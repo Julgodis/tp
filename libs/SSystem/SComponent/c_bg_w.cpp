@@ -13,7 +13,7 @@
 /* top-level dependencies (begin cBgW_BgId) */
 /* top-level dependencies (end cBgW_BgId) */
 struct cBgW_BgId {
-	/* 802681C0 */ void Regist(s32);
+	/* 802681C0 */ void Regist(int);
 	/* 802681C8 */ void Release();
 	/* 802681D4 */ void ChkUsed() const;
 };
@@ -49,7 +49,7 @@ SECTION_SDATA2 extern f32 lit_2249;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgW_BgId::Regist(s32 field_0) {
+asm void cBgW_BgId::Regist(int field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_w/Regist__9cBgW_BgIdFi.s"
 }

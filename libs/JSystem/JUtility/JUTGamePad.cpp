@@ -10,23 +10,23 @@
 // 
 
 // build JUTGamePad (JUTGamePad) False/False
+// build JUTGamePad (JUTGamePad) True/False
+struct JUTGamePad;
 // build PADStatus (PADStatus) False/False
 /* top-level dependencies (begin PADStatus) */
 /* top-level dependencies (end PADStatus) */
 struct PADStatus {
 };
 
-// build JUTGamePad (JUTGamePad) True/False
-struct JUTGamePad;
 // build JUTGamePad (JUTGamePad) True/True
 // build JUTGamePad (JUTGamePad) True/True
 // build JUTGamePad (JUTGamePad) True/True
 /* top-level dependencies (begin JUTGamePad) */
-// outer dependency: PADStatus
 // outer dependency: JUTGamePad::EPadPort
+// outer dependency: PADStatus
 // outer dependency: JUTGamePad::EWhichStick
-// outer dependency: JUTGamePad::EStickMode
 // outer dependency: JUTGamePad::CRumble::ERumble
+// outer dependency: JUTGamePad::EStickMode
 /* top-level dependencies (end JUTGamePad) */
 struct JUTGamePad {
 	// JUTGamePad::EPadPort
@@ -49,13 +49,6 @@ struct JUTGamePad {
 
 	// build CStick (JUTGamePad::CStick) False/False
 	/* dependencies (begin JUTGamePad::CStick) */
-	// inner dependency: EWhichStick (JUTGamePad::EWhichStick) True False (for JUTGamePad::CStick)
-	// build EWhichStick (JUTGamePad::EWhichStick) False/False
-	/* dependencies (begin JUTGamePad::EWhichStick) */
-	/* dependencies (end JUTGamePad::EWhichStick) */
-	struct EWhichStick {
-	};
-
 	// inner dependency: EStickMode (JUTGamePad::EStickMode) True False (for JUTGamePad::CStick)
 	// build EStickMode (JUTGamePad::EStickMode) False/False
 	/* dependencies (begin JUTGamePad::EStickMode) */
@@ -63,12 +56,19 @@ struct JUTGamePad {
 	struct EStickMode {
 	};
 
+	// inner dependency: EWhichStick (JUTGamePad::EWhichStick) True False (for JUTGamePad::CStick)
+	// build EWhichStick (JUTGamePad::EWhichStick) False/False
+	/* dependencies (begin JUTGamePad::EWhichStick) */
+	/* dependencies (end JUTGamePad::EWhichStick) */
+	struct EWhichStick {
+	};
+
 	/* dependencies (end JUTGamePad::CStick) */
 	struct CStick {
-		// JUTGamePad::EWhichStick
 		// JUTGamePad::EStickMode
+		// JUTGamePad::EWhichStick
 		/* 802E121C */ void clear();
-		/* 802E1238 */ void update(char, char, JUTGamePad::EStickMode, JUTGamePad::EWhichStick, u32);
+		/* 802E1238 */ void update(s8, s8, JUTGamePad::EStickMode, JUTGamePad::EWhichStick, u32);
 		/* 802E1500 */ void getButton(u32);
 		/* 802E1CA8 */ CStick();
 	};
@@ -91,8 +91,8 @@ struct JUTGamePad {
 
 		/* 802E15B4 */ void clear();
 		/* 802E15D8 */ void clear(JUTGamePad*);
-		/* 802E1634 */ void startMotor(s32);
-		/* 802E168C */ void stopMotor(s32, bool);
+		/* 802E1634 */ void startMotor(int);
+		/* 802E168C */ void stopMotor(int, bool);
 		/* 802E1720 */ void update(s16);
 		/* 802E18A4 */ void triggerPatternedRumble(u32);
 		/* 802E18CC */ void startPatternedRumble(void*, JUTGamePad::CRumble::ERumble, u32);
@@ -112,7 +112,7 @@ struct JUTGamePad {
 	/* 802E0CD8 */ void update();
 	/* 802E0FA4 */ void checkResetSwitch();
 	/* 802E1024 */ void clearForReset();
-	/* 802E199C */ void getGamePad(s32);
+	/* 802E199C */ void getGamePad(int);
 	/* 802E1A98 */ void recalibrate(u32);
 };
 
@@ -121,7 +121,7 @@ struct JUTGamePad {
 /* top-level dependencies (begin JUTGamePadLongPress) */
 /* top-level dependencies (end JUTGamePadLongPress) */
 struct JUTGamePadLongPress {
-	/* 802E1AFC */ void checkCallback(s32, u32);
+	/* 802E1AFC */ void checkCallback(int, u32);
 };
 
 // build JKRDisposer (JKRDisposer) False/False
@@ -158,7 +158,7 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-static void getNumBit(char*, s32);
+static void getNumBit(u8*, int);
 extern "C" void __sinit_JUTGamePad_cpp();
 extern "C" static void func_802E1C54();
 extern "C" static void func_802E1D08();
@@ -604,7 +604,7 @@ f32 JUTGamePad__lit_1121 = 10430.37890625f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTGamePad::CStick::update(char field_0, char field_1, JUTGamePad::EStickMode field_2, JUTGamePad::EWhichStick field_3, u32 field_4) {
+asm void JUTGamePad::CStick::update(s8 field_0, s8 field_1, JUTGamePad::EStickMode field_2, JUTGamePad::EWhichStick field_3, u32 field_4) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTGamePad/func_802E1238.s"
 }
@@ -648,7 +648,7 @@ asm void JUTGamePad::CRumble::clear(JUTGamePad* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTGamePad::CRumble::startMotor(s32 field_0) {
+asm void JUTGamePad::CRumble::startMotor(int field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTGamePad/startMotor__Q210JUTGamePad7CRumbleFi.s"
 }
@@ -659,7 +659,7 @@ asm void JUTGamePad::CRumble::startMotor(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTGamePad::CRumble::stopMotor(s32 field_0, bool field_1) {
+asm void JUTGamePad::CRumble::stopMotor(int field_0, bool field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTGamePad/stopMotor__Q210JUTGamePad7CRumbleFib.s"
 }
@@ -670,7 +670,7 @@ asm void JUTGamePad::CRumble::stopMotor(s32 field_0, bool field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void getNumBit(char* field_0, s32 field_1) {
+asm static void getNumBit(u8* field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTGamePad/getNumBit__FPUci.s"
 }
@@ -736,7 +736,7 @@ asm void JUTGamePad::CRumble::stopPatternedRumbleAtThePeriod() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTGamePad::getGamePad(s32 field_0) {
+asm void JUTGamePad::getGamePad(int field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTGamePad/getGamePad__10JUTGamePadFi.s"
 }
@@ -780,7 +780,7 @@ asm void JUTGamePad::recalibrate(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTGamePadLongPress::checkCallback(s32 field_0, u32 field_1) {
+asm void JUTGamePadLongPress::checkCallback(int field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTGamePad/checkCallback__19JUTGamePadLongPressFiUl.s"
 }

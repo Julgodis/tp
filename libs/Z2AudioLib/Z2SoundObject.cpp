@@ -16,36 +16,36 @@
 struct Z2SoundHandlePool {
 };
 
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SoundObjBase) */
 // outer dependency: Z2SoundHandlePool
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SoundObjBase) */
 struct Z2SoundObjBase {
 	// Z2SoundHandlePool
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802BDEF0 */ Z2SoundObjBase();
 	/* 802BDF48 */ ~Z2SoundObjBase();
-	/* 802BDFB0 */ void init(Vec*, char);
+	/* 802BDFB0 */ void init(Vec*, u8);
 	/* 802BDFF8 */ void deleteObject();
-	/* 802BE038 */ void framework(u32, char);
+	/* 802BE038 */ void framework(u32, s8);
 	/* 802BE070 */ void dispose();
 	/* 802BE104 */ void stopOK(Z2SoundHandlePool&);
-	/* 802BE144 */ void startSound(JAISoundID, u32, char);
-	/* 802BE2D4 */ void startLevelSound(JAISoundID, u32, char);
+	/* 802BE144 */ void startSound(JAISoundID, u32, s8);
+	/* 802BE2D4 */ void startLevelSound(JAISoundID, u32, s8);
 	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
 };
 
@@ -53,37 +53,37 @@ struct Z2SoundObjBase {
 // build Z2SoundHandlePool (Z2SoundHandlePool) True/True
 // build JAISoundID (JAISoundID) True/True
 // build Z2DopplerSoundObjBase (Z2DopplerSoundObjBase) False/False
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2DopplerSoundObjBase) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2DopplerSoundObjBase) */
 struct Z2DopplerSoundObjBase {
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802BE5A0 */ Z2DopplerSoundObjBase();
 	/* 802BE5FC */ ~Z2DopplerSoundObjBase();
-	/* 802BE65C */ void init(Vec*, char);
-	/* 802BE6B8 */ void framework(u32, char);
-	/* 802BE714 */ void startSound(JAISoundID, u32, char);
-	/* 802BE7AC */ void startLevelSound(JAISoundID, u32, char);
+	/* 802BE65C */ void init(Vec*, u8);
+	/* 802BE6B8 */ void framework(u32, s8);
+	/* 802BE714 */ void startSound(JAISoundID, u32, s8);
+	/* 802BE7AC */ void startLevelSound(JAISoundID, u32, s8);
 };
 
 // build Z2SoundObjSimple (Z2SoundObjSimple) False/False
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2SoundObjSimple) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SoundObjSimple) */
 struct Z2SoundObjSimple {
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802BE844 */ Z2SoundObjSimple();
-	/* 802BE880 */ void init(Vec*, char);
-	/* 802BE8A0 */ void startSound(JAISoundID, u32, char);
-	/* 802BE9B0 */ void startLevelSound(JAISoundID, u32, char);
+	/* 802BE880 */ void init(Vec*, u8);
+	/* 802BE8A0 */ void startSound(JAISoundID, u32, s8);
+	/* 802BE9B0 */ void startLevelSound(JAISoundID, u32, s8);
 };
 
 // build Z2SoundObjArrow (Z2SoundObjArrow) False/False
@@ -94,7 +94,7 @@ struct Z2SoundObjSimple {
 struct Z2SoundObjArrow {
 	// Vec
 	/* 802BEB38 */ Z2SoundObjArrow();
-	/* 802BEB74 */ void init(Vec*, char);
+	/* 802BEB74 */ void init(Vec*, u8);
 };
 
 // build Z2SoundObjAnime (Z2SoundObjAnime) False/False
@@ -105,7 +105,7 @@ struct Z2SoundObjArrow {
 struct Z2SoundObjAnime {
 	// Vec
 	/* 802BEB94 */ Z2SoundObjAnime();
-	/* 802BEBDC */ void init(Vec*, char);
+	/* 802BEBDC */ void init(Vec*, u8);
 	/* 802BEBFC */ void initAnime(void*, bool, f32, f32);
 	/* 802BED68 */ void ageSounds_();
 	/* 802BEED4 */ void updateAnime(f32, f32);
@@ -168,7 +168,7 @@ struct Z2Calc {
 /* top-level dependencies (end Z2SoundStarter) */
 struct Z2SoundStarter {
 	// JAISoundHandle
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, char);
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 };
 
 // build Z2SoundHandles (Z2SoundHandles) False/False
@@ -180,7 +180,7 @@ struct Z2SoundHandles {
 	// JAISoundID
 	/* 802AB07C */ Z2SoundHandles();
 	/* 802AB0B4 */ ~Z2SoundHandles();
-	/* 802AB118 */ void initHandlesPool(char);
+	/* 802AB118 */ void initHandlesPool(u8);
 	/* 802AB120 */ void deleteHandlesPool();
 	/* 802AB254 */ void getHandleSoundID(JAISoundID);
 	/* 802AB2A0 */ void getHandleUserData(u32);
@@ -416,7 +416,7 @@ asm Z2SoundObjBase::~Z2SoundObjBase() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjBase::init(Vec* field_0, char field_1) {
+asm void Z2SoundObjBase::init(Vec* field_0, u8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/init__14Z2SoundObjBaseFP3VecUc.s"
 }
@@ -438,7 +438,7 @@ asm void Z2SoundObjBase::deleteObject() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjBase::framework(u32 field_0, char field_1) {
+asm void Z2SoundObjBase::framework(u32 field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/framework__14Z2SoundObjBaseFUlSc.s"
 }
@@ -485,7 +485,7 @@ f64 lit_3564 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjBase::startSound(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2SoundObjBase::startSound(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/startSound__14Z2SoundObjBaseF10JAISoundIDUlSc.s"
 }
@@ -496,7 +496,7 @@ asm void Z2SoundObjBase::startSound(JAISoundID field_0, u32 field_1, char field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjBase::startLevelSound(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2SoundObjBase::startLevelSound(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc.s"
 }
@@ -548,7 +548,7 @@ asm Z2DopplerSoundObjBase::~Z2DopplerSoundObjBase() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2DopplerSoundObjBase::init(Vec* field_0, char field_1) {
+asm void Z2DopplerSoundObjBase::init(Vec* field_0, u8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/init__21Z2DopplerSoundObjBaseFP3VecUc.s"
 }
@@ -559,7 +559,7 @@ asm void Z2DopplerSoundObjBase::init(Vec* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2DopplerSoundObjBase::framework(u32 field_0, char field_1) {
+asm void Z2DopplerSoundObjBase::framework(u32 field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/framework__21Z2DopplerSoundObjBaseFUlSc.s"
 }
@@ -570,7 +570,7 @@ asm void Z2DopplerSoundObjBase::framework(u32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2DopplerSoundObjBase::startSound(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2DopplerSoundObjBase::startSound(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc.s"
 }
@@ -581,7 +581,7 @@ asm void Z2DopplerSoundObjBase::startSound(JAISoundID field_0, u32 field_1, char
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2DopplerSoundObjBase::startLevelSound(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2DopplerSoundObjBase::startLevelSound(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc.s"
 }
@@ -603,7 +603,7 @@ asm Z2SoundObjSimple::Z2SoundObjSimple() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjSimple::init(Vec* field_0, char field_1) {
+asm void Z2SoundObjSimple::init(Vec* field_0, u8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/init__16Z2SoundObjSimpleFP3VecUc.s"
 }
@@ -636,7 +636,7 @@ f64 Z2SoundObject__lit_3828 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjSimple::startSound(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2SoundObjSimple::startSound(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/startSound__16Z2SoundObjSimpleF10JAISoundIDUlSc.s"
 }
@@ -660,7 +660,7 @@ f32 Z2SoundObject__lit_3862 = 1.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjSimple::startLevelSound(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2SoundObjSimple::startLevelSound(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/startLevelSound__16Z2SoundObjSimpleF10JAISoundIDUlSc.s"
 }
@@ -682,7 +682,7 @@ asm Z2SoundObjArrow::Z2SoundObjArrow() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjArrow::init(Vec* field_0, char field_1) {
+asm void Z2SoundObjArrow::init(Vec* field_0, u8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/init__15Z2SoundObjArrowFP3VecUc.s"
 }
@@ -704,7 +704,7 @@ asm Z2SoundObjAnime::Z2SoundObjAnime() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjAnime::init(Vec* field_0, char field_1) {
+asm void Z2SoundObjAnime::init(Vec* field_0, u8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObject/init__15Z2SoundObjAnimeFP3VecUc.s"
 }

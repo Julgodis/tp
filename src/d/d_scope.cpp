@@ -13,7 +13,7 @@
 /* top-level dependencies (begin dScope_c) */
 /* top-level dependencies (end dScope_c) */
 struct dScope_c {
-	/* 80193690 */ dScope_c(char);
+	/* 80193690 */ dScope_c(u8);
 	/* 8019396C */ ~dScope_c();
 	/* 80193B90 */ void _execute(u32);
 	/* 80193C68 */ void draw();
@@ -123,7 +123,7 @@ SECTION_SDATA2 extern f64 d_d_scope__lit_3906;
 
 void* operator new(u32);
 void operator delete(void*);
-void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, s32);
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int);
 extern "C" void __construct_array();
 extern "C" void __ptmf_scall();
 extern "C" void _savegpr_23();
@@ -264,7 +264,7 @@ f64 d_d_scope__lit_3759 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dScope_c::dScope_c(char field_0) {
+asm dScope_c::dScope_c(u8 field_0) {
 	nofralloc
 #include "asm/d/d_scope/__ct__8dScope_cFUc.s"
 }

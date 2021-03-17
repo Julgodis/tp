@@ -141,7 +141,7 @@ struct cBgS_LinChk {
 	// cXyz
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
-	/* 80267ED0 */ void Set2(cXyz const*, cXyz const*, s32);
+	/* 80267ED0 */ void Set2(cXyz const*, cXyz const*, u32);
 };
 
 // 

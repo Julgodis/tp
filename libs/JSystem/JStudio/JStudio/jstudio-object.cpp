@@ -16,15 +16,16 @@
 // build JStudio (JStudio) True/True
 // build JStudio (JStudio) True/True
 // build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
 // build _GXColor (_GXColor) False/False
 /* top-level dependencies (begin _GXColor) */
 /* top-level dependencies (end _GXColor) */
 struct _GXColor {
 };
 
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
@@ -35,24 +36,23 @@ struct Vec {
 // build JStudio (JStudio) True/True
 // build JStudio (JStudio) True/True
 // build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
 /* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::TAdaptor_message
-// outer dependency: JStudio::TControl
-// outer dependency: JStudio::TVariableValue
 // outer dependency: JStudio::stb::data::TParse_TBlock_object
-// outer dependency: JStudio::TAdaptor_light
-// outer dependency: JStudio::TAdaptor_sound
-// outer dependency: _GXColor
-// outer dependency: JStudio::TAdaptor_fog
-// outer dependency: JStudio::TAdaptor_ambientLight
-// outer dependency: JStudio::TAdaptor
-// outer dependency: Vec
-// outer dependency: JStudio::TAdaptor_particle
-// outer dependency: JStudio::TAdaptor_actor
-// outer dependency: JStudio::data::TEOperationData
-// outer dependency: JStudio::TAdaptor_camera
 // outer dependency: JStudio::TAdaptor::TSetVariableValue_immediate
+// outer dependency: JStudio::TVariableValue
+// outer dependency: JStudio::TAdaptor_sound
+// outer dependency: JStudio::TAdaptor_actor
+// outer dependency: JStudio::TAdaptor_ambientLight
+// outer dependency: JStudio::TAdaptor_particle
+// outer dependency: JStudio::TAdaptor_fog
+// outer dependency: JStudio::data::TEOperationData
+// outer dependency: JStudio::TAdaptor
+// outer dependency: _GXColor
+// outer dependency: Vec
+// outer dependency: JStudio::TAdaptor_message
+// outer dependency: JStudio::TAdaptor_light
+// outer dependency: JStudio::TControl
+// outer dependency: JStudio::TAdaptor_camera
 /* top-level dependencies (end JStudio) */
 namespace JStudio {
 	// build TVariableValue (JStudio::TVariableValue) False/False
@@ -60,13 +60,7 @@ namespace JStudio {
 	// inner dependency: TAdaptor (JStudio::TAdaptor) True False (for JStudio::TVariableValue)
 	// build TAdaptor (JStudio::TAdaptor) False/False
 	/* dependencies (begin JStudio::TAdaptor) */
-	// inner dependency: TControl (JStudio::TControl) True False (for JStudio::TAdaptor)
-	// build TControl (JStudio::TControl) False/False
-	/* dependencies (begin JStudio::TControl) */
-	/* dependencies (end JStudio::TControl) */
-	struct TControl {
-	};
-
+	// inner dependency: TAdaptor (JStudio::TAdaptor::TSetVariableValue_immediate) True False (for JStudio::TAdaptor)
 	// inner dependency: data (JStudio::data::TEOperationData) True False (for JStudio::TAdaptor)
 	// build data (JStudio::data) False/False
 	/* dependencies (begin JStudio::data) */
@@ -80,14 +74,20 @@ namespace JStudio {
 
 	};
 
-	// inner dependency: TAdaptor (JStudio::TAdaptor::TSetVariableValue_immediate) True False (for JStudio::TAdaptor)
+	// inner dependency: TControl (JStudio::TControl) True False (for JStudio::TAdaptor)
+	// build TControl (JStudio::TControl) False/False
+	/* dependencies (begin JStudio::TControl) */
+	/* dependencies (end JStudio::TControl) */
+	struct TControl {
+	};
+
 	/* dependencies (end JStudio::TAdaptor) */
 	struct TAdaptor {
-		// JStudio::TControl
+		// JStudio::TAdaptor::TSetVariableValue_immediate
+		// JStudio::data::TEOperationData
 		// _GXColor
 		// Vec
-		// JStudio::data::TEOperationData
-		// JStudio::TAdaptor::TSetVariableValue_immediate
+		// JStudio::TControl
 		// build TSetVariableValue_immediate (JStudio::TAdaptor::TSetVariableValue_immediate) False/False
 		/* dependencies (begin JStudio::TAdaptor::TSetVariableValue_immediate) */
 		/* dependencies (end JStudio::TAdaptor::TSetVariableValue_immediate) */
@@ -200,14 +200,14 @@ namespace JStudio {
 
 	// build TObject_actor (JStudio::TObject_actor) False/False
 	/* dependencies (begin JStudio::TObject_actor) */
-	// inner dependency: TAdaptor_actor (JStudio::TAdaptor_actor) True False (for JStudio::TObject_actor)
-	// build TAdaptor_actor (JStudio::TAdaptor_actor) True/True
 	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_actor)
 	// build stb (JStudio::stb) True/True
+	// inner dependency: TAdaptor_actor (JStudio::TAdaptor_actor) True False (for JStudio::TObject_actor)
+	// build TAdaptor_actor (JStudio::TAdaptor_actor) True/True
 	/* dependencies (end JStudio::TObject_actor) */
 	struct TObject_actor {
-		// JStudio::TAdaptor_actor
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_actor
 		/* 80286910 */ TObject_actor(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_actor*);
 		/* 8028694C */ void do_paragraph(u32, void const*, u32);
 		/* 802881A4 */ ~TObject_actor();
@@ -222,14 +222,14 @@ namespace JStudio {
 
 	// build TObject_ambientLight (JStudio::TObject_ambientLight) False/False
 	/* dependencies (begin JStudio::TObject_ambientLight) */
-	// inner dependency: TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) True False (for JStudio::TObject_ambientLight)
-	// build TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) True/True
 	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_ambientLight)
 	// build stb (JStudio::stb) True/True
+	// inner dependency: TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) True False (for JStudio::TObject_ambientLight)
+	// build TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) True/True
 	/* dependencies (end JStudio::TObject_ambientLight) */
 	struct TObject_ambientLight {
-		// JStudio::TAdaptor_ambientLight
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_ambientLight
 		/* 80286CFC */ TObject_ambientLight(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_ambientLight*);
 		/* 80286D38 */ void do_paragraph(u32, void const*, u32);
 		/* 80288144 */ ~TObject_ambientLight();
@@ -244,14 +244,14 @@ namespace JStudio {
 
 	// build TObject_camera (JStudio::TObject_camera) False/False
 	/* dependencies (begin JStudio::TObject_camera) */
-	// inner dependency: TAdaptor_camera (JStudio::TAdaptor_camera) True False (for JStudio::TObject_camera)
-	// build TAdaptor_camera (JStudio::TAdaptor_camera) True/True
 	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_camera)
 	// build stb (JStudio::stb) True/True
+	// inner dependency: TAdaptor_camera (JStudio::TAdaptor_camera) True False (for JStudio::TObject_camera)
+	// build TAdaptor_camera (JStudio::TAdaptor_camera) True/True
 	/* dependencies (end JStudio::TObject_camera) */
 	struct TObject_camera {
-		// JStudio::TAdaptor_camera
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_camera
 		/* 80286E7C */ TObject_camera(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_camera*);
 		/* 80286EB8 */ void do_paragraph(u32, void const*, u32);
 		/* 802880E4 */ ~TObject_camera();
@@ -266,14 +266,14 @@ namespace JStudio {
 
 	// build TObject_fog (JStudio::TObject_fog) False/False
 	/* dependencies (begin JStudio::TObject_fog) */
-	// inner dependency: TAdaptor_fog (JStudio::TAdaptor_fog) True False (for JStudio::TObject_fog)
-	// build TAdaptor_fog (JStudio::TAdaptor_fog) True/True
 	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_fog)
 	// build stb (JStudio::stb) True/True
+	// inner dependency: TAdaptor_fog (JStudio::TAdaptor_fog) True False (for JStudio::TObject_fog)
+	// build TAdaptor_fog (JStudio::TAdaptor_fog) True/True
 	/* dependencies (end JStudio::TObject_fog) */
 	struct TObject_fog {
-		// JStudio::TAdaptor_fog
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_fog
 		/* 802871DC */ TObject_fog(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_fog*);
 		/* 80287218 */ void do_paragraph(u32, void const*, u32);
 		/* 80288084 */ ~TObject_fog();
@@ -310,14 +310,14 @@ namespace JStudio {
 
 	// build TObject_message (JStudio::TObject_message) False/False
 	/* dependencies (begin JStudio::TObject_message) */
-	// inner dependency: TAdaptor_message (JStudio::TAdaptor_message) True False (for JStudio::TObject_message)
-	// build TAdaptor_message (JStudio::TAdaptor_message) True/True
 	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_message)
 	// build stb (JStudio::stb) True/True
+	// inner dependency: TAdaptor_message (JStudio::TAdaptor_message) True False (for JStudio::TObject_message)
+	// build TAdaptor_message (JStudio::TAdaptor_message) True/True
 	/* dependencies (end JStudio::TObject_message) */
 	struct TObject_message {
-		// JStudio::TAdaptor_message
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_message
 		/* 80287640 */ TObject_message(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_message*);
 		/* 8028767C */ void do_paragraph(u32, void const*, u32);
 		/* 80287FC4 */ ~TObject_message();
@@ -332,14 +332,14 @@ namespace JStudio {
 
 	// build TObject_particle (JStudio::TObject_particle) False/False
 	/* dependencies (begin JStudio::TObject_particle) */
-	// inner dependency: TAdaptor_particle (JStudio::TAdaptor_particle) True False (for JStudio::TObject_particle)
-	// build TAdaptor_particle (JStudio::TAdaptor_particle) True/True
 	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_particle)
 	// build stb (JStudio::stb) True/True
+	// inner dependency: TAdaptor_particle (JStudio::TAdaptor_particle) True False (for JStudio::TObject_particle)
+	// build TAdaptor_particle (JStudio::TAdaptor_particle) True/True
 	/* dependencies (end JStudio::TObject_particle) */
 	struct TObject_particle {
-		// JStudio::TAdaptor_particle
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_particle
 		/* 8028776C */ TObject_particle(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_particle*);
 		/* 802877A8 */ void do_paragraph(u32, void const*, u32);
 		/* 80287F64 */ ~TObject_particle();

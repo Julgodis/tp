@@ -52,8 +52,8 @@ struct node_lists_tree_class {
 void fpcLy_CancelQTo(process_method_tag_class*);
 void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*);
 static void fpcLy_CancelMethod(process_method_tag_class*);
-void fpcLy_IntoQueue(layer_class*, s32, create_tag_class*, s32);
-void fpcLy_ToQueue(layer_class*, s32, create_tag_class*);
+void fpcLy_IntoQueue(layer_class*, int, create_tag_class*, int);
+void fpcLy_ToQueue(layer_class*, int, create_tag_class*);
 void fpcLy_QueueTo(layer_class*, create_tag_class*);
 void fpcLy_IsDeletingMesg(layer_class*);
 void fpcLy_DeletingMesg(layer_class*);
@@ -64,12 +64,12 @@ void fpcLy_CreatedMesg(layer_class*);
 void fpcLy_RootLayer();
 void fpcLy_SetCurrentLayer(layer_class*);
 void fpcLy_CurrentLayer();
-static void fpcLy_Search(s32);
-void fpcLy_Layer(s32);
+static void fpcLy_Search(u32);
+void fpcLy_Layer(u32);
 static void fpcLy_Regist(layer_class*);
 void fpcLy_Delete(layer_class*);
 void fpcLy_Cancel(layer_class*);
-void fpcLy_Create(layer_class*, void*, node_list_class*, s32);
+void fpcLy_Create(layer_class*, void*, node_list_class*, int);
 
 extern "C" void fpcLy_CancelQTo__FP24process_method_tag_class();
 extern "C" void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class();
@@ -112,10 +112,10 @@ void cLs_SingleCut(node_class*);
 void cLs_Addition(node_list_class*, node_class*);
 void cLs_Create(node_list_class*);
 void cNd_Create(node_class*, void*);
-void cTr_Create(node_lists_tree_class*, node_list_class*, s32);
+void cTr_Create(node_lists_tree_class*, node_list_class*, int);
 void cTg_SingleCutFromTree(create_tag_class*);
-void cTg_AdditionToTree(node_lists_tree_class*, s32, create_tag_class*);
-void cTg_InsertToTree(node_lists_tree_class*, s32, create_tag_class*, s32);
+void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*);
+void cTg_InsertToTree(node_lists_tree_class*, int, create_tag_class*, int);
 extern "C" void _savegpr_28();
 extern "C" void _restgpr_28();
 
@@ -175,7 +175,7 @@ asm static void fpcLy_CancelMethod(process_method_tag_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLy_IntoQueue(layer_class* field_0, s32 field_1, create_tag_class* field_2, s32 field_3) {
+asm void fpcLy_IntoQueue(layer_class* field_0, int field_1, create_tag_class* field_2, int field_3) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer/fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi.s"
 }
@@ -186,7 +186,7 @@ asm void fpcLy_IntoQueue(layer_class* field_0, s32 field_1, create_tag_class* fi
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLy_ToQueue(layer_class* field_0, s32 field_1, create_tag_class* field_2) {
+asm void fpcLy_ToQueue(layer_class* field_0, int field_1, create_tag_class* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer/fpcLy_ToQueue__FP11layer_classiP16create_tag_class.s"
 }
@@ -324,7 +324,7 @@ asm void fpcLy_CurrentLayer() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcLy_Search(s32 field_0) {
+asm static void fpcLy_Search(u32 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer/fpcLy_Search__FUi.s"
 }
@@ -335,7 +335,7 @@ asm static void fpcLy_Search(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLy_Layer(s32 field_0) {
+asm void fpcLy_Layer(u32 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer/fpcLy_Layer__FUi.s"
 }
@@ -392,7 +392,7 @@ u8 data_80450D28[8];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLy_Create(layer_class* field_0, void* field_1, node_list_class* field_2, s32 field_3) {
+asm void fpcLy_Create(layer_class* field_0, void* field_1, node_list_class* field_2, int field_3) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer/fpcLy_Create__FP11layer_classPvP15node_list_classi.s"
 }

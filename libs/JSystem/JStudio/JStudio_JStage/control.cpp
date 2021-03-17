@@ -19,11 +19,11 @@
 // build JStudio (JStudio) True/True
 /* top-level dependencies (begin JStudio) */
 // outer dependency: JStudio::stb::data::TParse_TBlock_object
-// outer dependency: JStudio::TAdaptor_fog
-// outer dependency: JStudio::TAdaptor_actor
-// outer dependency: JStudio::TAdaptor_ambientLight
-// outer dependency: JStudio::TAdaptor_camera
 // outer dependency: JStudio::TAdaptor_light
+// outer dependency: JStudio::TAdaptor_ambientLight
+// outer dependency: JStudio::TAdaptor_actor
+// outer dependency: JStudio::TAdaptor_fog
+// outer dependency: JStudio::TAdaptor_camera
 /* top-level dependencies (end JStudio) */
 namespace JStudio {
 	// build TObject (JStudio::TObject) False/False
@@ -59,6 +59,8 @@ namespace JStudio {
 
 	// build TObject_actor (JStudio::TObject_actor) False/False
 	/* dependencies (begin JStudio::TObject_actor) */
+	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_actor)
+	// build stb (JStudio::stb) True/True
 	// inner dependency: TAdaptor_actor (JStudio::TAdaptor_actor) True False (for JStudio::TObject_actor)
 	// build TAdaptor_actor (JStudio::TAdaptor_actor) False/False
 	/* dependencies (begin JStudio::TAdaptor_actor) */
@@ -66,18 +68,18 @@ namespace JStudio {
 	struct TAdaptor_actor {
 	};
 
-	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_actor)
-	// build stb (JStudio::stb) True/True
 	/* dependencies (end JStudio::TObject_actor) */
 	struct TObject_actor {
-		// JStudio::TAdaptor_actor
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_actor
 		/* 80286910 */ TObject_actor(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_actor*);
 	};
 
 	// build TAdaptor_actor (JStudio::TAdaptor_actor) True/True
 	// build TObject_ambientLight (JStudio::TObject_ambientLight) False/False
 	/* dependencies (begin JStudio::TObject_ambientLight) */
+	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_ambientLight)
+	// build stb (JStudio::stb) True/True
 	// inner dependency: TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) True False (for JStudio::TObject_ambientLight)
 	// build TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) False/False
 	/* dependencies (begin JStudio::TAdaptor_ambientLight) */
@@ -85,18 +87,18 @@ namespace JStudio {
 	struct TAdaptor_ambientLight {
 	};
 
-	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_ambientLight)
-	// build stb (JStudio::stb) True/True
 	/* dependencies (end JStudio::TObject_ambientLight) */
 	struct TObject_ambientLight {
-		// JStudio::TAdaptor_ambientLight
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_ambientLight
 		/* 80286CFC */ TObject_ambientLight(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_ambientLight*);
 	};
 
 	// build TAdaptor_ambientLight (JStudio::TAdaptor_ambientLight) True/True
 	// build TObject_camera (JStudio::TObject_camera) False/False
 	/* dependencies (begin JStudio::TObject_camera) */
+	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_camera)
+	// build stb (JStudio::stb) True/True
 	// inner dependency: TAdaptor_camera (JStudio::TAdaptor_camera) True False (for JStudio::TObject_camera)
 	// build TAdaptor_camera (JStudio::TAdaptor_camera) False/False
 	/* dependencies (begin JStudio::TAdaptor_camera) */
@@ -104,18 +106,18 @@ namespace JStudio {
 	struct TAdaptor_camera {
 	};
 
-	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_camera)
-	// build stb (JStudio::stb) True/True
 	/* dependencies (end JStudio::TObject_camera) */
 	struct TObject_camera {
-		// JStudio::TAdaptor_camera
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_camera
 		/* 80286E7C */ TObject_camera(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_camera*);
 	};
 
 	// build TAdaptor_camera (JStudio::TAdaptor_camera) True/True
 	// build TObject_fog (JStudio::TObject_fog) False/False
 	/* dependencies (begin JStudio::TObject_fog) */
+	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_fog)
+	// build stb (JStudio::stb) True/True
 	// inner dependency: TAdaptor_fog (JStudio::TAdaptor_fog) True False (for JStudio::TObject_fog)
 	// build TAdaptor_fog (JStudio::TAdaptor_fog) False/False
 	/* dependencies (begin JStudio::TAdaptor_fog) */
@@ -123,12 +125,10 @@ namespace JStudio {
 	struct TAdaptor_fog {
 	};
 
-	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_fog)
-	// build stb (JStudio::stb) True/True
 	/* dependencies (end JStudio::TObject_fog) */
 	struct TObject_fog {
-		// JStudio::TAdaptor_fog
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_fog
 		/* 802871DC */ TObject_fog(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_fog*);
 	};
 
@@ -196,29 +196,29 @@ struct JStage {
 
 };
 
+// build JStage (JStage) True/True
+// build JStage (JStage) True/True
 // build JStudio (JStudio) True/True
-// build JStage (JStage) True/True
-// build JStage (JStage) True/True
 // build JStage (JStage) True/True
 // build JStage (JStage) True/True
 // build JStage (JStage) True/True
 /* top-level dependencies (begin JStudio_JStage) */
 // outer dependency: JStudio::stb::data::TParse_TBlock_object
-// outer dependency: JStage::TFog
-// outer dependency: JStudio::TObject
 // outer dependency: JStage::TSystem
-// outer dependency: JStage::TLight
-// outer dependency: JStage::TCamera
-// outer dependency: JStage::TAmbientLight
+// outer dependency: JStage::TFog
 // outer dependency: JStage::TActor
+// outer dependency: JStudio::TObject
+// outer dependency: JStage::TLight
+// outer dependency: JStage::TAmbientLight
+// outer dependency: JStage::TCamera
 /* top-level dependencies (end JStudio_JStage) */
 struct JStudio_JStage {
 	// build TCreateObject (JStudio_JStage::TCreateObject) False/False
 	/* dependencies (begin JStudio_JStage::TCreateObject) */
 	/* dependencies (end JStudio_JStage::TCreateObject) */
 	struct TCreateObject {
-		// JStudio::TObject
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TObject
 		/* 80289B00 */ ~TCreateObject();
 		/* 80289B60 */ void create(JStudio::TObject**, JStudio::stb::data::TParse_TBlock_object const&);
 	};
@@ -254,8 +254,8 @@ struct JStudio_JStage {
 	/* dependencies (begin JStudio_JStage::TAdaptor_fog) */
 	/* dependencies (end JStudio_JStage::TAdaptor_fog) */
 	struct TAdaptor_fog {
-		// JStage::TSystem
 		// JStage::TFog
+		// JStage::TSystem
 		/* 8028C574 */ TAdaptor_fog(JStage::TSystem const*, JStage::TFog*);
 	};
 
@@ -263,8 +263,8 @@ struct JStudio_JStage {
 	/* dependencies (begin JStudio_JStage::TAdaptor_light) */
 	/* dependencies (end JStudio_JStage::TAdaptor_light) */
 	struct TAdaptor_light {
-		// JStage::TSystem
 		// JStage::TLight
+		// JStage::TSystem
 		/* 8028CB50 */ TAdaptor_light(JStage::TSystem const*, JStage::TLight*);
 	};
 

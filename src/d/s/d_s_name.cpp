@@ -54,6 +54,12 @@ struct dScnName_camera_c {
 	/* 80259294 */ ~dScnName_camera_c();
 };
 
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
 // build JKRHeap (JKRHeap) False/False
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
@@ -66,28 +72,28 @@ struct JKRHeap {
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033E94 */ void offFirstBit(char);
+	/* 80033E94 */ void offFirstBit(u8);
 };
 
 // build dRes_control_c (dRes_control_c) False/False
-// build JKRHeap (JKRHeap) True/True
 // build dRes_info_c (dRes_info_c) False/False
 /* top-level dependencies (begin dRes_info_c) */
 /* top-level dependencies (end dRes_info_c) */
 struct dRes_info_c {
 };
 
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin dRes_control_c) */
-// outer dependency: JKRHeap
 // outer dependency: dRes_info_c
+// outer dependency: JKRHeap
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
-	// JKRHeap
 	// dRes_info_c
-	/* 8003C078 */ void setRes(char const*, dRes_info_c*, s32, char const*, char, JKRHeap*);
-	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, s32);
-	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, s32);
-	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, s32);
+	// JKRHeap
+	/* 8003C078 */ void setRes(char const*, dRes_info_c*, int, char const*, u8, JKRHeap*);
+	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, int);
+	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, int);
+	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -149,7 +155,7 @@ struct dBrightCheck_c {
 /* top-level dependencies (begin dMeter2Info_c) */
 /* top-level dependencies (end dMeter2Info_c) */
 struct dMeter2Info_c {
-	/* 8021DD5C */ void changeWater(char);
+	/* 8021DD5C */ void changeWater(u8);
 };
 
 // build Z2SeqMgr (Z2SeqMgr) False/False
@@ -239,14 +245,14 @@ SECTION_SDATA2 extern f64 lit_3930;
 // External References:
 // 
 
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
-extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f();
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16);
+void mDoMtx_concatProjView(f32 const (* )[4], f32 const (* )[4], f32 (* )[4]);
 void mDoExt_getGameHeap();
 void mDoExt_setCurrentHeap(JKRHeap*);
 void fopOvlpM_IsPeek();
 void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
 void dComIfG_resetToOpening(scene_class*);
-void dComIfGp_setNextStage(char const*, s16, char, char);
+void dComIfGp_setNextStage(char const*, s16, s8, s8);
 void dComIfGs_gameStart();
 extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
 void dKy_clear_game_init();

@@ -31,6 +31,7 @@ struct JStage {
 		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
 		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
+		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
 };
@@ -39,7 +40,6 @@ struct JStage {
 // Forward References:
 // 
 
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
 
 extern "C" void __dt__Q26JStage7TObjectFv();
 extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
@@ -173,7 +173,7 @@ u8 JSGObject__lit_338[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f() {
+asm void JStage::TObject::JSGGetNodeTransformation(u32 field_0, f32 (* field_1)[4]) const {
 	nofralloc
 #include "asm/JSystem/JStage/JSGObject/JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f.s"
 }

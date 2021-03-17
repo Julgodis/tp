@@ -10,26 +10,38 @@
 // 
 
 // build JAISeqMgr (JAISeqMgr) False/False
-// build JAISeq (JAISeq) False/False
-// build JAISoundActivity (JAISoundActivity) False/False
-/* top-level dependencies (begin JAISoundActivity) */
-/* top-level dependencies (end JAISoundActivity) */
-struct JAISoundActivity {
+// build JAISoundHandle (JAISoundHandle) False/False
+/* top-level dependencies (begin JAISoundHandle) */
+/* top-level dependencies (end JAISoundHandle) */
+struct JAISoundHandle {
 };
 
+// build JAISeqDataRegion (JAISeqDataRegion) False/False
+/* top-level dependencies (begin JAISeqDataRegion) */
+/* top-level dependencies (end JAISeqDataRegion) */
+struct JAISeqDataRegion {
+};
+
+// build JAISeq (JAISeq) False/False
 // build JASSoundParams (JASSoundParams) False/False
 /* top-level dependencies (begin JASSoundParams) */
 /* top-level dependencies (end JASSoundParams) */
 struct JASSoundParams {
 };
 
+// build JAISoundActivity (JAISoundActivity) False/False
+/* top-level dependencies (begin JAISoundActivity) */
+/* top-level dependencies (end JAISoundActivity) */
+struct JAISoundActivity {
+};
+
 /* top-level dependencies (begin JAISeq) */
-// outer dependency: JAISoundActivity
 // outer dependency: JASSoundParams
+// outer dependency: JAISoundActivity
 /* top-level dependencies (end JAISeq) */
 struct JAISeq {
-	// JAISoundActivity
 	// JASSoundParams
+	// JAISoundActivity
 	/* 802A108C */ void JAISeqMgr_calc_();
 	/* 802A14FC */ void JAISeqMgr_mixOut_(JASSoundParams const&, JAISoundActivity);
 };
@@ -40,29 +52,17 @@ struct JAISeq {
 struct JAISoundID {
 };
 
-// build JAISeqDataRegion (JAISeqDataRegion) False/False
-/* top-level dependencies (begin JAISeqDataRegion) */
-/* top-level dependencies (end JAISeqDataRegion) */
-struct JAISeqDataRegion {
-};
-
-// build JAISoundHandle (JAISoundHandle) False/False
-/* top-level dependencies (begin JAISoundHandle) */
-/* top-level dependencies (end JAISoundHandle) */
-struct JAISoundHandle {
-};
-
 /* top-level dependencies (begin JAISeqMgr) */
+// outer dependency: JAISoundHandle
+// outer dependency: JAISeqDataRegion
 // outer dependency: JAISeq
 // outer dependency: JAISoundID
-// outer dependency: JAISeqDataRegion
-// outer dependency: JAISoundHandle
 /* top-level dependencies (end JAISeqMgr) */
 struct JAISeqMgr {
+	// JAISoundHandle
+	// JAISeqDataRegion
 	// JAISeq
 	// JAISoundID
-	// JAISeqDataRegion
-	// JAISoundHandle
 	/* 802A1804 */ void isUsingSeqData(JAISeqDataRegion const&);
 	/* 802A1870 */ void releaseSeqData(JAISeqDataRegion const&);
 	/* 802A1914 */ JAISeqMgr(bool);

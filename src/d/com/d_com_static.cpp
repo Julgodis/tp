@@ -40,7 +40,7 @@ struct daSus_c {
 	struct data_c {
 		// cXyz
 		// fopAc_ac_c
-		/* 80030F14 */ void set(char, cXyz const&, cXyz const&, char, char, char);
+		/* 80030F14 */ void set(s8, cXyz const&, cXyz const&, u8, u8, u8);
 		/* 80030FBC */ void reset();
 		/* 80030FCC */ void isSwitch();
 		/* 80031038 */ void check(cXyz const&);
@@ -62,9 +62,9 @@ struct daSus_c {
 		/* 80031EE4 */ room_c();
 	};
 
-	/* 80031248 */ void newData(char, cXyz const&, cXyz const&, char, char, char);
+	/* 80031248 */ void newData(s8, cXyz const&, cXyz const&, u8, u8, u8);
 	/* 800313BC */ void reset();
-	/* 80031434 */ void check(char, cXyz const&);
+	/* 80031434 */ void check(s8, cXyz const&);
 	/* 800314D4 */ void check(fopAc_ac_c*);
 	/* 800315A4 */ void execute();
 };
@@ -112,8 +112,8 @@ struct daMirror_c {
 /* top-level dependencies (begin daGrass_c) */
 /* top-level dependencies (end daGrass_c) */
 struct daGrass_c {
-	/* 800319C8 */ void deleteRoomGrass(s32);
-	/* 80031A20 */ void deleteRoomFlower(s32);
+	/* 800319C8 */ void deleteRoomGrass(int);
+	/* 80031A20 */ void deleteRoomFlower(int);
 };
 
 // build daMP_c (daMP_c) False/False
@@ -162,20 +162,20 @@ struct daObjCarry_c {
 	/* 80031CF8 */ void clrSaveFlag();
 	/* 80031D04 */ void setSaveFlag();
 	/* 80031D10 */ void chkSaveFlag();
-	/* 80031D24 */ void getPos(s32);
-	/* 80031D38 */ void savePos(s32, cXyz);
-	/* 80031D64 */ void onSttsFlag(s32, char);
-	/* 80031D78 */ void offSttsFlag(s32, char);
-	/* 80031D8C */ void chkSttsFlag(s32, char);
-	/* 80031DAC */ void setRoomNo(s32, char);
-	/* 80031DB8 */ void getRoomNo(s32);
+	/* 80031D24 */ void getPos(int);
+	/* 80031D38 */ void savePos(int, cXyz);
+	/* 80031D64 */ void onSttsFlag(int, u8);
+	/* 80031D78 */ void offSttsFlag(int, u8);
+	/* 80031D8C */ void chkSttsFlag(int, u8);
+	/* 80031DAC */ void setRoomNo(int, s8);
+	/* 80031DB8 */ void getRoomNo(int);
 };
 
 // build dComIfG_play_c (dComIfG_play_c) False/False
 /* top-level dependencies (begin dComIfG_play_c) */
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -185,7 +185,7 @@ struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 	/* 800349A4 */ void offEventBit(u16);
 	/* 800349BC */ void isEventBit(u16) const;
-	/* 800349E0 */ void setEventReg(u16, char);
+	/* 800349E0 */ void setEventReg(u16, u8);
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
@@ -193,7 +193,7 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build dBgS (dBgS) False/False
@@ -210,9 +210,9 @@ struct dBgS {
 // Forward References:
 // 
 
-void daNpcMsg_setEvtNum(char);
+void daNpcMsg_setEvtNum(u8);
 void daNpcKakashi_chkSwdTutorialStage();
-void daNpcKakashi_setSwdTutorialStep(char);
+void daNpcKakashi_setSwdTutorialStep(u8);
 void daNpcKakashi_getSwdTutorialStep();
 void daNpcKakashi_getSwdTutorialResult();
 void daNpcKakashi_setSwdTutorialResult(bool);
@@ -368,7 +368,7 @@ SECTION_SBSS extern u8 m_status__7dDemo_c[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daSus_c::data_c::set(char field_0, cXyz const& field_1, cXyz const& field_2, char field_3, char field_4, char field_5) {
+asm void daSus_c::data_c::set(s8 field_0, cXyz const& field_1, cXyz const& field_2, u8 field_3, u8 field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/com/d_com_static/set__Q27daSus_c6data_cFScRC4cXyzRC4cXyzUcUcUc.s"
 }
@@ -471,7 +471,7 @@ u8 struct_80450D88[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daSus_c::newData(char field_0, cXyz const& field_1, cXyz const& field_2, char field_3, char field_4, char field_5) {
+asm void daSus_c::newData(s8 field_0, cXyz const& field_1, cXyz const& field_2, u8 field_3, u8 field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/com/d_com_static/newData__7daSus_cFScRC4cXyzRC4cXyzUcUcUc.s"
 }
@@ -493,7 +493,7 @@ asm void daSus_c::reset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daSus_c::check(char field_0, cXyz const& field_1) {
+asm void daSus_c::check(s8 field_0, cXyz const& field_1) {
 	nofralloc
 #include "asm/d/com/d_com_static/check__7daSus_cFScRC4cXyz.s"
 }
@@ -526,7 +526,7 @@ asm void daSus_c::execute() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcMsg_setEvtNum(char field_0) {
+asm void daNpcMsg_setEvtNum(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_static/daNpcMsg_setEvtNum__FUc.s"
 }
@@ -557,7 +557,7 @@ asm void daNpcKakashi_chkSwdTutorialStage() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcKakashi_setSwdTutorialStep(char field_0) {
+asm void daNpcKakashi_setSwdTutorialStep(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_static/daNpcKakashi_setSwdTutorialStep__FUc.s"
 }
@@ -756,7 +756,7 @@ u8 m_grass__9daGrass_c[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daGrass_c::deleteRoomGrass(s32 field_0) {
+asm void daGrass_c::deleteRoomGrass(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_static/deleteRoomGrass__9daGrass_cFi.s"
 }
@@ -774,7 +774,7 @@ u8 m_flower__9daGrass_c[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daGrass_c::deleteRoomFlower(s32 field_0) {
+asm void daGrass_c::deleteRoomFlower(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_static/deleteRoomFlower__9daGrass_cFi.s"
 }
@@ -938,7 +938,7 @@ u8 mPos__12daObjCarry_c[60];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjCarry_c::getPos(s32 field_0) {
+asm void daObjCarry_c::getPos(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_static/getPos__12daObjCarry_cFi.s"
 }
@@ -949,7 +949,7 @@ asm void daObjCarry_c::getPos(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjCarry_c::savePos(s32 field_0, cXyz field_1) {
+asm void daObjCarry_c::savePos(int field_0, cXyz field_1) {
 	nofralloc
 #include "asm/d/com/d_com_static/savePos__12daObjCarry_cFi4cXyz.s"
 }
@@ -964,7 +964,7 @@ u8 mSttsFlag__12daObjCarry_c[5 + 3 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjCarry_c::onSttsFlag(s32 field_0, char field_1) {
+asm void daObjCarry_c::onSttsFlag(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_static/onSttsFlag__12daObjCarry_cFiUc.s"
 }
@@ -975,7 +975,7 @@ asm void daObjCarry_c::onSttsFlag(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjCarry_c::offSttsFlag(s32 field_0, char field_1) {
+asm void daObjCarry_c::offSttsFlag(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_static/offSttsFlag__12daObjCarry_cFiUc.s"
 }
@@ -986,7 +986,7 @@ asm void daObjCarry_c::offSttsFlag(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjCarry_c::chkSttsFlag(s32 field_0, char field_1) {
+asm void daObjCarry_c::chkSttsFlag(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_static/chkSttsFlag__12daObjCarry_cFiUc.s"
 }
@@ -1001,7 +1001,7 @@ u8 mRoomNo__12daObjCarry_c[5 + 7 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjCarry_c::setRoomNo(s32 field_0, char field_1) {
+asm void daObjCarry_c::setRoomNo(int field_0, s8 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_static/setRoomNo__12daObjCarry_cFiSc.s"
 }
@@ -1012,7 +1012,7 @@ asm void daObjCarry_c::setRoomNo(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObjCarry_c::getRoomNo(s32 field_0) {
+asm void daObjCarry_c::getRoomNo(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_static/getRoomNo__12daObjCarry_cFi.s"
 }

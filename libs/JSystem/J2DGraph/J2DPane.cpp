@@ -10,16 +10,22 @@
 // 
 
 // build J2DPane (J2DPane) False/False
-// build _GXCullMode (_GXCullMode) False/False
-/* top-level dependencies (begin _GXCullMode) */
-/* top-level dependencies (end _GXCullMode) */
-struct _GXCullMode {
+// build J2DAnmTransform (J2DAnmTransform) False/False
+/* top-level dependencies (begin J2DAnmTransform) */
+/* top-level dependencies (end J2DAnmTransform) */
+struct J2DAnmTransform {
 };
 
-// build J2DAnmVtxColor (J2DAnmVtxColor) False/False
-/* top-level dependencies (begin J2DAnmVtxColor) */
-/* top-level dependencies (end J2DAnmVtxColor) */
-struct J2DAnmVtxColor {
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
 };
 
 // build JSURandomInputStream (JSURandomInputStream) False/False
@@ -39,10 +45,10 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
 };
 
 // build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
@@ -51,28 +57,10 @@ struct JKRArchive {
 struct J2DAnmVisibilityFull {
 };
 
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
-struct J2DAnmTextureSRTKey {
-};
-
-// build J2DBasePosition (J2DBasePosition) False/False
-/* top-level dependencies (begin J2DBasePosition) */
-/* top-level dependencies (end J2DBasePosition) */
-struct J2DBasePosition {
-};
-
-// build J2DAnmTransform (J2DAnmTransform) False/False
-/* top-level dependencies (begin J2DAnmTransform) */
-/* top-level dependencies (end J2DAnmTransform) */
-struct J2DAnmTransform {
-};
-
-// build J2DRotateAxis (J2DRotateAxis) False/False
-/* top-level dependencies (begin J2DRotateAxis) */
-/* top-level dependencies (end J2DRotateAxis) */
-struct J2DRotateAxis {
+// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
+/* top-level dependencies (begin J2DAnmTexPattern) */
+/* top-level dependencies (end J2DAnmTexPattern) */
+struct J2DAnmTexPattern {
 };
 
 // build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
@@ -81,10 +69,34 @@ struct J2DRotateAxis {
 struct J2DAnmTevRegKey {
 };
 
-// build J2DAnmColor (J2DAnmColor) False/False
-/* top-level dependencies (begin J2DAnmColor) */
-/* top-level dependencies (end J2DAnmColor) */
-struct J2DAnmColor {
+// build ResFONT (ResFONT) False/False
+/* top-level dependencies (begin ResFONT) */
+/* top-level dependencies (end ResFONT) */
+struct ResFONT {
+};
+
+// build J2DAnmVtxColor (J2DAnmVtxColor) False/False
+/* top-level dependencies (begin J2DAnmVtxColor) */
+/* top-level dependencies (end J2DAnmVtxColor) */
+struct J2DAnmVtxColor {
+};
+
+// build J2DRotateAxis (J2DRotateAxis) False/False
+/* top-level dependencies (begin J2DRotateAxis) */
+/* top-level dependencies (end J2DRotateAxis) */
+struct J2DRotateAxis {
+};
+
+// build J2DAnmBase (J2DAnmBase) False/False
+/* top-level dependencies (begin J2DAnmBase) */
+/* top-level dependencies (end J2DAnmBase) */
+struct J2DAnmBase {
+};
+
+// build J2DBasePosition (J2DBasePosition) False/False
+/* top-level dependencies (begin J2DBasePosition) */
+/* top-level dependencies (end J2DBasePosition) */
+struct J2DBasePosition {
 };
 
 // build J2DGrafContext (J2DGrafContext) False/False
@@ -94,66 +106,54 @@ struct J2DGrafContext {
 	/* 802E8E20 */ void setScissor();
 };
 
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
-struct ResTIMG {
+// build J2DAnmColor (J2DAnmColor) False/False
+/* top-level dependencies (begin J2DAnmColor) */
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
 };
 
-// build ResFONT (ResFONT) False/False
-/* top-level dependencies (begin ResFONT) */
-/* top-level dependencies (end ResFONT) */
-struct ResFONT {
-};
-
-// build J2DAnmBase (J2DAnmBase) False/False
-/* top-level dependencies (begin J2DAnmBase) */
-/* top-level dependencies (end J2DAnmBase) */
-struct J2DAnmBase {
-};
-
-// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
-/* top-level dependencies (begin J2DAnmTexPattern) */
-/* top-level dependencies (end J2DAnmTexPattern) */
-struct J2DAnmTexPattern {
+// build _GXCullMode (_GXCullMode) False/False
+/* top-level dependencies (begin _GXCullMode) */
+/* top-level dependencies (end _GXCullMode) */
+struct _GXCullMode {
 };
 
 /* top-level dependencies (begin J2DPane) */
-// outer dependency: _GXCullMode
-// outer dependency: J2DAnmVtxColor
-// outer dependency: JSURandomInputStream
-// outer dependency: JKRArchive
-// outer dependency: J2DAnmVisibilityFull
-// outer dependency: J2DAnmTextureSRTKey
-// outer dependency: J2DBasePosition
 // outer dependency: J2DAnmTransform
-// outer dependency: J2DRotateAxis
-// outer dependency: J2DAnmTevRegKey
-// outer dependency: J2DAnmColor
-// outer dependency: J2DGrafContext
+// outer dependency: JKRArchive
 // outer dependency: ResTIMG
-// outer dependency: ResFONT
-// outer dependency: J2DAnmBase
+// outer dependency: JSURandomInputStream
+// outer dependency: J2DAnmTextureSRTKey
+// outer dependency: J2DAnmVisibilityFull
 // outer dependency: J2DAnmTexPattern
+// outer dependency: J2DAnmTevRegKey
+// outer dependency: ResFONT
+// outer dependency: J2DAnmVtxColor
+// outer dependency: J2DRotateAxis
+// outer dependency: J2DAnmBase
+// outer dependency: J2DBasePosition
+// outer dependency: J2DGrafContext
+// outer dependency: J2DAnmColor
+// outer dependency: _GXCullMode
 /* top-level dependencies (end J2DPane) */
 struct J2DPane {
-	// _GXCullMode
-	// J2DRotateAxis
-	// J2DAnmVtxColor
-	// J2DAnmTevRegKey
-	// J2DAnmColor
-	// J2DGrafContext
-	// JSURandomInputStream
-	// JKRArchive
-	// ResTIMG
-	// ResFONT
-	// J2DAnmBase
-	// J2DAnmVisibilityFull
-	// J2DAnmTextureSRTKey
-	// J2DBasePosition
 	// J2DAnmTransform
+	// ResFONT
+	// J2DAnmVtxColor
+	// J2DAnmColor
+	// JKRArchive
+	// J2DAnmVisibilityFull
+	// ResTIMG
+	// J2DAnmBase
+	// J2DAnmTextureSRTKey
+	// JSURandomInputStream
+	// J2DBasePosition
+	// J2DGrafContext
+	// J2DRotateAxis
+	// _GXCullMode
 	// J2DAnmTexPattern
-	/* 80020158 */ void setAlpha(char);
+	// J2DAnmTevRegKey
+	/* 80020158 */ void setAlpha(u8);
 	/* 80053BC0 */ void calcMtx();
 	/* 80053C00 */ void makeMatrix(f32, f32);
 	/* 80053C3C */ s32 getTypeID() const;
@@ -165,7 +165,7 @@ struct J2DPane {
 	/* 80256020 */ void setAnimation(J2DAnmTexPattern*);
 	/* 802F5BF8 */ J2DPane();
 	/* 802F5CB8 */ void initiate();
-	/* 802F5F9C */ J2DPane(J2DPane*, JSURandomInputStream*, char);
+	/* 802F5F9C */ J2DPane(J2DPane*, JSURandomInputStream*, u8);
 	/* 802F60C4 */ void makePaneStream(J2DPane*, JSURandomInputStream*);
 	/* 802F63F8 */ void changeUseTrans(J2DPane*);
 	/* 802F658C */ ~J2DPane();
@@ -186,12 +186,12 @@ struct J2DPane {
 	/* 802F7680 */ void setCullBack(_GXCullMode);
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 	/* 802F77D0 */ void setInfluencedAlpha(bool, bool);
-	/* 802F79A8 */ void getGlbVtx(char) const;
+	/* 802F79A8 */ void getGlbVtx(u8) const;
 	/* 802F7A8C */ void getFirstChildPane();
 	/* 802F7AC4 */ void getNextChildPane();
 	/* 802F7AFC */ void getParentPane();
 	/* 802F7B18 */ void makePaneExStream(J2DPane*, JSURandomInputStream*);
-	/* 802F7D00 */ void J2DCast_F32_to_S16(f32, char);
+	/* 802F7D00 */ void J2DCast_F32_to_S16(f32, u8);
 	/* 802F7DB8 */ void getPointer(JSURandomInputStream*, u32, JKRArchive*);
 	/* 802F7EF4 */ void setAnimation(J2DAnmBase*);
 	/* 802F7FC4 */ void setAnimation(J2DAnmTransform*);
@@ -202,6 +202,7 @@ struct J2DPane {
 	/* 802F81A0 */ void setVtxColorAnimation(J2DAnmVtxColor*);
 	/* 802F8228 */ void animationPane(J2DAnmTransform const*);
 	/* 802F82C0 */ void updateTransform(J2DAnmTransform const*);
+	/* 802F83C8 */ void drawSelf(f32, f32, f32 (* )[3][4]);
 	/* 802F83CC */ void rewriteAlpha();
 	/* 802F83D0 */ void setAnimationVF(J2DAnmVisibilityFull*);
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
@@ -257,15 +258,15 @@ struct JSUInputStream {
 
 // build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
 // build JUTResReference (JUTResReference) False/False
-// build JKRArchive (JKRArchive) True/True
 // build JSUInputStream (JSUInputStream) True/True
+// build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JUTResReference) */
-// outer dependency: JKRArchive
 // outer dependency: JSUInputStream
+// outer dependency: JKRArchive
 /* top-level dependencies (end JUTResReference) */
 struct JUTResReference {
-	// JKRArchive
 	// JSUInputStream
+	// JKRArchive
 	/* 802DE078 */ void getResource(JSUInputStream*, u32, JKRArchive*);
 };
 
@@ -289,7 +290,6 @@ extern "C" void func_802F5E88();
 extern "C" static void func_802F5F08();
 extern "C" void func_802F6D18();
 extern "C" void func_802F7264();
-extern "C" static void drawSelf__7J2DPaneFffPA3_A4_f();
 extern "C" void __sinit_J2DPane_cpp();
 
 extern "C" void __ct__7J2DPaneFv();
@@ -337,7 +337,7 @@ extern "C" void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
 extern "C" void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor();
 extern "C" void animationPane__7J2DPaneFPC15J2DAnmTransform();
 extern "C" void updateTransform__7J2DPaneFPC15J2DAnmTransform();
-extern "C" static void drawSelf__7J2DPaneFffPA3_A4_f();
+extern "C" void drawSelf__7J2DPaneFffPA3_A4_f();
 extern "C" void rewriteAlpha__7J2DPaneFv();
 extern "C" void setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull();
 extern "C" void setAnimationVC__7J2DPaneFP14J2DAnmVtxColor();
@@ -565,7 +565,7 @@ extern "C" asm static void func_802F5F08() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm J2DPane::J2DPane(J2DPane* field_0, JSURandomInputStream* field_1, char field_2) {
+asm J2DPane::J2DPane(J2DPane* field_0, JSURandomInputStream* field_1, u8 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPane/__ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc.s"
 }
@@ -841,7 +841,7 @@ asm void J2DPane::setInfluencedAlpha(bool field_0, bool field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPane::getGlbVtx(char field_0) const {
+asm void J2DPane::getGlbVtx(u8 field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPane/getGlbVtx__7J2DPaneCFUc.s"
 }
@@ -896,7 +896,7 @@ asm void J2DPane::makePaneExStream(J2DPane* field_0, JSURandomInputStream* field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPane::J2DCast_F32_to_S16(f32 field_0, char field_1) {
+asm void J2DPane::J2DCast_F32_to_S16(f32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPane/J2DCast_F32_to_S16__7J2DPaneFfUc.s"
 }
@@ -1022,7 +1022,7 @@ asm void J2DPane::updateTransform(J2DAnmTransform const* field_0) {
 
 
 /* 802F83C8-802F83CC 0004+00 rc=1 efc=0 .text      drawSelf__7J2DPaneFffPA3_A4_f                                */
-extern "C" static void drawSelf__7J2DPaneFffPA3_A4_f() {
+void J2DPane::drawSelf(f32 field_0, f32 field_1, f32 (* field_2)[3][4]) {
 	/* empty function */
 }
 

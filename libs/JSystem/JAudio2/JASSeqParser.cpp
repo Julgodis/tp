@@ -10,6 +10,8 @@
 // 
 
 // build JASSeqParser (JASSeqParser) False/False
+// build JASSeqParser (JASSeqParser) True/False
+struct JASSeqParser;
 // build JASTrack (JASTrack) False/False
 // build JASOscillator (JASOscillator) False/False
 /* top-level dependencies (begin JASOscillator) */
@@ -32,8 +34,8 @@ struct JASTrack {
 	/* 80291ABC */ void start();
 	/* 80291BB8 */ void closeChild(u32);
 	/* 80291C30 */ void openChild(u32);
-	/* 80291DAC */ void connectBus(s32, s32);
-	/* 80291DBC */ void setLatestKey(char);
+	/* 80291DAC */ void connectBus(int, int);
+	/* 80291DBC */ void setLatestKey(u8);
 	/* 80291F38 */ void noteOn(u32, u32, u32);
 	/* 80292008 */ void gateOn(u32, u32, f32, u32);
 	/* 80292198 */ void noteOff(u32, u16);
@@ -51,15 +53,13 @@ struct JASTrack {
 	/* 80292BC0 */ void setTimebase(u16);
 };
 
-// build JASSeqParser (JASSeqParser) True/False
-struct JASSeqParser;
 /* top-level dependencies (begin JASSeqParser) */
-// outer dependency: JASTrack
 // outer dependency: JASSeqParser::BranchCondition
+// outer dependency: JASTrack
 /* top-level dependencies (end JASSeqParser) */
 struct JASSeqParser {
-	// JASTrack
 	// JASSeqParser::BranchCondition
+	// JASTrack
 	// build BranchCondition (JASSeqParser::BranchCondition) False/False
 	/* dependencies (begin JASSeqParser::BranchCondition) */
 	/* dependencies (end JASSeqParser::BranchCondition) */
@@ -129,10 +129,10 @@ struct JASSeqParser {
 	/* 80295498 */ void execNoteOnGate(JASTrack*, u32, u32, u32, u32);
 	/* 80295540 */ void execNoteOnMidi(JASTrack*, u32, u32, u32);
 	/* 80295570 */ void execNoteOff(JASTrack*, u32);
-	/* 802955C8 */ void parseNoteOff(JASTrack*, char);
-	/* 80295600 */ void parseNoteOn(JASTrack*, char);
-	/* 802956B0 */ void parseCommand(JASTrack*, char, u16);
-	/* 80295864 */ void parseRegCommand(JASTrack*, s32);
+	/* 802955C8 */ void parseNoteOff(JASTrack*, u8);
+	/* 80295600 */ void parseNoteOn(JASTrack*, u8);
+	/* 802956B0 */ void parseCommand(JASTrack*, u8, u16);
+	/* 80295864 */ void parseRegCommand(JASTrack*, int);
 	/* 802958D4 */ void parse(JASTrack*);
 };
 
@@ -356,7 +356,7 @@ SECTION_SDATA2 extern f64 JASSeqParser__lit_1064;
 // External References:
 // 
 
-extern "C" void JASReport__FPCce();
+void JASReport(char const*, ...);
 extern "C" void __ptmf_test();
 extern "C" void __ptmf_scall();
 extern "C" void __cvt_fp2unsigned();
@@ -2072,7 +2072,7 @@ extern "C" asm static void execCommand__12JASSeqParserFP8JASTrackM12JASSeqParser
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASSeqParser::parseNoteOff(JASTrack* field_0, char field_1) {
+asm void JASSeqParser::parseNoteOff(JASTrack* field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/parseNoteOff__12JASSeqParserFP8JASTrackUc.s"
 }
@@ -2083,7 +2083,7 @@ asm void JASSeqParser::parseNoteOff(JASTrack* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASSeqParser::parseNoteOn(JASTrack* field_0, char field_1) {
+asm void JASSeqParser::parseNoteOn(JASTrack* field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/parseNoteOn__12JASSeqParserFP8JASTrackUc.s"
 }
@@ -2094,7 +2094,7 @@ asm void JASSeqParser::parseNoteOn(JASTrack* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASSeqParser::parseCommand(JASTrack* field_0, char field_1, u16 field_2) {
+asm void JASSeqParser::parseCommand(JASTrack* field_0, u8 field_1, u16 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/parseCommand__12JASSeqParserFP8JASTrackUcUs.s"
 }
@@ -2105,7 +2105,7 @@ asm void JASSeqParser::parseCommand(JASTrack* field_0, char field_1, u16 field_2
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASSeqParser::parseRegCommand(JASTrack* field_0, s32 field_1) {
+asm void JASSeqParser::parseRegCommand(JASTrack* field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/parseRegCommand__12JASSeqParserFP8JASTracki.s"
 }

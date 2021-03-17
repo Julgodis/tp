@@ -10,14 +10,14 @@
 // 
 
 // build JASBasicWaveBank (JASBasicWaveBank) False/False
-// build JASBasicWaveBank (JASBasicWaveBank) True/False
-struct JASBasicWaveBank;
 // build JKRHeap (JKRHeap) False/False
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
 };
 
+// build JASBasicWaveBank (JASBasicWaveBank) True/False
+struct JASBasicWaveBank;
 // build JASWaveInfo (JASWaveInfo) False/False
 /* top-level dependencies (begin JASWaveInfo) */
 /* top-level dependencies (end JASWaveInfo) */
@@ -25,13 +25,13 @@ struct JASWaveInfo {
 };
 
 /* top-level dependencies (begin JASBasicWaveBank) */
-// outer dependency: JASBasicWaveBank::TWaveGroup
 // outer dependency: JKRHeap
+// outer dependency: JASBasicWaveBank::TWaveGroup
 // outer dependency: JASWaveInfo
 /* top-level dependencies (end JASBasicWaveBank) */
 struct JASBasicWaveBank {
-	// JASBasicWaveBank::TWaveGroup
 	// JKRHeap
+	// JASBasicWaveBank::TWaveGroup
 	// JASWaveInfo
 	// build TWaveHandle (JASBasicWaveBank::TWaveHandle) False/False
 	/* dependencies (begin JASBasicWaveBank::TWaveHandle) */
@@ -53,7 +53,7 @@ struct JASBasicWaveBank {
 		/* 80298A84 */ void setWaveCount(u32, JKRHeap*);
 		/* 80298B04 */ void onLoadDone();
 		/* 80298B2C */ void onEraseDone();
-		/* 80298B54 */ void getWaveID(s32) const;
+		/* 80298B54 */ void getWaveID(int) const;
 	};
 
 	// build TGroupWaveInfo (JASBasicWaveBank::TGroupWaveInfo) False/False
@@ -71,7 +71,7 @@ struct JASBasicWaveBank {
 	/* 80298790 */ void incWaveTable(JASBasicWaveBank::TWaveGroup const*);
 	/* 8029883C */ void decWaveTable(JASBasicWaveBank::TWaveGroup const*);
 	/* 802988DC */ void getWaveHandle(u32) const;
-	/* 80298910 */ void setWaveInfo(JASBasicWaveBank::TWaveGroup*, s32, u16, JASWaveInfo const&);
+	/* 80298910 */ void setWaveInfo(JASBasicWaveBank::TWaveGroup*, int, u16, JASWaveInfo const&);
 	/* 80298C6C */ void getWaveArc(u32);
 	/* 80298C8C */ void getArcCount() const;
 };
@@ -141,7 +141,7 @@ SECTION_SBSS extern u8 mNoLoad__16JASBasicWaveBank[4 + 4 /* padding */];
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 void operator delete[](void*);
 extern "C" void OSInitMutex();
@@ -335,7 +335,7 @@ asm void JASBasicWaveBank::getWaveHandle(u32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASBasicWaveBank::setWaveInfo(JASBasicWaveBank::TWaveGroup* field_0, s32 field_1, u16 field_2, JASWaveInfo const& field_3) {
+asm void JASBasicWaveBank::setWaveInfo(JASBasicWaveBank::TWaveGroup* field_0, int field_1, u16 field_2, JASWaveInfo const& field_3) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicWaveBank/func_80298910.s"
 }
@@ -401,7 +401,7 @@ asm void JASBasicWaveBank::TWaveGroup::onEraseDone() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASBasicWaveBank::TWaveGroup::getWaveID(s32 field_0) const {
+asm void JASBasicWaveBank::TWaveGroup::getWaveID(int field_0) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicWaveBank/getWaveID__Q216JASBasicWaveBank10TWaveGroupCFi.s"
 }

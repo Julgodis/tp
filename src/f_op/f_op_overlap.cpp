@@ -53,7 +53,7 @@ void fpcMtd_Execute(process_method_class*, void*);
 void fpcMtd_IsDelete(process_method_class*, void*);
 void fpcMtd_Delete(process_method_class*, void*);
 void fpcMtd_Create(process_method_class*, void*);
-void cReq_Create(request_base_class*, char);
+void cReq_Create(request_base_class*, u8);
 
 extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
 extern "C" void fpcMtd_Execute__FP20process_method_classPv();

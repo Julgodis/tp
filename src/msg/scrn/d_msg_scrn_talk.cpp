@@ -21,7 +21,7 @@ struct JKRExpHeap {
 /* top-level dependencies (end dMsgScrnTalk_c) */
 struct dMsgScrnTalk_c {
 	// JKRExpHeap
-	/* 80246FF0 */ dMsgScrnTalk_c(char, char, JKRExpHeap*);
+	/* 80246FF0 */ dMsgScrnTalk_c(u8, u8, JKRExpHeap*);
 	/* 80247A90 */ ~dMsgScrnTalk_c();
 	/* 80247D34 */ void exec();
 	/* 80247E4C */ void drawSelf();
@@ -32,13 +32,13 @@ struct dMsgScrnTalk_c {
 	/* 80248180 */ void setSelectString(char*, char*, char*);
 	/* 802481AC */ void setSelectRubyString(char*, char*, char*);
 	/* 802481D8 */ void isSelect();
-	/* 8024820C */ void selectAnimeInit(char, char, f32, char);
-	/* 80248244 */ void selectAnimeMove(char, char, bool);
+	/* 8024820C */ void selectAnimeInit(u8, u8, f32, u8);
+	/* 80248244 */ void selectAnimeMove(u8, u8, bool);
 	/* 80248278 */ void selectAnimeEnd();
 	/* 802482AC */ void fukiScale(f32);
 	/* 802482B0 */ void fukiTrans(f32, f32);
 	/* 802482B4 */ void fukiAlpha(f32);
-	/* 8024835C */ void fukiPosCalc(char);
+	/* 8024835C */ void fukiPosCalc(u8);
 };
 
 // build JKRExpHeap (JKRExpHeap) True/True
@@ -66,7 +66,7 @@ struct JUtility {
 /* top-level dependencies (end dMeter2Draw_c) */
 struct dMeter2Draw_c {
 	// JUtility::TColor
-	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, char);
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 };
 
 // build JUtility (JUtility) True/True
@@ -87,16 +87,16 @@ struct dMsgScrn3Select_c {
 	/* 80239D08 */ void setRubyString(char*, char*, char*);
 	/* 80239D98 */ void translate(f32, f32);
 	/* 80239DD4 */ void draw(f32, f32);
-	/* 8023A094 */ void selAnimeInit(char, char, char, f32, char);
-	/* 8023A398 */ void selAnimeMove(char, char, bool);
+	/* 8023A094 */ void selAnimeInit(u8, u8, u8, f32, u8);
+	/* 8023A398 */ void selAnimeMove(u8, u8, bool);
 	/* 8023A680 */ void selAnimeEnd();
 	/* 8023A934 */ void getTextBoxWidth();
 	/* 8023A94C */ void getFontSize();
 	/* 8023A95C */ void getRubyFontSize();
 	/* 8023A97C */ void getCharSpace();
 	/* 8023A98C */ void getRubyCharSpace();
-	/* 8023A9AC */ void getTextBoxGlobalPosX(s32);
-	/* 8023A9D8 */ void getTextBoxGlobalPosY(s32);
+	/* 8023A9AC */ void getTextBoxGlobalPosX(int);
+	/* 8023A9D8 */ void getTextBoxGlobalPosY(int);
 };
 
 // build dMsgScrnArrow_c (dMsgScrnArrow_c) False/False
@@ -130,11 +130,13 @@ struct dMsgScrnBase_c {
 /* top-level dependencies (begin dMsgScrnLight_c) */
 /* top-level dependencies (end dMsgScrnLight_c) */
 struct dMsgScrnLight_c {
-	/* 80245934 */ dMsgScrnLight_c(char, char);
-	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, char);
+	/* 80245934 */ dMsgScrnLight_c(u8, u8);
+	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
+// build JUtility (JUtility) True/True
 // build J2DPane (J2DPane) False/False
 /* top-level dependencies (begin J2DPane) */
 /* top-level dependencies (end J2DPane) */
@@ -167,20 +169,18 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build JUtility (JUtility) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DPane
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: JUtility::TColor
+// outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DPane
-	// J2DScreen
 	// JKRExpHeap
 	// JUtility::TColor
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DPane
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253B2C */ void reinit();
 	/* 802542E8 */ void getGlobalPosX();
 	/* 80254364 */ void getGlobalPosY();
@@ -212,12 +212,19 @@ struct cXyz {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
 // build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) True/True
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -271,11 +278,10 @@ SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_talk__lit_4502;
 SECTION_INIT void memset();
 void mDoExt_getMesgFont();
 void mDoLib_project(Vec*, Vec*);
-void dComIfGp_getSubHeap2D(s32);
+void dComIfGp_getSubHeap2D(int);
 void dPaneClass_showNullPane(J2DScreen*);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void _savegpr_21();
 extern "C" void _savegpr_26();
 extern "C" void _savegpr_27();
@@ -421,7 +427,7 @@ f32 msg_scrn_d_msg_scrn_talk__lit_4089 = 6.0f / 5.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dMsgScrnTalk_c::dMsgScrnTalk_c(char field_0, char field_1, JKRExpHeap* field_2) {
+asm dMsgScrnTalk_c::dMsgScrnTalk_c(u8 field_0, u8 field_1, JKRExpHeap* field_2) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_talk/__ct__14dMsgScrnTalk_cFUcUcP10JKRExpHeap.s"
 }
@@ -553,7 +559,7 @@ asm void dMsgScrnTalk_c::isSelect() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrnTalk_c::selectAnimeInit(char field_0, char field_1, f32 field_2, char field_3) {
+asm void dMsgScrnTalk_c::selectAnimeInit(u8 field_0, u8 field_1, f32 field_2, u8 field_3) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_talk/selectAnimeInit__14dMsgScrnTalk_cFUcUcfUc.s"
 }
@@ -564,7 +570,7 @@ asm void dMsgScrnTalk_c::selectAnimeInit(char field_0, char field_1, f32 field_2
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrnTalk_c::selectAnimeMove(char field_0, char field_1, bool field_2) {
+asm void dMsgScrnTalk_c::selectAnimeMove(u8 field_0, u8 field_1, bool field_2) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_talk/selectAnimeMove__14dMsgScrnTalk_cFUcUcb.s"
 }
@@ -650,7 +656,7 @@ f64 msg_scrn_d_msg_scrn_talk__lit_4502 = 4503601774854144.0 /* cast s32 to float
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrnTalk_c::fukiPosCalc(char field_0) {
+asm void dMsgScrnTalk_c::fukiPosCalc(u8 field_0) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_talk/fukiPosCalc__14dMsgScrnTalk_cFUc.s"
 }

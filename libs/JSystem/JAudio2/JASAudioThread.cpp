@@ -13,7 +13,7 @@
 /* top-level dependencies (begin JASAudioThread) */
 /* top-level dependencies (end JASAudioThread) */
 struct JASAudioThread {
-	/* 8029CCDC */ JASAudioThread(s32, s32, u32);
+	/* 8029CCDC */ JASAudioThread(int, int, u32);
 	/* 8029CD4C */ void create(s32);
 	/* 8029CDC0 */ void stop();
 	/* 8029CDEC */ void run();
@@ -27,7 +27,7 @@ struct JASAudioThread {
 /* top-level dependencies (end JASGenericMemPool) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
-	/* 802908C8 */ void newMemPool(u32, s32);
+	/* 802908C8 */ void newMemPool(u32, int);
 };
 
 // build JASProbe (JASProbe) False/False
@@ -78,7 +78,7 @@ struct JKRHeap {
 /* top-level dependencies (end JKRThread) */
 struct JKRThread {
 	// JKRHeap
-	/* 802D1610 */ JKRThread(JKRHeap*, u32, s32, s32);
+	/* 802D1610 */ JKRThread(JKRHeap*, u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
@@ -106,7 +106,7 @@ SECTION_SBSS extern u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];
 extern "C" void func_802978DC();
 extern "C" void initAI__9JASDriverFPFv_v();
 extern "C" void boot__6JASDspFPFPv_v();
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void OSDisableInterrupts();
 extern "C" void OSRestoreInterrupts();
@@ -177,7 +177,7 @@ void* const __vt__14JASAudioThread[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JASAudioThread::JASAudioThread(s32 field_0, s32 field_1, u32 field_2) {
+asm JASAudioThread::JASAudioThread(int field_0, int field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAudioThread/__ct__14JASAudioThreadFiiUl.s"
 }

@@ -39,8 +39,8 @@ struct JUTProcBar {
 	/* 802E59E0 */ void create();
 	/* 802E5A28 */ void destroy();
 	/* 802E5A60 */ void clear();
-	/* 802E5B30 */ void bar_subroutine(s32, s32, s32, s32, s32, s32, s32, JUtility::TColor, JUtility::TColor);
-	/* 802E5CC4 */ void adjustMeterLength(u32, f32*, f32, f32, s32*);
+	/* 802E5B30 */ void bar_subroutine(int, int, int, int, int, int, int, JUtility::TColor, JUtility::TColor);
+	/* 802E5CC4 */ void adjustMeterLength(u32, f32*, f32, f32, int*);
 	/* 802E5E08 */ void draw();
 	/* 802E5E3C */ void drawProcessBar();
 	/* 802E6FA0 */ void drawHeapBar();
@@ -58,9 +58,9 @@ struct JKRHeap {
 // Forward References:
 // 
 
-static void addrToXPos(void*, s32);
-static void byteToXLen(s32, s32);
-static void heapBar(JKRHeap*, s32, s32, s32, s32, s32);
+static void addrToXPos(void*, int);
+static void byteToXLen(int, int);
+static void heapBar(JKRHeap*, int, int, int, int, int);
 
 extern "C" void __ct__10JUTProcBarFv();
 extern "C" void __dt__10JUTProcBarFv();
@@ -103,9 +103,9 @@ SECTION_SDATA2 extern f32 lit_2581;
 
 void* operator new(u32);
 void operator delete(void*);
-void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, s32);
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int);
 void J2DFillBox(f32, f32, f32, f32, JUtility::TColor);
-void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, char);
+void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8);
 extern "C" void OSGetTick();
 extern "C" void __construct_array();
 extern "C" void _savegpr_21();
@@ -231,7 +231,7 @@ f64 lit_2281 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTProcBar::bar_subroutine(s32 field_0, s32 field_1, s32 field_2, s32 field_3, s32 field_4, s32 field_5, s32 field_6, JUtility::TColor field_7, JUtility::TColor field_8) {
+asm void JUTProcBar::bar_subroutine(int field_0, int field_1, int field_2, int field_3, int field_4, int field_5, int field_6, JUtility::TColor field_7, JUtility::TColor field_8) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTProcBar/bar_subroutine__10JUTProcBarFiiiiiiiQ28JUtility6TColorQ28JUtility6TColor.s"
 }
@@ -264,7 +264,7 @@ f64 lit_2315 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTProcBar::adjustMeterLength(u32 field_0, f32* field_1, f32 field_2, f32 field_3, s32* field_4) {
+asm void JUTProcBar::adjustMeterLength(u32 field_0, f32* field_1, f32 field_2, f32 field_3, int* field_4) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTProcBar/adjustMeterLength__10JUTProcBarFUlPfffPi.s"
 }
@@ -316,7 +316,7 @@ asm void JUTProcBar::drawProcessBar() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void addrToXPos(void* field_0, s32 field_1) {
+asm static void addrToXPos(void* field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTProcBar/addrToXPos__FPvi.s"
 }
@@ -327,7 +327,7 @@ asm static void addrToXPos(void* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void byteToXLen(s32 field_0, s32 field_1) {
+asm static void byteToXLen(int field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTProcBar/byteToXLen__Fii.s"
 }
@@ -338,7 +338,7 @@ asm static void byteToXLen(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void heapBar(JKRHeap* field_0, s32 field_1, s32 field_2, s32 field_3, s32 field_4, s32 field_5) {
+asm static void heapBar(JKRHeap* field_0, int field_1, int field_2, int field_3, int field_4, int field_5) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTProcBar/heapBar__FP7JKRHeapiiiii.s"
 }

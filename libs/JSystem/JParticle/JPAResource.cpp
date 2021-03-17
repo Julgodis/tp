@@ -10,25 +10,17 @@
 // 
 
 // build JPAResource (JPAResource) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
-};
-
-// build JPABaseEmitter (JPABaseEmitter) False/False
-/* top-level dependencies (begin JPABaseEmitter) */
-/* top-level dependencies (end JPABaseEmitter) */
-struct JPABaseEmitter {
-	/* 8027EDD4 */ void processTillStartFrame();
-	/* 8027EE14 */ void processTermination();
-};
-
 // build JPAEmitterWorkData (JPAEmitterWorkData) False/False
 /* top-level dependencies (begin JPAEmitterWorkData) */
 /* top-level dependencies (end JPAEmitterWorkData) */
 struct JPAEmitterWorkData {
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
 
 // build JPABaseParticle (JPABaseParticle) False/False
@@ -42,17 +34,25 @@ struct JPABaseParticle {
 	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
 };
 
+// build JPABaseEmitter (JPABaseEmitter) False/False
+/* top-level dependencies (begin JPABaseEmitter) */
+/* top-level dependencies (end JPABaseEmitter) */
+struct JPABaseEmitter {
+	/* 8027EDD4 */ void processTillStartFrame();
+	/* 8027EE14 */ void processTermination();
+};
+
 /* top-level dependencies (begin JPAResource) */
-// outer dependency: JKRHeap
-// outer dependency: JPABaseEmitter
 // outer dependency: JPAEmitterWorkData
+// outer dependency: JKRHeap
 // outer dependency: JPABaseParticle
+// outer dependency: JPABaseEmitter
 /* top-level dependencies (end JPAResource) */
 struct JPAResource {
-	// JKRHeap
-	// JPABaseEmitter
 	// JPAEmitterWorkData
+	// JKRHeap
 	// JPABaseParticle
+	// JPABaseEmitter
 	/* 80274010 */ JPAResource();
 	/* 80274080 */ void init(JKRHeap*);
 	/* 802755E8 */ void calc(JPAEmitterWorkData*, JPABaseEmitter*);
@@ -245,7 +245,7 @@ void JPACalcChildAlphaOut(JPAEmitterWorkData*, JPABaseParticle*);
 void JPACalcChildScaleOut(JPAEmitterWorkData*, JPABaseParticle*);
 void JPALoadExTex(JPAEmitterWorkData*);
 extern "C" void func_80280588();
-extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
+void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]);
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXConcat();
 extern "C" void PSMTXScale();

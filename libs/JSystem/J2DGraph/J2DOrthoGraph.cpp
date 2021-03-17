@@ -45,7 +45,7 @@ struct J2DGrafContext {
 	/* 802E8C44 */ void setup2D();
 	/* 802E8E20 */ void setScissor();
 	/* 802E9118 */ void setColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
-	/* 802E9234 */ void setLineWidth(char);
+	/* 802E9234 */ void setLineWidth(u8);
 	/* 802E961C */ void place(f32, f32, f32, f32);
 };
 
@@ -55,10 +55,10 @@ struct J2DGrafContext {
 
 extern "C" void func_802E980C();
 extern "C" void func_802E987C();
-void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, s32);
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int);
 void J2DFillBox(f32, f32, f32, f32, JUtility::TColor);
 extern "C" static void func_802E9B0C();
-void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, char);
+void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8);
 extern "C" static void func_802E9BE8();
 
 extern "C" void __ct__13J2DOrthoGraphFv();
@@ -207,7 +207,7 @@ extern "C" asm void func_802E987C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DDrawLine(f32 field_0, f32 field_1, f32 field_2, f32 field_3, JUtility::TColor field_4, s32 field_5) {
+asm void J2DDrawLine(f32 field_0, f32 field_1, f32 field_2, f32 field_3, JUtility::TColor field_4, int field_5) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DOrthoGraph/J2DDrawLine__FffffQ28JUtility6TColori.s"
 }
@@ -240,7 +240,7 @@ extern "C" asm static void func_802E9B0C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DDrawFrame(f32 field_0, f32 field_1, f32 field_2, f32 field_3, JUtility::TColor field_4, char field_5) {
+asm void J2DDrawFrame(f32 field_0, f32 field_1, f32 field_2, f32 field_3, JUtility::TColor field_4, u8 field_5) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DOrthoGraph/J2DDrawFrame__FffffQ28JUtility6TColorUc.s"
 }

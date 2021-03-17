@@ -10,28 +10,22 @@
 // 
 
 // build dMeter2Info_c (dMeter2Info_c) False/False
-// build J2DPicture (J2DPicture) False/False
-/* top-level dependencies (begin J2DPicture) */
-/* top-level dependencies (end J2DPicture) */
-struct J2DPicture {
-};
-
 // build cXyz (cXyz) False/False
 /* top-level dependencies (begin cXyz) */
 /* top-level dependencies (end cXyz) */
 struct cXyz {
 };
 
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
-struct JUTFont {
-};
-
 // build JMSMesgEntry_c (JMSMesgEntry_c) False/False
 /* top-level dependencies (begin JMSMesgEntry_c) */
 /* top-level dependencies (end JMSMesgEntry_c) */
 struct JMSMesgEntry_c {
+};
+
+// build J2DPicture (J2DPicture) False/False
+/* top-level dependencies (begin J2DPicture) */
+/* top-level dependencies (end J2DPicture) */
+struct J2DPicture {
 };
 
 // build J2DTextBox (J2DTextBox) False/False
@@ -41,19 +35,25 @@ struct J2DTextBox {
 	/* 8021C7F4 */ void getFont() const;
 };
 
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
 /* top-level dependencies (begin dMeter2Info_c) */
-// outer dependency: J2DPicture
 // outer dependency: cXyz
-// outer dependency: JUTFont
 // outer dependency: JMSMesgEntry_c
+// outer dependency: J2DPicture
 // outer dependency: J2DTextBox
+// outer dependency: JUTFont
 /* top-level dependencies (end dMeter2Info_c) */
 struct dMeter2Info_c {
-	// JUTFont
-	// JMSMesgEntry_c
-	// J2DTextBox
 	// J2DPicture
 	// cXyz
+	// JMSMesgEntry_c
+	// J2DTextBox
+	// JUTFont
 	/* 8021BDDC */ dMeter2Info_c();
 	/* 8021BE20 */ ~dMeter2Info_c();
 	/* 8021BE68 */ void init();
@@ -68,30 +68,30 @@ struct dMeter2Info_c {
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 	/* 8021C6A4 */ void getStringLength(J2DTextBox*, char*);
 	/* 8021C7FC */ void getStringLength(JUTFont*, f32, f32, char*);
-	/* 8021C934 */ void onDirectUseItem(s32);
-	/* 8021C950 */ void isDirectUseItem(s32);
+	/* 8021C934 */ void onDirectUseItem(int);
+	/* 8021C950 */ void isDirectUseItem(int);
 	/* 8021C970 */ void setMeterString(s32);
 	/* 8021C9DC */ void resetWarpStatus();
 	/* 8021CA04 */ void warpInProc();
 	/* 8021CA70 */ void warpOutProc();
 	/* 8021CC00 */ void resetMeterString();
-	/* 8021CC0C */ void setWarpInfo(char const*, cXyz const&, s16, char, char, char);
-	/* 8021CC80 */ void getItemType(char);
-	/* 8021CF08 */ void readItemTexture(char, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, s32);
-	/* 8021D36C */ void setItemColor(char, J2DPicture*, J2DPicture*, J2DPicture*, J2DPicture*);
-	/* 8021D44C */ void get2ndTexture(char);
-	/* 8021D4B8 */ void get3rdTexture(char);
-	/* 8021D4FC */ void get4thTexture(char);
-	/* 8021D524 */ void set1stColor(char, J2DPicture*);
-	/* 8021D644 */ void set2ndColor(char, J2DPicture*);
-	/* 8021D764 */ void set3rdColor(char, J2DPicture*);
-	/* 8021DB64 */ void set4thColor(char, J2DPicture*);
-	/* 8021DCC4 */ void setHotSpringTimer(char);
+	/* 8021CC0C */ void setWarpInfo(char const*, cXyz const&, s16, u8, u8, u8);
+	/* 8021CC80 */ void getItemType(u8);
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
+	/* 8021D36C */ void setItemColor(u8, J2DPicture*, J2DPicture*, J2DPicture*, J2DPicture*);
+	/* 8021D44C */ void get2ndTexture(u8);
+	/* 8021D4B8 */ void get3rdTexture(u8);
+	/* 8021D4FC */ void get4thTexture(u8);
+	/* 8021D524 */ void set1stColor(u8, J2DPicture*);
+	/* 8021D644 */ void set2ndColor(u8, J2DPicture*);
+	/* 8021D764 */ void set3rdColor(u8, J2DPicture*);
+	/* 8021DB64 */ void set4thColor(u8, J2DPicture*);
+	/* 8021DCC4 */ void setHotSpringTimer(u8);
 	/* 8021DCE0 */ void decHotSpringTimer();
-	/* 8021DD5C */ void changeWater(char);
-	/* 8021DE18 */ void setMiniGameItem(char);
+	/* 8021DD5C */ void changeWater(u8);
+	/* 8021DE18 */ void setMiniGameItem(u8);
 	/* 8021E0C4 */ void resetMiniGameItem(bool);
-	/* 8021E268 */ void setMiniGameCount(char);
+	/* 8021E268 */ void setMiniGameCount(s8);
 	/* 8021E290 */ void setSaveStageName(char const*);
 };
 
@@ -110,45 +110,45 @@ struct ResTIMG {
 /* top-level dependencies (begin dSv_player_status_a_c) */
 /* top-level dependencies (end dSv_player_status_a_c) */
 struct dSv_player_status_a_c {
-	/* 80032A5C */ void getSelectItemIndex(s32) const;
+	/* 80032A5C */ void getSelectItemIndex(int) const;
 };
 
 // build dSv_player_item_c (dSv_player_item_c) False/False
 /* top-level dependencies (begin dSv_player_item_c) */
 /* top-level dependencies (end dSv_player_item_c) */
 struct dSv_player_item_c {
-	/* 80032FB8 */ void setItem(s32, char);
-	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80032FB8 */ void setItem(int, u8);
+	/* 80033030 */ void getItem(int, bool) const;
 };
 
 // build dSv_player_get_item_c (dSv_player_get_item_c) False/False
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033E94 */ void offFirstBit(char);
+	/* 80033E94 */ void offFirstBit(u8);
 };
 
 // build dSv_player_item_record_c (dSv_player_item_record_c) False/False
 /* top-level dependencies (begin dSv_player_item_record_c) */
 /* top-level dependencies (end dSv_player_item_record_c) */
 struct dSv_player_item_record_c {
-	/* 80033F6C */ void setBombNum(char, char);
-	/* 80033F7C */ void getBombNum(char) const;
+	/* 80033F6C */ void setBombNum(u8, u8);
+	/* 80033F7C */ void getBombNum(u8) const;
 };
 
 // build dSv_light_drop_c (dSv_light_drop_c) False/False
 /* top-level dependencies (begin dSv_light_drop_c) */
 /* top-level dependencies (end dSv_light_drop_c) */
 struct dSv_light_drop_c {
-	/* 8003439C */ void isLightDropGetFlag(char) const;
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
 // build dSv_letter_info_c (dSv_letter_info_c) False/False
 /* top-level dependencies (begin dSv_letter_info_c) */
 /* top-level dependencies (end dSv_letter_info_c) */
 struct dSv_letter_info_c {
-	/* 80034428 */ void onLetterGetFlag(s32);
-	/* 8003444C */ void isLetterGetFlag(s32) const;
+	/* 80034428 */ void onLetterGetFlag(int);
+	/* 8003444C */ void isLetterGetFlag(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -193,8 +193,8 @@ struct dMsgFlow_c {
 	// fopAc_ac_c
 	/* 80249F00 */ dMsgFlow_c();
 	/* 80249F48 */ ~dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, s32, s32, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, s32);
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 	/* 8024A538 */ void getMsgNo();
 };
 
@@ -212,12 +212,12 @@ struct JKRArchive {
 // 
 
 void dMeter2Info_getNowLifeGauge();
-void dMeter2Info_getNumberTextureName(s32);
+void dMeter2Info_getNumberTextureName(int);
 void dMeter2Info_getPlusTextureName();
 void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, ResTIMG const*);
-void dMeter2Info_setCloth(char, bool);
-void dMeter2Info_setSword(char, bool);
-void dMeter2Info_setShield(char, bool);
+void dMeter2Info_setCloth(u8, bool);
+void dMeter2Info_setSword(u8, bool);
+void dMeter2Info_setShield(u8, bool);
 bool dMeter2Info_is2DActiveTouchArea();
 void dMeter2Info_isMapOpenCheck();
 void dMeter2Info_isItemOpenCheck();
@@ -322,16 +322,16 @@ SECTION_SDATA2 extern f64 lit_5206;
 // 
 
 SECTION_INIT void memcpy();
-void dComIfGs_setSelectItemIndex(s32, char);
-void dComIfGs_setMixItemIndex(s32, char);
-void dComIfGs_getMixItemIndex(s32);
-void dComIfGp_setSelectItem(s32);
-void dComIfGs_setSelectEquipClothes(char);
-void dComIfGs_setSelectEquipSword(char);
-void dComIfGs_setSelectEquipShield(char);
-void dComIfGs_setWarpItemData(char const*, cXyz, s16, char, char, char);
-void dComIfGs_setWarpMarkFlag(char);
-void daNpcF_getPlayerInfoFromPlayerList(s32, s32, cXyz&, csXyz&);
+void dComIfGs_setSelectItemIndex(int, u8);
+void dComIfGs_setMixItemIndex(int, u8);
+void dComIfGs_getMixItemIndex(int);
+void dComIfGp_setSelectItem(int);
+void dComIfGs_setSelectEquipClothes(u8);
+void dComIfGs_setSelectEquipSword(u8);
+void dComIfGs_setSelectEquipShield(u8);
+void dComIfGs_setWarpItemData(char const*, cXyz, s16, s8, u8, u8);
+void dComIfGs_setWarpMarkFlag(u8);
+void daNpcF_getPlayerInfoFromPlayerList(int, int, cXyz&, csXyz&);
 void operator delete(void*);
 extern "C" void DCStoreRangeNoSync();
 extern "C" void __register_global_object();
@@ -893,7 +893,7 @@ asm void dMeter2Info_c::getStringLength(JUTFont* field_0, f32 field_1, f32 field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::onDirectUseItem(s32 field_0) {
+asm void dMeter2Info_c::onDirectUseItem(int field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/onDirectUseItem__13dMeter2Info_cFi.s"
 }
@@ -904,7 +904,7 @@ asm void dMeter2Info_c::onDirectUseItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::isDirectUseItem(s32 field_0) {
+asm void dMeter2Info_c::isDirectUseItem(int field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/isDirectUseItem__13dMeter2Info_cFi.s"
 }
@@ -977,7 +977,7 @@ asm void dMeter2Info_c::resetMeterString() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::setWarpInfo(char const* field_0, cXyz const& field_1, s16 field_2, char field_3, char field_4, char field_5) {
+asm void dMeter2Info_c::setWarpInfo(char const* field_0, cXyz const& field_1, s16 field_2, u8 field_3, u8 field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc.s"
 }
@@ -988,7 +988,7 @@ asm void dMeter2Info_c::setWarpInfo(char const* field_0, cXyz const& field_1, s1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::getItemType(char field_0) {
+asm void dMeter2Info_c::getItemType(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/getItemType__13dMeter2Info_cFUc.s"
 }
@@ -999,7 +999,7 @@ asm void dMeter2Info_c::getItemType(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::readItemTexture(char field_0, void* field_1, J2DPicture* field_2, void* field_3, J2DPicture* field_4, void* field_5, J2DPicture* field_6, void* field_7, J2DPicture* field_8, s32 field_9) {
+asm void dMeter2Info_c::readItemTexture(u8 field_0, void* field_1, J2DPicture* field_2, void* field_3, J2DPicture* field_4, void* field_5, J2DPicture* field_6, void* field_7, J2DPicture* field_8, int field_9) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/func_8021CF08.s"
 }
@@ -1010,7 +1010,7 @@ asm void dMeter2Info_c::readItemTexture(char field_0, void* field_1, J2DPicture*
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::setItemColor(char field_0, J2DPicture* field_1, J2DPicture* field_2, J2DPicture* field_3, J2DPicture* field_4) {
+asm void dMeter2Info_c::setItemColor(u8 field_0, J2DPicture* field_1, J2DPicture* field_2, J2DPicture* field_3, J2DPicture* field_4) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture.s"
 }
@@ -1021,7 +1021,7 @@ asm void dMeter2Info_c::setItemColor(char field_0, J2DPicture* field_1, J2DPictu
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::get2ndTexture(char field_0) {
+asm void dMeter2Info_c::get2ndTexture(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/get2ndTexture__13dMeter2Info_cFUc.s"
 }
@@ -1032,7 +1032,7 @@ asm void dMeter2Info_c::get2ndTexture(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::get3rdTexture(char field_0) {
+asm void dMeter2Info_c::get3rdTexture(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/get3rdTexture__13dMeter2Info_cFUc.s"
 }
@@ -1043,7 +1043,7 @@ asm void dMeter2Info_c::get3rdTexture(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::get4thTexture(char field_0) {
+asm void dMeter2Info_c::get4thTexture(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/get4thTexture__13dMeter2Info_cFUc.s"
 }
@@ -1054,7 +1054,7 @@ asm void dMeter2Info_c::get4thTexture(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::set1stColor(char field_0, J2DPicture* field_1) {
+asm void dMeter2Info_c::set1stColor(u8 field_0, J2DPicture* field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/set1stColor__13dMeter2Info_cFUcP10J2DPicture.s"
 }
@@ -1065,7 +1065,7 @@ asm void dMeter2Info_c::set1stColor(char field_0, J2DPicture* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::set2ndColor(char field_0, J2DPicture* field_1) {
+asm void dMeter2Info_c::set2ndColor(u8 field_0, J2DPicture* field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/set2ndColor__13dMeter2Info_cFUcP10J2DPicture.s"
 }
@@ -1076,7 +1076,7 @@ asm void dMeter2Info_c::set2ndColor(char field_0, J2DPicture* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::set3rdColor(char field_0, J2DPicture* field_1) {
+asm void dMeter2Info_c::set3rdColor(u8 field_0, J2DPicture* field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/set3rdColor__13dMeter2Info_cFUcP10J2DPicture.s"
 }
@@ -1087,7 +1087,7 @@ asm void dMeter2Info_c::set3rdColor(char field_0, J2DPicture* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::set4thColor(char field_0, J2DPicture* field_1) {
+asm void dMeter2Info_c::set4thColor(u8 field_0, J2DPicture* field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/set4thColor__13dMeter2Info_cFUcP10J2DPicture.s"
 }
@@ -1098,7 +1098,7 @@ asm void dMeter2Info_c::set4thColor(char field_0, J2DPicture* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::setHotSpringTimer(char field_0) {
+asm void dMeter2Info_c::setHotSpringTimer(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setHotSpringTimer__13dMeter2Info_cFUc.s"
 }
@@ -1120,7 +1120,7 @@ asm void dMeter2Info_c::decHotSpringTimer() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::changeWater(char field_0) {
+asm void dMeter2Info_c::changeWater(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/changeWater__13dMeter2Info_cFUc.s"
 }
@@ -1131,7 +1131,7 @@ asm void dMeter2Info_c::changeWater(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::setMiniGameItem(char field_0) {
+asm void dMeter2Info_c::setMiniGameItem(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setMiniGameItem__13dMeter2Info_cFUc.s"
 }
@@ -1153,7 +1153,7 @@ asm void dMeter2Info_c::resetMiniGameItem(bool field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_c::setMiniGameCount(char field_0) {
+asm void dMeter2Info_c::setMiniGameCount(s8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/setMiniGameCount__13dMeter2Info_cFSc.s"
 }
@@ -1186,7 +1186,7 @@ asm void dMeter2Info_getNowLifeGauge() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_getNumberTextureName(s32 field_0) {
+asm void dMeter2Info_getNumberTextureName(int field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_getNumberTextureName__Fi.s"
 }
@@ -1230,7 +1230,7 @@ asm void dMeter2Info_getPixel(f32 field_0, f32 field_1, f32 field_2, f32 field_3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_setCloth(char field_0, bool field_1) {
+asm void dMeter2Info_setCloth(u8 field_0, bool field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_setCloth__FUcb.s"
 }
@@ -1241,7 +1241,7 @@ asm void dMeter2Info_setCloth(char field_0, bool field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_setSword(char field_0, bool field_1) {
+asm void dMeter2Info_setSword(u8 field_0, bool field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_setSword__FUcb.s"
 }
@@ -1252,7 +1252,7 @@ asm void dMeter2Info_setSword(char field_0, bool field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Info_setShield(char field_0, bool field_1) {
+asm void dMeter2Info_setShield(u8 field_0, bool field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_info/dMeter2Info_setShield__FUcb.s"
 }

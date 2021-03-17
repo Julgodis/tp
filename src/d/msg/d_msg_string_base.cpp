@@ -10,6 +10,12 @@
 // 
 
 // build dMsgStringBase_c (dMsgStringBase_c) False/False
+// build COutFont_c (COutFont_c) False/False
+/* top-level dependencies (begin COutFont_c) */
+/* top-level dependencies (end COutFont_c) */
+struct COutFont_c {
+};
+
 // build JUTFont (JUTFont) False/False
 /* top-level dependencies (begin JUTFont) */
 /* top-level dependencies (end JUTFont) */
@@ -22,31 +28,25 @@ struct JUTFont {
 struct J2DTextBox {
 };
 
-// build COutFont_c (COutFont_c) False/False
-/* top-level dependencies (begin COutFont_c) */
-/* top-level dependencies (end COutFont_c) */
-struct COutFont_c {
-};
-
 /* top-level dependencies (begin dMsgStringBase_c) */
+// outer dependency: COutFont_c
 // outer dependency: JUTFont
 // outer dependency: J2DTextBox
-// outer dependency: COutFont_c
 /* top-level dependencies (end dMsgStringBase_c) */
 struct dMsgStringBase_c {
+	// COutFont_c
 	// JUTFont
 	// J2DTextBox
-	// COutFont_c
 	/* 802493B4 */ dMsgStringBase_c();
 	/* 80249528 */ ~dMsgStringBase_c();
 	/* 80249700 */ void getResource();
-	/* 80249768 */ void getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
-	/* 802498D8 */ void getStringPageLocal(u32, char, char, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
-	/* 80249A48 */ void getPageMax(s32);
+	/* 80249768 */ void getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 802498D8 */ void getStringPageLocal(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 80249A48 */ void getPageMax(int);
 	/* 80249A70 */ void getMessageLocal(u32, char*);
-	/* 80249BAC */ void drawFontLocal(J2DTextBox*, char, f32, f32, f32, f32, u32, char);
-	/* 80249BB0 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
-	/* 80249BD0 */ void getStringPage(u32, char, char, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 80249BAC */ void drawFontLocal(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8);
+	/* 80249BB0 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 80249BD0 */ void getStringPage(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
 	/* 80249BF8 */ void getMessage(u32, char*);
 	/* 80249C18 */ void resetStringLocal(J2DTextBox*);
 	/* 80249C1C */ void drawOutFontLocal(J2DTextBox*, f32);
@@ -56,21 +56,21 @@ struct dMsgStringBase_c {
 // build JUTFont (JUTFont) True/True
 // build COutFont_c (COutFont_c) True/True
 // build jmessage_string_tReference (jmessage_string_tReference) False/False
+// build COutFont_c (COutFont_c) True/True
 // build JUTFont (JUTFont) True/True
 // build J2DTextBox (J2DTextBox) True/True
-// build COutFont_c (COutFont_c) True/True
 /* top-level dependencies (begin jmessage_string_tReference) */
+// outer dependency: COutFont_c
 // outer dependency: JUTFont
 // outer dependency: J2DTextBox
-// outer dependency: COutFont_c
 /* top-level dependencies (end jmessage_string_tReference) */
 struct jmessage_string_tReference {
+	// COutFont_c
 	// JUTFont
 	// J2DTextBox
-	// COutFont_c
 	/* 8022F8C0 */ jmessage_string_tReference();
-	/* 8022F9AC */ void init(J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
-	/* 8022FA38 */ void getLineLength(s32);
+	/* 8022F9AC */ void init(J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 8022FA38 */ void getLineLength(int);
 };
 
 // build jmessage_string_tControl (jmessage_string_tControl) False/False
@@ -323,7 +323,7 @@ asm void dMsgStringBase_c::getResource() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgStringBase_c::getStringLocal(u32 field_0, J2DTextBox* field_1, J2DTextBox* field_2, JUTFont* field_3, COutFont_c* field_4, char field_5) {
+asm void dMsgStringBase_c::getStringLocal(u32 field_0, J2DTextBox* field_1, J2DTextBox* field_2, JUTFont* field_3, COutFont_c* field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
 }
@@ -342,7 +342,7 @@ u8 d_msg_d_msg_string_base__lit_4046[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgStringBase_c::getStringPageLocal(u32 field_0, char field_1, char field_2, J2DTextBox* field_3, J2DTextBox* field_4, JUTFont* field_5, COutFont_c* field_6, char field_7) {
+asm void dMsgStringBase_c::getStringPageLocal(u32 field_0, u8 field_1, u8 field_2, J2DTextBox* field_3, J2DTextBox* field_4, JUTFont* field_5, COutFont_c* field_6, u8 field_7) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/func_802498D8.s"
 }
@@ -353,7 +353,7 @@ asm void dMsgStringBase_c::getStringPageLocal(u32 field_0, char field_1, char fi
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgStringBase_c::getPageMax(s32 field_0) {
+asm void dMsgStringBase_c::getPageMax(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/getPageMax__16dMsgStringBase_cFi.s"
 }
@@ -372,7 +372,7 @@ asm void dMsgStringBase_c::getMessageLocal(u32 field_0, char* field_1) {
 
 
 /* 80249BAC-80249BB0 0004+00 rc=1 efc=0 .text      drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc    */
-void dMsgStringBase_c::drawFontLocal(J2DTextBox* field_0, char field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, char field_7) {
+void dMsgStringBase_c::drawFontLocal(J2DTextBox* field_0, u8 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, u8 field_7) {
 	/* empty function */
 }
 
@@ -381,7 +381,7 @@ void dMsgStringBase_c::drawFontLocal(J2DTextBox* field_0, char field_1, f32 fiel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgStringBase_c::getString(u32 field_0, J2DTextBox* field_1, J2DTextBox* field_2, JUTFont* field_3, COutFont_c* field_4, char field_5) {
+asm void dMsgStringBase_c::getString(u32 field_0, J2DTextBox* field_1, J2DTextBox* field_2, JUTFont* field_3, COutFont_c* field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
 }
@@ -392,7 +392,7 @@ asm void dMsgStringBase_c::getString(u32 field_0, J2DTextBox* field_1, J2DTextBo
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgStringBase_c::getStringPage(u32 field_0, char field_1, char field_2, J2DTextBox* field_3, J2DTextBox* field_4, JUTFont* field_5, COutFont_c* field_6, char field_7) {
+asm void dMsgStringBase_c::getStringPage(u32 field_0, u8 field_1, u8 field_2, J2DTextBox* field_3, J2DTextBox* field_4, JUTFont* field_5, COutFont_c* field_6, u8 field_7) {
 	nofralloc
 #include "asm/d/msg/d_msg_string_base/getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
 }

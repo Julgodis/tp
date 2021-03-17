@@ -12,6 +12,7 @@
 // build dTres_c (dTres_c) False/False
 // build dTres_c (dTres_c) True/False
 struct dTres_c;
+// build dTres_c (dTres_c) True/True
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
@@ -19,17 +20,16 @@ struct Vec {
 };
 
 // build dTres_c (dTres_c) True/True
-// build dTres_c (dTres_c) True/True
 /* top-level dependencies (begin dTres_c) */
+// outer dependency: dTres_c::list_class
 // outer dependency: dTres_c::typeGroupData_c
 // outer dependency: Vec
-// outer dependency: dTres_c::list_class
 // outer dependency: dTres_c::data_s
 /* top-level dependencies (end dTres_c) */
 struct dTres_c {
+	// dTres_c::list_class
 	// dTres_c::typeGroupData_c
 	// Vec
-	// dTres_c::list_class
 	// dTres_c::data_s
 	// build list_class (dTres_c::list_class) False/False
 	/* dependencies (begin dTres_c::list_class) */
@@ -53,17 +53,17 @@ struct dTres_c {
 	/* 8009BC18 */ void create();
 	/* 8009BC60 */ void remove();
 	/* 8009BC6C */ void reset();
-	/* 8009BCB4 */ void addData(dTres_c::list_class*, char);
+	/* 8009BCB4 */ void addData(dTres_c::list_class*, s8);
 	/* 8009BE28 */ void checkTreasureBox(dTres_c::data_s*);
-	/* 8009C168 */ void onStatus(char, s32, s32);
-	/* 8009C1F0 */ void offStatus(char, s32, s32);
-	/* 8009C27C */ void getBossIconFloorNo(s32*);
-	/* 8009C360 */ void getFirstData(char);
+	/* 8009C168 */ void onStatus(u8, int, int);
+	/* 8009C1F0 */ void offStatus(u8, int, int);
+	/* 8009C27C */ void getBossIconFloorNo(int*);
+	/* 8009C360 */ void getFirstData(u8);
 	/* 8009C39C */ void getNextData(dTres_c::typeGroupData_c*);
 	/* 8009C3B4 */ void getNextData(dTres_c::typeGroupData_c const*);
-	/* 8009C3CC */ void setPosition(s32, char, Vec const*, s32);
-	/* 8009C49C */ void getTypeGroupNoToType(char);
-	/* 8009C4B0 */ void getTypeToTypeGroupNo(char);
+	/* 8009C3CC */ void setPosition(int, u8, Vec const*, int);
+	/* 8009C49C */ void getTypeGroupNoToType(u8);
+	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
 };
 
 // build Vec (Vec) True/True
@@ -71,14 +71,14 @@ struct dTres_c {
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 80034934 */ void isDungeonItem(s32) const;
+	/* 80034934 */ void isDungeonItem(int) const;
 };
 
 // build dSv_info_c (dSv_info_c) False/False
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build dMapInfo_n (dMapInfo_n) False/False
@@ -88,14 +88,14 @@ struct dSv_info_c {
 /* top-level dependencies (end dMapInfo_n) */
 struct dMapInfo_n {
 	// Vec
-	/* 8003ED60 */ void correctionOriginPos(char, Vec*);
+	/* 8003ED60 */ void correctionOriginPos(s8, Vec*);
 };
 
 // build dMapInfo_c (dMapInfo_c) False/False
 /* top-level dependencies (begin dMapInfo_c) */
 /* top-level dependencies (end dMapInfo_c) */
 struct dMapInfo_c {
-	/* 8003F40C */ void calcFloorNo(f32, bool, s32);
+	/* 8003F40C */ void calcFloorNo(f32, bool, int);
 };
 
 // 
@@ -133,8 +133,8 @@ SECTION_SDATA2 extern f64 d_d_tresure__lit_3845;
 // External References:
 // 
 
-extern "C" void mDoMtx_YrotS__FPA4_fs();
-void dPath_GetRoomPath(s32, s32);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void dPath_GetRoomPath(int, int);
 void* operator new[](u32);
 extern "C" void PSMTXMultVec();
 extern "C" void PSVECAdd();
@@ -232,7 +232,7 @@ asm void dTres_c::reset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTres_c::addData(dTres_c::list_class* field_0, char field_1) {
+asm void dTres_c::addData(dTres_c::list_class* field_0, s8 field_1) {
 	nofralloc
 #include "asm/d/d_tresure/addData__7dTres_cFPQ27dTres_c10list_classSc.s"
 }
@@ -277,7 +277,7 @@ asm void dTres_c::checkTreasureBox(dTres_c::data_s* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTres_c::onStatus(char field_0, s32 field_1, s32 field_2) {
+asm void dTres_c::onStatus(u8 field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/d_tresure/onStatus__7dTres_cFUcii.s"
 }
@@ -288,7 +288,7 @@ asm void dTres_c::onStatus(char field_0, s32 field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTres_c::offStatus(char field_0, s32 field_1, s32 field_2) {
+asm void dTres_c::offStatus(u8 field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/d_tresure/offStatus__7dTres_cFUcii.s"
 }
@@ -299,7 +299,7 @@ asm void dTres_c::offStatus(char field_0, s32 field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTres_c::getBossIconFloorNo(s32* field_0) {
+asm void dTres_c::getBossIconFloorNo(int* field_0) {
 	nofralloc
 #include "asm/d/d_tresure/getBossIconFloorNo__7dTres_cFPi.s"
 }
@@ -310,7 +310,7 @@ asm void dTres_c::getBossIconFloorNo(s32* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTres_c::getFirstData(char field_0) {
+asm void dTres_c::getFirstData(u8 field_0) {
 	nofralloc
 #include "asm/d/d_tresure/getFirstData__7dTres_cFUc.s"
 }
@@ -343,7 +343,7 @@ asm void dTres_c::getNextData(dTres_c::typeGroupData_c const* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTres_c::setPosition(s32 field_0, char field_1, Vec const* field_2, s32 field_3) {
+asm void dTres_c::setPosition(int field_0, u8 field_1, Vec const* field_2, int field_3) {
 	nofralloc
 #include "asm/d/d_tresure/setPosition__7dTres_cFiUcPC3Veci.s"
 }
@@ -364,7 +364,7 @@ SECTION_RODATA const u8 typeToTypeGroup__7dTres_c[40] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTres_c::getTypeGroupNoToType(char field_0) {
+asm void dTres_c::getTypeGroupNoToType(u8 field_0) {
 	nofralloc
 #include "asm/d/d_tresure/getTypeGroupNoToType__7dTres_cFUc.s"
 }
@@ -375,7 +375,7 @@ asm void dTres_c::getTypeGroupNoToType(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTres_c::getTypeToTypeGroupNo(char field_0) {
+asm void dTres_c::getTypeToTypeGroupNo(u8 field_0) {
 	nofralloc
 #include "asm/d/d_tresure/getTypeToTypeGroupNo__7dTres_cFUc.s"
 }

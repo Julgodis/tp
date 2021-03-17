@@ -60,7 +60,7 @@ SECTION_DATA extern void*g_fopCam_Method[6];
 // External References:
 // 
 
-void fopDwTg_ToDrawQ(create_tag_class*, s32);
+void fopDwTg_ToDrawQ(create_tag_class*, int);
 void fopDwTg_DrawQTo(create_tag_class*);
 void fopDwTg_Init(create_tag_class*, void*);
 void fpcLf_GetPriority(leafdraw_class const*);

@@ -43,8 +43,9 @@ struct mDoMemCd_Ctrl_c {
 /* top-level dependencies (begin JUTConsole) */
 /* top-level dependencies (end JUTConsole) */
 struct JUTConsole {
+	/* 802E7BB8 */ void print_f(char const*, ...);
 	/* 802E7C38 */ void print(char const*);
-	/* 802E80A8 */ void scroll(s32);
+	/* 802E80A8 */ void scroll(int);
 	/* 802E8184 */ void getUsedLine() const;
 	/* 802E81A8 */ void getLineOffset() const;
 };
@@ -79,7 +80,7 @@ struct OSThread {
 /* top-level dependencies (end JKRThread) */
 struct JKRThread {
 	// OSThread
-	/* 802D16B8 */ JKRThread(OSThread*, s32);
+	/* 802D16B8 */ JKRThread(OSThread*, int);
 };
 
 // build OSThread (OSThread) True/True
@@ -100,7 +101,7 @@ struct JKRThreadSwitch {
 /* top-level dependencies (end JKRAramStream) */
 struct JKRAramStream {
 	// JKRHeap
-	/* 802D4034 */ void setTransBuffer(char*, u32, JKRHeap*);
+	/* 802D4034 */ void setTransBuffer(u8*, u32, JKRHeap*);
 };
 
 // build JUTDbPrint (JUTDbPrint) False/False
@@ -180,7 +181,7 @@ struct JUTConsoleManager {
 // 
 
 static void myGetHeapTypeByString(JKRHeap*);
-static void myMemoryErrorRoutine(void*, u32, s32);
+static void myMemoryErrorRoutine(void*, u32, int);
 static void myHeapCheckRecursive(JKRHeap*);
 void mDoMch_HeapCheckAll();
 static void developKeyCheck(u32, u32);
@@ -244,16 +245,15 @@ void mDoExt_createArchiveHeap(u32, JKRHeap*);
 void mDoExt_getArchiveHeap();
 void mDoExt_createJ2dHeap(u32, JKRHeap*);
 void mDoExt_getJ2dHeap();
-void mDoRst_reset(s32, u32, s32);
+void mDoRst_reset(int, u32, int);
 void mDoDvdErr_ThdInit();
 void exception_addition(JUTConsole*);
 void cAPICPad_recalibrate();
-void cM_initRnd(s32, s32, s32);
+void cM_initRnd(int, int, int);
 extern "C" void setErrorHandler__7JKRHeapFPFPvUli_v();
 void* operator new(u32);
 extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
 extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
-extern "C" void print_f__10JUTConsoleFPCce();
 extern "C" void PPCHalt();
 extern "C" void OSGetConsoleType();
 extern "C" void OSGetArenaHi();
@@ -482,7 +482,7 @@ asm static void myGetHeapTypeByString(JKRHeap* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void myMemoryErrorRoutine(void* field_0, u32 field_1, s32 field_2) {
+asm static void myMemoryErrorRoutine(void* field_0, u32 field_1, int field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine/myMemoryErrorRoutine__FPvUli.s"
 }

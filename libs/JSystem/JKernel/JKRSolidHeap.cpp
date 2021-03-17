@@ -27,36 +27,36 @@ struct JKRHeap {
 	/* 800065D8 */ bool dump_sort();
 	/* 802CE138 */ JKRHeap(void*, u32, JKRHeap*, bool);
 	/* 802CE264 */ ~JKRHeap();
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 	/* 802CE574 */ void callAllDisposer();
 	/* 802CE684 */ void resize(void*, u32);
 	/* 802CE72C */ void getFreeSize();
 	/* 802CE784 */ void getTotalFreeSize();
-	/* 802CE7DC */ void getMaxAllocatableSize(s32);
+	/* 802CE7DC */ void getMaxAllocatableSize(int);
 	/* 802CEAA0 */ void dispose(void*, void*);
 	/* 802CEAC0 */ void dispose();
 	/* 802CEDA0 */ void state_dump(JKRHeap::TState const&) const;
-	/* 802CEDA4 */ bool do_changeGroupID(char);
+	/* 802CEDA4 */ bool do_changeGroupID(u8);
 	/* 802CEDAC */ bool do_getCurrentGroupId();
 };
 
 // build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin JKRSolidHeap) */
-// outer dependency: JKRHeap
 // outer dependency: JKRHeap::TState
+// outer dependency: JKRHeap
 /* top-level dependencies (end JKRSolidHeap) */
 struct JKRSolidHeap {
-	// JKRHeap
 	// JKRHeap::TState
+	// JKRHeap
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 	/* 802D0AD0 */ void do_destroy();
 	/* 802D0B30 */ JKRSolidHeap(void*, u32, JKRHeap*, bool);
 	/* 802D0B8C */ ~JKRSolidHeap();
 	/* 802D0BF4 */ void adjustSize();
-	/* 802D0CB0 */ void do_alloc(u32, s32);
-	/* 802D0D58 */ void allocFromHead(u32, s32);
-	/* 802D0E20 */ void allocFromTail(u32, s32);
+	/* 802D0CB0 */ void do_alloc(u32, int);
+	/* 802D0D58 */ void allocFromHead(u32, int);
+	/* 802D0E20 */ void allocFromTail(u32, int);
 	/* 802D0EE4 */ void do_free(void*);
 	/* 802D0F14 */ void do_freeAll();
 	/* 802D0F74 */ void do_freeTail();
@@ -240,7 +240,7 @@ asm void JKRSolidHeap::adjustSize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRSolidHeap::do_alloc(u32 field_0, s32 field_1) {
+asm void JKRSolidHeap::do_alloc(u32 field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRSolidHeap/do_alloc__12JKRSolidHeapFUli.s"
 }
@@ -275,7 +275,7 @@ SECTION_DEAD char* const pad_8039CFA7 = "";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRSolidHeap::allocFromHead(u32 field_0, s32 field_1) {
+asm void JKRSolidHeap::allocFromHead(u32 field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRSolidHeap/allocFromHead__12JKRSolidHeapFUli.s"
 }
@@ -286,7 +286,7 @@ asm void JKRSolidHeap::allocFromHead(u32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRSolidHeap::allocFromTail(u32 field_0, s32 field_1) {
+asm void JKRSolidHeap::allocFromTail(u32 field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRSolidHeap/allocFromTail__12JKRSolidHeapFUli.s"
 }

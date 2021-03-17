@@ -57,8 +57,8 @@ struct JUTXfb {
 
 static void my_OSCancelAlarmAll();
 static void destroyVideo();
-void mDoRst_reset(s32, u32, s32);
-void mDoRst_resetCallBack(s32, void*);
+void mDoRst_reset(int, u32, int);
+void mDoRst_resetCallBack(int, void*);
 
 extern "C" static void my_OSCancelAlarmAll__Fv();
 extern "C" static void destroyVideo__Fv();
@@ -172,7 +172,7 @@ u8 mResetData__6mDoRst[4 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoRst_reset(s32 field_0, u32 field_1, s32 field_2) {
+asm void mDoRst_reset(int field_0, u32 field_1, int field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_Reset/mDoRst_reset__FiUli.s"
 }
@@ -183,7 +183,7 @@ asm void mDoRst_reset(s32 field_0, u32 field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoRst_resetCallBack(s32 field_0, void* field_1) {
+asm void mDoRst_resetCallBack(int field_0, void* field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_Reset/mDoRst_resetCallBack__FiPv.s"
 }

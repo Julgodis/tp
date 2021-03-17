@@ -25,7 +25,7 @@ struct cXyz {
 /* top-level dependencies (begin J2DPane) */
 /* top-level dependencies (end J2DPane) */
 struct J2DPane {
-	/* 80020158 */ void setAlpha(char);
+	/* 80020158 */ void setAlpha(u8);
 };
 
 // build J2DPicture (J2DPicture) False/False
@@ -34,7 +34,7 @@ struct J2DPane {
 struct J2DPicture {
 	/* 800202CC */ void setBlendRatio(f32, f32);
 	/* 80020338 */ void append(char const*, f32);
-	/* 80020368 */ void insert(char const*, char, f32);
+	/* 80020368 */ void insert(char const*, u8, f32);
 };
 
 // build JKRHeap (JKRHeap) False/False
@@ -101,7 +101,7 @@ struct dMsgObject_c {
 /* top-level dependencies (begin cMl) */
 /* top-level dependencies (end cMl) */
 struct cMl {
-	/* 80263228 */ void memalignB(s32, u32);
+	/* 80263228 */ void memalignB(int, u32);
 };
 
 // 
@@ -109,20 +109,20 @@ struct cMl {
 // 
 
 void fopMsgM_setStageLayer(void*);
-void fopMsgM_SearchByID(s32);
+void fopMsgM_SearchByID(u32);
 void fopMsgM_GetAppend(void*);
 void fopMsgM_Delete(void*);
-static void createAppend(fopAc_ac_c*, cXyz*, u32*, u32*, s32);
-static void createTimerAppend(s32, u32, char, char, f32, f32, f32, f32, s32);
+static void createAppend(fopAc_ac_c*, cXyz*, u32*, u32*, u32);
+static void createTimerAppend(int, u32, u8, u8, f32, f32, f32, f32, u32);
 extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i();
 extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i();
 void fopMsgM_messageSet(u32, fopAc_ac_c*, u32);
 void fopMsgM_messageSet(u32, u32);
 void fopMsgM_messageSetDemo(u32);
 void fopMsgM_messageGet(char*, u32);
-void fopMsgM_setMessageID(s32);
+void fopMsgM_setMessageID(u32);
 extern "C" void fopMsgM_Create__FsPFPv_iPv();
-void fopMsgM_valueIncrease(s32, s32, char);
+void fopMsgM_valueIncrease(int, int, u8);
 void fopMsgM_createExpHeap(u32, JKRHeap*);
 void fopMsgM_destroyExpHeap(JKRExpHeap*);
 
@@ -162,12 +162,12 @@ SECTION_SDATA2 extern f64 f_op_f_op_msg_mng__lit_4303;
 // 
 
 void mDoExt_getGameHeap();
-void fopScnM_SearchByID(s32);
-void fpcBs_Is_JustOfType(s32, s32);
-void fpcEx_SearchByID(s32);
+void fopScnM_SearchByID(u32);
+void fpcBs_Is_JustOfType(int, int);
+void fpcEx_SearchByID(u32);
 void fpcLy_CurrentLayer();
 void fpcM_Delete(void*);
-void fpcPi_Change(process_priority_class*, s32, u16, u16);
+void fpcPi_Change(process_priority_class*, u32, u16, u16);
 extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
 extern "C" void _savegpr_26();
 extern "C" void _savegpr_27();
@@ -230,7 +230,7 @@ asm void fopMsgM_setStageLayer(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopMsgM_SearchByID(s32 field_0) {
+asm void fopMsgM_SearchByID(u32 field_0) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/fopMsgM_SearchByID__FUi.s"
 }
@@ -269,7 +269,7 @@ u8 f_op_f_op_msg_mng__lit_3902[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void createAppend(fopAc_ac_c* field_0, cXyz* field_1, u32* field_2, u32* field_3, s32 field_4) {
+asm static void createAppend(fopAc_ac_c* field_0, cXyz* field_1, u32* field_2, u32* field_3, u32 field_4) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi.s"
 }
@@ -280,7 +280,7 @@ asm static void createAppend(fopAc_ac_c* field_0, cXyz* field_1, u32* field_2, u
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void createTimerAppend(s32 field_0, u32 field_1, char field_2, char field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, s32 field_8) {
+asm static void createTimerAppend(int field_0, u32 field_1, u8 field_2, u8 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, u32 field_8) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/createTimerAppend__FiUlUcUcffffUi.s"
 }
@@ -362,7 +362,7 @@ asm void fopMsgM_messageGet(char* field_0, u32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopMsgM_setMessageID(s32 field_0) {
+asm void fopMsgM_setMessageID(u32 field_0) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/fopMsgM_setMessageID__FUi.s"
 }
@@ -384,7 +384,7 @@ extern "C" asm void fopMsgM_Create__FsPFPv_iPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPane::setAlpha(char field_0) {
+asm void J2DPane::setAlpha(u8 field_0) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/setAlpha__7J2DPaneFUc.s"
 }
@@ -427,7 +427,7 @@ f64 f_op_f_op_msg_mng__lit_4303 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopMsgM_valueIncrease(s32 field_0, s32 field_1, char field_2) {
+asm void fopMsgM_valueIncrease(int field_0, int field_1, u8 field_2) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/fopMsgM_valueIncrease__FiiUc.s"
 }
@@ -460,7 +460,7 @@ asm void J2DPicture::append(char const* field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPicture::insert(char const* field_0, char field_1, f32 field_2) {
+asm void J2DPicture::insert(char const* field_0, u8 field_1, f32 field_2) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/insert__10J2DPictureFPCcUcf.s"
 }

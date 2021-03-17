@@ -10,6 +10,12 @@
 // 
 
 // build Z2FxLineMgr (Z2FxLineMgr) False/False
+// build Z2FxLineConfig (Z2FxLineConfig) False/False
+/* top-level dependencies (begin Z2FxLineConfig) */
+/* top-level dependencies (end Z2FxLineConfig) */
+struct Z2FxLineConfig {
+};
+
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
 /* top-level dependencies (end JKRArchive) */
@@ -25,24 +31,18 @@ struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-// build Z2FxLineConfig (Z2FxLineConfig) False/False
-/* top-level dependencies (begin Z2FxLineConfig) */
-/* top-level dependencies (end Z2FxLineConfig) */
-struct Z2FxLineConfig {
-};
-
 /* top-level dependencies (begin Z2FxLineMgr) */
+// outer dependency: Z2FxLineConfig
 // outer dependency: JKRArchive
 // outer dependency: JKRHeap
-// outer dependency: Z2FxLineConfig
 /* top-level dependencies (end Z2FxLineMgr) */
 struct Z2FxLineMgr {
+	// Z2FxLineConfig
 	// JKRArchive
 	// JKRHeap
-	// Z2FxLineConfig
 	/* 802BA7DC */ Z2FxLineMgr();
 	/* 802BA7FC */ void initDataArc(JKRArchive*, JKRHeap*);
-	/* 802BAC28 */ void setLineID(char, bool, bool);
+	/* 802BAC28 */ void setLineID(s8, bool, bool);
 	/* 802BAC74 */ void setLine(Z2FxLineConfig*, bool, bool);
 	/* 802BAE1C */ void setFxForceOff(bool);
 	/* 802BAE48 */ void setUnderWaterFx(bool);
@@ -66,7 +66,7 @@ struct JASDsp {
 	struct FxlineConfig_ {
 	};
 
-	/* 8029DB78 */ void setFXLine(char, s16*, JASDsp::FxlineConfig_*);
+	/* 8029DB78 */ void setFXLine(u8, s16*, JASDsp::FxlineConfig_*);
 };
 
 // build JSUInputStream (JSUInputStream) False/False
@@ -102,7 +102,7 @@ SECTION_DATA extern void*lit_3566[76];
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 extern "C" void _savegpr_22();
 extern "C" void _savegpr_28();
 extern "C" void _restgpr_22();
@@ -157,7 +157,7 @@ asm void Z2FxLineMgr::initDataArc(JKRArchive* field_0, JKRHeap* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2FxLineMgr::setLineID(char field_0, bool field_1, bool field_2) {
+asm void Z2FxLineMgr::setLineID(s8 field_0, bool field_1, bool field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2FxLineMgr/setLineID__11Z2FxLineMgrFScbb.s"
 }

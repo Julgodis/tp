@@ -29,7 +29,7 @@ void JMAEulerToQuat(s16, s16, s16, Quaternion*);
 void JMAQuatLerp(Quaternion const*, Quaternion const*, f32, Quaternion*);
 void JMAFastVECNormalize(Vec const*, Vec*);
 void JMAVECScaleAdd(Vec const*, Vec const*, Vec*, f32);
-extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff();
+void JMAMTXApplyScale(f32 const (* )[4], f32 (* )[4], f32, f32, f32);
 
 extern "C" void JMAEulerToQuat__FsssP10Quaternion();
 extern "C" void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion();
@@ -109,7 +109,7 @@ f32 lit_411 = 1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void JMAMTXApplyScale__FPA4_CfPA4_ffff() {
+asm void JMAMTXApplyScale(f32 const (* field_0)[4], f32 (* field_1)[4], f32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/JSystem/JMath/JMath/JMAMTXApplyScale__FPA4_CfPA4_ffff.s"
 }

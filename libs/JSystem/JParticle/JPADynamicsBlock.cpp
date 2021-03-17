@@ -22,7 +22,7 @@ struct JPAEmitterWorkData {
 /* top-level dependencies (end JPADynamicsBlock) */
 struct JPADynamicsBlock {
 	// JPAEmitterWorkData
-	/* 8027BB18 */ JPADynamicsBlock(char const*);
+	/* 8027BB18 */ JPADynamicsBlock(u8 const*);
 	/* 8027BB4C */ void init();
 	/* 8027BBE8 */ void create(JPAEmitterWorkData*);
 };
@@ -182,7 +182,7 @@ asm static void JPAVolumeTorus(JPAEmitterWorkData* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JPADynamicsBlock::JPADynamicsBlock(char const* field_0) {
+asm JPADynamicsBlock::JPADynamicsBlock(u8 const* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPADynamicsBlock/__ct__16JPADynamicsBlockFPCUc.s"
 }

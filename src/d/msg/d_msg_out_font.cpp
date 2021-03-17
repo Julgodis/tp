@@ -24,7 +24,7 @@ struct COutFontSet_c {
 	/* 80225BB8 */ COutFontSet_c();
 	/* 80225BF4 */ ~COutFontSet_c();
 	/* 80225C3C */ void initialize();
-	/* 80225C70 */ void drawFont(J2DTextBox*, char, f32, f32, f32, f32, u32, char);
+	/* 80225C70 */ void drawFont(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8);
 };
 
 // build J2DTextBox (J2DTextBox) True/True
@@ -52,17 +52,17 @@ struct J2DPicture {
 struct COutFont_c {
 	// J2DPicture
 	// J2DTextBox
-	/* 80225C94 */ COutFont_c(char);
+	/* 80225C94 */ COutFont_c(u8);
 	/* 80225D60 */ ~COutFont_c();
 	/* 80225E7C */ void setPane(J2DPicture*);
 	/* 80225EA8 */ void createPane();
 	/* 80226CF8 */ void initialize();
-	/* 80226D4C */ void drawFont(J2DTextBox*, char, f32, f32, f32, f32, u32, char);
+	/* 80226D4C */ void drawFont(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8);
 	/* 80226DA8 */ void setAlphaRatio(f32);
 	/* 80226DB0 */ void draw(J2DTextBox*, f32, f32, f32);
 	/* 80228448 */ void reset(J2DTextBox*);
 	/* 80228490 */ void setBlendAnime(J2DPicture*, s16);
-	/* 80228530 */ void getBtiName(s32);
+	/* 80228530 */ void getBtiName(int);
 };
 
 // build J2DPicture (J2DPicture) True/True
@@ -131,8 +131,8 @@ SECTION_SDATA2 extern f64 d_msg_d_msg_out_font__lit_5001;
 // External References:
 // 
 
-void fopMsgM_valueIncrease(s32, s32, char);
-void dMeter2Info_getNumberTextureName(s32);
+void fopMsgM_valueIncrease(int, int, u8);
+void dMeter2Info_getNumberTextureName(int);
 void* operator new(u32);
 void operator delete(void*);
 extern "C" void _savegpr_24();
@@ -396,7 +396,7 @@ asm void COutFontSet_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void COutFontSet_c::drawFont(J2DTextBox* field_0, char field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, char field_7) {
+asm void COutFontSet_c::drawFont(J2DTextBox* field_0, u8 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, u8 field_7) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc.s"
 }
@@ -407,7 +407,7 @@ asm void COutFontSet_c::drawFont(J2DTextBox* field_0, char field_1, f32 field_2,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm COutFont_c::COutFont_c(char field_0) {
+asm COutFont_c::COutFont_c(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/__ct__10COutFont_cFUc.s"
 }
@@ -523,7 +523,7 @@ asm void COutFont_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void COutFont_c::drawFont(J2DTextBox* field_0, char field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, char field_7) {
+asm void COutFont_c::drawFont(J2DTextBox* field_0, u8 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, u8 field_7) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc.s"
 }
@@ -618,7 +618,7 @@ asm void COutFont_c::setBlendAnime(J2DPicture* field_0, s16 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void COutFont_c::getBtiName(s32 field_0) {
+asm void COutFont_c::getBtiName(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_out_font/getBtiName__10COutFont_cFi.s"
 }

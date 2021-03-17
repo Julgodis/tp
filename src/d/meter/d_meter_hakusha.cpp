@@ -32,7 +32,7 @@ struct dMeterHakusha_c {
 /* top-level dependencies (begin dComIfG_play_c) */
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 // build dMeterSub_c (dMeterSub_c) False/False
@@ -43,16 +43,6 @@ struct dMeterSub_c {
 };
 
 // build dMeter2Draw_c (dMeter2Draw_c) False/False
-// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
-/* top-level dependencies (begin CPaneMgrAlpha) */
-/* top-level dependencies (end CPaneMgrAlpha) */
-struct CPaneMgrAlpha {
-	/* 802555C8 */ void show();
-	/* 80255608 */ void hide();
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255828 */ void getAlphaRate();
-};
-
 // build JUtility (JUtility) False/False
 /* top-level dependencies (begin JUtility) */
 /* top-level dependencies (end JUtility) */
@@ -65,13 +55,23 @@ struct JUtility {
 
 };
 
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+/* top-level dependencies (begin CPaneMgrAlpha) */
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
 /* top-level dependencies (begin dMeter2Draw_c) */
-// outer dependency: CPaneMgrAlpha
 // outer dependency: JUtility::TColor
+// outer dependency: CPaneMgrAlpha
 /* top-level dependencies (end dMeter2Draw_c) */
 struct dMeter2Draw_c {
-	// CPaneMgrAlpha
 	// JUtility::TColor
+	// CPaneMgrAlpha
 	/* 8021462C */ void drawPikariHakusha(f32, f32, f32, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
 	/* 8021A9C8 */ void setAlphaAnimeMin(CPaneMgrAlpha*, s16);
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
@@ -80,6 +80,18 @@ struct dMeter2Draw_c {
 // build JUtility (JUtility) True/True
 // build CPaneMgrAlpha (CPaneMgrAlpha) True/True
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (J2DPane) False/False
+/* top-level dependencies (begin J2DPane) */
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+};
+
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -105,28 +117,16 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (J2DPane) False/False
-/* top-level dependencies (begin J2DPane) */
-/* top-level dependencies (end J2DPane) */
-struct J2DPane {
-};
-
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };

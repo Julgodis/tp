@@ -30,16 +30,16 @@ struct JStage {
 
 // build JStage (JStage) True/True
 /* top-level dependencies (begin JStudio_JStage) */
-// outer dependency: JStage::TSystem
 // outer dependency: JStage::TFog
+// outer dependency: JStage::TSystem
 /* top-level dependencies (end JStudio_JStage) */
 struct JStudio_JStage {
 	// build TAdaptor_fog (JStudio_JStage::TAdaptor_fog) False/False
 	/* dependencies (begin JStudio_JStage::TAdaptor_fog) */
 	/* dependencies (end JStudio_JStage::TAdaptor_fog) */
 	struct TAdaptor_fog {
-		// JStage::TSystem
 		// JStage::TFog
+		// JStage::TSystem
 		/* 8028C574 */ TAdaptor_fog(JStage::TSystem const*, JStage::TFog*);
 		/* 8028C610 */ ~TAdaptor_fog();
 		/* 8028C684 */ void adaptor_do_prepare();
@@ -60,16 +60,16 @@ struct JStudio_JStage {
 
 // build JStage (JStage) True/True
 // build JStudio (JStudio) False/False
+// build JStudio (JStudio) True/False
 // build _GXColor (_GXColor) False/False
 /* top-level dependencies (begin _GXColor) */
 /* top-level dependencies (end _GXColor) */
 struct _GXColor {
 };
 
-// build JStudio (JStudio) True/False
 /* top-level dependencies (begin JStudio) */
-// outer dependency: _GXColor
 // outer dependency: JStudio::TVariableValue
+// outer dependency: _GXColor
 /* top-level dependencies (end JStudio) */
 namespace JStudio {
 	// build TVariableValue (JStudio::TVariableValue) False/False

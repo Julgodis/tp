@@ -74,8 +74,8 @@ namespace JStudio {
 // build JStudio_JAudio2 (JStudio_JAudio2) True/False
 struct JStudio_JAudio2;
 /* top-level dependencies (begin JStudio_JAudio2) */
-// outer dependency: JStudio::TObject
 // outer dependency: JStudio::stb::data::TParse_TBlock_object
+// outer dependency: JStudio::TObject
 // outer dependency: JStudio_JAudio2::TCreateObject
 /* top-level dependencies (end JStudio_JAudio2) */
 struct JStudio_JAudio2 {
@@ -83,8 +83,8 @@ struct JStudio_JAudio2 {
 	/* dependencies (begin JStudio_JAudio2::TCreateObject) */
 	/* dependencies (end JStudio_JAudio2::TCreateObject) */
 	struct TCreateObject {
-		// JStudio::TObject
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TObject
 		/* 8028D550 */ ~TCreateObject();
 		/* 8028D5B0 */ void create(JStudio::TObject**, JStudio::stb::data::TParse_TBlock_object const&);
 		/* 8028D624 */ void createObject_JAI_SOUND_(JStudio::stb::data::TParse_TBlock_object const&, JStudio_JAudio2::TCreateObject*);

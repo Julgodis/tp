@@ -10,8 +10,6 @@
 // 
 
 // build JUTFader (JUTFader) False/False
-// build JUTFader (JUTFader) True/False
-struct JUTFader;
 // build JUtility (JUtility) False/False
 /* top-level dependencies (begin JUtility) */
 /* top-level dependencies (end JUtility) */
@@ -24,25 +22,27 @@ struct JUtility {
 
 };
 
+// build JUTFader (JUTFader) True/False
+struct JUTFader;
 /* top-level dependencies (begin JUTFader) */
-// outer dependency: JUTFader::EStatus
 // outer dependency: JUtility::TColor
+// outer dependency: JUTFader::EStatus
 /* top-level dependencies (end JUTFader) */
 struct JUTFader {
-	// JUTFader::EStatus
 	// JUtility::TColor
+	// JUTFader::EStatus
 	// build EStatus (JUTFader::EStatus) False/False
 	/* dependencies (begin JUTFader::EStatus) */
 	/* dependencies (end JUTFader::EStatus) */
 	struct EStatus {
 	};
 
-	/* 802E5530 */ JUTFader(s32, s32, s32, s32, JUtility::TColor);
+	/* 802E5530 */ JUTFader(int, int, int, int, JUtility::TColor);
 	/* 802E55DC */ void control();
 	/* 802E56DC */ void draw();
-	/* 802E576C */ void startFadeIn(s32);
-	/* 802E579C */ void startFadeOut(s32);
-	/* 802E57D0 */ void setStatus(JUTFader::EStatus, s32);
+	/* 802E576C */ void startFadeIn(int);
+	/* 802E579C */ void startFadeOut(int);
+	/* 802E57D0 */ void setStatus(JUTFader::EStatus, int);
 	/* 802E5840 */ ~JUTFader();
 };
 
@@ -115,7 +115,7 @@ f64 lit_2196 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JUTFader::JUTFader(s32 field_0, s32 field_1, s32 field_2, s32 field_3, JUtility::TColor field_4) {
+asm JUTFader::JUTFader(int field_0, int field_1, int field_2, int field_3, JUtility::TColor field_4) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/__ct__8JUTFaderFiiiiQ28JUtility6TColor.s"
 }
@@ -148,7 +148,7 @@ asm void JUTFader::draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTFader::startFadeIn(s32 field_0) {
+asm void JUTFader::startFadeIn(int field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/startFadeIn__8JUTFaderFi.s"
 }
@@ -159,7 +159,7 @@ asm void JUTFader::startFadeIn(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTFader::startFadeOut(s32 field_0) {
+asm void JUTFader::startFadeOut(int field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/startFadeOut__8JUTFaderFi.s"
 }
@@ -170,7 +170,7 @@ asm void JUTFader::startFadeOut(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTFader::setStatus(JUTFader::EStatus field_0, s32 field_1) {
+asm void JUTFader::setStatus(JUTFader::EStatus field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTFader/setStatus__8JUTFaderFQ28JUTFader7EStatusi.s"
 }

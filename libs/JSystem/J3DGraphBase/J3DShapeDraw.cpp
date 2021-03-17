@@ -15,7 +15,7 @@
 struct J3DShapeDraw {
 	/* 80314924 */ void countVertex(u32);
 	/* 80314974 */ void addTexMtxIndexInDL(u32, u32, u32);
-	/* 80314ABC */ J3DShapeDraw(char const*, u32);
+	/* 80314ABC */ J3DShapeDraw(u8 const*, u32);
 	/* 80314AD4 */ void draw() const;
 	/* 80314B00 */ ~J3DShapeDraw();
 };
@@ -37,7 +37,7 @@ SECTION_DATA extern void*const __vt__12J3DShapeDraw[4];
 // 
 
 SECTION_INIT void memcpy();
-void* operator new[](u32, s32);
+void* operator new[](u32, int);
 void operator delete(void*);
 extern "C" void DCStoreRange();
 extern "C" void GXCallDisplayList();
@@ -92,7 +92,7 @@ void* const __vt__12J3DShapeDraw[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm J3DShapeDraw::J3DShapeDraw(char const* field_0, u32 field_1) {
+asm J3DShapeDraw::J3DShapeDraw(u8 const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeDraw/__ct__12J3DShapeDrawFPCUcUl.s"
 }

@@ -10,13 +10,6 @@
 // 
 
 // build JUTResReference (JUTResReference) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
-};
-
 // build JSUInputStream (JSUInputStream) False/False
 /* top-level dependencies (begin JSUInputStream) */
 /* top-level dependencies (end JSUInputStream) */
@@ -24,13 +17,20 @@ struct JSUInputStream {
 	/* 802DC298 */ void read(void*, s32);
 };
 
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+};
+
 /* top-level dependencies (begin JUTResReference) */
-// outer dependency: JKRArchive
 // outer dependency: JSUInputStream
+// outer dependency: JKRArchive
 /* top-level dependencies (end JUTResReference) */
 struct JUTResReference {
-	// JKRArchive
 	// JSUInputStream
+	// JKRArchive
 	/* 802DE078 */ void getResource(JSUInputStream*, u32, JKRArchive*);
 	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
 	/* 802DE1BC */ void getResource(u32, JKRArchive*);

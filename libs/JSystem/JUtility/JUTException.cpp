@@ -10,14 +10,14 @@
 // 
 
 // build JUTException (JUTException) False/False
-// build JUTException (JUTException) True/False
-struct JUTException;
 // build OSContext (OSContext) False/False
 /* top-level dependencies (begin OSContext) */
 /* top-level dependencies (end OSContext) */
 struct OSContext {
 };
 
+// build JUTException (JUTException) True/False
+struct JUTException;
 // build JUTDirectPrint (JUTDirectPrint) False/False
 /* top-level dependencies (begin JUTDirectPrint) */
 /* top-level dependencies (end JUTDirectPrint) */
@@ -26,13 +26,13 @@ struct JUTDirectPrint {
 };
 
 /* top-level dependencies (begin JUTException) */
-// outer dependency: JUTException::EInfoPage
 // outer dependency: OSContext
+// outer dependency: JUTException::EInfoPage
 // outer dependency: JUTDirectPrint
 /* top-level dependencies (end JUTException) */
 struct JUTException {
-	// JUTException::EInfoPage
 	// OSContext
+	// JUTException::EInfoPage
 	// JUTDirectPrint
 	// build EInfoPage (JUTException::EInfoPage) False/False
 	/* dependencies (begin JUTException::EInfoPage) */
@@ -44,8 +44,9 @@ struct JUTException {
 	/* 802E1E40 */ void create(JUTDirectPrint*);
 	/* 802E1EA8 */ void run();
 	/* 802E1FCC */ void errorHandler(u16, OSContext*, u32, u32);
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 	/* 802E227C */ void setFPException(u32);
-	/* 802E22C4 */ void showFloatSub(s32, f32);
+	/* 802E22C4 */ void showFloatSub(int, f32);
 	/* 802E2454 */ void showFloat(OSContext*);
 	/* 802E2578 */ void searchPartialModule(u32, u32*, u32*, u32*, u32*);
 	/* 802E26B0 */ void showStack(OSContext*);
@@ -70,25 +71,25 @@ struct JUTException {
 // build JUTDirectPrint (JUTDirectPrint) True/True
 // build OSContext (OSContext) True/True
 // build JUTExternalFB (JUTExternalFB) False/False
-// build _GXRenderModeObj (_GXRenderModeObj) False/False
-/* top-level dependencies (begin _GXRenderModeObj) */
-/* top-level dependencies (end _GXRenderModeObj) */
-struct _GXRenderModeObj {
-};
-
 // build _GXGamma (_GXGamma) False/False
 /* top-level dependencies (begin _GXGamma) */
 /* top-level dependencies (end _GXGamma) */
 struct _GXGamma {
 };
 
+// build _GXRenderModeObj (_GXRenderModeObj) False/False
+/* top-level dependencies (begin _GXRenderModeObj) */
+/* top-level dependencies (end _GXRenderModeObj) */
+struct _GXRenderModeObj {
+};
+
 /* top-level dependencies (begin JUTExternalFB) */
-// outer dependency: _GXRenderModeObj
 // outer dependency: _GXGamma
+// outer dependency: _GXRenderModeObj
 /* top-level dependencies (end JUTExternalFB) */
 struct JUTExternalFB {
-	// _GXRenderModeObj
 	// _GXGamma
+	// _GXRenderModeObj
 	/* 802E40CC */ JUTExternalFB(_GXRenderModeObj*, _GXGamma, void*, u32);
 };
 
@@ -104,7 +105,7 @@ struct JKRHeap {
 /* top-level dependencies (begin JKRThread) */
 /* top-level dependencies (end JKRThread) */
 struct JKRThread {
-	/* 802D1568 */ JKRThread(u32, s32, s32);
+	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
@@ -151,10 +152,11 @@ struct JUTGamePad {
 /* top-level dependencies (begin JUTConsole) */
 /* top-level dependencies (end JUTConsole) */
 struct JUTConsole {
-	/* 802E73E4 */ void create(s32, void*, u32);
-	/* 802E75DC */ void getLineFromObjectSize(u32, s32);
+	/* 802E73E4 */ void create(u32, void*, u32);
+	/* 802E75DC */ void getLineFromObjectSize(u32, u32);
+	/* 802E7BB8 */ void print_f(char const*, ...);
 	/* 802E7C38 */ void print(char const*);
-	/* 802E80A8 */ void scroll(s32);
+	/* 802E80A8 */ void scroll(int);
 	/* 802E8184 */ void getUsedLine() const;
 	/* 802E81A8 */ void getLineOffset() const;
 };
@@ -178,7 +180,7 @@ struct JUTDirectFile {
 	/* 802E881C */ ~JUTDirectFile();
 	/* 802E8860 */ void fopen(char const*);
 	/* 802E88FC */ void fclose();
-	/* 802E8958 */ void fgets(void*, s32);
+	/* 802E8958 */ void fgets(void*, int);
 };
 
 // 
@@ -186,8 +188,7 @@ struct JUTDirectFile {
 // 
 
 extern "C" static void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct();
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
-static void search_name_part(char*, char*, s32);
+static void search_name_part(u8*, u8*, int);
 extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
 extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
 extern "C" void __sinit_JUTException_cpp();
@@ -257,9 +258,8 @@ SECTION_INIT void memcpy();
 extern "C" void OSReport();
 extern "C" void OSPanic();
 void* operator new(u32);
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
-extern "C" void print_f__10JUTConsoleFPCce();
 extern "C" void PPCMfmsr();
 extern "C" void PPCMtmsr();
 extern "C" void OSGetArenaHi();
@@ -627,7 +627,7 @@ extern "C" asm static void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void panic_f__12JUTExceptionFPCciPCce() {
+asm void JUTException::panic_f(char const* field_0, int field_1, char const* field_2, ...) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/panic_f__12JUTExceptionFPCciPCce.s"
 }
@@ -655,7 +655,7 @@ u8 lit_2293[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTException::showFloatSub(s32 field_0, f32 field_1) {
+asm void JUTException::showFloatSub(int field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/showFloatSub__12JUTExceptionFif.s"
 }
@@ -688,7 +688,7 @@ asm void JUTException::searchPartialModule(u32 field_0, u32* field_1, u32* field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void search_name_part(char* field_0, char* field_1, s32 field_2) {
+asm static void search_name_part(u8* field_0, u8* field_1, int field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/search_name_part__FPUcPUci.s"
 }

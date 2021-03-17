@@ -10,10 +10,10 @@
 // 
 
 // build JASBasicBank (JASBasicBank) False/False
-// build JASInstParam (JASInstParam) False/False
-/* top-level dependencies (begin JASInstParam) */
-/* top-level dependencies (end JASInstParam) */
-struct JASInstParam {
+// build JASInst (JASInst) False/False
+/* top-level dependencies (begin JASInst) */
+/* top-level dependencies (end JASInst) */
+struct JASInst {
 };
 
 // build JKRHeap (JKRHeap) False/False
@@ -22,26 +22,26 @@ struct JASInstParam {
 struct JKRHeap {
 };
 
-// build JASInst (JASInst) False/False
-/* top-level dependencies (begin JASInst) */
-/* top-level dependencies (end JASInst) */
-struct JASInst {
+// build JASInstParam (JASInstParam) False/False
+/* top-level dependencies (begin JASInstParam) */
+/* top-level dependencies (end JASInstParam) */
+struct JASInstParam {
 };
 
 /* top-level dependencies (begin JASBasicBank) */
-// outer dependency: JASInstParam
-// outer dependency: JKRHeap
 // outer dependency: JASInst
+// outer dependency: JKRHeap
+// outer dependency: JASInstParam
 /* top-level dependencies (end JASBasicBank) */
 struct JASBasicBank {
-	// JASInstParam
-	// JKRHeap
 	// JASInst
+	// JKRHeap
+	// JASInstParam
 	/* 80297D78 */ JASBasicBank();
-	/* 80297DA4 */ void newInstTable(char, JKRHeap*);
-	/* 80297E00 */ void getInstParam(s32, s32, s32, JASInstParam*) const;
-	/* 80297E68 */ void setInst(s32, JASInst*);
-	/* 80297E80 */ void getInst(s32) const;
+	/* 80297DA4 */ void newInstTable(u8, JKRHeap*);
+	/* 80297E00 */ void getInstParam(int, int, int, JASInstParam*) const;
+	/* 80297E68 */ void setInst(int, JASInst*);
+	/* 80297E80 */ void getInst(int) const;
 	/* 80297F0C */ ~JASBasicBank();
 	/* 80297F68 */ void getType() const;
 };
@@ -83,7 +83,7 @@ SECTION_DATA extern void*const __vt__7JASBank[5];
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void _savegpr_29();
 extern "C" void _restgpr_29();
@@ -132,7 +132,7 @@ asm JASBasicBank::JASBasicBank() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASBasicBank::newInstTable(char field_0, JKRHeap* field_1) {
+asm void JASBasicBank::newInstTable(u8 field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/newInstTable__12JASBasicBankFUcP7JKRHeap.s"
 }
@@ -143,7 +143,7 @@ asm void JASBasicBank::newInstTable(char field_0, JKRHeap* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASBasicBank::getInstParam(s32 field_0, s32 field_1, s32 field_2, JASInstParam* field_3) const {
+asm void JASBasicBank::getInstParam(int field_0, int field_1, int field_2, JASInstParam* field_3) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/getInstParam__12JASBasicBankCFiiiP12JASInstParam.s"
 }
@@ -154,7 +154,7 @@ asm void JASBasicBank::getInstParam(s32 field_0, s32 field_1, s32 field_2, JASIn
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASBasicBank::setInst(s32 field_0, JASInst* field_1) {
+asm void JASBasicBank::setInst(int field_0, JASInst* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/setInst__12JASBasicBankFiP7JASInst.s"
 }
@@ -165,7 +165,7 @@ asm void JASBasicBank::setInst(s32 field_0, JASInst* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASBasicBank::getInst(s32 field_0) const {
+asm void JASBasicBank::getInst(int field_0) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicBank/getInst__12JASBasicBankCFi.s"
 }

@@ -24,7 +24,7 @@ struct cBgS_LinChk {
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
 	/* 80267E48 */ void ct();
-	/* 80267ED0 */ void Set2(cXyz const*, cXyz const*, s32);
+	/* 80267ED0 */ void Set2(cXyz const*, cXyz const*, u32);
 	/* 80267F40 */ void PreCalc();
 };
 
@@ -142,7 +142,7 @@ asm void cBgS_LinChk::ct() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgS_LinChk::Set2(cXyz const* field_0, cXyz const* field_1, s32 field_2) {
+asm void cBgS_LinChk::Set2(cXyz const* field_0, cXyz const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_lin_chk/Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi.s"
 }

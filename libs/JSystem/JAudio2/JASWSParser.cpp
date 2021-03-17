@@ -30,9 +30,9 @@ struct JASWSParser {
 
 // build JKRHeap (JKRHeap) True/True
 // build JASBasicWaveBank (JASBasicWaveBank) False/False
+// build JKRHeap (JKRHeap) True/True
 // build JASBasicWaveBank (JASBasicWaveBank) True/False
 struct JASBasicWaveBank;
-// build JKRHeap (JKRHeap) True/True
 // build JASWaveInfo (JASWaveInfo) False/False
 /* top-level dependencies (begin JASWaveInfo) */
 /* top-level dependencies (end JASWaveInfo) */
@@ -40,13 +40,13 @@ struct JASWaveInfo {
 };
 
 /* top-level dependencies (begin JASBasicWaveBank) */
-// outer dependency: JASBasicWaveBank::TWaveGroup
 // outer dependency: JKRHeap
+// outer dependency: JASBasicWaveBank::TWaveGroup
 // outer dependency: JASWaveInfo
 /* top-level dependencies (end JASBasicWaveBank) */
 struct JASBasicWaveBank {
-	// JASBasicWaveBank::TWaveGroup
 	// JKRHeap
+	// JASBasicWaveBank::TWaveGroup
 	// JASWaveInfo
 	// build TWaveGroup (JASBasicWaveBank::TWaveGroup) False/False
 	/* dependencies (begin JASBasicWaveBank::TWaveGroup) */
@@ -60,7 +60,7 @@ struct JASBasicWaveBank {
 	/* 80298640 */ void getWaveGroup(u32);
 	/* 80298664 */ void setGroupCount(u32, JKRHeap*);
 	/* 80298710 */ void setWaveTableSize(u32, JKRHeap*);
-	/* 80298910 */ void setWaveInfo(JASBasicWaveBank::TWaveGroup*, s32, u16, JASWaveInfo const&);
+	/* 80298910 */ void setWaveInfo(JASBasicWaveBank::TWaveGroup*, int, u16, JASWaveInfo const&);
 };
 
 // build JASWaveInfo (JASWaveInfo) True/True
@@ -115,7 +115,7 @@ SECTION_SBSS extern u8 sUsedHeapSize__11JASWSParser[4 + 4 /* padding */];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 extern "C" void _savegpr_20();
 extern "C" void _savegpr_23();
 extern "C" void _restgpr_20();

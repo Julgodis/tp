@@ -14,7 +14,7 @@
 /* top-level dependencies (end JUTConsole) */
 struct JUTConsole {
 	/* 802E7C38 */ void print(char const*);
-	/* 802E7F7C */ void dumpToTerminal(s32);
+	/* 802E7F7C */ void dumpToTerminal(u32);
 };
 
 // build dRes_control_c (dRes_control_c) False/False
@@ -50,7 +50,7 @@ struct JKRAramHeap {
 // Forward References:
 // 
 
-extern "C" static void print_f__FPCce();
+static void print_f(char const*, ...);
 static void print(char const*);
 static void dispHeapInfo();
 static void dispGameInfo();
@@ -108,7 +108,7 @@ SECTION_SBSS extern u8 sAramObject__7JKRAram[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void print_f__FPCce() {
+asm static void print_f(char const* field_0, ...) {
 	nofralloc
 #include "asm/m_Do/m_Do_machine_exception/print_f__FPCce.s"
 }

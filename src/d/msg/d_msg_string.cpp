@@ -10,6 +10,13 @@
 // 
 
 // build dMsgString_c (dMsgString_c) False/False
+// build COutFont_c (COutFont_c) False/False
+/* top-level dependencies (begin COutFont_c) */
+/* top-level dependencies (end COutFont_c) */
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
+};
+
 // build JUTFont (JUTFont) False/False
 /* top-level dependencies (begin JUTFont) */
 /* top-level dependencies (end JUTFont) */
@@ -22,30 +29,23 @@ struct JUTFont {
 struct J2DTextBox {
 };
 
-// build COutFont_c (COutFont_c) False/False
-/* top-level dependencies (begin COutFont_c) */
-/* top-level dependencies (end COutFont_c) */
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(char);
-};
-
 /* top-level dependencies (begin dMsgString_c) */
+// outer dependency: COutFont_c
 // outer dependency: JUTFont
 // outer dependency: J2DTextBox
-// outer dependency: COutFont_c
 /* top-level dependencies (end dMsgString_c) */
 struct dMsgString_c {
+	// COutFont_c
 	// JUTFont
 	// J2DTextBox
-	// COutFont_c
-	/* 80191B6C */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
-	/* 801E1D10 */ void getStringPage(u32, char, char, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 80191B6C */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 801E1D10 */ void getStringPage(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
 	/* 80249C20 */ dMsgString_c();
-	/* 80249CA0 */ dMsgString_c(char);
+	/* 80249CA0 */ dMsgString_c(u8);
 	/* 80249D28 */ ~dMsgString_c();
 	/* 80249DB4 */ void resetStringLocal(J2DTextBox*);
 	/* 80249DE4 */ void drawOutFontLocal(J2DTextBox*, f32);
-	/* 80249ED0 */ void drawFontLocal(J2DTextBox*, char, f32, f32, f32, f32, u32, char);
+	/* 80249ED0 */ void drawFontLocal(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8);
 };
 
 // build J2DTextBox (J2DTextBox) True/True
@@ -65,7 +65,7 @@ struct dMsgStringBase_c {
 /* top-level dependencies (begin J2DPane) */
 /* top-level dependencies (end J2DPane) */
 struct J2DPane {
-	/* 802F79A8 */ void getGlbVtx(char) const;
+	/* 802F79A8 */ void getGlbVtx(u8) const;
 };
 
 // 
@@ -135,7 +135,7 @@ asm dMsgString_c::dMsgString_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dMsgString_c::dMsgString_c(char field_0) {
+asm dMsgString_c::dMsgString_c(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_string/__ct__12dMsgString_cFUc.s"
 }
@@ -193,7 +193,7 @@ asm void dMsgString_c::drawOutFontLocal(J2DTextBox* field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgString_c::drawFontLocal(J2DTextBox* field_0, char field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, char field_7) {
+asm void dMsgString_c::drawFontLocal(J2DTextBox* field_0, u8 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, u8 field_7) {
 	nofralloc
 #include "asm/d/msg/d_msg_string/drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc.s"
 }

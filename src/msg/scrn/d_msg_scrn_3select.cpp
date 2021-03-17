@@ -20,16 +20,16 @@ struct dMsgScrn3Select_c {
 	/* 80239D08 */ void setRubyString(char*, char*, char*);
 	/* 80239D98 */ void translate(f32, f32);
 	/* 80239DD4 */ void draw(f32, f32);
-	/* 8023A094 */ void selAnimeInit(char, char, char, f32, char);
-	/* 8023A398 */ void selAnimeMove(char, char, bool);
+	/* 8023A094 */ void selAnimeInit(u8, u8, u8, f32, u8);
+	/* 8023A398 */ void selAnimeMove(u8, u8, bool);
 	/* 8023A680 */ void selAnimeEnd();
 	/* 8023A934 */ void getTextBoxWidth();
 	/* 8023A94C */ void getFontSize();
 	/* 8023A95C */ void getRubyFontSize();
 	/* 8023A97C */ void getCharSpace();
 	/* 8023A98C */ void getRubyCharSpace();
-	/* 8023A9AC */ void getTextBoxGlobalPosX(s32);
-	/* 8023A9D8 */ void getTextBoxGlobalPosY(s32);
+	/* 8023A9AC */ void getTextBoxGlobalPosX(int);
+	/* 8023A9D8 */ void getTextBoxGlobalPosY(int);
 	/* 8023AA04 */ void open1Proc();
 	/* 8023AAF4 */ void open2Proc();
 	/* 8023AC14 */ void waitProc();
@@ -38,7 +38,7 @@ struct dMsgScrn3Select_c {
 	/* 8023B148 */ void closeProc();
 	/* 8023B228 */ void selectScale();
 	/* 8023B4AC */ void selectTrans();
-	/* 8023B870 */ void selectAnimeTransform(s32);
+	/* 8023B870 */ void selectAnimeTransform(int);
 };
 
 // build J2DAnmColorKey (J2DAnmColorKey) False/False
@@ -49,12 +49,6 @@ struct J2DAnmColorKey {
 };
 
 // build dSelect_cursor_c (dSelect_cursor_c) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
 // build J2DPane (J2DPane) False/False
 /* top-level dependencies (begin J2DPane) */
 /* top-level dependencies (end J2DPane) */
@@ -63,14 +57,20 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
 /* top-level dependencies (begin dSelect_cursor_c) */
-// outer dependency: JKRArchive
 // outer dependency: J2DPane
+// outer dependency: JKRArchive
 /* top-level dependencies (end dSelect_cursor_c) */
 struct dSelect_cursor_c {
-	// JKRArchive
 	// J2DPane
-	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	// JKRArchive
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801952A0 */ void setAlphaRate(f32);
@@ -79,6 +79,13 @@ struct dSelect_cursor_c {
 // build JKRArchive (JKRArchive) True/True
 // build J2DPane (J2DPane) True/True
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (J2DPane) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) False/False
@@ -100,23 +107,16 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (J2DPane) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802542E8 */ void getGlobalPosX();
 	/* 80254364 */ void getGlobalPosY();
 	/* 802545B0 */ void paneTrans(f32, f32);
@@ -147,6 +147,7 @@ struct JKRFileLoader {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
@@ -227,7 +228,6 @@ void mDoExt_getMesgFont();
 void dPaneClass_showNullPane(J2DScreen*);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void __ptmf_scall();
 extern "C" void _savegpr_20();
 extern "C" void _savegpr_23();
@@ -536,7 +536,7 @@ asm void dMsgScrn3Select_c::draw(f32 field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrn3Select_c::selAnimeInit(char field_0, char field_1, char field_2, f32 field_3, char field_4) {
+asm void dMsgScrn3Select_c::selAnimeInit(u8 field_0, u8 field_1, u8 field_2, f32 field_3, u8 field_4) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_3select/selAnimeInit__17dMsgScrn3Select_cFUcUcUcfUc.s"
 }
@@ -551,7 +551,7 @@ f64 msg_scrn_d_msg_scrn_3select__lit_4345 = 4503601774854144.0 /* cast s32 to fl
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrn3Select_c::selAnimeMove(char field_0, char field_1, bool field_2) {
+asm void dMsgScrn3Select_c::selAnimeMove(u8 field_0, u8 field_1, bool field_2) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_3select/selAnimeMove__17dMsgScrn3Select_cFUcUcb.s"
 }
@@ -632,7 +632,7 @@ asm void dMsgScrn3Select_c::getRubyCharSpace() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrn3Select_c::getTextBoxGlobalPosX(s32 field_0) {
+asm void dMsgScrn3Select_c::getTextBoxGlobalPosX(int field_0) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_3select/getTextBoxGlobalPosX__17dMsgScrn3Select_cFi.s"
 }
@@ -643,7 +643,7 @@ asm void dMsgScrn3Select_c::getTextBoxGlobalPosX(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrn3Select_c::getTextBoxGlobalPosY(s32 field_0) {
+asm void dMsgScrn3Select_c::getTextBoxGlobalPosY(int field_0) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_3select/getTextBoxGlobalPosY__17dMsgScrn3Select_cFi.s"
 }
@@ -756,7 +756,7 @@ asm void dMsgScrn3Select_c::selectTrans() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrn3Select_c::selectAnimeTransform(s32 field_0) {
+asm void dMsgScrn3Select_c::selectAnimeTransform(int field_0) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_3select/selectAnimeTransform__17dMsgScrn3Select_cFi.s"
 }

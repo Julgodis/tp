@@ -10,31 +10,50 @@
 // 
 
 // build dMeter2Draw_c (dMeter2Draw_c) False/False
-// build CPaneMgr (CPaneMgr) False/False
-// build J2DPane (J2DPane) False/False
-// build J2DBasePosition (J2DBasePosition) False/False
-/* top-level dependencies (begin J2DBasePosition) */
-/* top-level dependencies (end J2DBasePosition) */
-struct J2DBasePosition {
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
 };
 
+// build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build JUtility (JUtility) True/True
+// build J2DPane (J2DPane) False/False
 // build J2DRotateAxis (J2DRotateAxis) False/False
 /* top-level dependencies (begin J2DRotateAxis) */
 /* top-level dependencies (end J2DRotateAxis) */
 struct J2DRotateAxis {
 };
 
+// build J2DBasePosition (J2DBasePosition) False/False
+/* top-level dependencies (begin J2DBasePosition) */
+/* top-level dependencies (end J2DBasePosition) */
+struct J2DBasePosition {
+};
+
 /* top-level dependencies (begin J2DPane) */
-// outer dependency: J2DBasePosition
 // outer dependency: J2DRotateAxis
+// outer dependency: J2DBasePosition
 /* top-level dependencies (end J2DPane) */
 struct J2DPane {
-	// J2DBasePosition
 	// J2DRotateAxis
+	// J2DBasePosition
 	/* 802F666C */ void appendChild(J2DPane*);
 	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
-	/* 802F79A8 */ void getGlbVtx(char) const;
+	/* 802F79A8 */ void getGlbVtx(u8) const;
 	/* 802F7FCC */ void animationTransform();
 };
 
@@ -65,53 +84,41 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
-struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
-	struct TColor {
-	};
-
-};
-
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DPane
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: JUtility::TColor
+// outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DPane
-	// J2DScreen
 	// JKRExpHeap
 	// JUtility::TColor
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DPane
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
-// build JUtility (JUtility) True/True
-// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
-// build J2DScreen (J2DScreen) True/True
+// build J2DAnmColor (J2DAnmColor) False/False
+/* top-level dependencies (begin J2DAnmColor) */
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
+};
+
 // build JKRExpHeap (JKRExpHeap) True/True
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DScreen (J2DScreen) True/True
 /* top-level dependencies (begin CPaneMgrAlpha) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgrAlpha) */
 struct CPaneMgrAlpha {
-	// J2DScreen
 	// JKRExpHeap
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 8025564C */ void isVisible();
@@ -119,26 +126,19 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DAnmColor (J2DAnmColor) False/False
-/* top-level dependencies (begin J2DAnmColor) */
-/* top-level dependencies (end J2DAnmColor) */
-struct J2DAnmColor {
-};
-
 /* top-level dependencies (begin dMeter2Draw_c) */
-// outer dependency: CPaneMgr
 // outer dependency: JUtility::TColor
-// outer dependency: CPaneMgrAlpha
-// outer dependency: JKRExpHeap
+// outer dependency: CPaneMgr
 // outer dependency: J2DAnmColor
+// outer dependency: JKRExpHeap
+// outer dependency: CPaneMgrAlpha
 /* top-level dependencies (end dMeter2Draw_c) */
 struct dMeter2Draw_c {
 	// JUtility::TColor
-	// J2DAnmColor
 	// CPaneMgr
-	// CPaneMgrAlpha
 	// JKRExpHeap
+	// CPaneMgrAlpha
+	// J2DAnmColor
 	/* 8020FAB4 */ dMeter2Draw_c(JKRExpHeap*);
 	/* 802102F8 */ ~dMeter2Draw_c();
 	/* 80210FB0 */ void init();
@@ -154,15 +154,15 @@ struct dMeter2Draw_c {
 	/* 80213D6C */ void setPikariBpkAnimation(J2DAnmColor*);
 	/* 80213E3C */ void playPikariBpkAnimation(f32);
 	/* 80213E94 */ void playOxygenBpkAnimation(J2DAnmColor*);
-	/* 80213FF0 */ void drawPikari(CPaneMgr*, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, char);
-	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, char);
+	/* 80213FF0 */ void drawPikari(CPaneMgr*, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 	/* 8021462C */ void drawPikariHakusha(f32, f32, f32, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
-	/* 802147CC */ void changeTextureLife(s32, bool, char);
+	/* 802147CC */ void changeTextureLife(int, bool, u8);
 	/* 802149F4 */ void drawLife(s16, s16, f32, f32);
 	/* 80214C20 */ void setAlphaLifeChange(bool);
 	/* 80214DF4 */ void setAlphaLifeAnimeMin();
 	/* 80214E54 */ void setAlphaLifeAnimeMax();
-	/* 80214EB4 */ void drawKanteraScreen(char);
+	/* 80214EB4 */ void drawKanteraScreen(u8);
 	/* 80215290 */ void drawMagic(s16, s16, f32, f32);
 	/* 80215380 */ void setAlphaMagicChange(bool);
 	/* 802154A8 */ void drawKantera(s32, s32, f32, f32);
@@ -173,7 +173,7 @@ struct dMeter2Draw_c {
 	/* 802158F0 */ void setAlphaOxygenChange(bool);
 	/* 80215A18 */ void setAlphaOxygenAnimeMin();
 	/* 80215A94 */ void setAlphaOxygenAnimeMax();
-	/* 80215B18 */ void drawLightDrop(char, char, f32, f32, f32, f32, char);
+	/* 80215B18 */ void drawLightDrop(u8, u8, f32, f32, f32, f32, u8);
 	/* 80215DA4 */ void setAlphaLightDropChange(bool);
 	/* 80215DA8 */ void getNowLightDropRateCalc();
 	/* 80215E40 */ void setAlphaLightDropAnimeMin();
@@ -186,15 +186,15 @@ struct dMeter2Draw_c {
 	/* 80216B28 */ void setAlphaKeyChange(bool);
 	/* 80216CA8 */ void setAlphaKeyAnimeMin();
 	/* 80216D2C */ void setAlphaKeyAnimeMax();
-	/* 80216DAC */ void drawButtonA(char, f32, f32, f32, f32, f32, bool, bool);
-	/* 802170E4 */ void drawButtonB(char, bool, f32, f32, f32, f32, f32, bool);
-	/* 8021764C */ void drawButtonR(char, char, bool, bool);
-	/* 802176EC */ void drawButtonZ(char);
-	/* 80217904 */ void drawButton3D(char);
-	/* 80217954 */ void drawButtonC(char, bool);
-	/* 802179C0 */ void drawButtonS(char);
-	/* 80217A10 */ void drawButtonBin(char);
-	/* 80217AB4 */ void drawButtonXY(s32, char, char, bool, bool);
+	/* 80216DAC */ void drawButtonA(u8, f32, f32, f32, f32, f32, bool, bool);
+	/* 802170E4 */ void drawButtonB(u8, bool, f32, f32, f32, f32, f32, bool);
+	/* 8021764C */ void drawButtonR(u8, u8, bool, bool);
+	/* 802176EC */ void drawButtonZ(u8);
+	/* 80217904 */ void drawButton3D(u8);
+	/* 80217954 */ void drawButtonC(u8, bool);
+	/* 802179C0 */ void drawButtonS(u8);
+	/* 80217A10 */ void drawButtonBin(u8);
+	/* 80217AB4 */ void drawButtonXY(int, u8, u8, bool, bool);
 	/* 80218238 */ void getButtonCrossParentInitTransY();
 	/* 80218254 */ void drawButtonCross(f32, f32);
 	/* 80218338 */ void setAlphaButtonCrossAnimeMin();
@@ -210,24 +210,24 @@ struct dMeter2Draw_c {
 	/* 80219258 */ void setAlphaButtonAAnimeMax();
 	/* 80219324 */ void setAlphaButtonBAnimeMin();
 	/* 80219474 */ void setAlphaButtonBAnimeMax();
-	/* 802195A4 */ void setButtonIconAAlpha(char, u32, bool);
-	/* 80219788 */ void setButtonIconBAlpha(char, u32, bool);
+	/* 802195A4 */ void setButtonIconAAlpha(u8, u32, bool);
+	/* 80219788 */ void setButtonIconBAlpha(u8, u32, bool);
 	/* 80219A84 */ void setButtonIconMidonaAlpha(u32);
-	/* 80219E98 */ void setButtonIconAlpha(s32, char, u32, bool);
-	/* 8021A29C */ void getNumberTexture(s32);
-	/* 8021A2F4 */ void getActionString(char, char, char*);
-	/* 8021A468 */ void changeTextureItemB(char);
-	/* 8021A71C */ void changeTextureItemXY(s32, char);
+	/* 80219E98 */ void setButtonIconAlpha(int, u8, u32, bool);
+	/* 8021A29C */ void getNumberTexture(int);
+	/* 8021A2F4 */ void getActionString(u8, u8, u8*);
+	/* 8021A468 */ void changeTextureItemB(u8);
+	/* 8021A71C */ void changeTextureItemXY(int, u8);
 	/* 8021A9C8 */ void setAlphaAnimeMin(CPaneMgrAlpha*, s16);
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
-	/* 8021AB84 */ void setItemNum(char, char, char);
-	/* 8021AEC8 */ void drawItemNum(char, f32);
-	/* 8021AF78 */ void drawKanteraMeter(char, f32);
+	/* 8021AB84 */ void setItemNum(u8, u8, u8);
+	/* 8021AEC8 */ void drawItemNum(u8, f32);
+	/* 8021AF78 */ void drawKanteraMeter(u8, f32);
 	/* 8021B0C8 */ void isButtonVisible();
-	/* 8021B104 */ void setItemParamX(char);
-	/* 8021B364 */ void setItemParamY(char);
-	/* 8021B5B0 */ void setItemParamZ(char);
-	/* 8021B810 */ void setItemParamB(char);
+	/* 8021B104 */ void setItemParamX(u8);
+	/* 8021B364 */ void setItemParamY(u8);
+	/* 8021B5B0 */ void setItemParamZ(u8);
+	/* 8021B810 */ void setItemParamB(u8);
 	/* 8021BB6C */ void getFishingType();
 	/* 8021BBB4 */ void getCanoeFishing();
 	/* 8021BC24 */ void getCameraSubject();
@@ -246,7 +246,7 @@ struct dMeter2Draw_c {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
@@ -254,15 +254,15 @@ struct JKRHeap {
 /* top-level dependencies (begin dSv_player_item_c) */
 /* top-level dependencies (end dSv_player_item_c) */
 struct dSv_player_item_c {
-	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80033030 */ void getItem(int, bool) const;
 };
 
 // build dSv_light_drop_c (dSv_light_drop_c) False/False
 /* top-level dependencies (begin dSv_light_drop_c) */
 /* top-level dependencies (end dSv_light_drop_c) */
 struct dSv_light_drop_c {
-	/* 80034340 */ void getLightDropNum(char) const;
-	/* 8003439C */ void isLightDropGetFlag(char) const;
+	/* 80034340 */ void getLightDropNum(u8) const;
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -315,8 +315,8 @@ struct dMeter2Info_c {
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 	/* 8021C370 */ void getStringKana(u32, char*, JMSMesgEntry_c*);
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
-	/* 8021C950 */ void isDirectUseItem(s32);
-	/* 8021CF08 */ void readItemTexture(char, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, s32);
+	/* 8021C950 */ void isDirectUseItem(int);
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
 // build JMSMesgEntry_c (JMSMesgEntry_c) True/True
@@ -332,27 +332,27 @@ struct dMsgObject_c {
 // build J2DScreen (J2DScreen) True/True
 // build J2DPane (J2DPane) True/True
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -374,6 +374,7 @@ struct JKRFileLoader {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
@@ -594,10 +595,10 @@ SECTION_SBSS2 extern u8 data_80456B9C[4];
 void mDoExt_setCurrentHeap(JKRHeap*);
 void mDoExt_getMesgFont();
 void dComIfGs_getMaxLifeGauge();
-void dComIfGp_getSelectItem(s32);
-void isBottleItem(char);
+void dComIfGp_getSelectItem(int);
+void isBottleItem(u8);
 void dCam_getBody();
-void dMeter2Info_getNumberTextureName(s32);
+void dMeter2Info_getNumberTextureName(int);
 void dMeter2Info_isMapOpenCheck();
 void dMeter2Info_isItemOpenCheck();
 void dMeter2Info_set2DVibration();
@@ -607,7 +608,6 @@ void cLib_addCalc2(f32*, f32, f32, f32);
 void* operator new(u32);
 void operator delete(void*);
 extern "C" void func_802FC800();
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void _savegpr_15();
 extern "C" void _savegpr_20();
 extern "C" void _savegpr_21();
@@ -1358,7 +1358,7 @@ asm void dMeter2Draw_c::playOxygenBpkAnimation(J2DAnmColor* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawPikari(CPaneMgr* field_0, f32* field_1, f32 field_2, JUtility::TColor field_3, JUtility::TColor field_4, JUtility::TColor field_5, JUtility::TColor field_6, f32 field_7, char field_8) {
+asm void dMeter2Draw_c::drawPikari(CPaneMgr* field_0, f32* field_1, f32 field_2, JUtility::TColor field_3, JUtility::TColor field_4, JUtility::TColor field_5, JUtility::TColor field_6, f32 field_7, u8 field_8) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/func_80213FF0.s"
 }
@@ -1379,7 +1379,7 @@ f32 lit_5786 = -1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawPikari(f32 field_0, f32 field_1, f32* field_2, f32 field_3, JUtility::TColor field_4, JUtility::TColor field_5, JUtility::TColor field_6, JUtility::TColor field_7, f32 field_8, char field_9) {
+asm void dMeter2Draw_c::drawPikari(f32 field_0, f32 field_1, f32* field_2, f32 field_3, JUtility::TColor field_4, JUtility::TColor field_5, JUtility::TColor field_6, JUtility::TColor field_7, f32 field_8, u8 field_9) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/func_802140DC.s"
 }
@@ -1401,7 +1401,7 @@ asm void dMeter2Draw_c::drawPikariHakusha(f32 field_0, f32 field_1, f32 field_2,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::changeTextureLife(s32 field_0, bool field_1, char field_2) {
+asm void dMeter2Draw_c::changeTextureLife(int field_0, bool field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/changeTextureLife__13dMeter2Draw_cFibUc.s"
 }
@@ -1460,7 +1460,7 @@ f32 d_meter_d_meter2_draw__lit_6143 = 0.25f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawKanteraScreen(char field_0) {
+asm void dMeter2Draw_c::drawKanteraScreen(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawKanteraScreen__13dMeter2Draw_cFUc.s"
 }
@@ -1596,7 +1596,7 @@ f32 lit_6524 = 3.0f / 10.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawLightDrop(char field_0, char field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, char field_6) {
+asm void dMeter2Draw_c::drawLightDrop(u8 field_0, u8 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u8 field_6) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawLightDrop__13dMeter2Draw_cFUcUcffffUc.s"
 }
@@ -1734,7 +1734,7 @@ asm void dMeter2Draw_c::setAlphaKeyAnimeMax() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawButtonA(char field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, bool field_6, bool field_7) {
+asm void dMeter2Draw_c::drawButtonA(u8 field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, bool field_6, bool field_7) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonA__13dMeter2Draw_cFUcfffffbb.s"
 }
@@ -1745,7 +1745,7 @@ asm void dMeter2Draw_c::drawButtonA(char field_0, f32 field_1, f32 field_2, f32 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawButtonB(char field_0, bool field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, bool field_7) {
+asm void dMeter2Draw_c::drawButtonB(u8 field_0, bool field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, bool field_7) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonB__13dMeter2Draw_cFUcbfffffb.s"
 }
@@ -1756,7 +1756,7 @@ asm void dMeter2Draw_c::drawButtonB(char field_0, bool field_1, f32 field_2, f32
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawButtonR(char field_0, char field_1, bool field_2, bool field_3) {
+asm void dMeter2Draw_c::drawButtonR(u8 field_0, u8 field_1, bool field_2, bool field_3) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonR__13dMeter2Draw_cFUcUcbb.s"
 }
@@ -1767,7 +1767,7 @@ asm void dMeter2Draw_c::drawButtonR(char field_0, char field_1, bool field_2, bo
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawButtonZ(char field_0) {
+asm void dMeter2Draw_c::drawButtonZ(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonZ__13dMeter2Draw_cFUc.s"
 }
@@ -1778,7 +1778,7 @@ asm void dMeter2Draw_c::drawButtonZ(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawButton3D(char field_0) {
+asm void dMeter2Draw_c::drawButton3D(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButton3D__13dMeter2Draw_cFUc.s"
 }
@@ -1789,7 +1789,7 @@ asm void dMeter2Draw_c::drawButton3D(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawButtonC(char field_0, bool field_1) {
+asm void dMeter2Draw_c::drawButtonC(u8 field_0, bool field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonC__13dMeter2Draw_cFUcb.s"
 }
@@ -1800,7 +1800,7 @@ asm void dMeter2Draw_c::drawButtonC(char field_0, bool field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawButtonS(char field_0) {
+asm void dMeter2Draw_c::drawButtonS(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonS__13dMeter2Draw_cFUc.s"
 }
@@ -1811,7 +1811,7 @@ asm void dMeter2Draw_c::drawButtonS(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawButtonBin(char field_0) {
+asm void dMeter2Draw_c::drawButtonBin(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonBin__13dMeter2Draw_cFUc.s"
 }
@@ -1822,7 +1822,7 @@ asm void dMeter2Draw_c::drawButtonBin(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawButtonXY(s32 field_0, char field_1, char field_2, bool field_3, bool field_4) {
+asm void dMeter2Draw_c::drawButtonXY(int field_0, u8 field_1, u8 field_2, bool field_3, bool field_4) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawButtonXY__13dMeter2Draw_cFiUcUcbb.s"
 }
@@ -2002,7 +2002,7 @@ f32 d_meter_d_meter2_draw__lit_8207 = 255.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::setButtonIconAAlpha(char field_0, u32 field_1, bool field_2) {
+asm void dMeter2Draw_c::setButtonIconAAlpha(u8 field_0, u32 field_1, bool field_2) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setButtonIconAAlpha__13dMeter2Draw_cFUcUlb.s"
 }
@@ -2013,7 +2013,7 @@ asm void dMeter2Draw_c::setButtonIconAAlpha(char field_0, u32 field_1, bool fiel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::setButtonIconBAlpha(char field_0, u32 field_1, bool field_2) {
+asm void dMeter2Draw_c::setButtonIconBAlpha(u8 field_0, u32 field_1, bool field_2) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setButtonIconBAlpha__13dMeter2Draw_cFUcUlb.s"
 }
@@ -2042,7 +2042,7 @@ asm void dMeter2Draw_c::setButtonIconMidonaAlpha(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::setButtonIconAlpha(s32 field_0, char field_1, u32 field_2, bool field_3) {
+asm void dMeter2Draw_c::setButtonIconAlpha(int field_0, u8 field_1, u32 field_2, bool field_3) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setButtonIconAlpha__13dMeter2Draw_cFiUcUlb.s"
 }
@@ -2053,7 +2053,7 @@ asm void dMeter2Draw_c::setButtonIconAlpha(s32 field_0, char field_1, u32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::getNumberTexture(s32 field_0) {
+asm void dMeter2Draw_c::getNumberTexture(int field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getNumberTexture__13dMeter2Draw_cFi.s"
 }
@@ -2068,7 +2068,7 @@ u8 data_80430158[32];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::getActionString(char field_0, char field_1, char* field_2) {
+asm void dMeter2Draw_c::getActionString(u8 field_0, u8 field_1, u8* field_2) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/getActionString__13dMeter2Draw_cFUcUcPUc.s"
 }
@@ -2086,7 +2086,7 @@ f32 lit_8549 = 48.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::changeTextureItemB(char field_0) {
+asm void dMeter2Draw_c::changeTextureItemB(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/changeTextureItemB__13dMeter2Draw_cFUc.s"
 }
@@ -2097,7 +2097,7 @@ asm void dMeter2Draw_c::changeTextureItemB(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::changeTextureItemXY(s32 field_0, char field_1) {
+asm void dMeter2Draw_c::changeTextureItemXY(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/changeTextureItemXY__13dMeter2Draw_cFiUc.s"
 }
@@ -2130,7 +2130,7 @@ asm void dMeter2Draw_c::setAlphaAnimeMax(CPaneMgrAlpha* field_0, s16 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::setItemNum(char field_0, char field_1, char field_2) {
+asm void dMeter2Draw_c::setItemNum(u8 field_0, u8 field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setItemNum__13dMeter2Draw_cFUcUcUc.s"
 }
@@ -2141,7 +2141,7 @@ asm void dMeter2Draw_c::setItemNum(char field_0, char field_1, char field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawItemNum(char field_0, f32 field_1) {
+asm void dMeter2Draw_c::drawItemNum(u8 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawItemNum__13dMeter2Draw_cFUcf.s"
 }
@@ -2171,7 +2171,7 @@ u8 data_80456B9C[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::drawKanteraMeter(char field_0, f32 field_1) {
+asm void dMeter2Draw_c::drawKanteraMeter(u8 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/drawKanteraMeter__13dMeter2Draw_cFUcf.s"
 }
@@ -2242,7 +2242,7 @@ f32 lit_9007 = 1.888888955116272f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::setItemParamX(char field_0) {
+asm void dMeter2Draw_c::setItemParamX(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setItemParamX__13dMeter2Draw_cFUc.s"
 }
@@ -2269,7 +2269,7 @@ f32 lit_9029 = -9.0f / 5.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::setItemParamY(char field_0) {
+asm void dMeter2Draw_c::setItemParamY(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setItemParamY__13dMeter2Draw_cFUc.s"
 }
@@ -2299,7 +2299,7 @@ f32 lit_9052 = -3.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::setItemParamZ(char field_0) {
+asm void dMeter2Draw_c::setItemParamZ(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setItemParamZ__13dMeter2Draw_cFUc.s"
 }
@@ -2362,7 +2362,7 @@ f32 lit_9105 = -45.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2Draw_c::setItemParamB(char field_0) {
+asm void dMeter2Draw_c::setItemParamB(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2_draw/setItemParamB__13dMeter2Draw_cFUc.s"
 }

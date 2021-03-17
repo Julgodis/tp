@@ -32,7 +32,7 @@ struct dMeterMap_c {
 	/* 8020D7EC */ void getDispPosOutSide_OffsetX();
 	/* 8020D874 */ void setDispPosInsideFlg_SE_On();
 	/* 8020D8BC */ void setDispPosOutsideFlg_SE_On();
-	/* 8020D8F8 */ void setMapAlpha(char);
+	/* 8020D8F8 */ void setMapAlpha(u8);
 	/* 8020D900 */ void isMapOpenCheck();
 	/* 8020D948 */ dMeterMap_c(J2DScreen*);
 	/* 8020D990 */ ~dMeterMap_c();
@@ -55,15 +55,15 @@ struct dMeterMap_c {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // build dMap_c (dMap_c) False/False
 /* top-level dependencies (begin dMap_c) */
 /* top-level dependencies (end dMap_c) */
 struct dMap_c {
-	/* 80029874 */ dMap_c(s32, s32, s32, s32);
-	/* 8002A32C */ void _move(f32, f32, s32, f32);
+	/* 80029874 */ dMap_c(int, int, int, int);
+	/* 8002A32C */ void _move(f32, f32, int, f32);
 	/* 8002AB54 */ void _draw();
 };
 
@@ -71,7 +71,7 @@ struct dMap_c {
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 80034934 */ void isDungeonItem(s32) const;
+	/* 80034934 */ void isDungeonItem(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -120,26 +120,26 @@ struct dMsgObject_c {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -412,7 +412,7 @@ asm void dMeterMap_c::setDispPosOutsideFlg_SE_On() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterMap_c::setMapAlpha(char field_0) {
+asm void dMeterMap_c::setMapAlpha(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter_map/setMapAlpha__11dMeterMap_cFUc.s"
 }

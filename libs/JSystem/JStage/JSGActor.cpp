@@ -67,6 +67,7 @@ struct JStage {
 		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
 		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
+		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
 };
@@ -106,7 +107,6 @@ SECTION_SDATA2 extern u8 JSGActor__lit_343[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
 void operator delete(void*);
 
 extern "C" void __dt__Q26JStage7TObjectFv();

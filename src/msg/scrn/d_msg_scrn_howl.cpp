@@ -41,7 +41,7 @@ struct dMsgScrnHowl_c {
 	/* 80243A50 */ void calcGuide();
 	/* 80243BE0 */ void moveLineV(bool);
 	/* 80243DCC */ void moveBaseLength(bool);
-	/* 80243EEC */ void getOnLineNum(s32);
+	/* 80243EEC */ void getOnLineNum(int);
 	/* 80243F58 */ void addCount(s16);
 	/* 80243F7C */ void addCountGuide(s16);
 	/* 80243F94 */ void getNowPlotPitch(f32);
@@ -49,7 +49,7 @@ struct dMsgScrnHowl_c {
 	/* 8024414C */ void calcPitchLevel();
 	/* 802441FC */ void initGuideData();
 	/* 80244304 */ void getGuideDataSize();
-	/* 8024438C */ void getGuideDataType(s32);
+	/* 8024438C */ void getGuideDataType(int);
 };
 
 // build dMeter2Draw_c (dMeter2Draw_c) False/False
@@ -70,7 +70,7 @@ struct JUtility {
 /* top-level dependencies (end dMeter2Draw_c) */
 struct dMeter2Draw_c {
 	// JUtility::TColor
-	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, char);
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 };
 
 // build JUtility (JUtility) True/True
@@ -96,11 +96,11 @@ struct dMeter2Info_c {
 struct dMsgScrnBase_c {
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
-	/* 80238C48 */ bool selectAnimeMove(char, char, bool);
-	/* 80238C50 */ void selectAnimeInit(char, char, f32, char);
+	/* 80238C48 */ bool selectAnimeMove(u8, u8, bool);
+	/* 80238C50 */ void selectAnimeInit(u8, u8, f32, u8);
 	/* 80238C54 */ void arwAnimeMove();
 	/* 80238C58 */ void arwAnimeInit();
-	/* 80238C5C */ void fukiPosCalc(char);
+	/* 80238C5C */ void fukiPosCalc(u8);
 	/* 80238C60 */ bool isSelect();
 	/* 80238C68 */ bool selectAnimeEnd();
 	/* 80238C70 */ void dotAnimeMove();
@@ -114,6 +114,19 @@ struct dMsgScrnBase_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (J2DPane) False/False
+/* top-level dependencies (begin J2DPane) */
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -130,34 +143,22 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (J2DPane) False/False
-/* top-level dependencies (begin J2DPane) */
-/* top-level dependencies (end J2DPane) */
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-};
-
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
+	// J2DScreen
 	/* 80253930 */ CPaneMgr();
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253A18 */ ~CPaneMgr();
 	/* 802542E8 */ void getGlobalPosX();
 	/* 80254364 */ void getGlobalPosY();
 	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
@@ -177,7 +178,7 @@ struct CPaneMgrAlpha {
 /* top-level dependencies (end Z2WolfHowlMgr) */
 struct Z2WolfHowlMgr {
 	/* 802CACCC */ void getNowInputValue();
-	/* 802CB320 */ void getCorrectLine(char);
+	/* 802CB320 */ void getCorrectLine(u8);
 	/* 802CB370 */ void getCorrectLineNum();
 	/* 802CB650 */ void getOnLineNum();
 	/* 802CBA88 */ void startGuideMelody(bool);
@@ -205,6 +206,7 @@ struct J2DPicture {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // 
@@ -296,13 +298,11 @@ SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_5508;
 // 
 
 void mDoExt_getMesgFont();
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
 void dPaneClass_showNullPane(J2DScreen*);
 void cLib_addCalc2(f32*, f32, f32, f32);
 void* operator new(u32);
 void operator delete(void*);
 extern "C" void func_802E90C0();
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void GXGetScissor();
 extern "C" void __ptmf_scall();
 extern "C" void _savegpr_21();
@@ -903,7 +903,7 @@ asm void dMsgScrnHowl_c::moveBaseLength(bool field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrnHowl_c::getOnLineNum(s32 field_0) {
+asm void dMsgScrnHowl_c::getOnLineNum(int field_0) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_howl/getOnLineNum__14dMsgScrnHowl_cFi.s"
 }
@@ -995,7 +995,7 @@ asm void dMsgScrnHowl_c::getGuideDataSize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrnHowl_c::getGuideDataType(s32 field_0) {
+asm void dMsgScrnHowl_c::getGuideDataType(int field_0) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_howl/getGuideDataType__14dMsgScrnHowl_cFi.s"
 }

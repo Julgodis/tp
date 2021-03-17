@@ -14,12 +14,19 @@
 struct JStage;
 // build JStage (JStage) True/True
 /* top-level dependencies (begin JStage) */
-// outer dependency: JStage::TObject
 // outer dependency: JStage::TEObject
+// outer dependency: JStage::TObject
 /* top-level dependencies (end JStage) */
 struct JStage {
 	// build TSystem (JStage::TSystem) False/False
 	/* dependencies (begin JStage::TSystem) */
+	// inner dependency: TEObject (JStage::TEObject) True False (for JStage::TSystem)
+	// build TEObject (JStage::TEObject) False/False
+	/* dependencies (begin JStage::TEObject) */
+	/* dependencies (end JStage::TEObject) */
+	struct TEObject {
+	};
+
 	// inner dependency: TObject (JStage::TObject) True False (for JStage::TSystem)
 	// build TObject (JStage::TObject) False/False
 	/* dependencies (begin JStage::TObject) */
@@ -36,19 +43,13 @@ struct JStage {
 		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
 		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
-	};
-
-	// inner dependency: TEObject (JStage::TEObject) True False (for JStage::TSystem)
-	// build TEObject (JStage::TEObject) False/False
-	/* dependencies (begin JStage::TEObject) */
-	/* dependencies (end JStage::TEObject) */
-	struct TEObject {
+		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
 	/* dependencies (end JStage::TSystem) */
 	struct TSystem {
-		// JStage::TObject
 		// JStage::TEObject
+		// JStage::TObject
 		/* 80280E90 */ ~TSystem();
 		/* 80280EF0 */ bool JSGFGetType() const;
 		/* 80280EF8 */ bool JSGFindObject(JStage::TObject**, char const*, JStage::TEObject) const;
@@ -80,7 +81,6 @@ SECTION_DATA extern void*const __vt__Q26JStage7TSystem[20];
 // External References:
 // 
 
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
 void operator delete(void*);
 
 extern "C" void __dt__Q26JStage7TObjectFv();

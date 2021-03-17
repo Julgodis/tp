@@ -31,7 +31,7 @@ struct node_list_class {
 // Forward References:
 // 
 
-void fopDwTg_ToDrawQ(create_tag_class*, s32);
+void fopDwTg_ToDrawQ(create_tag_class*, int);
 void fopDwTg_DrawQTo(create_tag_class*);
 void fopDwTg_Init(create_tag_class*, void*);
 void fopDwTg_CreateQueue();
@@ -47,9 +47,9 @@ SECTION_SDATA extern u8 g_fopDwTg_Queue[8];
 // External References:
 // 
 
-void cTr_Create(node_lists_tree_class*, node_list_class*, s32);
+void cTr_Create(node_lists_tree_class*, node_list_class*, int);
 void cTg_SingleCutFromTree(create_tag_class*);
-void cTg_AdditionToTree(node_lists_tree_class*, s32, create_tag_class*);
+void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*);
 void cTg_Create(create_tag_class*, void*);
 
 extern "C" void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
@@ -71,7 +71,7 @@ u8 g_fopDwTg_Queue[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopDwTg_ToDrawQ(create_tag_class* field_0, s32 field_1) {
+asm void fopDwTg_ToDrawQ(create_tag_class* field_0, int field_1) {
 	nofralloc
 #include "asm/f_op/f_op_draw_tag/fopDwTg_ToDrawQ__FP16create_tag_classi.s"
 }

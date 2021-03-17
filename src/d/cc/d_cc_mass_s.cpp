@@ -26,19 +26,13 @@ struct dCcMassS_HitInf {
 };
 
 // build dCcMassS_Mng (dCcMassS_Mng) False/False
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
-struct fopAc_ac_c {
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
 };
 
 // build dCcMassS_HitInf (dCcMassS_HitInf) True/True
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
-struct Vec {
-};
-
 // build cCcD_Obj (cCcD_Obj) False/False
 /* top-level dependencies (begin cCcD_Obj) */
 /* top-level dependencies (end cCcD_Obj) */
@@ -54,34 +48,40 @@ struct cM3dGCps {
 	/* 8026F080 */ void SetCps(cM3dGCps const&);
 };
 
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
 };
 
 /* top-level dependencies (begin dCcMassS_Mng) */
-// outer dependency: fopAc_ac_c
+// outer dependency: cXyz
 // outer dependency: dCcMassS_HitInf
-// outer dependency: Vec
 // outer dependency: cCcD_Obj
 // outer dependency: cM3dGCps
-// outer dependency: cXyz
+// outer dependency: fopAc_ac_c
+// outer dependency: Vec
 /* top-level dependencies (end dCcMassS_Mng) */
 struct dCcMassS_Mng {
-	// fopAc_ac_c
 	// dCcMassS_HitInf
-	// Vec
 	// cCcD_Obj
-	// cM3dGCps
 	// cXyz
+	// cM3dGCps
+	// fopAc_ac_c
+	// Vec
 	/* 80085350 */ dCcMassS_Mng();
 	/* 800855E4 */ void Ct();
-	/* 80085630 */ void SetAttr(f32, f32, char, char);
+	/* 80085630 */ void SetAttr(f32, f32, u8, u8);
 	/* 80085690 */ void Prepare();
 	/* 800858AC */ void Chk(cXyz*, fopAc_ac_c**, dCcMassS_HitInf*);
 	/* 80085CF0 */ void Clear();
-	/* 80085D98 */ void Set(cCcD_Obj*, char);
+	/* 80085D98 */ void Set(cCcD_Obj*, u8);
 	/* 80085E6C */ void SetCam(cM3dGCps const&);
 	/* 80085EB0 */ void GetResultCam() const;
 	/* 80085EB8 */ void GetCamTopPos(Vec*);
@@ -367,7 +367,7 @@ asm void dCcMassS_Mng::Ct() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCcMassS_Mng::SetAttr(f32 field_0, f32 field_1, char field_2, char field_3) {
+asm void dCcMassS_Mng::SetAttr(f32 field_0, f32 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/cc/d_cc_mass_s/SetAttr__12dCcMassS_MngFffUcUc.s"
 }
@@ -426,7 +426,7 @@ f32 d_cc_d_cc_mass_s__lit_3941 = 0.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCcMassS_Mng::Set(cCcD_Obj* field_0, char field_1) {
+asm void dCcMassS_Mng::Set(cCcD_Obj* field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/cc/d_cc_mass_s/Set__12dCcMassS_MngFP8cCcD_ObjUc.s"
 }

@@ -10,28 +10,17 @@
 // 
 
 // build JKRDvdArchive (JKRDvdArchive) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
-	/* 802CE4D4 */ void alloc(u32, s32);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-	/* 802CE548 */ void free(void*);
-	/* 802CEB18 */ void copyMemory(void*, void*, u32);
-};
-
 // build JKRArchive (JKRArchive) False/False
 // build JKRArchive (JKRArchive) True/False
 struct JKRArchive;
 // build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRArchive::EMountMode
 // outer dependency: JKRArchive::SDIFileEntry
+// outer dependency: JKRArchive::EMountMode
 /* top-level dependencies (end JKRArchive) */
 struct JKRArchive {
-	// JKRArchive::EMountMode
 	// JKRArchive::SDIFileEntry
+	// JKRArchive::EMountMode
 	// build EMountDirection (JKRArchive::EMountDirection) False/False
 	/* dependencies (begin JKRArchive::EMountDirection) */
 	/* dependencies (end JKRArchive::EMountDirection) */
@@ -68,23 +57,34 @@ struct JKRArchive {
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
 };
 
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE548 */ void free(void*);
+	/* 802CEB18 */ void copyMemory(void*, void*, u32);
+};
+
 // build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JKRDvdArchive) */
-// outer dependency: JKRHeap
 // outer dependency: JKRArchive::EMountDirection
+// outer dependency: JKRHeap
 // outer dependency: JKRArchive::SDIFileEntry
 /* top-level dependencies (end JKRDvdArchive) */
 struct JKRDvdArchive {
-	// JKRHeap
 	// JKRArchive::EMountDirection
+	// JKRHeap
 	// JKRArchive::SDIFileEntry
 	/* 802D7BF0 */ JKRDvdArchive(s32, JKRArchive::EMountDirection);
 	/* 802D7C98 */ ~JKRDvdArchive();
 	/* 802D7DB4 */ void open(s32);
 	/* 802D8050 */ void fetchResource(JKRArchive::SDIFileEntry*, u32*);
 	/* 802D8168 */ void fetchResource(void*, u32, JKRArchive::SDIFileEntry*, u32*);
-	/* 802D826C */ void fetchResource_subroutine(s32, u32, u32, char*, u32, s32, s32);
-	/* 802D8474 */ void fetchResource_subroutine(s32, u32, u32, JKRHeap*, s32, s32, char**);
+	/* 802D826C */ void fetchResource_subroutine(s32, u32, u32, u8*, u32, int, int);
+	/* 802D8474 */ void fetchResource_subroutine(s32, u32, u32, JKRHeap*, int, int, u8**);
 	/* 802D8698 */ void getExpandedResSize(void const*) const;
 };
 
@@ -105,23 +105,23 @@ struct JKRDvdFile {
 };
 
 // build JKRDvdRipper (JKRDvdRipper) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JKRExpandSwitch (JKRExpandSwitch) False/False
 /* top-level dependencies (begin JKRExpandSwitch) */
 /* top-level dependencies (end JKRExpandSwitch) */
 struct JKRExpandSwitch {
 };
 
+// build JKRHeap (JKRHeap) True/True
 // build JKRDvdRipper (JKRDvdRipper) True/False
 struct JKRDvdRipper;
 /* top-level dependencies (begin JKRDvdRipper) */
-// outer dependency: JKRHeap
 // outer dependency: JKRExpandSwitch
+// outer dependency: JKRHeap
 // outer dependency: JKRDvdRipper::EAllocDirection
 /* top-level dependencies (end JKRDvdRipper) */
 struct JKRDvdRipper {
-	// JKRHeap
 	// JKRExpandSwitch
+	// JKRHeap
 	// JKRDvdRipper::EAllocDirection
 	// build EAllocDirection (JKRDvdRipper::EAllocDirection) False/False
 	/* dependencies (begin JKRDvdRipper::EAllocDirection) */
@@ -129,7 +129,7 @@ struct JKRDvdRipper {
 	struct EAllocDirection {
 	};
 
-	/* 802D9C54 */ void loadToMainRAM(s32, char*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, s32*, u32*);
+	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
 };
 
 // build JKRExpandSwitch (JKRExpandSwitch) True/True
@@ -150,6 +150,13 @@ struct JSUPtrList {
 };
 
 // build JSUPtrLink (JSUPtrLink) True/True
+// build JUTException (JUTException) False/False
+/* top-level dependencies (begin JUTException) */
+/* top-level dependencies (end JUTException) */
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -171,9 +178,8 @@ SECTION_DATA extern void*const __vt__13JKRDvdArchive[20];
 // 
 
 SECTION_INIT void memset();
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
 extern "C" void DCInvalidateRange();
 extern "C" void _savegpr_25();
 extern "C" void _savegpr_26();
@@ -336,7 +342,7 @@ SECTION_DEAD char* const pad_8039D21D = "\0\0";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRDvdArchive::fetchResource_subroutine(s32 field_0, u32 field_1, u32 field_2, char* field_3, u32 field_4, s32 field_5, s32 field_6) {
+asm void JKRDvdArchive::fetchResource_subroutine(s32 field_0, u32 field_1, u32 field_2, u8* field_3, u32 field_4, int field_5, int field_6) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/fetchResource_subroutine__13JKRDvdArchiveFlUlUlPUcUlii.s"
 }
@@ -347,7 +353,7 @@ asm void JKRDvdArchive::fetchResource_subroutine(s32 field_0, u32 field_1, u32 f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRDvdArchive::fetchResource_subroutine(s32 field_0, u32 field_1, u32 field_2, JKRHeap* field_3, s32 field_4, s32 field_5, char** field_6) {
+asm void JKRDvdArchive::fetchResource_subroutine(s32 field_0, u32 field_1, u32 field_2, JKRHeap* field_3, int field_4, int field_5, u8** field_6) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdArchive/fetchResource_subroutine__13JKRDvdArchiveFlUlUlP7JKRHeapiiPPUc.s"
 }

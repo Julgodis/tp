@@ -10,30 +10,6 @@
 // 
 
 // build CPaneMgr (CPaneMgr) False/False
-// build J2DScreen (J2DScreen) False/False
-// build JSURandomInputStream (JSURandomInputStream) False/False
-/* top-level dependencies (begin JSURandomInputStream) */
-/* top-level dependencies (end JSURandomInputStream) */
-struct JSURandomInputStream {
-	/* 80255328 */ ~JSURandomInputStream();
-};
-
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
-/* top-level dependencies (begin J2DScreen) */
-// outer dependency: JSURandomInputStream
-// outer dependency: JKRArchive
-/* top-level dependencies (end J2DScreen) */
-struct J2DScreen {
-	// JSURandomInputStream
-	// JKRArchive
-	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
-};
-
 // build JKRExpHeap (JKRExpHeap) False/False
 /* top-level dependencies (begin JKRExpHeap) */
 /* top-level dependencies (end JKRExpHeap) */
@@ -71,21 +47,45 @@ struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 };
 
+// build J2DScreen (J2DScreen) False/False
+// build JSURandomInputStream (JSURandomInputStream) False/False
+/* top-level dependencies (begin JSURandomInputStream) */
+/* top-level dependencies (end JSURandomInputStream) */
+struct JSURandomInputStream {
+	/* 80255328 */ ~JSURandomInputStream();
+};
+
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+/* top-level dependencies (begin J2DScreen) */
+// outer dependency: JSURandomInputStream
+// outer dependency: JKRArchive
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+	// JSURandomInputStream
+	// JKRArchive
+	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
+};
+
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: JUtility::TColor
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// JUtility::TColor
 	// J2DPane
+	// J2DScreen
 	/* 80253930 */ CPaneMgr();
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253A18 */ ~CPaneMgr();
-	/* 80253AB4 */ void setAlpha(char);
+	/* 80253AB4 */ void setAlpha(u8);
 	/* 80253B2C */ void reinit();
 	/* 80253C08 */ void initiate(J2DPane*, JKRExpHeap*);
 	/* 80254018 */ void childPaneGetSize(J2DPane*);
@@ -95,8 +95,9 @@ struct CPaneMgr {
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254638 */ void paneScale(f32, f32);
-	/* 802547CC */ void scaleAnime(s16, f32, f32, char);
-	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, char);
+	/* 802547CC */ void scaleAnime(s16, f32, f32, u8);
+	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, u8);
+	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 	/* 80254FB8 */ void getBounds(J2DPane*);
 };
@@ -133,7 +134,7 @@ struct J2DTextBox {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
@@ -169,10 +170,10 @@ struct CPaneMgrAlpha {
 	// J2DPane
 	/* 802553EC */ CPaneMgrAlpha();
 	/* 8025546C */ ~CPaneMgrAlpha();
-	/* 80255658 */ void rateCalc(s16, s16, char);
+	/* 80255658 */ void rateCalc(s16, s16, u8);
 	/* 80255A60 */ void childPaneCount(J2DPane*);
 	/* 80255ACC */ void childPaneGetAlpha(J2DPane*);
-	/* 80255B5C */ void childPaneSetAlpha(J2DPane*, char);
+	/* 80255B5C */ void childPaneSetAlpha(J2DPane*, u8);
 };
 
 // build JSUInputStream (JSUInputStream) False/False
@@ -194,7 +195,6 @@ struct J2DOrthoGraph {
 // Forward References:
 // 
 
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
 void dPaneClass_showNullPane(J2DScreen*);
 static void dPaneClass_showNullPane(J2DPane*);
 void dPaneClass_setPriority(void**, JKRHeap*, J2DScreen*, char const*, u32, JKRArchive*);
@@ -344,7 +344,7 @@ asm CPaneMgr::CPaneMgr() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm CPaneMgr::CPaneMgr(J2DScreen* field_0, u64 field_1, char field_2, JKRExpHeap* field_3) {
+asm CPaneMgr::CPaneMgr(J2DScreen* field_0, u64 field_1, u8 field_2, JKRExpHeap* field_3) {
 	nofralloc
 #include "asm/d/pane/d_pane_class/__ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap.s"
 }
@@ -366,7 +366,7 @@ asm CPaneMgr::~CPaneMgr() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CPaneMgr::setAlpha(char field_0) {
+asm void CPaneMgr::setAlpha(u8 field_0) {
 	nofralloc
 #include "asm/d/pane/d_pane_class/setAlpha__8CPaneMgrFUc.s"
 }
@@ -558,7 +558,7 @@ asm void CPaneMgr::paneScale(f32 field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CPaneMgr::scaleAnime(s16 field_0, f32 field_1, f32 field_2, char field_3) {
+asm void CPaneMgr::scaleAnime(s16 field_0, f32 field_1, f32 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/pane/d_pane_class/scaleAnime__8CPaneMgrFsffUc.s"
 }
@@ -573,7 +573,7 @@ f64 d_pane_d_pane_class__lit_4349 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CPaneMgr::colorAnime(s16 field_0, JUtility::TColor field_1, JUtility::TColor field_2, JUtility::TColor field_3, JUtility::TColor field_4, char field_5) {
+asm void CPaneMgr::colorAnime(s16 field_0, JUtility::TColor field_1, JUtility::TColor field_2, JUtility::TColor field_3, JUtility::TColor field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/pane/d_pane_class/func_802548BC.s"
 }
@@ -597,7 +597,7 @@ f32 d_pane_d_pane_class__lit_4476 = 1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs() {
+asm void CPaneMgr::getGlobalVtx(J2DPane* field_0, f32 (* field_1)[3][4], u8 field_2, bool field_3, s16 field_4) {
 	nofralloc
 #include "asm/d/pane/d_pane_class/getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs.s"
 }

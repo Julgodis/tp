@@ -19,7 +19,7 @@ struct JPAEmitterWorkData {
 /* top-level dependencies (begin JPAExTexShape) */
 /* top-level dependencies (end JPAExTexShape) */
 struct JPAExTexShape {
-	/* 8027B13C */ JPAExTexShape(char const*);
+	/* 8027B13C */ JPAExTexShape(u8 const*);
 };
 
 // build JUTTexture (JUTTexture) False/False
@@ -75,7 +75,7 @@ asm void JPALoadExTex(JPAEmitterWorkData* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JPAExTexShape::JPAExTexShape(char const* field_0) {
+asm JPAExTexShape::JPAExTexShape(u8 const* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExTexShape/__ct__13JPAExTexShapeFPCUc.s"
 }

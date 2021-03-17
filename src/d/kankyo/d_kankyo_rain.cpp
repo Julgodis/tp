@@ -62,6 +62,12 @@ struct _GXTexMapID {
 struct dKankyo_rain_Packet {
 };
 
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
 // build daPy_py_c (daPy_py_c) False/False
 /* top-level dependencies (begin daPy_py_c) */
 /* top-level dependencies (end daPy_py_c) */
@@ -82,21 +88,21 @@ struct csXyz {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // build dComIfG_play_c (dComIfG_play_c) False/False
 /* top-level dependencies (begin dComIfG_play_c) */
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 // build dSv_memBit_c (dSv_memBit_c) False/False
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 80034934 */ void isDungeonItem(s32) const;
+	/* 80034934 */ void isDungeonItem(int) const;
 };
 
 // build dRes_control_c (dRes_control_c) False/False
@@ -111,7 +117,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -123,45 +129,39 @@ struct dEvent_manager_c {
 };
 
 // build dPa_control_c (dPa_control_c) False/False
-// build csXyz (csXyz) True/True
+// build cXyz (cXyz) True/True
+// build _GXColor (_GXColor) True/True
 // build dPa_levelEcallBack (dPa_levelEcallBack) False/False
 /* top-level dependencies (begin dPa_levelEcallBack) */
 /* top-level dependencies (end dPa_levelEcallBack) */
 struct dPa_levelEcallBack {
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
-// build cXyz (cXyz) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
 struct dKy_tevstr_c {
 };
 
+// build csXyz (csXyz) True/True
 /* top-level dependencies (begin dPa_control_c) */
-// outer dependency: csXyz
-// outer dependency: dPa_levelEcallBack
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
+// outer dependency: dPa_levelEcallBack
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
-	// csXyz
-	// _GXColor
 	// dPa_levelEcallBack
-	// cXyz
 	// dKy_tevstr_c
-	/* 8004D4CC */ void set(u32, char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	// csXyz
+	// cXyz
+	// _GXColor
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
 // build dPa_levelEcallBack (dPa_levelEcallBack) True/True
-// build _GXColor (_GXColor) True/True
 // build dDlst_peekZ_c (dDlst_peekZ_c) False/False
 /* top-level dependencies (begin dDlst_peekZ_c) */
 /* top-level dependencies (end dDlst_peekZ_c) */
@@ -277,7 +277,7 @@ struct LIGHT_INFLUENCE {
 /* top-level dependencies (begin Z2EnvSeMgr) */
 /* top-level dependencies (end Z2EnvSeMgr) */
 struct Z2EnvSeMgr {
-	/* 802C7CF4 */ void startNearThunderSe(char);
+	/* 802C7CF4 */ void startNearThunderSe(s8);
 };
 
 // build J3DSys (J3DSys) False/False
@@ -302,7 +302,7 @@ void dKyr_lenzflare_move();
 static void dKyr_moon_arrival_check();
 void dKyr_sun_move();
 void dKyr_rain_init();
-static void rain_bg_chk(dKankyo_rain_Packet*, s32);
+static void rain_bg_chk(dKankyo_rain_Packet*, int);
 static void overhead_bg_chk();
 static void forward_overhead_bg_chk(cXyz*, f32);
 void dKyr_rain_move();
@@ -315,31 +315,31 @@ void dKyr_star_move();
 void cloud_shadow_move();
 void vrkumo_move();
 static void dKr_cullVtx_Set();
-extern "C" static void dKyr_draw_rev_moon__FPA4_fPPUc();
-extern "C" void dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc();
-extern "C" void dKyr_drawLenzflare__FPA4_fP4cXyzR8_GXColorPPUc();
-extern "C" void dKyr_drawRain__FPA4_fPPUc();
-extern "C" void dKyr_drawSibuki__FPA4_fPPUc();
-extern "C" void dKyr_drawHousi__FPA4_fPPUc();
-extern "C" void dKyr_drawSnow__FPA4_fPPUc();
-extern "C" void dKyr_drawStar__FPA4_fPPUc();
-extern "C" void drawCloudShadow__FPA4_fPPUc();
-extern "C" void drawVrkumo__FPA4_fR8_GXColorPPUc();
+static void dKyr_draw_rev_moon(f32 (* )[4], u8**);
+void dKyr_drawSun(f32 (* )[4], cXyz*, _GXColor&, u8**);
+void dKyr_drawLenzflare(f32 (* )[4], cXyz*, _GXColor&, u8**);
+void dKyr_drawRain(f32 (* )[4], u8**);
+void dKyr_drawSibuki(f32 (* )[4], u8**);
+void dKyr_drawHousi(f32 (* )[4], u8**);
+void dKyr_drawSnow(f32 (* )[4], u8**);
+void dKyr_drawStar(f32 (* )[4], u8**);
+void drawCloudShadow(f32 (* )[4], u8**);
+void drawVrkumo(f32 (* )[4], _GXColor&, u8**);
 void dKyr_thunder_init();
 void dKyr_thunder_move();
 void dKyr_shstar_init();
 void dKyr_shstar_move();
 void dKyr_odour_init();
 void dKyr_odour_move();
-extern "C" void dKyr_odour_draw__FPA4_fPPUc();
+void dKyr_odour_draw(f32 (* )[4], u8**);
 void dKyr_mud_init();
 void dKyr_mud_move();
-extern "C" void dKyr_mud_draw__FPA4_fPPUc();
+void dKyr_mud_draw(f32 (* )[4], u8**);
 void dKyr_evil_init();
 void dKyr_evil_move();
-extern "C" static void dKyr_evil_draw2__FPA4_fPPUc();
+static void dKyr_evil_draw2(f32 (* )[4], u8**);
 static void dKyr_near_bosslight_check(cXyz);
-extern "C" void dKyr_evil_draw__FPA4_fPPUc();
+void dKyr_evil_draw(f32 (* )[4], u8**);
 
 extern "C" static void vectle_calc__FP10DOUBLE_POSP4cXyz();
 extern "C" static void get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
@@ -732,21 +732,21 @@ SECTION_SDATA2 extern f32 lit_12260;
 // External References:
 // 
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
-extern "C" void mDoMtx_XrotM__FPA4_fs();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void mDoMtx_ZrotM__FPA4_fs();
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
 void mDoLib_project(Vec*, Vec*);
 extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i();
 void dComIfG_getStageRes(char const*);
-void dComIfGs_PolyDamageOff_Set(char);
+void dComIfGs_PolyDamageOff_Set(s8);
 void dKyw_get_wind_vec();
 void dKyw_get_wind_pow();
 void dKyw_get_wind_vecpow();
 void dKyw_pntwind_get_vecpow(cXyz*);
 void dKy_get_parcent(f32, f32, f32);
 void dKy_daynight_check();
-void dKy_move_room_ratio(dKy_tevstr_c*, char*);
+void dKy_move_room_ratio(dKy_tevstr_c*, s8*);
 void dKy_efplight_set(LIGHT_INFLUENCE*);
 void dKy_efplight_cut(LIGHT_INFLUENCE*);
 void dKy_actor_addcol_amb_set(s16, s16, s16, f32);
@@ -769,7 +769,7 @@ void cM_rndF(f32);
 void cM_rndFX(f32);
 void cM3d_VectorProduct2d(f32, f32, f32, f32, f32, f32);
 void cLib_addCalc(f32*, f32, f32, f32, f32);
-void* operator new(u32, s32);
+void* operator new(u32, int);
 extern "C" void PSMTXConcat();
 extern "C" void PSMTXInverse();
 extern "C" void PSMTXRotRad();
@@ -1364,7 +1364,7 @@ f32 d_kankyo_d_kankyo_rain__lit_4430 = -800.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void rain_bg_chk(dKankyo_rain_Packet* field_0, s32 field_1) {
+asm static void rain_bg_chk(dKankyo_rain_Packet* field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/rain_bg_chk__FP19dKankyo_rain_Packeti.s"
 }
@@ -1888,7 +1888,7 @@ f32 lit_7213 = 23.0f / 10.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void dKyr_draw_rev_moon__FPA4_fPPUc() {
+asm static void dKyr_draw_rev_moon(f32 (* field_0)[4], u8** field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_draw_rev_moon__FPA4_fPPUc.s"
 }
@@ -1924,7 +1924,7 @@ f32 lit_7548 = 2400.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc() {
+asm void dKyr_drawSun(f32 (* field_0)[4], cXyz* field_1, _GXColor& field_2, u8** field_3) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc.s"
 }
@@ -1983,7 +1983,7 @@ f32 lit_7894 = 60.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void dKyr_drawLenzflare__FPA4_fP4cXyzR8_GXColorPPUc() {
+asm void dKyr_drawLenzflare(f32 (* field_0)[4], cXyz* field_1, _GXColor& field_2, u8** field_3) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_drawLenzflare__FPA4_fP4cXyzR8_GXColorPPUc.s"
 }
@@ -2021,7 +2021,7 @@ f32 d_kankyo_d_kankyo_rain__lit_8215 = 480.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void dKyr_drawRain__FPA4_fPPUc() {
+asm void dKyr_drawRain(f32 (* field_0)[4], u8** field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_drawRain__FPA4_fPPUc.s"
 }
@@ -2039,7 +2039,7 @@ f32 lit_8361 = 3600.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void dKyr_drawSibuki__FPA4_fPPUc() {
+asm void dKyr_drawSibuki(f32 (* field_0)[4], u8** field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_drawSibuki__FPA4_fPPUc.s"
 }
@@ -2096,7 +2096,7 @@ f32 lit_8927 = 16384.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void dKyr_drawHousi__FPA4_fPPUc() {
+asm void dKyr_drawHousi(f32 (* field_0)[4], u8** field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_drawHousi__FPA4_fPPUc.s"
 }
@@ -2185,7 +2185,7 @@ f32 d_kankyo_d_kankyo_rain__lit_9402 = -52.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void dKyr_drawSnow__FPA4_fPPUc() {
+asm void dKyr_drawSnow(f32 (* field_0)[4], u8** field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_drawSnow__FPA4_fPPUc.s"
 }
@@ -2220,7 +2220,7 @@ f32 lit_9837 = 0.004950494971126318f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void dKyr_drawStar__FPA4_fPPUc() {
+asm void dKyr_drawStar(f32 (* field_0)[4], u8** field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_drawStar__FPA4_fPPUc.s"
 }
@@ -2253,7 +2253,7 @@ f32 lit_10031 = 49.0f / 100.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void drawCloudShadow__FPA4_fPPUc() {
+asm void drawCloudShadow(f32 (* field_0)[4], u8** field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/drawCloudShadow__FPA4_fPPUc.s"
 }
@@ -2307,7 +2307,7 @@ f32 lit_10604 = 558.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void drawVrkumo__FPA4_fR8_GXColorPPUc() {
+asm void drawVrkumo(f32 (* field_0)[4], _GXColor& field_1, u8** field_2) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/drawVrkumo__FPA4_fR8_GXColorPPUc.s"
 }
@@ -2413,7 +2413,7 @@ u8 data_80450F34[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void dKyr_odour_draw__FPA4_fPPUc() {
+asm void dKyr_odour_draw(f32 (* field_0)[4], u8** field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_odour_draw__FPA4_fPPUc.s"
 }
@@ -2463,7 +2463,7 @@ f32 lit_11509 = 12.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void dKyr_mud_draw__FPA4_fPPUc() {
+asm void dKyr_mud_draw(f32 (* field_0)[4], u8** field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_mud_draw__FPA4_fPPUc.s"
 }
@@ -2521,7 +2521,7 @@ f32 lit_11887 = 135.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void dKyr_evil_draw2__FPA4_fPPUc() {
+asm static void dKyr_evil_draw2(f32 (* field_0)[4], u8** field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_evil_draw2__FPA4_fPPUc.s"
 }
@@ -2581,7 +2581,7 @@ f32 lit_12260 = 115.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void dKyr_evil_draw__FPA4_fPPUc() {
+asm void dKyr_evil_draw(f32 (* field_0)[4], u8** field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_rain/dKyr_evil_draw__FPA4_fPPUc.s"
 }

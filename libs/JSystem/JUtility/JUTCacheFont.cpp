@@ -10,40 +10,40 @@
 // 
 
 // build JUTCacheFont (JUTCacheFont) False/False
-// build JUTCacheFont (JUTCacheFont) True/False
-struct JUTCacheFont;
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-};
-
 // build ResFONT (ResFONT) False/False
 /* top-level dependencies (begin ResFONT) */
 /* top-level dependencies (end ResFONT) */
 struct ResFONT {
 };
 
-// build JUTCacheFont (JUTCacheFont) True/True
 // build _GXTexMapID (_GXTexMapID) False/False
 /* top-level dependencies (begin _GXTexMapID) */
 /* top-level dependencies (end _GXTexMapID) */
 struct _GXTexMapID {
 };
 
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
+// build JUTCacheFont (JUTCacheFont) True/False
+struct JUTCacheFont;
+// build JUTCacheFont (JUTCacheFont) True/True
 /* top-level dependencies (begin JUTCacheFont) */
-// outer dependency: JUTCacheFont::TCachePage
-// outer dependency: JKRHeap
 // outer dependency: ResFONT
-// outer dependency: JUTCacheFont::TGlyphCacheInfo
 // outer dependency: _GXTexMapID
+// outer dependency: JKRHeap
+// outer dependency: JUTCacheFont::TCachePage
+// outer dependency: JUTCacheFont::TGlyphCacheInfo
 /* top-level dependencies (end JUTCacheFont) */
 struct JUTCacheFont {
-	// JUTCacheFont::TGlyphCacheInfo
-	// JUTCacheFont::TCachePage
-	// JKRHeap
 	// ResFONT
 	// _GXTexMapID
+	// JKRHeap
+	// JUTCacheFont::TCachePage
+	// JUTCacheFont::TGlyphCacheInfo
 	// build TGlyphCacheInfo (JUTCacheFont::TGlyphCacheInfo) False/False
 	/* dependencies (begin JUTCacheFont::TGlyphCacheInfo) */
 	/* dependencies (end JUTCacheFont::TGlyphCacheInfo) */
@@ -67,9 +67,9 @@ struct JUTCacheFont {
 	/* 802DD804 */ void allocArray(JKRHeap*);
 	/* 802DD8EC */ void setBlock();
 	/* 802DDB0C */ void determineBlankPage();
-	/* 802DDBBC */ void getGlyphFromAram(JUTCacheFont::TGlyphCacheInfo*, JUTCacheFont::TCachePage*, s32*, s32*);
-	/* 802DDCE4 */ void loadImage(s32, _GXTexMapID);
-	/* 802DDD98 */ void loadCache_char_subroutine(s32*, bool);
+	/* 802DDBBC */ void getGlyphFromAram(JUTCacheFont::TGlyphCacheInfo*, JUTCacheFont::TCachePage*, int*, int*);
+	/* 802DDCE4 */ void loadImage(int, _GXTexMapID);
+	/* 802DDD98 */ void loadCache_char_subroutine(int*, bool);
 	/* 802DDEE0 */ void invalidiateAllCache();
 	/* 802DDF68 */ void unlink(JUTCacheFont::TGlyphCacheInfo*);
 	/* 802DDFAC */ void prepend(JUTCacheFont::TGlyphCacheInfo*);
@@ -79,6 +79,18 @@ struct JUTCacheFont {
 // build JKRHeap (JKRHeap) True/True
 // build _GXTexMapID (_GXTexMapID) True/True
 // build JUTResFont (JUTResFont) False/False
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
 // build JUTFont (JUTFont) False/False
 /* top-level dependencies (begin JUTFont) */
 /* top-level dependencies (end JUTFont) */
@@ -92,25 +104,13 @@ struct JUTFont {
 	/* 802DED24 */ void initialize_state();
 };
 
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
-struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
-	struct TColor {
-	};
-
-};
-
 /* top-level dependencies (begin JUTResFont) */
-// outer dependency: JUTFont::TWidth
 // outer dependency: JUtility::TColor
+// outer dependency: JUTFont::TWidth
 /* top-level dependencies (end JUTResFont) */
 struct JUTResFont {
-	// JUTFont::TWidth
 	// JUtility::TColor
+	// JUTFont::TWidth
 	/* 802DDFD8 */ void getResFont() const;
 	/* 802DDFE0 */ void getFontType() const;
 	/* 802DDFEC */ void getLeading() const;
@@ -124,30 +124,30 @@ struct JUTResFont {
 	/* 802DF0B0 */ void initialize_state();
 	/* 802DF48C */ void setGX();
 	/* 802DF584 */ void setGX(JUtility::TColor, JUtility::TColor);
-	/* 802DF7C4 */ void drawChar_scale(f32, f32, f32, f32, s32, bool);
-	/* 802DFC64 */ void getWidthEntry(s32, JUTFont::TWidth*) const;
+	/* 802DF7C4 */ void drawChar_scale(f32, f32, f32, f32, int, bool);
+	/* 802DFC64 */ void getWidthEntry(int, JUTFont::TWidth*) const;
 	/* 802DFD0C */ void getCellWidth() const;
 	/* 802DFD58 */ void getCellHeight() const;
-	/* 802DFDA4 */ void isLeadByte(s32) const;
+	/* 802DFDA4 */ void isLeadByte(int) const;
 };
 
 // build JKRAram (JKRAram) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JKRExpandSwitch (JKRExpandSwitch) False/False
 /* top-level dependencies (begin JKRExpandSwitch) */
 /* top-level dependencies (end JKRExpandSwitch) */
 struct JKRExpandSwitch {
 };
 
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin JKRAram) */
-// outer dependency: JKRHeap
 // outer dependency: JKRExpandSwitch
+// outer dependency: JKRHeap
 /* top-level dependencies (end JKRAram) */
 struct JKRAram {
-	// JKRHeap
 	// JKRExpandSwitch
-	/* 802D233C */ void mainRamToAram(char*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, s32, u32*);
-	/* 802D25B4 */ void aramToMainRam(u32, char*, u32, JKRExpandSwitch, u32, JKRHeap*, s32, u32*);
+	// JKRHeap
+	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
+	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
 // build JKRExpandSwitch (JKRExpandSwitch) True/True
@@ -170,6 +170,13 @@ struct JKRAramHeap {
 
 // build JUTFont (JUTFont) True/True
 // build JUtility (JUtility) True/True
+// build JUTException (JUTException) False/False
+/* top-level dependencies (begin JUTException) */
+/* top-level dependencies (end JUTException) */
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -208,11 +215,10 @@ SECTION_SDATA2 extern u8 lit_721[4 + 4 /* padding */];
 // 
 
 SECTION_INIT void memcpy();
-void* operator new(u32, JKRHeap*, s32);
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 void operator delete[](void*);
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
 extern "C" void JUTReportConsole();
 extern "C" void GXInitTexObj();
 extern "C" void GXInitTexObjLOD();
@@ -443,7 +449,7 @@ u8 lit_721[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTCacheFont::getGlyphFromAram(JUTCacheFont::TGlyphCacheInfo* field_0, JUTCacheFont::TCachePage* field_1, s32* field_2, s32* field_3) {
+asm void JUTCacheFont::getGlyphFromAram(JUTCacheFont::TGlyphCacheInfo* field_0, JUTCacheFont::TCachePage* field_1, int* field_2, int* field_3) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTCacheFont/func_802DDBBC.s"
 }
@@ -454,7 +460,7 @@ asm void JUTCacheFont::getGlyphFromAram(JUTCacheFont::TGlyphCacheInfo* field_0, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTCacheFont::loadImage(s32 field_0, _GXTexMapID field_1) {
+asm void JUTCacheFont::loadImage(int field_0, _GXTexMapID field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTCacheFont/loadImage__12JUTCacheFontFi11_GXTexMapID.s"
 }
@@ -465,7 +471,7 @@ asm void JUTCacheFont::loadImage(s32 field_0, _GXTexMapID field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTCacheFont::loadCache_char_subroutine(s32* field_0, bool field_1) {
+asm void JUTCacheFont::loadCache_char_subroutine(int* field_0, bool field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTCacheFont/loadCache_char_subroutine__12JUTCacheFontFPib.s"
 }

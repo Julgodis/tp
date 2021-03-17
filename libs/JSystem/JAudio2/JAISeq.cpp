@@ -10,27 +10,27 @@
 // 
 
 // build JAISeq (JAISeq) False/False
-// build JAISoundActivity (JAISoundActivity) False/False
-/* top-level dependencies (begin JAISoundActivity) */
-/* top-level dependencies (end JAISoundActivity) */
-struct JAISoundActivity {
-};
-
 // build JASSoundParams (JASSoundParams) False/False
 /* top-level dependencies (begin JASSoundParams) */
 /* top-level dependencies (end JASSoundParams) */
 struct JASSoundParams {
 };
 
+// build JAISoundActivity (JAISoundActivity) False/False
+/* top-level dependencies (begin JAISoundActivity) */
+/* top-level dependencies (end JAISoundActivity) */
+struct JAISoundActivity {
+};
+
 /* top-level dependencies (begin JAISeq) */
-// outer dependency: JAISoundActivity
 // outer dependency: JASSoundParams
+// outer dependency: JAISoundActivity
 /* top-level dependencies (end JAISeq) */
 struct JAISeq {
-	// JAISoundActivity
 	// JASSoundParams
+	// JAISoundActivity
 	/* 802A0C04 */ void playSeqData_(JASSoundParams const&, JAISoundActivity);
-	/* 802A0CA4 */ void reserveChildTracks_(s32);
+	/* 802A0CA4 */ void reserveChildTracks_(int);
 	/* 802A0E48 */ void releaseChildTracks_();
 	/* 802A0EDC */ void prepare_getSeqData_();
 	/* 802A0F90 */ void prepare_(JASSoundParams const&, JAISoundActivity);
@@ -40,10 +40,10 @@ struct JAISeq {
 	/* 802A1348 */ void mixOut_(JASSoundParams const&, JAISoundActivity);
 	/* 802A14FC */ void JAISeqMgr_mixOut_(JASSoundParams const&, JAISoundActivity);
 	/* 802A1570 */ s32 getNumChild() const;
-	/* 802A1578 */ void getChild(s32);
-	/* 802A165C */ void releaseChild(s32);
+	/* 802A1578 */ void getChild(int);
+	/* 802A165C */ void releaseChild(int);
 	/* 802A1728 */ void getTrack();
-	/* 802A1730 */ void getChildTrack(s32);
+	/* 802A1730 */ void getChildTrack(int);
 	/* 802A1768 */ void asSeq();
 	/* 802A176C */ void getTempoMgr();
 };
@@ -330,7 +330,7 @@ u8 lit_716[12];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAISeq::reserveChildTracks_(s32 field_0) {
+asm void JAISeq::reserveChildTracks_(int field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeq/reserveChildTracks___6JAISeqFi.s"
 }
@@ -453,7 +453,7 @@ s32 JAISeq::getNumChild() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAISeq::getChild(s32 field_0) {
+asm void JAISeq::getChild(int field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeq/getChild__6JAISeqFi.s"
 }
@@ -464,7 +464,7 @@ asm void JAISeq::getChild(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAISeq::releaseChild(s32 field_0) {
+asm void JAISeq::releaseChild(int field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeq/releaseChild__6JAISeqFi.s"
 }
@@ -486,7 +486,7 @@ asm void JAISeq::getTrack() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAISeq::getChildTrack(s32 field_0) {
+asm void JAISeq::getChildTrack(int field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeq/getChildTrack__6JAISeqFi.s"
 }

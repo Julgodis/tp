@@ -18,7 +18,7 @@ struct JUTDirectFile {
 	/* 802E881C */ ~JUTDirectFile();
 	/* 802E8860 */ void fopen(char const*);
 	/* 802E88FC */ void fclose();
-	/* 802E8958 */ void fgets(void*, s32);
+	/* 802E8958 */ void fgets(void*, int);
 };
 
 // 
@@ -124,7 +124,7 @@ asm void JUTDirectFile::fclose() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTDirectFile::fgets(void* field_0, s32 field_1) {
+asm void JUTDirectFile::fgets(void* field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectFile/fgets__13JUTDirectFileFPvi.s"
 }

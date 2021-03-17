@@ -107,7 +107,7 @@ SECTION_SDATA2 extern f32 d_ovlp_d_ovlp_fade2__lit_3822;
 // External References:
 // 
 
-extern "C" void mDoMtx_ZrotM__FPA4_fs();
+void mDoMtx_ZrotM(f32 (* )[4], s16);
 void fopOvlpM_SceneIsStop();
 void fopOvlpM_SceneIsStart();
 void fopOvlpM_IsOutReq(overlap_task_class*);

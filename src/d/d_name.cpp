@@ -37,7 +37,7 @@ struct dName_c {
 	/* 8024E7EC */ void showIcon();
 	/* 8024E9A0 */ void _move();
 	/* 8024EC10 */ void nameCheck();
-	/* 8024EC4C */ void playNameSet(s32);
+	/* 8024EC4C */ void playNameSet(int);
 	/* 8024EC84 */ void cursorAnm();
 	/* 8024ED48 */ void Wait();
 	/* 8024ED4C */ void MojiSelect();
@@ -45,10 +45,10 @@ struct dName_c {
 	/* 8024F0E0 */ void MojiSelectAnm();
 	/* 8024F164 */ void MojiSelectAnm2();
 	/* 8024F1E8 */ void MojiSelectAnm3();
-	/* 8024F1EC */ void mojiChange(char);
+	/* 8024F1EC */ void mojiChange(u8);
 	/* 8024F55C */ void selectMojiSet();
 	/* 8024F59C */ void getMoji();
-	/* 8024F634 */ void setMoji(s32);
+	/* 8024F634 */ void setMoji(int);
 	/* 8024F88C */ void setNameText();
 	/* 8024F914 */ void nameCursorMove();
 	/* 8024F994 */ void selectCursorMove();
@@ -63,12 +63,12 @@ struct dName_c {
 	/* 802501B0 */ void mojiListChange();
 	/* 80250284 */ void menuCursorMove();
 	/* 80250380 */ void menuCursorMove2();
-	/* 802504A0 */ void selectCursorPosSet(s32);
+	/* 802504A0 */ void selectCursorPosSet(int);
 	/* 80250560 */ void _draw();
 	/* 802505CC */ void screenSet();
 	/* 80250CEC */ void displayInit();
 	/* 80250E54 */ void NameStrSet();
-	/* 80251048 */ void getMenuPosIdx(char);
+	/* 80251048 */ void getMenuPosIdx(u8);
 };
 
 // build J2DPane (J2DPane) True/True
@@ -109,21 +109,21 @@ struct dDlst_list_c {
 
 // build dDlst_base_c (dDlst_base_c) True/True
 // build dSelect_cursor_c (dSelect_cursor_c) False/False
+// build J2DPane (J2DPane) True/True
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
 /* top-level dependencies (end JKRArchive) */
 struct JKRArchive {
 };
 
-// build J2DPane (J2DPane) True/True
 /* top-level dependencies (begin dSelect_cursor_c) */
-// outer dependency: JKRArchive
 // outer dependency: J2DPane
+// outer dependency: JKRArchive
 /* top-level dependencies (end dSelect_cursor_c) */
 struct dSelect_cursor_c {
-	// JKRArchive
 	// J2DPane
-	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	// JKRArchive
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801952A0 */ void setAlphaRate(f32);
@@ -131,6 +131,13 @@ struct dSelect_cursor_c {
 
 // build JKRArchive (JKRArchive) True/True
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (J2DPane) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) False/False
@@ -152,65 +159,58 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (J2DPane) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
-	/* 802547CC */ void scaleAnime(s16, f32, f32, char);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802547CC */ void scaleAnime(s16, f32, f32, u8);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // build J2DScreen (J2DScreen) True/True
 // build JKRExpHeap (JKRExpHeap) True/True
 // build CPaneMgrAlpha (CPaneMgrAlpha) False/False
-// build J2DScreen (J2DScreen) True/True
 // build JKRExpHeap (JKRExpHeap) True/True
+// build J2DScreen (J2DScreen) True/True
 /* top-level dependencies (begin CPaneMgrAlpha) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgrAlpha) */
 struct CPaneMgrAlpha {
-	// J2DScreen
 	// JKRExpHeap
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -228,6 +228,8 @@ struct JKRFileLoader {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 80300660 */ void setString(char const*, ...);
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
@@ -344,8 +346,6 @@ void fopMsgM_messageGet(char*, u32);
 void dPaneClass_showNullPane(J2DScreen*);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFPCce();
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXConcat();
 extern "C" void PSMTXScale();
@@ -979,7 +979,7 @@ asm void dName_c::nameCheck() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dName_c::playNameSet(s32 field_0) {
+asm void dName_c::playNameSet(int field_0) {
 	nofralloc
 #include "asm/d/d_name/playNameSet__7dName_cFi.s"
 }
@@ -1067,7 +1067,7 @@ void dName_c::MojiSelectAnm3() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dName_c::mojiChange(char field_0) {
+asm void dName_c::mojiChange(u8 field_0) {
 	nofralloc
 #include "asm/d/d_name/mojiChange__7dName_cFUc.s"
 }
@@ -1100,7 +1100,7 @@ asm void dName_c::getMoji() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dName_c::setMoji(s32 field_0) {
+asm void dName_c::setMoji(int field_0) {
 	nofralloc
 #include "asm/d/d_name/setMoji__7dName_cFi.s"
 }
@@ -1510,7 +1510,7 @@ asm void dName_c::menuCursorMove2() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dName_c::selectCursorPosSet(s32 field_0) {
+asm void dName_c::selectCursorPosSet(int field_0) {
 	nofralloc
 #include "asm/d/d_name/selectCursorPosSet__7dName_cFi.s"
 }
@@ -1579,7 +1579,7 @@ asm void dName_c::NameStrSet() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dName_c::getMenuPosIdx(char field_0) {
+asm void dName_c::getMenuPosIdx(u8 field_0) {
 	nofralloc
 #include "asm/d/d_name/getMenuPosIdx__7dName_cFUc.s"
 }

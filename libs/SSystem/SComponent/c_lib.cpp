@@ -34,7 +34,7 @@ struct cXyz {
 // 
 
 void cLib_memCpy(void*, void const*, u32);
-void cLib_memSet(void*, s32, u32);
+void cLib_memSet(void*, int, u32);
 void cLib_addCalc(f32*, f32, f32, f32, f32);
 void cLib_addCalc2(f32*, f32, f32, f32);
 void cLib_addCalc0(f32*, f32, f32);
@@ -44,7 +44,7 @@ void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32);
 void cLib_addCalcPosXZ2(cXyz*, cXyz const&, f32, f32);
 void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
 void cLib_addCalcAngleS2(s16*, s16, s16, s16);
-void cLib_chaseUC(char*, char, char);
+void cLib_chaseUC(u8*, u8, u8);
 void cLib_chaseS(s16*, s16, s16);
 void cLib_chaseF(f32*, f32, f32);
 void cLib_chasePos(cXyz*, cXyz const&, f32);
@@ -56,8 +56,8 @@ void cLib_targetAngleX(cXyz const*, cXyz const*);
 void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*);
 void cLib_distanceAngleS(s16, s16);
 void MtxInit();
-void MtxTrans(f32, f32, f32, char);
-void MtxScale(f32, f32, f32, char);
+void MtxTrans(f32, f32, f32, u8);
+void MtxScale(f32, f32, f32, u8);
 void MtxPosition(cXyz*, cXyz*);
 void MtxPush();
 void MtxPull();
@@ -156,7 +156,7 @@ asm void cLib_memCpy(void* field_0, void const* field_1, u32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cLib_memSet(void* field_0, s32 field_1, u32 field_2) {
+asm void cLib_memSet(void* field_0, int field_1, u32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_memSet__FPviUl.s"
 }
@@ -290,7 +290,7 @@ asm void cLib_addCalcAngleS2(s16* field_0, s16 field_1, s16 field_2, s16 field_3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cLib_chaseUC(char* field_0, char field_1, char field_2) {
+asm void cLib_chaseUC(u8* field_0, u8 field_1, u8 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/cLib_chaseUC__FPUcUcUc.s"
 }
@@ -433,7 +433,7 @@ asm void MtxInit() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void MtxTrans(f32 field_0, f32 field_1, f32 field_2, char field_3) {
+asm void MtxTrans(f32 field_0, f32 field_1, f32 field_2, u8 field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/MtxTrans__FfffUc.s"
 }
@@ -444,7 +444,7 @@ asm void MtxTrans(f32 field_0, f32 field_1, f32 field_2, char field_3) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void MtxScale(f32 field_0, f32 field_1, f32 field_2, char field_3) {
+asm void MtxScale(f32 field_0, f32 field_1, f32 field_2, u8 field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_lib/MtxScale__FfffUc.s"
 }

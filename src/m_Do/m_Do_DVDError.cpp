@@ -47,7 +47,7 @@ struct OSThread {
 /* top-level dependencies (end JKRThread) */
 struct JKRThread {
 	// OSThread
-	/* 802D16B8 */ JKRThread(OSThread*, s32);
+	/* 802D16B8 */ JKRThread(OSThread*, int);
 	/* 802D1758 */ ~JKRThread();
 };
 

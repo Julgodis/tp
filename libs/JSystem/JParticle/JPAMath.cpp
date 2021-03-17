@@ -10,8 +10,8 @@
 // 
 
 extern "C" void func_80280588();
-extern "C" void JPAGetYZRotateMtx__FssPA4_f();
-extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
+void JPAGetYZRotateMtx(s16, s16, f32 (* )[4]);
+void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]);
 extern "C" void func_802807E0();
 extern "C" void func_80280808();
 void JPACalcKeyAnmValue(f32, u16, f32 const*);
@@ -74,7 +74,7 @@ extern "C" asm void func_80280588() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void JPAGetYZRotateMtx__FssPA4_f() {
+asm void JPAGetYZRotateMtx(s16 field_0, s16 field_1, f32 (* field_2)[4]) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAMath/JPAGetYZRotateMtx__FssPA4_f.s"
 }
@@ -85,7 +85,7 @@ extern "C" asm void JPAGetYZRotateMtx__FssPA4_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void JPAGetXYZRotateMtx__FsssPA4_f() {
+asm void JPAGetXYZRotateMtx(s16 field_0, s16 field_1, s16 field_2, f32 (* field_3)[4]) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAMath/JPAGetXYZRotateMtx__FsssPA4_f.s"
 }

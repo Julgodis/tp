@@ -30,13 +30,13 @@ struct J3DShapeFactory {
 	// J3DShapeBlock
 	// _GXVtxDescList
 	/* 80337350 */ J3DShapeFactory(J3DShapeBlock const&);
-	/* 80337400 */ void create(s32, u32, _GXVtxDescList*);
-	/* 803375BC */ void newShapeMtx(u32, s32, s32) const;
-	/* 8033784C */ void newShapeDraw(s32, s32) const;
+	/* 80337400 */ void create(int, u32, _GXVtxDescList*);
+	/* 803375BC */ void newShapeMtx(u32, int, int) const;
+	/* 8033784C */ void newShapeDraw(int, int) const;
 	/* 803378D8 */ void allocVcdVatCmdBuffer(u32);
-	/* 80337944 */ void calcSize(s32, u32);
+	/* 80337944 */ void calcSize(int, u32);
 	/* 803379D8 */ void calcSizeVcdVatCmdBuffer(u32);
-	/* 803379E8 */ void calcSizeShapeMtx(u32, s32, s32) const;
+	/* 803379E8 */ void calcSizeShapeMtx(u32, int, int) const;
 };
 
 // build J3DShapeBlock (J3DShapeBlock) True/True
@@ -45,7 +45,7 @@ struct J3DShapeFactory {
 /* top-level dependencies (begin J3DShapeDraw) */
 /* top-level dependencies (end J3DShapeDraw) */
 struct J3DShapeDraw {
-	/* 80314ABC */ J3DShapeDraw(char const*, u32);
+	/* 80314ABC */ J3DShapeDraw(u8 const*, u32);
 };
 
 // build J3DShape (J3DShape) False/False
@@ -85,7 +85,7 @@ SECTION_RODATA extern const u8 J3DShapeFactory__stringBase0[48];
 extern "C" void OSReport();
 void* operator new(u32);
 void* operator new[](u32);
-void* operator new[](u32, s32);
+void* operator new[](u32, int);
 extern "C" void func_80336764();
 extern "C" void func_8033677C();
 extern "C" void _savegpr_26();
@@ -132,7 +132,7 @@ asm J3DShapeFactory::J3DShapeFactory(J3DShapeBlock const& field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeFactory::create(s32 field_0, u32 field_1, _GXVtxDescList* field_2) {
+asm void J3DShapeFactory::create(int field_0, u32 field_1, _GXVtxDescList* field_2) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/create__15J3DShapeFactoryFiUlP14_GXVtxDescList.s"
 }
@@ -154,7 +154,7 @@ SECTION_DEAD char* const pad_803A212C = "\0\0\0";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeFactory::newShapeMtx(u32 field_0, s32 field_1, s32 field_2) const {
+asm void J3DShapeFactory::newShapeMtx(u32 field_0, int field_1, int field_2) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/newShapeMtx__15J3DShapeFactoryCFUlii.s"
 }
@@ -165,7 +165,7 @@ asm void J3DShapeFactory::newShapeMtx(u32 field_0, s32 field_1, s32 field_2) con
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeFactory::newShapeDraw(s32 field_0, s32 field_1) const {
+asm void J3DShapeFactory::newShapeDraw(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/newShapeDraw__15J3DShapeFactoryCFii.s"
 }
@@ -187,7 +187,7 @@ asm void J3DShapeFactory::allocVcdVatCmdBuffer(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeFactory::calcSize(s32 field_0, u32 field_1) {
+asm void J3DShapeFactory::calcSize(int field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/calcSize__15J3DShapeFactoryFiUl.s"
 }
@@ -209,7 +209,7 @@ asm void J3DShapeFactory::calcSizeVcdVatCmdBuffer(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeFactory::calcSizeShapeMtx(u32 field_0, s32 field_1, s32 field_2) const {
+asm void J3DShapeFactory::calcSizeShapeMtx(u32 field_0, int field_1, int field_2) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/calcSizeShapeMtx__15J3DShapeFactoryCFUlii.s"
 }

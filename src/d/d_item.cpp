@@ -13,31 +13,31 @@
 /* top-level dependencies (begin dComIfG_play_c) */
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	/* 8002B36C */ void setItemBombNumCount(char, s16);
-	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002B36C */ void setItemBombNumCount(u8, s16);
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 // build dSv_player_status_a_c (dSv_player_status_a_c) False/False
 /* top-level dependencies (begin dSv_player_status_a_c) */
 /* top-level dependencies (end dSv_player_status_a_c) */
 struct dSv_player_status_a_c {
-	/* 80032AF8 */ void isMagicFlag(char) const;
+	/* 80032AF8 */ void isMagicFlag(u8) const;
 };
 
 // build dSv_player_item_c (dSv_player_item_c) False/False
 /* top-level dependencies (begin dSv_player_item_c) */
 /* top-level dependencies (end dSv_player_item_c) */
 struct dSv_player_item_c {
-	/* 80032FB8 */ void setItem(s32, char);
-	/* 80033030 */ void getItem(s32, bool) const;
-	/* 80033450 */ void setEmptyBottleItemIn(char);
+	/* 80032FB8 */ void setItem(int, u8);
+	/* 80033030 */ void getItem(int, bool) const;
+	/* 80033450 */ void setEmptyBottleItemIn(u8);
 	/* 80033494 */ void setEmptyBottle();
-	/* 80033514 */ void setEmptyBottle(char);
-	/* 800336E0 */ void checkBottle(char);
-	/* 80033A20 */ void setEmptyBombBagItemIn(char, bool);
-	/* 80033A50 */ void setEmptyBombBagItemIn(char, char, bool);
+	/* 80033514 */ void setEmptyBottle(u8);
+	/* 800336E0 */ void checkBottle(u8);
+	/* 80033A20 */ void setEmptyBombBagItemIn(u8, bool);
+	/* 80033A50 */ void setEmptyBombBagItemIn(u8, u8, bool);
 	/* 80033A88 */ void setEmptyBombBag();
-	/* 80033B08 */ void setEmptyBombBag(char, char);
+	/* 80033B08 */ void setEmptyBombBag(u8, u8);
 	/* 80033CBC */ void setRodTypeLevelUp();
 };
 
@@ -45,47 +45,47 @@ struct dSv_player_item_c {
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033E60 */ void onFirstBit(char);
-	/* 80033EC8 */ void isFirstBit(char) const;
+	/* 80033E60 */ void onFirstBit(u8);
+	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
 // build dSv_player_item_record_c (dSv_player_item_record_c) False/False
 /* top-level dependencies (begin dSv_player_item_record_c) */
 /* top-level dependencies (end dSv_player_item_record_c) */
 struct dSv_player_item_record_c {
-	/* 80033F7C */ void getBombNum(char) const;
-	/* 80033F8C */ void setBottleNum(char, char);
+	/* 80033F7C */ void getBombNum(u8) const;
+	/* 80033F8C */ void setBottleNum(u8, u8);
 };
 
 // build dSv_player_item_max_c (dSv_player_item_max_c) False/False
 /* top-level dependencies (begin dSv_player_item_max_c) */
 /* top-level dependencies (end dSv_player_item_max_c) */
 struct dSv_player_item_max_c {
-	/* 800340F8 */ void getBombNum(char) const;
+	/* 800340F8 */ void getBombNum(u8) const;
 };
 
 // build dSv_player_collect_c (dSv_player_collect_c) False/False
 /* top-level dependencies (begin dSv_player_collect_c) */
 /* top-level dependencies (end dSv_player_collect_c) */
 struct dSv_player_collect_c {
-	/* 800341E8 */ void setCollect(s32, char);
-	/* 80034208 */ void isCollect(s32, char) const;
+	/* 800341E8 */ void setCollect(int, u8);
+	/* 80034208 */ void isCollect(int, u8) const;
 };
 
 // build dSv_light_drop_c (dSv_light_drop_c) False/False
 /* top-level dependencies (begin dSv_light_drop_c) */
 /* top-level dependencies (end dSv_light_drop_c) */
 struct dSv_light_drop_c {
-	/* 80034368 */ void onLightDropGetFlag(char);
-	/* 8003439C */ void isLightDropGetFlag(char) const;
+	/* 80034368 */ void onLightDropGetFlag(u8);
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
 // build dSv_memBit_c (dSv_memBit_c) False/False
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 80034918 */ void onDungeonItem(s32);
-	/* 80034934 */ void isDungeonItem(s32) const;
+	/* 80034918 */ void onDungeonItem(int);
+	/* 80034934 */ void isDungeonItem(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -99,15 +99,15 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035200 */ void onSwitch(s32, s32);
+	/* 80035200 */ void onSwitch(int, int);
 };
 
 // 
 // Forward References:
 // 
 
-void execItemGet(char);
-void checkItemGet(char, s32);
+void execItemGet(u8);
+void checkItemGet(u8, int);
 static void item_func_HEART();
 static void item_func_GREEN_RUPEE();
 static void item_func_BLUE_RUPEE();
@@ -484,13 +484,13 @@ static void item_getcheck_func_L2_KEY_PIECES3();
 static void item_getcheck_func_KEY_OF_CARAVAN();
 static void item_getcheck_func_LV2_BOSS_KEY();
 static void item_getcheck_func_KEY_OF_FILONE();
-static void isBomb(char);
-static void isArrow(char);
-void isBottleItem(char);
-void isHeart(char);
-void isInsect(char);
-void check_itemno(s32);
-static void addBombCount(char, char);
+static void isBomb(u8);
+static void isArrow(u8);
+void isBottleItem(u8);
+void isHeart(u8);
+void isInsect(u8);
+void check_itemno(int);
+static void addBombCount(u8, u8);
 
 extern "C" void execItemGet__FUc();
 extern "C" void checkItemGet__FUci();
@@ -890,10 +890,10 @@ SECTION_SDATA2 extern f64 d_d_item__lit_3828;
 // 
 
 void dComIfGs_getMaxLifeGauge();
-void dComIfGs_setSelectEquipClothes(char);
-void dComIfGs_setSelectEquipSword(char);
-void dComIfGs_setSelectEquipShield(char);
-void dMeter2Info_setSword(char, bool);
+void dComIfGs_setSelectEquipClothes(u8);
+void dComIfGs_setSelectEquipSword(u8);
+void dComIfGs_setSelectEquipShield(u8);
+void dMeter2Info_setSword(u8, bool);
 extern "C" void _savegpr_20();
 extern "C" void _savegpr_26();
 extern "C" void _savegpr_29();
@@ -1214,7 +1214,7 @@ void* item_func_ptr[256] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void execItemGet(char field_0) {
+asm void execItemGet(u8 field_0) {
 	nofralloc
 #include "asm/d/d_item/execItemGet__FUc.s"
 }
@@ -1486,7 +1486,7 @@ void* item_getcheck_func_ptr[256] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void checkItemGet(char field_0, s32 field_1) {
+asm void checkItemGet(u8 field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_item/checkItemGet__FUci.s"
 }
@@ -5105,7 +5105,7 @@ asm static void item_getcheck_func_KEY_OF_FILONE() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void isBomb(char field_0) {
+asm static void isBomb(u8 field_0) {
 	nofralloc
 #include "asm/d/d_item/isBomb__FUc.s"
 }
@@ -5116,7 +5116,7 @@ asm static void isBomb(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void isArrow(char field_0) {
+asm static void isArrow(u8 field_0) {
 	nofralloc
 #include "asm/d/d_item/isArrow__FUc.s"
 }
@@ -5127,7 +5127,7 @@ asm static void isArrow(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isBottleItem(char field_0) {
+asm void isBottleItem(u8 field_0) {
 	nofralloc
 #include "asm/d/d_item/isBottleItem__FUc.s"
 }
@@ -5138,7 +5138,7 @@ asm void isBottleItem(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isHeart(char field_0) {
+asm void isHeart(u8 field_0) {
 	nofralloc
 #include "asm/d/d_item/isHeart__FUc.s"
 }
@@ -5149,7 +5149,7 @@ asm void isHeart(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void isInsect(char field_0) {
+asm void isInsect(u8 field_0) {
 	nofralloc
 #include "asm/d/d_item/isInsect__FUc.s"
 }
@@ -5170,7 +5170,7 @@ SECTION_DEAD char* const pad_8037B0D7 = "";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void check_itemno(s32 field_0) {
+asm void check_itemno(int field_0) {
 	nofralloc
 #include "asm/d/d_item/check_itemno__Fi.s"
 }
@@ -5181,7 +5181,7 @@ asm void check_itemno(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void addBombCount(char field_0, char field_1) {
+asm static void addBombCount(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/d_item/addBombCount__FUcUc.s"
 }

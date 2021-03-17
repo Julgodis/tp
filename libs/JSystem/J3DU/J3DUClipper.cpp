@@ -10,19 +10,28 @@
 // 
 
 // build J3DUClipper (J3DUClipper) False/False
-/* top-level dependencies (begin J3DUClipper) */
-/* top-level dependencies (end J3DUClipper) */
-struct J3DUClipper {
-	/* 80273778 */ void init();
-	/* 8027378C */ void calcViewFrustum();
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
 };
 
+/* top-level dependencies (begin J3DUClipper) */
+// outer dependency: Vec
+/* top-level dependencies (end J3DUClipper) */
+struct J3DUClipper {
+	// Vec
+	/* 80273778 */ void init();
+	/* 8027378C */ void calcViewFrustum();
+	/* 802738FC */ void clip(f32 const (* )[4], Vec, f32) const;
+	/* 80273A44 */ void clip(f32 const (* )[4], Vec*, Vec*) const;
+};
+
+// build Vec (Vec) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf();
-extern "C" void clip__11J3DUClipperCFPA4_CfP3VecP3Vec();
 
 extern "C" void init__11J3DUClipperFv();
 extern "C" void calcViewFrustum__11J3DUClipperFv();
@@ -107,7 +116,7 @@ asm void J3DUClipper::calcViewFrustum() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void clip__11J3DUClipperCFPA4_Cf3Vecf() {
+asm void J3DUClipper::clip(f32 const (* field_0)[4], Vec field_1, f32 field_2) const {
 	nofralloc
 #include "asm/JSystem/J3DU/J3DUClipper/clip__11J3DUClipperCFPA4_Cf3Vecf.s"
 }
@@ -126,7 +135,7 @@ u8 lit_991[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void clip__11J3DUClipperCFPA4_CfP3VecP3Vec() {
+asm void J3DUClipper::clip(f32 const (* field_0)[4], Vec* field_1, Vec* field_2) const {
 	nofralloc
 #include "asm/JSystem/J3DU/J3DUClipper/clip__11J3DUClipperCFPA4_CfP3VecP3Vec.s"
 }

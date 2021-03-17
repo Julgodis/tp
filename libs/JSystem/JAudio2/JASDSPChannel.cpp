@@ -18,8 +18,8 @@ struct JASDSPChannel {
 	/* 8029D330 */ void start();
 	/* 8029D340 */ void drop();
 	/* 8029D3C8 */ void initAll();
-	/* 8029D534 */ void setPriority(char);
-	/* 8029D540 */ void getLowestChannel(s32);
+	/* 8029D534 */ void setPriority(u8);
+	/* 8029D540 */ void getLowestChannel(int);
 	/* 8029D5D0 */ void getLowestActiveChannel();
 	/* 8029D65C */ void updateProc();
 	/* 8029D89C */ void updateAll();
@@ -45,7 +45,7 @@ struct JASDsp {
 	};
 
 	/* 8029D9A4 */ void releaseHalt(u32);
-	/* 8029DA38 */ void getDSPHandle(s32);
+	/* 8029DA38 */ void getDSPHandle(int);
 };
 
 // build JKRHeap (JKRHeap) False/False
@@ -81,7 +81,7 @@ SECTION_SBSS extern u8 sDspChannels__13JASDSPChannel[4 + 4 /* padding */];
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 extern "C" void __construct_new_array();
 extern "C" void _savegpr_28();
 extern "C" void _restgpr_28();
@@ -190,7 +190,7 @@ extern "C" asm void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDSPChannel::setPriority(char field_0) {
+asm void JASDSPChannel::setPriority(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/setPriority__13JASDSPChannelFUc.s"
 }
@@ -201,7 +201,7 @@ asm void JASDSPChannel::setPriority(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDSPChannel::getLowestChannel(s32 field_0) {
+asm void JASDSPChannel::getLowestChannel(int field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/getLowestChannel__13JASDSPChannelFi.s"
 }

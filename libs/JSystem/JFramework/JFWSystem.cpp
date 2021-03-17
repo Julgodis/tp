@@ -21,7 +21,7 @@ struct JFWSystem {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 };
 
 // build JKRExpHeap (JKRExpHeap) False/False
@@ -31,7 +31,7 @@ struct JKRHeap {
 /* top-level dependencies (end JKRExpHeap) */
 struct JKRExpHeap {
 	// JKRHeap
-	/* 802CEDB4 */ void createRoot(s32, bool);
+	/* 802CEDB4 */ void createRoot(int, bool);
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
@@ -47,7 +47,7 @@ struct OSThread {
 /* top-level dependencies (end JKRThread) */
 struct JKRThread {
 	// OSThread
-	/* 802D16B8 */ JKRThread(OSThread*, s32);
+	/* 802D16B8 */ JKRThread(OSThread*, int);
 };
 
 // build OSThread (OSThread) True/True
@@ -66,20 +66,20 @@ struct JUTGraphFifo {
 };
 
 // build JUTResFont (JUTResFont) False/False
-// build JKRHeap (JKRHeap) True/True
 // build ResFONT (ResFONT) False/False
 /* top-level dependencies (begin ResFONT) */
 /* top-level dependencies (end ResFONT) */
 struct ResFONT {
 };
 
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin JUTResFont) */
-// outer dependency: JKRHeap
 // outer dependency: ResFONT
+// outer dependency: JKRHeap
 /* top-level dependencies (end JUTResFont) */
 struct JUTResFont {
-	// JKRHeap
 	// ResFONT
+	// JKRHeap
 	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
 };
 
@@ -159,7 +159,7 @@ struct JUTVideo {
 /* top-level dependencies (end JUTConsole) */
 struct JUTConsole {
 	// JKRHeap
-	/* 802E7354 */ void create(s32, s32, JKRHeap*);
+	/* 802E7354 */ void create(u32, u32, JKRHeap*);
 };
 
 // build JUTConsoleManager (JUTConsoleManager) False/False

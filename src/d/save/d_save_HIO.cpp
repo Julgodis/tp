@@ -150,25 +150,25 @@ struct dSvBit_childSwitchHIO_c {
 /* top-level dependencies (begin dSv_player_status_b_c) */
 /* top-level dependencies (end dSv_player_status_b_c) */
 struct dSv_player_status_b_c {
-	/* 80032BB0 */ void isDarkClearLV(s32) const;
-	/* 80032BEC */ void isTransformLV(s32) const;
+	/* 80032BB0 */ void isDarkClearLV(int) const;
+	/* 80032BEC */ void isTransformLV(int) const;
 };
 
 // build dSv_light_drop_c (dSv_light_drop_c) False/False
 /* top-level dependencies (begin dSv_light_drop_c) */
 /* top-level dependencies (end dSv_light_drop_c) */
 struct dSv_light_drop_c {
-	/* 80034340 */ void getLightDropNum(char) const;
-	/* 8003439C */ void isLightDropGetFlag(char) const;
+	/* 80034340 */ void getLightDropNum(u8) const;
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
 // build dSv_memBit_c (dSv_memBit_c) False/False
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 800347E8 */ void isTbox(s32) const;
-	/* 80034860 */ void isSwitch(s32) const;
-	/* 800348EC */ void isItem(s32) const;
+	/* 800347E8 */ void isTbox(int) const;
+	/* 80034860 */ void isSwitch(int) const;
+	/* 800348EC */ void isItem(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -182,8 +182,8 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_danBit_c) */
 /* top-level dependencies (end dSv_danBit_c) */
 struct dSv_danBit_c {
-	/* 80034BE8 */ void isSwitch(s32) const;
-	/* 80034C74 */ void isItem(s32) const;
+	/* 80034BE8 */ void isSwitch(int) const;
+	/* 80034C74 */ void isItem(int) const;
 };
 
 // 

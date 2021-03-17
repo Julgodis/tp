@@ -109,15 +109,15 @@ struct request_of_phase_process_class {
 /* top-level dependencies (begin dSv_player_item_c) */
 /* top-level dependencies (end dSv_player_item_c) */
 struct dSv_player_item_c {
-	/* 80032FB8 */ void setItem(s32, char);
-	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80032FB8 */ void setItem(int, u8);
+	/* 80033030 */ void getItem(int, bool) const;
 };
 
 // build dSv_player_get_item_c (dSv_player_get_item_c) False/False
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(char) const;
+	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -140,7 +140,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, s32);
+	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -195,7 +195,7 @@ struct JUtility {
 /* top-level dependencies (end dMsgScrnLight_c) */
 struct dMsgScrnLight_c {
 	// JUtility::TColor
-	/* 80245934 */ dMsgScrnLight_c(char, char);
+	/* 80245934 */ dMsgScrnLight_c(u8, u8);
 	/* 80245F90 */ void draw(f32*, f32, f32, f32, f32, f32, f32, JUtility::TColor, JUtility::TColor);
 };
 
@@ -221,6 +221,13 @@ struct J2DScreen {
 };
 
 // build J2DGrafContext (J2DGrafContext) True/True
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 80300660 */ void setString(char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -230,8 +237,8 @@ static void dGameover_Execute(dGameover_c*);
 static bool dGameover_IsDelete(dGameover_c*);
 static void dGameover_Delete(dGameover_c*);
 static void dGameover_Create(msg_class*);
-void d_GameOver_Create(char);
-void d_GameOver_Delete(s32&);
+void d_GameOver_Create(u8);
+void d_GameOver_Delete(u32&);
 extern "C" void __sinit_d_gameover_cpp();
 
 extern "C" void draw__24dDlst_Gameover_CAPTURE_cFv();
@@ -325,18 +332,17 @@ SECTION_SDATA2 extern f32 lit_4377;
 
 void mDoExt_setCurrentHeap(JKRHeap*);
 void mDoExt_getSubFont();
-void fopMsgM_SearchByID(s32);
+void fopMsgM_SearchByID(u32);
 void fopMsgM_Delete(void*);
 extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i();
 void dComIfG_resLoad(request_of_phase_process_class*, char const*);
 void dComIfG_resDelete(request_of_phase_process_class*, char const*);
-void dComIfGp_setHeapLockFlag(char);
-void dComIfGp_offHeapLockFlag(s32);
+void dComIfGp_setHeapLockFlag(u8);
+void dComIfGp_offHeapLockFlag(int);
 void dPaneClass_showNullPane(J2DScreen*);
 void* operator new(u32);
 void operator delete(void*);
 extern "C" void func_802FC800();
-extern "C" void setString__10J2DTextBoxFPCce();
 extern "C" void C_MTXOrtho();
 extern "C" void GXSetVtxDesc();
 extern "C" void GXClearVtxDesc();
@@ -1104,7 +1110,7 @@ asm static void dGameover_Create(msg_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void d_GameOver_Create(char field_0) {
+asm void d_GameOver_Create(u8 field_0) {
 	nofralloc
 #include "asm/d/d_gameover/d_GameOver_Create__FUc.s"
 }
@@ -1115,7 +1121,7 @@ asm void d_GameOver_Create(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void d_GameOver_Delete(s32& field_0) {
+asm void d_GameOver_Delete(u32& field_0) {
 	nofralloc
 #include "asm/d/d_gameover/d_GameOver_Delete__FRUi.s"
 }

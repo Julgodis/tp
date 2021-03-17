@@ -18,9 +18,9 @@ struct cBgS_PolyInfo {
 	/* 802680F8 */ void ChkSetInfo() const;
 	/* 80268120 */ void ClearPi();
 	/* 80268148 */ void SetPolyInfo(cBgS_PolyInfo const&);
-	/* 8026816C */ void SetActorInfo(s32, void*, s32);
-	/* 8026817C */ void ChkSafe(void const*, s32) const;
-	/* 802681A4 */ void SetPolyIndex(s32);
+	/* 8026816C */ void SetActorInfo(int, void*, u32);
+	/* 8026817C */ void ChkSafe(void const*, u32) const;
+	/* 802681A4 */ void SetPolyIndex(int);
 	/* 802681AC */ void ChkBgIndex() const;
 };
 
@@ -121,7 +121,7 @@ asm void cBgS_PolyInfo::SetPolyInfo(cBgS_PolyInfo const& field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgS_PolyInfo::SetActorInfo(s32 field_0, void* field_1, s32 field_2) {
+asm void cBgS_PolyInfo::SetActorInfo(int field_0, void* field_1, u32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_poly_info/SetActorInfo__13cBgS_PolyInfoFiPvUi.s"
 }
@@ -132,7 +132,7 @@ asm void cBgS_PolyInfo::SetActorInfo(s32 field_0, void* field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgS_PolyInfo::ChkSafe(void const* field_0, s32 field_1) const {
+asm void cBgS_PolyInfo::ChkSafe(void const* field_0, u32 field_1) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_poly_info/ChkSafe__13cBgS_PolyInfoCFPCvUi.s"
 }
@@ -143,7 +143,7 @@ asm void cBgS_PolyInfo::ChkSafe(void const* field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgS_PolyInfo::SetPolyIndex(s32 field_0) {
+asm void cBgS_PolyInfo::SetPolyIndex(int field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_poly_info/SetPolyIndex__13cBgS_PolyInfoFi.s"
 }

@@ -55,10 +55,10 @@ SECTION_SBSS extern u8 fopKy_KANKYO_TYPE[4 + 4 /* padding */];
 // External References:
 // 
 
-void fopDwTg_ToDrawQ(create_tag_class*, s32);
+void fopDwTg_ToDrawQ(create_tag_class*, int);
 void fopDwTg_DrawQTo(create_tag_class*);
 void fopDwTg_Init(create_tag_class*, void*);
-void fpcBs_MakeOfType(s32*);
+void fpcBs_MakeOfType(int*);
 void fpcLf_GetPriority(leafdraw_class const*);
 void fpcLf_DrawMethod(leafdraw_method_class*, void*);
 void fpcMtd_Execute(process_method_class*, void*);

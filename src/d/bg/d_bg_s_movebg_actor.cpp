@@ -16,6 +16,7 @@ struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
 	/* 80078688 */ bool CreateHeap();
 	/* 80078690 */ bool Create();
+	/* 80078698 */ bool Execute(f32 (** )[3][4]);
 	/* 800786A0 */ bool Draw();
 	/* 800786A8 */ bool Delete();
 	/* 800786B0 */ bool IsDelete();
@@ -52,7 +53,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -85,6 +86,22 @@ struct dBgS {
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
+// build cBgW (cBgW) False/False
+// build cBgD_t (cBgD_t) False/False
+/* top-level dependencies (begin cBgD_t) */
+/* top-level dependencies (end cBgD_t) */
+struct cBgD_t {
+};
+
+/* top-level dependencies (begin cBgW) */
+// outer dependency: cBgD_t
+/* top-level dependencies (end cBgW) */
+struct cBgW {
+	// cBgD_t
+	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
+};
+
+// build cBgD_t (cBgD_t) True/True
 // build dBgW (dBgW) False/False
 /* top-level dependencies (begin dBgW) */
 /* top-level dependencies (end dBgW) */
@@ -105,14 +122,13 @@ struct cBgW_BgId {
 // 
 
 static void CheckCreateHeap(fopAc_ac_c*);
-extern "C" static bool Execute__16dBgS_MoveBgActorFPPA3_A4_f();
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
 
 extern "C" void __ct__16dBgS_MoveBgActorFv();
 extern "C" static void d_bg_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c();
 extern "C" bool CreateHeap__16dBgS_MoveBgActorFv();
 extern "C" bool Create__16dBgS_MoveBgActorFv();
-extern "C" static bool Execute__16dBgS_MoveBgActorFPPA3_A4_f();
+extern "C" bool Execute__16dBgS_MoveBgActorFPPA3_A4_f();
 extern "C" bool Draw__16dBgS_MoveBgActorFv();
 extern "C" bool Delete__16dBgS_MoveBgActorFv();
 extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
@@ -131,9 +147,8 @@ SECTION_SBSS extern u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void mDoMtx_YrotM__FPA4_fs();
+void mDoMtx_YrotM(f32 (* )[4], s16);
 extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
-extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f();
 void* operator new(u32);
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXTrans();
@@ -213,7 +228,7 @@ bool dBgS_MoveBgActor::Create() {
 
 
 /* 80078698-800786A0 0008+00 rc=1 efc=0 .text      Execute__16dBgS_MoveBgActorFPPA3_A4_f                        */
-extern "C" static bool Execute__16dBgS_MoveBgActorFPPA3_A4_f() {
+bool dBgS_MoveBgActor::Execute(f32 (** field_0)[3][4]) {
 	return true;
 }
 

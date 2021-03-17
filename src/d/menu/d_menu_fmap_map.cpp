@@ -16,11 +16,10 @@ struct _GXColor {
 };
 
 // build renderingFmap_c (renderingFmap_c) False/False
-// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) False/False
-/* top-level dependencies (begin dMenu_Fmap_region_data_c) */
-/* top-level dependencies (end dMenu_Fmap_region_data_c) */
-struct dMenu_Fmap_region_data_c {
-	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, s32, s32*, s32*);
+// build dMenu_Fmap_world_data_c (dMenu_Fmap_world_data_c) False/False
+/* top-level dependencies (begin dMenu_Fmap_world_data_c) */
+/* top-level dependencies (end dMenu_Fmap_world_data_c) */
+struct dMenu_Fmap_world_data_c {
 };
 
 // build dDrawPath_c (dDrawPath_c) False/False
@@ -30,13 +29,13 @@ struct dDrawPath_c;
 // build dDrawPath_c (dDrawPath_c) True/True
 /* top-level dependencies (begin dDrawPath_c) */
 // outer dependency: dDrawPath_c::line_class
-// outer dependency: dDrawPath_c::room_class
 // outer dependency: dDrawPath_c::poly_class
+// outer dependency: dDrawPath_c::room_class
 /* top-level dependencies (end dDrawPath_c) */
 struct dDrawPath_c {
 	// dDrawPath_c::line_class
-	// dDrawPath_c::room_class
 	// dDrawPath_c::poly_class
+	// dDrawPath_c::room_class
 	// build group_class (dDrawPath_c::group_class) False/False
 	/* dependencies (begin dDrawPath_c::group_class) */
 	/* dependencies (end dDrawPath_c::group_class) */
@@ -61,40 +60,41 @@ struct dDrawPath_c {
 	struct room_class {
 	};
 
-	/* 8002ABF0 */ bool isDrawType(s32);
-	/* 8002AD84 */ void getLineColor(s32, s32);
+	/* 8002ABF0 */ bool isDrawType(int);
+	/* 8002AD84 */ void getLineColor(int, int);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003CCC4 */ void drawPath();
 };
 
-// build dMenu_Fmap_world_data_c (dMenu_Fmap_world_data_c) False/False
-/* top-level dependencies (begin dMenu_Fmap_world_data_c) */
-/* top-level dependencies (end dMenu_Fmap_world_data_c) */
-struct dMenu_Fmap_world_data_c {
+// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) False/False
+/* top-level dependencies (begin dMenu_Fmap_region_data_c) */
+/* top-level dependencies (end dMenu_Fmap_region_data_c) */
+struct dMenu_Fmap_region_data_c {
+	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
 };
 
 /* top-level dependencies (begin renderingFmap_c) */
-// outer dependency: dMenu_Fmap_region_data_c
-// outer dependency: dDrawPath_c::group_class
 // outer dependency: dMenu_Fmap_world_data_c
+// outer dependency: dDrawPath_c::group_class
+// outer dependency: dMenu_Fmap_region_data_c
 /* top-level dependencies (end renderingFmap_c) */
 struct renderingFmap_c {
-	// dMenu_Fmap_region_data_c
-	// dDrawPath_c::group_class
 	// dMenu_Fmap_world_data_c
+	// dDrawPath_c::group_class
+	// dMenu_Fmap_region_data_c
 	// build palette_e (renderingFmap_c::palette_e) False/False
 	/* dependencies (begin renderingFmap_c::palette_e) */
 	/* dependencies (end renderingFmap_c::palette_e) */
 	struct palette_e {
 	};
 
-	/* 801CE15C */ void init(char*, u16, u16, u16, u16);
-	/* 801CE188 */ void entry(dMenu_Fmap_world_data_c*, s32, f32, f32, f32);
-	/* 801CE224 */ void isSwitchSpecialOff(s32);
+	/* 801CE15C */ void init(u8*, u16, u16, u16, u16);
+	/* 801CE188 */ void entry(dMenu_Fmap_world_data_c*, int, f32, f32, f32);
+	/* 801CE224 */ void isSwitchSpecialOff(int);
 	/* 801CE288 */ void isSwitch(dDrawPath_c::group_class const*);
-	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, s32, s32*, s32*);
+	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, int, int*, int*);
 	/* 801CE410 */ void preDrawPath();
 	/* 801CE4D4 */ bool isDrawPath();
 	/* 801CE4DC */ void isDrawRoom();
@@ -110,7 +110,7 @@ struct renderingFmap_c {
 	/* 801CE93C */ void getNextRegion();
 	/* 801CE9A4 */ void getNextRoomPointer();
 	/* 801CF4D0 */ ~renderingFmap_c();
-	/* 801CF55C */ bool isRenderingFloor(s32);
+	/* 801CF55C */ bool isRenderingFloor(int);
 	/* 801CF564 */ void beforeDrawPath();
 	/* 801CF568 */ void afterDrawPath();
 };
@@ -119,24 +119,24 @@ struct renderingFmap_c {
 // build dDrawPath_c (dDrawPath_c) True/True
 // build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
 // build dMenu_FmapMap_c (dMenu_FmapMap_c) False/False
-// build _GXColor (_GXColor) True/True
+// build dMenu_Fmap_world_data_c (dMenu_Fmap_world_data_c) True/True
 // build dDrawPath_c (dDrawPath_c) True/True
 // build renderingFmap_c (renderingFmap_c) True/True
-// build dMenu_Fmap_world_data_c (dMenu_Fmap_world_data_c) True/True
+// build _GXColor (_GXColor) True/True
 /* top-level dependencies (begin dMenu_FmapMap_c) */
-// outer dependency: _GXColor
+// outer dependency: dMenu_Fmap_world_data_c
 // outer dependency: dDrawPath_c::line_class
 // outer dependency: renderingFmap_c::palette_e
-// outer dependency: dMenu_Fmap_world_data_c
+// outer dependency: _GXColor
 /* top-level dependencies (end dMenu_FmapMap_c) */
 struct dMenu_FmapMap_c {
-	// _GXColor
+	// dMenu_Fmap_world_data_c
 	// dDrawPath_c::line_class
 	// renderingFmap_c::palette_e
-	// dMenu_Fmap_world_data_c
-	/* 801CEA38 */ void setFmapPaletteColor(renderingFmap_c::palette_e, char, char, char, char);
+	// _GXColor
+	/* 801CEA38 */ void setFmapPaletteColor(renderingFmap_c::palette_e, u8, u8, u8, u8);
 	/* 801CEAAC */ void setFmapPaletteColor(renderingFmap_c::palette_e, _GXColor const&);
-	/* 801CEAE0 */ void isFlashRoomNoCheck(s32) const;
+	/* 801CEAE0 */ void isFlashRoomNoCheck(int) const;
 	/* 801CEB1C */ void setPointColor(f32);
 	/* 801CEC24 */ dMenu_FmapMap_c();
 	/* 801CED38 */ ~dMenu_FmapMap_c();
@@ -144,14 +144,20 @@ struct dMenu_FmapMap_c {
 	/* 801CEE3C */ void _delete();
 	/* 801CEE94 */ void draw();
 	/* 801CF0B4 */ void rendering(dDrawPath_c::line_class const*);
-	/* 801CF12C */ void getLineWidth(s32);
-	/* 801CF1D4 */ void isDrawType(s32);
-	/* 801CF1E0 */ void setFlashOn(s32, s32, char*, s32);
-	/* 801CF208 */ void getLineColor(s32, s32);
+	/* 801CF12C */ void getLineWidth(int);
+	/* 801CF1D4 */ void isDrawType(int);
+	/* 801CF1E0 */ void setFlashOn(int, int, u8*, int);
+	/* 801CF208 */ void getLineColor(int, int);
 	/* 801CF298 */ void getBackColor() const;
-	/* 801CF2A0 */ void getColor(s32);
+	/* 801CF2A0 */ void getColor(int);
 	/* 801CF394 */ void setTexture(u16, u16, u16, u16);
-	/* 801CF450 */ void setRendering(dMenu_Fmap_world_data_c*, s32, f32, f32, f32, f32);
+	/* 801CF450 */ void setRendering(dMenu_Fmap_world_data_c*, int, f32, f32, f32, f32);
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
 };
 
 // build dDlst_base_c (dDlst_base_c) False/False
@@ -165,7 +171,7 @@ struct dDlst_base_c {
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build dRenderingMap_c (dRenderingMap_c) False/False
@@ -180,7 +186,7 @@ struct ResTIMG {
 /* top-level dependencies (end dRenderingMap_c) */
 struct dRenderingMap_c {
 	// ResTIMG
-	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, char*, char*, u16) const;
+	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, u8*, u8*, u16) const;
 	/* 8003CDAC */ void renderingMap();
 };
 
@@ -195,8 +201,8 @@ struct dRenderingFDAmap_c {
 	/* 8003D188 */ void preRenderingMap();
 	/* 8003D320 */ void postRenderingMap();
 	/* 8003D3C0 */ void renderingDecoration(dDrawPath_c::line_class const*);
-	/* 8003D68C */ void getDecoLineColor(s32, s32);
-	/* 8003D6B8 */ void getDecorationLineWidth(s32);
+	/* 8003D68C */ void getDecoLineColor(int, int);
+	/* 8003D6B8 */ void getDecorationLineWidth(int);
 };
 
 // build dMenu_Fmap_room_data_c (dMenu_Fmap_room_data_c) False/False
@@ -220,7 +226,7 @@ struct dDlst_list_c {
 // Forward References:
 // 
 
-static void twoValueLineInterpolation(char, char, f32);
+static void twoValueLineInterpolation(u8, u8, f32);
 static void twoColorLineInterporation(_GXColor const&, _GXColor const&, f32, _GXColor&);
 
 extern "C" static void twoValueLineInterpolation__FUcUcf();
@@ -296,11 +302,11 @@ SECTION_SDATA2 extern u8 data_804541CC[4];
 // External References:
 // 
 
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
-void dComIfGs_isStageSwitch(s32, s32);
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
+void dComIfGs_isStageSwitch(int, int);
 void dComIfGp_getNowLevel();
-void* operator new(u32, s32);
-void* operator new[](u32, s32);
+void* operator new(u32, int);
+void* operator new[](u32, int);
 void operator delete(void*);
 void operator delete[](void*);
 extern "C" void DCStoreRange();
@@ -379,7 +385,7 @@ f64 d_menu_d_menu_fmap_map__lit_3689 = 4503599627370496.0 /* cast u32 to float *
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void twoValueLineInterpolation(char field_0, char field_1, f32 field_2) {
+asm static void twoValueLineInterpolation(u8 field_0, u8 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/twoValueLineInterpolation__FUcUcf.s"
 }
@@ -407,7 +413,7 @@ u8 d_menu_d_menu_fmap_map__lit_3703[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingFmap_c::init(char* field_0, u16 field_1, u16 field_2, u16 field_3, u16 field_4) {
+asm void renderingFmap_c::init(u8* field_0, u16 field_1, u16 field_2, u16 field_3, u16 field_4) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/init__15renderingFmap_cFPUcUsUsUsUs.s"
 }
@@ -422,7 +428,7 @@ f32 d_menu_d_menu_fmap_map__lit_3711 = 1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingFmap_c::entry(dMenu_Fmap_world_data_c* field_0, s32 field_1, f32 field_2, f32 field_3, f32 field_4) {
+asm void renderingFmap_c::entry(dMenu_Fmap_world_data_c* field_0, int field_1, f32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/entry__15renderingFmap_cFP23dMenu_Fmap_world_data_cifff.s"
 }
@@ -470,7 +476,7 @@ SECTION_DEAD char* const pad_80396244 = "\0\0\0";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingFmap_c::isSwitchSpecialOff(s32 field_0) {
+asm void renderingFmap_c::isSwitchSpecialOff(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/isSwitchSpecialOff__15renderingFmap_cFi.s"
 }
@@ -492,7 +498,7 @@ asm void renderingFmap_c::isSwitch(dDrawPath_c::group_class const* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingFmap_c::getPointStagePathInnerNo(dMenu_Fmap_region_data_c* field_0, f32 field_1, f32 field_2, s32 field_3, s32* field_4, s32* field_5) {
+asm void renderingFmap_c::getPointStagePathInnerNo(dMenu_Fmap_region_data_c* field_0, f32 field_1, f32 field_2, int field_3, int* field_4, int* field_5) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi.s"
 }
@@ -662,7 +668,7 @@ asm void renderingFmap_c::getNextRoomPointer() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_FmapMap_c::setFmapPaletteColor(renderingFmap_c::palette_e field_0, char field_1, char field_2, char field_3, char field_4) {
+asm void dMenu_FmapMap_c::setFmapPaletteColor(renderingFmap_c::palette_e field_0, u8 field_1, u8 field_2, u8 field_3, u8 field_4) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/setFmapPaletteColor__15dMenu_FmapMap_cFQ215renderingFmap_c9palette_eUcUcUcUc.s"
 }
@@ -684,7 +690,7 @@ asm void dMenu_FmapMap_c::setFmapPaletteColor(renderingFmap_c::palette_e field_0
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_FmapMap_c::isFlashRoomNoCheck(s32 field_0) const {
+asm void dMenu_FmapMap_c::isFlashRoomNoCheck(int field_0) const {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/isFlashRoomNoCheck__15dMenu_FmapMap_cCFi.s"
 }
@@ -872,7 +878,7 @@ f32 d_menu_d_menu_fmap_map__lit_4152 = 1.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_FmapMap_c::getLineWidth(s32 field_0) {
+asm void dMenu_FmapMap_c::getLineWidth(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/getLineWidth__15dMenu_FmapMap_cFi.s"
 }
@@ -883,7 +889,7 @@ asm void dMenu_FmapMap_c::getLineWidth(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_FmapMap_c::isDrawType(s32 field_0) {
+asm void dMenu_FmapMap_c::isDrawType(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/isDrawType__15dMenu_FmapMap_cFi.s"
 }
@@ -894,7 +900,7 @@ asm void dMenu_FmapMap_c::isDrawType(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_FmapMap_c::setFlashOn(s32 field_0, s32 field_1, char* field_2, s32 field_3) {
+asm void dMenu_FmapMap_c::setFlashOn(int field_0, int field_1, u8* field_2, int field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/setFlashOn__15dMenu_FmapMap_cFiiPUci.s"
 }
@@ -923,7 +929,7 @@ u8 data_804541C8[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_FmapMap_c::getLineColor(s32 field_0, s32 field_1) {
+asm void dMenu_FmapMap_c::getLineColor(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/getLineColor__15dMenu_FmapMap_cFii.s"
 }
@@ -951,7 +957,7 @@ asm void dMenu_FmapMap_c::getBackColor() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_FmapMap_c::getColor(s32 field_0) {
+asm void dMenu_FmapMap_c::getColor(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/getColor__15dMenu_FmapMap_cFi.s"
 }
@@ -973,7 +979,7 @@ asm void dMenu_FmapMap_c::setTexture(u16 field_0, u16 field_1, u16 field_2, u16 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_FmapMap_c::setRendering(dMenu_Fmap_world_data_c* field_0, s32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5) {
+asm void dMenu_FmapMap_c::setRendering(dMenu_Fmap_world_data_c* field_0, int field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/setRendering__15dMenu_FmapMap_cFP23dMenu_Fmap_world_data_ciffff.s"
 }
@@ -992,7 +998,7 @@ asm renderingFmap_c::~renderingFmap_c() {
 
 
 /* 801CF55C-801CF564 0008+00 rc=2 efc=0 .text      isRenderingFloor__15renderingFmap_cFi                        */
-bool renderingFmap_c::isRenderingFloor(s32 field_0) {
+bool renderingFmap_c::isRenderingFloor(int field_0) {
 	return true;
 }
 

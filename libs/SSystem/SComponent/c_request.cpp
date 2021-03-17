@@ -21,8 +21,8 @@ struct request_base_class {
 
 void cReq_Is_Done(request_base_class*);
 void cReq_Done(request_base_class*);
-void cReq_Command(request_base_class*, char);
-void cReq_Create(request_base_class*, char);
+void cReq_Command(request_base_class*, u8);
+void cReq_Create(request_base_class*, u8);
 
 extern "C" void cReq_Is_Done__FP18request_base_class();
 extern "C" void cReq_Done__FP18request_base_class();
@@ -65,7 +65,7 @@ asm void cReq_Done(request_base_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cReq_Command(request_base_class* field_0, char field_1) {
+asm void cReq_Command(request_base_class* field_0, u8 field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_request/cReq_Command__FP18request_base_classUc.s"
 }
@@ -76,7 +76,7 @@ asm void cReq_Command(request_base_class* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cReq_Create(request_base_class* field_0, char field_1) {
+asm void cReq_Create(request_base_class* field_0, u8 field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_request/cReq_Create__FP18request_base_classUc.s"
 }

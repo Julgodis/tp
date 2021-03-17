@@ -17,12 +17,6 @@ struct JPAEmitterCallBack {
 };
 
 // build JPABaseEmitter (JPABaseEmitter) False/False
-// build JPAEmitterManager (JPAEmitterManager) False/False
-/* top-level dependencies (begin JPAEmitterManager) */
-/* top-level dependencies (end JPAEmitterManager) */
-struct JPAEmitterManager {
-};
-
 // build JPAResource (JPAResource) False/False
 /* top-level dependencies (begin JPAResource) */
 /* top-level dependencies (end JPAResource) */
@@ -33,6 +27,12 @@ struct JPAResource {
 /* top-level dependencies (begin _GXTexMapID) */
 /* top-level dependencies (end _GXTexMapID) */
 struct _GXTexMapID {
+};
+
+// build JPAEmitterManager (JPAEmitterManager) False/False
+/* top-level dependencies (begin JPAEmitterManager) */
+/* top-level dependencies (end JPAEmitterManager) */
+struct JPAEmitterManager {
 };
 
 // build JPABaseParticle (JPABaseParticle) False/False
@@ -52,15 +52,15 @@ struct JPABaseParticle {
 };
 
 /* top-level dependencies (begin JPABaseEmitter) */
-// outer dependency: JPAEmitterManager
 // outer dependency: JPAResource
 // outer dependency: _GXTexMapID
+// outer dependency: JPAEmitterManager
 // outer dependency: JPABaseParticle
 /* top-level dependencies (end JPABaseEmitter) */
 struct JPABaseEmitter {
-	// JPAEmitterManager
 	// JPAResource
 	// _GXTexMapID
+	// JPAEmitterManager
 	// JPABaseParticle
 	/* 8027E6EC */ void init(JPAEmitterManager*, JPAResource*);
 	/* 8027EA40 */ void createParticle();
@@ -70,7 +70,7 @@ struct JPABaseEmitter {
 	/* 8027EE14 */ void processTermination();
 	/* 8027EF30 */ void getCurrentCreateNumber() const;
 	/* 8027EF40 */ void getDrawCount() const;
-	/* 8027EF50 */ void loadTexture(char, _GXTexMapID);
+	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
 };
 
 // build JPAEmitterManager (JPAEmitterManager) True/True
@@ -269,7 +269,7 @@ asm void JPABaseEmitter::getDrawCount() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPABaseEmitter::loadTexture(char field_0, _GXTexMapID field_1) {
+asm void JPABaseEmitter::loadTexture(u8 field_0, _GXTexMapID field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/loadTexture__14JPABaseEmitterFUc11_GXTexMapID.s"
 }

@@ -32,10 +32,10 @@ struct dShopItemCtrl_c {
 	// cXyz
 	/* 80196914 */ dShopItemCtrl_c();
 	/* 80196958 */ ~dShopItemCtrl_c();
-	/* 801969A0 */ void getCurrentPos(s32);
-	/* 80196A3C */ void isHomePos(s32);
-	/* 80196AF0 */ void setRotateAnime(s32);
-	/* 80196BA4 */ void setZoomAnime(s32, cXyz*, s16, bool);
+	/* 801969A0 */ void getCurrentPos(int);
+	/* 80196A3C */ void isHomePos(int);
+	/* 80196AF0 */ void setRotateAnime(int);
+	/* 80196BA4 */ void setZoomAnime(int, cXyz*, s16, bool);
 };
 
 // build cXyz (cXyz) True/True
@@ -147,7 +147,7 @@ u8 d_shop_d_shop_item_ctrl__lit_3659[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopItemCtrl_c::getCurrentPos(s32 field_0) {
+asm void dShopItemCtrl_c::getCurrentPos(int field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_item_ctrl/getCurrentPos__15dShopItemCtrl_cFi.s"
 }
@@ -158,7 +158,7 @@ asm void dShopItemCtrl_c::getCurrentPos(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopItemCtrl_c::isHomePos(s32 field_0) {
+asm void dShopItemCtrl_c::isHomePos(int field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_item_ctrl/isHomePos__15dShopItemCtrl_cFi.s"
 }
@@ -169,7 +169,7 @@ asm void dShopItemCtrl_c::isHomePos(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopItemCtrl_c::setRotateAnime(s32 field_0) {
+asm void dShopItemCtrl_c::setRotateAnime(int field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_item_ctrl/setRotateAnime__15dShopItemCtrl_cFi.s"
 }
@@ -204,7 +204,7 @@ f32 d_shop_d_shop_item_ctrl__lit_3844 = 1.0f / 100.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopItemCtrl_c::setZoomAnime(s32 field_0, cXyz* field_1, s16 field_2, bool field_3) {
+asm void dShopItemCtrl_c::setZoomAnime(int field_0, cXyz* field_1, s16 field_2, bool field_3) {
 	nofralloc
 #include "asm/d/shop/d_shop_item_ctrl/setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb.s"
 }

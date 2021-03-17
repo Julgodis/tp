@@ -14,8 +14,8 @@
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 	/* 802CE548 */ void free(void*);
 	/* 802CE83C */ void findFromRoot(void*);
@@ -149,7 +149,7 @@ SECTION_DATA extern void*const __vt__12JKRFileCache[20];
 // 
 
 SECTION_INIT void memcpy();
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void DVDChangeDir();
 extern "C" void DVDOpenDir();

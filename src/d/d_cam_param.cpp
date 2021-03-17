@@ -10,25 +10,25 @@
 // 
 
 // build dCamMath (dCamMath) False/False
-// build cSAngle (cSAngle) False/False
-/* top-level dependencies (begin cSAngle) */
-/* top-level dependencies (end cSAngle) */
-struct cSAngle {
-};
-
 // build cXyz (cXyz) False/False
 /* top-level dependencies (begin cXyz) */
 /* top-level dependencies (end cXyz) */
 struct cXyz {
 };
 
+// build cSAngle (cSAngle) False/False
+/* top-level dependencies (begin cSAngle) */
+/* top-level dependencies (end cSAngle) */
+struct cSAngle {
+};
+
 /* top-level dependencies (begin dCamMath) */
-// outer dependency: cSAngle
 // outer dependency: cXyz
+// outer dependency: cSAngle
 /* top-level dependencies (end dCamMath) */
 struct dCamMath {
-	// cSAngle
 	// cXyz
+	// cSAngle
 	/* 8008813C */ void rationalBezierRatio(f32, f32);
 	/* 80088284 */ void zoomFovy(f32, f32);
 	/* 8008831C */ void xyzRotateX(cXyz&, cSAngle);
@@ -96,7 +96,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -190,8 +190,8 @@ SECTION_SDATA2 extern f32 d_d_cam_param__lit_4173;
 // External References:
 // 
 
-extern "C" void mDoMtx_XrotS__FPA4_fs();
-extern "C" void mDoMtx_YrotS__FPA4_fs();
+void mDoMtx_XrotS(f32 (* )[4], s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
 void dCam_getBody();
 void cM_atan2f(f32, f32);
 void operator delete(void*);

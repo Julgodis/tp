@@ -16,16 +16,11 @@
 struct cCcD_GObjInf {
 };
 
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
-};
-
-// build dCcD_GStts (dCcD_GStts) False/False
-/* top-level dependencies (begin dCcD_GStts) */
-/* top-level dependencies (end dCcD_GStts) */
-struct dCcD_GStts {
+// build cCcD_Obj (cCcD_Obj) False/False
+/* top-level dependencies (begin cCcD_Obj) */
+/* top-level dependencies (end cCcD_Obj) */
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
 };
 
 // build dCcD_GObjInf (dCcD_GObjInf) False/False
@@ -33,12 +28,6 @@ struct dCcD_GStts {
 /* top-level dependencies (end dCcD_GObjInf) */
 struct dCcD_GObjInf {
 	/* 800843DC */ void ChkAtNoGuard();
-};
-
-// build cCcD_GStts (cCcD_GStts) False/False
-/* top-level dependencies (begin cCcD_GStts) */
-/* top-level dependencies (end cCcD_GStts) */
-struct cCcD_GStts {
 };
 
 // build cCcD_ShapeAttr (cCcD_ShapeAttr) False/False
@@ -53,25 +42,22 @@ struct cCcD_ShapeAttr {
 
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
-struct fopAc_ac_c {
+// build dCcD_GStts (dCcD_GStts) False/False
+/* top-level dependencies (begin dCcD_GStts) */
+/* top-level dependencies (end dCcD_GStts) */
+struct dCcD_GStts {
 };
 
-// build cCcD_Obj (cCcD_Obj) False/False
-/* top-level dependencies (begin cCcD_Obj) */
-/* top-level dependencies (end cCcD_Obj) */
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
 };
 
-// build cCcD_Stts (cCcD_Stts) False/False
-/* top-level dependencies (begin cCcD_Stts) */
-/* top-level dependencies (end cCcD_Stts) */
-struct cCcD_Stts {
-	/* 80263934 */ void PlusCcMove(f32, f32, f32);
-	/* 80263970 */ void PlusDmg(s32);
+// build cCcD_GStts (cCcD_GStts) False/False
+/* top-level dependencies (begin cCcD_GStts) */
+/* top-level dependencies (end cCcD_GStts) */
+struct cCcD_GStts {
 };
 
 // build cXyz (cXyz) False/False
@@ -80,38 +66,52 @@ struct cCcD_Stts {
 struct cXyz {
 };
 
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+// build cCcD_Stts (cCcD_Stts) False/False
+/* top-level dependencies (begin cCcD_Stts) */
+/* top-level dependencies (end cCcD_Stts) */
+struct cCcD_Stts {
+	/* 80263934 */ void PlusCcMove(f32, f32, f32);
+	/* 80263970 */ void PlusDmg(int);
+};
+
 /* top-level dependencies (begin dCcS) */
 // outer dependency: cCcD_GObjInf
-// outer dependency: csXyz
-// outer dependency: dCcD_GStts
-// outer dependency: dCcD_GObjInf
-// outer dependency: cCcD_GStts
-// outer dependency: cCcD_ShapeAttr::Shape
-// outer dependency: fopAc_ac_c
 // outer dependency: cCcD_Obj
-// outer dependency: cCcD_Stts
+// outer dependency: dCcD_GObjInf
+// outer dependency: cCcD_ShapeAttr::Shape
+// outer dependency: dCcD_GStts
+// outer dependency: csXyz
+// outer dependency: cCcD_GStts
 // outer dependency: cXyz
+// outer dependency: fopAc_ac_c
+// outer dependency: cCcD_Stts
 /* top-level dependencies (end dCcS) */
 struct dCcS {
 	// cCcD_GObjInf
-	// csXyz
-	// dCcD_GStts
-	// dCcD_GObjInf
-	// cCcD_GStts
-	// cCcD_ShapeAttr::Shape
-	// fopAc_ac_c
 	// cCcD_Obj
-	// cCcD_Stts
+	// dCcD_GObjInf
+	// cCcD_ShapeAttr::Shape
+	// dCcD_GStts
+	// csXyz
+	// cCcD_GStts
 	// cXyz
+	// fopAc_ac_c
+	// cCcD_Stts
 	/* 8002FF40 */ ~dCcS();
 	/* 80085ED4 */ void Ct();
 	/* 80085F08 */ void Dt();
-	/* 80085F28 */ void ChkShieldFrontRange(cCcD_Obj*, cCcD_Obj*, s32, cXyz const*);
+	/* 80085F28 */ void ChkShieldFrontRange(cCcD_Obj*, cCcD_Obj*, int, cXyz const*);
 	/* 800860F8 */ void ChkShield(cCcD_Obj*, cCcD_Obj*, dCcD_GObjInf*, dCcD_GObjInf*, cXyz const*);
 	/* 800861B0 */ void CalcTgPlusDmg(cCcD_Obj*, cCcD_Obj*, cCcD_Stts*, cCcD_Stts*);
 	/* 800861B4 */ void ChkAtTgHitAfterCross(bool, bool, cCcD_GObjInf const*, cCcD_GObjInf const*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*);
 	/* 80086240 */ void SetCoGObjInf(bool, bool, cCcD_GObjInf*, cCcD_GObjInf*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*);
-	/* 80086360 */ void GetRank(char);
+	/* 80086360 */ void GetRank(u8);
 	/* 80086404 */ bool ChkNoHitGCo(cCcD_Obj*, cCcD_Obj*);
 	/* 8008640C */ void SetPosCorrect(cCcD_Obj*, cXyz*, cCcD_Obj*, cXyz*, f32);
 	/* 80086754 */ void CalcParticleAngle(dCcD_GObjInf*, cCcD_Stts*, cCcD_Stts*, csXyz*);
@@ -124,7 +124,7 @@ struct dCcS {
 	/* 800872B0 */ void Move();
 	/* 800872D0 */ void Draw();
 	/* 8008730C */ void MassClear();
-	/* 80087330 */ void ChkAtTgMtrlHit(char, char);
+	/* 80087330 */ void ChkAtTgMtrlHit(u8, u8);
 	/* 8008734C */ void ChkNoHitGAtTg(cCcD_GObjInf const*, cCcD_GObjInf const*, cCcD_GStts*, cCcD_GStts*);
 };
 
@@ -166,22 +166,22 @@ struct mDoMtx_stack_c {
 struct dJntCol_c {
 	// cXyz
 	// csXyz
-	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, s32) const;
+	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, int) const;
 };
 
 // build dPa_control_c (dPa_control_c) False/False
 // build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
 // build csXyz (csXyz) True/True
+// build fopAc_ac_c (fopAc_ac_c) True/True
 /* top-level dependencies (begin dPa_control_c) */
 // outer dependency: cXyz
-// outer dependency: fopAc_ac_c
 // outer dependency: csXyz
+// outer dependency: fopAc_ac_c
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
 	// cXyz
-	// fopAc_ac_c
 	// csXyz
+	// fopAc_ac_c
 	/* 8004C218 */ void setHitMark(u16, fopAc_ac_c*, cXyz const*, csXyz const*, cXyz const*, u32);
 };
 
@@ -189,7 +189,7 @@ struct dPa_control_c {
 /* top-level dependencies (begin dCcD_GAtTgCoCommonBase) */
 /* top-level dependencies (end dCcD_GAtTgCoCommonBase) */
 struct dCcD_GAtTgCoCommonBase {
-	/* 80083678 */ void SetHitApid(s32);
+	/* 80083678 */ void SetHitApid(u32);
 	/* 80083718 */ void SetEffCounterTimer();
 	/* 80083748 */ void ChkEffCounter();
 };
@@ -442,7 +442,7 @@ u8 d_cc_d_cc_s__lit_3705[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCcS::ChkShieldFrontRange(cCcD_Obj* field_0, cCcD_Obj* field_1, s32 field_2, cXyz const* field_3) {
+asm void dCcS::ChkShieldFrontRange(cCcD_Obj* field_0, cCcD_Obj* field_1, int field_2, cXyz const* field_3) {
 	nofralloc
 #include "asm/d/cc/d_cc_s/ChkShieldFrontRange__4dCcSFP8cCcD_ObjP8cCcD_ObjiPC4cXyz.s"
 }
@@ -492,7 +492,7 @@ asm void dCcS::SetCoGObjInf(bool field_0, bool field_1, cCcD_GObjInf* field_2, c
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCcS::GetRank(char field_0) {
+asm void dCcS::GetRank(u8 field_0) {
 	nofralloc
 #include "asm/d/cc/d_cc_s/GetRank__4dCcSFUc.s"
 }
@@ -670,7 +670,7 @@ u8 m_mtrl_hit_tbl__4dCcS[64] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCcS::ChkAtTgMtrlHit(char field_0, char field_1) {
+asm void dCcS::ChkAtTgMtrlHit(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/cc/d_cc_s/ChkAtTgMtrlHit__4dCcSFUcUc.s"
 }

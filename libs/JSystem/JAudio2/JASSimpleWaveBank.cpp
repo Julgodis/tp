@@ -88,7 +88,7 @@ SECTION_DATA extern void*const __vt__17JASSimpleWaveBank[13];
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void __destroy_new_array();
 extern "C" void __construct_new_array();

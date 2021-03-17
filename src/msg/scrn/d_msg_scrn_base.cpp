@@ -16,11 +16,11 @@ struct dMsgScrnBase_c {
 	/* 80238C3C */ void exec();
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
-	/* 80238C48 */ bool selectAnimeMove(char, char, bool);
-	/* 80238C50 */ void selectAnimeInit(char, char, f32, char);
+	/* 80238C48 */ bool selectAnimeMove(u8, u8, bool);
+	/* 80238C50 */ void selectAnimeInit(u8, u8, f32, u8);
 	/* 80238C54 */ void arwAnimeMove();
 	/* 80238C58 */ void arwAnimeInit();
-	/* 80238C5C */ void fukiPosCalc(char);
+	/* 80238C5C */ void fukiPosCalc(u8);
 	/* 80238C60 */ bool isSelect();
 	/* 80238C68 */ bool selectAnimeEnd();
 	/* 80238C70 */ void dotAnimeMove();

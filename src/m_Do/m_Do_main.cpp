@@ -93,7 +93,7 @@ struct JKRAramHeap {
 /* top-level dependencies (begin JUTAssertion) */
 /* top-level dependencies (end JUTAssertion) */
 struct JUTAssertion {
-	/* 802E4C3C */ void setMessageCount(s32);
+	/* 802E4C3C */ void setMessageCount(int);
 };
 
 // build JUTConsole (JUTConsole) False/False
@@ -101,8 +101,8 @@ struct JUTAssertion {
 /* top-level dependencies (end JUTConsole) */
 struct JUTConsole {
 	/* 802E75EC */ void clear();
-	/* 802E7F7C */ void dumpToTerminal(s32);
-	/* 802E80A8 */ void scroll(s32);
+	/* 802E7F7C */ void dumpToTerminal(u32);
+	/* 802E80A8 */ void scroll(int);
 	/* 802E81A8 */ void getLineOffset() const;
 };
 
@@ -220,8 +220,8 @@ void cDyl_InitAsync();
 void fapGm_Execute();
 void fapGm_Create();
 void fopAcM_initManager();
-extern "C" void JUTReport__FiiPCce();
-extern "C" void JUTReport__FiiiPCce();
+void JUTReport(int, int, char const*, ...);
+void JUTReport(int, int, int, char const*, ...);
 extern "C" void OSGetConsoleType();
 extern "C" void OSAllocFromArenaLo();
 extern "C" void OSGetResetCode();

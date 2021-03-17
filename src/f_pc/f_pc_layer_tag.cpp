@@ -31,10 +31,10 @@ struct create_tag_class {
 // Forward References:
 // 
 
-void fpcLyTg_ToQueue(layer_management_tag_class*, s32, u16, u16);
+void fpcLyTg_ToQueue(layer_management_tag_class*, u32, u16, u16);
 void fpcLyTg_QueueTo(layer_management_tag_class*);
-void fpcLyTg_Move(layer_management_tag_class*, s32, u16, u16);
-void fpcLyTg_Init(layer_management_tag_class*, s32, void*);
+void fpcLyTg_Move(layer_management_tag_class*, u32, u16, u16);
+void fpcLyTg_Init(layer_management_tag_class*, u32, void*);
 
 extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
 extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class();
@@ -46,10 +46,10 @@ SECTION_DATA extern u8 data_803A3A00[28 + 4 /* padding */];
 // External References:
 // 
 
-void fpcLy_IntoQueue(layer_class*, s32, create_tag_class*, s32);
-void fpcLy_ToQueue(layer_class*, s32, create_tag_class*);
+void fpcLy_IntoQueue(layer_class*, int, create_tag_class*, int);
+void fpcLy_ToQueue(layer_class*, int, create_tag_class*);
 void fpcLy_QueueTo(layer_class*, create_tag_class*);
-void fpcLy_Layer(s32);
+void fpcLy_Layer(u32);
 void cTg_Create(create_tag_class*, void*);
 extern "C" void _savegpr_27();
 extern "C" void _savegpr_28();
@@ -74,7 +74,7 @@ extern "C" void _restgpr_28();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLyTg_ToQueue(layer_management_tag_class* field_0, s32 field_1, u16 field_2, u16 field_3) {
+asm void fpcLyTg_ToQueue(layer_management_tag_class* field_0, u32 field_1, u16 field_2, u16 field_3) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer_tag/fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs.s"
 }
@@ -96,7 +96,7 @@ asm void fpcLyTg_QueueTo(layer_management_tag_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLyTg_Move(layer_management_tag_class* field_0, s32 field_1, u16 field_2, u16 field_3) {
+asm void fpcLyTg_Move(layer_management_tag_class* field_0, u32 field_1, u16 field_2, u16 field_3) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer_tag/fpcLyTg_Move__FP26layer_management_tag_classUiUsUs.s"
 }
@@ -116,7 +116,7 @@ u8 data_803A3A00[32] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLyTg_Init(layer_management_tag_class* field_0, s32 field_1, void* field_2) {
+asm void fpcLyTg_Init(layer_management_tag_class* field_0, u32 field_1, void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer_tag/fpcLyTg_Init__FP26layer_management_tag_classUiPv.s"
 }

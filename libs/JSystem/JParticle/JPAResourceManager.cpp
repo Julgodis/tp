@@ -10,6 +10,12 @@
 // 
 
 // build JPAResourceManager (JPAResourceManager) False/False
+// build JPATexture (JPATexture) False/False
+/* top-level dependencies (begin JPATexture) */
+/* top-level dependencies (end JPATexture) */
+struct JPATexture {
+};
+
 // build JPAResource (JPAResource) False/False
 /* top-level dependencies (begin JPAResource) */
 /* top-level dependencies (end JPAResource) */
@@ -28,23 +34,17 @@ struct JKRHeap {
 struct ResTIMG {
 };
 
-// build JPATexture (JPATexture) False/False
-/* top-level dependencies (begin JPATexture) */
-/* top-level dependencies (end JPATexture) */
-struct JPATexture {
-};
-
 /* top-level dependencies (begin JPAResourceManager) */
+// outer dependency: JPATexture
 // outer dependency: JPAResource
 // outer dependency: JKRHeap
 // outer dependency: ResTIMG
-// outer dependency: JPATexture
 /* top-level dependencies (end JPAResourceManager) */
 struct JPAResourceManager {
+	// JPATexture
 	// JPAResource
 	// JKRHeap
 	// ResTIMG
-	// JPATexture
 	/* 80273E10 */ JPAResourceManager(void const*, JKRHeap*);
 	/* 80273E68 */ void getResource(u16) const;
 	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
@@ -65,7 +65,7 @@ struct JPAResourceManager {
 /* top-level dependencies (end JPAResourceLoader) */
 struct JPAResourceLoader {
 	// JPAResourceManager
-	/* 8027D8A0 */ JPAResourceLoader(char const*, JPAResourceManager*);
+	/* 8027D8A0 */ JPAResourceLoader(u8 const*, JPAResourceManager*);
 };
 
 // build JUTTexture (JUTTexture) False/False
@@ -75,7 +75,7 @@ struct JPAResourceLoader {
 /* top-level dependencies (end JUTTexture) */
 struct JUTTexture {
 	// ResTIMG
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, char);
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 };
 
 // 

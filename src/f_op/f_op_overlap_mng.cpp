@@ -41,7 +41,7 @@ void fopOvlpM_SceneIsStop();
 void fopOvlpM_SceneIsStart();
 void fopOvlpM_IsOutReq(overlap_task_class*);
 void fopOvlpM_Done(overlap_task_class*);
-void fopOvlpM_ToldAboutID(s32);
+void fopOvlpM_ToldAboutID(u32);
 void fopOvlpM_IsPeek();
 void fopOvlpM_IsDone();
 void fopOvlpM_IsDoingReq();
@@ -77,7 +77,7 @@ void fopOvlpReq_Cancel(overlap_request_class*);
 void fopOvlpReq_OverlapClr(overlap_request_class*);
 void fopScnPause_Enable(scene_class*);
 void fopScnPause_Disable(scene_class*);
-void fpcEx_SearchByID(s32);
+void fpcEx_SearchByID(u32);
 void cReq_Is_Done(request_base_class*);
 void cReq_Done(request_base_class*);
 
@@ -151,7 +151,7 @@ asm void fopOvlpM_Done(overlap_task_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopOvlpM_ToldAboutID(s32 field_0) {
+asm void fopOvlpM_ToldAboutID(u32 field_0) {
 	nofralloc
 #include "asm/f_op/f_op_overlap_mng/fopOvlpM_ToldAboutID__FUi.s"
 }

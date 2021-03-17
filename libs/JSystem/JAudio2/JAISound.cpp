@@ -17,6 +17,7 @@ struct JAISoundHandle {
 };
 
 // build JAISound (JAISound) False/False
+// build JAISoundHandle (JAISoundHandle) True/True
 // build JASTrack (JASTrack) False/False
 // build JASSoundParams (JASSoundParams) False/False
 /* top-level dependencies (begin JASSoundParams) */
@@ -33,14 +34,13 @@ struct JASTrack {
 	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
 };
 
-// build JAISoundHandle (JAISoundHandle) True/True
 /* top-level dependencies (begin JAISound) */
-// outer dependency: JASTrack
 // outer dependency: JAISoundHandle
+// outer dependency: JASTrack
 /* top-level dependencies (end JAISound) */
 struct JAISound {
-	// JASTrack
 	// JAISoundHandle
+	// JASTrack
 	/* 802A21A0 */ void releaseHandle();
 	/* 802A21BC */ void attachHandle(JAISoundHandle*);
 	/* 802A22F8 */ JAISound();
@@ -114,7 +114,7 @@ SECTION_SDATA2 extern f32 lit_887;
 // External References:
 // 
 
-extern "C" void JASReport__FPCce();
+void JASReport(char const*, ...);
 extern "C" void _savegpr_26();
 extern "C" void _restgpr_26();
 

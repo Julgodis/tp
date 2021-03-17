@@ -78,7 +78,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -118,8 +118,8 @@ struct dBgS {
 };
 
 // build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build J3DModelData (J3DModelData) True/True
 // build cXyz (cXyz) True/True
+// build J3DModelData (J3DModelData) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
@@ -127,19 +127,35 @@ struct dKy_tevstr_c {
 };
 
 /* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: J3DModelData
 // outer dependency: cXyz
+// outer dependency: J3DModelData
 // outer dependency: dKy_tevstr_c
 /* top-level dependencies (end dScnKy_env_light_c) */
 struct dScnKy_env_light_c {
-	// J3DModelData
 	// cXyz
+	// J3DModelData
 	// dKy_tevstr_c
-	/* 801A37C4 */ void settingTevStruct(s32, cXyz*, dKy_tevstr_c*);
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build J3DUClipper (J3DUClipper) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin J3DUClipper) */
+// outer dependency: Vec
+/* top-level dependencies (end J3DUClipper) */
+struct J3DUClipper {
+	// Vec
+	/* 802738FC */ void clip(f32 const (* )[4], Vec, f32) const;
+};
+
+// build Vec (Vec) True/True
 // build J3DLightInfo (J3DLightInfo) False/False
 /* top-level dependencies (begin J3DLightInfo) */
 /* top-level dependencies (end J3DLightInfo) */
@@ -186,7 +202,7 @@ SECTION_SDATA2 extern f64 lit_3908;
 // External References:
 // 
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
 void mDoExt_modelUpdateDL(J3DModel*);
 void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
 void mDoExt_adjustSolidHeap(JKRSolidHeap*);
@@ -194,9 +210,8 @@ void mDoExt_destroySolidHeap(JKRSolidHeap*);
 void mDoExt_restoreCurrentHeap();
 void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
 void fopKyM_Delete(void*);
-void dKy_tevstr_init(dKy_tevstr_c*, char, char);
+void dKy_tevstr_init(dKy_tevstr_c*, s8, u8);
 void cM_atan2s(f32, f32);
-extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf();
 void operator delete(void*);
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXTrans();

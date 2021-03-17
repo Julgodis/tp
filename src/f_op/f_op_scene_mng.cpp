@@ -19,7 +19,7 @@ struct scene_class {
 // Forward References:
 // 
 
-void fopScnM_SearchByID(s32);
+void fopScnM_SearchByID(u32);
 void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
 void fopScnM_DeleteReq(scene_class*);
 void fopScnM_CreateReq(s16, s16, u16, u32);
@@ -41,8 +41,8 @@ SECTION_SDATA extern u32 l_scnRqID;
 // 
 
 extern "C" void fopScnIt_Judge__FPFPvPv_PvPv();
-void fopScnRq_Request(s32, scene_class*, s16, void*, s16, u16);
-void fopScnRq_ReRequest(s32, s16, void*);
+void fopScnRq_Request(int, scene_class*, s16, void*, s16, u16);
+void fopScnRq_ReRequest(u32, s16, void*);
 void fopScnRq_Handler();
 void fpcSch_JudgeByID(void*, void*);
 
@@ -60,7 +60,7 @@ extern "C" void fpcSch_JudgeByID__FPvPv();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopScnM_SearchByID(s32 field_0) {
+asm void fopScnM_SearchByID(u32 field_0) {
 	nofralloc
 #include "asm/f_op/f_op_scene_mng/fopScnM_SearchByID__FUi.s"
 }

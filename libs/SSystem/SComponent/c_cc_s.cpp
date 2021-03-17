@@ -23,21 +23,21 @@ struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
 
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+};
+
 // build cCcD_Stts (cCcD_Stts) False/False
 /* top-level dependencies (begin cCcD_Stts) */
 /* top-level dependencies (end cCcD_Stts) */
 struct cCcD_Stts {
 	/* 80263934 */ void PlusCcMove(f32, f32, f32);
 	/* 8026395C */ void ClrCcMove();
-	/* 80263970 */ void PlusDmg(s32);
+	/* 80263970 */ void PlusDmg(int);
 	/* 80263984 */ void GetWeightF() const;
-};
-
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
-	/* 80009184 */ ~cXyz();
 };
 
 // build cCcD_GStts (cCcD_GStts) False/False
@@ -49,21 +49,21 @@ struct cCcD_GStts {
 /* top-level dependencies (begin cCcS) */
 // outer dependency: cCcD_GObjInf
 // outer dependency: cCcD_Obj
-// outer dependency: cCcD_Stts
 // outer dependency: cXyz
+// outer dependency: cCcD_Stts
 // outer dependency: cCcD_GStts
 /* top-level dependencies (end cCcS) */
 struct cCcS {
 	// cCcD_GObjInf
-	// cCcD_GStts
 	// cCcD_Obj
-	// cCcD_Stts
+	// cCcD_GStts
 	// cXyz
+	// cCcD_Stts
 	/* 80030BDC */ ~cCcS();
 	/* 80264A6C */ cCcS();
 	/* 80264A94 */ void Ct();
 	/* 80264B60 */ void Dt();
-	/* 80264B80 */ void GetWt(char) const;
+	/* 80264B80 */ void GetWt(u8) const;
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 	/* 80264C5C */ void ClrCoHitInf();
 	/* 80264CF0 */ void ClrTgHitInf();
@@ -319,7 +319,7 @@ asm void cCcS::Dt() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cCcS::GetWt(char field_0) const {
+asm void cCcS::GetWt(u8 field_0) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_cc_s/GetWt__4cCcSCFUc.s"
 }

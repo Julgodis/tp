@@ -42,8 +42,8 @@ struct JMessage {
 		};
 
 		/* 802A906C */ TResourceContainer();
-		/* 802A90B8 */ void setEncoding(char);
-		/* 802A90F0 */ void setEncoding_(char);
+		/* 802A90B8 */ void setEncoding(u8);
+		/* 802A90F0 */ void setEncoding_(u8);
 	};
 
 	// build TParse (JMessage::TParse) False/False
@@ -76,8 +76,8 @@ struct JMessage {
 struct JGadget;
 // build JGadget (JGadget) True/True
 /* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TNodeLinkList::iterator
 // outer dependency: JGadget::TLinkListNode
+// outer dependency: JGadget::TNodeLinkList::iterator
 /* top-level dependencies (end JGadget) */
 struct JGadget {
 	// build binary (JGadget::binary) False/False
@@ -95,7 +95,6 @@ struct JGadget {
 
 	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
 	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
 	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
 	// build TLinkListNode (JGadget::TLinkListNode) False/False
 	/* dependencies (begin JGadget::TLinkListNode) */
@@ -103,10 +102,11 @@ struct JGadget {
 	struct TLinkListNode {
 	};
 
+	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
 	/* dependencies (end JGadget::TNodeLinkList) */
 	struct TNodeLinkList {
-		// JGadget::TNodeLinkList::iterator
 		// JGadget::TLinkListNode
+		// JGadget::TNodeLinkList::iterator
 		// build iterator (JGadget::TNodeLinkList::iterator) False/False
 		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
 		/* dependencies (end JGadget::TNodeLinkList::iterator) */
@@ -294,7 +294,7 @@ asm JMessage::TResourceContainer::TResourceContainer() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JMessage::TResourceContainer::setEncoding(char field_0) {
+asm void JMessage::TResourceContainer::setEncoding(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/setEncoding__Q28JMessage18TResourceContainerFUc.s"
 }
@@ -305,7 +305,7 @@ asm void JMessage::TResourceContainer::setEncoding(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JMessage::TResourceContainer::setEncoding_(char field_0) {
+asm void JMessage::TResourceContainer::setEncoding_(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/setEncoding___Q28JMessage18TResourceContainerFUc.s"
 }

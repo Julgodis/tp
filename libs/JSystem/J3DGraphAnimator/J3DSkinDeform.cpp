@@ -14,6 +14,14 @@
 /* top-level dependencies (end J3DSkinNList) */
 struct J3DSkinNList {
 	/* 8032C6E4 */ J3DSkinNList();
+	/* 8032C85C */ void calcSkin_VtxPosF32(f32 (* )[4], void*, void*);
+	/* 8032C8E4 */ void calcSkin_VtxNrmF32(f32 (* )[4], void*, void*);
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
 };
 
 // build J3DSkinDeform (J3DSkinDeform) False/False
@@ -23,16 +31,16 @@ struct J3DSkinNList {
 struct J3DModelData {
 };
 
-// build J3DMtxBuffer (J3DMtxBuffer) False/False
-/* top-level dependencies (begin J3DMtxBuffer) */
-/* top-level dependencies (end J3DMtxBuffer) */
-struct J3DMtxBuffer {
-};
-
 // build J3DVertexBuffer (J3DVertexBuffer) False/False
 /* top-level dependencies (begin J3DVertexBuffer) */
 /* top-level dependencies (end J3DVertexBuffer) */
 struct J3DVertexBuffer {
+};
+
+// build J3DMtxBuffer (J3DMtxBuffer) False/False
+/* top-level dependencies (begin J3DMtxBuffer) */
+/* top-level dependencies (end J3DMtxBuffer) */
+struct J3DMtxBuffer {
 };
 
 // build J3DModel (J3DModel) False/False
@@ -43,14 +51,14 @@ struct J3DModel {
 
 /* top-level dependencies (begin J3DSkinDeform) */
 // outer dependency: J3DModelData
-// outer dependency: J3DMtxBuffer
 // outer dependency: J3DVertexBuffer
+// outer dependency: J3DMtxBuffer
 // outer dependency: J3DModel
 /* top-level dependencies (end J3DSkinDeform) */
 struct J3DSkinDeform {
 	// J3DModelData
-	// J3DMtxBuffer
 	// J3DVertexBuffer
+	// J3DMtxBuffer
 	// J3DModel
 	/* 8032C96C */ J3DSkinDeform();
 	/* 8032C9B0 */ void initSkinInfo(J3DModelData*);
@@ -95,16 +103,14 @@ struct J3DShape {
 // Forward References:
 // 
 
-extern "C" static void J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec();
-extern "C" static void J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec();
-extern "C" static void calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv();
-extern "C" static void calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv();
+static void J3DPSWeightMTXMultVec(f32 (* )[4], f32, Vec*, Vec*);
+static void J3DPSWeightMTXMultVecSR(f32 (* )[4], f32, Vec*, Vec*);
 
 extern "C" void __ct__12J3DSkinNListFv();
 extern "C" static void J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec();
 extern "C" static void J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec();
-extern "C" static void calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv();
-extern "C" static void calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv();
+extern "C" void calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv();
+extern "C" void calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv();
 extern "C" void __ct__13J3DSkinDeformFv();
 extern "C" void initSkinInfo__13J3DSkinDeformFP12J3DModelData();
 extern "C" void initMtxIndexArray__13J3DSkinDeformFP12J3DModelData();
@@ -139,10 +145,10 @@ SECTION_SDATA2 extern u8 lit_1578[4];
 SECTION_INIT void memcpy();
 extern "C" void OSReport();
 void* operator new[](u32);
-void* operator new[](u32, s32);
+void* operator new[](u32, int);
 void operator delete(void*);
 void J3DGQRSetup7(u32, u32, u32, u32);
-extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f();
+void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]);
 extern "C" void DCStoreRange();
 extern "C" void PSMTXConcat();
 extern "C" void PSMTXInverse();
@@ -217,7 +223,7 @@ asm J3DSkinNList::J3DSkinNList() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec() {
+asm static void J3DPSWeightMTXMultVec(f32 (* field_0)[4], f32 field_1, Vec* field_2, Vec* field_3) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DSkinDeform/J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec.s"
 }
@@ -228,7 +234,7 @@ extern "C" asm static void J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec() {
+asm static void J3DPSWeightMTXMultVecSR(f32 (* field_0)[4], f32 field_1, Vec* field_2, Vec* field_3) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DSkinDeform/J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec.s"
 }
@@ -239,7 +245,7 @@ extern "C" asm static void J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv() {
+asm void J3DSkinNList::calcSkin_VtxPosF32(f32 (* field_0)[4], void* field_1, void* field_2) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DSkinDeform/calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv.s"
 }
@@ -250,7 +256,7 @@ extern "C" asm static void calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv() {
+asm void J3DSkinNList::calcSkin_VtxNrmF32(f32 (* field_0)[4], void* field_1, void* field_2) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DSkinDeform/calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv.s"
 }

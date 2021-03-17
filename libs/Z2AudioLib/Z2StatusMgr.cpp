@@ -34,7 +34,7 @@ struct Z2StatusMgr {
 	/* 802B6734 */ void checkDayTime();
 	/* 802B6758 */ void setEventBit(void*);
 	/* 802B6760 */ void setCameraPolygonPos(Vec*);
-	/* 802B6784 */ void setCameraGroupInfo(char);
+	/* 802B6784 */ void setCameraGroupInfo(u8);
 	/* 802B6788 */ void setCameraInWaterDepth(f32);
 };
 
@@ -64,21 +64,21 @@ struct Z2Calc {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AD9F4 */ void seMoveVolumeAll(f32, u32);
 	/* 802ADB50 */ void talkInSe();
 	/* 802ADC54 */ void talkOutSe();
@@ -514,7 +514,7 @@ asm void Z2StatusMgr::setCameraPolygonPos(Vec* field_0) {
 
 
 /* 802B6784-802B6788 0004+00 rc=1 efc=1 .text      setCameraGroupInfo__11Z2StatusMgrFUc                         */
-void Z2StatusMgr::setCameraGroupInfo(char field_0) {
+void Z2StatusMgr::setCameraGroupInfo(u8 field_0) {
 	/* empty function */
 }
 

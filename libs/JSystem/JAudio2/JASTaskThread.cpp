@@ -13,7 +13,7 @@
 /* top-level dependencies (begin JASTaskThread) */
 /* top-level dependencies (end JASTaskThread) */
 struct JASTaskThread {
-	/* 8028F6C4 */ JASTaskThread(s32, s32, u32);
+	/* 8028F6C4 */ JASTaskThread(int, int, u32);
 	/* 8028F724 */ ~JASTaskThread();
 	/* 8028FD4C */ void run();
 	/* 8028FE88 */ void pause(bool);
@@ -47,7 +47,7 @@ struct JKRHeap {
 /* top-level dependencies (end JKRThread) */
 struct JKRThread {
 	// JKRHeap
-	/* 802D1610 */ JKRThread(JKRHeap*, u32, s32, s32);
+	/* 802D1610 */ JKRThread(JKRHeap*, u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
@@ -74,7 +74,7 @@ SECTION_DATA extern void*const __vt__13JASTaskThread[4];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void OSDisableInterrupts();
 extern "C" void OSRestoreInterrupts();
@@ -134,7 +134,7 @@ void* const __vt__13JASTaskThread[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JASTaskThread::JASTaskThread(s32 field_0, s32 field_1, u32 field_2) {
+asm JASTaskThread::JASTaskThread(int field_0, int field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/__ct__13JASTaskThreadFiiUl.s"
 }

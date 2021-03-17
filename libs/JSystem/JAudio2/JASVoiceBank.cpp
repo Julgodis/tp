@@ -21,7 +21,7 @@ struct JASInstParam {
 /* top-level dependencies (end JASVoiceBank) */
 struct JASVoiceBank {
 	// JASInstParam
-	/* 80297F74 */ void getInstParam(s32, s32, s32, JASInstParam*) const;
+	/* 80297F74 */ void getInstParam(int, int, int, JASInstParam*) const;
 	/* 80297FAC */ ~JASVoiceBank();
 	/* 80298008 */ void getType() const;
 };
@@ -66,7 +66,7 @@ u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASVoiceBank::getInstParam(s32 field_0, s32 field_1, s32 field_2, JASInstParam* field_3) const {
+asm void JASVoiceBank::getInstParam(int field_0, int field_1, int field_2, JASInstParam* field_3) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASVoiceBank/getInstParam__12JASVoiceBankCFiiiP12JASInstParam.s"
 }

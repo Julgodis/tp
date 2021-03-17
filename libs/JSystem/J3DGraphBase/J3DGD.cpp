@@ -99,6 +99,12 @@ struct _GXTlutFmt {
 struct _GXTlutSize {
 };
 
+// build _GXIndTexMtxID (_GXIndTexMtxID) False/False
+/* top-level dependencies (begin _GXIndTexMtxID) */
+/* top-level dependencies (end _GXIndTexMtxID) */
+struct _GXIndTexMtxID {
+};
+
 // build _GXIndTexStageID (_GXIndTexStageID) False/False
 /* top-level dependencies (begin _GXIndTexStageID) */
 /* top-level dependencies (end _GXIndTexStageID) */
@@ -163,34 +169,34 @@ struct _GXTexCacheSize {
 // Forward References:
 // 
 
-void J3DGDSetGenMode(char, char, char, char, _GXCullMode);
-void J3DGDSetGenMode_3Param(char, char, char);
+void J3DGDSetGenMode(u8, u8, u8, u8, _GXCullMode);
+void J3DGDSetGenMode_3Param(u8, u8, u8);
 void J3DGDSetLightAttn(_GXLightID, f32, f32, f32, f32, f32, f32);
 void J3DGDSetLightColor(_GXLightID, _GXColor);
 void J3DGDSetLightPos(_GXLightID, f32, f32, f32);
 void J3DGDSetLightDir(_GXLightID, f32, f32, f32);
 void J3DGDSetVtxAttrFmtv(_GXVtxFmt, _GXVtxAttrFmtList const*, bool);
 void J3DGDSetTexCoordGen(_GXTexGenType, _GXTexGenSrc);
-void J3DGDSetTexCoordScale2(_GXTexCoordID, u16, char, char, u16, char, char);
-void J3DGDSetTexLookupMode(_GXTexMapID, _GXTexWrapMode, _GXTexWrapMode, _GXTexFilter, _GXTexFilter, f32, f32, f32, char, char, _GXAnisotropy);
+void J3DGDSetTexCoordScale2(_GXTexCoordID, u16, u8, u8, u16, u8, u8);
+void J3DGDSetTexLookupMode(_GXTexMapID, _GXTexWrapMode, _GXTexWrapMode, _GXTexFilter, _GXTexFilter, f32, f32, f32, u8, u8, _GXAnisotropy);
 void J3DGDSetTexImgAttr(_GXTexMapID, u16, u16, _GXTexFmt);
 void J3DGDSetTexImgPtr(_GXTexMapID, void*);
 void J3DGDSetTexImgPtrRaw(_GXTexMapID, u32);
 void J3DGDSetTexTlut(_GXTexMapID, u32, _GXTlutFmt);
 void J3DGDLoadTlut(void*, u32, _GXTlutSize);
-extern "C" void J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc();
+void J3DGDSetIndTexMtx(_GXIndTexMtxID, f32 (* )[3], s8);
 void J3DGDSetIndTexCoordScale(_GXIndTexStageID, _GXIndTexScale, _GXIndTexScale, _GXIndTexScale, _GXIndTexScale);
 void J3DGDSetIndTexOrder(u32, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID);
 void J3DGDSetTevOrder(_GXTevStageID, _GXTexCoordID, _GXTexMapID, _GXChannelID, _GXTexCoordID, _GXTexMapID, _GXChannelID);
 void J3DGDSetTevKColor(_GXTevKColorID, _GXColor);
 void J3DGDSetTevColorS10(_GXTevRegID, _GXColorS10);
 void J3DGDSetFog(_GXFogType, f32, f32, f32, f32, _GXColor);
-void J3DGDSetFogRangeAdj(char, u16, _GXFogAdjTable*);
-extern "C" void J3DFifoLoadPosMtxImm__FPA4_fUl();
-extern "C" void J3DFifoLoadNrmMtxImm__FPA4_fUl();
-extern "C" void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl();
-extern "C" void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl();
-extern "C" void J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl();
+void J3DGDSetFogRangeAdj(u8, u16, _GXFogAdjTable*);
+void J3DFifoLoadPosMtxImm(f32 (* )[4], u32);
+void J3DFifoLoadNrmMtxImm(f32 (* )[4], u32);
+void J3DFifoLoadNrmMtxImm3x3(f32 (* )[3], u32);
+void J3DFifoLoadNrmMtxToTexMtx(f32 (* )[4], u32);
+void J3DFifoLoadNrmMtxToTexMtx3x3(f32 (* )[3], u32);
 void J3DFifoLoadTexCached(_GXTexMapID, u32, _GXTexCacheSize, u32, _GXTexCacheSize);
 
 extern "C" void J3DGDSetGenMode__FUcUcUcUc11_GXCullMode();
@@ -294,7 +300,7 @@ u8 data_80450908[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetGenMode(char field_0, char field_1, char field_2, char field_3, _GXCullMode field_4) {
+asm void J3DGDSetGenMode(u8 field_0, u8 field_1, u8 field_2, u8 field_3, _GXCullMode field_4) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetGenMode__FUcUcUcUc11_GXCullMode.s"
 }
@@ -305,7 +311,7 @@ asm void J3DGDSetGenMode(char field_0, char field_1, char field_2, char field_3,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetGenMode_3Param(char field_0, char field_1, char field_2) {
+asm void J3DGDSetGenMode_3Param(u8 field_0, u8 field_1, u8 field_2) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetGenMode_3Param__FUcUcUc.s"
 }
@@ -430,7 +436,7 @@ asm void J3DGDSetTexCoordGen(_GXTexGenType field_0, _GXTexGenSrc field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTexCoordScale2(_GXTexCoordID field_0, u16 field_1, char field_2, char field_3, u16 field_4, char field_5, char field_6) {
+asm void J3DGDSetTexCoordScale2(_GXTexCoordID field_0, u16 field_1, u8 field_2, u8 field_3, u16 field_4, u8 field_5, u8 field_6) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc.s"
 }
@@ -480,7 +486,7 @@ f32 lit_1051 = 16.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetTexLookupMode(_GXTexMapID field_0, _GXTexWrapMode field_1, _GXTexWrapMode field_2, _GXTexFilter field_3, _GXTexFilter field_4, f32 field_5, f32 field_6, f32 field_7, char field_8, char field_9, _GXAnisotropy field_10) {
+asm void J3DGDSetTexLookupMode(_GXTexMapID field_0, _GXTexWrapMode field_1, _GXTexWrapMode field_2, _GXTexFilter field_3, _GXTexFilter field_4, f32 field_5, f32 field_6, f32 field_7, u8 field_8, u8 field_9, _GXAnisotropy field_10) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/func_8030E438.s"
 }
@@ -550,7 +556,7 @@ f32 lit_1233 = 1024.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc() {
+asm void J3DGDSetIndTexMtx(_GXIndTexMtxID field_0, f32 (* field_1)[3], s8 field_2) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc.s"
 }
@@ -662,7 +668,7 @@ asm void J3DGDSetFog(_GXFogType field_0, f32 field_1, f32 field_2, f32 field_3, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDSetFogRangeAdj(char field_0, u16 field_1, _GXFogAdjTable* field_2) {
+asm void J3DGDSetFogRangeAdj(u8 field_0, u16 field_1, _GXFogAdjTable* field_2) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable.s"
 }
@@ -673,7 +679,7 @@ asm void J3DGDSetFogRangeAdj(char field_0, u16 field_1, _GXFogAdjTable* field_2)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DFifoLoadPosMtxImm__FPA4_fUl() {
+asm void J3DFifoLoadPosMtxImm(f32 (* field_0)[4], u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DFifoLoadPosMtxImm__FPA4_fUl.s"
 }
@@ -684,7 +690,7 @@ extern "C" asm void J3DFifoLoadPosMtxImm__FPA4_fUl() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DFifoLoadNrmMtxImm__FPA4_fUl() {
+asm void J3DFifoLoadNrmMtxImm(f32 (* field_0)[4], u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DFifoLoadNrmMtxImm__FPA4_fUl.s"
 }
@@ -695,7 +701,7 @@ extern "C" asm void J3DFifoLoadNrmMtxImm__FPA4_fUl() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl() {
+asm void J3DFifoLoadNrmMtxImm3x3(f32 (* field_0)[3], u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DFifoLoadNrmMtxImm3x3__FPA3_fUl.s"
 }
@@ -706,7 +712,7 @@ extern "C" asm void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl() {
+asm void J3DFifoLoadNrmMtxToTexMtx(f32 (* field_0)[4], u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl.s"
 }
@@ -717,7 +723,7 @@ extern "C" asm void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl() {
+asm void J3DFifoLoadNrmMtxToTexMtx3x3(f32 (* field_0)[3], u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DGD/J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl.s"
 }

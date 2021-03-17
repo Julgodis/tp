@@ -15,8 +15,8 @@
 // build JStudio (JStudio) True/True
 // build JStudio (JStudio) True/True
 /* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::object::TIDData
 // outer dependency: JStudio::ctb::TObject
+// outer dependency: JStudio::object::TIDData
 // outer dependency: JStudio::ctb::data::TParse_TBlock
 // outer dependency: JStudio::ctb::TControl
 /* top-level dependencies (end JStudio) */
@@ -123,8 +123,8 @@ namespace JStudio {
 struct JGadget;
 // build JGadget (JGadget) True/True
 /* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TNodeLinkList::iterator
 // outer dependency: JGadget::TLinkListNode
+// outer dependency: JGadget::TNodeLinkList::iterator
 /* top-level dependencies (end JGadget) */
 struct JGadget {
 	// build binary (JGadget::binary) False/False
@@ -142,7 +142,6 @@ struct JGadget {
 
 	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
 	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
 	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
 	// build TLinkListNode (JGadget::TLinkListNode) False/False
 	/* dependencies (begin JGadget::TLinkListNode) */
@@ -150,10 +149,11 @@ struct JGadget {
 	struct TLinkListNode {
 	};
 
+	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
 	/* dependencies (end JGadget::TNodeLinkList) */
 	struct TNodeLinkList {
-		// JGadget::TNodeLinkList::iterator
 		// JGadget::TLinkListNode
+		// JGadget::TNodeLinkList::iterator
 		// build iterator (JGadget::TNodeLinkList::iterator) False/False
 		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
 		/* dependencies (end JGadget::TNodeLinkList::iterator) */

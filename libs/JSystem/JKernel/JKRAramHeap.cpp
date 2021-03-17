@@ -55,9 +55,9 @@ struct JKRDisposer {
 /* top-level dependencies (end JKRAramBlock) */
 struct JKRAramBlock {
 	// JKRAramHeap
-	/* 802D3304 */ JKRAramBlock(u32, u32, u32, char, bool);
-	/* 802D3434 */ void allocHead(u32, char, JKRAramHeap*);
-	/* 802D34D0 */ void allocTail(u32, char, JKRAramHeap*);
+	/* 802D3304 */ JKRAramBlock(u32, u32, u32, u8, bool);
+	/* 802D3434 */ void allocHead(u32, u8, JKRAramHeap*);
+	/* 802D34D0 */ void allocTail(u32, u8, JKRAramHeap*);
 };
 
 // build JSUPtrList (JSUPtrList) False/False
@@ -103,7 +103,7 @@ SECTION_BSS extern u8 sAramList__11JKRAramHeap[12];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void OSInitMutex();
 extern "C" void OSLockMutex();

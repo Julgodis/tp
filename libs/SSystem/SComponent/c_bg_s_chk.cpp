@@ -16,7 +16,7 @@ struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();
 	/* 80267BB8 */ void SetExtChk(cBgS_Chk&);
-	/* 80267BDC */ void ChkSameActorPid(s32) const;
+	/* 80267BDC */ void ChkSameActorPid(u32) const;
 };
 
 // 
@@ -89,7 +89,7 @@ asm void cBgS_Chk::SetExtChk(cBgS_Chk& field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgS_Chk::ChkSameActorPid(s32 field_0) const {
+asm void cBgS_Chk::ChkSameActorPid(u32 field_0) const {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_chk/ChkSameActorPid__8cBgS_ChkCFUi.s"
 }

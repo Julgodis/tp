@@ -39,6 +39,12 @@ namespace JStudio {
 	/* dependencies (begin JStudio::TControl) */
 	/* dependencies (end JStudio::TControl) */
 	struct TControl {
+		// build TTransform_translation_rotation_scaling (JStudio::TControl::TTransform_translation_rotation_scaling) False/False
+		/* dependencies (begin JStudio::TControl::TTransform_translation_rotation_scaling) */
+		/* dependencies (end JStudio::TControl::TTransform_translation_rotation_scaling) */
+		struct TTransform_translation_rotation_scaling {
+		};
+
 	};
 
 	// build TAdaptor (JStudio::TAdaptor) False/False
@@ -69,7 +75,15 @@ namespace JStudio {
 	/* dependencies (begin JStudio::TFunctionValue) */
 	/* dependencies (end JStudio::TFunctionValue) */
 	struct TFunctionValue {
-		/* 80281648 */ void toFunction_outside(s32);
+		/* 80281648 */ void toFunction_outside(int);
+	};
+
+	// build math (JStudio::math) False/False
+	/* dependencies (begin JStudio::math) */
+	/* dependencies (end JStudio::math) */
+	struct math {
+		// Vec
+		/* 80285BCC */ void getFromTransformation_SRxyzT(Vec*, Vec*, Vec*, f32 const (* )[4]);
 	};
 
 	// build TAdaptor_actor (JStudio::TAdaptor_actor) False/False
@@ -81,6 +95,7 @@ namespace JStudio {
 
 };
 
+// build JStudio (JStudio) True/True
 // build JStage (JStage) False/False
 /* top-level dependencies (begin JStage) */
 /* top-level dependencies (end JStage) */
@@ -110,14 +125,17 @@ struct JStage {
 // build JStudio (JStudio) True/True
 // build JStage (JStage) True/True
 /* top-level dependencies (begin JStudio_JStage) */
-// outer dependency: JStudio::TControl
-// outer dependency: JStage::TSystem
-// outer dependency: JStage::TObject
 // outer dependency: JStudio::TAdaptor
-// outer dependency: JStudio::data::TEOperationData
+// outer dependency: JStudio::TControl
+// outer dependency: JStage::TObject
 // outer dependency: JStage::TActor
+// outer dependency: JStudio::TControl::TTransform_translation_rotation_scaling
+// outer dependency: JStudio::data::TEOperationData
+// outer dependency: JStage::TSystem
 /* top-level dependencies (end JStudio_JStage) */
 struct JStudio_JStage {
+	// JStudio::TControl::TTransform_translation_rotation_scaling
+	// JStage::TObject
 	// build TAdaptor_actor (JStudio_JStage::TAdaptor_actor) False/False
 	/* dependencies (begin JStudio_JStage::TAdaptor_actor) */
 	/* dependencies (end JStudio_JStage::TAdaptor_actor) */
@@ -168,6 +186,8 @@ struct JStudio_JStage {
 		/* 8028A50C */ void adaptor_object_findJSGObjectNode_(JStage::TObject const*, char const*);
 	};
 
+	/* 8028A1F8 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_translation_rotation_scaling const&, JStage::TObject const*, u32);
+	/* 8028A328 */ void transform_toLocalFromGlobal(f32 (* )[4], JStudio::TControl::TTransform_translation_rotation_scaling const&, JStage::TObject const*, u32);
 };
 
 // build JStage (JStage) True/True
@@ -237,9 +257,6 @@ SECTION_SDATA2 extern u8 lit_1081[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf();
-extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
-extern "C" void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
 void operator delete(void*);
 extern "C" void PSMTXMultVec();
 extern "C" void __register_global_object();

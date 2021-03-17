@@ -10,12 +10,6 @@
 // 
 
 // build Z2Creature (Z2Creature) False/False
-// build Z2SoundStarter (Z2SoundStarter) False/False
-/* top-level dependencies (begin Z2SoundStarter) */
-/* top-level dependencies (end Z2SoundStarter) */
-struct Z2SoundStarter {
-};
-
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
@@ -28,31 +22,37 @@ struct JAISoundID {
 struct Vec {
 };
 
+// build Z2SoundStarter (Z2SoundStarter) False/False
+/* top-level dependencies (begin Z2SoundStarter) */
+/* top-level dependencies (end Z2SoundStarter) */
+struct Z2SoundStarter {
+};
+
 /* top-level dependencies (begin Z2Creature) */
-// outer dependency: Z2SoundStarter
 // outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: Z2SoundStarter
 /* top-level dependencies (end Z2Creature) */
 struct Z2Creature {
-	// Z2SoundStarter
 	// JAISoundID
 	// Vec
+	// Z2SoundStarter
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C04E8 */ void deleteObject();
-	/* 802C0530 */ void init(Vec*, Vec*, char, char);
-	/* 802C05B0 */ void init(Vec*, Vec*, Vec*, char, char, char);
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+	/* 802C05B0 */ void init(Vec*, Vec*, Vec*, u8, u8, u8);
 	/* 802C0618 */ void setSoundStarter(Z2SoundStarter*);
 	/* 802C0628 */ void initAnime(void*, bool, f32, f32);
-	/* 802C064C */ void framework(u32, char);
+	/* 802C064C */ void framework(u32, s8);
 	/* 802C06D0 */ void updateAnime(f32, f32);
 	/* 802C06F4 */ void stopAnime();
-	/* 802C0720 */ void startCreatureSound(JAISoundID, u32, char);
-	/* 802C087C */ void startCreatureSoundLevel(JAISoundID, u32, char);
-	/* 802C0A4C */ void startCreatureVoice(JAISoundID, char);
-	/* 802C0AF8 */ void startCreatureVoiceLevel(JAISoundID, char);
-	/* 802C0B70 */ void startCreatureExtraSound(JAISoundID, u32, char);
-	/* 802C0BAC */ void startCreatureExtraSoundLevel(JAISoundID, u32, char);
+	/* 802C0720 */ void startCreatureSound(JAISoundID, u32, s8);
+	/* 802C087C */ void startCreatureSoundLevel(JAISoundID, u32, s8);
+	/* 802C0A4C */ void startCreatureVoice(JAISoundID, s8);
+	/* 802C0AF8 */ void startCreatureVoiceLevel(JAISoundID, s8);
+	/* 802C0B70 */ void startCreatureExtraSound(JAISoundID, u32, s8);
+	/* 802C0BAC */ void startCreatureExtraSoundLevel(JAISoundID, u32, s8);
 	/* 802C0BE8 */ void startCollisionSE(u32, u32);
 };
 
@@ -60,45 +60,45 @@ struct Z2Creature {
 // build Z2SoundStarter (Z2SoundStarter) True/True
 // build JAISoundID (JAISoundID) True/True
 // build Z2CreatureCitizen (Z2CreatureCitizen) False/False
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2CreatureCitizen) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2CreatureCitizen) */
 struct Z2CreatureCitizen {
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802C0C10 */ Z2CreatureCitizen();
 	/* 802C0C6C */ ~Z2CreatureCitizen();
-	/* 802C0CE4 */ void init(Vec*, Vec*, char, char);
+	/* 802C0CE4 */ void init(Vec*, Vec*, u8, u8);
 	/* 802C0D04 */ void deleteObject();
-	/* 802C0D48 */ void setMdlType(char, bool, bool);
-	/* 802C0E18 */ void playVoice(s32);
-	/* 802C0ED8 */ void startCreatureVoice(JAISoundID, char);
+	/* 802C0D48 */ void setMdlType(s8, bool, bool);
+	/* 802C0E18 */ void playVoice(int);
+	/* 802C0ED8 */ void startCreatureVoice(JAISoundID, s8);
 };
 
 // build Z2CreatureEnemy (Z2CreatureEnemy) False/False
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2CreatureEnemy) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2CreatureEnemy) */
 struct Z2CreatureEnemy {
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802C0F64 */ Z2CreatureEnemy();
 	/* 802C0FC4 */ void deleteObject();
-	/* 802C1094 */ void init(Vec*, Vec*, char, char);
-	/* 802C10B4 */ void init(Vec*, Vec*, Vec*, char, char, char);
-	/* 802C10D4 */ void framework(u32, char);
-	/* 802C110C */ void startCreatureSound(JAISoundID, u32, char);
-	/* 802C136C */ void startCreatureSoundLevel(JAISoundID, u32, char);
-	/* 802C168C */ void startCreatureVoice(JAISoundID, char);
-	/* 802C1948 */ void startCreatureVoiceLevel(JAISoundID, char);
-	/* 802C199C */ void startCreatureExtraSound(JAISoundID, u32, char);
-	/* 802C19D8 */ void startCreatureExtraSoundLevel(JAISoundID, u32, char);
+	/* 802C1094 */ void init(Vec*, Vec*, u8, u8);
+	/* 802C10B4 */ void init(Vec*, Vec*, Vec*, u8, u8, u8);
+	/* 802C10D4 */ void framework(u32, s8);
+	/* 802C110C */ void startCreatureSound(JAISoundID, u32, s8);
+	/* 802C136C */ void startCreatureSoundLevel(JAISoundID, u32, s8);
+	/* 802C168C */ void startCreatureVoice(JAISoundID, s8);
+	/* 802C1948 */ void startCreatureVoiceLevel(JAISoundID, s8);
+	/* 802C199C */ void startCreatureExtraSound(JAISoundID, u32, s8);
+	/* 802C19D8 */ void startCreatureExtraSoundLevel(JAISoundID, u32, s8);
 	/* 802C1A14 */ void startCollisionSE(u32, u32);
 	/* 802C1B7C */ void setLinkSearch(bool);
 	/* 802C1B90 */ void setEnemyName(char const*);
@@ -114,69 +114,69 @@ struct Z2CreatureSumomo {
 };
 
 // build Z2SoundObjBeeGroup (Z2SoundObjBeeGroup) False/False
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2SoundObjBeeGroup) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SoundObjBeeGroup) */
 struct Z2SoundObjBeeGroup {
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802C1D10 */ Z2SoundObjBeeGroup();
-	/* 802C1D4C */ void init(Vec*, char);
-	/* 802C1D6C */ void playBeeGroupSound(JAISoundID, char);
+	/* 802C1D4C */ void init(Vec*, u8);
+	/* 802C1D6C */ void playBeeGroupSound(JAISoundID, u8);
 };
 
 // build Z2CreatureFM (Z2CreatureFM) False/False
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2CreatureFM) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2CreatureFM) */
 struct Z2CreatureFM {
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802C1F54 */ Z2CreatureFM();
 	/* 802C1FB0 */ void deleteObject();
-	/* 802C1FFC */ void init(Vec*, Vec*, Vec*, Vec*, Vec*, Vec*, char, char, char, char, char, char);
-	/* 802C20E8 */ void framework(u32, char);
-	/* 802C2194 */ void startChainSound(JAISoundID, char, f32, u32, char);
-	/* 802C2290 */ void startChainSoundLevel(JAISoundID, char, f32, u32, char);
+	/* 802C1FFC */ void init(Vec*, Vec*, Vec*, Vec*, Vec*, Vec*, u8, u8, u8, u8, u8, u8);
+	/* 802C20E8 */ void framework(u32, s8);
+	/* 802C2194 */ void startChainSound(JAISoundID, u8, f32, u32, s8);
+	/* 802C2290 */ void startChainSoundLevel(JAISoundID, u8, f32, u32, s8);
 };
 
 // build Z2CreatureGob (Z2CreatureGob) False/False
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2CreatureGob) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2CreatureGob) */
 struct Z2CreatureGob {
-	// JAISoundID
 	// Vec
-	/* 802C24B0 */ void init(Vec*, Vec*, Vec*, char, char, char);
-	/* 802C24D0 */ void startCreatureVoiceLevel(JAISoundID, char);
+	// JAISoundID
+	/* 802C24B0 */ void init(Vec*, Vec*, Vec*, u8, u8, u8);
+	/* 802C24D0 */ void startCreatureVoiceLevel(JAISoundID, s8);
 };
 
 // build Z2CreatureOI (Z2CreatureOI) False/False
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2CreatureOI) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2CreatureOI) */
 struct Z2CreatureOI {
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802C2578 */ Z2CreatureOI();
 	/* 802C25EC */ void deleteObject();
 	/* 802C2670 */ void init(Vec*, Vec*, Vec*, Vec*, Vec*, Vec*, Vec*, Vec*, Vec*, Vec*, Vec*, Vec*, Vec*);
-	/* 802C2864 */ void framework(u32, char);
-	/* 802C29D4 */ void startCreatureSoundLevel(JAISoundID, u32, char);
-	/* 802C2C84 */ void startTentacleSound(JAISoundID, char, u32, char);
-	/* 802C2CD4 */ void startTentacleSoundLevel(JAISoundID, char, f32, u32, char);
+	/* 802C2864 */ void framework(u32, s8);
+	/* 802C29D4 */ void startCreatureSoundLevel(JAISoundID, u32, s8);
+	/* 802C2C84 */ void startTentacleSound(JAISoundID, u8, u32, s8);
+	/* 802C2CD4 */ void startTentacleSoundLevel(JAISoundID, u8, f32, u32, s8);
 };
 
 // build Z2SoundHandlePool (Z2SoundHandlePool) False/False
@@ -231,18 +231,18 @@ struct Z2SoundHandles {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802AB93C */ void incrCrowdSize();
 	/* 802AB960 */ void decrCrowdSize();
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build Z2SeqMgr (Z2SeqMgr) False/False
@@ -259,9 +259,9 @@ struct Z2SeqMgr {
 	// JAISoundHandle
 	/* 802AF49C */ void subBgmStart(u32);
 	/* 802AF884 */ void subBgmStop();
-	/* 802B3FEC */ void setChildTrackVolume(JAISoundHandle*, s32, f32, u32, f32, f32);
-	/* 802B4844 */ void setBattleSeqState(char);
-	/* 802B4AFC */ void setBattleLastHit(char);
+	/* 802B3FEC */ void setChildTrackVolume(JAISoundHandle*, int, f32, u32, f32, f32);
+	/* 802B4844 */ void setBattleSeqState(u8);
+	/* 802B4AFC */ void setBattleLastHit(u8);
 };
 
 // build JAISoundHandle (JAISoundHandle) True/True
@@ -272,34 +272,34 @@ struct Z2SeqMgr {
 /* top-level dependencies (end Z2Audience) */
 struct Z2Audience {
 	// Vec
-	/* 802BD92C */ void convertAbsToRel(Vec&, Vec*, s32);
-	/* 802BD95C */ void calcRelPosVolume(Vec const&, f32, s32);
-	/* 802BDA44 */ void calcRelPosPan(Vec const&, s32);
-	/* 802BDB44 */ void calcRelPosDolby(Vec const&, s32);
+	/* 802BD92C */ void convertAbsToRel(Vec&, Vec*, int);
+	/* 802BD95C */ void calcRelPosVolume(Vec const&, f32, int);
+	/* 802BDA44 */ void calcRelPosPan(Vec const&, int);
+	/* 802BDB44 */ void calcRelPosDolby(Vec const&, int);
 };
 
 // build Z2SoundObjBase (Z2SoundObjBase) False/False
 // build Z2SoundHandlePool (Z2SoundHandlePool) True/True
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2SoundObjBase) */
 // outer dependency: Z2SoundHandlePool
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SoundObjBase) */
 struct Z2SoundObjBase {
 	// Z2SoundHandlePool
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802BDEF0 */ Z2SoundObjBase();
 	/* 802BDF48 */ ~Z2SoundObjBase();
-	/* 802BDFB0 */ void init(Vec*, char);
+	/* 802BDFB0 */ void init(Vec*, u8);
 	/* 802BDFF8 */ void deleteObject();
-	/* 802BE038 */ void framework(u32, char);
+	/* 802BE038 */ void framework(u32, s8);
 	/* 802BE070 */ void dispose();
 	/* 802BE104 */ void stopOK(Z2SoundHandlePool&);
-	/* 802BE144 */ void startSound(JAISoundID, u32, char);
-	/* 802BE2D4 */ void startLevelSound(JAISoundID, u32, char);
+	/* 802BE144 */ void startSound(JAISoundID, u32, s8);
+	/* 802BE2D4 */ void startLevelSound(JAISoundID, u32, s8);
 	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
 };
 
@@ -885,7 +885,7 @@ asm void Z2Creature::deleteObject() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2Creature::init(Vec* field_0, Vec* field_1, char field_2, char field_3) {
+asm void Z2Creature::init(Vec* field_0, Vec* field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/init__10Z2CreatureFP3VecP3VecUcUc.s"
 }
@@ -896,7 +896,7 @@ asm void Z2Creature::init(Vec* field_0, Vec* field_1, char field_2, char field_3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2Creature::init(Vec* field_0, Vec* field_1, Vec* field_2, char field_3, char field_4, char field_5) {
+asm void Z2Creature::init(Vec* field_0, Vec* field_1, Vec* field_2, u8 field_3, u8 field_4, u8 field_5) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/init__10Z2CreatureFP3VecP3VecP3VecUcUcUc.s"
 }
@@ -929,7 +929,7 @@ asm void Z2Creature::initAnime(void* field_0, bool field_1, f32 field_2, f32 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2Creature::framework(u32 field_0, char field_1) {
+asm void Z2Creature::framework(u32 field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/framework__10Z2CreatureFUlSc.s"
 }
@@ -1024,7 +1024,7 @@ f64 Z2Creature__lit_3672 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2Creature::startCreatureSound(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2Creature::startCreatureSound(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureSound__10Z2CreatureF10JAISoundIDUlSc.s"
 }
@@ -1053,7 +1053,7 @@ f32 Z2Creature__lit_3720 = 2.0f / 5.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2Creature::startCreatureSoundLevel(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2Creature::startCreatureSoundLevel(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureSoundLevel__10Z2CreatureF10JAISoundIDUlSc.s"
 }
@@ -1064,7 +1064,7 @@ asm void Z2Creature::startCreatureSoundLevel(JAISoundID field_0, u32 field_1, ch
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2Creature::startCreatureVoice(JAISoundID field_0, char field_1) {
+asm void Z2Creature::startCreatureVoice(JAISoundID field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureVoice__10Z2CreatureF10JAISoundIDSc.s"
 }
@@ -1075,7 +1075,7 @@ asm void Z2Creature::startCreatureVoice(JAISoundID field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2Creature::startCreatureVoiceLevel(JAISoundID field_0, char field_1) {
+asm void Z2Creature::startCreatureVoiceLevel(JAISoundID field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureVoiceLevel__10Z2CreatureF10JAISoundIDSc.s"
 }
@@ -1086,7 +1086,7 @@ asm void Z2Creature::startCreatureVoiceLevel(JAISoundID field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2Creature::startCreatureExtraSound(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2Creature::startCreatureExtraSound(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureExtraSound__10Z2CreatureF10JAISoundIDUlSc.s"
 }
@@ -1097,7 +1097,7 @@ asm void Z2Creature::startCreatureExtraSound(JAISoundID field_0, u32 field_1, ch
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2Creature::startCreatureExtraSoundLevel(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2Creature::startCreatureExtraSoundLevel(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureExtraSoundLevel__10Z2CreatureF10JAISoundIDUlSc.s"
 }
@@ -1141,7 +1141,7 @@ asm Z2CreatureCitizen::~Z2CreatureCitizen() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureCitizen::init(Vec* field_0, Vec* field_1, char field_2, char field_3) {
+asm void Z2CreatureCitizen::init(Vec* field_0, Vec* field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/init__17Z2CreatureCitizenFP3VecP3VecUcUc.s"
 }
@@ -1163,7 +1163,7 @@ asm void Z2CreatureCitizen::deleteObject() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureCitizen::setMdlType(char field_0, bool field_1, bool field_2) {
+asm void Z2CreatureCitizen::setMdlType(s8 field_0, bool field_1, bool field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/setMdlType__17Z2CreatureCitizenFScbb.s"
 }
@@ -1174,7 +1174,7 @@ asm void Z2CreatureCitizen::setMdlType(char field_0, bool field_1, bool field_2)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureCitizen::playVoice(s32 field_0) {
+asm void Z2CreatureCitizen::playVoice(int field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/playVoice__17Z2CreatureCitizenFi.s"
 }
@@ -1185,7 +1185,7 @@ asm void Z2CreatureCitizen::playVoice(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureCitizen::startCreatureVoice(JAISoundID field_0, char field_1) {
+asm void Z2CreatureCitizen::startCreatureVoice(JAISoundID field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureVoice__17Z2CreatureCitizenF10JAISoundIDSc.s"
 }
@@ -1218,7 +1218,7 @@ asm void Z2CreatureEnemy::deleteObject() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureEnemy::init(Vec* field_0, Vec* field_1, char field_2, char field_3) {
+asm void Z2CreatureEnemy::init(Vec* field_0, Vec* field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/init__15Z2CreatureEnemyFP3VecP3VecUcUc.s"
 }
@@ -1229,7 +1229,7 @@ asm void Z2CreatureEnemy::init(Vec* field_0, Vec* field_1, char field_2, char fi
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureEnemy::init(Vec* field_0, Vec* field_1, Vec* field_2, char field_3, char field_4, char field_5) {
+asm void Z2CreatureEnemy::init(Vec* field_0, Vec* field_1, Vec* field_2, u8 field_3, u8 field_4, u8 field_5) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/init__15Z2CreatureEnemyFP3VecP3VecP3VecUcUcUc.s"
 }
@@ -1240,7 +1240,7 @@ asm void Z2CreatureEnemy::init(Vec* field_0, Vec* field_1, Vec* field_2, char fi
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureEnemy::framework(u32 field_0, char field_1) {
+asm void Z2CreatureEnemy::framework(u32 field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/framework__15Z2CreatureEnemyFUlSc.s"
 }
@@ -1261,7 +1261,7 @@ f32 Z2Creature__lit_4092 = 1.0f / 10.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureEnemy::startCreatureSound(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2CreatureEnemy::startCreatureSound(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureSound__15Z2CreatureEnemyF10JAISoundIDUlSc.s"
 }
@@ -1297,7 +1297,7 @@ f32 Z2Creature__lit_4194 = 13000.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureEnemy::startCreatureSoundLevel(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2CreatureEnemy::startCreatureSoundLevel(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureSoundLevel__15Z2CreatureEnemyF10JAISoundIDUlSc.s"
 }
@@ -1308,7 +1308,7 @@ asm void Z2CreatureEnemy::startCreatureSoundLevel(JAISoundID field_0, u32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureEnemy::startCreatureVoice(JAISoundID field_0, char field_1) {
+asm void Z2CreatureEnemy::startCreatureVoice(JAISoundID field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureVoice__15Z2CreatureEnemyF10JAISoundIDSc.s"
 }
@@ -1319,7 +1319,7 @@ asm void Z2CreatureEnemy::startCreatureVoice(JAISoundID field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureEnemy::startCreatureVoiceLevel(JAISoundID field_0, char field_1) {
+asm void Z2CreatureEnemy::startCreatureVoiceLevel(JAISoundID field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureVoiceLevel__15Z2CreatureEnemyF10JAISoundIDSc.s"
 }
@@ -1330,7 +1330,7 @@ asm void Z2CreatureEnemy::startCreatureVoiceLevel(JAISoundID field_0, char field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureEnemy::startCreatureExtraSound(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2CreatureEnemy::startCreatureExtraSound(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureExtraSound__15Z2CreatureEnemyF10JAISoundIDUlSc.s"
 }
@@ -1341,7 +1341,7 @@ asm void Z2CreatureEnemy::startCreatureExtraSound(JAISoundID field_0, u32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureEnemy::startCreatureExtraSoundLevel(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2CreatureEnemy::startCreatureExtraSoundLevel(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureExtraSoundLevel__15Z2CreatureEnemyF10JAISoundIDUlSc.s"
 }
@@ -1429,7 +1429,7 @@ asm Z2SoundObjBeeGroup::Z2SoundObjBeeGroup() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjBeeGroup::init(Vec* field_0, char field_1) {
+asm void Z2SoundObjBeeGroup::init(Vec* field_0, u8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/init__18Z2SoundObjBeeGroupFP3VecUc.s"
 }
@@ -1447,7 +1447,7 @@ f32 Z2Creature__lit_4562 = 20.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjBeeGroup::playBeeGroupSound(JAISoundID field_0, char field_1) {
+asm void Z2SoundObjBeeGroup::playBeeGroupSound(JAISoundID field_0, u8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/playBeeGroupSound__18Z2SoundObjBeeGroupF10JAISoundIDUc.s"
 }
@@ -1480,7 +1480,7 @@ asm void Z2CreatureFM::deleteObject() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureFM::init(Vec* field_0, Vec* field_1, Vec* field_2, Vec* field_3, Vec* field_4, Vec* field_5, char field_6, char field_7, char field_8, char field_9, char field_10, char field_11) {
+asm void Z2CreatureFM::init(Vec* field_0, Vec* field_1, Vec* field_2, Vec* field_3, Vec* field_4, Vec* field_5, u8 field_6, u8 field_7, u8 field_8, u8 field_9, u8 field_10, u8 field_11) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/init__12Z2CreatureFMFP3VecP3VecP3VecP3VecP3VecP3VecUcUcUcUcUcUc.s"
 }
@@ -1491,7 +1491,7 @@ asm void Z2CreatureFM::init(Vec* field_0, Vec* field_1, Vec* field_2, Vec* field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureFM::framework(u32 field_0, char field_1) {
+asm void Z2CreatureFM::framework(u32 field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/framework__12Z2CreatureFMFUlSc.s"
 }
@@ -1502,7 +1502,7 @@ asm void Z2CreatureFM::framework(u32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureFM::startChainSound(JAISoundID field_0, char field_1, f32 field_2, u32 field_3, char field_4) {
+asm void Z2CreatureFM::startChainSound(JAISoundID field_0, u8 field_1, f32 field_2, u32 field_3, s8 field_4) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startChainSound__12Z2CreatureFMF10JAISoundIDUcfUlSc.s"
 }
@@ -1520,7 +1520,7 @@ f32 Z2Creature__lit_4682 = 3.0f / 100.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureFM::startChainSoundLevel(JAISoundID field_0, char field_1, f32 field_2, u32 field_3, char field_4) {
+asm void Z2CreatureFM::startChainSoundLevel(JAISoundID field_0, u8 field_1, f32 field_2, u32 field_3, s8 field_4) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startChainSoundLevel__12Z2CreatureFMF10JAISoundIDUcfUlSc.s"
 }
@@ -1531,7 +1531,7 @@ asm void Z2CreatureFM::startChainSoundLevel(JAISoundID field_0, char field_1, f3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureGob::init(Vec* field_0, Vec* field_1, Vec* field_2, char field_3, char field_4, char field_5) {
+asm void Z2CreatureGob::init(Vec* field_0, Vec* field_1, Vec* field_2, u8 field_3, u8 field_4, u8 field_5) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/init__13Z2CreatureGobFP3VecP3VecP3VecUcUcUc.s"
 }
@@ -1542,7 +1542,7 @@ asm void Z2CreatureGob::init(Vec* field_0, Vec* field_1, Vec* field_2, char fiel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureGob::startCreatureVoiceLevel(JAISoundID field_0, char field_1) {
+asm void Z2CreatureGob::startCreatureVoiceLevel(JAISoundID field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureVoiceLevel__13Z2CreatureGobF10JAISoundIDSc.s"
 }
@@ -1586,7 +1586,7 @@ asm void Z2CreatureOI::init(Vec* field_0, Vec* field_1, Vec* field_2, Vec* field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureOI::framework(u32 field_0, char field_1) {
+asm void Z2CreatureOI::framework(u32 field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/framework__12Z2CreatureOIFUlSc.s"
 }
@@ -1604,7 +1604,7 @@ f32 lit_4838 = 9.0f / 10.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureOI::startCreatureSoundLevel(JAISoundID field_0, u32 field_1, char field_2) {
+asm void Z2CreatureOI::startCreatureSoundLevel(JAISoundID field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startCreatureSoundLevel__12Z2CreatureOIF10JAISoundIDUlSc.s"
 }
@@ -1615,7 +1615,7 @@ asm void Z2CreatureOI::startCreatureSoundLevel(JAISoundID field_0, u32 field_1, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureOI::startTentacleSound(JAISoundID field_0, char field_1, u32 field_2, char field_3) {
+asm void Z2CreatureOI::startTentacleSound(JAISoundID field_0, u8 field_1, u32 field_2, s8 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startTentacleSound__12Z2CreatureOIF10JAISoundIDUcUlSc.s"
 }
@@ -1630,7 +1630,7 @@ f32 Z2Creature__lit_4875 = 60.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2CreatureOI::startTentacleSoundLevel(JAISoundID field_0, char field_1, f32 field_2, u32 field_3, char field_4) {
+asm void Z2CreatureOI::startTentacleSoundLevel(JAISoundID field_0, u8 field_1, f32 field_2, u32 field_3, s8 field_4) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/startTentacleSoundLevel__12Z2CreatureOIF10JAISoundIDUcfUlSc.s"
 }

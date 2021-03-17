@@ -10,12 +10,6 @@
 // 
 
 // build JStage (JStage) False/False
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
 // build _GXFogType (_GXFogType) False/False
 /* top-level dependencies (begin _GXFogType) */
 /* top-level dependencies (end _GXFogType) */
@@ -24,18 +18,24 @@ struct _GXFogType {
 
 // build JStage (JStage) True/False
 struct JStage;
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
 /* top-level dependencies (begin JStage) */
-// outer dependency: _GXColor
 // outer dependency: _GXFogType
 // outer dependency: JStage::TObject
+// outer dependency: _GXColor
 /* top-level dependencies (end JStage) */
 struct JStage {
 	// build TFog (JStage::TFog) False/False
 	/* dependencies (begin JStage::TFog) */
 	/* dependencies (end JStage::TFog) */
 	struct TFog {
-		// _GXColor
 		// _GXFogType
+		// _GXColor
 		/* 80280C80 */ ~TFog();
 		/* 80280CE0 */ s32 JSGFGetType() const;
 		/* 80280CE8 */ bool JSGGetFogFunction() const;
@@ -63,6 +63,7 @@ struct JStage {
 		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
 		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
+		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
 };
@@ -92,7 +93,6 @@ SECTION_SDATA2 extern u32 JSGFog__lit_336;
 // External References:
 // 
 
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
 void operator delete(void*);
 
 extern "C" void __dt__Q26JStage7TObjectFv();

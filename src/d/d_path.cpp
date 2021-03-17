@@ -31,14 +31,14 @@ struct cXyz {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // build dSv_info_c (dSv_info_c) False/False
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build dBgS (dBgS) False/False
@@ -57,10 +57,10 @@ struct dBgS {
 // Forward References:
 // 
 
-void dPath_GetPnt(dPath const*, s32);
-void dPath_GetRoomPath(s32, s32);
-void dPath_GetNextRoomPath(dPath const*, s32);
-void dPath_GetPolyRoomPathVec(cBgS_PolyInfo const&, cXyz*, s32*);
+void dPath_GetPnt(dPath const*, int);
+void dPath_GetRoomPath(int, int);
+void dPath_GetNextRoomPath(dPath const*, int);
+void dPath_GetPolyRoomPathVec(cBgS_PolyInfo const&, cXyz*, int*);
 
 extern "C" void dPath_GetPnt__FPC5dPathi();
 extern "C" void dPath_GetRoomPath__Fii();
@@ -92,7 +92,7 @@ SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPath_GetPnt(dPath const* field_0, s32 field_1) {
+asm void dPath_GetPnt(dPath const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_path/dPath_GetPnt__FPC5dPathi.s"
 }
@@ -103,7 +103,7 @@ asm void dPath_GetPnt(dPath const* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPath_GetRoomPath(s32 field_0, s32 field_1) {
+asm void dPath_GetRoomPath(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_path/dPath_GetRoomPath__Fii.s"
 }
@@ -114,7 +114,7 @@ asm void dPath_GetRoomPath(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPath_GetNextRoomPath(dPath const* field_0, s32 field_1) {
+asm void dPath_GetNextRoomPath(dPath const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_path/dPath_GetNextRoomPath__FPC5dPathi.s"
 }
@@ -133,7 +133,7 @@ u8 d_d_path__lit_3685[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPath_GetPolyRoomPathVec(cBgS_PolyInfo const& field_0, cXyz* field_1, s32* field_2) {
+asm void dPath_GetPolyRoomPathVec(cBgS_PolyInfo const& field_0, cXyz* field_1, int* field_2) {
 	nofralloc
 #include "asm/d/d_path/dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi.s"
 }

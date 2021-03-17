@@ -91,13 +91,13 @@ void fpcM_Draw(void*);
 extern "C" static void fpcM_DrawIterater__FPFPvPv_i();
 static void fpcM_Execute(void*);
 void fpcM_Delete(void*);
-void fpcM_IsCreating(s32);
+void fpcM_IsCreating(u32);
 extern "C" void fpcM_Management__FPFv_vPFv_v();
 void fpcM_Init();
 extern "C" void fpcM_FastCreate__FsPFPv_iPvPv();
-void fpcM_IsPause(void*, char);
-void fpcM_PauseEnable(void*, char);
-void fpcM_PauseDisable(void*, char);
+void fpcM_IsPause(void*, u8);
+void fpcM_PauseEnable(void*, u8);
+void fpcM_PauseDisable(void*, u8);
 extern "C" void fpcM_JudgeInLayer__FUiPFPvPv_PvPv();
 
 extern "C" void fpcM_Draw__FPv();
@@ -120,7 +120,7 @@ SECTION_BSS extern u8 data_803F4DDC[120 + 4 /* padding */];
 // 
 
 extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv();
-void fpcCt_IsCreatingByID(s32);
+void fpcCt_IsCreatingByID(u32);
 void fpcCt_Handler();
 void fpcDt_Handler();
 void fpcDt_Delete(void*);
@@ -128,15 +128,15 @@ void fpcEx_Execute(base_process_class*);
 extern "C" void fpcEx_Handler__FPFPvPv_i();
 void fpcLy_RootLayer();
 void fpcLy_CurrentLayer();
-void fpcLy_Layer(s32);
-void fpcLy_Create(layer_class*, void*, node_list_class*, s32);
+void fpcLy_Layer(u32);
+void fpcLy_Create(layer_class*, void*, node_list_class*, int);
 extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
 extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv();
 void fpcLn_Create();
 void fpcPi_Handler();
-void fpcPause_IsEnable(void*, char);
-void fpcPause_Enable(void*, char);
-void fpcPause_Disable(void*, char);
+void fpcPause_IsEnable(void*, u8);
+void fpcPause_Enable(void*, u8);
+void fpcPause_Disable(void*, u8);
 void fpcDw_Execute(base_process_class*);
 extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
 extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
@@ -236,7 +236,7 @@ asm void fpcM_Delete(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcM_IsCreating(s32 field_0) {
+asm void fpcM_IsCreating(u32 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_manager/fpcM_IsCreating__FUi.s"
 }
@@ -287,7 +287,7 @@ extern "C" asm void fpcM_FastCreate__FsPFPv_iPvPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcM_IsPause(void* field_0, char field_1) {
+asm void fpcM_IsPause(void* field_0, u8 field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_manager/fpcM_IsPause__FPvUc.s"
 }
@@ -298,7 +298,7 @@ asm void fpcM_IsPause(void* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcM_PauseEnable(void* field_0, char field_1) {
+asm void fpcM_PauseEnable(void* field_0, u8 field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_manager/fpcM_PauseEnable__FPvUc.s"
 }
@@ -309,7 +309,7 @@ asm void fpcM_PauseEnable(void* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcM_PauseDisable(void* field_0, char field_1) {
+asm void fpcM_PauseDisable(void* field_0, u8 field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_manager/fpcM_PauseDisable__FPvUc.s"
 }

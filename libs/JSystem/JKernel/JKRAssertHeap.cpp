@@ -26,7 +26,7 @@ struct JKRHeap {
 
 	/* 802CE138 */ JKRHeap(void*, u32, JKRHeap*, bool);
 	/* 802CE264 */ ~JKRHeap();
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE574 */ void callAllDisposer();
 	/* 802CEAC0 */ void dispose();
 	/* 802CED84 */ void state_register(JKRHeap::TState*, u32) const;
@@ -47,9 +47,9 @@ struct JKRAssertHeap {
 	/* 802D1414 */ bool check();
 	/* 802D141C */ bool dump();
 	/* 802D1424 */ bool dump_sort();
-	/* 802D142C */ bool do_changeGroupID(char);
+	/* 802D142C */ bool do_changeGroupID(u8);
 	/* 802D1434 */ bool do_getCurrentGroupId();
-	/* 802D143C */ bool do_alloc(u32, s32);
+	/* 802D143C */ bool do_alloc(u32, int);
 	/* 802D1444 */ void do_free(void*);
 	/* 802D1448 */ void do_freeAll();
 	/* 802D144C */ void do_freeTail();
@@ -213,7 +213,7 @@ bool JKRAssertHeap::dump_sort() {
 
 
 /* 802D142C-802D1434 0008+00 rc=1 efc=0 .text      do_changeGroupID__13JKRAssertHeapFUc                         */
-bool JKRAssertHeap::do_changeGroupID(char field_0) {
+bool JKRAssertHeap::do_changeGroupID(u8 field_0) {
 	return false;
 }
 
@@ -225,7 +225,7 @@ bool JKRAssertHeap::do_getCurrentGroupId() {
 
 
 /* 802D143C-802D1444 0008+00 rc=1 efc=0 .text      do_alloc__13JKRAssertHeapFUli                                */
-bool JKRAssertHeap::do_alloc(u32 field_0, s32 field_1) {
+bool JKRAssertHeap::do_alloc(u32 field_0, int field_1) {
 	return false;
 }
 

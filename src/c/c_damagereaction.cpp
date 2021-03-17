@@ -10,25 +10,25 @@
 // 
 
 // build JPTraceParticleCallBack4 (JPTraceParticleCallBack4) False/False
-// build JPABaseEmitter (JPABaseEmitter) False/False
-/* top-level dependencies (begin JPABaseEmitter) */
-/* top-level dependencies (end JPABaseEmitter) */
-struct JPABaseEmitter {
-};
-
 // build JPABaseParticle (JPABaseParticle) False/False
 /* top-level dependencies (begin JPABaseParticle) */
 /* top-level dependencies (end JPABaseParticle) */
 struct JPABaseParticle {
 };
 
+// build JPABaseEmitter (JPABaseEmitter) False/False
+/* top-level dependencies (begin JPABaseEmitter) */
+/* top-level dependencies (end JPABaseEmitter) */
+struct JPABaseEmitter {
+};
+
 /* top-level dependencies (begin JPTraceParticleCallBack4) */
-// outer dependency: JPABaseEmitter
 // outer dependency: JPABaseParticle
+// outer dependency: JPABaseEmitter
 /* top-level dependencies (end JPTraceParticleCallBack4) */
 struct JPTraceParticleCallBack4 {
-	// JPABaseEmitter
 	// JPABaseParticle
+	// JPABaseEmitter
 	/* 8001817C */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 800182A4 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 80018328 */ ~JPTraceParticleCallBack4();
@@ -37,15 +37,15 @@ struct JPTraceParticleCallBack4 {
 // build JPABaseEmitter (JPABaseEmitter) True/True
 // build JPABaseParticle (JPABaseParticle) True/True
 // build JPAParticleCallBack (JPAParticleCallBack) False/False
-// build JPABaseEmitter (JPABaseEmitter) True/True
 // build JPABaseParticle (JPABaseParticle) True/True
+// build JPABaseEmitter (JPABaseEmitter) True/True
 /* top-level dependencies (begin JPAParticleCallBack) */
-// outer dependency: JPABaseEmitter
 // outer dependency: JPABaseParticle
+// outer dependency: JPABaseEmitter
 /* top-level dependencies (end JPAParticleCallBack) */
 struct JPAParticleCallBack {
-	// JPABaseEmitter
 	// JPABaseParticle
+	// JPABaseEmitter
 	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8027EFA4 */ ~JPAParticleCallBack();

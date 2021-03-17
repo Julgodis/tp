@@ -22,14 +22,14 @@ struct Vec {
 struct Z2SpeechMgr2 {
 	// Vec
 	/* 802CBC60 */ Z2SpeechMgr2();
-	/* 802CBD88 */ void setString(u16 const*, s16, char, u16);
+	/* 802CBD88 */ void setString(u16 const*, s16, u8, u16);
 	/* 802CBF60 */ void setTextCount(s16);
 	/* 802CC190 */ void speakOneWord(bool);
 	/* 802CC2FC */ void isNonVerbal();
 	/* 802CC4C0 */ void selectUnit(bool);
 	/* 802CC738 */ void selectTail();
 	/* 802CC9D0 */ void framework();
-	/* 802CCA18 */ void playOneShotVoice(char, u16, Vec*, char);
+	/* 802CCA18 */ void playOneShotVoice(u8, u16, Vec*, s8);
 	/* 802CCF88 */ void isMidnaSpeak();
 };
 
@@ -82,7 +82,7 @@ struct JAISoundStarter {
 struct Z2SoundStarter {
 	// JAISoundHandle
 	/* 802AAB94 */ Z2SoundStarter(bool);
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, char);
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 };
 
 // build Z2SeqMgr (Z2SeqMgr) False/False
@@ -184,7 +184,7 @@ SECTION_SBSS2 extern u8 Z2SpeechMgr2__lit_4104[2 + 2 /* padding */];
 // External References:
 // 
 
-void dComIfGp_getReverb(s32);
+void dComIfGp_getReverb(int);
 extern "C" void func_802AABF4();
 void operator delete(void*);
 extern "C" void _savegpr_26();
@@ -408,7 +408,7 @@ asm Z2SpeechStarter::~Z2SpeechStarter() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SpeechMgr2::setString(u16 const* field_0, s16 field_1, char field_2, u16 field_3) {
+asm void Z2SpeechMgr2::setString(u16 const* field_0, s16 field_1, u8 field_2, u16 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SpeechMgr2/setString__12Z2SpeechMgr2FPCUssUcUs.s"
 }
@@ -881,7 +881,7 @@ asm void Z2SpeechMgr2::framework() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SpeechMgr2::playOneShotVoice(char field_0, u16 field_1, Vec* field_2, char field_3) {
+asm void Z2SpeechMgr2::playOneShotVoice(u8 field_0, u16 field_1, Vec* field_2, s8 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SpeechMgr2/playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc.s"
 }

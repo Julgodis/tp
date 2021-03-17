@@ -25,7 +25,7 @@ struct dEvt_control_c {
 	// dEvt_order_c
 	/* 80041580 */ dEvt_control_c();
 	/* 800415D8 */ void orderOld(u16, u16, u16, u16, void*, void*, void const*);
-	/* 80041668 */ void order(u16, u16, u16, u16, void*, void*, s16, char);
+	/* 80041668 */ void order(u16, u16, u16, u16, void*, void*, s16, u8);
 	/* 80041804 */ void setParam(dEvt_order_c*);
 	/* 80041934 */ void beforeFlagProc(dEvt_order_c*);
 	/* 80041964 */ void afterFlagProc(dEvt_order_c*);
@@ -55,20 +55,20 @@ struct dEvt_control_c {
 	/* 8004316C */ void compulsory(void*, char const*, u16);
 	/* 800431E8 */ void remove();
 	/* 80043278 */ void getStageEventDt();
-	/* 80043280 */ void sceneChange(s32);
+	/* 80043280 */ void sceneChange(int);
 	/* 800432C8 */ void getPId(void*);
-	/* 800432EC */ void convPId(s32);
+	/* 800432EC */ void convPId(u32);
 	/* 8004331C */ void getStbDemoData(char*);
-	/* 800434D8 */ void searchMapEventData(char);
-	/* 80043500 */ void searchMapEventData(char, s32);
+	/* 800434D8 */ void searchMapEventData(u8);
+	/* 80043500 */ void searchMapEventData(u8, s32);
 	/* 8004360C */ void runningEventID(s16);
 	/* 8004362C */ void setPt1(void*);
 	/* 8004365C */ void setPt2(void*);
 	/* 8004368C */ void setPtT(void*);
 	/* 800436BC */ void setPtI(void*);
-	/* 800436EC */ void setPtI_Id(s32);
+	/* 800436EC */ void setPtI_Id(u32);
 	/* 800436F4 */ void setPtD(void*);
-	/* 80043724 */ void setGtItm(char);
+	/* 80043724 */ void setGtItm(u8);
 };
 
 // build dEvt_order_c (dEvt_order_c) True/True
@@ -99,7 +99,7 @@ struct fopAc_ac_c {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -113,8 +113,8 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035200 */ void onSwitch(s32, s32);
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035200 */ void onSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build daItemBase_c (daItemBase_c) False/False
@@ -143,7 +143,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -158,7 +158,7 @@ struct dEvDtEvent_c {
 /* top-level dependencies (begin dEvent_exception_c) */
 /* top-level dependencies (end dEvent_exception_c) */
 struct dEvent_exception_c {
-	/* 800463F0 */ void setStartDemo(s32);
+	/* 800463F0 */ void setStartDemo(int);
 };
 
 // build dEvent_manager_c (dEvent_manager_c) False/False
@@ -169,12 +169,12 @@ struct dEvent_exception_c {
 struct dEvent_manager_c {
 	// fopAc_ac_c
 	/* 80046800 */ void setObjectArchive(char*);
-	/* 80046DAC */ void endProc(s16, s32);
+	/* 80046DAC */ void endProc(s16, int);
 	/* 80046E64 */ void Sequencer();
 	/* 800473FC */ void Experts();
 	/* 800474BC */ void getEventData(s16);
-	/* 80047514 */ void getEventIdx(char const*, char, s32);
-	/* 80047698 */ void getEventIdx(fopAc_ac_c*, char);
+	/* 80047514 */ void getEventIdx(char const*, u8, s32);
+	/* 80047698 */ void getEventIdx(fopAc_ac_c*, u8);
 	/* 80047984 */ void order(s16);
 	/* 800482CC */ void issueStaff(char const*);
 	/* 80048348 */ void cancelStaff(char const*);
@@ -184,7 +184,7 @@ struct dEvent_manager_c {
 /* top-level dependencies (begin dVibration_c) */
 /* top-level dependencies (end dVibration_c) */
 struct dVibration_c {
-	/* 8006FD94 */ void StopQuake(s32);
+	/* 8006FD94 */ void StopQuake(int);
 };
 
 // build dCamera_c (dCamera_c) False/False
@@ -216,10 +216,10 @@ struct Z2StatusMgr {
 
 extern "C" static bool func_80041480();
 extern "C" static void func_80041488();
-void dEv_defaultSkipProc(void*, s32);
-void dEv_defaultSkipZev(void*, s32);
-void dEv_defaultSkipStb(void*, s32);
-void dEv_noFinishSkipProc(void*, s32);
+void dEv_defaultSkipProc(void*, int);
+void dEv_defaultSkipZev(void*, int);
+void dEv_defaultSkipStb(void*, int);
+void dEv_noFinishSkipProc(void*, int);
 extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
 
 extern "C" static bool func_80041480();
@@ -292,14 +292,14 @@ SECTION_SDATA2 extern u8 lit_5095[4];
 // 
 
 extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, char, u16, u16, u16);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
 void fopAcM_getItemEventPartner(fopAc_ac_c const*);
 void fpcSch_JudgeByID(void*, void*);
-void dStage_changeScene4Event(s32, char, s32, bool, f32, u32, s16, s32);
-void dComIfGp_getSelectItem(s32);
+void dStage_changeScene4Event(int, s8, int, bool, f32, u32, s16, int);
+void dComIfGp_getSelectItem(int);
 void dComIfG_getStageRes(char const*);
-void dComIfG_getRoomArcName(s32);
-void dComIfGs_onVisitedRoom(s32);
+void dComIfG_getRoomArcName(int);
+void dComIfGs_onVisitedRoom(int);
 void dCam_getBody();
 extern "C" void __construct_array();
 extern "C" void _savegpr_22();
@@ -434,7 +434,7 @@ asm void dEvt_control_c::orderOld(u16 field_0, u16 field_1, u16 field_2, u16 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvt_control_c::order(u16 field_0, u16 field_1, u16 field_2, u16 field_3, void* field_4, void* field_5, s16 field_6, char field_7) {
+asm void dEvt_control_c::order(u16 field_0, u16 field_1, u16 field_2, u16 field_3, void* field_4, void* field_5, s16 field_6, u8 field_7) {
 	nofralloc
 #include "asm/d/event/d_event/order__14dEvt_control_cFUsUsUsUsPvPvsUc.s"
 }
@@ -694,7 +694,7 @@ asm void dEvt_control_c::clearSkipSystem() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEv_defaultSkipProc(void* field_0, s32 field_1) {
+asm void dEv_defaultSkipProc(void* field_0, int field_1) {
 	nofralloc
 #include "asm/d/event/d_event/dEv_defaultSkipProc__FPvi.s"
 }
@@ -705,7 +705,7 @@ asm void dEv_defaultSkipProc(void* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEv_defaultSkipZev(void* field_0, s32 field_1) {
+asm void dEv_defaultSkipZev(void* field_0, int field_1) {
 	nofralloc
 #include "asm/d/event/d_event/dEv_defaultSkipZev__FPvi.s"
 }
@@ -716,7 +716,7 @@ asm void dEv_defaultSkipZev(void* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEv_defaultSkipStb(void* field_0, s32 field_1) {
+asm void dEv_defaultSkipStb(void* field_0, int field_1) {
 	nofralloc
 #include "asm/d/event/d_event/dEv_defaultSkipStb__FPvi.s"
 }
@@ -727,7 +727,7 @@ asm void dEv_defaultSkipStb(void* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEv_noFinishSkipProc(void* field_0, s32 field_1) {
+asm void dEv_noFinishSkipProc(void* field_0, int field_1) {
 	nofralloc
 #include "asm/d/event/d_event/dEv_noFinishSkipProc__FPvi.s"
 }
@@ -873,7 +873,7 @@ asm void dEvt_control_c::getStageEventDt() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvt_control_c::sceneChange(s32 field_0) {
+asm void dEvt_control_c::sceneChange(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event/sceneChange__14dEvt_control_cFi.s"
 }
@@ -895,7 +895,7 @@ asm void dEvt_control_c::getPId(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvt_control_c::convPId(s32 field_0) {
+asm void dEvt_control_c::convPId(u32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event/convPId__14dEvt_control_cFUi.s"
 }
@@ -961,7 +961,7 @@ asm void dEvt_info_c::beforeProc() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvt_control_c::searchMapEventData(char field_0) {
+asm void dEvt_control_c::searchMapEventData(u8 field_0) {
 	nofralloc
 #include "asm/d/event/d_event/searchMapEventData__14dEvt_control_cFUc.s"
 }
@@ -972,7 +972,7 @@ asm void dEvt_control_c::searchMapEventData(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvt_control_c::searchMapEventData(char field_0, s32 field_1) {
+asm void dEvt_control_c::searchMapEventData(u8 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/event/d_event/searchMapEventData__14dEvt_control_cFUcl.s"
 }
@@ -1038,7 +1038,7 @@ asm void dEvt_control_c::setPtI(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvt_control_c::setPtI_Id(s32 field_0) {
+asm void dEvt_control_c::setPtI_Id(u32 field_0) {
 	nofralloc
 #include "asm/d/event/d_event/setPtI_Id__14dEvt_control_cFUi.s"
 }
@@ -1060,7 +1060,7 @@ asm void dEvt_control_c::setPtD(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvt_control_c::setGtItm(char field_0) {
+asm void dEvt_control_c::setGtItm(u8 field_0) {
 	nofralloc
 #include "asm/d/event/d_event/setGtItm__14dEvt_control_cFUc.s"
 }

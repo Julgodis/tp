@@ -106,7 +106,7 @@ struct process_method_class {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // build daSus_c (daSus_c) False/False
@@ -123,7 +123,7 @@ struct daSus_c {
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build dDemo_actor_c (dDemo_actor_c) False/False
@@ -140,7 +140,7 @@ struct dDemo_actor_c {
 /* top-level dependencies (begin dDemo_object_c) */
 /* top-level dependencies (end dDemo_object_c) */
 struct dDemo_object_c {
-	/* 80039088 */ void getActor(char);
+	/* 80039088 */ void getActor(u8);
 };
 
 // build dRes_control_c (dRes_control_c) False/False
@@ -155,7 +155,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -167,11 +167,10 @@ struct dEvt_control_c {
 };
 
 // build dPa_control_c (dPa_control_c) False/False
-// build csXyz (csXyz) True/True
-// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
-/* top-level dependencies (begin dPa_levelEcallBack) */
-/* top-level dependencies (end dPa_levelEcallBack) */
-struct dPa_levelEcallBack {
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
 };
 
 // build _GXColor (_GXColor) False/False
@@ -180,42 +179,43 @@ struct dPa_levelEcallBack {
 struct _GXColor {
 };
 
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
+// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
+/* top-level dependencies (begin dPa_levelEcallBack) */
+/* top-level dependencies (end dPa_levelEcallBack) */
+struct dPa_levelEcallBack {
 };
 
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build csXyz (csXyz) True/True
 /* top-level dependencies (begin dPa_control_c) */
-// outer dependency: csXyz
-// outer dependency: dPa_levelEcallBack
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
+// outer dependency: dPa_levelEcallBack
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
-	// csXyz
-	// _GXColor
 	// dPa_levelEcallBack
-	// cXyz
 	// dKy_tevstr_c
-	/* 8004D4CC */ void set(u32, char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	// csXyz
+	// cXyz
+	// _GXColor
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 // build cXyz (cXyz) True/True
 // build dPa_levelEcallBack (dPa_levelEcallBack) True/True
 // build _GXColor (_GXColor) True/True
 // build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build J3DModelData (J3DModelData) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build J3DModelData (J3DModelData) True/True
 /* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: J3DModelData
 // outer dependency: dKy_tevstr_c
+// outer dependency: J3DModelData
 /* top-level dependencies (end dScnKy_env_light_c) */
 struct dScnKy_env_light_c {
-	// J3DModelData
 	// dKy_tevstr_c
+	// J3DModelData
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
@@ -247,15 +247,15 @@ struct J3DAnmTevRegKey {
 };
 
 // build J3DMaterialTable (J3DMaterialTable) False/False
-// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) True/True
 // build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) True/True
 /* top-level dependencies (begin J3DMaterialTable) */
-// outer dependency: J3DAnmTextureSRTKey
 // outer dependency: J3DAnmTevRegKey
+// outer dependency: J3DAnmTextureSRTKey
 /* top-level dependencies (end J3DMaterialTable) */
 struct J3DMaterialTable {
-	// J3DAnmTextureSRTKey
 	// J3DAnmTevRegKey
+	// J3DAnmTextureSRTKey
 	/* 8032FCC4 */ void entryTexMtxAnimator(J3DAnmTextureSRTKey*);
 	/* 8032FE70 */ void entryTevRegAnimator(J3DAnmTevRegKey*);
 };
@@ -316,18 +316,18 @@ void fopAcTg_Init(create_tag_class*, void*);
 void fopAcM_delete(fopAc_ac_c*);
 void fopAcM_DeleteHeap(fopAc_ac_c*);
 void fopAcM_cullingCheck(fopAc_ac_c const*);
-void fopDwTg_ToDrawQ(create_tag_class*, s32);
+void fopDwTg_ToDrawQ(create_tag_class*, int);
 void fopDwTg_DrawQTo(create_tag_class*);
 void fopDwTg_Init(create_tag_class*, void*);
-void fpcBs_Is_JustOfType(s32, s32);
-void fpcBs_MakeOfType(s32*);
+void fpcBs_Is_JustOfType(int, int);
+void fpcBs_MakeOfType(int*);
 void fpcLf_GetPriority(leafdraw_class const*);
 void fpcLf_DrawMethod(leafdraw_method_class*, void*);
 void fpcMtd_Execute(process_method_class*, void*);
 void fpcMtd_IsDelete(process_method_class*, void*);
 void fpcMtd_Delete(process_method_class*, void*);
 void fpcMtd_Create(process_method_class*, void*);
-void dKy_tevstr_init(dKy_tevstr_c*, char, char);
+void dKy_tevstr_init(dKy_tevstr_c*, s8, u8);
 void dKy_depth_dist_set(void*);
 void cLib_chaseF(f32*, f32, f32);
 void operator delete(void*);

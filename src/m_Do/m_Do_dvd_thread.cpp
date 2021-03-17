@@ -65,27 +65,28 @@ struct JKRHeap {
 struct mDoDvdThd_mountArchive_c {
 	// JKRHeap
 	/* 80015D44 */ ~mDoDvdThd_mountArchive_c();
-	/* 80015DA4 */ mDoDvdThd_mountArchive_c(char);
-	/* 80015E14 */ void create(char const*, char, JKRHeap*);
+	/* 80015DA4 */ mDoDvdThd_mountArchive_c(u8);
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 	/* 80015EDC */ void execute();
 };
 
 // build JKRHeap (JKRHeap) True/True
 // build mDoDvdThd_mountXArchive_c (mDoDvdThd_mountXArchive_c) False/False
+// build JKRHeap (JKRHeap) True/True
 // build JKRArchive (JKRArchive) False/False
 // build JKRArchive (JKRArchive) True/False
 struct JKRArchive;
 // build JKRHeap (JKRHeap) True/True
 // build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRArchive::EMountMode
-// outer dependency: JKRHeap
 // outer dependency: JKRArchive::EMountDirection
+// outer dependency: JKRHeap
+// outer dependency: JKRArchive::EMountMode
 /* top-level dependencies (end JKRArchive) */
 struct JKRArchive {
-	// JKRArchive::EMountMode
-	// JKRHeap
 	// JKRArchive::EMountDirection
+	// JKRHeap
+	// JKRArchive::EMountMode
 	// build EMountMode (JKRArchive::EMountMode) False/False
 	/* dependencies (begin JKRArchive::EMountMode) */
 	/* dependencies (end JKRArchive::EMountMode) */
@@ -101,17 +102,16 @@ struct JKRArchive {
 	/* 802D58C8 */ void mount(s32, JKRArchive::EMountMode, JKRHeap*, JKRArchive::EMountDirection);
 };
 
-// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin mDoDvdThd_mountXArchive_c) */
-// outer dependency: JKRArchive::EMountMode
 // outer dependency: JKRHeap
+// outer dependency: JKRArchive::EMountMode
 /* top-level dependencies (end mDoDvdThd_mountXArchive_c) */
 struct mDoDvdThd_mountXArchive_c {
-	// JKRArchive::EMountMode
 	// JKRHeap
+	// JKRArchive::EMountMode
 	/* 80016108 */ ~mDoDvdThd_mountXArchive_c();
-	/* 80016168 */ mDoDvdThd_mountXArchive_c(char, JKRArchive::EMountMode);
-	/* 800161E0 */ void create(char const*, char, JKRArchive::EMountMode, JKRHeap*);
+	/* 80016168 */ mDoDvdThd_mountXArchive_c(u8, JKRArchive::EMountMode);
+	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 	/* 800162B0 */ void execute();
 };
 
@@ -123,8 +123,8 @@ struct mDoDvdThd_mountXArchive_c {
 /* top-level dependencies (end mDoDvdThd_toMainRam_c) */
 struct mDoDvdThd_toMainRam_c {
 	// JKRHeap
-	/* 80016338 */ mDoDvdThd_toMainRam_c(char);
-	/* 80016394 */ void create(char const*, char, JKRHeap*);
+	/* 80016338 */ mDoDvdThd_toMainRam_c(u8);
+	/* 80016394 */ void create(char const*, u8, JKRHeap*);
 	/* 8001645C */ ~mDoDvdThd_toMainRam_c();
 	/* 800164BC */ void execute();
 };
@@ -160,7 +160,7 @@ struct OSThread {
 /* top-level dependencies (end JKRThread) */
 struct JKRThread {
 	// OSThread
-	/* 802D16B8 */ JKRThread(OSThread*, s32);
+	/* 802D16B8 */ JKRThread(OSThread*, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
@@ -176,23 +176,23 @@ struct JKRMemArchive {
 };
 
 // build JKRDvdRipper (JKRDvdRipper) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JKRExpandSwitch (JKRExpandSwitch) False/False
 /* top-level dependencies (begin JKRExpandSwitch) */
 /* top-level dependencies (end JKRExpandSwitch) */
 struct JKRExpandSwitch {
 };
 
+// build JKRHeap (JKRHeap) True/True
 // build JKRDvdRipper (JKRDvdRipper) True/False
 struct JKRDvdRipper;
 /* top-level dependencies (begin JKRDvdRipper) */
-// outer dependency: JKRHeap
 // outer dependency: JKRExpandSwitch
+// outer dependency: JKRHeap
 // outer dependency: JKRDvdRipper::EAllocDirection
 /* top-level dependencies (end JKRDvdRipper) */
 struct JKRDvdRipper {
-	// JKRHeap
 	// JKRExpandSwitch
+	// JKRHeap
 	// JKRDvdRipper::EAllocDirection
 	// build EAllocDirection (JKRDvdRipper::EAllocDirection) False/False
 	/* dependencies (begin JKRDvdRipper::EAllocDirection) */
@@ -200,7 +200,7 @@ struct JKRDvdRipper {
 	struct EAllocDirection {
 	};
 
-	/* 802D9C54 */ void loadToMainRAM(s32, char*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, s32*, u32*);
+	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
 };
 
 // build JKRExpandSwitch (JKRExpandSwitch) True/True
@@ -273,7 +273,7 @@ void cLs_Addition(node_list_class*, node_class*);
 void cLs_Create(node_list_class*);
 void cNd_ForcedClear(node_class*);
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void OSInitMessageQueue();
 extern "C" void OSSendMessage();
@@ -647,7 +647,7 @@ asm mDoDvdThd_mountArchive_c::~mDoDvdThd_mountArchive_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm mDoDvdThd_mountArchive_c::mDoDvdThd_mountArchive_c(char field_0) {
+asm mDoDvdThd_mountArchive_c::mDoDvdThd_mountArchive_c(u8 field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_dvd_thread/__ct__24mDoDvdThd_mountArchive_cFUc.s"
 }
@@ -658,7 +658,7 @@ asm mDoDvdThd_mountArchive_c::mDoDvdThd_mountArchive_c(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoDvdThd_mountArchive_c::create(char const* field_0, char field_1, JKRHeap* field_2) {
+asm void mDoDvdThd_mountArchive_c::create(char const* field_0, u8 field_1, JKRHeap* field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_dvd_thread/create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap.s"
 }
@@ -691,7 +691,7 @@ asm mDoDvdThd_mountXArchive_c::~mDoDvdThd_mountXArchive_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm mDoDvdThd_mountXArchive_c::mDoDvdThd_mountXArchive_c(char field_0, JKRArchive::EMountMode field_1) {
+asm mDoDvdThd_mountXArchive_c::mDoDvdThd_mountXArchive_c(u8 field_0, JKRArchive::EMountMode field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_dvd_thread/__ct__25mDoDvdThd_mountXArchive_cFUcQ210JKRArchive10EMountMode.s"
 }
@@ -702,7 +702,7 @@ asm mDoDvdThd_mountXArchive_c::mDoDvdThd_mountXArchive_c(char field_0, JKRArchiv
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoDvdThd_mountXArchive_c::create(char const* field_0, char field_1, JKRArchive::EMountMode field_2, JKRHeap* field_3) {
+asm void mDoDvdThd_mountXArchive_c::create(char const* field_0, u8 field_1, JKRArchive::EMountMode field_2, JKRHeap* field_3) {
 	nofralloc
 #include "asm/m_Do/m_Do_dvd_thread/create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap.s"
 }
@@ -724,7 +724,7 @@ asm void mDoDvdThd_mountXArchive_c::execute() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm mDoDvdThd_toMainRam_c::mDoDvdThd_toMainRam_c(char field_0) {
+asm mDoDvdThd_toMainRam_c::mDoDvdThd_toMainRam_c(u8 field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_dvd_thread/__ct__21mDoDvdThd_toMainRam_cFUc.s"
 }
@@ -735,7 +735,7 @@ asm mDoDvdThd_toMainRam_c::mDoDvdThd_toMainRam_c(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoDvdThd_toMainRam_c::create(char const* field_0, char field_1, JKRHeap* field_2) {
+asm void mDoDvdThd_toMainRam_c::create(char const* field_0, u8 field_1, JKRHeap* field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_dvd_thread/create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap.s"
 }

@@ -32,10 +32,10 @@ struct cXyz {
 struct dVibration_c {
 	// cXyz
 	/* 8006F268 */ void Run();
-	/* 8006FA24 */ void StartShock(s32, s32, cXyz);
-	/* 8006FB10 */ void StartQuake(s32, s32, cXyz);
-	/* 8006FC0C */ void StartQuake(char const*, s32, s32, cXyz);
-	/* 8006FD94 */ void StopQuake(s32);
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+	/* 8006FB10 */ void StartQuake(int, int, cXyz);
+	/* 8006FC0C */ void StartQuake(u8 const*, int, int, cXyz);
+	/* 8006FD94 */ void StopQuake(int);
 	/* 8006FE00 */ void Kill();
 	/* 8006FE5C */ void CheckQuake();
 	/* 8006FE84 */ void setDefault();
@@ -59,7 +59,7 @@ struct dSv_player_config_c {
 /* top-level dependencies (end dCamera_c) */
 struct dCamera_c {
 	// cXyz
-	/* 80181000 */ void StartShake(s32, char*, s32, cXyz);
+	/* 80181000 */ void StartShake(s32, u8*, s32, cXyz);
 	/* 80181158 */ void StopShake();
 };
 
@@ -83,7 +83,7 @@ struct JUTGamePad {
 		struct ERumble {
 		};
 
-		/* 802E168C */ void stopMotor(s32, bool);
+		/* 802E168C */ void stopMotor(int, bool);
 		/* 802E18CC */ void startPatternedRumble(void*, JUTGamePad::CRumble::ERumble, u32);
 		/* 802E1948 */ void stopPatternedRumble(s16);
 		/* 802E1978 */ void stopPatternedRumbleAtThePeriod();
@@ -227,7 +227,7 @@ asm void dVibration_c::Run() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dVibration_c::StartShock(s32 field_0, s32 field_1, cXyz field_2) {
+asm void dVibration_c::StartShock(int field_0, int field_1, cXyz field_2) {
 	nofralloc
 #include "asm/d/d_vibration/StartShock__12dVibration_cFii4cXyz.s"
 }
@@ -238,7 +238,7 @@ asm void dVibration_c::StartShock(s32 field_0, s32 field_1, cXyz field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dVibration_c::StartQuake(s32 field_0, s32 field_1, cXyz field_2) {
+asm void dVibration_c::StartQuake(int field_0, int field_1, cXyz field_2) {
 	nofralloc
 #include "asm/d/d_vibration/StartQuake__12dVibration_cFii4cXyz.s"
 }
@@ -249,7 +249,7 @@ asm void dVibration_c::StartQuake(s32 field_0, s32 field_1, cXyz field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dVibration_c::StartQuake(char const* field_0, s32 field_1, s32 field_2, cXyz field_3) {
+asm void dVibration_c::StartQuake(u8 const* field_0, int field_1, int field_2, cXyz field_3) {
 	nofralloc
 #include "asm/d/d_vibration/StartQuake__12dVibration_cFPCUcii4cXyz.s"
 }
@@ -260,7 +260,7 @@ asm void dVibration_c::StartQuake(char const* field_0, s32 field_1, s32 field_2,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dVibration_c::StopQuake(s32 field_0) {
+asm void dVibration_c::StopQuake(int field_0) {
 	nofralloc
 #include "asm/d/d_vibration/StopQuake__12dVibration_cFi.s"
 }

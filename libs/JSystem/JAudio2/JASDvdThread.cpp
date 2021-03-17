@@ -14,14 +14,14 @@
 /* top-level dependencies (end JASDvd) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
-	/* 8028FF04 */ void createThread(s32, s32, u32);
+	/* 8028FF04 */ void createThread(s32, int, u32);
 };
 
 // build JASTaskThread (JASTaskThread) False/False
 /* top-level dependencies (begin JASTaskThread) */
 /* top-level dependencies (end JASTaskThread) */
 struct JASTaskThread {
-	/* 8028F6C4 */ JASTaskThread(s32, s32, u32);
+	/* 8028F6C4 */ JASTaskThread(int, int, u32);
 };
 
 // build JKRHeap (JKRHeap) False/False
@@ -43,7 +43,7 @@ SECTION_SBSS extern u8 sThread__6JASDvd[4 + 4 /* padding */];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 extern "C" void OSResumeThread();
 extern "C" void _savegpr_29();
 extern "C" void _restgpr_29();
@@ -80,7 +80,7 @@ asm void JASDvd::getThreadPointer() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDvd::createThread(s32 field_0, s32 field_1, u32 field_2) {
+asm void JASDvd::createThread(s32 field_0, int field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDvdThread/createThread__6JASDvdFliUl.s"
 }

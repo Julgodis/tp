@@ -29,12 +29,13 @@ struct JUTDirectPrint {
 	// JUtility::TColor
 	/* 802E41E8 */ JUTDirectPrint();
 	/* 802E4240 */ void start();
-	/* 802E4288 */ void erase(s32, s32, s32, s32);
-	/* 802E431C */ void drawChar(s32, s32, s32);
+	/* 802E4288 */ void erase(int, int, int, int);
+	/* 802E431C */ void drawChar(int, int, int);
 	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
 	/* 802E46D8 */ void drawString(u16, u16, char*);
+	/* 802E4708 */ void drawString_f(u16, u16, char const*, ...);
 	/* 802E4798 */ void setCharColor(JUtility::TColor);
-	/* 802E47C8 */ void setCharColor(char, char, char);
+	/* 802E47C8 */ void setCharColor(u8, u8, u8);
 };
 
 // build JUtility (JUtility) True/True
@@ -62,7 +63,6 @@ namespace JStudio {
 // 
 
 extern "C" static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb();
-extern "C" static void drawString_f__14JUTDirectPrintFUsUsPCce();
 
 extern "C" void __ct__14JUTDirectPrintFv();
 extern "C" void start__14JUTDirectPrintFv();
@@ -71,7 +71,7 @@ extern "C" void drawChar__14JUTDirectPrintFiii();
 extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
 extern "C" static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb();
 extern "C" void drawString__14JUTDirectPrintFUsUsPc();
-extern "C" static void drawString_f__14JUTDirectPrintFUsUsPCce();
+extern "C" void drawString_f__14JUTDirectPrintFUsUsPCce();
 extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor();
 extern "C" void setCharColor__14JUTDirectPrintFUcUcUc();
 SECTION_RODATA extern const u8 JUTDirectPrint__stringBase0[8];
@@ -149,7 +149,7 @@ asm void JUTDirectPrint::start() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTDirectPrint::erase(s32 field_0, s32 field_1, s32 field_2, s32 field_3) {
+asm void JUTDirectPrint::erase(int field_0, int field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/erase__14JUTDirectPrintFiiii.s"
 }
@@ -173,7 +173,7 @@ u8 sAsciiTable__14JUTDirectPrint[128] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTDirectPrint::drawChar(s32 field_0, s32 field_1, s32 field_2) {
+asm void JUTDirectPrint::drawChar(int field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/drawChar__14JUTDirectPrintFiii.s"
 }
@@ -227,7 +227,7 @@ asm void JUTDirectPrint::drawString(u16 field_0, u16 field_1, char* field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void drawString_f__14JUTDirectPrintFUsUsPCce() {
+asm void JUTDirectPrint::drawString_f(u16 field_0, u16 field_1, char const* field_2, ...) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/drawString_f__14JUTDirectPrintFUsUsPCce.s"
 }
@@ -283,7 +283,7 @@ f64 JUTDirectPrint__lit_514 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTDirectPrint::setCharColor(char field_0, char field_1, char field_2) {
+asm void JUTDirectPrint::setCharColor(u8 field_0, u8 field_1, u8 field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDirectPrint/setCharColor__14JUTDirectPrintFUcUcUc.s"
 }

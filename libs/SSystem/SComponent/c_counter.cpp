@@ -9,7 +9,7 @@
 // Forward References:
 // 
 
-void cCt_Counter(s32);
+void cCt_Counter(int);
 
 extern "C" void cCt_Counter__Fi();
 SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
@@ -32,7 +32,7 @@ u8 g_Counter[12 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cCt_Counter(s32 field_0) {
+asm void cCt_Counter(int field_0) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_counter/cCt_Counter__Fi.s"
 }

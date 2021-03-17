@@ -25,7 +25,7 @@ struct JPABaseParticle {
 /* top-level dependencies (begin JPAChildShape) */
 /* top-level dependencies (end JPAChildShape) */
 struct JPAChildShape {
-	/* 8027B038 */ JPAChildShape(char const*);
+	/* 8027B038 */ JPAChildShape(u8 const*);
 };
 
 // 
@@ -99,7 +99,7 @@ asm void JPACalcChildScaleOut(JPAEmitterWorkData* field_0, JPABaseParticle* fiel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JPAChildShape::JPAChildShape(char const* field_0) {
+asm JPAChildShape::JPAChildShape(u8 const* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAChildShape/__ct__13JPAChildShapeFPCUc.s"
 }

@@ -22,6 +22,26 @@ struct JUtility {
 
 };
 
+// build J2DWindow (J2DWindow) True/False
+struct J2DWindow;
+// build ResFONT (ResFONT) False/False
+/* top-level dependencies (begin ResFONT) */
+/* top-level dependencies (end ResFONT) */
+struct ResFONT {
+};
+
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
 // build J2DMaterial (J2DMaterial) False/False
 /* top-level dependencies (begin J2DMaterial) */
 /* top-level dependencies (end J2DMaterial) */
@@ -29,28 +49,31 @@ struct J2DMaterial {
 };
 
 // build J2DPane (J2DPane) False/False
-// build _GXCullMode (_GXCullMode) False/False
-/* top-level dependencies (begin _GXCullMode) */
-/* top-level dependencies (end _GXCullMode) */
-struct _GXCullMode {
+// build J2DAnmTransform (J2DAnmTransform) False/False
+/* top-level dependencies (begin J2DAnmTransform) */
+/* top-level dependencies (end J2DAnmTransform) */
+struct J2DAnmTransform {
 };
 
+// build ResFONT (ResFONT) True/True
 // build J2DAnmVtxColor (J2DAnmVtxColor) False/False
 /* top-level dependencies (begin J2DAnmVtxColor) */
 /* top-level dependencies (end J2DAnmVtxColor) */
 struct J2DAnmVtxColor {
 };
 
-// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
-/* top-level dependencies (begin J2DAnmTevRegKey) */
-/* top-level dependencies (end J2DAnmTevRegKey) */
-struct J2DAnmTevRegKey {
+// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
+/* top-level dependencies (begin J2DAnmVisibilityFull) */
+/* top-level dependencies (end J2DAnmVisibilityFull) */
+struct J2DAnmVisibilityFull {
 };
 
-// build J2DAnmColor (J2DAnmColor) False/False
-/* top-level dependencies (begin J2DAnmColor) */
-/* top-level dependencies (end J2DAnmColor) */
-struct J2DAnmColor {
+// build JKRArchive (JKRArchive) True/True
+// build ResTIMG (ResTIMG) True/True
+// build J2DAnmBase (J2DAnmBase) False/False
+/* top-level dependencies (begin J2DAnmBase) */
+/* top-level dependencies (end J2DAnmBase) */
+struct J2DAnmBase {
 };
 
 // build JSURandomInputStream (JSURandomInputStream) False/False
@@ -69,46 +92,22 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
-// build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
-/* top-level dependencies (begin J2DAnmVisibilityFull) */
-/* top-level dependencies (end J2DAnmVisibilityFull) */
-struct J2DAnmVisibilityFull {
-};
-
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
-struct ResTIMG {
-};
-
-// build ResFONT (ResFONT) False/False
-/* top-level dependencies (begin ResFONT) */
-/* top-level dependencies (end ResFONT) */
-struct ResFONT {
-};
-
 // build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
 /* top-level dependencies (begin J2DAnmTextureSRTKey) */
 /* top-level dependencies (end J2DAnmTextureSRTKey) */
 struct J2DAnmTextureSRTKey {
 };
 
-// build J2DAnmBase (J2DAnmBase) False/False
-/* top-level dependencies (begin J2DAnmBase) */
-/* top-level dependencies (end J2DAnmBase) */
-struct J2DAnmBase {
+// build J2DAnmColor (J2DAnmColor) False/False
+/* top-level dependencies (begin J2DAnmColor) */
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
 };
 
-// build J2DAnmTransform (J2DAnmTransform) False/False
-/* top-level dependencies (begin J2DAnmTransform) */
-/* top-level dependencies (end J2DAnmTransform) */
-struct J2DAnmTransform {
+// build _GXCullMode (_GXCullMode) False/False
+/* top-level dependencies (begin _GXCullMode) */
+/* top-level dependencies (end _GXCullMode) */
+struct _GXCullMode {
 };
 
 // build J2DAnmTexPattern (J2DAnmTexPattern) False/False
@@ -117,36 +116,42 @@ struct J2DAnmTransform {
 struct J2DAnmTexPattern {
 };
 
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
+/* top-level dependencies (begin J2DAnmTevRegKey) */
+/* top-level dependencies (end J2DAnmTevRegKey) */
+struct J2DAnmTevRegKey {
+};
+
 /* top-level dependencies (begin J2DPane) */
-// outer dependency: _GXCullMode
-// outer dependency: J2DAnmVtxColor
-// outer dependency: J2DAnmTevRegKey
-// outer dependency: J2DAnmColor
-// outer dependency: JSURandomInputStream
-// outer dependency: JKRArchive
-// outer dependency: J2DAnmVisibilityFull
-// outer dependency: ResTIMG
-// outer dependency: ResFONT
-// outer dependency: J2DAnmTextureSRTKey
-// outer dependency: J2DAnmBase
 // outer dependency: J2DAnmTransform
+// outer dependency: ResFONT
+// outer dependency: J2DAnmVtxColor
+// outer dependency: J2DAnmVisibilityFull
+// outer dependency: JKRArchive
+// outer dependency: ResTIMG
+// outer dependency: J2DAnmBase
+// outer dependency: JSURandomInputStream
+// outer dependency: J2DAnmTextureSRTKey
+// outer dependency: J2DAnmColor
+// outer dependency: _GXCullMode
 // outer dependency: J2DAnmTexPattern
+// outer dependency: J2DAnmTevRegKey
 /* top-level dependencies (end J2DPane) */
 struct J2DPane {
-	// _GXCullMode
-	// J2DAnmVtxColor
-	// J2DAnmTevRegKey
-	// J2DAnmColor
-	// JSURandomInputStream
-	// JKRArchive
-	// J2DAnmVisibilityFull
-	// ResTIMG
-	// ResFONT
-	// J2DAnmTextureSRTKey
-	// J2DAnmBase
 	// J2DAnmTransform
+	// ResFONT
+	// J2DAnmVtxColor
+	// J2DAnmVisibilityFull
+	// JKRArchive
+	// ResTIMG
+	// J2DAnmBase
+	// JSURandomInputStream
+	// J2DAnmTextureSRTKey
+	// J2DAnmColor
+	// _GXCullMode
 	// J2DAnmTexPattern
-	/* 80020158 */ void setAlpha(char);
+	// J2DAnmTevRegKey
+	/* 80020158 */ void setAlpha(u8);
 	/* 80053BC0 */ void calcMtx();
 	/* 80053C00 */ void makeMatrix(f32, f32);
 	/* 80126350 */ void setAnimation(J2DAnmTevRegKey*);
@@ -184,51 +189,46 @@ struct J2DPane {
 };
 
 // build JSURandomInputStream (JSURandomInputStream) True/True
-// build JKRArchive (JKRArchive) True/True
-// build ResTIMG (ResTIMG) True/True
-// build J2DWindow (J2DWindow) True/False
-struct J2DWindow;
-// build ResFONT (ResFONT) True/True
 // build JUTTexture (JUTTexture) False/False
-// build ResTIMG (ResTIMG) True/True
 // build _GXTexMapID (_GXTexMapID) False/False
 /* top-level dependencies (begin _GXTexMapID) */
 /* top-level dependencies (end _GXTexMapID) */
 struct _GXTexMapID {
 };
 
+// build ResTIMG (ResTIMG) True/True
 /* top-level dependencies (begin JUTTexture) */
-// outer dependency: ResTIMG
 // outer dependency: _GXTexMapID
+// outer dependency: ResTIMG
 /* top-level dependencies (end JUTTexture) */
 struct JUTTexture {
-	// ResTIMG
 	// _GXTexMapID
+	// ResTIMG
 	/* 802DE234 */ ~JUTTexture();
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, char);
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
 /* top-level dependencies (begin J2DWindow) */
 // outer dependency: JUtility::TColor
+// outer dependency: J2DWindow::TMaterial
+// outer dependency: ResFONT
+// outer dependency: JKRArchive
+// outer dependency: ResTIMG
 // outer dependency: J2DMaterial
 // outer dependency: J2DPane
 // outer dependency: JSURandomInputStream
-// outer dependency: JKRArchive
-// outer dependency: ResTIMG
-// outer dependency: J2DWindow::TMaterial
-// outer dependency: ResFONT
 // outer dependency: JUTTexture
 /* top-level dependencies (end J2DWindow) */
 struct J2DWindow {
 	// JUtility::TColor
+	// J2DWindow::TMaterial
+	// ResFONT
+	// JKRArchive
+	// ResTIMG
 	// J2DMaterial
 	// J2DPane
 	// JSURandomInputStream
-	// JKRArchive
-	// ResTIMG
-	// J2DWindow::TMaterial
-	// ResFONT
 	// JUTTexture
 	// build TMaterial (J2DWindow::TMaterial) False/False
 	/* dependencies (begin J2DWindow::TMaterial) */
@@ -250,17 +250,18 @@ struct J2DWindow {
 	/* 802FB000 */ void resize(f32, f32);
 	/* 802FB12C */ void setContentsColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
 	/* 802FB1D8 */ void drawSelf(f32, f32);
+	/* 802FB240 */ void drawSelf(f32, f32, f32 (* )[3][4]);
 	/* 802FB634 */ void drawFrameTexture(JUTTexture*, f32, f32, f32, f32, u16, u16, u16, u16, bool);
 	/* 802FB7C8 */ void drawFrameTexture(JUTTexture*, f32, f32, bool, bool, bool);
 	/* 802FB868 */ void drawContentsTexture(f32, f32, f32, f32);
 	/* 802FBB90 */ void setTevMode(JUTTexture*, JUtility::TColor, JUtility::TColor);
-	/* 802FBE60 */ void getFrameTexture(char, char) const;
+	/* 802FBE60 */ void getFrameTexture(u8, u8) const;
 	/* 802FBEDC */ void isUsed(ResTIMG const*);
 	/* 802FBF98 */ s32 getTypeID() const;
 	/* 802FBFA0 */ void draw(f32, f32, f32, f32);
-	/* 802FBFE8 */ void getContentsTexture(char) const;
+	/* 802FBFE8 */ void getContentsTexture(u8) const;
 	/* 802FC000 */ void getMaterial(J2DWindow::TMaterial&) const;
-	/* 802FC01C */ bool getFrameMaterial(char) const;
+	/* 802FC01C */ bool getFrameMaterial(u8) const;
 	/* 802FC024 */ bool getContentsMaterial() const;
 	/* 802FC02C */ void isUsed(ResFONT const*);
 	/* 802FC04C */ void rewriteAlpha();
@@ -290,25 +291,25 @@ struct JSUInputStream {
 // build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
 // build _GXTexMapID (_GXTexMapID) True/True
 // build JUTPalette (JUTPalette) False/False
-// build _GXTlut (_GXTlut) False/False
-/* top-level dependencies (begin _GXTlut) */
-/* top-level dependencies (end _GXTlut) */
-struct _GXTlut {
-};
-
 // build ResTLUT (ResTLUT) False/False
 /* top-level dependencies (begin ResTLUT) */
 /* top-level dependencies (end ResTLUT) */
 struct ResTLUT {
 };
 
+// build _GXTlut (_GXTlut) False/False
+/* top-level dependencies (begin _GXTlut) */
+/* top-level dependencies (end _GXTlut) */
+struct _GXTlut {
+};
+
 /* top-level dependencies (begin JUTPalette) */
-// outer dependency: _GXTlut
 // outer dependency: ResTLUT
+// outer dependency: _GXTlut
 /* top-level dependencies (end JUTPalette) */
 struct JUTPalette {
-	// _GXTlut
 	// ResTLUT
+	// _GXTlut
 	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
 };
 
@@ -324,7 +325,6 @@ struct JUTPalette {
 extern "C" static void func_802FA928();
 extern "C" static void func_802FAA5C();
 extern "C" static void func_802FAED0();
-extern "C" static void drawSelf__9J2DWindowFffPA3_A4_f();
 extern "C" static void func_802FB338();
 
 extern "C" void __ct__9J2DWindowFv();
@@ -339,7 +339,7 @@ extern "C" static void func_802FAED0();
 extern "C" void resize__9J2DWindowFff();
 extern "C" void setContentsColor__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
 extern "C" void drawSelf__9J2DWindowFff();
-extern "C" static void drawSelf__9J2DWindowFffPA3_A4_f();
+extern "C" void drawSelf__9J2DWindowFffPA3_A4_f();
 extern "C" static void func_802FB338();
 extern "C" void drawFrameTexture__9J2DWindowFP10JUTTextureffffUsUsUsUsb();
 extern "C" void drawFrameTexture__9J2DWindowFP10JUTTextureffbbb();
@@ -708,7 +708,7 @@ asm void J2DWindow::drawSelf(f32 field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void drawSelf__9J2DWindowFffPA3_A4_f() {
+asm void J2DWindow::drawSelf(f32 field_0, f32 field_1, f32 (* field_2)[3][4]) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/drawSelf__9J2DWindowFffPA3_A4_f.s"
 }
@@ -788,7 +788,7 @@ SECTION_RODATA const u8 lit_3028[16] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DWindow::getFrameTexture(char field_0, char field_1) const {
+asm void J2DWindow::getFrameTexture(u8 field_0, u8 field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/getFrameTexture__9J2DWindowCFUcUc.s"
 }
@@ -836,7 +836,7 @@ asm void J2DWindow::draw(f32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DWindow::getContentsTexture(char field_0) const {
+asm void J2DWindow::getContentsTexture(u8 field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DWindow/getContentsTexture__9J2DWindowCFUc.s"
 }
@@ -855,7 +855,7 @@ asm void J2DWindow::getMaterial(J2DWindow::TMaterial& field_0) const {
 
 
 /* 802FC01C-802FC024 0008+00 rc=1 efc=0 .text      getFrameMaterial__9J2DWindowCFUc                             */
-bool J2DWindow::getFrameMaterial(char field_0) const {
+bool J2DWindow::getFrameMaterial(u8 field_0) const {
 	return false;
 }
 

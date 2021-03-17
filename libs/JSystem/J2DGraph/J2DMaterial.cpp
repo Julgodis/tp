@@ -10,28 +10,23 @@
 // 
 
 // build J2DMaterial (J2DMaterial) False/False
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
-/* top-level dependencies (begin J3DTextureSRTInfo) */
-/* top-level dependencies (end J3DTextureSRTInfo) */
-struct J3DTextureSRTInfo {
-};
-
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-// outer dependency: J3DTextureSRTInfo
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
-struct J2DAnmTextureSRTKey {
-	// J3DTextureSRTInfo
-	/* 8030B9F0 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
-};
-
-// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
+// build J2DAnmColor (J2DAnmColor) False/False
 // build _GXColor (_GXColor) False/False
 /* top-level dependencies (begin _GXColor) */
 /* top-level dependencies (end _GXColor) */
 struct _GXColor {
 };
 
+/* top-level dependencies (begin J2DAnmColor) */
+// outer dependency: _GXColor
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
+	// _GXColor
+	/* 802EB390 */ void getColor(u16, _GXColor*) const;
+};
+
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
+// build _GXColor (_GXColor) True/True
 // build _GXColorS10 (_GXColorS10) False/False
 /* top-level dependencies (begin _GXColorS10) */
 /* top-level dependencies (end _GXColorS10) */
@@ -49,16 +44,6 @@ struct J2DAnmTevRegKey {
 	/* 8030C3B4 */ void getTevKonstReg(u16, _GXColor*) const;
 };
 
-// build J2DAnmColor (J2DAnmColor) False/False
-// build _GXColor (_GXColor) True/True
-/* top-level dependencies (begin J2DAnmColor) */
-// outer dependency: _GXColor
-/* top-level dependencies (end J2DAnmColor) */
-struct J2DAnmColor {
-	// _GXColor
-	/* 802EB390 */ void getColor(u16, _GXColor*) const;
-};
-
 // build J2DAnmTexPattern (J2DAnmTexPattern) False/False
 /* top-level dependencies (begin J2DAnmTexPattern) */
 /* top-level dependencies (end J2DAnmTexPattern) */
@@ -68,17 +53,32 @@ struct J2DAnmTexPattern {
 	/* 8030BFF0 */ void getPalette(u16) const;
 };
 
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
+/* top-level dependencies (begin J3DTextureSRTInfo) */
+/* top-level dependencies (end J3DTextureSRTInfo) */
+struct J3DTextureSRTInfo {
+};
+
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+// outer dependency: J3DTextureSRTInfo
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
+	// J3DTextureSRTInfo
+	/* 8030B9F0 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
+};
+
 /* top-level dependencies (begin J2DMaterial) */
-// outer dependency: J2DAnmTextureSRTKey
-// outer dependency: J2DAnmTevRegKey
 // outer dependency: J2DAnmColor
+// outer dependency: J2DAnmTevRegKey
 // outer dependency: J2DAnmTexPattern
+// outer dependency: J2DAnmTextureSRTKey
 /* top-level dependencies (end J2DMaterial) */
 struct J2DMaterial {
-	// J2DAnmTextureSRTKey
-	// J2DAnmTevRegKey
 	// J2DAnmColor
+	// J2DAnmTevRegKey
 	// J2DAnmTexPattern
+	// J2DAnmTextureSRTKey
 	// build J2DMaterialAnmPointer (J2DMaterial::J2DMaterialAnmPointer) False/False
 	/* dependencies (begin J2DMaterial::J2DMaterialAnmPointer) */
 	/* dependencies (end J2DMaterial::J2DMaterialAnmPointer) */
@@ -89,8 +89,8 @@ struct J2DMaterial {
 	/* 802EA1AC */ J2DMaterial();
 	/* 802EA2CC */ ~J2DMaterial();
 	/* 802EA38C */ void setGX();
-	/* 802EA410 */ void createTevBlock(s32, bool);
-	/* 802EA5C4 */ void createIndBlock(s32, bool);
+	/* 802EA410 */ void createTevBlock(int, bool);
+	/* 802EA5C4 */ void createIndBlock(int, bool);
 	/* 802EA84C */ void makeAnmPointer();
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
@@ -113,6 +113,14 @@ struct J2DColorBlock {
 };
 
 // build J2DIndBlock (J2DIndBlock) False/False
+// build J2DIndTexCoordScale (J2DIndTexCoordScale) False/False
+/* top-level dependencies (begin J2DIndTexCoordScale) */
+/* top-level dependencies (end J2DIndTexCoordScale) */
+struct J2DIndTexCoordScale {
+	/* 802EB290 */ ~J2DIndTexCoordScale();
+	/* 802EB2CC */ J2DIndTexCoordScale();
+};
+
 // build J2DIndTexOrder (J2DIndTexOrder) False/False
 /* top-level dependencies (begin J2DIndTexOrder) */
 /* top-level dependencies (end J2DIndTexOrder) */
@@ -128,23 +136,15 @@ struct J2DIndTexMtx {
 	/* 802EB320 */ J2DIndTexMtx();
 };
 
-// build J2DIndTexCoordScale (J2DIndTexCoordScale) False/False
-/* top-level dependencies (begin J2DIndTexCoordScale) */
-/* top-level dependencies (end J2DIndTexCoordScale) */
-struct J2DIndTexCoordScale {
-	/* 802EB290 */ ~J2DIndTexCoordScale();
-	/* 802EB2CC */ J2DIndTexCoordScale();
-};
-
 /* top-level dependencies (begin J2DIndBlock) */
+// outer dependency: J2DIndTexCoordScale
 // outer dependency: J2DIndTexOrder
 // outer dependency: J2DIndTexMtx
-// outer dependency: J2DIndTexCoordScale
 /* top-level dependencies (end J2DIndBlock) */
 struct J2DIndBlock {
+	// J2DIndTexCoordScale
 	// J2DIndTexOrder
 	// J2DIndTexMtx
-	// J2DIndTexCoordScale
 	/* 802EA18C */ bool getIndTexCoordScale(u32);
 	/* 802EA194 */ bool getIndTexMtx(u32);
 	/* 802EA19C */ bool getIndTexOrder(u32);
@@ -152,19 +152,13 @@ struct J2DIndBlock {
 	/* 802EB13C */ ~J2DIndBlock();
 	/* 802EB1CC */ void setGX();
 	/* 802EB24C */ void initialize();
-	/* 802EB250 */ void setIndTexStageNum(char);
+	/* 802EB250 */ void setIndTexStageNum(u8);
 	/* 802EB254 */ void setIndTexOrder(u32, J2DIndTexOrder);
 	/* 802EB258 */ void setIndTexMtx(u32, J2DIndTexMtx);
 	/* 802EB25C */ void setIndTexCoordScale(u32, J2DIndTexCoordScale);
 };
 
 // build J2DTevBlock (J2DTevBlock) False/False
-// build J2DGXColorS10 (J2DGXColorS10) False/False
-/* top-level dependencies (begin J2DGXColorS10) */
-/* top-level dependencies (end J2DGXColorS10) */
-struct J2DGXColorS10 {
-};
-
 // build JUtility (JUtility) False/False
 /* top-level dependencies (begin JUtility) */
 /* top-level dependencies (end JUtility) */
@@ -178,13 +172,19 @@ struct JUtility {
 
 };
 
+// build J2DGXColorS10 (J2DGXColorS10) False/False
+/* top-level dependencies (begin J2DGXColorS10) */
+/* top-level dependencies (end J2DGXColorS10) */
+struct J2DGXColorS10 {
+};
+
 /* top-level dependencies (begin J2DTevBlock) */
-// outer dependency: J2DGXColorS10
 // outer dependency: JUtility::TColor
+// outer dependency: J2DGXColorS10
 /* top-level dependencies (end J2DTevBlock) */
 struct J2DTevBlock {
-	// J2DGXColorS10
 	// JUtility::TColor
+	// J2DGXColorS10
 	/* 802EB184 */ ~J2DTevBlock();
 	/* 802EB1D0 */ void setGX();
 	/* 802EB1D4 */ void setTevKColor(u32, JUtility::TColor);
@@ -222,10 +222,10 @@ struct J2DColorChan {
 
 // build _GXColor (_GXColor) True/True
 // build JUTTexture (JUTTexture) False/False
-// build _GXTlut (_GXTlut) False/False
-/* top-level dependencies (begin _GXTlut) */
-/* top-level dependencies (end _GXTlut) */
-struct _GXTlut {
+// build JUTPalette (JUTPalette) False/False
+/* top-level dependencies (begin JUTPalette) */
+/* top-level dependencies (end JUTPalette) */
+struct JUTPalette {
 };
 
 // build ResTIMG (ResTIMG) False/False
@@ -234,21 +234,21 @@ struct _GXTlut {
 struct ResTIMG {
 };
 
-// build JUTPalette (JUTPalette) False/False
-/* top-level dependencies (begin JUTPalette) */
-/* top-level dependencies (end JUTPalette) */
-struct JUTPalette {
+// build _GXTlut (_GXTlut) False/False
+/* top-level dependencies (begin _GXTlut) */
+/* top-level dependencies (end _GXTlut) */
+struct _GXTlut {
 };
 
 /* top-level dependencies (begin JUTTexture) */
-// outer dependency: _GXTlut
-// outer dependency: ResTIMG
 // outer dependency: JUTPalette
+// outer dependency: ResTIMG
+// outer dependency: _GXTlut
 /* top-level dependencies (end JUTTexture) */
 struct JUTTexture {
-	// _GXTlut
-	// ResTIMG
 	// JUTPalette
+	// ResTIMG
+	// _GXTlut
 	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
 };
 
@@ -374,7 +374,7 @@ SECTION_SDATA2 extern f64 lit_1946;
 // 
 
 void* operator new(u32);
-void* operator new(u32, s32);
+void* operator new(u32, int);
 void operator delete(void*);
 extern "C" void __construct_array();
 extern "C" void _savegpr_26();
@@ -516,7 +516,7 @@ asm void J2DMaterial::setGX() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterial::createTevBlock(s32 field_0, bool field_1) {
+asm void J2DMaterial::createTevBlock(int field_0, bool field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterial/createTevBlock__11J2DMaterialFib.s"
 }
@@ -527,7 +527,7 @@ asm void J2DMaterial::createTevBlock(s32 field_0, bool field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterial::createIndBlock(s32 field_0, bool field_1) {
+asm void J2DMaterial::createIndBlock(int field_0, bool field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterial/createIndBlock__11J2DMaterialFib.s"
 }
@@ -719,7 +719,7 @@ void J2DIndBlock::initialize() {
 
 
 /* 802EB250-802EB254 0004+00 rc=2 efc=0 .text      setIndTexStageNum__11J2DIndBlockFUc                          */
-void J2DIndBlock::setIndTexStageNum(char field_0) {
+void J2DIndBlock::setIndTexStageNum(u8 field_0) {
 	/* empty function */
 }
 

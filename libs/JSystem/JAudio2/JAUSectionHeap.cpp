@@ -10,23 +10,23 @@
 // 
 
 // build JAUSection (JAUSection) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build JAUSectionHeap (JAUSectionHeap) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
 // build JAISeqDataUser (JAISeqDataUser) False/False
 /* top-level dependencies (begin JAISeqDataUser) */
 /* top-level dependencies (end JAISeqDataUser) */
 struct JAISeqDataUser {
+};
+
+// build JAISeqData (JAISeqData) False/False
+/* top-level dependencies (begin JAISeqData) */
+/* top-level dependencies (end JAISeqData) */
+struct JAISeqData {
+};
+
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
 };
 
 // build JKRSolidHeap (JKRSolidHeap) False/False
@@ -47,25 +47,24 @@ struct JKRSolidHeap {
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 };
 
-// build JAISoundID (JAISoundID) True/True
-// build JAISeqData (JAISeqData) False/False
-/* top-level dependencies (begin JAISeqData) */
-/* top-level dependencies (end JAISeqData) */
-struct JAISeqData {
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
 };
 
 /* top-level dependencies (begin JAUSectionHeap) */
-// outer dependency: JKRArchive
 // outer dependency: JAISeqDataUser
+// outer dependency: JAISeqData
+// outer dependency: JKRArchive
 // outer dependency: JKRSolidHeap
 // outer dependency: JAISoundID
-// outer dependency: JAISeqData
 /* top-level dependencies (end JAUSectionHeap) */
 struct JAUSectionHeap {
-	// JAISeqDataUser
-	// JAISoundID
 	// JKRArchive
 	// JKRSolidHeap
+	// JAISoundID
+	// JAISeqDataUser
 	// JAISeqData
 	// build TSectionHeapData (JAUSectionHeap::TSectionHeapData) False/False
 	/* dependencies (begin JAUSectionHeap::TSectionHeapData) */
@@ -86,13 +85,14 @@ struct JAUSectionHeap {
 	/* 802A6278 */ ~JAUSectionHeap();
 };
 
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin JAUSection) */
-// outer dependency: JAISoundID
 // outer dependency: JAUSectionHeap
+// outer dependency: JAISoundID
 /* top-level dependencies (end JAUSection) */
 struct JAUSection {
-	// JAISoundID
 	// JAUSectionHeap
+	// JAISoundID
 	// build TSectionData (JAUSection::TSectionData) False/False
 	/* dependencies (begin JAUSection::TSectionData) */
 	/* dependencies (end JAUSection::TSectionData) */
@@ -218,23 +218,23 @@ struct JAUSeqDataBlock {
 };
 
 // build JAUDynamicSeqDataBlocks (JAUDynamicSeqDataBlocks) False/False
-// build JKRArchive (JKRArchive) True/True
 // build JAISeqDataUser (JAISeqDataUser) True/True
+// build JAISeqData (JAISeqData) True/True
+// build JKRArchive (JKRArchive) True/True
 // build JAUSeqDataBlock (JAUSeqDataBlock) True/True
 // build JAISoundID (JAISoundID) True/True
-// build JAISeqData (JAISeqData) True/True
 /* top-level dependencies (begin JAUDynamicSeqDataBlocks) */
-// outer dependency: JKRArchive
 // outer dependency: JAISeqDataUser
+// outer dependency: JAISeqData
+// outer dependency: JKRArchive
 // outer dependency: JAUSeqDataBlock
 // outer dependency: JAISoundID
-// outer dependency: JAISeqData
 /* top-level dependencies (end JAUDynamicSeqDataBlocks) */
 struct JAUDynamicSeqDataBlocks {
+	// JKRArchive
+	// JAISoundID
 	// JAISeqDataUser
 	// JAISeqData
-	// JAISoundID
-	// JKRArchive
 	// JAUSeqDataBlock
 	/* 802A6A58 */ JAUDynamicSeqDataBlocks();
 	/* 802A6AA0 */ void setSeqDataArchive(JKRArchive*);
@@ -265,7 +265,7 @@ struct JAUStreamFileTable {
 	/* 802A7420 */ JAUStreamFileTable();
 	/* 802A742C */ void init(void const*);
 	/* 802A7478 */ void getNumFiles() const;
-	/* 802A7484 */ void getFilePath(s32) const;
+	/* 802A7484 */ void getFilePath(int) const;
 };
 
 // build JKRDisposer (JKRDisposer) False/False
@@ -374,8 +374,8 @@ SECTION_INIT void memcpy();
 extern "C" void func_802A4A80();
 void* operator new(u32);
 void* operator new[](u32);
-void* operator new[](u32, s32);
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, int);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void OSDisableInterrupts();
 extern "C" void OSRestoreInterrupts();

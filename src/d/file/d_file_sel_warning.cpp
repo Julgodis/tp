@@ -10,12 +10,6 @@
 // 
 
 // build dFile_warning_c (dFile_warning_c) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
 // build JUtility (JUtility) False/False
 /* top-level dependencies (begin JUtility) */
 /* top-level dependencies (end JUtility) */
@@ -28,14 +22,20 @@ struct JUtility {
 
 };
 
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
 /* top-level dependencies (begin dFile_warning_c) */
-// outer dependency: JKRArchive
 // outer dependency: JUtility::TColor
+// outer dependency: JKRArchive
 /* top-level dependencies (end dFile_warning_c) */
 struct dFile_warning_c {
-	// JKRArchive
 	// JUtility::TColor
-	/* 80191BAC */ dFile_warning_c(JKRArchive*, char);
+	// JKRArchive
+	/* 80191BAC */ dFile_warning_c(JKRArchive*, u8);
 	/* 80191C18 */ ~dFile_warning_c();
 	/* 80191CF4 */ void screenSet();
 	/* 80191F18 */ void _move();
@@ -61,6 +61,7 @@ struct dFile_warning_c {
 struct J2DTextBox {
 	// JUtility::TColor
 	/* 8019230C */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // build dDlst_FileWarn_c (dDlst_FileWarn_c) False/False
@@ -72,13 +73,13 @@ struct dDlst_FileWarn_c {
 };
 
 // build J2DScreen (J2DScreen) False/False
-// build JKRArchive (JKRArchive) True/True
 // build J2DAnmTransform (J2DAnmTransform) False/False
 /* top-level dependencies (begin J2DAnmTransform) */
 /* top-level dependencies (end J2DAnmTransform) */
 struct J2DAnmTransform {
 };
 
+// build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) False/False
 /* top-level dependencies (begin J2DGrafContext) */
 /* top-level dependencies (end J2DGrafContext) */
@@ -86,13 +87,13 @@ struct J2DGrafContext {
 };
 
 /* top-level dependencies (begin J2DScreen) */
-// outer dependency: JKRArchive
 // outer dependency: J2DAnmTransform
+// outer dependency: JKRArchive
 // outer dependency: J2DGrafContext
 /* top-level dependencies (end J2DScreen) */
 struct J2DScreen {
-	// JKRArchive
 	// J2DAnmTransform
+	// JKRArchive
 	// J2DGrafContext
 	/* 80192414 */ void setAnimation(J2DAnmTransform*);
 	/* 802F8498 */ J2DScreen();
@@ -127,21 +128,21 @@ struct dMsgString_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
-// build J2DScreen (J2DScreen) True/True
 // build JKRExpHeap (JKRExpHeap) False/False
 /* top-level dependencies (begin JKRExpHeap) */
 /* top-level dependencies (end JKRExpHeap) */
 struct JKRExpHeap {
 };
 
+// build J2DScreen (J2DScreen) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 };
 
 // build JKRExpHeap (JKRExpHeap) True/True
@@ -218,7 +219,6 @@ void mDoExt_getMesgFont();
 void mDoExt_removeMesgFont();
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void __ptmf_scall();
 
 extern "C" void mDoExt_getMesgFont__Fv();
@@ -309,7 +309,7 @@ u8 d_file_d_file_sel_warning__lit_3741[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dFile_warning_c::dFile_warning_c(JKRArchive* field_0, char field_1) {
+asm dFile_warning_c::dFile_warning_c(JKRArchive* field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_sel_warning/__ct__15dFile_warning_cFP10JKRArchiveUc.s"
 }

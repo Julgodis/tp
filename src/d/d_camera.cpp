@@ -21,12 +21,20 @@ struct fopAc_ac_c {
 /* top-level dependencies (end dCamMapToolData) */
 struct dCamMapToolData {
 	// fopAc_ac_c
-	/* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, char);
+	/* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
 };
 
 // build fopAc_ac_c (fopAc_ac_c) True/True
 // build dCamera_c (dCamera_c) False/False
-// build dBgS_LinChk (dBgS_LinChk) False/False
+// build camera_class (camera_class) False/False
+/* top-level dependencies (begin camera_class) */
+/* top-level dependencies (end camera_class) */
+struct camera_class {
+};
+
+// build dCamMapToolData (dCamMapToolData) True/True
+// build dCamera_c (dCamera_c) True/False
+struct dCamera_c;
 // build cXyz (cXyz) False/False
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
@@ -57,31 +65,6 @@ struct cXyz {
 	/* 8026706C */ bool operator!=(Vec const&) const;
 };
 
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin dBgS_LinChk) */
-// outer dependency: cXyz
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dBgS_LinChk) */
-struct dBgS_LinChk {
-	// cXyz
-	// fopAc_ac_c
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-// build stage_camera2_data_class (stage_camera2_data_class) False/False
-/* top-level dependencies (begin stage_camera2_data_class) */
-/* top-level dependencies (end stage_camera2_data_class) */
-struct stage_camera2_data_class {
-};
-
-// build camera_class (camera_class) False/False
-/* top-level dependencies (begin camera_class) */
-/* top-level dependencies (end camera_class) */
-struct camera_class {
-};
-
-// build dCamMapToolData (dCamMapToolData) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
 // build cSAngle (cSAngle) False/False
 /* top-level dependencies (begin cSAngle) */
 /* top-level dependencies (end cSAngle) */
@@ -117,28 +100,45 @@ struct cSAngle {
 	/* 802712B4 */ void operator*=(f32);
 };
 
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build dBgS_LinChk (dBgS_LinChk) False/False
 // build cXyz (cXyz) True/True
-// build dCamera_c (dCamera_c) True/False
-struct dCamera_c;
+// build fopAc_ac_c (fopAc_ac_c) True/True
+/* top-level dependencies (begin dBgS_LinChk) */
+// outer dependency: cXyz
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dBgS_LinChk) */
+struct dBgS_LinChk {
+	// cXyz
+	// fopAc_ac_c
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+// build stage_camera2_data_class (stage_camera2_data_class) False/False
+/* top-level dependencies (begin stage_camera2_data_class) */
+/* top-level dependencies (end stage_camera2_data_class) */
+struct stage_camera2_data_class {
+};
+
 /* top-level dependencies (begin dCamera_c) */
-// outer dependency: dBgS_LinChk
-// outer dependency: stage_camera2_data_class
 // outer dependency: camera_class
 // outer dependency: dCamMapToolData
-// outer dependency: fopAc_ac_c
-// outer dependency: cSAngle
-// outer dependency: cXyz
 // outer dependency: dCamera_c::dCamInfo_c
+// outer dependency: cXyz
+// outer dependency: cSAngle
+// outer dependency: fopAc_ac_c
+// outer dependency: dBgS_LinChk
+// outer dependency: stage_camera2_data_class
 /* top-level dependencies (end dCamera_c) */
 struct dCamera_c {
-	// dBgS_LinChk
-	// stage_camera2_data_class
 	// camera_class
 	// dCamMapToolData
-	// fopAc_ac_c
-	// cSAngle
-	// cXyz
 	// dCamera_c::dCamInfo_c
+	// cXyz
+	// cSAngle
+	// fopAc_ac_c
+	// dBgS_LinChk
+	// stage_camera2_data_class
 	// build dCamInfo_c (dCamera_c::dCamInfo_c) False/False
 	/* dependencies (begin dCamera_c::dCamInfo_c) */
 	/* dependencies (end dCamera_c::dCamInfo_c) */
@@ -147,9 +147,9 @@ struct dCamera_c {
 		/* 80182920 */ ~dCamInfo_c();
 	};
 
-	/* 80088CB0 */ void getEvIntData(s32*, char*);
+	/* 80088CB0 */ void getEvIntData(int*, char*);
 	/* 80088D90 */ void getEvFloatData(f32*, char*);
-	/* 8008908C */ void getEvIntData(s32*, char*, s32);
+	/* 8008908C */ void getEvIntData(int*, char*, int);
 	/* 80089154 */ void getEvFloatData(f32*, char*, f32);
 	/* 8008933C */ void getEvStringData(char*, char*, char*);
 	/* 800894C4 */ void getEvActor(char*);
@@ -214,7 +214,7 @@ struct dCamera_c {
 	/* 80163154 */ void Draw();
 	/* 8016317C */ void setStageMapToolData();
 	/* 80163340 */ void setMapToolData();
-	/* 80163558 */ void SetTagData(fopAc_ac_c*, s32, u16, char);
+	/* 80163558 */ void SetTagData(fopAc_ac_c*, s32, u16, u8);
 	/* 801635AC */ void setRoomMapToolData(dCamMapToolData*, s32, s32);
 	/* 801635E4 */ void nextMode(s32);
 	/* 80163C38 */ void onModeChange(s32, s32);
@@ -289,9 +289,9 @@ struct dCamera_c {
 	/* 80180C18 */ void Reset(cXyz, cXyz);
 	/* 80180C68 */ void Reset();
 	/* 80180D24 */ void shakeCamera();
-	/* 80181000 */ void StartShake(s32, char*, s32, cXyz);
+	/* 80181000 */ void StartShake(s32, u8*, s32, cXyz);
 	/* 80181158 */ void StopShake();
-	/* 80181170 */ void StartBlure(s32, fopAc_ac_c*, f32, f32);
+	/* 80181170 */ void StartBlure(int, fopAc_ac_c*, f32, f32);
 	/* 801811B8 */ void ResetBlure();
 	/* 80181208 */ void SetBlureAlpha(f32);
 	/* 80181210 */ void SetBlureScale(f32, f32, f32);
@@ -301,7 +301,7 @@ struct dCamera_c {
 	/* 80181490 */ void onHorseDush();
 	/* 80181500 */ void GetForceLockOnActor();
 	/* 80181534 */ void ForceLockOn(fopAc_ac_c*);
-	/* 80181560 */ void ForceLockOff(s32);
+	/* 80181560 */ void ForceLockOff(u32);
 	/* 8018159C */ void ForceLockOff(fopAc_ac_c*);
 	/* 80181E20 */ void Up();
 	/* 80181E64 */ void Eye();
@@ -410,7 +410,7 @@ struct dAttention_c {
 	/* 800737E4 */ void LockonTruth();
 	/* 8016E424 */ void LockEdge();
 	/* 80182994 */ void GetCheckObjectCount();
-	/* 80182AD0 */ void keepLock(s32);
+	/* 80182AD0 */ void keepLock(int);
 };
 
 // build camera_process_class (camera_process_class) False/False
@@ -523,12 +523,12 @@ struct dCamParam_c {
 	/* 80182C50 */ void Arg0();
 	/* 80182C58 */ void Fovy();
 	/* 80182C60 */ void Arg2(s16);
-	/* 80182C6C */ void Arg1(char);
-	/* 80182C74 */ void Arg0(char);
-	/* 80182C7C */ void Fovy(char);
+	/* 80182C6C */ void Arg1(u8);
+	/* 80182C74 */ void Arg0(u8);
+	/* 80182C7C */ void Fovy(u8);
 	/* 80182C8C */ void Flag(s32, u16);
 	/* 80182CB4 */ void CheckFlag(u16);
-	/* 80182CD0 */ void Val(s32, s32);
+	/* 80182CD0 */ void Val(s32, int);
 };
 
 // build daHorse_c (daHorse_c) False/False
@@ -573,8 +573,10 @@ struct daTagMwait_c {
 /* top-level dependencies (end mDoGph_gInf_c) */
 struct mDoGph_gInf_c {
 	/* 80008078 */ void onBlure();
+	/* 800080A0 */ void onBlure(f32 const (* )[4]);
 };
 
+// build Vec (Vec) True/True
 // build mDoMtx_stack_c (mDoMtx_stack_c) False/False
 // build cXyz (cXyz) True/True
 /* top-level dependencies (begin mDoMtx_stack_c) */
@@ -593,12 +595,11 @@ struct mDoLib_clipper {
 	/* 8001528C */ void setup(f32, f32, f32, f32);
 };
 
-// build Vec (Vec) True/True
 // build dStage_roomControl_c (dStage_roomControl_c) False/False
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // build cM3dGCyl (cM3dGCyl) False/False
@@ -623,7 +624,7 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build cM3dGLin (cM3dGLin) False/False
@@ -660,7 +661,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -668,7 +669,7 @@ struct dRes_control_c {
 /* top-level dependencies (begin dEvt_control_c) */
 /* top-level dependencies (end dEvt_control_c) */
 struct dEvt_control_c {
-	/* 800434D8 */ void searchMapEventData(char);
+	/* 800434D8 */ void searchMapEventData(u8);
 };
 
 // build dEvent_manager_c (dEvent_manager_c) False/False
@@ -678,10 +679,10 @@ struct dEvt_control_c {
 /* top-level dependencies (end dEvent_manager_c) */
 struct dEvent_manager_c {
 	// fopAc_ac_c
-	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, s32);
-	/* 80047D4C */ void getIsAddvance(s32);
-	/* 80047E10 */ void getMyActIdx(s32, char const**, s32, s32, s32);
-	/* 8004817C */ void cutEnd(s32);
+	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
+	/* 80047D4C */ void getIsAddvance(int);
+	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 8004817C */ void cutEnd(int);
 };
 
 // build dDlst_window_c (dDlst_window_c) False/False
@@ -696,24 +697,24 @@ struct dDlst_window_c {
 /* top-level dependencies (begin cM_rnd_c) */
 /* top-level dependencies (end cM_rnd_c) */
 struct cM_rnd_c {
-	/* 80053CDC */ void init(s32, s32, s32);
+	/* 80053CDC */ void init(int, int, int);
 };
 
 // build dDlst_effectLine_c (dDlst_effectLine_c) False/False
+// build cXyz (cXyz) True/True
 // build _GXColor (_GXColor) False/False
 /* top-level dependencies (begin _GXColor) */
 /* top-level dependencies (end _GXColor) */
 struct _GXColor {
 };
 
-// build cXyz (cXyz) True/True
 /* top-level dependencies (begin dDlst_effectLine_c) */
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
 /* top-level dependencies (end dDlst_effectLine_c) */
 struct dDlst_effectLine_c {
-	// _GXColor
 	// cXyz
+	// _GXColor
 	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
 };
 
@@ -725,12 +726,18 @@ struct dDlst_effectLine_c {
 /* top-level dependencies (end dVibration_c) */
 struct dVibration_c {
 	// cXyz
-	/* 8006FA24 */ void StartShock(s32, s32, cXyz);
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
 // build cBgS (cBgS) False/False
 // build cBgS_LinChk (cBgS_LinChk) True/True
 // build cM3dGPla (cM3dGPla) True/True
+// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
+/* top-level dependencies (begin cBgS_PolyInfo) */
+/* top-level dependencies (end cBgS_PolyInfo) */
+struct cBgS_PolyInfo {
+};
+
 // build cBgS_GndChk (cBgS_GndChk) False/False
 // build cXyz (cXyz) True/True
 /* top-level dependencies (begin cBgS_GndChk) */
@@ -741,40 +748,27 @@ struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
-struct cBgS_PolyInfo {
-};
-
 /* top-level dependencies (begin cBgS) */
 // outer dependency: cBgS_LinChk
 // outer dependency: cM3dGPla
-// outer dependency: cBgS_GndChk
 // outer dependency: cBgS_PolyInfo
+// outer dependency: cBgS_GndChk
 /* top-level dependencies (end cBgS) */
 struct cBgS {
 	// cBgS_LinChk
 	// cM3dGPla
-	// cBgS_GndChk
 	// cBgS_PolyInfo
+	// cBgS_GndChk
 	/* 800743B4 */ void LineCross(cBgS_LinChk*);
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
-	/* 80074618 */ void GetActorPointer(s32) const;
+	/* 80074618 */ void GetActorPointer(int) const;
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
 // build cBgS_GndChk (cBgS_GndChk) True/True
 // build cBgS_PolyInfo (cBgS_PolyInfo) True/True
 // build dBgS (dBgS) False/False
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
-};
-
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-// build dBgS_SphChk (dBgS_SphChk) True/True
+// build cXyz (cXyz) True/True
 // build dBgS_RoofChk (dBgS_RoofChk) False/False
 /* top-level dependencies (begin dBgS_RoofChk) */
 /* top-level dependencies (end dBgS_RoofChk) */
@@ -783,20 +777,27 @@ struct dBgS_RoofChk {
 	/* 80079090 */ ~dBgS_RoofChk();
 };
 
-// build cXyz (cXyz) True/True
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+// build dBgS_SphChk (dBgS_SphChk) True/True
 /* top-level dependencies (begin dBgS) */
+// outer dependency: cXyz
+// outer dependency: dBgS_RoofChk
 // outer dependency: csXyz
 // outer dependency: cBgS_PolyInfo
 // outer dependency: dBgS_SphChk
-// outer dependency: dBgS_RoofChk
-// outer dependency: cXyz
 /* top-level dependencies (end dBgS) */
 struct dBgS {
 	// csXyz
 	// cBgS_PolyInfo
 	// dBgS_SphChk
-	// dBgS_RoofChk
 	// cXyz
+	// dBgS_RoofChk
 	/* 80074ABC */ void ChkMoveBG(cBgS_PolyInfo const&);
 	/* 80074EF0 */ void GetGroundCode(cBgS_PolyInfo const&);
 	/* 80074F40 */ void GetCamMoveBG(cBgS_PolyInfo const&);
@@ -881,31 +882,31 @@ struct dCcMassS_Mng {
 // build cM3dGCps (cM3dGCps) True/True
 // build dCcS (dCcS) False/False
 // build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
 // build cCcD_ShapeAttr (cCcD_ShapeAttr) True/True
+// build fopAc_ac_c (fopAc_ac_c) True/True
 /* top-level dependencies (begin dCcS) */
 // outer dependency: cXyz
-// outer dependency: fopAc_ac_c
 // outer dependency: cCcD_ShapeAttr::Shape
+// outer dependency: fopAc_ac_c
 /* top-level dependencies (end dCcS) */
 struct dCcS {
 	// cXyz
-	// fopAc_ac_c
 	// cCcD_ShapeAttr::Shape
+	// fopAc_ac_c
 	/* 80086D8C */ void ChkCamera(cXyz&, cXyz&, f32, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*);
 	/* 80086FBC */ void chkCameraPoint(cXyz const&, cCcD_ShapeAttr::Shape*, fopAc_ac_c*, fopAc_ac_c*);
 };
 
 // build dCamMath (dCamMath) False/False
-// build cSAngle (cSAngle) True/True
 // build cXyz (cXyz) True/True
+// build cSAngle (cSAngle) True/True
 /* top-level dependencies (begin dCamMath) */
-// outer dependency: cSAngle
 // outer dependency: cXyz
+// outer dependency: cSAngle
 /* top-level dependencies (end dCamMath) */
 struct dCamMath {
-	// cSAngle
 	// cXyz
+	// cSAngle
 	/* 8008813C */ void rationalBezierRatio(f32, f32);
 	/* 80088284 */ void zoomFovy(f32, f32);
 	/* 8008831C */ void xyzRotateX(cXyz&, cSAngle);
@@ -948,21 +949,21 @@ struct cSPolar {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -974,8 +975,18 @@ struct Z2SeMgr {
 struct Z2StatusMgr {
 	// Vec
 	/* 802B6760 */ void setCameraPolygonPos(Vec*);
-	/* 802B6784 */ void setCameraGroupInfo(char);
+	/* 802B6784 */ void setCameraGroupInfo(u8);
 	/* 802B6788 */ void setCameraInWaterDepth(f32);
+};
+
+// build Z2Audience (Z2Audience) False/False
+// build Vec (Vec) True/True
+/* top-level dependencies (begin Z2Audience) */
+// outer dependency: Vec
+/* top-level dependencies (end Z2Audience) */
+struct Z2Audience {
+	// Vec
+	/* 802BD2DC */ void setAudioCamera(f32 (* )[4], Vec&, Vec&, f32, f32, bool, int, bool);
 };
 
 // 
@@ -989,7 +1000,7 @@ extern "C" static void func_8015FB28();
 extern "C" static void func_8015FBF8();
 extern "C" static void func_801602C4();
 extern "C" static void func_80160300();
-static void sph_chk_callback(dBgS_SphChk*, cBgD_Vtx_t*, s32, s32, s32, cM3dGPla*, void*);
+static void sph_chk_callback(dBgS_SphChk*, cBgD_Vtx_t*, int, int, int, cM3dGPla*, void*);
 extern "C" static void func_80167CB8();
 extern "C" static void func_8016C25C();
 extern "C" static void func_8016C2D4();
@@ -1517,12 +1528,11 @@ SECTION_SDATA2 extern f32 lit_17979;
 // External References:
 // 
 
-extern "C" void onBlure__13mDoGph_gInf_cFPA4_Cf();
-extern "C" void mDoMtx_XrotM__FPA4_fs();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void mDoMtx_ZrotM__FPA4_fs();
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
-extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f();
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
+void mDoMtx_concatProjView(f32 const (* )[4], f32 const (* )[4], f32 (* )[4]);
 void mDoLib_project(Vec*, Vec*);
 extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
 void fopAcM_setStageLayer(void*);
@@ -1530,16 +1540,16 @@ void fopAcM_searchFromName4Event(char const*, s16);
 void fopCamM_GetParam(camera_class*);
 void fpcSch_JudgeForPName(void*, void*);
 void fpcSch_JudgeByID(void*, void*);
-void dComIfGp_getRoomCamera(s32);
-void dComIfGp_getRoomArrow(s32);
+void dComIfGp_getRoomCamera(int);
+void dComIfGp_getRoomArrow(int);
 extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
-void dPath_GetRoomPath(s32, s32);
+void dPath_GetRoomPath(int, int);
 void dKyw_get_wind_vec();
 void dKyw_get_wind_pow();
 void fopAcM_GetID(void const*);
 void fopAcM_GetName(void*);
 void dComIfGp_getHorseActor();
-void dKy_camera_water_in_status_set(char);
+void dKy_camera_water_in_status_set(u8);
 void dKy_pol_sound_get(cBgS_PolyInfo const*);
 void dKy_TeachWind_existence_chk();
 void cM_atan2s(f32, f32);
@@ -1554,7 +1564,6 @@ void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*);
 void cM3d_2PlaneLinePosNearPos(cM3dGPla const&, cM3dGPla const&, Vec const*, Vec*);
 void operator+(s16, cSAngle const&);
 void operator-(s16, cSAngle const&);
-extern "C" void setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib();
 void operator delete(void*);
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXInverse();
@@ -1985,7 +1994,7 @@ extern "C" asm static void func_8015FBF8() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamMapToolData::Set(s32 field_0, s32 field_1, fopAc_ac_c* field_2, u16 field_3, char field_4) {
+asm void dCamMapToolData::Set(s32 field_0, s32 field_1, fopAc_ac_c* field_2, u16 field_3, u8 field_4) {
 	nofralloc
 #include "asm/d/d_camera/Set__15dCamMapToolDataFllP10fopAc_ac_cUsUc.s"
 }
@@ -3114,7 +3123,7 @@ asm void dCamera_c::setMapToolData() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamera_c::SetTagData(fopAc_ac_c* field_0, s32 field_1, u16 field_2, char field_3) {
+asm void dCamera_c::SetTagData(fopAc_ac_c* field_0, s32 field_1, u16 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/d_camera/SetTagData__9dCamera_cFP10fopAc_ac_clUsUc.s"
 }
@@ -3451,7 +3460,7 @@ f32 lit_8163 = -9.999999747378752e-05f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void sph_chk_callback(dBgS_SphChk* field_0, cBgD_Vtx_t* field_1, s32 field_2, s32 field_3, s32 field_4, cM3dGPla* field_5, void* field_6) {
+asm static void sph_chk_callback(dBgS_SphChk* field_0, cBgD_Vtx_t* field_1, int field_2, int field_3, int field_4, cM3dGPla* field_5, void* field_6) {
 	nofralloc
 #include "asm/d/d_camera/sph_chk_callback__FP11dBgS_SphChkP10cBgD_Vtx_tiiiP8cM3dGPlaPv.s"
 }
@@ -4571,7 +4580,7 @@ u8 data_80453914[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamera_c::StartShake(s32 field_0, char* field_1, s32 field_2, cXyz field_3) {
+asm void dCamera_c::StartShake(s32 field_0, u8* field_1, s32 field_2, cXyz field_3) {
 	nofralloc
 #include "asm/d/d_camera/StartShake__9dCamera_cFlPUcl4cXyz.s"
 }
@@ -4593,7 +4602,7 @@ asm void dCamera_c::StopShake() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamera_c::StartBlure(s32 field_0, fopAc_ac_c* field_1, f32 field_2, f32 field_3) {
+asm void dCamera_c::StartBlure(int field_0, fopAc_ac_c* field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/d_camera/StartBlure__9dCamera_cFiP10fopAc_ac_cff.s"
 }
@@ -4707,7 +4716,7 @@ asm void dCamera_c::ForceLockOn(fopAc_ac_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamera_c::ForceLockOff(s32 field_0) {
+asm void dCamera_c::ForceLockOff(u32 field_0) {
 	nofralloc
 #include "asm/d/d_camera/ForceLockOff__9dCamera_cFUi.s"
 }
@@ -5403,7 +5412,7 @@ asm void daPy_py_c::checkCopyRodThrowAfter() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttention_c::keepLock(s32 field_0) {
+asm void dAttention_c::keepLock(int field_0) {
 	nofralloc
 #include "asm/d/d_camera/keepLock__12dAttention_cFi.s"
 }
@@ -5601,7 +5610,7 @@ asm void dCamParam_c::Arg2(s16 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamParam_c::Arg1(char field_0) {
+asm void dCamParam_c::Arg1(u8 field_0) {
 	nofralloc
 #include "asm/d/d_camera/Arg1__11dCamParam_cFUc.s"
 }
@@ -5612,7 +5621,7 @@ asm void dCamParam_c::Arg1(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamParam_c::Arg0(char field_0) {
+asm void dCamParam_c::Arg0(u8 field_0) {
 	nofralloc
 #include "asm/d/d_camera/Arg0__11dCamParam_cFUc.s"
 }
@@ -5623,7 +5632,7 @@ asm void dCamParam_c::Arg0(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamParam_c::Fovy(char field_0) {
+asm void dCamParam_c::Fovy(u8 field_0) {
 	nofralloc
 #include "asm/d/d_camera/Fovy__11dCamParam_cFUc.s"
 }
@@ -5678,7 +5687,7 @@ asm void dCamParam_c::CheckFlag(u16 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamParam_c::Val(s32 field_0, s32 field_1) {
+asm void dCamParam_c::Val(s32 field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_camera/Val__11dCamParam_cFli.s"
 }

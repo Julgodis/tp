@@ -16,16 +16,16 @@
 struct cXyz {
 };
 
-// build cBgD_t (cBgD_t) False/False
-/* top-level dependencies (begin cBgD_t) */
-/* top-level dependencies (end cBgD_t) */
-struct cBgD_t {
-};
-
 // build cBgS_PolyInfo (cBgS_PolyInfo) False/False
 /* top-level dependencies (begin cBgS_PolyInfo) */
 /* top-level dependencies (end cBgS_PolyInfo) */
 struct cBgS_PolyInfo {
+};
+
+// build cBgD_t (cBgD_t) False/False
+/* top-level dependencies (begin cBgD_t) */
+/* top-level dependencies (end cBgD_t) */
+struct cBgD_t {
 };
 
 // build csXyz (csXyz) False/False
@@ -36,20 +36,20 @@ struct csXyz {
 
 /* top-level dependencies (begin dBgWSv) */
 // outer dependency: cXyz
-// outer dependency: cBgD_t
 // outer dependency: cBgS_PolyInfo
+// outer dependency: cBgD_t
 // outer dependency: csXyz
 /* top-level dependencies (end dBgWSv) */
 struct dBgWSv {
 	// cXyz
-	// cBgD_t
 	// cBgS_PolyInfo
+	// cBgD_t
 	// csXyz
 	/* 80082F98 */ void Set(cBgD_t*, u32);
 	/* 80083020 */ void CopyBackVtx();
-	/* 8008308C */ void CrrPosWork(cXyz*, s32, s32, s32);
+	/* 8008308C */ void CrrPosWork(cXyz*, int, int, int);
 	/* 80083244 */ void CrrPos(cBgS_PolyInfo const&, void*, bool, cXyz*, csXyz*, csXyz*);
-	/* 80083300 */ void TransPosWork(cXyz*, s32, s32, s32);
+	/* 80083300 */ void TransPosWork(cXyz*, int, int, int);
 	/* 8008351C */ void TransPos(cBgS_PolyInfo const&, void*, bool, cXyz*, csXyz*, csXyz*);
 	/* 800835D8 */ void MatrixCrrPos(cBgS_PolyInfo const&, void*, bool, cXyz*, csXyz*, csXyz*);
 	/* 800835DC */ ~dBgWSv();
@@ -73,13 +73,6 @@ struct dBgW_Base {
 struct cBgS_LinChk {
 };
 
-// build cBgS_GndChk (cBgS_GndChk) False/False
-/* top-level dependencies (begin cBgS_GndChk) */
-/* top-level dependencies (end cBgS_GndChk) */
-struct cBgS_GndChk {
-};
-
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
 // build cXyz (cXyz) True/True
 // build cBgS_ShdwDraw (cBgS_ShdwDraw) False/False
 /* top-level dependencies (begin cBgS_ShdwDraw) */
@@ -87,23 +80,34 @@ struct cBgS_GndChk {
 struct cBgS_ShdwDraw {
 };
 
+// build cBgD_t (cBgD_t) True/True
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+// build cBgS_GndChk (cBgS_GndChk) False/False
+/* top-level dependencies (begin cBgS_GndChk) */
+/* top-level dependencies (end cBgS_GndChk) */
+struct cBgS_GndChk {
+};
+
 /* top-level dependencies (begin cBgW) */
 // outer dependency: cBgS_LinChk
-// outer dependency: cBgS_GndChk
-// outer dependency: cBgS_PolyInfo
 // outer dependency: cXyz
 // outer dependency: cBgS_ShdwDraw
+// outer dependency: cBgD_t
+// outer dependency: cBgS_PolyInfo
+// outer dependency: cBgS_GndChk
 /* top-level dependencies (end cBgW) */
 struct cBgW {
-	// cBgS_LinChk
+	// cBgS_ShdwDraw
 	// cBgS_PolyInfo
 	// cBgS_GndChk
+	// cBgS_LinChk
 	// cXyz
-	// cBgS_ShdwDraw
+	// cBgD_t
 	/* 8007933C */ ~cBgW();
 	/* 80079564 */ void CalcPlane();
 	/* 800797BC */ void ClassifyPlane();
 	/* 80079EEC */ void ChkMemoryError();
+	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
 	/* 8007A658 */ void LineCheck(cBgS_LinChk*);
 	/* 8007AB9C */ void GroundCross(cBgS_GndChk*);
 	/* 8007B084 */ void ShdwDraw(cBgS_ShdwDraw*);
@@ -122,16 +126,16 @@ struct cBgW {
 // build cBgS_GndChk (cBgS_GndChk) True/True
 // build cBgS_ShdwDraw (cBgS_ShdwDraw) True/True
 // build dBgW (dBgW) False/False
+// build dBgS_Acch (dBgS_Acch) False/False
+/* top-level dependencies (begin dBgS_Acch) */
+/* top-level dependencies (end dBgS_Acch) */
+struct dBgS_Acch {
+};
+
 // build dBgS_CaptPoly (dBgS_CaptPoly) False/False
 /* top-level dependencies (begin dBgS_CaptPoly) */
 /* top-level dependencies (end dBgS_CaptPoly) */
 struct dBgS_CaptPoly {
-};
-
-// build cBgS_GrpPassChk (cBgS_GrpPassChk) False/False
-/* top-level dependencies (begin cBgS_GrpPassChk) */
-/* top-level dependencies (end cBgS_GrpPassChk) */
-struct cBgS_GrpPassChk {
 };
 
 // build cBgS_PolyInfo (cBgS_PolyInfo) True/True
@@ -141,19 +145,13 @@ struct cBgS_GrpPassChk {
 struct dBgS_SphChk {
 };
 
+// build cBgS_GrpPassChk (cBgS_GrpPassChk) False/False
+/* top-level dependencies (begin cBgS_GrpPassChk) */
+/* top-level dependencies (end cBgS_GrpPassChk) */
+struct cBgS_GrpPassChk {
+};
+
 // build cXyz (cXyz) True/True
-// build cBgS_PolyPassChk (cBgS_PolyPassChk) False/False
-/* top-level dependencies (begin cBgS_PolyPassChk) */
-/* top-level dependencies (end cBgS_PolyPassChk) */
-struct cBgS_PolyPassChk {
-};
-
-// build dBgS_Acch (dBgS_Acch) False/False
-/* top-level dependencies (begin dBgS_Acch) */
-/* top-level dependencies (end dBgS_Acch) */
-struct dBgS_Acch {
-};
-
 // build fopAc_ac_c (fopAc_ac_c) False/False
 /* top-level dependencies (begin fopAc_ac_c) */
 /* top-level dependencies (end fopAc_ac_c) */
@@ -172,53 +170,59 @@ struct dBgS_RoofChk {
 struct dBgS_SplGrpChk {
 };
 
+// build cBgS_PolyPassChk (cBgS_PolyPassChk) False/False
+/* top-level dependencies (begin cBgS_PolyPassChk) */
+/* top-level dependencies (end cBgS_PolyPassChk) */
+struct cBgS_PolyPassChk {
+};
+
 /* top-level dependencies (begin dBgW) */
+// outer dependency: dBgS_Acch
 // outer dependency: dBgS_CaptPoly
-// outer dependency: cBgS_GrpPassChk
 // outer dependency: cBgS_PolyInfo
 // outer dependency: dBgS_SphChk
+// outer dependency: cBgS_GrpPassChk
 // outer dependency: cXyz
-// outer dependency: cBgS_PolyPassChk
-// outer dependency: dBgS_Acch
 // outer dependency: fopAc_ac_c
 // outer dependency: dBgS_RoofChk
 // outer dependency: dBgS_SplGrpChk
+// outer dependency: cBgS_PolyPassChk
 /* top-level dependencies (end dBgW) */
 struct dBgW {
+	// dBgS_Acch
 	// dBgS_CaptPoly
-	// cBgS_GrpPassChk
 	// cBgS_PolyInfo
 	// dBgS_SphChk
+	// cBgS_GrpPassChk
 	// cXyz
-	// cBgS_PolyPassChk
-	// dBgS_Acch
 	// fopAc_ac_c
 	// dBgS_RoofChk
 	// dBgS_SplGrpChk
+	// cBgS_PolyPassChk
 	/* 8007B3AC */ void GetExitId(cBgS_PolyInfo const&);
 	/* 8007B3D8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 8007B404 */ void GetHorseNoEntry(cBgS_PolyInfo const&);
 	/* 8007B430 */ void GetSpecialCode(cBgS_PolyInfo const&);
-	/* 8007B460 */ void GetSpecialCode(s32);
+	/* 8007B460 */ void GetSpecialCode(int);
 	/* 8007B488 */ void GetMagnetCode(cBgS_PolyInfo const&);
 	/* 8007B4B4 */ void GetMonkeyBarsCode(cBgS_PolyInfo const&);
-	/* 8007B4E0 */ void GetPolyObjThrough(s32);
-	/* 8007B504 */ void GetPolyCamThrough(s32);
-	/* 8007B52C */ void GetPolyLinkThrough(s32);
-	/* 8007B550 */ void GetPolyArrowThrough(s32);
-	/* 8007B574 */ void GetPolyHSStick(s32);
-	/* 8007B598 */ void GetPolyBoomerangThrough(s32);
-	/* 8007B5BC */ void GetPolyRopeThrough(s32);
-	/* 8007B5E0 */ void GetPolyBombThrough(s32);
-	/* 8007B604 */ void GetShdwThrough(s32);
-	/* 8007B630 */ void GetUnderwaterRoofCode(s32);
+	/* 8007B4E0 */ void GetPolyObjThrough(int);
+	/* 8007B504 */ void GetPolyCamThrough(int);
+	/* 8007B52C */ void GetPolyLinkThrough(int);
+	/* 8007B550 */ void GetPolyArrowThrough(int);
+	/* 8007B574 */ void GetPolyHSStick(int);
+	/* 8007B598 */ void GetPolyBoomerangThrough(int);
+	/* 8007B5BC */ void GetPolyRopeThrough(int);
+	/* 8007B5E0 */ void GetPolyBombThrough(int);
+	/* 8007B604 */ void GetShdwThrough(int);
+	/* 8007B630 */ void GetUnderwaterRoofCode(int);
 	/* 8007B6AC */ void GetLinkNo(cBgS_PolyInfo const&);
 	/* 8007B6D8 */ void GetWallCode(cBgS_PolyInfo const&);
 	/* 8007B704 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 	/* 8007B734 */ void GetPolyAtt1(cBgS_PolyInfo const&);
 	/* 8007B760 */ void GetGroundCode(cBgS_PolyInfo const&);
-	/* 8007B7DC */ void GetIronBallThrough(s32);
-	/* 8007B800 */ void GetAttackThrough(s32);
+	/* 8007B7DC */ void GetIronBallThrough(int);
+	/* 8007B800 */ void GetAttackThrough(int);
 	/* 8007B87C */ void GetCamMoveBG(cBgS_PolyInfo const&);
 	/* 8007B8A8 */ void GetRoomCamId(cBgS_PolyInfo const&);
 	/* 8007B8D8 */ void GetRoomPathId(cBgS_PolyInfo const&);
@@ -231,9 +235,9 @@ struct dBgW {
 	/* 8007DF00 */ void SphChk(dBgS_SphChk*, void*);
 	/* 8007DF28 */ void GetPolyGrpRoomInfId(cBgS_PolyInfo const&);
 	/* 8007DF58 */ void GetGrpSoundId(cBgS_PolyInfo const&);
-	/* 8007E02C */ void ChkPolyThrough(s32, cBgS_PolyPassChk*);
-	/* 8007E360 */ void ChkShdwDrawThrough(s32, cBgS_PolyPassChk*);
-	/* 8007E3D8 */ void ChkGrpThrough(s32, cBgS_GrpPassChk*, s32);
+	/* 8007E02C */ void ChkPolyThrough(int, cBgS_PolyPassChk*);
+	/* 8007E360 */ void ChkShdwDrawThrough(int, cBgS_PolyPassChk*);
+	/* 8007E3D8 */ void ChkGrpThrough(int, cBgS_GrpPassChk*, int);
 	/* 8007E444 */ void CallRideCallBack(fopAc_ac_c*, fopAc_ac_c*);
 	/* 8007E474 */ void CallArrowStickCallBack(fopAc_ac_c*, fopAc_ac_c*, cXyz&);
 	/* 8007E4A4 */ void OffMoveFlag();
@@ -269,7 +273,6 @@ SECTION_SDATA2 extern f32 d_bg_d_bg_w_sv__lit_3808;
 // External References:
 // 
 
-extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f();
 void* operator new[](u32);
 void operator delete(void*);
 extern "C" void _savegpr_27();
@@ -373,7 +376,7 @@ asm void dBgWSv::CopyBackVtx() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWSv::CrrPosWork(cXyz* field_0, s32 field_1, s32 field_2, s32 field_3) {
+asm void dBgWSv::CrrPosWork(cXyz* field_0, int field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_sv/CrrPosWork__6dBgWSvFP4cXyziii.s"
 }
@@ -404,7 +407,7 @@ f32 d_bg_d_bg_w_sv__lit_3808 = 1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWSv::TransPosWork(cXyz* field_0, s32 field_1, s32 field_2, s32 field_3) {
+asm void dBgWSv::TransPosWork(cXyz* field_0, int field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_sv/TransPosWork__6dBgWSvFP4cXyziii.s"
 }

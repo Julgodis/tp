@@ -10,39 +10,6 @@
 // 
 
 // build dNpcLib_lookat_c (dNpcLib_lookat_c) False/False
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 8026745C */ void operator+=(csXyz&);
-};
-
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
-struct J3DModel {
-};
-
-/* top-level dependencies (begin dNpcLib_lookat_c) */
-// outer dependency: csXyz
-// outer dependency: J3DModel
-/* top-level dependencies (end dNpcLib_lookat_c) */
-struct dNpcLib_lookat_c {
-	// csXyz
-	// J3DModel
-	/* 80251314 */ dNpcLib_lookat_c();
-	/* 8025140C */ void init(J3DModel*, s32*, csXyz*, csXyz*);
-	/* 80251B60 */ void dbView();
-	/* 80251B64 */ void setPrm();
-	/* 80251EF8 */ void update();
-	/* 80252018 */ void limitter(s16*, s16, s16, s16);
-	/* 80252094 */ ~dNpcLib_lookat_c();
-};
-
-// build J3DModel (J3DModel) True/True
-// build csXyz (csXyz) True/True
 // build cXyz (cXyz) False/False
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
@@ -62,6 +29,52 @@ struct cXyz {
 	/* 802670AC */ void isZero() const;
 };
 
+// build J3DModel (J3DModel) False/False
+/* top-level dependencies (begin J3DModel) */
+/* top-level dependencies (end J3DModel) */
+struct J3DModel {
+};
+
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 8026745C */ void operator+=(csXyz&);
+};
+
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+/* top-level dependencies (begin dNpcLib_lookat_c) */
+// outer dependency: cXyz
+// outer dependency: J3DModel
+// outer dependency: csXyz
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dNpcLib_lookat_c) */
+struct dNpcLib_lookat_c {
+	// cXyz
+	// J3DModel
+	// csXyz
+	// fopAc_ac_c
+	/* 80251314 */ dNpcLib_lookat_c();
+	/* 8025140C */ void init(J3DModel*, int*, csXyz*, csXyz*);
+	/* 80251534 */ void action(cXyz, cXyz, fopAc_ac_c*, f32 (* )[4], int);
+	/* 80251B60 */ void dbView();
+	/* 80251B64 */ void setPrm();
+	/* 80251EF8 */ void update();
+	/* 80252018 */ void limitter(s16*, s16, s16, s16);
+	/* 80252094 */ ~dNpcLib_lookat_c();
+};
+
+// build J3DModel (J3DModel) True/True
+// build csXyz (csXyz) True/True
+// build cXyz (cXyz) True/True
+// build fopAc_ac_c (fopAc_ac_c) True/True
 // build mDoMtx_stack_c (mDoMtx_stack_c) False/False
 // build cXyz (cXyz) True/True
 // build csXyz (csXyz) True/True
@@ -82,7 +95,6 @@ struct mDoMtx_stack_c {
 // Forward References:
 // 
 
-extern "C" void action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi();
 
 extern "C" void __ct__16dNpcLib_lookat_cFv();
 extern "C" void init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz();
@@ -182,7 +194,7 @@ asm dNpcLib_lookat_c::dNpcLib_lookat_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dNpcLib_lookat_c::init(J3DModel* field_0, s32* field_1, csXyz* field_2, csXyz* field_3) {
+asm void dNpcLib_lookat_c::init(J3DModel* field_0, int* field_1, csXyz* field_2, csXyz* field_3) {
 	nofralloc
 #include "asm/d/d_npc_lib/init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz.s"
 }
@@ -220,7 +232,7 @@ f64 d_d_npc_lib__lit_3873 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi() {
+asm void dNpcLib_lookat_c::action(cXyz field_0, cXyz field_1, fopAc_ac_c* field_2, f32 (* field_3)[4], int field_4) {
 	nofralloc
 #include "asm/d/d_npc_lib/action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi.s"
 }

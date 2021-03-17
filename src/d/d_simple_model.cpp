@@ -16,50 +16,50 @@ struct J3DModel {
 };
 
 // build dSmplMdl_draw_c (dSmplMdl_draw_c) False/False
+// build J3DModel (J3DModel) True/True
 // build J3DModelData (J3DModelData) False/False
 /* top-level dependencies (begin J3DModelData) */
 /* top-level dependencies (end J3DModelData) */
 struct J3DModelData {
 };
 
-// build J3DModel (J3DModel) True/True
 /* top-level dependencies (begin dSmplMdl_draw_c) */
-// outer dependency: J3DModelData
 // outer dependency: J3DModel
+// outer dependency: J3DModelData
 /* top-level dependencies (end dSmplMdl_draw_c) */
 struct dSmplMdl_draw_c {
-	// J3DModelData
 	// J3DModel
+	// J3DModelData
 	/* 80048CB4 */ dSmplMdl_draw_c();
 	/* 80048D80 */ ~dSmplMdl_draw_c();
 	/* 80048E0C */ void draw();
-	/* 80048EBC */ void entry(J3DModel*, s32);
-	/* 80048F70 */ void addModel(J3DModelData*, s32, char);
-	/* 80049058 */ void removeModel(J3DModelData*, s32);
+	/* 80048EBC */ void entry(J3DModel*, int);
+	/* 80048F70 */ void addModel(J3DModelData*, int, u8);
+	/* 80049058 */ void removeModel(J3DModelData*, int);
 };
 
 // build diff_model_c (diff_model_c) False/False
-// build J3DModelData (J3DModelData) True/True
 // build modelList_c (modelList_c) False/False
 /* top-level dependencies (begin modelList_c) */
 /* top-level dependencies (end modelList_c) */
 struct modelList_c {
 };
 
+// build J3DModelData (J3DModelData) True/True
 /* top-level dependencies (begin diff_model_c) */
-// outer dependency: J3DModelData
 // outer dependency: modelList_c
+// outer dependency: J3DModelData
 /* top-level dependencies (end diff_model_c) */
 struct diff_model_c {
-	// J3DModelData
 	// modelList_c
+	// J3DModelData
 	/* 80048D60 */ diff_model_c();
-	/* 800490EC */ void create(J3DModelData*, s32, char);
+	/* 800490EC */ void create(J3DModelData*, int, u8);
 	/* 800491F4 */ void getModelData();
-	/* 80049210 */ void remove(s32);
+	/* 80049210 */ void remove(int);
 	/* 80049270 */ void draw();
 	/* 80049368 */ void init();
-	/* 80049388 */ void isSame(J3DModelData*, s32);
+	/* 80049388 */ void isSame(J3DModelData*, int);
 	/* 800493FC */ void getRoomNo();
 	/* 80049408 */ void insert(modelList_c*);
 };
@@ -73,20 +73,20 @@ struct JKRSolidHeap {
 };
 
 // build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build J3DModelData (J3DModelData) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
 struct dKy_tevstr_c {
 };
 
+// build J3DModelData (J3DModelData) True/True
 /* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: J3DModelData
 // outer dependency: dKy_tevstr_c
+// outer dependency: J3DModelData
 /* top-level dependencies (end dScnKy_env_light_c) */
 struct dScnKy_env_light_c {
-	// J3DModelData
 	// dKy_tevstr_c
+	// J3DModelData
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
@@ -235,7 +235,7 @@ asm void dSmplMdl_draw_c::draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSmplMdl_draw_c::entry(J3DModel* field_0, s32 field_1) {
+asm void dSmplMdl_draw_c::entry(J3DModel* field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_simple_model/entry__15dSmplMdl_draw_cFP8J3DModeli.s"
 }
@@ -246,7 +246,7 @@ asm void dSmplMdl_draw_c::entry(J3DModel* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSmplMdl_draw_c::addModel(J3DModelData* field_0, s32 field_1, char field_2) {
+asm void dSmplMdl_draw_c::addModel(J3DModelData* field_0, int field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/d_simple_model/addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc.s"
 }
@@ -257,7 +257,7 @@ asm void dSmplMdl_draw_c::addModel(J3DModelData* field_0, s32 field_1, char fiel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSmplMdl_draw_c::removeModel(J3DModelData* field_0, s32 field_1) {
+asm void dSmplMdl_draw_c::removeModel(J3DModelData* field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_simple_model/removeModel__15dSmplMdl_draw_cFP12J3DModelDatai.s"
 }
@@ -276,7 +276,7 @@ u8 d_d_simple_model__lit_3763[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void diff_model_c::create(J3DModelData* field_0, s32 field_1, char field_2) {
+asm void diff_model_c::create(J3DModelData* field_0, int field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/d_simple_model/create__12diff_model_cFP12J3DModelDataiUc.s"
 }
@@ -298,7 +298,7 @@ asm void diff_model_c::getModelData() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void diff_model_c::remove(s32 field_0) {
+asm void diff_model_c::remove(int field_0) {
 	nofralloc
 #include "asm/d/d_simple_model/remove__12diff_model_cFi.s"
 }
@@ -331,7 +331,7 @@ asm void diff_model_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void diff_model_c::isSame(J3DModelData* field_0, s32 field_1) {
+asm void diff_model_c::isSame(J3DModelData* field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_simple_model/isSame__12diff_model_cFP12J3DModelDatai.s"
 }

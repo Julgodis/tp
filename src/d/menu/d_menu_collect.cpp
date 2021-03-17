@@ -10,10 +10,10 @@
 // 
 
 // build dMenu_Collect2D_c (dMenu_Collect2D_c) False/False
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
-struct J2DAnmTextureSRTKey {
+// build CSTControl (CSTControl) False/False
+/* top-level dependencies (begin CSTControl) */
+/* top-level dependencies (end CSTControl) */
+struct CSTControl {
 };
 
 // build JKRExpHeap (JKRExpHeap) False/False
@@ -33,10 +33,10 @@ struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-// build CSTControl (CSTControl) False/False
-/* top-level dependencies (begin CSTControl) */
-/* top-level dependencies (end CSTControl) */
-struct CSTControl {
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
 };
 
 // build STControl (STControl) False/False
@@ -51,15 +51,15 @@ struct STControl {
 };
 
 /* top-level dependencies (begin dMenu_Collect2D_c) */
-// outer dependency: J2DAnmTextureSRTKey
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
+// outer dependency: J2DAnmTextureSRTKey
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Collect2D_c) */
 struct dMenu_Collect2D_c {
-	// J2DAnmTextureSRTKey
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
+	// J2DAnmTextureSRTKey
 	// STControl
 	/* 801AFD48 */ dMenu_Collect2D_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801AFE34 */ ~dMenu_Collect2D_c();
@@ -78,16 +78,16 @@ struct dMenu_Collect2D_c {
 	/* 801B2A74 */ void changeSword();
 	/* 801B2D00 */ void changeShield();
 	/* 801B2EE4 */ void changeClothe();
-	/* 801B30C8 */ void setArrowMaxNum(char);
+	/* 801B30C8 */ void setArrowMaxNum(u8);
 	/* 801B3340 */ void setWalletMaxNum(u16);
 	/* 801B3524 */ void setSmellType();
 	/* 801B3640 */ void setHeartPiece();
-	/* 801B370C */ void setPohMaxNum(char);
-	/* 801B39D0 */ void setEquipItemFrameColorSword(s32);
-	/* 801B3CF4 */ void setEquipItemFrameColorShield(s32);
-	/* 801B3FDC */ void setEquipItemFrameColorClothes(s32);
+	/* 801B370C */ void setPohMaxNum(u8);
+	/* 801B39D0 */ void setEquipItemFrameColorSword(int);
+	/* 801B3CF4 */ void setEquipItemFrameColorShield(int);
+	/* 801B3FDC */ void setEquipItemFrameColorClothes(int);
 	/* 801B42D8 */ void setHIO(bool);
-	/* 801B46FC */ void getItemTag(s32, s32, bool);
+	/* 801B46FC */ void getItemTag(int, int, bool);
 	/* 801B473C */ void wait_init();
 	/* 801B48D0 */ void wait_proc();
 	/* 801B4E14 */ void save_open_init();
@@ -133,7 +133,7 @@ struct dMenu_Collect2D_c {
 	/* 801B5FAC */ bool isOutCheck();
 	/* 801B5FB4 */ void setAButtonString(u16);
 	/* 801B60B8 */ void setBButtonString(u16);
-	/* 801B61BC */ void setItemNameString(char, char);
+	/* 801B61BC */ void setItemNameString(u8, u8);
 	/* 801B6344 */ void setItemNameStringNull();
 	/* 801B7F00 */ void draw();
 };
@@ -143,31 +143,31 @@ struct dMenu_Collect2D_c {
 // build CSTControl (CSTControl) True/True
 // build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
 // build dMenu_Collect3D_c (dMenu_Collect3D_c) False/False
+// build dMenu_Collect2D_c (dMenu_Collect2D_c) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build cXyz (cXyz) False/False
 /* top-level dependencies (begin cXyz) */
 /* top-level dependencies (end cXyz) */
 struct cXyz {
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build dMenu_Collect2D_c (dMenu_Collect2D_c) True/True
 // build CSTControl (CSTControl) True/True
 /* top-level dependencies (begin dMenu_Collect3D_c) */
-// outer dependency: cXyz
-// outer dependency: JKRExpHeap
 // outer dependency: dMenu_Collect2D_c
+// outer dependency: JKRExpHeap
+// outer dependency: cXyz
 // outer dependency: CSTControl
 /* top-level dependencies (end dMenu_Collect3D_c) */
 struct dMenu_Collect3D_c {
-	// cXyz
-	// JKRExpHeap
 	// dMenu_Collect2D_c
+	// JKRExpHeap
+	// cXyz
 	// CSTControl
 	/* 801B6454 */ dMenu_Collect3D_c(JKRExpHeap*, dMenu_Collect2D_c*, CSTControl*);
 	/* 801B6538 */ ~dMenu_Collect3D_c();
 	/* 801B65A8 */ void _create();
 	/* 801B6694 */ void _delete();
-	/* 801B66C8 */ void _move(char, char);
+	/* 801B66C8 */ void _move(u8, u8);
 	/* 801B696C */ void draw();
 	/* 801B6A30 */ void setJ3D(char const*, char const*, char const*);
 	/* 801B6D30 */ void set_mtx();
@@ -178,7 +178,9 @@ struct dMenu_Collect3D_c {
 	/* 801B7434 */ void getCrystalNum();
 	/* 801B749C */ void getMirrorNum();
 	/* 801B7504 */ void getMaskMdlVisible();
+	/* 801B75E8 */ void setupItem3D(f32 (* )[4]);
 	/* 801B7660 */ void toItem3Dpos(f32, f32, f32, cXyz*);
+	/* 801B774C */ void calcViewMtx(f32 (* )[4]);
 };
 
 // build cXyz (cXyz) True/True
@@ -191,17 +193,17 @@ struct dMenu_Collect2DTop_c {
 };
 
 // build dMenu_Collect_c (dMenu_Collect_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Collect_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Collect_c) */
 struct dMenu_Collect_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
 	/* 801B78C0 */ dMenu_Collect_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801B795C */ ~dMenu_Collect_c();
@@ -209,6 +211,12 @@ struct dMenu_Collect_c {
 	/* 801B7A44 */ void _delete();
 	/* 801B7A7C */ void _move();
 	/* 801B7AC0 */ void draw();
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
 };
 
 // build mDoExt_baseAnm (mDoExt_baseAnm) False/False
@@ -247,28 +255,28 @@ struct J3DMaterialTable {
 struct mDoExt_brkAnm {
 	// J3DAnmTevRegKey
 	// J3DMaterialTable
-	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, s32, s32, f32, s16, s16);
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
 // build J3DMaterialTable (J3DMaterialTable) True/True
 // build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
 // build mDoExt_bckAnm (mDoExt_bckAnm) False/False
+// build J3DModelData (J3DModelData) True/True
 // build J3DAnmTransform (J3DAnmTransform) False/False
 /* top-level dependencies (begin J3DAnmTransform) */
 /* top-level dependencies (end J3DAnmTransform) */
 struct J3DAnmTransform {
 };
 
-// build J3DModelData (J3DModelData) True/True
 /* top-level dependencies (begin mDoExt_bckAnm) */
-// outer dependency: J3DAnmTransform
 // outer dependency: J3DModelData
+// outer dependency: J3DAnmTransform
 /* top-level dependencies (end mDoExt_bckAnm) */
 struct mDoExt_bckAnm {
-	// J3DAnmTransform
 	// J3DModelData
-	/* 8000D7DC */ void init(J3DAnmTransform*, s32, s32, f32, s16, s16, bool);
+	// J3DAnmTransform
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
@@ -311,15 +319,15 @@ struct dSv_player_status_a_c {
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(char) const;
+	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
 // build dSv_player_collect_c (dSv_player_collect_c) False/False
 /* top-level dependencies (begin dSv_player_collect_c) */
 /* top-level dependencies (end dSv_player_collect_c) */
 struct dSv_player_collect_c {
-	/* 8003424C */ void isCollectCrystal(char) const;
-	/* 80034290 */ void isCollectMirror(char) const;
+	/* 8003424C */ void isCollectCrystal(u8) const;
+	/* 80034290 */ void isCollectMirror(u8) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -400,26 +408,26 @@ struct daAlink_c {
 };
 
 // build dSelect_cursor_c (dSelect_cursor_c) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
 // build J2DPane (J2DPane) False/False
 /* top-level dependencies (begin J2DPane) */
 /* top-level dependencies (end J2DPane) */
 struct J2DPane {
 };
 
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
 /* top-level dependencies (begin dSelect_cursor_c) */
-// outer dependency: JKRArchive
 // outer dependency: J2DPane
+// outer dependency: JKRArchive
 /* top-level dependencies (end dSelect_cursor_c) */
 struct dSelect_cursor_c {
-	// JKRArchive
 	// J2DPane
-	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	// JKRArchive
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801952A0 */ void setAlphaRate(f32);
@@ -428,8 +436,8 @@ struct dSelect_cursor_c {
 // build JKRArchive (JKRArchive) True/True
 // build J2DPane (J2DPane) True/True
 // build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build J3DModelData (J3DModelData) True/True
 // build cXyz (cXyz) True/True
+// build J3DModelData (J3DModelData) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
@@ -437,31 +445,31 @@ struct dKy_tevstr_c {
 };
 
 /* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: J3DModelData
 // outer dependency: cXyz
+// outer dependency: J3DModelData
 // outer dependency: dKy_tevstr_c
 /* top-level dependencies (end dScnKy_env_light_c) */
 struct dScnKy_env_light_c {
-	// J3DModelData
 	// cXyz
+	// J3DModelData
 	// dKy_tevstr_c
-	/* 801A37C4 */ void settingTevStruct(s32, cXyz*, dKy_tevstr_c*);
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
 // build dMenu_Fishing_c (dMenu_Fishing_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Fishing_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Fishing_c) */
 struct dMenu_Fishing_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
 	/* 801C4D54 */ dMenu_Fishing_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801C50B4 */ void _move();
@@ -471,19 +479,19 @@ struct dMenu_Fishing_c {
 };
 
 // build dMenu_Insect_c (dMenu_Insect_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Insect_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Insect_c) */
 struct dMenu_Insect_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
-	/* 801D8114 */ dMenu_Insect_c(JKRExpHeap*, STControl*, CSTControl*, char);
+	/* 801D8114 */ dMenu_Insect_c(JKRExpHeap*, STControl*, CSTControl*, u8);
 	/* 801D86C8 */ void _move();
 	/* 801D8760 */ void _draw();
 	/* 801D894C */ void _open();
@@ -492,17 +500,17 @@ struct dMenu_Insect_c {
 };
 
 // build dMenu_Letter_c (dMenu_Letter_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Letter_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Letter_c) */
 struct dMenu_Letter_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
 	/* 801DCDC0 */ dMenu_Letter_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801DD474 */ void _move();
@@ -545,17 +553,17 @@ struct dMenu_save_c {
 };
 
 // build dMenu_Skill_c (dMenu_Skill_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Skill_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Skill_c) */
 struct dMenu_Skill_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
 	/* 801F7224 */ dMenu_Skill_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801F7718 */ void _move();
@@ -596,6 +604,8 @@ struct dMsgString_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DPane (J2DPane) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) False/False
@@ -617,18 +627,16 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DPane (J2DPane) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
@@ -642,30 +650,24 @@ struct CPaneMgrAlpha {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
-struct Vec {
-};
-
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
-// build Vec (Vec) True/True
 // build JKRFileLoader (JKRFileLoader) False/False
 /* top-level dependencies (begin JKRFileLoader) */
 /* top-level dependencies (end JKRFileLoader) */
@@ -695,6 +697,7 @@ struct J2DPicture {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
@@ -759,8 +762,6 @@ struct J3DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" void setupItem3D__17dMenu_Collect3D_cFPA4_f();
-extern "C" static void calcViewMtx__17dMenu_Collect3D_cFPA4_f();
 extern "C" void __sinit_d_menu_collect_cpp();
 
 extern "C" void __ct__17dMenu_Collect2D_cFP10JKRExpHeapP9STControlP10CSTControl();
@@ -854,7 +855,7 @@ extern "C" void getMirrorNum__17dMenu_Collect3D_cFv();
 extern "C" void getMaskMdlVisible__17dMenu_Collect3D_cFv();
 extern "C" void setupItem3D__17dMenu_Collect3D_cFPA4_f();
 extern "C" void toItem3Dpos__17dMenu_Collect3D_cFfffP4cXyz();
-extern "C" static void calcViewMtx__17dMenu_Collect3D_cFPA4_f();
+extern "C" void calcViewMtx__17dMenu_Collect3D_cFPA4_f();
 extern "C" void draw__20dMenu_Collect2DTop_cFv();
 extern "C" void __ct__15dMenu_Collect_cFP10JKRExpHeapP9STControlP10CSTControl();
 extern "C" void __dt__15dMenu_Collect_cFv();
@@ -989,10 +990,10 @@ SECTION_SDATA2 extern f64 lit_7963;
 // External References:
 // 
 
-extern "C" void mDoMtx_XrotM__FPA4_fs();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void mDoMtx_ZrotM__FPA4_fs();
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
 void mDoExt_modelUpdateDL(J3DModel*);
 void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32);
 void mDoExt_destroySolidHeap(JKRSolidHeap*);
@@ -1001,13 +1002,13 @@ void mDoExt_setCurrentHeap(JKRHeap*);
 void mDoExt_restoreCurrentHeap();
 void mDoExt_getMesgFont();
 void mDoExt_getRubyFont();
-void checkItemGet(char, s32);
-void dKy_tevstr_init(dKy_tevstr_c*, char, char);
+void checkItemGet(u8, int);
+void dKy_tevstr_init(dKy_tevstr_c*, s8, u8);
 void dMw_A_TRIGGER();
-void dMeter2Info_getNumberTextureName(s32);
-void dMeter2Info_setCloth(char, bool);
-void dMeter2Info_setSword(char, bool);
-void dMeter2Info_setShield(char, bool);
+void dMeter2Info_getNumberTextureName(int);
+void dMeter2Info_setCloth(u8, bool);
+void dMeter2Info_setSword(u8, bool);
+void dMeter2Info_setShield(u8, bool);
 void dMeter2Info_getRecieveLetterNum();
 void dMeter2Info_set2DVibration();
 void dMeter2Info_set2DVibrationM();
@@ -1015,7 +1016,6 @@ void dPaneClass_showNullPane(J2DScreen*);
 void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXInverse();
 extern "C" void PSMTXTrans();
@@ -2060,7 +2060,7 @@ asm void dMenu_Collect2D_c::changeClothe() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Collect2D_c::setArrowMaxNum(char field_0) {
+asm void dMenu_Collect2D_c::setArrowMaxNum(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_collect/setArrowMaxNum__17dMenu_Collect2D_cFUc.s"
 }
@@ -2104,7 +2104,7 @@ asm void dMenu_Collect2D_c::setHeartPiece() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Collect2D_c::setPohMaxNum(char field_0) {
+asm void dMenu_Collect2D_c::setPohMaxNum(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_collect/setPohMaxNum__17dMenu_Collect2D_cFUc.s"
 }
@@ -2115,7 +2115,7 @@ asm void dMenu_Collect2D_c::setPohMaxNum(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Collect2D_c::setEquipItemFrameColorSword(s32 field_0) {
+asm void dMenu_Collect2D_c::setEquipItemFrameColorSword(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_collect/setEquipItemFrameColorSword__17dMenu_Collect2D_cFi.s"
 }
@@ -2126,7 +2126,7 @@ asm void dMenu_Collect2D_c::setEquipItemFrameColorSword(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Collect2D_c::setEquipItemFrameColorShield(s32 field_0) {
+asm void dMenu_Collect2D_c::setEquipItemFrameColorShield(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_collect/setEquipItemFrameColorShield__17dMenu_Collect2D_cFi.s"
 }
@@ -2137,7 +2137,7 @@ asm void dMenu_Collect2D_c::setEquipItemFrameColorShield(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Collect2D_c::setEquipItemFrameColorClothes(s32 field_0) {
+asm void dMenu_Collect2D_c::setEquipItemFrameColorClothes(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_collect/setEquipItemFrameColorClothes__17dMenu_Collect2D_cFi.s"
 }
@@ -2159,7 +2159,7 @@ asm void dMenu_Collect2D_c::setHIO(bool field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Collect2D_c::getItemTag(s32 field_0, s32 field_1, bool field_2) {
+asm void dMenu_Collect2D_c::getItemTag(int field_0, int field_1, bool field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_collect/getItemTag__17dMenu_Collect2D_cFiib.s"
 }
@@ -2660,7 +2660,7 @@ asm void dMenu_Collect2D_c::setBButtonString(u16 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Collect2D_c::setItemNameString(char field_0, char field_1) {
+asm void dMenu_Collect2D_c::setItemNameString(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_collect/setItemNameString__17dMenu_Collect2D_cFUcUc.s"
 }
@@ -2766,7 +2766,7 @@ f32 d_menu_d_menu_collect__lit_7336 = 600.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Collect3D_c::_move(char field_0, char field_1) {
+asm void dMenu_Collect3D_c::_move(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_collect/_move__17dMenu_Collect3D_cFUcUc.s"
 }
@@ -2924,7 +2924,7 @@ f32 lit_7949 = 100000.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void setupItem3D__17dMenu_Collect3D_cFPA4_f() {
+asm void dMenu_Collect3D_c::setupItem3D(f32 (* field_0)[4]) {
 	nofralloc
 #include "asm/d/menu/d_menu_collect/setupItem3D__17dMenu_Collect3D_cFPA4_f.s"
 }
@@ -2950,7 +2950,7 @@ asm void dMenu_Collect3D_c::toItem3Dpos(f32 field_0, f32 field_1, f32 field_2, c
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void calcViewMtx__17dMenu_Collect3D_cFPA4_f() {
+asm void dMenu_Collect3D_c::calcViewMtx(f32 (* field_0)[4]) {
 	nofralloc
 #include "asm/d/menu/d_menu_collect/calcViewMtx__17dMenu_Collect3D_cFPA4_f.s"
 }

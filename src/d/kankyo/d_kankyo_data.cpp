@@ -15,12 +15,12 @@ void dKyd_dmenvr_getp();
 void dKyd_dmvrbox_getp();
 void dKyd_schejule_getp();
 void dKyd_schejule_boss_getp();
-void dKyd_xfog_table_set(char);
+void dKyd_xfog_table_set(u8);
 void dKyd_maple_col_getp();
 void dKyd_darkworld_tbl_getp();
 void dKyd_light_size_tbl_getp();
 void dKyd_light_tw_size_tbl_getp();
-void dKyd_BloomInf_tbl_getp(s32);
+void dKyd_BloomInf_tbl_getp(int);
 
 extern "C" void dKyd_dmpalet_getp__Fv();
 extern "C" void dKyd_dmpselect_getp__Fv();
@@ -438,7 +438,7 @@ u8 S_xfog_table_data[44] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKyd_xfog_table_set(char field_0) {
+asm void dKyd_xfog_table_set(u8 field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_xfog_table_set__FUc.s"
 }
@@ -493,7 +493,7 @@ asm void dKyd_light_tw_size_tbl_getp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKyd_BloomInf_tbl_getp(s32 field_0) {
+asm void dKyd_BloomInf_tbl_getp(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_data/dKyd_BloomInf_tbl_getp__Fi.s"
 }

@@ -28,7 +28,7 @@ struct JKRHeap {
 /* top-level dependencies (end JPAFieldBlock) */
 struct JPAFieldBlock {
 	// JKRHeap
-	/* 8027D088 */ JPAFieldBlock(char const*, JKRHeap*);
+	/* 8027D088 */ JPAFieldBlock(u8 const*, JKRHeap*);
 	/* 8027D0C0 */ void init(JKRHeap*);
 };
 
@@ -274,7 +274,7 @@ SECTION_SDATA2 extern f32 lit_2656;
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void PSMTXRotAxisRad();
 extern "C" void PSMTXMultVecSR();
@@ -523,7 +523,7 @@ asm void JPAFieldSpin::calc(JPAEmitterWorkData* field_0, JPAFieldBlock* field_1,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JPAFieldBlock::JPAFieldBlock(char const* field_0, JKRHeap* field_1) {
+asm JPAFieldBlock::JPAFieldBlock(u8 const* field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAFieldBlock/__ct__13JPAFieldBlockFPCUcP7JKRHeap.s"
 }

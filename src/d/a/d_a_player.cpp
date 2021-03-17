@@ -15,7 +15,7 @@
 struct daPy_frameCtrl_c {
 	/* 8015E4CC */ void checkAnmEnd();
 	/* 8015E510 */ void updateFrame();
-	/* 8015E544 */ void setFrameCtrl(char, s16, s16, f32, f32);
+	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
 };
 
 // build daPy_boomerangMove_c (daPy_boomerangMove_c) False/False
@@ -55,23 +55,23 @@ struct daPy_boomerangMove_c {
 struct daPy_py_c {
 	// cXyz
 	// fopAc_ac_c
-	/* 8015EA0C */ void setParamData(s32, s32, s32, s32);
-	/* 8015EA20 */ void checkFishingRodItem(s32);
-	/* 8015EA48 */ void checkBombItem(s32);
-	/* 8015EA88 */ void checkBottleItem(s32);
-	/* 8015EAD8 */ void checkDrinkBottleItem(s32);
-	/* 8015EB40 */ void checkOilBottleItem(s32);
-	/* 8015EB68 */ void checkOpenBottleItem(s32);
-	/* 8015EB90 */ void checkBowItem(s32);
-	/* 8015EBB8 */ void checkHookshotItem(s32);
-	/* 8015EBD8 */ void checkTradeItem(s32);
-	/* 8015EC28 */ void checkDungeonWarpItem(s32);
+	/* 8015EA0C */ void setParamData(int, int, int, int);
+	/* 8015EA20 */ void checkFishingRodItem(int);
+	/* 8015EA48 */ void checkBombItem(int);
+	/* 8015EA88 */ void checkBottleItem(int);
+	/* 8015EAD8 */ void checkDrinkBottleItem(int);
+	/* 8015EB40 */ void checkOilBottleItem(int);
+	/* 8015EB68 */ void checkOpenBottleItem(int);
+	/* 8015EB90 */ void checkBowItem(int);
+	/* 8015EBB8 */ void checkHookshotItem(int);
+	/* 8015EBD8 */ void checkTradeItem(int);
+	/* 8015EC28 */ void checkDungeonWarpItem(int);
 	/* 8015F398 */ void checkMasterSwordEquip();
 	/* 8015F3C4 */ void checkWoodShieldEquip();
 	/* 8015F3FC */ void getAttentionOffsetY();
 	/* 8015F424 */ void checkNowWolfEyeUp();
-	/* 8015F438 */ void forceRestartRoom(s32, u32, s32);
-	/* 8015F478 */ void setFmChainPos(fopAc_ac_c*, cXyz*, s32);
+	/* 8015F438 */ void forceRestartRoom(int, u32, int);
+	/* 8015F478 */ void setFmChainPos(fopAc_ac_c*, cXyz*, int);
 	/* 8015F4B8 */ void cancelFmChainGrab();
 	/* 8015F4F0 */ void setLookPos(cXyz*);
 	/* 8015F520 */ void setPlayerSe(u32);
@@ -86,9 +86,9 @@ struct daPy_py_c {
 	/* 8015F8C8 */ bool checkBoomerangChargeTime();
 	/* 8015F8D0 */ void getThrowBoomerangActor();
 	/* 8015F8E4 */ void cancelBoomerangLockActor(fopAc_ac_c*);
-	/* 8015F914 */ void setPlayerDamage(s32, s32);
-	/* 8015F954 */ void setMidnaMotionNum(s32);
-	/* 8015F968 */ void setMidnaFaceNum(s32);
+	/* 8015F914 */ void setPlayerDamage(int, int);
+	/* 8015F954 */ void setMidnaMotionNum(int);
+	/* 8015F968 */ void setMidnaFaceNum(int);
 };
 
 // build daPy_actorKeep_c (daPy_actorKeep_c) False/False
@@ -186,8 +186,8 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
-	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -218,12 +218,12 @@ struct daAlink_c {
 	// cXyz
 	// fopAc_ac_c
 	/* 800A0744 */ void setLookPosFromOut(cXyz*);
-	/* 800BDF60 */ void startRestartRoom(u32, s32, s32, s32);
-	/* 800D72BC */ void setDamagePoint(s32, s32, s32, s32);
+	/* 800BDF60 */ void startRestartRoom(u32, int, int, int);
+	/* 800D72BC */ void setDamagePoint(int, int, int, int);
 	/* 800E01CC */ void cancelBoomerangLock(fopAc_ac_c*);
 	/* 800E0244 */ void checkBoomerangChargeEnd();
 	/* 800E02B8 */ void checkBoomerangCarry(fopAc_ac_c*);
-	/* 800E7AEC */ void setFmChainPosFromOut(fopAc_ac_c*, cXyz*, s32);
+	/* 800E7AEC */ void setFmChainPosFromOut(fopAc_ac_c*, cXyz*, int);
 };
 
 // build JKRArchive (JKRArchive) False/False
@@ -393,7 +393,7 @@ void cM_atan2s(f32, f32);
 void cM_rndF(f32);
 void* operator new(u32);
 void* operator new[](u32);
-void* operator new[](u32, s32);
+void* operator new[](u32, int);
 void operator delete(void*);
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXTrans();
@@ -519,7 +519,7 @@ f64 d_a_d_a_player__lit_4237 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_frameCtrl_c::setFrameCtrl(char field_0, s16 field_1, s16 field_2, f32 field_3, f32 field_4) {
+asm void daPy_frameCtrl_c::setFrameCtrl(u8 field_0, s16 field_1, s16 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/d/a/d_a_player/setFrameCtrl__16daPy_frameCtrl_cFUcssff.s"
 }
@@ -607,7 +607,7 @@ asm void daPy_boomerangMove_c::bgCheckAfterOffset(cXyz const* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::setParamData(s32 field_0, s32 field_1, s32 field_2, s32 field_3) {
+asm void daPy_py_c::setParamData(int field_0, int field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_player/setParamData__9daPy_py_cFiiii.s"
 }
@@ -618,7 +618,7 @@ asm void daPy_py_c::setParamData(s32 field_0, s32 field_1, s32 field_2, s32 fiel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::checkFishingRodItem(s32 field_0) {
+asm void daPy_py_c::checkFishingRodItem(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/checkFishingRodItem__9daPy_py_cFi.s"
 }
@@ -629,7 +629,7 @@ asm void daPy_py_c::checkFishingRodItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::checkBombItem(s32 field_0) {
+asm void daPy_py_c::checkBombItem(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/checkBombItem__9daPy_py_cFi.s"
 }
@@ -640,7 +640,7 @@ asm void daPy_py_c::checkBombItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::checkBottleItem(s32 field_0) {
+asm void daPy_py_c::checkBottleItem(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/checkBottleItem__9daPy_py_cFi.s"
 }
@@ -651,7 +651,7 @@ asm void daPy_py_c::checkBottleItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::checkDrinkBottleItem(s32 field_0) {
+asm void daPy_py_c::checkDrinkBottleItem(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/checkDrinkBottleItem__9daPy_py_cFi.s"
 }
@@ -662,7 +662,7 @@ asm void daPy_py_c::checkDrinkBottleItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::checkOilBottleItem(s32 field_0) {
+asm void daPy_py_c::checkOilBottleItem(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/checkOilBottleItem__9daPy_py_cFi.s"
 }
@@ -673,7 +673,7 @@ asm void daPy_py_c::checkOilBottleItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::checkOpenBottleItem(s32 field_0) {
+asm void daPy_py_c::checkOpenBottleItem(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/checkOpenBottleItem__9daPy_py_cFi.s"
 }
@@ -684,7 +684,7 @@ asm void daPy_py_c::checkOpenBottleItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::checkBowItem(s32 field_0) {
+asm void daPy_py_c::checkBowItem(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/checkBowItem__9daPy_py_cFi.s"
 }
@@ -695,7 +695,7 @@ asm void daPy_py_c::checkBowItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::checkHookshotItem(s32 field_0) {
+asm void daPy_py_c::checkHookshotItem(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/checkHookshotItem__9daPy_py_cFi.s"
 }
@@ -706,7 +706,7 @@ asm void daPy_py_c::checkHookshotItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::checkTradeItem(s32 field_0) {
+asm void daPy_py_c::checkTradeItem(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/checkTradeItem__9daPy_py_cFi.s"
 }
@@ -717,7 +717,7 @@ asm void daPy_py_c::checkTradeItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::checkDungeonWarpItem(s32 field_0) {
+asm void daPy_py_c::checkDungeonWarpItem(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/checkDungeonWarpItem__9daPy_py_cFi.s"
 }
@@ -1033,7 +1033,7 @@ asm void daPy_py_c::checkNowWolfEyeUp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::forceRestartRoom(s32 field_0, u32 field_1, s32 field_2) {
+asm void daPy_py_c::forceRestartRoom(int field_0, u32 field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_player/forceRestartRoom__9daPy_py_cFiUli.s"
 }
@@ -1044,7 +1044,7 @@ asm void daPy_py_c::forceRestartRoom(s32 field_0, u32 field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::setFmChainPos(fopAc_ac_c* field_0, cXyz* field_1, s32 field_2) {
+asm void daPy_py_c::setFmChainPos(fopAc_ac_c* field_0, cXyz* field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_player/setFmChainPos__9daPy_py_cFP10fopAc_ac_cP4cXyzi.s"
 }
@@ -1204,7 +1204,7 @@ asm void daPy_py_c::cancelBoomerangLockActor(fopAc_ac_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::setPlayerDamage(s32 field_0, s32 field_1) {
+asm void daPy_py_c::setPlayerDamage(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_player/setPlayerDamage__9daPy_py_cFii.s"
 }
@@ -1215,7 +1215,7 @@ asm void daPy_py_c::setPlayerDamage(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::setMidnaMotionNum(s32 field_0) {
+asm void daPy_py_c::setMidnaMotionNum(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/setMidnaMotionNum__9daPy_py_cFi.s"
 }
@@ -1226,7 +1226,7 @@ asm void daPy_py_c::setMidnaMotionNum(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_py_c::setMidnaFaceNum(s32 field_0) {
+asm void daPy_py_c::setMidnaFaceNum(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_player/setMidnaFaceNum__9daPy_py_cFi.s"
 }

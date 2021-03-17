@@ -39,25 +39,25 @@ struct dFile_select_c {
 	/* 80184A48 */ void copyBookIconAnm();
 	/* 80184B44 */ void dataDelEffAnm();
 	/* 80184BFC */ void dataCopyEffAnm();
-	/* 80184CB4 */ void selectDataBaseMoveAnmInitSet(s32, s32);
+	/* 80184CB4 */ void selectDataBaseMoveAnmInitSet(int, int);
 	/* 80184D4C */ void selectDataBaseMoveAnm();
 	/* 80184E38 */ void dataSelectInAnmSet();
 	/* 80185040 */ void dataSelectIn();
 	/* 80185230 */ void dataSelectInit();
 	/* 801853C4 */ void dataSelect();
 	/* 80185508 */ void dataSelectStart();
-	/* 80185994 */ void selectDataMoveAnmInitSet(s32, s32);
+	/* 80185994 */ void selectDataMoveAnmInitSet(int, int);
 	/* 80185AAC */ void selectDataMoveAnm();
 	/* 80185C2C */ void dataSelectAnmSet();
 	/* 80185DE0 */ void dataSelectMoveAnime();
-	/* 80186088 */ void makeRecInfo(char);
+	/* 80186088 */ void makeRecInfo(u8);
 	/* 801864DC */ void selectDataOpenMove();
 	/* 80186638 */ void selectDataNameMove();
 	/* 801866C8 */ void selectDataOpenEraseMove();
 	/* 80186774 */ void menuSelect();
 	/* 801868EC */ void menuSelectStart();
 	/* 80186A80 */ void menuSelectCansel();
-	/* 80186B48 */ void menuMoveAnmInitSet(s32, s32);
+	/* 80186B48 */ void menuMoveAnmInitSet(int, int);
 	/* 80186CAC */ void menuMoveAnm();
 	/* 80186E14 */ void menuSelectAnmSet();
 	/* 80186F98 */ void menuSelectMoveAnm();
@@ -74,19 +74,19 @@ struct dFile_select_c {
 	/* 801879B8 */ void ToCopyPaneMove();
 	/* 80187ADC */ void ToErasePaneMove();
 	/* 80187B44 */ void backSelectMove();
-	/* 80187BE8 */ void copySelMoveAnmInitSet(s32, s32);
+	/* 80187BE8 */ void copySelMoveAnmInitSet(int, int);
 	/* 80187DB8 */ void setSaveDataForCopySel();
 	/* 80187ED4 */ void copyDataToSelect();
 	/* 8018801C */ void copyDataToSelectStart();
 	/* 80188234 */ void copyDataToSelectCansel();
 	/* 8018832C */ void copyDataToSelectMoveAnmSet();
 	/* 801884D0 */ void copyDataToSelectMoveAnm();
-	/* 80188834 */ void copySelectWakuAlpahAnmInit(char, char, char, char);
-	/* 80188878 */ void copySelectWakuAlpahAnm(char);
-	/* 80188950 */ void getCptoNum(char);
+	/* 80188834 */ void copySelectWakuAlpahAnmInit(u8, u8, u8, u8);
+	/* 80188878 */ void copySelectWakuAlpahAnm(u8);
+	/* 80188950 */ void getCptoNum(u8);
 	/* 80188994 */ void copyToSelBack();
 	/* 80188B54 */ void copyToSelPaneMove();
-	/* 80188BBC */ void yesnoMenuMoveAnmInitSet(s32, s32);
+	/* 80188BBC */ void yesnoMenuMoveAnmInitSet(int, int);
 	/* 80188D38 */ void yesnoMenuMoveAnm();
 	/* 80188ED0 */ void yesnoSelectMoveAnm();
 	/* 8018912C */ void yesnoCursorShow();
@@ -121,25 +121,25 @@ struct dFile_select_c {
 	/* 8018CE38 */ void setWakuAnm();
 	/* 8018CF50 */ void displayInit();
 	/* 8018D044 */ void setSaveData();
-	/* 8018D0E4 */ void headerTxtSet(u16, char, char);
+	/* 8018D0E4 */ void headerTxtSet(u16, u8, u8);
 	/* 8018D25C */ void headerTxtChangeAnm();
-	/* 8018D344 */ void modoruTxtChange(char);
-	/* 8018D3A0 */ void modoruTxtDispAnmInit(char);
+	/* 8018D344 */ void modoruTxtChange(u8);
+	/* 8018D3A0 */ void modoruTxtDispAnmInit(u8);
 	/* 8018D41C */ void modoruTxtDispAnm();
-	/* 8018D4F8 */ void ketteiTxtDispAnmInit(char);
+	/* 8018D4F8 */ void ketteiTxtDispAnmInit(u8);
 	/* 8018D574 */ void ketteiTxtDispAnm();
-	/* 8018D650 */ void selectWakuAlpahAnmInit(char, char, char, char);
-	/* 8018D68C */ void selectWakuAlpahAnm(char);
+	/* 8018D650 */ void selectWakuAlpahAnmInit(u8, u8, u8, u8);
+	/* 8018D68C */ void selectWakuAlpahAnm(u8);
 	/* 8018D764 */ void selFileCursorShow();
-	/* 8018D884 */ void menuWakuAlpahAnmInit(char, char, char, char);
-	/* 8018D8C8 */ void menuWakuAlpahAnm(char);
+	/* 8018D884 */ void menuWakuAlpahAnmInit(u8, u8, u8, u8);
+	/* 8018D8C8 */ void menuWakuAlpahAnm(u8);
 	/* 8018DA10 */ void menuCursorShow();
-	/* 8018DB80 */ void yesnoWakuAlpahAnmInit(char, char, char, char);
-	/* 8018DBCC */ void yesnoWakuAlpahAnm(char);
+	/* 8018DB80 */ void yesnoWakuAlpahAnmInit(u8, u8, u8, u8);
+	/* 8018DBCC */ void yesnoWakuAlpahAnm(u8);
 	/* 8018DD38 */ void _draw();
-	/* 8018E130 */ void errorMoveAnmInitSet(s32, s32);
+	/* 8018E130 */ void errorMoveAnmInitSet(int, int);
 	/* 8018E1C0 */ void errorMoveAnm();
-	/* 8018E2B4 */ void errDispInitSet(s32, s32);
+	/* 8018E2B4 */ void errDispInitSet(int, int);
 	/* 8018E4CC */ void MemCardCheckMain();
 	/* 8018E504 */ void MemCardStatCheck();
 	/* 8018E7C4 */ void MemCardLoadWait();
@@ -173,7 +173,7 @@ struct dFile_select_c {
 	/* 8018F8D8 */ void MemCardMsgWindowOpen();
 	/* 8018F974 */ void MemCardMsgWindowClose();
 	/* 8018FA2C */ void errYesNoSelect();
-	/* 8018FB80 */ void errCurMove(char);
+	/* 8018FB80 */ void errCurMove(u8);
 	/* 8018FBF8 */ void MemCardErrYesNoCursorMoveAnm();
 	/* 8018FC64 */ void errorTxtSet(u16);
 	/* 8018FD30 */ void errorTxtChangeAnm();
@@ -181,7 +181,7 @@ struct dFile_select_c {
 	/* 8018FE64 */ void fileRecScaleAnmInitSet2(f32, f32);
 	/* 8018FEF4 */ void fileRecScaleAnm2();
 	/* 8018FF9C */ void fileInfoScaleAnm();
-	/* 80190074 */ void nameMoveAnmInitSet(s32, s32);
+	/* 80190074 */ void nameMoveAnmInitSet(int, int);
 	/* 80190124 */ void nameMoveAnm();
 	/* 80190208 */ void MemCardSaveDataClear();
 	/* 80190254 */ void setInitSaveData();
@@ -246,6 +246,8 @@ struct J2DTextBox {
 	// JUtility::TColor
 	/* 80186C84 */ void setWhite(JUtility::TColor);
 	/* 80300658 */ void getStringPtr() const;
+	/* 80300660 */ void setString(char const*, ...);
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // build JUtility (JUtility) True/True
@@ -325,7 +327,7 @@ struct dFile_select3D_c {
 	// cXyz
 	/* 801902F0 */ dFile_select3D_c();
 	/* 80190380 */ ~dFile_select3D_c();
-	/* 801903DC */ void _create(char, char);
+	/* 801903DC */ void _create(u8, u8);
 	/* 8019049C */ void _delete();
 	/* 801904A0 */ void freeHeap();
 	/* 801904E4 */ void _move();
@@ -337,6 +339,7 @@ struct dFile_select3D_c {
 	/* 80190BA8 */ void createMaskModel();
 	/* 80190D68 */ void createMirrorModel();
 	/* 80190FE8 */ void toItem3Dpos(f32, f32, f32, cXyz*);
+	/* 801910D4 */ void calcViewMtx(f32 (* )[4]);
 };
 
 // build cXyz (cXyz) True/True
@@ -349,6 +352,12 @@ struct JUTNameTab {
 };
 
 // build dMsgString_c (dMsgString_c) False/False
+// build COutFont_c (COutFont_c) False/False
+/* top-level dependencies (begin COutFont_c) */
+/* top-level dependencies (end COutFont_c) */
+struct COutFont_c {
+};
+
 // build JUTFont (JUTFont) False/False
 /* top-level dependencies (begin JUTFont) */
 /* top-level dependencies (end JUTFont) */
@@ -356,28 +365,28 @@ struct JUTFont {
 };
 
 // build J2DTextBox (J2DTextBox) True/True
-// build COutFont_c (COutFont_c) False/False
-/* top-level dependencies (begin COutFont_c) */
-/* top-level dependencies (end COutFont_c) */
-struct COutFont_c {
-};
-
 /* top-level dependencies (begin dMsgString_c) */
+// outer dependency: COutFont_c
 // outer dependency: JUTFont
 // outer dependency: J2DTextBox
-// outer dependency: COutFont_c
 /* top-level dependencies (end dMsgString_c) */
 struct dMsgString_c {
+	// COutFont_c
 	// JUTFont
 	// J2DTextBox
-	// COutFont_c
-	/* 80191B6C */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 80191B6C */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
 	/* 80249C20 */ dMsgString_c();
 	/* 80249D28 */ ~dMsgString_c();
 };
 
 // build JUTFont (JUTFont) True/True
 // build COutFont_c (COutFont_c) True/True
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
 // build mDoExt_baseAnm (mDoExt_baseAnm) False/False
 /* top-level dependencies (begin mDoExt_baseAnm) */
 /* top-level dependencies (end mDoExt_baseAnm) */
@@ -414,28 +423,28 @@ struct J3DMaterialTable {
 struct mDoExt_brkAnm {
 	// J3DAnmTevRegKey
 	// J3DMaterialTable
-	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, s32, s32, f32, s16, s16);
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
 // build J3DMaterialTable (J3DMaterialTable) True/True
 // build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
 // build mDoExt_bckAnm (mDoExt_bckAnm) False/False
+// build J3DModelData (J3DModelData) True/True
 // build J3DAnmTransform (J3DAnmTransform) False/False
 /* top-level dependencies (begin J3DAnmTransform) */
 /* top-level dependencies (end J3DAnmTransform) */
 struct J3DAnmTransform {
 };
 
-// build J3DModelData (J3DModelData) True/True
 /* top-level dependencies (begin mDoExt_bckAnm) */
-// outer dependency: J3DAnmTransform
 // outer dependency: J3DModelData
+// outer dependency: J3DAnmTransform
 /* top-level dependencies (end mDoExt_bckAnm) */
 struct mDoExt_bckAnm {
-	// J3DAnmTransform
 	// J3DModelData
-	/* 8000D7DC */ void init(J3DAnmTransform*, s32, s32, f32, s16, s16, bool);
+	// J3DAnmTransform
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
@@ -508,15 +517,15 @@ struct STControl {
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(char) const;
+	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
 // build dSv_player_collect_c (dSv_player_collect_c) False/False
 /* top-level dependencies (begin dSv_player_collect_c) */
 /* top-level dependencies (end dSv_player_collect_c) */
 struct dSv_player_collect_c {
-	/* 8003424C */ void isCollectCrystal(char) const;
-	/* 80034290 */ void isCollectMirror(char) const;
+	/* 8003424C */ void isCollectCrystal(u8) const;
+	/* 80034290 */ void isCollectMirror(u8) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -531,8 +540,8 @@ struct dSv_event_c {
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
 	/* 80034FCC */ void init();
-	/* 80035A04 */ void card_to_memory(char*, s32);
-	/* 80035BD0 */ void initdata_to_card(char*, s32);
+	/* 80035A04 */ void card_to_memory(char*, int);
+	/* 80035BD0 */ void initdata_to_card(char*, int);
 };
 
 // build J3DTevKColorAnm (J3DTevKColorAnm) False/False
@@ -629,7 +638,7 @@ struct J2DAnmBase {
 /* top-level dependencies (end dFile_warning_c) */
 struct dFile_warning_c {
 	// JKRArchive
-	/* 80191BAC */ dFile_warning_c(JKRArchive*, char);
+	/* 80191BAC */ dFile_warning_c(JKRArchive*, u8);
 	/* 80191F18 */ void _move();
 	/* 801920B8 */ void openInit();
 	/* 8019210C */ void closeInit();
@@ -638,45 +647,45 @@ struct dFile_warning_c {
 };
 
 // build dFile_info_c (dFile_info_c) False/False
+// build JKRArchive (JKRArchive) True/True
 // build dSv_save_c (dSv_save_c) False/False
 /* top-level dependencies (begin dSv_save_c) */
 /* top-level dependencies (end dSv_save_c) */
 struct dSv_save_c {
 };
 
-// build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin dFile_info_c) */
-// outer dependency: dSv_save_c
 // outer dependency: JKRArchive
+// outer dependency: dSv_save_c
 /* top-level dependencies (end dFile_info_c) */
 struct dFile_info_c {
-	// dSv_save_c
 	// JKRArchive
-	/* 80192434 */ dFile_info_c(JKRArchive*, char);
-	/* 80192954 */ void setSaveData(dSv_save_c*, s32, char);
+	// dSv_save_c
+	/* 80192434 */ dFile_info_c(JKRArchive*, u8);
+	/* 80192954 */ void setSaveData(dSv_save_c*, int, u8);
 	/* 80192D60 */ void _draw();
 };
 
 // build dSv_save_c (dSv_save_c) True/True
 // build dSelect_cursor_c (dSelect_cursor_c) False/False
-// build JKRArchive (JKRArchive) True/True
 // build J2DPane (J2DPane) True/True
+// build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin dSelect_cursor_c) */
-// outer dependency: JKRArchive
 // outer dependency: J2DPane
+// outer dependency: JKRArchive
 /* top-level dependencies (end dSelect_cursor_c) */
 struct dSelect_cursor_c {
-	// JKRArchive
 	// J2DPane
-	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	// JKRArchive
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
 // build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build J3DModelData (J3DModelData) True/True
 // build cXyz (cXyz) True/True
+// build J3DModelData (J3DModelData) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
@@ -684,15 +693,15 @@ struct dKy_tevstr_c {
 };
 
 /* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: J3DModelData
 // outer dependency: cXyz
+// outer dependency: J3DModelData
 // outer dependency: dKy_tevstr_c
 /* top-level dependencies (end dScnKy_env_light_c) */
 struct dScnKy_env_light_c {
-	// J3DModelData
 	// cXyz
+	// J3DModelData
 	// dKy_tevstr_c
-	/* 801A37C4 */ void settingTevStruct(s32, cXyz*, dKy_tevstr_c*);
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
@@ -715,19 +724,19 @@ struct dMeter2Info_c {
 
 // build JMSMesgEntry_c (JMSMesgEntry_c) True/True
 // build dMsgStringBase_c (dMsgStringBase_c) False/False
+// build COutFont_c (COutFont_c) True/True
 // build JUTFont (JUTFont) True/True
 // build J2DTextBox (J2DTextBox) True/True
-// build COutFont_c (COutFont_c) True/True
 /* top-level dependencies (begin dMsgStringBase_c) */
+// outer dependency: COutFont_c
 // outer dependency: JUTFont
 // outer dependency: J2DTextBox
-// outer dependency: COutFont_c
 /* top-level dependencies (end dMsgStringBase_c) */
 struct dMsgStringBase_c {
+	// COutFont_c
 	// JUTFont
 	// J2DTextBox
-	// COutFont_c
-	/* 80249768 */ void getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 80249768 */ void getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
 };
 
 // build dName_c (dName_c) False/False
@@ -745,8 +754,6 @@ struct dName_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
-// build J2DPane (J2DPane) True/True
-// build J2DScreen (J2DScreen) True/True
 // build JKRExpHeap (JKRExpHeap) False/False
 /* top-level dependencies (begin JKRExpHeap) */
 /* top-level dependencies (end JKRExpHeap) */
@@ -754,67 +761,63 @@ struct JKRExpHeap {
 };
 
 // build JUtility (JUtility) True/True
+// build J2DPane (J2DPane) True/True
+// build J2DScreen (J2DScreen) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DPane
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: JUtility::TColor
+// outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DPane
-	// J2DScreen
 	// JKRExpHeap
 	// JUtility::TColor
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DPane
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253B2C */ void reinit();
-	/* 802547CC */ void scaleAnime(s16, f32, f32, char);
-	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, char);
+	/* 802547CC */ void scaleAnime(s16, f32, f32, u8);
+	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, u8);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // build JKRExpHeap (JKRExpHeap) True/True
 // build CPaneMgrAlpha (CPaneMgrAlpha) False/False
-// build J2DScreen (J2DScreen) True/True
 // build JKRExpHeap (JKRExpHeap) True/True
+// build J2DScreen (J2DScreen) True/True
 /* top-level dependencies (begin CPaneMgrAlpha) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgrAlpha) */
 struct CPaneMgrAlpha {
-	// J2DScreen
 	// JKRExpHeap
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
-	/* 80255878 */ void alphaAnime(s16, char, char, char);
+	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
-struct Vec {
-};
-
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
-// build Vec (Vec) True/True
 // build JKRFileLoader (JKRFileLoader) False/False
 /* top-level dependencies (begin JKRFileLoader) */
 /* top-level dependencies (end JKRFileLoader) */
@@ -885,7 +888,6 @@ struct J3DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" static void calcViewMtx__16dFile_select3D_cFPA4_f();
 extern "C" void __sinit_d_file_select_cpp();
 
 extern "C" void __ct__9dFs_HIO_cFv();
@@ -1072,7 +1074,7 @@ extern "C" void animeEntry__16dFile_select3D_cFv();
 extern "C" void createMaskModel__16dFile_select3D_cFv();
 extern "C" void createMirrorModel__16dFile_select3D_cFv();
 extern "C" void toItem3Dpos__16dFile_select3D_cFfffP4cXyz();
-extern "C" static void calcViewMtx__16dFile_select3D_cFPA4_f();
+extern "C" void calcViewMtx__16dFile_select3D_cFPA4_f();
 extern "C" void getTransform__15J2DAnmTransformCFUsP16J3DTransformInfo();
 extern "C" void __dt__10JUTNameTabFv();
 extern "C" void __dt__17dDlst_FileSel3m_cFv();
@@ -1282,8 +1284,8 @@ SECTION_SDATA2 extern f32 d_file_d_file_select__lit_8993;
 // 
 
 SECTION_INIT void memcpy();
-extern "C" void mDoMtx_XYZrotM__FPA4_fsss();
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+void mDoMtx_XYZrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
 void mDoExt_modelUpdateDL(J3DModel*);
 void mDoExt_createSolidHeapFromGameToCurrent(JKRHeap**, u32, u32);
 void mDoExt_destroySolidHeap(JKRSolidHeap*);
@@ -1293,17 +1295,15 @@ void mDoExt_removeMesgFont();
 void mDoExt_getSubFont();
 void mDoExt_removeSubFont();
 void mDoMemCdRWm_TestCheckSumGameData(void*);
-void mDoMemCdRWm_SetCheckSumGameData(char*, char);
+void mDoMemCdRWm_SetCheckSumGameData(u8*, u8);
 void fopMsgM_messageGet(char*, u32);
-void dKy_tevstr_init(dKy_tevstr_c*, char, char);
+void dKy_tevstr_init(dKy_tevstr_c*, s8, u8);
 void dPaneClass_showNullPane(J2DScreen*);
 void cAPICPad_ANY_BUTTON(u32);
 void* operator new(u32);
 void operator delete(void*);
 extern "C" void func_802F5E88();
 extern "C" void func_802FC800();
-extern "C" void setString__10J2DTextBoxFPCce();
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXConcat();
 extern "C" void PSMTXInverse();
@@ -2692,7 +2692,7 @@ asm void dFile_select_c::dataCopyEffAnm() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::selectDataBaseMoveAnmInitSet(s32 field_0, s32 field_1) {
+asm void dFile_select_c::selectDataBaseMoveAnmInitSet(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/selectDataBaseMoveAnmInitSet__14dFile_select_cFii.s"
 }
@@ -2799,7 +2799,7 @@ asm void dFile_select_c::dataSelectStart() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::selectDataMoveAnmInitSet(s32 field_0, s32 field_1) {
+asm void dFile_select_c::selectDataMoveAnmInitSet(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/selectDataMoveAnmInitSet__14dFile_select_cFii.s"
 }
@@ -2843,7 +2843,7 @@ asm void dFile_select_c::dataSelectMoveAnime() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::makeRecInfo(char field_0) {
+asm void dFile_select_c::makeRecInfo(u8 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/makeRecInfo__14dFile_select_cFUc.s"
 }
@@ -2920,7 +2920,7 @@ asm void dFile_select_c::menuSelectCansel() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::menuMoveAnmInitSet(s32 field_0, s32 field_1) {
+asm void dFile_select_c::menuMoveAnmInitSet(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/menuMoveAnmInitSet__14dFile_select_cFii.s"
 }
@@ -3136,7 +3136,7 @@ f32 d_file_d_file_select__lit_5615 = 109.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::copySelMoveAnmInitSet(s32 field_0, s32 field_1) {
+asm void dFile_select_c::copySelMoveAnmInitSet(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/copySelMoveAnmInitSet__14dFile_select_cFii.s"
 }
@@ -3213,7 +3213,7 @@ asm void dFile_select_c::copyDataToSelectMoveAnm() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::copySelectWakuAlpahAnmInit(char field_0, char field_1, char field_2, char field_3) {
+asm void dFile_select_c::copySelectWakuAlpahAnmInit(u8 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/file/d_file_select/copySelectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc.s"
 }
@@ -3224,7 +3224,7 @@ asm void dFile_select_c::copySelectWakuAlpahAnmInit(char field_0, char field_1, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::copySelectWakuAlpahAnm(char field_0) {
+asm void dFile_select_c::copySelectWakuAlpahAnm(u8 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/copySelectWakuAlpahAnm__14dFile_select_cFUc.s"
 }
@@ -3235,7 +3235,7 @@ asm void dFile_select_c::copySelectWakuAlpahAnm(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::getCptoNum(char field_0) {
+asm void dFile_select_c::getCptoNum(u8 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/getCptoNum__14dFile_select_cFUc.s"
 }
@@ -3268,7 +3268,7 @@ asm void dFile_select_c::copyToSelPaneMove() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::yesnoMenuMoveAnmInitSet(s32 field_0, s32 field_1) {
+asm void dFile_select_c::yesnoMenuMoveAnmInitSet(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/yesnoMenuMoveAnmInitSet__14dFile_select_cFii.s"
 }
@@ -3859,7 +3859,7 @@ u8 data_804506E0[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::headerTxtSet(u16 field_0, char field_1, char field_2) {
+asm void dFile_select_c::headerTxtSet(u16 field_0, u8 field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/file/d_file_select/headerTxtSet__14dFile_select_cFUsUcUc.s"
 }
@@ -3881,7 +3881,7 @@ asm void dFile_select_c::headerTxtChangeAnm() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::modoruTxtChange(char field_0) {
+asm void dFile_select_c::modoruTxtChange(u8 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/modoruTxtChange__14dFile_select_cFUc.s"
 }
@@ -3892,7 +3892,7 @@ asm void dFile_select_c::modoruTxtChange(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::modoruTxtDispAnmInit(char field_0) {
+asm void dFile_select_c::modoruTxtDispAnmInit(u8 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/modoruTxtDispAnmInit__14dFile_select_cFUc.s"
 }
@@ -3914,7 +3914,7 @@ asm void dFile_select_c::modoruTxtDispAnm() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::ketteiTxtDispAnmInit(char field_0) {
+asm void dFile_select_c::ketteiTxtDispAnmInit(u8 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/ketteiTxtDispAnmInit__14dFile_select_cFUc.s"
 }
@@ -3936,7 +3936,7 @@ asm void dFile_select_c::ketteiTxtDispAnm() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::selectWakuAlpahAnmInit(char field_0, char field_1, char field_2, char field_3) {
+asm void dFile_select_c::selectWakuAlpahAnmInit(u8 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/file/d_file_select/selectWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc.s"
 }
@@ -3947,7 +3947,7 @@ asm void dFile_select_c::selectWakuAlpahAnmInit(char field_0, char field_1, char
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::selectWakuAlpahAnm(char field_0) {
+asm void dFile_select_c::selectWakuAlpahAnm(u8 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/selectWakuAlpahAnm__14dFile_select_cFUc.s"
 }
@@ -3969,7 +3969,7 @@ asm void dFile_select_c::selFileCursorShow() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::menuWakuAlpahAnmInit(char field_0, char field_1, char field_2, char field_3) {
+asm void dFile_select_c::menuWakuAlpahAnmInit(u8 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/file/d_file_select/menuWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc.s"
 }
@@ -3980,7 +3980,7 @@ asm void dFile_select_c::menuWakuAlpahAnmInit(char field_0, char field_1, char f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::menuWakuAlpahAnm(char field_0) {
+asm void dFile_select_c::menuWakuAlpahAnm(u8 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/menuWakuAlpahAnm__14dFile_select_cFUc.s"
 }
@@ -4002,7 +4002,7 @@ asm void dFile_select_c::menuCursorShow() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::yesnoWakuAlpahAnmInit(char field_0, char field_1, char field_2, char field_3) {
+asm void dFile_select_c::yesnoWakuAlpahAnmInit(u8 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/file/d_file_select/yesnoWakuAlpahAnmInit__14dFile_select_cFUcUcUcUc.s"
 }
@@ -4013,7 +4013,7 @@ asm void dFile_select_c::yesnoWakuAlpahAnmInit(char field_0, char field_1, char 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::yesnoWakuAlpahAnm(char field_0) {
+asm void dFile_select_c::yesnoWakuAlpahAnm(u8 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/yesnoWakuAlpahAnm__14dFile_select_cFUc.s"
 }
@@ -4090,7 +4090,7 @@ asm void dDlst_FileSel3m_c::draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::errorMoveAnmInitSet(s32 field_0, s32 field_1) {
+asm void dFile_select_c::errorMoveAnmInitSet(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/errorMoveAnmInitSet__14dFile_select_cFii.s"
 }
@@ -4112,7 +4112,7 @@ asm void dFile_select_c::errorMoveAnm() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::errDispInitSet(s32 field_0, s32 field_1) {
+asm void dFile_select_c::errDispInitSet(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/errDispInitSet__14dFile_select_cFii.s"
 }
@@ -4486,7 +4486,7 @@ asm void dFile_select_c::errYesNoSelect() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::errCurMove(char field_0) {
+asm void dFile_select_c::errCurMove(u8 field_0) {
 	nofralloc
 #include "asm/d/file/d_file_select/errCurMove__14dFile_select_cFUc.s"
 }
@@ -4574,7 +4574,7 @@ asm void dFile_select_c::fileInfoScaleAnm() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select_c::nameMoveAnmInitSet(s32 field_0, s32 field_1) {
+asm void dFile_select_c::nameMoveAnmInitSet(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/nameMoveAnmInitSet__14dFile_select_cFii.s"
 }
@@ -4651,7 +4651,7 @@ asm dFile_select3D_c::~dFile_select3D_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_select3D_c::_create(char field_0, char field_1) {
+asm void dFile_select3D_c::_create(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_select/_create__16dFile_select3D_cFUcUc.s"
 }
@@ -4804,7 +4804,7 @@ f32 d_file_d_file_select__lit_8993 = -1000.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void calcViewMtx__16dFile_select3D_cFPA4_f() {
+asm void dFile_select3D_c::calcViewMtx(f32 (* field_0)[4]) {
 	nofralloc
 #include "asm/d/file/d_file_select/calcViewMtx__16dFile_select3D_cFPA4_f.s"
 }
@@ -4909,7 +4909,7 @@ extern "C" asm void __sinit_d_file_select_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgString_c::getString(u32 field_0, J2DTextBox* field_1, J2DTextBox* field_2, JUTFont* field_3, COutFont_c* field_4, char field_5) {
+asm void dMsgString_c::getString(u32 field_0, J2DTextBox* field_1, J2DTextBox* field_2, JUTFont* field_3, COutFont_c* field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/file/d_file_select/getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
 }

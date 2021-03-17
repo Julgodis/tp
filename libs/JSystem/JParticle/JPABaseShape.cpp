@@ -37,20 +37,20 @@ struct JPAClrAnmKeyData {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
 
 // build JPABaseShape (JPABaseShape) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JPAEmitterWorkData (JPAEmitterWorkData) True/True
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin JPABaseShape) */
-// outer dependency: JKRHeap
 // outer dependency: JPAEmitterWorkData
+// outer dependency: JKRHeap
 /* top-level dependencies (end JPABaseShape) */
 struct JPABaseShape {
-	// JKRHeap
 	// JPAEmitterWorkData
-	/* 8027A6DC */ JPABaseShape(char const*, JKRHeap*);
+	// JKRHeap
+	/* 8027A6DC */ JPABaseShape(u8 const*, JKRHeap*);
 	/* 8027A7E8 */ void setGX(JPAEmitterWorkData*) const;
 };
 
@@ -120,9 +120,9 @@ void JPACalcTexIdxMerge(JPAEmitterWorkData*, JPABaseParticle*);
 void JPACalcTexIdxRandom(JPAEmitterWorkData*);
 void JPACalcTexIdxRandom(JPAEmitterWorkData*, JPABaseParticle*);
 void JPALoadPosMtxCam(JPAEmitterWorkData*);
-extern "C" static void noLoadPrj__FPC18JPAEmitterWorkDataPA4_Cf();
-extern "C" static void loadPrj__FPC18JPAEmitterWorkDataPA4_Cf();
-extern "C" static void loadPrjAnm__FPC18JPAEmitterWorkDataPA4_Cf();
+static void noLoadPrj(JPAEmitterWorkData const*, f32 const (* )[4]);
+static void loadPrj(JPAEmitterWorkData const*, f32 const (* )[4]);
+static void loadPrjAnm(JPAEmitterWorkData const*, f32 const (* )[4]);
 void JPADrawBillboard(JPAEmitterWorkData*, JPABaseParticle*);
 void JPADrawRotBillboard(JPAEmitterWorkData*, JPABaseParticle*);
 void JPADrawYBillboard(JPAEmitterWorkData*, JPABaseParticle*);
@@ -132,13 +132,13 @@ extern "C" static void func_802782D0();
 extern "C" static void func_802782EC();
 extern "C" static void func_80278320();
 extern "C" static void func_8027833C();
-extern "C" static void rotTypeY__FffRA3_A4_f();
-extern "C" static void rotTypeX__FffRA3_A4_f();
-extern "C" static void rotTypeZ__FffRA3_A4_f();
-extern "C" static void rotTypeXYZ__FffRA3_A4_f();
-extern "C" static void basePlaneTypeXY__FPA4_fff();
-extern "C" static void basePlaneTypeXZ__FPA4_fff();
-extern "C" static void basePlaneTypeX__FPA4_fff();
+static void rotTypeY(f32, f32, f32 (& )[3][4]);
+static void rotTypeX(f32, f32, f32 (& )[3][4]);
+static void rotTypeZ(f32, f32, f32 (& )[3][4]);
+static void rotTypeXYZ(f32, f32, f32 (& )[3][4]);
+static void basePlaneTypeXY(f32 (* )[4], f32, f32);
+static void basePlaneTypeXZ(f32 (* )[4], f32, f32);
+static void basePlaneTypeX(f32 (* )[4], f32, f32);
 void JPADrawDirection(JPAEmitterWorkData*, JPABaseParticle*);
 void JPADrawRotDirection(JPAEmitterWorkData*, JPABaseParticle*);
 void JPADrawDBillboard(JPAEmitterWorkData*, JPABaseParticle*);
@@ -151,7 +151,7 @@ void JPADrawStripe(JPAEmitterWorkData*);
 void JPADrawStripeX(JPAEmitterWorkData*);
 void JPADrawEmitterCallBackB(JPAEmitterWorkData*);
 void JPADrawParticleCallBack(JPAEmitterWorkData*, JPABaseParticle*);
-static void makeColorTable(_GXColor**, JPAClrAnmKeyData const*, char, s16, JKRHeap*);
+static void makeColorTable(_GXColor**, JPAClrAnmKeyData const*, u8, s16, JKRHeap*);
 
 extern "C" void JPASetPointSize__FP18JPAEmitterWorkData();
 extern "C" void JPASetLineWidth__FP18JPAEmitterWorkData();
@@ -865,7 +865,7 @@ asm void JPALoadPosMtxCam(JPAEmitterWorkData* field_0) {
 
 
 /* 80277C8C-80277C90 0004+00 rc=1 efc=0 .text      noLoadPrj__FPC18JPAEmitterWorkDataPA4_Cf                     */
-extern "C" static void noLoadPrj__FPC18JPAEmitterWorkDataPA4_Cf() {
+static void noLoadPrj(JPAEmitterWorkData const* field_0, f32 const (* field_1)[4]) {
 	/* empty function */
 }
 
@@ -874,7 +874,7 @@ extern "C" static void noLoadPrj__FPC18JPAEmitterWorkDataPA4_Cf() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void loadPrj__FPC18JPAEmitterWorkDataPA4_Cf() {
+asm static void loadPrj(JPAEmitterWorkData const* field_0, f32 const (* field_1)[4]) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPABaseShape/loadPrj__FPC18JPAEmitterWorkDataPA4_Cf.s"
 }
@@ -885,7 +885,7 @@ extern "C" asm static void loadPrj__FPC18JPAEmitterWorkDataPA4_Cf() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void loadPrjAnm__FPC18JPAEmitterWorkDataPA4_Cf() {
+asm static void loadPrjAnm(JPAEmitterWorkData const* field_0, f32 const (* field_1)[4]) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPABaseShape/loadPrjAnm__FPC18JPAEmitterWorkDataPA4_Cf.s"
 }
@@ -1015,7 +1015,7 @@ extern "C" asm static void func_8027833C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void rotTypeY__FffRA3_A4_f() {
+asm static void rotTypeY(f32 field_0, f32 field_1, f32 (& field_2)[3][4]) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPABaseShape/rotTypeY__FffRA3_A4_f.s"
 }
@@ -1026,7 +1026,7 @@ extern "C" asm static void rotTypeY__FffRA3_A4_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void rotTypeX__FffRA3_A4_f() {
+asm static void rotTypeX(f32 field_0, f32 field_1, f32 (& field_2)[3][4]) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPABaseShape/rotTypeX__FffRA3_A4_f.s"
 }
@@ -1037,7 +1037,7 @@ extern "C" asm static void rotTypeX__FffRA3_A4_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void rotTypeZ__FffRA3_A4_f() {
+asm static void rotTypeZ(f32 field_0, f32 field_1, f32 (& field_2)[3][4]) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPABaseShape/rotTypeZ__FffRA3_A4_f.s"
 }
@@ -1055,7 +1055,7 @@ f32 lit_3146 = 0.5773500204086304f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void rotTypeXYZ__FffRA3_A4_f() {
+asm static void rotTypeXYZ(f32 field_0, f32 field_1, f32 (& field_2)[3][4]) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPABaseShape/rotTypeXYZ__FffRA3_A4_f.s"
 }
@@ -1066,7 +1066,7 @@ extern "C" asm static void rotTypeXYZ__FffRA3_A4_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void basePlaneTypeXY__FPA4_fff() {
+asm static void basePlaneTypeXY(f32 (* field_0)[4], f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPABaseShape/basePlaneTypeXY__FPA4_fff.s"
 }
@@ -1077,7 +1077,7 @@ extern "C" asm static void basePlaneTypeXY__FPA4_fff() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void basePlaneTypeXZ__FPA4_fff() {
+asm static void basePlaneTypeXZ(f32 (* field_0)[4], f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPABaseShape/basePlaneTypeXZ__FPA4_fff.s"
 }
@@ -1088,7 +1088,7 @@ extern "C" asm static void basePlaneTypeXZ__FPA4_fff() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void basePlaneTypeX__FPA4_fff() {
+asm static void basePlaneTypeX(f32 (* field_0)[4], f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPABaseShape/basePlaneTypeX__FPA4_fff.s"
 }
@@ -1254,7 +1254,7 @@ asm void JPADrawParticleCallBack(JPAEmitterWorkData* field_0, JPABaseParticle* f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void makeColorTable(_GXColor** field_0, JPAClrAnmKeyData const* field_1, char field_2, s16 field_3, JKRHeap* field_4) {
+asm static void makeColorTable(_GXColor** field_0, JPAClrAnmKeyData const* field_1, u8 field_2, s16 field_3, JKRHeap* field_4) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPABaseShape/makeColorTable__FPP8_GXColorPC16JPAClrAnmKeyDataUcsP7JKRHeap.s"
 }
@@ -1265,7 +1265,7 @@ asm static void makeColorTable(_GXColor** field_0, JPAClrAnmKeyData const* field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JPABaseShape::JPABaseShape(char const* field_0, JKRHeap* field_1) {
+asm JPABaseShape::JPABaseShape(u8 const* field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPABaseShape/__ct__12JPABaseShapeFPCUcP7JKRHeap.s"
 }

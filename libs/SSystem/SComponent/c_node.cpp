@@ -23,7 +23,7 @@ static void cNd_Join(node_class*, node_class*);
 void cNd_LengthOf(node_class*);
 void cNd_First(node_class*);
 void cNd_Last(node_class*);
-void cNd_Order(node_class*, s32);
+void cNd_Order(node_class*, int);
 void cNd_SingleCut(node_class*);
 static void cNd_Cut(node_class*);
 void cNd_Addition(node_class*, node_class*);
@@ -109,7 +109,7 @@ asm void cNd_Last(node_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cNd_Order(node_class* field_0, s32 field_1) {
+asm void cNd_Order(node_class* field_0, int field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_node/cNd_Order__FP10node_classi.s"
 }

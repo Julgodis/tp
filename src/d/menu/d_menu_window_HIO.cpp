@@ -33,7 +33,7 @@ struct dMw_DHIO_c {
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(char) const;
+	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
 // 

@@ -126,8 +126,8 @@ def main(debug, game_path):
 
     cpp_gen = True
     asm_gen = False
-    mk_gen = False
-    symbols_gen = False
+    mk_gen = True
+    symbols_gen = True
     no_file_generation = False
     select_modules = [0]
 

@@ -10,54 +10,55 @@
 // 
 
 // build JUTConsole (JUTConsole) False/False
+// build JUTConsole (JUTConsole) True/False
+struct JUTConsole;
 // build JKRHeap (JKRHeap) False/False
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
 
-// build JUTConsole (JUTConsole) True/False
-struct JUTConsole;
 /* top-level dependencies (begin JUTConsole) */
-// outer dependency: JKRHeap
 // outer dependency: JUTConsole::EConsoleType
+// outer dependency: JKRHeap
 /* top-level dependencies (end JUTConsole) */
 struct JUTConsole {
-	// JKRHeap
 	// JUTConsole::EConsoleType
+	// JKRHeap
 	// build EConsoleType (JUTConsole::EConsoleType) False/False
 	/* dependencies (begin JUTConsole::EConsoleType) */
 	/* dependencies (end JUTConsole::EConsoleType) */
 	struct EConsoleType {
 	};
 
-	/* 802E7354 */ void create(s32, s32, JKRHeap*);
-	/* 802E73E4 */ void create(s32, void*, u32);
-	/* 802E746C */ JUTConsole(s32, s32, bool);
+	/* 802E7354 */ void create(u32, u32, JKRHeap*);
+	/* 802E73E4 */ void create(u32, void*, u32);
+	/* 802E746C */ JUTConsole(u32, u32, bool);
 	/* 802E755C */ ~JUTConsole();
-	/* 802E75CC */ void getObjectSizeFromBufferSize(s32, s32);
-	/* 802E75DC */ void getLineFromObjectSize(u32, s32);
+	/* 802E75CC */ void getObjectSizeFromBufferSize(u32, u32);
+	/* 802E75DC */ void getLineFromObjectSize(u32, u32);
 	/* 802E75EC */ void clear();
 	/* 802E7648 */ void doDraw(JUTConsole::EConsoleType) const;
+	/* 802E7BB8 */ void print_f(char const*, ...);
 	/* 802E7C38 */ void print(char const*);
-	/* 802E7F7C */ void dumpToTerminal(s32);
-	/* 802E80A8 */ void scroll(s32);
+	/* 802E7F7C */ void dumpToTerminal(u32);
+	/* 802E80A8 */ void scroll(int);
 	/* 802E8184 */ void getUsedLine() const;
 	/* 802E81A8 */ void getLineOffset() const;
 };
 
 // build JKRHeap (JKRHeap) True/True
 // build JUTConsoleManager (JUTConsoleManager) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JUTConsole (JUTConsole) True/True
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin JUTConsoleManager) */
-// outer dependency: JKRHeap
 // outer dependency: JUTConsole
+// outer dependency: JKRHeap
 /* top-level dependencies (end JUTConsoleManager) */
 struct JUTConsoleManager {
-	// JKRHeap
 	// JUTConsole
+	// JKRHeap
 	/* 802E81CC */ JUTConsoleManager();
 	/* 802E81F4 */ void createManager(JKRHeap*);
 	/* 802E8240 */ void appendConsole(JUTConsole*);
@@ -80,13 +81,12 @@ struct JKRDisposer {
 struct JGadget;
 // build JGadget (JGadget) True/True
 /* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TNodeLinkList::iterator
 // outer dependency: JGadget::TLinkListNode
+// outer dependency: JGadget::TNodeLinkList::iterator
 /* top-level dependencies (end JGadget) */
 struct JGadget {
 	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
 	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
 	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
 	// build TLinkListNode (JGadget::TLinkListNode) False/False
 	/* dependencies (begin JGadget::TLinkListNode) */
@@ -94,10 +94,11 @@ struct JGadget {
 	struct TLinkListNode {
 	};
 
+	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
 	/* dependencies (end JGadget::TNodeLinkList) */
 	struct TNodeLinkList {
-		// JGadget::TNodeLinkList::iterator
 		// JGadget::TLinkListNode
+		// JGadget::TNodeLinkList::iterator
 		// build iterator (JGadget::TNodeLinkList::iterator) False/False
 		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
 		/* dependencies (end JGadget::TNodeLinkList::iterator) */
@@ -141,7 +142,7 @@ struct JUTFont {
 /* top-level dependencies (end JUTDirectPrint) */
 struct JUTDirectPrint {
 	// JUtility::TColor
-	/* 802E4288 */ void erase(s32, s32, s32, s32);
+	/* 802E4288 */ void erase(int, int, int, int);
 	/* 802E46D8 */ void drawString(u16, u16, char*);
 	/* 802E4798 */ void setCharColor(JUtility::TColor);
 };
@@ -158,7 +159,6 @@ struct J2DOrthoGraph {
 // Forward References:
 // 
 
-extern "C" void print_f__10JUTConsoleFPCce();
 extern "C" void JUTConsole_print_f_va_();
 extern "C" void JUTSetReportConsole();
 extern "C" static void JUTGetReportConsole();
@@ -221,7 +221,7 @@ SECTION_SDATA2 extern f64 lit_2471;
 // 
 
 extern "C" void OSReport();
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
 void J2DFillBox(f32, f32, f32, f32, JUtility::TColor);
 extern "C" void OSEnableInterrupts();
@@ -285,7 +285,7 @@ u8 sManager__17JUTConsoleManager[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTConsole::create(s32 field_0, s32 field_1, JKRHeap* field_2) {
+asm void JUTConsole::create(u32 field_0, u32 field_1, JKRHeap* field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTConsole/create__10JUTConsoleFUiUiP7JKRHeap.s"
 }
@@ -296,7 +296,7 @@ asm void JUTConsole::create(s32 field_0, s32 field_1, JKRHeap* field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTConsole::create(s32 field_0, void* field_1, u32 field_2) {
+asm void JUTConsole::create(u32 field_0, void* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTConsole/create__10JUTConsoleFUiPvUl.s"
 }
@@ -317,7 +317,7 @@ void* const __vt__10JUTConsole[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JUTConsole::JUTConsole(s32 field_0, s32 field_1, bool field_2) {
+asm JUTConsole::JUTConsole(u32 field_0, u32 field_1, bool field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTConsole/__ct__10JUTConsoleFUiUib.s"
 }
@@ -339,7 +339,7 @@ asm JUTConsole::~JUTConsole() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTConsole::getObjectSizeFromBufferSize(s32 field_0, s32 field_1) {
+asm void JUTConsole::getObjectSizeFromBufferSize(u32 field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTConsole/getObjectSizeFromBufferSize__10JUTConsoleFUiUi.s"
 }
@@ -350,7 +350,7 @@ asm void JUTConsole::getObjectSizeFromBufferSize(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTConsole::getLineFromObjectSize(u32 field_0, s32 field_1) {
+asm void JUTConsole::getLineFromObjectSize(u32 field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTConsole/getLineFromObjectSize__10JUTConsoleFUlUi.s"
 }
@@ -414,7 +414,7 @@ asm void JUTConsole::doDraw(JUTConsole::EConsoleType field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void print_f__10JUTConsoleFPCce() {
+asm void JUTConsole::print_f(char const* field_0, ...) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTConsole/print_f__10JUTConsoleFPCce.s"
 }
@@ -463,7 +463,7 @@ SECTION_DEAD char* const pad_8039DA0B = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTConsole::dumpToTerminal(s32 field_0) {
+asm void JUTConsole::dumpToTerminal(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTConsole/dumpToTerminal__10JUTConsoleFUi.s"
 }
@@ -474,7 +474,7 @@ asm void JUTConsole::dumpToTerminal(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTConsole::scroll(s32 field_0) {
+asm void JUTConsole::scroll(int field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTConsole/scroll__10JUTConsoleFi.s"
 }

@@ -51,7 +51,7 @@ void fopScnM_Init();
 void fopDwTg_CreateQueue();
 extern "C" void fpcM_Management__FPFv_vPFv_v();
 void fpcM_Init();
-void cCt_Counter(s32);
+void cCt_Counter(int);
 void operator delete(void*);
 extern "C" void __register_global_object();
 

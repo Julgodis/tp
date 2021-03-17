@@ -21,6 +21,7 @@ struct J3DLightInfo {
 /* top-level dependencies (end J3DTexMtxInfo) */
 struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
+	/* 80325794 */ void setEffectMtx(f32 (* )[4]);
 };
 
 // build J3DIndTexMtxInfo (J3DIndTexMtxInfo) False/False
@@ -48,7 +49,6 @@ struct J3DNBTScaleInfo {
 // Forward References:
 // 
 
-extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f();
 
 extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
 extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
@@ -104,7 +104,7 @@ u8 lit_410[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void setEffectMtx__13J3DTexMtxInfoFPA4_f() {
+asm void J3DTexMtxInfo::setEffectMtx(f32 (* field_0)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DStruct/setEffectMtx__13J3DTexMtxInfoFPA4_f.s"
 }

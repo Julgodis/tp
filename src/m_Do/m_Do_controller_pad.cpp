@@ -40,7 +40,7 @@ struct JUTGamePad {
 	/* 802E06DC */ JUTGamePad(JUTGamePad::EPadPort);
 	/* 802E08E4 */ void read();
 	/* 802E1024 */ void clearForReset();
-	/* 802E199C */ void getGamePad(s32);
+	/* 802E199C */ void getGamePad(int);
 };
 
 /* top-level dependencies (begin mDoCPd_c) */
@@ -80,8 +80,8 @@ SECTION_SDATA2 extern f64 m_Do_m_Do_controller_pad__lit_3713;
 // External References:
 // 
 
-void mDoRst_resetCallBack(s32, void*);
-void cLib_memSet(void*, s32, u32);
+void mDoRst_resetCallBack(int, void*);
+void cLib_memSet(void*, int, u32);
 void* operator new(u32);
 extern "C" void PADSetAnalogMode();
 extern "C" void _savegpr_29();

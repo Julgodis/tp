@@ -40,16 +40,10 @@ struct J2DTexGenBlock {
 
 // build J2DTexMtx (J2DTexMtx) True/True
 // build J2DTevBlock (J2DTevBlock) False/False
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) False/False
-/* top-level dependencies (begin J2DTevSwapModeInfo) */
-/* top-level dependencies (end J2DTevSwapModeInfo) */
-struct J2DTevSwapModeInfo {
-};
-
-// build ResTLUT (ResTLUT) False/False
-/* top-level dependencies (begin ResTLUT) */
-/* top-level dependencies (end ResTLUT) */
-struct ResTLUT {
+// build ResFONT (ResFONT) False/False
+/* top-level dependencies (begin ResFONT) */
+/* top-level dependencies (end ResFONT) */
+struct ResFONT {
 };
 
 // build JUtility (JUtility) False/False
@@ -65,88 +59,12 @@ struct JUtility {
 
 };
 
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
-struct JUTFont {
-};
-
 // build ResTIMG (ResTIMG) False/False
 /* top-level dependencies (begin ResTIMG) */
 /* top-level dependencies (end ResTIMG) */
 struct ResTIMG {
 };
 
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) False/False
-/* top-level dependencies (begin J2DTevSwapModeTable) */
-/* top-level dependencies (end J2DTevSwapModeTable) */
-struct J2DTevSwapModeTable {
-	/* 802F1934 */ J2DTevSwapModeTable();
-};
-
-// build ResFONT (ResFONT) False/False
-/* top-level dependencies (begin ResFONT) */
-/* top-level dependencies (end ResFONT) */
-struct ResFONT {
-};
-
-// build J2DGXColorS10 (J2DGXColorS10) False/False
-/* top-level dependencies (begin J2DGXColorS10) */
-/* top-level dependencies (end J2DGXColorS10) */
-struct J2DGXColorS10 {
-	/* 802F1B90 */ J2DGXColorS10();
-};
-
-// build J2DTevOrder (J2DTevOrder) False/False
-/* top-level dependencies (begin J2DTevOrder) */
-/* top-level dependencies (end J2DTevOrder) */
-struct J2DTevOrder {
-	/* 802F1B70 */ J2DTevOrder();
-};
-
-// build JUTTexture (JUTTexture) False/False
-// build ResTIMG (ResTIMG) True/True
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
-struct _GXTexMapID {
-};
-
-// build JUTPalette (JUTPalette) False/False
-// build _GXTlut (_GXTlut) False/False
-/* top-level dependencies (begin _GXTlut) */
-/* top-level dependencies (end _GXTlut) */
-struct _GXTlut {
-};
-
-// build ResTLUT (ResTLUT) True/True
-/* top-level dependencies (begin JUTPalette) */
-// outer dependency: _GXTlut
-// outer dependency: ResTLUT
-/* top-level dependencies (end JUTPalette) */
-struct JUTPalette {
-	// _GXTlut
-	// ResTLUT
-	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
-};
-
-/* top-level dependencies (begin JUTTexture) */
-// outer dependency: ResTIMG
-// outer dependency: _GXTexMapID
-// outer dependency: JUTPalette
-/* top-level dependencies (end JUTTexture) */
-struct JUTTexture {
-	// ResTIMG
-	// _GXTexMapID
-	// JUTPalette
-	/* 802DE234 */ ~JUTTexture();
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, char);
-	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
-	/* 802DE5B0 */ void attachPalette(JUTPalette*);
-	/* 802DE840 */ void load(_GXTexMapID);
-};
-
-// build JUTPalette (JUTPalette) True/True
 // build J2DTevStage (J2DTevStage) False/False
 // build J2DTevStageInfo (J2DTevStageInfo) False/False
 /* top-level dependencies (begin J2DTevStageInfo) */
@@ -163,46 +81,128 @@ struct J2DTevStage {
 	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
 };
 
+// build J2DTevSwapModeTable (J2DTevSwapModeTable) False/False
+/* top-level dependencies (begin J2DTevSwapModeTable) */
+/* top-level dependencies (end J2DTevSwapModeTable) */
+struct J2DTevSwapModeTable {
+	/* 802F1934 */ J2DTevSwapModeTable();
+};
+
+// build JUTPalette (JUTPalette) False/False
+// build ResTLUT (ResTLUT) False/False
+/* top-level dependencies (begin ResTLUT) */
+/* top-level dependencies (end ResTLUT) */
+struct ResTLUT {
+};
+
+// build _GXTlut (_GXTlut) False/False
+/* top-level dependencies (begin _GXTlut) */
+/* top-level dependencies (end _GXTlut) */
+struct _GXTlut {
+};
+
+/* top-level dependencies (begin JUTPalette) */
+// outer dependency: ResTLUT
+// outer dependency: _GXTlut
+/* top-level dependencies (end JUTPalette) */
+struct JUTPalette {
+	// ResTLUT
+	// _GXTlut
+	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
+};
+
+// build ResTLUT (ResTLUT) True/True
+// build J2DGXColorS10 (J2DGXColorS10) False/False
+/* top-level dependencies (begin J2DGXColorS10) */
+/* top-level dependencies (end J2DGXColorS10) */
+struct J2DGXColorS10 {
+	/* 802F1B90 */ J2DGXColorS10();
+};
+
+// build _GXTexMapID (_GXTexMapID) False/False
+/* top-level dependencies (begin _GXTexMapID) */
+/* top-level dependencies (end _GXTexMapID) */
+struct _GXTexMapID {
+};
+
 // build J2DIndTevStage (J2DIndTevStage) False/False
 /* top-level dependencies (begin J2DIndTevStage) */
 /* top-level dependencies (end J2DIndTevStage) */
 struct J2DIndTevStage {
-	/* 802EA044 */ void load(char);
+	/* 802EA044 */ void load(u8);
 	/* 802F18A0 */ J2DIndTevStage();
 };
 
+// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) False/False
+/* top-level dependencies (begin J2DTevSwapModeInfo) */
+/* top-level dependencies (end J2DTevSwapModeInfo) */
+struct J2DTevSwapModeInfo {
+};
+
+// build JUTTexture (JUTTexture) False/False
+// build JUTPalette (JUTPalette) True/True
 // build _GXTexMapID (_GXTexMapID) True/True
-/* top-level dependencies (begin J2DTevBlock) */
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: ResTLUT
-// outer dependency: JUtility::TColor
-// outer dependency: JUTFont
-// outer dependency: ResTIMG
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: ResFONT
-// outer dependency: J2DGXColorS10
-// outer dependency: J2DTevOrder
-// outer dependency: JUTTexture
+// build ResTIMG (ResTIMG) True/True
+/* top-level dependencies (begin JUTTexture) */
 // outer dependency: JUTPalette
-// outer dependency: J2DTevStage
-// outer dependency: J2DIndTevStage
 // outer dependency: _GXTexMapID
+// outer dependency: ResTIMG
+/* top-level dependencies (end JUTTexture) */
+struct JUTTexture {
+	// JUTPalette
+	// _GXTexMapID
+	// ResTIMG
+	/* 802DE234 */ ~JUTTexture();
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
+	/* 802DE5B0 */ void attachPalette(JUTPalette*);
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+// build J2DTevOrder (J2DTevOrder) False/False
+/* top-level dependencies (begin J2DTevOrder) */
+/* top-level dependencies (end J2DTevOrder) */
+struct J2DTevOrder {
+	/* 802F1B70 */ J2DTevOrder();
+};
+
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
+/* top-level dependencies (begin J2DTevBlock) */
+// outer dependency: ResFONT
+// outer dependency: JUtility::TColor
+// outer dependency: ResTIMG
+// outer dependency: J2DTevStage
+// outer dependency: J2DTevSwapModeTable
+// outer dependency: JUTPalette
+// outer dependency: ResTLUT
+// outer dependency: J2DGXColorS10
+// outer dependency: _GXTexMapID
+// outer dependency: J2DIndTevStage
+// outer dependency: J2DTevSwapModeInfo
+// outer dependency: JUTTexture
+// outer dependency: J2DTevOrder
+// outer dependency: JUTFont
 /* top-level dependencies (end J2DTevBlock) */
 struct J2DTevBlock {
-	// J2DTevSwapModeInfo
-	// ResTLUT
-	// JUtility::TColor
-	// JUTFont
-	// ResTIMG
-	// J2DTevSwapModeTable
 	// ResFONT
-	// J2DGXColorS10
-	// J2DTevOrder
-	// JUTTexture
-	// JUTPalette
+	// JUtility::TColor
+	// ResTIMG
 	// J2DTevStage
-	// J2DIndTevStage
+	// J2DTevSwapModeTable
+	// JUTPalette
+	// ResTLUT
+	// J2DGXColorS10
 	// _GXTexMapID
+	// J2DIndTevStage
+	// J2DTevSwapModeInfo
+	// JUTTexture
+	// J2DTevOrder
+	// JUTFont
 	/* 802EA12C */ bool getTevSwapModeTable(u32);
 	/* 802EA134 */ bool getTevStage(u32);
 	/* 802EA13C */ bool getTevColor(u32);
@@ -225,9 +225,9 @@ struct J2DTevBlock {
 	/* 802F2A44 */ void loadTexture(_GXTexMapID, u32);
 	/* 802F2A48 */ void setFontNo(u16);
 	/* 802F2A4C */ void setTevOrder(u32, J2DTevOrder);
-	/* 802F2A50 */ void setTevKColorSel(u32, char);
-	/* 802F2A54 */ void setTevKAlphaSel(u32, char);
-	/* 802F2A58 */ void setTevStageNum(char);
+	/* 802F2A50 */ void setTevKColorSel(u32, u8);
+	/* 802F2A54 */ void setTevKAlphaSel(u32, u8);
+	/* 802F2A58 */ void setTevStageNum(u8);
 	/* 802F2A5C */ void setTevStage(u32, J2DTevStage);
 	/* 802F2A60 */ void setTevSwapModeInfo(u32, J2DTevSwapModeInfo);
 	/* 802F2A64 */ void setTevSwapModeTable(u32, J2DTevSwapModeTable);
@@ -241,63 +241,63 @@ struct J2DTevBlock {
 	/* 802F2A9C */ bool setFont(JUTFont*);
 	/* 802F2AA4 */ bool setFont(ResFONT*);
 	/* 802F2AAC */ bool setPalette(u32, ResTLUT const*);
-	/* 802F2AB4 */ bool prepareTexture(char);
+	/* 802F2AB4 */ bool prepareTexture(u8);
 	/* 802F2ABC */ bool getFont();
-	/* 802F2AC4 */ void shiftDeleteFlag(char, bool);
-	/* 802F2AC8 */ void setUndeleteFlag(char);
+	/* 802F2AC4 */ void shiftDeleteFlag(u8, bool);
+	/* 802F2AC8 */ void setUndeleteFlag(u8);
 	/* 802F2ACC */ void setFontUndeleteFlag();
 };
 
 // build J2DTevBlock1 (J2DTevBlock1) False/False
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
-// build ResTLUT (ResTLUT) True/True
-// build JUtility (JUtility) True/True
-// build JUTFont (JUTFont) True/True
-// build ResTIMG (ResTIMG) True/True
 // build ResFONT (ResFONT) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
-// build JUTTexture (JUTTexture) True/True
-// build JUTPalette (JUTPalette) True/True
-// build J2DTevOrder (J2DTevOrder) True/True
+// build JUtility (JUtility) True/True
+// build ResTIMG (ResTIMG) True/True
 // build J2DTevStage (J2DTevStage) True/True
-// build J2DIndTevStage (J2DIndTevStage) True/True
+// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
+// build JUTPalette (JUTPalette) True/True
+// build ResTLUT (ResTLUT) True/True
+// build J2DGXColorS10 (J2DGXColorS10) True/True
+// build JUTTexture (JUTTexture) True/True
 // build _GXTexMapID (_GXTexMapID) True/True
+// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
+// build J2DIndTevStage (J2DIndTevStage) True/True
+// build J2DTevOrder (J2DTevOrder) True/True
+// build JUTFont (JUTFont) True/True
 /* top-level dependencies (begin J2DTevBlock1) */
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: ResTLUT
-// outer dependency: JUtility::TColor
-// outer dependency: JUTFont
-// outer dependency: ResTIMG
 // outer dependency: ResFONT
-// outer dependency: J2DGXColorS10
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: JUTTexture
-// outer dependency: JUTPalette
-// outer dependency: J2DTevOrder
+// outer dependency: JUtility::TColor
+// outer dependency: ResTIMG
 // outer dependency: J2DTevStage
-// outer dependency: J2DIndTevStage
+// outer dependency: J2DTevSwapModeTable
+// outer dependency: JUTPalette
+// outer dependency: ResTLUT
+// outer dependency: J2DGXColorS10
+// outer dependency: JUTTexture
 // outer dependency: _GXTexMapID
+// outer dependency: J2DTevSwapModeInfo
+// outer dependency: J2DIndTevStage
+// outer dependency: J2DTevOrder
+// outer dependency: JUTFont
 /* top-level dependencies (end J2DTevBlock1) */
 struct J2DTevBlock1 {
-	// J2DTevSwapModeInfo
-	// ResTLUT
-	// JUtility::TColor
-	// JUTFont
-	// ResTIMG
 	// ResFONT
-	// J2DGXColorS10
-	// J2DTevSwapModeTable
-	// JUTTexture
-	// JUTPalette
-	// J2DTevOrder
+	// JUtility::TColor
+	// ResTIMG
 	// J2DTevStage
-	// J2DIndTevStage
+	// J2DTevSwapModeTable
+	// JUTPalette
+	// ResTLUT
+	// J2DGXColorS10
+	// JUTTexture
 	// _GXTexMapID
+	// J2DTevSwapModeInfo
+	// J2DIndTevStage
+	// J2DTevOrder
+	// JUTFont
 	/* 802EB88C */ J2DTevBlock1();
 	/* 802EB998 */ ~J2DTevBlock1();
 	/* 802EBA50 */ void initialize();
-	/* 802EBC0C */ void prepareTexture(char);
+	/* 802EBC0C */ void prepareTexture(u8);
 	/* 802EBCC0 */ void insertTexture(u32, ResTIMG const*, JUTPalette*);
 	/* 802EBDE4 */ void insertTexture(u32, JUTTexture*);
 	/* 802EBE8C */ void setTexture(u32, ResTIMG const*);
@@ -306,7 +306,7 @@ struct J2DTevBlock1 {
 	/* 802EC124 */ void setFont(ResFONT*);
 	/* 802EC1D8 */ void setFont(JUTFont*);
 	/* 802EC258 */ void setPalette(u32, ResTLUT const*);
-	/* 802EC318 */ void shiftDeleteFlag(char, bool);
+	/* 802EC318 */ void shiftDeleteFlag(u8, bool);
 	/* 802EC328 */ void setGX();
 	/* 802EC570 */ void loadTexture(_GXTexMapID, u32);
 	/* 802F27A0 */ void getType();
@@ -321,11 +321,11 @@ struct J2DTevBlock1 {
 	/* 802F2848 */ void getTevColor(u32);
 	/* 802F285C */ void setTevKColor(u32, JUtility::TColor);
 	/* 802F2888 */ void getTevKColor(u32);
-	/* 802F289C */ void setTevKColorSel(u32, char);
+	/* 802F289C */ void setTevKColorSel(u32, u8);
 	/* 802F28A8 */ void getTevKColorSel(u32);
-	/* 802F28B4 */ void setTevKAlphaSel(u32, char);
+	/* 802F28B4 */ void setTevKAlphaSel(u32, u8);
 	/* 802F28C0 */ void getTevKAlphaSel(u32);
-	/* 802F28CC */ void setTevStageNum(char);
+	/* 802F28CC */ void setTevStageNum(u8);
 	/* 802F28D0 */ bool getTevStageNum() const;
 	/* 802F28D8 */ void setTevStage(u32, J2DTevStage);
 	/* 802F2914 */ void getTevStage(u32);
@@ -338,7 +338,7 @@ struct J2DTevBlock1 {
 	/* 802F29D8 */ void getTexture(u32);
 	/* 802F29F8 */ void getPalette(u32);
 	/* 802F2A18 */ void getFont();
-	/* 802F2A20 */ void setUndeleteFlag(char);
+	/* 802F2A20 */ void setUndeleteFlag(u8);
 	/* 802F2A30 */ void setFontUndeleteFlag();
 };
 
@@ -350,55 +350,55 @@ struct J2DTevBlock1 {
 // build ResTLUT (ResTLUT) True/True
 // build _GXTexMapID (_GXTexMapID) True/True
 // build J2DTevBlock2 (J2DTevBlock2) False/False
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
-// build ResTLUT (ResTLUT) True/True
-// build JUtility (JUtility) True/True
-// build JUTFont (JUTFont) True/True
-// build ResTIMG (ResTIMG) True/True
 // build ResFONT (ResFONT) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
-// build JUTTexture (JUTTexture) True/True
-// build JUTPalette (JUTPalette) True/True
-// build J2DTevOrder (J2DTevOrder) True/True
+// build JUtility (JUtility) True/True
+// build ResTIMG (ResTIMG) True/True
 // build J2DTevStage (J2DTevStage) True/True
-// build J2DIndTevStage (J2DIndTevStage) True/True
+// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
+// build JUTPalette (JUTPalette) True/True
+// build ResTLUT (ResTLUT) True/True
+// build J2DGXColorS10 (J2DGXColorS10) True/True
+// build JUTTexture (JUTTexture) True/True
 // build _GXTexMapID (_GXTexMapID) True/True
+// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
+// build J2DIndTevStage (J2DIndTevStage) True/True
+// build J2DTevOrder (J2DTevOrder) True/True
+// build JUTFont (JUTFont) True/True
 /* top-level dependencies (begin J2DTevBlock2) */
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: ResTLUT
-// outer dependency: JUtility::TColor
-// outer dependency: JUTFont
-// outer dependency: ResTIMG
 // outer dependency: ResFONT
-// outer dependency: J2DGXColorS10
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: JUTTexture
-// outer dependency: JUTPalette
-// outer dependency: J2DTevOrder
+// outer dependency: JUtility::TColor
+// outer dependency: ResTIMG
 // outer dependency: J2DTevStage
-// outer dependency: J2DIndTevStage
+// outer dependency: J2DTevSwapModeTable
+// outer dependency: JUTPalette
+// outer dependency: ResTLUT
+// outer dependency: J2DGXColorS10
+// outer dependency: JUTTexture
 // outer dependency: _GXTexMapID
+// outer dependency: J2DTevSwapModeInfo
+// outer dependency: J2DIndTevStage
+// outer dependency: J2DTevOrder
+// outer dependency: JUTFont
 /* top-level dependencies (end J2DTevBlock2) */
 struct J2DTevBlock2 {
-	// J2DTevSwapModeInfo
-	// ResTLUT
-	// JUtility::TColor
-	// JUTFont
-	// ResTIMG
 	// ResFONT
-	// J2DGXColorS10
-	// J2DTevSwapModeTable
-	// JUTTexture
-	// JUTPalette
-	// J2DTevOrder
+	// JUtility::TColor
+	// ResTIMG
 	// J2DTevStage
-	// J2DIndTevStage
+	// J2DTevSwapModeTable
+	// JUTPalette
+	// ResTLUT
+	// J2DGXColorS10
+	// JUTTexture
 	// _GXTexMapID
+	// J2DTevSwapModeInfo
+	// J2DIndTevStage
+	// J2DTevOrder
+	// JUTFont
 	/* 802EC5B8 */ J2DTevBlock2();
 	/* 802EC6C8 */ ~J2DTevBlock2();
 	/* 802EC7A0 */ void initialize();
-	/* 802ECA18 */ void prepareTexture(char);
+	/* 802ECA18 */ void prepareTexture(u8);
 	/* 802ECAE8 */ void insertTexture(u32, ResTIMG const*, JUTPalette*);
 	/* 802ECDE8 */ void insertTexture(u32, JUTTexture*);
 	/* 802ECF48 */ void setTexture(u32, ResTIMG const*);
@@ -407,7 +407,7 @@ struct J2DTevBlock2 {
 	/* 802ED2F0 */ void setFont(ResFONT*);
 	/* 802ED3A4 */ void setFont(JUTFont*);
 	/* 802ED424 */ void setPalette(u32, ResTLUT const*);
-	/* 802ED4FC */ void shiftDeleteFlag(char, bool);
+	/* 802ED4FC */ void shiftDeleteFlag(u8, bool);
 	/* 802ED584 */ void setGX();
 	/* 802ED874 */ void loadTexture(_GXTexMapID, u32);
 	/* 802F24FC */ void getType();
@@ -422,11 +422,11 @@ struct J2DTevBlock2 {
 	/* 802F25A4 */ void getTevColor(u32);
 	/* 802F25B8 */ void setTevKColor(u32, JUtility::TColor);
 	/* 802F25E4 */ void getTevKColor(u32);
-	/* 802F25F8 */ void setTevKColorSel(u32, char);
+	/* 802F25F8 */ void setTevKColorSel(u32, u8);
 	/* 802F2604 */ void getTevKColorSel(u32);
-	/* 802F2610 */ void setTevKAlphaSel(u32, char);
+	/* 802F2610 */ void setTevKAlphaSel(u32, u8);
 	/* 802F261C */ void getTevKAlphaSel(u32);
-	/* 802F2628 */ void setTevStageNum(char);
+	/* 802F2628 */ void setTevStageNum(u8);
 	/* 802F2630 */ void getTevStageNum() const;
 	/* 802F2638 */ void setTevStage(u32, J2DTevStage);
 	/* 802F2674 */ void getTevStage(u32);
@@ -439,60 +439,60 @@ struct J2DTevBlock2 {
 	/* 802F2738 */ void getTexture(u32);
 	/* 802F2758 */ void getPalette(u32);
 	/* 802F2778 */ void getFont();
-	/* 802F2780 */ void setUndeleteFlag(char);
+	/* 802F2780 */ void setUndeleteFlag(u8);
 	/* 802F2790 */ void setFontUndeleteFlag();
 };
 
 // build J2DTevBlock4 (J2DTevBlock4) False/False
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
-// build ResTLUT (ResTLUT) True/True
-// build JUtility (JUtility) True/True
-// build JUTFont (JUTFont) True/True
-// build ResTIMG (ResTIMG) True/True
 // build ResFONT (ResFONT) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
-// build JUTTexture (JUTTexture) True/True
-// build JUTPalette (JUTPalette) True/True
-// build J2DTevOrder (J2DTevOrder) True/True
+// build JUtility (JUtility) True/True
+// build ResTIMG (ResTIMG) True/True
 // build J2DTevStage (J2DTevStage) True/True
-// build J2DIndTevStage (J2DIndTevStage) True/True
+// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
+// build JUTPalette (JUTPalette) True/True
+// build ResTLUT (ResTLUT) True/True
+// build J2DGXColorS10 (J2DGXColorS10) True/True
+// build JUTTexture (JUTTexture) True/True
 // build _GXTexMapID (_GXTexMapID) True/True
+// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
+// build J2DIndTevStage (J2DIndTevStage) True/True
+// build J2DTevOrder (J2DTevOrder) True/True
+// build JUTFont (JUTFont) True/True
 /* top-level dependencies (begin J2DTevBlock4) */
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: ResTLUT
-// outer dependency: JUtility::TColor
-// outer dependency: JUTFont
-// outer dependency: ResTIMG
 // outer dependency: ResFONT
-// outer dependency: J2DGXColorS10
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: JUTTexture
-// outer dependency: JUTPalette
-// outer dependency: J2DTevOrder
+// outer dependency: JUtility::TColor
+// outer dependency: ResTIMG
 // outer dependency: J2DTevStage
-// outer dependency: J2DIndTevStage
+// outer dependency: J2DTevSwapModeTable
+// outer dependency: JUTPalette
+// outer dependency: ResTLUT
+// outer dependency: J2DGXColorS10
+// outer dependency: JUTTexture
 // outer dependency: _GXTexMapID
+// outer dependency: J2DTevSwapModeInfo
+// outer dependency: J2DIndTevStage
+// outer dependency: J2DTevOrder
+// outer dependency: JUTFont
 /* top-level dependencies (end J2DTevBlock4) */
 struct J2DTevBlock4 {
-	// J2DTevSwapModeInfo
-	// ResTLUT
-	// JUtility::TColor
-	// JUTFont
-	// ResTIMG
 	// ResFONT
-	// J2DGXColorS10
-	// J2DTevSwapModeTable
-	// JUTTexture
-	// JUTPalette
-	// J2DTevOrder
+	// JUtility::TColor
+	// ResTIMG
 	// J2DTevStage
-	// J2DIndTevStage
+	// J2DTevSwapModeTable
+	// JUTPalette
+	// ResTLUT
+	// J2DGXColorS10
+	// JUTTexture
 	// _GXTexMapID
+	// J2DTevSwapModeInfo
+	// J2DIndTevStage
+	// J2DTevOrder
+	// JUTFont
 	/* 802ED8BC */ J2DTevBlock4();
 	/* 802ED9E4 */ ~J2DTevBlock4();
 	/* 802EDAC4 */ void initialize();
-	/* 802EDD34 */ void prepareTexture(char);
+	/* 802EDD34 */ void prepareTexture(u8);
 	/* 802EDE04 */ void insertTexture(u32, ResTIMG const*, JUTPalette*);
 	/* 802EE1D4 */ void insertTexture(u32, JUTTexture*);
 	/* 802EE364 */ void setTexture(u32, ResTIMG const*);
@@ -501,7 +501,7 @@ struct J2DTevBlock4 {
 	/* 802EE798 */ void setFont(ResFONT*);
 	/* 802EE84C */ void setFont(JUTFont*);
 	/* 802EE8CC */ void setPalette(u32, ResTLUT const*);
-	/* 802EE9A4 */ void shiftDeleteFlag(char, bool);
+	/* 802EE9A4 */ void shiftDeleteFlag(u8, bool);
 	/* 802EEA2C */ void setGX();
 	/* 802EED1C */ void loadTexture(_GXTexMapID, u32);
 	/* 802F2258 */ void getType();
@@ -516,11 +516,11 @@ struct J2DTevBlock4 {
 	/* 802F2300 */ void getTevColor(u32);
 	/* 802F2314 */ void setTevKColor(u32, JUtility::TColor);
 	/* 802F2340 */ void getTevKColor(u32);
-	/* 802F2354 */ void setTevKColorSel(u32, char);
+	/* 802F2354 */ void setTevKColorSel(u32, u8);
 	/* 802F2360 */ void getTevKColorSel(u32);
-	/* 802F236C */ void setTevKAlphaSel(u32, char);
+	/* 802F236C */ void setTevKAlphaSel(u32, u8);
 	/* 802F2378 */ void getTevKAlphaSel(u32);
-	/* 802F2384 */ void setTevStageNum(char);
+	/* 802F2384 */ void setTevStageNum(u8);
 	/* 802F238C */ void getTevStageNum() const;
 	/* 802F2394 */ void setTevStage(u32, J2DTevStage);
 	/* 802F23D0 */ void getTevStage(u32);
@@ -533,60 +533,60 @@ struct J2DTevBlock4 {
 	/* 802F2494 */ void getTexture(u32);
 	/* 802F24B4 */ void getPalette(u32);
 	/* 802F24D4 */ void getFont();
-	/* 802F24DC */ void setUndeleteFlag(char);
+	/* 802F24DC */ void setUndeleteFlag(u8);
 	/* 802F24EC */ void setFontUndeleteFlag();
 };
 
 // build J2DTevBlock8 (J2DTevBlock8) False/False
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
-// build ResTLUT (ResTLUT) True/True
-// build JUtility (JUtility) True/True
-// build JUTFont (JUTFont) True/True
-// build ResTIMG (ResTIMG) True/True
 // build ResFONT (ResFONT) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
-// build JUTTexture (JUTTexture) True/True
-// build JUTPalette (JUTPalette) True/True
-// build J2DTevOrder (J2DTevOrder) True/True
+// build JUtility (JUtility) True/True
+// build ResTIMG (ResTIMG) True/True
 // build J2DTevStage (J2DTevStage) True/True
-// build J2DIndTevStage (J2DIndTevStage) True/True
+// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
+// build JUTPalette (JUTPalette) True/True
+// build ResTLUT (ResTLUT) True/True
+// build J2DGXColorS10 (J2DGXColorS10) True/True
+// build JUTTexture (JUTTexture) True/True
 // build _GXTexMapID (_GXTexMapID) True/True
+// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
+// build J2DIndTevStage (J2DIndTevStage) True/True
+// build J2DTevOrder (J2DTevOrder) True/True
+// build JUTFont (JUTFont) True/True
 /* top-level dependencies (begin J2DTevBlock8) */
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: ResTLUT
-// outer dependency: JUtility::TColor
-// outer dependency: JUTFont
-// outer dependency: ResTIMG
 // outer dependency: ResFONT
-// outer dependency: J2DGXColorS10
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: JUTTexture
-// outer dependency: JUTPalette
-// outer dependency: J2DTevOrder
+// outer dependency: JUtility::TColor
+// outer dependency: ResTIMG
 // outer dependency: J2DTevStage
-// outer dependency: J2DIndTevStage
+// outer dependency: J2DTevSwapModeTable
+// outer dependency: JUTPalette
+// outer dependency: ResTLUT
+// outer dependency: J2DGXColorS10
+// outer dependency: JUTTexture
 // outer dependency: _GXTexMapID
+// outer dependency: J2DTevSwapModeInfo
+// outer dependency: J2DIndTevStage
+// outer dependency: J2DTevOrder
+// outer dependency: JUTFont
 /* top-level dependencies (end J2DTevBlock8) */
 struct J2DTevBlock8 {
-	// J2DTevSwapModeInfo
-	// ResTLUT
-	// JUtility::TColor
-	// JUTFont
-	// ResTIMG
 	// ResFONT
-	// J2DGXColorS10
-	// J2DTevSwapModeTable
-	// JUTTexture
-	// JUTPalette
-	// J2DTevOrder
+	// JUtility::TColor
+	// ResTIMG
 	// J2DTevStage
-	// J2DIndTevStage
+	// J2DTevSwapModeTable
+	// JUTPalette
+	// ResTLUT
+	// J2DGXColorS10
+	// JUTTexture
 	// _GXTexMapID
+	// J2DTevSwapModeInfo
+	// J2DIndTevStage
+	// J2DTevOrder
+	// JUTFont
 	/* 802EED64 */ J2DTevBlock8();
 	/* 802EEE8C */ ~J2DTevBlock8();
 	/* 802EEF6C */ void initialize();
-	/* 802EF1E0 */ void prepareTexture(char);
+	/* 802EF1E0 */ void prepareTexture(u8);
 	/* 802EF2B0 */ void insertTexture(u32, ResTIMG const*, JUTPalette*);
 	/* 802EF67C */ void insertTexture(u32, JUTTexture*);
 	/* 802EF80C */ void setTexture(u32, ResTIMG const*);
@@ -595,7 +595,7 @@ struct J2DTevBlock8 {
 	/* 802EFC40 */ void setFont(ResFONT*);
 	/* 802EFCEC */ void setFont(JUTFont*);
 	/* 802EFD68 */ void setPalette(u32, ResTLUT const*);
-	/* 802EFE40 */ void shiftDeleteFlag(char, bool);
+	/* 802EFE40 */ void shiftDeleteFlag(u8, bool);
 	/* 802EFEAC */ void setGX();
 	/* 802F019C */ void loadTexture(_GXTexMapID, u32);
 	/* 802F1FB8 */ void getType();
@@ -610,11 +610,11 @@ struct J2DTevBlock8 {
 	/* 802F2060 */ void getTevColor(u32);
 	/* 802F2074 */ void setTevKColor(u32, JUtility::TColor);
 	/* 802F20A0 */ void getTevKColor(u32);
-	/* 802F20B4 */ void setTevKColorSel(u32, char);
+	/* 802F20B4 */ void setTevKColorSel(u32, u8);
 	/* 802F20C0 */ void getTevKColorSel(u32);
-	/* 802F20CC */ void setTevKAlphaSel(u32, char);
+	/* 802F20CC */ void setTevKAlphaSel(u32, u8);
 	/* 802F20D8 */ void getTevKAlphaSel(u32);
-	/* 802F20E4 */ void setTevStageNum(char);
+	/* 802F20E4 */ void setTevStageNum(u8);
 	/* 802F20EC */ void getTevStageNum() const;
 	/* 802F20F4 */ void setTevStage(u32, J2DTevStage);
 	/* 802F2130 */ void getTevStage(u32);
@@ -627,60 +627,60 @@ struct J2DTevBlock8 {
 	/* 802F21F4 */ void getTexture(u32);
 	/* 802F2214 */ void getPalette(u32);
 	/* 802F2234 */ void getFont();
-	/* 802F223C */ void setUndeleteFlag(char);
+	/* 802F223C */ void setUndeleteFlag(u8);
 	/* 802F224C */ void setFontUndeleteFlag();
 };
 
 // build J2DTevBlock16 (J2DTevBlock16) False/False
-// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
-// build ResTLUT (ResTLUT) True/True
-// build JUtility (JUtility) True/True
-// build JUTFont (JUTFont) True/True
-// build ResTIMG (ResTIMG) True/True
 // build ResFONT (ResFONT) True/True
-// build J2DGXColorS10 (J2DGXColorS10) True/True
-// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
-// build JUTTexture (JUTTexture) True/True
-// build JUTPalette (JUTPalette) True/True
-// build J2DTevOrder (J2DTevOrder) True/True
+// build JUtility (JUtility) True/True
+// build ResTIMG (ResTIMG) True/True
 // build J2DTevStage (J2DTevStage) True/True
-// build J2DIndTevStage (J2DIndTevStage) True/True
+// build J2DTevSwapModeTable (J2DTevSwapModeTable) True/True
+// build JUTPalette (JUTPalette) True/True
+// build ResTLUT (ResTLUT) True/True
+// build J2DGXColorS10 (J2DGXColorS10) True/True
+// build JUTTexture (JUTTexture) True/True
 // build _GXTexMapID (_GXTexMapID) True/True
+// build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
+// build J2DIndTevStage (J2DIndTevStage) True/True
+// build J2DTevOrder (J2DTevOrder) True/True
+// build JUTFont (JUTFont) True/True
 /* top-level dependencies (begin J2DTevBlock16) */
-// outer dependency: J2DTevSwapModeInfo
-// outer dependency: ResTLUT
-// outer dependency: JUtility::TColor
-// outer dependency: JUTFont
-// outer dependency: ResTIMG
 // outer dependency: ResFONT
-// outer dependency: J2DGXColorS10
-// outer dependency: J2DTevSwapModeTable
-// outer dependency: JUTTexture
-// outer dependency: JUTPalette
-// outer dependency: J2DTevOrder
+// outer dependency: JUtility::TColor
+// outer dependency: ResTIMG
 // outer dependency: J2DTevStage
-// outer dependency: J2DIndTevStage
+// outer dependency: J2DTevSwapModeTable
+// outer dependency: JUTPalette
+// outer dependency: ResTLUT
+// outer dependency: J2DGXColorS10
+// outer dependency: JUTTexture
 // outer dependency: _GXTexMapID
+// outer dependency: J2DTevSwapModeInfo
+// outer dependency: J2DIndTevStage
+// outer dependency: J2DTevOrder
+// outer dependency: JUTFont
 /* top-level dependencies (end J2DTevBlock16) */
 struct J2DTevBlock16 {
-	// J2DTevSwapModeInfo
-	// ResTLUT
-	// JUtility::TColor
-	// JUTFont
-	// ResTIMG
 	// ResFONT
-	// J2DGXColorS10
-	// J2DTevSwapModeTable
-	// JUTTexture
-	// JUTPalette
-	// J2DTevOrder
+	// JUtility::TColor
+	// ResTIMG
 	// J2DTevStage
-	// J2DIndTevStage
+	// J2DTevSwapModeTable
+	// JUTPalette
+	// ResTLUT
+	// J2DGXColorS10
+	// JUTTexture
 	// _GXTexMapID
+	// J2DTevSwapModeInfo
+	// J2DIndTevStage
+	// J2DTevOrder
+	// JUTFont
 	/* 802F01E4 */ J2DTevBlock16();
 	/* 802F030C */ ~J2DTevBlock16();
 	/* 802F03EC */ void initialize();
-	/* 802F0660 */ void prepareTexture(char);
+	/* 802F0660 */ void prepareTexture(u8);
 	/* 802F0730 */ void insertTexture(u32, ResTIMG const*, JUTPalette*);
 	/* 802F0AFC */ void insertTexture(u32, JUTTexture*);
 	/* 802F0C8C */ void setTexture(u32, ResTIMG const*);
@@ -689,7 +689,7 @@ struct J2DTevBlock16 {
 	/* 802F10C0 */ void setFont(ResFONT*);
 	/* 802F116C */ void setFont(JUTFont*);
 	/* 802F11E8 */ void setPalette(u32, ResTLUT const*);
-	/* 802F12C0 */ void shiftDeleteFlag(char, bool);
+	/* 802F12C0 */ void shiftDeleteFlag(u8, bool);
 	/* 802F132C */ void setGX();
 	/* 802F161C */ void loadTexture(_GXTexMapID, u32);
 	/* 802F1D18 */ void getType();
@@ -704,11 +704,11 @@ struct J2DTevBlock16 {
 	/* 802F1DC0 */ void getTevColor(u32);
 	/* 802F1DD4 */ void setTevKColor(u32, JUtility::TColor);
 	/* 802F1E00 */ void getTevKColor(u32);
-	/* 802F1E14 */ void setTevKColorSel(u32, char);
+	/* 802F1E14 */ void setTevKColorSel(u32, u8);
 	/* 802F1E20 */ void getTevKColorSel(u32);
-	/* 802F1E2C */ void setTevKAlphaSel(u32, char);
+	/* 802F1E2C */ void setTevKAlphaSel(u32, u8);
 	/* 802F1E38 */ void getTevKAlphaSel(u32);
-	/* 802F1E44 */ void setTevStageNum(char);
+	/* 802F1E44 */ void setTevStageNum(u8);
 	/* 802F1E4C */ void getTevStageNum() const;
 	/* 802F1E54 */ void setTevStage(u32, J2DTevStage);
 	/* 802F1E90 */ void getTevStage(u32);
@@ -721,47 +721,47 @@ struct J2DTevBlock16 {
 	/* 802F1F54 */ void getTexture(u32);
 	/* 802F1F74 */ void getPalette(u32);
 	/* 802F1F94 */ void getFont();
-	/* 802F1F9C */ void setUndeleteFlag(char);
+	/* 802F1F9C */ void setUndeleteFlag(u8);
 	/* 802F1FAC */ void setFontUndeleteFlag();
 };
 
 // build J2DIndBlockFull (J2DIndBlockFull) False/False
+// build J2DIndTexCoordScale (J2DIndTexCoordScale) False/False
+/* top-level dependencies (begin J2DIndTexCoordScale) */
+/* top-level dependencies (end J2DIndTexCoordScale) */
+struct J2DIndTexCoordScale {
+	/* 802EA0CC */ void load(u8);
+	/* 802EB290 */ ~J2DIndTexCoordScale();
+};
+
 // build J2DIndTexOrder (J2DIndTexOrder) False/False
 /* top-level dependencies (begin J2DIndTexOrder) */
 /* top-level dependencies (end J2DIndTexOrder) */
 struct J2DIndTexOrder {
-	/* 802EA0FC */ void load(char);
+	/* 802EA0FC */ void load(u8);
 };
 
 // build J2DIndTexMtx (J2DIndTexMtx) False/False
 /* top-level dependencies (begin J2DIndTexMtx) */
 /* top-level dependencies (end J2DIndTexMtx) */
 struct J2DIndTexMtx {
-	/* 802EA098 */ void load(char);
+	/* 802EA098 */ void load(u8);
 	/* 802EB2E4 */ ~J2DIndTexMtx();
 };
 
-// build J2DIndTexCoordScale (J2DIndTexCoordScale) False/False
-/* top-level dependencies (begin J2DIndTexCoordScale) */
-/* top-level dependencies (end J2DIndTexCoordScale) */
-struct J2DIndTexCoordScale {
-	/* 802EA0CC */ void load(char);
-	/* 802EB290 */ ~J2DIndTexCoordScale();
-};
-
 /* top-level dependencies (begin J2DIndBlockFull) */
+// outer dependency: J2DIndTexCoordScale
 // outer dependency: J2DIndTexOrder
 // outer dependency: J2DIndTexMtx
-// outer dependency: J2DIndTexCoordScale
 /* top-level dependencies (end J2DIndBlockFull) */
 struct J2DIndBlockFull {
+	// J2DIndTexCoordScale
 	// J2DIndTexOrder
 	// J2DIndTexMtx
-	// J2DIndTexCoordScale
 	/* 802F1664 */ void initialize();
 	/* 802F1730 */ void setGX();
 	/* 802F1B94 */ void getType();
-	/* 802F1BA0 */ void setIndTexStageNum(char);
+	/* 802F1BA0 */ void setIndTexStageNum(u8);
 	/* 802F1BA8 */ void getIndTexStageNum() const;
 	/* 802F1BB0 */ void setIndTexOrder(u32, J2DIndTexOrder);
 	/* 802F1BCC */ void getIndTexOrder(u32);
@@ -793,20 +793,20 @@ struct J2DPEBlock {
 // build J2DTevSwapModeInfo (J2DTevSwapModeInfo) True/True
 // build _GXTlut (_GXTlut) True/True
 // build JUTResFont (JUTResFont) False/False
+// build ResFONT (ResFONT) True/True
 // build JKRHeap (JKRHeap) False/False
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
 };
 
-// build ResFONT (ResFONT) True/True
 /* top-level dependencies (begin JUTResFont) */
-// outer dependency: JKRHeap
 // outer dependency: ResFONT
+// outer dependency: JKRHeap
 /* top-level dependencies (end JUTResFont) */
 struct JUTResFont {
-	// JKRHeap
 	// ResFONT
+	// JKRHeap
 	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
 };
 
@@ -1708,7 +1708,7 @@ asm void J2DTevBlock1::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock1::prepareTexture(char field_0) {
+asm void J2DTevBlock1::prepareTexture(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/prepareTexture__12J2DTevBlock1FUc.s"
 }
@@ -1807,7 +1807,7 @@ asm void J2DTevBlock1::setPalette(u32 field_0, ResTLUT const* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock1::shiftDeleteFlag(char field_0, bool field_1) {
+asm void J2DTevBlock1::shiftDeleteFlag(u8 field_0, bool field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/shiftDeleteFlag__12J2DTevBlock1FUcb.s"
 }
@@ -1873,7 +1873,7 @@ asm void J2DTevBlock2::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock2::prepareTexture(char field_0) {
+asm void J2DTevBlock2::prepareTexture(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/prepareTexture__12J2DTevBlock2FUc.s"
 }
@@ -1972,7 +1972,7 @@ asm void J2DTevBlock2::setPalette(u32 field_0, ResTLUT const* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock2::shiftDeleteFlag(char field_0, bool field_1) {
+asm void J2DTevBlock2::shiftDeleteFlag(u8 field_0, bool field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/shiftDeleteFlag__12J2DTevBlock2FUcb.s"
 }
@@ -2038,7 +2038,7 @@ asm void J2DTevBlock4::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock4::prepareTexture(char field_0) {
+asm void J2DTevBlock4::prepareTexture(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/prepareTexture__12J2DTevBlock4FUc.s"
 }
@@ -2137,7 +2137,7 @@ asm void J2DTevBlock4::setPalette(u32 field_0, ResTLUT const* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock4::shiftDeleteFlag(char field_0, bool field_1) {
+asm void J2DTevBlock4::shiftDeleteFlag(u8 field_0, bool field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/shiftDeleteFlag__12J2DTevBlock4FUcb.s"
 }
@@ -2203,7 +2203,7 @@ asm void J2DTevBlock8::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock8::prepareTexture(char field_0) {
+asm void J2DTevBlock8::prepareTexture(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/prepareTexture__12J2DTevBlock8FUc.s"
 }
@@ -2302,7 +2302,7 @@ asm void J2DTevBlock8::setPalette(u32 field_0, ResTLUT const* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock8::shiftDeleteFlag(char field_0, bool field_1) {
+asm void J2DTevBlock8::shiftDeleteFlag(u8 field_0, bool field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/shiftDeleteFlag__12J2DTevBlock8FUcb.s"
 }
@@ -2368,7 +2368,7 @@ asm void J2DTevBlock16::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock16::prepareTexture(char field_0) {
+asm void J2DTevBlock16::prepareTexture(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/prepareTexture__13J2DTevBlock16FUc.s"
 }
@@ -2467,7 +2467,7 @@ asm void J2DTevBlock16::setPalette(u32 field_0, ResTLUT const* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock16::shiftDeleteFlag(char field_0, bool field_1) {
+asm void J2DTevBlock16::shiftDeleteFlag(u8 field_0, bool field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/shiftDeleteFlag__13J2DTevBlock16FUcb.s"
 }
@@ -2616,7 +2616,7 @@ asm void J2DIndBlockFull::getType() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DIndBlockFull::setIndTexStageNum(char field_0) {
+asm void J2DIndBlockFull::setIndTexStageNum(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setIndTexStageNum__15J2DIndBlockFullFUc.s"
 }
@@ -2842,7 +2842,7 @@ asm void J2DTevBlock16::getTevKColor(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock16::setTevKColorSel(u32 field_0, char field_1) {
+asm void J2DTevBlock16::setTevKColorSel(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKColorSel__13J2DTevBlock16FUlUc.s"
 }
@@ -2864,7 +2864,7 @@ asm void J2DTevBlock16::getTevKColorSel(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock16::setTevKAlphaSel(u32 field_0, char field_1) {
+asm void J2DTevBlock16::setTevKAlphaSel(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKAlphaSel__13J2DTevBlock16FUlUc.s"
 }
@@ -2886,7 +2886,7 @@ asm void J2DTevBlock16::getTevKAlphaSel(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock16::setTevStageNum(char field_0) {
+asm void J2DTevBlock16::setTevStageNum(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevStageNum__13J2DTevBlock16FUc.s"
 }
@@ -3029,7 +3029,7 @@ asm void J2DTevBlock16::getFont() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock16::setUndeleteFlag(char field_0) {
+asm void J2DTevBlock16::setUndeleteFlag(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setUndeleteFlag__13J2DTevBlock16FUc.s"
 }
@@ -3178,7 +3178,7 @@ asm void J2DTevBlock8::getTevKColor(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock8::setTevKColorSel(u32 field_0, char field_1) {
+asm void J2DTevBlock8::setTevKColorSel(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKColorSel__12J2DTevBlock8FUlUc.s"
 }
@@ -3200,7 +3200,7 @@ asm void J2DTevBlock8::getTevKColorSel(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock8::setTevKAlphaSel(u32 field_0, char field_1) {
+asm void J2DTevBlock8::setTevKAlphaSel(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKAlphaSel__12J2DTevBlock8FUlUc.s"
 }
@@ -3222,7 +3222,7 @@ asm void J2DTevBlock8::getTevKAlphaSel(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock8::setTevStageNum(char field_0) {
+asm void J2DTevBlock8::setTevStageNum(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevStageNum__12J2DTevBlock8FUc.s"
 }
@@ -3365,7 +3365,7 @@ asm void J2DTevBlock8::getFont() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock8::setUndeleteFlag(char field_0) {
+asm void J2DTevBlock8::setUndeleteFlag(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setUndeleteFlag__12J2DTevBlock8FUc.s"
 }
@@ -3514,7 +3514,7 @@ asm void J2DTevBlock4::getTevKColor(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock4::setTevKColorSel(u32 field_0, char field_1) {
+asm void J2DTevBlock4::setTevKColorSel(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKColorSel__12J2DTevBlock4FUlUc.s"
 }
@@ -3536,7 +3536,7 @@ asm void J2DTevBlock4::getTevKColorSel(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock4::setTevKAlphaSel(u32 field_0, char field_1) {
+asm void J2DTevBlock4::setTevKAlphaSel(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKAlphaSel__12J2DTevBlock4FUlUc.s"
 }
@@ -3558,7 +3558,7 @@ asm void J2DTevBlock4::getTevKAlphaSel(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock4::setTevStageNum(char field_0) {
+asm void J2DTevBlock4::setTevStageNum(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevStageNum__12J2DTevBlock4FUc.s"
 }
@@ -3701,7 +3701,7 @@ asm void J2DTevBlock4::getFont() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock4::setUndeleteFlag(char field_0) {
+asm void J2DTevBlock4::setUndeleteFlag(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setUndeleteFlag__12J2DTevBlock4FUc.s"
 }
@@ -3850,7 +3850,7 @@ asm void J2DTevBlock2::getTevKColor(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock2::setTevKColorSel(u32 field_0, char field_1) {
+asm void J2DTevBlock2::setTevKColorSel(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKColorSel__12J2DTevBlock2FUlUc.s"
 }
@@ -3872,7 +3872,7 @@ asm void J2DTevBlock2::getTevKColorSel(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock2::setTevKAlphaSel(u32 field_0, char field_1) {
+asm void J2DTevBlock2::setTevKAlphaSel(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKAlphaSel__12J2DTevBlock2FUlUc.s"
 }
@@ -3894,7 +3894,7 @@ asm void J2DTevBlock2::getTevKAlphaSel(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock2::setTevStageNum(char field_0) {
+asm void J2DTevBlock2::setTevStageNum(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevStageNum__12J2DTevBlock2FUc.s"
 }
@@ -4037,7 +4037,7 @@ asm void J2DTevBlock2::getFont() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock2::setUndeleteFlag(char field_0) {
+asm void J2DTevBlock2::setUndeleteFlag(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setUndeleteFlag__12J2DTevBlock2FUc.s"
 }
@@ -4186,7 +4186,7 @@ asm void J2DTevBlock1::getTevKColor(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock1::setTevKColorSel(u32 field_0, char field_1) {
+asm void J2DTevBlock1::setTevKColorSel(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKColorSel__12J2DTevBlock1FUlUc.s"
 }
@@ -4208,7 +4208,7 @@ asm void J2DTevBlock1::getTevKColorSel(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock1::setTevKAlphaSel(u32 field_0, char field_1) {
+asm void J2DTevBlock1::setTevKAlphaSel(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setTevKAlphaSel__12J2DTevBlock1FUlUc.s"
 }
@@ -4227,7 +4227,7 @@ asm void J2DTevBlock1::getTevKAlphaSel(u32 field_0) {
 
 
 /* 802F28CC-802F28D0 0004+00 rc=1 efc=0 .text      setTevStageNum__12J2DTevBlock1FUc                            */
-void J2DTevBlock1::setTevStageNum(char field_0) {
+void J2DTevBlock1::setTevStageNum(u8 field_0) {
 	/* empty function */
 }
 
@@ -4363,7 +4363,7 @@ asm void J2DTevBlock1::getFont() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTevBlock1::setUndeleteFlag(char field_0) {
+asm void J2DTevBlock1::setUndeleteFlag(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMatBlock/setUndeleteFlag__12J2DTevBlock1FUc.s"
 }
@@ -4406,19 +4406,19 @@ void J2DTevBlock::setTevOrder(u32 field_0, J2DTevOrder field_1) {
 
 
 /* 802F2A50-802F2A54 0004+00 rc=1 efc=0 .text      setTevKColorSel__11J2DTevBlockFUlUc                          */
-void J2DTevBlock::setTevKColorSel(u32 field_0, char field_1) {
+void J2DTevBlock::setTevKColorSel(u32 field_0, u8 field_1) {
 	/* empty function */
 }
 
 
 /* 802F2A54-802F2A58 0004+00 rc=1 efc=0 .text      setTevKAlphaSel__11J2DTevBlockFUlUc                          */
-void J2DTevBlock::setTevKAlphaSel(u32 field_0, char field_1) {
+void J2DTevBlock::setTevKAlphaSel(u32 field_0, u8 field_1) {
 	/* empty function */
 }
 
 
 /* 802F2A58-802F2A5C 0004+00 rc=1 efc=0 .text      setTevStageNum__11J2DTevBlockFUc                             */
-void J2DTevBlock::setTevStageNum(char field_0) {
+void J2DTevBlock::setTevStageNum(u8 field_0) {
 	/* empty function */
 }
 
@@ -4502,7 +4502,7 @@ bool J2DTevBlock::setPalette(u32 field_0, ResTLUT const* field_1) {
 
 
 /* 802F2AB4-802F2ABC 0008+00 rc=1 efc=0 .text      prepareTexture__11J2DTevBlockFUc                             */
-bool J2DTevBlock::prepareTexture(char field_0) {
+bool J2DTevBlock::prepareTexture(u8 field_0) {
 	return false;
 }
 
@@ -4514,13 +4514,13 @@ bool J2DTevBlock::getFont() {
 
 
 /* 802F2AC4-802F2AC8 0004+00 rc=1 efc=0 .text      shiftDeleteFlag__11J2DTevBlockFUcb                           */
-void J2DTevBlock::shiftDeleteFlag(char field_0, bool field_1) {
+void J2DTevBlock::shiftDeleteFlag(u8 field_0, bool field_1) {
 	/* empty function */
 }
 
 
 /* 802F2AC8-802F2ACC 0004+00 rc=1 efc=0 .text      setUndeleteFlag__11J2DTevBlockFUc                            */
-void J2DTevBlock::setUndeleteFlag(char field_0) {
+void J2DTevBlock::setUndeleteFlag(u8 field_0) {
 	/* empty function */
 }
 

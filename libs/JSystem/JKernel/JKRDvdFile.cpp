@@ -66,6 +66,13 @@ struct JSUPtrList {
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
+// build JUTException (JUTException) False/False
+/* top-level dependencies (begin JUTException) */
+/* top-level dependencies (end JUTException) */
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -98,7 +105,6 @@ SECTION_BSS extern u8 sDvdList__10JKRDvdFile[12];
 // 
 
 void operator delete(void*);
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
 extern "C" void OSInitMessageQueue();
 extern "C" void OSSendMessage();
 extern "C" void OSReceiveMessage();

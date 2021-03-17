@@ -16,7 +16,7 @@ struct JAUStreamFileTable {
 	/* 802A7420 */ JAUStreamFileTable();
 	/* 802A742C */ void init(void const*);
 	/* 802A7478 */ void getNumFiles() const;
-	/* 802A7484 */ void getFilePath(s32) const;
+	/* 802A7484 */ void getFilePath(int) const;
 };
 
 // build JAUStreamDataMgr_StreamFileTable (JAUStreamDataMgr_StreamFileTable) False/False
@@ -108,7 +108,7 @@ asm void JAUStreamFileTable::getNumFiles() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAUStreamFileTable::getFilePath(s32 field_0) const {
+asm void JAUStreamFileTable::getFilePath(int field_0) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUStreamFileTable/getFilePath__18JAUStreamFileTableCFi.s"
 }

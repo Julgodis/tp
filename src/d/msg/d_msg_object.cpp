@@ -26,7 +26,45 @@ struct dMsgObject_HIO_c {
 };
 
 // build dMsgObject_c (dMsgObject_c) False/False
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
+// build msg_class (msg_class) False/False
+/* top-level dependencies (begin msg_class) */
+/* top-level dependencies (end msg_class) */
+struct msg_class {
+};
+
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+};
+
+// build COutFont_c (COutFont_c) False/False
+/* top-level dependencies (begin COutFont_c) */
+/* top-level dependencies (end COutFont_c) */
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
+};
+
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
 // build mDoDvdThd_mountXArchive_c (mDoDvdThd_mountXArchive_c) False/False
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
 /* top-level dependencies (end JKRArchive) */
@@ -39,69 +77,31 @@ struct JKRArchive {
 
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
 /* top-level dependencies (begin mDoDvdThd_mountXArchive_c) */
-// outer dependency: JKRArchive::EMountMode
 // outer dependency: JKRHeap
+// outer dependency: JKRArchive::EMountMode
 /* top-level dependencies (end mDoDvdThd_mountXArchive_c) */
 struct mDoDvdThd_mountXArchive_c {
-	// JKRArchive::EMountMode
 	// JKRHeap
-	/* 800161E0 */ void create(char const*, char, JKRArchive::EMountMode, JKRHeap*);
-};
-
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
-struct fopAc_ac_c {
-};
-
-// build COutFont_c (COutFont_c) False/False
-/* top-level dependencies (begin COutFont_c) */
-/* top-level dependencies (end COutFont_c) */
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(char);
-};
-
-// build msg_class (msg_class) False/False
-/* top-level dependencies (begin msg_class) */
-/* top-level dependencies (end msg_class) */
-struct msg_class {
-};
-
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
-struct JUTFont {
-};
-
-// build J2DTextBox (J2DTextBox) False/False
-/* top-level dependencies (begin J2DTextBox) */
-/* top-level dependencies (end J2DTextBox) */
-struct J2DTextBox {
+	// JKRArchive::EMountMode
+	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
 /* top-level dependencies (begin dMsgObject_c) */
-// outer dependency: mDoDvdThd_mountXArchive_c
 // outer dependency: fopAc_ac_c
-// outer dependency: COutFont_c
 // outer dependency: msg_class
-// outer dependency: JUTFont
 // outer dependency: J2DTextBox
+// outer dependency: COutFont_c
+// outer dependency: JUTFont
+// outer dependency: mDoDvdThd_mountXArchive_c
 /* top-level dependencies (end dMsgObject_c) */
 struct dMsgObject_c {
 	// COutFont_c
-	// msg_class
-	// JUTFont
-	// J2DTextBox
 	// mDoDvdThd_mountXArchive_c
 	// fopAc_ac_c
+	// msg_class
+	// J2DTextBox
+	// JUTFont
 	/* 80233284 */ void _create(msg_class*);
 	/* 80233590 */ void _execute();
 	/* 802339BC */ void _draw();
@@ -163,15 +163,15 @@ struct dMsgObject_c {
 	/* 8023756C */ void offMsgSendLocal();
 	/* 8023757C */ void isMsgSendLocal();
 	/* 80237588 */ void isMouthCheckLocal();
-	/* 8023759C */ void getBombBuyPriceLocal(char);
-	/* 802375E4 */ void addSelectBomBag(char);
+	/* 8023759C */ void getBombBuyPriceLocal(u8);
+	/* 802375E4 */ void addSelectBomBag(u8);
 	/* 80237610 */ void resetSelectBomBag();
 	/* 8023763C */ void getSelectBombBagIDLocal();
 	/* 8023768C */ void getSelectBombPriceLocal();
 	/* 8023773C */ void setEquipBombInfoLocal();
 	/* 80237748 */ void updateEquipBombInfoLocal();
-	/* 802378B8 */ void setShopWaitTimer(char);
-	/* 802378CC */ void setSelectWordFlagLocal(char);
+	/* 802378B8 */ void setShopWaitTimer(u8);
+	/* 802378CC */ void setSelectWordFlagLocal(u8);
 	/* 802378D4 */ void isHowlHearingModeLocal();
 	/* 80237934 */ void isCameraCancelFlag();
 	/* 80237950 */ void onCameraCancelFlag();
@@ -191,9 +191,9 @@ struct dMsgObject_c {
 	/* 80237BFC */ void setButtonStatusLocal();
 	/* 80237D88 */ void setDemoMessageLocal(u32);
 	/* 80237DD8 */ void getSmellTypeMessageIDLocal();
-	/* 80237E04 */ void setSmellTypeLocal(char);
+	/* 80237E04 */ void setSmellTypeLocal(u8);
 	/* 80237E58 */ void getSelectCursorPosLocal();
-	/* 80237E68 */ void setSelectCursorPosLocal(char);
+	/* 80237E68 */ void setSelectCursorPosLocal(u8);
 	/* 80237F10 */ void setTalkActorLocal(fopAc_ac_c*);
 	/* 8023800C */ void readMessageGroup(mDoDvdThd_mountXArchive_c**);
 	/* 8023803C */ void changeFlowGroup(s32);
@@ -202,7 +202,7 @@ struct dMsgObject_c {
 	/* 802380C4 */ void changeGroup(s16);
 	/* 802380F4 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char*, char*, char*, s16*);
 	/* 80238174 */ void getMsgDtPtr();
-	/* 80238188 */ void setProcessID(s32);
+	/* 80238188 */ void setProcessID(u32);
 	/* 8023819C */ void getActor();
 	/* 802381C0 */ void getpTalkActor();
 	/* 802381D4 */ void getIdx();
@@ -220,25 +220,25 @@ struct dMsgObject_c {
 	/* 802383A4 */ void isMouthCheck();
 	/* 802383D0 */ void getMessageID();
 	/* 802383E4 */ void getSmellTypeMessageID();
-	/* 80238410 */ void setSmellType(char);
+	/* 80238410 */ void setSmellType(u8);
 	/* 80238440 */ void getSelectCursorPos();
-	/* 8023846C */ void setSelectCursorPos(char);
+	/* 8023846C */ void setSelectCursorPos(u8);
 	/* 8023849C */ void setPortalMessageID(u16);
-	/* 802384B0 */ void setInsectItemNo(char);
+	/* 802384B0 */ void setInsectItemNo(u8);
 	/* 802384C4 */ void setLetterNameID(u16);
-	/* 802384D8 */ void setArrowNum(char);
-	/* 802384EC */ void setMsgOutputType(char);
+	/* 802384D8 */ void setArrowNum(u8);
+	/* 802384EC */ void setMsgOutputType(u8);
 	/* 80238500 */ void getMsgOutputType();
 	/* 80238514 */ void getWord();
-	/* 80238528 */ void getSelectWord(s32);
-	/* 80238544 */ void setSelectWordFlag(char);
+	/* 80238528 */ void getSelectWord(int);
+	/* 80238544 */ void setSelectWordFlag(u8);
 	/* 80238574 */ void getSelectWordFlag();
 	/* 80238588 */ void isHowlHearingMode();
 	/* 802385B4 */ void getSelectBombBagID();
 	/* 802385E0 */ void getSelectBombPrice();
 	/* 8023860C */ void setEquipBombInfo();
 	/* 80238638 */ void getItemEquipButton();
-	/* 8023864C */ void setSelectCancelPos(char);
+	/* 8023864C */ void setSelectCancelPos(u8);
 };
 
 // build msg_class (msg_class) True/True
@@ -254,11 +254,11 @@ struct dMsgScrnBase_c {
 	/* 80238C3C */ void exec();
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
-	/* 80238C48 */ bool selectAnimeMove(char, char, bool);
-	/* 80238C50 */ void selectAnimeInit(char, char, f32, char);
+	/* 80238C48 */ bool selectAnimeMove(u8, u8, bool);
+	/* 80238C50 */ void selectAnimeInit(u8, u8, f32, u8);
 	/* 80238C54 */ void arwAnimeMove();
 	/* 80238C58 */ void arwAnimeInit();
-	/* 80238C5C */ void fukiPosCalc(char);
+	/* 80238C5C */ void fukiPosCalc(u8);
 	/* 80238C60 */ bool isSelect();
 	/* 80238C68 */ bool selectAnimeEnd();
 	/* 80238C70 */ void dotAnimeMove();
@@ -306,21 +306,21 @@ struct jmessage_tReference {
 /* top-level dependencies (begin dSv_player_item_c) */
 /* top-level dependencies (end dSv_player_item_c) */
 struct dSv_player_item_c {
-	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80033030 */ void getItem(int, bool) const;
 };
 
 // build dSv_player_get_item_c (dSv_player_get_item_c) False/False
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033E60 */ void onFirstBit(char);
+	/* 80033E60 */ void onFirstBit(u8);
 };
 
 // build dSv_player_item_record_c (dSv_player_item_record_c) False/False
 /* top-level dependencies (begin dSv_player_item_record_c) */
 /* top-level dependencies (end dSv_player_item_record_c) */
 struct dSv_player_item_record_c {
-	/* 80033F7C */ void getBombNum(char) const;
+	/* 80033F7C */ void getBombNum(u8) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -330,7 +330,7 @@ struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 	/* 800349A4 */ void offEventBit(u16);
 	/* 800349BC */ void isEventBit(u16) const;
-	/* 800349E0 */ void setEventReg(u16, char);
+	/* 800349E0 */ void setEventReg(u16, u8);
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
@@ -435,7 +435,7 @@ struct JKRExpHeap {
 /* top-level dependencies (end dMsgScrnItem_c) */
 struct dMsgScrnItem_c {
 	// JKRExpHeap
-	/* 8023E79C */ dMsgScrnItem_c(char, char, JKRExpHeap*);
+	/* 8023E79C */ dMsgScrnItem_c(u8, u8, JKRExpHeap*);
 };
 
 // build JKRExpHeap (JKRExpHeap) True/True
@@ -454,7 +454,7 @@ struct dMsgScrnHowl_c {
 /* top-level dependencies (end dMsgScrnJimaku_c) */
 struct dMsgScrnJimaku_c {
 	// JKRExpHeap
-	/* 80244558 */ dMsgScrnJimaku_c(char, JKRExpHeap*);
+	/* 80244558 */ dMsgScrnJimaku_c(u8, JKRExpHeap*);
 };
 
 // build dMsgScrnKanban_c (dMsgScrnKanban_c) False/False
@@ -478,7 +478,7 @@ struct dMsgScrnPlace_c {
 /* top-level dependencies (begin dMsgScrnStaff_c) */
 /* top-level dependencies (end dMsgScrnStaff_c) */
 struct dMsgScrnStaff_c {
-	/* 80246B34 */ dMsgScrnStaff_c(char);
+	/* 80246B34 */ dMsgScrnStaff_c(u8);
 };
 
 // build dMsgScrnTalk_c (dMsgScrnTalk_c) False/False
@@ -488,19 +488,19 @@ struct dMsgScrnStaff_c {
 /* top-level dependencies (end dMsgScrnTalk_c) */
 struct dMsgScrnTalk_c {
 	// JKRExpHeap
-	/* 80246FF0 */ dMsgScrnTalk_c(char, char, JKRExpHeap*);
+	/* 80246FF0 */ dMsgScrnTalk_c(u8, u8, JKRExpHeap*);
 };
 
 // build dMsgScrnTree_c (dMsgScrnTree_c) False/False
-// build JUTFont (JUTFont) True/True
 // build JKRExpHeap (JKRExpHeap) True/True
+// build JUTFont (JUTFont) True/True
 /* top-level dependencies (begin dMsgScrnTree_c) */
-// outer dependency: JUTFont
 // outer dependency: JKRExpHeap
+// outer dependency: JUTFont
 /* top-level dependencies (end dMsgScrnTree_c) */
 struct dMsgScrnTree_c {
-	// JUTFont
 	// JKRExpHeap
+	// JUTFont
 	/* 80248954 */ dMsgScrnTree_c(JUTFont*, JKRExpHeap*);
 };
 
@@ -557,21 +557,21 @@ struct JMessage {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -892,10 +892,10 @@ void fopAc_IsActor(void*);
 void fopMsgM_setStageLayer(void*);
 void fopMsgM_messageSet(u32, u32);
 extern "C" void fpcEx_Search__FPFPvPv_PvPv();
-void dComIfGs_setSelectItemIndex(s32, char);
-void dComIfGp_setHeapLockFlag(char);
-void dComIfGp_offHeapLockFlag(s32);
-void dComIfGp_getSubHeap2D(s32);
+void dComIfGs_setSelectItemIndex(int, u8);
+void dComIfGp_setHeapLockFlag(u8);
+void dComIfGp_offHeapLockFlag(int);
+void dComIfGp_getSubHeap2D(int);
 void dMeter2Info_set2DVibration();
 void* operator new(u32);
 void operator delete(void*);
@@ -1971,7 +1971,7 @@ asm void dMsgObject_c::isMouthCheckLocal() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::getBombBuyPriceLocal(char field_0) {
+asm void dMsgObject_c::getBombBuyPriceLocal(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getBombBuyPriceLocal__12dMsgObject_cFUc.s"
 }
@@ -1982,7 +1982,7 @@ asm void dMsgObject_c::getBombBuyPriceLocal(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::addSelectBomBag(char field_0) {
+asm void dMsgObject_c::addSelectBomBag(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/addSelectBomBag__12dMsgObject_cFUc.s"
 }
@@ -2048,7 +2048,7 @@ asm void dMsgObject_c::updateEquipBombInfoLocal() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setShopWaitTimer(char field_0) {
+asm void dMsgObject_c::setShopWaitTimer(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setShopWaitTimer__12dMsgObject_cFUc.s"
 }
@@ -2059,7 +2059,7 @@ asm void dMsgObject_c::setShopWaitTimer(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setSelectWordFlagLocal(char field_0) {
+asm void dMsgObject_c::setSelectWordFlagLocal(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSelectWordFlagLocal__12dMsgObject_cFUc.s"
 }
@@ -2279,7 +2279,7 @@ asm void dMsgObject_c::getSmellTypeMessageIDLocal() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setSmellTypeLocal(char field_0) {
+asm void dMsgObject_c::setSmellTypeLocal(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSmellTypeLocal__12dMsgObject_cFUc.s"
 }
@@ -2301,7 +2301,7 @@ asm void dMsgObject_c::getSelectCursorPosLocal() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setSelectCursorPosLocal(char field_0) {
+asm void dMsgObject_c::setSelectCursorPosLocal(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSelectCursorPosLocal__12dMsgObject_cFUc.s"
 }
@@ -2450,7 +2450,7 @@ asm void dMsgObject_c::getMsgDtPtr() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setProcessID(s32 field_0) {
+asm void dMsgObject_c::setProcessID(u32 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setProcessID__12dMsgObject_cFUi.s"
 }
@@ -2648,7 +2648,7 @@ asm void dMsgObject_c::getSmellTypeMessageID() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setSmellType(char field_0) {
+asm void dMsgObject_c::setSmellType(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSmellType__12dMsgObject_cFUc.s"
 }
@@ -2670,7 +2670,7 @@ asm void dMsgObject_c::getSelectCursorPos() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setSelectCursorPos(char field_0) {
+asm void dMsgObject_c::setSelectCursorPos(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSelectCursorPos__12dMsgObject_cFUc.s"
 }
@@ -2692,7 +2692,7 @@ asm void dMsgObject_c::setPortalMessageID(u16 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setInsectItemNo(char field_0) {
+asm void dMsgObject_c::setInsectItemNo(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setInsectItemNo__12dMsgObject_cFUc.s"
 }
@@ -2714,7 +2714,7 @@ asm void dMsgObject_c::setLetterNameID(u16 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setArrowNum(char field_0) {
+asm void dMsgObject_c::setArrowNum(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setArrowNum__12dMsgObject_cFUc.s"
 }
@@ -2725,7 +2725,7 @@ asm void dMsgObject_c::setArrowNum(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setMsgOutputType(char field_0) {
+asm void dMsgObject_c::setMsgOutputType(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setMsgOutputType__12dMsgObject_cFUc.s"
 }
@@ -2758,7 +2758,7 @@ asm void dMsgObject_c::getWord() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::getSelectWord(s32 field_0) {
+asm void dMsgObject_c::getSelectWord(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/getSelectWord__12dMsgObject_cFi.s"
 }
@@ -2769,7 +2769,7 @@ asm void dMsgObject_c::getSelectWord(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setSelectWordFlag(char field_0) {
+asm void dMsgObject_c::setSelectWordFlag(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSelectWordFlag__12dMsgObject_cFUc.s"
 }
@@ -2846,7 +2846,7 @@ asm void dMsgObject_c::getItemEquipButton() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgObject_c::setSelectCancelPos(char field_0) {
+asm void dMsgObject_c::setSelectCancelPos(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_object/setSelectCancelPos__12dMsgObject_cFUc.s"
 }
@@ -3026,13 +3026,13 @@ void dMsgScrnBase_c::setSelectString(char* field_0, char* field_1, char* field_2
 
 
 /* 80238C48-80238C50 0008+00 rc=8 efc=8 .text      selectAnimeMove__14dMsgScrnBase_cFUcUcb                      */
-bool dMsgScrnBase_c::selectAnimeMove(char field_0, char field_1, bool field_2) {
+bool dMsgScrnBase_c::selectAnimeMove(u8 field_0, u8 field_1, bool field_2) {
 	return true;
 }
 
 
 /* 80238C50-80238C54 0004+00 rc=8 efc=8 .text      selectAnimeInit__14dMsgScrnBase_cFUcUcfUc                    */
-void dMsgScrnBase_c::selectAnimeInit(char field_0, char field_1, f32 field_2, char field_3) {
+void dMsgScrnBase_c::selectAnimeInit(u8 field_0, u8 field_1, f32 field_2, u8 field_3) {
 	/* empty function */
 }
 
@@ -3050,7 +3050,7 @@ void dMsgScrnBase_c::arwAnimeInit() {
 
 
 /* 80238C5C-80238C60 0004+00 rc=8 efc=8 .text      fukiPosCalc__14dMsgScrnBase_cFUc                             */
-void dMsgScrnBase_c::fukiPosCalc(char field_0) {
+void dMsgScrnBase_c::fukiPosCalc(u8 field_0) {
 	/* empty function */
 }
 

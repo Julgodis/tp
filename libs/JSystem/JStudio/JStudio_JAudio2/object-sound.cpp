@@ -11,16 +11,16 @@
 
 // build JStudio_JAudio2 (JStudio_JAudio2) False/False
 // build JStudio (JStudio) False/False
+// build JStudio (JStudio) True/False
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
-// build JStudio (JStudio) True/False
 /* top-level dependencies (begin JStudio) */
-// outer dependency: Vec
 // outer dependency: JStudio::TAdaptor::TSetVariableValue_immediate
+// outer dependency: Vec
 /* top-level dependencies (end JStudio) */
 namespace JStudio {
 	// build data (JStudio::data) False/False
@@ -40,8 +40,8 @@ namespace JStudio {
 	// inner dependency: TAdaptor (JStudio::TAdaptor::TSetVariableValue_immediate) True False (for JStudio::TAdaptor)
 	/* dependencies (end JStudio::TAdaptor) */
 	struct TAdaptor {
-		// Vec
 		// JStudio::TAdaptor::TSetVariableValue_immediate
+		// Vec
 		// build TSetVariableValue_immediate (JStudio::TAdaptor::TSetVariableValue_immediate) False/False
 		/* dependencies (begin JStudio::TAdaptor::TSetVariableValue_immediate) */
 		/* dependencies (end JStudio::TAdaptor::TSetVariableValue_immediate) */
@@ -75,15 +75,27 @@ namespace JStudio {
 		/* 80287B3C */ ~TAdaptor_sound();
 	};
 
+	// build TControl (JStudio::TControl) False/False
+	/* dependencies (begin JStudio::TControl) */
+	/* dependencies (end JStudio::TControl) */
+	struct TControl {
+		// build TTransform_position (JStudio::TControl::TTransform_position) False/False
+		/* dependencies (begin JStudio::TControl::TTransform_position) */
+		/* dependencies (end JStudio::TControl::TTransform_position) */
+		struct TTransform_position {
+		};
+
+	};
+
 };
 
 // build JStudio_JAudio2 (JStudio_JAudio2) True/False
 struct JStudio_JAudio2;
 // build JStudio (JStudio) True/True
 /* top-level dependencies (begin JStudio_JAudio2) */
-// outer dependency: JStudio::data::TEOperationData
-// outer dependency: JStudio_JAudio2::TCreateObject
 // outer dependency: JStudio::TAdaptor
+// outer dependency: JStudio_JAudio2::TCreateObject
+// outer dependency: JStudio::data::TEOperationData
 /* top-level dependencies (end JStudio_JAudio2) */
 struct JStudio_JAudio2 {
 	// build TAdaptor_sound (JStudio_JAudio2::TAdaptor_sound) False/False
@@ -97,8 +109,8 @@ struct JStudio_JAudio2 {
 
 	/* dependencies (end JStudio_JAudio2::TAdaptor_sound) */
 	struct TAdaptor_sound {
-		// JStudio::data::TEOperationData
 		// JStudio_JAudio2::TCreateObject
+		// JStudio::data::TEOperationData
 		// build TVVOSetValue_ (JStudio_JAudio2::TAdaptor_sound::TVVOSetValue_) False/False
 		/* dependencies (begin JStudio_JAudio2::TAdaptor_sound::TVVOSetValue_) */
 		/* dependencies (end JStudio_JAudio2::TAdaptor_sound::TVVOSetValue_) */
@@ -135,6 +147,31 @@ struct JStudio_JAudio2 {
 
 // build JStudio (JStudio) True/True
 // build Vec (Vec) True/True
+// build JStudio_JStage (JStudio_JStage) False/False
+// build JStage (JStage) False/False
+/* top-level dependencies (begin JStage) */
+/* top-level dependencies (end JStage) */
+struct JStage {
+	// build TObject (JStage::TObject) False/False
+	/* dependencies (begin JStage::TObject) */
+	/* dependencies (end JStage::TObject) */
+	struct TObject {
+	};
+
+};
+
+// build JStudio (JStudio) True/True
+/* top-level dependencies (begin JStudio_JStage) */
+// outer dependency: JStage::TObject
+// outer dependency: JStudio::TControl::TTransform_position
+/* top-level dependencies (end JStudio_JStage) */
+struct JStudio_JStage {
+	// JStage::TObject
+	// JStudio::TControl::TTransform_position
+	/* 8028A290 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_position const&, JStage::TObject const*, u32);
+};
+
+// build JStage (JStage) True/True
 // build JAISoundHandle (JAISoundHandle) False/False
 /* top-level dependencies (begin JAISoundHandle) */
 /* top-level dependencies (end JAISoundHandle) */
@@ -225,7 +262,6 @@ SECTION_SDATA2 extern f64 lit_1807;
 // External References:
 // 
 
-extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
 extern "C" void func_802A2FEC();
 void operator delete(void*);
 extern "C" void PSMTXMultVec();

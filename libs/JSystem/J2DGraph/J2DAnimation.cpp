@@ -94,7 +94,7 @@ struct J2DAnmColorKey {
 /* top-level dependencies (end J2DAnmVtxColorFull) */
 struct J2DAnmVtxColorFull {
 	// _GXColor
-	/* 8030B4C4 */ void getColor(char, u16, _GXColor*) const;
+	/* 8030B4C4 */ void getColor(u8, u16, _GXColor*) const;
 	/* 8030CC8C */ ~J2DAnmVtxColorFull();
 };
 
@@ -105,7 +105,7 @@ struct J2DAnmVtxColorFull {
 /* top-level dependencies (end J2DAnmVtxColorKey) */
 struct J2DAnmVtxColorKey {
 	// _GXColor
-	/* 8030B704 */ void getColor(char, u16, _GXColor*) const;
+	/* 8030B704 */ void getColor(u8, u16, _GXColor*) const;
 	/* 8030CC20 */ ~J2DAnmVtxColorKey();
 };
 
@@ -156,12 +156,12 @@ struct J2DAnmTexPattern {
 /* top-level dependencies (begin J2DAnmVisibilityFull) */
 /* top-level dependencies (end J2DAnmVisibilityFull) */
 struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, char*) const;
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 // build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
-// build _GXColor (_GXColor) True/True
 // build J2DScreen (J2DScreen) True/True
+// build _GXColor (_GXColor) True/True
 // build _GXColorS10 (_GXColorS10) False/False
 /* top-level dependencies (begin _GXColorS10) */
 /* top-level dependencies (end _GXColorS10) */
@@ -169,13 +169,13 @@ struct _GXColorS10 {
 };
 
 /* top-level dependencies (begin J2DAnmTevRegKey) */
-// outer dependency: _GXColor
 // outer dependency: J2DScreen
+// outer dependency: _GXColor
 // outer dependency: _GXColorS10
 /* top-level dependencies (end J2DAnmTevRegKey) */
 struct J2DAnmTevRegKey {
-	// _GXColor
 	// J2DScreen
+	// _GXColor
 	// _GXColorS10
 	/* 801841EC */ ~J2DAnmTevRegKey();
 	/* 8030C0F0 */ void getTevColorReg(u16, _GXColorS10*) const;
@@ -217,27 +217,27 @@ struct JUTResReference {
 struct JUTTransparency {
 };
 
-// build _GXTlut (_GXTlut) False/False
-/* top-level dependencies (begin _GXTlut) */
-/* top-level dependencies (end _GXTlut) */
-struct _GXTlut {
-};
-
 // build _GXTlutFmt (_GXTlutFmt) False/False
 /* top-level dependencies (begin _GXTlutFmt) */
 /* top-level dependencies (end _GXTlutFmt) */
 struct _GXTlutFmt {
 };
 
+// build _GXTlut (_GXTlut) False/False
+/* top-level dependencies (begin _GXTlut) */
+/* top-level dependencies (end _GXTlut) */
+struct _GXTlut {
+};
+
 /* top-level dependencies (begin JUTPalette) */
 // outer dependency: JUTTransparency
-// outer dependency: _GXTlut
 // outer dependency: _GXTlutFmt
+// outer dependency: _GXTlut
 /* top-level dependencies (end JUTPalette) */
 struct JUTPalette {
 	// JUTTransparency
-	// _GXTlut
 	// _GXTlutFmt
+	// _GXTlut
 	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
 };
 
@@ -448,7 +448,7 @@ asm void J2DAnmColorKey::getColor(u16 field_0, _GXColor* field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DAnmVtxColorFull::getColor(char field_0, u16 field_1, _GXColor* field_2) const {
+asm void J2DAnmVtxColorFull::getColor(u8 field_0, u16 field_1, _GXColor* field_2) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnimation/getColor__18J2DAnmVtxColorFullCFUcUsP8_GXColor.s"
 }
@@ -459,7 +459,7 @@ asm void J2DAnmVtxColorFull::getColor(char field_0, u16 field_1, _GXColor* field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DAnmVtxColorKey::getColor(char field_0, u16 field_1, _GXColor* field_2) const {
+asm void J2DAnmVtxColorKey::getColor(u8 field_0, u16 field_1, _GXColor* field_2) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnimation/getColor__17J2DAnmVtxColorKeyCFUcUsP8_GXColor.s"
 }
@@ -536,7 +536,7 @@ asm void J2DAnmTexPattern::getPalette(u16 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DAnmVisibilityFull::getVisibility(u16 field_0, char* field_1) const {
+asm void J2DAnmVisibilityFull::getVisibility(u16 field_0, u8* field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnimation/getVisibility__20J2DAnmVisibilityFullCFUsPUc.s"
 }

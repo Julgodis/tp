@@ -10,78 +10,10 @@
 // 
 
 // build dBgWKCol (dBgWKCol) False/False
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
-struct cBgS_PolyInfo {
-	/* 802681A4 */ void SetPolyIndex(s32);
-};
-
-// build KC_PrismData (KC_PrismData) False/False
-/* top-level dependencies (begin KC_PrismData) */
-/* top-level dependencies (end KC_PrismData) */
-struct KC_PrismData {
-};
-
-// build dBgS_Acch (dBgS_Acch) False/False
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
-struct Vec {
-};
-
-/* top-level dependencies (begin dBgS_Acch) */
-// outer dependency: Vec
-/* top-level dependencies (end dBgS_Acch) */
-struct dBgS_Acch {
-	// Vec
-	/* 800771E4 */ void GetSpeedY();
-	/* 80077200 */ void GetWallAddY(Vec&);
-	/* 80077288 */ void SetWallPolyIndex(s32, s32);
-	/* 800772E8 */ void CalcMovePosWork();
-};
-
-// build Vec (Vec) True/True
-// build dBgS_SplGrpChk (dBgS_SplGrpChk) False/False
-/* top-level dependencies (begin dBgS_SplGrpChk) */
-/* top-level dependencies (end dBgS_SplGrpChk) */
-struct dBgS_SplGrpChk {
-};
-
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
-};
-
-// build cBgS_LinChk (cBgS_LinChk) False/False
-/* top-level dependencies (begin cBgS_LinChk) */
-/* top-level dependencies (end cBgS_LinChk) */
-struct cBgS_LinChk {
-};
-
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
-};
-
-// build cBgS_GrpPassChk (cBgS_GrpPassChk) False/False
-/* top-level dependencies (begin cBgS_GrpPassChk) */
-/* top-level dependencies (end cBgS_GrpPassChk) */
-struct cBgS_GrpPassChk {
-};
-
-// build dBgS_CaptPoly (dBgS_CaptPoly) False/False
-/* top-level dependencies (begin dBgS_CaptPoly) */
-/* top-level dependencies (end dBgS_CaptPoly) */
-struct dBgS_CaptPoly {
-};
-
-// build dBgS_SphChk (dBgS_SphChk) False/False
-/* top-level dependencies (begin dBgS_SphChk) */
-/* top-level dependencies (end dBgS_SphChk) */
-struct dBgS_SphChk {
+// build cBgS_ShdwDraw (cBgS_ShdwDraw) False/False
+/* top-level dependencies (begin cBgS_ShdwDraw) */
+/* top-level dependencies (end cBgS_ShdwDraw) */
+struct cBgS_ShdwDraw {
 };
 
 // build dBgPc (dBgPc) False/False
@@ -99,10 +31,47 @@ struct dBgPc {
 	/* 80074048 */ void setCode(sBgPc&);
 };
 
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
+// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
+/* top-level dependencies (begin cBgS_PolyInfo) */
+/* top-level dependencies (end cBgS_PolyInfo) */
+struct cBgS_PolyInfo {
+	/* 802681A4 */ void SetPolyIndex(int);
+};
+
+// build KC_PrismData (KC_PrismData) False/False
+/* top-level dependencies (begin KC_PrismData) */
+/* top-level dependencies (end KC_PrismData) */
+struct KC_PrismData {
+};
+
+// build cBgS_GrpPassChk (cBgS_GrpPassChk) False/False
+/* top-level dependencies (begin cBgS_GrpPassChk) */
+/* top-level dependencies (end cBgS_GrpPassChk) */
+struct cBgS_GrpPassChk {
+};
+
 // build cBgS_GndChk (cBgS_GndChk) False/False
 /* top-level dependencies (begin cBgS_GndChk) */
 /* top-level dependencies (end cBgS_GndChk) */
 struct cBgS_GndChk {
+};
+
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
+// build cBgS_LinChk (cBgS_LinChk) False/False
+/* top-level dependencies (begin cBgS_LinChk) */
+/* top-level dependencies (end cBgS_LinChk) */
+struct cBgS_LinChk {
 };
 
 // build dBgS_RoofChk (dBgS_RoofChk) False/False
@@ -111,53 +80,84 @@ struct cBgS_GndChk {
 struct dBgS_RoofChk {
 };
 
+// build dBgS_Acch (dBgS_Acch) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin dBgS_Acch) */
+// outer dependency: Vec
+/* top-level dependencies (end dBgS_Acch) */
+struct dBgS_Acch {
+	// Vec
+	/* 800771E4 */ void GetSpeedY();
+	/* 80077200 */ void GetWallAddY(Vec&);
+	/* 80077288 */ void SetWallPolyIndex(int, int);
+	/* 800772E8 */ void CalcMovePosWork();
+};
+
+// build dBgS_CaptPoly (dBgS_CaptPoly) False/False
+/* top-level dependencies (begin dBgS_CaptPoly) */
+/* top-level dependencies (end dBgS_CaptPoly) */
+struct dBgS_CaptPoly {
+};
+
+// build dBgS_SphChk (dBgS_SphChk) False/False
+/* top-level dependencies (begin dBgS_SphChk) */
+/* top-level dependencies (end dBgS_SphChk) */
+struct dBgS_SphChk {
+};
+
+// build Vec (Vec) True/True
+// build dBgS_SplGrpChk (dBgS_SplGrpChk) False/False
+/* top-level dependencies (begin dBgS_SplGrpChk) */
+/* top-level dependencies (end dBgS_SplGrpChk) */
+struct dBgS_SplGrpChk {
+};
+
 // build cBgS_PolyPassChk (cBgS_PolyPassChk) False/False
 /* top-level dependencies (begin cBgS_PolyPassChk) */
 /* top-level dependencies (end cBgS_PolyPassChk) */
 struct cBgS_PolyPassChk {
 };
 
-// build cBgS_ShdwDraw (cBgS_ShdwDraw) False/False
-/* top-level dependencies (begin cBgS_ShdwDraw) */
-/* top-level dependencies (end cBgS_ShdwDraw) */
-struct cBgS_ShdwDraw {
-};
-
 /* top-level dependencies (begin dBgWKCol) */
+// outer dependency: cBgS_ShdwDraw
+// outer dependency: dBgPc
+// outer dependency: csXyz
 // outer dependency: cBgS_PolyInfo
 // outer dependency: KC_PrismData
-// outer dependency: dBgS_Acch
-// outer dependency: Vec
-// outer dependency: dBgS_SplGrpChk
+// outer dependency: cBgS_GrpPassChk
+// outer dependency: cBgS_GndChk
 // outer dependency: cXyz
 // outer dependency: cBgS_LinChk
-// outer dependency: csXyz
-// outer dependency: cBgS_GrpPassChk
+// outer dependency: dBgS_RoofChk
+// outer dependency: dBgS_Acch
 // outer dependency: dBgS_CaptPoly
 // outer dependency: dBgS_SphChk
-// outer dependency: dBgPc
-// outer dependency: cBgS_GndChk
-// outer dependency: dBgS_RoofChk
+// outer dependency: Vec
+// outer dependency: dBgS_SplGrpChk
 // outer dependency: cBgS_PolyPassChk
-// outer dependency: cBgS_ShdwDraw
 /* top-level dependencies (end dBgWKCol) */
 struct dBgWKCol {
-	// cBgS_LinChk
-	// dBgS_RoofChk
-	// cBgS_GrpPassChk
-	// cBgS_PolyInfo
-	// dBgS_SphChk
-	// dBgPc
-	// dBgS_SplGrpChk
-	// csXyz
-	// cBgS_PolyPassChk
-	// KC_PrismData
-	// cBgS_GndChk
-	// dBgS_Acch
-	// Vec
-	// dBgS_CaptPoly
-	// cXyz
 	// cBgS_ShdwDraw
+	// dBgS_Acch
+	// dBgS_CaptPoly
+	// dBgPc
+	// csXyz
+	// cBgS_PolyInfo
+	// KC_PrismData
+	// cBgS_GrpPassChk
+	// cBgS_GndChk
+	// dBgS_SphChk
+	// cXyz
+	// cBgS_LinChk
+	// Vec
+	// dBgS_RoofChk
+	// dBgS_SplGrpChk
+	// cBgS_PolyPassChk
 	/* 8007E6F4 */ dBgWKCol();
 	/* 8007E74C */ ~dBgWKCol();
 	/* 8007E7D0 */ void initKCollision(void*);
@@ -168,14 +168,14 @@ struct dBgWKCol {
 	/* 8007E884 */ bool ChkMoveBg() const;
 	/* 8007E88C */ bool ChkMoveFlag() const;
 	/* 8007E894 */ void GetTriPla(cBgS_PolyInfo const&) const;
-	/* 8007E8C0 */ void GetTriPla(s32) const;
+	/* 8007E8C0 */ void GetTriPla(int) const;
 	/* 8007E980 */ void GetTriPnt(cBgS_PolyInfo const&, cXyz*, cXyz*, cXyz*) const;
-	/* 8007E9A4 */ void GetTriPnt(s32, Vec*, Vec*, Vec*) const;
+	/* 8007E9A4 */ void GetTriPnt(int, Vec*, Vec*, Vec*) const;
 	/* 8007E9D4 */ void GetTriPnt(KC_PrismData const*, Vec*, Vec*, Vec*) const;
 	/* 8007EB28 */ void GetBnd() const;
 	/* 8007EB30 */ void GetGrpInf(cBgS_PolyInfo const&) const;
 	/* 8007EB6C */ void OffMoveFlag();
-	/* 8007EB70 */ void getPolyCode(s32, dBgPc*) const;
+	/* 8007EB70 */ void getPolyCode(int, dBgPc*) const;
 	/* 8007EBC4 */ void chkPolyThrough(dBgPc*, cBgS_PolyPassChk*, cBgS_GrpPassChk*, cXyz&) const;
 	/* 8007EE34 */ void LineCheck(cBgS_LinChk*);
 	/* 8007F628 */ void GroundCross(cBgS_GndChk*);
@@ -193,26 +193,26 @@ struct dBgWKCol {
 	/* 80082A50 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 80082A80 */ void GetHorseNoEntry(cBgS_PolyInfo const&);
 	/* 80082AB0 */ void GetSpecialCode(cBgS_PolyInfo const&);
-	/* 80082AE0 */ void GetSpecialCode(s32);
+	/* 80082AE0 */ void GetSpecialCode(int);
 	/* 80082B0C */ void GetMagnetCode(cBgS_PolyInfo const&);
 	/* 80082B3C */ void GetMonkeyBarsCode(cBgS_PolyInfo const&);
-	/* 80082B6C */ void GetPolyObjThrough(s32);
-	/* 80082B98 */ void GetPolyCamThrough(s32);
-	/* 80082BC4 */ void GetPolyLinkThrough(s32);
-	/* 80082BF0 */ void GetPolyArrowThrough(s32);
-	/* 80082C1C */ void GetPolyHSStick(s32);
-	/* 80082C48 */ void GetPolyBoomerangThrough(s32);
-	/* 80082C74 */ void GetPolyRopeThrough(s32);
-	/* 80082CA0 */ void GetPolyBombThrough(s32);
-	/* 80082CCC */ void GetUnderwaterRoofCode(s32);
-	/* 80082CF8 */ void GetShdwThrough(s32);
+	/* 80082B6C */ void GetPolyObjThrough(int);
+	/* 80082B98 */ void GetPolyCamThrough(int);
+	/* 80082BC4 */ void GetPolyLinkThrough(int);
+	/* 80082BF0 */ void GetPolyArrowThrough(int);
+	/* 80082C1C */ void GetPolyHSStick(int);
+	/* 80082C48 */ void GetPolyBoomerangThrough(int);
+	/* 80082C74 */ void GetPolyRopeThrough(int);
+	/* 80082CA0 */ void GetPolyBombThrough(int);
+	/* 80082CCC */ void GetUnderwaterRoofCode(int);
+	/* 80082CF8 */ void GetShdwThrough(int);
 	/* 80082D24 */ void GetLinkNo(cBgS_PolyInfo const&);
 	/* 80082D54 */ void GetWallCode(cBgS_PolyInfo const&);
 	/* 80082D84 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 	/* 80082DB4 */ void GetPolyAtt1(cBgS_PolyInfo const&);
 	/* 80082DE4 */ void GetGroundCode(cBgS_PolyInfo const&);
-	/* 80082E14 */ void GetIronBallThrough(s32);
-	/* 80082E40 */ void GetAttackThrough(s32);
+	/* 80082E14 */ void GetIronBallThrough(int);
+	/* 80082E40 */ void GetAttackThrough(int);
 	/* 80082E6C */ void GetCamMoveBG(cBgS_PolyInfo const&);
 	/* 80082E9C */ void GetRoomCamId(cBgS_PolyInfo const&);
 	/* 80082ECC */ void GetRoomPathId(cBgS_PolyInfo const&);
@@ -251,8 +251,8 @@ struct dBgPlc {
 	/* 80074074 */ dBgPlc();
 	/* 80074080 */ ~dBgPlc();
 	/* 800740BC */ void setBase(void*);
-	/* 800740C4 */ void getCode(s32, sBgPc**) const;
-	/* 800740DC */ void getGrpCode(s32) const;
+	/* 800740C4 */ void getCode(int, sBgPc**) const;
+	/* 800740DC */ void getGrpCode(int) const;
 };
 
 // build dBgW_Base (dBgW_Base) False/False
@@ -672,7 +672,7 @@ asm void dBgWKCol::GetTriPla(cBgS_PolyInfo const& field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetTriPla(s32 field_0) const {
+asm void dBgWKCol::GetTriPla(int field_0) const {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetTriPla__8dBgWKColCFi.s"
 }
@@ -694,7 +694,7 @@ asm void dBgWKCol::GetTriPnt(cBgS_PolyInfo const& field_0, cXyz* field_1, cXyz* 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetTriPnt(s32 field_0, Vec* field_1, Vec* field_2, Vec* field_3) const {
+asm void dBgWKCol::GetTriPnt(int field_0, Vec* field_1, Vec* field_2, Vec* field_3) const {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetTriPnt__8dBgWKColCFiP3VecP3VecP3Vec.s"
 }
@@ -744,7 +744,7 @@ void dBgWKCol::OffMoveFlag() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::getPolyCode(s32 field_0, dBgPc* field_1) const {
+asm void dBgWKCol::getPolyCode(int field_0, dBgPc* field_1) const {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/getPolyCode__8dBgWKColCFiP5dBgPc.s"
 }
@@ -995,7 +995,7 @@ asm void dBgWKCol::GetSpecialCode(cBgS_PolyInfo const& field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetSpecialCode(s32 field_0) {
+asm void dBgWKCol::GetSpecialCode(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetSpecialCode__8dBgWKColFi.s"
 }
@@ -1028,7 +1028,7 @@ asm void dBgWKCol::GetMonkeyBarsCode(cBgS_PolyInfo const& field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetPolyObjThrough(s32 field_0) {
+asm void dBgWKCol::GetPolyObjThrough(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetPolyObjThrough__8dBgWKColFi.s"
 }
@@ -1039,7 +1039,7 @@ asm void dBgWKCol::GetPolyObjThrough(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetPolyCamThrough(s32 field_0) {
+asm void dBgWKCol::GetPolyCamThrough(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetPolyCamThrough__8dBgWKColFi.s"
 }
@@ -1050,7 +1050,7 @@ asm void dBgWKCol::GetPolyCamThrough(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetPolyLinkThrough(s32 field_0) {
+asm void dBgWKCol::GetPolyLinkThrough(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetPolyLinkThrough__8dBgWKColFi.s"
 }
@@ -1061,7 +1061,7 @@ asm void dBgWKCol::GetPolyLinkThrough(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetPolyArrowThrough(s32 field_0) {
+asm void dBgWKCol::GetPolyArrowThrough(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetPolyArrowThrough__8dBgWKColFi.s"
 }
@@ -1072,7 +1072,7 @@ asm void dBgWKCol::GetPolyArrowThrough(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetPolyHSStick(s32 field_0) {
+asm void dBgWKCol::GetPolyHSStick(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetPolyHSStick__8dBgWKColFi.s"
 }
@@ -1083,7 +1083,7 @@ asm void dBgWKCol::GetPolyHSStick(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetPolyBoomerangThrough(s32 field_0) {
+asm void dBgWKCol::GetPolyBoomerangThrough(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetPolyBoomerangThrough__8dBgWKColFi.s"
 }
@@ -1094,7 +1094,7 @@ asm void dBgWKCol::GetPolyBoomerangThrough(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetPolyRopeThrough(s32 field_0) {
+asm void dBgWKCol::GetPolyRopeThrough(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetPolyRopeThrough__8dBgWKColFi.s"
 }
@@ -1105,7 +1105,7 @@ asm void dBgWKCol::GetPolyRopeThrough(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetPolyBombThrough(s32 field_0) {
+asm void dBgWKCol::GetPolyBombThrough(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetPolyBombThrough__8dBgWKColFi.s"
 }
@@ -1116,7 +1116,7 @@ asm void dBgWKCol::GetPolyBombThrough(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetUnderwaterRoofCode(s32 field_0) {
+asm void dBgWKCol::GetUnderwaterRoofCode(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetUnderwaterRoofCode__8dBgWKColFi.s"
 }
@@ -1127,7 +1127,7 @@ asm void dBgWKCol::GetUnderwaterRoofCode(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetShdwThrough(s32 field_0) {
+asm void dBgWKCol::GetShdwThrough(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetShdwThrough__8dBgWKColFi.s"
 }
@@ -1193,7 +1193,7 @@ asm void dBgWKCol::GetGroundCode(cBgS_PolyInfo const& field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetIronBallThrough(s32 field_0) {
+asm void dBgWKCol::GetIronBallThrough(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetIronBallThrough__8dBgWKColFi.s"
 }
@@ -1204,7 +1204,7 @@ asm void dBgWKCol::GetIronBallThrough(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgWKCol::GetAttackThrough(s32 field_0) {
+asm void dBgWKCol::GetAttackThrough(int field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_w_kcol/GetAttackThrough__8dBgWKColFi.s"
 }

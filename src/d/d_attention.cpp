@@ -52,6 +52,12 @@ struct cSAngle {
 	/* 80271228 */ void operator-(s16) const;
 };
 
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
 // build cXyz (cXyz) False/False
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
@@ -67,29 +73,23 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
-struct fopAc_ac_c {
-};
-
 /* top-level dependencies (begin dAttention_c) */
 // outer dependency: cSAngle
-// outer dependency: cXyz
 // outer dependency: fopAc_ac_c
+// outer dependency: cXyz
 /* top-level dependencies (end dAttention_c) */
 struct dAttention_c {
 	// cSAngle
-	// cXyz
 	// fopAc_ac_c
+	// cXyz
 	/* 80070198 */ dAttention_c(fopAc_ac_c*, u32);
 	/* 80070774 */ ~dAttention_c();
 	/* 80070844 */ void GetLockonList(s32);
 	/* 80070880 */ void getActionBtnB();
 	/* 80070974 */ void getActionBtnXY();
 	/* 80070A70 */ void chkAttMask(u32, u32);
-	/* 80070E90 */ void calcWeight(s32, fopAc_ac_c*, f32, s16, s16, u32*);
-	/* 800710C0 */ void setList(s32, fopAc_ac_c*, f32, f32, cSAngle, u32);
+	/* 80070E90 */ void calcWeight(int, fopAc_ac_c*, f32, s16, s16, u32*);
+	/* 800710C0 */ void setList(int, fopAc_ac_c*, f32, f32, cSAngle, u32);
 	/* 80071240 */ void initList(u32);
 	/* 800713CC */ void makeList();
 	/* 80071424 */ void setOwnerAttentionPos();
@@ -135,14 +135,18 @@ struct cSGlobe {
 };
 
 // build dAttDraw_c (dAttDraw_c) False/False
+// build cXyz (cXyz) True/True
 /* top-level dependencies (begin dAttDraw_c) */
+// outer dependency: cXyz
 /* top-level dependencies (end dAttDraw_c) */
 struct dAttDraw_c {
+	// cXyz
 	/* 8003054C */ ~dAttDraw_c();
 	/* 800307F0 */ dAttDraw_c();
-	/* 80072DD8 */ void setAnm(char, f32);
-	/* 80072FE8 */ void setAlphaAnm(char, char);
+	/* 80072DD8 */ void setAnm(u8, f32);
+	/* 80072FE8 */ void setAlphaAnm(u8, u8);
 	/* 80073004 */ void alphaAnm();
+	/* 800732B0 */ void draw(cXyz&, f32 (* )[4]);
 };
 
 // build J3DTevBlock (J3DTevBlock) False/False
@@ -182,8 +186,8 @@ struct dAttList_c {
 struct dAttHint_c {
 	// fopAc_ac_c
 	/* 800738B4 */ void getPId(void*);
-	/* 800738CC */ void convPId(s32);
-	/* 800738FC */ void request(fopAc_ac_c*, s32);
+	/* 800738CC */ void convPId(u32);
+	/* 800738FC */ void request(fopAc_ac_c*, int);
 	/* 80073958 */ void init();
 	/* 80073970 */ void proc();
 };
@@ -195,10 +199,10 @@ struct dAttHint_c {
 /* top-level dependencies (end dAttCatch_c) */
 struct dAttCatch_c {
 	// fopAc_ac_c
-	/* 8007398C */ void convPId(s32);
+	/* 8007398C */ void convPId(u32);
 	/* 800739BC */ void init();
 	/* 800739DC */ void proc();
-	/* 80073A08 */ void request(fopAc_ac_c*, char, f32, f32, f32, s16, s32);
+	/* 80073A08 */ void request(fopAc_ac_c*, u8, f32, f32, f32, s16, int);
 };
 
 // build dAttLook_c (dAttLook_c) False/False
@@ -208,10 +212,10 @@ struct dAttCatch_c {
 /* top-level dependencies (end dAttLook_c) */
 struct dAttLook_c {
 	// fopAc_ac_c
-	/* 80073CA4 */ void convPId(s32);
+	/* 80073CA4 */ void convPId(u32);
 	/* 80073CD4 */ void init();
 	/* 80073CEC */ void proc();
-	/* 80073D08 */ void request(fopAc_ac_c*, f32, f32, f32, s16, s32);
+	/* 80073D08 */ void request(fopAc_ac_c*, f32, f32, f32, s16, int);
 };
 
 // build mDoExt_baseAnm (mDoExt_baseAnm) False/False
@@ -222,26 +226,26 @@ struct mDoExt_baseAnm {
 };
 
 // build mDoExt_bpkAnm (mDoExt_bpkAnm) False/False
-// build J3DAnmColor (J3DAnmColor) False/False
-/* top-level dependencies (begin J3DAnmColor) */
-/* top-level dependencies (end J3DAnmColor) */
-struct J3DAnmColor {
-};
-
 // build J3DMaterialTable (J3DMaterialTable) False/False
 /* top-level dependencies (begin J3DMaterialTable) */
 /* top-level dependencies (end J3DMaterialTable) */
 struct J3DMaterialTable {
 };
 
+// build J3DAnmColor (J3DAnmColor) False/False
+/* top-level dependencies (begin J3DAnmColor) */
+/* top-level dependencies (end J3DAnmColor) */
+struct J3DAnmColor {
+};
+
 /* top-level dependencies (begin mDoExt_bpkAnm) */
-// outer dependency: J3DAnmColor
 // outer dependency: J3DMaterialTable
+// outer dependency: J3DAnmColor
 /* top-level dependencies (end mDoExt_bpkAnm) */
 struct mDoExt_bpkAnm {
-	// J3DAnmColor
 	// J3DMaterialTable
-	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, s32, s32, f32, s16, s16);
+	// J3DAnmColor
+	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
@@ -262,7 +266,7 @@ struct J3DAnmTextureSRTKey {
 struct mDoExt_btkAnm {
 	// J3DAnmTextureSRTKey
 	// J3DMaterialTable
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, s32, s32, f32, s16, s16);
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
@@ -282,32 +286,32 @@ struct J3DAnmTevRegKey {
 struct mDoExt_brkAnm {
 	// J3DAnmTevRegKey
 	// J3DMaterialTable
-	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, s32, s32, f32, s16, s16);
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
 // build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
 // build mDoExt_bckAnm (mDoExt_bckAnm) False/False
-// build J3DAnmTransform (J3DAnmTransform) False/False
-/* top-level dependencies (begin J3DAnmTransform) */
-/* top-level dependencies (end J3DAnmTransform) */
-struct J3DAnmTransform {
-};
-
 // build J3DModelData (J3DModelData) False/False
 /* top-level dependencies (begin J3DModelData) */
 /* top-level dependencies (end J3DModelData) */
 struct J3DModelData {
 };
 
+// build J3DAnmTransform (J3DAnmTransform) False/False
+/* top-level dependencies (begin J3DAnmTransform) */
+/* top-level dependencies (end J3DAnmTransform) */
+struct J3DAnmTransform {
+};
+
 /* top-level dependencies (begin mDoExt_bckAnm) */
-// outer dependency: J3DAnmTransform
 // outer dependency: J3DModelData
+// outer dependency: J3DAnmTransform
 /* top-level dependencies (end mDoExt_bckAnm) */
 struct mDoExt_bckAnm {
-	// J3DAnmTransform
 	// J3DModelData
-	/* 8000D7DC */ void init(J3DAnmTransform*, s32, s32, f32, s16, s16, bool);
+	// J3DAnmTransform
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
@@ -329,7 +333,7 @@ struct JKRSolidHeap {
 /* top-level dependencies (begin dSv_danBit_c) */
 /* top-level dependencies (end dSv_danBit_c) */
 struct dSv_danBit_c {
-	/* 80034BE8 */ void isSwitch(s32) const;
+	/* 80034BE8 */ void isSwitch(int) const;
 };
 
 // build dRes_control_c (dRes_control_c) False/False
@@ -344,7 +348,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -357,21 +361,21 @@ struct daPy_py_c {
 
 // build Vec (Vec) True/True
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -394,7 +398,6 @@ static void distace_angle_adjust(f32, s16, f32);
 static void check_distace(cXyz*, s16, cXyz*, f32, f32, f32, f32);
 static void select_attention(fopAc_ac_c*, void*);
 static void sound_attention(fopAc_ac_c*, void*);
-extern "C" static void draw__10dAttDraw_cFR4cXyzPA4_f();
 extern "C" void __sinit_d_attention_cpp();
 
 extern "C" static void func_80070018();
@@ -443,7 +446,7 @@ extern "C" void setAnm__10dAttDraw_cFUcf();
 extern "C" void setAlphaAnm__10dAttDraw_cFUcUc();
 extern "C" void alphaAnm__10dAttDraw_cFv();
 extern "C" void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor();
-extern "C" static void draw__10dAttDraw_cFR4cXyzPA4_f();
+extern "C" void draw__10dAttDraw_cFR4cXyzPA4_f();
 extern "C" void LockonTarget__12dAttention_cFl();
 extern "C" void LockonReleaseDistanse__12dAttention_cFv();
 extern "C" void LockonTargetPId__12dAttention_cFl();
@@ -984,7 +987,7 @@ f32 d_d_attention__lit_4563 = 0.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttention_c::calcWeight(s32 field_0, fopAc_ac_c* field_1, f32 field_2, s16 field_3, s16 field_4, u32* field_5) {
+asm void dAttention_c::calcWeight(int field_0, fopAc_ac_c* field_1, f32 field_2, s16 field_3, s16 field_4, u32* field_5) {
 	nofralloc
 #include "asm/d/d_attention/calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl.s"
 }
@@ -995,7 +998,7 @@ asm void dAttention_c::calcWeight(s32 field_0, fopAc_ac_c* field_1, f32 field_2,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttention_c::setList(s32 field_0, fopAc_ac_c* field_1, f32 field_2, f32 field_3, cSAngle field_4, u32 field_5) {
+asm void dAttention_c::setList(int field_0, fopAc_ac_c* field_1, f32 field_2, f32 field_3, cSAngle field_4, u32 field_5) {
 	nofralloc
 #include "asm/d/d_attention/setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl.s"
 }
@@ -1272,7 +1275,7 @@ asm void dAttention_c::lockSoundStart(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttDraw_c::setAnm(char field_0, f32 field_1) {
+asm void dAttDraw_c::setAnm(u8 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/d_attention/setAnm__10dAttDraw_cFUcf.s"
 }
@@ -1283,7 +1286,7 @@ asm void dAttDraw_c::setAnm(char field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttDraw_c::setAlphaAnm(char field_0, char field_1) {
+asm void dAttDraw_c::setAlphaAnm(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/d_attention/setAlphaAnm__10dAttDraw_cFUcUc.s"
 }
@@ -1326,7 +1329,7 @@ f32 d_d_attention__lit_5785 = -100.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void draw__10dAttDraw_cFR4cXyzPA4_f() {
+asm void dAttDraw_c::draw(cXyz& field_0, f32 (* field_1)[4]) {
 	nofralloc
 #include "asm/d/d_attention/draw__10dAttDraw_cFR4cXyzPA4_f.s"
 }
@@ -1447,7 +1450,7 @@ asm void dAttHint_c::getPId(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttHint_c::convPId(s32 field_0) {
+asm void dAttHint_c::convPId(u32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/convPId__10dAttHint_cFUi.s"
 }
@@ -1458,7 +1461,7 @@ asm void dAttHint_c::convPId(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttHint_c::request(fopAc_ac_c* field_0, s32 field_1) {
+asm void dAttHint_c::request(fopAc_ac_c* field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_attention/request__10dAttHint_cFP10fopAc_ac_ci.s"
 }
@@ -1491,7 +1494,7 @@ asm void dAttHint_c::proc() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttCatch_c::convPId(s32 field_0) {
+asm void dAttCatch_c::convPId(u32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/convPId__11dAttCatch_cFUi.s"
 }
@@ -1524,7 +1527,7 @@ asm void dAttCatch_c::proc() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttCatch_c::request(fopAc_ac_c* field_0, char field_1, f32 field_2, f32 field_3, f32 field_4, s16 field_5, s32 field_6) {
+asm void dAttCatch_c::request(fopAc_ac_c* field_0, u8 field_1, f32 field_2, f32 field_3, f32 field_4, s16 field_5, int field_6) {
 	nofralloc
 #include "asm/d/d_attention/request__11dAttCatch_cFP10fopAc_ac_cUcfffsi.s"
 }
@@ -1535,7 +1538,7 @@ asm void dAttCatch_c::request(fopAc_ac_c* field_0, char field_1, f32 field_2, f3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttLook_c::convPId(s32 field_0) {
+asm void dAttLook_c::convPId(u32 field_0) {
 	nofralloc
 #include "asm/d/d_attention/convPId__10dAttLook_cFUi.s"
 }
@@ -1568,7 +1571,7 @@ asm void dAttLook_c::proc() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttLook_c::request(fopAc_ac_c* field_0, f32 field_1, f32 field_2, f32 field_3, s16 field_4, s32 field_5) {
+asm void dAttLook_c::request(fopAc_ac_c* field_0, f32 field_1, f32 field_2, f32 field_3, s16 field_4, int field_5) {
 	nofralloc
 #include "asm/d/d_attention/request__10dAttLook_cFP10fopAc_ac_cfffsi.s"
 }

@@ -38,8 +38,8 @@ struct create_tag_class {
 // 
 
 extern "C" void fpcEx_Search__FPFPvPv_PvPv();
-void fpcEx_SearchByID(s32);
-void fpcEx_IsExist(s32);
+void fpcEx_SearchByID(u32);
+void fpcEx_IsExist(u32);
 void fpcEx_Execute(base_process_class*);
 static void fpcEx_ToLineQ(base_process_class*);
 void fpcEx_ExecuteQTo(base_process_class*);
@@ -59,16 +59,16 @@ extern "C" void fpcEx_Handler__FPFPvPv_i();
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(s32, s32);
+void fpcBs_Is_JustOfType(int, int);
 void fpcBs_Execute(base_process_class*);
 extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
 extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv();
-void fpcLyTg_ToQueue(layer_management_tag_class*, s32, u16, u16);
+void fpcLyTg_ToQueue(layer_management_tag_class*, u32, u16, u16);
 void fpcLyTg_QueueTo(layer_management_tag_class*);
 void fpcSch_JudgeByID(void*, void*);
-void fpcLnTg_ToQueue(line_tag*, s32);
+void fpcLnTg_ToQueue(line_tag*, int);
 extern "C" void fpcLnIt_Queue__FPFPvPv_i();
-void fpcPause_IsEnable(void*, char);
+void fpcPause_IsEnable(void*, u8);
 void cTg_IsUse(create_tag_class*);
 
 extern "C" void fpcBs_Is_JustOfType__Fii();
@@ -103,7 +103,7 @@ extern "C" asm void fpcEx_Search__FPFPvPv_PvPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcEx_SearchByID(s32 field_0) {
+asm void fpcEx_SearchByID(u32 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_SearchByID__FUi.s"
 }
@@ -114,7 +114,7 @@ asm void fpcEx_SearchByID(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcEx_IsExist(s32 field_0) {
+asm void fpcEx_IsExist(u32 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_IsExist__FUi.s"
 }

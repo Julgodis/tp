@@ -29,7 +29,7 @@ struct jmessage_tReference {
 	/* 80229034 */ void pageSend();
 	/* 80229168 */ void selectMessage();
 	/* 802294A8 */ void inputNumber();
-	/* 80229730 */ void getWord(s32);
+	/* 80229730 */ void getWord(int);
 	/* 80229744 */ void resetWord();
 	/* 80229768 */ void setCharactor(u16);
 	/* 80229788 */ void addCharactor(u16);
@@ -40,7 +40,7 @@ struct jmessage_tReference {
 	/* 8022986C */ void isCharSend();
 	/* 802298DC */ void isLightSend();
 	/* 8022994C */ void isLightEnd();
-	/* 802299AC */ void decideOutFontRupeeColor(s32);
+	/* 802299AC */ void decideOutFontRupeeColor(int);
 	/* 80232A20 */ void getActorPos();
 };
 
@@ -61,11 +61,11 @@ struct jmessage_tMeasureProcessor {
 	/* 80229A28 */ jmessage_tMeasureProcessor(jmessage_tReference const*);
 	/* 80229AC4 */ void do_begin(void const*, char const*);
 	/* 80229CB4 */ void do_end();
-	/* 80229E3C */ void do_character(s32);
+	/* 80229E3C */ void do_character(int);
 	/* 8022A268 */ void do_tag(u32, void const*, u32);
 	/* 8022B0B0 */ void do_scale(f32);
 	/* 8022B18C */ void do_space(u32);
-	/* 8022B3EC */ void do_pageType(s32);
+	/* 8022B3EC */ void do_pageType(int);
 	/* 8022B454 */ void do_name1();
 	/* 8022B458 */ void do_rubyset(void const*, u32);
 	/* 8022B4E0 */ void push_word(char*);
@@ -73,8 +73,6 @@ struct jmessage_tMeasureProcessor {
 };
 
 // build jmessage_tSequenceProcessor (jmessage_tSequenceProcessor) False/False
-// build jmessage_tControl (jmessage_tControl) True/True
-// build jmessage_tReference (jmessage_tReference) True/True
 // build cXyz (cXyz) False/False
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
@@ -90,28 +88,30 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
+// build jmessage_tControl (jmessage_tControl) True/True
+// build jmessage_tReference (jmessage_tReference) True/True
 /* top-level dependencies (begin jmessage_tSequenceProcessor) */
+// outer dependency: cXyz
 // outer dependency: jmessage_tControl
 // outer dependency: jmessage_tReference
-// outer dependency: cXyz
 /* top-level dependencies (end jmessage_tSequenceProcessor) */
 struct jmessage_tSequenceProcessor {
+	// cXyz
 	// jmessage_tControl
 	// jmessage_tReference
-	// cXyz
 	/* 8022B558 */ jmessage_tSequenceProcessor(jmessage_tReference const*, jmessage_tControl*);
 	/* 8022B654 */ void do_reset();
 	/* 8022B658 */ void do_begin(void const*, char const*);
 	/* 8022BA3C */ void do_end();
 	/* 8022BB7C */ void do_isReady();
-	/* 8022BFE0 */ void do_character(s32);
+	/* 8022BFE0 */ void do_character(int);
 	/* 8022C1A0 */ void do_tag(u32, void const*, u32);
 	/* 8022C8FC */ bool do_jump_isReady();
 	/* 8022C904 */ void do_name1();
 	/* 8022C908 */ void do_space(u32);
 	/* 8022CA24 */ void do_rubyset(void const*, u32);
 	/* 8022CAAC */ void push_word();
-	/* 8022CB10 */ void messageSePlay(char, char, cXyz*);
+	/* 8022CB10 */ void messageSePlay(u8, u8, cXyz*);
 	/* 8022CBE4 */ void do_jump(void const*, char const*);
 	/* 8022CBE8 */ void calcStringLength();
 	/* 8023299C */ ~jmessage_tSequenceProcessor();
@@ -129,19 +129,19 @@ struct jmessage_tRenderingProcessor {
 	/* 8022CDC8 */ void do_reset();
 	/* 8022CDCC */ void do_begin(void const*, char const*);
 	/* 8022CFD8 */ void do_end();
-	/* 8022D0A0 */ void do_character(s32);
+	/* 8022D0A0 */ void do_character(int);
 	/* 8022D74C */ void do_tag(u32, void const*, u32);
 	/* 8022E12C */ void resetRendering();
 	/* 8022E17C */ void do_widthcenter();
-	/* 8022E260 */ void do_selwidthcenter(s32);
+	/* 8022E260 */ void do_selwidthcenter(int);
 	/* 8022E318 */ void do_heightcenter();
-	/* 8022E7CC */ void do_color(char);
+	/* 8022E7CC */ void do_color(u8);
 	/* 8022E860 */ void do_scale(f32);
 	/* 8022E960 */ void do_linedown(s16);
 	/* 8022E9C0 */ void do_transY(s16, bool);
-	/* 8022EAE4 */ void do_outfont(char, u32);
+	/* 8022EAE4 */ void do_outfont(u8, u32);
 	/* 8022ED10 */ void do_arrow2();
-	/* 8022EECC */ void getLineLength(s32);
+	/* 8022EECC */ void getLineLength(int);
 	/* 8022EF00 */ void do_strcat(char*, bool, bool, bool);
 	/* 8022F148 */ void do_rubyset(void const*, u32);
 	/* 8022F384 */ void do_rubystrcat(char*, char*, f32, f32);
@@ -153,6 +153,13 @@ struct jmessage_tRenderingProcessor {
 };
 
 // build jmessage_string_tReference (jmessage_string_tReference) False/False
+// build COutFont_c (COutFont_c) False/False
+/* top-level dependencies (begin COutFont_c) */
+/* top-level dependencies (end COutFont_c) */
+struct COutFont_c {
+	/* 80226CF8 */ void initialize();
+};
+
 // build JUTFont (JUTFont) False/False
 /* top-level dependencies (begin JUTFont) */
 /* top-level dependencies (end JUTFont) */
@@ -166,33 +173,26 @@ struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 };
 
-// build COutFont_c (COutFont_c) False/False
-/* top-level dependencies (begin COutFont_c) */
-/* top-level dependencies (end COutFont_c) */
-struct COutFont_c {
-	/* 80226CF8 */ void initialize();
-};
-
 /* top-level dependencies (begin jmessage_string_tReference) */
+// outer dependency: COutFont_c
 // outer dependency: JUTFont
 // outer dependency: J2DTextBox
-// outer dependency: COutFont_c
 /* top-level dependencies (end jmessage_string_tReference) */
 struct jmessage_string_tReference {
+	// COutFont_c
 	// JUTFont
 	// J2DTextBox
-	// COutFont_c
 	/* 8022F8C0 */ jmessage_string_tReference();
 	/* 8022F94C */ ~jmessage_string_tReference();
-	/* 8022F9AC */ void init(J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 8022F9AC */ void init(J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
 	/* 8022FA2C */ void setCharactor(u16);
 	/* 8022FA30 */ void addCharactor(u16);
 	/* 8022FA34 */ void resetCharactor();
-	/* 8022FA38 */ void getLineLength(s32);
-	/* 8022FA6C */ void addLineLength(s32, f32);
-	/* 8022FA98 */ void getOutfontLength(s32);
-	/* 8022FACC */ void setOutfontLength(s32, f32);
-	/* 8022FAF0 */ void clearOutfontLength(s32);
+	/* 8022FA38 */ void getLineLength(int);
+	/* 8022FA6C */ void addLineLength(int, f32);
+	/* 8022FA98 */ void getOutfontLength(int);
+	/* 8022FACC */ void setOutfontLength(int, f32);
+	/* 8022FAF0 */ void clearOutfontLength(int);
 	/* 8022FB24 */ void getLineCountNowPage();
 };
 
@@ -217,7 +217,7 @@ struct jmessage_string_tMeasureProcessor {
 	/* 8022FB98 */ jmessage_string_tMeasureProcessor(jmessage_string_tReference const*);
 	/* 8022FBE4 */ void do_begin(void const*, char const*);
 	/* 8022FC14 */ void do_end();
-	/* 8022FC28 */ void do_character(s32);
+	/* 8022FC28 */ void do_character(int);
 	/* 8022FDF0 */ void do_tag(u32, void const*, u32);
 	/* 8023098C */ void do_rubyset(void const*, u32);
 	/* 80230A5C */ ~jmessage_string_tMeasureProcessor();
@@ -238,7 +238,7 @@ struct jmessage_string_tSequenceProcessor {
 	/* 80230AC0 */ void do_begin(void const*, char const*);
 	/* 80230B7C */ void do_end();
 	/* 80230B80 */ bool do_isReady();
-	/* 80230B88 */ void do_character(s32);
+	/* 80230B88 */ void do_character(int);
 	/* 80230B8C */ void do_tag(u32, void const*, u32);
 	/* 80230BBC */ bool do_jump_isReady();
 	/* 80230BC4 */ void do_jump(void const*, char const*);
@@ -257,15 +257,15 @@ struct jmessage_string_tRenderingProcessor {
 	/* 80230C5C */ void do_reset();
 	/* 80230CA0 */ void do_begin(void const*, char const*);
 	/* 80230CE8 */ void do_end();
-	/* 80230D48 */ void do_character(s32);
+	/* 80230D48 */ void do_character(int);
 	/* 80231110 */ void do_tag(u32, void const*, u32);
 	/* 80231D70 */ void do_widthcenter();
 	/* 80231EF0 */ void do_heightcenter();
 	/* 80232044 */ void do_strcat(char*);
 	/* 802320B0 */ void do_rubyset(void const*, u32);
 	/* 80232260 */ void do_rubystrcat(char*);
-	/* 802322CC */ void do_outfont(char);
-	/* 8023256C */ void do_color(char);
+	/* 802322CC */ void do_outfont(u8);
+	/* 8023256C */ void do_color(u8);
 	/* 80232600 */ void do_scale(f32);
 	/* 80232690 */ void do_linedown(s16);
 	/* 802326E4 */ void do_numset(s16);
@@ -290,7 +290,7 @@ struct STControl {
 /* top-level dependencies (begin dSv_player_item_max_c) */
 /* top-level dependencies (end dSv_player_item_max_c) */
 struct dSv_player_item_max_c {
-	/* 800340F8 */ void getBombNum(char) const;
+	/* 800340F8 */ void getBombNum(u8) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -320,11 +320,11 @@ struct dMsgObject_c {
 	/* 8023741C */ void getInsectName();
 	/* 80237478 */ void getLetterName();
 	/* 802374D0 */ void getSelectBombNum();
-	/* 802375E4 */ void addSelectBomBag(char);
+	/* 802375E4 */ void addSelectBomBag(u8);
 	/* 80237610 */ void resetSelectBomBag();
 	/* 80238500 */ void getMsgOutputType();
 	/* 80238514 */ void getWord();
-	/* 80238528 */ void getSelectWord(s32);
+	/* 80238528 */ void getSelectWord(int);
 	/* 80238574 */ void getSelectWordFlag();
 	/* 802385E0 */ void getSelectBombPrice();
 	/* 80238638 */ void getItemEquipButton();
@@ -334,7 +334,7 @@ struct dMsgObject_c {
 /* top-level dependencies (begin dMsgUnit_c) */
 /* top-level dependencies (end dMsgUnit_c) */
 struct dMsgUnit_c {
-	/* 80238CEC */ void setTag(s32, s32, char*, bool);
+	/* 80238CEC */ void setTag(int, int, char*, bool);
 };
 
 // build Vec (Vec) True/True
@@ -344,9 +344,9 @@ struct JMessage;
 // build JMessage (JMessage) True/True
 // build JMessage (JMessage) True/True
 /* top-level dependencies (begin JMessage) */
+// outer dependency: JMessage::TControl
 // outer dependency: JMessage::TProcessor
 // outer dependency: JMessage::TReference
-// outer dependency: JMessage::TControl
 /* top-level dependencies (end JMessage) */
 struct JMessage {
 	// build TControl (JMessage::TControl) False/False
@@ -381,14 +381,14 @@ struct JMessage {
 
 	// build TSequenceProcessor (JMessage::TSequenceProcessor) False/False
 	/* dependencies (begin JMessage::TSequenceProcessor) */
-	// inner dependency: TReference (JMessage::TReference) True False (for JMessage::TSequenceProcessor)
-	// build TReference (JMessage::TReference) True/True
 	// inner dependency: TControl (JMessage::TControl) True False (for JMessage::TSequenceProcessor)
 	// build TControl (JMessage::TControl) True/True
+	// inner dependency: TReference (JMessage::TReference) True False (for JMessage::TSequenceProcessor)
+	// build TReference (JMessage::TReference) True/True
 	/* dependencies (end JMessage::TSequenceProcessor) */
 	struct TSequenceProcessor {
-		// JMessage::TReference
 		// JMessage::TControl
+		// JMessage::TReference
 		/* 802A8374 */ TSequenceProcessor(JMessage::TReference const*, JMessage::TControl*);
 		/* 802A83B8 */ ~TSequenceProcessor();
 		/* 802A8794 */ void do_branch_query(u32);
@@ -419,21 +419,21 @@ struct JMessage {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -444,8 +444,8 @@ struct Z2SeMgr {
 /* top-level dependencies (end Z2SpeechMgr2) */
 struct Z2SpeechMgr2 {
 	// Vec
-	/* 802CBD88 */ void setString(u16 const*, s16, char, u16);
-	/* 802CCA18 */ void playOneShotVoice(char, u16, Vec*, char);
+	/* 802CBD88 */ void setString(u16 const*, s16, u8, u16);
+	/* 802CCA18 */ void playOneShotVoice(u8, u16, Vec*, s8);
 };
 
 // build J2DPane (J2DPane) False/False
@@ -460,14 +460,14 @@ struct J2DPane {
 // Forward References:
 // 
 
-static void checkCharInfoCharactor(s32);
+static void checkCharInfoCharactor(int);
 static void changeCodeToChar(u16);
-static void change1ByteTo2Bytes(s32);
-static void changeKataToHira(s32);
-static void isOutfontKanjiCode(s32);
-static void getFontCCColorTable(char, char);
-static void getFontGCColorTable(char, char);
-static void getOutFontNumberType(s32);
+static void change1ByteTo2Bytes(int);
+static void changeKataToHira(int);
+static void isOutfontKanjiCode(int);
+static void getFontCCColorTable(u8, u8);
+static void getFontGCColorTable(u8, u8);
+static void getOutFontNumberType(int);
 static void getPohNum();
 
 extern "C" static void checkCharInfoCharactor__Fi();
@@ -668,7 +668,7 @@ SECTION_SDATA2 extern f32 lit_7190;
 // 
 
 void mDoExt_getMesgFont();
-void dComIfGp_getReverb(s32);
+void dComIfGp_getReverb(int);
 void dComIfGs_checkGetInsectNum();
 void dMeter2Info_getNewLetterNum();
 void dMsgObject_getFundRaising();
@@ -813,7 +813,7 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void checkCharInfoCharactor(s32 field_0) {
+asm static void checkCharInfoCharactor(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/checkCharInfoCharactor__Fi.s"
 }
@@ -920,7 +920,7 @@ void* d_msg_d_msg_class__lit_3831[64] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void change1ByteTo2Bytes(s32 field_0) {
+asm static void change1ByteTo2Bytes(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/change1ByteTo2Bytes__Fi.s"
 }
@@ -931,7 +931,7 @@ asm static void change1ByteTo2Bytes(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void changeKataToHira(s32 field_0) {
+asm static void changeKataToHira(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/changeKataToHira__Fi.s"
 }
@@ -942,7 +942,7 @@ asm static void changeKataToHira(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void isOutfontKanjiCode(s32 field_0) {
+asm static void isOutfontKanjiCode(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/isOutfontKanjiCode__Fi.s"
 }
@@ -961,7 +961,7 @@ SECTION_RODATA const u8 data_803995C8[36] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void getFontCCColorTable(char field_0, char field_1) {
+asm static void getFontCCColorTable(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/getFontCCColorTable__FUcUc.s"
 }
@@ -980,7 +980,7 @@ SECTION_RODATA const u8 data_803995EC[36] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void getFontGCColorTable(char field_0, char field_1) {
+asm static void getFontGCColorTable(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/getFontGCColorTable__FUcUc.s"
 }
@@ -1006,7 +1006,7 @@ void* d_msg_d_msg_class__lit_3903[10] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void getOutFontNumberType(s32 field_0) {
+asm static void getOutFontNumberType(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/getOutFontNumberType__Fi.s"
 }
@@ -2072,7 +2072,7 @@ asm void jmessage_tReference::inputNumber() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_tReference::getWord(s32 field_0) {
+asm void jmessage_tReference::getWord(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/getWord__19jmessage_tReferenceFi.s"
 }
@@ -2193,7 +2193,7 @@ asm void jmessage_tReference::isLightEnd() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_tReference::decideOutFontRupeeColor(s32 field_0) {
+asm void jmessage_tReference::decideOutFontRupeeColor(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/decideOutFontRupeeColor__19jmessage_tReferenceFi.s"
 }
@@ -2248,7 +2248,7 @@ asm void jmessage_tMeasureProcessor::do_end() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_tMeasureProcessor::do_character(s32 field_0) {
+asm void jmessage_tMeasureProcessor::do_character(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/do_character__26jmessage_tMeasureProcessorFi.s"
 }
@@ -2317,7 +2317,7 @@ asm void jmessage_tMeasureProcessor::do_space(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_tMeasureProcessor::do_pageType(s32 field_0) {
+asm void jmessage_tMeasureProcessor::do_pageType(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/do_pageType__26jmessage_tMeasureProcessorFi.s"
 }
@@ -2424,7 +2424,7 @@ asm void jmessage_tSequenceProcessor::do_isReady() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_tSequenceProcessor::do_character(s32 field_0) {
+asm void jmessage_tSequenceProcessor::do_character(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/do_character__27jmessage_tSequenceProcessorFi.s"
 }
@@ -2491,7 +2491,7 @@ asm void jmessage_tSequenceProcessor::push_word() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_tSequenceProcessor::messageSePlay(char field_0, char field_1, cXyz* field_2) {
+asm void jmessage_tSequenceProcessor::messageSePlay(u8 field_0, u8 field_1, cXyz* field_2) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/messageSePlay__27jmessage_tSequenceProcessorFUcUcP4cXyz.s"
 }
@@ -2562,7 +2562,7 @@ f32 lit_6374 = 3.0f / 10.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_tRenderingProcessor::do_character(s32 field_0) {
+asm void jmessage_tRenderingProcessor::do_character(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/do_character__28jmessage_tRenderingProcessorFi.s"
 }
@@ -2606,7 +2606,7 @@ asm void jmessage_tRenderingProcessor::do_widthcenter() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_tRenderingProcessor::do_selwidthcenter(s32 field_0) {
+asm void jmessage_tRenderingProcessor::do_selwidthcenter(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/do_selwidthcenter__28jmessage_tRenderingProcessorFi.s"
 }
@@ -2628,7 +2628,7 @@ asm void jmessage_tRenderingProcessor::do_heightcenter() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_tRenderingProcessor::do_color(char field_0) {
+asm void jmessage_tRenderingProcessor::do_color(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/do_color__28jmessage_tRenderingProcessorFUc.s"
 }
@@ -2676,7 +2676,7 @@ f32 lit_6781 = 24.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_tRenderingProcessor::do_outfont(char field_0, u32 field_1) {
+asm void jmessage_tRenderingProcessor::do_outfont(u8 field_0, u32 field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/do_outfont__28jmessage_tRenderingProcessorFUcUl.s"
 }
@@ -2698,7 +2698,7 @@ asm void jmessage_tRenderingProcessor::do_arrow2() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_tRenderingProcessor::getLineLength(s32 field_0) {
+asm void jmessage_tRenderingProcessor::getLineLength(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/getLineLength__28jmessage_tRenderingProcessorFi.s"
 }
@@ -2803,7 +2803,7 @@ asm jmessage_string_tReference::~jmessage_string_tReference() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_string_tReference::init(J2DTextBox* field_0, J2DTextBox* field_1, JUTFont* field_2, COutFont_c* field_3, char field_4) {
+asm void jmessage_string_tReference::init(J2DTextBox* field_0, J2DTextBox* field_1, JUTFont* field_2, COutFont_c* field_3, u8 field_4) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
 }
@@ -2832,7 +2832,7 @@ void jmessage_string_tReference::resetCharactor() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_string_tReference::getLineLength(s32 field_0) {
+asm void jmessage_string_tReference::getLineLength(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/getLineLength__26jmessage_string_tReferenceFi.s"
 }
@@ -2843,7 +2843,7 @@ asm void jmessage_string_tReference::getLineLength(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_string_tReference::addLineLength(s32 field_0, f32 field_1) {
+asm void jmessage_string_tReference::addLineLength(int field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/addLineLength__26jmessage_string_tReferenceFif.s"
 }
@@ -2854,7 +2854,7 @@ asm void jmessage_string_tReference::addLineLength(s32 field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_string_tReference::getOutfontLength(s32 field_0) {
+asm void jmessage_string_tReference::getOutfontLength(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/getOutfontLength__26jmessage_string_tReferenceFi.s"
 }
@@ -2865,7 +2865,7 @@ asm void jmessage_string_tReference::getOutfontLength(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_string_tReference::setOutfontLength(s32 field_0, f32 field_1) {
+asm void jmessage_string_tReference::setOutfontLength(int field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/setOutfontLength__26jmessage_string_tReferenceFif.s"
 }
@@ -2876,7 +2876,7 @@ asm void jmessage_string_tReference::setOutfontLength(s32 field_0, f32 field_1) 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_string_tReference::clearOutfontLength(s32 field_0) {
+asm void jmessage_string_tReference::clearOutfontLength(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/clearOutfontLength__26jmessage_string_tReferenceFi.s"
 }
@@ -2947,7 +2947,7 @@ f32 lit_7190 = 20.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_string_tMeasureProcessor::do_character(s32 field_0) {
+asm void jmessage_string_tMeasureProcessor::do_character(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/do_character__33jmessage_string_tMeasureProcessorFi.s"
 }
@@ -3028,7 +3028,7 @@ bool jmessage_string_tSequenceProcessor::do_isReady() {
 
 
 /* 80230B88-80230B8C 0004+00 rc=1 efc=0 .text      do_character__34jmessage_string_tSequenceProcessorFi         */
-void jmessage_string_tSequenceProcessor::do_character(s32 field_0) {
+void jmessage_string_tSequenceProcessor::do_character(int field_0) {
 	/* empty function */
 }
 
@@ -3115,7 +3115,7 @@ asm void jmessage_string_tRenderingProcessor::do_end() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_string_tRenderingProcessor::do_character(s32 field_0) {
+asm void jmessage_string_tRenderingProcessor::do_character(int field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/do_character__35jmessage_string_tRenderingProcessorFi.s"
 }
@@ -3192,7 +3192,7 @@ asm void jmessage_string_tRenderingProcessor::do_rubystrcat(char* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_string_tRenderingProcessor::do_outfont(char field_0) {
+asm void jmessage_string_tRenderingProcessor::do_outfont(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/do_outfont__35jmessage_string_tRenderingProcessorFUc.s"
 }
@@ -3203,7 +3203,7 @@ asm void jmessage_string_tRenderingProcessor::do_outfont(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void jmessage_string_tRenderingProcessor::do_color(char field_0) {
+asm void jmessage_string_tRenderingProcessor::do_color(u8 field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_class/do_color__35jmessage_string_tRenderingProcessorFUc.s"
 }

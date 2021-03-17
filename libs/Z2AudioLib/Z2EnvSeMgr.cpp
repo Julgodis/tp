@@ -10,25 +10,25 @@
 // 
 
 // build Z2EnvSeBase (Z2EnvSeBase) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2EnvSeBase) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2EnvSeBase) */
 struct Z2EnvSeBase {
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802C589C */ Z2EnvSeBase(Vec*);
 	/* 802C58AC */ ~Z2EnvSeBase();
 	/* 802C5908 */ void startEnvSe(JAISoundID, f32, f32, f32, f32, f32, u32);
@@ -38,15 +38,15 @@ struct Z2EnvSeBase {
 // build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) True/True
 // build Z2EnvSeDir (Z2EnvSeDir) False/False
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2EnvSeDir) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2EnvSeDir) */
 struct Z2EnvSeDir {
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802C5C9C */ Z2EnvSeDir(Vec*);
 	/* 802C5D1C */ ~Z2EnvSeDir();
 	/* 802C5D70 */ void setPanDir(Vec*);
@@ -80,43 +80,43 @@ struct Z2EnvSeMgr {
 	/* 802C66B0 */ void framework();
 	/* 802C6998 */ void resetScene();
 	/* 802C699C */ void resetSceneInner();
-	/* 802C6AC0 */ void initSceneEnvSe(s32, char, f32);
+	/* 802C6AC0 */ void initSceneEnvSe(s32, s8, f32);
 	/* 802C6C1C */ void playSceneEnvSe();
-	/* 802C6C84 */ void initStaticEnvSe(char, char, char, char, Vec*);
-	/* 802C70C8 */ void startStaticEnvSe(char);
+	/* 802C6C84 */ void initStaticEnvSe(u8, u8, u8, u8, Vec*);
+	/* 802C70C8 */ void startStaticEnvSe(s8);
 	/* 802C780C */ void registWindowPos(Vec*);
-	/* 802C7830 */ void startRainSe(s32, char);
-	/* 802C7CF4 */ void startNearThunderSe(char);
-	/* 802C7E68 */ void startFarThunderSe(Vec*, char);
-	/* 802C7FB4 */ void setSnowPower(char);
+	/* 802C7830 */ void startRainSe(s32, s8);
+	/* 802C7CF4 */ void startNearThunderSe(s8);
+	/* 802C7E68 */ void startFarThunderSe(Vec*, s8);
+	/* 802C7FB4 */ void setSnowPower(s8);
 	/* 802C7FBC */ void initStrongWindSe();
 	/* 802C7FC8 */ void setWindDirection(Vec*);
-	/* 802C800C */ void startStrongWindSe(char);
-	/* 802C80F8 */ void initRiverSe(char, char, char, char);
+	/* 802C800C */ void startStrongWindSe(s8);
+	/* 802C80F8 */ void initRiverSe(u8, u8, u8, u8);
 	/* 802C8234 */ void registRiverSePos(Vec*);
 	/* 802C8258 */ void setHyrulSewerOpen(bool);
-	/* 802C8300 */ void startRiverSe(char);
-	/* 802C8730 */ void initFallSe(char, char, char, char);
+	/* 802C8300 */ void startRiverSe(s8);
+	/* 802C8730 */ void initFallSe(u8, u8, u8, u8);
 	/* 802C886C */ void registFallSePos(Vec*);
-	/* 802C8890 */ void startFallSe(char);
-	/* 802C8A90 */ void initEtcSe(char, char, char, char);
+	/* 802C8890 */ void startFallSe(s8);
+	/* 802C8A90 */ void initEtcSe(u8, u8, u8, u8);
 	/* 802C8C24 */ void registEtcSePos(Vec*);
-	/* 802C8C48 */ void startEtcSe(char);
+	/* 802C8C48 */ void startEtcSe(s8);
 	/* 802C92C8 */ void registWolfSmellSePos(Vec*);
 	/* 802C92EC */ void startFogWipeTrigger(Vec*);
 	/* 802C93A0 */ void setFogWipeWidth(f32);
 	/* 802C93E4 */ void getFogDensity();
 	/* 802C9400 */ void startFogSe();
-	/* 802C950C */ void initLv3WaterSe(char, char, char, char);
-	/* 802C9F58 */ void registLv3WaterSePos(char, Vec*);
-	/* 802CA794 */ void startLv3WaterSe(char);
+	/* 802C950C */ void initLv3WaterSe(u8, u8, u8, u8);
+	/* 802C9F58 */ void registLv3WaterSePos(u8, Vec*);
+	/* 802CA794 */ void startLv3WaterSe(s8);
 };
 
 // build dSv_memBit_c (dSv_memBit_c) False/False
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 80034860 */ void isSwitch(s32) const;
+	/* 80034860 */ void isSwitch(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -196,20 +196,20 @@ struct Z2SoundMgr {
 /* top-level dependencies (end Z2SoundStarter) */
 struct Z2SoundStarter {
 	// JAISoundHandle
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, char);
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) True/True
 // build Vec (Vec) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build Z2MultiSeMgr (Z2MultiSeMgr) False/False
@@ -234,10 +234,10 @@ struct Z2MultiSeMgr {
 /* top-level dependencies (end Z2Audience) */
 struct Z2Audience {
 	// Vec
-	/* 802BD92C */ void convertAbsToRel(Vec&, Vec*, s32);
-	/* 802BD95C */ void calcRelPosVolume(Vec const&, f32, s32);
-	/* 802BDA44 */ void calcRelPosPan(Vec const&, s32);
-	/* 802BDB44 */ void calcRelPosDolby(Vec const&, s32);
+	/* 802BD92C */ void convertAbsToRel(Vec&, Vec*, int);
+	/* 802BD95C */ void calcRelPosVolume(Vec const&, f32, int);
+	/* 802BDA44 */ void calcRelPosPan(Vec const&, int);
+	/* 802BDB44 */ void calcRelPosDolby(Vec const&, int);
 };
 
 // 
@@ -377,7 +377,7 @@ SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4879;
 // External References:
 // 
 
-void dComIfGp_getReverb(s32);
+void dComIfGp_getReverb(int);
 extern "C" void func_802A2FEC();
 void operator delete(void*);
 void JMAFastVECNormalize(Vec const*, Vec*);
@@ -801,7 +801,7 @@ f32 Z2EnvSeMgr__lit_3963 = 100.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::initSceneEnvSe(s32 field_0, char field_1, f32 field_2) {
+asm void Z2EnvSeMgr::initSceneEnvSe(s32 field_0, s8 field_1, f32 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/initSceneEnvSe__10Z2EnvSeMgrFlScf.s"
 }
@@ -840,7 +840,7 @@ void* Z2EnvSeMgr__lit_4025[12] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::initStaticEnvSe(char field_0, char field_1, char field_2, char field_3, Vec* field_4) {
+asm void Z2EnvSeMgr::initStaticEnvSe(u8 field_0, u8 field_1, u8 field_2, u8 field_3, Vec* field_4) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec.s"
 }
@@ -902,7 +902,7 @@ f64 Z2EnvSeMgr__lit_4271 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::startStaticEnvSe(char field_0) {
+asm void Z2EnvSeMgr::startStaticEnvSe(s8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/startStaticEnvSe__10Z2EnvSeMgrFSc.s"
 }
@@ -928,7 +928,7 @@ f32 Z2EnvSeMgr__lit_4400 = 11.0f / 10.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::startRainSe(s32 field_0, char field_1) {
+asm void Z2EnvSeMgr::startRainSe(s32 field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/startRainSe__10Z2EnvSeMgrFlSc.s"
 }
@@ -943,7 +943,7 @@ f32 Z2EnvSeMgr__lit_4422 = 0.25f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::startNearThunderSe(char field_0) {
+asm void Z2EnvSeMgr::startNearThunderSe(s8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/startNearThunderSe__10Z2EnvSeMgrFSc.s"
 }
@@ -954,7 +954,7 @@ asm void Z2EnvSeMgr::startNearThunderSe(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::startFarThunderSe(Vec* field_0, char field_1) {
+asm void Z2EnvSeMgr::startFarThunderSe(Vec* field_0, s8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/startFarThunderSe__10Z2EnvSeMgrFP3VecSc.s"
 }
@@ -965,7 +965,7 @@ asm void Z2EnvSeMgr::startFarThunderSe(Vec* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::setSnowPower(char field_0) {
+asm void Z2EnvSeMgr::setSnowPower(s8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/setSnowPower__10Z2EnvSeMgrFSc.s"
 }
@@ -998,7 +998,7 @@ asm void Z2EnvSeMgr::setWindDirection(Vec* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::startStrongWindSe(char field_0) {
+asm void Z2EnvSeMgr::startStrongWindSe(s8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/startStrongWindSe__10Z2EnvSeMgrFSc.s"
 }
@@ -1016,7 +1016,7 @@ f32 Z2EnvSeMgr__lit_4511 = 3.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::initRiverSe(char field_0, char field_1, char field_2, char field_3) {
+asm void Z2EnvSeMgr::initRiverSe(u8 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/initRiverSe__10Z2EnvSeMgrFUcUcUcUc.s"
 }
@@ -1102,7 +1102,7 @@ f32 Z2EnvSeMgr__lit_4621 = 150.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::startRiverSe(char field_0) {
+asm void Z2EnvSeMgr::startRiverSe(s8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/startRiverSe__10Z2EnvSeMgrFSc.s"
 }
@@ -1113,7 +1113,7 @@ asm void Z2EnvSeMgr::startRiverSe(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::initFallSe(char field_0, char field_1, char field_2, char field_3) {
+asm void Z2EnvSeMgr::initFallSe(u8 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/initFallSe__10Z2EnvSeMgrFUcUcUcUc.s"
 }
@@ -1135,7 +1135,7 @@ asm void Z2EnvSeMgr::registFallSePos(Vec* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::startFallSe(char field_0) {
+asm void Z2EnvSeMgr::startFallSe(s8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/startFallSe__10Z2EnvSeMgrFSc.s"
 }
@@ -1170,7 +1170,7 @@ f32 Z2EnvSeMgr__lit_4732 = 4.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::initEtcSe(char field_0, char field_1, char field_2, char field_3) {
+asm void Z2EnvSeMgr::initEtcSe(u8 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/initEtcSe__10Z2EnvSeMgrFUcUcUcUc.s"
 }
@@ -1244,7 +1244,7 @@ f32 Z2EnvSeMgr__lit_4837 = 0.6679999828338623f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::startEtcSe(char field_0) {
+asm void Z2EnvSeMgr::startEtcSe(s8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/startEtcSe__10Z2EnvSeMgrFSc.s"
 }
@@ -1351,7 +1351,7 @@ void* Z2EnvSeMgr__lit_5074[10] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::initLv3WaterSe(char field_0, char field_1, char field_2, char field_3) {
+asm void Z2EnvSeMgr::initLv3WaterSe(u8 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc.s"
 }
@@ -1395,7 +1395,7 @@ void* Z2EnvSeMgr__lit_5258[10] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::registLv3WaterSePos(char field_0, Vec* field_1) {
+asm void Z2EnvSeMgr::registLv3WaterSePos(u8 field_0, Vec* field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec.s"
 }
@@ -1406,7 +1406,7 @@ asm void Z2EnvSeMgr::registLv3WaterSePos(char field_0, Vec* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2EnvSeMgr::startLv3WaterSe(char field_0) {
+asm void Z2EnvSeMgr::startLv3WaterSe(s8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2EnvSeMgr/startLv3WaterSe__10Z2EnvSeMgrFSc.s"
 }

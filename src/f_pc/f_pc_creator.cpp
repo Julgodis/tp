@@ -25,7 +25,7 @@ struct create_request {
 // Forward References:
 // 
 
-void fpcCt_IsCreatingByID(s32);
+void fpcCt_IsCreatingByID(u32);
 void fpcCt_IsDoing(base_process_class*);
 void fpcCt_Abort(base_process_class*);
 void fpcCt_Handler();
@@ -39,7 +39,7 @@ extern "C" void fpcCt_Handler__Fv();
 // External References:
 // 
 
-void fpcCtRq_IsCreatingByID(s32);
+void fpcCtRq_IsCreatingByID(u32);
 void fpcCtRq_Cancel(create_request*);
 void fpcCtRq_IsDoing(create_request*);
 void fpcCtRq_Handler();
@@ -57,7 +57,7 @@ extern "C" void fpcCtRq_Handler__Fv();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCt_IsCreatingByID(s32 field_0) {
+asm void fpcCt_IsCreatingByID(u32 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_creator/fpcCt_IsCreatingByID__FUi.s"
 }

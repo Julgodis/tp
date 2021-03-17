@@ -32,7 +32,7 @@ struct STControl {
 struct dMsgScrnExplain_c {
 	// J2DOrthoGraph
 	// STControl
-	/* 8023CC88 */ dMsgScrnExplain_c(STControl*, char, bool, char);
+	/* 8023CC88 */ dMsgScrnExplain_c(STControl*, u8, bool, u8);
 	/* 8023D538 */ ~dMsgScrnExplain_c();
 	/* 8023D7D8 */ void move();
 	/* 8023D918 */ void draw(J2DOrthoGraph*);
@@ -48,7 +48,7 @@ struct dMsgScrnExplain_c {
 	/* 8023E0F4 */ void move_select_proc();
 	/* 8023E43C */ void close_init();
 	/* 8023E448 */ void close_proc();
-	/* 8023E558 */ void openExplain(u32, char, char, char, bool);
+	/* 8023E558 */ void openExplain(u32, u8, u8, u8, bool);
 	/* 8023E5CC */ void getAlphaRatio();
 	/* 8023E640 */ void checkTriggerA();
 	/* 8023E654 */ void checkTriggerB();
@@ -57,25 +57,25 @@ struct dMsgScrnExplain_c {
 // build STControl (STControl) True/True
 // build J2DOrthoGraph (J2DOrthoGraph) True/True
 // build dMeter2Info_c (dMeter2Info_c) False/False
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
-struct JUTFont {
-};
-
 // build JMSMesgEntry_c (JMSMesgEntry_c) False/False
 /* top-level dependencies (begin JMSMesgEntry_c) */
 /* top-level dependencies (end JMSMesgEntry_c) */
 struct JMSMesgEntry_c {
 };
 
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
 /* top-level dependencies (begin dMeter2Info_c) */
-// outer dependency: JUTFont
 // outer dependency: JMSMesgEntry_c
+// outer dependency: JUTFont
 /* top-level dependencies (end dMeter2Info_c) */
 struct dMeter2Info_c {
-	// JUTFont
 	// JMSMesgEntry_c
+	// JUTFont
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 	/* 8021C7FC */ void getStringLength(JUTFont*, f32, f32, char*);
 };
@@ -86,28 +86,29 @@ struct dMeter2Info_c {
 /* top-level dependencies (begin COutFont_c) */
 /* top-level dependencies (end COutFont_c) */
 struct COutFont_c {
-	/* 80225C94 */ COutFont_c(char);
+	/* 80225C94 */ COutFont_c(u8);
 };
 
 // build dMsgObject_c (dMsgObject_c) False/False
+// build COutFont_c (COutFont_c) True/True
 // build JUTFont (JUTFont) True/True
 // build J2DTextBox (J2DTextBox) False/False
 /* top-level dependencies (begin J2DTextBox) */
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-// build COutFont_c (COutFont_c) True/True
 /* top-level dependencies (begin dMsgObject_c) */
+// outer dependency: COutFont_c
 // outer dependency: JUTFont
 // outer dependency: J2DTextBox
-// outer dependency: COutFont_c
 /* top-level dependencies (end dMsgObject_c) */
 struct dMsgObject_c {
+	// COutFont_c
 	// JUTFont
 	// J2DTextBox
-	// COutFont_c
 	/* 802380F4 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char*, char*, char*, s16*);
 };
 
@@ -122,8 +123,8 @@ struct dMsgScrn3Select_c {
 	/* 80239D08 */ void setRubyString(char*, char*, char*);
 	/* 80239D98 */ void translate(f32, f32);
 	/* 80239DD4 */ void draw(f32, f32);
-	/* 8023A094 */ void selAnimeInit(char, char, char, f32, char);
-	/* 8023A398 */ void selAnimeMove(char, char, bool);
+	/* 8023A094 */ void selAnimeInit(u8, u8, u8, f32, u8);
+	/* 8023A398 */ void selAnimeMove(u8, u8, bool);
 	/* 8023A680 */ void selAnimeEnd();
 	/* 8023A934 */ void getTextBoxWidth();
 	/* 8023A94C */ void getFontSize();
@@ -149,6 +150,19 @@ struct dMsgString_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (J2DPane) False/False
+/* top-level dependencies (begin J2DPane) */
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -174,29 +188,16 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (J2DPane) False/False
-/* top-level dependencies (begin J2DPane) */
-/* top-level dependencies (end J2DPane) */
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-};
-
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
@@ -212,26 +213,26 @@ struct CPaneMgrAlpha {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -330,7 +331,6 @@ void dMeter2Info_set2DVibrationM();
 void dPaneClass_showNullPane(J2DScreen*);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void __ptmf_scall();
 extern "C" void _savegpr_24();
 extern "C" void _savegpr_27();
@@ -558,7 +558,7 @@ f32 msg_scrn_d_msg_scrn_explain__lit_3981 = -190.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dMsgScrnExplain_c::dMsgScrnExplain_c(STControl* field_0, char field_1, bool field_2, char field_3) {
+asm dMsgScrnExplain_c::dMsgScrnExplain_c(STControl* field_0, u8 field_1, bool field_2, u8 field_3) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_explain/__ct__17dMsgScrnExplain_cFP9STControlUcbUc.s"
 }
@@ -751,7 +751,7 @@ asm void dMsgScrnExplain_c::close_proc() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrnExplain_c::openExplain(u32 field_0, char field_1, char field_2, char field_3, bool field_4) {
+asm void dMsgScrnExplain_c::openExplain(u32 field_0, u8 field_1, u8 field_2, u8 field_3, bool field_4) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_explain/openExplain__17dMsgScrnExplain_cFUlUcUcUcb.s"
 }

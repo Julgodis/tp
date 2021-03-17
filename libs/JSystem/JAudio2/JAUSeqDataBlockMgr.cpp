@@ -35,38 +35,38 @@ struct JAUSeqDataBlocks {
 
 // build JAISoundID (JAISoundID) True/True
 // build JAUDynamicSeqDataBlocks (JAUDynamicSeqDataBlocks) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
 // build JAISeqDataUser (JAISeqDataUser) False/False
 /* top-level dependencies (begin JAISeqDataUser) */
 /* top-level dependencies (end JAISeqDataUser) */
 struct JAISeqDataUser {
 };
 
-// build JAUSeqDataBlock (JAUSeqDataBlock) True/True
-// build JAISoundID (JAISoundID) True/True
 // build JAISeqData (JAISeqData) False/False
 /* top-level dependencies (begin JAISeqData) */
 /* top-level dependencies (end JAISeqData) */
 struct JAISeqData {
 };
 
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
+// build JAUSeqDataBlock (JAUSeqDataBlock) True/True
+// build JAISoundID (JAISoundID) True/True
 /* top-level dependencies (begin JAUDynamicSeqDataBlocks) */
-// outer dependency: JKRArchive
 // outer dependency: JAISeqDataUser
+// outer dependency: JAISeqData
+// outer dependency: JKRArchive
 // outer dependency: JAUSeqDataBlock
 // outer dependency: JAISoundID
-// outer dependency: JAISeqData
 /* top-level dependencies (end JAUDynamicSeqDataBlocks) */
 struct JAUDynamicSeqDataBlocks {
+	// JKRArchive
+	// JAISoundID
 	// JAISeqDataUser
 	// JAISeqData
-	// JAISoundID
-	// JKRArchive
 	// JAUSeqDataBlock
 	/* 802A6A58 */ JAUDynamicSeqDataBlocks();
 	/* 802A6AA0 */ void setSeqDataArchive(JKRArchive*);

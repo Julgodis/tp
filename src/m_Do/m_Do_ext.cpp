@@ -9,32 +9,25 @@
 // Types:
 // 
 
+// build J3DTransformInfo (J3DTransformInfo) False/False
+/* top-level dependencies (begin J3DTransformInfo) */
+/* top-level dependencies (end J3DTransformInfo) */
+struct J3DTransformInfo {
+};
+
 // build mDoExt_baseAnm (mDoExt_baseAnm) False/False
 /* top-level dependencies (begin mDoExt_baseAnm) */
 /* top-level dependencies (end mDoExt_baseAnm) */
 struct mDoExt_baseAnm {
-	/* 8000D320 */ void initPlay(s16, s32, f32, s16, s16);
+	/* 8000D320 */ void initPlay(s16, int, f32, s16, s16);
 	/* 8000D428 */ void play();
 };
 
 // build mDoExt_bpkAnm (mDoExt_bpkAnm) False/False
-// build J3DAnmColor (J3DAnmColor) False/False
 // build J3DMaterialTable (J3DMaterialTable) False/False
-// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
 // build J3DMaterialTable (J3DMaterialTable) True/False
 struct J3DMaterialTable;
-/* top-level dependencies (begin J3DAnmTextureSRTKey) */
-// outer dependency: J3DMaterialTable
-/* top-level dependencies (end J3DAnmTextureSRTKey) */
-struct J3DAnmTextureSRTKey {
-	// J3DMaterialTable
-	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
-};
-
-// build J3DAnmColor (J3DAnmColor) True/False
-struct J3DAnmColor;
-// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
-// build J3DMaterialTable (J3DMaterialTable) True/True
 /* top-level dependencies (begin J3DAnmTevRegKey) */
 // outer dependency: J3DMaterialTable
 /* top-level dependencies (end J3DAnmTevRegKey) */
@@ -53,23 +46,18 @@ struct J3DAnmTexPattern {
 	/* 8032B004 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
-/* top-level dependencies (begin J3DMaterialTable) */
-// outer dependency: J3DAnmTextureSRTKey
-// outer dependency: J3DAnmColor
-// outer dependency: J3DAnmTevRegKey
-// outer dependency: J3DAnmTexPattern
-/* top-level dependencies (end J3DMaterialTable) */
-struct J3DMaterialTable {
-	// J3DAnmTextureSRTKey
-	// J3DAnmColor
-	// J3DAnmTevRegKey
-	// J3DAnmTexPattern
-	/* 8032FAF4 */ void entryMatColorAnimator(J3DAnmColor*);
-	/* 8032FBC8 */ void entryTexNoAnimator(J3DAnmTexPattern*);
-	/* 8032FCC4 */ void entryTexMtxAnimator(J3DAnmTextureSRTKey*);
-	/* 8032FE70 */ void entryTevRegAnimator(J3DAnmTevRegKey*);
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
+// build J3DMaterialTable (J3DMaterialTable) True/True
+/* top-level dependencies (begin J3DAnmTextureSRTKey) */
+// outer dependency: J3DMaterialTable
+/* top-level dependencies (end J3DAnmTextureSRTKey) */
+struct J3DAnmTextureSRTKey {
+	// J3DMaterialTable
+	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
+// build J3DAnmColor (J3DAnmColor) False/False
+// build J3DMaterialTable (J3DMaterialTable) True/True
 /* top-level dependencies (begin J3DAnmColor) */
 // outer dependency: J3DMaterialTable
 /* top-level dependencies (end J3DAnmColor) */
@@ -78,31 +66,48 @@ struct J3DAnmColor {
 	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
-// build J3DMaterialTable (J3DMaterialTable) True/True
-/* top-level dependencies (begin mDoExt_bpkAnm) */
+/* top-level dependencies (begin J3DMaterialTable) */
+// outer dependency: J3DAnmTevRegKey
+// outer dependency: J3DAnmTexPattern
+// outer dependency: J3DAnmTextureSRTKey
 // outer dependency: J3DAnmColor
+/* top-level dependencies (end J3DMaterialTable) */
+struct J3DMaterialTable {
+	// J3DAnmTevRegKey
+	// J3DAnmTexPattern
+	// J3DAnmTextureSRTKey
+	// J3DAnmColor
+	/* 8032FAF4 */ void entryMatColorAnimator(J3DAnmColor*);
+	/* 8032FBC8 */ void entryTexNoAnimator(J3DAnmTexPattern*);
+	/* 8032FCC4 */ void entryTexMtxAnimator(J3DAnmTextureSRTKey*);
+	/* 8032FE70 */ void entryTevRegAnimator(J3DAnmTevRegKey*);
+};
+
+// build J3DAnmColor (J3DAnmColor) True/True
+/* top-level dependencies (begin mDoExt_bpkAnm) */
 // outer dependency: J3DMaterialTable
+// outer dependency: J3DAnmColor
 /* top-level dependencies (end mDoExt_bpkAnm) */
 struct mDoExt_bpkAnm {
-	// J3DAnmColor
 	// J3DMaterialTable
-	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, s32, s32, f32, s16, s16);
+	// J3DAnmColor
+	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
 // build J3DMaterialTable (J3DMaterialTable) True/True
 // build J3DAnmColor (J3DAnmColor) True/True
 // build mDoExt_btpAnm (mDoExt_btpAnm) False/False
-// build J3DMaterialTable (J3DMaterialTable) True/True
 // build J3DAnmTexPattern (J3DAnmTexPattern) True/True
+// build J3DMaterialTable (J3DMaterialTable) True/True
 /* top-level dependencies (begin mDoExt_btpAnm) */
-// outer dependency: J3DMaterialTable
 // outer dependency: J3DAnmTexPattern
+// outer dependency: J3DMaterialTable
 /* top-level dependencies (end mDoExt_btpAnm) */
 struct mDoExt_btpAnm {
-	// J3DMaterialTable
 	// J3DAnmTexPattern
-	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, s32, s32, f32, s16, s16);
+	// J3DMaterialTable
+	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16);
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
@@ -117,7 +122,7 @@ struct mDoExt_btpAnm {
 struct mDoExt_btkAnm {
 	// J3DAnmTextureSRTKey
 	// J3DMaterialTable
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, s32, s32, f32, s16, s16);
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
@@ -132,32 +137,32 @@ struct mDoExt_btkAnm {
 struct mDoExt_brkAnm {
 	// J3DAnmTevRegKey
 	// J3DMaterialTable
-	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, s32, s32, f32, s16, s16);
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
 // build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
 // build mDoExt_bckAnm (mDoExt_bckAnm) False/False
-// build J3DAnmTransform (J3DAnmTransform) False/False
-/* top-level dependencies (begin J3DAnmTransform) */
-/* top-level dependencies (end J3DAnmTransform) */
-struct J3DAnmTransform {
-};
-
 // build J3DModelData (J3DModelData) False/False
 /* top-level dependencies (begin J3DModelData) */
 /* top-level dependencies (end J3DModelData) */
 struct J3DModelData {
 };
 
+// build J3DAnmTransform (J3DAnmTransform) False/False
+/* top-level dependencies (begin J3DAnmTransform) */
+/* top-level dependencies (end J3DAnmTransform) */
+struct J3DAnmTransform {
+};
+
 /* top-level dependencies (begin mDoExt_bckAnm) */
-// outer dependency: J3DAnmTransform
 // outer dependency: J3DModelData
+// outer dependency: J3DAnmTransform
 /* top-level dependencies (end mDoExt_bckAnm) */
 struct mDoExt_bckAnm {
-	// J3DAnmTransform
 	// J3DModelData
-	/* 8000D7DC */ void init(J3DAnmTransform*, s32, s32, f32, s16, s16, bool);
+	// J3DAnmTransform
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 	/* 8000D9E8 */ void entryJoint(J3DModelData*, u16, f32);
@@ -184,24 +189,23 @@ struct J3DMtxCalcAnmBase {
 struct J3DMtxCalc {
 	// J3DAnmTransform
 	/* 8000D948 */ ~J3DMtxCalc();
-	/* 80014E8C */ void setAnmTransform(char, J3DAnmTransform*);
+	/* 80014E8C */ void setAnmTransform(u8, J3DAnmTransform*);
 	/* 80014E90 */ void setAnmTransform(J3DAnmTransform*);
-	/* 80014E94 */ bool getAnmTransform(char);
+	/* 80014E94 */ bool getAnmTransform(u8);
 	/* 80014E9C */ bool getAnmTransform();
-	/* 80014EA4 */ void setWeight(char, f32);
-	/* 80014EA8 */ void getWeight(char) const;
+	/* 80014EA4 */ void setWeight(u8, f32);
+	/* 80014EA8 */ void getWeight(u8) const;
 };
 
 // build J3DModelData (J3DModelData) True/True
 // build mDoExt_blkAnm (mDoExt_blkAnm) False/False
+// build J3DDeformData (J3DDeformData) False/False
 // build J3DAnmCluster (J3DAnmCluster) False/False
 /* top-level dependencies (begin J3DAnmCluster) */
 /* top-level dependencies (end J3DAnmCluster) */
 struct J3DAnmCluster {
 };
 
-// build J3DDeformData (J3DDeformData) False/False
-// build J3DAnmCluster (J3DAnmCluster) True/True
 /* top-level dependencies (begin J3DDeformData) */
 // outer dependency: J3DAnmCluster
 /* top-level dependencies (end J3DDeformData) */
@@ -210,14 +214,15 @@ struct J3DDeformData {
 	/* 8032E364 */ void setAnm(J3DAnmCluster*);
 };
 
+// build J3DAnmCluster (J3DAnmCluster) True/True
 /* top-level dependencies (begin mDoExt_blkAnm) */
-// outer dependency: J3DAnmCluster
 // outer dependency: J3DDeformData
+// outer dependency: J3DAnmCluster
 /* top-level dependencies (end mDoExt_blkAnm) */
 struct mDoExt_blkAnm {
-	// J3DAnmCluster
 	// J3DDeformData
-	/* 8000DA08 */ void init(J3DDeformData*, J3DAnmCluster*, s32, s32, f32, s16, s16);
+	// J3DAnmCluster
+	/* 8000DA08 */ void init(J3DDeformData*, J3DAnmCluster*, int, int, f32, s16, s16);
 };
 
 // build J3DDeformData (J3DDeformData) True/True
@@ -238,6 +243,34 @@ struct J3DModel {
 };
 
 // build J3DTevBlock (J3DTevBlock) False/False
+// build J3DTevOrder (J3DTevOrder) False/False
+/* top-level dependencies (begin J3DTevOrder) */
+/* top-level dependencies (end J3DTevOrder) */
+struct J3DTevOrder {
+	/* 8000E140 */ J3DTevOrder();
+};
+
+// build J3DTevSwapModeTable (J3DTevSwapModeTable) False/False
+/* top-level dependencies (begin J3DTevSwapModeTable) */
+/* top-level dependencies (end J3DTevSwapModeTable) */
+struct J3DTevSwapModeTable {
+	/* 8000E134 */ J3DTevSwapModeTable();
+};
+
+// build J3DGXColorS10 (J3DGXColorS10) False/False
+/* top-level dependencies (begin J3DGXColorS10) */
+/* top-level dependencies (end J3DGXColorS10) */
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+// build J3DGXColor (J3DGXColor) False/False
+/* top-level dependencies (begin J3DGXColor) */
+/* top-level dependencies (end J3DGXColor) */
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
+};
+
 // build J3DTevStage (J3DTevStage) False/False
 // build J3DTevStageInfo (J3DTevStageInfo) False/False
 /* top-level dependencies (begin J3DTevStageInfo) */
@@ -261,49 +294,21 @@ struct J3DIndTevStage {
 	/* 8000E14C */ J3DIndTevStage();
 };
 
-// build J3DGXColorS10 (J3DGXColorS10) False/False
-/* top-level dependencies (begin J3DGXColorS10) */
-/* top-level dependencies (end J3DGXColorS10) */
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
-};
-
-// build J3DGXColor (J3DGXColor) False/False
-/* top-level dependencies (begin J3DGXColor) */
-/* top-level dependencies (end J3DGXColor) */
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
-// build J3DTevSwapModeTable (J3DTevSwapModeTable) False/False
-/* top-level dependencies (begin J3DTevSwapModeTable) */
-/* top-level dependencies (end J3DTevSwapModeTable) */
-struct J3DTevSwapModeTable {
-	/* 8000E134 */ J3DTevSwapModeTable();
-};
-
-// build J3DTevOrder (J3DTevOrder) False/False
-/* top-level dependencies (begin J3DTevOrder) */
-/* top-level dependencies (end J3DTevOrder) */
-struct J3DTevOrder {
-	/* 8000E140 */ J3DTevOrder();
-};
-
 /* top-level dependencies (begin J3DTevBlock) */
-// outer dependency: J3DTevStage
-// outer dependency: J3DIndTevStage
+// outer dependency: J3DTevOrder
+// outer dependency: J3DTevSwapModeTable
 // outer dependency: J3DGXColorS10
 // outer dependency: J3DGXColor
-// outer dependency: J3DTevSwapModeTable
-// outer dependency: J3DTevOrder
+// outer dependency: J3DTevStage
+// outer dependency: J3DIndTevStage
 /* top-level dependencies (end J3DTevBlock) */
 struct J3DTevBlock {
-	// J3DGXColorS10
-	// J3DGXColor
 	// J3DTevOrder
-	// J3DTevSwapModeTable
-	// J3DTevStage
 	// J3DIndTevStage
+	// J3DGXColorS10
+	// J3DTevSwapModeTable
+	// J3DGXColor
+	// J3DTevStage
 	/* 8000DBC8 */ void patchTexNoAndTexCoordScale();
 	/* 8000DBD4 */ void patch();
 	/* 8000DF84 */ bool getIndTevStage(u32);
@@ -320,12 +325,12 @@ struct J3DTevBlock {
 	/* 8000E0A8 */ void setTevStage(u32, J3DTevStage);
 	/* 8000E0AC */ void setTexNo(u32, u16);
 	/* 8000E0B0 */ void setTevSwapModeTable(u32, J3DTevSwapModeTable);
-	/* 8000E0B4 */ void setTevKAlphaSel(u32, char);
-	/* 8000E0B8 */ void setTevKColorSel(u32, char);
+	/* 8000E0B4 */ void setTevKAlphaSel(u32, u8);
+	/* 8000E0B8 */ void setTevKColorSel(u32, u8);
 	/* 8000E0BC */ void setTevOrder(u32, J3DTevOrder);
 	/* 8000E0C0 */ void setTevKColor(u32, J3DGXColor);
 	/* 8000E0C4 */ void setTevColor(u32, J3DGXColorS10);
-	/* 8000E0C8 */ void setTevStageNum(char);
+	/* 8000E0C8 */ void setTevStageNum(u8);
 };
 
 // build J3DPEBlock (J3DPEBlock) False/False
@@ -362,13 +367,14 @@ struct J3DPEBlock {
 	/* 8000DF4C */ bool getBlend();
 	/* 8000DF54 */ bool getAlphaComp();
 	/* 8000DF5C */ bool getFog();
-	/* 8000E010 */ void setZCompLoc(char);
+	/* 8000E010 */ void setZCompLoc(u8);
 	/* 8000E014 */ void setZMode(J3DZMode);
 	/* 8000E018 */ void setBlend(J3DBlend const&);
 	/* 8000E01C */ void setAlphaComp(J3DAlphaComp const&);
 };
 
 // build J3DColorBlock (J3DColorBlock) False/False
+// build J3DGXColor (J3DGXColor) True/True
 // build J3DColorChan (J3DColorChan) False/False
 /* top-level dependencies (begin J3DColorChan) */
 /* top-level dependencies (end J3DColorChan) */
@@ -376,14 +382,13 @@ struct J3DColorChan {
 	/* 8000E47C */ J3DColorChan();
 };
 
-// build J3DGXColor (J3DGXColor) True/True
 /* top-level dependencies (begin J3DColorBlock) */
-// outer dependency: J3DColorChan
 // outer dependency: J3DGXColor
+// outer dependency: J3DColorChan
 /* top-level dependencies (end J3DColorBlock) */
 struct J3DColorBlock {
-	// J3DColorChan
 	// J3DGXColor
+	// J3DColorChan
 	/* 8000DBD0 */ void patchLight();
 	/* 8000DFF0 */ bool getAmbColor(u32);
 	/* 8000DFF8 */ bool getColorChan(u32);
@@ -392,7 +397,7 @@ struct J3DColorBlock {
 	/* 8000E0D4 */ void setAmbColor(u32, J3DGXColor);
 	/* 8000E0D8 */ void setColorChan(u32, J3DColorChan const&);
 	/* 8000E0DC */ void setMatColor(u32, J3DGXColor);
-	/* 8000E0E0 */ void setColorChanNum(char);
+	/* 8000E0E0 */ void setColorChanNum(u8);
 };
 
 // build J3DIndBlock (J3DIndBlock) False/False
@@ -425,7 +430,7 @@ struct J3DIndBlock {
 	/* 8000DF7C */ bool getIndTexStageNum() const;
 	/* 8000E020 */ void setIndTexCoordScale(u32, J3DIndTexCoordScale);
 	/* 8000E060 */ void setIndTexMtx(u32, J3DIndTexMtx);
-	/* 8000E0A0 */ void setIndTexStageNum(char);
+	/* 8000E0A0 */ void setIndTexStageNum(u8);
 };
 
 // build J3DTexGenBlock (J3DTexGenBlock) False/False
@@ -499,7 +504,7 @@ struct cXyz {
 struct mDoExt_invisibleModel {
 	// cXyz
 	// J3DModel
-	/* 8000E53C */ void create(J3DModel*, char);
+	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E6C8 */ void entryJoint(cXyz*);
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
@@ -625,48 +630,43 @@ struct J3DMtxCalcNoAnmBase {
 };
 
 // build mDoExt_McaMorf (mDoExt_McaMorf) False/False
+// build J3DModelData (J3DModelData) True/True
 // build mDoExt_McaMorfCallBack1_c (mDoExt_McaMorfCallBack1_c) False/False
 /* top-level dependencies (begin mDoExt_McaMorfCallBack1_c) */
 /* top-level dependencies (end mDoExt_McaMorfCallBack1_c) */
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-// build J3DModelData (J3DModelData) True/True
+// build J3DTransformInfo (J3DTransformInfo) True/True
 // build Vec (Vec) True/True
-// build J3DAnmTransform (J3DAnmTransform) True/True
 // build mDoExt_McaMorfCallBack2_c (mDoExt_McaMorfCallBack2_c) False/False
 /* top-level dependencies (begin mDoExt_McaMorfCallBack2_c) */
 /* top-level dependencies (end mDoExt_McaMorfCallBack2_c) */
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-// build J3DTransformInfo (J3DTransformInfo) False/False
-/* top-level dependencies (begin J3DTransformInfo) */
-/* top-level dependencies (end J3DTransformInfo) */
-struct J3DTransformInfo {
-};
-
+// build J3DAnmTransform (J3DAnmTransform) True/True
 /* top-level dependencies (begin mDoExt_McaMorf) */
-// outer dependency: mDoExt_McaMorfCallBack1_c
 // outer dependency: J3DModelData
-// outer dependency: Vec
-// outer dependency: J3DAnmTransform
-// outer dependency: mDoExt_McaMorfCallBack2_c
+// outer dependency: mDoExt_McaMorfCallBack1_c
 // outer dependency: J3DTransformInfo
+// outer dependency: Vec
+// outer dependency: mDoExt_McaMorfCallBack2_c
+// outer dependency: J3DAnmTransform
 /* top-level dependencies (end mDoExt_McaMorf) */
 struct mDoExt_McaMorf {
-	// mDoExt_McaMorfCallBack1_c
-	// J3DAnmTransform
-	// J3DTransformInfo
 	// J3DModelData
-	// Vec
+	// J3DTransformInfo
 	// mDoExt_McaMorfCallBack2_c
-	/* 8000FC4C */ mDoExt_McaMorf(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, s32, f32, s32, s32, s32, void*, u32, u32);
+	// mDoExt_McaMorfCallBack1_c
+	// Vec
+	// J3DAnmTransform
+	/* 8000FC4C */ mDoExt_McaMorf(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, int, void*, u32, u32);
 	/* 8000FD10 */ ~mDoExt_McaMorf();
-	/* 8000FD94 */ void create(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, s32, f32, s32, s32, s32, void*, u32, u32);
+	/* 8000FD94 */ void create(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, int, void*, u32, u32);
 	/* 80010074 */ void calc();
-	/* 8001037C */ void setAnm(J3DAnmTransform*, s32, f32, f32, f32, f32, void*);
-	/* 800105C8 */ void play(Vec*, u32, char);
+	/* 8001037C */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32, void*);
+	/* 800105C8 */ void play(Vec*, u32, s8);
 	/* 80010680 */ void entryDL();
 	/* 800106AC */ void modelCalc();
 	/* 80010710 */ void getTransform(u16, J3DTransformInfo*);
@@ -675,8 +675,10 @@ struct mDoExt_McaMorf {
 // build mDoExt_McaMorfCallBack1_c (mDoExt_McaMorfCallBack1_c) True/True
 // build mDoExt_McaMorfCallBack2_c (mDoExt_McaMorfCallBack2_c) True/True
 // build Vec (Vec) True/True
-// build J3DTransformInfo (J3DTransformInfo) True/True
 // build mDoExt_McaMorfSO (mDoExt_McaMorfSO) False/False
+// build J3DModelData (J3DModelData) True/True
+// build mDoExt_McaMorfCallBack1_c (mDoExt_McaMorfCallBack1_c) True/True
+// build J3DTransformInfo (J3DTransformInfo) True/True
 // build Z2Creature (Z2Creature) False/False
 /* top-level dependencies (begin Z2Creature) */
 /* top-level dependencies (end Z2Creature) */
@@ -685,32 +687,29 @@ struct Z2Creature {
 	/* 802C06D0 */ void updateAnime(f32, f32);
 };
 
-// build mDoExt_McaMorfCallBack1_c (mDoExt_McaMorfCallBack1_c) True/True
-// build J3DModelData (J3DModelData) True/True
-// build J3DAnmTransform (J3DAnmTransform) True/True
 // build mDoExt_McaMorfCallBack2_c (mDoExt_McaMorfCallBack2_c) True/True
-// build J3DTransformInfo (J3DTransformInfo) True/True
+// build J3DAnmTransform (J3DAnmTransform) True/True
 /* top-level dependencies (begin mDoExt_McaMorfSO) */
-// outer dependency: Z2Creature
-// outer dependency: mDoExt_McaMorfCallBack1_c
 // outer dependency: J3DModelData
-// outer dependency: J3DAnmTransform
-// outer dependency: mDoExt_McaMorfCallBack2_c
+// outer dependency: mDoExt_McaMorfCallBack1_c
 // outer dependency: J3DTransformInfo
+// outer dependency: Z2Creature
+// outer dependency: mDoExt_McaMorfCallBack2_c
+// outer dependency: J3DAnmTransform
 /* top-level dependencies (end mDoExt_McaMorfSO) */
 struct mDoExt_McaMorfSO {
-	// Z2Creature
-	// mDoExt_McaMorfCallBack1_c
-	// J3DAnmTransform
-	// J3DTransformInfo
 	// J3DModelData
+	// J3DTransformInfo
 	// mDoExt_McaMorfCallBack2_c
-	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, s32, f32, s32, s32, Z2Creature*, u32, u32);
+	// mDoExt_McaMorfCallBack1_c
+	// Z2Creature
+	// J3DAnmTransform
+	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
 	/* 80010888 */ ~mDoExt_McaMorfSO();
-	/* 800108F0 */ void create(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, s32, f32, s32, s32, Z2Creature*, u32, u32);
+	/* 800108F0 */ void create(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
 	/* 80010B68 */ void calc();
-	/* 80010E70 */ void setAnm(J3DAnmTransform*, s32, f32, f32, f32, f32);
-	/* 800110B0 */ void play(u32, char);
+	/* 80010E70 */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32);
+	/* 800110B0 */ void play(u32, s8);
 	/* 80011154 */ void updateDL();
 	/* 800111C0 */ void entryDL();
 	/* 800111EC */ void modelCalc();
@@ -720,32 +719,32 @@ struct mDoExt_McaMorfSO {
 
 // build Z2Creature (Z2Creature) True/True
 // build mDoExt_McaMorf2 (mDoExt_McaMorf2) False/False
-// build Z2Creature (Z2Creature) True/True
-// build mDoExt_McaMorfCallBack1_c (mDoExt_McaMorfCallBack1_c) True/True
 // build J3DModelData (J3DModelData) True/True
-// build J3DAnmTransform (J3DAnmTransform) True/True
+// build mDoExt_McaMorfCallBack1_c (mDoExt_McaMorfCallBack1_c) True/True
+// build Z2Creature (Z2Creature) True/True
 // build mDoExt_McaMorfCallBack2_c (mDoExt_McaMorfCallBack2_c) True/True
+// build J3DAnmTransform (J3DAnmTransform) True/True
 /* top-level dependencies (begin mDoExt_McaMorf2) */
-// outer dependency: Z2Creature
-// outer dependency: mDoExt_McaMorfCallBack1_c
 // outer dependency: J3DModelData
-// outer dependency: J3DAnmTransform
+// outer dependency: mDoExt_McaMorfCallBack1_c
+// outer dependency: Z2Creature
 // outer dependency: mDoExt_McaMorfCallBack2_c
+// outer dependency: J3DAnmTransform
 /* top-level dependencies (end mDoExt_McaMorf2) */
 struct mDoExt_McaMorf2 {
-	// Z2Creature
-	// mDoExt_McaMorfCallBack1_c
-	// J3DAnmTransform
 	// J3DModelData
 	// mDoExt_McaMorfCallBack2_c
-	/* 80011348 */ mDoExt_McaMorf2(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, J3DAnmTransform*, s32, f32, s32, s32, Z2Creature*, u32, u32);
+	// mDoExt_McaMorfCallBack1_c
+	// Z2Creature
+	// J3DAnmTransform
+	/* 80011348 */ mDoExt_McaMorf2(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
 	/* 800113FC */ ~mDoExt_McaMorf2();
-	/* 80011464 */ void create(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, J3DAnmTransform*, s32, f32, s32, s32, Z2Creature*, u32, u32);
+	/* 80011464 */ void create(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
 	/* 800116B4 */ void ERROR_EXIT();
 	/* 800116F4 */ void calc();
-	/* 80011D70 */ void setAnm(J3DAnmTransform*, J3DAnmTransform*, f32, s32, f32, f32, f32, f32);
+	/* 80011D70 */ void setAnm(J3DAnmTransform*, J3DAnmTransform*, f32, int, f32, f32, f32, f32);
 	/* 80011FCC */ void setAnmRate(f32);
-	/* 800120A0 */ void play(u32, char);
+	/* 800120A0 */ void play(u32, s8);
 	/* 80012144 */ void entryDL();
 	/* 80012170 */ void modelCalc();
 	/* 800121E8 */ void stopZelAnime();
@@ -755,41 +754,42 @@ struct mDoExt_McaMorf2 {
 /* top-level dependencies (begin mDoExt_3Dline_c) */
 /* top-level dependencies (end mDoExt_3Dline_c) */
 struct mDoExt_3Dline_c {
-	/* 800123D0 */ void init(u16, s32, s32);
+	/* 800123D0 */ void init(u16, int, int);
 	/* 800126BC */ mDoExt_3Dline_c();
 };
 
 // build mDoExt_3DlineMat0_c (mDoExt_3DlineMat0_c) False/False
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
 struct dKy_tevstr_c {
 };
 
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
 /* top-level dependencies (begin mDoExt_3DlineMat0_c) */
-// outer dependency: _GXColor
 // outer dependency: dKy_tevstr_c
+// outer dependency: _GXColor
 /* top-level dependencies (end mDoExt_3DlineMat0_c) */
 struct mDoExt_3DlineMat0_c {
-	// _GXColor
 	// dKy_tevstr_c
-	/* 800125E0 */ void init(u16, u16, s32);
+	// _GXColor
+	/* 800125E0 */ void init(u16, u16, int);
 	/* 800126C0 */ void setMaterial();
 	/* 80012774 */ void draw();
-	/* 80012874 */ void update(s32, f32, _GXColor&, u16, dKy_tevstr_c*);
-	/* 80012E3C */ void update(s32, _GXColor&, dKy_tevstr_c*);
+	/* 80012874 */ void update(int, f32, _GXColor&, u16, dKy_tevstr_c*);
+	/* 80012E3C */ void update(int, _GXColor&, dKy_tevstr_c*);
 	/* 80014E84 */ bool getMaterialID();
 };
 
 // build _GXColor (_GXColor) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
 // build mDoExt_3DlineMat1_c (mDoExt_3DlineMat1_c) False/False
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
 // build _GXColor (_GXColor) True/True
 // build ResTIMG (ResTIMG) False/False
 /* top-level dependencies (begin ResTIMG) */
@@ -797,21 +797,20 @@ struct mDoExt_3DlineMat0_c {
 struct ResTIMG {
 };
 
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
 /* top-level dependencies (begin mDoExt_3DlineMat1_c) */
+// outer dependency: dKy_tevstr_c
 // outer dependency: _GXColor
 // outer dependency: ResTIMG
-// outer dependency: dKy_tevstr_c
 /* top-level dependencies (end mDoExt_3DlineMat1_c) */
 struct mDoExt_3DlineMat1_c {
+	// dKy_tevstr_c
 	// _GXColor
 	// ResTIMG
-	// dKy_tevstr_c
-	/* 80013360 */ void init(u16, u16, ResTIMG*, s32);
+	/* 80013360 */ void init(u16, u16, ResTIMG*, int);
 	/* 800134F8 */ void setMaterial();
 	/* 800135D0 */ void draw();
-	/* 8001373C */ void update(s32, f32, _GXColor&, u16, dKy_tevstr_c*);
-	/* 80013FB0 */ void update(s32, _GXColor&, dKy_tevstr_c*);
+	/* 8001373C */ void update(int, f32, _GXColor&, u16, dKy_tevstr_c*);
+	/* 80013FB0 */ void update(int, _GXColor&, dKy_tevstr_c*);
 	/* 80014E7C */ bool getMaterialID();
 };
 
@@ -866,18 +865,18 @@ struct ResFONT {
 
 // build JUtility (JUtility) True/True
 // build dDlst_list_c (dDlst_list_c) False/False
+// build J3DDrawBuffer (J3DDrawBuffer) True/True
 // build cXyz (cXyz) True/True
 // build J3DPacket (J3DPacket) True/True
-// build J3DDrawBuffer (J3DDrawBuffer) True/True
 /* top-level dependencies (begin dDlst_list_c) */
+// outer dependency: J3DDrawBuffer
 // outer dependency: cXyz
 // outer dependency: J3DPacket
-// outer dependency: J3DDrawBuffer
 /* top-level dependencies (end dDlst_list_c) */
 struct dDlst_list_c {
+	// J3DDrawBuffer
 	// cXyz
 	// J3DPacket
-	// J3DDrawBuffer
 	/* 800565EC */ void entryZSortXluDrawList(J3DDrawBuffer*, J3DPacket*, cXyz&);
 };
 
@@ -902,11 +901,11 @@ struct JAISoundID {
 struct Z2SoundObjBase {
 	// Z2SoundHandlePool
 	// JAISoundID
-	/* 802BE038 */ void framework(u32, char);
+	/* 802BE038 */ void framework(u32, s8);
 	/* 802BE070 */ void dispose();
 	/* 802BE104 */ void stopOK(Z2SoundHandlePool&);
-	/* 802BE144 */ void startSound(JAISoundID, u32, char);
-	/* 802BE2D4 */ void startLevelSound(JAISoundID, u32, char);
+	/* 802BE144 */ void startSound(JAISoundID, u32, s8);
+	/* 802BE2D4 */ void startLevelSound(JAISoundID, u32, s8);
 };
 
 // build Z2SoundHandlePool (Z2SoundHandlePool) True/True
@@ -919,7 +918,7 @@ struct Z2SoundObjBase {
 struct Z2SoundObjAnime {
 	// Vec
 	/* 802BEB94 */ Z2SoundObjAnime();
-	/* 802BEBDC */ void init(Vec*, char);
+	/* 802BEBDC */ void init(Vec*, u8);
 	/* 802BEBFC */ void initAnime(void*, bool, f32, f32);
 	/* 802BEED4 */ void updateAnime(f32, f32);
 };
@@ -966,15 +965,15 @@ struct JKRFileLoader {
 };
 
 // build JUTCacheFont (JUTCacheFont) False/False
-// build JKRHeap (JKRHeap) True/True
 // build ResFONT (ResFONT) True/True
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin JUTCacheFont) */
-// outer dependency: JKRHeap
 // outer dependency: ResFONT
+// outer dependency: JKRHeap
 /* top-level dependencies (end JUTCacheFont) */
 struct JUTCacheFont {
-	// JKRHeap
 	// ResFONT
+	// JKRHeap
 	/* 802DD188 */ JUTCacheFont(ResFONT const*, u32, JKRHeap*);
 };
 
@@ -986,15 +985,15 @@ struct JUTNameTab {
 };
 
 // build JUTResFont (JUTResFont) False/False
-// build JKRHeap (JKRHeap) True/True
 // build ResFONT (ResFONT) True/True
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin JUTResFont) */
-// outer dependency: JKRHeap
 // outer dependency: ResFONT
+// outer dependency: JKRHeap
 /* top-level dependencies (end JUTResFont) */
 struct JUTResFont {
-	// JKRHeap
 	// ResFONT
+	// JKRHeap
 	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
 };
 
@@ -1041,6 +1040,12 @@ struct J3DIndTexMtxInfo {
 };
 
 // build J3DMaterialAnm (J3DMaterialAnm) False/False
+// build J3DTevKColorAnm (J3DTevKColorAnm) False/False
+/* top-level dependencies (begin J3DTevKColorAnm) */
+/* top-level dependencies (end J3DTevKColorAnm) */
+struct J3DTevKColorAnm {
+};
+
 // build J3DTevColorAnm (J3DTevColorAnm) False/False
 /* top-level dependencies (begin J3DTevColorAnm) */
 /* top-level dependencies (end J3DTevColorAnm) */
@@ -1053,29 +1058,33 @@ struct J3DTevColorAnm {
 struct J3DTexMtxAnm {
 };
 
-// build J3DTevKColorAnm (J3DTevKColorAnm) False/False
-/* top-level dependencies (begin J3DTevKColorAnm) */
-/* top-level dependencies (end J3DTevKColorAnm) */
-struct J3DTevKColorAnm {
-};
-
 /* top-level dependencies (begin J3DMaterialAnm) */
+// outer dependency: J3DTevKColorAnm
 // outer dependency: J3DTevColorAnm
 // outer dependency: J3DTexMtxAnm
-// outer dependency: J3DTevKColorAnm
 /* top-level dependencies (end J3DMaterialAnm) */
 struct J3DMaterialAnm {
+	// J3DTevKColorAnm
 	// J3DTevColorAnm
 	// J3DTexMtxAnm
-	// J3DTevKColorAnm
-	/* 8032C5E4 */ void setTexMtxAnm(s32, J3DTexMtxAnm*);
-	/* 8032C664 */ void setTevColorAnm(s32, J3DTevColorAnm*);
-	/* 8032C6A4 */ void setTevKColorAnm(s32, J3DTevKColorAnm*);
+	/* 8032C5E4 */ void setTexMtxAnm(int, J3DTexMtxAnm*);
+	/* 8032C664 */ void setTevColorAnm(int, J3DTevColorAnm*);
+	/* 8032C6A4 */ void setTevKColorAnm(int, J3DTevKColorAnm*);
 };
 
 // build J3DTexMtxAnm (J3DTexMtxAnm) True/True
 // build J3DTevColorAnm (J3DTevColorAnm) True/True
 // build J3DTevKColorAnm (J3DTevKColorAnm) True/True
+// build J3DMtxCalcJ3DSysInitMaya (J3DMtxCalcJ3DSysInitMaya) False/False
+// build Vec (Vec) True/True
+/* top-level dependencies (begin J3DMtxCalcJ3DSysInitMaya) */
+// outer dependency: Vec
+/* top-level dependencies (end J3DMtxCalcJ3DSysInitMaya) */
+struct J3DMtxCalcJ3DSysInitMaya {
+	// Vec
+	/* 8032ECAC */ void init(Vec const&, f32 const (& )[3][4]);
+};
+
 // build J3DMtxCalcCalcTransformMaya (J3DMtxCalcCalcTransformMaya) False/False
 // build J3DTransformInfo (J3DTransformInfo) True/True
 /* top-level dependencies (begin J3DMtxCalcCalcTransformMaya) */
@@ -1096,7 +1105,7 @@ struct Quaternion {
 // Forward References:
 // 
 
-extern "C" static void mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs();
+static void mDoExt_setJ3DData(f32 (* )[4], J3DTransformInfo const*, u16);
 extern "C" static void func_8000D8E4();
 static void mDoExt_changeMaterial(J3DModel*);
 void mDoExt_modelTexturePatch(J3DModelData*);
@@ -1140,7 +1149,7 @@ void mDoExt_getCurrentHeap();
 void mDoExt_restoreCurrentHeap();
 void mDoExt_resIDToIndex(JKRArchive*, u16);
 extern "C" static void func_8000FA20();
-static void mDoExt_initFontCommon(JUTFont**, ResFONT**, JKRHeap*, char const*, JKRArchive*, char, u32, u32);
+static void mDoExt_initFontCommon(JUTFont**, ResFONT**, JKRHeap*, char const*, JKRArchive*, u8, u32, u32);
 static void mDoExt_initFont0();
 void mDoExt_getMesgFont();
 void mDoExt_removeMesgFont();
@@ -1454,13 +1463,12 @@ void dKy_setLight_again();
 void dKy_Global_amb_set(dKy_tevstr_c*);
 void dKy_GxFog_set();
 void cLib_chaseF(f32*, f32, f32);
-void GFSetBlendModeEtc(_GXBlendMode, _GXBlendFactor, _GXBlendFactor, _GXLogicOp, char, char, char);
-void GFSetZMode(char, _GXCompare, char);
+void GFSetBlendModeEtc(_GXBlendMode, _GXBlendFactor, _GXBlendFactor, _GXLogicOp, u8, u8, u8);
+void GFSetZMode(u8, _GXCompare, u8);
 void* operator new(u32);
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void* operator new[](u32);
 void operator delete(void*);
-extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf();
 void JMAEulerToQuat(s16, s16, s16, Quaternion*);
 void JMAQuatLerp(Quaternion const*, Quaternion const*, f32, Quaternion*);
 extern "C" void DCStoreRangeNoSync();
@@ -1678,7 +1686,7 @@ f32 m_Do_m_Do_ext__lit_3847 = 1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs() {
+asm static void mDoExt_setJ3DData(f32 (* field_0)[4], J3DTransformInfo const* field_1, u16 field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs.s"
 }
@@ -1698,7 +1706,7 @@ f64 m_Do_m_Do_ext__lit_3878 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_baseAnm::initPlay(s16 field_0, s32 field_1, f32 field_2, s16 field_3, s16 field_4) {
+asm void mDoExt_baseAnm::initPlay(s16 field_0, int field_1, f32 field_2, s16 field_3, s16 field_4) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/initPlay__14mDoExt_baseAnmFsifss.s"
 }
@@ -1720,7 +1728,7 @@ asm void mDoExt_baseAnm::play() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_bpkAnm::init(J3DMaterialTable* field_0, J3DAnmColor* field_1, s32 field_2, s32 field_3, f32 field_4, s16 field_5, s16 field_6) {
+asm void mDoExt_bpkAnm::init(J3DMaterialTable* field_0, J3DAnmColor* field_1, int field_2, int field_3, f32 field_4, s16 field_5, s16 field_6) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss.s"
 }
@@ -1742,7 +1750,7 @@ asm void mDoExt_bpkAnm::entry(J3DMaterialTable* field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_btpAnm::init(J3DMaterialTable* field_0, J3DAnmTexPattern* field_1, s32 field_2, s32 field_3, f32 field_4, s16 field_5, s16 field_6) {
+asm void mDoExt_btpAnm::init(J3DMaterialTable* field_0, J3DAnmTexPattern* field_1, int field_2, int field_3, f32 field_4, s16 field_5, s16 field_6) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss.s"
 }
@@ -1764,7 +1772,7 @@ asm void mDoExt_btpAnm::entry(J3DMaterialTable* field_0, s16 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_btkAnm::init(J3DMaterialTable* field_0, J3DAnmTextureSRTKey* field_1, s32 field_2, s32 field_3, f32 field_4, s16 field_5, s16 field_6) {
+asm void mDoExt_btkAnm::init(J3DMaterialTable* field_0, J3DAnmTextureSRTKey* field_1, int field_2, int field_3, f32 field_4, s16 field_5, s16 field_6) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss.s"
 }
@@ -1786,7 +1794,7 @@ asm void mDoExt_btkAnm::entry(J3DMaterialTable* field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_brkAnm::init(J3DMaterialTable* field_0, J3DAnmTevRegKey* field_1, s32 field_2, s32 field_3, f32 field_4, s16 field_5, s16 field_6) {
+asm void mDoExt_brkAnm::init(J3DMaterialTable* field_0, J3DAnmTevRegKey* field_1, int field_2, int field_3, f32 field_4, s16 field_5, s16 field_6) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss.s"
 }
@@ -2099,7 +2107,7 @@ void* const __vt__10J3DMtxCalc[12] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_bckAnm::init(J3DAnmTransform* field_0, s32 field_1, s32 field_2, f32 field_3, s16 field_4, s16 field_5, bool field_6) {
+asm void mDoExt_bckAnm::init(J3DAnmTransform* field_0, int field_1, int field_2, f32 field_3, s16 field_4, s16 field_5, bool field_6) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb.s"
 }
@@ -2176,7 +2184,7 @@ asm void mDoExt_bckAnm::entryJoint(J3DModelData* field_0, u16 field_1, f32 field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_blkAnm::init(J3DDeformData* field_0, J3DAnmCluster* field_1, s32 field_2, s32 field_3, f32 field_4, s16 field_5, s16 field_6) {
+asm void mDoExt_blkAnm::init(J3DDeformData* field_0, J3DAnmCluster* field_1, int field_2, int field_3, f32 field_4, s16 field_5, s16 field_6) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss.s"
 }
@@ -2457,7 +2465,7 @@ bool J3DColorBlock::getColorChanNum() const {
 
 
 /* 8000E010-8000E014 0004+00 rc=5 efc=5 .text      setZCompLoc__10J3DPEBlockFUc                                 */
-void J3DPEBlock::setZCompLoc(char field_0) {
+void J3DPEBlock::setZCompLoc(u8 field_0) {
 	/* empty function */
 }
 
@@ -2515,7 +2523,7 @@ asm J3DIndTexMtx::~J3DIndTexMtx() {
 
 
 /* 8000E0A0-8000E0A4 0004+00 rc=2 efc=2 .text      setIndTexStageNum__11J3DIndBlockFUc                          */
-void J3DIndBlock::setIndTexStageNum(char field_0) {
+void J3DIndBlock::setIndTexStageNum(u8 field_0) {
 	/* empty function */
 }
 
@@ -2545,13 +2553,13 @@ void J3DTevBlock::setTevSwapModeTable(u32 field_0, J3DTevSwapModeTable field_1) 
 
 
 /* 8000E0B4-8000E0B8 0004+00 rc=4 efc=4 .text      setTevKAlphaSel__11J3DTevBlockFUlUc                          */
-void J3DTevBlock::setTevKAlphaSel(u32 field_0, char field_1) {
+void J3DTevBlock::setTevKAlphaSel(u32 field_0, u8 field_1) {
 	/* empty function */
 }
 
 
 /* 8000E0B8-8000E0BC 0004+00 rc=3 efc=3 .text      setTevKColorSel__11J3DTevBlockFUlUc                          */
-void J3DTevBlock::setTevKColorSel(u32 field_0, char field_1) {
+void J3DTevBlock::setTevKColorSel(u32 field_0, u8 field_1) {
 	/* empty function */
 }
 
@@ -2575,7 +2583,7 @@ void J3DTevBlock::setTevColor(u32 field_0, J3DGXColorS10 field_1) {
 
 
 /* 8000E0C8-8000E0CC 0004+00 rc=2 efc=2 .text      setTevStageNum__11J3DTevBlockFUc                             */
-void J3DTevBlock::setTevStageNum(char field_0) {
+void J3DTevBlock::setTevStageNum(u8 field_0) {
 	/* empty function */
 }
 
@@ -2611,7 +2619,7 @@ void J3DColorBlock::setMatColor(u32 field_0, J3DGXColor field_1) {
 
 
 /* 8000E0E0-8000E0E4 0004+00 rc=2 efc=2 .text      setColorChanNum__13J3DColorBlockFUc                          */
-void J3DColorBlock::setColorChanNum(char field_0) {
+void J3DColorBlock::setColorChanNum(u8 field_0) {
 	/* empty function */
 }
 
@@ -2742,7 +2750,7 @@ J3DGXColor::J3DGXColor() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_invisibleModel::create(J3DModel* field_0, char field_1) {
+asm void mDoExt_invisibleModel::create(J3DModel* field_0, u8 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/create__21mDoExt_invisibleModelFP8J3DModelUc.s"
 }
@@ -3363,7 +3371,7 @@ asm void mDoExt_morf_c::frameUpdate() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm mDoExt_McaMorf::mDoExt_McaMorf(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, s32 field_4, f32 field_5, s32 field_6, s32 field_7, s32 field_8, void* field_9, u32 field_10, u32 field_11) {
+asm mDoExt_McaMorf::mDoExt_McaMorf(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, int field_4, f32 field_5, int field_6, int field_7, int field_8, void* field_9, u32 field_10, u32 field_11) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_8000FC4C.s"
 }
@@ -3389,7 +3397,7 @@ f32 lit_5939 = -1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_McaMorf::create(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, s32 field_4, f32 field_5, s32 field_6, s32 field_7, s32 field_8, void* field_9, u32 field_10, u32 field_11) {
+asm void mDoExt_McaMorf::create(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, int field_4, f32 field_5, int field_6, int field_7, int field_8, void* field_9, u32 field_10, u32 field_11) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_8000FD94.s"
 }
@@ -3411,7 +3419,7 @@ asm void mDoExt_McaMorf::calc() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_McaMorf::setAnm(J3DAnmTransform* field_0, s32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, void* field_6) {
+asm void mDoExt_McaMorf::setAnm(J3DAnmTransform* field_0, int field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, void* field_6) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv.s"
 }
@@ -3422,7 +3430,7 @@ asm void mDoExt_McaMorf::setAnm(J3DAnmTransform* field_0, s32 field_1, f32 field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_McaMorf::play(Vec* field_0, u32 field_1, char field_2) {
+asm void mDoExt_McaMorf::play(Vec* field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/play__14mDoExt_McaMorfFP3VecUlSc.s"
 }
@@ -3466,7 +3474,7 @@ asm void mDoExt_McaMorf::getTransform(u16 field_0, J3DTransformInfo* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm mDoExt_McaMorfSO::mDoExt_McaMorfSO(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, s32 field_4, f32 field_5, s32 field_6, s32 field_7, Z2Creature* field_8, u32 field_9, u32 field_10) {
+asm mDoExt_McaMorfSO::mDoExt_McaMorfSO(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, int field_4, f32 field_5, int field_6, int field_7, Z2Creature* field_8, u32 field_9, u32 field_10) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_800107D0.s"
 }
@@ -3488,7 +3496,7 @@ asm mDoExt_McaMorfSO::~mDoExt_McaMorfSO() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_McaMorfSO::create(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, s32 field_4, f32 field_5, s32 field_6, s32 field_7, Z2Creature* field_8, u32 field_9, u32 field_10) {
+asm void mDoExt_McaMorfSO::create(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, int field_4, f32 field_5, int field_6, int field_7, Z2Creature* field_8, u32 field_9, u32 field_10) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_800108F0.s"
 }
@@ -3510,7 +3518,7 @@ asm void mDoExt_McaMorfSO::calc() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_McaMorfSO::setAnm(J3DAnmTransform* field_0, s32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5) {
+asm void mDoExt_McaMorfSO::setAnm(J3DAnmTransform* field_0, int field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff.s"
 }
@@ -3521,7 +3529,7 @@ asm void mDoExt_McaMorfSO::setAnm(J3DAnmTransform* field_0, s32 field_1, f32 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_McaMorfSO::play(u32 field_0, char field_1) {
+asm void mDoExt_McaMorfSO::play(u32 field_0, s8 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/play__16mDoExt_McaMorfSOFUlSc.s"
 }
@@ -3587,7 +3595,7 @@ asm void mDoExt_McaMorfSO::stopZelAnime() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm mDoExt_McaMorf2::mDoExt_McaMorf2(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, J3DAnmTransform* field_4, s32 field_5, f32 field_6, s32 field_7, s32 field_8, Z2Creature* field_9, u32 field_10, u32 field_11) {
+asm mDoExt_McaMorf2::mDoExt_McaMorf2(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, J3DAnmTransform* field_4, int field_5, f32 field_6, int field_7, int field_8, Z2Creature* field_9, u32 field_10, u32 field_11) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_80011348.s"
 }
@@ -3609,7 +3617,7 @@ asm mDoExt_McaMorf2::~mDoExt_McaMorf2() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_McaMorf2::create(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, J3DAnmTransform* field_4, s32 field_5, f32 field_6, s32 field_7, s32 field_8, Z2Creature* field_9, u32 field_10, u32 field_11) {
+asm void mDoExt_McaMorf2::create(J3DModelData* field_0, mDoExt_McaMorfCallBack1_c* field_1, mDoExt_McaMorfCallBack2_c* field_2, J3DAnmTransform* field_3, J3DAnmTransform* field_4, int field_5, f32 field_6, int field_7, int field_8, Z2Creature* field_9, u32 field_10, u32 field_11) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_80011464.s"
 }
@@ -3646,7 +3654,7 @@ f32 lit_6819 = 0.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_McaMorf2::setAnm(J3DAnmTransform* field_0, J3DAnmTransform* field_1, f32 field_2, s32 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7) {
+asm void mDoExt_McaMorf2::setAnm(J3DAnmTransform* field_0, J3DAnmTransform* field_1, f32 field_2, int field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/setAnm__15mDoExt_McaMorf2FP15J3DAnmTransformP15J3DAnmTransformfiffff.s"
 }
@@ -3668,7 +3676,7 @@ asm void mDoExt_McaMorf2::setAnmRate(f32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_McaMorf2::play(u32 field_0, char field_1) {
+asm void mDoExt_McaMorf2::play(u32 field_0, s8 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/play__15mDoExt_McaMorf2FUlSc.s"
 }
@@ -3723,7 +3731,7 @@ asm void mDoExt_invJntPacket::draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_3Dline_c::init(u16 field_0, s32 field_1, s32 field_2) {
+asm void mDoExt_3Dline_c::init(u16 field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__15mDoExt_3Dline_cFUsii.s"
 }
@@ -3740,7 +3748,7 @@ cXyz::cXyz() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_3DlineMat0_c::init(u16 field_0, u16 field_1, s32 field_2) {
+asm void mDoExt_3DlineMat0_c::init(u16 field_0, u16 field_1, int field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__19mDoExt_3DlineMat0_cFUsUsi.s"
 }
@@ -3787,7 +3795,7 @@ f64 lit_7406 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_3DlineMat0_c::update(s32 field_0, f32 field_1, _GXColor& field_2, u16 field_3, dKy_tevstr_c* field_4) {
+asm void mDoExt_3DlineMat0_c::update(int field_0, f32 field_1, _GXColor& field_2, u16 field_3, dKy_tevstr_c* field_4) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/update__19mDoExt_3DlineMat0_cFifR8_GXColorUsP12dKy_tevstr_c.s"
 }
@@ -3798,7 +3806,7 @@ asm void mDoExt_3DlineMat0_c::update(s32 field_0, f32 field_1, _GXColor& field_2
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_3DlineMat0_c::update(s32 field_0, _GXColor& field_1, dKy_tevstr_c* field_2) {
+asm void mDoExt_3DlineMat0_c::update(int field_0, _GXColor& field_1, dKy_tevstr_c* field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c.s"
 }
@@ -3816,7 +3824,7 @@ f32 m_Do_m_Do_ext__lit_7625 = 1.0f / 100.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_3DlineMat1_c::init(u16 field_0, u16 field_1, ResTIMG* field_2, s32 field_3) {
+asm void mDoExt_3DlineMat1_c::init(u16 field_0, u16 field_1, ResTIMG* field_2, int field_3) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi.s"
 }
@@ -3871,7 +3879,7 @@ f32 lit_7924 = 8.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_3DlineMat1_c::update(s32 field_0, f32 field_1, _GXColor& field_2, u16 field_3, dKy_tevstr_c* field_4) {
+asm void mDoExt_3DlineMat1_c::update(int field_0, f32 field_1, _GXColor& field_2, u16 field_3, dKy_tevstr_c* field_4) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c.s"
 }
@@ -3882,7 +3890,7 @@ asm void mDoExt_3DlineMat1_c::update(s32 field_0, f32 field_1, _GXColor& field_2
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoExt_3DlineMat1_c::update(s32 field_0, _GXColor& field_1, dKy_tevstr_c* field_2) {
+asm void mDoExt_3DlineMat1_c::update(int field_0, _GXColor& field_1, dKy_tevstr_c* field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c.s"
 }
@@ -3915,7 +3923,7 @@ asm void mDoExt_3DlineMatSortPacket::draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void mDoExt_initFontCommon(JUTFont** field_0, ResFONT** field_1, JKRHeap* field_2, char const* field_3, JKRArchive* field_4, char field_5, u32 field_6, u32 field_7) {
+asm static void mDoExt_initFontCommon(JUTFont** field_0, ResFONT** field_1, JKRHeap* field_2, char const* field_3, JKRArchive* field_4, u8 field_5, u32 field_6, u32 field_7) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/mDoExt_initFontCommon__FPP7JUTFontPP7ResFONTP7JKRHeapPCcP10JKRArchiveUcUlUl.s"
 }
@@ -4145,7 +4153,7 @@ bool mDoExt_3DlineMat0_c::getMaterialID() {
 
 
 /* 80014E8C-80014E90 0004+00 rc=13 efc=2 .text      setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform           */
-void J3DMtxCalc::setAnmTransform(char field_0, J3DAnmTransform* field_1) {
+void J3DMtxCalc::setAnmTransform(u8 field_0, J3DAnmTransform* field_1) {
 	/* empty function */
 }
 
@@ -4157,7 +4165,7 @@ void J3DMtxCalc::setAnmTransform(J3DAnmTransform* field_0) {
 
 
 /* 80014E94-80014E9C 0008+00 rc=13 efc=2 .text      getAnmTransform__10J3DMtxCalcFUc                             */
-bool J3DMtxCalc::getAnmTransform(char field_0) {
+bool J3DMtxCalc::getAnmTransform(u8 field_0) {
 	return false;
 }
 
@@ -4169,7 +4177,7 @@ bool J3DMtxCalc::getAnmTransform() {
 
 
 /* 80014EA4-80014EA8 0004+00 rc=13 efc=2 .text      setWeight__10J3DMtxCalcFUcf                                  */
-void J3DMtxCalc::setWeight(char field_0, f32 field_1) {
+void J3DMtxCalc::setWeight(u8 field_0, f32 field_1) {
 	/* empty function */
 }
 
@@ -4178,7 +4186,7 @@ void J3DMtxCalc::setWeight(char field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMtxCalc::getWeight(char field_0) const {
+asm void J3DMtxCalc::getWeight(u8 field_0) const {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/getWeight__10J3DMtxCalcCFUc.s"
 }

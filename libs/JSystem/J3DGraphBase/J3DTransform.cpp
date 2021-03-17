@@ -6,24 +6,46 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build J3DTransformInfo (J3DTransformInfo) False/False
+/* top-level dependencies (begin J3DTransformInfo) */
+/* top-level dependencies (end J3DTransformInfo) */
+struct J3DTransformInfo {
+};
+
+// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
+/* top-level dependencies (begin J3DTextureSRTInfo) */
+/* top-level dependencies (end J3DTextureSRTInfo) */
+struct J3DTextureSRTInfo {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+// 
 // Forward References:
 // 
 
 static void __MTGQR7(u32);
 void J3DGQRSetup7(u32, u32, u32, u32);
-extern "C" void J3DCalcBBoardMtx__FPA4_f();
-extern "C" void J3DCalcYBBoardMtx__FPA4_f();
-extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f();
-extern "C" void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f();
-extern "C" void J3DGetTranslateRotateMtx__FsssfffPA4_f();
-extern "C" void J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f();
-extern "C" void J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f();
-extern "C" void J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f();
-extern "C" void J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f();
-extern "C" void J3DScaleNrmMtx__FPA4_fRC3Vec();
-extern "C" void J3DScaleNrmMtx33__FPA3_fRC3Vec();
-extern "C" void J3DMtxProjConcat__FPA4_fPA4_fPA4_f();
-extern "C" void J3DPSMtxArrayConcat__FPA4_fPA4_fPA4_fUl();
+void J3DCalcBBoardMtx(f32 (* )[4]);
+void J3DCalcYBBoardMtx(f32 (* )[4]);
+void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]);
+void J3DGetTranslateRotateMtx(J3DTransformInfo const&, f32 (* )[4]);
+void J3DGetTranslateRotateMtx(s16, s16, s16, f32, f32, f32, f32 (* )[4]);
+void J3DGetTextureMtx(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]);
+void J3DGetTextureMtxOld(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]);
+void J3DGetTextureMtxMaya(J3DTextureSRTInfo const&, f32 (* )[4]);
+void J3DGetTextureMtxMayaOld(J3DTextureSRTInfo const&, f32 (* )[4]);
+void J3DScaleNrmMtx(f32 (* )[4], Vec const&);
+void J3DScaleNrmMtx33(f32 (* )[3], Vec const&);
+void J3DMtxProjConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4]);
+void J3DPSMtxArrayConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4], u32);
 
 extern "C" static void __MTGQR7__FUl();
 extern "C" void J3DGQRSetup7__FUlUlUlUl();
@@ -95,7 +117,7 @@ u8 lit_435[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DCalcBBoardMtx__FPA4_f() {
+asm void J3DCalcBBoardMtx(f32 (* field_0)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DCalcBBoardMtx__FPA4_f.s"
 }
@@ -130,7 +152,7 @@ SECTION_RODATA const u8 lit_443[12] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DCalcYBBoardMtx__FPA4_f() {
+asm void J3DCalcYBBoardMtx(f32 (* field_0)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DCalcYBBoardMtx__FPA4_f.s"
 }
@@ -141,7 +163,7 @@ extern "C" asm void J3DCalcYBBoardMtx__FPA4_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DPSCalcInverseTranspose__FPA4_fPA3_f() {
+asm void J3DPSCalcInverseTranspose(f32 (* field_0)[4], f32 (* field_1)[3]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DPSCalcInverseTranspose__FPA4_fPA3_f.s"
 }
@@ -152,7 +174,7 @@ extern "C" asm void J3DPSCalcInverseTranspose__FPA4_fPA3_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f() {
+asm void J3DGetTranslateRotateMtx(J3DTransformInfo const& field_0, f32 (* field_1)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f.s"
 }
@@ -163,7 +185,7 @@ extern "C" asm void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DGetTranslateRotateMtx__FsssfffPA4_f() {
+asm void J3DGetTranslateRotateMtx(s16 field_0, s16 field_1, s16 field_2, f32 field_3, f32 field_4, f32 field_5, f32 (* field_6)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DGetTranslateRotateMtx__FsssfffPA4_f.s"
 }
@@ -178,7 +200,7 @@ f32 J3DTransform__lit_526 = 1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f() {
+asm void J3DGetTextureMtx(J3DTextureSRTInfo const& field_0, Vec const& field_1, f32 (* field_2)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f.s"
 }
@@ -189,7 +211,7 @@ extern "C" asm void J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f() {
+asm void J3DGetTextureMtxOld(J3DTextureSRTInfo const& field_0, Vec const& field_1, f32 (* field_2)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f.s"
 }
@@ -205,7 +227,7 @@ f32 lit_557 = 0.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f() {
+asm void J3DGetTextureMtxMaya(J3DTextureSRTInfo const& field_0, f32 (* field_1)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f.s"
 }
@@ -216,7 +238,7 @@ extern "C" asm void J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f() {
+asm void J3DGetTextureMtxMayaOld(J3DTextureSRTInfo const& field_0, f32 (* field_1)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f.s"
 }
@@ -227,7 +249,7 @@ extern "C" asm void J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DScaleNrmMtx__FPA4_fRC3Vec() {
+asm void J3DScaleNrmMtx(f32 (* field_0)[4], Vec const& field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DScaleNrmMtx__FPA4_fRC3Vec.s"
 }
@@ -238,7 +260,7 @@ extern "C" asm void J3DScaleNrmMtx__FPA4_fRC3Vec() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DScaleNrmMtx33__FPA3_fRC3Vec() {
+asm void J3DScaleNrmMtx33(f32 (* field_0)[3], Vec const& field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DScaleNrmMtx33__FPA3_fRC3Vec.s"
 }
@@ -249,7 +271,7 @@ extern "C" asm void J3DScaleNrmMtx33__FPA3_fRC3Vec() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DMtxProjConcat__FPA4_fPA4_fPA4_f() {
+asm void J3DMtxProjConcat(f32 (* field_0)[4], f32 (* field_1)[4], f32 (* field_2)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DMtxProjConcat__FPA4_fPA4_fPA4_f.s"
 }
@@ -266,7 +288,7 @@ u8 J3DTransform__Unit01[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DPSMtxArrayConcat__FPA4_fPA4_fPA4_fUl() {
+asm void J3DPSMtxArrayConcat(f32 (* field_0)[4], f32 (* field_1)[4], f32 (* field_2)[4], u32 field_3) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/J3DPSMtxArrayConcat__FPA4_fPA4_fPA4_fUl.s"
 }

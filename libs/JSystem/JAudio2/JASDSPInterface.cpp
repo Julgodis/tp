@@ -10,17 +10,17 @@
 // 
 
 // build JASDsp (JASDsp) False/False
+// build JASDsp (JASDsp) True/False
+struct JASDsp;
 // build JASWaveInfo (JASWaveInfo) False/False
 /* top-level dependencies (begin JASWaveInfo) */
 /* top-level dependencies (end JASWaveInfo) */
 struct JASWaveInfo {
 };
 
-// build JASDsp (JASDsp) True/False
-struct JASDsp;
 /* top-level dependencies (begin JASDsp) */
-// outer dependency: JASWaveInfo
 // outer dependency: JASDsp::FxlineConfig_
+// outer dependency: JASWaveInfo
 /* top-level dependencies (end JASDsp) */
 struct JASDsp {
 	// JASDsp::FxlineConfig_
@@ -45,18 +45,18 @@ struct JASDsp {
 		/* 8029DD8C */ void setWaveInfo(JASWaveInfo const&, u32, u32);
 		/* 8029DEAC */ void setOscInfo(u32);
 		/* 8029DEC4 */ void initAutoMixer();
-		/* 8029DEF0 */ void setAutoMixer(u16, char, char, char, char);
+		/* 8029DEF0 */ void setAutoMixer(u16, u8, u8, u8, u8);
 		/* 8029DF1C */ void setPitch(u16);
-		/* 8029DF34 */ void setMixerInitVolume(char, s16);
-		/* 8029DF54 */ void setMixerVolume(char, s16);
-		/* 8029DF80 */ void setPauseFlag(char);
+		/* 8029DF34 */ void setMixerInitVolume(u8, s16);
+		/* 8029DF54 */ void setMixerVolume(u8, s16);
+		/* 8029DF80 */ void setPauseFlag(u8);
 		/* 8029DF8C */ void flush();
 		/* 8029DFB0 */ void initFilter();
 		/* 8029E00C */ void setFilterMode(u16);
 		/* 8029E044 */ void setIIRFilterParam(s16*);
 		/* 8029E06C */ void setFIR8FilterParam(s16*);
 		/* 8029E094 */ void setDistFilter(s16);
-		/* 8029E09C */ void setBusConnect(char, char);
+		/* 8029E09C */ void setBusConnect(u8, u8);
 	};
 
 	/* 8029D9A4 */ void releaseHalt(u32);
@@ -64,12 +64,12 @@ struct JASDsp {
 	/* 8029D9E4 */ void syncFrame(u32, u32, u32);
 	/* 8029DA04 */ void setDSPMixerLevel(f32);
 	/* 8029DA30 */ void getDSPMixerLevel();
-	/* 8029DA38 */ void getDSPHandle(s32);
+	/* 8029DA38 */ void getDSPHandle(int);
 	/* 8029DA48 */ void setFilterTable(s16*, s16*, u32);
 	/* 8029DA6C */ void flushBuffer();
 	/* 8029DAA0 */ void invalChannelAll();
 	/* 8029DAC8 */ void initBuffer();
-	/* 8029DB78 */ void setFXLine(char, s16*, JASDsp::FxlineConfig_*);
+	/* 8029DB78 */ void setFXLine(u8, s16*, JASDsp::FxlineConfig_*);
 };
 
 // build JASWaveInfo (JASWaveInfo) True/True
@@ -152,7 +152,7 @@ void DsetMixerLevel(f32);
 extern "C" void DspBoot__FPFPv_v();
 void DspFinishWork(u16);
 void DsyncFrame2(u32, u32, u32);
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 extern "C" void DCInvalidateRange();
 extern "C" void DCFlushRange();
 extern "C" void OSDisableInterrupts();
@@ -274,7 +274,7 @@ asm void JASDsp::getDSPMixerLevel() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDsp::getDSPHandle(s32 field_0) {
+asm void JASDsp::getDSPHandle(int field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/getDSPHandle__6JASDspFi.s"
 }
@@ -672,7 +672,7 @@ u8 SEND_TABLE__6JASDsp[48] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDsp::setFXLine(char field_0, s16* field_1, JASDsp::FxlineConfig_* field_2) {
+asm void JASDsp::setFXLine(u8 field_0, s16* field_1, JASDsp::FxlineConfig_* field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_.s"
 }
@@ -806,7 +806,7 @@ asm void JASDsp::TChannel::initAutoMixer() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDsp::TChannel::setAutoMixer(u16 field_0, char field_1, char field_2, char field_3, char field_4) {
+asm void JASDsp::TChannel::setAutoMixer(u16 field_0, u8 field_1, u8 field_2, u8 field_3, u8 field_4) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc.s"
 }
@@ -828,7 +828,7 @@ asm void JASDsp::TChannel::setPitch(u16 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDsp::TChannel::setMixerInitVolume(char field_0, s16 field_1) {
+asm void JASDsp::TChannel::setMixerInitVolume(u8 field_0, s16 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setMixerInitVolume__Q26JASDsp8TChannelFUcs.s"
 }
@@ -839,7 +839,7 @@ asm void JASDsp::TChannel::setMixerInitVolume(char field_0, s16 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDsp::TChannel::setMixerVolume(char field_0, s16 field_1) {
+asm void JASDsp::TChannel::setMixerVolume(u8 field_0, s16 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setMixerVolume__Q26JASDsp8TChannelFUcs.s"
 }
@@ -850,7 +850,7 @@ asm void JASDsp::TChannel::setMixerVolume(char field_0, s16 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDsp::TChannel::setPauseFlag(char field_0) {
+asm void JASDsp::TChannel::setPauseFlag(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setPauseFlag__Q26JASDsp8TChannelFUc.s"
 }
@@ -934,7 +934,7 @@ SECTION_RODATA const u8 data_8039B8A0[24] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDsp::TChannel::setBusConnect(char field_0, char field_1) {
+asm void JASDsp::TChannel::setBusConnect(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/setBusConnect__Q26JASDsp8TChannelFUcUc.s"
 }

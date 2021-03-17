@@ -10,6 +10,31 @@
 // 
 
 // build JStudio_JStage (JStudio_JStage) False/False
+// build JStage (JStage) False/False
+/* top-level dependencies (begin JStage) */
+/* top-level dependencies (end JStage) */
+struct JStage {
+	// build TSystem (JStage::TSystem) False/False
+	/* dependencies (begin JStage::TSystem) */
+	/* dependencies (end JStage::TSystem) */
+	struct TSystem {
+	};
+
+	// build TCamera (JStage::TCamera) False/False
+	/* dependencies (begin JStage::TCamera) */
+	/* dependencies (end JStage::TCamera) */
+	struct TCamera {
+	};
+
+	// build TObject (JStage::TObject) False/False
+	/* dependencies (begin JStage::TObject) */
+	/* dependencies (end JStage::TObject) */
+	struct TObject {
+	};
+
+};
+
+// build JStage (JStage) True/True
 // build JStudio (JStudio) False/False
 // build JStudio (JStudio) True/False
 // build Vec (Vec) False/False
@@ -39,6 +64,12 @@ namespace JStudio {
 	/* dependencies (begin JStudio::TControl) */
 	/* dependencies (end JStudio::TControl) */
 	struct TControl {
+		// build TTransform_position (JStudio::TControl::TTransform_position) False/False
+		/* dependencies (begin JStudio::TControl::TTransform_position) */
+		/* dependencies (end JStudio::TControl::TTransform_position) */
+		struct TTransform_position {
+		};
+
 	};
 
 	// build TVariableValue (JStudio::TVariableValue) False/False
@@ -74,47 +105,26 @@ namespace JStudio {
 
 };
 
-// build JStage (JStage) False/False
-/* top-level dependencies (begin JStage) */
-/* top-level dependencies (end JStage) */
-struct JStage {
-	// build TSystem (JStage::TSystem) False/False
-	/* dependencies (begin JStage::TSystem) */
-	/* dependencies (end JStage::TSystem) */
-	struct TSystem {
-	};
-
-	// build TCamera (JStage::TCamera) False/False
-	/* dependencies (begin JStage::TCamera) */
-	/* dependencies (end JStage::TCamera) */
-	struct TCamera {
-	};
-
-	// build TObject (JStage::TObject) False/False
-	/* dependencies (begin JStage::TObject) */
-	/* dependencies (end JStage::TObject) */
-	struct TObject {
-	};
-
-};
-
-// build JStage (JStage) True/True
+// build JStudio (JStudio) True/True
 // build JStudio (JStudio) True/True
 // build JStage (JStage) True/True
 /* top-level dependencies (begin JStudio_JStage) */
-// outer dependency: JStudio::TControl
-// outer dependency: JStage::TSystem
-// outer dependency: JStage::TCamera
-// outer dependency: JStudio::data::TEOperationData
 // outer dependency: JStage::TObject
+// outer dependency: JStage::TSystem
+// outer dependency: JStudio::TControl
+// outer dependency: JStudio::TControl::TTransform_position
+// outer dependency: JStudio::data::TEOperationData
+// outer dependency: JStage::TCamera
 /* top-level dependencies (end JStudio_JStage) */
 struct JStudio_JStage {
+	// JStage::TObject
+	// JStudio::TControl::TTransform_position
 	// build TAdaptor_camera (JStudio_JStage::TAdaptor_camera) False/False
 	/* dependencies (begin JStudio_JStage::TAdaptor_camera) */
 	/* dependencies (end JStudio_JStage::TAdaptor_camera) */
 	struct TAdaptor_camera {
-		// JStage::TCamera
 		// JStudio::TControl
+		// JStage::TCamera
 		// JStudio::data::TEOperationData
 		// JStage::TSystem
 		/* 8028B8A0 */ TAdaptor_camera(JStage::TSystem const*, JStage::TCamera*);
@@ -147,6 +157,8 @@ struct JStudio_JStage {
 		/* 8028A50C */ void adaptor_object_findJSGObjectNode_(JStage::TObject const*, char const*);
 	};
 
+	/* 8028A290 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_position const&, JStage::TObject const*, u32);
+	/* 8028A3CC */ void transform_toLocalFromGlobal(f32 (* )[4], JStudio::TControl::TTransform_position const&, JStage::TObject const*, u32);
 };
 
 // build JStage (JStage) True/True
@@ -202,8 +214,6 @@ SECTION_BSS extern u8 saoVVOutput___Q214JStudio_JStage15TAdaptor_camera[160 + 4 
 // External References:
 // 
 
-extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
-extern "C" void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
 void operator delete(void*);
 extern "C" void PSMTXMultVec();
 extern "C" void __register_global_object();

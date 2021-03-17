@@ -39,7 +39,7 @@ struct JAU_JAIInitializer {
 /* top-level dependencies (end JASDvd) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
-	/* 8028FF04 */ void createThread(s32, s32, u32);
+	/* 8028FF04 */ void createThread(s32, int, u32);
 };
 
 // build JASGenericMemPool (JASGenericMemPool) False/False
@@ -47,7 +47,7 @@ struct JASDvd {
 /* top-level dependencies (end JASGenericMemPool) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
-	/* 802908C8 */ void newMemPool(u32, s32);
+	/* 802908C8 */ void newMemPool(u32, int);
 };
 
 // build JASKernel (JASKernel) False/False
@@ -109,7 +109,7 @@ struct JKRThread {
 /* top-level dependencies (end JKRThreadSwitch) */
 struct JKRThreadSwitch {
 	// JKRThread
-	/* 802D1A70 */ void enter(JKRThread*, s32);
+	/* 802D1A70 */ void enter(JKRThread*, int);
 };
 
 // build JKRThread (JKRThread) True/True

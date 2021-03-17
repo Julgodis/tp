@@ -10,6 +10,12 @@
 // 
 
 // build JKRAramPiece (JKRAramPiece) False/False
+// build JKRAramBlock (JKRAramBlock) False/False
+/* top-level dependencies (begin JKRAramBlock) */
+/* top-level dependencies (end JKRAramBlock) */
+struct JKRAramBlock {
+};
+
 // build JKRAMCommand (JKRAMCommand) False/False
 /* top-level dependencies (begin JKRAMCommand) */
 /* top-level dependencies (end JKRAMCommand) */
@@ -18,22 +24,16 @@ struct JKRAMCommand {
 	/* 802D3A5C */ ~JKRAMCommand();
 };
 
-// build JKRAramBlock (JKRAramBlock) False/False
-/* top-level dependencies (begin JKRAramBlock) */
-/* top-level dependencies (end JKRAramBlock) */
-struct JKRAramBlock {
-};
-
 /* top-level dependencies (begin JKRAramPiece) */
-// outer dependency: JKRAMCommand
 // outer dependency: JKRAramBlock
+// outer dependency: JKRAMCommand
 /* top-level dependencies (end JKRAramPiece) */
 struct JKRAramPiece {
-	// JKRAMCommand
 	// JKRAramBlock
+	// JKRAMCommand
 	/* 802D35F4 */ void sendCommand(JKRAMCommand*);
-	/* 802D3770 */ void sync(JKRAMCommand*, s32);
-	/* 802D3838 */ void orderSync(s32, u32, u32, u32, JKRAramBlock*);
+	/* 802D3770 */ void sync(JKRAMCommand*, int);
+	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
 	/* 802D38CC */ void startDMA(JKRAMCommand*);
 	/* 802D3944 */ void doneDMA(u32);
 };
@@ -83,6 +83,13 @@ struct JSUPtrList {
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
+// build JUTException (JUTException) False/False
+/* top-level dependencies (begin JUTException) */
+/* top-level dependencies (end JUTException) */
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -111,10 +118,9 @@ SECTION_BSS extern u8 mMutex__12JKRAramPiece[24];
 // 
 
 extern "C" void OSReport();
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void func_802D2DF0();
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
 extern "C" void DCInvalidateRange();
 extern "C" void DCStoreRange();
 extern "C" void OSInitMessageQueue();
@@ -225,7 +231,7 @@ extern "C" asm static void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAramPiece::sync(JKRAMCommand* field_0, s32 field_1) {
+asm void JKRAramPiece::sync(JKRAMCommand* field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/sync__12JKRAramPieceFP12JKRAMCommandi.s"
 }
@@ -236,7 +242,7 @@ asm void JKRAramPiece::sync(JKRAMCommand* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAramPiece::orderSync(s32 field_0, u32 field_1, u32 field_2, u32 field_3, JKRAramBlock* field_4) {
+asm void JKRAramPiece::orderSync(int field_0, u32 field_1, u32 field_2, u32 field_3, JKRAramBlock* field_4) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock.s"
 }

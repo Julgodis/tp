@@ -23,7 +23,7 @@ struct Z2SoundHandles {
 	// JAISoundID
 	/* 802AB07C */ Z2SoundHandles();
 	/* 802AB0B4 */ ~Z2SoundHandles();
-	/* 802AB118 */ void initHandlesPool(char);
+	/* 802AB118 */ void initHandlesPool(u8);
 	/* 802AB120 */ void deleteHandlesPool();
 	/* 802AB254 */ void getHandleSoundID(JAISoundID);
 	/* 802AB2A0 */ void getHandleUserData(u32);
@@ -163,7 +163,7 @@ asm Z2SoundHandles::~Z2SoundHandles() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundHandles::initHandlesPool(char field_0) {
+asm void Z2SoundHandles::initHandlesPool(u8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundHandles/initHandlesPool__14Z2SoundHandlesFUc.s"
 }

@@ -155,7 +155,7 @@ struct Z2SeqMgr {
 	/* 802AF010 */ void bgmStart(u32, u32, s32);
 	/* 802AFF8C */ void changeBgmStatus(s32);
 	/* 802B299C */ void onVariantBgmJumpEnd(bool);
-	/* 802B3FEC */ void setChildTrackVolume(JAISoundHandle*, s32, f32, u32, f32, f32);
+	/* 802B3FEC */ void setChildTrackVolume(JAISoundHandle*, int, f32, u32, f32, f32);
 	/* 802B5750 */ void onFieldBgmJumpStart();
 	/* 802B579C */ void onFieldBgmJumpEnd();
 };

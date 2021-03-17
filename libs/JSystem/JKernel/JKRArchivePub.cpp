@@ -10,8 +10,6 @@
 // 
 
 // build JKRArchive (JKRArchive) False/False
-// build JKRArchive (JKRArchive) True/False
-struct JKRArchive;
 // build JKRHeap (JKRHeap) False/False
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
@@ -19,21 +17,23 @@ struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
+// build JKRArchive (JKRArchive) True/False
+struct JKRArchive;
 // build JKRArchive (JKRArchive) True/True
 // build JKRArchive (JKRArchive) True/True
 // build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRArchive::EMountMode
 // outer dependency: JKRHeap
+// outer dependency: JKRArchive::EMountMode
 // outer dependency: JKRArchive::EMountDirection
 // outer dependency: JKRArchive::SDirEntry
 // outer dependency: JKRArchive::SDIFileEntry
 /* top-level dependencies (end JKRArchive) */
 struct JKRArchive {
-	// JKRArchive::EMountMode
-	// JKRHeap
 	// JKRArchive::EMountDirection
 	// JKRArchive::SDirEntry
+	// JKRHeap
+	// JKRArchive::EMountMode
 	// JKRArchive::SDIFileEntry
 	// build EMountMode (JKRArchive::EMountMode) False/False
 	/* dependencies (begin JKRArchive::EMountMode) */
@@ -114,20 +114,20 @@ struct JKRArcFinder {
 };
 
 // build JKRMemArchive (JKRMemArchive) False/False
+// build JKRArchive (JKRArchive) True/True
 // build JKRMemBreakFlag (JKRMemBreakFlag) False/False
 /* top-level dependencies (begin JKRMemBreakFlag) */
 /* top-level dependencies (end JKRMemBreakFlag) */
 struct JKRMemBreakFlag {
 };
 
-// build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JKRMemArchive) */
-// outer dependency: JKRMemBreakFlag
 // outer dependency: JKRArchive::EMountDirection
+// outer dependency: JKRMemBreakFlag
 /* top-level dependencies (end JKRMemArchive) */
 struct JKRMemArchive {
-	// JKRMemBreakFlag
 	// JKRArchive::EMountDirection
+	// JKRMemBreakFlag
 	/* 802D69B8 */ JKRMemArchive(s32, JKRArchive::EMountDirection);
 	/* 802D6A6C */ JKRMemArchive(void*, u32, JKRMemBreakFlag);
 };
@@ -197,7 +197,7 @@ SECTION_DATA extern void*const __vt__10JKRArchive[20];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 extern "C" void DVDConvertPathToEntrynum();
 extern "C" void _savegpr_27();
 extern "C" void _savegpr_28();

@@ -14,7 +14,7 @@
 /* top-level dependencies (end dMsgScrnLight_HIO_c) */
 struct dMsgScrnLight_HIO_c {
 	/* 8024575C */ dMsgScrnLight_HIO_c();
-	/* 802457C4 */ void updateColor(char);
+	/* 802457C4 */ void updateColor(u8);
 	/* 80246348 */ ~dMsgScrnLight_HIO_c();
 };
 
@@ -36,15 +36,22 @@ struct JUtility {
 /* top-level dependencies (end dMsgScrnLight_c) */
 struct dMsgScrnLight_c {
 	// JUtility::TColor
-	/* 80245934 */ dMsgScrnLight_c(char, char);
+	/* 80245934 */ dMsgScrnLight_c(u8, u8);
 	/* 80245B00 */ ~dMsgScrnLight_c();
-	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, char);
+	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
 	/* 80245F90 */ void draw(f32*, f32, f32, f32, f32, f32, f32, JUtility::TColor, JUtility::TColor);
 	/* 802460DC */ void drawCommon(f32, f32, f32, f32, f32);
 };
 
 // build JUtility (JUtility) True/True
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build JUtility (JUtility) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -71,23 +78,16 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build JUtility (JUtility) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: JUtility::TColor
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// JUtility::TColor
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 };
 
@@ -209,7 +209,7 @@ asm dMsgScrnLight_HIO_c::dMsgScrnLight_HIO_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrnLight_HIO_c::updateColor(char field_0) {
+asm void dMsgScrnLight_HIO_c::updateColor(u8 field_0) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/updateColor__19dMsgScrnLight_HIO_cFUc.s"
 }
@@ -246,7 +246,7 @@ u8 msg_scrn_d_msg_scrn_light__lit_3808[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dMsgScrnLight_c::dMsgScrnLight_c(char field_0, char field_1) {
+asm dMsgScrnLight_c::dMsgScrnLight_c(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/__ct__15dMsgScrnLight_cFUcUc.s"
 }
@@ -275,7 +275,7 @@ f64 msg_scrn_d_msg_scrn_light__lit_3871 = 4503601774854144.0 /* cast s32 to floa
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgScrnLight_c::draw(f32* field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, char field_6) {
+asm void dMsgScrnLight_c::draw(f32* field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u8 field_6) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_light/draw__15dMsgScrnLight_cFPffffffUc.s"
 }

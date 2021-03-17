@@ -9,6 +9,32 @@
 // Types:
 // 
 
+// build J3DMtxCalcJ3DSysInitBasic (J3DMtxCalcJ3DSysInitBasic) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin J3DMtxCalcJ3DSysInitBasic) */
+// outer dependency: Vec
+/* top-level dependencies (end J3DMtxCalcJ3DSysInitBasic) */
+struct J3DMtxCalcJ3DSysInitBasic {
+	// Vec
+	/* 8032EC28 */ void init(Vec const&, f32 const (& )[3][4]);
+};
+
+// build Vec (Vec) True/True
+// build J3DMtxCalcJ3DSysInitMaya (J3DMtxCalcJ3DSysInitMaya) False/False
+// build Vec (Vec) True/True
+/* top-level dependencies (begin J3DMtxCalcJ3DSysInitMaya) */
+// outer dependency: Vec
+/* top-level dependencies (end J3DMtxCalcJ3DSysInitMaya) */
+struct J3DMtxCalcJ3DSysInitMaya {
+	// Vec
+	/* 8032ECAC */ void init(Vec const&, f32 const (& )[3][4]);
+};
+
 // build J3DMtxCalcCalcTransformBasic (J3DMtxCalcCalcTransformBasic) False/False
 // build J3DTransformInfo (J3DTransformInfo) False/False
 /* top-level dependencies (begin J3DTransformInfo) */
@@ -66,8 +92,6 @@ struct J3DMaterial {
 // Forward References:
 // 
 
-extern "C" void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf();
-extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf();
 
 extern "C" void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf();
 extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf();
@@ -92,9 +116,9 @@ SECTION_SDATA2 extern u8 lit_1220[4];
 // External References:
 // 
 
-extern "C" void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f();
-extern "C" void J3DGetTranslateRotateMtx__FsssfffPA4_f();
-extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff();
+void J3DGetTranslateRotateMtx(J3DTransformInfo const&, f32 (* )[4]);
+void J3DGetTranslateRotateMtx(s16, s16, s16, f32, f32, f32, f32 (* )[4]);
+void JMAMTXApplyScale(f32 const (* )[4], f32 (* )[4], f32, f32, f32);
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXConcat();
 extern "C" void _savegpr_27();
@@ -129,7 +153,7 @@ SECTION_RODATA const u8 J3DJoint__lit_882[12] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf() {
+asm void J3DMtxCalcJ3DSysInitBasic::init(Vec const& field_0, f32 const (& field_1)[3][4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJoint/init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf.s"
 }
@@ -146,7 +170,7 @@ SECTION_RODATA const u8 J3DJoint__lit_893[12] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf() {
+asm void J3DMtxCalcJ3DSysInitMaya::init(Vec const& field_0, f32 const (& field_1)[3][4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJoint/init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf.s"
 }

@@ -10,20 +10,10 @@
 // 
 
 // build JASTrack (JASTrack) False/False
-// build JASDsp (JASDsp) False/False
-/* top-level dependencies (begin JASDsp) */
-/* top-level dependencies (end JASDsp) */
-struct JASDsp {
-	// build TChannel (JASDsp::TChannel) False/False
-	/* dependencies (begin JASDsp::TChannel) */
-	/* dependencies (end JASDsp::TChannel) */
-	struct TChannel {
-		/* 8029E00C */ void setFilterMode(u16);
-		/* 8029E044 */ void setIIRFilterParam(s16*);
-		/* 8029E06C */ void setFIR8FilterParam(s16*);
-		/* 8029E094 */ void setDistFilter(s16);
-	};
-
+// build JASSoundParams (JASSoundParams) False/False
+/* top-level dependencies (begin JASSoundParams) */
+/* top-level dependencies (end JASSoundParams) */
+struct JASSoundParams {
 };
 
 // build JASOscillator (JASOscillator) False/False
@@ -58,27 +48,37 @@ struct JASChannel {
 	/* 8029BBFC */ void free();
 };
 
-// build JASSoundParams (JASSoundParams) False/False
-/* top-level dependencies (begin JASSoundParams) */
-/* top-level dependencies (end JASSoundParams) */
-struct JASSoundParams {
-};
-
 // build JASTrack (JASTrack) True/False
 struct JASTrack;
+// build JASDsp (JASDsp) False/False
+/* top-level dependencies (begin JASDsp) */
+/* top-level dependencies (end JASDsp) */
+struct JASDsp {
+	// build TChannel (JASDsp::TChannel) False/False
+	/* dependencies (begin JASDsp::TChannel) */
+	/* dependencies (end JASDsp::TChannel) */
+	struct TChannel {
+		/* 8029E00C */ void setFilterMode(u16);
+		/* 8029E044 */ void setIIRFilterParam(s16*);
+		/* 8029E06C */ void setFIR8FilterParam(s16*);
+		/* 8029E094 */ void setDistFilter(s16);
+	};
+
+};
+
 /* top-level dependencies (begin JASTrack) */
-// outer dependency: JASDsp::TChannel
+// outer dependency: JASSoundParams
 // outer dependency: JASOscillator::Point
 // outer dependency: JASChannel
-// outer dependency: JASSoundParams
 // outer dependency: JASTrack::TChannelMgr
+// outer dependency: JASDsp::TChannel
 /* top-level dependencies (end JASTrack) */
 struct JASTrack {
+	// JASSoundParams
 	// JASChannel
+	// JASTrack::TChannelMgr
 	// JASDsp::TChannel
 	// JASOscillator::Point
-	// JASSoundParams
-	// JASTrack::TChannelMgr
 	// build TChannelMgr (JASTrack::TChannelMgr) False/False
 	/* dependencies (begin JASTrack::TChannelMgr) */
 	// inner dependency:  (JASTrack) False False (for JASTrack::TChannelMgr)
@@ -126,8 +126,8 @@ struct JASTrack {
 	/* 80291B8C */ void connectChild(u32, JASTrack*);
 	/* 80291BB8 */ void closeChild(u32);
 	/* 80291C30 */ void openChild(u32);
-	/* 80291DAC */ void connectBus(s32, s32);
-	/* 80291DBC */ void setLatestKey(char);
+	/* 80291DAC */ void connectBus(int, int);
+	/* 80291DBC */ void setLatestKey(u8);
 	/* 80291DF8 */ void channelStart(JASTrack::TChannelMgr*, u32, u32, u32);
 	/* 80291F38 */ void noteOn(u32, u32, u32);
 	/* 80292008 */ void gateOn(u32, u32, f32, u32);
@@ -242,13 +242,12 @@ struct JASDriver {
 struct JGadget;
 // build JGadget (JGadget) True/True
 /* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TNodeLinkList::iterator
 // outer dependency: JGadget::TLinkListNode
+// outer dependency: JGadget::TNodeLinkList::iterator
 /* top-level dependencies (end JGadget) */
 struct JGadget {
 	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
 	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
 	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
 	// build TLinkListNode (JGadget::TLinkListNode) False/False
 	/* dependencies (begin JGadget::TLinkListNode) */
@@ -256,10 +255,11 @@ struct JGadget {
 	struct TLinkListNode {
 	};
 
+	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
 	/* dependencies (end JGadget::TNodeLinkList) */
 	struct TNodeLinkList {
-		// JGadget::TNodeLinkList::iterator
 		// JGadget::TLinkListNode
+		// JGadget::TNodeLinkList::iterator
 		// build iterator (JGadget::TNodeLinkList::iterator) False/False
 		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
 		/* dependencies (end JGadget::TNodeLinkList::iterator) */
@@ -675,7 +675,7 @@ asm void JASTrack::openChild(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASTrack::connectBus(s32 field_0, s32 field_1) {
+asm void JASTrack::connectBus(int field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTrack/connectBus__8JASTrackFii.s"
 }
@@ -686,7 +686,7 @@ asm void JASTrack::connectBus(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASTrack::setLatestKey(char field_0) {
+asm void JASTrack::setLatestKey(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTrack/setLatestKey__8JASTrackFUc.s"
 }

@@ -13,7 +13,7 @@
 /* top-level dependencies (begin JPAKeyBlock) */
 /* top-level dependencies (end JPAKeyBlock) */
 struct JPAKeyBlock {
-	/* 8027D730 */ JPAKeyBlock(char const*);
+	/* 8027D730 */ JPAKeyBlock(u8 const*);
 	/* 8027D740 */ void calc(f32);
 };
 
@@ -42,7 +42,7 @@ extern "C" void JPACalcKeyAnmValue__FfUsPCf();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JPAKeyBlock::JPAKeyBlock(char const* field_0) {
+asm JPAKeyBlock::JPAKeyBlock(u8 const* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAKeyBlock/__ct__11JPAKeyBlockFPCUc.s"
 }

@@ -55,7 +55,7 @@ struct JAUAudioArcLoader {
 	/* 802A4968 */ void readBSFT(void const*);
 	/* 802A4990 */ void beginBNKList(u32, u32);
 	/* 802A49B4 */ void endBNKList();
-	/* 802A49D8 */ void readMaxSeCategory(s32, s32, s32);
+	/* 802A49D8 */ void readMaxSeCategory(int, int, int);
 };
 
 // build JAUSectionHeap (JAUSectionHeap) False/False
@@ -67,21 +67,21 @@ struct JAUSectionHeap {
 
 // build Z2FxLineMgr (Z2FxLineMgr) False/False
 // build JKRArchive (JKRArchive) False/False
+// build JKRArchive (JKRArchive) True/False
+struct JKRArchive;
 // build JKRHeap (JKRHeap) False/False
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
 };
 
-// build JKRArchive (JKRArchive) True/False
-struct JKRArchive;
 /* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRHeap
 // outer dependency: JKRArchive::EMountDirection
+// outer dependency: JKRHeap
 /* top-level dependencies (end JKRArchive) */
 struct JKRArchive {
-	// JKRHeap
 	// JKRArchive::EMountDirection
+	// JKRHeap
 	// build EMountDirection (JKRArchive::EMountDirection) False/False
 	/* dependencies (begin JKRArchive::EMountDirection) */
 	/* dependencies (end JKRArchive::EMountDirection) */

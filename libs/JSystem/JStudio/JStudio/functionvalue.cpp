@@ -14,16 +14,16 @@
 // build JStudio (JStudio) True/True
 // build JStudio (JStudio) True/True
 /* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::TFunctionValue_list_parameter
-// outer dependency: JStudio::TFunctionValue_list
 // outer dependency: JStudio::TFunctionValue_list::TIndexData_
+// outer dependency: JStudio::TFunctionValue_list
+// outer dependency: JStudio::TFunctionValue_list_parameter
 /* top-level dependencies (end JStudio) */
 namespace JStudio {
 	// build TFunctionValue (JStudio::TFunctionValue) False/False
 	/* dependencies (begin JStudio::TFunctionValue) */
 	/* dependencies (end JStudio::TFunctionValue) */
 	struct TFunctionValue {
-		/* 80281648 */ void toFunction_outside(s32);
+		/* 80281648 */ void toFunction_outside(int);
 		/* 80281690 */ TFunctionValue();
 		/* 802816A0 */ ~TFunctionValue();
 	};
@@ -336,7 +336,7 @@ SECTION_RODATA const void* const data_8039A9F0[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JStudio::TFunctionValue::toFunction_outside(s32 field_0) {
+asm void JStudio::TFunctionValue::toFunction_outside(int field_0) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/toFunction_outside__Q27JStudio14TFunctionValueFi.s"
 }

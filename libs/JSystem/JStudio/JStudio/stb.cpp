@@ -19,14 +19,14 @@
 // build JStudio (JStudio) True/True
 // build JStudio (JStudio) True/True
 /* top-level dependencies (begin JStudio) */
+// outer dependency: JStudio::stb::data::TParse_TBlock_object
+// outer dependency: JStudio::stb::data::TParse_TParagraph::TData
+// outer dependency: JStudio::stb::data::TParse_TBlock
+// outer dependency: JStudio::stb::TControl
+// outer dependency: JStudio::stb::data::TParse_TSequence::TData
 // outer dependency: JStudio::object::TIDData
 // outer dependency: JStudio::stb::data::TParse_THeader
-// outer dependency: JStudio::stb::data::TParse_TBlock
-// outer dependency: JStudio::stb::data::TParse_TBlock_object
-// outer dependency: JStudio::stb::data::TParse_TSequence::TData
-// outer dependency: JStudio::stb::data::TParse_TParagraph::TData
 // outer dependency: JStudio::stb::TObject
-// outer dependency: JStudio::stb::TControl
 /* top-level dependencies (end JStudio) */
 namespace JStudio {
 	// build stb (JStudio::stb) False/False
@@ -96,7 +96,7 @@ namespace JStudio {
 			/* 80288A78 */ TObject(u32, void const*, u32);
 			/* 80288AC0 */ TObject(JStudio::stb::data::TParse_TBlock_object const&);
 			/* 80288B30 */ ~TObject();
-			/* 80288B78 */ void setFlag_operation(char, s32);
+			/* 80288B78 */ void setFlag_operation(u8, int);
 			/* 80288BD0 */ void reset(void const*);
 			/* 80288BE8 */ void forward(u32);
 			/* 80288E18 */ void do_begin();
@@ -152,20 +152,20 @@ namespace JStudio {
 
 		// build TParse (JStudio::stb::TParse) False/False
 		/* dependencies (begin JStudio::stb::TParse) */
-		// inner dependency: data (JStudio::stb::data::TParse_THeader) True False (for JStudio::stb::TParse)
-		// build data (JStudio::stb::data) True/True
-		// inner dependency: data (JStudio::stb::data::TParse_TBlock) True False (for JStudio::stb::TParse)
-		// build data (JStudio::stb::data) True/True
 		// inner dependency: data (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::stb::TParse)
 		// build data (JStudio::stb::data) True/True
 		// inner dependency: TControl (JStudio::stb::TControl) True False (for JStudio::stb::TParse)
 		// build TControl (JStudio::stb::TControl) True/True
+		// inner dependency: data (JStudio::stb::data::TParse_TBlock) True False (for JStudio::stb::TParse)
+		// build data (JStudio::stb::data) True/True
+		// inner dependency: data (JStudio::stb::data::TParse_THeader) True False (for JStudio::stb::TParse)
+		// build data (JStudio::stb::data) True/True
 		/* dependencies (end JStudio::stb::TParse) */
 		struct TParse {
-			// JStudio::stb::data::TParse_THeader
-			// JStudio::stb::data::TParse_TBlock
 			// JStudio::stb::data::TParse_TBlock_object
 			// JStudio::stb::TControl
+			// JStudio::stb::data::TParse_TBlock
+			// JStudio::stb::data::TParse_THeader
 			/* 80289640 */ TParse(JStudio::stb::TControl*);
 			/* 80289660 */ ~TParse();
 			/* 802896C0 */ void parseHeader_next(void const**, u32*, u32);
@@ -197,8 +197,8 @@ namespace JStudio {
 struct JGadget;
 // build JGadget (JGadget) True/True
 /* top-level dependencies (begin JGadget) */
-// outer dependency: JGadget::TNodeLinkList::iterator
 // outer dependency: JGadget::TLinkListNode
+// outer dependency: JGadget::TNodeLinkList::iterator
 /* top-level dependencies (end JGadget) */
 struct JGadget {
 	// build binary (JGadget::binary) False/False
@@ -216,7 +216,6 @@ struct JGadget {
 
 	// build TNodeLinkList (JGadget::TNodeLinkList) False/False
 	/* dependencies (begin JGadget::TNodeLinkList) */
-	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
 	// inner dependency: TLinkListNode (JGadget::TLinkListNode) True False (for JGadget::TNodeLinkList)
 	// build TLinkListNode (JGadget::TLinkListNode) False/False
 	/* dependencies (begin JGadget::TLinkListNode) */
@@ -224,10 +223,11 @@ struct JGadget {
 	struct TLinkListNode {
 	};
 
+	// inner dependency: TNodeLinkList (JGadget::TNodeLinkList::iterator) True False (for JGadget::TNodeLinkList)
 	/* dependencies (end JGadget::TNodeLinkList) */
 	struct TNodeLinkList {
-		// JGadget::TNodeLinkList::iterator
 		// JGadget::TLinkListNode
+		// JGadget::TNodeLinkList::iterator
 		// build iterator (JGadget::TNodeLinkList::iterator) False/False
 		/* dependencies (begin JGadget::TNodeLinkList::iterator) */
 		/* dependencies (end JGadget::TNodeLinkList::iterator) */
@@ -415,7 +415,7 @@ asm JStudio::stb::TObject::~TObject() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JStudio::stb::TObject::setFlag_operation(char field_0, s32 field_1) {
+asm void JStudio::stb::TObject::setFlag_operation(u8 field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/stb/setFlag_operation__Q37JStudio3stb7TObjectFUci.s"
 }

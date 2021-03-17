@@ -23,11 +23,10 @@ struct dBgS_AcchCir {
 };
 
 // build dBgS_Acch (dBgS_Acch) False/False
-// build dBgS_AcchCir (dBgS_AcchCir) True/True
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
 };
 
 // build fopAc_ac_c (fopAc_ac_c) False/False
@@ -36,23 +35,26 @@ struct csXyz {
 struct fopAc_ac_c {
 };
 
-// build Vec (Vec) False/False
-/* top-level dependencies (begin Vec) */
-/* top-level dependencies (end Vec) */
-struct Vec {
-};
-
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
-};
-
+// build dBgS_AcchCir (dBgS_AcchCir) True/True
 // build dBgS (dBgS) False/False
+// build cXyz (cXyz) True/True
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build dBgS_RoofChk (dBgS_RoofChk) False/False
+/* top-level dependencies (begin dBgS_RoofChk) */
+/* top-level dependencies (end dBgS_RoofChk) */
+struct dBgS_RoofChk {
+	/* 80078FF4 */ dBgS_RoofChk();
+	/* 80079090 */ ~dBgS_RoofChk();
+};
+
 // build dBgS_Acch (dBgS_Acch) True/False
 struct dBgS_Acch;
-// build csXyz (csXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
 // build cBgS_PolyInfo (cBgS_PolyInfo) False/False
 /* top-level dependencies (begin cBgS_PolyInfo) */
 /* top-level dependencies (end cBgS_PolyInfo) */
@@ -60,8 +62,8 @@ struct cBgS_PolyInfo {
 	/* 80268074 */ cBgS_PolyInfo();
 	/* 802680B0 */ ~cBgS_PolyInfo();
 	/* 80268120 */ void ClearPi();
-	/* 8026816C */ void SetActorInfo(s32, void*, s32);
-	/* 802681A4 */ void SetPolyIndex(s32);
+	/* 8026816C */ void SetActorInfo(int, void*, u32);
+	/* 802681A4 */ void SetPolyIndex(int);
 };
 
 // build dBgS_SplGrpChk (dBgS_SplGrpChk) False/False
@@ -75,29 +77,20 @@ struct dBgS_SplGrpChk {
 	/* 80078C78 */ ~dBgS_SplGrpChk();
 };
 
-// build dBgS_RoofChk (dBgS_RoofChk) False/False
-/* top-level dependencies (begin dBgS_RoofChk) */
-/* top-level dependencies (end dBgS_RoofChk) */
-struct dBgS_RoofChk {
-	/* 80078FF4 */ dBgS_RoofChk();
-	/* 80079090 */ ~dBgS_RoofChk();
-};
-
-// build cXyz (cXyz) True/True
 /* top-level dependencies (begin dBgS) */
+// outer dependency: cXyz
+// outer dependency: fopAc_ac_c
+// outer dependency: dBgS_RoofChk
 // outer dependency: dBgS_Acch
 // outer dependency: csXyz
-// outer dependency: fopAc_ac_c
 // outer dependency: cBgS_PolyInfo
 // outer dependency: dBgS_SplGrpChk
-// outer dependency: dBgS_RoofChk
-// outer dependency: cXyz
 /* top-level dependencies (end dBgS) */
 struct dBgS {
-	// csXyz
-	// cXyz
-	// cBgS_PolyInfo
 	// dBgS_Acch
+	// csXyz
+	// cBgS_PolyInfo
+	// cXyz
 	// fopAc_ac_c
 	// dBgS_RoofChk
 	// dBgS_SplGrpChk
@@ -109,26 +102,33 @@ struct dBgS {
 	/* 80075B84 */ void RideCallBack(cBgS_PolyInfo const&, fopAc_ac_c*);
 };
 
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+// build csXyz (csXyz) True/True
 /* top-level dependencies (begin dBgS_Acch) */
-// outer dependency: dBgS_AcchCir
-// outer dependency: csXyz
-// outer dependency: fopAc_ac_c
-// outer dependency: Vec
 // outer dependency: cXyz
+// outer dependency: fopAc_ac_c
+// outer dependency: dBgS_AcchCir
 // outer dependency: dBgS
+// outer dependency: Vec
+// outer dependency: csXyz
 /* top-level dependencies (end dBgS_Acch) */
 struct dBgS_Acch {
 	// csXyz
-	// dBgS_AcchCir
-	// fopAc_ac_c
-	// Vec
 	// cXyz
+	// fopAc_ac_c
+	// dBgS_AcchCir
+	// Vec
 	// dBgS
 	/* 80075F94 */ ~dBgS_Acch();
 	/* 800760A0 */ dBgS_Acch();
 	/* 800761CC */ void Init();
-	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, s32, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
-	/* 80076288 */ void Set(fopAc_ac_c*, s32, dBgS_AcchCir*);
+	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
+	/* 80076288 */ void Set(fopAc_ac_c*, int, dBgS_AcchCir*);
 	/* 800762D8 */ void GroundCheckInit(dBgS&);
 	/* 80076350 */ void GroundCheck(dBgS&);
 	/* 8007654C */ void GroundRoofProc(dBgS&);
@@ -142,8 +142,8 @@ struct dBgS_Acch {
 	/* 80077178 */ void GetWallAllLowH_R();
 	/* 800771E4 */ void GetSpeedY();
 	/* 80077200 */ void GetWallAddY(Vec&);
-	/* 80077278 */ void SetNowActorInfo(s32, void*, s32);
-	/* 80077288 */ void SetWallPolyIndex(s32, s32);
+	/* 80077278 */ void SetNowActorInfo(int, void*, u32);
+	/* 80077288 */ void SetWallPolyIndex(int, int);
 	/* 800772E8 */ void CalcMovePosWork();
 	/* 8007732C */ void CalcWallRR();
 	/* 80077388 */ void SetMoveBGOnly();
@@ -178,7 +178,7 @@ struct cBgS_LinChk {
 	// cXyz
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
-	/* 80267ED0 */ void Set2(cXyz const*, cXyz const*, s32);
+	/* 80267ED0 */ void Set2(cXyz const*, cXyz const*, u32);
 };
 
 // build cM3dGPla (cM3dGPla) False/False
@@ -191,6 +191,7 @@ struct cM3dGPla {
 	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
 };
 
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
 // build cBgS_GndChk (cBgS_GndChk) False/False
 // build cXyz (cXyz) True/True
 /* top-level dependencies (begin cBgS_GndChk) */
@@ -201,18 +202,17 @@ struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
 /* top-level dependencies (begin cBgS) */
 // outer dependency: cBgS_LinChk
 // outer dependency: cM3dGPla
-// outer dependency: cBgS_GndChk
 // outer dependency: cBgS_PolyInfo
+// outer dependency: cBgS_GndChk
 /* top-level dependencies (end cBgS) */
 struct cBgS {
 	// cBgS_LinChk
 	// cM3dGPla
-	// cBgS_GndChk
 	// cBgS_PolyInfo
+	// cBgS_GndChk
 	/* 800743B4 */ void LineCross(cBgS_LinChk*);
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
@@ -573,7 +573,7 @@ asm void dBgS_Acch::Init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgS_Acch::Set(cXyz* field_0, cXyz* field_1, fopAc_ac_c* field_2, s32 field_3, dBgS_AcchCir* field_4, cXyz* field_5, csXyz* field_6, csXyz* field_7) {
+asm void dBgS_Acch::Set(cXyz* field_0, cXyz* field_1, fopAc_ac_c* field_2, int field_3, dBgS_AcchCir* field_4, cXyz* field_5, csXyz* field_6, csXyz* field_7) {
 	nofralloc
 #include "asm/d/bg/d_bg_s_acch/Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz.s"
 }
@@ -584,7 +584,7 @@ asm void dBgS_Acch::Set(cXyz* field_0, cXyz* field_1, fopAc_ac_c* field_2, s32 f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgS_Acch::Set(fopAc_ac_c* field_0, s32 field_1, dBgS_AcchCir* field_2) {
+asm void dBgS_Acch::Set(fopAc_ac_c* field_0, int field_1, dBgS_AcchCir* field_2) {
 	nofralloc
 #include "asm/d/bg/d_bg_s_acch/Set__9dBgS_AcchFP10fopAc_ac_ciP12dBgS_AcchCir.s"
 }
@@ -761,7 +761,7 @@ asm void dBgS_Acch::GetWallAddY(Vec& field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgS_Acch::SetNowActorInfo(s32 field_0, void* field_1, s32 field_2) {
+asm void dBgS_Acch::SetNowActorInfo(int field_0, void* field_1, u32 field_2) {
 	nofralloc
 #include "asm/d/bg/d_bg_s_acch/SetNowActorInfo__9dBgS_AcchFiPvUi.s"
 }
@@ -772,7 +772,7 @@ asm void dBgS_Acch::SetNowActorInfo(s32 field_0, void* field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgS_Acch::SetWallPolyIndex(s32 field_0, s32 field_1) {
+asm void dBgS_Acch::SetWallPolyIndex(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/bg/d_bg_s_acch/SetWallPolyIndex__9dBgS_AcchFii.s"
 }

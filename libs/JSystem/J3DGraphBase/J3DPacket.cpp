@@ -56,6 +56,7 @@ struct J3DDrawPacket {
 };
 
 // build J3DMatPacket (J3DMatPacket) False/False
+// build J3DDrawBuffer (J3DDrawBuffer) True/True
 // build J3DShapePacket (J3DShapePacket) False/False
 /* top-level dependencies (begin J3DShapePacket) */
 /* top-level dependencies (end J3DShapePacket) */
@@ -69,14 +70,13 @@ struct J3DShapePacket {
 	/* 80312FBC */ void drawFast();
 };
 
-// build J3DDrawBuffer (J3DDrawBuffer) True/True
 /* top-level dependencies (begin J3DMatPacket) */
-// outer dependency: J3DShapePacket
 // outer dependency: J3DDrawBuffer
+// outer dependency: J3DShapePacket
 /* top-level dependencies (end J3DMatPacket) */
 struct J3DMatPacket {
-	// J3DShapePacket
 	// J3DDrawBuffer
+	// J3DShapePacket
 	/* 80312948 */ J3DMatPacket();
 	/* 803129A4 */ ~J3DMatPacket();
 	/* 80312A04 */ void addShapePacket(J3DShapePacket*);
@@ -162,7 +162,7 @@ SECTION_SBSS extern u8 sInterruptFlag__17J3DDisplayListObj[4 + 4 /* padding */];
 
 SECTION_INIT void memcpy();
 void* operator new(u32);
-void* operator new[](u32, s32);
+void* operator new[](u32, int);
 void operator delete(void*);
 extern "C" void DCStoreRange();
 extern "C" void OSDisableInterrupts();

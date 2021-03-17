@@ -70,19 +70,19 @@ SECTION_DATA extern void*data_803A3890[8];
 // External References:
 // 
 
-void fpcEx_SearchByID(s32);
+void fpcEx_SearchByID(u32);
 void fpcLy_RootLayer();
 void fpcLy_SetCurrentLayer(layer_class*);
 void fpcLy_CurrentLayer();
 void fpcM_Delete(void*);
-void fpcM_IsCreating(s32);
+void fpcM_IsCreating(u32);
 extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
 extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
 void cPhs_Do(request_of_phase_process_class*, void*);
 void cReq_Is_Done(request_base_class*);
 void cReq_Done(request_base_class*);
-void cReq_Command(request_base_class*, char);
-void cReq_Create(request_base_class*, char);
+void cReq_Command(request_base_class*, u8);
+void cReq_Create(request_base_class*, u8);
 extern "C" void _savegpr_29();
 extern "C" void _restgpr_29();
 

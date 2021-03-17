@@ -27,6 +27,9 @@ struct J3DTexCoord {
 /* top-level dependencies (end J3DTexMtx) */
 struct J3DTexMtx {
 	/* 803238C4 */ void load(u32) const;
+	/* 80323900 */ void calc(f32 const (* )[4]);
+	/* 80323920 */ void calcTexMtx(f32 const (* )[4]);
+	/* 80323C0C */ void calcPostTexMtx(f32 const (* )[4]);
 	/* 80324358 */ void loadTexMtx(u32) const;
 	/* 803243BC */ void loadPostTexMtx(u32) const;
 };
@@ -35,6 +38,12 @@ struct J3DTexMtx {
 /* top-level dependencies (begin J3DNBTScale) */
 /* top-level dependencies (end J3DNBTScale) */
 struct J3DNBTScale {
+};
+
+// build _GXTexMtxType (_GXTexMtxType) False/False
+/* top-level dependencies (begin _GXTexMtxType) */
+/* top-level dependencies (end _GXTexMtxType) */
+struct _GXTexMtxType {
 };
 
 // build _GXLightID (_GXLightID) False/False
@@ -103,14 +112,23 @@ struct _GXTlutFmt {
 struct _GXTlutSize {
 };
 
+// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
+/* top-level dependencies (begin J3DTextureSRTInfo) */
+/* top-level dependencies (end J3DTextureSRTInfo) */
+struct J3DTextureSRTInfo {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
 // 
 // Forward References:
 // 
 
 void loadTexCoordGens(u32, J3DTexCoord*);
-extern "C" void calc__9J3DTexMtxFPA4_Cf();
-extern "C" static void calcTexMtx__9J3DTexMtxFPA4_Cf();
-extern "C" void calcPostTexMtx__9J3DTexMtxFPA4_Cf();
 void isTexNoReg(void*);
 void getTexNoReg(void*);
 void loadTexNo(u32, u16 const&);
@@ -120,14 +138,14 @@ void makeTexCoordTable();
 void makeAlphaCmpTable();
 void makeZModeTable();
 void makeTevSwapTable();
-extern "C" static void J3DGDLoadTexMtxImm__FPA4_fUl13_GXTexMtxType();
-extern "C" static void J3DGDLoadPostTexMtxImm__FPA4_fUl();
+static void J3DGDLoadTexMtxImm(f32 (* )[4], u32, _GXTexMtxType);
+static void J3DGDLoadPostTexMtxImm(f32 (* )[4], u32);
 
 extern "C" void load__11J3DLightObjCFUl();
 extern "C" void loadTexCoordGens__FUlP11J3DTexCoord();
 extern "C" void load__9J3DTexMtxCFUl();
 extern "C" void calc__9J3DTexMtxFPA4_Cf();
-extern "C" static void calcTexMtx__9J3DTexMtxFPA4_Cf();
+extern "C" void calcTexMtx__9J3DTexMtxFPA4_Cf();
 extern "C" void calcPostTexMtx__9J3DTexMtxFPA4_Cf();
 extern "C" void isTexNoReg__FPv();
 extern "C" void getTexNoReg__FPv();
@@ -190,17 +208,17 @@ void J3DGDSetLightColor(_GXLightID, _GXColor);
 void J3DGDSetLightPos(_GXLightID, f32, f32, f32);
 void J3DGDSetLightDir(_GXLightID, f32, f32, f32);
 void J3DGDSetTexCoordGen(_GXTexGenType, _GXTexGenSrc);
-void J3DGDSetTexLookupMode(_GXTexMapID, _GXTexWrapMode, _GXTexWrapMode, _GXTexFilter, _GXTexFilter, f32, f32, f32, char, char, _GXAnisotropy);
+void J3DGDSetTexLookupMode(_GXTexMapID, _GXTexWrapMode, _GXTexWrapMode, _GXTexFilter, _GXTexFilter, f32, f32, f32, u8, u8, _GXAnisotropy);
 void J3DGDSetTexImgAttr(_GXTexMapID, u16, u16, _GXTexFmt);
 void J3DGDSetTexImgPtr(_GXTexMapID, void*);
 void J3DGDSetTexImgPtrRaw(_GXTexMapID, u32);
 void J3DGDSetTexTlut(_GXTexMapID, u32, _GXTlutFmt);
 void J3DGDLoadTlut(void*, u32, _GXTlutSize);
-extern "C" void J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f();
-extern "C" void J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f();
-extern "C" void J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f();
-extern "C" void J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f();
-extern "C" void J3DMtxProjConcat__FPA4_fPA4_fPA4_f();
+void J3DGetTextureMtx(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]);
+void J3DGetTextureMtxOld(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]);
+void J3DGetTextureMtxMaya(J3DTextureSRTInfo const&, f32 (* )[4]);
+void J3DGetTextureMtxMayaOld(J3DTextureSRTInfo const&, f32 (* )[4]);
+void J3DMtxProjConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4]);
 extern "C" void PSMTXConcat();
 extern "C" void GDOverflowed();
 extern "C" void _savegpr_26();
@@ -275,7 +293,7 @@ asm void J3DTexMtx::load(u32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void calc__9J3DTexMtxFPA4_Cf() {
+asm void J3DTexMtx::calc(f32 const (* field_0)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTevs/calc__9J3DTexMtxFPA4_Cf.s"
 }
@@ -317,7 +335,7 @@ void* J3DTevs__lit_1059[12] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void calcTexMtx__9J3DTexMtxFPA4_Cf() {
+asm void J3DTexMtx::calcTexMtx(f32 const (* field_0)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTevs/calcTexMtx__9J3DTexMtxFPA4_Cf.s"
 }
@@ -359,7 +377,7 @@ void* lit_1131[12] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void calcPostTexMtx__9J3DTexMtxFPA4_Cf() {
+asm void J3DTexMtx::calcPostTexMtx(f32 const (* field_0)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTevs/calcPostTexMtx__9J3DTexMtxFPA4_Cf.s"
 }
@@ -577,7 +595,7 @@ asm void J3DTexMtx::loadPostTexMtx(u32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void J3DGDLoadTexMtxImm__FPA4_fUl13_GXTexMtxType() {
+asm static void J3DGDLoadTexMtxImm(f32 (* field_0)[4], u32 field_1, _GXTexMtxType field_2) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTevs/J3DGDLoadTexMtxImm__FPA4_fUl13_GXTexMtxType.s"
 }
@@ -588,7 +606,7 @@ extern "C" asm static void J3DGDLoadTexMtxImm__FPA4_fUl13_GXTexMtxType() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void J3DGDLoadPostTexMtxImm__FPA4_fUl() {
+asm static void J3DGDLoadPostTexMtxImm(f32 (* field_0)[4], u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTevs/J3DGDLoadPostTexMtxImm__FPA4_fUl.s"
 }

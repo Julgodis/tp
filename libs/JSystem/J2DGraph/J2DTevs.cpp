@@ -10,39 +10,59 @@
 // 
 
 // build J2DTexMtx (J2DTexMtx) False/False
-/* top-level dependencies (begin J2DTexMtx) */
-/* top-level dependencies (end J2DTexMtx) */
-struct J2DTexMtx {
-	/* 802E9C90 */ void load(u32);
-	/* 802E9CC4 */ void calc();
+// build J2DTextureSRTInfo (J2DTextureSRTInfo) False/False
+/* top-level dependencies (begin J2DTextureSRTInfo) */
+/* top-level dependencies (end J2DTextureSRTInfo) */
+struct J2DTextureSRTInfo {
 };
 
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin J2DTexMtx) */
+// outer dependency: J2DTextureSRTInfo
+// outer dependency: Vec
+/* top-level dependencies (end J2DTexMtx) */
+struct J2DTexMtx {
+	// J2DTextureSRTInfo
+	// Vec
+	/* 802E9C90 */ void load(u32);
+	/* 802E9CC4 */ void calc();
+	/* 802E9D2C */ void getTextureMtx(J2DTextureSRTInfo const&, Vec, f32 (* )[4]);
+	/* 802E9EBC */ void getTextureMtxMaya(J2DTextureSRTInfo const&, f32 (* )[4]);
+};
+
+// build J2DTextureSRTInfo (J2DTextureSRTInfo) True/True
+// build Vec (Vec) True/True
 // build J2DIndTevStage (J2DIndTevStage) False/False
 /* top-level dependencies (begin J2DIndTevStage) */
 /* top-level dependencies (end J2DIndTevStage) */
 struct J2DIndTevStage {
-	/* 802EA044 */ void load(char);
+	/* 802EA044 */ void load(u8);
 };
 
 // build J2DIndTexMtx (J2DIndTexMtx) False/False
 /* top-level dependencies (begin J2DIndTexMtx) */
 /* top-level dependencies (end J2DIndTexMtx) */
 struct J2DIndTexMtx {
-	/* 802EA098 */ void load(char);
+	/* 802EA098 */ void load(u8);
 };
 
 // build J2DIndTexCoordScale (J2DIndTexCoordScale) False/False
 /* top-level dependencies (begin J2DIndTexCoordScale) */
 /* top-level dependencies (end J2DIndTexCoordScale) */
 struct J2DIndTexCoordScale {
-	/* 802EA0CC */ void load(char);
+	/* 802EA0CC */ void load(u8);
 };
 
 // build J2DIndTexOrder (J2DIndTexOrder) False/False
 /* top-level dependencies (begin J2DIndTexOrder) */
 /* top-level dependencies (end J2DIndTexOrder) */
 struct J2DIndTexOrder {
-	/* 802EA0FC */ void load(char);
+	/* 802EA0FC */ void load(u8);
 };
 
 // build J2DTevBlock (J2DTevBlock) False/False
@@ -76,13 +96,11 @@ struct J2DIndBlock {
 // Forward References:
 // 
 
-extern "C" static void getTextureMtx__9J2DTexMtxFRC17J2DTextureSRTInfo3VecPA4_f();
-extern "C" static void getTextureMtxMaya__9J2DTexMtxFRC17J2DTextureSRTInfoPA4_f();
 
 extern "C" void load__9J2DTexMtxFUl();
 extern "C" void calc__9J2DTexMtxFv();
-extern "C" static void getTextureMtx__9J2DTexMtxFRC17J2DTextureSRTInfo3VecPA4_f();
-extern "C" static void getTextureMtxMaya__9J2DTexMtxFRC17J2DTextureSRTInfoPA4_f();
+extern "C" void getTextureMtx__9J2DTexMtxFRC17J2DTextureSRTInfo3VecPA4_f();
+extern "C" void getTextureMtxMaya__9J2DTexMtxFRC17J2DTextureSRTInfoPA4_f();
 extern "C" void load__14J2DIndTevStageFUc();
 extern "C" void load__12J2DIndTexMtxFUc();
 extern "C" void load__19J2DIndTexCoordScaleFUc();
@@ -195,7 +213,7 @@ f32 J2DTevs__lit_1491 = 1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void getTextureMtx__9J2DTexMtxFRC17J2DTextureSRTInfo3VecPA4_f() {
+asm void J2DTexMtx::getTextureMtx(J2DTextureSRTInfo const& field_0, Vec field_1, f32 (* field_2)[4]) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DTevs/getTextureMtx__9J2DTexMtxFRC17J2DTextureSRTInfo3VecPA4_f.s"
 }
@@ -210,7 +228,7 @@ f32 lit_1507 = 0.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void getTextureMtxMaya__9J2DTexMtxFRC17J2DTextureSRTInfoPA4_f() {
+asm void J2DTexMtx::getTextureMtxMaya(J2DTextureSRTInfo const& field_0, f32 (* field_1)[4]) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DTevs/getTextureMtxMaya__9J2DTexMtxFRC17J2DTextureSRTInfoPA4_f.s"
 }
@@ -221,7 +239,7 @@ extern "C" asm static void getTextureMtxMaya__9J2DTexMtxFRC17J2DTextureSRTInfoPA
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DIndTevStage::load(char field_0) {
+asm void J2DIndTevStage::load(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DTevs/load__14J2DIndTevStageFUc.s"
 }
@@ -232,7 +250,7 @@ asm void J2DIndTevStage::load(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DIndTexMtx::load(char field_0) {
+asm void J2DIndTexMtx::load(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DTevs/load__12J2DIndTexMtxFUc.s"
 }
@@ -243,7 +261,7 @@ asm void J2DIndTexMtx::load(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DIndTexCoordScale::load(char field_0) {
+asm void J2DIndTexCoordScale::load(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DTevs/load__19J2DIndTexCoordScaleFUc.s"
 }
@@ -254,7 +272,7 @@ asm void J2DIndTexCoordScale::load(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DIndTexOrder::load(char field_0) {
+asm void J2DIndTexOrder::load(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DTevs/load__14J2DIndTexOrderFUc.s"
 }

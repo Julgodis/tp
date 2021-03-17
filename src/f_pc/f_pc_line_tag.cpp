@@ -31,9 +31,9 @@ struct node_lists_tree_class {
 // Forward References:
 // 
 
-void fpcLnTg_Move(line_tag*, s32);
+void fpcLnTg_Move(line_tag*, int);
 void fpcLnTg_QueueTo(line_tag*);
-void fpcLnTg_ToQueue(line_tag*, s32);
+void fpcLnTg_ToQueue(line_tag*, int);
 void fpcLnTg_Init(line_tag*, void*);
 
 extern "C" void fpcLnTg_Move__FP8line_tagi();
@@ -46,7 +46,7 @@ extern "C" void fpcLnTg_Init__FP8line_tagPv();
 // 
 
 void cTg_SingleCutFromTree(create_tag_class*);
-void cTg_AdditionToTree(node_lists_tree_class*, s32, create_tag_class*);
+void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*);
 void cTg_Create(create_tag_class*, void*);
 
 extern "C" void cTg_SingleCutFromTree__FP16create_tag_class();
@@ -62,7 +62,7 @@ SECTION_SDATA extern void*g_fpcLn_Queue[2];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLnTg_Move(line_tag* field_0, s32 field_1) {
+asm void fpcLnTg_Move(line_tag* field_0, int field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_line_tag/fpcLnTg_Move__FP8line_tagi.s"
 }
@@ -84,7 +84,7 @@ asm void fpcLnTg_QueueTo(line_tag* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLnTg_ToQueue(line_tag* field_0, s32 field_1) {
+asm void fpcLnTg_ToQueue(line_tag* field_0, int field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_line_tag/fpcLnTg_ToQueue__FP8line_tagi.s"
 }

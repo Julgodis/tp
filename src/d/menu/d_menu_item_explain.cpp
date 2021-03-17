@@ -16,16 +16,16 @@
 struct J2DOrthoGraph {
 };
 
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
 // build JKRExpHeap (JKRExpHeap) False/False
 /* top-level dependencies (begin JKRExpHeap) */
 /* top-level dependencies (end JKRExpHeap) */
 struct JKRExpHeap {
+};
+
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
 };
 
 // build STControl (STControl) False/False
@@ -39,14 +39,14 @@ struct STControl {
 
 /* top-level dependencies (begin dMenu_ItemExplain_c) */
 // outer dependency: J2DOrthoGraph
-// outer dependency: JKRArchive
 // outer dependency: JKRExpHeap
+// outer dependency: JKRArchive
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_ItemExplain_c) */
 struct dMenu_ItemExplain_c {
 	// J2DOrthoGraph
-	// JKRArchive
 	// JKRExpHeap
+	// JKRArchive
 	// STControl
 	/* 801DA754 */ dMenu_ItemExplain_c(JKRExpHeap*, JKRArchive*, STControl*, bool);
 	/* 801DAFF0 */ ~dMenu_ItemExplain_c();
@@ -65,8 +65,8 @@ struct dMenu_ItemExplain_c {
 	/* 801DC214 */ void move_next_proc();
 	/* 801DC2E4 */ void close_init();
 	/* 801DC2F0 */ void close_proc();
-	/* 801DC340 */ void openExplain(char, char, char, bool);
-	/* 801DC3C8 */ void openExplainDmap(char, char, char, bool, char);
+	/* 801DC340 */ void openExplain(u8, u8, u8, bool);
+	/* 801DC3C8 */ void openExplainDmap(u8, u8, u8, bool, u8);
 	/* 801DC738 */ void openExplainTx(u32, u32);
 	/* 801DC7AC */ void getAlphaRatio();
 	/* 801DC7FC */ void setNumber();
@@ -82,21 +82,21 @@ struct dMenu_ItemExplain_c {
 /* top-level dependencies (begin dSv_player_item_c) */
 /* top-level dependencies (end dSv_player_item_c) */
 struct dSv_player_item_c {
-	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80033030 */ void getItem(int, bool) const;
 };
 
 // build dSv_player_get_item_c (dSv_player_get_item_c) False/False
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(char) const;
+	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
 // build dSv_player_item_record_c (dSv_player_item_record_c) False/False
 /* top-level dependencies (begin dSv_player_item_record_c) */
 /* top-level dependencies (end dSv_player_item_record_c) */
 struct dSv_player_item_record_c {
-	/* 80033F7C */ void getBombNum(char) const;
+	/* 80033F7C */ void getBombNum(u8) const;
 };
 
 // build dKantera_icon_c (dKantera_icon_c) False/False
@@ -111,16 +111,16 @@ struct dKantera_icon_c {
 };
 
 // build dMeter2Info_c (dMeter2Info_c) False/False
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
-struct JUTFont {
-};
-
 // build JMSMesgEntry_c (JMSMesgEntry_c) False/False
 /* top-level dependencies (begin JMSMesgEntry_c) */
 /* top-level dependencies (end JMSMesgEntry_c) */
 struct JMSMesgEntry_c {
+};
+
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
 };
 
 // build J2DPicture (J2DPicture) False/False
@@ -139,17 +139,17 @@ struct J2DPicture {
 };
 
 /* top-level dependencies (begin dMeter2Info_c) */
-// outer dependency: JUTFont
 // outer dependency: JMSMesgEntry_c
+// outer dependency: JUTFont
 // outer dependency: J2DPicture
 /* top-level dependencies (end dMeter2Info_c) */
 struct dMeter2Info_c {
-	// JUTFont
 	// JMSMesgEntry_c
+	// JUTFont
 	// J2DPicture
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 	/* 8021C7FC */ void getStringLength(JUTFont*, f32, f32, char*);
-	/* 8021CF08 */ void readItemTexture(char, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, s32);
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
 // build JMSMesgEntry_c (JMSMesgEntry_c) True/True
@@ -164,8 +164,8 @@ struct dMsgScrn3Select_c {
 	/* 80239D08 */ void setRubyString(char*, char*, char*);
 	/* 80239D98 */ void translate(f32, f32);
 	/* 80239DD4 */ void draw(f32, f32);
-	/* 8023A094 */ void selAnimeInit(char, char, char, f32, char);
-	/* 8023A398 */ void selAnimeMove(char, char, bool);
+	/* 8023A094 */ void selAnimeInit(u8, u8, u8, f32, u8);
+	/* 8023A398 */ void selAnimeMove(u8, u8, bool);
 	/* 8023A680 */ void selAnimeEnd();
 	/* 8023A934 */ void getTextBoxWidth();
 	/* 8023A94C */ void getFontSize();
@@ -185,11 +185,12 @@ struct dMsgScrnArrow_c {
 /* top-level dependencies (begin dMsgString_c) */
 /* top-level dependencies (end dMsgString_c) */
 struct dMsgString_c {
-	/* 80249CA0 */ dMsgString_c(char);
+	/* 80249CA0 */ dMsgString_c(u8);
 	/* 80249D28 */ ~dMsgString_c();
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) False/False
@@ -211,15 +212,14 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802542E8 */ void getGlobalPosX();
 	/* 80254364 */ void getGlobalPosY();
 	/* 802545B0 */ void paneTrans(f32, f32);
@@ -236,26 +236,26 @@ struct CPaneMgrAlpha {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -264,7 +264,7 @@ struct Z2SeMgr {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 	/* 802CE784 */ void getTotalFreeSize();
 };
@@ -289,6 +289,13 @@ struct J2DPane {
 // build J2DBasePosition (J2DBasePosition) True/True
 // build J2DGrafContext (J2DGrafContext) True/True
 // build ResTIMG (ResTIMG) True/True
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -364,15 +371,14 @@ SECTION_SDATA2 extern f64 lit_4950;
 // 
 
 void mDoExt_getMesgFont();
-void dComIfGs_isDungeonItemWarp(s32);
+void dComIfGs_isDungeonItemWarp(int);
 void dComIfGs_getWarpMarkFlag();
-void checkItemGet(char, s32);
-void dMeter2Info_getNumberTextureName(s32);
+void checkItemGet(u8, int);
+void dMeter2Info_getNumberTextureName(int);
 void dMeter2Info_set2DVibration();
 void* operator new(u32);
 void operator delete(void*);
 extern "C" void func_802FC800();
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void __ptmf_scall();
 extern "C" void _savegpr_21();
 extern "C" void _savegpr_22();
@@ -844,7 +850,7 @@ asm void dMenu_ItemExplain_c::close_proc() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_ItemExplain_c::openExplain(char field_0, char field_1, char field_2, bool field_3) {
+asm void dMenu_ItemExplain_c::openExplain(u8 field_0, u8 field_1, u8 field_2, bool field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_item_explain/openExplain__19dMenu_ItemExplain_cFUcUcUcb.s"
 }
@@ -855,7 +861,7 @@ asm void dMenu_ItemExplain_c::openExplain(char field_0, char field_1, char field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_ItemExplain_c::openExplainDmap(char field_0, char field_1, char field_2, bool field_3, char field_4) {
+asm void dMenu_ItemExplain_c::openExplainDmap(u8 field_0, u8 field_1, u8 field_2, bool field_3, u8 field_4) {
 	nofralloc
 #include "asm/d/menu/d_menu_item_explain/openExplainDmap__19dMenu_ItemExplain_cFUcUcUcbUc.s"
 }

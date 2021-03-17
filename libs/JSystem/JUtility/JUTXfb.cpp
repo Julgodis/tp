@@ -10,6 +10,8 @@
 // 
 
 // build JUTXfb (JUTXfb) False/False
+// build JUTXfb (JUTXfb) True/False
+struct JUTXfb;
 // build JKRHeap (JKRHeap) False/False
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
@@ -22,17 +24,15 @@ struct JKRHeap {
 struct _GXRenderModeObj {
 };
 
-// build JUTXfb (JUTXfb) True/False
-struct JUTXfb;
 /* top-level dependencies (begin JUTXfb) */
+// outer dependency: JUTXfb::EXfbNumber
 // outer dependency: JKRHeap
 // outer dependency: _GXRenderModeObj
-// outer dependency: JUTXfb::EXfbNumber
 /* top-level dependencies (end JUTXfb) */
 struct JUTXfb {
+	// JUTXfb::EXfbNumber
 	// JKRHeap
 	// _GXRenderModeObj
-	// JUTXfb::EXfbNumber
 	// build EXfbNumber (JUTXfb::EXfbNumber) False/False
 	/* dependencies (begin JUTXfb::EXfbNumber) */
 	/* dependencies (end JUTXfb::EXfbNumber) */
@@ -40,10 +40,10 @@ struct JUTXfb {
 	};
 
 	/* 802E5214 */ void clearIndex();
-	/* 802E5228 */ void common_init(s32);
+	/* 802E5228 */ void common_init(int);
 	/* 802E5260 */ JUTXfb(_GXRenderModeObj const*, JKRHeap*, JUTXfb::EXfbNumber);
 	/* 802E5308 */ ~JUTXfb();
-	/* 802E5378 */ void delXfb(s32);
+	/* 802E5378 */ void delXfb(int);
 	/* 802E53B8 */ void createManager(JKRHeap*, JUTXfb::EXfbNumber);
 	/* 802E5424 */ void destroyManager();
 	/* 802E5454 */ void initiate(u16, u16, JKRHeap*, JUTXfb::EXfbNumber);
@@ -71,7 +71,7 @@ SECTION_SBSS extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 // 
 
 void* operator new(u32);
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void GXGetNumXfbLines();
 extern "C" void GXGetYScaleFactor();
@@ -115,7 +115,7 @@ asm void JUTXfb::clearIndex() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTXfb::common_init(s32 field_0) {
+asm void JUTXfb::common_init(int field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTXfb/common_init__6JUTXfbFi.s"
 }
@@ -152,7 +152,7 @@ asm JUTXfb::~JUTXfb() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTXfb::delXfb(s32 field_0) {
+asm void JUTXfb::delXfb(int field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTXfb/delXfb__6JUTXfbFi.s"
 }

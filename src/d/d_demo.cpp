@@ -34,7 +34,7 @@ struct dDemo_actor_c {
 	/* 80038128 */ void getActor();
 	/* 8003815C */ void setActor(fopAc_ac_c*);
 	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(s32*, s32*, s32*, u16*, char*);
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
 	/* 800387EC */ void JSGSetData(u32, void const*, u32);
 	/* 80038920 */ void JSGSetTranslation(Vec const&);
 	/* 80038980 */ void JSGSetScaling(Vec const&);
@@ -46,6 +46,7 @@ struct dDemo_actor_c {
 	/* 80038A68 */ void JSGSetTextureAnimation(u32);
 	/* 80038A7C */ void JSGSetTextureAnimationFrame(f32);
 	/* 8003A05C */ void JSGFindNodeID(char const*) const;
+	/* 8003A088 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	/* 8003A0C8 */ void JSGGetAnimationFrameMax() const;
 	/* 8003A0D0 */ void JSGGetTextureAnimationFrameMax() const;
 	/* 8003A0D8 */ void JSGGetTranslation(Vec*) const;
@@ -69,8 +70,8 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorf {
 	// J3DAnmTransform
 	// Vec
-	/* 8001037C */ void setAnm(J3DAnmTransform*, s32, f32, f32, f32, f32, void*);
-	/* 800105C8 */ void play(Vec*, u32, char);
+	/* 8001037C */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32, void*);
+	/* 800105C8 */ void play(Vec*, u32, s8);
 };
 
 // build Vec (Vec) True/True
@@ -118,37 +119,33 @@ struct dDemo_ambient_c {
 
 // build _GXColor (_GXColor) True/True
 // build dDemo_light_c (dDemo_light_c) False/False
-// build _GXDistAttnFn (_GXDistAttnFn) False/False
-/* top-level dependencies (begin _GXDistAttnFn) */
-/* top-level dependencies (end _GXDistAttnFn) */
-struct _GXDistAttnFn {
-};
-
-// build Vec (Vec) True/True
-// build _GXColor (_GXColor) True/True
+// build JStage (JStage) False/False
+// build JStage (JStage) True/False
+struct JStage;
 // build _GXSpotFn (_GXSpotFn) False/False
 /* top-level dependencies (begin _GXSpotFn) */
 /* top-level dependencies (end _GXSpotFn) */
 struct _GXSpotFn {
 };
 
-// build JStage (JStage) False/False
-// build JStage (JStage) True/False
-struct JStage;
+// build _GXDistAttnFn (_GXDistAttnFn) False/False
+/* top-level dependencies (begin _GXDistAttnFn) */
+/* top-level dependencies (end _GXDistAttnFn) */
+struct _GXDistAttnFn {
+};
+
 // build JStage (JStage) True/True
 // build Vec (Vec) True/True
-// build _GXDistAttnFn (_GXDistAttnFn) True/True
-// build _GXSpotFn (_GXSpotFn) True/True
 // build JStage (JStage) True/True
 // build JStage (JStage) True/True
 /* top-level dependencies (begin JStage) */
 // outer dependency: JStage::TECameraView
-// outer dependency: JStage::TECameraProjection
-// outer dependency: Vec
-// outer dependency: _GXDistAttnFn
 // outer dependency: _GXSpotFn
+// outer dependency: _GXDistAttnFn
 // outer dependency: JStage::TObject
+// outer dependency: Vec
 // outer dependency: JStage::TEObject
+// outer dependency: JStage::TECameraProjection
 /* top-level dependencies (end JStage) */
 struct JStage {
 	// build TELight (JStage::TELight) False/False
@@ -171,6 +168,7 @@ struct JStage {
 		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
 		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
+		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
 	// build TEObject (JStage::TEObject) False/False
@@ -204,13 +202,6 @@ struct JStage {
 
 	// build TCamera (JStage::TCamera) False/False
 	/* dependencies (begin JStage::TCamera) */
-	// inner dependency: TECameraView (JStage::TECameraView) True False (for JStage::TCamera)
-	// build TECameraView (JStage::TECameraView) False/False
-	/* dependencies (begin JStage::TECameraView) */
-	/* dependencies (end JStage::TECameraView) */
-	struct TECameraView {
-	};
-
 	// inner dependency: TECameraProjection (JStage::TECameraProjection) True False (for JStage::TCamera)
 	// build TECameraProjection (JStage::TECameraProjection) False/False
 	/* dependencies (begin JStage::TECameraProjection) */
@@ -218,10 +209,17 @@ struct JStage {
 	struct TECameraProjection {
 	};
 
+	// inner dependency: TECameraView (JStage::TECameraView) True False (for JStage::TCamera)
+	// build TECameraView (JStage::TECameraView) False/False
+	/* dependencies (begin JStage::TECameraView) */
+	/* dependencies (end JStage::TECameraView) */
+	struct TECameraView {
+	};
+
 	/* dependencies (end JStage::TCamera) */
 	struct TCamera {
-		// JStage::TECameraView
 		// JStage::TECameraProjection
+		// JStage::TECameraView
 		/* 80280BA0 */ ~TCamera();
 		/* 80280C00 */ s32 JSGFGetType() const;
 		/* 80280C08 */ bool JSGGetProjectionType() const;
@@ -251,8 +249,8 @@ struct JStage {
 	/* dependencies (end JStage::TLight) */
 	struct TLight {
 		// _GXSpotFn
-		// Vec
 		// _GXDistAttnFn
+		// Vec
 		/* 80280D28 */ ~TLight();
 		/* 80280D88 */ s32 JSGFGetType() const;
 		/* 80280D90 */ bool JSGGetLightType() const;
@@ -265,14 +263,14 @@ struct JStage {
 
 	// build TSystem (JStage::TSystem) False/False
 	/* dependencies (begin JStage::TSystem) */
-	// inner dependency: TObject (JStage::TObject) True False (for JStage::TSystem)
-	// build TObject (JStage::TObject) True/True
 	// inner dependency: TEObject (JStage::TEObject) True False (for JStage::TSystem)
 	// build TEObject (JStage::TEObject) True/True
+	// inner dependency: TObject (JStage::TObject) True False (for JStage::TSystem)
+	// build TObject (JStage::TObject) True/True
 	/* dependencies (end JStage::TSystem) */
 	struct TSystem {
-		// JStage::TObject
 		// JStage::TEObject
+		// JStage::TObject
 		/* 80280E90 */ ~TSystem();
 		/* 80280EF0 */ bool JSGFGetType() const;
 		/* 80280F00 */ bool JSGCreateObject(char const*, JStage::TEObject, u32);
@@ -283,19 +281,23 @@ struct JStage {
 
 };
 
+// build _GXSpotFn (_GXSpotFn) True/True
+// build _GXDistAttnFn (_GXDistAttnFn) True/True
+// build _GXColor (_GXColor) True/True
+// build Vec (Vec) True/True
 /* top-level dependencies (begin dDemo_light_c) */
-// outer dependency: _GXDistAttnFn
-// outer dependency: Vec
-// outer dependency: _GXColor
-// outer dependency: _GXSpotFn
 // outer dependency: JStage::TELight
+// outer dependency: _GXSpotFn
+// outer dependency: _GXDistAttnFn
+// outer dependency: _GXColor
+// outer dependency: Vec
 /* top-level dependencies (end dDemo_light_c) */
 struct dDemo_light_c {
+	// _GXSpotFn
+	// JStage::TELight
 	// _GXDistAttnFn
 	// _GXColor
 	// Vec
-	// _GXSpotFn
-	// JStage::TELight
 	/* 80038E20 */ void JSGSetLightType(JStage::TELight);
 	/* 80038E34 */ void JSGSetPosition(Vec const&);
 	/* 80038E5C */ void JSGSetColor(_GXColor);
@@ -309,20 +311,20 @@ struct dDemo_light_c {
 // build _GXDistAttnFn (_GXDistAttnFn) True/True
 // build _GXSpotFn (_GXSpotFn) True/True
 // build dDemo_fog_c (dDemo_fog_c) False/False
-// build _GXColor (_GXColor) True/True
 // build _GXFogType (_GXFogType) False/False
 /* top-level dependencies (begin _GXFogType) */
 /* top-level dependencies (end _GXFogType) */
 struct _GXFogType {
 };
 
+// build _GXColor (_GXColor) True/True
 /* top-level dependencies (begin dDemo_fog_c) */
-// outer dependency: _GXColor
 // outer dependency: _GXFogType
+// outer dependency: _GXColor
 /* top-level dependencies (end dDemo_fog_c) */
 struct dDemo_fog_c {
-	// _GXColor
 	// _GXFogType
+	// _GXColor
 	/* 80038EE8 */ void JSGSetFogFunction(_GXFogType);
 	/* 80038EFC */ void JSGSetStartZ(f32);
 	/* 80038F10 */ void JSGSetEndZ(f32);
@@ -341,7 +343,7 @@ struct dDemo_object_c {
 	/* 80038F54 */ dDemo_object_c();
 	/* 80038F70 */ ~dDemo_object_c();
 	/* 80038FC0 */ void appendActor(fopAc_ac_c*);
-	/* 80039088 */ void getActor(char);
+	/* 80039088 */ void getActor(u8);
 	/* 800390AC */ void createCamera();
 	/* 80039128 */ void getActiveCamera();
 	/* 8003913C */ void createAmbient();
@@ -354,12 +356,12 @@ struct dDemo_object_c {
 // build JStage (JStage) True/True
 // build JStage (JStage) True/True
 /* top-level dependencies (begin dDemo_system_c) */
-// outer dependency: JStage::TObject
 // outer dependency: JStage::TEObject
+// outer dependency: JStage::TObject
 /* top-level dependencies (end dDemo_system_c) */
 struct dDemo_system_c {
-	// JStage::TObject
 	// JStage::TEObject
+	// JStage::TObject
 	/* 80039528 */ void JSGFindObject(JStage::TObject**, char const*, JStage::TEObject) const;
 	/* 80039AAC */ ~dDemo_system_c();
 };
@@ -379,7 +381,7 @@ struct dDemo_c {
 	// cXyz
 	/* 80039678 */ void create();
 	/* 80039910 */ void remove();
-	/* 80039B6C */ void start(char const*, cXyz*, f32);
+	/* 80039B6C */ void start(u8 const*, cXyz*, f32);
 	/* 80039CF8 */ void end();
 	/* 80039D4C */ void branch();
 	/* 80039DA4 */ void update();
@@ -435,46 +437,46 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
-	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, s32);
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
 // build dPa_control_c (dPa_control_c) False/False
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
-};
-
+// build cXyz (cXyz) True/True
+// build _GXColor (_GXColor) True/True
 // build dPa_levelEcallBack (dPa_levelEcallBack) False/False
 /* top-level dependencies (begin dPa_levelEcallBack) */
 /* top-level dependencies (end dPa_levelEcallBack) */
 struct dPa_levelEcallBack {
 };
 
-// build _GXColor (_GXColor) True/True
-// build cXyz (cXyz) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
 struct dKy_tevstr_c {
 };
 
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
 /* top-level dependencies (begin dPa_control_c) */
-// outer dependency: csXyz
-// outer dependency: dPa_levelEcallBack
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
+// outer dependency: dPa_levelEcallBack
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
-	// csXyz
-	// _GXColor
 	// dPa_levelEcallBack
-	// cXyz
 	// dKy_tevstr_c
-	/* 8004CA90 */ void set(char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	// csXyz
+	// cXyz
+	// _GXColor
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
@@ -490,19 +492,19 @@ struct dMsgObject_c {
 // build JStudio (JStudio) False/False
 // build JStudio (JStudio) True/False
 // build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
-// build JStudio (JStudio) True/True
 // build Vec (Vec) True/True
 // build JStudio (JStudio) True/True
 // build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
 /* top-level dependencies (begin JStudio) */
-// outer dependency: JStudio::TAdaptor_message
-// outer dependency: JStudio::TControl
-// outer dependency: JStudio::stb::data::TParse_TParagraph_data::TData
+// outer dependency: JStudio::TCreateObject
 // outer dependency: JStudio::stb::data::TParse_TBlock_object
 // outer dependency: Vec
-// outer dependency: JStudio::TCreateObject
+// outer dependency: JStudio::stb::data::TParse_TParagraph_data::TData
+// outer dependency: JStudio::TAdaptor_message
 // outer dependency: JStudio::TFactory
+// outer dependency: JStudio::TControl
 /* top-level dependencies (end JStudio) */
 namespace JStudio {
 	// build ctb (JStudio::ctb) False/False
@@ -552,8 +554,8 @@ namespace JStudio {
 
 	/* dependencies (end JStudio::TControl) */
 	struct TControl {
-		// Vec
 		// JStudio::TFactory
+		// Vec
 		/* 80285114 */ TControl();
 		/* 80285228 */ void setFactory(JStudio::TFactory*);
 		/* 80285250 */ void transformOnSet_setOrigin_TxyzRy(Vec const&, f32);
@@ -593,8 +595,6 @@ namespace JStudio {
 
 	// build TObject_message (JStudio::TObject_message) False/False
 	/* dependencies (begin JStudio::TObject_message) */
-	// inner dependency: TAdaptor_message (JStudio::TAdaptor_message) True False (for JStudio::TObject_message)
-	// build TAdaptor_message (JStudio::TAdaptor_message) True/True
 	// inner dependency: stb (JStudio::stb::data::TParse_TBlock_object) True False (for JStudio::TObject_message)
 	// build stb (JStudio::stb) False/False
 	/* dependencies (begin JStudio::stb) */
@@ -638,10 +638,12 @@ namespace JStudio {
 
 	};
 
+	// inner dependency: TAdaptor_message (JStudio::TAdaptor_message) True False (for JStudio::TObject_message)
+	// build TAdaptor_message (JStudio::TAdaptor_message) True/True
 	/* dependencies (end JStudio::TObject_message) */
 	struct TObject_message {
-		// JStudio::TAdaptor_message
 		// JStudio::stb::data::TParse_TBlock_object
+		// JStudio::TAdaptor_message
 		/* 80287640 */ TObject_message(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_message*);
 	};
 
@@ -656,26 +658,26 @@ namespace JStudio {
 
 // build JStudio_JParticle (JStudio_JParticle) False/False
 // build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
 // build JPABaseEmitter (JPABaseEmitter) False/False
 /* top-level dependencies (begin JPABaseEmitter) */
 /* top-level dependencies (end JPABaseEmitter) */
 struct JPABaseEmitter {
 };
 
-// build JStudio (JStudio) True/True
 /* top-level dependencies (begin JStudio_JParticle) */
+// outer dependency: JStudio::stb::data::TParse_TBlock_object
 // outer dependency: JStudio::TObject
 // outer dependency: JPABaseEmitter
-// outer dependency: JStudio::stb::data::TParse_TBlock_object
 /* top-level dependencies (end JStudio_JParticle) */
 struct JStudio_JParticle {
 	// build TCreateObject (JStudio_JParticle::TCreateObject) False/False
 	/* dependencies (begin JStudio_JParticle::TCreateObject) */
 	/* dependencies (end JStudio_JParticle::TCreateObject) */
 	struct TCreateObject {
+		// JStudio::stb::data::TParse_TBlock_object
 		// JStudio::TObject
 		// JPABaseEmitter
-		// JStudio::stb::data::TParse_TBlock_object
 		/* 8028E3A0 */ ~TCreateObject();
 		/* 8028E400 */ void create(JStudio::TObject**, JStudio::stb::data::TParse_TBlock_object const&);
 		/* 8028E4E4 */ void emitter_destroy(JPABaseEmitter*);
@@ -731,11 +733,10 @@ extern "C" static void func_80037DE4();
 extern "C" static void func_80037E44();
 extern "C" static void func_80037E74();
 extern "C" static void func_80037ED4();
-static void dDemo_getJaiPointer(char const*, u32, s32, u16*);
-void dDemo_setDemoData(fopAc_ac_c*, char, mDoExt_McaMorf*, char const*, s32, u16*, u32, char);
+static void dDemo_getJaiPointer(char const*, u32, int, u16*);
+void dDemo_setDemoData(fopAc_ac_c*, u8, mDoExt_McaMorf*, char const*, int, u16*, u32, s8);
 static void branchFile(char const*);
 static void getView();
-extern "C" static void JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f();
 
 extern "C" static void func_80037DE4();
 extern "C" static void func_80037E44();
@@ -817,7 +818,7 @@ extern "C" void emitter_create__16dDemo_particle_cFUl();
 extern "C" void __dt__16dDemo_particle_cFv();
 extern "C" void __dt__14dDemo_camera_cFv();
 extern "C" void JSGFindNodeID__13dDemo_actor_cCFPCc();
-extern "C" static void JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f();
+extern "C" void JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f();
 extern "C" void JSGGetAnimationFrameMax__13dDemo_actor_cCFv();
 extern "C" void JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv();
 extern "C" void JSGGetTranslation__13dDemo_actor_cCFP3Vec();
@@ -885,7 +886,6 @@ extern "C" void fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv();
 void fopAcM_searchFromName(char const*, u32, u32);
 void fpcSch_JudgeByID(void*, void*);
 void dComIfGs_staffroll_next_go_check();
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
 void* operator new(u32);
 void operator delete(void*);
 extern "C" void PSMTXCopy();
@@ -1464,7 +1464,7 @@ u8 data_80450E4C[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDemo_actor_c::getDemoIDData(s32* field_0, s32* field_1, s32* field_2, u16* field_3, char* field_4) {
+asm void dDemo_actor_c::getDemoIDData(int* field_0, int* field_1, int* field_2, u16* field_3, u8* field_4) {
 	nofralloc
 #include "asm/d/d_demo/getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc.s"
 }
@@ -1475,7 +1475,7 @@ asm void dDemo_actor_c::getDemoIDData(s32* field_0, s32* field_1, s32* field_2, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dDemo_getJaiPointer(char const* field_0, u32 field_1, s32 field_2, u16* field_3) {
+asm static void dDemo_getJaiPointer(char const* field_0, u32 field_1, int field_2, u16* field_3) {
 	nofralloc
 #include "asm/d/d_demo/dDemo_getJaiPointer__FPCcUliPUs.s"
 }
@@ -1490,7 +1490,7 @@ f32 d_d_demo__lit_4152 = -1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDemo_setDemoData(fopAc_ac_c* field_0, char field_1, mDoExt_McaMorf* field_2, char const* field_3, s32 field_4, u16* field_5, u32 field_6, char field_7) {
+asm void dDemo_setDemoData(fopAc_ac_c* field_0, u8 field_1, mDoExt_McaMorf* field_2, char const* field_3, int field_4, u16* field_5, u32 field_6, s8 field_7) {
 	nofralloc
 #include "asm/d/d_demo/dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc.s"
 }
@@ -2004,7 +2004,7 @@ asm void dDemo_object_c::appendActor(fopAc_ac_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDemo_object_c::getActor(char field_0) {
+asm void dDemo_object_c::getActor(u8 field_0) {
 	nofralloc
 #include "asm/d/d_demo/getActor__14dDemo_object_cFUc.s"
 }
@@ -2183,7 +2183,7 @@ u8 data_80450E50[8];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDemo_c::start(char const* field_0, cXyz* field_1, f32 field_2) {
+asm void dDemo_c::start(u8 const* field_0, cXyz* field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/d_demo/start__7dDemo_cFPCUcP4cXyzf.s"
 }
@@ -2309,7 +2309,7 @@ asm void dDemo_actor_c::JSGFindNodeID(char const* field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f() {
+asm void dDemo_actor_c::JSGGetNodeTransformation(u32 field_0, f32 (* field_1)[4]) const {
 	nofralloc
 #include "asm/d/d_demo/JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f.s"
 }

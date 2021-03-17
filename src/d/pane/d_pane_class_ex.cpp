@@ -10,6 +10,12 @@
 // 
 
 // build J2DPane (J2DPane) False/False
+// build J2DAnmTransform (J2DAnmTransform) False/False
+/* top-level dependencies (begin J2DAnmTransform) */
+/* top-level dependencies (end J2DAnmTransform) */
+struct J2DAnmTransform {
+};
+
 // build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
 /* top-level dependencies (begin J2DAnmVisibilityFull) */
 /* top-level dependencies (end J2DAnmVisibilityFull) */
@@ -22,12 +28,6 @@ struct J2DAnmVisibilityFull {
 struct J2DAnmVtxColor {
 };
 
-// build J2DAnmTransform (J2DAnmTransform) False/False
-/* top-level dependencies (begin J2DAnmTransform) */
-/* top-level dependencies (end J2DAnmTransform) */
-struct J2DAnmTransform {
-};
-
 // build J2DAnmTexPattern (J2DAnmTexPattern) False/False
 /* top-level dependencies (begin J2DAnmTexPattern) */
 /* top-level dependencies (end J2DAnmTexPattern) */
@@ -35,15 +35,15 @@ struct J2DAnmTexPattern {
 };
 
 /* top-level dependencies (begin J2DPane) */
+// outer dependency: J2DAnmTransform
 // outer dependency: J2DAnmVisibilityFull
 // outer dependency: J2DAnmVtxColor
-// outer dependency: J2DAnmTransform
 // outer dependency: J2DAnmTexPattern
 /* top-level dependencies (end J2DPane) */
 struct J2DPane {
+	// J2DAnmTransform
 	// J2DAnmVisibilityFull
 	// J2DAnmVtxColor
-	// J2DAnmTransform
 	// J2DAnmTexPattern
 	/* 80256018 */ void setAnimation(J2DAnmVtxColor*);
 	/* 8025601C */ void setAnimation(J2DAnmVisibilityFull*);

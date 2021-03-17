@@ -10,28 +10,28 @@
 // 
 
 // build JAUSeqCollection (JAUSeqCollection) False/False
-// build JAISeqDataRegion (JAISeqDataRegion) False/False
-/* top-level dependencies (begin JAISeqDataRegion) */
-/* top-level dependencies (end JAISeqDataRegion) */
-struct JAISeqDataRegion {
-};
-
 // build JAISeqData (JAISeqData) False/False
 /* top-level dependencies (begin JAISeqData) */
 /* top-level dependencies (end JAISeqData) */
 struct JAISeqData {
 };
 
+// build JAISeqDataRegion (JAISeqDataRegion) False/False
+/* top-level dependencies (begin JAISeqDataRegion) */
+/* top-level dependencies (end JAISeqDataRegion) */
+struct JAISeqDataRegion {
+};
+
 /* top-level dependencies (begin JAUSeqCollection) */
-// outer dependency: JAISeqDataRegion
 // outer dependency: JAISeqData
+// outer dependency: JAISeqDataRegion
 /* top-level dependencies (end JAUSeqCollection) */
 struct JAUSeqCollection {
-	// JAISeqDataRegion
 	// JAISeqData
+	// JAISeqDataRegion
 	/* 802A66A0 */ JAUSeqCollection();
 	/* 802A66AC */ void init(void const*);
-	/* 802A66FC */ void getSeqData(s32, s32, JAISeqData*);
+	/* 802A66FC */ void getSeqData(int, int, JAISeqData*);
 	/* 802A6754 */ void getSeqDataRegion(JAISeqDataRegion*);
 };
 
@@ -44,22 +44,22 @@ struct JAUSeqCollection {
 struct JAISeqDataUser {
 };
 
+// build JAISeqData (JAISeqData) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build JAISeqData (JAISeqData) True/True
 /* top-level dependencies (begin JAUSeqDataMgr_SeqCollection) */
 // outer dependency: JAISeqDataUser
-// outer dependency: JAISoundID
 // outer dependency: JAISeqData
+// outer dependency: JAISoundID
 /* top-level dependencies (end JAUSeqDataMgr_SeqCollection) */
 struct JAUSeqDataMgr_SeqCollection {
 	// JAISeqDataUser
-	// JAISoundID
 	// JAISeqData
+	// JAISoundID
 	/* 802A677C */ JAUSeqDataMgr_SeqCollection();
 	/* 802A67D0 */ void setSeqDataUser(JAISeqDataUser*);
 	/* 802A67DC */ void releaseSeqData();
@@ -132,7 +132,7 @@ asm void JAUSeqCollection::init(void const* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAUSeqCollection::getSeqData(s32 field_0, s32 field_1, JAISeqData* field_2) {
+asm void JAUSeqCollection::getSeqData(int field_0, int field_1, JAISeqData* field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqCollection/getSeqData__16JAUSeqCollectionFiiP10JAISeqData.s"
 }

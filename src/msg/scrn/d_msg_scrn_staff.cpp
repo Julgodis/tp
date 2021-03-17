@@ -13,7 +13,7 @@
 /* top-level dependencies (begin dMsgScrnStaff_c) */
 /* top-level dependencies (end dMsgScrnStaff_c) */
 struct dMsgScrnStaff_c {
-	/* 80246B34 */ dMsgScrnStaff_c(char);
+	/* 80246B34 */ dMsgScrnStaff_c(u8);
 	/* 80246DD8 */ ~dMsgScrnStaff_c();
 	/* 80246EE8 */ void exec();
 	/* 80246F68 */ void drawSelf();
@@ -29,11 +29,11 @@ struct dMsgScrnStaff_c {
 struct dMsgScrnBase_c {
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
-	/* 80238C48 */ bool selectAnimeMove(char, char, bool);
-	/* 80238C50 */ void selectAnimeInit(char, char, f32, char);
+	/* 80238C48 */ bool selectAnimeMove(u8, u8, bool);
+	/* 80238C50 */ void selectAnimeInit(u8, u8, f32, u8);
 	/* 80238C54 */ void arwAnimeMove();
 	/* 80238C58 */ void arwAnimeInit();
-	/* 80238C5C */ void fukiPosCalc(char);
+	/* 80238C5C */ void fukiPosCalc(u8);
 	/* 80238C60 */ bool isSelect();
 	/* 80238C68 */ bool selectAnimeEnd();
 	/* 80238C70 */ void dotAnimeMove();
@@ -48,6 +48,12 @@ struct dMsgScrnBase_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -64,20 +70,14 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802542E8 */ void getGlobalPosX();
 	/* 80254364 */ void getGlobalPosY();
 };
@@ -92,6 +92,13 @@ struct CPaneMgrAlpha {
 };
 
 // build JKRArchive (JKRArchive) True/True
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -119,7 +126,6 @@ void mDoExt_getMesgFont();
 void dPaneClass_showNullPane(J2DScreen*);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void _savegpr_26();
 extern "C" void _restgpr_26();
 
@@ -214,7 +220,7 @@ u8 msg_scrn_d_msg_scrn_staff__lit_3842[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dMsgScrnStaff_c::dMsgScrnStaff_c(char field_0) {
+asm dMsgScrnStaff_c::dMsgScrnStaff_c(u8 field_0) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_staff/__ct__15dMsgScrnStaff_cFUc.s"
 }

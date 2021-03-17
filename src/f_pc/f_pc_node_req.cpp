@@ -43,7 +43,7 @@ struct layer_class {
 /* top-level dependencies (begin cMl) */
 /* top-level dependencies (end cMl) */
 struct cMl {
-	/* 80263228 */ void memalignB(s32, u32);
+	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);
 };
 
@@ -81,9 +81,9 @@ static void fpcNdRq_Create(u32);
 static void fpcNdRq_ChangeNode(u32, process_node_class*, s16, void*);
 static void fpcNdRq_DeleteNode(u32, process_node_class*);
 static void fpcNdRq_CreateNode(u32, s16, void*);
-void fpcNdRq_Request(u32, s32, process_node_class*, s16, void*, node_create_request_method_class*);
-static void fpcNdRq_ReChangeNode(s32, s16, void*);
-void fpcNdRq_ReRequest(s32, s16, void*);
+void fpcNdRq_Request(u32, int, process_node_class*, s16, void*, node_create_request_method_class*);
+static void fpcNdRq_ReChangeNode(u32, s16, void*);
+void fpcNdRq_ReRequest(u32, s16, void*);
 
 extern "C" static void fpcNdRq_RequestQTo__FP19node_create_request();
 extern "C" static void fpcNdRq_ToRequestQ__FP19node_create_request();
@@ -118,10 +118,10 @@ SECTION_SBSS extern u8 data_80450D4C[4];
 // External References:
 // 
 
-void fpcCtRq_IsCreatingByID(s32);
+void fpcCtRq_IsCreatingByID(u32);
 void fpcDt_IsComplete();
 void fpcDt_Delete(void*);
-void fpcEx_IsExist(s32);
+void fpcEx_IsExist(u32);
 void fpcLy_CancelQTo(process_method_tag_class*);
 void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*);
 void fpcLy_CreatingMesg(layer_class*);
@@ -419,7 +419,7 @@ asm static void fpcNdRq_CreateNode(u32 field_0, s16 field_1, void* field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcNdRq_Request(u32 field_0, s32 field_1, process_node_class* field_2, s16 field_3, void* field_4, node_create_request_method_class* field_5) {
+asm void fpcNdRq_Request(u32 field_0, int field_1, process_node_class* field_2, s16 field_3, void* field_4, node_create_request_method_class* field_5) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class.s"
 }
@@ -430,7 +430,7 @@ asm void fpcNdRq_Request(u32 field_0, s32 field_1, process_node_class* field_2, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcNdRq_ReChangeNode(s32 field_0, s16 field_1, void* field_2) {
+asm static void fpcNdRq_ReChangeNode(u32 field_0, s16 field_1, void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_ReChangeNode__FUisPv.s"
 }
@@ -441,7 +441,7 @@ asm static void fpcNdRq_ReChangeNode(s32 field_0, s16 field_1, void* field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcNdRq_ReRequest(s32 field_0, s16 field_1, void* field_2) {
+asm void fpcNdRq_ReRequest(u32 field_0, s16 field_1, void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_node_req/fpcNdRq_ReRequest__FUisPv.s"
 }

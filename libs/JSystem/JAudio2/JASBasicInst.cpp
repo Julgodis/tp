@@ -10,18 +10,6 @@
 // 
 
 // build JASBasicInst (JASBasicInst) False/False
-// build JASInstParam (JASInstParam) False/False
-/* top-level dependencies (begin JASInstParam) */
-/* top-level dependencies (end JASInstParam) */
-struct JASInstParam {
-};
-
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-};
-
 // build JASOscillator (JASOscillator) False/False
 /* top-level dependencies (begin JASOscillator) */
 /* top-level dependencies (end JASOscillator) */
@@ -34,15 +22,27 @@ struct JASOscillator {
 
 };
 
+// build JASInstParam (JASInstParam) False/False
+/* top-level dependencies (begin JASInstParam) */
+/* top-level dependencies (end JASInstParam) */
+struct JASInstParam {
+};
+
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
 /* top-level dependencies (begin JASBasicInst) */
+// outer dependency: JASOscillator::Data
 // outer dependency: JASInstParam
 // outer dependency: JKRHeap
-// outer dependency: JASOscillator::Data
 /* top-level dependencies (end JASBasicInst) */
 struct JASBasicInst {
+	// JASOscillator::Data
 	// JASInstParam
 	// JKRHeap
-	// JASOscillator::Data
 	// build TKeymap (JASBasicInst::TKeymap) False/False
 	/* dependencies (begin JASBasicInst::TKeymap) */
 	/* dependencies (end JASBasicInst::TKeymap) */
@@ -53,10 +53,10 @@ struct JASBasicInst {
 
 	/* 80298014 */ JASBasicInst();
 	/* 8029807C */ ~JASBasicInst();
-	/* 802980F8 */ void getParam(s32, s32, JASInstParam*) const;
+	/* 802980F8 */ void getParam(int, int, JASInstParam*) const;
 	/* 8029819C */ void setKeyRegionCount(u32, JKRHeap*);
-	/* 8029821C */ void setOsc(s32, JASOscillator::Data const*);
-	/* 8029822C */ void getKeyRegion(s32);
+	/* 8029821C */ void setOsc(int, JASOscillator::Data const*);
+	/* 8029822C */ void getKeyRegion(int);
 	/* 802982E0 */ void getType() const;
 };
 
@@ -100,7 +100,7 @@ SECTION_SDATA2 extern f32 lit_187;
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void __destroy_new_array();
 extern "C" void __construct_new_array();
@@ -168,7 +168,7 @@ asm JASBasicInst::~JASBasicInst() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASBasicInst::getParam(s32 field_0, s32 field_1, JASInstParam* field_2) const {
+asm void JASBasicInst::getParam(int field_0, int field_1, JASInstParam* field_2) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicInst/getParam__12JASBasicInstCFiiP12JASInstParam.s"
 }
@@ -190,7 +190,7 @@ asm void JASBasicInst::setKeyRegionCount(u32 field_0, JKRHeap* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASBasicInst::setOsc(s32 field_0, JASOscillator::Data const* field_1) {
+asm void JASBasicInst::setOsc(int field_0, JASOscillator::Data const* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicInst/setOsc__12JASBasicInstFiPCQ213JASOscillator4Data.s"
 }
@@ -201,7 +201,7 @@ asm void JASBasicInst::setOsc(s32 field_0, JASOscillator::Data const* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASBasicInst::getKeyRegion(s32 field_0) {
+asm void JASBasicInst::getKeyRegion(int field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBasicInst/getKeyRegion__12JASBasicInstFi.s"
 }

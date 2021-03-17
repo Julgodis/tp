@@ -13,11 +13,11 @@ void cM_rad2s(f32);
 static void U_GetAtanTable(f32, f32);
 void cM_atan2s(f32, f32);
 void cM_atan2f(f32, f32);
-void cM_initRnd(s32, s32, s32);
+void cM_initRnd(int, int, int);
 void cM_rnd();
 void cM_rndF(f32);
 void cM_rndFX(f32);
-void cM_initRnd2(s32, s32, s32);
+void cM_initRnd2(int, int, int);
 static void cM_rnd2();
 void cM_rndF2(f32);
 void cM_rndFX2(f32);
@@ -284,7 +284,7 @@ u8 data_80451170[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_initRnd(s32 field_0, s32 field_1, s32 field_2) {
+asm void cM_initRnd(int field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_initRnd__Fiii.s"
 }
@@ -359,7 +359,7 @@ u8 data_8045117C[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_initRnd2(s32 field_0, s32 field_1, s32 field_2) {
+asm void cM_initRnd2(int field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_initRnd2__Fiii.s"
 }

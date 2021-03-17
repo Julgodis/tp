@@ -24,8 +24,8 @@ struct dBgPlc {
 	/* 80074074 */ dBgPlc();
 	/* 80074080 */ ~dBgPlc();
 	/* 800740BC */ void setBase(void*);
-	/* 800740C4 */ void getCode(s32, sBgPc**) const;
-	/* 800740DC */ void getGrpCode(s32) const;
+	/* 800740C4 */ void getCode(int, sBgPc**) const;
+	/* 800740DC */ void getGrpCode(int) const;
 };
 
 // build sBgPc (sBgPc) True/True
@@ -89,7 +89,7 @@ asm void dBgPlc::setBase(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgPlc::getCode(s32 field_0, sBgPc** field_1) const {
+asm void dBgPlc::getCode(int field_0, sBgPc** field_1) const {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/getCode__6dBgPlcCFiPP5sBgPc.s"
 }
@@ -100,7 +100,7 @@ asm void dBgPlc::getCode(s32 field_0, sBgPc** field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dBgPlc::getGrpCode(s32 field_0) const {
+asm void dBgPlc::getGrpCode(int field_0) const {
 	nofralloc
 #include "asm/d/bg/d_bg_plc/getGrpCode__6dBgPlcCFi.s"
 }

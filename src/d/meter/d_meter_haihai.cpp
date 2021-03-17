@@ -10,6 +10,12 @@
 // 
 
 // build dMeterHaihai_c (dMeterHaihai_c) False/False
+// build J2DAnmColor (J2DAnmColor) False/False
+/* top-level dependencies (begin J2DAnmColor) */
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
+};
+
 // build J2DAnmTransformKey (J2DAnmTransformKey) False/False
 /* top-level dependencies (begin J2DAnmTransformKey) */
 /* top-level dependencies (end J2DAnmTransformKey) */
@@ -22,28 +28,22 @@ struct J2DAnmTransformKey {
 struct J2DAnmTextureSRTKey {
 };
 
-// build J2DAnmColor (J2DAnmColor) False/False
-/* top-level dependencies (begin J2DAnmColor) */
-/* top-level dependencies (end J2DAnmColor) */
-struct J2DAnmColor {
-};
-
 /* top-level dependencies (begin dMeterHaihai_c) */
+// outer dependency: J2DAnmColor
 // outer dependency: J2DAnmTransformKey
 // outer dependency: J2DAnmTextureSRTKey
-// outer dependency: J2DAnmColor
 /* top-level dependencies (end dMeterHaihai_c) */
 struct dMeterHaihai_c {
+	// J2DAnmColor
 	// J2DAnmTransformKey
 	// J2DAnmTextureSRTKey
-	// J2DAnmColor
-	/* 8020AE8C */ dMeterHaihai_c(char);
+	/* 8020AE8C */ dMeterHaihai_c(u8);
 	/* 8020AEF0 */ ~dMeterHaihai_c();
 	/* 8020AF6C */ void _create();
 	/* 8020B0F4 */ void _execute(u32);
 	/* 8020B140 */ void draw();
-	/* 8020B518 */ void drawHaihai(char);
-	/* 8020B814 */ void drawHaihai(char, f32, f32, f32, f32);
+	/* 8020B518 */ void drawHaihai(u8);
+	/* 8020B814 */ void drawHaihai(u8, f32, f32, f32, f32);
 	/* 8020B9B0 */ void drawHaihaiLeft(f32, f32);
 	/* 8020BA4C */ void drawHaihaiRight(f32, f32);
 	/* 8020BAE8 */ void drawHaihaiTop(f32, f32);
@@ -68,6 +68,12 @@ struct dMeterSub_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -94,20 +100,14 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 };
 
 // build J2DScreen (J2DScreen) True/True
@@ -240,7 +240,7 @@ void* const __vt__14dMeterHaihai_c[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dMeterHaihai_c::dMeterHaihai_c(char field_0) {
+asm dMeterHaihai_c::dMeterHaihai_c(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter_haihai/__ct__14dMeterHaihai_cFUc.s"
 }
@@ -352,7 +352,7 @@ f32 d_meter_d_meter_haihai__lit_3943 = 50.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterHaihai_c::drawHaihai(char field_0) {
+asm void dMeterHaihai_c::drawHaihai(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter_haihai/drawHaihai__14dMeterHaihai_cFUc.s"
 }
@@ -363,7 +363,7 @@ asm void dMeterHaihai_c::drawHaihai(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterHaihai_c::drawHaihai(char field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4) {
+asm void dMeterHaihai_c::drawHaihai(u8 field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/d/meter/d_meter_haihai/drawHaihai__14dMeterHaihai_cFUcffff.s"
 }

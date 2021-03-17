@@ -58,14 +58,15 @@ struct dCamera_c {
 	struct dCamInfo_c {
 	};
 
-	/* 80088BBC */ void EndEventCamera(s32);
+	/* 80088A7C */ void StartEventCamera(int, int, ...);
+	/* 80088BBC */ void EndEventCamera(int);
 	/* 80088C24 */ void searchEventArgData(char*);
-	/* 80088CB0 */ void getEvIntData(s32*, char*);
+	/* 80088CB0 */ void getEvIntData(int*, char*);
 	/* 80088D90 */ void getEvFloatData(f32*, char*);
 	/* 80088E58 */ void getEvFloatListData(f32**, char*);
 	/* 80088F1C */ void getEvXyzListData(cXyz**, char*);
 	/* 80088FE0 */ void getEvStringPntData(char*);
-	/* 8008908C */ void getEvIntData(s32*, char*, s32);
+	/* 8008908C */ void getEvIntData(int*, char*, int);
 	/* 80089154 */ void getEvFloatData(f32*, char*, f32);
 	/* 8008922C */ void getEvXyzData(cXyz*, char*, cXyz);
 	/* 8008933C */ void getEvStringData(char*, char*, char*);
@@ -80,7 +81,7 @@ struct dCamera_c {
 	/* 8008BE2C */ void uniformTransEvCamera();
 	/* 8008BE50 */ void uniformBrakeEvCamera();
 	/* 8008BE74 */ void uniformAcceleEvCamera();
-	/* 8008BE98 */ void transEvCamera(s32);
+	/* 8008BE98 */ void transEvCamera(int);
 	/* 8008E938 */ void watchActorEvCamera();
 	/* 8008FAE8 */ void restorePosEvCamera();
 	/* 80090174 */ void talktoEvCamera();
@@ -117,7 +118,7 @@ struct dCamera_c {
 	/* 801659F4 */ void lineBGCheck(cXyz*, cXyz*, cXyz*, u32);
 	/* 80165AF0 */ void lineBGCheck(cXyz*, cXyz*, u32);
 	/* 80180C68 */ void Reset();
-	/* 80181170 */ void StartBlure(s32, fopAc_ac_c*, f32, f32);
+	/* 80181170 */ void StartBlure(int, fopAc_ac_c*, f32, f32);
 	/* 80181208 */ void SetBlureAlpha(f32);
 	/* 80181210 */ void SetBlureScale(f32, f32, f32);
 	/* 80181220 */ void SetBlurePosition(f32, f32, f32);
@@ -232,8 +233,8 @@ struct dDemo_object_c {
 /* top-level dependencies (begin dEvt_control_c) */
 /* top-level dependencies (end dEvt_control_c) */
 struct dEvt_control_c {
-	/* 800432EC */ void convPId(s32);
-	/* 800434D8 */ void searchMapEventData(char);
+	/* 800432EC */ void convPId(u32);
+	/* 800434D8 */ void searchMapEventData(u8);
 };
 
 // build dEvent_manager_c (dEvent_manager_c) False/False
@@ -243,8 +244,8 @@ struct dEvt_control_c {
 /* top-level dependencies (end dEvent_manager_c) */
 struct dEvent_manager_c {
 	// cXyz
-	/* 800480EC */ void getMySubstanceP(s32, char const*, s32);
-	/* 80048144 */ void getMySubstanceNum(s32, char const*);
+	/* 800480EC */ void getMySubstanceP(int, char const*, int);
+	/* 80048144 */ void getMySubstanceNum(int, char const*);
 	/* 800483C4 */ void setGoal(cXyz*);
 };
 
@@ -281,15 +282,15 @@ struct dCcS {
 };
 
 // build dCamMath (dCamMath) False/False
-// build cSAngle (cSAngle) True/True
 // build cXyz (cXyz) True/True
+// build cSAngle (cSAngle) True/True
 /* top-level dependencies (begin dCamMath) */
-// outer dependency: cSAngle
 // outer dependency: cXyz
+// outer dependency: cSAngle
 /* top-level dependencies (end dCamMath) */
 struct dCamMath {
-	// cSAngle
 	// cXyz
+	// cSAngle
 	/* 8008813C */ void rationalBezierRatio(f32, f32);
 	/* 80088384 */ void xyzRotateY(cXyz&, cSAngle);
 	/* 800883EC */ void xyzHorizontalDistance(cXyz&, cXyz&);
@@ -320,10 +321,9 @@ struct d2DBSplinePath {
 // 
 
 extern "C" static void func_800889F8();
-extern "C" void StartEventCamera__9dCamera_cFiie();
 extern "C" static void func_8008E750();
 extern "C" static void func_8008FA94();
-static void dComIfGp_saveCameraPosition(s32, cXyz*, cXyz*, f32, s16);
+static void dComIfGp_saveCameraPosition(int, cXyz*, cXyz*, f32, s16);
 extern "C" void __sinit_d_ev_camera_cpp();
 void fopAcM_GetID(void const*);
 extern "C" static void func_80097810();
@@ -782,7 +782,7 @@ extern "C" asm static void func_800889F8() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void StartEventCamera__9dCamera_cFiie() {
+asm void dCamera_c::StartEventCamera(int field_0, int field_1, ...) {
 	nofralloc
 #include "asm/d/d_ev_camera/StartEventCamera__9dCamera_cFiie.s"
 }
@@ -793,7 +793,7 @@ extern "C" asm void StartEventCamera__9dCamera_cFiie() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamera_c::EndEventCamera(s32 field_0) {
+asm void dCamera_c::EndEventCamera(int field_0) {
 	nofralloc
 #include "asm/d/d_ev_camera/EndEventCamera__9dCamera_cFi.s"
 }
@@ -815,7 +815,7 @@ asm void dCamera_c::searchEventArgData(char* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamera_c::getEvIntData(s32* field_0, char* field_1) {
+asm void dCamera_c::getEvIntData(int* field_0, char* field_1) {
 	nofralloc
 #include "asm/d/d_ev_camera/getEvIntData__9dCamera_cFPiPc.s"
 }
@@ -870,7 +870,7 @@ asm void dCamera_c::getEvStringPntData(char* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamera_c::getEvIntData(s32* field_0, char* field_1, s32 field_2) {
+asm void dCamera_c::getEvIntData(int* field_0, char* field_1, int field_2) {
 	nofralloc
 #include "asm/d/d_ev_camera/getEvIntData__9dCamera_cFPiPci.s"
 }
@@ -1301,7 +1301,7 @@ f32 lit_6683 = -360.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dCamera_c::transEvCamera(s32 field_0) {
+asm void dCamera_c::transEvCamera(int field_0) {
 	nofralloc
 #include "asm/d/d_ev_camera/transEvCamera__9dCamera_cFi.s"
 }
@@ -1816,7 +1816,7 @@ asm void dCamera_c::tactEvCamera() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dComIfGp_saveCameraPosition(s32 field_0, cXyz* field_1, cXyz* field_2, f32 field_3, s16 field_4) {
+asm static void dComIfGp_saveCameraPosition(int field_0, cXyz* field_1, cXyz* field_2, f32 field_3, s16 field_4) {
 	nofralloc
 #include "asm/d/d_ev_camera/dComIfGp_saveCameraPosition__FiP4cXyzP4cXyzfs.s"
 }

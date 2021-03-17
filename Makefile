@@ -159,7 +159,7 @@ $(BUILD_DIR)/%.o: %.cpp
 	@mkdir -p $(@D)
 	iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
 	$(CC) $(CFLAGS) -c -o $@ $@.iconv.cpp
-	cp $@ $@.copy
+	#cp $@ $@.copy
 	$(STRIP) -d -R .dead -R .comment $@
 #$(PYTHON) $(POSTPROC) -fsymbol-fixup $@
 

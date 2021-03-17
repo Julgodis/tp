@@ -65,7 +65,7 @@ extern "C" void __dt__14J3DDrawMtxDataFv();
 // 
 
 SECTION_INIT void memcpy();
-void* operator new[](u32, s32);
+void* operator new[](u32, int);
 void operator delete(void*);
 extern "C" void DCStoreRange();
 extern "C" void _savegpr_24();

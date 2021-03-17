@@ -35,7 +35,7 @@ struct JUTFader {
 	struct EStatus {
 	};
 
-	/* 802E57D0 */ void setStatus(JUTFader::EStatus, s32);
+	/* 802E57D0 */ void setStatus(JUTFader::EStatus, int);
 };
 
 // 
@@ -43,7 +43,7 @@ struct JUTFader {
 // 
 
 static bool dOvlpFd_Draw(overlap1_class*);
-static void dOvlpFd_startFadeIn(s32);
+static void dOvlpFd_startFadeIn(int);
 static void dOvlpFd_FadeOut(overlap1_class*);
 static void dOvlpFd_Wait(overlap1_class*);
 static void dOvlpFd_FadeIn(overlap1_class*);
@@ -76,8 +76,8 @@ SECTION_SBSS extern u8 dOvlpFd_execute_f[4 + 4 /* padding */];
 // External References:
 // 
 
-void mDoAud_setFadeOutStart(char);
-void mDoAud_setFadeInStart(char);
+void mDoAud_setFadeOutStart(u8);
+void mDoAud_setFadeInStart(u8);
 void fopOvlpM_SceneIsStart();
 void fopOvlpM_IsOutReq(overlap_task_class*);
 void fopOvlpM_Done(overlap_task_class*);
@@ -107,7 +107,7 @@ static bool dOvlpFd_Draw(overlap1_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dOvlpFd_startFadeIn(s32 field_0) {
+asm static void dOvlpFd_startFadeIn(int field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_startFadeIn__Fi.s"
 }

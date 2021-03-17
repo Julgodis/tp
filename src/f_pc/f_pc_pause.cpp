@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-void fpcPause_IsEnable(void*, char);
-void fpcPause_Enable(void*, char);
-void fpcPause_Disable(void*, char);
+void fpcPause_IsEnable(void*, u8);
+void fpcPause_Enable(void*, u8);
+void fpcPause_Disable(void*, u8);
 void fpcPause_Init(void*);
 
 extern "C" void fpcPause_IsEnable__FPvUc();
@@ -23,7 +23,7 @@ extern "C" void fpcPause_Init__FPv();
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(s32, s32);
+void fpcBs_Is_JustOfType(int, int);
 extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
 
 extern "C" void fpcBs_Is_JustOfType__Fii();
@@ -38,7 +38,7 @@ SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcPause_IsEnable(void* field_0, char field_1) {
+asm void fpcPause_IsEnable(void* field_0, u8 field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_pause/fpcPause_IsEnable__FPvUc.s"
 }
@@ -49,7 +49,7 @@ asm void fpcPause_IsEnable(void* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcPause_Enable(void* field_0, char field_1) {
+asm void fpcPause_Enable(void* field_0, u8 field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_pause/fpcPause_Enable__FPvUc.s"
 }
@@ -60,7 +60,7 @@ asm void fpcPause_Enable(void* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcPause_Disable(void* field_0, char field_1) {
+asm void fpcPause_Disable(void* field_0, u8 field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_pause/fpcPause_Disable__FPvUc.s"
 }

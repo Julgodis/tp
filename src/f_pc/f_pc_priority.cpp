@@ -60,10 +60,10 @@ static void fpcPi_QueueTo(process_priority_class*);
 static void fpcPi_ToQueue(process_priority_class*);
 static void fpcPi_GetFromQueue();
 void fpcPi_Delete(process_priority_class*);
-static void fpcPi_IsNormal(s32, u16, u16);
-void fpcPi_Change(process_priority_class*, s32, u16, u16);
+static void fpcPi_IsNormal(u32, u16, u16);
+void fpcPi_Change(process_priority_class*, u32, u16, u16);
 void fpcPi_Handler();
-void fpcPi_Init(process_priority_class*, void*, s32, u16, u16);
+void fpcPi_Init(process_priority_class*, void*, u32, u16, u16);
 
 extern "C" void fpcPi_IsInQueue__FP22process_priority_class();
 extern "C" static void fpcPi_QueueTo__FP22process_priority_class();
@@ -84,9 +84,9 @@ SECTION_SDATA extern u8 data_804505F0[8];
 
 void fpcLy_CancelQTo(process_method_tag_class*);
 void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*);
-void fpcLy_Layer(s32);
-void fpcLyTg_Move(layer_management_tag_class*, s32, u16, u16);
-void fpcLnTg_Move(line_tag*, s32);
+void fpcLy_Layer(u32);
+void fpcLyTg_Move(layer_management_tag_class*, u32, u16, u16);
+void fpcLnTg_Move(line_tag*, int);
 extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
 void cTg_IsUse(create_tag_class*);
 void cTg_GetFirst(node_list_class*);
@@ -187,7 +187,7 @@ asm void fpcPi_Delete(process_priority_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcPi_IsNormal(s32 field_0, u16 field_1, u16 field_2) {
+asm static void fpcPi_IsNormal(u32 field_0, u16 field_1, u16 field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_priority/fpcPi_IsNormal__FUiUsUs.s"
 }
@@ -198,7 +198,7 @@ asm static void fpcPi_IsNormal(s32 field_0, u16 field_1, u16 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcPi_Change(process_priority_class* field_0, s32 field_1, u16 field_2, u16 field_3) {
+asm void fpcPi_Change(process_priority_class* field_0, u32 field_1, u16 field_2, u16 field_3) {
 	nofralloc
 #include "asm/f_pc/f_pc_priority/fpcPi_Change__FP22process_priority_classUiUsUs.s"
 }
@@ -220,7 +220,7 @@ asm void fpcPi_Handler() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcPi_Init(process_priority_class* field_0, void* field_1, s32 field_2, u16 field_3, u16 field_4) {
+asm void fpcPi_Init(process_priority_class* field_0, void* field_1, u32 field_2, u16 field_3, u16 field_4) {
 	nofralloc
 #include "asm/f_pc/f_pc_priority/fpcPi_Init__FP22process_priority_classPvUiUsUs.s"
 }

@@ -26,13 +26,13 @@ struct dTimer_c {
 	/* 8025D33C */ void _draw();
 	/* 8025D3BC */ void _delete();
 	/* 8025D524 */ void deleteCheck();
-	/* 8025D538 */ void start(s32);
-	/* 8025D618 */ void start(s32, s16);
+	/* 8025D538 */ void start(int);
+	/* 8025D618 */ void start(int, s16);
 	/* 8025D708 */ void stock_start();
 	/* 8025D7C0 */ void stock_start(s16);
-	/* 8025D7E8 */ void stop(char);
-	/* 8025D86C */ void restart(char);
-	/* 8025D920 */ void end(s32);
+	/* 8025D7E8 */ void stop(u8);
+	/* 8025D86C */ void restart(u8);
+	/* 8025D920 */ void end(int);
 	/* 8025D9E0 */ void deleteRequest();
 	/* 8025D9F0 */ void getTimeMs();
 	/* 8025DA54 */ void getLimitTimeMs();
@@ -42,13 +42,6 @@ struct dTimer_c {
 };
 
 // build dDlst_TimerScrnDraw_c (dDlst_TimerScrnDraw_c) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
-// build cXyz (cXyz) True/True
 // build J2DPane (J2DPane) False/False
 /* top-level dependencies (begin J2DPane) */
 /* top-level dependencies (end J2DPane) */
@@ -57,15 +50,22 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
+// build cXyz (cXyz) True/True
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
 /* top-level dependencies (begin dDlst_TimerScrnDraw_c) */
-// outer dependency: JKRArchive
-// outer dependency: cXyz
 // outer dependency: J2DPane
+// outer dependency: cXyz
+// outer dependency: JKRArchive
 /* top-level dependencies (end dDlst_TimerScrnDraw_c) */
 struct dDlst_TimerScrnDraw_c {
-	// JKRArchive
-	// cXyz
 	// J2DPane
+	// cXyz
+	// JKRArchive
 	/* 8025DB38 */ dDlst_TimerScrnDraw_c();
 	/* 8025DBE0 */ void setHIO();
 	/* 8025DFBC */ void setScreen(s32, JKRArchive*);
@@ -74,15 +74,15 @@ struct dDlst_TimerScrnDraw_c {
 	/* 8025E8B8 */ void setScreenRider();
 	/* 8025EB20 */ void hideDenominator();
 	/* 8025EC5C */ void deleteScreen();
-	/* 8025EE24 */ void changeNumberTexture(J2DPane*, s32);
-	/* 8025EECC */ void getNumber(s32);
-	/* 8025EEF0 */ void setTimer(s32);
-	/* 8025F180 */ void setCounter(char, char);
+	/* 8025EE24 */ void changeNumberTexture(J2DPane*, int);
+	/* 8025EECC */ void getNumber(int);
+	/* 8025EEF0 */ void setTimer(int);
+	/* 8025F180 */ void setCounter(u8, u8);
 	/* 8025FA00 */ void setParentPos(f32, f32);
 	/* 8025FA2C */ void setTimerPos(f32, f32);
 	/* 8025FA6C */ void setCounterPos(f32, f32);
 	/* 8025FA98 */ void setImagePos(f32, f32);
-	/* 8025FAC4 */ void setShowType(char);
+	/* 8025FAC4 */ void setShowType(u8);
 	/* 8025FB74 */ void anime();
 	/* 8025FF98 */ void closeAnime();
 	/* 802601E4 */ void createGetIn(cXyz);
@@ -90,7 +90,7 @@ struct dDlst_TimerScrnDraw_c {
 	/* 80260690 */ void draw();
 	/* 80260AA8 */ void checkStartAnimeEnd();
 	/* 80260AD4 */ void playBckAnimation(f32);
-	/* 80260B54 */ void drawPikari(s32);
+	/* 80260B54 */ void drawPikari(int);
 	/* 80261394 */ ~dDlst_TimerScrnDraw_c();
 };
 
@@ -129,13 +129,13 @@ struct JKRExpHeap {
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
 	// dTimer_c
-	/* 8002CB94 */ void setTimerNowTimeMs(s32);
+	/* 8002CB94 */ void setTimerNowTimeMs(int);
 	/* 8002CB9C */ void getTimerNowTimeMs();
-	/* 8002CBA4 */ void setTimerLimitTimeMs(s32);
+	/* 8002CBA4 */ void setTimerLimitTimeMs(int);
 	/* 8002CBAC */ void getTimerLimitTimeMs();
-	/* 8002CBB4 */ void setTimerMode(s32);
+	/* 8002CBB4 */ void setTimerMode(int);
 	/* 8002CBBC */ void getTimerMode();
-	/* 8002CBC4 */ void setTimerType(char);
+	/* 8002CBC4 */ void setTimerType(u8);
 	/* 8002CBCC */ void getTimerType();
 	/* 8002CBD4 */ void setTimerPtr(dTimer_c*);
 	/* 8002CBDC */ void getTimerPtr();
@@ -166,7 +166,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, s32);
+	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -204,7 +204,7 @@ struct JUtility {
 /* top-level dependencies (end dMeter2Draw_c) */
 struct dMeter2Draw_c {
 	// JUtility::TColor
-	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, char);
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 };
 
 // build JUtility (JUtility) True/True
@@ -232,6 +232,8 @@ struct dMsgObject_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DPane (J2DPane) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) False/False
@@ -252,18 +254,16 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DPane (J2DPane) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
@@ -279,21 +279,21 @@ struct CPaneMgrAlpha {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -328,7 +328,7 @@ static void dTimer_Execute(dTimer_c*);
 static bool dTimer_IsDelete(dTimer_c*);
 static void dTimer_Delete(dTimer_c*);
 static void dTimer_Create(msg_class*);
-void dTimer_createTimer(s32, u32, char, char, f32, f32, f32, f32);
+void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32);
 void dTimer_createStockTimer();
 void dTimer_createGetIn2D(s32, cXyz);
 static void dTimer_createStart2D(s32, u16);
@@ -441,7 +441,7 @@ void fopMsgM_createExpHeap(u32, JKRHeap*);
 void fopMsgM_destroyExpHeap(JKRExpHeap*);
 void dComIfG_resLoad(request_of_phase_process_class*, char const*);
 void dComIfG_resDelete(request_of_phase_process_class*, char const*);
-void dMeter2Info_getNumberTextureName(s32);
+void dMeter2Info_getNumberTextureName(int);
 void dPaneClass_showNullPane(J2DScreen*);
 void cM_rndFX(f32);
 void* operator new(u32);
@@ -628,7 +628,7 @@ asm void dTimer_c::deleteCheck() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTimer_c::start(s32 field_0) {
+asm void dTimer_c::start(int field_0) {
 	nofralloc
 #include "asm/d/d_timer/start__8dTimer_cFi.s"
 }
@@ -639,7 +639,7 @@ asm void dTimer_c::start(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTimer_c::start(s32 field_0, s16 field_1) {
+asm void dTimer_c::start(int field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/d_timer/start__8dTimer_cFis.s"
 }
@@ -672,7 +672,7 @@ asm void dTimer_c::stock_start(s16 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTimer_c::stop(char field_0) {
+asm void dTimer_c::stop(u8 field_0) {
 	nofralloc
 #include "asm/d/d_timer/stop__8dTimer_cFUc.s"
 }
@@ -683,7 +683,7 @@ asm void dTimer_c::stop(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTimer_c::restart(char field_0) {
+asm void dTimer_c::restart(u8 field_0) {
 	nofralloc
 #include "asm/d/d_timer/restart__8dTimer_cFUc.s"
 }
@@ -694,7 +694,7 @@ asm void dTimer_c::restart(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTimer_c::end(s32 field_0) {
+asm void dTimer_c::end(int field_0) {
 	nofralloc
 #include "asm/d/d_timer/end__8dTimer_cFi.s"
 }
@@ -893,7 +893,7 @@ asm void dDlst_TimerScrnDraw_c::deleteScreen() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDlst_TimerScrnDraw_c::changeNumberTexture(J2DPane* field_0, s32 field_1) {
+asm void dDlst_TimerScrnDraw_c::changeNumberTexture(J2DPane* field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_timer/changeNumberTexture__21dDlst_TimerScrnDraw_cFP7J2DPanei.s"
 }
@@ -904,7 +904,7 @@ asm void dDlst_TimerScrnDraw_c::changeNumberTexture(J2DPane* field_0, s32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDlst_TimerScrnDraw_c::getNumber(s32 field_0) {
+asm void dDlst_TimerScrnDraw_c::getNumber(int field_0) {
 	nofralloc
 #include "asm/d/d_timer/getNumber__21dDlst_TimerScrnDraw_cFi.s"
 }
@@ -926,7 +926,7 @@ f64 d_d_timer__lit_4627 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDlst_TimerScrnDraw_c::setTimer(s32 field_0) {
+asm void dDlst_TimerScrnDraw_c::setTimer(int field_0) {
 	nofralloc
 #include "asm/d/d_timer/setTimer__21dDlst_TimerScrnDraw_cFi.s"
 }
@@ -937,7 +937,7 @@ asm void dDlst_TimerScrnDraw_c::setTimer(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDlst_TimerScrnDraw_c::setCounter(char field_0, char field_1) {
+asm void dDlst_TimerScrnDraw_c::setCounter(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/d_timer/setCounter__21dDlst_TimerScrnDraw_cFUcUc.s"
 }
@@ -992,7 +992,7 @@ asm void dDlst_TimerScrnDraw_c::setImagePos(f32 field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDlst_TimerScrnDraw_c::setShowType(char field_0) {
+asm void dDlst_TimerScrnDraw_c::setShowType(u8 field_0) {
 	nofralloc
 #include "asm/d/d_timer/setShowType__21dDlst_TimerScrnDraw_cFUc.s"
 }
@@ -1133,7 +1133,7 @@ asm void dDlst_TimerScrnDraw_c::playBckAnimation(f32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDlst_TimerScrnDraw_c::drawPikari(s32 field_0) {
+asm void dDlst_TimerScrnDraw_c::drawPikari(int field_0) {
 	nofralloc
 #include "asm/d/d_timer/drawPikari__21dDlst_TimerScrnDraw_cFi.s"
 }
@@ -1194,7 +1194,7 @@ asm static void dTimer_Create(msg_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTimer_createTimer(s32 field_0, u32 field_1, char field_2, char field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7) {
+asm void dTimer_createTimer(s32 field_0, u32 field_1, u8 field_2, u8 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7) {
 	nofralloc
 #include "asm/d/d_timer/dTimer_createTimer__FlUlUcUcffff.s"
 }

@@ -21,10 +21,10 @@ struct JKRAramHeap {
 /* top-level dependencies (end JKRAramBlock) */
 struct JKRAramBlock {
 	// JKRAramHeap
-	/* 802D3304 */ JKRAramBlock(u32, u32, u32, char, bool);
+	/* 802D3304 */ JKRAramBlock(u32, u32, u32, u8, bool);
 	/* 802D3378 */ ~JKRAramBlock();
-	/* 802D3434 */ void allocHead(u32, char, JKRAramHeap*);
-	/* 802D34D0 */ void allocTail(u32, char, JKRAramHeap*);
+	/* 802D3434 */ void allocHead(u32, u8, JKRAramHeap*);
+	/* 802D34D0 */ void allocTail(u32, u8, JKRAramHeap*);
 };
 
 // build JKRAramHeap (JKRAramHeap) True/True
@@ -68,7 +68,7 @@ SECTION_DATA extern void*const __vt__12JKRAramBlock[4];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void _savegpr_26();
 extern "C" void _savegpr_27();
@@ -104,7 +104,7 @@ void* const __vt__12JKRAramBlock[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JKRAramBlock::JKRAramBlock(u32 field_0, u32 field_1, u32 field_2, char field_3, bool field_4) {
+asm JKRAramBlock::JKRAramBlock(u32 field_0, u32 field_1, u32 field_2, u8 field_3, bool field_4) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramBlock/__ct__12JKRAramBlockFUlUlUlUcb.s"
 }
@@ -126,7 +126,7 @@ asm JKRAramBlock::~JKRAramBlock() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAramBlock::allocHead(u32 field_0, char field_1, JKRAramHeap* field_2) {
+asm void JKRAramBlock::allocHead(u32 field_0, u8 field_1, JKRAramHeap* field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramBlock/allocHead__12JKRAramBlockFUlUcP11JKRAramHeap.s"
 }
@@ -137,7 +137,7 @@ asm void JKRAramBlock::allocHead(u32 field_0, char field_1, JKRAramHeap* field_2
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAramBlock::allocTail(u32 field_0, char field_1, JKRAramHeap* field_2) {
+asm void JKRAramBlock::allocTail(u32 field_0, u8 field_1, JKRAramHeap* field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramBlock/allocTail__12JKRAramBlockFUlUcP11JKRAramHeap.s"
 }

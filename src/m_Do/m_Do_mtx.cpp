@@ -9,20 +9,27 @@
 // Types:
 // 
 
-// build Quaternion (Quaternion) False/False
-/* top-level dependencies (begin Quaternion) */
-/* top-level dependencies (end Quaternion) */
-struct Quaternion {
-};
-
-// build mDoMtx_stack_c (mDoMtx_stack_c) False/False
-// build cXyz (cXyz) False/False
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build Quaternion (Quaternion) False/False
+/* top-level dependencies (begin Quaternion) */
+/* top-level dependencies (end Quaternion) */
+struct Quaternion {
+};
+
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
+// build mDoMtx_stack_c (mDoMtx_stack_c) False/False
+// build cXyz (cXyz) False/False
+// build Vec (Vec) True/True
 /* top-level dependencies (begin cXyz) */
 // outer dependency: Vec
 /* top-level dependencies (end cXyz) */
@@ -34,22 +41,17 @@ struct cXyz {
 	/* 80266FDC */ void normalizeRS();
 };
 
+// build csXyz (csXyz) True/True
 // build Quaternion (Quaternion) True/True
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
-};
-
 /* top-level dependencies (begin mDoMtx_stack_c) */
 // outer dependency: cXyz
-// outer dependency: Quaternion
 // outer dependency: csXyz
+// outer dependency: Quaternion
 /* top-level dependencies (end mDoMtx_stack_c) */
 struct mDoMtx_stack_c {
 	// cXyz
-	// Quaternion
 	// csXyz
+	// Quaternion
 	/* 8000CCC8 */ void push();
 	/* 8000CD14 */ void pop();
 	/* 8000CD64 */ void transS(cXyz const&);
@@ -67,7 +69,6 @@ struct mDoMtx_stack_c {
 };
 
 // build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
 // build mDoMtx_quatStack_c (mDoMtx_quatStack_c) False/False
 /* top-level dependencies (begin mDoMtx_quatStack_c) */
 /* top-level dependencies (end mDoMtx_quatStack_c) */
@@ -75,27 +76,26 @@ struct mDoMtx_quatStack_c {
 	/* 8000D034 */ ~mDoMtx_quatStack_c();
 };
 
-// build Vec (Vec) True/True
 // 
 // Forward References:
 // 
 
-extern "C" static void mDoMtx_XYZrotS__FPA4_fsss();
-extern "C" void mDoMtx_XYZrotM__FPA4_fsss();
-extern "C" void mDoMtx_ZXYrotS__FPA4_fsss();
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
-extern "C" void mDoMtx_XrotS__FPA4_fs();
-extern "C" void mDoMtx_XrotM__FPA4_fs();
-extern "C" void mDoMtx_YrotS__FPA4_fs();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void mDoMtx_ZrotS__FPA4_fs();
-extern "C" void mDoMtx_ZrotM__FPA4_fs();
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
-extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f();
-extern "C" void mDoMtx_inverseTranspose__FPA4_CfPA4_f();
+static void mDoMtx_XYZrotS(f32 (* )[4], s16, s16, s16);
+void mDoMtx_XYZrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_ZXYrotS(f32 (* )[4], s16, s16, s16);
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_XrotS(f32 (* )[4], s16);
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotS(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16);
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
+void mDoMtx_concatProjView(f32 const (* )[4], f32 const (* )[4], f32 (* )[4]);
+void mDoMtx_inverseTranspose(f32 const (* )[4], f32 (* )[4]);
 void mDoMtx_QuatConcat(Quaternion const*, Quaternion const*, Quaternion*);
-extern "C" void mDoMtx_MtxToRot__FPA4_CfP5csXyz();
+void mDoMtx_MtxToRot(f32 const (* )[4], csXyz*);
 extern "C" void __sinit_m_Do_mtx_cpp();
 
 extern "C" static void mDoMtx_XYZrotS__FPA4_fsss();
@@ -190,7 +190,7 @@ SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void mDoMtx_XYZrotS__FPA4_fsss() {
+asm static void mDoMtx_XYZrotS(f32 (* field_0)[4], s16 field_1, s16 field_2, s16 field_3) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_XYZrotS__FPA4_fsss.s"
 }
@@ -201,7 +201,7 @@ extern "C" asm static void mDoMtx_XYZrotS__FPA4_fsss() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_XYZrotM__FPA4_fsss() {
+asm void mDoMtx_XYZrotM(f32 (* field_0)[4], s16 field_1, s16 field_2, s16 field_3) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_XYZrotM__FPA4_fsss.s"
 }
@@ -212,7 +212,7 @@ extern "C" asm void mDoMtx_XYZrotM__FPA4_fsss() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_ZXYrotS__FPA4_fsss() {
+asm void mDoMtx_ZXYrotS(f32 (* field_0)[4], s16 field_1, s16 field_2, s16 field_3) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_ZXYrotS__FPA4_fsss.s"
 }
@@ -223,7 +223,7 @@ extern "C" asm void mDoMtx_ZXYrotS__FPA4_fsss() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_ZXYrotM__FPA4_fsss() {
+asm void mDoMtx_ZXYrotM(f32 (* field_0)[4], s16 field_1, s16 field_2, s16 field_3) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_ZXYrotM__FPA4_fsss.s"
 }
@@ -243,7 +243,7 @@ u8 m_Do_m_Do_mtx__lit_3677[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_XrotS__FPA4_fs() {
+asm void mDoMtx_XrotS(f32 (* field_0)[4], s16 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_XrotS__FPA4_fs.s"
 }
@@ -254,7 +254,7 @@ extern "C" asm void mDoMtx_XrotS__FPA4_fs() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_XrotM__FPA4_fs() {
+asm void mDoMtx_XrotM(f32 (* field_0)[4], s16 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_XrotM__FPA4_fs.s"
 }
@@ -265,7 +265,7 @@ extern "C" asm void mDoMtx_XrotM__FPA4_fs() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_YrotS__FPA4_fs() {
+asm void mDoMtx_YrotS(f32 (* field_0)[4], s16 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_YrotS__FPA4_fs.s"
 }
@@ -276,7 +276,7 @@ extern "C" asm void mDoMtx_YrotS__FPA4_fs() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_YrotM__FPA4_fs() {
+asm void mDoMtx_YrotM(f32 (* field_0)[4], s16 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_YrotM__FPA4_fs.s"
 }
@@ -287,7 +287,7 @@ extern "C" asm void mDoMtx_YrotM__FPA4_fs() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_ZrotS__FPA4_fs() {
+asm void mDoMtx_ZrotS(f32 (* field_0)[4], s16 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_ZrotS__FPA4_fs.s"
 }
@@ -298,7 +298,7 @@ extern "C" asm void mDoMtx_ZrotS__FPA4_fs() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_ZrotM__FPA4_fs() {
+asm void mDoMtx_ZrotM(f32 (* field_0)[4], s16 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_ZrotM__FPA4_fs.s"
 }
@@ -309,7 +309,7 @@ extern "C" asm void mDoMtx_ZrotM__FPA4_fs() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs() {
+asm void mDoMtx_lookAt(f32 (* field_0)[4], Vec const* field_1, Vec const* field_2, s16 field_3) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs.s"
 }
@@ -325,7 +325,7 @@ f32 m_Do_m_Do_mtx__lit_3840 = 32.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs() {
+asm void mDoMtx_lookAt(f32 (* field_0)[4], Vec const* field_1, Vec const* field_2, Vec const* field_3, s16 field_4) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs.s"
 }
@@ -336,7 +336,7 @@ extern "C" asm void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f() {
+asm void mDoMtx_concatProjView(f32 const (* field_0)[4], f32 const (* field_1)[4], f32 (* field_2)[4]) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f.s"
 }
@@ -347,7 +347,7 @@ extern "C" asm void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_inverseTranspose__FPA4_CfPA4_f() {
+asm void mDoMtx_inverseTranspose(f32 const (* field_0)[4], f32 (* field_1)[4]) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_inverseTranspose__FPA4_CfPA4_f.s"
 }
@@ -369,7 +369,7 @@ asm void mDoMtx_QuatConcat(Quaternion const* field_0, Quaternion const* field_1,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void mDoMtx_MtxToRot__FPA4_CfP5csXyz() {
+asm void mDoMtx_MtxToRot(f32 const (* field_0)[4], csXyz* field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_mtx/mDoMtx_MtxToRot__FPA4_CfP5csXyz.s"
 }

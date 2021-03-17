@@ -33,7 +33,7 @@ static void mDoMemCdRWm_CheckCardStat(CARDFileInfo*);
 static void mDoMemCdRWm_CalcCheckSum(void*, u32);
 static void mDoMemCdRWm_CalcCheckSumGameData(void*, u32);
 void mDoMemCdRWm_TestCheckSumGameData(void*);
-void mDoMemCdRWm_SetCheckSumGameData(char*, char);
+void mDoMemCdRWm_SetCheckSumGameData(u8*, u8);
 
 extern "C" void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl();
 extern "C" void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl();
@@ -196,7 +196,7 @@ asm void mDoMemCdRWm_TestCheckSumGameData(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoMemCdRWm_SetCheckSumGameData(char* field_0, char field_1) {
+asm void mDoMemCdRWm_SetCheckSumGameData(u8* field_0, u8 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_MemCardRWmng/mDoMemCdRWm_SetCheckSumGameData__FPUcUc.s"
 }

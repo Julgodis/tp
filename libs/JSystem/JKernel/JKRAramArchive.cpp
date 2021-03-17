@@ -10,28 +10,17 @@
 // 
 
 // build JKRAramArchive (JKRAramArchive) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
-	/* 802CE4D4 */ void alloc(u32, s32);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-	/* 802CE548 */ void free(void*);
-	/* 802CEB18 */ void copyMemory(void*, void*, u32);
-};
-
 // build JKRArchive (JKRArchive) False/False
 // build JKRArchive (JKRArchive) True/False
 struct JKRArchive;
 // build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRArchive::EMountMode
 // outer dependency: JKRArchive::SDIFileEntry
+// outer dependency: JKRArchive::EMountMode
 /* top-level dependencies (end JKRArchive) */
 struct JKRArchive {
-	// JKRArchive::EMountMode
 	// JKRArchive::SDIFileEntry
+	// JKRArchive::EMountMode
 	// build EMountDirection (JKRArchive::EMountDirection) False/False
 	/* dependencies (begin JKRArchive::EMountDirection) */
 	/* dependencies (end JKRArchive::EMountDirection) */
@@ -69,15 +58,26 @@ struct JKRArchive {
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
 };
 
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE548 */ void free(void*);
+	/* 802CEB18 */ void copyMemory(void*, void*, u32);
+};
+
 // build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JKRAramArchive) */
-// outer dependency: JKRHeap
 // outer dependency: JKRArchive::EMountDirection
+// outer dependency: JKRHeap
 // outer dependency: JKRArchive::SDIFileEntry
 /* top-level dependencies (end JKRAramArchive) */
 struct JKRAramArchive {
-	// JKRHeap
 	// JKRArchive::EMountDirection
+	// JKRHeap
 	// JKRArchive::SDIFileEntry
 	/* 802D70C0 */ JKRAramArchive(s32, JKRArchive::EMountDirection);
 	/* 802D7168 */ ~JKRAramArchive();
@@ -86,8 +86,8 @@ struct JKRAramArchive {
 	/* 802D76F4 */ void fetchResource(void*, u32, JKRArchive::SDIFileEntry*, u32*);
 	/* 802D77F8 */ void getAramAddress_Entry(JKRArchive::SDIFileEntry*);
 	/* 802D781C */ void getAramAddress(char const*);
-	/* 802D7858 */ void fetchResource_subroutine(u32, u32, char*, u32, s32);
-	/* 802D7914 */ void fetchResource_subroutine(u32, u32, JKRHeap*, s32, char**);
+	/* 802D7858 */ void fetchResource_subroutine(u32, u32, u8*, u32, int);
+	/* 802D7914 */ void fetchResource_subroutine(u32, u32, JKRHeap*, int, u8**);
 	/* 802D7A64 */ void getExpandedResSize(void const*) const;
 };
 
@@ -108,21 +108,21 @@ struct JKRDisposer {
 };
 
 // build JKRAram (JKRAram) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JKRExpandSwitch (JKRExpandSwitch) False/False
 /* top-level dependencies (begin JKRExpandSwitch) */
 /* top-level dependencies (end JKRExpandSwitch) */
 struct JKRExpandSwitch {
 };
 
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin JKRAram) */
-// outer dependency: JKRHeap
 // outer dependency: JKRExpandSwitch
+// outer dependency: JKRHeap
 /* top-level dependencies (end JKRAram) */
 struct JKRAram {
-	// JKRHeap
 	// JKRExpandSwitch
-	/* 802D25B4 */ void aramToMainRam(u32, char*, u32, JKRExpandSwitch, u32, JKRHeap*, s32, u32*);
+	// JKRHeap
+	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
 // build JKRExpandSwitch (JKRExpandSwitch) True/True
@@ -158,18 +158,18 @@ struct JKRDvdFile {
 };
 
 // build JKRDvdRipper (JKRDvdRipper) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JKRExpandSwitch (JKRExpandSwitch) True/True
+// build JKRHeap (JKRHeap) True/True
 // build JKRDvdRipper (JKRDvdRipper) True/False
 struct JKRDvdRipper;
 /* top-level dependencies (begin JKRDvdRipper) */
-// outer dependency: JKRHeap
 // outer dependency: JKRExpandSwitch
+// outer dependency: JKRHeap
 // outer dependency: JKRDvdRipper::EAllocDirection
 /* top-level dependencies (end JKRDvdRipper) */
 struct JKRDvdRipper {
-	// JKRHeap
 	// JKRExpandSwitch
+	// JKRHeap
 	// JKRDvdRipper::EAllocDirection
 	// build EAllocDirection (JKRDvdRipper::EAllocDirection) False/False
 	/* dependencies (begin JKRDvdRipper::EAllocDirection) */
@@ -177,7 +177,7 @@ struct JKRDvdRipper {
 	struct EAllocDirection {
 	};
 
-	/* 802D9C54 */ void loadToMainRAM(s32, char*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, s32*, u32*);
+	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
 };
 
 // build JKRDvdAramRipper (JKRDvdAramRipper) False/False
@@ -207,6 +207,13 @@ struct JSUPtrList {
 };
 
 // build JSUPtrLink (JSUPtrLink) True/True
+// build JUTException (JUTException) False/False
+/* top-level dependencies (begin JUTException) */
+/* top-level dependencies (end JUTException) */
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -232,9 +239,8 @@ SECTION_DATA extern void*const __vt__14JKRAramArchive[20];
 // 
 
 SECTION_INIT void memset();
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
 extern "C" void DCInvalidateRange();
 extern "C" void _savegpr_26();
 extern "C" void _savegpr_27();
@@ -427,7 +433,7 @@ SECTION_DEAD char* const stringBase_8039D19E = "??? bad sequence\n";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAramArchive::fetchResource_subroutine(u32 field_0, u32 field_1, char* field_2, u32 field_3, s32 field_4) {
+asm void JKRAramArchive::fetchResource_subroutine(u32 field_0, u32 field_1, u8* field_2, u32 field_3, int field_4) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramArchive/fetchResource_subroutine__14JKRAramArchiveFUlUlPUcUli.s"
 }
@@ -438,7 +444,7 @@ asm void JKRAramArchive::fetchResource_subroutine(u32 field_0, u32 field_1, char
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAramArchive::fetchResource_subroutine(u32 field_0, u32 field_1, JKRHeap* field_2, s32 field_3, char** field_4) {
+asm void JKRAramArchive::fetchResource_subroutine(u32 field_0, u32 field_1, JKRHeap* field_2, int field_3, u8** field_4) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramArchive/fetchResource_subroutine__14JKRAramArchiveFUlUlP7JKRHeapiPPUc.s"
 }

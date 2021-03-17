@@ -28,12 +28,12 @@ struct JKRDecomp {
 	/* 802DB730 */ ~JKRDecomp();
 	/* 802DB790 */ void run();
 	/* 802DB8D0 */ void sendCommand(JKRDecompCommand*);
-	/* 802DB934 */ void sync(JKRDecompCommand*, s32);
-	/* 802DB988 */ void orderSync(char*, char*, u32, u32);
-	/* 802DB9DC */ void decode(char*, char*, u32, u32);
-	/* 802DBA58 */ void decodeSZP(char*, char*, u32, u32);
-	/* 802DBC14 */ void decodeSZS(char*, char*, u32, u32);
-	/* 802DBCF8 */ void checkCompressed(char*);
+	/* 802DB934 */ void sync(JKRDecompCommand*, int);
+	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
+	/* 802DB9DC */ void decode(u8*, u8*, u32, u32);
+	/* 802DBA58 */ void decodeSZP(u8*, u8*, u32, u32);
+	/* 802DBC14 */ void decodeSZS(u8*, u8*, u32, u32);
+	/* 802DBCF8 */ void checkCompressed(u8*);
 };
 
 // build JKRDecompCommand (JKRDecompCommand) True/True
@@ -47,7 +47,7 @@ struct JKRHeap {
 /* top-level dependencies (begin JKRThread) */
 /* top-level dependencies (end JKRThread) */
 struct JKRThread {
-	/* 802D1568 */ JKRThread(u32, s32, s32);
+	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
@@ -98,7 +98,7 @@ SECTION_SBSS extern u8 sDecompObject__9JKRDecomp[4 + 4 /* padding */];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void OSInitMessageQueue();
 extern "C" void OSSendMessage();
@@ -234,7 +234,7 @@ extern "C" asm static void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRDecomp::sync(JKRDecompCommand* field_0, s32 field_1) {
+asm void JKRDecomp::sync(JKRDecompCommand* field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/sync__9JKRDecompFP16JKRDecompCommandi.s"
 }
@@ -245,7 +245,7 @@ asm void JKRDecomp::sync(JKRDecompCommand* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRDecomp::orderSync(char* field_0, char* field_1, u32 field_2, u32 field_3) {
+asm void JKRDecomp::orderSync(u8* field_0, u8* field_1, u32 field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/orderSync__9JKRDecompFPUcPUcUlUl.s"
 }
@@ -256,7 +256,7 @@ asm void JKRDecomp::orderSync(char* field_0, char* field_1, u32 field_2, u32 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRDecomp::decode(char* field_0, char* field_1, u32 field_2, u32 field_3) {
+asm void JKRDecomp::decode(u8* field_0, u8* field_1, u32 field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/decode__9JKRDecompFPUcPUcUlUl.s"
 }
@@ -267,7 +267,7 @@ asm void JKRDecomp::decode(char* field_0, char* field_1, u32 field_2, u32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRDecomp::decodeSZP(char* field_0, char* field_1, u32 field_2, u32 field_3) {
+asm void JKRDecomp::decodeSZP(u8* field_0, u8* field_1, u32 field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/decodeSZP__9JKRDecompFPUcPUcUlUl.s"
 }
@@ -278,7 +278,7 @@ asm void JKRDecomp::decodeSZP(char* field_0, char* field_1, u32 field_2, u32 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRDecomp::decodeSZS(char* field_0, char* field_1, u32 field_2, u32 field_3) {
+asm void JKRDecomp::decodeSZS(u8* field_0, u8* field_1, u32 field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/decodeSZS__9JKRDecompFPUcPUcUlUl.s"
 }
@@ -289,7 +289,7 @@ asm void JKRDecomp::decodeSZS(char* field_0, char* field_1, u32 field_2, u32 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRDecomp::checkCompressed(char* field_0) {
+asm void JKRDecomp::checkCompressed(u8* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/checkCompressed__9JKRDecompFPUc.s"
 }

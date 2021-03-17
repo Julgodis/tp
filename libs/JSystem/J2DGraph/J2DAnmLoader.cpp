@@ -23,34 +23,16 @@ struct J2DAnmLoaderDataBase {
 struct J3DAnmVtxColorKeyData {
 };
 
-// build J2DAnmTransformKey (J2DAnmTransformKey) False/False
-/* top-level dependencies (begin J2DAnmTransformKey) */
-/* top-level dependencies (end J2DAnmTransformKey) */
-struct J2DAnmTransformKey {
-};
-
-// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
-/* top-level dependencies (begin J2DAnmTevRegKey) */
-/* top-level dependencies (end J2DAnmTevRegKey) */
-struct J2DAnmTevRegKey {
-};
-
-// build J2DAnmVtxColorKey (J2DAnmVtxColorKey) False/False
-/* top-level dependencies (begin J2DAnmVtxColorKey) */
-/* top-level dependencies (end J2DAnmVtxColorKey) */
-struct J2DAnmVtxColorKey {
+// build J2DAnmColorKey (J2DAnmColorKey) False/False
+/* top-level dependencies (begin J2DAnmColorKey) */
+/* top-level dependencies (end J2DAnmColorKey) */
+struct J2DAnmColorKey {
 };
 
 // build J3DAnmTevRegKeyData (J3DAnmTevRegKeyData) False/False
 /* top-level dependencies (begin J3DAnmTevRegKeyData) */
 /* top-level dependencies (end J3DAnmTevRegKeyData) */
 struct J3DAnmTevRegKeyData {
-};
-
-// build J2DAnmColorKey (J2DAnmColorKey) False/False
-/* top-level dependencies (begin J2DAnmColorKey) */
-/* top-level dependencies (end J2DAnmColorKey) */
-struct J2DAnmColorKey {
 };
 
 // build J2DAnmBase (J2DAnmBase) False/False
@@ -68,18 +50,6 @@ struct J2DAnmBase {
 	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
 };
 
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
-struct J2DAnmTextureSRTKey {
-};
-
-// build J3DAnmTextureSRTKeyData (J3DAnmTextureSRTKeyData) False/False
-/* top-level dependencies (begin J3DAnmTextureSRTKeyData) */
-/* top-level dependencies (end J3DAnmTextureSRTKeyData) */
-struct J3DAnmTextureSRTKeyData {
-};
-
 // build J3DAnmColorKeyData (J3DAnmColorKeyData) False/False
 /* top-level dependencies (begin J3DAnmColorKeyData) */
 /* top-level dependencies (end J3DAnmColorKeyData) */
@@ -92,31 +62,61 @@ struct J3DAnmColorKeyData {
 struct J3DAnmTransformKeyData {
 };
 
+// build J2DAnmTransformKey (J2DAnmTransformKey) False/False
+/* top-level dependencies (begin J2DAnmTransformKey) */
+/* top-level dependencies (end J2DAnmTransformKey) */
+struct J2DAnmTransformKey {
+};
+
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
+};
+
+// build J2DAnmVtxColorKey (J2DAnmVtxColorKey) False/False
+/* top-level dependencies (begin J2DAnmVtxColorKey) */
+/* top-level dependencies (end J2DAnmVtxColorKey) */
+struct J2DAnmVtxColorKey {
+};
+
+// build J3DAnmTextureSRTKeyData (J3DAnmTextureSRTKeyData) False/False
+/* top-level dependencies (begin J3DAnmTextureSRTKeyData) */
+/* top-level dependencies (end J3DAnmTextureSRTKeyData) */
+struct J3DAnmTextureSRTKeyData {
+};
+
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
+/* top-level dependencies (begin J2DAnmTevRegKey) */
+/* top-level dependencies (end J2DAnmTevRegKey) */
+struct J2DAnmTevRegKey {
+};
+
 /* top-level dependencies (begin J2DAnmKeyLoader_v15) */
 // outer dependency: J3DAnmVtxColorKeyData
-// outer dependency: J2DAnmTransformKey
-// outer dependency: J2DAnmTevRegKey
-// outer dependency: J2DAnmVtxColorKey
-// outer dependency: J3DAnmTevRegKeyData
 // outer dependency: J2DAnmColorKey
+// outer dependency: J3DAnmTevRegKeyData
 // outer dependency: J2DAnmBase
-// outer dependency: J2DAnmTextureSRTKey
-// outer dependency: J3DAnmTextureSRTKeyData
 // outer dependency: J3DAnmColorKeyData
 // outer dependency: J3DAnmTransformKeyData
+// outer dependency: J2DAnmTransformKey
+// outer dependency: J2DAnmTextureSRTKey
+// outer dependency: J2DAnmVtxColorKey
+// outer dependency: J3DAnmTextureSRTKeyData
+// outer dependency: J2DAnmTevRegKey
 /* top-level dependencies (end J2DAnmKeyLoader_v15) */
 struct J2DAnmKeyLoader_v15 {
 	// J3DAnmVtxColorKeyData
-	// J2DAnmTransformKey
-	// J2DAnmTevRegKey
-	// J2DAnmVtxColorKey
-	// J3DAnmTevRegKeyData
 	// J2DAnmColorKey
+	// J3DAnmTevRegKeyData
 	// J2DAnmBase
-	// J2DAnmTextureSRTKey
-	// J3DAnmTextureSRTKeyData
 	// J3DAnmColorKeyData
 	// J3DAnmTransformKeyData
+	// J2DAnmTransformKey
+	// J2DAnmTextureSRTKey
+	// J2DAnmVtxColorKey
+	// J3DAnmTextureSRTKeyData
+	// J2DAnmTevRegKey
 	/* 80309290 */ J2DAnmKeyLoader_v15();
 	/* 803092AC */ ~J2DAnmKeyLoader_v15();
 	/* 80309308 */ void load(void const*);
@@ -143,16 +143,10 @@ struct J2DAnmKeyLoader_v15 {
 // build J3DAnmVtxColorKeyData (J3DAnmVtxColorKeyData) True/True
 // build J2DAnmVtxColorKey (J2DAnmVtxColorKey) True/True
 // build J2DAnmFullLoader_v15 (J2DAnmFullLoader_v15) False/False
-// build J2DAnmVtxColorFull (J2DAnmVtxColorFull) False/False
-/* top-level dependencies (begin J2DAnmVtxColorFull) */
-/* top-level dependencies (end J2DAnmVtxColorFull) */
-struct J2DAnmVtxColorFull {
-};
-
-// build J3DAnmVisibilityFullData (J3DAnmVisibilityFullData) False/False
-/* top-level dependencies (begin J3DAnmVisibilityFullData) */
-/* top-level dependencies (end J3DAnmVisibilityFullData) */
-struct J3DAnmVisibilityFullData {
+// build J3DAnmTexPatternFullData (J3DAnmTexPatternFullData) False/False
+/* top-level dependencies (begin J3DAnmTexPatternFullData) */
+/* top-level dependencies (end J3DAnmTexPatternFullData) */
+struct J3DAnmTexPatternFullData {
 };
 
 // build J3DAnmTransformFullData (J3DAnmTransformFullData) False/False
@@ -161,28 +155,41 @@ struct J3DAnmVisibilityFullData {
 struct J3DAnmTransformFullData {
 };
 
-// build J2DAnmColorFull (J2DAnmColorFull) False/False
-/* top-level dependencies (begin J2DAnmColorFull) */
-/* top-level dependencies (end J2DAnmColorFull) */
-struct J2DAnmColorFull {
-};
-
-// build J3DAnmColorFullData (J3DAnmColorFullData) False/False
-/* top-level dependencies (begin J3DAnmColorFullData) */
-/* top-level dependencies (end J3DAnmColorFullData) */
-struct J3DAnmColorFullData {
-};
-
-// build J3DAnmVtxColorFullData (J3DAnmVtxColorFullData) False/False
-/* top-level dependencies (begin J3DAnmVtxColorFullData) */
-/* top-level dependencies (end J3DAnmVtxColorFullData) */
-struct J3DAnmVtxColorFullData {
+// build J2DAnmVtxColorFull (J2DAnmVtxColorFull) False/False
+/* top-level dependencies (begin J2DAnmVtxColorFull) */
+/* top-level dependencies (end J2DAnmVtxColorFull) */
+struct J2DAnmVtxColorFull {
 };
 
 // build J2DAnmTransformFull (J2DAnmTransformFull) False/False
 /* top-level dependencies (begin J2DAnmTransformFull) */
 /* top-level dependencies (end J2DAnmTransformFull) */
 struct J2DAnmTransformFull {
+};
+
+// build J2DAnmBase (J2DAnmBase) True/True
+// build J3DAnmColorFullData (J3DAnmColorFullData) False/False
+/* top-level dependencies (begin J3DAnmColorFullData) */
+/* top-level dependencies (end J3DAnmColorFullData) */
+struct J3DAnmColorFullData {
+};
+
+// build J3DAnmVisibilityFullData (J3DAnmVisibilityFullData) False/False
+/* top-level dependencies (begin J3DAnmVisibilityFullData) */
+/* top-level dependencies (end J3DAnmVisibilityFullData) */
+struct J3DAnmVisibilityFullData {
+};
+
+// build J2DAnmColorFull (J2DAnmColorFull) False/False
+/* top-level dependencies (begin J2DAnmColorFull) */
+/* top-level dependencies (end J2DAnmColorFull) */
+struct J2DAnmColorFull {
+};
+
+// build J3DAnmVtxColorFullData (J3DAnmVtxColorFullData) False/False
+/* top-level dependencies (begin J3DAnmVtxColorFullData) */
+/* top-level dependencies (end J3DAnmVtxColorFullData) */
+struct J3DAnmVtxColorFullData {
 };
 
 // build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
@@ -192,13 +199,6 @@ struct J2DAnmVisibilityFull {
 	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
 };
 
-// build J2DAnmBase (J2DAnmBase) True/True
-// build J3DAnmTexPatternFullData (J3DAnmTexPatternFullData) False/False
-/* top-level dependencies (begin J3DAnmTexPatternFullData) */
-/* top-level dependencies (end J3DAnmTexPatternFullData) */
-struct J3DAnmTexPatternFullData {
-};
-
 // build J2DAnmTexPattern (J2DAnmTexPattern) False/False
 /* top-level dependencies (begin J2DAnmTexPattern) */
 /* top-level dependencies (end J2DAnmTexPattern) */
@@ -206,29 +206,29 @@ struct J2DAnmTexPattern {
 };
 
 /* top-level dependencies (begin J2DAnmFullLoader_v15) */
-// outer dependency: J2DAnmVtxColorFull
-// outer dependency: J3DAnmVisibilityFullData
-// outer dependency: J3DAnmTransformFullData
-// outer dependency: J2DAnmColorFull
-// outer dependency: J3DAnmColorFullData
-// outer dependency: J3DAnmVtxColorFullData
-// outer dependency: J2DAnmTransformFull
-// outer dependency: J2DAnmVisibilityFull
-// outer dependency: J2DAnmBase
 // outer dependency: J3DAnmTexPatternFullData
+// outer dependency: J3DAnmTransformFullData
+// outer dependency: J2DAnmVtxColorFull
+// outer dependency: J2DAnmTransformFull
+// outer dependency: J2DAnmBase
+// outer dependency: J3DAnmColorFullData
+// outer dependency: J3DAnmVisibilityFullData
+// outer dependency: J2DAnmColorFull
+// outer dependency: J3DAnmVtxColorFullData
+// outer dependency: J2DAnmVisibilityFull
 // outer dependency: J2DAnmTexPattern
 /* top-level dependencies (end J2DAnmFullLoader_v15) */
 struct J2DAnmFullLoader_v15 {
-	// J2DAnmVtxColorFull
-	// J3DAnmVisibilityFullData
-	// J3DAnmTransformFullData
-	// J2DAnmColorFull
-	// J3DAnmColorFullData
-	// J3DAnmVtxColorFullData
-	// J2DAnmTransformFull
-	// J2DAnmVisibilityFull
-	// J2DAnmBase
 	// J3DAnmTexPatternFullData
+	// J3DAnmTransformFullData
+	// J2DAnmVtxColorFull
+	// J2DAnmTransformFull
+	// J2DAnmBase
+	// J3DAnmColorFullData
+	// J3DAnmVisibilityFullData
+	// J2DAnmColorFull
+	// J3DAnmVtxColorFullData
+	// J2DAnmVisibilityFull
 	// J2DAnmTexPattern
 	/* 80309A80 */ void load(void const*);
 	/* 80309B8C */ void setResource(J2DAnmBase*, void const*);
@@ -270,7 +270,7 @@ struct _GXColor {
 /* top-level dependencies (end J2DAnmVtxColor) */
 struct J2DAnmVtxColor {
 	// _GXColor
-	/* 8030363C */ void getColor(char, u16, _GXColor*) const;
+	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
 	/* 8030A358 */ ~J2DAnmVtxColor();
 };
 

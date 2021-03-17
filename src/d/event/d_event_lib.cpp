@@ -14,8 +14,8 @@
 /* top-level dependencies (end dEvLib_callback_c) */
 struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
-	/* 800488A4 */ void setEvent(s32, s32, s32);
-	/* 80048940 */ void orderEvent(s32, s32, s32);
+	/* 800488A4 */ void setEvent(int, int, int);
+	/* 80048940 */ void orderEvent(int, int, int);
 	/* 800489A8 */ void initAction();
 	/* 800489F8 */ void executeAction();
 	/* 80048A50 */ void initStart();
@@ -44,7 +44,7 @@ struct dEvt_control_c {
 /* top-level dependencies (end dEvent_manager_c) */
 struct dEvent_manager_c {
 	// fopAc_ac_c
-	/* 80047698 */ void getEventIdx(fopAc_ac_c*, char);
+	/* 80047698 */ void getEventIdx(fopAc_ac_c*, u8);
 	/* 80047A78 */ void endCheck(s16);
 };
 
@@ -78,8 +78,8 @@ SECTION_BSS extern u8 l_runAction[24];
 // External References:
 // 
 
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, char, u16, u16, u16);
-void fopAcM_orderMapToolEvent(fopAc_ac_c*, char, s16, u16, u16, u16);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void fopAcM_orderMapToolEvent(fopAc_ac_c*, u8, s16, u16, u16, u16);
 extern "C" void __ptmf_test();
 extern "C" void __ptmf_scall();
 
@@ -115,7 +115,7 @@ u8 l_startAction[24];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvLib_callback_c::setEvent(s32 field_0, s32 field_1, s32 field_2) {
+asm void dEvLib_callback_c::setEvent(int field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/event/d_event_lib/setEvent__17dEvLib_callback_cFiii.s"
 }
@@ -126,7 +126,7 @@ asm void dEvLib_callback_c::setEvent(s32 field_0, s32 field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvLib_callback_c::orderEvent(s32 field_0, s32 field_1, s32 field_2) {
+asm void dEvLib_callback_c::orderEvent(int field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/event/d_event_lib/orderEvent__17dEvLib_callback_cFiii.s"
 }

@@ -50,8 +50,8 @@ struct _GXCompare {
 // 
 
 void GFSetFog(_GXFogType, f32, f32, f32, f32, _GXColor);
-void GFSetBlendModeEtc(_GXBlendMode, _GXBlendFactor, _GXBlendFactor, _GXLogicOp, char, char, char);
-void GFSetZMode(char, _GXCompare, char);
+void GFSetBlendModeEtc(_GXBlendMode, _GXBlendFactor, _GXBlendFactor, _GXLogicOp, u8, u8, u8);
+void GFSetZMode(u8, _GXCompare, u8);
 
 extern "C" void GFSetFog__F10_GXFogTypeffff8_GXColor();
 extern "C" void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc();
@@ -121,7 +121,7 @@ asm void GFSetFog(_GXFogType field_0, f32 field_1, f32 field_2, f32 field_3, f32
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GFSetBlendModeEtc(_GXBlendMode field_0, _GXBlendFactor field_1, _GXBlendFactor field_2, _GXLogicOp field_3, char field_4, char field_5, char field_6) {
+asm void GFSetBlendModeEtc(_GXBlendMode field_0, _GXBlendFactor field_1, _GXBlendFactor field_2, _GXLogicOp field_3, u8 field_4, u8 field_5, u8 field_6) {
 	nofralloc
 #include "asm/dolphin/gf/GFPixel/GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc.s"
 }
@@ -132,7 +132,7 @@ asm void GFSetBlendModeEtc(_GXBlendMode field_0, _GXBlendFactor field_1, _GXBlen
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GFSetZMode(char field_0, _GXCompare field_1, char field_2) {
+asm void GFSetZMode(u8 field_0, _GXCompare field_1, u8 field_2) {
 	nofralloc
 #include "asm/dolphin/gf/GFPixel/GFSetZMode__FUc10_GXCompareUc.s"
 }

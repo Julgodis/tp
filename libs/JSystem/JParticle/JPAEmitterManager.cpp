@@ -10,13 +10,6 @@
 // 
 
 // build JPAEmitterManager (JPAEmitterManager) False/False
-// build JPAResourceManager (JPAResourceManager) False/False
-/* top-level dependencies (begin JPAResourceManager) */
-/* top-level dependencies (end JPAResourceManager) */
-struct JPAResourceManager {
-	/* 80273E68 */ void getResource(u16) const;
-};
-
 // build JPADrawInfo (JPADrawInfo) False/False
 /* top-level dependencies (begin JPADrawInfo) */
 /* top-level dependencies (end JPADrawInfo) */
@@ -29,9 +22,14 @@ struct JPADrawInfo {
 struct JKRHeap {
 };
 
+// build JPAResourceManager (JPAResourceManager) False/False
+/* top-level dependencies (begin JPAResourceManager) */
+/* top-level dependencies (end JPAResourceManager) */
+struct JPAResourceManager {
+	/* 80273E68 */ void getResource(u16) const;
+};
+
 // build JPABaseEmitter (JPABaseEmitter) False/False
-// build JPAEmitterManager (JPAEmitterManager) True/False
-struct JPAEmitterManager;
 // build JPAResource (JPAResource) False/False
 // build JPAEmitterWorkData (JPAEmitterWorkData) False/False
 /* top-level dependencies (begin JPAEmitterWorkData) */
@@ -52,13 +50,15 @@ struct JPAResource {
 	/* 80275A94 */ void draw(JPAEmitterWorkData*, JPABaseEmitter*);
 };
 
+// build JPAEmitterManager (JPAEmitterManager) True/False
+struct JPAEmitterManager;
 /* top-level dependencies (begin JPABaseEmitter) */
-// outer dependency: JPAEmitterManager
 // outer dependency: JPAResource
+// outer dependency: JPAEmitterManager
 /* top-level dependencies (end JPABaseEmitter) */
 struct JPABaseEmitter {
-	// JPAEmitterManager
 	// JPAResource
+	// JPAEmitterManager
 	/* 8027E5EC */ ~JPABaseEmitter();
 	/* 8027E64C */ JPABaseEmitter();
 	/* 8027E6EC */ void init(JPAEmitterManager*, JPAResource*);
@@ -66,24 +66,24 @@ struct JPABaseEmitter {
 };
 
 /* top-level dependencies (begin JPAEmitterManager) */
-// outer dependency: JPAResourceManager
 // outer dependency: JPADrawInfo
 // outer dependency: JKRHeap
+// outer dependency: JPAResourceManager
 // outer dependency: JPABaseEmitter
 /* top-level dependencies (end JPAEmitterManager) */
 struct JPAEmitterManager {
-	// JPAResourceManager
 	// JPADrawInfo
 	// JKRHeap
+	// JPAResourceManager
 	// JPABaseEmitter
-	/* 8027DCA0 */ JPAEmitterManager(u32, u32, JKRHeap*, char, char);
-	/* 8027DFA0 */ void calc(char);
-	/* 8027E028 */ void draw(JPADrawInfo const*, char);
+	/* 8027DCA0 */ JPAEmitterManager(u32, u32, JKRHeap*, u8, u8);
+	/* 8027DFA0 */ void calc(u8);
+	/* 8027E028 */ void draw(JPADrawInfo const*, u8);
 	/* 8027E220 */ void forceDeleteAllEmitter();
-	/* 8027E278 */ void forceDeleteGroupEmitter(char);
+	/* 8027E278 */ void forceDeleteGroupEmitter(u8);
 	/* 8027E2D8 */ void forceDeleteEmitter(JPABaseEmitter*);
-	/* 8027E344 */ void entryResourceManager(JPAResourceManager*, char);
-	/* 8027E354 */ void clearResourceManager(char);
+	/* 8027E344 */ void entryResourceManager(JPAResourceManager*, u8);
+	/* 8027E354 */ void clearResourceManager(u8);
 	/* 8027E3F4 */ void calcYBBCam();
 };
 
@@ -151,8 +151,8 @@ SECTION_SDATA2 extern f32 lit_2636;
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void PSMTXCopy();
 extern "C" void GXSetVtxDesc();
@@ -222,7 +222,7 @@ SECTION_SDATA extern u32 __float_epsilon;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JPAEmitterManager::JPAEmitterManager(u32 field_0, u32 field_1, JKRHeap* field_2, char field_3, char field_4) {
+asm JPAEmitterManager::JPAEmitterManager(u32 field_0, u32 field_1, JKRHeap* field_2, u8 field_3, u8 field_4) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitterManager/__ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc.s"
 }
@@ -244,7 +244,7 @@ extern "C" asm void func_8027DEBC() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPAEmitterManager::calc(char field_0) {
+asm void JPAEmitterManager::calc(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitterManager/calc__17JPAEmitterManagerFUc.s"
 }
@@ -255,7 +255,7 @@ asm void JPAEmitterManager::calc(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPAEmitterManager::draw(JPADrawInfo const* field_0, char field_1) {
+asm void JPAEmitterManager::draw(JPADrawInfo const* field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitterManager/draw__17JPAEmitterManagerFPC11JPADrawInfoUc.s"
 }
@@ -277,7 +277,7 @@ asm void JPAEmitterManager::forceDeleteAllEmitter() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPAEmitterManager::forceDeleteGroupEmitter(char field_0) {
+asm void JPAEmitterManager::forceDeleteGroupEmitter(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitterManager/forceDeleteGroupEmitter__17JPAEmitterManagerFUc.s"
 }
@@ -299,7 +299,7 @@ asm void JPAEmitterManager::forceDeleteEmitter(JPABaseEmitter* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPAEmitterManager::entryResourceManager(JPAResourceManager* field_0, char field_1) {
+asm void JPAEmitterManager::entryResourceManager(JPAResourceManager* field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitterManager/entryResourceManager__17JPAEmitterManagerFP18JPAResourceManagerUc.s"
 }
@@ -310,7 +310,7 @@ asm void JPAEmitterManager::entryResourceManager(JPAResourceManager* field_0, ch
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPAEmitterManager::clearResourceManager(char field_0) {
+asm void JPAEmitterManager::clearResourceManager(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitterManager/clearResourceManager__17JPAEmitterManagerFUc.s"
 }

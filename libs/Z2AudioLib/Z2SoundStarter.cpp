@@ -22,8 +22,8 @@ struct JAISoundHandle {
 struct Z2SoundStarter {
 	// JAISoundHandle
 	/* 802AAB94 */ Z2SoundStarter(bool);
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, char);
-	/* 802AAF74 */ void getPortData(JAISoundHandle*, u32, char);
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
+	/* 802AAF74 */ void getPortData(JAISoundHandle*, u32, s8);
 	/* 802AAFF0 */ ~Z2SoundStarter();
 };
 
@@ -187,7 +187,7 @@ extern "C" asm void func_802AAC3C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundStarter::setPortData(JAISoundHandle* field_0, u32 field_1, u16 field_2, char field_3) {
+asm void Z2SoundStarter::setPortData(JAISoundHandle* field_0, u32 field_1, u16 field_2, s8 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundStarter/setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc.s"
 }
@@ -198,7 +198,7 @@ asm void Z2SoundStarter::setPortData(JAISoundHandle* field_0, u32 field_1, u16 f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundStarter::getPortData(JAISoundHandle* field_0, u32 field_1, char field_2) {
+asm void Z2SoundStarter::getPortData(JAISoundHandle* field_0, u32 field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundStarter/getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc.s"
 }

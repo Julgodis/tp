@@ -10,16 +10,16 @@
 // 
 
 // build dMenu_Fishing_c (dMenu_Fishing_c) False/False
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
 // build CSTControl (CSTControl) False/False
 /* top-level dependencies (begin CSTControl) */
 /* top-level dependencies (end CSTControl) */
 struct CSTControl {
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
 };
 
 // build STControl (STControl) False/False
@@ -29,13 +29,13 @@ struct STControl {
 };
 
 /* top-level dependencies (begin dMenu_Fishing_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Fishing_c) */
 struct dMenu_Fishing_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
 	/* 801C4D54 */ dMenu_Fishing_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801C4D98 */ ~dMenu_Fishing_c();
@@ -52,8 +52,8 @@ struct dMenu_Fishing_c {
 	/* 801C5D3C */ void screenSetDoIcon();
 	/* 801C5EB8 */ void setAButtonString(u16);
 	/* 801C5F68 */ void setBButtonString(u16);
-	/* 801C6018 */ void getFigure(s32);
-	/* 801C605C */ void setFishParam(s32, u16, char);
+	/* 801C6018 */ void getFigure(int);
+	/* 801C605C */ void setFishParam(int, u16, u8);
 	/* 801C6210 */ void setHIO(bool);
 	/* 801C659C */ void draw();
 };
@@ -74,7 +74,7 @@ struct JKRHeap {
 /* top-level dependencies (end mDoDvdThd_mountArchive_c) */
 struct mDoDvdThd_mountArchive_c {
 	// JKRHeap
-	/* 80015E14 */ void create(char const*, char, JKRHeap*);
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
 // build dMeter2Info_c (dMeter2Info_c) False/False
@@ -102,6 +102,7 @@ struct dMsgString_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -127,15 +128,14 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 };
 
@@ -172,6 +172,7 @@ struct J2DPicture {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // 
@@ -239,7 +240,6 @@ void mDoExt_getSubFont();
 void dPaneClass_showNullPane(J2DScreen*);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void __ptmf_scall();
 extern "C" void _savegpr_18();
 extern "C" void _savegpr_23();
@@ -660,7 +660,7 @@ asm void dMenu_Fishing_c::setBButtonString(u16 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fishing_c::getFigure(s32 field_0) {
+asm void dMenu_Fishing_c::getFigure(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/getFigure__15dMenu_Fishing_cFi.s"
 }
@@ -671,7 +671,7 @@ asm void dMenu_Fishing_c::getFigure(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fishing_c::setFishParam(s32 field_0, u16 field_1, char field_2) {
+asm void dMenu_Fishing_c::setFishParam(int field_0, u16 field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_fishing/setFishParam__15dMenu_Fishing_cFiUsUc.s"
 }

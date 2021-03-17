@@ -14,7 +14,7 @@
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
@@ -24,7 +24,7 @@ struct JKRHeap {
 struct cMl {
 	// JKRHeap
 	/* 80263220 */ void init(JKRHeap*);
-	/* 80263228 */ void memalignB(s32, u32);
+	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);
 };
 
@@ -71,7 +71,7 @@ asm void cMl::init(JKRHeap* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cMl::memalignB(s32 field_0, u32 field_1) {
+asm void cMl::memalignB(int field_0, u32 field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_malloc/memalignB__3cMlFiUl.s"
 }

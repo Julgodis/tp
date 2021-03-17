@@ -52,7 +52,7 @@ struct J3DMaterialTable {
 struct mDoExt_btkAnm {
 	// J3DAnmTextureSRTKey
 	// J3DMaterialTable
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, s32, s32, f32, s16, s16);
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
@@ -73,32 +73,32 @@ struct J3DAnmTevRegKey {
 struct mDoExt_brkAnm {
 	// J3DAnmTevRegKey
 	// J3DMaterialTable
-	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, s32, s32, f32, s16, s16);
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
 // build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
 // build mDoExt_bckAnm (mDoExt_bckAnm) False/False
-// build J3DAnmTransform (J3DAnmTransform) False/False
-/* top-level dependencies (begin J3DAnmTransform) */
-/* top-level dependencies (end J3DAnmTransform) */
-struct J3DAnmTransform {
-};
-
 // build J3DModelData (J3DModelData) False/False
 /* top-level dependencies (begin J3DModelData) */
 /* top-level dependencies (end J3DModelData) */
 struct J3DModelData {
 };
 
+// build J3DAnmTransform (J3DAnmTransform) False/False
+/* top-level dependencies (begin J3DAnmTransform) */
+/* top-level dependencies (end J3DAnmTransform) */
+struct J3DAnmTransform {
+};
+
 /* top-level dependencies (begin mDoExt_bckAnm) */
-// outer dependency: J3DAnmTransform
 // outer dependency: J3DModelData
+// outer dependency: J3DAnmTransform
 /* top-level dependencies (end mDoExt_bckAnm) */
 struct mDoExt_bckAnm {
-	// J3DAnmTransform
 	// J3DModelData
-	/* 8000D7DC */ void init(J3DAnmTransform*, s32, s32, f32, s16, s16, bool);
+	// J3DAnmTransform
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
@@ -151,15 +151,16 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
 // build dPa_control_c (dPa_control_c) False/False
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
+// build cXyz (cXyz) True/True
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
 };
 
 // build dPa_levelEcallBack (dPa_levelEcallBack) False/False
@@ -168,33 +169,32 @@ struct csXyz {
 struct dPa_levelEcallBack {
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
-// build cXyz (cXyz) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
 struct dKy_tevstr_c {
 };
 
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
 /* top-level dependencies (begin dPa_control_c) */
-// outer dependency: csXyz
-// outer dependency: dPa_levelEcallBack
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
+// outer dependency: dPa_levelEcallBack
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
-	// csXyz
-	// _GXColor
 	// dPa_levelEcallBack
-	// cXyz
 	// dKy_tevstr_c
-	/* 8004CA90 */ void set(char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	// csXyz
+	// cXyz
+	// _GXColor
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
@@ -219,19 +219,19 @@ struct dBgS {
 
 // build cBgS_PolyInfo (cBgS_PolyInfo) True/True
 // build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build J3DModelData (J3DModelData) True/True
 // build cXyz (cXyz) True/True
+// build J3DModelData (J3DModelData) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
 /* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: J3DModelData
 // outer dependency: cXyz
+// outer dependency: J3DModelData
 // outer dependency: dKy_tevstr_c
 /* top-level dependencies (end dScnKy_env_light_c) */
 struct dScnKy_env_light_c {
-	// J3DModelData
 	// cXyz
+	// J3DModelData
 	// dKy_tevstr_c
-	/* 801A37C4 */ void settingTevStruct(s32, cXyz*, dKy_tevstr_c*);
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
@@ -286,7 +286,7 @@ void mDoExt_restoreCurrentHeap();
 void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
 void fopAcM_getWaterY(cXyz const*, f32*);
 void fopKyM_Delete(void*);
-void dKy_tevstr_init(dKy_tevstr_c*, char, char);
+void dKy_tevstr_init(dKy_tevstr_c*, s8, u8);
 void operator delete(void*);
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXTrans();

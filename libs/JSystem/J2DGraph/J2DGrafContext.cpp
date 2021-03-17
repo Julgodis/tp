@@ -32,7 +32,7 @@ struct J2DGrafContext {
 	/* 802E8C44 */ void setup2D();
 	/* 802E8E20 */ void setScissor();
 	/* 802E9118 */ void setColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
-	/* 802E9234 */ void setLineWidth(char);
+	/* 802E9234 */ void setLineWidth(u8);
 	/* 802E95D4 */ ~J2DGrafContext();
 	/* 802E961C */ void place(f32, f32, f32, f32);
 	/* 802E9664 */ bool getGrafType() const;
@@ -256,7 +256,7 @@ asm void J2DGrafContext::setColor(JUtility::TColor field_0, JUtility::TColor fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DGrafContext::setLineWidth(char field_0) {
+asm void J2DGrafContext::setLineWidth(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/setLineWidth__14J2DGrafContextFUc.s"
 }

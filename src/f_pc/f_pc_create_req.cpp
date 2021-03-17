@@ -49,7 +49,7 @@ struct process_method_tag_class {
 /* top-level dependencies (begin cMl) */
 /* top-level dependencies (end cMl) */
 struct cMl {
-	/* 80263228 */ void memalignB(s32, u32);
+	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);
 };
 
@@ -57,8 +57,8 @@ struct cMl {
 // Forward References:
 // 
 
-static void fpcCtRq_isCreatingByID(create_tag*, s32*);
-void fpcCtRq_IsCreatingByID(s32);
+static void fpcCtRq_isCreatingByID(create_tag*, u32*);
+void fpcCtRq_IsCreatingByID(u32);
 static void fpcCtRq_CreateQTo(create_request*);
 static void fpcCtRq_ToCreateQ(create_request*);
 static void fpcCtRq_Delete(create_request*);
@@ -127,7 +127,7 @@ extern "C" void _restgpr_29();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcCtRq_isCreatingByID(create_tag* field_0, s32* field_1) {
+asm static void fpcCtRq_isCreatingByID(create_tag* field_0, u32* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_isCreatingByID__FP10create_tagPUi.s"
 }
@@ -138,7 +138,7 @@ asm static void fpcCtRq_isCreatingByID(create_tag* field_0, s32* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtRq_IsCreatingByID(s32 field_0) {
+asm void fpcCtRq_IsCreatingByID(u32 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_create_req/fpcCtRq_IsCreatingByID__FUi.s"
 }

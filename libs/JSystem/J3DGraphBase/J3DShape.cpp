@@ -16,14 +16,23 @@
 struct _GXAttr {
 };
 
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
 /* top-level dependencies (begin J3DShape) */
 // outer dependency: _GXAttr
+// outer dependency: Vec
 /* top-level dependencies (end J3DShape) */
 struct J3DShape {
 	// _GXAttr
+	// Vec
 	/* 80314B48 */ void initialize();
 	/* 80314BB8 */ void addTexMtxIndexInDL(_GXAttr, u32);
 	/* 80314CBC */ void addTexMtxIndexInVcd(_GXAttr);
+	/* 80314DA8 */ void calcNBTScale(Vec const&, f32 (* )[3][3], f32 (* )[3][3]);
 	/* 80314E28 */ void countBumpMtxNum() const;
 	/* 80314EEC */ void loadVtxArray() const;
 	/* 80314F5C */ void isSameVcdVatCmd(J3DShape*);
@@ -38,6 +47,7 @@ struct J3DShape {
 };
 
 // build _GXAttr (_GXAttr) True/True
+// build Vec (Vec) True/True
 // build _GXVtxFmt (_GXVtxFmt) False/False
 /* top-level dependencies (begin _GXVtxFmt) */
 /* top-level dependencies (end _GXVtxFmt) */
@@ -69,8 +79,7 @@ struct J3DShapeDraw {
 // Forward References:
 // 
 
-extern "C" void calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f();
-static void J3DLoadCPCmd(char, u32);
+static void J3DLoadCPCmd(u8, u32);
 static void J3DLoadArrayBasePtr(_GXAttr, void*);
 
 extern "C" void initialize__8J3DShapeFv();
@@ -104,8 +113,8 @@ SECTION_SDATA2 extern u8 lit_687[4 + 4 /* padding */];
 
 void* operator new[](u32);
 void J3DGDSetVtxAttrFmtv(_GXVtxFmt, _GXVtxAttrFmtList const*, bool);
-extern "C" void J3DFifoLoadPosMtxImm__FPA4_fUl();
-extern "C" void J3DFifoLoadNrmMtxImm__FPA4_fUl();
+void J3DFifoLoadPosMtxImm(f32 (* )[4], u32);
+void J3DFifoLoadNrmMtxImm(f32 (* )[4], u32);
 extern "C" void OSDisableInterrupts();
 extern "C" void OSRestoreInterrupts();
 extern "C" void OSDisableScheduler();
@@ -213,7 +222,7 @@ asm void J3DShape::addTexMtxIndexInVcd(_GXAttr field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f() {
+asm void J3DShape::calcNBTScale(Vec const& field_0, f32 (* field_1)[3][3], f32 (* field_2)[3][3]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShape/calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f.s"
 }
@@ -235,7 +244,7 @@ asm void J3DShape::countBumpMtxNum() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void J3DLoadCPCmd(char field_0, u32 field_1) {
+asm static void J3DLoadCPCmd(u8 field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShape/J3DLoadCPCmd__FUcUl.s"
 }

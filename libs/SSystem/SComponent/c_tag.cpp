@@ -39,8 +39,8 @@ struct node_class {
 
 void cTg_IsUse(create_tag_class*);
 void cTg_SingleCutFromTree(create_tag_class*);
-void cTg_AdditionToTree(node_lists_tree_class*, s32, create_tag_class*);
-void cTg_InsertToTree(node_lists_tree_class*, s32, create_tag_class*, s32);
+void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*);
+void cTg_InsertToTree(node_lists_tree_class*, int, create_tag_class*, int);
 void cTg_GetFirst(node_list_class*);
 void cTg_SingleCut(create_tag_class*);
 void cTg_Addition(node_list_class*, create_tag_class*);
@@ -64,8 +64,8 @@ void cLs_Addition(node_list_class*, node_class*);
 void cLs_GetFirst(node_list_class*);
 void cNd_Create(node_class*, void*);
 void cTr_SingleCut(node_class*);
-void cTr_Addition(node_lists_tree_class*, s32, node_class*);
-void cTr_Insert(node_lists_tree_class*, s32, node_class*, s32);
+void cTr_Addition(node_lists_tree_class*, int, node_class*);
+void cTr_Insert(node_lists_tree_class*, int, node_class*, int);
 
 extern "C" void cLs_SingleCut__FP10node_class();
 extern "C" void cLs_Addition__FP15node_list_classP10node_class();
@@ -105,7 +105,7 @@ asm void cTg_SingleCutFromTree(create_tag_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cTg_AdditionToTree(node_lists_tree_class* field_0, s32 field_1, create_tag_class* field_2) {
+asm void cTg_AdditionToTree(node_lists_tree_class* field_0, int field_1, create_tag_class* field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tag/cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class.s"
 }
@@ -116,7 +116,7 @@ asm void cTg_AdditionToTree(node_lists_tree_class* field_0, s32 field_1, create_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cTg_InsertToTree(node_lists_tree_class* field_0, s32 field_1, create_tag_class* field_2, s32 field_3) {
+asm void cTg_InsertToTree(node_lists_tree_class* field_0, int field_1, create_tag_class* field_2, int field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tag/cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi.s"
 }

@@ -16,7 +16,7 @@ struct Z2SoundObjMgr {
 	/* 802BF920 */ Z2SoundObjMgr();
 	/* 802BF980 */ void setForceBattleArea(bool, u16, u16, u16);
 	/* 802BF994 */ void searchEnemy();
-	/* 802BFFEC */ void setGhostEnemyState(char);
+	/* 802BFFEC */ void setGhostEnemyState(u8);
 	/* 802C0100 */ void setBattleInit();
 	/* 802C0120 */ void checkBattleFinish();
 	/* 802C013C */ void deleteEnemyAll();
@@ -48,8 +48,8 @@ struct Z2SeqMgr {
 	/* 802B1DF4 */ void changeSubBgmStatus(s32);
 	/* 802B421C */ void setBattleSearched(bool);
 	/* 802B43E0 */ void setBattleGhostMute(bool);
-	/* 802B4498 */ void setBattleDistState(char);
-	/* 802B5204 */ void stopBattleBgm(char, char);
+	/* 802B4498 */ void setBattleDistState(u8);
+	/* 802B5204 */ void stopBattleBgm(u8, u8);
 };
 
 // build JSUPtrList (JSUPtrList) False/False
@@ -382,7 +382,7 @@ asm void Z2SoundObjMgr::searchEnemy() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SoundObjMgr::setGhostEnemyState(char field_0) {
+asm void Z2SoundObjMgr::setGhostEnemyState(u8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/setGhostEnemyState__13Z2SoundObjMgrFUc.s"
 }

@@ -32,9 +32,9 @@ struct node_list_class {
 // 
 
 void cTr_SingleCut(node_class*);
-void cTr_Addition(node_lists_tree_class*, s32, node_class*);
-void cTr_Insert(node_lists_tree_class*, s32, node_class*, s32);
-void cTr_Create(node_lists_tree_class*, node_list_class*, s32);
+void cTr_Addition(node_lists_tree_class*, int, node_class*);
+void cTr_Insert(node_lists_tree_class*, int, node_class*, int);
+void cTr_Create(node_lists_tree_class*, node_list_class*, int);
 
 extern "C" void cTr_SingleCut__FP10node_class();
 extern "C" void cTr_Addition__FP21node_lists_tree_classiP10node_class();
@@ -47,7 +47,7 @@ extern "C" void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
 
 void cLs_SingleCut(node_class*);
 void cLs_Addition(node_list_class*, node_class*);
-void cLs_Insert(node_list_class*, s32, node_class*);
+void cLs_Insert(node_list_class*, int, node_class*);
 void cLs_Create(node_list_class*);
 
 extern "C" void cLs_SingleCut__FP10node_class();
@@ -74,7 +74,7 @@ asm void cTr_SingleCut(node_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cTr_Addition(node_lists_tree_class* field_0, s32 field_1, node_class* field_2) {
+asm void cTr_Addition(node_lists_tree_class* field_0, int field_1, node_class* field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tree/cTr_Addition__FP21node_lists_tree_classiP10node_class.s"
 }
@@ -85,7 +85,7 @@ asm void cTr_Addition(node_lists_tree_class* field_0, s32 field_1, node_class* f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cTr_Insert(node_lists_tree_class* field_0, s32 field_1, node_class* field_2, s32 field_3) {
+asm void cTr_Insert(node_lists_tree_class* field_0, int field_1, node_class* field_2, int field_3) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tree/cTr_Insert__FP21node_lists_tree_classiP10node_classi.s"
 }
@@ -96,7 +96,7 @@ asm void cTr_Insert(node_lists_tree_class* field_0, s32 field_1, node_class* fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cTr_Create(node_lists_tree_class* field_0, node_list_class* field_1, s32 field_2) {
+asm void cTr_Create(node_lists_tree_class* field_0, node_list_class* field_1, int field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tree/cTr_Create__FP21node_lists_tree_classP15node_list_classi.s"
 }

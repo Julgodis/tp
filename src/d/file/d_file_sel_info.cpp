@@ -10,29 +10,29 @@
 // 
 
 // build dFile_info_c (dFile_info_c) False/False
-// build dSv_save_c (dSv_save_c) False/False
-/* top-level dependencies (begin dSv_save_c) */
-/* top-level dependencies (end dSv_save_c) */
-struct dSv_save_c {
-};
-
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
 /* top-level dependencies (end JKRArchive) */
 struct JKRArchive {
 };
 
+// build dSv_save_c (dSv_save_c) False/False
+/* top-level dependencies (begin dSv_save_c) */
+/* top-level dependencies (end dSv_save_c) */
+struct dSv_save_c {
+};
+
 /* top-level dependencies (begin dFile_info_c) */
-// outer dependency: dSv_save_c
 // outer dependency: JKRArchive
+// outer dependency: dSv_save_c
 /* top-level dependencies (end dFile_info_c) */
 struct dFile_info_c {
-	// dSv_save_c
 	// JKRArchive
-	/* 80192434 */ dFile_info_c(JKRArchive*, char);
+	// dSv_save_c
+	/* 80192434 */ dFile_info_c(JKRArchive*, u8);
 	/* 801924A0 */ ~dFile_info_c();
 	/* 80192570 */ void screenSet();
-	/* 80192954 */ void setSaveData(dSv_save_c*, s32, char);
+	/* 80192954 */ void setSaveData(dSv_save_c*, int, u8);
 	/* 80192AA0 */ void setHeartCnt(dSv_save_c*);
 	/* 80192C08 */ void setSaveDate(dSv_save_c*);
 	/* 80192C70 */ void setPlayTime(dSv_save_c*);
@@ -84,6 +84,12 @@ struct dMeter2Info_c {
 
 // build JMSMesgEntry_c (JMSMesgEntry_c) True/True
 // build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) False/False
@@ -104,20 +110,14 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
 /* top-level dependencies (begin CPaneMgrAlpha) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgrAlpha) */
 struct CPaneMgrAlpha {
-	// J2DScreen
 	// JKRExpHeap
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 };
 
 // build J2DScreen (J2DScreen) True/True
@@ -128,6 +128,7 @@ struct CPaneMgrAlpha {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // 
@@ -169,7 +170,6 @@ void mDoExt_getMesgFont();
 void mDoExt_removeMesgFont();
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void OSTicksToCalendarTime();
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXConcat();
@@ -293,7 +293,7 @@ void* const __vt__12dFile_info_c[6] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dFile_info_c::dFile_info_c(JKRArchive* field_0, char field_1) {
+asm dFile_info_c::dFile_info_c(JKRArchive* field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/file/d_file_sel_info/__ct__12dFile_info_cFP10JKRArchiveUc.s"
 }
@@ -341,7 +341,7 @@ asm void dFile_info_c::screenSet() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dFile_info_c::setSaveData(dSv_save_c* field_0, s32 field_1, char field_2) {
+asm void dFile_info_c::setSaveData(dSv_save_c* field_0, int field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/file/d_file_sel_info/setSaveData__12dFile_info_cFP10dSv_save_ciUc.s"
 }

@@ -10,16 +10,16 @@
 // 
 
 // build dMenu_Insect_c (dMenu_Insect_c) False/False
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
 // build CSTControl (CSTControl) False/False
 /* top-level dependencies (begin CSTControl) */
 /* top-level dependencies (end CSTControl) */
 struct CSTControl {
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
 };
 
 // build STControl (STControl) False/False
@@ -34,15 +34,15 @@ struct STControl {
 };
 
 /* top-level dependencies (begin dMenu_Insect_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Insect_c) */
 struct dMenu_Insect_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
-	/* 801D8114 */ dMenu_Insect_c(JKRExpHeap*, STControl*, CSTControl*, char);
+	/* 801D8114 */ dMenu_Insect_c(JKRExpHeap*, STControl*, CSTControl*, u8);
 	/* 801D82F4 */ ~dMenu_Insect_c();
 	/* 801D8658 */ void _create();
 	/* 801D86C8 */ void _move();
@@ -65,12 +65,12 @@ struct dMenu_Insect_c {
 	/* 801D98F0 */ void screenSetExplain();
 	/* 801D9BD0 */ void screenSetDoIcon();
 	/* 801D9D4C */ void getGetInsectNum();
-	/* 801D9DCC */ void getInsectItemID(s32, s32);
-	/* 801D9DE4 */ void isGetInsect(s32, s32);
-	/* 801D9E20 */ void isGiveInsect(s32, s32);
-	/* 801D9E7C */ void isCatchInsect(char);
-	/* 801D9ED4 */ void isGiveInsect(char);
-	/* 801D9F3C */ void isCatchNotGiveInsect(char);
+	/* 801D9DCC */ void getInsectItemID(int, int);
+	/* 801D9DE4 */ void isGetInsect(int, int);
+	/* 801D9E20 */ void isGiveInsect(int, int);
+	/* 801D9E7C */ void isCatchInsect(u8);
+	/* 801D9ED4 */ void isGiveInsect(u8);
+	/* 801D9F3C */ void isCatchNotGiveInsect(u8);
 	/* 801D9F8C */ void cursorMove();
 	/* 801DA1EC */ void setCursorPos();
 	/* 801DA2FC */ bool dpdMove();
@@ -87,7 +87,7 @@ struct dMenu_Insect_c {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
@@ -98,14 +98,14 @@ struct JKRHeap {
 /* top-level dependencies (end mDoDvdThd_mountArchive_c) */
 struct mDoDvdThd_mountArchive_c {
 	// JKRHeap
-	/* 80015E14 */ void create(char const*, char, JKRHeap*);
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
 // build dSv_player_get_item_c (dSv_player_get_item_c) False/False
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(char) const;
+	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -116,26 +116,26 @@ struct dSv_event_c {
 };
 
 // build dSelect_cursor_c (dSelect_cursor_c) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
 // build J2DPane (J2DPane) False/False
 /* top-level dependencies (begin J2DPane) */
 /* top-level dependencies (end J2DPane) */
 struct J2DPane {
 };
 
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
 /* top-level dependencies (begin dSelect_cursor_c) */
-// outer dependency: JKRArchive
 // outer dependency: J2DPane
+// outer dependency: JKRArchive
 /* top-level dependencies (end dSelect_cursor_c) */
 struct dSelect_cursor_c {
-	// JKRArchive
 	// J2DPane
-	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	// JKRArchive
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801951C8 */ void setScale(f32);
@@ -145,16 +145,16 @@ struct dSelect_cursor_c {
 // build JKRArchive (JKRArchive) True/True
 // build J2DPane (J2DPane) True/True
 // build dMeter2Info_c (dMeter2Info_c) False/False
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
-struct JUTFont {
-};
-
 // build JMSMesgEntry_c (JMSMesgEntry_c) False/False
 /* top-level dependencies (begin JMSMesgEntry_c) */
 /* top-level dependencies (end JMSMesgEntry_c) */
 struct JMSMesgEntry_c {
+};
+
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
 };
 
 // build J2DPicture (J2DPicture) False/False
@@ -173,18 +173,18 @@ struct J2DPicture {
 };
 
 /* top-level dependencies (begin dMeter2Info_c) */
-// outer dependency: JUTFont
 // outer dependency: JMSMesgEntry_c
+// outer dependency: JUTFont
 // outer dependency: J2DPicture
 /* top-level dependencies (end dMeter2Info_c) */
 struct dMeter2Info_c {
-	// JUTFont
 	// JMSMesgEntry_c
+	// JUTFont
 	// J2DPicture
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 	/* 8021C7FC */ void getStringLength(JUTFont*, f32, f32, char*);
-	/* 8021CF08 */ void readItemTexture(char, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, s32);
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
 // build JMSMesgEntry_c (JMSMesgEntry_c) True/True
@@ -200,8 +200,8 @@ struct dMsgScrn3Select_c {
 	/* 80239D08 */ void setRubyString(char*, char*, char*);
 	/* 80239D98 */ void translate(f32, f32);
 	/* 80239DD4 */ void draw(f32, f32);
-	/* 8023A094 */ void selAnimeInit(char, char, char, f32, char);
-	/* 8023A398 */ void selAnimeMove(char, char, bool);
+	/* 8023A094 */ void selAnimeInit(u8, u8, u8, f32, u8);
+	/* 8023A398 */ void selAnimeMove(u8, u8, bool);
 	/* 8023A680 */ void selAnimeEnd();
 	/* 8023A934 */ void getTextBoxWidth();
 	/* 8023A94C */ void getFontSize();
@@ -217,6 +217,8 @@ struct dMsgString_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DPane (J2DPane) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) False/False
@@ -237,18 +239,16 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DPane (J2DPane) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
@@ -262,30 +262,30 @@ struct CPaneMgrAlpha {
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
-	/* 80255878 */ void alphaAnime(s16, char, char, char);
+	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -297,6 +297,7 @@ struct Z2SeMgr {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // 
@@ -391,7 +392,6 @@ void dMeter2Info_set2DVibration();
 void dPaneClass_showNullPane(J2DScreen*);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void __ptmf_scall();
 extern "C" void _savegpr_24();
 extern "C" void _savegpr_26();
@@ -695,7 +695,7 @@ u8 d_menu_d_menu_insect__lit_3837[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dMenu_Insect_c::dMenu_Insect_c(JKRExpHeap* field_0, STControl* field_1, CSTControl* field_2, char field_3) {
+asm dMenu_Insect_c::dMenu_Insect_c(JKRExpHeap* field_0, STControl* field_1, CSTControl* field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_insect/__ct__14dMenu_Insect_cFP10JKRExpHeapP9STControlP10CSTControlUc.s"
 }
@@ -979,7 +979,7 @@ asm void dMenu_Insect_c::getGetInsectNum() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Insect_c::getInsectItemID(s32 field_0, s32 field_1) {
+asm void dMenu_Insect_c::getInsectItemID(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_insect/getInsectItemID__14dMenu_Insect_cFii.s"
 }
@@ -990,7 +990,7 @@ asm void dMenu_Insect_c::getInsectItemID(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Insect_c::isGetInsect(s32 field_0, s32 field_1) {
+asm void dMenu_Insect_c::isGetInsect(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_insect/isGetInsect__14dMenu_Insect_cFii.s"
 }
@@ -1001,7 +1001,7 @@ asm void dMenu_Insect_c::isGetInsect(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Insect_c::isGiveInsect(s32 field_0, s32 field_1) {
+asm void dMenu_Insect_c::isGiveInsect(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_insect/isGiveInsect__14dMenu_Insect_cFii.s"
 }
@@ -1012,7 +1012,7 @@ asm void dMenu_Insect_c::isGiveInsect(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Insect_c::isCatchInsect(char field_0) {
+asm void dMenu_Insect_c::isCatchInsect(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_insect/isCatchInsect__14dMenu_Insect_cFUc.s"
 }
@@ -1023,7 +1023,7 @@ asm void dMenu_Insect_c::isCatchInsect(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Insect_c::isGiveInsect(char field_0) {
+asm void dMenu_Insect_c::isGiveInsect(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_insect/isGiveInsect__14dMenu_Insect_cFUc.s"
 }
@@ -1034,7 +1034,7 @@ asm void dMenu_Insect_c::isGiveInsect(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Insect_c::isCatchNotGiveInsect(char field_0) {
+asm void dMenu_Insect_c::isCatchNotGiveInsect(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_insect/isCatchNotGiveInsect__14dMenu_Insect_cFUc.s"
 }

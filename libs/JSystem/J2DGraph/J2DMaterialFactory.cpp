@@ -10,6 +10,14 @@
 // 
 
 // build J2DMaterialFactory (J2DMaterialFactory) False/False
+// build J2DMaterial (J2DMaterial) False/False
+/* top-level dependencies (begin J2DMaterial) */
+/* top-level dependencies (end J2DMaterial) */
+struct J2DMaterial {
+	/* 802EA410 */ void createTevBlock(int, bool);
+	/* 802EA5C4 */ void createIndBlock(int, bool);
+};
+
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
 /* top-level dependencies (end JKRArchive) */
@@ -24,14 +32,6 @@ struct J2DResReference {
 	/* 8030CF44 */ void getName(u16) const;
 };
 
-// build J2DMaterial (J2DMaterial) False/False
-/* top-level dependencies (begin J2DMaterial) */
-/* top-level dependencies (end J2DMaterial) */
-struct J2DMaterial {
-	/* 802EA410 */ void createTevBlock(s32, bool);
-	/* 802EA5C4 */ void createIndBlock(s32, bool);
-};
-
 // build J2DMaterialBlock (J2DMaterialBlock) False/False
 /* top-level dependencies (begin J2DMaterialBlock) */
 /* top-level dependencies (end J2DMaterialBlock) */
@@ -39,42 +39,42 @@ struct J2DMaterialBlock {
 };
 
 /* top-level dependencies (begin J2DMaterialFactory) */
+// outer dependency: J2DMaterial
 // outer dependency: JKRArchive
 // outer dependency: J2DResReference
-// outer dependency: J2DMaterial
 // outer dependency: J2DMaterialBlock
 /* top-level dependencies (end J2DMaterialFactory) */
 struct J2DMaterialFactory {
+	// J2DMaterial
 	// JKRArchive
 	// J2DResReference
-	// J2DMaterial
 	// J2DMaterialBlock
 	/* 802F2AD0 */ J2DMaterialFactory(J2DMaterialBlock const&);
-	/* 802F2C94 */ void countStages(s32) const;
-	/* 802F2D1C */ void create(J2DMaterial*, s32, u32, J2DResReference*, J2DResReference*, JKRArchive*) const;
-	/* 802F362C */ void newMatColor(s32, s32) const;
-	/* 802F36CC */ void newColorChanNum(s32) const;
-	/* 802F3704 */ void newColorChan(s32, s32) const;
-	/* 802F3758 */ void newTexGenNum(s32) const;
-	/* 802F3790 */ void newTexCoord(s32, s32) const;
-	/* 802F3804 */ void newTexMtx(s32, s32) const;
-	/* 802F38E0 */ void newCullMode(s32) const;
-	/* 802F3920 */ void newTexNo(s32, s32) const;
-	/* 802F3968 */ void newFontNo(s32) const;
-	/* 802F39A8 */ void newTevOrder(s32, s32) const;
-	/* 802F3A1C */ void newTevColor(s32, s32) const;
-	/* 802F3AB4 */ void newTevKColor(s32, s32) const;
-	/* 802F3B54 */ void newTevStageNum(s32) const;
-	/* 802F3B8C */ void newTevStage(s32, s32) const;
-	/* 802F3BEC */ void newTevSwapModeTable(s32, s32) const;
-	/* 802F3C88 */ void newIndTexStageNum(s32) const;
-	/* 802F3CB8 */ void newIndTexOrder(s32, s32) const;
-	/* 802F3D20 */ void newIndTexMtx(s32, s32) const;
-	/* 802F3E24 */ void newIndTevStage(s32, s32) const;
-	/* 802F3F78 */ void newIndTexCoordScale(s32, s32) const;
-	/* 802F3FE0 */ void newAlphaComp(s32) const;
-	/* 802F405C */ void newBlend(s32) const;
-	/* 802F40D8 */ void newDither(s32) const;
+	/* 802F2C94 */ void countStages(int) const;
+	/* 802F2D1C */ void create(J2DMaterial*, int, u32, J2DResReference*, J2DResReference*, JKRArchive*) const;
+	/* 802F362C */ void newMatColor(int, int) const;
+	/* 802F36CC */ void newColorChanNum(int) const;
+	/* 802F3704 */ void newColorChan(int, int) const;
+	/* 802F3758 */ void newTexGenNum(int) const;
+	/* 802F3790 */ void newTexCoord(int, int) const;
+	/* 802F3804 */ void newTexMtx(int, int) const;
+	/* 802F38E0 */ void newCullMode(int) const;
+	/* 802F3920 */ void newTexNo(int, int) const;
+	/* 802F3968 */ void newFontNo(int) const;
+	/* 802F39A8 */ void newTevOrder(int, int) const;
+	/* 802F3A1C */ void newTevColor(int, int) const;
+	/* 802F3AB4 */ void newTevKColor(int, int) const;
+	/* 802F3B54 */ void newTevStageNum(int) const;
+	/* 802F3B8C */ void newTevStage(int, int) const;
+	/* 802F3BEC */ void newTevSwapModeTable(int, int) const;
+	/* 802F3C88 */ void newIndTexStageNum(int) const;
+	/* 802F3CB8 */ void newIndTexOrder(int, int) const;
+	/* 802F3D20 */ void newIndTexMtx(int, int) const;
+	/* 802F3E24 */ void newIndTevStage(int, int) const;
+	/* 802F3F78 */ void newIndTexCoordScale(int, int) const;
+	/* 802F3FE0 */ void newAlphaComp(int) const;
+	/* 802F405C */ void newBlend(int) const;
+	/* 802F40D8 */ void newDither(int) const;
 };
 
 // build J2DMaterialBlock (J2DMaterialBlock) True/True
@@ -250,7 +250,7 @@ asm J2DMaterialFactory::J2DMaterialFactory(J2DMaterialBlock const& field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::countStages(s32 field_0) const {
+asm void J2DMaterialFactory::countStages(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/countStages__18J2DMaterialFactoryCFi.s"
 }
@@ -261,7 +261,7 @@ asm void J2DMaterialFactory::countStages(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::create(J2DMaterial* field_0, s32 field_1, u32 field_2, J2DResReference* field_3, J2DResReference* field_4, JKRArchive* field_5) const {
+asm void J2DMaterialFactory::create(J2DMaterial* field_0, int field_1, u32 field_2, J2DResReference* field_3, J2DResReference* field_4, JKRArchive* field_5) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F2D1C.s"
 }
@@ -276,7 +276,7 @@ u32 lit_1887 = 0xFFFFFFFF;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newMatColor(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newMatColor(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newMatColor__18J2DMaterialFactoryCFii.s"
 }
@@ -287,7 +287,7 @@ asm void J2DMaterialFactory::newMatColor(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newColorChanNum(s32 field_0) const {
+asm void J2DMaterialFactory::newColorChanNum(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newColorChanNum__18J2DMaterialFactoryCFi.s"
 }
@@ -298,7 +298,7 @@ asm void J2DMaterialFactory::newColorChanNum(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newColorChan(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newColorChan(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newColorChan__18J2DMaterialFactoryCFii.s"
 }
@@ -309,7 +309,7 @@ asm void J2DMaterialFactory::newColorChan(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newTexGenNum(s32 field_0) const {
+asm void J2DMaterialFactory::newTexGenNum(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newTexGenNum__18J2DMaterialFactoryCFi.s"
 }
@@ -320,7 +320,7 @@ asm void J2DMaterialFactory::newTexGenNum(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newTexCoord(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newTexCoord(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newTexCoord__18J2DMaterialFactoryCFii.s"
 }
@@ -331,7 +331,7 @@ asm void J2DMaterialFactory::newTexCoord(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newTexMtx(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newTexMtx(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newTexMtx__18J2DMaterialFactoryCFii.s"
 }
@@ -342,7 +342,7 @@ asm void J2DMaterialFactory::newTexMtx(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newCullMode(s32 field_0) const {
+asm void J2DMaterialFactory::newCullMode(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newCullMode__18J2DMaterialFactoryCFi.s"
 }
@@ -353,7 +353,7 @@ asm void J2DMaterialFactory::newCullMode(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newTexNo(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newTexNo(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newTexNo__18J2DMaterialFactoryCFii.s"
 }
@@ -364,7 +364,7 @@ asm void J2DMaterialFactory::newTexNo(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newFontNo(s32 field_0) const {
+asm void J2DMaterialFactory::newFontNo(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newFontNo__18J2DMaterialFactoryCFi.s"
 }
@@ -375,7 +375,7 @@ asm void J2DMaterialFactory::newFontNo(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newTevOrder(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newTevOrder(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newTevOrder__18J2DMaterialFactoryCFii.s"
 }
@@ -393,7 +393,7 @@ u8 data_80456BB4[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newTevColor(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newTevColor(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newTevColor__18J2DMaterialFactoryCFii.s"
 }
@@ -408,7 +408,7 @@ u32 lit_2039 = 0xFFFFFFFF;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newTevKColor(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newTevKColor(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newTevKColor__18J2DMaterialFactoryCFii.s"
 }
@@ -419,7 +419,7 @@ asm void J2DMaterialFactory::newTevKColor(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newTevStageNum(s32 field_0) const {
+asm void J2DMaterialFactory::newTevStageNum(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newTevStageNum__18J2DMaterialFactoryCFi.s"
 }
@@ -430,7 +430,7 @@ asm void J2DMaterialFactory::newTevStageNum(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newTevStage(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newTevStage(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newTevStage__18J2DMaterialFactoryCFii.s"
 }
@@ -441,7 +441,7 @@ asm void J2DMaterialFactory::newTevStage(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newTevSwapModeTable(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newTevSwapModeTable(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newTevSwapModeTable__18J2DMaterialFactoryCFii.s"
 }
@@ -452,7 +452,7 @@ asm void J2DMaterialFactory::newTevSwapModeTable(s32 field_0, s32 field_1) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newIndTexStageNum(s32 field_0) const {
+asm void J2DMaterialFactory::newIndTexStageNum(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newIndTexStageNum__18J2DMaterialFactoryCFi.s"
 }
@@ -463,7 +463,7 @@ asm void J2DMaterialFactory::newIndTexStageNum(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newIndTexOrder(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newIndTexOrder(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newIndTexOrder__18J2DMaterialFactoryCFii.s"
 }
@@ -474,7 +474,7 @@ asm void J2DMaterialFactory::newIndTexOrder(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newIndTexMtx(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newIndTexMtx(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newIndTexMtx__18J2DMaterialFactoryCFii.s"
 }
@@ -485,7 +485,7 @@ asm void J2DMaterialFactory::newIndTexMtx(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newIndTevStage(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newIndTevStage(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newIndTevStage__18J2DMaterialFactoryCFii.s"
 }
@@ -496,7 +496,7 @@ asm void J2DMaterialFactory::newIndTevStage(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newIndTexCoordScale(s32 field_0, s32 field_1) const {
+asm void J2DMaterialFactory::newIndTexCoordScale(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newIndTexCoordScale__18J2DMaterialFactoryCFii.s"
 }
@@ -507,7 +507,7 @@ asm void J2DMaterialFactory::newIndTexCoordScale(s32 field_0, s32 field_1) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newAlphaComp(s32 field_0) const {
+asm void J2DMaterialFactory::newAlphaComp(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newAlphaComp__18J2DMaterialFactoryCFi.s"
 }
@@ -518,7 +518,7 @@ asm void J2DMaterialFactory::newAlphaComp(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newBlend(s32 field_0) const {
+asm void J2DMaterialFactory::newBlend(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newBlend__18J2DMaterialFactoryCFi.s"
 }
@@ -529,7 +529,7 @@ asm void J2DMaterialFactory::newBlend(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DMaterialFactory::newDither(s32 field_0) const {
+asm void J2DMaterialFactory::newDither(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/newDither__18J2DMaterialFactoryCFi.s"
 }

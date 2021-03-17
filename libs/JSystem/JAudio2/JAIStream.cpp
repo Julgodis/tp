@@ -14,7 +14,7 @@
 /* top-level dependencies (end JASAramStream) */
 struct JASAramStream {
 	/* 802963A8 */ JASAramStream();
-	/* 8029655C */ void prepare(s32, s32);
+	/* 8029655C */ void prepare(s32, int);
 	/* 80296618 */ void start();
 	/* 8029664C */ void stop(u16);
 	/* 80296684 */ void pause(bool);
@@ -22,25 +22,25 @@ struct JASAramStream {
 };
 
 // build JAIStream (JAIStream) False/False
-// build JAISoundActivity (JAISoundActivity) False/False
-/* top-level dependencies (begin JAISoundActivity) */
-/* top-level dependencies (end JAISoundActivity) */
-struct JAISoundActivity {
-};
-
 // build JASSoundParams (JASSoundParams) False/False
 /* top-level dependencies (begin JASSoundParams) */
 /* top-level dependencies (end JASSoundParams) */
 struct JASSoundParams {
 };
 
+// build JAISoundActivity (JAISoundActivity) False/False
+/* top-level dependencies (begin JAISoundActivity) */
+/* top-level dependencies (end JAISoundActivity) */
+struct JAISoundActivity {
+};
+
 /* top-level dependencies (begin JAIStream) */
-// outer dependency: JAISoundActivity
 // outer dependency: JASSoundParams
+// outer dependency: JAISoundActivity
 /* top-level dependencies (end JAIStream) */
 struct JAIStream {
-	// JAISoundActivity
 	// JASSoundParams
+	// JAISoundActivity
 	/* 802A3230 */ void prepare_prepareStream_();
 	/* 802A33F4 */ void prepare_();
 	/* 802A3498 */ void prepare_startStream_();
@@ -49,10 +49,10 @@ struct JAIStream {
 	/* 802A37FC */ void JAISound_tryDie_();
 	/* 802A388C */ void JAIStreamMgr_calc_();
 	/* 802A3948 */ s32 getNumChild() const;
-	/* 802A3950 */ void getChild(s32);
-	/* 802A3A24 */ void releaseChild(s32);
+	/* 802A3950 */ void getChild(int);
+	/* 802A3A24 */ void releaseChild(int);
 	/* 802A3ABC */ bool getTrack();
-	/* 802A3AC4 */ bool getChildTrack(s32);
+	/* 802A3AC4 */ bool getChildTrack(int);
 	/* 802A3ACC */ void asStream();
 	/* 802A3AD0 */ bool getTempoMgr();
 };
@@ -337,7 +337,7 @@ s32 JAIStream::getNumChild() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAIStream::getChild(s32 field_0) {
+asm void JAIStream::getChild(int field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/getChild__9JAIStreamFi.s"
 }
@@ -348,7 +348,7 @@ asm void JAIStream::getChild(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAIStream::releaseChild(s32 field_0) {
+asm void JAIStream::releaseChild(int field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAIStream/releaseChild__9JAIStreamFi.s"
 }
@@ -362,7 +362,7 @@ bool JAIStream::getTrack() {
 
 
 /* 802A3AC4-802A3ACC 0008+00 rc=1 efc=0 .text      getChildTrack__9JAIStreamFi                                  */
-bool JAIStream::getChildTrack(s32 field_0) {
+bool JAIStream::getChildTrack(int field_0) {
 	return false;
 }
 

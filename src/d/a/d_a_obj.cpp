@@ -10,14 +10,6 @@
 // 
 
 // build daObj (daObj) False/False
-// build dCcD_GObjInf (dCcD_GObjInf) False/False
-/* top-level dependencies (begin dCcD_GObjInf) */
-/* top-level dependencies (end dCcD_GObjInf) */
-struct dCcD_GObjInf {
-	/* 800844F8 */ void GetTgHitObj();
-	/* 8008457C */ void GetTgHitObjSe();
-};
-
 // build cXyz (cXyz) False/False
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
@@ -37,6 +29,14 @@ struct cXyz {
 	/* 80266CBC */ void outprod(Vec const&) const;
 };
 
+// build dCcD_GObjInf (dCcD_GObjInf) False/False
+/* top-level dependencies (begin dCcD_GObjInf) */
+/* top-level dependencies (end dCcD_GObjInf) */
+struct dCcD_GObjInf {
+	/* 800844F8 */ void GetTgHitObj();
+	/* 8008457C */ void GetTgHitObjSe();
+};
+
 // build fopAc_ac_c (fopAc_ac_c) False/False
 /* top-level dependencies (begin fopAc_ac_c) */
 /* top-level dependencies (end fopAc_ac_c) */
@@ -50,17 +50,17 @@ struct Quaternion {
 };
 
 /* top-level dependencies (begin daObj) */
-// outer dependency: dCcD_GObjInf
 // outer dependency: cXyz
+// outer dependency: dCcD_GObjInf
 // outer dependency: fopAc_ac_c
 // outer dependency: Quaternion
 /* top-level dependencies (end daObj) */
 struct daObj {
-	// dCcD_GObjInf
 	// cXyz
+	// dCcD_GObjInf
 	// fopAc_ac_c
 	// Quaternion
-	/* 80037038 */ void eff_break_tsubo(fopAc_ac_c*, cXyz, s32);
+	/* 80037038 */ void eff_break_tsubo(fopAc_ac_c*, cXyz, int);
 	/* 80037180 */ void make_eff_break_kotubo(fopAc_ac_c*);
 	/* 80037210 */ void make_eff_break_kotubo2(fopAc_ac_c*);
 	/* 800372A0 */ void make_eff_break_gm_kotubo(fopAc_ac_c*);
@@ -68,7 +68,7 @@ struct daObj {
 	/* 800373C0 */ void posMoveF_stream(fopAc_ac_c*, cXyz const*, cXyz const*, f32, f32);
 	/* 80037620 */ void posMoveF_grade(fopAc_ac_c*, cXyz const*, cXyz const*, f32, f32, cXyz const*, f32, f32, cXyz const*);
 	/* 80037788 */ void quat_rotBaseY(Quaternion*, cXyz const&);
-	/* 80037900 */ void HitSeStart(cXyz const*, s32, dCcD_GObjInf const*, u32);
+	/* 80037900 */ void HitSeStart(cXyz const*, int, dCcD_GObjInf const*, u32);
 };
 
 // build fopAc_ac_c (fopAc_ac_c) True/True
@@ -101,11 +101,17 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
 // build dPa_modelEcallBack (dPa_modelEcallBack) False/False
+// build dKy_tevstr_c (dKy_tevstr_c) False/False
+/* top-level dependencies (begin dKy_tevstr_c) */
+/* top-level dependencies (end dKy_tevstr_c) */
+struct dKy_tevstr_c {
+};
+
 // build J3DModelData (J3DModelData) False/False
 /* top-level dependencies (begin J3DModelData) */
 /* top-level dependencies (end J3DModelData) */
@@ -118,32 +124,27 @@ struct J3DModelData {
 struct JPABaseEmitter {
 };
 
-// build dKy_tevstr_c (dKy_tevstr_c) False/False
-/* top-level dependencies (begin dKy_tevstr_c) */
-/* top-level dependencies (end dKy_tevstr_c) */
-struct dKy_tevstr_c {
-};
-
 /* top-level dependencies (begin dPa_modelEcallBack) */
+// outer dependency: dKy_tevstr_c
 // outer dependency: J3DModelData
 // outer dependency: JPABaseEmitter
-// outer dependency: dKy_tevstr_c
 /* top-level dependencies (end dPa_modelEcallBack) */
 struct dPa_modelEcallBack {
+	// dKy_tevstr_c
 	// J3DModelData
 	// JPABaseEmitter
-	// dKy_tevstr_c
-	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, char, void*, char, char);
+	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
 // build JPABaseEmitter (JPABaseEmitter) True/True
 // build J3DModelData (J3DModelData) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
 // build dPa_control_c (dPa_control_c) False/False
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
+// build cXyz (cXyz) True/True
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
 };
 
 // build dPa_levelEcallBack (dPa_levelEcallBack) False/False
@@ -152,28 +153,27 @@ struct csXyz {
 struct dPa_levelEcallBack {
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
+// build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
 };
 
-// build cXyz (cXyz) True/True
-// build dKy_tevstr_c (dKy_tevstr_c) True/True
 /* top-level dependencies (begin dPa_control_c) */
-// outer dependency: csXyz
-// outer dependency: dPa_levelEcallBack
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
+// outer dependency: dPa_levelEcallBack
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
-	// csXyz
-	// _GXColor
 	// dPa_levelEcallBack
-	// cXyz
 	// dKy_tevstr_c
-	/* 8004CA90 */ void set(char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	// csXyz
+	// cXyz
+	// _GXColor
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 // build csXyz (csXyz) True/True
@@ -195,21 +195,21 @@ struct daPy_py_c {
 
 // build Vec (Vec) True/True
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -254,7 +254,7 @@ SECTION_SDATA2 extern f32 d_a_d_a_obj__lit_3956;
 // 
 
 void fopAcM_posMove(fopAc_ac_c*, cXyz const*);
-void dComIfGp_getReverb(s32);
+void dComIfGp_getReverb(int);
 void cM_atan2s(f32, f32);
 void cM3d_CrawVec(Vec const&, Vec const&, Vec*);
 extern "C" void PSVECAdd();
@@ -342,7 +342,7 @@ f32 lit_3671 = 1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj::eff_break_tsubo(fopAc_ac_c* field_0, cXyz field_1, s32 field_2) {
+asm void daObj::eff_break_tsubo(fopAc_ac_c* field_0, cXyz field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_obj/eff_break_tsubo__5daObjFP10fopAc_ac_c4cXyzi.s"
 }
@@ -498,7 +498,7 @@ asm void daObj::quat_rotBaseY(Quaternion* field_0, cXyz const& field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj::HitSeStart(cXyz const* field_0, s32 field_1, dCcD_GObjInf const* field_2, u32 field_3) {
+asm void daObj::HitSeStart(cXyz const* field_0, int field_1, dCcD_GObjInf const* field_2, u32 field_3) {
 	nofralloc
 #include "asm/d/a/d_a_obj/HitSeStart__5daObjFPC4cXyziPC12dCcD_GObjInfUl.s"
 }

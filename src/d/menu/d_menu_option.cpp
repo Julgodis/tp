@@ -74,15 +74,15 @@ struct dMenu_Option_c {
 	/* 801E5434 */ void calibration_close1_move();
 	/* 801E5478 */ void calibration_close2_move();
 	/* 801E5494 */ void menuVisible();
-	/* 801E54F8 */ void menuShow(s32);
-	/* 801E55B8 */ void menuHide(s32);
+	/* 801E54F8 */ void menuShow(int);
+	/* 801E55B8 */ void menuHide(int);
 	/* 801E5678 */ void screenSet();
 	/* 801E6FBC */ void setSoundMode(u32);
 	/* 801E7004 */ void setAttenString();
 	/* 801E70E8 */ void setVibString();
 	/* 801E71CC */ void setSoundString();
-	/* 801E7314 */ void setCursorPos(char);
-	/* 801E73D8 */ void setSelectColor(char, bool);
+	/* 801E7314 */ void setCursorPos(u8);
+	/* 801E73D8 */ void setSelectColor(u8, bool);
 	/* 801E76EC */ void getSelectType();
 	/* 801E7718 */ void changeBarColor(bool);
 	/* 801E78B8 */ void setHIO(bool);
@@ -95,15 +95,15 @@ struct dMenu_Option_c {
 	/* 801E80AC */ bool dpdMenuMove();
 	/* 801E80B4 */ void paneResize(u64);
 	/* 801E8210 */ void initialize();
-	/* 801E82C4 */ void yesnoMenuMoveAnmInitSet(s32, s32);
+	/* 801E82C4 */ void yesnoMenuMoveAnmInitSet(int, int);
 	/* 801E8438 */ void yesnoMenuMoveAnm();
 	/* 801E85D4 */ void yesnoSelectMoveAnm();
 	/* 801E8888 */ void yesnoCursorShow();
 	/* 801E89F8 */ void yesNoSelectStart();
 	/* 801E8AC8 */ void yesnoSelectAnmSet();
 	/* 801E8C38 */ void yesnoCancelAnmSet();
-	/* 801E8CB0 */ void yesnoWakuAlpahAnmInit(char, char, char, char);
-	/* 801E8CFC */ void yesnoWakuAlpahAnm(char);
+	/* 801E8CB0 */ void yesnoWakuAlpahAnmInit(u8, u8, u8, u8);
+	/* 801E8CFC */ void yesnoWakuAlpahAnm(u8);
 	/* 801E8E6C */ void draw();
 };
 
@@ -121,7 +121,7 @@ struct JKRHeap {
 /* top-level dependencies (end mDoDvdThd_mountArchive_c) */
 struct mDoDvdThd_mountArchive_c {
 	// JKRHeap
-	/* 80015E14 */ void create(char const*, char, JKRHeap*);
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
 // build JKRHeap (JKRHeap) True/True
@@ -129,7 +129,7 @@ struct mDoDvdThd_mountArchive_c {
 /* top-level dependencies (begin dComIfG_play_c) */
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	/* 8002B3A8 */ void setNowVibration(char);
+	/* 8002B3A8 */ void setNowVibration(u8);
 	/* 8002B3B0 */ void getNowVibration();
 };
 
@@ -138,12 +138,11 @@ struct dComIfG_play_c {
 /* top-level dependencies (end dSv_player_config_c) */
 struct dSv_player_config_c {
 	/* 80034684 */ void getSound();
-	/* 8003468C */ void setSound(char);
-	/* 8003469C */ void setVibration(char);
+	/* 8003468C */ void setSound(u8);
+	/* 8003469C */ void setVibration(u8);
 };
 
 // build dFile_warning_c (dFile_warning_c) False/False
-// build JKRArchive (JKRArchive) True/True
 // build JUtility (JUtility) False/False
 /* top-level dependencies (begin JUtility) */
 /* top-level dependencies (end JUtility) */
@@ -157,14 +156,15 @@ struct JUtility {
 
 };
 
+// build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin dFile_warning_c) */
-// outer dependency: JKRArchive
 // outer dependency: JUtility::TColor
+// outer dependency: JKRArchive
 /* top-level dependencies (end dFile_warning_c) */
 struct dFile_warning_c {
-	// JKRArchive
 	// JUtility::TColor
-	/* 80191BAC */ dFile_warning_c(JKRArchive*, char);
+	// JKRArchive
+	/* 80191BAC */ dFile_warning_c(JKRArchive*, u8);
 	/* 80191F18 */ void _move();
 	/* 801920B8 */ void openInit();
 	/* 8019210C */ void closeInit();
@@ -175,7 +175,6 @@ struct dFile_warning_c {
 
 // build JUtility (JUtility) True/True
 // build dSelect_cursor_c (dSelect_cursor_c) False/False
-// build JKRArchive (JKRArchive) True/True
 // build J2DPane (J2DPane) False/False
 // build J2DBasePosition (J2DBasePosition) False/False
 /* top-level dependencies (begin J2DBasePosition) */
@@ -193,14 +192,15 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
+// build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin dSelect_cursor_c) */
-// outer dependency: JKRArchive
 // outer dependency: J2DPane
+// outer dependency: JKRArchive
 /* top-level dependencies (end dSelect_cursor_c) */
 struct dSelect_cursor_c {
-	// JKRArchive
 	// J2DPane
-	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	// JKRArchive
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801951C8 */ void setScale(f32);
@@ -227,8 +227,8 @@ struct dMw_c {
 /* top-level dependencies (begin dMeterHaihai_c) */
 /* top-level dependencies (end dMeterHaihai_c) */
 struct dMeterHaihai_c {
-	/* 8020AE8C */ dMeterHaihai_c(char);
-	/* 8020B814 */ void drawHaihai(char, f32, f32, f32, f32);
+	/* 8020AE8C */ dMeterHaihai_c(u8);
+	/* 8020B814 */ void drawHaihai(u8, f32, f32, f32, f32);
 };
 
 // build dMeter2Info_c (dMeter2Info_c) False/False
@@ -256,6 +256,13 @@ struct dMsgString_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build JUtility (JUtility) True/True
 // build J2DPane (J2DPane) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) True/True
@@ -278,29 +285,22 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build JUtility (JUtility) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DPane
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: JUtility::TColor
+// outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DPane
-	// J2DScreen
 	// JKRExpHeap
 	// JUtility::TColor
+	// J2DPane
+	// J2DScreen
 	/* 80253930 */ CPaneMgr();
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253A18 */ ~CPaneMgr();
 	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, char);
+	/* 802548BC */ void colorAnime(s16, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, u8);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
@@ -313,30 +313,30 @@ struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255878 */ void alphaAnime(s16, char, char, char);
+	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -402,6 +402,7 @@ struct J2DPicture {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
@@ -611,7 +612,6 @@ void dPaneClass_showNullPane(J2DScreen*);
 void cLib_addCalc2(f32*, f32, f32, f32);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void OSSetSoundMode();
 extern "C" void __construct_array();
 extern "C" void __ptmf_scall();
@@ -1831,7 +1831,7 @@ asm void dMenu_Option_c::menuVisible() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Option_c::menuShow(s32 field_0) {
+asm void dMenu_Option_c::menuShow(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_option/menuShow__14dMenu_Option_cFi.s"
 }
@@ -1842,7 +1842,7 @@ asm void dMenu_Option_c::menuShow(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Option_c::menuHide(s32 field_0) {
+asm void dMenu_Option_c::menuHide(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_option/menuHide__14dMenu_Option_cFi.s"
 }
@@ -1908,7 +1908,7 @@ asm void dMenu_Option_c::setSoundString() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Option_c::setCursorPos(char field_0) {
+asm void dMenu_Option_c::setCursorPos(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_option/setCursorPos__14dMenu_Option_cFUc.s"
 }
@@ -1919,7 +1919,7 @@ asm void dMenu_Option_c::setCursorPos(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Option_c::setSelectColor(char field_0, bool field_1) {
+asm void dMenu_Option_c::setSelectColor(u8 field_0, bool field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_option/setSelectColor__14dMenu_Option_cFUcb.s"
 }
@@ -2061,7 +2061,7 @@ asm void dMenu_Option_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Option_c::yesnoMenuMoveAnmInitSet(s32 field_0, s32 field_1) {
+asm void dMenu_Option_c::yesnoMenuMoveAnmInitSet(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_option/yesnoMenuMoveAnmInitSet__14dMenu_Option_cFii.s"
 }
@@ -2159,7 +2159,7 @@ asm void dMenu_Option_c::yesnoCancelAnmSet() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Option_c::yesnoWakuAlpahAnmInit(char field_0, char field_1, char field_2, char field_3) {
+asm void dMenu_Option_c::yesnoWakuAlpahAnmInit(u8 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_option/yesnoWakuAlpahAnmInit__14dMenu_Option_cFUcUcUcUc.s"
 }
@@ -2170,7 +2170,7 @@ asm void dMenu_Option_c::yesnoWakuAlpahAnmInit(char field_0, char field_1, char 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Option_c::yesnoWakuAlpahAnm(char field_0) {
+asm void dMenu_Option_c::yesnoWakuAlpahAnm(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_option/yesnoWakuAlpahAnm__14dMenu_Option_cFUc.s"
 }

@@ -21,7 +21,7 @@ struct JKRExpHeap {
 /* top-level dependencies (end dMsgScrnJimaku_c) */
 struct dMsgScrnJimaku_c {
 	// JKRExpHeap
-	/* 80244558 */ dMsgScrnJimaku_c(char, JKRExpHeap*);
+	/* 80244558 */ dMsgScrnJimaku_c(u8, JKRExpHeap*);
 	/* 80244A74 */ ~dMsgScrnJimaku_c();
 	/* 80244C2C */ void exec();
 	/* 80244D34 */ void drawSelf();
@@ -38,11 +38,11 @@ struct dMsgScrnJimaku_c {
 struct dMsgScrnBase_c {
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
-	/* 80238C48 */ bool selectAnimeMove(char, char, bool);
-	/* 80238C50 */ void selectAnimeInit(char, char, f32, char);
+	/* 80238C48 */ bool selectAnimeMove(u8, u8, bool);
+	/* 80238C50 */ void selectAnimeInit(u8, u8, f32, u8);
 	/* 80238C54 */ void arwAnimeMove();
 	/* 80238C58 */ void arwAnimeInit();
-	/* 80238C5C */ void fukiPosCalc(char);
+	/* 80238C5C */ void fukiPosCalc(u8);
 	/* 80238C60 */ bool isSelect();
 	/* 80238C68 */ bool selectAnimeEnd();
 	/* 80238C70 */ void dotAnimeMove();
@@ -60,10 +60,23 @@ struct dMsgScrnBase_c {
 /* top-level dependencies (begin dMsgScrnLight_c) */
 /* top-level dependencies (end dMsgScrnLight_c) */
 struct dMsgScrnLight_c {
-	/* 80245934 */ dMsgScrnLight_c(char, char);
+	/* 80245934 */ dMsgScrnLight_c(u8, u8);
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
+// build JUtility (JUtility) False/False
+/* top-level dependencies (begin JUtility) */
+/* top-level dependencies (end JUtility) */
+struct JUtility {
+	// build TColor (JUtility::TColor) False/False
+	/* dependencies (begin JUtility::TColor) */
+	/* dependencies (end JUtility::TColor) */
+	struct TColor {
+	};
+
+};
+
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -80,29 +93,16 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build JUtility (JUtility) False/False
-/* top-level dependencies (begin JUtility) */
-/* top-level dependencies (end JUtility) */
-struct JUtility {
-	// build TColor (JUtility::TColor) False/False
-	/* dependencies (begin JUtility::TColor) */
-	/* dependencies (end JUtility::TColor) */
-	struct TColor {
-	};
-
-};
-
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: JUtility::TColor
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// JUtility::TColor
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802542E8 */ void getGlobalPosX();
 	/* 80254364 */ void getGlobalPosY();
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
@@ -122,11 +122,18 @@ struct CPaneMgrAlpha {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
 // build JKRArchive (JKRArchive) True/True
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -152,11 +159,10 @@ SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_jimaku__lit_4021;
 
 SECTION_INIT void memset();
 void mDoExt_getMesgFont();
-void dComIfGp_getSubHeap2D(s32);
+void dComIfGp_getSubHeap2D(int);
 void dPaneClass_showNullPane(J2DScreen*);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void _savegpr_23();
 extern "C" void _savegpr_24();
 extern "C" void _savegpr_27();
@@ -266,7 +272,7 @@ f32 msg_scrn_d_msg_scrn_jimaku__lit_3942 = 6.0f / 5.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dMsgScrnJimaku_c::dMsgScrnJimaku_c(char field_0, JKRExpHeap* field_1) {
+asm dMsgScrnJimaku_c::dMsgScrnJimaku_c(u8 field_0, JKRExpHeap* field_1) {
 	nofralloc
 #include "asm/msg/scrn/d_msg_scrn_jimaku/__ct__16dMsgScrnJimaku_cFUcP10JKRExpHeap.s"
 }

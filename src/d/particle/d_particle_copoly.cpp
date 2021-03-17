@@ -10,12 +10,6 @@
 // 
 
 // build dPaPo_c (dPaPo_c) False/False
-// build dBgS_Acch (dBgS_Acch) False/False
-/* top-level dependencies (begin dBgS_Acch) */
-/* top-level dependencies (end dBgS_Acch) */
-struct dBgS_Acch {
-};
-
 // build cXyz (cXyz) False/False
 /* top-level dependencies (begin cXyz) */
 /* top-level dependencies (end cXyz) */
@@ -34,24 +28,30 @@ struct csXyz {
 struct dKy_tevstr_c {
 };
 
+// build dBgS_Acch (dBgS_Acch) False/False
+/* top-level dependencies (begin dBgS_Acch) */
+/* top-level dependencies (end dBgS_Acch) */
+struct dBgS_Acch {
+};
+
 /* top-level dependencies (begin dPaPo_c) */
-// outer dependency: dBgS_Acch
 // outer dependency: cXyz
 // outer dependency: csXyz
 // outer dependency: dKy_tevstr_c
+// outer dependency: dBgS_Acch
 /* top-level dependencies (end dPaPo_c) */
 struct dPaPo_c {
-	// dBgS_Acch
 	// cXyz
 	// csXyz
 	// dKy_tevstr_c
+	// dBgS_Acch
 	/* 80050C9C */ void init(dBgS_Acch*, f32, f32);
-	/* 80050CC4 */ void checkWaterIn(cXyz*, cXyz const*, dKy_tevstr_c const*, u32, char, f32, f32);
-	/* 80050E7C */ void setEffect(u32*, s32, dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, char, char*, char*);
-	/* 80051008 */ void setEffectCenter(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, cXyz const*, char, f32, f32);
-	/* 8005113C */ void clearID(u32*, char*);
-	/* 80051488 */ void getCenterEffType(s32) const;
-	/* 80051524 */ void getCenterEmitter(s32, s32);
+	/* 80050CC4 */ void checkWaterIn(cXyz*, cXyz const*, dKy_tevstr_c const*, u32, s8, f32, f32);
+	/* 80050E7C */ void setEffect(u32*, int, dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, s8, u8*, u8*);
+	/* 80051008 */ void setEffectCenter(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
+	/* 8005113C */ void clearID(u32*, u8*);
+	/* 80051488 */ void getCenterEffType(int) const;
+	/* 80051524 */ void getCenterEmitter(int, int);
 };
 
 // build dBgS_Acch (dBgS_Acch) True/True
@@ -59,45 +59,45 @@ struct dPaPo_c {
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
 // build csXyz (csXyz) True/True
 // build dPaPoT_c (dPaPoT_c) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build csXyz (csXyz) True/True
+// build cXyz (cXyz) True/True
 /* top-level dependencies (begin dPaPoT_c) */
-// outer dependency: cXyz
-// outer dependency: csXyz
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
+// outer dependency: cXyz
 /* top-level dependencies (end dPaPoT_c) */
 struct dPaPoT_c {
-	// cXyz
-	// csXyz
 	// dKy_tevstr_c
-	/* 8005115C */ void setEffectTwo(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, char, f32, f32);
+	// csXyz
+	// cXyz
+	/* 8005115C */ void setEffectTwo(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
 	/* 80051294 */ void clearTwoAllID();
-	/* 80051470 */ void getRightEffType(s32) const;
-	/* 8005147C */ void getLeftEffType(s32) const;
-	/* 80051494 */ void getRightEmitter(s32, s32);
-	/* 800514DC */ void getLeftEmitter(s32, s32);
+	/* 80051470 */ void getRightEffType(int) const;
+	/* 8005147C */ void getLeftEffType(int) const;
+	/* 80051494 */ void getRightEmitter(int, int);
+	/* 800514DC */ void getLeftEmitter(int, int);
 };
 
 // build dPaPoF_c (dPaPoF_c) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build csXyz (csXyz) True/True
+// build cXyz (cXyz) True/True
 /* top-level dependencies (begin dPaPoF_c) */
-// outer dependency: cXyz
-// outer dependency: csXyz
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
+// outer dependency: cXyz
 /* top-level dependencies (end dPaPoF_c) */
 struct dPaPoF_c {
-	// cXyz
-	// csXyz
 	// dKy_tevstr_c
-	/* 800512E8 */ void setEffectFour(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, char, f32, f32);
+	// csXyz
+	// cXyz
+	/* 800512E8 */ void setEffectFour(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
 	/* 80051424 */ void clearFourAllID();
-	/* 8005156C */ void getBackRightEffType(s32) const;
-	/* 80051578 */ void getBackLeftEffType(s32) const;
-	/* 80051584 */ void getBackRightEmitter(s32, s32);
-	/* 800515CC */ void getBackLeftEmitter(s32, s32);
+	/* 8005156C */ void getBackRightEffType(int) const;
+	/* 80051578 */ void getBackLeftEffType(int) const;
+	/* 80051584 */ void getBackRightEmitter(int, int);
+	/* 800515CC */ void getBackLeftEmitter(int, int);
 };
 
 // build dPa_control_c (dPa_control_c) False/False
@@ -128,9 +128,9 @@ struct dPa_control_c {
 		/* 8004B918 */ void getEmitter(u32);
 	};
 
-	/* 8004C838 */ void setWaterRipple(u32*, cBgS_PolyInfo&, cXyz const*, f32, dKy_tevstr_c const*, cXyz const*, char);
+	/* 8004C838 */ void setWaterRipple(u32*, cBgS_PolyInfo&, cXyz const*, f32, dKy_tevstr_c const*, cXyz const*, s8);
 	/* 8004D770 */ void setStopContinue(u32);
-	/* 8004D988 */ void setCommonPoly(u32*, cBgS_PolyInfo*, cXyz const*, cXyz const*, dKy_tevstr_c const*, u32, u32, csXyz const*, cXyz const*, char);
+	/* 8004D988 */ void setCommonPoly(u32*, cBgS_PolyInfo*, cXyz const*, cXyz const*, dKy_tevstr_c const*, u32, u32, csXyz const*, cXyz const*, s8);
 };
 
 // build cBgS_PolyInfo (cBgS_PolyInfo) True/True
@@ -207,7 +207,7 @@ SECTION_SDATA2 extern u8 d_particle_d_particle_copoly__lit_3672[4 + 4 /* padding
 // External References:
 // 
 
-void fopKyM_createWpillar(cXyz const*, f32, s32);
+void fopKyM_createWpillar(cXyz const*, f32, int);
 extern "C" void _savegpr_22();
 extern "C" void _savegpr_24();
 extern "C" void _savegpr_25();
@@ -261,7 +261,7 @@ u8 d_particle_d_particle_copoly__lit_3672[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPo_c::checkWaterIn(cXyz* field_0, cXyz const* field_1, dKy_tevstr_c const* field_2, u32 field_3, char field_4, f32 field_5, f32 field_6) {
+asm void dPaPo_c::checkWaterIn(cXyz* field_0, cXyz const* field_1, dKy_tevstr_c const* field_2, u32 field_3, s8 field_4, f32 field_5, f32 field_6) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff.s"
 }
@@ -272,7 +272,7 @@ asm void dPaPo_c::checkWaterIn(cXyz* field_0, cXyz const* field_1, dKy_tevstr_c 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPo_c::setEffect(u32* field_0, s32 field_1, dKy_tevstr_c const* field_2, cXyz const* field_3, u32 field_4, u32 field_5, cXyz const* field_6, csXyz const* field_7, char field_8, char* field_9, char* field_10) {
+asm void dPaPo_c::setEffect(u32* field_0, int field_1, dKy_tevstr_c const* field_2, cXyz const* field_3, u32 field_4, u32 field_5, cXyz const* field_6, csXyz const* field_7, s8 field_8, u8* field_9, u8* field_10) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc.s"
 }
@@ -283,7 +283,7 @@ asm void dPaPo_c::setEffect(u32* field_0, s32 field_1, dKy_tevstr_c const* field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPo_c::setEffectCenter(dKy_tevstr_c const* field_0, cXyz const* field_1, u32 field_2, u32 field_3, cXyz const* field_4, csXyz const* field_5, cXyz const* field_6, char field_7, f32 field_8, f32 field_9) {
+asm void dPaPo_c::setEffectCenter(dKy_tevstr_c const* field_0, cXyz const* field_1, u32 field_2, u32 field_3, cXyz const* field_4, csXyz const* field_5, cXyz const* field_6, s8 field_7, f32 field_8, f32 field_9) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff.s"
 }
@@ -294,7 +294,7 @@ asm void dPaPo_c::setEffectCenter(dKy_tevstr_c const* field_0, cXyz const* field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPo_c::clearID(u32* field_0, char* field_1) {
+asm void dPaPo_c::clearID(u32* field_0, u8* field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/clearID__7dPaPo_cFPUlPUc.s"
 }
@@ -305,7 +305,7 @@ asm void dPaPo_c::clearID(u32* field_0, char* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPoT_c::setEffectTwo(dKy_tevstr_c const* field_0, cXyz const* field_1, u32 field_2, u32 field_3, cXyz const* field_4, cXyz const* field_5, cXyz const* field_6, csXyz const* field_7, cXyz const* field_8, char field_9, f32 field_10, f32 field_11) {
+asm void dPaPoT_c::setEffectTwo(dKy_tevstr_c const* field_0, cXyz const* field_1, u32 field_2, u32 field_3, cXyz const* field_4, cXyz const* field_5, cXyz const* field_6, csXyz const* field_7, cXyz const* field_8, s8 field_9, f32 field_10, f32 field_11) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/func_8005115C.s"
 }
@@ -327,7 +327,7 @@ asm void dPaPoT_c::clearTwoAllID() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPoF_c::setEffectFour(dKy_tevstr_c const* field_0, cXyz const* field_1, u32 field_2, u32 field_3, cXyz const* field_4, cXyz const* field_5, cXyz const* field_6, cXyz const* field_7, cXyz const* field_8, csXyz const* field_9, cXyz const* field_10, char field_11, f32 field_12, f32 field_13) {
+asm void dPaPoF_c::setEffectFour(dKy_tevstr_c const* field_0, cXyz const* field_1, u32 field_2, u32 field_3, cXyz const* field_4, cXyz const* field_5, cXyz const* field_6, cXyz const* field_7, cXyz const* field_8, csXyz const* field_9, cXyz const* field_10, s8 field_11, f32 field_12, f32 field_13) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/func_800512E8.s"
 }
@@ -349,7 +349,7 @@ asm void dPaPoF_c::clearFourAllID() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPoT_c::getRightEffType(s32 field_0) const {
+asm void dPaPoT_c::getRightEffType(int field_0) const {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getRightEffType__8dPaPoT_cCFi.s"
 }
@@ -360,7 +360,7 @@ asm void dPaPoT_c::getRightEffType(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPoT_c::getLeftEffType(s32 field_0) const {
+asm void dPaPoT_c::getLeftEffType(int field_0) const {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getLeftEffType__8dPaPoT_cCFi.s"
 }
@@ -371,7 +371,7 @@ asm void dPaPoT_c::getLeftEffType(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPo_c::getCenterEffType(s32 field_0) const {
+asm void dPaPo_c::getCenterEffType(int field_0) const {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getCenterEffType__7dPaPo_cCFi.s"
 }
@@ -382,7 +382,7 @@ asm void dPaPo_c::getCenterEffType(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPoT_c::getRightEmitter(s32 field_0, s32 field_1) {
+asm void dPaPoT_c::getRightEmitter(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getRightEmitter__8dPaPoT_cFii.s"
 }
@@ -393,7 +393,7 @@ asm void dPaPoT_c::getRightEmitter(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPoT_c::getLeftEmitter(s32 field_0, s32 field_1) {
+asm void dPaPoT_c::getLeftEmitter(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getLeftEmitter__8dPaPoT_cFii.s"
 }
@@ -404,7 +404,7 @@ asm void dPaPoT_c::getLeftEmitter(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPo_c::getCenterEmitter(s32 field_0, s32 field_1) {
+asm void dPaPo_c::getCenterEmitter(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getCenterEmitter__7dPaPo_cFii.s"
 }
@@ -415,7 +415,7 @@ asm void dPaPo_c::getCenterEmitter(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPoF_c::getBackRightEffType(s32 field_0) const {
+asm void dPaPoF_c::getBackRightEffType(int field_0) const {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getBackRightEffType__8dPaPoF_cCFi.s"
 }
@@ -426,7 +426,7 @@ asm void dPaPoF_c::getBackRightEffType(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPoF_c::getBackLeftEffType(s32 field_0) const {
+asm void dPaPoF_c::getBackLeftEffType(int field_0) const {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getBackLeftEffType__8dPaPoF_cCFi.s"
 }
@@ -437,7 +437,7 @@ asm void dPaPoF_c::getBackLeftEffType(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPoF_c::getBackRightEmitter(s32 field_0, s32 field_1) {
+asm void dPaPoF_c::getBackRightEmitter(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getBackRightEmitter__8dPaPoF_cFii.s"
 }
@@ -448,7 +448,7 @@ asm void dPaPoF_c::getBackRightEmitter(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dPaPoF_c::getBackLeftEmitter(s32 field_0, s32 field_1) {
+asm void dPaPoF_c::getBackLeftEmitter(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/particle/d_particle_copoly/getBackLeftEmitter__8dPaPoF_cFii.s"
 }

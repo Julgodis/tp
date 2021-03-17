@@ -15,7 +15,7 @@
 struct dMsgUnit_c {
 	/* 80238C94 */ dMsgUnit_c();
 	/* 80238CA4 */ ~dMsgUnit_c();
-	/* 80238CEC */ void setTag(s32, s32, char*, bool);
+	/* 80238CEC */ void setTag(int, int, char*, bool);
 };
 
 // build dScnKy_env_light_c (dScnKy_env_light_c) False/False
@@ -136,7 +136,7 @@ f64 lit_3707 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgUnit_c::setTag(s32 field_0, s32 field_1, char* field_2, bool field_3) {
+asm void dMsgUnit_c::setTag(int field_0, int field_1, char* field_2, bool field_3) {
 	nofralloc
 #include "asm/d/msg/d_msg_unit/setTag__10dMsgUnit_cFiiPcb.s"
 }

@@ -10,25 +10,25 @@
 // 
 
 // build J3DAnmLoaderDataBase (J3DAnmLoaderDataBase) False/False
-// build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) False/False
-/* top-level dependencies (begin J3DAnmLoaderDataBaseFlag) */
-/* top-level dependencies (end J3DAnmLoaderDataBaseFlag) */
-struct J3DAnmLoaderDataBaseFlag {
-};
-
 // build J3DAnmBase (J3DAnmBase) False/False
 /* top-level dependencies (begin J3DAnmBase) */
 /* top-level dependencies (end J3DAnmBase) */
 struct J3DAnmBase {
 };
 
+// build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) False/False
+/* top-level dependencies (begin J3DAnmLoaderDataBaseFlag) */
+/* top-level dependencies (end J3DAnmLoaderDataBaseFlag) */
+struct J3DAnmLoaderDataBaseFlag {
+};
+
 /* top-level dependencies (begin J3DAnmLoaderDataBase) */
-// outer dependency: J3DAnmLoaderDataBaseFlag
 // outer dependency: J3DAnmBase
+// outer dependency: J3DAnmLoaderDataBaseFlag
 /* top-level dependencies (end J3DAnmLoaderDataBase) */
 struct J3DAnmLoaderDataBase {
-	// J3DAnmLoaderDataBaseFlag
 	// J3DAnmBase
+	// J3DAnmLoaderDataBaseFlag
 	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
 	/* 80338134 */ void setResource(J3DAnmBase*, void const*);
 };
@@ -36,10 +36,50 @@ struct J3DAnmLoaderDataBase {
 // build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) True/True
 // build J3DAnmBase (J3DAnmBase) True/True
 // build J3DAnmFullLoader_v15 (J3DAnmFullLoader_v15) False/False
-// build J3DAnmClusterFullData (J3DAnmClusterFullData) False/False
-/* top-level dependencies (begin J3DAnmClusterFullData) */
-/* top-level dependencies (end J3DAnmClusterFullData) */
-struct J3DAnmClusterFullData {
+// build J3DAnmVisibilityFull (J3DAnmVisibilityFull) False/False
+/* top-level dependencies (begin J3DAnmVisibilityFull) */
+/* top-level dependencies (end J3DAnmVisibilityFull) */
+struct J3DAnmVisibilityFull {
+	/* 8033979C */ ~J3DAnmVisibilityFull();
+	/* 803397F8 */ s32 getKind() const;
+};
+
+// build J3DAnmBase (J3DAnmBase) True/True
+// build J3DAnmClusterFull (J3DAnmClusterFull) False/False
+/* top-level dependencies (begin J3DAnmClusterFull) */
+/* top-level dependencies (end J3DAnmClusterFull) */
+struct J3DAnmClusterFull {
+};
+
+// build J3DAnmTexPatternFullData (J3DAnmTexPatternFullData) False/False
+/* top-level dependencies (begin J3DAnmTexPatternFullData) */
+/* top-level dependencies (end J3DAnmTexPatternFullData) */
+struct J3DAnmTexPatternFullData {
+};
+
+// build J3DAnmTransformFullData (J3DAnmTransformFullData) False/False
+/* top-level dependencies (begin J3DAnmTransformFullData) */
+/* top-level dependencies (end J3DAnmTransformFullData) */
+struct J3DAnmTransformFullData {
+};
+
+// build J3DAnmColorFull (J3DAnmColorFull) False/False
+/* top-level dependencies (begin J3DAnmColorFull) */
+/* top-level dependencies (end J3DAnmColorFull) */
+struct J3DAnmColorFull {
+	/* 8032A93C */ J3DAnmColorFull();
+};
+
+// build J3DAnmTransformFull (J3DAnmTransformFull) False/False
+/* top-level dependencies (begin J3DAnmTransformFull) */
+/* top-level dependencies (end J3DAnmTransformFull) */
+struct J3DAnmTransformFull {
+};
+
+// build J3DAnmColorFullData (J3DAnmColorFullData) False/False
+/* top-level dependencies (begin J3DAnmColorFullData) */
+/* top-level dependencies (end J3DAnmColorFullData) */
+struct J3DAnmColorFullData {
 };
 
 // build J3DAnmTexPattern (J3DAnmTexPattern) False/False
@@ -55,41 +95,10 @@ struct J3DAnmTexPattern {
 struct J3DAnmVisibilityFullData {
 };
 
-// build J3DAnmColorFullData (J3DAnmColorFullData) False/False
-/* top-level dependencies (begin J3DAnmColorFullData) */
-/* top-level dependencies (end J3DAnmColorFullData) */
-struct J3DAnmColorFullData {
-};
-
-// build J3DAnmTransformFullData (J3DAnmTransformFullData) False/False
-/* top-level dependencies (begin J3DAnmTransformFullData) */
-/* top-level dependencies (end J3DAnmTransformFullData) */
-struct J3DAnmTransformFullData {
-};
-
-// build J3DAnmVtxColorFullData (J3DAnmVtxColorFullData) False/False
-/* top-level dependencies (begin J3DAnmVtxColorFullData) */
-/* top-level dependencies (end J3DAnmVtxColorFullData) */
-struct J3DAnmVtxColorFullData {
-};
-
-// build J3DAnmColorFull (J3DAnmColorFull) False/False
-/* top-level dependencies (begin J3DAnmColorFull) */
-/* top-level dependencies (end J3DAnmColorFull) */
-struct J3DAnmColorFull {
-	/* 8032A93C */ J3DAnmColorFull();
-};
-
-// build J3DAnmTexPatternFullData (J3DAnmTexPatternFullData) False/False
-/* top-level dependencies (begin J3DAnmTexPatternFullData) */
-/* top-level dependencies (end J3DAnmTexPatternFullData) */
-struct J3DAnmTexPatternFullData {
-};
-
-// build J3DAnmTransformFull (J3DAnmTransformFull) False/False
-/* top-level dependencies (begin J3DAnmTransformFull) */
-/* top-level dependencies (end J3DAnmTransformFull) */
-struct J3DAnmTransformFull {
+// build J3DAnmClusterFullData (J3DAnmClusterFullData) False/False
+/* top-level dependencies (begin J3DAnmClusterFullData) */
+/* top-level dependencies (end J3DAnmClusterFullData) */
+struct J3DAnmClusterFullData {
 };
 
 // build J3DAnmVtxColorFull (J3DAnmVtxColorFull) False/False
@@ -99,50 +108,41 @@ struct J3DAnmVtxColorFull {
 	/* 8032A30C */ J3DAnmVtxColorFull();
 };
 
-// build J3DAnmClusterFull (J3DAnmClusterFull) False/False
-/* top-level dependencies (begin J3DAnmClusterFull) */
-/* top-level dependencies (end J3DAnmClusterFull) */
-struct J3DAnmClusterFull {
+// build J3DAnmVtxColorFullData (J3DAnmVtxColorFullData) False/False
+/* top-level dependencies (begin J3DAnmVtxColorFullData) */
+/* top-level dependencies (end J3DAnmVtxColorFullData) */
+struct J3DAnmVtxColorFullData {
 };
 
-// build J3DAnmVisibilityFull (J3DAnmVisibilityFull) False/False
-/* top-level dependencies (begin J3DAnmVisibilityFull) */
-/* top-level dependencies (end J3DAnmVisibilityFull) */
-struct J3DAnmVisibilityFull {
-	/* 8033979C */ ~J3DAnmVisibilityFull();
-	/* 803397F8 */ s32 getKind() const;
-};
-
-// build J3DAnmBase (J3DAnmBase) True/True
 /* top-level dependencies (begin J3DAnmFullLoader_v15) */
-// outer dependency: J3DAnmClusterFullData
-// outer dependency: J3DAnmTexPattern
-// outer dependency: J3DAnmVisibilityFullData
-// outer dependency: J3DAnmColorFullData
-// outer dependency: J3DAnmTransformFullData
-// outer dependency: J3DAnmVtxColorFullData
-// outer dependency: J3DAnmColorFull
-// outer dependency: J3DAnmTexPatternFullData
-// outer dependency: J3DAnmTransformFull
-// outer dependency: J3DAnmVtxColorFull
-// outer dependency: J3DAnmClusterFull
 // outer dependency: J3DAnmVisibilityFull
 // outer dependency: J3DAnmBase
+// outer dependency: J3DAnmClusterFull
+// outer dependency: J3DAnmTexPatternFullData
+// outer dependency: J3DAnmTransformFullData
+// outer dependency: J3DAnmColorFull
+// outer dependency: J3DAnmTransformFull
+// outer dependency: J3DAnmColorFullData
+// outer dependency: J3DAnmTexPattern
+// outer dependency: J3DAnmVisibilityFullData
+// outer dependency: J3DAnmClusterFullData
+// outer dependency: J3DAnmVtxColorFull
+// outer dependency: J3DAnmVtxColorFullData
 /* top-level dependencies (end J3DAnmFullLoader_v15) */
 struct J3DAnmFullLoader_v15 {
-	// J3DAnmClusterFullData
-	// J3DAnmTexPattern
-	// J3DAnmVisibilityFullData
-	// J3DAnmColorFullData
-	// J3DAnmTransformFullData
-	// J3DAnmVtxColorFullData
-	// J3DAnmColorFull
-	// J3DAnmTexPatternFullData
-	// J3DAnmTransformFull
-	// J3DAnmVtxColorFull
-	// J3DAnmClusterFull
 	// J3DAnmVisibilityFull
 	// J3DAnmBase
+	// J3DAnmClusterFull
+	// J3DAnmTexPatternFullData
+	// J3DAnmTransformFullData
+	// J3DAnmColorFull
+	// J3DAnmTransformFull
+	// J3DAnmColorFullData
+	// J3DAnmTexPattern
+	// J3DAnmVisibilityFullData
+	// J3DAnmClusterFullData
+	// J3DAnmVtxColorFull
+	// J3DAnmVtxColorFullData
 	/* 80338468 */ J3DAnmFullLoader_v15();
 	/* 80338484 */ ~J3DAnmFullLoader_v15();
 	/* 80338558 */ void load(void const*);
@@ -168,10 +168,49 @@ struct J3DAnmFullLoader_v15 {
 struct J3DAnmVtxColorKeyData {
 };
 
+// build J3DAnmBase (J3DAnmBase) True/True
+// build J3DAnmTevRegKeyData (J3DAnmTevRegKeyData) False/False
+/* top-level dependencies (begin J3DAnmTevRegKeyData) */
+/* top-level dependencies (end J3DAnmTevRegKeyData) */
+struct J3DAnmTevRegKeyData {
+};
+
+// build J3DAnmColorKey (J3DAnmColorKey) False/False
+/* top-level dependencies (begin J3DAnmColorKey) */
+/* top-level dependencies (end J3DAnmColorKey) */
+struct J3DAnmColorKey {
+	/* 8032AB00 */ J3DAnmColorKey();
+};
+
+// build J3DAnmClusterKey (J3DAnmClusterKey) False/False
+/* top-level dependencies (begin J3DAnmClusterKey) */
+/* top-level dependencies (end J3DAnmClusterKey) */
+struct J3DAnmClusterKey {
+};
+
+// build J3DAnmTransformKey (J3DAnmTransformKey) False/False
+/* top-level dependencies (begin J3DAnmTransformKey) */
+/* top-level dependencies (end J3DAnmTransformKey) */
+struct J3DAnmTransformKey {
+};
+
+// build J3DAnmColorKeyData (J3DAnmColorKeyData) False/False
+/* top-level dependencies (begin J3DAnmColorKeyData) */
+/* top-level dependencies (end J3DAnmColorKeyData) */
+struct J3DAnmColorKeyData {
+};
+
 // build J3DAnmTransformKeyData (J3DAnmTransformKeyData) False/False
 /* top-level dependencies (begin J3DAnmTransformKeyData) */
 /* top-level dependencies (end J3DAnmTransformKeyData) */
 struct J3DAnmTransformKeyData {
+};
+
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
+/* top-level dependencies (begin J3DAnmTevRegKey) */
+/* top-level dependencies (end J3DAnmTevRegKey) */
+struct J3DAnmTevRegKey {
+	/* 8032AE18 */ J3DAnmTevRegKey();
 };
 
 // build J3DAnmClusterKeyData (J3DAnmClusterKeyData) False/False
@@ -187,24 +226,11 @@ struct J3DAnmVtxColorKey {
 	/* 8032A4E0 */ J3DAnmVtxColorKey();
 };
 
-// build J3DAnmColorKey (J3DAnmColorKey) False/False
-/* top-level dependencies (begin J3DAnmColorKey) */
-/* top-level dependencies (end J3DAnmColorKey) */
-struct J3DAnmColorKey {
-	/* 8032AB00 */ J3DAnmColorKey();
-};
-
-// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
-/* top-level dependencies (begin J3DAnmTevRegKey) */
-/* top-level dependencies (end J3DAnmTevRegKey) */
-struct J3DAnmTevRegKey {
-	/* 8032AE18 */ J3DAnmTevRegKey();
-};
-
-// build J3DAnmTevRegKeyData (J3DAnmTevRegKeyData) False/False
-/* top-level dependencies (begin J3DAnmTevRegKeyData) */
-/* top-level dependencies (end J3DAnmTevRegKeyData) */
-struct J3DAnmTevRegKeyData {
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J3DAnmTextureSRTKey) */
+/* top-level dependencies (end J3DAnmTextureSRTKey) */
+struct J3DAnmTextureSRTKey {
+	/* 80329E5C */ J3DAnmTextureSRTKey();
 };
 
 // build J3DAnmTextureSRTKeyData (J3DAnmTextureSRTKeyData) False/False
@@ -213,61 +239,35 @@ struct J3DAnmTevRegKeyData {
 struct J3DAnmTextureSRTKeyData {
 };
 
-// build J3DAnmColorKeyData (J3DAnmColorKeyData) False/False
-/* top-level dependencies (begin J3DAnmColorKeyData) */
-/* top-level dependencies (end J3DAnmColorKeyData) */
-struct J3DAnmColorKeyData {
-};
-
-// build J3DAnmTransformKey (J3DAnmTransformKey) False/False
-/* top-level dependencies (begin J3DAnmTransformKey) */
-/* top-level dependencies (end J3DAnmTransformKey) */
-struct J3DAnmTransformKey {
-};
-
-// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J3DAnmTextureSRTKey) */
-/* top-level dependencies (end J3DAnmTextureSRTKey) */
-struct J3DAnmTextureSRTKey {
-	/* 80329E5C */ J3DAnmTextureSRTKey();
-};
-
-// build J3DAnmClusterKey (J3DAnmClusterKey) False/False
-/* top-level dependencies (begin J3DAnmClusterKey) */
-/* top-level dependencies (end J3DAnmClusterKey) */
-struct J3DAnmClusterKey {
-};
-
-// build J3DAnmBase (J3DAnmBase) True/True
 /* top-level dependencies (begin J3DAnmKeyLoader_v15) */
 // outer dependency: J3DAnmVtxColorKeyData
+// outer dependency: J3DAnmBase
+// outer dependency: J3DAnmTevRegKeyData
+// outer dependency: J3DAnmColorKey
+// outer dependency: J3DAnmClusterKey
+// outer dependency: J3DAnmTransformKey
+// outer dependency: J3DAnmColorKeyData
 // outer dependency: J3DAnmTransformKeyData
+// outer dependency: J3DAnmTevRegKey
 // outer dependency: J3DAnmClusterKeyData
 // outer dependency: J3DAnmVtxColorKey
-// outer dependency: J3DAnmColorKey
-// outer dependency: J3DAnmTevRegKey
-// outer dependency: J3DAnmTevRegKeyData
-// outer dependency: J3DAnmTextureSRTKeyData
-// outer dependency: J3DAnmColorKeyData
-// outer dependency: J3DAnmTransformKey
 // outer dependency: J3DAnmTextureSRTKey
-// outer dependency: J3DAnmClusterKey
-// outer dependency: J3DAnmBase
+// outer dependency: J3DAnmTextureSRTKeyData
 /* top-level dependencies (end J3DAnmKeyLoader_v15) */
 struct J3DAnmKeyLoader_v15 {
 	// J3DAnmVtxColorKeyData
+	// J3DAnmBase
+	// J3DAnmTevRegKeyData
+	// J3DAnmColorKey
+	// J3DAnmClusterKey
+	// J3DAnmTransformKey
+	// J3DAnmColorKeyData
 	// J3DAnmTransformKeyData
+	// J3DAnmTevRegKey
 	// J3DAnmClusterKeyData
 	// J3DAnmVtxColorKey
-	// J3DAnmColorKey
-	// J3DAnmTevRegKey
-	// J3DAnmTevRegKeyData
-	// J3DAnmTextureSRTKeyData
-	// J3DAnmColorKeyData
-	// J3DAnmTransformKey
 	// J3DAnmTextureSRTKey
-	// J3DAnmClusterKey
-	// J3DAnmBase
+	// J3DAnmTextureSRTKeyData
 	/* 803384E0 */ J3DAnmKeyLoader_v15();
 	/* 803384FC */ ~J3DAnmKeyLoader_v15();
 	/* 80338D44 */ void load(void const*);

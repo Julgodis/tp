@@ -52,7 +52,7 @@ struct daItemBase_c {
 	/* 80144D70 */ void setShadow();
 	/* 80144EDC */ void animEntry();
 	/* 8014503C */ void animPlay(f32, f32, f32, f32, f32, f32);
-	/* 80145144 */ void chkFlag(s32);
+	/* 80145144 */ void chkFlag(int);
 	/* 80145164 */ void getTevFrm();
 	/* 80145180 */ void getBtpFrm();
 	/* 8014519C */ void getShadowSize();
@@ -113,7 +113,7 @@ struct daItem_c {
 	/* 8015D9F0 */ void initAction();
 	/* 8015DAAC */ void initFlag();
 	/* 8015DBF0 */ void initScale();
-	/* 8015DC40 */ void initSpeed(s32);
+	/* 8015DC40 */ void initSpeed(int);
 	/* 8015DE38 */ void initAngle();
 };
 
@@ -194,16 +194,16 @@ struct request_of_phase_process_class {
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033E94 */ void offFirstBit(char);
+	/* 80033E94 */ void offFirstBit(u8);
 };
 
 // build dSv_info_c (dSv_info_c) False/False
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
-	/* 800354E0 */ void onItem(s32, s32);
-	/* 80035590 */ void isItem(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
+	/* 800354E0 */ void onItem(int, int);
+	/* 80035590 */ void isItem(int, int) const;
 };
 
 // build dEvt_control_c (dEvt_control_c) False/False
@@ -211,7 +211,7 @@ struct dSv_info_c {
 /* top-level dependencies (end dEvt_control_c) */
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
-	/* 800436EC */ void setPtI_Id(s32);
+	/* 800436EC */ void setPtI_Id(u32);
 };
 
 // build dEvent_manager_c (dEvent_manager_c) False/False
@@ -225,44 +225,44 @@ struct dEvent_manager_c {
 /* top-level dependencies (begin dPa_followEcallBack) */
 /* top-level dependencies (end dPa_followEcallBack) */
 struct dPa_followEcallBack {
-	/* 80049580 */ dPa_followEcallBack(char, char);
+	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
 // build dPa_control_c (dPa_control_c) False/False
-// build csXyz (csXyz) True/True
-// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
-/* top-level dependencies (begin dPa_levelEcallBack) */
-/* top-level dependencies (end dPa_levelEcallBack) */
-struct dPa_levelEcallBack {
-};
-
+// build cXyz (cXyz) True/True
 // build _GXColor (_GXColor) False/False
 /* top-level dependencies (begin _GXColor) */
 /* top-level dependencies (end _GXColor) */
 struct _GXColor {
 };
 
-// build cXyz (cXyz) True/True
+// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
+/* top-level dependencies (begin dPa_levelEcallBack) */
+/* top-level dependencies (end dPa_levelEcallBack) */
+struct dPa_levelEcallBack {
+};
+
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
 struct dKy_tevstr_c {
 };
 
+// build csXyz (csXyz) True/True
 /* top-level dependencies (begin dPa_control_c) */
-// outer dependency: csXyz
-// outer dependency: dPa_levelEcallBack
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
+// outer dependency: dPa_levelEcallBack
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
-	// csXyz
-	// _GXColor
 	// dPa_levelEcallBack
-	// cXyz
 	// dKy_tevstr_c
-	/* 8004CA90 */ void set(char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	// csXyz
+	// cXyz
+	// _GXColor
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
@@ -307,26 +307,26 @@ struct dBgS_AcchCir {
 };
 
 // build dBgS_Acch (dBgS_Acch) False/False
-// build dBgS_AcchCir (dBgS_AcchCir) True/True
-// build csXyz (csXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
 // build cXyz (cXyz) True/True
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build dBgS_AcchCir (dBgS_AcchCir) True/True
 // build dBgS (dBgS) True/True
+// build csXyz (csXyz) True/True
 /* top-level dependencies (begin dBgS_Acch) */
-// outer dependency: dBgS_AcchCir
-// outer dependency: csXyz
-// outer dependency: fopAc_ac_c
 // outer dependency: cXyz
+// outer dependency: fopAc_ac_c
+// outer dependency: dBgS_AcchCir
 // outer dependency: dBgS
+// outer dependency: csXyz
 /* top-level dependencies (end dBgS_Acch) */
 struct dBgS_Acch {
 	// csXyz
-	// dBgS_AcchCir
-	// fopAc_ac_c
 	// cXyz
+	// fopAc_ac_c
+	// dBgS_AcchCir
 	// dBgS
 	/* 800760A0 */ dBgS_Acch();
-	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, s32, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
+	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
 	/* 80076AAC */ void CrrPos(dBgS&);
 	/* 80077388 */ void SetMoveBGOnly();
 	/* 800773A4 */ void ClrMoveBGOnly();
@@ -353,7 +353,7 @@ struct dCcD_GStts {
 /* top-level dependencies (end dCcD_Stts) */
 struct dCcD_Stts {
 	// fopAc_ac_c
-	/* 80083860 */ void Init(s32, s32, fopAc_ac_c*);
+	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
 // build dCcD_Cyl (dCcD_Cyl) False/False
@@ -388,24 +388,24 @@ struct daPy_boomerangMove_c {
 };
 
 // build dScnKy_env_light_c (dScnKy_env_light_c) False/False
+// build cXyz (cXyz) True/True
 // build J3DModelData (J3DModelData) False/False
 /* top-level dependencies (begin J3DModelData) */
 /* top-level dependencies (end J3DModelData) */
 struct J3DModelData {
 };
 
-// build cXyz (cXyz) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
 /* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: J3DModelData
 // outer dependency: cXyz
+// outer dependency: J3DModelData
 // outer dependency: dKy_tevstr_c
 /* top-level dependencies (end dScnKy_env_light_c) */
 struct dScnKy_env_light_c {
-	// J3DModelData
 	// cXyz
+	// J3DModelData
 	// dKy_tevstr_c
-	/* 801A37C4 */ void settingTevStruct(s32, cXyz*, dKy_tevstr_c*);
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
@@ -440,21 +440,21 @@ struct cM3dGCyl {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -597,21 +597,21 @@ SECTION_SDATA2 extern f32 a_obj_d_a_obj_item__lit_5233;
 // External References:
 // 
 
-extern "C" void mDoMtx_YrotS__FPA4_fs();
+void mDoMtx_YrotS(f32 (* )[4], s16);
 void fopAcM_delete(fopAc_ac_c*);
-void fopAcM_delete(s32);
+void fopAcM_delete(u32);
 extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
 void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*);
 void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*);
 void fopAcM_orderItemEvent(fopAc_ac_c*, u16, u16);
-void fopAcM_createItemForTrBoxDemo(cXyz const*, s32, s32, s32, csXyz const*, cXyz const*);
+void fopAcM_createItemForTrBoxDemo(cXyz const*, int, int, int, csXyz const*, cXyz const*);
 void fopAcM_effHamonSet(u32*, cXyz const*, f32, f32);
 void dComIfG_resLoad(request_of_phase_process_class*, char const*);
-void dComIfGp_getReverb(s32);
+void dComIfGp_getReverb(int);
 void CheckFieldItemCreateHeap(fopAc_ac_c*);
-void execItemGet(char);
-void checkItemGet(char, s32);
-void isHeart(char);
+void execItemGet(u8);
+void checkItemGet(u8, int);
+void isHeart(u8);
 extern "C" void func_80141AE8();
 void cM_atan2s(f32, f32);
 void cM_rndF(f32);
@@ -1691,7 +1691,7 @@ f32 a_obj_d_a_obj_item__lit_5233 = 50.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daItem_c::initSpeed(s32 field_0) {
+asm void daItem_c::initSpeed(int field_0) {
 	nofralloc
 #include "asm/a/obj/d_a_obj_item/initSpeed__8daItem_cFi.s"
 }

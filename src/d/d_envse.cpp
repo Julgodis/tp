@@ -21,7 +21,7 @@ struct dStage_SoundInfo_c {
 /* top-level dependencies (end dEnvSe_c) */
 struct dEnvSe_c {
 	// dStage_SoundInfo_c
-	/* 80182FD8 */ void execute_common(dStage_SoundInfo_c*, char*, char);
+	/* 80182FD8 */ void execute_common(dStage_SoundInfo_c*, s8*, u8);
 	/* 80183480 */ void execute();
 };
 
@@ -42,7 +42,7 @@ struct dPath {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // build dCamera_c (dCamera_c) False/False
@@ -75,21 +75,21 @@ struct cM3dGLin {
 /* top-level dependencies (end Z2EnvSeMgr) */
 struct Z2EnvSeMgr {
 	// Vec
-	/* 802C6C84 */ void initStaticEnvSe(char, char, char, char, Vec*);
-	/* 802C70C8 */ void startStaticEnvSe(char);
+	/* 802C6C84 */ void initStaticEnvSe(u8, u8, u8, u8, Vec*);
+	/* 802C70C8 */ void startStaticEnvSe(s8);
 	/* 802C780C */ void registWindowPos(Vec*);
-	/* 802C80F8 */ void initRiverSe(char, char, char, char);
+	/* 802C80F8 */ void initRiverSe(u8, u8, u8, u8);
 	/* 802C8234 */ void registRiverSePos(Vec*);
-	/* 802C8300 */ void startRiverSe(char);
-	/* 802C8730 */ void initFallSe(char, char, char, char);
+	/* 802C8300 */ void startRiverSe(s8);
+	/* 802C8730 */ void initFallSe(u8, u8, u8, u8);
 	/* 802C886C */ void registFallSePos(Vec*);
-	/* 802C8890 */ void startFallSe(char);
-	/* 802C8A90 */ void initEtcSe(char, char, char, char);
+	/* 802C8890 */ void startFallSe(s8);
+	/* 802C8A90 */ void initEtcSe(u8, u8, u8, u8);
 	/* 802C8C24 */ void registEtcSePos(Vec*);
-	/* 802C8C48 */ void startEtcSe(char);
-	/* 802C950C */ void initLv3WaterSe(char, char, char, char);
-	/* 802C9F58 */ void registLv3WaterSePos(char, Vec*);
-	/* 802CA794 */ void startLv3WaterSe(char);
+	/* 802C8C48 */ void startEtcSe(s8);
+	/* 802C950C */ void initLv3WaterSe(u8, u8, u8, u8);
+	/* 802C9F58 */ void registLv3WaterSePos(u8, Vec*);
+	/* 802CA794 */ void startLv3WaterSe(s8);
 };
 
 // 
@@ -121,9 +121,9 @@ SECTION_SBSS2 extern u8 data_80456B84[4];
 // External References:
 // 
 
-void dComIfGp_getReverb(s32);
-void dPath_GetRoomPath(s32, s32);
-void dPath_GetNextRoomPath(dPath const*, s32);
+void dComIfGp_getReverb(int);
+void dPath_GetRoomPath(int, int);
+void dPath_GetNextRoomPath(dPath const*, int);
 void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*);
 extern "C" void PSVECSquareDistance();
 extern "C" void _savegpr_22();
@@ -214,7 +214,7 @@ SECTION_DEAD char* const pad_8039430F = "";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEnvSe_c::execute_common(dStage_SoundInfo_c* field_0, char* field_1, char field_2) {
+asm void dEnvSe_c::execute_common(dStage_SoundInfo_c* field_0, s8* field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/d_envse/execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc.s"
 }

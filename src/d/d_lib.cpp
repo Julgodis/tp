@@ -76,31 +76,31 @@ struct dLib_time_c {
 /* top-level dependencies (begin dEvt_control_c) */
 /* top-level dependencies (end dEvt_control_c) */
 struct dEvt_control_c {
-	/* 800434D8 */ void searchMapEventData(char);
+	/* 800434D8 */ void searchMapEventData(u8);
 };
 
 // build Vec (Vec) True/True
 // build JKRAram (JKRAram) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-};
-
 // build JKRExpandSwitch (JKRExpandSwitch) False/False
 /* top-level dependencies (begin JKRExpandSwitch) */
 /* top-level dependencies (end JKRExpandSwitch) */
 struct JKRExpandSwitch {
 };
 
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
 /* top-level dependencies (begin JKRAram) */
-// outer dependency: JKRHeap
 // outer dependency: JKRExpandSwitch
+// outer dependency: JKRHeap
 /* top-level dependencies (end JKRAram) */
 struct JKRAram {
-	// JKRHeap
 	// JKRExpandSwitch
-	/* 802D25B4 */ void aramToMainRam(u32, char*, u32, JKRExpandSwitch, u32, JKRHeap*, s32, u32*);
+	// JKRHeap
+	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
 // build JKRExpandSwitch (JKRExpandSwitch) True/True
@@ -116,7 +116,7 @@ struct JKRArchive {
 // Forward References:
 // 
 
-void dLib_getEventSwitchNo(s32);
+void dLib_getEventSwitchNo(int);
 void dLib_checkActorInRectangle(fopAc_ac_c*, fopAc_ac_c*, cXyz const*, cXyz const*);
 void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, char const*);
 
@@ -154,7 +154,7 @@ SECTION_SBSS extern u8 struct_80450DF0[8];
 // External References:
 // 
 
-extern "C" void mDoMtx_YrotS__FPA4_fs();
+void mDoMtx_YrotS(f32 (* )[4], s16);
 extern "C" void OSGetTime();
 extern "C" void PSMTXMultVec();
 extern "C" void _savegpr_29();
@@ -358,7 +358,7 @@ asm void STControl::checkDownTrigger() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dLib_getEventSwitchNo(s32 field_0) {
+asm void dLib_getEventSwitchNo(int field_0) {
 	nofralloc
 #include "asm/d/d_lib/dLib_getEventSwitchNo__Fi.s"
 }

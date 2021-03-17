@@ -6,14 +6,39 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+// build JStudio (JStudio) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin JStudio) */
+// outer dependency: Vec
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build math (JStudio::math) False/False
+	/* dependencies (begin JStudio::math) */
+	/* dependencies (end JStudio::math) */
+	struct math {
+		// Vec
+		/* 802859DC */ void getRotation_xyz(f32 (* )[4], f32, f32, f32);
+		/* 80285B44 */ void getTransformation_SRxyzT(f32 (* )[4], Vec const&, Vec const&, Vec const&);
+		/* 80285BCC */ void getFromTransformation_SRxyzT(Vec*, Vec*, Vec*, f32 const (* )[4]);
+	};
+
+};
+
+// build Vec (Vec) True/True
+// 
 // Forward References:
 // 
 
-extern "C" static void getRotation_xyz__Q27JStudio4mathFPA4_ffff();
-extern "C" void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec();
-extern "C" void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf();
 
-extern "C" static void getRotation_xyz__Q27JStudio4mathFPA4_ffff();
+extern "C" void getRotation_xyz__Q27JStudio4mathFPA4_ffff();
 extern "C" void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec();
 extern "C" void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf();
 SECTION_SDATA2 extern f32 jstudio_math__lit_488;
@@ -73,7 +98,7 @@ u8 jstudio_math__lit_489[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void getRotation_xyz__Q27JStudio4mathFPA4_ffff() {
+asm void JStudio::math::getRotation_xyz(f32 (* field_0)[4], f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-math/getRotation_xyz__Q27JStudio4mathFPA4_ffff.s"
 }
@@ -84,7 +109,7 @@ extern "C" asm static void getRotation_xyz__Q27JStudio4mathFPA4_ffff() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec() {
+asm void JStudio::math::getTransformation_SRxyzT(f32 (* field_0)[4], Vec const& field_1, Vec const& field_2, Vec const& field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-math/getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec.s"
 }
@@ -117,7 +142,7 @@ f64 jstudio_math__lit_628 = 57.29577951308232;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf() {
+asm void JStudio::math::getFromTransformation_SRxyzT(Vec* field_0, Vec* field_1, Vec* field_2, f32 const (* field_3)[4]) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-math/getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf.s"
 }

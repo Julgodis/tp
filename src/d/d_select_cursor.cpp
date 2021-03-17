@@ -24,17 +24,17 @@ struct dSelect_cursorHIO_c {
 struct JKRArchive {
 };
 
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
-struct J2DAnmTextureSRTKey {
-};
-
 // build J2DAnmTransformKey (J2DAnmTransformKey) False/False
 /* top-level dependencies (begin J2DAnmTransformKey) */
 /* top-level dependencies (end J2DAnmTransformKey) */
 struct J2DAnmTransformKey {
 	/* 801959C0 */ ~J2DAnmTransformKey();
+};
+
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
 };
 
 // build J2DAnmColor (J2DAnmColor) False/False
@@ -51,18 +51,18 @@ struct J2DPane {
 
 /* top-level dependencies (begin dSelect_cursor_c) */
 // outer dependency: JKRArchive
-// outer dependency: J2DAnmTextureSRTKey
 // outer dependency: J2DAnmTransformKey
+// outer dependency: J2DAnmTextureSRTKey
 // outer dependency: J2DAnmColor
 // outer dependency: J2DPane
 /* top-level dependencies (end dSelect_cursor_c) */
 struct dSelect_cursor_c {
-	// J2DAnmTransformKey
-	// J2DAnmColor
-	// J2DPane
 	// JKRArchive
+	// J2DPane
+	// J2DAnmTransformKey
 	// J2DAnmTextureSRTKey
-	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	// J2DAnmColor
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801949EC */ ~dSelect_cursor_c();
 	/* 80194C30 */ void draw();
 	/* 80194CC0 */ void update();
@@ -92,11 +92,18 @@ struct dSelect_cursor_c {
 struct dSelect_icon_c {
 	// J2DPane
 	/* 80195A3C */ void animation();
-	/* 80195B40 */ void setAlpha(char);
+	/* 80195B40 */ void setAlpha(u8);
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (J2DPane) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) False/False
@@ -118,23 +125,16 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (J2DPane) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
@@ -401,7 +401,7 @@ u8 d_d_select_cursor__lit_3808[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dSelect_cursor_c::dSelect_cursor_c(char field_0, f32 field_1, JKRArchive* field_2) {
+asm dSelect_cursor_c::dSelect_cursor_c(u8 field_0, f32 field_1, JKRArchive* field_2) {
 	nofralloc
 #include "asm/d/d_select_cursor/__ct__16dSelect_cursor_cFUcfP10JKRArchive.s"
 }

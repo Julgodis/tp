@@ -10,12 +10,6 @@
 // 
 
 // build cM3dGCyl (cM3dGCyl) False/False
-// build cM3dGSph (cM3dGSph) False/False
-/* top-level dependencies (begin cM3dGSph) */
-/* top-level dependencies (end cM3dGSph) */
-struct cM3dGSph {
-};
-
 // build cXyz (cXyz) False/False
 /* top-level dependencies (begin cXyz) */
 /* top-level dependencies (end cXyz) */
@@ -28,15 +22,21 @@ struct cXyz {
 struct cM3dGCylS {
 };
 
+// build cM3dGSph (cM3dGSph) False/False
+/* top-level dependencies (begin cM3dGSph) */
+/* top-level dependencies (end cM3dGSph) */
+struct cM3dGSph {
+};
+
 /* top-level dependencies (begin cM3dGCyl) */
-// outer dependency: cM3dGSph
 // outer dependency: cXyz
 // outer dependency: cM3dGCylS
+// outer dependency: cM3dGSph
 /* top-level dependencies (end cM3dGCyl) */
 struct cM3dGCyl {
-	// cM3dGSph
 	// cXyz
 	// cM3dGCylS
+	// cM3dGSph
 	/* 8026F0A8 */ cM3dGCyl(cXyz const*, f32, f32);
 	/* 8026F114 */ void Set(cM3dGCylS const&);
 	/* 8026F180 */ void Set(cXyz const&, f32, f32);

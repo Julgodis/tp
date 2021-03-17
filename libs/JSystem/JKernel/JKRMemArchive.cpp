@@ -10,23 +10,17 @@
 // 
 
 // build JKRMemArchive (JKRMemArchive) False/False
-// build JKRMemBreakFlag (JKRMemBreakFlag) False/False
-/* top-level dependencies (begin JKRMemBreakFlag) */
-/* top-level dependencies (end JKRMemBreakFlag) */
-struct JKRMemBreakFlag {
-};
-
 // build JKRArchive (JKRArchive) False/False
 // build JKRArchive (JKRArchive) True/False
 struct JKRArchive;
 // build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRArchive::EMountMode
 // outer dependency: JKRArchive::SDIFileEntry
+// outer dependency: JKRArchive::EMountMode
 /* top-level dependencies (end JKRArchive) */
 struct JKRArchive {
-	// JKRArchive::EMountMode
 	// JKRArchive::SDIFileEntry
+	// JKRArchive::EMountMode
 	// build EMountDirection (JKRArchive::EMountDirection) False/False
 	/* dependencies (begin JKRArchive::EMountDirection) */
 	/* dependencies (end JKRArchive::EMountDirection) */
@@ -61,15 +55,21 @@ struct JKRArchive {
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
 };
 
+// build JKRMemBreakFlag (JKRMemBreakFlag) False/False
+/* top-level dependencies (begin JKRMemBreakFlag) */
+/* top-level dependencies (end JKRMemBreakFlag) */
+struct JKRMemBreakFlag {
+};
+
 // build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JKRMemArchive) */
-// outer dependency: JKRMemBreakFlag
 // outer dependency: JKRArchive::EMountDirection
+// outer dependency: JKRMemBreakFlag
 // outer dependency: JKRArchive::SDIFileEntry
 /* top-level dependencies (end JKRMemArchive) */
 struct JKRMemArchive {
-	// JKRMemBreakFlag
 	// JKRArchive::EMountDirection
+	// JKRMemBreakFlag
 	// JKRArchive::SDIFileEntry
 	/* 802D69B8 */ JKRMemArchive(s32, JKRArchive::EMountDirection);
 	/* 802D6A6C */ JKRMemArchive(void*, u32, JKRMemBreakFlag);
@@ -80,7 +80,7 @@ struct JKRMemArchive {
 	/* 802D6E10 */ void fetchResource(void*, u32, JKRArchive::SDIFileEntry*, u32*);
 	/* 802D6ED0 */ void removeResourceAll();
 	/* 802D6F20 */ void removeResource(void*);
-	/* 802D6F5C */ void fetchResource_subroutine(char*, u32, char*, u32, s32);
+	/* 802D6F5C */ void fetchResource_subroutine(u8*, u32, u8*, u32, int);
 	/* 802D7030 */ void getExpandedResSize(void const*) const;
 };
 
@@ -102,23 +102,23 @@ struct JKRFileLoader {
 };
 
 // build JKRDvdRipper (JKRDvdRipper) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JKRExpandSwitch (JKRExpandSwitch) False/False
 /* top-level dependencies (begin JKRExpandSwitch) */
 /* top-level dependencies (end JKRExpandSwitch) */
 struct JKRExpandSwitch {
 };
 
+// build JKRHeap (JKRHeap) True/True
 // build JKRDvdRipper (JKRDvdRipper) True/False
 struct JKRDvdRipper;
 /* top-level dependencies (begin JKRDvdRipper) */
-// outer dependency: JKRHeap
 // outer dependency: JKRExpandSwitch
+// outer dependency: JKRHeap
 // outer dependency: JKRDvdRipper::EAllocDirection
 /* top-level dependencies (end JKRDvdRipper) */
 struct JKRDvdRipper {
-	// JKRHeap
 	// JKRExpandSwitch
+	// JKRHeap
 	// JKRDvdRipper::EAllocDirection
 	// build EAllocDirection (JKRDvdRipper::EAllocDirection) False/False
 	/* dependencies (begin JKRDvdRipper::EAllocDirection) */
@@ -126,7 +126,7 @@ struct JKRDvdRipper {
 	struct EAllocDirection {
 	};
 
-	/* 802D9C54 */ void loadToMainRAM(s32, char*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, s32*, u32*);
+	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
 };
 
 // build JKRExpandSwitch (JKRExpandSwitch) True/True
@@ -134,7 +134,7 @@ struct JKRDvdRipper {
 /* top-level dependencies (begin JKRDecomp) */
 /* top-level dependencies (end JKRDecomp) */
 struct JKRDecomp {
-	/* 802DB988 */ void orderSync(char*, char*, u32, u32);
+	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
 };
 
 // build JSUPtrList (JSUPtrList) False/False
@@ -154,6 +154,13 @@ struct JSUPtrList {
 };
 
 // build JSUPtrLink (JSUPtrLink) True/True
+// build JUTException (JUTException) False/False
+/* top-level dependencies (begin JUTException) */
+/* top-level dependencies (end JUTException) */
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -179,7 +186,6 @@ SECTION_DATA extern void*const __vt__13JKRMemArchive[20];
 
 SECTION_INIT void memcpy();
 void operator delete(void*);
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
 extern "C" void DCInvalidateRange();
 extern "C" void _savegpr_28();
 extern "C" void _savegpr_29();
@@ -361,7 +367,7 @@ SECTION_DEAD char* const pad_8039D187 = "";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRMemArchive::fetchResource_subroutine(char* field_0, u32 field_1, char* field_2, u32 field_3, s32 field_4) {
+asm void JKRMemArchive::fetchResource_subroutine(u8* field_0, u32 field_1, u8* field_2, u32 field_3, int field_4) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRMemArchive/fetchResource_subroutine__13JKRMemArchiveFPUcUlPUcUli.s"
 }

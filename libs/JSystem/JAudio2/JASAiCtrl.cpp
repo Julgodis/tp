@@ -161,8 +161,8 @@ SECTION_SDATA2 extern f64 lit_278;
 // 
 
 extern "C" void func_8028F69C();
-extern "C" void JASReport__FPCce();
-void* operator new[](u32, JKRHeap*, s32);
+void JASReport(char const*, ...);
+void* operator new[](u32, JKRHeap*, int);
 extern "C" void DCInvalidateRange();
 extern "C" void DCStoreRange();
 extern "C" void OSDisableInterrupts();

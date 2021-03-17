@@ -12,12 +12,6 @@
 // build J2DPrint (J2DPrint) False/False
 // build J2DPrint (J2DPrint) True/False
 struct J2DPrint;
-// build J2DTextBoxVBinding (J2DTextBoxVBinding) False/False
-/* top-level dependencies (begin J2DTextBoxVBinding) */
-/* top-level dependencies (end J2DTextBoxVBinding) */
-struct J2DTextBoxVBinding {
-};
-
 // build JUtility (JUtility) False/False
 /* top-level dependencies (begin JUtility) */
 /* top-level dependencies (end JUtility) */
@@ -28,6 +22,12 @@ struct JUtility {
 	struct TColor {
 	};
 
+};
+
+// build J2DTextBoxVBinding (J2DTextBoxVBinding) False/False
+/* top-level dependencies (begin J2DTextBoxVBinding) */
+/* top-level dependencies (end J2DTextBoxVBinding) */
+struct J2DTextBoxVBinding {
 };
 
 // build JUTFont (JUTFont) False/False
@@ -48,17 +48,17 @@ struct J2DTextBoxHBinding {
 
 /* top-level dependencies (begin J2DPrint) */
 // outer dependency: J2DPrint::TSize
-// outer dependency: J2DTextBoxVBinding
 // outer dependency: JUtility::TColor
+// outer dependency: J2DTextBoxVBinding
 // outer dependency: JUTFont
 // outer dependency: J2DTextBoxHBinding
 /* top-level dependencies (end J2DPrint) */
 struct J2DPrint {
 	// J2DPrint::TSize
-	// J2DTextBoxVBinding
 	// JUtility::TColor
-	// JUTFont
 	// J2DTextBoxHBinding
+	// J2DTextBoxVBinding
+	// JUTFont
 	// build TSize (J2DPrint::TSize) False/False
 	/* dependencies (begin J2DPrint::TSize) */
 	/* dependencies (end J2DPrint::TSize) */
@@ -71,13 +71,14 @@ struct J2DPrint {
 	/* 802F4658 */ void setBuffer(u32);
 	/* 802F46C4 */ void setFontSize();
 	/* 802F475C */ void locate(f32, f32);
-	/* 802F4828 */ void printReturn(char const*, f32, f32, J2DTextBoxHBinding, J2DTextBoxVBinding, f32, f32, char);
-	/* 802F4B4C */ void parse(char const*, s32, s32, u16*, J2DPrint::TSize&, char, bool);
-	/* 802F52E8 */ void doCtrlCode(s32);
-	/* 802F5410 */ void doEscapeCode(char const**, char);
+	/* 802F4778 */ void print(f32, f32, u8, char const*, ...);
+	/* 802F4828 */ void printReturn(char const*, f32, f32, J2DTextBoxHBinding, J2DTextBoxVBinding, f32, f32, u8);
+	/* 802F4B4C */ void parse(u8 const*, int, int, u16*, J2DPrint::TSize&, u8, bool);
+	/* 802F52E8 */ void doCtrlCode(int);
+	/* 802F5410 */ void doEscapeCode(u8 const**, u8);
 	/* 802F594C */ void initchar();
-	/* 802F59C0 */ void getNumberS32(char const**, s32, s32, s32);
-	/* 802F5AC4 */ void getNumberF32(char const**, f32, f32, s32);
+	/* 802F59C0 */ void getNumberS32(u8 const**, s32, s32, int);
+	/* 802F5AC4 */ void getNumberF32(u8 const**, f32, f32, int);
 };
 
 // build JUTFont (JUTFont) True/True
@@ -95,7 +96,6 @@ struct JKRHeap {
 // 
 
 extern "C" static void J2DPrint_print_alpha_va();
-extern "C" void print__8J2DPrintFffUcPCce();
 
 extern "C" static void J2DPrint_print_alpha_va();
 extern "C" void __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
@@ -130,7 +130,7 @@ SECTION_SDATA2 extern f32 J2DPrint__lit_937;
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void _savegpr_20();
 extern "C" void _savegpr_25();
@@ -314,7 +314,7 @@ asm void J2DPrint::locate(f32 field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void print__8J2DPrintFffUcPCce() {
+asm void J2DPrint::print(f32 field_0, f32 field_1, u8 field_2, char const* field_3, ...) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/print__8J2DPrintFffUcPCce.s"
 }
@@ -333,7 +333,7 @@ f64 lit_791 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPrint::printReturn(char const* field_0, f32 field_1, f32 field_2, J2DTextBoxHBinding field_3, J2DTextBoxVBinding field_4, f32 field_5, f32 field_6, char field_7) {
+asm void J2DPrint::printReturn(char const* field_0, f32 field_1, f32 field_2, J2DTextBoxHBinding field_3, J2DTextBoxVBinding field_4, f32 field_5, f32 field_6, u8 field_7) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc.s"
 }
@@ -348,7 +348,7 @@ f32 J2DPrint__lit_913 = 10000.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPrint::parse(char const* field_0, s32 field_1, s32 field_2, u16* field_3, J2DPrint::TSize& field_4, char field_5, bool field_6) {
+asm void J2DPrint::parse(u8 const* field_0, int field_1, int field_2, u16* field_3, J2DPrint::TSize& field_4, u8 field_5, bool field_6) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb.s"
 }
@@ -363,7 +363,7 @@ f32 J2DPrint__lit_937 = 1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPrint::doCtrlCode(s32 field_0) {
+asm void J2DPrint::doCtrlCode(int field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/doCtrlCode__8J2DPrintFi.s"
 }
@@ -374,7 +374,7 @@ asm void J2DPrint::doCtrlCode(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPrint::doEscapeCode(char const** field_0, char field_1) {
+asm void J2DPrint::doEscapeCode(u8 const** field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/doEscapeCode__8J2DPrintFPPCUcUc.s"
 }
@@ -396,7 +396,7 @@ asm void J2DPrint::initchar() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPrint::getNumberS32(char const** field_0, s32 field_1, s32 field_2, s32 field_3) {
+asm void J2DPrint::getNumberS32(u8 const** field_0, s32 field_1, s32 field_2, int field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/getNumberS32__8J2DPrintFPPCUclli.s"
 }
@@ -407,7 +407,7 @@ asm void J2DPrint::getNumberS32(char const** field_0, s32 field_1, s32 field_2, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPrint::getNumberF32(char const** field_0, f32 field_1, f32 field_2, s32 field_3) {
+asm void J2DPrint::getNumberF32(u8 const** field_0, f32 field_1, f32 field_2, int field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPrint/getNumberF32__8J2DPrintFPPCUcffi.s"
 }

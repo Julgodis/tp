@@ -99,7 +99,7 @@ SECTION_SDATA2 extern f64 lit_784;
 // External References:
 // 
 
-void* operator new[](u32, s32);
+void* operator new[](u32, int);
 void operator delete(void*);
 void operator delete[](void*);
 extern "C" void __ptmf_scall();

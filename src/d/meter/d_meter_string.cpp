@@ -13,16 +13,16 @@
 /* top-level dependencies (begin dMeterString_c) */
 /* top-level dependencies (end dMeterString_c) */
 struct dMeterString_c {
-	/* 8020ED60 */ dMeterString_c(s32);
+	/* 8020ED60 */ dMeterString_c(int);
 	/* 8020EDF4 */ ~dMeterString_c();
 	/* 8020EE70 */ void _create();
 	/* 8020F150 */ void _execute(u32);
 	/* 8020F1B0 */ void draw();
 	/* 8020F49C */ void _delete();
-	/* 8020F5A4 */ void createString(s32);
+	/* 8020F5A4 */ void createString(int);
 	/* 8020F66C */ void playBckAnimation(f32);
 	/* 8020F6EC */ void drawPikari();
-	/* 8020FA88 */ void isLeadByte(s32);
+	/* 8020FA88 */ void isLeadByte(int);
 };
 
 // build dMeterSub_c (dMeterSub_c) False/False
@@ -50,7 +50,7 @@ struct JUtility {
 /* top-level dependencies (end dMeter2Draw_c) */
 struct dMeter2Draw_c {
 	// JUtility::TColor
-	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, char);
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 };
 
 // build JUtility (JUtility) True/True
@@ -72,6 +72,20 @@ struct dMeter2Info_c {
 
 // build JMSMesgEntry_c (JMSMesgEntry_c) True/True
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (J2DPane) False/False
+/* top-level dependencies (begin J2DPane) */
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	/* 802F7AFC */ void getParentPane();
+	/* 802F7FCC */ void animationTransform();
+};
+
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -97,30 +111,16 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (J2DPane) False/False
-/* top-level dependencies (begin J2DPane) */
-/* top-level dependencies (end J2DPane) */
-struct J2DPane {
-	/* 802F7AFC */ void getParentPane();
-	/* 802F7FCC */ void animationTransform();
-};
-
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
@@ -149,6 +149,7 @@ struct JKRFileLoader {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
@@ -193,12 +194,11 @@ SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3979;
 // 
 
 void mDoExt_getMesgFont();
-void dComIfG_TimerDeleteRequest(s32);
+void dComIfG_TimerDeleteRequest(int);
 void dPaneClass_showNullPane(J2DScreen*);
-void dTimer_createTimer(s32, u32, char, char, f32, f32, f32, f32);
+void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void _savegpr_23();
 extern "C" void _restgpr_23();
 extern "C" void strcpy();
@@ -256,7 +256,7 @@ void* const __vt__14dMeterString_c[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dMeterString_c::dMeterString_c(s32 field_0) {
+asm dMeterString_c::dMeterString_c(int field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter_string/__ct__14dMeterString_cFi.s"
 }
@@ -372,7 +372,7 @@ f32 d_meter_d_meter_string__lit_3866 = 40.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterString_c::createString(s32 field_0) {
+asm void dMeterString_c::createString(int field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter_string/createString__14dMeterString_cFi.s"
 }
@@ -409,7 +409,7 @@ asm void dMeterString_c::drawPikari() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterString_c::isLeadByte(s32 field_0) {
+asm void dMeterString_c::isLeadByte(int field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter_string/isLeadByte__14dMeterString_cFi.s"
 }

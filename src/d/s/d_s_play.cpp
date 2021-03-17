@@ -125,7 +125,7 @@ struct create_tag_class {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024954 */ void resetArchiveBank(s32);
+	/* 80024954 */ void resetArchiveBank(int);
 };
 
 // build stage_stag_info_class (stage_stag_info_class) False/False
@@ -148,9 +148,9 @@ struct dComIfG_play_c {
 	// dStage_startStage_c
 	/* 8002B22C */ void init();
 	/* 8002B3B8 */ void setStartStage(dStage_startStage_c*);
-	/* 8002B434 */ void getLayerNo_common_common(char const*, s32, s32);
-	/* 8002C950 */ void getLayerNo_common(char const*, s32, s32);
-	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002B434 */ void getLayerNo_common_common(char const*, int, int);
+	/* 8002C950 */ void getLayerNo_common(char const*, int, int);
+	/* 8002C97C */ void getLayerNo(int);
 	/* 8002CA1C */ void createSimpleModel();
 	/* 8002CA70 */ void deleteSimpleModel();
 };
@@ -168,22 +168,22 @@ struct daSus_c {
 /* top-level dependencies (begin dSv_player_status_b_c) */
 /* top-level dependencies (end dSv_player_status_b_c) */
 struct dSv_player_status_b_c {
-	/* 80032B94 */ void onDarkClearLV(s32);
-	/* 80032BD0 */ void onTransformLV(s32);
+	/* 80032B94 */ void onDarkClearLV(int);
+	/* 80032BD0 */ void onTransformLV(int);
 };
 
 // build dSv_player_item_c (dSv_player_item_c) False/False
 /* top-level dependencies (begin dSv_player_item_c) */
 /* top-level dependencies (end dSv_player_item_c) */
 struct dSv_player_item_c {
-	/* 80032FB8 */ void setItem(s32, char);
+	/* 80032FB8 */ void setItem(int, u8);
 };
 
 // build dSv_player_get_item_c (dSv_player_get_item_c) False/False
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033E60 */ void onFirstBit(char);
+	/* 80033E60 */ void onFirstBit(u8);
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -197,7 +197,7 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_danBit_c) */
 /* top-level dependencies (end dSv_danBit_c) */
 struct dSv_danBit_c {
-	/* 80034B98 */ void onSwitch(s32);
+	/* 80034B98 */ void onSwitch(int);
 };
 
 // build dSv_info_c (dSv_info_c) False/False
@@ -217,23 +217,23 @@ struct dDemo_c {
 };
 
 // build dRes_control_c (dRes_control_c) False/False
-// build JKRHeap (JKRHeap) True/True
 // build dRes_info_c (dRes_info_c) False/False
 /* top-level dependencies (begin dRes_info_c) */
 /* top-level dependencies (end dRes_info_c) */
 struct dRes_info_c {
 };
 
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin dRes_control_c) */
-// outer dependency: JKRHeap
 // outer dependency: dRes_info_c
+// outer dependency: JKRHeap
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
-	// JKRHeap
 	// dRes_info_c
-	/* 8003C078 */ void setRes(char const*, dRes_info_c*, s32, char const*, char, JKRHeap*);
-	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, s32);
-	/* 8003C470 */ void syncAllRes(dRes_info_c*, s32);
+	// JKRHeap
+	/* 8003C078 */ void setRes(char const*, dRes_info_c*, int, char const*, u8, JKRHeap*);
+	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, int);
+	/* 8003C470 */ void syncAllRes(dRes_info_c*, int);
 	/* 8003C5BC */ void setStageRes(char const*, JKRHeap*);
 };
 
@@ -266,7 +266,7 @@ struct mDoDvdThd_toMainRam_c {
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
 	// mDoDvdThd_toMainRam_c
-	/* 8004BDFC */ void readScene(char, mDoDvdThd_toMainRam_c**);
+	/* 8004BDFC */ void readScene(u8, mDoDvdThd_toMainRam_c**);
 	/* 8004BEB0 */ void createScene(void const*);
 	/* 8004BFD4 */ void removeScene(bool);
 	/* 8004C054 */ void cleanup();
@@ -398,7 +398,7 @@ struct Z2SceneMgr {
 /* top-level dependencies (begin JUTAssertion) */
 /* top-level dependencies (end JUTAssertion) */
 struct JUTAssertion {
-	/* 802E4C3C */ void setMessageCount(s32);
+	/* 802E4C3C */ void setMessageCount(int);
 };
 
 // 
@@ -497,8 +497,8 @@ SECTION_SDATA2 extern f32 d_s_d_s_play__lit_4806;
 void mDoAud_setSceneName(char const*, s32, s32);
 void mDoAud_load1stDynamicWave();
 void mDoAud_resetRecover();
-void mDoRst_resetCallBack(s32, void*);
-void fopAcM_create(s16, u32, cXyz const*, s32, csXyz const*, cXyz const*, char);
+void mDoRst_resetCallBack(int, void*);
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
 void fopOvlpM_IsPeek();
 void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
 void fopMsgM_createExpHeap(u32, JKRHeap*);
@@ -506,29 +506,29 @@ void fopMsgM_destroyExpHeap(JKRExpHeap*);
 void fopDwIt_Begin();
 void fopDwIt_Next(create_tag_class*);
 void fpcM_Draw(void*);
-void dStage_stagInfo_GetParticleNo(stage_stag_info_class*, s32);
+void dStage_stagInfo_GetParticleNo(stage_stag_info_class*, int);
 void dStage_infoCreate();
 void dStage_Create();
 void dStage_Delete();
 void dComIfG_resetToOpening(scene_class*);
 void dComIfG_resLoad(request_of_phase_process_class*, char const*);
 void dComIfG_resDelete(request_of_phase_process_class*, char const*);
-void dComIfGs_BossLife_public_Set(char);
+void dComIfGs_BossLife_public_Set(s8);
 void dComIfGp_calcNowRegion();
-void dComIfGp_world_dark_set(char);
+void dComIfGp_world_dark_set(u8);
 extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
-void execItemGet(char);
+void execItemGet(u8);
 void dKy_getdaytime_hour();
 void dKy_getdaytime_minute();
 void dKy_itudemo_se();
 void dKy_get_dayofweek();
 void dKy_darkworld_check();
-void dKy_darkworld_stage_check(char const*, s32);
-void dKy_darkworld_spot_check(char const*, s32);
-void dKy_darkworld_Area_set(char const*, s32);
-void dMeter2Info_setCloth(char, bool);
-void dMeter2Info_setSword(char, bool);
-void dMeter2Info_setShield(char, bool);
+void dKy_darkworld_stage_check(char const*, int);
+void dKy_darkworld_spot_check(char const*, int);
+void dKy_darkworld_Area_set(char const*, int);
+void dMeter2Info_setCloth(u8, bool);
+void dMeter2Info_setSword(u8, bool);
+void dMeter2Info_setShield(u8, bool);
 extern "C" void func_80252E70();
 void operator delete(void*);
 extern "C" void JUTReportConsole_f();

@@ -17,13 +17,13 @@ struct dDrawPath_c;
 // build dDrawPath_c (dDrawPath_c) True/True
 /* top-level dependencies (begin dDrawPath_c) */
 // outer dependency: dDrawPath_c::line_class
-// outer dependency: dDrawPath_c::room_class
 // outer dependency: dDrawPath_c::poly_class
+// outer dependency: dDrawPath_c::room_class
 /* top-level dependencies (end dDrawPath_c) */
 struct dDrawPath_c {
 	// dDrawPath_c::line_class
-	// dDrawPath_c::room_class
 	// dDrawPath_c::poly_class
+	// dDrawPath_c::room_class
 	// build room_class (dDrawPath_c::room_class) False/False
 	/* dependencies (begin dDrawPath_c::room_class) */
 	/* dependencies (end dDrawPath_c::room_class) */
@@ -48,15 +48,16 @@ struct dDrawPath_c {
 	struct group_class {
 	};
 
-	/* 8002ABF0 */ bool isDrawType(s32);
+	/* 8002ABF0 */ bool isDrawType(int);
 	/* 8002AD3C */ ~dDrawPath_c();
-	/* 8002AD84 */ void getLineColor(s32, s32);
+	/* 8002AD84 */ void getLineColor(int, int);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003CCC4 */ void drawPath();
 };
 
+// build dDrawPath_c (dDrawPath_c) True/True
 // build dDrawPath_c (dDrawPath_c) True/True
 // build dTres_c (dTres_c) False/False
 /* top-level dependencies (begin dTres_c) */
@@ -74,22 +75,21 @@ struct dTres_c {
 	struct data_s {
 	};
 
-	/* 8009C4B0 */ void getTypeToTypeGroupNo(char);
+	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
 };
 
-// build dDrawPath_c (dDrawPath_c) True/True
 /* top-level dependencies (begin renderingAmap_c) */
 // outer dependency: dDrawPath_c::line_class
+// outer dependency: dDrawPath_c::poly_class
 // outer dependency: dDrawPath_c::room_class
 // outer dependency: dTres_c::data_s
-// outer dependency: dDrawPath_c::poly_class
 /* top-level dependencies (end renderingAmap_c) */
 struct renderingAmap_c {
 	// dDrawPath_c::line_class
+	// dDrawPath_c::poly_class
 	// dDrawPath_c::room_class
 	// dTres_c::data_s
-	// dDrawPath_c::poly_class
-	/* 800284BC */ void getIconSize(char) const;
+	/* 800284BC */ void getIconSize(u8) const;
 	/* 800284D0 */ void draw();
 	/* 800288C4 */ void getDispType() const;
 	/* 80028960 */ void beforeDrawPath();
@@ -103,12 +103,12 @@ struct renderingAmap_c {
 	/* 80028BB4 */ void isDrawOutSideTrim();
 	/* 80028C4C */ void getOutSideBlackLineNumber();
 	/* 80028C60 */ void isOutSideBlackLine();
-	/* 80028C90 */ void getLineWidthSub(s32);
-	/* 80028CF4 */ void getDecorationLineWidth(s32);
-	/* 80028DD4 */ void getLineWidth(s32);
-	/* 80028EE4 */ void getLineColor(s32, s32);
-	/* 80028FB4 */ void getDecoLineColor(s32, s32);
-	/* 80029058 */ void getIconGroupNumber(char) const;
+	/* 80028C90 */ void getLineWidthSub(int);
+	/* 80028CF4 */ void getDecorationLineWidth(int);
+	/* 80028DD4 */ void getLineWidth(int);
+	/* 80028EE4 */ void getLineColor(int, int);
+	/* 80028FB4 */ void getDecoLineColor(int, int);
+	/* 80029058 */ void getIconGroupNumber(u8) const;
 	/* 80029078 */ void hasMap() const;
 	/* 800290C0 */ void isRendDoor() const;
 	/* 80029104 */ bool isCheckFloor() const;
@@ -116,7 +116,7 @@ struct renderingAmap_c {
 	/* 80029114 */ bool isRendCursor() const;
 	/* 8002911C */ void isRendAllRoom() const;
 	/* 80029160 */ void getStayType() const;
-	/* 80029190 */ void isDrawIconSingle2(dTres_c::data_s const*, bool, bool, s32) const;
+	/* 80029190 */ void isDrawIconSingle2(dTres_c::data_s const*, bool, bool, int) const;
 	/* 8002ADB0 */ ~renderingAmap_c();
 	/* 8002AE6C */ renderingAmap_c();
 	/* 8002B000 */ bool isRendIcon() const;
@@ -130,30 +130,30 @@ struct renderingAmap_c {
 /* top-level dependencies (end dMap_c) */
 struct dMap_c {
 	// dTres_c::typeGroupData_c
-	/* 80028DF4 */ void getColor(s32);
+	/* 80028DF4 */ void getColor(int);
 	/* 80029038 */ void getIconPosition(dTres_c::typeGroupData_c*) const;
-	/* 800296EC */ void isDrawType(s32);
+	/* 800296EC */ void isDrawType(int);
 	/* 800296F8 */ void isRendAllRoom() const;
 	/* 80029744 */ bool isSpecialOutline();
 	/* 8002974C */ void copyPalette();
-	/* 800297A8 */ void setMapPaletteColorAlphaPer(s32, s32, f32);
+	/* 800297A8 */ void setMapPaletteColorAlphaPer(int, int, f32);
 	/* 80029818 */ void resCopy();
-	/* 80029874 */ dMap_c(s32, s32, s32, s32);
+	/* 80029874 */ dMap_c(int, int, int, int);
 	/* 80029A1C */ void _remove();
-	/* 80029A8C */ void getMapMinMaxXZ(s32, f32*, f32*, f32*, f32*);
-	/* 80029C10 */ void getPack(s32, f32*, f32*);
-	/* 80029D78 */ void calcMapCenterXZ(s32, f32*, f32*);
-	/* 80029E1C */ void calcMapCmPerTexel(s32, f32*);
-	/* 80029F84 */ void setMapPaletteColorAlphaPer(s32, f32);
-	/* 8002A064 */ void copyPalette(s32, s32, f32);
-	/* 8002A148 */ void setAmapPaletteColor(s32, char, char, char, char);
+	/* 80029A8C */ void getMapMinMaxXZ(int, f32*, f32*, f32*, f32*);
+	/* 80029C10 */ void getPack(int, f32*, f32*);
+	/* 80029D78 */ void calcMapCenterXZ(int, f32*, f32*);
+	/* 80029E1C */ void calcMapCmPerTexel(int, f32*);
+	/* 80029F84 */ void setMapPaletteColorAlphaPer(int, f32);
+	/* 8002A064 */ void copyPalette(int, int, f32);
+	/* 8002A148 */ void setAmapPaletteColor(int, u8, u8, u8, u8);
 	/* 8002A1BC */ void getDispType() const;
-	/* 8002A1DC */ void isDrawRoom(s32, s32) const;
+	/* 8002A1DC */ void isDrawRoom(int, int) const;
 	/* 8002A254 */ void getRoomNoSingle();
-	/* 8002A294 */ void isDrawRoomIcon(s32, s32) const;
-	/* 8002A32C */ void _move(f32, f32, s32, f32);
+	/* 8002A294 */ void isDrawRoomIcon(int, int) const;
+	/* 8002A32C */ void _move(f32, f32, int, f32);
 	/* 8002AB54 */ void _draw();
-	/* 8002ABAC */ void getFirstData(char);
+	/* 8002ABAC */ void getFirstData(u8);
 	/* 8002ABCC */ void getNextData(dTres_c::typeGroupData_c*);
 	/* 8002AF20 */ ~dMap_c();
 };
@@ -192,7 +192,7 @@ struct ResTIMG {
 struct dRenderingMap_c {
 	// ResTIMG
 	/* 8002AC74 */ ~dRenderingMap_c();
-	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, char*, char*, u16) const;
+	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, u8*, u8*, u16) const;
 };
 
 // build dDrawPathWithNormalPattern_c (dDrawPathWithNormalPattern_c) False/False
@@ -211,7 +211,7 @@ struct renderingPlusDoorAndCursor_c {
 	// dTres_c::typeGroupData_c
 	/* 8002B008 */ ~renderingPlusDoorAndCursor_c();
 	/* 800402FC */ void afterDrawPath();
-	/* 80040A94 */ void getFirstData(char);
+	/* 80040A94 */ void getFirstData(u8);
 	/* 80040AB8 */ void getNextData(dTres_c::typeGroupData_c*);
 	/* 80040ADC */ void getIconPosition(dTres_c::typeGroupData_c*) const;
 };
@@ -224,31 +224,31 @@ struct renderingPlusDoor_c {
 };
 
 // build renderingDAmap_c (renderingDAmap_c) False/False
+// build dDrawPath_c (dDrawPath_c) True/True
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
-// build dDrawPath_c (dDrawPath_c) True/True
 // build dTres_c (dTres_c) True/True
 /* top-level dependencies (begin renderingDAmap_c) */
-// outer dependency: Vec
 // outer dependency: dDrawPath_c::group_class
+// outer dependency: Vec
 // outer dependency: dTres_c::data_s
 /* top-level dependencies (end renderingDAmap_c) */
 struct renderingDAmap_c {
-	// Vec
 	// dDrawPath_c::group_class
+	// Vec
 	// dTres_c::data_s
 	/* 8002B150 */ ~renderingDAmap_c();
-	/* 8003FCC8 */ void init(char*, u16, u16, u16, u16);
-	/* 8003FD08 */ void entry(f32, f32, f32, s32, char);
+	/* 8003FCC8 */ void init(u8*, u16, u16, u16, u16);
+	/* 8003FD08 */ void entry(f32, f32, f32, int, s8);
 	/* 8003FD9C */ void isSwitch(dDrawPath_c::group_class const*);
 	/* 8003FE18 */ void draw();
 	/* 8003FE4C */ void getBackColor() const;
-	/* 8003FE54 */ void isRenderingFloor(s32);
-	/* 8003FE70 */ void isDrawRoom(s32, s32) const;
+	/* 8003FE54 */ void isRenderingFloor(int);
+	/* 8003FE70 */ void isDrawRoom(int, int) const;
 	/* 8003FF14 */ void preDrawPath();
 	/* 8003FFC4 */ void postDrawPath();
 	/* 8003FFEC */ void getRoomNoSingle();
@@ -256,18 +256,18 @@ struct renderingDAmap_c {
 	/* 800401E8 */ void getNextRoomPointer();
 	/* 800402C0 */ void isDrawPath();
 	/* 800402E0 */ bool getFirstDrawLayerNo();
-	/* 800402E8 */ void getNextDrawLayerNo(s32);
-	/* 800409B4 */ void isDrawRoomIcon(s32, s32) const;
-	/* 800409E0 */ void isDrawIconSingle(dTres_c::data_s const*, s32, s32, bool, bool, Vec const*) const;
-	/* 80040AE4 */ void getIconGroupNumber(char) const;
+	/* 800402E8 */ void getNextDrawLayerNo(int);
+	/* 800409B4 */ void isDrawRoomIcon(int, int) const;
+	/* 800409E0 */ void isDrawIconSingle(dTres_c::data_s const*, int, int, bool, bool, Vec const*) const;
+	/* 80040AE4 */ void getIconGroupNumber(u8) const;
 };
 
 // build dSv_memBit_c (dSv_memBit_c) False/False
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 800347E8 */ void isTbox(s32) const;
-	/* 80034934 */ void isDungeonItem(s32) const;
+	/* 800347E8 */ void isTbox(int) const;
+	/* 80034934 */ void isDungeonItem(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -281,14 +281,14 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_danBit_c) */
 /* top-level dependencies (end dSv_danBit_c) */
 struct dSv_danBit_c {
-	/* 80034BE8 */ void isSwitch(s32) const;
+	/* 80034BE8 */ void isSwitch(int) const;
 };
 
 // build dSv_info_c (dSv_info_c) False/False
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build dRes_control_c (dRes_control_c) False/False
@@ -303,7 +303,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -314,15 +314,15 @@ struct dRes_control_c {
 struct dMapInfo_n {
 	/* 8003ECA0 */ void chkGetCompass();
 	/* 8003ECD8 */ void chkGetMap();
-	/* 8003ED10 */ void isVisitedRoom(s32);
-	/* 8003F1F4 */ void getRoomMinMaxXZ(s32, f32*, f32*, f32*, f32*);
+	/* 8003ED10 */ void isVisitedRoom(int);
+	/* 8003F1F4 */ void getRoomMinMaxXZ(int, f32*, f32*, f32*, f32*);
 };
 
 // build dMapInfo_c (dMapInfo_c) False/False
 /* top-level dependencies (begin dMapInfo_c) */
 /* top-level dependencies (end dMapInfo_c) */
 struct dMapInfo_c {
-	/* 8003F6C8 */ void move(s32, f32);
+	/* 8003F6C8 */ void move(int, f32);
 };
 
 // build Vec (Vec) True/True
@@ -440,8 +440,8 @@ SECTION_SDATA2 extern f32 d_map_d_map__lit_4692;
 
 void dComIfGp_isLightDropMapVisible();
 void cLib_memCpy(void*, void const*, u32);
-void* operator new(u32, s32);
-void* operator new[](u32, s32);
+void* operator new(u32, int);
+void* operator new[](u32, int);
 void operator delete(void*);
 void operator delete[](void*);
 extern "C" void DCStoreRange();
@@ -551,7 +551,7 @@ SECTION_RODATA const u8 data_80378E48[68] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingAmap_c::getIconSize(char field_0) const {
+asm void renderingAmap_c::getIconSize(u8 field_0) const {
 	nofralloc
 #include "asm/d/map/d_map/getIconSize__15renderingAmap_cCFUc.s"
 }
@@ -760,7 +760,7 @@ u8 data_80451CD0[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingAmap_c::getLineWidthSub(s32 field_0) {
+asm void renderingAmap_c::getLineWidthSub(int field_0) {
 	nofralloc
 #include "asm/d/map/d_map/getLineWidthSub__15renderingAmap_cFi.s"
 }
@@ -771,7 +771,7 @@ asm void renderingAmap_c::getLineWidthSub(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingAmap_c::getDecorationLineWidth(s32 field_0) {
+asm void renderingAmap_c::getDecorationLineWidth(int field_0) {
 	nofralloc
 #include "asm/d/map/d_map/getDecorationLineWidth__15renderingAmap_cFi.s"
 }
@@ -782,7 +782,7 @@ asm void renderingAmap_c::getDecorationLineWidth(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingAmap_c::getLineWidth(s32 field_0) {
+asm void renderingAmap_c::getLineWidth(int field_0) {
 	nofralloc
 #include "asm/d/map/d_map/getLineWidth__15renderingAmap_cFi.s"
 }
@@ -793,7 +793,7 @@ asm void renderingAmap_c::getLineWidth(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::getColor(s32 field_0) {
+asm void dMap_c::getColor(int field_0) {
 	nofralloc
 #include "asm/d/map/d_map/getColor__6dMap_cFi.s"
 }
@@ -822,7 +822,7 @@ u8 data_80451CDC[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingAmap_c::getLineColor(s32 field_0, s32 field_1) {
+asm void renderingAmap_c::getLineColor(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/map/d_map/getLineColor__15renderingAmap_cFii.s"
 }
@@ -860,7 +860,7 @@ SECTION_RODATA const u8 data_80378EF8[16] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingAmap_c::getDecoLineColor(s32 field_0, s32 field_1) {
+asm void renderingAmap_c::getDecoLineColor(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/map/d_map/getDecoLineColor__15renderingAmap_cFii.s"
 }
@@ -882,7 +882,7 @@ asm void dMap_c::getIconPosition(dTres_c::typeGroupData_c* field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingAmap_c::getIconGroupNumber(char field_0) const {
+asm void renderingAmap_c::getIconGroupNumber(u8 field_0) const {
 	nofralloc
 #include "asm/d/map/d_map/getIconGroupNumber__15renderingAmap_cCFUc.s"
 }
@@ -984,7 +984,7 @@ void* d_map_d_map__lit_4259[17] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void renderingAmap_c::isDrawIconSingle2(dTres_c::data_s const* field_0, bool field_1, bool field_2, s32 field_3) const {
+asm void renderingAmap_c::isDrawIconSingle2(dTres_c::data_s const* field_0, bool field_1, bool field_2, int field_3) const {
 	nofralloc
 #include "asm/d/map/d_map/isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi.s"
 }
@@ -995,7 +995,7 @@ asm void renderingAmap_c::isDrawIconSingle2(dTres_c::data_s const* field_0, bool
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::isDrawType(s32 field_0) {
+asm void dMap_c::isDrawType(int field_0) {
 	nofralloc
 #include "asm/d/map/d_map/isDrawType__6dMap_cFi.s"
 }
@@ -1038,7 +1038,7 @@ asm void dMap_c::copyPalette() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::setMapPaletteColorAlphaPer(s32 field_0, s32 field_1, f32 field_2) {
+asm void dMap_c::setMapPaletteColorAlphaPer(int field_0, int field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/map/d_map/setMapPaletteColorAlphaPer__6dMap_cFiif.s"
 }
@@ -1194,7 +1194,7 @@ u8 d_map_d_map__lit_4321[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dMap_c::dMap_c(s32 field_0, s32 field_1, s32 field_2, s32 field_3) {
+asm dMap_c::dMap_c(int field_0, int field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/map/d_map/__ct__6dMap_cFiiii.s"
 }
@@ -1216,7 +1216,7 @@ asm void dMap_c::_remove() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::getMapMinMaxXZ(s32 field_0, f32* field_1, f32* field_2, f32* field_3, f32* field_4) {
+asm void dMap_c::getMapMinMaxXZ(int field_0, f32* field_1, f32* field_2, f32* field_3, f32* field_4) {
 	nofralloc
 #include "asm/d/map/d_map/getMapMinMaxXZ__6dMap_cFiPfPfPfPf.s"
 }
@@ -1227,7 +1227,7 @@ asm void dMap_c::getMapMinMaxXZ(s32 field_0, f32* field_1, f32* field_2, f32* fi
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::getPack(s32 field_0, f32* field_1, f32* field_2) {
+asm void dMap_c::getPack(int field_0, f32* field_1, f32* field_2) {
 	nofralloc
 #include "asm/d/map/d_map/getPack__6dMap_cFiPfPf.s"
 }
@@ -1238,7 +1238,7 @@ asm void dMap_c::getPack(s32 field_0, f32* field_1, f32* field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::calcMapCenterXZ(s32 field_0, f32* field_1, f32* field_2) {
+asm void dMap_c::calcMapCenterXZ(int field_0, f32* field_1, f32* field_2) {
 	nofralloc
 #include "asm/d/map/d_map/calcMapCenterXZ__6dMap_cFiPfPf.s"
 }
@@ -1253,7 +1253,7 @@ f32 d_map_d_map__lit_4503 = 10800.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::calcMapCmPerTexel(s32 field_0, f32* field_1) {
+asm void dMap_c::calcMapCmPerTexel(int field_0, f32* field_1) {
 	nofralloc
 #include "asm/d/map/d_map/calcMapCmPerTexel__6dMap_cFiPf.s"
 }
@@ -1264,7 +1264,7 @@ asm void dMap_c::calcMapCmPerTexel(s32 field_0, f32* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::setMapPaletteColorAlphaPer(s32 field_0, f32 field_1) {
+asm void dMap_c::setMapPaletteColorAlphaPer(int field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/map/d_map/setMapPaletteColorAlphaPer__6dMap_cFif.s"
 }
@@ -1275,7 +1275,7 @@ asm void dMap_c::setMapPaletteColorAlphaPer(s32 field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::copyPalette(s32 field_0, s32 field_1, f32 field_2) {
+asm void dMap_c::copyPalette(int field_0, int field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/map/d_map/copyPalette__6dMap_cFiif.s"
 }
@@ -1286,7 +1286,7 @@ asm void dMap_c::copyPalette(s32 field_0, s32 field_1, f32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::setAmapPaletteColor(s32 field_0, char field_1, char field_2, char field_3, char field_4) {
+asm void dMap_c::setAmapPaletteColor(int field_0, u8 field_1, u8 field_2, u8 field_3, u8 field_4) {
 	nofralloc
 #include "asm/d/map/d_map/setAmapPaletteColor__6dMap_cFiUcUcUcUc.s"
 }
@@ -1308,7 +1308,7 @@ asm void dMap_c::getDispType() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::isDrawRoom(s32 field_0, s32 field_1) const {
+asm void dMap_c::isDrawRoom(int field_0, int field_1) const {
 	nofralloc
 #include "asm/d/map/d_map/isDrawRoom__6dMap_cCFii.s"
 }
@@ -1330,7 +1330,7 @@ asm void dMap_c::getRoomNoSingle() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::isDrawRoomIcon(s32 field_0, s32 field_1) const {
+asm void dMap_c::isDrawRoomIcon(int field_0, int field_1) const {
 	nofralloc
 #include "asm/d/map/d_map/isDrawRoomIcon__6dMap_cCFii.s"
 }
@@ -1357,7 +1357,7 @@ f32 d_map_d_map__lit_4692 = 20.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::_move(f32 field_0, f32 field_1, s32 field_2, f32 field_3) {
+asm void dMap_c::_move(f32 field_0, f32 field_1, int field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/map/d_map/_move__6dMap_cFffif.s"
 }
@@ -1379,7 +1379,7 @@ asm void dMap_c::_draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMap_c::getFirstData(char field_0) {
+asm void dMap_c::getFirstData(u8 field_0) {
 	nofralloc
 #include "asm/d/map/d_map/getFirstData__6dMap_cFUc.s"
 }
@@ -1404,7 +1404,7 @@ void dDlst_base_c::draw() {
 
 
 /* 8002ABF0-8002ABF8 0008+00 rc=10 efc=7 .text      isDrawType__11dDrawPath_cFi                                  */
-bool dDrawPath_c::isDrawType(s32 field_0) {
+bool dDrawPath_c::isDrawType(int field_0) {
 	return true;
 }
 
@@ -1457,7 +1457,7 @@ asm dDrawPath_c::~dDrawPath_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDrawPath_c::getLineColor(s32 field_0, s32 field_1) {
+asm void dDrawPath_c::getLineColor(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/map/d_map/getLineColor__11dDrawPath_cFii.s"
 }

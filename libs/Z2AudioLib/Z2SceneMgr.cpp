@@ -27,10 +27,10 @@ struct Z2SceneMgr {
 	/* 802B6840 */ Z2SceneMgr();
 	/* 802B68B0 */ void setInDarkness(bool);
 	/* 802B68E0 */ void setSceneExist(bool);
-	/* 802B697C */ void setFadeOutStart(char);
-	/* 802B6A18 */ void setFadeInStart(char);
+	/* 802B697C */ void setFadeOutStart(u8);
+	/* 802B6A18 */ void setFadeInStart(u8);
 	/* 802B6AF8 */ void setSceneName(char*, s32, s32);
-	/* 802B9B68 */ void sceneChange(JAISoundID, char, char, char, char, char, bool);
+	/* 802B9B68 */ void sceneChange(JAISoundID, u8, u8, u8, u8, u8, bool);
 	/* 802B9C50 */ void framework();
 	/* 802B9D40 */ void load1stDynamicWave();
 	/* 802B9D98 */ void _load1stWaveInner_1();
@@ -99,7 +99,7 @@ struct Z2SeMgr {
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 80034860 */ void isSwitch(s32) const;
+	/* 80034860 */ void isSwitch(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -113,7 +113,7 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build JASWaveArc (JASWaveArc) False/False
@@ -179,7 +179,7 @@ struct Z2FxLineMgr {
 /* top-level dependencies (end Z2SoundObjMgr) */
 struct Z2SoundObjMgr {
 	/* 802BF980 */ void setForceBattleArea(bool, u16, u16, u16);
-	/* 802BFFEC */ void setGhostEnemyState(char);
+	/* 802BFFEC */ void setGhostEnemyState(u8);
 	/* 802C013C */ void deleteEnemyAll();
 };
 
@@ -188,7 +188,7 @@ struct Z2SoundObjMgr {
 /* top-level dependencies (end Z2EnvSeMgr) */
 struct Z2EnvSeMgr {
 	/* 802C699C */ void resetSceneInner();
-	/* 802C6AC0 */ void initSceneEnvSe(s32, char, f32);
+	/* 802C6AC0 */ void initSceneEnvSe(s32, s8, f32);
 };
 
 // 
@@ -197,7 +197,7 @@ struct Z2EnvSeMgr {
 
 extern "C" static void func_802B9994();
 static void dComIfGs_getStartPoint();
-static void dComIfGs_isSaveSwitch(s32);
+static void dComIfGs_isSaveSwitch(int);
 
 extern "C" void __ct__10Z2SceneMgrFv();
 extern "C" void setInDarkness__10Z2SceneMgrFb();
@@ -260,7 +260,7 @@ SECTION_SDATA2 extern f32 Z2SceneMgr__lit_5346;
 // External References:
 // 
 
-void dComIfGs_isStageSwitch(s32, s32);
+void dComIfGs_isStageSwitch(int, int);
 void dComIfGs_isEventBit(u16);
 extern "C" void _savegpr_16();
 extern "C" void _savegpr_29();
@@ -380,7 +380,7 @@ f64 lit_3531 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SceneMgr::setFadeOutStart(char field_0) {
+asm void Z2SceneMgr::setFadeOutStart(u8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/setFadeOutStart__10Z2SceneMgrFUc.s"
 }
@@ -391,7 +391,7 @@ asm void Z2SceneMgr::setFadeOutStart(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SceneMgr::setFadeInStart(char field_0) {
+asm void Z2SceneMgr::setFadeInStart(u8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/setFadeInStart__10Z2SceneMgrFUc.s"
 }
@@ -912,7 +912,7 @@ asm void JAISoundID::operator=(JAISoundID const& field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dComIfGs_isSaveSwitch(s32 field_0) {
+asm static void dComIfGs_isSaveSwitch(int field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/dComIfGs_isSaveSwitch__Fi.s"
 }
@@ -967,7 +967,7 @@ asm JAISoundID::JAISoundID(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SceneMgr::sceneChange(JAISoundID field_0, char field_1, char field_2, char field_3, char field_4, char field_5, bool field_6) {
+asm void Z2SceneMgr::sceneChange(JAISoundID field_0, u8 field_1, u8 field_2, u8 field_3, u8 field_4, u8 field_5, bool field_6) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb.s"
 }

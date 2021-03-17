@@ -10,24 +10,6 @@
 // 
 
 // build JStudio_JStage (JStudio_JStage) False/False
-// build JStudio (JStudio) False/False
-/* top-level dependencies (begin JStudio) */
-/* top-level dependencies (end JStudio) */
-namespace JStudio {
-	// build data (JStudio::data) False/False
-	/* dependencies (begin JStudio::data) */
-	/* dependencies (end JStudio::data) */
-	struct data {
-		// build TEOperationData (JStudio::data::TEOperationData) False/False
-		/* dependencies (begin JStudio::data::TEOperationData) */
-		/* dependencies (end JStudio::data::TEOperationData) */
-		struct TEOperationData {
-		};
-
-	};
-
-};
-
 // build JStage (JStage) False/False
 /* top-level dependencies (begin JStage) */
 /* top-level dependencies (end JStage) */
@@ -40,35 +22,94 @@ struct JStage {
 
 };
 
+// build JStudio (JStudio) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+/* top-level dependencies (begin JStudio) */
+// outer dependency: Vec
+/* top-level dependencies (end JStudio) */
+namespace JStudio {
+	// build TControl (JStudio::TControl) False/False
+	/* dependencies (begin JStudio::TControl) */
+	/* dependencies (end JStudio::TControl) */
+	struct TControl {
+		// build TTransform_translation_rotation_scaling (JStudio::TControl::TTransform_translation_rotation_scaling) False/False
+		/* dependencies (begin JStudio::TControl::TTransform_translation_rotation_scaling) */
+		/* dependencies (end JStudio::TControl::TTransform_translation_rotation_scaling) */
+		struct TTransform_translation_rotation_scaling {
+		};
+
+		// build TTransform_position (JStudio::TControl::TTransform_position) False/False
+		/* dependencies (begin JStudio::TControl::TTransform_position) */
+		/* dependencies (end JStudio::TControl::TTransform_position) */
+		struct TTransform_position {
+		};
+
+	};
+
+	// build data (JStudio::data) False/False
+	/* dependencies (begin JStudio::data) */
+	/* dependencies (end JStudio::data) */
+	struct data {
+		// build TEOperationData (JStudio::data::TEOperationData) False/False
+		/* dependencies (begin JStudio::data::TEOperationData) */
+		/* dependencies (end JStudio::data::TEOperationData) */
+		struct TEOperationData {
+		};
+
+	};
+
+	// build math (JStudio::math) False/False
+	/* dependencies (begin JStudio::math) */
+	/* dependencies (end JStudio::math) */
+	struct math {
+		// Vec
+		/* 80285B44 */ void getTransformation_SRxyzT(f32 (* )[4], Vec const&, Vec const&, Vec const&);
+	};
+
+};
+
+// build JStudio (JStudio) True/True
+// build JStudio (JStudio) True/True
 /* top-level dependencies (begin JStudio_JStage) */
-// outer dependency: JStudio::data::TEOperationData
 // outer dependency: JStage::TObject
+// outer dependency: JStudio::TControl::TTransform_translation_rotation_scaling
+// outer dependency: JStudio::TControl::TTransform_position
+// outer dependency: JStudio::data::TEOperationData
 /* top-level dependencies (end JStudio_JStage) */
 struct JStudio_JStage {
+	// JStudio::TControl::TTransform_position
+	// JStudio::TControl::TTransform_translation_rotation_scaling
+	// JStage::TObject
 	// build TAdaptor_object_ (JStudio_JStage::TAdaptor_object_) False/False
 	/* dependencies (begin JStudio_JStage::TAdaptor_object_) */
 	/* dependencies (end JStudio_JStage::TAdaptor_object_) */
 	struct TAdaptor_object_ {
-		// JStudio::data::TEOperationData
 		// JStage::TObject
+		// JStudio::data::TEOperationData
 		/* 8028A470 */ void adaptor_object_data_(void const*, u32, void const*, u32);
 		/* 8028A4BC */ void adaptor_object_findJSGObject_(char const*);
 		/* 8028A50C */ void adaptor_object_findJSGObjectNode_(JStage::TObject const*, char const*);
 		/* 8028A550 */ void adaptor_object_ENABLE_(JStudio::data::TEOperationData, void const*, u32);
 	};
 
+	/* 8028A1F8 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_translation_rotation_scaling const&, JStage::TObject const*, u32);
+	/* 8028A290 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_position const&, JStage::TObject const*, u32);
+	/* 8028A328 */ void transform_toLocalFromGlobal(f32 (* )[4], JStudio::TControl::TTransform_translation_rotation_scaling const&, JStage::TObject const*, u32);
+	/* 8028A3CC */ void transform_toLocalFromGlobal(f32 (* )[4], JStudio::TControl::TTransform_position const&, JStage::TObject const*, u32);
 };
 
-// build JStage (JStage) True/True
 // build JStudio (JStudio) True/True
+// build JStage (JStage) True/True
+// build Vec (Vec) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
-extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
-extern "C" void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
-extern "C" void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
 
 extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
 extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
@@ -83,7 +124,6 @@ extern "C" void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37
 // External References:
 // 
 
-extern "C" void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec();
 extern "C" void PSMTXConcat();
 extern "C" void PSMTXInverse();
 extern "C" void PSMTXTrans();
@@ -101,7 +141,7 @@ extern "C" void PSMTXTrans();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl() {
+asm void JStudio_JStage::transform_toGlobalFromLocal(f32 (* field_0)[4], JStudio::TControl::TTransform_translation_rotation_scaling const& field_1, JStage::TObject const* field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/func_8028A1F8.s"
 }
@@ -112,7 +152,7 @@ extern "C" asm void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStu
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl() {
+asm void JStudio_JStage::transform_toGlobalFromLocal(f32 (* field_0)[4], JStudio::TControl::TTransform_position const& field_1, JStage::TObject const* field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/func_8028A290.s"
 }
@@ -123,7 +163,7 @@ extern "C" asm void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStu
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl() {
+asm void JStudio_JStage::transform_toLocalFromGlobal(f32 (* field_0)[4], JStudio::TControl::TTransform_translation_rotation_scaling const& field_1, JStage::TObject const* field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/func_8028A328.s"
 }
@@ -134,7 +174,7 @@ extern "C" asm void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStu
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl() {
+asm void JStudio_JStage::transform_toLocalFromGlobal(f32 (* field_0)[4], JStudio::TControl::TTransform_position const& field_1, JStage::TObject const* field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object/func_8028A3CC.s"
 }

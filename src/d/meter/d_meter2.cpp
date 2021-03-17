@@ -53,7 +53,7 @@ struct dMeter2_c {
 	/* 802250F4 */ void alphaAnimeButton();
 	/* 802254C0 */ void alphaAnimeButtonCross();
 	/* 802256DC */ void isShowLightDrop();
-	/* 802258A0 */ void killSubContents(char);
+	/* 802258A0 */ void killSubContents(u8);
 	/* 80225960 */ void isKeyVisible();
 	/* 802259F8 */ void isArrowEquip();
 	/* 80225A64 */ void isPachinkoEquip();
@@ -83,10 +83,10 @@ struct JKRExpHeap {
 /* top-level dependencies (begin dComIfG_play_c) */
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	/* 8002B36C */ void setItemBombNumCount(char, s16);
-	/* 8002B384 */ void getItemBombNumCount(char);
-	/* 8002B394 */ void clearItemBombNumCount(char);
-	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002B36C */ void setItemBombNumCount(u8, s16);
+	/* 8002B384 */ void getItemBombNumCount(u8);
+	/* 8002B394 */ void clearItemBombNumCount(u8);
+	/* 8002C97C */ void getLayerNo(int);
 	/* 8002CBBC */ void getTimerMode();
 };
 
@@ -94,7 +94,7 @@ struct dComIfG_play_c {
 /* top-level dependencies (begin dSv_player_status_a_c) */
 /* top-level dependencies (end dSv_player_status_a_c) */
 struct dSv_player_status_a_c {
-	/* 80032A5C */ void getSelectItemIndex(s32) const;
+	/* 80032A5C */ void getSelectItemIndex(int) const;
 	/* 80032AA8 */ void getRupeeMax() const;
 };
 
@@ -102,42 +102,42 @@ struct dSv_player_status_a_c {
 /* top-level dependencies (begin dSv_player_item_c) */
 /* top-level dependencies (end dSv_player_item_c) */
 struct dSv_player_item_c {
-	/* 80032FB8 */ void setItem(s32, char);
-	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80032FB8 */ void setItem(int, u8);
+	/* 80033030 */ void getItem(int, bool) const;
 };
 
 // build dSv_player_item_record_c (dSv_player_item_record_c) False/False
 /* top-level dependencies (begin dSv_player_item_record_c) */
 /* top-level dependencies (end dSv_player_item_record_c) */
 struct dSv_player_item_record_c {
-	/* 80033F6C */ void setBombNum(char, char);
-	/* 80033F7C */ void getBombNum(char) const;
-	/* 80034030 */ void getBottleNum(char) const;
+	/* 80033F6C */ void setBombNum(u8, u8);
+	/* 80033F7C */ void getBombNum(u8) const;
+	/* 80034030 */ void getBottleNum(u8) const;
 };
 
 // build dSv_player_item_max_c (dSv_player_item_max_c) False/False
 /* top-level dependencies (begin dSv_player_item_max_c) */
 /* top-level dependencies (end dSv_player_item_max_c) */
 struct dSv_player_item_max_c {
-	/* 800340F8 */ void getBombNum(char) const;
+	/* 800340F8 */ void getBombNum(u8) const;
 };
 
 // build dSv_player_collect_c (dSv_player_collect_c) False/False
 /* top-level dependencies (begin dSv_player_collect_c) */
 /* top-level dependencies (end dSv_player_collect_c) */
 struct dSv_player_collect_c {
-	/* 8003422C */ void onCollectCrystal(char);
-	/* 8003424C */ void isCollectCrystal(char) const;
-	/* 80034270 */ void onCollectMirror(char);
-	/* 80034290 */ void isCollectMirror(char) const;
+	/* 8003422C */ void onCollectCrystal(u8);
+	/* 8003424C */ void isCollectCrystal(u8) const;
+	/* 80034270 */ void onCollectMirror(u8);
+	/* 80034290 */ void isCollectMirror(u8) const;
 };
 
 // build dSv_light_drop_c (dSv_light_drop_c) False/False
 /* top-level dependencies (begin dSv_light_drop_c) */
 /* top-level dependencies (end dSv_light_drop_c) */
 struct dSv_light_drop_c {
-	/* 80034340 */ void getLightDropNum(char) const;
-	/* 8003439C */ void isLightDropGetFlag(char) const;
+	/* 80034340 */ void getLightDropNum(u8) const;
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -174,7 +174,7 @@ struct dCamera_c {
 /* top-level dependencies (begin dScope_c) */
 /* top-level dependencies (end dScope_c) */
 struct dScope_c {
-	/* 80193690 */ dScope_c(char);
+	/* 80193690 */ dScope_c(u8);
 };
 
 // build dMw_HIO_c (dMw_HIO_c) False/False
@@ -193,7 +193,7 @@ struct dMeterButton_c {
 	/* 80201328 */ dMeterButton_c();
 	/* 80201404 */ void _execute(u32, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool);
 	/* 80209474 */ void isClose();
-	/* 802095C0 */ void setString(char*, char, char, char);
+	/* 802095C0 */ void setString(char*, u8, u8, u8);
 	/* 80209CEC */ void hideAll();
 };
 
@@ -201,7 +201,7 @@ struct dMeterButton_c {
 /* top-level dependencies (begin dMeterHaihai_c) */
 /* top-level dependencies (end dMeterHaihai_c) */
 struct dMeterHaihai_c {
-	/* 8020AE8C */ dMeterHaihai_c(char);
+	/* 8020AE8C */ dMeterHaihai_c(u8);
 };
 
 // build dMeterHakusha_c (dMeterHakusha_c) False/False
@@ -225,7 +225,7 @@ struct dMeterMap_c {
 	// J2DScreen
 	/* 8020D650 */ void isEnableDispMapAndMapDispSizeTypeNo();
 	/* 8020D75C */ void getMapDispEdgeTop();
-	/* 8020D8F8 */ void setMapAlpha(char);
+	/* 8020D8F8 */ void setMapAlpha(u8);
 	/* 8020D948 */ dMeterMap_c(J2DScreen*);
 	/* 8020DCE4 */ void _move(u32);
 	/* 8020DF1C */ void _draw();
@@ -237,8 +237,8 @@ struct dMeterMap_c {
 /* top-level dependencies (begin dMeterString_c) */
 /* top-level dependencies (end dMeterString_c) */
 struct dMeterString_c {
-	/* 8020ED60 */ dMeterString_c(s32);
-	/* 8020F5A4 */ void createString(s32);
+	/* 8020ED60 */ dMeterString_c(int);
+	/* 8020F5A4 */ void createString(int);
 };
 
 // build dMeter2Draw_c (dMeter2Draw_c) False/False
@@ -262,7 +262,7 @@ struct dMeter2Draw_c {
 	/* 802158F0 */ void setAlphaOxygenChange(bool);
 	/* 80215A18 */ void setAlphaOxygenAnimeMin();
 	/* 80215A94 */ void setAlphaOxygenAnimeMax();
-	/* 80215B18 */ void drawLightDrop(char, char, f32, f32, f32, f32, char);
+	/* 80215B18 */ void drawLightDrop(u8, u8, f32, f32, f32, f32, u8);
 	/* 80215DA4 */ void setAlphaLightDropChange(bool);
 	/* 80215DA8 */ void getNowLightDropRateCalc();
 	/* 80215E40 */ void setAlphaLightDropAnimeMin();
@@ -275,15 +275,15 @@ struct dMeter2Draw_c {
 	/* 80216B28 */ void setAlphaKeyChange(bool);
 	/* 80216CA8 */ void setAlphaKeyAnimeMin();
 	/* 80216D2C */ void setAlphaKeyAnimeMax();
-	/* 80216DAC */ void drawButtonA(char, f32, f32, f32, f32, f32, bool, bool);
-	/* 802170E4 */ void drawButtonB(char, bool, f32, f32, f32, f32, f32, bool);
-	/* 8021764C */ void drawButtonR(char, char, bool, bool);
-	/* 802176EC */ void drawButtonZ(char);
-	/* 80217904 */ void drawButton3D(char);
-	/* 80217954 */ void drawButtonC(char, bool);
-	/* 802179C0 */ void drawButtonS(char);
-	/* 80217A10 */ void drawButtonBin(char);
-	/* 80217AB4 */ void drawButtonXY(s32, char, char, bool, bool);
+	/* 80216DAC */ void drawButtonA(u8, f32, f32, f32, f32, f32, bool, bool);
+	/* 802170E4 */ void drawButtonB(u8, bool, f32, f32, f32, f32, f32, bool);
+	/* 8021764C */ void drawButtonR(u8, u8, bool, bool);
+	/* 802176EC */ void drawButtonZ(u8);
+	/* 80217904 */ void drawButton3D(u8);
+	/* 80217954 */ void drawButtonC(u8, bool);
+	/* 802179C0 */ void drawButtonS(u8);
+	/* 80217A10 */ void drawButtonBin(u8);
+	/* 80217AB4 */ void drawButtonXY(int, u8, u8, bool, bool);
 	/* 80218238 */ void getButtonCrossParentInitTransY();
 	/* 80218254 */ void drawButtonCross(f32, f32);
 	/* 80218338 */ void setAlphaButtonCrossAnimeMin();
@@ -295,14 +295,14 @@ struct dMeter2Draw_c {
 	/* 80219258 */ void setAlphaButtonAAnimeMax();
 	/* 80219324 */ void setAlphaButtonBAnimeMin();
 	/* 80219474 */ void setAlphaButtonBAnimeMax();
-	/* 802195A4 */ void setButtonIconAAlpha(char, u32, bool);
-	/* 80219788 */ void setButtonIconBAlpha(char, u32, bool);
+	/* 802195A4 */ void setButtonIconAAlpha(u8, u32, bool);
+	/* 80219788 */ void setButtonIconBAlpha(u8, u32, bool);
 	/* 80219A84 */ void setButtonIconMidonaAlpha(u32);
-	/* 80219E98 */ void setButtonIconAlpha(s32, char, u32, bool);
-	/* 8021A2F4 */ void getActionString(char, char, char*);
-	/* 8021AB84 */ void setItemNum(char, char, char);
-	/* 8021AEC8 */ void drawItemNum(char, f32);
-	/* 8021AF78 */ void drawKanteraMeter(char, f32);
+	/* 80219E98 */ void setButtonIconAlpha(int, u8, u32, bool);
+	/* 8021A2F4 */ void getActionString(u8, u8, u8*);
+	/* 8021AB84 */ void setItemNum(u8, u8, u8);
+	/* 8021AEC8 */ void drawItemNum(u8, f32);
+	/* 8021AF78 */ void drawKanteraMeter(u8, f32);
 	/* 8021B0C8 */ void isButtonVisible();
 	/* 8021BC24 */ void getCameraSubject();
 	/* 8021BC54 */ void getItemSubject();
@@ -316,7 +316,7 @@ struct dMeter2Draw_c {
 /* top-level dependencies (end dMeter2Info_c) */
 struct dMeter2Info_c {
 	/* 8021C1DC */ void isFloatingMessageVisible();
-	/* 8021C950 */ void isDirectUseItem(s32);
+	/* 8021C950 */ void isDirectUseItem(int);
 	/* 8021DCE0 */ void decHotSpringTimer();
 };
 
@@ -329,27 +329,27 @@ struct dMsgObject_c {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -445,21 +445,21 @@ SECTION_SDATA2 extern f32 d_meter_d_meter2__lit_9091;
 
 void mDoExt_setCurrentHeap(JKRHeap*);
 void fopMsgM_setStageLayer(void*);
-void fopMsgM_setMessageID(s32);
+void fopMsgM_setMessageID(u32);
 extern "C" void fopMsgM_Create__FsPFPv_iPv();
 void fopMsgM_createExpHeap(u32, JKRHeap*);
 void fopMsgM_destroyExpHeap(JKRExpHeap*);
-void dComIfGs_setSelectItemIndex(s32, char);
-void dComIfGs_setMixItemIndex(s32, char);
-void dComIfGs_getSelectMixItemNoArrowIndex(s32);
-void dComIfGs_getMixItemIndex(s32);
-void dComIfGp_setSelectItem(s32);
-void dComIfGp_getSelectItem(s32);
-void dComIfGp_setHeapLockFlag(char);
-void dComIfGp_offHeapLockFlag(s32);
-void dComIfGp_getSubHeap2D(s32);
-void dComIfGp_getSelectItemNum(s32);
-void dComIfGp_getSelectItemMaxNum(s32);
+void dComIfGs_setSelectItemIndex(int, u8);
+void dComIfGs_setMixItemIndex(int, u8);
+void dComIfGs_getSelectMixItemNoArrowIndex(int);
+void dComIfGs_getMixItemIndex(int);
+void dComIfGp_setSelectItem(int);
+void dComIfGp_getSelectItem(int);
+void dComIfGp_setHeapLockFlag(u8);
+void dComIfGp_offHeapLockFlag(int);
+void dComIfGp_getSubHeap2D(int);
+void dComIfGp_getSelectItemNum(int);
+void dComIfGp_getSelectItemMaxNum(int);
 void dCam_getBody();
 void dKy_darkworld_check();
 bool dMeter2Info_is2DActiveTouchArea();
@@ -1170,7 +1170,7 @@ asm void dMeter2_c::isShowLightDrop() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeter2_c::killSubContents(char field_0) {
+asm void dMeter2_c::killSubContents(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2/killSubContents__9dMeter2_cFUc.s"
 }

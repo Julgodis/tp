@@ -46,7 +46,7 @@ struct dScnLogo_c {
 	/* 80257AE0 */ void create();
 	/* 80257C64 */ void logoInitGC();
 	/* 80257FEC */ void dvdDataLoad();
-	/* 802584D8 */ void setProgressiveMode(char);
+	/* 802584D8 */ void setProgressiveMode(u8);
 	/* 802584FC */ void getProgressiveMode();
 	/* 80258520 */ void isProgressiveMode();
 	/* 8025854C */ void setRenderMode();
@@ -70,11 +70,12 @@ struct scene_class {
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE448 */ void destroy();
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 // build mDoDvdThd_mountXArchive_c (mDoDvdThd_mountXArchive_c) False/False
+// build JKRHeap (JKRHeap) True/True
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
 /* top-level dependencies (end JKRArchive) */
@@ -87,15 +88,14 @@ struct JKRArchive {
 
 };
 
-// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin mDoDvdThd_mountXArchive_c) */
-// outer dependency: JKRArchive::EMountMode
 // outer dependency: JKRHeap
+// outer dependency: JKRArchive::EMountMode
 /* top-level dependencies (end mDoDvdThd_mountXArchive_c) */
 struct mDoDvdThd_mountXArchive_c {
-	// JKRArchive::EMountMode
 	// JKRHeap
-	/* 800161E0 */ void create(char const*, char, JKRArchive::EMountMode, JKRHeap*);
+	// JKRArchive::EMountMode
+	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
 // build JKRArchive (JKRArchive) True/True
@@ -106,7 +106,7 @@ struct mDoDvdThd_mountXArchive_c {
 /* top-level dependencies (end mDoDvdThd_toMainRam_c) */
 struct mDoDvdThd_toMainRam_c {
 	// JKRHeap
-	/* 80016394 */ void create(char const*, char, JKRHeap*);
+	/* 80016394 */ void create(char const*, u8, JKRHeap*);
 };
 
 // build cDylPhs (cDylPhs) False/False
@@ -127,24 +127,24 @@ struct dComIfG_play_c {
 };
 
 // build dRes_control_c (dRes_control_c) False/False
-// build JKRHeap (JKRHeap) True/True
 // build dRes_info_c (dRes_info_c) False/False
 /* top-level dependencies (begin dRes_info_c) */
 /* top-level dependencies (end dRes_info_c) */
 struct dRes_info_c {
 };
 
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin dRes_control_c) */
-// outer dependency: JKRHeap
 // outer dependency: dRes_info_c
+// outer dependency: JKRHeap
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
-	// JKRHeap
 	// dRes_info_c
-	/* 8003C078 */ void setRes(char const*, dRes_info_c*, s32, char const*, char, JKRHeap*);
-	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, s32);
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
-	/* 8003C470 */ void syncAllRes(dRes_info_c*, s32);
+	// JKRHeap
+	/* 8003C078 */ void setRes(char const*, dRes_info_c*, int, char const*, u8, JKRHeap*);
+	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, int);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+	/* 8003C470 */ void syncAllRes(dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -174,7 +174,7 @@ struct ResTIMG {
 /* top-level dependencies (end dDlst_2D_c) */
 struct dDlst_2D_c {
 	// ResTIMG
-	/* 80053A00 */ dDlst_2D_c(ResTIMG*, s16, s16, s16, s16, char);
+	/* 80053A00 */ dDlst_2D_c(ResTIMG*, s16, s16, s16, s16, u8);
 };
 
 // build ResTIMG (ResTIMG) True/True
@@ -215,30 +215,30 @@ struct dTres_c {
 /* top-level dependencies (begin JFWDisplay) */
 /* top-level dependencies (end JFWDisplay) */
 struct JFWDisplay {
-	/* 80272C60 */ void waitBlanking(s32);
+	/* 80272C60 */ void waitBlanking(int);
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -387,8 +387,8 @@ void mDoExt_getMesgFont();
 void mDoExt_getRubyFont();
 void mDoExt_getSubFont();
 void mDoExt_setAraCacheSize(u32);
-void mDoRst_reset(s32, u32, s32);
-void mDoRst_resetCallBack(s32, void*);
+void mDoRst_reset(int, u32, int);
+void mDoRst_resetCallBack(int, void*);
 void cDyl_InitAsyncIsDone();
 void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
 void dComIfG_changeOpeningScene(scene_class*, s16);
@@ -1116,7 +1116,7 @@ static bool dScnLogo_IsDelete(dScnLogo_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dScnLogo_c::setProgressiveMode(char field_0) {
+asm void dScnLogo_c::setProgressiveMode(u8 field_0) {
 	nofralloc
 #include "asm/d/s/d_s_logo/setProgressiveMode__10dScnLogo_cFUc.s"
 }

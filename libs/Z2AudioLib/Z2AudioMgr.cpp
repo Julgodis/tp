@@ -56,7 +56,7 @@ struct JASHeap {
 /* top-level dependencies (end JASGenericMemPool) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
-	/* 802908C8 */ void newMemPool(u32, s32);
+	/* 802908C8 */ void newMemPool(u32, int);
 };
 
 // build JASKernel (JASKernel) False/False
@@ -348,7 +348,7 @@ void JAUNewSectionHeap(bool);
 void seqCallback(JASTrack*, u16);
 extern "C" void func_802AB200();
 extern "C" void func_802BD288();
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void __register_global_object();
 extern "C" void __destroy_arr();

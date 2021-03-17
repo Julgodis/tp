@@ -13,7 +13,7 @@
 /* top-level dependencies (begin JPATexture) */
 /* top-level dependencies (end JPATexture) */
 struct JPATexture {
-	/* 8027D7D4 */ JPATexture(char const*);
+	/* 8027D7D4 */ JPATexture(u8 const*);
 	/* 8027D83C */ ~JPATexture();
 };
 
@@ -30,7 +30,7 @@ struct ResTIMG {
 struct JUTTexture {
 	// ResTIMG
 	/* 802DE234 */ ~JUTTexture();
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, char);
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 };
 
 // build ResTIMG (ResTIMG) True/True
@@ -71,7 +71,7 @@ void* const __vt__10JPATexture[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JPATexture::JPATexture(char const* field_0) {
+asm JPATexture::JPATexture(u8 const* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPATexture/__ct__10JPATextureFPCUc.s"
 }

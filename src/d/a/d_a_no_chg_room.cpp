@@ -14,7 +14,7 @@
 /* top-level dependencies (end daNocrm_c) */
 struct daNocrm_c {
 	/* 801452DC */ void execute();
-	/* 80145508 */ void getRoomNo(s32);
+	/* 80145508 */ void getRoomNo(int);
 };
 
 // build fopAc_ac_c (fopAc_ac_c) False/False
@@ -66,7 +66,7 @@ struct dBgS {
 // Forward References:
 // 
 
-static void isLoadRoom(s32);
+static void isLoadRoom(int);
 static void daNocrm_create(daNocrm_c*);
 static bool daNocrm_Delete(daNocrm_c*);
 static void daNocrm_execute(daNocrm_c*);
@@ -91,8 +91,8 @@ SECTION_SDATA2 extern f32 d_a_d_a_no_chg_room__lit_3833;
 // 
 
 extern "C" void OSReport_Warning();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-void fopScnM_SearchByID(s32);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void fopScnM_SearchByID(u32);
 void fpcNd_IsDeleteTiming(process_node_class*);
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXInverse();
@@ -133,7 +133,7 @@ SECTION_SBSS extern u8 data_80450D68[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void isLoadRoom(s32 field_0) {
+asm static void isLoadRoom(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_no_chg_room/isLoadRoom__Fi.s"
 }
@@ -161,7 +161,7 @@ asm void daNocrm_c::execute() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNocrm_c::getRoomNo(s32 field_0) {
+asm void daNocrm_c::getRoomNo(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_no_chg_room/getRoomNo__9daNocrm_cFi.s"
 }

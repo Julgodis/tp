@@ -28,7 +28,6 @@ struct JStage {
 
 };
 
-// build JStage (JStage) True/True
 // build JStudio (JStudio) False/False
 // build _GXColor (_GXColor) False/False
 /* top-level dependencies (begin _GXColor) */
@@ -98,20 +97,21 @@ namespace JStudio {
 };
 
 // build JStudio (JStudio) True/True
+// build JStage (JStage) True/True
 /* top-level dependencies (begin JStudio_JStage) */
-// outer dependency: JStage::TSystem
 // outer dependency: JStage::TLight
 // outer dependency: JStudio::TAdaptor
 // outer dependency: JStudio::data::TEOperationData
+// outer dependency: JStage::TSystem
 /* top-level dependencies (end JStudio_JStage) */
 struct JStudio_JStage {
 	// build TAdaptor_light (JStudio_JStage::TAdaptor_light) False/False
 	/* dependencies (begin JStudio_JStage::TAdaptor_light) */
 	/* dependencies (end JStudio_JStage::TAdaptor_light) */
 	struct TAdaptor_light {
+		// JStage::TLight
 		// JStudio::data::TEOperationData
 		// JStage::TSystem
-		// JStage::TLight
 		// build TVVOutput_direction_ (JStudio_JStage::TAdaptor_light::TVVOutput_direction_) False/False
 		/* dependencies (begin JStudio_JStage::TAdaptor_light::TVVOutput_direction_) */
 		/* dependencies (end JStudio_JStage::TAdaptor_light::TVVOutput_direction_) */

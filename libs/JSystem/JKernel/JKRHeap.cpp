@@ -26,12 +26,12 @@ struct JKRHeap {
 	/* 800065D8 */ bool dump_sort();
 	/* 802CE138 */ JKRHeap(void*, u32, JKRHeap*, bool);
 	/* 802CE264 */ ~JKRHeap();
-	/* 802CE378 */ void initArena(char**, u32*, s32);
+	/* 802CE378 */ void initArena(char**, u32*, int);
 	/* 802CE428 */ void becomeSystemHeap();
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE448 */ void destroy();
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 	/* 802CE548 */ void free(void*);
 	/* 802CE574 */ void callAllDisposer();
@@ -44,8 +44,8 @@ struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
 	/* 802CE758 */ void getMaxFreeBlock();
 	/* 802CE784 */ void getTotalFreeSize();
-	/* 802CE7B0 */ void changeGroupID(char);
-	/* 802CE7DC */ void getMaxAllocatableSize(s32);
+	/* 802CE7B0 */ void changeGroupID(u8);
+	/* 802CE7DC */ void getMaxAllocatableSize(int);
 	/* 802CE83C */ void findFromRoot(void*);
 	/* 802CE894 */ void find(void*) const;
 	/* 802CE93C */ void findAllHeap(void*) const;
@@ -59,7 +59,7 @@ struct JKRHeap {
 	/* 802CED84 */ void state_register(JKRHeap::TState*, u32) const;
 	/* 802CED88 */ void state_compare(JKRHeap::TState const&, JKRHeap::TState const&) const;
 	/* 802CEDA0 */ void state_dump(JKRHeap::TState const&) const;
-	/* 802CEDA4 */ bool do_changeGroupID(char);
+	/* 802CEDA4 */ bool do_changeGroupID(u8);
 	/* 802CEDAC */ bool do_getCurrentGroupId();
 };
 
@@ -92,18 +92,25 @@ struct JSUPtrList {
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
+// build JUTException (JUTException) False/False
+/* top-level dependencies (begin JUTException) */
+/* top-level dependencies (end JUTException) */
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
 
-static void JKRDefaultMemoryErrorRoutine(void*, u32, s32);
+static void JKRDefaultMemoryErrorRoutine(void*, u32, int);
 extern "C" void setErrorHandler__7JKRHeapFPFPvUli_v();
 void* operator new(u32);
-void* operator new(u32, s32);
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, int);
+void* operator new(u32, JKRHeap*, int);
 void* operator new[](u32);
-void* operator new[](u32, s32);
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, int);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 void operator delete[](void*);
 
@@ -171,7 +178,6 @@ SECTION_SBSS extern u8 mMemorySize__7JKRHeap[4];
 // External References:
 // 
 
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
 extern "C" void OSInitAlloc();
 extern "C" void OSGetArenaHi();
 extern "C" void OSGetArenaLo();
@@ -303,7 +309,7 @@ u8 mMemorySize__7JKRHeap[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRHeap::initArena(char** field_0, u32* field_1, s32 field_2) {
+asm void JKRHeap::initArena(char** field_0, u32* field_1, int field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/initArena__7JKRHeapFPPcPUli.s"
 }
@@ -347,7 +353,7 @@ asm void JKRHeap::destroy() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRHeap::alloc(u32 field_0, s32 field_1, JKRHeap* field_2) {
+asm void JKRHeap::alloc(u32 field_0, int field_1, JKRHeap* field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/alloc__7JKRHeapFUliP7JKRHeap.s"
 }
@@ -358,7 +364,7 @@ asm void JKRHeap::alloc(u32 field_0, s32 field_1, JKRHeap* field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRHeap::alloc(u32 field_0, s32 field_1) {
+asm void JKRHeap::alloc(u32 field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/alloc__7JKRHeapFUli.s"
 }
@@ -501,7 +507,7 @@ asm void JKRHeap::getTotalFreeSize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRHeap::changeGroupID(char field_0) {
+asm void JKRHeap::changeGroupID(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/changeGroupID__7JKRHeapFUc.s"
 }
@@ -512,7 +518,7 @@ asm void JKRHeap::changeGroupID(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRHeap::getMaxAllocatableSize(s32 field_0) {
+asm void JKRHeap::getMaxAllocatableSize(int field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/getMaxAllocatableSize__7JKRHeapFi.s"
 }
@@ -623,7 +629,7 @@ SECTION_DEAD char* const pad_8039CAEE = "\0";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JKRDefaultMemoryErrorRoutine(void* field_0, u32 field_1, s32 field_2) {
+asm static void JKRDefaultMemoryErrorRoutine(void* field_0, u32 field_1, int field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/JKRDefaultMemoryErrorRoutine__FPvUli.s"
 }
@@ -678,7 +684,7 @@ asm void* operator new(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void* operator new(u32 field_0, s32 field_1) {
+asm void* operator new(u32 field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/__nw__FUli.s"
 }
@@ -689,7 +695,7 @@ asm void* operator new(u32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void* operator new(u32 field_0, JKRHeap* field_1, s32 field_2) {
+asm void* operator new(u32 field_0, JKRHeap* field_1, int field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/__nw__FUlP7JKRHeapi.s"
 }
@@ -711,7 +717,7 @@ asm void* operator new[](u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void* operator new[](u32 field_0, s32 field_1) {
+asm void* operator new[](u32 field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/__nwa__FUli.s"
 }
@@ -722,7 +728,7 @@ asm void* operator new[](u32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void* operator new[](u32 field_0, JKRHeap* field_1, s32 field_2) {
+asm void* operator new[](u32 field_0, JKRHeap* field_1, int field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/__nwa__FUlP7JKRHeapi.s"
 }
@@ -775,7 +781,7 @@ void JKRHeap::state_dump(JKRHeap::TState const& field_0) const {
 
 
 /* 802CEDA4-802CEDAC 0008+00 rc=2 efc=1 .text      do_changeGroupID__7JKRHeapFUc                                */
-bool JKRHeap::do_changeGroupID(char field_0) {
+bool JKRHeap::do_changeGroupID(u8 field_0) {
 	return false;
 }
 

@@ -16,12 +16,6 @@ struct J3DJoint {
 };
 
 // build daNpcCd_c (daNpcCd_c) False/False
-// build J3DAnmTransformKey (J3DAnmTransformKey) False/False
-/* top-level dependencies (begin J3DAnmTransformKey) */
-/* top-level dependencies (end J3DAnmTransformKey) */
-struct J3DAnmTransformKey {
-};
-
 // build J3DModel (J3DModel) False/False
 /* top-level dependencies (begin J3DModel) */
 /* top-level dependencies (end J3DModel) */
@@ -29,32 +23,38 @@ struct J3DModel {
 };
 
 // build J3DJoint (J3DJoint) True/True
+// build J3DAnmTransformKey (J3DAnmTransformKey) False/False
+/* top-level dependencies (begin J3DAnmTransformKey) */
+/* top-level dependencies (end J3DAnmTransformKey) */
+struct J3DAnmTransformKey {
+};
+
 /* top-level dependencies (begin daNpcCd_c) */
-// outer dependency: J3DAnmTransformKey
 // outer dependency: J3DModel
 // outer dependency: J3DJoint
+// outer dependency: J3DAnmTransformKey
 /* top-level dependencies (end daNpcCd_c) */
 struct daNpcCd_c {
-	// J3DAnmTransformKey
 	// J3DModel
 	// J3DJoint
-	/* 8015605C */ void NpcCreate(s32);
-	/* 801561E8 */ void ObjCreate(s32);
+	// J3DAnmTransformKey
+	/* 8015605C */ void NpcCreate(int);
+	/* 801561E8 */ void ObjCreate(int);
 	/* 80156228 */ void isM_();
-	/* 80156248 */ void getAnmP(s32, s32);
-	/* 801563C8 */ void setAttention(s32);
-	/* 80156B4C */ void loadResrc(s32, s32);
-	/* 80156C50 */ void removeResrc(s32, s32);
+	/* 80156248 */ void getAnmP(int, int);
+	/* 801563C8 */ void setAttention(int);
+	/* 80156B4C */ void loadResrc(int, int);
+	/* 80156C50 */ void removeResrc(int, int);
 	/* 80156D1C */ void setEnvTevCol();
 	/* 80156D78 */ void setRoomNo();
 	/* 80156DBC */ void animation();
-	/* 80156E20 */ void setAnm(J3DAnmTransformKey*, f32, f32, s32, s32, s32);
-	/* 80156E8C */ void drawObj(s32, J3DModel*, f32);
+	/* 80156E20 */ void setAnm(J3DAnmTransformKey*, f32, f32, int, int, int);
+	/* 80156E8C */ void drawObj(int, J3DModel*, f32);
 	/* 80156F74 */ void drawNpc();
 	/* 80157084 */ void jntNodeCB(J3DJoint*, J3DModel*);
 	/* 8015736C */ void setHitodamaParticle();
-	/* 80157524 */ void getNpcMdlDataP(s32);
-	/* 80157588 */ void getObjMdlDataP(s32);
+	/* 80157524 */ void getNpcMdlDataP(int);
+	/* 80157588 */ void getObjMdlDataP(int);
 };
 
 // build J3DAnmTransformKey (J3DAnmTransformKey) True/True
@@ -113,10 +113,10 @@ struct mDoMtx_stack_c {
 };
 
 // build mDoExt_McaMorfSO (mDoExt_McaMorfSO) False/False
-// build Z2Creature (Z2Creature) False/False
-/* top-level dependencies (begin Z2Creature) */
-/* top-level dependencies (end Z2Creature) */
-struct Z2Creature {
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
 };
 
 // build mDoExt_McaMorfCallBack1_c (mDoExt_McaMorfCallBack1_c) False/False
@@ -125,16 +125,10 @@ struct Z2Creature {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
-struct J3DModelData {
-};
-
-// build J3DAnmTransform (J3DAnmTransform) False/False
-/* top-level dependencies (begin J3DAnmTransform) */
-/* top-level dependencies (end J3DAnmTransform) */
-struct J3DAnmTransform {
+// build Z2Creature (Z2Creature) False/False
+/* top-level dependencies (begin Z2Creature) */
+/* top-level dependencies (end Z2Creature) */
+struct Z2Creature {
 };
 
 // build mDoExt_McaMorfCallBack2_c (mDoExt_McaMorfCallBack2_c) False/False
@@ -143,22 +137,28 @@ struct J3DAnmTransform {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
+// build J3DAnmTransform (J3DAnmTransform) False/False
+/* top-level dependencies (begin J3DAnmTransform) */
+/* top-level dependencies (end J3DAnmTransform) */
+struct J3DAnmTransform {
+};
+
 /* top-level dependencies (begin mDoExt_McaMorfSO) */
-// outer dependency: Z2Creature
-// outer dependency: mDoExt_McaMorfCallBack1_c
 // outer dependency: J3DModelData
-// outer dependency: J3DAnmTransform
+// outer dependency: mDoExt_McaMorfCallBack1_c
+// outer dependency: Z2Creature
 // outer dependency: mDoExt_McaMorfCallBack2_c
+// outer dependency: J3DAnmTransform
 /* top-level dependencies (end mDoExt_McaMorfSO) */
 struct mDoExt_McaMorfSO {
-	// Z2Creature
-	// mDoExt_McaMorfCallBack1_c
-	// J3DAnmTransform
 	// J3DModelData
 	// mDoExt_McaMorfCallBack2_c
-	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, s32, f32, s32, s32, Z2Creature*, u32, u32);
-	/* 80010E70 */ void setAnm(J3DAnmTransform*, s32, f32, f32, f32, f32);
-	/* 800110B0 */ void play(u32, char);
+	// mDoExt_McaMorfCallBack1_c
+	// Z2Creature
+	// J3DAnmTransform
+	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
+	/* 80010E70 */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32);
+	/* 800110B0 */ void play(u32, s8);
 	/* 800111C0 */ void entryDL();
 	/* 80011310 */ void stopZelAnime();
 };
@@ -186,15 +186,16 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
 // build dPa_control_c (dPa_control_c) False/False
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
+// build cXyz (cXyz) True/True
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
 };
 
 // build dPa_levelEcallBack (dPa_levelEcallBack) False/False
@@ -203,32 +204,31 @@ struct csXyz {
 struct dPa_levelEcallBack {
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
-// build cXyz (cXyz) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
 struct dKy_tevstr_c {
 };
 
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
 /* top-level dependencies (begin dPa_control_c) */
-// outer dependency: csXyz
-// outer dependency: dPa_levelEcallBack
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
+// outer dependency: dPa_levelEcallBack
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
-	// csXyz
-	// _GXColor
 	// dPa_levelEcallBack
-	// cXyz
 	// dKy_tevstr_c
+	// csXyz
+	// cXyz
+	// _GXColor
 	// build level_c (dPa_control_c::level_c) False/False
 	/* dependencies (begin dPa_control_c::level_c) */
 	/* dependencies (end dPa_control_c::level_c) */
@@ -236,7 +236,7 @@ struct dPa_control_c {
 		/* 8004B918 */ void getEmitter(u32);
 	};
 
-	/* 8004D4CC */ void set(u32, char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
@@ -268,19 +268,19 @@ struct daPy_py_c {
 };
 
 // build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build J3DModelData (J3DModelData) True/True
 // build cXyz (cXyz) True/True
+// build J3DModelData (J3DModelData) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
 /* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: J3DModelData
 // outer dependency: cXyz
+// outer dependency: J3DModelData
 // outer dependency: dKy_tevstr_c
 /* top-level dependencies (end dScnKy_env_light_c) */
 struct dScnKy_env_light_c {
-	// J3DModelData
 	// cXyz
+	// J3DModelData
 	// dKy_tevstr_c
-	/* 801A37C4 */ void settingTevStruct(s32, cXyz*, dKy_tevstr_c*);
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
@@ -296,8 +296,8 @@ struct Vec {
 /* top-level dependencies (end Z2CreatureCitizen) */
 struct Z2CreatureCitizen {
 	// Vec
-	/* 802C0CE4 */ void init(Vec*, Vec*, char, char);
-	/* 802C0D48 */ void setMdlType(char, bool, bool);
+	/* 802C0CE4 */ void init(Vec*, Vec*, u8, u8);
+	/* 802C0D48 */ void setMdlType(s8, bool, bool);
 };
 
 // build Vec (Vec) True/True
@@ -305,7 +305,7 @@ struct Z2CreatureCitizen {
 // Forward References:
 // 
 
-static void jntNodeCallBack(J3DJoint*, s32);
+static void jntNodeCallBack(J3DJoint*, int);
 extern "C" void __sinit_d_a_npc_cd_cpp();
 
 extern "C" static void a_npc_d_a_npc_cd__jntNodeCallBack__FP8J3DJointi();
@@ -433,7 +433,7 @@ SECTION_SDATA2 extern f32 a_npc_d_a_npc_cd__lit_4657;
 // 
 
 SECTION_INIT void memcpy();
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
 void mDoExt_modelUpdateDL(J3DModel*);
 void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
 void dComIfG_resLoad(request_of_phase_process_class*, char const*);
@@ -511,7 +511,7 @@ SECTION_SBSS extern u8 data_80450FF8[8];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void jntNodeCallBack(J3DJoint* field_0, s32 field_1) {
+asm static void jntNodeCallBack(J3DJoint* field_0, int field_1) {
 	nofralloc
 #include "asm/a/npc/d_a_npc_cd/a_npc_d_a_npc_cd__jntNodeCallBack__FP8J3DJointi.s"
 }
@@ -782,7 +782,7 @@ f32 a_npc_d_a_npc_cd__lit_4021 = 1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcCd_c::NpcCreate(s32 field_0) {
+asm void daNpcCd_c::NpcCreate(int field_0) {
 	nofralloc
 #include "asm/a/npc/d_a_npc_cd/NpcCreate__9daNpcCd_cFi.s"
 }
@@ -793,7 +793,7 @@ asm void daNpcCd_c::NpcCreate(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcCd_c::ObjCreate(s32 field_0) {
+asm void daNpcCd_c::ObjCreate(int field_0) {
 	nofralloc
 #include "asm/a/npc/d_a_npc_cd/ObjCreate__9daNpcCd_cFi.s"
 }
@@ -815,7 +815,7 @@ asm void daNpcCd_c::isM_() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcCd_c::getAnmP(s32 field_0, s32 field_1) {
+asm void daNpcCd_c::getAnmP(int field_0, int field_1) {
 	nofralloc
 #include "asm/a/npc/d_a_npc_cd/getAnmP__9daNpcCd_cFii.s"
 }
@@ -842,7 +842,7 @@ f64 a_npc_d_a_npc_cd__lit_4375 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcCd_c::setAttention(s32 field_0) {
+asm void daNpcCd_c::setAttention(int field_0) {
 	nofralloc
 #include "asm/a/npc/d_a_npc_cd/setAttention__9daNpcCd_cFi.s"
 }
@@ -893,7 +893,7 @@ void* a_npc_d_a_npc_cd__l_resNameTbl[30] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcCd_c::loadResrc(s32 field_0, s32 field_1) {
+asm void daNpcCd_c::loadResrc(int field_0, int field_1) {
 	nofralloc
 #include "asm/a/npc/d_a_npc_cd/loadResrc__9daNpcCd_cFii.s"
 }
@@ -904,7 +904,7 @@ asm void daNpcCd_c::loadResrc(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcCd_c::removeResrc(s32 field_0, s32 field_1) {
+asm void daNpcCd_c::removeResrc(int field_0, int field_1) {
 	nofralloc
 #include "asm/a/npc/d_a_npc_cd/removeResrc__9daNpcCd_cFii.s"
 }
@@ -948,7 +948,7 @@ asm void daNpcCd_c::animation() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcCd_c::setAnm(J3DAnmTransformKey* field_0, f32 field_1, f32 field_2, s32 field_3, s32 field_4, s32 field_5) {
+asm void daNpcCd_c::setAnm(J3DAnmTransformKey* field_0, f32 field_1, f32 field_2, int field_3, int field_4, int field_5) {
 	nofralloc
 #include "asm/a/npc/d_a_npc_cd/setAnm__9daNpcCd_cFP18J3DAnmTransformKeyffiii.s"
 }
@@ -967,7 +967,7 @@ SECTION_RODATA const u8 data_80392FC4[36] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcCd_c::drawObj(s32 field_0, J3DModel* field_1, f32 field_2) {
+asm void daNpcCd_c::drawObj(int field_0, J3DModel* field_1, f32 field_2) {
 	nofralloc
 #include "asm/a/npc/d_a_npc_cd/drawObj__9daNpcCd_cFiP8J3DModelf.s"
 }
@@ -1069,7 +1069,7 @@ u8 a_npc_d_a_npc_cd__l_bmdTWTbl[240] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcCd_c::getNpcMdlDataP(s32 field_0) {
+asm void daNpcCd_c::getNpcMdlDataP(int field_0) {
 	nofralloc
 #include "asm/a/npc/d_a_npc_cd/getNpcMdlDataP__9daNpcCd_cFi.s"
 }
@@ -1080,7 +1080,7 @@ asm void daNpcCd_c::getNpcMdlDataP(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcCd_c::getObjMdlDataP(s32 field_0) {
+asm void daNpcCd_c::getObjMdlDataP(int field_0) {
 	nofralloc
 #include "asm/a/npc/d_a_npc_cd/getObjMdlDataP__9daNpcCd_cFi.s"
 }

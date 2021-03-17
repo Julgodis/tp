@@ -61,25 +61,25 @@ struct JAISound {
 
 // build JAISoundHandle (JAISoundHandle) True/True
 // build JAIStream (JAIStream) False/False
-// build JAISoundActivity (JAISoundActivity) False/False
-/* top-level dependencies (begin JAISoundActivity) */
-/* top-level dependencies (end JAISoundActivity) */
-struct JAISoundActivity {
-};
-
 // build JASSoundParams (JASSoundParams) False/False
 /* top-level dependencies (begin JASSoundParams) */
 /* top-level dependencies (end JASSoundParams) */
 struct JASSoundParams {
 };
 
+// build JAISoundActivity (JAISoundActivity) False/False
+/* top-level dependencies (begin JAISoundActivity) */
+/* top-level dependencies (end JAISoundActivity) */
+struct JAISoundActivity {
+};
+
 /* top-level dependencies (begin JAIStream) */
-// outer dependency: JAISoundActivity
 // outer dependency: JASSoundParams
+// outer dependency: JAISoundActivity
 /* top-level dependencies (end JAIStream) */
 struct JAIStream {
-	// JAISoundActivity
 	// JASSoundParams
+	// JAISoundActivity
 	/* 802A34E4 */ void JAIStreamMgr_mixOut_(JASSoundParams const&, JAISoundActivity);
 	/* 802A388C */ void JAIStreamMgr_calc_();
 };

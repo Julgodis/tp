@@ -73,7 +73,7 @@ extern "C" void fpcDt_Delete__FPv();
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(s32, s32);
+void fpcBs_Is_JustOfType(int, int);
 void fpcBs_IsDelete(base_process_class*);
 void fpcBs_Delete(base_process_class*);
 void fpcCt_IsDoing(base_process_class*);
@@ -81,7 +81,7 @@ void fpcCt_Abort(base_process_class*);
 void fpcDtTg_IsEmpty();
 void fpcDtTg_ToDeleteQ(delete_tag_class*);
 extern "C" void fpcDtTg_Do__FP16delete_tag_classPFPv_i();
-void fpcEx_IsExist(s32);
+void fpcEx_IsExist(u32);
 void fpcEx_ExecuteQTo(base_process_class*);
 void fpcLy_DeletingMesg(layer_class*);
 void fpcLy_DeletedMesg(layer_class*);

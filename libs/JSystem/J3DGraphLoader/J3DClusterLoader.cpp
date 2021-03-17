@@ -104,7 +104,7 @@ SECTION_INIT void memcpy();
 extern "C" void OSReport();
 void* operator new(u32);
 void* operator new[](u32);
-void* operator new[](u32, s32);
+void* operator new[](u32, int);
 void operator delete(void*);
 extern "C" void func_802F42C0();
 extern "C" void func_8030A530();

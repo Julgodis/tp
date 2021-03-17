@@ -10,12 +10,21 @@
 // 
 
 // build JStage (JStage) False/False
+// build JStage (JStage) True/False
+struct JStage;
+// build _GXSpotFn (_GXSpotFn) False/False
+/* top-level dependencies (begin _GXSpotFn) */
+/* top-level dependencies (end _GXSpotFn) */
+struct _GXSpotFn {
+};
+
 // build _GXDistAttnFn (_GXDistAttnFn) False/False
 /* top-level dependencies (begin _GXDistAttnFn) */
 /* top-level dependencies (end _GXDistAttnFn) */
 struct _GXDistAttnFn {
 };
 
+// build JStage (JStage) True/True
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
@@ -28,22 +37,13 @@ struct Vec {
 struct _GXColor {
 };
 
-// build _GXSpotFn (_GXSpotFn) False/False
-/* top-level dependencies (begin _GXSpotFn) */
-/* top-level dependencies (end _GXSpotFn) */
-struct _GXSpotFn {
-};
-
-// build JStage (JStage) True/False
-struct JStage;
-// build JStage (JStage) True/True
 /* top-level dependencies (begin JStage) */
+// outer dependency: JStage::TELight
+// outer dependency: _GXSpotFn
 // outer dependency: _GXDistAttnFn
+// outer dependency: JStage::TObject
 // outer dependency: Vec
 // outer dependency: _GXColor
-// outer dependency: _GXSpotFn
-// outer dependency: JStage::TObject
-// outer dependency: JStage::TELight
 /* top-level dependencies (end JStage) */
 struct JStage {
 	// build TLight (JStage::TLight) False/False
@@ -57,11 +57,11 @@ struct JStage {
 
 	/* dependencies (end JStage::TLight) */
 	struct TLight {
-		// _GXDistAttnFn
-		// _GXColor
-		// Vec
 		// _GXSpotFn
 		// JStage::TELight
+		// _GXDistAttnFn
+		// Vec
+		// _GXColor
 		/* 80280D28 */ ~TLight();
 		/* 80280D88 */ s32 JSGFGetType() const;
 		/* 80280D90 */ bool JSGGetLightType() const;
@@ -94,6 +94,7 @@ struct JStage {
 		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
 		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
+		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
 };
@@ -128,7 +129,6 @@ SECTION_SDATA2 extern u32 JSGLight__lit_311;
 // External References:
 // 
 
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
 void operator delete(void*);
 
 extern "C" void __dt__Q26JStage7TObjectFv();

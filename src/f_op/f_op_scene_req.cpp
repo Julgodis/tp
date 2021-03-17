@@ -58,8 +58,8 @@ static void fopScnRq_Execute(scene_request_class*);
 static void fopScnRq_PostMethod(void*, scene_request_class*);
 static void fopScnRq_Cancel(scene_request_class*);
 static void fopScnRq_FadeRequest(s16, u16);
-void fopScnRq_Request(s32, scene_class*, s16, void*, s16, u16);
-void fopScnRq_ReRequest(s32, s16, void*);
+void fopScnRq_Request(int, scene_class*, s16, void*, s16, u16);
+void fopScnRq_ReRequest(u32, s16, void*);
 void fopScnRq_Handler();
 
 extern "C" static void fopScnRq_phase_ClearOverlap__FP19scene_request_class();
@@ -83,7 +83,7 @@ SECTION_SBSS extern u8 l_fopScnRq_IsUsingOfOverlap[4 + 4 /* padding */];
 // External References:
 // 
 
-void fopOvlpM_ToldAboutID(s32);
+void fopOvlpM_ToldAboutID(u32);
 void fopOvlpM_IsDone();
 void fopOvlpM_IsDoingReq();
 void fopOvlpM_ClearOfReq();
@@ -91,12 +91,12 @@ void fopOvlpM_Request(s16, u16);
 void fopOvlpM_Cancel();
 void fopScnPause_Enable(scene_class*);
 void fopScnPause_Disable(scene_class*);
-void fpcEx_SearchByID(s32);
+void fpcEx_SearchByID(u32);
 void fpcNdRq_Execute(node_create_request*);
 void fpcNdRq_Delete(node_create_request*);
 void fpcNdRq_Handler();
-void fpcNdRq_Request(u32, s32, process_node_class*, s16, void*, node_create_request_method_class*);
-void fpcNdRq_ReRequest(s32, s16, void*);
+void fpcNdRq_Request(u32, int, process_node_class*, s16, void*, node_create_request_method_class*);
+void fpcNdRq_ReRequest(u32, s16, void*);
 extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
 void cPhs_Do(request_of_phase_process_class*, void*);
 extern "C" void _savegpr_26();
@@ -241,7 +241,7 @@ void* data_803A38C8[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopScnRq_Request(s32 field_0, scene_class* field_1, s16 field_2, void* field_3, s16 field_4, u16 field_5) {
+asm void fopScnRq_Request(int field_0, scene_class* field_1, s16 field_2, void* field_3, s16 field_4, u16 field_5) {
 	nofralloc
 #include "asm/f_op/f_op_scene_req/fopScnRq_Request__FiP11scene_classsPvsUs.s"
 }
@@ -252,7 +252,7 @@ asm void fopScnRq_Request(s32 field_0, scene_class* field_1, s16 field_2, void* 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopScnRq_ReRequest(s32 field_0, s16 field_1, void* field_2) {
+asm void fopScnRq_ReRequest(u32 field_0, s16 field_1, void* field_2) {
 	nofralloc
 #include "asm/f_op/f_op_scene_req/fopScnRq_ReRequest__FUisPv.s"
 }

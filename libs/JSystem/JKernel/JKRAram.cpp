@@ -10,13 +10,10 @@
 // 
 
 // build JKRAram (JKRAram) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
-	/* 802CE4D4 */ void alloc(u32, s32);
-	/* 802CE500 */ void free(void*, JKRHeap*);
+// build JKRExpandSwitch (JKRExpandSwitch) False/False
+/* top-level dependencies (begin JKRExpandSwitch) */
+/* top-level dependencies (end JKRExpandSwitch) */
+struct JKRExpandSwitch {
 };
 
 // build JKRAramBlock (JKRAramBlock) False/False
@@ -25,29 +22,32 @@ struct JKRHeap {
 struct JKRAramBlock {
 };
 
-// build JKRExpandSwitch (JKRExpandSwitch) False/False
-/* top-level dependencies (begin JKRExpandSwitch) */
-/* top-level dependencies (end JKRExpandSwitch) */
-struct JKRExpandSwitch {
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 /* top-level dependencies (begin JKRAram) */
-// outer dependency: JKRHeap
-// outer dependency: JKRAramBlock
 // outer dependency: JKRExpandSwitch
+// outer dependency: JKRAramBlock
+// outer dependency: JKRHeap
 /* top-level dependencies (end JKRAram) */
 struct JKRAram {
-	// JKRHeap
-	// JKRAramBlock
 	// JKRExpandSwitch
+	// JKRAramBlock
+	// JKRHeap
 	/* 802D1FA4 */ void create(u32, u32, s32, s32, s32);
 	/* 802D2040 */ JKRAram(u32, u32, s32);
 	/* 802D214C */ ~JKRAram();
 	/* 802D21DC */ void run();
-	/* 802D2248 */ void checkOkAddress(char*, u32, JKRAramBlock*, u32);
-	/* 802D22DC */ void changeGroupIdIfNeed(char*, s32);
-	/* 802D233C */ void mainRamToAram(char*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, s32, u32*);
-	/* 802D25B4 */ void aramToMainRam(u32, char*, u32, JKRExpandSwitch, u32, JKRHeap*, s32, u32*);
+	/* 802D2248 */ void checkOkAddress(u8*, u32, JKRAramBlock*, u32);
+	/* 802D22DC */ void changeGroupIdIfNeed(u8*, int);
+	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
+	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
 // build JKRAramBlock (JKRAramBlock) True/True
@@ -57,7 +57,7 @@ struct JKRAram {
 /* top-level dependencies (begin JKRThread) */
 /* top-level dependencies (end JKRThread) */
 struct JKRThread {
-	/* 802D1568 */ JKRThread(u32, s32, s32);
+	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
@@ -80,21 +80,21 @@ struct JKRAramHeap {
 };
 
 // build JKRAramPiece (JKRAramPiece) False/False
+// build JKRAramBlock (JKRAramBlock) True/True
 // build JKRAMCommand (JKRAMCommand) False/False
 /* top-level dependencies (begin JKRAMCommand) */
 /* top-level dependencies (end JKRAMCommand) */
 struct JKRAMCommand {
 };
 
-// build JKRAramBlock (JKRAramBlock) True/True
 /* top-level dependencies (begin JKRAramPiece) */
-// outer dependency: JKRAMCommand
 // outer dependency: JKRAramBlock
+// outer dependency: JKRAMCommand
 /* top-level dependencies (end JKRAramPiece) */
 struct JKRAramPiece {
-	// JKRAMCommand
 	// JKRAramBlock
-	/* 802D3838 */ void orderSync(s32, u32, u32, u32, JKRAramBlock*);
+	// JKRAMCommand
+	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
 	/* 802D38CC */ void startDMA(JKRAMCommand*);
 };
 
@@ -111,8 +111,8 @@ struct JKRAramStream {
 /* top-level dependencies (end JKRDecomp) */
 struct JKRDecomp {
 	/* 802DB680 */ void create(s32);
-	/* 802DB988 */ void orderSync(char*, char*, u32, u32);
-	/* 802DBCF8 */ void checkCompressed(char*);
+	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
+	/* 802DBCF8 */ void checkCompressed(u8*);
 };
 
 // build JSUPtrList (JSUPtrList) False/False
@@ -123,14 +123,21 @@ struct JSUPtrList {
 	/* 802DBF14 */ void initiate();
 };
 
+// build JUTException (JUTException) False/False
+/* top-level dependencies (begin JUTException) */
+/* top-level dependencies (end JUTException) */
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
 
 static void JKRDecompressFromAramToMainRam(u32, void*, u32, u32, u32, u32*);
-static void decompSZS_subroutine(char*, char*);
+static void decompSZS_subroutine(u8*, u8*);
 static void firstSrcData();
-static void nextSrcData(char*);
+static void nextSrcData(u8*);
 extern "C" void __sinit_JKRAram_cpp();
 extern "C" void func_802D2DF0();
 
@@ -178,9 +185,8 @@ SECTION_SBSS extern u8 JKRAram__tsArea[4];
 // 
 
 SECTION_INIT void memcpy();
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
 extern "C" void DCStoreRangeNoSync();
 extern "C" void OSDisableInterrupts();
 extern "C" void OSRestoreInterrupts();
@@ -345,7 +351,7 @@ SECTION_DEAD char* const pad_8039D0B4 = "\0\0\0";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAram::checkOkAddress(char* field_0, u32 field_1, JKRAramBlock* field_2, u32 field_3) {
+asm void JKRAram::checkOkAddress(u8* field_0, u32 field_1, JKRAramBlock* field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAram/checkOkAddress__7JKRAramFPUcUlP12JKRAramBlockUl.s"
 }
@@ -356,7 +362,7 @@ asm void JKRAram::checkOkAddress(char* field_0, u32 field_1, JKRAramBlock* field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAram::changeGroupIdIfNeed(char* field_0, s32 field_1) {
+asm void JKRAram::changeGroupIdIfNeed(u8* field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAram/changeGroupIdIfNeed__7JKRAramFPUci.s"
 }
@@ -367,7 +373,7 @@ asm void JKRAram::changeGroupIdIfNeed(char* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAram::mainRamToAram(char* field_0, u32 field_1, u32 field_2, JKRExpandSwitch field_3, u32 field_4, JKRHeap* field_5, s32 field_6, u32* field_7) {
+asm void JKRAram::mainRamToAram(u8* field_0, u32 field_1, u32 field_2, JKRExpandSwitch field_3, u32 field_4, JKRHeap* field_5, int field_6, u32* field_7) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAram/mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl.s"
 }
@@ -378,7 +384,7 @@ asm void JKRAram::mainRamToAram(char* field_0, u32 field_1, u32 field_2, JKRExpa
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAram::aramToMainRam(u32 field_0, char* field_1, u32 field_2, JKRExpandSwitch field_3, u32 field_4, JKRHeap* field_5, s32 field_6, u32* field_7) {
+asm void JKRAram::aramToMainRam(u32 field_0, u8* field_1, u32 field_2, JKRExpandSwitch field_3, u32 field_4, JKRHeap* field_5, int field_6, u32* field_7) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAram/aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl.s"
 }
@@ -459,7 +465,7 @@ asm static void JKRDecompressFromAramToMainRam(u32 field_0, void* field_1, u32 f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void decompSZS_subroutine(char* field_0, char* field_1) {
+asm static void decompSZS_subroutine(u8* field_0, u8* field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAram/JKRAram__decompSZS_subroutine__FPUcPUc.s"
 }
@@ -481,7 +487,7 @@ asm static void firstSrcData() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void nextSrcData(char* field_0) {
+asm static void nextSrcData(u8* field_0) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAram/JKRAram__nextSrcData__FPUc.s"
 }

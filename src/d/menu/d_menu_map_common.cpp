@@ -25,14 +25,14 @@ struct dMenuMapCommon_c {
 	/* 801C27B4 */ ~dMenuMapCommon_c();
 	/* 801C28D8 */ void initiate(JKRArchive*);
 	/* 801C38E4 */ void drawIcon(f32, f32, f32, f32);
-	/* 801C3EC4 */ void iconScale(s32, f32, f32, f32);
-	/* 801C43A8 */ void setIconInfo(char, f32, f32, f32, f32, f32, char);
+	/* 801C3EC4 */ void iconScale(int, f32, f32, f32);
+	/* 801C43A8 */ void setIconInfo(u8, f32, f32, f32, f32, f32, u8);
 	/* 801C443C */ void clearIconInfo();
-	/* 801C4494 */ void setBlendRatio(char, f32, f32);
+	/* 801C4494 */ void setBlendRatio(u8, f32, f32);
 	/* 801C452C */ void blinkMove(s16);
 	/* 801C4600 */ void moveLightDropAnime();
-	/* 801C4738 */ void getIconSizeX(char);
-	/* 801C4778 */ void getIconSizeY(char);
+	/* 801C4738 */ void getIconSizeX(u8);
+	/* 801C4778 */ void getIconSizeY(u8);
 	/* 801C47C4 */ void debugIcon();
 };
 
@@ -44,31 +44,31 @@ struct dMenuMapCommon_c {
 /* top-level dependencies (end dSelect_cursor_c) */
 struct dSelect_cursor_c {
 	// JKRArchive
-	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801951C8 */ void setScale(f32);
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
 // build J2DPane (J2DPane) False/False
-// build J2DBasePosition (J2DBasePosition) False/False
-/* top-level dependencies (begin J2DBasePosition) */
-/* top-level dependencies (end J2DBasePosition) */
-struct J2DBasePosition {
-};
-
 // build J2DRotateAxis (J2DRotateAxis) False/False
 /* top-level dependencies (begin J2DRotateAxis) */
 /* top-level dependencies (end J2DRotateAxis) */
 struct J2DRotateAxis {
 };
 
+// build J2DBasePosition (J2DBasePosition) False/False
+/* top-level dependencies (begin J2DBasePosition) */
+/* top-level dependencies (end J2DBasePosition) */
+struct J2DBasePosition {
+};
+
 /* top-level dependencies (begin J2DPane) */
-// outer dependency: J2DBasePosition
 // outer dependency: J2DRotateAxis
+// outer dependency: J2DBasePosition
 /* top-level dependencies (end J2DPane) */
 struct J2DPane {
-	// J2DBasePosition
 	// J2DRotateAxis
+	// J2DBasePosition
 	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 	/* 802F77D0 */ void setInfluencedAlpha(bool, bool);
@@ -316,7 +316,7 @@ f32 d_menu_d_menu_map_common__lit_4073 = 11.0f / 27.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenuMapCommon_c::iconScale(s32 field_0, f32 field_1, f32 field_2, f32 field_3) {
+asm void dMenuMapCommon_c::iconScale(int field_0, f32 field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/iconScale__16dMenuMapCommon_cFifff.s"
 }
@@ -327,7 +327,7 @@ asm void dMenuMapCommon_c::iconScale(s32 field_0, f32 field_1, f32 field_2, f32 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenuMapCommon_c::setIconInfo(char field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, char field_6) {
+asm void dMenuMapCommon_c::setIconInfo(u8 field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u8 field_6) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/setIconInfo__16dMenuMapCommon_cFUcfffffUc.s"
 }
@@ -349,7 +349,7 @@ asm void dMenuMapCommon_c::clearIconInfo() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenuMapCommon_c::setBlendRatio(char field_0, f32 field_1, f32 field_2) {
+asm void dMenuMapCommon_c::setBlendRatio(u8 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/setBlendRatio__16dMenuMapCommon_cFUcff.s"
 }
@@ -390,7 +390,7 @@ asm void dMenuMapCommon_c::moveLightDropAnime() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenuMapCommon_c::getIconSizeX(char field_0) {
+asm void dMenuMapCommon_c::getIconSizeX(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/getIconSizeX__16dMenuMapCommon_cFUc.s"
 }
@@ -401,7 +401,7 @@ asm void dMenuMapCommon_c::getIconSizeX(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenuMapCommon_c::getIconSizeY(char field_0) {
+asm void dMenuMapCommon_c::getIconSizeY(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_map_common/getIconSizeY__16dMenuMapCommon_cFUc.s"
 }

@@ -60,7 +60,7 @@ SECTION_SBSS extern u8 struct_80450D38[8];
 // External References:
 // 
 
-void fpcBs_MakeOfType(s32*);
+void fpcBs_MakeOfType(int*);
 void fpcDwPi_Get(draw_priority_class const*);
 void fpcDwPi_Init(draw_priority_class*, s16);
 extern "C" void fpcMtd_Method__FPFPv_iPv();

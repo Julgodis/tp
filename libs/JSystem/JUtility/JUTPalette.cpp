@@ -16,6 +16,12 @@
 struct JUTTransparency {
 };
 
+// build ResTLUT (ResTLUT) False/False
+/* top-level dependencies (begin ResTLUT) */
+/* top-level dependencies (end ResTLUT) */
+struct ResTLUT {
+};
+
 // build _GXTlut (_GXTlut) False/False
 /* top-level dependencies (begin _GXTlut) */
 /* top-level dependencies (end _GXTlut) */
@@ -28,23 +34,17 @@ struct _GXTlut {
 struct _GXTlutFmt {
 };
 
-// build ResTLUT (ResTLUT) False/False
-/* top-level dependencies (begin ResTLUT) */
-/* top-level dependencies (end ResTLUT) */
-struct ResTLUT {
-};
-
 /* top-level dependencies (begin JUTPalette) */
 // outer dependency: JUTTransparency
+// outer dependency: ResTLUT
 // outer dependency: _GXTlut
 // outer dependency: _GXTlutFmt
-// outer dependency: ResTLUT
 /* top-level dependencies (end JUTPalette) */
 struct JUTPalette {
 	// JUTTransparency
+	// ResTLUT
 	// _GXTlut
 	// _GXTlutFmt
-	// ResTLUT
 	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
 	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
 	/* 802DE95C */ void load();

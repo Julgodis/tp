@@ -10,57 +10,57 @@
 // 
 
 // build J3DMaterialFactory_v21 (J3DMaterialFactory_v21) False/False
-// build J3DMaterialBlock_v21 (J3DMaterialBlock_v21) False/False
-/* top-level dependencies (begin J3DMaterialBlock_v21) */
-/* top-level dependencies (end J3DMaterialBlock_v21) */
-struct J3DMaterialBlock_v21 {
-};
-
 // build J3DMaterial (J3DMaterial) False/False
 /* top-level dependencies (begin J3DMaterial) */
 /* top-level dependencies (end J3DMaterial) */
 struct J3DMaterial {
 	/* 803157A0 */ void createColorBlock(u32);
 	/* 803159A0 */ void createTexGenBlock(u32);
-	/* 80315B04 */ void createTevBlock(s32);
-	/* 80315E78 */ void createIndBlock(s32);
+	/* 80315B04 */ void createTevBlock(int);
+	/* 80315E78 */ void createIndBlock(int);
 	/* 80315F60 */ void createPEBlock(u32, u32);
 	/* 80316240 */ void initialize();
 };
 
+// build J3DMaterialBlock_v21 (J3DMaterialBlock_v21) False/False
+/* top-level dependencies (begin J3DMaterialBlock_v21) */
+/* top-level dependencies (end J3DMaterialBlock_v21) */
+struct J3DMaterialBlock_v21 {
+};
+
 /* top-level dependencies (begin J3DMaterialFactory_v21) */
-// outer dependency: J3DMaterialBlock_v21
 // outer dependency: J3DMaterial
+// outer dependency: J3DMaterialBlock_v21
 /* top-level dependencies (end J3DMaterialFactory_v21) */
 struct J3DMaterialFactory_v21 {
-	// J3DMaterialBlock_v21
 	// J3DMaterial
+	// J3DMaterialBlock_v21
 	/* 80332DA4 */ J3DMaterialFactory_v21(J3DMaterialBlock_v21 const&);
 	/* 80332F84 */ void countUniqueMaterials();
-	/* 80332FA8 */ void countTexGens(s32) const;
-	/* 80332FE0 */ void countStages(s32) const;
-	/* 80333068 */ void create(J3DMaterial*, s32, u32) const;
-	/* 803337D8 */ void newMatColor(s32, s32) const;
-	/* 80333834 */ void newColorChanNum(s32) const;
-	/* 8033386C */ void newColorChan(s32, s32) const;
-	/* 80333A10 */ void newTexGenNum(s32) const;
-	/* 80333A48 */ void newTexCoord(s32, s32) const;
-	/* 80333AA8 */ void newTexMtx(s32, s32) const;
-	/* 80333B30 */ void newCullMode(s32) const;
-	/* 80333B70 */ void newTexNo(s32, s32) const;
-	/* 80333BB8 */ void newTevOrder(s32, s32) const;
-	/* 80333C04 */ void newTevColor(s32, s32) const;
-	/* 80333C74 */ void newTevKColor(s32, s32) const;
-	/* 80333CD0 */ void newTevStageNum(s32) const;
-	/* 80333D08 */ void newTevStage(s32, s32) const;
-	/* 80333D68 */ void newTevSwapModeTable(s32, s32) const;
-	/* 80333E04 */ void newFog(s32) const;
-	/* 80333EE0 */ void newAlphaComp(s32) const;
-	/* 80333F60 */ void newBlend(s32) const;
-	/* 80333FA4 */ void newZMode(s32) const;
-	/* 80334004 */ void newZCompLoc(s32) const;
-	/* 8033403C */ void newDither(s32) const;
-	/* 80334074 */ void newNBTScale(s32) const;
+	/* 80332FA8 */ void countTexGens(int) const;
+	/* 80332FE0 */ void countStages(int) const;
+	/* 80333068 */ void create(J3DMaterial*, int, u32) const;
+	/* 803337D8 */ void newMatColor(int, int) const;
+	/* 80333834 */ void newColorChanNum(int) const;
+	/* 8033386C */ void newColorChan(int, int) const;
+	/* 80333A10 */ void newTexGenNum(int) const;
+	/* 80333A48 */ void newTexCoord(int, int) const;
+	/* 80333AA8 */ void newTexMtx(int, int) const;
+	/* 80333B30 */ void newCullMode(int) const;
+	/* 80333B70 */ void newTexNo(int, int) const;
+	/* 80333BB8 */ void newTevOrder(int, int) const;
+	/* 80333C04 */ void newTevColor(int, int) const;
+	/* 80333C74 */ void newTevKColor(int, int) const;
+	/* 80333CD0 */ void newTevStageNum(int) const;
+	/* 80333D08 */ void newTevStage(int, int) const;
+	/* 80333D68 */ void newTevSwapModeTable(int, int) const;
+	/* 80333E04 */ void newFog(int) const;
+	/* 80333EE0 */ void newAlphaComp(int) const;
+	/* 80333F60 */ void newBlend(int) const;
+	/* 80333FA4 */ void newZMode(int) const;
+	/* 80334004 */ void newZCompLoc(int) const;
+	/* 8033403C */ void newDither(int) const;
+	/* 80334074 */ void newNBTScale(int) const;
 };
 
 // build J3DMaterialBlock_v21 (J3DMaterialBlock_v21) True/True
@@ -235,7 +235,7 @@ asm void J3DMaterialFactory_v21::countUniqueMaterials() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::countTexGens(s32 field_0) const {
+asm void J3DMaterialFactory_v21::countTexGens(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/countTexGens__22J3DMaterialFactory_v21CFi.s"
 }
@@ -246,7 +246,7 @@ asm void J3DMaterialFactory_v21::countTexGens(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::countStages(s32 field_0) const {
+asm void J3DMaterialFactory_v21::countStages(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/countStages__22J3DMaterialFactory_v21CFi.s"
 }
@@ -257,7 +257,7 @@ asm void J3DMaterialFactory_v21::countStages(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::create(J3DMaterial* field_0, s32 field_1, u32 field_2) const {
+asm void J3DMaterialFactory_v21::create(J3DMaterial* field_0, int field_1, u32 field_2) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl.s"
 }
@@ -272,7 +272,7 @@ u32 lit_1130 = 0xFFFFFFFF;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newMatColor(s32 field_0, s32 field_1) const {
+asm void J3DMaterialFactory_v21::newMatColor(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newMatColor__22J3DMaterialFactory_v21CFii.s"
 }
@@ -283,7 +283,7 @@ asm void J3DMaterialFactory_v21::newMatColor(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newColorChanNum(s32 field_0) const {
+asm void J3DMaterialFactory_v21::newColorChanNum(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newColorChanNum__22J3DMaterialFactory_v21CFi.s"
 }
@@ -294,7 +294,7 @@ asm void J3DMaterialFactory_v21::newColorChanNum(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newColorChan(s32 field_0, s32 field_1) const {
+asm void J3DMaterialFactory_v21::newColorChan(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newColorChan__22J3DMaterialFactory_v21CFii.s"
 }
@@ -305,7 +305,7 @@ asm void J3DMaterialFactory_v21::newColorChan(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newTexGenNum(s32 field_0) const {
+asm void J3DMaterialFactory_v21::newTexGenNum(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTexGenNum__22J3DMaterialFactory_v21CFi.s"
 }
@@ -316,7 +316,7 @@ asm void J3DMaterialFactory_v21::newTexGenNum(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newTexCoord(s32 field_0, s32 field_1) const {
+asm void J3DMaterialFactory_v21::newTexCoord(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTexCoord__22J3DMaterialFactory_v21CFii.s"
 }
@@ -327,7 +327,7 @@ asm void J3DMaterialFactory_v21::newTexCoord(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newTexMtx(s32 field_0, s32 field_1) const {
+asm void J3DMaterialFactory_v21::newTexMtx(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTexMtx__22J3DMaterialFactory_v21CFii.s"
 }
@@ -338,7 +338,7 @@ asm void J3DMaterialFactory_v21::newTexMtx(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newCullMode(s32 field_0) const {
+asm void J3DMaterialFactory_v21::newCullMode(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newCullMode__22J3DMaterialFactory_v21CFi.s"
 }
@@ -349,7 +349,7 @@ asm void J3DMaterialFactory_v21::newCullMode(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newTexNo(s32 field_0, s32 field_1) const {
+asm void J3DMaterialFactory_v21::newTexNo(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTexNo__22J3DMaterialFactory_v21CFii.s"
 }
@@ -360,7 +360,7 @@ asm void J3DMaterialFactory_v21::newTexNo(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newTevOrder(s32 field_0, s32 field_1) const {
+asm void J3DMaterialFactory_v21::newTevOrder(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevOrder__22J3DMaterialFactory_v21CFii.s"
 }
@@ -378,7 +378,7 @@ u8 data_80456BC4[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newTevColor(s32 field_0, s32 field_1) const {
+asm void J3DMaterialFactory_v21::newTevColor(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevColor__22J3DMaterialFactory_v21CFii.s"
 }
@@ -393,7 +393,7 @@ u32 lit_1317 = 0xFFFFFFFF;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newTevKColor(s32 field_0, s32 field_1) const {
+asm void J3DMaterialFactory_v21::newTevKColor(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevKColor__22J3DMaterialFactory_v21CFii.s"
 }
@@ -404,7 +404,7 @@ asm void J3DMaterialFactory_v21::newTevKColor(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newTevStageNum(s32 field_0) const {
+asm void J3DMaterialFactory_v21::newTevStageNum(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevStageNum__22J3DMaterialFactory_v21CFi.s"
 }
@@ -415,7 +415,7 @@ asm void J3DMaterialFactory_v21::newTevStageNum(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newTevStage(s32 field_0, s32 field_1) const {
+asm void J3DMaterialFactory_v21::newTevStage(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevStage__22J3DMaterialFactory_v21CFii.s"
 }
@@ -426,7 +426,7 @@ asm void J3DMaterialFactory_v21::newTevStage(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newTevSwapModeTable(s32 field_0, s32 field_1) const {
+asm void J3DMaterialFactory_v21::newTevSwapModeTable(int field_0, int field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newTevSwapModeTable__22J3DMaterialFactory_v21CFii.s"
 }
@@ -437,7 +437,7 @@ asm void J3DMaterialFactory_v21::newTevSwapModeTable(s32 field_0, s32 field_1) c
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newFog(s32 field_0) const {
+asm void J3DMaterialFactory_v21::newFog(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newFog__22J3DMaterialFactory_v21CFi.s"
 }
@@ -448,7 +448,7 @@ asm void J3DMaterialFactory_v21::newFog(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newAlphaComp(s32 field_0) const {
+asm void J3DMaterialFactory_v21::newAlphaComp(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newAlphaComp__22J3DMaterialFactory_v21CFi.s"
 }
@@ -459,7 +459,7 @@ asm void J3DMaterialFactory_v21::newAlphaComp(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newBlend(s32 field_0) const {
+asm void J3DMaterialFactory_v21::newBlend(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newBlend__22J3DMaterialFactory_v21CFi.s"
 }
@@ -470,7 +470,7 @@ asm void J3DMaterialFactory_v21::newBlend(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newZMode(s32 field_0) const {
+asm void J3DMaterialFactory_v21::newZMode(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newZMode__22J3DMaterialFactory_v21CFi.s"
 }
@@ -481,7 +481,7 @@ asm void J3DMaterialFactory_v21::newZMode(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newZCompLoc(s32 field_0) const {
+asm void J3DMaterialFactory_v21::newZCompLoc(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newZCompLoc__22J3DMaterialFactory_v21CFi.s"
 }
@@ -492,7 +492,7 @@ asm void J3DMaterialFactory_v21::newZCompLoc(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newDither(s32 field_0) const {
+asm void J3DMaterialFactory_v21::newDither(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newDither__22J3DMaterialFactory_v21CFi.s"
 }
@@ -503,7 +503,7 @@ asm void J3DMaterialFactory_v21::newDither(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DMaterialFactory_v21::newNBTScale(s32 field_0) const {
+asm void J3DMaterialFactory_v21::newNBTScale(int field_0) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory_v21/newNBTScale__22J3DMaterialFactory_v21CFi.s"
 }

@@ -20,7 +20,7 @@ struct camera_class {
 // 
 
 void fopCamM_GetParam(camera_class*);
-void fopCamM_Create(s32, s16, void*);
+void fopCamM_Create(int, s16, void*);
 void fopCamM_Management();
 void fopCamM_Init();
 
@@ -67,7 +67,7 @@ u8 l_fopCamM_id[16];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopCamM_Create(s32 field_0, s16 field_1, void* field_2) {
+asm void fopCamM_Create(int field_0, s16 field_1, void* field_2) {
 	nofralloc
 #include "asm/f_op/f_op_camera_mng/fopCamM_Create__FisPv.s"
 }

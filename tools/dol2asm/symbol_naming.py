@@ -3,7 +3,7 @@ import demangle
 import data_types
 from collections import defaultdict
 from data import *
-from data_types import ConstType, ReferenceType, PointerType
+from data_types import ConstType, ReferenceType, PointerType, ArrayType
 
 def is_demangled_safe(parts, pointer_types):
     for part in parts:
@@ -43,35 +43,41 @@ integer_types = {
     ("long", False, False): data_types.S32,
     ("long long", False, True): data_types.S64,
     ("long long", False, False): data_types.S64,
+    ("int", False, False): data_types.INT,
+    ("int", True, False): data_types.U32,
+    ("int", False, True): data_types.S32,
 }
 
 type_map = {
     "void": data_types.VOID,
     "bool": data_types.BOOL,
-    "int": data_types.S32,
     "float": data_types.F32,
     "double": data_types.F64,
     "f32": data_types.F32,
     "f64": data_types.F64,
+    "...": data_types.VARIADIC,
 }
 
 def type_from_demangled_param(param):
     if isinstance(param, demangle.FuncParam):
         return None
     elif isinstance(param, demangle.ArrayParam):
+        return ArrayType(
+            base = type_from_demangled_param(param.base_type),
+            inner = type_from_demangled_param(param.inner_type),
+            sizes = param.sizes
+        )
+
+    integer_key = (param.name, param.is_unsigned, param.is_signed)
+    if integer_key in integer_types:
+        type = integer_types[integer_key]
+    elif param.name in type_map:
+        assert not param.is_unsigned and not param.is_signed
+        type = type_map[param.name]
+    elif not demangle.is_builtin_type(param.name):
+        type = NamedType(name = param.name)
+    else:
         return None
-        
-    type = data_types.builtin_from(param.name)
-    if not type:
-        integer_key = (param.name, param.is_unsigned, param.is_signed)
-        if integer_key in integer_types:
-            type = integer_types[integer_key]
-        elif param.name in type_map:
-            type = type_map[param.name]
-        elif not demangle.is_builtin_type(param.name):
-            type = NamedType(name = param.name)
-        else:
-            return None
 
     if param.is_const:
         type = ConstType(of=type)
@@ -122,7 +128,7 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
                     type_from_demangled_param(x)
                     for x in p.demangled
                 ]
-                
+
                 valid = True
                 for type in types:
                     if type == None:

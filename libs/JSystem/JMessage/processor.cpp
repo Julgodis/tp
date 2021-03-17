@@ -16,9 +16,9 @@ struct JMessage;
 // build JMessage (JMessage) True/True
 // build JMessage (JMessage) True/True
 /* top-level dependencies (begin JMessage) */
-// outer dependency: JMessage::TControl
 // outer dependency: JMessage::TSequenceProcessor
 // outer dependency: JMessage::TProcessor
+// outer dependency: JMessage::TControl
 // outer dependency: JMessage::TReference
 /* top-level dependencies (end JMessage) */
 struct JMessage {
@@ -45,7 +45,7 @@ struct JMessage {
 		/* 802A7FC0 */ void do_reset();
 		/* 802A7FC4 */ void do_begin(void const*, char const*);
 		/* 802A7FC8 */ void do_end();
-		/* 802A7FCC */ void do_character(s32);
+		/* 802A7FCC */ void do_character(int);
 		/* 802A7FD0 */ bool do_tag(u32, void const*, u32);
 		/* 802A7FD8 */ void do_select_begin(u32);
 		/* 802A7FDC */ void do_select_end();
@@ -65,8 +65,6 @@ struct JMessage {
 
 	// build TSequenceProcessor (JMessage::TSequenceProcessor) False/False
 	/* dependencies (begin JMessage::TSequenceProcessor) */
-	// inner dependency: TReference (JMessage::TReference) True False (for JMessage::TSequenceProcessor)
-	// build TReference (JMessage::TReference) True/True
 	// inner dependency: TControl (JMessage::TControl) True False (for JMessage::TSequenceProcessor)
 	// build TControl (JMessage::TControl) False/False
 	/* dependencies (begin JMessage::TControl) */
@@ -78,10 +76,12 @@ struct JMessage {
 		/* 802A7A20 */ void setMessageCode_inSequence_(JMessage::TProcessor const*, u16, u16);
 	};
 
+	// inner dependency: TReference (JMessage::TReference) True False (for JMessage::TSequenceProcessor)
+	// build TReference (JMessage::TReference) True/True
 	/* dependencies (end JMessage::TSequenceProcessor) */
 	struct TSequenceProcessor {
-		// JMessage::TReference
 		// JMessage::TControl
+		// JMessage::TReference
 		/* 802A8374 */ TSequenceProcessor(JMessage::TReference const*, JMessage::TControl*);
 		/* 802A83B8 */ ~TSequenceProcessor();
 		/* 802A8418 */ void process(char const*);
@@ -478,7 +478,7 @@ void JMessage::TProcessor::do_end() {
 
 
 /* 802A7FCC-802A7FD0 0004+00 rc=3 efc=0 .text      do_character__Q28JMessage10TProcessorFi                      */
-void JMessage::TProcessor::do_character(s32 field_0) {
+void JMessage::TProcessor::do_character(int field_0) {
 	/* empty function */
 }
 

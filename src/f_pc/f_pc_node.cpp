@@ -68,14 +68,14 @@ SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(s32, s32);
-void fpcBs_MakeOfType(s32*);
+void fpcBs_Is_JustOfType(int, int);
+void fpcBs_MakeOfType(int*);
 void fpcLy_IsDeletingMesg(layer_class*);
 void fpcLy_IsCreatingMesg(layer_class*);
 void fpcLy_SetCurrentLayer(layer_class*);
 void fpcLy_CurrentLayer();
 void fpcLy_Delete(layer_class*);
-void fpcLy_Create(layer_class*, void*, node_list_class*, s32);
+void fpcLy_Create(layer_class*, void*, node_list_class*, int);
 extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv();
 extern "C" void fpcMtd_Method__FPFPv_iPv();
 void fpcMtd_Execute(process_method_class*, void*);

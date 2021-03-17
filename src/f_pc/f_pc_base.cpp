@@ -55,7 +55,7 @@ struct line_tag {
 /* top-level dependencies (begin cMl) */
 /* top-level dependencies (end cMl) */
 struct cMl {
-	/* 80263228 */ void memalignB(s32, u32);
+	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);
 };
 
@@ -63,14 +63,14 @@ struct cMl {
 // Forward References:
 // 
 
-void fpcBs_Is_JustOfType(s32, s32);
-void fpcBs_MakeOfType(s32*);
+void fpcBs_Is_JustOfType(int, int);
+void fpcBs_MakeOfType(int*);
 void fpcBs_MakeOfId();
 void fpcBs_Execute(base_process_class*);
 static void fpcBs_DeleteAppend(base_process_class*);
 void fpcBs_IsDelete(base_process_class*);
 void fpcBs_Delete(base_process_class*);
-void fpcBs_Create(s16, s32, void*);
+void fpcBs_Create(s16, u32, void*);
 void fpcBs_SubCreate(base_process_class*);
 
 extern "C" void fpcBs_Is_JustOfType__Fii();
@@ -95,12 +95,12 @@ SECTION_SBSS extern u8 data_80450D10[8];
 void fpcDtTg_Init(delete_tag_class*, void*);
 void fpcLy_SetCurrentLayer(layer_class*);
 void fpcLy_CurrentLayer();
-void fpcLyTg_Init(layer_management_tag_class*, s32, void*);
+void fpcLyTg_Init(layer_management_tag_class*, u32, void*);
 void fpcMtd_Execute(process_method_class*, void*);
 void fpcMtd_IsDelete(process_method_class*, void*);
 void fpcMtd_Delete(process_method_class*, void*);
 void fpcMtd_Create(process_method_class*, void*);
-void fpcPi_Init(process_priority_class*, void*, s32, u16, u16);
+void fpcPi_Init(process_priority_class*, void*, u32, u16, u16);
 void fpcPf_Get(s16);
 void fpcLnTg_Init(line_tag*, void*);
 void fpcPause_Init(void*);
@@ -134,7 +134,7 @@ extern "C" void _restgpr_26();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_Is_JustOfType(s32 field_0, s32 field_1) {
+asm void fpcBs_Is_JustOfType(int field_0, int field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_Is_JustOfType__Fii.s"
 }
@@ -155,7 +155,7 @@ u8 data_80450D08[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_MakeOfType(s32* field_0) {
+asm void fpcBs_MakeOfType(int* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_MakeOfType__FPi.s"
 }
@@ -228,7 +228,7 @@ asm void fpcBs_Delete(base_process_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_Create(s16 field_0, s32 field_1, void* field_2) {
+asm void fpcBs_Create(s16 field_0, u32 field_1, void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_Create__FsUiPv.s"
 }

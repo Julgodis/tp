@@ -10,16 +10,16 @@
 // 
 
 // build dMenu_Letter_c (dMenu_Letter_c) False/False
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
 // build CSTControl (CSTControl) False/False
 /* top-level dependencies (begin CSTControl) */
 /* top-level dependencies (end CSTControl) */
 struct CSTControl {
+};
+
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
 };
 
 // build STControl (STControl) False/False
@@ -31,13 +31,13 @@ struct STControl {
 };
 
 /* top-level dependencies (begin dMenu_Letter_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Letter_c) */
 struct dMenu_Letter_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
 	/* 801DCDC0 */ dMenu_Letter_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801DCF34 */ ~dMenu_Letter_c();
@@ -93,6 +93,7 @@ struct J2DTextBox {
 	/* 801DFA28 */ void getWhite() const;
 	/* 801DFA34 */ void getBlack() const;
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // build J2DPicture (J2DPicture) False/False
@@ -113,6 +114,12 @@ struct J2DPicture {
 };
 
 // build dMsgString_c (dMsgString_c) False/False
+// build COutFont_c (COutFont_c) False/False
+/* top-level dependencies (begin COutFont_c) */
+/* top-level dependencies (end COutFont_c) */
+struct COutFont_c {
+};
+
 // build JUTFont (JUTFont) False/False
 /* top-level dependencies (begin JUTFont) */
 /* top-level dependencies (end JUTFont) */
@@ -120,22 +127,16 @@ struct JUTFont {
 };
 
 // build J2DTextBox (J2DTextBox) True/True
-// build COutFont_c (COutFont_c) False/False
-/* top-level dependencies (begin COutFont_c) */
-/* top-level dependencies (end COutFont_c) */
-struct COutFont_c {
-};
-
 /* top-level dependencies (begin dMsgString_c) */
+// outer dependency: COutFont_c
 // outer dependency: JUTFont
 // outer dependency: J2DTextBox
-// outer dependency: COutFont_c
 /* top-level dependencies (end dMsgString_c) */
 struct dMsgString_c {
+	// COutFont_c
 	// JUTFont
 	// J2DTextBox
-	// COutFont_c
-	/* 801E1D10 */ void getStringPage(u32, char, char, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
+	/* 801E1D10 */ void getStringPage(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
 	/* 80249C20 */ dMsgString_c();
 	/* 80249D28 */ ~dMsgString_c();
 };
@@ -155,16 +156,16 @@ struct JKRHeap {
 /* top-level dependencies (end mDoDvdThd_mountArchive_c) */
 struct mDoDvdThd_mountArchive_c {
 	// JKRHeap
-	/* 80015E14 */ void create(char const*, char, JKRHeap*);
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
 // build dSv_letter_info_c (dSv_letter_info_c) False/False
 /* top-level dependencies (begin dSv_letter_info_c) */
 /* top-level dependencies (end dSv_letter_info_c) */
 struct dSv_letter_info_c {
-	/* 80034428 */ void onLetterGetFlag(s32);
-	/* 80034474 */ void onLetterReadFlag(s32);
-	/* 8003449C */ void isLetterReadFlag(s32) const;
+	/* 80034428 */ void onLetterGetFlag(int);
+	/* 80034474 */ void onLetterReadFlag(int);
+	/* 8003449C */ void isLetterReadFlag(int) const;
 };
 
 // build JUtility (JUtility) False/False
@@ -181,12 +182,6 @@ struct JUtility {
 };
 
 // build dSelect_cursor_c (dSelect_cursor_c) False/False
-// build JKRArchive (JKRArchive) False/False
-/* top-level dependencies (begin JKRArchive) */
-/* top-level dependencies (end JKRArchive) */
-struct JKRArchive {
-};
-
 // build J2DPane (J2DPane) False/False
 /* top-level dependencies (begin J2DPane) */
 /* top-level dependencies (end J2DPane) */
@@ -194,14 +189,20 @@ struct J2DPane {
 	/* 802F7100 */ void getBounds();
 };
 
+// build JKRArchive (JKRArchive) False/False
+/* top-level dependencies (begin JKRArchive) */
+/* top-level dependencies (end JKRArchive) */
+struct JKRArchive {
+};
+
 /* top-level dependencies (begin dSelect_cursor_c) */
-// outer dependency: JKRArchive
 // outer dependency: J2DPane
+// outer dependency: JKRArchive
 /* top-level dependencies (end dSelect_cursor_c) */
 struct dSelect_cursor_c {
-	// JKRArchive
 	// J2DPane
-	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	// JKRArchive
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801951C8 */ void setScale(f32);
@@ -240,23 +241,25 @@ struct dMsgScrnArrow_c {
 };
 
 // build dMsgStringBase_c (dMsgStringBase_c) False/False
+// build COutFont_c (COutFont_c) True/True
 // build JUTFont (JUTFont) True/True
 // build J2DTextBox (J2DTextBox) True/True
-// build COutFont_c (COutFont_c) True/True
 /* top-level dependencies (begin dMsgStringBase_c) */
+// outer dependency: COutFont_c
 // outer dependency: JUTFont
 // outer dependency: J2DTextBox
-// outer dependency: COutFont_c
 /* top-level dependencies (end dMsgStringBase_c) */
 struct dMsgStringBase_c {
+	// COutFont_c
 	// JUTFont
 	// J2DTextBox
-	// COutFont_c
-	/* 802498D8 */ void getStringPageLocal(u32, char, char, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char);
-	/* 80249A48 */ void getPageMax(s32);
+	/* 802498D8 */ void getStringPageLocal(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
+	/* 80249A48 */ void getPageMax(int);
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DPane (J2DPane) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) False/False
@@ -277,21 +280,20 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DPane (J2DPane) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
+	// J2DScreen
 	/* 80253930 */ CPaneMgr();
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253A18 */ ~CPaneMgr();
 	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
@@ -304,26 +306,26 @@ struct CPaneMgrAlpha {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -448,13 +450,11 @@ void mDoExt_getMesgFont();
 void mDoExt_getSubFont();
 void dMeter2Info_getRecieveLetterNum();
 void dMeter2Info_set2DVibration();
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
 void dPaneClass_showNullPane(J2DScreen*);
 void cLib_addCalc2(f32*, f32, f32, f32);
 void* operator new(u32);
 void operator delete(void*);
 extern "C" void func_802E90C0();
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void GXGetScissor();
 extern "C" void __construct_array();
 extern "C" void __ptmf_scall();
@@ -1414,7 +1414,7 @@ asm void dMenu_Letter_c::setHIO(bool field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMsgString_c::getStringPage(u32 field_0, char field_1, char field_2, J2DTextBox* field_3, J2DTextBox* field_4, JUTFont* field_5, COutFont_c* field_6, char field_7) {
+asm void dMsgString_c::getStringPage(u32 field_0, u8 field_1, u8 field_2, J2DTextBox* field_3, J2DTextBox* field_4, JUTFont* field_5, COutFont_c* field_6, u8 field_7) {
 	nofralloc
 #include "asm/d/menu/d_menu_letter/getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc.s"
 }

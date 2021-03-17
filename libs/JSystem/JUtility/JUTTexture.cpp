@@ -10,16 +10,36 @@
 // 
 
 // build JUTTexture (JUTTexture) False/False
+// build JUTPalette (JUTPalette) False/False
+// build JUTTransparency (JUTTransparency) False/False
+/* top-level dependencies (begin JUTTransparency) */
+/* top-level dependencies (end JUTTransparency) */
+struct JUTTransparency {
+};
+
+// build _GXTlutFmt (_GXTlutFmt) False/False
+/* top-level dependencies (begin _GXTlutFmt) */
+/* top-level dependencies (end _GXTlutFmt) */
+struct _GXTlutFmt {
+};
+
 // build _GXTlut (_GXTlut) False/False
 /* top-level dependencies (begin _GXTlut) */
 /* top-level dependencies (end _GXTlut) */
 struct _GXTlut {
 };
 
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
-struct ResTIMG {
+/* top-level dependencies (begin JUTPalette) */
+// outer dependency: JUTTransparency
+// outer dependency: _GXTlutFmt
+// outer dependency: _GXTlut
+/* top-level dependencies (end JUTPalette) */
+struct JUTPalette {
+	// JUTTransparency
+	// _GXTlutFmt
+	// _GXTlut
+	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
+	/* 802DE95C */ void load();
 };
 
 // build _GXTexMapID (_GXTexMapID) False/False
@@ -28,46 +48,26 @@ struct ResTIMG {
 struct _GXTexMapID {
 };
 
-// build JUTPalette (JUTPalette) False/False
-// build JUTTransparency (JUTTransparency) False/False
-/* top-level dependencies (begin JUTTransparency) */
-/* top-level dependencies (end JUTTransparency) */
-struct JUTTransparency {
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
 };
 
 // build _GXTlut (_GXTlut) True/True
-// build _GXTlutFmt (_GXTlutFmt) False/False
-/* top-level dependencies (begin _GXTlutFmt) */
-/* top-level dependencies (end _GXTlutFmt) */
-struct _GXTlutFmt {
-};
-
-/* top-level dependencies (begin JUTPalette) */
-// outer dependency: JUTTransparency
-// outer dependency: _GXTlut
-// outer dependency: _GXTlutFmt
-/* top-level dependencies (end JUTPalette) */
-struct JUTPalette {
-	// JUTTransparency
-	// _GXTlut
-	// _GXTlutFmt
-	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
-	/* 802DE95C */ void load();
-};
-
 /* top-level dependencies (begin JUTTexture) */
-// outer dependency: _GXTlut
-// outer dependency: ResTIMG
-// outer dependency: _GXTexMapID
 // outer dependency: JUTPalette
+// outer dependency: _GXTexMapID
+// outer dependency: ResTIMG
+// outer dependency: _GXTlut
 /* top-level dependencies (end JUTTexture) */
 struct JUTTexture {
-	// _GXTlut
-	// ResTIMG
-	// _GXTexMapID
 	// JUTPalette
+	// _GXTexMapID
+	// ResTIMG
+	// _GXTlut
 	/* 802DE234 */ ~JUTTexture();
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, char);
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
 	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
 	/* 802DE5B0 */ void attachPalette(JUTPalette*);
@@ -147,7 +147,7 @@ asm JUTTexture::~JUTTexture() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTTexture::storeTIMG(ResTIMG const* field_0, char field_1) {
+asm void JUTTexture::storeTIMG(ResTIMG const* field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTTexture/storeTIMG__10JUTTextureFPC7ResTIMGUc.s"
 }

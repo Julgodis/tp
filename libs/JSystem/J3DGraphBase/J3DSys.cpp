@@ -22,8 +22,8 @@ struct _GXTexCacheSize {
 struct J3DSys {
 	// _GXTexCacheSize
 	/* 8030FDE8 */ J3DSys();
-	/* 8030FEC0 */ void loadPosMtxIndx(s32, u16) const;
-	/* 8030FEE4 */ void loadNrmMtxIndx(s32, u16) const;
+	/* 8030FEC0 */ void loadPosMtxIndx(int, u16) const;
+	/* 8030FEE4 */ void loadNrmMtxIndx(int, u16) const;
 	/* 8030FF0C */ void setTexCacheRegion(_GXTexCacheSize);
 	/* 803100BC */ void drawInit();
 	/* 8031073C */ void reinitGX();
@@ -238,7 +238,7 @@ asm J3DSys::J3DSys() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DSys::loadPosMtxIndx(s32 field_0, u16 field_1) const {
+asm void J3DSys::loadPosMtxIndx(int field_0, u16 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/loadPosMtxIndx__6J3DSysCFiUs.s"
 }
@@ -249,7 +249,7 @@ asm void J3DSys::loadPosMtxIndx(s32 field_0, u16 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DSys::loadNrmMtxIndx(s32 field_0, u16 field_1) const {
+asm void J3DSys::loadNrmMtxIndx(int field_0, u16 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DSys/loadNrmMtxIndx__6J3DSysCFiUs.s"
 }

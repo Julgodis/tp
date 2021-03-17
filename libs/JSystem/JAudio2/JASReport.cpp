@@ -9,7 +9,7 @@
 // Forward References:
 // 
 
-extern "C" void JASReport__FPCce();
+void JASReport(char const*, ...);
 
 extern "C" void JASReport__FPCce();
 SECTION_BSS extern u8 sMutex[24];
@@ -55,7 +55,7 @@ u8 sTop[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void JASReport__FPCce() {
+asm void JASReport(char const* field_0, ...) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASReport/JASReport__FPCce.s"
 }

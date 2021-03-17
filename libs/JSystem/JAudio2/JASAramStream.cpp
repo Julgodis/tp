@@ -10,18 +10,6 @@
 // 
 
 // build JASAramStream (JASAramStream) False/False
-// build JASDsp (JASDsp) False/False
-/* top-level dependencies (begin JASDsp) */
-/* top-level dependencies (end JASDsp) */
-struct JASDsp {
-	// build TChannel (JASDsp::TChannel) False/False
-	/* dependencies (begin JASDsp::TChannel) */
-	/* dependencies (end JASDsp::TChannel) */
-	struct TChannel {
-	};
-
-};
-
 // build JASChannel (JASChannel) False/False
 // build JASOscillator (JASOscillator) False/False
 /* top-level dependencies (begin JASOscillator) */
@@ -46,16 +34,28 @@ struct JASChannel {
 	/* 8029AB98 */ void setMixConfig(u32, u16);
 };
 
+// build JASDsp (JASDsp) False/False
+/* top-level dependencies (begin JASDsp) */
+/* top-level dependencies (end JASDsp) */
+struct JASDsp {
+	// build TChannel (JASDsp::TChannel) False/False
+	/* dependencies (begin JASDsp::TChannel) */
+	/* dependencies (end JASDsp::TChannel) */
+	struct TChannel {
+	};
+
+};
+
 /* top-level dependencies (begin JASAramStream) */
-// outer dependency: JASDsp::TChannel
 // outer dependency: JASChannel
+// outer dependency: JASDsp::TChannel
 /* top-level dependencies (end JASAramStream) */
 struct JASAramStream {
-	// JASDsp::TChannel
 	// JASChannel
+	// JASDsp::TChannel
 	/* 8029631C */ void initSystem(u32, u32);
 	/* 802963A8 */ JASAramStream();
-	/* 8029655C */ void prepare(s32, s32);
+	/* 8029655C */ void prepare(s32, int);
 	/* 80296618 */ void start();
 	/* 8029664C */ void stop(u16);
 	/* 80296684 */ void pause(bool);
@@ -66,7 +66,7 @@ struct JASAramStream {
 	/* 80296848 */ void loadToAramTask(void*);
 	/* 80296868 */ void finishTask(void*);
 	/* 802968C8 */ void prepareFinishTask(void*);
-	/* 80296920 */ void headerLoad(u32, s32);
+	/* 80296920 */ void headerLoad(u32, int);
 	/* 80296AE8 */ void load();
 	/* 80296D74 */ void channelProcCallback(void*);
 	/* 80296D94 */ void dvdErrorCheck(void*);
@@ -110,21 +110,21 @@ struct JKRHeap {
 };
 
 // build JKRAram (JKRAram) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JKRExpandSwitch (JKRExpandSwitch) False/False
 /* top-level dependencies (begin JKRExpandSwitch) */
 /* top-level dependencies (end JKRExpandSwitch) */
 struct JKRExpandSwitch {
 };
 
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin JKRAram) */
-// outer dependency: JKRHeap
 // outer dependency: JKRExpandSwitch
+// outer dependency: JKRHeap
 /* top-level dependencies (end JKRAram) */
 struct JKRAram {
-	// JKRHeap
 	// JKRExpandSwitch
-	/* 802D233C */ void mainRamToAram(char*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, s32, u32*);
+	// JKRHeap
+	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
 // build JKRExpandSwitch (JKRExpandSwitch) True/True
@@ -185,7 +185,7 @@ extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv();
 extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
 extern "C" void rejectCallback__9JASDriverFPFPv_lPv();
 extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv();
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 extern "C" void OSDisableInterrupts();
 extern "C" void OSRestoreInterrupts();
@@ -317,7 +317,7 @@ extern "C" asm void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASAramStream::prepare(s32 field_0, s32 field_1) {
+asm void JASAramStream::prepare(s32 field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/prepare__13JASAramStreamFli.s"
 }
@@ -445,7 +445,7 @@ f64 JASAramStream__lit_533 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASAramStream::headerLoad(u32 field_0, s32 field_1) {
+asm void JASAramStream::headerLoad(u32 field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/headerLoad__13JASAramStreamFUli.s"
 }

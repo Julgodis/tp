@@ -10,12 +10,18 @@
 // 
 
 // build JKRAramStream (JKRAramStream) False/False
+// build JSUFileInputStream (JSUFileInputStream) False/False
+/* top-level dependencies (begin JSUFileInputStream) */
+/* top-level dependencies (end JSUFileInputStream) */
+struct JSUFileInputStream {
+};
+
 // build JKRHeap (JKRHeap) False/False
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
@@ -26,21 +32,15 @@ struct JKRAramStreamCommand {
 	/* 802D4088 */ JKRAramStreamCommand();
 };
 
-// build JSUFileInputStream (JSUFileInputStream) False/False
-/* top-level dependencies (begin JSUFileInputStream) */
-/* top-level dependencies (end JSUFileInputStream) */
-struct JSUFileInputStream {
-};
-
 /* top-level dependencies (begin JKRAramStream) */
+// outer dependency: JSUFileInputStream
 // outer dependency: JKRHeap
 // outer dependency: JKRAramStreamCommand
-// outer dependency: JSUFileInputStream
 /* top-level dependencies (end JKRAramStream) */
 struct JKRAramStream {
+	// JSUFileInputStream
 	// JKRHeap
 	// JKRAramStreamCommand
-	// JSUFileInputStream
 	/* 802D3B48 */ void create(s32);
 	/* 802D3BB8 */ JKRAramStream(s32);
 	/* 802D3C08 */ ~JKRAramStream();
@@ -48,8 +48,8 @@ struct JKRAramStream {
 	/* 802D3CD8 */ bool readFromAram();
 	/* 802D3CE0 */ void writeToAram(JKRAramStreamCommand*);
 	/* 802D3ED0 */ void write_StreamToAram_Async(JSUFileInputStream*, u32, u32, u32, u32*);
-	/* 802D3FA0 */ void sync(JKRAramStreamCommand*, s32);
-	/* 802D4034 */ void setTransBuffer(char*, u32, JKRHeap*);
+	/* 802D3FA0 */ void sync(JKRAramStreamCommand*, int);
+	/* 802D4034 */ void setTransBuffer(u8*, u32, JKRHeap*);
 };
 
 // build JKRAramStreamCommand (JKRAramStreamCommand) True/True
@@ -75,7 +75,7 @@ struct JSURandomInputStream {
 /* top-level dependencies (begin JKRThread) */
 /* top-level dependencies (end JKRThread) */
 struct JKRThread {
-	/* 802D1568 */ JKRThread(u32, s32, s32);
+	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
@@ -91,7 +91,7 @@ struct JKRAramBlock {
 /* top-level dependencies (end JKRAramPiece) */
 struct JKRAramPiece {
 	// JKRAramBlock
-	/* 802D3838 */ void orderSync(s32, u32, u32, u32, JKRAramBlock*);
+	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
 };
 
 // build JKRAramBlock (JKRAramBlock) True/True
@@ -103,6 +103,13 @@ struct JSUInputStream {
 };
 
 // build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
+// build JUTException (JUTException) False/False
+/* top-level dependencies (begin JUTException) */
+/* top-level dependencies (end JUTException) */
+struct JUTException {
+	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
+};
+
 // 
 // Forward References:
 // 
@@ -132,9 +139,8 @@ SECTION_SBSS extern u8 transHeap__13JKRAramStream[4];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
 extern "C" void OSInitMessageQueue();
 extern "C" void OSSendMessage();
 extern "C" void OSReceiveMessage();
@@ -292,7 +298,7 @@ asm void JKRAramStream::write_StreamToAram_Async(JSUFileInputStream* field_0, u3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAramStream::sync(JKRAramStreamCommand* field_0, s32 field_1) {
+asm void JKRAramStream::sync(JKRAramStreamCommand* field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/sync__13JKRAramStreamFP20JKRAramStreamCommandi.s"
 }
@@ -303,7 +309,7 @@ asm void JKRAramStream::sync(JKRAramStreamCommand* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRAramStream::setTransBuffer(char* field_0, u32 field_1, JKRHeap* field_2) {
+asm void JKRAramStream::setTransBuffer(u8* field_0, u32 field_1, JKRHeap* field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramStream/setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap.s"
 }

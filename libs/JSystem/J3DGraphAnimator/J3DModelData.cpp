@@ -18,6 +18,7 @@ struct J3DModelData {
 	/* 80325E14 */ void newSharedDisplayList(u32);
 	/* 80325EC8 */ void indexToPtr();
 	/* 80325F94 */ void makeSharedDL();
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 	/* 803260CC */ void syncJ3DSysPointers() const;
 	/* 803260F8 */ void syncJ3DSysFlags() const;
 	/* 8032617C */ ~J3DModelData();
@@ -72,7 +73,6 @@ struct J3DMaterialTable {
 // Forward References:
 // 
 
-extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
 
 extern "C" void clear__12J3DModelDataFv();
 extern "C" void __ct__12J3DModelDataFv();
@@ -211,7 +211,7 @@ asm void J3DModelData::makeSharedDL() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void simpleCalcMaterial__12J3DModelDataFUsPA4_f() {
+asm void J3DModelData::simpleCalcMaterial(u16 field_0, f32 (* field_1)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DModelData/simpleCalcMaterial__12J3DModelDataFUsPA4_f.s"
 }

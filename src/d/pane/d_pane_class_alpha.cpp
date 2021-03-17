@@ -10,12 +10,6 @@
 // 
 
 // build CPaneMgrAlpha (CPaneMgrAlpha) False/False
-// build J2DScreen (J2DScreen) False/False
-/* top-level dependencies (begin J2DScreen) */
-/* top-level dependencies (end J2DScreen) */
-struct J2DScreen {
-};
-
 // build JKRExpHeap (JKRExpHeap) False/False
 /* top-level dependencies (begin JKRExpHeap) */
 /* top-level dependencies (end JKRExpHeap) */
@@ -30,50 +24,56 @@ struct J2DPane {
 	/* 802F7AC4 */ void getNextChildPane();
 };
 
+// build J2DScreen (J2DScreen) False/False
+/* top-level dependencies (begin J2DScreen) */
+/* top-level dependencies (end J2DScreen) */
+struct J2DScreen {
+};
+
 /* top-level dependencies (begin CPaneMgrAlpha) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgrAlpha) */
 struct CPaneMgrAlpha {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
+	// J2DScreen
 	/* 802553EC */ CPaneMgrAlpha();
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 8025546C */ ~CPaneMgrAlpha();
 	/* 802554E0 */ void initiateAlpha(J2DPane*, JKRExpHeap*);
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 8025564C */ void isVisible();
-	/* 80255658 */ void rateCalc(s16, s16, char);
-	/* 80255758 */ void setAlpha(char);
+	/* 80255658 */ void rateCalc(s16, s16, u8);
+	/* 80255758 */ void setAlpha(u8);
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
-	/* 80255878 */ void alphaAnime(s16, char, char, char);
-	/* 80255964 */ void alphaAnimeLoop(s16, char, char, char);
+	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
+	/* 80255964 */ void alphaAnimeLoop(s16, u8, u8, u8);
 	/* 80255A60 */ void childPaneCount(J2DPane*);
 	/* 80255ACC */ void childPaneGetAlpha(J2DPane*);
-	/* 80255B5C */ void childPaneSetAlpha(J2DPane*, char);
+	/* 80255B5C */ void childPaneSetAlpha(J2DPane*, u8);
 };
 
 // build J2DScreen (J2DScreen) True/True
 // build JKRExpHeap (JKRExpHeap) True/True
 // build J2DPane (J2DPane) True/True
 // build CPaneMgrAlphaMorf (CPaneMgrAlphaMorf) False/False
-// build J2DScreen (J2DScreen) True/True
 // build JKRExpHeap (JKRExpHeap) True/True
 // build J2DPane (J2DPane) True/True
+// build J2DScreen (J2DScreen) True/True
 /* top-level dependencies (begin CPaneMgrAlphaMorf) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgrAlphaMorf) */
 struct CPaneMgrAlphaMorf {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
-	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255CAC */ ~CPaneMgrAlphaMorf();
 	/* 80255D48 */ void initiateAlphaMorf();
 	/* 80255DD0 */ void setBackupAlpha();
@@ -86,7 +86,7 @@ struct CPaneMgrAlphaMorf {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
@@ -183,7 +183,7 @@ asm CPaneMgrAlpha::CPaneMgrAlpha() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm CPaneMgrAlpha::CPaneMgrAlpha(J2DScreen* field_0, u64 field_1, char field_2, JKRExpHeap* field_3) {
+asm CPaneMgrAlpha::CPaneMgrAlpha(J2DScreen* field_0, u64 field_1, u8 field_2, JKRExpHeap* field_3) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/__ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap.s"
 }
@@ -257,7 +257,7 @@ f64 d_pane_d_pane_class_alpha__lit_3694 = 4503601774854144.0 /* cast s32 to floa
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CPaneMgrAlpha::rateCalc(s16 field_0, s16 field_1, char field_2) {
+asm void CPaneMgrAlpha::rateCalc(s16 field_0, s16 field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/rateCalc__13CPaneMgrAlphaFssUc.s"
 }
@@ -268,7 +268,7 @@ asm void CPaneMgrAlpha::rateCalc(s16 field_0, s16 field_1, char field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CPaneMgrAlpha::setAlpha(char field_0) {
+asm void CPaneMgrAlpha::setAlpha(u8 field_0) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/setAlpha__13CPaneMgrAlphaFUc.s"
 }
@@ -313,7 +313,7 @@ asm void CPaneMgrAlpha::getAlphaRate() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CPaneMgrAlpha::alphaAnime(s16 field_0, char field_1, char field_2, char field_3) {
+asm void CPaneMgrAlpha::alphaAnime(s16 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/alphaAnime__13CPaneMgrAlphaFsUcUcUc.s"
 }
@@ -324,7 +324,7 @@ asm void CPaneMgrAlpha::alphaAnime(s16 field_0, char field_1, char field_2, char
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CPaneMgrAlpha::alphaAnimeLoop(s16 field_0, char field_1, char field_2, char field_3) {
+asm void CPaneMgrAlpha::alphaAnimeLoop(s16 field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc.s"
 }
@@ -357,7 +357,7 @@ asm void CPaneMgrAlpha::childPaneGetAlpha(J2DPane* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CPaneMgrAlpha::childPaneSetAlpha(J2DPane* field_0, char field_1) {
+asm void CPaneMgrAlpha::childPaneSetAlpha(J2DPane* field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc.s"
 }
@@ -368,7 +368,7 @@ asm void CPaneMgrAlpha::childPaneSetAlpha(J2DPane* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm CPaneMgrAlphaMorf::CPaneMgrAlphaMorf(J2DScreen* field_0, u64 field_1, char field_2, JKRExpHeap* field_3) {
+asm CPaneMgrAlphaMorf::CPaneMgrAlphaMorf(J2DScreen* field_0, u64 field_1, u8 field_2, JKRExpHeap* field_3) {
 	nofralloc
 #include "asm/d/pane/d_pane_class_alpha/__ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap.s"
 }

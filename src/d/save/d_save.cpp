@@ -14,12 +14,12 @@
 /* top-level dependencies (end dSv_player_status_a_c) */
 struct dSv_player_status_a_c {
 	/* 80032958 */ void init();
-	/* 80032A48 */ void setSelectItemIndex(s32, char);
-	/* 80032A5C */ void getSelectItemIndex(s32) const;
-	/* 80032A78 */ void setMixItemIndex(s32, char);
-	/* 80032A8C */ void getMixItemIndex(s32) const;
+	/* 80032A48 */ void setSelectItemIndex(int, u8);
+	/* 80032A5C */ void getSelectItemIndex(int) const;
+	/* 80032A78 */ void setMixItemIndex(int, u8);
+	/* 80032A8C */ void getMixItemIndex(int) const;
 	/* 80032AA8 */ void getRupeeMax() const;
-	/* 80032AF8 */ void isMagicFlag(char) const;
+	/* 80032AF8 */ void isMagicFlag(u8) const;
 };
 
 // build dSv_player_status_b_c (dSv_player_status_b_c) False/False
@@ -27,10 +27,10 @@ struct dSv_player_status_a_c {
 /* top-level dependencies (end dSv_player_status_b_c) */
 struct dSv_player_status_b_c {
 	/* 80032B50 */ void init();
-	/* 80032B94 */ void onDarkClearLV(s32);
-	/* 80032BB0 */ void isDarkClearLV(s32) const;
-	/* 80032BD0 */ void onTransformLV(s32);
-	/* 80032BEC */ void isTransformLV(s32) const;
+	/* 80032B94 */ void onDarkClearLV(int);
+	/* 80032BB0 */ void isDarkClearLV(int) const;
+	/* 80032BD0 */ void onTransformLV(int);
+	/* 80032BEC */ void isTransformLV(int) const;
 };
 
 // build dSv_horse_place_c (dSv_horse_place_c) False/False
@@ -46,7 +46,7 @@ struct cXyz {
 struct dSv_horse_place_c {
 	// cXyz
 	/* 80032C0C */ void init();
-	/* 80032C64 */ void set(char const*, cXyz const&, s16, char);
+	/* 80032C64 */ void set(char const*, cXyz const&, s16, s8);
 };
 
 // build cXyz (cXyz) True/True
@@ -55,7 +55,7 @@ struct dSv_horse_place_c {
 /* top-level dependencies (end dSv_player_return_place_c) */
 struct dSv_player_return_place_c {
 	/* 80032CC8 */ void init();
-	/* 80032D1C */ void set(char const*, char, char);
+	/* 80032D1C */ void set(char const*, s8, u8);
 };
 
 // build dSv_player_field_last_stay_info_c (dSv_player_field_last_stay_info_c) False/False
@@ -66,9 +66,9 @@ struct dSv_player_return_place_c {
 struct dSv_player_field_last_stay_info_c {
 	// cXyz
 	/* 80032D60 */ void init();
-	/* 80032DE0 */ void set(char const*, cXyz const&, s16, char, char);
-	/* 80032E4C */ void onRegionBit(s32);
-	/* 80032E78 */ void isRegionBit(s32) const;
+	/* 80032DE0 */ void set(char const*, cXyz const&, s16, s8, u8);
+	/* 80032E4C */ void onRegionBit(int);
+	/* 80032E78 */ void isRegionBit(int) const;
 };
 
 // build dSv_player_last_mark_info_c (dSv_player_last_mark_info_c) False/False
@@ -79,7 +79,7 @@ struct dSv_player_field_last_stay_info_c {
 struct dSv_player_last_mark_info_c {
 	// cXyz
 	/* 80032EB0 */ void init();
-	/* 80032F2C */ void setWarpItemData(char const*, cXyz const&, s16, char, char, char);
+	/* 80032F2C */ void setWarpItemData(char const*, cXyz const&, s16, s8, u8, u8);
 };
 
 // build dSv_player_item_c (dSv_player_item_c) False/False
@@ -87,29 +87,29 @@ struct dSv_player_last_mark_info_c {
 /* top-level dependencies (end dSv_player_item_c) */
 struct dSv_player_item_c {
 	/* 80032F90 */ void init();
-	/* 80032FB8 */ void setItem(s32, char);
-	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80032FB8 */ void setItem(int, u8);
+	/* 80033030 */ void getItem(int, bool) const;
 	/* 800332F8 */ void setLineUpItem();
-	/* 80033354 */ void getLineUpItem(s32) const;
-	/* 80033370 */ void setBottleItemIn(char, char);
-	/* 80033450 */ void setEmptyBottleItemIn(char);
+	/* 80033354 */ void getLineUpItem(int) const;
+	/* 80033370 */ void setBottleItemIn(u8, u8);
+	/* 80033450 */ void setEmptyBottleItemIn(u8);
 	/* 80033494 */ void setEmptyBottle();
-	/* 80033514 */ void setEmptyBottle(char);
-	/* 80033598 */ void setEquipBottleItemIn(char, char);
-	/* 800336BC */ void setEquipBottleItemEmpty(char);
-	/* 800336E0 */ void checkBottle(char);
+	/* 80033514 */ void setEmptyBottle(u8);
+	/* 80033598 */ void setEquipBottleItemIn(u8, u8);
+	/* 800336BC */ void setEquipBottleItemEmpty(u8);
+	/* 800336E0 */ void checkBottle(u8);
 	/* 80033754 */ void checkInsectBottle();
 	/* 800337EC */ void checkEmptyBottle();
-	/* 80033828 */ void setBombBagItemIn(char, char, bool);
-	/* 80033910 */ void setBombBagItemIn(char, char, char, bool);
-	/* 80033A20 */ void setEmptyBombBagItemIn(char, bool);
-	/* 80033A50 */ void setEmptyBombBagItemIn(char, char, bool);
+	/* 80033828 */ void setBombBagItemIn(u8, u8, bool);
+	/* 80033910 */ void setBombBagItemIn(u8, u8, u8, bool);
+	/* 80033A20 */ void setEmptyBombBagItemIn(u8, bool);
+	/* 80033A50 */ void setEmptyBombBagItemIn(u8, u8, bool);
 	/* 80033A88 */ void setEmptyBombBag();
-	/* 80033B08 */ void setEmptyBombBag(char, char);
-	/* 80033BEC */ void checkBombBag(char);
-	/* 80033C2C */ void setWarashibeItem(char);
+	/* 80033B08 */ void setEmptyBombBag(u8, u8);
+	/* 80033BEC */ void checkBombBag(u8);
+	/* 80033C2C */ void setWarashibeItem(u8);
 	/* 80033CBC */ void setRodTypeLevelUp();
-	/* 80033D40 */ void setBaitItem(char);
+	/* 80033D40 */ void setBaitItem(u8);
 };
 
 // build dSv_player_get_item_c (dSv_player_get_item_c) False/False
@@ -117,9 +117,9 @@ struct dSv_player_item_c {
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
 	/* 80033E40 */ void init();
-	/* 80033E60 */ void onFirstBit(char);
-	/* 80033E94 */ void offFirstBit(char);
-	/* 80033EC8 */ void isFirstBit(char) const;
+	/* 80033E60 */ void onFirstBit(u8);
+	/* 80033E94 */ void offFirstBit(u8);
+	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
 // build dSv_player_item_record_c (dSv_player_item_record_c) False/False
@@ -127,11 +127,11 @@ struct dSv_player_get_item_c {
 /* top-level dependencies (end dSv_player_item_record_c) */
 struct dSv_player_item_record_c {
 	/* 80033F00 */ void init();
-	/* 80033F6C */ void setBombNum(char, char);
-	/* 80033F7C */ void getBombNum(char) const;
-	/* 80033F8C */ void setBottleNum(char, char);
-	/* 80033F9C */ void addBottleNum(char, s16);
-	/* 80034030 */ void getBottleNum(char) const;
+	/* 80033F6C */ void setBombNum(u8, u8);
+	/* 80033F7C */ void getBombNum(u8) const;
+	/* 80033F8C */ void setBottleNum(u8, u8);
+	/* 80033F9C */ void addBottleNum(u8, s16);
+	/* 80034030 */ void getBottleNum(u8) const;
 };
 
 // build dSv_player_item_max_c (dSv_player_item_max_c) False/False
@@ -139,8 +139,8 @@ struct dSv_player_item_record_c {
 /* top-level dependencies (end dSv_player_item_max_c) */
 struct dSv_player_item_max_c {
 	/* 80034040 */ void init();
-	/* 800340B8 */ void setBombNum(char, char);
-	/* 800340F8 */ void getBombNum(char) const;
+	/* 800340B8 */ void setBombNum(u8, u8);
+	/* 800340F8 */ void getBombNum(u8) const;
 };
 
 // build dSv_player_collect_c (dSv_player_collect_c) False/False
@@ -148,12 +148,12 @@ struct dSv_player_item_max_c {
 /* top-level dependencies (end dSv_player_collect_c) */
 struct dSv_player_collect_c {
 	/* 800341AC */ void init();
-	/* 800341E8 */ void setCollect(s32, char);
-	/* 80034208 */ void isCollect(s32, char) const;
-	/* 8003422C */ void onCollectCrystal(char);
-	/* 8003424C */ void isCollectCrystal(char) const;
-	/* 80034270 */ void onCollectMirror(char);
-	/* 80034290 */ void isCollectMirror(char) const;
+	/* 800341E8 */ void setCollect(int, u8);
+	/* 80034208 */ void isCollect(int, u8) const;
+	/* 8003422C */ void onCollectCrystal(u8);
+	/* 8003424C */ void isCollectCrystal(u8) const;
+	/* 80034270 */ void onCollectMirror(u8);
+	/* 80034290 */ void isCollectMirror(u8) const;
 };
 
 // build dSv_player_wolf_c (dSv_player_wolf_c) False/False
@@ -168,10 +168,10 @@ struct dSv_player_wolf_c {
 /* top-level dependencies (end dSv_light_drop_c) */
 struct dSv_light_drop_c {
 	/* 800342DC */ void init();
-	/* 80034320 */ void setLightDropNum(char, char);
-	/* 80034340 */ void getLightDropNum(char) const;
-	/* 80034368 */ void onLightDropGetFlag(char);
-	/* 8003439C */ void isLightDropGetFlag(char) const;
+	/* 80034320 */ void setLightDropNum(u8, u8);
+	/* 80034340 */ void getLightDropNum(u8) const;
+	/* 80034368 */ void onLightDropGetFlag(u8);
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
 // build dSv_letter_info_c (dSv_letter_info_c) False/False
@@ -179,10 +179,10 @@ struct dSv_light_drop_c {
 /* top-level dependencies (end dSv_letter_info_c) */
 struct dSv_letter_info_c {
 	/* 800343DC */ void init();
-	/* 80034428 */ void onLetterGetFlag(s32);
-	/* 8003444C */ void isLetterGetFlag(s32) const;
-	/* 80034474 */ void onLetterReadFlag(s32);
-	/* 8003449C */ void isLetterReadFlag(s32) const;
+	/* 80034428 */ void onLetterGetFlag(int);
+	/* 8003444C */ void isLetterGetFlag(int) const;
+	/* 80034474 */ void onLetterReadFlag(int);
+	/* 8003449C */ void isLetterReadFlag(int) const;
 };
 
 // build dSv_fishing_info_c (dSv_fishing_info_c) False/False
@@ -190,7 +190,7 @@ struct dSv_letter_info_c {
 /* top-level dependencies (end dSv_fishing_info_c) */
 struct dSv_fishing_info_c {
 	/* 800344C8 */ void init();
-	/* 800344FC */ void addFishCount(char);
+	/* 800344FC */ void addFishCount(u8);
 };
 
 // build dSv_player_info_c (dSv_player_info_c) False/False
@@ -207,9 +207,9 @@ struct dSv_player_config_c {
 	/* 800345AC */ void init();
 	/* 80034644 */ void checkVibration() const;
 	/* 80034684 */ void getSound();
-	/* 8003468C */ void setSound(char);
+	/* 8003468C */ void setSound(u8);
 	/* 80034694 */ void getVibration();
-	/* 8003469C */ void setVibration(char);
+	/* 8003469C */ void setVibration(u8);
 };
 
 // build dSv_player_c (dSv_player_c) False/False
@@ -224,17 +224,17 @@ struct dSv_player_c {
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
 	/* 80034750 */ void init();
-	/* 800347A0 */ void onTbox(s32);
-	/* 800347C4 */ void offTbox(s32);
-	/* 800347E8 */ void isTbox(s32) const;
-	/* 80034810 */ void onSwitch(s32);
-	/* 80034838 */ void offSwitch(s32);
-	/* 80034860 */ void isSwitch(s32) const;
-	/* 8003488C */ void revSwitch(s32);
-	/* 800348C4 */ void onItem(s32);
-	/* 800348EC */ void isItem(s32) const;
-	/* 80034918 */ void onDungeonItem(s32);
-	/* 80034934 */ void isDungeonItem(s32) const;
+	/* 800347A0 */ void onTbox(int);
+	/* 800347C4 */ void offTbox(int);
+	/* 800347E8 */ void isTbox(int) const;
+	/* 80034810 */ void onSwitch(int);
+	/* 80034838 */ void offSwitch(int);
+	/* 80034860 */ void isSwitch(int) const;
+	/* 8003488C */ void revSwitch(int);
+	/* 800348C4 */ void onItem(int);
+	/* 800348EC */ void isItem(int) const;
+	/* 80034918 */ void onDungeonItem(int);
+	/* 80034934 */ void isDungeonItem(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -245,7 +245,7 @@ struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 	/* 800349A4 */ void offEventBit(u16);
 	/* 800349BC */ void isEventBit(u16) const;
-	/* 800349E0 */ void setEventReg(u16, char);
+	/* 800349E0 */ void setEventReg(u16, u8);
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
@@ -270,22 +270,22 @@ struct dSv_memory_c {
 struct dSv_memory2_c {
 	/* 80030D80 */ dSv_memory2_c();
 	/* 80034A84 */ void init();
-	/* 80034AA4 */ void onVisitedRoom(s32);
-	/* 80034AC8 */ void offVisitedRoom(s32);
-	/* 80034AEC */ void isVisitedRoom(s32);
+	/* 80034AA4 */ void onVisitedRoom(int);
+	/* 80034AC8 */ void offVisitedRoom(int);
+	/* 80034AEC */ void isVisitedRoom(int);
 };
 
 // build dSv_danBit_c (dSv_danBit_c) False/False
 /* top-level dependencies (begin dSv_danBit_c) */
 /* top-level dependencies (end dSv_danBit_c) */
 struct dSv_danBit_c {
-	/* 80034B14 */ void init(char);
-	/* 80034B98 */ void onSwitch(s32);
-	/* 80034BC0 */ void offSwitch(s32);
-	/* 80034BE8 */ void isSwitch(s32) const;
-	/* 80034C14 */ void revSwitch(s32);
-	/* 80034C4C */ void onItem(s32);
-	/* 80034C74 */ void isItem(s32) const;
+	/* 80034B14 */ void init(s8);
+	/* 80034B98 */ void onSwitch(int);
+	/* 80034BC0 */ void offSwitch(int);
+	/* 80034BE8 */ void isSwitch(int) const;
+	/* 80034C14 */ void revSwitch(int);
+	/* 80034C4C */ void onItem(int);
+	/* 80034C74 */ void isItem(int) const;
 };
 
 // build dSv_zoneBit_c (dSv_zoneBit_c) False/False
@@ -295,18 +295,18 @@ struct dSv_zoneBit_c {
 	/* 80034CA0 */ void init();
 	/* 80034CEC */ void clearRoomSwitch();
 	/* 80034CF8 */ void clearRoomItem();
-	/* 80034D04 */ void onSwitch(s32);
-	/* 80034D2C */ void offSwitch(s32);
-	/* 80034D50 */ void isSwitch(s32) const;
-	/* 80034D78 */ void revSwitch(s32);
-	/* 80034DAC */ void onOneSwitch(s32);
-	/* 80034DC8 */ void offOneSwitch(s32);
-	/* 80034DE0 */ void isOneSwitch(s32) const;
-	/* 80034DFC */ void revOneSwitch(s32);
-	/* 80034E24 */ void onItem(s32);
-	/* 80034E50 */ void isItem(s32) const;
-	/* 80034E7C */ void onOneItem(s32);
-	/* 80034E98 */ void isOneItem(s32) const;
+	/* 80034D04 */ void onSwitch(int);
+	/* 80034D2C */ void offSwitch(int);
+	/* 80034D50 */ void isSwitch(int) const;
+	/* 80034D78 */ void revSwitch(int);
+	/* 80034DAC */ void onOneSwitch(int);
+	/* 80034DC8 */ void offOneSwitch(int);
+	/* 80034DE0 */ void isOneSwitch(int) const;
+	/* 80034DFC */ void revOneSwitch(int);
+	/* 80034E24 */ void onItem(int);
+	/* 80034E50 */ void isItem(int) const;
+	/* 80034E7C */ void onOneItem(int);
+	/* 80034E98 */ void isOneItem(int) const;
 };
 
 // build dSv_zoneActor_c (dSv_zoneActor_c) False/False
@@ -314,16 +314,16 @@ struct dSv_zoneBit_c {
 /* top-level dependencies (end dSv_zoneActor_c) */
 struct dSv_zoneActor_c {
 	/* 80034EB4 */ void init();
-	/* 80034ED4 */ void on(s32);
-	/* 80034EF8 */ void off(s32);
-	/* 80034F1C */ void is(s32) const;
+	/* 80034ED4 */ void on(int);
+	/* 80034EF8 */ void off(int);
+	/* 80034F1C */ void is(int) const;
 };
 
 // build dSv_zone_c (dSv_zone_c) False/False
 /* top-level dependencies (begin dSv_zone_c) */
 /* top-level dependencies (end dSv_zone_c) */
 struct dSv_zone_c {
-	/* 80034F44 */ void init(s32);
+	/* 80034F44 */ void init(int);
 };
 
 // build dSv_restart_c (dSv_restart_c) False/False
@@ -333,7 +333,7 @@ struct dSv_zone_c {
 /* top-level dependencies (end dSv_restart_c) */
 struct dSv_restart_c {
 	// cXyz
-	/* 80034F80 */ void setRoom(cXyz const&, s16, char);
+	/* 80034F80 */ void setRoom(cXyz const&, s16, s8);
 };
 
 // build dSv_turnRestart_c (dSv_turnRestart_c) False/False
@@ -343,7 +343,7 @@ struct dSv_restart_c {
 /* top-level dependencies (end dSv_turnRestart_c) */
 struct dSv_turnRestart_c {
 	// cXyz
-	/* 80034FA4 */ void set(cXyz const&, s16, char, u32);
+	/* 80034FA4 */ void set(cXyz const&, s16, s8, u32);
 };
 
 // build dSv_info_c (dSv_info_c) False/False
@@ -351,22 +351,22 @@ struct dSv_turnRestart_c {
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
 	/* 80034FCC */ void init();
-	/* 800350BC */ void getSave(s32);
-	/* 800350F0 */ void putSave(s32);
+	/* 800350BC */ void getSave(int);
+	/* 800350F0 */ void putSave(int);
 	/* 8003514C */ void initZone();
-	/* 800351A4 */ void createZone(s32);
-	/* 80035200 */ void onSwitch(s32, s32);
-	/* 800352B0 */ void offSwitch(s32, s32);
-	/* 80035360 */ void isSwitch(s32, s32) const;
-	/* 8003542C */ void revSwitch(s32, s32);
-	/* 800354E0 */ void onItem(s32, s32);
-	/* 80035590 */ void isItem(s32, s32) const;
-	/* 80035644 */ void onActor(s32, s32);
-	/* 800356B4 */ void offActor(s32, s32);
-	/* 80035724 */ void isActor(s32, s32) const;
-	/* 80035798 */ void memory_to_card(char*, s32);
-	/* 80035A04 */ void card_to_memory(char*, s32);
-	/* 80035BD0 */ void initdata_to_card(char*, s32);
+	/* 800351A4 */ void createZone(int);
+	/* 80035200 */ void onSwitch(int, int);
+	/* 800352B0 */ void offSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
+	/* 8003542C */ void revSwitch(int, int);
+	/* 800354E0 */ void onItem(int, int);
+	/* 80035590 */ void isItem(int, int) const;
+	/* 80035644 */ void onActor(int, int);
+	/* 800356B4 */ void offActor(int, int);
+	/* 80035724 */ void isActor(int, int) const;
+	/* 80035798 */ void memory_to_card(char*, int);
+	/* 80035A04 */ void card_to_memory(char*, int);
+	/* 80035BD0 */ void initdata_to_card(char*, int);
 };
 
 // build dSv_save_c (dSv_save_c) False/False
@@ -374,14 +374,14 @@ struct dSv_info_c {
 /* top-level dependencies (end dSv_save_c) */
 struct dSv_save_c {
 	/* 8003501C */ void init();
-	/* 800350A8 */ void getSave2(s32);
+	/* 800350A8 */ void getSave2(int);
 };
 
 // build dComIfG_play_c (dComIfG_play_c) False/False
 /* top-level dependencies (begin dComIfG_play_c) */
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	/* 8002B3A8 */ void setNowVibration(char);
+	/* 8002B3A8 */ void setNowVibration(u8);
 	/* 8002B3B0 */ void getNowVibration();
 };
 
@@ -389,7 +389,7 @@ struct dComIfG_play_c {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 8002D9B0 */ void getZoneNo(s32);
+	/* 8002D9B0 */ void getZoneNo(int);
 };
 
 // build daObjCarry_c (daObjCarry_c) False/False
@@ -413,7 +413,7 @@ struct JMSMesgEntry_c {
 struct dMeter2Info_c {
 	// JMSMesgEntry_c
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
-	/* 8021DCC4 */ void setHotSpringTimer(char);
+	/* 8021DCC4 */ void setHotSpringTimer(u8);
 	/* 8021E290 */ void setSaveStageName(char const*);
 };
 
@@ -429,7 +429,7 @@ struct Z2AudioMgr {
 // Forward References:
 // 
 
-static void dSv_item_rename(char);
+static void dSv_item_rename(u8);
 
 extern "C" static void dSv_item_rename__FUc();
 extern "C" void init__21dSv_player_status_a_cFv();
@@ -604,12 +604,12 @@ SECTION_SDATA2 extern u8 lit_3813[4];
 
 SECTION_INIT void memcpy();
 extern "C" void OSReport_Error();
-void dComIfGs_setSelectItemIndex(s32, char);
-void dComIfGs_setMixItemIndex(s32, char);
-void dComIfGs_getMixItemIndex(s32);
-void dComIfGp_setSelectItem(s32);
+void dComIfGs_setSelectItemIndex(int, u8);
+void dComIfGs_setMixItemIndex(int, u8);
+void dComIfGs_getMixItemIndex(int);
+void dComIfGp_setSelectItem(int);
 s32 dComIfGs_getBottleMax();
-void dComIfGs_setKeyNum(s32, char);
+void dComIfGs_setKeyNum(int, u8);
 void setInitEventBit();
 extern "C" void OSGetSoundMode();
 extern "C" void OSGetTime();
@@ -677,7 +677,7 @@ SECTION_SBSS extern u8 sRumbleSupported__10JUTGamePad[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dSv_item_rename(char field_0) {
+asm static void dSv_item_rename(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/dSv_item_rename__FUc.s"
 }
@@ -699,7 +699,7 @@ asm void dSv_player_status_a_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_status_a_c::setSelectItemIndex(s32 field_0, char field_1) {
+asm void dSv_player_status_a_c::setSelectItemIndex(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setSelectItemIndex__21dSv_player_status_a_cFiUc.s"
 }
@@ -710,7 +710,7 @@ asm void dSv_player_status_a_c::setSelectItemIndex(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_status_a_c::getSelectItemIndex(s32 field_0) const {
+asm void dSv_player_status_a_c::getSelectItemIndex(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/getSelectItemIndex__21dSv_player_status_a_cCFi.s"
 }
@@ -721,7 +721,7 @@ asm void dSv_player_status_a_c::getSelectItemIndex(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_status_a_c::setMixItemIndex(s32 field_0, char field_1) {
+asm void dSv_player_status_a_c::setMixItemIndex(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setMixItemIndex__21dSv_player_status_a_cFiUc.s"
 }
@@ -732,7 +732,7 @@ asm void dSv_player_status_a_c::setMixItemIndex(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_status_a_c::getMixItemIndex(s32 field_0) const {
+asm void dSv_player_status_a_c::getMixItemIndex(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/getMixItemIndex__21dSv_player_status_a_cCFi.s"
 }
@@ -754,7 +754,7 @@ asm void dSv_player_status_a_c::getRupeeMax() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_status_a_c::isMagicFlag(char field_0) const {
+asm void dSv_player_status_a_c::isMagicFlag(u8 field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isMagicFlag__21dSv_player_status_a_cCFUc.s"
 }
@@ -780,7 +780,7 @@ asm void dSv_player_status_b_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_status_b_c::onDarkClearLV(s32 field_0) {
+asm void dSv_player_status_b_c::onDarkClearLV(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onDarkClearLV__21dSv_player_status_b_cFi.s"
 }
@@ -791,7 +791,7 @@ asm void dSv_player_status_b_c::onDarkClearLV(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_status_b_c::isDarkClearLV(s32 field_0) const {
+asm void dSv_player_status_b_c::isDarkClearLV(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isDarkClearLV__21dSv_player_status_b_cCFi.s"
 }
@@ -802,7 +802,7 @@ asm void dSv_player_status_b_c::isDarkClearLV(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_status_b_c::onTransformLV(s32 field_0) {
+asm void dSv_player_status_b_c::onTransformLV(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onTransformLV__21dSv_player_status_b_cFi.s"
 }
@@ -813,7 +813,7 @@ asm void dSv_player_status_b_c::onTransformLV(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_status_b_c::isTransformLV(s32 field_0) const {
+asm void dSv_player_status_b_c::isTransformLV(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isTransformLV__21dSv_player_status_b_cCFi.s"
 }
@@ -886,7 +886,7 @@ asm void dSv_horse_place_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_horse_place_c::set(char const* field_0, cXyz const& field_1, s16 field_2, char field_3) {
+asm void dSv_horse_place_c::set(char const* field_0, cXyz const& field_1, s16 field_2, s8 field_3) {
 	nofralloc
 #include "asm/d/save/d_save/set__17dSv_horse_place_cFPCcRC4cXyzsSc.s"
 }
@@ -908,7 +908,7 @@ asm void dSv_player_return_place_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_return_place_c::set(char const* field_0, char field_1, char field_2) {
+asm void dSv_player_return_place_c::set(char const* field_0, s8 field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/save/d_save/set__25dSv_player_return_place_cFPCcScUc.s"
 }
@@ -930,7 +930,7 @@ asm void dSv_player_field_last_stay_info_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_field_last_stay_info_c::set(char const* field_0, cXyz const& field_1, s16 field_2, char field_3, char field_4) {
+asm void dSv_player_field_last_stay_info_c::set(char const* field_0, cXyz const& field_1, s16 field_2, s8 field_3, u8 field_4) {
 	nofralloc
 #include "asm/d/save/d_save/set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc.s"
 }
@@ -941,7 +941,7 @@ asm void dSv_player_field_last_stay_info_c::set(char const* field_0, cXyz const&
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_field_last_stay_info_c::onRegionBit(s32 field_0) {
+asm void dSv_player_field_last_stay_info_c::onRegionBit(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onRegionBit__33dSv_player_field_last_stay_info_cFi.s"
 }
@@ -952,7 +952,7 @@ asm void dSv_player_field_last_stay_info_c::onRegionBit(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_field_last_stay_info_c::isRegionBit(s32 field_0) const {
+asm void dSv_player_field_last_stay_info_c::isRegionBit(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isRegionBit__33dSv_player_field_last_stay_info_cCFi.s"
 }
@@ -974,7 +974,7 @@ asm void dSv_player_last_mark_info_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_last_mark_info_c::setWarpItemData(char const* field_0, cXyz const& field_1, s16 field_2, char field_3, char field_4, char field_5) {
+asm void dSv_player_last_mark_info_c::setWarpItemData(char const* field_0, cXyz const& field_1, s16 field_2, s8 field_3, u8 field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/save/d_save/setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc.s"
 }
@@ -996,7 +996,7 @@ asm void dSv_player_item_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setItem(s32 field_0, char field_1) {
+asm void dSv_player_item_c::setItem(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setItem__17dSv_player_item_cFiUc.s"
 }
@@ -1007,7 +1007,7 @@ asm void dSv_player_item_c::setItem(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::getItem(s32 field_0, bool field_1) const {
+asm void dSv_player_item_c::getItem(int field_0, bool field_1) const {
 	nofralloc
 #include "asm/d/save/d_save/getItem__17dSv_player_item_cCFib.s"
 }
@@ -1038,7 +1038,7 @@ asm void dSv_player_item_c::setLineUpItem() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::getLineUpItem(s32 field_0) const {
+asm void dSv_player_item_c::getLineUpItem(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/getLineUpItem__17dSv_player_item_cCFi.s"
 }
@@ -1049,7 +1049,7 @@ asm void dSv_player_item_c::getLineUpItem(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setBottleItemIn(char field_0, char field_1) {
+asm void dSv_player_item_c::setBottleItemIn(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setBottleItemIn__17dSv_player_item_cFUcUc.s"
 }
@@ -1060,7 +1060,7 @@ asm void dSv_player_item_c::setBottleItemIn(char field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setEmptyBottleItemIn(char field_0) {
+asm void dSv_player_item_c::setEmptyBottleItemIn(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/setEmptyBottleItemIn__17dSv_player_item_cFUc.s"
 }
@@ -1082,7 +1082,7 @@ asm void dSv_player_item_c::setEmptyBottle() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setEmptyBottle(char field_0) {
+asm void dSv_player_item_c::setEmptyBottle(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/setEmptyBottle__17dSv_player_item_cFUc.s"
 }
@@ -1093,7 +1093,7 @@ asm void dSv_player_item_c::setEmptyBottle(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setEquipBottleItemIn(char field_0, char field_1) {
+asm void dSv_player_item_c::setEquipBottleItemIn(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setEquipBottleItemIn__17dSv_player_item_cFUcUc.s"
 }
@@ -1104,7 +1104,7 @@ asm void dSv_player_item_c::setEquipBottleItemIn(char field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setEquipBottleItemEmpty(char field_0) {
+asm void dSv_player_item_c::setEquipBottleItemEmpty(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/setEquipBottleItemEmpty__17dSv_player_item_cFUc.s"
 }
@@ -1115,7 +1115,7 @@ asm void dSv_player_item_c::setEquipBottleItemEmpty(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::checkBottle(char field_0) {
+asm void dSv_player_item_c::checkBottle(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/checkBottle__17dSv_player_item_cFUc.s"
 }
@@ -1258,7 +1258,7 @@ asm void dSv_player_item_c::checkEmptyBottle() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setBombBagItemIn(char field_0, char field_1, bool field_2) {
+asm void dSv_player_item_c::setBombBagItemIn(u8 field_0, u8 field_1, bool field_2) {
 	nofralloc
 #include "asm/d/save/d_save/setBombBagItemIn__17dSv_player_item_cFUcUcb.s"
 }
@@ -1269,7 +1269,7 @@ asm void dSv_player_item_c::setBombBagItemIn(char field_0, char field_1, bool fi
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setBombBagItemIn(char field_0, char field_1, char field_2, bool field_3) {
+asm void dSv_player_item_c::setBombBagItemIn(u8 field_0, u8 field_1, u8 field_2, bool field_3) {
 	nofralloc
 #include "asm/d/save/d_save/setBombBagItemIn__17dSv_player_item_cFUcUcUcb.s"
 }
@@ -1280,7 +1280,7 @@ asm void dSv_player_item_c::setBombBagItemIn(char field_0, char field_1, char fi
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setEmptyBombBagItemIn(char field_0, bool field_1) {
+asm void dSv_player_item_c::setEmptyBombBagItemIn(u8 field_0, bool field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setEmptyBombBagItemIn__17dSv_player_item_cFUcb.s"
 }
@@ -1291,7 +1291,7 @@ asm void dSv_player_item_c::setEmptyBombBagItemIn(char field_0, bool field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setEmptyBombBagItemIn(char field_0, char field_1, bool field_2) {
+asm void dSv_player_item_c::setEmptyBombBagItemIn(u8 field_0, u8 field_1, bool field_2) {
 	nofralloc
 #include "asm/d/save/d_save/setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb.s"
 }
@@ -1313,7 +1313,7 @@ asm void dSv_player_item_c::setEmptyBombBag() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setEmptyBombBag(char field_0, char field_1) {
+asm void dSv_player_item_c::setEmptyBombBag(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setEmptyBombBag__17dSv_player_item_cFUcUc.s"
 }
@@ -1324,7 +1324,7 @@ asm void dSv_player_item_c::setEmptyBombBag(char field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::checkBombBag(char field_0) {
+asm void dSv_player_item_c::checkBombBag(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/checkBombBag__17dSv_player_item_cFUc.s"
 }
@@ -1335,7 +1335,7 @@ asm void dSv_player_item_c::checkBombBag(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setWarashibeItem(char field_0) {
+asm void dSv_player_item_c::setWarashibeItem(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/setWarashibeItem__17dSv_player_item_cFUc.s"
 }
@@ -1357,7 +1357,7 @@ asm void dSv_player_item_c::setRodTypeLevelUp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_c::setBaitItem(char field_0) {
+asm void dSv_player_item_c::setBaitItem(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/setBaitItem__17dSv_player_item_cFUc.s"
 }
@@ -1379,7 +1379,7 @@ asm void dSv_player_get_item_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_get_item_c::onFirstBit(char field_0) {
+asm void dSv_player_get_item_c::onFirstBit(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onFirstBit__21dSv_player_get_item_cFUc.s"
 }
@@ -1390,7 +1390,7 @@ asm void dSv_player_get_item_c::onFirstBit(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_get_item_c::offFirstBit(char field_0) {
+asm void dSv_player_get_item_c::offFirstBit(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/offFirstBit__21dSv_player_get_item_cFUc.s"
 }
@@ -1401,7 +1401,7 @@ asm void dSv_player_get_item_c::offFirstBit(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_get_item_c::isFirstBit(char field_0) const {
+asm void dSv_player_get_item_c::isFirstBit(u8 field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isFirstBit__21dSv_player_get_item_cCFUc.s"
 }
@@ -1423,7 +1423,7 @@ asm void dSv_player_item_record_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_record_c::setBombNum(char field_0, char field_1) {
+asm void dSv_player_item_record_c::setBombNum(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setBombNum__24dSv_player_item_record_cFUcUc.s"
 }
@@ -1434,7 +1434,7 @@ asm void dSv_player_item_record_c::setBombNum(char field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_record_c::getBombNum(char field_0) const {
+asm void dSv_player_item_record_c::getBombNum(u8 field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/getBombNum__24dSv_player_item_record_cCFUc.s"
 }
@@ -1445,7 +1445,7 @@ asm void dSv_player_item_record_c::getBombNum(char field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_record_c::setBottleNum(char field_0, char field_1) {
+asm void dSv_player_item_record_c::setBottleNum(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setBottleNum__24dSv_player_item_record_cFUcUc.s"
 }
@@ -1456,7 +1456,7 @@ asm void dSv_player_item_record_c::setBottleNum(char field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_record_c::addBottleNum(char field_0, s16 field_1) {
+asm void dSv_player_item_record_c::addBottleNum(u8 field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/addBottleNum__24dSv_player_item_record_cFUcs.s"
 }
@@ -1467,7 +1467,7 @@ asm void dSv_player_item_record_c::addBottleNum(char field_0, s16 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_record_c::getBottleNum(char field_0) const {
+asm void dSv_player_item_record_c::getBottleNum(u8 field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/getBottleNum__24dSv_player_item_record_cCFUc.s"
 }
@@ -1489,7 +1489,7 @@ asm void dSv_player_item_max_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_max_c::setBombNum(char field_0, char field_1) {
+asm void dSv_player_item_max_c::setBombNum(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setBombNum__21dSv_player_item_max_cFUcUc.s"
 }
@@ -1500,7 +1500,7 @@ asm void dSv_player_item_max_c::setBombNum(char field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_item_max_c::getBombNum(char field_0) const {
+asm void dSv_player_item_max_c::getBombNum(u8 field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/getBombNum__21dSv_player_item_max_cCFUc.s"
 }
@@ -1522,7 +1522,7 @@ asm void dSv_player_collect_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_collect_c::setCollect(s32 field_0, char field_1) {
+asm void dSv_player_collect_c::setCollect(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setCollect__20dSv_player_collect_cFiUc.s"
 }
@@ -1533,7 +1533,7 @@ asm void dSv_player_collect_c::setCollect(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_collect_c::isCollect(s32 field_0, char field_1) const {
+asm void dSv_player_collect_c::isCollect(int field_0, u8 field_1) const {
 	nofralloc
 #include "asm/d/save/d_save/isCollect__20dSv_player_collect_cCFiUc.s"
 }
@@ -1544,7 +1544,7 @@ asm void dSv_player_collect_c::isCollect(s32 field_0, char field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_collect_c::onCollectCrystal(char field_0) {
+asm void dSv_player_collect_c::onCollectCrystal(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onCollectCrystal__20dSv_player_collect_cFUc.s"
 }
@@ -1555,7 +1555,7 @@ asm void dSv_player_collect_c::onCollectCrystal(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_collect_c::isCollectCrystal(char field_0) const {
+asm void dSv_player_collect_c::isCollectCrystal(u8 field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isCollectCrystal__20dSv_player_collect_cCFUc.s"
 }
@@ -1566,7 +1566,7 @@ asm void dSv_player_collect_c::isCollectCrystal(char field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_collect_c::onCollectMirror(char field_0) {
+asm void dSv_player_collect_c::onCollectMirror(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onCollectMirror__20dSv_player_collect_cFUc.s"
 }
@@ -1577,7 +1577,7 @@ asm void dSv_player_collect_c::onCollectMirror(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_collect_c::isCollectMirror(char field_0) const {
+asm void dSv_player_collect_c::isCollectMirror(u8 field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isCollectMirror__20dSv_player_collect_cCFUc.s"
 }
@@ -1610,7 +1610,7 @@ asm void dSv_light_drop_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_light_drop_c::setLightDropNum(char field_0, char field_1) {
+asm void dSv_light_drop_c::setLightDropNum(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setLightDropNum__16dSv_light_drop_cFUcUc.s"
 }
@@ -1621,7 +1621,7 @@ asm void dSv_light_drop_c::setLightDropNum(char field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_light_drop_c::getLightDropNum(char field_0) const {
+asm void dSv_light_drop_c::getLightDropNum(u8 field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/getLightDropNum__16dSv_light_drop_cCFUc.s"
 }
@@ -1632,7 +1632,7 @@ asm void dSv_light_drop_c::getLightDropNum(char field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_light_drop_c::onLightDropGetFlag(char field_0) {
+asm void dSv_light_drop_c::onLightDropGetFlag(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onLightDropGetFlag__16dSv_light_drop_cFUc.s"
 }
@@ -1643,7 +1643,7 @@ asm void dSv_light_drop_c::onLightDropGetFlag(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_light_drop_c::isLightDropGetFlag(char field_0) const {
+asm void dSv_light_drop_c::isLightDropGetFlag(u8 field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isLightDropGetFlag__16dSv_light_drop_cCFUc.s"
 }
@@ -1665,7 +1665,7 @@ asm void dSv_letter_info_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_letter_info_c::onLetterGetFlag(s32 field_0) {
+asm void dSv_letter_info_c::onLetterGetFlag(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onLetterGetFlag__17dSv_letter_info_cFi.s"
 }
@@ -1676,7 +1676,7 @@ asm void dSv_letter_info_c::onLetterGetFlag(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_letter_info_c::isLetterGetFlag(s32 field_0) const {
+asm void dSv_letter_info_c::isLetterGetFlag(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isLetterGetFlag__17dSv_letter_info_cCFi.s"
 }
@@ -1687,7 +1687,7 @@ asm void dSv_letter_info_c::isLetterGetFlag(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_letter_info_c::onLetterReadFlag(s32 field_0) {
+asm void dSv_letter_info_c::onLetterReadFlag(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onLetterReadFlag__17dSv_letter_info_cFi.s"
 }
@@ -1698,7 +1698,7 @@ asm void dSv_letter_info_c::onLetterReadFlag(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_letter_info_c::isLetterReadFlag(s32 field_0) const {
+asm void dSv_letter_info_c::isLetterReadFlag(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isLetterReadFlag__17dSv_letter_info_cCFi.s"
 }
@@ -1720,7 +1720,7 @@ asm void dSv_fishing_info_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_fishing_info_c::addFishCount(char field_0) {
+asm void dSv_fishing_info_c::addFishCount(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/addFishCount__18dSv_fishing_info_cFUc.s"
 }
@@ -1775,7 +1775,7 @@ asm void dSv_player_config_c::getSound() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_config_c::setSound(char field_0) {
+asm void dSv_player_config_c::setSound(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/setSound__19dSv_player_config_cFUc.s"
 }
@@ -1797,7 +1797,7 @@ asm void dSv_player_config_c::getVibration() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_player_config_c::setVibration(char field_0) {
+asm void dSv_player_config_c::setVibration(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/setVibration__19dSv_player_config_cFUc.s"
 }
@@ -1830,7 +1830,7 @@ asm void dSv_memBit_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memBit_c::onTbox(s32 field_0) {
+asm void dSv_memBit_c::onTbox(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onTbox__12dSv_memBit_cFi.s"
 }
@@ -1841,7 +1841,7 @@ asm void dSv_memBit_c::onTbox(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memBit_c::offTbox(s32 field_0) {
+asm void dSv_memBit_c::offTbox(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/offTbox__12dSv_memBit_cFi.s"
 }
@@ -1852,7 +1852,7 @@ asm void dSv_memBit_c::offTbox(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memBit_c::isTbox(s32 field_0) const {
+asm void dSv_memBit_c::isTbox(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isTbox__12dSv_memBit_cCFi.s"
 }
@@ -1863,7 +1863,7 @@ asm void dSv_memBit_c::isTbox(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memBit_c::onSwitch(s32 field_0) {
+asm void dSv_memBit_c::onSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onSwitch__12dSv_memBit_cFi.s"
 }
@@ -1874,7 +1874,7 @@ asm void dSv_memBit_c::onSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memBit_c::offSwitch(s32 field_0) {
+asm void dSv_memBit_c::offSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/offSwitch__12dSv_memBit_cFi.s"
 }
@@ -1885,7 +1885,7 @@ asm void dSv_memBit_c::offSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memBit_c::isSwitch(s32 field_0) const {
+asm void dSv_memBit_c::isSwitch(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isSwitch__12dSv_memBit_cCFi.s"
 }
@@ -1896,7 +1896,7 @@ asm void dSv_memBit_c::isSwitch(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memBit_c::revSwitch(s32 field_0) {
+asm void dSv_memBit_c::revSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/revSwitch__12dSv_memBit_cFi.s"
 }
@@ -1907,7 +1907,7 @@ asm void dSv_memBit_c::revSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memBit_c::onItem(s32 field_0) {
+asm void dSv_memBit_c::onItem(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onItem__12dSv_memBit_cFi.s"
 }
@@ -1918,7 +1918,7 @@ asm void dSv_memBit_c::onItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memBit_c::isItem(s32 field_0) const {
+asm void dSv_memBit_c::isItem(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isItem__12dSv_memBit_cCFi.s"
 }
@@ -1929,7 +1929,7 @@ asm void dSv_memBit_c::isItem(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memBit_c::onDungeonItem(s32 field_0) {
+asm void dSv_memBit_c::onDungeonItem(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onDungeonItem__12dSv_memBit_cFi.s"
 }
@@ -1940,7 +1940,7 @@ asm void dSv_memBit_c::onDungeonItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memBit_c::isDungeonItem(s32 field_0) const {
+asm void dSv_memBit_c::isDungeonItem(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isDungeonItem__12dSv_memBit_cCFi.s"
 }
@@ -1995,7 +1995,7 @@ asm void dSv_event_c::isEventBit(u16 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_event_c::setEventReg(u16 field_0, char field_1) {
+asm void dSv_event_c::setEventReg(u16 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/save/d_save/setEventReg__11dSv_event_cFUsUc.s"
 }
@@ -2050,7 +2050,7 @@ asm void dSv_memory2_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memory2_c::onVisitedRoom(s32 field_0) {
+asm void dSv_memory2_c::onVisitedRoom(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onVisitedRoom__13dSv_memory2_cFi.s"
 }
@@ -2061,7 +2061,7 @@ asm void dSv_memory2_c::onVisitedRoom(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memory2_c::offVisitedRoom(s32 field_0) {
+asm void dSv_memory2_c::offVisitedRoom(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/offVisitedRoom__13dSv_memory2_cFi.s"
 }
@@ -2072,7 +2072,7 @@ asm void dSv_memory2_c::offVisitedRoom(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_memory2_c::isVisitedRoom(s32 field_0) {
+asm void dSv_memory2_c::isVisitedRoom(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/isVisitedRoom__13dSv_memory2_cFi.s"
 }
@@ -2083,7 +2083,7 @@ asm void dSv_memory2_c::isVisitedRoom(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_danBit_c::init(char field_0) {
+asm void dSv_danBit_c::init(s8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/init__12dSv_danBit_cFSc.s"
 }
@@ -2094,7 +2094,7 @@ asm void dSv_danBit_c::init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_danBit_c::onSwitch(s32 field_0) {
+asm void dSv_danBit_c::onSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onSwitch__12dSv_danBit_cFi.s"
 }
@@ -2105,7 +2105,7 @@ asm void dSv_danBit_c::onSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_danBit_c::offSwitch(s32 field_0) {
+asm void dSv_danBit_c::offSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/offSwitch__12dSv_danBit_cFi.s"
 }
@@ -2116,7 +2116,7 @@ asm void dSv_danBit_c::offSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_danBit_c::isSwitch(s32 field_0) const {
+asm void dSv_danBit_c::isSwitch(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isSwitch__12dSv_danBit_cCFi.s"
 }
@@ -2127,7 +2127,7 @@ asm void dSv_danBit_c::isSwitch(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_danBit_c::revSwitch(s32 field_0) {
+asm void dSv_danBit_c::revSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/revSwitch__12dSv_danBit_cFi.s"
 }
@@ -2138,7 +2138,7 @@ asm void dSv_danBit_c::revSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_danBit_c::onItem(s32 field_0) {
+asm void dSv_danBit_c::onItem(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onItem__12dSv_danBit_cFi.s"
 }
@@ -2149,7 +2149,7 @@ asm void dSv_danBit_c::onItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_danBit_c::isItem(s32 field_0) const {
+asm void dSv_danBit_c::isItem(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isItem__12dSv_danBit_cCFi.s"
 }
@@ -2193,7 +2193,7 @@ asm void dSv_zoneBit_c::clearRoomItem() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::onSwitch(s32 field_0) {
+asm void dSv_zoneBit_c::onSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onSwitch__13dSv_zoneBit_cFi.s"
 }
@@ -2204,7 +2204,7 @@ asm void dSv_zoneBit_c::onSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::offSwitch(s32 field_0) {
+asm void dSv_zoneBit_c::offSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/offSwitch__13dSv_zoneBit_cFi.s"
 }
@@ -2215,7 +2215,7 @@ asm void dSv_zoneBit_c::offSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::isSwitch(s32 field_0) const {
+asm void dSv_zoneBit_c::isSwitch(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isSwitch__13dSv_zoneBit_cCFi.s"
 }
@@ -2226,7 +2226,7 @@ asm void dSv_zoneBit_c::isSwitch(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::revSwitch(s32 field_0) {
+asm void dSv_zoneBit_c::revSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/revSwitch__13dSv_zoneBit_cFi.s"
 }
@@ -2237,7 +2237,7 @@ asm void dSv_zoneBit_c::revSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::onOneSwitch(s32 field_0) {
+asm void dSv_zoneBit_c::onOneSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onOneSwitch__13dSv_zoneBit_cFi.s"
 }
@@ -2248,7 +2248,7 @@ asm void dSv_zoneBit_c::onOneSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::offOneSwitch(s32 field_0) {
+asm void dSv_zoneBit_c::offOneSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/offOneSwitch__13dSv_zoneBit_cFi.s"
 }
@@ -2259,7 +2259,7 @@ asm void dSv_zoneBit_c::offOneSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::isOneSwitch(s32 field_0) const {
+asm void dSv_zoneBit_c::isOneSwitch(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isOneSwitch__13dSv_zoneBit_cCFi.s"
 }
@@ -2270,7 +2270,7 @@ asm void dSv_zoneBit_c::isOneSwitch(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::revOneSwitch(s32 field_0) {
+asm void dSv_zoneBit_c::revOneSwitch(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/revOneSwitch__13dSv_zoneBit_cFi.s"
 }
@@ -2281,7 +2281,7 @@ asm void dSv_zoneBit_c::revOneSwitch(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::onItem(s32 field_0) {
+asm void dSv_zoneBit_c::onItem(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onItem__13dSv_zoneBit_cFi.s"
 }
@@ -2292,7 +2292,7 @@ asm void dSv_zoneBit_c::onItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::isItem(s32 field_0) const {
+asm void dSv_zoneBit_c::isItem(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isItem__13dSv_zoneBit_cCFi.s"
 }
@@ -2303,7 +2303,7 @@ asm void dSv_zoneBit_c::isItem(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::onOneItem(s32 field_0) {
+asm void dSv_zoneBit_c::onOneItem(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/onOneItem__13dSv_zoneBit_cFi.s"
 }
@@ -2314,7 +2314,7 @@ asm void dSv_zoneBit_c::onOneItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneBit_c::isOneItem(s32 field_0) const {
+asm void dSv_zoneBit_c::isOneItem(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/isOneItem__13dSv_zoneBit_cCFi.s"
 }
@@ -2336,7 +2336,7 @@ asm void dSv_zoneActor_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneActor_c::on(s32 field_0) {
+asm void dSv_zoneActor_c::on(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/on__15dSv_zoneActor_cFi.s"
 }
@@ -2347,7 +2347,7 @@ asm void dSv_zoneActor_c::on(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneActor_c::off(s32 field_0) {
+asm void dSv_zoneActor_c::off(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/off__15dSv_zoneActor_cFi.s"
 }
@@ -2358,7 +2358,7 @@ asm void dSv_zoneActor_c::off(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zoneActor_c::is(s32 field_0) const {
+asm void dSv_zoneActor_c::is(int field_0) const {
 	nofralloc
 #include "asm/d/save/d_save/is__15dSv_zoneActor_cCFi.s"
 }
@@ -2369,7 +2369,7 @@ asm void dSv_zoneActor_c::is(s32 field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_zone_c::init(s32 field_0) {
+asm void dSv_zone_c::init(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/init__10dSv_zone_cFi.s"
 }
@@ -2380,7 +2380,7 @@ asm void dSv_zone_c::init(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_restart_c::setRoom(cXyz const& field_0, s16 field_1, char field_2) {
+asm void dSv_restart_c::setRoom(cXyz const& field_0, s16 field_1, s8 field_2) {
 	nofralloc
 #include "asm/d/save/d_save/setRoom__13dSv_restart_cFRC4cXyzsSc.s"
 }
@@ -2391,7 +2391,7 @@ asm void dSv_restart_c::setRoom(cXyz const& field_0, s16 field_1, char field_2) 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_turnRestart_c::set(cXyz const& field_0, s16 field_1, char field_2, u32 field_3) {
+asm void dSv_turnRestart_c::set(cXyz const& field_0, s16 field_1, s8 field_2, u32 field_3) {
 	nofralloc
 #include "asm/d/save/d_save/set__17dSv_turnRestart_cFRC4cXyzsScUl.s"
 }
@@ -2424,7 +2424,7 @@ asm void dSv_save_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_save_c::getSave2(s32 field_0) {
+asm void dSv_save_c::getSave2(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/getSave2__10dSv_save_cFi.s"
 }
@@ -2435,7 +2435,7 @@ asm void dSv_save_c::getSave2(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::getSave(s32 field_0) {
+asm void dSv_info_c::getSave(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/getSave__10dSv_info_cFi.s"
 }
@@ -2446,7 +2446,7 @@ asm void dSv_info_c::getSave(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::putSave(s32 field_0) {
+asm void dSv_info_c::putSave(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/putSave__10dSv_info_cFi.s"
 }
@@ -2468,7 +2468,7 @@ asm void dSv_info_c::initZone() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::createZone(s32 field_0) {
+asm void dSv_info_c::createZone(int field_0) {
 	nofralloc
 #include "asm/d/save/d_save/createZone__10dSv_info_cFi.s"
 }
@@ -2479,7 +2479,7 @@ asm void dSv_info_c::createZone(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::onSwitch(s32 field_0, s32 field_1) {
+asm void dSv_info_c::onSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/save/d_save/onSwitch__10dSv_info_cFii.s"
 }
@@ -2490,7 +2490,7 @@ asm void dSv_info_c::onSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::offSwitch(s32 field_0, s32 field_1) {
+asm void dSv_info_c::offSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/save/d_save/offSwitch__10dSv_info_cFii.s"
 }
@@ -2501,7 +2501,7 @@ asm void dSv_info_c::offSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::isSwitch(s32 field_0, s32 field_1) const {
+asm void dSv_info_c::isSwitch(int field_0, int field_1) const {
 	nofralloc
 #include "asm/d/save/d_save/isSwitch__10dSv_info_cCFii.s"
 }
@@ -2512,7 +2512,7 @@ asm void dSv_info_c::isSwitch(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::revSwitch(s32 field_0, s32 field_1) {
+asm void dSv_info_c::revSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/save/d_save/revSwitch__10dSv_info_cFii.s"
 }
@@ -2523,7 +2523,7 @@ asm void dSv_info_c::revSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::onItem(s32 field_0, s32 field_1) {
+asm void dSv_info_c::onItem(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/save/d_save/onItem__10dSv_info_cFii.s"
 }
@@ -2534,7 +2534,7 @@ asm void dSv_info_c::onItem(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::isItem(s32 field_0, s32 field_1) const {
+asm void dSv_info_c::isItem(int field_0, int field_1) const {
 	nofralloc
 #include "asm/d/save/d_save/isItem__10dSv_info_cCFii.s"
 }
@@ -2545,7 +2545,7 @@ asm void dSv_info_c::isItem(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::onActor(s32 field_0, s32 field_1) {
+asm void dSv_info_c::onActor(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/save/d_save/onActor__10dSv_info_cFii.s"
 }
@@ -2556,7 +2556,7 @@ asm void dSv_info_c::onActor(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::offActor(s32 field_0, s32 field_1) {
+asm void dSv_info_c::offActor(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/save/d_save/offActor__10dSv_info_cFii.s"
 }
@@ -2567,7 +2567,7 @@ asm void dSv_info_c::offActor(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::isActor(s32 field_0, s32 field_1) const {
+asm void dSv_info_c::isActor(int field_0, int field_1) const {
 	nofralloc
 #include "asm/d/save/d_save/isActor__10dSv_info_cCFii.s"
 }
@@ -2578,7 +2578,7 @@ asm void dSv_info_c::isActor(s32 field_0, s32 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::memory_to_card(char* field_0, s32 field_1) {
+asm void dSv_info_c::memory_to_card(char* field_0, int field_1) {
 	nofralloc
 #include "asm/d/save/d_save/memory_to_card__10dSv_info_cFPci.s"
 }
@@ -2589,7 +2589,7 @@ asm void dSv_info_c::memory_to_card(char* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::card_to_memory(char* field_0, s32 field_1) {
+asm void dSv_info_c::card_to_memory(char* field_0, int field_1) {
 	nofralloc
 #include "asm/d/save/d_save/card_to_memory__10dSv_info_cFPci.s"
 }
@@ -2600,7 +2600,7 @@ asm void dSv_info_c::card_to_memory(char* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSv_info_c::initdata_to_card(char* field_0, s32 field_1) {
+asm void dSv_info_c::initdata_to_card(char* field_0, int field_1) {
 	nofralloc
 #include "asm/d/save/d_save/initdata_to_card__10dSv_info_cFPci.s"
 }

@@ -15,14 +15,14 @@ struct JKRArchive;
 // build JKRArchive (JKRArchive) True/True
 // build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRArchive::EMountMode
 // outer dependency: JKRArchive::CArcName
 // outer dependency: JKRArchive::SDIFileEntry
+// outer dependency: JKRArchive::EMountMode
 /* top-level dependencies (end JKRArchive) */
 struct JKRArchive {
-	// JKRArchive::EMountMode
 	// JKRArchive::CArcName
 	// JKRArchive::SDIFileEntry
+	// JKRArchive::EMountMode
 	// build EMountMode (JKRArchive::EMountMode) False/False
 	/* dependencies (begin JKRArchive::EMountMode) */
 	/* dependencies (end JKRArchive::EMountMode) */

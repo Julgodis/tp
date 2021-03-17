@@ -41,7 +41,7 @@ struct JASHeap {
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290860 */ ~JASGenericMemPool();
-	/* 802908C8 */ void newMemPool(u32, s32);
+	/* 802908C8 */ void newMemPool(u32, int);
 	/* 80290948 */ void alloc(u32);
 	/* 80290994 */ void free(void*, u32);
 };
@@ -142,8 +142,8 @@ SECTION_SBSS extern u8 sCommandHeap__9JASKernel[4];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 void operator delete[](void*);
 extern "C" void OSInitMutex();
@@ -317,7 +317,7 @@ u8 JASDram[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASGenericMemPool::newMemPool(u32 field_0, s32 field_1) {
+asm void JASGenericMemPool::newMemPool(u32 field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASHeapCtrl/newMemPool__17JASGenericMemPoolFUli.s"
 }

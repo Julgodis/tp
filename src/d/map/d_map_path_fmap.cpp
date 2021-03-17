@@ -30,10 +30,10 @@ struct dTres_c {
 	struct typeGroupData_c {
 	};
 
-	/* 8009C360 */ void getFirstData(char);
+	/* 8009C360 */ void getFirstData(u8);
 	/* 8009C39C */ void getNextData(dTres_c::typeGroupData_c*);
-	/* 8009C49C */ void getTypeGroupNoToType(char);
-	/* 8009C4B0 */ void getTypeToTypeGroupNo(char);
+	/* 8009C49C */ void getTypeGroupNoToType(u8);
+	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
 };
 
 /* top-level dependencies (begin fmpTresTypeGroupDataList_c) */
@@ -41,7 +41,7 @@ struct dTres_c {
 /* top-level dependencies (end fmpTresTypeGroupDataList_c) */
 struct fmpTresTypeGroupDataList_c {
 	// dTres_c::data_s
-	/* 8003D790 */ void addTypeGroupData(char, dTres_c::data_s const*);
+	/* 8003D790 */ void addTypeGroupData(u8, dTres_c::data_s const*);
 	/* 8003EB10 */ ~fmpTresTypeGroupDataList_c();
 	/* 8003EC90 */ fmpTresTypeGroupDataList_c();
 };
@@ -52,8 +52,8 @@ struct fmpTresTypeGroupDataList_c {
 /* top-level dependencies (end dMenu_Fmap_room_data_c) */
 struct dMenu_Fmap_room_data_c {
 	/* 8003D818 */ void isArrival();
-	/* 8003D868 */ void buildTresTypeGroup(s32, s32, s32);
-	/* 8003D92C */ void buildFmapRoomData(s32, s32, f32, f32, f32, f32);
+	/* 8003D868 */ void buildTresTypeGroup(int, int, int);
+	/* 8003D92C */ void buildFmapRoomData(int, int, f32, f32, f32, f32);
 };
 
 // build dMenu_Fmap_stage_data_c (dMenu_Fmap_stage_data_c) False/False
@@ -61,16 +61,16 @@ struct dMenu_Fmap_room_data_c {
 /* top-level dependencies (end dMenu_Fmap_stage_data_c) */
 struct dMenu_Fmap_stage_data_c {
 	/* 8003D95C */ void isArrival();
-	/* 8003D9D8 */ void buildFmapStageData(s32, f32, f32);
+	/* 8003D9D8 */ void buildFmapStageData(int, f32, f32);
 };
 
 // build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) False/False
 /* top-level dependencies (begin dMenu_Fmap_region_data_c) */
 /* top-level dependencies (end dMenu_Fmap_region_data_c) */
 struct dMenu_Fmap_region_data_c {
-	/* 8003DB48 */ void getMenuFmapStageData(s32);
-	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, s32, s32*, s32*);
-	/* 8003DEE0 */ void buildFmapRegionData(s32);
+	/* 8003DB48 */ void getMenuFmapStageData(int);
+	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
+	/* 8003DEE0 */ void buildFmapRegionData(int);
 };
 
 // build dMenu_Fmap_world_data_c (dMenu_Fmap_world_data_c) False/False
@@ -85,16 +85,16 @@ struct dMenu_Fmap_world_data_c {
 };
 
 // build dMenuFmapIconPointer_c (dMenuFmapIconPointer_c) False/False
-// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
 // build dMenu_Fmap_stage_data_c (dMenu_Fmap_stage_data_c) True/True
+// build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
 /* top-level dependencies (begin dMenuFmapIconPointer_c) */
-// outer dependency: dMenu_Fmap_region_data_c
 // outer dependency: dMenu_Fmap_stage_data_c
+// outer dependency: dMenu_Fmap_region_data_c
 /* top-level dependencies (end dMenuFmapIconPointer_c) */
 struct dMenuFmapIconPointer_c {
-	// dMenu_Fmap_region_data_c
 	// dMenu_Fmap_stage_data_c
-	/* 8003E114 */ void init(dMenu_Fmap_region_data_c*, dMenu_Fmap_stage_data_c*, char, s32, s32);
+	// dMenu_Fmap_region_data_c
+	/* 8003E114 */ void init(dMenu_Fmap_region_data_c*, dMenu_Fmap_stage_data_c*, u8, int, int);
 	/* 8003E1C0 */ void getFirstData();
 	/* 8003E2BC */ void getData();
 	/* 8003E350 */ void getFirstRoomData();
@@ -112,7 +112,7 @@ struct dMenuFmapIconPointer_c {
 /* top-level dependencies (end dMenuFmapIconDisp_c) */
 struct dMenuFmapIconDisp_c {
 	// dTres_c::data_s
-	/* 8003E578 */ void getPosition(s32*, s32*, f32*, f32*, dTres_c::data_s const**);
+	/* 8003E578 */ void getPosition(int*, int*, f32*, f32*, dTres_c::data_s const**);
 	/* 8003E6E8 */ void isDrawDisp();
 };
 
@@ -127,7 +127,7 @@ struct fmpTresTypeGroupData_c {
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 800347E8 */ void isTbox(s32) const;
+	/* 800347E8 */ void isTbox(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -141,21 +141,21 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_memory2_c) */
 /* top-level dependencies (end dSv_memory2_c) */
 struct dSv_memory2_c {
-	/* 80034AEC */ void isVisitedRoom(s32);
+	/* 80034AEC */ void isVisitedRoom(int);
 };
 
 // build dSv_save_c (dSv_save_c) False/False
 /* top-level dependencies (begin dSv_save_c) */
 /* top-level dependencies (end dSv_save_c) */
 struct dSv_save_c {
-	/* 800350A8 */ void getSave2(s32);
+	/* 800350A8 */ void getSave2(int);
 };
 
 // build dSv_info_c (dSv_info_c) False/False
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // 
@@ -196,8 +196,8 @@ SECTION_SDATA2 extern u8 d_map_d_map_path_fmap__lit_3894[4 + 4 /* padding */];
 // External References:
 // 
 
-void dComIfGs_isStageTbox(s32, s32);
-void dComIfGs_isStageSwitch(s32, s32);
+void dComIfGs_isStageTbox(int, int);
+void dComIfGs_isStageSwitch(int, int);
 void dComIfGp_isLightDropMapVisible();
 void* operator new(u32);
 void operator delete(void*);
@@ -258,7 +258,7 @@ SECTION_SDATA extern u32 __float_max;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fmpTresTypeGroupDataList_c::addTypeGroupData(char field_0, dTres_c::data_s const* field_1) {
+asm void fmpTresTypeGroupDataList_c::addTypeGroupData(u8 field_0, dTres_c::data_s const* field_1) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s.s"
 }
@@ -280,7 +280,7 @@ asm void dMenu_Fmap_room_data_c::isArrival() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap_room_data_c::buildTresTypeGroup(s32 field_0, s32 field_1, s32 field_2) {
+asm void dMenu_Fmap_room_data_c::buildTresTypeGroup(int field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii.s"
 }
@@ -291,7 +291,7 @@ asm void dMenu_Fmap_room_data_c::buildTresTypeGroup(s32 field_0, s32 field_1, s3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap_room_data_c::buildFmapRoomData(s32 field_0, s32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5) {
+asm void dMenu_Fmap_room_data_c::buildFmapRoomData(int field_0, int field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/buildFmapRoomData__22dMenu_Fmap_room_data_cFiiffff.s"
 }
@@ -321,7 +321,7 @@ u8 d_map_d_map_path_fmap__lit_3894[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap_stage_data_c::buildFmapStageData(s32 field_0, f32 field_1, f32 field_2) {
+asm void dMenu_Fmap_stage_data_c::buildFmapStageData(int field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/buildFmapStageData__23dMenu_Fmap_stage_data_cFiff.s"
 }
@@ -332,7 +332,7 @@ asm void dMenu_Fmap_stage_data_c::buildFmapStageData(s32 field_0, f32 field_1, f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap_region_data_c::getMenuFmapStageData(s32 field_0) {
+asm void dMenu_Fmap_region_data_c::getMenuFmapStageData(int field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getMenuFmapStageData__24dMenu_Fmap_region_data_cFi.s"
 }
@@ -343,7 +343,7 @@ asm void dMenu_Fmap_region_data_c::getMenuFmapStageData(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap_region_data_c::getPointStagePathInnerNo(f32 field_0, f32 field_1, s32 field_2, s32* field_3, s32* field_4) {
+asm void dMenu_Fmap_region_data_c::getPointStagePathInnerNo(f32 field_0, f32 field_1, int field_2, int* field_3, int* field_4) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi.s"
 }
@@ -354,7 +354,7 @@ asm void dMenu_Fmap_region_data_c::getPointStagePathInnerNo(f32 field_0, f32 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap_region_data_c::buildFmapRegionData(s32 field_0) {
+asm void dMenu_Fmap_region_data_c::buildFmapRegionData(int field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/buildFmapRegionData__24dMenu_Fmap_region_data_cFi.s"
 }
@@ -387,7 +387,7 @@ asm void dMenu_Fmap_world_data_c::buildFmapWorldData() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenuFmapIconPointer_c::init(dMenu_Fmap_region_data_c* field_0, dMenu_Fmap_stage_data_c* field_1, char field_2, s32 field_3, s32 field_4) {
+asm void dMenuFmapIconPointer_c::init(dMenu_Fmap_region_data_c* field_0, dMenu_Fmap_stage_data_c* field_1, u8 field_2, int field_3, int field_4) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii.s"
 }
@@ -486,7 +486,7 @@ asm void dMenuFmapIconPointer_c::getValidData() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenuFmapIconDisp_c::getPosition(s32* field_0, s32* field_1, f32* field_2, f32* field_3, dTres_c::data_s const** field_4) {
+asm void dMenuFmapIconDisp_c::getPosition(int* field_0, int* field_1, f32* field_2, f32* field_3, dTres_c::data_s const** field_4) {
 	nofralloc
 #include "asm/d/map/d_map_path_fmap/getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s.s"
 }

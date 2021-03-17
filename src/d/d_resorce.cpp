@@ -10,20 +10,19 @@
 // 
 
 // build dRes_info_c (dRes_info_c) False/False
+// build cXyz (cXyz) False/False
+/* top-level dependencies (begin cXyz) */
+/* top-level dependencies (end cXyz) */
+struct cXyz {
+};
+
 // build J3DModelData (J3DModelData) False/False
 /* top-level dependencies (begin J3DModelData) */
 /* top-level dependencies (end J3DModelData) */
 struct J3DModelData {
 	/* 80325E14 */ void newSharedDisplayList(u32);
 	/* 80325F94 */ void makeSharedDL();
-};
-
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
-	/* 802CE83C */ void findFromRoot(void*);
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 // build JKRArchive (JKRArchive) False/False
@@ -36,26 +35,28 @@ struct JKRArchive {
 	/* 802D66AC */ void findNameResource(char const*) const;
 };
 
-// build cXyz (cXyz) False/False
-/* top-level dependencies (begin cXyz) */
-/* top-level dependencies (end cXyz) */
-struct cXyz {
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
+	/* 802CE83C */ void findFromRoot(void*);
 };
 
 /* top-level dependencies (begin dRes_info_c) */
-// outer dependency: J3DModelData
-// outer dependency: JKRHeap
-// outer dependency: JKRArchive
 // outer dependency: cXyz
+// outer dependency: J3DModelData
+// outer dependency: JKRArchive
+// outer dependency: JKRHeap
 /* top-level dependencies (end dRes_info_c) */
 struct dRes_info_c {
 	// J3DModelData
-	// JKRHeap
 	// JKRArchive
 	// cXyz
+	// JKRHeap
 	/* 8003A260 */ dRes_info_c();
 	/* 8003A280 */ ~dRes_info_c();
-	/* 8003A348 */ void set(char const*, char const*, char, JKRHeap*);
+	/* 8003A348 */ void set(char const*, char const*, u8, JKRHeap*);
 	/* 8003AB30 */ void onWarpMaterial(J3DModelData*);
 	/* 8003AC1C */ void offWarpMaterial(J3DModelData*);
 	/* 8003AD08 */ void setWarpSRT(J3DModelData*, cXyz const&, f32, f32);
@@ -64,8 +65,8 @@ struct dRes_info_c {
 	/* 8003B998 */ void deleteArchiveRes();
 	/* 8003BAC4 */ void setRes(JKRArchive*, JKRHeap*);
 	/* 8003BAF8 */ void setRes();
-	/* 8003BD2C */ void dump_long(dRes_info_c*, s32);
-	/* 8003BE38 */ void dump(dRes_info_c*, s32);
+	/* 8003BD2C */ void dump_long(dRes_info_c*, int);
+	/* 8003BE38 */ void dump(dRes_info_c*, int);
 };
 
 // build JKRHeap (JKRHeap) True/True
@@ -180,26 +181,26 @@ struct J3DAnmTransform {
 
 // build JKRArchive (JKRArchive) True/True
 // build dRes_control_c (dRes_control_c) False/False
-// build JKRHeap (JKRHeap) True/True
 // build dRes_info_c (dRes_info_c) True/True
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin dRes_control_c) */
-// outer dependency: JKRHeap
 // outer dependency: dRes_info_c
+// outer dependency: JKRHeap
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
-	// JKRHeap
 	// dRes_info_c
+	// JKRHeap
 	/* 8003BFB0 */ ~dRes_control_c();
-	/* 8003C078 */ void setRes(char const*, dRes_info_c*, s32, char const*, char, JKRHeap*);
-	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, s32);
-	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, s32);
-	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, s32);
-	/* 8003C260 */ void newResInfo(dRes_info_c*, s32);
-	/* 8003C288 */ void getResInfoLoaded(char const*, dRes_info_c*, s32);
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
-	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, s32);
-	/* 8003C470 */ void syncAllRes(dRes_info_c*, s32);
+	/* 8003C078 */ void setRes(char const*, dRes_info_c*, int, char const*, u8, JKRHeap*);
+	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, int);
+	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, int);
+	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
+	/* 8003C260 */ void newResInfo(dRes_info_c*, int);
+	/* 8003C288 */ void getResInfoLoaded(char const*, dRes_info_c*, int);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
+	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
+	/* 8003C470 */ void syncAllRes(dRes_info_c*, int);
 	/* 8003C4E4 */ void setObjectRes(char const*, void*, u32, JKRHeap*);
 	/* 8003C5BC */ void setStageRes(char const*, JKRHeap*);
 	/* 8003C638 */ void dump();
@@ -234,7 +235,7 @@ struct JKRSolidHeap {
 /* top-level dependencies (end mDoDvdThd_mountArchive_c) */
 struct mDoDvdThd_mountArchive_c {
 	// JKRHeap
-	/* 80015E14 */ void create(char const*, char, JKRHeap*);
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
 // build cBgS (cBgS) False/False
@@ -343,20 +344,20 @@ struct J3DModelLoaderDataBase {
 };
 
 // build J3DAnmLoaderDataBase (J3DAnmLoaderDataBase) False/False
+// build J3DAnmBase (J3DAnmBase) True/True
 // build J3DAnmLoaderDataBaseFlag (J3DAnmLoaderDataBaseFlag) False/False
 /* top-level dependencies (begin J3DAnmLoaderDataBaseFlag) */
 /* top-level dependencies (end J3DAnmLoaderDataBaseFlag) */
 struct J3DAnmLoaderDataBaseFlag {
 };
 
-// build J3DAnmBase (J3DAnmBase) True/True
 /* top-level dependencies (begin J3DAnmLoaderDataBase) */
-// outer dependency: J3DAnmLoaderDataBaseFlag
 // outer dependency: J3DAnmBase
+// outer dependency: J3DAnmLoaderDataBaseFlag
 /* top-level dependencies (end J3DAnmLoaderDataBase) */
 struct J3DAnmLoaderDataBase {
-	// J3DAnmLoaderDataBaseFlag
 	// J3DAnmBase
+	// J3DAnmLoaderDataBaseFlag
 	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
 	/* 80338134 */ void setResource(J3DAnmBase*, void const*);
 };
@@ -450,7 +451,7 @@ SECTION_SDATA2 extern f32 d_d_resorce__lit_4333;
 
 extern "C" void OSReport_Error();
 extern "C" void OSReport_Warning();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
+void mDoMtx_YrotM(f32 (* )[4], s16);
 void mDoExt_getGameHeap();
 void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32);
 void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
@@ -462,7 +463,6 @@ void* operator new(u32);
 void* operator new[](u32);
 void operator delete(void*);
 extern "C" void JUTReportConsole_f();
-extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
 extern "C" void DCStoreRangeNoSync();
 extern "C" void OSLockMutex();
 extern "C" void OSUnlockMutex();
@@ -669,7 +669,7 @@ SECTION_DEAD char* const pad_80379C2B = "\0\0\0\0";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_info_c::set(char const* field_0, char const* field_1, char field_2, JKRHeap* field_3) {
+asm void dRes_info_c::set(char const* field_0, char const* field_1, u8 field_2, JKRHeap* field_3) {
 	nofralloc
 #include "asm/d/d_resorce/set__11dRes_info_cFPCcPCcUcP7JKRHeap.s"
 }
@@ -1066,7 +1066,7 @@ asm static void myGetMemBlockSize0(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_info_c::dump_long(dRes_info_c* field_0, s32 field_1) {
+asm void dRes_info_c::dump_long(dRes_info_c* field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_resorce/dump_long__11dRes_info_cFP11dRes_info_ci.s"
 }
@@ -1085,7 +1085,7 @@ f32 d_d_resorce__lit_4333 = 0.0009765625f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_info_c::dump(dRes_info_c* field_0, s32 field_1) {
+asm void dRes_info_c::dump(dRes_info_c* field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_resorce/dump__11dRes_info_cFP11dRes_info_ci.s"
 }
@@ -1107,7 +1107,7 @@ asm dRes_control_c::~dRes_control_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_control_c::setRes(char const* field_0, dRes_info_c* field_1, s32 field_2, char const* field_3, char field_4, JKRHeap* field_5) {
+asm void dRes_control_c::setRes(char const* field_0, dRes_info_c* field_1, int field_2, char const* field_3, u8 field_4, JKRHeap* field_5) {
 	nofralloc
 #include "asm/d/d_resorce/setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap.s"
 }
@@ -1118,7 +1118,7 @@ asm void dRes_control_c::setRes(char const* field_0, dRes_info_c* field_1, s32 f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_control_c::syncRes(char const* field_0, dRes_info_c* field_1, s32 field_2) {
+asm void dRes_control_c::syncRes(char const* field_0, dRes_info_c* field_1, int field_2) {
 	nofralloc
 #include "asm/d/d_resorce/syncRes__14dRes_control_cFPCcP11dRes_info_ci.s"
 }
@@ -1129,7 +1129,7 @@ asm void dRes_control_c::syncRes(char const* field_0, dRes_info_c* field_1, s32 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_control_c::deleteRes(char const* field_0, dRes_info_c* field_1, s32 field_2) {
+asm void dRes_control_c::deleteRes(char const* field_0, dRes_info_c* field_1, int field_2) {
 	nofralloc
 #include "asm/d/d_resorce/deleteRes__14dRes_control_cFPCcP11dRes_info_ci.s"
 }
@@ -1140,7 +1140,7 @@ asm void dRes_control_c::deleteRes(char const* field_0, dRes_info_c* field_1, s3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_control_c::getResInfo(char const* field_0, dRes_info_c* field_1, s32 field_2) {
+asm void dRes_control_c::getResInfo(char const* field_0, dRes_info_c* field_1, int field_2) {
 	nofralloc
 #include "asm/d/d_resorce/getResInfo__14dRes_control_cFPCcP11dRes_info_ci.s"
 }
@@ -1151,7 +1151,7 @@ asm void dRes_control_c::getResInfo(char const* field_0, dRes_info_c* field_1, s
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_control_c::newResInfo(dRes_info_c* field_0, s32 field_1) {
+asm void dRes_control_c::newResInfo(dRes_info_c* field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_resorce/newResInfo__14dRes_control_cFP11dRes_info_ci.s"
 }
@@ -1162,7 +1162,7 @@ asm void dRes_control_c::newResInfo(dRes_info_c* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_control_c::getResInfoLoaded(char const* field_0, dRes_info_c* field_1, s32 field_2) {
+asm void dRes_control_c::getResInfoLoaded(char const* field_0, dRes_info_c* field_1, int field_2) {
 	nofralloc
 #include "asm/d/d_resorce/getResInfoLoaded__14dRes_control_cFPCcP11dRes_info_ci.s"
 }
@@ -1173,7 +1173,7 @@ asm void dRes_control_c::getResInfoLoaded(char const* field_0, dRes_info_c* fiel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_control_c::getRes(char const* field_0, s32 field_1, dRes_info_c* field_2, s32 field_3) {
+asm void dRes_control_c::getRes(char const* field_0, s32 field_1, dRes_info_c* field_2, int field_3) {
 	nofralloc
 #include "asm/d/d_resorce/getRes__14dRes_control_cFPCclP11dRes_info_ci.s"
 }
@@ -1184,7 +1184,7 @@ asm void dRes_control_c::getRes(char const* field_0, s32 field_1, dRes_info_c* f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_control_c::getRes(char const* field_0, char const* field_1, dRes_info_c* field_2, s32 field_3) {
+asm void dRes_control_c::getRes(char const* field_0, char const* field_1, dRes_info_c* field_2, int field_3) {
 	nofralloc
 #include "asm/d/d_resorce/getRes__14dRes_control_cFPCcPCcP11dRes_info_ci.s"
 }
@@ -1195,7 +1195,7 @@ asm void dRes_control_c::getRes(char const* field_0, char const* field_1, dRes_i
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_control_c::getIDRes(char const* field_0, u16 field_1, dRes_info_c* field_2, s32 field_3) {
+asm void dRes_control_c::getIDRes(char const* field_0, u16 field_1, dRes_info_c* field_2, int field_3) {
 	nofralloc
 #include "asm/d/d_resorce/getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci.s"
 }
@@ -1206,7 +1206,7 @@ asm void dRes_control_c::getIDRes(char const* field_0, u16 field_1, dRes_info_c*
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRes_control_c::syncAllRes(dRes_info_c* field_0, s32 field_1) {
+asm void dRes_control_c::syncAllRes(dRes_info_c* field_0, int field_1) {
 	nofralloc
 #include "asm/d/d_resorce/syncAllRes__14dRes_control_cFP11dRes_info_ci.s"
 }

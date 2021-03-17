@@ -77,23 +77,23 @@ struct JAISeCategoryMgr {
 };
 
 // build mDoDvdThd_mountXArchive_c (mDoDvdThd_mountXArchive_c) False/False
-// build JKRArchive (JKRArchive) True/True
 // build JKRHeap (JKRHeap) False/False
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
-	/* 802CE7B0 */ void changeGroupID(char);
+	/* 802CE7B0 */ void changeGroupID(u8);
 };
 
+// build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin mDoDvdThd_mountXArchive_c) */
-// outer dependency: JKRArchive::EMountMode
 // outer dependency: JKRHeap
+// outer dependency: JKRArchive::EMountMode
 /* top-level dependencies (end mDoDvdThd_mountXArchive_c) */
 struct mDoDvdThd_mountXArchive_c {
-	// JKRArchive::EMountMode
 	// JKRHeap
-	/* 800161E0 */ void create(char const*, char, JKRArchive::EMountMode, JKRHeap*);
+	// JKRArchive::EMountMode
+	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
 // build JKRArchive (JKRArchive) True/True
@@ -105,7 +105,7 @@ struct mDoDvdThd_mountXArchive_c {
 /* top-level dependencies (end mDoDvdThd_toMainRam_c) */
 struct mDoDvdThd_toMainRam_c {
 	// JKRHeap
-	/* 80016394 */ void create(char const*, char, JKRHeap*);
+	/* 80016394 */ void create(char const*, u8, JKRHeap*);
 };
 
 // build JASAudioReseter (JASAudioReseter) False/False
@@ -161,8 +161,8 @@ struct Z2StatusMgr {
 /* top-level dependencies (begin Z2SceneMgr) */
 /* top-level dependencies (end Z2SceneMgr) */
 struct Z2SceneMgr {
-	/* 802B697C */ void setFadeOutStart(char);
-	/* 802B6A18 */ void setFadeInStart(char);
+	/* 802B697C */ void setFadeOutStart(u8);
+	/* 802B6A18 */ void setFadeInStart(u8);
 	/* 802B6AF8 */ void setSceneName(char*, s32, s32);
 	/* 802B9D40 */ void load1stDynamicWave();
 };
@@ -190,8 +190,8 @@ static void mDoAud_Create();
 void mDoAud_Execute();
 void mDoAud_setSceneName(char const*, s32, s32);
 void mDoAud_load1stDynamicWave();
-void mDoAud_setFadeOutStart(char);
-void mDoAud_setFadeInStart(char);
+void mDoAud_setFadeOutStart(u8);
+void mDoAud_setFadeInStart(u8);
 void mDoAud_resetProcess();
 void mDoAud_resetRecover();
 extern "C" void __sinit_m_Do_audio_cpp();
@@ -393,7 +393,7 @@ asm void mDoAud_load1stDynamicWave() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoAud_setFadeOutStart(char field_0) {
+asm void mDoAud_setFadeOutStart(u8 field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_audio/mDoAud_setFadeOutStart__FUc.s"
 }
@@ -404,7 +404,7 @@ asm void mDoAud_setFadeOutStart(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoAud_setFadeInStart(char field_0) {
+asm void mDoAud_setFadeInStart(u8 field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_audio/mDoAud_setFadeInStart__FUc.s"
 }

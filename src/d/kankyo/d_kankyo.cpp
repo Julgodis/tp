@@ -48,44 +48,45 @@ struct _GXColor {
 };
 
 // build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
-struct J3DModelData {
-};
-
-// build cXyz (cXyz) True/True
-// build _GXColorS10 (_GXColorS10) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
 struct dKy_tevstr_c {
 };
 
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
+// build cXyz (cXyz) True/True
+// build _GXColorS10 (_GXColorS10) True/True
 /* top-level dependencies (begin dScnKy_env_light_c) */
+// outer dependency: dKy_tevstr_c
 // outer dependency: J3DModelData
 // outer dependency: cXyz
 // outer dependency: _GXColorS10
-// outer dependency: dKy_tevstr_c
 /* top-level dependencies (end dScnKy_env_light_c) */
 struct dScnKy_env_light_c {
+	// dKy_tevstr_c
 	// J3DModelData
 	// cXyz
 	// _GXColorS10
-	// dKy_tevstr_c
 	/* 8019F2E8 */ dScnKy_env_light_c();
 	/* 8019F4FC */ void setDaytime();
 	/* 8019F788 */ void setSunpos();
 	/* 8019FA08 */ void getDaytime();
 	/* 8019FBCC */ void getDarkDaytime();
-	/* 8019FBD4 */ void setLight_palno_get(char*, char*, char*, char*, char*, char*, char*, char*, f32*, s32*, s32*, f32*, char*);
+	/* 8019FBD4 */ void setLight_palno_get(u8*, u8*, u8*, u8*, u8*, u8*, u8*, u8*, f32*, int*, int*, f32*, u8*);
 	/* 801A040C */ void setLight();
 	/* 801A133C */ void setLight_bg(dKy_tevstr_c*, _GXColorS10*, _GXColorS10*, f32*, f32*);
 	/* 801A16C0 */ void setLight_actor(dKy_tevstr_c*, _GXColorS10*, f32*, f32*);
 	/* 801A1D64 */ void settingTevStruct_colget_actor(cXyz*, dKy_tevstr_c*, _GXColorS10*, _GXColorS10*, f32*, f32*);
 	/* 801A1F58 */ void settingTevStruct_colget_player(dKy_tevstr_c*);
-	/* 801A2128 */ void settingTevStruct_plightcol_plus(cXyz*, dKy_tevstr_c*, _GXColorS10, _GXColorS10, char);
-	/* 801A37C4 */ void settingTevStruct(s32, cXyz*, dKy_tevstr_c*);
+	/* 801A2128 */ void settingTevStruct_plightcol_plus(cXyz*, dKy_tevstr_c*, _GXColorS10, _GXColorS10, u8);
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A441C */ void setLightTevColorType(J3DModelData*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 	/* 801A4E90 */ void CalcTevColor();
@@ -140,7 +141,7 @@ struct LIGHT_INFLUENCE {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 	/* 8019F780 */ void GetTimePass();
 };
 
@@ -159,25 +160,25 @@ struct J3DMaterial {
 };
 
 // build J3DColorBlock (J3DColorBlock) False/False
-// build J3DLightObj (J3DLightObj) False/False
-/* top-level dependencies (begin J3DLightObj) */
-/* top-level dependencies (end J3DLightObj) */
-struct J3DLightObj {
-};
-
 // build J3DGXColor (J3DGXColor) False/False
 /* top-level dependencies (begin J3DGXColor) */
 /* top-level dependencies (end J3DGXColor) */
 struct J3DGXColor {
 };
 
+// build J3DLightObj (J3DLightObj) False/False
+/* top-level dependencies (begin J3DLightObj) */
+/* top-level dependencies (end J3DLightObj) */
+struct J3DLightObj {
+};
+
 /* top-level dependencies (begin J3DColorBlock) */
-// outer dependency: J3DLightObj
 // outer dependency: J3DGXColor
+// outer dependency: J3DLightObj
 /* top-level dependencies (end J3DColorBlock) */
 struct J3DColorBlock {
-	// J3DLightObj
 	// J3DGXColor
+	// J3DLightObj
 	/* 801A4C08 */ void setLight(u32, J3DLightObj*);
 	/* 801A4C0C */ void setAmbColor(u32, J3DGXColor const*);
 };
@@ -242,7 +243,7 @@ struct J3DMaterialTable {
 struct mDoExt_btkAnm {
 	// J3DAnmTextureSRTKey
 	// J3DMaterialTable
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, s32, s32, f32, s16, s16);
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
@@ -264,23 +265,23 @@ struct JKRSolidHeap {
 /* top-level dependencies (begin dComIfG_play_c) */
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	/* 8002C950 */ void getLayerNo_common(char const*, s32, s32);
-	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002C950 */ void getLayerNo_common(char const*, int, int);
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 // build dSv_player_status_b_c (dSv_player_status_b_c) False/False
 /* top-level dependencies (begin dSv_player_status_b_c) */
 /* top-level dependencies (end dSv_player_status_b_c) */
 struct dSv_player_status_b_c {
-	/* 80032BB0 */ void isDarkClearLV(s32) const;
+	/* 80032BB0 */ void isDarkClearLV(int) const;
 };
 
 // build dSv_memBit_c (dSv_memBit_c) False/False
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 80034860 */ void isSwitch(s32) const;
-	/* 80034934 */ void isDungeonItem(s32) const;
+	/* 80034860 */ void isSwitch(int) const;
+	/* 80034934 */ void isDungeonItem(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -295,7 +296,7 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build dRes_control_c (dRes_control_c) False/False
@@ -310,40 +311,40 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
 // build dPa_control_c (dPa_control_c) False/False
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
-};
-
+// build cXyz (cXyz) True/True
+// build _GXColor (_GXColor) True/True
 // build dPa_levelEcallBack (dPa_levelEcallBack) False/False
 /* top-level dependencies (begin dPa_levelEcallBack) */
 /* top-level dependencies (end dPa_levelEcallBack) */
 struct dPa_levelEcallBack {
 };
 
-// build _GXColor (_GXColor) True/True
-// build cXyz (cXyz) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
 /* top-level dependencies (begin dPa_control_c) */
-// outer dependency: csXyz
-// outer dependency: dPa_levelEcallBack
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
+// outer dependency: dPa_levelEcallBack
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
-	// csXyz
-	// _GXColor
 	// dPa_levelEcallBack
-	// cXyz
 	// dKy_tevstr_c
-	/* 8004CA90 */ void set(char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	// csXyz
+	// cXyz
+	// _GXColor
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 // build csXyz (csXyz) True/True
@@ -409,21 +410,21 @@ struct JPABaseEmitter {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -456,6 +457,13 @@ struct JUTNameTab {
 	/* 802DEAF8 */ void getName(u16) const;
 };
 
+// build J3DTexMtxInfo (J3DTexMtxInfo) False/False
+/* top-level dependencies (begin J3DTexMtxInfo) */
+/* top-level dependencies (end J3DTexMtxInfo) */
+struct J3DTexMtxInfo {
+	/* 80325794 */ void setEffectMtx(f32 (* )[4]);
+};
+
 // build J3DFrameCtrl (J3DFrameCtrl) False/False
 /* top-level dependencies (begin J3DFrameCtrl) */
 /* top-level dependencies (end J3DFrameCtrl) */
@@ -472,28 +480,28 @@ static void dKy_sense_pat_get();
 static void dKy_WolfPowerup_BgAmbCol(_GXColorS10*);
 static void dKy_WolfPowerup_FogNearFar(f32*, f32*);
 static void dKy_pos2_get_angle(cXyz*, cXyz*, s16*, s16*);
-static void dKy_twi_wolflight_set(s32);
+static void dKy_twi_wolflight_set(int);
 static void dKy_lightdir_set(f32, f32, Vec*);
-static void dKy_GXInitLightSpot(J3DLightInfo*, f32, char);
-static void dKy_GXInitLightDistAttn(J3DLightInfo*, f32, f32, char);
-static void u8_data_ratio_set(char, char, f32);
+static void dKy_GXInitLightSpot(J3DLightInfo*, f32, u8);
+static void dKy_GXInitLightDistAttn(J3DLightInfo*, f32, f32, u8);
+static void u8_data_ratio_set(u8, u8, f32);
 static void s16_data_ratio_set(s16, s16, f32);
 static void kankyo_color_ratio_calc_common(s16, f32);
 static void kankyo_color_ratio_calc(_GXColor*, _GXColorS10, f32);
-static void kankyo_color_ratio_set(char, char, f32, char, char, f32, s16, f32);
+static void kankyo_color_ratio_set(u8, u8, f32, u8, u8, f32, s16, f32);
 static void fl_data_ratio_set(f32, f32, f32);
 static void float_kankyo_color_ratio_set(f32, f32, f32, f32, f32, f32, f32, f32);
 static void get_parcent(f32, f32, f32);
 void dKy_get_parcent(f32, f32, f32);
 static void dKy_FiveSenses_fullthrottle_dark_static1();
 void dKy_FiveSenses_fullthrottle_dark();
-static void dKy_light_influence_id(cXyz, s32);
-static void dKy_eflight_influence_id(cXyz, s32);
-static void dKy_light_influence_col(s32);
+static void dKy_light_influence_id(cXyz, int);
+static void dKy_eflight_influence_id(cXyz, int);
+static void dKy_light_influence_col(int);
 void dKy_light_influence_col(_GXColor*, f32);
-static void dKy_light_influence_power(s32);
-static void dKy_light_influence_yuragi(s32);
-static void dKy_light_influence_distance(cXyz, s32);
+static void dKy_light_influence_power(int);
+static void dKy_light_influence_yuragi(int);
+static void dKy_light_influence_distance(cXyz, int);
 static void plight_init();
 static void darkmist_init();
 static void plight_set();
@@ -510,9 +518,9 @@ void dKy_getDarktime_hour();
 void dKy_getDarktime_minute();
 void dKy_getDarktime_week();
 static void dKy_calc_color_set(_GXColorS10*, color_RGB_class*, color_RGB_class*, color_RGB_class*, color_RGB_class*, f32, f32, _GXColorS10, f32);
-static void cLib_addCalcU8(char*, char, s16, s16);
-static void setLightTevColorType_MAJI_sub(J3DMaterial*, dKy_tevstr_c*, s32);
-static void dKy_cloudshadow_scroll(J3DModelData*, dKy_tevstr_c*, s32);
+static void cLib_addCalcU8(u8*, u8, s16, s16);
+static void setLightTevColorType_MAJI_sub(J3DMaterial*, dKy_tevstr_c*, int);
+static void dKy_cloudshadow_scroll(J3DModelData*, dKy_tevstr_c*, int);
 void dKy_undwater_filter_draw();
 extern "C" static void dKy_Draw__FP17sub_kankyo__class();
 extern "C" static void dKy_Execute__FP17sub_kankyo__class();
@@ -526,11 +534,11 @@ static void dKy_lightswitch_check(stage_pure_lightvec_info_class*, char);
 static void dKy_setLight_nowroom_common(char, f32);
 void dKy_setLight_nowroom(char);
 void dKy_setLight_nowroom_grass(char, f32);
-void dKy_move_room_ratio(dKy_tevstr_c*, char*);
+void dKy_move_room_ratio(dKy_tevstr_c*, s8*);
 void dKy_setLight_nowroom_actor(dKy_tevstr_c*);
 void dKy_setLight_again();
 void dKy_Global_amb_set(dKy_tevstr_c*);
-static void dKy_light_influence_pos(s32);
+static void dKy_light_influence_pos(int);
 void dKy_plight_near_pos();
 void dKy_mock_light_every_set(LIGHT_INFLUENCE*);
 void dKy_plight_set(LIGHT_INFLUENCE*);
@@ -540,8 +548,8 @@ void dKy_plight_priority_set(LIGHT_INFLUENCE*);
 void dKy_plight_cut(LIGHT_INFLUENCE*);
 void dKy_efplight_set(LIGHT_INFLUENCE*);
 void dKy_efplight_cut(LIGHT_INFLUENCE*);
-static void dKy_bgparts_activelight_set(LIGHT_INFLUENCE*, s32);
-static void dKy_bgparts_activelight_cut(s32);
+static void dKy_bgparts_activelight_set(LIGHT_INFLUENCE*, int);
+static void dKy_bgparts_activelight_cut(int);
 void dKy_actor_addcol_amb_set(s16, s16, s16, f32);
 void dKy_bg_addcol_amb_set(s16, s16, s16, f32);
 void dKy_bg1_addcol_amb_set(s16, s16, s16, f32);
@@ -555,19 +563,19 @@ static void dKy_vrbox_addcol_set(s16, s16, s16, f32);
 static void dKy_fog_startendz_set(f32, f32, f32);
 void dKy_Itemgetcol_chg_on();
 static void dKy_Sound_init();
-void dKy_Sound_set(cXyz, s32, s32, s32);
+void dKy_Sound_set(cXyz, int, u32, int);
 void dKy_Sound_get();
-void dKy_SordFlush_set(cXyz, s32);
+void dKy_SordFlush_set(cXyz, int);
 static void GxFogSet_Sub(_GXColor*);
 static void GxFog_set();
 void dKy_GxFog_set();
 void dKy_GxFog_tevstr_set(dKy_tevstr_c*);
 void dKy_GfFog_tevstr_set(dKy_tevstr_c*);
 static void GxXFog_set();
-void dKy_change_colpat(char);
-void dKy_custom_colset(char, char, f32);
+void dKy_change_colpat(u8);
+void dKy_custom_colset(u8, u8, f32);
 void dKy_setLight_mine(dKy_tevstr_c*);
-void dKy_tevstr_init(dKy_tevstr_c*, char, char);
+void dKy_tevstr_init(dKy_tevstr_c*, s8, u8);
 void dKy_rain_check();
 void dKy_set_allcol_ratio(f32);
 void dKy_set_actcol_ratio(f32);
@@ -585,12 +593,12 @@ static void NewAmbColGet(_GXColorS10*);
 static void dKy_ParticleColor_get_base(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32);
 void dKy_ParticleColor_get_actor(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32);
 void dKy_ParticleColor_get_bg(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32);
-static void dKy_BossLight_set(cXyz*, _GXColor*, f32, char);
-void dKy_BossSpotLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, char, char);
-void dKy_WolfEyeLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, char, char);
+static void dKy_BossLight_set(cXyz*, _GXColor*, f32, u8);
+void dKy_BossSpotLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8);
+void dKy_WolfEyeLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8);
 static void dKy_twilight_camelight_set();
 static void dKy_WaterIn_Light_set();
-void dKy_camera_water_in_status_set(char);
+void dKy_camera_water_in_status_set(u8);
 void dKy_camera_water_in_status_check();
 void dKy_pol_efftype_get(cBgS_PolyInfo const*);
 void dKy_pol_efftype2_get(cBgS_PolyInfo const*);
@@ -611,14 +619,14 @@ static void dKy_Indoor_check();
 bool dKy_withwarp_capture_check();
 void dKy_depth_dist_set(void*);
 void dKy_darkworld_check();
-static void dKy_F_SP121Check(char const*, s32, char*, s32);
-void dKy_darkworld_stage_check(char const*, s32);
-void dKy_darkworld_spot_check(char const*, s32);
-void dKy_darkworld_Area_set(char const*, s32);
+static void dKy_F_SP121Check(char const*, int, u8*, int);
+void dKy_darkworld_stage_check(char const*, int);
+void dKy_darkworld_spot_check(char const*, int);
+void dKy_darkworld_Area_set(char const*, int);
 static void dKy_murky_set(J3DMaterial*);
-void dKy_shadow_mode_set(char);
-void dKy_shadow_mode_reset(char);
-static void dKy_shadow_mode_check(char);
+void dKy_shadow_mode_set(u8);
+void dKy_shadow_mode_reset(u8);
+static void dKy_shadow_mode_check(u8);
 void dKy_bg_MAxx_proc(void*);
 extern "C" void __sinit_d_kankyo_cpp();
 static void dKankyo_DayProc();
@@ -1018,8 +1026,8 @@ SECTION_INIT void memset();
 SECTION_INIT void memcpy();
 extern "C" void OSReport_Warning();
 void mDoAud_setSceneName(char const*, s32, s32);
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
-extern "C" void mDoMtx_inverseTranspose__FPA4_CfPA4_f();
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16);
+void mDoMtx_inverseTranspose(f32 const (* )[4], f32 (* )[4]);
 void mDoExt_modelUpdateDL(J3DModel*);
 void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
 void mDoExt_adjustSolidHeap(JKRSolidHeap*);
@@ -1030,23 +1038,23 @@ void mDoLib_project(Vec*, Vec*);
 void dComIfGs_sense_type_change_Get();
 void dComIfG_getStageRes(char const*);
 void dComIfGp_world_dark_get();
-void dComIfGs_PolyDamageOff_Set(char);
+void dComIfGs_PolyDamageOff_Set(s8);
 void dKyd_dmpalet_getp();
 void dKyd_dmpselect_getp();
 void dKyd_dmenvr_getp();
 void dKyd_dmvrbox_getp();
 void dKyd_schejule_getp();
 void dKyd_schejule_boss_getp();
-void dKyd_xfog_table_set(char);
+void dKyd_xfog_table_set(u8);
 void dKyd_maple_col_getp();
 void dKyd_darkworld_tbl_getp();
 void dKyd_light_size_tbl_getp();
 void dKyd_light_tw_size_tbl_getp();
-void dKyd_BloomInf_tbl_getp(s32);
+void dKyd_BloomInf_tbl_getp(int);
 void dKyw_wether_proc();
 void dKyw_wind_set();
 void dKyw_get_wind_vec();
-void dKyw_rain_set(s32);
+void dKyw_rain_set(int);
 void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
 void dCam_getBody();
 void cM_rad2s(f32);
@@ -1057,8 +1065,6 @@ void cLib_addCalc(f32*, f32, f32, f32, f32);
 void GFSetFog(_GXFogType, f32, f32, f32, f32, _GXColor);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f();
-extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXConcat();
 extern "C" void PSMTXTrans();
@@ -1589,7 +1595,7 @@ f64 d_kankyo_d_kankyo__lit_4444 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_twi_wolflight_set(s32 field_0) {
+asm static void dKy_twi_wolflight_set(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_twi_wolflight_set__Fi.s"
 }
@@ -1654,7 +1660,7 @@ f32 d_kankyo_d_kankyo__lit_4510 = -2.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_GXInitLightSpot(J3DLightInfo* field_0, f32 field_1, char field_2) {
+asm static void dKy_GXInitLightSpot(J3DLightInfo* field_0, f32 field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_GXInitLightSpot__FP12J3DLightInfofUc.s"
 }
@@ -1669,7 +1675,7 @@ f32 d_kankyo_d_kankyo__lit_4529 = 0.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_GXInitLightDistAttn(J3DLightInfo* field_0, f32 field_1, f32 field_2, char field_3) {
+asm static void dKy_GXInitLightDistAttn(J3DLightInfo* field_0, f32 field_1, f32 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_GXInitLightDistAttn__FP12J3DLightInfoffUc.s"
 }
@@ -1680,7 +1686,7 @@ asm static void dKy_GXInitLightDistAttn(J3DLightInfo* field_0, f32 field_1, f32 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void u8_data_ratio_set(char field_0, char field_1, f32 field_2) {
+asm static void u8_data_ratio_set(u8 field_0, u8 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/u8_data_ratio_set__FUcUcf.s"
 }
@@ -1724,7 +1730,7 @@ asm static void kankyo_color_ratio_calc(_GXColor* field_0, _GXColorS10 field_1, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void kankyo_color_ratio_set(char field_0, char field_1, f32 field_2, char field_3, char field_4, f32 field_5, s16 field_6, f32 field_7) {
+asm static void kankyo_color_ratio_set(u8 field_0, u8 field_1, f32 field_2, u8 field_3, u8 field_4, f32 field_5, s16 field_6, f32 field_7) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/kankyo_color_ratio_set__FUcUcfUcUcfsf.s"
 }
@@ -1822,7 +1828,7 @@ f32 lit_4852 = 250.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_light_influence_id(cXyz field_0, s32 field_1) {
+asm static void dKy_light_influence_id(cXyz field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_light_influence_id__F4cXyzi.s"
 }
@@ -1833,7 +1839,7 @@ asm static void dKy_light_influence_id(cXyz field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_eflight_influence_id(cXyz field_0, s32 field_1) {
+asm static void dKy_eflight_influence_id(cXyz field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_eflight_influence_id__F4cXyzi.s"
 }
@@ -1844,7 +1850,7 @@ asm static void dKy_eflight_influence_id(cXyz field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_light_influence_col(s32 field_0) {
+asm static void dKy_light_influence_col(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_light_influence_col__Fi.s"
 }
@@ -1870,7 +1876,7 @@ asm void dKy_light_influence_col(_GXColor* field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_light_influence_power(s32 field_0) {
+asm static void dKy_light_influence_power(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_light_influence_power__Fi.s"
 }
@@ -1881,7 +1887,7 @@ asm static void dKy_light_influence_power(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_light_influence_yuragi(s32 field_0) {
+asm static void dKy_light_influence_yuragi(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_light_influence_yuragi__Fi.s"
 }
@@ -1892,7 +1898,7 @@ asm static void dKy_light_influence_yuragi(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_light_influence_distance(cXyz field_0, s32 field_1) {
+asm static void dKy_light_influence_distance(cXyz field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_light_influence_distance__F4cXyzi.s"
 }
@@ -2416,7 +2422,7 @@ f32 lit_5840 = 1.0f / 15.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dScnKy_env_light_c::setLight_palno_get(char* field_0, char* field_1, char* field_2, char* field_3, char* field_4, char* field_5, char* field_6, char* field_7, f32* field_8, s32* field_9, s32* field_10, f32* field_11, char* field_12) {
+asm void dScnKy_env_light_c::setLight_palno_get(u8* field_0, u8* field_1, u8* field_2, u8* field_3, u8* field_4, u8* field_5, u8* field_6, u8* field_7, f32* field_8, int* field_9, int* field_10, f32* field_11, u8* field_12) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc.s"
 }
@@ -2533,7 +2539,7 @@ asm void dScnKy_env_light_c::settingTevStruct_colget_player(dKy_tevstr_c* field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void cLib_addCalcU8(char* field_0, char field_1, s16 field_2, s16 field_3) {
+asm static void cLib_addCalcU8(u8* field_0, u8 field_1, s16 field_2, s16 field_3) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/cLib_addCalcU8__FPUcUcss.s"
 }
@@ -2587,7 +2593,7 @@ f32 lit_6774 = 1.0f / 25.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dScnKy_env_light_c::settingTevStruct_plightcol_plus(cXyz* field_0, dKy_tevstr_c* field_1, _GXColorS10 field_2, _GXColorS10 field_3, char field_4) {
+asm void dScnKy_env_light_c::settingTevStruct_plightcol_plus(cXyz* field_0, dKy_tevstr_c* field_1, _GXColorS10 field_2, _GXColorS10 field_3, u8 field_4) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/func_801A2128.s"
 }
@@ -2659,7 +2665,7 @@ f32 lit_7027 = 6.0f / 5.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dScnKy_env_light_c::settingTevStruct(s32 field_0, cXyz* field_1, dKy_tevstr_c* field_2) {
+asm void dScnKy_env_light_c::settingTevStruct(int field_0, cXyz* field_1, dKy_tevstr_c* field_2) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c.s"
 }
@@ -2683,7 +2689,7 @@ f32 lit_7187 = 95.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void setLightTevColorType_MAJI_sub(J3DMaterial* field_0, dKy_tevstr_c* field_1, s32 field_2) {
+asm static void setLightTevColorType_MAJI_sub(J3DMaterial* field_0, dKy_tevstr_c* field_1, int field_2) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/setLightTevColorType_MAJI_sub__FP11J3DMaterialP12dKy_tevstr_ci.s"
 }
@@ -2706,7 +2712,7 @@ void J3DColorBlock::setAmbColor(u32 field_0, J3DGXColor const* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_cloudshadow_scroll(J3DModelData* field_0, dKy_tevstr_c* field_1, s32 field_2) {
+asm static void dKy_cloudshadow_scroll(J3DModelData* field_0, dKy_tevstr_c* field_1, int field_2) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_cloudshadow_scroll__FP12J3DModelDataP12dKy_tevstr_ci.s"
 }
@@ -2953,7 +2959,7 @@ asm void dKy_setLight_nowroom_grass(char field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_move_room_ratio(dKy_tevstr_c* field_0, char* field_1) {
+asm void dKy_move_room_ratio(dKy_tevstr_c* field_0, s8* field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_move_room_ratio__FP12dKy_tevstr_cPSc.s"
 }
@@ -2997,7 +3003,7 @@ asm void dKy_Global_amb_set(dKy_tevstr_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_light_influence_pos(s32 field_0) {
+asm static void dKy_light_influence_pos(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_light_influence_pos__Fi.s"
 }
@@ -3107,7 +3113,7 @@ asm void dKy_efplight_cut(LIGHT_INFLUENCE* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_bgparts_activelight_set(LIGHT_INFLUENCE* field_0, s32 field_1) {
+asm static void dKy_bgparts_activelight_set(LIGHT_INFLUENCE* field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_bgparts_activelight_set__FP15LIGHT_INFLUENCEi.s"
 }
@@ -3118,7 +3124,7 @@ asm static void dKy_bgparts_activelight_set(LIGHT_INFLUENCE* field_0, s32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_bgparts_activelight_cut(s32 field_0) {
+asm static void dKy_bgparts_activelight_cut(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_bgparts_activelight_cut__Fi.s"
 }
@@ -3272,7 +3278,7 @@ asm static void dKy_Sound_init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_Sound_set(cXyz field_0, s32 field_1, s32 field_2, s32 field_3) {
+asm void dKy_Sound_set(cXyz field_0, int field_1, u32 field_2, int field_3) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_Sound_set__F4cXyziUii.s"
 }
@@ -3294,7 +3300,7 @@ asm void dKy_Sound_get() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_SordFlush_set(cXyz field_0, s32 field_1) {
+asm void dKy_SordFlush_set(cXyz field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_SordFlush_set__F4cXyzi.s"
 }
@@ -3375,7 +3381,7 @@ asm static void GxXFog_set() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_change_colpat(char field_0) {
+asm void dKy_change_colpat(u8 field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_change_colpat__FUc.s"
 }
@@ -3386,7 +3392,7 @@ asm void dKy_change_colpat(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_custom_colset(char field_0, char field_1, f32 field_2) {
+asm void dKy_custom_colset(u8 field_0, u8 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_custom_colset__FUcUcf.s"
 }
@@ -3408,7 +3414,7 @@ asm void dKy_setLight_mine(dKy_tevstr_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_tevstr_init(dKy_tevstr_c* field_0, char field_1, char field_2) {
+asm void dKy_tevstr_init(dKy_tevstr_c* field_0, s8 field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_tevstr_init__FP12dKy_tevstr_cScUc.s"
 }
@@ -3628,7 +3634,7 @@ asm void dKy_ParticleColor_get_bg(cXyz* field_0, dKy_tevstr_c* field_1, _GXColor
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_BossLight_set(cXyz* field_0, _GXColor* field_1, f32 field_2, char field_3) {
+asm static void dKy_BossLight_set(cXyz* field_0, _GXColor* field_1, f32 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_BossLight_set__FP4cXyzP8_GXColorfUc.s"
 }
@@ -3639,7 +3645,7 @@ asm static void dKy_BossLight_set(cXyz* field_0, _GXColor* field_1, f32 field_2,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_BossSpotLight_set(cXyz* field_0, f32 field_1, f32 field_2, f32 field_3, _GXColor* field_4, f32 field_5, char field_6, char field_7) {
+asm void dKy_BossSpotLight_set(cXyz* field_0, f32 field_1, f32 field_2, f32 field_3, _GXColor* field_4, f32 field_5, u8 field_6, u8 field_7) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc.s"
 }
@@ -3657,7 +3663,7 @@ f32 lit_9677 = 1.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_WolfEyeLight_set(cXyz* field_0, f32 field_1, f32 field_2, f32 field_3, _GXColor* field_4, f32 field_5, char field_6, char field_7) {
+asm void dKy_WolfEyeLight_set(cXyz* field_0, f32 field_1, f32 field_2, f32 field_3, _GXColor* field_4, f32 field_5, u8 field_6, u8 field_7) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_WolfEyeLight_set__FP4cXyzfffP8_GXColorfUcUc.s"
 }
@@ -3722,7 +3728,7 @@ asm static void dKy_WaterIn_Light_set() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_camera_water_in_status_set(char field_0) {
+asm void dKy_camera_water_in_status_set(u8 field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_camera_water_in_status_set__FUc.s"
 }
@@ -3955,7 +3961,7 @@ asm void dKy_darkworld_check() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_F_SP121Check(char const* field_0, s32 field_1, char* field_2, s32 field_3) {
+asm static void dKy_F_SP121Check(char const* field_0, int field_1, u8* field_2, int field_3) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_F_SP121Check__FPCciPUci.s"
 }
@@ -3966,7 +3972,7 @@ asm static void dKy_F_SP121Check(char const* field_0, s32 field_1, char* field_2
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_darkworld_stage_check(char const* field_0, s32 field_1) {
+asm void dKy_darkworld_stage_check(char const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_darkworld_stage_check__FPCci.s"
 }
@@ -3977,7 +3983,7 @@ asm void dKy_darkworld_stage_check(char const* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_darkworld_spot_check(char const* field_0, s32 field_1) {
+asm void dKy_darkworld_spot_check(char const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_darkworld_spot_check__FPCci.s"
 }
@@ -3988,7 +3994,7 @@ asm void dKy_darkworld_spot_check(char const* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_darkworld_Area_set(char const* field_0, s32 field_1) {
+asm void dKy_darkworld_Area_set(char const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_darkworld_Area_set__FPCci.s"
 }
@@ -4023,7 +4029,7 @@ asm static void dKy_murky_set(J3DMaterial* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_shadow_mode_set(char field_0) {
+asm void dKy_shadow_mode_set(u8 field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_shadow_mode_set__FUc.s"
 }
@@ -4034,7 +4040,7 @@ asm void dKy_shadow_mode_set(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_shadow_mode_reset(char field_0) {
+asm void dKy_shadow_mode_reset(u8 field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_shadow_mode_reset__FUc.s"
 }
@@ -4045,7 +4051,7 @@ asm void dKy_shadow_mode_reset(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKy_shadow_mode_check(char field_0) {
+asm static void dKy_shadow_mode_check(u8 field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo/dKy_shadow_mode_check__FUc.s"
 }

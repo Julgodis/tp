@@ -46,19 +46,19 @@ struct Z2SeqMgr {
 	/* 802B3398 */ void setTimeProcVolMod(bool, u32);
 	/* 802B33A8 */ void processBgmFramework();
 	/* 802B3EAC */ void checkBgmIDPlaying(u32);
-	/* 802B3F40 */ void getChildTrackVolume(JAISoundHandle*, s32);
-	/* 802B3FEC */ void setChildTrackVolume(JAISoundHandle*, s32, f32, u32, f32, f32);
+	/* 802B3F40 */ void getChildTrackVolume(JAISoundHandle*, int);
+	/* 802B3FEC */ void setChildTrackVolume(JAISoundHandle*, int, f32, u32, f32, f32);
 	/* 802B4128 */ void resetBattleBgmParams();
 	/* 802B4164 */ void setBattleBgmOff(bool);
 	/* 802B421C */ void setBattleSearched(bool);
 	/* 802B43D0 */ void setBattleDistIgnore(bool);
 	/* 802B43E0 */ void setBattleGhostMute(bool);
-	/* 802B4498 */ void setBattleDistState(char);
-	/* 802B4844 */ void setBattleSeqState(char);
-	/* 802B4AFC */ void setBattleLastHit(char);
+	/* 802B4498 */ void setBattleDistState(u8);
+	/* 802B4844 */ void setBattleSeqState(u8);
+	/* 802B4AFC */ void setBattleLastHit(u8);
 	/* 802B4BD0 */ void battleBgmFramework();
 	/* 802B4EB0 */ void startBattleBgm(bool);
-	/* 802B5204 */ void stopBattleBgm(char, char);
+	/* 802B5204 */ void stopBattleBgm(u8, u8);
 	/* 802B545C */ void fieldBgmStart();
 	/* 802B556C */ void fieldRidingMute();
 	/* 802B5750 */ void onFieldBgmJumpStart();
@@ -139,8 +139,8 @@ struct Z2Calc {
 /* top-level dependencies (end Z2SoundStarter) */
 struct Z2SoundStarter {
 	// JAISoundHandle
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, char);
-	/* 802AAF74 */ void getPortData(JAISoundHandle*, u32, char);
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
+	/* 802AAF74 */ void getPortData(JAISoundHandle*, u32, s8);
 };
 
 // build Z2StatusMgr (Z2StatusMgr) False/False
@@ -1232,7 +1232,7 @@ asm void Z2SeqMgr::checkBgmIDPlaying(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SeqMgr::getChildTrackVolume(JAISoundHandle* field_0, s32 field_1) {
+asm void Z2SeqMgr::getChildTrackVolume(JAISoundHandle* field_0, int field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei.s"
 }
@@ -1243,7 +1243,7 @@ asm void Z2SeqMgr::getChildTrackVolume(JAISoundHandle* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SeqMgr::setChildTrackVolume(JAISoundHandle* field_0, s32 field_1, f32 field_2, u32 field_3, f32 field_4, f32 field_5) {
+asm void Z2SeqMgr::setChildTrackVolume(JAISoundHandle* field_0, int field_1, f32 field_2, u32 field_3, f32 field_4, f32 field_5) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff.s"
 }
@@ -1313,7 +1313,7 @@ asm void Z2SeqMgr::setBattleGhostMute(bool field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SeqMgr::setBattleDistState(char field_0) {
+asm void Z2SeqMgr::setBattleDistState(u8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setBattleDistState__8Z2SeqMgrFUc.s"
 }
@@ -1324,7 +1324,7 @@ asm void Z2SeqMgr::setBattleDistState(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SeqMgr::setBattleSeqState(char field_0) {
+asm void Z2SeqMgr::setBattleSeqState(u8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setBattleSeqState__8Z2SeqMgrFUc.s"
 }
@@ -1335,7 +1335,7 @@ asm void Z2SeqMgr::setBattleSeqState(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SeqMgr::setBattleLastHit(char field_0) {
+asm void Z2SeqMgr::setBattleLastHit(u8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/setBattleLastHit__8Z2SeqMgrFUc.s"
 }
@@ -1368,7 +1368,7 @@ asm void Z2SeqMgr::startBattleBgm(bool field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SeqMgr::stopBattleBgm(char field_0, char field_1) {
+asm void Z2SeqMgr::stopBattleBgm(u8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeqMgr/stopBattleBgm__8Z2SeqMgrFUcUc.s"
 }

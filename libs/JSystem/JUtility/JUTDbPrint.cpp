@@ -36,7 +36,7 @@ struct JUTFont {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
@@ -50,10 +50,10 @@ struct JUTDbPrint {
 	/* 802E0148 */ JUTDbPrint(JUTFont*, JKRHeap*);
 	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
 	/* 802E0204 */ void changeFont(JUTFont*);
-	/* 802E021C */ void enter(s32, s32, s32, char const*, s32);
+	/* 802E021C */ void enter(int, int, int, char const*, int);
 	/* 802E02A4 */ void flush();
-	/* 802E02DC */ void flush(s32, s32, s32, s32);
-	/* 802E0440 */ void drawString(s32, s32, s32, char const*);
+	/* 802E02DC */ void flush(int, int, int, int);
+	/* 802E0440 */ void drawString(int, int, int, u8 const*);
 };
 
 // build JUTFont (JUTFont) True/True
@@ -71,8 +71,8 @@ struct J2DOrthoGraph {
 // Forward References:
 // 
 
-extern "C" void JUTReport__FiiPCce();
-extern "C" void JUTReport__FiiiPCce();
+void JUTReport(int, int, char const*, ...);
+void JUTReport(int, int, int, char const*, ...);
 
 extern "C" void __ct__10JUTDbPrintFP7JUTFontP7JKRHeap();
 extern "C" void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
@@ -171,7 +171,7 @@ asm void JUTDbPrint::changeFont(JUTFont* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTDbPrint::enter(s32 field_0, s32 field_1, s32 field_2, char const* field_3, s32 field_4) {
+asm void JUTDbPrint::enter(int field_0, int field_1, int field_2, char const* field_3, int field_4) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/enter__10JUTDbPrintFiiiPCci.s"
 }
@@ -203,7 +203,7 @@ f64 JUTDbPrint__lit_838 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTDbPrint::flush(s32 field_0, s32 field_1, s32 field_2, s32 field_3) {
+asm void JUTDbPrint::flush(int field_0, int field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/flush__10JUTDbPrintFiiii.s"
 }
@@ -214,7 +214,7 @@ asm void JUTDbPrint::flush(s32 field_0, s32 field_1, s32 field_2, s32 field_3) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTDbPrint::drawString(s32 field_0, s32 field_1, s32 field_2, char const* field_3) {
+asm void JUTDbPrint::drawString(int field_0, int field_1, int field_2, u8 const* field_3) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/drawString__10JUTDbPrintFiiiPCUc.s"
 }
@@ -225,7 +225,7 @@ asm void JUTDbPrint::drawString(s32 field_0, s32 field_1, s32 field_2, char cons
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void JUTReport__FiiPCce() {
+asm void JUTReport(int field_0, int field_1, char const* field_2, ...) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/JUTReport__FiiPCce.s"
 }
@@ -236,7 +236,7 @@ extern "C" asm void JUTReport__FiiPCce() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void JUTReport__FiiiPCce() {
+asm void JUTReport(int field_0, int field_1, int field_2, char const* field_3, ...) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTDbPrint/JUTReport__FiiiPCce.s"
 }

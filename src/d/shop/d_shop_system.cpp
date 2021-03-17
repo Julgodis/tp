@@ -25,12 +25,32 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
+// build dMsgFlow_c (dMsgFlow_c) False/False
+// build mesg_flow_node_branch (mesg_flow_node_branch) False/False
+/* top-level dependencies (begin mesg_flow_node_branch) */
+/* top-level dependencies (end mesg_flow_node_branch) */
+struct mesg_flow_node_branch {
+};
+
 // build fopAc_ac_c (fopAc_ac_c) False/False
 /* top-level dependencies (begin fopAc_ac_c) */
 /* top-level dependencies (end fopAc_ac_c) */
 struct fopAc_ac_c {
 };
 
+/* top-level dependencies (begin dMsgFlow_c) */
+// outer dependency: mesg_flow_node_branch
+// outer dependency: fopAc_ac_c
+/* top-level dependencies (end dMsgFlow_c) */
+struct dMsgFlow_c {
+	// mesg_flow_node_branch
+	// fopAc_ac_c
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+	/* 8024A528 */ void getEventId(int*);
+	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
 // build STControl (STControl) False/False
 /* top-level dependencies (begin STControl) */
 /* top-level dependencies (end STControl) */
@@ -44,52 +64,32 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-// build dMsgFlow_c (dMsgFlow_c) False/False
-// build mesg_flow_node_branch (mesg_flow_node_branch) False/False
-/* top-level dependencies (begin mesg_flow_node_branch) */
-/* top-level dependencies (end mesg_flow_node_branch) */
-struct mesg_flow_node_branch {
-};
-
-// build fopAc_ac_c (fopAc_ac_c) True/True
-/* top-level dependencies (begin dMsgFlow_c) */
-// outer dependency: mesg_flow_node_branch
-// outer dependency: fopAc_ac_c
-/* top-level dependencies (end dMsgFlow_c) */
-struct dMsgFlow_c {
-	// mesg_flow_node_branch
-	// fopAc_ac_c
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, s32);
-	/* 8024A528 */ void getEventId(s32*);
-	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, s32);
-};
-
 /* top-level dependencies (begin dShopSystem_c) */
 // outer dependency: cXyz
+// outer dependency: dMsgFlow_c
 // outer dependency: fopAc_ac_c
 // outer dependency: STControl
-// outer dependency: dMsgFlow_c
 /* top-level dependencies (end dShopSystem_c) */
 struct dShopSystem_c {
 	// cXyz
+	// dMsgFlow_c
 	// fopAc_ac_c
 	// STControl
-	// dMsgFlow_c
 	/* 80197338 */ void initShopSystem();
 	/* 801974E4 */ ~dShopSystem_c();
-	/* 801975C0 */ void onFlag(s32);
-	/* 801975DC */ void offFlag(s32);
-	/* 801975F8 */ void isFlag(s32);
-	/* 80197618 */ void onSoldOutItemFlag(s32);
-	/* 80197634 */ void offSoldOutItemFlag(s32);
-	/* 80197650 */ void isSoldOutItemFlag(s32);
-	/* 80197670 */ void checkController(char, dMsgFlow_c*);
-	/* 80197808 */ void chooseItem3(char);
-	/* 80197DD0 */ void chooseItem5(char);
-	/* 80198250 */ void chooseItem4(char);
-	/* 80198444 */ void moveCursor(s32, char);
-	/* 80198488 */ void moveCursor0(s32, char);
-	/* 80198708 */ void moveCursor1(s32, char);
+	/* 801975C0 */ void onFlag(int);
+	/* 801975DC */ void offFlag(int);
+	/* 801975F8 */ void isFlag(int);
+	/* 80197618 */ void onSoldOutItemFlag(int);
+	/* 80197634 */ void offSoldOutItemFlag(int);
+	/* 80197650 */ void isSoldOutItemFlag(int);
+	/* 80197670 */ void checkController(u8, dMsgFlow_c*);
+	/* 80197808 */ void chooseItem3(u8);
+	/* 80197DD0 */ void chooseItem5(u8);
+	/* 80198250 */ void chooseItem4(u8);
+	/* 80198444 */ void moveCursor(int, u8);
+	/* 80198488 */ void moveCursor0(int, u8);
+	/* 80198708 */ void moveCursor1(int, u8);
 	/* 80198878 */ void drawCursor();
 	/* 80198950 */ void itemRotate();
 	/* 80198A2C */ void itemZoom(cXyz*);
@@ -107,22 +107,22 @@ struct dShopSystem_c {
 	/* 8019A0C0 */ void seq_event(fopAc_ac_c*, dMsgFlow_c*);
 	/* 8019A0D0 */ void shop_init(bool);
 	/* 8019A158 */ void shop_process(fopAc_ac_c*, dMsgFlow_c*);
-	/* 8019A238 */ void createShopItem(s32);
-	/* 8019A344 */ void setSeq(char);
+	/* 8019A238 */ void createShopItem(int);
+	/* 8019A344 */ void setSeq(u8);
 	/* 8019A354 */ void setSoldOutFlag();
 	/* 8019A364 */ void setSoldOut();
 	/* 8019A4F4 */ void setSoldOutItemHide();
 	/* 8019A564 */ void deleteObject();
 	/* 8019A5D0 */ void searchItemActor();
 	/* 8019AB00 */ void getFlowNodeNum();
-	/* 8019AB1C */ void setSellItemMax(char);
+	/* 8019AB1C */ void setSellItemMax(u8);
 	/* 8019AB24 */ void checkShopOpen();
 	/* 8019AB60 */ void checkLeftTrigger(STControl*);
 	/* 8019AB84 */ void checkRightTrigger(STControl*);
 	/* 8019ABA8 */ bool dpdMove();
-	/* 8019ACE0 */ bool beforeStartSeqAction(dMsgFlow_c*, s32);
-	/* 8019ACE8 */ bool beforeSelectSeqAction(dMsgFlow_c*, s32);
-	/* 8019ACF0 */ bool getResName2(s32);
+	/* 8019ACE0 */ bool beforeStartSeqAction(dMsgFlow_c*, int);
+	/* 8019ACE8 */ bool beforeSelectSeqAction(dMsgFlow_c*, int);
+	/* 8019ACF0 */ bool getResName2(int);
 };
 
 // build dMsgFlow_c (dMsgFlow_c) True/True
@@ -140,8 +140,8 @@ struct csXyz {
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 80034810 */ void onSwitch(s32);
-	/* 80034860 */ void isSwitch(s32) const;
+	/* 80034810 */ void onSwitch(int);
+	/* 80034860 */ void isSwitch(int) const;
 };
 
 // build daItemBase_c (daItemBase_c) False/False
@@ -168,11 +168,24 @@ struct dDlst_list_c {
 
 // build dDlst_base_c (dDlst_base_c) True/True
 // build daNpcT_c (daNpcT_c) False/False
-// build fopAc_ac_c (fopAc_ac_c) True/True
+// build cXyz (cXyz) True/True
+// build J3DModel (J3DModel) False/False
+/* top-level dependencies (begin J3DModel) */
+/* top-level dependencies (end J3DModel) */
+struct J3DModel {
+};
+
 // build J3DJoint (J3DJoint) False/False
 /* top-level dependencies (begin J3DJoint) */
 /* top-level dependencies (end J3DJoint) */
 struct J3DJoint {
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build daNpcT_faceMotionAnmData_c (daNpcT_faceMotionAnmData_c) False/False
+/* top-level dependencies (begin daNpcT_faceMotionAnmData_c) */
+/* top-level dependencies (end daNpcT_faceMotionAnmData_c) */
+struct daNpcT_faceMotionAnmData_c {
 };
 
 // build daNpcT_motionAnmData_c (daNpcT_motionAnmData_c) False/False
@@ -181,33 +194,20 @@ struct J3DJoint {
 struct daNpcT_motionAnmData_c {
 };
 
-// build cXyz (cXyz) True/True
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
-struct J3DModel {
-};
-
-// build daNpcT_faceMotionAnmData_c (daNpcT_faceMotionAnmData_c) False/False
-/* top-level dependencies (begin daNpcT_faceMotionAnmData_c) */
-/* top-level dependencies (end daNpcT_faceMotionAnmData_c) */
-struct daNpcT_faceMotionAnmData_c {
-};
-
 /* top-level dependencies (begin daNpcT_c) */
-// outer dependency: fopAc_ac_c
-// outer dependency: J3DJoint
-// outer dependency: daNpcT_motionAnmData_c
 // outer dependency: cXyz
 // outer dependency: J3DModel
+// outer dependency: J3DJoint
+// outer dependency: fopAc_ac_c
 // outer dependency: daNpcT_faceMotionAnmData_c
+// outer dependency: daNpcT_motionAnmData_c
 /* top-level dependencies (end daNpcT_c) */
 struct daNpcT_c {
+	// J3DModel
 	// J3DJoint
 	// daNpcT_motionAnmData_c
-	// fopAc_ac_c
 	// cXyz
-	// J3DModel
+	// fopAc_ac_c
 	// daNpcT_faceMotionAnmData_c
 	/* 801490D4 */ void ctrlBtk();
 	/* 8014951C */ void ctrlJoint(J3DJoint*, J3DModel*);
@@ -219,12 +219,12 @@ struct daNpcT_c {
 	/* 8014A0B0 */ void evtOrder();
 	/* 8014A224 */ void evtChange();
 	/* 8014A324 */ void clrParam();
-	/* 8014A628 */ void setMotionAnm(s32, f32, s32);
-	/* 8014BBF0 */ void initTalk(s32, fopAc_ac_c**);
+	/* 8014A628 */ void setMotionAnm(int, f32, int);
+	/* 8014BBF0 */ void initTalk(int, fopAc_ac_c**);
 	/* 8014CBF4 */ void decTmr();
 	/* 8014CC0C */ void setCollision();
 	/* 8014CC10 */ void setAttnPos();
-	/* 8014CC14 */ void ctrlSubFaceMotion(s32);
+	/* 8014CC14 */ void ctrlSubFaceMotion(int);
 	/* 8014CC18 */ void afterMoved();
 	/* 8014CC1C */ void beforeMove();
 	/* 8014CC20 */ void action();
@@ -232,9 +232,9 @@ struct daNpcT_c {
 	/* 8014CC28 */ void drawOtherMdl();
 	/* 8014CC2C */ void drawGhost();
 	/* 8014CC30 */ bool drawDbgInfo();
-	/* 8014CC38 */ bool checkRemoveJoint(s32);
-	/* 8014CC40 */ bool checkChangeJoint(s32);
-	/* 8014CC48 */ void afterJntAnm(s32);
+	/* 8014CC38 */ bool checkRemoveJoint(int);
+	/* 8014CC40 */ bool checkChangeJoint(int);
+	/* 8014CC48 */ void afterJntAnm(int);
 	/* 8014CC4C */ s32 getHeadJointNo();
 	/* 8014CC54 */ s32 getNeckJointNo();
 	/* 8014CC5C */ s32 getBackboneJointNo();
@@ -246,13 +246,13 @@ struct daNpcT_c {
 	/* 8014CC88 */ s32 getFootRJointNo();
 	/* 8014CC90 */ s32 getFootLJointNo();
 	/* 8014CC98 */ bool chkXYItems();
-	/* 8014CCA0 */ bool afterSetFaceMotionAnm(s32, s32, f32, s32);
-	/* 8014CCA8 */ void changeBtp(s32*, s32*);
-	/* 8014CCAC */ void changeBck(s32*, s32*);
+	/* 8014CCA0 */ bool afterSetFaceMotionAnm(int, int, f32, int);
+	/* 8014CCA8 */ void changeBtp(int*, int*);
+	/* 8014CCAC */ void changeBck(int*, int*);
 	/* 8014CCB0 */ void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
-	/* 8014CCE0 */ bool afterSetMotionAnm(s32, s32, f32, s32);
-	/* 8014CCE8 */ void changeBtk(s32*, s32*);
-	/* 8014CCEC */ void changeAnm(s32*, s32*);
+	/* 8014CCE0 */ bool afterSetMotionAnm(int, int, f32, int);
+	/* 8014CCE8 */ void changeBtk(int*, int*);
+	/* 8014CCEC */ void changeAnm(int*, int*);
 	/* 8014CCF0 */ void getMotionAnm(daNpcT_motionAnmData_c);
 	/* 8014CD20 */ ~daNpcT_c();
 	/* 8014D0A8 */ bool getEyeballLMaterialNo();
@@ -276,7 +276,7 @@ struct JKRArchive {
 /* top-level dependencies (end dSelect_cursor_c) */
 struct dSelect_cursor_c {
 	// JKRArchive
-	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801951C8 */ void setScale(f32);
 	/* 80195330 */ void addAlpha();
@@ -307,17 +307,17 @@ struct ShopCam_action_c {
 struct dShopItemCtrl_c {
 	// cXyz
 	/* 80196958 */ ~dShopItemCtrl_c();
-	/* 801969A0 */ void getCurrentPos(s32);
-	/* 80196A3C */ void isHomePos(s32);
-	/* 80196AF0 */ void setRotateAnime(s32);
-	/* 80196BA4 */ void setZoomAnime(s32, cXyz*, s16, bool);
+	/* 801969A0 */ void getCurrentPos(int);
+	/* 80196A3C */ void isHomePos(int);
+	/* 80196AF0 */ void setRotateAnime(int);
+	/* 80196BA4 */ void setZoomAnime(int, cXyz*, s16, bool);
 };
 
 // build dMsgObject_c (dMsgObject_c) False/False
 /* top-level dependencies (begin dMsgObject_c) */
 /* top-level dependencies (end dMsgObject_c) */
 struct dMsgObject_c {
-	/* 802378B8 */ void setShopWaitTimer(char);
+	/* 802378B8 */ void setShopWaitTimer(u8);
 	/* 8023822C */ void getStatus();
 	/* 802382F4 */ void isMsgSendControl();
 	/* 80238320 */ void onMsgSend();
@@ -326,21 +326,21 @@ struct dMsgObject_c {
 
 // build mesg_flow_node_branch (mesg_flow_node_branch) True/True
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -465,14 +465,14 @@ SECTION_SDATA2 extern f32 lit_5694;
 void mDoLib_project(Vec*, Vec*);
 void fopAc_IsActor(void*);
 extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-void fopAcM_delete(s32);
-void fopAcM_create(s16, u32, cXyz const*, s32, csXyz const*, cXyz const*, char);
+void fopAcM_delete(u32);
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
 void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*);
-void fopAcM_createItemForPresentDemo(cXyz const*, s32, char, s32, s32, csXyz const*, cXyz const*);
+void fopAcM_createItemForPresentDemo(cXyz const*, int, u8, int, int, csXyz const*, cXyz const*);
 extern "C" void fpcEx_Search__FPFPvPv_PvPv();
-void fpcEx_IsExist(s32);
+void fpcEx_IsExist(u32);
 void fpcSch_JudgeByID(void*, void*);
-void checkItemGet(char, s32);
+void checkItemGet(u8, int);
 void dMeter2Info_set2DVibration();
 void dMeter2Info_set2DVibrationM();
 void cM_atan2s(f32, f32);
@@ -884,7 +884,7 @@ asm dShopSystem_c::~dShopSystem_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::onFlag(s32 field_0) {
+asm void dShopSystem_c::onFlag(int field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/onFlag__13dShopSystem_cFi.s"
 }
@@ -895,7 +895,7 @@ asm void dShopSystem_c::onFlag(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::offFlag(s32 field_0) {
+asm void dShopSystem_c::offFlag(int field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/offFlag__13dShopSystem_cFi.s"
 }
@@ -906,7 +906,7 @@ asm void dShopSystem_c::offFlag(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::isFlag(s32 field_0) {
+asm void dShopSystem_c::isFlag(int field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/isFlag__13dShopSystem_cFi.s"
 }
@@ -917,7 +917,7 @@ asm void dShopSystem_c::isFlag(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::onSoldOutItemFlag(s32 field_0) {
+asm void dShopSystem_c::onSoldOutItemFlag(int field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/onSoldOutItemFlag__13dShopSystem_cFi.s"
 }
@@ -928,7 +928,7 @@ asm void dShopSystem_c::onSoldOutItemFlag(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::offSoldOutItemFlag(s32 field_0) {
+asm void dShopSystem_c::offSoldOutItemFlag(int field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/offSoldOutItemFlag__13dShopSystem_cFi.s"
 }
@@ -939,7 +939,7 @@ asm void dShopSystem_c::offSoldOutItemFlag(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::isSoldOutItemFlag(s32 field_0) {
+asm void dShopSystem_c::isSoldOutItemFlag(int field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/isSoldOutItemFlag__13dShopSystem_cFi.s"
 }
@@ -950,7 +950,7 @@ asm void dShopSystem_c::isSoldOutItemFlag(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::checkController(char field_0, dMsgFlow_c* field_1) {
+asm void dShopSystem_c::checkController(u8 field_0, dMsgFlow_c* field_1) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/checkController__13dShopSystem_cFUcP10dMsgFlow_c.s"
 }
@@ -974,7 +974,7 @@ f32 d_shop_d_shop_system__lit_4496 = 5.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::chooseItem3(char field_0) {
+asm void dShopSystem_c::chooseItem3(u8 field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/chooseItem3__13dShopSystem_cFUc.s"
 }
@@ -985,7 +985,7 @@ asm void dShopSystem_c::chooseItem3(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::chooseItem5(char field_0) {
+asm void dShopSystem_c::chooseItem5(u8 field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/chooseItem5__13dShopSystem_cFUc.s"
 }
@@ -996,7 +996,7 @@ asm void dShopSystem_c::chooseItem5(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::chooseItem4(char field_0) {
+asm void dShopSystem_c::chooseItem4(u8 field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/chooseItem4__13dShopSystem_cFUc.s"
 }
@@ -1007,7 +1007,7 @@ asm void dShopSystem_c::chooseItem4(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::moveCursor(s32 field_0, char field_1) {
+asm void dShopSystem_c::moveCursor(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/moveCursor__13dShopSystem_cFiUc.s"
 }
@@ -1018,7 +1018,7 @@ asm void dShopSystem_c::moveCursor(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::moveCursor0(s32 field_0, char field_1) {
+asm void dShopSystem_c::moveCursor0(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/moveCursor0__13dShopSystem_cFiUc.s"
 }
@@ -1029,7 +1029,7 @@ asm void dShopSystem_c::moveCursor0(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::moveCursor1(s32 field_0, char field_1) {
+asm void dShopSystem_c::moveCursor1(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/moveCursor1__13dShopSystem_cFiUc.s"
 }
@@ -1288,7 +1288,7 @@ u8 data_80453B58[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::createShopItem(s32 field_0) {
+asm void dShopSystem_c::createShopItem(int field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/createShopItem__13dShopSystem_cFi.s"
 }
@@ -1299,7 +1299,7 @@ asm void dShopSystem_c::createShopItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::setSeq(char field_0) {
+asm void dShopSystem_c::setSeq(u8 field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/setSeq__13dShopSystem_cFUc.s"
 }
@@ -1401,7 +1401,7 @@ asm void dShopSystem_c::getFlowNodeNum() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_c::setSellItemMax(char field_0) {
+asm void dShopSystem_c::setSellItemMax(u8 field_0) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/setSellItemMax__13dShopSystem_cFUc.s"
 }
@@ -1459,19 +1459,19 @@ extern "C" asm void __sinit_d_shop_system_cpp() {
 
 
 /* 8019ACE0-8019ACE8 0008+00 rc=1 efc=0 .text      beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci         */
-bool dShopSystem_c::beforeStartSeqAction(dMsgFlow_c* field_0, s32 field_1) {
+bool dShopSystem_c::beforeStartSeqAction(dMsgFlow_c* field_0, int field_1) {
 	return true;
 }
 
 
 /* 8019ACE8-8019ACF0 0008+00 rc=1 efc=0 .text      beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci        */
-bool dShopSystem_c::beforeSelectSeqAction(dMsgFlow_c* field_0, s32 field_1) {
+bool dShopSystem_c::beforeSelectSeqAction(dMsgFlow_c* field_0, int field_1) {
 	return true;
 }
 
 
 /* 8019ACF0-8019ACF8 0008+00 rc=1 efc=0 .text      getResName2__13dShopSystem_cFi                               */
-bool dShopSystem_c::getResName2(s32 field_0) {
+bool dShopSystem_c::getResName2(int field_0) {
 	return false;
 }
 

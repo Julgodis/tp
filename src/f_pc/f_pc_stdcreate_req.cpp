@@ -71,8 +71,8 @@ SECTION_DATA extern void*data_803A3AFC[7];
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(s32, s32);
-void fpcBs_Create(s16, s32, void*);
+void fpcBs_Is_JustOfType(int, int);
+void fpcBs_Create(s16, u32, void*);
 void fpcBs_SubCreate(base_process_class*);
 void fpcCtRq_Create(layer_class*, u32, create_request_method_class*);
 void fpcLy_IsCreatingMesg(layer_class*);

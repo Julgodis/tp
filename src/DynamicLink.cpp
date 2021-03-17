@@ -55,7 +55,7 @@ struct DynamicModuleControl {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 	/* 802CE624 */ void resize(void*, u32, JKRHeap*);
 	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
@@ -84,14 +84,14 @@ struct JKRArchive;
 // build JKRHeap (JKRHeap) True/True
 // build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin JKRArchive) */
-// outer dependency: JKRArchive::EMountMode
-// outer dependency: JKRHeap
 // outer dependency: JKRArchive::EMountDirection
+// outer dependency: JKRHeap
+// outer dependency: JKRArchive::EMountMode
 /* top-level dependencies (end JKRArchive) */
 struct JKRArchive {
-	// JKRArchive::EMountMode
-	// JKRHeap
 	// JKRArchive::EMountDirection
+	// JKRHeap
+	// JKRArchive::EMountMode
 	// build EMountMode (JKRArchive::EMountMode) False/False
 	/* dependencies (begin JKRArchive::EMountMode) */
 	/* dependencies (end JKRArchive::EMountMode) */
@@ -109,23 +109,23 @@ struct JKRArchive {
 };
 
 // build JKRDvdRipper (JKRDvdRipper) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JKRExpandSwitch (JKRExpandSwitch) False/False
 /* top-level dependencies (begin JKRExpandSwitch) */
 /* top-level dependencies (end JKRExpandSwitch) */
 struct JKRExpandSwitch {
 };
 
+// build JKRHeap (JKRHeap) True/True
 // build JKRDvdRipper (JKRDvdRipper) True/False
 struct JKRDvdRipper;
 /* top-level dependencies (begin JKRDvdRipper) */
-// outer dependency: JKRHeap
 // outer dependency: JKRExpandSwitch
+// outer dependency: JKRHeap
 // outer dependency: JKRDvdRipper::EAllocDirection
 /* top-level dependencies (end JKRDvdRipper) */
 struct JKRDvdRipper {
-	// JKRHeap
 	// JKRExpandSwitch
+	// JKRHeap
 	// JKRDvdRipper::EAllocDirection
 	// build EAllocDirection (JKRDvdRipper::EAllocDirection) False/False
 	/* dependencies (begin JKRDvdRipper::EAllocDirection) */
@@ -133,7 +133,7 @@ struct JKRDvdRipper {
 	struct EAllocDirection {
 	};
 
-	/* 802D9B98 */ void loadToMainRAM(char const*, char*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, s32*, u32*);
+	/* 802D9B98 */ void loadToMainRAM(char const*, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
 };
 
 // build JKRExpandSwitch (JKRExpandSwitch) True/True

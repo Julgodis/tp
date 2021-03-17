@@ -39,25 +39,25 @@ struct Z2AudioMgr {
 };
 
 // build JUTResFont (JUTResFont) False/False
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-};
-
 // build ResFONT (ResFONT) False/False
 /* top-level dependencies (begin ResFONT) */
 /* top-level dependencies (end ResFONT) */
 struct ResFONT {
 };
 
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+};
+
 /* top-level dependencies (begin JUTResFont) */
-// outer dependency: JKRHeap
 // outer dependency: ResFONT
+// outer dependency: JKRHeap
 /* top-level dependencies (end JUTResFont) */
 struct JUTResFont {
-	// JKRHeap
 	// ResFONT
+	// JKRHeap
 	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
 	/* 802DF000 */ ~JUTResFont();
 };
@@ -122,7 +122,7 @@ struct J3DSys {
 // 
 
 static void messageSet(u32, bool);
-static void drawCapture(char);
+static void drawCapture(u8);
 
 extern "C" static void messageSet__FUlb();
 extern "C" void draw__14dDvdErrorMsg_cFl();
@@ -153,9 +153,9 @@ SECTION_SBSS2 extern u8 d_d_error_msg__lit_3873[4 + 4 /* padding */];
 
 extern "C" void OSReport_Error();
 void mDoAud_resetRecover();
-void mDoGph_drawFilterQuad(char, char);
-void mDoRst_reset(s32, u32, s32);
-void cLib_chaseUC(char*, char, char);
+void mDoGph_drawFilterQuad(s8, s8);
+void mDoRst_reset(int, u32, int);
+void cLib_chaseUC(u8*, u8, u8);
 extern "C" void func_802E980C();
 extern "C" void func_802FC800();
 extern "C" void func_802FFBC4();
@@ -19002,7 +19002,7 @@ u8 d_d_error_msg__lit_3873[4 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void drawCapture(char field_0) {
+asm static void drawCapture(u8 field_0) {
 	nofralloc
 #include "asm/d/d_error_msg/drawCapture__FUc.s"
 }

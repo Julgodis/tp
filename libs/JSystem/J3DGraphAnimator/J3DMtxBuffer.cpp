@@ -16,11 +16,19 @@
 struct J3DModelData {
 };
 
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
 /* top-level dependencies (begin J3DMtxBuffer) */
 // outer dependency: J3DModelData
+// outer dependency: Vec
 /* top-level dependencies (end J3DMtxBuffer) */
 struct J3DMtxBuffer {
 	// J3DModelData
+	// Vec
 	/* 80326214 */ void initialize();
 	/* 80326258 */ void create(J3DModelData*, u32);
 	/* 80326364 */ void createAnmMtx(J3DModelData*);
@@ -29,11 +37,13 @@ struct J3DMtxBuffer {
 	/* 803264B8 */ void createDoubleDrawMtx(J3DModelData*, u32);
 	/* 80326664 */ void createBumpMtxArray(J3DModelData*, u32);
 	/* 803268D4 */ void calcWeightEnvelopeMtx();
+	/* 80326ACC */ void calcDrawMtx(u32, Vec const&, f32 const (& )[3][4]);
 	/* 80326D3C */ void calcNrmMtx();
 	/* 80326EF0 */ void calcBBoardMtx();
 };
 
 // build J3DModelData (J3DModelData) True/True
+// build Vec (Vec) True/True
 // build J3DShape (J3DShape) False/False
 /* top-level dependencies (begin J3DShape) */
 /* top-level dependencies (end J3DShape) */
@@ -45,8 +55,7 @@ struct J3DShape {
 // Forward References:
 // 
 
-extern "C" void calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf();
-extern "C" void J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f();
+void J3DCalcViewBaseMtx(f32 (* )[4], Vec const&, f32 const (& )[3][4], f32 (* )[4]);
 
 extern "C" void initialize__12J3DMtxBufferFv();
 extern "C" void create__12J3DMtxBufferFP12J3DModelDataUl();
@@ -73,11 +82,11 @@ SECTION_SDATA2 extern u8 lit_1321[4];
 // 
 
 void* operator new[](u32);
-void* operator new[](u32, s32);
-extern "C" void J3DCalcBBoardMtx__FPA4_f();
-extern "C" void J3DCalcYBBoardMtx__FPA4_f();
-extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f();
-extern "C" void J3DPSMtxArrayConcat__FPA4_fPA4_fPA4_fUl();
+void* operator new[](u32, int);
+void J3DCalcBBoardMtx(f32 (* )[4]);
+void J3DCalcYBBoardMtx(f32 (* )[4]);
+void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]);
+void J3DPSMtxArrayConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4], u32);
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXConcat();
 extern "C" void _savegpr_19();
@@ -221,7 +230,7 @@ asm void J3DMtxBuffer::calcWeightEnvelopeMtx() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf() {
+asm void J3DMtxBuffer::calcDrawMtx(u32 field_0, Vec const& field_1, f32 const (& field_2)[3][4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMtxBuffer/calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf.s"
 }
@@ -263,7 +272,7 @@ asm void J3DMtxBuffer::calcBBoardMtx() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f() {
+asm void J3DCalcViewBaseMtx(f32 (* field_0)[4], Vec const& field_1, f32 const (& field_2)[3][4], f32 (* field_3)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DMtxBuffer/J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f.s"
 }

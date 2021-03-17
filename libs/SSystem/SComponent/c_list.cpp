@@ -28,7 +28,7 @@ struct node_class {
 static void cLs_Init(node_list_class*);
 void cLs_SingleCut(node_class*);
 void cLs_Addition(node_list_class*, node_class*);
-void cLs_Insert(node_list_class*, s32, node_class*);
+void cLs_Insert(node_list_class*, int, node_class*);
 void cLs_GetFirst(node_list_class*);
 void cLs_Create(node_list_class*);
 
@@ -46,7 +46,7 @@ extern "C" void cLs_Create__FP15node_list_class();
 void cNd_LengthOf(node_class*);
 void cNd_First(node_class*);
 void cNd_Last(node_class*);
-void cNd_Order(node_class*, s32);
+void cNd_Order(node_class*, int);
 void cNd_SingleCut(node_class*);
 void cNd_Addition(node_class*, node_class*);
 void cNd_Insert(node_class*, node_class*);
@@ -108,7 +108,7 @@ asm void cLs_Addition(node_list_class* field_0, node_class* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cLs_Insert(node_list_class* field_0, s32 field_1, node_class* field_2) {
+asm void cLs_Insert(node_list_class* field_0, int field_1, node_class* field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_list/cLs_Insert__FP15node_list_classiP10node_class.s"
 }

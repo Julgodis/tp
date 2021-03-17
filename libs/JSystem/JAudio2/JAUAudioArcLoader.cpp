@@ -55,7 +55,7 @@ struct JAUAudioArcLoader {
 	/* 802A4968 */ void readBSFT(void const*);
 	/* 802A4990 */ void beginBNKList(u32, u32);
 	/* 802A49B4 */ void endBNKList();
-	/* 802A49D8 */ void readMaxSeCategory(s32, s32, s32);
+	/* 802A49D8 */ void readMaxSeCategory(int, int, int);
 	/* 802A49FC */ ~JAUAudioArcLoader();
 };
 
@@ -317,7 +317,7 @@ asm void JAUAudioArcLoader::endBNKList() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAUAudioArcLoader::readMaxSeCategory(s32 field_0, s32 field_1, s32 field_2) {
+asm void JAUAudioArcLoader::readMaxSeCategory(int field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUAudioArcLoader/readMaxSeCategory__17JAUAudioArcLoaderFiii.s"
 }

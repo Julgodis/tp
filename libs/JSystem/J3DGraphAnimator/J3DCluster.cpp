@@ -10,10 +10,10 @@
 // 
 
 // build J3DDeformData (J3DDeformData) False/False
-// build J3DAnmCluster (J3DAnmCluster) False/False
-/* top-level dependencies (begin J3DAnmCluster) */
-/* top-level dependencies (end J3DAnmCluster) */
-struct J3DAnmCluster {
+// build J3DModel (J3DModel) False/False
+/* top-level dependencies (begin J3DModel) */
+/* top-level dependencies (end J3DModel) */
+struct J3DModel {
 };
 
 // build J3DVertexBuffer (J3DVertexBuffer) False/False
@@ -22,21 +22,21 @@ struct J3DAnmCluster {
 struct J3DVertexBuffer {
 };
 
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
-struct J3DModel {
+// build J3DAnmCluster (J3DAnmCluster) False/False
+/* top-level dependencies (begin J3DAnmCluster) */
+/* top-level dependencies (end J3DAnmCluster) */
+struct J3DAnmCluster {
 };
 
 /* top-level dependencies (begin J3DDeformData) */
-// outer dependency: J3DAnmCluster
-// outer dependency: J3DVertexBuffer
 // outer dependency: J3DModel
+// outer dependency: J3DVertexBuffer
+// outer dependency: J3DAnmCluster
 /* top-level dependencies (end J3DDeformData) */
 struct J3DDeformData {
-	// J3DAnmCluster
-	// J3DVertexBuffer
 	// J3DModel
+	// J3DVertexBuffer
+	// J3DAnmCluster
 	/* 8032E1F8 */ J3DDeformData();
 	/* 8032E230 */ void offAllFlag(u32);
 	/* 8032E274 */ void deform(J3DModel*);
@@ -48,37 +48,37 @@ struct J3DDeformData {
 // build J3DVertexBuffer (J3DVertexBuffer) True/True
 // build J3DAnmCluster (J3DAnmCluster) True/True
 // build J3DDeformer (J3DDeformer) False/False
-// build J3DVertexBuffer (J3DVertexBuffer) True/True
 // build J3DClusterKey (J3DClusterKey) False/False
 /* top-level dependencies (begin J3DClusterKey) */
 /* top-level dependencies (end J3DClusterKey) */
 struct J3DClusterKey {
 };
 
+// build J3DDeformData (J3DDeformData) True/True
+// build J3DVertexBuffer (J3DVertexBuffer) True/True
 // build J3DCluster (J3DCluster) False/False
 /* top-level dependencies (begin J3DCluster) */
 /* top-level dependencies (end J3DCluster) */
 struct J3DCluster {
 };
 
-// build J3DDeformData (J3DDeformData) True/True
 /* top-level dependencies (begin J3DDeformer) */
-// outer dependency: J3DVertexBuffer
 // outer dependency: J3DClusterKey
-// outer dependency: J3DCluster
 // outer dependency: J3DDeformData
+// outer dependency: J3DVertexBuffer
+// outer dependency: J3DCluster
 /* top-level dependencies (end J3DDeformer) */
 struct J3DDeformer {
-	// J3DVertexBuffer
 	// J3DClusterKey
-	// J3DCluster
 	// J3DDeformData
+	// J3DVertexBuffer
+	// J3DCluster
 	/* 8032E39C */ J3DDeformer(J3DDeformData*);
 	/* 8032E3BC */ void deform(J3DVertexBuffer*, u16);
 	/* 8032E4A4 */ void deform_VtxPosF32(J3DVertexBuffer*, J3DCluster*, J3DClusterKey*, f32*);
 	/* 8032E60C */ void deform_VtxNrmF32(J3DVertexBuffer*, J3DCluster*, J3DClusterKey*, f32*);
 	/* 8032EAB4 */ void deform(J3DVertexBuffer*, u16, f32*);
-	/* 8032EBCC */ void normalizeWeight(s32, f32*);
+	/* 8032EBCC */ void normalizeWeight(int, f32*);
 };
 
 // build J3DCluster (J3DCluster) True/True
@@ -297,7 +297,7 @@ asm void J3DDeformer::deform(J3DVertexBuffer* field_0, u16 field_1, f32* field_2
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DDeformer::normalizeWeight(s32 field_0, f32* field_1) {
+asm void J3DDeformer::normalizeWeight(int field_0, f32* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DCluster/normalizeWeight__11J3DDeformerFiPf.s"
 }

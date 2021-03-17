@@ -35,36 +35,36 @@ struct JASOscillator {
 
 };
 
+// build JASBNKParser (JASBNKParser) True/False
+struct JASBNKParser;
 // build JASBasicBank (JASBasicBank) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JASInst (JASInst) False/False
 /* top-level dependencies (begin JASInst) */
 /* top-level dependencies (end JASInst) */
 struct JASInst {
 };
 
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin JASBasicBank) */
-// outer dependency: JKRHeap
 // outer dependency: JASInst
+// outer dependency: JKRHeap
 /* top-level dependencies (end JASBasicBank) */
 struct JASBasicBank {
-	// JKRHeap
 	// JASInst
+	// JKRHeap
 	/* 80297D78 */ JASBasicBank();
-	/* 80297DA4 */ void newInstTable(char, JKRHeap*);
-	/* 80297E68 */ void setInst(s32, JASInst*);
-	/* 80297E80 */ void getInst(s32) const;
+	/* 80297DA4 */ void newInstTable(u8, JKRHeap*);
+	/* 80297E68 */ void setInst(int, JASInst*);
+	/* 80297E80 */ void getInst(int) const;
 };
 
-// build JASBNKParser (JASBNKParser) True/False
-struct JASBNKParser;
 // build JASBNKParser (JASBNKParser) True/True
 /* top-level dependencies (begin JASBNKParser) */
 // outer dependency: JKRHeap
 // outer dependency: JASOscillator::Point
+// outer dependency: JASBNKParser::Ver0::THeader
 // outer dependency: JASBasicBank
 // outer dependency: JASBNKParser::Ver0::TOsc
-// outer dependency: JASBNKParser::Ver0::THeader
 /* top-level dependencies (end JASBNKParser) */
 struct JASBNKParser {
 	// JKRHeap
@@ -79,15 +79,15 @@ struct JASBNKParser {
 
 	// build Ver0 (JASBNKParser::Ver0) False/False
 	/* dependencies (begin JASBNKParser::Ver0) */
-	// inner dependency: Ver0 (JASBNKParser::Ver0::TOsc) True False (for JASBNKParser::Ver0)
 	// inner dependency: Ver0 (JASBNKParser::Ver0::THeader) True False (for JASBNKParser::Ver0)
+	// inner dependency: Ver0 (JASBNKParser::Ver0::TOsc) True False (for JASBNKParser::Ver0)
 	/* dependencies (end JASBNKParser::Ver0) */
 	struct Ver0 {
-		// JASBNKParser::Ver0::TOsc
-		// JKRHeap
-		// JASOscillator::Point
-		// JASBasicBank
 		// JASBNKParser::Ver0::THeader
+		// JASOscillator::Point
+		// JKRHeap
+		// JASBasicBank
+		// JASBNKParser::Ver0::TOsc
 		// build THeader (JASBNKParser::Ver0::THeader) False/False
 		/* dependencies (begin JASBNKParser::Ver0::THeader) */
 		/* dependencies (end JASBNKParser::Ver0::THeader) */
@@ -139,21 +139,21 @@ struct JASBasicInst {
 	// JASOscillator::Data
 	/* 80298014 */ JASBasicInst();
 	/* 8029819C */ void setKeyRegionCount(u32, JKRHeap*);
-	/* 8029821C */ void setOsc(s32, JASOscillator::Data const*);
-	/* 8029822C */ void getKeyRegion(s32);
+	/* 8029821C */ void setOsc(int, JASOscillator::Data const*);
+	/* 8029822C */ void getKeyRegion(int);
 };
 
 // build JASDrumSet (JASDrumSet) False/False
-// build JKRHeap (JKRHeap) True/True
 // build JASDrumSet (JASDrumSet) True/False
 struct JASDrumSet;
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin JASDrumSet) */
-// outer dependency: JKRHeap
 // outer dependency: JASDrumSet::TPerc
+// outer dependency: JKRHeap
 /* top-level dependencies (end JASDrumSet) */
 struct JASDrumSet {
-	// JKRHeap
 	// JASDrumSet::TPerc
+	// JKRHeap
 	// build TPerc (JASDrumSet::TPerc) False/False
 	/* dependencies (begin JASDrumSet::TPerc) */
 	/* dependencies (end JASDrumSet::TPerc) */
@@ -163,8 +163,8 @@ struct JASDrumSet {
 	};
 
 	/* 802982EC */ JASDrumSet();
-	/* 80298370 */ void newPercArray(char, JKRHeap*);
-	/* 802984B4 */ void setPerc(s32, JASDrumSet::TPerc*);
+	/* 80298370 */ void newPercArray(u8, JKRHeap*);
+	/* 802984B4 */ void setPerc(int, JASDrumSet::TPerc*);
 };
 
 // 
@@ -211,8 +211,8 @@ SECTION_SDATA2 extern f32 JASBNKParser__lit_1047;
 // 
 
 extern "C" void func_802978DC();
-void* operator new(u32, JKRHeap*, s32);
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
+void* operator new[](u32, JKRHeap*, int);
 extern "C" void __register_global_object();
 extern "C" void _savegpr_17();
 extern "C" void _savegpr_19();

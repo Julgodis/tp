@@ -25,7 +25,7 @@ struct JPABaseParticle {
 /* top-level dependencies (begin JPAExtraShape) */
 /* top-level dependencies (end JPAExtraShape) */
 struct JPAExtraShape {
-	/* 8027AD88 */ JPAExtraShape(char const*);
+	/* 8027AD88 */ JPAExtraShape(u8 const*);
 	/* 8027ADBC */ void init();
 };
 
@@ -213,7 +213,7 @@ asm void JPACalcAlphaFlickAnm(JPAEmitterWorkData* field_0, JPABaseParticle* fiel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JPAExtraShape::JPAExtraShape(char const* field_0) {
+asm JPAExtraShape::JPAExtraShape(u8 const* field_0) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAExtraShape/__ct__13JPAExtraShapeFPCUc.s"
 }

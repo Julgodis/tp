@@ -10,16 +10,10 @@
 // 
 
 // build Z2SoundInfo (Z2SoundInfo) False/False
-// build JAISe (JAISe) False/False
-/* top-level dependencies (begin JAISe) */
-/* top-level dependencies (end JAISe) */
-struct JAISe {
-};
-
-// build JAISeq (JAISeq) False/False
-/* top-level dependencies (begin JAISeq) */
-/* top-level dependencies (end JAISeq) */
-struct JAISeq {
+// build JAIStream (JAIStream) False/False
+/* top-level dependencies (begin JAIStream) */
+/* top-level dependencies (end JAIStream) */
+struct JAIStream {
 };
 
 // build JAISound (JAISound) False/False
@@ -28,31 +22,37 @@ struct JAISeq {
 struct JAISound {
 };
 
+// build JAISeq (JAISeq) False/False
+/* top-level dependencies (begin JAISeq) */
+/* top-level dependencies (end JAISeq) */
+struct JAISeq {
+};
+
+// build JAISe (JAISe) False/False
+/* top-level dependencies (begin JAISe) */
+/* top-level dependencies (end JAISe) */
+struct JAISe {
+};
+
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build JAIStream (JAIStream) False/False
-/* top-level dependencies (begin JAIStream) */
-/* top-level dependencies (end JAIStream) */
-struct JAIStream {
-};
-
 /* top-level dependencies (begin Z2SoundInfo) */
-// outer dependency: JAISe
-// outer dependency: JAISeq
-// outer dependency: JAISound
-// outer dependency: JAISoundID
 // outer dependency: JAIStream
+// outer dependency: JAISound
+// outer dependency: JAISeq
+// outer dependency: JAISe
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SoundInfo) */
 struct Z2SoundInfo {
-	// JAISe
-	// JAISoundID
 	// JAIStream
-	// JAISeq
 	// JAISound
+	// JAISoundID
+	// JAISeq
+	// JAISe
 	/* 802BB00C */ void getBgmSeqResourceID(JAISoundID) const;
 	/* 802BB090 */ void getSoundType(JAISoundID) const;
 	/* 802BB0D8 */ void getCategory(JAISoundID) const;

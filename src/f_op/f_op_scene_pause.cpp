@@ -29,10 +29,10 @@ extern "C" void fopScnPause_Disable__FP11scene_class();
 // External References:
 // 
 
-void fpcEx_IsExist(s32);
-void fpcM_IsPause(void*, char);
-void fpcM_PauseEnable(void*, char);
-void fpcM_PauseDisable(void*, char);
+void fpcEx_IsExist(u32);
+void fpcM_IsPause(void*, u8);
+void fpcM_PauseEnable(void*, u8);
+void fpcM_PauseDisable(void*, u8);
 
 extern "C" void fpcEx_IsExist__FUi();
 extern "C" void fpcM_IsPause__FPvUc();

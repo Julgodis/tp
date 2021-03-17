@@ -72,27 +72,27 @@ struct J3DAnmTransformKey {
 struct J3DModelData {
 };
 
-// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
-/* top-level dependencies (begin J3DTextureSRTInfo) */
-/* top-level dependencies (end J3DTextureSRTInfo) */
-struct J3DTextureSRTInfo {
-};
-
 // build J3DMaterialTable (J3DMaterialTable) False/False
 /* top-level dependencies (begin J3DMaterialTable) */
 /* top-level dependencies (end J3DMaterialTable) */
 struct J3DMaterialTable {
 };
 
+// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
+/* top-level dependencies (begin J3DTextureSRTInfo) */
+/* top-level dependencies (end J3DTextureSRTInfo) */
+struct J3DTextureSRTInfo {
+};
+
 /* top-level dependencies (begin J3DAnmTextureSRTKey) */
 // outer dependency: J3DModelData
-// outer dependency: J3DTextureSRTInfo
 // outer dependency: J3DMaterialTable
+// outer dependency: J3DTextureSRTInfo
 /* top-level dependencies (end J3DAnmTextureSRTKey) */
 struct J3DAnmTextureSRTKey {
 	// J3DModelData
-	// J3DTextureSRTInfo
 	// J3DMaterialTable
+	// J3DTextureSRTInfo
 	/* 80329E5C */ J3DAnmTextureSRTKey();
 	/* 80329F14 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
 	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
@@ -135,7 +135,7 @@ struct J3DAnmVtxColor {
 	/* 8032A29C */ J3DAnmVtxColor();
 	/* 8032BC50 */ ~J3DAnmVtxColor();
 	/* 8032C038 */ s32 getKind() const;
-	/* 8032C040 */ void getColor(char, u16, _GXColor*) const;
+	/* 8032C040 */ void getColor(u8, u16, _GXColor*) const;
 };
 
 // build J3DAnmVtxColorFull (J3DAnmVtxColorFull) False/False
@@ -146,7 +146,7 @@ struct J3DAnmVtxColor {
 struct J3DAnmVtxColorFull {
 	// _GXColor
 	/* 8032A30C */ J3DAnmVtxColorFull();
-	/* 8032A368 */ void getColor(char, u16, _GXColor*) const;
+	/* 8032A368 */ void getColor(u8, u16, _GXColor*) const;
 	/* 8032BFC4 */ ~J3DAnmVtxColorFull();
 	/* 8032C030 */ s32 getKind() const;
 };
@@ -160,21 +160,21 @@ struct J3DAnmVtxColorFull {
 struct J3DAnmVtxColorKey {
 	// _GXColor
 	/* 8032A4E0 */ J3DAnmVtxColorKey();
-	/* 8032A53C */ void getColor(char, u16, _GXColor*) const;
+	/* 8032A53C */ void getColor(u8, u16, _GXColor*) const;
 	/* 8032BF50 */ ~J3DAnmVtxColorKey();
 	/* 8032BFBC */ s32 getKind() const;
 };
 
 // build J3DAnmColor (J3DAnmColor) False/False
-// build _GXColor (_GXColor) True/True
 // build J3DMaterialTable (J3DMaterialTable) True/True
+// build _GXColor (_GXColor) True/True
 /* top-level dependencies (begin J3DAnmColor) */
-// outer dependency: _GXColor
 // outer dependency: J3DMaterialTable
+// outer dependency: _GXColor
 /* top-level dependencies (end J3DAnmColor) */
 struct J3DAnmColor {
-	// _GXColor
 	// J3DMaterialTable
+	// _GXColor
 	/* 8032A828 */ J3DAnmColor();
 	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
 	/* 8032BCAC */ ~J3DAnmColor();
@@ -210,9 +210,9 @@ struct J3DAnmColorKey {
 };
 
 // build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
-// build _GXColor (_GXColor) True/True
 // build J3DModelData (J3DModelData) True/True
 // build J3DMaterialTable (J3DMaterialTable) True/True
+// build _GXColor (_GXColor) True/True
 // build _GXColorS10 (_GXColorS10) False/False
 /* top-level dependencies (begin _GXColorS10) */
 /* top-level dependencies (end _GXColorS10) */
@@ -220,15 +220,15 @@ struct _GXColorS10 {
 };
 
 /* top-level dependencies (begin J3DAnmTevRegKey) */
-// outer dependency: _GXColor
 // outer dependency: J3DModelData
 // outer dependency: J3DMaterialTable
+// outer dependency: _GXColor
 // outer dependency: _GXColorS10
 /* top-level dependencies (end J3DAnmTevRegKey) */
 struct J3DAnmTevRegKey {
-	// _GXColor
 	// J3DModelData
 	// J3DMaterialTable
+	// _GXColor
 	// _GXColorS10
 	/* 8032AE18 */ J3DAnmTevRegKey();
 	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
@@ -689,7 +689,7 @@ asm J3DAnmVtxColorFull::J3DAnmVtxColorFull() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DAnmVtxColorFull::getColor(char field_0, u16 field_1, _GXColor* field_2) const {
+asm void J3DAnmVtxColorFull::getColor(u8 field_0, u16 field_1, _GXColor* field_2) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DAnimation/getColor__18J3DAnmVtxColorFullCFUcUsP8_GXColor.s"
 }
@@ -715,7 +715,7 @@ f32 lit_1499 = 255.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DAnmVtxColorKey::getColor(char field_0, u16 field_1, _GXColor* field_2) const {
+asm void J3DAnmVtxColorKey::getColor(u8 field_0, u16 field_1, _GXColor* field_2) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DAnimation/getColor__17J3DAnmVtxColorKeyCFUcUsP8_GXColor.s"
 }
@@ -1082,7 +1082,7 @@ s32 J3DAnmVtxColor::getKind() const {
 
 
 /* 8032C040-8032C044 0004+00 rc=1 efc=0 .text      getColor__14J3DAnmVtxColorCFUcUsP8_GXColor                   */
-void J3DAnmVtxColor::getColor(char field_0, u16 field_1, _GXColor* field_2) const {
+void J3DAnmVtxColor::getColor(u8 field_0, u16 field_1, _GXColor* field_2) const {
 	/* empty function */
 }
 

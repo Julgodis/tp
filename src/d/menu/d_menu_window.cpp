@@ -13,41 +13,41 @@
 /* top-level dependencies (begin dMw_c) */
 /* top-level dependencies (end dMw_c) */
 struct dMw_c {
-	/* 801FA13C */ void key_wait_init(char);
-	/* 801FA220 */ void ring_open_init(char);
-	/* 801FA23C */ void ring_move_init(char);
-	/* 801FA240 */ void ring_close_init(char);
-	/* 801FA244 */ void collect_open_init(char);
-	/* 801FA2D0 */ void collect_move_init(char);
-	/* 801FA46C */ void collect_close_init(char);
-	/* 801FA538 */ void fmap_open_init(char);
-	/* 801FA55C */ void fmap_move_init(char);
-	/* 801FA560 */ void fmap_close_init(char);
-	/* 801FA564 */ void dmap_open_init(char);
-	/* 801FA588 */ void dmap_move_init(char);
-	/* 801FA58C */ void dmap_close_init(char);
-	/* 801FA590 */ void collect_save_open_init(char);
-	/* 801FA5E4 */ void collect_save_move_init(char);
-	/* 801FA5E8 */ void collect_save_close_init(char);
-	/* 801FA608 */ void collect_option_open_init(char);
-	/* 801FA65C */ void collect_option_move_init(char);
-	/* 801FA660 */ void collect_option_close_init(char);
-	/* 801FA680 */ void collect_letter_open_init(char);
-	/* 801FA6DC */ void collect_letter_move_init(char);
-	/* 801FA6E0 */ void collect_letter_close_init(char);
-	/* 801FA738 */ void collect_fishing_open_init(char);
-	/* 801FA794 */ void collect_fishing_move_init(char);
-	/* 801FA798 */ void collect_fishing_close_init(char);
-	/* 801FA7F0 */ void collect_skill_open_init(char);
-	/* 801FA84C */ void collect_skill_move_init(char);
-	/* 801FA850 */ void collect_skill_close_init(char);
-	/* 801FA8A8 */ void collect_insect_open_init(char);
-	/* 801FA908 */ void collect_insect_move_init(char);
-	/* 801FA90C */ void collect_insect_close_init(char);
-	/* 801FA964 */ void insect_open_init(char);
-	/* 801FA9E8 */ void insect_open2_init(char);
-	/* 801FA9EC */ void insect_move_init(char);
-	/* 801FA9F0 */ void insect_close_init(char);
+	/* 801FA13C */ void key_wait_init(u8);
+	/* 801FA220 */ void ring_open_init(u8);
+	/* 801FA23C */ void ring_move_init(u8);
+	/* 801FA240 */ void ring_close_init(u8);
+	/* 801FA244 */ void collect_open_init(u8);
+	/* 801FA2D0 */ void collect_move_init(u8);
+	/* 801FA46C */ void collect_close_init(u8);
+	/* 801FA538 */ void fmap_open_init(u8);
+	/* 801FA55C */ void fmap_move_init(u8);
+	/* 801FA560 */ void fmap_close_init(u8);
+	/* 801FA564 */ void dmap_open_init(u8);
+	/* 801FA588 */ void dmap_move_init(u8);
+	/* 801FA58C */ void dmap_close_init(u8);
+	/* 801FA590 */ void collect_save_open_init(u8);
+	/* 801FA5E4 */ void collect_save_move_init(u8);
+	/* 801FA5E8 */ void collect_save_close_init(u8);
+	/* 801FA608 */ void collect_option_open_init(u8);
+	/* 801FA65C */ void collect_option_move_init(u8);
+	/* 801FA660 */ void collect_option_close_init(u8);
+	/* 801FA680 */ void collect_letter_open_init(u8);
+	/* 801FA6DC */ void collect_letter_move_init(u8);
+	/* 801FA6E0 */ void collect_letter_close_init(u8);
+	/* 801FA738 */ void collect_fishing_open_init(u8);
+	/* 801FA794 */ void collect_fishing_move_init(u8);
+	/* 801FA798 */ void collect_fishing_close_init(u8);
+	/* 801FA7F0 */ void collect_skill_open_init(u8);
+	/* 801FA84C */ void collect_skill_move_init(u8);
+	/* 801FA850 */ void collect_skill_close_init(u8);
+	/* 801FA8A8 */ void collect_insect_open_init(u8);
+	/* 801FA908 */ void collect_insect_move_init(u8);
+	/* 801FA90C */ void collect_insect_close_init(u8);
+	/* 801FA964 */ void insect_open_init(u8);
+	/* 801FA9E8 */ void insect_open2_init(u8);
+	/* 801FA9EC */ void insect_move_init(u8);
+	/* 801FA9F0 */ void insect_close_init(u8);
 	/* 801FAA48 */ void key_wait_proc();
 	/* 801FAFDC */ void ring_open_proc();
 	/* 801FB01C */ void ring_move_proc();
@@ -85,7 +85,7 @@ struct dMw_c {
 	/* 801FBD64 */ void insect_close_proc();
 	/* 801FBD80 */ void dMw_capture_create();
 	/* 801FBE14 */ void dMw_capture_delete();
-	/* 801FBE94 */ void dMw_ring_create(char);
+	/* 801FBE94 */ void dMw_ring_create(u8);
 	/* 801FBF60 */ void dMw_ring_delete();
 	/* 801FBFF8 */ void dMw_collect_create();
 	/* 801FC090 */ void dMw_collect_delete(bool);
@@ -103,11 +103,11 @@ struct dMw_c {
 	/* 801FC9A4 */ void dMw_fishing_delete();
 	/* 801FCA4C */ void dMw_skill_create();
 	/* 801FCAEC */ void dMw_skill_delete();
-	/* 801FCB94 */ void dMw_insect_create(char);
+	/* 801FCB94 */ void dMw_insect_create(u8);
 	/* 801FCC44 */ void dMw_insect_delete();
-	/* 801FCCEC */ void dMw_onButtonBit(char);
-	/* 801FCCFC */ void dMw_offButtonBit(char);
-	/* 801FCD0C */ void dMw_isButtonBit(char);
+	/* 801FCCEC */ void dMw_onButtonBit(u8);
+	/* 801FCCFC */ void dMw_offButtonBit(u8);
+	/* 801FCD0C */ void dMw_isButtonBit(u8);
 	/* 801FCD24 */ void dMw_isPush_S_Button();
 	/* 801FCDD8 */ void isPauseReady();
 	/* 801FCE08 */ void dMw_fade_out();
@@ -178,27 +178,27 @@ struct dMenu_Collect2D_c {
 };
 
 // build dMenu_Collect_c (dMenu_Collect_c) False/False
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
 // build CSTControl (CSTControl) False/False
 /* top-level dependencies (begin CSTControl) */
 /* top-level dependencies (end CSTControl) */
 struct CSTControl {
 };
 
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Collect_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Collect_c) */
 struct dMenu_Collect_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
 	/* 801B78C0 */ dMenu_Collect_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801B7A0C */ void _create();
@@ -210,19 +210,19 @@ struct dMenu_Collect_c {
 // build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
 // build dMenu_Dmap_c (dMenu_Dmap_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Dmap_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Dmap_c) */
 struct dMenu_Dmap_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
-	/* 801BB498 */ dMenu_Dmap_c(JKRExpHeap*, STControl*, CSTControl*, char, char);
+	/* 801BB498 */ dMenu_Dmap_c(JKRExpHeap*, STControl*, CSTControl*, u8, u8);
 	/* 801BDDA4 */ void _move();
 	/* 801BE328 */ void isOpen();
 	/* 801BE670 */ void isClose();
@@ -232,17 +232,17 @@ struct dMenu_Dmap_c {
 };
 
 // build dMenu_Fishing_c (dMenu_Fishing_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Fishing_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Fishing_c) */
 struct dMenu_Fishing_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
 	/* 801C4D54 */ dMenu_Fishing_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801C50B4 */ void _move();
@@ -251,23 +251,23 @@ struct dMenu_Fishing_c {
 };
 
 // build dMenu_Fmap_c (dMenu_Fmap_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Fmap_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Fmap_c) */
 struct dMenu_Fmap_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
-	/* 801C66E4 */ dMenu_Fmap_c(JKRExpHeap*, STControl*, CSTControl*, char, char, char, f32, f32, char);
+	/* 801C66E4 */ dMenu_Fmap_c(JKRExpHeap*, STControl*, CSTControl*, u8, u8, u8, f32, f32, u8);
 	/* 801C74A4 */ void _delete();
 	/* 801C74A8 */ void _move();
 	/* 801C7650 */ void _draw();
-	/* 801C77F0 */ void getNextStatus(char*);
+	/* 801C77F0 */ void getNextStatus(u8*);
 	/* 801C7AFC */ void isSync();
 	/* 801CADC4 */ void isOpen();
 	/* 801CB038 */ void isClose();
@@ -279,36 +279,36 @@ struct dMenu_Fmap_c {
 };
 
 // build dMenu_Insect_c (dMenu_Insect_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Insect_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Insect_c) */
 struct dMenu_Insect_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
-	/* 801D8114 */ dMenu_Insect_c(JKRExpHeap*, STControl*, CSTControl*, char);
+	/* 801D8114 */ dMenu_Insect_c(JKRExpHeap*, STControl*, CSTControl*, u8);
 	/* 801D86C8 */ void _move();
 	/* 801D88EC */ void isSync();
 	/* 801D894C */ void _open();
 };
 
 // build dMenu_Letter_c (dMenu_Letter_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Letter_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Letter_c) */
 struct dMenu_Letter_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
 	/* 801DCDC0 */ dMenu_Letter_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801DD474 */ void _move();
@@ -340,19 +340,19 @@ struct dMenu_Option_c {
 
 // build JKRArchive (JKRArchive) True/True
 // build dMenu_Ring_c (dMenu_Ring_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Ring_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Ring_c) */
 struct dMenu_Ring_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
-	/* 801E9118 */ dMenu_Ring_c(JKRExpHeap*, STControl*, CSTControl*, char);
+	/* 801E9118 */ dMenu_Ring_c(JKRExpHeap*, STControl*, CSTControl*, u8);
 	/* 801EAB7C */ void _create();
 	/* 801EABE8 */ void _delete();
 	/* 801EABEC */ void _move();
@@ -375,17 +375,17 @@ struct dMenu_save_c {
 };
 
 // build dMenu_Skill_c (dMenu_Skill_c) False/False
-// build JKRExpHeap (JKRExpHeap) True/True
 // build CSTControl (CSTControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Skill_c) */
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: JKRExpHeap
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Skill_c) */
 struct dMenu_Skill_c {
-	// JKRExpHeap
 	// CSTControl
+	// JKRExpHeap
 	// STControl
 	/* 801F7224 */ dMenu_Skill_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801F7718 */ void _move();
@@ -425,26 +425,26 @@ struct dMsgObject_c {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -699,8 +699,8 @@ void mDoExt_getCurrentHeap();
 void mDoExt_removeMesgFont();
 void fopOvlpM_IsDoingReq();
 void fopMsgM_setStageLayer(void*);
-void dComIfGp_setHeapLockFlag(char);
-void dComIfGp_offHeapLockFlag(s32);
+void dComIfGp_setHeapLockFlag(u8);
+void dComIfGp_offHeapLockFlag(int);
 void dCam_getBody();
 void dMeter2Info_isItemOpenCheck();
 void dMeter2Info_set2DVibration();
@@ -1635,7 +1635,7 @@ void* d_menu_d_menu_window__lit_4360[32] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::key_wait_init(char field_0) {
+asm void dMw_c::key_wait_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/key_wait_init__5dMw_cFUc.s"
 }
@@ -1646,7 +1646,7 @@ asm void dMw_c::key_wait_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::ring_open_init(char field_0) {
+asm void dMw_c::ring_open_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/ring_open_init__5dMw_cFUc.s"
 }
@@ -1654,13 +1654,13 @@ asm void dMw_c::ring_open_init(char field_0) {
 
 
 /* 801FA23C-801FA240 0004+00 rc=1 efc=0 .text      ring_move_init__5dMw_cFUc                                    */
-void dMw_c::ring_move_init(char field_0) {
+void dMw_c::ring_move_init(u8 field_0) {
 	/* empty function */
 }
 
 
 /* 801FA240-801FA244 0004+00 rc=1 efc=0 .text      ring_close_init__5dMw_cFUc                                   */
-void dMw_c::ring_close_init(char field_0) {
+void dMw_c::ring_close_init(u8 field_0) {
 	/* empty function */
 }
 
@@ -1681,7 +1681,7 @@ f32 lit_4387 = -1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_open_init(char field_0) {
+asm void dMw_c::collect_open_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_open_init__5dMw_cFUc.s"
 }
@@ -1724,7 +1724,7 @@ void* d_menu_d_menu_window__lit_4418[27] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_move_init(char field_0) {
+asm void dMw_c::collect_move_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_move_init__5dMw_cFUc.s"
 }
@@ -1735,7 +1735,7 @@ asm void dMw_c::collect_move_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_close_init(char field_0) {
+asm void dMw_c::collect_close_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_close_init__5dMw_cFUc.s"
 }
@@ -1746,7 +1746,7 @@ asm void dMw_c::collect_close_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::fmap_open_init(char field_0) {
+asm void dMw_c::fmap_open_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/fmap_open_init__5dMw_cFUc.s"
 }
@@ -1754,13 +1754,13 @@ asm void dMw_c::fmap_open_init(char field_0) {
 
 
 /* 801FA55C-801FA560 0004+00 rc=1 efc=0 .text      fmap_move_init__5dMw_cFUc                                    */
-void dMw_c::fmap_move_init(char field_0) {
+void dMw_c::fmap_move_init(u8 field_0) {
 	/* empty function */
 }
 
 
 /* 801FA560-801FA564 0004+00 rc=1 efc=0 .text      fmap_close_init__5dMw_cFUc                                   */
-void dMw_c::fmap_close_init(char field_0) {
+void dMw_c::fmap_close_init(u8 field_0) {
 	/* empty function */
 }
 
@@ -1769,7 +1769,7 @@ void dMw_c::fmap_close_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::dmap_open_init(char field_0) {
+asm void dMw_c::dmap_open_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/dmap_open_init__5dMw_cFUc.s"
 }
@@ -1777,13 +1777,13 @@ asm void dMw_c::dmap_open_init(char field_0) {
 
 
 /* 801FA588-801FA58C 0004+00 rc=1 efc=0 .text      dmap_move_init__5dMw_cFUc                                    */
-void dMw_c::dmap_move_init(char field_0) {
+void dMw_c::dmap_move_init(u8 field_0) {
 	/* empty function */
 }
 
 
 /* 801FA58C-801FA590 0004+00 rc=1 efc=0 .text      dmap_close_init__5dMw_cFUc                                   */
-void dMw_c::dmap_close_init(char field_0) {
+void dMw_c::dmap_close_init(u8 field_0) {
 	/* empty function */
 }
 
@@ -1792,7 +1792,7 @@ void dMw_c::dmap_close_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_save_open_init(char field_0) {
+asm void dMw_c::collect_save_open_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_save_open_init__5dMw_cFUc.s"
 }
@@ -1800,7 +1800,7 @@ asm void dMw_c::collect_save_open_init(char field_0) {
 
 
 /* 801FA5E4-801FA5E8 0004+00 rc=1 efc=0 .text      collect_save_move_init__5dMw_cFUc                            */
-void dMw_c::collect_save_move_init(char field_0) {
+void dMw_c::collect_save_move_init(u8 field_0) {
 	/* empty function */
 }
 
@@ -1809,7 +1809,7 @@ void dMw_c::collect_save_move_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_save_close_init(char field_0) {
+asm void dMw_c::collect_save_close_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_save_close_init__5dMw_cFUc.s"
 }
@@ -1820,7 +1820,7 @@ asm void dMw_c::collect_save_close_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_option_open_init(char field_0) {
+asm void dMw_c::collect_option_open_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_option_open_init__5dMw_cFUc.s"
 }
@@ -1828,7 +1828,7 @@ asm void dMw_c::collect_option_open_init(char field_0) {
 
 
 /* 801FA65C-801FA660 0004+00 rc=1 efc=0 .text      collect_option_move_init__5dMw_cFUc                          */
-void dMw_c::collect_option_move_init(char field_0) {
+void dMw_c::collect_option_move_init(u8 field_0) {
 	/* empty function */
 }
 
@@ -1837,7 +1837,7 @@ void dMw_c::collect_option_move_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_option_close_init(char field_0) {
+asm void dMw_c::collect_option_close_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_option_close_init__5dMw_cFUc.s"
 }
@@ -1848,7 +1848,7 @@ asm void dMw_c::collect_option_close_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_letter_open_init(char field_0) {
+asm void dMw_c::collect_letter_open_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_letter_open_init__5dMw_cFUc.s"
 }
@@ -1856,7 +1856,7 @@ asm void dMw_c::collect_letter_open_init(char field_0) {
 
 
 /* 801FA6DC-801FA6E0 0004+00 rc=1 efc=0 .text      collect_letter_move_init__5dMw_cFUc                          */
-void dMw_c::collect_letter_move_init(char field_0) {
+void dMw_c::collect_letter_move_init(u8 field_0) {
 	/* empty function */
 }
 
@@ -1865,7 +1865,7 @@ void dMw_c::collect_letter_move_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_letter_close_init(char field_0) {
+asm void dMw_c::collect_letter_close_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_letter_close_init__5dMw_cFUc.s"
 }
@@ -1876,7 +1876,7 @@ asm void dMw_c::collect_letter_close_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_fishing_open_init(char field_0) {
+asm void dMw_c::collect_fishing_open_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_fishing_open_init__5dMw_cFUc.s"
 }
@@ -1884,7 +1884,7 @@ asm void dMw_c::collect_fishing_open_init(char field_0) {
 
 
 /* 801FA794-801FA798 0004+00 rc=1 efc=0 .text      collect_fishing_move_init__5dMw_cFUc                         */
-void dMw_c::collect_fishing_move_init(char field_0) {
+void dMw_c::collect_fishing_move_init(u8 field_0) {
 	/* empty function */
 }
 
@@ -1893,7 +1893,7 @@ void dMw_c::collect_fishing_move_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_fishing_close_init(char field_0) {
+asm void dMw_c::collect_fishing_close_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_fishing_close_init__5dMw_cFUc.s"
 }
@@ -1904,7 +1904,7 @@ asm void dMw_c::collect_fishing_close_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_skill_open_init(char field_0) {
+asm void dMw_c::collect_skill_open_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_skill_open_init__5dMw_cFUc.s"
 }
@@ -1912,7 +1912,7 @@ asm void dMw_c::collect_skill_open_init(char field_0) {
 
 
 /* 801FA84C-801FA850 0004+00 rc=1 efc=0 .text      collect_skill_move_init__5dMw_cFUc                           */
-void dMw_c::collect_skill_move_init(char field_0) {
+void dMw_c::collect_skill_move_init(u8 field_0) {
 	/* empty function */
 }
 
@@ -1921,7 +1921,7 @@ void dMw_c::collect_skill_move_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_skill_close_init(char field_0) {
+asm void dMw_c::collect_skill_close_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_skill_close_init__5dMw_cFUc.s"
 }
@@ -1932,7 +1932,7 @@ asm void dMw_c::collect_skill_close_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_insect_open_init(char field_0) {
+asm void dMw_c::collect_insect_open_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_insect_open_init__5dMw_cFUc.s"
 }
@@ -1940,7 +1940,7 @@ asm void dMw_c::collect_insect_open_init(char field_0) {
 
 
 /* 801FA908-801FA90C 0004+00 rc=1 efc=0 .text      collect_insect_move_init__5dMw_cFUc                          */
-void dMw_c::collect_insect_move_init(char field_0) {
+void dMw_c::collect_insect_move_init(u8 field_0) {
 	/* empty function */
 }
 
@@ -1949,7 +1949,7 @@ void dMw_c::collect_insect_move_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::collect_insect_close_init(char field_0) {
+asm void dMw_c::collect_insect_close_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/collect_insect_close_init__5dMw_cFUc.s"
 }
@@ -1960,7 +1960,7 @@ asm void dMw_c::collect_insect_close_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::insect_open_init(char field_0) {
+asm void dMw_c::insect_open_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/insect_open_init__5dMw_cFUc.s"
 }
@@ -1968,13 +1968,13 @@ asm void dMw_c::insect_open_init(char field_0) {
 
 
 /* 801FA9E8-801FA9EC 0004+00 rc=1 efc=0 .text      insect_open2_init__5dMw_cFUc                                 */
-void dMw_c::insect_open2_init(char field_0) {
+void dMw_c::insect_open2_init(u8 field_0) {
 	/* empty function */
 }
 
 
 /* 801FA9EC-801FA9F0 0004+00 rc=1 efc=0 .text      insect_move_init__5dMw_cFUc                                  */
-void dMw_c::insect_move_init(char field_0) {
+void dMw_c::insect_move_init(u8 field_0) {
 	/* empty function */
 }
 
@@ -1983,7 +1983,7 @@ void dMw_c::insect_move_init(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::insect_close_init(char field_0) {
+asm void dMw_c::insect_close_init(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/insect_close_init__5dMw_cFUc.s"
 }
@@ -2442,7 +2442,7 @@ asm void dMw_c::dMw_capture_delete() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::dMw_ring_create(char field_0) {
+asm void dMw_c::dMw_ring_create(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/dMw_ring_create__5dMw_cFUc.s"
 }
@@ -2640,7 +2640,7 @@ asm void dMw_c::dMw_skill_delete() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::dMw_insect_create(char field_0) {
+asm void dMw_c::dMw_insect_create(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/dMw_insect_create__5dMw_cFUc.s"
 }
@@ -2662,7 +2662,7 @@ asm void dMw_c::dMw_insect_delete() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::dMw_onButtonBit(char field_0) {
+asm void dMw_c::dMw_onButtonBit(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/dMw_onButtonBit__5dMw_cFUc.s"
 }
@@ -2673,7 +2673,7 @@ asm void dMw_c::dMw_onButtonBit(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::dMw_offButtonBit(char field_0) {
+asm void dMw_c::dMw_offButtonBit(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/dMw_offButtonBit__5dMw_cFUc.s"
 }
@@ -2684,7 +2684,7 @@ asm void dMw_c::dMw_offButtonBit(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMw_c::dMw_isButtonBit(char field_0) {
+asm void dMw_c::dMw_isButtonBit(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_window/dMw_isButtonBit__5dMw_cFUc.s"
 }

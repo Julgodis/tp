@@ -10,25 +10,25 @@
 // 
 
 // build dMsgScrnTree_c (dMsgScrnTree_c) False/False
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
-struct JUTFont {
-};
-
 // build JKRExpHeap (JKRExpHeap) False/False
 /* top-level dependencies (begin JKRExpHeap) */
 /* top-level dependencies (end JKRExpHeap) */
 struct JKRExpHeap {
 };
 
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
 /* top-level dependencies (begin dMsgScrnTree_c) */
-// outer dependency: JUTFont
 // outer dependency: JKRExpHeap
+// outer dependency: JUTFont
 /* top-level dependencies (end dMsgScrnTree_c) */
 struct dMsgScrnTree_c {
-	// JUTFont
 	// JKRExpHeap
+	// JUTFont
 	/* 80248954 */ dMsgScrnTree_c(JUTFont*, JKRExpHeap*);
 	/* 80248F14 */ ~dMsgScrnTree_c();
 	/* 80249118 */ void exec();
@@ -46,11 +46,11 @@ struct dMsgScrnTree_c {
 struct dMsgScrnBase_c {
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
-	/* 80238C48 */ bool selectAnimeMove(char, char, bool);
-	/* 80238C50 */ void selectAnimeInit(char, char, f32, char);
+	/* 80238C48 */ bool selectAnimeMove(u8, u8, bool);
+	/* 80238C50 */ void selectAnimeInit(u8, u8, f32, u8);
 	/* 80238C54 */ void arwAnimeMove();
 	/* 80238C58 */ void arwAnimeInit();
-	/* 80238C5C */ void fukiPosCalc(char);
+	/* 80238C5C */ void fukiPosCalc(u8);
 	/* 80238C60 */ bool isSelect();
 	/* 80238C68 */ bool selectAnimeEnd();
 	/* 80238C70 */ void dotAnimeMove();
@@ -65,6 +65,7 @@ struct dMsgScrnBase_c {
 };
 
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -91,15 +92,14 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802542E8 */ void getGlobalPosX();
 	/* 80254364 */ void getGlobalPosY();
 };
@@ -135,6 +135,13 @@ struct J2DPane {
 
 // build JKRArchive (JKRArchive) True/True
 // build J2DGrafContext (J2DGrafContext) True/True
+// build J2DTextBox (J2DTextBox) False/False
+/* top-level dependencies (begin J2DTextBox) */
+/* top-level dependencies (end J2DTextBox) */
+struct J2DTextBox {
+	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
 // build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
 /* top-level dependencies (begin J2DAnmLoaderDataBase) */
 /* top-level dependencies (end J2DAnmLoaderDataBase) */
@@ -167,11 +174,10 @@ SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_tree__lit_4053;
 // 
 
 void mDoExt_getMesgFont();
-void dComIfGp_getSubHeap2D(s32);
+void dComIfGp_getSubHeap2D(int);
 void dPaneClass_showNullPane(J2DScreen*);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void _savegpr_27();
 extern "C" void _savegpr_28();
 extern "C" void _restgpr_27();

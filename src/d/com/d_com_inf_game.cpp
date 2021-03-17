@@ -10,35 +10,16 @@
 // 
 
 // build dComIfG_play_c (dComIfG_play_c) False/False
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
-struct J3DModelData {
-};
-
-// build dStage_startStage_c (dStage_startStage_c) False/False
-/* top-level dependencies (begin dStage_startStage_c) */
-/* top-level dependencies (end dStage_startStage_c) */
-struct dStage_startStage_c {
-};
-
-// build dTimer_c (dTimer_c) False/False
-/* top-level dependencies (begin dTimer_c) */
-/* top-level dependencies (end dTimer_c) */
-struct dTimer_c {
-	/* 8025D524 */ void deleteCheck();
-	/* 8025D538 */ void start(s32);
-	/* 8025D618 */ void start(s32, s16);
-	/* 8025D7E8 */ void stop(char);
-	/* 8025D86C */ void restart(char);
-	/* 8025D920 */ void end(s32);
-	/* 8025D9E0 */ void deleteRequest();
-};
-
 // build cXyz (cXyz) False/False
 /* top-level dependencies (begin cXyz) */
 /* top-level dependencies (end cXyz) */
 struct cXyz {
+};
+
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
 };
 
 // build J3DModel (J3DModel) False/False
@@ -47,49 +28,68 @@ struct cXyz {
 struct J3DModel {
 };
 
+// build dTimer_c (dTimer_c) False/False
+/* top-level dependencies (begin dTimer_c) */
+/* top-level dependencies (end dTimer_c) */
+struct dTimer_c {
+	/* 8025D524 */ void deleteCheck();
+	/* 8025D538 */ void start(int);
+	/* 8025D618 */ void start(int, s16);
+	/* 8025D7E8 */ void stop(u8);
+	/* 8025D86C */ void restart(u8);
+	/* 8025D920 */ void end(int);
+	/* 8025D9E0 */ void deleteRequest();
+};
+
+// build dStage_startStage_c (dStage_startStage_c) False/False
+/* top-level dependencies (begin dStage_startStage_c) */
+/* top-level dependencies (end dStage_startStage_c) */
+struct dStage_startStage_c {
+};
+
 /* top-level dependencies (begin dComIfG_play_c) */
-// outer dependency: J3DModelData
-// outer dependency: dStage_startStage_c
-// outer dependency: dTimer_c
 // outer dependency: cXyz
+// outer dependency: J3DModelData
 // outer dependency: J3DModel
+// outer dependency: dTimer_c
+// outer dependency: dStage_startStage_c
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	// cXyz
-	// dStage_startStage_c
 	// J3DModelData
-	// dTimer_c
 	// J3DModel
+	// dStage_startStage_c
+	// cXyz
+	// dTimer_c
 	/* 8002B1DC */ void ct();
 	/* 8002B22C */ void init();
 	/* 8002B2C8 */ void itemInit();
-	/* 8002B36C */ void setItemBombNumCount(char, s16);
-	/* 8002B384 */ void getItemBombNumCount(char);
-	/* 8002B394 */ void clearItemBombNumCount(char);
-	/* 8002B3A8 */ void setNowVibration(char);
+	/* 8002B36C */ void setItemBombNumCount(u8, s16);
+	/* 8002B384 */ void getItemBombNumCount(u8);
+	/* 8002B394 */ void clearItemBombNumCount(u8);
+	/* 8002B3A8 */ void setNowVibration(u8);
 	/* 8002B3B0 */ void getNowVibration();
 	/* 8002B3B8 */ void setStartStage(dStage_startStage_c*);
-	/* 8002B434 */ void getLayerNo_common_common(char const*, s32, s32);
-	/* 8002C950 */ void getLayerNo_common(char const*, s32, s32);
-	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002B434 */ void getLayerNo_common_common(char const*, int, int);
+	/* 8002C950 */ void getLayerNo_common(char const*, int, int);
+	/* 8002C97C */ void getLayerNo(int);
 	/* 8002C9D8 */ void createParticle();
 	/* 8002CA1C */ void createSimpleModel();
 	/* 8002CA70 */ void deleteSimpleModel();
 	/* 8002CAC4 */ void drawSimpleModel();
-	/* 8002CAF0 */ void addSimpleModel(J3DModelData*, s32, char);
-	/* 8002CB30 */ void removeSimpleModel(J3DModelData*, s32);
-	/* 8002CB68 */ void entrySimpleModel(J3DModel*, s32);
-	/* 8002CB94 */ void setTimerNowTimeMs(s32);
+	/* 8002CAF0 */ void addSimpleModel(J3DModelData*, int, u8);
+	/* 8002CB30 */ void removeSimpleModel(J3DModelData*, int);
+	/* 8002CB68 */ void entrySimpleModel(J3DModel*, int);
+	/* 8002CB94 */ void setTimerNowTimeMs(int);
 	/* 8002CB9C */ void getTimerNowTimeMs();
-	/* 8002CBA4 */ void setTimerLimitTimeMs(s32);
+	/* 8002CBA4 */ void setTimerLimitTimeMs(int);
 	/* 8002CBAC */ void getTimerLimitTimeMs();
-	/* 8002CBB4 */ void setTimerMode(s32);
+	/* 8002CBB4 */ void setTimerMode(int);
 	/* 8002CBBC */ void getTimerMode();
-	/* 8002CBC4 */ void setTimerType(char);
+	/* 8002CBC4 */ void setTimerType(u8);
 	/* 8002CBCC */ void getTimerType();
 	/* 8002CBD4 */ void setTimerPtr(dTimer_c*);
 	/* 8002CBDC */ void getTimerPtr();
-	/* 8002F128 */ void setWarpItemData(char const*, cXyz, s16, char, char, char);
+	/* 8002F128 */ void setWarpItemData(char const*, cXyz, s16, s8, u8, u8);
 	/* 8002FDE8 */ ~dComIfG_play_c();
 };
 
@@ -150,8 +150,8 @@ struct _GXTexObj {
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
 	/* 80024338 */ void initZone();
-	/* 80024384 */ void getStatusRoomDt(s32);
-	/* 8002D9B0 */ void getZoneNo(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
+	/* 8002D9B0 */ void getZoneNo(int);
 };
 
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
@@ -335,9 +335,9 @@ struct dSv_zone_c {
 struct dSv_memory2_c {
 	/* 80030D80 */ dSv_memory2_c();
 	/* 80034A84 */ void init();
-	/* 80034AA4 */ void onVisitedRoom(s32);
-	/* 80034AC8 */ void offVisitedRoom(s32);
-	/* 80034AEC */ void isVisitedRoom(s32);
+	/* 80034AA4 */ void onVisitedRoom(int);
+	/* 80034AC8 */ void offVisitedRoom(int);
+	/* 80034AEC */ void isVisitedRoom(int);
 };
 
 // build dSv_memory_c (dSv_memory_c) False/False
@@ -390,7 +390,7 @@ struct JKRExpHeap {
 /* top-level dependencies (begin dStage_nextStage_c) */
 /* top-level dependencies (end dStage_nextStage_c) */
 struct dStage_nextStage_c {
-	/* 80023E28 */ void set(char const*, char, s16, char, char, char);
+	/* 80023E28 */ void set(char const*, s8, s16, s8, s8, u8);
 };
 
 // build roomRead_class (roomRead_class) False/False
@@ -403,18 +403,18 @@ struct roomRead_class {
 /* top-level dependencies (begin dSv_player_status_a_c) */
 /* top-level dependencies (end dSv_player_status_a_c) */
 struct dSv_player_status_a_c {
-	/* 80032A48 */ void setSelectItemIndex(s32, char);
-	/* 80032A5C */ void getSelectItemIndex(s32) const;
-	/* 80032A78 */ void setMixItemIndex(s32, char);
-	/* 80032A8C */ void getMixItemIndex(s32) const;
+	/* 80032A48 */ void setSelectItemIndex(int, u8);
+	/* 80032A5C */ void getSelectItemIndex(int) const;
+	/* 80032A78 */ void setMixItemIndex(int, u8);
+	/* 80032A8C */ void getMixItemIndex(int) const;
 };
 
 // build dSv_player_status_b_c (dSv_player_status_b_c) False/False
 /* top-level dependencies (begin dSv_player_status_b_c) */
 /* top-level dependencies (end dSv_player_status_b_c) */
 struct dSv_player_status_b_c {
-	/* 80032BB0 */ void isDarkClearLV(s32) const;
-	/* 80032BEC */ void isTransformLV(s32) const;
+	/* 80032BB0 */ void isDarkClearLV(int) const;
+	/* 80032BEC */ void isTransformLV(int) const;
 };
 
 // build dSv_player_field_last_stay_info_c (dSv_player_field_last_stay_info_c) False/False
@@ -424,9 +424,9 @@ struct dSv_player_status_b_c {
 /* top-level dependencies (end dSv_player_field_last_stay_info_c) */
 struct dSv_player_field_last_stay_info_c {
 	// cXyz
-	/* 80032DE0 */ void set(char const*, cXyz const&, s16, char, char);
-	/* 80032E4C */ void onRegionBit(s32);
-	/* 80032E78 */ void isRegionBit(s32) const;
+	/* 80032DE0 */ void set(char const*, cXyz const&, s16, s8, u8);
+	/* 80032E4C */ void onRegionBit(int);
+	/* 80032E78 */ void isRegionBit(int) const;
 };
 
 // build dSv_player_last_mark_info_c (dSv_player_last_mark_info_c) False/False
@@ -436,54 +436,54 @@ struct dSv_player_field_last_stay_info_c {
 /* top-level dependencies (end dSv_player_last_mark_info_c) */
 struct dSv_player_last_mark_info_c {
 	// cXyz
-	/* 80032F2C */ void setWarpItemData(char const*, cXyz const&, s16, char, char, char);
+	/* 80032F2C */ void setWarpItemData(char const*, cXyz const&, s16, s8, u8, u8);
 };
 
 // build dSv_player_item_c (dSv_player_item_c) False/False
 /* top-level dependencies (begin dSv_player_item_c) */
 /* top-level dependencies (end dSv_player_item_c) */
 struct dSv_player_item_c {
-	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80033030 */ void getItem(int, bool) const;
 };
 
 // build dSv_player_get_item_c (dSv_player_get_item_c) False/False
 /* top-level dependencies (begin dSv_player_get_item_c) */
 /* top-level dependencies (end dSv_player_get_item_c) */
 struct dSv_player_get_item_c {
-	/* 80033EC8 */ void isFirstBit(char) const;
+	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
 // build dSv_player_item_record_c (dSv_player_item_record_c) False/False
 /* top-level dependencies (begin dSv_player_item_record_c) */
 /* top-level dependencies (end dSv_player_item_record_c) */
 struct dSv_player_item_record_c {
-	/* 80033F6C */ void setBombNum(char, char);
-	/* 80033F7C */ void getBombNum(char) const;
-	/* 80033F8C */ void setBottleNum(char, char);
-	/* 80033F9C */ void addBottleNum(char, s16);
-	/* 80034030 */ void getBottleNum(char) const;
+	/* 80033F6C */ void setBombNum(u8, u8);
+	/* 80033F7C */ void getBombNum(u8) const;
+	/* 80033F8C */ void setBottleNum(u8, u8);
+	/* 80033F9C */ void addBottleNum(u8, s16);
+	/* 80034030 */ void getBottleNum(u8) const;
 };
 
 // build dSv_player_item_max_c (dSv_player_item_max_c) False/False
 /* top-level dependencies (begin dSv_player_item_max_c) */
 /* top-level dependencies (end dSv_player_item_max_c) */
 struct dSv_player_item_max_c {
-	/* 800340F8 */ void getBombNum(char) const;
+	/* 800340F8 */ void getBombNum(u8) const;
 };
 
 // build dSv_player_collect_c (dSv_player_collect_c) False/False
 /* top-level dependencies (begin dSv_player_collect_c) */
 /* top-level dependencies (end dSv_player_collect_c) */
 struct dSv_player_collect_c {
-	/* 800341E8 */ void setCollect(s32, char);
+	/* 800341E8 */ void setCollect(int, u8);
 };
 
 // build dSv_light_drop_c (dSv_light_drop_c) False/False
 /* top-level dependencies (begin dSv_light_drop_c) */
 /* top-level dependencies (end dSv_light_drop_c) */
 struct dSv_light_drop_c {
-	/* 80034340 */ void getLightDropNum(char) const;
-	/* 8003439C */ void isLightDropGetFlag(char) const;
+	/* 80034340 */ void getLightDropNum(u8) const;
+	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
 // build dSv_player_config_c (dSv_player_config_c) False/False
@@ -497,12 +497,12 @@ struct dSv_player_config_c {
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 800347E8 */ void isTbox(s32) const;
-	/* 80034810 */ void onSwitch(s32);
-	/* 80034838 */ void offSwitch(s32);
-	/* 80034860 */ void isSwitch(s32) const;
-	/* 80034918 */ void onDungeonItem(s32);
-	/* 80034934 */ void isDungeonItem(s32) const;
+	/* 800347E8 */ void isTbox(int) const;
+	/* 80034810 */ void onSwitch(int);
+	/* 80034838 */ void offSwitch(int);
+	/* 80034860 */ void isSwitch(int) const;
+	/* 80034918 */ void onDungeonItem(int);
+	/* 80034934 */ void isDungeonItem(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -518,30 +518,30 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_zoneBit_c) */
 /* top-level dependencies (end dSv_zoneBit_c) */
 struct dSv_zoneBit_c {
-	/* 80034D04 */ void onSwitch(s32);
-	/* 80034D2C */ void offSwitch(s32);
-	/* 80034D50 */ void isSwitch(s32) const;
-	/* 80034DAC */ void onOneSwitch(s32);
-	/* 80034DC8 */ void offOneSwitch(s32);
-	/* 80034DE0 */ void isOneSwitch(s32) const;
-	/* 80034E50 */ void isItem(s32) const;
-	/* 80034E98 */ void isOneItem(s32) const;
+	/* 80034D04 */ void onSwitch(int);
+	/* 80034D2C */ void offSwitch(int);
+	/* 80034D50 */ void isSwitch(int) const;
+	/* 80034DAC */ void onOneSwitch(int);
+	/* 80034DC8 */ void offOneSwitch(int);
+	/* 80034DE0 */ void isOneSwitch(int) const;
+	/* 80034E50 */ void isItem(int) const;
+	/* 80034E98 */ void isOneItem(int) const;
 };
 
 // build dSv_save_c (dSv_save_c) False/False
 /* top-level dependencies (begin dSv_save_c) */
 /* top-level dependencies (end dSv_save_c) */
 struct dSv_save_c {
-	/* 800350A8 */ void getSave2(s32);
+	/* 800350A8 */ void getSave2(int);
 };
 
 // build dSv_info_c (dSv_info_c) False/False
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035200 */ void onSwitch(s32, s32);
-	/* 800352B0 */ void offSwitch(s32, s32);
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035200 */ void onSwitch(int, int);
+	/* 800352B0 */ void offSwitch(int, int);
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build dRes_info_c (dRes_info_c) False/False
@@ -553,20 +553,20 @@ struct dRes_info_c {
 };
 
 // build dRes_control_c (dRes_control_c) False/False
-// build JKRHeap (JKRHeap) True/True
 // build dRes_info_c (dRes_info_c) True/True
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin dRes_control_c) */
-// outer dependency: JKRHeap
 // outer dependency: dRes_info_c
+// outer dependency: JKRHeap
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
-	// JKRHeap
 	// dRes_info_c
+	// JKRHeap
 	/* 8003BFB0 */ ~dRes_control_c();
-	/* 8003C078 */ void setRes(char const*, dRes_info_c*, s32, char const*, char, JKRHeap*);
-	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, s32);
-	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, s32);
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
+	/* 8003C078 */ void setRes(char const*, dRes_info_c*, int, char const*, u8, JKRHeap*);
+	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, int);
+	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, int);
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
 // build dMapInfo_n (dMapInfo_n) False/False
@@ -591,20 +591,20 @@ struct dEvent_manager_c {
 };
 
 // build dSmplMdl_draw_c (dSmplMdl_draw_c) False/False
-// build J3DModelData (J3DModelData) True/True
 // build J3DModel (J3DModel) True/True
+// build J3DModelData (J3DModelData) True/True
 /* top-level dependencies (begin dSmplMdl_draw_c) */
-// outer dependency: J3DModelData
 // outer dependency: J3DModel
+// outer dependency: J3DModelData
 /* top-level dependencies (end dSmplMdl_draw_c) */
 struct dSmplMdl_draw_c {
-	// J3DModelData
 	// J3DModel
+	// J3DModelData
 	/* 80048CB4 */ dSmplMdl_draw_c();
 	/* 80048E0C */ void draw();
-	/* 80048EBC */ void entry(J3DModel*, s32);
-	/* 80048F70 */ void addModel(J3DModelData*, s32, char);
-	/* 80049058 */ void removeModel(J3DModelData*, s32);
+	/* 80048EBC */ void entry(J3DModel*, int);
+	/* 80048F70 */ void addModel(J3DModelData*, int, u8);
+	/* 80049058 */ void removeModel(J3DModelData*, int);
 };
 
 // build dPa_control_c (dPa_control_c) False/False
@@ -616,21 +616,21 @@ struct dPa_control_c {
 
 // build dDlst_shadowControl_c (dDlst_shadowControl_c) False/False
 // build cXyz (cXyz) True/True
-// build _GXTexObj (_GXTexObj) True/True
 // build J3DModel (J3DModel) True/True
+// build _GXTexObj (_GXTexObj) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
 /* top-level dependencies (begin dDlst_shadowControl_c) */
 // outer dependency: cXyz
-// outer dependency: _GXTexObj
 // outer dependency: J3DModel
+// outer dependency: _GXTexObj
 // outer dependency: dKy_tevstr_c
 /* top-level dependencies (end dDlst_shadowControl_c) */
 struct dDlst_shadowControl_c {
 	// cXyz
-	// _GXTexObj
 	// J3DModel
+	// _GXTexObj
 	// dKy_tevstr_c
-	/* 80055C74 */ void setReal(u32, char, J3DModel*, cXyz*, f32, f32, dKy_tevstr_c*);
+	/* 80055C74 */ void setReal(u32, s8, J3DModel*, cXyz*, f32, f32, dKy_tevstr_c*);
 	/* 80055F84 */ void setSimple(cXyz*, f32, f32, cXyz*, s16, f32, _GXTexObj*);
 };
 
@@ -690,8 +690,8 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-void dComIfGp_checkItemGet(char, s32);
-static void dComIfG_get_timelayer(s32*);
+void dComIfGp_checkItemGet(u8, int);
+static void dComIfG_get_timelayer(int*);
 void dComIfG_changeOpeningScene(scene_class*, s16);
 void dComIfG_resetToOpening(scene_class*);
 static void phase_1(char*);
@@ -703,103 +703,103 @@ static void phase_02(phaseParam_c*);
 static bool phase_03(phaseParam_c*);
 void dComIfG_resLoad(request_of_phase_process_class*, char const*, JKRHeap*);
 void dComIfG_resDelete(request_of_phase_process_class*, char const*);
-void dComIfGp_getReverb(s32);
+void dComIfGp_getReverb(int);
 void dComIfGd_setSimpleShadow(cXyz*, f32, f32, cBgS_PolyInfo&, s16, f32, _GXTexObj*);
-void dComIfGp_getMapTrans(s32, f32*, f32*, s16*);
-void dComIfGp_getRoomCamera(s32);
-void dComIfGp_getRoomArrow(s32);
-void dComIfGp_setNextStage(char const*, s16, char, char, f32, u32, s32, char, s16, s32, s32);
-void dComIfGp_setNextStage(char const*, s16, char, char);
-void dComIfGs_isStageTbox(s32, s32);
-void dComIfGs_onStageSwitch(s32, s32);
-void dComIfGs_offStageSwitch(s32, s32);
-void dComIfGs_isStageSwitch(s32, s32);
-void dComIfGs_onStageBossEnemy(s32);
-void dComIfGs_isDungeonItemWarp(s32);
-void dComIfGs_BossLife_public_Set(char);
+void dComIfGp_getMapTrans(int, f32*, f32*, s16*);
+void dComIfGp_getRoomCamera(int);
+void dComIfGp_getRoomArrow(int);
+void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int);
+void dComIfGp_setNextStage(char const*, s16, s8, s8);
+void dComIfGs_isStageTbox(int, int);
+void dComIfGs_onStageSwitch(int, int);
+void dComIfGs_offStageSwitch(int, int);
+void dComIfGs_isStageSwitch(int, int);
+void dComIfGs_onStageBossEnemy(int);
+void dComIfGs_isDungeonItemWarp(int);
+void dComIfGs_BossLife_public_Set(s8);
 void dComIfGs_BossLife_public_Get();
-void dComIfGs_sense_type_change_Set(char);
+void dComIfGs_sense_type_change_Set(s8);
 void dComIfGs_sense_type_change_Get();
-void dComIfGs_onZoneSwitch(s32, s32);
-void dComIfGs_offZoneSwitch(s32, s32);
-void dComIfGs_isZoneSwitch(s32, s32);
-void dComIfGs_onOneZoneSwitch(s32, s32);
-void dComIfGs_offOneZoneSwitch(s32, s32);
-void dComIfGs_isOneZoneSwitch(s32, s32);
-void dComIfGs_isZoneItem(s32, s32);
-void dComIfGs_isOneZoneItem(s32, s32);
+void dComIfGs_onZoneSwitch(int, int);
+void dComIfGs_offZoneSwitch(int, int);
+void dComIfGs_isZoneSwitch(int, int);
+void dComIfGs_onOneZoneSwitch(int, int);
+void dComIfGs_offOneZoneSwitch(int, int);
+void dComIfGs_isOneZoneSwitch(int, int);
+void dComIfGs_isZoneItem(int, int);
+void dComIfGs_isOneZoneItem(int, int);
 void dComIfGs_getMaxLifeGauge();
-void dComIfGs_setSelectItemIndex(s32, char);
-void dComIfGs_setMixItemIndex(s32, char);
-void dComIfGs_getSelectMixItemNoArrowIndex(s32);
-void dComIfGs_getMixItemIndex(s32);
-void dComIfGp_setSelectItem(s32);
-void dComIfGp_getSelectItem(s32);
+void dComIfGs_setSelectItemIndex(int, u8);
+void dComIfGs_setMixItemIndex(int, u8);
+void dComIfGs_getSelectMixItemNoArrowIndex(int);
+void dComIfGs_getMixItemIndex(int);
+void dComIfGp_setSelectItem(int);
+void dComIfGp_getSelectItem(int);
 void dComIfGp_mapShow();
 void dComIfGp_mapHide();
 void dComIfGp_checkMapShow();
-void dComIfGp_setHeapLockFlag(char);
-void dComIfGp_offHeapLockFlag(s32);
+void dComIfGp_setHeapLockFlag(u8);
+void dComIfGp_offHeapLockFlag(int);
 static void dComIfGp_createSubExpHeap2D();
 static void dComIfGp_destroySubExpHeap2D();
 static void dComIfGp_checkEmptySubHeap2D();
-static void dComIfGp_searchUseSubHeap2D(s32);
-void dComIfGp_getSubHeap2D(s32);
+static void dComIfGp_searchUseSubHeap2D(int);
+void dComIfGp_getSubHeap2D(int);
 void dComIfGs_checkGetInsectNum();
-static void dComIfGs_checkGetItem(char);
+static void dComIfGs_checkGetItem(u8);
 s32 dComIfGs_getBottleMax();
-void dComIfGp_getSelectItemNum(s32);
-void dComIfGp_getSelectItemMaxNum(s32);
-void dComIfGp_setSelectItemNum(s32, s16);
-void dComIfGp_addSelectItemNum(s32, s16);
-void dComIfGd_setShadow(u32, char, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
+void dComIfGp_getSelectItemNum(int);
+void dComIfGp_getSelectItemMaxNum(int);
+void dComIfGp_setSelectItemNum(int, s16);
+void dComIfGp_addSelectItemNum(int, s16);
+void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
 void dComIfGs_gameStart();
 void dComIfG_getTrigA(u32);
 void dComIfGp_calcNowRegion();
 static void dComIfG_getNowCalcRegion();
 void dComIfGp_isLightDropMapVisible();
 void dComIfGp_getNowLevel();
-void dComIfGs_setSelectEquipClothes(char);
-void dComIfGs_setSelectEquipSword(char);
-void dComIfGs_setSelectEquipShield(char);
-void dComIfGs_setKeyNum(s32, char);
-static void dComIfGs_setWarpItemData(s32, char const*, cXyz, s16, char, char, char);
-void dComIfGs_setWarpItemData(char const*, cXyz, s16, char, char, char);
-static void dComIfGs_setLastWarpMarkItemData(char const*, cXyz, s16, char, char, char);
+void dComIfGs_setSelectEquipClothes(u8);
+void dComIfGs_setSelectEquipSword(u8);
+void dComIfGs_setSelectEquipShield(u8);
+void dComIfGs_setKeyNum(int, u8);
+static void dComIfGs_setWarpItemData(int, char const*, cXyz, s16, s8, u8, u8);
+void dComIfGs_setWarpItemData(char const*, cXyz, s16, s8, u8, u8);
+static void dComIfGs_setLastWarpMarkItemData(char const*, cXyz, s16, s8, u8, u8);
 void dComIfGs_getWarpStageName();
 void dComIfGs_getWarpPlayerPos();
 void dComIfGs_getWarpPlayerAngleY();
 void dComIfGs_getWarpRoomNo();
 void dComIfGs_getWarpMarkFlag();
-void dComIfGs_setWarpMarkFlag(char);
+void dComIfGs_setWarpMarkFlag(u8);
 void dComIfG_getStageRes(char const*);
 void dComIfG_getOldStageRes(char const*);
-void dComIfG_getRoomArcName(s32);
-void dComIfGp_ret_wp_set(char);
-void dComIfGp_world_dark_set(char);
+void dComIfG_getRoomArcName(int);
+void dComIfGp_ret_wp_set(s8);
+void dComIfGp_world_dark_set(u8);
 void dComIfGp_world_dark_get();
-void dComIfG_TimerStart(s32, s16);
-void dComIfG_TimerStop(s32);
-void dComIfG_TimerReStart(s32);
-void dComIfG_TimerEnd(s32, s32);
-void dComIfG_TimerDeleteCheck(s32);
-void dComIfG_TimerDeleteRequest(s32);
+void dComIfG_TimerStart(int, s16);
+void dComIfG_TimerStop(int);
+void dComIfG_TimerReStart(int);
+void dComIfG_TimerEnd(int, int);
+void dComIfG_TimerDeleteCheck(int);
+void dComIfG_TimerDeleteRequest(int);
 void dComIfGs_Wolf_Change_Check();
-void dComIfGs_PolyDamageOff_Set(char);
+void dComIfGs_PolyDamageOff_Set(s8);
 void dComIfGs_PolyDamageOff_Check();
 void dComIfGs_shake_kandelaar();
 void dComIfGs_shake_kandelaar_check();
 void dComIfGs_wolfeye_effect_check();
-void dComIfGs_Grass_hide_Set(char);
-void dComIfGp_TargetWarpPt_set(char);
-void dComIfGp_SelectWarpPt_set(char);
+void dComIfGs_Grass_hide_Set(s8);
+void dComIfGp_TargetWarpPt_set(u8);
+void dComIfGp_SelectWarpPt_set(u8);
 void dComIfGp_TargetWarpPt_get();
 void dComIfGp_SelectWarpPt_get();
 void dComIfGp_TransportWarp_check();
 extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
-void dComIfGs_onVisitedRoom(s32);
-void dComIfGs_offVisitedRoom(s32);
-void dComIfGs_isVisitedRoom(s32);
+void dComIfGs_onVisitedRoom(int);
+void dComIfGs_offVisitedRoom(int);
+void dComIfGs_isVisitedRoom(int);
 void dComIfGs_staffroll_next_go();
 void dComIfGs_staffroll_next_go_check();
 extern "C" void __sinit_d_com_inf_game_cpp();
@@ -1027,10 +1027,10 @@ void mDoAud_resetProcess();
 void mDoExt_destroyExpHeap(JKRExpHeap*);
 void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
 void fopScnM_ReRequest(s16, u32);
-void dStage_roomRead_dt_c_GetReverbStage(roomRead_class&, s32);
-void checkItemGet(char, s32);
+void dStage_roomRead_dt_c_GetReverbStage(roomRead_class&, int);
+void checkItemGet(u8, int);
 void dKy_daynight_check();
-void dKy_darkworld_stage_check(char const*, s32);
+void dKy_darkworld_stage_check(char const*, int);
 void dMenuFmap_getStartStageName(void*);
 extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
 void* operator new(u32);
@@ -1245,7 +1245,7 @@ asm void dComIfG_play_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_checkItemGet(char field_0, s32 field_1) {
+asm void dComIfGp_checkItemGet(u8 field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_checkItemGet__FUci.s"
 }
@@ -1267,7 +1267,7 @@ asm void dComIfG_play_c::itemInit() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::setItemBombNumCount(char field_0, s16 field_1) {
+asm void dComIfG_play_c::setItemBombNumCount(u8 field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setItemBombNumCount__14dComIfG_play_cFUcs.s"
 }
@@ -1278,7 +1278,7 @@ asm void dComIfG_play_c::setItemBombNumCount(char field_0, s16 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::getItemBombNumCount(char field_0) {
+asm void dComIfG_play_c::getItemBombNumCount(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getItemBombNumCount__14dComIfG_play_cFUc.s"
 }
@@ -1289,7 +1289,7 @@ asm void dComIfG_play_c::getItemBombNumCount(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::clearItemBombNumCount(char field_0) {
+asm void dComIfG_play_c::clearItemBombNumCount(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/clearItemBombNumCount__14dComIfG_play_cFUc.s"
 }
@@ -1300,7 +1300,7 @@ asm void dComIfG_play_c::clearItemBombNumCount(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::setNowVibration(char field_0) {
+asm void dComIfG_play_c::setNowVibration(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setNowVibration__14dComIfG_play_cFUc.s"
 }
@@ -1333,7 +1333,7 @@ asm void dComIfG_play_c::setStartStage(dStage_startStage_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dComIfG_get_timelayer(s32* field_0) {
+asm static void dComIfG_get_timelayer(int* field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_get_timelayer__FPi.s"
 }
@@ -1396,7 +1396,7 @@ SECTION_DEAD char* const pad_803790AF = "";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::getLayerNo_common_common(char const* field_0, s32 field_1, s32 field_2) {
+asm void dComIfG_play_c::getLayerNo_common_common(char const* field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getLayerNo_common_common__14dComIfG_play_cFPCcii.s"
 }
@@ -1407,7 +1407,7 @@ asm void dComIfG_play_c::getLayerNo_common_common(char const* field_0, s32 field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::getLayerNo_common(char const* field_0, s32 field_1, s32 field_2) {
+asm void dComIfG_play_c::getLayerNo_common(char const* field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getLayerNo_common__14dComIfG_play_cFPCcii.s"
 }
@@ -1418,7 +1418,7 @@ asm void dComIfG_play_c::getLayerNo_common(char const* field_0, s32 field_1, s32
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::getLayerNo(s32 field_0) {
+asm void dComIfG_play_c::getLayerNo(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getLayerNo__14dComIfG_play_cFi.s"
 }
@@ -1473,7 +1473,7 @@ asm void dComIfG_play_c::drawSimpleModel() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::addSimpleModel(J3DModelData* field_0, s32 field_1, char field_2) {
+asm void dComIfG_play_c::addSimpleModel(J3DModelData* field_0, int field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc.s"
 }
@@ -1484,7 +1484,7 @@ asm void dComIfG_play_c::addSimpleModel(J3DModelData* field_0, s32 field_1, char
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::removeSimpleModel(J3DModelData* field_0, s32 field_1) {
+asm void dComIfG_play_c::removeSimpleModel(J3DModelData* field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai.s"
 }
@@ -1495,7 +1495,7 @@ asm void dComIfG_play_c::removeSimpleModel(J3DModelData* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::entrySimpleModel(J3DModel* field_0, s32 field_1) {
+asm void dComIfG_play_c::entrySimpleModel(J3DModel* field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/entrySimpleModel__14dComIfG_play_cFP8J3DModeli.s"
 }
@@ -1506,7 +1506,7 @@ asm void dComIfG_play_c::entrySimpleModel(J3DModel* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::setTimerNowTimeMs(s32 field_0) {
+asm void dComIfG_play_c::setTimerNowTimeMs(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setTimerNowTimeMs__14dComIfG_play_cFi.s"
 }
@@ -1528,7 +1528,7 @@ asm void dComIfG_play_c::getTimerNowTimeMs() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::setTimerLimitTimeMs(s32 field_0) {
+asm void dComIfG_play_c::setTimerLimitTimeMs(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setTimerLimitTimeMs__14dComIfG_play_cFi.s"
 }
@@ -1550,7 +1550,7 @@ asm void dComIfG_play_c::getTimerLimitTimeMs() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::setTimerMode(s32 field_0) {
+asm void dComIfG_play_c::setTimerMode(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setTimerMode__14dComIfG_play_cFi.s"
 }
@@ -1572,7 +1572,7 @@ asm void dComIfG_play_c::getTimerMode() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::setTimerType(char field_0) {
+asm void dComIfG_play_c::setTimerType(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setTimerType__14dComIfG_play_cFUc.s"
 }
@@ -1763,7 +1763,7 @@ asm void dComIfG_resDelete(request_of_phase_process_class* field_0, char const* 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_getReverb(s32 field_0) {
+asm void dComIfGp_getReverb(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getReverb__Fi.s"
 }
@@ -1789,7 +1789,7 @@ asm void dComIfGd_setSimpleShadow(cXyz* field_0, f32 field_1, f32 field_2, cBgS_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_getMapTrans(s32 field_0, f32* field_1, f32* field_2, s16* field_3) {
+asm void dComIfGp_getMapTrans(int field_0, f32* field_1, f32* field_2, s16* field_3) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getMapTrans__FiPfPfPs.s"
 }
@@ -1800,7 +1800,7 @@ asm void dComIfGp_getMapTrans(s32 field_0, f32* field_1, f32* field_2, s16* fiel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_getRoomCamera(s32 field_0) {
+asm void dComIfGp_getRoomCamera(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getRoomCamera__Fi.s"
 }
@@ -1811,7 +1811,7 @@ asm void dComIfGp_getRoomCamera(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_getRoomArrow(s32 field_0) {
+asm void dComIfGp_getRoomArrow(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getRoomArrow__Fi.s"
 }
@@ -1822,7 +1822,7 @@ asm void dComIfGp_getRoomArrow(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_setNextStage(char const* field_0, s16 field_1, char field_2, char field_3, f32 field_4, u32 field_5, s32 field_6, char field_7, s16 field_8, s32 field_9, s32 field_10) {
+asm void dComIfGp_setNextStage(char const* field_0, s16 field_1, s8 field_2, s8 field_3, f32 field_4, u32 field_5, int field_6, s8 field_7, s16 field_8, int field_9, int field_10) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_setNextStage__FPCcsScScfUliScsii.s"
 }
@@ -1839,7 +1839,7 @@ u8 lit_5226[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_setNextStage(char const* field_0, s16 field_1, char field_2, char field_3) {
+asm void dComIfGp_setNextStage(char const* field_0, s16 field_1, s8 field_2, s8 field_3) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_setNextStage__FPCcsScSc.s"
 }
@@ -1850,7 +1850,7 @@ asm void dComIfGp_setNextStage(char const* field_0, s16 field_1, char field_2, c
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_isStageTbox(s32 field_0, s32 field_1) {
+asm void dComIfGs_isStageTbox(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isStageTbox__Fii.s"
 }
@@ -1861,7 +1861,7 @@ asm void dComIfGs_isStageTbox(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_onStageSwitch(s32 field_0, s32 field_1) {
+asm void dComIfGs_onStageSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_onStageSwitch__Fii.s"
 }
@@ -1872,7 +1872,7 @@ asm void dComIfGs_onStageSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_offStageSwitch(s32 field_0, s32 field_1) {
+asm void dComIfGs_offStageSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_offStageSwitch__Fii.s"
 }
@@ -1883,7 +1883,7 @@ asm void dComIfGs_offStageSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_isStageSwitch(s32 field_0, s32 field_1) {
+asm void dComIfGs_isStageSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isStageSwitch__Fii.s"
 }
@@ -1894,7 +1894,7 @@ asm void dComIfGs_isStageSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_onStageBossEnemy(s32 field_0) {
+asm void dComIfGs_onStageBossEnemy(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_onStageBossEnemy__Fi.s"
 }
@@ -1905,7 +1905,7 @@ asm void dComIfGs_onStageBossEnemy(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_isDungeonItemWarp(s32 field_0) {
+asm void dComIfGs_isDungeonItemWarp(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isDungeonItemWarp__Fi.s"
 }
@@ -1916,7 +1916,7 @@ asm void dComIfGs_isDungeonItemWarp(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_BossLife_public_Set(char field_0) {
+asm void dComIfGs_BossLife_public_Set(s8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_BossLife_public_Set__FSc.s"
 }
@@ -1938,7 +1938,7 @@ asm void dComIfGs_BossLife_public_Get() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_sense_type_change_Set(char field_0) {
+asm void dComIfGs_sense_type_change_Set(s8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_sense_type_change_Set__FSc.s"
 }
@@ -1960,7 +1960,7 @@ asm void dComIfGs_sense_type_change_Get() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_onZoneSwitch(s32 field_0, s32 field_1) {
+asm void dComIfGs_onZoneSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_onZoneSwitch__Fii.s"
 }
@@ -1971,7 +1971,7 @@ asm void dComIfGs_onZoneSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dStage_roomControl_c::getZoneNo(s32 field_0) {
+asm void dStage_roomControl_c::getZoneNo(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/getZoneNo__20dStage_roomControl_cFi.s"
 }
@@ -1982,7 +1982,7 @@ asm void dStage_roomControl_c::getZoneNo(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_offZoneSwitch(s32 field_0, s32 field_1) {
+asm void dComIfGs_offZoneSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_offZoneSwitch__Fii.s"
 }
@@ -1993,7 +1993,7 @@ asm void dComIfGs_offZoneSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_isZoneSwitch(s32 field_0, s32 field_1) {
+asm void dComIfGs_isZoneSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isZoneSwitch__Fii.s"
 }
@@ -2004,7 +2004,7 @@ asm void dComIfGs_isZoneSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_onOneZoneSwitch(s32 field_0, s32 field_1) {
+asm void dComIfGs_onOneZoneSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_onOneZoneSwitch__Fii.s"
 }
@@ -2015,7 +2015,7 @@ asm void dComIfGs_onOneZoneSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_offOneZoneSwitch(s32 field_0, s32 field_1) {
+asm void dComIfGs_offOneZoneSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_offOneZoneSwitch__Fii.s"
 }
@@ -2026,7 +2026,7 @@ asm void dComIfGs_offOneZoneSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_isOneZoneSwitch(s32 field_0, s32 field_1) {
+asm void dComIfGs_isOneZoneSwitch(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isOneZoneSwitch__Fii.s"
 }
@@ -2037,7 +2037,7 @@ asm void dComIfGs_isOneZoneSwitch(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_isZoneItem(s32 field_0, s32 field_1) {
+asm void dComIfGs_isZoneItem(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isZoneItem__Fii.s"
 }
@@ -2048,7 +2048,7 @@ asm void dComIfGs_isZoneItem(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_isOneZoneItem(s32 field_0, s32 field_1) {
+asm void dComIfGs_isOneZoneItem(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isOneZoneItem__Fii.s"
 }
@@ -2070,7 +2070,7 @@ asm void dComIfGs_getMaxLifeGauge() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_setSelectItemIndex(s32 field_0, char field_1) {
+asm void dComIfGs_setSelectItemIndex(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setSelectItemIndex__FiUc.s"
 }
@@ -2081,7 +2081,7 @@ asm void dComIfGs_setSelectItemIndex(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_setMixItemIndex(s32 field_0, char field_1) {
+asm void dComIfGs_setMixItemIndex(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setMixItemIndex__FiUc.s"
 }
@@ -2092,7 +2092,7 @@ asm void dComIfGs_setMixItemIndex(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_getSelectMixItemNoArrowIndex(s32 field_0) {
+asm void dComIfGs_getSelectMixItemNoArrowIndex(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_getSelectMixItemNoArrowIndex__Fi.s"
 }
@@ -2103,7 +2103,7 @@ asm void dComIfGs_getSelectMixItemNoArrowIndex(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_getMixItemIndex(s32 field_0) {
+asm void dComIfGs_getMixItemIndex(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_getMixItemIndex__Fi.s"
 }
@@ -2114,7 +2114,7 @@ asm void dComIfGs_getMixItemIndex(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_setSelectItem(s32 field_0) {
+asm void dComIfGp_setSelectItem(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_setSelectItem__Fi.s"
 }
@@ -2125,7 +2125,7 @@ asm void dComIfGp_setSelectItem(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_getSelectItem(s32 field_0) {
+asm void dComIfGp_getSelectItem(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getSelectItem__Fi.s"
 }
@@ -2169,7 +2169,7 @@ asm void dComIfGp_checkMapShow() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_setHeapLockFlag(char field_0) {
+asm void dComIfGp_setHeapLockFlag(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_setHeapLockFlag__FUc.s"
 }
@@ -2180,7 +2180,7 @@ asm void dComIfGp_setHeapLockFlag(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_offHeapLockFlag(s32 field_0) {
+asm void dComIfGp_offHeapLockFlag(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_offHeapLockFlag__Fi.s"
 }
@@ -2232,7 +2232,7 @@ asm static void dComIfGp_checkEmptySubHeap2D() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dComIfGp_searchUseSubHeap2D(s32 field_0) {
+asm static void dComIfGp_searchUseSubHeap2D(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_searchUseSubHeap2D__Fi.s"
 }
@@ -2243,7 +2243,7 @@ asm static void dComIfGp_searchUseSubHeap2D(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_getSubHeap2D(s32 field_0) {
+asm void dComIfGp_getSubHeap2D(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getSubHeap2D__Fi.s"
 }
@@ -2272,7 +2272,7 @@ asm void dComIfGs_checkGetInsectNum() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dComIfGs_checkGetItem(char field_0) {
+asm static void dComIfGs_checkGetItem(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_checkGetItem__FUc.s"
 }
@@ -2289,7 +2289,7 @@ s32 dComIfGs_getBottleMax() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_getSelectItemNum(s32 field_0) {
+asm void dComIfGp_getSelectItemNum(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getSelectItemNum__Fi.s"
 }
@@ -2300,7 +2300,7 @@ asm void dComIfGp_getSelectItemNum(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_getSelectItemMaxNum(s32 field_0) {
+asm void dComIfGp_getSelectItemMaxNum(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_getSelectItemMaxNum__Fi.s"
 }
@@ -2311,7 +2311,7 @@ asm void dComIfGp_getSelectItemMaxNum(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_setSelectItemNum(s32 field_0, s16 field_1) {
+asm void dComIfGp_setSelectItemNum(int field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_setSelectItemNum__Fis.s"
 }
@@ -2322,7 +2322,7 @@ asm void dComIfGp_setSelectItemNum(s32 field_0, s16 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_addSelectItemNum(s32 field_0, s16 field_1) {
+asm void dComIfGp_addSelectItemNum(int field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_addSelectItemNum__Fis.s"
 }
@@ -2333,7 +2333,7 @@ asm void dComIfGp_addSelectItemNum(s32 field_0, s16 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGd_setShadow(u32 field_0, char field_1, J3DModel* field_2, cXyz* field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, cBgS_PolyInfo& field_8, dKy_tevstr_c* field_9, s16 field_10, f32 field_11, _GXTexObj* field_12) {
+asm void dComIfGd_setShadow(u32 field_0, s8 field_1, J3DModel* field_2, cXyz* field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, cBgS_PolyInfo& field_8, dKy_tevstr_c* field_9, s16 field_10, f32 field_11, _GXTexObj* field_12) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj.s"
 }
@@ -2417,7 +2417,7 @@ asm void dComIfGp_getNowLevel() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_setSelectEquipClothes(char field_0) {
+asm void dComIfGs_setSelectEquipClothes(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setSelectEquipClothes__FUc.s"
 }
@@ -2428,7 +2428,7 @@ asm void dComIfGs_setSelectEquipClothes(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_setSelectEquipSword(char field_0) {
+asm void dComIfGs_setSelectEquipSword(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setSelectEquipSword__FUc.s"
 }
@@ -2439,7 +2439,7 @@ asm void dComIfGs_setSelectEquipSword(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_setSelectEquipShield(char field_0) {
+asm void dComIfGs_setSelectEquipShield(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setSelectEquipShield__FUc.s"
 }
@@ -2450,7 +2450,7 @@ asm void dComIfGs_setSelectEquipShield(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_setKeyNum(s32 field_0, char field_1) {
+asm void dComIfGs_setKeyNum(int field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setKeyNum__FiUc.s"
 }
@@ -2461,7 +2461,7 @@ asm void dComIfGs_setKeyNum(s32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dComIfGs_setWarpItemData(s32 field_0, char const* field_1, cXyz field_2, s16 field_3, char field_4, char field_5, char field_6) {
+asm static void dComIfGs_setWarpItemData(int field_0, char const* field_1, cXyz field_2, s16 field_3, s8 field_4, u8 field_5, u8 field_6) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setWarpItemData__FiPCc4cXyzsScUcUc.s"
 }
@@ -2472,7 +2472,7 @@ asm static void dComIfGs_setWarpItemData(s32 field_0, char const* field_1, cXyz 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_play_c::setWarpItemData(char const* field_0, cXyz field_1, s16 field_2, char field_3, char field_4, char field_5) {
+asm void dComIfG_play_c::setWarpItemData(char const* field_0, cXyz field_1, s16 field_2, s8 field_3, u8 field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/setWarpItemData__14dComIfG_play_cFPCc4cXyzsScUcUc.s"
 }
@@ -2483,7 +2483,7 @@ asm void dComIfG_play_c::setWarpItemData(char const* field_0, cXyz field_1, s16 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_setWarpItemData(char const* field_0, cXyz field_1, s16 field_2, char field_3, char field_4, char field_5) {
+asm void dComIfGs_setWarpItemData(char const* field_0, cXyz field_1, s16 field_2, s8 field_3, u8 field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc.s"
 }
@@ -2494,7 +2494,7 @@ asm void dComIfGs_setWarpItemData(char const* field_0, cXyz field_1, s16 field_2
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dComIfGs_setLastWarpMarkItemData(char const* field_0, cXyz field_1, s16 field_2, char field_3, char field_4, char field_5) {
+asm static void dComIfGs_setLastWarpMarkItemData(char const* field_0, cXyz field_1, s16 field_2, s8 field_3, u8 field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_setLastWarpMarkItemData__FPCc4cXyzsScUcUc.s"
 }
@@ -2557,7 +2557,7 @@ asm void dComIfGs_getWarpMarkFlag() {
 
 
 /* 8002F310-8002F314 0004+00 rc=1 efc=1 .text      dComIfGs_setWarpMarkFlag__FUc                                */
-void dComIfGs_setWarpMarkFlag(char field_0) {
+void dComIfGs_setWarpMarkFlag(u8 field_0) {
 	/* empty function */
 }
 
@@ -2625,7 +2625,7 @@ u8 data_80423FD0[32];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_getRoomArcName(s32 field_0) {
+asm void dComIfG_getRoomArcName(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_getRoomArcName__Fi.s"
 }
@@ -2633,7 +2633,7 @@ asm void dComIfG_getRoomArcName(s32 field_0) {
 
 
 /* 8002F500-8002F504 0004+00 rc=1 efc=1 .text      dComIfGp_ret_wp_set__FSc                                     */
-void dComIfGp_ret_wp_set(char field_0) {
+void dComIfGp_ret_wp_set(s8 field_0) {
 	/* empty function */
 }
 
@@ -2642,7 +2642,7 @@ void dComIfGp_ret_wp_set(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_world_dark_set(char field_0) {
+asm void dComIfGp_world_dark_set(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_world_dark_set__FUc.s"
 }
@@ -2664,7 +2664,7 @@ asm void dComIfGp_world_dark_get() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_TimerStart(s32 field_0, s16 field_1) {
+asm void dComIfG_TimerStart(int field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerStart__Fis.s"
 }
@@ -2675,7 +2675,7 @@ asm void dComIfG_TimerStart(s32 field_0, s16 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_TimerStop(s32 field_0) {
+asm void dComIfG_TimerStop(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerStop__Fi.s"
 }
@@ -2686,7 +2686,7 @@ asm void dComIfG_TimerStop(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_TimerReStart(s32 field_0) {
+asm void dComIfG_TimerReStart(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerReStart__Fi.s"
 }
@@ -2697,7 +2697,7 @@ asm void dComIfG_TimerReStart(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_TimerEnd(s32 field_0, s32 field_1) {
+asm void dComIfG_TimerEnd(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerEnd__Fii.s"
 }
@@ -2708,7 +2708,7 @@ asm void dComIfG_TimerEnd(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_TimerDeleteCheck(s32 field_0) {
+asm void dComIfG_TimerDeleteCheck(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerDeleteCheck__Fi.s"
 }
@@ -2719,7 +2719,7 @@ asm void dComIfG_TimerDeleteCheck(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfG_TimerDeleteRequest(s32 field_0) {
+asm void dComIfG_TimerDeleteRequest(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfG_TimerDeleteRequest__Fi.s"
 }
@@ -2741,7 +2741,7 @@ asm void dComIfGs_Wolf_Change_Check() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_PolyDamageOff_Set(char field_0) {
+asm void dComIfGs_PolyDamageOff_Set(s8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_PolyDamageOff_Set__FSc.s"
 }
@@ -2800,7 +2800,7 @@ asm void dComIfGs_wolfeye_effect_check() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_Grass_hide_Set(char field_0) {
+asm void dComIfGs_Grass_hide_Set(s8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_Grass_hide_Set__FSc.s"
 }
@@ -2811,7 +2811,7 @@ asm void dComIfGs_Grass_hide_Set(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_TargetWarpPt_set(char field_0) {
+asm void dComIfGp_TargetWarpPt_set(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_TargetWarpPt_set__FUc.s"
 }
@@ -2822,7 +2822,7 @@ asm void dComIfGp_TargetWarpPt_set(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_SelectWarpPt_set(char field_0) {
+asm void dComIfGp_SelectWarpPt_set(u8 field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGp_SelectWarpPt_set__FUc.s"
 }
@@ -2877,7 +2877,7 @@ extern "C" asm void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFP
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_onVisitedRoom(s32 field_0) {
+asm void dComIfGs_onVisitedRoom(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_onVisitedRoom__Fi.s"
 }
@@ -2888,7 +2888,7 @@ asm void dComIfGs_onVisitedRoom(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_offVisitedRoom(s32 field_0) {
+asm void dComIfGs_offVisitedRoom(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_offVisitedRoom__Fi.s"
 }
@@ -2899,7 +2899,7 @@ asm void dComIfGs_offVisitedRoom(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_isVisitedRoom(s32 field_0) {
+asm void dComIfGs_isVisitedRoom(int field_0) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComIfGs_isVisitedRoom__Fi.s"
 }

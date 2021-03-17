@@ -119,8 +119,8 @@ SECTION_SDATA2 extern f32 d_ovlp_d_ovlp_fade3__lit_3947;
 // External References:
 // 
 
-void mDoAud_setFadeOutStart(char);
-void mDoAud_setFadeInStart(char);
+void mDoAud_setFadeOutStart(u8);
+void mDoAud_setFadeInStart(u8);
 void fopOvlpM_SceneIsStart();
 void fopOvlpM_IsOutReq(overlap_task_class*);
 void fopOvlpM_Done(overlap_task_class*);

@@ -30,7 +30,7 @@ struct J2DPane {
 struct dSelect_icon_c {
 	// J2DPane
 	/* 80195A3C */ void animation();
-	/* 80195B40 */ void setAlpha(char);
+	/* 80195B40 */ void setAlpha(u8);
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
@@ -131,7 +131,7 @@ asm void dSelect_icon_c::animation() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dSelect_icon_c::setAlpha(char field_0) {
+asm void dSelect_icon_c::setAlpha(u8 field_0) {
 	nofralloc
 #include "asm/d/d_select_icon/setAlpha__14dSelect_icon_cFUc.s"
 }

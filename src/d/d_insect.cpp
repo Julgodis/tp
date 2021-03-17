@@ -56,7 +56,7 @@ struct dSv_event_c {
 /* top-level dependencies (end dEvt_control_c) */
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
-	/* 800436EC */ void setPtI_Id(s32);
+	/* 800436EC */ void setPtI_Id(u32);
 };
 
 // build dEvent_manager_c (dEvent_manager_c) False/False
@@ -77,7 +77,7 @@ struct dDlst_peekZ_c {
 /* top-level dependencies (begin dMenu_Insect_c) */
 /* top-level dependencies (end dMenu_Insect_c) */
 struct dMenu_Insect_c {
-	/* 801D9F3C */ void isCatchNotGiveInsect(char);
+	/* 801D9F3C */ void isCatchNotGiveInsect(u8);
 };
 
 // 
@@ -106,8 +106,8 @@ void mDoLib_project(Vec*, Vec*);
 void mDoLib_pos2camera(Vec*, Vec*);
 void fopAcM_delete(fopAc_ac_c*);
 void fopAcM_orderItemEvent(fopAc_ac_c*, u16, u16);
-void fopAcM_createItemForTrBoxDemo(cXyz const*, s32, s32, s32, csXyz const*, cXyz const*);
-void fopAcM_createItem(cXyz const*, s32, s32, s32, csXyz const*, cXyz const*, s32);
+void fopAcM_createItemForTrBoxDemo(cXyz const*, int, int, int, csXyz const*, cXyz const*);
+void fopAcM_createItem(cXyz const*, int, int, int, csXyz const*, cXyz const*, int);
 void fopAcM_cancelCarryNow(fopAc_ac_c*);
 
 extern "C" void mDoLib_project__FP3VecP3Vec();

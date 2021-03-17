@@ -31,7 +31,7 @@ struct cBgS_ChkElm {
 	// dBgW_Base
 	/* 8002FEF8 */ ~cBgS_ChkElm();
 	/* 800740F4 */ void Init();
-	/* 80074110 */ void Regist2(dBgW_Base*, s32, void*);
+	/* 80074110 */ void Regist2(dBgW_Base*, u32, void*);
 	/* 80074128 */ void Release();
 };
 
@@ -42,31 +42,6 @@ struct cBgS_ChkElm {
 /* top-level dependencies (end cBgS_LinChk) */
 struct cBgS_LinChk {
 	/* 80267F40 */ void PreCalc();
-};
-
-// build cBgS_GndChk (cBgS_GndChk) False/False
-/* top-level dependencies (begin cBgS_GndChk) */
-/* top-level dependencies (end cBgS_GndChk) */
-struct cBgS_GndChk {
-	/* 80267D44 */ void PreCheck();
-};
-
-// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
-/* top-level dependencies (begin cBgS_PolyInfo) */
-/* top-level dependencies (end cBgS_PolyInfo) */
-struct cBgS_PolyInfo {
-	/* 802680F8 */ void ChkSetInfo() const;
-	/* 80268120 */ void ClearPi();
-	/* 8026816C */ void SetActorInfo(s32, void*, s32);
-	/* 8026817C */ void ChkSafe(void const*, s32) const;
-	/* 802681AC */ void ChkBgIndex() const;
-};
-
-// build dBgW_Base (dBgW_Base) True/True
-// build cM3dGPla (cM3dGPla) False/False
-/* top-level dependencies (begin cM3dGPla) */
-/* top-level dependencies (end cM3dGPla) */
-struct cM3dGPla {
 };
 
 // build cXyz (cXyz) False/False
@@ -81,32 +56,57 @@ struct cXyz {
 struct cBgS_ShdwDraw {
 };
 
+// build dBgW_Base (dBgW_Base) True/True
+// build cM3dGPla (cM3dGPla) False/False
+/* top-level dependencies (begin cM3dGPla) */
+/* top-level dependencies (end cM3dGPla) */
+struct cM3dGPla {
+};
+
+// build cBgS_PolyInfo (cBgS_PolyInfo) False/False
+/* top-level dependencies (begin cBgS_PolyInfo) */
+/* top-level dependencies (end cBgS_PolyInfo) */
+struct cBgS_PolyInfo {
+	/* 802680F8 */ void ChkSetInfo() const;
+	/* 80268120 */ void ClearPi();
+	/* 8026816C */ void SetActorInfo(int, void*, u32);
+	/* 8026817C */ void ChkSafe(void const*, u32) const;
+	/* 802681AC */ void ChkBgIndex() const;
+};
+
+// build cBgS_GndChk (cBgS_GndChk) False/False
+/* top-level dependencies (begin cBgS_GndChk) */
+/* top-level dependencies (end cBgS_GndChk) */
+struct cBgS_GndChk {
+	/* 80267D44 */ void PreCheck();
+};
+
 /* top-level dependencies (begin cBgS) */
 // outer dependency: cBgS_LinChk
-// outer dependency: cBgS_GndChk
-// outer dependency: cBgS_PolyInfo
-// outer dependency: dBgW_Base
-// outer dependency: cM3dGPla
 // outer dependency: cXyz
 // outer dependency: cBgS_ShdwDraw
+// outer dependency: dBgW_Base
+// outer dependency: cM3dGPla
+// outer dependency: cBgS_PolyInfo
+// outer dependency: cBgS_GndChk
 /* top-level dependencies (end cBgS) */
 struct cBgS {
-	// cBgS_LinChk
-	// cBgS_PolyInfo
-	// dBgW_Base
-	// cBgS_GndChk
-	// cM3dGPla
-	// cXyz
 	// cBgS_ShdwDraw
+	// cBgS_PolyInfo
+	// cBgS_GndChk
+	// cBgS_LinChk
+	// cXyz
+	// dBgW_Base
+	// cM3dGPla
 	/* 80030CCC */ ~cBgS();
-	/* 80074144 */ void Regist(dBgW_Base*, s32, void*);
+	/* 80074144 */ void Regist(dBgW_Base*, u32, void*);
 	/* 80074250 */ void Release(dBgW_Base*);
 	/* 800742E4 */ void Ct();
 	/* 80074338 */ void Dt();
 	/* 800743B4 */ void LineCross(cBgS_LinChk*);
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
 	/* 80074578 */ void ConvDzb(void*);
-	/* 80074618 */ void GetActorPointer(s32) const;
+	/* 80074618 */ void GetActorPointer(int) const;
 	/* 80074628 */ void GetBgWBasePointer(cBgS_PolyInfo const&) const;
 	/* 80074660 */ void ChkPolySafe(cBgS_PolyInfo const&);
 	/* 800746F4 */ void GetGrpRoomId(cBgS_PolyInfo const&) const;
@@ -123,13 +123,21 @@ struct cBgS {
 // build cXyz (cXyz) True/True
 // build cBgS_ShdwDraw (cBgS_ShdwDraw) True/True
 // build dBgS (dBgS) False/False
+// build dBgS_Acch (dBgS_Acch) False/False
+/* top-level dependencies (begin dBgS_Acch) */
+/* top-level dependencies (end dBgS_Acch) */
+struct dBgS_Acch {
+	/* 80077278 */ void SetNowActorInfo(int, void*, u32);
+	/* 800772E8 */ void CalcMovePosWork();
+	/* 8007732C */ void CalcWallRR();
+};
+
 // build csXyz (csXyz) False/False
 /* top-level dependencies (begin csXyz) */
 /* top-level dependencies (end csXyz) */
 struct csXyz {
 };
 
-// build cXyz (cXyz) True/True
 // build cBgS_PolyInfo (cBgS_PolyInfo) True/True
 // build dBgS_SphChk (dBgS_SphChk) False/False
 /* top-level dependencies (begin dBgS_SphChk) */
@@ -138,22 +146,14 @@ struct dBgS_SphChk {
 };
 
 // build dBgW_Base (dBgW_Base) True/True
-// build dBgW_Base (dBgW_Base) True/True
-// build dBgS_Acch (dBgS_Acch) False/False
-/* top-level dependencies (begin dBgS_Acch) */
-/* top-level dependencies (end dBgS_Acch) */
-struct dBgS_Acch {
-	/* 80077278 */ void SetNowActorInfo(s32, void*, s32);
-	/* 800772E8 */ void CalcMovePosWork();
-	/* 8007732C */ void CalcWallRR();
-};
-
+// build cXyz (cXyz) True/True
 // build fopAc_ac_c (fopAc_ac_c) False/False
 /* top-level dependencies (begin fopAc_ac_c) */
 /* top-level dependencies (end fopAc_ac_c) */
 struct fopAc_ac_c {
 };
 
+// build dBgW_Base (dBgW_Base) True/True
 // build dBgS_RoofChk (dBgS_RoofChk) False/False
 /* top-level dependencies (begin dBgS_RoofChk) */
 /* top-level dependencies (end dBgS_RoofChk) */
@@ -169,26 +169,26 @@ struct dBgS_SplGrpChk {
 };
 
 /* top-level dependencies (begin dBgS) */
+// outer dependency: dBgS_Acch
 // outer dependency: csXyz
-// outer dependency: cXyz
 // outer dependency: cBgS_PolyInfo
 // outer dependency: dBgS_SphChk
-// outer dependency: dBgW_Base
 // outer dependency: dBgW_Base::PushPullLabel
-// outer dependency: dBgS_Acch
+// outer dependency: cXyz
 // outer dependency: fopAc_ac_c
+// outer dependency: dBgW_Base
 // outer dependency: dBgS_RoofChk
 // outer dependency: dBgS_SplGrpChk
 /* top-level dependencies (end dBgS) */
 struct dBgS {
+	// dBgS_Acch
 	// csXyz
-	// cXyz
 	// cBgS_PolyInfo
 	// dBgS_SphChk
-	// dBgW_Base
 	// dBgW_Base::PushPullLabel
-	// dBgS_Acch
+	// cXyz
 	// fopAc_ac_c
+	// dBgW_Base
 	// dBgS_RoofChk
 	// dBgS_SplGrpChk
 	/* 80030C50 */ ~dBgS();
@@ -258,14 +258,14 @@ struct cBgW {
 /* top-level dependencies (begin cBgS_Chk) */
 /* top-level dependencies (end cBgS_Chk) */
 struct cBgS_Chk {
-	/* 80267BDC */ void ChkSameActorPid(s32) const;
+	/* 80267BDC */ void ChkSameActorPid(u32) const;
 };
 
 // build cBgW_BgId (cBgW_BgId) False/False
 /* top-level dependencies (begin cBgW_BgId) */
 /* top-level dependencies (end cBgW_BgId) */
 struct cBgW_BgId {
-	/* 802681C0 */ void Regist(s32);
+	/* 802681C0 */ void Regist(int);
 	/* 802681C8 */ void Release();
 	/* 802681D4 */ void ChkUsed() const;
 };
@@ -443,7 +443,7 @@ asm void cBgS_ChkElm::Init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgS_ChkElm::Regist2(dBgW_Base* field_0, s32 field_1, void* field_2) {
+asm void cBgS_ChkElm::Regist2(dBgW_Base* field_0, u32 field_1, void* field_2) {
 	nofralloc
 #include "asm/d/bg/d_bg_s/Regist2__11cBgS_ChkElmFP9dBgW_BaseUiPv.s"
 }
@@ -469,7 +469,7 @@ u8 l_SetCounter[4 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgS::Regist(dBgW_Base* field_0, s32 field_1, void* field_2) {
+asm void cBgS::Regist(dBgW_Base* field_0, u32 field_1, void* field_2) {
 	nofralloc
 #include "asm/d/bg/d_bg_s/Regist__4cBgSFP9dBgW_BaseUiPv.s"
 }
@@ -551,7 +551,7 @@ asm void cBgS::ConvDzb(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cBgS::GetActorPointer(s32 field_0) const {
+asm void cBgS::GetActorPointer(int field_0) const {
 	nofralloc
 #include "asm/d/bg/d_bg_s/GetActorPointer__4cBgSCFi.s"
 }

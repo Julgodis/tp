@@ -219,14 +219,14 @@ struct WIND_INFLUENCE {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // build dComIfG_play_c (dComIfG_play_c) False/False
 /* top-level dependencies (begin dComIfG_play_c) */
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 // build dRes_control_c (dRes_control_c) False/False
@@ -241,15 +241,16 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
 // build dPa_control_c (dPa_control_c) False/False
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
+// build cXyz (cXyz) True/True
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
 };
 
 // build dPa_levelEcallBack (dPa_levelEcallBack) False/False
@@ -258,33 +259,32 @@ struct csXyz {
 struct dPa_levelEcallBack {
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
-// build cXyz (cXyz) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
 struct dKy_tevstr_c {
 };
 
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
 /* top-level dependencies (begin dPa_control_c) */
-// outer dependency: csXyz
-// outer dependency: dPa_levelEcallBack
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
+// outer dependency: dPa_levelEcallBack
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
-	// csXyz
-	// _GXColor
 	// dPa_levelEcallBack
-	// cXyz
 	// dKy_tevstr_c
-	/* 8004CA90 */ void set(char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	// csXyz
+	// cXyz
+	// _GXColor
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
@@ -300,21 +300,21 @@ struct dScnKy_env_light_c {
 
 // build Vec (Vec) True/True
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -325,10 +325,10 @@ struct Z2SeMgr {
 /* top-level dependencies (end Z2EnvSeMgr) */
 struct Z2EnvSeMgr {
 	// Vec
-	/* 802C7830 */ void startRainSe(s32, char);
+	/* 802C7830 */ void startRainSe(s32, s8);
 	/* 802C7FBC */ void initStrongWindSe();
 	/* 802C7FC8 */ void setWindDirection(Vec*);
-	/* 802C800C */ void startStrongWindSe(char);
+	/* 802C800C */ void startStrongWindSe(s8);
 };
 
 // build J3DDrawBuffer (J3DDrawBuffer) True/True
@@ -336,33 +336,33 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-static void dKyw_setDrawPacketList(J3DPacket*, s32);
-static void dKyw_setDrawPacketListIndScreen(J3DPacket*, s32);
-static void dKyw_setDrawPacketListSky(J3DPacket*, s32);
-static void dKyw_setDrawPacketListXluBg(J3DPacket*, s32);
-static void dKyw_drawSun(s32);
+static void dKyw_setDrawPacketList(J3DPacket*, int);
+static void dKyw_setDrawPacketListIndScreen(J3DPacket*, int);
+static void dKyw_setDrawPacketListSky(J3DPacket*, int);
+static void dKyw_setDrawPacketListXluBg(J3DPacket*, int);
+static void dKyw_drawSun(int);
 static void dKyw_Sun_Draw();
-static void dKyw_drawSunlenz(s32);
+static void dKyw_drawSunlenz(int);
 static void dKyw_Sunlenz_Draw();
-static void dKyw_drawRain(s32);
+static void dKyw_drawRain(int);
 static void dKyw_Rain_Draw();
-static void dKyw_drawSnow(s32);
+static void dKyw_drawSnow(int);
 static void dKyw_Snow_Draw();
-static void dKyw_drawStar(s32);
+static void dKyw_drawStar(int);
 static void dKyw_Star_Draw();
-static void dKyw_drawHousi(s32);
+static void dKyw_drawHousi(int);
 static void dKyw_Housi_Draw();
-static void dKyw_drawCloud(s32);
+static void dKyw_drawCloud(int);
 static void dKyw_Cloud_Draw();
-static void dKyw_drawVrkumo(s32);
+static void dKyw_drawVrkumo(int);
 static void dKyw_Vrkumo_Draw();
-static void dKyw_shstar_packet(s32);
+static void dKyw_shstar_packet(int);
 static void dKyw_shstar_Draw();
-static void dKyw_odour_packet(s32);
+static void dKyw_odour_packet(int);
 static void dKyw_Odour_Draw();
-static void dKyw_mud_packet(s32);
+static void dKyw_mud_packet(int);
 static void dKyw_mud_Draw();
-static void dKyw_evil_packet(s32);
+static void dKyw_evil_packet(int);
 static void dKyw_evil_Draw();
 void dKyw_wether_init();
 void dKyw_wether_init2();
@@ -397,7 +397,7 @@ static void pntwind_set(WIND_INFLUENCE*);
 void dKyw_pntwind_set(WIND_INFLUENCE*);
 static void dKyw_pntlight_set(WIND_INFLUENCE*);
 static void dKyw_pntwind_cut(WIND_INFLUENCE*);
-static void pntwind_get_info(cXyz*, cXyz*, f32*, char);
+static void pntwind_get_info(cXyz*, cXyz*, f32*, u8);
 static void dKyw_pntwind_get_info(cXyz*, cXyz*, f32*);
 void dKyw_pntlight_collision_get_info(cXyz*, cXyz*, f32*);
 void dKyw_pntwind_get_vecpow(cXyz*);
@@ -406,7 +406,7 @@ void dKyw_get_AllWind_vecpow(cXyz*);
 void dKyw_custom_windpower(f32);
 void dKyw_evt_wind_set(s16, s16);
 void dKyw_evt_wind_set_go();
-void dKyw_rain_set(s32);
+void dKyw_rain_set(int);
 
 extern "C" static void dKyw_setDrawPacketList__FP9J3DPacketi();
 extern "C" static void dKyw_setDrawPacketListIndScreen__FP9J3DPacketi();
@@ -584,7 +584,7 @@ SECTION_SDATA2 extern f32 lit_5855;
 // External References:
 // 
 
-void dComIfGp_getReverb(s32);
+void dComIfGp_getReverb(int);
 void dComIfG_getStageRes(char const*);
 void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
 void dKyr_lenzflare_move();
@@ -598,34 +598,34 @@ void dKyr_star_init();
 void dKyr_star_move();
 void cloud_shadow_move();
 void vrkumo_move();
-extern "C" void dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc();
-extern "C" void dKyr_drawLenzflare__FPA4_fP4cXyzR8_GXColorPPUc();
-extern "C" void dKyr_drawRain__FPA4_fPPUc();
-extern "C" void dKyr_drawSibuki__FPA4_fPPUc();
-extern "C" void dKyr_drawHousi__FPA4_fPPUc();
-extern "C" void dKyr_drawSnow__FPA4_fPPUc();
-extern "C" void dKyr_drawStar__FPA4_fPPUc();
-extern "C" void drawCloudShadow__FPA4_fPPUc();
-extern "C" void drawVrkumo__FPA4_fR8_GXColorPPUc();
+void dKyr_drawSun(f32 (* )[4], cXyz*, _GXColor&, u8**);
+void dKyr_drawLenzflare(f32 (* )[4], cXyz*, _GXColor&, u8**);
+void dKyr_drawRain(f32 (* )[4], u8**);
+void dKyr_drawSibuki(f32 (* )[4], u8**);
+void dKyr_drawHousi(f32 (* )[4], u8**);
+void dKyr_drawSnow(f32 (* )[4], u8**);
+void dKyr_drawStar(f32 (* )[4], u8**);
+void drawCloudShadow(f32 (* )[4], u8**);
+void drawVrkumo(f32 (* )[4], _GXColor&, u8**);
 void dKyr_thunder_init();
 void dKyr_thunder_move();
 void dKyr_shstar_init();
 void dKyr_shstar_move();
 void dKyr_odour_init();
 void dKyr_odour_move();
-extern "C" void dKyr_odour_draw__FPA4_fPPUc();
+void dKyr_odour_draw(f32 (* )[4], u8**);
 void dKyr_mud_init();
 void dKyr_mud_move();
-extern "C" void dKyr_mud_draw__FPA4_fPPUc();
+void dKyr_mud_draw(f32 (* )[4], u8**);
 void dKyr_evil_init();
 void dKyr_evil_move();
-extern "C" void dKyr_evil_draw__FPA4_fPPUc();
+void dKyr_evil_draw(f32 (* )[4], u8**);
 void dKy_undwater_filter_draw();
 void dKy_get_dayofweek();
 void dKy_darkworld_check();
 void cM_atan2s(f32, f32);
 void cLib_addCalc(f32*, f32, f32, f32, f32);
-void* operator new(u32, s32);
+void* operator new(u32, int);
 void operator delete(void*);
 extern "C" void PSVECSquareMag();
 extern "C" void PSVECSquareDistance();
@@ -743,7 +743,7 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_setDrawPacketList(J3DPacket* field_0, s32 field_1) {
+asm static void dKyw_setDrawPacketList(J3DPacket* field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_setDrawPacketList__FP9J3DPacketi.s"
 }
@@ -754,7 +754,7 @@ asm static void dKyw_setDrawPacketList(J3DPacket* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_setDrawPacketListIndScreen(J3DPacket* field_0, s32 field_1) {
+asm static void dKyw_setDrawPacketListIndScreen(J3DPacket* field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_setDrawPacketListIndScreen__FP9J3DPacketi.s"
 }
@@ -765,7 +765,7 @@ asm static void dKyw_setDrawPacketListIndScreen(J3DPacket* field_0, s32 field_1)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_setDrawPacketListSky(J3DPacket* field_0, s32 field_1) {
+asm static void dKyw_setDrawPacketListSky(J3DPacket* field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_setDrawPacketListSky__FP9J3DPacketi.s"
 }
@@ -776,7 +776,7 @@ asm static void dKyw_setDrawPacketListSky(J3DPacket* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_setDrawPacketListXluBg(J3DPacket* field_0, s32 field_1) {
+asm static void dKyw_setDrawPacketListXluBg(J3DPacket* field_0, int field_1) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_setDrawPacketListXluBg__FP9J3DPacketi.s"
 }
@@ -1061,7 +1061,7 @@ asm void dKankyo_evil_Packet::draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_drawSun(s32 field_0) {
+asm static void dKyw_drawSun(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_drawSun__Fi.s"
 }
@@ -1083,7 +1083,7 @@ asm static void dKyw_Sun_Draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_drawSunlenz(s32 field_0) {
+asm static void dKyw_drawSunlenz(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_drawSunlenz__Fi.s"
 }
@@ -1105,7 +1105,7 @@ asm static void dKyw_Sunlenz_Draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_drawRain(s32 field_0) {
+asm static void dKyw_drawRain(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_drawRain__Fi.s"
 }
@@ -1127,7 +1127,7 @@ asm static void dKyw_Rain_Draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_drawSnow(s32 field_0) {
+asm static void dKyw_drawSnow(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_drawSnow__Fi.s"
 }
@@ -1149,7 +1149,7 @@ asm static void dKyw_Snow_Draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_drawStar(s32 field_0) {
+asm static void dKyw_drawStar(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_drawStar__Fi.s"
 }
@@ -1171,7 +1171,7 @@ asm static void dKyw_Star_Draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_drawHousi(s32 field_0) {
+asm static void dKyw_drawHousi(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_drawHousi__Fi.s"
 }
@@ -1193,7 +1193,7 @@ asm static void dKyw_Housi_Draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_drawCloud(s32 field_0) {
+asm static void dKyw_drawCloud(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_drawCloud__Fi.s"
 }
@@ -1215,7 +1215,7 @@ asm static void dKyw_Cloud_Draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_drawVrkumo(s32 field_0) {
+asm static void dKyw_drawVrkumo(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_drawVrkumo__Fi.s"
 }
@@ -1237,7 +1237,7 @@ asm static void dKyw_Vrkumo_Draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_shstar_packet(s32 field_0) {
+asm static void dKyw_shstar_packet(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_shstar_packet__Fi.s"
 }
@@ -1259,7 +1259,7 @@ asm static void dKyw_shstar_Draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_odour_packet(s32 field_0) {
+asm static void dKyw_odour_packet(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_odour_packet__Fi.s"
 }
@@ -1281,7 +1281,7 @@ asm static void dKyw_Odour_Draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_mud_packet(s32 field_0) {
+asm static void dKyw_mud_packet(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_mud_packet__Fi.s"
 }
@@ -1303,7 +1303,7 @@ asm static void dKyw_mud_Draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dKyw_evil_packet(s32 field_0) {
+asm static void dKyw_evil_packet(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_evil_packet__Fi.s"
 }
@@ -2114,7 +2114,7 @@ asm static void dKyw_pntwind_cut(WIND_INFLUENCE* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void pntwind_get_info(cXyz* field_0, cXyz* field_1, f32* field_2, char field_3) {
+asm static void pntwind_get_info(cXyz* field_0, cXyz* field_1, f32* field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/pntwind_get_info__FP4cXyzP4cXyzPfUc.s"
 }
@@ -2218,7 +2218,7 @@ asm void dKyw_evt_wind_set_go() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKyw_rain_set(s32 field_0) {
+asm void dKyw_rain_set(int field_0) {
 	nofralloc
 #include "asm/d/kankyo/d_kankyo_wether/dKyw_rain_set__Fi.s"
 }

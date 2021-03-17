@@ -54,19 +54,12 @@ struct daNpcT_MatAnm_c {
 /* top-level dependencies (end daNpcT_MotionSeqMngr_c) */
 struct daNpcT_MotionSeqMngr_c {
 	/* 80145898 */ void initialize();
-	/* 801458C0 */ void play(u16, s32*, f32*);
+	/* 801458C0 */ void play(u16, int*, f32*);
 	/* 80145A24 */ void checkEndSequence();
 	/* 8014D0C0 */ ~daNpcT_MotionSeqMngr_c();
 };
 
 // build daNpcT_Path_c (daNpcT_Path_c) False/False
-// build daNpcT_Hermite_c (daNpcT_Hermite_c) False/False
-/* top-level dependencies (begin daNpcT_Hermite_c) */
-/* top-level dependencies (end daNpcT_Hermite_c) */
-struct daNpcT_Hermite_c {
-	/* 8014CBAC */ ~daNpcT_Hermite_c();
-};
-
 // build cXyz (cXyz) False/False
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
@@ -87,23 +80,30 @@ struct cXyz {
 	/* 802670AC */ void isZero() const;
 };
 
+// build daNpcT_Hermite_c (daNpcT_Hermite_c) False/False
+/* top-level dependencies (begin daNpcT_Hermite_c) */
+/* top-level dependencies (end daNpcT_Hermite_c) */
+struct daNpcT_Hermite_c {
+	/* 8014CBAC */ ~daNpcT_Hermite_c();
+};
+
 /* top-level dependencies (begin daNpcT_Path_c) */
-// outer dependency: daNpcT_Hermite_c
 // outer dependency: cXyz
+// outer dependency: daNpcT_Hermite_c
 /* top-level dependencies (end daNpcT_Path_c) */
 struct daNpcT_Path_c {
-	// daNpcT_Hermite_c
 	// cXyz
+	// daNpcT_Hermite_c
 	/* 80145B7C */ void hermite(cXyz&, cXyz&, cXyz&, cXyz&, daNpcT_Hermite_c&, cXyz&);
 	/* 80145C40 */ void initialize();
-	/* 80145C74 */ void setPathInfo(char, char, char);
-	/* 80145D2C */ void setNextPathInfo(char, char);
+	/* 80145C74 */ void setPathInfo(u8, s8, u8);
+	/* 80145D2C */ void setNextPathInfo(s8, u8);
 	/* 80145DA0 */ void reverse();
-	/* 80145DD0 */ void setNextIdx(s32);
-	/* 80145E38 */ void getDstPos(cXyz, cXyz*, s32);
-	/* 80145FB4 */ void getDstPosH(cXyz, cXyz*, s32, s32);
-	/* 80146188 */ void chkPassed1(cXyz, s32);
-	/* 801464D8 */ void chkPassed2(cXyz, cXyz*, s32, s32);
+	/* 80145DD0 */ void setNextIdx(int);
+	/* 80145E38 */ void getDstPos(cXyz, cXyz*, int);
+	/* 80145FB4 */ void getDstPosH(cXyz, cXyz*, int, int);
+	/* 80146188 */ void chkPassed1(cXyz, int);
+	/* 801464D8 */ void chkPassed2(cXyz, cXyz*, int, int);
 };
 
 // build cXyz (cXyz) True/True
@@ -116,24 +116,24 @@ struct dPnt {
 
 // build daNpcT_JntAnm_c (daNpcT_JntAnm_c) False/False
 // build cXyz (cXyz) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
 // build J3DModel (J3DModel) False/False
 /* top-level dependencies (begin J3DModel) */
 /* top-level dependencies (end J3DModel) */
 struct J3DModel {
 };
 
+// build fopAc_ac_c (fopAc_ac_c) True/True
 /* top-level dependencies (begin daNpcT_JntAnm_c) */
 // outer dependency: cXyz
-// outer dependency: fopAc_ac_c
 // outer dependency: J3DModel
+// outer dependency: fopAc_ac_c
 /* top-level dependencies (end daNpcT_JntAnm_c) */
 struct daNpcT_JntAnm_c {
 	// cXyz
-	// fopAc_ac_c
 	// J3DModel
+	// fopAc_ac_c
 	/* 80146C98 */ void initialize();
-	/* 80146CD8 */ void setParam(fopAc_ac_c*, J3DModel*, cXyz*, s32, s32, s32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, cXyz*);
+	/* 80146CD8 */ void setParam(fopAc_ac_c*, J3DModel*, cXyz*, int, int, int, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, cXyz*);
 	/* 80147858 */ void calc(f32);
 	/* 80147C38 */ void calcJntRad(f32, f32, f32);
 	/* 8014D150 */ ~daNpcT_JntAnm_c();
@@ -148,27 +148,15 @@ struct daNpcT_JntAnm_c {
 struct daNpcT_DmgStagger_c {
 	// fopAc_ac_c
 	/* 80147DCC */ void setParam(fopAc_ac_c*, fopAc_ac_c*, s16);
-	/* 80147E3C */ void calc(s32);
+	/* 80147E3C */ void calc(int);
 };
 
 // build daNpcT_c (daNpcT_c) False/False
-// build J3DAnmTexPattern (J3DAnmTexPattern) False/False
-/* top-level dependencies (begin J3DAnmTexPattern) */
-/* top-level dependencies (end J3DAnmTexPattern) */
-struct J3DAnmTexPattern {
-};
-
 // build dCcD_GObjInf (dCcD_GObjInf) False/False
 /* top-level dependencies (begin dCcD_GObjInf) */
 /* top-level dependencies (end dCcD_GObjInf) */
 struct dCcD_GObjInf {
 	/* 80084460 */ void ChkTgHit();
-};
-
-// build J3DAnmTransform (J3DAnmTransform) False/False
-/* top-level dependencies (begin J3DAnmTransform) */
-/* top-level dependencies (end J3DAnmTransform) */
-struct J3DAnmTransform {
 };
 
 // build J3DJoint (J3DJoint) False/False
@@ -183,40 +171,6 @@ struct J3DJoint {
 struct daNpcT_motionAnmData_c {
 };
 
-// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
-/* top-level dependencies (begin J3DAnmTevRegKey) */
-/* top-level dependencies (end J3DAnmTevRegKey) */
-struct J3DAnmTevRegKey {
-};
-
-// build J3DModelData (J3DModelData) False/False
-/* top-level dependencies (begin J3DModelData) */
-/* top-level dependencies (end J3DModelData) */
-struct J3DModelData {
-};
-
-// build J3DFrameCtrl (J3DFrameCtrl) False/False
-/* top-level dependencies (begin J3DFrameCtrl) */
-/* top-level dependencies (end J3DFrameCtrl) */
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-};
-
-// build fopAc_ac_c (fopAc_ac_c) True/True
-// build cXyz (cXyz) True/True
-// build J3DAnmTransformKey (J3DAnmTransformKey) False/False
-/* top-level dependencies (begin J3DAnmTransformKey) */
-/* top-level dependencies (end J3DAnmTransformKey) */
-struct J3DAnmTransformKey {
-};
-
-// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J3DAnmTextureSRTKey) */
-/* top-level dependencies (end J3DAnmTextureSRTKey) */
-struct J3DAnmTextureSRTKey {
-};
-
-// build J3DModel (J3DModel) True/True
 // build csXyz (csXyz) False/False
 /* top-level dependencies (begin csXyz) */
 /* top-level dependencies (end csXyz) */
@@ -226,16 +180,17 @@ struct csXyz {
 	/* 8026745C */ void operator+=(csXyz&);
 };
 
-// build _GXColorS10 (_GXColorS10) False/False
-/* top-level dependencies (begin _GXColorS10) */
-/* top-level dependencies (end _GXColorS10) */
-struct _GXColorS10 {
-};
-
 // build J3DAnmColor (J3DAnmColor) False/False
 /* top-level dependencies (begin J3DAnmColor) */
 /* top-level dependencies (end J3DAnmColor) */
 struct J3DAnmColor {
+};
+
+// build cXyz (cXyz) True/True
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) False/False
+/* top-level dependencies (begin J3DAnmTevRegKey) */
+/* top-level dependencies (end J3DAnmTevRegKey) */
+struct J3DAnmTevRegKey {
 };
 
 // build daNpcT_faceMotionAnmData_c (daNpcT_faceMotionAnmData_c) False/False
@@ -244,61 +199,106 @@ struct J3DAnmColor {
 struct daNpcT_faceMotionAnmData_c {
 };
 
+// build J3DAnmTransform (J3DAnmTransform) False/False
+/* top-level dependencies (begin J3DAnmTransform) */
+/* top-level dependencies (end J3DAnmTransform) */
+struct J3DAnmTransform {
+};
+
+// build J3DModelData (J3DModelData) False/False
+/* top-level dependencies (begin J3DModelData) */
+/* top-level dependencies (end J3DModelData) */
+struct J3DModelData {
+};
+
+// build J3DModel (J3DModel) True/True
+// build J3DFrameCtrl (J3DFrameCtrl) False/False
+/* top-level dependencies (begin J3DFrameCtrl) */
+/* top-level dependencies (end J3DFrameCtrl) */
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+};
+
+// build J3DAnmTransformKey (J3DAnmTransformKey) False/False
+/* top-level dependencies (begin J3DAnmTransformKey) */
+/* top-level dependencies (end J3DAnmTransformKey) */
+struct J3DAnmTransformKey {
+};
+
+// build J3DAnmTexPattern (J3DAnmTexPattern) False/False
+/* top-level dependencies (begin J3DAnmTexPattern) */
+/* top-level dependencies (end J3DAnmTexPattern) */
+struct J3DAnmTexPattern {
+};
+
+// build fopAc_ac_c (fopAc_ac_c) True/True
+// build _GXColorS10 (_GXColorS10) False/False
+/* top-level dependencies (begin _GXColorS10) */
+/* top-level dependencies (end _GXColorS10) */
+struct _GXColorS10 {
+};
+
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J3DAnmTextureSRTKey) */
+/* top-level dependencies (end J3DAnmTextureSRTKey) */
+struct J3DAnmTextureSRTKey {
+};
+
 /* top-level dependencies (begin daNpcT_c) */
-// outer dependency: J3DAnmTexPattern
 // outer dependency: dCcD_GObjInf
-// outer dependency: J3DAnmTransform
 // outer dependency: J3DJoint
 // outer dependency: daNpcT_motionAnmData_c
-// outer dependency: J3DAnmTevRegKey
-// outer dependency: J3DModelData
-// outer dependency: J3DFrameCtrl
-// outer dependency: fopAc_ac_c
-// outer dependency: cXyz
-// outer dependency: J3DAnmTransformKey
-// outer dependency: J3DAnmTextureSRTKey
-// outer dependency: J3DModel
 // outer dependency: csXyz
-// outer dependency: _GXColorS10
 // outer dependency: J3DAnmColor
+// outer dependency: cXyz
+// outer dependency: J3DAnmTevRegKey
 // outer dependency: daNpcT_faceMotionAnmData_c
+// outer dependency: J3DAnmTransform
+// outer dependency: J3DModelData
+// outer dependency: J3DModel
+// outer dependency: J3DFrameCtrl
+// outer dependency: J3DAnmTransformKey
+// outer dependency: J3DAnmTexPattern
+// outer dependency: fopAc_ac_c
+// outer dependency: _GXColorS10
+// outer dependency: J3DAnmTextureSRTKey
 /* top-level dependencies (end daNpcT_c) */
 struct daNpcT_c {
-	// csXyz
-	// cXyz
-	// daNpcT_faceMotionAnmData_c
-	// J3DAnmTexPattern
-	// dCcD_GObjInf
-	// J3DAnmTransform
-	// J3DJoint
-	// daNpcT_motionAnmData_c
-	// J3DAnmColor
-	// J3DAnmTevRegKey
 	// J3DModelData
-	// J3DFrameCtrl
-	// fopAc_ac_c
-	// J3DAnmTransformKey
-	// J3DAnmTextureSRTKey
+	// dCcD_GObjInf
+	// J3DJoint
 	// J3DModel
+	// daNpcT_motionAnmData_c
+	// J3DFrameCtrl
+	// csXyz
+	// J3DAnmTransformKey
+	// J3DAnmColor
+	// cXyz
+	// J3DAnmTexPattern
+	// fopAc_ac_c
+	// J3DAnmTevRegKey
+	// daNpcT_faceMotionAnmData_c
 	// _GXColorS10
+	// J3DAnmTextureSRTKey
+	// J3DAnmTransform
 	/* 80147FA4 */ void tgHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
 	/* 80147FD4 */ void srchActor(void*, void*);
-	/* 80148058 */ void getTrnsfrmAnmP(char const*, s32);
-	/* 80148094 */ void getTrnsfrmKeyAnmP(char const*, s32);
-	/* 801480D0 */ void getTexPtrnAnmP(char const*, s32);
-	/* 8014810C */ void getTexSRTKeyAnmP(char const*, s32);
-	/* 80148148 */ void getTevRegKeyAnmP(char const*, s32);
-	/* 80148184 */ void getColorAnmP(char const*, s32);
-	/* 801481C0 */ void setBckAnm(J3DAnmTransform*, f32, s32, s32, s32, bool);
-	/* 80148204 */ void setMcaMorfAnm(J3DAnmTransformKey*, f32, f32, s32, s32, s32);
-	/* 801482F8 */ void setBtpAnm(J3DAnmTexPattern*, J3DModelData*, f32, s32);
-	/* 80148338 */ void setBtkAnm(J3DAnmTextureSRTKey*, J3DModelData*, f32, s32);
-	/* 80148378 */ void setBrkAnm(J3DAnmTevRegKey*, J3DModelData*, f32, s32);
-	/* 801483B8 */ void setBpkAnm(J3DAnmColor*, J3DModelData*, f32, s32);
-	/* 801483F8 */ void loadRes(char const*, char const**);
-	/* 801484AC */ void deleteRes(char const*, char const**);
+	/* 80148058 */ void getTrnsfrmAnmP(char const*, int);
+	/* 80148094 */ void getTrnsfrmKeyAnmP(char const*, int);
+	/* 801480D0 */ void getTexPtrnAnmP(char const*, int);
+	/* 8014810C */ void getTexSRTKeyAnmP(char const*, int);
+	/* 80148148 */ void getTevRegKeyAnmP(char const*, int);
+	/* 80148184 */ void getColorAnmP(char const*, int);
+	/* 801481C0 */ void setBckAnm(J3DAnmTransform*, f32, int, int, int, bool);
+	/* 80148204 */ void setMcaMorfAnm(J3DAnmTransformKey*, f32, f32, int, int, int);
+	/* 801482F8 */ void setBtpAnm(J3DAnmTexPattern*, J3DModelData*, f32, int);
+	/* 80148338 */ void setBtkAnm(J3DAnmTextureSRTKey*, J3DModelData*, f32, int);
+	/* 80148378 */ void setBrkAnm(J3DAnmTevRegKey*, J3DModelData*, f32, int);
+	/* 801483B8 */ void setBpkAnm(J3DAnmColor*, J3DModelData*, f32, int);
+	/* 801483F8 */ void loadRes(s8 const*, char const**);
+	/* 801484AC */ void deleteRes(s8 const*, char const**);
 	/* 8014852C */ void execute();
-	/* 8014886C */ void draw(s32, s32, f32, _GXColorS10*, f32, s32, s32, s32);
+	/* 8014886C */ void draw(int, int, f32, _GXColorS10*, f32, int, int, int);
 	/* 80148C70 */ void setEnvTevColor();
 	/* 80148CCC */ void setRoomNo();
 	/* 80148D10 */ void checkEndAnm(f32);
@@ -308,7 +308,7 @@ struct daNpcT_c {
 	/* 80149190 */ void setMtx();
 	/* 8014924C */ void ctrlFaceMotion();
 	/* 80149300 */ void ctrlMotion();
-	/* 801493B8 */ void ctrlMsgAnm(s32*, s32*, fopAc_ac_c*, s32);
+	/* 801493B8 */ void ctrlMsgAnm(int*, int*, fopAc_ac_c*, int);
 	/* 8014951C */ void ctrlJoint(J3DJoint*, J3DModel*);
 	/* 8014997C */ void evtProc();
 	/* 80149BB4 */ void setFootPos();
@@ -318,35 +318,35 @@ struct daNpcT_c {
 	/* 8014A0B0 */ void evtOrder();
 	/* 8014A224 */ void evtChange();
 	/* 8014A324 */ void clrParam();
-	/* 8014A388 */ void setFaceMotionAnm(s32, bool);
-	/* 8014A628 */ void setMotionAnm(s32, f32, s32);
+	/* 8014A388 */ void setFaceMotionAnm(int, bool);
+	/* 8014A628 */ void setMotionAnm(int, f32, int);
 	/* 8014A908 */ void setPos(cXyz);
 	/* 8014A99C */ void setAngle(csXyz);
 	/* 8014AA18 */ void setAngle(s16);
 	/* 8014AA40 */ void hitChk(dCcD_GObjInf*, u32);
-	/* 8014AAD0 */ void setDamage(s32, s32, s32);
+	/* 8014AAD0 */ void setDamage(int, int, int);
 	/* 8014ABD0 */ void chkActorInSight(fopAc_ac_c*, f32, s16);
 	/* 8014ACF0 */ void chkPointInArea(cXyz, cXyz, f32, f32, f32, s16);
 	/* 8014ADA0 */ void chkPointInArea(cXyz, cXyz, cXyz, s16);
-	/* 8014AE1C */ void chkFindActor(fopAc_ac_c*, s32, s16);
+	/* 8014AE1C */ void chkFindActor(fopAc_ac_c*, int, s16);
 	/* 8014B024 */ void chkWolfAction();
-	/* 8014B0C8 */ void chkFindWolf(s16, s32, s32, f32, f32, f32, f32, s32);
+	/* 8014B0C8 */ void chkFindWolf(s16, int, int, f32, f32, f32, f32, int);
 	/* 8014B338 */ void srchPlayerActor();
 	/* 8014B3EC */ void getAttnPos(fopAc_ac_c*);
-	/* 8014B4A4 */ void turn(s16, s32, s32);
-	/* 8014B648 */ void step(s16, s32, s32, s32, s32);
-	/* 8014B808 */ void calcSpeedAndAngle(cXyz, s32, s16, s16);
-	/* 8014BB00 */ void getActorDistance(fopAc_ac_c*, s32, s32);
-	/* 8014BBF0 */ void initTalk(s32, fopAc_ac_c**);
-	/* 8014BC78 */ void talkProc(s32*, s32, fopAc_ac_c**, s32);
+	/* 8014B4A4 */ void turn(s16, int, int);
+	/* 8014B648 */ void step(s16, int, int, int, int);
+	/* 8014B808 */ void calcSpeedAndAngle(cXyz, int, s16, s16);
+	/* 8014BB00 */ void getActorDistance(fopAc_ac_c*, int, int);
+	/* 8014BBF0 */ void initTalk(int, fopAc_ac_c**);
+	/* 8014BC78 */ void talkProc(int*, int, fopAc_ac_c**, int);
 	/* 8014BE2C */ void getNearestActorP(s16);
-	/* 8014BEE4 */ void getEvtAreaTagP(s32, s32);
+	/* 8014BEE4 */ void getEvtAreaTagP(int, int);
 	/* 8014BFB0 */ void getShopItemTagP();
 	/* 8014C030 */ void setHitodamaPrtcl();
 	/* 8014CBF4 */ void decTmr();
 	/* 8014CC0C */ void setCollision();
 	/* 8014CC10 */ void setAttnPos();
-	/* 8014CC14 */ void ctrlSubFaceMotion(s32);
+	/* 8014CC14 */ void ctrlSubFaceMotion(int);
 	/* 8014CC18 */ void afterMoved();
 	/* 8014CC1C */ void beforeMove();
 	/* 8014CC20 */ void action();
@@ -354,9 +354,9 @@ struct daNpcT_c {
 	/* 8014CC28 */ void drawOtherMdl();
 	/* 8014CC2C */ void drawGhost();
 	/* 8014CC30 */ bool drawDbgInfo();
-	/* 8014CC38 */ bool checkRemoveJoint(s32);
-	/* 8014CC40 */ bool checkChangeJoint(s32);
-	/* 8014CC48 */ void afterJntAnm(s32);
+	/* 8014CC38 */ bool checkRemoveJoint(int);
+	/* 8014CC40 */ bool checkChangeJoint(int);
+	/* 8014CC48 */ void afterJntAnm(int);
 	/* 8014CC4C */ s32 getHeadJointNo();
 	/* 8014CC54 */ s32 getNeckJointNo();
 	/* 8014CC5C */ s32 getBackboneJointNo();
@@ -368,13 +368,13 @@ struct daNpcT_c {
 	/* 8014CC88 */ s32 getFootRJointNo();
 	/* 8014CC90 */ s32 getFootLJointNo();
 	/* 8014CC98 */ bool chkXYItems();
-	/* 8014CCA0 */ bool afterSetFaceMotionAnm(s32, s32, f32, s32);
-	/* 8014CCA8 */ void changeBtp(s32*, s32*);
-	/* 8014CCAC */ void changeBck(s32*, s32*);
+	/* 8014CCA0 */ bool afterSetFaceMotionAnm(int, int, f32, int);
+	/* 8014CCA8 */ void changeBtp(int*, int*);
+	/* 8014CCAC */ void changeBck(int*, int*);
 	/* 8014CCB0 */ void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
-	/* 8014CCE0 */ bool afterSetMotionAnm(s32, s32, f32, s32);
-	/* 8014CCE8 */ void changeBtk(s32*, s32*);
-	/* 8014CCEC */ void changeAnm(s32*, s32*);
+	/* 8014CCE0 */ bool afterSetMotionAnm(int, int, f32, int);
+	/* 8014CCE8 */ void changeBtk(int*, int*);
+	/* 8014CCEC */ void changeAnm(int*, int*);
 	/* 8014CCF0 */ void getMotionAnm(daNpcT_motionAnmData_c);
 	/* 8014CD20 */ ~daNpcT_c();
 	/* 8014D0A8 */ bool getEyeballLMaterialNo();
@@ -401,7 +401,7 @@ struct dAttention_c {
 	/* 80070880 */ void getActionBtnB();
 	/* 8007353C */ void LockonTarget(s32);
 	/* 80073734 */ void ActionTarget(s32);
-	/* 8014B010 */ void getDistTable(s32);
+	/* 8014B010 */ void getDistTable(int);
 };
 
 // build dPath (dPath) False/False
@@ -451,7 +451,7 @@ struct daBaseNpc_path_c {
 	// cXyz
 	/* 8014D998 */ daBaseNpc_path_c();
 	/* 8014D9A8 */ void isPath();
-	/* 8014D9BC */ void setPathInfo(char, char, char);
+	/* 8014D9BC */ void setPathInfo(u8, s8, s8);
 	/* 8014DA48 */ void reverseDir();
 	/* 8014DA64 */ void chkPnt(cXyz);
 	/* 8014DAC4 */ void setNextPnt();
@@ -462,56 +462,60 @@ struct daBaseNpc_path_c {
 };
 
 // build daBaseNpc_lookat_c (daBaseNpc_lookat_c) False/False
-// build csXyz (csXyz) True/True
 // build cXyz (cXyz) True/True
+// build csXyz (csXyz) True/True
+// build fopAc_ac_c (fopAc_ac_c) True/True
 /* top-level dependencies (begin daBaseNpc_lookat_c) */
-// outer dependency: csXyz
 // outer dependency: cXyz
+// outer dependency: csXyz
+// outer dependency: fopAc_ac_c
 /* top-level dependencies (end daBaseNpc_lookat_c) */
 struct daBaseNpc_lookat_c {
-	// csXyz
 	// cXyz
+	// csXyz
+	// fopAc_ac_c
 	/* 8014DB40 */ void limitter(s16, s16*, s16, s16);
-	/* 8014E634 */ void setMaxJntLmt(csXyz, s32);
-	/* 8014E658 */ void setMinJntLmt(csXyz, s32);
-	/* 8014E67C */ void setJntPos(cXyz, s32);
+	/* 8014DBB4 */ void calc(fopAc_ac_c*, f32 (* )[4], s16);
+	/* 8014E634 */ void setMaxJntLmt(csXyz, int);
+	/* 8014E658 */ void setMinJntLmt(csXyz, int);
+	/* 8014E67C */ void setJntPos(cXyz, int);
 	/* 8014E6A0 */ void setAttnPos(cXyz*);
-	/* 8014E6AC */ void getRot(s32);
+	/* 8014E6AC */ void getRot(int);
 	/* 801502EC */ ~daBaseNpc_lookat_c();
 };
 
 // build daBaseNpc_c (daBaseNpc_c) False/False
 // build J3DModelData (J3DModelData) True/True
-// build J3DFrameCtrl (J3DFrameCtrl) True/True
 // build J3DAnmTexPattern (J3DAnmTexPattern) True/True
+// build J3DFrameCtrl (J3DFrameCtrl) True/True
 // build J3DAnmTransform (J3DAnmTransform) True/True
 // build J3DAnmTransformKey (J3DAnmTransformKey) True/True
 /* top-level dependencies (begin daBaseNpc_c) */
 // outer dependency: J3DModelData
-// outer dependency: J3DFrameCtrl
 // outer dependency: J3DAnmTexPattern
+// outer dependency: J3DFrameCtrl
 // outer dependency: J3DAnmTransform
 // outer dependency: J3DAnmTransformKey
 /* top-level dependencies (end daBaseNpc_c) */
 struct daBaseNpc_c {
-	// J3DAnmTexPattern
-	// J3DAnmTransform
 	// J3DModelData
 	// J3DFrameCtrl
 	// J3DAnmTransformKey
+	// J3DAnmTexPattern
+	// J3DAnmTransform
 	/* 8014E6C8 */ daBaseNpc_c();
 	/* 8014E89C */ ~daBaseNpc_c();
 	/* 8014EAD0 */ void execute();
 	/* 8014EC50 */ void draw(f32);
 	/* 8014EE3C */ bool getResName();
-	/* 8014EE44 */ void getTrnsfrmKeyAnmP(char*, s32);
-	/* 8014EE80 */ void setMcaMorfAnm(J3DAnmTransformKey*, f32, f32, s32, s32, s32);
-	/* 8014EEE4 */ void setBckAnm(J3DAnmTransform*, f32, s32, s32, s32, bool);
-	/* 8014EF28 */ void getTexPtrnAnmP(char*, s32);
-	/* 8014EF64 */ void setBtpAnm(J3DAnmTexPattern*, J3DModelData*, f32, s32);
-	/* 8014EFA4 */ void attnSttsOn(s32, s32);
+	/* 8014EE44 */ void getTrnsfrmKeyAnmP(char*, int);
+	/* 8014EE80 */ void setMcaMorfAnm(J3DAnmTransformKey*, f32, f32, int, int, int);
+	/* 8014EEE4 */ void setBckAnm(J3DAnmTransform*, f32, int, int, int, bool);
+	/* 8014EF28 */ void getTexPtrnAnmP(char*, int);
+	/* 8014EF64 */ void setBtpAnm(J3DAnmTexPattern*, J3DModelData*, f32, int);
+	/* 8014EFA4 */ void attnSttsOn(int, int);
 	/* 8014EFF0 */ void setParam();
-	/* 8014EFF4 */ void orderEvent(s32, char*);
+	/* 8014EFF4 */ void orderEvent(int, char*);
 	/* 8014F09C */ void mainProc();
 	/* 8014F0A0 */ void setEnvTevColor();
 	/* 8014F0FC */ void setRoomNo();
@@ -520,7 +524,7 @@ struct daBaseNpc_c {
 	/* 8014F1C8 */ void checkEndAnm(J3DFrameCtrl*);
 	/* 8014F228 */ void allAnmPlay();
 	/* 8014F38C */ void adjustShapeAngle();
-	/* 8014F390 */ void setMtx(s32);
+	/* 8014F390 */ void setMtx(int);
 	/* 8014F4A0 */ void setCollisions();
 	/* 8014F4A4 */ void setAttnPos();
 	/* 8014F4A8 */ void drawOtherMdls();
@@ -538,6 +542,7 @@ struct daBaseNpc_moveBgActor_c {
 	/* 801503BC */ bool CreateHeap();
 	/* 801503C4 */ bool Create();
 	/* 801503CC */ bool Delete();
+	/* 801503D4 */ bool Execute(f32 (** )[3][4]);
 	/* 801503DC */ bool Draw();
 	/* 801503E4 */ bool IsDelete();
 	/* 801503EC */ bool ToFore();
@@ -561,7 +566,7 @@ struct daNpcF_ActorMngr_c {
 	// fopAc_ac_c
 	/* 801506B0 */ void initialize();
 	/* 801506BC */ void entry(fopAc_ac_c*);
-	/* 801506D8 */ void entry(s32);
+	/* 801506D8 */ void entry(u32);
 	/* 801506E0 */ void remove();
 	/* 801506EC */ void getActorP();
 	/* 80155E40 */ ~daNpcF_ActorMngr_c();
@@ -586,7 +591,7 @@ struct daNpcF_MatAnm_c {
 /* top-level dependencies (end daNpcF_SPCurve_c) */
 struct daNpcF_SPCurve_c {
 	// dPath
-	/* 80150870 */ void initialize(dPath*, s32);
+	/* 80150870 */ void initialize(dPath*, int);
 };
 
 // build daNpcF_Path_c (daNpcF_Path_c) False/False
@@ -597,7 +602,7 @@ struct daNpcF_SPCurve_c {
 struct daNpcF_Path_c {
 	// cXyz
 	/* 80150900 */ void initialize();
-	/* 8015095C */ void setPathInfo(char, char, char);
+	/* 8015095C */ void setPathInfo(u8, s8, u8);
 	/* 80150A24 */ void chkPassed(cXyz);
 	/* 80150A7C */ void chkPassedDst(cXyz);
 	/* 80150BBC */ void reverse();
@@ -613,71 +618,76 @@ struct daNpcF_Path_c {
 // build daNpcF_Lookat_c (daNpcF_Lookat_c) False/False
 // build cXyz (cXyz) True/True
 // build csXyz (csXyz) True/True
+// build fopAc_ac_c (fopAc_ac_c) True/True
 /* top-level dependencies (begin daNpcF_Lookat_c) */
 // outer dependency: cXyz
 // outer dependency: csXyz
+// outer dependency: fopAc_ac_c
 /* top-level dependencies (end daNpcF_Lookat_c) */
 struct daNpcF_Lookat_c {
 	// cXyz
 	// csXyz
+	// fopAc_ac_c
 	/* 80151038 */ void initialize();
 	/* 801510B8 */ void setParam(f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, f32, s16, cXyz*);
+	/* 80151350 */ void calc(fopAc_ac_c*, f32 (* )[4], csXyz**, int, int, int);
 	/* 801515D4 */ void adjustMoveDisAngle(s16&, s16, s16, s16);
+	/* 80151648 */ void initCalc(fopAc_ac_c*, f32 (* )[4], cXyz*, csXyz*, f32*, cXyz&, int);
 	/* 80151A54 */ void update(cXyz*, csXyz*, f32*);
-	/* 80151B68 */ void calcMoveDisAngle(s32, cXyz*, csXyz*, cXyz, s32, s32);
+	/* 80151B68 */ void calcMoveDisAngle(int, cXyz*, csXyz*, cXyz, int, int);
 	/* 80151F54 */ void setRotAngle();
 	/* 80151FE0 */ void clrRotAngle();
 };
 
 // build daNpcF_c (daNpcF_c) False/False
-// build cXyz (cXyz) True/True
+// build J3DModelData (J3DModelData) True/True
+// build dCcD_GObjInf (dCcD_GObjInf) True/True
+// build J3DFrameCtrl (J3DFrameCtrl) True/True
+// build J3DAnmTransformKey (J3DAnmTransformKey) True/True
 // build dCcD_Cyl (dCcD_Cyl) False/False
 /* top-level dependencies (begin dCcD_Cyl) */
 /* top-level dependencies (end dCcD_Cyl) */
 struct dCcD_Cyl {
 };
 
+// build cXyz (cXyz) True/True
 // build J3DAnmTexPattern (J3DAnmTexPattern) True/True
-// build dCcD_GObjInf (dCcD_GObjInf) True/True
-// build J3DAnmTransform (J3DAnmTransform) True/True
-// build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
-// build J3DModelData (J3DModelData) True/True
-// build J3DFrameCtrl (J3DFrameCtrl) True/True
 // build fopAc_ac_c (fopAc_ac_c) True/True
+// build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
 // build daNpcF_c (daNpcF_c) True/False
 struct daNpcF_c;
-// build J3DAnmTransformKey (J3DAnmTransformKey) True/True
-// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) True/True
 // build _GXColorS10 (_GXColorS10) True/True
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) True/True
+// build J3DAnmTransform (J3DAnmTransform) True/True
 /* top-level dependencies (begin daNpcF_c) */
-// outer dependency: cXyz
-// outer dependency: dCcD_Cyl
-// outer dependency: J3DAnmTexPattern
-// outer dependency: dCcD_GObjInf
-// outer dependency: J3DAnmTransform
-// outer dependency: J3DAnmTevRegKey
 // outer dependency: J3DModelData
+// outer dependency: dCcD_GObjInf
 // outer dependency: J3DFrameCtrl
-// outer dependency: fopAc_ac_c
-// outer dependency: daNpcF_c::daNpcF_anmPlayData
 // outer dependency: J3DAnmTransformKey
-// outer dependency: J3DAnmTextureSRTKey
+// outer dependency: dCcD_Cyl
+// outer dependency: cXyz
+// outer dependency: J3DAnmTexPattern
+// outer dependency: fopAc_ac_c
+// outer dependency: J3DAnmTevRegKey
+// outer dependency: daNpcF_c::daNpcF_anmPlayData
 // outer dependency: _GXColorS10
+// outer dependency: J3DAnmTextureSRTKey
+// outer dependency: J3DAnmTransform
 /* top-level dependencies (end daNpcF_c) */
 struct daNpcF_c {
-	// cXyz
-	// dCcD_Cyl
-	// J3DAnmTexPattern
-	// dCcD_GObjInf
-	// J3DAnmTransform
-	// J3DAnmTevRegKey
 	// J3DModelData
+	// dCcD_GObjInf
 	// J3DFrameCtrl
-	// fopAc_ac_c
-	// daNpcF_c::daNpcF_anmPlayData
 	// J3DAnmTransformKey
-	// J3DAnmTextureSRTKey
+	// dCcD_Cyl
+	// cXyz
+	// J3DAnmTexPattern
+	// fopAc_ac_c
+	// J3DAnmTevRegKey
+	// daNpcF_c::daNpcF_anmPlayData
 	// _GXColorS10
+	// J3DAnmTextureSRTKey
+	// J3DAnmTransform
 	// build daNpcF_anmPlayData (daNpcF_c::daNpcF_anmPlayData) False/False
 	/* dependencies (begin daNpcF_c::daNpcF_anmPlayData) */
 	/* dependencies (end daNpcF_c::daNpcF_anmPlayData) */
@@ -685,22 +695,22 @@ struct daNpcF_c {
 	};
 
 	/* 80152014 */ void execute();
-	/* 801522AC */ void draw(s32, s32, f32, _GXColorS10*, s32);
+	/* 801522AC */ void draw(int, int, f32, _GXColorS10*, int);
 	/* 80152614 */ void tgHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
 	/* 80152654 */ void srchAttnActor1(void*, void*);
 	/* 801526E8 */ void srchActor(void*, void*);
 	/* 8015276C */ void setMtx();
 	/* 801527FC */ void setMtx2();
 	/* 801528C8 */ void initialize();
-	/* 80152B2C */ void getTrnsfrmKeyAnmP(char*, s32);
-	/* 80152B68 */ void getTexPtrnAnmP(char*, s32);
-	/* 80152BA4 */ void getTexSRTKeyAnmP(char*, s32);
-	/* 80152BE0 */ void getTevRegKeyAnmP(char*, s32);
-	/* 80152C1C */ void setMcaMorfAnm(J3DAnmTransformKey*, f32, f32, s32, s32, s32);
-	/* 80152C80 */ void setBckAnm(J3DAnmTransform*, f32, s32, s32, s32, bool);
-	/* 80152CC4 */ void setBtpAnm(J3DAnmTexPattern*, J3DModelData*, f32, s32);
-	/* 80152D04 */ void setBtkAnm(J3DAnmTextureSRTKey*, J3DModelData*, f32, s32);
-	/* 80152D44 */ void setBrkAnm(J3DAnmTevRegKey*, J3DModelData*, f32, s32);
+	/* 80152B2C */ void getTrnsfrmKeyAnmP(char*, int);
+	/* 80152B68 */ void getTexPtrnAnmP(char*, int);
+	/* 80152BA4 */ void getTexSRTKeyAnmP(char*, int);
+	/* 80152BE0 */ void getTevRegKeyAnmP(char*, int);
+	/* 80152C1C */ void setMcaMorfAnm(J3DAnmTransformKey*, f32, f32, int, int, int);
+	/* 80152C80 */ void setBckAnm(J3DAnmTransform*, f32, int, int, int, bool);
+	/* 80152CC4 */ void setBtpAnm(J3DAnmTexPattern*, J3DModelData*, f32, int);
+	/* 80152D04 */ void setBtkAnm(J3DAnmTextureSRTKey*, J3DModelData*, f32, int);
+	/* 80152D44 */ void setBrkAnm(J3DAnmTevRegKey*, J3DModelData*, f32, int);
 	/* 80152D84 */ void setEnvTevColor();
 	/* 80152DE0 */ void setRoomNo();
 	/* 80152E24 */ void chkEndAnm(f32);
@@ -708,27 +718,27 @@ struct daNpcF_c {
 	/* 80152F40 */ void playAllAnm();
 	/* 80153150 */ void playExpressionAnm(daNpcF_c::daNpcF_anmPlayData***);
 	/* 80153264 */ void playMotionAnm(daNpcF_c::daNpcF_anmPlayData***);
-	/* 8015337C */ void setLookatMtx(s32, s32*, f32);
-	/* 80153578 */ void hitChk2(dCcD_Cyl*, s32, s32);
-	/* 80153658 */ void setDamage(s32, s32, s32);
-	/* 80153718 */ void ctrlMsgAnm(s32&, s32&, fopAc_ac_c*, s32);
-	/* 8015387C */ void orderEvent(s32, char*, u16, u16, char, u16);
+	/* 8015337C */ void setLookatMtx(int, int*, f32);
+	/* 80153578 */ void hitChk2(dCcD_Cyl*, int, int);
+	/* 80153658 */ void setDamage(int, int, int);
+	/* 80153718 */ void ctrlMsgAnm(int&, int&, fopAc_ac_c*, int);
+	/* 8015387C */ void orderEvent(int, char*, u16, u16, u8, u16);
 	/* 80153954 */ void changeEvent(char*, char*, u16, u16);
 	/* 801539F0 */ void chkActorInSight(fopAc_ac_c*, f32);
 	/* 80153A78 */ void chkActorInArea(fopAc_ac_c*, cXyz, cXyz, s16);
-	/* 80153BDC */ void chkActorInAttnArea(fopAc_ac_c*, fopAc_ac_c*, s32);
-	/* 80153D1C */ void initTalk(s32, fopAc_ac_c**);
-	/* 80153D84 */ void talkProc(s32*, s32, fopAc_ac_c**);
-	/* 80153EF4 */ void turn(s16, f32, s32);
-	/* 801540A4 */ void step(s16, s32, s32, s32);
+	/* 80153BDC */ void chkActorInAttnArea(fopAc_ac_c*, fopAc_ac_c*, int);
+	/* 80153D1C */ void initTalk(int, fopAc_ac_c**);
+	/* 80153D84 */ void talkProc(int*, int, fopAc_ac_c**);
+	/* 80153EF4 */ void turn(s16, f32, int);
+	/* 801540A4 */ void step(s16, int, int, int);
 	/* 80154250 */ void setAngle(s16);
-	/* 80154278 */ void getDistTableIdx(s32, s32);
-	/* 801542A0 */ void getEvtAreaTagP(s32, s32);
+	/* 80154278 */ void getDistTableIdx(int, int);
+	/* 801542A0 */ void getEvtAreaTagP(int, int);
 	/* 80154730 */ void chkActorInSight2(fopAc_ac_c*, f32, s16);
 	/* 80154834 */ void chkPointInArea(cXyz, cXyz, f32, f32, f32, s16);
 	/* 801548F4 */ void chkPointInArea(cXyz, cXyz, cXyz, s16);
 	/* 8015496C */ void getAttentionPos(fopAc_ac_c*);
-	/* 801549E0 */ void chkFindPlayer2(s32, s16);
+	/* 801549E0 */ void chkFindPlayer2(int, s16);
 	/* 80154BD8 */ void setHitodamaPrtcl();
 	/* 80155BB4 */ void setCollisions();
 	/* 80155BB8 */ void setAttnPos();
@@ -738,12 +748,12 @@ struct daNpcF_c {
 	/* 80155BCC */ void drawOtherMdls();
 	/* 80155BD0 */ bool drawDbgInfo();
 	/* 80155BD8 */ bool ctrlBtk();
-	/* 80155BE0 */ bool setExpressionAnm(s32, bool);
-	/* 80155BE8 */ void setMotionAnm(s32, f32);
-	/* 80155BEC */ void setMotion(s32, f32, s32);
-	/* 80155BF0 */ void setExpression(s32, f32);
+	/* 80155BE0 */ bool setExpressionAnm(int, bool);
+	/* 80155BE8 */ void setMotionAnm(int, f32);
+	/* 80155BEC */ void setMotion(int, f32, int);
+	/* 80155BF0 */ void setExpression(int, f32);
 	/* 80155BF4 */ ~daNpcF_c();
-	/* 80155EC8 */ bool setExpressionBtp(s32);
+	/* 80155EC8 */ bool setExpressionBtp(int);
 };
 
 // build dCcD_Cyl (dCcD_Cyl) True/True
@@ -755,6 +765,7 @@ struct daNpcF_MoveBgActor_c {
 	/* 80155E88 */ bool CreateHeap();
 	/* 80155E90 */ bool Create();
 	/* 80155E98 */ bool Delete();
+	/* 80155EA0 */ bool Execute(f32 (** )[3][4]);
 	/* 80155EA8 */ bool Draw();
 	/* 80155EB0 */ bool IsDelete();
 	/* 80155EB8 */ bool ToFore();
@@ -788,52 +799,52 @@ struct mDoExt_baseAnm {
 };
 
 // build mDoExt_bpkAnm (mDoExt_bpkAnm) False/False
-// build J3DAnmColor (J3DAnmColor) True/True
 // build J3DMaterialTable (J3DMaterialTable) False/False
-// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) True/True
-// build J3DAnmColor (J3DAnmColor) True/True
 // build J3DAnmTevRegKey (J3DAnmTevRegKey) True/True
 // build J3DAnmTexPattern (J3DAnmTexPattern) True/True
+// build J3DAnmTextureSRTKey (J3DAnmTextureSRTKey) True/True
+// build J3DAnmColor (J3DAnmColor) True/True
 /* top-level dependencies (begin J3DMaterialTable) */
-// outer dependency: J3DAnmTextureSRTKey
-// outer dependency: J3DAnmColor
 // outer dependency: J3DAnmTevRegKey
 // outer dependency: J3DAnmTexPattern
+// outer dependency: J3DAnmTextureSRTKey
+// outer dependency: J3DAnmColor
 /* top-level dependencies (end J3DMaterialTable) */
 struct J3DMaterialTable {
-	// J3DAnmTextureSRTKey
-	// J3DAnmColor
 	// J3DAnmTevRegKey
 	// J3DAnmTexPattern
+	// J3DAnmTextureSRTKey
+	// J3DAnmColor
 	/* 8032F64C */ void removeMatColorAnimator(J3DAnmColor*);
 	/* 8032F6F8 */ void removeTexNoAnimator(J3DAnmTexPattern*);
 	/* 8032F7B4 */ void removeTexMtxAnimator(J3DAnmTextureSRTKey*);
 	/* 8032F880 */ void removeTevRegAnimator(J3DAnmTevRegKey*);
 };
 
+// build J3DAnmColor (J3DAnmColor) True/True
 /* top-level dependencies (begin mDoExt_bpkAnm) */
-// outer dependency: J3DAnmColor
 // outer dependency: J3DMaterialTable
+// outer dependency: J3DAnmColor
 /* top-level dependencies (end mDoExt_bpkAnm) */
 struct mDoExt_bpkAnm {
-	// J3DAnmColor
 	// J3DMaterialTable
-	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, s32, s32, f32, s16, s16);
+	// J3DAnmColor
+	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
 // build J3DMaterialTable (J3DMaterialTable) True/True
 // build mDoExt_btpAnm (mDoExt_btpAnm) False/False
-// build J3DMaterialTable (J3DMaterialTable) True/True
 // build J3DAnmTexPattern (J3DAnmTexPattern) True/True
+// build J3DMaterialTable (J3DMaterialTable) True/True
 /* top-level dependencies (begin mDoExt_btpAnm) */
-// outer dependency: J3DMaterialTable
 // outer dependency: J3DAnmTexPattern
+// outer dependency: J3DMaterialTable
 /* top-level dependencies (end mDoExt_btpAnm) */
 struct mDoExt_btpAnm {
-	// J3DMaterialTable
 	// J3DAnmTexPattern
-	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, s32, s32, f32, s16, s16);
+	// J3DMaterialTable
+	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16);
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
@@ -847,7 +858,7 @@ struct mDoExt_btpAnm {
 struct mDoExt_btkAnm {
 	// J3DAnmTextureSRTKey
 	// J3DMaterialTable
-	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, s32, s32, f32, s16, s16);
+	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
@@ -861,21 +872,21 @@ struct mDoExt_btkAnm {
 struct mDoExt_brkAnm {
 	// J3DAnmTevRegKey
 	// J3DMaterialTable
-	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, s32, s32, f32, s16, s16);
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
 // build mDoExt_bckAnm (mDoExt_bckAnm) False/False
-// build J3DAnmTransform (J3DAnmTransform) True/True
 // build J3DModelData (J3DModelData) True/True
+// build J3DAnmTransform (J3DAnmTransform) True/True
 /* top-level dependencies (begin mDoExt_bckAnm) */
-// outer dependency: J3DAnmTransform
 // outer dependency: J3DModelData
+// outer dependency: J3DAnmTransform
 /* top-level dependencies (end mDoExt_bckAnm) */
 struct mDoExt_bckAnm {
-	// J3DAnmTransform
 	// J3DModelData
-	/* 8000D7DC */ void init(J3DAnmTransform*, s32, s32, f32, s16, s16, bool);
+	// J3DAnmTransform
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 	/* 8000D9E8 */ void entryJoint(J3DModelData*, u16, f32);
 };
@@ -894,8 +905,8 @@ struct mDoExt_morf_c {
 /* top-level dependencies (end mDoExt_McaMorfSO) */
 struct mDoExt_McaMorfSO {
 	// J3DAnmTransform
-	/* 80010E70 */ void setAnm(J3DAnmTransform*, s32, f32, f32, f32, f32);
-	/* 800110B0 */ void play(u32, char);
+	/* 80010E70 */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32);
+	/* 800110B0 */ void play(u32, s8);
 	/* 800111C0 */ void entryDL();
 	/* 800111EC */ void modelCalc();
 };
@@ -911,7 +922,7 @@ struct cM3dGPla {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // build request_of_phase_process_class (request_of_phase_process_class) False/False
@@ -988,7 +999,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -998,9 +1009,9 @@ struct dRes_control_c {
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 	/* 80042518 */ void reset(void*);
-	/* 800432EC */ void convPId(s32);
+	/* 800432EC */ void convPId(u32);
 	/* 8004368C */ void setPtT(void*);
-	/* 800436EC */ void setPtI_Id(s32);
+	/* 800436EC */ void setPtI_Id(u32);
 };
 
 // build dEvent_manager_c (dEvent_manager_c) False/False
@@ -1011,40 +1022,40 @@ struct dEvt_control_c {
 struct dEvent_manager_c {
 	// fopAc_ac_c
 	/* 80046800 */ void setObjectArchive(char*);
-	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, char);
+	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, u8);
 	/* 80047A78 */ void endCheck(s16);
 	/* 800483E8 */ void getRunEventName();
 };
 
 // build dPa_control_c (dPa_control_c) False/False
-// build csXyz (csXyz) True/True
-// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
-/* top-level dependencies (begin dPa_levelEcallBack) */
-/* top-level dependencies (end dPa_levelEcallBack) */
-struct dPa_levelEcallBack {
-};
-
+// build cXyz (cXyz) True/True
 // build _GXColor (_GXColor) False/False
 /* top-level dependencies (begin _GXColor) */
 /* top-level dependencies (end _GXColor) */
 struct _GXColor {
 };
 
-// build cXyz (cXyz) True/True
+// build dPa_levelEcallBack (dPa_levelEcallBack) False/False
+/* top-level dependencies (begin dPa_levelEcallBack) */
+/* top-level dependencies (end dPa_levelEcallBack) */
+struct dPa_levelEcallBack {
+};
+
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build csXyz (csXyz) True/True
 /* top-level dependencies (begin dPa_control_c) */
-// outer dependency: csXyz
-// outer dependency: dPa_levelEcallBack
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
+// outer dependency: dPa_levelEcallBack
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
-	// csXyz
-	// _GXColor
 	// dPa_levelEcallBack
-	// cXyz
 	// dKy_tevstr_c
+	// csXyz
+	// cXyz
+	// _GXColor
 	// build level_c (dPa_control_c::level_c) False/False
 	/* dependencies (begin dPa_control_c::level_c) */
 	/* dependencies (end dPa_control_c::level_c) */
@@ -1052,25 +1063,25 @@ struct dPa_control_c {
 		/* 8004B918 */ void getEmitter(u32);
 	};
 
-	/* 8004D4CC */ void set(u32, char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 // build dPa_levelEcallBack (dPa_levelEcallBack) True/True
 // build _GXColor (_GXColor) True/True
 // build dPaPoT_c (dPaPoT_c) False/False
-// build cXyz (cXyz) True/True
-// build csXyz (csXyz) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build csXyz (csXyz) True/True
+// build cXyz (cXyz) True/True
 /* top-level dependencies (begin dPaPoT_c) */
-// outer dependency: cXyz
-// outer dependency: csXyz
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
+// outer dependency: cXyz
 /* top-level dependencies (end dPaPoT_c) */
 struct dPaPoT_c {
-	// cXyz
-	// csXyz
 	// dKy_tevstr_c
-	/* 8005115C */ void setEffectTwo(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, char, f32, f32);
+	// csXyz
+	// cXyz
+	/* 8005115C */ void setEffectTwo(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
 };
 
 // build cBgS (cBgS) False/False
@@ -1080,6 +1091,14 @@ struct dPaPoT_c {
 struct cBgS_LinChk {
 };
 
+// build dBgW_Base (dBgW_Base) False/False
+/* top-level dependencies (begin dBgW_Base) */
+/* top-level dependencies (end dBgW_Base) */
+struct dBgW_Base {
+};
+
+// build cM3dGPla (cM3dGPla) True/True
+// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
 // build cBgS_GndChk (cBgS_GndChk) False/False
 // build cXyz (cXyz) True/True
 /* top-level dependencies (begin cBgS_GndChk) */
@@ -1092,26 +1111,18 @@ struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
-// build cBgS_PolyInfo (cBgS_PolyInfo) True/True
-// build dBgW_Base (dBgW_Base) False/False
-/* top-level dependencies (begin dBgW_Base) */
-/* top-level dependencies (end dBgW_Base) */
-struct dBgW_Base {
-};
-
-// build cM3dGPla (cM3dGPla) True/True
 /* top-level dependencies (begin cBgS) */
 // outer dependency: cBgS_LinChk
-// outer dependency: cBgS_GndChk
-// outer dependency: cBgS_PolyInfo
 // outer dependency: dBgW_Base
 // outer dependency: cM3dGPla
+// outer dependency: cBgS_PolyInfo
+// outer dependency: cBgS_GndChk
 /* top-level dependencies (end cBgS) */
 struct cBgS {
-	// cBgS_LinChk
 	// cBgS_PolyInfo
-	// dBgW_Base
 	// cBgS_GndChk
+	// cBgS_LinChk
+	// dBgW_Base
 	// cM3dGPla
 	/* 80074250 */ void Release(dBgW_Base*);
 	/* 800743B4 */ void LineCross(cBgS_LinChk*);
@@ -1125,17 +1136,17 @@ struct cBgS {
 // build cBgS_GndChk (cBgS_GndChk) True/True
 // build dBgS (dBgS) False/False
 // build dBgW_Base (dBgW_Base) True/True
-// build fopAc_ac_c (fopAc_ac_c) True/True
 // build cBgS_PolyInfo (cBgS_PolyInfo) True/True
+// build fopAc_ac_c (fopAc_ac_c) True/True
 /* top-level dependencies (begin dBgS) */
 // outer dependency: dBgW_Base
-// outer dependency: fopAc_ac_c
 // outer dependency: cBgS_PolyInfo
+// outer dependency: fopAc_ac_c
 /* top-level dependencies (end dBgS) */
 struct dBgS {
 	// dBgW_Base
-	// fopAc_ac_c
 	// cBgS_PolyInfo
+	// fopAc_ac_c
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
@@ -1189,6 +1200,22 @@ struct dBgS_PolyPassChk {
 	/* 80078E68 */ void SetObj();
 };
 
+// build cBgW (cBgW) False/False
+// build cBgD_t (cBgD_t) False/False
+/* top-level dependencies (begin cBgD_t) */
+/* top-level dependencies (end cBgD_t) */
+struct cBgD_t {
+};
+
+/* top-level dependencies (begin cBgW) */
+// outer dependency: cBgD_t
+/* top-level dependencies (end cBgW) */
+struct cBgW {
+	// cBgD_t
+	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
+};
+
+// build cBgD_t (cBgD_t) True/True
 // build dBgW (dBgW) False/False
 /* top-level dependencies (begin dBgW) */
 /* top-level dependencies (end dBgW) */
@@ -1221,19 +1248,19 @@ struct daPy_py_c {
 };
 
 // build dScnKy_env_light_c (dScnKy_env_light_c) False/False
-// build J3DModelData (J3DModelData) True/True
 // build cXyz (cXyz) True/True
+// build J3DModelData (J3DModelData) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
 /* top-level dependencies (begin dScnKy_env_light_c) */
-// outer dependency: J3DModelData
 // outer dependency: cXyz
+// outer dependency: J3DModelData
 // outer dependency: dKy_tevstr_c
 /* top-level dependencies (end dScnKy_env_light_c) */
 struct dScnKy_env_light_c {
-	// J3DModelData
 	// cXyz
+	// J3DModelData
 	// dKy_tevstr_c
-	/* 801A37C4 */ void settingTevStruct(s32, cXyz*, dKy_tevstr_c*);
+	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
@@ -1256,9 +1283,9 @@ struct dMsgFlow_c {
 	// fopAc_ac_c
 	/* 80249F00 */ dMsgFlow_c();
 	/* 80249F48 */ ~dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, s32, s32, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, s32);
-	/* 8024A424 */ void checkEventRender(s32*, s32*, s32*, s32*);
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+	/* 8024A424 */ void checkEventRender(int*, int*, int*, int*);
 	/* 8024A538 */ void getMsgNo();
 	/* 8024A548 */ void getMsg();
 };
@@ -1319,17 +1346,17 @@ struct J3DMaterialAnm {
 // Forward References:
 // 
 
-static void daNpcT_addIdx(s32, s32, u16&, s32);
-static void daNpcT_subIdx(s32, s32, u16&, s32);
-static void daNpcT_incIdx(s32, u16&, s32, s32);
-static void daNpcT_decIdx(s32, u16&, s32, s32);
-static void daNpcT_chkPassed(cXyz, dPnt*, u16, u16, s32, s32, cXyz*, s32*, s32*);
-void daNpcT_chkActorInScreen(fopAc_ac_c*, f32, f32, f32, f32, f32, f32, f32, s32);
-static void daNpcT_chkPointInArea(cXyz, cXyz, cXyz, s16, s32);
-void daNpcT_getPlayerInfoFromPlayerList(s32, s32, cXyz*, csXyz*);
+static void daNpcT_addIdx(int, int, u16&, int);
+static void daNpcT_subIdx(int, int, u16&, int);
+static void daNpcT_incIdx(int, u16&, int, int);
+static void daNpcT_decIdx(int, u16&, int, int);
+static void daNpcT_chkPassed(cXyz, dPnt*, u16, u16, int, int, cXyz*, int*, int*);
+void daNpcT_chkActorInScreen(fopAc_ac_c*, f32, f32, f32, f32, f32, f32, f32, int);
+static void daNpcT_chkPointInArea(cXyz, cXyz, cXyz, s16, int);
+void daNpcT_getPlayerInfoFromPlayerList(int, int, cXyz*, csXyz*);
 void daNpcT_chkDoBtnIsSpeak(fopAc_ac_c*);
-void daNpcT_judgeRace(dPath*, fopAc_ac_c**, daNpcT_pntData_c*, s32, s32*);
-void daNpcT_getDistTableIdx(s32, s32);
+void daNpcT_judgeRace(dPath*, fopAc_ac_c**, daNpcT_pntData_c*, int, int*);
+void daNpcT_getDistTableIdx(int, int);
 void daNpcT_onEvtBit(u32);
 void daNpcT_offEvtBit(u32);
 void daNpcT_chkEvtBit(u32);
@@ -1340,41 +1367,36 @@ extern "C" static void func_8014D32C();
 extern "C" void func_8014D348();
 extern "C" void func_8014D364();
 extern "C" void __sinit_d_a_npc_cpp();
-static void daBaseNpc_addIdx(s32, s32, u16*, s32);
-static void daBaseNpc_subIdx(s32, s32, u16*, s32);
-static void daBaseNpc_incIdx(s32, u16*, s32, s32);
-static void daBaseNpc_decIdx(s32, u16*, s32, s32);
-static void daNpcBase_BBasis(s32, s32, s32, s32*);
-extern "C" void calc__18daBaseNpc_lookat_cFP10fopAc_ac_cPA4_fs();
+static void daBaseNpc_addIdx(int, int, u16*, int);
+static void daBaseNpc_subIdx(int, int, u16*, int);
+static void daBaseNpc_incIdx(int, u16*, int, int);
+static void daBaseNpc_decIdx(int, u16*, int, int);
+static void daNpcBase_BBasis(int, int, int, int*);
 static void CheckCreateHeap(fopAc_ac_c*);
 extern "C" void MoveBGCreate__23daBaseNpc_moveBgActor_cFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUl();
 static void daBaseNpc_PntVsLineSegmentLengthSquare2D(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*);
-static void daBaseNpc_putNurbs(dPnt*, s32, s32, dPnt*, s32);
-static void daBaseNpc_chkPnt(cXyz, dPnt*, u16, u16, s32, s32);
+static void daBaseNpc_putNurbs(dPnt*, int, int, dPnt*, int);
+static void daBaseNpc_chkPnt(cXyz, dPnt*, u16, u16, int, int);
 static void daBaseNpc_getGroundAngle(cBgS_PolyInfo*, s16);
-extern "C" static bool Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f();
-static void daNpcF_addIdx(s32, s32, u16&, s32);
-static void daNpcF_subIdx(s32, s32, u16&, s32);
-static void daNpcF_incIdx(s32, u16&, s32, s32);
-static void daNpcF_decIdx(s32, u16&, s32, s32);
-extern "C" void calc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fPP5csXyziii();
-extern "C" static void initCalc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fP4cXyzP5csXyzPfR4cXyzi();
+static void daNpcF_addIdx(int, int, u16&, int);
+static void daNpcF_subIdx(int, int, u16&, int);
+static void daNpcF_incIdx(int, u16&, int, int);
+static void daNpcF_decIdx(int, u16&, int, int);
 extern "C" void getAttnActorP__8daNpcF_cFiPFPvPv_Pvffffsii();
 static void daNpcF_pntVsLineSegmentLengthSquare2D(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*);
-static bool daNpcF_putNurbs(dPnt*, s32, s32, dPnt*, s32);
-static void daNpcF_chkPassed(cXyz, dPnt*, u16, u16, s32, s32);
+static bool daNpcF_putNurbs(dPnt*, int, int, dPnt*, int);
+static void daNpcF_chkPassed(cXyz, dPnt*, u16, u16, int, int);
 static void daNpcF_getGroundAngle(cBgS_PolyInfo*, s16);
 void daNpcF_chkEvtBit(u32);
 void daNpcF_onEvtBit(u32);
 void daNpcF_chkTmpBit(u32);
 void daNpcF_onTmpBit(u32);
 static void daNpcF_offTmpBit(u32);
-void daNpcF_getPlayerInfoFromPlayerList(s32, s32, cXyz&, csXyz&);
+void daNpcF_getPlayerInfoFromPlayerList(int, int, cXyz&, csXyz&);
 void daNpcF_chkDoBtnEqSpeak(fopAc_ac_c*);
 static void daNpcF_chkPointInArea(cXyz, cXyz, cXyz, s16);
-static void daNpcF_getDistTableIdx(s32, s32);
+static void daNpcF_getDistTableIdx(int, int);
 void daNpcF_clearMessageTmpBit();
-extern "C" static bool Execute__20daNpcF_MoveBgActor_cFPPA3_A4_f();
 
 extern "C" void initialize__18daNpcT_ActorMngr_cFv();
 extern "C" void entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c();
@@ -1592,7 +1614,7 @@ extern "C" void __dt__18daBaseNpc_lookat_cFv();
 extern "C" bool CreateHeap__23daBaseNpc_moveBgActor_cFv();
 extern "C" bool Create__23daBaseNpc_moveBgActor_cFv();
 extern "C" bool Delete__23daBaseNpc_moveBgActor_cFv();
-extern "C" static bool Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f();
+extern "C" bool Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f();
 extern "C" bool Draw__23daBaseNpc_moveBgActor_cFv();
 extern "C" bool IsDelete__23daBaseNpc_moveBgActor_cFv();
 extern "C" bool ToFore__23daBaseNpc_moveBgActor_cFv();
@@ -1628,7 +1650,7 @@ extern "C" void initialize__15daNpcF_Lookat_cFv();
 extern "C" void setParam__15daNpcF_Lookat_cFffffffffffffsP4cXyz();
 extern "C" void calc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fPP5csXyziii();
 extern "C" void adjustMoveDisAngle__15daNpcF_Lookat_cFRssss();
-extern "C" static void initCalc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fP4cXyzP5csXyzPfR4cXyzi();
+extern "C" void initCalc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fP4cXyzP5csXyzPfR4cXyzi();
 extern "C" void update__15daNpcF_Lookat_cFP4cXyzP5csXyzPf();
 extern "C" void calcMoveDisAngle__15daNpcF_Lookat_cFiP4cXyzP5csXyz4cXyzii();
 extern "C" void setRotAngle__15daNpcF_Lookat_cFv();
@@ -1712,7 +1734,7 @@ extern "C" void __dt__18daNpcF_ActorMngr_cFv();
 extern "C" bool CreateHeap__20daNpcF_MoveBgActor_cFv();
 extern "C" bool Create__20daNpcF_MoveBgActor_cFv();
 extern "C" bool Delete__20daNpcF_MoveBgActor_cFv();
-extern "C" static bool Execute__20daNpcF_MoveBgActor_cFPPA3_A4_f();
+extern "C" bool Execute__20daNpcF_MoveBgActor_cFPPA3_A4_f();
 extern "C" bool Draw__20daNpcF_MoveBgActor_cFv();
 extern "C" bool IsDelete__20daNpcF_MoveBgActor_cFv();
 extern "C" bool ToFore__20daNpcF_MoveBgActor_cFv();
@@ -1817,14 +1839,14 @@ SECTION_SDATA2 extern u8 data_804534B4[4];
 // 
 
 SECTION_INIT void memset();
-extern "C" void mDoMtx_ZXYrotS__FPA4_fsss();
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
-extern "C" void mDoMtx_XrotS__FPA4_fs();
-extern "C" void mDoMtx_YrotS__FPA4_fs();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
+void mDoMtx_ZXYrotS(f32 (* )[4], s16, s16, s16);
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_XrotS(f32 (* )[4], s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
 void mDoLib_project(Vec*, Vec*);
 void fopAc_IsActor(void*);
-void fopAcM_SearchByID(s32, fopAc_ac_c**);
+void fopAcM_SearchByID(u32, fopAc_ac_c**);
 extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
 void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*);
 void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
@@ -1832,7 +1854,7 @@ void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*);
 void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*);
 void fopAcM_orderSpeakEvent(fopAc_ac_c*, u16, u16);
 void fopAcM_orderChangeEventId(fopAc_ac_c*, s16, u16, u16);
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, char, u16, u16, u16);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
 void fopAcM_setEffectMtx(fopAc_ac_c const*, J3DModelData const*);
 void fopAcM_getPolygonAngle(cBgS_PolyInfo const&, s16);
 void fopAcM_getPolygonAngle(cM3dGPla const*, s16);
@@ -1840,12 +1862,11 @@ extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i();
 extern "C" void fpcEx_Search__FPFPvPv_PvPv();
 void dComIfG_resLoad(request_of_phase_process_class*, char const*);
 void dComIfG_resDelete(request_of_phase_process_class*, char const*);
-void dComIfGp_getReverb(s32);
+void dComIfGp_getReverb(int);
 void dComIfGd_setSimpleShadow(cXyz*, f32, f32, cBgS_PolyInfo&, s16, f32, _GXTexObj*);
-void dComIfGd_setShadow(u32, char, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
+void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
 void dComIfGs_wolfeye_effect_check();
-void dPath_GetRoomPath(s32, s32);
-extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f();
+void dPath_GetRoomPath(int, int);
 void dKy_pol_sound_get(cBgS_PolyInfo const*);
 void dKy_darkworld_check();
 void cM_rad2s(f32);
@@ -2226,7 +2247,7 @@ asm void daNpcT_MotionSeqMngr_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_MotionSeqMngr_c::play(u16 field_0, s32* field_1, f32* field_2) {
+asm void daNpcT_MotionSeqMngr_c::play(u16 field_0, int* field_1, f32* field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/play__22daNpcT_MotionSeqMngr_cFUsPiPf.s"
 }
@@ -2248,7 +2269,7 @@ asm void daNpcT_MotionSeqMngr_c::checkEndSequence() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcT_addIdx(s32 field_0, s32 field_1, u16& field_2, s32 field_3) {
+asm static void daNpcT_addIdx(int field_0, int field_1, u16& field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcT_addIdx__FiiRUsi.s"
 }
@@ -2259,7 +2280,7 @@ asm static void daNpcT_addIdx(s32 field_0, s32 field_1, u16& field_2, s32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcT_subIdx(s32 field_0, s32 field_1, u16& field_2, s32 field_3) {
+asm static void daNpcT_subIdx(int field_0, int field_1, u16& field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcT_subIdx__FiiRUsi.s"
 }
@@ -2270,7 +2291,7 @@ asm static void daNpcT_subIdx(s32 field_0, s32 field_1, u16& field_2, s32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcT_incIdx(s32 field_0, u16& field_1, s32 field_2, s32 field_3) {
+asm static void daNpcT_incIdx(int field_0, u16& field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcT_incIdx__FiRUsii.s"
 }
@@ -2281,7 +2302,7 @@ asm static void daNpcT_incIdx(s32 field_0, u16& field_1, s32 field_2, s32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcT_decIdx(s32 field_0, u16& field_1, s32 field_2, s32 field_3) {
+asm static void daNpcT_decIdx(int field_0, u16& field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcT_decIdx__FiRUsii.s"
 }
@@ -2314,7 +2335,7 @@ asm void daNpcT_Path_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_Path_c::setPathInfo(char field_0, char field_1, char field_2) {
+asm void daNpcT_Path_c::setPathInfo(u8 field_0, s8 field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setPathInfo__13daNpcT_Path_cFUcScUc.s"
 }
@@ -2325,7 +2346,7 @@ asm void daNpcT_Path_c::setPathInfo(char field_0, char field_1, char field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_Path_c::setNextPathInfo(char field_0, char field_1) {
+asm void daNpcT_Path_c::setNextPathInfo(s8 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setNextPathInfo__13daNpcT_Path_cFScUc.s"
 }
@@ -2347,7 +2368,7 @@ asm void daNpcT_Path_c::reverse() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_Path_c::setNextIdx(s32 field_0) {
+asm void daNpcT_Path_c::setNextIdx(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setNextIdx__13daNpcT_Path_cFi.s"
 }
@@ -2358,7 +2379,7 @@ asm void daNpcT_Path_c::setNextIdx(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_Path_c::getDstPos(cXyz field_0, cXyz* field_1, s32 field_2) {
+asm void daNpcT_Path_c::getDstPos(cXyz field_0, cXyz* field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getDstPos__13daNpcT_Path_cF4cXyzP4cXyzi.s"
 }
@@ -2369,7 +2390,7 @@ asm void daNpcT_Path_c::getDstPos(cXyz field_0, cXyz* field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_Path_c::getDstPosH(cXyz field_0, cXyz* field_1, s32 field_2, s32 field_3) {
+asm void daNpcT_Path_c::getDstPosH(cXyz field_0, cXyz* field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getDstPosH__13daNpcT_Path_cF4cXyzP4cXyzii.s"
 }
@@ -2384,7 +2405,7 @@ f32 d_a_d_a_npc__lit_4513 = 100.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_Path_c::chkPassed1(cXyz field_0, s32 field_1) {
+asm void daNpcT_Path_c::chkPassed1(cXyz field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/chkPassed1__13daNpcT_Path_cF4cXyzi.s"
 }
@@ -2735,7 +2756,7 @@ f64 d_a_d_a_npc__lit_4677 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_Path_c::chkPassed2(cXyz field_0, cXyz* field_1, s32 field_2, s32 field_3) {
+asm void daNpcT_Path_c::chkPassed2(cXyz field_0, cXyz* field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/chkPassed2__13daNpcT_Path_cF4cXyzP4cXyzii.s"
 }
@@ -2746,7 +2767,7 @@ asm void daNpcT_Path_c::chkPassed2(cXyz field_0, cXyz* field_1, s32 field_2, s32
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcT_chkPassed(cXyz field_0, dPnt* field_1, u16 field_2, u16 field_3, s32 field_4, s32 field_5, cXyz* field_6, s32* field_7, s32* field_8) {
+asm static void daNpcT_chkPassed(cXyz field_0, dPnt* field_1, u16 field_2, u16 field_3, int field_4, int field_5, cXyz* field_6, int* field_7, int* field_8) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcT_chkPassed__F4cXyzP4dPntUsUsiiP4cXyzPiPi.s"
 }
@@ -2789,7 +2810,7 @@ f32 d_a_d_a_npc__lit_5241 = 1000.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_JntAnm_c::setParam(fopAc_ac_c* field_0, J3DModel* field_1, cXyz* field_2, s32 field_3, s32 field_4, s32 field_5, f32 field_6, f32 field_7, f32 field_8, f32 field_9, f32 field_10, f32 field_11, f32 field_12, f32 field_13, f32 field_14, f32 field_15, cXyz* field_16) {
+asm void daNpcT_JntAnm_c::setParam(fopAc_ac_c* field_0, J3DModel* field_1, cXyz* field_2, int field_3, int field_4, int field_5, f32 field_6, f32 field_7, f32 field_8, f32 field_9, f32 field_10, f32 field_11, f32 field_12, f32 field_13, f32 field_14, f32 field_15, cXyz* field_16) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setParam__15daNpcT_JntAnm_cFP10fopAc_ac_cP8J3DModelP4cXyziiiffffffffffP4cXyz.s"
 }
@@ -2851,7 +2872,7 @@ f32 lit_5460 = 125.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_DmgStagger_c::calc(s32 field_0) {
+asm void daNpcT_DmgStagger_c::calc(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_npc/calc__19daNpcT_DmgStagger_cFi.s"
 }
@@ -2894,7 +2915,7 @@ asm void daNpcT_c::srchActor(void* field_0, void* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::getTrnsfrmAnmP(char const* field_0, s32 field_1) {
+asm void daNpcT_c::getTrnsfrmAnmP(char const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getTrnsfrmAnmP__8daNpcT_cFPCci.s"
 }
@@ -2905,7 +2926,7 @@ asm void daNpcT_c::getTrnsfrmAnmP(char const* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::getTrnsfrmKeyAnmP(char const* field_0, s32 field_1) {
+asm void daNpcT_c::getTrnsfrmKeyAnmP(char const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getTrnsfrmKeyAnmP__8daNpcT_cFPCci.s"
 }
@@ -2916,7 +2937,7 @@ asm void daNpcT_c::getTrnsfrmKeyAnmP(char const* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::getTexPtrnAnmP(char const* field_0, s32 field_1) {
+asm void daNpcT_c::getTexPtrnAnmP(char const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getTexPtrnAnmP__8daNpcT_cFPCci.s"
 }
@@ -2927,7 +2948,7 @@ asm void daNpcT_c::getTexPtrnAnmP(char const* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::getTexSRTKeyAnmP(char const* field_0, s32 field_1) {
+asm void daNpcT_c::getTexSRTKeyAnmP(char const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getTexSRTKeyAnmP__8daNpcT_cFPCci.s"
 }
@@ -2938,7 +2959,7 @@ asm void daNpcT_c::getTexSRTKeyAnmP(char const* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::getTevRegKeyAnmP(char const* field_0, s32 field_1) {
+asm void daNpcT_c::getTevRegKeyAnmP(char const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getTevRegKeyAnmP__8daNpcT_cFPCci.s"
 }
@@ -2949,7 +2970,7 @@ asm void daNpcT_c::getTevRegKeyAnmP(char const* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::getColorAnmP(char const* field_0, s32 field_1) {
+asm void daNpcT_c::getColorAnmP(char const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getColorAnmP__8daNpcT_cFPCci.s"
 }
@@ -2960,7 +2981,7 @@ asm void daNpcT_c::getColorAnmP(char const* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::setBckAnm(J3DAnmTransform* field_0, f32 field_1, s32 field_2, s32 field_3, s32 field_4, bool field_5) {
+asm void daNpcT_c::setBckAnm(J3DAnmTransform* field_0, f32 field_1, int field_2, int field_3, int field_4, bool field_5) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setBckAnm__8daNpcT_cFP15J3DAnmTransformfiiib.s"
 }
@@ -2971,7 +2992,7 @@ asm void daNpcT_c::setBckAnm(J3DAnmTransform* field_0, f32 field_1, s32 field_2,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::setMcaMorfAnm(J3DAnmTransformKey* field_0, f32 field_1, f32 field_2, s32 field_3, s32 field_4, s32 field_5) {
+asm void daNpcT_c::setMcaMorfAnm(J3DAnmTransformKey* field_0, f32 field_1, f32 field_2, int field_3, int field_4, int field_5) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setMcaMorfAnm__8daNpcT_cFP18J3DAnmTransformKeyffiii.s"
 }
@@ -2982,7 +3003,7 @@ asm void daNpcT_c::setMcaMorfAnm(J3DAnmTransformKey* field_0, f32 field_1, f32 f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::setBtpAnm(J3DAnmTexPattern* field_0, J3DModelData* field_1, f32 field_2, s32 field_3) {
+asm void daNpcT_c::setBtpAnm(J3DAnmTexPattern* field_0, J3DModelData* field_1, f32 field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setBtpAnm__8daNpcT_cFP16J3DAnmTexPatternP12J3DModelDatafi.s"
 }
@@ -2993,7 +3014,7 @@ asm void daNpcT_c::setBtpAnm(J3DAnmTexPattern* field_0, J3DModelData* field_1, f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::setBtkAnm(J3DAnmTextureSRTKey* field_0, J3DModelData* field_1, f32 field_2, s32 field_3) {
+asm void daNpcT_c::setBtkAnm(J3DAnmTextureSRTKey* field_0, J3DModelData* field_1, f32 field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setBtkAnm__8daNpcT_cFP19J3DAnmTextureSRTKeyP12J3DModelDatafi.s"
 }
@@ -3004,7 +3025,7 @@ asm void daNpcT_c::setBtkAnm(J3DAnmTextureSRTKey* field_0, J3DModelData* field_1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::setBrkAnm(J3DAnmTevRegKey* field_0, J3DModelData* field_1, f32 field_2, s32 field_3) {
+asm void daNpcT_c::setBrkAnm(J3DAnmTevRegKey* field_0, J3DModelData* field_1, f32 field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setBrkAnm__8daNpcT_cFP15J3DAnmTevRegKeyP12J3DModelDatafi.s"
 }
@@ -3015,7 +3036,7 @@ asm void daNpcT_c::setBrkAnm(J3DAnmTevRegKey* field_0, J3DModelData* field_1, f3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::setBpkAnm(J3DAnmColor* field_0, J3DModelData* field_1, f32 field_2, s32 field_3) {
+asm void daNpcT_c::setBpkAnm(J3DAnmColor* field_0, J3DModelData* field_1, f32 field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setBpkAnm__8daNpcT_cFP11J3DAnmColorP12J3DModelDatafi.s"
 }
@@ -3026,7 +3047,7 @@ asm void daNpcT_c::setBpkAnm(J3DAnmColor* field_0, J3DModelData* field_1, f32 fi
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::loadRes(char const* field_0, char const** field_1) {
+asm void daNpcT_c::loadRes(s8 const* field_0, char const** field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/loadRes__8daNpcT_cFPCScPPCc.s"
 }
@@ -3037,7 +3058,7 @@ asm void daNpcT_c::loadRes(char const* field_0, char const** field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::deleteRes(char const* field_0, char const** field_1) {
+asm void daNpcT_c::deleteRes(s8 const* field_0, char const** field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/deleteRes__8daNpcT_cFPCScPPCc.s"
 }
@@ -3067,7 +3088,7 @@ f32 lit_5794 = 20.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::draw(s32 field_0, s32 field_1, f32 field_2, _GXColorS10* field_3, f32 field_4, s32 field_5, s32 field_6, s32 field_7) {
+asm void daNpcT_c::draw(int field_0, int field_1, f32 field_2, _GXColorS10* field_3, f32 field_4, int field_5, int field_6, int field_7) {
 	nofralloc
 #include "asm/d/a/d_a_npc/draw__8daNpcT_cFiifP11_GXColorS10fiii.s"
 }
@@ -3177,7 +3198,7 @@ asm void daNpcT_c::ctrlMotion() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::ctrlMsgAnm(s32* field_0, s32* field_1, fopAc_ac_c* field_2, s32 field_3) {
+asm void daNpcT_c::ctrlMsgAnm(int* field_0, int* field_1, fopAc_ac_c* field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/ctrlMsgAnm__8daNpcT_cFPiPiP10fopAc_ac_ci.s"
 }
@@ -3351,7 +3372,7 @@ asm void daNpcT_c::clrParam() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::setFaceMotionAnm(s32 field_0, bool field_1) {
+asm void daNpcT_c::setFaceMotionAnm(int field_0, bool field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setFaceMotionAnm__8daNpcT_cFib.s"
 }
@@ -3362,7 +3383,7 @@ asm void daNpcT_c::setFaceMotionAnm(s32 field_0, bool field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::setMotionAnm(s32 field_0, f32 field_1, s32 field_2) {
+asm void daNpcT_c::setMotionAnm(int field_0, f32 field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setMotionAnm__8daNpcT_cFifi.s"
 }
@@ -3421,7 +3442,7 @@ asm void daNpcT_c::hitChk(dCcD_GObjInf* field_0, u32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::setDamage(s32 field_0, s32 field_1, s32 field_2) {
+asm void daNpcT_c::setDamage(int field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setDamage__8daNpcT_cFiii.s"
 }
@@ -3488,7 +3509,7 @@ f32 lit_6909 = 135.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::chkFindActor(fopAc_ac_c* field_0, s32 field_1, s16 field_2) {
+asm void daNpcT_c::chkFindActor(fopAc_ac_c* field_0, int field_1, s16 field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/chkFindActor__8daNpcT_cFP10fopAc_ac_cis.s"
 }
@@ -3499,7 +3520,7 @@ asm void daNpcT_c::chkFindActor(fopAc_ac_c* field_0, s32 field_1, s16 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dAttention_c::getDistTable(s32 field_0) {
+asm void dAttention_c::getDistTable(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getDistTable__12dAttention_cFi.s"
 }
@@ -3521,7 +3542,7 @@ asm void daNpcT_c::chkWolfAction() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::chkFindWolf(s16 field_0, s32 field_1, s32 field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, s32 field_7) {
+asm void daNpcT_c::chkFindWolf(s16 field_0, int field_1, int field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, int field_7) {
 	nofralloc
 #include "asm/d/a/d_a_npc/chkFindWolf__8daNpcT_cFsiiffffi.s"
 }
@@ -3564,7 +3585,7 @@ f32 lit_7091 = 16384.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::turn(s16 field_0, s32 field_1, s32 field_2) {
+asm void daNpcT_c::turn(s16 field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/turn__8daNpcT_cFsii.s"
 }
@@ -3575,7 +3596,7 @@ asm void daNpcT_c::turn(s16 field_0, s32 field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::step(s16 field_0, s32 field_1, s32 field_2, s32 field_3, s32 field_4) {
+asm void daNpcT_c::step(s16 field_0, int field_1, int field_2, int field_3, int field_4) {
 	nofralloc
 #include "asm/d/a/d_a_npc/step__8daNpcT_cFsiiii.s"
 }
@@ -3590,7 +3611,7 @@ f32 lit_7222 = 17.0f / 20.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::calcSpeedAndAngle(cXyz field_0, s32 field_1, s16 field_2, s16 field_3) {
+asm void daNpcT_c::calcSpeedAndAngle(cXyz field_0, int field_1, s16 field_2, s16 field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/calcSpeedAndAngle__8daNpcT_cF4cXyziss.s"
 }
@@ -3605,7 +3626,7 @@ f32 lit_7242 = 6.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::getActorDistance(fopAc_ac_c* field_0, s32 field_1, s32 field_2) {
+asm void daNpcT_c::getActorDistance(fopAc_ac_c* field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getActorDistance__8daNpcT_cFP10fopAc_ac_cii.s"
 }
@@ -3616,7 +3637,7 @@ asm void daNpcT_c::getActorDistance(fopAc_ac_c* field_0, s32 field_1, s32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::initTalk(s32 field_0, fopAc_ac_c** field_1) {
+asm void daNpcT_c::initTalk(int field_0, fopAc_ac_c** field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/initTalk__8daNpcT_cFiPP10fopAc_ac_c.s"
 }
@@ -3627,7 +3648,7 @@ asm void daNpcT_c::initTalk(s32 field_0, fopAc_ac_c** field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::talkProc(s32* field_0, s32 field_1, fopAc_ac_c** field_2, s32 field_3) {
+asm void daNpcT_c::talkProc(int* field_0, int field_1, fopAc_ac_c** field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/talkProc__8daNpcT_cFPiiPP10fopAc_ac_ci.s"
 }
@@ -3653,7 +3674,7 @@ asm void daNpcT_c::getNearestActorP(s16 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_c::getEvtAreaTagP(s32 field_0, s32 field_1) {
+asm void daNpcT_c::getEvtAreaTagP(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getEvtAreaTagP__8daNpcT_cFii.s"
 }
@@ -3702,7 +3723,7 @@ f32 lit_7551 = 448.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_chkActorInScreen(fopAc_ac_c* field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, s32 field_8) {
+asm void daNpcT_chkActorInScreen(fopAc_ac_c* field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, int field_8) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcT_chkActorInScreen__FP10fopAc_ac_cfffffffi.s"
 }
@@ -3713,7 +3734,7 @@ asm void daNpcT_chkActorInScreen(fopAc_ac_c* field_0, f32 field_1, f32 field_2, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcT_chkPointInArea(cXyz field_0, cXyz field_1, cXyz field_2, s16 field_3, s32 field_4) {
+asm static void daNpcT_chkPointInArea(cXyz field_0, cXyz field_1, cXyz field_2, s16 field_3, int field_4) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcT_chkPointInArea__F4cXyz4cXyz4cXyzsi.s"
 }
@@ -3724,7 +3745,7 @@ asm static void daNpcT_chkPointInArea(cXyz field_0, cXyz field_1, cXyz field_2, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_getPlayerInfoFromPlayerList(s32 field_0, s32 field_1, cXyz* field_2, csXyz* field_3) {
+asm void daNpcT_getPlayerInfoFromPlayerList(int field_0, int field_1, cXyz* field_2, csXyz* field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcT_getPlayerInfoFromPlayerList__FiiP4cXyzP5csXyz.s"
 }
@@ -3746,7 +3767,7 @@ asm void daNpcT_chkDoBtnIsSpeak(fopAc_ac_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_judgeRace(dPath* field_0, fopAc_ac_c** field_1, daNpcT_pntData_c* field_2, s32 field_3, s32* field_4) {
+asm void daNpcT_judgeRace(dPath* field_0, fopAc_ac_c** field_1, daNpcT_pntData_c* field_2, int field_3, int* field_4) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcT_judgeRace__FP5dPathPP10fopAc_ac_cP16daNpcT_pntData_ciPi.s"
 }
@@ -3757,7 +3778,7 @@ asm void daNpcT_judgeRace(dPath* field_0, fopAc_ac_c** field_1, daNpcT_pntData_c
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcT_getDistTableIdx(s32 field_0, s32 field_1) {
+asm void daNpcT_getDistTableIdx(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcT_getDistTableIdx__Fii.s"
 }
@@ -3865,7 +3886,7 @@ void daNpcT_c::setAttnPos() {
 
 
 /* 8014CC14-8014CC18 0004+00 rc=2 efc=1 .text      ctrlSubFaceMotion__8daNpcT_cFi                               */
-void daNpcT_c::ctrlSubFaceMotion(s32 field_0) {
+void daNpcT_c::ctrlSubFaceMotion(int field_0) {
 	/* empty function */
 }
 
@@ -3913,19 +3934,19 @@ bool daNpcT_c::drawDbgInfo() {
 
 
 /* 8014CC38-8014CC40 0008+00 rc=2 efc=1 .text      checkRemoveJoint__8daNpcT_cFi                                */
-bool daNpcT_c::checkRemoveJoint(s32 field_0) {
+bool daNpcT_c::checkRemoveJoint(int field_0) {
 	return false;
 }
 
 
 /* 8014CC40-8014CC48 0008+00 rc=2 efc=1 .text      checkChangeJoint__8daNpcT_cFi                                */
-bool daNpcT_c::checkChangeJoint(s32 field_0) {
+bool daNpcT_c::checkChangeJoint(int field_0) {
 	return false;
 }
 
 
 /* 8014CC48-8014CC4C 0004+00 rc=2 efc=1 .text      afterJntAnm__8daNpcT_cFi                                     */
-void daNpcT_c::afterJntAnm(s32 field_0) {
+void daNpcT_c::afterJntAnm(int field_0) {
 	/* empty function */
 }
 
@@ -3997,19 +4018,19 @@ bool daNpcT_c::chkXYItems() {
 
 
 /* 8014CCA0-8014CCA8 0008+00 rc=2 efc=1 .text      afterSetFaceMotionAnm__8daNpcT_cFiifi                        */
-bool daNpcT_c::afterSetFaceMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+bool daNpcT_c::afterSetFaceMotionAnm(int field_0, int field_1, f32 field_2, int field_3) {
 	return true;
 }
 
 
 /* 8014CCA8-8014CCAC 0004+00 rc=2 efc=1 .text      changeBtp__8daNpcT_cFPiPi                                    */
-void daNpcT_c::changeBtp(s32* field_0, s32* field_1) {
+void daNpcT_c::changeBtp(int* field_0, int* field_1) {
 	/* empty function */
 }
 
 
 /* 8014CCAC-8014CCB0 0004+00 rc=2 efc=1 .text      changeBck__8daNpcT_cFPiPi                                    */
-void daNpcT_c::changeBck(s32* field_0, s32* field_1) {
+void daNpcT_c::changeBck(int* field_0, int* field_1) {
 	/* empty function */
 }
 
@@ -4026,19 +4047,19 @@ asm void daNpcT_c::getFaceMotionAnm(daNpcT_faceMotionAnmData_c field_0) {
 
 
 /* 8014CCE0-8014CCE8 0008+00 rc=2 efc=1 .text      afterSetMotionAnm__8daNpcT_cFiifi                            */
-bool daNpcT_c::afterSetMotionAnm(s32 field_0, s32 field_1, f32 field_2, s32 field_3) {
+bool daNpcT_c::afterSetMotionAnm(int field_0, int field_1, f32 field_2, int field_3) {
 	return true;
 }
 
 
 /* 8014CCE8-8014CCEC 0004+00 rc=2 efc=1 .text      changeBtk__8daNpcT_cFPiPi                                    */
-void daNpcT_c::changeBtk(s32* field_0, s32* field_1) {
+void daNpcT_c::changeBtk(int* field_0, int* field_1) {
 	/* empty function */
 }
 
 
 /* 8014CCEC-8014CCF0 0004+00 rc=2 efc=1 .text      changeAnm__8daNpcT_cFPiPi                                    */
-void daNpcT_c::changeAnm(s32* field_0, s32* field_1) {
+void daNpcT_c::changeAnm(int* field_0, int* field_1) {
 	/* empty function */
 }
 
@@ -4186,7 +4207,7 @@ extern "C" asm void __sinit_d_a_npc_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBaseNpc_addIdx(s32 field_0, s32 field_1, u16* field_2, s32 field_3) {
+asm static void daBaseNpc_addIdx(int field_0, int field_1, u16* field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daBaseNpc_addIdx__FiiPUsi.s"
 }
@@ -4197,7 +4218,7 @@ asm static void daBaseNpc_addIdx(s32 field_0, s32 field_1, u16* field_2, s32 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBaseNpc_subIdx(s32 field_0, s32 field_1, u16* field_2, s32 field_3) {
+asm static void daBaseNpc_subIdx(int field_0, int field_1, u16* field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daBaseNpc_subIdx__FiiPUsi.s"
 }
@@ -4208,7 +4229,7 @@ asm static void daBaseNpc_subIdx(s32 field_0, s32 field_1, u16* field_2, s32 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBaseNpc_incIdx(s32 field_0, u16* field_1, s32 field_2, s32 field_3) {
+asm static void daBaseNpc_incIdx(int field_0, u16* field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daBaseNpc_incIdx__FiPUsii.s"
 }
@@ -4219,7 +4240,7 @@ asm static void daBaseNpc_incIdx(s32 field_0, u16* field_1, s32 field_2, s32 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBaseNpc_decIdx(s32 field_0, u16* field_1, s32 field_2, s32 field_3) {
+asm static void daBaseNpc_decIdx(int field_0, u16* field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daBaseNpc_decIdx__FiPUsii.s"
 }
@@ -4230,7 +4251,7 @@ asm static void daBaseNpc_decIdx(s32 field_0, u16* field_1, s32 field_2, s32 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcBase_BBasis(s32 field_0, s32 field_1, s32 field_2, s32* field_3) {
+asm static void daNpcBase_BBasis(int field_0, int field_1, int field_2, int* field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcBase_BBasis__FiiiPi.s"
 }
@@ -4307,7 +4328,7 @@ asm void daBaseNpc_path_c::isPath() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_path_c::setPathInfo(char field_0, char field_1, char field_2) {
+asm void daBaseNpc_path_c::setPathInfo(u8 field_0, s8 field_1, s8 field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setPathInfo__16daBaseNpc_path_cFUcScSc.s"
 }
@@ -4402,7 +4423,7 @@ f32 lit_8405 = 4.0f / 5.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void calc__18daBaseNpc_lookat_cFP10fopAc_ac_cPA4_fs() {
+asm void daBaseNpc_lookat_c::calc(fopAc_ac_c* field_0, f32 (* field_1)[4], s16 field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/calc__18daBaseNpc_lookat_cFP10fopAc_ac_cPA4_fs.s"
 }
@@ -4413,7 +4434,7 @@ extern "C" asm void calc__18daBaseNpc_lookat_cFP10fopAc_ac_cPA4_fs() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_lookat_c::setMaxJntLmt(csXyz field_0, s32 field_1) {
+asm void daBaseNpc_lookat_c::setMaxJntLmt(csXyz field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setMaxJntLmt__18daBaseNpc_lookat_cF5csXyzi.s"
 }
@@ -4424,7 +4445,7 @@ asm void daBaseNpc_lookat_c::setMaxJntLmt(csXyz field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_lookat_c::setMinJntLmt(csXyz field_0, s32 field_1) {
+asm void daBaseNpc_lookat_c::setMinJntLmt(csXyz field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setMinJntLmt__18daBaseNpc_lookat_cF5csXyzi.s"
 }
@@ -4435,7 +4456,7 @@ asm void daBaseNpc_lookat_c::setMinJntLmt(csXyz field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_lookat_c::setJntPos(cXyz field_0, s32 field_1) {
+asm void daBaseNpc_lookat_c::setJntPos(cXyz field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setJntPos__18daBaseNpc_lookat_cF4cXyzi.s"
 }
@@ -4457,7 +4478,7 @@ asm void daBaseNpc_lookat_c::setAttnPos(cXyz* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_lookat_c::getRot(s32 field_0) {
+asm void daBaseNpc_lookat_c::getRot(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getRot__18daBaseNpc_lookat_cFi.s"
 }
@@ -4518,7 +4539,7 @@ bool daBaseNpc_c::getResName() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_c::getTrnsfrmKeyAnmP(char* field_0, s32 field_1) {
+asm void daBaseNpc_c::getTrnsfrmKeyAnmP(char* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getTrnsfrmKeyAnmP__11daBaseNpc_cFPci.s"
 }
@@ -4529,7 +4550,7 @@ asm void daBaseNpc_c::getTrnsfrmKeyAnmP(char* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_c::setMcaMorfAnm(J3DAnmTransformKey* field_0, f32 field_1, f32 field_2, s32 field_3, s32 field_4, s32 field_5) {
+asm void daBaseNpc_c::setMcaMorfAnm(J3DAnmTransformKey* field_0, f32 field_1, f32 field_2, int field_3, int field_4, int field_5) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setMcaMorfAnm__11daBaseNpc_cFP18J3DAnmTransformKeyffiii.s"
 }
@@ -4540,7 +4561,7 @@ asm void daBaseNpc_c::setMcaMorfAnm(J3DAnmTransformKey* field_0, f32 field_1, f3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_c::setBckAnm(J3DAnmTransform* field_0, f32 field_1, s32 field_2, s32 field_3, s32 field_4, bool field_5) {
+asm void daBaseNpc_c::setBckAnm(J3DAnmTransform* field_0, f32 field_1, int field_2, int field_3, int field_4, bool field_5) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setBckAnm__11daBaseNpc_cFP15J3DAnmTransformfiiib.s"
 }
@@ -4551,7 +4572,7 @@ asm void daBaseNpc_c::setBckAnm(J3DAnmTransform* field_0, f32 field_1, s32 field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_c::getTexPtrnAnmP(char* field_0, s32 field_1) {
+asm void daBaseNpc_c::getTexPtrnAnmP(char* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getTexPtrnAnmP__11daBaseNpc_cFPci.s"
 }
@@ -4562,7 +4583,7 @@ asm void daBaseNpc_c::getTexPtrnAnmP(char* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_c::setBtpAnm(J3DAnmTexPattern* field_0, J3DModelData* field_1, f32 field_2, s32 field_3) {
+asm void daBaseNpc_c::setBtpAnm(J3DAnmTexPattern* field_0, J3DModelData* field_1, f32 field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setBtpAnm__11daBaseNpc_cFP16J3DAnmTexPatternP12J3DModelDatafi.s"
 }
@@ -4573,7 +4594,7 @@ asm void daBaseNpc_c::setBtpAnm(J3DAnmTexPattern* field_0, J3DModelData* field_1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_c::attnSttsOn(s32 field_0, s32 field_1) {
+asm void daBaseNpc_c::attnSttsOn(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/attnSttsOn__11daBaseNpc_cFii.s"
 }
@@ -4590,7 +4611,7 @@ void daBaseNpc_c::setParam() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_c::orderEvent(s32 field_0, char* field_1) {
+asm void daBaseNpc_c::orderEvent(int field_0, char* field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/orderEvent__11daBaseNpc_cFiPc.s"
 }
@@ -4674,7 +4695,7 @@ void daBaseNpc_c::adjustShapeAngle() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daBaseNpc_c::setMtx(s32 field_0) {
+asm void daBaseNpc_c::setMtx(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setMtx__11daBaseNpc_cFi.s"
 }
@@ -4796,7 +4817,7 @@ asm static void daBaseNpc_PntVsLineSegmentLengthSquare2D(f32 field_0, f32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBaseNpc_putNurbs(dPnt* field_0, s32 field_1, s32 field_2, dPnt* field_3, s32 field_4) {
+asm static void daBaseNpc_putNurbs(dPnt* field_0, int field_1, int field_2, dPnt* field_3, int field_4) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daBaseNpc_putNurbs__FP4dPntiiP4dPnti.s"
 }
@@ -4807,7 +4828,7 @@ asm static void daBaseNpc_putNurbs(dPnt* field_0, s32 field_1, s32 field_2, dPnt
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBaseNpc_chkPnt(cXyz field_0, dPnt* field_1, u16 field_2, u16 field_3, s32 field_4, s32 field_5) {
+asm static void daBaseNpc_chkPnt(cXyz field_0, dPnt* field_1, u16 field_2, u16 field_3, int field_4, int field_5) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daBaseNpc_chkPnt__F4cXyzP4dPntUsUsii.s"
 }
@@ -4855,7 +4876,7 @@ bool daBaseNpc_moveBgActor_c::Delete() {
 
 
 /* 801503D4-801503DC 0008+00 rc=1 efc=0 .text      Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f                 */
-extern "C" static bool Execute__23daBaseNpc_moveBgActor_cFPPA3_A4_f() {
+bool daBaseNpc_moveBgActor_c::Execute(f32 (** field_0)[3][4]) {
 	return true;
 }
 
@@ -4921,7 +4942,7 @@ asm daBaseNpc_acMngr_c::~daBaseNpc_acMngr_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcF_addIdx(s32 field_0, s32 field_1, u16& field_2, s32 field_3) {
+asm static void daNpcF_addIdx(int field_0, int field_1, u16& field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcF_addIdx__FiiRUsi.s"
 }
@@ -4932,7 +4953,7 @@ asm static void daNpcF_addIdx(s32 field_0, s32 field_1, u16& field_2, s32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcF_subIdx(s32 field_0, s32 field_1, u16& field_2, s32 field_3) {
+asm static void daNpcF_subIdx(int field_0, int field_1, u16& field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcF_subIdx__FiiRUsi.s"
 }
@@ -4943,7 +4964,7 @@ asm static void daNpcF_subIdx(s32 field_0, s32 field_1, u16& field_2, s32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcF_incIdx(s32 field_0, u16& field_1, s32 field_2, s32 field_3) {
+asm static void daNpcF_incIdx(int field_0, u16& field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcF_incIdx__FiRUsii.s"
 }
@@ -4954,7 +4975,7 @@ asm static void daNpcF_incIdx(s32 field_0, u16& field_1, s32 field_2, s32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcF_decIdx(s32 field_0, u16& field_1, s32 field_2, s32 field_3) {
+asm static void daNpcF_decIdx(int field_0, u16& field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcF_decIdx__FiRUsii.s"
 }
@@ -4987,7 +5008,7 @@ asm void daNpcF_ActorMngr_c::entry(fopAc_ac_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_ActorMngr_c::entry(s32 field_0) {
+asm void daNpcF_ActorMngr_c::entry(u32 field_0) {
 	nofralloc
 #include "asm/d/a/d_a_npc/entry__18daNpcF_ActorMngr_cFUi.s"
 }
@@ -5042,7 +5063,7 @@ asm void daNpcF_MatAnm_c::calc(J3DMaterial* field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_SPCurve_c::initialize(dPath* field_0, s32 field_1) {
+asm void daNpcF_SPCurve_c::initialize(dPath* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/initialize__16daNpcF_SPCurve_cFP5dPathi.s"
 }
@@ -5064,7 +5085,7 @@ asm void daNpcF_Path_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_Path_c::setPathInfo(char field_0, char field_1, char field_2) {
+asm void daNpcF_Path_c::setPathInfo(u8 field_0, s8 field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setPathInfo__13daNpcF_Path_cFUcScUc.s"
 }
@@ -5220,7 +5241,7 @@ asm void daNpcF_Lookat_c::setParam(f32 field_0, f32 field_1, f32 field_2, f32 fi
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void calc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fPP5csXyziii() {
+asm void daNpcF_Lookat_c::calc(fopAc_ac_c* field_0, f32 (* field_1)[4], csXyz** field_2, int field_3, int field_4, int field_5) {
 	nofralloc
 #include "asm/d/a/d_a_npc/calc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fPP5csXyziii.s"
 }
@@ -5246,7 +5267,7 @@ f32 lit_10253 = 63.0f / 100.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void initCalc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fP4cXyzP5csXyzPfR4cXyzi() {
+asm void daNpcF_Lookat_c::initCalc(fopAc_ac_c* field_0, f32 (* field_1)[4], cXyz* field_2, csXyz* field_3, f32* field_4, cXyz& field_5, int field_6) {
 	nofralloc
 #include "asm/d/a/d_a_npc/initCalc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fP4cXyzP5csXyzPfR4cXyzi.s"
 }
@@ -5268,7 +5289,7 @@ asm void daNpcF_Lookat_c::update(cXyz* field_0, csXyz* field_1, f32* field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_Lookat_c::calcMoveDisAngle(s32 field_0, cXyz* field_1, csXyz* field_2, cXyz field_3, s32 field_4, s32 field_5) {
+asm void daNpcF_Lookat_c::calcMoveDisAngle(int field_0, cXyz* field_1, csXyz* field_2, cXyz field_3, int field_4, int field_5) {
 	nofralloc
 #include "asm/d/a/d_a_npc/calcMoveDisAngle__15daNpcF_Lookat_cFiP4cXyzP5csXyz4cXyzii.s"
 }
@@ -5312,7 +5333,7 @@ asm void daNpcF_c::execute() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::draw(s32 field_0, s32 field_1, f32 field_2, _GXColorS10* field_3, s32 field_4) {
+asm void daNpcF_c::draw(int field_0, int field_1, f32 field_2, _GXColorS10* field_3, int field_4) {
 	nofralloc
 #include "asm/d/a/d_a_npc/draw__8daNpcF_cFiifP11_GXColorS10i.s"
 }
@@ -5404,7 +5425,7 @@ asm void daNpcF_c::initialize() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::getTrnsfrmKeyAnmP(char* field_0, s32 field_1) {
+asm void daNpcF_c::getTrnsfrmKeyAnmP(char* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getTrnsfrmKeyAnmP__8daNpcF_cFPci.s"
 }
@@ -5415,7 +5436,7 @@ asm void daNpcF_c::getTrnsfrmKeyAnmP(char* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::getTexPtrnAnmP(char* field_0, s32 field_1) {
+asm void daNpcF_c::getTexPtrnAnmP(char* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getTexPtrnAnmP__8daNpcF_cFPci.s"
 }
@@ -5426,7 +5447,7 @@ asm void daNpcF_c::getTexPtrnAnmP(char* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::getTexSRTKeyAnmP(char* field_0, s32 field_1) {
+asm void daNpcF_c::getTexSRTKeyAnmP(char* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getTexSRTKeyAnmP__8daNpcF_cFPci.s"
 }
@@ -5437,7 +5458,7 @@ asm void daNpcF_c::getTexSRTKeyAnmP(char* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::getTevRegKeyAnmP(char* field_0, s32 field_1) {
+asm void daNpcF_c::getTevRegKeyAnmP(char* field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getTevRegKeyAnmP__8daNpcF_cFPci.s"
 }
@@ -5448,7 +5469,7 @@ asm void daNpcF_c::getTevRegKeyAnmP(char* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::setMcaMorfAnm(J3DAnmTransformKey* field_0, f32 field_1, f32 field_2, s32 field_3, s32 field_4, s32 field_5) {
+asm void daNpcF_c::setMcaMorfAnm(J3DAnmTransformKey* field_0, f32 field_1, f32 field_2, int field_3, int field_4, int field_5) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setMcaMorfAnm__8daNpcF_cFP18J3DAnmTransformKeyffiii.s"
 }
@@ -5459,7 +5480,7 @@ asm void daNpcF_c::setMcaMorfAnm(J3DAnmTransformKey* field_0, f32 field_1, f32 f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::setBckAnm(J3DAnmTransform* field_0, f32 field_1, s32 field_2, s32 field_3, s32 field_4, bool field_5) {
+asm void daNpcF_c::setBckAnm(J3DAnmTransform* field_0, f32 field_1, int field_2, int field_3, int field_4, bool field_5) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setBckAnm__8daNpcF_cFP15J3DAnmTransformfiiib.s"
 }
@@ -5470,7 +5491,7 @@ asm void daNpcF_c::setBckAnm(J3DAnmTransform* field_0, f32 field_1, s32 field_2,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::setBtpAnm(J3DAnmTexPattern* field_0, J3DModelData* field_1, f32 field_2, s32 field_3) {
+asm void daNpcF_c::setBtpAnm(J3DAnmTexPattern* field_0, J3DModelData* field_1, f32 field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setBtpAnm__8daNpcF_cFP16J3DAnmTexPatternP12J3DModelDatafi.s"
 }
@@ -5481,7 +5502,7 @@ asm void daNpcF_c::setBtpAnm(J3DAnmTexPattern* field_0, J3DModelData* field_1, f
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::setBtkAnm(J3DAnmTextureSRTKey* field_0, J3DModelData* field_1, f32 field_2, s32 field_3) {
+asm void daNpcF_c::setBtkAnm(J3DAnmTextureSRTKey* field_0, J3DModelData* field_1, f32 field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setBtkAnm__8daNpcF_cFP19J3DAnmTextureSRTKeyP12J3DModelDatafi.s"
 }
@@ -5492,7 +5513,7 @@ asm void daNpcF_c::setBtkAnm(J3DAnmTextureSRTKey* field_0, J3DModelData* field_1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::setBrkAnm(J3DAnmTevRegKey* field_0, J3DModelData* field_1, f32 field_2, s32 field_3) {
+asm void daNpcF_c::setBrkAnm(J3DAnmTevRegKey* field_0, J3DModelData* field_1, f32 field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setBrkAnm__8daNpcF_cFP15J3DAnmTevRegKeyP12J3DModelDatafi.s"
 }
@@ -5580,7 +5601,7 @@ asm void daNpcF_c::playMotionAnm(daNpcF_c::daNpcF_anmPlayData*** field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::setLookatMtx(s32 field_0, s32* field_1, f32 field_2) {
+asm void daNpcF_c::setLookatMtx(int field_0, int* field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setLookatMtx__8daNpcF_cFiPif.s"
 }
@@ -5591,7 +5612,7 @@ asm void daNpcF_c::setLookatMtx(s32 field_0, s32* field_1, f32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::hitChk2(dCcD_Cyl* field_0, s32 field_1, s32 field_2) {
+asm void daNpcF_c::hitChk2(dCcD_Cyl* field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/hitChk2__8daNpcF_cFP8dCcD_Cylii.s"
 }
@@ -5609,7 +5630,7 @@ f32 lit_11062 = 12743.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::setDamage(s32 field_0, s32 field_1, s32 field_2) {
+asm void daNpcF_c::setDamage(int field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/setDamage__8daNpcF_cFiii.s"
 }
@@ -5620,7 +5641,7 @@ asm void daNpcF_c::setDamage(s32 field_0, s32 field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::ctrlMsgAnm(s32& field_0, s32& field_1, fopAc_ac_c* field_2, s32 field_3) {
+asm void daNpcF_c::ctrlMsgAnm(int& field_0, int& field_1, fopAc_ac_c* field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/ctrlMsgAnm__8daNpcF_cFRiRiP10fopAc_ac_ci.s"
 }
@@ -5631,7 +5652,7 @@ asm void daNpcF_c::ctrlMsgAnm(s32& field_0, s32& field_1, fopAc_ac_c* field_2, s
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::orderEvent(s32 field_0, char* field_1, u16 field_2, u16 field_3, char field_4, u16 field_5) {
+asm void daNpcF_c::orderEvent(int field_0, char* field_1, u16 field_2, u16 field_3, u8 field_4, u16 field_5) {
 	nofralloc
 #include "asm/d/a/d_a_npc/orderEvent__8daNpcF_cFiPcUsUsUcUs.s"
 }
@@ -5679,7 +5700,7 @@ f32 lit_11253 = 0.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::chkActorInAttnArea(fopAc_ac_c* field_0, fopAc_ac_c* field_1, s32 field_2) {
+asm void daNpcF_c::chkActorInAttnArea(fopAc_ac_c* field_0, fopAc_ac_c* field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/chkActorInAttnArea__8daNpcF_cFP10fopAc_ac_cP10fopAc_ac_ci.s"
 }
@@ -5690,7 +5711,7 @@ asm void daNpcF_c::chkActorInAttnArea(fopAc_ac_c* field_0, fopAc_ac_c* field_1, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::initTalk(s32 field_0, fopAc_ac_c** field_1) {
+asm void daNpcF_c::initTalk(int field_0, fopAc_ac_c** field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/initTalk__8daNpcF_cFiPP10fopAc_ac_c.s"
 }
@@ -5701,7 +5722,7 @@ asm void daNpcF_c::initTalk(s32 field_0, fopAc_ac_c** field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::talkProc(s32* field_0, s32 field_1, fopAc_ac_c** field_2) {
+asm void daNpcF_c::talkProc(int* field_0, int field_1, fopAc_ac_c** field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/talkProc__8daNpcF_cFPiiPP10fopAc_ac_c.s"
 }
@@ -5712,7 +5733,7 @@ asm void daNpcF_c::talkProc(s32* field_0, s32 field_1, fopAc_ac_c** field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::turn(s16 field_0, f32 field_1, s32 field_2) {
+asm void daNpcF_c::turn(s16 field_0, f32 field_1, int field_2) {
 	nofralloc
 #include "asm/d/a/d_a_npc/turn__8daNpcF_cFsfi.s"
 }
@@ -5723,7 +5744,7 @@ asm void daNpcF_c::turn(s16 field_0, f32 field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::step(s16 field_0, s32 field_1, s32 field_2, s32 field_3) {
+asm void daNpcF_c::step(s16 field_0, int field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/step__8daNpcF_cFsiii.s"
 }
@@ -5745,7 +5766,7 @@ asm void daNpcF_c::setAngle(s16 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::getDistTableIdx(s32 field_0, s32 field_1) {
+asm void daNpcF_c::getDistTableIdx(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getDistTableIdx__8daNpcF_cFii.s"
 }
@@ -5756,7 +5777,7 @@ asm void daNpcF_c::getDistTableIdx(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::getEvtAreaTagP(s32 field_0, s32 field_1) {
+asm void daNpcF_c::getEvtAreaTagP(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getEvtAreaTagP__8daNpcF_cFii.s"
 }
@@ -5826,7 +5847,7 @@ asm void daNpcF_c::getAttentionPos(fopAc_ac_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_c::chkFindPlayer2(s32 field_0, s16 field_1) {
+asm void daNpcF_c::chkFindPlayer2(int field_0, s16 field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/chkFindPlayer2__8daNpcF_cFis.s"
 }
@@ -5862,7 +5883,7 @@ asm static void daNpcF_pntVsLineSegmentLengthSquare2D(f32 field_0, f32 field_1, 
 
 
 /* 80154E54-80154E5C 0008+00 rc=1 efc=0 .text      daNpcF_putNurbs__FP4dPntiiP4dPnti                            */
-static bool daNpcF_putNurbs(dPnt* field_0, s32 field_1, s32 field_2, dPnt* field_3, s32 field_4) {
+static bool daNpcF_putNurbs(dPnt* field_0, int field_1, int field_2, dPnt* field_3, int field_4) {
 	return false;
 }
 
@@ -5871,7 +5892,7 @@ static bool daNpcF_putNurbs(dPnt* field_0, s32 field_1, s32 field_2, dPnt* field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcF_chkPassed(cXyz field_0, dPnt* field_1, u16 field_2, u16 field_3, s32 field_4, s32 field_5) {
+asm static void daNpcF_chkPassed(cXyz field_0, dPnt* field_1, u16 field_2, u16 field_3, int field_4, int field_5) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcF_chkPassed__F4cXyzP4dPntUsUsii.s"
 }
@@ -5948,7 +5969,7 @@ asm static void daNpcF_offTmpBit(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daNpcF_getPlayerInfoFromPlayerList(s32 field_0, s32 field_1, cXyz& field_2, csXyz& field_3) {
+asm void daNpcF_getPlayerInfoFromPlayerList(int field_0, int field_1, cXyz& field_2, csXyz& field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz.s"
 }
@@ -5981,7 +6002,7 @@ asm static void daNpcF_chkPointInArea(cXyz field_0, cXyz field_1, cXyz field_2, 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNpcF_getDistTableIdx(s32 field_0, s32 field_1) {
+asm static void daNpcF_getDistTableIdx(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/a/d_a_npc/daNpcF_getDistTableIdx__Fii.s"
 }
@@ -6059,25 +6080,25 @@ bool daNpcF_c::ctrlBtk() {
 
 
 /* 80155BE0-80155BE8 0008+00 rc=2 efc=0 .text      setExpressionAnm__8daNpcF_cFib                               */
-bool daNpcF_c::setExpressionAnm(s32 field_0, bool field_1) {
+bool daNpcF_c::setExpressionAnm(int field_0, bool field_1) {
 	return true;
 }
 
 
 /* 80155BE8-80155BEC 0004+00 rc=2 efc=0 .text      setMotionAnm__8daNpcF_cFif                                   */
-void daNpcF_c::setMotionAnm(s32 field_0, f32 field_1) {
+void daNpcF_c::setMotionAnm(int field_0, f32 field_1) {
 	/* empty function */
 }
 
 
 /* 80155BEC-80155BF0 0004+00 rc=2 efc=0 .text      setMotion__8daNpcF_cFifi                                     */
-void daNpcF_c::setMotion(s32 field_0, f32 field_1, s32 field_2) {
+void daNpcF_c::setMotion(int field_0, f32 field_1, int field_2) {
 	/* empty function */
 }
 
 
 /* 80155BF0-80155BF4 0004+00 rc=2 efc=0 .text      setExpression__8daNpcF_cFif                                  */
-void daNpcF_c::setExpression(s32 field_0, f32 field_1) {
+void daNpcF_c::setExpression(int field_0, f32 field_1) {
 	/* empty function */
 }
 
@@ -6123,7 +6144,7 @@ bool daNpcF_MoveBgActor_c::Delete() {
 
 
 /* 80155EA0-80155EA8 0008+00 rc=1 efc=0 .text      Execute__20daNpcF_MoveBgActor_cFPPA3_A4_f                    */
-extern "C" static bool Execute__20daNpcF_MoveBgActor_cFPPA3_A4_f() {
+bool daNpcF_MoveBgActor_c::Execute(f32 (** field_0)[3][4]) {
 	return true;
 }
 
@@ -6153,7 +6174,7 @@ bool daNpcF_MoveBgActor_c::ToBack() {
 
 
 /* 80155EC8-80155ED0 0008+00 rc=2 efc=0 .text      setExpressionBtp__8daNpcF_cFi                                */
-bool daNpcF_c::setExpressionBtp(s32 field_0) {
+bool daNpcF_c::setExpressionBtp(int field_0) {
 	return true;
 }
 

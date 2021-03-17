@@ -62,7 +62,7 @@ struct J3DMaterialTable {
 struct mDoExt_brkAnm {
 	// J3DAnmTevRegKey
 	// J3DMaterialTable
-	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, s32, s32, f32, s16, s16);
+	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
@@ -98,7 +98,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -115,7 +115,7 @@ struct Vec {
 /* top-level dependencies (end Z2EnvSeMgr) */
 struct Z2EnvSeMgr {
 	// Vec
-	/* 802C7E68 */ void startFarThunderSe(Vec*, char);
+	/* 802C7E68 */ void startFarThunderSe(Vec*, s8);
 };
 
 // build J3DFrameCtrl (J3DFrameCtrl) False/False
@@ -187,9 +187,9 @@ SECTION_SDATA2 extern f32 d_d_ky_thunder__lit_4099;
 // External References:
 // 
 
-extern "C" void mDoMtx_XrotM__FPA4_fs();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void mDoMtx_ZrotM__FPA4_fs();
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
 void mDoExt_modelUpdateDL(J3DModel*);
 void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
 void mDoExt_adjustSolidHeap(JKRSolidHeap*);

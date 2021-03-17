@@ -36,12 +36,12 @@ struct Z2WolfHowlMgr {
 	/* 802CACCC */ void getNowInputValue();
 	/* 802CACD4 */ void calcPitchMod(f32, f32);
 	/* 802CAED4 */ void startWolfHowlSound(f32, f32, bool, f32);
-	/* 802CB100 */ void setCorrectData(char, Z2WolfHowlData*);
-	/* 802CB320 */ void getCorrectLine(char);
+	/* 802CB100 */ void setCorrectData(s8, Z2WolfHowlData*);
+	/* 802CB320 */ void getCorrectLine(u8);
 	/* 802CB370 */ void getCorrectLineNum();
 	/* 802CB38C */ void checkLine();
 	/* 802CB650 */ void getOnLineNum();
-	/* 802CB6EC */ void startWindStoneSound(char, Vec*);
+	/* 802CB6EC */ void startWindStoneSound(s8, Vec*);
 	/* 802CBA88 */ void startGuideMelody(bool);
 	/* 802CBB58 */ void skipCorrectDemo();
 };
@@ -83,21 +83,21 @@ struct Z2Calc {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -464,7 +464,7 @@ f32 Z2WolfHowlMgr__lit_3720 = 1.1892000436782837f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2WolfHowlMgr::setCorrectData(char field_0, Z2WolfHowlData* field_1) {
+asm void Z2WolfHowlMgr::setCorrectData(s8 field_0, Z2WolfHowlData* field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2WolfHowlMgr/setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData.s"
 }
@@ -475,7 +475,7 @@ asm void Z2WolfHowlMgr::setCorrectData(char field_0, Z2WolfHowlData* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2WolfHowlMgr::getCorrectLine(char field_0) {
+asm void Z2WolfHowlMgr::getCorrectLine(u8 field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2WolfHowlMgr/getCorrectLine__13Z2WolfHowlMgrFUc.s"
 }
@@ -563,7 +563,7 @@ f32 Z2WolfHowlMgr__lit_4041 = 1.0f / 25.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2WolfHowlMgr::startWindStoneSound(char field_0, Vec* field_1) {
+asm void Z2WolfHowlMgr::startWindStoneSound(s8 field_0, Vec* field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2WolfHowlMgr/startWindStoneSound__13Z2WolfHowlMgrFScP3Vec.s"
 }

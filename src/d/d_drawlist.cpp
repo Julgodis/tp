@@ -59,7 +59,7 @@ struct dDlst_2DT2_c {
 	// ResTIMG
 	/* 80052354 */ void draw();
 	/* 80052B00 */ dDlst_2DT2_c();
-	/* 80052B4C */ void init(ResTIMG*, f32, f32, f32, f32, char, char, char, f32, f32);
+	/* 80052B4C */ void init(ResTIMG*, f32, f32, f32, f32, u8, u8, u8, f32, f32);
 };
 
 // build ResTIMG (ResTIMG) True/True
@@ -102,7 +102,7 @@ struct JUtility {
 /* top-level dependencies (end J2DPicture) */
 struct J2DPicture {
 	// JUtility::TColor
-	/* 800539DC */ void getTexture(char) const;
+	/* 800539DC */ void getTexture(u8) const;
 	/* 80053C44 */ void setWhite(JUtility::TColor);
 	/* 80053C6C */ void setBlack(JUtility::TColor);
 	/* 802FC050 */ J2DPicture();
@@ -115,7 +115,7 @@ struct J2DPicture {
 /* top-level dependencies (end dDlst_2D_c) */
 struct dDlst_2D_c {
 	// ResTIMG
-	/* 80053A00 */ dDlst_2D_c(ResTIMG*, s16, s16, s16, s16, char);
+	/* 80053A00 */ dDlst_2D_c(ResTIMG*, s16, s16, s16, s16, u8);
 	/* 80053A9C */ void draw();
 };
 
@@ -168,7 +168,7 @@ struct J2DAnmBase {
 /* top-level dependencies (begin cM_rnd_c) */
 /* top-level dependencies (end cM_rnd_c) */
 struct cM_rnd_c {
-	/* 80053CDC */ void init(s32, s32, s32);
+	/* 80053CDC */ void init(int, int, int);
 	/* 80053CEC */ void get();
 	/* 80053DE0 */ void getF(f32);
 	/* 80053E18 */ void getFX(f32);
@@ -176,12 +176,6 @@ struct cM_rnd_c {
 };
 
 // build dDlst_effectLine_c (dDlst_effectLine_c) False/False
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
 // build cXyz (cXyz) False/False
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
@@ -201,13 +195,19 @@ struct cXyz {
 	/* 802670AC */ void isZero() const;
 };
 
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
 /* top-level dependencies (begin dDlst_effectLine_c) */
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
 /* top-level dependencies (end dDlst_effectLine_c) */
 struct dDlst_effectLine_c {
-	// _GXColor
 	// cXyz
+	// _GXColor
 	/* 80053E9C */ void draw();
 	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
 };
@@ -264,6 +264,7 @@ struct dDlst_shadowReal_c {
 	// J3DModel
 	// dKy_tevstr_c
 	/* 800544F0 */ void reset();
+	/* 80054500 */ void imageDraw(f32 (* )[4]);
 	/* 800545D4 */ void draw();
 	/* 80054BD0 */ void setShadowRealMtx(cXyz*, cXyz*, f32, f32, f32, dKy_tevstr_c*);
 	/* 80055028 */ void set(u32, J3DModel*, cXyz*, f32, f32, dKy_tevstr_c*, f32, f32);
@@ -315,27 +316,29 @@ struct dDlst_shadowSimple_c {
 
 // build _GXTexObj (_GXTexObj) True/True
 // build dDlst_shadowControl_c (dDlst_shadowControl_c) False/False
-// build ResTIMG (ResTIMG) True/True
-// build _GXTexObj (_GXTexObj) True/True
 // build cXyz (cXyz) True/True
 // build J3DModel (J3DModel) True/True
+// build ResTIMG (ResTIMG) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build _GXTexObj (_GXTexObj) True/True
 /* top-level dependencies (begin dDlst_shadowControl_c) */
-// outer dependency: ResTIMG
-// outer dependency: _GXTexObj
 // outer dependency: cXyz
 // outer dependency: J3DModel
+// outer dependency: ResTIMG
 // outer dependency: dKy_tevstr_c
+// outer dependency: _GXTexObj
 /* top-level dependencies (end dDlst_shadowControl_c) */
 struct dDlst_shadowControl_c {
-	// ResTIMG
-	// _GXTexObj
-	// cXyz
 	// J3DModel
+	// ResTIMG
 	// dKy_tevstr_c
+	// cXyz
+	// _GXTexObj
 	/* 80055684 */ void init();
 	/* 80055768 */ void reset();
-	/* 80055C74 */ void setReal(u32, char, J3DModel*, cXyz*, f32, f32, dKy_tevstr_c*);
+	/* 800557C8 */ void imageDraw(f32 (* )[4]);
+	/* 80055A14 */ void draw(f32 (* )[4]);
+	/* 80055C74 */ void setReal(u32, s8, J3DModel*, cXyz*, f32, f32, dKy_tevstr_c*);
 	/* 80055F1C */ void addReal(u32, J3DModel*);
 	/* 80055F84 */ void setSimple(cXyz*, f32, f32, cXyz*, s16, f32, _GXTexObj*);
 	/* 80055FE8 */ void setSimpleTex(ResTIMG const*);
@@ -350,22 +353,13 @@ struct dDlst_peekZ_c {
 };
 
 // build dDlst_list_c (dDlst_list_c) False/False
-// build dDlst_base_c (dDlst_base_c) False/False
-/* top-level dependencies (begin dDlst_base_c) */
-/* top-level dependencies (end dDlst_base_c) */
-struct dDlst_base_c {
-};
-
+// build J3DDrawBuffer (J3DDrawBuffer) False/False
 // build J3DPacket (J3DPacket) False/False
 /* top-level dependencies (begin J3DPacket) */
 /* top-level dependencies (end J3DPacket) */
 struct J3DPacket {
 };
 
-// build _GXColor (_GXColor) True/True
-// build cXyz (cXyz) True/True
-// build J3DDrawBuffer (J3DDrawBuffer) False/False
-// build J3DPacket (J3DPacket) True/True
 /* top-level dependencies (begin J3DDrawBuffer) */
 // outer dependency: J3DPacket
 /* top-level dependencies (end J3DDrawBuffer) */
@@ -379,19 +373,28 @@ struct J3DDrawBuffer {
 	/* 803254AC */ void draw() const;
 };
 
+// build cXyz (cXyz) True/True
+// build dDlst_base_c (dDlst_base_c) False/False
+/* top-level dependencies (begin dDlst_base_c) */
+/* top-level dependencies (end dDlst_base_c) */
+struct dDlst_base_c {
+};
+
+// build _GXColor (_GXColor) True/True
+// build J3DPacket (J3DPacket) True/True
 /* top-level dependencies (begin dDlst_list_c) */
-// outer dependency: dDlst_base_c
-// outer dependency: J3DPacket
-// outer dependency: _GXColor
-// outer dependency: cXyz
 // outer dependency: J3DDrawBuffer
+// outer dependency: cXyz
+// outer dependency: dDlst_base_c
+// outer dependency: _GXColor
+// outer dependency: J3DPacket
 /* top-level dependencies (end dDlst_list_c) */
 struct dDlst_list_c {
+	// J3DDrawBuffer
+	// cXyz
 	// dDlst_base_c
 	// _GXColor
 	// J3DPacket
-	// cXyz
-	// J3DDrawBuffer
 	/* 800560F0 */ dDlst_list_c();
 	/* 80056390 */ void init();
 	/* 8005648C */ ~dDlst_list_c();
@@ -435,6 +438,7 @@ struct dDlst_shadowRealPoly_c {
 	/* 800569A8 */ s32 getTriMax();
 };
 
+// build Vec (Vec) True/True
 // build mDoMtx_stack_c (mDoMtx_stack_c) False/False
 /* top-level dependencies (begin mDoMtx_stack_c) */
 /* top-level dependencies (end mDoMtx_stack_c) */
@@ -458,12 +462,15 @@ struct cBgS {
 	/* 80074840 */ void ShdwDraw(cBgS_ShdwDraw*);
 };
 
-// build Vec (Vec) True/True
 // build J3DUClipper (J3DUClipper) False/False
+// build Vec (Vec) True/True
 /* top-level dependencies (begin J3DUClipper) */
+// outer dependency: Vec
 /* top-level dependencies (end J3DUClipper) */
 struct J3DUClipper {
+	// Vec
 	/* 8027378C */ void calcViewFrustum();
+	/* 80273A44 */ void clip(f32 const (* )[4], Vec*, Vec*) const;
 };
 
 // build JKRArchive (JKRArchive) False/False
@@ -500,12 +507,9 @@ struct J3DShape {
 // 
 
 static void J3DDrawBuffer__create(u32);
-extern "C" static void imageDraw__18dDlst_shadowReal_cFPA4_f();
-static void psdRealCallBack(cBgS_ShdwDraw*, cBgD_Vtx_t*, s32, s32, s32, cM3dGPla*);
+static void psdRealCallBack(cBgS_ShdwDraw*, cBgD_Vtx_t*, int, int, int, cM3dGPla*);
 static void realPolygonCheck(cXyz*, f32, f32, cXyz*, dDlst_shadowPoly_c*);
 static void setkankyoShadow(dKy_tevstr_c*, f32*);
-extern "C" void imageDraw__21dDlst_shadowControl_cFPA4_f();
-extern "C" void draw__21dDlst_shadowControl_cFPA4_f();
 extern "C" void __sinit_d_drawlist_cpp();
 
 extern "C" void setViewPort__14dDlst_window_cFffffff();
@@ -542,7 +546,7 @@ extern "C" void set__18dDlst_shadowPoly_cFP10cBgD_Vtx_tUsUsUsP8cM3dGPla();
 extern "C" void draw__18dDlst_shadowPoly_cFv();
 extern "C" static void J3DDrawBuffer__create__FUl();
 extern "C" void reset__18dDlst_shadowReal_cFv();
-extern "C" static void imageDraw__18dDlst_shadowReal_cFPA4_f();
+extern "C" void imageDraw__18dDlst_shadowReal_cFPA4_f();
 extern "C" void draw__18dDlst_shadowReal_cFv();
 extern "C" static void psdRealCallBack__FP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla();
 extern "C" static void realPolygonCheck__FP4cXyzffP4cXyzP18dDlst_shadowPoly_c();
@@ -687,16 +691,15 @@ SECTION_SBSS2 extern u8 d_d_drawlist__lit_4275[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16);
 void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*);
 void dKy_plight_near_pos();
 void dKy_GxFog_set();
 extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
-void cLib_chaseUC(char*, char, char);
-extern "C" void clip__11J3DUClipperCFPA4_CfP3VecP3Vec();
+void cLib_chaseUC(u8*, u8, u8);
 void* operator new(u32);
-void* operator new[](u32, s32);
+void* operator new[](u32, int);
 void operator delete(void*);
 extern "C" void PSMTXConcat();
 extern "C" void PSMTXTrans();
@@ -1347,7 +1350,7 @@ u32 d_d_drawlist__lit_4284 = 0x000000FF;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDlst_2DT2_c::init(ResTIMG* field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, char field_5, char field_6, char field_7, f32 field_8, f32 field_9) {
+asm void dDlst_2DT2_c::init(ResTIMG* field_0, f32 field_1, f32 field_2, f32 field_3, f32 field_4, u8 field_5, u8 field_6, u8 field_7, f32 field_8, f32 field_9) {
 	nofralloc
 #include "asm/d/d_drawlist/init__12dDlst_2DT2_cFP7ResTIMGffffUcUcUcff.s"
 }
@@ -1395,7 +1398,7 @@ asm void dDlst_2DMt_c::draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPicture::getTexture(char field_0) const {
+asm void J2DPicture::getTexture(u8 field_0) const {
 	nofralloc
 #include "asm/d/d_drawlist/getTexture__10J2DPictureCFUc.s"
 }
@@ -1406,7 +1409,7 @@ asm void J2DPicture::getTexture(char field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dDlst_2D_c::dDlst_2D_c(ResTIMG* field_0, s16 field_1, s16 field_2, s16 field_3, s16 field_4, char field_5) {
+asm dDlst_2D_c::dDlst_2D_c(ResTIMG* field_0, s16 field_1, s16 field_2, s16 field_3, s16 field_4, u8 field_5) {
 	nofralloc
 #include "asm/d/d_drawlist/__ct__10dDlst_2D_cFP7ResTIMGssssUc.s"
 }
@@ -1511,7 +1514,7 @@ asm J2DAnmBase::~J2DAnmBase() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_rnd_c::init(s32 field_0, s32 field_1, s32 field_2) {
+asm void cM_rnd_c::init(int field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/d/d_drawlist/init__8cM_rnd_cFiii.s"
 }
@@ -1653,7 +1656,7 @@ asm void dDlst_shadowReal_c::reset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void imageDraw__18dDlst_shadowReal_cFPA4_f() {
+asm void dDlst_shadowReal_c::imageDraw(f32 (* field_0)[4]) {
 	nofralloc
 #include "asm/d/d_drawlist/imageDraw__18dDlst_shadowReal_cFPA4_f.s"
 }
@@ -1688,7 +1691,7 @@ f32 d_d_drawlist__lit_5062 = -90.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void psdRealCallBack(cBgS_ShdwDraw* field_0, cBgD_Vtx_t* field_1, s32 field_2, s32 field_3, s32 field_4, cM3dGPla* field_5) {
+asm static void psdRealCallBack(cBgS_ShdwDraw* field_0, cBgD_Vtx_t* field_1, int field_2, int field_3, int field_4, cM3dGPla* field_5) {
 	nofralloc
 #include "asm/d/d_drawlist/psdRealCallBack__FP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla.s"
 }
@@ -1885,7 +1888,7 @@ asm void dDlst_shadowControl_c::reset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void imageDraw__21dDlst_shadowControl_cFPA4_f() {
+asm void dDlst_shadowControl_c::imageDraw(f32 (* field_0)[4]) {
 	nofralloc
 #include "asm/d/d_drawlist/imageDraw__21dDlst_shadowControl_cFPA4_f.s"
 }
@@ -1905,7 +1908,7 @@ u32 d_d_drawlist__lit_5433 = 0x00000020;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void draw__21dDlst_shadowControl_cFPA4_f() {
+asm void dDlst_shadowControl_c::draw(f32 (* field_0)[4]) {
 	nofralloc
 #include "asm/d/d_drawlist/draw__21dDlst_shadowControl_cFPA4_f.s"
 }
@@ -1926,7 +1929,7 @@ f32 lit_5553 = 0.0010000000474974513f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dDlst_shadowControl_c::setReal(u32 field_0, char field_1, J3DModel* field_2, cXyz* field_3, f32 field_4, f32 field_5, dKy_tevstr_c* field_6) {
+asm void dDlst_shadowControl_c::setReal(u32 field_0, s8 field_1, J3DModel* field_2, cXyz* field_3, f32 field_4, f32 field_5, dKy_tevstr_c* field_6) {
 	nofralloc
 #include "asm/d/d_drawlist/setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c.s"
 }

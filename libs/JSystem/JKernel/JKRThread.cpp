@@ -10,36 +10,36 @@
 // 
 
 // build JKRThread (JKRThread) False/False
+// build JKRHeap (JKRHeap) False/False
+/* top-level dependencies (begin JKRHeap) */
+/* top-level dependencies (end JKRHeap) */
+struct JKRHeap {
+	/* 802CE438 */ void becomeCurrentHeap();
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE83C */ void findFromRoot(void*);
+	/* 802CEBA8 */ void isSubHeap(JKRHeap*) const;
+};
+
 // build OSThread (OSThread) False/False
 /* top-level dependencies (begin OSThread) */
 /* top-level dependencies (end OSThread) */
 struct OSThread {
 };
 
-// build JKRHeap (JKRHeap) False/False
-/* top-level dependencies (begin JKRHeap) */
-/* top-level dependencies (end JKRHeap) */
-struct JKRHeap {
-	/* 802CE438 */ void becomeCurrentHeap();
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-	/* 802CE83C */ void findFromRoot(void*);
-	/* 802CEBA8 */ void isSubHeap(JKRHeap*) const;
-};
-
 /* top-level dependencies (begin JKRThread) */
-// outer dependency: OSThread
 // outer dependency: JKRHeap
+// outer dependency: OSThread
 /* top-level dependencies (end JKRThread) */
 struct JKRThread {
-	// OSThread
 	// JKRHeap
-	/* 802D1568 */ JKRThread(u32, s32, s32);
-	/* 802D1610 */ JKRThread(JKRHeap*, u32, s32, s32);
-	/* 802D16B8 */ JKRThread(OSThread*, s32);
+	// OSThread
+	/* 802D1568 */ JKRThread(u32, int, int);
+	/* 802D1610 */ JKRThread(JKRHeap*, u32, int, int);
+	/* 802D16B8 */ JKRThread(OSThread*, int);
 	/* 802D1758 */ ~JKRThread();
-	/* 802D1830 */ void setCommon_mesgQueue(JKRHeap*, s32);
-	/* 802D18A4 */ void setCommon_heapSpecified(JKRHeap*, u32, s32);
+	/* 802D1830 */ void setCommon_mesgQueue(JKRHeap*, int);
+	/* 802D18A4 */ void setCommon_heapSpecified(JKRHeap*, u32, int);
 	/* 802D1934 */ void start(void*);
 	/* 802D1960 */ void searchThread(OSThread*);
 	/* 802D1E14 */ bool run();
@@ -48,16 +48,7 @@ struct JKRThread {
 // build JKRHeap (JKRHeap) True/True
 // build OSThread (OSThread) True/True
 // build JKRThreadSwitch (JKRThreadSwitch) False/False
-// build OSThread (OSThread) True/True
 // build JKRHeap (JKRHeap) True/True
-// build JUTConsole (JUTConsole) False/False
-/* top-level dependencies (begin JUTConsole) */
-/* top-level dependencies (end JUTConsole) */
-struct JUTConsole {
-	/* 802E75EC */ void clear();
-	/* 802E7C38 */ void print(char const*);
-};
-
 // build JKRThread (JKRThread) True/True
 // build JKRThreadName_ (JKRThreadName_) False/False
 /* top-level dependencies (begin JKRThreadName_) */
@@ -65,22 +56,32 @@ struct JUTConsole {
 struct JKRThreadName_ {
 };
 
+// build JUTConsole (JUTConsole) False/False
+/* top-level dependencies (begin JUTConsole) */
+/* top-level dependencies (end JUTConsole) */
+struct JUTConsole {
+	/* 802E75EC */ void clear();
+	/* 802E7BB8 */ void print_f(char const*, ...);
+	/* 802E7C38 */ void print(char const*);
+};
+
+// build OSThread (OSThread) True/True
 /* top-level dependencies (begin JKRThreadSwitch) */
-// outer dependency: OSThread
 // outer dependency: JKRHeap
-// outer dependency: JUTConsole
 // outer dependency: JKRThread
 // outer dependency: JKRThreadName_
+// outer dependency: JUTConsole
+// outer dependency: OSThread
 /* top-level dependencies (end JKRThreadSwitch) */
 struct JKRThreadSwitch {
-	// JUTConsole
-	// JKRThread
 	// JKRThreadName_
-	// OSThread
+	// JUTConsole
 	// JKRHeap
+	// JKRThread
+	// OSThread
 	/* 802D199C */ JKRThreadSwitch(JKRHeap*);
 	/* 802D1A14 */ void createManager(JKRHeap*);
-	/* 802D1A70 */ void enter(JKRThread*, s32);
+	/* 802D1A70 */ void enter(JKRThread*, int);
 	/* 802D1AE4 */ void callback(OSThread*, OSThread*);
 	/* 802D1C74 */ void draw(JKRThreadName_*, JUTConsole*);
 	/* 802D1E1C */ void draw(JKRThreadName_*);
@@ -168,9 +169,8 @@ SECTION_SDATA2 extern f64 JKRThread__lit_937;
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
 void operator delete(void*);
-extern "C" void print_f__10JUTConsoleFPCce();
 extern "C" void JUTWarningConsole();
 extern "C" void OSInitMessageQueue();
 extern "C" void OSSetSwitchThreadCallback();
@@ -263,7 +263,7 @@ void* const __vt__9JKRThread[5] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JKRThread::JKRThread(u32 field_0, s32 field_1, s32 field_2) {
+asm JKRThread::JKRThread(u32 field_0, int field_1, int field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRThread/__ct__9JKRThreadFUlii.s"
 }
@@ -274,7 +274,7 @@ asm JKRThread::JKRThread(u32 field_0, s32 field_1, s32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JKRThread::JKRThread(JKRHeap* field_0, u32 field_1, s32 field_2, s32 field_3) {
+asm JKRThread::JKRThread(JKRHeap* field_0, u32 field_1, int field_2, int field_3) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRThread/__ct__9JKRThreadFP7JKRHeapUlii.s"
 }
@@ -285,7 +285,7 @@ asm JKRThread::JKRThread(JKRHeap* field_0, u32 field_1, s32 field_2, s32 field_3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JKRThread::JKRThread(OSThread* field_0, s32 field_1) {
+asm JKRThread::JKRThread(OSThread* field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRThread/__ct__9JKRThreadFP8OSThreadi.s"
 }
@@ -314,7 +314,7 @@ asm JKRThread::~JKRThread() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRThread::setCommon_mesgQueue(JKRHeap* field_0, s32 field_1) {
+asm void JKRThread::setCommon_mesgQueue(JKRHeap* field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRThread/setCommon_mesgQueue__9JKRThreadFP7JKRHeapi.s"
 }
@@ -325,7 +325,7 @@ asm void JKRThread::setCommon_mesgQueue(JKRHeap* field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRThread::setCommon_heapSpecified(JKRHeap* field_0, u32 field_1, s32 field_2) {
+asm void JKRThread::setCommon_heapSpecified(JKRHeap* field_0, u32 field_1, int field_2) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRThread/setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli.s"
 }
@@ -393,7 +393,7 @@ asm void JKRThreadSwitch::createManager(JKRHeap* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JKRThreadSwitch::enter(JKRThread* field_0, s32 field_1) {
+asm void JKRThreadSwitch::enter(JKRThread* field_0, int field_1) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRThread/enter__15JKRThreadSwitchFP9JKRThreadi.s"
 }

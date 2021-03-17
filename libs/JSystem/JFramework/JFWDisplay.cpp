@@ -10,12 +10,6 @@
 // 
 
 // build JFWDisplay (JFWDisplay) False/False
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
 // build JUTXfb (JUTXfb) False/False
 // build JUTXfb (JUTXfb) True/False
 struct JUTXfb;
@@ -42,6 +36,12 @@ struct JUTXfb {
 	/* 802E5424 */ void destroyManager();
 };
 
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
+};
+
 // build JKRHeap (JKRHeap) True/True
 // build _GXRenderModeObj (_GXRenderModeObj) False/False
 /* top-level dependencies (begin _GXRenderModeObj) */
@@ -50,14 +50,14 @@ struct _GXRenderModeObj {
 };
 
 /* top-level dependencies (begin JFWDisplay) */
-// outer dependency: _GXColor
 // outer dependency: JUTXfb::EXfbNumber
+// outer dependency: _GXColor
 // outer dependency: JKRHeap
 // outer dependency: _GXRenderModeObj
 /* top-level dependencies (end JFWDisplay) */
 struct JFWDisplay {
-	// _GXColor
 	// JUTXfb::EXfbNumber
+	// _GXColor
 	// JKRHeap
 	// _GXRenderModeObj
 	/* 80272040 */ void ctor_subroutine(bool);
@@ -74,12 +74,12 @@ struct JFWDisplay {
 	/* 80272798 */ void beginRender();
 	/* 80272A04 */ void endRender();
 	/* 80272AB0 */ void endFrame();
-	/* 80272C60 */ void waitBlanking(s32);
+	/* 80272C60 */ void waitBlanking(int);
 	/* 80272E10 */ void threadSleep(s64);
 	/* 80272EB8 */ void clearEfb_init();
 	/* 80272F2C */ void clearEfb();
 	/* 80272F58 */ void clearEfb(_GXColor);
-	/* 80272F9C */ void clearEfb(s32, s32, s32, s32, _GXColor);
+	/* 80272F9C */ void clearEfb(int, int, int, int, _GXColor);
 	/* 8027331C */ void calcCombinationRatio();
 };
 
@@ -685,7 +685,7 @@ asm void JFWDisplay::endFrame() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JFWDisplay::waitBlanking(s32 field_0) {
+asm void JFWDisplay::waitBlanking(int field_0) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/waitBlanking__10JFWDisplayFi.s"
 }
@@ -789,7 +789,7 @@ asm void JFWDisplay::clearEfb(_GXColor field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JFWDisplay::clearEfb(s32 field_0, s32 field_1, s32 field_2, s32 field_3, _GXColor field_4) {
+asm void JFWDisplay::clearEfb(int field_0, int field_1, int field_2, int field_3, _GXColor field_4) {
 	nofralloc
 #include "asm/JSystem/JFramework/JFWDisplay/clearEfb__10JFWDisplayFiiii8_GXColor.s"
 }

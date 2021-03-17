@@ -10,24 +10,65 @@
 // 
 
 // build J2DPictureEx (J2DPictureEx) False/False
-// build J2DPictureEx (J2DPictureEx) True/False
-struct J2DPictureEx;
-// build ResTLUT (ResTLUT) False/False
-/* top-level dependencies (begin ResTLUT) */
-/* top-level dependencies (end ResTLUT) */
-struct ResTLUT {
+// build J2DAnmTransform (J2DAnmTransform) False/False
+/* top-level dependencies (begin J2DAnmTransform) */
+/* top-level dependencies (end J2DAnmTransform) */
+struct J2DAnmTransform {
 };
 
-// build _GXCullMode (_GXCullMode) False/False
-/* top-level dependencies (begin _GXCullMode) */
-/* top-level dependencies (end _GXCullMode) */
-struct _GXCullMode {
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
 };
 
-// build J2DAnmVtxColor (J2DAnmVtxColor) False/False
-/* top-level dependencies (begin J2DAnmVtxColor) */
-/* top-level dependencies (end J2DAnmVtxColor) */
-struct J2DAnmVtxColor {
+// build J2DTevStage (J2DTevStage) False/False
+/* top-level dependencies (begin J2DTevStage) */
+/* top-level dependencies (end J2DTevStage) */
+struct J2DTevStage {
+};
+
+// build J2DMaterial (J2DMaterial) False/False
+// build J2DAnmColor (J2DAnmColor) False/False
+/* top-level dependencies (begin J2DAnmColor) */
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
+};
+
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
+/* top-level dependencies (begin J2DAnmTevRegKey) */
+/* top-level dependencies (end J2DAnmTevRegKey) */
+struct J2DAnmTevRegKey {
+};
+
+// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
+/* top-level dependencies (begin J2DAnmTexPattern) */
+/* top-level dependencies (end J2DAnmTexPattern) */
+struct J2DAnmTexPattern {
+};
+
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
+};
+
+/* top-level dependencies (begin J2DMaterial) */
+// outer dependency: J2DAnmColor
+// outer dependency: J2DAnmTevRegKey
+// outer dependency: J2DAnmTexPattern
+// outer dependency: J2DAnmTextureSRTKey
+/* top-level dependencies (end J2DMaterial) */
+struct J2DMaterial {
+	// J2DAnmColor
+	// J2DAnmTevRegKey
+	// J2DAnmTexPattern
+	// J2DAnmTextureSRTKey
+	/* 802EA38C */ void setGX();
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
 };
 
 // build JSURandomInputStream (JSURandomInputStream) False/False
@@ -46,31 +87,43 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
+// build JUTTexture (JUTTexture) False/False
+// build JUTPalette (JUTPalette) False/False
+/* top-level dependencies (begin JUTPalette) */
+/* top-level dependencies (end JUTPalette) */
+struct JUTPalette {
+};
+
+// build ResTIMG (ResTIMG) True/True
+// build _GXTlut (_GXTlut) False/False
+/* top-level dependencies (begin _GXTlut) */
+/* top-level dependencies (end _GXTlut) */
+struct _GXTlut {
+};
+
+/* top-level dependencies (begin JUTTexture) */
+// outer dependency: JUTPalette
+// outer dependency: ResTIMG
+// outer dependency: _GXTlut
+/* top-level dependencies (end JUTTexture) */
+struct JUTTexture {
+	// JUTPalette
+	// ResTIMG
+	// _GXTlut
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
+};
+
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
 // build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
 /* top-level dependencies (begin J2DAnmVisibilityFull) */
 /* top-level dependencies (end J2DAnmVisibilityFull) */
 struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, char*) const;
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
-struct J2DAnmTextureSRTKey {
-};
-
-// build J2DAnmTransform (J2DAnmTransform) False/False
-/* top-level dependencies (begin J2DAnmTransform) */
-/* top-level dependencies (end J2DAnmTransform) */
-struct J2DAnmTransform {
-};
-
-// build _GXTexMapID (_GXTexMapID) False/False
-/* top-level dependencies (begin _GXTexMapID) */
-/* top-level dependencies (end _GXTexMapID) */
-struct _GXTexMapID {
-};
-
+// build J2DAnmTexPattern (J2DAnmTexPattern) True/True
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) True/True
 // build JUtility (JUtility) False/False
 /* top-level dependencies (begin JUtility) */
 /* top-level dependencies (end JUtility) */
@@ -83,89 +136,56 @@ struct JUtility {
 
 };
 
-// build J2DMaterial (J2DMaterial) False/False
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
-// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
-/* top-level dependencies (begin J2DAnmTevRegKey) */
-/* top-level dependencies (end J2DAnmTevRegKey) */
-struct J2DAnmTevRegKey {
-};
-
-// build J2DAnmColor (J2DAnmColor) False/False
-/* top-level dependencies (begin J2DAnmColor) */
-/* top-level dependencies (end J2DAnmColor) */
-struct J2DAnmColor {
-};
-
-// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
-/* top-level dependencies (begin J2DAnmTexPattern) */
-/* top-level dependencies (end J2DAnmTexPattern) */
-struct J2DAnmTexPattern {
-};
-
-/* top-level dependencies (begin J2DMaterial) */
-// outer dependency: J2DAnmTextureSRTKey
-// outer dependency: J2DAnmTevRegKey
-// outer dependency: J2DAnmColor
-// outer dependency: J2DAnmTexPattern
-/* top-level dependencies (end J2DMaterial) */
-struct J2DMaterial {
-	// J2DAnmTextureSRTKey
-	// J2DAnmTevRegKey
-	// J2DAnmColor
-	// J2DAnmTexPattern
-	/* 802EA38C */ void setGX();
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-};
-
-// build J2DAnmTevRegKey (J2DAnmTevRegKey) True/True
-// build J2DAnmColor (J2DAnmColor) True/True
-// build J2DPane (J2DPane) False/False
-// build _GXCullMode (_GXCullMode) True/True
-// build J2DAnmVtxColor (J2DAnmVtxColor) True/True
-// build JSURandomInputStream (JSURandomInputStream) True/True
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
-struct ResTIMG {
-};
-
 // build ResFONT (ResFONT) False/False
 /* top-level dependencies (begin ResFONT) */
 /* top-level dependencies (end ResFONT) */
 struct ResFONT {
 };
 
+// build J2DAnmVtxColor (J2DAnmVtxColor) False/False
+/* top-level dependencies (begin J2DAnmVtxColor) */
+/* top-level dependencies (end J2DAnmVtxColor) */
+struct J2DAnmVtxColor {
+};
+
+// build J2DPane (J2DPane) False/False
+// build J2DAnmTransform (J2DAnmTransform) True/True
+// build ResFONT (ResFONT) True/True
+// build J2DAnmVtxColor (J2DAnmVtxColor) True/True
+// build ResTIMG (ResTIMG) True/True
 // build J2DAnmBase (J2DAnmBase) False/False
 /* top-level dependencies (begin J2DAnmBase) */
 /* top-level dependencies (end J2DAnmBase) */
 struct J2DAnmBase {
 };
 
+// build JSURandomInputStream (JSURandomInputStream) True/True
 // build J2DAnmVisibilityFull (J2DAnmVisibilityFull) True/True
-// build J2DAnmTransform (J2DAnmTransform) True/True
+// build _GXCullMode (_GXCullMode) False/False
+/* top-level dependencies (begin _GXCullMode) */
+/* top-level dependencies (end _GXCullMode) */
+struct _GXCullMode {
+};
+
 /* top-level dependencies (begin J2DPane) */
-// outer dependency: _GXCullMode
-// outer dependency: J2DAnmVtxColor
-// outer dependency: JSURandomInputStream
-// outer dependency: ResTIMG
-// outer dependency: ResFONT
-// outer dependency: J2DAnmBase
-// outer dependency: J2DAnmVisibilityFull
 // outer dependency: J2DAnmTransform
+// outer dependency: ResFONT
+// outer dependency: J2DAnmVtxColor
+// outer dependency: ResTIMG
+// outer dependency: J2DAnmBase
+// outer dependency: JSURandomInputStream
+// outer dependency: J2DAnmVisibilityFull
+// outer dependency: _GXCullMode
 /* top-level dependencies (end J2DPane) */
 struct J2DPane {
-	// _GXCullMode
-	// J2DAnmVtxColor
-	// JSURandomInputStream
-	// ResTIMG
-	// ResFONT
-	// J2DAnmBase
-	// J2DAnmVisibilityFull
 	// J2DAnmTransform
+	// ResFONT
+	// J2DAnmVtxColor
+	// ResTIMG
+	// J2DAnmBase
+	// JSURandomInputStream
+	// J2DAnmVisibilityFull
+	// _GXCullMode
 	/* 80053BC0 */ void calcMtx();
 	/* 80053C00 */ void makeMatrix(f32, f32);
 	/* 802F6F60 */ void move(f32, f32);
@@ -190,89 +210,69 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-// build ResTIMG (ResTIMG) True/True
-// build ResFONT (ResFONT) True/True
 // build J2DAnmBase (J2DAnmBase) True/True
-// build JUTPalette (JUTPalette) False/False
-/* top-level dependencies (begin JUTPalette) */
-/* top-level dependencies (end JUTPalette) */
-struct JUTPalette {
-};
-
-// build JUTTexture (JUTTexture) False/False
-// build _GXTlut (_GXTlut) False/False
-/* top-level dependencies (begin _GXTlut) */
-/* top-level dependencies (end _GXTlut) */
-struct _GXTlut {
-};
-
-// build ResTIMG (ResTIMG) True/True
+// build J2DPictureEx (J2DPictureEx) True/False
+struct J2DPictureEx;
 // build JUTPalette (JUTPalette) True/True
-/* top-level dependencies (begin JUTTexture) */
-// outer dependency: _GXTlut
-// outer dependency: ResTIMG
-// outer dependency: JUTPalette
-/* top-level dependencies (end JUTTexture) */
-struct JUTTexture {
-	// _GXTlut
-	// ResTIMG
-	// JUTPalette
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, char);
-	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
+// build ResTLUT (ResTLUT) False/False
+/* top-level dependencies (begin ResTLUT) */
+/* top-level dependencies (end ResTLUT) */
+struct ResTLUT {
 };
 
-// build J2DTevStage (J2DTevStage) False/False
-/* top-level dependencies (begin J2DTevStage) */
-/* top-level dependencies (end J2DTevStage) */
-struct J2DTevStage {
+// build _GXTexMapID (_GXTexMapID) False/False
+/* top-level dependencies (begin _GXTexMapID) */
+/* top-level dependencies (end _GXTexMapID) */
+struct _GXTexMapID {
 };
 
-// build J2DAnmTexPattern (J2DAnmTexPattern) True/True
+// build J2DAnmColor (J2DAnmColor) True/True
+// build _GXCullMode (_GXCullMode) True/True
 /* top-level dependencies (begin J2DPictureEx) */
-// outer dependency: J2DPictureEx::stage_enum
-// outer dependency: ResTLUT
-// outer dependency: _GXCullMode
-// outer dependency: J2DAnmVtxColor
-// outer dependency: JSURandomInputStream
-// outer dependency: J2DAnmVisibilityFull
-// outer dependency: J2DAnmTextureSRTKey
 // outer dependency: J2DAnmTransform
-// outer dependency: _GXTexMapID
-// outer dependency: JUtility::TColor
-// outer dependency: J2DMaterial
-// outer dependency: J2DAnmTevRegKey
-// outer dependency: J2DAnmColor
-// outer dependency: J2DPane
 // outer dependency: ResTIMG
-// outer dependency: ResFONT
-// outer dependency: J2DAnmBase
-// outer dependency: JUTPalette
-// outer dependency: JUTTexture
 // outer dependency: J2DTevStage
+// outer dependency: J2DMaterial
+// outer dependency: JSURandomInputStream
+// outer dependency: JUTTexture
+// outer dependency: J2DAnmTextureSRTKey
+// outer dependency: J2DAnmVisibilityFull
 // outer dependency: J2DAnmTexPattern
+// outer dependency: J2DAnmTevRegKey
+// outer dependency: JUtility::TColor
+// outer dependency: ResFONT
+// outer dependency: J2DAnmVtxColor
+// outer dependency: J2DPane
+// outer dependency: J2DAnmBase
+// outer dependency: J2DPictureEx::stage_enum
+// outer dependency: JUTPalette
+// outer dependency: ResTLUT
+// outer dependency: _GXTexMapID
+// outer dependency: J2DAnmColor
+// outer dependency: _GXCullMode
 /* top-level dependencies (end J2DPictureEx) */
 struct J2DPictureEx {
-	// J2DPictureEx::stage_enum
-	// ResTLUT
-	// J2DAnmVtxColor
-	// JSURandomInputStream
-	// J2DAnmVisibilityFull
-	// J2DAnmTextureSRTKey
-	// JUtility::TColor
-	// J2DAnmTevRegKey
-	// ResTIMG
-	// ResFONT
-	// JUTPalette
-	// JUTTexture
-	// _GXCullMode
 	// J2DAnmTransform
-	// _GXTexMapID
-	// J2DMaterial
-	// J2DAnmColor
-	// J2DPane
-	// J2DAnmBase
-	// J2DTevStage
 	// J2DAnmTexPattern
+	// J2DAnmTevRegKey
+	// JUtility::TColor
+	// J2DAnmBase
+	// JUTPalette
+	// ResTLUT
+	// _GXTexMapID
+	// J2DAnmColor
+	// _GXCullMode
+	// ResTIMG
+	// J2DTevStage
+	// J2DMaterial
+	// JSURandomInputStream
+	// JUTTexture
+	// J2DAnmTextureSRTKey
+	// J2DAnmVisibilityFull
+	// ResFONT
+	// J2DAnmVtxColor
+	// J2DPane
+	// J2DPictureEx::stage_enum
 	// build stage_enum (J2DPictureEx::stage_enum) False/False
 	/* dependencies (begin J2DPictureEx::stage_enum) */
 	/* dependencies (end J2DPictureEx::stage_enum) */
@@ -284,37 +284,40 @@ struct J2DPictureEx {
 	/* 80303640 */ void initiate(ResTIMG const*, ResTLUT const*);
 	/* 803036EC */ J2DPictureEx(J2DPane*, JSURandomInputStream*, u32, J2DMaterial*);
 	/* 8030393C */ ~J2DPictureEx();
-	/* 803039CC */ void prepareTexture(char);
+	/* 803039CC */ void prepareTexture(u8);
+	/* 80303AB4 */ void drawSelf(f32, f32, f32 (* )[3][4]);
+	/* 80303B80 */ void drawFullSet(f32, f32, f32, f32, f32 (* )[3][4]);
+	/* 80303BDC */ void drawTexCoord(f32, f32, f32, f32, s16, s16, s16, s16, s16, s16, s16, s16, f32 (* )[3][4]);
 	/* 80303E5C */ void append(ResTIMG const*, JUTPalette*, f32);
 	/* 80303EA4 */ void append(char const*, JUTPalette*, f32);
 	/* 80303EEC */ void append(JUTTexture*, f32);
-	/* 80303F34 */ void insert(ResTIMG const*, JUTPalette*, char, f32);
-	/* 80303FD8 */ void insert(char const*, JUTPalette*, char, f32);
-	/* 80304048 */ void insert(JUTTexture*, char, f32);
-	/* 803040E4 */ void insertCommon(char, f32);
-	/* 8030437C */ void isInsert(char) const;
-	/* 8030446C */ void remove(char);
+	/* 80303F34 */ void insert(ResTIMG const*, JUTPalette*, u8, f32);
+	/* 80303FD8 */ void insert(char const*, JUTPalette*, u8, f32);
+	/* 80304048 */ void insert(JUTTexture*, u8, f32);
+	/* 803040E4 */ void insertCommon(u8, f32);
+	/* 8030437C */ void isInsert(u8) const;
+	/* 8030446C */ void remove(u8);
 	/* 80304608 */ void remove();
 	/* 8030466C */ void remove(JUTTexture*);
-	/* 80304728 */ void isRemove(char) const;
-	/* 8030477C */ void draw(f32, f32, char, bool, bool, bool);
+	/* 80304728 */ void isRemove(u8) const;
+	/* 8030477C */ void draw(f32, f32, u8, bool, bool, bool);
 	/* 80304890 */ void draw(f32, f32, f32, f32, bool, bool, bool);
 	/* 80304D88 */ void drawOut(f32, f32, f32, f32, f32, f32);
-	/* 80305264 */ void load(_GXTexMapID, char);
-	/* 803052AC */ void setTevOrder(char, char, bool);
-	/* 803053E0 */ void setTevStage(char, char, bool);
+	/* 80305264 */ void load(_GXTexMapID, u8);
+	/* 803052AC */ void setTevOrder(u8, u8, bool);
+	/* 803053E0 */ void setTevStage(u8, u8, bool);
 	/* 80305688 */ void setStage(J2DTevStage*, J2DPictureEx::stage_enum);
-	/* 80305928 */ void setTevKColor(char);
-	/* 80305C70 */ void setTevKColorSel(char);
-	/* 80305D18 */ void setTevKAlphaSel(char);
-	/* 80305DC0 */ void shiftSetBlendRatio(char, f32, bool, bool);
+	/* 80305928 */ void setTevKColor(u8);
+	/* 80305C70 */ void setTevKColorSel(u8);
+	/* 80305D18 */ void setTevKAlphaSel(u8);
+	/* 80305DC0 */ void shiftSetBlendRatio(u8, f32, bool, bool);
 	/* 80305ED4 */ void setBlendColorRatio(f32, f32);
 	/* 80305F34 */ void setBlendAlphaRatio(f32, f32);
-	/* 80305F94 */ void changeTexture(ResTIMG const*, char);
-	/* 803060DC */ void changeTexture(char const*, char);
-	/* 80306134 */ void changeTexture(ResTIMG const*, char, JUTPalette*);
-	/* 80306298 */ void changeTexture(char const*, char, JUTPalette*);
-	/* 803062F8 */ void getTexture(char) const;
+	/* 80305F94 */ void changeTexture(ResTIMG const*, u8);
+	/* 803060DC */ void changeTexture(char const*, u8);
+	/* 80306134 */ void changeTexture(ResTIMG const*, u8, JUTPalette*);
+	/* 80306298 */ void changeTexture(char const*, u8, JUTPalette*);
+	/* 803062F8 */ void getTexture(u8) const;
 	/* 80306350 */ void getTextureCount() const;
 	/* 80306370 */ void setBlack(JUtility::TColor);
 	/* 803063F8 */ void setWhite(JUtility::TColor);
@@ -323,7 +326,7 @@ struct J2DPictureEx {
 	/* 80306824 */ void isSetBlackWhite(JUtility::TColor, JUtility::TColor) const;
 	/* 803068F8 */ void getBlack() const;
 	/* 80306958 */ void getWhite() const;
-	/* 803069B8 */ void setAlpha(char);
+	/* 803069B8 */ void setAlpha(u8);
 	/* 803069D8 */ void setCullBack(_GXCullMode);
 	/* 80306A0C */ void rewriteAlpha();
 	/* 80306A24 */ void isUsed(ResTIMG const*);
@@ -334,7 +337,7 @@ struct J2DPictureEx {
 	/* 80306B74 */ void setAnimation(J2DAnmVisibilityFull*);
 	/* 80306B7C */ void setAnimation(J2DAnmVtxColor*);
 	/* 80306C70 */ void animationPane(J2DAnmTransform const*);
-	/* 80306DC8 */ void getUsableTlut(char);
+	/* 80306DC8 */ void getUsableTlut(u8);
 	/* 80306ED4 */ void append(ResTIMG const*, f32);
 	/* 80306F04 */ void append(char const*, f32);
 	/* 80306F34 */ void prepend(JUTTexture*, f32);
@@ -342,11 +345,11 @@ struct J2DPictureEx {
 	/* 80306F94 */ void prepend(char const*, f32);
 	/* 80306FC4 */ void prepend(ResTIMG const*, JUTPalette*, f32);
 	/* 80306FF4 */ void prepend(ResTIMG const*, f32);
-	/* 80307024 */ void insert(char const*, char, f32);
-	/* 80307058 */ void insert(ResTIMG const*, char, f32);
+	/* 80307024 */ void insert(char const*, u8, f32);
+	/* 80307058 */ void insert(ResTIMG const*, u8, f32);
 	/* 8030708C */ void draw(f32, f32, bool, bool, bool);
 	/* 803070D0 */ void drawOut(f32, f32, f32, f32, f32, f32, f32, f32);
-	/* 80307134 */ void load(char);
+	/* 80307134 */ void load(u8);
 	/* 80307168 */ void setCullBack(bool);
 	/* 803071A4 */ void isUsed(ResFONT const*);
 	/* 803071C4 */ void setAnimation(J2DAnmBase*);
@@ -383,7 +386,7 @@ struct J2DPicture {
 	/* 802FC050 */ J2DPicture();
 	/* 802FCFF0 */ ~J2DPicture();
 	/* 802FDB28 */ void drawSelf(f32, f32);
-	/* 802FF1D0 */ void getTlutID(ResTIMG const*, char);
+	/* 802FF1D0 */ void getTlutID(ResTIMG const*, u8);
 	/* 802FF2E8 */ s32 getTypeID() const;
 };
 
@@ -423,18 +426,15 @@ struct J2DScreen {
 // Forward References:
 // 
 
-extern "C" static void drawSelf__12J2DPictureExFffPA3_A4_f();
-extern "C" static void drawFullSet__12J2DPictureExFffffPA3_A4_f();
-extern "C" static void drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f();
 extern "C" static void func_80304EF0();
 
 extern "C" void initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT();
 extern "C" void __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
 extern "C" void __dt__12J2DPictureExFv();
 extern "C" void prepareTexture__12J2DPictureExFUc();
-extern "C" static void drawSelf__12J2DPictureExFffPA3_A4_f();
-extern "C" static void drawFullSet__12J2DPictureExFffffPA3_A4_f();
-extern "C" static void drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f();
+extern "C" void drawSelf__12J2DPictureExFffPA3_A4_f();
+extern "C" void drawFullSet__12J2DPictureExFffffPA3_A4_f();
+extern "C" void drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f();
 extern "C" void append__12J2DPictureExFPC7ResTIMGP10JUTPalettef();
 extern "C" void append__12J2DPictureExFPCcP10JUTPalettef();
 extern "C" void append__12J2DPictureExFP10JUTTexturef();
@@ -759,7 +759,7 @@ asm J2DPictureEx::~J2DPictureEx() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::prepareTexture(char field_0) {
+asm void J2DPictureEx::prepareTexture(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/prepareTexture__12J2DPictureExFUc.s"
 }
@@ -770,7 +770,7 @@ asm void J2DPictureEx::prepareTexture(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void drawSelf__12J2DPictureExFffPA3_A4_f() {
+asm void J2DPictureEx::drawSelf(f32 field_0, f32 field_1, f32 (* field_2)[3][4]) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/drawSelf__12J2DPictureExFffPA3_A4_f.s"
 }
@@ -781,7 +781,7 @@ extern "C" asm static void drawSelf__12J2DPictureExFffPA3_A4_f() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void drawFullSet__12J2DPictureExFffffPA3_A4_f() {
+asm void J2DPictureEx::drawFullSet(f32 field_0, f32 field_1, f32 field_2, f32 field_3, f32 (* field_4)[3][4]) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/drawFullSet__12J2DPictureExFffffPA3_A4_f.s"
 }
@@ -798,7 +798,7 @@ u8 lit_1784[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f() {
+asm void J2DPictureEx::drawTexCoord(f32 field_0, f32 field_1, f32 field_2, f32 field_3, s16 field_4, s16 field_5, s16 field_6, s16 field_7, s16 field_8, s16 field_9, s16 field_10, s16 field_11, f32 (* field_12)[3][4]) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f.s"
 }
@@ -842,7 +842,7 @@ asm void J2DPictureEx::append(JUTTexture* field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::insert(ResTIMG const* field_0, JUTPalette* field_1, char field_2, f32 field_3) {
+asm void J2DPictureEx::insert(ResTIMG const* field_0, JUTPalette* field_1, u8 field_2, f32 field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf.s"
 }
@@ -853,7 +853,7 @@ asm void J2DPictureEx::insert(ResTIMG const* field_0, JUTPalette* field_1, char 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::insert(char const* field_0, JUTPalette* field_1, char field_2, f32 field_3) {
+asm void J2DPictureEx::insert(char const* field_0, JUTPalette* field_1, u8 field_2, f32 field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFPCcP10JUTPaletteUcf.s"
 }
@@ -864,7 +864,7 @@ asm void J2DPictureEx::insert(char const* field_0, JUTPalette* field_1, char fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::insert(JUTTexture* field_0, char field_1, f32 field_2) {
+asm void J2DPictureEx::insert(JUTTexture* field_0, u8 field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFP10JUTTextureUcf.s"
 }
@@ -875,7 +875,7 @@ asm void J2DPictureEx::insert(JUTTexture* field_0, char field_1, f32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::insertCommon(char field_0, f32 field_1) {
+asm void J2DPictureEx::insertCommon(u8 field_0, f32 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insertCommon__12J2DPictureExFUcf.s"
 }
@@ -886,7 +886,7 @@ asm void J2DPictureEx::insertCommon(char field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::isInsert(char field_0) const {
+asm void J2DPictureEx::isInsert(u8 field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/isInsert__12J2DPictureExCFUc.s"
 }
@@ -897,7 +897,7 @@ asm void J2DPictureEx::isInsert(char field_0) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::remove(char field_0) {
+asm void J2DPictureEx::remove(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/remove__12J2DPictureExFUc.s"
 }
@@ -930,7 +930,7 @@ asm void J2DPictureEx::remove(JUTTexture* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::isRemove(char field_0) const {
+asm void J2DPictureEx::isRemove(u8 field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/isRemove__12J2DPictureExCFUc.s"
 }
@@ -945,7 +945,7 @@ f64 lit_2130 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::draw(f32 field_0, f32 field_1, char field_2, bool field_3, bool field_4, bool field_5) {
+asm void J2DPictureEx::draw(f32 field_0, f32 field_1, u8 field_2, bool field_3, bool field_4, bool field_5) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/draw__12J2DPictureExFffUcbbb.s"
 }
@@ -989,7 +989,7 @@ extern "C" asm static void func_80304EF0() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::load(_GXTexMapID field_0, char field_1) {
+asm void J2DPictureEx::load(_GXTexMapID field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/load__12J2DPictureExF11_GXTexMapIDUc.s"
 }
@@ -1000,7 +1000,7 @@ asm void J2DPictureEx::load(_GXTexMapID field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::setTevOrder(char field_0, char field_1, bool field_2) {
+asm void J2DPictureEx::setTevOrder(u8 field_0, u8 field_1, bool field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setTevOrder__12J2DPictureExFUcUcb.s"
 }
@@ -1011,7 +1011,7 @@ asm void J2DPictureEx::setTevOrder(char field_0, char field_1, bool field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::setTevStage(char field_0, char field_1, bool field_2) {
+asm void J2DPictureEx::setTevStage(u8 field_0, u8 field_1, bool field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setTevStage__12J2DPictureExFUcUcb.s"
 }
@@ -1045,7 +1045,7 @@ f32 lit_2690 = 255.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::setTevKColor(char field_0) {
+asm void J2DPictureEx::setTevKColor(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setTevKColor__12J2DPictureExFUc.s"
 }
@@ -1056,7 +1056,7 @@ asm void J2DPictureEx::setTevKColor(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::setTevKColorSel(char field_0) {
+asm void J2DPictureEx::setTevKColorSel(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setTevKColorSel__12J2DPictureExFUc.s"
 }
@@ -1067,7 +1067,7 @@ asm void J2DPictureEx::setTevKColorSel(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::setTevKAlphaSel(char field_0) {
+asm void J2DPictureEx::setTevKAlphaSel(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setTevKAlphaSel__12J2DPictureExFUc.s"
 }
@@ -1078,7 +1078,7 @@ asm void J2DPictureEx::setTevKAlphaSel(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::shiftSetBlendRatio(char field_0, f32 field_1, bool field_2, bool field_3) {
+asm void J2DPictureEx::shiftSetBlendRatio(u8 field_0, f32 field_1, bool field_2, bool field_3) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/shiftSetBlendRatio__12J2DPictureExFUcfbb.s"
 }
@@ -1111,7 +1111,7 @@ asm void J2DPictureEx::setBlendAlphaRatio(f32 field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::changeTexture(ResTIMG const* field_0, char field_1) {
+asm void J2DPictureEx::changeTexture(ResTIMG const* field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPC7ResTIMGUc.s"
 }
@@ -1122,7 +1122,7 @@ asm void J2DPictureEx::changeTexture(ResTIMG const* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::changeTexture(char const* field_0, char field_1) {
+asm void J2DPictureEx::changeTexture(char const* field_0, u8 field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPCcUc.s"
 }
@@ -1133,7 +1133,7 @@ asm void J2DPictureEx::changeTexture(char const* field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::changeTexture(ResTIMG const* field_0, char field_1, JUTPalette* field_2) {
+asm void J2DPictureEx::changeTexture(ResTIMG const* field_0, u8 field_1, JUTPalette* field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette.s"
 }
@@ -1144,7 +1144,7 @@ asm void J2DPictureEx::changeTexture(ResTIMG const* field_0, char field_1, JUTPa
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::changeTexture(char const* field_0, char field_1, JUTPalette* field_2) {
+asm void J2DPictureEx::changeTexture(char const* field_0, u8 field_1, JUTPalette* field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/changeTexture__12J2DPictureExFPCcUcP10JUTPalette.s"
 }
@@ -1155,7 +1155,7 @@ asm void J2DPictureEx::changeTexture(char const* field_0, char field_1, JUTPalet
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::getTexture(char field_0) const {
+asm void J2DPictureEx::getTexture(u8 field_0) const {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/getTexture__12J2DPictureExCFUc.s"
 }
@@ -1254,7 +1254,7 @@ asm void J2DPictureEx::getWhite() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::setAlpha(char field_0) {
+asm void J2DPictureEx::setAlpha(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/setAlpha__12J2DPictureExFUc.s"
 }
@@ -1375,7 +1375,7 @@ asm void J2DPictureEx::animationPane(J2DAnmTransform const* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::getUsableTlut(char field_0) {
+asm void J2DPictureEx::getUsableTlut(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/getUsableTlut__12J2DPictureExFUc.s"
 }
@@ -1463,7 +1463,7 @@ asm void J2DPictureEx::prepend(ResTIMG const* field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::insert(char const* field_0, char field_1, f32 field_2) {
+asm void J2DPictureEx::insert(char const* field_0, u8 field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFPCcUcf.s"
 }
@@ -1474,7 +1474,7 @@ asm void J2DPictureEx::insert(char const* field_0, char field_1, f32 field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::insert(ResTIMG const* field_0, char field_1, f32 field_2) {
+asm void J2DPictureEx::insert(ResTIMG const* field_0, u8 field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/insert__12J2DPictureExFPC7ResTIMGUcf.s"
 }
@@ -1507,7 +1507,7 @@ asm void J2DPictureEx::drawOut(f32 field_0, f32 field_1, f32 field_2, f32 field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPictureEx::load(char field_0) {
+asm void J2DPictureEx::load(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DPictureEx/load__12J2DPictureExFUc.s"
 }

@@ -35,6 +35,7 @@ struct mDoGph_gInf_c {
 	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
 	/* 80008028 */ void fadeOut_f(f32, _GXColor&);
 	/* 80008078 */ void onBlure();
+	/* 800080A0 */ void onBlure(f32 const (* )[4]);
 	/* 800080D0 */ void fadeOut(f32);
 	/* 80008330 */ void calcFade();
 };
@@ -75,12 +76,18 @@ struct daPy_py_c {
 	/* 8000B1E4 */ s32 getAtnActorID() const;
 };
 
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
 // build JKRHeap (JKRHeap) False/False
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, s32, JKRHeap*);
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
@@ -103,30 +110,38 @@ struct JPADrawInfo {
 struct dPa_control_c {
 	// JPADrawInfo
 	/* 8004C134 */ void calcMenu();
-	/* 8004C188 */ void draw(JPADrawInfo*, char);
+	/* 8004C188 */ void draw(JPADrawInfo*, u8);
 };
 
 // build JPADrawInfo (JPADrawInfo) True/True
-// build dDlst_list_c (dDlst_list_c) False/False
-// build dDlst_base_c (dDlst_base_c) False/False
-/* top-level dependencies (begin dDlst_base_c) */
-/* top-level dependencies (end dDlst_base_c) */
-struct dDlst_base_c {
+// build dDlst_shadowControl_c (dDlst_shadowControl_c) False/False
+/* top-level dependencies (begin dDlst_shadowControl_c) */
+/* top-level dependencies (end dDlst_shadowControl_c) */
+struct dDlst_shadowControl_c {
+	/* 800557C8 */ void imageDraw(f32 (* )[4]);
+	/* 80055A14 */ void draw(f32 (* )[4]);
 };
 
+// build dDlst_list_c (dDlst_list_c) False/False
 // build J3DDrawBuffer (J3DDrawBuffer) False/False
 /* top-level dependencies (begin J3DDrawBuffer) */
 /* top-level dependencies (end J3DDrawBuffer) */
 struct J3DDrawBuffer {
 };
 
+// build dDlst_base_c (dDlst_base_c) False/False
+/* top-level dependencies (begin dDlst_base_c) */
+/* top-level dependencies (end dDlst_base_c) */
+struct dDlst_base_c {
+};
+
 /* top-level dependencies (begin dDlst_list_c) */
-// outer dependency: dDlst_base_c
 // outer dependency: J3DDrawBuffer
+// outer dependency: dDlst_base_c
 /* top-level dependencies (end dDlst_list_c) */
 struct dDlst_list_c {
-	// dDlst_base_c
 	// J3DDrawBuffer
+	// dDlst_base_c
 	/* 80056390 */ void init();
 	/* 80056538 */ void reset();
 	/* 800566D4 */ void drawOpaDrawList(J3DDrawBuffer*);
@@ -146,14 +161,14 @@ struct dAttention_c {
 	/* 800737E4 */ void LockonTruth();
 };
 
-// build JFWDisplay (JFWDisplay) False/False
-// build JKRHeap (JKRHeap) True/True
-// build _GXRenderModeObj (_GXRenderModeObj) False/False
-/* top-level dependencies (begin _GXRenderModeObj) */
-/* top-level dependencies (end _GXRenderModeObj) */
-struct _GXRenderModeObj {
+// build dMenu_Collect3D_c (dMenu_Collect3D_c) False/False
+/* top-level dependencies (begin dMenu_Collect3D_c) */
+/* top-level dependencies (end dMenu_Collect3D_c) */
+struct dMenu_Collect3D_c {
+	/* 801B75E8 */ void setupItem3D(f32 (* )[4]);
 };
 
+// build JFWDisplay (JFWDisplay) False/False
 // build JUTXfb (JUTXfb) False/False
 /* top-level dependencies (begin JUTXfb) */
 /* top-level dependencies (end JUTXfb) */
@@ -166,15 +181,22 @@ struct JUTXfb {
 
 };
 
+// build JKRHeap (JKRHeap) True/True
+// build _GXRenderModeObj (_GXRenderModeObj) False/False
+/* top-level dependencies (begin _GXRenderModeObj) */
+/* top-level dependencies (end _GXRenderModeObj) */
+struct _GXRenderModeObj {
+};
+
 /* top-level dependencies (begin JFWDisplay) */
+// outer dependency: JUTXfb::EXfbNumber
 // outer dependency: JKRHeap
 // outer dependency: _GXRenderModeObj
-// outer dependency: JUTXfb::EXfbNumber
 /* top-level dependencies (end JFWDisplay) */
 struct JFWDisplay {
+	// JUTXfb::EXfbNumber
 	// JKRHeap
 	// _GXRenderModeObj
-	// JUTXfb::EXfbNumber
 	/* 802721DC */ void createManager(_GXRenderModeObj const*, JKRHeap*, JUTXfb::EXfbNumber, bool);
 };
 
@@ -208,7 +230,7 @@ struct JUtility {
 /* top-level dependencies (end JUTFader) */
 struct JUTFader {
 	// JUtility::TColor
-	/* 802E5530 */ JUTFader(s32, s32, s32, s32, JUtility::TColor);
+	/* 802E5530 */ JUTFader(int, int, int, int, JUtility::TColor);
 };
 
 // build JUtility (JUtility) True/True
@@ -232,17 +254,16 @@ struct J3DSys {
 // 
 
 static void createTimg(u16, u16, u32);
-extern "C" void onBlure__13mDoGph_gInf_cFPA4_Cf();
 static void darwFilter(_GXColor);
 void mDoGph_BlankingON();
 void mDoGph_BlankingOFF();
 static void dScnPly_BeforeOfPaint();
 void mDoGph_BeforeOfDraw();
 void mDoGph_AfterOfDraw();
-static void drawDepth2(view_class*, view_port_class*, s32);
+static void drawDepth2(view_class*, view_port_class*, int);
 static void trimming(view_class*, view_port_class*);
-void mDoGph_drawFilterQuad(char, char);
-static void retry_captue_frame(view_class*, view_port_class*, s32);
+void mDoGph_drawFilterQuad(s8, s8);
+static void retry_captue_frame(view_class*, view_port_class*, int);
 static void motionBlure(view_class*);
 static void setLight();
 static void drawItem3D();
@@ -349,19 +370,16 @@ SECTION_SBSS2 extern u8 m_Do_m_Do_graphic__lit_4530[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
 void mDoExt_getArchiveHeap();
 void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32);
 void mDoExt_adjustSolidHeap(JKRSolidHeap*);
 void mDoExt_restoreCurrentHeap();
 extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
 void fpcSch_JudgeByID(void*, void*);
-extern "C" void imageDraw__21dDlst_shadowControl_cFPA4_f();
-extern "C" void draw__21dDlst_shadowControl_cFPA4_f();
 void dCam_getBody();
 void dKy_setLight();
-extern "C" void setupItem3D__17dMenu_Collect3D_cFPA4_f();
-void cLib_memSet(void*, s32, u32);
+void cLib_memSet(void*, int, u32);
 void cLib_addCalc(f32*, f32, f32, f32, f32);
 void* operator new(u32);
 void operator delete(void*);
@@ -727,7 +745,7 @@ u8 mBlureMtx__13mDoGph_gInf_c[48 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void onBlure__13mDoGph_gInf_cFPA4_Cf() {
+asm void mDoGph_gInf_c::onBlure(f32 const (* field_0)[4]) {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/onBlure__13mDoGph_gInf_cFPA4_Cf.s"
 }
@@ -900,7 +918,7 @@ f32 m_Do_m_Do_graphic__lit_4442 = -0.0024999999441206455f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void drawDepth2(view_class* field_0, view_port_class* field_1, s32 field_2) {
+asm static void drawDepth2(view_class* field_0, view_port_class* field_1, int field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/drawDepth2__FP10view_classP15view_port_classi.s"
 }
@@ -940,7 +958,7 @@ asm static void trimming(view_class* field_0, view_port_class* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoGph_drawFilterQuad(char field_0, char field_1) {
+asm void mDoGph_drawFilterQuad(s8 field_0, s8 field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/mDoGph_drawFilterQuad__FScSc.s"
 }
@@ -1010,7 +1028,7 @@ asm void mDoGph_gInf_c::bloom_c::draw() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void retry_captue_frame(view_class* field_0, view_port_class* field_1, s32 field_2) {
+asm static void retry_captue_frame(view_class* field_0, view_port_class* field_1, int field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/retry_captue_frame__FP10view_classP15view_port_classi.s"
 }

@@ -144,7 +144,7 @@ SECTION_SBSS extern u8 sAramHeap__16JASWaveArcLoader[4 + 4 /* padding */];
 // 
 
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 void operator delete[](void*);
 extern "C" void OSInitMutex();

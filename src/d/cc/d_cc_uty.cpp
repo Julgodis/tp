@@ -46,17 +46,17 @@ struct daPy_py_c {
 /* top-level dependencies (begin dCcD_GObjInf) */
 /* top-level dependencies (end dCcD_GObjInf) */
 struct dCcD_GObjInf {
-	/* 800845B0 */ void getHitSeID(char, s32);
+	/* 800845B0 */ void getHitSeID(u8, int);
 };
 
 // 
 // Forward References:
 // 
 
-void pl_cut_LRC(s32);
+void pl_cut_LRC(int);
 static void cc_pl_cut_bit_get();
-static void getMapInfo(char);
-static void getHitId(cCcD_Obj*, s32);
+static void getMapInfo(s8);
+static void getHitId(cCcD_Obj*, int);
 void def_se_set(Z2Creature*, cCcD_Obj*, u32, fopAc_ac_c*);
 static void at_power_get(dCcU_AtInfo*);
 static void at_power_check(dCcU_AtInfo*);
@@ -132,7 +132,7 @@ u8 plCutLRC[232] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void pl_cut_LRC(s32 field_0) {
+asm void pl_cut_LRC(int field_0) {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/pl_cut_LRC__Fi.s"
 }
@@ -154,7 +154,7 @@ asm static void cc_pl_cut_bit_get() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void getMapInfo(char field_0) {
+asm static void getMapInfo(s8 field_0) {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/getMapInfo__FSc.s"
 }
@@ -165,7 +165,7 @@ asm static void getMapInfo(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void getHitId(cCcD_Obj* field_0, s32 field_1) {
+asm static void getHitId(cCcD_Obj* field_0, int field_1) {
 	nofralloc
 #include "asm/d/cc/d_cc_uty/getHitId__FP8cCcD_Obji.s"
 }

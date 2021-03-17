@@ -100,7 +100,7 @@ SECTION_SDATA2 extern f32 lit_3010;
 // External References:
 // 
 
-extern "C" void JPAGetYZRotateMtx__FssPA4_f();
+void JPAGetYZRotateMtx(s16, s16, f32 (* )[4]);
 void operator delete(void*);
 void JMAVECScaleAdd(Vec const*, Vec const*, Vec*, f32);
 extern "C" void PSMTXConcat();

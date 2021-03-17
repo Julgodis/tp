@@ -22,7 +22,7 @@ struct J3DJointBlock {
 struct J3DJointFactory {
 	// J3DJointBlock
 	/* 80337178 */ J3DJointFactory(J3DJointBlock const&);
-	/* 803371D0 */ void create(s32);
+	/* 803371D0 */ void create(int);
 };
 
 // build J3DJointBlock (J3DJointBlock) True/True
@@ -73,7 +73,7 @@ asm J3DJointFactory::J3DJointFactory(J3DJointBlock const& field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DJointFactory::create(s32 field_0) {
+asm void J3DJointFactory::create(int field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DJointFactory/create__15J3DJointFactoryFi.s"
 }

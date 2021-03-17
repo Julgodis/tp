@@ -13,29 +13,22 @@
 // build JStage (JStage) True/False
 struct JStage;
 // build JStage (JStage) True/True
-// build JStage (JStage) True/True
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JStage (JStage) True/True
 /* top-level dependencies (begin JStage) */
-// outer dependency: JStage::TECameraView
 // outer dependency: JStage::TECameraProjection
-// outer dependency: JStage::TObject
+// outer dependency: JStage::TECameraView
 // outer dependency: Vec
+// outer dependency: JStage::TObject
 /* top-level dependencies (end JStage) */
 struct JStage {
 	// build TCamera (JStage::TCamera) False/False
 	/* dependencies (begin JStage::TCamera) */
-	// inner dependency: TECameraView (JStage::TECameraView) True False (for JStage::TCamera)
-	// build TECameraView (JStage::TECameraView) False/False
-	/* dependencies (begin JStage::TECameraView) */
-	/* dependencies (end JStage::TECameraView) */
-	struct TECameraView {
-	};
-
 	// inner dependency: TECameraProjection (JStage::TECameraProjection) True False (for JStage::TCamera)
 	// build TECameraProjection (JStage::TECameraProjection) False/False
 	/* dependencies (begin JStage::TECameraProjection) */
@@ -43,10 +36,17 @@ struct JStage {
 	struct TECameraProjection {
 	};
 
+	// inner dependency: TECameraView (JStage::TECameraView) True False (for JStage::TCamera)
+	// build TECameraView (JStage::TECameraView) False/False
+	/* dependencies (begin JStage::TECameraView) */
+	/* dependencies (end JStage::TECameraView) */
+	struct TECameraView {
+	};
+
 	/* dependencies (end JStage::TCamera) */
 	struct TCamera {
-		// JStage::TECameraView
 		// JStage::TECameraProjection
+		// JStage::TECameraView
 		// Vec
 		/* 80280BA0 */ ~TCamera();
 		/* 80280C00 */ s32 JSGFGetType() const;
@@ -91,6 +91,7 @@ struct JStage {
 		/* 80280E44 */ void JSGSetParent(JStage::TObject*, u32);
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
 		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
+		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
 };
@@ -132,7 +133,6 @@ SECTION_SDATA2 extern u8 JSGCamera__lit_319[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
 void operator delete(void*);
 
 extern "C" void __dt__Q26JStage7TObjectFv();

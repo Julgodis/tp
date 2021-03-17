@@ -10,24 +10,6 @@
 // 
 
 // build J3DJointTree (J3DJointTree) False/False
-// build J3DModelHierarchy (J3DModelHierarchy) False/False
-/* top-level dependencies (begin J3DModelHierarchy) */
-/* top-level dependencies (end J3DModelHierarchy) */
-struct J3DModelHierarchy {
-};
-
-// build J3DShapeTable (J3DShapeTable) False/False
-/* top-level dependencies (begin J3DShapeTable) */
-/* top-level dependencies (end J3DShapeTable) */
-struct J3DShapeTable {
-};
-
-// build J3DMaterialTable (J3DMaterialTable) False/False
-/* top-level dependencies (begin J3DMaterialTable) */
-/* top-level dependencies (end J3DMaterialTable) */
-struct J3DMaterialTable {
-};
-
 // build J3DJoint (J3DJoint) False/False
 /* top-level dependencies (begin J3DJoint) */
 /* top-level dependencies (end J3DJoint) */
@@ -36,20 +18,55 @@ struct J3DJoint {
 	/* 8032F3F8 */ void recursiveCalc();
 };
 
+// build J3DModelHierarchy (J3DModelHierarchy) False/False
+/* top-level dependencies (begin J3DModelHierarchy) */
+/* top-level dependencies (end J3DModelHierarchy) */
+struct J3DModelHierarchy {
+};
+
+// build J3DMaterialTable (J3DMaterialTable) False/False
+/* top-level dependencies (begin J3DMaterialTable) */
+/* top-level dependencies (end J3DMaterialTable) */
+struct J3DMaterialTable {
+};
+
+// build J3DShapeTable (J3DShapeTable) False/False
+/* top-level dependencies (begin J3DShapeTable) */
+/* top-level dependencies (end J3DShapeTable) */
+struct J3DShapeTable {
+};
+
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
+// build J3DMtxBuffer (J3DMtxBuffer) False/False
+/* top-level dependencies (begin J3DMtxBuffer) */
+/* top-level dependencies (end J3DMtxBuffer) */
+struct J3DMtxBuffer {
+};
+
 /* top-level dependencies (begin J3DJointTree) */
-// outer dependency: J3DModelHierarchy
-// outer dependency: J3DShapeTable
-// outer dependency: J3DMaterialTable
 // outer dependency: J3DJoint
+// outer dependency: J3DModelHierarchy
+// outer dependency: J3DMaterialTable
+// outer dependency: J3DShapeTable
+// outer dependency: Vec
+// outer dependency: J3DMtxBuffer
 /* top-level dependencies (end J3DJointTree) */
 struct J3DJointTree {
-	// J3DModelHierarchy
-	// J3DShapeTable
-	// J3DMaterialTable
 	// J3DJoint
+	// J3DModelHierarchy
+	// J3DMaterialTable
+	// J3DShapeTable
+	// J3DMtxBuffer
+	// Vec
 	/* 80325A18 */ J3DJointTree();
 	/* 80325A9C */ void makeHierarchy(J3DJoint*, J3DModelHierarchy const**, J3DMaterialTable*, J3DShapeTable*);
 	/* 80325C00 */ void findImportantMtxIndex();
+	/* 80325CAC */ void calc(J3DMtxBuffer*, Vec const&, f32 const (& )[3][4]);
 	/* 80325D24 */ ~J3DJointTree();
 };
 
@@ -57,13 +74,10 @@ struct J3DJointTree {
 // build J3DModelHierarchy (J3DModelHierarchy) True/True
 // build J3DMaterialTable (J3DMaterialTable) True/True
 // build J3DShapeTable (J3DShapeTable) True/True
+// build J3DMtxBuffer (J3DMtxBuffer) True/True
+// build Vec (Vec) True/True
 // build J3DMtxCalc (J3DMtxCalc) False/False
-// build J3DMtxBuffer (J3DMtxBuffer) False/False
-/* top-level dependencies (begin J3DMtxBuffer) */
-/* top-level dependencies (end J3DMtxBuffer) */
-struct J3DMtxBuffer {
-};
-
+// build J3DMtxBuffer (J3DMtxBuffer) True/True
 /* top-level dependencies (begin J3DMtxCalc) */
 // outer dependency: J3DMtxBuffer
 /* top-level dependencies (end J3DMtxCalc) */
@@ -72,7 +86,6 @@ struct J3DMtxCalc {
 	/* 80325D1C */ void setMtxBuffer(J3DMtxBuffer*);
 };
 
-// build J3DMtxBuffer (J3DMtxBuffer) True/True
 // build J3DDrawMtxData (J3DDrawMtxData) False/False
 /* top-level dependencies (begin J3DDrawMtxData) */
 /* top-level dependencies (end J3DDrawMtxData) */
@@ -85,12 +98,11 @@ struct J3DDrawMtxData {
 // Forward References:
 // 
 
-extern "C" static void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf();
 
 extern "C" void __ct__12J3DJointTreeFv();
 extern "C" void makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable();
 extern "C" void findImportantMtxIndex__12J3DJointTreeFv();
-extern "C" static void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf();
+extern "C" void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf();
 extern "C" void setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer();
 extern "C" void __dt__12J3DJointTreeFv();
 SECTION_DATA extern void*lit_871[19];
@@ -195,7 +207,7 @@ asm void J3DJointTree::findImportantMtxIndex() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf() {
+asm void J3DJointTree::calc(J3DMtxBuffer* field_0, Vec const& field_1, f32 const (& field_2)[3][4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphAnimator/J3DJointTree/calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf.s"
 }

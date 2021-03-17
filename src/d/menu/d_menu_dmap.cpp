@@ -15,7 +15,7 @@
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 	/* 802CE72C */ void getFreeSize();
 	/* 802CE784 */ void getTotalFreeSize();
@@ -51,8 +51,8 @@ struct dMenu_DmapBg_c {
 	/* 801B7F20 */ dMenu_DmapBg_c(JKRExpHeap*, STControl*);
 	/* 801B8110 */ void mapScreenInit();
 	/* 801B884C */ void mapScreenAnime();
-	/* 801B88F4 */ void mapIconScaleSet(char);
-	/* 801B893C */ void iconScaleAnmInit(f32, f32, char);
+	/* 801B88F4 */ void mapIconScaleSet(u8);
+	/* 801B893C */ void iconScaleAnmInit(f32, f32, u8);
 	/* 801B8954 */ void iconScaleAnm();
 	/* 801B8A0C */ void buttonIconScreenInit();
 	/* 801B8DE4 */ void setAButtonString(u32);
@@ -63,7 +63,7 @@ struct dMenu_DmapBg_c {
 	/* 801B9164 */ void deleteExplain();
 	/* 801B91DC */ void baseScreenInit();
 	/* 801B944C */ void setFloorMessage();
-	/* 801BA0B4 */ bool dpdMove(char, char, char, char*, char);
+	/* 801BA0B4 */ bool dpdMove(s8, s8, s8, u8*, u8);
 	/* 801BA0BC */ ~dMenu_DmapBg_c();
 	/* 801BA60C */ void setAllAlphaRate(f32, bool);
 	/* 801BA700 */ void setGoldAnimation(bool);
@@ -79,13 +79,20 @@ struct dMenu_DmapBg_c {
 // build JKRExpHeap (JKRExpHeap) True/True
 // build STControl (STControl) True/True
 // build dMenu_Dmap_c (dMenu_Dmap_c) False/False
-// build STControl (STControl) True/True
+// build CSTControl (CSTControl) False/False
+/* top-level dependencies (begin CSTControl) */
+/* top-level dependencies (end CSTControl) */
+struct CSTControl {
+};
+
 // build J2DOrthoGraph (J2DOrthoGraph) False/False
 /* top-level dependencies (begin J2DOrthoGraph) */
 /* top-level dependencies (end J2DOrthoGraph) */
 struct J2DOrthoGraph {
 };
 
+// build STControl (STControl) True/True
+// build JKRExpHeap (JKRExpHeap) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -112,30 +119,23 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build CSTControl (CSTControl) False/False
-/* top-level dependencies (begin CSTControl) */
-/* top-level dependencies (end CSTControl) */
-struct CSTControl {
-};
-
 /* top-level dependencies (begin dMenu_Dmap_c) */
-// outer dependency: STControl
-// outer dependency: J2DOrthoGraph
-// outer dependency: J2DScreen
-// outer dependency: JKRExpHeap
 // outer dependency: CSTControl
+// outer dependency: J2DOrthoGraph
+// outer dependency: STControl
+// outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end dMenu_Dmap_c) */
 struct dMenu_Dmap_c {
-	// J2DOrthoGraph
 	// CSTControl
-	// J2DScreen
+	// J2DOrthoGraph
 	// JKRExpHeap
+	// J2DScreen
 	// STControl
-	/* 801BB498 */ dMenu_Dmap_c(JKRExpHeap*, STControl*, CSTControl*, char, char);
+	/* 801BB498 */ dMenu_Dmap_c(JKRExpHeap*, STControl*, CSTControl*, u8, u8);
 	/* 801BB634 */ void screenInit();
-	/* 801BC788 */ void getPlayerIconPos(char, f32);
-	/* 801BC848 */ void getIconPos(char, f32);
+	/* 801BC788 */ void getPlayerIconPos(s8, f32);
+	/* 801BC848 */ void getIconPos(s8, f32);
 	/* 801BCDF4 */ ~dMenu_Dmap_c();
 	/* 801BD1D4 */ void getCurFloorPos();
 	/* 801BD1E8 */ void getDefaultCurFloorPos();
@@ -155,7 +155,7 @@ struct dMenu_Dmap_c {
 	/* 801BEAFC */ void itemInfo_init_proc();
 	/* 801BEB0C */ void itemInfo_proc();
 	/* 801BEB44 */ void itemSelect();
-	/* 801BEF28 */ void getNextItem(s32);
+	/* 801BEF28 */ void getNextItem(int);
 	/* 801BEFCC */ void itemSelectAnmInit();
 	/* 801BF030 */ void itemSelectAnm();
 	/* 801BF180 */ void itemInfoOpenAnm();
@@ -208,7 +208,7 @@ struct ResTIMG {
 struct J2DPicture {
 	// ResTIMG
 	/* 801BDD40 */ void append(ResTIMG const*, f32);
-	/* 801BDD70 */ void insert(ResTIMG const*, char, f32);
+	/* 801BDD70 */ void insert(ResTIMG const*, u8, f32);
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
@@ -231,20 +231,20 @@ struct dMenu_StageMapCtrl_c {
 	/* 801C0F3C */ void getPixelStageSizeZ() const;
 	/* 801C0F54 */ void getPixelCenterX() const;
 	/* 801C0F74 */ void getPixelCenterZ() const;
-	/* 801C0F94 */ void initGetTreasureList(char, char);
-	/* 801C0FF8 */ void getTreasureList(f32*, f32*, char*, char*, char*);
+	/* 801C0F94 */ void initGetTreasureList(u8, s8);
+	/* 801C0FF8 */ void getTreasureList(f32*, f32*, s8*, u8*, s8*);
 	/* 801C1194 */ void getPlayerDrawInfo(f32*, f32*, s16*) const;
 	/* 801C1218 */ void getRestartDrawInfo(f32*, f32*, s16*) const;
-	/* 801C12A8 */ void setPlusNowStayFloorNo(char, char);
-	/* 801C1C40 */ void initZoomIn(char);
-	/* 801C1CEC */ void initZoomIn(char, f32, f32);
-	/* 801C1E00 */ void initZoomInCenterHold(char);
-	/* 801C1F2C */ void initZoomOut(char);
+	/* 801C12A8 */ void setPlusNowStayFloorNo(s8, u8);
+	/* 801C1C40 */ void initZoomIn(u8);
+	/* 801C1CEC */ void initZoomIn(u8, f32, f32);
+	/* 801C1E00 */ void initZoomInCenterHold(u8);
+	/* 801C1F2C */ void initZoomOut(u8);
 	/* 801C1F70 */ void initZoomWait(f32, f32);
 	/* 801C2234 */ void move();
 	/* 801C22F8 */ void getPlayerStayFloorNo() const;
 	/* 801C231C */ void _create(u16, u16, u16, u16, void*);
-	/* 801C235C */ void _create(u16, u16, u16, u16, char, void*);
+	/* 801C235C */ void _create(u16, u16, u16, u16, s8, void*);
 	/* 801C2518 */ void _delete();
 	/* 801C2538 */ void isEnableZoomIn();
 	/* 801C2578 */ void isEnableZoomOut();
@@ -267,15 +267,15 @@ struct dMenu_DmapMap_c {
 /* top-level dependencies (end mDoDvdThd_mountArchive_c) */
 struct mDoDvdThd_mountArchive_c {
 	// JKRHeap
-	/* 80015E14 */ void create(char const*, char, JKRHeap*);
+	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
 // build dSv_memBit_c (dSv_memBit_c) False/False
 /* top-level dependencies (begin dSv_memBit_c) */
 /* top-level dependencies (end dSv_memBit_c) */
 struct dSv_memBit_c {
-	/* 80034860 */ void isSwitch(s32) const;
-	/* 80034934 */ void isDungeonItem(s32) const;
+	/* 80034860 */ void isSwitch(int) const;
+	/* 80034934 */ void isDungeonItem(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -289,7 +289,7 @@ struct dSv_event_c {
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build dDlst_list_c (dDlst_list_c) False/False
@@ -312,11 +312,10 @@ struct dDlst_list_c {
 /* top-level dependencies (begin dTres_c) */
 /* top-level dependencies (end dTres_c) */
 struct dTres_c {
-	/* 8009C27C */ void getBossIconFloorNo(s32*);
+	/* 8009C27C */ void getBossIconFloorNo(int*);
 };
 
 // build dSelect_cursor_c (dSelect_cursor_c) False/False
-// build JKRArchive (JKRArchive) True/True
 // build J2DPane (J2DPane) False/False
 // build J2DBasePosition (J2DBasePosition) False/False
 /* top-level dependencies (begin J2DBasePosition) */
@@ -333,14 +332,15 @@ struct J2DPane {
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 };
 
+// build JKRArchive (JKRArchive) True/True
 /* top-level dependencies (begin dSelect_cursor_c) */
-// outer dependency: JKRArchive
 // outer dependency: J2DPane
+// outer dependency: JKRArchive
 /* top-level dependencies (end dSelect_cursor_c) */
 struct dSelect_cursor_c {
-	// JKRArchive
 	// J2DPane
-	/* 80194220 */ dSelect_cursor_c(char, f32, JKRArchive*);
+	// JKRArchive
+	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801952A0 */ void setAlphaRate(f32);
@@ -359,39 +359,39 @@ struct dMenuMapCommon_c {
 	/* 801C27B4 */ ~dMenuMapCommon_c();
 	/* 801C28D8 */ void initiate(JKRArchive*);
 	/* 801C38E4 */ void drawIcon(f32, f32, f32, f32);
-	/* 801C3EC4 */ void iconScale(s32, f32, f32, f32);
-	/* 801C43A8 */ void setIconInfo(char, f32, f32, f32, f32, f32, char);
+	/* 801C3EC4 */ void iconScale(int, f32, f32, f32);
+	/* 801C43A8 */ void setIconInfo(u8, f32, f32, f32, f32, f32, u8);
 	/* 801C443C */ void clearIconInfo();
 };
 
 // build dMenu_ItemExplain_c (dMenu_ItemExplain_c) False/False
 // build J2DOrthoGraph (J2DOrthoGraph) True/True
-// build JKRArchive (JKRArchive) True/True
 // build JKRExpHeap (JKRExpHeap) True/True
+// build JKRArchive (JKRArchive) True/True
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_ItemExplain_c) */
 // outer dependency: J2DOrthoGraph
-// outer dependency: JKRArchive
 // outer dependency: JKRExpHeap
+// outer dependency: JKRArchive
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_ItemExplain_c) */
 struct dMenu_ItemExplain_c {
 	// J2DOrthoGraph
-	// JKRArchive
 	// JKRExpHeap
+	// JKRArchive
 	// STControl
 	/* 801DA754 */ dMenu_ItemExplain_c(JKRExpHeap*, JKRArchive*, STControl*, bool);
 	/* 801DB470 */ void move();
 	/* 801DB514 */ void draw(J2DOrthoGraph*);
-	/* 801DC3C8 */ void openExplainDmap(char, char, char, bool, char);
+	/* 801DC3C8 */ void openExplainDmap(u8, u8, u8, bool, u8);
 };
 
 // build dMeterHaihai_c (dMeterHaihai_c) False/False
 /* top-level dependencies (begin dMeterHaihai_c) */
 /* top-level dependencies (end dMeterHaihai_c) */
 struct dMeterHaihai_c {
-	/* 8020AE8C */ dMeterHaihai_c(char);
-	/* 8020B814 */ void drawHaihai(char, f32, f32, f32, f32);
+	/* 8020AE8C */ dMeterHaihai_c(u8);
+	/* 8020B814 */ void drawHaihai(u8, f32, f32, f32, f32);
 	/* 8020BC20 */ void setScale(f32);
 };
 
@@ -412,7 +412,7 @@ struct dMeter2Info_c {
 	// J2DPicture
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
-	/* 8021CF08 */ void readItemTexture(char, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, s32);
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
 // build JMSMesgEntry_c (JMSMesgEntry_c) True/True
@@ -447,86 +447,87 @@ struct dMsgFlow_c {
 	// fopAc_ac_c
 	/* 80249F00 */ dMsgFlow_c();
 	/* 80249F48 */ ~dMsgFlow_c();
-	/* 80249F90 */ void init(fopAc_ac_c*, s32, s32, fopAc_ac_c**);
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, s32);
+	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
 // build fopAc_ac_c (fopAc_ac_c) True/True
 // build CPaneMgr (CPaneMgr) False/False
-// build J2DScreen (J2DScreen) True/True
 // build JKRExpHeap (JKRExpHeap) True/True
 // build J2DPane (J2DPane) True/True
+// build J2DScreen (J2DScreen) True/True
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
+	// J2DScreen
 	/* 80253930 */ CPaneMgr();
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253A18 */ ~CPaneMgr();
 	/* 802545B0 */ void paneTrans(f32, f32);
-	/* 802547CC */ void scaleAnime(s16, f32, f32, char);
+	/* 802547CC */ void scaleAnime(s16, f32, f32, u8);
+	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
 // build CPaneMgrAlpha (CPaneMgrAlpha) False/False
-// build J2DScreen (J2DScreen) True/True
 // build JKRExpHeap (JKRExpHeap) True/True
+// build J2DScreen (J2DScreen) True/True
 /* top-level dependencies (begin CPaneMgrAlpha) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgrAlpha) */
 struct CPaneMgrAlpha {
-	// J2DScreen
 	// JKRExpHeap
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255878 */ void alphaAnime(s16, char, char, char);
+	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
 // build CPaneMgrAlphaMorf (CPaneMgrAlphaMorf) False/False
-// build J2DScreen (J2DScreen) True/True
 // build JKRExpHeap (JKRExpHeap) True/True
+// build J2DScreen (J2DScreen) True/True
 /* top-level dependencies (begin CPaneMgrAlphaMorf) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgrAlphaMorf) */
 struct CPaneMgrAlphaMorf {
-	// J2DScreen
 	// JKRExpHeap
-	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255DD0 */ void setBackupAlpha();
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -545,6 +546,7 @@ struct JKRFileLoader {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
@@ -744,20 +746,18 @@ void mDoExt_destroyExpHeap(JKRExpHeap*);
 void mDoExt_setCurrentHeap(JKRHeap*);
 void mDoExt_getMesgFont();
 void mDoExt_getSubFont();
-void fopMsgM_valueIncrease(s32, s32, char);
+void fopMsgM_valueIncrease(int, int, u8);
 void dComIfGp_isLightDropMapVisible();
-void checkItemGet(char, s32);
+void checkItemGet(u8, int);
 void dMw_LEFT_TRIGGER();
 void dMw_RIGHT_TRIGGER();
 void dMw_B_TRIGGER();
-void dMeter2Info_getNumberTextureName(s32);
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+void dMeter2Info_getNumberTextureName(int);
 void dPaneClass_showNullPane(J2DScreen*);
 void cLib_addCalc2(f32*, f32, f32, f32);
 void* operator new(u32);
 void operator delete(void*);
 extern "C" void func_802E90C0();
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void GXGetScissor();
 extern "C" void __destroy_arr();
 extern "C" void __construct_array();
@@ -1410,7 +1410,7 @@ asm void dMenu_DmapBg_c::mapScreenAnime() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_DmapBg_c::mapIconScaleSet(char field_0) {
+asm void dMenu_DmapBg_c::mapIconScaleSet(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/mapIconScaleSet__14dMenu_DmapBg_cFUc.s"
 }
@@ -1421,7 +1421,7 @@ asm void dMenu_DmapBg_c::mapIconScaleSet(char field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_DmapBg_c::iconScaleAnmInit(f32 field_0, f32 field_1, char field_2) {
+asm void dMenu_DmapBg_c::iconScaleAnmInit(f32 field_0, f32 field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/iconScaleAnmInit__14dMenu_DmapBg_cFffUc.s"
 }
@@ -1576,7 +1576,7 @@ asm void dMenu_DmapBg_c::setFloorMessage() {
 
 
 /* 801BA0B4-801BA0BC 0008+00 rc=1 efc=0 .text      dpdMove__14dMenu_DmapBg_cFScScScPUcUc                        */
-bool dMenu_DmapBg_c::dpdMove(char field_0, char field_1, char field_2, char* field_3, char field_4) {
+bool dMenu_DmapBg_c::dpdMove(s8 field_0, s8 field_1, s8 field_2, u8* field_3, u8 field_4) {
 	return false;
 }
 
@@ -1724,7 +1724,7 @@ f32 lit_4927 = -448.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm dMenu_Dmap_c::dMenu_Dmap_c(JKRExpHeap* field_0, STControl* field_1, CSTControl* field_2, char field_3, char field_4) {
+asm dMenu_Dmap_c::dMenu_Dmap_c(JKRExpHeap* field_0, STControl* field_1, CSTControl* field_2, u8 field_3, u8 field_4) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/__ct__12dMenu_Dmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUc.s"
 }
@@ -1754,7 +1754,7 @@ f32 lit_5288 = 0.0054931640625f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Dmap_c::getPlayerIconPos(char field_0, f32 field_1) {
+asm void dMenu_Dmap_c::getPlayerIconPos(s8 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/getPlayerIconPos__12dMenu_Dmap_cFScf.s"
 }
@@ -1765,7 +1765,7 @@ asm void dMenu_Dmap_c::getPlayerIconPos(char field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Dmap_c::getIconPos(char field_0, f32 field_1) {
+asm void dMenu_Dmap_c::getIconPos(s8 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/getIconPos__12dMenu_Dmap_cFScf.s"
 }
@@ -1897,7 +1897,7 @@ asm void J2DPicture::append(ResTIMG const* field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DPicture::insert(ResTIMG const* field_0, char field_1, f32 field_2) {
+asm void J2DPicture::insert(ResTIMG const* field_0, u8 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/insert__10J2DPictureFPC7ResTIMGUcf.s"
 }
@@ -2029,7 +2029,7 @@ asm void dMenu_Dmap_c::itemSelect() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Dmap_c::getNextItem(s32 field_0) {
+asm void dMenu_Dmap_c::getNextItem(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_dmap/getNextItem__12dMenu_Dmap_cFi.s"
 }

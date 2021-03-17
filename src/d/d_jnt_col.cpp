@@ -10,7 +10,6 @@
 // 
 
 // build dJntCol_c (dJntCol_c) False/False
-// build cM3dGLin (cM3dGLin) False/False
 // build cXyz (cXyz) False/False
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
@@ -32,6 +31,14 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
+// build J3DModel (J3DModel) False/False
+/* top-level dependencies (begin J3DModel) */
+/* top-level dependencies (end J3DModel) */
+struct J3DModel {
+};
+
+// build cM3dGLin (cM3dGLin) False/False
+// build cXyz (cXyz) True/True
 /* top-level dependencies (begin cM3dGLin) */
 // outer dependency: cXyz
 /* top-level dependencies (end cM3dGLin) */
@@ -53,13 +60,6 @@ struct csXyz {
 struct fopAc_ac_c {
 };
 
-// build cXyz (cXyz) True/True
-// build J3DModel (J3DModel) False/False
-/* top-level dependencies (begin J3DModel) */
-/* top-level dependencies (end J3DModel) */
-struct J3DModel {
-};
-
 // build dJntColData_c (dJntColData_c) False/False
 /* top-level dependencies (begin dJntColData_c) */
 /* top-level dependencies (end dJntColData_c) */
@@ -67,27 +67,27 @@ struct dJntColData_c {
 };
 
 /* top-level dependencies (begin dJntCol_c) */
+// outer dependency: cXyz
+// outer dependency: J3DModel
 // outer dependency: cM3dGLin
 // outer dependency: csXyz
 // outer dependency: fopAc_ac_c
-// outer dependency: cXyz
-// outer dependency: J3DModel
 // outer dependency: dJntColData_c
 /* top-level dependencies (end dJntCol_c) */
 struct dJntCol_c {
-	// cM3dGLin
-	// csXyz
-	// fopAc_ac_c
-	// dJntColData_c
-	// cXyz
 	// J3DModel
+	// cM3dGLin
+	// dJntColData_c
+	// csXyz
+	// cXyz
+	// fopAc_ac_c
 	/* 80035C8C */ dJntCol_c();
-	/* 80035CA0 */ void init(fopAc_ac_c*, dJntColData_c const*, J3DModel*, s32);
+	/* 80035CA0 */ void init(fopAc_ac_c*, dJntColData_c const*, J3DModel*, int);
 	/* 80035CC8 */ void setNowLine(cM3dGLin*, cXyz const*, csXyz const*, cXyz*);
-	/* 80035DC8 */ void searchNearPos(cM3dGLin const*, cXyz const*, cXyz*, s32) const;
+	/* 80035DC8 */ void searchNearPos(cM3dGLin const*, cXyz const*, cXyz*, int) const;
 	/* 80036AEC */ void getArrowOffsetPosAndAngle(cXyz const*, csXyz const*, cXyz*, cXyz*) const;
-	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, s32) const;
-	/* 80036FA8 */ void setArrowPosAndAngle(cXyz const*, cXyz const*, s32, cXyz*, csXyz*);
+	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, int) const;
+	/* 80036FA8 */ void setArrowPosAndAngle(cXyz const*, cXyz const*, int, cXyz*, csXyz*);
 };
 
 // build fopAc_ac_c (fopAc_ac_c) True/True
@@ -178,8 +178,8 @@ SECTION_SDATA2 extern f32 d_d_jnt_col__lit_4149;
 // External References:
 // 
 
-extern "C" void mDoMtx_XrotM__FPA4_fs();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
 void cM_atan2s(f32, f32);
 void cM3d_SignedLenPlaAndPos(cM3dGPla const*, Vec const*);
 void cM3d_Cross_LinPla(cM3dGLin const*, cM3dGPla const*, Vec*, bool, bool);
@@ -270,7 +270,7 @@ asm dJntCol_c::dJntCol_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dJntCol_c::init(fopAc_ac_c* field_0, dJntColData_c const* field_1, J3DModel* field_2, s32 field_3) {
+asm void dJntCol_c::init(fopAc_ac_c* field_0, dJntColData_c const* field_1, J3DModel* field_2, int field_3) {
 	nofralloc
 #include "asm/d/d_jnt_col/init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli.s"
 }
@@ -344,7 +344,7 @@ f32 d_d_jnt_col__lit_4149 = 1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dJntCol_c::searchNearPos(cM3dGLin const* field_0, cXyz const* field_1, cXyz* field_2, s32 field_3) const {
+asm void dJntCol_c::searchNearPos(cM3dGLin const* field_0, cXyz const* field_1, cXyz* field_2, int field_3) const {
 	nofralloc
 #include "asm/d/d_jnt_col/searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi.s"
 }
@@ -388,7 +388,7 @@ asm void dJntCol_c::getArrowOffsetPosAndAngle(cXyz const* field_0, csXyz const* 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dJntCol_c::getHitmarkPosAndAngle(cXyz const* field_0, csXyz const* field_1, cXyz* field_2, csXyz* field_3, s32 field_4) const {
+asm void dJntCol_c::getHitmarkPosAndAngle(cXyz const* field_0, csXyz const* field_1, cXyz* field_2, csXyz* field_3, int field_4) const {
 	nofralloc
 #include "asm/d/d_jnt_col/getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi.s"
 }
@@ -399,7 +399,7 @@ asm void dJntCol_c::getHitmarkPosAndAngle(cXyz const* field_0, csXyz const* fiel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dJntCol_c::setArrowPosAndAngle(cXyz const* field_0, cXyz const* field_1, s32 field_2, cXyz* field_3, csXyz* field_4) {
+asm void dJntCol_c::setArrowPosAndAngle(cXyz const* field_0, cXyz const* field_1, int field_2, cXyz* field_3, csXyz* field_4) {
 	nofralloc
 #include "asm/d/d_jnt_col/setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz.s"
 }

@@ -32,18 +32,18 @@ struct dDrawPath_c;
 // build dDrawPath_c (dDrawPath_c) True/True
 // build dDrawPath_c (dDrawPath_c) True/True
 /* top-level dependencies (begin dDrawPath_c) */
+// outer dependency: dDrawPath_c::group_class
+// outer dependency: dDrawPath_c::poly_class
 // outer dependency: dDrawPath_c::line_class
 // outer dependency: dDrawPath_c::room_class
-// outer dependency: dDrawPath_c::poly_class
-// outer dependency: dDrawPath_c::group_class
 // outer dependency: dDrawPath_c::floor_class
 /* top-level dependencies (end dDrawPath_c) */
 struct dDrawPath_c {
+	// dDrawPath_c::floor_class
+	// dDrawPath_c::poly_class
+	// dDrawPath_c::group_class
 	// dDrawPath_c::line_class
 	// dDrawPath_c::room_class
-	// dDrawPath_c::group_class
-	// dDrawPath_c::poly_class
-	// dDrawPath_c::floor_class
 	// build line_class (dDrawPath_c::line_class) False/False
 	/* dependencies (begin dDrawPath_c::line_class) */
 	/* dependencies (end dDrawPath_c::line_class) */
@@ -74,9 +74,9 @@ struct dDrawPath_c {
 	struct room_class {
 	};
 
-	/* 8002ABF0 */ bool isDrawType(s32);
+	/* 8002ABF0 */ bool isDrawType(int);
 	/* 8002AD3C */ ~dDrawPath_c();
-	/* 8002AD84 */ void getLineColor(s32, s32);
+	/* 8002AD84 */ void getLineColor(int, int);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
 	/* 8003CB00 */ void rendering(dDrawPath_c::group_class const*);
@@ -97,7 +97,7 @@ struct ResTIMG {
 /* top-level dependencies (end dRenderingMap_c) */
 struct dRenderingMap_c {
 	// ResTIMG
-	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, char*, char*, u16) const;
+	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, u8*, u8*, u16) const;
 	/* 8003CDAC */ void renderingMap();
 };
 
@@ -116,8 +116,8 @@ struct dRenderingFDAmap_c {
 	/* 8003D188 */ void preRenderingMap();
 	/* 8003D320 */ void postRenderingMap();
 	/* 8003D3C0 */ void renderingDecoration(dDrawPath_c::line_class const*);
-	/* 8003D68C */ void getDecoLineColor(s32, s32);
-	/* 8003D6B8 */ void getDecorationLineWidth(s32);
+	/* 8003D68C */ void getDecoLineColor(int, int);
+	/* 8003D6B8 */ void getDecorationLineWidth(int);
 };
 
 // build _GXTexObj (_GXTexObj) False/False
@@ -151,7 +151,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, s32);
+	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -420,7 +420,7 @@ asm void dDrawPath_c::drawPath() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRenderingMap_c::makeResTIMG(ResTIMG* field_0, u16 field_1, u16 field_2, char* field_3, char* field_4, u16 field_5) const {
+asm void dRenderingMap_c::makeResTIMG(ResTIMG* field_0, u16 field_1, u16 field_2, u8* field_3, u8* field_4, u16 field_5) const {
 	nofralloc
 #include "asm/d/map/d_map_path/makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs.s"
 }
@@ -534,7 +534,7 @@ asm void dRenderingFDAmap_c::renderingDecoration(dDrawPath_c::line_class const* 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRenderingFDAmap_c::getDecoLineColor(s32 field_0, s32 field_1) {
+asm void dRenderingFDAmap_c::getDecoLineColor(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/map/d_map_path/getDecoLineColor__18dRenderingFDAmap_cFii.s"
 }
@@ -545,7 +545,7 @@ asm void dRenderingFDAmap_c::getDecoLineColor(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dRenderingFDAmap_c::getDecorationLineWidth(s32 field_0) {
+asm void dRenderingFDAmap_c::getDecorationLineWidth(int field_0) {
 	nofralloc
 #include "asm/d/map/d_map_path/getDecorationLineWidth__18dRenderingFDAmap_cFi.s"
 }

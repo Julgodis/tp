@@ -10,10 +10,10 @@
 // 
 
 // build dMdl_c (dMdl_c) False/False
-// build dMdl_obj_c (dMdl_obj_c) False/False
-/* top-level dependencies (begin dMdl_obj_c) */
-/* top-level dependencies (end dMdl_obj_c) */
-struct dMdl_obj_c {
+// build dKy_tevstr_c (dKy_tevstr_c) False/False
+/* top-level dependencies (begin dKy_tevstr_c) */
+/* top-level dependencies (end dKy_tevstr_c) */
+struct dKy_tevstr_c {
 };
 
 // build J3DModelData (J3DModelData) False/False
@@ -22,21 +22,21 @@ struct dMdl_obj_c {
 struct J3DModelData {
 };
 
-// build dKy_tevstr_c (dKy_tevstr_c) False/False
-/* top-level dependencies (begin dKy_tevstr_c) */
-/* top-level dependencies (end dKy_tevstr_c) */
-struct dKy_tevstr_c {
+// build dMdl_obj_c (dMdl_obj_c) False/False
+/* top-level dependencies (begin dMdl_obj_c) */
+/* top-level dependencies (end dMdl_obj_c) */
+struct dMdl_obj_c {
 };
 
 /* top-level dependencies (begin dMdl_c) */
-// outer dependency: dMdl_obj_c
-// outer dependency: J3DModelData
 // outer dependency: dKy_tevstr_c
+// outer dependency: J3DModelData
+// outer dependency: dMdl_obj_c
 /* top-level dependencies (end dMdl_c) */
 struct dMdl_c {
-	// dMdl_obj_c
-	// J3DModelData
 	// dKy_tevstr_c
+	// J3DModelData
+	// dMdl_obj_c
 	/* 8009C4FC */ void draw();
 	/* 8009C650 */ void create(J3DModelData*, u16, dKy_tevstr_c*);
 	/* 8009C668 */ void entryObj(dMdl_obj_c*);
@@ -48,21 +48,21 @@ struct dMdl_c {
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
 // build dMdl_obj_c (dMdl_obj_c) True/True
 // build dMdl_mng_c (dMdl_mng_c) False/False
-// build J3DModelData (J3DModelData) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
+// build J3DModelData (J3DModelData) True/True
 /* top-level dependencies (begin dMdl_mng_c) */
-// outer dependency: J3DModelData
 // outer dependency: dKy_tevstr_c
+// outer dependency: J3DModelData
 /* top-level dependencies (end dMdl_mng_c) */
 struct dMdl_mng_c {
-	// J3DModelData
 	// dKy_tevstr_c
+	// J3DModelData
 	/* 8009C6DC */ void search(J3DModelData*, u16, dKy_tevstr_c*);
 	/* 8009C724 */ void entry(J3DModelData*, u16, dKy_tevstr_c*);
 	/* 8009C7AC */ void create();
 	/* 8009C864 */ void remove();
 	/* 8009C8C0 */ void reset();
-	/* 8009C8D8 */ void entry(J3DModelData*, u16, s32);
+	/* 8009C8D8 */ void entry(J3DModelData*, u16, int);
 };
 
 // build J3DPacket (J3DPacket) False/False
@@ -287,7 +287,7 @@ asm void dMdl_mng_c::reset() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMdl_mng_c::entry(J3DModelData* field_0, u16 field_1, s32 field_2) {
+asm void dMdl_mng_c::entry(J3DModelData* field_0, u16 field_1, int field_2) {
 	nofralloc
 #include "asm/d/d_model/entry__10dMdl_mng_cFP12J3DModelDataUsi.s"
 }

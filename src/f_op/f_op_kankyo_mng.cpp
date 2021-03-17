@@ -16,10 +16,11 @@ struct cXyz {
 };
 
 // build dPa_control_c (dPa_control_c) False/False
-// build csXyz (csXyz) False/False
-/* top-level dependencies (begin csXyz) */
-/* top-level dependencies (end csXyz) */
-struct csXyz {
+// build cXyz (cXyz) True/True
+// build _GXColor (_GXColor) False/False
+/* top-level dependencies (begin _GXColor) */
+/* top-level dependencies (end _GXColor) */
+struct _GXColor {
 };
 
 // build dPa_levelEcallBack (dPa_levelEcallBack) False/False
@@ -28,33 +29,32 @@ struct csXyz {
 struct dPa_levelEcallBack {
 };
 
-// build _GXColor (_GXColor) False/False
-/* top-level dependencies (begin _GXColor) */
-/* top-level dependencies (end _GXColor) */
-struct _GXColor {
-};
-
-// build cXyz (cXyz) True/True
 // build dKy_tevstr_c (dKy_tevstr_c) False/False
 /* top-level dependencies (begin dKy_tevstr_c) */
 /* top-level dependencies (end dKy_tevstr_c) */
 struct dKy_tevstr_c {
 };
 
+// build csXyz (csXyz) False/False
+/* top-level dependencies (begin csXyz) */
+/* top-level dependencies (end csXyz) */
+struct csXyz {
+};
+
 /* top-level dependencies (begin dPa_control_c) */
-// outer dependency: csXyz
-// outer dependency: dPa_levelEcallBack
-// outer dependency: _GXColor
 // outer dependency: cXyz
+// outer dependency: _GXColor
+// outer dependency: dPa_levelEcallBack
 // outer dependency: dKy_tevstr_c
+// outer dependency: csXyz
 /* top-level dependencies (end dPa_control_c) */
 struct dPa_control_c {
-	// csXyz
-	// _GXColor
 	// dPa_levelEcallBack
-	// cXyz
 	// dKy_tevstr_c
-	/* 8004CA90 */ void set(char, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, char, dPa_levelEcallBack*, char, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	// csXyz
+	// cXyz
+	// _GXColor
+	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
 // build dKy_tevstr_c (dKy_tevstr_c) True/True
@@ -65,7 +65,7 @@ struct dPa_control_c {
 /* top-level dependencies (begin cMl) */
 /* top-level dependencies (end cMl) */
 struct cMl {
-	/* 80263228 */ void memalignB(s32, u32);
+	/* 80263228 */ void memalignB(int, u32);
 };
 
 // 
@@ -73,12 +73,12 @@ struct cMl {
 // 
 
 static void fopKyM_CreateAppend();
-static void createAppend(s32, cXyz*, cXyz*);
+static void createAppend(int, cXyz*, cXyz*);
 void fopKyM_Delete(void*);
 extern "C" static void fopKyM_Create__FsPFPv_iPv();
 extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i();
 extern "C" void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i();
-void fopKyM_createWpillar(cXyz const*, f32, s32);
+void fopKyM_createWpillar(cXyz const*, f32, int);
 void fopKyM_createMpillar(cXyz const*, f32);
 
 extern "C" static void fopKyM_CreateAppend__Fv();
@@ -100,7 +100,7 @@ void fpcLy_CurrentLayer();
 void fpcM_Delete(void*);
 extern "C" void fpcM_FastCreate__FsPFPv_iPvPv();
 extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-void cLib_memSet(void*, s32, u32);
+void cLib_memSet(void*, int, u32);
 extern "C" void _savegpr_28();
 extern "C" void _savegpr_29();
 extern "C" void _restgpr_28();
@@ -143,7 +143,7 @@ asm static void fopKyM_CreateAppend() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void createAppend(s32 field_0, cXyz* field_1, cXyz* field_2) {
+asm static void createAppend(int field_0, cXyz* field_1, cXyz* field_2) {
 	nofralloc
 #include "asm/f_op/f_op_kankyo_mng/createAppend__FiP4cXyzP4cXyz.s"
 }
@@ -198,7 +198,7 @@ extern "C" asm void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopKyM_createWpillar(cXyz const* field_0, f32 field_1, s32 field_2) {
+asm void fopKyM_createWpillar(cXyz const* field_0, f32 field_1, int field_2) {
 	nofralloc
 #include "asm/f_op/f_op_kankyo_mng/fopKyM_createWpillar__FPC4cXyzfi.s"
 }

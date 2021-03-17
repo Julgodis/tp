@@ -25,13 +25,13 @@ struct create_tag {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
-	/* 800243B0 */ void getMemoryBlock(s32);
-	/* 8002490C */ void setArcBank(s32, char const*);
-	/* 80024940 */ void getArcBank(s32);
-	/* 80024954 */ void resetArchiveBank(s32);
-	/* 8002D9B0 */ void getZoneNo(s32);
-	/* 8025BAAC */ void setZoneNo(s32, s32);
+	/* 80024384 */ void getStatusRoomDt(int);
+	/* 800243B0 */ void getMemoryBlock(int);
+	/* 8002490C */ void setArcBank(int, char const*);
+	/* 80024940 */ void getArcBank(int);
+	/* 80024954 */ void resetArchiveBank(int);
+	/* 8002D9B0 */ void getZoneNo(int);
+	/* 8025BAAC */ void setZoneNo(int, int);
 };
 
 // build scene_class (scene_class) False/False
@@ -69,7 +69,7 @@ struct dStage_dt_c {
 /* top-level dependencies (begin dComIfG_play_c) */
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 // build dSv_zoneBit_c (dSv_zoneBit_c) False/False
@@ -84,28 +84,28 @@ struct dSv_zoneBit_c {
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 800351A4 */ void createZone(s32);
+	/* 800351A4 */ void createZone(int);
 };
 
 // build dRes_control_c (dRes_control_c) False/False
-// build JKRHeap (JKRHeap) True/True
 // build dRes_info_c (dRes_info_c) False/False
 /* top-level dependencies (begin dRes_info_c) */
 /* top-level dependencies (end dRes_info_c) */
 struct dRes_info_c {
 };
 
+// build JKRHeap (JKRHeap) True/True
 /* top-level dependencies (begin dRes_control_c) */
-// outer dependency: JKRHeap
 // outer dependency: dRes_info_c
+// outer dependency: JKRHeap
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
-	// JKRHeap
 	// dRes_info_c
-	/* 8003C078 */ void setRes(char const*, dRes_info_c*, s32, char const*, char, JKRHeap*);
-	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, s32);
-	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, s32);
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
+	// JKRHeap
+	/* 8003C078 */ void setRes(char const*, dRes_info_c*, int, char const*, u8, JKRHeap*);
+	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, int);
+	/* 8003C194 */ void deleteRes(char const*, dRes_info_c*, int);
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 	/* 8003C5BC */ void setStageRes(char const*, JKRHeap*);
 };
 
@@ -115,8 +115,8 @@ struct dRes_control_c {
 /* top-level dependencies (end dEvent_manager_c) */
 struct dEvent_manager_c {
 	/* 80046888 */ void demoInit();
-	/* 80046904 */ void roomInit(s32);
-	/* 800469EC */ void roomFinish(s32);
+	/* 80046904 */ void roomInit(int);
+	/* 800469EC */ void roomFinish(int);
 };
 
 // build dPa_control_c (dPa_control_c) False/False
@@ -144,18 +144,18 @@ struct JKRExpHeap {
 // 
 
 static bool dScnRoom_Draw(room_of_scene_class*);
-static void getResetArchiveBank(s32, char const**);
-static void resetArchiveBank(s32);
-static void setArchiveBank(s32);
+static void getResetArchiveBank(int, u8 const**);
+static void resetArchiveBank(int);
+static void setArchiveBank(int);
 static void objectDeleteJugge(void*, void*);
 static void deleteJugge(void*, void*);
-static void isCreatingCallback(create_tag*, s32*);
-static void isCreating(s32);
-static void loadDemoArchive(s32);
+static void isCreatingCallback(create_tag*, u32*);
+static void isCreating(u32);
+static void loadDemoArchive(int);
 static void objectSetCheck(room_of_scene_class*);
 static void dScnRoom_Execute(room_of_scene_class*);
 static bool dScnRoom_IsDelete(room_of_scene_class*);
-static void isReadRoom(s32);
+static void isReadRoom(int);
 static void dScnRoom_Delete(room_of_scene_class*);
 static void phase_0(room_of_scene_class*);
 static void phase_1(room_of_scene_class*);
@@ -198,16 +198,16 @@ extern "C" void OSReport_Error();
 void mDoExt_getArchiveHeap();
 void mDoExt_setCurrentHeap(JKRHeap*);
 void fopAc_IsActor(void*);
-void fopAcM_create(s16, u32, cXyz const*, s32, csXyz const*, cXyz const*, char);
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
 void fopScnM_DeleteReq(scene_class*);
-void fpcBs_Is_JustOfType(s32, s32);
+void fpcBs_Is_JustOfType(int, int);
 extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv();
 extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv();
 void fpcM_Delete(void*);
-void dStage_dt_c_roomLoader(void*, dStage_dt_c*, s32);
-void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, s32);
-void dComIfG_getRoomArcName(s32);
-void dComIfGp_ret_wp_set(char);
+void dStage_dt_c_roomLoader(void*, dStage_dt_c*, int);
+void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, int);
+void dComIfG_getRoomArcName(int);
+void dComIfGp_ret_wp_set(s8);
 extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
 extern "C" void _savegpr_25();
 extern "C" void _savegpr_27();
@@ -310,7 +310,7 @@ SECTION_DEAD char* const pad_8039A3D3 = "\0\0\0\0";
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void getResetArchiveBank(s32 field_0, char const** field_1) {
+asm static void getResetArchiveBank(int field_0, u8 const** field_1) {
 	nofralloc
 #include "asm/d/s/d_s_room/getResetArchiveBank__FiPPCUc.s"
 }
@@ -321,7 +321,7 @@ asm static void getResetArchiveBank(s32 field_0, char const** field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void resetArchiveBank(s32 field_0) {
+asm static void resetArchiveBank(int field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/resetArchiveBank__Fi.s"
 }
@@ -332,7 +332,7 @@ asm static void resetArchiveBank(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void setArchiveBank(s32 field_0) {
+asm static void setArchiveBank(int field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/setArchiveBank__Fi.s"
 }
@@ -365,7 +365,7 @@ asm static void deleteJugge(void* field_0, void* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void isCreatingCallback(create_tag* field_0, s32* field_1) {
+asm static void isCreatingCallback(create_tag* field_0, u32* field_1) {
 	nofralloc
 #include "asm/d/s/d_s_room/isCreatingCallback__FP10create_tagPUi.s"
 }
@@ -376,7 +376,7 @@ asm static void isCreatingCallback(create_tag* field_0, s32* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void isCreating(s32 field_0) {
+asm static void isCreating(u32 field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/isCreating__FUi.s"
 }
@@ -387,7 +387,7 @@ asm static void isCreating(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void loadDemoArchive(s32 field_0) {
+asm static void loadDemoArchive(int field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/loadDemoArchive__Fi.s"
 }
@@ -426,7 +426,7 @@ static bool dScnRoom_IsDelete(room_of_scene_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void isReadRoom(s32 field_0) {
+asm static void isReadRoom(int field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/isReadRoom__Fi.s"
 }
@@ -481,7 +481,7 @@ asm static void phase_2(room_of_scene_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dStage_roomControl_c::setZoneNo(s32 field_0, s32 field_1) {
+asm void dStage_roomControl_c::setZoneNo(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/s/d_s_room/setZoneNo__20dStage_roomControl_cFii.s"
 }

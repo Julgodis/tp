@@ -32,7 +32,7 @@ struct dMenu_Fmap2DBack_c {
 	/* 801CF56C */ dMenu_Fmap2DBack_c();
 	/* 801CFCDC */ ~dMenu_Fmap2DBack_c();
 	/* 801CFF34 */ void draw();
-	/* 801D0804 */ void setRegionTexData(char, ResTIMG*, f32, f32, f32, f32, f32, f32, f32, f32, f32);
+	/* 801D0804 */ void setRegionTexData(u8, ResTIMG*, f32, f32, f32, f32, f32, f32, f32, f32, f32);
 	/* 801D0AC8 */ void calcAllMapPos();
 	/* 801D0BF8 */ void calcAllMapScaleRate();
 	/* 801D0C6C */ void calcAllMapPos2DFirst(f32, f32, f32*, f32*);
@@ -47,12 +47,12 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D1858 */ void zoomMapCalcHIO();
 	/* 801D1AA4 */ void scrollCalc(f32);
 	/* 801D1D50 */ void mapBlink(s16*);
-	/* 801D1D74 */ void setSpotCursor(char);
+	/* 801D1D74 */ void setSpotCursor(u8);
 	/* 801D1DC4 */ void allmap_move2(STControl*);
-	/* 801D2100 */ void setIcon2DPos(char, f32, f32, f32, char, bool);
-	/* 801D241C */ void setIcon2DPos(char, char const*, f32, f32, f32, char, bool);
-	/* 801D2454 */ void setIcon2DPos(char, char, char const*, f32, f32, f32, char, bool);
-	/* 801D2508 */ void isShowRegion(s32);
+	/* 801D2100 */ void setIcon2DPos(u8, f32, f32, f32, u8, bool);
+	/* 801D241C */ void setIcon2DPos(u8, char const*, f32, f32, f32, u8, bool);
+	/* 801D2454 */ void setIcon2DPos(u8, u8, char const*, f32, f32, f32, u8, bool);
+	/* 801D2508 */ void isShowRegion(int);
 	/* 801D2658 */ void getMapAreaGlobalPosX();
 	/* 801D2668 */ void getMapAreaGlobalPosY();
 	/* 801D2678 */ void getMapAreaGlobalCenterPosX();
@@ -71,10 +71,10 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D2A34 */ void calcRenderingScale();
 	/* 801D2AC8 */ void getPathScale(f32);
 	/* 801D2B5C */ void getAllMapZoomRate();
-	/* 801D2B64 */ void getRegionMapZoomRate(s32);
+	/* 801D2B64 */ void getRegionMapZoomRate(int);
 	/* 801D2C4C */ void getSpotMapZoomRate();
-	/* 801D2C88 */ void getStageOriginPath(char, f32*, f32*);
-	/* 801D2CC8 */ void calcOffset(char, char const*, f32*, f32*);
+	/* 801D2C88 */ void getStageOriginPath(u8, f32*, f32*);
+	/* 801D2CC8 */ void calcOffset(u8, char const*, f32*, f32*);
 	/* 801D2DA8 */ void regionTextureDraw();
 	/* 801D3094 */ void stageTextureDraw();
 	/* 801D31D0 */ void worldGridDraw();
@@ -86,14 +86,14 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D3CB8 */ void calcBlink();
 	/* 801D4928 */ void calcBackAlpha(bool);
 	/* 801D49E0 */ void btkAnimeLoop(f32);
-	/* 801D4AFC */ void setBaseBackAlpha(char);
+	/* 801D4AFC */ void setBaseBackAlpha(u8);
 	/* 801D4B2C */ void regionMapMove(STControl*);
-	/* 801D4E80 */ void stageMapMove(STControl*, char, bool);
+	/* 801D4E80 */ void stageMapMove(STControl*, u8, bool);
 	/* 801D5334 */ void setAllAlphaRate(f32, bool);
 	/* 801D5388 */ void drawDebugStageArea();
 	/* 801D564C */ void drawDebugRegionArea();
-	/* 801D58F8 */ void setArrowPos3D(char, char const*, f32, f32);
-	/* 801D59C0 */ void setArrowPos3DOffset(char, char const*, f32, f32, f32);
+	/* 801D58F8 */ void setArrowPos3D(u8, char const*, f32, f32);
+	/* 801D59C0 */ void setArrowPos3DOffset(u8, char const*, f32, f32, f32);
 	/* 801D5AC4 */ void calcDrawPriority();
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
@@ -101,7 +101,20 @@ struct dMenu_Fmap2DBack_c {
 // build ResTIMG (ResTIMG) True/True
 // build STControl (STControl) True/True
 // build dMenu_Fmap2DTop_c (dMenu_Fmap2DTop_c) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
+};
+
 // build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -128,43 +141,30 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
 /* top-level dependencies (begin CPaneMgrAlpha) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgrAlpha) */
 struct CPaneMgrAlpha {
-	// J2DScreen
 	// JKRExpHeap
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
 };
 
-// build JKRExpHeap (JKRExpHeap) True/True
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
-struct J2DAnmTextureSRTKey {
-};
-
 // build STControl (STControl) True/True
 /* top-level dependencies (begin dMenu_Fmap2DTop_c) */
-// outer dependency: CPaneMgrAlpha
 // outer dependency: JKRExpHeap
 // outer dependency: J2DAnmTextureSRTKey
+// outer dependency: CPaneMgrAlpha
 // outer dependency: STControl
 /* top-level dependencies (end dMenu_Fmap2DTop_c) */
 struct dMenu_Fmap2DTop_c {
-	// CPaneMgrAlpha
 	// JKRExpHeap
 	// J2DAnmTextureSRTKey
+	// CPaneMgrAlpha
 	// STControl
 	/* 801D5BD0 */ dMenu_Fmap2DTop_c(JKRExpHeap*, STControl*);
 	/* 801D6700 */ ~dMenu_Fmap2DTop_c();
@@ -172,22 +172,22 @@ struct dMenu_Fmap2DTop_c {
 	/* 801D6C44 */ void setAllAlphaRate(f32, bool);
 	/* 801D6C98 */ void draw();
 	/* 801D6DF8 */ void btkAnimeLoop(J2DAnmTextureSRTKey*, f32);
-	/* 801D6EDC */ void setMoyaAlpha(char);
+	/* 801D6EDC */ void setMoyaAlpha(u8);
 	/* 801D6F38 */ void setTitleNameString(u32);
 	/* 801D7010 */ void setAreaNameString(u32);
-	/* 801D70E8 */ void setZButtonString(u32, char);
-	/* 801D7210 */ void setBButtonString(u32, char);
-	/* 801D72D4 */ void setAButtonString(u32, char);
+	/* 801D70E8 */ void setZButtonString(u32, u8);
+	/* 801D7210 */ void setBButtonString(u32, u8);
+	/* 801D72D4 */ void setAButtonString(u32, u8);
 	/* 801D7398 */ void setCrossLRString(u32);
 	/* 801D74EC */ void set3DStickString(u32);
 	/* 801D7640 */ void createExplain(JKRExpHeap*, STControl*);
 	/* 801D76C0 */ void deleteExplain();
-	/* 801D7714 */ void setArrowAlphaRatio(char, f32);
+	/* 801D7714 */ void setArrowAlphaRatio(u8, f32);
 	/* 801D77C4 */ void setAlphaAnimeMin(CPaneMgrAlpha*);
 	/* 801D7858 */ void setAlphaAnimeMid(CPaneMgrAlpha*);
 	/* 801D78FC */ void setAlphaAnimeMax(CPaneMgrAlpha*);
 	/* 801D7994 */ void checkPlayerWarpAccept();
-	/* 801D7A08 */ void checkWarpAcceptRegion(s32);
+	/* 801D7A08 */ void checkWarpAcceptRegion(int);
 	/* 801D7AB4 */ void checkWarpAcceptRegion4();
 	/* 801D7B58 */ void checkWarpAcceptCannon();
 	/* 801D7BCC */ void setHIO(bool);
@@ -207,7 +207,7 @@ struct JKRHeap {
 /* top-level dependencies (begin dSv_player_field_last_stay_info_c) */
 /* top-level dependencies (end dSv_player_field_last_stay_info_c) */
 struct dSv_player_field_last_stay_info_c {
-	/* 80032E78 */ void isRegionBit(s32) const;
+	/* 80032E78 */ void isRegionBit(int) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -228,7 +228,7 @@ struct dMenuMapCommon_c {
 	/* 801C27B4 */ ~dMenuMapCommon_c();
 	/* 801C28D8 */ void initiate(JKRArchive*);
 	/* 801C38E4 */ void drawIcon(f32, f32, f32, f32);
-	/* 801C43A8 */ void setIconInfo(char, f32, f32, f32, f32, f32, char);
+	/* 801C43A8 */ void setIconInfo(u8, f32, f32, f32, f32, f32, u8);
 	/* 801C452C */ void blinkMove(s16);
 	/* 801C4600 */ void moveLightDropAnime();
 };
@@ -246,7 +246,7 @@ struct dMenu_Fmap_region_data_c {
 /* top-level dependencies (end renderingFmap_c) */
 struct renderingFmap_c {
 	// dMenu_Fmap_region_data_c
-	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, s32, s32*, s32*);
+	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, int, int*, int*);
 };
 
 // build dMenu_Fmap_region_data_c (dMenu_Fmap_region_data_c) True/True
@@ -254,8 +254,8 @@ struct renderingFmap_c {
 /* top-level dependencies (begin dMeterHaihai_c) */
 /* top-level dependencies (end dMeterHaihai_c) */
 struct dMeterHaihai_c {
-	/* 8020AE8C */ dMeterHaihai_c(char);
-	/* 8020B518 */ void drawHaihai(char);
+	/* 8020AE8C */ dMeterHaihai_c(u8);
+	/* 8020B518 */ void drawHaihai(u8);
 };
 
 // build dMeter2Info_c (dMeter2Info_c) False/False
@@ -289,62 +289,82 @@ struct J2DOrthoGraph {
 struct dMsgScrnExplain_c {
 	// J2DOrthoGraph
 	// STControl
-	/* 8023CC88 */ dMsgScrnExplain_c(STControl*, char, bool, char);
+	/* 8023CC88 */ dMsgScrnExplain_c(STControl*, u8, bool, u8);
 	/* 8023D918 */ void draw(J2DOrthoGraph*);
 };
 
 // build J2DOrthoGraph (J2DOrthoGraph) True/True
 // build CPaneMgr (CPaneMgr) False/False
-// build J2DScreen (J2DScreen) True/True
 // build JKRExpHeap (JKRExpHeap) True/True
-/* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
-// outer dependency: JKRExpHeap
-/* top-level dependencies (end CPaneMgr) */
-struct CPaneMgr {
-	// J2DScreen
-	// JKRExpHeap
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
-	/* 802545B0 */ void paneTrans(f32, f32);
+// build J2DPane (J2DPane) False/False
+// build J2DRotateAxis (J2DRotateAxis) False/False
+/* top-level dependencies (begin J2DRotateAxis) */
+/* top-level dependencies (end J2DRotateAxis) */
+struct J2DRotateAxis {
+};
+
+/* top-level dependencies (begin J2DPane) */
+// outer dependency: J2DRotateAxis
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	// J2DRotateAxis
+	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
+	/* 802F7AFC */ void getParentPane();
 };
 
 // build J2DScreen (J2DScreen) True/True
-// build CPaneMgrAlphaMorf (CPaneMgrAlphaMorf) False/False
-// build J2DScreen (J2DScreen) True/True
-// build JKRExpHeap (JKRExpHeap) True/True
-/* top-level dependencies (begin CPaneMgrAlphaMorf) */
-// outer dependency: J2DScreen
+/* top-level dependencies (begin CPaneMgr) */
 // outer dependency: JKRExpHeap
+// outer dependency: J2DPane
+// outer dependency: J2DScreen
+/* top-level dependencies (end CPaneMgr) */
+struct CPaneMgr {
+	// JKRExpHeap
+	// J2DPane
+	// J2DScreen
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
+};
+
+// build J2DScreen (J2DScreen) True/True
+// build J2DPane (J2DPane) True/True
+// build CPaneMgrAlphaMorf (CPaneMgrAlphaMorf) False/False
+// build JKRExpHeap (JKRExpHeap) True/True
+// build J2DScreen (J2DScreen) True/True
+/* top-level dependencies (begin CPaneMgrAlphaMorf) */
+// outer dependency: JKRExpHeap
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgrAlphaMorf) */
 struct CPaneMgrAlphaMorf {
-	// J2DScreen
 	// JKRExpHeap
-	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, char, JKRExpHeap*);
+	// J2DScreen
+	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255DD0 */ void setBackupAlpha();
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -368,22 +388,6 @@ struct JUtility {
 
 };
 
-// build J2DPane (J2DPane) False/False
-// build J2DRotateAxis (J2DRotateAxis) False/False
-/* top-level dependencies (begin J2DRotateAxis) */
-/* top-level dependencies (end J2DRotateAxis) */
-struct J2DRotateAxis {
-};
-
-/* top-level dependencies (begin J2DPane) */
-// outer dependency: J2DRotateAxis
-/* top-level dependencies (end J2DPane) */
-struct J2DPane {
-	// J2DRotateAxis
-	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
-	/* 802F7AFC */ void getParentPane();
-};
-
 // build J2DRotateAxis (J2DRotateAxis) True/True
 // build J2DGrafContext (J2DGrafContext) True/True
 // build J2DPicture (J2DPicture) False/False
@@ -401,6 +405,7 @@ struct J2DPicture {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 // build J2DAnmLoaderDataBase (J2DAnmLoaderDataBase) False/False
@@ -566,19 +571,17 @@ SECTION_SDATA2 extern f32 lit_6325;
 void mDoExt_setCurrentHeap(JKRHeap*);
 void mDoExt_getMesgFont();
 void mDoExt_getRubyFont();
-void dComIfGs_isStageSwitch(s32, s32);
+void dComIfGs_isStageSwitch(int, int);
 void dComIfGp_getNowLevel();
 void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, ResTIMG const*);
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
 void dPaneClass_showNullPane(J2DScreen*);
 void cLib_addCalc2(f32*, f32, f32, f32);
 void* operator new(u32);
 void operator delete(void*);
 extern "C" void func_802E90C0();
-void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, s32);
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int);
 void J2DFillBox(f32, f32, f32, f32, JUtility::TColor);
-void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, char);
-extern "C" void setString__10J2DTextBoxFsPCce();
+void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8);
 extern "C" void GXGetScissor();
 extern "C" void _savegpr_23();
 extern "C" void _savegpr_24();
@@ -954,7 +957,7 @@ f32 d_menu_d_menu_fmap2D__lit_4260 = 100.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::setRegionTexData(char field_0, ResTIMG* field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, f32 field_8, f32 field_9, f32 field_10) {
+asm void dMenu_Fmap2DBack_c::setRegionTexData(u8 field_0, ResTIMG* field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, f32 field_8, f32 field_9, f32 field_10) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff.s"
 }
@@ -1119,7 +1122,7 @@ asm void dMenu_Fmap2DBack_c::mapBlink(s16* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::setSpotCursor(char field_0) {
+asm void dMenu_Fmap2DBack_c::setSpotCursor(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setSpotCursor__18dMenu_Fmap2DBack_cFUc.s"
 }
@@ -1141,7 +1144,7 @@ asm void dMenu_Fmap2DBack_c::allmap_move2(STControl* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::setIcon2DPos(char field_0, f32 field_1, f32 field_2, f32 field_3, char field_4, bool field_5) {
+asm void dMenu_Fmap2DBack_c::setIcon2DPos(u8 field_0, f32 field_1, f32 field_2, f32 field_3, u8 field_4, bool field_5) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb.s"
 }
@@ -1152,7 +1155,7 @@ asm void dMenu_Fmap2DBack_c::setIcon2DPos(char field_0, f32 field_1, f32 field_2
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::setIcon2DPos(char field_0, char const* field_1, f32 field_2, f32 field_3, f32 field_4, char field_5, bool field_6) {
+asm void dMenu_Fmap2DBack_c::setIcon2DPos(u8 field_0, char const* field_1, f32 field_2, f32 field_3, f32 field_4, u8 field_5, bool field_6) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb.s"
 }
@@ -1163,7 +1166,7 @@ asm void dMenu_Fmap2DBack_c::setIcon2DPos(char field_0, char const* field_1, f32
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::setIcon2DPos(char field_0, char field_1, char const* field_2, f32 field_3, f32 field_4, f32 field_5, char field_6, bool field_7) {
+asm void dMenu_Fmap2DBack_c::setIcon2DPos(u8 field_0, u8 field_1, char const* field_2, f32 field_3, f32 field_4, f32 field_5, u8 field_6, bool field_7) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setIcon2DPos__18dMenu_Fmap2DBack_cFUcUcPCcfffUcb.s"
 }
@@ -1174,7 +1177,7 @@ asm void dMenu_Fmap2DBack_c::setIcon2DPos(char field_0, char field_1, char const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::isShowRegion(s32 field_0) {
+asm void dMenu_Fmap2DBack_c::isShowRegion(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/isShowRegion__18dMenu_Fmap2DBack_cFi.s"
 }
@@ -1383,7 +1386,7 @@ asm void dMenu_Fmap2DBack_c::getAllMapZoomRate() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::getRegionMapZoomRate(s32 field_0) {
+asm void dMenu_Fmap2DBack_c::getRegionMapZoomRate(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi.s"
 }
@@ -1405,7 +1408,7 @@ asm void dMenu_Fmap2DBack_c::getSpotMapZoomRate() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::getStageOriginPath(char field_0, f32* field_1, f32* field_2) {
+asm void dMenu_Fmap2DBack_c::getStageOriginPath(u8 field_0, f32* field_1, f32* field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/getStageOriginPath__18dMenu_Fmap2DBack_cFUcPfPf.s"
 }
@@ -1416,7 +1419,7 @@ asm void dMenu_Fmap2DBack_c::getStageOriginPath(char field_0, f32* field_1, f32*
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::calcOffset(char field_0, char const* field_1, f32* field_2, f32* field_3) {
+asm void dMenu_Fmap2DBack_c::calcOffset(u8 field_0, char const* field_1, f32* field_2, f32* field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/calcOffset__18dMenu_Fmap2DBack_cFUcPCcPfPf.s"
 }
@@ -1565,7 +1568,7 @@ asm void dMenu_Fmap2DBack_c::btkAnimeLoop(f32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::setBaseBackAlpha(char field_0) {
+asm void dMenu_Fmap2DBack_c::setBaseBackAlpha(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc.s"
 }
@@ -1591,7 +1594,7 @@ f32 lit_5568 = -1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::stageMapMove(STControl* field_0, char field_1, bool field_2) {
+asm void dMenu_Fmap2DBack_c::stageMapMove(STControl* field_0, u8 field_1, bool field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb.s"
 }
@@ -1642,7 +1645,7 @@ asm void dMenu_Fmap2DBack_c::drawDebugRegionArea() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::setArrowPos3D(char field_0, char const* field_1, f32 field_2, f32 field_3) {
+asm void dMenu_Fmap2DBack_c::setArrowPos3D(u8 field_0, char const* field_1, f32 field_2, f32 field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff.s"
 }
@@ -1653,7 +1656,7 @@ asm void dMenu_Fmap2DBack_c::setArrowPos3D(char field_0, char const* field_1, f3
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DBack_c::setArrowPos3DOffset(char field_0, char const* field_1, f32 field_2, f32 field_3, f32 field_4) {
+asm void dMenu_Fmap2DBack_c::setArrowPos3DOffset(u8 field_0, char const* field_1, f32 field_2, f32 field_3, f32 field_4) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff.s"
 }
@@ -1752,7 +1755,7 @@ asm void dMenu_Fmap2DTop_c::btkAnimeLoop(J2DAnmTextureSRTKey* field_0, f32 field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DTop_c::setMoyaAlpha(char field_0) {
+asm void dMenu_Fmap2DTop_c::setMoyaAlpha(u8 field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setMoyaAlpha__17dMenu_Fmap2DTop_cFUc.s"
 }
@@ -1785,7 +1788,7 @@ asm void dMenu_Fmap2DTop_c::setAreaNameString(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DTop_c::setZButtonString(u32 field_0, char field_1) {
+asm void dMenu_Fmap2DTop_c::setZButtonString(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setZButtonString__17dMenu_Fmap2DTop_cFUlUc.s"
 }
@@ -1796,7 +1799,7 @@ asm void dMenu_Fmap2DTop_c::setZButtonString(u32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DTop_c::setBButtonString(u32 field_0, char field_1) {
+asm void dMenu_Fmap2DTop_c::setBButtonString(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setBButtonString__17dMenu_Fmap2DTop_cFUlUc.s"
 }
@@ -1807,7 +1810,7 @@ asm void dMenu_Fmap2DTop_c::setBButtonString(u32 field_0, char field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DTop_c::setAButtonString(u32 field_0, char field_1) {
+asm void dMenu_Fmap2DTop_c::setAButtonString(u32 field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setAButtonString__17dMenu_Fmap2DTop_cFUlUc.s"
 }
@@ -1862,7 +1865,7 @@ asm void dMenu_Fmap2DTop_c::deleteExplain() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DTop_c::setArrowAlphaRatio(char field_0, f32 field_1) {
+asm void dMenu_Fmap2DTop_c::setArrowAlphaRatio(u8 field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf.s"
 }
@@ -1926,7 +1929,7 @@ asm void dMenu_Fmap2DTop_c::checkPlayerWarpAccept() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMenu_Fmap2DTop_c::checkWarpAcceptRegion(s32 field_0) {
+asm void dMenu_Fmap2DTop_c::checkWarpAcceptRegion(int field_0) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap2D/checkWarpAcceptRegion__17dMenu_Fmap2DTop_cFi.s"
 }

@@ -10,42 +10,42 @@
 // 
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
+	// JAISoundID
 	/* 802AB64C */ Z2SeMgr();
 	/* 802AB750 */ void initSe();
 	/* 802AB80C */ void resetModY();
 	/* 802AB830 */ void modHeightAtCamera(Vec const**);
 	/* 802AB93C */ void incrCrowdSize();
 	/* 802AB960 */ void decrCrowdSize();
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
-	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
+	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 	/* 802AD8B0 */ void seStop(JAISoundID, u32);
 	/* 802AD94C */ void seStopAll(u32);
 	/* 802AD9F4 */ void seMoveVolumeAll(f32, u32);
-	/* 802ADB14 */ void messageSePlay(u16, Vec*, char);
+	/* 802ADB14 */ void messageSePlay(u16, Vec*, s8);
 	/* 802ADB50 */ void talkInSe();
 	/* 802ADC54 */ void talkOutSe();
 	/* 802ADD58 */ void menuInSe();
-	/* 802ADE5C */ void setLevObjSE(u32, Vec*, char);
-	/* 802ADFF4 */ void setMultiTriggerSE(u32, Vec*, char);
+	/* 802ADE5C */ void setLevObjSE(u32, Vec*, s8);
+	/* 802ADFF4 */ void setMultiTriggerSE(u32, Vec*, s8);
 	/* 802AE184 */ void processSeFramework();
 	/* 802AE524 */ void isLevelSe(JAISoundID);
 	/* 802AE5B0 */ void isSoundCulling(JAISoundID);
@@ -157,7 +157,7 @@ struct Z2SoundMgr {
 /* top-level dependencies (end Z2SoundStarter) */
 struct Z2SoundStarter {
 	// JAISoundHandle
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, char);
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 };
 
 // build Z2SeqMgr (Z2SeqMgr) False/False
@@ -184,10 +184,10 @@ struct Z2StatusMgr {
 struct Z2Audience {
 	// Vec
 	/* 802BD704 */ void calcOffMicSound(f32);
-	/* 802BD92C */ void convertAbsToRel(Vec&, Vec*, s32);
-	/* 802BD95C */ void calcRelPosVolume(Vec const&, f32, s32);
-	/* 802BDA44 */ void calcRelPosPan(Vec const&, s32);
-	/* 802BDB44 */ void calcRelPosDolby(Vec const&, s32);
+	/* 802BD92C */ void convertAbsToRel(Vec&, Vec*, int);
+	/* 802BD95C */ void calcRelPosVolume(Vec const&, f32, int);
+	/* 802BDA44 */ void calcRelPosPan(Vec const&, int);
+	/* 802BDB44 */ void calcRelPosDolby(Vec const&, int);
 };
 
 // build Z2SpeechMgr2 (Z2SpeechMgr2) False/False
@@ -197,7 +197,7 @@ struct Z2Audience {
 /* top-level dependencies (end Z2SpeechMgr2) */
 struct Z2SpeechMgr2 {
 	// Vec
-	/* 802CCA18 */ void playOneShotVoice(char, u16, Vec*, char);
+	/* 802CCA18 */ void playOneShotVoice(u8, u16, Vec*, s8);
 };
 
 // 
@@ -556,7 +556,7 @@ f64 Z2SeMgr__lit_4070 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SeMgr::seStart(JAISoundID field_0, Vec const* field_1, u32 field_2, char field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, char field_8) {
+asm void Z2SeMgr::seStart(JAISoundID field_0, Vec const* field_1, u32 field_2, s8 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, u8 field_8) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeMgr/seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc.s"
 }
@@ -690,7 +690,7 @@ f32 Z2SeMgr__lit_4615 = 90.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SeMgr::seStartLevel(JAISoundID field_0, Vec const* field_1, u32 field_2, char field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, char field_8) {
+asm void Z2SeMgr::seStartLevel(JAISoundID field_0, Vec const* field_1, u32 field_2, s8 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, u8 field_8) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeMgr/seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc.s"
 }
@@ -734,7 +734,7 @@ asm void Z2SeMgr::seMoveVolumeAll(f32 field_0, u32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SeMgr::messageSePlay(u16 field_0, Vec* field_1, char field_2) {
+asm void Z2SeMgr::messageSePlay(u16 field_0, Vec* field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeMgr/messageSePlay__7Z2SeMgrFUsP3VecSc.s"
 }
@@ -787,7 +787,7 @@ f32 lit_5085 = 4.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SeMgr::setLevObjSE(u32 field_0, Vec* field_1, char field_2) {
+asm void Z2SeMgr::setLevObjSE(u32 field_0, Vec* field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeMgr/setLevObjSE__7Z2SeMgrFUlP3VecSc.s"
 }
@@ -807,7 +807,7 @@ f32 Z2SeMgr__lit_5134 = 3.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Z2SeMgr::setMultiTriggerSE(u32 field_0, Vec* field_1, char field_2) {
+asm void Z2SeMgr::setMultiTriggerSE(u32 field_0, Vec* field_1, s8 field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SeMgr/setMultiTriggerSE__7Z2SeMgrFUlP3VecSc.s"
 }

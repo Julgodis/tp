@@ -10,29 +10,29 @@
 // 
 
 // build JASDrumSet (JASDrumSet) False/False
-// build JASInstParam (JASInstParam) False/False
-/* top-level dependencies (begin JASInstParam) */
-/* top-level dependencies (end JASInstParam) */
-struct JASInstParam {
-};
-
+// build JASDrumSet (JASDrumSet) True/False
+struct JASDrumSet;
 // build JKRHeap (JKRHeap) False/False
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
 };
 
-// build JASDrumSet (JASDrumSet) True/False
-struct JASDrumSet;
+// build JASInstParam (JASInstParam) False/False
+/* top-level dependencies (begin JASInstParam) */
+/* top-level dependencies (end JASInstParam) */
+struct JASInstParam {
+};
+
 /* top-level dependencies (begin JASDrumSet) */
-// outer dependency: JASInstParam
-// outer dependency: JKRHeap
 // outer dependency: JASDrumSet::TPerc
+// outer dependency: JKRHeap
+// outer dependency: JASInstParam
 /* top-level dependencies (end JASDrumSet) */
 struct JASDrumSet {
-	// JASInstParam
-	// JKRHeap
 	// JASDrumSet::TPerc
+	// JKRHeap
+	// JASInstParam
 	// build TPerc (JASDrumSet::TPerc) False/False
 	/* dependencies (begin JASDrumSet::TPerc) */
 	/* dependencies (end JASDrumSet::TPerc) */
@@ -43,9 +43,9 @@ struct JASDrumSet {
 
 	/* 802982EC */ JASDrumSet();
 	/* 80298314 */ ~JASDrumSet();
-	/* 80298370 */ void newPercArray(char, JKRHeap*);
-	/* 802983CC */ void getParam(s32, s32, JASInstParam*) const;
-	/* 802984B4 */ void setPerc(s32, JASDrumSet::TPerc*);
+	/* 80298370 */ void newPercArray(u8, JKRHeap*);
+	/* 802983CC */ void getParam(int, int, JASInstParam*) const;
+	/* 802984B4 */ void setPerc(int, JASDrumSet::TPerc*);
 	/* 802984EC */ void getType() const;
 };
 
@@ -83,7 +83,7 @@ SECTION_SDATA2 extern f32 lit_253;
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new[](u32, JKRHeap*, int);
 void operator delete(void*);
 
 extern "C" void bzero__7JASCalcFPvUl();
@@ -133,7 +133,7 @@ asm JASDrumSet::~JASDrumSet() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDrumSet::newPercArray(char field_0, JKRHeap* field_1) {
+asm void JASDrumSet::newPercArray(u8 field_0, JKRHeap* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDrumSet/newPercArray__10JASDrumSetFUcP7JKRHeap.s"
 }
@@ -162,7 +162,7 @@ u8 JASDrumSet__lit_220[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDrumSet::getParam(s32 field_0, s32 field_1, JASInstParam* field_2) const {
+asm void JASDrumSet::getParam(int field_0, int field_1, JASInstParam* field_2) const {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDrumSet/getParam__10JASDrumSetCFiiP12JASInstParam.s"
 }
@@ -173,7 +173,7 @@ asm void JASDrumSet::getParam(s32 field_0, s32 field_1, JASInstParam* field_2) c
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASDrumSet::setPerc(s32 field_0, JASDrumSet::TPerc* field_1) {
+asm void JASDrumSet::setPerc(int field_0, JASDrumSet::TPerc* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDrumSet/setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc.s"
 }

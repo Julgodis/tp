@@ -19,7 +19,7 @@ struct _GXCullMode {
 // Forward References:
 // 
 
-void GFSetGenMode2(char, char, char, char, _GXCullMode);
+void GFSetGenMode2(u8, u8, u8, u8, _GXCullMode);
 
 extern "C" void GFSetGenMode2__FUcUcUcUc11_GXCullMode();
 SECTION_SDATA extern u8 data_804508A8[4 + 4 /* padding */];
@@ -47,7 +47,7 @@ u8 data_804508A8[8] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void GFSetGenMode2(char field_0, char field_1, char field_2, char field_3, _GXCullMode field_4) {
+asm void GFSetGenMode2(u8 field_0, u8 field_1, u8 field_2, u8 field_3, _GXCullMode field_4) {
 	nofralloc
 #include "asm/dolphin/gf/GFGeometry/GFSetGenMode2__FUcUcUcUc11_GXCullMode.s"
 }

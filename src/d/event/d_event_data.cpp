@@ -13,9 +13,9 @@
 /* top-level dependencies (begin dEvDtFlag_c) */
 /* top-level dependencies (end dEvDtFlag_c) */
 struct dEvDtFlag_c {
-	/* 80043D60 */ void flagCheck(s32);
-	/* 80043DC8 */ void flagSet(s32);
-	/* 80043E30 */ void flagMaxCheck(s32);
+	/* 80043D60 */ void flagCheck(int);
+	/* 80043DC8 */ void flagSet(int);
+	/* 80043E30 */ void flagMaxCheck(int);
 	/* 80043E58 */ void init();
 };
 
@@ -24,11 +24,11 @@ struct dEvDtFlag_c {
 /* top-level dependencies (begin dEvDtStaff_c) */
 /* top-level dependencies (end dEvDtStaff_c) */
 struct dEvDtStaff_c {
-	/* 80043FD8 */ void specialProc_WaitStart(s32);
-	/* 8004403C */ void specialProc_WaitProc(s32);
+	/* 80043FD8 */ void specialProc_WaitStart(int);
+	/* 8004403C */ void specialProc_WaitProc(int);
 	/* 80044080 */ void specialProc();
 	/* 80044134 */ void init();
-	/* 80044170 */ void advanceCut(s32);
+	/* 80044170 */ void advanceCut(int);
 	/* 80044190 */ void specialProcLight();
 	/* 80044324 */ void specialProcMessage();
 	/* 80044A58 */ void specialProcSound();
@@ -68,7 +68,7 @@ struct dEvDtBase_c {
 	// dEvDtStaff_c
 	// dEvDtEvent_c
 	/* 80046138 */ void init();
-	/* 8004616C */ void init(char*, s32);
+	/* 8004616C */ void init(char*, int);
 	/* 8004628C */ void advanceCut(dEvDtEvent_c*);
 	/* 800462FC */ void advanceCutLocal(dEvDtStaff_c*);
 };
@@ -106,7 +106,7 @@ struct csXyz {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -125,7 +125,7 @@ struct dSv_event_c {
 /* top-level dependencies (end dDemo_c) */
 struct dDemo_c {
 	// cXyz
-	/* 80039B6C */ void start(char const*, cXyz*, f32);
+	/* 80039B6C */ void start(u8 const*, cXyz*, f32);
 	/* 80039CF8 */ void end();
 };
 
@@ -135,9 +135,9 @@ struct dDemo_c {
 struct dEvt_control_c {
 	/* 80042958 */ void setSkipZev(void*, char*);
 	/* 80043278 */ void getStageEventDt();
-	/* 800432EC */ void convPId(s32);
+	/* 800432EC */ void convPId(u32);
 	/* 8004331C */ void getStbDemoData(char*);
-	/* 800434D8 */ void searchMapEventData(char);
+	/* 800434D8 */ void searchMapEventData(u8);
 	/* 8004365C */ void setPt2(void*);
 	/* 8004368C */ void setPtT(void*);
 	/* 800436BC */ void setPtI(void*);
@@ -156,12 +156,12 @@ struct fopAc_ac_c {
 /* top-level dependencies (end dEvent_manager_c) */
 struct dEvent_manager_c {
 	// fopAc_ac_c
-	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, s32);
-	/* 80047D4C */ void getIsAddvance(s32);
-	/* 80047F5C */ void getMyNowCutName(s32);
-	/* 800480EC */ void getMySubstanceP(s32, char const*, s32);
-	/* 80048144 */ void getMySubstanceNum(s32, char const*);
-	/* 8004817C */ void cutEnd(s32);
+	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
+	/* 80047D4C */ void getIsAddvance(int);
+	/* 80047F5C */ void getMyNowCutName(int);
+	/* 800480EC */ void getMySubstanceP(int, char const*, int);
+	/* 80048144 */ void getMySubstanceNum(int, char const*);
+	/* 8004817C */ void cutEnd(int);
 };
 
 // build fopAc_ac_c (fopAc_ac_c) True/True
@@ -179,10 +179,10 @@ struct dDlst_list_c {
 /* top-level dependencies (end dVibration_c) */
 struct dVibration_c {
 	// cXyz
-	/* 8006FA24 */ void StartShock(s32, s32, cXyz);
-	/* 8006FB10 */ void StartQuake(s32, s32, cXyz);
-	/* 8006FC0C */ void StartQuake(char const*, s32, s32, cXyz);
-	/* 8006FD94 */ void StopQuake(s32);
+	/* 8006FA24 */ void StartShock(int, int, cXyz);
+	/* 8006FB10 */ void StartQuake(int, int, cXyz);
+	/* 8006FC0C */ void StartQuake(u8 const*, int, int, cXyz);
+	/* 8006FD94 */ void StopQuake(int);
 };
 
 // build dCamera_c (dCamera_c) False/False
@@ -192,7 +192,7 @@ struct dVibration_c {
 /* top-level dependencies (end dCamera_c) */
 struct dCamera_c {
 	// fopAc_ac_c
-	/* 80181170 */ void StartBlure(s32, fopAc_ac_c*, f32, f32);
+	/* 80181170 */ void StartBlure(int, fopAc_ac_c*, f32, f32);
 };
 
 // build dMsgObject_c (dMsgObject_c) False/False
@@ -203,26 +203,26 @@ struct dMsgObject_c {
 };
 
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -242,7 +242,7 @@ struct Z2SeqMgr {
 static void getTelopNo(char const*);
 static void getTelopNo();
 static void getStartTelopNo();
-static void dEvDt_Next_Stage(s32, s32);
+static void dEvDt_Next_Stage(int, int);
 
 extern "C" static void getTelopNo__FPCc();
 extern "C" static void getTelopNo__Fv();
@@ -291,21 +291,21 @@ SECTION_SDATA2 extern f32 lit_5200;
 // External References:
 // 
 
-void fopAcM_create(s16, u32, cXyz const*, s32, csXyz const*, cXyz const*, char);
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
 void fopAcM_searchFromName4Event(char const*, s16);
-void fopMsgM_SearchByID(s32);
+void fopMsgM_SearchByID(u32);
 void fopMsgM_messageSet(u32, u32);
 void fopMsgM_messageSetDemo(u32);
 void dStage_searchName(char const*);
-void dComIfGp_setNextStage(char const*, s16, char, char, f32, u32, s32, char, s16, s32, s32);
-void dComIfGs_onStageSwitch(s32, s32);
-void dComIfGs_offStageSwitch(s32, s32);
-void dComIfGs_isStageSwitch(s32, s32);
-void dEv_defaultSkipProc(void*, s32);
+void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int);
+void dComIfGs_onStageSwitch(int, int);
+void dComIfGs_offStageSwitch(int, int);
+void dComIfGs_isStageSwitch(int, int);
+void dEv_defaultSkipProc(void*, int);
 extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
 void dCam_getBody();
-void d_GameOver_Create(char);
-void d_GameOver_Delete(s32&);
+void d_GameOver_Create(u8);
+void d_GameOver_Delete(u32&);
 void dKy_set_nexttime(f32);
 void dKy_instant_timechg(f32);
 void dKy_instant_rainchg();
@@ -563,7 +563,7 @@ f64 d_event_d_event_data__lit_4267 = 4503601774854144.0 /* cast s32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dEvDt_Next_Stage(s32 field_0, s32 field_1) {
+asm static void dEvDt_Next_Stage(int field_0, int field_1) {
 	nofralloc
 #include "asm/d/event/d_event_data/dEvDt_Next_Stage__Fii.s"
 }
@@ -574,7 +574,7 @@ asm static void dEvDt_Next_Stage(s32 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvDtFlag_c::flagCheck(s32 field_0) {
+asm void dEvDtFlag_c::flagCheck(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/flagCheck__11dEvDtFlag_cFi.s"
 }
@@ -585,7 +585,7 @@ asm void dEvDtFlag_c::flagCheck(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvDtFlag_c::flagSet(s32 field_0) {
+asm void dEvDtFlag_c::flagSet(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/flagSet__11dEvDtFlag_cFi.s"
 }
@@ -596,7 +596,7 @@ asm void dEvDtFlag_c::flagSet(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvDtFlag_c::flagMaxCheck(s32 field_0) {
+asm void dEvDtFlag_c::flagMaxCheck(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/flagMaxCheck__11dEvDtFlag_cFi.s"
 }
@@ -651,7 +651,7 @@ asm void dEvDtEvent_c::specialStaffProc(dEvDtStaff_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvDtStaff_c::specialProc_WaitStart(s32 field_0) {
+asm void dEvDtStaff_c::specialProc_WaitStart(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProc_WaitStart__12dEvDtStaff_cFi.s"
 }
@@ -662,7 +662,7 @@ asm void dEvDtStaff_c::specialProc_WaitStart(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvDtStaff_c::specialProc_WaitProc(s32 field_0) {
+asm void dEvDtStaff_c::specialProc_WaitProc(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/specialProc_WaitProc__12dEvDtStaff_cFi.s"
 }
@@ -715,7 +715,7 @@ asm void dEvDtStaff_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvDtStaff_c::advanceCut(s32 field_0) {
+asm void dEvDtStaff_c::advanceCut(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_data/advanceCut__12dEvDtStaff_cFi.s"
 }
@@ -859,7 +859,7 @@ asm void dEvDtBase_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvDtBase_c::init(char* field_0, s32 field_1) {
+asm void dEvDtBase_c::init(char* field_0, int field_1) {
 	nofralloc
 #include "asm/d/event/d_event_data/init__11dEvDtBase_cFPci.s"
 }

@@ -15,8 +15,8 @@
 // build JStudio (JStudio) True/True
 /* top-level dependencies (begin JStudio) */
 // outer dependency: JStudio::stb::data::TParse_TSequence::TData
-// outer dependency: JStudio::stb::data::TParse_TParagraph::TData
 // outer dependency: JStudio::stb::data::TParse_TParagraph_data::TData
+// outer dependency: JStudio::stb::data::TParse_TParagraph::TData
 /* top-level dependencies (end JStudio) */
 namespace JStudio {
 	// build stb (JStudio::stb) False/False

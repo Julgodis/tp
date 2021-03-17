@@ -15,7 +15,7 @@
 /* top-level dependencies (begin JPATexture) */
 /* top-level dependencies (end JPATexture) */
 struct JPATexture {
-	/* 8027D7D4 */ JPATexture(char const*);
+	/* 8027D7D4 */ JPATexture(u8 const*);
 };
 
 // build JPAResource (JPAResource) False/False
@@ -50,8 +50,8 @@ struct JPAResourceManager {
 /* top-level dependencies (end JPAResourceLoader) */
 struct JPAResourceLoader {
 	// JPAResourceManager
-	/* 8027D8A0 */ JPAResourceLoader(char const*, JPAResourceManager*);
-	/* 8027D8E0 */ void load_jpc(char const*, JPAResourceManager*);
+	/* 8027D8A0 */ JPAResourceLoader(u8 const*, JPAResourceManager*);
+	/* 8027D8E0 */ void load_jpc(u8 const*, JPAResourceManager*);
 };
 
 // build JPAResourceManager (JPAResourceManager) True/True
@@ -65,35 +65,35 @@ struct JPAResourceLoader {
 /* top-level dependencies (end JPABaseShape) */
 struct JPABaseShape {
 	// JKRHeap
-	/* 8027A6DC */ JPABaseShape(char const*, JKRHeap*);
+	/* 8027A6DC */ JPABaseShape(u8 const*, JKRHeap*);
 };
 
 // build JPAExtraShape (JPAExtraShape) False/False
 /* top-level dependencies (begin JPAExtraShape) */
 /* top-level dependencies (end JPAExtraShape) */
 struct JPAExtraShape {
-	/* 8027AD88 */ JPAExtraShape(char const*);
+	/* 8027AD88 */ JPAExtraShape(u8 const*);
 };
 
 // build JPAChildShape (JPAChildShape) False/False
 /* top-level dependencies (begin JPAChildShape) */
 /* top-level dependencies (end JPAChildShape) */
 struct JPAChildShape {
-	/* 8027B038 */ JPAChildShape(char const*);
+	/* 8027B038 */ JPAChildShape(u8 const*);
 };
 
 // build JPAExTexShape (JPAExTexShape) False/False
 /* top-level dependencies (begin JPAExTexShape) */
 /* top-level dependencies (end JPAExTexShape) */
 struct JPAExTexShape {
-	/* 8027B13C */ JPAExTexShape(char const*);
+	/* 8027B13C */ JPAExTexShape(u8 const*);
 };
 
 // build JPADynamicsBlock (JPADynamicsBlock) False/False
 /* top-level dependencies (begin JPADynamicsBlock) */
 /* top-level dependencies (end JPADynamicsBlock) */
 struct JPADynamicsBlock {
-	/* 8027BB18 */ JPADynamicsBlock(char const*);
+	/* 8027BB18 */ JPADynamicsBlock(u8 const*);
 };
 
 // build JPAFieldBlock (JPAFieldBlock) False/False
@@ -103,14 +103,14 @@ struct JPADynamicsBlock {
 /* top-level dependencies (end JPAFieldBlock) */
 struct JPAFieldBlock {
 	// JKRHeap
-	/* 8027D088 */ JPAFieldBlock(char const*, JKRHeap*);
+	/* 8027D088 */ JPAFieldBlock(u8 const*, JKRHeap*);
 };
 
 // build JPAKeyBlock (JPAKeyBlock) False/False
 /* top-level dependencies (begin JPAKeyBlock) */
 /* top-level dependencies (end JPAKeyBlock) */
 struct JPAKeyBlock {
-	/* 8027D730 */ JPAKeyBlock(char const*);
+	/* 8027D730 */ JPAKeyBlock(u8 const*);
 };
 
 // 
@@ -125,8 +125,8 @@ extern "C" void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager();
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, s32);
-void* operator new[](u32, JKRHeap*, s32);
+void* operator new(u32, JKRHeap*, int);
+void* operator new[](u32, JKRHeap*, int);
 extern "C" void _savegpr_18();
 extern "C" void _restgpr_18();
 
@@ -155,7 +155,7 @@ extern "C" void _restgpr_18();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm JPAResourceLoader::JPAResourceLoader(char const* field_0, JPAResourceManager* field_1) {
+asm JPAResourceLoader::JPAResourceLoader(u8 const* field_0, JPAResourceManager* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceLoader/__ct__17JPAResourceLoaderFPCUcP18JPAResourceManager.s"
 }
@@ -166,7 +166,7 @@ asm JPAResourceLoader::JPAResourceLoader(char const* field_0, JPAResourceManager
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPAResourceLoader::load_jpc(char const* field_0, JPAResourceManager* field_1) {
+asm void JPAResourceLoader::load_jpc(u8 const* field_0, JPAResourceManager* field_1) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAResourceLoader/load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager.s"
 }

@@ -10,16 +10,65 @@
 // 
 
 // build J2DTextBoxEx (J2DTextBoxEx) False/False
-// build _GXCullMode (_GXCullMode) False/False
-/* top-level dependencies (begin _GXCullMode) */
-/* top-level dependencies (end _GXCullMode) */
-struct _GXCullMode {
+// build J2DAnmTransform (J2DAnmTransform) False/False
+/* top-level dependencies (begin J2DAnmTransform) */
+/* top-level dependencies (end J2DAnmTransform) */
+struct J2DAnmTransform {
 };
 
-// build J2DAnmVtxColor (J2DAnmVtxColor) False/False
-/* top-level dependencies (begin J2DAnmVtxColor) */
-/* top-level dependencies (end J2DAnmVtxColor) */
-struct J2DAnmVtxColor {
+// build ResTIMG (ResTIMG) False/False
+/* top-level dependencies (begin ResTIMG) */
+/* top-level dependencies (end ResTIMG) */
+struct ResTIMG {
+};
+
+// build J2DTevStage (J2DTevStage) False/False
+/* top-level dependencies (begin J2DTevStage) */
+/* top-level dependencies (end J2DTevStage) */
+struct J2DTevStage {
+};
+
+// build J2DMaterial (J2DMaterial) False/False
+// build J2DAnmColor (J2DAnmColor) False/False
+/* top-level dependencies (begin J2DAnmColor) */
+/* top-level dependencies (end J2DAnmColor) */
+struct J2DAnmColor {
+};
+
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
+/* top-level dependencies (begin J2DAnmTevRegKey) */
+/* top-level dependencies (end J2DAnmTevRegKey) */
+struct J2DAnmTevRegKey {
+};
+
+// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
+/* top-level dependencies (begin J2DAnmTexPattern) */
+/* top-level dependencies (end J2DAnmTexPattern) */
+struct J2DAnmTexPattern {
+};
+
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
+/* top-level dependencies (begin J2DAnmTextureSRTKey) */
+/* top-level dependencies (end J2DAnmTextureSRTKey) */
+struct J2DAnmTextureSRTKey {
+};
+
+/* top-level dependencies (begin J2DMaterial) */
+// outer dependency: J2DAnmColor
+// outer dependency: J2DAnmTevRegKey
+// outer dependency: J2DAnmTexPattern
+// outer dependency: J2DAnmTextureSRTKey
+/* top-level dependencies (end J2DMaterial) */
+struct J2DMaterial {
+	// J2DAnmColor
+	// J2DAnmTevRegKey
+	// J2DAnmTexPattern
+	// J2DAnmTextureSRTKey
+	/* 802EA38C */ void setGX();
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
 };
 
 // build JSURandomInputStream (JSURandomInputStream) False/False
@@ -38,33 +87,16 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
+// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
 // build J2DAnmVisibilityFull (J2DAnmVisibilityFull) False/False
 /* top-level dependencies (begin J2DAnmVisibilityFull) */
 /* top-level dependencies (end J2DAnmVisibilityFull) */
 struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, char*) const;
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) False/False
-/* top-level dependencies (begin J2DAnmTextureSRTKey) */
-/* top-level dependencies (end J2DAnmTextureSRTKey) */
-struct J2DAnmTextureSRTKey {
-};
-
-// build J2DTextBoxHBinding (J2DTextBoxHBinding) False/False
-/* top-level dependencies (begin J2DTextBoxHBinding) */
-/* top-level dependencies (end J2DTextBoxHBinding) */
-struct J2DTextBoxHBinding {
-};
-
-// build J2DAnmTransform (J2DAnmTransform) False/False
-/* top-level dependencies (begin J2DAnmTransform) */
-/* top-level dependencies (end J2DAnmTransform) */
-struct J2DAnmTransform {
-};
-
-// build J2DTextBoxEx (J2DTextBoxEx) True/False
-struct J2DTextBoxEx;
+// build J2DAnmTexPattern (J2DAnmTexPattern) True/True
+// build J2DAnmTevRegKey (J2DAnmTevRegKey) True/True
 // build JUtility (JUtility) False/False
 /* top-level dependencies (begin JUtility) */
 /* top-level dependencies (end JUtility) */
@@ -77,95 +109,56 @@ struct JUtility {
 
 };
 
-// build JUTFont (JUTFont) False/False
-/* top-level dependencies (begin JUTFont) */
-/* top-level dependencies (end JUTFont) */
-struct JUTFont {
-};
-
-// build J2DMaterial (J2DMaterial) False/False
-// build J2DAnmTextureSRTKey (J2DAnmTextureSRTKey) True/True
-// build J2DAnmTevRegKey (J2DAnmTevRegKey) False/False
-/* top-level dependencies (begin J2DAnmTevRegKey) */
-/* top-level dependencies (end J2DAnmTevRegKey) */
-struct J2DAnmTevRegKey {
-};
-
-// build J2DAnmColor (J2DAnmColor) False/False
-/* top-level dependencies (begin J2DAnmColor) */
-/* top-level dependencies (end J2DAnmColor) */
-struct J2DAnmColor {
-};
-
-// build J2DAnmTexPattern (J2DAnmTexPattern) False/False
-/* top-level dependencies (begin J2DAnmTexPattern) */
-/* top-level dependencies (end J2DAnmTexPattern) */
-struct J2DAnmTexPattern {
-};
-
-/* top-level dependencies (begin J2DMaterial) */
-// outer dependency: J2DAnmTextureSRTKey
-// outer dependency: J2DAnmTevRegKey
-// outer dependency: J2DAnmColor
-// outer dependency: J2DAnmTexPattern
-/* top-level dependencies (end J2DMaterial) */
-struct J2DMaterial {
-	// J2DAnmTextureSRTKey
-	// J2DAnmTevRegKey
-	// J2DAnmColor
-	// J2DAnmTexPattern
-	/* 802EA38C */ void setGX();
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-};
-
-// build J2DAnmTevRegKey (J2DAnmTevRegKey) True/True
-// build J2DAnmColor (J2DAnmColor) True/True
-// build J2DPane (J2DPane) False/False
-// build _GXCullMode (_GXCullMode) True/True
-// build J2DAnmVtxColor (J2DAnmVtxColor) True/True
-// build JSURandomInputStream (JSURandomInputStream) True/True
-// build ResTIMG (ResTIMG) False/False
-/* top-level dependencies (begin ResTIMG) */
-/* top-level dependencies (end ResTIMG) */
-struct ResTIMG {
-};
-
 // build ResFONT (ResFONT) False/False
 /* top-level dependencies (begin ResFONT) */
 /* top-level dependencies (end ResFONT) */
 struct ResFONT {
 };
 
+// build J2DAnmVtxColor (J2DAnmVtxColor) False/False
+/* top-level dependencies (begin J2DAnmVtxColor) */
+/* top-level dependencies (end J2DAnmVtxColor) */
+struct J2DAnmVtxColor {
+};
+
+// build J2DPane (J2DPane) False/False
+// build J2DAnmTransform (J2DAnmTransform) True/True
+// build ResFONT (ResFONT) True/True
+// build J2DAnmVtxColor (J2DAnmVtxColor) True/True
+// build ResTIMG (ResTIMG) True/True
 // build J2DAnmBase (J2DAnmBase) False/False
 /* top-level dependencies (begin J2DAnmBase) */
 /* top-level dependencies (end J2DAnmBase) */
 struct J2DAnmBase {
 };
 
+// build JSURandomInputStream (JSURandomInputStream) True/True
 // build J2DAnmVisibilityFull (J2DAnmVisibilityFull) True/True
-// build J2DAnmTransform (J2DAnmTransform) True/True
+// build _GXCullMode (_GXCullMode) False/False
+/* top-level dependencies (begin _GXCullMode) */
+/* top-level dependencies (end _GXCullMode) */
+struct _GXCullMode {
+};
+
 /* top-level dependencies (begin J2DPane) */
-// outer dependency: _GXCullMode
-// outer dependency: J2DAnmVtxColor
-// outer dependency: JSURandomInputStream
-// outer dependency: ResTIMG
-// outer dependency: ResFONT
-// outer dependency: J2DAnmBase
-// outer dependency: J2DAnmVisibilityFull
 // outer dependency: J2DAnmTransform
+// outer dependency: ResFONT
+// outer dependency: J2DAnmVtxColor
+// outer dependency: ResTIMG
+// outer dependency: J2DAnmBase
+// outer dependency: JSURandomInputStream
+// outer dependency: J2DAnmVisibilityFull
+// outer dependency: _GXCullMode
 /* top-level dependencies (end J2DPane) */
 struct J2DPane {
-	// _GXCullMode
-	// J2DAnmVtxColor
-	// JSURandomInputStream
-	// ResTIMG
-	// ResFONT
-	// J2DAnmBase
-	// J2DAnmVisibilityFull
 	// J2DAnmTransform
+	// ResFONT
+	// J2DAnmVtxColor
+	// ResTIMG
+	// J2DAnmBase
+	// JSURandomInputStream
+	// J2DAnmVisibilityFull
+	// _GXCullMode
 	/* 80053BC0 */ void calcMtx();
 	/* 80053C00 */ void makeMatrix(f32, f32);
 	/* 802F6F60 */ void move(f32, f32);
@@ -188,57 +181,64 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-// build ResTIMG (ResTIMG) True/True
-// build ResFONT (ResFONT) True/True
-// build J2DAnmBase (J2DAnmBase) True/True
-// build J2DTevStage (J2DTevStage) False/False
-/* top-level dependencies (begin J2DTevStage) */
-/* top-level dependencies (end J2DTevStage) */
-struct J2DTevStage {
+// build J2DTextBoxHBinding (J2DTextBoxHBinding) False/False
+/* top-level dependencies (begin J2DTextBoxHBinding) */
+/* top-level dependencies (end J2DTextBoxHBinding) */
+struct J2DTextBoxHBinding {
 };
 
-// build J2DAnmTexPattern (J2DAnmTexPattern) True/True
+// build J2DAnmBase (J2DAnmBase) True/True
+// build J2DAnmColor (J2DAnmColor) True/True
+// build _GXCullMode (_GXCullMode) True/True
+// build JUTFont (JUTFont) False/False
+/* top-level dependencies (begin JUTFont) */
+/* top-level dependencies (end JUTFont) */
+struct JUTFont {
+};
+
+// build J2DTextBoxEx (J2DTextBoxEx) True/False
+struct J2DTextBoxEx;
 /* top-level dependencies (begin J2DTextBoxEx) */
-// outer dependency: _GXCullMode
-// outer dependency: J2DAnmVtxColor
-// outer dependency: JSURandomInputStream
-// outer dependency: J2DAnmVisibilityFull
-// outer dependency: J2DAnmTextureSRTKey
-// outer dependency: J2DTextBoxHBinding
 // outer dependency: J2DAnmTransform
-// outer dependency: J2DTextBoxEx::stage_enum
-// outer dependency: JUtility::TColor
-// outer dependency: JUTFont
-// outer dependency: J2DMaterial
-// outer dependency: J2DAnmTevRegKey
-// outer dependency: J2DAnmColor
-// outer dependency: J2DPane
 // outer dependency: ResTIMG
-// outer dependency: ResFONT
-// outer dependency: J2DAnmBase
 // outer dependency: J2DTevStage
+// outer dependency: J2DMaterial
+// outer dependency: JSURandomInputStream
+// outer dependency: J2DAnmTextureSRTKey
+// outer dependency: J2DAnmVisibilityFull
 // outer dependency: J2DAnmTexPattern
+// outer dependency: J2DAnmTevRegKey
+// outer dependency: JUtility::TColor
+// outer dependency: ResFONT
+// outer dependency: J2DAnmVtxColor
+// outer dependency: J2DPane
+// outer dependency: J2DTextBoxHBinding
+// outer dependency: J2DAnmBase
+// outer dependency: J2DAnmColor
+// outer dependency: _GXCullMode
+// outer dependency: JUTFont
+// outer dependency: J2DTextBoxEx::stage_enum
 /* top-level dependencies (end J2DTextBoxEx) */
 struct J2DTextBoxEx {
-	// J2DAnmVtxColor
-	// JSURandomInputStream
-	// J2DAnmVisibilityFull
-	// J2DAnmTextureSRTKey
-	// J2DTextBoxHBinding
-	// J2DTextBoxEx::stage_enum
-	// JUtility::TColor
-	// J2DAnmTevRegKey
-	// ResTIMG
-	// ResFONT
-	// _GXCullMode
 	// J2DAnmTransform
-	// JUTFont
-	// J2DMaterial
-	// J2DAnmColor
-	// J2DPane
-	// J2DAnmBase
-	// J2DTevStage
 	// J2DAnmTexPattern
+	// J2DAnmTevRegKey
+	// JUtility::TColor
+	// J2DTextBoxHBinding
+	// J2DAnmBase
+	// J2DAnmColor
+	// _GXCullMode
+	// ResTIMG
+	// J2DTevStage
+	// J2DMaterial
+	// JSURandomInputStream
+	// J2DAnmTextureSRTKey
+	// J2DAnmVisibilityFull
+	// ResFONT
+	// J2DAnmVtxColor
+	// J2DPane
+	// JUTFont
+	// J2DTextBoxEx::stage_enum
 	// build stage_enum (J2DTextBoxEx::stage_enum) False/False
 	/* dependencies (begin J2DTextBoxEx::stage_enum) */
 	/* dependencies (end J2DTextBoxEx::stage_enum) */
@@ -249,6 +249,7 @@ struct J2DTextBoxEx {
 	/* 80256044 */ void setAnimation(J2DAnmTransform*);
 	/* 803071E4 */ J2DTextBoxEx(J2DPane*, JSURandomInputStream*, u32, J2DMaterial*);
 	/* 8030751C */ ~J2DTextBoxEx();
+	/* 803075AC */ void drawSelf(f32, f32, f32 (* )[3][4]);
 	/* 803078AC */ void draw(f32, f32);
 	/* 80307AF0 */ void draw(f32, f32, f32, J2DTextBoxHBinding);
 	/* 80307D5C */ void setFont(JUTFont*);
@@ -263,7 +264,7 @@ struct J2DTextBoxEx {
 	/* 80308668 */ void isSetBlackWhite(JUtility::TColor, JUtility::TColor) const;
 	/* 803086FC */ void getBlack() const;
 	/* 8030875C */ void getWhite() const;
-	/* 803087BC */ void setAlpha(char);
+	/* 803087BC */ void setAlpha(u8);
 	/* 803087DC */ void setCullBack(_GXCullMode);
 	/* 80308810 */ void rewriteAlpha();
 	/* 80308828 */ void isUsed(ResFONT const*);
@@ -306,30 +307,31 @@ struct JSUInputStream {
 
 // build JSUStreamSeekFrom (JSUStreamSeekFrom) True/True
 // build J2DPrint (J2DPrint) False/False
+// build JUtility (JUtility) True/True
 // build JUTFont (JUTFont) True/True
-// build J2DTextBoxHBinding (J2DTextBoxHBinding) True/True
 // build J2DTextBoxVBinding (J2DTextBoxVBinding) False/False
 /* top-level dependencies (begin J2DTextBoxVBinding) */
 /* top-level dependencies (end J2DTextBoxVBinding) */
 struct J2DTextBoxVBinding {
 };
 
-// build JUtility (JUtility) True/True
+// build J2DTextBoxHBinding (J2DTextBoxHBinding) True/True
 /* top-level dependencies (begin J2DPrint) */
-// outer dependency: JUTFont
-// outer dependency: J2DTextBoxHBinding
-// outer dependency: J2DTextBoxVBinding
 // outer dependency: JUtility::TColor
+// outer dependency: JUTFont
+// outer dependency: J2DTextBoxVBinding
+// outer dependency: J2DTextBoxHBinding
 /* top-level dependencies (end J2DPrint) */
 struct J2DPrint {
-	// JUTFont
-	// J2DTextBoxHBinding
-	// J2DTextBoxVBinding
 	// JUtility::TColor
+	// JUTFont
+	// J2DTextBoxVBinding
+	// J2DTextBoxHBinding
 	/* 802F4394 */ J2DPrint(JUTFont*, f32, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
 	/* 802F4420 */ ~J2DPrint();
 	/* 802F475C */ void locate(f32, f32);
-	/* 802F4828 */ void printReturn(char const*, f32, f32, J2DTextBoxHBinding, J2DTextBoxVBinding, f32, f32, char);
+	/* 802F4778 */ void print(f32, f32, u8, char const*, ...);
+	/* 802F4828 */ void printReturn(char const*, f32, f32, J2DTextBoxHBinding, J2DTextBoxVBinding, f32, f32, u8);
 };
 
 // build J2DTextBoxVBinding (J2DTextBoxVBinding) True/True
@@ -349,11 +351,10 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" static void drawSelf__12J2DTextBoxExFffPA3_A4_f();
 
 extern "C" void __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
 extern "C" void __dt__12J2DTextBoxExFv();
-extern "C" static void drawSelf__12J2DTextBoxExFffPA3_A4_f();
+extern "C" void drawSelf__12J2DTextBoxExFffPA3_A4_f();
 extern "C" void draw__12J2DTextBoxExFff();
 extern "C" void draw__12J2DTextBoxExFfff18J2DTextBoxHBinding();
 extern "C" void setFont__12J2DTextBoxExFP7JUTFont();
@@ -399,7 +400,6 @@ SECTION_SDATA2 extern f32 lit_1731;
 
 void* operator new[](u32);
 void operator delete(void*);
-extern "C" void print__8J2DPrintFffUcPCce();
 extern "C" void PSMTXIdentity();
 extern "C" void PSMTXConcat();
 extern "C" void GXSetVtxDesc();
@@ -576,7 +576,7 @@ f32 lit_1731 = 9.999999747378752e-05f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void drawSelf__12J2DTextBoxExFffPA3_A4_f() {
+asm void J2DTextBoxEx::drawSelf(f32 field_0, f32 field_1, f32 (* field_2)[3][4]) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DTextBoxEx/drawSelf__12J2DTextBoxExFffPA3_A4_f.s"
 }
@@ -775,7 +775,7 @@ asm void J2DTextBoxEx::getWhite() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J2DTextBoxEx::setAlpha(char field_0) {
+asm void J2DTextBoxEx::setAlpha(u8 field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DTextBoxEx/setAlpha__12J2DTextBoxExFUc.s"
 }

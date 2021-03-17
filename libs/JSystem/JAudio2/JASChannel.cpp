@@ -38,6 +38,7 @@ struct JASOscillator {
 	/* 8029C0E0 */ void update();
 };
 
+// build JASOscillator (JASOscillator) True/True
 // build JASChannel (JASChannel) True/False
 struct JASChannel;
 // build JASDsp (JASDsp) False/False
@@ -59,28 +60,27 @@ struct JASDsp {
 		/* 8029DD8C */ void setWaveInfo(JASWaveInfo const&, u32, u32);
 		/* 8029DEAC */ void setOscInfo(u32);
 		/* 8029DEC4 */ void initAutoMixer();
-		/* 8029DEF0 */ void setAutoMixer(u16, char, char, char, char);
+		/* 8029DEF0 */ void setAutoMixer(u16, u8, u8, u8, u8);
 		/* 8029DF1C */ void setPitch(u16);
-		/* 8029DF34 */ void setMixerInitVolume(char, s16);
-		/* 8029DF54 */ void setMixerVolume(char, s16);
-		/* 8029DF80 */ void setPauseFlag(char);
-		/* 8029E09C */ void setBusConnect(char, char);
+		/* 8029DF34 */ void setMixerInitVolume(u8, s16);
+		/* 8029DF54 */ void setMixerVolume(u8, s16);
+		/* 8029DF80 */ void setPauseFlag(u8);
+		/* 8029E09C */ void setBusConnect(u8, u8);
 	};
 
 };
 
-// build JASOscillator (JASOscillator) True/True
 /* top-level dependencies (begin JASChannel) */
 // outer dependency: JASOscillator::EffectParams
+// outer dependency: JASOscillator::Data
 // outer dependency: JASChannel::PanVector
 // outer dependency: JASDsp::TChannel
-// outer dependency: JASOscillator::Data
 /* top-level dependencies (end JASChannel) */
 struct JASChannel {
 	// JASOscillator::EffectParams
+	// JASOscillator::Data
 	// JASChannel::PanVector
 	// JASDsp::TChannel
-	// JASOscillator::Data
 	// build PanVector (JASChannel::PanVector) False/False
 	/* dependencies (begin JASChannel::PanVector) */
 	/* dependencies (end JASChannel::PanVector) */
@@ -152,7 +152,7 @@ struct JASDSPChannel {
 	/* 8029D320 */ void free();
 	/* 8029D330 */ void start();
 	/* 8029D340 */ void drop();
-	/* 8029D534 */ void setPriority(char);
+	/* 8029D534 */ void setPriority(u8);
 };
 
 // build JASWaveInfo (JASWaveInfo) True/True

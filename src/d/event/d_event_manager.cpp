@@ -14,7 +14,7 @@
 /* top-level dependencies (end dEvent_exception_c) */
 struct dEvent_exception_c {
 	/* 800463DC */ void init();
-	/* 800463F0 */ void setStartDemo(s32);
+	/* 800463F0 */ void setStartDemo(int);
 	/* 80046480 */ void getEventName();
 };
 
@@ -40,12 +40,6 @@ struct cXyz {
 struct dEvDtData_c {
 };
 
-// build fopAc_ac_c (fopAc_ac_c) False/False
-/* top-level dependencies (begin fopAc_ac_c) */
-/* top-level dependencies (end fopAc_ac_c) */
-struct fopAc_ac_c {
-};
-
 // build dEvDtEvent_c (dEvDtEvent_c) False/False
 // build dEvDtStaff_c (dEvDtStaff_c) False/False
 /* top-level dependencies (begin dEvDtStaff_c) */
@@ -63,58 +57,64 @@ struct dEvDtEvent_c {
 	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
 };
 
+// build fopAc_ac_c (fopAc_ac_c) False/False
+/* top-level dependencies (begin fopAc_ac_c) */
+/* top-level dependencies (end fopAc_ac_c) */
+struct fopAc_ac_c {
+};
+
 /* top-level dependencies (begin dEvent_manager_c) */
 // outer dependency: cXyz
 // outer dependency: dEvDtData_c
-// outer dependency: fopAc_ac_c
 // outer dependency: dEvDtEvent_c
+// outer dependency: fopAc_ac_c
 /* top-level dependencies (end dEvent_manager_c) */
 struct dEvent_manager_c {
 	// cXyz
 	// dEvDtData_c
-	// fopAc_ac_c
 	// dEvDtEvent_c
-	/* 800465E8 */ void getSubstance(dEvDtData_c*, s32);
+	// fopAc_ac_c
+	/* 800465E8 */ void getSubstance(dEvDtData_c*, int);
 	/* 80046688 */ dEvent_manager_c();
 	/* 80046710 */ void create();
 	/* 80046800 */ void setObjectArchive(char*);
 	/* 80046888 */ void demoInit();
-	/* 80046904 */ void roomInit(s32);
-	/* 800469EC */ void roomFinish(s32);
+	/* 80046904 */ void roomInit(int);
+	/* 800469EC */ void roomFinish(int);
 	/* 80046A58 */ void orderStartDemo();
 	/* 80046C0C */ void remove();
 	/* 80046CB8 */ void startProc(dEvDtEvent_c*);
 	/* 80046DA0 */ void closeProc(dEvDtEvent_c*);
-	/* 80046DAC */ void endProc(s16, s32);
+	/* 80046DAC */ void endProc(s16, int);
 	/* 80046E64 */ void Sequencer();
 	/* 800473FC */ void Experts();
-	/* 80047454 */ void getEventData(s16, s32);
+	/* 80047454 */ void getEventData(s16, int);
 	/* 800474BC */ void getEventData(s16);
-	/* 80047514 */ void getEventIdx(char const*, char, s32);
-	/* 80047698 */ void getEventIdx(fopAc_ac_c*, char);
-	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, char);
-	/* 80047930 */ void isMapToolCamera(char, s32);
+	/* 80047514 */ void getEventIdx(char const*, u8, s32);
+	/* 80047698 */ void getEventIdx(fopAc_ac_c*, u8);
+	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, u8);
+	/* 80047930 */ void isMapToolCamera(u8, s32);
 	/* 80047984 */ void order(s16);
 	/* 800479F8 */ void startCheck(s16);
 	/* 80047A38 */ void startCheckOld(char const*);
 	/* 80047A78 */ void endCheck(s16);
 	/* 80047ADC */ void endCheckOld(char const*);
-	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, s32);
-	/* 80047D4C */ void getIsAddvance(s32);
-	/* 80047E10 */ void getMyActIdx(s32, char const**, s32, s32, s32);
-	/* 80047F5C */ void getMyNowCutName(s32);
-	/* 80047FC8 */ void getMyDataP(s32, char const*, s32);
-	/* 800480EC */ void getMySubstanceP(s32, char const*, s32);
-	/* 80048144 */ void getMySubstanceNum(s32, char const*);
-	/* 8004817C */ void cutEnd(s32);
+	/* 80047B1C */ void getMyStaffId(char const*, fopAc_ac_c*, int);
+	/* 80047D4C */ void getIsAddvance(int);
+	/* 80047E10 */ void getMyActIdx(int, char const**, int, int, int);
+	/* 80047F5C */ void getMyNowCutName(int);
+	/* 80047FC8 */ void getMyDataP(int, char const*, int);
+	/* 800480EC */ void getMySubstanceP(int, char const*, int);
+	/* 80048144 */ void getMySubstanceNum(int, char const*);
+	/* 8004817C */ void cutEnd(int);
 	/* 800481F4 */ void getEventPrio(fopAc_ac_c*, s16);
 	/* 800482CC */ void issueStaff(char const*);
 	/* 80048348 */ void cancelStaff(char const*);
 	/* 800483C4 */ void setGoal(cXyz*);
 	/* 800483E0 */ void getGoal();
 	/* 800483E8 */ void getRunEventName();
-	/* 80048520 */ void specialCast_Shutter(s16, s32);
-	/* 80048618 */ void specialCast(char const*, s32);
+	/* 80048520 */ void specialCast_Shutter(s16, int);
+	/* 80048618 */ void specialCast(char const*, int);
 	/* 800487F0 */ void ChkPresentEnd();
 	/* 8004882C */ void checkStartDemo();
 };
@@ -129,7 +129,7 @@ struct dEvDtBase_c {
 	// dEvDtEvent_c
 	/* 80030190 */ ~dEvDtBase_c();
 	/* 80046138 */ void init();
-	/* 8004616C */ void init(char*, s32);
+	/* 8004616C */ void init(char*, int);
 	/* 8004628C */ void advanceCut(dEvDtEvent_c*);
 	/* 800466E0 */ dEvDtBase_c();
 };
@@ -141,14 +141,14 @@ struct dEvDtBase_c {
 /* top-level dependencies (begin dStage_roomControl_c) */
 /* top-level dependencies (end dStage_roomControl_c) */
 struct dStage_roomControl_c {
-	/* 80024384 */ void getStatusRoomDt(s32);
+	/* 80024384 */ void getStatusRoomDt(int);
 };
 
 // build dSv_info_c (dSv_info_c) False/False
 /* top-level dependencies (begin dSv_info_c) */
 /* top-level dependencies (end dSv_info_c) */
 struct dSv_info_c {
-	/* 80035360 */ void isSwitch(s32, s32) const;
+	/* 80035360 */ void isSwitch(int, int) const;
 };
 
 // build dRes_control_c (dRes_control_c) False/False
@@ -163,7 +163,7 @@ struct dRes_info_c {
 /* top-level dependencies (end dRes_control_c) */
 struct dRes_control_c {
 	// dRes_info_c
-	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, s32);
+	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
 // build dRes_info_c (dRes_info_c) True/True
@@ -174,9 +174,9 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 	/* 800429A8 */ void onSkipFade();
 	/* 80043278 */ void getStageEventDt();
-	/* 80043280 */ void sceneChange(s32);
-	/* 800432EC */ void convPId(s32);
-	/* 80043500 */ void searchMapEventData(char, s32);
+	/* 80043280 */ void sceneChange(int);
+	/* 800432EC */ void convPId(u32);
+	/* 80043500 */ void searchMapEventData(u8, s32);
 	/* 8004360C */ void runningEventID(s16);
 	/* 8004365C */ void setPt2(void*);
 	/* 800436BC */ void setPtI(void*);
@@ -187,7 +187,7 @@ struct dEvt_control_c {
 /* top-level dependencies (begin dEvDtFlag_c) */
 /* top-level dependencies (end dEvDtFlag_c) */
 struct dEvDtFlag_c {
-	/* 80043DC8 */ void flagSet(s32);
+	/* 80043DC8 */ void flagSet(int);
 	/* 80043E58 */ void init();
 };
 
@@ -202,21 +202,21 @@ struct dCamera_c {
 
 // build Vec (Vec) True/True
 // build Z2SeMgr (Z2SeMgr) False/False
+// build Vec (Vec) True/True
 // build JAISoundID (JAISoundID) False/False
 /* top-level dependencies (begin JAISoundID) */
 /* top-level dependencies (end JAISoundID) */
 struct JAISoundID {
 };
 
-// build Vec (Vec) True/True
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -236,7 +236,7 @@ static void extraOffObjectCallBack(fopAc_ac_c*, void*);
 static void allOffObjectCallBack(fopAc_ac_c*, void*);
 static void dEvmng_strcmp(char const*, char*);
 static void findShutterCallBack(fopAc_ac_c*, void*);
-static void dEv_talkman_get_action(s32);
+static void dEv_talkman_get_action(int);
 
 extern "C" void init__18dEvent_exception_cFv();
 extern "C" void setStartDemo__18dEvent_exception_cFi();
@@ -314,15 +314,15 @@ SECTION_SDATA2 extern f32 d_event_d_event_manager__lit_5055;
 // 
 
 extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, char, u16, u16, u16);
-void fopAcM_orderMapToolAutoNextEvent(fopAc_ac_c*, char, s16, u16, u16, u16);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void fopAcM_orderMapToolAutoNextEvent(fopAc_ac_c*, u8, s16, u16, u16, u16);
 void fopAcM_searchFromName4Event(char const*, s16);
 void dComIfG_getStageRes(char const*);
-void dComIfG_getRoomArcName(s32);
+void dComIfG_getRoomArcName(int);
 void dComIfGp_SelectWarpPt_get();
-void dEv_defaultSkipProc(void*, s32);
-void dEv_defaultSkipZev(void*, s32);
-void dEv_defaultSkipStb(void*, s32);
+void dEv_defaultSkipProc(void*, int);
+void dEv_defaultSkipZev(void*, int);
+void dEv_defaultSkipStb(void*, int);
 extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
 void dCam_getBody();
 extern "C" void PSVECSquareMag();
@@ -431,7 +431,7 @@ asm void dEvent_exception_c::init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_exception_c::setStartDemo(s32 field_0) {
+asm void dEvent_exception_c::setStartDemo(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/setStartDemo__18dEvent_exception_cFi.s"
 }
@@ -520,7 +520,7 @@ asm void dEvent_exception_c::getEventName() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getSubstance(dEvDtData_c* field_0, s32 field_1) {
+asm void dEvent_manager_c::getSubstance(dEvDtData_c* field_0, int field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getSubstance__16dEvent_manager_cFP11dEvDtData_ci.s"
 }
@@ -586,7 +586,7 @@ asm void dEvent_manager_c::demoInit() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::roomInit(s32 field_0) {
+asm void dEvent_manager_c::roomInit(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/roomInit__16dEvent_manager_cFi.s"
 }
@@ -597,7 +597,7 @@ asm void dEvent_manager_c::roomInit(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::roomFinish(s32 field_0) {
+asm void dEvent_manager_c::roomFinish(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/roomFinish__16dEvent_manager_cFi.s"
 }
@@ -685,7 +685,7 @@ asm void dEvent_manager_c::closeProc(dEvDtEvent_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::endProc(s16 field_0, s32 field_1) {
+asm void dEvent_manager_c::endProc(s16 field_0, int field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/endProc__16dEvent_manager_cFsi.s"
 }
@@ -746,7 +746,7 @@ asm void dEvent_manager_c::Experts() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getEventData(s16 field_0, s32 field_1) {
+asm void dEvent_manager_c::getEventData(s16 field_0, int field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getEventData__16dEvent_manager_cFsi.s"
 }
@@ -772,7 +772,7 @@ u8 data_804246A0[17 + 3 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getEventIdx(char const* field_0, char field_1, s32 field_2) {
+asm void dEvent_manager_c::getEventIdx(char const* field_0, u8 field_1, s32 field_2) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getEventIdx__16dEvent_manager_cFPCcUcl.s"
 }
@@ -787,7 +787,7 @@ u8 data_804246B4[17 + 3 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getEventIdx(fopAc_ac_c* field_0, char field_1) {
+asm void dEvent_manager_c::getEventIdx(fopAc_ac_c* field_0, u8 field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc.s"
 }
@@ -802,7 +802,7 @@ u8 data_804246C8[17 + 7 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getEventIdx(fopAc_ac_c* field_0, char const* field_1, char field_2) {
+asm void dEvent_manager_c::getEventIdx(fopAc_ac_c* field_0, char const* field_1, u8 field_2) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc.s"
 }
@@ -813,7 +813,7 @@ asm void dEvent_manager_c::getEventIdx(fopAc_ac_c* field_0, char const* field_1,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::isMapToolCamera(char field_0, s32 field_1) {
+asm void dEvent_manager_c::isMapToolCamera(u8 field_0, s32 field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/isMapToolCamera__16dEvent_manager_cFUcl.s"
 }
@@ -879,7 +879,7 @@ asm void dEvent_manager_c::endCheckOld(char const* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getMyStaffId(char const* field_0, fopAc_ac_c* field_1, s32 field_2) {
+asm void dEvent_manager_c::getMyStaffId(char const* field_0, fopAc_ac_c* field_1, int field_2) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci.s"
 }
@@ -890,7 +890,7 @@ asm void dEvent_manager_c::getMyStaffId(char const* field_0, fopAc_ac_c* field_1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getIsAddvance(s32 field_0) {
+asm void dEvent_manager_c::getIsAddvance(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getIsAddvance__16dEvent_manager_cFi.s"
 }
@@ -912,7 +912,7 @@ asm static void dEvmng_strcmp(char const* field_0, char* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getMyActIdx(s32 field_0, char const** field_1, s32 field_2, s32 field_3, s32 field_4) {
+asm void dEvent_manager_c::getMyActIdx(int field_0, char const** field_1, int field_2, int field_3, int field_4) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMyActIdx__16dEvent_manager_cFiPCPCciii.s"
 }
@@ -923,7 +923,7 @@ asm void dEvent_manager_c::getMyActIdx(s32 field_0, char const** field_1, s32 fi
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getMyNowCutName(s32 field_0) {
+asm void dEvent_manager_c::getMyNowCutName(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMyNowCutName__16dEvent_manager_cFi.s"
 }
@@ -934,7 +934,7 @@ asm void dEvent_manager_c::getMyNowCutName(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getMyDataP(s32 field_0, char const* field_1, s32 field_2) {
+asm void dEvent_manager_c::getMyDataP(int field_0, char const* field_1, int field_2) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMyDataP__16dEvent_manager_cFiPCci.s"
 }
@@ -945,7 +945,7 @@ asm void dEvent_manager_c::getMyDataP(s32 field_0, char const* field_1, s32 fiel
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getMySubstanceP(s32 field_0, char const* field_1, s32 field_2) {
+asm void dEvent_manager_c::getMySubstanceP(int field_0, char const* field_1, int field_2) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMySubstanceP__16dEvent_manager_cFiPCci.s"
 }
@@ -956,7 +956,7 @@ asm void dEvent_manager_c::getMySubstanceP(s32 field_0, char const* field_1, s32
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::getMySubstanceNum(s32 field_0, char const* field_1) {
+asm void dEvent_manager_c::getMySubstanceNum(int field_0, char const* field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/getMySubstanceNum__16dEvent_manager_cFiPCc.s"
 }
@@ -967,7 +967,7 @@ asm void dEvent_manager_c::getMySubstanceNum(s32 field_0, char const* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::cutEnd(s32 field_0) {
+asm void dEvent_manager_c::cutEnd(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/cutEnd__16dEvent_manager_cFi.s"
 }
@@ -1066,7 +1066,7 @@ f32 d_event_d_event_manager__lit_5055 = 100.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::specialCast_Shutter(s16 field_0, s32 field_1) {
+asm void dEvent_manager_c::specialCast_Shutter(s16 field_0, int field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/specialCast_Shutter__16dEvent_manager_cFsi.s"
 }
@@ -1077,7 +1077,7 @@ asm void dEvent_manager_c::specialCast_Shutter(s16 field_0, s32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvent_manager_c::specialCast(char const* field_0, s32 field_1) {
+asm void dEvent_manager_c::specialCast(char const* field_0, int field_1) {
 	nofralloc
 #include "asm/d/event/d_event_manager/specialCast__16dEvent_manager_cFPCci.s"
 }
@@ -1096,7 +1096,7 @@ u8 data_803A82A8[16] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dEv_talkman_get_action(s32 field_0) {
+asm static void dEv_talkman_get_action(int field_0) {
 	nofralloc
 #include "asm/d/event/d_event_manager/dEv_talkman_get_action__Fi.s"
 }

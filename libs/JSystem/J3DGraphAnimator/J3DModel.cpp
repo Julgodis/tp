@@ -17,10 +17,21 @@ struct J3DModelData {
 	/* 803260F8 */ void syncJ3DSysFlags() const;
 };
 
-// build J3DSkinDeform (J3DSkinDeform) False/False
-// build J3DModelData (J3DModelData) True/True
+// build J3DDeformData (J3DDeformData) False/False
 // build J3DModel (J3DModel) True/False
 struct J3DModel;
+/* top-level dependencies (begin J3DDeformData) */
+// outer dependency: J3DModel
+/* top-level dependencies (end J3DDeformData) */
+struct J3DDeformData {
+	// J3DModel
+	/* 8032E230 */ void offAllFlag(u32);
+	/* 8032E274 */ void deform(J3DModel*);
+};
+
+// build J3DSkinDeform (J3DSkinDeform) False/False
+// build J3DModelData (J3DModelData) True/True
+// build J3DModel (J3DModel) True/True
 /* top-level dependencies (begin J3DSkinDeform) */
 // outer dependency: J3DModelData
 // outer dependency: J3DModel
@@ -35,26 +46,15 @@ struct J3DSkinDeform {
 	/* 8032DFDC */ void deform(J3DModel*);
 };
 
-// build J3DDeformData (J3DDeformData) False/False
-// build J3DModel (J3DModel) True/True
-/* top-level dependencies (begin J3DDeformData) */
-// outer dependency: J3DModel
-/* top-level dependencies (end J3DDeformData) */
-struct J3DDeformData {
-	// J3DModel
-	/* 8032E230 */ void offAllFlag(u32);
-	/* 8032E274 */ void deform(J3DModel*);
-};
-
 /* top-level dependencies (begin J3DModel) */
 // outer dependency: J3DModelData
-// outer dependency: J3DSkinDeform
 // outer dependency: J3DDeformData
+// outer dependency: J3DSkinDeform
 /* top-level dependencies (end J3DModel) */
 struct J3DModel {
 	// J3DModelData
-	// J3DSkinDeform
 	// J3DDeformData
+	// J3DSkinDeform
 	/* 80327100 */ void initialize();
 	/* 80327184 */ void entryModelData(J3DModelData*, u32, u32);
 	/* 80327300 */ void createShapePacket(J3DModelData*);
@@ -85,14 +85,23 @@ struct J3DModel {
 // build J3DSkinDeform (J3DSkinDeform) True/True
 // build J3DMtxBuffer (J3DMtxBuffer) False/False
 // build J3DModelData (J3DModelData) True/True
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
 /* top-level dependencies (begin J3DMtxBuffer) */
 // outer dependency: J3DModelData
+// outer dependency: Vec
 /* top-level dependencies (end J3DMtxBuffer) */
 struct J3DMtxBuffer {
 	// J3DModelData
+	// Vec
 	/* 80326214 */ void initialize();
 	/* 80326258 */ void create(J3DModelData*, u32);
 	/* 803268D4 */ void calcWeightEnvelopeMtx();
+	/* 80326ACC */ void calcDrawMtx(u32, Vec const&, f32 const (& )[3][4]);
 	/* 80326D3C */ void calcNrmMtx();
 	/* 80326EF0 */ void calcBBoardMtx();
 	/* 803283B4 */ ~J3DMtxBuffer();
@@ -154,6 +163,17 @@ struct J3DMatPacket {
 };
 
 // build J3DShapePacket (J3DShapePacket) True/True
+// build J3DShape (J3DShape) False/False
+// build Vec (Vec) True/True
+/* top-level dependencies (begin J3DShape) */
+// outer dependency: Vec
+/* top-level dependencies (end J3DShape) */
+struct J3DShape {
+	// Vec
+	/* 80314DA8 */ void calcNBTScale(Vec const&, f32 (* )[3][3], f32 (* )[3][3]);
+};
+
+// build Vec (Vec) True/True
 // build J3DMaterial (J3DMaterial) False/False
 /* top-level dependencies (begin J3DMaterial) */
 /* top-level dependencies (end J3DMaterial) */
@@ -220,9 +240,7 @@ SECTION_SDATA2 extern f32 J3DModel__lit_896;
 void* operator new(u32);
 void* operator new[](u32);
 void operator delete(void*);
-extern "C" void calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f();
-extern "C" void calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf();
-extern "C" void J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f();
+void J3DCalcViewBaseMtx(f32 (* )[4], Vec const&, f32 const (& )[3][4], f32 (* )[4]);
 extern "C" void DCStoreRange();
 extern "C" void DCStoreRangeNoSync();
 extern "C" void PSMTXIdentity();

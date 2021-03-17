@@ -10,25 +10,25 @@
 // 
 
 // build JAISe (JAISe) False/False
-// build JAISoundActivity (JAISoundActivity) False/False
-/* top-level dependencies (begin JAISoundActivity) */
-/* top-level dependencies (end JAISoundActivity) */
-struct JAISoundActivity {
-};
-
 // build JASSoundParams (JASSoundParams) False/False
 /* top-level dependencies (begin JASSoundParams) */
 /* top-level dependencies (end JASSoundParams) */
 struct JASSoundParams {
 };
 
+// build JAISoundActivity (JAISoundActivity) False/False
+/* top-level dependencies (begin JAISoundActivity) */
+/* top-level dependencies (end JAISoundActivity) */
+struct JAISoundActivity {
+};
+
 /* top-level dependencies (begin JAISe) */
-// outer dependency: JAISoundActivity
 // outer dependency: JASSoundParams
+// outer dependency: JAISoundActivity
 /* top-level dependencies (end JAISe) */
 struct JAISe {
-	// JAISoundActivity
 	// JASSoundParams
+	// JAISoundActivity
 	/* 8029F0F8 */ void mixOut_(JASSoundParams const&);
 	/* 8029F214 */ void stopTrack_();
 	/* 8029F250 */ void startTrack_(JASSoundParams const&);
@@ -36,12 +36,12 @@ struct JAISe {
 	/* 8029F4CC */ void JAISeCategoryMgr_calc_();
 	/* 8029F5C8 */ void JAISound_tryDie_();
 	/* 8029F6D8 */ bool getNumChild() const;
-	/* 8029F6E0 */ bool getChild(s32);
-	/* 8029F6E8 */ void releaseChild(s32);
+	/* 8029F6E0 */ bool getChild(int);
+	/* 8029F6E8 */ void releaseChild(int);
 	/* 8029F6EC */ void prepare_getSeqData_();
 	/* 8029F78C */ void prepare_();
 	/* 8029F84C */ void getTrack();
-	/* 8029F854 */ void getChildTrack(s32);
+	/* 8029F854 */ void getChildTrack(int);
 	/* 8029F864 */ void asSe();
 	/* 8029F868 */ void getTempoMgr();
 };
@@ -322,13 +322,13 @@ bool JAISe::getNumChild() const {
 
 
 /* 8029F6E0-8029F6E8 0008+00 rc=2 efc=0 .text      getChild__5JAISeFi                                           */
-bool JAISe::getChild(s32 field_0) {
+bool JAISe::getChild(int field_0) {
 	return false;
 }
 
 
 /* 8029F6E8-8029F6EC 0004+00 rc=2 efc=0 .text      releaseChild__5JAISeFi                                       */
-void JAISe::releaseChild(s32 field_0) {
+void JAISe::releaseChild(int field_0) {
 	/* empty function */
 }
 
@@ -370,7 +370,7 @@ asm void JAISe::getTrack() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JAISe::getChildTrack(s32 field_0) {
+asm void JAISe::getChildTrack(int field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISe/getChildTrack__5JAISeFi.s"
 }

@@ -11,6 +11,19 @@
 
 // build dMeterButton_c (dMeterButton_c) False/False
 // build CPaneMgr (CPaneMgr) False/False
+// build JKRExpHeap (JKRExpHeap) False/False
+/* top-level dependencies (begin JKRExpHeap) */
+/* top-level dependencies (end JKRExpHeap) */
+struct JKRExpHeap {
+};
+
+// build J2DPane (J2DPane) False/False
+/* top-level dependencies (begin J2DPane) */
+/* top-level dependencies (end J2DPane) */
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
 // build J2DScreen (J2DScreen) False/False
 // build JKRArchive (JKRArchive) False/False
 /* top-level dependencies (begin JKRArchive) */
@@ -36,32 +49,20 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (JKRExpHeap) False/False
-/* top-level dependencies (begin JKRExpHeap) */
-/* top-level dependencies (end JKRExpHeap) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (J2DPane) False/False
-/* top-level dependencies (begin J2DPane) */
-/* top-level dependencies (end J2DPane) */
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-};
-
 /* top-level dependencies (begin CPaneMgr) */
-// outer dependency: J2DScreen
 // outer dependency: JKRExpHeap
 // outer dependency: J2DPane
+// outer dependency: J2DScreen
 /* top-level dependencies (end CPaneMgr) */
 struct CPaneMgr {
-	// J2DScreen
 	// JKRExpHeap
 	// J2DPane
+	// J2DScreen
 	/* 80253930 */ CPaneMgr();
-	/* 80253984 */ CPaneMgr(J2DScreen*, u64, char, JKRExpHeap*);
+	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80253A18 */ ~CPaneMgr();
 	/* 802545B0 */ void paneTrans(f32, f32);
+	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
@@ -103,7 +104,7 @@ struct dMeterButton_c {
 	/* 80205CA0 */ void updateButton();
 	/* 80206978 */ void updateText(u32);
 	/* 80206CE0 */ void setAlphaButtonAAnimeMin();
-	/* 80206D70 */ void isFastSet(s32);
+	/* 80206D70 */ void isFastSet(int);
 	/* 80207060 */ void setAlphaButtonAAnimeMax();
 	/* 8020714C */ void setAlphaButtonBAnimeMin();
 	/* 802071DC */ void setAlphaButtonBAnimeMax();
@@ -149,18 +150,18 @@ struct dMeterButton_c {
 	/* 80208FB4 */ void setAlphaButtonNunCAnimeMax();
 	/* 802090B4 */ void setAlphaButtonBinAnimeMin();
 	/* 8020914C */ void setAlphaButtonBinAnimeMax();
-	/* 8020924C */ void setAlphaButtonOAnimeMin(s32);
-	/* 802092C0 */ void setAlphaButtonOAnimeMax(s32);
+	/* 8020924C */ void setAlphaButtonOAnimeMin(int);
+	/* 802092C0 */ void setAlphaButtonOAnimeMax(int);
 	/* 80209368 */ void setAlphaIconAnimeMin();
 	/* 802093D8 */ void setAlphaIconAnimeMax();
 	/* 80209474 */ void isClose();
-	/* 802095C0 */ void setString(char*, char, char, char);
+	/* 802095C0 */ void setString(char*, u8, u8, u8);
 	/* 80209CEC */ void hideAll();
-	/* 80209D7C */ void getCenterPosCalc(char, char*, s32);
-	/* 8020A540 */ void trans_button(s32, f32);
-	/* 8020A94C */ void hide_button(char);
+	/* 80209D7C */ void getCenterPosCalc(u8, char*, int);
+	/* 8020A540 */ void trans_button(int, f32);
+	/* 8020A94C */ void hide_button(u8);
 	/* 8020AA84 */ void pikariCheck();
-	/* 8020AE68 */ void paneTrans(CPaneMgr*, f32, f32, char);
+	/* 8020AE68 */ void paneTrans(CPaneMgr*, f32, f32, u8);
 };
 
 // build CPaneMgr (CPaneMgr) True/True
@@ -168,14 +169,14 @@ struct dMeterButton_c {
 /* top-level dependencies (begin dComIfG_play_c) */
 /* top-level dependencies (end dComIfG_play_c) */
 struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(s32);
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 // build dSv_player_item_c (dSv_player_item_c) False/False
 /* top-level dependencies (begin dSv_player_item_c) */
 /* top-level dependencies (end dSv_player_item_c) */
 struct dSv_player_item_c {
-	/* 80033030 */ void getItem(s32, bool) const;
+	/* 80033030 */ void getItem(int, bool) const;
 };
 
 // build dSv_event_c (dSv_event_c) False/False
@@ -186,16 +187,6 @@ struct dSv_event_c {
 };
 
 // build dMeter2Draw_c (dMeter2Draw_c) False/False
-// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
-/* top-level dependencies (begin CPaneMgrAlpha) */
-/* top-level dependencies (end CPaneMgrAlpha) */
-struct CPaneMgrAlpha {
-	/* 802555C8 */ void show();
-	/* 80255608 */ void hide();
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255828 */ void getAlphaRate();
-};
-
 // build JUtility (JUtility) False/False
 /* top-level dependencies (begin JUtility) */
 /* top-level dependencies (end JUtility) */
@@ -208,14 +199,24 @@ struct JUtility {
 
 };
 
+// build CPaneMgrAlpha (CPaneMgrAlpha) False/False
+/* top-level dependencies (begin CPaneMgrAlpha) */
+/* top-level dependencies (end CPaneMgrAlpha) */
+struct CPaneMgrAlpha {
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
 /* top-level dependencies (begin dMeter2Draw_c) */
-// outer dependency: CPaneMgrAlpha
 // outer dependency: JUtility::TColor
+// outer dependency: CPaneMgrAlpha
 /* top-level dependencies (end dMeter2Draw_c) */
 struct dMeter2Draw_c {
-	// CPaneMgrAlpha
 	// JUtility::TColor
-	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, char);
+	// CPaneMgrAlpha
+	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
 	/* 8021BBB4 */ void getCanoeFishing();
 };
@@ -234,6 +235,7 @@ struct J2DPicture {
 /* top-level dependencies (end J2DTextBox) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 /* top-level dependencies (begin dMeter2Info_c) */
@@ -246,7 +248,7 @@ struct dMeter2Info_c {
 	/* 8021C1F0 */ void decFloatingMessageTimer();
 	/* 8021C218 */ void resetFloatingMessage();
 	/* 8021C6A4 */ void getStringLength(J2DTextBox*, char*);
-	/* 8021CF08 */ void readItemTexture(char, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, s32);
+	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
 // build J2DTextBox (J2DTextBox) True/True
@@ -255,10 +257,11 @@ struct dMeter2Info_c {
 /* top-level dependencies (begin COutFont_c) */
 /* top-level dependencies (end COutFont_c) */
 struct COutFont_c {
-	/* 80225C94 */ COutFont_c(char);
+	/* 80225C94 */ COutFont_c(u8);
 };
 
 // build dMsgObject_c (dMsgObject_c) False/False
+// build COutFont_c (COutFont_c) True/True
 // build JUTFont (JUTFont) False/False
 /* top-level dependencies (begin JUTFont) */
 /* top-level dependencies (end JUTFont) */
@@ -266,16 +269,15 @@ struct JUTFont {
 };
 
 // build J2DTextBox (J2DTextBox) True/True
-// build COutFont_c (COutFont_c) True/True
 /* top-level dependencies (begin dMsgObject_c) */
+// outer dependency: COutFont_c
 // outer dependency: JUTFont
 // outer dependency: J2DTextBox
-// outer dependency: COutFont_c
 /* top-level dependencies (end dMsgObject_c) */
 struct dMsgObject_c {
+	// COutFont_c
 	// JUTFont
 	// J2DTextBox
-	// COutFont_c
 	/* 802370A8 */ void isGetItemMessage();
 	/* 802370BC */ void isKanbanMessage();
 	/* 802370E8 */ void isHowlMessage();
@@ -302,26 +304,26 @@ struct dMsgString_c {
 // build JKRExpHeap (JKRExpHeap) True/True
 // build J2DPane (J2DPane) True/True
 // build Z2SeMgr (Z2SeMgr) False/False
-// build JAISoundID (JAISoundID) False/False
-/* top-level dependencies (begin JAISoundID) */
-/* top-level dependencies (end JAISoundID) */
-struct JAISoundID {
-};
-
 // build Vec (Vec) False/False
 /* top-level dependencies (begin Vec) */
 /* top-level dependencies (end Vec) */
 struct Vec {
 };
 
+// build JAISoundID (JAISoundID) False/False
+/* top-level dependencies (begin JAISoundID) */
+/* top-level dependencies (end JAISoundID) */
+struct JAISoundID {
+};
+
 /* top-level dependencies (begin Z2SeMgr) */
-// outer dependency: JAISoundID
 // outer dependency: Vec
+// outer dependency: JAISoundID
 /* top-level dependencies (end Z2SeMgr) */
 struct Z2SeMgr {
-	// JAISoundID
 	// Vec
-	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, char, f32, f32, f32, f32, char);
+	// JAISoundID
+	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
 // build JAISoundID (JAISoundID) True/True
@@ -330,7 +332,7 @@ struct Z2SeMgr {
 /* top-level dependencies (begin JKRHeap) */
 /* top-level dependencies (end JKRHeap) */
 struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, s32);
+	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
@@ -469,13 +471,11 @@ SECTION_SDATA2 extern f32 lit_7857;
 
 void mDoExt_getCurrentHeap();
 void mDoExt_getMesgFont();
-void dComIfGs_isOneZoneSwitch(s32, s32);
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+void dComIfGs_isOneZoneSwitch(int, int);
 void dPaneClass_showNullPane(J2DScreen*);
 void cLib_addCalc2(f32*, f32, f32, f32);
 void* operator new(u32);
 void operator delete(void*);
-extern "C" void setString__10J2DTextBoxFsPCce();
 extern "C" void __save_gpr();
 extern "C" void _savegpr_21();
 extern "C" void _savegpr_24();
@@ -1108,7 +1108,7 @@ asm void dMeterButton_c::setAlphaButtonAAnimeMin() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterButton_c::isFastSet(s32 field_0) {
+asm void dMeterButton_c::isFastSet(int field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter_button/isFastSet__14dMeterButton_cFi.s"
 }
@@ -1604,7 +1604,7 @@ asm void dMeterButton_c::setAlphaButtonBinAnimeMax() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterButton_c::setAlphaButtonOAnimeMin(s32 field_0) {
+asm void dMeterButton_c::setAlphaButtonOAnimeMin(int field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonOAnimeMin__14dMeterButton_cFi.s"
 }
@@ -1615,7 +1615,7 @@ asm void dMeterButton_c::setAlphaButtonOAnimeMin(s32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterButton_c::setAlphaButtonOAnimeMax(s32 field_0) {
+asm void dMeterButton_c::setAlphaButtonOAnimeMax(int field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setAlphaButtonOAnimeMax__14dMeterButton_cFi.s"
 }
@@ -1659,7 +1659,7 @@ asm void dMeterButton_c::isClose() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterButton_c::setString(char* field_0, char field_1, char field_2, char field_3) {
+asm void dMeterButton_c::setString(char* field_0, u8 field_1, u8 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/meter/d_meter_button/setString__14dMeterButton_cFPcUcUcUc.s"
 }
@@ -1681,7 +1681,7 @@ asm void dMeterButton_c::hideAll() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterButton_c::getCenterPosCalc(char field_0, char* field_1, s32 field_2) {
+asm void dMeterButton_c::getCenterPosCalc(u8 field_0, char* field_1, int field_2) {
 	nofralloc
 #include "asm/d/meter/d_meter_button/getCenterPosCalc__14dMeterButton_cFUcPci.s"
 }
@@ -1696,7 +1696,7 @@ f32 lit_7857 = 20.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterButton_c::trans_button(s32 field_0, f32 field_1) {
+asm void dMeterButton_c::trans_button(int field_0, f32 field_1) {
 	nofralloc
 #include "asm/d/meter/d_meter_button/trans_button__14dMeterButton_cFif.s"
 }
@@ -1707,7 +1707,7 @@ asm void dMeterButton_c::trans_button(s32 field_0, f32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterButton_c::hide_button(char field_0) {
+asm void dMeterButton_c::hide_button(u8 field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter_button/hide_button__14dMeterButton_cFUc.s"
 }
@@ -1729,7 +1729,7 @@ asm void dMeterButton_c::pikariCheck() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dMeterButton_c::paneTrans(CPaneMgr* field_0, f32 field_1, f32 field_2, char field_3) {
+asm void dMeterButton_c::paneTrans(CPaneMgr* field_0, f32 field_1, f32 field_2, u8 field_3) {
 	nofralloc
 #include "asm/d/meter/d_meter_button/paneTrans__14dMeterButton_cFP8CPaneMgrffUc.s"
 }

@@ -18,7 +18,7 @@ struct JUTAssertion {
 	/* 802E499C */ void flushMessage();
 	/* 802E4A54 */ void flushMessage_dbPrint();
 	/* 802E4C34 */ void setVisible(bool);
-	/* 802E4C3C */ void setMessageCount(s32);
+	/* 802E4C3C */ void setMessageCount(int);
 };
 
 // build JUTFont (JUTFont) False/False
@@ -174,7 +174,7 @@ asm void JUTAssertion::setVisible(bool field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JUTAssertion::setMessageCount(s32 field_0) {
+asm void JUTAssertion::setMessageCount(int field_0) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTAssert/setMessageCount__12JUTAssertionFi.s"
 }

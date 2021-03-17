@@ -10,41 +10,63 @@
 // 
 
 // build J3DShapeMtx (J3DShapeMtx) False/False
+// build Vec (Vec) False/False
+/* top-level dependencies (begin Vec) */
+/* top-level dependencies (end Vec) */
+struct Vec {
+};
+
 /* top-level dependencies (begin J3DShapeMtx) */
+// outer dependency: Vec
 /* top-level dependencies (end J3DShapeMtx) */
 struct J3DShapeMtx {
+	// Vec
 	/* 80273E08 */ bool getUseMtxNum() const;
 	/* 803130A8 */ void resetMtxLoadCache();
-	/* 803130E4 */ void loadMtxIndx_PNGP(s32, u16) const;
-	/* 80313128 */ void loadMtxIndx_PCPU(s32, u16) const;
-	/* 80313188 */ void loadMtxIndx_NCPU(s32, u16) const;
-	/* 803131D4 */ void loadMtxIndx_PNCPU(s32, u16) const;
+	/* 803130E4 */ void loadMtxIndx_PNGP(int, u16) const;
+	/* 80313128 */ void loadMtxIndx_PCPU(int, u16) const;
+	/* 80313188 */ void loadMtxIndx_NCPU(int, u16) const;
+	/* 803131D4 */ void loadMtxIndx_PNCPU(int, u16) const;
 	/* 80313B94 */ void load() const;
+	/* 80313BF0 */ void calcNBTScale(Vec const&, f32 (* )[3][3], f32 (* )[3][3]);
 	/* 8031459C */ void getUseMtxIndex(u16) const;
 	/* 80314798 */ ~J3DShapeMtx();
 	/* 803147E0 */ void getType() const;
+};
+
+// build J3DDifferedTexMtx (J3DDifferedTexMtx) False/False
+/* top-level dependencies (begin J3DDifferedTexMtx) */
+/* top-level dependencies (end J3DDifferedTexMtx) */
+struct J3DDifferedTexMtx {
+	/* 8031322C */ void loadExecute(f32 const (* )[4]);
 };
 
 // build J3DShapeMtxConcatView (J3DShapeMtxConcatView) False/False
 /* top-level dependencies (begin J3DShapeMtxConcatView) */
 /* top-level dependencies (end J3DShapeMtxConcatView) */
 struct J3DShapeMtxConcatView {
-	/* 80313828 */ void loadMtxConcatView_PNGP(s32, u16) const;
-	/* 803138C8 */ void loadMtxConcatView_PCPU(s32, u16) const;
-	/* 8031396C */ void loadMtxConcatView_NCPU(s32, u16) const;
-	/* 80313A14 */ void loadMtxConcatView_PNCPU(s32, u16) const;
-	/* 80313AC8 */ void loadMtxConcatView_PNGP_LOD(s32, u16) const;
+	/* 80313828 */ void loadMtxConcatView_PNGP(int, u16) const;
+	/* 803138C8 */ void loadMtxConcatView_PCPU(int, u16) const;
+	/* 8031396C */ void loadMtxConcatView_NCPU(int, u16) const;
+	/* 80313A14 */ void loadMtxConcatView_PNCPU(int, u16) const;
+	/* 80313AC8 */ void loadMtxConcatView_PNGP_LOD(int, u16) const;
 	/* 80313C54 */ void load() const;
-	/* 80314598 */ void loadNrmMtx(s32, u16) const;
+	/* 80313D28 */ void loadNrmMtx(int, u16, f32 (* )[4]) const;
+	/* 80314598 */ void loadNrmMtx(int, u16) const;
 	/* 80314730 */ ~J3DShapeMtxConcatView();
 	/* 8031478C */ void getType() const;
 };
 
+// build Vec (Vec) True/True
 // build J3DShapeMtxMulti (J3DShapeMtxMulti) False/False
+// build Vec (Vec) True/True
 /* top-level dependencies (begin J3DShapeMtxMulti) */
+// outer dependency: Vec
 /* top-level dependencies (end J3DShapeMtxMulti) */
 struct J3DShapeMtxMulti {
+	// Vec
 	/* 80313E4C */ void load() const;
+	/* 80313EEC */ void calcNBTScale(Vec const&, f32 (* )[3][3], f32 (* )[3][3]);
 	/* 803146B0 */ ~J3DShapeMtxMulti();
 	/* 8031470C */ void getType() const;
 	/* 80314718 */ void getUseMtxNum() const;
@@ -56,11 +78,12 @@ struct J3DShapeMtxMulti {
 /* top-level dependencies (end J3DShapeMtxMultiConcatView) */
 struct J3DShapeMtxMultiConcatView {
 	/* 80313FA4 */ void load() const;
+	/* 8031419C */ void loadNrmMtx(int, u16, f32 (* )[4]) const;
 	/* 8031461C */ ~J3DShapeMtxMultiConcatView();
 	/* 80314688 */ void getType() const;
 	/* 80314694 */ void getUseMtxNum() const;
 	/* 8031469C */ void getUseMtxIndex(u16) const;
-	/* 803146AC */ void loadNrmMtx(s32, u16) const;
+	/* 803146AC */ void loadNrmMtx(int, u16) const;
 };
 
 // build J3DShapeMtxBBoardConcatView (J3DShapeMtxBBoardConcatView) False/False
@@ -85,19 +108,20 @@ struct J3DShapeMtxYBBoardConcatView {
 /* top-level dependencies (begin J3DSys) */
 /* top-level dependencies (end J3DSys) */
 struct J3DSys {
-	/* 8030FEC0 */ void loadPosMtxIndx(s32, u16) const;
-	/* 8030FEE4 */ void loadNrmMtxIndx(s32, u16) const;
+	/* 8030FEC0 */ void loadPosMtxIndx(int, u16) const;
+	/* 8030FEE4 */ void loadNrmMtxIndx(int, u16) const;
+};
+
+// build J3DTextureSRTInfo (J3DTextureSRTInfo) False/False
+/* top-level dependencies (begin J3DTextureSRTInfo) */
+/* top-level dependencies (end J3DTextureSRTInfo) */
+struct J3DTextureSRTInfo {
 };
 
 // 
 // Forward References:
 // 
 
-extern "C" static void loadExecute__17J3DDifferedTexMtxFPA4_Cf();
-extern "C" static void calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f();
-extern "C" static void loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f();
-extern "C" static void calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f();
-extern "C" static void loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f();
 extern "C" void __sinit_J3DShapeMtx_cpp();
 
 extern "C" void resetMtxLoadCache__11J3DShapeMtxFv();
@@ -105,20 +129,20 @@ extern "C" void loadMtxIndx_PNGP__11J3DShapeMtxCFiUs();
 extern "C" void loadMtxIndx_PCPU__11J3DShapeMtxCFiUs();
 extern "C" void loadMtxIndx_NCPU__11J3DShapeMtxCFiUs();
 extern "C" void loadMtxIndx_PNCPU__11J3DShapeMtxCFiUs();
-extern "C" static void loadExecute__17J3DDifferedTexMtxFPA4_Cf();
+extern "C" void loadExecute__17J3DDifferedTexMtxFPA4_Cf();
 extern "C" void loadMtxConcatView_PNGP__21J3DShapeMtxConcatViewCFiUs();
 extern "C" void loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs();
 extern "C" void loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs();
 extern "C" void loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs();
 extern "C" void loadMtxConcatView_PNGP_LOD__21J3DShapeMtxConcatViewCFiUs();
 extern "C" void load__11J3DShapeMtxCFv();
-extern "C" static void calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f();
+extern "C" void calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f();
 extern "C" void load__21J3DShapeMtxConcatViewCFv();
-extern "C" static void loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f();
+extern "C" void loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f();
 extern "C" void load__16J3DShapeMtxMultiCFv();
-extern "C" static void calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f();
+extern "C" void calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f();
 extern "C" void load__26J3DShapeMtxMultiConcatViewCFv();
-extern "C" static void loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f();
+extern "C" void loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f();
 extern "C" void load__27J3DShapeMtxBBoardConcatViewCFv();
 extern "C" void load__28J3DShapeMtxYBBoardConcatViewCFv();
 extern "C" void __dt__28J3DShapeMtxYBBoardConcatViewFv();
@@ -183,21 +207,21 @@ SECTION_SDATA2 extern f32 lit_1423;
 // 
 
 void operator delete(void*);
-extern "C" void J3DFifoLoadPosMtxImm__FPA4_fUl();
-extern "C" void J3DFifoLoadNrmMtxImm__FPA4_fUl();
-extern "C" void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl();
-extern "C" void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl();
-extern "C" void J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl();
-extern "C" void J3DCalcBBoardMtx__FPA4_f();
-extern "C" void J3DCalcYBBoardMtx__FPA4_f();
-extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f();
-extern "C" void J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f();
-extern "C" void J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f();
-extern "C" void J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f();
-extern "C" void J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f();
-extern "C" void J3DScaleNrmMtx__FPA4_fRC3Vec();
-extern "C" void J3DScaleNrmMtx33__FPA3_fRC3Vec();
-extern "C" void J3DMtxProjConcat__FPA4_fPA4_fPA4_f();
+void J3DFifoLoadPosMtxImm(f32 (* )[4], u32);
+void J3DFifoLoadNrmMtxImm(f32 (* )[4], u32);
+void J3DFifoLoadNrmMtxImm3x3(f32 (* )[3], u32);
+void J3DFifoLoadNrmMtxToTexMtx(f32 (* )[4], u32);
+void J3DFifoLoadNrmMtxToTexMtx3x3(f32 (* )[3], u32);
+void J3DCalcBBoardMtx(f32 (* )[4]);
+void J3DCalcYBBoardMtx(f32 (* )[4]);
+void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]);
+void J3DGetTextureMtx(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]);
+void J3DGetTextureMtxOld(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]);
+void J3DGetTextureMtxMaya(J3DTextureSRTInfo const&, f32 (* )[4]);
+void J3DGetTextureMtxMayaOld(J3DTextureSRTInfo const&, f32 (* )[4]);
+void J3DScaleNrmMtx(f32 (* )[4], Vec const&);
+void J3DScaleNrmMtx33(f32 (* )[3], Vec const&);
+void J3DMtxProjConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4]);
 extern "C" void PSMTXCopy();
 extern "C" void PSMTXConcat();
 extern "C" void PSMTXInverse();
@@ -275,7 +299,7 @@ asm void J3DShapeMtx::resetMtxLoadCache() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeMtx::loadMtxIndx_PNGP(s32 field_0, u16 field_1) const {
+asm void J3DShapeMtx::loadMtxIndx_PNGP(int field_0, u16 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadMtxIndx_PNGP__11J3DShapeMtxCFiUs.s"
 }
@@ -286,7 +310,7 @@ asm void J3DShapeMtx::loadMtxIndx_PNGP(s32 field_0, u16 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeMtx::loadMtxIndx_PCPU(s32 field_0, u16 field_1) const {
+asm void J3DShapeMtx::loadMtxIndx_PCPU(int field_0, u16 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadMtxIndx_PCPU__11J3DShapeMtxCFiUs.s"
 }
@@ -297,7 +321,7 @@ asm void J3DShapeMtx::loadMtxIndx_PCPU(s32 field_0, u16 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeMtx::loadMtxIndx_NCPU(s32 field_0, u16 field_1) const {
+asm void J3DShapeMtx::loadMtxIndx_NCPU(int field_0, u16 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadMtxIndx_NCPU__11J3DShapeMtxCFiUs.s"
 }
@@ -308,7 +332,7 @@ asm void J3DShapeMtx::loadMtxIndx_NCPU(s32 field_0, u16 field_1) const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeMtx::loadMtxIndx_PNCPU(s32 field_0, u16 field_1) const {
+asm void J3DShapeMtx::loadMtxIndx_PNCPU(int field_0, u16 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadMtxIndx_PNCPU__11J3DShapeMtxCFiUs.s"
 }
@@ -499,7 +523,7 @@ u8 J3DShapeMtx__lit_1032[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void loadExecute__17J3DDifferedTexMtxFPA4_Cf() {
+asm void J3DDifferedTexMtx::loadExecute(f32 const (* field_0)[4]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadExecute__17J3DDifferedTexMtxFPA4_Cf.s"
 }
@@ -510,7 +534,7 @@ extern "C" asm static void loadExecute__17J3DDifferedTexMtxFPA4_Cf() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeMtxConcatView::loadMtxConcatView_PNGP(s32 field_0, u16 field_1) const {
+asm void J3DShapeMtxConcatView::loadMtxConcatView_PNGP(int field_0, u16 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadMtxConcatView_PNGP__21J3DShapeMtxConcatViewCFiUs.s"
 }
@@ -521,7 +545,7 @@ asm void J3DShapeMtxConcatView::loadMtxConcatView_PNGP(s32 field_0, u16 field_1)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeMtxConcatView::loadMtxConcatView_PCPU(s32 field_0, u16 field_1) const {
+asm void J3DShapeMtxConcatView::loadMtxConcatView_PCPU(int field_0, u16 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs.s"
 }
@@ -532,7 +556,7 @@ asm void J3DShapeMtxConcatView::loadMtxConcatView_PCPU(s32 field_0, u16 field_1)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeMtxConcatView::loadMtxConcatView_NCPU(s32 field_0, u16 field_1) const {
+asm void J3DShapeMtxConcatView::loadMtxConcatView_NCPU(int field_0, u16 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs.s"
 }
@@ -543,7 +567,7 @@ asm void J3DShapeMtxConcatView::loadMtxConcatView_NCPU(s32 field_0, u16 field_1)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeMtxConcatView::loadMtxConcatView_PNCPU(s32 field_0, u16 field_1) const {
+asm void J3DShapeMtxConcatView::loadMtxConcatView_PNCPU(int field_0, u16 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs.s"
 }
@@ -554,7 +578,7 @@ asm void J3DShapeMtxConcatView::loadMtxConcatView_PNCPU(s32 field_0, u16 field_1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DShapeMtxConcatView::loadMtxConcatView_PNGP_LOD(s32 field_0, u16 field_1) const {
+asm void J3DShapeMtxConcatView::loadMtxConcatView_PNGP_LOD(int field_0, u16 field_1) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadMtxConcatView_PNGP_LOD__21J3DShapeMtxConcatViewCFiUs.s"
 }
@@ -576,7 +600,7 @@ asm void J3DShapeMtx::load() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f() {
+asm void J3DShapeMtx::calcNBTScale(Vec const& field_0, f32 (* field_1)[3][3], f32 (* field_2)[3][3]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f.s"
 }
@@ -598,7 +622,7 @@ asm void J3DShapeMtxConcatView::load() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f() {
+asm void J3DShapeMtxConcatView::loadNrmMtx(int field_0, u16 field_1, f32 (* field_2)[4]) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f.s"
 }
@@ -620,7 +644,7 @@ asm void J3DShapeMtxMulti::load() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f() {
+asm void J3DShapeMtxMulti::calcNBTScale(Vec const& field_0, f32 (* field_1)[3][3], f32 (* field_2)[3][3]) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f.s"
 }
@@ -642,7 +666,7 @@ asm void J3DShapeMtxMultiConcatView::load() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f() {
+asm void J3DShapeMtxMultiConcatView::loadNrmMtx(int field_0, u16 field_1, f32 (* field_2)[4]) const {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f.s"
 }
@@ -787,7 +811,7 @@ asm void J3DShapeMtxYBBoardConcatView::getType() const {
 
 
 /* 80314598-8031459C 0004+00 rc=3 efc=0 .text      loadNrmMtx__21J3DShapeMtxConcatViewCFiUs                     */
-void J3DShapeMtxConcatView::loadNrmMtx(s32 field_0, u16 field_1) const {
+void J3DShapeMtxConcatView::loadNrmMtx(int field_0, u16 field_1) const {
 	/* empty function */
 }
 
@@ -870,7 +894,7 @@ asm void J3DShapeMtxMultiConcatView::getUseMtxIndex(u16 field_0) const {
 
 
 /* 803146AC-803146B0 0004+00 rc=1 efc=0 .text      loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUs                */
-void J3DShapeMtxMultiConcatView::loadNrmMtx(s32 field_0, u16 field_1) const {
+void J3DShapeMtxMultiConcatView::loadNrmMtx(int field_0, u16 field_1) const {
 	/* empty function */
 }
 

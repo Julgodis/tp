@@ -35,10 +35,10 @@ extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(s32, s32);
+void fpcBs_Is_JustOfType(int, int);
 void fpcLy_SetCurrentLayer(layer_class*);
 void fpcLy_CurrentLayer();
-void fpcPause_IsEnable(void*, char);
+void fpcPause_IsEnable(void*, u8);
 void cAPIGph_BeforeOfDraw();
 void cAPIGph_AfterOfDraw();
 extern "C" void _savegpr_29();
