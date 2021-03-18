@@ -9,27 +9,14 @@
 // Types:
 // 
 
-// build dShopItemCtrl_c (['dShopItemCtrl_c']) False/False
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-/* top-level dependencies (begin ['dShopItemCtrl_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dShopItemCtrl_c']) */
 struct dShopItemCtrl_c {
-	// ('cXyz',)
 	/* 80196914 */ dShopItemCtrl_c();
 	/* 80196958 */ ~dShopItemCtrl_c();
 	/* 801969A0 */ void getCurrentPos(int);
@@ -38,27 +25,22 @@ struct dShopItemCtrl_c {
 	/* 80196BA4 */ void setZoomAnime(int, cXyz*, s16, bool);
 };
 
-// build cXyz (['cXyz']) True/True
-// build daShopItem_c (['daShopItem_c']) False/False
-/* top-level dependencies (begin ['daShopItem_c']) */
-/* top-level dependencies (end ['daShopItem_c']) */
 struct daShopItem_c {
 	/* 80037C14 */ void getRotateP();
 	/* 80037C1C */ void getPosP();
 };
 
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__15dShopItemCtrl_cFv();
-extern "C" void __dt__15dShopItemCtrl_cFv();
-extern "C" void getCurrentPos__15dShopItemCtrl_cFi();
-extern "C" void isHomePos__15dShopItemCtrl_cFi();
-extern "C" void setRotateAnime__15dShopItemCtrl_cFi();
-extern "C" void setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb();
+extern "C" void __ct__15dShopItemCtrl_cFv(); // 1
+extern "C" void __dt__15dShopItemCtrl_cFv(); // 1
+extern "C" void getCurrentPos__15dShopItemCtrl_cFi(); // 1
+extern "C" void isHomePos__15dShopItemCtrl_cFi(); // 1
+extern "C" void setRotateAnime__15dShopItemCtrl_cFi(); // 1
+extern "C" void setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb(); // 1
 SECTION_DATA extern void*const __vt__15dShopItemCtrl_c[4];
 SECTION_SDATA2 extern u8 d_shop_d_shop_item_ctrl__lit_3659[4 + 4 /* padding */];
 SECTION_SDATA2 extern f64 d_shop_d_shop_item_ctrl__lit_3838;
@@ -73,30 +55,30 @@ SECTION_SDATA2 extern f32 d_shop_d_shop_item_ctrl__lit_3844;
 // External References:
 // 
 
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-void fpcSch_JudgeByID(void*, void*);
-void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32);
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
-void operator delete(void*);
-extern "C" void PSVECSquareMag();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_27();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fpcSch_JudgeByID(void*, void*); // 2
+void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32); // 2
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
+void operator delete(void*); // 2
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_27(); // 1
 
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-extern "C" void fpcSch_JudgeByID__FPvPv();
-extern "C" void getRotateP__12daShopItem_cFv();
-extern "C" void getPosP__12daShopItem_cFv();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void cLib_addCalcPos2__FP4cXyzRC4cXyzff();
-extern "C" void cLib_addCalcAngleS__FPsssss();
-extern "C" void __dl__FPv();
-extern "C" void PSVECSquareMag();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_27();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
+extern "C" void getRotateP__12daShopItem_cFv(); // 1
+extern "C" void getPosP__12daShopItem_cFv(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void cLib_addCalcPos2__FP4cXyzRC4cXyzff(); // 1
+extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_27(); // 1
 SECTION_SDATA extern u32 __float_nan;
 
 // 

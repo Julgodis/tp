@@ -9,56 +9,27 @@
 // Types:
 // 
 
-// build daSus_c (['daSus_c']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 	/* 800125DC */ cXyz();
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build daSus_c (['daSus_c']) True/False
-struct daSus_c;
-/* top-level dependencies (begin ['daSus_c']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-// outer dependency: ('daSus_c', 'data_c')
-/* top-level dependencies (end ['daSus_c']) */
 struct daSus_c {
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
-	// build data_c (['daSus_c', 'data_c']) False/False
-	/* dependencies (begin ['daSus_c', 'data_c']) */
-	// inner dependency: 0 ('cXyz',) (for ['daSus_c', 'data_c'])
-	// inner dependency: 0 ('fopAc_ac_c',) (for ['daSus_c', 'data_c'])
-	/* dependencies (end ['daSus_c', 'data_c']) */
 	struct data_c {
-		// ('cXyz',)
-		// ('fopAc_ac_c',)
 		/* 80030F14 */ void set(s8, cXyz const&, cXyz const&, u8, u8, u8);
 		/* 80030FBC */ void reset();
 		/* 80030FCC */ void isSwitch();
-		/* 80031038 */ void check(cXyz const&);
 		/* 800310C8 */ void check(fopAc_ac_c*);
+		/* 80031038 */ void check(cXyz const&);
 		/* 80031150 */ void execute();
 		/* 80031F28 */ ~data_c();
 		/* 80031F64 */ data_c();
 	};
 
-	// build room_c (['daSus_c', 'room_c']) False/False
-	/* dependencies (begin ['daSus_c', 'room_c']) */
-	// inner dependency: 1 ('daSus_c', 'data_c') (for ['daSus_c', 'room_c'])
-	// build data_c (['daSus_c', 'data_c']) True/True
-	/* dependencies (end ['daSus_c', 'room_c']) */
 	struct room_c {
-		// ('daSus_c', 'data_c')
 		/* 80031190 */ void add(daSus_c::data_c*);
 		/* 800311FC */ void reset();
 		/* 80031EE4 */ room_c();
@@ -66,61 +37,32 @@ struct daSus_c {
 
 	/* 80031248 */ void newData(s8, cXyz const&, cXyz const&, u8, u8, u8);
 	/* 800313BC */ void reset();
-	/* 80031434 */ void check(s8, cXyz const&);
 	/* 800314D4 */ void check(fopAc_ac_c*);
+	/* 80031434 */ void check(s8, cXyz const&);
 	/* 800315A4 */ void execute();
 };
 
-// build cXyz (['cXyz']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build daSetBgObj_c (['daSetBgObj_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['daSetBgObj_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['daSetBgObj_c']) */
 struct daSetBgObj_c {
-	// ('fopAc_ac_c',)
 	/* 80031870 */ void getArcName(fopAc_ac_c*);
 };
 
-// build daTagStream_c (['daTagStream_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['daTagStream_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['daTagStream_c']) */
 struct daTagStream_c {
-	// ('cXyz',)
 	/* 800318B4 */ void checkArea(cXyz const*);
 };
 
-// build daMirror_c (['daMirror_c']) False/False
-// build J3DModel (['J3DModel']) False/False
-/* top-level dependencies (begin ['J3DModel']) */
-/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-/* top-level dependencies (begin ['daMirror_c']) */
-// outer dependency: ('J3DModel',)
-/* top-level dependencies (end ['daMirror_c']) */
 struct daMirror_c {
-	// ('J3DModel',)
 	/* 8003194C */ void entry(J3DModel*);
 	/* 80031990 */ void remove();
 };
 
-// build J3DModel (['J3DModel']) True/True
-// build daGrass_c (['daGrass_c']) False/False
-/* top-level dependencies (begin ['daGrass_c']) */
-/* top-level dependencies (end ['daGrass_c']) */
 struct daGrass_c {
 	/* 800319C8 */ void deleteRoomGrass(int);
 	/* 80031A20 */ void deleteRoomFlower(int);
 };
 
-// build daMP_c (['daMP_c']) False/False
-/* top-level dependencies (begin ['daMP_c']) */
-/* top-level dependencies (end ['daMP_c']) */
 struct daMP_c {
 	/* 80031A78 */ void daMP_c_Get_MovieRestFrame();
 	/* 80031AA4 */ void daMP_c_Set_PercentMovieVolume(f32);
@@ -128,39 +70,21 @@ struct daMP_c {
 	/* 80031B24 */ void daMP_c_THPPlayerPause();
 };
 
-// build daTagMagne_c (['daTagMagne_c']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-/* top-level dependencies (begin ['daTagMagne_c']) */
-// outer dependency: ('cBgS_PolyInfo',)
-/* top-level dependencies (end ['daTagMagne_c']) */
 struct daTagMagne_c {
-	// ('cBgS_PolyInfo',)
 	/* 80031B50 */ void checkMagnetCode(cBgS_PolyInfo&);
 	/* 80031BF4 */ void checkMagneA();
 	/* 80031C48 */ void checkMagneB();
 	/* 80031C9C */ void checkMagneC();
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-// build daTagMist_c (['daTagMist_c']) False/False
-/* top-level dependencies (begin ['daTagMist_c']) */
-/* top-level dependencies (end ['daTagMist_c']) */
 struct daTagMist_c {
 	/* 80031CF0 */ void getPlayerNo();
 };
 
-// build daObjCarry_c (['daObjCarry_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['daObjCarry_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['daObjCarry_c']) */
 struct daObjCarry_c {
-	// ('cXyz',)
 	/* 80031CF8 */ void clrSaveFlag();
 	/* 80031D04 */ void setSaveFlag();
 	/* 80031D10 */ void chkSaveFlag();
@@ -173,16 +97,10 @@ struct daObjCarry_c {
 	/* 80031DB8 */ void getRoomNo(int);
 };
 
-// build dComIfG_play_c (['dComIfG_play_c']) False/False
-/* top-level dependencies (begin ['dComIfG_play_c']) */
-/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 	/* 800349A4 */ void offEventBit(u16);
@@ -191,20 +109,11 @@ struct dSv_event_c {
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
-// build dSv_info_c (['dSv_info_c']) False/False
-/* top-level dependencies (begin ['dSv_info_c']) */
-/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build dBgS (['dBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-/* top-level dependencies (begin ['dBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// ('cBgS_PolyInfo',)
 	/* 80074D0C */ void GetMagnetCode(cBgS_PolyInfo const&);
 };
 
@@ -212,72 +121,72 @@ struct dBgS {
 // Forward References:
 // 
 
-void daNpcMsg_setEvtNum(u8);
-void daNpcKakashi_chkSwdTutorialStage();
-void daNpcKakashi_setSwdTutorialStep(u8);
-void daNpcKakashi_getSwdTutorialStep();
-void daNpcKakashi_getSwdTutorialResult();
-void daNpcKakashi_setSwdTutorialResult(bool);
-void daNpcKakashi_getSuccessCount();
-void daNpcKakashi_incSuccessCount();
-void daNpcKakashi_clrSuccessCount();
-extern "C" void __sinit_d_com_static_cpp();
-extern "C" static void func_80031EAC();
-extern "C" static void func_80031EF0();
+void daNpcMsg_setEvtNum(u8); // 2
+void daNpcKakashi_chkSwdTutorialStage(); // 2
+void daNpcKakashi_setSwdTutorialStep(u8); // 2
+void daNpcKakashi_getSwdTutorialStep(); // 2
+void daNpcKakashi_getSwdTutorialResult(); // 2
+void daNpcKakashi_setSwdTutorialResult(bool); // 2
+void daNpcKakashi_getSuccessCount(); // 2
+void daNpcKakashi_incSuccessCount(); // 2
+void daNpcKakashi_clrSuccessCount(); // 2
+extern "C" void __sinit_d_com_static_cpp(); // 1
+extern "C" static void func_80031EAC(); // 1
+extern "C" static void func_80031EF0(); // 1
 
-extern "C" void set__Q27daSus_c6data_cFScRC4cXyzRC4cXyzUcUcUc();
-extern "C" void reset__Q27daSus_c6data_cFv();
-extern "C" void isSwitch__Q27daSus_c6data_cFv();
-extern "C" void check__Q27daSus_c6data_cFRC4cXyz();
-extern "C" void check__Q27daSus_c6data_cFP10fopAc_ac_c();
-extern "C" void execute__Q27daSus_c6data_cFv();
-extern "C" void add__Q27daSus_c6room_cFPQ27daSus_c6data_c();
-extern "C" void reset__Q27daSus_c6room_cFv();
-extern "C" void newData__7daSus_cFScRC4cXyzRC4cXyzUcUcUc();
-extern "C" void reset__7daSus_cFv();
-extern "C" void check__7daSus_cFScRC4cXyz();
-extern "C" void check__7daSus_cFP10fopAc_ac_c();
-extern "C" void execute__7daSus_cFv();
-extern "C" void daNpcMsg_setEvtNum__FUc();
-extern "C" void daNpcKakashi_chkSwdTutorialStage__Fv();
-extern "C" void daNpcKakashi_setSwdTutorialStep__FUc();
-extern "C" void daNpcKakashi_getSwdTutorialStep__Fv();
-extern "C" void daNpcKakashi_getSwdTutorialResult__Fv();
-extern "C" void daNpcKakashi_setSwdTutorialResult__Fb();
-extern "C" void daNpcKakashi_getSuccessCount__Fv();
-extern "C" void daNpcKakashi_incSuccessCount__Fv();
-extern "C" void daNpcKakashi_clrSuccessCount__Fv();
-extern "C" void getArcName__12daSetBgObj_cFP10fopAc_ac_c();
-extern "C" void checkArea__13daTagStream_cFPC4cXyz();
-extern "C" void entry__10daMirror_cFP8J3DModel();
-extern "C" void remove__10daMirror_cFv();
-extern "C" void deleteRoomGrass__9daGrass_cFi();
-extern "C" void deleteRoomFlower__9daGrass_cFi();
-extern "C" void daMP_c_Get_MovieRestFrame__6daMP_cFv();
-extern "C" void daMP_c_Set_PercentMovieVolume__6daMP_cFf();
-extern "C" void daMP_c_THPPlayerPlay__6daMP_cFv();
-extern "C" void daMP_c_THPPlayerPause__6daMP_cFv();
-extern "C" void checkMagnetCode__12daTagMagne_cFR13cBgS_PolyInfo();
-extern "C" void checkMagneA__12daTagMagne_cFv();
-extern "C" void checkMagneB__12daTagMagne_cFv();
-extern "C" void checkMagneC__12daTagMagne_cFv();
-extern "C" void getPlayerNo__11daTagMist_cFv();
-extern "C" void clrSaveFlag__12daObjCarry_cFv();
-extern "C" void setSaveFlag__12daObjCarry_cFv();
-extern "C" void chkSaveFlag__12daObjCarry_cFv();
-extern "C" void getPos__12daObjCarry_cFi();
-extern "C" void savePos__12daObjCarry_cFi4cXyz();
-extern "C" void onSttsFlag__12daObjCarry_cFiUc();
-extern "C" void offSttsFlag__12daObjCarry_cFiUc();
-extern "C" void chkSttsFlag__12daObjCarry_cFiUc();
-extern "C" void setRoomNo__12daObjCarry_cFiSc();
-extern "C" void getRoomNo__12daObjCarry_cFi();
-extern "C" void __sinit_d_com_static_cpp();
-extern "C" static void func_80031EAC();
-extern "C" void __ct__Q27daSus_c6room_cFv();
-extern "C" static void func_80031EF0();
-extern "C" void __dt__Q27daSus_c6data_cFv();
-extern "C" void __ct__Q27daSus_c6data_cFv();
+extern "C" void set__Q27daSus_c6data_cFScRC4cXyzRC4cXyzUcUcUc(); // 1
+extern "C" void reset__Q27daSus_c6data_cFv(); // 1
+extern "C" void isSwitch__Q27daSus_c6data_cFv(); // 1
+extern "C" void check__Q27daSus_c6data_cFRC4cXyz(); // 1
+extern "C" void check__Q27daSus_c6data_cFP10fopAc_ac_c(); // 1
+extern "C" void execute__Q27daSus_c6data_cFv(); // 1
+extern "C" void add__Q27daSus_c6room_cFPQ27daSus_c6data_c(); // 1
+extern "C" void reset__Q27daSus_c6room_cFv(); // 1
+extern "C" void newData__7daSus_cFScRC4cXyzRC4cXyzUcUcUc(); // 1
+extern "C" void reset__7daSus_cFv(); // 1
+extern "C" void check__7daSus_cFScRC4cXyz(); // 1
+extern "C" void check__7daSus_cFP10fopAc_ac_c(); // 1
+extern "C" void execute__7daSus_cFv(); // 1
+extern "C" void daNpcMsg_setEvtNum__FUc(); // 1
+extern "C" void daNpcKakashi_chkSwdTutorialStage__Fv(); // 1
+extern "C" void daNpcKakashi_setSwdTutorialStep__FUc(); // 1
+extern "C" void daNpcKakashi_getSwdTutorialStep__Fv(); // 1
+extern "C" void daNpcKakashi_getSwdTutorialResult__Fv(); // 1
+extern "C" void daNpcKakashi_setSwdTutorialResult__Fb(); // 1
+extern "C" void daNpcKakashi_getSuccessCount__Fv(); // 1
+extern "C" void daNpcKakashi_incSuccessCount__Fv(); // 1
+extern "C" void daNpcKakashi_clrSuccessCount__Fv(); // 1
+extern "C" void getArcName__12daSetBgObj_cFP10fopAc_ac_c(); // 1
+extern "C" void checkArea__13daTagStream_cFPC4cXyz(); // 1
+extern "C" void entry__10daMirror_cFP8J3DModel(); // 1
+extern "C" void remove__10daMirror_cFv(); // 1
+extern "C" void deleteRoomGrass__9daGrass_cFi(); // 1
+extern "C" void deleteRoomFlower__9daGrass_cFi(); // 1
+extern "C" void daMP_c_Get_MovieRestFrame__6daMP_cFv(); // 1
+extern "C" void daMP_c_Set_PercentMovieVolume__6daMP_cFf(); // 1
+extern "C" void daMP_c_THPPlayerPlay__6daMP_cFv(); // 1
+extern "C" void daMP_c_THPPlayerPause__6daMP_cFv(); // 1
+extern "C" void checkMagnetCode__12daTagMagne_cFR13cBgS_PolyInfo(); // 1
+extern "C" void checkMagneA__12daTagMagne_cFv(); // 1
+extern "C" void checkMagneB__12daTagMagne_cFv(); // 1
+extern "C" void checkMagneC__12daTagMagne_cFv(); // 1
+extern "C" void getPlayerNo__11daTagMist_cFv(); // 1
+extern "C" void clrSaveFlag__12daObjCarry_cFv(); // 1
+extern "C" void setSaveFlag__12daObjCarry_cFv(); // 1
+extern "C" void chkSaveFlag__12daObjCarry_cFv(); // 1
+extern "C" void getPos__12daObjCarry_cFi(); // 1
+extern "C" void savePos__12daObjCarry_cFi4cXyz(); // 1
+extern "C" void onSttsFlag__12daObjCarry_cFiUc(); // 1
+extern "C" void offSttsFlag__12daObjCarry_cFiUc(); // 1
+extern "C" void chkSttsFlag__12daObjCarry_cFiUc(); // 1
+extern "C" void setRoomNo__12daObjCarry_cFiSc(); // 1
+extern "C" void getRoomNo__12daObjCarry_cFi(); // 1
+extern "C" void __sinit_d_com_static_cpp(); // 1
+extern "C" static void func_80031EAC(); // 1
+extern "C" void __ct__Q27daSus_c6room_cFv(); // 1
+extern "C" static void func_80031EF0(); // 1
+extern "C" void __dt__Q27daSus_c6data_cFv(); // 1
+extern "C" void __ct__Q27daSus_c6data_cFv(); // 1
 SECTION_RODATA extern const u8 d_com_d_com_static__stringBase0[16];
 SECTION_BSS extern u8 d_com_d_com_static__lit_3840[12];
 SECTION_BSS extern u8 mData__7daSus_c[1152];
@@ -319,45 +228,45 @@ SECTION_SDATA2 extern u8 d_com_d_com_static__lit_4338[4];
 // External References:
 // 
 
-void mDoMch_Create();
-void fopAcM_delete(fopAc_ac_c*);
-void fpoAcM_relativePos(fopAc_ac_c const*, cXyz const*, cXyz*);
-void operator delete(void*);
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void sprintf();
-extern "C" void strcmp();
+void mDoMch_Create(); // 2
+void fopAcM_delete(fopAc_ac_c*); // 2
+void fpoAcM_relativePos(fopAc_ac_c const*, cXyz const*, cXyz*); // 2
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void sprintf(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void __dt__4cXyzFv();
-extern "C" void mDoMch_Create__Fv();
-extern "C" void __ct__4cXyzFv();
-extern "C" void fopAcM_delete__FP10fopAc_ac_c();
-extern "C" void fpoAcM_relativePos__FPC10fopAc_ac_cPC4cXyzP4cXyz();
-extern "C" void getLayerNo__14dComIfG_play_cFi();
-extern "C" void onEventBit__11dSv_event_cFUs();
-extern "C" void offEventBit__11dSv_event_cFUs();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void setEventReg__11dSv_event_cFUsUc();
-extern "C" void getEventReg__11dSv_event_cCFUs();
-extern "C" void isSwitch__10dSv_info_cCFii();
-extern "C" void GetMagnetCode__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void __dl__FPv();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void sprintf();
-extern "C" void strcmp();
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void mDoMch_Create__Fv(); // 1
+extern "C" void __ct__4cXyzFv(); // 1
+extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
+extern "C" void fpoAcM_relativePos__FPC10fopAc_ac_cPC4cXyzP4cXyz(); // 1
+extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
+extern "C" void onEventBit__11dSv_event_cFUs(); // 1
+extern "C" void offEventBit__11dSv_event_cFUs(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void setEventReg__11dSv_event_cFUsUc(); // 1
+extern "C" void getEventReg__11dSv_event_cCFUs(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void GetMagnetCode__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void sprintf(); // 1
+extern "C" void strcmp(); // 1
 SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SBSS extern u8 m_status__7dDemo_c[4];

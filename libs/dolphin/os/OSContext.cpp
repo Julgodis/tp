@@ -9,35 +9,35 @@
 // Forward References:
 // 
 
-extern "C" static void __OSLoadFPUContext();
-extern "C" static void __OSSaveFPUContext();
-extern "C" void OSSaveFPUContext();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSGetCurrentContext();
-extern "C" void OSSaveContext();
-extern "C" void OSLoadContext();
-extern "C" void OSGetStackPointer();
-extern "C" void OSClearContext();
-extern "C" void OSInitContext();
-extern "C" void OSDumpContext();
-extern "C" static void OSSwitchFPUContext();
-extern "C" void __OSContextInit();
-extern "C" void OSFillFPUContext();
+extern "C" static void __OSLoadFPUContext(); // 1
+extern "C" static void __OSSaveFPUContext(); // 1
+extern "C" void OSSaveFPUContext(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSGetCurrentContext(); // 1
+extern "C" void OSSaveContext(); // 1
+extern "C" void OSLoadContext(); // 1
+extern "C" void OSGetStackPointer(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSInitContext(); // 1
+extern "C" void OSDumpContext(); // 1
+extern "C" static void OSSwitchFPUContext(); // 1
+extern "C" void __OSContextInit(); // 1
+extern "C" void OSFillFPUContext(); // 1
 
-extern "C" static void __OSLoadFPUContext();
-extern "C" static void __OSSaveFPUContext();
-extern "C" void OSSaveFPUContext();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSGetCurrentContext();
-extern "C" void OSSaveContext();
-extern "C" void OSLoadContext();
-extern "C" void OSGetStackPointer();
-extern "C" void OSClearContext();
-extern "C" void OSInitContext();
-extern "C" void OSDumpContext();
-extern "C" static void OSSwitchFPUContext();
-extern "C" void __OSContextInit();
-extern "C" void OSFillFPUContext();
+extern "C" static void __OSLoadFPUContext(); // 1
+extern "C" static void __OSSaveFPUContext(); // 1
+extern "C" void OSSaveFPUContext(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSGetCurrentContext(); // 1
+extern "C" void OSSaveContext(); // 1
+extern "C" void OSLoadContext(); // 1
+extern "C" void OSGetStackPointer(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSInitContext(); // 1
+extern "C" void OSDumpContext(); // 1
+extern "C" static void OSSwitchFPUContext(); // 1
+extern "C" void __OSContextInit(); // 1
+extern "C" void OSFillFPUContext(); // 1
 SECTION_DATA extern u8 OSContext__lit_61[68];
 SECTION_DATA extern u8 OSContext__lit_62[48];
 SECTION_DATA extern u8 OSContext__lit_63[47 + 1 /* padding */];
@@ -56,21 +56,21 @@ SECTION_DATA extern u8 OSContext__lit_76[35 + 1 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport();
-extern "C" void __OSSetExceptionHandler();
-extern "C" void OSDisableInterrupts();
-extern "C" void __RAS_OSDisableInterrupts_end();
-extern "C" void OSRestoreInterrupts();
-extern "C" void DBPrintf();
-extern "C" void __cvt_fp2unsigned();
+extern "C" void OSReport(); // 1
+extern "C" void __OSSetExceptionHandler(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void __RAS_OSDisableInterrupts_end(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void DBPrintf(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
 
-extern "C" void OSReport();
-extern "C" void __OSSetExceptionHandler();
-extern "C" void OSDisableInterrupts();
-extern "C" void __RAS_OSDisableInterrupts_end();
-extern "C" void OSRestoreInterrupts();
-extern "C" void DBPrintf();
-extern "C" void __cvt_fp2unsigned();
+extern "C" void OSReport(); // 1
+extern "C" void __OSSetExceptionHandler(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void __RAS_OSDisableInterrupts_end(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void DBPrintf(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
 
 // 
 // Declarations:

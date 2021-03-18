@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
-/* top-level dependencies (begin ['JPAEmitterWorkData']) */
-/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPABaseParticle (['JPABaseParticle']) False/False
-/* top-level dependencies (begin ['JPABaseParticle']) */
-/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
 };
 
-// build JPAChildShape (['JPAChildShape']) False/False
-/* top-level dependencies (begin ['JPAChildShape']) */
-/* top-level dependencies (end ['JPAChildShape']) */
 struct JPAChildShape {
 	/* 8027B038 */ JPAChildShape(u8 const*);
 };
@@ -32,14 +23,14 @@ struct JPAChildShape {
 // Forward References:
 // 
 
-void JPARegistChildPrmEnv(JPAEmitterWorkData*);
-void JPACalcChildAlphaOut(JPAEmitterWorkData*, JPABaseParticle*);
-void JPACalcChildScaleOut(JPAEmitterWorkData*, JPABaseParticle*);
+void JPARegistChildPrmEnv(JPAEmitterWorkData*); // 2
+void JPACalcChildAlphaOut(JPAEmitterWorkData*, JPABaseParticle*); // 2
+void JPACalcChildScaleOut(JPAEmitterWorkData*, JPABaseParticle*); // 2
 
-extern "C" void JPARegistChildPrmEnv__FP18JPAEmitterWorkData();
-extern "C" void JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void __ct__13JPAChildShapeFPCUc();
+extern "C" void JPARegistChildPrmEnv__FP18JPAEmitterWorkData(); // 1
+extern "C" void JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void __ct__13JPAChildShapeFPCUc(); // 1
 SECTION_SDATA2 extern f32 lit_2318;
 SECTION_SDATA2 extern f32 lit_2319;
 
@@ -47,9 +38,9 @@ SECTION_SDATA2 extern f32 lit_2319;
 // External References:
 // 
 
-extern "C" void GXSetTevColor();
+extern "C" void GXSetTevColor(); // 1
 
-extern "C" void GXSetTevColor();
+extern "C" void GXSetTevColor(); // 1
 
 // 
 // Declarations:

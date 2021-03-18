@@ -9,94 +9,52 @@
 // Types:
 // 
 
-// build JUTTexture (['JUTTexture']) False/False
-// build _GXTlut (['_GXTlut']) False/False
-/* top-level dependencies (begin ['_GXTlut']) */
-/* top-level dependencies (end ['_GXTlut']) */
-struct _GXTlut {
-};
-
-// build _GXTexMapID (['_GXTexMapID']) False/False
-/* top-level dependencies (begin ['_GXTexMapID']) */
-/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
-struct ResTIMG {
+struct _GXTlut {
 };
 
-// build JUTPalette (['JUTPalette']) False/False
-// build _GXTlut (['_GXTlut']) True/True
-// build JUTTransparency (['JUTTransparency']) False/False
-/* top-level dependencies (begin ['JUTTransparency']) */
-/* top-level dependencies (end ['JUTTransparency']) */
 struct JUTTransparency {
 };
 
-// build _GXTlutFmt (['_GXTlutFmt']) False/False
-/* top-level dependencies (begin ['_GXTlutFmt']) */
-/* top-level dependencies (end ['_GXTlutFmt']) */
 struct _GXTlutFmt {
 };
 
-/* top-level dependencies (begin ['JUTPalette']) */
-// outer dependency: ('_GXTlut',)
-// outer dependency: ('JUTTransparency',)
-// outer dependency: ('_GXTlutFmt',)
-/* top-level dependencies (end ['JUTPalette']) */
 struct JUTPalette {
-	// ('_GXTlut',)
-	// ('JUTTransparency',)
-	// ('_GXTlutFmt',)
 	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
 	/* 802DE95C */ void load();
 };
 
-/* top-level dependencies (begin ['JUTTexture']) */
-// outer dependency: ('_GXTlut',)
-// outer dependency: ('_GXTexMapID',)
-// outer dependency: ('ResTIMG',)
-// outer dependency: ('JUTPalette',)
-/* top-level dependencies (end ['JUTTexture']) */
+struct ResTIMG {
+};
+
 struct JUTTexture {
-	// ('_GXTlut',)
-	// ('_GXTexMapID',)
-	// ('ResTIMG',)
-	// ('JUTPalette',)
 	/* 802DE234 */ ~JUTTexture();
+	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
 	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
-	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
 	/* 802DE5B0 */ void attachPalette(JUTPalette*);
 	/* 802DE608 */ void init();
-	/* 802DE658 */ void initTexObj();
 	/* 802DE744 */ void initTexObj(_GXTlut);
+	/* 802DE658 */ void initTexObj();
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
-// build ResTIMG (['ResTIMG']) True/True
-// build JUTPalette (['JUTPalette']) True/True
-// build _GXTlut (['_GXTlut']) True/True
-// build _GXTexMapID (['_GXTexMapID']) True/True
-// build _GXTlutFmt (['_GXTlutFmt']) True/True
-// build JUTTransparency (['JUTTransparency']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __dt__10JUTTextureFv();
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc();
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette();
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut();
-extern "C" void attachPalette__10JUTTextureFP10JUTPalette();
-extern "C" void init__10JUTTextureFv();
-extern "C" void initTexObj__10JUTTextureFv();
-extern "C" void initTexObj__10JUTTextureF7_GXTlut();
-extern "C" void load__10JUTTextureF11_GXTexMapID();
+extern "C" void __dt__10JUTTextureFv(); // 1
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc(); // 1
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette(); // 1
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut(); // 1
+extern "C" void attachPalette__10JUTTextureFP10JUTPalette(); // 1
+extern "C" void init__10JUTTextureFv(); // 1
+extern "C" void initTexObj__10JUTTextureFv(); // 1
+extern "C" void initTexObj__10JUTTextureF7_GXTlut(); // 1
+extern "C" void load__10JUTTextureF11_GXTexMapID(); // 1
 SECTION_SDATA2 extern f32 lit_453;
 SECTION_SDATA2 extern f32 lit_454;
 SECTION_SDATA2 extern f64 lit_456;
@@ -106,27 +64,27 @@ SECTION_SDATA2 extern f64 JUTTexture__lit_459;
 // External References:
 // 
 
-void* operator new(u32);
-void operator delete(void*);
-void operator delete[](void*);
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjCI();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+void operator delete[](void*); // 2
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjCI(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void __dla__FPv();
-extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv();
-extern "C" void load__10JUTPaletteFv();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjCI();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dla__FPv(); // 1
+extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv(); // 1
+extern "C" void load__10JUTPaletteFv(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjCI(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

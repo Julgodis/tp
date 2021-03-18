@@ -9,40 +9,35 @@
 // Types:
 // 
 
-// build Z2SoundObjMgr (['Z2SoundObjMgr']) False/False
-/* top-level dependencies (begin ['Z2SoundObjMgr']) */
-/* top-level dependencies (end ['Z2SoundObjMgr']) */
+template <typename A0>
+struct JSULink { };
+/* JSULink<Z2CreatureEnemy> */
+struct JSULink__template2 {
+};
+
+struct Z2CreatureEnemy {
+};
+
 struct Z2SoundObjMgr {
 	/* 802BF920 */ Z2SoundObjMgr();
 	/* 802BF980 */ void setForceBattleArea(bool, u16, u16, u16);
 	/* 802BF994 */ void searchEnemy();
 	/* 802BFFEC */ void setGhostEnemyState(u8);
+	/* 802C0074 */ void getEnemyID(char const*, JSULink<Z2CreatureEnemy>*);
 	/* 802C0100 */ void setBattleInit();
 	/* 802C0120 */ void checkBattleFinish();
 	/* 802C013C */ void deleteEnemyAll();
+	/* 802C0190 */ void removeEnemy(JSULink<Z2CreatureEnemy>*);
 	/* 802C01E4 */ void isTwilightBattle();
 };
 
-// build Z2Calc (['Z2Calc']) False/False
-// build Z2Calc (['Z2Calc']) True/False
-struct Z2Calc;
-/* top-level dependencies (begin ['Z2Calc']) */
-// outer dependency: ('Z2Calc', 'CurveSign')
-/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
-	// ('Z2Calc', 'CurveSign')
-	// build CurveSign (['Z2Calc', 'CurveSign']) False/False
-	/* dependencies (begin ['Z2Calc', 'CurveSign']) */
-	/* dependencies (end ['Z2Calc', 'CurveSign']) */
 	struct CurveSign {
 	};
 
 	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
 };
 
-// build Z2SeqMgr (['Z2SeqMgr']) False/False
-/* top-level dependencies (begin ['Z2SeqMgr']) */
-/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
 	/* 802AFF8C */ void changeBgmStatus(s32);
 	/* 802B1DF4 */ void changeSubBgmStatus(s32);
@@ -52,43 +47,32 @@ struct Z2SeqMgr {
 	/* 802B5204 */ void stopBattleBgm(u8, u8);
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 };
 
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JSUPtrLink (['JSUPtrLink']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void func_802C0074();
-extern "C" void func_802C0190();
-extern "C" void __sinit_Z2SoundObjMgr_cpp();
+extern "C" void __sinit_Z2SoundObjMgr_cpp(); // 1
 
-extern "C" void __ct__13Z2SoundObjMgrFv();
-extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
-extern "C" void searchEnemy__13Z2SoundObjMgrFv();
-extern "C" void setGhostEnemyState__13Z2SoundObjMgrFUc();
-extern "C" void func_802C0074();
-extern "C" void setBattleInit__13Z2SoundObjMgrFv();
-extern "C" void checkBattleFinish__13Z2SoundObjMgrFv();
-extern "C" void deleteEnemyAll__13Z2SoundObjMgrFv();
-extern "C" void func_802C0190();
-extern "C" void isTwilightBattle__13Z2SoundObjMgrFv();
-extern "C" void __sinit_Z2SoundObjMgr_cpp();
+extern "C" void __ct__13Z2SoundObjMgrFv(); // 1
+extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs(); // 1
+extern "C" void searchEnemy__13Z2SoundObjMgrFv(); // 1
+extern "C" void setGhostEnemyState__13Z2SoundObjMgrFUc(); // 1
+extern "C" void func_802C0074(); // 1
+extern "C" void setBattleInit__13Z2SoundObjMgrFv(); // 1
+extern "C" void checkBattleFinish__13Z2SoundObjMgrFv(); // 1
+extern "C" void deleteEnemyAll__13Z2SoundObjMgrFv(); // 1
+extern "C" void func_802C0190(); // 1
+extern "C" void isTwilightBattle__13Z2SoundObjMgrFv(); // 1
+extern "C" void __sinit_Z2SoundObjMgr_cpp(); // 1
 SECTION_RODATA extern const u8 lit_3380[12 + 4 /* padding */];
 SECTION_DATA extern u8 Z2SoundObjMgr__mEnemyInfo[1024];
 SECTION_DATA extern void*Z2SoundObjMgr__lit_3704[48];
@@ -118,31 +102,31 @@ SECTION_SDATA2 extern f64 Z2SoundObjMgr__lit_3703;
 // External References:
 // 
 
-extern "C" void PSVECSubtract();
-extern "C" void PSVECMag();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_27();
-extern "C" void strcmp();
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern "C" void changeBgmStatus__8Z2SeqMgrFl();
-extern "C" void changeSubBgmStatus__8Z2SeqMgrFl();
-extern "C" void setBattleSearched__8Z2SeqMgrFb();
-extern "C" void setBattleGhostMute__8Z2SeqMgrFb();
-extern "C" void setBattleDistState__8Z2SeqMgrFUc();
-extern "C" void stopBattleBgm__8Z2SeqMgrFUcUc();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECMag();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_27();
-extern "C" void strcmp();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
+extern "C" void changeBgmStatus__8Z2SeqMgrFl(); // 1
+extern "C" void changeSubBgmStatus__8Z2SeqMgrFl(); // 1
+extern "C" void setBattleSearched__8Z2SeqMgrFb(); // 1
+extern "C" void setBattleGhostMute__8Z2SeqMgrFb(); // 1
+extern "C" void setBattleDistState__8Z2SeqMgrFUc(); // 1
+extern "C" void stopBattleBgm__8Z2SeqMgrFUcUc(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void strcmp(); // 1
 SECTION_SBSS extern u8 data_80450B48[4];
 SECTION_SBSS extern u8 data_80450B80[4];
 SECTION_SBSS extern u8 data_80450B84[4];
@@ -393,7 +377,7 @@ asm void Z2SoundObjMgr::setGhostEnemyState(u8 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802C0074() {
+asm void Z2SoundObjMgr::getEnemyID(char const* field_0, JSULink<Z2CreatureEnemy>* field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/func_802C0074.s"
 }
@@ -437,7 +421,7 @@ asm void Z2SoundObjMgr::deleteEnemyAll() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802C0190() {
+asm void Z2SoundObjMgr::removeEnemy(JSULink<Z2CreatureEnemy>* field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundObjMgr/func_802C0190.s"
 }

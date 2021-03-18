@@ -16,6 +16,7 @@ from symbols import ReturnFunction, ReturnIntegerFunction, FirstParamFunction, G
 from demangle import demangle
 
 from symbol_table import GlobalSymbolTable
+from collections import defaultdict
 
 from intervaltree import Interval, IntervalTree
 import functools
@@ -29,38 +30,49 @@ from context import Context
 import globals
 
 import data_types
-from data_types import ConstType, ReferenceType, PointerType
+from data_types import ConstType, ReferenceType, PointerType, ArrayType
 from dataclasses import dataclass, field
 
 SDA_BASE = 0x80458580
 SDA2_BASE = 0x80459A00
 
+
 @dataclass(eq=False)
 class Struct:
     name: str
+    index: int
     parent: "Struct"
+    parent_ti: int
+    templates: List[Symbol]
     symbols: List[Symbol] = field(default_factory=list)
     dependecies: Set[Type] = field(default_factory=set)
-    types: Dict[str,"Struct"] = field(default_factory=dict)
+    types: Dict[str, Dict[int, "Struct"]] = field(default_factory=dict)
 
     @property
     def id(self) -> List[str]:
         if self.parent:
-            return self.parent.id + [self.name]
-        return [self.name]
+            return self.parent.id + [(self.index, self.name)]
+        return [(self.index, self.name)]
+
+    @property
+    def depth(self) -> int:
+        if self.parent:
+            return self.parent.depth + 1
+        return 0
 
     def __eq__(self, other):
         if self.__class__ != other.__class__:
             return
-        return self.id == other.id
+        return self.id == other.id and self.parent == other.parent
 
     def __hash__(self):
-        return hash(tuple(self.id))
+        return hash((hash(self.parent), tuple(self.id)))
+
 
 @dataclass(eq=False)
 class Namespace(Struct):
     ...
-        
+
 
 class CPPDisassembler(dasm.Disassembler):
     def __init__(self, builder, function, block_map, symbol_table):
@@ -303,6 +315,7 @@ class DeclType:
 class CPPExporter:
     context: Context
     gst: GlobalSymbolTable
+    tu: TranslationUnit = None
 
     async def export_symbol_header(self, builder: Builder, symbol: Symbol):
         await builder.write("/* %08X-%08X %04X+%02X rc=%i efc=%i %-10s %-60s */" % (
@@ -825,7 +838,6 @@ class CPPExporter:
                 await builder.write("")
                 break
 
-
     async def export_section_dtors(self, builder: AsyncBuilder, section: Section):
         await builder.write("#pragma section \".dtors$10\"")
         for symbol in section.symbols:
@@ -941,8 +953,10 @@ class CPPExporter:
             if section.name == ".text":
                 for function in section.symbols:
                     symbols = []
-                    addr_references = function.internal_references(self.context, self.gst)
-                    references = addr_references#self.gst.resolve_set(addr_references)
+                    addr_references = function.internal_references(
+                        self.context, self.gst)
+                    # self.gst.resolve_set(addr_references)
+                    references = addr_references
                     for symbol in references:
                         if isinstance(symbol, Function):
                             continue
@@ -955,7 +969,8 @@ class CPPExporter:
 
                     addr_relocations = function.relocation_symbols(
                         self.context, self.gst, section)
-                    relocations = addr_relocations#self.gst.resolve_set(addr_relocations)
+                    # self.gst.resolve_set(addr_relocations)
+                    relocations = addr_relocations
                     for symbol in relocations:
                         if isinstance(symbol, Function):
                             continue
@@ -987,7 +1002,7 @@ class CPPExporter:
         for function, symbols in function_symbols_groups:
             # new section of symbols followed by a function
             if len(symbols) > 0:
-               await builder.write("/* ############################################################################################## */")
+                await builder.write("/* ############################################################################################## */")
 
             unreferenced_decls = 0
             for symbol in symbols:
@@ -995,7 +1010,7 @@ class CPPExporter:
                 await symbol.export_declaration(self, builder)
                 await builder.write("")
 
-            await self.export_symbol_header(builder, function)           
+            await self.export_symbol_header(builder, function)
             await function.export_declaration(self, builder)
             await builder.write("")
 
@@ -1017,9 +1032,6 @@ class CPPExporter:
                 await symbol.export_declaration(self, builder)
                 await builder.write("")
 
-
-
-
     def find_references(self,
                         section: Section,
                         decl_references: Set[Symbol],
@@ -1030,32 +1042,46 @@ class CPPExporter:
             internal_addrs = symbol.internal_references(self.context, self.gst)
             internal_references.update(internal_addrs)
 
-            relocation_addrs = symbol.relocation_symbols(self.context, self.gst, section)
+            relocation_addrs = symbol.relocation_symbols(
+                self.context, self.gst, section)
             relocation_symbols.update(relocation_addrs)
 
-    def get_or_create_type(self, parent, types, names):
+    def get_or_create_type(self, parent, parent_ti, types, names):
         class_name = names[0]
         if not class_name.name in types:
-            full_name = ""
-            if parent:
-                full_name = f"{parent.id}::"
-            full_name += class_name.name
-            if full_name in globals.NAMESPACES:
-                types[class_name.name] = Namespace(class_name.name, parent)
-            else:
-                types[class_name.name] = Struct(class_name.name, parent)
+            types[class_name.name] = dict()
 
-        struct = types[class_name.name]
+        index = class_name.template_index
+        struct_group = types[class_name.name]
+        if not index in struct_group:
+            parent_names = []
+            if parent:
+                parent_names = parent.id
+            full_name = "::".join([x[1] for x in parent_names] +  [class_name.name])
+            template_count = len(class_name.templates)
+            if full_name in globals.NAMESPACES:
+                if template_count > 0:
+                    self.context.error(
+                        f"namespace cannot have template arguments ({full_name})")
+                if parent_ti != -1:
+                    self.context.error(
+                        f"namespace cannot have templated struct as parent ({full_name})")
+                struct_group[index] = Namespace(class_name.name, -1, parent, -1, [])
+            else:
+                struct_group[index] = Struct(
+                    class_name.name, index, parent, parent_ti, class_name.templates)
+
+        struct = struct_group[index]
         if len(names) == 1:
             return struct
-        else:
-            return self.get_or_create_type(struct, struct.types, names[1:])
 
-    def get_or_create_type_from_name(self, parent, types, names):
+        return self.get_or_create_type(struct, index, struct.types, names[1:])
+
+    def get_or_create_type_from_name(self, parent, parent_ti, types, names):
         if len(names) == 1:
             return None
 
-        struct = self.get_or_create_type(parent,types, names[:-1])
+        struct = self.get_or_create_type(parent, parent_ti, types, names[:-1])
         return struct
 
     def build_forward_type(self, forward_types, types, parent_struct, arg, indirect: bool = False):
@@ -1070,14 +1096,19 @@ class CPPExporter:
             return self.build_forward_type(forward_types, types, parent_struct, arg.of, indirect=True)
 
         if isinstance(arg, NamedType):
-            struct = self.get_or_create_type(None, types, arg.names)
+            for name in arg.names:
+                for template in name.templates:
+                    self.build_forward_type(forward_types, types, parent_struct, template, indirect=indirect)
+            
+            struct = self.get_or_create_type(None, -1, types, arg.names)
             if not struct:
                 forward_types.add(arg)
             else:
                 if arg.has_class:
                     forward_types.add(arg)
                 if parent_struct:
-                    parent_struct.dependecies.add(tuple([x.name for x in arg.names]))
+                    parent_struct.dependecies.add(
+                        tuple([(x.template_index, x.name) for x in arg.names]))
 
     def build_forward_types(self, forward_types, types, symbol):
         if not isinstance(symbol, Function):
@@ -1085,87 +1116,19 @@ class CPPExporter:
 
         struct = None
         if symbol.has_class:
-            struct = self.get_or_create_type_from_name(None, types, symbol.func_name.parts)
+            struct = self.get_or_create_type_from_name(
+                None, -1, types, symbol.func_name.names)
             struct.symbols.append(symbol)
 
-        self.build_forward_type(forward_types, types, struct, symbol.return_type)
+        self.build_forward_type(forward_types, types,
+                                struct, symbol.return_type)
         for arg in symbol.argument_types:
             self.build_forward_type(forward_types, types, struct, arg)
 
-
-    async def export_translation_unit(self, tu: TranslationUnit, path: Path):
-        # Skip empty translation units
-        # TODO: To this test earlier
-        if len(tu.sections) == 0:
-            return []
-        if sum([len(x.symbols) for x in tu.sections.values()]) == 0:
-            return []
-
-        tasks = []
-        await util.create_dirs_for_file(path)
-
-        # find all references
-        decl_references = set()
-        internal_references = set()
-        relocation_symbols = set()
-        for section in tu.sections.values():
-            self.find_references(section, decl_references,
-                                 internal_references, relocation_symbols)
-
-        rel_symbol_map = dict()
-        for symbol in relocation_symbols:
-            internal_references.add(symbol)
-            rel_symbol_map[symbol.addr] = symbol
-
-        forward_references = list(decl_references)
-        forward_references.sort(key=lambda x: x.addr)
-
-        external_references = list(
-            (internal_references | relocation_symbols) - decl_references)
-        external_references.sort(key=lambda x: x.addr)
-
-        types = dict()
-        forward_types = set()
-
-
-
-
-        for symbol in forward_references:
-            self.build_forward_types(forward_types, types, symbol)
-        for symbol in external_references:
-            self.build_forward_types(forward_types, types, symbol)
-
-        async with AsyncBuilder(path) as builder:
-            await builder.write("// ")
-            await builder.write("// Generated By: dol2asm")
-            # await builder.write(f"// Module: {module.index}")
-            # await builder.write(f"// Library: {library.name if library.name else '---'}")
-            await builder.write(f"// Translation Unit: {tu.name}")
-            await builder.write("// ")
-
-            await builder.write("")
-            await builder.write("#include \"dolphin/types.h\"")
-            await builder.write("")
-
-            if len(forward_types) > 0 or len(types) > 0:
-                await builder.write("// ")
-                await builder.write("// Types:")
-                await builder.write("// ")
-                await builder.write("")
-
-                """
-                if len(forward_types) > 0:
-                    for data_type in forward_types:
-                        if data_type.name in types:
-                            type = types[data_type.name]
-                            if not isinstance(type, Namespace):
-                                await builder.write(f"struct {type.type()};")
-                    await builder.write("")
-                """
-
-                if len(types) > 0:
-                    used = set()
+    """
+                        used = set()
                     declared = set()
+                    template_created = set()
 
                     def get_all_dependencies(struct):
                         deps = set()
@@ -1228,6 +1191,15 @@ class CPPExporter:
 
                         declared.add(struct)
 
+                        if struct.templated > 0:
+                            self.context.debug(struct)
+                            for temp in struct.templates:
+                                await builder.write(f"{pad}/* {temp} */")
+
+                            alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            args = ", ".join([ f"typename {alphabet[i]}{struct.depth}" for i in range(struct.templated) ])
+                            await builder.write(f"{pad}template<{args}>")
+
                         decl = "struct"
                         if isinstance(struct, Namespace):
                             decl = "namespace"
@@ -1242,20 +1214,392 @@ class CPPExporter:
                             await build_struct(child, indent + 1)
 
                         if not isinstance(struct, Namespace):
-                            symbols = list(set(struct.symbols))
-                            symbols.sort(key=lambda x: x.addr)
-                            for symbol in symbols:
-                                await builder.write_nonewline(f"{pad}\t/* {symbol.addr:08X} */ ")
-                                await symbol.export_forward_references(self, builder, in_class=True)
+                            names = defaultdict(list)
+                            for symbol in set(struct.symbols):
+                                names[symbol.func_name.last.name].append(symbol)
+
+                            for name, functions in names.items():
+                                if functions[0].func_name.last.templates:
+                                    await builder.write(f"{pad}\t/*          templated function */ ")
+                                    template_count = len(functions[0].func_name.last.templates)
+
+                                    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                    args = [ f"{alphabet[i]}{struct.depth}" for i in range(template_count) ]
+                                    typename_args = ", ".join([ f"typename {x}" for x in args ])
+                                    await builder.write(f"{pad}\t/*          */ template <{typename_args}>")
+
+                                    await builder.write_nonewline(f"{pad}\t/*          */ ")
+                                    await functions[0].export_template_base(self, builder, in_class=True)
+                                    for function in functions:
+                                        assert function.template_index >= 0
+                                        await builder.write_nonewline(f"{pad}\t/* {function.addr:08X} */ ")
+                                        await function.export_forward_references(self, builder, in_class=True)
+                                else:
+                                    for function in functions:
+                                        await builder.write_nonewline(f"{pad}\t/* {function.addr:08X} */ ")
+                                        await function.export_forward_references(self, builder, in_class=True)
                         else:
                             # TODO: error
                             pass
 
                         await builder.write(f"{pad}}};")
                         await builder.write("")
+    """
 
-                    for struct in types.values():
-                        await build_struct(struct, 0)
+    def struct_dependencies(self, struct):
+        deps = set()
+        deps.update(struct.dependecies)
+        deps.discard(tuple(struct.id))
+        for child_group in struct.types.values():
+            for child in child_group.values():
+                deps.update(self.struct_dependencies(child))
+        return deps
+
+    def index_of_same(self, a, b):
+        if len(a) >= len(b):
+            return 0
+        for i, a_value in enumerate(a):
+            if a_value != b[i]:
+                return i
+        return len(a)
+
+    def struct_get_child_group(self, parent, names):
+        index = self.index_of_same(parent.id, names)
+        if index <= 0:
+            return None, None
+
+        name = names[index]
+        if not name[1] in parent.types:
+            return None, None
+
+        child = parent.types[name[1]]
+        return child, name
+
+    def type_get_dependencies(self, deps, type):
+        if not type:
+            return
+        if data_types.is_builtin(type):
+            return
+
+        if isinstance(type, ArrayType):
+            self.type_get_dependencies(deps, type.base)
+            self.type_get_dependencies(deps, type.inner)
+            return
+
+        if isinstance(type, ConstType):
+            return self.type_get_dependencies(deps, type.of)
+        if isinstance(type, PointerType):
+            return self.type_get_dependencies(deps, type.of)
+        if isinstance(type, ReferenceType):
+            return self.type_get_dependencies(deps, type.of)
+
+        if isinstance(type, NamedType):
+            deps.add (type)
+            for name in type.names:
+                for template in name.templates:
+                    self.type_get_dependencies(deps, template)
+
+    def function_get_dependencies(self, func):
+        deps = set()
+        self.type_get_dependencies(deps, func.return_type)
+        for arg_type in func.argument_types:
+            self.type_get_dependencies(deps, arg_type)
+        return deps
+
+    def get_struct_from_names(self, parent, names):
+        name = names[0]
+        types = self.global_types
+        if parent:
+            types = parent.types
+        if not name[1] in types:
+            return None
+
+        if not name[0] in types[name[1]]:
+            return None
+
+        struct = types[name[1]][name[0]]
+        if len(names) == 1:
+            return struct
+        return self.get_struct_from_names(struct, names[1:])
+
+    def function_requires_move(self, function):
+        deps = self.function_get_dependencies(function)
+        dep_defined = []
+        for dep in deps:
+            dep_names = [ (x.template_index, x.name) for x in dep.names ]
+            struct = self.get_struct_from_names(None, dep_names)
+            assert struct
+            dep_defined.append((struct in self.struct_export_set) or (struct in self.struct_forward_set))
+
+        move_function = len(dep_defined) > 0 and any([ not x for x in dep_defined ])
+        return move_function
+
+    async def export_struct_function(self, builder, parent, indent, function, specialize):
+        pad = "\t" * indent
+
+        move_function = self.function_requires_move(function)
+        if move_function:
+            self.moved_functions.append((parent, function, specialize))
+            if not isinstance(parent, Namespace):
+                self.context.error(f"moving function that is part of struct and not namespace ({function.label})")
+
+        if not move_function:
+            await builder.write_nonewline(f"{pad}/* {function.addr:08X} */ ")
+            if function.template_index >= 0:
+                await builder.write(f"/* {function.function_name(full_qualified_name=False)} */")
+                await builder.write_nonewline(f"{pad}")
+
+            await function.export_function_header(self, builder,
+                                                forward=True,
+                                                full_qualified_name=False,
+                                                specialize_templates=specialize)
+            await builder.write(f";")
+
+
+
+    async def export_struct(self, builder, struct_index, struct, indent):
+        self.struct_export_set.add(struct)
+
+        pad = "\t" * indent
+        if isinstance(struct, Namespace):
+            await builder.write(f"{pad}namespace {struct.name} {{")
+        else:
+            if struct_index >= 0:
+                args = ", ".join([x.type() for x in struct.templates])
+                await builder.write(f"{pad}/* {struct.name}<{args}> */")
+                await builder.write(f"{pad}struct {struct.name}__template{struct_index} {{")
+            else:
+                await builder.write(f"{pad}struct {struct.name} {{")
+
+        for inner_struct_group in struct.types.values():
+            await self.export_struct_group(builder, struct, inner_struct_group, indent + 1)
+
+        # symbols
+        names = defaultdict(list)
+        for symbol in set(struct.symbols):
+            names[symbol.func_name.last.name].append(symbol)
+
+        symbols = list(names.items())
+        symbols.sort(key=lambda x: min([ z.addr for z in x[1]]))
+        for name, functions in symbols:
+            if functions[0].template_index >= 0:
+
+                first_function = functions[0]
+                move_function = self.function_requires_move(first_function)
+
+                alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                args = [ f"{alphabet[i]}{struct.depth+1}" for i in range(len(first_function.func_name.last.templates)) ]
+                typename_args = ", ".join([ f"typename {x}" for x in args ])
+                await builder.write(f"{pad}\t/*          */ template <{typename_args}>")
+                await builder.write_nonewline(f"{pad}\t/*          */ ")
+                await first_function.export_function_header(self, builder,
+                                                    forward=True,
+                                                    full_qualified_name=False,
+                                                    without_template=True,
+                                                    specialize_templates=False,
+                                                    comment_arguments=True)
+                await builder.write(f";")
+
+                for function in functions:
+                    await self.export_struct_function(builder, struct, indent + 1, function, True)
+                await builder.write(f"")
+            else:
+                for function in functions:
+                    await self.export_struct_function(builder, struct, indent + 1, function, (struct_index >= 0))
+
+        await builder.write(f"{pad}}};")
+        await builder.write("")
+
+    async def export_struct_group(self, builder, parent, struct_group, indent):
+        if len(struct_group) <= 0:
+            return
+
+        pad = "\t" * indent
+        first_struct = struct_group[list(struct_group.keys())[0]]
+        is_exported = (first_struct in self.struct_export_set)
+        is_declared = (first_struct in self.struct_declare_set)
+        is_forwarded = (first_struct in self.struct_forward_set)
+        if is_exported or is_declared:
+            if is_declared and not is_exported:
+                # circular-dependency
+                if not is_forwarded:
+                    for struct_index, struct in struct_group.items():
+                        if isinstance(struct, Namespace):
+                            self.context.error(f"forward references required in non-namespace scope. the struct '{struct.name}' ({struct.id}) must be defined before it is being used, but it is not possible without using a forward reference. forward reference does nopt work inside struct scope.")
+                            continue
+
+                        self.struct_forward_set.add(struct)
+                        if struct_index >= 0:
+                            await builder.write(f"{pad}struct {struct.name}__template{struct_index};")
+                        else:
+                            await builder.write(f"{pad}struct {struct.name};")
+            else:
+                pass #await builder.write(f"{pad}// group (already exported)")
+            return 
+        else:
+            pass #await builder.write(f"{pad}// group")
+
+        dependecies = set()
+        structs = set(struct_group.values())
+        for struct in structs:
+            #await builder.write(f"{pad}// {id(struct)} {struct.id} {hash(struct)}")
+            self.struct_declare_set.add(struct)
+            dependecies.update(self.struct_dependencies(struct))
+
+        #await builder.write(f"{pad}/* begin dependencies */")
+        for dep in dependecies:
+            if parent:
+                inner_struct_group, name = self.struct_get_child_group(parent, dep)
+                if not inner_struct_group:
+                    continue
+                if inner_struct_group == struct_group:
+                    continue
+                assert name[0] in inner_struct_group
+                inner_struct = inner_struct_group[name[0]]
+                #await builder.write(f"{pad}\t// exporting... {dep}")
+                await self.export_struct_group(builder, inner_struct.parent, inner_struct_group, indent)
+            else:
+                top_level = dep[0]
+                if not top_level[1] in self.global_types:
+                    continue
+                inner_struct_group = self.global_types[top_level[1]]
+                if inner_struct_group == struct_group:
+                    continue
+                assert top_level[0] in inner_struct_group
+                inner_struct = inner_struct_group[top_level[0]]
+                #await builder.write(f"{pad}\t// exporting... {dep}")
+                await self.export_struct_group(builder, inner_struct.parent, inner_struct_group, indent)
+                
+        #await builder.write(f"{pad}/* end   dependencies */")
+
+
+        # check if there are templated types
+        if not (-1 in struct_group):
+            #await builder.write(f"{pad}// template")
+            alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            args = [ f"{alphabet[i]}{first_struct.depth}" for i in range(len(first_struct.templates)) ]
+            typename_args = ", ".join([ f"typename {x}" for x in args ])
+            await builder.write(f"{pad}template <{typename_args}>")
+            await builder.write(f"{pad}struct {first_struct.name} {{ }};")
+
+
+        for index, struct in struct_group.items():
+            #await builder.write(f"{pad}// export {index} {struct.name} ({struct.id})")
+            await self.export_struct(builder, index, struct, indent)
+
+    async def export_translation_unit(self, tu: TranslationUnit, path: Path):
+        self.tu = tu
+
+
+        # Skip empty translation units
+        # TODO: To this test earlier
+        if len(tu.sections) == 0:
+            return []
+        if sum([len(x.symbols) for x in tu.sections.values()]) == 0:
+            return []
+
+        tasks = []
+        await util.create_dirs_for_file(path)
+
+        # find all references
+        decl_references = set()
+        internal_references = set()
+        relocation_symbols = set()
+        for section in tu.sections.values():
+            self.find_references(section, decl_references,
+                                 internal_references, relocation_symbols)
+
+        rel_symbol_map = dict()
+        for symbol in relocation_symbols:
+            internal_references.add(symbol)
+            rel_symbol_map[symbol.addr] = symbol
+
+        forward_references = list(decl_references)
+        forward_references.sort(key=lambda x: x.addr)
+
+        external_references = list(
+            (internal_references | relocation_symbols) - decl_references)
+        external_references.sort(key=lambda x: x.addr)
+
+        types = dict()
+        forward_types = set()
+
+        for symbol in forward_references:
+            self.build_forward_types(forward_types, types, symbol)
+        for symbol in external_references:
+            self.build_forward_types(forward_types, types, symbol)
+
+        async with AsyncBuilder(path) as builder:
+            await builder.write("// ")
+            await builder.write("// Generated By: dol2asm")
+            # await builder.write(f"// Module: {module.index}")
+            # await builder.write(f"// Library: {library.name if library.name else '---'}")
+            await builder.write(f"// Translation Unit: {tu.name}")
+            await builder.write("// ")
+
+            await builder.write("")
+            await builder.write("#include \"dolphin/types.h\"")
+            await builder.write("")
+
+            if len(forward_types) > 0 or len(types) > 0:
+                await builder.write("// ")
+                await builder.write("// Types:")
+                await builder.write("// ")
+                await builder.write("")
+
+                """
+                if len(forward_types) > 0:
+                    for data_type in forward_types:
+                        if data_type.name in types:
+                            type = types[data_type.name]
+                            if not isinstance(type, Namespace):
+                                await builder.write(f"struct {type.type()};")
+                    await builder.write("")
+                """
+
+                if len(types) > 0:
+                    self.struct_export_set = set()
+                    self.struct_declare_set = set()
+                    self.struct_forward_set = set()
+                    self.global_types = types
+                    self.moved_functions = list()
+                    for struct_group in types.values():
+                        await self.export_struct_group(builder, None, struct_group, 0)
+
+                    if self.moved_functions:
+                        def ddict():
+                            return (list(), defaultdict(ddict))
+
+                        namespaces = ddict()
+                        for struct, function, specialize in self.moved_functions:
+                            parent = namespaces
+                            for i,name in struct.id:
+                                parent = parent[1][name]
+                            namespace = "::".join([x[1] for x in struct.id])
+                            parent[0].append((struct, function, specialize))
+
+                        async def export_namespace(name, namespace, indent):
+                            symbols = namespace[0]
+                            children = namespace[1]
+                            pad = "\t" * indent
+                            await builder.write(f"{pad}namespace {name} {{")
+                            for child_name, child in children.items():
+                                await export_namespace(child_name, child, indent + 1)
+
+                            for struct, function, specialize in symbols:
+                                await builder.write_nonewline(f"{pad}/* {function.addr:08X} */ ")
+                                await function.export_function_header(self, builder,
+                                                                    forward=True,
+                                                                    full_qualified_name=False,
+                                                                    specialize_templates=specialize)
+                                await builder.write(f";")
+
+                            await builder.write(f"{pad}}}")
+                            await builder.write(f"")
+
+                        for name, namespace in namespaces[1].items():
+                            await export_namespace(name, namespace, 0)
+
 
 
             await builder.write("// ")
@@ -1268,7 +1612,7 @@ class CPPExporter:
             await builder.write("")
 
             for symbol in forward_references:
-                await symbol.export_forward_references(self, builder, c_export = True)
+                await symbol.export_forward_references(self, builder, c_export=True)
             await builder.write("")
 
             await builder.write("// ")
@@ -1281,7 +1625,7 @@ class CPPExporter:
             await builder.write("")
 
             for symbol in external_references:
-                await symbol.export_forward_references(self, builder, c_export = True)
+                await symbol.export_forward_references(self, builder, c_export=True)
             await builder.write("")
 
             await builder.write("// ")
@@ -1451,10 +1795,10 @@ def export_translation_unit_x(context: Context, tu: TranslationUnit, path: Path,
     end = time.time()
     #context.debug(f"complete TU: {tu.name} ({end-start})")
 
+
 def export_translation_unit_group(context: Context, tus: List[Tuple[TranslationUnit, Path]], symbol_table: GlobalSymbolTable):
-    cpp_exporter = CPPExporter(context, symbol_table)
     async_tasks = [
-        cpp_exporter.export_translation_unit(*tu)
+        CPPExporter(context, symbol_table).export_translation_unit(*tu)
         for tu in tus
     ]
 
@@ -1474,16 +1818,18 @@ async def export_function2(function: Function, symbol_table: GlobalSymbolTable, 
         block_map[block.addr] = block
 
     async with AsyncBuilder(function.include_path) as include_builder:
-        cppd = CPPDisassembler(include_builder, function, block_map, symbol_table)
+        cppd = CPPDisassembler(include_builder, function,
+                               block_map, symbol_table)
         for block in function.blocks:
             await cppd.async_execute(block.addr, block.data, block.size)
 
     #context.debug(f"generated asm: '{function.include_path}'")
-    
+
 
 def export_function(context: Context, functions: List[Tuple[Symbol, Path]], symbol_table: GlobalSymbolTable, no_file_generation: bool):
     async_tasks = [
-        export_function2(*function, symbol_table=symbol_table, no_file_generation=no_file_generation,context=context)
+        export_function2(*function, symbol_table=symbol_table,
+                         no_file_generation=no_file_generation, context=context)
         for function in functions
     ]
 
@@ -1492,6 +1838,7 @@ def export_function(context: Context, functions: List[Tuple[Symbol, Path]], symb
 
     context.debug(f"generated asm {len(functions)} functions")
     asyncio.run(wait_all())
+
 
 def export_library(library: Library, gst: GlobalSymbolTable):
     tasks = []

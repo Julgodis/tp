@@ -9,185 +9,92 @@
 // Types:
 // 
 
-// build J3DTransformInfo (['J3DTransformInfo']) False/False
-/* top-level dependencies (begin ['J3DTransformInfo']) */
-/* top-level dependencies (end ['J3DTransformInfo']) */
 struct J3DTransformInfo {
 };
 
-// build mDoExt_baseAnm (['mDoExt_baseAnm']) False/False
-/* top-level dependencies (begin ['mDoExt_baseAnm']) */
-/* top-level dependencies (end ['mDoExt_baseAnm']) */
 struct mDoExt_baseAnm {
 	/* 8000D320 */ void initPlay(s16, int, f32, s16, s16);
 	/* 8000D428 */ void play();
 };
 
-// build mDoExt_bpkAnm (['mDoExt_bpkAnm']) False/False
-// build J3DMaterialTable (['J3DMaterialTable']) False/False
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) False/False
-// build J3DMaterialTable (['J3DMaterialTable']) True/False
 struct J3DMaterialTable;
-/* top-level dependencies (begin ['J3DAnmTevRegKey']) */
-// outer dependency: ('J3DMaterialTable',)
-/* top-level dependencies (end ['J3DAnmTevRegKey']) */
-struct J3DAnmTevRegKey {
-	// ('J3DMaterialTable',)
-	/* 8032B780 */ void searchUpdateMaterialID(J3DMaterialTable*);
-};
-
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) False/False
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-/* top-level dependencies (begin ['J3DAnmTexPattern']) */
-// outer dependency: ('J3DMaterialTable',)
-/* top-level dependencies (end ['J3DAnmTexPattern']) */
-struct J3DAnmTexPattern {
-	// ('J3DMaterialTable',)
-	/* 8032B004 */ void searchUpdateMaterialID(J3DMaterialTable*);
-};
-
-// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) False/False
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-/* top-level dependencies (begin ['J3DAnmTextureSRTKey']) */
-// outer dependency: ('J3DMaterialTable',)
-/* top-level dependencies (end ['J3DAnmTextureSRTKey']) */
 struct J3DAnmTextureSRTKey {
-	// ('J3DMaterialTable',)
 	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
-// build J3DAnmColor (['J3DAnmColor']) False/False
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-/* top-level dependencies (begin ['J3DAnmColor']) */
-// outer dependency: ('J3DMaterialTable',)
-/* top-level dependencies (end ['J3DAnmColor']) */
-struct J3DAnmColor {
-	// ('J3DMaterialTable',)
-	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
+struct J3DAnmTexPattern {
+	/* 8032B004 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
-/* top-level dependencies (begin ['J3DMaterialTable']) */
-// outer dependency: ('J3DAnmTevRegKey',)
-// outer dependency: ('J3DAnmTexPattern',)
-// outer dependency: ('J3DAnmTextureSRTKey',)
-// outer dependency: ('J3DAnmColor',)
-/* top-level dependencies (end ['J3DMaterialTable']) */
+struct J3DAnmTevRegKey {
+	/* 8032B780 */ void searchUpdateMaterialID(J3DMaterialTable*);
+};
+
+struct J3DAnmColor;
 struct J3DMaterialTable {
-	// ('J3DAnmTevRegKey',)
-	// ('J3DAnmTexPattern',)
-	// ('J3DAnmTextureSRTKey',)
-	// ('J3DAnmColor',)
 	/* 8032FAF4 */ void entryMatColorAnimator(J3DAnmColor*);
 	/* 8032FBC8 */ void entryTexNoAnimator(J3DAnmTexPattern*);
 	/* 8032FCC4 */ void entryTexMtxAnimator(J3DAnmTextureSRTKey*);
 	/* 8032FE70 */ void entryTevRegAnimator(J3DAnmTevRegKey*);
 };
 
-// build J3DAnmColor (['J3DAnmColor']) True/True
-/* top-level dependencies (begin ['mDoExt_bpkAnm']) */
-// outer dependency: ('J3DMaterialTable',)
-// outer dependency: ('J3DAnmColor',)
-/* top-level dependencies (end ['mDoExt_bpkAnm']) */
+struct J3DAnmColor {
+	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
+};
+
 struct mDoExt_bpkAnm {
-	// ('J3DMaterialTable',)
-	// ('J3DAnmColor',)
 	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-// build J3DAnmColor (['J3DAnmColor']) True/True
-// build mDoExt_btpAnm (['mDoExt_btpAnm']) False/False
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) True/True
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-/* top-level dependencies (begin ['mDoExt_btpAnm']) */
-// outer dependency: ('J3DAnmTexPattern',)
-// outer dependency: ('J3DMaterialTable',)
-/* top-level dependencies (end ['mDoExt_btpAnm']) */
 struct mDoExt_btpAnm {
-	// ('J3DAnmTexPattern',)
-	// ('J3DMaterialTable',)
 	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16);
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) True/True
-// build mDoExt_btkAnm (['mDoExt_btkAnm']) False/False
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) True/True
-/* top-level dependencies (begin ['mDoExt_btkAnm']) */
-// outer dependency: ('J3DMaterialTable',)
-// outer dependency: ('J3DAnmTextureSRTKey',)
-/* top-level dependencies (end ['mDoExt_btkAnm']) */
 struct mDoExt_btkAnm {
-	// ('J3DMaterialTable',)
-	// ('J3DAnmTextureSRTKey',)
 	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) True/True
-// build mDoExt_brkAnm (['mDoExt_brkAnm']) False/False
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-/* top-level dependencies (begin ['mDoExt_brkAnm']) */
-// outer dependency: ('J3DAnmTevRegKey',)
-// outer dependency: ('J3DMaterialTable',)
-/* top-level dependencies (end ['mDoExt_brkAnm']) */
 struct mDoExt_brkAnm {
-	// ('J3DAnmTevRegKey',)
-	// ('J3DMaterialTable',)
 	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
-// build mDoExt_bckAnm (['mDoExt_bckAnm']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build J3DAnmTransform (['J3DAnmTransform']) False/False
-/* top-level dependencies (begin ['J3DAnmTransform']) */
-/* top-level dependencies (end ['J3DAnmTransform']) */
 struct J3DAnmTransform {
 };
 
-/* top-level dependencies (begin ['mDoExt_bckAnm']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('J3DAnmTransform',)
-/* top-level dependencies (end ['mDoExt_bckAnm']) */
 struct mDoExt_bckAnm {
-	// ('J3DModelData',)
-	// ('J3DAnmTransform',)
 	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 	/* 8000D9E8 */ void entryJoint(J3DModelData*, u16, f32);
 };
 
-// build J3DAnmTransform (['J3DAnmTransform']) True/True
-// build J3DMtxCalcAnmBase (['J3DMtxCalcAnmBase']) False/False
-// build J3DAnmTransform (['J3DAnmTransform']) True/True
-/* top-level dependencies (begin ['J3DMtxCalcAnmBase']) */
-// outer dependency: ('J3DAnmTransform',)
-/* top-level dependencies (end ['J3DMtxCalcAnmBase']) */
+struct Vec {
+};
+
+template <typename A0, typename B0>
+struct J3DMtxCalcAnimation { };
+/* J3DMtxCalcAnimation<J3DMtxCalcAnimationAdaptorDefault<J3DMtxCalcCalcTransformMaya>, J3DMtxCalcJ3DSysInitMaya> */
+struct J3DMtxCalcAnimation__template0 {
+	/* 8000D8E4 */ void setAnmTransform(J3DAnmTransform*);
+	/* 80014FC8 */ ~J3DMtxCalcAnimation__template0();
+	/* 80015034 */ void init(Vec const&, f32 const (& )[3][4]);
+	/* 800150AC */ void calc();
+};
+
 struct J3DMtxCalcAnmBase {
-	// ('J3DAnmTransform',)
 	/* 8000D8EC */ ~J3DMtxCalcAnmBase();
 	/* 80014FB8 */ void getAnmTransform();
 	/* 80014FC0 */ void setAnmTransform(J3DAnmTransform*);
 };
 
-// build J3DMtxCalc (['J3DMtxCalc']) False/False
-// build J3DAnmTransform (['J3DAnmTransform']) True/True
-/* top-level dependencies (begin ['J3DMtxCalc']) */
-// outer dependency: ('J3DAnmTransform',)
-/* top-level dependencies (end ['J3DMtxCalc']) */
 struct J3DMtxCalc {
-	// ('J3DAnmTransform',)
 	/* 8000D948 */ ~J3DMtxCalc();
 	/* 80014E8C */ void setAnmTransform(u8, J3DAnmTransform*);
 	/* 80014E90 */ void setAnmTransform(J3DAnmTransform*);
@@ -197,43 +104,18 @@ struct J3DMtxCalc {
 	/* 80014EA8 */ void getWeight(u8) const;
 };
 
-// build J3DModelData (['J3DModelData']) True/True
-// build mDoExt_blkAnm (['mDoExt_blkAnm']) False/False
-// build J3DDeformData (['J3DDeformData']) False/False
-// build J3DAnmCluster (['J3DAnmCluster']) False/False
-/* top-level dependencies (begin ['J3DAnmCluster']) */
-/* top-level dependencies (end ['J3DAnmCluster']) */
 struct J3DAnmCluster {
 };
 
-/* top-level dependencies (begin ['J3DDeformData']) */
-// outer dependency: ('J3DAnmCluster',)
-/* top-level dependencies (end ['J3DDeformData']) */
 struct J3DDeformData {
-	// ('J3DAnmCluster',)
 	/* 8032E364 */ void setAnm(J3DAnmCluster*);
 };
 
-// build J3DAnmCluster (['J3DAnmCluster']) True/True
-/* top-level dependencies (begin ['mDoExt_blkAnm']) */
-// outer dependency: ('J3DDeformData',)
-// outer dependency: ('J3DAnmCluster',)
-/* top-level dependencies (end ['mDoExt_blkAnm']) */
 struct mDoExt_blkAnm {
-	// ('J3DDeformData',)
-	// ('J3DAnmCluster',)
 	/* 8000DA08 */ void init(J3DDeformData*, J3DAnmCluster*, int, int, f32, s16, s16);
 };
 
-// build J3DDeformData (['J3DDeformData']) True/True
-// build J3DAnmCluster (['J3DAnmCluster']) True/True
-// build J3DModel (['J3DModel']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-/* top-level dependencies (begin ['J3DModel']) */
-// outer dependency: ('J3DModelData',)
-/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
-	// ('J3DModelData',)
 	/* 80327100 */ void initialize();
 	/* 80327184 */ void entryModelData(J3DModelData*, u32, u32);
 	/* 803275FC */ void newDifferedDisplayList(u32);
@@ -242,73 +124,35 @@ struct J3DModel {
 	/* 803279A0 */ void diff();
 };
 
-// build J3DTevBlock (['J3DTevBlock']) False/False
-// build J3DTevSwapModeTable (['J3DTevSwapModeTable']) False/False
-/* top-level dependencies (begin ['J3DTevSwapModeTable']) */
-/* top-level dependencies (end ['J3DTevSwapModeTable']) */
-struct J3DTevSwapModeTable {
-	/* 8000E134 */ J3DTevSwapModeTable();
-};
-
-// build J3DGXColor (['J3DGXColor']) False/False
-/* top-level dependencies (begin ['J3DGXColor']) */
-/* top-level dependencies (end ['J3DGXColor']) */
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
-// build J3DIndTevStage (['J3DIndTevStage']) False/False
-/* top-level dependencies (begin ['J3DIndTevStage']) */
-/* top-level dependencies (end ['J3DIndTevStage']) */
 struct J3DIndTevStage {
 	/* 8000E14C */ J3DIndTevStage();
 };
 
-// build J3DGXColorS10 (['J3DGXColorS10']) False/False
-/* top-level dependencies (begin ['J3DGXColorS10']) */
-/* top-level dependencies (end ['J3DGXColorS10']) */
 struct J3DGXColorS10 {
 	/* 8000E460 */ J3DGXColorS10();
 };
 
-// build J3DTevOrder (['J3DTevOrder']) False/False
-/* top-level dependencies (begin ['J3DTevOrder']) */
-/* top-level dependencies (end ['J3DTevOrder']) */
+struct J3DTevSwapModeTable {
+	/* 8000E134 */ J3DTevSwapModeTable();
+};
+
 struct J3DTevOrder {
 	/* 8000E140 */ J3DTevOrder();
 };
 
-// build J3DTevStage (['J3DTevStage']) False/False
-// build J3DTevStageInfo (['J3DTevStageInfo']) False/False
-/* top-level dependencies (begin ['J3DTevStageInfo']) */
-/* top-level dependencies (end ['J3DTevStageInfo']) */
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
+};
+
 struct J3DTevStageInfo {
 };
 
-/* top-level dependencies (begin ['J3DTevStage']) */
-// outer dependency: ('J3DTevStageInfo',)
-/* top-level dependencies (end ['J3DTevStage']) */
 struct J3DTevStage {
-	// ('J3DTevStageInfo',)
 	/* 8000E230 */ J3DTevStage();
 	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
 };
 
-/* top-level dependencies (begin ['J3DTevBlock']) */
-// outer dependency: ('J3DTevSwapModeTable',)
-// outer dependency: ('J3DGXColor',)
-// outer dependency: ('J3DIndTevStage',)
-// outer dependency: ('J3DGXColorS10',)
-// outer dependency: ('J3DTevOrder',)
-// outer dependency: ('J3DTevStage',)
-/* top-level dependencies (end ['J3DTevBlock']) */
 struct J3DTevBlock {
-	// ('J3DTevSwapModeTable',)
-	// ('J3DTevStage',)
-	// ('J3DGXColor',)
-	// ('J3DIndTevStage',)
-	// ('J3DTevOrder',)
-	// ('J3DGXColorS10',)
 	/* 8000DBC8 */ void patchTexNoAndTexCoordScale();
 	/* 8000DBD4 */ void patch();
 	/* 8000DF84 */ bool getIndTevStage(u32);
@@ -333,34 +177,16 @@ struct J3DTevBlock {
 	/* 8000E0C8 */ void setTevStageNum(u8);
 };
 
-// build J3DPEBlock (['J3DPEBlock']) False/False
-// build J3DAlphaComp (['J3DAlphaComp']) False/False
-/* top-level dependencies (begin ['J3DAlphaComp']) */
-/* top-level dependencies (end ['J3DAlphaComp']) */
-struct J3DAlphaComp {
-};
-
-// build J3DZMode (['J3DZMode']) False/False
-/* top-level dependencies (begin ['J3DZMode']) */
-/* top-level dependencies (end ['J3DZMode']) */
 struct J3DZMode {
 };
 
-// build J3DBlend (['J3DBlend']) False/False
-/* top-level dependencies (begin ['J3DBlend']) */
-/* top-level dependencies (end ['J3DBlend']) */
 struct J3DBlend {
 };
 
-/* top-level dependencies (begin ['J3DPEBlock']) */
-// outer dependency: ('J3DAlphaComp',)
-// outer dependency: ('J3DZMode',)
-// outer dependency: ('J3DBlend',)
-/* top-level dependencies (end ['J3DPEBlock']) */
+struct J3DAlphaComp {
+};
+
 struct J3DPEBlock {
-	// ('J3DAlphaComp',)
-	// ('J3DZMode',)
-	// ('J3DBlend',)
 	/* 8000DBCC */ void patch();
 	/* 8000DF3C */ bool getZCompLoc() const;
 	/* 8000DF44 */ bool getZMode();
@@ -373,22 +199,11 @@ struct J3DPEBlock {
 	/* 8000E01C */ void setAlphaComp(J3DAlphaComp const&);
 };
 
-// build J3DColorBlock (['J3DColorBlock']) False/False
-// build J3DColorChan (['J3DColorChan']) False/False
-/* top-level dependencies (begin ['J3DColorChan']) */
-/* top-level dependencies (end ['J3DColorChan']) */
 struct J3DColorChan {
 	/* 8000E47C */ J3DColorChan();
 };
 
-// build J3DGXColor (['J3DGXColor']) True/True
-/* top-level dependencies (begin ['J3DColorBlock']) */
-// outer dependency: ('J3DColorChan',)
-// outer dependency: ('J3DGXColor',)
-/* top-level dependencies (end ['J3DColorBlock']) */
 struct J3DColorBlock {
-	// ('J3DColorChan',)
-	// ('J3DGXColor',)
 	/* 8000DBD0 */ void patchLight();
 	/* 8000DFF0 */ bool getAmbColor(u32);
 	/* 8000DFF8 */ bool getColorChan(u32);
@@ -400,30 +215,17 @@ struct J3DColorBlock {
 	/* 8000E0E0 */ void setColorChanNum(u8);
 };
 
-// build J3DIndBlock (['J3DIndBlock']) False/False
-// build J3DIndTexMtx (['J3DIndTexMtx']) False/False
-/* top-level dependencies (begin ['J3DIndTexMtx']) */
-/* top-level dependencies (end ['J3DIndTexMtx']) */
-struct J3DIndTexMtx {
-	/* 8000E064 */ ~J3DIndTexMtx();
-	/* 8000E0F0 */ J3DIndTexMtx();
-};
-
-// build J3DIndTexCoordScale (['J3DIndTexCoordScale']) False/False
-/* top-level dependencies (begin ['J3DIndTexCoordScale']) */
-/* top-level dependencies (end ['J3DIndTexCoordScale']) */
 struct J3DIndTexCoordScale {
 	/* 8000E024 */ ~J3DIndTexCoordScale();
 	/* 8000E0E4 */ J3DIndTexCoordScale();
 };
 
-/* top-level dependencies (begin ['J3DIndBlock']) */
-// outer dependency: ('J3DIndTexMtx',)
-// outer dependency: ('J3DIndTexCoordScale',)
-/* top-level dependencies (end ['J3DIndBlock']) */
+struct J3DIndTexMtx {
+	/* 8000E064 */ ~J3DIndTexMtx();
+	/* 8000E0F0 */ J3DIndTexMtx();
+};
+
 struct J3DIndBlock {
-	// ('J3DIndTexMtx',)
-	// ('J3DIndTexCoordScale',)
 	/* 8000DF64 */ bool getIndTexCoordScale(u32);
 	/* 8000DF6C */ bool getIndTexMtx(u32);
 	/* 8000DF74 */ bool getIndTexOrder(u32);
@@ -433,19 +235,11 @@ struct J3DIndBlock {
 	/* 8000E0A0 */ void setIndTexStageNum(u8);
 };
 
-// build J3DTexGenBlock (['J3DTexGenBlock']) False/False
-// build J3DTexCoord (['J3DTexCoord']) False/False
-/* top-level dependencies (begin ['J3DTexCoord']) */
-/* top-level dependencies (end ['J3DTexCoord']) */
 struct J3DTexCoord {
 	/* 8000E464 */ J3DTexCoord();
 };
 
-/* top-level dependencies (begin ['J3DTexGenBlock']) */
-// outer dependency: ('J3DTexCoord',)
-/* top-level dependencies (end ['J3DTexGenBlock']) */
 struct J3DTexGenBlock {
-	// ('J3DTexCoord',)
 	/* 8000DFD8 */ bool getTexMtx(u32);
 	/* 8000DFE0 */ bool getTexCoord(u32);
 	/* 8000DFE8 */ bool getTexGenNum() const;
@@ -453,41 +247,11 @@ struct J3DTexGenBlock {
 	/* 8000E0D0 */ void setTexGenNum(u32);
 };
 
-// build J3DZMode (['J3DZMode']) True/True
-// build J3DBlend (['J3DBlend']) True/True
-// build J3DAlphaComp (['J3DAlphaComp']) True/True
-// build J3DIndTexCoordScale (['J3DIndTexCoordScale']) True/True
-// build J3DIndTexMtx (['J3DIndTexMtx']) True/True
-// build J3DIndTevStage (['J3DIndTevStage']) True/True
-// build J3DTevStage (['J3DTevStage']) True/True
-// build J3DTevSwapModeTable (['J3DTevSwapModeTable']) True/True
-// build J3DTevOrder (['J3DTevOrder']) True/True
-// build J3DGXColor (['J3DGXColor']) True/True
-// build J3DGXColorS10 (['J3DGXColorS10']) True/True
-// build J3DTexCoord (['J3DTexCoord']) True/True
-// build J3DColorChan (['J3DColorChan']) True/True
-// build J3DIndTexOrder (['J3DIndTexOrder']) False/False
-/* top-level dependencies (begin ['J3DIndTexOrder']) */
-/* top-level dependencies (end ['J3DIndTexOrder']) */
 struct J3DIndTexOrder {
 	/* 8000E128 */ J3DIndTexOrder();
 };
 
-// build J3DTevStageInfo (['J3DTevStageInfo']) True/True
-// build mDoExt_invisibleModel (['mDoExt_invisibleModel']) False/False
-// build J3DModel (['J3DModel']) True/True
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
-struct Vec {
-};
-
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80009184 */ ~cXyz();
 	/* 800125DC */ cXyz();
 	/* 80266AE4 */ void operator+(Vec const&) const;
@@ -497,52 +261,28 @@ struct cXyz {
 	/* 80266F48 */ void normalizeZP();
 };
 
-/* top-level dependencies (begin ['mDoExt_invisibleModel']) */
-// outer dependency: ('J3DModel',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['mDoExt_invisibleModel']) */
 struct mDoExt_invisibleModel {
-	// ('J3DModel',)
-	// ('cXyz',)
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E6C8 */ void entryJoint(cXyz*);
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-// build mDoExt_invJntPacket (['mDoExt_invJntPacket']) False/False
-/* top-level dependencies (begin ['mDoExt_invJntPacket']) */
-/* top-level dependencies (end ['mDoExt_invJntPacket']) */
 struct mDoExt_invJntPacket {
 	/* 8000E5F8 */ ~mDoExt_invJntPacket();
 	/* 8000E654 */ mDoExt_invJntPacket();
 	/* 80012220 */ void draw();
 };
 
-// build J3DPacket (['J3DPacket']) False/False
-// build J3DDrawBuffer (['J3DDrawBuffer']) False/False
-// build J3DPacket (['J3DPacket']) True/False
 struct J3DPacket;
-/* top-level dependencies (begin ['J3DDrawBuffer']) */
-// outer dependency: ('J3DPacket',)
-/* top-level dependencies (end ['J3DDrawBuffer']) */
 struct J3DDrawBuffer {
-	// ('J3DPacket',)
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
 };
 
-/* top-level dependencies (begin ['J3DPacket']) */
-// outer dependency: ('J3DDrawBuffer',)
-/* top-level dependencies (end ['J3DPacket']) */
 struct J3DPacket {
-	// ('J3DDrawBuffer',)
 	/* 8000E680 */ ~J3DPacket();
 	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
-// build cXyz (['cXyz']) True/True
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE448 */ void destroy();
@@ -550,62 +290,35 @@ struct JKRHeap {
 	/* 802CEB78 */ void setErrorFlag(bool);
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
-	// ('JKRHeap',)
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 	/* 802D0BF4 */ void adjustSize();
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRExpHeap']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
-	// ('JKRHeap',)
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
 	/* 802D6770 */ void findIdResource(u16) const;
 };
 
-// build mDoExt_MtxCalcAnmBlendTbl (['mDoExt_MtxCalcAnmBlendTbl']) False/False
-/* top-level dependencies (begin ['mDoExt_MtxCalcAnmBlendTbl']) */
-/* top-level dependencies (end ['mDoExt_MtxCalcAnmBlendTbl']) */
 struct mDoExt_MtxCalcAnmBlendTbl {
 	/* 8000F26C */ void calc();
 	/* 80014F3C */ ~mDoExt_MtxCalcAnmBlendTbl();
 };
 
-// build mDoExt_MtxCalcAnmBlendTblOld (['mDoExt_MtxCalcAnmBlendTblOld']) False/False
-/* top-level dependencies (begin ['mDoExt_MtxCalcAnmBlendTblOld']) */
-/* top-level dependencies (end ['mDoExt_MtxCalcAnmBlendTblOld']) */
 struct mDoExt_MtxCalcAnmBlendTblOld {
 	/* 8000F4B0 */ void calc();
 	/* 80014EB0 */ ~mDoExt_MtxCalcAnmBlendTblOld();
 };
 
-// build mDoExt_MtxCalcOldFrame (['mDoExt_MtxCalcOldFrame']) False/False
-/* top-level dependencies (begin ['mDoExt_MtxCalcOldFrame']) */
-/* top-level dependencies (end ['mDoExt_MtxCalcOldFrame']) */
 struct mDoExt_MtxCalcOldFrame {
 	/* 8000F848 */ void initOldFrameMorf(f32, u16, u16);
 	/* 8000F8CC */ void decOldFrameMorfCounter();
 };
 
-// build mDoExt_morf_c (['mDoExt_morf_c']) False/False
-/* top-level dependencies (begin ['mDoExt_morf_c']) */
-/* top-level dependencies (end ['mDoExt_morf_c']) */
 struct mDoExt_morf_c {
 	/* 8000F950 */ mDoExt_morf_c();
 	/* 8000FAE8 */ ~mDoExt_morf_c();
@@ -613,54 +326,32 @@ struct mDoExt_morf_c {
 	/* 8000FBC0 */ void frameUpdate();
 };
 
-// build J3DFrameCtrl (['J3DFrameCtrl']) False/False
-/* top-level dependencies (begin ['J3DFrameCtrl']) */
-/* top-level dependencies (end ['J3DFrameCtrl']) */
 struct J3DFrameCtrl {
 	/* 8000F9D8 */ ~J3DFrameCtrl();
 	/* 803283FC */ void init(s16);
 	/* 803289CC */ void update();
 };
 
-// build J3DMtxCalcNoAnmBase (['J3DMtxCalcNoAnmBase']) False/False
-/* top-level dependencies (begin ['J3DMtxCalcNoAnmBase']) */
-/* top-level dependencies (end ['J3DMtxCalcNoAnmBase']) */
+template <typename A0, typename B0>
+struct J3DMtxCalcNoAnm { };
+/* J3DMtxCalcNoAnm<J3DMtxCalcCalcTransformMaya, J3DMtxCalcJ3DSysInitMaya> */
+struct J3DMtxCalcNoAnm__template0 {
+	/* 8000FA20 */ ~J3DMtxCalcNoAnm__template0();
+	/* 8001505C */ void init(Vec const&, f32 const (& )[3][4]);
+	/* 80015084 */ void calc();
+};
+
 struct J3DMtxCalcNoAnmBase {
 	/* 8000FA8C */ ~J3DMtxCalcNoAnmBase();
 };
 
-// build mDoExt_McaMorf (['mDoExt_McaMorf']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-// build mDoExt_McaMorfCallBack2_c (['mDoExt_McaMorfCallBack2_c']) False/False
-/* top-level dependencies (begin ['mDoExt_McaMorfCallBack2_c']) */
-/* top-level dependencies (end ['mDoExt_McaMorfCallBack2_c']) */
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-// build J3DAnmTransform (['J3DAnmTransform']) True/True
-// build Vec (['Vec']) True/True
-// build mDoExt_McaMorfCallBack1_c (['mDoExt_McaMorfCallBack1_c']) False/False
-/* top-level dependencies (begin ['mDoExt_McaMorfCallBack1_c']) */
-/* top-level dependencies (end ['mDoExt_McaMorfCallBack1_c']) */
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-// build J3DTransformInfo (['J3DTransformInfo']) True/True
-/* top-level dependencies (begin ['mDoExt_McaMorf']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('mDoExt_McaMorfCallBack2_c',)
-// outer dependency: ('J3DAnmTransform',)
-// outer dependency: ('Vec',)
-// outer dependency: ('mDoExt_McaMorfCallBack1_c',)
-// outer dependency: ('J3DTransformInfo',)
-/* top-level dependencies (end ['mDoExt_McaMorf']) */
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorf {
-	// ('J3DModelData',)
-	// ('Vec',)
-	// ('mDoExt_McaMorfCallBack1_c',)
-	// ('J3DTransformInfo',)
-	// ('J3DAnmTransform',)
-	// ('mDoExt_McaMorfCallBack2_c',)
 	/* 8000FC4C */ mDoExt_McaMorf(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, int, void*, u32, u32);
 	/* 8000FD10 */ ~mDoExt_McaMorf();
 	/* 8000FD94 */ void create(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, int, void*, u32, u32);
@@ -672,38 +363,12 @@ struct mDoExt_McaMorf {
 	/* 80010710 */ void getTransform(u16, J3DTransformInfo*);
 };
 
-// build mDoExt_McaMorfCallBack1_c (['mDoExt_McaMorfCallBack1_c']) True/True
-// build mDoExt_McaMorfCallBack2_c (['mDoExt_McaMorfCallBack2_c']) True/True
-// build Vec (['Vec']) True/True
-// build mDoExt_McaMorfSO (['mDoExt_McaMorfSO']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-// build Z2Creature (['Z2Creature']) False/False
-/* top-level dependencies (begin ['Z2Creature']) */
-/* top-level dependencies (end ['Z2Creature']) */
 struct Z2Creature {
 	/* 802C0628 */ void initAnime(void*, bool, f32, f32);
 	/* 802C06D0 */ void updateAnime(f32, f32);
 };
 
-// build mDoExt_McaMorfCallBack2_c (['mDoExt_McaMorfCallBack2_c']) True/True
-// build J3DAnmTransform (['J3DAnmTransform']) True/True
-// build mDoExt_McaMorfCallBack1_c (['mDoExt_McaMorfCallBack1_c']) True/True
-// build J3DTransformInfo (['J3DTransformInfo']) True/True
-/* top-level dependencies (begin ['mDoExt_McaMorfSO']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('Z2Creature',)
-// outer dependency: ('mDoExt_McaMorfCallBack2_c',)
-// outer dependency: ('J3DAnmTransform',)
-// outer dependency: ('mDoExt_McaMorfCallBack1_c',)
-// outer dependency: ('J3DTransformInfo',)
-/* top-level dependencies (end ['mDoExt_McaMorfSO']) */
 struct mDoExt_McaMorfSO {
-	// ('J3DModelData',)
-	// ('Z2Creature',)
-	// ('mDoExt_McaMorfCallBack1_c',)
-	// ('J3DTransformInfo',)
-	// ('J3DAnmTransform',)
-	// ('mDoExt_McaMorfCallBack2_c',)
 	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
 	/* 80010888 */ ~mDoExt_McaMorfSO();
 	/* 800108F0 */ void create(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
@@ -717,26 +382,7 @@ struct mDoExt_McaMorfSO {
 	/* 80011310 */ void stopZelAnime();
 };
 
-// build Z2Creature (['Z2Creature']) True/True
-// build mDoExt_McaMorf2 (['mDoExt_McaMorf2']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-// build Z2Creature (['Z2Creature']) True/True
-// build mDoExt_McaMorfCallBack2_c (['mDoExt_McaMorfCallBack2_c']) True/True
-// build J3DAnmTransform (['J3DAnmTransform']) True/True
-// build mDoExt_McaMorfCallBack1_c (['mDoExt_McaMorfCallBack1_c']) True/True
-/* top-level dependencies (begin ['mDoExt_McaMorf2']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('Z2Creature',)
-// outer dependency: ('mDoExt_McaMorfCallBack2_c',)
-// outer dependency: ('J3DAnmTransform',)
-// outer dependency: ('mDoExt_McaMorfCallBack1_c',)
-/* top-level dependencies (end ['mDoExt_McaMorf2']) */
 struct mDoExt_McaMorf2 {
-	// ('J3DModelData',)
-	// ('Z2Creature',)
-	// ('mDoExt_McaMorfCallBack1_c',)
-	// ('J3DAnmTransform',)
-	// ('mDoExt_McaMorfCallBack2_c',)
 	/* 80011348 */ mDoExt_McaMorf2(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
 	/* 800113FC */ ~mDoExt_McaMorf2();
 	/* 80011464 */ void create(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
@@ -750,34 +396,18 @@ struct mDoExt_McaMorf2 {
 	/* 800121E8 */ void stopZelAnime();
 };
 
-// build mDoExt_3Dline_c (['mDoExt_3Dline_c']) False/False
-/* top-level dependencies (begin ['mDoExt_3Dline_c']) */
-/* top-level dependencies (end ['mDoExt_3Dline_c']) */
 struct mDoExt_3Dline_c {
 	/* 800123D0 */ void init(u16, int, int);
 	/* 800126BC */ mDoExt_3Dline_c();
 };
 
-// build mDoExt_3DlineMat0_c (['mDoExt_3DlineMat0_c']) False/False
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
-struct dKy_tevstr_c {
-};
-
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin ['mDoExt_3DlineMat0_c']) */
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('_GXColor',)
-/* top-level dependencies (end ['mDoExt_3DlineMat0_c']) */
+struct dKy_tevstr_c {
+};
+
 struct mDoExt_3DlineMat0_c {
-	// ('dKy_tevstr_c',)
-	// ('_GXColor',)
 	/* 800125E0 */ void init(u16, u16, int);
 	/* 800126C0 */ void setMaterial();
 	/* 80012774 */ void draw();
@@ -786,121 +416,54 @@ struct mDoExt_3DlineMat0_c {
 	/* 80014E84 */ bool getMaterialID();
 };
 
-// build _GXColor (['_GXColor']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build mDoExt_3DlineMat1_c (['mDoExt_3DlineMat1_c']) False/False
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-// build _GXColor (['_GXColor']) True/True
-/* top-level dependencies (begin ['mDoExt_3DlineMat1_c']) */
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('ResTIMG',)
-// outer dependency: ('_GXColor',)
-/* top-level dependencies (end ['mDoExt_3DlineMat1_c']) */
 struct mDoExt_3DlineMat1_c {
-	// ('dKy_tevstr_c',)
-	// ('ResTIMG',)
-	// ('_GXColor',)
 	/* 80013360 */ void init(u16, u16, ResTIMG*, int);
 	/* 800134F8 */ void setMaterial();
 	/* 800135D0 */ void draw();
-	/* 8001373C */ void update(int, f32, _GXColor&, u16, dKy_tevstr_c*);
 	/* 80013FB0 */ void update(int, _GXColor&, dKy_tevstr_c*);
+	/* 8001373C */ void update(int, f32, _GXColor&, u16, dKy_tevstr_c*);
 	/* 80014E7C */ bool getMaterialID();
 };
 
-// build ResTIMG (['ResTIMG']) True/True
-// build mDoExt_3DlineMatSortPacket (['mDoExt_3DlineMatSortPacket']) False/False
-// build mDoExt_3DlineMat_c (['mDoExt_3DlineMat_c']) False/False
-/* top-level dependencies (begin ['mDoExt_3DlineMat_c']) */
-/* top-level dependencies (end ['mDoExt_3DlineMat_c']) */
 struct mDoExt_3DlineMat_c {
 };
 
-/* top-level dependencies (begin ['mDoExt_3DlineMatSortPacket']) */
-// outer dependency: ('mDoExt_3DlineMat_c',)
-/* top-level dependencies (end ['mDoExt_3DlineMatSortPacket']) */
 struct mDoExt_3DlineMatSortPacket {
-	// ('mDoExt_3DlineMat_c',)
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 	/* 8001479C */ void draw();
 	/* 80014E20 */ ~mDoExt_3DlineMatSortPacket();
 };
 
-// build mDoExt_3DlineMat_c (['mDoExt_3DlineMat_c']) True/True
-// build JUTFont (['JUTFont']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin ['JUTFont']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// ('JUtility', 'TColor')
 	/* 8001494C */ ~JUTFont();
 	/* 80014D9C */ void setGX(JUtility::TColor, JUtility::TColor);
 	/* 80014DC8 */ void getCellWidth() const;
 	/* 80014DF4 */ void getCellHeight() const;
 };
 
-// build ResFONT (['ResFONT']) False/False
-/* top-level dependencies (begin ['ResFONT']) */
-/* top-level dependencies (end ['ResFONT']) */
 struct ResFONT {
 };
 
-// build JUtility (['JUtility']) True/True
-// build dDlst_list_c (['dDlst_list_c']) False/False
-// build cXyz (['cXyz']) True/True
-// build J3DDrawBuffer (['J3DDrawBuffer']) True/True
-// build J3DPacket (['J3DPacket']) True/True
-/* top-level dependencies (begin ['dDlst_list_c']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('J3DDrawBuffer',)
-// outer dependency: ('J3DPacket',)
-/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// ('cXyz',)
-	// ('J3DDrawBuffer',)
-	// ('J3DPacket',)
 	/* 800565EC */ void entryZSortXluDrawList(J3DDrawBuffer*, J3DPacket*, cXyz&);
 };
 
-// build J3DDrawBuffer (['J3DDrawBuffer']) True/True
-// build Z2SoundObjBase (['Z2SoundObjBase']) False/False
-// build Z2SoundHandlePool (['Z2SoundHandlePool']) False/False
-/* top-level dependencies (begin ['Z2SoundHandlePool']) */
-/* top-level dependencies (end ['Z2SoundHandlePool']) */
-struct Z2SoundHandlePool {
-};
-
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SoundObjBase']) */
-// outer dependency: ('Z2SoundHandlePool',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SoundObjBase']) */
+struct Z2SoundHandlePool {
+};
+
 struct Z2SoundObjBase {
-	// ('Z2SoundHandlePool',)
-	// ('JAISoundID',)
 	/* 802BE038 */ void framework(u32, s8);
 	/* 802BE070 */ void dispose();
 	/* 802BE104 */ void stopOK(Z2SoundHandlePool&);
@@ -908,196 +471,92 @@ struct Z2SoundObjBase {
 	/* 802BE2D4 */ void startLevelSound(JAISoundID, u32, s8);
 };
 
-// build Z2SoundHandlePool (['Z2SoundHandlePool']) True/True
-// build JAISoundID (['JAISoundID']) True/True
-// build Z2SoundObjAnime (['Z2SoundObjAnime']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['Z2SoundObjAnime']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2SoundObjAnime']) */
 struct Z2SoundObjAnime {
-	// ('Vec',)
 	/* 802BEB94 */ Z2SoundObjAnime();
 	/* 802BEBDC */ void init(Vec*, u8);
 	/* 802BEBFC */ void initAnime(void*, bool, f32, f32);
 	/* 802BEED4 */ void updateAnime(f32, f32);
 };
 
-// build _GXBlendMode (['_GXBlendMode']) False/False
-/* top-level dependencies (begin ['_GXBlendMode']) */
-/* top-level dependencies (end ['_GXBlendMode']) */
 struct _GXBlendMode {
 };
 
-// build _GXBlendFactor (['_GXBlendFactor']) False/False
-/* top-level dependencies (begin ['_GXBlendFactor']) */
-/* top-level dependencies (end ['_GXBlendFactor']) */
 struct _GXBlendFactor {
 };
 
-// build _GXLogicOp (['_GXLogicOp']) False/False
-/* top-level dependencies (begin ['_GXLogicOp']) */
-/* top-level dependencies (end ['_GXLogicOp']) */
 struct _GXLogicOp {
 };
 
-// build _GXCompare (['_GXCompare']) False/False
-/* top-level dependencies (begin ['_GXCompare']) */
-/* top-level dependencies (end ['_GXCompare']) */
 struct _GXCompare {
 };
 
-// build JKRAssertHeap (['JKRAssertHeap']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRAssertHeap']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRAssertHeap']) */
 struct JKRAssertHeap {
-	// ('JKRHeap',)
 	/* 802D1368 */ void create(JKRHeap*);
 };
 
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4308 */ void removeResource(void*, JKRFileLoader*);
 };
 
-// build JUTCacheFont (['JUTCacheFont']) False/False
-// build ResFONT (['ResFONT']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JUTCacheFont']) */
-// outer dependency: ('ResFONT',)
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JUTCacheFont']) */
 struct JUTCacheFont {
-	// ('ResFONT',)
-	// ('JKRHeap',)
 	/* 802DD188 */ JUTCacheFont(ResFONT const*, u32, JKRHeap*);
 };
 
-// build JUTNameTab (['JUTNameTab']) False/False
-/* top-level dependencies (begin ['JUTNameTab']) */
-/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
 	/* 802DEAF8 */ void getName(u16) const;
 };
 
-// build JUTResFont (['JUTResFont']) False/False
-// build ResFONT (['ResFONT']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JUTResFont']) */
-// outer dependency: ('ResFONT',)
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JUTResFont']) */
 struct JUTResFont {
-	// ('ResFONT',)
-	// ('JKRHeap',)
 	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
 };
 
-// build J3DSys (['J3DSys']) False/False
-/* top-level dependencies (begin ['J3DSys']) */
-/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
 	/* 8031073C */ void reinitGX();
 };
 
-// build J3DVertexBuffer (['J3DVertexBuffer']) False/False
-/* top-level dependencies (begin ['J3DVertexBuffer']) */
-/* top-level dependencies (end ['J3DVertexBuffer']) */
 struct J3DVertexBuffer {
 	/* 80310FD8 */ void init();
 };
 
-// build J3DDisplayListObj (['J3DDisplayListObj']) False/False
-/* top-level dependencies (begin ['J3DDisplayListObj']) */
-/* top-level dependencies (end ['J3DDisplayListObj']) */
 struct J3DDisplayListObj {
 	/* 80312618 */ void callDL() const;
 };
 
-// build J3DShapePacket (['J3DShapePacket']) False/False
-/* top-level dependencies (begin ['J3DShapePacket']) */
-/* top-level dependencies (end ['J3DShapePacket']) */
 struct J3DShapePacket {
 	/* 80312FBC */ void drawFast();
 };
 
-// build J3DShape (['J3DShape']) False/False
-/* top-level dependencies (begin ['J3DShape']) */
-/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
-// build J3DIndTexMtxInfo (['J3DIndTexMtxInfo']) False/False
-/* top-level dependencies (begin ['J3DIndTexMtxInfo']) */
-/* top-level dependencies (end ['J3DIndTexMtxInfo']) */
 struct J3DIndTexMtxInfo {
 	/* 803257DC */ void operator=(J3DIndTexMtxInfo const&);
 };
 
-// build J3DMaterialAnm (['J3DMaterialAnm']) False/False
-// build J3DTevKColorAnm (['J3DTevKColorAnm']) False/False
-/* top-level dependencies (begin ['J3DTevKColorAnm']) */
-/* top-level dependencies (end ['J3DTevKColorAnm']) */
-struct J3DTevKColorAnm {
-};
-
-// build J3DTexMtxAnm (['J3DTexMtxAnm']) False/False
-/* top-level dependencies (begin ['J3DTexMtxAnm']) */
-/* top-level dependencies (end ['J3DTexMtxAnm']) */
 struct J3DTexMtxAnm {
 };
 
-// build J3DTevColorAnm (['J3DTevColorAnm']) False/False
-/* top-level dependencies (begin ['J3DTevColorAnm']) */
-/* top-level dependencies (end ['J3DTevColorAnm']) */
+struct J3DTevKColorAnm {
+};
+
 struct J3DTevColorAnm {
 };
 
-/* top-level dependencies (begin ['J3DMaterialAnm']) */
-// outer dependency: ('J3DTevKColorAnm',)
-// outer dependency: ('J3DTexMtxAnm',)
-// outer dependency: ('J3DTevColorAnm',)
-/* top-level dependencies (end ['J3DMaterialAnm']) */
 struct J3DMaterialAnm {
-	// ('J3DTevKColorAnm',)
-	// ('J3DTexMtxAnm',)
-	// ('J3DTevColorAnm',)
 	/* 8032C5E4 */ void setTexMtxAnm(int, J3DTexMtxAnm*);
 	/* 8032C664 */ void setTevColorAnm(int, J3DTevColorAnm*);
 	/* 8032C6A4 */ void setTevKColorAnm(int, J3DTevKColorAnm*);
 };
 
-// build J3DTexMtxAnm (['J3DTexMtxAnm']) True/True
-// build J3DTevColorAnm (['J3DTevColorAnm']) True/True
-// build J3DTevKColorAnm (['J3DTevKColorAnm']) True/True
-// build J3DMtxCalcJ3DSysInitMaya (['J3DMtxCalcJ3DSysInitMaya']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['J3DMtxCalcJ3DSysInitMaya']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['J3DMtxCalcJ3DSysInitMaya']) */
 struct J3DMtxCalcJ3DSysInitMaya {
-	// ('Vec',)
 	/* 8032ECAC */ void init(Vec const&, f32 const (& )[3][4]);
 };
 
-// build J3DMtxCalcCalcTransformMaya (['J3DMtxCalcCalcTransformMaya']) False/False
-// build J3DTransformInfo (['J3DTransformInfo']) True/True
-/* top-level dependencies (begin ['J3DMtxCalcCalcTransformMaya']) */
-// outer dependency: ('J3DTransformInfo',)
-/* top-level dependencies (end ['J3DMtxCalcCalcTransformMaya']) */
 struct J3DMtxCalcCalcTransformMaya {
-	// ('J3DTransformInfo',)
 	/* 8032EFBC */ void calcTransform(J3DTransformInfo const&);
 };
 
-// build Quaternion (['Quaternion']) False/False
-/* top-level dependencies (begin ['Quaternion']) */
-/* top-level dependencies (end ['Quaternion']) */
 struct Quaternion {
 };
 
@@ -1105,293 +564,286 @@ struct Quaternion {
 // Forward References:
 // 
 
-static void mDoExt_setJ3DData(f32 (* )[4], J3DTransformInfo const*, u16);
-extern "C" static void func_8000D8E4();
-static void mDoExt_changeMaterial(J3DModel*);
-void mDoExt_modelTexturePatch(J3DModelData*);
-static void mDoExt_modelDiff(J3DModel*);
-void mDoExt_modelUpdate(J3DModel*);
-void mDoExt_modelUpdateDL(J3DModel*);
-void mDoExt_modelEntryDL(J3DModel*);
-void mDoExt_btkAnmRemove(J3DModelData*);
-void mDoExt_brkAnmRemove(J3DModelData*);
-void mDoExt_setupShareTexture(J3DModelData*, J3DModelData*);
-void mDoExt_setupStageTexture(J3DModelData*);
-void mDoExt_createAssertHeap(JKRHeap*);
-void mDoExt_getAssertHeap();
-void mDoExt_createDbPrintHeap(u32, JKRHeap*);
-void mDoExt_getDbPrintHeap();
-void mDoExt_createGameHeap(u32, JKRHeap*);
-void mDoExt_getGameHeap();
-void mDoExt_createZeldaHeap(u32, JKRHeap*);
-void mDoExt_getZeldaHeap();
-void mDoExt_createCommandHeap(u32, JKRHeap*);
-void mDoExt_getCommandHeap();
-void mDoExt_createArchiveHeap(u32, JKRHeap*);
-void mDoExt_getArchiveHeap();
-void mDoExt_getArchiveHeapPtr();
-void mDoExt_createJ2dHeap(u32, JKRHeap*);
-void mDoExt_getJ2dHeap();
-void mDoExt_getHostIOHeap();
-static void mDoExt_createSolidHeap(u32, JKRHeap*, u32);
-void mDoExt_createSolidHeapFromGame(u32, u32);
-void mDoExt_createSolidHeapFromSystem(u32, u32);
-static void mDoExt_createSolidHeapToCurrent(JKRHeap**, u32, JKRHeap*, u32);
-void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32);
-void mDoExt_createSolidHeapFromGameToCurrent(JKRHeap**, u32, u32);
-void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
-void mDoExt_adjustSolidHeap(JKRSolidHeap*);
-void mDoExt_adjustSolidHeapToSystem(JKRSolidHeap*);
-void mDoExt_destroySolidHeap(JKRSolidHeap*);
-void mDoExt_destroyExpHeap(JKRExpHeap*);
-void mDoExt_setCurrentHeap(JKRHeap*);
-void mDoExt_getCurrentHeap();
-void mDoExt_restoreCurrentHeap();
-void mDoExt_resIDToIndex(JKRArchive*, u16);
-extern "C" static void func_8000FA20();
-static void mDoExt_initFontCommon(JUTFont**, ResFONT**, JKRHeap*, char const*, JKRArchive*, u8, u32, u32);
-static void mDoExt_initFont0();
-void mDoExt_getMesgFont();
-void mDoExt_removeMesgFont();
-static void mDoExt_initFont1();
-void mDoExt_getRubyFont();
-static void mDoExt_initFont2();
-void mDoExt_getSubFont();
-void mDoExt_removeSubFont();
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
-void mDoExt_setAraCacheSize(u32);
-void mDoExt_GetCurrentRunningThread();
-extern "C" static void func_80014FC8();
-extern "C" static void func_80015034();
-extern "C" static void func_8001505C();
-extern "C" static void func_80015084();
-extern "C" static void func_800150AC();
+static void mDoExt_setJ3DData(f32 (* )[4], J3DTransformInfo const*, u16); // 2
+static void mDoExt_changeMaterial(J3DModel*); // 2
+void mDoExt_modelTexturePatch(J3DModelData*); // 2
+static void mDoExt_modelDiff(J3DModel*); // 2
+void mDoExt_modelUpdate(J3DModel*); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_modelEntryDL(J3DModel*); // 2
+void mDoExt_btkAnmRemove(J3DModelData*); // 2
+void mDoExt_brkAnmRemove(J3DModelData*); // 2
+void mDoExt_setupShareTexture(J3DModelData*, J3DModelData*); // 2
+void mDoExt_setupStageTexture(J3DModelData*); // 2
+void mDoExt_createAssertHeap(JKRHeap*); // 2
+void mDoExt_getAssertHeap(); // 2
+void mDoExt_createDbPrintHeap(u32, JKRHeap*); // 2
+void mDoExt_getDbPrintHeap(); // 2
+void mDoExt_createGameHeap(u32, JKRHeap*); // 2
+void mDoExt_getGameHeap(); // 2
+void mDoExt_createZeldaHeap(u32, JKRHeap*); // 2
+void mDoExt_getZeldaHeap(); // 2
+void mDoExt_createCommandHeap(u32, JKRHeap*); // 2
+void mDoExt_getCommandHeap(); // 2
+void mDoExt_createArchiveHeap(u32, JKRHeap*); // 2
+void mDoExt_getArchiveHeap(); // 2
+void mDoExt_getArchiveHeapPtr(); // 2
+void mDoExt_createJ2dHeap(u32, JKRHeap*); // 2
+void mDoExt_getJ2dHeap(); // 2
+void mDoExt_getHostIOHeap(); // 2
+static void mDoExt_createSolidHeap(u32, JKRHeap*, u32); // 2
+void mDoExt_createSolidHeapFromGame(u32, u32); // 2
+void mDoExt_createSolidHeapFromSystem(u32, u32); // 2
+static void mDoExt_createSolidHeapToCurrent(JKRHeap**, u32, JKRHeap*, u32); // 2
+void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32); // 2
+void mDoExt_createSolidHeapFromGameToCurrent(JKRHeap**, u32, u32); // 2
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); // 2
+void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
+void mDoExt_adjustSolidHeapToSystem(JKRSolidHeap*); // 2
+void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
+void mDoExt_destroyExpHeap(JKRExpHeap*); // 2
+void mDoExt_setCurrentHeap(JKRHeap*); // 2
+void mDoExt_getCurrentHeap(); // 2
+void mDoExt_restoreCurrentHeap(); // 2
+void mDoExt_resIDToIndex(JKRArchive*, u16); // 2
+static void mDoExt_initFontCommon(JUTFont**, ResFONT**, JKRHeap*, char const*, JKRArchive*, u8, u32, u32); // 2
+static void mDoExt_initFont0(); // 2
+void mDoExt_getMesgFont(); // 2
+void mDoExt_removeMesgFont(); // 2
+static void mDoExt_initFont1(); // 2
+void mDoExt_getRubyFont(); // 2
+static void mDoExt_initFont2(); // 2
+void mDoExt_getSubFont(); // 2
+void mDoExt_removeSubFont(); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void mDoExt_setAraCacheSize(u32); // 2
+void mDoExt_GetCurrentRunningThread(); // 2
 
-extern "C" static void mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs();
-extern "C" void initPlay__14mDoExt_baseAnmFsifss();
-extern "C" void play__14mDoExt_baseAnmFv();
-extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
-extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
-extern "C" void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss();
-extern "C" void entry__13mDoExt_btpAnmFP16J3DMaterialTables();
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
-extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
-extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
-extern "C" static void func_8000D8E4();
-extern "C" void __dt__17J3DMtxCalcAnmBaseFv();
-extern "C" void __dt__10J3DMtxCalcFv();
-extern "C" void changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform();
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
-extern "C" void entryJoint__13mDoExt_bckAnmFP12J3DModelDataUsf();
-extern "C" void init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss();
-extern "C" static void mDoExt_changeMaterial__FP8J3DModel();
-extern "C" void mDoExt_modelTexturePatch__FP12J3DModelData();
-extern "C" void patchTexNoAndTexCoordScale__11J3DTevBlockFv();
-extern "C" void patch__10J3DPEBlockFv();
-extern "C" void patchLight__13J3DColorBlockFv();
-extern "C" void patch__11J3DTevBlockFv();
-extern "C" static void mDoExt_modelDiff__FP8J3DModel();
-extern "C" void mDoExt_modelUpdate__FP8J3DModel();
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" void mDoExt_modelEntryDL__FP8J3DModel();
-extern "C" void mDoExt_btkAnmRemove__FP12J3DModelData();
-extern "C" void mDoExt_brkAnmRemove__FP12J3DModelData();
-extern "C" bool getZCompLoc__10J3DPEBlockCFv();
-extern "C" bool getZMode__10J3DPEBlockFv();
-extern "C" bool getBlend__10J3DPEBlockFv();
-extern "C" bool getAlphaComp__10J3DPEBlockFv();
-extern "C" bool getFog__10J3DPEBlockFv();
-extern "C" bool getIndTexCoordScale__11J3DIndBlockFUl();
-extern "C" bool getIndTexMtx__11J3DIndBlockFUl();
-extern "C" bool getIndTexOrder__11J3DIndBlockFUl();
-extern "C" bool getIndTexStageNum__11J3DIndBlockCFv();
-extern "C" bool getIndTevStage__11J3DTevBlockFUl();
-extern "C" bool getTevStage__11J3DTevBlockFUl();
-extern "C" void getTexNo__11J3DTevBlockCFUl();
-extern "C" bool getTevSwapModeTable__11J3DTevBlockFUl();
-extern "C" bool getTevKAlphaSel__11J3DTevBlockFUl();
-extern "C" bool getTevKColorSel__11J3DTevBlockFUl();
-extern "C" bool getTevOrder__11J3DTevBlockFUl();
-extern "C" bool getTevKColor__11J3DTevBlockFUl();
-extern "C" bool getTevColor__11J3DTevBlockFUl();
-extern "C" bool getTevStageNum__11J3DTevBlockCFv();
-extern "C" bool getTexMtx__14J3DTexGenBlockFUl();
-extern "C" bool getTexCoord__14J3DTexGenBlockFUl();
-extern "C" bool getTexGenNum__14J3DTexGenBlockCFv();
-extern "C" bool getAmbColor__13J3DColorBlockFUl();
-extern "C" bool getColorChan__13J3DColorBlockFUl();
-extern "C" bool getMatColor__13J3DColorBlockFUl();
-extern "C" bool getColorChanNum__13J3DColorBlockCFv();
-extern "C" void setZCompLoc__10J3DPEBlockFUc();
-extern "C" void setZMode__10J3DPEBlockF8J3DZMode();
-extern "C" void setBlend__10J3DPEBlockFRC8J3DBlend();
-extern "C" void setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp();
-extern "C" void setIndTexCoordScale__11J3DIndBlockFUl19J3DIndTexCoordScale();
-extern "C" void __dt__19J3DIndTexCoordScaleFv();
-extern "C" void setIndTexMtx__11J3DIndBlockFUl12J3DIndTexMtx();
-extern "C" void __dt__12J3DIndTexMtxFv();
-extern "C" void setIndTexStageNum__11J3DIndBlockFUc();
-extern "C" void setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage();
-extern "C" void setTevStage__11J3DTevBlockFUl11J3DTevStage();
-extern "C" void setTexNo__11J3DTevBlockFUlUs();
-extern "C" void setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable();
-extern "C" void setTevKAlphaSel__11J3DTevBlockFUlUc();
-extern "C" void setTevKColorSel__11J3DTevBlockFUlUc();
-extern "C" void setTevOrder__11J3DTevBlockFUl11J3DTevOrder();
-extern "C" void setTevKColor__11J3DTevBlockFUl10J3DGXColor();
-extern "C" void setTevColor__11J3DTevBlockFUl13J3DGXColorS10();
-extern "C" void setTevStageNum__11J3DTevBlockFUc();
-extern "C" void setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord();
-extern "C" void setTexGenNum__14J3DTexGenBlockFUl();
-extern "C" void setAmbColor__13J3DColorBlockFUl10J3DGXColor();
-extern "C" void setColorChan__13J3DColorBlockFUlRC12J3DColorChan();
-extern "C" void setMatColor__13J3DColorBlockFUl10J3DGXColor();
-extern "C" void setColorChanNum__13J3DColorBlockFUc();
-extern "C" void __ct__19J3DIndTexCoordScaleFv();
-extern "C" void __ct__12J3DIndTexMtxFv();
-extern "C" void __ct__14J3DIndTexOrderFv();
-extern "C" void __ct__19J3DTevSwapModeTableFv();
-extern "C" void __ct__11J3DTevOrderFv();
-extern "C" void __ct__14J3DIndTevStageFv();
-extern "C" void __ct__11J3DTevStageFv();
-extern "C" void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo();
-extern "C" void __ct__13J3DGXColorS10Fv();
-extern "C" void __ct__11J3DTexCoordFv();
-extern "C" void __ct__12J3DColorChanFv();
-extern "C" void __ct__10J3DGXColorFv();
-extern "C" void create__21mDoExt_invisibleModelFP8J3DModelUc();
-extern "C" void __dt__19mDoExt_invJntPacketFv();
-extern "C" void __ct__19mDoExt_invJntPacketFv();
-extern "C" void __dt__9J3DPacketFv();
-extern "C" void entryJoint__21mDoExt_invisibleModelFP4cXyz();
-extern "C" void entryDL__21mDoExt_invisibleModelFP4cXyz();
-extern "C" void mDoExt_setupShareTexture__FP12J3DModelDataP12J3DModelData();
-extern "C" void mDoExt_setupStageTexture__FP12J3DModelData();
-extern "C" void mDoExt_createAssertHeap__FP7JKRHeap();
-extern "C" void mDoExt_getAssertHeap__Fv();
-extern "C" void mDoExt_createDbPrintHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getDbPrintHeap__Fv();
-extern "C" void mDoExt_createGameHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getGameHeap__Fv();
-extern "C" void mDoExt_createZeldaHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getZeldaHeap__Fv();
-extern "C" void mDoExt_createCommandHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getCommandHeap__Fv();
-extern "C" void mDoExt_createArchiveHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getArchiveHeap__Fv();
-extern "C" void mDoExt_getArchiveHeapPtr__Fv();
-extern "C" void mDoExt_createJ2dHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getJ2dHeap__Fv();
-extern "C" void mDoExt_getHostIOHeap__Fv();
-extern "C" static void mDoExt_createSolidHeap__FUlP7JKRHeapUl();
-extern "C" void mDoExt_createSolidHeapFromGame__FUlUl();
-extern "C" void mDoExt_createSolidHeapFromSystem__FUlUl();
-extern "C" static void mDoExt_createSolidHeapToCurrent__FPP7JKRHeapUlP7JKRHeapUl();
-extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl();
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl();
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap();
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap();
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" void mDoExt_getCurrentHeap__Fv();
-extern "C" void mDoExt_restoreCurrentHeap__Fv();
-extern "C" void mDoExt_resIDToIndex__FP10JKRArchiveUs();
-extern "C" void calc__25mDoExt_MtxCalcAnmBlendTblFv();
-extern "C" void calc__28mDoExt_MtxCalcAnmBlendTblOldFv();
-extern "C" void initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs();
-extern "C" void decOldFrameMorfCounter__22mDoExt_MtxCalcOldFrameFv();
-extern "C" void __ct__13mDoExt_morf_cFv();
-extern "C" void __dt__12J3DFrameCtrlFv();
-extern "C" static void func_8000FA20();
-extern "C" void __dt__19J3DMtxCalcNoAnmBaseFv();
-extern "C" void __dt__13mDoExt_morf_cFv();
-extern "C" void setMorf__13mDoExt_morf_cFf();
-extern "C" void frameUpdate__13mDoExt_morf_cFv();
-extern "C" void __ct__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl();
-extern "C" void __dt__14mDoExt_McaMorfFv();
-extern "C" void create__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl();
-extern "C" void calc__14mDoExt_McaMorfFv();
-extern "C" void setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv();
-extern "C" void play__14mDoExt_McaMorfFP3VecUlSc();
-extern "C" void entryDL__14mDoExt_McaMorfFv();
-extern "C" void modelCalc__14mDoExt_McaMorfFv();
-extern "C" void getTransform__14mDoExt_McaMorfFUsP16J3DTransformInfo();
-extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
-extern "C" void __dt__16mDoExt_McaMorfSOFv();
-extern "C" void create__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
-extern "C" void calc__16mDoExt_McaMorfSOFv();
-extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff();
-extern "C" void play__16mDoExt_McaMorfSOFUlSc();
-extern "C" void updateDL__16mDoExt_McaMorfSOFv();
-extern "C" void entryDL__16mDoExt_McaMorfSOFv();
-extern "C" void modelCalc__16mDoExt_McaMorfSOFv();
-extern "C" void getTransform__16mDoExt_McaMorfSOFUsP16J3DTransformInfo();
-extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv();
-extern "C" void __ct__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl();
-extern "C" void __dt__15mDoExt_McaMorf2Fv();
-extern "C" void create__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl();
-extern "C" void ERROR_EXIT__15mDoExt_McaMorf2Fv();
-extern "C" void calc__15mDoExt_McaMorf2Fv();
-extern "C" void setAnm__15mDoExt_McaMorf2FP15J3DAnmTransformP15J3DAnmTransformfiffff();
-extern "C" void setAnmRate__15mDoExt_McaMorf2Ff();
-extern "C" void play__15mDoExt_McaMorf2FUlSc();
-extern "C" void entryDL__15mDoExt_McaMorf2Fv();
-extern "C" void modelCalc__15mDoExt_McaMorf2Fv();
-extern "C" void stopZelAnime__15mDoExt_McaMorf2Fv();
-extern "C" void draw__19mDoExt_invJntPacketFv();
-extern "C" void init__15mDoExt_3Dline_cFUsii();
-extern "C" void __ct__4cXyzFv();
-extern "C" void init__19mDoExt_3DlineMat0_cFUsUsi();
-extern "C" void __ct__15mDoExt_3Dline_cFv();
-extern "C" void setMaterial__19mDoExt_3DlineMat0_cFv();
-extern "C" void draw__19mDoExt_3DlineMat0_cFv();
-extern "C" void update__19mDoExt_3DlineMat0_cFifR8_GXColorUsP12dKy_tevstr_c();
-extern "C" void update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c();
-extern "C" void init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi();
-extern "C" void setMaterial__19mDoExt_3DlineMat1_cFv();
-extern "C" void draw__19mDoExt_3DlineMat1_cFv();
-extern "C" void update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c();
-extern "C" void update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c();
-extern "C" void setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c();
-extern "C" void draw__26mDoExt_3DlineMatSortPacketFv();
-extern "C" static void mDoExt_initFontCommon__FPP7JUTFontPP7ResFONTP7JKRHeapPCcP10JKRArchiveUcUlUl();
-extern "C" void __dt__7JUTFontFv();
-extern "C" static void mDoExt_initFont0__Fv();
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void mDoExt_removeMesgFont__Fv();
-extern "C" static void mDoExt_initFont1__Fv();
-extern "C" void mDoExt_getRubyFont__Fv();
-extern "C" static void mDoExt_initFont2__Fv();
-extern "C" void mDoExt_getSubFont__Fv();
-extern "C" void mDoExt_removeSubFont__Fv();
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern "C" void mDoExt_setAraCacheSize__FUl();
-extern "C" void mDoExt_GetCurrentRunningThread__Fv();
-extern "C" void setGX__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void getCellWidth__7JUTFontCFv();
-extern "C" void getCellHeight__7JUTFontCFv();
-extern "C" void __dt__26mDoExt_3DlineMatSortPacketFv();
-extern "C" bool getMaterialID__19mDoExt_3DlineMat1_cFv();
-extern "C" bool getMaterialID__19mDoExt_3DlineMat0_cFv();
-extern "C" void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform();
-extern "C" void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform();
-extern "C" bool getAnmTransform__10J3DMtxCalcFUc();
-extern "C" bool getAnmTransform__10J3DMtxCalcFv();
-extern "C" void setWeight__10J3DMtxCalcFUcf();
-extern "C" void getWeight__10J3DMtxCalcCFUc();
-extern "C" void __dt__28mDoExt_MtxCalcAnmBlendTblOldFv();
-extern "C" void __dt__25mDoExt_MtxCalcAnmBlendTblFv();
-extern "C" void getAnmTransform__17J3DMtxCalcAnmBaseFv();
-extern "C" void setAnmTransform__17J3DMtxCalcAnmBaseFP15J3DAnmTransform();
-extern "C" static void func_80014FC8();
-extern "C" static void func_80015034();
-extern "C" static void func_8001505C();
-extern "C" static void func_80015084();
-extern "C" static void func_800150AC();
+extern "C" static void mDoExt_setJ3DData__FPA4_fPC16J3DTransformInfoUs(); // 1
+extern "C" void initPlay__14mDoExt_baseAnmFsifss(); // 1
+extern "C" void play__14mDoExt_baseAnmFv(); // 1
+extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss(); // 1
+extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef(); // 1
+extern "C" void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss(); // 1
+extern "C" void entry__13mDoExt_btpAnmFP16J3DMaterialTables(); // 1
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss(); // 1
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef(); // 1
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
+extern "C" void func_8000D8E4(); // 1
+extern "C" void __dt__17J3DMtxCalcAnmBaseFv(); // 1
+extern "C" void __dt__10J3DMtxCalcFv(); // 1
+extern "C" void changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform(); // 1
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
+extern "C" void entryJoint__13mDoExt_bckAnmFP12J3DModelDataUsf(); // 1
+extern "C" void init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss(); // 1
+extern "C" static void mDoExt_changeMaterial__FP8J3DModel(); // 1
+extern "C" void mDoExt_modelTexturePatch__FP12J3DModelData(); // 1
+extern "C" void patchTexNoAndTexCoordScale__11J3DTevBlockFv(); // 1
+extern "C" void patch__10J3DPEBlockFv(); // 1
+extern "C" void patchLight__13J3DColorBlockFv(); // 1
+extern "C" void patch__11J3DTevBlockFv(); // 1
+extern "C" static void mDoExt_modelDiff__FP8J3DModel(); // 1
+extern "C" void mDoExt_modelUpdate__FP8J3DModel(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_modelEntryDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_btkAnmRemove__FP12J3DModelData(); // 1
+extern "C" void mDoExt_brkAnmRemove__FP12J3DModelData(); // 1
+extern "C" bool getZCompLoc__10J3DPEBlockCFv(); // 1
+extern "C" bool getZMode__10J3DPEBlockFv(); // 1
+extern "C" bool getBlend__10J3DPEBlockFv(); // 1
+extern "C" bool getAlphaComp__10J3DPEBlockFv(); // 1
+extern "C" bool getFog__10J3DPEBlockFv(); // 1
+extern "C" bool getIndTexCoordScale__11J3DIndBlockFUl(); // 1
+extern "C" bool getIndTexMtx__11J3DIndBlockFUl(); // 1
+extern "C" bool getIndTexOrder__11J3DIndBlockFUl(); // 1
+extern "C" bool getIndTexStageNum__11J3DIndBlockCFv(); // 1
+extern "C" bool getIndTevStage__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevStage__11J3DTevBlockFUl(); // 1
+extern "C" void getTexNo__11J3DTevBlockCFUl(); // 1
+extern "C" bool getTevSwapModeTable__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevKAlphaSel__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevKColorSel__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevOrder__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevKColor__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevColor__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevStageNum__11J3DTevBlockCFv(); // 1
+extern "C" bool getTexMtx__14J3DTexGenBlockFUl(); // 1
+extern "C" bool getTexCoord__14J3DTexGenBlockFUl(); // 1
+extern "C" bool getTexGenNum__14J3DTexGenBlockCFv(); // 1
+extern "C" bool getAmbColor__13J3DColorBlockFUl(); // 1
+extern "C" bool getColorChan__13J3DColorBlockFUl(); // 1
+extern "C" bool getMatColor__13J3DColorBlockFUl(); // 1
+extern "C" bool getColorChanNum__13J3DColorBlockCFv(); // 1
+extern "C" void setZCompLoc__10J3DPEBlockFUc(); // 1
+extern "C" void setZMode__10J3DPEBlockF8J3DZMode(); // 1
+extern "C" void setBlend__10J3DPEBlockFRC8J3DBlend(); // 1
+extern "C" void setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp(); // 1
+extern "C" void setIndTexCoordScale__11J3DIndBlockFUl19J3DIndTexCoordScale(); // 1
+extern "C" void __dt__19J3DIndTexCoordScaleFv(); // 1
+extern "C" void setIndTexMtx__11J3DIndBlockFUl12J3DIndTexMtx(); // 1
+extern "C" void __dt__12J3DIndTexMtxFv(); // 1
+extern "C" void setIndTexStageNum__11J3DIndBlockFUc(); // 1
+extern "C" void setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage(); // 1
+extern "C" void setTevStage__11J3DTevBlockFUl11J3DTevStage(); // 1
+extern "C" void setTexNo__11J3DTevBlockFUlUs(); // 1
+extern "C" void setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable(); // 1
+extern "C" void setTevKAlphaSel__11J3DTevBlockFUlUc(); // 1
+extern "C" void setTevKColorSel__11J3DTevBlockFUlUc(); // 1
+extern "C" void setTevOrder__11J3DTevBlockFUl11J3DTevOrder(); // 1
+extern "C" void setTevKColor__11J3DTevBlockFUl10J3DGXColor(); // 1
+extern "C" void setTevColor__11J3DTevBlockFUl13J3DGXColorS10(); // 1
+extern "C" void setTevStageNum__11J3DTevBlockFUc(); // 1
+extern "C" void setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord(); // 1
+extern "C" void setTexGenNum__14J3DTexGenBlockFUl(); // 1
+extern "C" void setAmbColor__13J3DColorBlockFUl10J3DGXColor(); // 1
+extern "C" void setColorChan__13J3DColorBlockFUlRC12J3DColorChan(); // 1
+extern "C" void setMatColor__13J3DColorBlockFUl10J3DGXColor(); // 1
+extern "C" void setColorChanNum__13J3DColorBlockFUc(); // 1
+extern "C" void __ct__19J3DIndTexCoordScaleFv(); // 1
+extern "C" void __ct__12J3DIndTexMtxFv(); // 1
+extern "C" void __ct__14J3DIndTexOrderFv(); // 1
+extern "C" void __ct__19J3DTevSwapModeTableFv(); // 1
+extern "C" void __ct__11J3DTevOrderFv(); // 1
+extern "C" void __ct__14J3DIndTevStageFv(); // 1
+extern "C" void __ct__11J3DTevStageFv(); // 1
+extern "C" void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo(); // 1
+extern "C" void __ct__13J3DGXColorS10Fv(); // 1
+extern "C" void __ct__11J3DTexCoordFv(); // 1
+extern "C" void __ct__12J3DColorChanFv(); // 1
+extern "C" void __ct__10J3DGXColorFv(); // 1
+extern "C" void create__21mDoExt_invisibleModelFP8J3DModelUc(); // 1
+extern "C" void __dt__19mDoExt_invJntPacketFv(); // 1
+extern "C" void __ct__19mDoExt_invJntPacketFv(); // 1
+extern "C" void __dt__9J3DPacketFv(); // 1
+extern "C" void entryJoint__21mDoExt_invisibleModelFP4cXyz(); // 1
+extern "C" void entryDL__21mDoExt_invisibleModelFP4cXyz(); // 1
+extern "C" void mDoExt_setupShareTexture__FP12J3DModelDataP12J3DModelData(); // 1
+extern "C" void mDoExt_setupStageTexture__FP12J3DModelData(); // 1
+extern "C" void mDoExt_createAssertHeap__FP7JKRHeap(); // 1
+extern "C" void mDoExt_getAssertHeap__Fv(); // 1
+extern "C" void mDoExt_createDbPrintHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getDbPrintHeap__Fv(); // 1
+extern "C" void mDoExt_createGameHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getGameHeap__Fv(); // 1
+extern "C" void mDoExt_createZeldaHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getZeldaHeap__Fv(); // 1
+extern "C" void mDoExt_createCommandHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getCommandHeap__Fv(); // 1
+extern "C" void mDoExt_createArchiveHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
+extern "C" void mDoExt_getArchiveHeapPtr__Fv(); // 1
+extern "C" void mDoExt_createJ2dHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getJ2dHeap__Fv(); // 1
+extern "C" void mDoExt_getHostIOHeap__Fv(); // 1
+extern "C" static void mDoExt_createSolidHeap__FUlP7JKRHeapUl(); // 1
+extern "C" void mDoExt_createSolidHeapFromGame__FUlUl(); // 1
+extern "C" void mDoExt_createSolidHeapFromSystem__FUlUl(); // 1
+extern "C" static void mDoExt_createSolidHeapToCurrent__FPP7JKRHeapUlP7JKRHeapUl(); // 1
+extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl(); // 1
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl(); // 1
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl(); // 1
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap(); // 1
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
+extern "C" void mDoExt_getCurrentHeap__Fv(); // 1
+extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
+extern "C" void mDoExt_resIDToIndex__FP10JKRArchiveUs(); // 1
+extern "C" void calc__25mDoExt_MtxCalcAnmBlendTblFv(); // 1
+extern "C" void calc__28mDoExt_MtxCalcAnmBlendTblOldFv(); // 1
+extern "C" void initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs(); // 1
+extern "C" void decOldFrameMorfCounter__22mDoExt_MtxCalcOldFrameFv(); // 1
+extern "C" void __ct__13mDoExt_morf_cFv(); // 1
+extern "C" void __dt__12J3DFrameCtrlFv(); // 1
+extern "C" void func_8000FA20(); // 1
+extern "C" void __dt__19J3DMtxCalcNoAnmBaseFv(); // 1
+extern "C" void __dt__13mDoExt_morf_cFv(); // 1
+extern "C" void setMorf__13mDoExt_morf_cFf(); // 1
+extern "C" void frameUpdate__13mDoExt_morf_cFv(); // 1
+extern "C" void __ct__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl(); // 1
+extern "C" void __dt__14mDoExt_McaMorfFv(); // 1
+extern "C" void create__14mDoExt_McaMorfFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiiPvUlUl(); // 1
+extern "C" void calc__14mDoExt_McaMorfFv(); // 1
+extern "C" void setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv(); // 1
+extern "C" void play__14mDoExt_McaMorfFP3VecUlSc(); // 1
+extern "C" void entryDL__14mDoExt_McaMorfFv(); // 1
+extern "C" void modelCalc__14mDoExt_McaMorfFv(); // 1
+extern "C" void getTransform__14mDoExt_McaMorfFUsP16J3DTransformInfo(); // 1
+extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
+extern "C" void __dt__16mDoExt_McaMorfSOFv(); // 1
+extern "C" void create__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
+extern "C" void calc__16mDoExt_McaMorfSOFv(); // 1
+extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff(); // 1
+extern "C" void play__16mDoExt_McaMorfSOFUlSc(); // 1
+extern "C" void updateDL__16mDoExt_McaMorfSOFv(); // 1
+extern "C" void entryDL__16mDoExt_McaMorfSOFv(); // 1
+extern "C" void modelCalc__16mDoExt_McaMorfSOFv(); // 1
+extern "C" void getTransform__16mDoExt_McaMorfSOFUsP16J3DTransformInfo(); // 1
+extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv(); // 1
+extern "C" void __ct__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
+extern "C" void __dt__15mDoExt_McaMorf2Fv(); // 1
+extern "C" void create__15mDoExt_McaMorf2FP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
+extern "C" void ERROR_EXIT__15mDoExt_McaMorf2Fv(); // 1
+extern "C" void calc__15mDoExt_McaMorf2Fv(); // 1
+extern "C" void setAnm__15mDoExt_McaMorf2FP15J3DAnmTransformP15J3DAnmTransformfiffff(); // 1
+extern "C" void setAnmRate__15mDoExt_McaMorf2Ff(); // 1
+extern "C" void play__15mDoExt_McaMorf2FUlSc(); // 1
+extern "C" void entryDL__15mDoExt_McaMorf2Fv(); // 1
+extern "C" void modelCalc__15mDoExt_McaMorf2Fv(); // 1
+extern "C" void stopZelAnime__15mDoExt_McaMorf2Fv(); // 1
+extern "C" void draw__19mDoExt_invJntPacketFv(); // 1
+extern "C" void init__15mDoExt_3Dline_cFUsii(); // 1
+extern "C" void __ct__4cXyzFv(); // 1
+extern "C" void init__19mDoExt_3DlineMat0_cFUsUsi(); // 1
+extern "C" void __ct__15mDoExt_3Dline_cFv(); // 1
+extern "C" void setMaterial__19mDoExt_3DlineMat0_cFv(); // 1
+extern "C" void draw__19mDoExt_3DlineMat0_cFv(); // 1
+extern "C" void update__19mDoExt_3DlineMat0_cFifR8_GXColorUsP12dKy_tevstr_c(); // 1
+extern "C" void update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c(); // 1
+extern "C" void init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi(); // 1
+extern "C" void setMaterial__19mDoExt_3DlineMat1_cFv(); // 1
+extern "C" void draw__19mDoExt_3DlineMat1_cFv(); // 1
+extern "C" void update__19mDoExt_3DlineMat1_cFifR8_GXColorUsP12dKy_tevstr_c(); // 1
+extern "C" void update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c(); // 1
+extern "C" void setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c(); // 1
+extern "C" void draw__26mDoExt_3DlineMatSortPacketFv(); // 1
+extern "C" static void mDoExt_initFontCommon__FPP7JUTFontPP7ResFONTP7JKRHeapPCcP10JKRArchiveUcUlUl(); // 1
+extern "C" void __dt__7JUTFontFv(); // 1
+extern "C" static void mDoExt_initFont0__Fv(); // 1
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void mDoExt_removeMesgFont__Fv(); // 1
+extern "C" static void mDoExt_initFont1__Fv(); // 1
+extern "C" void mDoExt_getRubyFont__Fv(); // 1
+extern "C" static void mDoExt_initFont2__Fv(); // 1
+extern "C" void mDoExt_getSubFont__Fv(); // 1
+extern "C" void mDoExt_removeSubFont__Fv(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void mDoExt_setAraCacheSize__FUl(); // 1
+extern "C" void mDoExt_GetCurrentRunningThread__Fv(); // 1
+extern "C" void setGX__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void getCellWidth__7JUTFontCFv(); // 1
+extern "C" void getCellHeight__7JUTFontCFv(); // 1
+extern "C" void __dt__26mDoExt_3DlineMatSortPacketFv(); // 1
+extern "C" bool getMaterialID__19mDoExt_3DlineMat1_cFv(); // 1
+extern "C" bool getMaterialID__19mDoExt_3DlineMat0_cFv(); // 1
+extern "C" void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform(); // 1
+extern "C" void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform(); // 1
+extern "C" bool getAnmTransform__10J3DMtxCalcFUc(); // 1
+extern "C" bool getAnmTransform__10J3DMtxCalcFv(); // 1
+extern "C" void setWeight__10J3DMtxCalcFUcf(); // 1
+extern "C" void getWeight__10J3DMtxCalcCFUc(); // 1
+extern "C" void __dt__28mDoExt_MtxCalcAnmBlendTblOldFv(); // 1
+extern "C" void __dt__25mDoExt_MtxCalcAnmBlendTblFv(); // 1
+extern "C" void getAnmTransform__17J3DMtxCalcAnmBaseFv(); // 1
+extern "C" void setAnmTransform__17J3DMtxCalcAnmBaseFP15J3DAnmTransform(); // 1
+extern "C" void func_80014FC8(); // 1
+extern "C" void func_80015034(); // 1
+extern "C" void func_8001505C(); // 1
+extern "C" void func_80015084(); // 1
+extern "C" void func_800150AC(); // 1
 SECTION_RODATA extern const u8 data_803740C0[18 + 2 /* padding */];
 SECTION_RODATA extern const u8 data_803740D4[20];
 SECTION_RODATA extern const u8 data_803740E8[20];
@@ -1456,199 +908,199 @@ SECTION_SDATA2 extern f32 lit_7924;
 // External References:
 // 
 
-extern "C" void OSReport_FatalError();
-extern "C" void OSReport_Error();
-void dComIfG_getStageRes(char const*);
-void dKy_setLight_again();
-void dKy_Global_amb_set(dKy_tevstr_c*);
-void dKy_GxFog_set();
-void cLib_chaseF(f32*, f32, f32);
-void GFSetBlendModeEtc(_GXBlendMode, _GXBlendFactor, _GXBlendFactor, _GXLogicOp, u8, u8, u8);
-void GFSetZMode(u8, _GXCompare, u8);
-void* operator new(u32);
-void* operator new(u32, JKRHeap*, int);
-void* operator new[](u32);
-void operator delete(void*);
-void JMAEulerToQuat(s16, s16, s16, Quaternion*);
-void JMAQuatLerp(Quaternion const*, Quaternion const*, f32, Quaternion*);
-extern "C" void DCStoreRangeNoSync();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSGetCurrentThread();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXQuat();
-extern "C" void PSVECAdd();
-extern "C" void PSVECScale();
-extern "C" void PSVECSquareMag();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetArray();
-extern "C" void GXBegin();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXGetTexObjWidth();
-extern "C" void GXGetTexObjHeight();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetTexCoordScaleManually();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevColor();
-extern "C" void GXCallDisplayList();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXLoadNrmMtxImm();
-extern "C" void GDInitGDLObj();
-extern "C" void __construct_new_array();
-extern "C" void _savegpr_15();
-extern "C" void _savegpr_18();
-extern "C" void _savegpr_20();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_15();
-extern "C" void _restgpr_18();
-extern "C" void _restgpr_20();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void snprintf();
-extern "C" void strcmp();
+extern "C" void OSReport_FatalError(); // 1
+extern "C" void OSReport_Error(); // 1
+void dComIfG_getStageRes(char const*); // 2
+void dKy_setLight_again(); // 2
+void dKy_Global_amb_set(dKy_tevstr_c*); // 2
+void dKy_GxFog_set(); // 2
+void cLib_chaseF(f32*, f32, f32); // 2
+void GFSetBlendModeEtc(_GXBlendMode, _GXBlendFactor, _GXBlendFactor, _GXLogicOp, u8, u8, u8); // 2
+void GFSetZMode(u8, _GXCompare, u8); // 2
+void* operator new(u32); // 2
+void* operator new(u32, JKRHeap*, int); // 2
+void* operator new[](u32); // 2
+void operator delete(void*); // 2
+void JMAEulerToQuat(s16, s16, s16, Quaternion*); // 2
+void JMAQuatLerp(Quaternion const*, Quaternion const*, f32, Quaternion*); // 2
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXQuat(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetArray(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXGetTexObjWidth(); // 1
+extern "C" void GXGetTexObjHeight(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetTexCoordScaleManually(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXCallDisplayList(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXLoadNrmMtxImm(); // 1
+extern "C" void GDInitGDLObj(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void _savegpr_15(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _savegpr_20(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_15(); // 1
+extern "C" void _restgpr_18(); // 1
+extern "C" void _restgpr_20(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void snprintf(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void OSReport_FatalError();
-extern "C" void OSReport_Error();
-extern "C" void __dt__4cXyzFv();
-extern "C" void dComIfG_getStageRes__FPCc();
-extern "C" void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz();
-extern "C" void dKy_setLight_again__Fv();
-extern "C" void dKy_Global_amb_set__FP12dKy_tevstr_c();
-extern "C" void dKy_GxFog_set__Fv();
-extern "C" void __pl__4cXyzCFRC3Vec();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void __ml__4cXyzCFf();
-extern "C" void outprod__4cXyzCFRC3Vec();
-extern "C" void normalizeZP__4cXyzFv();
-extern "C" void cLib_chaseF__FPfff();
-extern "C" void framework__14Z2SoundObjBaseFUlSc();
-extern "C" void dispose__14Z2SoundObjBaseFv();
-extern "C" void stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool();
-extern "C" void startSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
-extern "C" void startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
-extern "C" void __ct__15Z2SoundObjAnimeFv();
-extern "C" void init__15Z2SoundObjAnimeFP3VecUc();
-extern "C" void initAnime__15Z2SoundObjAnimeFPvbff();
-extern "C" void updateAnime__15Z2SoundObjAnimeFff();
-extern "C" void initAnime__10Z2CreatureFPvbff();
-extern "C" void updateAnime__10Z2CreatureFff();
-extern "C" void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc();
-extern "C" void GFSetZMode__FUc10_GXCompareUc();
-extern "C" void becomeCurrentHeap__7JKRHeapFv();
-extern "C" void destroy__7JKRHeapFv();
-extern "C" void free__7JKRHeapFPvP7JKRHeap();
-extern "C" void setErrorFlag__7JKRHeapFb();
-extern "C" void* __nw__FUl();
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void* __nwa__FUl();
-extern "C" void __dl__FPv();
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb();
-extern "C" void adjustSize__12JKRSolidHeapFv();
-extern "C" void create__13JKRAssertHeapFP7JKRHeap();
-extern "C" void removeResource__13JKRFileLoaderFPvP13JKRFileLoader();
-extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
-extern "C" void findIdResource__10JKRArchiveCFUs();
-extern "C" void __ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap();
-extern "C" void getName__10JUTNameTabCFUs();
-extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
-extern "C" void reinitGX__6J3DSysFv();
-extern "C" void init__15J3DVertexBufferFv();
-extern "C" void callDL__17J3DDisplayListObjCFv();
-extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer();
-extern "C" void drawFast__14J3DShapePacketFv();
-extern "C" void loadPreDrawSetting__8J3DShapeCFv();
-extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs();
-extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
-extern "C" void initialize__8J3DModelFv();
-extern "C" void entryModelData__8J3DModelFP12J3DModelDataUlUl();
-extern "C" void newDifferedDisplayList__8J3DModelFUl();
-extern "C" void lock__8J3DModelFv();
-extern "C" void unlock__8J3DModelFv();
-extern "C" void diff__8J3DModelFv();
-extern "C" void init__12J3DFrameCtrlFs();
-extern "C" void update__12J3DFrameCtrlFv();
-extern "C" void searchUpdateMaterialID__11J3DAnmColorFP16J3DMaterialTable();
-extern "C" void searchUpdateMaterialID__16J3DAnmTexPatternFP16J3DMaterialTable();
-extern "C" void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP16J3DMaterialTable();
-extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP16J3DMaterialTable();
-extern "C" void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm();
-extern "C" void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm();
-extern "C" void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm();
-extern "C" void setAnm__13J3DDeformDataFP13J3DAnmCluster();
-extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf();
-extern "C" void calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo();
-extern "C" void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
-extern "C" void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
-extern "C" void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
-extern "C" void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
-extern "C" void JMAEulerToQuat__FsssP10Quaternion();
-extern "C" void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion();
-extern "C" void DCStoreRangeNoSync();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSGetCurrentThread();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXQuat();
-extern "C" void PSVECAdd();
-extern "C" void PSVECScale();
-extern "C" void PSVECSquareMag();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetArray();
-extern "C" void GXBegin();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXGetTexObjWidth();
-extern "C" void GXGetTexObjHeight();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetTexCoordScaleManually();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevColor();
-extern "C" void GXCallDisplayList();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXLoadNrmMtxImm();
-extern "C" void GDInitGDLObj();
-extern "C" void __construct_new_array();
-extern "C" void _savegpr_15();
-extern "C" void _savegpr_18();
-extern "C" void _savegpr_20();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_15();
-extern "C" void _restgpr_18();
-extern "C" void _restgpr_20();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void snprintf();
-extern "C" void strcmp();
+extern "C" void OSReport_FatalError(); // 1
+extern "C" void OSReport_Error(); // 1
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void dComIfG_getStageRes__FPCc(); // 1
+extern "C" void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz(); // 1
+extern "C" void dKy_setLight_again__Fv(); // 1
+extern "C" void dKy_Global_amb_set__FP12dKy_tevstr_c(); // 1
+extern "C" void dKy_GxFog_set__Fv(); // 1
+extern "C" void __pl__4cXyzCFRC3Vec(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ml__4cXyzCFf(); // 1
+extern "C" void outprod__4cXyzCFRC3Vec(); // 1
+extern "C" void normalizeZP__4cXyzFv(); // 1
+extern "C" void cLib_chaseF__FPfff(); // 1
+extern "C" void framework__14Z2SoundObjBaseFUlSc(); // 1
+extern "C" void dispose__14Z2SoundObjBaseFv(); // 1
+extern "C" void stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool(); // 1
+extern "C" void startSound__14Z2SoundObjBaseF10JAISoundIDUlSc(); // 1
+extern "C" void startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc(); // 1
+extern "C" void __ct__15Z2SoundObjAnimeFv(); // 1
+extern "C" void init__15Z2SoundObjAnimeFP3VecUc(); // 1
+extern "C" void initAnime__15Z2SoundObjAnimeFPvbff(); // 1
+extern "C" void updateAnime__15Z2SoundObjAnimeFff(); // 1
+extern "C" void initAnime__10Z2CreatureFPvbff(); // 1
+extern "C" void updateAnime__10Z2CreatureFff(); // 1
+extern "C" void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc(); // 1
+extern "C" void GFSetZMode__FUc10_GXCompareUc(); // 1
+extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
+extern "C" void destroy__7JKRHeapFv(); // 1
+extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void setErrorFlag__7JKRHeapFb(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
+extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb(); // 1
+extern "C" void adjustSize__12JKRSolidHeapFv(); // 1
+extern "C" void create__13JKRAssertHeapFP7JKRHeap(); // 1
+extern "C" void removeResource__13JKRFileLoaderFPvP13JKRFileLoader(); // 1
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive(); // 1
+extern "C" void findIdResource__10JKRArchiveCFUs(); // 1
+extern "C" void __ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap(); // 1
+extern "C" void getName__10JUTNameTabCFUs(); // 1
+extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap(); // 1
+extern "C" void reinitGX__6J3DSysFv(); // 1
+extern "C" void init__15J3DVertexBufferFv(); // 1
+extern "C" void callDL__17J3DDisplayListObjCFv(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" void drawFast__14J3DShapePacketFv(); // 1
+extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
+extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
+extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo(); // 1
+extern "C" void initialize__8J3DModelFv(); // 1
+extern "C" void entryModelData__8J3DModelFP12J3DModelDataUlUl(); // 1
+extern "C" void newDifferedDisplayList__8J3DModelFUl(); // 1
+extern "C" void lock__8J3DModelFv(); // 1
+extern "C" void unlock__8J3DModelFv(); // 1
+extern "C" void diff__8J3DModelFv(); // 1
+extern "C" void init__12J3DFrameCtrlFs(); // 1
+extern "C" void update__12J3DFrameCtrlFv(); // 1
+extern "C" void searchUpdateMaterialID__11J3DAnmColorFP16J3DMaterialTable(); // 1
+extern "C" void searchUpdateMaterialID__16J3DAnmTexPatternFP16J3DMaterialTable(); // 1
+extern "C" void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP16J3DMaterialTable(); // 1
+extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP16J3DMaterialTable(); // 1
+extern "C" void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm(); // 1
+extern "C" void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm(); // 1
+extern "C" void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm(); // 1
+extern "C" void setAnm__13J3DDeformDataFP13J3DAnmCluster(); // 1
+extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf(); // 1
+extern "C" void calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo(); // 1
+extern "C" void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor(); // 1
+extern "C" void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern(); // 1
+extern "C" void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey(); // 1
+extern "C" void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
+extern "C" void JMAEulerToQuat__FsssP10Quaternion(); // 1
+extern "C" void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion(); // 1
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXQuat(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetArray(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXGetTexObjWidth(); // 1
+extern "C" void GXGetTexObjHeight(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetTexCoordScaleManually(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXCallDisplayList(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXLoadNrmMtxImm(); // 1
+extern "C" void GDInitGDLObj(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void _savegpr_15(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _savegpr_20(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_15(); // 1
+extern "C" void _restgpr_18(); // 1
+extern "C" void _restgpr_20(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void snprintf(); // 1
+extern "C" void strcmp(); // 1
 SECTION_RODATA extern const u8 j3dDefaultTexCoordInfo[32];
 SECTION_RODATA extern const u8 j3dDefaultIndTexMtxInfo[28];
 SECTION_RODATA extern const u8 j3dDefaultTevStageInfo[20];
@@ -2118,7 +1570,7 @@ asm void mDoExt_bckAnm::init(J3DAnmTransform* field_0, int field_1, int field_2,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8000D8E4() {
+asm void J3DMtxCalcAnimation__template0::setAnmTransform(J3DAnmTransform* field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_8000D8E4.s"
 }
@@ -3316,7 +2768,7 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8000FA20() {
+asm J3DMtxCalcNoAnm__template0::~J3DMtxCalcNoAnm__template0() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_8000FA20.s"
 }
@@ -4241,7 +3693,7 @@ asm void J3DMtxCalcAnmBase::setAnmTransform(J3DAnmTransform* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80014FC8() {
+asm J3DMtxCalcAnimation__template0::~J3DMtxCalcAnimation__template0() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_80014FC8.s"
 }
@@ -4252,7 +3704,7 @@ extern "C" asm static void func_80014FC8() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80015034() {
+asm void J3DMtxCalcAnimation__template0::init(Vec const& field_0, f32 const (& field_1)[3][4]) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_80015034.s"
 }
@@ -4263,7 +3715,7 @@ extern "C" asm static void func_80015034() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8001505C() {
+asm void J3DMtxCalcNoAnm__template0::init(Vec const& field_0, f32 const (& field_1)[3][4]) {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_8001505C.s"
 }
@@ -4274,7 +3726,7 @@ extern "C" asm static void func_8001505C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80015084() {
+asm void J3DMtxCalcNoAnm__template0::calc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_80015084.s"
 }
@@ -4285,7 +3737,7 @@ extern "C" asm static void func_80015084() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_800150AC() {
+asm void J3DMtxCalcAnimation__template0::calc() {
 	nofralloc
 #include "asm/m_Do/m_Do_ext/func_800150AC.s"
 }

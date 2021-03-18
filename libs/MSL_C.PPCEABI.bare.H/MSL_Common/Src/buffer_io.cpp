@@ -9,11 +9,11 @@
 // Forward References:
 // 
 
-extern "C" void __flush_buffer();
-extern "C" void __prep_buffer();
+extern "C" void __flush_buffer(); // 1
+extern "C" void __prep_buffer(); // 1
 
-extern "C" void __flush_buffer();
-extern "C" void __prep_buffer();
+extern "C" void __flush_buffer(); // 1
+extern "C" void __prep_buffer(); // 1
 
 // 
 // External References:

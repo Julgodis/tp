@@ -9,24 +9,13 @@
 // Types:
 // 
 
-// build JUTDirectPrint (['JUTDirectPrint']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin ['JUTDirectPrint']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['JUTDirectPrint']) */
 struct JUTDirectPrint {
-	// ('JUtility', 'TColor')
 	/* 802E41E8 */ JUTDirectPrint();
 	/* 802E4240 */ void start();
 	/* 802E4288 */ void erase(int, int, int, int);
@@ -34,24 +23,14 @@ struct JUTDirectPrint {
 	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
 	/* 802E46D8 */ void drawString(u16, u16, char*);
 	/* 802E4708 */ void drawString_f(u16, u16, char const*, ...);
-	/* 802E4798 */ void setCharColor(JUtility::TColor);
 	/* 802E47C8 */ void setCharColor(u8, u8, u8);
+	/* 802E4798 */ void setCharColor(JUtility::TColor);
 };
 
-// build JUtility (['JUtility']) True/True
-// build base_process_class (['base_process_class']) False/False
-/* top-level dependencies (begin ['base_process_class']) */
-/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build JStudio (['JStudio']) False/False
-/* top-level dependencies (begin ['JStudio']) */
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build TFunctionValue_list_parameter (['JStudio', 'TFunctionValue_list_parameter']) False/False
-	/* dependencies (begin ['JStudio', 'TFunctionValue_list_parameter']) */
-	/* dependencies (end ['JStudio', 'TFunctionValue_list_parameter']) */
 	struct TFunctionValue_list_parameter {
 		/* 80283C24 */ ~TFunctionValue_list_parameter();
 	};
@@ -62,18 +41,18 @@ namespace JStudio {
 // Forward References:
 // 
 
-extern "C" static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb();
+extern "C" static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb(); // 1
 
-extern "C" void __ct__14JUTDirectPrintFv();
-extern "C" void start__14JUTDirectPrintFv();
-extern "C" void erase__14JUTDirectPrintFiiii();
-extern "C" void drawChar__14JUTDirectPrintFiii();
-extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
-extern "C" static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb();
-extern "C" void drawString__14JUTDirectPrintFUsUsPc();
-extern "C" void drawString_f__14JUTDirectPrintFUsUsPCce();
-extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor();
-extern "C" void setCharColor__14JUTDirectPrintFUcUcUc();
+extern "C" void __ct__14JUTDirectPrintFv(); // 1
+extern "C" void start__14JUTDirectPrintFv(); // 1
+extern "C" void erase__14JUTDirectPrintFiiii(); // 1
+extern "C" void drawChar__14JUTDirectPrintFiii(); // 1
+extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs(); // 1
+extern "C" static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb(); // 1
+extern "C" void drawString__14JUTDirectPrintFUsUsPc(); // 1
+extern "C" void drawString_f__14JUTDirectPrintFUsUsPCce(); // 1
+extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor(); // 1
+extern "C" void setCharColor__14JUTDirectPrintFUcUcUc(); // 1
 SECTION_RODATA extern const u8 JUTDirectPrint__stringBase0[8];
 SECTION_DATA extern u8 sAsciiTable__14JUTDirectPrint[128];
 SECTION_DATA extern void*sFontData__14JUTDirectPrint[64];
@@ -96,24 +75,24 @@ SECTION_SDATA2 extern f64 JUTDirectPrint__lit_514;
 // External References:
 // 
 
-void fpcBs_Delete(base_process_class*);
-void* operator new(u32);
-extern "C" void DCStoreRange();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_27();
-extern "C" void vsnprintf();
+void fpcBs_Delete(base_process_class*); // 2
+void* operator new(u32); // 2
+extern "C" void DCStoreRange(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void vsnprintf(); // 1
 
-extern "C" void fpcBs_Delete__FP18base_process_class();
-extern "C" void __dt__Q27JStudio29TFunctionValue_list_parameterFv();
-extern "C" void* __nw__FUl();
-extern "C" void DCStoreRange();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_27();
-extern "C" void vsnprintf();
+extern "C" void fpcBs_Delete__FP18base_process_class(); // 1
+extern "C" void __dt__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void DCStoreRange(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void vsnprintf(); // 1
 
 // 
 // Declarations:

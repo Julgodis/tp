@@ -9,20 +9,11 @@
 // Types:
 // 
 
-// build J3DVertexData (['J3DVertexData']) False/False
-/* top-level dependencies (begin ['J3DVertexData']) */
-/* top-level dependencies (end ['J3DVertexData']) */
 struct J3DVertexData {
 	/* 80310EF8 */ J3DVertexData();
 };
 
-// build J3DVertexBuffer (['J3DVertexBuffer']) False/False
-// build J3DVertexData (['J3DVertexData']) True/True
-/* top-level dependencies (begin ['J3DVertexBuffer']) */
-// outer dependency: ('J3DVertexData',)
-/* top-level dependencies (end ['J3DVertexBuffer']) */
 struct J3DVertexBuffer {
-	// ('J3DVertexData',)
 	/* 80310F78 */ void setVertexData(J3DVertexData*);
 	/* 80310FD8 */ void init();
 	/* 80311030 */ ~J3DVertexBuffer();
@@ -34,9 +25,6 @@ struct J3DVertexBuffer {
 	/* 8031152C */ void allocTransformedVtxNrmArray();
 };
 
-// build J3DDrawMtxData (['J3DDrawMtxData']) False/False
-/* top-level dependencies (begin ['J3DDrawMtxData']) */
-/* top-level dependencies (end ['J3DDrawMtxData']) */
 struct J3DDrawMtxData {
 	/* 803115E0 */ J3DDrawMtxData();
 	/* 803115F4 */ ~J3DDrawMtxData();
@@ -47,44 +35,44 @@ struct J3DDrawMtxData {
 // 
 
 
-extern "C" void __ct__13J3DVertexDataFv();
-extern "C" void setVertexData__15J3DVertexBufferFP13J3DVertexData();
-extern "C" void init__15J3DVertexBufferFv();
-extern "C" void __dt__15J3DVertexBufferFv();
-extern "C" void setArray__15J3DVertexBufferCFv();
-extern "C" void copyLocalVtxPosArray__15J3DVertexBufferFUl();
-extern "C" void copyLocalVtxNrmArray__15J3DVertexBufferFUl();
-extern "C" void copyLocalVtxArray__15J3DVertexBufferFUl();
-extern "C" void allocTransformedVtxPosArray__15J3DVertexBufferFv();
-extern "C" void allocTransformedVtxNrmArray__15J3DVertexBufferFv();
-extern "C" void __ct__14J3DDrawMtxDataFv();
-extern "C" void __dt__14J3DDrawMtxDataFv();
+extern "C" void __ct__13J3DVertexDataFv(); // 1
+extern "C" void setVertexData__15J3DVertexBufferFP13J3DVertexData(); // 1
+extern "C" void init__15J3DVertexBufferFv(); // 1
+extern "C" void __dt__15J3DVertexBufferFv(); // 1
+extern "C" void setArray__15J3DVertexBufferCFv(); // 1
+extern "C" void copyLocalVtxPosArray__15J3DVertexBufferFUl(); // 1
+extern "C" void copyLocalVtxNrmArray__15J3DVertexBufferFUl(); // 1
+extern "C" void copyLocalVtxArray__15J3DVertexBufferFUl(); // 1
+extern "C" void allocTransformedVtxPosArray__15J3DVertexBufferFv(); // 1
+extern "C" void allocTransformedVtxNrmArray__15J3DVertexBufferFv(); // 1
+extern "C" void __ct__14J3DDrawMtxDataFv(); // 1
+extern "C" void __dt__14J3DDrawMtxDataFv(); // 1
 
 // 
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-void* operator new[](u32, int);
-void operator delete(void*);
-extern "C" void DCStoreRange();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+void* operator new[](u32, int); // 2
+void operator delete(void*); // 2
+extern "C" void DCStoreRange(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void* __nwa__FUli();
-extern "C" void __dl__FPv();
-extern "C" void DCStoreRange();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+extern "C" void* __nwa__FUli(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void DCStoreRange(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 j3dSys[284];
 
 // 

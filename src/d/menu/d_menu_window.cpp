@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dMw_c (['dMw_c']) False/False
-/* top-level dependencies (begin ['dMw_c']) */
-/* top-level dependencies (end ['dMw_c']) */
 struct dMw_c {
 	/* 801FA13C */ void key_wait_init(u8);
 	/* 801FA220 */ void ring_open_init(u8);
@@ -122,84 +119,44 @@ struct dMw_c {
 	/* 801FD67C */ void _delete();
 };
 
-// build msg_class (['msg_class']) False/False
-/* top-level dependencies (begin ['msg_class']) */
-/* top-level dependencies (end ['msg_class']) */
 struct msg_class {
 };
 
-// build dDlst_MENU_CAPTURE_c (['dDlst_MENU_CAPTURE_c']) False/False
-/* top-level dependencies (begin ['dDlst_MENU_CAPTURE_c']) */
-/* top-level dependencies (end ['dDlst_MENU_CAPTURE_c']) */
 struct dDlst_MENU_CAPTURE_c {
 	/* 801FDFCC */ void draw();
 	/* 801FE2E8 */ ~dDlst_MENU_CAPTURE_c();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-// build STControl (['STControl']) False/False
-/* top-level dependencies (begin ['STControl']) */
-/* top-level dependencies (end ['STControl']) */
 struct STControl {
 	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 8003219C */ void checkTrigger();
 };
 
-// build dDlst_list_c (['dDlst_list_c']) False/False
-// build dDlst_base_c (['dDlst_base_c']) False/False
-/* top-level dependencies (begin ['dDlst_base_c']) */
-/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin ['dDlst_list_c']) */
-// outer dependency: ('dDlst_base_c',)
-/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (['dDlst_base_c']) True/True
-// build dMenu_Collect2D_c (['dMenu_Collect2D_c']) False/False
-/* top-level dependencies (begin ['dMenu_Collect2D_c']) */
-/* top-level dependencies (end ['dMenu_Collect2D_c']) */
 struct dMenu_Collect2D_c {
 	/* 801B5F84 */ void isKeyCheck();
 	/* 801B5FAC */ bool isOutCheck();
 };
 
-// build dMenu_Collect_c (['dMenu_Collect_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 };
 
-// build CSTControl (['CSTControl']) False/False
-/* top-level dependencies (begin ['CSTControl']) */
-/* top-level dependencies (end ['CSTControl']) */
 struct CSTControl {
 };
 
-/* top-level dependencies (begin ['dMenu_Collect_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Collect_c']) */
 struct dMenu_Collect_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801B78C0 */ dMenu_Collect_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801B7A0C */ void _create();
 	/* 801B7A44 */ void _delete();
@@ -207,21 +164,7 @@ struct dMenu_Collect_c {
 	/* 801B7AC0 */ void draw();
 };
 
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-// build dMenu_Dmap_c (['dMenu_Dmap_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Dmap_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Dmap_c']) */
 struct dMenu_Dmap_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801BB498 */ dMenu_Dmap_c(JKRExpHeap*, STControl*, CSTControl*, u8, u8);
 	/* 801BDDA4 */ void _move();
 	/* 801BE328 */ void isOpen();
@@ -231,38 +174,14 @@ struct dMenu_Dmap_c {
 	/* 801BF410 */ void isSync();
 };
 
-// build dMenu_Fishing_c (['dMenu_Fishing_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Fishing_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Fishing_c']) */
 struct dMenu_Fishing_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801C4D54 */ dMenu_Fishing_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801C50B4 */ void _move();
 	/* 801C5204 */ void isSync();
 	/* 801C52E4 */ void _open();
 };
 
-// build dMenu_Fmap_c (['dMenu_Fmap_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Fmap_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Fmap_c']) */
 struct dMenu_Fmap_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801C66E4 */ dMenu_Fmap_c(JKRExpHeap*, STControl*, CSTControl*, u8, u8, u8, f32, f32, u8);
 	/* 801C74A4 */ void _delete();
 	/* 801C74A8 */ void _move();
@@ -278,59 +197,24 @@ struct dMenu_Fmap_c {
 	/* 801CB290 */ void getStageTransZ();
 };
 
-// build dMenu_Insect_c (['dMenu_Insect_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Insect_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Insect_c']) */
 struct dMenu_Insect_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801D8114 */ dMenu_Insect_c(JKRExpHeap*, STControl*, CSTControl*, u8);
 	/* 801D86C8 */ void _move();
 	/* 801D88EC */ void isSync();
 	/* 801D894C */ void _open();
 };
 
-// build dMenu_Letter_c (['dMenu_Letter_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Letter_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Letter_c']) */
 struct dMenu_Letter_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801DCDC0 */ dMenu_Letter_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801DD474 */ void _move();
 	/* 801DD934 */ void isSync();
 	/* 801DDA74 */ void _open();
 };
 
-// build dMenu_Option_c (['dMenu_Option_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['dMenu_Option_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['dMenu_Option_c']) */
 struct dMenu_Option_c {
-	// ('STControl',)
-	// ('JKRArchive',)
 	/* 801E1F10 */ dMenu_Option_c(JKRArchive*, STControl*);
 	/* 801E2C1C */ void _delete();
 	/* 801E3408 */ void _move();
@@ -338,20 +222,7 @@ struct dMenu_Option_c {
 	/* 801E3B98 */ void _open();
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build dMenu_Ring_c (['dMenu_Ring_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Ring_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Ring_c']) */
 struct dMenu_Ring_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801E9118 */ dMenu_Ring_c(JKRExpHeap*, STControl*, CSTControl*, u8);
 	/* 801EAB7C */ void _create();
 	/* 801EABE8 */ void _delete();
@@ -361,9 +232,6 @@ struct dMenu_Ring_c {
 	/* 801EB3CC */ void isClose();
 };
 
-// build dMenu_save_c (['dMenu_save_c']) False/False
-/* top-level dependencies (begin ['dMenu_save_c']) */
-/* top-level dependencies (end ['dMenu_save_c']) */
 struct dMenu_save_c {
 	/* 801EF6A0 */ dMenu_save_c();
 	/* 801EF7AC */ void _create();
@@ -374,233 +242,194 @@ struct dMenu_save_c {
 	/* 801F69FC */ void _draw2();
 };
 
-// build dMenu_Skill_c (['dMenu_Skill_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Skill_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Skill_c']) */
 struct dMenu_Skill_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801F7224 */ dMenu_Skill_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801F7718 */ void _move();
 	/* 801F7950 */ void isSync();
 	/* 801F7A40 */ void _open();
 };
 
-// build dMeterMap_c (['dMeterMap_c']) False/False
-/* top-level dependencies (begin ['dMeterMap_c']) */
-/* top-level dependencies (end ['dMeterMap_c']) */
 struct dMeterMap_c {
 	/* 8020D650 */ void isEnableDispMapAndMapDispSizeTypeNo();
 	/* 8020D874 */ void setDispPosInsideFlg_SE_On();
 	/* 8020D8BC */ void setDispPosOutsideFlg_SE_On();
 };
 
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
 	/* 8021C9DC */ void resetWarpStatus();
 };
 
-// build dMeter2_c (['dMeter2_c']) False/False
-/* top-level dependencies (begin ['dMeter2_c']) */
-/* top-level dependencies (end ['dMeter2_c']) */
 struct dMeter2_c {
 	/* 8021F6EC */ void emphasisButtonDelete();
 };
 
-// build dMsgObject_c (['dMsgObject_c']) False/False
-/* top-level dependencies (begin ['dMsgObject_c']) */
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 802379AC */ void setKillMessageFlag();
 	/* 8023822C */ void getStatus();
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
-struct Vec {
-};
-
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
+struct Vec {
+};
+
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
-void dMw_UP_TRIGGER();
-void dMw_DOWN_TRIGGER();
-void dMw_LEFT_TRIGGER();
-void dMw_RIGHT_TRIGGER();
-void dMw_A_TRIGGER();
-void dMw_B_TRIGGER();
-void dMw_Z_TRIGGER();
-void dMw_START_TRIGGER();
-void dMw_onPauseWindow();
-void dMw_offPauseWindow();
-void dMw_onMenuRing();
-void dMw_offMenuRing();
-static void dMw_isMenuRing();
-static void dMw_Draw(dMw_c*);
-static void dMw_Execute(dMw_c*);
-static bool dMw_IsDelete(dMw_c*);
-static void dMw_Delete(dMw_c*);
-static void dMw_Create(msg_class*);
-extern "C" void __sinit_d_menu_window_cpp();
+void dMw_UP_TRIGGER(); // 2
+void dMw_DOWN_TRIGGER(); // 2
+void dMw_LEFT_TRIGGER(); // 2
+void dMw_RIGHT_TRIGGER(); // 2
+void dMw_A_TRIGGER(); // 2
+void dMw_B_TRIGGER(); // 2
+void dMw_Z_TRIGGER(); // 2
+void dMw_START_TRIGGER(); // 2
+void dMw_onPauseWindow(); // 2
+void dMw_offPauseWindow(); // 2
+void dMw_onMenuRing(); // 2
+void dMw_offMenuRing(); // 2
+static void dMw_isMenuRing(); // 2
+static void dMw_Draw(dMw_c*); // 2
+static void dMw_Execute(dMw_c*); // 2
+static bool dMw_IsDelete(dMw_c*); // 2
+static void dMw_Delete(dMw_c*); // 2
+static void dMw_Create(msg_class*); // 2
+extern "C" void __sinit_d_menu_window_cpp(); // 1
 
-extern "C" void dMw_UP_TRIGGER__Fv();
-extern "C" void dMw_DOWN_TRIGGER__Fv();
-extern "C" void dMw_LEFT_TRIGGER__Fv();
-extern "C" void dMw_RIGHT_TRIGGER__Fv();
-extern "C" void dMw_A_TRIGGER__Fv();
-extern "C" void dMw_B_TRIGGER__Fv();
-extern "C" void dMw_Z_TRIGGER__Fv();
-extern "C" void dMw_START_TRIGGER__Fv();
-extern "C" void dMw_onPauseWindow__Fv();
-extern "C" void dMw_offPauseWindow__Fv();
-extern "C" void dMw_onMenuRing__Fv();
-extern "C" void dMw_offMenuRing__Fv();
-extern "C" static void dMw_isMenuRing__Fv();
-extern "C" void key_wait_init__5dMw_cFUc();
-extern "C" void ring_open_init__5dMw_cFUc();
-extern "C" void ring_move_init__5dMw_cFUc();
-extern "C" void ring_close_init__5dMw_cFUc();
-extern "C" void collect_open_init__5dMw_cFUc();
-extern "C" void collect_move_init__5dMw_cFUc();
-extern "C" void collect_close_init__5dMw_cFUc();
-extern "C" void fmap_open_init__5dMw_cFUc();
-extern "C" void fmap_move_init__5dMw_cFUc();
-extern "C" void fmap_close_init__5dMw_cFUc();
-extern "C" void dmap_open_init__5dMw_cFUc();
-extern "C" void dmap_move_init__5dMw_cFUc();
-extern "C" void dmap_close_init__5dMw_cFUc();
-extern "C" void collect_save_open_init__5dMw_cFUc();
-extern "C" void collect_save_move_init__5dMw_cFUc();
-extern "C" void collect_save_close_init__5dMw_cFUc();
-extern "C" void collect_option_open_init__5dMw_cFUc();
-extern "C" void collect_option_move_init__5dMw_cFUc();
-extern "C" void collect_option_close_init__5dMw_cFUc();
-extern "C" void collect_letter_open_init__5dMw_cFUc();
-extern "C" void collect_letter_move_init__5dMw_cFUc();
-extern "C" void collect_letter_close_init__5dMw_cFUc();
-extern "C" void collect_fishing_open_init__5dMw_cFUc();
-extern "C" void collect_fishing_move_init__5dMw_cFUc();
-extern "C" void collect_fishing_close_init__5dMw_cFUc();
-extern "C" void collect_skill_open_init__5dMw_cFUc();
-extern "C" void collect_skill_move_init__5dMw_cFUc();
-extern "C" void collect_skill_close_init__5dMw_cFUc();
-extern "C" void collect_insect_open_init__5dMw_cFUc();
-extern "C" void collect_insect_move_init__5dMw_cFUc();
-extern "C" void collect_insect_close_init__5dMw_cFUc();
-extern "C" void insect_open_init__5dMw_cFUc();
-extern "C" void insect_open2_init__5dMw_cFUc();
-extern "C" void insect_move_init__5dMw_cFUc();
-extern "C" void insect_close_init__5dMw_cFUc();
-extern "C" void key_wait_proc__5dMw_cFv();
-extern "C" void ring_open_proc__5dMw_cFv();
-extern "C" void ring_move_proc__5dMw_cFv();
-extern "C" void ring_close_proc__5dMw_cFv();
-extern "C" void collect_open_proc__5dMw_cFv();
-extern "C" void collect_move_proc__5dMw_cFv();
-extern "C" void collect_close_proc__5dMw_cFv();
-extern "C" void fmap_open_proc__5dMw_cFv();
-extern "C" void fmap_move_proc__5dMw_cFv();
-extern "C" void fmap_close_proc__5dMw_cFv();
-extern "C" void dmap_open_proc__5dMw_cFv();
-extern "C" void dmap_move_proc__5dMw_cFv();
-extern "C" void dmap_close_proc__5dMw_cFv();
-extern "C" void collect_save_open_proc__5dMw_cFv();
-extern "C" void collect_save_move_proc__5dMw_cFv();
-extern "C" void collect_save_close_proc__5dMw_cFv();
-extern "C" void collect_option_open_proc__5dMw_cFv();
-extern "C" void collect_option_move_proc__5dMw_cFv();
-extern "C" void collect_option_close_proc__5dMw_cFv();
-extern "C" void collect_letter_open_proc__5dMw_cFv();
-extern "C" void collect_letter_move_proc__5dMw_cFv();
-extern "C" void collect_letter_close_proc__5dMw_cFv();
-extern "C" void collect_fishing_open_proc__5dMw_cFv();
-extern "C" void collect_fishing_move_proc__5dMw_cFv();
-extern "C" void collect_fishing_close_proc__5dMw_cFv();
-extern "C" void collect_skill_open_proc__5dMw_cFv();
-extern "C" void collect_skill_move_proc__5dMw_cFv();
-extern "C" void collect_skill_close_proc__5dMw_cFv();
-extern "C" void collect_insect_open_proc__5dMw_cFv();
-extern "C" void collect_insect_move_proc__5dMw_cFv();
-extern "C" void collect_insect_close_proc__5dMw_cFv();
-extern "C" void insect_open_proc__5dMw_cFv();
-extern "C" void insect_open2_proc__5dMw_cFv();
-extern "C" void insect_move_proc__5dMw_cFv();
-extern "C" void insect_close_proc__5dMw_cFv();
-extern "C" void dMw_capture_create__5dMw_cFv();
-extern "C" void dMw_capture_delete__5dMw_cFv();
-extern "C" void dMw_ring_create__5dMw_cFUc();
-extern "C" void dMw_ring_delete__5dMw_cFv();
-extern "C" void dMw_collect_create__5dMw_cFv();
-extern "C" void dMw_collect_delete__5dMw_cFb();
-extern "C" void dMw_fmap_create__5dMw_cFv();
-extern "C" void dMw_fmap_delete__5dMw_cFb();
-extern "C" void dMw_dmap_create__5dMw_cFv();
-extern "C" void dMw_dmap_delete__5dMw_cFb();
-extern "C" void dMw_save_create__5dMw_cFv();
-extern "C" void dMw_save_delete__5dMw_cFv();
-extern "C" void dMw_option_create__5dMw_cFv();
-extern "C" void dMw_option_delete__5dMw_cFv();
-extern "C" void dMw_letter_create__5dMw_cFv();
-extern "C" void dMw_letter_delete__5dMw_cFv();
-extern "C" void dMw_fishing_create__5dMw_cFv();
-extern "C" void dMw_fishing_delete__5dMw_cFv();
-extern "C" void dMw_skill_create__5dMw_cFv();
-extern "C" void dMw_skill_delete__5dMw_cFv();
-extern "C" void dMw_insect_create__5dMw_cFUc();
-extern "C" void dMw_insect_delete__5dMw_cFv();
-extern "C" void dMw_onButtonBit__5dMw_cFUc();
-extern "C" void dMw_offButtonBit__5dMw_cFUc();
-extern "C" void dMw_isButtonBit__5dMw_cFUc();
-extern "C" void dMw_isPush_S_Button__5dMw_cFv();
-extern "C" void isPauseReady__5dMw_cFv();
-extern "C" void dMw_fade_out__5dMw_cFv();
-extern "C" void dMw_fade_in__5dMw_cFv();
-extern "C" void checkCStickTrigger__5dMw_cFv();
-extern "C" void isEventCheck__5dMw_cFv();
-extern "C" void markMemSize__5dMw_cFv();
-extern "C" void checkMemSize__5dMw_cFv();
-extern "C" void _create__5dMw_cFv();
-extern "C" void _execute__5dMw_cFv();
-extern "C" void _draw__5dMw_cFv();
-extern "C" void _delete__5dMw_cFv();
-extern "C" static void dMw_Draw__FP5dMw_c();
-extern "C" static void dMw_Execute__FP5dMw_c();
-extern "C" static bool dMw_IsDelete__FP5dMw_c();
-extern "C" static void dMw_Delete__FP5dMw_c();
-extern "C" static void dMw_Create__FP9msg_class();
-extern "C" void __sinit_d_menu_window_cpp();
-extern "C" void draw__20dDlst_MENU_CAPTURE_cFv();
-extern "C" void __dt__20dDlst_MENU_CAPTURE_cFv();
+extern "C" void dMw_UP_TRIGGER__Fv(); // 1
+extern "C" void dMw_DOWN_TRIGGER__Fv(); // 1
+extern "C" void dMw_LEFT_TRIGGER__Fv(); // 1
+extern "C" void dMw_RIGHT_TRIGGER__Fv(); // 1
+extern "C" void dMw_A_TRIGGER__Fv(); // 1
+extern "C" void dMw_B_TRIGGER__Fv(); // 1
+extern "C" void dMw_Z_TRIGGER__Fv(); // 1
+extern "C" void dMw_START_TRIGGER__Fv(); // 1
+extern "C" void dMw_onPauseWindow__Fv(); // 1
+extern "C" void dMw_offPauseWindow__Fv(); // 1
+extern "C" void dMw_onMenuRing__Fv(); // 1
+extern "C" void dMw_offMenuRing__Fv(); // 1
+extern "C" static void dMw_isMenuRing__Fv(); // 1
+extern "C" void key_wait_init__5dMw_cFUc(); // 1
+extern "C" void ring_open_init__5dMw_cFUc(); // 1
+extern "C" void ring_move_init__5dMw_cFUc(); // 1
+extern "C" void ring_close_init__5dMw_cFUc(); // 1
+extern "C" void collect_open_init__5dMw_cFUc(); // 1
+extern "C" void collect_move_init__5dMw_cFUc(); // 1
+extern "C" void collect_close_init__5dMw_cFUc(); // 1
+extern "C" void fmap_open_init__5dMw_cFUc(); // 1
+extern "C" void fmap_move_init__5dMw_cFUc(); // 1
+extern "C" void fmap_close_init__5dMw_cFUc(); // 1
+extern "C" void dmap_open_init__5dMw_cFUc(); // 1
+extern "C" void dmap_move_init__5dMw_cFUc(); // 1
+extern "C" void dmap_close_init__5dMw_cFUc(); // 1
+extern "C" void collect_save_open_init__5dMw_cFUc(); // 1
+extern "C" void collect_save_move_init__5dMw_cFUc(); // 1
+extern "C" void collect_save_close_init__5dMw_cFUc(); // 1
+extern "C" void collect_option_open_init__5dMw_cFUc(); // 1
+extern "C" void collect_option_move_init__5dMw_cFUc(); // 1
+extern "C" void collect_option_close_init__5dMw_cFUc(); // 1
+extern "C" void collect_letter_open_init__5dMw_cFUc(); // 1
+extern "C" void collect_letter_move_init__5dMw_cFUc(); // 1
+extern "C" void collect_letter_close_init__5dMw_cFUc(); // 1
+extern "C" void collect_fishing_open_init__5dMw_cFUc(); // 1
+extern "C" void collect_fishing_move_init__5dMw_cFUc(); // 1
+extern "C" void collect_fishing_close_init__5dMw_cFUc(); // 1
+extern "C" void collect_skill_open_init__5dMw_cFUc(); // 1
+extern "C" void collect_skill_move_init__5dMw_cFUc(); // 1
+extern "C" void collect_skill_close_init__5dMw_cFUc(); // 1
+extern "C" void collect_insect_open_init__5dMw_cFUc(); // 1
+extern "C" void collect_insect_move_init__5dMw_cFUc(); // 1
+extern "C" void collect_insect_close_init__5dMw_cFUc(); // 1
+extern "C" void insect_open_init__5dMw_cFUc(); // 1
+extern "C" void insect_open2_init__5dMw_cFUc(); // 1
+extern "C" void insect_move_init__5dMw_cFUc(); // 1
+extern "C" void insect_close_init__5dMw_cFUc(); // 1
+extern "C" void key_wait_proc__5dMw_cFv(); // 1
+extern "C" void ring_open_proc__5dMw_cFv(); // 1
+extern "C" void ring_move_proc__5dMw_cFv(); // 1
+extern "C" void ring_close_proc__5dMw_cFv(); // 1
+extern "C" void collect_open_proc__5dMw_cFv(); // 1
+extern "C" void collect_move_proc__5dMw_cFv(); // 1
+extern "C" void collect_close_proc__5dMw_cFv(); // 1
+extern "C" void fmap_open_proc__5dMw_cFv(); // 1
+extern "C" void fmap_move_proc__5dMw_cFv(); // 1
+extern "C" void fmap_close_proc__5dMw_cFv(); // 1
+extern "C" void dmap_open_proc__5dMw_cFv(); // 1
+extern "C" void dmap_move_proc__5dMw_cFv(); // 1
+extern "C" void dmap_close_proc__5dMw_cFv(); // 1
+extern "C" void collect_save_open_proc__5dMw_cFv(); // 1
+extern "C" void collect_save_move_proc__5dMw_cFv(); // 1
+extern "C" void collect_save_close_proc__5dMw_cFv(); // 1
+extern "C" void collect_option_open_proc__5dMw_cFv(); // 1
+extern "C" void collect_option_move_proc__5dMw_cFv(); // 1
+extern "C" void collect_option_close_proc__5dMw_cFv(); // 1
+extern "C" void collect_letter_open_proc__5dMw_cFv(); // 1
+extern "C" void collect_letter_move_proc__5dMw_cFv(); // 1
+extern "C" void collect_letter_close_proc__5dMw_cFv(); // 1
+extern "C" void collect_fishing_open_proc__5dMw_cFv(); // 1
+extern "C" void collect_fishing_move_proc__5dMw_cFv(); // 1
+extern "C" void collect_fishing_close_proc__5dMw_cFv(); // 1
+extern "C" void collect_skill_open_proc__5dMw_cFv(); // 1
+extern "C" void collect_skill_move_proc__5dMw_cFv(); // 1
+extern "C" void collect_skill_close_proc__5dMw_cFv(); // 1
+extern "C" void collect_insect_open_proc__5dMw_cFv(); // 1
+extern "C" void collect_insect_move_proc__5dMw_cFv(); // 1
+extern "C" void collect_insect_close_proc__5dMw_cFv(); // 1
+extern "C" void insect_open_proc__5dMw_cFv(); // 1
+extern "C" void insect_open2_proc__5dMw_cFv(); // 1
+extern "C" void insect_move_proc__5dMw_cFv(); // 1
+extern "C" void insect_close_proc__5dMw_cFv(); // 1
+extern "C" void dMw_capture_create__5dMw_cFv(); // 1
+extern "C" void dMw_capture_delete__5dMw_cFv(); // 1
+extern "C" void dMw_ring_create__5dMw_cFUc(); // 1
+extern "C" void dMw_ring_delete__5dMw_cFv(); // 1
+extern "C" void dMw_collect_create__5dMw_cFv(); // 1
+extern "C" void dMw_collect_delete__5dMw_cFb(); // 1
+extern "C" void dMw_fmap_create__5dMw_cFv(); // 1
+extern "C" void dMw_fmap_delete__5dMw_cFb(); // 1
+extern "C" void dMw_dmap_create__5dMw_cFv(); // 1
+extern "C" void dMw_dmap_delete__5dMw_cFb(); // 1
+extern "C" void dMw_save_create__5dMw_cFv(); // 1
+extern "C" void dMw_save_delete__5dMw_cFv(); // 1
+extern "C" void dMw_option_create__5dMw_cFv(); // 1
+extern "C" void dMw_option_delete__5dMw_cFv(); // 1
+extern "C" void dMw_letter_create__5dMw_cFv(); // 1
+extern "C" void dMw_letter_delete__5dMw_cFv(); // 1
+extern "C" void dMw_fishing_create__5dMw_cFv(); // 1
+extern "C" void dMw_fishing_delete__5dMw_cFv(); // 1
+extern "C" void dMw_skill_create__5dMw_cFv(); // 1
+extern "C" void dMw_skill_delete__5dMw_cFv(); // 1
+extern "C" void dMw_insect_create__5dMw_cFUc(); // 1
+extern "C" void dMw_insect_delete__5dMw_cFv(); // 1
+extern "C" void dMw_onButtonBit__5dMw_cFUc(); // 1
+extern "C" void dMw_offButtonBit__5dMw_cFUc(); // 1
+extern "C" void dMw_isButtonBit__5dMw_cFUc(); // 1
+extern "C" void dMw_isPush_S_Button__5dMw_cFv(); // 1
+extern "C" void isPauseReady__5dMw_cFv(); // 1
+extern "C" void dMw_fade_out__5dMw_cFv(); // 1
+extern "C" void dMw_fade_in__5dMw_cFv(); // 1
+extern "C" void checkCStickTrigger__5dMw_cFv(); // 1
+extern "C" void isEventCheck__5dMw_cFv(); // 1
+extern "C" void markMemSize__5dMw_cFv(); // 1
+extern "C" void checkMemSize__5dMw_cFv(); // 1
+extern "C" void _create__5dMw_cFv(); // 1
+extern "C" void _execute__5dMw_cFv(); // 1
+extern "C" void _draw__5dMw_cFv(); // 1
+extern "C" void _delete__5dMw_cFv(); // 1
+extern "C" static void dMw_Draw__FP5dMw_c(); // 1
+extern "C" static void dMw_Execute__FP5dMw_c(); // 1
+extern "C" static bool dMw_IsDelete__FP5dMw_c(); // 1
+extern "C" static void dMw_Delete__FP5dMw_c(); // 1
+extern "C" static void dMw_Create__FP9msg_class(); // 1
+extern "C" void __sinit_d_menu_window_cpp(); // 1
+extern "C" void draw__20dDlst_MENU_CAPTURE_cFv(); // 1
+extern "C" void __dt__20dDlst_MENU_CAPTURE_cFv(); // 1
 SECTION_RODATA extern const u8 d_menu_d_menu_window__stringBase0[24];
 SECTION_DATA extern u8 d_menu_d_menu_window__cNullVec__6Z2Calc[12];
 SECTION_DATA extern void*d_menu_d_menu_window__lit_4276[3];
@@ -693,183 +522,183 @@ SECTION_SBSS2 extern u8 lit_4115[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport_Error();
-void mDoExt_setCurrentHeap(JKRHeap*);
-void mDoExt_getCurrentHeap();
-void mDoExt_removeMesgFont();
-void fopOvlpM_IsDoingReq();
-void fopMsgM_setStageLayer(void*);
-void dComIfGp_setHeapLockFlag(u8);
-void dComIfGp_offHeapLockFlag(int);
-void dCam_getBody();
-void dMeter2Info_isItemOpenCheck();
-void dMeter2Info_set2DVibration();
-void dMeter2Info_set2DVibrationM();
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXPixModeSync();
-extern "C" void GXBegin();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetTexCopySrc();
-extern "C" void GXSetTexCopyDst();
-extern "C" void GXCopyTex();
-extern "C" void GXSetNumChans();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetDither();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void OSReport_Error(); // 1
+void mDoExt_setCurrentHeap(JKRHeap*); // 2
+void mDoExt_getCurrentHeap(); // 2
+void mDoExt_removeMesgFont(); // 2
+void fopOvlpM_IsDoingReq(); // 2
+void fopMsgM_setStageLayer(void*); // 2
+void dComIfGp_setHeapLockFlag(u8); // 2
+void dComIfGp_offHeapLockFlag(int); // 2
+void dCam_getBody(); // 2
+void dMeter2Info_isItemOpenCheck(); // 2
+void dMeter2Info_set2DVibration(); // 2
+void dMeter2Info_set2DVibrationM(); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXPixModeSync(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetTexCopySrc(); // 1
+extern "C" void GXSetTexCopyDst(); // 1
+extern "C" void GXCopyTex(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void OSReport_Error();
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" void mDoExt_getCurrentHeap__Fv();
-extern "C" void mDoExt_removeMesgFont__Fv();
-extern "C" void fopOvlpM_IsDoingReq__Fv();
-extern "C" void fopMsgM_setStageLayer__FPv();
-extern "C" void dComIfGp_setHeapLockFlag__FUc();
-extern "C" void dComIfGp_offHeapLockFlag__Fi();
-extern "C" void __ct__9STControlFssssffss();
-extern "C" void setWaitParm__9STControlFssssffss();
-extern "C" void checkTrigger__9STControlFv();
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" void dCam_getBody__Fv();
-extern "C" void isKeyCheck__17dMenu_Collect2D_cFv();
-extern "C" bool isOutCheck__17dMenu_Collect2D_cFv();
-extern "C" void __ct__15dMenu_Collect_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern "C" void _create__15dMenu_Collect_cFv();
-extern "C" void _delete__15dMenu_Collect_cFv();
-extern "C" void _move__15dMenu_Collect_cFv();
-extern "C" void draw__15dMenu_Collect_cFv();
-extern "C" void __ct__12dMenu_Dmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUc();
-extern "C" void _move__12dMenu_Dmap_cFv();
-extern "C" void isOpen__12dMenu_Dmap_cFv();
-extern "C" void isClose__12dMenu_Dmap_cFv();
-extern "C" void _draw__12dMenu_Dmap_cFv();
-extern "C" void getNextStatus__12dMenu_Dmap_cFv();
-extern "C" void isSync__12dMenu_Dmap_cFv();
-extern "C" void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern "C" void _move__15dMenu_Fishing_cFv();
-extern "C" void isSync__15dMenu_Fishing_cFv();
-extern "C" void _open__15dMenu_Fishing_cFv();
-extern "C" void __ct__12dMenu_Fmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUcUcffUc();
-extern "C" void _delete__12dMenu_Fmap_cFv();
-extern "C" void _move__12dMenu_Fmap_cFv();
-extern "C" void _draw__12dMenu_Fmap_cFv();
-extern "C" void getNextStatus__12dMenu_Fmap_cFPUc();
-extern "C" void isSync__12dMenu_Fmap_cFv();
-extern "C" void isOpen__12dMenu_Fmap_cFv();
-extern "C" void isClose__12dMenu_Fmap_cFv();
-extern "C" void getProcess__12dMenu_Fmap_cFv();
-extern "C" void getRegionCursor__12dMenu_Fmap_cFv();
-extern "C" void getStageCursor__12dMenu_Fmap_cFv();
-extern "C" void getStageTransX__12dMenu_Fmap_cFv();
-extern "C" void getStageTransZ__12dMenu_Fmap_cFv();
-extern "C" void __ct__14dMenu_Insect_cFP10JKRExpHeapP9STControlP10CSTControlUc();
-extern "C" void _move__14dMenu_Insect_cFv();
-extern "C" void isSync__14dMenu_Insect_cFv();
-extern "C" void _open__14dMenu_Insect_cFv();
-extern "C" void __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern "C" void _move__14dMenu_Letter_cFv();
-extern "C" void isSync__14dMenu_Letter_cFv();
-extern "C" void _open__14dMenu_Letter_cFv();
-extern "C" void __ct__14dMenu_Option_cFP10JKRArchiveP9STControl();
-extern "C" void _delete__14dMenu_Option_cFv();
-extern "C" void _move__14dMenu_Option_cFv();
-extern "C" void isSync__14dMenu_Option_cFv();
-extern "C" void _open__14dMenu_Option_cFv();
-extern "C" void __ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc();
-extern "C" void _create__12dMenu_Ring_cFv();
-extern "C" void _delete__12dMenu_Ring_cFv();
-extern "C" void _move__12dMenu_Ring_cFv();
-extern "C" void isOpen__12dMenu_Ring_cFv();
-extern "C" void isMoveEnd__12dMenu_Ring_cFv();
-extern "C" void isClose__12dMenu_Ring_cFv();
-extern "C" void __ct__12dMenu_save_cFv();
-extern "C" void _create__12dMenu_save_cFv();
-extern "C" void initialize__12dMenu_save_cFv();
-extern "C" void _open__12dMenu_save_cFv();
-extern "C" void _delete__12dMenu_save_cFv();
-extern "C" void _move__12dMenu_save_cFv();
-extern "C" void _draw2__12dMenu_save_cFv();
-extern "C" void __ct__13dMenu_Skill_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern "C" void _move__13dMenu_Skill_cFv();
-extern "C" void isSync__13dMenu_Skill_cFv();
-extern "C" void _open__13dMenu_Skill_cFv();
-extern "C" void isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv();
-extern "C" void setDispPosInsideFlg_SE_On__11dMeterMap_cFv();
-extern "C" void setDispPosOutsideFlg_SE_On__11dMeterMap_cFv();
-extern "C" void resetWarpStatus__13dMeter2Info_cFv();
-extern "C" void dMeter2Info_isItemOpenCheck__Fv();
-extern "C" void dMeter2Info_set2DVibration__Fv();
-extern "C" void dMeter2Info_set2DVibrationM__Fv();
-extern "C" void emphasisButtonDelete__9dMeter2_cFv();
-extern "C" void setKillMessageFlag__12dMsgObject_cFv();
-extern "C" void getStatus__12dMsgObject_cFv();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void freeAll__7JKRHeapFv();
-extern "C" void getTotalFreeSize__7JKRHeapFv();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXPixModeSync();
-extern "C" void GXBegin();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetTexCopySrc();
-extern "C" void GXSetTexCopyDst();
-extern "C" void GXCopyTex();
-extern "C" void GXSetNumChans();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetDither();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void OSReport_Error(); // 1
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
+extern "C" void mDoExt_getCurrentHeap__Fv(); // 1
+extern "C" void mDoExt_removeMesgFont__Fv(); // 1
+extern "C" void fopOvlpM_IsDoingReq__Fv(); // 1
+extern "C" void fopMsgM_setStageLayer__FPv(); // 1
+extern "C" void dComIfGp_setHeapLockFlag__FUc(); // 1
+extern "C" void dComIfGp_offHeapLockFlag__Fi(); // 1
+extern "C" void __ct__9STControlFssssffss(); // 1
+extern "C" void setWaitParm__9STControlFssssffss(); // 1
+extern "C" void checkTrigger__9STControlFv(); // 1
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
+extern "C" void dCam_getBody__Fv(); // 1
+extern "C" void isKeyCheck__17dMenu_Collect2D_cFv(); // 1
+extern "C" bool isOutCheck__17dMenu_Collect2D_cFv(); // 1
+extern "C" void __ct__15dMenu_Collect_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
+extern "C" void _create__15dMenu_Collect_cFv(); // 1
+extern "C" void _delete__15dMenu_Collect_cFv(); // 1
+extern "C" void _move__15dMenu_Collect_cFv(); // 1
+extern "C" void draw__15dMenu_Collect_cFv(); // 1
+extern "C" void __ct__12dMenu_Dmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUc(); // 1
+extern "C" void _move__12dMenu_Dmap_cFv(); // 1
+extern "C" void isOpen__12dMenu_Dmap_cFv(); // 1
+extern "C" void isClose__12dMenu_Dmap_cFv(); // 1
+extern "C" void _draw__12dMenu_Dmap_cFv(); // 1
+extern "C" void getNextStatus__12dMenu_Dmap_cFv(); // 1
+extern "C" void isSync__12dMenu_Dmap_cFv(); // 1
+extern "C" void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
+extern "C" void _move__15dMenu_Fishing_cFv(); // 1
+extern "C" void isSync__15dMenu_Fishing_cFv(); // 1
+extern "C" void _open__15dMenu_Fishing_cFv(); // 1
+extern "C" void __ct__12dMenu_Fmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUcUcffUc(); // 1
+extern "C" void _delete__12dMenu_Fmap_cFv(); // 1
+extern "C" void _move__12dMenu_Fmap_cFv(); // 1
+extern "C" void _draw__12dMenu_Fmap_cFv(); // 1
+extern "C" void getNextStatus__12dMenu_Fmap_cFPUc(); // 1
+extern "C" void isSync__12dMenu_Fmap_cFv(); // 1
+extern "C" void isOpen__12dMenu_Fmap_cFv(); // 1
+extern "C" void isClose__12dMenu_Fmap_cFv(); // 1
+extern "C" void getProcess__12dMenu_Fmap_cFv(); // 1
+extern "C" void getRegionCursor__12dMenu_Fmap_cFv(); // 1
+extern "C" void getStageCursor__12dMenu_Fmap_cFv(); // 1
+extern "C" void getStageTransX__12dMenu_Fmap_cFv(); // 1
+extern "C" void getStageTransZ__12dMenu_Fmap_cFv(); // 1
+extern "C" void __ct__14dMenu_Insect_cFP10JKRExpHeapP9STControlP10CSTControlUc(); // 1
+extern "C" void _move__14dMenu_Insect_cFv(); // 1
+extern "C" void isSync__14dMenu_Insect_cFv(); // 1
+extern "C" void _open__14dMenu_Insect_cFv(); // 1
+extern "C" void __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
+extern "C" void _move__14dMenu_Letter_cFv(); // 1
+extern "C" void isSync__14dMenu_Letter_cFv(); // 1
+extern "C" void _open__14dMenu_Letter_cFv(); // 1
+extern "C" void __ct__14dMenu_Option_cFP10JKRArchiveP9STControl(); // 1
+extern "C" void _delete__14dMenu_Option_cFv(); // 1
+extern "C" void _move__14dMenu_Option_cFv(); // 1
+extern "C" void isSync__14dMenu_Option_cFv(); // 1
+extern "C" void _open__14dMenu_Option_cFv(); // 1
+extern "C" void __ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc(); // 1
+extern "C" void _create__12dMenu_Ring_cFv(); // 1
+extern "C" void _delete__12dMenu_Ring_cFv(); // 1
+extern "C" void _move__12dMenu_Ring_cFv(); // 1
+extern "C" void isOpen__12dMenu_Ring_cFv(); // 1
+extern "C" void isMoveEnd__12dMenu_Ring_cFv(); // 1
+extern "C" void isClose__12dMenu_Ring_cFv(); // 1
+extern "C" void __ct__12dMenu_save_cFv(); // 1
+extern "C" void _create__12dMenu_save_cFv(); // 1
+extern "C" void initialize__12dMenu_save_cFv(); // 1
+extern "C" void _open__12dMenu_save_cFv(); // 1
+extern "C" void _delete__12dMenu_save_cFv(); // 1
+extern "C" void _move__12dMenu_save_cFv(); // 1
+extern "C" void _draw2__12dMenu_save_cFv(); // 1
+extern "C" void __ct__13dMenu_Skill_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
+extern "C" void _move__13dMenu_Skill_cFv(); // 1
+extern "C" void isSync__13dMenu_Skill_cFv(); // 1
+extern "C" void _open__13dMenu_Skill_cFv(); // 1
+extern "C" void isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv(); // 1
+extern "C" void setDispPosInsideFlg_SE_On__11dMeterMap_cFv(); // 1
+extern "C" void setDispPosOutsideFlg_SE_On__11dMeterMap_cFv(); // 1
+extern "C" void resetWarpStatus__13dMeter2Info_cFv(); // 1
+extern "C" void dMeter2Info_isItemOpenCheck__Fv(); // 1
+extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
+extern "C" void dMeter2Info_set2DVibrationM__Fv(); // 1
+extern "C" void emphasisButtonDelete__9dMeter2_cFv(); // 1
+extern "C" void setKillMessageFlag__12dMsgObject_cFv(); // 1
+extern "C" void getStatus__12dMsgObject_cFv(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void freeAll__7JKRHeapFv(); // 1
+extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXPixModeSync(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetTexCopySrc(); // 1
+extern "C" void GXSetTexCopyDst(); // 1
+extern "C" void GXCopyTex(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 SECTION_DATA extern void*g_fopMsg_Method[6];
 SECTION_DATA extern void*g_fpcLf_Method[6];

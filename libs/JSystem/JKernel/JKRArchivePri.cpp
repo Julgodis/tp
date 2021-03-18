@@ -9,37 +9,15 @@
 // Types:
 // 
 
-// build JKRArchive (['JKRArchive']) False/False
-// build JKRArchive (['JKRArchive']) True/False
-struct JKRArchive;
-// build JKRArchive (['JKRArchive']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['JKRArchive']) */
-// outer dependency: ('JKRArchive', 'SDIFileEntry')
-// outer dependency: ('JKRArchive', 'EMountMode')
-// outer dependency: ('JKRArchive', 'CArcName')
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
-	// ('JKRArchive', 'SDIFileEntry')
-	// ('JKRArchive', 'EMountMode')
-	// ('JKRArchive', 'CArcName')
-	// build EMountMode (['JKRArchive', 'EMountMode']) False/False
-	/* dependencies (begin ['JKRArchive', 'EMountMode']) */
-	/* dependencies (end ['JKRArchive', 'EMountMode']) */
 	struct EMountMode {
 	};
 
-	// build CArcName (['JKRArchive', 'CArcName']) False/False
-	/* dependencies (begin ['JKRArchive', 'CArcName']) */
-	/* dependencies (end ['JKRArchive', 'CArcName']) */
 	struct CArcName {
-		/* 802D67F4 */ void store(char const*);
 		/* 802D6884 */ void store(char const*, char);
+		/* 802D67F4 */ void store(char const*);
 	};
 
-	// build SDIFileEntry (['JKRArchive', 'SDIFileEntry']) False/False
-	/* dependencies (begin ['JKRArchive', 'SDIFileEntry']) */
-	/* dependencies (end ['JKRArchive', 'SDIFileEntry']) */
 	struct SDIFileEntry {
 	};
 
@@ -58,16 +36,10 @@ struct JKRArchive {
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE83C */ void findFromRoot(void*);
 };
 
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D40F0 */ JKRFileLoader();
 	/* 802D4148 */ ~JKRFileLoader();
@@ -78,49 +50,49 @@ struct JKRFileLoader {
 // 
 
 
-extern "C" void __ct__10JKRArchiveFlQ210JKRArchive10EMountMode();
-extern "C" void __dt__10JKRArchiveFv();
-extern "C" void isSameName__10JKRArchiveCFRQ210JKRArchive8CArcNameUlUs();
-extern "C" void findResType__10JKRArchiveCFUl();
-extern "C" void findDirectory__10JKRArchiveCFPCcUl();
-extern "C" void findTypeResource__10JKRArchiveCFUlPCc();
-extern "C" void findFsResource__10JKRArchiveCFPCcUl();
-extern "C" void findIdxResource__10JKRArchiveCFUl();
-extern "C" void findNameResource__10JKRArchiveCFPCc();
-extern "C" void findPtrResource__10JKRArchiveCFPCv();
-extern "C" void findIdResource__10JKRArchiveCFUs();
-extern "C" void store__Q210JKRArchive8CArcNameFPCc();
-extern "C" void store__Q210JKRArchive8CArcNameFPCcc();
-extern "C" void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl();
-extern "C" void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry();
+extern "C" void __ct__10JKRArchiveFlQ210JKRArchive10EMountMode(); // 1
+extern "C" void __dt__10JKRArchiveFv(); // 1
+extern "C" void isSameName__10JKRArchiveCFRQ210JKRArchive8CArcNameUlUs(); // 1
+extern "C" void findResType__10JKRArchiveCFUl(); // 1
+extern "C" void findDirectory__10JKRArchiveCFPCcUl(); // 1
+extern "C" void findTypeResource__10JKRArchiveCFUlPCc(); // 1
+extern "C" void findFsResource__10JKRArchiveCFPCcUl(); // 1
+extern "C" void findIdxResource__10JKRArchiveCFUl(); // 1
+extern "C" void findNameResource__10JKRArchiveCFPCc(); // 1
+extern "C" void findPtrResource__10JKRArchiveCFPCv(); // 1
+extern "C" void findIdResource__10JKRArchiveCFUs(); // 1
+extern "C" void store__Q210JKRArchive8CArcNameFPCc(); // 1
+extern "C" void store__Q210JKRArchive8CArcNameFPCcc(); // 1
+extern "C" void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl(); // 1
+extern "C" void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry(); // 1
 SECTION_SBSS extern u8 sCurrentDirID__10JKRArchive[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void tolower();
-extern "C" void strcmp();
+void operator delete(void*); // 2
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void tolower(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void findFromRoot__7JKRHeapFPv();
-extern "C" void __dl__FPv();
-extern "C" void __ct__13JKRFileLoaderFv();
-extern "C" void __dt__13JKRFileLoaderFv();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void tolower();
-extern "C" void strcmp();
+extern "C" void findFromRoot__7JKRHeapFPv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__13JKRFileLoaderFv(); // 1
+extern "C" void __dt__13JKRFileLoaderFv(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void tolower(); // 1
+extern "C" void strcmp(); // 1
 SECTION_DATA extern void*const __vt__10JKRArchive[20];
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];

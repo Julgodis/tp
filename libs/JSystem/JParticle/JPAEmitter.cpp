@@ -9,82 +9,50 @@
 // Types:
 // 
 
-// build JPAEmitterCallBack (['JPAEmitterCallBack']) False/False
-/* top-level dependencies (begin ['JPAEmitterCallBack']) */
-/* top-level dependencies (end ['JPAEmitterCallBack']) */
 struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
-// build JPABaseEmitter (['JPABaseEmitter']) False/False
-// build JPABaseParticle (['JPABaseParticle']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
-/* top-level dependencies (begin ['JPAEmitterWorkData']) */
-/* top-level dependencies (end ['JPAEmitterWorkData']) */
+struct JPAResource {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+struct JPAEmitterManager {
+};
+
+struct _GXTexMapID {
+};
+
 struct JPAEmitterWorkData {
 };
 
-/* top-level dependencies (begin ['JPABaseParticle']) */
-// outer dependency: ('JPAEmitterWorkData',)
-/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
-	// ('JPAEmitterWorkData',)
 	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
 	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
 };
 
-// build JPAEmitterManager (['JPAEmitterManager']) False/False
-/* top-level dependencies (begin ['JPAEmitterManager']) */
-/* top-level dependencies (end ['JPAEmitterManager']) */
-struct JPAEmitterManager {
-};
-
-// build JPAResource (['JPAResource']) False/False
-/* top-level dependencies (begin ['JPAResource']) */
-/* top-level dependencies (end ['JPAResource']) */
-struct JPAResource {
-};
-
-// build _GXTexMapID (['_GXTexMapID']) False/False
-/* top-level dependencies (begin ['_GXTexMapID']) */
-/* top-level dependencies (end ['_GXTexMapID']) */
-struct _GXTexMapID {
-};
-
-/* top-level dependencies (begin ['JPABaseEmitter']) */
-// outer dependency: ('JPABaseParticle',)
-// outer dependency: ('JPAEmitterManager',)
-// outer dependency: ('JPAResource',)
-// outer dependency: ('_GXTexMapID',)
-/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
-	// ('JPABaseParticle',)
-	// ('JPAEmitterManager',)
-	// ('JPAResource',)
-	// ('_GXTexMapID',)
 	/* 8027E6EC */ void init(JPAEmitterManager*, JPAResource*);
 	/* 8027EA40 */ void createParticle();
 	/* 8027EB60 */ void createChild(JPABaseParticle*);
 	/* 8027EC60 */ void deleteAllParticle();
 	/* 8027EDD4 */ void processTillStartFrame();
 	/* 8027EE14 */ void processTermination();
+	/* 8027EEB0 */ void calcEmitterGlobalPosition(JGeometry::TVec3<f32>*) const;
 	/* 8027EF30 */ void getCurrentCreateNumber() const;
 	/* 8027EF40 */ void getDrawCount() const;
 	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
 };
 
-// build JPAEmitterManager (['JPAEmitterManager']) True/True
-// build JPAResource (['JPAResource']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-// build _GXTexMapID (['_GXTexMapID']) True/True
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-// build JUTTexture (['JUTTexture']) False/False
-// build _GXTexMapID (['_GXTexMapID']) True/True
-/* top-level dependencies (begin ['JUTTexture']) */
-// outer dependency: ('_GXTexMapID',)
-/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// ('_GXTexMapID',)
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
@@ -92,19 +60,18 @@ struct JUTTexture {
 // Forward References:
 // 
 
-extern "C" void func_8027EEB0();
 
-extern "C" void __dt__18JPAEmitterCallBackFv();
-extern "C" void init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource();
-extern "C" void createParticle__14JPABaseEmitterFv();
-extern "C" void createChild__14JPABaseEmitterFP15JPABaseParticle();
-extern "C" void deleteAllParticle__14JPABaseEmitterFv();
-extern "C" void processTillStartFrame__14JPABaseEmitterFv();
-extern "C" void processTermination__14JPABaseEmitterFv();
-extern "C" void func_8027EEB0();
-extern "C" void getCurrentCreateNumber__14JPABaseEmitterCFv();
-extern "C" void getDrawCount__14JPABaseEmitterCFv();
-extern "C" void loadTexture__14JPABaseEmitterFUc11_GXTexMapID();
+extern "C" void __dt__18JPAEmitterCallBackFv(); // 1
+extern "C" void init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource(); // 1
+extern "C" void createParticle__14JPABaseEmitterFv(); // 1
+extern "C" void createChild__14JPABaseEmitterFP15JPABaseParticle(); // 1
+extern "C" void deleteAllParticle__14JPABaseEmitterFv(); // 1
+extern "C" void processTillStartFrame__14JPABaseEmitterFv(); // 1
+extern "C" void processTermination__14JPABaseEmitterFv(); // 1
+extern "C" void func_8027EEB0(); // 1
+extern "C" void getCurrentCreateNumber__14JPABaseEmitterCFv(); // 1
+extern "C" void getDrawCount__14JPABaseEmitterCFv(); // 1
+extern "C" void loadTexture__14JPABaseEmitterFUc11_GXTexMapID(); // 1
 SECTION_SDATA2 extern f32 JPAEmitter__lit_2440;
 SECTION_SDATA2 extern u8 JPAEmitter__lit_2441[4];
 SECTION_SDATA2 extern f32 lit_2442;
@@ -115,20 +82,20 @@ SECTION_SDATA2 extern f32 lit_2444;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void PSMTXIdentity();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXScale();
-extern "C" void PSMTXMultVec();
+void operator delete(void*); // 2
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXScale(); // 1
+extern "C" void PSMTXMultVec(); // 1
 
-extern "C" void init_p__15JPABaseParticleFP18JPAEmitterWorkData();
-extern "C" void init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void __dl__FPv();
-extern "C" void load__10JUTTextureF11_GXTexMapID();
-extern "C" void PSMTXIdentity();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXScale();
-extern "C" void PSMTXMultVec();
+extern "C" void init_p__15JPABaseParticleFP18JPAEmitterWorkData(); // 1
+extern "C" void init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void load__10JUTTextureF11_GXTexMapID(); // 1
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXScale(); // 1
+extern "C" void PSMTXMultVec(); // 1
 SECTION_DATA extern void*const __vt__18JPAEmitterCallBack[7];
 SECTION_SDATA extern u32 __float_epsilon;
 
@@ -236,7 +203,7 @@ asm void JPABaseEmitter::processTermination() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8027EEB0() {
+asm void JPABaseEmitter::calcEmitterGlobalPosition(JGeometry::TVec3<f32>* field_0) const {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAEmitter/func_8027EEB0.s"
 }

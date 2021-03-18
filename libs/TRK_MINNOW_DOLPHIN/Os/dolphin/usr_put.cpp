@@ -9,23 +9,23 @@
 // Forward References:
 // 
 
-extern "C" void usr_put_initialize();
-extern "C" void usr_puts_serial();
+extern "C" void usr_put_initialize(); // 1
+extern "C" void usr_puts_serial(); // 1
 
-extern "C" void usr_put_initialize();
-extern "C" void usr_puts_serial();
+extern "C" void usr_put_initialize(); // 1
+extern "C" void usr_puts_serial(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void OSReport();
-extern "C" void SetTRKConnected();
-extern "C" void GetTRKConnected();
+extern "C" void OSReport(); // 1
+extern "C" void SetTRKConnected(); // 1
+extern "C" void GetTRKConnected(); // 1
 
-extern "C" void OSReport();
-extern "C" void SetTRKConnected();
-extern "C" void GetTRKConnected();
+extern "C" void OSReport(); // 1
+extern "C" void SetTRKConnected(); // 1
+extern "C" void GetTRKConnected(); // 1
 
 // 
 // Declarations:

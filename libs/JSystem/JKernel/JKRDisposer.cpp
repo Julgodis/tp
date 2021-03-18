@@ -9,36 +9,21 @@
 // Types:
 // 
 
-// build JKRDisposer (['JKRDisposer']) False/False
-/* top-level dependencies (begin ['JKRDisposer']) */
-/* top-level dependencies (end ['JKRDisposer']) */
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE83C */ void findFromRoot(void*);
 };
 
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) True/True
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
@@ -48,22 +33,22 @@ struct JSUPtrList {
 // 
 
 
-extern "C" void __ct__11JKRDisposerFv();
-extern "C" void __dt__11JKRDisposerFv();
+extern "C" void __ct__11JKRDisposerFv(); // 1
+extern "C" void __dt__11JKRDisposerFv(); // 1
 SECTION_DATA extern void*const __vt__11JKRDisposer[4];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void findFromRoot__7JKRHeapFPv();
-extern "C" void __dl__FPv();
-extern "C" void __ct__10JSUPtrLinkFPv();
-extern "C" void __dt__10JSUPtrLinkFv();
-extern "C" void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void findFromRoot__7JKRHeapFPv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__10JSUPtrLinkFPv(); // 1
+extern "C" void __dt__10JSUPtrLinkFv(); // 1
+extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
 
 // 
 // Declarations:

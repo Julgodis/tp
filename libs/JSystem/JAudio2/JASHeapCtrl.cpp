@@ -9,19 +9,11 @@
 // Types:
 // 
 
-// build JASHeap (['JASHeap']) False/False
-// build JASDisposer (['JASDisposer']) False/False
-/* top-level dependencies (begin ['JASDisposer']) */
-/* top-level dependencies (end ['JASDisposer']) */
 struct JASDisposer {
 	/* 80290BCC */ void onDispose();
 };
 
-/* top-level dependencies (begin ['JASHeap']) */
-// outer dependency: ('JASDisposer',)
-/* top-level dependencies (end ['JASHeap']) */
 struct JASHeap {
-	// ('JASDisposer',)
 	/* 80290140 */ JASHeap(JASDisposer*);
 	/* 802901AC */ void initRootHeap(void*, u32);
 	/* 8029021C */ void alloc(JASHeap*, u32);
@@ -34,10 +26,6 @@ struct JASHeap {
 	/* 80290B54 */ ~JASHeap();
 };
 
-// build JASDisposer (['JASDisposer']) True/True
-// build JASGenericMemPool (['JASGenericMemPool']) False/False
-/* top-level dependencies (begin ['JASGenericMemPool']) */
-/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290860 */ ~JASGenericMemPool();
@@ -46,18 +34,10 @@ struct JASGenericMemPool {
 	/* 80290994 */ void free(void*, u32);
 };
 
-// build JASKernel (['JASKernel']) False/False
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-/* top-level dependencies (begin ['JASKernel']) */
-// outer dependency: ('JKRSolidHeap',)
-/* top-level dependencies (end ['JASKernel']) */
 struct JASKernel {
-	// ('JKRSolidHeap',)
 	/* 802909B8 */ void setupRootHeap(JKRSolidHeap*, u32);
 	/* 80290AC0 */ void getSystemHeap();
 	/* 80290AC8 */ void getCommandHeap();
@@ -65,38 +45,19 @@ struct JASKernel {
 	/* 80290B08 */ void getAramHeap();
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) True/True
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRExpHeap']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
-	// ('JKRHeap',)
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) True/True
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);
@@ -107,30 +68,30 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-extern "C" void __sinit_JASHeapCtrl_cpp();
+extern "C" void __sinit_JASHeapCtrl_cpp(); // 1
 
-extern "C" void __ct__7JASHeapFP11JASDisposer();
-extern "C" void initRootHeap__7JASHeapFPvUl();
-extern "C" void alloc__7JASHeapFP7JASHeapUl();
-extern "C" void allocTail__7JASHeapFP7JASHeapUl();
-extern "C" void free__7JASHeapFv();
-extern "C" void insertChild__7JASHeapFP7JASHeapP7JASHeapPvUlb();
-extern "C" void getTailHeap__7JASHeapFv();
-extern "C" void getTailOffset__7JASHeapFv();
-extern "C" void getCurOffset__7JASHeapFv();
-extern "C" void __ct__17JASGenericMemPoolFv();
-extern "C" void __dt__17JASGenericMemPoolFv();
-extern "C" void newMemPool__17JASGenericMemPoolFUli();
-extern "C" void alloc__17JASGenericMemPoolFUl();
-extern "C" void free__17JASGenericMemPoolFPvUl();
-extern "C" void setupRootHeap__9JASKernelFP12JKRSolidHeapUl();
-extern "C" void getSystemHeap__9JASKernelFv();
-extern "C" void getCommandHeap__9JASKernelFv();
-extern "C" void setupAramHeap__9JASKernelFUlUl();
-extern "C" void getAramHeap__9JASKernelFv();
-extern "C" void __sinit_JASHeapCtrl_cpp();
-extern "C" void __dt__7JASHeapFv();
-extern "C" void onDispose__11JASDisposerFv();
+extern "C" void __ct__7JASHeapFP11JASDisposer(); // 1
+extern "C" void initRootHeap__7JASHeapFPvUl(); // 1
+extern "C" void alloc__7JASHeapFP7JASHeapUl(); // 1
+extern "C" void allocTail__7JASHeapFP7JASHeapUl(); // 1
+extern "C" void free__7JASHeapFv(); // 1
+extern "C" void insertChild__7JASHeapFP7JASHeapP7JASHeapPvUlb(); // 1
+extern "C" void getTailHeap__7JASHeapFv(); // 1
+extern "C" void getTailOffset__7JASHeapFv(); // 1
+extern "C" void getCurOffset__7JASHeapFv(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv(); // 1
+extern "C" void __dt__17JASGenericMemPoolFv(); // 1
+extern "C" void newMemPool__17JASGenericMemPoolFUli(); // 1
+extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
+extern "C" void free__17JASGenericMemPoolFPvUl(); // 1
+extern "C" void setupRootHeap__9JASKernelFP12JKRSolidHeapUl(); // 1
+extern "C" void getSystemHeap__9JASKernelFv(); // 1
+extern "C" void getCommandHeap__9JASKernelFv(); // 1
+extern "C" void setupAramHeap__9JASKernelFUlUl(); // 1
+extern "C" void getAramHeap__9JASKernelFv(); // 1
+extern "C" void __sinit_JASHeapCtrl_cpp(); // 1
+extern "C" void __dt__7JASHeapFv(); // 1
+extern "C" void onDispose__11JASDisposerFv(); // 1
 SECTION_BSS extern u8 lit_313[12];
 SECTION_BSS extern u8 audioAramHeap__9JASKernel[68];
 SECTION_SBSS extern u8 JASDram[4];
@@ -142,46 +103,46 @@ SECTION_SBSS extern u8 sCommandHeap__9JASKernel[4];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int);
-void* operator new[](u32, JKRHeap*, int);
-void operator delete(void*);
-void operator delete[](void*);
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void* operator new(u32, JKRHeap*, int); // 2
+void* operator new[](u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+void operator delete[](void*); // 2
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void __dla__FPv();
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" void __ct__10JSUPtrLinkFPv();
-extern "C" void __dt__10JSUPtrLinkFv();
-extern "C" void __dt__10JSUPtrListFv();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dla__FPv(); // 1
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
+extern "C" void __ct__10JSUPtrLinkFPv(); // 1
+extern "C" void __dt__10JSUPtrLinkFv(); // 1
+extern "C" void __dt__10JSUPtrListFv(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink(); // 1
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 
 // 

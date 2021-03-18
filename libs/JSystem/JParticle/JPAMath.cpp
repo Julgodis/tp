@@ -6,22 +6,35 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" void func_80280588();
-void JPAGetYZRotateMtx(s16, s16, f32 (* )[4]);
-void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]);
-extern "C" void func_802807E0();
-extern "C" void func_80280808();
-void JPACalcKeyAnmValue(f32, u16, f32 const*);
+void JPAGetDirMtx(JGeometry::TVec3<f32> const&, f32 (* )[4]); // 2
+void JPAGetYZRotateMtx(s16, s16, f32 (* )[4]); // 2
+void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
+void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3<f32>*); // 2
+void JPASetRMtxSTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3<f32>*, JGeometry::TVec3<f32>*); // 2
+void JPACalcKeyAnmValue(f32, u16, f32 const*); // 2
 
-extern "C" void func_80280588();
-extern "C" void JPAGetYZRotateMtx__FssPA4_f();
-extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
-extern "C" void func_802807E0();
-extern "C" void func_80280808();
-extern "C" void JPACalcKeyAnmValue__FfUsPCf();
+extern "C" void func_80280588(); // 1
+extern "C" void JPAGetYZRotateMtx__FssPA4_f(); // 1
+extern "C" void JPAGetXYZRotateMtx__FsssPA4_f(); // 1
+extern "C" void func_802807E0(); // 1
+extern "C" void func_80280808(); // 1
+extern "C" void JPACalcKeyAnmValue__FfUsPCf(); // 1
 SECTION_SDATA2 extern f32 lit_2193;
 SECTION_SDATA2 extern u8 lit_2238[4];
 SECTION_SDATA2 extern f32 lit_2239;
@@ -30,15 +43,15 @@ SECTION_SDATA2 extern f32 lit_2239;
 // External References:
 // 
 
-extern "C" void PSMTXIdentity();
-extern "C" void PSVECMag();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void PSMTXIdentity();
-extern "C" void PSVECMag();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 SECTION_SDATA extern u32 __float_epsilon;
 
@@ -63,7 +76,7 @@ f32 lit_2239 = 32.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80280588() {
+asm void JPAGetDirMtx(JGeometry::TVec3<f32> const& field_0, f32 (* field_1)[4]) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAMath/func_80280588.s"
 }
@@ -96,7 +109,7 @@ asm void JPAGetXYZRotateMtx(s16 field_0, s16 field_1, s16 field_2, f32 (* field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802807E0() {
+asm void JPASetRMtxTVecfromMtx(f32 const (* field_0)[4], f32 (* field_1)[4], JGeometry::TVec3<f32>* field_2) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAMath/func_802807E0.s"
 }
@@ -107,7 +120,7 @@ extern "C" asm void func_802807E0() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80280808() {
+asm void JPASetRMtxSTVecfromMtx(f32 const (* field_0)[4], f32 (* field_1)[4], JGeometry::TVec3<f32>* field_2, JGeometry::TVec3<f32>* field_3) {
 	nofralloc
 #include "asm/JSystem/JParticle/JPAMath/func_80280808.s"
 }

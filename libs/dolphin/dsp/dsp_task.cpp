@@ -9,15 +9,15 @@
 // Forward References:
 // 
 
-extern "C" void __DSP_exec_task();
-extern "C" void __DSP_boot_task();
-extern "C" void __DSP_insert_task();
-extern "C" void __DSP_remove_task();
+extern "C" void __DSP_exec_task(); // 1
+extern "C" void __DSP_boot_task(); // 1
+extern "C" void __DSP_insert_task(); // 1
+extern "C" void __DSP_remove_task(); // 1
 
-extern "C" void __DSP_exec_task();
-extern "C" void __DSP_boot_task();
-extern "C" void __DSP_insert_task();
-extern "C" void __DSP_remove_task();
+extern "C" void __DSP_exec_task(); // 1
+extern "C" void __DSP_boot_task(); // 1
+extern "C" void __DSP_insert_task(); // 1
+extern "C" void __DSP_remove_task(); // 1
 SECTION_DATA extern u8 lit_266[29 + 3 /* padding */];
 SECTION_DATA extern u8 dsp_task__lit_267[45 + 3 /* padding */];
 SECTION_DATA extern u8 dsp_task__lit_268[45 + 3 /* padding */];
@@ -34,17 +34,17 @@ SECTION_SBSS extern u8 __DSP_curr_task[4];
 // External References:
 // 
 
-extern "C" void DSPCheckMailToDSP();
-extern "C" void DSPCheckMailFromDSP();
-extern "C" void DSPReadMailFromDSP();
-extern "C" void DSPSendMailToDSP();
-extern "C" void __DSP_debug_printf();
+extern "C" void DSPCheckMailToDSP(); // 1
+extern "C" void DSPCheckMailFromDSP(); // 1
+extern "C" void DSPReadMailFromDSP(); // 1
+extern "C" void DSPSendMailToDSP(); // 1
+extern "C" void __DSP_debug_printf(); // 1
 
-extern "C" void DSPCheckMailToDSP();
-extern "C" void DSPCheckMailFromDSP();
-extern "C" void DSPReadMailFromDSP();
-extern "C" void DSPSendMailToDSP();
-extern "C" void __DSP_debug_printf();
+extern "C" void DSPCheckMailToDSP(); // 1
+extern "C" void DSPCheckMailFromDSP(); // 1
+extern "C" void DSPReadMailFromDSP(); // 1
+extern "C" void DSPSendMailToDSP(); // 1
+extern "C" void __DSP_debug_printf(); // 1
 
 // 
 // Declarations:

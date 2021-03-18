@@ -9,36 +9,36 @@
 // Forward References:
 // 
 
-SECTION_INIT static void __check_pad3();
-SECTION_INIT static void __set_debug_bba();
-SECTION_INIT static void __get_debug_bba();
-SECTION_INIT void __start();
-SECTION_INIT static void __init_registers();
-SECTION_INIT static void __init_data();
-SECTION_INIT static void __init_hardware();
-SECTION_INIT static void __flush_cache();
-SECTION_INIT void memset();
-SECTION_INIT static void __fill_mem();
-SECTION_INIT void memcpy();
-SECTION_INIT void TRK_memset();
-SECTION_INIT void TRK_memcpy();
-SECTION_INIT void __TRK_reset();
+SECTION_INIT static void __check_pad3(); // 1
+SECTION_INIT static void __set_debug_bba(); // 1
+SECTION_INIT static void __get_debug_bba(); // 1
+SECTION_INIT void __start(); // 1
+SECTION_INIT static void __init_registers(); // 1
+SECTION_INIT static void __init_data(); // 1
+SECTION_INIT static void __init_hardware(); // 1
+SECTION_INIT static void __flush_cache(); // 1
+SECTION_INIT void memset(); // 1
+SECTION_INIT static void __fill_mem(); // 1
+SECTION_INIT void memcpy(); // 1
+SECTION_INIT void TRK_memset(); // 1
+SECTION_INIT void TRK_memcpy(); // 1
+SECTION_INIT void __TRK_reset(); // 1
 
-SECTION_INIT static void __check_pad3();
-SECTION_INIT static void __set_debug_bba();
-SECTION_INIT static void __get_debug_bba();
-SECTION_INIT void __start();
-SECTION_INIT static void __init_registers();
-SECTION_INIT static void __init_data();
-SECTION_INIT static void __init_hardware();
-SECTION_INIT static void __flush_cache();
-SECTION_INIT void memset();
-SECTION_INIT static void __fill_mem();
-SECTION_INIT void memcpy();
-SECTION_INIT void TRK_memset();
-SECTION_INIT void TRK_memcpy();
+SECTION_INIT static void __check_pad3(); // 1
+SECTION_INIT static void __set_debug_bba(); // 1
+SECTION_INIT static void __get_debug_bba(); // 1
+SECTION_INIT void __start(); // 1
+SECTION_INIT static void __init_registers(); // 1
+SECTION_INIT static void __init_data(); // 1
+SECTION_INIT static void __init_hardware(); // 1
+SECTION_INIT static void __flush_cache(); // 1
+SECTION_INIT void memset(); // 1
+SECTION_INIT static void __fill_mem(); // 1
+SECTION_INIT void memcpy(); // 1
+SECTION_INIT void TRK_memset(); // 1
+SECTION_INIT void TRK_memcpy(); // 1
 SECTION_INIT extern const u8 __TRK_unknown_data[7988];
-SECTION_INIT void __TRK_reset();
+SECTION_INIT void __TRK_reset(); // 1
 SECTION_INIT extern const u8 _rom_copy_info[132];
 SECTION_INIT extern const u8 _bss_init_info[32];
 extern void*_section_symbol_extab[18];
@@ -47,33 +47,33 @@ extern void*_section_symbol_extab[18];
 // External References:
 // 
 
-extern "C" void main();
-extern "C" void __OSFPRInit();
-extern "C" void OSInit();
-extern "C" void __OSPSInit();
-extern "C" void __OSCacheInit();
-extern "C" void OSResetSystem();
-extern "C" void __init_user();
-extern "C" void DBInit();
-extern "C" void __dt__26__partial_array_destructorFv();
-extern "C" void exit();
-extern "C" void TRK_fill_mem();
-extern "C" void InitMetroTRK();
-extern "C" void InitMetroTRK_BBA();
+extern "C" void main(); // 1
+extern "C" void __OSFPRInit(); // 1
+extern "C" void OSInit(); // 1
+extern "C" void __OSPSInit(); // 1
+extern "C" void __OSCacheInit(); // 1
+extern "C" void OSResetSystem(); // 1
+extern "C" void __init_user(); // 1
+extern "C" void DBInit(); // 1
+extern "C" void __dt__26__partial_array_destructorFv(); // 1
+extern "C" void exit(); // 1
+extern "C" void TRK_fill_mem(); // 1
+extern "C" void InitMetroTRK(); // 1
+extern "C" void InitMetroTRK_BBA(); // 1
 
-extern "C" void main();
-extern "C" void __OSFPRInit();
-extern "C" void OSInit();
-extern "C" void __OSPSInit();
-extern "C" void __OSCacheInit();
-extern "C" void OSResetSystem();
-extern "C" void __init_user();
-extern "C" void DBInit();
-extern "C" void __dt__26__partial_array_destructorFv();
-extern "C" void exit();
-extern "C" void TRK_fill_mem();
-extern "C" void InitMetroTRK();
-extern "C" void InitMetroTRK_BBA();
+extern "C" void main(); // 1
+extern "C" void __OSFPRInit(); // 1
+extern "C" void OSInit(); // 1
+extern "C" void __OSPSInit(); // 1
+extern "C" void __OSCacheInit(); // 1
+extern "C" void OSResetSystem(); // 1
+extern "C" void __init_user(); // 1
+extern "C" void DBInit(); // 1
+extern "C" void __dt__26__partial_array_destructorFv(); // 1
+extern "C" void exit(); // 1
+extern "C" void TRK_fill_mem(); // 1
+extern "C" void InitMetroTRK(); // 1
+extern "C" void InitMetroTRK_BBA(); // 1
 SECTION_SBSS extern u8 data_804516D0[8];
 
 // 

@@ -9,23 +9,23 @@
 // Forward References:
 // 
 
-extern "C" void EXI2_Init();
-extern "C" void EXI2_EnableInterrupts();
-extern "C" bool EXI2_Poll();
-extern "C" bool EXI2_ReadN();
-extern "C" bool EXI2_WriteN();
-extern "C" void EXI2_Reserve();
-extern "C" void EXI2_Unreserve();
-extern "C" bool AMC_IsStub();
+extern "C" void EXI2_Init(); // 1
+extern "C" void EXI2_EnableInterrupts(); // 1
+extern "C" bool EXI2_Poll(); // 1
+extern "C" bool EXI2_ReadN(); // 1
+extern "C" bool EXI2_WriteN(); // 1
+extern "C" void EXI2_Reserve(); // 1
+extern "C" void EXI2_Unreserve(); // 1
+extern "C" bool AMC_IsStub(); // 1
 
-extern "C" void EXI2_Init();
-extern "C" void EXI2_EnableInterrupts();
-extern "C" bool EXI2_Poll();
-extern "C" bool EXI2_ReadN();
-extern "C" bool EXI2_WriteN();
-extern "C" void EXI2_Reserve();
-extern "C" void EXI2_Unreserve();
-extern "C" bool AMC_IsStub();
+extern "C" void EXI2_Init(); // 1
+extern "C" void EXI2_EnableInterrupts(); // 1
+extern "C" bool EXI2_Poll(); // 1
+extern "C" bool EXI2_ReadN(); // 1
+extern "C" bool EXI2_WriteN(); // 1
+extern "C" void EXI2_Reserve(); // 1
+extern "C" void EXI2_Unreserve(); // 1
+extern "C" bool AMC_IsStub(); // 1
 
 // 
 // External References:

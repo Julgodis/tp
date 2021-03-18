@@ -9,26 +9,13 @@
 // Types:
 // 
 
-// build cM3dGPla (['cM3dGPla']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['cM3dGPla']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
-	// ('Vec',)
-	// ('cXyz',)
 	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
 	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
 	/* 8026F4C4 */ void SetupNP0(Vec const&, Vec const&);
@@ -38,36 +25,34 @@ struct cM3dGPla {
 	/* 8026F624 */ void Set(cM3dGPla const*);
 };
 
-// build cXyz (['cXyz']) True/True
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__8cM3dGPlaFPC4cXyzf();
-extern "C" void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz();
-extern "C" void SetupNP0__8cM3dGPlaFRC3VecRC3Vec();
-extern "C" void SetupNP__8cM3dGPlaFRC3VecRC3Vec();
-extern "C" void getCrossY__8cM3dGPlaCFRC4cXyzPf();
-extern "C" void getCrossYLessD__8cM3dGPlaCFRC3VecPf();
-extern "C" void Set__8cM3dGPlaFPC8cM3dGPla();
+extern "C" void __ct__8cM3dGPlaFPC4cXyzf(); // 1
+extern "C" void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz(); // 1
+extern "C" void SetupNP0__8cM3dGPlaFRC3VecRC3Vec(); // 1
+extern "C" void SetupNP__8cM3dGPlaFRC3VecRC3Vec(); // 1
+extern "C" void getCrossY__8cM3dGPlaCFRC4cXyzPf(); // 1
+extern "C" void getCrossYLessD__8cM3dGPlaCFRC3VecPf(); // 1
+extern "C" void Set__8cM3dGPlaFPC8cM3dGPla(); // 1
 
 // 
 // External References:
 // 
 
-void cM3d_InDivPos2(Vec const*, Vec const*, f32, Vec*);
-extern "C" void PSVECNormalize();
-extern "C" void PSVECDotProduct();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+void cM3d_InDivPos2(Vec const*, Vec const*, f32, Vec*); // 2
+extern "C" void PSVECNormalize(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void cM3d_InDivPos2__FPC3VecPC3VecfP3Vec();
-extern "C" void PSVECNormalize();
-extern "C" void PSVECDotProduct();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void cM3d_InDivPos2__FPC3VecPC3VecfP3Vec(); // 1
+extern "C" void PSVECNormalize(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
 

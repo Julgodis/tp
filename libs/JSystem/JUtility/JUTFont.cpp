@@ -9,24 +9,13 @@
 // Types:
 // 
 
-// build JUTFont (['JUTFont']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin ['JUTFont']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// ('JUtility', 'TColor')
 	/* 802DECF8 */ JUTFont();
 	/* 802DED24 */ void initialize_state();
 	/* 802DED70 */ void setCharColor(JUtility::TColor);
@@ -34,27 +23,26 @@ struct JUTFont {
 	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
 };
 
-// build JUtility (['JUtility']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__7JUTFontFv();
-extern "C" void initialize_state__7JUTFontFv();
-extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor();
-extern "C" void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb();
+extern "C" void __ct__7JUTFontFv(); // 1
+extern "C" void initialize_state__7JUTFontFv(); // 1
+extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor(); // 1
+extern "C" void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
 
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
 SECTION_DATA extern void*const __vt__7JUTFont[17];
 
 // 

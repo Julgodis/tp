@@ -9,22 +9,22 @@
 // Forward References:
 // 
 
-extern "C" void GDSetVtxDescv();
-extern "C" void GDSetArray();
-extern "C" void GDSetArrayRaw();
+extern "C" void GDSetVtxDescv(); // 1
+extern "C" void GDSetArray(); // 1
+extern "C" void GDSetArrayRaw(); // 1
 
-extern "C" void GDSetVtxDescv();
-extern "C" void GDSetArray();
-extern "C" void GDSetArrayRaw();
+extern "C" void GDSetVtxDescv(); // 1
+extern "C" void GDSetArray(); // 1
+extern "C" void GDSetArrayRaw(); // 1
 SECTION_DATA extern void*GDGeometry__lit_121[26];
 
 // 
 // External References:
 // 
 
-extern "C" void GDOverflowed();
+extern "C" void GDOverflowed(); // 1
 
-extern "C" void GDOverflowed();
+extern "C" void GDOverflowed(); // 1
 SECTION_SBSS extern u8 __GDCurrentDL[4];
 
 // 

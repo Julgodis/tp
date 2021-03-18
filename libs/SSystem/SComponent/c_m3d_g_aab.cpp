@@ -9,48 +9,39 @@
 // Types:
 // 
 
-// build cM3dGAab (['cM3dGAab']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['cM3dGAab']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGAab']) */
 struct cM3dGAab {
-	// ('cXyz',)
 	/* 8026EC54 */ void Set(cXyz const*, cXyz const*);
 	/* 8026EC88 */ void CrossY(cXyz const*) const;
 	/* 8026ECD0 */ void UnderPlaneYUnder(f32) const;
 	/* 8026ECE4 */ void TopPlaneYUnder(f32) const;
 	/* 8026ECF8 */ void ClearForMinMax();
-	/* 8026ED1C */ void SetMinMax(cXyz const&);
 	/* 8026ED60 */ void SetMinMax(cM3dGAab const&);
+	/* 8026ED1C */ void SetMinMax(cXyz const&);
 	/* 8026EDA4 */ void SetMin(cXyz const&);
 	/* 8026EDE4 */ void SetMax(cXyz const&);
 	/* 8026EE24 */ void CalcCenter(cXyz*) const;
 	/* 8026EE68 */ void PlusR(f32);
 };
 
-// build cXyz (['cXyz']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void Set__8cM3dGAabFPC4cXyzPC4cXyz();
-extern "C" void CrossY__8cM3dGAabCFPC4cXyz();
-extern "C" void UnderPlaneYUnder__8cM3dGAabCFf();
-extern "C" void TopPlaneYUnder__8cM3dGAabCFf();
-extern "C" void ClearForMinMax__8cM3dGAabFv();
-extern "C" void SetMinMax__8cM3dGAabFRC4cXyz();
-extern "C" void SetMinMax__8cM3dGAabFRC8cM3dGAab();
-extern "C" void SetMin__8cM3dGAabFRC4cXyz();
-extern "C" void SetMax__8cM3dGAabFRC4cXyz();
-extern "C" void CalcCenter__8cM3dGAabCFP4cXyz();
-extern "C" void PlusR__8cM3dGAabFf();
+extern "C" void Set__8cM3dGAabFPC4cXyzPC4cXyz(); // 1
+extern "C" void CrossY__8cM3dGAabCFPC4cXyz(); // 1
+extern "C" void UnderPlaneYUnder__8cM3dGAabCFf(); // 1
+extern "C" void TopPlaneYUnder__8cM3dGAabCFf(); // 1
+extern "C" void ClearForMinMax__8cM3dGAabFv(); // 1
+extern "C" void SetMinMax__8cM3dGAabFRC4cXyz(); // 1
+extern "C" void SetMinMax__8cM3dGAabFRC8cM3dGAab(); // 1
+extern "C" void SetMin__8cM3dGAabFRC4cXyz(); // 1
+extern "C" void SetMax__8cM3dGAabFRC4cXyz(); // 1
+extern "C" void CalcCenter__8cM3dGAabCFP4cXyz(); // 1
+extern "C" void PlusR__8cM3dGAabFf(); // 1
 SECTION_SDATA2 extern f32 lit_416;
 SECTION_SDATA2 extern f32 lit_417;
 SECTION_SDATA2 extern f32 c_m3d_g_aab__lit_493;
@@ -59,11 +50,11 @@ SECTION_SDATA2 extern f32 c_m3d_g_aab__lit_493;
 // External References:
 // 
 
-extern "C" void PSVECAdd();
-extern "C" void PSVECScale();
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECScale(); // 1
 
-extern "C" void PSVECAdd();
-extern "C" void PSVECScale();
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECScale(); // 1
 
 // 
 // Declarations:

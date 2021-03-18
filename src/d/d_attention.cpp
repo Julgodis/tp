@@ -9,42 +9,30 @@
 // Types:
 // 
 
-// build dAttParam_c (['dAttParam_c']) False/False
-/* top-level dependencies (begin ['dAttParam_c']) */
-/* top-level dependencies (end ['dAttParam_c']) */
 struct dAttParam_c {
 	/* 80070038 */ dAttParam_c(s32);
 	/* 80070110 */ ~dAttParam_c();
 };
 
-// build dAttDrawParam_c (['dAttDrawParam_c']) False/False
-/* top-level dependencies (begin ['dAttDrawParam_c']) */
-/* top-level dependencies (end ['dAttDrawParam_c']) */
 struct dAttDrawParam_c {
 	/* 80070158 */ dAttDrawParam_c();
 	/* 80073FC4 */ ~dAttDrawParam_c();
 };
 
-// build dAttDraw_CallBack_c (['dAttDraw_CallBack_c']) False/False
-// build J3DTransformInfo (['J3DTransformInfo']) False/False
-/* top-level dependencies (begin ['J3DTransformInfo']) */
-/* top-level dependencies (end ['J3DTransformInfo']) */
 struct J3DTransformInfo {
 };
 
-/* top-level dependencies (begin ['dAttDraw_CallBack_c']) */
-// outer dependency: ('J3DTransformInfo',)
-/* top-level dependencies (end ['dAttDraw_CallBack_c']) */
 struct dAttDraw_CallBack_c {
-	// ('J3DTransformInfo',)
 	/* 80070178 */ void execute(u16, J3DTransformInfo*);
 };
 
-// build J3DTransformInfo (['J3DTransformInfo']) True/True
-// build dAttention_c (['dAttention_c']) False/False
-// build cSAngle (['cSAngle']) False/False
-/* top-level dependencies (begin ['cSAngle']) */
-/* top-level dependencies (end ['cSAngle']) */
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
 struct cSAngle {
 	/* 80270F68 */ cSAngle(cSAngle const&);
 	/* 80270F98 */ cSAngle(s16);
@@ -52,36 +40,10 @@ struct cSAngle {
 	/* 80271228 */ void operator-(s16) const;
 };
 
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
-struct Vec {
-};
-
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
-struct cXyz {
-	// ('Vec',)
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ['dAttention_c']) */
-// outer dependency: ('cSAngle',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dAttention_c']) */
 struct dAttention_c {
-	// ('cSAngle',)
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 80070198 */ dAttention_c(fopAc_ac_c*, u32);
 	/* 80070774 */ ~dAttention_c();
 	/* 80070844 */ void GetLockonList(s32);
@@ -120,27 +82,12 @@ struct dAttention_c {
 	/* 80073838 */ void checkDistance(cXyz*, s16, cXyz*, f32, f32, f32, f32);
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build cXyz (['cXyz']) True/True
-// build cSAngle (['cSAngle']) True/True
-// build cSGlobe (['cSGlobe']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cSGlobe']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cSGlobe']) */
 struct cSGlobe {
-	// ('cXyz',)
 	/* 8007167C */ ~cSGlobe();
 	/* 80271880 */ cSGlobe(cXyz const&);
 };
 
-// build dAttDraw_c (['dAttDraw_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dAttDraw_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dAttDraw_c']) */
 struct dAttDraw_c {
-	// ('cXyz',)
 	/* 8003054C */ ~dAttDraw_c();
 	/* 800307F0 */ dAttDraw_c();
 	/* 80072DD8 */ void setAnm(u8, f32);
@@ -149,42 +96,21 @@ struct dAttDraw_c {
 	/* 800732B0 */ void draw(cXyz&, f32 (* )[4]);
 };
 
-// build J3DTevBlock (['J3DTevBlock']) False/False
-// build J3DGXColor (['J3DGXColor']) False/False
-/* top-level dependencies (begin ['J3DGXColor']) */
-/* top-level dependencies (end ['J3DGXColor']) */
 struct J3DGXColor {
 };
 
-/* top-level dependencies (begin ['J3DTevBlock']) */
-// outer dependency: ('J3DGXColor',)
-/* top-level dependencies (end ['J3DTevBlock']) */
 struct J3DTevBlock {
-	// ('J3DGXColor',)
 	/* 800732AC */ void setTevKColor(u32, J3DGXColor const*);
 };
 
-// build J3DGXColor (['J3DGXColor']) True/True
-// build dAttList_c (['dAttList_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dAttList_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dAttList_c']) */
 struct dAttList_c {
-	// ('fopAc_ac_c',)
 	/* 800304D0 */ ~dAttList_c();
 	/* 8003050C */ dAttList_c();
 	/* 80073864 */ void getActor();
 	/* 80073898 */ void setActor(fopAc_ac_c*);
 };
 
-// build dAttHint_c (['dAttHint_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dAttHint_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dAttHint_c']) */
 struct dAttHint_c {
-	// ('fopAc_ac_c',)
 	/* 800738B4 */ void getPId(void*);
 	/* 800738CC */ void convPId(u32);
 	/* 800738FC */ void request(fopAc_ac_c*, int);
@@ -192,196 +118,90 @@ struct dAttHint_c {
 	/* 80073970 */ void proc();
 };
 
-// build dAttCatch_c (['dAttCatch_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dAttCatch_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dAttCatch_c']) */
 struct dAttCatch_c {
-	// ('fopAc_ac_c',)
 	/* 8007398C */ void convPId(u32);
 	/* 800739BC */ void init();
 	/* 800739DC */ void proc();
 	/* 80073A08 */ void request(fopAc_ac_c*, u8, f32, f32, f32, s16, int);
 };
 
-// build dAttLook_c (['dAttLook_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dAttLook_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dAttLook_c']) */
 struct dAttLook_c {
-	// ('fopAc_ac_c',)
 	/* 80073CA4 */ void convPId(u32);
 	/* 80073CD4 */ void init();
 	/* 80073CEC */ void proc();
 	/* 80073D08 */ void request(fopAc_ac_c*, f32, f32, f32, s16, int);
 };
 
-// build mDoExt_baseAnm (['mDoExt_baseAnm']) False/False
-/* top-level dependencies (begin ['mDoExt_baseAnm']) */
-/* top-level dependencies (end ['mDoExt_baseAnm']) */
 struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-// build mDoExt_bpkAnm (['mDoExt_bpkAnm']) False/False
-// build J3DMaterialTable (['J3DMaterialTable']) False/False
-/* top-level dependencies (begin ['J3DMaterialTable']) */
-/* top-level dependencies (end ['J3DMaterialTable']) */
-struct J3DMaterialTable {
-};
-
-// build J3DAnmColor (['J3DAnmColor']) False/False
-/* top-level dependencies (begin ['J3DAnmColor']) */
-/* top-level dependencies (end ['J3DAnmColor']) */
 struct J3DAnmColor {
 };
 
-/* top-level dependencies (begin ['mDoExt_bpkAnm']) */
-// outer dependency: ('J3DMaterialTable',)
-// outer dependency: ('J3DAnmColor',)
-/* top-level dependencies (end ['mDoExt_bpkAnm']) */
+struct J3DMaterialTable {
+};
+
 struct mDoExt_bpkAnm {
-	// ('J3DMaterialTable',)
-	// ('J3DAnmColor',)
 	/* 8000D47C */ void init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16);
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-// build J3DAnmColor (['J3DAnmColor']) True/True
-// build mDoExt_btkAnm (['mDoExt_btkAnm']) False/False
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) False/False
-/* top-level dependencies (begin ['J3DAnmTextureSRTKey']) */
-/* top-level dependencies (end ['J3DAnmTextureSRTKey']) */
 struct J3DAnmTextureSRTKey {
 };
 
-/* top-level dependencies (begin ['mDoExt_btkAnm']) */
-// outer dependency: ('J3DMaterialTable',)
-// outer dependency: ('J3DAnmTextureSRTKey',)
-/* top-level dependencies (end ['mDoExt_btkAnm']) */
 struct mDoExt_btkAnm {
-	// ('J3DMaterialTable',)
-	// ('J3DAnmTextureSRTKey',)
 	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) True/True
-// build mDoExt_brkAnm (['mDoExt_brkAnm']) False/False
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) False/False
-/* top-level dependencies (begin ['J3DAnmTevRegKey']) */
-/* top-level dependencies (end ['J3DAnmTevRegKey']) */
 struct J3DAnmTevRegKey {
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-/* top-level dependencies (begin ['mDoExt_brkAnm']) */
-// outer dependency: ('J3DAnmTevRegKey',)
-// outer dependency: ('J3DMaterialTable',)
-/* top-level dependencies (end ['mDoExt_brkAnm']) */
 struct mDoExt_brkAnm {
-	// ('J3DAnmTevRegKey',)
-	// ('J3DMaterialTable',)
 	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
-// build mDoExt_bckAnm (['mDoExt_bckAnm']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build J3DAnmTransform (['J3DAnmTransform']) False/False
-/* top-level dependencies (begin ['J3DAnmTransform']) */
-/* top-level dependencies (end ['J3DAnmTransform']) */
 struct J3DAnmTransform {
 };
 
-/* top-level dependencies (begin ['mDoExt_bckAnm']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('J3DAnmTransform',)
-/* top-level dependencies (end ['mDoExt_bckAnm']) */
 struct mDoExt_bckAnm {
-	// ('J3DModelData',)
-	// ('J3DAnmTransform',)
 	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
-// build J3DAnmTransform (['J3DAnmTransform']) True/True
-// build J3DModelData (['J3DModelData']) True/True
-// build J3DModel (['J3DModel']) False/False
-/* top-level dependencies (begin ['J3DModel']) */
-/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build dSv_danBit_c (['dSv_danBit_c']) False/False
-/* top-level dependencies (begin ['dSv_danBit_c']) */
-/* top-level dependencies (end ['dSv_danBit_c']) */
 struct dSv_danBit_c {
 	/* 80034BE8 */ void isSwitch(int) const;
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build daPy_py_c (['daPy_py_c']) False/False
-/* top-level dependencies (begin ['daPy_py_c']) */
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015F3FC */ void getAttentionOffsetY();
 };
 
-// build Vec (['Vec']) True/True
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) True/True
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build Z2SeqMgr (['Z2SeqMgr']) False/False
-/* top-level dependencies (begin ['Z2SeqMgr']) */
-/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
 	/* 802B5E88 */ void bgmNowBattle(f32);
 };
@@ -390,87 +210,87 @@ struct Z2SeqMgr {
 // Forward References:
 // 
 
-extern "C" static void func_80070018();
-static void check_event_condition(u32, u16);
-static void check_flontofplayer(u32, s16, s16);
-static void distace_weight(f32, s16, f32);
-static void distace_angle_adjust(f32, s16, f32);
-static void check_distace(cXyz*, s16, cXyz*, f32, f32, f32, f32);
-static void select_attention(fopAc_ac_c*, void*);
-static void sound_attention(fopAc_ac_c*, void*);
-extern "C" void __sinit_d_attention_cpp();
+extern "C" static void func_80070018(); // 1
+static void check_event_condition(u32, u16); // 2
+static void check_flontofplayer(u32, s16, s16); // 2
+static void distace_weight(f32, s16, f32); // 2
+static void distace_angle_adjust(f32, s16, f32); // 2
+static void check_distace(cXyz*, s16, cXyz*, f32, f32, f32, f32); // 2
+static void select_attention(fopAc_ac_c*, void*); // 2
+static void sound_attention(fopAc_ac_c*, void*); // 2
+extern "C" void __sinit_d_attention_cpp(); // 1
 
-extern "C" static void func_80070018();
-extern "C" void __ct__11dAttParam_cFl();
-extern "C" void __dt__11dAttParam_cFv();
-extern "C" void __ct__15dAttDrawParam_cFv();
-extern "C" void execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo();
-extern "C" void __ct__12dAttention_cFP10fopAc_ac_cUl();
-extern "C" void __dt__12dAttention_cFv();
-extern "C" void GetLockonList__12dAttention_cFl();
-extern "C" void getActionBtnB__12dAttention_cFv();
-extern "C" void getActionBtnXY__12dAttention_cFv();
-extern "C" void chkAttMask__12dAttention_cFUlUl();
-extern "C" static void check_event_condition__FUlUs();
-extern "C" static void check_flontofplayer__FUlss();
-extern "C" static void distace_weight__Ffsf();
-extern "C" static void distace_angle_adjust__Ffsf();
-extern "C" static void check_distace__FP4cXyzsP4cXyzffff();
-extern "C" void calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl();
-extern "C" void setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl();
-extern "C" void initList__12dAttention_cFUl();
-extern "C" static void select_attention__FP10fopAc_ac_cPv();
-extern "C" void makeList__12dAttention_cFv();
-extern "C" void setOwnerAttentionPos__12dAttention_cFv();
-extern "C" void SelectAttention__12dAttention_cFP10fopAc_ac_c();
-extern "C" void __dt__7cSGlobeFv();
-extern "C" void sortList__12dAttention_cFv();
-extern "C" void stockAttention__12dAttention_cFv();
-extern "C" void nextAttention__12dAttention_cFv();
-extern "C" void freeAttention__12dAttention_cFv();
-extern "C" void chaseAttention__12dAttention_cFv();
-extern "C" void EnemyDistance__12dAttention_cFP10fopAc_ac_c();
-extern "C" static void sound_attention__FP10fopAc_ac_cPv();
-extern "C" void runSoundProc__12dAttention_cFv();
-extern "C" void runDrawProc__12dAttention_cFv();
-extern "C" void runDebugDisp__12dAttention_cFv();
-extern "C" void checkButton__12dAttention_cFv();
-extern "C" void triggerProc__12dAttention_cFv();
-extern "C" void lostCheck__12dAttention_cFv();
-extern "C" void judgementStatus4Hold__12dAttention_cFv();
-extern "C" void judgementStatus4Switch__12dAttention_cFv();
-extern "C" void Run__12dAttention_cFv();
-extern "C" void Draw__12dAttention_cFv();
-extern "C" void lockSoundStart__12dAttention_cFUl();
-extern "C" void setAnm__10dAttDraw_cFUcf();
-extern "C" void setAlphaAnm__10dAttDraw_cFUcUc();
-extern "C" void alphaAnm__10dAttDraw_cFv();
-extern "C" void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor();
-extern "C" void draw__10dAttDraw_cFR4cXyzPA4_f();
-extern "C" void LockonTarget__12dAttention_cFl();
-extern "C" void LockonReleaseDistanse__12dAttention_cFv();
-extern "C" void LockonTargetPId__12dAttention_cFl();
-extern "C" void ActionTarget__12dAttention_cFl();
-extern "C" void CheckObjectTarget__12dAttention_cFl();
-extern "C" void LockonTruth__12dAttention_cFv();
-extern "C" void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff();
-extern "C" void getActor__10dAttList_cFv();
-extern "C" void setActor__10dAttList_cFP10fopAc_ac_c();
-extern "C" void getPId__10dAttHint_cFPv();
-extern "C" void convPId__10dAttHint_cFUi();
-extern "C" void request__10dAttHint_cFP10fopAc_ac_ci();
-extern "C" void init__10dAttHint_cFv();
-extern "C" void proc__10dAttHint_cFv();
-extern "C" void convPId__11dAttCatch_cFUi();
-extern "C" void init__11dAttCatch_cFv();
-extern "C" void proc__11dAttCatch_cFv();
-extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi();
-extern "C" void convPId__10dAttLook_cFUi();
-extern "C" void init__10dAttLook_cFv();
-extern "C" void proc__10dAttLook_cFv();
-extern "C" void request__10dAttLook_cFP10fopAc_ac_cfffsi();
-extern "C" void __dt__15dAttDrawParam_cFv();
-extern "C" void __sinit_d_attention_cpp();
+extern "C" static void func_80070018(); // 1
+extern "C" void __ct__11dAttParam_cFl(); // 1
+extern "C" void __dt__11dAttParam_cFv(); // 1
+extern "C" void __ct__15dAttDrawParam_cFv(); // 1
+extern "C" void execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo(); // 1
+extern "C" void __ct__12dAttention_cFP10fopAc_ac_cUl(); // 1
+extern "C" void __dt__12dAttention_cFv(); // 1
+extern "C" void GetLockonList__12dAttention_cFl(); // 1
+extern "C" void getActionBtnB__12dAttention_cFv(); // 1
+extern "C" void getActionBtnXY__12dAttention_cFv(); // 1
+extern "C" void chkAttMask__12dAttention_cFUlUl(); // 1
+extern "C" static void check_event_condition__FUlUs(); // 1
+extern "C" static void check_flontofplayer__FUlss(); // 1
+extern "C" static void distace_weight__Ffsf(); // 1
+extern "C" static void distace_angle_adjust__Ffsf(); // 1
+extern "C" static void check_distace__FP4cXyzsP4cXyzffff(); // 1
+extern "C" void calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl(); // 1
+extern "C" void setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl(); // 1
+extern "C" void initList__12dAttention_cFUl(); // 1
+extern "C" static void select_attention__FP10fopAc_ac_cPv(); // 1
+extern "C" void makeList__12dAttention_cFv(); // 1
+extern "C" void setOwnerAttentionPos__12dAttention_cFv(); // 1
+extern "C" void SelectAttention__12dAttention_cFP10fopAc_ac_c(); // 1
+extern "C" void __dt__7cSGlobeFv(); // 1
+extern "C" void sortList__12dAttention_cFv(); // 1
+extern "C" void stockAttention__12dAttention_cFv(); // 1
+extern "C" void nextAttention__12dAttention_cFv(); // 1
+extern "C" void freeAttention__12dAttention_cFv(); // 1
+extern "C" void chaseAttention__12dAttention_cFv(); // 1
+extern "C" void EnemyDistance__12dAttention_cFP10fopAc_ac_c(); // 1
+extern "C" static void sound_attention__FP10fopAc_ac_cPv(); // 1
+extern "C" void runSoundProc__12dAttention_cFv(); // 1
+extern "C" void runDrawProc__12dAttention_cFv(); // 1
+extern "C" void runDebugDisp__12dAttention_cFv(); // 1
+extern "C" void checkButton__12dAttention_cFv(); // 1
+extern "C" void triggerProc__12dAttention_cFv(); // 1
+extern "C" void lostCheck__12dAttention_cFv(); // 1
+extern "C" void judgementStatus4Hold__12dAttention_cFv(); // 1
+extern "C" void judgementStatus4Switch__12dAttention_cFv(); // 1
+extern "C" void Run__12dAttention_cFv(); // 1
+extern "C" void Draw__12dAttention_cFv(); // 1
+extern "C" void lockSoundStart__12dAttention_cFUl(); // 1
+extern "C" void setAnm__10dAttDraw_cFUcf(); // 1
+extern "C" void setAlphaAnm__10dAttDraw_cFUcUc(); // 1
+extern "C" void alphaAnm__10dAttDraw_cFv(); // 1
+extern "C" void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor(); // 1
+extern "C" void draw__10dAttDraw_cFR4cXyzPA4_f(); // 1
+extern "C" void LockonTarget__12dAttention_cFl(); // 1
+extern "C" void LockonReleaseDistanse__12dAttention_cFv(); // 1
+extern "C" void LockonTargetPId__12dAttention_cFl(); // 1
+extern "C" void ActionTarget__12dAttention_cFl(); // 1
+extern "C" void CheckObjectTarget__12dAttention_cFl(); // 1
+extern "C" void LockonTruth__12dAttention_cFv(); // 1
+extern "C" void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff(); // 1
+extern "C" void getActor__10dAttList_cFv(); // 1
+extern "C" void setActor__10dAttList_cFP10fopAc_ac_c(); // 1
+extern "C" void getPId__10dAttHint_cFPv(); // 1
+extern "C" void convPId__10dAttHint_cFUi(); // 1
+extern "C" void request__10dAttHint_cFP10fopAc_ac_ci(); // 1
+extern "C" void init__10dAttHint_cFv(); // 1
+extern "C" void proc__10dAttHint_cFv(); // 1
+extern "C" void convPId__11dAttCatch_cFUi(); // 1
+extern "C" void init__11dAttCatch_cFv(); // 1
+extern "C" void proc__11dAttCatch_cFv(); // 1
+extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi(); // 1
+extern "C" void convPId__10dAttLook_cFUi(); // 1
+extern "C" void init__10dAttLook_cFv(); // 1
+extern "C" void proc__10dAttLook_cFv(); // 1
+extern "C" void request__10dAttLook_cFP10fopAc_ac_cfffsi(); // 1
+extern "C" void __dt__15dAttDrawParam_cFv(); // 1
+extern "C" void __sinit_d_attention_cpp(); // 1
 SECTION_RODATA extern const u8 d_d_attention__stringBase0[16];
 SECTION_DATA extern u8 loc_type_tbl__12dAttention_c[12];
 SECTION_DATA extern u8 act_type_tbl__12dAttention_c[20];
@@ -523,107 +343,107 @@ SECTION_SDATA2 extern f32 d_d_attention__lit_5785;
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-void mDoExt_modelUpdateDL(J3DModel*);
-void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
-void mDoExt_adjustSolidHeap(JKRSolidHeap*);
-void mDoExt_destroySolidHeap(JKRSolidHeap*);
-void mDoExt_restoreCurrentHeap();
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
-extern "C" void fopAcIt_Executor__FPFPvPv_iPv();
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*);
-void fpcSch_JudgeByID(void*, void*);
-void operator delete(void*);
-extern "C" void DCStoreRangeNoSync();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXTrans();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECSquareMag();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void tan();
+SECTION_INIT void memcpy(); // 1
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); // 2
+void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
+void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
+void mDoExt_restoreCurrentHeap(); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+extern "C" void fopAcIt_Executor__FPFPvPv_iPv(); // 1
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
+void fpcSch_JudgeByID(void*, void*); // 2
+void operator delete(void*); // 2
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void tan(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void play__14mDoExt_baseAnmFv();
-extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
-extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
-extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
-extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_restoreCurrentHeap__Fv();
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern "C" void fopAcIt_Executor__FPFPvPv_iPv();
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c();
-extern "C" void fpcSch_JudgeByID__FPvPv();
-extern "C" void __dt__10dAttList_cFv();
-extern "C" void __ct__10dAttList_cFv();
-extern "C" void __dt__10dAttDraw_cFv();
-extern "C" void __ct__10dAttDraw_cFv();
-extern "C" void isSwitch__12dSv_danBit_cCFi();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void getAttentionOffsetY__9daPy_py_cFv();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void __ct__7cSAngleFRC7cSAngle();
-extern "C" void __ct__7cSAngleFs();
-extern "C" void Inv__7cSAngleCFv();
-extern "C" void __mi__7cSAngleCFs();
-extern "C" void __ct__7cSGlobeFRC4cXyz();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void bgmNowBattle__8Z2SeqMgrFf();
-extern "C" void __dl__FPv();
-extern "C" void DCStoreRangeNoSync();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXTrans();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECSquareMag();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void tan();
+SECTION_INIT void memcpy(); // 1
+extern "C" void play__14mDoExt_baseAnmFv(); // 1
+extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss(); // 1
+extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef(); // 1
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss(); // 1
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef(); // 1
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl(); // 1
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void fopAcIt_Executor__FPFPvPv_iPv(); // 1
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
+extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
+extern "C" void __dt__10dAttList_cFv(); // 1
+extern "C" void __ct__10dAttList_cFv(); // 1
+extern "C" void __dt__10dAttDraw_cFv(); // 1
+extern "C" void __ct__10dAttDraw_cFv(); // 1
+extern "C" void isSwitch__12dSv_danBit_cCFi(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void getAttentionOffsetY__9daPy_py_cFv(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ct__7cSAngleFRC7cSAngle(); // 1
+extern "C" void __ct__7cSAngleFs(); // 1
+extern "C" void Inv__7cSAngleCFv(); // 1
+extern "C" void __mi__7cSAngleCFs(); // 1
+extern "C" void __ct__7cSGlobeFRC4cXyz(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void bgmNowBattle__8Z2SeqMgrFf(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void tan(); // 1
 SECTION_DATA extern void*const __vt__25mDoExt_McaMorfCallBack1_c[3];
 SECTION_DATA extern u8 dist_table__12dAttention_c[6552];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];

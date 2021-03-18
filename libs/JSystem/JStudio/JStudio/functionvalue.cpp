@@ -9,31 +9,53 @@
 // Types:
 // 
 
-// build JStudio (['JStudio']) False/False
-// build JStudio (['JStudio']) True/False
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('JStudio', 'TFunctionValue_list', 'TIndexData_')
-/* top-level dependencies (end ['JStudio']) */
+namespace std {
+	template <typename A1>
+	struct less { };
+	/* less<f64> */
+	struct less__template0 {
+	};
+
+	/*          */ template <typename A1, typename B1, typename C1>
+	/*          */ void upper_bound(/* JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&, std::less<f64> */);
+
+};
+
+namespace JGadget {
+	template <typename A1>
+	struct TVector_pointer { };
+	/* TVector_pointer<JStudio::TFunctionValue*> */
+	struct TVector_pointer__template0 {
+	};
+
+	template <typename A1>
+	struct TAllocator { };
+	/* TAllocator<void*> */
+	struct TAllocator__template0 {
+	};
+
+	struct TVector_pointer_void {
+		/* 802DCCD0 */ TVector_pointer_void(JGadget::TAllocator<void*> const&);
+		/* 802DCCFC */ ~TVector_pointer_void();
+		/* 802DCDC4 */ void erase(void**, void**);
+	};
+
+	/*          */ template <typename A1, typename B1>
+	/*          */ void findUpperBound_binary_current(/* JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const& */);
+
+};
+
 namespace JStudio {
-	// build TFunctionValue (['JStudio', 'TFunctionValue']) False/False
-	/* dependencies (begin ['JStudio', 'TFunctionValue']) */
-	/* dependencies (end ['JStudio', 'TFunctionValue']) */
 	struct TFunctionValue {
 		/* 80281648 */ void toFunction_outside(int);
 		/* 80281690 */ TFunctionValue();
 		/* 802816A0 */ ~TFunctionValue();
 	};
 
-	// build TFunctionValueAttribute_refer (['JStudio', 'TFunctionValueAttribute_refer']) False/False
-	/* dependencies (begin ['JStudio', 'TFunctionValueAttribute_refer']) */
-	/* dependencies (end ['JStudio', 'TFunctionValueAttribute_refer']) */
 	struct TFunctionValueAttribute_refer {
 		/* 802816E8 */ void refer_initialize();
 	};
 
-	// build functionvalue (['JStudio', 'functionvalue']) False/False
-	/* dependencies (begin ['JStudio', 'functionvalue']) */
-	/* dependencies (end ['JStudio', 'functionvalue']) */
 	struct functionvalue {
 		/* 80281710 */ void interpolateValue_hermite(f64, f64, f64, f64, f64, f64, f64);
 		/* 80281774 */ void interpolateValue_BSpline_uniform(f64, f64, f64, f64, f64);
@@ -44,9 +66,6 @@ namespace JStudio {
 		/* 802835B0 */ void extrapolateParameter_clamp(f64, f64);
 	};
 
-	// build TFunctionValueAttribute_range (['JStudio', 'TFunctionValueAttribute_range']) False/False
-	/* dependencies (begin ['JStudio', 'TFunctionValueAttribute_range']) */
-	/* dependencies (end ['JStudio', 'TFunctionValueAttribute_range']) */
 	struct TFunctionValueAttribute_range {
 		/* 80281918 */ void range_initialize();
 		/* 8028194C */ void range_prepare();
@@ -55,22 +74,26 @@ namespace JStudio {
 		/* 80281D18 */ TFunctionValueAttribute_range();
 	};
 
-	// build TFunctionValue_composite (['JStudio', 'TFunctionValue_composite']) False/False
-	/* dependencies (begin ['JStudio', 'TFunctionValue_composite']) */
-	/* dependencies (end ['JStudio', 'TFunctionValue_composite']) */
 	struct TFunctionValue_composite {
+		struct TData {
+		};
+
 		/* 80281D5C */ TFunctionValue_composite();
 		/* 80281DB8 */ bool getType() const;
 		/* 80281DC0 */ void getAttributeSet();
 		/* 80281DE0 */ void initialize();
 		/* 80281E24 */ void prepare();
 		/* 80281E28 */ void getValue(f64);
+		/* 80281E5C */ void composite_raw(JGadget::TVector_pointer<JStudio::TFunctionValue*> const&, JStudio::TFunctionValue_composite::TData const&, f64);
+		/* 80281EC8 */ void composite_index(JGadget::TVector_pointer<JStudio::TFunctionValue*> const&, JStudio::TFunctionValue_composite::TData const&, f64);
+		/* 8028202C */ void composite_parameter(JGadget::TVector_pointer<JStudio::TFunctionValue*> const&, JStudio::TFunctionValue_composite::TData const&, f64);
+		/* 80282094 */ void composite_add(JGadget::TVector_pointer<JStudio::TFunctionValue*> const&, JStudio::TFunctionValue_composite::TData const&, f64);
+		/* 80282118 */ void composite_subtract(JGadget::TVector_pointer<JStudio::TFunctionValue*> const&, JStudio::TFunctionValue_composite::TData const&, f64);
+		/* 80282200 */ void composite_multiply(JGadget::TVector_pointer<JStudio::TFunctionValue*> const&, JStudio::TFunctionValue_composite::TData const&, f64);
+		/* 80282284 */ void composite_divide(JGadget::TVector_pointer<JStudio::TFunctionValue*> const&, JStudio::TFunctionValue_composite::TData const&, f64);
 		/* 80283DA4 */ ~TFunctionValue_composite();
 	};
 
-	// build TFunctionValue_constant (['JStudio', 'TFunctionValue_constant']) False/False
-	/* dependencies (begin ['JStudio', 'TFunctionValue_constant']) */
-	/* dependencies (end ['JStudio', 'TFunctionValue_constant']) */
 	struct TFunctionValue_constant {
 		/* 8028236C */ TFunctionValue_constant();
 		/* 802823B4 */ s32 getType() const;
@@ -81,9 +104,6 @@ namespace JStudio {
 		/* 80283D44 */ ~TFunctionValue_constant();
 	};
 
-	// build TFunctionValue_transition (['JStudio', 'TFunctionValue_transition']) False/False
-	/* dependencies (begin ['JStudio', 'TFunctionValue_transition']) */
-	/* dependencies (end ['JStudio', 'TFunctionValue_transition']) */
 	struct TFunctionValue_transition {
 		/* 802823EC */ TFunctionValue_transition();
 		/* 8028244C */ s32 getType() const;
@@ -94,15 +114,7 @@ namespace JStudio {
 		/* 80283CE4 */ ~TFunctionValue_transition();
 	};
 
-	// build TFunctionValue_list (['JStudio', 'TFunctionValue_list']) False/False
-	/* dependencies (begin ['JStudio', 'TFunctionValue_list']) */
-	// inner dependency: 1 ('JStudio', 'TFunctionValue_list', 'TIndexData_') (for ['JStudio', 'TFunctionValue_list'])
-	/* dependencies (end ['JStudio', 'TFunctionValue_list']) */
 	struct TFunctionValue_list {
-		// ('JStudio', 'TFunctionValue_list', 'TIndexData_')
-		// build TIndexData_ (['JStudio', 'TFunctionValue_list', 'TIndexData_']) False/False
-		/* dependencies (begin ['JStudio', 'TFunctionValue_list', 'TIndexData_']) */
-		/* dependencies (end ['JStudio', 'TFunctionValue_list', 'TIndexData_']) */
 		struct TIndexData_ {
 		};
 
@@ -119,10 +131,10 @@ namespace JStudio {
 		/* 80283C84 */ ~TFunctionValue_list();
 	};
 
-	// build TFunctionValue_list_parameter (['JStudio', 'TFunctionValue_list_parameter']) False/False
-	/* dependencies (begin ['JStudio', 'TFunctionValue_list_parameter']) */
-	/* dependencies (end ['JStudio', 'TFunctionValue_list_parameter']) */
 	struct TFunctionValue_list_parameter {
+		struct TIterator_data_ {
+		};
+
 		/* 80282D34 */ TFunctionValue_list_parameter();
 		/* 80282DA0 */ s32 getType() const;
 		/* 80282DA8 */ void getAttributeSet();
@@ -137,10 +149,10 @@ namespace JStudio {
 		/* 80283C24 */ ~TFunctionValue_list_parameter();
 	};
 
-	// build TFunctionValue_hermite (['JStudio', 'TFunctionValue_hermite']) False/False
-	/* dependencies (begin ['JStudio', 'TFunctionValue_hermite']) */
-	/* dependencies (end ['JStudio', 'TFunctionValue_hermite']) */
 	struct TFunctionValue_hermite {
+		struct TIterator_data_ {
+		};
+
 		/* 802832C4 */ TFunctionValue_hermite();
 		/* 80283344 */ s32 getType() const;
 		/* 8028334C */ void getAttributeSet();
@@ -153,119 +165,104 @@ namespace JStudio {
 
 };
 
-// build JGadget (['JGadget']) False/False
-/* top-level dependencies (begin ['JGadget']) */
-/* top-level dependencies (end ['JGadget']) */
-struct JGadget {
-	// build TVector_pointer_void (['JGadget', 'TVector_pointer_void']) False/False
-	/* dependencies (begin ['JGadget', 'TVector_pointer_void']) */
-	/* dependencies (end ['JGadget', 'TVector_pointer_void']) */
-	struct TVector_pointer_void {
-		/* 802DCCFC */ ~TVector_pointer_void();
-		/* 802DCDC4 */ void erase(void**, void**);
-	};
+namespace std {
+/* 80283EB8 */ void upper_bound__template1(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&, std::less<f64>);
+/* 80283E24 */ void upper_bound__template0(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, f64 const&, std::less<f64>);
+}
 
-};
+namespace JGadget {
+/* 80283858 */ void findUpperBound_binary_current__template2(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&);
+/* 802835DC */ void findUpperBound_binary_current__template2(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, f64 const&);
+/* 80283634 */ void findUpperBound_binary_current__template0(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, f64 const&, std::less<f64>);
+/* 802838C8 */ void findUpperBound_binary_current__template5(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&, std::less<f64>);
+}
 
 // 
 // Forward References:
 // 
 
-extern "C" void func_80281E5C();
-extern "C" void func_80281EC8();
-extern "C" void func_8028202C();
-extern "C" void func_80282094();
-extern "C" void func_80282118();
-extern "C" void func_80282200();
-extern "C" void func_80282284();
-extern "C" static void func_802835DC();
-extern "C" static void func_80283634();
-extern "C" static void func_80283858();
-extern "C" static void func_802838C8();
-extern "C" static void func_80283E24();
-extern "C" static void func_80283EB8();
 
-extern "C" void toFunction_outside__Q27JStudio14TFunctionValueFi();
-extern "C" void __ct__Q27JStudio14TFunctionValueFv();
-extern "C" void __dt__Q27JStudio14TFunctionValueFv();
-extern "C" void refer_initialize__Q27JStudio29TFunctionValueAttribute_referFv();
-extern "C" void interpolateValue_hermite__Q27JStudio13functionvalueFddddddd();
-extern "C" void interpolateValue_BSpline_uniform__Q27JStudio13functionvalueFddddd();
-extern "C" void interpolateValue_BSpline_nonuniform__Q27JStudio13functionvalueFdPCdPCd();
-extern "C" void extrapolateParameter_turn__Q27JStudio13functionvalueFdd();
-extern "C" void range_initialize__Q27JStudio29TFunctionValueAttribute_rangeFv();
-extern "C" void range_prepare__Q27JStudio29TFunctionValueAttribute_rangeFv();
-extern "C" void range_set__Q27JStudio29TFunctionValueAttribute_rangeFdd();
-extern "C" void range_getParameter__Q27JStudio29TFunctionValueAttribute_rangeCFddd();
-extern "C" void __ct__Q27JStudio29TFunctionValueAttribute_rangeFv();
-extern "C" void __ct__Q27JStudio24TFunctionValue_compositeFv();
-extern "C" bool getType__Q27JStudio24TFunctionValue_compositeCFv();
-extern "C" void getAttributeSet__Q27JStudio24TFunctionValue_compositeFv();
-extern "C" void initialize__Q27JStudio24TFunctionValue_compositeFv();
-extern "C" void prepare__Q27JStudio24TFunctionValue_compositeFv();
-extern "C" void getValue__Q27JStudio24TFunctionValue_compositeFd();
-extern "C" void func_80281E5C();
-extern "C" void func_80281EC8();
-extern "C" void func_8028202C();
-extern "C" void func_80282094();
-extern "C" void func_80282118();
-extern "C" void func_80282200();
-extern "C" void func_80282284();
-extern "C" void __ct__Q27JStudio23TFunctionValue_constantFv();
-extern "C" s32 getType__Q27JStudio23TFunctionValue_constantCFv();
-extern "C" void getAttributeSet__Q27JStudio23TFunctionValue_constantFv();
-extern "C" void initialize__Q27JStudio23TFunctionValue_constantFv();
-extern "C" void prepare__Q27JStudio23TFunctionValue_constantFv();
-extern "C" void getValue__Q27JStudio23TFunctionValue_constantFd();
-extern "C" void __ct__Q27JStudio25TFunctionValue_transitionFv();
-extern "C" s32 getType__Q27JStudio25TFunctionValue_transitionCFv();
-extern "C" void getAttributeSet__Q27JStudio25TFunctionValue_transitionFv();
-extern "C" void initialize__Q27JStudio25TFunctionValue_transitionFv();
-extern "C" void prepare__Q27JStudio25TFunctionValue_transitionFv();
-extern "C" void getValue__Q27JStudio25TFunctionValue_transitionFd();
-extern "C" void __ct__Q27JStudio19TFunctionValue_listFv();
-extern "C" s32 getType__Q27JStudio19TFunctionValue_listCFv();
-extern "C" void getAttributeSet__Q27JStudio19TFunctionValue_listFv();
-extern "C" void initialize__Q27JStudio19TFunctionValue_listFv();
-extern "C" void prepare__Q27JStudio19TFunctionValue_listFv();
-extern "C" void getValue__Q27JStudio19TFunctionValue_listFd();
-extern "C" void update_INTERPOLATE_NONE___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
-extern "C" void update_INTERPOLATE_LINEAR___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
-extern "C" void update_INTERPOLATE_PLATEAU___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
-extern "C" void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
-extern "C" void __ct__Q27JStudio29TFunctionValue_list_parameterFv();
-extern "C" s32 getType__Q27JStudio29TFunctionValue_list_parameterCFv();
-extern "C" void getAttributeSet__Q27JStudio29TFunctionValue_list_parameterFv();
-extern "C" void data_set__Q27JStudio29TFunctionValue_list_parameterFPCfUl();
-extern "C" void initialize__Q27JStudio29TFunctionValue_list_parameterFv();
-extern "C" void prepare__Q27JStudio29TFunctionValue_list_parameterFv();
-extern "C" void getValue__Q27JStudio29TFunctionValue_list_parameterFd();
-extern "C" void update_INTERPOLATE_NONE___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
-extern "C" void update_INTERPOLATE_LINEAR___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
-extern "C" void update_INTERPOLATE_PLATEAU___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
-extern "C" void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
-extern "C" void __ct__Q27JStudio22TFunctionValue_hermiteFv();
-extern "C" s32 getType__Q27JStudio22TFunctionValue_hermiteCFv();
-extern "C" void getAttributeSet__Q27JStudio22TFunctionValue_hermiteFv();
-extern "C" void data_set__Q27JStudio22TFunctionValue_hermiteFPCfUlUl();
-extern "C" void initialize__Q27JStudio22TFunctionValue_hermiteFv();
-extern "C" void prepare__Q27JStudio22TFunctionValue_hermiteFv();
-extern "C" void getValue__Q27JStudio22TFunctionValue_hermiteFd();
-extern "C" void extrapolateParameter_raw__Q27JStudio13functionvalueFdd();
-extern "C" void extrapolateParameter_repeat__Q27JStudio13functionvalueFdd();
-extern "C" void extrapolateParameter_clamp__Q27JStudio13functionvalueFdd();
-extern "C" static void func_802835DC();
-extern "C" static void func_80283634();
-extern "C" static void func_80283858();
-extern "C" static void func_802838C8();
-extern "C" void __dt__Q27JStudio22TFunctionValue_hermiteFv();
-extern "C" void __dt__Q27JStudio29TFunctionValue_list_parameterFv();
-extern "C" void __dt__Q27JStudio19TFunctionValue_listFv();
-extern "C" void __dt__Q27JStudio25TFunctionValue_transitionFv();
-extern "C" void __dt__Q27JStudio23TFunctionValue_constantFv();
-extern "C" void __dt__Q27JStudio24TFunctionValue_compositeFv();
-extern "C" static void func_80283E24();
-extern "C" static void func_80283EB8();
+extern "C" void toFunction_outside__Q27JStudio14TFunctionValueFi(); // 1
+extern "C" void __ct__Q27JStudio14TFunctionValueFv(); // 1
+extern "C" void __dt__Q27JStudio14TFunctionValueFv(); // 1
+extern "C" void refer_initialize__Q27JStudio29TFunctionValueAttribute_referFv(); // 1
+extern "C" void interpolateValue_hermite__Q27JStudio13functionvalueFddddddd(); // 1
+extern "C" void interpolateValue_BSpline_uniform__Q27JStudio13functionvalueFddddd(); // 1
+extern "C" void interpolateValue_BSpline_nonuniform__Q27JStudio13functionvalueFdPCdPCd(); // 1
+extern "C" void extrapolateParameter_turn__Q27JStudio13functionvalueFdd(); // 1
+extern "C" void range_initialize__Q27JStudio29TFunctionValueAttribute_rangeFv(); // 1
+extern "C" void range_prepare__Q27JStudio29TFunctionValueAttribute_rangeFv(); // 1
+extern "C" void range_set__Q27JStudio29TFunctionValueAttribute_rangeFdd(); // 1
+extern "C" void range_getParameter__Q27JStudio29TFunctionValueAttribute_rangeCFddd(); // 1
+extern "C" void __ct__Q27JStudio29TFunctionValueAttribute_rangeFv(); // 1
+extern "C" void __ct__Q27JStudio24TFunctionValue_compositeFv(); // 1
+extern "C" bool getType__Q27JStudio24TFunctionValue_compositeCFv(); // 1
+extern "C" void getAttributeSet__Q27JStudio24TFunctionValue_compositeFv(); // 1
+extern "C" void initialize__Q27JStudio24TFunctionValue_compositeFv(); // 1
+extern "C" void prepare__Q27JStudio24TFunctionValue_compositeFv(); // 1
+extern "C" void getValue__Q27JStudio24TFunctionValue_compositeFd(); // 1
+extern "C" void func_80281E5C(); // 1
+extern "C" void func_80281EC8(); // 1
+extern "C" void func_8028202C(); // 1
+extern "C" void func_80282094(); // 1
+extern "C" void func_80282118(); // 1
+extern "C" void func_80282200(); // 1
+extern "C" void func_80282284(); // 1
+extern "C" void __ct__Q27JStudio23TFunctionValue_constantFv(); // 1
+extern "C" s32 getType__Q27JStudio23TFunctionValue_constantCFv(); // 1
+extern "C" void getAttributeSet__Q27JStudio23TFunctionValue_constantFv(); // 1
+extern "C" void initialize__Q27JStudio23TFunctionValue_constantFv(); // 1
+extern "C" void prepare__Q27JStudio23TFunctionValue_constantFv(); // 1
+extern "C" void getValue__Q27JStudio23TFunctionValue_constantFd(); // 1
+extern "C" void __ct__Q27JStudio25TFunctionValue_transitionFv(); // 1
+extern "C" s32 getType__Q27JStudio25TFunctionValue_transitionCFv(); // 1
+extern "C" void getAttributeSet__Q27JStudio25TFunctionValue_transitionFv(); // 1
+extern "C" void initialize__Q27JStudio25TFunctionValue_transitionFv(); // 1
+extern "C" void prepare__Q27JStudio25TFunctionValue_transitionFv(); // 1
+extern "C" void getValue__Q27JStudio25TFunctionValue_transitionFd(); // 1
+extern "C" void __ct__Q27JStudio19TFunctionValue_listFv(); // 1
+extern "C" s32 getType__Q27JStudio19TFunctionValue_listCFv(); // 1
+extern "C" void getAttributeSet__Q27JStudio19TFunctionValue_listFv(); // 1
+extern "C" void initialize__Q27JStudio19TFunctionValue_listFv(); // 1
+extern "C" void prepare__Q27JStudio19TFunctionValue_listFv(); // 1
+extern "C" void getValue__Q27JStudio19TFunctionValue_listFd(); // 1
+extern "C" void update_INTERPOLATE_NONE___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_(); // 1
+extern "C" void update_INTERPOLATE_LINEAR___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_(); // 1
+extern "C" void update_INTERPOLATE_PLATEAU___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_(); // 1
+extern "C" void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_(); // 1
+extern "C" void __ct__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
+extern "C" s32 getType__Q27JStudio29TFunctionValue_list_parameterCFv(); // 1
+extern "C" void getAttributeSet__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
+extern "C" void data_set__Q27JStudio29TFunctionValue_list_parameterFPCfUl(); // 1
+extern "C" void initialize__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
+extern "C" void prepare__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
+extern "C" void getValue__Q27JStudio29TFunctionValue_list_parameterFd(); // 1
+extern "C" void update_INTERPOLATE_NONE___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd(); // 1
+extern "C" void update_INTERPOLATE_LINEAR___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd(); // 1
+extern "C" void update_INTERPOLATE_PLATEAU___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd(); // 1
+extern "C" void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd(); // 1
+extern "C" void __ct__Q27JStudio22TFunctionValue_hermiteFv(); // 1
+extern "C" s32 getType__Q27JStudio22TFunctionValue_hermiteCFv(); // 1
+extern "C" void getAttributeSet__Q27JStudio22TFunctionValue_hermiteFv(); // 1
+extern "C" void data_set__Q27JStudio22TFunctionValue_hermiteFPCfUlUl(); // 1
+extern "C" void initialize__Q27JStudio22TFunctionValue_hermiteFv(); // 1
+extern "C" void prepare__Q27JStudio22TFunctionValue_hermiteFv(); // 1
+extern "C" void getValue__Q27JStudio22TFunctionValue_hermiteFd(); // 1
+extern "C" void extrapolateParameter_raw__Q27JStudio13functionvalueFdd(); // 1
+extern "C" void extrapolateParameter_repeat__Q27JStudio13functionvalueFdd(); // 1
+extern "C" void extrapolateParameter_clamp__Q27JStudio13functionvalueFdd(); // 1
+extern "C" void func_802835DC(); // 1
+extern "C" void func_80283634(); // 1
+extern "C" void func_80283858(); // 1
+extern "C" void func_802838C8(); // 1
+extern "C" void __dt__Q27JStudio22TFunctionValue_hermiteFv(); // 1
+extern "C" void __dt__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
+extern "C" void __dt__Q27JStudio19TFunctionValue_listFv(); // 1
+extern "C" void __dt__Q27JStudio25TFunctionValue_transitionFv(); // 1
+extern "C" void __dt__Q27JStudio23TFunctionValue_constantFv(); // 1
+extern "C" void __dt__Q27JStudio24TFunctionValue_compositeFv(); // 1
+extern "C" void func_80283E24(); // 1
+extern "C" void func_80283EB8(); // 1
 SECTION_RODATA extern const void*const data_8039A9F0[4];
 SECTION_DATA extern void*const __vt__Q27JStudio22TFunctionValue_hermite[8];
 SECTION_DATA extern void*const __vt__Q27JStudio29TFunctionValue_list_parameter[8];
@@ -290,29 +287,28 @@ SECTION_SDATA2 extern f64 functionvalue__lit_1517;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void func_802DCCD0();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savefpr_29();
-extern "C" void _restfpr_29();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void div();
-extern "C" void floor();
-extern "C" void fmod();
+void operator delete(void*); // 2
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savefpr_29(); // 1
+extern "C" void _restfpr_29(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void div(); // 1
+extern "C" void floor(); // 1
+extern "C" void fmod(); // 1
 
-extern "C" void __dl__FPv();
-extern "C" void func_802DCCD0();
-extern "C" void __dt__Q27JGadget20TVector_pointer_voidFv();
-extern "C" void erase__Q27JGadget20TVector_pointer_voidFPPvPPv();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savefpr_29();
-extern "C" void _restfpr_29();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void div();
-extern "C" void floor();
-extern "C" void fmod();
+extern "C" void __dl__FPv(); // 1
+extern "C" void func_802DCCD0(); // 1
+extern "C" void __dt__Q27JGadget20TVector_pointer_voidFv(); // 1
+extern "C" void erase__Q27JGadget20TVector_pointer_voidFPPvPPv(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savefpr_29(); // 1
+extern "C" void _restfpr_29(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void div(); // 1
+extern "C" void floor(); // 1
+extern "C" void fmod(); // 1
 SECTION_SDATA extern u32 __float_nan;
 
 // 
@@ -653,7 +649,7 @@ asm void JStudio::TFunctionValue_composite::getValue(f64 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80281E5C() {
+asm void JStudio::TFunctionValue_composite::composite_raw(JGadget::TVector_pointer<JStudio::TFunctionValue*> const& field_0, JStudio::TFunctionValue_composite::TData const& field_1, f64 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_80281E5C.s"
 }
@@ -664,7 +660,7 @@ extern "C" asm void func_80281E5C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80281EC8() {
+asm void JStudio::TFunctionValue_composite::composite_index(JGadget::TVector_pointer<JStudio::TFunctionValue*> const& field_0, JStudio::TFunctionValue_composite::TData const& field_1, f64 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_80281EC8.s"
 }
@@ -675,7 +671,7 @@ extern "C" asm void func_80281EC8() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8028202C() {
+asm void JStudio::TFunctionValue_composite::composite_parameter(JGadget::TVector_pointer<JStudio::TFunctionValue*> const& field_0, JStudio::TFunctionValue_composite::TData const& field_1, f64 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_8028202C.s"
 }
@@ -686,7 +682,7 @@ extern "C" asm void func_8028202C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80282094() {
+asm void JStudio::TFunctionValue_composite::composite_add(JGadget::TVector_pointer<JStudio::TFunctionValue*> const& field_0, JStudio::TFunctionValue_composite::TData const& field_1, f64 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_80282094.s"
 }
@@ -697,7 +693,7 @@ extern "C" asm void func_80282094() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80282118() {
+asm void JStudio::TFunctionValue_composite::composite_subtract(JGadget::TVector_pointer<JStudio::TFunctionValue*> const& field_0, JStudio::TFunctionValue_composite::TData const& field_1, f64 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_80282118.s"
 }
@@ -708,7 +704,7 @@ extern "C" asm void func_80282118() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80282200() {
+asm void JStudio::TFunctionValue_composite::composite_multiply(JGadget::TVector_pointer<JStudio::TFunctionValue*> const& field_0, JStudio::TFunctionValue_composite::TData const& field_1, f64 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_80282200.s"
 }
@@ -719,7 +715,7 @@ extern "C" asm void func_80282200() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80282284() {
+asm void JStudio::TFunctionValue_composite::composite_divide(JGadget::TVector_pointer<JStudio::TFunctionValue*> const& field_0, JStudio::TFunctionValue_composite::TData const& field_1, f64 field_2) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_80282284.s"
 }
@@ -1172,7 +1168,7 @@ asm void JStudio::functionvalue::extrapolateParameter_clamp(f64 field_0, f64 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802835DC() {
+asm void JGadget::findUpperBound_binary_current__template2(JStudio::TFunctionValue_list_parameter::TIterator_data_ field_0, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_1, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_2, f64 const& field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_802835DC.s"
 }
@@ -1183,7 +1179,7 @@ extern "C" asm static void func_802835DC() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80283634() {
+asm void JGadget::findUpperBound_binary_current__template0(JStudio::TFunctionValue_list_parameter::TIterator_data_ field_0, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_1, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_2, f64 const& field_3, std::less<f64> field_4) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_80283634.s"
 }
@@ -1194,7 +1190,7 @@ extern "C" asm static void func_80283634() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80283858() {
+asm void JGadget::findUpperBound_binary_current__template2(JStudio::TFunctionValue_hermite::TIterator_data_ field_0, JStudio::TFunctionValue_hermite::TIterator_data_ field_1, JStudio::TFunctionValue_hermite::TIterator_data_ field_2, f64 const& field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_80283858.s"
 }
@@ -1205,7 +1201,7 @@ extern "C" asm static void func_80283858() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802838C8() {
+asm void JGadget::findUpperBound_binary_current__template5(JStudio::TFunctionValue_hermite::TIterator_data_ field_0, JStudio::TFunctionValue_hermite::TIterator_data_ field_1, JStudio::TFunctionValue_hermite::TIterator_data_ field_2, f64 const& field_3, std::less<f64> field_4) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_802838C8.s"
 }
@@ -1282,7 +1278,7 @@ asm JStudio::TFunctionValue_composite::~TFunctionValue_composite() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80283E24() {
+asm void std::upper_bound__template0(JStudio::TFunctionValue_list_parameter::TIterator_data_ field_0, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_1, f64 const& field_2, std::less<f64> field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_80283E24.s"
 }
@@ -1293,7 +1289,7 @@ extern "C" asm static void func_80283E24() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80283EB8() {
+asm void std::upper_bound__template1(JStudio::TFunctionValue_hermite::TIterator_data_ field_0, JStudio::TFunctionValue_hermite::TIterator_data_ field_1, f64 const& field_2, std::less<f64> field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_80283EB8.s"
 }

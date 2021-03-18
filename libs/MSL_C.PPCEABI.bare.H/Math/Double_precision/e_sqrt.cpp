@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __ieee754_sqrt();
+extern "C" void __ieee754_sqrt(); // 1
 
-extern "C" void __ieee754_sqrt();
+extern "C" void __ieee754_sqrt(); // 1
 SECTION_SDATA2 extern f64 Math_Double_precision_e_sqrt__lit_164;
 
 // 

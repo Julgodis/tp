@@ -9,68 +9,35 @@
 // Types:
 // 
 
-// build dMeterButton_c (['dMeterButton_c']) False/False
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
 };
 
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
-	// ('J2DPane',)
-	/* 80253930 */ CPaneMgr();
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80253930 */ CPaneMgr();
 	/* 80253A18 */ ~CPaneMgr();
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
-/* top-level dependencies (begin ['dMeterButton_c']) */
-// outer dependency: ('CPaneMgr',)
-/* top-level dependencies (end ['dMeterButton_c']) */
 struct dMeterButton_c {
-	// ('CPaneMgr',)
 	/* 80201328 */ dMeterButton_c();
 	/* 80201370 */ ~dMeterButton_c();
 	/* 802013CC */ void _create();
@@ -164,44 +131,18 @@ struct dMeterButton_c {
 	/* 8020AE68 */ void paneTrans(CPaneMgr*, f32, f32, u8);
 };
 
-// build CPaneMgr (['CPaneMgr']) True/True
-// build dComIfG_play_c (['dComIfG_play_c']) False/False
-/* top-level dependencies (begin ['dComIfG_play_c']) */
-/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-// build dSv_player_item_c (['dSv_player_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_c']) */
-/* top-level dependencies (end ['dSv_player_item_c']) */
 struct dSv_player_item_c {
 	/* 80033030 */ void getItem(int, bool) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dMeter2Draw_c (['dMeter2Draw_c']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
-struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
-	struct TColor {
-	};
-
-};
-
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
@@ -209,75 +150,41 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-/* top-level dependencies (begin ['dMeter2Draw_c']) */
-// outer dependency: ('JUtility', 'TColor')
-// outer dependency: ('CPaneMgrAlpha',)
-/* top-level dependencies (end ['dMeter2Draw_c']) */
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct dMeter2Draw_c {
-	// ('JUtility', 'TColor')
-	// ('CPaneMgrAlpha',)
 	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
 	/* 8021BBB4 */ void getCanoeFishing();
 };
 
-// build JUtility (['JUtility']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) True/True
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-// build J2DPicture (['J2DPicture']) False/False
-/* top-level dependencies (begin ['J2DPicture']) */
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
 };
 
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-// outer dependency: ('J2DTextBox',)
-// outer dependency: ('J2DPicture',)
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// ('J2DTextBox',)
-	// ('J2DPicture',)
 	/* 8021C1F0 */ void decFloatingMessageTimer();
 	/* 8021C218 */ void resetFloatingMessage();
 	/* 8021C6A4 */ void getStringLength(J2DTextBox*, char*);
 	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
-// build J2DTextBox (['J2DTextBox']) True/True
-// build J2DPicture (['J2DPicture']) True/True
-// build COutFont_c (['COutFont_c']) False/False
-/* top-level dependencies (begin ['COutFont_c']) */
-/* top-level dependencies (end ['COutFont_c']) */
 struct COutFont_c {
 	/* 80225C94 */ COutFont_c(u8);
 };
 
-// build dMsgObject_c (['dMsgObject_c']) False/False
-// build COutFont_c (['COutFont_c']) True/True
-// build J2DTextBox (['J2DTextBox']) True/True
-// build JUTFont (['JUTFont']) False/False
-/* top-level dependencies (begin ['JUTFont']) */
-/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
 };
 
-/* top-level dependencies (begin ['dMsgObject_c']) */
-// outer dependency: ('COutFont_c',)
-// outer dependency: ('J2DTextBox',)
-// outer dependency: ('JUTFont',)
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
-	// ('COutFont_c',)
-	// ('J2DTextBox',)
-	// ('JUTFont',)
 	/* 802370A8 */ void isGetItemMessage();
 	/* 802370BC */ void isKanbanMessage();
 	/* 802370E8 */ void isHowlMessage();
@@ -291,149 +198,122 @@ struct dMsgObject_c {
 	/* 80238258 */ void getScrnDrawPtr();
 };
 
-// build JUTFont (['JUTFont']) True/True
-// build dMsgString_c (['dMsgString_c']) False/False
-/* top-level dependencies (begin ['dMsgString_c']) */
-/* top-level dependencies (end ['dMsgString_c']) */
 struct dMsgString_c {
 	/* 80249C20 */ dMsgString_c();
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build J2DPane (['J2DPane']) True/True
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
-struct Vec {
-};
-
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
+struct Vec {
+};
+
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build Vec (['Vec']) True/True
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build J2DGrafContext (['J2DGrafContext']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__14dMeterButton_cFv();
-extern "C" void __dt__14dMeterButton_cFv();
-extern "C" void _create__14dMeterButton_cFv();
-extern "C" void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb();
-extern "C" void draw__14dMeterButton_cFv();
-extern "C" void _delete__14dMeterButton_cFv();
-extern "C" void alphaAnimeButtonA__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonB__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonR__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonZ__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButton3D__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonC__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonS__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonX__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonY__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonNun__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonRemo__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonRemo2__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonAR__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButton3DB__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonNURE__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonReel__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonReel2__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonAB__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonTate__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonNunZ__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonNunC__14dMeterButton_cFUlb();
-extern "C" void alphaAnimeButtonBin__14dMeterButton_cFUlb();
-extern "C" void screenInitButton__14dMeterButton_cFv();
-extern "C" void screenInitText__14dMeterButton_cFv();
-extern "C" void updateButton__14dMeterButton_cFv();
-extern "C" void updateText__14dMeterButton_cFUl();
-extern "C" void setAlphaButtonAAnimeMin__14dMeterButton_cFv();
-extern "C" void isFastSet__14dMeterButton_cFi();
-extern "C" void setAlphaButtonAAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonBAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonBAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonRAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonRAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonZAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonZAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButton3DAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButton3DAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButton3DVAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButton3DVAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonCAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonCAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonSAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonSAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonXAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonXAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonYAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonYAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonNunAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonNunAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonRemoAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonRemoAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonARAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonARAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButton3DBAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButton3DBAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonNUREAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonNUREAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonReelAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonReelAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonReel2AnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonReel2AnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonABAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonABAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonTateAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonTateAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonNunZAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonNunZAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonNunCAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonNunCAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonBinAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaButtonBinAnimeMax__14dMeterButton_cFv();
-extern "C" void setAlphaButtonOAnimeMin__14dMeterButton_cFi();
-extern "C" void setAlphaButtonOAnimeMax__14dMeterButton_cFi();
-extern "C" void setAlphaIconAnimeMin__14dMeterButton_cFv();
-extern "C" void setAlphaIconAnimeMax__14dMeterButton_cFv();
-extern "C" void isClose__14dMeterButton_cFv();
-extern "C" void setString__14dMeterButton_cFPcUcUcUc();
-extern "C" void hideAll__14dMeterButton_cFv();
-extern "C" void getCenterPosCalc__14dMeterButton_cFUcPci();
-extern "C" void trans_button__14dMeterButton_cFif();
-extern "C" void hide_button__14dMeterButton_cFUc();
-extern "C" void pikariCheck__14dMeterButton_cFv();
-extern "C" void paneTrans__14dMeterButton_cFP8CPaneMgrffUc();
+extern "C" void __ct__14dMeterButton_cFv(); // 1
+extern "C" void __dt__14dMeterButton_cFv(); // 1
+extern "C" void _create__14dMeterButton_cFv(); // 1
+extern "C" void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb(); // 1
+extern "C" void draw__14dMeterButton_cFv(); // 1
+extern "C" void _delete__14dMeterButton_cFv(); // 1
+extern "C" void alphaAnimeButtonA__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonB__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonR__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonZ__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButton3D__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonC__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonS__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonX__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonY__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonNun__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonRemo__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonRemo2__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonAR__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButton3DB__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonNURE__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonReel__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonReel2__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonAB__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonTate__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonNunZ__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonNunC__14dMeterButton_cFUlb(); // 1
+extern "C" void alphaAnimeButtonBin__14dMeterButton_cFUlb(); // 1
+extern "C" void screenInitButton__14dMeterButton_cFv(); // 1
+extern "C" void screenInitText__14dMeterButton_cFv(); // 1
+extern "C" void updateButton__14dMeterButton_cFv(); // 1
+extern "C" void updateText__14dMeterButton_cFUl(); // 1
+extern "C" void setAlphaButtonAAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void isFastSet__14dMeterButton_cFi(); // 1
+extern "C" void setAlphaButtonAAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonBAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonBAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonRAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonRAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonZAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonZAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButton3DAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButton3DAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButton3DVAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButton3DVAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonCAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonCAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonSAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonSAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonXAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonXAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonYAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonYAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonNunAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonNunAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonRemoAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonRemoAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonARAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonARAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButton3DBAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButton3DBAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonNUREAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonNUREAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonReelAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonReelAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonReel2AnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonReel2AnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonABAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonABAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonTateAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonTateAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonNunZAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonNunZAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonNunCAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonNunCAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonBinAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonBinAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaButtonOAnimeMin__14dMeterButton_cFi(); // 1
+extern "C" void setAlphaButtonOAnimeMax__14dMeterButton_cFi(); // 1
+extern "C" void setAlphaIconAnimeMin__14dMeterButton_cFv(); // 1
+extern "C" void setAlphaIconAnimeMax__14dMeterButton_cFv(); // 1
+extern "C" void isClose__14dMeterButton_cFv(); // 1
+extern "C" void setString__14dMeterButton_cFPcUcUcUc(); // 1
+extern "C" void hideAll__14dMeterButton_cFv(); // 1
+extern "C" void getCenterPosCalc__14dMeterButton_cFUcPci(); // 1
+extern "C" void trans_button__14dMeterButton_cFif(); // 1
+extern "C" void hide_button__14dMeterButton_cFUc(); // 1
+extern "C" void pikariCheck__14dMeterButton_cFv(); // 1
+extern "C" void paneTrans__14dMeterButton_cFP8CPaneMgrffUc(); // 1
 SECTION_RODATA extern const u8 data_80398048[80];
 SECTION_RODATA extern const u8 data_80398098[80];
 SECTION_RODATA extern const u8 d_meter_d_meter_button__stringBase0[112];
@@ -469,96 +349,96 @@ SECTION_SDATA2 extern f32 lit_7857;
 // External References:
 // 
 
-void mDoExt_getCurrentHeap();
-void mDoExt_getMesgFont();
-void dComIfGs_isOneZoneSwitch(int, int);
-void dPaneClass_showNullPane(J2DScreen*);
-void cLib_addCalc2(f32*, f32, f32, f32);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void __save_gpr();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void strcpy();
+void mDoExt_getCurrentHeap(); // 2
+void mDoExt_getMesgFont(); // 2
+void dComIfGs_isOneZoneSwitch(int, int); // 2
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void cLib_addCalc2(f32*, f32, f32, f32); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void mDoExt_getCurrentHeap__Fv();
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void getLayerNo__14dComIfG_play_cFi();
-extern "C" void dComIfGs_isOneZoneSwitch__Fii();
-extern "C" void getItem__17dSv_player_item_cCFib();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
-extern "C" void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas();
-extern "C" void getCanoeFishing__13dMeter2Draw_cFv();
-extern "C" void decFloatingMessageTimer__13dMeter2Info_cFv();
-extern "C" void resetFloatingMessage__13dMeter2Info_cFv();
-extern "C" void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc();
-extern "C" void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
-extern "C" void __ct__10COutFont_cFUc();
-extern "C" void isGetItemMessage__12dMsgObject_cFv();
-extern "C" void isKanbanMessage__12dMsgObject_cFv();
-extern "C" void isHowlMessage__12dMsgObject_cFv();
-extern "C" void isMidonaTalkWait__12dMsgObject_cFv();
-extern "C" void isPlaceMessage__12dMsgObject_cFv();
-extern "C" void isBossMessage__12dMsgObject_cFv();
-extern "C" bool isBookMessage__12dMsgObject_cFv();
-extern "C" void isStaffMessage__12dMsgObject_cFv();
-extern "C" void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs();
-extern "C" void getStatus__12dMsgObject_cFv();
-extern "C" void getScrnDrawPtr__12dMsgObject_cFv();
-extern "C" void __ct__12dMsgString_cFv();
-extern "C" void __dt__12dMsgString_cFv();
-extern "C" void __ct__8CPaneMgrFv();
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void __dt__8CPaneMgrFv();
-extern "C" void paneTrans__8CPaneMgrFff();
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" void show__13CPaneMgrAlphaFv();
-extern "C" void hide__13CPaneMgrAlphaFv();
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
-extern "C" void cLib_addCalc2__FPffff();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void alloc__7JKRHeapFUli();
-extern "C" void free__7JKRHeapFPv();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void getBounds__7J2DPaneFv();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void getStringPtr__10J2DTextBoxCFv();
-extern "C" void setString__10J2DTextBoxFsPCce();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void strcpy();
+extern "C" void mDoExt_getCurrentHeap__Fv(); // 1
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
+extern "C" void dComIfGs_isOneZoneSwitch__Fii(); // 1
+extern "C" void getItem__17dSv_player_item_cCFib(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc(); // 1
+extern "C" void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas(); // 1
+extern "C" void getCanoeFishing__13dMeter2Draw_cFv(); // 1
+extern "C" void decFloatingMessageTimer__13dMeter2Info_cFv(); // 1
+extern "C" void resetFloatingMessage__13dMeter2Info_cFv(); // 1
+extern "C" void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc(); // 1
+extern "C" void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei(); // 1
+extern "C" void __ct__10COutFont_cFUc(); // 1
+extern "C" void isGetItemMessage__12dMsgObject_cFv(); // 1
+extern "C" void isKanbanMessage__12dMsgObject_cFv(); // 1
+extern "C" void isHowlMessage__12dMsgObject_cFv(); // 1
+extern "C" void isMidonaTalkWait__12dMsgObject_cFv(); // 1
+extern "C" void isPlaceMessage__12dMsgObject_cFv(); // 1
+extern "C" void isBossMessage__12dMsgObject_cFv(); // 1
+extern "C" bool isBookMessage__12dMsgObject_cFv(); // 1
+extern "C" void isStaffMessage__12dMsgObject_cFv(); // 1
+extern "C" void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs(); // 1
+extern "C" void getStatus__12dMsgObject_cFv(); // 1
+extern "C" void getScrnDrawPtr__12dMsgObject_cFv(); // 1
+extern "C" void __ct__12dMsgString_cFv(); // 1
+extern "C" void __dt__12dMsgString_cFv(); // 1
+extern "C" void __ct__8CPaneMgrFv(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void __dt__8CPaneMgrFv(); // 1
+extern "C" void paneTrans__8CPaneMgrFff(); // 1
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs(); // 1
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void show__13CPaneMgrAlphaFv(); // 1
+extern "C" void hide__13CPaneMgrAlphaFv(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
+extern "C" void cLib_addCalc2__FPffff(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void alloc__7JKRHeapFUli(); // 1
+extern "C" void free__7JKRHeapFPv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getBounds__7J2DPaneFv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
+extern "C" void setString__10J2DTextBoxFsPCce(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];

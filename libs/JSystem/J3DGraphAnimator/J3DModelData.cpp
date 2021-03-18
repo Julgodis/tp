@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 	/* 80325D88 */ void clear();
 	/* 80325DA0 */ J3DModelData();
@@ -24,46 +21,28 @@ struct J3DModelData {
 	/* 8032617C */ ~J3DModelData();
 };
 
-// build J3DShapeTable (['J3DShapeTable']) False/False
-/* top-level dependencies (begin ['J3DShapeTable']) */
-/* top-level dependencies (end ['J3DShapeTable']) */
 struct J3DShapeTable {
 	/* 80326134 */ ~J3DShapeTable();
 };
 
-// build J3DVertexData (['J3DVertexData']) False/False
-/* top-level dependencies (begin ['J3DVertexData']) */
-/* top-level dependencies (end ['J3DVertexData']) */
 struct J3DVertexData {
 	/* 80310EF8 */ J3DVertexData();
 };
 
-// build J3DDrawMtxData (['J3DDrawMtxData']) False/False
-/* top-level dependencies (begin ['J3DDrawMtxData']) */
-/* top-level dependencies (end ['J3DDrawMtxData']) */
 struct J3DDrawMtxData {
 	/* 803115F4 */ ~J3DDrawMtxData();
 };
 
-// build J3DMaterial (['J3DMaterial']) False/False
-/* top-level dependencies (begin ['J3DMaterial']) */
-/* top-level dependencies (end ['J3DMaterial']) */
 struct J3DMaterial {
 	/* 80316290 */ void countDLSize();
 	/* 80316E90 */ void newSharedDisplayList(u32);
 	/* 80316F24 */ void newSingleSharedDisplayList(u32);
 };
 
-// build J3DJointTree (['J3DJointTree']) False/False
-/* top-level dependencies (begin ['J3DJointTree']) */
-/* top-level dependencies (end ['J3DJointTree']) */
 struct J3DJointTree {
 	/* 80325A18 */ J3DJointTree();
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) False/False
-/* top-level dependencies (begin ['J3DMaterialTable']) */
-/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
 	/* 8032F5D0 */ J3DMaterialTable();
 	/* 8032F604 */ ~J3DMaterialTable();
@@ -74,16 +53,16 @@ struct J3DMaterialTable {
 // 
 
 
-extern "C" void clear__12J3DModelDataFv();
-extern "C" void __ct__12J3DModelDataFv();
-extern "C" void newSharedDisplayList__12J3DModelDataFUl();
-extern "C" void indexToPtr__12J3DModelDataFv();
-extern "C" void makeSharedDL__12J3DModelDataFv();
-extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
-extern "C" void syncJ3DSysPointers__12J3DModelDataCFv();
-extern "C" void syncJ3DSysFlags__12J3DModelDataCFv();
-extern "C" void __dt__13J3DShapeTableFv();
-extern "C" void __dt__12J3DModelDataFv();
+extern "C" void clear__12J3DModelDataFv(); // 1
+extern "C" void __ct__12J3DModelDataFv(); // 1
+extern "C" void newSharedDisplayList__12J3DModelDataFUl(); // 1
+extern "C" void indexToPtr__12J3DModelDataFv(); // 1
+extern "C" void makeSharedDL__12J3DModelDataFv(); // 1
+extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f(); // 1
+extern "C" void syncJ3DSysPointers__12J3DModelDataCFv(); // 1
+extern "C" void syncJ3DSysFlags__12J3DModelDataCFv(); // 1
+extern "C" void __dt__13J3DShapeTableFv(); // 1
+extern "C" void __dt__12J3DModelDataFv(); // 1
 SECTION_DATA extern void*const __vt__13J3DShapeTable[3];
 SECTION_DATA extern void*const __vt__12J3DModelData[3];
 SECTION_SBSS extern u8 data_804515E8[4];
@@ -93,35 +72,35 @@ SECTION_SBSS extern u8 data_804515EC[4];
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" void GDInitGDLObj();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void GDInitGDLObj(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dl__FPv();
-extern "C" void __ct__13J3DVertexDataFv();
-extern "C" void __dt__14J3DDrawMtxDataFv();
-extern "C" void countDLSize__11J3DMaterialFv();
-extern "C" void newSharedDisplayList__11J3DMaterialFUl();
-extern "C" void newSingleSharedDisplayList__11J3DMaterialFUl();
-extern "C" void __ct__12J3DJointTreeFv();
-extern "C" void __ct__16J3DMaterialTableFv();
-extern "C" void __dt__16J3DMaterialTableFv();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" void GDInitGDLObj();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__13J3DVertexDataFv(); // 1
+extern "C" void __dt__14J3DDrawMtxDataFv(); // 1
+extern "C" void countDLSize__11J3DMaterialFv(); // 1
+extern "C" void newSharedDisplayList__11J3DMaterialFUl(); // 1
+extern "C" void newSingleSharedDisplayList__11J3DMaterialFUl(); // 1
+extern "C" void __ct__12J3DJointTreeFv(); // 1
+extern "C" void __ct__16J3DMaterialTableFv(); // 1
+extern "C" void __dt__16J3DMaterialTableFv(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void GDInitGDLObj(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__12J3DJointTree[5];
 SECTION_BSS extern u8 j3dSys[284];
 SECTION_SBSS extern u8 __GDCurrentDL[4];

@@ -9,249 +9,114 @@
 // Types:
 // 
 
-// build JPAFieldBase (['JPAFieldBase']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
-/* top-level dependencies (begin ['JPAEmitterWorkData']) */
-/* top-level dependencies (end ['JPAEmitterWorkData']) */
-struct JPAEmitterWorkData {
+struct JPABaseParticle {
 };
 
-// build JPAFieldBlock (['JPAFieldBlock']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-/* top-level dependencies (begin ['JPAFieldBlock']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JPAFieldBlock']) */
 struct JPAFieldBlock {
-	// ('JKRHeap',)
 	/* 8027D088 */ JPAFieldBlock(u8 const*, JKRHeap*);
 	/* 8027D0C0 */ void init(JKRHeap*);
 };
 
-// build JPABaseParticle (['JPABaseParticle']) False/False
-/* top-level dependencies (begin ['JPABaseParticle']) */
-/* top-level dependencies (end ['JPABaseParticle']) */
-struct JPABaseParticle {
+struct JPAEmitterWorkData {
 };
 
-/* top-level dependencies (begin ['JPAFieldBase']) */
-// outer dependency: ('JPAEmitterWorkData',)
-// outer dependency: ('JPAFieldBlock',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAFieldBase']) */
 struct JPAFieldBase {
-	// ('JPAEmitterWorkData',)
-	// ('JPAFieldBlock',)
-	// ('JPABaseParticle',)
 	/* 80276A8C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027BDEC */ void calcAffect(JPAFieldBlock*, JPABaseParticle*);
 	/* 8027BF18 */ void calcFadeAffect(JPAFieldBlock*, f32) const;
 	/* 8027D3AC */ ~JPAFieldBase();
 };
 
-// build JPAFieldBlock (['JPAFieldBlock']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-// build JPAFieldGravity (['JPAFieldGravity']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-// build JPAFieldBlock (['JPAFieldBlock']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['JPAFieldGravity']) */
-// outer dependency: ('JPAEmitterWorkData',)
-// outer dependency: ('JPAFieldBlock',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAFieldGravity']) */
 struct JPAFieldGravity {
-	// ('JPAEmitterWorkData',)
-	// ('JPAFieldBlock',)
-	// ('JPABaseParticle',)
 	/* 8027BFB4 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027C054 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D6D4 */ ~JPAFieldGravity();
 };
 
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-// build JPAFieldAir (['JPAFieldAir']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-// build JPAFieldBlock (['JPAFieldBlock']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['JPAFieldAir']) */
-// outer dependency: ('JPAEmitterWorkData',)
-// outer dependency: ('JPAFieldBlock',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAFieldAir']) */
 struct JPAFieldAir {
-	// ('JPAEmitterWorkData',)
-	// ('JPAFieldBlock',)
-	// ('JPABaseParticle',)
 	/* 8027C07C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027C1B8 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D678 */ ~JPAFieldAir();
 };
 
-// build JPAFieldMagnet (['JPAFieldMagnet']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-// build JPAFieldBlock (['JPAFieldBlock']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['JPAFieldMagnet']) */
-// outer dependency: ('JPAEmitterWorkData',)
-// outer dependency: ('JPAFieldBlock',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAFieldMagnet']) */
 struct JPAFieldMagnet {
-	// ('JPAEmitterWorkData',)
-	// ('JPAFieldBlock',)
-	// ('JPABaseParticle',)
 	/* 8027C24C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027C29C */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D61C */ ~JPAFieldMagnet();
 };
 
-// build JPAFieldNewton (['JPAFieldNewton']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-// build JPAFieldBlock (['JPAFieldBlock']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['JPAFieldNewton']) */
-// outer dependency: ('JPAEmitterWorkData',)
-// outer dependency: ('JPAFieldBlock',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAFieldNewton']) */
 struct JPAFieldNewton {
-	// ('JPAEmitterWorkData',)
-	// ('JPAFieldBlock',)
-	// ('JPABaseParticle',)
 	/* 8027C36C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027C3E0 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D5C0 */ ~JPAFieldNewton();
 };
 
-// build JPAFieldVortex (['JPAFieldVortex']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-// build JPAFieldBlock (['JPAFieldBlock']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['JPAFieldVortex']) */
-// outer dependency: ('JPAEmitterWorkData',)
-// outer dependency: ('JPAFieldBlock',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAFieldVortex']) */
 struct JPAFieldVortex {
-	// ('JPAEmitterWorkData',)
-	// ('JPAFieldBlock',)
-	// ('JPABaseParticle',)
 	/* 8027C56C */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027C674 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D564 */ ~JPAFieldVortex();
 };
 
-// build JPAFieldConvection (['JPAFieldConvection']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-// build JPAFieldBlock (['JPAFieldBlock']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['JPAFieldConvection']) */
-// outer dependency: ('JPAEmitterWorkData',)
-// outer dependency: ('JPAFieldBlock',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAFieldConvection']) */
 struct JPAFieldConvection {
-	// ('JPAEmitterWorkData',)
-	// ('JPAFieldBlock',)
-	// ('JPABaseParticle',)
 	/* 8027C814 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027CA94 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D508 */ ~JPAFieldConvection();
 };
 
-// build JPAFieldRandom (['JPAFieldRandom']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-// build JPAFieldBlock (['JPAFieldBlock']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['JPAFieldRandom']) */
-// outer dependency: ('JPAEmitterWorkData',)
-// outer dependency: ('JPAFieldBlock',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAFieldRandom']) */
 struct JPAFieldRandom {
-	// ('JPAEmitterWorkData',)
-	// ('JPAFieldBlock',)
-	// ('JPABaseParticle',)
 	/* 8027CCCC */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D4AC */ ~JPAFieldRandom();
 };
 
-// build JPAFieldDrag (['JPAFieldDrag']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-// build JPAFieldBlock (['JPAFieldBlock']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['JPAFieldDrag']) */
-// outer dependency: ('JPAEmitterWorkData',)
-// outer dependency: ('JPAFieldBlock',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAFieldDrag']) */
 struct JPAFieldDrag {
-	// ('JPAEmitterWorkData',)
-	// ('JPAFieldBlock',)
-	// ('JPABaseParticle',)
 	/* 8027CDE4 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D450 */ ~JPAFieldDrag();
 };
 
-// build JPAFieldSpin (['JPAFieldSpin']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-// build JPAFieldBlock (['JPAFieldBlock']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['JPAFieldSpin']) */
-// outer dependency: ('JPAEmitterWorkData',)
-// outer dependency: ('JPAFieldBlock',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAFieldSpin']) */
 struct JPAFieldSpin {
-	// ('JPAEmitterWorkData',)
-	// ('JPAFieldBlock',)
-	// ('JPABaseParticle',)
 	/* 8027CE64 */ void prepare(JPAEmitterWorkData*, JPAFieldBlock*);
 	/* 8027CFA8 */ void calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*);
 	/* 8027D3F4 */ ~JPAFieldSpin();
 };
 
-// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void calcAffect__12JPAFieldBaseFP13JPAFieldBlockP15JPABaseParticle();
-extern "C" void calcFadeAffect__12JPAFieldBaseCFP13JPAFieldBlockf();
-extern "C" void prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock();
-extern "C" void calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
-extern "C" void prepare__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlock();
-extern "C" void calc__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
-extern "C" void prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock();
-extern "C" void calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
-extern "C" void prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock();
-extern "C" void calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
-extern "C" void prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock();
-extern "C" void calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
-extern "C" void prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock();
-extern "C" void calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
-extern "C" void calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
-extern "C" void calc__12JPAFieldDragFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
-extern "C" void prepare__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlock();
-extern "C" void calc__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
-extern "C" void __ct__13JPAFieldBlockFPCUcP7JKRHeap();
-extern "C" void init__13JPAFieldBlockFP7JKRHeap();
-extern "C" void __dt__12JPAFieldBaseFv();
-extern "C" void __dt__12JPAFieldSpinFv();
-extern "C" void __dt__12JPAFieldDragFv();
-extern "C" void __dt__14JPAFieldRandomFv();
-extern "C" void __dt__18JPAFieldConvectionFv();
-extern "C" void __dt__14JPAFieldVortexFv();
-extern "C" void __dt__14JPAFieldNewtonFv();
-extern "C" void __dt__14JPAFieldMagnetFv();
-extern "C" void __dt__11JPAFieldAirFv();
-extern "C" void __dt__15JPAFieldGravityFv();
+extern "C" void calcAffect__12JPAFieldBaseFP13JPAFieldBlockP15JPABaseParticle(); // 1
+extern "C" void calcFadeAffect__12JPAFieldBaseCFP13JPAFieldBlockf(); // 1
+extern "C" void prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
+extern "C" void calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
+extern "C" void prepare__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
+extern "C" void calc__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
+extern "C" void prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
+extern "C" void calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
+extern "C" void prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
+extern "C" void calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
+extern "C" void prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
+extern "C" void calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
+extern "C" void prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
+extern "C" void calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
+extern "C" void calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
+extern "C" void calc__12JPAFieldDragFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
+extern "C" void prepare__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
+extern "C" void calc__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
+extern "C" void __ct__13JPAFieldBlockFPCUcP7JKRHeap(); // 1
+extern "C" void init__13JPAFieldBlockFP7JKRHeap(); // 1
+extern "C" void __dt__12JPAFieldBaseFv(); // 1
+extern "C" void __dt__12JPAFieldSpinFv(); // 1
+extern "C" void __dt__12JPAFieldDragFv(); // 1
+extern "C" void __dt__14JPAFieldRandomFv(); // 1
+extern "C" void __dt__18JPAFieldConvectionFv(); // 1
+extern "C" void __dt__14JPAFieldVortexFv(); // 1
+extern "C" void __dt__14JPAFieldNewtonFv(); // 1
+extern "C" void __dt__14JPAFieldMagnetFv(); // 1
+extern "C" void __dt__11JPAFieldAirFv(); // 1
+extern "C" void __dt__15JPAFieldGravityFv(); // 1
 SECTION_DATA extern void*lit_3259[9];
 SECTION_DATA extern void*const __vt__12JPAFieldBase[5];
 SECTION_DATA extern void*const __vt__12JPAFieldSpin[5];
@@ -274,24 +139,24 @@ SECTION_SDATA2 extern f32 lit_2656;
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void PSMTXRotAxisRad();
-extern "C" void PSMTXMultVecSR();
-extern "C" void PSVECMag();
-extern "C" void PSVECCrossProduct();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void* operator new(u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXRotAxisRad(); // 1
+extern "C" void PSMTXMultVecSR(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock();
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void PSMTXRotAxisRad();
-extern "C" void PSMTXMultVecSR();
-extern "C" void PSVECMag();
-extern "C" void PSVECCrossProduct();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXRotAxisRad(); // 1
+extern "C" void PSMTXMultVecSR(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SDATA extern u32 __float_epsilon;
 
 // 

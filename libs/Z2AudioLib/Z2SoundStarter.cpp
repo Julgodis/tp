@@ -9,37 +9,36 @@
 // Types:
 // 
 
-// build Z2SoundStarter (['Z2SoundStarter']) False/False
-// build JAISoundHandle (['JAISoundHandle']) False/False
-/* top-level dependencies (begin ['JAISoundHandle']) */
-/* top-level dependencies (end ['JAISoundHandle']) */
+struct JAISoundID {
+};
+
 struct JAISoundHandle {
 };
 
-/* top-level dependencies (begin ['Z2SoundStarter']) */
-// outer dependency: ('JAISoundHandle',)
-/* top-level dependencies (end ['Z2SoundStarter']) */
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
 struct Z2SoundStarter {
-	// ('JAISoundHandle',)
 	/* 802AAB94 */ Z2SoundStarter(bool);
+	/* 802AAC3C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*, u32, f32, f32, f32, f32, f32, u32);
+	/* 802AABF4 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 	/* 802AAF74 */ void getPortData(JAISoundHandle*, u32, s8);
 	/* 802AAFF0 */ ~Z2SoundStarter();
 };
 
-// build JAISoundHandle (['JAISoundHandle']) True/True
-// build JASTrack (['JASTrack']) False/False
-/* top-level dependencies (begin ['JASTrack']) */
-/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
 	/* 80291C30 */ void openChild(u32);
 	/* 80292918 */ void writePort(u32, u16);
 	/* 8029297C */ void readPort(u32);
 };
 
-// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
-/* top-level dependencies (begin ['JAISoundParamsMove']) */
-/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 	/* 802A2E0C */ void movePitch(f32, u32);
@@ -48,17 +47,11 @@ struct JAISoundParamsMove {
 	/* 802A2F14 */ void moveDolby(f32, u32);
 };
 
-// build JAISoundStarter (['JAISoundStarter']) False/False
-/* top-level dependencies (begin ['JAISoundStarter']) */
-/* top-level dependencies (end ['JAISoundStarter']) */
 struct JAISoundStarter {
 	/* 802A2F6C */ JAISoundStarter(bool);
 	/* 802A2F88 */ ~JAISoundStarter();
 };
 
-// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
-/* top-level dependencies (begin ['Z2EnvSeMgr']) */
-/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
 	/* 802C93E4 */ void getFogDensity();
 };
@@ -67,15 +60,13 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-extern "C" void func_802AABF4();
-extern "C" void func_802AAC3C();
 
-extern "C" void __ct__14Z2SoundStarterFb();
-extern "C" void func_802AABF4();
-extern "C" void func_802AAC3C();
-extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
-extern "C" void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc();
-extern "C" void __dt__14Z2SoundStarterFv();
+extern "C" void __ct__14Z2SoundStarterFb(); // 1
+extern "C" void func_802AABF4(); // 1
+extern "C" void func_802AAC3C(); // 1
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc(); // 1
+extern "C" void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc(); // 1
+extern "C" void __dt__14Z2SoundStarterFv(); // 1
 SECTION_DATA extern void*const __vt__14Z2SoundStarter[6];
 SECTION_SDATA2 extern u8 lit_3597[4];
 SECTION_SDATA2 extern f32 lit_3598;
@@ -87,28 +78,28 @@ SECTION_SDATA2 extern f64 Z2SoundStarter__lit_3717;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void openChild__8JASTrackFUl();
-extern "C" void writePort__8JASTrackFUlUs();
-extern "C" void readPort__8JASTrackFUl();
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
-extern "C" void movePitch__18JAISoundParamsMoveFfUl();
-extern "C" void moveFxMix__18JAISoundParamsMoveFfUl();
-extern "C" void movePan__18JAISoundParamsMoveFfUl();
-extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
-extern "C" void __ct__15JAISoundStarterFb();
-extern "C" void __dt__15JAISoundStarterFv();
-extern "C" void getFogDensity__10Z2EnvSeMgrFv();
-extern "C" void __dl__FPv();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+extern "C" void openChild__8JASTrackFUl(); // 1
+extern "C" void writePort__8JASTrackFUlUs(); // 1
+extern "C" void readPort__8JASTrackFUl(); // 1
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void movePitch__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void moveFxMix__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void movePan__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void __ct__15JAISoundStarterFb(); // 1
+extern "C" void __dt__15JAISoundStarterFv(); // 1
+extern "C" void getFogDensity__10Z2EnvSeMgrFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SBSS extern u8 data_80450B3C[4];
 SECTION_SBSS extern u8 data_80450B74[4];
 SECTION_SBSS extern u8 data_80450B7C[4];
@@ -158,7 +149,7 @@ f32 lit_3599 = -1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802AABF4() {
+asm void Z2SoundStarter::startSound(JAISoundID field_0, JAISoundHandle* field_1, JGeometry::TVec3<f32> const* field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundStarter/func_802AABF4.s"
 }
@@ -176,7 +167,7 @@ f64 Z2SoundStarter__lit_3717 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802AAC3C() {
+asm void Z2SoundStarter::startSound(JAISoundID field_0, JAISoundHandle* field_1, JGeometry::TVec3<f32> const* field_2, u32 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, f32 field_8, u32 field_9) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundStarter/func_802AAC3C.s"
 }

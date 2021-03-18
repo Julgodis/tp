@@ -9,39 +9,21 @@
 // Types:
 // 
 
-// build process_method_tag_class (['process_method_tag_class']) False/False
-/* top-level dependencies (begin ['process_method_tag_class']) */
-/* top-level dependencies (end ['process_method_tag_class']) */
 struct process_method_tag_class {
 };
 
-// build layer_class (['layer_class']) False/False
-/* top-level dependencies (begin ['layer_class']) */
-/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
-// build node_class (['node_class']) False/False
-/* top-level dependencies (begin ['node_class']) */
-/* top-level dependencies (end ['node_class']) */
 struct node_class {
 };
 
-// build node_lists_tree_class (['node_lists_tree_class']) False/False
-/* top-level dependencies (begin ['node_lists_tree_class']) */
-/* top-level dependencies (end ['node_lists_tree_class']) */
 struct node_lists_tree_class {
 };
 
@@ -49,49 +31,49 @@ struct node_lists_tree_class {
 // Forward References:
 // 
 
-void fpcLy_CancelQTo(process_method_tag_class*);
-void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*);
-static void fpcLy_CancelMethod(process_method_tag_class*);
-void fpcLy_IntoQueue(layer_class*, int, create_tag_class*, int);
-void fpcLy_ToQueue(layer_class*, int, create_tag_class*);
-void fpcLy_QueueTo(layer_class*, create_tag_class*);
-void fpcLy_IsDeletingMesg(layer_class*);
-void fpcLy_DeletingMesg(layer_class*);
-void fpcLy_DeletedMesg(layer_class*);
-void fpcLy_IsCreatingMesg(layer_class*);
-void fpcLy_CreatingMesg(layer_class*);
-void fpcLy_CreatedMesg(layer_class*);
-void fpcLy_RootLayer();
-void fpcLy_SetCurrentLayer(layer_class*);
-void fpcLy_CurrentLayer();
-static void fpcLy_Search(u32);
-void fpcLy_Layer(u32);
-static void fpcLy_Regist(layer_class*);
-void fpcLy_Delete(layer_class*);
-void fpcLy_Cancel(layer_class*);
-void fpcLy_Create(layer_class*, void*, node_list_class*, int);
+void fpcLy_CancelQTo(process_method_tag_class*); // 2
+void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*); // 2
+static void fpcLy_CancelMethod(process_method_tag_class*); // 2
+void fpcLy_IntoQueue(layer_class*, int, create_tag_class*, int); // 2
+void fpcLy_ToQueue(layer_class*, int, create_tag_class*); // 2
+void fpcLy_QueueTo(layer_class*, create_tag_class*); // 2
+void fpcLy_IsDeletingMesg(layer_class*); // 2
+void fpcLy_DeletingMesg(layer_class*); // 2
+void fpcLy_DeletedMesg(layer_class*); // 2
+void fpcLy_IsCreatingMesg(layer_class*); // 2
+void fpcLy_CreatingMesg(layer_class*); // 2
+void fpcLy_CreatedMesg(layer_class*); // 2
+void fpcLy_RootLayer(); // 2
+void fpcLy_SetCurrentLayer(layer_class*); // 2
+void fpcLy_CurrentLayer(); // 2
+static void fpcLy_Search(u32); // 2
+void fpcLy_Layer(u32); // 2
+static void fpcLy_Regist(layer_class*); // 2
+void fpcLy_Delete(layer_class*); // 2
+void fpcLy_Cancel(layer_class*); // 2
+void fpcLy_Create(layer_class*, void*, node_list_class*, int); // 2
 
-extern "C" void fpcLy_CancelQTo__FP24process_method_tag_class();
-extern "C" void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class();
-extern "C" static void fpcLy_CancelMethod__FP24process_method_tag_class();
-extern "C" void fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi();
-extern "C" void fpcLy_ToQueue__FP11layer_classiP16create_tag_class();
-extern "C" void fpcLy_QueueTo__FP11layer_classP16create_tag_class();
-extern "C" void fpcLy_IsDeletingMesg__FP11layer_class();
-extern "C" void fpcLy_DeletingMesg__FP11layer_class();
-extern "C" void fpcLy_DeletedMesg__FP11layer_class();
-extern "C" void fpcLy_IsCreatingMesg__FP11layer_class();
-extern "C" void fpcLy_CreatingMesg__FP11layer_class();
-extern "C" void fpcLy_CreatedMesg__FP11layer_class();
-extern "C" void fpcLy_RootLayer__Fv();
-extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
-extern "C" void fpcLy_CurrentLayer__Fv();
-extern "C" static void fpcLy_Search__FUi();
-extern "C" void fpcLy_Layer__FUi();
-extern "C" static void fpcLy_Regist__FP11layer_class();
-extern "C" void fpcLy_Delete__FP11layer_class();
-extern "C" void fpcLy_Cancel__FP11layer_class();
-extern "C" void fpcLy_Create__FP11layer_classPvP15node_list_classi();
+extern "C" void fpcLy_CancelQTo__FP24process_method_tag_class(); // 1
+extern "C" void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class(); // 1
+extern "C" static void fpcLy_CancelMethod__FP24process_method_tag_class(); // 1
+extern "C" void fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi(); // 1
+extern "C" void fpcLy_ToQueue__FP11layer_classiP16create_tag_class(); // 1
+extern "C" void fpcLy_QueueTo__FP11layer_classP16create_tag_class(); // 1
+extern "C" void fpcLy_IsDeletingMesg__FP11layer_class(); // 1
+extern "C" void fpcLy_DeletingMesg__FP11layer_class(); // 1
+extern "C" void fpcLy_DeletedMesg__FP11layer_class(); // 1
+extern "C" void fpcLy_IsCreatingMesg__FP11layer_class(); // 1
+extern "C" void fpcLy_CreatingMesg__FP11layer_class(); // 1
+extern "C" void fpcLy_CreatedMesg__FP11layer_class(); // 1
+extern "C" void fpcLy_RootLayer__Fv(); // 1
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1
+extern "C" void fpcLy_CurrentLayer__Fv(); // 1
+extern "C" static void fpcLy_Search__FUi(); // 1
+extern "C" void fpcLy_Layer__FUi(); // 1
+extern "C" static void fpcLy_Regist__FP11layer_class(); // 1
+extern "C" void fpcLy_Delete__FP11layer_class(); // 1
+extern "C" void fpcLy_Cancel__FP11layer_class(); // 1
+extern "C" void fpcLy_Create__FP11layer_classPvP15node_list_classi(); // 1
 SECTION_DATA extern u8 l_fpcLy_Crear[44];
 SECTION_DATA extern u8 l_fpcLy_LayerList[12];
 SECTION_SBSS extern u8 l_fpcLy_CurrLayer_p[4];
@@ -104,35 +86,35 @@ SECTION_SBSS extern u8 data_80450D28[8];
 // External References:
 // 
 
-extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i();
-void fpcMtdTg_Do(process_method_tag_class*);
-void fpcMtdTg_ToMethodQ(node_list_class*, process_method_tag_class*);
-void fpcMtdTg_MethodQTo(process_method_tag_class*);
-void cLs_SingleCut(node_class*);
-void cLs_Addition(node_list_class*, node_class*);
-void cLs_Create(node_list_class*);
-void cNd_Create(node_class*, void*);
-void cTr_Create(node_lists_tree_class*, node_list_class*, int);
-void cTg_SingleCutFromTree(create_tag_class*);
-void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*);
-void cTg_InsertToTree(node_lists_tree_class*, int, create_tag_class*, int);
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i(); // 1
+void fpcMtdTg_Do(process_method_tag_class*); // 2
+void fpcMtdTg_ToMethodQ(node_list_class*, process_method_tag_class*); // 2
+void fpcMtdTg_MethodQTo(process_method_tag_class*); // 2
+void cLs_SingleCut(node_class*); // 2
+void cLs_Addition(node_list_class*, node_class*); // 2
+void cLs_Create(node_list_class*); // 2
+void cNd_Create(node_class*, void*); // 2
+void cTr_Create(node_lists_tree_class*, node_list_class*, int); // 2
+void cTg_SingleCutFromTree(create_tag_class*); // 2
+void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*); // 2
+void cTg_InsertToTree(node_lists_tree_class*, int, create_tag_class*, int); // 2
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i();
-extern "C" void fpcMtdTg_Do__FP24process_method_tag_class();
-extern "C" void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class();
-extern "C" void fpcMtdTg_MethodQTo__FP24process_method_tag_class();
-extern "C" void cLs_SingleCut__FP10node_class();
-extern "C" void cLs_Addition__FP15node_list_classP10node_class();
-extern "C" void cLs_Create__FP15node_list_class();
-extern "C" void cNd_Create__FP10node_classPv();
-extern "C" void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
-extern "C" void cTg_SingleCutFromTree__FP16create_tag_class();
-extern "C" void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
-extern "C" void cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i(); // 1
+extern "C" void fpcMtdTg_Do__FP24process_method_tag_class(); // 1
+extern "C" void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class(); // 1
+extern "C" void fpcMtdTg_MethodQTo__FP24process_method_tag_class(); // 1
+extern "C" void cLs_SingleCut__FP10node_class(); // 1
+extern "C" void cLs_Addition__FP15node_list_classP10node_class(); // 1
+extern "C" void cLs_Create__FP15node_list_class(); // 1
+extern "C" void cNd_Create__FP10node_classPv(); // 1
+extern "C" void cTr_Create__FP21node_lists_tree_classP15node_list_classi(); // 1
+extern "C" void cTg_SingleCutFromTree__FP16create_tag_class(); // 1
+extern "C" void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class(); // 1
+extern "C" void cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
 // 
 // Declarations:

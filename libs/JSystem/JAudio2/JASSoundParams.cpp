@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JASSoundParams (['JASSoundParams']) False/False
-/* top-level dependencies (begin ['JASSoundParams']) */
-/* top-level dependencies (end ['JASSoundParams']) */
 struct JASSoundParams {
 	/* 8029E3B0 */ void clamp();
 	/* 8029E47C */ void combine(JASSoundParams const&, JASSoundParams const&);
@@ -22,8 +19,8 @@ struct JASSoundParams {
 // 
 
 
-extern "C" void clamp__14JASSoundParamsFv();
-extern "C" void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams();
+extern "C" void clamp__14JASSoundParamsFv(); // 1
+extern "C" void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams(); // 1
 SECTION_SDATA2 extern u8 lit_299[4];
 SECTION_SDATA2 extern f32 lit_300;
 SECTION_SDATA2 extern f32 JASSoundParams__lit_301;

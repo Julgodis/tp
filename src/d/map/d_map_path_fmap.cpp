@@ -9,24 +9,10 @@
 // Types:
 // 
 
-// build fmpTresTypeGroupDataList_c (['fmpTresTypeGroupDataList_c']) False/False
-// build dTres_c (['dTres_c']) False/False
-// build dTres_c (['dTres_c']) True/False
-struct dTres_c;
-/* top-level dependencies (begin ['dTres_c']) */
-// outer dependency: ('dTres_c', 'typeGroupData_c')
-/* top-level dependencies (end ['dTres_c']) */
 struct dTres_c {
-	// ('dTres_c', 'typeGroupData_c')
-	// build data_s (['dTres_c', 'data_s']) False/False
-	/* dependencies (begin ['dTres_c', 'data_s']) */
-	/* dependencies (end ['dTres_c', 'data_s']) */
 	struct data_s {
 	};
 
-	// build typeGroupData_c (['dTres_c', 'typeGroupData_c']) False/False
-	/* dependencies (begin ['dTres_c', 'typeGroupData_c']) */
-	/* dependencies (end ['dTres_c', 'typeGroupData_c']) */
 	struct typeGroupData_c {
 	};
 
@@ -36,64 +22,35 @@ struct dTres_c {
 	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
 };
 
-/* top-level dependencies (begin ['fmpTresTypeGroupDataList_c']) */
-// outer dependency: ('dTres_c', 'data_s')
-/* top-level dependencies (end ['fmpTresTypeGroupDataList_c']) */
 struct fmpTresTypeGroupDataList_c {
-	// ('dTres_c', 'data_s')
 	/* 8003D790 */ void addTypeGroupData(u8, dTres_c::data_s const*);
 	/* 8003EB10 */ ~fmpTresTypeGroupDataList_c();
 	/* 8003EC90 */ fmpTresTypeGroupDataList_c();
 };
 
-// build dTres_c (['dTres_c']) True/True
-// build dMenu_Fmap_room_data_c (['dMenu_Fmap_room_data_c']) False/False
-/* top-level dependencies (begin ['dMenu_Fmap_room_data_c']) */
-/* top-level dependencies (end ['dMenu_Fmap_room_data_c']) */
 struct dMenu_Fmap_room_data_c {
 	/* 8003D818 */ void isArrival();
 	/* 8003D868 */ void buildTresTypeGroup(int, int, int);
 	/* 8003D92C */ void buildFmapRoomData(int, int, f32, f32, f32, f32);
 };
 
-// build dMenu_Fmap_stage_data_c (['dMenu_Fmap_stage_data_c']) False/False
-/* top-level dependencies (begin ['dMenu_Fmap_stage_data_c']) */
-/* top-level dependencies (end ['dMenu_Fmap_stage_data_c']) */
 struct dMenu_Fmap_stage_data_c {
 	/* 8003D95C */ void isArrival();
 	/* 8003D9D8 */ void buildFmapStageData(int, f32, f32);
 };
 
-// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) False/False
-/* top-level dependencies (begin ['dMenu_Fmap_region_data_c']) */
-/* top-level dependencies (end ['dMenu_Fmap_region_data_c']) */
 struct dMenu_Fmap_region_data_c {
 	/* 8003DB48 */ void getMenuFmapStageData(int);
 	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
 	/* 8003DEE0 */ void buildFmapRegionData(int);
 };
 
-// build dMenu_Fmap_world_data_c (['dMenu_Fmap_world_data_c']) False/False
-// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) True/True
-/* top-level dependencies (begin ['dMenu_Fmap_world_data_c']) */
-// outer dependency: ('dMenu_Fmap_region_data_c',)
-/* top-level dependencies (end ['dMenu_Fmap_world_data_c']) */
 struct dMenu_Fmap_world_data_c {
-	// ('dMenu_Fmap_region_data_c',)
 	/* 8003E028 */ void create(dMenu_Fmap_region_data_c*);
 	/* 8003E04C */ void buildFmapWorldData();
 };
 
-// build dMenuFmapIconPointer_c (['dMenuFmapIconPointer_c']) False/False
-// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) True/True
-// build dMenu_Fmap_stage_data_c (['dMenu_Fmap_stage_data_c']) True/True
-/* top-level dependencies (begin ['dMenuFmapIconPointer_c']) */
-// outer dependency: ('dMenu_Fmap_region_data_c',)
-// outer dependency: ('dMenu_Fmap_stage_data_c',)
-/* top-level dependencies (end ['dMenuFmapIconPointer_c']) */
 struct dMenuFmapIconPointer_c {
-	// ('dMenu_Fmap_region_data_c',)
-	// ('dMenu_Fmap_stage_data_c',)
 	/* 8003E114 */ void init(dMenu_Fmap_region_data_c*, dMenu_Fmap_stage_data_c*, u8, int, int);
 	/* 8003E1C0 */ void getFirstData();
 	/* 8003E2BC */ void getData();
@@ -105,55 +62,31 @@ struct dMenuFmapIconPointer_c {
 	/* 8003E510 */ void getValidData();
 };
 
-// build dMenuFmapIconDisp_c (['dMenuFmapIconDisp_c']) False/False
-// build dTres_c (['dTres_c']) True/True
-/* top-level dependencies (begin ['dMenuFmapIconDisp_c']) */
-// outer dependency: ('dTres_c', 'data_s')
-/* top-level dependencies (end ['dMenuFmapIconDisp_c']) */
 struct dMenuFmapIconDisp_c {
-	// ('dTres_c', 'data_s')
 	/* 8003E578 */ void getPosition(int*, int*, f32*, f32*, dTres_c::data_s const**);
 	/* 8003E6E8 */ void isDrawDisp();
 };
 
-// build fmpTresTypeGroupData_c (['fmpTresTypeGroupData_c']) False/False
-/* top-level dependencies (begin ['fmpTresTypeGroupData_c']) */
-/* top-level dependencies (end ['fmpTresTypeGroupData_c']) */
 struct fmpTresTypeGroupData_c {
 	/* 8003EB70 */ ~fmpTresTypeGroupData_c();
 };
 
-// build dSv_memBit_c (['dSv_memBit_c']) False/False
-/* top-level dependencies (begin ['dSv_memBit_c']) */
-/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 800347E8 */ void isTbox(int) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dSv_memory2_c (['dSv_memory2_c']) False/False
-/* top-level dependencies (begin ['dSv_memory2_c']) */
-/* top-level dependencies (end ['dSv_memory2_c']) */
 struct dSv_memory2_c {
 	/* 80034AEC */ void isVisitedRoom(int);
 };
 
-// build dSv_save_c (['dSv_save_c']) False/False
-/* top-level dependencies (begin ['dSv_save_c']) */
-/* top-level dependencies (end ['dSv_save_c']) */
 struct dSv_save_c {
 	/* 800350A8 */ void getSave2(int);
 };
 
-// build dSv_info_c (['dSv_info_c']) False/False
-/* top-level dependencies (begin ['dSv_info_c']) */
-/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
@@ -163,31 +96,31 @@ struct dSv_info_c {
 // 
 
 
-extern "C" void addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s();
-extern "C" void isArrival__22dMenu_Fmap_room_data_cFv();
-extern "C" void buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii();
-extern "C" void buildFmapRoomData__22dMenu_Fmap_room_data_cFiiffff();
-extern "C" void isArrival__23dMenu_Fmap_stage_data_cFv();
-extern "C" void buildFmapStageData__23dMenu_Fmap_stage_data_cFiff();
-extern "C" void getMenuFmapStageData__24dMenu_Fmap_region_data_cFi();
-extern "C" void getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi();
-extern "C" void buildFmapRegionData__24dMenu_Fmap_region_data_cFi();
-extern "C" void create__23dMenu_Fmap_world_data_cFP24dMenu_Fmap_region_data_c();
-extern "C" void buildFmapWorldData__23dMenu_Fmap_world_data_cFv();
-extern "C" void init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii();
-extern "C" void getFirstData__22dMenuFmapIconPointer_cFv();
-extern "C" void getData__22dMenuFmapIconPointer_cFv();
-extern "C" void getFirstRoomData__22dMenuFmapIconPointer_cFv();
-extern "C" void getNextRoomData__22dMenuFmapIconPointer_cFv();
-extern "C" void getNextStageData__22dMenuFmapIconPointer_cFv();
-extern "C" void getNextData__22dMenuFmapIconPointer_cFv();
-extern "C" void nextData__22dMenuFmapIconPointer_cFv();
-extern "C" void getValidData__22dMenuFmapIconPointer_cFv();
-extern "C" void getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s();
-extern "C" void isDrawDisp__19dMenuFmapIconDisp_cFv();
-extern "C" void __dt__26fmpTresTypeGroupDataList_cFv();
-extern "C" void __dt__22fmpTresTypeGroupData_cFv();
-extern "C" void __ct__26fmpTresTypeGroupDataList_cFv();
+extern "C" void addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s(); // 1
+extern "C" void isArrival__22dMenu_Fmap_room_data_cFv(); // 1
+extern "C" void buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii(); // 1
+extern "C" void buildFmapRoomData__22dMenu_Fmap_room_data_cFiiffff(); // 1
+extern "C" void isArrival__23dMenu_Fmap_stage_data_cFv(); // 1
+extern "C" void buildFmapStageData__23dMenu_Fmap_stage_data_cFiff(); // 1
+extern "C" void getMenuFmapStageData__24dMenu_Fmap_region_data_cFi(); // 1
+extern "C" void getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi(); // 1
+extern "C" void buildFmapRegionData__24dMenu_Fmap_region_data_cFi(); // 1
+extern "C" void create__23dMenu_Fmap_world_data_cFP24dMenu_Fmap_region_data_c(); // 1
+extern "C" void buildFmapWorldData__23dMenu_Fmap_world_data_cFv(); // 1
+extern "C" void init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii(); // 1
+extern "C" void getFirstData__22dMenuFmapIconPointer_cFv(); // 1
+extern "C" void getData__22dMenuFmapIconPointer_cFv(); // 1
+extern "C" void getFirstRoomData__22dMenuFmapIconPointer_cFv(); // 1
+extern "C" void getNextRoomData__22dMenuFmapIconPointer_cFv(); // 1
+extern "C" void getNextStageData__22dMenuFmapIconPointer_cFv(); // 1
+extern "C" void getNextData__22dMenuFmapIconPointer_cFv(); // 1
+extern "C" void nextData__22dMenuFmapIconPointer_cFv(); // 1
+extern "C" void getValidData__22dMenuFmapIconPointer_cFv(); // 1
+extern "C" void getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s(); // 1
+extern "C" void isDrawDisp__19dMenuFmapIconDisp_cFv(); // 1
+extern "C" void __dt__26fmpTresTypeGroupDataList_cFv(); // 1
+extern "C" void __dt__22fmpTresTypeGroupData_cFv(); // 1
+extern "C" void __ct__26fmpTresTypeGroupDataList_cFv(); // 1
 SECTION_DATA extern void*d_map_d_map_path_fmap__lit_4467[15];
 SECTION_DATA extern void*const __vt__19dMenuFmapIconDisp_c[3];
 SECTION_SDATA2 extern u8 d_map_d_map_path_fmap__lit_3894[4 + 4 /* padding */];
@@ -196,56 +129,56 @@ SECTION_SDATA2 extern u8 d_map_d_map_path_fmap__lit_3894[4 + 4 /* padding */];
 // External References:
 // 
 
-void dComIfGs_isStageTbox(int, int);
-void dComIfGs_isStageSwitch(int, int);
-void dComIfGp_isLightDropMapVisible();
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void PSVECCrossProduct();
-extern "C" void __construct_array();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+void dComIfGs_isStageTbox(int, int); // 2
+void dComIfGs_isStageSwitch(int, int); // 2
+void dComIfGp_isLightDropMapVisible(); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void dComIfGs_isStageTbox__Fii();
-extern "C" void dComIfGs_isStageSwitch__Fii();
-extern "C" void dComIfGp_isLightDropMapVisible__Fv();
-extern "C" void isTbox__12dSv_memBit_cCFi();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void isVisitedRoom__13dSv_memory2_cFi();
-extern "C" void getSave2__10dSv_save_cFi();
-extern "C" void isSwitch__10dSv_info_cCFii();
-extern "C" void getFirstData__7dTres_cFUc();
-extern "C" void getNextData__7dTres_cFPQ27dTres_c15typeGroupData_c();
-extern "C" void getTypeGroupNoToType__7dTres_cFUc();
-extern "C" void getTypeToTypeGroupNo__7dTres_cFUc();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void PSVECCrossProduct();
-extern "C" void __construct_array();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+extern "C" void dComIfGs_isStageTbox__Fii(); // 1
+extern "C" void dComIfGs_isStageSwitch__Fii(); // 1
+extern "C" void dComIfGp_isLightDropMapVisible__Fv(); // 1
+extern "C" void isTbox__12dSv_memBit_cCFi(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void isVisitedRoom__13dSv_memory2_cFi(); // 1
+extern "C" void getSave2__10dSv_save_cFi(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getFirstData__7dTres_cFUc(); // 1
+extern "C" void getNextData__7dTres_cFPQ27dTres_c15typeGroupData_c(); // 1
+extern "C" void getTypeGroupNoToType__7dTres_cFUc(); // 1
+extern "C" void getTypeToTypeGroupNo__7dTres_cFUc(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SDATA extern u32 __float_max;

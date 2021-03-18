@@ -9,23 +9,23 @@
 // Forward References:
 // 
 
-extern "C" void InitMetroTRK();
-extern "C" void InitMetroTRK_BBA();
-extern "C" void TRK__write_aram();
-extern "C" void TRK__read_aram();
-extern "C" void TRKInitializeTarget();
-extern "C" void __TRK_copy_vectors();
-extern "C" void TRKTargetTranslate();
-extern "C" void EnableMetroTRKInterrupts();
+extern "C" void InitMetroTRK(); // 1
+extern "C" void InitMetroTRK_BBA(); // 1
+extern "C" void TRK__write_aram(); // 1
+extern "C" void TRK__read_aram(); // 1
+extern "C" void TRKInitializeTarget(); // 1
+extern "C" void __TRK_copy_vectors(); // 1
+extern "C" void TRKTargetTranslate(); // 1
+extern "C" void EnableMetroTRKInterrupts(); // 1
 
-extern "C" void InitMetroTRK();
-extern "C" void InitMetroTRK_BBA();
-extern "C" void TRK__write_aram();
-extern "C" void TRK__read_aram();
-extern "C" void TRKInitializeTarget();
-extern "C" void __TRK_copy_vectors();
-extern "C" void TRKTargetTranslate();
-extern "C" void EnableMetroTRKInterrupts();
+extern "C" void InitMetroTRK(); // 1
+extern "C" void InitMetroTRK_BBA(); // 1
+extern "C" void TRK__write_aram(); // 1
+extern "C" void TRK__read_aram(); // 1
+extern "C" void TRKInitializeTarget(); // 1
+extern "C" void __TRK_copy_vectors(); // 1
+extern "C" void TRKTargetTranslate(); // 1
+extern "C" void EnableMetroTRKInterrupts(); // 1
 SECTION_DATA extern u8 TRK_ISR_OFFSETS[60 + 4 /* padding */];
 SECTION_BSS extern u8 lc_base[4 + 4 /* padding */];
 
@@ -33,30 +33,30 @@ SECTION_BSS extern u8 lc_base[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void TRK_memcpy();
-extern "C" void ARGetDMAStatus();
-extern "C" void ARStartDMA();
-extern "C" void __ARClearInterrupt();
-extern "C" void __ARGetInterruptStatus();
-extern "C" void TRK_flush_cache();
-extern "C" void __TRK_get_MSR();
-extern "C" void TRKSaveExtended1Block();
-extern "C" void TRK_main();
-extern "C" void EnableEXI2Interrupts();
-extern "C" void InitMetroTRKCommTable();
+SECTION_INIT void TRK_memcpy(); // 1
+extern "C" void ARGetDMAStatus(); // 1
+extern "C" void ARStartDMA(); // 1
+extern "C" void __ARClearInterrupt(); // 1
+extern "C" void __ARGetInterruptStatus(); // 1
+extern "C" void TRK_flush_cache(); // 1
+extern "C" void __TRK_get_MSR(); // 1
+extern "C" void TRKSaveExtended1Block(); // 1
+extern "C" void TRK_main(); // 1
+extern "C" void EnableEXI2Interrupts(); // 1
+extern "C" void InitMetroTRKCommTable(); // 1
 
-SECTION_INIT void TRK_memcpy();
+SECTION_INIT void TRK_memcpy(); // 1
 SECTION_INIT extern const u8 __TRK_unknown_data[7988];
-extern "C" void ARGetDMAStatus();
-extern "C" void ARStartDMA();
-extern "C" void __ARClearInterrupt();
-extern "C" void __ARGetInterruptStatus();
-extern "C" void TRK_flush_cache();
-extern "C" void __TRK_get_MSR();
-extern "C" void TRKSaveExtended1Block();
-extern "C" void TRK_main();
-extern "C" void EnableEXI2Interrupts();
-extern "C" void InitMetroTRKCommTable();
+extern "C" void ARGetDMAStatus(); // 1
+extern "C" void ARStartDMA(); // 1
+extern "C" void __ARClearInterrupt(); // 1
+extern "C" void __ARGetInterruptStatus(); // 1
+extern "C" void TRK_flush_cache(); // 1
+extern "C" void __TRK_get_MSR(); // 1
+extern "C" void TRKSaveExtended1Block(); // 1
+extern "C" void TRK_main(); // 1
+extern "C" void EnableEXI2Interrupts(); // 1
+extern "C" void InitMetroTRKCommTable(); // 1
 SECTION_BSS extern u8 gTRKState[164];
 SECTION_BSS extern u8 gTRKCPUState[1072];
 

@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __kernel_cos();
+extern "C" void __kernel_cos(); // 1
 
-extern "C" void __kernel_cos();
+extern "C" void __kernel_cos(); // 1
 SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_65;
 SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_66;
 SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_67;

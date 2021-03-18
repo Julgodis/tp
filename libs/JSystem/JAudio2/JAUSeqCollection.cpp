@@ -9,57 +9,26 @@
 // Types:
 // 
 
-// build JAUSeqCollection (['JAUSeqCollection']) False/False
-// build JAISeqData (['JAISeqData']) False/False
-/* top-level dependencies (begin ['JAISeqData']) */
-/* top-level dependencies (end ['JAISeqData']) */
 struct JAISeqData {
 };
 
-// build JAISeqDataRegion (['JAISeqDataRegion']) False/False
-/* top-level dependencies (begin ['JAISeqDataRegion']) */
-/* top-level dependencies (end ['JAISeqDataRegion']) */
 struct JAISeqDataRegion {
 };
 
-/* top-level dependencies (begin ['JAUSeqCollection']) */
-// outer dependency: ('JAISeqData',)
-// outer dependency: ('JAISeqDataRegion',)
-/* top-level dependencies (end ['JAUSeqCollection']) */
 struct JAUSeqCollection {
-	// ('JAISeqData',)
-	// ('JAISeqDataRegion',)
 	/* 802A66A0 */ JAUSeqCollection();
 	/* 802A66AC */ void init(void const*);
 	/* 802A66FC */ void getSeqData(int, int, JAISeqData*);
 	/* 802A6754 */ void getSeqDataRegion(JAISeqDataRegion*);
 };
 
-// build JAISeqData (['JAISeqData']) True/True
-// build JAISeqDataRegion (['JAISeqDataRegion']) True/True
-// build JAUSeqDataMgr_SeqCollection (['JAUSeqDataMgr_SeqCollection']) False/False
-// build JAISeqDataUser (['JAISeqDataUser']) False/False
-/* top-level dependencies (begin ['JAISeqDataUser']) */
-/* top-level dependencies (end ['JAISeqDataUser']) */
-struct JAISeqDataUser {
-};
-
-// build JAISeqData (['JAISeqData']) True/True
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['JAUSeqDataMgr_SeqCollection']) */
-// outer dependency: ('JAISeqDataUser',)
-// outer dependency: ('JAISeqData',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['JAUSeqDataMgr_SeqCollection']) */
+struct JAISeqDataUser {
+};
+
 struct JAUSeqDataMgr_SeqCollection {
-	// ('JAISeqDataUser',)
-	// ('JAISeqData',)
-	// ('JAISoundID',)
 	/* 802A677C */ JAUSeqDataMgr_SeqCollection();
 	/* 802A67D0 */ void setSeqDataUser(JAISeqDataUser*);
 	/* 802A67DC */ void releaseSeqData();
@@ -67,11 +36,6 @@ struct JAUSeqDataMgr_SeqCollection {
 	/* 802A6894 */ ~JAUSeqDataMgr_SeqCollection();
 };
 
-// build JAISeqDataUser (['JAISeqDataUser']) True/True
-// build JAISoundID (['JAISoundID']) True/True
-// build JAISeqDataMgr (['JAISeqDataMgr']) False/False
-/* top-level dependencies (begin ['JAISeqDataMgr']) */
-/* top-level dependencies (end ['JAISeqDataMgr']) */
 struct JAISeqDataMgr {
 	/* 802A17BC */ ~JAISeqDataMgr();
 };
@@ -81,25 +45,25 @@ struct JAISeqDataMgr {
 // 
 
 
-extern "C" void __ct__16JAUSeqCollectionFv();
-extern "C" void init__16JAUSeqCollectionFPCv();
-extern "C" void getSeqData__16JAUSeqCollectionFiiP10JAISeqData();
-extern "C" void getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion();
-extern "C" void __ct__27JAUSeqDataMgr_SeqCollectionFv();
-extern "C" void setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser();
-extern "C" void releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv();
-extern "C" void getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData();
-extern "C" void __dt__27JAUSeqDataMgr_SeqCollectionFv();
+extern "C" void __ct__16JAUSeqCollectionFv(); // 1
+extern "C" void init__16JAUSeqCollectionFPCv(); // 1
+extern "C" void getSeqData__16JAUSeqCollectionFiiP10JAISeqData(); // 1
+extern "C" void getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion(); // 1
+extern "C" void __ct__27JAUSeqDataMgr_SeqCollectionFv(); // 1
+extern "C" void setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser(); // 1
+extern "C" void releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv(); // 1
+extern "C" void getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData(); // 1
+extern "C" void __dt__27JAUSeqDataMgr_SeqCollectionFv(); // 1
 SECTION_DATA extern void*const __vt__27JAUSeqDataMgr_SeqCollection[6];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dt__13JAISeqDataMgrFv();
-extern "C" void __dl__FPv();
+extern "C" void __dt__13JAISeqDataMgrFv(); // 1
+extern "C" void __dl__FPv(); // 1
 SECTION_DATA extern void*const __vt__13JAISeqDataMgr[6];
 
 // 

@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build view_class (['view_class']) False/False
-/* top-level dependencies (begin ['view_class']) */
-/* top-level dependencies (end ['view_class']) */
 struct view_class {
 };
 
-// build leafdraw_method_class (['leafdraw_method_class']) False/False
-/* top-level dependencies (begin ['leafdraw_method_class']) */
-/* top-level dependencies (end ['leafdraw_method_class']) */
 struct leafdraw_method_class {
 };
 
-// build process_method_class (['process_method_class']) False/False
-/* top-level dependencies (begin ['process_method_class']) */
-/* top-level dependencies (end ['process_method_class']) */
 struct process_method_class {
 };
 
@@ -31,34 +22,34 @@ struct process_method_class {
 // Forward References:
 // 
 
-static void fopVw_Draw(view_class*);
-static void fopVw_Execute(view_class*);
-static void fopVw_IsDelete(void*);
-static void fopVw_Delete(view_class*);
-static void fopVw_Create(void*);
+static void fopVw_Draw(view_class*); // 2
+static void fopVw_Execute(view_class*); // 2
+static void fopVw_IsDelete(void*); // 2
+static void fopVw_Delete(view_class*); // 2
+static void fopVw_Create(void*); // 2
 
-extern "C" static void fopVw_Draw__FP10view_class();
-extern "C" static void fopVw_Execute__FP10view_class();
-extern "C" static void fopVw_IsDelete__FPv();
-extern "C" static void fopVw_Delete__FP10view_class();
-extern "C" static void fopVw_Create__FPv();
+extern "C" static void fopVw_Draw__FP10view_class(); // 1
+extern "C" static void fopVw_Execute__FP10view_class(); // 1
+extern "C" static void fopVw_IsDelete__FPv(); // 1
+extern "C" static void fopVw_Delete__FP10view_class(); // 1
+extern "C" static void fopVw_Create__FPv(); // 1
 SECTION_DATA extern void*g_fopVw_Method[6];
 
 // 
 // External References:
 // 
 
-void fpcLf_DrawMethod(leafdraw_method_class*, void*);
-void fpcMtd_Execute(process_method_class*, void*);
-void fpcMtd_IsDelete(process_method_class*, void*);
-void fpcMtd_Delete(process_method_class*, void*);
-void fpcMtd_Create(process_method_class*, void*);
+void fpcLf_DrawMethod(leafdraw_method_class*, void*); // 2
+void fpcMtd_Execute(process_method_class*, void*); // 2
+void fpcMtd_IsDelete(process_method_class*, void*); // 2
+void fpcMtd_Delete(process_method_class*, void*); // 2
+void fpcMtd_Create(process_method_class*, void*); // 2
 
-extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
-extern "C" void fpcMtd_Execute__FP20process_method_classPv();
-extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
-extern "C" void fpcMtd_Delete__FP20process_method_classPv();
-extern "C" void fpcMtd_Create__FP20process_method_classPv();
+extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv(); // 1
+extern "C" void fpcMtd_Execute__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_Delete__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
 
 // 
 // Declarations:

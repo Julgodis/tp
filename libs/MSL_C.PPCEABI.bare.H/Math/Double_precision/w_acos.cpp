@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void acos();
+extern "C" void acos(); // 1
 
-extern "C" void acos();
+extern "C" void acos(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __ieee754_acos();
+extern "C" void __ieee754_acos(); // 1
 
-extern "C" void __ieee754_acos();
+extern "C" void __ieee754_acos(); // 1
 
 // 
 // Declarations:

@@ -9,87 +9,45 @@
 // Types:
 // 
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 	/* 80020158 */ void setAlpha(u8);
 };
 
-// build J2DPicture (['J2DPicture']) False/False
-/* top-level dependencies (begin ['J2DPicture']) */
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
 	/* 800202CC */ void setBlendRatio(f32, f32);
 	/* 80020338 */ void append(char const*, f32);
 	/* 80020368 */ void insert(char const*, u8, f32);
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE448 */ void destroy();
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRExpHeap']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
-	// ('JKRHeap',)
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-// build process_priority_class (['process_priority_class']) False/False
-/* top-level dependencies (begin ['process_priority_class']) */
-/* top-level dependencies (end ['process_priority_class']) */
 struct process_priority_class {
 };
 
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
-/* top-level dependencies (begin ['JMSMesgEntry_c']) */
-/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-// outer dependency: ('JMSMesgEntry_c',)
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// ('JMSMesgEntry_c',)
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 };
 
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
-// build dMeter2_c (['dMeter2_c']) False/False
-/* top-level dependencies (begin ['dMeter2_c']) */
-/* top-level dependencies (end ['dMeter2_c']) */
 struct dMeter2_c {
 	/* 8021F6EC */ void emphasisButtonDelete();
 };
 
-// build dMsgObject_c (['dMsgObject_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dMsgObject_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
-	// ('fopAc_ac_c',)
 	/* 80233D04 */ void setMessageIndex(u32, u32, bool);
 	/* 80233E70 */ void setMessageIndexDemo(u32, bool);
 	/* 80237A74 */ void setTalkPartner(fopAc_ac_c*);
@@ -97,9 +55,6 @@ struct dMsgObject_c {
 	/* 8023826C */ void setTalkActor(fopAc_ac_c*);
 };
 
-// build cMl (['cMl']) False/False
-/* top-level dependencies (begin ['cMl']) */
-/* top-level dependencies (end ['cMl']) */
 struct cMl {
 	/* 80263228 */ void memalignB(int, u32);
 };
@@ -108,45 +63,45 @@ struct cMl {
 // Forward References:
 // 
 
-void fopMsgM_setStageLayer(void*);
-void fopMsgM_SearchByID(u32);
-void fopMsgM_GetAppend(void*);
-void fopMsgM_Delete(void*);
-static void createAppend(fopAc_ac_c*, cXyz*, u32*, u32*, u32);
-static void createTimerAppend(int, u32, u8, u8, f32, f32, f32, f32, u32);
-extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i();
-extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i();
-void fopMsgM_messageSet(u32, fopAc_ac_c*, u32);
-void fopMsgM_messageSet(u32, u32);
-void fopMsgM_messageSetDemo(u32);
-void fopMsgM_messageGet(char*, u32);
-void fopMsgM_setMessageID(u32);
-extern "C" void fopMsgM_Create__FsPFPv_iPv();
-void fopMsgM_valueIncrease(int, int, u8);
-void fopMsgM_createExpHeap(u32, JKRHeap*);
-void fopMsgM_destroyExpHeap(JKRExpHeap*);
+void fopMsgM_setStageLayer(void*); // 2
+void fopMsgM_SearchByID(u32); // 2
+void fopMsgM_GetAppend(void*); // 2
+void fopMsgM_Delete(void*); // 2
+static void createAppend(fopAc_ac_c*, cXyz*, u32*, u32*, u32); // 2
+static void createTimerAppend(int, u32, u8, u8, f32, f32, f32, f32, u32); // 2
+extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i(); // 1
+extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i(); // 1
+void fopMsgM_messageSet(u32, fopAc_ac_c*, u32); // 2
+void fopMsgM_messageSet(u32, u32); // 2
+void fopMsgM_messageSetDemo(u32); // 2
+void fopMsgM_messageGet(char*, u32); // 2
+void fopMsgM_setMessageID(u32); // 2
+extern "C" void fopMsgM_Create__FsPFPv_iPv(); // 1
+void fopMsgM_valueIncrease(int, int, u8); // 2
+void fopMsgM_createExpHeap(u32, JKRHeap*); // 2
+void fopMsgM_destroyExpHeap(JKRExpHeap*); // 2
 
-extern "C" void fopMsgM_setStageLayer__FPv();
-extern "C" void fopMsgM_SearchByID__FUi();
-extern "C" void fopMsgM_GetAppend__FPv();
-extern "C" void fopMsgM_Delete__FPv();
-extern "C" static void createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi();
-extern "C" static void createTimerAppend__FiUlUcUcffffUi();
-extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i();
-extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i();
-extern "C" void fopMsgM_messageSet__FUlP10fopAc_ac_cUl();
-extern "C" void fopMsgM_messageSet__FUlUl();
-extern "C" void fopMsgM_messageSetDemo__FUl();
-extern "C" void fopMsgM_messageGet__FPcUl();
-extern "C" void fopMsgM_setMessageID__FUi();
-extern "C" void fopMsgM_Create__FsPFPv_iPv();
-extern "C" void setAlpha__7J2DPaneFUc();
-extern "C" void fopMsgM_valueIncrease__FiiUc();
-extern "C" void setBlendRatio__10J2DPictureFff();
-extern "C" void append__10J2DPictureFPCcf();
-extern "C" void insert__10J2DPictureFPCcUcf();
-extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap();
-extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
+extern "C" void fopMsgM_setStageLayer__FPv(); // 1
+extern "C" void fopMsgM_SearchByID__FUi(); // 1
+extern "C" void fopMsgM_GetAppend__FPv(); // 1
+extern "C" void fopMsgM_Delete__FPv(); // 1
+extern "C" static void createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi(); // 1
+extern "C" static void createTimerAppend__FiUlUcUcffffUi(); // 1
+extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i(); // 1
+extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i(); // 1
+extern "C" void fopMsgM_messageSet__FUlP10fopAc_ac_cUl(); // 1
+extern "C" void fopMsgM_messageSet__FUlUl(); // 1
+extern "C" void fopMsgM_messageSetDemo__FUl(); // 1
+extern "C" void fopMsgM_messageGet__FPcUl(); // 1
+extern "C" void fopMsgM_setMessageID__FUi(); // 1
+extern "C" void fopMsgM_Create__FsPFPv_iPv(); // 1
+extern "C" void setAlpha__7J2DPaneFUc(); // 1
+extern "C" void fopMsgM_valueIncrease__FiiUc(); // 1
+extern "C" void setBlendRatio__10J2DPictureFff(); // 1
+extern "C" void append__10J2DPictureFPCcf(); // 1
+extern "C" void insert__10J2DPictureFPCcUcf(); // 1
+extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap(); // 1
+extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap(); // 1
 SECTION_DATA extern void*f_op_f_op_msg_mng__lit_4305[8];
 SECTION_SDATA extern u32 i_msgID;
 SECTION_SDATA2 extern u8 f_op_f_op_msg_mng__lit_3902[4];
@@ -161,49 +116,49 @@ SECTION_SDATA2 extern f64 f_op_f_op_msg_mng__lit_4303;
 // External References:
 // 
 
-void mDoExt_getGameHeap();
-void fopScnM_SearchByID(u32);
-void fpcBs_Is_JustOfType(int, int);
-void fpcEx_SearchByID(u32);
-void fpcLy_CurrentLayer();
-void fpcM_Delete(void*);
-void fpcPi_Change(process_priority_class*, u32, u16, u16);
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void mDoExt_getGameHeap(); // 2
+void fopScnM_SearchByID(u32); // 2
+void fpcBs_Is_JustOfType(int, int); // 2
+void fpcEx_SearchByID(u32); // 2
+void fpcLy_CurrentLayer(); // 2
+void fpcM_Delete(void*); // 2
+void fpcPi_Change(process_priority_class*, u32, u16, u16); // 2
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void mDoExt_getGameHeap__Fv();
-extern "C" void fopScnM_SearchByID__FUi();
-extern "C" void fpcBs_Is_JustOfType__Fii();
-extern "C" void fpcEx_SearchByID__FUi();
-extern "C" void fpcLy_CurrentLayer__Fv();
-extern "C" void fpcM_Delete__FPv();
-extern "C" void fpcPi_Change__FP22process_priority_classUiUsUs();
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" void emphasisButtonDelete__9dMeter2_cFv();
-extern "C" void setMessageIndex__12dMsgObject_cFUlUlb();
-extern "C" void setMessageIndexDemo__12dMsgObject_cFUlb();
-extern "C" void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c();
-extern "C" void endFlowGroup__12dMsgObject_cFv();
-extern "C" void setTalkActor__12dMsgObject_cFP10fopAc_ac_c();
-extern "C" void memalignB__3cMlFiUl();
-extern "C" void destroy__7JKRHeapFv();
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void mDoExt_getGameHeap__Fv(); // 1
+extern "C" void fopScnM_SearchByID__FUi(); // 1
+extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
+extern "C" void fpcEx_SearchByID__FUi(); // 1
+extern "C" void fpcLy_CurrentLayer__Fv(); // 1
+extern "C" void fpcM_Delete__FPv(); // 1
+extern "C" void fpcPi_Change__FP22process_priority_classUiUsUs(); // 1
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void emphasisButtonDelete__9dMeter2_cFv(); // 1
+extern "C" void setMessageIndex__12dMsgObject_cFUlUlb(); // 1
+extern "C" void setMessageIndexDemo__12dMsgObject_cFUlb(); // 1
+extern "C" void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c(); // 1
+extern "C" void endFlowGroup__12dMsgObject_cFv(); // 1
+extern "C" void setTalkActor__12dMsgObject_cFP10fopAc_ac_c(); // 1
+extern "C" void memalignB__3cMlFiUl(); // 1
+extern "C" void destroy__7JKRHeapFv(); // 1
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_meter2_info[248];
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];

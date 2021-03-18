@@ -9,58 +9,20 @@
 // Types:
 // 
 
-// build JStudio_JParticle (['JStudio_JParticle']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) False/False
-/* top-level dependencies (begin ['JPABaseEmitter']) */
-/* top-level dependencies (end ['JPABaseEmitter']) */
-struct JPABaseEmitter {
-};
-
-// build JStudio (['JStudio']) False/False
-// build JStudio (['JStudio']) True/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate')
-// outer dependency: ('Vec',)
-// outer dependency: ('_GXColor',)
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build data (['JStudio', 'data']) False/False
-	/* dependencies (begin ['JStudio', 'data']) */
-	/* dependencies (end ['JStudio', 'data']) */
 	struct data {
-		// build TEOperationData (['JStudio', 'data', 'TEOperationData']) False/False
-		/* dependencies (begin ['JStudio', 'data', 'TEOperationData']) */
-		/* dependencies (end ['JStudio', 'data', 'TEOperationData']) */
 		struct TEOperationData {
 		};
 
 	};
 
-	// build TAdaptor (['JStudio', 'TAdaptor']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor']) */
-	// inner dependency: 1 ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate') (for ['JStudio', 'TAdaptor'])
-	// inner dependency: 0 ('Vec',) (for ['JStudio', 'TAdaptor'])
-	// inner dependency: 0 ('_GXColor',) (for ['JStudio', 'TAdaptor'])
-	/* dependencies (end ['JStudio', 'TAdaptor']) */
 	struct TAdaptor {
-		// ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate')
-		// ('Vec',)
-		// ('_GXColor',)
-		// build TSetVariableValue_immediate (['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) False/False
-		/* dependencies (begin ['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) */
-		/* dependencies (end ['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) */
 		struct TSetVariableValue_immediate {
 		};
 
@@ -71,62 +33,31 @@ namespace JStudio {
 		/* 8028638C */ void adaptor_getVariableValue_GXColor(_GXColor*, u32 const*) const;
 	};
 
-	// build TAdaptor_particle (['JStudio', 'TAdaptor_particle']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_particle']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_particle']) */
 	struct TAdaptor_particle {
 		/* 8028770C */ ~TAdaptor_particle();
 	};
 
-	// build TControl (['JStudio', 'TControl']) False/False
-	/* dependencies (begin ['JStudio', 'TControl']) */
-	/* dependencies (end ['JStudio', 'TControl']) */
 	struct TControl {
-		// build TTransform_translation_rotation_scaling (['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) False/False
-		/* dependencies (begin ['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) */
-		/* dependencies (end ['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) */
 		struct TTransform_translation_rotation_scaling {
 		};
 
 	};
 
-	// build TVariableValue (['JStudio', 'TVariableValue']) False/False
-	/* dependencies (begin ['JStudio', 'TVariableValue']) */
-	/* dependencies (end ['JStudio', 'TVariableValue']) */
 	struct TVariableValue {
 		/* 8028B568 */ TVariableValue();
 	};
 
 };
 
-// build JStudio_JParticle (['JStudio_JParticle']) True/False
-struct JStudio_JParticle;
-/* top-level dependencies (begin ['JStudio_JParticle']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JStudio', 'data', 'TEOperationData')
-// outer dependency: ('JStudio_JParticle', 'TCreateObject')
-/* top-level dependencies (end ['JStudio_JParticle']) */
+struct JPABaseEmitter {
+};
+
 struct JStudio_JParticle {
-	// build TAdaptor_particle (['JStudio_JParticle', 'TAdaptor_particle']) False/False
-	/* dependencies (begin ['JStudio_JParticle', 'TAdaptor_particle']) */
-	// inner dependency: 0 ('JStudio', 'data', 'TEOperationData') (for ['JStudio_JParticle', 'TAdaptor_particle'])
-	// inner dependency: 1 ('JStudio_JParticle', 'TCreateObject') (for ['JStudio_JParticle', 'TAdaptor_particle'])
-	// build TCreateObject (['JStudio_JParticle', 'TCreateObject']) False/False
-	/* dependencies (begin ['JStudio_JParticle', 'TCreateObject']) */
-	/* dependencies (end ['JStudio_JParticle', 'TCreateObject']) */
 	struct TCreateObject {
 	};
 
-	/* dependencies (end ['JStudio_JParticle', 'TAdaptor_particle']) */
 	struct TAdaptor_particle {
-		// ('JStudio', 'data', 'TEOperationData')
-		// ('JStudio_JParticle', 'TCreateObject')
-		// build TJPACallback_emitter_ (['JStudio_JParticle', 'TAdaptor_particle', 'TJPACallback_emitter_']) False/False
-		/* dependencies (begin ['JStudio_JParticle', 'TAdaptor_particle', 'TJPACallback_emitter_']) */
-		// inner dependency: 0 ('JPABaseEmitter',) (for ['JStudio_JParticle', 'TAdaptor_particle', 'TJPACallback_emitter_'])
-		/* dependencies (end ['JStudio_JParticle', 'TAdaptor_particle', 'TJPACallback_emitter_']) */
 		struct TJPACallback_emitter_ {
-			// ('JPABaseEmitter',)
 			/* 8028E700 */ ~TJPACallback_emitter_();
 			/* 8028ECC0 */ void execute(JPABaseEmitter*);
 			/* 8028F060 */ void executeAfter(JPABaseEmitter*);
@@ -154,73 +85,59 @@ struct JStudio_JParticle {
 		/* 8028F1C0 */ void endParticle_fadeOut_(u32);
 	};
 
-	// build TCreateObject (['JStudio_JParticle', 'TCreateObject']) True/True
 };
 
-// build JStudio (['JStudio']) True/True
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPAEmitterCallBack (['JPAEmitterCallBack']) False/False
-/* top-level dependencies (begin ['JPAEmitterCallBack']) */
-/* top-level dependencies (end ['JPAEmitterCallBack']) */
 struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
-// build Vec (['Vec']) True/True
-// build _GXColor (['_GXColor']) True/True
-// build JStudio_JStage (['JStudio_JStage']) False/False
-// build JStudio (['JStudio']) True/True
-// build JStage (['JStage']) False/False
-/* top-level dependencies (begin ['JStage']) */
-/* top-level dependencies (end ['JStage']) */
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
 struct JStage {
-	// build TObject (['JStage', 'TObject']) False/False
-	/* dependencies (begin ['JStage', 'TObject']) */
-	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 	};
 
 };
 
-/* top-level dependencies (begin ['JStudio_JStage']) */
-// outer dependency: ('JStudio', 'TControl', 'TTransform_translation_rotation_scaling')
-// outer dependency: ('JStage', 'TObject')
-/* top-level dependencies (end ['JStudio_JStage']) */
 struct JStudio_JStage {
-	// ('JStudio', 'TControl', 'TTransform_translation_rotation_scaling')
-	// ('JStage', 'TObject')
 	/* 8028A1F8 */ void transform_toGlobalFromLocal(f32 (* )[4], JStudio::TControl::TTransform_translation_rotation_scaling const&, JStage::TObject const*, u32);
 };
 
-// build JStage (['JStage']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject();
-extern "C" void __dt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_Fv();
-extern "C" void __dt__Q217JStudio_JParticle17TAdaptor_particleFv();
-extern "C" void adaptor_do_prepare__Q217JStudio_JParticle17TAdaptor_particleFv();
-extern "C" void adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv();
-extern "C" void adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl();
-extern "C" void adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
-extern "C" void executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
-extern "C" void draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
-extern "C" void drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter();
-extern "C" void beginParticle_fadeIn___Q217JStudio_JParticle17TAdaptor_particleFv();
-extern "C" void endParticle_fadeOut___Q217JStudio_JParticle17TAdaptor_particleFUl();
+extern "C" void __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject(); // 1
+extern "C" void __dt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_Fv(); // 1
+extern "C" void __dt__Q217JStudio_JParticle17TAdaptor_particleFv(); // 1
+extern "C" void adaptor_do_prepare__Q217JStudio_JParticle17TAdaptor_particleFv(); // 1
+extern "C" void adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv(); // 1
+extern "C" void adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl(); // 1
+extern "C" void adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter(); // 1
+extern "C" void executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter(); // 1
+extern "C" void draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter(); // 1
+extern "C" void drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter(); // 1
+extern "C" void beginParticle_fadeIn___Q217JStudio_JParticle17TAdaptor_particleFv(); // 1
+extern "C" void endParticle_fadeOut___Q217JStudio_JParticle17TAdaptor_particleFUl(); // 1
 SECTION_DATA extern void*const __vt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_[7];
 SECTION_DATA extern void*const __vt__Q217JStudio_JParticle17TAdaptor_particle[19];
 SECTION_BSS extern u8 data_80431540[144];
@@ -237,32 +154,32 @@ SECTION_SDATA2 extern f64 lit_1629;
 // External References:
 // 
 
-void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]);
-extern "C" void func_80280808();
-void operator delete(void*);
-extern "C" void PSMTXMultVec();
-extern "C" void __construct_array();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
+void JPASetRMtxSTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3<f32>*, JGeometry::TVec3<f32>*); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void __dt__18JPAEmitterCallBackFv();
-extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
-extern "C" void func_80280808();
-extern "C" void adaptor_do_begin__Q27JStudio8TAdaptorFv();
-extern "C" void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl();
-extern "C" void adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate();
-extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl();
-extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
-extern "C" void __dt__Q27JStudio17TAdaptor_particleFv();
-extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
-extern "C" void __ct__Q27JStudio14TVariableValueFv();
-extern "C" void __dl__FPv();
-extern "C" void PSMTXMultVec();
-extern "C" void __construct_array();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void __dt__18JPAEmitterCallBackFv(); // 1
+extern "C" void JPAGetXYZRotateMtx__FsssPA4_f(); // 1
+extern "C" void func_80280808(); // 1
+extern "C" void adaptor_do_begin__Q27JStudio8TAdaptorFv(); // 1
+extern "C" void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl(); // 1
+extern "C" void adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate(); // 1
+extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl(); // 1
+extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl(); // 1
+extern "C" void __dt__Q27JStudio17TAdaptor_particleFv(); // 1
+extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl(); // 1
+extern "C" void __ct__Q27JStudio14TVariableValueFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_RODATA extern const u8 sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio17TAdaptor_particle[12];
 SECTION_RODATA extern const u8 sauVariableValue_3_ROTATION_XYZ__Q27JStudio17TAdaptor_particle[12];
 SECTION_RODATA extern const u8 sauVariableValue_3_SCALING_XYZ__Q27JStudio17TAdaptor_particle[12];

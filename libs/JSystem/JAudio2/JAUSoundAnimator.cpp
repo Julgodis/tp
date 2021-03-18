@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JAUSoundAnimation (['JAUSoundAnimation']) False/False
-/* top-level dependencies (begin ['JAUSoundAnimation']) */
-/* top-level dependencies (end ['JAUSoundAnimation']) */
 struct JAUSoundAnimation {
 	/* 802A6F70 */ void getStartSoundIndex(f32) const;
 	/* 802A7044 */ void getEndSoundIndex(f32) const;
@@ -22,18 +19,18 @@ struct JAUSoundAnimation {
 // 
 
 
-extern "C" void getStartSoundIndex__17JAUSoundAnimationCFf();
-extern "C" void getEndSoundIndex__17JAUSoundAnimationCFf();
+extern "C" void getStartSoundIndex__17JAUSoundAnimationCFf(); // 1
+extern "C" void getEndSoundIndex__17JAUSoundAnimationCFf(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
 // 
 // Declarations:

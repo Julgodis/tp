@@ -9,46 +9,25 @@
 // Types:
 // 
 
-// build JKRAramBlock (['JKRAramBlock']) False/False
-// build JKRAramHeap (['JKRAramHeap']) False/False
-/* top-level dependencies (begin ['JKRAramHeap']) */
-/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
 };
 
-/* top-level dependencies (begin ['JKRAramBlock']) */
-// outer dependency: ('JKRAramHeap',)
-/* top-level dependencies (end ['JKRAramBlock']) */
 struct JKRAramBlock {
-	// ('JKRAramHeap',)
 	/* 802D3304 */ JKRAramBlock(u32, u32, u32, u8, bool);
 	/* 802D3378 */ ~JKRAramBlock();
 	/* 802D3434 */ void allocHead(u32, u8, JKRAramHeap*);
 	/* 802D34D0 */ void allocTail(u32, u8, JKRAramHeap*);
 };
 
-// build JKRAramHeap (['JKRAramHeap']) True/True
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) True/True
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DC094 */ void insert(JSUPtrLink*, JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
@@ -58,33 +37,33 @@ struct JSUPtrList {
 // 
 
 
-extern "C" void __ct__12JKRAramBlockFUlUlUlUcb();
-extern "C" void __dt__12JKRAramBlockFv();
-extern "C" void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap();
-extern "C" void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap();
+extern "C" void __ct__12JKRAramBlockFUlUlUlUcb(); // 1
+extern "C" void __dt__12JKRAramBlockFv(); // 1
+extern "C" void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap(); // 1
+extern "C" void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap(); // 1
 SECTION_DATA extern void*const __vt__12JKRAramBlock[4];
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
+void* operator new(u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
 
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void __ct__10JSUPtrLinkFPv();
-extern "C" void __dt__10JSUPtrLinkFv();
-extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__10JSUPtrLinkFPv(); // 1
+extern "C" void __dt__10JSUPtrLinkFv(); // 1
+extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink(); // 1
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
 
 // 
 // Declarations:

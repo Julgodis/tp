@@ -9,34 +9,16 @@
 // Types:
 // 
 
-// build dMenu_Fishing_c (['dMenu_Fishing_c']) False/False
-// build STControl (['STControl']) False/False
-/* top-level dependencies (begin ['STControl']) */
-/* top-level dependencies (end ['STControl']) */
-struct STControl {
-};
-
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 };
 
-// build CSTControl (['CSTControl']) False/False
-/* top-level dependencies (begin ['CSTControl']) */
-/* top-level dependencies (end ['CSTControl']) */
 struct CSTControl {
 };
 
-/* top-level dependencies (begin ['dMenu_Fishing_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Fishing_c']) */
+struct STControl {
+};
+
 struct dMenu_Fishing_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801C4D54 */ dMenu_Fishing_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801C4D98 */ ~dMenu_Fishing_c();
 	/* 801C504C */ void _create();
@@ -58,118 +40,55 @@ struct dMenu_Fishing_c {
 	/* 801C659C */ void draw();
 };
 
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build STControl (['STControl']) True/True
-// build CSTControl (['CSTControl']) True/True
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build mDoDvdThd_mountArchive_c (['mDoDvdThd_mountArchive_c']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['mDoDvdThd_mountArchive_c']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['mDoDvdThd_mountArchive_c']) */
 struct mDoDvdThd_mountArchive_c {
-	// ('JKRHeap',)
 	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
-/* top-level dependencies (begin ['JMSMesgEntry_c']) */
-/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-// outer dependency: ('JMSMesgEntry_c',)
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// ('JMSMesgEntry_c',)
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
-// build dMsgString_c (['dMsgString_c']) False/False
-/* top-level dependencies (begin ['dMsgString_c']) */
-/* top-level dependencies (end ['dMsgString_c']) */
 struct dMsgString_c {
 	/* 80249C20 */ dMsgString_c();
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (['JKRExpHeap']) True/True
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build J2DPicture (['J2DPicture']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['J2DPicture']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-// build ResTIMG (['ResTIMG']) True/True
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 	/* 8030074C */ void setString(s16, char const*, ...);
@@ -179,28 +98,28 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_fishing_cpp();
+extern "C" void __sinit_d_menu_fishing_cpp(); // 1
 
-extern "C" void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern "C" void __dt__15dMenu_Fishing_cFv();
-extern "C" void _create__15dMenu_Fishing_cFv();
-extern "C" void _move__15dMenu_Fishing_cFv();
-extern "C" void _draw__15dMenu_Fishing_cFv();
-extern "C" void isSync__15dMenu_Fishing_cFv();
-extern "C" void init__15dMenu_Fishing_cFv();
-extern "C" void _open__15dMenu_Fishing_cFv();
-extern "C" void _close__15dMenu_Fishing_cFv();
-extern "C" void wait_init__15dMenu_Fishing_cFv();
-extern "C" void wait_move__15dMenu_Fishing_cFv();
-extern "C" void screenSetBase__15dMenu_Fishing_cFv();
-extern "C" void screenSetDoIcon__15dMenu_Fishing_cFv();
-extern "C" void setAButtonString__15dMenu_Fishing_cFUs();
-extern "C" void setBButtonString__15dMenu_Fishing_cFUs();
-extern "C" void getFigure__15dMenu_Fishing_cFi();
-extern "C" void setFishParam__15dMenu_Fishing_cFiUsUc();
-extern "C" void setHIO__15dMenu_Fishing_cFb();
-extern "C" void draw__15dMenu_Fishing_cFv();
-extern "C" void __sinit_d_menu_fishing_cpp();
+extern "C" void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
+extern "C" void __dt__15dMenu_Fishing_cFv(); // 1
+extern "C" void _create__15dMenu_Fishing_cFv(); // 1
+extern "C" void _move__15dMenu_Fishing_cFv(); // 1
+extern "C" void _draw__15dMenu_Fishing_cFv(); // 1
+extern "C" void isSync__15dMenu_Fishing_cFv(); // 1
+extern "C" void init__15dMenu_Fishing_cFv(); // 1
+extern "C" void _open__15dMenu_Fishing_cFv(); // 1
+extern "C" void _close__15dMenu_Fishing_cFv(); // 1
+extern "C" void wait_init__15dMenu_Fishing_cFv(); // 1
+extern "C" void wait_move__15dMenu_Fishing_cFv(); // 1
+extern "C" void screenSetBase__15dMenu_Fishing_cFv(); // 1
+extern "C" void screenSetDoIcon__15dMenu_Fishing_cFv(); // 1
+extern "C" void setAButtonString__15dMenu_Fishing_cFUs(); // 1
+extern "C" void setBButtonString__15dMenu_Fishing_cFUs(); // 1
+extern "C" void getFigure__15dMenu_Fishing_cFi(); // 1
+extern "C" void setFishParam__15dMenu_Fishing_cFiUsUc(); // 1
+extern "C" void setHIO__15dMenu_Fishing_cFb(); // 1
+extern "C" void draw__15dMenu_Fishing_cFv(); // 1
+extern "C" void __sinit_d_menu_fishing_cpp(); // 1
 SECTION_RODATA extern const u8 data_80395D90[48];
 SECTION_RODATA extern const u8 data_80395DC0[48];
 SECTION_RODATA extern const u8 data_80395DF0[48];
@@ -234,66 +153,66 @@ SECTION_SDATA2 extern f64 d_menu_d_menu_fishing__lit_4012;
 // External References:
 // 
 
-void mDoExt_setCurrentHeap(JKRHeap*);
-void mDoExt_getMesgFont();
-void mDoExt_getSubFont();
-void dPaneClass_showNullPane(J2DScreen*);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_18();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_18();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcpy();
+void mDoExt_setCurrentHeap(JKRHeap*); // 2
+void mDoExt_getMesgFont(); // 2
+void mDoExt_getSubFont(); // 2
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_18(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void mDoExt_getSubFont__Fv();
-extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" void __ct__12dMsgString_cFv();
-extern "C" void __dt__12dMsgString_cFv();
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void paneTrans__8CPaneMgrFff();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" void show__13CPaneMgrAlphaFv();
-extern "C" void hide__13CPaneMgrAlphaFv();
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" void getStringPtr__10J2DTextBoxCFv();
-extern "C" void setString__10J2DTextBoxFsPCce();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_18();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_18();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcpy();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void mDoExt_getSubFont__Fv(); // 1
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap(); // 1
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void __ct__12dMsgString_cFv(); // 1
+extern "C" void __dt__12dMsgString_cFv(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void paneTrans__8CPaneMgrFff(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void show__13CPaneMgrAlphaFv(); // 1
+extern "C" void hide__13CPaneMgrAlphaFv(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
+extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
+extern "C" void setString__10J2DTextBoxFsPCce(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_18(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcpy(); // 1
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];

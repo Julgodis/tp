@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build daItemBase_c (['daItemBase_c']) False/False
-/* top-level dependencies (begin ['daItemBase_c']) */
-/* top-level dependencies (end ['daItemBase_c']) */
 struct daItemBase_c {
 	/* 80037A5C */ void getItemNo();
 	/* 80037A64 */ void hide();
@@ -23,9 +20,6 @@ struct daItemBase_c {
 	/* 8014475C */ void CreateItemHeap(char const*, s16, s16, s16, s16, s16, s16, s16);
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
@@ -33,18 +27,18 @@ struct fopAc_ac_c {
 // Forward References:
 // 
 
-void CheckItemCreateHeap(fopAc_ac_c*);
-void CheckFieldItemCreateHeap(fopAc_ac_c*);
+void CheckItemCreateHeap(fopAc_ac_c*); // 2
+void CheckFieldItemCreateHeap(fopAc_ac_c*); // 2
 
-extern "C" void getItemNo__12daItemBase_cFv();
-extern "C" void hide__12daItemBase_cFv();
-extern "C" void show__12daItemBase_cFv();
-extern "C" void changeDraw__12daItemBase_cFv();
-extern "C" void chkDraw__12daItemBase_cFv();
-extern "C" void dead__12daItemBase_cFv();
-extern "C" void chkDead__12daItemBase_cFv();
-extern "C" void CheckItemCreateHeap__FP10fopAc_ac_c();
-extern "C" void CheckFieldItemCreateHeap__FP10fopAc_ac_c();
+extern "C" void getItemNo__12daItemBase_cFv(); // 1
+extern "C" void hide__12daItemBase_cFv(); // 1
+extern "C" void show__12daItemBase_cFv(); // 1
+extern "C" void changeDraw__12daItemBase_cFv(); // 1
+extern "C" void chkDraw__12daItemBase_cFv(); // 1
+extern "C" void dead__12daItemBase_cFv(); // 1
+extern "C" void chkDead__12daItemBase_cFv(); // 1
+extern "C" void CheckItemCreateHeap__FP10fopAc_ac_c(); // 1
+extern "C" void CheckFieldItemCreateHeap__FP10fopAc_ac_c(); // 1
 SECTION_RODATA extern const u8 m_data__12daItemBase_c[56];
 
 // 
@@ -52,7 +46,7 @@ SECTION_RODATA extern const u8 m_data__12daItemBase_c[56];
 // 
 
 
-extern "C" void CreateItemHeap__12daItemBase_cFPCcsssssss();
+extern "C" void CreateItemHeap__12daItemBase_cFPCcsssssss(); // 1
 SECTION_DATA extern void*item_resource__10dItem_data[1530];
 SECTION_DATA extern u8 field_item_res__10dItem_data[4080];
 

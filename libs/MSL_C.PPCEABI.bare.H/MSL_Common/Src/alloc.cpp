@@ -9,15 +9,15 @@
 // Forward References:
 // 
 
-extern "C" void free();
-extern "C" static void __pool_free();
-extern "C" static void deallocate_from_fixed_pools();
-extern "C" static void deallocate_from_var_pools();
+extern "C" void free(); // 1
+extern "C" static void __pool_free(); // 1
+extern "C" static void deallocate_from_fixed_pools(); // 1
+extern "C" static void deallocate_from_var_pools(); // 1
 
-extern "C" void free();
-extern "C" static void __pool_free();
-extern "C" static void deallocate_from_fixed_pools();
-extern "C" static void deallocate_from_var_pools();
+extern "C" void free(); // 1
+extern "C" static void __pool_free(); // 1
+extern "C" static void deallocate_from_fixed_pools(); // 1
+extern "C" static void deallocate_from_var_pools(); // 1
 SECTION_RODATA extern const u8 fix_pool_sizes[24];
 SECTION_BSS extern u8 data_8044D540[56];
 
@@ -25,15 +25,15 @@ SECTION_BSS extern u8 data_8044D540[56];
 // External References:
 // 
 
-SECTION_INIT void memset();
-extern "C" void __sys_free();
-extern "C" void __end_critical_region();
-extern "C" void __begin_critical_region();
+SECTION_INIT void memset(); // 1
+extern "C" void __sys_free(); // 1
+extern "C" void __end_critical_region(); // 1
+extern "C" void __begin_critical_region(); // 1
 
-SECTION_INIT void memset();
-extern "C" void __sys_free();
-extern "C" void __end_critical_region();
-extern "C" void __begin_critical_region();
+SECTION_INIT void memset(); // 1
+extern "C" void __sys_free(); // 1
+extern "C" void __end_critical_region(); // 1
+extern "C" void __begin_critical_region(); // 1
 SECTION_SBSS extern u8 data_804519A0[8];
 
 // 

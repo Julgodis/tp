@@ -9,42 +9,19 @@
 // Types:
 // 
 
-// build JPAResourceManager (['JPAResourceManager']) False/False
-// build JPATexture (['JPATexture']) False/False
-/* top-level dependencies (begin ['JPATexture']) */
-/* top-level dependencies (end ['JPATexture']) */
 struct JPATexture {
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-};
-
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
-struct ResTIMG {
-};
-
-// build JPAResource (['JPAResource']) False/False
-/* top-level dependencies (begin ['JPAResource']) */
-/* top-level dependencies (end ['JPAResource']) */
 struct JPAResource {
 };
 
-/* top-level dependencies (begin ['JPAResourceManager']) */
-// outer dependency: ('JPATexture',)
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('ResTIMG',)
-// outer dependency: ('JPAResource',)
-/* top-level dependencies (end ['JPAResourceManager']) */
+struct JKRHeap {
+};
+
+struct ResTIMG {
+};
+
 struct JPAResourceManager {
-	// ('JPATexture',)
-	// ('JKRHeap',)
-	// ('ResTIMG',)
-	// ('JPAResource',)
 	/* 80273E10 */ JPAResourceManager(void const*, JKRHeap*);
 	/* 80273E68 */ void getResource(u16) const;
 	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
@@ -54,27 +31,11 @@ struct JPAResourceManager {
 	/* 80273FCC */ void getResUserWork(u16) const;
 };
 
-// build JKRHeap (['JKRHeap']) True/True
-// build ResTIMG (['ResTIMG']) True/True
-// build JPAResource (['JPAResource']) True/True
-// build JPATexture (['JPATexture']) True/True
-// build JPAResourceLoader (['JPAResourceLoader']) False/False
-// build JPAResourceManager (['JPAResourceManager']) True/True
-/* top-level dependencies (begin ['JPAResourceLoader']) */
-// outer dependency: ('JPAResourceManager',)
-/* top-level dependencies (end ['JPAResourceLoader']) */
 struct JPAResourceLoader {
-	// ('JPAResourceManager',)
 	/* 8027D8A0 */ JPAResourceLoader(u8 const*, JPAResourceManager*);
 };
 
-// build JUTTexture (['JUTTexture']) False/False
-// build ResTIMG (['ResTIMG']) True/True
-/* top-level dependencies (begin ['JUTTexture']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// ('ResTIMG',)
 	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 };
 
@@ -83,27 +44,27 @@ struct JUTTexture {
 // 
 
 
-extern "C" void __ct__18JPAResourceManagerFPCvP7JKRHeap();
-extern "C" void getResource__18JPAResourceManagerCFUs();
-extern "C" void checkUserIndexDuplication__18JPAResourceManagerCFUs();
-extern "C" void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc();
-extern "C" void registRes__18JPAResourceManagerFP11JPAResource();
-extern "C" void registTex__18JPAResourceManagerFP10JPATexture();
-extern "C" void getResUserWork__18JPAResourceManagerCFUs();
+extern "C" void __ct__18JPAResourceManagerFPCvP7JKRHeap(); // 1
+extern "C" void getResource__18JPAResourceManagerCFUs(); // 1
+extern "C" void checkUserIndexDuplication__18JPAResourceManagerCFUs(); // 1
+extern "C" void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc(); // 1
+extern "C" void registRes__18JPAResourceManagerFP11JPAResource(); // 1
+extern "C" void registTex__18JPAResourceManagerFP10JPATexture(); // 1
+extern "C" void getResUserWork__18JPAResourceManagerCFUs(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
-extern "C" void strcmp();
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
-extern "C" void strcmp();
+extern "C" void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager(); // 1
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void strcmp(); // 1
 
 // 
 // Declarations:

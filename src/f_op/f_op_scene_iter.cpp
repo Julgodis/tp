@@ -9,15 +9,9 @@
 // Types:
 // 
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build judge_filter (['judge_filter']) False/False
-/* top-level dependencies (begin ['judge_filter']) */
-/* top-level dependencies (end ['judge_filter']) */
 struct judge_filter {
 };
 
@@ -25,19 +19,19 @@ struct judge_filter {
 // Forward References:
 // 
 
-extern "C" void fopScnIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopScnIt_Judge__FPFPvPv_PvPv(); // 1
 
-extern "C" void fopScnIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopScnIt_Judge__FPFPvPv_PvPv(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
-void cTgIt_JudgeFilter(create_tag_class*, judge_filter*);
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
+void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); // 2
 
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
-extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
+extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter(); // 1
 SECTION_DATA extern u8 g_fopScnTg_SceneList[12 + 4 /* padding */];
 
 // 

@@ -9,15 +9,9 @@
 // Types:
 // 
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
-// build node_class (['node_class']) False/False
-/* top-level dependencies (begin ['node_class']) */
-/* top-level dependencies (end ['node_class']) */
 struct node_class {
 };
 
@@ -25,47 +19,47 @@ struct node_class {
 // Forward References:
 // 
 
-static void cLs_Init(node_list_class*);
-void cLs_SingleCut(node_class*);
-void cLs_Addition(node_list_class*, node_class*);
-void cLs_Insert(node_list_class*, int, node_class*);
-void cLs_GetFirst(node_list_class*);
-void cLs_Create(node_list_class*);
+static void cLs_Init(node_list_class*); // 2
+void cLs_SingleCut(node_class*); // 2
+void cLs_Addition(node_list_class*, node_class*); // 2
+void cLs_Insert(node_list_class*, int, node_class*); // 2
+void cLs_GetFirst(node_list_class*); // 2
+void cLs_Create(node_list_class*); // 2
 
-extern "C" static void cLs_Init__FP15node_list_class();
-extern "C" void cLs_SingleCut__FP10node_class();
-extern "C" void cLs_Addition__FP15node_list_classP10node_class();
-extern "C" void cLs_Insert__FP15node_list_classiP10node_class();
-extern "C" void cLs_GetFirst__FP15node_list_class();
-extern "C" void cLs_Create__FP15node_list_class();
+extern "C" static void cLs_Init__FP15node_list_class(); // 1
+extern "C" void cLs_SingleCut__FP10node_class(); // 1
+extern "C" void cLs_Addition__FP15node_list_classP10node_class(); // 1
+extern "C" void cLs_Insert__FP15node_list_classiP10node_class(); // 1
+extern "C" void cLs_GetFirst__FP15node_list_class(); // 1
+extern "C" void cLs_Create__FP15node_list_class(); // 1
 
 // 
 // External References:
 // 
 
-void cNd_LengthOf(node_class*);
-void cNd_First(node_class*);
-void cNd_Last(node_class*);
-void cNd_Order(node_class*, int);
-void cNd_SingleCut(node_class*);
-void cNd_Addition(node_class*, node_class*);
-void cNd_Insert(node_class*, node_class*);
-void cNd_SetObject(node_class*, void*);
-void cNd_ClearObject(node_class*);
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void cNd_LengthOf(node_class*); // 2
+void cNd_First(node_class*); // 2
+void cNd_Last(node_class*); // 2
+void cNd_Order(node_class*, int); // 2
+void cNd_SingleCut(node_class*); // 2
+void cNd_Addition(node_class*, node_class*); // 2
+void cNd_Insert(node_class*, node_class*); // 2
+void cNd_SetObject(node_class*, void*); // 2
+void cNd_ClearObject(node_class*); // 2
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void cNd_LengthOf__FP10node_class();
-extern "C" void cNd_First__FP10node_class();
-extern "C" void cNd_Last__FP10node_class();
-extern "C" void cNd_Order__FP10node_classi();
-extern "C" void cNd_SingleCut__FP10node_class();
-extern "C" void cNd_Addition__FP10node_classP10node_class();
-extern "C" void cNd_Insert__FP10node_classP10node_class();
-extern "C" void cNd_SetObject__FP10node_classPv();
-extern "C" void cNd_ClearObject__FP10node_class();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void cNd_LengthOf__FP10node_class(); // 1
+extern "C" void cNd_First__FP10node_class(); // 1
+extern "C" void cNd_Last__FP10node_class(); // 1
+extern "C" void cNd_Order__FP10node_classi(); // 1
+extern "C" void cNd_SingleCut__FP10node_class(); // 1
+extern "C" void cNd_Addition__FP10node_classP10node_class(); // 1
+extern "C" void cNd_Insert__FP10node_classP10node_class(); // 1
+extern "C" void cNd_SetObject__FP10node_classPv(); // 1
+extern "C" void cNd_ClearObject__FP10node_class(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

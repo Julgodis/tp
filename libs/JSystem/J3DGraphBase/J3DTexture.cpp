@@ -9,41 +9,26 @@
 // Types:
 // 
 
-// build J3DTexture (['J3DTexture']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-// build _GXTexMapID (['_GXTexMapID']) False/False
-/* top-level dependencies (begin ['_GXTexMapID']) */
-/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-/* top-level dependencies (begin ['J3DTexture']) */
-// outer dependency: ('ResTIMG',)
-// outer dependency: ('_GXTexMapID',)
-/* top-level dependencies (end ['J3DTexture']) */
 struct J3DTexture {
-	// ('ResTIMG',)
-	// ('_GXTexMapID',)
 	/* 8031204C */ void loadGX(u16, _GXTexMapID) const;
 	/* 803121A4 */ void entryNum(u16);
 	/* 8031221C */ void addResTIMG(u16, ResTIMG const*);
 };
 
-// build _GXTexMapID (['_GXTexMapID']) True/True
-// build ResTIMG (['ResTIMG']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void loadGX__10J3DTextureCFUs11_GXTexMapID();
-extern "C" void entryNum__10J3DTextureFUs();
-extern "C" void addResTIMG__10J3DTextureFUsPC7ResTIMG();
+extern "C" void loadGX__10J3DTextureCFUs11_GXTexMapID(); // 1
+extern "C" void entryNum__10J3DTextureFUs(); // 1
+extern "C" void addResTIMG__10J3DTextureFUsPC7ResTIMG(); // 1
 SECTION_SDATA2 extern f32 lit_284;
 SECTION_SDATA2 extern f32 lit_285;
 SECTION_SDATA2 extern f64 J3DTexture__lit_288;
@@ -52,25 +37,25 @@ SECTION_SDATA2 extern f64 J3DTexture__lit_288;
 // External References:
 // 
 
-void* operator new[](u32);
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjCI();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void GXInitTlutObj();
-extern "C" void GXLoadTlut();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+void* operator new[](u32); // 2
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjCI(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXInitTlutObj(); // 1
+extern "C" void GXLoadTlut(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void* __nwa__FUl();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjCI();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void GXInitTlutObj();
-extern "C" void GXLoadTlut();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjCI(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXInitTlutObj(); // 1
+extern "C" void GXLoadTlut(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
 // 
 // Declarations:

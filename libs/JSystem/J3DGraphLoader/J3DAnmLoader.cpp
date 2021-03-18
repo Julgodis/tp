@@ -9,140 +9,59 @@
 // Types:
 // 
 
-// build J3DAnmLoaderDataBase (['J3DAnmLoaderDataBase']) False/False
-// build J3DAnmBase (['J3DAnmBase']) False/False
-/* top-level dependencies (begin ['J3DAnmBase']) */
-/* top-level dependencies (end ['J3DAnmBase']) */
 struct J3DAnmBase {
 };
 
-// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) False/False
-/* top-level dependencies (begin ['J3DAnmLoaderDataBaseFlag']) */
-/* top-level dependencies (end ['J3DAnmLoaderDataBaseFlag']) */
 struct J3DAnmLoaderDataBaseFlag {
 };
 
-/* top-level dependencies (begin ['J3DAnmLoaderDataBase']) */
-// outer dependency: ('J3DAnmBase',)
-// outer dependency: ('J3DAnmLoaderDataBaseFlag',)
-/* top-level dependencies (end ['J3DAnmLoaderDataBase']) */
 struct J3DAnmLoaderDataBase {
-	// ('J3DAnmBase',)
-	// ('J3DAnmLoaderDataBaseFlag',)
 	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
 	/* 80338134 */ void setResource(J3DAnmBase*, void const*);
 };
 
-// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) True/True
-// build J3DAnmBase (['J3DAnmBase']) True/True
-// build J3DAnmFullLoader_v15 (['J3DAnmFullLoader_v15']) False/False
-// build J3DAnmVisibilityFull (['J3DAnmVisibilityFull']) False/False
-/* top-level dependencies (begin ['J3DAnmVisibilityFull']) */
-/* top-level dependencies (end ['J3DAnmVisibilityFull']) */
+struct J3DAnmColorFull {
+	/* 8032A93C */ J3DAnmColorFull();
+};
+
+struct J3DAnmVtxColorFullData {
+};
+
+struct J3DAnmTexPattern {
+	/* 8032AED8 */ J3DAnmTexPattern();
+};
+
 struct J3DAnmVisibilityFull {
 	/* 8033979C */ ~J3DAnmVisibilityFull();
 	/* 803397F8 */ s32 getKind() const;
 };
 
-// build J3DAnmTransformFullData (['J3DAnmTransformFullData']) False/False
-/* top-level dependencies (begin ['J3DAnmTransformFullData']) */
-/* top-level dependencies (end ['J3DAnmTransformFullData']) */
-struct J3DAnmTransformFullData {
-};
-
-// build J3DAnmVisibilityFullData (['J3DAnmVisibilityFullData']) False/False
-/* top-level dependencies (begin ['J3DAnmVisibilityFullData']) */
-/* top-level dependencies (end ['J3DAnmVisibilityFullData']) */
-struct J3DAnmVisibilityFullData {
-};
-
-// build J3DAnmTransformFull (['J3DAnmTransformFull']) False/False
-/* top-level dependencies (begin ['J3DAnmTransformFull']) */
-/* top-level dependencies (end ['J3DAnmTransformFull']) */
-struct J3DAnmTransformFull {
-};
-
-// build J3DAnmClusterFullData (['J3DAnmClusterFullData']) False/False
-/* top-level dependencies (begin ['J3DAnmClusterFullData']) */
-/* top-level dependencies (end ['J3DAnmClusterFullData']) */
-struct J3DAnmClusterFullData {
-};
-
-// build J3DAnmTexPatternFullData (['J3DAnmTexPatternFullData']) False/False
-/* top-level dependencies (begin ['J3DAnmTexPatternFullData']) */
-/* top-level dependencies (end ['J3DAnmTexPatternFullData']) */
 struct J3DAnmTexPatternFullData {
 };
 
-// build J3DAnmColorFull (['J3DAnmColorFull']) False/False
-/* top-level dependencies (begin ['J3DAnmColorFull']) */
-/* top-level dependencies (end ['J3DAnmColorFull']) */
-struct J3DAnmColorFull {
-	/* 8032A93C */ J3DAnmColorFull();
-};
-
-// build J3DAnmBase (['J3DAnmBase']) True/True
-// build J3DAnmClusterFull (['J3DAnmClusterFull']) False/False
-/* top-level dependencies (begin ['J3DAnmClusterFull']) */
-/* top-level dependencies (end ['J3DAnmClusterFull']) */
 struct J3DAnmClusterFull {
 };
 
-// build J3DAnmVtxColorFull (['J3DAnmVtxColorFull']) False/False
-/* top-level dependencies (begin ['J3DAnmVtxColorFull']) */
-/* top-level dependencies (end ['J3DAnmVtxColorFull']) */
+struct J3DAnmTransformFull {
+};
+
+struct J3DAnmVisibilityFullData {
+};
+
 struct J3DAnmVtxColorFull {
 	/* 8032A30C */ J3DAnmVtxColorFull();
 };
 
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) False/False
-/* top-level dependencies (begin ['J3DAnmTexPattern']) */
-/* top-level dependencies (end ['J3DAnmTexPattern']) */
-struct J3DAnmTexPattern {
-	/* 8032AED8 */ J3DAnmTexPattern();
+struct J3DAnmClusterFullData {
 };
 
-// build J3DAnmVtxColorFullData (['J3DAnmVtxColorFullData']) False/False
-/* top-level dependencies (begin ['J3DAnmVtxColorFullData']) */
-/* top-level dependencies (end ['J3DAnmVtxColorFullData']) */
-struct J3DAnmVtxColorFullData {
+struct J3DAnmTransformFullData {
 };
 
-// build J3DAnmColorFullData (['J3DAnmColorFullData']) False/False
-/* top-level dependencies (begin ['J3DAnmColorFullData']) */
-/* top-level dependencies (end ['J3DAnmColorFullData']) */
 struct J3DAnmColorFullData {
 };
 
-/* top-level dependencies (begin ['J3DAnmFullLoader_v15']) */
-// outer dependency: ('J3DAnmVisibilityFull',)
-// outer dependency: ('J3DAnmTransformFullData',)
-// outer dependency: ('J3DAnmVisibilityFullData',)
-// outer dependency: ('J3DAnmTransformFull',)
-// outer dependency: ('J3DAnmClusterFullData',)
-// outer dependency: ('J3DAnmTexPatternFullData',)
-// outer dependency: ('J3DAnmColorFull',)
-// outer dependency: ('J3DAnmBase',)
-// outer dependency: ('J3DAnmClusterFull',)
-// outer dependency: ('J3DAnmVtxColorFull',)
-// outer dependency: ('J3DAnmTexPattern',)
-// outer dependency: ('J3DAnmVtxColorFullData',)
-// outer dependency: ('J3DAnmColorFullData',)
-/* top-level dependencies (end ['J3DAnmFullLoader_v15']) */
 struct J3DAnmFullLoader_v15 {
-	// ('J3DAnmVisibilityFull',)
-	// ('J3DAnmTransformFullData',)
-	// ('J3DAnmVisibilityFullData',)
-	// ('J3DAnmTransformFull',)
-	// ('J3DAnmClusterFullData',)
-	// ('J3DAnmTexPatternFullData',)
-	// ('J3DAnmColorFull',)
-	// ('J3DAnmBase',)
-	// ('J3DAnmClusterFull',)
-	// ('J3DAnmVtxColorFull',)
-	// ('J3DAnmTexPattern',)
-	// ('J3DAnmVtxColorFullData',)
-	// ('J3DAnmColorFullData',)
 	/* 80338468 */ J3DAnmFullLoader_v15();
 	/* 80338484 */ ~J3DAnmFullLoader_v15();
 	/* 80338558 */ void load(void const*);
@@ -161,113 +80,47 @@ struct J3DAnmFullLoader_v15 {
 	/* 80338BDC */ void setAnmVtxColor(J3DAnmVtxColorFull*, J3DAnmVtxColorFullData const*);
 };
 
-// build J3DAnmKeyLoader_v15 (['J3DAnmKeyLoader_v15']) False/False
-// build J3DAnmColorKey (['J3DAnmColorKey']) False/False
-/* top-level dependencies (begin ['J3DAnmColorKey']) */
-/* top-level dependencies (end ['J3DAnmColorKey']) */
-struct J3DAnmColorKey {
-	/* 8032AB00 */ J3DAnmColorKey();
+struct J3DAnmColorKeyData {
 };
 
-// build J3DAnmClusterKeyData (['J3DAnmClusterKeyData']) False/False
-/* top-level dependencies (begin ['J3DAnmClusterKeyData']) */
-/* top-level dependencies (end ['J3DAnmClusterKeyData']) */
-struct J3DAnmClusterKeyData {
-};
-
-// build J3DAnmTransformKeyData (['J3DAnmTransformKeyData']) False/False
-/* top-level dependencies (begin ['J3DAnmTransformKeyData']) */
-/* top-level dependencies (end ['J3DAnmTransformKeyData']) */
-struct J3DAnmTransformKeyData {
-};
-
-// build J3DAnmBase (['J3DAnmBase']) True/True
-// build J3DAnmVtxColorKey (['J3DAnmVtxColorKey']) False/False
-/* top-level dependencies (begin ['J3DAnmVtxColorKey']) */
-/* top-level dependencies (end ['J3DAnmVtxColorKey']) */
 struct J3DAnmVtxColorKey {
 	/* 8032A4E0 */ J3DAnmVtxColorKey();
 };
 
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) False/False
-/* top-level dependencies (begin ['J3DAnmTevRegKey']) */
-/* top-level dependencies (end ['J3DAnmTevRegKey']) */
-struct J3DAnmTevRegKey {
-	/* 8032AE18 */ J3DAnmTevRegKey();
-};
-
-// build J3DAnmColorKeyData (['J3DAnmColorKeyData']) False/False
-/* top-level dependencies (begin ['J3DAnmColorKeyData']) */
-/* top-level dependencies (end ['J3DAnmColorKeyData']) */
-struct J3DAnmColorKeyData {
-};
-
-// build J3DAnmTransformKey (['J3DAnmTransformKey']) False/False
-/* top-level dependencies (begin ['J3DAnmTransformKey']) */
-/* top-level dependencies (end ['J3DAnmTransformKey']) */
-struct J3DAnmTransformKey {
-};
-
-// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) False/False
-/* top-level dependencies (begin ['J3DAnmTextureSRTKey']) */
-/* top-level dependencies (end ['J3DAnmTextureSRTKey']) */
 struct J3DAnmTextureSRTKey {
 	/* 80329E5C */ J3DAnmTextureSRTKey();
 };
 
-// build J3DAnmTextureSRTKeyData (['J3DAnmTextureSRTKeyData']) False/False
-/* top-level dependencies (begin ['J3DAnmTextureSRTKeyData']) */
-/* top-level dependencies (end ['J3DAnmTextureSRTKeyData']) */
-struct J3DAnmTextureSRTKeyData {
+struct J3DAnmTransformKey {
 };
 
-// build J3DAnmTevRegKeyData (['J3DAnmTevRegKeyData']) False/False
-/* top-level dependencies (begin ['J3DAnmTevRegKeyData']) */
-/* top-level dependencies (end ['J3DAnmTevRegKeyData']) */
-struct J3DAnmTevRegKeyData {
+struct J3DAnmColorKey {
+	/* 8032AB00 */ J3DAnmColorKey();
 };
 
-// build J3DAnmVtxColorKeyData (['J3DAnmVtxColorKeyData']) False/False
-/* top-level dependencies (begin ['J3DAnmVtxColorKeyData']) */
-/* top-level dependencies (end ['J3DAnmVtxColorKeyData']) */
-struct J3DAnmVtxColorKeyData {
+struct J3DAnmTransformKeyData {
 };
 
-// build J3DAnmClusterKey (['J3DAnmClusterKey']) False/False
-/* top-level dependencies (begin ['J3DAnmClusterKey']) */
-/* top-level dependencies (end ['J3DAnmClusterKey']) */
+struct J3DAnmClusterKeyData {
+};
+
 struct J3DAnmClusterKey {
 };
 
-/* top-level dependencies (begin ['J3DAnmKeyLoader_v15']) */
-// outer dependency: ('J3DAnmColorKey',)
-// outer dependency: ('J3DAnmClusterKeyData',)
-// outer dependency: ('J3DAnmTransformKeyData',)
-// outer dependency: ('J3DAnmBase',)
-// outer dependency: ('J3DAnmVtxColorKey',)
-// outer dependency: ('J3DAnmTevRegKey',)
-// outer dependency: ('J3DAnmColorKeyData',)
-// outer dependency: ('J3DAnmTransformKey',)
-// outer dependency: ('J3DAnmTextureSRTKey',)
-// outer dependency: ('J3DAnmTextureSRTKeyData',)
-// outer dependency: ('J3DAnmTevRegKeyData',)
-// outer dependency: ('J3DAnmVtxColorKeyData',)
-// outer dependency: ('J3DAnmClusterKey',)
-/* top-level dependencies (end ['J3DAnmKeyLoader_v15']) */
+struct J3DAnmTevRegKey {
+	/* 8032AE18 */ J3DAnmTevRegKey();
+};
+
+struct J3DAnmTextureSRTKeyData {
+};
+
+struct J3DAnmTevRegKeyData {
+};
+
+struct J3DAnmVtxColorKeyData {
+};
+
 struct J3DAnmKeyLoader_v15 {
-	// ('J3DAnmColorKey',)
-	// ('J3DAnmClusterKeyData',)
-	// ('J3DAnmTransformKeyData',)
-	// ('J3DAnmBase',)
-	// ('J3DAnmVtxColorKey',)
-	// ('J3DAnmTevRegKey',)
-	// ('J3DAnmColorKeyData',)
-	// ('J3DAnmTransformKey',)
-	// ('J3DAnmTextureSRTKey',)
-	// ('J3DAnmTextureSRTKeyData',)
-	// ('J3DAnmTevRegKeyData',)
-	// ('J3DAnmVtxColorKeyData',)
-	// ('J3DAnmClusterKey',)
 	/* 803384E0 */ J3DAnmKeyLoader_v15();
 	/* 803384FC */ ~J3DAnmKeyLoader_v15();
 	/* 80338D44 */ void load(void const*);
@@ -286,56 +139,17 @@ struct J3DAnmKeyLoader_v15 {
 	/* 80339634 */ void setAnmVtxColor(J3DAnmVtxColorKey*, J3DAnmVtxColorKeyData const*);
 };
 
-// build J3DAnmTransformFullData (['J3DAnmTransformFullData']) True/True
-// build J3DAnmTransformFull (['J3DAnmTransformFull']) True/True
-// build J3DAnmColorFullData (['J3DAnmColorFullData']) True/True
-// build J3DAnmColorFull (['J3DAnmColorFull']) True/True
-// build J3DAnmTexPatternFullData (['J3DAnmTexPatternFullData']) True/True
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) True/True
-// build J3DAnmVisibilityFullData (['J3DAnmVisibilityFullData']) True/True
-// build J3DAnmVisibilityFull (['J3DAnmVisibilityFull']) True/True
-// build J3DAnmClusterFullData (['J3DAnmClusterFullData']) True/True
-// build J3DAnmClusterFull (['J3DAnmClusterFull']) True/True
-// build J3DAnmVtxColorFullData (['J3DAnmVtxColorFullData']) True/True
-// build J3DAnmVtxColorFull (['J3DAnmVtxColorFull']) True/True
-// build J3DAnmTransformKeyData (['J3DAnmTransformKeyData']) True/True
-// build J3DAnmTransformKey (['J3DAnmTransformKey']) True/True
-// build J3DAnmTextureSRTKeyData (['J3DAnmTextureSRTKeyData']) True/True
-// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) True/True
-// build J3DAnmColorKeyData (['J3DAnmColorKeyData']) True/True
-// build J3DAnmColorKey (['J3DAnmColorKey']) True/True
-// build J3DAnmClusterKeyData (['J3DAnmClusterKeyData']) True/True
-// build J3DAnmClusterKey (['J3DAnmClusterKey']) True/True
-// build J3DAnmTevRegKeyData (['J3DAnmTevRegKeyData']) True/True
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
-// build J3DAnmVtxColorKeyData (['J3DAnmVtxColorKeyData']) True/True
-// build J3DAnmVtxColorKey (['J3DAnmVtxColorKey']) True/True
-// build J3DAnmLoader (['J3DAnmLoader']) False/False
-/* top-level dependencies (begin ['J3DAnmLoader']) */
-/* top-level dependencies (end ['J3DAnmLoader']) */
 struct J3DAnmLoader {
 	/* 80339800 */ ~J3DAnmLoader();
 };
 
-// build JUTNameTab (['JUTNameTab']) False/False
-// build ResNTAB (['ResNTAB']) False/False
-/* top-level dependencies (begin ['ResNTAB']) */
-/* top-level dependencies (end ['ResNTAB']) */
 struct ResNTAB {
 };
 
-/* top-level dependencies (begin ['JUTNameTab']) */
-// outer dependency: ('ResNTAB',)
-/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
-	// ('ResNTAB',)
 	/* 802DEA1C */ void setResource(ResNTAB const*);
 };
 
-// build ResNTAB (['ResNTAB']) True/True
-// build J3DAnmTransform (['J3DAnmTransform']) False/False
-/* top-level dependencies (begin ['J3DAnmTransform']) */
-/* top-level dependencies (end ['J3DAnmTransform']) */
 struct J3DAnmTransform {
 	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
 };
@@ -344,48 +158,48 @@ struct J3DAnmTransform {
 // Forward References:
 // 
 
-extern "C" static void func_80339848();
-extern "C" static void func_80339860();
+static void JSUConvertOffsetToPtr__template77(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template78(void const*, void const*); // 2
 
-extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
-extern "C" void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv();
-extern "C" void __ct__20J3DAnmFullLoader_v15Fv();
-extern "C" void __dt__20J3DAnmFullLoader_v15Fv();
-extern "C" void __ct__19J3DAnmKeyLoader_v15Fv();
-extern "C" void __dt__19J3DAnmKeyLoader_v15Fv();
-extern "C" void load__20J3DAnmFullLoader_v15FPCv();
-extern "C" void setResource__20J3DAnmFullLoader_v15FP10J3DAnmBasePCv();
-extern "C" void readAnmTransform__20J3DAnmFullLoader_v15FPC23J3DAnmTransformFullData();
-extern "C" void setAnmTransform__20J3DAnmFullLoader_v15FP19J3DAnmTransformFullPC23J3DAnmTransformFullData();
-extern "C" void readAnmColor__20J3DAnmFullLoader_v15FPC19J3DAnmColorFullData();
-extern "C" void setAnmColor__20J3DAnmFullLoader_v15FP15J3DAnmColorFullPC19J3DAnmColorFullData();
-extern "C" void readAnmTexPattern__20J3DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData();
-extern "C" void setAnmTexPattern__20J3DAnmFullLoader_v15FP16J3DAnmTexPatternPC24J3DAnmTexPatternFullData();
-extern "C" void readAnmVisibility__20J3DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData();
-extern "C" void setAnmVisibility__20J3DAnmFullLoader_v15FP20J3DAnmVisibilityFullPC24J3DAnmVisibilityFullData();
-extern "C" void readAnmCluster__20J3DAnmFullLoader_v15FPC21J3DAnmClusterFullData();
-extern "C" void setAnmCluster__20J3DAnmFullLoader_v15FP17J3DAnmClusterFullPC21J3DAnmClusterFullData();
-extern "C" void readAnmVtxColor__20J3DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData();
-extern "C" void setAnmVtxColor__20J3DAnmFullLoader_v15FP18J3DAnmVtxColorFullPC22J3DAnmVtxColorFullData();
-extern "C" void load__19J3DAnmKeyLoader_v15FPCv();
-extern "C" void setResource__19J3DAnmKeyLoader_v15FP10J3DAnmBasePCv();
-extern "C" void readAnmTransform__19J3DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData();
-extern "C" void setAnmTransform__19J3DAnmKeyLoader_v15FP18J3DAnmTransformKeyPC22J3DAnmTransformKeyData();
-extern "C" void readAnmTextureSRT__19J3DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData();
-extern "C" void setAnmTextureSRT__19J3DAnmKeyLoader_v15FP19J3DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData();
-extern "C" void readAnmColor__19J3DAnmKeyLoader_v15FPC18J3DAnmColorKeyData();
-extern "C" void setAnmColor__19J3DAnmKeyLoader_v15FP14J3DAnmColorKeyPC18J3DAnmColorKeyData();
-extern "C" void readAnmCluster__19J3DAnmKeyLoader_v15FPC20J3DAnmClusterKeyData();
-extern "C" void setAnmCluster__19J3DAnmKeyLoader_v15FP16J3DAnmClusterKeyPC20J3DAnmClusterKeyData();
-extern "C" void readAnmTevReg__19J3DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData();
-extern "C" void setAnmTevReg__19J3DAnmKeyLoader_v15FP15J3DAnmTevRegKeyPC19J3DAnmTevRegKeyData();
-extern "C" void readAnmVtxColor__19J3DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData();
-extern "C" void setAnmVtxColor__19J3DAnmKeyLoader_v15FP17J3DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData();
-extern "C" void __dt__20J3DAnmVisibilityFullFv();
-extern "C" s32 getKind__20J3DAnmVisibilityFullCFv();
-extern "C" void __dt__12J3DAnmLoaderFv();
-extern "C" static void func_80339848();
-extern "C" static void func_80339860();
+extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag(); // 1
+extern "C" void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv(); // 1
+extern "C" void __ct__20J3DAnmFullLoader_v15Fv(); // 1
+extern "C" void __dt__20J3DAnmFullLoader_v15Fv(); // 1
+extern "C" void __ct__19J3DAnmKeyLoader_v15Fv(); // 1
+extern "C" void __dt__19J3DAnmKeyLoader_v15Fv(); // 1
+extern "C" void load__20J3DAnmFullLoader_v15FPCv(); // 1
+extern "C" void setResource__20J3DAnmFullLoader_v15FP10J3DAnmBasePCv(); // 1
+extern "C" void readAnmTransform__20J3DAnmFullLoader_v15FPC23J3DAnmTransformFullData(); // 1
+extern "C" void setAnmTransform__20J3DAnmFullLoader_v15FP19J3DAnmTransformFullPC23J3DAnmTransformFullData(); // 1
+extern "C" void readAnmColor__20J3DAnmFullLoader_v15FPC19J3DAnmColorFullData(); // 1
+extern "C" void setAnmColor__20J3DAnmFullLoader_v15FP15J3DAnmColorFullPC19J3DAnmColorFullData(); // 1
+extern "C" void readAnmTexPattern__20J3DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData(); // 1
+extern "C" void setAnmTexPattern__20J3DAnmFullLoader_v15FP16J3DAnmTexPatternPC24J3DAnmTexPatternFullData(); // 1
+extern "C" void readAnmVisibility__20J3DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData(); // 1
+extern "C" void setAnmVisibility__20J3DAnmFullLoader_v15FP20J3DAnmVisibilityFullPC24J3DAnmVisibilityFullData(); // 1
+extern "C" void readAnmCluster__20J3DAnmFullLoader_v15FPC21J3DAnmClusterFullData(); // 1
+extern "C" void setAnmCluster__20J3DAnmFullLoader_v15FP17J3DAnmClusterFullPC21J3DAnmClusterFullData(); // 1
+extern "C" void readAnmVtxColor__20J3DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData(); // 1
+extern "C" void setAnmVtxColor__20J3DAnmFullLoader_v15FP18J3DAnmVtxColorFullPC22J3DAnmVtxColorFullData(); // 1
+extern "C" void load__19J3DAnmKeyLoader_v15FPCv(); // 1
+extern "C" void setResource__19J3DAnmKeyLoader_v15FP10J3DAnmBasePCv(); // 1
+extern "C" void readAnmTransform__19J3DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData(); // 1
+extern "C" void setAnmTransform__19J3DAnmKeyLoader_v15FP18J3DAnmTransformKeyPC22J3DAnmTransformKeyData(); // 1
+extern "C" void readAnmTextureSRT__19J3DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData(); // 1
+extern "C" void setAnmTextureSRT__19J3DAnmKeyLoader_v15FP19J3DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData(); // 1
+extern "C" void readAnmColor__19J3DAnmKeyLoader_v15FPC18J3DAnmColorKeyData(); // 1
+extern "C" void setAnmColor__19J3DAnmKeyLoader_v15FP14J3DAnmColorKeyPC18J3DAnmColorKeyData(); // 1
+extern "C" void readAnmCluster__19J3DAnmKeyLoader_v15FPC20J3DAnmClusterKeyData(); // 1
+extern "C" void setAnmCluster__19J3DAnmKeyLoader_v15FP16J3DAnmClusterKeyPC20J3DAnmClusterKeyData(); // 1
+extern "C" void readAnmTevReg__19J3DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData(); // 1
+extern "C" void setAnmTevReg__19J3DAnmKeyLoader_v15FP15J3DAnmTevRegKeyPC19J3DAnmTevRegKeyData(); // 1
+extern "C" void readAnmVtxColor__19J3DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData(); // 1
+extern "C" void setAnmVtxColor__19J3DAnmKeyLoader_v15FP17J3DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData(); // 1
+extern "C" void __dt__20J3DAnmVisibilityFullFv(); // 1
+extern "C" s32 getKind__20J3DAnmVisibilityFullCFv(); // 1
+extern "C" void __dt__12J3DAnmLoaderFv(); // 1
+extern "C" static void func_80339848(); // 1
+extern "C" static void func_80339860(); // 1
 SECTION_RODATA extern const u8 J3DAnmLoader__stringBase0[64];
 SECTION_DATA extern void*const __vt__19J3DAnmKeyLoader_v15[5];
 SECTION_DATA extern void*const __vt__20J3DAnmFullLoader_v15[5];
@@ -397,64 +211,64 @@ SECTION_SDATA2 extern u8 lit_889[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport();
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void func_802F4260();
-extern "C" void func_802F42C0();
-extern "C" void func_8030A458();
-extern "C" void func_8030A470();
-extern "C" void func_8030A488();
-extern "C" void func_8030A4A0();
-extern "C" void func_8030A4B8();
-extern "C" void func_8030A4D0();
-extern "C" void func_8030A4E8();
-extern "C" void func_8030A500();
-extern "C" void func_8030A518();
-extern "C" void func_8030A530();
-extern "C" void func_8030A548();
-extern "C" void func_8030A560();
-extern "C" void func_8030A578();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void OSReport(); // 1
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template30(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template31(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template32(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template33(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template34(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template35(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template36(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template37(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template38(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template39(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template40(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template41(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template42(void const*, void const*); // 2
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void OSReport();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void setResource__10JUTNameTabFPC7ResNTAB();
-extern "C" void func_802F4260();
-extern "C" void func_802F42C0();
-extern "C" void func_8030A458();
-extern "C" void func_8030A470();
-extern "C" void func_8030A488();
-extern "C" void func_8030A4A0();
-extern "C" void func_8030A4B8();
-extern "C" void func_8030A4D0();
-extern "C" void func_8030A4E8();
-extern "C" void func_8030A500();
-extern "C" void func_8030A518();
-extern "C" void func_8030A530();
-extern "C" void func_8030A548();
-extern "C" void func_8030A560();
-extern "C" void func_8030A578();
-extern "C" void __ct__15J3DAnmTransformFsPfPsPf();
-extern "C" void __ct__19J3DAnmTextureSRTKeyFv();
-extern "C" void __ct__18J3DAnmVtxColorFullFv();
-extern "C" void __ct__17J3DAnmVtxColorKeyFv();
-extern "C" void __ct__15J3DAnmColorFullFv();
-extern "C" void __ct__14J3DAnmColorKeyFv();
-extern "C" void __ct__15J3DAnmTevRegKeyFv();
-extern "C" void __ct__16J3DAnmTexPatternFv();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void OSReport(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void setResource__10JUTNameTabFPC7ResNTAB(); // 1
+extern "C" void func_802F4260(); // 1
+extern "C" void func_802F42C0(); // 1
+extern "C" void func_8030A458(); // 1
+extern "C" void func_8030A470(); // 1
+extern "C" void func_8030A488(); // 1
+extern "C" void func_8030A4A0(); // 1
+extern "C" void func_8030A4B8(); // 1
+extern "C" void func_8030A4D0(); // 1
+extern "C" void func_8030A4E8(); // 1
+extern "C" void func_8030A500(); // 1
+extern "C" void func_8030A518(); // 1
+extern "C" void func_8030A530(); // 1
+extern "C" void func_8030A548(); // 1
+extern "C" void func_8030A560(); // 1
+extern "C" void func_8030A578(); // 1
+extern "C" void __ct__15J3DAnmTransformFsPfPsPf(); // 1
+extern "C" void __ct__19J3DAnmTextureSRTKeyFv(); // 1
+extern "C" void __ct__18J3DAnmVtxColorFullFv(); // 1
+extern "C" void __ct__17J3DAnmVtxColorKeyFv(); // 1
+extern "C" void __ct__15J3DAnmColorFullFv(); // 1
+extern "C" void __ct__14J3DAnmColorKeyFv(); // 1
+extern "C" void __ct__15J3DAnmTevRegKeyFv(); // 1
+extern "C" void __ct__16J3DAnmTexPatternFv(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__10J3DAnmBase[4];
 SECTION_DATA extern void*const __vt__18J3DAnmTransformKey[5];
 SECTION_DATA extern void*const __vt__16J3DAnmClusterKey[5];
@@ -929,7 +743,7 @@ asm J3DAnmLoader::~J3DAnmLoader() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80339848() {
+asm static void JSUConvertOffsetToPtr__template77(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_80339848.s"
 }
@@ -940,7 +754,7 @@ extern "C" asm static void func_80339848() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80339860() {
+asm static void JSUConvertOffsetToPtr__template78(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DAnmLoader/func_80339860.s"
 }

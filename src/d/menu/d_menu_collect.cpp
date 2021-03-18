@@ -9,16 +9,21 @@
 // Types:
 // 
 
-// build dMenu_Collect2D_c (['dMenu_Collect2D_c']) False/False
-// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) False/False
-/* top-level dependencies (begin ['J2DAnmTextureSRTKey']) */
-/* top-level dependencies (end ['J2DAnmTextureSRTKey']) */
+struct JKRHeap {
+	/* 802CE5CC */ void freeAll();
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct CSTControl {
+};
+
 struct J2DAnmTextureSRTKey {
 };
 
-// build STControl (['STControl']) False/False
-/* top-level dependencies (begin ['STControl']) */
-/* top-level dependencies (end ['STControl']) */
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 8003242C */ void checkLeftTrigger();
@@ -27,40 +32,7 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-	/* 802CE5CC */ void freeAll();
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
-/* top-level dependencies (begin ['JKRExpHeap']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRExpHeap']) */
-struct JKRExpHeap {
-	// ('JKRHeap',)
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-// build CSTControl (['CSTControl']) False/False
-/* top-level dependencies (begin ['CSTControl']) */
-/* top-level dependencies (end ['CSTControl']) */
-struct CSTControl {
-};
-
-/* top-level dependencies (begin ['dMenu_Collect2D_c']) */
-// outer dependency: ('J2DAnmTextureSRTKey',)
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Collect2D_c']) */
 struct dMenu_Collect2D_c {
-	// ('J2DAnmTextureSRTKey',)
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801AFD48 */ dMenu_Collect2D_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801AFE34 */ ~dMenu_Collect2D_c();
 	/* 801AFEA4 */ void _create();
@@ -138,31 +110,10 @@ struct dMenu_Collect2D_c {
 	/* 801B7F00 */ void draw();
 };
 
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build STControl (['STControl']) True/True
-// build CSTControl (['CSTControl']) True/True
-// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) True/True
-// build dMenu_Collect3D_c (['dMenu_Collect3D_c']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build dMenu_Collect2D_c (['dMenu_Collect2D_c']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Collect3D_c']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('dMenu_Collect2D_c',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Collect3D_c']) */
 struct dMenu_Collect3D_c {
-	// ('cXyz',)
-	// ('JKRExpHeap',)
-	// ('dMenu_Collect2D_c',)
-	// ('CSTControl',)
 	/* 801B6454 */ dMenu_Collect3D_c(JKRExpHeap*, dMenu_Collect2D_c*, CSTControl*);
 	/* 801B6538 */ ~dMenu_Collect3D_c();
 	/* 801B65A8 */ void _create();
@@ -183,28 +134,12 @@ struct dMenu_Collect3D_c {
 	/* 801B774C */ void calcViewMtx(f32 (* )[4]);
 };
 
-// build cXyz (['cXyz']) True/True
-// build dMenu_Collect2DTop_c (['dMenu_Collect2DTop_c']) False/False
-/* top-level dependencies (begin ['dMenu_Collect2DTop_c']) */
-/* top-level dependencies (end ['dMenu_Collect2DTop_c']) */
 struct dMenu_Collect2DTop_c {
 	/* 801B77A4 */ void draw();
 	/* 801B7EB8 */ ~dMenu_Collect2DTop_c();
 };
 
-// build dMenu_Collect_c (['dMenu_Collect_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Collect_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Collect_c']) */
 struct dMenu_Collect_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801B78C0 */ dMenu_Collect_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801B795C */ ~dMenu_Collect_c();
 	/* 801B7A0C */ void _create();
@@ -213,193 +148,99 @@ struct dMenu_Collect_c {
 	/* 801B7AC0 */ void draw();
 };
 
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build mDoExt_baseAnm (['mDoExt_baseAnm']) False/False
-/* top-level dependencies (begin ['mDoExt_baseAnm']) */
-/* top-level dependencies (end ['mDoExt_baseAnm']) */
 struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-// build mDoExt_brkAnm (['mDoExt_brkAnm']) False/False
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-/* top-level dependencies (begin ['J3DAnmTevRegKey']) */
-// outer dependency: ('J3DModelData',)
-/* top-level dependencies (end ['J3DAnmTevRegKey']) */
 struct J3DAnmTevRegKey {
-	// ('J3DModelData',)
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) False/False
-/* top-level dependencies (begin ['J3DMaterialTable']) */
-/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
 };
 
-/* top-level dependencies (begin ['mDoExt_brkAnm']) */
-// outer dependency: ('J3DAnmTevRegKey',)
-// outer dependency: ('J3DMaterialTable',)
-/* top-level dependencies (end ['mDoExt_brkAnm']) */
 struct mDoExt_brkAnm {
-	// ('J3DAnmTevRegKey',)
-	// ('J3DMaterialTable',)
 	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
-// build mDoExt_bckAnm (['mDoExt_bckAnm']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-// build J3DAnmTransform (['J3DAnmTransform']) False/False
-/* top-level dependencies (begin ['J3DAnmTransform']) */
-/* top-level dependencies (end ['J3DAnmTransform']) */
 struct J3DAnmTransform {
 };
 
-/* top-level dependencies (begin ['mDoExt_bckAnm']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('J3DAnmTransform',)
-/* top-level dependencies (end ['mDoExt_bckAnm']) */
 struct mDoExt_bckAnm {
-	// ('J3DModelData',)
-	// ('J3DAnmTransform',)
 	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
 	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
-// build J3DAnmTransform (['J3DAnmTransform']) True/True
-// build J3DModelData (['J3DModelData']) True/True
-// build J3DModel (['J3DModel']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-/* top-level dependencies (begin ['J3DModel']) */
-// outer dependency: ('J3DModelData',)
-/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
-	// ('J3DModelData',)
 	/* 80327100 */ void initialize();
 	/* 80327184 */ void entryModelData(J3DModelData*, u32, u32);
 };
 
-// build JKRHeap (['JKRHeap']) True/True
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 	/* 802D0BF4 */ void adjustSize();
 };
 
-// build J3DLightObj (['J3DLightObj']) False/False
-/* top-level dependencies (begin ['J3DLightObj']) */
-/* top-level dependencies (end ['J3DLightObj']) */
 struct J3DLightObj {
 	/* 80018C0C */ J3DLightObj();
 };
 
-// build dSv_player_status_a_c (['dSv_player_status_a_c']) False/False
-/* top-level dependencies (begin ['dSv_player_status_a_c']) */
-/* top-level dependencies (end ['dSv_player_status_a_c']) */
 struct dSv_player_status_a_c {
 	/* 80032AA8 */ void getRupeeMax() const;
 };
 
-// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_get_item_c']) */
-/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
-// build dSv_player_collect_c (['dSv_player_collect_c']) False/False
-/* top-level dependencies (begin ['dSv_player_collect_c']) */
-/* top-level dependencies (end ['dSv_player_collect_c']) */
 struct dSv_player_collect_c {
 	/* 8003424C */ void isCollectCrystal(u8) const;
 	/* 80034290 */ void isCollectMirror(u8) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build J3DTevKColorAnm (['J3DTevKColorAnm']) False/False
-/* top-level dependencies (begin ['J3DTevKColorAnm']) */
-/* top-level dependencies (end ['J3DTevKColorAnm']) */
 struct J3DTevKColorAnm {
 	/* 8003B150 */ ~J3DTevKColorAnm();
 	/* 8003B18C */ J3DTevKColorAnm();
 };
 
-// build J3DTevColorAnm (['J3DTevColorAnm']) False/False
-/* top-level dependencies (begin ['J3DTevColorAnm']) */
-/* top-level dependencies (end ['J3DTevColorAnm']) */
 struct J3DTevColorAnm {
 	/* 8003B1A4 */ ~J3DTevColorAnm();
 	/* 8003B1E0 */ J3DTevColorAnm();
 };
 
-// build J3DTexNoAnm (['J3DTexNoAnm']) False/False
-/* top-level dependencies (begin ['J3DTexNoAnm']) */
-/* top-level dependencies (end ['J3DTexNoAnm']) */
 struct J3DTexNoAnm {
 	/* 8003B1F8 */ ~J3DTexNoAnm();
 	/* 8003B240 */ J3DTexNoAnm();
 };
 
-// build J3DTexMtxAnm (['J3DTexMtxAnm']) False/False
-/* top-level dependencies (begin ['J3DTexMtxAnm']) */
-/* top-level dependencies (end ['J3DTexMtxAnm']) */
 struct J3DTexMtxAnm {
 	/* 8003B264 */ ~J3DTexMtxAnm();
 	/* 8003B2A0 */ J3DTexMtxAnm();
 };
 
-// build J3DMatColorAnm (['J3DMatColorAnm']) False/False
-/* top-level dependencies (begin ['J3DMatColorAnm']) */
-/* top-level dependencies (end ['J3DMatColorAnm']) */
 struct J3DMatColorAnm {
 	/* 8003B2B8 */ ~J3DMatColorAnm();
 	/* 8003B2F4 */ J3DMatColorAnm();
 };
 
-// build dDlst_list_c (['dDlst_list_c']) False/False
-// build dDlst_base_c (['dDlst_base_c']) False/False
-/* top-level dependencies (begin ['dDlst_base_c']) */
-/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin ['dDlst_list_c']) */
-// outer dependency: ('dDlst_base_c',)
-/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (['dDlst_base_c']) True/True
-// build daAlink_c (['daAlink_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['daAlink_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['daAlink_c']) */
 struct daAlink_c {
-	// ('cXyz',)
 	/* 80140064 */ void setShieldChange();
 	/* 801406A8 */ void initStatusWindow();
 	/* 80140888 */ void statusWindowExecute(cXyz const*, s16);
@@ -407,70 +248,28 @@ struct daAlink_c {
 	/* 80140AC8 */ void resetStatusWindow();
 };
 
-// build dSelect_cursor_c (['dSelect_cursor_c']) False/False
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
-struct J2DPane {
-};
-
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['dSelect_cursor_c']) */
-// outer dependency: ('J2DPane',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['dSelect_cursor_c']) */
+struct J2DPane {
+};
+
 struct dSelect_cursor_c {
-	// ('J2DPane',)
-	// ('JKRArchive',)
 	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801950F4 */ void setPos(f32, f32, J2DPane*, bool);
 	/* 801951B0 */ void setParam(f32, f32, f32, f32, f32);
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build J2DPane (['J2DPane']) True/True
-// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-// build cXyz (['cXyz']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
 struct dKy_tevstr_c {
 };
 
-/* top-level dependencies (begin ['dScnKy_env_light_c']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
-	// ('J3DModelData',)
-	// ('cXyz',)
-	// ('dKy_tevstr_c',)
 	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build dMenu_Fishing_c (['dMenu_Fishing_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Fishing_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Fishing_c']) */
 struct dMenu_Fishing_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801C4D54 */ dMenu_Fishing_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801C50B4 */ void _move();
 	/* 801C514C */ void _draw();
@@ -478,19 +277,7 @@ struct dMenu_Fishing_c {
 	/* 801C5470 */ void _close();
 };
 
-// build dMenu_Insect_c (['dMenu_Insect_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Insect_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Insect_c']) */
 struct dMenu_Insect_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801D8114 */ dMenu_Insect_c(JKRExpHeap*, STControl*, CSTControl*, u8);
 	/* 801D86C8 */ void _move();
 	/* 801D8760 */ void _draw();
@@ -499,19 +286,7 @@ struct dMenu_Insect_c {
 	/* 801D9D4C */ void getGetInsectNum();
 };
 
-// build dMenu_Letter_c (['dMenu_Letter_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Letter_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Letter_c']) */
 struct dMenu_Letter_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801DCDC0 */ dMenu_Letter_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801DD474 */ void _move();
 	/* 801DD50C */ void _draw();
@@ -519,16 +294,7 @@ struct dMenu_Letter_c {
 	/* 801DDC98 */ void _close();
 };
 
-// build dMenu_Option_c (['dMenu_Option_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['dMenu_Option_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['dMenu_Option_c']) */
 struct dMenu_Option_c {
-	// ('STControl',)
-	// ('JKRArchive',)
 	/* 801E1F10 */ dMenu_Option_c(JKRArchive*, STControl*);
 	/* 801E2C1C */ void _delete();
 	/* 801E3408 */ void _move();
@@ -538,9 +304,6 @@ struct dMenu_Option_c {
 	/* 801E8210 */ void initialize();
 };
 
-// build dMenu_save_c (['dMenu_save_c']) False/False
-/* top-level dependencies (begin ['dMenu_save_c']) */
-/* top-level dependencies (end ['dMenu_save_c']) */
 struct dMenu_save_c {
 	/* 801EF6A0 */ dMenu_save_c();
 	/* 801EF7AC */ void _create();
@@ -552,19 +315,7 @@ struct dMenu_save_c {
 	/* 801F69B8 */ void _draw();
 };
 
-// build dMenu_Skill_c (['dMenu_Skill_c']) False/False
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CSTControl (['CSTControl']) True/True
-/* top-level dependencies (begin ['dMenu_Skill_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CSTControl',)
-/* top-level dependencies (end ['dMenu_Skill_c']) */
 struct dMenu_Skill_c {
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CSTControl',)
 	/* 801F7224 */ dMenu_Skill_c(JKRExpHeap*, STControl*, CSTControl*);
 	/* 801F7718 */ void _move();
 	/* 801F77B0 */ void _draw();
@@ -572,300 +323,204 @@ struct dMenu_Skill_c {
 	/* 801F7C1C */ void _close();
 };
 
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
-/* top-level dependencies (begin ['JMSMesgEntry_c']) */
-/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-// outer dependency: ('JMSMesgEntry_c',)
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// ('JMSMesgEntry_c',)
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
-// build dMsgObject_c (['dMsgObject_c']) False/False
-/* top-level dependencies (begin ['dMsgObject_c']) */
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 802383E4 */ void getSmellTypeMessageID();
 };
 
-// build dMsgString_c (['dMsgString_c']) False/False
-/* top-level dependencies (begin ['dMsgString_c']) */
-/* top-level dependencies (end ['dMsgString_c']) */
 struct dMsgString_c {
 	/* 80249C20 */ dMsgString_c();
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build J2DPane (['J2DPane']) True/True
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
-	// ('J2DPane',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) True/True
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build J2DPicture (['J2DPicture']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['J2DPicture']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-// build ResTIMG (['ResTIMG']) True/True
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-// build J2DAnmLoaderDataBase (['J2DAnmLoaderDataBase']) False/False
-/* top-level dependencies (begin ['J2DAnmLoaderDataBase']) */
-/* top-level dependencies (end ['J2DAnmLoaderDataBase']) */
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
 
-// build J3DVertexBuffer (['J3DVertexBuffer']) False/False
-/* top-level dependencies (begin ['J3DVertexBuffer']) */
-/* top-level dependencies (end ['J3DVertexBuffer']) */
 struct J3DVertexBuffer {
 	/* 80310FD8 */ void init();
 };
 
-// build J3DLightInfo (['J3DLightInfo']) False/False
-/* top-level dependencies (begin ['J3DLightInfo']) */
-/* top-level dependencies (end ['J3DLightInfo']) */
 struct J3DLightInfo {
 	/* 803256C4 */ void operator=(J3DLightInfo const&);
 };
 
-// build J3DFrameCtrl (['J3DFrameCtrl']) False/False
-/* top-level dependencies (begin ['J3DFrameCtrl']) */
-/* top-level dependencies (end ['J3DFrameCtrl']) */
 struct J3DFrameCtrl {
 	/* 803283FC */ void init(s16);
 };
 
-// build J3DMaterialAnm (['J3DMaterialAnm']) False/False
-/* top-level dependencies (begin ['J3DMaterialAnm']) */
-/* top-level dependencies (end ['J3DMaterialAnm']) */
 struct J3DMaterialAnm {
 	/* 8032C320 */ void initialize();
 };
 
-// build J3DModelLoaderDataBase (['J3DModelLoaderDataBase']) False/False
-/* top-level dependencies (begin ['J3DModelLoaderDataBase']) */
-/* top-level dependencies (end ['J3DModelLoaderDataBase']) */
 struct J3DModelLoaderDataBase {
 	/* 803346BC */ void load(void const*, u32);
 };
 
-// build J3DAnmLoaderDataBase (['J3DAnmLoaderDataBase']) False/False
-// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) False/False
-/* top-level dependencies (begin ['J3DAnmLoaderDataBaseFlag']) */
-/* top-level dependencies (end ['J3DAnmLoaderDataBaseFlag']) */
 struct J3DAnmLoaderDataBaseFlag {
 };
 
-/* top-level dependencies (begin ['J3DAnmLoaderDataBase']) */
-// outer dependency: ('J3DAnmLoaderDataBaseFlag',)
-/* top-level dependencies (end ['J3DAnmLoaderDataBase']) */
 struct J3DAnmLoaderDataBase {
-	// ('J3DAnmLoaderDataBaseFlag',)
 	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
 };
 
-// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_collect_cpp();
+extern "C" void __sinit_d_menu_collect_cpp(); // 1
 
-extern "C" void __ct__17dMenu_Collect2D_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern "C" void __dt__17dMenu_Collect2D_cFv();
-extern "C" void _create__17dMenu_Collect2D_cFv();
-extern "C" void _delete__17dMenu_Collect2D_cFv();
-extern "C" void initialize__17dMenu_Collect2D_cFv();
-extern "C" void isFishIconVisible__17dMenu_Collect2D_cFv();
-extern "C" void isSkillIconVisible__17dMenu_Collect2D_cFv();
-extern "C" void isInsectIconVisible__17dMenu_Collect2D_cFv();
-extern "C" void screenSet__17dMenu_Collect2D_cFv();
-extern "C" void animationSet__17dMenu_Collect2D_cFv();
-extern "C" void btkAnimeLoop0__17dMenu_Collect2D_cFP19J2DAnmTextureSRTKey();
-extern "C" void setBackAlpha__17dMenu_Collect2D_cFv();
-extern "C" void cursorMove__17dMenu_Collect2D_cFv();
-extern "C" void cursorPosSet__17dMenu_Collect2D_cFv();
-extern "C" void changeSword__17dMenu_Collect2D_cFv();
-extern "C" void changeShield__17dMenu_Collect2D_cFv();
-extern "C" void changeClothe__17dMenu_Collect2D_cFv();
-extern "C" void setArrowMaxNum__17dMenu_Collect2D_cFUc();
-extern "C" void setWalletMaxNum__17dMenu_Collect2D_cFUs();
-extern "C" void setSmellType__17dMenu_Collect2D_cFv();
-extern "C" void setHeartPiece__17dMenu_Collect2D_cFv();
-extern "C" void setPohMaxNum__17dMenu_Collect2D_cFUc();
-extern "C" void setEquipItemFrameColorSword__17dMenu_Collect2D_cFi();
-extern "C" void setEquipItemFrameColorShield__17dMenu_Collect2D_cFi();
-extern "C" void setEquipItemFrameColorClothes__17dMenu_Collect2D_cFi();
-extern "C" void setHIO__17dMenu_Collect2D_cFb();
-extern "C" void getItemTag__17dMenu_Collect2D_cFiib();
-extern "C" void wait_init__17dMenu_Collect2D_cFv();
-extern "C" void wait_proc__17dMenu_Collect2D_cFv();
-extern "C" void save_open_init__17dMenu_Collect2D_cFv();
-extern "C" void save_open_proc__17dMenu_Collect2D_cFv();
-extern "C" void save_move_init__17dMenu_Collect2D_cFv();
-extern "C" void save_move_proc__17dMenu_Collect2D_cFv();
-extern "C" void save_close_init__17dMenu_Collect2D_cFv();
-extern "C" void save_close_proc__17dMenu_Collect2D_cFv();
-extern "C" void option_open_init__17dMenu_Collect2D_cFv();
-extern "C" void option_open_proc__17dMenu_Collect2D_cFv();
-extern "C" void option_move_init__17dMenu_Collect2D_cFv();
-extern "C" void option_move_proc__17dMenu_Collect2D_cFv();
-extern "C" void option_close_init__17dMenu_Collect2D_cFv();
-extern "C" void option_close_proc__17dMenu_Collect2D_cFv();
-extern "C" void letter_open_init__17dMenu_Collect2D_cFv();
-extern "C" void letter_open_proc__17dMenu_Collect2D_cFv();
-extern "C" void letter_move_init__17dMenu_Collect2D_cFv();
-extern "C" void letter_move_proc__17dMenu_Collect2D_cFv();
-extern "C" void letter_close_init__17dMenu_Collect2D_cFv();
-extern "C" void letter_close_proc__17dMenu_Collect2D_cFv();
-extern "C" void fishing_open_init__17dMenu_Collect2D_cFv();
-extern "C" void fishing_open_proc__17dMenu_Collect2D_cFv();
-extern "C" void fishing_move_init__17dMenu_Collect2D_cFv();
-extern "C" void fishing_move_proc__17dMenu_Collect2D_cFv();
-extern "C" void fishing_close_init__17dMenu_Collect2D_cFv();
-extern "C" void fishing_close_proc__17dMenu_Collect2D_cFv();
-extern "C" void skill_open_init__17dMenu_Collect2D_cFv();
-extern "C" void skill_open_proc__17dMenu_Collect2D_cFv();
-extern "C" void skill_move_init__17dMenu_Collect2D_cFv();
-extern "C" void skill_move_proc__17dMenu_Collect2D_cFv();
-extern "C" void skill_close_init__17dMenu_Collect2D_cFv();
-extern "C" void skill_close_proc__17dMenu_Collect2D_cFv();
-extern "C" void insect_open_init__17dMenu_Collect2D_cFv();
-extern "C" void insect_open_proc__17dMenu_Collect2D_cFv();
-extern "C" void insect_move_init__17dMenu_Collect2D_cFv();
-extern "C" void insect_move_proc__17dMenu_Collect2D_cFv();
-extern "C" void insect_close_init__17dMenu_Collect2D_cFv();
-extern "C" void insect_close_proc__17dMenu_Collect2D_cFv();
-extern "C" void _move__17dMenu_Collect2D_cFv();
-extern "C" void _draw__17dMenu_Collect2D_cFv();
-extern "C" void drawTop__17dMenu_Collect2D_cFv();
-extern "C" void isKeyCheck__17dMenu_Collect2D_cFv();
-extern "C" bool isOutCheck__17dMenu_Collect2D_cFv();
-extern "C" void setAButtonString__17dMenu_Collect2D_cFUs();
-extern "C" void setBButtonString__17dMenu_Collect2D_cFUs();
-extern "C" void setItemNameString__17dMenu_Collect2D_cFUcUc();
-extern "C" void setItemNameStringNull__17dMenu_Collect2D_cFv();
-extern "C" void __ct__17dMenu_Collect3D_cFP10JKRExpHeapP17dMenu_Collect2D_cP10CSTControl();
-extern "C" void __dt__17dMenu_Collect3D_cFv();
-extern "C" void _create__17dMenu_Collect3D_cFv();
-extern "C" void _delete__17dMenu_Collect3D_cFv();
-extern "C" void _move__17dMenu_Collect3D_cFUcUc();
-extern "C" void draw__17dMenu_Collect3D_cFv();
-extern "C" void setJ3D__17dMenu_Collect3D_cFPCcPCcPCc();
-extern "C" void set_mtx__17dMenu_Collect3D_cFv();
-extern "C" void animePlay__17dMenu_Collect3D_cFv();
-extern "C" void animeEntry__17dMenu_Collect3D_cFv();
-extern "C" void createMaskModel__17dMenu_Collect3D_cFv();
-extern "C" void createMirrorModel__17dMenu_Collect3D_cFv();
-extern "C" void getCrystalNum__17dMenu_Collect3D_cFv();
-extern "C" void getMirrorNum__17dMenu_Collect3D_cFv();
-extern "C" void getMaskMdlVisible__17dMenu_Collect3D_cFv();
-extern "C" void setupItem3D__17dMenu_Collect3D_cFPA4_f();
-extern "C" void toItem3Dpos__17dMenu_Collect3D_cFfffP4cXyz();
-extern "C" void calcViewMtx__17dMenu_Collect3D_cFPA4_f();
-extern "C" void draw__20dMenu_Collect2DTop_cFv();
-extern "C" void __ct__15dMenu_Collect_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern "C" void __dt__15dMenu_Collect_cFv();
-extern "C" void _create__15dMenu_Collect_cFv();
-extern "C" void _delete__15dMenu_Collect_cFv();
-extern "C" void _move__15dMenu_Collect_cFv();
-extern "C" void draw__15dMenu_Collect_cFv();
-extern "C" void __sinit_d_menu_collect_cpp();
-extern "C" void __dt__20dMenu_Collect2DTop_cFv();
-extern "C" void draw__17dMenu_Collect2D_cFv();
+extern "C" void __ct__17dMenu_Collect2D_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
+extern "C" void __dt__17dMenu_Collect2D_cFv(); // 1
+extern "C" void _create__17dMenu_Collect2D_cFv(); // 1
+extern "C" void _delete__17dMenu_Collect2D_cFv(); // 1
+extern "C" void initialize__17dMenu_Collect2D_cFv(); // 1
+extern "C" void isFishIconVisible__17dMenu_Collect2D_cFv(); // 1
+extern "C" void isSkillIconVisible__17dMenu_Collect2D_cFv(); // 1
+extern "C" void isInsectIconVisible__17dMenu_Collect2D_cFv(); // 1
+extern "C" void screenSet__17dMenu_Collect2D_cFv(); // 1
+extern "C" void animationSet__17dMenu_Collect2D_cFv(); // 1
+extern "C" void btkAnimeLoop0__17dMenu_Collect2D_cFP19J2DAnmTextureSRTKey(); // 1
+extern "C" void setBackAlpha__17dMenu_Collect2D_cFv(); // 1
+extern "C" void cursorMove__17dMenu_Collect2D_cFv(); // 1
+extern "C" void cursorPosSet__17dMenu_Collect2D_cFv(); // 1
+extern "C" void changeSword__17dMenu_Collect2D_cFv(); // 1
+extern "C" void changeShield__17dMenu_Collect2D_cFv(); // 1
+extern "C" void changeClothe__17dMenu_Collect2D_cFv(); // 1
+extern "C" void setArrowMaxNum__17dMenu_Collect2D_cFUc(); // 1
+extern "C" void setWalletMaxNum__17dMenu_Collect2D_cFUs(); // 1
+extern "C" void setSmellType__17dMenu_Collect2D_cFv(); // 1
+extern "C" void setHeartPiece__17dMenu_Collect2D_cFv(); // 1
+extern "C" void setPohMaxNum__17dMenu_Collect2D_cFUc(); // 1
+extern "C" void setEquipItemFrameColorSword__17dMenu_Collect2D_cFi(); // 1
+extern "C" void setEquipItemFrameColorShield__17dMenu_Collect2D_cFi(); // 1
+extern "C" void setEquipItemFrameColorClothes__17dMenu_Collect2D_cFi(); // 1
+extern "C" void setHIO__17dMenu_Collect2D_cFb(); // 1
+extern "C" void getItemTag__17dMenu_Collect2D_cFiib(); // 1
+extern "C" void wait_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void wait_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void save_open_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void save_open_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void save_move_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void save_move_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void save_close_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void save_close_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void option_open_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void option_open_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void option_move_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void option_move_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void option_close_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void option_close_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void letter_open_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void letter_open_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void letter_move_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void letter_move_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void letter_close_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void letter_close_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void fishing_open_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void fishing_open_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void fishing_move_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void fishing_move_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void fishing_close_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void fishing_close_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void skill_open_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void skill_open_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void skill_move_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void skill_move_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void skill_close_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void skill_close_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void insect_open_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void insect_open_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void insect_move_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void insect_move_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void insect_close_init__17dMenu_Collect2D_cFv(); // 1
+extern "C" void insect_close_proc__17dMenu_Collect2D_cFv(); // 1
+extern "C" void _move__17dMenu_Collect2D_cFv(); // 1
+extern "C" void _draw__17dMenu_Collect2D_cFv(); // 1
+extern "C" void drawTop__17dMenu_Collect2D_cFv(); // 1
+extern "C" void isKeyCheck__17dMenu_Collect2D_cFv(); // 1
+extern "C" bool isOutCheck__17dMenu_Collect2D_cFv(); // 1
+extern "C" void setAButtonString__17dMenu_Collect2D_cFUs(); // 1
+extern "C" void setBButtonString__17dMenu_Collect2D_cFUs(); // 1
+extern "C" void setItemNameString__17dMenu_Collect2D_cFUcUc(); // 1
+extern "C" void setItemNameStringNull__17dMenu_Collect2D_cFv(); // 1
+extern "C" void __ct__17dMenu_Collect3D_cFP10JKRExpHeapP17dMenu_Collect2D_cP10CSTControl(); // 1
+extern "C" void __dt__17dMenu_Collect3D_cFv(); // 1
+extern "C" void _create__17dMenu_Collect3D_cFv(); // 1
+extern "C" void _delete__17dMenu_Collect3D_cFv(); // 1
+extern "C" void _move__17dMenu_Collect3D_cFUcUc(); // 1
+extern "C" void draw__17dMenu_Collect3D_cFv(); // 1
+extern "C" void setJ3D__17dMenu_Collect3D_cFPCcPCcPCc(); // 1
+extern "C" void set_mtx__17dMenu_Collect3D_cFv(); // 1
+extern "C" void animePlay__17dMenu_Collect3D_cFv(); // 1
+extern "C" void animeEntry__17dMenu_Collect3D_cFv(); // 1
+extern "C" void createMaskModel__17dMenu_Collect3D_cFv(); // 1
+extern "C" void createMirrorModel__17dMenu_Collect3D_cFv(); // 1
+extern "C" void getCrystalNum__17dMenu_Collect3D_cFv(); // 1
+extern "C" void getMirrorNum__17dMenu_Collect3D_cFv(); // 1
+extern "C" void getMaskMdlVisible__17dMenu_Collect3D_cFv(); // 1
+extern "C" void setupItem3D__17dMenu_Collect3D_cFPA4_f(); // 1
+extern "C" void toItem3Dpos__17dMenu_Collect3D_cFfffP4cXyz(); // 1
+extern "C" void calcViewMtx__17dMenu_Collect3D_cFPA4_f(); // 1
+extern "C" void draw__20dMenu_Collect2DTop_cFv(); // 1
+extern "C" void __ct__15dMenu_Collect_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
+extern "C" void __dt__15dMenu_Collect_cFv(); // 1
+extern "C" void _create__15dMenu_Collect_cFv(); // 1
+extern "C" void _delete__15dMenu_Collect_cFv(); // 1
+extern "C" void _move__15dMenu_Collect_cFv(); // 1
+extern "C" void draw__15dMenu_Collect_cFv(); // 1
+extern "C" void __sinit_d_menu_collect_cpp(); // 1
+extern "C" void __dt__20dMenu_Collect2DTop_cFv(); // 1
+extern "C" void draw__17dMenu_Collect2D_cFv(); // 1
 SECTION_RODATA extern const u8 d_menu_d_menu_collect__lit_3778[12 + 4 /* padding */];
 SECTION_RODATA extern const u8 data_80394F88[24];
 SECTION_RODATA extern const u8 data_80394FA0[24];
@@ -990,214 +645,214 @@ SECTION_SDATA2 extern f64 lit_7963;
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16);
-void mDoMtx_YrotM(f32 (* )[4], s16);
-void mDoMtx_ZrotM(f32 (* )[4], s16);
-void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
-void mDoExt_modelUpdateDL(J3DModel*);
-void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32);
-void mDoExt_destroySolidHeap(JKRSolidHeap*);
-void mDoExt_destroyExpHeap(JKRExpHeap*);
-void mDoExt_setCurrentHeap(JKRHeap*);
-void mDoExt_restoreCurrentHeap();
-void mDoExt_getMesgFont();
-void mDoExt_getRubyFont();
-void checkItemGet(u8, int);
-void dKy_tevstr_init(dKy_tevstr_c*, s8, u8);
-void dMw_A_TRIGGER();
-void dMeter2Info_getNumberTextureName(int);
-void dMeter2Info_setCloth(u8, bool);
-void dMeter2Info_setSword(u8, bool);
-void dMeter2Info_setShield(u8, bool);
-void dMeter2Info_getRecieveLetterNum();
-void dMeter2Info_set2DVibration();
-void dMeter2Info_set2DVibrationM();
-void dPaneClass_showNullPane(J2DScreen*);
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXTrans();
-extern "C" void PSMTXMultVec();
-extern "C" void C_MTXPerspective();
-extern "C" void GXSetProjection();
-extern "C" void GXSetViewport();
-extern "C" void __construct_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_17();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_17();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcpy();
-extern "C" void tan();
+void mDoMtx_XrotM(f32 (* )[4], s16); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32); // 2
+void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
+void mDoExt_destroyExpHeap(JKRExpHeap*); // 2
+void mDoExt_setCurrentHeap(JKRHeap*); // 2
+void mDoExt_restoreCurrentHeap(); // 2
+void mDoExt_getMesgFont(); // 2
+void mDoExt_getRubyFont(); // 2
+void checkItemGet(u8, int); // 2
+void dKy_tevstr_init(dKy_tevstr_c*, s8, u8); // 2
+void dMw_A_TRIGGER(); // 2
+void dMeter2Info_getNumberTextureName(int); // 2
+void dMeter2Info_setCloth(u8, bool); // 2
+void dMeter2Info_setSword(u8, bool); // 2
+void dMeter2Info_setShield(u8, bool); // 2
+void dMeter2Info_getRecieveLetterNum(); // 2
+void dMeter2Info_set2DVibration(); // 2
+void dMeter2Info_set2DVibrationM(); // 2
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void C_MTXPerspective(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_17(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_17(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcpy(); // 1
+extern "C" void tan(); // 1
 
-extern "C" void mDoMtx_XrotM__FPA4_fs();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void mDoMtx_ZrotM__FPA4_fs();
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
-extern "C" void play__14mDoExt_baseAnmFv();
-extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
-extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl();
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap();
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" void mDoExt_restoreCurrentHeap__Fv();
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void mDoExt_getRubyFont__Fv();
-extern "C" void __ct__11J3DLightObjFv();
-extern "C" void checkTrigger__9STControlFv();
-extern "C" void checkLeftTrigger__9STControlFv();
-extern "C" void checkRightTrigger__9STControlFv();
-extern "C" void checkUpTrigger__9STControlFv();
-extern "C" void checkDownTrigger__9STControlFv();
-extern "C" void getRupeeMax__21dSv_player_status_a_cCFv();
-extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
-extern "C" void isCollectCrystal__20dSv_player_collect_cCFUc();
-extern "C" void isCollectMirror__20dSv_player_collect_cCFUc();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void __dt__15J3DTevKColorAnmFv();
-extern "C" void __ct__15J3DTevKColorAnmFv();
-extern "C" void __dt__14J3DTevColorAnmFv();
-extern "C" void __ct__14J3DTevColorAnmFv();
-extern "C" void __dt__11J3DTexNoAnmFv();
-extern "C" void __ct__11J3DTexNoAnmFv();
-extern "C" void __dt__12J3DTexMtxAnmFv();
-extern "C" void __ct__12J3DTexMtxAnmFv();
-extern "C" void __dt__14J3DMatColorAnmFv();
-extern "C" void __ct__14J3DMatColorAnmFv();
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" void checkItemGet__FUci();
-extern "C" void setShieldChange__9daAlink_cFv();
-extern "C" void initStatusWindow__9daAlink_cFv();
-extern "C" void statusWindowExecute__9daAlink_cFPC4cXyzs();
-extern "C" void statusWindowDraw__9daAlink_cFv();
-extern "C" void resetStatusWindow__9daAlink_cFv();
-extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
-extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
-extern "C" void setParam__16dSelect_cursor_cFfffff();
-extern "C" void setAlphaRate__16dSelect_cursor_cFf();
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
-extern "C" void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern "C" void _move__15dMenu_Fishing_cFv();
-extern "C" void _draw__15dMenu_Fishing_cFv();
-extern "C" void _open__15dMenu_Fishing_cFv();
-extern "C" void _close__15dMenu_Fishing_cFv();
-extern "C" void __ct__14dMenu_Insect_cFP10JKRExpHeapP9STControlP10CSTControlUc();
-extern "C" void _move__14dMenu_Insect_cFv();
-extern "C" void _draw__14dMenu_Insect_cFv();
-extern "C" void _open__14dMenu_Insect_cFv();
-extern "C" void _close__14dMenu_Insect_cFv();
-extern "C" void getGetInsectNum__14dMenu_Insect_cFv();
-extern "C" void __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern "C" void _move__14dMenu_Letter_cFv();
-extern "C" void _draw__14dMenu_Letter_cFv();
-extern "C" void _open__14dMenu_Letter_cFv();
-extern "C" void _close__14dMenu_Letter_cFv();
-extern "C" void __ct__14dMenu_Option_cFP10JKRArchiveP9STControl();
-extern "C" void _delete__14dMenu_Option_cFv();
-extern "C" void _move__14dMenu_Option_cFv();
-extern "C" void _draw__14dMenu_Option_cFv();
-extern "C" void _open__14dMenu_Option_cFv();
-extern "C" void _close__14dMenu_Option_cFv();
-extern "C" void initialize__14dMenu_Option_cFv();
-extern "C" void __ct__12dMenu_save_cFv();
-extern "C" void _create__12dMenu_save_cFv();
-extern "C" void initialize__12dMenu_save_cFv();
-extern "C" void _open__12dMenu_save_cFv();
-extern "C" void _close__12dMenu_save_cFv();
-extern "C" void _delete__12dMenu_save_cFv();
-extern "C" void _move__12dMenu_save_cFv();
-extern "C" void _draw__12dMenu_save_cFv();
-extern "C" void __ct__13dMenu_Skill_cFP10JKRExpHeapP9STControlP10CSTControl();
-extern "C" void _move__13dMenu_Skill_cFv();
-extern "C" void _draw__13dMenu_Skill_cFv();
-extern "C" void _open__13dMenu_Skill_cFv();
-extern "C" void _close__13dMenu_Skill_cFv();
-extern "C" void dMw_A_TRIGGER__Fv();
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" void dMeter2Info_getNumberTextureName__Fi();
-extern "C" void dMeter2Info_setCloth__FUcb();
-extern "C" void dMeter2Info_setSword__FUcb();
-extern "C" void dMeter2Info_setShield__FUcb();
-extern "C" void dMeter2Info_getRecieveLetterNum__Fv();
-extern "C" void dMeter2Info_set2DVibration__Fv();
-extern "C" void dMeter2Info_set2DVibrationM__Fv();
-extern "C" void getSmellTypeMessageID__12dMsgObject_cFv();
-extern "C" void __ct__12dMsgString_cFv();
-extern "C" void __dt__12dMsgString_cFv();
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void paneTrans__8CPaneMgrFff();
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" void cLib_addCalcAngleS__FPsssss();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void freeAll__7JKRHeapFv();
-extern "C" void getTotalFreeSize__7JKRHeapFv();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" void adjustSize__12JKRSolidHeapFv();
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void animation__9J2DScreenFv();
-extern "C" void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" void getStringPtr__10J2DTextBoxCFv();
-extern "C" void setString__10J2DTextBoxFsPCce();
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" void init__15J3DVertexBufferFv();
-extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern "C" void initialize__8J3DModelFv();
-extern "C" void entryModelData__8J3DModelFP12J3DModelDataUlUl();
-extern "C" void init__12J3DFrameCtrlFs();
-extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData();
-extern "C" void initialize__14J3DMaterialAnmFv();
-extern "C" void load__22J3DModelLoaderDataBaseFPCvUl();
-extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXTrans();
-extern "C" void PSMTXMultVec();
-extern "C" void C_MTXPerspective();
-extern "C" void GXSetProjection();
-extern "C" void GXSetViewport();
-extern "C" void __construct_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_17();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_17();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcpy();
-extern "C" void tan();
+extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs(); // 1
+extern "C" void play__14mDoExt_baseAnmFv(); // 1
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss(); // 1
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef(); // 1
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl(); // 1
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap(); // 1
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
+extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void mDoExt_getRubyFont__Fv(); // 1
+extern "C" void __ct__11J3DLightObjFv(); // 1
+extern "C" void checkTrigger__9STControlFv(); // 1
+extern "C" void checkLeftTrigger__9STControlFv(); // 1
+extern "C" void checkRightTrigger__9STControlFv(); // 1
+extern "C" void checkUpTrigger__9STControlFv(); // 1
+extern "C" void checkDownTrigger__9STControlFv(); // 1
+extern "C" void getRupeeMax__21dSv_player_status_a_cCFv(); // 1
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc(); // 1
+extern "C" void isCollectCrystal__20dSv_player_collect_cCFUc(); // 1
+extern "C" void isCollectMirror__20dSv_player_collect_cCFUc(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void __dt__15J3DTevKColorAnmFv(); // 1
+extern "C" void __ct__15J3DTevKColorAnmFv(); // 1
+extern "C" void __dt__14J3DTevColorAnmFv(); // 1
+extern "C" void __ct__14J3DTevColorAnmFv(); // 1
+extern "C" void __dt__11J3DTexNoAnmFv(); // 1
+extern "C" void __ct__11J3DTexNoAnmFv(); // 1
+extern "C" void __dt__12J3DTexMtxAnmFv(); // 1
+extern "C" void __ct__12J3DTexMtxAnmFv(); // 1
+extern "C" void __dt__14J3DMatColorAnmFv(); // 1
+extern "C" void __ct__14J3DMatColorAnmFv(); // 1
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
+extern "C" void checkItemGet__FUci(); // 1
+extern "C" void setShieldChange__9daAlink_cFv(); // 1
+extern "C" void initStatusWindow__9daAlink_cFv(); // 1
+extern "C" void statusWindowExecute__9daAlink_cFPC4cXyzs(); // 1
+extern "C" void statusWindowDraw__9daAlink_cFv(); // 1
+extern "C" void resetStatusWindow__9daAlink_cFv(); // 1
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb(); // 1
+extern "C" void setParam__16dSelect_cursor_cFfffff(); // 1
+extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc(); // 1
+extern "C" void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
+extern "C" void _move__15dMenu_Fishing_cFv(); // 1
+extern "C" void _draw__15dMenu_Fishing_cFv(); // 1
+extern "C" void _open__15dMenu_Fishing_cFv(); // 1
+extern "C" void _close__15dMenu_Fishing_cFv(); // 1
+extern "C" void __ct__14dMenu_Insect_cFP10JKRExpHeapP9STControlP10CSTControlUc(); // 1
+extern "C" void _move__14dMenu_Insect_cFv(); // 1
+extern "C" void _draw__14dMenu_Insect_cFv(); // 1
+extern "C" void _open__14dMenu_Insect_cFv(); // 1
+extern "C" void _close__14dMenu_Insect_cFv(); // 1
+extern "C" void getGetInsectNum__14dMenu_Insect_cFv(); // 1
+extern "C" void __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
+extern "C" void _move__14dMenu_Letter_cFv(); // 1
+extern "C" void _draw__14dMenu_Letter_cFv(); // 1
+extern "C" void _open__14dMenu_Letter_cFv(); // 1
+extern "C" void _close__14dMenu_Letter_cFv(); // 1
+extern "C" void __ct__14dMenu_Option_cFP10JKRArchiveP9STControl(); // 1
+extern "C" void _delete__14dMenu_Option_cFv(); // 1
+extern "C" void _move__14dMenu_Option_cFv(); // 1
+extern "C" void _draw__14dMenu_Option_cFv(); // 1
+extern "C" void _open__14dMenu_Option_cFv(); // 1
+extern "C" void _close__14dMenu_Option_cFv(); // 1
+extern "C" void initialize__14dMenu_Option_cFv(); // 1
+extern "C" void __ct__12dMenu_save_cFv(); // 1
+extern "C" void _create__12dMenu_save_cFv(); // 1
+extern "C" void initialize__12dMenu_save_cFv(); // 1
+extern "C" void _open__12dMenu_save_cFv(); // 1
+extern "C" void _close__12dMenu_save_cFv(); // 1
+extern "C" void _delete__12dMenu_save_cFv(); // 1
+extern "C" void _move__12dMenu_save_cFv(); // 1
+extern "C" void _draw__12dMenu_save_cFv(); // 1
+extern "C" void __ct__13dMenu_Skill_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
+extern "C" void _move__13dMenu_Skill_cFv(); // 1
+extern "C" void _draw__13dMenu_Skill_cFv(); // 1
+extern "C" void _open__13dMenu_Skill_cFv(); // 1
+extern "C" void _close__13dMenu_Skill_cFv(); // 1
+extern "C" void dMw_A_TRIGGER__Fv(); // 1
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void dMeter2Info_getNumberTextureName__Fi(); // 1
+extern "C" void dMeter2Info_setCloth__FUcb(); // 1
+extern "C" void dMeter2Info_setSword__FUcb(); // 1
+extern "C" void dMeter2Info_setShield__FUcb(); // 1
+extern "C" void dMeter2Info_getRecieveLetterNum__Fv(); // 1
+extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
+extern "C" void dMeter2Info_set2DVibrationM__Fv(); // 1
+extern "C" void getSmellTypeMessageID__12dMsgObject_cFv(); // 1
+extern "C" void __ct__12dMsgString_cFv(); // 1
+extern "C" void __dt__12dMsgString_cFv(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void paneTrans__8CPaneMgrFff(); // 1
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void freeAll__7JKRHeapFv(); // 1
+extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
+extern "C" void adjustSize__12JKRSolidHeapFv(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void animation__9J2DScreenFv(); // 1
+extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
+extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
+extern "C" void setString__10J2DTextBoxFsPCce(); // 1
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
+extern "C" void init__15J3DVertexBufferFv(); // 1
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo(); // 1
+extern "C" void initialize__8J3DModelFv(); // 1
+extern "C" void entryModelData__8J3DModelFP12J3DModelDataUlUl(); // 1
+extern "C" void init__12J3DFrameCtrlFs(); // 1
+extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData(); // 1
+extern "C" void initialize__14J3DMaterialAnmFv(); // 1
+extern "C" void load__22J3DModelLoaderDataBaseFPCvUl(); // 1
+extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void C_MTXPerspective(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_17(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_17(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcpy(); // 1
+extern "C" void tan(); // 1
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
 SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];

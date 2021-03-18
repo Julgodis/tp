@@ -9,28 +9,16 @@
 // Types:
 // 
 
-// build dBgS_SplGrpChk (['dBgS_SplGrpChk']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['dBgS_SplGrpChk']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dBgS_SplGrpChk']) */
 struct dBgS_SplGrpChk {
-	// ('cXyz',)
 	/* 80078B90 */ void Set(cXyz&, f32);
 	/* 80078BB0 */ dBgS_SplGrpChk();
 	/* 80078C78 */ ~dBgS_SplGrpChk();
 	/* 80078D0C */ void Init();
 };
 
-// build cXyz (['cXyz']) True/True
-// build dBgS_Chk (['dBgS_Chk']) False/False
-/* top-level dependencies (begin ['dBgS_Chk']) */
-/* top-level dependencies (end ['dBgS_Chk']) */
 struct dBgS_Chk {
 	/* 8007749C */ dBgS_Chk();
 	/* 800774E8 */ ~dBgS_Chk();
@@ -38,17 +26,11 @@ struct dBgS_Chk {
 	/* 80077564 */ void GetGrpPassChkInfo();
 };
 
-// build cBgS_Chk (['cBgS_Chk']) False/False
-/* top-level dependencies (begin ['cBgS_Chk']) */
-/* top-level dependencies (end ['cBgS_Chk']) */
 struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 	/* 80268074 */ cBgS_PolyInfo();
 	/* 802680B0 */ ~cBgS_PolyInfo();
@@ -59,17 +41,17 @@ struct cBgS_PolyInfo {
 // Forward References:
 // 
 
-extern "C" static void func_80078D4C();
-extern "C" static void func_80078D54();
-extern "C" static void func_80078D5C();
+extern "C" static void func_80078D4C(); // 1
+extern "C" static void func_80078D54(); // 1
+extern "C" static void func_80078D5C(); // 1
 
-extern "C" void Set__14dBgS_SplGrpChkFR4cXyzf();
-extern "C" void __ct__14dBgS_SplGrpChkFv();
-extern "C" void __dt__14dBgS_SplGrpChkFv();
-extern "C" void Init__14dBgS_SplGrpChkFv();
-extern "C" static void func_80078D4C();
-extern "C" static void func_80078D54();
-extern "C" static void func_80078D5C();
+extern "C" void Set__14dBgS_SplGrpChkFR4cXyzf(); // 1
+extern "C" void __ct__14dBgS_SplGrpChkFv(); // 1
+extern "C" void __dt__14dBgS_SplGrpChkFv(); // 1
+extern "C" void Init__14dBgS_SplGrpChkFv(); // 1
+extern "C" static void func_80078D4C(); // 1
+extern "C" static void func_80078D54(); // 1
+extern "C" static void func_80078D5C(); // 1
 SECTION_DATA extern void*const __vt__14dBgS_SplGrpChk[12];
 SECTION_SDATA2 extern u8 d_bg_d_bg_s_spl_grp_chk__lit_319[4];
 SECTION_SDATA2 extern f32 d_bg_d_bg_s_spl_grp_chk__lit_320;
@@ -78,18 +60,18 @@ SECTION_SDATA2 extern f32 d_bg_d_bg_s_spl_grp_chk__lit_320;
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __ct__8dBgS_ChkFv();
-extern "C" void __dt__8dBgS_ChkFv();
-extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv();
-extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv();
-extern "C" void __ct__8cBgS_ChkFv();
-extern "C" void __dt__8cBgS_ChkFv();
-extern "C" void __ct__13cBgS_PolyInfoFv();
-extern "C" void __dt__13cBgS_PolyInfoFv();
-extern "C" void ClearPi__13cBgS_PolyInfoFv();
-extern "C" void __dl__FPv();
+extern "C" void __ct__8dBgS_ChkFv(); // 1
+extern "C" void __dt__8dBgS_ChkFv(); // 1
+extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv(); // 1
+extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv(); // 1
+extern "C" void __ct__8cBgS_ChkFv(); // 1
+extern "C" void __dt__8cBgS_ChkFv(); // 1
+extern "C" void __ct__13cBgS_PolyInfoFv(); // 1
+extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
+extern "C" void ClearPi__13cBgS_PolyInfoFv(); // 1
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

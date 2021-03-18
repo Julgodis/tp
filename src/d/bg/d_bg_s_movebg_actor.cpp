@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dBgS_MoveBgActor (['dBgS_MoveBgActor']) False/False
-/* top-level dependencies (begin ['dBgS_MoveBgActor']) */
-/* top-level dependencies (end ['dBgS_MoveBgActor']) */
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
 	/* 80078688 */ bool CreateHeap();
@@ -27,92 +24,44 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
-/* top-level dependencies (begin ['mDoMtx_stack_c']) */
-/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build cBgS (['cBgS']) False/False
-// build dBgW_Base (['dBgW_Base']) False/False
-/* top-level dependencies (begin ['dBgW_Base']) */
-/* top-level dependencies (end ['dBgW_Base']) */
 struct dBgW_Base {
 };
 
-/* top-level dependencies (begin ['cBgS']) */
-// outer dependency: ('dBgW_Base',)
-/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
-	// ('dBgW_Base',)
 	/* 80074250 */ void Release(dBgW_Base*);
 };
 
-// build dBgW_Base (['dBgW_Base']) True/True
-// build dBgS (['dBgS']) False/False
-// build dBgW_Base (['dBgW_Base']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dBgS']) */
-// outer dependency: ('dBgW_Base',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// ('dBgW_Base',)
-	// ('fopAc_ac_c',)
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
-// build cBgW (['cBgW']) False/False
-// build cBgD_t (['cBgD_t']) False/False
-/* top-level dependencies (begin ['cBgD_t']) */
-/* top-level dependencies (end ['cBgD_t']) */
 struct cBgD_t {
 };
 
-/* top-level dependencies (begin ['cBgW']) */
-// outer dependency: ('cBgD_t',)
-/* top-level dependencies (end ['cBgW']) */
 struct cBgW {
-	// ('cBgD_t',)
 	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
 };
 
-// build cBgD_t (['cBgD_t']) True/True
-// build dBgW (['dBgW']) False/False
-/* top-level dependencies (begin ['dBgW']) */
-/* top-level dependencies (end ['dBgW']) */
 struct dBgW {
 	/* 8007B970 */ dBgW();
 	/* 8007B9C0 */ void Move();
 };
 
-// build cBgW_BgId (['cBgW_BgId']) False/False
-/* top-level dependencies (begin ['cBgW_BgId']) */
-/* top-level dependencies (end ['cBgW_BgId']) */
 struct cBgW_BgId {
 	/* 802681D4 */ void ChkUsed() const;
 };
@@ -121,23 +70,23 @@ struct cBgW_BgId {
 // Forward References:
 // 
 
-static void CheckCreateHeap(fopAc_ac_c*);
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+static void CheckCreateHeap(fopAc_ac_c*); // 2
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 
-extern "C" void __ct__16dBgS_MoveBgActorFv();
-extern "C" static void d_bg_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c();
-extern "C" bool CreateHeap__16dBgS_MoveBgActorFv();
-extern "C" bool Create__16dBgS_MoveBgActorFv();
-extern "C" bool Execute__16dBgS_MoveBgActorFPPA3_A4_f();
-extern "C" bool Draw__16dBgS_MoveBgActorFv();
-extern "C" bool Delete__16dBgS_MoveBgActorFv();
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
-extern "C" bool ToFore__16dBgS_MoveBgActorFv();
-extern "C" bool ToBack__16dBgS_MoveBgActorFv();
-extern "C" void MoveBGCreateHeap__16dBgS_MoveBgActorFv();
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
+extern "C" static void d_bg_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c(); // 1
+extern "C" bool CreateHeap__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Execute__16dBgS_MoveBgActorFPPA3_A4_f(); // 1
+extern "C" bool Draw__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool Delete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
+extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGCreateHeap__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
 SECTION_DATA extern void*const __vt__16dBgS_MoveBgActor[10];
 SECTION_SBSS extern u8 m_name__16dBgS_MoveBgActor[4];
 SECTION_SBSS extern u8 m_dzb_id__16dBgS_MoveBgActor[4];
@@ -147,30 +96,30 @@ SECTION_SBSS extern u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16);
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
-void* operator new(u32);
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXTrans();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+void* operator new(u32); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
 
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void scaleM__14mDoMtx_stack_cFfff();
-extern "C" void __ct__10fopAc_ac_cFv();
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void Release__4cBgSFP9dBgW_Base();
-extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c();
-extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f();
-extern "C" void __ct__4dBgWFv();
-extern "C" void Move__4dBgWFv();
-extern "C" void ChkUsed__9cBgW_BgIdCFv();
-extern "C" void* __nw__FUl();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXTrans();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
+extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
+extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f(); // 1
+extern "C" void __ct__4dBgWFv(); // 1
+extern "C" void Move__4dBgWFv(); // 1
+extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 

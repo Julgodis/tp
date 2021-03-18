@@ -9,20 +9,12 @@
 // Types:
 // 
 
-// build dEvt_control_c (['dEvt_control_c']) False/False
-// build dEvt_order_c (['dEvt_order_c']) False/False
-/* top-level dependencies (begin ['dEvt_order_c']) */
-/* top-level dependencies (end ['dEvt_order_c']) */
 struct dEvt_order_c {
 	/* 80030154 */ ~dEvt_order_c();
 	/* 800415D4 */ dEvt_order_c();
 };
 
-/* top-level dependencies (begin ['dEvt_control_c']) */
-// outer dependency: ('dEvt_order_c',)
-/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
-	// ('dEvt_order_c',)
 	/* 80041580 */ dEvt_control_c();
 	/* 800415D8 */ void orderOld(u16, u16, u16, u16, void*, void*, void const*);
 	/* 80041668 */ void order(u16, u16, u16, u16, void*, void*, s16, u8);
@@ -42,8 +34,8 @@ struct dEvt_control_c {
 	/* 800421C0 */ void endProc();
 	/* 80042254 */ void change();
 	/* 800422C0 */ void entry();
-	/* 80042468 */ void reset();
 	/* 80042518 */ void reset(void*);
+	/* 80042468 */ void reset();
 	/* 800425B4 */ void clearSkipSystem();
 	/* 8004290C */ void getSkipEventName();
 	/* 80042958 */ void setSkipZev(void*, char*);
@@ -59,8 +51,8 @@ struct dEvt_control_c {
 	/* 800432C8 */ void getPId(void*);
 	/* 800432EC */ void convPId(u32);
 	/* 8004331C */ void getStbDemoData(char*);
-	/* 800434D8 */ void searchMapEventData(u8);
 	/* 80043500 */ void searchMapEventData(u8, s32);
+	/* 800434D8 */ void searchMapEventData(u8);
 	/* 8004360C */ void runningEventID(s16);
 	/* 8004362C */ void setPt1(void*);
 	/* 8004365C */ void setPt2(void*);
@@ -71,10 +63,6 @@ struct dEvt_control_c {
 	/* 80043724 */ void setGtItm(u8);
 };
 
-// build dEvt_order_c (['dEvt_order_c']) True/True
-// build dEvt_info_c (['dEvt_info_c']) False/False
-/* top-level dependencies (begin ['dEvt_info_c']) */
-/* top-level dependencies (end ['dEvt_info_c']) */
 struct dEvt_info_c {
 	/* 800433F0 */ dEvt_info_c();
 	/* 80043428 */ void setEventName(char*);
@@ -82,92 +70,50 @@ struct dEvt_info_c {
 	/* 800434CC */ void beforeProc();
 };
 
-// build mDoGph_gInf_c (['mDoGph_gInf_c']) False/False
-/* top-level dependencies (begin ['mDoGph_gInf_c']) */
-/* top-level dependencies (end ['mDoGph_gInf_c']) */
 struct mDoGph_gInf_c {
 	/* 800080D0 */ void fadeOut(f32);
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
-/* top-level dependencies (begin ['dStage_roomControl_c']) */
-/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349A4 */ void offEventBit(u16);
 };
 
-// build dSv_info_c (['dSv_info_c']) False/False
-/* top-level dependencies (begin ['dSv_info_c']) */
-/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build daItemBase_c (['daItemBase_c']) False/False
-/* top-level dependencies (begin ['daItemBase_c']) */
-/* top-level dependencies (end ['daItemBase_c']) */
 struct daItemBase_c {
 	/* 80037AE4 */ void dead();
 };
 
-// build dDemo_c (['dDemo_c']) False/False
-/* top-level dependencies (begin ['dDemo_c']) */
-/* top-level dependencies (end ['dDemo_c']) */
 struct dDemo_c {
 	/* 80039CF8 */ void end();
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build dEvDtEvent_c (['dEvDtEvent_c']) False/False
-/* top-level dependencies (begin ['dEvDtEvent_c']) */
-/* top-level dependencies (end ['dEvDtEvent_c']) */
 struct dEvDtEvent_c {
 	/* 80043EFC */ void forceFinish();
 };
 
-// build dEvent_exception_c (['dEvent_exception_c']) False/False
-/* top-level dependencies (begin ['dEvent_exception_c']) */
-/* top-level dependencies (end ['dEvent_exception_c']) */
 struct dEvent_exception_c {
 	/* 800463F0 */ void setStartDemo(int);
 };
 
-// build dEvent_manager_c (['dEvent_manager_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dEvent_manager_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dEvent_manager_c']) */
 struct dEvent_manager_c {
-	// ('fopAc_ac_c',)
 	/* 80046800 */ void setObjectArchive(char*);
 	/* 80046DAC */ void endProc(s16, int);
 	/* 80046E64 */ void Sequencer();
@@ -180,32 +126,20 @@ struct dEvent_manager_c {
 	/* 80048348 */ void cancelStaff(char const*);
 };
 
-// build dVibration_c (['dVibration_c']) False/False
-/* top-level dependencies (begin ['dVibration_c']) */
-/* top-level dependencies (end ['dVibration_c']) */
 struct dVibration_c {
 	/* 8006FD94 */ void StopQuake(int);
 };
 
-// build dCamera_c (['dCamera_c']) False/False
-/* top-level dependencies (begin ['dCamera_c']) */
-/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
 	/* 801614C4 */ void QuickStart();
 };
 
-// build dMsgObject_c (['dMsgObject_c']) False/False
-/* top-level dependencies (begin ['dMsgObject_c']) */
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 80237994 */ void onKillMessageFlag();
 	/* 802379AC */ void setKillMessageFlag();
 	/* 80238098 */ void endFlowGroup();
 };
 
-// build Z2StatusMgr (['Z2StatusMgr']) False/False
-/* top-level dependencies (begin ['Z2StatusMgr']) */
-/* top-level dependencies (end ['Z2StatusMgr']) */
 struct Z2StatusMgr {
 	/* 802B61E8 */ void setDemoName(char*);
 };
@@ -214,72 +148,72 @@ struct Z2StatusMgr {
 // Forward References:
 // 
 
-extern "C" static bool func_80041480();
-extern "C" static void func_80041488();
-void dEv_defaultSkipProc(void*, int);
-void dEv_defaultSkipZev(void*, int);
-void dEv_defaultSkipStb(void*, int);
-void dEv_noFinishSkipProc(void*, int);
-extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+extern "C" static bool func_80041480(); // 1
+extern "C" static void func_80041488(); // 1
+void dEv_defaultSkipProc(void*, int); // 2
+void dEv_defaultSkipZev(void*, int); // 2
+void dEv_defaultSkipStb(void*, int); // 2
+void dEv_noFinishSkipProc(void*, int); // 2
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
 
-extern "C" static bool func_80041480();
-extern "C" static void func_80041488();
-extern "C" void __ct__14dEvt_control_cFv();
-extern "C" void __ct__12dEvt_order_cFv();
-extern "C" void orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv();
-extern "C" void order__14dEvt_control_cFUsUsUsUsPvPvsUc();
-extern "C" void setParam__14dEvt_control_cFP12dEvt_order_c();
-extern "C" void beforeFlagProc__14dEvt_control_cFP12dEvt_order_c();
-extern "C" void afterFlagProc__14dEvt_control_cFP12dEvt_order_c();
-extern "C" void commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs();
-extern "C" void talkCheck__14dEvt_control_cFP12dEvt_order_c();
-extern "C" void talkXyCheck__14dEvt_control_cFP12dEvt_order_c();
-extern "C" void catchCheck__14dEvt_control_cFP12dEvt_order_c();
-extern "C" void talkEnd__14dEvt_control_cFv();
-extern "C" void demoCheck__14dEvt_control_cFP12dEvt_order_c();
-extern "C" void demoEnd__14dEvt_control_cFv();
-extern "C" void potentialCheck__14dEvt_control_cFP12dEvt_order_c();
-extern "C" void doorCheck__14dEvt_control_cFP12dEvt_order_c();
-extern "C" void itemCheck__14dEvt_control_cFP12dEvt_order_c();
-extern "C" void endProc__14dEvt_control_cFv();
-extern "C" void change__14dEvt_control_cFv();
-extern "C" void entry__14dEvt_control_cFv();
-extern "C" void reset__14dEvt_control_cFv();
-extern "C" void reset__14dEvt_control_cFPv();
-extern "C" void clearSkipSystem__14dEvt_control_cFv();
-extern "C" void dEv_defaultSkipProc__FPvi();
-extern "C" void dEv_defaultSkipZev__FPvi();
-extern "C" void dEv_defaultSkipStb__FPvi();
-extern "C" void dEv_noFinishSkipProc__FPvi();
-extern "C" void getSkipEventName__14dEvt_control_cFv();
-extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
-extern "C" void setSkipZev__14dEvt_control_cFPvPc();
-extern "C" void onSkipFade__14dEvt_control_cFv();
-extern "C" void offSkipFade__14dEvt_control_cFv();
-extern "C" void skipper__14dEvt_control_cFv();
-extern "C" void Step__14dEvt_control_cFv();
-extern "C" void moveApproval__14dEvt_control_cFPv();
-extern "C" void compulsory__14dEvt_control_cFPvPCcUs();
-extern "C" void remove__14dEvt_control_cFv();
-extern "C" void getStageEventDt__14dEvt_control_cFv();
-extern "C" void sceneChange__14dEvt_control_cFi();
-extern "C" void getPId__14dEvt_control_cFPv();
-extern "C" void convPId__14dEvt_control_cFUi();
-extern "C" void getStbDemoData__14dEvt_control_cFPc();
-extern "C" void __ct__11dEvt_info_cFv();
-extern "C" void setEventName__11dEvt_info_cFPc();
-extern "C" void getEventName__11dEvt_info_cFv();
-extern "C" void beforeProc__11dEvt_info_cFv();
-extern "C" void searchMapEventData__14dEvt_control_cFUc();
-extern "C" void searchMapEventData__14dEvt_control_cFUcl();
-extern "C" void runningEventID__14dEvt_control_cFs();
-extern "C" void setPt1__14dEvt_control_cFPv();
-extern "C" void setPt2__14dEvt_control_cFPv();
-extern "C" void setPtT__14dEvt_control_cFPv();
-extern "C" void setPtI__14dEvt_control_cFPv();
-extern "C" void setPtI_Id__14dEvt_control_cFUi();
-extern "C" void setPtD__14dEvt_control_cFPv();
-extern "C" void setGtItm__14dEvt_control_cFUc();
+extern "C" static bool func_80041480(); // 1
+extern "C" static void func_80041488(); // 1
+extern "C" void __ct__14dEvt_control_cFv(); // 1
+extern "C" void __ct__12dEvt_order_cFv(); // 1
+extern "C" void orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv(); // 1
+extern "C" void order__14dEvt_control_cFUsUsUsUsPvPvsUc(); // 1
+extern "C" void setParam__14dEvt_control_cFP12dEvt_order_c(); // 1
+extern "C" void beforeFlagProc__14dEvt_control_cFP12dEvt_order_c(); // 1
+extern "C" void afterFlagProc__14dEvt_control_cFP12dEvt_order_c(); // 1
+extern "C" void commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs(); // 1
+extern "C" void talkCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
+extern "C" void talkXyCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
+extern "C" void catchCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
+extern "C" void talkEnd__14dEvt_control_cFv(); // 1
+extern "C" void demoCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
+extern "C" void demoEnd__14dEvt_control_cFv(); // 1
+extern "C" void potentialCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
+extern "C" void doorCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
+extern "C" void itemCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
+extern "C" void endProc__14dEvt_control_cFv(); // 1
+extern "C" void change__14dEvt_control_cFv(); // 1
+extern "C" void entry__14dEvt_control_cFv(); // 1
+extern "C" void reset__14dEvt_control_cFv(); // 1
+extern "C" void reset__14dEvt_control_cFPv(); // 1
+extern "C" void clearSkipSystem__14dEvt_control_cFv(); // 1
+extern "C" void dEv_defaultSkipProc__FPvi(); // 1
+extern "C" void dEv_defaultSkipZev__FPvi(); // 1
+extern "C" void dEv_defaultSkipStb__FPvi(); // 1
+extern "C" void dEv_noFinishSkipProc__FPvi(); // 1
+extern "C" void getSkipEventName__14dEvt_control_cFv(); // 1
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
+extern "C" void setSkipZev__14dEvt_control_cFPvPc(); // 1
+extern "C" void onSkipFade__14dEvt_control_cFv(); // 1
+extern "C" void offSkipFade__14dEvt_control_cFv(); // 1
+extern "C" void skipper__14dEvt_control_cFv(); // 1
+extern "C" void Step__14dEvt_control_cFv(); // 1
+extern "C" void moveApproval__14dEvt_control_cFPv(); // 1
+extern "C" void compulsory__14dEvt_control_cFPvPCcUs(); // 1
+extern "C" void remove__14dEvt_control_cFv(); // 1
+extern "C" void getStageEventDt__14dEvt_control_cFv(); // 1
+extern "C" void sceneChange__14dEvt_control_cFi(); // 1
+extern "C" void getPId__14dEvt_control_cFPv(); // 1
+extern "C" void convPId__14dEvt_control_cFUi(); // 1
+extern "C" void getStbDemoData__14dEvt_control_cFPc(); // 1
+extern "C" void __ct__11dEvt_info_cFv(); // 1
+extern "C" void setEventName__11dEvt_info_cFPc(); // 1
+extern "C" void getEventName__11dEvt_info_cFv(); // 1
+extern "C" void beforeProc__11dEvt_info_cFv(); // 1
+extern "C" void searchMapEventData__14dEvt_control_cFUc(); // 1
+extern "C" void searchMapEventData__14dEvt_control_cFUcl(); // 1
+extern "C" void runningEventID__14dEvt_control_cFs(); // 1
+extern "C" void setPt1__14dEvt_control_cFPv(); // 1
+extern "C" void setPt2__14dEvt_control_cFPv(); // 1
+extern "C" void setPtT__14dEvt_control_cFPv(); // 1
+extern "C" void setPtI__14dEvt_control_cFPv(); // 1
+extern "C" void setPtI_Id__14dEvt_control_cFUi(); // 1
+extern "C" void setPtD__14dEvt_control_cFPv(); // 1
+extern "C" void setGtItm__14dEvt_control_cFUc(); // 1
 SECTION_RODATA extern const u8 d_event_d_event__stringBase0[80];
 SECTION_DATA extern void*d_event_d_event__lit_4719[14];
 SECTION_SDATA2 extern f32 d_event_d_event__lit_4361;
@@ -291,86 +225,86 @@ SECTION_SDATA2 extern u8 lit_5095[4];
 // External References:
 // 
 
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
-void fopAcM_getItemEventPartner(fopAc_ac_c const*);
-void fpcSch_JudgeByID(void*, void*);
-void dStage_changeScene4Event(int, s8, int, bool, f32, u32, s16, int);
-void dComIfGp_getSelectItem(int);
-void dComIfG_getStageRes(char const*);
-void dComIfG_getRoomArcName(int);
-void dComIfGs_onVisitedRoom(int);
-void dCam_getBody();
-extern "C" void __construct_array();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcat();
-extern "C" void strncpy();
-extern "C" void strcpy();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
+void fopAcM_getItemEventPartner(fopAc_ac_c const*); // 2
+void fpcSch_JudgeByID(void*, void*); // 2
+void dStage_changeScene4Event(int, s8, int, bool, f32, u32, s16, int); // 2
+void dComIfGp_getSelectItem(int); // 2
+void dComIfG_getStageRes(char const*); // 2
+void dComIfG_getRoomArcName(int); // 2
+void dComIfGs_onVisitedRoom(int); // 2
+void dCam_getBody(); // 2
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcat(); // 1
+extern "C" void strncpy(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void fadeOut__13mDoGph_gInf_cFf();
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
-extern "C" void fopAcM_getItemEventPartner__FPC10fopAc_ac_c();
-extern "C" void fpcSch_JudgeByID__FPvPv();
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" void dStage_changeScene4Event__FiScibfUlsi();
-extern "C" void dComIfGp_getSelectItem__Fi();
-extern "C" void dComIfG_getStageRes__FPCc();
-extern "C" void dComIfG_getRoomArcName__Fi();
-extern "C" void dComIfGs_onVisitedRoom__Fi();
-extern "C" void __dt__12dEvt_order_cFv();
-extern "C" void offEventBit__11dSv_event_cFUs();
-extern "C" void onSwitch__10dSv_info_cFii();
-extern "C" void isSwitch__10dSv_info_cCFii();
-extern "C" void dead__12daItemBase_cFv();
-extern "C" void end__7dDemo_cFv();
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
-extern "C" void forceFinish__12dEvDtEvent_cFv();
-extern "C" void setStartDemo__18dEvent_exception_cFi();
-extern "C" void setObjectArchive__16dEvent_manager_cFPc();
-extern "C" void endProc__16dEvent_manager_cFsi();
-extern "C" void Sequencer__16dEvent_manager_cFv();
-extern "C" void Experts__16dEvent_manager_cFv();
-extern "C" void getEventData__16dEvent_manager_cFs();
-extern "C" void getEventIdx__16dEvent_manager_cFPCcUcl();
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
-extern "C" void order__16dEvent_manager_cFs();
-extern "C" void issueStaff__16dEvent_manager_cFPCc();
-extern "C" void cancelStaff__16dEvent_manager_cFPCc();
-extern "C" void StopQuake__12dVibration_cFi();
-extern "C" void QuickStart__9dCamera_cFv();
-extern "C" void dCam_getBody__Fv();
-extern "C" void onKillMessageFlag__12dMsgObject_cFv();
-extern "C" void setKillMessageFlag__12dMsgObject_cFv();
-extern "C" void endFlowGroup__12dMsgObject_cFv();
-extern "C" void setDemoName__11Z2StatusMgrFPc();
-extern "C" void __construct_array();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcat();
-extern "C" void strncpy();
-extern "C" void strcpy();
+extern "C" void fadeOut__13mDoGph_gInf_cFf(); // 1
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
+extern "C" void fopAcM_getItemEventPartner__FPC10fopAc_ac_c(); // 1
+extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
+extern "C" void dStage_changeScene4Event__FiScibfUlsi(); // 1
+extern "C" void dComIfGp_getSelectItem__Fi(); // 1
+extern "C" void dComIfG_getStageRes__FPCc(); // 1
+extern "C" void dComIfG_getRoomArcName__Fi(); // 1
+extern "C" void dComIfGs_onVisitedRoom__Fi(); // 1
+extern "C" void __dt__12dEvt_order_cFv(); // 1
+extern "C" void offEventBit__11dSv_event_cFUs(); // 1
+extern "C" void onSwitch__10dSv_info_cFii(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void dead__12daItemBase_cFv(); // 1
+extern "C" void end__7dDemo_cFv(); // 1
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
+extern "C" void forceFinish__12dEvDtEvent_cFv(); // 1
+extern "C" void setStartDemo__18dEvent_exception_cFi(); // 1
+extern "C" void setObjectArchive__16dEvent_manager_cFPc(); // 1
+extern "C" void endProc__16dEvent_manager_cFsi(); // 1
+extern "C" void Sequencer__16dEvent_manager_cFv(); // 1
+extern "C" void Experts__16dEvent_manager_cFv(); // 1
+extern "C" void getEventData__16dEvent_manager_cFs(); // 1
+extern "C" void getEventIdx__16dEvent_manager_cFPCcUcl(); // 1
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
+extern "C" void order__16dEvent_manager_cFs(); // 1
+extern "C" void issueStaff__16dEvent_manager_cFPCc(); // 1
+extern "C" void cancelStaff__16dEvent_manager_cFPCc(); // 1
+extern "C" void StopQuake__12dVibration_cFi(); // 1
+extern "C" void QuickStart__9dCamera_cFv(); // 1
+extern "C" void dCam_getBody__Fv(); // 1
+extern "C" void onKillMessageFlag__12dMsgObject_cFv(); // 1
+extern "C" void setKillMessageFlag__12dMsgObject_cFv(); // 1
+extern "C" void endFlowGroup__12dMsgObject_cFv(); // 1
+extern "C" void setDemoName__11Z2StatusMgrFPc(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcat(); // 1
+extern "C" void strncpy(); // 1
+extern "C" void strcpy(); // 1
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 SECTION_DATA extern void*const __vt__11dEvt_info_c[4];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];

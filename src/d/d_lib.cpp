@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build STControl (['STControl']) False/False
-/* top-level dependencies (begin ['STControl']) */
-/* top-level dependencies (end ['STControl']) */
 struct STControl {
 	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
@@ -27,87 +24,45 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-// build CSTControl (['CSTControl']) False/False
-/* top-level dependencies (begin ['CSTControl']) */
-/* top-level dependencies (end ['CSTControl']) */
 struct CSTControl {
 	/* 8003217C */ void getValueStick();
 	/* 8003218C */ void getAngleStick();
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-// build JKRAramArchive (['JKRAramArchive']) False/False
-/* top-level dependencies (begin ['JKRAramArchive']) */
-/* top-level dependencies (end ['JKRAramArchive']) */
 struct JKRAramArchive {
 	/* 802D781C */ void getAramAddress(char const*);
 };
 
-// build dLib_time_c (['dLib_time_c']) False/False
-/* top-level dependencies (begin ['dLib_time_c']) */
-/* top-level dependencies (end ['dLib_time_c']) */
 struct dLib_time_c {
 	/* 80032804 */ void getTime();
 	/* 80032880 */ void stopTime();
 	/* 800328BC */ void startTime();
 };
 
-// build dEvt_control_c (['dEvt_control_c']) False/False
-/* top-level dependencies (begin ['dEvt_control_c']) */
-/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
 	/* 800434D8 */ void searchMapEventData(u8);
 };
 
-// build Vec (['Vec']) True/True
-// build JKRAram (['JKRAram']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-};
-
-// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
-/* top-level dependencies (begin ['JKRExpandSwitch']) */
-/* top-level dependencies (end ['JKRExpandSwitch']) */
 struct JKRExpandSwitch {
 };
 
-/* top-level dependencies (begin ['JKRAram']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JKRExpandSwitch',)
-/* top-level dependencies (end ['JKRAram']) */
+struct JKRHeap {
+};
+
 struct JKRAram {
-	// ('JKRHeap',)
-	// ('JKRExpandSwitch',)
 	/* 802D25B4 */ void aramToMainRam(u32, u8*, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
-// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D65A4 */ void findFsResource(char const*, u32) const;
 };
@@ -116,30 +71,30 @@ struct JKRArchive {
 // Forward References:
 // 
 
-void dLib_getEventSwitchNo(int);
-void dLib_checkActorInRectangle(fopAc_ac_c*, fopAc_ac_c*, cXyz const*, cXyz const*);
-void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, char const*);
+void dLib_getEventSwitchNo(int); // 2
+void dLib_checkActorInRectangle(fopAc_ac_c*, fopAc_ac_c*, cXyz const*, cXyz const*); // 2
+void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, char const*); // 2
 
-extern "C" void __ct__9STControlFssssffss();
-extern "C" void setWaitParm__9STControlFssssffss();
-extern "C" void init__9STControlFv();
-extern "C" void Xinit__9STControlFv();
-extern "C" void Yinit__9STControlFv();
-extern "C" void getValueStick__9STControlFv();
-extern "C" void getAngleStick__9STControlFv();
-extern "C" void getValueStick__10CSTControlFv();
-extern "C" void getAngleStick__10CSTControlFv();
-extern "C" void checkTrigger__9STControlFv();
-extern "C" void checkLeftTrigger__9STControlFv();
-extern "C" void checkRightTrigger__9STControlFv();
-extern "C" void checkUpTrigger__9STControlFv();
-extern "C" void checkDownTrigger__9STControlFv();
-extern "C" void dLib_getEventSwitchNo__Fi();
-extern "C" void dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz();
-extern "C" void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
-extern "C" void getTime__11dLib_time_cFv();
-extern "C" void stopTime__11dLib_time_cFv();
-extern "C" void startTime__11dLib_time_cFv();
+extern "C" void __ct__9STControlFssssffss(); // 1
+extern "C" void setWaitParm__9STControlFssssffss(); // 1
+extern "C" void init__9STControlFv(); // 1
+extern "C" void Xinit__9STControlFv(); // 1
+extern "C" void Yinit__9STControlFv(); // 1
+extern "C" void getValueStick__9STControlFv(); // 1
+extern "C" void getAngleStick__9STControlFv(); // 1
+extern "C" void getValueStick__10CSTControlFv(); // 1
+extern "C" void getAngleStick__10CSTControlFv(); // 1
+extern "C" void checkTrigger__9STControlFv(); // 1
+extern "C" void checkLeftTrigger__9STControlFv(); // 1
+extern "C" void checkRightTrigger__9STControlFv(); // 1
+extern "C" void checkUpTrigger__9STControlFv(); // 1
+extern "C" void checkDownTrigger__9STControlFv(); // 1
+extern "C" void dLib_getEventSwitchNo__Fi(); // 1
+extern "C" void dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz(); // 1
+extern "C" void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc(); // 1
+extern "C" void getTime__11dLib_time_cFv(); // 1
+extern "C" void stopTime__11dLib_time_cFv(); // 1
+extern "C" void startTime__11dLib_time_cFv(); // 1
 SECTION_DATA extern u8 ZeroQuat[16];
 SECTION_DATA extern void*const __vt__10CSTControl[4];
 SECTION_DATA extern void*const __vt__9STControl[4];
@@ -154,22 +109,22 @@ SECTION_SBSS extern u8 struct_80450DF0[8];
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16);
-extern "C" void OSGetTime();
-extern "C" void PSMTXMultVec();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void mDoMtx_YrotS(f32 (* )[4], s16); // 2
+extern "C" void OSGetTime(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void mDoMtx_YrotS__FPA4_fs();
-extern "C" void searchMapEventData__14dEvt_control_cFUc();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl();
-extern "C" void findFsResource__10JKRArchiveCFPCcUl();
-extern "C" void getAramAddress__14JKRAramArchiveFPCc();
-extern "C" void OSGetTime();
-extern "C" void PSMTXMultVec();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
+extern "C" void searchMapEventData__14dEvt_control_cFUc(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl(); // 1
+extern "C" void findFsResource__10JKRArchiveCFPCcUl(); // 1
+extern "C" void getAramAddress__14JKRAramArchiveFPCc(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];

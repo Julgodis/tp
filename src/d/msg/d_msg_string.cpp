@@ -9,35 +9,17 @@
 // Types:
 // 
 
-// build dMsgString_c (['dMsgString_c']) False/False
-// build COutFont_c (['COutFont_c']) False/False
-/* top-level dependencies (begin ['COutFont_c']) */
-/* top-level dependencies (end ['COutFont_c']) */
+struct JUTFont {
+};
+
+struct J2DTextBox {
+};
+
 struct COutFont_c {
 	/* 80225C94 */ COutFont_c(u8);
 };
 
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
-struct J2DTextBox {
-};
-
-// build JUTFont (['JUTFont']) False/False
-/* top-level dependencies (begin ['JUTFont']) */
-/* top-level dependencies (end ['JUTFont']) */
-struct JUTFont {
-};
-
-/* top-level dependencies (begin ['dMsgString_c']) */
-// outer dependency: ('COutFont_c',)
-// outer dependency: ('J2DTextBox',)
-// outer dependency: ('JUTFont',)
-/* top-level dependencies (end ['dMsgString_c']) */
 struct dMsgString_c {
-	// ('COutFont_c',)
-	// ('J2DTextBox',)
-	// ('JUTFont',)
 	/* 80191B6C */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
 	/* 801E1D10 */ void getStringPage(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
 	/* 80249C20 */ dMsgString_c();
@@ -48,12 +30,6 @@ struct dMsgString_c {
 	/* 80249ED0 */ void drawFontLocal(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8);
 };
 
-// build J2DTextBox (['J2DTextBox']) True/True
-// build JUTFont (['JUTFont']) True/True
-// build COutFont_c (['COutFont_c']) True/True
-// build dMsgStringBase_c (['dMsgStringBase_c']) False/False
-/* top-level dependencies (begin ['dMsgStringBase_c']) */
-/* top-level dependencies (end ['dMsgStringBase_c']) */
 struct dMsgStringBase_c {
 	/* 802493B4 */ dMsgStringBase_c();
 	/* 80249528 */ ~dMsgStringBase_c();
@@ -61,9 +37,6 @@ struct dMsgStringBase_c {
 	/* 80249BF8 */ void getMessage(u32, char*);
 };
 
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 	/* 802F79A8 */ void getGlbVtx(u8) const;
 };
@@ -73,12 +46,12 @@ struct J2DPane {
 // 
 
 
-extern "C" void __ct__12dMsgString_cFv();
-extern "C" void __ct__12dMsgString_cFUc();
-extern "C" void __dt__12dMsgString_cFv();
-extern "C" void resetStringLocal__12dMsgString_cFP10J2DTextBox();
-extern "C" void drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf();
-extern "C" void drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc();
+extern "C" void __ct__12dMsgString_cFv(); // 1
+extern "C" void __ct__12dMsgString_cFUc(); // 1
+extern "C" void __dt__12dMsgString_cFv(); // 1
+extern "C" void resetStringLocal__12dMsgString_cFP10J2DTextBox(); // 1
+extern "C" void drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf(); // 1
+extern "C" void drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc(); // 1
 SECTION_DATA extern void*const __vt__12dMsgString_c[8];
 SECTION_SDATA2 extern f32 d_msg_d_msg_string__lit_3777;
 SECTION_SDATA2 extern f32 d_msg_d_msg_string__lit_3778;
@@ -89,19 +62,19 @@ SECTION_SDATA2 extern f64 lit_3781;
 // External References:
 // 
 
-void* operator new(u32);
-void operator delete(void*);
+void* operator new(u32); // 2
+void operator delete(void*); // 2
 
-extern "C" void getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
-extern "C" void getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
-extern "C" void __ct__10COutFont_cFUc();
-extern "C" void __ct__16dMsgStringBase_cFv();
-extern "C" void __dt__16dMsgStringBase_cFv();
-extern "C" void getResource__16dMsgStringBase_cFv();
-extern "C" void getMessage__16dMsgStringBase_cFUlPc();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void getGlbVtx__7J2DPaneCFUc();
+extern "C" void getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc(); // 1
+extern "C" void getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc(); // 1
+extern "C" void __ct__10COutFont_cFUc(); // 1
+extern "C" void __ct__16dMsgStringBase_cFv(); // 1
+extern "C" void __dt__16dMsgStringBase_cFv(); // 1
+extern "C" void getResource__16dMsgStringBase_cFv(); // 1
+extern "C" void getMessage__16dMsgStringBase_cFUlPc(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getGlbVtx__7J2DPaneCFUc(); // 1
 
 // 
 // Declarations:

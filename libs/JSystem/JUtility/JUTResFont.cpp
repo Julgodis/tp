@@ -9,44 +9,7 @@
 // Types:
 // 
 
-// build JUTResFont (['JUTResFont']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-};
-
-// build _GXTexMapID (['_GXTexMapID']) False/False
-/* top-level dependencies (begin ['_GXTexMapID']) */
-/* top-level dependencies (end ['_GXTexMapID']) */
-struct _GXTexMapID {
-};
-
-// build ResFONT (['ResFONT']) False/False
-/* top-level dependencies (begin ['ResFONT']) */
-/* top-level dependencies (end ['ResFONT']) */
-struct ResFONT {
-};
-
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
-struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
-	struct TColor {
-	};
-
-};
-
-// build JUTFont (['JUTFont']) False/False
-/* top-level dependencies (begin ['JUTFont']) */
-/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// build TWidth (['JUTFont', 'TWidth']) False/False
-	/* dependencies (begin ['JUTFont', 'TWidth']) */
-	/* dependencies (end ['JUTFont', 'TWidth']) */
 	struct TWidth {
 	};
 
@@ -57,19 +20,22 @@ struct JUTFont {
 	/* 802E0118 */ void isLeadByte_ShiftJIS(int);
 };
 
-/* top-level dependencies (begin ['JUTResFont']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('_GXTexMapID',)
-// outer dependency: ('ResFONT',)
-// outer dependency: ('JUtility', 'TColor')
-// outer dependency: ('JUTFont', 'TWidth')
-/* top-level dependencies (end ['JUTResFont']) */
+struct _GXTexMapID {
+};
+
+struct ResFONT {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JKRHeap {
+};
+
 struct JUTResFont {
-	// ('JKRHeap',)
-	// ('ResFONT',)
-	// ('JUtility', 'TColor')
-	// ('JUTFont', 'TWidth')
-	// ('_GXTexMapID',)
 	/* 802DDFD8 */ void getResFont() const;
 	/* 802DDFE0 */ void getFontType() const;
 	/* 802DDFEC */ void getLeading() const;
@@ -77,8 +43,8 @@ struct JUTResFont {
 	/* 802DE004 */ void getAscent() const;
 	/* 802DE010 */ void getDescent() const;
 	/* 802DE01C */ void getHeight() const;
-	/* 802DEF48 */ JUTResFont();
 	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
+	/* 802DEF48 */ JUTResFont();
 	/* 802DF000 */ ~JUTResFont();
 	/* 802DF08C */ void deleteMemBlocks_ResFont();
 	/* 802DF0B0 */ void initialize_state();
@@ -86,8 +52,8 @@ struct JUTResFont {
 	/* 802DF13C */ void protected_initiate(ResFONT const*, JKRHeap*);
 	/* 802DF248 */ void countBlock();
 	/* 802DF344 */ void setBlock();
-	/* 802DF48C */ void setGX();
 	/* 802DF584 */ void setGX(JUtility::TColor, JUtility::TColor);
+	/* 802DF48C */ void setGX();
 	/* 802DF7C4 */ void drawChar_scale(f32, f32, f32, f32, int, bool);
 	/* 802DFBE8 */ void loadFont(int, _GXTexMapID, JUTFont::TWidth*);
 	/* 802DFC64 */ void getWidthEntry(int, JUTFont::TWidth*) const;
@@ -99,39 +65,34 @@ struct JUTResFont {
 	/* 802E00C4 */ void convertSjis(int, u16*) const;
 };
 
-// build ResFONT (['ResFONT']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-// build JUtility (['JUtility']) True/True
-// build _GXTexMapID (['_GXTexMapID']) True/True
-// build JUTFont (['JUTFont']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__10JUTResFontFv();
-extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
-extern "C" void __dt__10JUTResFontFv();
-extern "C" void deleteMemBlocks_ResFont__10JUTResFontFv();
-extern "C" void initialize_state__10JUTResFontFv();
-extern "C" void initiate__10JUTResFontFPC7ResFONTP7JKRHeap();
-extern "C" void protected_initiate__10JUTResFontFPC7ResFONTP7JKRHeap();
-extern "C" void countBlock__10JUTResFontFv();
-extern "C" void setBlock__10JUTResFontFv();
-extern "C" void setGX__10JUTResFontFv();
-extern "C" void setGX__10JUTResFontFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void drawChar_scale__10JUTResFontFffffib();
-extern "C" void loadFont__10JUTResFontFi11_GXTexMapIDPQ27JUTFont6TWidth();
-extern "C" void getWidthEntry__10JUTResFontCFiPQ27JUTFont6TWidth();
-extern "C" void getCellWidth__10JUTResFontCFv();
-extern "C" void getCellHeight__10JUTResFontCFv();
-extern "C" void isLeadByte__10JUTResFontCFi();
-extern "C" void getFontCode__10JUTResFontCFi();
-extern "C" void loadImage__10JUTResFontFi11_GXTexMapID();
-extern "C" void convertSjis__10JUTResFontCFiPUs();
-extern "C" bool isLeadByte_1Byte__7JUTFontFi();
-extern "C" bool isLeadByte_2Byte__7JUTFontFi();
-extern "C" void isLeadByte_ShiftJIS__7JUTFontFi();
+extern "C" void __ct__10JUTResFontFv(); // 1
+extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap(); // 1
+extern "C" void __dt__10JUTResFontFv(); // 1
+extern "C" void deleteMemBlocks_ResFont__10JUTResFontFv(); // 1
+extern "C" void initialize_state__10JUTResFontFv(); // 1
+extern "C" void initiate__10JUTResFontFPC7ResFONTP7JKRHeap(); // 1
+extern "C" void protected_initiate__10JUTResFontFPC7ResFONTP7JKRHeap(); // 1
+extern "C" void countBlock__10JUTResFontFv(); // 1
+extern "C" void setBlock__10JUTResFontFv(); // 1
+extern "C" void setGX__10JUTResFontFv(); // 1
+extern "C" void setGX__10JUTResFontFQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void drawChar_scale__10JUTResFontFffffib(); // 1
+extern "C" void loadFont__10JUTResFontFi11_GXTexMapIDPQ27JUTFont6TWidth(); // 1
+extern "C" void getWidthEntry__10JUTResFontCFiPQ27JUTFont6TWidth(); // 1
+extern "C" void getCellWidth__10JUTResFontCFv(); // 1
+extern "C" void getCellHeight__10JUTResFontCFv(); // 1
+extern "C" void isLeadByte__10JUTResFontCFi(); // 1
+extern "C" void getFontCode__10JUTResFontCFi(); // 1
+extern "C" void loadImage__10JUTResFontFi11_GXTexMapID(); // 1
+extern "C" void convertSjis__10JUTResFontCFiPUs(); // 1
+extern "C" bool isLeadByte_1Byte__7JUTFontFi(); // 1
+extern "C" bool isLeadByte_2Byte__7JUTFontFi(); // 1
+extern "C" void isLeadByte_ShiftJIS__7JUTFontFi(); // 1
 SECTION_RODATA extern const void*const saoAboutEncoding___10JUTResFont[3];
 SECTION_RODATA extern const u8 data_8039D39C[190 + 2 /* padding */];
 SECTION_RODATA extern const u8 JUTResFont__stringBase0[52];
@@ -144,78 +105,78 @@ SECTION_SDATA2 extern f64 lit_651;
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int);
-void operator delete(void*);
-void operator delete[](void*);
-extern "C" void JUTReportConsole();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXBegin();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetTevOp();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetBlendMode();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void* operator new[](u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+void operator delete[](void*); // 2
+extern "C" void JUTReportConsole(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetTevOp(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void __dla__FPv();
-extern "C" void getResFont__10JUTResFontCFv();
-extern "C" void getFontType__10JUTResFontCFv();
-extern "C" void getLeading__10JUTResFontCFv();
-extern "C" void getWidth__10JUTResFontCFv();
-extern "C" void getAscent__10JUTResFontCFv();
-extern "C" void getDescent__10JUTResFontCFv();
-extern "C" void getHeight__10JUTResFontCFv();
-extern "C" void __ct__7JUTFontFv();
-extern "C" void initialize_state__7JUTFontFv();
-extern "C" void JUTReportConsole();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXBegin();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetTevOp();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetBlendMode();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dla__FPv(); // 1
+extern "C" void getResFont__10JUTResFontCFv(); // 1
+extern "C" void getFontType__10JUTResFontCFv(); // 1
+extern "C" void getLeading__10JUTResFontCFv(); // 1
+extern "C" void getWidth__10JUTResFontCFv(); // 1
+extern "C" void getAscent__10JUTResFontCFv(); // 1
+extern "C" void getDescent__10JUTResFontCFv(); // 1
+extern "C" void getHeight__10JUTResFontCFv(); // 1
+extern "C" void __ct__7JUTFontFv(); // 1
+extern "C" void initialize_state__7JUTFontFv(); // 1
+extern "C" void JUTReportConsole(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetTevOp(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__7JUTFont[17];
 
 // 

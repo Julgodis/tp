@@ -9,29 +9,29 @@
 // Forward References:
 // 
 
-extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
-extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv();
+extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv(); // 1
+extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv(); // 1
 
-extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
-extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv();
+extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv(); // 1
+extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 
 // 
 // Declarations:

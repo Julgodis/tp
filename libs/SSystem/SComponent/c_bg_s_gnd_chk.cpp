@@ -9,46 +9,25 @@
 // Types:
 // 
 
-// build cBgS_GndChk (['cBgS_GndChk']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['cBgS_GndChk']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cBgS_GndChk']) */
 struct cBgS_GndChk {
-	// ('Vec',)
-	// ('cXyz',)
 	/* 80267C1C */ cBgS_GndChk();
 	/* 80267C94 */ ~cBgS_GndChk();
-	/* 80267D0C */ void SetPos(Vec const*);
 	/* 80267D28 */ void SetPos(cXyz const*);
+	/* 80267D0C */ void SetPos(Vec const*);
 	/* 80267D44 */ void PreCheck();
 };
 
-// build Vec (['Vec']) True/True
-// build cXyz (['cXyz']) True/True
-// build cBgS_Chk (['cBgS_Chk']) False/False
-/* top-level dependencies (begin ['cBgS_Chk']) */
-/* top-level dependencies (end ['cBgS_Chk']) */
 struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 	/* 80268074 */ cBgS_PolyInfo();
 	/* 802680B0 */ ~cBgS_PolyInfo();
@@ -58,27 +37,27 @@ struct cBgS_PolyInfo {
 // Forward References:
 // 
 
-extern "C" static void func_80267D54();
+extern "C" static void func_80267D54(); // 1
 
-extern "C" void __ct__11cBgS_GndChkFv();
-extern "C" void __dt__11cBgS_GndChkFv();
-extern "C" void SetPos__11cBgS_GndChkFPC3Vec();
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
-extern "C" void PreCheck__11cBgS_GndChkFv();
-extern "C" static void func_80267D54();
+extern "C" void __ct__11cBgS_GndChkFv(); // 1
+extern "C" void __dt__11cBgS_GndChkFv(); // 1
+extern "C" void SetPos__11cBgS_GndChkFPC3Vec(); // 1
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
+extern "C" void PreCheck__11cBgS_GndChkFv(); // 1
+extern "C" static void func_80267D54(); // 1
 SECTION_DATA extern void*const __vt__11cBgS_GndChk[6];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __ct__8cBgS_ChkFv();
-extern "C" void __dt__8cBgS_ChkFv();
-extern "C" void __ct__13cBgS_PolyInfoFv();
-extern "C" void __dt__13cBgS_PolyInfoFv();
-extern "C" void __dl__FPv();
+extern "C" void __ct__8cBgS_ChkFv(); // 1
+extern "C" void __dt__8cBgS_ChkFv(); // 1
+extern "C" void __ct__13cBgS_PolyInfoFv(); // 1
+extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
+extern "C" void __dl__FPv(); // 1
 SECTION_BSS extern u8 Zero__4cXyz[12];
 
 // 

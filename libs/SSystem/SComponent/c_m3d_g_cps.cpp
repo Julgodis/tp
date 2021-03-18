@@ -9,26 +9,13 @@
 // Types:
 // 
 
-// build cM3dGCps (['cM3dGCps']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
-struct cXyz {
-};
-
-// build cM3dGCpsS (['cM3dGCpsS']) False/False
-/* top-level dependencies (begin ['cM3dGCpsS']) */
-/* top-level dependencies (end ['cM3dGCpsS']) */
 struct cM3dGCpsS {
 };
 
-/* top-level dependencies (begin ['cM3dGCps']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('cM3dGCpsS',)
-/* top-level dependencies (end ['cM3dGCps']) */
+struct cXyz {
+};
+
 struct cM3dGCps {
-	// ('cXyz',)
-	// ('cM3dGCpsS',)
 	/* 8026EF88 */ cM3dGCps();
 	/* 8026EFA4 */ ~cM3dGCps();
 	/* 8026F000 */ void Set(cXyz const&, cXyz const&, f32);
@@ -36,49 +23,35 @@ struct cM3dGCps {
 	/* 8026F080 */ void SetCps(cM3dGCps const&);
 };
 
-// build cXyz (['cXyz']) True/True
-// build cM3dGCpsS (['cM3dGCpsS']) True/True
-// build cM3dGLin (['cM3dGLin']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGLin']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// ('Vec',)
-	// ('cXyz',)
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
 };
 
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__8cM3dGCpsFv();
-extern "C" void __dt__8cM3dGCpsFv();
-extern "C" void Set__8cM3dGCpsFRC4cXyzRC4cXyzf();
-extern "C" void Set__8cM3dGCpsFRC9cM3dGCpsS();
-extern "C" void SetCps__8cM3dGCpsFRC8cM3dGCps();
+extern "C" void __ct__8cM3dGCpsFv(); // 1
+extern "C" void __dt__8cM3dGCpsFv(); // 1
+extern "C" void Set__8cM3dGCpsFRC4cXyzRC4cXyzf(); // 1
+extern "C" void Set__8cM3dGCpsFRC9cM3dGCpsS(); // 1
+extern "C" void SetCps__8cM3dGCpsFRC8cM3dGCps(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGCps[10];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
-extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
-extern "C" void __dl__FPv();
+extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
+extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec(); // 1
+extern "C" void __dl__FPv(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGLin[3];
 
 // 

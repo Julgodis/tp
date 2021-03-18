@@ -9,44 +9,41 @@
 // Types:
 // 
 
-// build JAUBankTable (['JAUBankTable']) False/False
-/* top-level dependencies (begin ['JAUBankTable']) */
-/* top-level dependencies (end ['JAUBankTable']) */
+template <typename A0>
+struct JSULink { };
+/* JSULink<JAUBankTable> */
+struct JSULink__template0 {
+};
+
 struct JAUBankTable {
 	/* 802A4AA0 */ void getBank(u32) const;
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
+struct JAUBankTableDictionary {
+	/* 802A4A80 */ void appendBankTable(JSULink<JAUBankTable>*);
+};
+
 struct JSUPtrLink {
 };
 
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBF4C */ void append(JSUPtrLink*);
 };
 
-// build JSUPtrLink (['JSUPtrLink']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void func_802A4A80();
 
-extern "C" void func_802A4A80();
-extern "C" void getBank__12JAUBankTableCFUl();
+extern "C" void func_802A4A80(); // 1
+extern "C" void getBank__12JAUBankTableCFUl(); // 1
 
 // 
 // External References:
 // 
 
 
-extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
 
 // 
 // Declarations:
@@ -56,7 +53,7 @@ extern "C" void append__10JSUPtrListFP10JSUPtrLink();
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802A4A80() {
+asm void JAUBankTableDictionary::appendBankTable(JSULink<JAUBankTable>* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUBankTable/func_802A4A80.s"
 }

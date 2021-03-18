@@ -9,24 +9,11 @@
 // Types:
 // 
 
-// build JASChannel (['JASChannel']) False/False
-// build JASDsp (['JASDsp']) False/False
-// build JASWaveInfo (['JASWaveInfo']) False/False
-/* top-level dependencies (begin ['JASWaveInfo']) */
-/* top-level dependencies (end ['JASWaveInfo']) */
 struct JASWaveInfo {
 };
 
-/* top-level dependencies (begin ['JASDsp']) */
-// outer dependency: ('JASWaveInfo',)
-/* top-level dependencies (end ['JASDsp']) */
 struct JASDsp {
-	// build TChannel (['JASDsp', 'TChannel']) False/False
-	/* dependencies (begin ['JASDsp', 'TChannel']) */
-	// inner dependency: 0 ('JASWaveInfo',) (for ['JASDsp', 'TChannel'])
-	/* dependencies (end ['JASDsp', 'TChannel']) */
 	struct TChannel {
-		// ('JASWaveInfo',)
 		/* 8029DD8C */ void setWaveInfo(JASWaveInfo const&, u32, u32);
 		/* 8029DEAC */ void setOscInfo(u32);
 		/* 8029DEC4 */ void initAutoMixer();
@@ -40,23 +27,10 @@ struct JASDsp {
 
 };
 
-// build JASOscillator (['JASOscillator']) False/False
-// build JASOscillator (['JASOscillator']) True/False
-struct JASOscillator;
-/* top-level dependencies (begin ['JASOscillator']) */
-// outer dependency: ('JASOscillator', 'Data')
-/* top-level dependencies (end ['JASOscillator']) */
 struct JASOscillator {
-	// ('JASOscillator', 'Data')
-	// build Data (['JASOscillator', 'Data']) False/False
-	/* dependencies (begin ['JASOscillator', 'Data']) */
-	/* dependencies (end ['JASOscillator', 'Data']) */
 	struct Data {
 	};
 
-	// build EffectParams (['JASOscillator', 'EffectParams']) False/False
-	/* dependencies (begin ['JASOscillator', 'EffectParams']) */
-	/* dependencies (end ['JASOscillator', 'EffectParams']) */
 	struct EffectParams {
 	};
 
@@ -68,23 +42,7 @@ struct JASOscillator {
 	/* 8029C0E0 */ void update();
 };
 
-// build JASChannel (['JASChannel']) True/False
-struct JASChannel;
-// build JASOscillator (['JASOscillator']) True/True
-/* top-level dependencies (begin ['JASChannel']) */
-// outer dependency: ('JASDsp', 'TChannel')
-// outer dependency: ('JASOscillator', 'Data')
-// outer dependency: ('JASChannel', 'PanVector')
-// outer dependency: ('JASOscillator', 'EffectParams')
-/* top-level dependencies (end ['JASChannel']) */
 struct JASChannel {
-	// ('JASDsp', 'TChannel')
-	// ('JASOscillator', 'Data')
-	// ('JASChannel', 'PanVector')
-	// ('JASOscillator', 'EffectParams')
-	// build PanVector (['JASChannel', 'PanVector']) False/False
-	/* dependencies (begin ['JASChannel', 'PanVector']) */
-	/* dependencies (end ['JASChannel', 'PanVector']) */
 	struct PanVector {
 	};
 
@@ -110,26 +68,22 @@ struct JASChannel {
 	/* 8029BCC0 */ void checkBankDispose() const;
 };
 
-// build JASOscillator (['JASOscillator']) True/True
-// build JASDsp (['JASDsp']) True/True
-// build JASCalc (['JASCalc']) False/False
-/* top-level dependencies (begin ['JASCalc']) */
-/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F578 */ void pow2(f32);
 };
 
-// build JASGenericMemPool (['JASGenericMemPool']) False/False
-/* top-level dependencies (begin ['JASGenericMemPool']) */
-/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290994 */ void free(void*, u32);
 };
 
-// build JASLfo (['JASLfo']) False/False
-/* top-level dependencies (begin ['JASLfo']) */
-/* top-level dependencies (end ['JASLfo']) */
+template <typename A0>
+struct JASMemPool_MultiThreaded { };
+/* JASMemPool_MultiThreaded<JASChannel> */
+struct JASMemPool_MultiThreaded__template2 {
+	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
+};
+
 struct JASLfo {
 	/* 8029BD14 */ JASLfo();
 	/* 8029BD44 */ void getValue() const;
@@ -137,18 +91,12 @@ struct JASLfo {
 	/* 8029BE2C */ void resetCounter();
 };
 
-// build JASDriver (['JASDriver']) False/False
-/* top-level dependencies (begin ['JASDriver']) */
-/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029C9E8 */ void getDacRate();
 	/* 8029E150 */ void getChannelLevel_dsp();
 	/* 8029E180 */ void getOutputMode();
 };
 
-// build JASDSPChannel (['JASDSPChannel']) False/False
-/* top-level dependencies (begin ['JASDSPChannel']) */
-/* top-level dependencies (end ['JASDSPChannel']) */
 struct JASDSPChannel {
 	/* 8029D320 */ void free();
 	/* 8029D330 */ void start();
@@ -156,34 +104,33 @@ struct JASDSPChannel {
 	/* 8029D534 */ void setPriority(u8);
 };
 
-// build JASWaveInfo (['JASWaveInfo']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
+extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
 
-extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
-extern "C" void __dt__10JASChannelFv();
-extern "C" void play__10JASChannelFv();
-extern "C" void playForce__10JASChannelFv();
-extern "C" void release__10JASChannelFUs();
-extern "C" void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data();
-extern "C" void setMixConfig__10JASChannelFUlUs();
-extern "C" void calcEffect__10JASChannelFPCQ210JASChannel9PanVector();
-extern "C" void calcPan__10JASChannelFPCQ210JASChannel9PanVector();
-extern "C" void effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams();
-extern "C" void setKeySweepTarget__10JASChannelFlUl();
-extern "C" void updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams();
-extern "C" void dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv();
-extern "C" void initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel();
-extern "C" void updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel();
-extern "C" void updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff();
-extern "C" void updateMixer__10JASChannelFffffPUs();
-extern "C" void free__10JASChannelFv();
-extern "C" void initBankDisposeMsgQueue__10JASChannelFv();
-extern "C" void receiveBankDisposeMsg__10JASChannelFv();
-extern "C" void checkBankDispose__10JASChannelCFv();
+extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
+extern "C" void __dt__10JASChannelFv(); // 1
+extern "C" void play__10JASChannelFv(); // 1
+extern "C" void playForce__10JASChannelFv(); // 1
+extern "C" void release__10JASChannelFUs(); // 1
+extern "C" void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data(); // 1
+extern "C" void setMixConfig__10JASChannelFUlUs(); // 1
+extern "C" void calcEffect__10JASChannelFPCQ210JASChannel9PanVector(); // 1
+extern "C" void calcPan__10JASChannelFPCQ210JASChannel9PanVector(); // 1
+extern "C" void effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams(); // 1
+extern "C" void setKeySweepTarget__10JASChannelFlUl(); // 1
+extern "C" void updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams(); // 1
+extern "C" void dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv(); // 1
+extern "C" void initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel(); // 1
+extern "C" void updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel(); // 1
+extern "C" void updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff(); // 1
+extern "C" void updateMixer__10JASChannelFffffPUs(); // 1
+extern "C" void free__10JASChannelFv(); // 1
+extern "C" void initBankDisposeMsgQueue__10JASChannelFv(); // 1
+extern "C" void receiveBankDisposeMsg__10JASChannelFv(); // 1
+extern "C" void checkBankDispose__10JASChannelCFv(); // 1
 SECTION_DATA extern void*lit_662[7];
 SECTION_DATA extern void*lit_977[8];
 SECTION_DATA extern void*lit_974[9];
@@ -215,66 +162,65 @@ SECTION_SDATA2 extern f32 JASChannel__lit_973;
 // External References:
 // 
 
-extern "C" void func_802978DC();
-extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
-extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSInitMessageQueue();
-extern "C" void OSReceiveMessage();
-extern "C" void __register_global_object();
-extern "C" void __construct_array();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
+extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void pow2__7JASCalcFf();
-extern "C" void __ct__17JASGenericMemPoolFv();
-extern "C" void free__17JASGenericMemPoolFPvUl();
-extern "C" void func_802978DC();
-extern "C" void __ct__6JASLfoFv();
-extern "C" void getValue__6JASLfoCFv();
-extern "C" void incCounter__6JASLfoFf();
-extern "C" void resetCounter__6JASLfoFv();
-extern "C" void __ct__13JASOscillatorFv();
-extern "C" void initStart__13JASOscillatorFPCQ213JASOscillator4Data();
-extern "C" void incCounter__13JASOscillatorFf();
-extern "C" void getValue__13JASOscillatorCFv();
-extern "C" void release__13JASOscillatorFv();
-extern "C" void update__13JASOscillatorFv();
-extern "C" void getDacRate__9JASDriverFv();
-extern "C" void free__13JASDSPChannelFv();
-extern "C" void start__13JASDSPChannelFv();
-extern "C" void drop__13JASDSPChannelFv();
-extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
-extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
-extern "C" void setPriority__13JASDSPChannelFUc();
-extern "C" void setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl();
-extern "C" void setOscInfo__Q26JASDsp8TChannelFUl();
-extern "C" void initAutoMixer__Q26JASDsp8TChannelFv();
-extern "C" void setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc();
-extern "C" void setPitch__Q26JASDsp8TChannelFUs();
-extern "C" void setMixerInitVolume__Q26JASDsp8TChannelFUcs();
-extern "C" void setMixerVolume__Q26JASDsp8TChannelFUcs();
-extern "C" void setPauseFlag__Q26JASDsp8TChannelFUc();
-extern "C" void setBusConnect__Q26JASDsp8TChannelFUcUc();
-extern "C" void getChannelLevel_dsp__9JASDriverFv();
-extern "C" void getOutputMode__9JASDriverFv();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSInitMessageQueue();
-extern "C" void OSReceiveMessage();
-extern "C" void __register_global_object();
-extern "C" void __construct_array();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void pow2__7JASCalcFf(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv(); // 1
+extern "C" void free__17JASGenericMemPoolFPvUl(); // 1
+extern "C" void func_802978DC(); // 1
+extern "C" void __ct__6JASLfoFv(); // 1
+extern "C" void getValue__6JASLfoCFv(); // 1
+extern "C" void incCounter__6JASLfoFf(); // 1
+extern "C" void resetCounter__6JASLfoFv(); // 1
+extern "C" void __ct__13JASOscillatorFv(); // 1
+extern "C" void initStart__13JASOscillatorFPCQ213JASOscillator4Data(); // 1
+extern "C" void incCounter__13JASOscillatorFf(); // 1
+extern "C" void getValue__13JASOscillatorCFv(); // 1
+extern "C" void release__13JASOscillatorFv(); // 1
+extern "C" void update__13JASOscillatorFv(); // 1
+extern "C" void getDacRate__9JASDriverFv(); // 1
+extern "C" void free__13JASDSPChannelFv(); // 1
+extern "C" void start__13JASDSPChannelFv(); // 1
+extern "C" void drop__13JASDSPChannelFv(); // 1
+extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
+extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
+extern "C" void setPriority__13JASDSPChannelFUc(); // 1
+extern "C" void setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl(); // 1
+extern "C" void setOscInfo__Q26JASDsp8TChannelFUl(); // 1
+extern "C" void initAutoMixer__Q26JASDsp8TChannelFv(); // 1
+extern "C" void setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc(); // 1
+extern "C" void setPitch__Q26JASDsp8TChannelFUs(); // 1
+extern "C" void setMixerInitVolume__Q26JASDsp8TChannelFUcs(); // 1
+extern "C" void setMixerVolume__Q26JASDsp8TChannelFUcs(); // 1
+extern "C" void setPauseFlag__Q26JASDsp8TChannelFUc(); // 1
+extern "C" void setBusConnect__Q26JASDsp8TChannelFUcUc(); // 1
+extern "C" void getChannelLevel_dsp__9JASDriverFv(); // 1
+extern "C" void getOutputMode__9JASDriverFv(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 data_80431B34[16 + 4 /* padding */];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 SECTION_SDATA extern u32 one__11JASWaveInfo;

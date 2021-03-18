@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __ieee754_exp();
+extern "C" void __ieee754_exp(); // 1
 
-extern "C" void __ieee754_exp();
+extern "C" void __ieee754_exp(); // 1
 SECTION_RODATA extern const u8 halF[16];
 SECTION_RODATA extern const u8 ln2HI[16];
 SECTION_RODATA extern const u8 ln2LO[16];

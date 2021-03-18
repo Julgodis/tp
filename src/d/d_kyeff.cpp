@@ -9,22 +9,13 @@
 // Types:
 // 
 
-// build dKyeff_c (['dKyeff_c']) False/False
-/* top-level dependencies (begin ['dKyeff_c']) */
-/* top-level dependencies (end ['dKyeff_c']) */
 struct dKyeff_c {
 	/* 801ADD5C */ void execute();
 };
 
-// build kankyo_class (['kankyo_class']) False/False
-/* top-level dependencies (begin ['kankyo_class']) */
-/* top-level dependencies (end ['kankyo_class']) */
 struct kankyo_class {
 };
 
-// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
-/* top-level dependencies (begin ['Z2EnvSeMgr']) */
-/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
 	/* 802C66B0 */ void framework();
 };
@@ -33,18 +24,18 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-static void dKyeff_Draw(dKyeff_c*);
-static void dKyeff_Execute(dKyeff_c*);
-static bool dKyeff_IsDelete(dKyeff_c*);
-static void dKyeff_Delete(dKyeff_c*);
-static void dKyeff_Create(kankyo_class*);
+static void dKyeff_Draw(dKyeff_c*); // 2
+static void dKyeff_Execute(dKyeff_c*); // 2
+static bool dKyeff_IsDelete(dKyeff_c*); // 2
+static void dKyeff_Delete(dKyeff_c*); // 2
+static void dKyeff_Create(kankyo_class*); // 2
 
-extern "C" static void dKyeff_Draw__FP8dKyeff_c();
-extern "C" void execute__8dKyeff_cFv();
-extern "C" static void dKyeff_Execute__FP8dKyeff_c();
-extern "C" static bool dKyeff_IsDelete__FP8dKyeff_c();
-extern "C" static void dKyeff_Delete__FP8dKyeff_c();
-extern "C" static void dKyeff_Create__FP12kankyo_class();
+extern "C" static void dKyeff_Draw__FP8dKyeff_c(); // 1
+extern "C" void execute__8dKyeff_cFv(); // 1
+extern "C" static void dKyeff_Execute__FP8dKyeff_c(); // 1
+extern "C" static bool dKyeff_IsDelete__FP8dKyeff_c(); // 1
+extern "C" static void dKyeff_Delete__FP8dKyeff_c(); // 1
+extern "C" static void dKyeff_Create__FP12kankyo_class(); // 1
 SECTION_RODATA extern const u8 d_d_kyeff__stringBase0[8];
 SECTION_DATA extern void*l_dKyeff_Method[5];
 SECTION_DATA extern void*g_profile_KYEFF[11];
@@ -58,26 +49,26 @@ SECTION_SDATA2 extern f32 d_d_kyeff__lit_3844;
 // External References:
 // 
 
-void dKyw_wether_init();
-void dKyw_wether_delete();
-void dKyw_wether_move();
-void dKyw_wether_move_draw();
-void dKyw_wether_draw();
-void dKy_FiveSenses_fullthrottle_dark();
-extern "C" void OSGetTime();
-extern "C" void OSTicksToCalendarTime();
-extern "C" void strcmp();
+void dKyw_wether_init(); // 2
+void dKyw_wether_delete(); // 2
+void dKyw_wether_move(); // 2
+void dKyw_wether_move_draw(); // 2
+void dKyw_wether_draw(); // 2
+void dKy_FiveSenses_fullthrottle_dark(); // 2
+extern "C" void OSGetTime(); // 1
+extern "C" void OSTicksToCalendarTime(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void dKyw_wether_init__Fv();
-extern "C" void dKyw_wether_delete__Fv();
-extern "C" void dKyw_wether_move__Fv();
-extern "C" void dKyw_wether_move_draw__Fv();
-extern "C" void dKyw_wether_draw__Fv();
-extern "C" void dKy_FiveSenses_fullthrottle_dark__Fv();
-extern "C" void framework__10Z2EnvSeMgrFv();
-extern "C" void OSGetTime();
-extern "C" void OSTicksToCalendarTime();
-extern "C" void strcmp();
+extern "C" void dKyw_wether_init__Fv(); // 1
+extern "C" void dKyw_wether_delete__Fv(); // 1
+extern "C" void dKyw_wether_move__Fv(); // 1
+extern "C" void dKyw_wether_move_draw__Fv(); // 1
+extern "C" void dKyw_wether_draw__Fv(); // 1
+extern "C" void dKy_FiveSenses_fullthrottle_dark__Fv(); // 1
+extern "C" void framework__10Z2EnvSeMgrFv(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void OSTicksToCalendarTime(); // 1
+extern "C" void strcmp(); // 1
 SECTION_DATA extern void*g_fopKy_Method[6];
 SECTION_DATA extern void*g_fpcLf_Method[6];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];

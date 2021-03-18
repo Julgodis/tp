@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
@@ -19,9 +16,9 @@ struct node_list_class {
 // Forward References:
 // 
 
-void fpcLn_Create();
+void fpcLn_Create(); // 2
 
-extern "C" void fpcLn_Create__Fv();
+extern "C" void fpcLn_Create__Fv(); // 1
 SECTION_BSS extern u8 l_fpcLn_Line[192];
 SECTION_SDATA extern void*g_fpcLn_Queue[2];
 
@@ -29,9 +26,9 @@ SECTION_SDATA extern void*g_fpcLn_Queue[2];
 // External References:
 // 
 
-void cLs_Create(node_list_class*);
+void cLs_Create(node_list_class*); // 2
 
-extern "C" void cLs_Create__FP15node_list_class();
+extern "C" void cLs_Create__FP15node_list_class(); // 1
 
 // 
 // Declarations:

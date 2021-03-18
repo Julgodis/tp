@@ -9,13 +9,13 @@
 // Forward References:
 // 
 
-void cAPIGph_Painter();
-void cAPIGph_BeforeOfDraw();
-void cAPIGph_AfterOfDraw();
+void cAPIGph_Painter(); // 2
+void cAPIGph_BeforeOfDraw(); // 2
+void cAPIGph_AfterOfDraw(); // 2
 
-extern "C" void cAPIGph_Painter__Fv();
-extern "C" void cAPIGph_BeforeOfDraw__Fv();
-extern "C" void cAPIGph_AfterOfDraw__Fv();
+extern "C" void cAPIGph_Painter__Fv(); // 1
+extern "C" void cAPIGph_BeforeOfDraw__Fv(); // 1
+extern "C" void cAPIGph_AfterOfDraw__Fv(); // 1
 
 // 
 // External References:

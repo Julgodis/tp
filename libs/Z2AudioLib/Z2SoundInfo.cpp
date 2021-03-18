@@ -9,50 +9,22 @@
 // Types:
 // 
 
-// build Z2SoundInfo (['Z2SoundInfo']) False/False
-// build JAIStream (['JAIStream']) False/False
-/* top-level dependencies (begin ['JAIStream']) */
-/* top-level dependencies (end ['JAIStream']) */
 struct JAIStream {
 };
 
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
-struct JAISoundID {
-};
-
-// build JAISeq (['JAISeq']) False/False
-/* top-level dependencies (begin ['JAISeq']) */
-/* top-level dependencies (end ['JAISeq']) */
 struct JAISeq {
 };
 
-// build JAISound (['JAISound']) False/False
-/* top-level dependencies (begin ['JAISound']) */
-/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
 };
 
-// build JAISe (['JAISe']) False/False
-/* top-level dependencies (begin ['JAISe']) */
-/* top-level dependencies (end ['JAISe']) */
 struct JAISe {
 };
 
-/* top-level dependencies (begin ['Z2SoundInfo']) */
-// outer dependency: ('JAIStream',)
-// outer dependency: ('JAISoundID',)
-// outer dependency: ('JAISeq',)
-// outer dependency: ('JAISound',)
-// outer dependency: ('JAISe',)
-/* top-level dependencies (end ['Z2SoundInfo']) */
+struct JAISoundID {
+};
+
 struct Z2SoundInfo {
-	// ('JAISoundID',)
-	// ('JAISound',)
-	// ('JAISe',)
-	// ('JAIStream',)
-	// ('JAISeq',)
 	/* 802BB00C */ void getBgmSeqResourceID(JAISoundID) const;
 	/* 802BB090 */ void getSoundType(JAISoundID) const;
 	/* 802BB0D8 */ void getCategory(JAISoundID) const;
@@ -69,39 +41,19 @@ struct Z2SoundInfo {
 	/* 802BBBE0 */ ~Z2SoundInfo();
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build JAISe (['JAISe']) True/True
-// build JAISeq (['JAISeq']) True/True
-// build JAIStream (['JAIStream']) True/True
-// build JAISound (['JAISound']) True/True
-// build JAISoundInfo (['JAISoundInfo']) False/False
-/* top-level dependencies (begin ['JAISoundInfo']) */
-/* top-level dependencies (end ['JAISoundInfo']) */
 struct JAISoundInfo {
 	/* 802A2D50 */ ~JAISoundInfo();
 };
 
-// build JAIStreamDataMgr (['JAIStreamDataMgr']) False/False
-/* top-level dependencies (begin ['JAIStreamDataMgr']) */
-/* top-level dependencies (end ['JAIStreamDataMgr']) */
 struct JAIStreamDataMgr {
 	/* 802A3AD8 */ ~JAIStreamDataMgr();
 };
 
-// build JAUSoundTable (['JAUSoundTable']) False/False
-// build JAISoundID (['JAISoundID']) True/True
-/* top-level dependencies (begin ['JAUSoundTable']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['JAUSoundTable']) */
 struct JAUSoundTable {
-	// ('JAISoundID',)
 	/* 802A7160 */ void getTypeID(JAISoundID) const;
 	/* 802A728C */ void getData(JAISoundID) const;
 };
 
-// build Z2Calc (['Z2Calc']) False/False
-/* top-level dependencies (begin ['Z2Calc']) */
-/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
 	/* 802A968C */ void linearTransform(f32, f32, f32, f32, f32, bool);
 	/* 802A98D4 */ void getRandom_0_1();
@@ -111,29 +63,29 @@ struct Z2Calc {
 // Forward References:
 // 
 
-extern "C" static void func_802BBCBC();
-extern "C" static void func_802BBCC4();
-extern "C" static void func_802BBCCC();
-extern "C" static void func_802BBCD4();
+extern "C" static void func_802BBCBC(); // 1
+extern "C" static void func_802BBCC4(); // 1
+extern "C" static void func_802BBCCC(); // 1
+extern "C" static void func_802BBCD4(); // 1
 
-extern "C" void getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID();
-extern "C" void getSoundType__11Z2SoundInfoCF10JAISoundID();
-extern "C" void getCategory__11Z2SoundInfoCF10JAISoundID();
-extern "C" void getPriority__11Z2SoundInfoCF10JAISoundID();
-extern "C" void getAudibleSwFull__11Z2SoundInfoF10JAISoundID();
-extern "C" void getAudibleSw__11Z2SoundInfoCF10JAISoundID();
-extern "C" void getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe();
-extern "C" void getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq();
-extern "C" void getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream();
-extern "C" void getStreamFilePath__11Z2SoundInfoF10JAISoundID();
-extern "C" void getStreamFileEntry__11Z2SoundInfoF10JAISoundID();
-extern "C" void getSwBit__11Z2SoundInfoCF10JAISoundID();
-extern "C" void getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound();
-extern "C" void __dt__11Z2SoundInfoFv();
-extern "C" static void func_802BBCBC();
-extern "C" static void func_802BBCC4();
-extern "C" static void func_802BBCCC();
-extern "C" static void func_802BBCD4();
+extern "C" void getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID(); // 1
+extern "C" void getSoundType__11Z2SoundInfoCF10JAISoundID(); // 1
+extern "C" void getCategory__11Z2SoundInfoCF10JAISoundID(); // 1
+extern "C" void getPriority__11Z2SoundInfoCF10JAISoundID(); // 1
+extern "C" void getAudibleSwFull__11Z2SoundInfoF10JAISoundID(); // 1
+extern "C" void getAudibleSw__11Z2SoundInfoCF10JAISoundID(); // 1
+extern "C" void getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe(); // 1
+extern "C" void getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq(); // 1
+extern "C" void getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream(); // 1
+extern "C" void getStreamFilePath__11Z2SoundInfoF10JAISoundID(); // 1
+extern "C" void getStreamFileEntry__11Z2SoundInfoF10JAISoundID(); // 1
+extern "C" void getSwBit__11Z2SoundInfoCF10JAISoundID(); // 1
+extern "C" void getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound(); // 1
+extern "C" void __dt__11Z2SoundInfoFv(); // 1
+extern "C" static void func_802BBCBC(); // 1
+extern "C" static void func_802BBCC4(); // 1
+extern "C" static void func_802BBCCC(); // 1
+extern "C" static void func_802BBCD4(); // 1
 SECTION_DATA extern void*const __vt__11Z2SoundInfo[20];
 SECTION_SDATA2 extern f32 lit_963;
 SECTION_SDATA2 extern f32 lit_964;
@@ -151,33 +103,33 @@ SECTION_SDATA2 extern f32 Z2SoundInfo__lit_1070;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void DVDConvertPathToEntrynum();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void DVDConvertPathToEntrynum(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dt__12JAISoundInfoFv();
-extern "C" void __dt__16JAIStreamDataMgrFv();
-extern "C" void getTypeID__13JAUSoundTableCF10JAISoundID();
-extern "C" void getData__13JAUSoundTableCF10JAISoundID();
-extern "C" void linearTransform__6Z2CalcFfffffb();
-extern "C" void getRandom_0_1__6Z2CalcFv();
-extern "C" void __dl__FPv();
-extern "C" void DVDConvertPathToEntrynum();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void __dt__12JAISoundInfoFv(); // 1
+extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
+extern "C" void getTypeID__13JAUSoundTableCF10JAISoundID(); // 1
+extern "C" void getData__13JAUSoundTableCF10JAISoundID(); // 1
+extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
+extern "C" void getRandom_0_1__6Z2CalcFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void DVDConvertPathToEntrynum(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__12JAUSoundInfo[5];
 SECTION_SBSS extern u8 data_80450B4C[4];
 SECTION_SBSS extern u8 data_80450B50[4];

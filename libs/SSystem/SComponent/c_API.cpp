@@ -16,19 +16,19 @@ SECTION_DATA extern void*g_cAPI_Interface[6];
 // External References:
 // 
 
-void mDoGph_BlankingON();
-void mDoGph_BlankingOFF();
-void mDoGph_BeforeOfDraw();
-void mDoGph_AfterOfDraw();
-void mDoGph_Painter();
-void mDoGph_Create();
+void mDoGph_BlankingON(); // 2
+void mDoGph_BlankingOFF(); // 2
+void mDoGph_BeforeOfDraw(); // 2
+void mDoGph_AfterOfDraw(); // 2
+void mDoGph_Painter(); // 2
+void mDoGph_Create(); // 2
 
-extern "C" void mDoGph_BlankingON__Fv();
-extern "C" void mDoGph_BlankingOFF__Fv();
-extern "C" void mDoGph_BeforeOfDraw__Fv();
-extern "C" void mDoGph_AfterOfDraw__Fv();
-extern "C" void mDoGph_Painter__Fv();
-extern "C" void mDoGph_Create__Fv();
+extern "C" void mDoGph_BlankingON__Fv(); // 1
+extern "C" void mDoGph_BlankingOFF__Fv(); // 1
+extern "C" void mDoGph_BeforeOfDraw__Fv(); // 1
+extern "C" void mDoGph_AfterOfDraw__Fv(); // 1
+extern "C" void mDoGph_Painter__Fv(); // 1
+extern "C" void mDoGph_Create__Fv(); // 1
 
 // 
 // Declarations:

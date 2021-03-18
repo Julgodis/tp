@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dMw_HIO_c (['dMw_HIO_c']) False/False
-/* top-level dependencies (begin ['dMw_HIO_c']) */
-/* top-level dependencies (end ['dMw_HIO_c']) */
 struct dMw_HIO_c {
 	/* 801F9AFC */ dMw_HIO_c();
 	/* 801F9B38 */ void init();
@@ -21,17 +18,11 @@ struct dMw_HIO_c {
 	/* 801F9EE0 */ ~dMw_HIO_c();
 };
 
-// build dMw_DHIO_c (['dMw_DHIO_c']) False/False
-/* top-level dependencies (begin ['dMw_DHIO_c']) */
-/* top-level dependencies (end ['dMw_DHIO_c']) */
 struct dMw_DHIO_c {
 	/* 801F9E2C */ dMw_DHIO_c();
 	/* 801F9E98 */ ~dMw_DHIO_c();
 };
 
-// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_get_item_c']) */
-/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033EC8 */ void isFirstBit(u8) const;
 };
@@ -40,17 +31,17 @@ struct dSv_player_get_item_c {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_window_HIO_cpp();
+extern "C" void __sinit_d_menu_window_HIO_cpp(); // 1
 
-extern "C" void __ct__9dMw_HIO_cFv();
-extern "C" void init__9dMw_HIO_cFv();
-extern "C" bool getBombFlag__9dMw_HIO_cFv();
-extern "C" bool getArrowFlag__9dMw_HIO_cFv();
-extern "C" bool getPachinkoFlag__9dMw_HIO_cFv();
-extern "C" void __ct__10dMw_DHIO_cFv();
-extern "C" void __dt__10dMw_DHIO_cFv();
-extern "C" void __dt__9dMw_HIO_cFv();
-extern "C" void __sinit_d_menu_window_HIO_cpp();
+extern "C" void __ct__9dMw_HIO_cFv(); // 1
+extern "C" void init__9dMw_HIO_cFv(); // 1
+extern "C" bool getBombFlag__9dMw_HIO_cFv(); // 1
+extern "C" bool getArrowFlag__9dMw_HIO_cFv(); // 1
+extern "C" bool getPachinkoFlag__9dMw_HIO_cFv(); // 1
+extern "C" void __ct__10dMw_DHIO_cFv(); // 1
+extern "C" void __dt__10dMw_DHIO_cFv(); // 1
+extern "C" void __dt__9dMw_HIO_cFv(); // 1
+extern "C" void __sinit_d_menu_window_HIO_cpp(); // 1
 SECTION_DATA extern void*const __vt__10dMw_DHIO_c[3];
 SECTION_DATA extern void*const __vt__9dMw_HIO_c[3];
 SECTION_BSS extern u8 d_menu_d_menu_window_HIO__lit_3773[12];
@@ -65,16 +56,16 @@ SECTION_SDATA extern u8 data_80450750[3 + 5 /* padding */];
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void __register_global_object();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 
-extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
-extern "C" void __dl__FPv();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 

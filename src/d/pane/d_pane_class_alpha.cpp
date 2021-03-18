@@ -9,36 +9,18 @@
 // Types:
 // 
 
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-/* top-level dependencies (begin ['J2DScreen']) */
-/* top-level dependencies (end ['J2DScreen']) */
-struct J2DScreen {
-};
-
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 };
 
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
+struct J2DScreen {
+};
+
 struct J2DPane {
 	/* 802F7A8C */ void getFirstChildPane();
 	/* 802F7AC4 */ void getNextChildPane();
 };
 
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
-	// ('J2DPane',)
 	/* 802553EC */ CPaneMgrAlpha();
 	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 8025546C */ ~CPaneMgrAlpha();
@@ -57,22 +39,7 @@ struct CPaneMgrAlpha {
 	/* 80255B5C */ void childPaneSetAlpha(J2DPane*, u8);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build J2DPane (['J2DPane']) True/True
-// build CPaneMgrAlphaMorf (['CPaneMgrAlphaMorf']) False/False
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build J2DPane (['J2DPane']) True/True
-/* top-level dependencies (begin ['CPaneMgrAlphaMorf']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['CPaneMgrAlphaMorf']) */
 struct CPaneMgrAlphaMorf {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
-	// ('J2DPane',)
 	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255CAC */ ~CPaneMgrAlphaMorf();
 	/* 80255D48 */ void initiateAlphaMorf();
@@ -82,9 +49,6 @@ struct CPaneMgrAlphaMorf {
 	/* 80255F28 */ void childPaneSetAlphaMorf(J2DPane*, f32);
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
@@ -95,29 +59,29 @@ struct JKRHeap {
 // 
 
 
-extern "C" void __ct__13CPaneMgrAlphaFv();
-extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void __dt__13CPaneMgrAlphaFv();
-extern "C" void initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap();
-extern "C" void show__13CPaneMgrAlphaFv();
-extern "C" void hide__13CPaneMgrAlphaFv();
-extern "C" void isVisible__13CPaneMgrAlphaFv();
-extern "C" void rateCalc__13CPaneMgrAlphaFssUc();
-extern "C" void setAlpha__13CPaneMgrAlphaFUc();
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
-extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc();
-extern "C" void alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc();
-extern "C" void childPaneCount__13CPaneMgrAlphaFP7J2DPane();
-extern "C" void childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane();
-extern "C" void childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc();
-extern "C" void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void __dt__17CPaneMgrAlphaMorfFv();
-extern "C" void initiateAlphaMorf__17CPaneMgrAlphaMorfFv();
-extern "C" void setBackupAlpha__17CPaneMgrAlphaMorfFv();
-extern "C" void setAlphaMorfRate__17CPaneMgrAlphaMorfFf();
-extern "C" void childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane();
-extern "C" void childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef();
+extern "C" void __ct__13CPaneMgrAlphaFv(); // 1
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void __dt__13CPaneMgrAlphaFv(); // 1
+extern "C" void initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap(); // 1
+extern "C" void show__13CPaneMgrAlphaFv(); // 1
+extern "C" void hide__13CPaneMgrAlphaFv(); // 1
+extern "C" void isVisible__13CPaneMgrAlphaFv(); // 1
+extern "C" void rateCalc__13CPaneMgrAlphaFssUc(); // 1
+extern "C" void setAlpha__13CPaneMgrAlphaFUc(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
+extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc(); // 1
+extern "C" void alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc(); // 1
+extern "C" void childPaneCount__13CPaneMgrAlphaFP7J2DPane(); // 1
+extern "C" void childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane(); // 1
+extern "C" void childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc(); // 1
+extern "C" void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void __dt__17CPaneMgrAlphaMorfFv(); // 1
+extern "C" void initiateAlphaMorf__17CPaneMgrAlphaMorfFv(); // 1
+extern "C" void setBackupAlpha__17CPaneMgrAlphaMorfFv(); // 1
+extern "C" void setAlphaMorfRate__17CPaneMgrAlphaMorfFf(); // 1
+extern "C" void childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane(); // 1
+extern "C" void childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef(); // 1
 SECTION_DATA extern void*const __vt__17CPaneMgrAlphaMorf[4];
 SECTION_DATA extern void*const __vt__13CPaneMgrAlpha[4];
 SECTION_SDATA2 extern f32 d_pane_d_pane_class_alpha__lit_3692;
@@ -129,23 +93,23 @@ SECTION_SDATA2 extern u8 d_pane_d_pane_class_alpha__lit_3721[4 + 4 /* padding */
 // External References:
 // 
 
-void mDoExt_getCurrentHeap();
-void operator delete(void*);
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void mDoExt_getCurrentHeap(); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void mDoExt_getCurrentHeap__Fv();
-extern "C" void alloc__7JKRHeapFUli();
-extern "C" void free__7JKRHeapFPv();
-extern "C" void __dl__FPv();
-extern "C" void getFirstChildPane__7J2DPaneFv();
-extern "C" void getNextChildPane__7J2DPaneFv();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void mDoExt_getCurrentHeap__Fv(); // 1
+extern "C" void alloc__7JKRHeapFUli(); // 1
+extern "C" void free__7JKRHeapFPv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getFirstChildPane__7J2DPaneFv(); // 1
+extern "C" void getNextChildPane__7J2DPaneFv(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

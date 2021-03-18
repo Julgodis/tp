@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build layer_management_tag_class (['layer_management_tag_class']) False/False
-/* top-level dependencies (begin ['layer_management_tag_class']) */
-/* top-level dependencies (end ['layer_management_tag_class']) */
 struct layer_management_tag_class {
 };
 
-// build layer_class (['layer_class']) False/False
-/* top-level dependencies (begin ['layer_class']) */
-/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
@@ -31,40 +22,40 @@ struct create_tag_class {
 // Forward References:
 // 
 
-void fpcLyTg_ToQueue(layer_management_tag_class*, u32, u16, u16);
-void fpcLyTg_QueueTo(layer_management_tag_class*);
-void fpcLyTg_Move(layer_management_tag_class*, u32, u16, u16);
-void fpcLyTg_Init(layer_management_tag_class*, u32, void*);
+void fpcLyTg_ToQueue(layer_management_tag_class*, u32, u16, u16); // 2
+void fpcLyTg_QueueTo(layer_management_tag_class*); // 2
+void fpcLyTg_Move(layer_management_tag_class*, u32, u16, u16); // 2
+void fpcLyTg_Init(layer_management_tag_class*, u32, void*); // 2
 
-extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
-extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class();
-extern "C" void fpcLyTg_Move__FP26layer_management_tag_classUiUsUs();
-extern "C" void fpcLyTg_Init__FP26layer_management_tag_classUiPv();
+extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs(); // 1
+extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class(); // 1
+extern "C" void fpcLyTg_Move__FP26layer_management_tag_classUiUsUs(); // 1
+extern "C" void fpcLyTg_Init__FP26layer_management_tag_classUiPv(); // 1
 SECTION_DATA extern u8 data_803A3A00[28 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void fpcLy_IntoQueue(layer_class*, int, create_tag_class*, int);
-void fpcLy_ToQueue(layer_class*, int, create_tag_class*);
-void fpcLy_QueueTo(layer_class*, create_tag_class*);
-void fpcLy_Layer(u32);
-void cTg_Create(create_tag_class*, void*);
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+void fpcLy_IntoQueue(layer_class*, int, create_tag_class*, int); // 2
+void fpcLy_ToQueue(layer_class*, int, create_tag_class*); // 2
+void fpcLy_QueueTo(layer_class*, create_tag_class*); // 2
+void fpcLy_Layer(u32); // 2
+void cTg_Create(create_tag_class*, void*); // 2
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi();
-extern "C" void fpcLy_ToQueue__FP11layer_classiP16create_tag_class();
-extern "C" void fpcLy_QueueTo__FP11layer_classP16create_tag_class();
-extern "C" void fpcLy_Layer__FUi();
-extern "C" void cTg_Create__FP16create_tag_classPv();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+extern "C" void fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi(); // 1
+extern "C" void fpcLy_ToQueue__FP11layer_classiP16create_tag_class(); // 1
+extern "C" void fpcLy_QueueTo__FP11layer_classP16create_tag_class(); // 1
+extern "C" void fpcLy_Layer__FUi(); // 1
+extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 
 // 
 // Declarations:

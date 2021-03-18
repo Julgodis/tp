@@ -9,17 +9,7 @@
 // Types:
 // 
 
-// build JASOscillator (['JASOscillator']) False/False
-// build JASOscillator (['JASOscillator']) True/False
-struct JASOscillator;
-/* top-level dependencies (begin ['JASOscillator']) */
-// outer dependency: ('JASOscillator', 'Data')
-/* top-level dependencies (end ['JASOscillator']) */
 struct JASOscillator {
-	// ('JASOscillator', 'Data')
-	// build Data (['JASOscillator', 'Data']) False/False
-	/* dependencies (begin ['JASOscillator', 'Data']) */
-	/* dependencies (end ['JASOscillator', 'Data']) */
 	struct Data {
 	};
 
@@ -37,13 +27,13 @@ struct JASOscillator {
 // 
 
 
-extern "C" void __ct__13JASOscillatorFv();
-extern "C" void initStart__13JASOscillatorFPCQ213JASOscillator4Data();
-extern "C" void incCounter__13JASOscillatorFf();
-extern "C" void getValue__13JASOscillatorCFv();
-extern "C" void release__13JASOscillatorFv();
-extern "C" void update__13JASOscillatorFv();
-extern "C" void updateCurrentValue__13JASOscillatorFf();
+extern "C" void __ct__13JASOscillatorFv(); // 1
+extern "C" void initStart__13JASOscillatorFPCQ213JASOscillator4Data(); // 1
+extern "C" void incCounter__13JASOscillatorFf(); // 1
+extern "C" void getValue__13JASOscillatorCFv(); // 1
+extern "C" void release__13JASOscillatorFv(); // 1
+extern "C" void update__13JASOscillatorFv(); // 1
+extern "C" void updateCurrentValue__13JASOscillatorFf(); // 1
 SECTION_RODATA extern const u8 sCurveTableLinear__13JASOscillator[68];
 SECTION_RODATA extern const u8 sCurveTableSampleCell__13JASOscillator[68];
 SECTION_RODATA extern const u8 sCurveTableSqRoot__13JASOscillator[68];
@@ -60,9 +50,9 @@ SECTION_SDATA2 extern f64 JASOscillator__lit_156;
 // External References:
 // 
 
-extern "C" void __cvt_fp2unsigned();
+extern "C" void __cvt_fp2unsigned(); // 1
 
-extern "C" void __cvt_fp2unsigned();
+extern "C" void __cvt_fp2unsigned(); // 1
 
 // 
 // Declarations:

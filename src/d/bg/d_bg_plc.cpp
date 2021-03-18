@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build dBgPlc (['dBgPlc']) False/False
-// build sBgPc (['sBgPc']) False/False
-/* top-level dependencies (begin ['sBgPc']) */
-/* top-level dependencies (end ['sBgPc']) */
 struct sBgPc {
 };
 
-/* top-level dependencies (begin ['dBgPlc']) */
-// outer dependency: ('sBgPc',)
-/* top-level dependencies (end ['dBgPlc']) */
 struct dBgPlc {
-	// ('sBgPc',)
 	/* 80074074 */ dBgPlc();
 	/* 80074080 */ ~dBgPlc();
 	/* 800740BC */ void setBase(void*);
@@ -28,25 +20,24 @@ struct dBgPlc {
 	/* 800740DC */ void getGrpCode(int) const;
 };
 
-// build sBgPc (['sBgPc']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__6dBgPlcFv();
-extern "C" void __dt__6dBgPlcFv();
-extern "C" void setBase__6dBgPlcFPv();
-extern "C" void getCode__6dBgPlcCFiPP5sBgPc();
-extern "C" void getGrpCode__6dBgPlcCFi();
+extern "C" void __ct__6dBgPlcFv(); // 1
+extern "C" void __dt__6dBgPlcFv(); // 1
+extern "C" void setBase__6dBgPlcFPv(); // 1
+extern "C" void getCode__6dBgPlcCFiPP5sBgPc(); // 1
+extern "C" void getGrpCode__6dBgPlcCFi(); // 1
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

@@ -9,16 +9,10 @@
 // Types:
 // 
 
-// build JAIStreamDataMgr (['JAIStreamDataMgr']) False/False
-/* top-level dependencies (begin ['JAIStreamDataMgr']) */
-/* top-level dependencies (end ['JAIStreamDataMgr']) */
 struct JAIStreamDataMgr {
 	/* 802A3AD8 */ ~JAIStreamDataMgr();
 };
 
-// build JAIStreamAramMgr (['JAIStreamAramMgr']) False/False
-/* top-level dependencies (begin ['JAIStreamAramMgr']) */
-/* top-level dependencies (end ['JAIStreamAramMgr']) */
 struct JAIStreamAramMgr {
 	/* 802A3B20 */ ~JAIStreamAramMgr();
 };
@@ -28,8 +22,8 @@ struct JAIStreamAramMgr {
 // 
 
 
-extern "C" void __dt__16JAIStreamDataMgrFv();
-extern "C" void __dt__16JAIStreamAramMgrFv();
+extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
+extern "C" void __dt__16JAIStreamAramMgrFv(); // 1
 SECTION_DATA extern void*const __vt__16JAIStreamAramMgr[5];
 SECTION_DATA extern void*const __vt__16JAIStreamDataMgr[5];
 
@@ -37,9 +31,9 @@ SECTION_DATA extern void*const __vt__16JAIStreamDataMgr[5];
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

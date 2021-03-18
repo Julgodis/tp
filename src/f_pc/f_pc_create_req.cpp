@@ -9,45 +9,24 @@
 // Types:
 // 
 
-// build create_tag (['create_tag']) False/False
-/* top-level dependencies (begin ['create_tag']) */
-/* top-level dependencies (end ['create_tag']) */
 struct create_tag {
 };
 
-// build create_request (['create_request']) False/False
-/* top-level dependencies (begin ['create_request']) */
-/* top-level dependencies (end ['create_request']) */
 struct create_request {
 };
 
-// build layer_class (['layer_class']) False/False
-/* top-level dependencies (begin ['layer_class']) */
-/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build create_request_method_class (['create_request_method_class']) False/False
-/* top-level dependencies (begin ['create_request_method_class']) */
-/* top-level dependencies (end ['create_request_method_class']) */
 struct create_request_method_class {
 };
 
-// build base_process_class (['base_process_class']) False/False
-/* top-level dependencies (begin ['base_process_class']) */
-/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build process_method_tag_class (['process_method_tag_class']) False/False
-/* top-level dependencies (begin ['process_method_tag_class']) */
-/* top-level dependencies (end ['process_method_tag_class']) */
 struct process_method_tag_class {
 };
 
-// build cMl (['cMl']) False/False
-/* top-level dependencies (begin ['cMl']) */
-/* top-level dependencies (end ['cMl']) */
 struct cMl {
 	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);
@@ -57,67 +36,67 @@ struct cMl {
 // Forward References:
 // 
 
-static void fpcCtRq_isCreatingByID(create_tag*, u32*);
-void fpcCtRq_IsCreatingByID(u32);
-static void fpcCtRq_CreateQTo(create_request*);
-static void fpcCtRq_ToCreateQ(create_request*);
-static void fpcCtRq_Delete(create_request*);
-void fpcCtRq_Cancel(create_request*);
-void fpcCtRq_IsDoing(create_request*);
-static void fpcCtRq_Do(create_request*);
-void fpcCtRq_Handler();
-void fpcCtRq_Create(layer_class*, u32, create_request_method_class*);
+static void fpcCtRq_isCreatingByID(create_tag*, u32*); // 2
+void fpcCtRq_IsCreatingByID(u32); // 2
+static void fpcCtRq_CreateQTo(create_request*); // 2
+static void fpcCtRq_ToCreateQ(create_request*); // 2
+static void fpcCtRq_Delete(create_request*); // 2
+void fpcCtRq_Cancel(create_request*); // 2
+void fpcCtRq_IsDoing(create_request*); // 2
+static void fpcCtRq_Do(create_request*); // 2
+void fpcCtRq_Handler(); // 2
+void fpcCtRq_Create(layer_class*, u32, create_request_method_class*); // 2
 
-extern "C" static void fpcCtRq_isCreatingByID__FP10create_tagPUi();
-extern "C" void fpcCtRq_IsCreatingByID__FUi();
-extern "C" static void fpcCtRq_CreateQTo__FP14create_request();
-extern "C" static void fpcCtRq_ToCreateQ__FP14create_request();
-extern "C" static void fpcCtRq_Delete__FP14create_request();
-extern "C" void fpcCtRq_Cancel__FP14create_request();
-extern "C" void fpcCtRq_IsDoing__FP14create_request();
-extern "C" static void fpcCtRq_Do__FP14create_request();
-extern "C" void fpcCtRq_Handler__Fv();
-extern "C" void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class();
+extern "C" static void fpcCtRq_isCreatingByID__FP10create_tagPUi(); // 1
+extern "C" void fpcCtRq_IsCreatingByID__FUi(); // 1
+extern "C" static void fpcCtRq_CreateQTo__FP14create_request(); // 1
+extern "C" static void fpcCtRq_ToCreateQ__FP14create_request(); // 1
+extern "C" static void fpcCtRq_Delete__FP14create_request(); // 1
+extern "C" void fpcCtRq_Cancel__FP14create_request(); // 1
+extern "C" void fpcCtRq_IsDoing__FP14create_request(); // 1
+extern "C" static void fpcCtRq_Do__FP14create_request(); // 1
+extern "C" void fpcCtRq_Handler__Fv(); // 1
+extern "C" void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class(); // 1
 
 // 
 // External References:
 // 
 
-void fpcBs_MakeOfId();
-extern "C" void fpcCtIt_Method__FPFPvPv_iPv();
-extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv();
-void fpcCtTg_ToCreateQ(create_tag*);
-void fpcCtTg_CreateQTo(create_tag*);
-void fpcCtTg_Init(create_tag*, void*);
-void fpcDt_Delete(void*);
-void fpcEx_ToExecuteQ(base_process_class*);
-void fpcLy_CancelQTo(process_method_tag_class*);
-void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*);
-void fpcLy_CreatingMesg(layer_class*);
-void fpcLy_CreatedMesg(layer_class*);
-extern "C" void fpcMtd_Method__FPFPv_iPv();
-extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void fpcBs_MakeOfId(); // 2
+extern "C" void fpcCtIt_Method__FPFPvPv_iPv(); // 1
+extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv(); // 1
+void fpcCtTg_ToCreateQ(create_tag*); // 2
+void fpcCtTg_CreateQTo(create_tag*); // 2
+void fpcCtTg_Init(create_tag*, void*); // 2
+void fpcDt_Delete(void*); // 2
+void fpcEx_ToExecuteQ(base_process_class*); // 2
+void fpcLy_CancelQTo(process_method_tag_class*); // 2
+void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*); // 2
+void fpcLy_CreatingMesg(layer_class*); // 2
+void fpcLy_CreatedMesg(layer_class*); // 2
+extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
+extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void fpcBs_MakeOfId__Fv();
-extern "C" void fpcCtIt_Method__FPFPvPv_iPv();
-extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv();
-extern "C" void fpcCtTg_ToCreateQ__FP10create_tag();
-extern "C" void fpcCtTg_CreateQTo__FP10create_tag();
-extern "C" void fpcCtTg_Init__FP10create_tagPv();
-extern "C" void fpcDt_Delete__FPv();
-extern "C" void fpcEx_ToExecuteQ__FP18base_process_class();
-extern "C" void fpcLy_CancelQTo__FP24process_method_tag_class();
-extern "C" void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class();
-extern "C" void fpcLy_CreatingMesg__FP11layer_class();
-extern "C" void fpcLy_CreatedMesg__FP11layer_class();
-extern "C" void fpcMtd_Method__FPFPv_iPv();
-extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
-extern "C" void memalignB__3cMlFiUl();
-extern "C" void free__3cMlFPv();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void fpcBs_MakeOfId__Fv(); // 1
+extern "C" void fpcCtIt_Method__FPFPvPv_iPv(); // 1
+extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv(); // 1
+extern "C" void fpcCtTg_ToCreateQ__FP10create_tag(); // 1
+extern "C" void fpcCtTg_CreateQTo__FP10create_tag(); // 1
+extern "C" void fpcCtTg_Init__FP10create_tagPv(); // 1
+extern "C" void fpcDt_Delete__FPv(); // 1
+extern "C" void fpcEx_ToExecuteQ__FP18base_process_class(); // 1
+extern "C" void fpcLy_CancelQTo__FP24process_method_tag_class(); // 1
+extern "C" void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class(); // 1
+extern "C" void fpcLy_CreatingMesg__FP11layer_class(); // 1
+extern "C" void fpcLy_CreatedMesg__FP11layer_class(); // 1
+extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
+extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
+extern "C" void memalignB__3cMlFiUl(); // 1
+extern "C" void free__3cMlFPv(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

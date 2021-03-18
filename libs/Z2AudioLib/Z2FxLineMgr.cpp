@@ -9,37 +9,19 @@
 // Types:
 // 
 
-// build Z2FxLineMgr (['Z2FxLineMgr']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5D38 */ void getResource(u16);
 	/* 802D610C */ void countResource() const;
 };
 
-// build Z2FxLineConfig (['Z2FxLineConfig']) False/False
-/* top-level dependencies (begin ['Z2FxLineConfig']) */
-/* top-level dependencies (end ['Z2FxLineConfig']) */
+struct JKRHeap {
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
 struct Z2FxLineConfig {
 };
 
-/* top-level dependencies (begin ['Z2FxLineMgr']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JKRArchive',)
-// outer dependency: ('Z2FxLineConfig',)
-/* top-level dependencies (end ['Z2FxLineMgr']) */
 struct Z2FxLineMgr {
-	// ('JKRHeap',)
-	// ('JKRArchive',)
-	// ('Z2FxLineConfig',)
 	/* 802BA7DC */ Z2FxLineMgr();
 	/* 802BA7FC */ void initDataArc(JKRArchive*, JKRHeap*);
 	/* 802BAC28 */ void setLineID(s8, bool, bool);
@@ -49,37 +31,18 @@ struct Z2FxLineMgr {
 	/* 802BAEB8 */ void setSceneFx(s32);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-// build Z2FxLineConfig (['Z2FxLineConfig']) True/True
-// build JASDsp (['JASDsp']) False/False
-// build JASDsp (['JASDsp']) True/False
-struct JASDsp;
-/* top-level dependencies (begin ['JASDsp']) */
-// outer dependency: ('JASDsp', 'FxlineConfig_')
-/* top-level dependencies (end ['JASDsp']) */
 struct JASDsp {
-	// ('JASDsp', 'FxlineConfig_')
-	// build FxlineConfig_ (['JASDsp', 'FxlineConfig_']) False/False
-	/* dependencies (begin ['JASDsp', 'FxlineConfig_']) */
-	/* dependencies (end ['JASDsp', 'FxlineConfig_']) */
 	struct FxlineConfig_ {
 	};
 
 	/* 8029DB78 */ void setFXLine(u8, s16*, JASDsp::FxlineConfig_*);
 };
 
-// build JSUInputStream (['JSUInputStream']) False/False
-/* top-level dependencies (begin ['JSUInputStream']) */
-/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC23C */ ~JSUInputStream();
 	/* 802DC298 */ void read(void*, s32);
 };
 
-// build JSUMemoryInputStream (['JSUMemoryInputStream']) False/False
-/* top-level dependencies (begin ['JSUMemoryInputStream']) */
-/* top-level dependencies (end ['JSUMemoryInputStream']) */
 struct JSUMemoryInputStream {
 	/* 802DC520 */ void setBuffer(void const*, s32);
 };
@@ -89,37 +52,37 @@ struct JSUMemoryInputStream {
 // 
 
 
-extern "C" void __ct__11Z2FxLineMgrFv();
-extern "C" void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
-extern "C" void setLineID__11Z2FxLineMgrFScbb();
-extern "C" void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb();
-extern "C" void setFxForceOff__11Z2FxLineMgrFb();
-extern "C" void setUnderWaterFx__11Z2FxLineMgrFb();
-extern "C" void setSceneFx__11Z2FxLineMgrFl();
+extern "C" void __ct__11Z2FxLineMgrFv(); // 1
+extern "C" void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap(); // 1
+extern "C" void setLineID__11Z2FxLineMgrFScbb(); // 1
+extern "C" void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb(); // 1
+extern "C" void setFxForceOff__11Z2FxLineMgrFb(); // 1
+extern "C" void setUnderWaterFx__11Z2FxLineMgrFb(); // 1
+extern "C" void setSceneFx__11Z2FxLineMgrFl(); // 1
 SECTION_DATA extern void*lit_3566[76];
 
 // 
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int);
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_28();
+void* operator new[](u32, JKRHeap*, int); // 2
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_();
-extern "C" void free__7JKRHeapFPvP7JKRHeap();
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void getResource__10JKRArchiveFUs();
-extern "C" void countResource__10JKRArchiveCFv();
-extern "C" void __dt__14JSUInputStreamFv();
-extern "C" void read__14JSUInputStreamFPvl();
-extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_28();
+extern "C" void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_(); // 1
+extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void getResource__10JKRArchiveFUs(); // 1
+extern "C" void countResource__10JKRArchiveCFv(); // 1
+extern "C" void __dt__14JSUInputStreamFv(); // 1
+extern "C" void read__14JSUInputStreamFPvl(); // 1
+extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_DATA extern void*const __vt__10JSUIosBase[3];
 SECTION_DATA extern void*const __vt__20JSURandomInputStream[9];
 SECTION_DATA extern void*const __vt__14JSUInputStream[7];

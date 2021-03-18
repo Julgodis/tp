@@ -9,91 +9,42 @@
 // Types:
 // 
 
-// build cBgW_RwgElm (['cBgW_RwgElm']) False/False
-/* top-level dependencies (begin ['cBgW_RwgElm']) */
-/* top-level dependencies (end ['cBgW_RwgElm']) */
 struct cBgW_RwgElm {
 	/* 800791C4 */ cBgW_RwgElm();
 	/* 800791D4 */ ~cBgW_RwgElm();
 };
 
-// build cBgW_NodeTree (['cBgW_NodeTree']) False/False
-/* top-level dependencies (begin ['cBgW_NodeTree']) */
-/* top-level dependencies (end ['cBgW_NodeTree']) */
 struct cBgW_NodeTree {
 	/* 8007921C */ cBgW_NodeTree();
 	/* 80079238 */ ~cBgW_NodeTree();
 };
 
-// build cBgW (['cBgW']) False/False
-// build cBgS_ShdwDraw (['cBgS_ShdwDraw']) False/False
-/* top-level dependencies (begin ['cBgS_ShdwDraw']) */
-/* top-level dependencies (end ['cBgS_ShdwDraw']) */
-struct cBgS_ShdwDraw {
+struct cBgS_LinChk {
 };
 
-// build cBgS_PolyPassChk (['cBgS_PolyPassChk']) False/False
-/* top-level dependencies (begin ['cBgS_PolyPassChk']) */
-/* top-level dependencies (end ['cBgS_PolyPassChk']) */
 struct cBgS_PolyPassChk {
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
+struct cBgS_GndChk {
+};
+
+struct cXyz {
+};
+
 struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-// build cBgS_LinChk (['cBgS_LinChk']) False/False
-/* top-level dependencies (begin ['cBgS_LinChk']) */
-/* top-level dependencies (end ['cBgS_LinChk']) */
-struct cBgS_LinChk {
-};
-
-// build cBgS_GndChk (['cBgS_GndChk']) False/False
-/* top-level dependencies (begin ['cBgS_GndChk']) */
-/* top-level dependencies (end ['cBgS_GndChk']) */
-struct cBgS_GndChk {
-};
-
-// build cBgD_t (['cBgD_t']) False/False
-/* top-level dependencies (begin ['cBgD_t']) */
-/* top-level dependencies (end ['cBgD_t']) */
-struct cBgD_t {
-};
-
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
-struct cXyz {
-};
-
-// build cBgS_GrpPassChk (['cBgS_GrpPassChk']) False/False
-/* top-level dependencies (begin ['cBgS_GrpPassChk']) */
-/* top-level dependencies (end ['cBgS_GrpPassChk']) */
 struct cBgS_GrpPassChk {
 };
 
-/* top-level dependencies (begin ['cBgW']) */
-// outer dependency: ('cBgS_ShdwDraw',)
-// outer dependency: ('cBgS_PolyPassChk',)
-// outer dependency: ('cBgS_PolyInfo',)
-// outer dependency: ('cBgS_LinChk',)
-// outer dependency: ('cBgS_GndChk',)
-// outer dependency: ('cBgD_t',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('cBgS_GrpPassChk',)
-/* top-level dependencies (end ['cBgW']) */
+struct cBgS_ShdwDraw {
+};
+
+struct cBgD_t {
+};
+
 struct cBgW {
-	// ('cBgS_ShdwDraw',)
-	// ('cBgS_PolyPassChk',)
-	// ('cBgS_PolyInfo',)
-	// ('cBgS_LinChk',)
-	// ('cBgS_GndChk',)
-	// ('cBgD_t',)
-	// ('cXyz',)
-	// ('cBgS_GrpPassChk',)
 	/* 80079294 */ cBgW();
 	/* 8007933C */ ~cBgW();
 	/* 800793A4 */ void FreeArea();
@@ -149,140 +100,54 @@ struct cBgW {
 	/* 8007B964 */ void ChkMoveBg() const;
 };
 
-// build cBgW_TriElm (['cBgW_TriElm']) False/False
-/* top-level dependencies (begin ['cBgW_TriElm']) */
-/* top-level dependencies (end ['cBgW_TriElm']) */
 struct cBgW_TriElm {
 	/* 800796F8 */ ~cBgW_TriElm();
 	/* 80079754 */ cBgW_TriElm();
 };
 
-// build cXyz (['cXyz']) True/True
-// build cBgD_t (['cBgD_t']) True/True
-// build cBgW_GrpElm (['cBgW_GrpElm']) False/False
-/* top-level dependencies (begin ['cBgW_GrpElm']) */
-/* top-level dependencies (end ['cBgW_GrpElm']) */
 struct cBgW_GrpElm {
 	/* 8007A184 */ ~cBgW_GrpElm();
 	/* 8007A1E4 */ cBgW_GrpElm();
 };
 
-// build cBgS_LinChk (['cBgS_LinChk']) True/True
-// build cM3dGTri (['cM3dGTri']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build cM3dGPla (['cM3dGPla']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGPla']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
-	// ('cXyz',)
 	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
 };
 
-/* top-level dependencies (begin ['cM3dGTri']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('cM3dGPla',)
-/* top-level dependencies (end ['cM3dGTri']) */
 struct cM3dGTri {
-	// ('Vec',)
-	// ('cM3dGPla',)
 	/* 8007A344 */ ~cM3dGTri();
 	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
 };
 
-// build cBgS_GndChk (['cBgS_GndChk']) True/True
-// build cBgS_ShdwDraw (['cBgS_ShdwDraw']) True/True
-// build cBgS_PolyPassChk (['cBgS_PolyPassChk']) True/True
-// build cBgS_GrpPassChk (['cBgS_GrpPassChk']) True/True
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-// build dBgW (['dBgW']) False/False
-// build dBgS_SphChk (['dBgS_SphChk']) False/False
-/* top-level dependencies (begin ['dBgS_SphChk']) */
-/* top-level dependencies (end ['dBgS_SphChk']) */
-struct dBgS_SphChk {
+struct fopAc_ac_c {
 };
 
-// build dBgS_RoofChk (['dBgS_RoofChk']) False/False
-/* top-level dependencies (begin ['dBgS_RoofChk']) */
-/* top-level dependencies (end ['dBgS_RoofChk']) */
-struct dBgS_RoofChk {
+struct csXyz {
 };
 
-// build dBgS_Acch (['dBgS_Acch']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['dBgS_Acch']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['dBgS_Acch']) */
 struct dBgS_Acch {
-	// ('Vec',)
 	/* 800771E4 */ void GetSpeedY();
 	/* 80077200 */ void GetWallAddY(Vec&);
 	/* 80077288 */ void SetWallPolyIndex(int, int);
 	/* 800772E8 */ void CalcMovePosWork();
 };
 
-// build cBgS_PolyPassChk (['cBgS_PolyPassChk']) True/True
-// build cM3dGPla (['cM3dGPla']) True/True
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
-struct csXyz {
+struct dBgS_RoofChk {
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
-struct fopAc_ac_c {
-};
-
-// build dBgS_CaptPoly (['dBgS_CaptPoly']) False/False
-/* top-level dependencies (begin ['dBgS_CaptPoly']) */
-/* top-level dependencies (end ['dBgS_CaptPoly']) */
 struct dBgS_CaptPoly {
 };
 
-// build dBgS_SplGrpChk (['dBgS_SplGrpChk']) False/False
-/* top-level dependencies (begin ['dBgS_SplGrpChk']) */
-/* top-level dependencies (end ['dBgS_SplGrpChk']) */
+struct dBgS_SphChk {
+};
+
 struct dBgS_SplGrpChk {
 };
 
-// build cXyz (['cXyz']) True/True
-// build cBgS_GrpPassChk (['cBgS_GrpPassChk']) True/True
-/* top-level dependencies (begin ['dBgW']) */
-// outer dependency: ('dBgS_SphChk',)
-// outer dependency: ('dBgS_RoofChk',)
-// outer dependency: ('dBgS_Acch',)
-// outer dependency: ('cBgS_PolyPassChk',)
-// outer dependency: ('cM3dGPla',)
-// outer dependency: ('cBgS_PolyInfo',)
-// outer dependency: ('csXyz',)
-// outer dependency: ('fopAc_ac_c',)
-// outer dependency: ('dBgS_CaptPoly',)
-// outer dependency: ('dBgS_SplGrpChk',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('cBgS_GrpPassChk',)
-/* top-level dependencies (end ['dBgW']) */
 struct dBgW {
-	// ('dBgS_SphChk',)
-	// ('dBgS_RoofChk',)
-	// ('dBgS_Acch',)
-	// ('cBgS_PolyPassChk',)
-	// ('cM3dGPla',)
-	// ('cBgS_PolyInfo',)
-	// ('csXyz',)
-	// ('fopAc_ac_c',)
-	// ('dBgS_CaptPoly',)
-	// ('dBgS_SplGrpChk',)
-	// ('cXyz',)
-	// ('cBgS_GrpPassChk',)
 	/* 8007B3AC */ void GetExitId(cBgS_PolyInfo const&);
 	/* 8007B3D8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 8007B404 */ void GetHorseNoEntry(cBgS_PolyInfo const&);
@@ -353,24 +218,7 @@ struct dBgW {
 	/* 8007E548 */ ~dBgW();
 };
 
-// build dBgS_Acch (['dBgS_Acch']) True/True
-// build cM3dGPla (['cM3dGPla']) True/True
-// build dBgS_RoofChk (['dBgS_RoofChk']) True/True
-// build dBgS_SplGrpChk (['dBgS_SplGrpChk']) True/True
-// build dBgS_CaptPoly (['dBgS_CaptPoly']) True/True
-// build dBgS_SphChk (['dBgS_SphChk']) True/True
-// build csXyz (['csXyz']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build dBgW_Base (['dBgW_Base']) False/False
-// build cXyz (['cXyz']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dBgW_Base']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dBgW_Base']) */
 struct dBgW_Base {
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 80074AB4 */ void SetOldShapeAngleY(s16);
 	/* 8007E5A8 */ dBgW_Base();
 	/* 8007E640 */ ~dBgW_Base();
@@ -378,27 +226,14 @@ struct dBgW_Base {
 	/* 8007E6DC */ void CallArrowStickCallBack(fopAc_ac_c*, fopAc_ac_c*, cXyz&);
 };
 
-// build Vec (['Vec']) True/True
-// build dBgS_PolyPassChk (['dBgS_PolyPassChk']) False/False
-/* top-level dependencies (begin ['dBgS_PolyPassChk']) */
-/* top-level dependencies (end ['dBgS_PolyPassChk']) */
 struct dBgS_PolyPassChk {
 	/* 80078F04 */ void ChkNoHorse();
 };
 
-// build cM2dGCir (['cM2dGCir']) False/False
-/* top-level dependencies (begin ['cM2dGCir']) */
-/* top-level dependencies (end ['cM2dGCir']) */
 struct cM2dGCir {
 };
 
-// build cM3dGAab (['cM3dGAab']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGAab']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGAab']) */
 struct cM3dGAab {
-	// ('cXyz',)
 	/* 8026EC88 */ void CrossY(cXyz const*) const;
 	/* 8026ECD0 */ void UnderPlaneYUnder(f32) const;
 	/* 8026ECE4 */ void TopPlaneYUnder(f32) const;
@@ -408,25 +243,13 @@ struct cM3dGAab {
 	/* 8026EDE4 */ void SetMax(cXyz const&);
 };
 
-// build cM3dGCyl (['cM3dGCyl']) False/False
-/* top-level dependencies (begin ['cM3dGCyl']) */
-/* top-level dependencies (end ['cM3dGCyl']) */
 struct cM3dGCyl {
 };
 
-// build cM3dGSph (['cM3dGSph']) False/False
-/* top-level dependencies (begin ['cM3dGSph']) */
-/* top-level dependencies (end ['cM3dGSph']) */
 struct cM3dGSph {
 };
 
-// build cM3dGLin (['cM3dGLin']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGLin']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// ('cXyz',)
 	/* 8026F3C0 */ void SetEnd(cXyz const&);
 };
 
@@ -434,139 +257,139 @@ struct cM3dGLin {
 // Forward References:
 // 
 
-void dBgW_NewSet(cBgD_t*, u32, f32 (* )[3][4]);
+void dBgW_NewSet(cBgD_t*, u32, f32 (* )[3][4]); // 2
 
-extern "C" void __ct__11cBgW_RwgElmFv();
-extern "C" void __dt__11cBgW_RwgElmFv();
-extern "C" void __ct__13cBgW_NodeTreeFv();
-extern "C" void __dt__13cBgW_NodeTreeFv();
-extern "C" void __ct__4cBgWFv();
-extern "C" void __dt__4cBgWFv();
-extern "C" void FreeArea__4cBgWFv();
-extern "C" void GlobalVtx__4cBgWFv();
-extern "C" void SetVtx__4cBgWFv();
-extern "C" void CalcPlane__4cBgWFv();
-extern "C" void SetTri__4cBgWFv();
-extern "C" void __dt__11cBgW_TriElmFv();
-extern "C" void __ct__11cBgW_TriElmFv();
-extern "C" void BlckConnect__4cBgWFPUsPii();
-extern "C" void ClassifyPlane__4cBgWFv();
-extern "C" void MakeBlckTransMinMax__4cBgWFP4cXyzP4cXyz();
-extern "C" void MakeBlckMinMax__4cBgWFiP4cXyzP4cXyz();
-extern "C" void MakeBlckBnd__4cBgWFiP4cXyzP4cXyz();
-extern "C" void MakeNodeTreeRp__4cBgWFi();
-extern "C" void MakeNodeTreeGrpRp__4cBgWFi();
-extern "C" void MakeNodeTree__4cBgWFv();
-extern "C" void ChkMemoryError__4cBgWFv();
-extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f();
-extern "C" void __dt__11cBgW_GrpElmFv();
-extern "C" void __ct__11cBgW_GrpElmFv();
-extern "C" void RwgLineCheck__4cBgWFUsP11cBgS_LinChk();
-extern "C" void __dt__8cM3dGTriFv();
-extern "C" void LineCheckRp__4cBgWFP11cBgS_LinChki();
-extern "C" void LineCheckGrpRp__4cBgWFP11cBgS_LinChkii();
-extern "C" void LineCheck__4cBgWFP11cBgS_LinChk();
-extern "C" void RwgGroundCheckCommon__4cBgWFfUsP11cBgS_GndChk();
-extern "C" void RwgGroundCheckGnd__4cBgWFUsP11cBgS_GndChk();
-extern "C" void RwgGroundCheckWall__4cBgWFUsP11cBgS_GndChk();
-extern "C" void GroundCrossRp__4cBgWFP11cBgS_GndChki();
-extern "C" void GroundCrossGrpRp__4cBgWFP11cBgS_GndChkii();
-extern "C" void GroundCross__4cBgWFP11cBgS_GndChk();
-extern "C" void CopyOldMtx__4cBgWFv();
-extern "C" void Move__4cBgWFv();
-extern "C" void RwgShdwDraw__4cBgWFiP13cBgS_ShdwDraw();
-extern "C" void ShdwDrawRp__4cBgWFP13cBgS_ShdwDrawi();
-extern "C" void ShdwDrawGrpRp__4cBgWFP13cBgS_ShdwDrawi();
-extern "C" void ShdwDraw__4cBgWFP13cBgS_ShdwDraw();
-extern "C" bool ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk();
-extern "C" void ChkShdwDrawThrough__4cBgWFiP16cBgS_PolyPassChk();
-extern "C" bool ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki();
-extern "C" void GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo();
-extern "C" void GetBnd__4cBgWCFv();
-extern "C" void GetTrans__4cBgWCFP4cXyz();
-extern "C" void GetTriPnt__4cBgWCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz();
-extern "C" void GetTopUnder__4cBgWCFPfPf();
-extern "C" void GetTriPla__4cBgWCFRC13cBgS_PolyInfo();
-extern "C" void GetGrpInf__4cBgWCFRC13cBgS_PolyInfo();
-extern "C" void GetPolyInfId__4cBgWCFi();
-extern "C" void GetPolyInf0__4cBgWCFiUlUl();
-extern "C" void GetMaskPolyInf0_NoShift__4cBgWCFiUl();
-extern "C" void GetExitId__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetPolyColor__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetHorseNoEntry__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetSpecialCode__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetSpecialCode__4dBgWFi();
-extern "C" void GetMagnetCode__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetMonkeyBarsCode__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetPolyObjThrough__4dBgWFi();
-extern "C" void GetPolyCamThrough__4dBgWFi();
-extern "C" void GetPolyLinkThrough__4dBgWFi();
-extern "C" void GetPolyArrowThrough__4dBgWFi();
-extern "C" void GetPolyHSStick__4dBgWFi();
-extern "C" void GetPolyBoomerangThrough__4dBgWFi();
-extern "C" void GetPolyRopeThrough__4dBgWFi();
-extern "C" void GetPolyBombThrough__4dBgWFi();
-extern "C" void GetShdwThrough__4dBgWFi();
-extern "C" void GetUnderwaterRoofCode__4dBgWFi();
-extern "C" void GetPolyInf1__4cBgWCFiUlUl();
-extern "C" void GetLinkNo__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetWallCode__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetPolyAtt0__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetPolyAtt1__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetGroundCode__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetMaskPolyInf1_NoShift__4cBgWCFiUl();
-extern "C" void GetIronBallThrough__4dBgWFi();
-extern "C" void GetAttackThrough__4dBgWFi();
-extern "C" void GetPolyInf2__4cBgWCFiUlUl();
-extern "C" void GetCamMoveBG__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetRoomCamId__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetRoomPathId__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetRoomPathPntNo__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetTriGrp__4cBgWCFi();
-extern "C" void ChkNotReady__4cBgWCFv();
-extern "C" void ChkLock__4cBgWCFv();
-extern "C" void ChkMoveBg__4cBgWCFv();
-extern "C" void __ct__4dBgWFv();
-extern "C" void Move__4dBgWFv();
-extern "C" void positionWallCorrect__4dBgWFP9dBgS_AcchfR8cM3dGPlaP4cXyzf();
-extern "C" void RwgWallCorrect__4dBgWFP9dBgS_AcchUs();
-extern "C" void WallCorrectRp__4dBgWFP9dBgS_Acchi();
-extern "C" void WallCorrectGrpRp__4dBgWFP9dBgS_Acchii();
-extern "C" void WallCorrect__4dBgWFP9dBgS_Acch();
-extern "C" void RwgWallCorrectSort__4dBgWFP9dBgS_AcchUs();
-extern "C" void WallCorrectRpSort__4dBgWFP9dBgS_Acchi();
-extern "C" void WallCorrectGrpRpSort__4dBgWFP9dBgS_Acchii();
-extern "C" void WallCorrectSort__4dBgWFP9dBgS_Acch();
-extern "C" void RwgRoofChk__4dBgWFUsP12dBgS_RoofChk();
-extern "C" void RoofChkRp__4dBgWFP12dBgS_RoofChki();
-extern "C" void RoofChkGrpRp__4dBgWFP12dBgS_RoofChkii();
-extern "C" void RoofChk__4dBgWFP12dBgS_RoofChk();
-extern "C" void RwgSplGrpChk__4dBgWFUsP14dBgS_SplGrpChk();
-extern "C" void SplGrpChkRp__4dBgWFP14dBgS_SplGrpChki();
-extern "C" void SplGrpChkGrpRp__4dBgWFP14dBgS_SplGrpChkii();
-extern "C" void SplGrpChk__4dBgWFP14dBgS_SplGrpChk();
-extern "C" void RwgCaptPoly__4dBgWFiR13dBgS_CaptPoly();
-extern "C" void CaptPolyRp__4dBgWFR13dBgS_CaptPolyi();
-extern "C" void CaptPolyGrpRp__4dBgWFR13dBgS_CaptPolyii();
-extern "C" void CaptPoly__4dBgWFR13dBgS_CaptPoly();
-extern "C" void RwgSphChk__4dBgWFUsP11dBgS_SphChkPv();
-extern "C" void SphChkRp__4dBgWFP11dBgS_SphChkPvi();
-extern "C" void SphChkGrpRp__4dBgWFP11dBgS_SphChkPvii();
-extern "C" void SphChk__4dBgWFP11dBgS_SphChkPv();
-extern "C" void GetPolyGrpRoomInfId__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void GetGrpSoundId__4dBgWFRC13cBgS_PolyInfo();
-extern "C" void CrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz();
-extern "C" void TransPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz();
-extern "C" void MatrixCrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz();
-extern "C" void ChkPolyThrough__4dBgWFiP16cBgS_PolyPassChk();
-extern "C" void ChkShdwDrawThrough__4dBgWFiP16cBgS_PolyPassChk();
-extern "C" void ChkGrpThrough__4dBgWFiP15cBgS_GrpPassChki();
-extern "C" void CallRideCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" void CallArrowStickCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_cR4cXyz();
-extern "C" void OffMoveFlag__4dBgWFv();
-extern "C" void ChkMoveFlag__4dBgWCFv();
-extern "C" void dBgW_NewSet__FP6cBgD_tUlPA3_A4_f();
-extern "C" void __dt__4dBgWFv();
+extern "C" void __ct__11cBgW_RwgElmFv(); // 1
+extern "C" void __dt__11cBgW_RwgElmFv(); // 1
+extern "C" void __ct__13cBgW_NodeTreeFv(); // 1
+extern "C" void __dt__13cBgW_NodeTreeFv(); // 1
+extern "C" void __ct__4cBgWFv(); // 1
+extern "C" void __dt__4cBgWFv(); // 1
+extern "C" void FreeArea__4cBgWFv(); // 1
+extern "C" void GlobalVtx__4cBgWFv(); // 1
+extern "C" void SetVtx__4cBgWFv(); // 1
+extern "C" void CalcPlane__4cBgWFv(); // 1
+extern "C" void SetTri__4cBgWFv(); // 1
+extern "C" void __dt__11cBgW_TriElmFv(); // 1
+extern "C" void __ct__11cBgW_TriElmFv(); // 1
+extern "C" void BlckConnect__4cBgWFPUsPii(); // 1
+extern "C" void ClassifyPlane__4cBgWFv(); // 1
+extern "C" void MakeBlckTransMinMax__4cBgWFP4cXyzP4cXyz(); // 1
+extern "C" void MakeBlckMinMax__4cBgWFiP4cXyzP4cXyz(); // 1
+extern "C" void MakeBlckBnd__4cBgWFiP4cXyzP4cXyz(); // 1
+extern "C" void MakeNodeTreeRp__4cBgWFi(); // 1
+extern "C" void MakeNodeTreeGrpRp__4cBgWFi(); // 1
+extern "C" void MakeNodeTree__4cBgWFv(); // 1
+extern "C" void ChkMemoryError__4cBgWFv(); // 1
+extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f(); // 1
+extern "C" void __dt__11cBgW_GrpElmFv(); // 1
+extern "C" void __ct__11cBgW_GrpElmFv(); // 1
+extern "C" void RwgLineCheck__4cBgWFUsP11cBgS_LinChk(); // 1
+extern "C" void __dt__8cM3dGTriFv(); // 1
+extern "C" void LineCheckRp__4cBgWFP11cBgS_LinChki(); // 1
+extern "C" void LineCheckGrpRp__4cBgWFP11cBgS_LinChkii(); // 1
+extern "C" void LineCheck__4cBgWFP11cBgS_LinChk(); // 1
+extern "C" void RwgGroundCheckCommon__4cBgWFfUsP11cBgS_GndChk(); // 1
+extern "C" void RwgGroundCheckGnd__4cBgWFUsP11cBgS_GndChk(); // 1
+extern "C" void RwgGroundCheckWall__4cBgWFUsP11cBgS_GndChk(); // 1
+extern "C" void GroundCrossRp__4cBgWFP11cBgS_GndChki(); // 1
+extern "C" void GroundCrossGrpRp__4cBgWFP11cBgS_GndChkii(); // 1
+extern "C" void GroundCross__4cBgWFP11cBgS_GndChk(); // 1
+extern "C" void CopyOldMtx__4cBgWFv(); // 1
+extern "C" void Move__4cBgWFv(); // 1
+extern "C" void RwgShdwDraw__4cBgWFiP13cBgS_ShdwDraw(); // 1
+extern "C" void ShdwDrawRp__4cBgWFP13cBgS_ShdwDrawi(); // 1
+extern "C" void ShdwDrawGrpRp__4cBgWFP13cBgS_ShdwDrawi(); // 1
+extern "C" void ShdwDraw__4cBgWFP13cBgS_ShdwDraw(); // 1
+extern "C" bool ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk(); // 1
+extern "C" void ChkShdwDrawThrough__4cBgWFiP16cBgS_PolyPassChk(); // 1
+extern "C" bool ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki(); // 1
+extern "C" void GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetBnd__4cBgWCFv(); // 1
+extern "C" void GetTrans__4cBgWCFP4cXyz(); // 1
+extern "C" void GetTriPnt__4cBgWCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz(); // 1
+extern "C" void GetTopUnder__4cBgWCFPfPf(); // 1
+extern "C" void GetTriPla__4cBgWCFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetGrpInf__4cBgWCFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetPolyInfId__4cBgWCFi(); // 1
+extern "C" void GetPolyInf0__4cBgWCFiUlUl(); // 1
+extern "C" void GetMaskPolyInf0_NoShift__4cBgWCFiUl(); // 1
+extern "C" void GetExitId__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetPolyColor__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetHorseNoEntry__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetSpecialCode__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetSpecialCode__4dBgWFi(); // 1
+extern "C" void GetMagnetCode__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetMonkeyBarsCode__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetPolyObjThrough__4dBgWFi(); // 1
+extern "C" void GetPolyCamThrough__4dBgWFi(); // 1
+extern "C" void GetPolyLinkThrough__4dBgWFi(); // 1
+extern "C" void GetPolyArrowThrough__4dBgWFi(); // 1
+extern "C" void GetPolyHSStick__4dBgWFi(); // 1
+extern "C" void GetPolyBoomerangThrough__4dBgWFi(); // 1
+extern "C" void GetPolyRopeThrough__4dBgWFi(); // 1
+extern "C" void GetPolyBombThrough__4dBgWFi(); // 1
+extern "C" void GetShdwThrough__4dBgWFi(); // 1
+extern "C" void GetUnderwaterRoofCode__4dBgWFi(); // 1
+extern "C" void GetPolyInf1__4cBgWCFiUlUl(); // 1
+extern "C" void GetLinkNo__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetWallCode__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetPolyAtt0__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetPolyAtt1__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetGroundCode__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetMaskPolyInf1_NoShift__4cBgWCFiUl(); // 1
+extern "C" void GetIronBallThrough__4dBgWFi(); // 1
+extern "C" void GetAttackThrough__4dBgWFi(); // 1
+extern "C" void GetPolyInf2__4cBgWCFiUlUl(); // 1
+extern "C" void GetCamMoveBG__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetRoomCamId__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetRoomPathId__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetRoomPathPntNo__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetTriGrp__4cBgWCFi(); // 1
+extern "C" void ChkNotReady__4cBgWCFv(); // 1
+extern "C" void ChkLock__4cBgWCFv(); // 1
+extern "C" void ChkMoveBg__4cBgWCFv(); // 1
+extern "C" void __ct__4dBgWFv(); // 1
+extern "C" void Move__4dBgWFv(); // 1
+extern "C" void positionWallCorrect__4dBgWFP9dBgS_AcchfR8cM3dGPlaP4cXyzf(); // 1
+extern "C" void RwgWallCorrect__4dBgWFP9dBgS_AcchUs(); // 1
+extern "C" void WallCorrectRp__4dBgWFP9dBgS_Acchi(); // 1
+extern "C" void WallCorrectGrpRp__4dBgWFP9dBgS_Acchii(); // 1
+extern "C" void WallCorrect__4dBgWFP9dBgS_Acch(); // 1
+extern "C" void RwgWallCorrectSort__4dBgWFP9dBgS_AcchUs(); // 1
+extern "C" void WallCorrectRpSort__4dBgWFP9dBgS_Acchi(); // 1
+extern "C" void WallCorrectGrpRpSort__4dBgWFP9dBgS_Acchii(); // 1
+extern "C" void WallCorrectSort__4dBgWFP9dBgS_Acch(); // 1
+extern "C" void RwgRoofChk__4dBgWFUsP12dBgS_RoofChk(); // 1
+extern "C" void RoofChkRp__4dBgWFP12dBgS_RoofChki(); // 1
+extern "C" void RoofChkGrpRp__4dBgWFP12dBgS_RoofChkii(); // 1
+extern "C" void RoofChk__4dBgWFP12dBgS_RoofChk(); // 1
+extern "C" void RwgSplGrpChk__4dBgWFUsP14dBgS_SplGrpChk(); // 1
+extern "C" void SplGrpChkRp__4dBgWFP14dBgS_SplGrpChki(); // 1
+extern "C" void SplGrpChkGrpRp__4dBgWFP14dBgS_SplGrpChkii(); // 1
+extern "C" void SplGrpChk__4dBgWFP14dBgS_SplGrpChk(); // 1
+extern "C" void RwgCaptPoly__4dBgWFiR13dBgS_CaptPoly(); // 1
+extern "C" void CaptPolyRp__4dBgWFR13dBgS_CaptPolyi(); // 1
+extern "C" void CaptPolyGrpRp__4dBgWFR13dBgS_CaptPolyii(); // 1
+extern "C" void CaptPoly__4dBgWFR13dBgS_CaptPoly(); // 1
+extern "C" void RwgSphChk__4dBgWFUsP11dBgS_SphChkPv(); // 1
+extern "C" void SphChkRp__4dBgWFP11dBgS_SphChkPvi(); // 1
+extern "C" void SphChkGrpRp__4dBgWFP11dBgS_SphChkPvii(); // 1
+extern "C" void SphChk__4dBgWFP11dBgS_SphChkPv(); // 1
+extern "C" void GetPolyGrpRoomInfId__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetGrpSoundId__4dBgWFRC13cBgS_PolyInfo(); // 1
+extern "C" void CrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz(); // 1
+extern "C" void TransPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz(); // 1
+extern "C" void MatrixCrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz(); // 1
+extern "C" void ChkPolyThrough__4dBgWFiP16cBgS_PolyPassChk(); // 1
+extern "C" void ChkShdwDrawThrough__4dBgWFiP16cBgS_PolyPassChk(); // 1
+extern "C" void ChkGrpThrough__4dBgWFiP15cBgS_GrpPassChki(); // 1
+extern "C" void CallRideCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_c(); // 1
+extern "C" void CallArrowStickCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_cR4cXyz(); // 1
+extern "C" void OffMoveFlag__4dBgWFv(); // 1
+extern "C" void ChkMoveFlag__4dBgWCFv(); // 1
+extern "C" void dBgW_NewSet__FP6cBgD_tUlPA3_A4_f(); // 1
+extern "C" void __dt__4dBgWFv(); // 1
 SECTION_DATA extern void*const __vt__4dBgW[65];
 SECTION_DATA extern void*const __vt__8cM3dGTri[3];
 SECTION_DATA extern void*const __vt__11cBgW_GrpElm[3];
@@ -590,112 +413,112 @@ SECTION_SDATA2 extern f32 lit_4962;
 // External References:
 // 
 
-void cM_atan2s(f32, f32);
-void cM_rndF(f32);
-void cBgW_CheckBGround(f32);
-void cBgW_CheckBRoof(f32);
-void cM2d_CrossCirLin(cM2dGCir&, f32, f32, f32, f32, f32*, f32*);
-void cM3d_Len2dSq(f32, f32, f32, f32);
-void cM3d_Len2dSqPntAndSegLine(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*);
-void cM3d_CalcPla(Vec const*, Vec const*, Vec const*, Vec*, f32*);
-void cM3d_Cross_AabAab(cM3dGAab const*, cM3dGAab const*);
-void cM3d_Cross_AabCyl(cM3dGAab const*, cM3dGCyl const*);
-void cM3d_Cross_AabSph(cM3dGAab const*, cM3dGSph const*);
-void cM3d_Cross_MinMaxBoxLine(Vec const*, Vec const*, Vec const*, Vec const*);
-void cM3d_CrossY_Tri(Vec const&, Vec const&, Vec const&, cM3dGPla const&, Vec const*);
-void cM3d_CrossY_Tri_Front(Vec const&, Vec const&, Vec const&, Vec const*);
-void cM3d_Cross_LinTri(cM3dGLin const*, cM3dGTri const*, Vec*, bool, bool);
-void cM3d_Cross_SphTri(cM3dGSph const*, cM3dGTri const*, Vec*);
-void* operator new(u32);
-void* operator new[](u32);
-void operator delete(void*);
-extern "C" void PSMTXIdentity();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECAdd();
-extern "C" void PSVECDotProduct();
-extern "C" void __construct_new_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void cM_atan2s(f32, f32); // 2
+void cM_rndF(f32); // 2
+void cBgW_CheckBGround(f32); // 2
+void cBgW_CheckBRoof(f32); // 2
+void cM2d_CrossCirLin(cM2dGCir&, f32, f32, f32, f32, f32*, f32*); // 2
+void cM3d_Len2dSq(f32, f32, f32, f32); // 2
+void cM3d_Len2dSqPntAndSegLine(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*); // 2
+void cM3d_CalcPla(Vec const*, Vec const*, Vec const*, Vec*, f32*); // 2
+void cM3d_Cross_AabAab(cM3dGAab const*, cM3dGAab const*); // 2
+void cM3d_Cross_AabCyl(cM3dGAab const*, cM3dGCyl const*); // 2
+void cM3d_Cross_AabSph(cM3dGAab const*, cM3dGSph const*); // 2
+void cM3d_Cross_MinMaxBoxLine(Vec const*, Vec const*, Vec const*, Vec const*); // 2
+void cM3d_CrossY_Tri(Vec const&, Vec const&, Vec const&, cM3dGPla const&, Vec const*); // 2
+void cM3d_CrossY_Tri_Front(Vec const&, Vec const&, Vec const&, Vec const*); // 2
+void cM3d_Cross_LinTri(cM3dGLin const*, cM3dGTri const*, Vec*, bool, bool); // 2
+void cM3d_Cross_SphTri(cM3dGSph const*, cM3dGTri const*, Vec*); // 2
+void* operator new(u32); // 2
+void* operator new[](u32); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void SetOldShapeAngleY__9dBgW_BaseFs();
-extern "C" void GetSpeedY__9dBgS_AcchFv();
-extern "C" void GetWallAddY__9dBgS_AcchFR3Vec();
-extern "C" void SetWallPolyIndex__9dBgS_AcchFii();
-extern "C" void CalcMovePosWork__9dBgS_AcchFv();
-extern "C" void ChkNoHorse__16dBgS_PolyPassChkFv();
-extern "C" void __ct__9dBgW_BaseFv();
-extern "C" void __dt__9dBgW_BaseFv();
-extern "C" void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cM_rndF__Ff();
-extern "C" void SetPolyIndex__13cBgS_PolyInfoFi();
-extern "C" void cBgW_CheckBGround__Ff();
-extern "C" void cBgW_CheckBRoof__Ff();
-extern "C" void cM2d_CrossCirLin__FR8cM2dGCirffffPfPf();
-extern "C" void cM3d_Len2dSq__Fffff();
-extern "C" void cM3d_Len2dSqPntAndSegLine__FffffffPfPfPf();
-extern "C" void cM3d_CalcPla__FPC3VecPC3VecPC3VecP3VecPf();
-extern "C" void cM3d_Cross_AabAab__FPC8cM3dGAabPC8cM3dGAab();
-extern "C" void cM3d_Cross_AabCyl__FPC8cM3dGAabPC8cM3dGCyl();
-extern "C" void cM3d_Cross_AabSph__FPC8cM3dGAabPC8cM3dGSph();
-extern "C" void cM3d_Cross_MinMaxBoxLine__FPC3VecPC3VecPC3VecPC3Vec();
-extern "C" void cM3d_CrossY_Tri__FRC3VecRC3VecRC3VecRC8cM3dGPlaPC3Vec();
-extern "C" void cM3d_CrossY_Tri_Front__FRC3VecRC3VecRC3VecPC3Vec();
-extern "C" void cM3d_Cross_LinTri__FPC8cM3dGLinPC8cM3dGTriP3Vecbb();
-extern "C" void cM3d_Cross_SphTri__FPC8cM3dGSphPC8cM3dGTriP3Vec();
-extern "C" void CrossY__8cM3dGAabCFPC4cXyz();
-extern "C" void UnderPlaneYUnder__8cM3dGAabCFf();
-extern "C" void TopPlaneYUnder__8cM3dGAabCFf();
-extern "C" void ClearForMinMax__8cM3dGAabFv();
-extern "C" void SetMinMax__8cM3dGAabFRC4cXyz();
-extern "C" void SetMin__8cM3dGAabFRC4cXyz();
-extern "C" void SetMax__8cM3dGAabFRC4cXyz();
-extern "C" void SetEnd__8cM3dGLinFRC4cXyz();
-extern "C" void getCrossY__8cM3dGPlaCFRC4cXyzPf();
-extern "C" void setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla();
-extern "C" void* __nw__FUl();
-extern "C" void* __nwa__FUl();
-extern "C" void __dl__FPv();
-extern "C" void PSMTXIdentity();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECAdd();
-extern "C" void PSVECDotProduct();
-extern "C" void __construct_new_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void SetOldShapeAngleY__9dBgW_BaseFs(); // 1
+extern "C" void GetSpeedY__9dBgS_AcchFv(); // 1
+extern "C" void GetWallAddY__9dBgS_AcchFR3Vec(); // 1
+extern "C" void SetWallPolyIndex__9dBgS_AcchFii(); // 1
+extern "C" void CalcMovePosWork__9dBgS_AcchFv(); // 1
+extern "C" void ChkNoHorse__16dBgS_PolyPassChkFv(); // 1
+extern "C" void __ct__9dBgW_BaseFv(); // 1
+extern "C" void __dt__9dBgW_BaseFv(); // 1
+extern "C" void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c(); // 1
+extern "C" void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM_rndF__Ff(); // 1
+extern "C" void SetPolyIndex__13cBgS_PolyInfoFi(); // 1
+extern "C" void cBgW_CheckBGround__Ff(); // 1
+extern "C" void cBgW_CheckBRoof__Ff(); // 1
+extern "C" void cM2d_CrossCirLin__FR8cM2dGCirffffPfPf(); // 1
+extern "C" void cM3d_Len2dSq__Fffff(); // 1
+extern "C" void cM3d_Len2dSqPntAndSegLine__FffffffPfPfPf(); // 1
+extern "C" void cM3d_CalcPla__FPC3VecPC3VecPC3VecP3VecPf(); // 1
+extern "C" void cM3d_Cross_AabAab__FPC8cM3dGAabPC8cM3dGAab(); // 1
+extern "C" void cM3d_Cross_AabCyl__FPC8cM3dGAabPC8cM3dGCyl(); // 1
+extern "C" void cM3d_Cross_AabSph__FPC8cM3dGAabPC8cM3dGSph(); // 1
+extern "C" void cM3d_Cross_MinMaxBoxLine__FPC3VecPC3VecPC3VecPC3Vec(); // 1
+extern "C" void cM3d_CrossY_Tri__FRC3VecRC3VecRC3VecRC8cM3dGPlaPC3Vec(); // 1
+extern "C" void cM3d_CrossY_Tri_Front__FRC3VecRC3VecRC3VecPC3Vec(); // 1
+extern "C" void cM3d_Cross_LinTri__FPC8cM3dGLinPC8cM3dGTriP3Vecbb(); // 1
+extern "C" void cM3d_Cross_SphTri__FPC8cM3dGSphPC8cM3dGTriP3Vec(); // 1
+extern "C" void CrossY__8cM3dGAabCFPC4cXyz(); // 1
+extern "C" void UnderPlaneYUnder__8cM3dGAabCFf(); // 1
+extern "C" void TopPlaneYUnder__8cM3dGAabCFf(); // 1
+extern "C" void ClearForMinMax__8cM3dGAabFv(); // 1
+extern "C" void SetMinMax__8cM3dGAabFRC4cXyz(); // 1
+extern "C" void SetMin__8cM3dGAabFRC4cXyz(); // 1
+extern "C" void SetMax__8cM3dGAabFRC4cXyz(); // 1
+extern "C" void SetEnd__8cM3dGLinFRC4cXyz(); // 1
+extern "C" void getCrossY__8cM3dGPlaCFRC4cXyzPf(); // 1
+extern "C" void setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];

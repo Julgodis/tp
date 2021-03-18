@@ -9,21 +9,21 @@
 // Forward References:
 // 
 
-extern "C" void __init_user();
-extern "C" static void __init_cpp();
-extern "C" void _ExitProcess();
+extern "C" void __init_user(); // 1
+extern "C" static void __init_cpp(); // 1
+extern "C" void _ExitProcess(); // 1
 
-extern "C" void __init_user();
-extern "C" static void __init_cpp();
-extern "C" void _ExitProcess();
+extern "C" void __init_user(); // 1
+extern "C" static void __init_cpp(); // 1
+extern "C" void _ExitProcess(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void PPCHalt();
+extern "C" void PPCHalt(); // 1
 
-extern "C" void PPCHalt();
+extern "C" void PPCHalt(); // 1
 extern const void*const __init_cpp_exceptions_reference;
 
 // 

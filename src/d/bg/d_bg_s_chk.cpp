@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dBgS_Chk (['dBgS_Chk']) False/False
-/* top-level dependencies (begin ['dBgS_Chk']) */
-/* top-level dependencies (end ['dBgS_Chk']) */
 struct dBgS_Chk {
 	/* 8007749C */ dBgS_Chk();
 	/* 800774E8 */ ~dBgS_Chk();
@@ -19,17 +16,11 @@ struct dBgS_Chk {
 	/* 80077564 */ void GetGrpPassChkInfo();
 };
 
-// build dBgS_GrpPassChk (['dBgS_GrpPassChk']) False/False
-/* top-level dependencies (begin ['dBgS_GrpPassChk']) */
-/* top-level dependencies (end ['dBgS_GrpPassChk']) */
 struct dBgS_GrpPassChk {
 	/* 80077BA0 */ dBgS_GrpPassChk();
 	/* 80077BC4 */ ~dBgS_GrpPassChk();
 };
 
-// build dBgS_PolyPassChk (['dBgS_PolyPassChk']) False/False
-/* top-level dependencies (begin ['dBgS_PolyPassChk']) */
-/* top-level dependencies (end ['dBgS_PolyPassChk']) */
 struct dBgS_PolyPassChk {
 	/* 80078D64 */ dBgS_PolyPassChk();
 	/* 80078DB0 */ ~dBgS_PolyPassChk();
@@ -39,26 +30,26 @@ struct dBgS_PolyPassChk {
 // Forward References:
 // 
 
-extern "C" static void func_80077574();
+extern "C" static void func_80077574(); // 1
 
-extern "C" void __ct__8dBgS_ChkFv();
-extern "C" void __dt__8dBgS_ChkFv();
-extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv();
-extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv();
-extern "C" static void func_80077574();
+extern "C" void __ct__8dBgS_ChkFv(); // 1
+extern "C" void __dt__8dBgS_ChkFv(); // 1
+extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv(); // 1
+extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv(); // 1
+extern "C" static void func_80077574(); // 1
 SECTION_DATA extern void*const __vt__8dBgS_Chk[6];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __ct__15dBgS_GrpPassChkFv();
-extern "C" void __dt__15dBgS_GrpPassChkFv();
-extern "C" void __ct__16dBgS_PolyPassChkFv();
-extern "C" void __dt__16dBgS_PolyPassChkFv();
-extern "C" void __dl__FPv();
+extern "C" void __ct__15dBgS_GrpPassChkFv(); // 1
+extern "C" void __dt__15dBgS_GrpPassChkFv(); // 1
+extern "C" void __ct__16dBgS_PolyPassChkFv(); // 1
+extern "C" void __dt__16dBgS_PolyPassChkFv(); // 1
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

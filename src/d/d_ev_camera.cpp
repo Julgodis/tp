@@ -9,21 +9,10 @@
 // Types:
 // 
 
-// build dCamera_c (['dCamera_c']) False/False
-// build dCamera_c (['dCamera_c']) True/False
-struct dCamera_c;
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80009184 */ ~cXyz();
 	/* 8008E790 */ void abs() const;
 	/* 8008E8D0 */ void operator-=(Vec const&);
@@ -37,40 +26,26 @@ struct cXyz {
 	/* 80266EF4 */ void normalize();
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ['dCamera_c']) */
-// outer dependency: ('dCamera_c', 'dCamInfo_c')
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
-	// ('dCamera_c', 'dCamInfo_c')
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
-	// build dCamInfo_c (['dCamera_c', 'dCamInfo_c']) False/False
-	/* dependencies (begin ['dCamera_c', 'dCamInfo_c']) */
-	/* dependencies (end ['dCamera_c', 'dCamInfo_c']) */
 	struct dCamInfo_c {
 	};
 
 	/* 80088A7C */ void StartEventCamera(int, int, ...);
 	/* 80088BBC */ void EndEventCamera(int);
 	/* 80088C24 */ void searchEventArgData(char*);
+	/* 8008908C */ void getEvIntData(int*, char*, int);
 	/* 80088CB0 */ void getEvIntData(int*, char*);
 	/* 80088D90 */ void getEvFloatData(f32*, char*);
+	/* 80089154 */ void getEvFloatData(f32*, char*, f32);
 	/* 80088E58 */ void getEvFloatListData(f32**, char*);
 	/* 80088F1C */ void getEvXyzListData(cXyz**, char*);
+	/* 8008941C */ void getEvStringPntData(char*, char*);
 	/* 80088FE0 */ void getEvStringPntData(char*);
-	/* 8008908C */ void getEvIntData(int*, char*, int);
-	/* 80089154 */ void getEvFloatData(f32*, char*, f32);
 	/* 8008922C */ void getEvXyzData(cXyz*, char*, cXyz);
 	/* 8008933C */ void getEvStringData(char*, char*, char*);
-	/* 8008941C */ void getEvStringPntData(char*, char*);
 	/* 800894C4 */ void getEvActor(char*);
 	/* 800895F4 */ void getEvActor(char*, char*);
 	/* 80089730 */ void pauseEvCamera();
@@ -112,11 +87,11 @@ struct dCamera_c {
 	/* 8009778C */ void eyePos(fopAc_ac_c*);
 	/* 80164944 */ void GetCameraTypeFromMapToolID(s32, s32);
 	/* 80164C64 */ void pushInfo(dCamera_c::dCamInfo_c*, s16);
-	/* 80164D6C */ void relationalPos(fopAc_ac_c*, cXyz*);
 	/* 80164E20 */ void relationalPos(fopAc_ac_c*, fopAc_ac_c*, cXyz*, f32);
+	/* 80164D6C */ void relationalPos(fopAc_ac_c*, cXyz*);
 	/* 8016517C */ void pointInSight(cXyz*);
-	/* 801659F4 */ void lineBGCheck(cXyz*, cXyz*, cXyz*, u32);
 	/* 80165AF0 */ void lineBGCheck(cXyz*, cXyz*, u32);
+	/* 801659F4 */ void lineBGCheck(cXyz*, cXyz*, cXyz*, u32);
 	/* 80180C68 */ void Reset();
 	/* 80181170 */ void StartBlure(int, fopAc_ac_c*, f32, f32);
 	/* 80181208 */ void SetBlureAlpha(f32);
@@ -124,45 +99,33 @@ struct dCamera_c {
 	/* 80181220 */ void SetBlurePosition(f32, f32, f32);
 };
 
-// build cXyz (['cXyz']) True/True
-// build cSGlobe (['cSGlobe']) False/False
-// build cSAngle (['cSAngle']) False/False
-/* top-level dependencies (begin ['cSAngle']) */
-/* top-level dependencies (end ['cSAngle']) */
 struct cSAngle {
 	/* 80030510 */ ~cSAngle();
 	/* 80270F68 */ cSAngle(cSAngle const&);
-	/* 80270F98 */ cSAngle(s16);
 	/* 80270FC8 */ cSAngle(f32);
+	/* 80270F98 */ cSAngle(s16);
 	/* 8027100C */ void Val(f32);
 	/* 80271030 */ void Degree() const;
 	/* 802710CC */ void Abs() const;
 	/* 802710E8 */ void Inv() const;
 	/* 80271120 */ void Cos() const;
+	/* 802711A4 */ void operator-(cSAngle const&) const;
 	/* 80271148 */ void operator-() const;
 	/* 80271174 */ void operator+(cSAngle const&) const;
-	/* 802711A4 */ void operator-(cSAngle const&) const;
-	/* 802711D4 */ void operator+=(cSAngle const&);
 	/* 802711FC */ void operator+(s16) const;
+	/* 802711D4 */ void operator+=(cSAngle const&);
 	/* 80271264 */ void operator*(f32) const;
 	/* 802712B4 */ void operator*=(f32);
 };
 
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cSGlobe']) */
-// outer dependency: ('cSAngle',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cSGlobe']) */
 struct cSGlobe {
-	// ('cSAngle',)
-	// ('cXyz',)
 	/* 8007167C */ ~cSGlobe();
 	/* 8008E774 */ void operator=(cSGlobe const&);
 	/* 8008E894 */ void U(cSAngle const&);
 	/* 8008FA58 */ void V(cSAngle const&);
+	/* 80271880 */ cSGlobe(cXyz const&);
 	/* 802717F0 */ cSGlobe(cSGlobe const&);
 	/* 80271850 */ cSGlobe(f32, cSAngle const&, cSAngle const&);
-	/* 80271880 */ cSGlobe(cXyz const&);
 	/* 80271A08 */ void Val(f32, cSAngle const&, cSAngle const&);
 	/* 80271A70 */ void Val(cXyz const&);
 	/* 80271AB4 */ void Xyz() const;
@@ -170,19 +133,10 @@ struct cSGlobe {
 	/* 80271B7C */ void Invert();
 };
 
-// build cSAngle (['cSAngle']) True/True
-// build Vec (['Vec']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build daMidna_c (['daMidna_c']) False/False
-/* top-level dependencies (begin ['daMidna_c']) */
-/* top-level dependencies (end ['daMidna_c']) */
 struct daMidna_c {
 	/* 800977A8 */ void checkNoDraw() const;
 };
 
-// build daPy_py_c (['daPy_py_c']) False/False
-/* top-level dependencies (begin ['daPy_py_c']) */
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 800977B4 */ void checkMidnaRide() const;
 	/* 80097850 */ bool checkCanoeRide() const;
@@ -191,219 +145,153 @@ struct daPy_py_c {
 	/* 80097868 */ bool checkBoarRide() const;
 };
 
-// build daAlink_c (['daAlink_c']) False/False
-/* top-level dependencies (begin ['daAlink_c']) */
-/* top-level dependencies (end ['daAlink_c']) */
 struct daAlink_c {
 	/* 80097870 */ void getShadowTalkAtnPos();
 };
 
-// build cM3dGPla (['cM3dGPla']) False/False
-/* top-level dependencies (begin ['cM3dGPla']) */
-/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
 	/* 8001DB90 */ ~cM3dGPla();
 };
 
-// build camera_class (['camera_class']) False/False
-/* top-level dependencies (begin ['camera_class']) */
-/* top-level dependencies (end ['camera_class']) */
 struct camera_class {
 };
 
-// build cM3dGLin (['cM3dGLin']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGLin']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// ('cXyz',)
 	/* 80036A5C */ ~cM3dGLin();
 	/* 8026F2A8 */ cM3dGLin(cXyz const&, cXyz const&);
 };
 
-// build dDemo_object_c (['dDemo_object_c']) False/False
-/* top-level dependencies (begin ['dDemo_object_c']) */
-/* top-level dependencies (end ['dDemo_object_c']) */
 struct dDemo_object_c {
 	/* 80039128 */ void getActiveCamera();
 };
 
-// build dEvt_control_c (['dEvt_control_c']) False/False
-/* top-level dependencies (begin ['dEvt_control_c']) */
-/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
 	/* 800432EC */ void convPId(u32);
 	/* 800434D8 */ void searchMapEventData(u8);
 };
 
-// build dEvent_manager_c (['dEvent_manager_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dEvent_manager_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dEvent_manager_c']) */
 struct dEvent_manager_c {
-	// ('cXyz',)
 	/* 800480EC */ void getMySubstanceP(int, char const*, int);
 	/* 80048144 */ void getMySubstanceNum(int, char const*);
 	/* 800483C4 */ void setGoal(cXyz*);
 };
 
-// build cBgS (['cBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build cM3dGPla (['cM3dGPla']) True/True
-/* top-level dependencies (begin ['cBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-// outer dependency: ('cM3dGPla',)
-/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
-	// ('cBgS_PolyInfo',)
-	// ('cM3dGPla',)
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-// build dCcS (['dCcS']) False/False
-// build cXyz (['cXyz']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dCcS']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dCcS']) */
 struct dCcS {
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 80086D8C */ void ChkCamera(cXyz&, cXyz&, f32, fopAc_ac_c*, fopAc_ac_c*, fopAc_ac_c*);
 };
 
-// build dCamMath (['dCamMath']) False/False
-// build cSAngle (['cSAngle']) True/True
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dCamMath']) */
-// outer dependency: ('cSAngle',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dCamMath']) */
 struct dCamMath {
-	// ('cSAngle',)
-	// ('cXyz',)
 	/* 8008813C */ void rationalBezierRatio(f32, f32);
 	/* 80088384 */ void xyzRotateY(cXyz&, cSAngle);
 	/* 800883EC */ void xyzHorizontalDistance(cXyz&, cXyz&);
 };
 
-// build dCamParam_c (['dCamParam_c']) False/False
-/* top-level dependencies (begin ['dCamParam_c']) */
-/* top-level dependencies (end ['dCamParam_c']) */
 struct dCamParam_c {
 	/* 80088620 */ void SearchStyle(u32);
 };
 
-// build d2DBSplinePath (['d2DBSplinePath']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['d2DBSplinePath']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['d2DBSplinePath']) */
 struct d2DBSplinePath {
-	// ('cXyz',)
 	/* 80097878 */ void Init(s32, s32);
 	/* 80097904 */ void Step();
-	/* 80097A6C */ void Calc(cXyz*);
 	/* 80097B20 */ void Calc(f32*);
+	/* 80097A6C */ void Calc(cXyz*);
 };
 
 // 
 // Forward References:
 // 
 
-extern "C" static void func_800889F8();
-extern "C" static void func_8008E750();
-extern "C" static void func_8008FA94();
-static void dComIfGp_saveCameraPosition(int, cXyz*, cXyz*, f32, s16);
-extern "C" void __sinit_d_ev_camera_cpp();
-void fopAcM_GetID(void const*);
-extern "C" static void func_80097810();
-extern "C" static void func_8009784C();
+extern "C" static void func_800889F8(); // 1
+extern "C" static void func_8008E750(); // 1
+extern "C" static void func_8008FA94(); // 1
+static void dComIfGp_saveCameraPosition(int, cXyz*, cXyz*, f32, s16); // 2
+extern "C" void __sinit_d_ev_camera_cpp(); // 1
+void fopAcM_GetID(void const*); // 2
+extern "C" static void func_80097810(); // 1
+extern "C" static void func_8009784C(); // 1
 
-extern "C" static void func_800889F8();
-extern "C" void StartEventCamera__9dCamera_cFiie();
-extern "C" void EndEventCamera__9dCamera_cFi();
-extern "C" void searchEventArgData__9dCamera_cFPc();
-extern "C" void getEvIntData__9dCamera_cFPiPc();
-extern "C" void getEvFloatData__9dCamera_cFPfPc();
-extern "C" void getEvFloatListData__9dCamera_cFPPfPc();
-extern "C" void getEvXyzListData__9dCamera_cFPP4cXyzPc();
-extern "C" void getEvStringPntData__9dCamera_cFPc();
-extern "C" void getEvIntData__9dCamera_cFPiPci();
-extern "C" void getEvFloatData__9dCamera_cFPfPcf();
-extern "C" void getEvXyzData__9dCamera_cFP4cXyzPc4cXyz();
-extern "C" void getEvStringData__9dCamera_cFPcPcPc();
-extern "C" void getEvStringPntData__9dCamera_cFPcPc();
-extern "C" void getEvActor__9dCamera_cFPc();
-extern "C" void getEvActor__9dCamera_cFPcPc();
-extern "C" void pauseEvCamera__9dCamera_cFv();
-extern "C" void fixedFrameEvCamera__9dCamera_cFv();
-extern "C" void stokerEvCamera__9dCamera_cFv();
-extern "C" void rollingEvCamera__9dCamera_cFv();
-extern "C" void fixedPositionEvCamera__9dCamera_cFv();
-extern "C" void uniformTransEvCamera__9dCamera_cFv();
-extern "C" void uniformBrakeEvCamera__9dCamera_cFv();
-extern "C" void uniformAcceleEvCamera__9dCamera_cFv();
-extern "C" void transEvCamera__9dCamera_cFi();
-extern "C" static void func_8008E750();
-extern "C" void __as__7cSGlobeFRC7cSGlobe();
-extern "C" void abs__4cXyzCFv();
-extern "C" void U__7cSGlobeFRC7cSAngle();
-extern "C" void __ami__4cXyzFRC3Vec();
-extern "C" void __apl__4cXyzFRC3Vec();
-extern "C" void watchActorEvCamera__9dCamera_cFv();
-extern "C" void V__7cSGlobeFRC7cSAngle();
-extern "C" static void func_8008FA94();
-extern "C" void restorePosEvCamera__9dCamera_cFv();
-extern "C" void talktoEvCamera__9dCamera_cFv();
-extern "C" void maptoolIdEvCamera__9dCamera_cFv();
-extern "C" void styleEvCamera__9dCamera_cFv();
-extern "C" void gameOverEvCamera__9dCamera_cFv();
-extern "C" void tactEvCamera__9dCamera_cFv();
-extern "C" static void dComIfGp_saveCameraPosition__FiP4cXyzP4cXyzfs();
-extern "C" bool turnToActorEvCamera__9dCamera_cFv();
-extern "C" void stbWaitEvCamera__9dCamera_cFv();
-extern "C" void saveEvCamera__9dCamera_cFv();
-extern "C" void loadEvCamera__9dCamera_cFv();
-extern "C" void useItem0EvCamera__9dCamera_cFv();
-extern "C" void useItem1EvCamera__9dCamera_cFv();
-extern "C" void getItemEvCamera__9dCamera_cFv();
-extern "C" void possessedEvCamera__9dCamera_cFv();
-extern "C" void fixedFramesEvCamera__9dCamera_cFv();
-extern "C" void bSplineEvCamera__9dCamera_cFv();
-extern "C" void twoActor0EvCamera__9dCamera_cFv();
-extern "C" void peepHoleEvCamera__9dCamera_cFv();
-extern "C" void digHoleEvCamera__9dCamera_cFv();
-extern "C" void hintTalkEvCamera__9dCamera_cFv();
-extern "C" void bspTransEvCamera__9dCamera_cFv();
-extern "C" bool portalWarpEvCamera__9dCamera_cFv();
-extern "C" void __sinit_d_ev_camera_cpp();
-extern "C" void attentionPos__9dCamera_cFP10fopAc_ac_c();
-extern "C" void directionOf__9dCamera_cFP10fopAc_ac_c();
-extern "C" void positionOf__9dCamera_cFP10fopAc_ac_c();
-extern "C" void setFlag__9dCamera_cFUl();
-extern "C" void eyePos__9dCamera_cFP10fopAc_ac_c();
-extern "C" void checkNoDraw__9daMidna_cCFv();
-extern "C" void checkMidnaRide__9daPy_py_cCFv();
-extern "C" void fopAcM_GetID__FPCv();
-extern "C" void __as__4cXyzFRC4cXyz();
-extern "C" void __ct__4cXyzFRC4cXyz();
-extern "C" static void func_80097810();
-extern "C" static void func_8009784C();
-extern "C" bool checkCanoeRide__9daPy_py_cCFv();
-extern "C" bool checkBoardRide__9daPy_py_cCFv();
-extern "C" bool checkSpinnerRide__9daPy_py_cCFv();
-extern "C" bool checkBoarRide__9daPy_py_cCFv();
-extern "C" void getShadowTalkAtnPos__9daAlink_cFv();
+extern "C" static void func_800889F8(); // 1
+extern "C" void StartEventCamera__9dCamera_cFiie(); // 1
+extern "C" void EndEventCamera__9dCamera_cFi(); // 1
+extern "C" void searchEventArgData__9dCamera_cFPc(); // 1
+extern "C" void getEvIntData__9dCamera_cFPiPc(); // 1
+extern "C" void getEvFloatData__9dCamera_cFPfPc(); // 1
+extern "C" void getEvFloatListData__9dCamera_cFPPfPc(); // 1
+extern "C" void getEvXyzListData__9dCamera_cFPP4cXyzPc(); // 1
+extern "C" void getEvStringPntData__9dCamera_cFPc(); // 1
+extern "C" void getEvIntData__9dCamera_cFPiPci(); // 1
+extern "C" void getEvFloatData__9dCamera_cFPfPcf(); // 1
+extern "C" void getEvXyzData__9dCamera_cFP4cXyzPc4cXyz(); // 1
+extern "C" void getEvStringData__9dCamera_cFPcPcPc(); // 1
+extern "C" void getEvStringPntData__9dCamera_cFPcPc(); // 1
+extern "C" void getEvActor__9dCamera_cFPc(); // 1
+extern "C" void getEvActor__9dCamera_cFPcPc(); // 1
+extern "C" void pauseEvCamera__9dCamera_cFv(); // 1
+extern "C" void fixedFrameEvCamera__9dCamera_cFv(); // 1
+extern "C" void stokerEvCamera__9dCamera_cFv(); // 1
+extern "C" void rollingEvCamera__9dCamera_cFv(); // 1
+extern "C" void fixedPositionEvCamera__9dCamera_cFv(); // 1
+extern "C" void uniformTransEvCamera__9dCamera_cFv(); // 1
+extern "C" void uniformBrakeEvCamera__9dCamera_cFv(); // 1
+extern "C" void uniformAcceleEvCamera__9dCamera_cFv(); // 1
+extern "C" void transEvCamera__9dCamera_cFi(); // 1
+extern "C" static void func_8008E750(); // 1
+extern "C" void __as__7cSGlobeFRC7cSGlobe(); // 1
+extern "C" void abs__4cXyzCFv(); // 1
+extern "C" void U__7cSGlobeFRC7cSAngle(); // 1
+extern "C" void __ami__4cXyzFRC3Vec(); // 1
+extern "C" void __apl__4cXyzFRC3Vec(); // 1
+extern "C" void watchActorEvCamera__9dCamera_cFv(); // 1
+extern "C" void V__7cSGlobeFRC7cSAngle(); // 1
+extern "C" static void func_8008FA94(); // 1
+extern "C" void restorePosEvCamera__9dCamera_cFv(); // 1
+extern "C" void talktoEvCamera__9dCamera_cFv(); // 1
+extern "C" void maptoolIdEvCamera__9dCamera_cFv(); // 1
+extern "C" void styleEvCamera__9dCamera_cFv(); // 1
+extern "C" void gameOverEvCamera__9dCamera_cFv(); // 1
+extern "C" void tactEvCamera__9dCamera_cFv(); // 1
+extern "C" static void dComIfGp_saveCameraPosition__FiP4cXyzP4cXyzfs(); // 1
+extern "C" bool turnToActorEvCamera__9dCamera_cFv(); // 1
+extern "C" void stbWaitEvCamera__9dCamera_cFv(); // 1
+extern "C" void saveEvCamera__9dCamera_cFv(); // 1
+extern "C" void loadEvCamera__9dCamera_cFv(); // 1
+extern "C" void useItem0EvCamera__9dCamera_cFv(); // 1
+extern "C" void useItem1EvCamera__9dCamera_cFv(); // 1
+extern "C" void getItemEvCamera__9dCamera_cFv(); // 1
+extern "C" void possessedEvCamera__9dCamera_cFv(); // 1
+extern "C" void fixedFramesEvCamera__9dCamera_cFv(); // 1
+extern "C" void bSplineEvCamera__9dCamera_cFv(); // 1
+extern "C" void twoActor0EvCamera__9dCamera_cFv(); // 1
+extern "C" void peepHoleEvCamera__9dCamera_cFv(); // 1
+extern "C" void digHoleEvCamera__9dCamera_cFv(); // 1
+extern "C" void hintTalkEvCamera__9dCamera_cFv(); // 1
+extern "C" void bspTransEvCamera__9dCamera_cFv(); // 1
+extern "C" bool portalWarpEvCamera__9dCamera_cFv(); // 1
+extern "C" void __sinit_d_ev_camera_cpp(); // 1
+extern "C" void attentionPos__9dCamera_cFP10fopAc_ac_c(); // 1
+extern "C" void directionOf__9dCamera_cFP10fopAc_ac_c(); // 1
+extern "C" void positionOf__9dCamera_cFP10fopAc_ac_c(); // 1
+extern "C" void setFlag__9dCamera_cFUl(); // 1
+extern "C" void eyePos__9dCamera_cFP10fopAc_ac_c(); // 1
+extern "C" void checkNoDraw__9daMidna_cCFv(); // 1
+extern "C" void checkMidnaRide__9daPy_py_cCFv(); // 1
+extern "C" void fopAcM_GetID__FPCv(); // 1
+extern "C" void __as__4cXyzFRC4cXyz(); // 1
+extern "C" void __ct__4cXyzFRC4cXyz(); // 1
+extern "C" static void func_80097810(); // 1
+extern "C" static void func_8009784C(); // 1
+extern "C" bool checkCanoeRide__9daPy_py_cCFv(); // 1
+extern "C" bool checkBoardRide__9daPy_py_cCFv(); // 1
+extern "C" bool checkSpinnerRide__9daPy_py_cCFv(); // 1
+extern "C" bool checkBoarRide__9daPy_py_cCFv(); // 1
+extern "C" void getShadowTalkAtnPos__9daAlink_cFv(); // 1
 SECTION_RODATA extern const u8 d_d_ev_camera__lit_3871[12];
 SECTION_RODATA extern const u8 d_d_ev_camera__lit_5984[16];
 SECTION_RODATA extern const u8 d_d_ev_camera__lit_5985[28];
@@ -625,131 +513,131 @@ SECTION_SDATA2 extern f32 lit_11422;
 // External References:
 // 
 
-void mDoLib_project(Vec*, Vec*);
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-void fopAcM_searchFromName4Event(char const*, s16);
-void fopCamM_GetParam(camera_class*);
-void fpcSch_JudgeForPName(void*, void*);
-void fpcSch_JudgeByID(void*, void*);
-void cM_atan2s(f32, f32);
-void cM_rndFX(f32);
-void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*);
-void operator+(s16, cSAngle const&);
-void operator delete(void*);
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECSquareMag();
-extern "C" void __va_arg();
-extern "C" void __register_global_object();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void strcpy();
+void mDoLib_project(Vec*, Vec*); // 2
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcM_searchFromName4Event(char const*, s16); // 2
+void fopCamM_GetParam(camera_class*); // 2
+void fpcSch_JudgeForPName(void*, void*); // 2
+void fpcSch_JudgeByID(void*, void*); // 2
+void cM_atan2s(f32, f32); // 2
+void cM_rndFX(f32); // 2
+void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*); // 2
+void operator+(s16, cSAngle const&); // 2
+void operator delete(void*); // 2
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void __va_arg(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void __dt__4cXyzFv();
-extern "C" void mDoLib_project__FP3VecP3Vec();
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-extern "C" void fopAcM_searchFromName4Event__FPCcs();
-extern "C" void __dt__8cM3dGPlaFv();
-extern "C" void fopCamM_GetParam__FP12camera_class();
-extern "C" void fpcSch_JudgeForPName__FPvPv();
-extern "C" void fpcSch_JudgeByID__FPvPv();
-extern "C" void __dt__7cSAngleFv();
-extern "C" void __dt__8cM3dGLinFv();
-extern "C" void getActiveCamera__14dDemo_object_cFv();
-extern "C" void convPId__14dEvt_control_cFUi();
-extern "C" void searchMapEventData__14dEvt_control_cFUc();
-extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
-extern "C" void getMySubstanceNum__16dEvent_manager_cFiPCc();
-extern "C" void setGoal__16dEvent_manager_cFP4cXyz();
-extern "C" void __dt__7cSGlobeFv();
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
-extern "C" void ChkCamera__4dCcSFR4cXyzR4cXyzfP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" void rationalBezierRatio__8dCamMathFff();
-extern "C" void xyzRotateY__8dCamMathFR4cXyz7cSAngle();
-extern "C" void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz();
-extern "C" void SearchStyle__11dCamParam_cFUl();
-extern "C" void Init__14d2DBSplinePathFll();
-extern "C" void Step__14d2DBSplinePathFv();
-extern "C" void Calc__14d2DBSplinePathFP4cXyz();
-extern "C" void Calc__14d2DBSplinePathFPf();
-extern "C" void GetCameraTypeFromMapToolID__9dCamera_cFll();
-extern "C" void pushInfo__9dCamera_cFPQ29dCamera_c10dCamInfo_cs();
-extern "C" void relationalPos__9dCamera_cFP10fopAc_ac_cP4cXyz();
-extern "C" void relationalPos__9dCamera_cFP10fopAc_ac_cP10fopAc_ac_cP4cXyzf();
-extern "C" void pointInSight__9dCamera_cFP4cXyz();
-extern "C" void lineBGCheck__9dCamera_cFP4cXyzP4cXyzP4cXyzUl();
-extern "C" void lineBGCheck__9dCamera_cFP4cXyzP4cXyzUl();
-extern "C" void Reset__9dCamera_cFv();
-extern "C" void StartBlure__9dCamera_cFiP10fopAc_ac_cff();
-extern "C" void SetBlureAlpha__9dCamera_cFf();
-extern "C" void SetBlureScale__9dCamera_cFfff();
-extern "C" void SetBlurePosition__9dCamera_cFfff();
-extern "C" void __pl__4cXyzCFRC3Vec();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void __ml__4cXyzCFf();
-extern "C" void norm__4cXyzCFv();
-extern "C" void normalize__4cXyzFv();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cM_rndFX__Ff();
-extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf();
-extern "C" void __ct__8cM3dGLinFRC4cXyzRC4cXyz();
-extern "C" void __ct__7cSAngleFRC7cSAngle();
-extern "C" void __ct__7cSAngleFs();
-extern "C" void __ct__7cSAngleFf();
-extern "C" void Val__7cSAngleFf();
-extern "C" void Degree__7cSAngleCFv();
-extern "C" void Abs__7cSAngleCFv();
-extern "C" void Inv__7cSAngleCFv();
-extern "C" void Cos__7cSAngleCFv();
-extern "C" void __mi__7cSAngleCFv();
-extern "C" void __pl__7cSAngleCFRC7cSAngle();
-extern "C" void __mi__7cSAngleCFRC7cSAngle();
-extern "C" void __apl__7cSAngleFRC7cSAngle();
-extern "C" void __pl__7cSAngleCFs();
-extern "C" void __ml__7cSAngleCFf();
-extern "C" void __amu__7cSAngleFf();
-extern "C" void __pl__FsRC7cSAngle();
-extern "C" void __ct__7cSGlobeFRC7cSGlobe();
-extern "C" void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle();
-extern "C" void __ct__7cSGlobeFRC4cXyz();
-extern "C" void Val__7cSGlobeFfRC7cSAngleRC7cSAngle();
-extern "C" void Val__7cSGlobeFRC4cXyz();
-extern "C" void Xyz__7cSGlobeCFv();
-extern "C" void Norm__7cSGlobeCFv();
-extern "C" void Invert__7cSGlobeFv();
-extern "C" void __dl__FPv();
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECSquareMag();
-extern "C" void __va_arg();
-extern "C" void __register_global_object();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void strcpy();
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+extern "C" void fopAcM_searchFromName4Event__FPCcs(); // 1
+extern "C" void __dt__8cM3dGPlaFv(); // 1
+extern "C" void fopCamM_GetParam__FP12camera_class(); // 1
+extern "C" void fpcSch_JudgeForPName__FPvPv(); // 1
+extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
+extern "C" void __dt__7cSAngleFv(); // 1
+extern "C" void __dt__8cM3dGLinFv(); // 1
+extern "C" void getActiveCamera__14dDemo_object_cFv(); // 1
+extern "C" void convPId__14dEvt_control_cFUi(); // 1
+extern "C" void searchMapEventData__14dEvt_control_cFUc(); // 1
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
+extern "C" void getMySubstanceNum__16dEvent_manager_cFiPCc(); // 1
+extern "C" void setGoal__16dEvent_manager_cFP4cXyz(); // 1
+extern "C" void __dt__7cSGlobeFv(); // 1
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
+extern "C" void ChkCamera__4dCcSFR4cXyzR4cXyzfP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_c(); // 1
+extern "C" void rationalBezierRatio__8dCamMathFff(); // 1
+extern "C" void xyzRotateY__8dCamMathFR4cXyz7cSAngle(); // 1
+extern "C" void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz(); // 1
+extern "C" void SearchStyle__11dCamParam_cFUl(); // 1
+extern "C" void Init__14d2DBSplinePathFll(); // 1
+extern "C" void Step__14d2DBSplinePathFv(); // 1
+extern "C" void Calc__14d2DBSplinePathFP4cXyz(); // 1
+extern "C" void Calc__14d2DBSplinePathFPf(); // 1
+extern "C" void GetCameraTypeFromMapToolID__9dCamera_cFll(); // 1
+extern "C" void pushInfo__9dCamera_cFPQ29dCamera_c10dCamInfo_cs(); // 1
+extern "C" void relationalPos__9dCamera_cFP10fopAc_ac_cP4cXyz(); // 1
+extern "C" void relationalPos__9dCamera_cFP10fopAc_ac_cP10fopAc_ac_cP4cXyzf(); // 1
+extern "C" void pointInSight__9dCamera_cFP4cXyz(); // 1
+extern "C" void lineBGCheck__9dCamera_cFP4cXyzP4cXyzP4cXyzUl(); // 1
+extern "C" void lineBGCheck__9dCamera_cFP4cXyzP4cXyzUl(); // 1
+extern "C" void Reset__9dCamera_cFv(); // 1
+extern "C" void StartBlure__9dCamera_cFiP10fopAc_ac_cff(); // 1
+extern "C" void SetBlureAlpha__9dCamera_cFf(); // 1
+extern "C" void SetBlureScale__9dCamera_cFfff(); // 1
+extern "C" void SetBlurePosition__9dCamera_cFfff(); // 1
+extern "C" void __pl__4cXyzCFRC3Vec(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ml__4cXyzCFf(); // 1
+extern "C" void norm__4cXyzCFv(); // 1
+extern "C" void normalize__4cXyzFv(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM_rndFX__Ff(); // 1
+extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf(); // 1
+extern "C" void __ct__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
+extern "C" void __ct__7cSAngleFRC7cSAngle(); // 1
+extern "C" void __ct__7cSAngleFs(); // 1
+extern "C" void __ct__7cSAngleFf(); // 1
+extern "C" void Val__7cSAngleFf(); // 1
+extern "C" void Degree__7cSAngleCFv(); // 1
+extern "C" void Abs__7cSAngleCFv(); // 1
+extern "C" void Inv__7cSAngleCFv(); // 1
+extern "C" void Cos__7cSAngleCFv(); // 1
+extern "C" void __mi__7cSAngleCFv(); // 1
+extern "C" void __pl__7cSAngleCFRC7cSAngle(); // 1
+extern "C" void __mi__7cSAngleCFRC7cSAngle(); // 1
+extern "C" void __apl__7cSAngleFRC7cSAngle(); // 1
+extern "C" void __pl__7cSAngleCFs(); // 1
+extern "C" void __ml__7cSAngleCFf(); // 1
+extern "C" void __amu__7cSAngleFf(); // 1
+extern "C" void __pl__FsRC7cSAngle(); // 1
+extern "C" void __ct__7cSGlobeFRC7cSGlobe(); // 1
+extern "C" void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle(); // 1
+extern "C" void __ct__7cSGlobeFRC4cXyz(); // 1
+extern "C" void Val__7cSGlobeFfRC7cSAngleRC7cSAngle(); // 1
+extern "C" void Val__7cSGlobeFRC4cXyz(); // 1
+extern "C" void Xyz__7cSGlobeCFv(); // 1
+extern "C" void Norm__7cSGlobeCFv(); // 1
+extern "C" void Invert__7cSGlobeFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void __va_arg(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 SECTION_DATA extern u8 engine_tbl__9dCamera_c[240];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];

@@ -9,55 +9,37 @@
 // Types:
 // 
 
-// build d2DBSplinePath (['d2DBSplinePath']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['d2DBSplinePath']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['d2DBSplinePath']) */
 struct d2DBSplinePath {
-	// ('cXyz',)
 	/* 80097878 */ void Init(s32, s32);
 	/* 80097904 */ void Step();
-	/* 80097A6C */ void Calc(cXyz*);
 	/* 80097B20 */ void Calc(f32*);
+	/* 80097A6C */ void Calc(cXyz*);
 	/* 80097B68 */ void Spot(f32*, f32);
 };
 
-// build cXyz (['cXyz']) True/True
-// build dPathCurve (['dPathCurve']) False/False
-// build dPath (['dPath']) False/False
-/* top-level dependencies (begin ['dPath']) */
-/* top-level dependencies (end ['dPath']) */
 struct dPath {
 };
 
-/* top-level dependencies (begin ['dPathCurve']) */
-// outer dependency: ('dPath',)
-/* top-level dependencies (end ['dPathCurve']) */
 struct dPathCurve {
-	// ('dPath',)
 	/* 80097C5C */ void Init(dPath*);
 	/* 80097C74 */ void bSpline2(f32);
 };
 
-// build dPath (['dPath']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void Init__14d2DBSplinePathFll();
-extern "C" void Step__14d2DBSplinePathFv();
-extern "C" void Calc__14d2DBSplinePathFP4cXyz();
-extern "C" void Calc__14d2DBSplinePathFPf();
-extern "C" void Spot__14d2DBSplinePathFPff();
-extern "C" void Init__10dPathCurveFP5dPath();
-extern "C" void bSpline2__10dPathCurveFf();
+extern "C" void Init__14d2DBSplinePathFll(); // 1
+extern "C" void Step__14d2DBSplinePathFv(); // 1
+extern "C" void Calc__14d2DBSplinePathFP4cXyz(); // 1
+extern "C" void Calc__14d2DBSplinePathFPf(); // 1
+extern "C" void Spot__14d2DBSplinePathFPff(); // 1
+extern "C" void Init__10dPathCurveFP5dPath(); // 1
+extern "C" void bSpline2__10dPathCurveFf(); // 1
 SECTION_SDATA2 extern f64 lit_3632;
 SECTION_SDATA2 extern f32 d_d_spline_path__lit_3684;
 SECTION_SDATA2 extern f32 d_d_spline_path__lit_3685;
@@ -66,9 +48,9 @@ SECTION_SDATA2 extern f32 d_d_spline_path__lit_3685;
 // External References:
 // 
 
-extern "C" void PSVECAdd();
+extern "C" void PSVECAdd(); // 1
 
-extern "C" void PSVECAdd();
+extern "C" void PSVECAdd(); // 1
 
 // 
 // Declarations:

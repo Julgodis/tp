@@ -9,42 +9,19 @@
 // Types:
 // 
 
-// build dMsgFlow_c (['dMsgFlow_c']) False/False
-// build mesg_flow_node_branch (['mesg_flow_node_branch']) False/False
-/* top-level dependencies (begin ['mesg_flow_node_branch']) */
-/* top-level dependencies (end ['mesg_flow_node_branch']) */
-struct mesg_flow_node_branch {
-};
-
-// build mesg_flow_node_event (['mesg_flow_node_event']) False/False
-/* top-level dependencies (begin ['mesg_flow_node_event']) */
-/* top-level dependencies (end ['mesg_flow_node_event']) */
-struct mesg_flow_node_event {
-};
-
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
-struct fopAc_ac_c {
-};
-
-// build mesg_flow_node (['mesg_flow_node']) False/False
-/* top-level dependencies (begin ['mesg_flow_node']) */
-/* top-level dependencies (end ['mesg_flow_node']) */
 struct mesg_flow_node {
 };
 
-/* top-level dependencies (begin ['dMsgFlow_c']) */
-// outer dependency: ('mesg_flow_node_branch',)
-// outer dependency: ('mesg_flow_node_event',)
-// outer dependency: ('fopAc_ac_c',)
-// outer dependency: ('mesg_flow_node',)
-/* top-level dependencies (end ['dMsgFlow_c']) */
+struct mesg_flow_node_event {
+};
+
+struct mesg_flow_node_branch {
+};
+
+struct fopAc_ac_c {
+};
+
 struct dMsgFlow_c {
-	// ('mesg_flow_node_branch',)
-	// ('mesg_flow_node_event',)
-	// ('fopAc_ac_c',)
-	// ('mesg_flow_node',)
 	/* 80249F00 */ dMsgFlow_c();
 	/* 80249F48 */ ~dMsgFlow_c();
 	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
@@ -168,51 +145,26 @@ struct dMsgFlow_c {
 	/* 8024DAA8 */ bool event042(mesg_flow_node_event*, fopAc_ac_c*);
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build mesg_flow_node (['mesg_flow_node']) True/True
-// build mesg_flow_node_branch (['mesg_flow_node_branch']) True/True
-// build mesg_flow_node_event (['mesg_flow_node_event']) True/True
-// build mDoGph_gInf_c (['mDoGph_gInf_c']) False/False
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin ['mDoGph_gInf_c']) */
-// outer dependency: ('_GXColor',)
-/* top-level dependencies (end ['mDoGph_gInf_c']) */
 struct mDoGph_gInf_c {
-	// ('_GXColor',)
 	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
 };
 
-// build _GXColor (['_GXColor']) True/True
-// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
-/* top-level dependencies (begin ['dStage_roomControl_c']) */
-/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
-// build dComIfG_play_c (['dComIfG_play_c']) False/False
-/* top-level dependencies (begin ['dComIfG_play_c']) */
-/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002B36C */ void setItemBombNumCount(u8, s16);
 };
 
-// build dSv_player_status_a_c (['dSv_player_status_a_c']) False/False
-/* top-level dependencies (begin ['dSv_player_status_a_c']) */
-/* top-level dependencies (end ['dSv_player_status_a_c']) */
 struct dSv_player_status_a_c {
 	/* 80032A5C */ void getSelectItemIndex(int) const;
 	/* 80032AA8 */ void getRupeeMax() const;
 };
 
-// build dSv_player_item_c (['dSv_player_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_c']) */
-/* top-level dependencies (end ['dSv_player_item_c']) */
 struct dSv_player_item_c {
 	/* 80032FB8 */ void setItem(int, u8);
 	/* 80033030 */ void getItem(int, bool) const;
@@ -224,39 +176,24 @@ struct dSv_player_item_c {
 	/* 80033C2C */ void setWarashibeItem(u8);
 };
 
-// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_get_item_c']) */
-/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033E94 */ void offFirstBit(u8);
 };
 
-// build dSv_player_item_record_c (['dSv_player_item_record_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_record_c']) */
-/* top-level dependencies (end ['dSv_player_item_record_c']) */
 struct dSv_player_item_record_c {
 	/* 80033F6C */ void setBombNum(u8, u8);
 	/* 80033F7C */ void getBombNum(u8) const;
 };
 
-// build dSv_player_item_max_c (['dSv_player_item_max_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_max_c']) */
-/* top-level dependencies (end ['dSv_player_item_max_c']) */
 struct dSv_player_item_max_c {
 	/* 800340F8 */ void getBombNum(u8) const;
 };
 
-// build dSv_light_drop_c (['dSv_light_drop_c']) False/False
-/* top-level dependencies (begin ['dSv_light_drop_c']) */
-/* top-level dependencies (end ['dSv_light_drop_c']) */
 struct dSv_light_drop_c {
 	/* 80034340 */ void getLightDropNum(u8) const;
 	/* 80034368 */ void onLightDropGetFlag(u8);
 };
 
-// build dSv_memBit_c (['dSv_memBit_c']) False/False
-/* top-level dependencies (begin ['dSv_memBit_c']) */
-/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 800347E8 */ void isTbox(int) const;
 	/* 80034810 */ void onSwitch(int);
@@ -265,9 +202,6 @@ struct dSv_memBit_c {
 	/* 800348EC */ void isItem(int) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 	/* 800349A4 */ void offEventBit(u16);
@@ -276,9 +210,6 @@ struct dSv_event_c {
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
-// build dSv_danBit_c (['dSv_danBit_c']) False/False
-/* top-level dependencies (begin ['dSv_danBit_c']) */
-/* top-level dependencies (end ['dSv_danBit_c']) */
 struct dSv_danBit_c {
 	/* 80034B98 */ void onSwitch(int);
 	/* 80034BC0 */ void offSwitch(int);
@@ -286,70 +217,38 @@ struct dSv_danBit_c {
 	/* 80034C74 */ void isItem(int) const;
 };
 
-// build dAttention_c (['dAttention_c']) False/False
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-/* top-level dependencies (begin ['dAttention_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dAttention_c']) */
 struct dAttention_c {
-	// ('cXyz',)
 	/* 80073838 */ void checkDistance(cXyz*, s16, cXyz*, f32, f32, f32, f32);
 	/* 8014B010 */ void getDistTable(int);
 };
 
-// build cXyz (['cXyz']) True/True
-// build daAlink_c (['daAlink_c']) False/False
-/* top-level dependencies (begin ['daAlink_c']) */
-/* top-level dependencies (end ['daAlink_c']) */
 struct daAlink_c {
 	/* 800B4938 */ void setMidnaMsg();
 };
 
-// build daPy_py_c (['daPy_py_c']) False/False
-/* top-level dependencies (begin ['daPy_py_c']) */
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015F3FC */ void getAttentionOffsetY();
 	/* 8015F954 */ void setMidnaMotionNum(int);
 	/* 8015F968 */ void setMidnaFaceNum(int);
 };
 
-// build dShopSystem_c (['dShopSystem_c']) False/False
-/* top-level dependencies (begin ['dShopSystem_c']) */
-/* top-level dependencies (end ['dShopSystem_c']) */
 struct dShopSystem_c {
 	/* 801975F8 */ void isFlag(int);
 	/* 8019A354 */ void setSoldOutFlag();
 };
 
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
 	/* 8021E0C4 */ void resetMiniGameItem(bool);
 };
 
-// build dMsgObject_c (['dMsgObject_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dMsgObject_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
-	// ('fopAc_ac_c',)
 	/* 802370FC */ void isMidonaMessage();
 	/* 80237980 */ void isKillMessageFlag();
 	/* 80237994 */ void onKillMessageFlag();
@@ -368,31 +267,15 @@ struct dMsgObject_c {
 	/* 8023864C */ void setSelectCancelPos(u8);
 };
 
-// build Vec (['Vec']) True/True
-// build cSAngle (['cSAngle']) False/False
-/* top-level dependencies (begin ['cSAngle']) */
-/* top-level dependencies (end ['cSAngle']) */
 struct cSAngle {
 	/* 80271228 */ void operator-(s16) const;
 };
 
-// build cSGlobe (['cSGlobe']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cSGlobe']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cSGlobe']) */
 struct cSGlobe {
-	// ('cXyz',)
 	/* 80271880 */ cSGlobe(cXyz const&);
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// ('Vec',)
 	/* 802ADB14 */ void messageSePlay(u16, Vec*, s8);
 };
 
@@ -400,132 +283,132 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-extern "C" static void func_8024DAB0();
-extern "C" void __sinit_d_msg_flow_cpp();
+static void cLib_calcTimer__template3(s32*); // 2
+extern "C" void __sinit_d_msg_flow_cpp(); // 1
 
-extern "C" void __ct__10dMsgFlow_cFv();
-extern "C" void __dt__10dMsgFlow_cFv();
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
-extern "C" void checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi();
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
-extern "C" void checkEventRender__10dMsgFlow_cFPiPiPiPi();
-extern "C" void remove__10dMsgFlow_cFv();
-extern "C" void getEventId__10dMsgFlow_cFPi();
-extern "C" void getMsgNo__10dMsgFlow_cFv();
-extern "C" void getNowMsgNo__10dMsgFlow_cFv();
-extern "C" void getMsg__10dMsgFlow_cFv();
-extern "C" void setInitValue__10dMsgFlow_cFi();
-extern "C" void setInitValueGroupChange__10dMsgFlow_cFiPP10fopAc_ac_c();
-extern "C" void getMsgDataBlock__10dMsgFlow_cFPCc();
-extern "C" void getInitNodeIndex__10dMsgFlow_cFUs();
-extern "C" void setNodeIndex__10dMsgFlow_cFUsPP10fopAc_ac_c();
-extern "C" void setSelectMsg__10dMsgFlow_cFP14mesg_flow_nodeP14mesg_flow_nodeP10fopAc_ac_c();
-extern "C" void setNormalMsg__10dMsgFlow_cFP14mesg_flow_nodeP10fopAc_ac_c();
-extern "C" void messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
-extern "C" void branchNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
-extern "C" void eventNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
-extern "C" void nodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c();
-extern "C" void getParam__10dMsgFlow_cFPUsPUsPUc();
-extern "C" void getParam__10dMsgFlow_cFPUcPUc();
-extern "C" void getParam__10dMsgFlow_cFPUc();
-extern "C" void query001__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query002__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query003__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query004__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query006__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query007__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query008__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query009__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query010__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query011__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query012__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query013__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query014__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query015__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query016__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query017__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query018__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query019__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query020__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query021__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query022__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query023__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query024__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query025__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query026__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query027__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query028__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query029__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query030__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query031__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query032__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query033__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query034__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query035__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query036__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query037__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query038__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query039__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query040__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query041__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query042__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query043__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query044__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query045__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query046__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" bool query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query049__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query050__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query051__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query052__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void query053__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
-extern "C" void event000__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event001__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event002__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event003__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event004__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event005__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event006__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event007__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event008__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event009__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event010__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event011__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" bool event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event014__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event015__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event016__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event017__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event018__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" bool event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event022__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event024__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event025__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event026__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event028__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event029__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event030__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event031__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event032__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event033__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event034__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event035__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event036__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event037__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event038__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event039__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" void event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" bool event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c();
-extern "C" static void func_8024DAB0();
-extern "C" void __sinit_d_msg_flow_cpp();
+extern "C" void __ct__10dMsgFlow_cFv(); // 1
+extern "C" void __dt__10dMsgFlow_cFv(); // 1
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
+extern "C" void checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi(); // 1
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
+extern "C" void checkEventRender__10dMsgFlow_cFPiPiPiPi(); // 1
+extern "C" void remove__10dMsgFlow_cFv(); // 1
+extern "C" void getEventId__10dMsgFlow_cFPi(); // 1
+extern "C" void getMsgNo__10dMsgFlow_cFv(); // 1
+extern "C" void getNowMsgNo__10dMsgFlow_cFv(); // 1
+extern "C" void getMsg__10dMsgFlow_cFv(); // 1
+extern "C" void setInitValue__10dMsgFlow_cFi(); // 1
+extern "C" void setInitValueGroupChange__10dMsgFlow_cFiPP10fopAc_ac_c(); // 1
+extern "C" void getMsgDataBlock__10dMsgFlow_cFPCc(); // 1
+extern "C" void getInitNodeIndex__10dMsgFlow_cFUs(); // 1
+extern "C" void setNodeIndex__10dMsgFlow_cFUsPP10fopAc_ac_c(); // 1
+extern "C" void setSelectMsg__10dMsgFlow_cFP14mesg_flow_nodeP14mesg_flow_nodeP10fopAc_ac_c(); // 1
+extern "C" void setNormalMsg__10dMsgFlow_cFP14mesg_flow_nodeP10fopAc_ac_c(); // 1
+extern "C" void messageNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c(); // 1
+extern "C" void branchNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c(); // 1
+extern "C" void eventNodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c(); // 1
+extern "C" void nodeProc__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_c(); // 1
+extern "C" void getParam__10dMsgFlow_cFPUsPUsPUc(); // 1
+extern "C" void getParam__10dMsgFlow_cFPUcPUc(); // 1
+extern "C" void getParam__10dMsgFlow_cFPUc(); // 1
+extern "C" void query001__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query002__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query003__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query004__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query006__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query007__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query008__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query009__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query010__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query011__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query012__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query013__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query014__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query015__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query016__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query017__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query018__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query019__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query020__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query021__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query022__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query023__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query024__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query025__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query026__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query027__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query028__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query029__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query030__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query031__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query032__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query033__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query034__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query035__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query036__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query037__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query038__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query039__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query040__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query041__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query042__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query043__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query044__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query045__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query046__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" bool query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query049__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query050__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query051__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query052__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query053__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void event000__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event001__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event002__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event003__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event004__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event005__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event006__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event007__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event008__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event009__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event010__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event011__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" bool event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event014__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event015__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event016__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event017__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event018__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" bool event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event022__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event023__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event024__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event025__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event026__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event027__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event028__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event029__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event030__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event031__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event032__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event033__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event034__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event035__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event036__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event037__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event038__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event039__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" bool event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" static void func_8024DAB0(); // 1
+extern "C" void __sinit_d_msg_flow_cpp(); // 1
 SECTION_RODATA extern const u8 d_msg_d_msg_flow__stringBase0[24];
 SECTION_DATA extern u8 d_msg_d_msg_flow__cNullVec__6Z2Calc[12];
 SECTION_DATA extern void*d_msg_d_msg_flow__lit_4646[22];
@@ -645,157 +528,157 @@ SECTION_SBSS2 extern u8 data_80456BA4[4];
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-void fopMsgM_SearchByID(u32);
-void fopMsgM_messageSet(u32, fopAc_ac_c*, u32);
-void fopMsgM_messageSet(u32, u32);
-void dComIfGp_getReverb(int);
-void dComIfGs_onZoneSwitch(int, int);
-void dComIfGs_offZoneSwitch(int, int);
-void dComIfGs_isZoneSwitch(int, int);
-void dComIfGs_onOneZoneSwitch(int, int);
-void dComIfGs_offOneZoneSwitch(int, int);
-void dComIfGs_isOneZoneSwitch(int, int);
-void dComIfGs_isZoneItem(int, int);
-void dComIfGs_isOneZoneItem(int, int);
-void dComIfGs_setSelectItemIndex(int, u8);
-void dComIfGs_setMixItemIndex(int, u8);
-void dComIfGs_getMixItemIndex(int);
-void dComIfGp_setSelectItem(int);
-void dComIfGs_checkGetInsectNum();
-void daNpcKakashi_getSwdTutorialStep();
-void daNpcKakashi_getSwdTutorialResult();
-void daNpcKakashi_getSuccessCount();
-void execItemGet(u8);
-void checkItemGet(u8, int);
-void dMeter2Info_getNewLetterNum();
-void dMeter2Info_setNewLetterSender();
-void dMeter2Info_recieveLetter();
-void dMsgObject_getFundRaising();
-void dMsgObject_setFundRaising(u16);
-void dMsgObject_getOffering();
-void dMsgObject_addOffering(s16);
-void cM_rndF(f32);
-void operator delete(void*);
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+SECTION_INIT void memcpy(); // 1
+void fopMsgM_SearchByID(u32); // 2
+void fopMsgM_messageSet(u32, fopAc_ac_c*, u32); // 2
+void fopMsgM_messageSet(u32, u32); // 2
+void dComIfGp_getReverb(int); // 2
+void dComIfGs_onZoneSwitch(int, int); // 2
+void dComIfGs_offZoneSwitch(int, int); // 2
+void dComIfGs_isZoneSwitch(int, int); // 2
+void dComIfGs_onOneZoneSwitch(int, int); // 2
+void dComIfGs_offOneZoneSwitch(int, int); // 2
+void dComIfGs_isOneZoneSwitch(int, int); // 2
+void dComIfGs_isZoneItem(int, int); // 2
+void dComIfGs_isOneZoneItem(int, int); // 2
+void dComIfGs_setSelectItemIndex(int, u8); // 2
+void dComIfGs_setMixItemIndex(int, u8); // 2
+void dComIfGs_getMixItemIndex(int); // 2
+void dComIfGp_setSelectItem(int); // 2
+void dComIfGs_checkGetInsectNum(); // 2
+void daNpcKakashi_getSwdTutorialStep(); // 2
+void daNpcKakashi_getSwdTutorialResult(); // 2
+void daNpcKakashi_getSuccessCount(); // 2
+void execItemGet(u8); // 2
+void checkItemGet(u8, int); // 2
+void dMeter2Info_getNewLetterNum(); // 2
+void dMeter2Info_setNewLetterSender(); // 2
+void dMeter2Info_recieveLetter(); // 2
+void dMsgObject_getFundRaising(); // 2
+void dMsgObject_setFundRaising(u16); // 2
+void dMsgObject_getOffering(); // 2
+void dMsgObject_addOffering(s16); // 2
+void cM_rndF(f32); // 2
+void operator delete(void*); // 2
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
-extern "C" void fopMsgM_SearchByID__FUi();
-extern "C" void fopMsgM_messageSet__FUlP10fopAc_ac_cUl();
-extern "C" void fopMsgM_messageSet__FUlUl();
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" void setItemBombNumCount__14dComIfG_play_cFUcs();
-extern "C" void dComIfGp_getReverb__Fi();
-extern "C" void dComIfGs_onZoneSwitch__Fii();
-extern "C" void dComIfGs_offZoneSwitch__Fii();
-extern "C" void dComIfGs_isZoneSwitch__Fii();
-extern "C" void dComIfGs_onOneZoneSwitch__Fii();
-extern "C" void dComIfGs_offOneZoneSwitch__Fii();
-extern "C" void dComIfGs_isOneZoneSwitch__Fii();
-extern "C" void dComIfGs_isZoneItem__Fii();
-extern "C" void dComIfGs_isOneZoneItem__Fii();
-extern "C" void dComIfGs_setSelectItemIndex__FiUc();
-extern "C" void dComIfGs_setMixItemIndex__FiUc();
-extern "C" void dComIfGs_getMixItemIndex__Fi();
-extern "C" void dComIfGp_setSelectItem__Fi();
-extern "C" void dComIfGs_checkGetInsectNum__Fv();
-extern "C" void daNpcKakashi_getSwdTutorialStep__Fv();
-extern "C" void daNpcKakashi_getSwdTutorialResult__Fv();
-extern "C" void daNpcKakashi_getSuccessCount__Fv();
-extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi();
-extern "C" void getRupeeMax__21dSv_player_status_a_cCFv();
-extern "C" void setItem__17dSv_player_item_cFiUc();
-extern "C" void getItem__17dSv_player_item_cCFib();
-extern "C" void setBottleItemIn__17dSv_player_item_cFUcUc();
-extern "C" void setEmptyBottleItemIn__17dSv_player_item_cFUc();
-extern "C" void checkInsectBottle__17dSv_player_item_cFv();
-extern "C" void checkEmptyBottle__17dSv_player_item_cFv();
-extern "C" void checkBombBag__17dSv_player_item_cFUc();
-extern "C" void setWarashibeItem__17dSv_player_item_cFUc();
-extern "C" void offFirstBit__21dSv_player_get_item_cFUc();
-extern "C" void setBombNum__24dSv_player_item_record_cFUcUc();
-extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
-extern "C" void getBombNum__21dSv_player_item_max_cCFUc();
-extern "C" void getLightDropNum__16dSv_light_drop_cCFUc();
-extern "C" void onLightDropGetFlag__16dSv_light_drop_cFUc();
-extern "C" void isTbox__12dSv_memBit_cCFi();
-extern "C" void onSwitch__12dSv_memBit_cFi();
-extern "C" void offSwitch__12dSv_memBit_cFi();
-extern "C" void isSwitch__12dSv_memBit_cCFi();
-extern "C" void isItem__12dSv_memBit_cCFi();
-extern "C" void onEventBit__11dSv_event_cFUs();
-extern "C" void offEventBit__11dSv_event_cFUs();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void setEventReg__11dSv_event_cFUsUc();
-extern "C" void getEventReg__11dSv_event_cCFUs();
-extern "C" void onSwitch__12dSv_danBit_cFi();
-extern "C" void offSwitch__12dSv_danBit_cFi();
-extern "C" void isSwitch__12dSv_danBit_cCFi();
-extern "C" void isItem__12dSv_danBit_cCFi();
-extern "C" void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff();
-extern "C" void execItemGet__FUc();
-extern "C" void checkItemGet__FUci();
-extern "C" void setMidnaMsg__9daAlink_cFv();
-extern "C" void getDistTable__12dAttention_cFi();
-extern "C" void getAttentionOffsetY__9daPy_py_cFv();
-extern "C" void setMidnaMotionNum__9daPy_py_cFi();
-extern "C" void setMidnaFaceNum__9daPy_py_cFi();
-extern "C" void isFlag__13dShopSystem_cFi();
-extern "C" void setSoldOutFlag__13dShopSystem_cFv();
-extern "C" void resetMiniGameItem__13dMeter2Info_cFb();
-extern "C" void dMeter2Info_getNewLetterNum__Fv();
-extern "C" void dMeter2Info_setNewLetterSender__Fv();
-extern "C" void dMeter2Info_recieveLetter__Fv();
-extern "C" void isMidonaMessage__12dMsgObject_cFv();
-extern "C" void isKillMessageFlag__12dMsgObject_cFv();
-extern "C" void onKillMessageFlag__12dMsgObject_cFv();
-extern "C" void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c();
-extern "C" void setNowTalkFlowNo__12dMsgObject_cFs();
-extern "C" void changeFlowGroup__12dMsgObject_cFl();
-extern "C" void endFlowGroup__12dMsgObject_cFv();
-extern "C" void getMsgDtPtr__12dMsgObject_cFv();
-extern "C" void getStatus__12dMsgObject_cFv();
-extern "C" void setSelectCursorPos__12dMsgObject_cFUc();
-extern "C" void setArrowNum__12dMsgObject_cFUc();
-extern "C" void setSelectWordFlag__12dMsgObject_cFUc();
-extern "C" void getSelectBombBagID__12dMsgObject_cFv();
-extern "C" void getSelectBombPrice__12dMsgObject_cFv();
-extern "C" void setEquipBombInfo__12dMsgObject_cFv();
-extern "C" void setSelectCancelPos__12dMsgObject_cFUc();
-extern "C" void dMsgObject_getFundRaising__Fv();
-extern "C" void dMsgObject_setFundRaising__FUs();
-extern "C" void dMsgObject_getOffering__Fv();
-extern "C" void dMsgObject_addOffering__Fs();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void cM_rndF__Ff();
-extern "C" void __mi__7cSAngleCFs();
-extern "C" void __ct__7cSGlobeFRC4cXyz();
-extern "C" void messageSePlay__7Z2SeMgrFUsP3VecSc();
-extern "C" void __dl__FPv();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+SECTION_INIT void memcpy(); // 1
+extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor(); // 1
+extern "C" void fopMsgM_SearchByID__FUi(); // 1
+extern "C" void fopMsgM_messageSet__FUlP10fopAc_ac_cUl(); // 1
+extern "C" void fopMsgM_messageSet__FUlUl(); // 1
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
+extern "C" void setItemBombNumCount__14dComIfG_play_cFUcs(); // 1
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void dComIfGs_onZoneSwitch__Fii(); // 1
+extern "C" void dComIfGs_offZoneSwitch__Fii(); // 1
+extern "C" void dComIfGs_isZoneSwitch__Fii(); // 1
+extern "C" void dComIfGs_onOneZoneSwitch__Fii(); // 1
+extern "C" void dComIfGs_offOneZoneSwitch__Fii(); // 1
+extern "C" void dComIfGs_isOneZoneSwitch__Fii(); // 1
+extern "C" void dComIfGs_isZoneItem__Fii(); // 1
+extern "C" void dComIfGs_isOneZoneItem__Fii(); // 1
+extern "C" void dComIfGs_setSelectItemIndex__FiUc(); // 1
+extern "C" void dComIfGs_setMixItemIndex__FiUc(); // 1
+extern "C" void dComIfGs_getMixItemIndex__Fi(); // 1
+extern "C" void dComIfGp_setSelectItem__Fi(); // 1
+extern "C" void dComIfGs_checkGetInsectNum__Fv(); // 1
+extern "C" void daNpcKakashi_getSwdTutorialStep__Fv(); // 1
+extern "C" void daNpcKakashi_getSwdTutorialResult__Fv(); // 1
+extern "C" void daNpcKakashi_getSuccessCount__Fv(); // 1
+extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi(); // 1
+extern "C" void getRupeeMax__21dSv_player_status_a_cCFv(); // 1
+extern "C" void setItem__17dSv_player_item_cFiUc(); // 1
+extern "C" void getItem__17dSv_player_item_cCFib(); // 1
+extern "C" void setBottleItemIn__17dSv_player_item_cFUcUc(); // 1
+extern "C" void setEmptyBottleItemIn__17dSv_player_item_cFUc(); // 1
+extern "C" void checkInsectBottle__17dSv_player_item_cFv(); // 1
+extern "C" void checkEmptyBottle__17dSv_player_item_cFv(); // 1
+extern "C" void checkBombBag__17dSv_player_item_cFUc(); // 1
+extern "C" void setWarashibeItem__17dSv_player_item_cFUc(); // 1
+extern "C" void offFirstBit__21dSv_player_get_item_cFUc(); // 1
+extern "C" void setBombNum__24dSv_player_item_record_cFUcUc(); // 1
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc(); // 1
+extern "C" void getBombNum__21dSv_player_item_max_cCFUc(); // 1
+extern "C" void getLightDropNum__16dSv_light_drop_cCFUc(); // 1
+extern "C" void onLightDropGetFlag__16dSv_light_drop_cFUc(); // 1
+extern "C" void isTbox__12dSv_memBit_cCFi(); // 1
+extern "C" void onSwitch__12dSv_memBit_cFi(); // 1
+extern "C" void offSwitch__12dSv_memBit_cFi(); // 1
+extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1
+extern "C" void isItem__12dSv_memBit_cCFi(); // 1
+extern "C" void onEventBit__11dSv_event_cFUs(); // 1
+extern "C" void offEventBit__11dSv_event_cFUs(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void setEventReg__11dSv_event_cFUsUc(); // 1
+extern "C" void getEventReg__11dSv_event_cCFUs(); // 1
+extern "C" void onSwitch__12dSv_danBit_cFi(); // 1
+extern "C" void offSwitch__12dSv_danBit_cFi(); // 1
+extern "C" void isSwitch__12dSv_danBit_cCFi(); // 1
+extern "C" void isItem__12dSv_danBit_cCFi(); // 1
+extern "C" void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff(); // 1
+extern "C" void execItemGet__FUc(); // 1
+extern "C" void checkItemGet__FUci(); // 1
+extern "C" void setMidnaMsg__9daAlink_cFv(); // 1
+extern "C" void getDistTable__12dAttention_cFi(); // 1
+extern "C" void getAttentionOffsetY__9daPy_py_cFv(); // 1
+extern "C" void setMidnaMotionNum__9daPy_py_cFi(); // 1
+extern "C" void setMidnaFaceNum__9daPy_py_cFi(); // 1
+extern "C" void isFlag__13dShopSystem_cFi(); // 1
+extern "C" void setSoldOutFlag__13dShopSystem_cFv(); // 1
+extern "C" void resetMiniGameItem__13dMeter2Info_cFb(); // 1
+extern "C" void dMeter2Info_getNewLetterNum__Fv(); // 1
+extern "C" void dMeter2Info_setNewLetterSender__Fv(); // 1
+extern "C" void dMeter2Info_recieveLetter__Fv(); // 1
+extern "C" void isMidonaMessage__12dMsgObject_cFv(); // 1
+extern "C" void isKillMessageFlag__12dMsgObject_cFv(); // 1
+extern "C" void onKillMessageFlag__12dMsgObject_cFv(); // 1
+extern "C" void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c(); // 1
+extern "C" void setNowTalkFlowNo__12dMsgObject_cFs(); // 1
+extern "C" void changeFlowGroup__12dMsgObject_cFl(); // 1
+extern "C" void endFlowGroup__12dMsgObject_cFv(); // 1
+extern "C" void getMsgDtPtr__12dMsgObject_cFv(); // 1
+extern "C" void getStatus__12dMsgObject_cFv(); // 1
+extern "C" void setSelectCursorPos__12dMsgObject_cFUc(); // 1
+extern "C" void setArrowNum__12dMsgObject_cFUc(); // 1
+extern "C" void setSelectWordFlag__12dMsgObject_cFUc(); // 1
+extern "C" void getSelectBombBagID__12dMsgObject_cFv(); // 1
+extern "C" void getSelectBombPrice__12dMsgObject_cFv(); // 1
+extern "C" void setEquipBombInfo__12dMsgObject_cFv(); // 1
+extern "C" void setSelectCancelPos__12dMsgObject_cFUc(); // 1
+extern "C" void dMsgObject_getFundRaising__Fv(); // 1
+extern "C" void dMsgObject_setFundRaising__FUs(); // 1
+extern "C" void dMsgObject_getOffering__Fv(); // 1
+extern "C" void dMsgObject_addOffering__Fs(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void cM_rndF__Ff(); // 1
+extern "C" void __mi__7cSAngleCFs(); // 1
+extern "C" void __ct__7cSGlobeFRC4cXyz(); // 1
+extern "C" void messageSePlay__7Z2SeMgrFUsP3VecSc(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
@@ -3053,7 +2936,7 @@ bool dMsgFlow_c::event042(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8024DAB0() {
+asm static void cLib_calcTimer__template3(s32* field_0) {
 	nofralloc
 #include "asm/d/msg/d_msg_flow/func_8024DAB0.s"
 }

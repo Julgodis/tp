@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build cDylPhs (['cDylPhs']) False/False
-// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
-/* top-level dependencies (begin ['request_of_phase_process_class']) */
-/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 
-/* top-level dependencies (begin ['cDylPhs']) */
-// outer dependency: ('request_of_phase_process_class',)
-/* top-level dependencies (end ['cDylPhs']) */
 struct cDylPhs {
-	// ('request_of_phase_process_class',)
 	/* 80018804 */ s32 phase_01(void*);
 	/* 8001880C */ void phase_02(s16*);
 	/* 80018844 */ bool phase_03(void*);
@@ -28,10 +20,6 @@ struct cDylPhs {
 	/* 80018890 */ void Unlink(request_of_phase_process_class*, s16);
 };
 
-// build request_of_phase_process_class (['request_of_phase_process_class']) True/True
-// build DynamicModuleControlBase (['DynamicModuleControlBase']) False/False
-/* top-level dependencies (begin ['DynamicModuleControlBase']) */
-/* top-level dependencies (end ['DynamicModuleControlBase']) */
 struct DynamicModuleControlBase {
 	/* 800188DC */ bool getModuleName() const;
 	/* 802621CC */ ~DynamicModuleControlBase();
@@ -40,48 +28,27 @@ struct DynamicModuleControlBase {
 	/* 802623EC */ void load_async();
 };
 
-// build DynamicModuleControl (['DynamicModuleControl']) False/False
-/* top-level dependencies (begin ['DynamicModuleControl']) */
-/* top-level dependencies (end ['DynamicModuleControl']) */
 struct DynamicModuleControl {
 	/* 800188E4 */ ~DynamicModuleControl();
 	/* 80262660 */ DynamicModuleControl(char const*);
 	/* 8026275C */ void initialize();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
-	// ('JKRHeap',)
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 	/* 802D0BF4 */ void adjustSize();
 };
 
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4224 */ void getGlbResource(char const*);
 	/* 802D43A0 */ void detachResource(void*, JKRFileLoader*);
 };
 
-// build JKRFileCache (['JKRFileCache']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRFileCache']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRFileCache']) */
 struct JKRFileCache {
-	// ('JKRHeap',)
 	/* 802D49B4 */ void mount(char const*, JKRHeap*, char const*);
 };
 
@@ -89,28 +56,28 @@ struct JKRFileCache {
 // Forward References:
 // 
 
-static void cCc_Init();
-void cDyl_IsLinked(s16);
-void cDyl_Unlink(s16);
-void cDyl_LinkASync(s16);
-static void cDyl_InitCallback(void*);
-void cDyl_InitAsync();
-void cDyl_InitAsyncIsDone();
+static void cCc_Init(); // 2
+void cDyl_IsLinked(s16); // 2
+void cDyl_Unlink(s16); // 2
+void cDyl_LinkASync(s16); // 2
+static void cDyl_InitCallback(void*); // 2
+void cDyl_InitAsync(); // 2
+void cDyl_InitAsyncIsDone(); // 2
 
-extern "C" static void cCc_Init__Fv();
-extern "C" void cDyl_IsLinked__Fs();
-extern "C" void cDyl_Unlink__Fs();
-extern "C" void cDyl_LinkASync__Fs();
-extern "C" static void cDyl_InitCallback__FPv();
-extern "C" void cDyl_InitAsync__Fv();
-extern "C" void cDyl_InitAsyncIsDone__Fv();
-extern "C" s32 phase_01__7cDylPhsFPv();
-extern "C" void phase_02__7cDylPhsFPs();
-extern "C" bool phase_03__7cDylPhsFPv();
-extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs();
-extern "C" void Unlink__7cDylPhsFP30request_of_phase_process_classs();
-extern "C" bool getModuleName__24DynamicModuleControlBaseCFv();
-extern "C" void __dt__20DynamicModuleControlFv();
+extern "C" static void cCc_Init__Fv(); // 1
+extern "C" void cDyl_IsLinked__Fs(); // 1
+extern "C" void cDyl_Unlink__Fs(); // 1
+extern "C" void cDyl_LinkASync__Fs(); // 1
+extern "C" static void cDyl_InitCallback__FPv(); // 1
+extern "C" void cDyl_InitAsync__Fv(); // 1
+extern "C" void cDyl_InitAsyncIsDone__Fv(); // 1
+extern "C" s32 phase_01__7cDylPhsFPv(); // 1
+extern "C" void phase_02__7cDylPhsFPs(); // 1
+extern "C" bool phase_03__7cDylPhsFPv(); // 1
+extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs(); // 1
+extern "C" void Unlink__7cDylPhsFP30request_of_phase_process_classs(); // 1
+extern "C" bool getModuleName__24DynamicModuleControlBaseCFv(); // 1
+extern "C" void __dt__20DynamicModuleControlFv(); // 1
 SECTION_RODATA extern const void*const DynamicNameTable[1514];
 SECTION_RODATA extern const u8 c_c_dylink__stringBase0[10896];
 SECTION_DATA extern void*data_803A3590[4];
@@ -123,43 +90,43 @@ SECTION_SBSS extern u8 cDyl_DVD[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memset();
-extern "C" void OSReport_Error();
-void mDoExt_getArchiveHeap();
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
-void fopScnM_CreateReq(s16, s16, u16, u32);
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void OSSetStringTable();
-extern "C" void _savegpr_23();
-extern "C" void _restgpr_23();
-extern "C" void strcmp();
+SECTION_INIT void memset(); // 1
+extern "C" void OSReport_Error(); // 1
+void mDoExt_getArchiveHeap(); // 2
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
+void fopScnM_CreateReq(s16, s16, u16, u32); // 2
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void OSSetStringTable(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void strcmp(); // 1
 
-SECTION_INIT void memset();
-extern "C" void OSReport_Error();
-extern "C" void mDoExt_getArchiveHeap__Fv();
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
-extern "C" void fopScnM_CreateReq__FssUsUl();
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
-extern "C" void __dt__24DynamicModuleControlBaseFv();
-extern "C" void link__24DynamicModuleControlBaseFv();
-extern "C" void unlink__24DynamicModuleControlBaseFv();
-extern "C" void load_async__24DynamicModuleControlBaseFv();
-extern "C" void __ct__20DynamicModuleControlFPCc();
-extern "C" void initialize__20DynamicModuleControlFv();
-extern "C" void becomeCurrentHeap__7JKRHeapFv();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb();
-extern "C" void adjustSize__12JKRSolidHeapFv();
-extern "C" void getGlbResource__13JKRFileLoaderFPCc();
-extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader();
-extern "C" void mount__12JKRFileCacheFPCcP7JKRHeapPCc();
-extern "C" void OSSetStringTable();
-extern "C" void _savegpr_23();
-extern "C" void _restgpr_23();
-extern "C" void strcmp();
+SECTION_INIT void memset(); // 1
+extern "C" void OSReport_Error(); // 1
+extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
+extern "C" void fopScnM_CreateReq__FssUsUl(); // 1
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+extern "C" void __dt__24DynamicModuleControlBaseFv(); // 1
+extern "C" void link__24DynamicModuleControlBaseFv(); // 1
+extern "C" void unlink__24DynamicModuleControlBaseFv(); // 1
+extern "C" void load_async__24DynamicModuleControlBaseFv(); // 1
+extern "C" void __ct__20DynamicModuleControlFPCc(); // 1
+extern "C" void initialize__20DynamicModuleControlFv(); // 1
+extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb(); // 1
+extern "C" void adjustSize__12JKRSolidHeapFv(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCc(); // 1
+extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader(); // 1
+extern "C" void mount__12JKRFileCacheFPCcP7JKRHeapPCc(); // 1
+extern "C" void OSSetStringTable(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void strcmp(); // 1
 SECTION_DATA extern void*const __vt__20DynamicModuleControl[13];
 
 // 

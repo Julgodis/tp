@@ -9,71 +9,34 @@
 // Types:
 // 
 
-// build _GXColorS10 (['_GXColorS10']) False/False
-/* top-level dependencies (begin ['_GXColorS10']) */
-/* top-level dependencies (end ['_GXColorS10']) */
 struct _GXColorS10 {
 };
 
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80009184 */ ~cXyz();
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
 };
 
-// build Vec (['Vec']) True/True
-// build J3DLightInfo (['J3DLightInfo']) False/False
-/* top-level dependencies (begin ['J3DLightInfo']) */
-/* top-level dependencies (end ['J3DLightInfo']) */
 struct J3DLightInfo {
 	/* 803256C4 */ void operator=(J3DLightInfo const&);
 };
 
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
-// build cXyz (['cXyz']) True/True
-// build _GXColorS10 (['_GXColorS10']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
 struct dKy_tevstr_c {
 };
 
-/* top-level dependencies (begin ['dScnKy_env_light_c']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('_GXColorS10',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
-	// ('J3DModelData',)
-	// ('cXyz',)
-	// ('_GXColorS10',)
-	// ('dKy_tevstr_c',)
 	/* 8019F2E8 */ dScnKy_env_light_c();
 	/* 8019F4FC */ void setDaytime();
 	/* 8019F788 */ void setSunpos();
@@ -98,375 +61,187 @@ struct dScnKy_env_light_c {
 	/* 801ADBBC */ ~dScnKy_env_light_c();
 };
 
-// build GB_MAPLE_COL_CHANGE (['GB_MAPLE_COL_CHANGE']) False/False
-/* top-level dependencies (begin ['GB_MAPLE_COL_CHANGE']) */
-/* top-level dependencies (end ['GB_MAPLE_COL_CHANGE']) */
 struct GB_MAPLE_COL_CHANGE {
 	/* 8019F400 */ GB_MAPLE_COL_CHANGE();
 };
 
-// build BOSS_LIGHT (['BOSS_LIGHT']) False/False
-/* top-level dependencies (begin ['BOSS_LIGHT']) */
-/* top-level dependencies (end ['BOSS_LIGHT']) */
 struct BOSS_LIGHT {
 	/* 8019F438 */ ~BOSS_LIGHT();
 	/* 8019F474 */ BOSS_LIGHT();
 };
 
-// build DUNGEON_LIGHT (['DUNGEON_LIGHT']) False/False
-/* top-level dependencies (begin ['DUNGEON_LIGHT']) */
-/* top-level dependencies (end ['DUNGEON_LIGHT']) */
 struct DUNGEON_LIGHT {
 	/* 8019F478 */ ~DUNGEON_LIGHT();
 	/* 8019F4B4 */ DUNGEON_LIGHT();
 };
 
-// build WIND_INF_ENTITY (['WIND_INF_ENTITY']) False/False
-/* top-level dependencies (begin ['WIND_INF_ENTITY']) */
-/* top-level dependencies (end ['WIND_INF_ENTITY']) */
 struct WIND_INF_ENTITY {
 	/* 8019F4B8 */ ~WIND_INF_ENTITY();
 	/* 8019F4F4 */ WIND_INF_ENTITY();
 };
 
-// build LIGHT_INFLUENCE (['LIGHT_INFLUENCE']) False/False
-/* top-level dependencies (begin ['LIGHT_INFLUENCE']) */
-/* top-level dependencies (end ['LIGHT_INFLUENCE']) */
 struct LIGHT_INFLUENCE {
 	/* 800CFC7C */ ~LIGHT_INFLUENCE();
 	/* 8019F4F8 */ LIGHT_INFLUENCE();
 };
 
-// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
-/* top-level dependencies (begin ['dStage_roomControl_c']) */
-/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 	/* 8019F780 */ void GetTimePass();
 };
 
-// build color_RGB_class (['color_RGB_class']) False/False
-/* top-level dependencies (begin ['color_RGB_class']) */
-/* top-level dependencies (end ['color_RGB_class']) */
 struct color_RGB_class {
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build J3DModelData (['J3DModelData']) True/True
-// build J3DMaterial (['J3DMaterial']) False/False
-/* top-level dependencies (begin ['J3DMaterial']) */
-/* top-level dependencies (end ['J3DMaterial']) */
 struct J3DMaterial {
 };
 
-// build J3DColorBlock (['J3DColorBlock']) False/False
-// build J3DLightObj (['J3DLightObj']) False/False
-/* top-level dependencies (begin ['J3DLightObj']) */
-/* top-level dependencies (end ['J3DLightObj']) */
 struct J3DLightObj {
 };
 
-// build J3DGXColor (['J3DGXColor']) False/False
-/* top-level dependencies (begin ['J3DGXColor']) */
-/* top-level dependencies (end ['J3DGXColor']) */
 struct J3DGXColor {
 };
 
-/* top-level dependencies (begin ['J3DColorBlock']) */
-// outer dependency: ('J3DLightObj',)
-// outer dependency: ('J3DGXColor',)
-/* top-level dependencies (end ['J3DColorBlock']) */
 struct J3DColorBlock {
-	// ('J3DLightObj',)
-	// ('J3DGXColor',)
 	/* 801A4C08 */ void setLight(u32, J3DLightObj*);
 	/* 801A4C0C */ void setAmbColor(u32, J3DGXColor const*);
 };
 
-// build J3DLightObj (['J3DLightObj']) True/True
-// build J3DGXColor (['J3DGXColor']) True/True
-// build stage_pure_lightvec_info_class (['stage_pure_lightvec_info_class']) False/False
-/* top-level dependencies (begin ['stage_pure_lightvec_info_class']) */
-/* top-level dependencies (end ['stage_pure_lightvec_info_class']) */
 struct stage_pure_lightvec_info_class {
 };
 
-// build DALKMIST_INFLUENCE (['DALKMIST_INFLUENCE']) False/False
-/* top-level dependencies (begin ['DALKMIST_INFLUENCE']) */
-/* top-level dependencies (end ['DALKMIST_INFLUENCE']) */
 struct DALKMIST_INFLUENCE {
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build mDoGph_gInf_c (['mDoGph_gInf_c']) False/False
-/* top-level dependencies (begin ['mDoGph_gInf_c']) */
-/* top-level dependencies (end ['mDoGph_gInf_c']) */
 struct mDoGph_gInf_c {
-	// build bloom_c (['mDoGph_gInf_c', 'bloom_c']) False/False
-	/* dependencies (begin ['mDoGph_gInf_c', 'bloom_c']) */
-	/* dependencies (end ['mDoGph_gInf_c', 'bloom_c']) */
 	struct bloom_c {
 		/* 80009544 */ void create();
 	};
 
 };
 
-// build mDoExt_baseAnm (['mDoExt_baseAnm']) False/False
-/* top-level dependencies (begin ['mDoExt_baseAnm']) */
-/* top-level dependencies (end ['mDoExt_baseAnm']) */
 struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-// build mDoExt_btkAnm (['mDoExt_btkAnm']) False/False
-// build J3DMaterialTable (['J3DMaterialTable']) False/False
-/* top-level dependencies (begin ['J3DMaterialTable']) */
-/* top-level dependencies (end ['J3DMaterialTable']) */
-struct J3DMaterialTable {
-};
-
-// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) False/False
-/* top-level dependencies (begin ['J3DAnmTextureSRTKey']) */
-/* top-level dependencies (end ['J3DAnmTextureSRTKey']) */
 struct J3DAnmTextureSRTKey {
 };
 
-/* top-level dependencies (begin ['mDoExt_btkAnm']) */
-// outer dependency: ('J3DMaterialTable',)
-// outer dependency: ('J3DAnmTextureSRTKey',)
-/* top-level dependencies (end ['mDoExt_btkAnm']) */
+struct J3DMaterialTable {
+};
+
 struct mDoExt_btkAnm {
-	// ('J3DMaterialTable',)
-	// ('J3DAnmTextureSRTKey',)
 	/* 8000D63C */ void init(J3DMaterialTable*, J3DAnmTextureSRTKey*, int, int, f32, s16, s16);
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) True/True
-// build J3DModel (['J3DModel']) False/False
-/* top-level dependencies (begin ['J3DModel']) */
-/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build dComIfG_play_c (['dComIfG_play_c']) False/False
-/* top-level dependencies (begin ['dComIfG_play_c']) */
-/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002C950 */ void getLayerNo_common(char const*, int, int);
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-// build dSv_player_status_b_c (['dSv_player_status_b_c']) False/False
-/* top-level dependencies (begin ['dSv_player_status_b_c']) */
-/* top-level dependencies (end ['dSv_player_status_b_c']) */
 struct dSv_player_status_b_c {
 	/* 80032BB0 */ void isDarkClearLV(int) const;
 };
 
-// build dSv_memBit_c (['dSv_memBit_c']) False/False
-/* top-level dependencies (begin ['dSv_memBit_c']) */
-/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 80034860 */ void isSwitch(int) const;
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349A4 */ void offEventBit(u16);
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dSv_info_c (['dSv_info_c']) False/False
-/* top-level dependencies (begin ['dSv_info_c']) */
-/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build dPa_control_c (['dPa_control_c']) False/False
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
-// build _GXColor (['_GXColor']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build cXyz (['cXyz']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) False/False
-/* top-level dependencies (begin ['dPa_levelEcallBack']) */
-/* top-level dependencies (end ['dPa_levelEcallBack']) */
 struct dPa_levelEcallBack {
 };
 
-/* top-level dependencies (begin ['dPa_control_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('_GXColor',)
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dPa_levelEcallBack',)
-/* top-level dependencies (end ['dPa_control_c']) */
 struct dPa_control_c {
-	// ('_GXColor',)
-	// ('dKy_tevstr_c',)
-	// ('dPa_levelEcallBack',)
-	// ('csXyz',)
-	// ('cXyz',)
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-// build csXyz (['csXyz']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) True/True
-// build cBgS (['cBgS']) False/False
-// build cBgS_GndChk (['cBgS_GndChk']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cBgS_GndChk']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cBgS_GndChk']) */
 struct cBgS_GndChk {
-	// ('cXyz',)
 	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
-/* top-level dependencies (begin ['cBgS']) */
-// outer dependency: ('cBgS_GndChk',)
-/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
-	// ('cBgS_GndChk',)
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
 };
 
-// build cBgS_GndChk (['cBgS_GndChk']) True/True
-// build dBgS (['dBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-/* top-level dependencies (begin ['dBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// ('cBgS_PolyInfo',)
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 	/* 80074EA0 */ void GetPolyAtt1(cBgS_PolyInfo const&);
 };
 
-// build dBgS_CamGndChk_Wtr (['dBgS_CamGndChk_Wtr']) False/False
-/* top-level dependencies (begin ['dBgS_CamGndChk_Wtr']) */
-/* top-level dependencies (end ['dBgS_CamGndChk_Wtr']) */
 struct dBgS_CamGndChk_Wtr {
 	/* 80077A00 */ dBgS_CamGndChk_Wtr();
 	/* 80077A98 */ ~dBgS_CamGndChk_Wtr();
 };
 
-// build daPy_py_c (['daPy_py_c']) False/False
-/* top-level dependencies (begin ['daPy_py_c']) */
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-// build dMsgObject_c (['dMsgObject_c']) False/False
-/* top-level dependencies (begin ['dMsgObject_c']) */
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 8023819C */ void getActor();
 };
 
-// build JPABaseEmitter (['JPABaseEmitter']) False/False
-/* top-level dependencies (begin ['JPABaseEmitter']) */
-/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
 	/* 8027EC60 */ void deleteAllParticle();
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) True/True
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build Z2SceneMgr (['Z2SceneMgr']) False/False
-/* top-level dependencies (begin ['Z2SceneMgr']) */
-/* top-level dependencies (end ['Z2SceneMgr']) */
 struct Z2SceneMgr {
 	/* 802BA120 */ void load2ndDynamicWave();
 };
 
-// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
-/* top-level dependencies (begin ['Z2EnvSeMgr']) */
-/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
 	/* 802C611C */ Z2EnvSeMgr();
 	/* 802C6540 */ ~Z2EnvSeMgr();
 	/* 802C6998 */ void resetScene();
 };
 
-// build _GXFogType (['_GXFogType']) False/False
-/* top-level dependencies (begin ['_GXFogType']) */
-/* top-level dependencies (end ['_GXFogType']) */
 struct _GXFogType {
 };
 
-// build JUTNameTab (['JUTNameTab']) False/False
-/* top-level dependencies (begin ['JUTNameTab']) */
-/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
 	/* 802DEAF8 */ void getName(u16) const;
 };
 
-// build J3DTexMtxInfo (['J3DTexMtxInfo']) False/False
-/* top-level dependencies (begin ['J3DTexMtxInfo']) */
-/* top-level dependencies (end ['J3DTexMtxInfo']) */
 struct J3DTexMtxInfo {
 	/* 80325794 */ void setEffectMtx(f32 (* )[4]);
 };
 
-// build J3DFrameCtrl (['J3DFrameCtrl']) False/False
-/* top-level dependencies (begin ['J3DFrameCtrl']) */
-/* top-level dependencies (end ['J3DFrameCtrl']) */
 struct J3DFrameCtrl {
 	/* 803283FC */ void init(s16);
 };
@@ -475,350 +250,350 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void dKy_WolfPowerup_AmbCol(_GXColorS10*);
-static void dKy_sense_pat_get();
-static void dKy_WolfPowerup_BgAmbCol(_GXColorS10*);
-static void dKy_WolfPowerup_FogNearFar(f32*, f32*);
-static void dKy_pos2_get_angle(cXyz*, cXyz*, s16*, s16*);
-static void dKy_twi_wolflight_set(int);
-static void dKy_lightdir_set(f32, f32, Vec*);
-static void dKy_GXInitLightSpot(J3DLightInfo*, f32, u8);
-static void dKy_GXInitLightDistAttn(J3DLightInfo*, f32, f32, u8);
-static void u8_data_ratio_set(u8, u8, f32);
-static void s16_data_ratio_set(s16, s16, f32);
-static void kankyo_color_ratio_calc_common(s16, f32);
-static void kankyo_color_ratio_calc(_GXColor*, _GXColorS10, f32);
-static void kankyo_color_ratio_set(u8, u8, f32, u8, u8, f32, s16, f32);
-static void fl_data_ratio_set(f32, f32, f32);
-static void float_kankyo_color_ratio_set(f32, f32, f32, f32, f32, f32, f32, f32);
-static void get_parcent(f32, f32, f32);
-void dKy_get_parcent(f32, f32, f32);
-static void dKy_FiveSenses_fullthrottle_dark_static1();
-void dKy_FiveSenses_fullthrottle_dark();
-static void dKy_light_influence_id(cXyz, int);
-static void dKy_eflight_influence_id(cXyz, int);
-static void dKy_light_influence_col(int);
-void dKy_light_influence_col(_GXColor*, f32);
-static void dKy_light_influence_power(int);
-static void dKy_light_influence_yuragi(int);
-static void dKy_light_influence_distance(cXyz, int);
-static void plight_init();
-static void darkmist_init();
-static void plight_set();
-static void bgparts_activelight_init();
-static void dungeonlight_init();
-static void undwater_init();
-static void dKy_light_size_get(char const*);
-static void envcolor_init();
-void dKy_clear_game_init();
-void dKy_getdaytime_hour();
-void dKy_getdaytime_minute();
-void dKy_daynight_check();
-void dKy_getDarktime_hour();
-void dKy_getDarktime_minute();
-void dKy_getDarktime_week();
-static void dKy_calc_color_set(_GXColorS10*, color_RGB_class*, color_RGB_class*, color_RGB_class*, color_RGB_class*, f32, f32, _GXColorS10, f32);
-static void cLib_addCalcU8(u8*, u8, s16, s16);
-static void setLightTevColorType_MAJI_sub(J3DMaterial*, dKy_tevstr_c*, int);
-static void dKy_cloudshadow_scroll(J3DModelData*, dKy_tevstr_c*, int);
-void dKy_undwater_filter_draw();
-extern "C" static void dKy_Draw__FP17sub_kankyo__class();
-extern "C" static void dKy_Execute__FP17sub_kankyo__class();
-extern "C" static bool dKy_IsDelete__FP17sub_kankyo__class();
-extern "C" static void dKy_Delete__FP17sub_kankyo__class();
-static void dKy_Create(void*);
-void dKy_setLight_init();
-void dKy_setLight();
-static void dKy_GlobalLight_set();
-static void dKy_lightswitch_check(stage_pure_lightvec_info_class*, char);
-static void dKy_setLight_nowroom_common(char, f32);
-void dKy_setLight_nowroom(char);
-void dKy_setLight_nowroom_grass(char, f32);
-void dKy_move_room_ratio(dKy_tevstr_c*, s8*);
-void dKy_setLight_nowroom_actor(dKy_tevstr_c*);
-void dKy_setLight_again();
-void dKy_Global_amb_set(dKy_tevstr_c*);
-static void dKy_light_influence_pos(int);
-void dKy_plight_near_pos();
-void dKy_mock_light_every_set(LIGHT_INFLUENCE*);
-void dKy_plight_set(LIGHT_INFLUENCE*);
-void dKy_dalkmist_inf_set(DALKMIST_INFLUENCE*);
-void dKy_dalkmist_inf_cut(DALKMIST_INFLUENCE*);
-void dKy_plight_priority_set(LIGHT_INFLUENCE*);
-void dKy_plight_cut(LIGHT_INFLUENCE*);
-void dKy_efplight_set(LIGHT_INFLUENCE*);
-void dKy_efplight_cut(LIGHT_INFLUENCE*);
-static void dKy_bgparts_activelight_set(LIGHT_INFLUENCE*, int);
-static void dKy_bgparts_activelight_cut(int);
-void dKy_actor_addcol_amb_set(s16, s16, s16, f32);
-void dKy_bg_addcol_amb_set(s16, s16, s16, f32);
-void dKy_bg1_addcol_amb_set(s16, s16, s16, f32);
-static void dKy_bg2_addcol_amb_set(s16, s16, s16, f32);
-static void dKy_bg3_addcol_amb_set(s16, s16, s16, f32);
-void dKy_addcol_fog_set(s16, s16, s16, f32);
-static void dKy_actor_addcol_set(s16, s16, s16, f32);
-void dKy_vrbox_addcol_sky0_set(s16, s16, s16, f32);
-void dKy_vrbox_addcol_kasumi_set(s16, s16, s16, f32);
-static void dKy_vrbox_addcol_set(s16, s16, s16, f32);
-static void dKy_fog_startendz_set(f32, f32, f32);
-void dKy_Itemgetcol_chg_on();
-static void dKy_Sound_init();
-void dKy_Sound_set(cXyz, int, u32, int);
-void dKy_Sound_get();
-void dKy_SordFlush_set(cXyz, int);
-static void GxFogSet_Sub(_GXColor*);
-static void GxFog_set();
-void dKy_GxFog_set();
-void dKy_GxFog_tevstr_set(dKy_tevstr_c*);
-void dKy_GfFog_tevstr_set(dKy_tevstr_c*);
-static void GxXFog_set();
-void dKy_change_colpat(u8);
-void dKy_custom_colset(u8, u8, f32);
-void dKy_setLight_mine(dKy_tevstr_c*);
-void dKy_tevstr_init(dKy_tevstr_c*, s8, u8);
-void dKy_rain_check();
-void dKy_set_allcol_ratio(f32);
-void dKy_set_actcol_ratio(f32);
-void dKy_set_bgcol_ratio(f32);
-void dKy_set_fogcol_ratio(f32);
-void dKy_set_vrboxcol_ratio(f32);
-static void dKy_set_vrboxsoracol_ratio(f32);
-static void dKy_set_vrboxkumocol_ratio(f32);
-void dKy_itudemo_se();
-void dKy_get_dayofweek();
-void dKy_set_nexttime(f32);
-void dKy_instant_timechg(f32);
-void dKy_instant_rainchg();
-static void NewAmbColGet(_GXColorS10*);
-static void dKy_ParticleColor_get_base(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32);
-void dKy_ParticleColor_get_actor(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32);
-void dKy_ParticleColor_get_bg(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32);
-static void dKy_BossLight_set(cXyz*, _GXColor*, f32, u8);
-void dKy_BossSpotLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8);
-void dKy_WolfEyeLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8);
-static void dKy_twilight_camelight_set();
-static void dKy_WaterIn_Light_set();
-void dKy_camera_water_in_status_set(u8);
-void dKy_camera_water_in_status_check();
-void dKy_pol_efftype_get(cBgS_PolyInfo const*);
-void dKy_pol_efftype2_get(cBgS_PolyInfo const*);
-void dKy_pol_sound_get(cBgS_PolyInfo const*);
-void dKy_pol_argument_get(cBgS_PolyInfo const*);
-void dKy_pol_eff_prim_get(cBgS_PolyInfo const*, _GXColor*);
-void dKy_pol_eff_env_get(cBgS_PolyInfo const*, _GXColor*);
-void dKy_pol_eff2_prim_get(cBgS_PolyInfo const*, _GXColor*);
-void dKy_pol_eff2_env_get(cBgS_PolyInfo const*, _GXColor*);
-void dKy_pol_eff_alpha_get(cBgS_PolyInfo const*);
-void dKy_pol_eff_ratio_get(cBgS_PolyInfo const*);
-void dKy_pol_eff2_alpha_get(cBgS_PolyInfo const*);
-void dKy_pol_eff2_ratio_get(cBgS_PolyInfo const*);
-void dKy_TeachWind_existence_chk();
-static void dKy_SunMoon_Light_Check();
-static void dKy_Outdoor_check();
-static void dKy_Indoor_check();
-bool dKy_withwarp_capture_check();
-void dKy_depth_dist_set(void*);
-void dKy_darkworld_check();
-static void dKy_F_SP121Check(char const*, int, u8*, int);
-void dKy_darkworld_stage_check(char const*, int);
-void dKy_darkworld_spot_check(char const*, int);
-void dKy_darkworld_Area_set(char const*, int);
-static void dKy_murky_set(J3DMaterial*);
-void dKy_shadow_mode_set(u8);
-void dKy_shadow_mode_reset(u8);
-static void dKy_shadow_mode_check(u8);
-void dKy_bg_MAxx_proc(void*);
-extern "C" void __sinit_d_kankyo_cpp();
-static void dKankyo_DayProc();
+static void dKy_WolfPowerup_AmbCol(_GXColorS10*); // 2
+static void dKy_sense_pat_get(); // 2
+static void dKy_WolfPowerup_BgAmbCol(_GXColorS10*); // 2
+static void dKy_WolfPowerup_FogNearFar(f32*, f32*); // 2
+static void dKy_pos2_get_angle(cXyz*, cXyz*, s16*, s16*); // 2
+static void dKy_twi_wolflight_set(int); // 2
+static void dKy_lightdir_set(f32, f32, Vec*); // 2
+static void dKy_GXInitLightSpot(J3DLightInfo*, f32, u8); // 2
+static void dKy_GXInitLightDistAttn(J3DLightInfo*, f32, f32, u8); // 2
+static void u8_data_ratio_set(u8, u8, f32); // 2
+static void s16_data_ratio_set(s16, s16, f32); // 2
+static void kankyo_color_ratio_calc_common(s16, f32); // 2
+static void kankyo_color_ratio_calc(_GXColor*, _GXColorS10, f32); // 2
+static void kankyo_color_ratio_set(u8, u8, f32, u8, u8, f32, s16, f32); // 2
+static void fl_data_ratio_set(f32, f32, f32); // 2
+static void float_kankyo_color_ratio_set(f32, f32, f32, f32, f32, f32, f32, f32); // 2
+static void get_parcent(f32, f32, f32); // 2
+void dKy_get_parcent(f32, f32, f32); // 2
+static void dKy_FiveSenses_fullthrottle_dark_static1(); // 2
+void dKy_FiveSenses_fullthrottle_dark(); // 2
+static void dKy_light_influence_id(cXyz, int); // 2
+static void dKy_eflight_influence_id(cXyz, int); // 2
+static void dKy_light_influence_col(int); // 2
+void dKy_light_influence_col(_GXColor*, f32); // 2
+static void dKy_light_influence_power(int); // 2
+static void dKy_light_influence_yuragi(int); // 2
+static void dKy_light_influence_distance(cXyz, int); // 2
+static void plight_init(); // 2
+static void darkmist_init(); // 2
+static void plight_set(); // 2
+static void bgparts_activelight_init(); // 2
+static void dungeonlight_init(); // 2
+static void undwater_init(); // 2
+static void dKy_light_size_get(char const*); // 2
+static void envcolor_init(); // 2
+void dKy_clear_game_init(); // 2
+void dKy_getdaytime_hour(); // 2
+void dKy_getdaytime_minute(); // 2
+void dKy_daynight_check(); // 2
+void dKy_getDarktime_hour(); // 2
+void dKy_getDarktime_minute(); // 2
+void dKy_getDarktime_week(); // 2
+static void dKy_calc_color_set(_GXColorS10*, color_RGB_class*, color_RGB_class*, color_RGB_class*, color_RGB_class*, f32, f32, _GXColorS10, f32); // 2
+static void cLib_addCalcU8(u8*, u8, s16, s16); // 2
+static void setLightTevColorType_MAJI_sub(J3DMaterial*, dKy_tevstr_c*, int); // 2
+static void dKy_cloudshadow_scroll(J3DModelData*, dKy_tevstr_c*, int); // 2
+void dKy_undwater_filter_draw(); // 2
+extern "C" static void dKy_Draw__FP17sub_kankyo__class(); // 1
+extern "C" static void dKy_Execute__FP17sub_kankyo__class(); // 1
+extern "C" static bool dKy_IsDelete__FP17sub_kankyo__class(); // 1
+extern "C" static void dKy_Delete__FP17sub_kankyo__class(); // 1
+static void dKy_Create(void*); // 2
+void dKy_setLight_init(); // 2
+void dKy_setLight(); // 2
+static void dKy_GlobalLight_set(); // 2
+static void dKy_lightswitch_check(stage_pure_lightvec_info_class*, char); // 2
+static void dKy_setLight_nowroom_common(char, f32); // 2
+void dKy_setLight_nowroom(char); // 2
+void dKy_setLight_nowroom_grass(char, f32); // 2
+void dKy_move_room_ratio(dKy_tevstr_c*, s8*); // 2
+void dKy_setLight_nowroom_actor(dKy_tevstr_c*); // 2
+void dKy_setLight_again(); // 2
+void dKy_Global_amb_set(dKy_tevstr_c*); // 2
+static void dKy_light_influence_pos(int); // 2
+void dKy_plight_near_pos(); // 2
+void dKy_mock_light_every_set(LIGHT_INFLUENCE*); // 2
+void dKy_plight_set(LIGHT_INFLUENCE*); // 2
+void dKy_dalkmist_inf_set(DALKMIST_INFLUENCE*); // 2
+void dKy_dalkmist_inf_cut(DALKMIST_INFLUENCE*); // 2
+void dKy_plight_priority_set(LIGHT_INFLUENCE*); // 2
+void dKy_plight_cut(LIGHT_INFLUENCE*); // 2
+void dKy_efplight_set(LIGHT_INFLUENCE*); // 2
+void dKy_efplight_cut(LIGHT_INFLUENCE*); // 2
+static void dKy_bgparts_activelight_set(LIGHT_INFLUENCE*, int); // 2
+static void dKy_bgparts_activelight_cut(int); // 2
+void dKy_actor_addcol_amb_set(s16, s16, s16, f32); // 2
+void dKy_bg_addcol_amb_set(s16, s16, s16, f32); // 2
+void dKy_bg1_addcol_amb_set(s16, s16, s16, f32); // 2
+static void dKy_bg2_addcol_amb_set(s16, s16, s16, f32); // 2
+static void dKy_bg3_addcol_amb_set(s16, s16, s16, f32); // 2
+void dKy_addcol_fog_set(s16, s16, s16, f32); // 2
+static void dKy_actor_addcol_set(s16, s16, s16, f32); // 2
+void dKy_vrbox_addcol_sky0_set(s16, s16, s16, f32); // 2
+void dKy_vrbox_addcol_kasumi_set(s16, s16, s16, f32); // 2
+static void dKy_vrbox_addcol_set(s16, s16, s16, f32); // 2
+static void dKy_fog_startendz_set(f32, f32, f32); // 2
+void dKy_Itemgetcol_chg_on(); // 2
+static void dKy_Sound_init(); // 2
+void dKy_Sound_set(cXyz, int, u32, int); // 2
+void dKy_Sound_get(); // 2
+void dKy_SordFlush_set(cXyz, int); // 2
+static void GxFogSet_Sub(_GXColor*); // 2
+static void GxFog_set(); // 2
+void dKy_GxFog_set(); // 2
+void dKy_GxFog_tevstr_set(dKy_tevstr_c*); // 2
+void dKy_GfFog_tevstr_set(dKy_tevstr_c*); // 2
+static void GxXFog_set(); // 2
+void dKy_change_colpat(u8); // 2
+void dKy_custom_colset(u8, u8, f32); // 2
+void dKy_setLight_mine(dKy_tevstr_c*); // 2
+void dKy_tevstr_init(dKy_tevstr_c*, s8, u8); // 2
+void dKy_rain_check(); // 2
+void dKy_set_allcol_ratio(f32); // 2
+void dKy_set_actcol_ratio(f32); // 2
+void dKy_set_bgcol_ratio(f32); // 2
+void dKy_set_fogcol_ratio(f32); // 2
+void dKy_set_vrboxcol_ratio(f32); // 2
+static void dKy_set_vrboxsoracol_ratio(f32); // 2
+static void dKy_set_vrboxkumocol_ratio(f32); // 2
+void dKy_itudemo_se(); // 2
+void dKy_get_dayofweek(); // 2
+void dKy_set_nexttime(f32); // 2
+void dKy_instant_timechg(f32); // 2
+void dKy_instant_rainchg(); // 2
+static void NewAmbColGet(_GXColorS10*); // 2
+static void dKy_ParticleColor_get_base(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); // 2
+void dKy_ParticleColor_get_actor(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); // 2
+void dKy_ParticleColor_get_bg(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); // 2
+static void dKy_BossLight_set(cXyz*, _GXColor*, f32, u8); // 2
+void dKy_BossSpotLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8); // 2
+void dKy_WolfEyeLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8); // 2
+static void dKy_twilight_camelight_set(); // 2
+static void dKy_WaterIn_Light_set(); // 2
+void dKy_camera_water_in_status_set(u8); // 2
+void dKy_camera_water_in_status_check(); // 2
+void dKy_pol_efftype_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_efftype2_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_sound_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_argument_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_eff_prim_get(cBgS_PolyInfo const*, _GXColor*); // 2
+void dKy_pol_eff_env_get(cBgS_PolyInfo const*, _GXColor*); // 2
+void dKy_pol_eff2_prim_get(cBgS_PolyInfo const*, _GXColor*); // 2
+void dKy_pol_eff2_env_get(cBgS_PolyInfo const*, _GXColor*); // 2
+void dKy_pol_eff_alpha_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_eff_ratio_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_eff2_alpha_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_eff2_ratio_get(cBgS_PolyInfo const*); // 2
+void dKy_TeachWind_existence_chk(); // 2
+static void dKy_SunMoon_Light_Check(); // 2
+static void dKy_Outdoor_check(); // 2
+static void dKy_Indoor_check(); // 2
+bool dKy_withwarp_capture_check(); // 2
+void dKy_depth_dist_set(void*); // 2
+void dKy_darkworld_check(); // 2
+static void dKy_F_SP121Check(char const*, int, u8*, int); // 2
+void dKy_darkworld_stage_check(char const*, int); // 2
+void dKy_darkworld_spot_check(char const*, int); // 2
+void dKy_darkworld_Area_set(char const*, int); // 2
+static void dKy_murky_set(J3DMaterial*); // 2
+void dKy_shadow_mode_set(u8); // 2
+void dKy_shadow_mode_reset(u8); // 2
+static void dKy_shadow_mode_check(u8); // 2
+void dKy_bg_MAxx_proc(void*); // 2
+extern "C" void __sinit_d_kankyo_cpp(); // 1
+static void dKankyo_DayProc(); // 2
 
-extern "C" static void dKy_WolfPowerup_AmbCol__FP11_GXColorS10();
-extern "C" static void dKy_sense_pat_get__Fv();
-extern "C" static void dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10();
-extern "C" static void dKy_WolfPowerup_FogNearFar__FPfPf();
-extern "C" static void dKy_pos2_get_angle__FP4cXyzP4cXyzPsPs();
-extern "C" static void dKy_twi_wolflight_set__Fi();
-extern "C" static void dKy_lightdir_set__FffP3Vec();
-extern "C" static void dKy_GXInitLightSpot__FP12J3DLightInfofUc();
-extern "C" static void dKy_GXInitLightDistAttn__FP12J3DLightInfoffUc();
-extern "C" static void u8_data_ratio_set__FUcUcf();
-extern "C" static void s16_data_ratio_set__Fssf();
-extern "C" static void kankyo_color_ratio_calc_common__Fsf();
-extern "C" static void kankyo_color_ratio_calc__FP8_GXColor11_GXColorS10f();
-extern "C" static void kankyo_color_ratio_set__FUcUcfUcUcfsf();
-extern "C" static void fl_data_ratio_set__Ffff();
-extern "C" static void float_kankyo_color_ratio_set__Fffffffff();
-extern "C" static void get_parcent__Ffff();
-extern "C" void dKy_get_parcent__Ffff();
-extern "C" static void dKy_FiveSenses_fullthrottle_dark_static1__Fv();
-extern "C" void dKy_FiveSenses_fullthrottle_dark__Fv();
-extern "C" static void dKy_light_influence_id__F4cXyzi();
-extern "C" static void dKy_eflight_influence_id__F4cXyzi();
-extern "C" static void dKy_light_influence_col__Fi();
-extern "C" void dKy_light_influence_col__FP8_GXColorf();
-extern "C" static void dKy_light_influence_power__Fi();
-extern "C" static void dKy_light_influence_yuragi__Fi();
-extern "C" static void dKy_light_influence_distance__F4cXyzi();
-extern "C" static void plight_init__Fv();
-extern "C" static void darkmist_init__Fv();
-extern "C" static void plight_set__Fv();
-extern "C" static void bgparts_activelight_init__Fv();
-extern "C" static void dungeonlight_init__Fv();
-extern "C" static void undwater_init__Fv();
-extern "C" static void dKy_light_size_get__FPCc();
-extern "C" static void envcolor_init__Fv();
-extern "C" void dKy_clear_game_init__Fv();
-extern "C" void __ct__18dScnKy_env_light_cFv();
-extern "C" void __ct__19GB_MAPLE_COL_CHANGEFv();
-extern "C" void __dt__10BOSS_LIGHTFv();
-extern "C" void __ct__10BOSS_LIGHTFv();
-extern "C" void __dt__13DUNGEON_LIGHTFv();
-extern "C" void __ct__13DUNGEON_LIGHTFv();
-extern "C" void __dt__15WIND_INF_ENTITYFv();
-extern "C" void __ct__15WIND_INF_ENTITYFv();
-extern "C" void __ct__15LIGHT_INFLUENCEFv();
-extern "C" void setDaytime__18dScnKy_env_light_cFv();
-extern "C" void GetTimePass__20dStage_roomControl_cFv();
-extern "C" void setSunpos__18dScnKy_env_light_cFv();
-extern "C" void getDaytime__18dScnKy_env_light_cFv();
-extern "C" void dKy_getdaytime_hour__Fv();
-extern "C" void dKy_getdaytime_minute__Fv();
-extern "C" void dKy_daynight_check__Fv();
-extern "C" void dKy_getDarktime_hour__Fv();
-extern "C" void dKy_getDarktime_minute__Fv();
-extern "C" void dKy_getDarktime_week__Fv();
-extern "C" void getDarkDaytime__18dScnKy_env_light_cFv();
-extern "C" void setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc();
-extern "C" static void dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f();
-extern "C" void setLight__18dScnKy_env_light_cFv();
-extern "C" void setLight_bg__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf();
-extern "C" void setLight_actor__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10PfPf();
-extern "C" void settingTevStruct_colget_actor__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf();
-extern "C" void settingTevStruct_colget_player__18dScnKy_env_light_cFP12dKy_tevstr_c();
-extern "C" static void cLib_addCalcU8__FPUcUcss();
-extern "C" void settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc();
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
-extern "C" void setLightTevColorType__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern "C" static void setLightTevColorType_MAJI_sub__FP11J3DMaterialP12dKy_tevstr_ci();
-extern "C" void setLight__13J3DColorBlockFUlP11J3DLightObj();
-extern "C" void setAmbColor__13J3DColorBlockFUlPC10J3DGXColor();
-extern "C" static void dKy_cloudshadow_scroll__FP12J3DModelDataP12dKy_tevstr_ci();
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern "C" void CalcTevColor__18dScnKy_env_light_cFv();
-extern "C" void Sndpos__18dScnKy_env_light_cFv();
-extern "C" void Eflight_flush_proc__18dScnKy_env_light_cFv();
-extern "C" void SetBaseLight__18dScnKy_env_light_cFv();
-extern "C" void exeKankyo__18dScnKy_env_light_cFv();
-extern "C" void drawKankyo__18dScnKy_env_light_cFv();
-extern "C" void dKy_undwater_filter_draw__Fv();
-extern "C" static void dKy_Draw__FP17sub_kankyo__class();
-extern "C" static void dKy_Execute__FP17sub_kankyo__class();
-extern "C" static bool dKy_IsDelete__FP17sub_kankyo__class();
-extern "C" static void dKy_Delete__FP17sub_kankyo__class();
-extern "C" static void dKy_Create__FPv();
-extern "C" void dKy_setLight_init__Fv();
-extern "C" void dKy_setLight__Fv();
-extern "C" static void dKy_GlobalLight_set__Fv();
-extern "C" static void dKy_lightswitch_check__FP30stage_pure_lightvec_info_classc();
-extern "C" static void dKy_setLight_nowroom_common__Fcf();
-extern "C" void dKy_setLight_nowroom__Fc();
-extern "C" void dKy_setLight_nowroom_grass__Fcf();
-extern "C" void dKy_move_room_ratio__FP12dKy_tevstr_cPSc();
-extern "C" void dKy_setLight_nowroom_actor__FP12dKy_tevstr_c();
-extern "C" void dKy_setLight_again__Fv();
-extern "C" void dKy_Global_amb_set__FP12dKy_tevstr_c();
-extern "C" static void dKy_light_influence_pos__Fi();
-extern "C" void dKy_plight_near_pos__Fv();
-extern "C" void dKy_mock_light_every_set__FP15LIGHT_INFLUENCE();
-extern "C" void dKy_plight_set__FP15LIGHT_INFLUENCE();
-extern "C" void dKy_dalkmist_inf_set__FP18DALKMIST_INFLUENCE();
-extern "C" void dKy_dalkmist_inf_cut__FP18DALKMIST_INFLUENCE();
-extern "C" void dKy_plight_priority_set__FP15LIGHT_INFLUENCE();
-extern "C" void dKy_plight_cut__FP15LIGHT_INFLUENCE();
-extern "C" void dKy_efplight_set__FP15LIGHT_INFLUENCE();
-extern "C" void dKy_efplight_cut__FP15LIGHT_INFLUENCE();
-extern "C" static void dKy_bgparts_activelight_set__FP15LIGHT_INFLUENCEi();
-extern "C" static void dKy_bgparts_activelight_cut__Fi();
-extern "C" void dKy_actor_addcol_amb_set__Fsssf();
-extern "C" void dKy_bg_addcol_amb_set__Fsssf();
-extern "C" void dKy_bg1_addcol_amb_set__Fsssf();
-extern "C" static void dKy_bg2_addcol_amb_set__Fsssf();
-extern "C" static void dKy_bg3_addcol_amb_set__Fsssf();
-extern "C" void dKy_addcol_fog_set__Fsssf();
-extern "C" static void dKy_actor_addcol_set__Fsssf();
-extern "C" void dKy_vrbox_addcol_sky0_set__Fsssf();
-extern "C" void dKy_vrbox_addcol_kasumi_set__Fsssf();
-extern "C" static void dKy_vrbox_addcol_set__Fsssf();
-extern "C" static void dKy_fog_startendz_set__Ffff();
-extern "C" void dKy_Itemgetcol_chg_on__Fv();
-extern "C" static void dKy_Sound_init__Fv();
-extern "C" void dKy_Sound_set__F4cXyziUii();
-extern "C" void dKy_Sound_get__Fv();
-extern "C" void dKy_SordFlush_set__F4cXyzi();
-extern "C" static void GxFogSet_Sub__FP8_GXColor();
-extern "C" static void GxFog_set__Fv();
-extern "C" void dKy_GxFog_set__Fv();
-extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c();
-extern "C" void dKy_GfFog_tevstr_set__FP12dKy_tevstr_c();
-extern "C" static void GxXFog_set__Fv();
-extern "C" void dKy_change_colpat__FUc();
-extern "C" void dKy_custom_colset__FUcUcf();
-extern "C" void dKy_setLight_mine__FP12dKy_tevstr_c();
-extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
-extern "C" void dKy_rain_check__Fv();
-extern "C" void dKy_set_allcol_ratio__Ff();
-extern "C" void dKy_set_actcol_ratio__Ff();
-extern "C" void dKy_set_bgcol_ratio__Ff();
-extern "C" void dKy_set_fogcol_ratio__Ff();
-extern "C" void dKy_set_vrboxcol_ratio__Ff();
-extern "C" static void dKy_set_vrboxsoracol_ratio__Ff();
-extern "C" static void dKy_set_vrboxkumocol_ratio__Ff();
-extern "C" void dKy_itudemo_se__Fv();
-extern "C" void dKy_get_dayofweek__Fv();
-extern "C" void dKy_set_nexttime__Ff();
-extern "C" void dKy_instant_timechg__Ff();
-extern "C" void dKy_instant_rainchg__Fv();
-extern "C" static void NewAmbColGet__FP11_GXColorS10();
-extern "C" static void dKy_ParticleColor_get_base__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf();
-extern "C" void dKy_ParticleColor_get_actor__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf();
-extern "C" void dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf();
-extern "C" static void dKy_BossLight_set__FP4cXyzP8_GXColorfUc();
-extern "C" void dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc();
-extern "C" void dKy_WolfEyeLight_set__FP4cXyzfffP8_GXColorfUcUc();
-extern "C" static void dKy_twilight_camelight_set__Fv();
-extern "C" static void dKy_WaterIn_Light_set__Fv();
-extern "C" void dKy_camera_water_in_status_set__FUc();
-extern "C" void dKy_camera_water_in_status_check__Fv();
-extern "C" void dKy_pol_efftype_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_efftype2_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_sound_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_argument_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor();
-extern "C" void dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor();
-extern "C" void dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor();
-extern "C" void dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor();
-extern "C" void dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_TeachWind_existence_chk__Fv();
-extern "C" static void dKy_SunMoon_Light_Check__Fv();
-extern "C" static void dKy_Outdoor_check__Fv();
-extern "C" static void dKy_Indoor_check__Fv();
-extern "C" bool dKy_withwarp_capture_check__Fv();
-extern "C" void dKy_depth_dist_set__FPv();
-extern "C" void dKy_darkworld_check__Fv();
-extern "C" static void dKy_F_SP121Check__FPCciPUci();
-extern "C" void dKy_darkworld_stage_check__FPCci();
-extern "C" void dKy_darkworld_spot_check__FPCci();
-extern "C" void dKy_darkworld_Area_set__FPCci();
-extern "C" static void dKy_murky_set__FP11J3DMaterial();
-extern "C" void dKy_shadow_mode_set__FUc();
-extern "C" void dKy_shadow_mode_reset__FUc();
-extern "C" static void dKy_shadow_mode_check__FUc();
-extern "C" void dKy_bg_MAxx_proc__FPv();
-extern "C" void __dt__18dScnKy_env_light_cFv();
-extern "C" void __sinit_d_kankyo_cpp();
-extern "C" static void dKankyo_DayProc__Fv();
+extern "C" static void dKy_WolfPowerup_AmbCol__FP11_GXColorS10(); // 1
+extern "C" static void dKy_sense_pat_get__Fv(); // 1
+extern "C" static void dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10(); // 1
+extern "C" static void dKy_WolfPowerup_FogNearFar__FPfPf(); // 1
+extern "C" static void dKy_pos2_get_angle__FP4cXyzP4cXyzPsPs(); // 1
+extern "C" static void dKy_twi_wolflight_set__Fi(); // 1
+extern "C" static void dKy_lightdir_set__FffP3Vec(); // 1
+extern "C" static void dKy_GXInitLightSpot__FP12J3DLightInfofUc(); // 1
+extern "C" static void dKy_GXInitLightDistAttn__FP12J3DLightInfoffUc(); // 1
+extern "C" static void u8_data_ratio_set__FUcUcf(); // 1
+extern "C" static void s16_data_ratio_set__Fssf(); // 1
+extern "C" static void kankyo_color_ratio_calc_common__Fsf(); // 1
+extern "C" static void kankyo_color_ratio_calc__FP8_GXColor11_GXColorS10f(); // 1
+extern "C" static void kankyo_color_ratio_set__FUcUcfUcUcfsf(); // 1
+extern "C" static void fl_data_ratio_set__Ffff(); // 1
+extern "C" static void float_kankyo_color_ratio_set__Fffffffff(); // 1
+extern "C" static void get_parcent__Ffff(); // 1
+extern "C" void dKy_get_parcent__Ffff(); // 1
+extern "C" static void dKy_FiveSenses_fullthrottle_dark_static1__Fv(); // 1
+extern "C" void dKy_FiveSenses_fullthrottle_dark__Fv(); // 1
+extern "C" static void dKy_light_influence_id__F4cXyzi(); // 1
+extern "C" static void dKy_eflight_influence_id__F4cXyzi(); // 1
+extern "C" static void dKy_light_influence_col__Fi(); // 1
+extern "C" void dKy_light_influence_col__FP8_GXColorf(); // 1
+extern "C" static void dKy_light_influence_power__Fi(); // 1
+extern "C" static void dKy_light_influence_yuragi__Fi(); // 1
+extern "C" static void dKy_light_influence_distance__F4cXyzi(); // 1
+extern "C" static void plight_init__Fv(); // 1
+extern "C" static void darkmist_init__Fv(); // 1
+extern "C" static void plight_set__Fv(); // 1
+extern "C" static void bgparts_activelight_init__Fv(); // 1
+extern "C" static void dungeonlight_init__Fv(); // 1
+extern "C" static void undwater_init__Fv(); // 1
+extern "C" static void dKy_light_size_get__FPCc(); // 1
+extern "C" static void envcolor_init__Fv(); // 1
+extern "C" void dKy_clear_game_init__Fv(); // 1
+extern "C" void __ct__18dScnKy_env_light_cFv(); // 1
+extern "C" void __ct__19GB_MAPLE_COL_CHANGEFv(); // 1
+extern "C" void __dt__10BOSS_LIGHTFv(); // 1
+extern "C" void __ct__10BOSS_LIGHTFv(); // 1
+extern "C" void __dt__13DUNGEON_LIGHTFv(); // 1
+extern "C" void __ct__13DUNGEON_LIGHTFv(); // 1
+extern "C" void __dt__15WIND_INF_ENTITYFv(); // 1
+extern "C" void __ct__15WIND_INF_ENTITYFv(); // 1
+extern "C" void __ct__15LIGHT_INFLUENCEFv(); // 1
+extern "C" void setDaytime__18dScnKy_env_light_cFv(); // 1
+extern "C" void GetTimePass__20dStage_roomControl_cFv(); // 1
+extern "C" void setSunpos__18dScnKy_env_light_cFv(); // 1
+extern "C" void getDaytime__18dScnKy_env_light_cFv(); // 1
+extern "C" void dKy_getdaytime_hour__Fv(); // 1
+extern "C" void dKy_getdaytime_minute__Fv(); // 1
+extern "C" void dKy_daynight_check__Fv(); // 1
+extern "C" void dKy_getDarktime_hour__Fv(); // 1
+extern "C" void dKy_getDarktime_minute__Fv(); // 1
+extern "C" void dKy_getDarktime_week__Fv(); // 1
+extern "C" void getDarkDaytime__18dScnKy_env_light_cFv(); // 1
+extern "C" void setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc(); // 1
+extern "C" static void dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f(); // 1
+extern "C" void setLight__18dScnKy_env_light_cFv(); // 1
+extern "C" void setLight_bg__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf(); // 1
+extern "C" void setLight_actor__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10PfPf(); // 1
+extern "C" void settingTevStruct_colget_actor__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf(); // 1
+extern "C" void settingTevStruct_colget_player__18dScnKy_env_light_cFP12dKy_tevstr_c(); // 1
+extern "C" static void cLib_addCalcU8__FPUcUcss(); // 1
+extern "C" void settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" static void setLightTevColorType_MAJI_sub__FP11J3DMaterialP12dKy_tevstr_ci(); // 1
+extern "C" void setLight__13J3DColorBlockFUlP11J3DLightObj(); // 1
+extern "C" void setAmbColor__13J3DColorBlockFUlPC10J3DGXColor(); // 1
+extern "C" static void dKy_cloudshadow_scroll__FP12J3DModelDataP12dKy_tevstr_ci(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void CalcTevColor__18dScnKy_env_light_cFv(); // 1
+extern "C" void Sndpos__18dScnKy_env_light_cFv(); // 1
+extern "C" void Eflight_flush_proc__18dScnKy_env_light_cFv(); // 1
+extern "C" void SetBaseLight__18dScnKy_env_light_cFv(); // 1
+extern "C" void exeKankyo__18dScnKy_env_light_cFv(); // 1
+extern "C" void drawKankyo__18dScnKy_env_light_cFv(); // 1
+extern "C" void dKy_undwater_filter_draw__Fv(); // 1
+extern "C" static void dKy_Draw__FP17sub_kankyo__class(); // 1
+extern "C" static void dKy_Execute__FP17sub_kankyo__class(); // 1
+extern "C" static bool dKy_IsDelete__FP17sub_kankyo__class(); // 1
+extern "C" static void dKy_Delete__FP17sub_kankyo__class(); // 1
+extern "C" static void dKy_Create__FPv(); // 1
+extern "C" void dKy_setLight_init__Fv(); // 1
+extern "C" void dKy_setLight__Fv(); // 1
+extern "C" static void dKy_GlobalLight_set__Fv(); // 1
+extern "C" static void dKy_lightswitch_check__FP30stage_pure_lightvec_info_classc(); // 1
+extern "C" static void dKy_setLight_nowroom_common__Fcf(); // 1
+extern "C" void dKy_setLight_nowroom__Fc(); // 1
+extern "C" void dKy_setLight_nowroom_grass__Fcf(); // 1
+extern "C" void dKy_move_room_ratio__FP12dKy_tevstr_cPSc(); // 1
+extern "C" void dKy_setLight_nowroom_actor__FP12dKy_tevstr_c(); // 1
+extern "C" void dKy_setLight_again__Fv(); // 1
+extern "C" void dKy_Global_amb_set__FP12dKy_tevstr_c(); // 1
+extern "C" static void dKy_light_influence_pos__Fi(); // 1
+extern "C" void dKy_plight_near_pos__Fv(); // 1
+extern "C" void dKy_mock_light_every_set__FP15LIGHT_INFLUENCE(); // 1
+extern "C" void dKy_plight_set__FP15LIGHT_INFLUENCE(); // 1
+extern "C" void dKy_dalkmist_inf_set__FP18DALKMIST_INFLUENCE(); // 1
+extern "C" void dKy_dalkmist_inf_cut__FP18DALKMIST_INFLUENCE(); // 1
+extern "C" void dKy_plight_priority_set__FP15LIGHT_INFLUENCE(); // 1
+extern "C" void dKy_plight_cut__FP15LIGHT_INFLUENCE(); // 1
+extern "C" void dKy_efplight_set__FP15LIGHT_INFLUENCE(); // 1
+extern "C" void dKy_efplight_cut__FP15LIGHT_INFLUENCE(); // 1
+extern "C" static void dKy_bgparts_activelight_set__FP15LIGHT_INFLUENCEi(); // 1
+extern "C" static void dKy_bgparts_activelight_cut__Fi(); // 1
+extern "C" void dKy_actor_addcol_amb_set__Fsssf(); // 1
+extern "C" void dKy_bg_addcol_amb_set__Fsssf(); // 1
+extern "C" void dKy_bg1_addcol_amb_set__Fsssf(); // 1
+extern "C" static void dKy_bg2_addcol_amb_set__Fsssf(); // 1
+extern "C" static void dKy_bg3_addcol_amb_set__Fsssf(); // 1
+extern "C" void dKy_addcol_fog_set__Fsssf(); // 1
+extern "C" static void dKy_actor_addcol_set__Fsssf(); // 1
+extern "C" void dKy_vrbox_addcol_sky0_set__Fsssf(); // 1
+extern "C" void dKy_vrbox_addcol_kasumi_set__Fsssf(); // 1
+extern "C" static void dKy_vrbox_addcol_set__Fsssf(); // 1
+extern "C" static void dKy_fog_startendz_set__Ffff(); // 1
+extern "C" void dKy_Itemgetcol_chg_on__Fv(); // 1
+extern "C" static void dKy_Sound_init__Fv(); // 1
+extern "C" void dKy_Sound_set__F4cXyziUii(); // 1
+extern "C" void dKy_Sound_get__Fv(); // 1
+extern "C" void dKy_SordFlush_set__F4cXyzi(); // 1
+extern "C" static void GxFogSet_Sub__FP8_GXColor(); // 1
+extern "C" static void GxFog_set__Fv(); // 1
+extern "C" void dKy_GxFog_set__Fv(); // 1
+extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c(); // 1
+extern "C" void dKy_GfFog_tevstr_set__FP12dKy_tevstr_c(); // 1
+extern "C" static void GxXFog_set__Fv(); // 1
+extern "C" void dKy_change_colpat__FUc(); // 1
+extern "C" void dKy_custom_colset__FUcUcf(); // 1
+extern "C" void dKy_setLight_mine__FP12dKy_tevstr_c(); // 1
+extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc(); // 1
+extern "C" void dKy_rain_check__Fv(); // 1
+extern "C" void dKy_set_allcol_ratio__Ff(); // 1
+extern "C" void dKy_set_actcol_ratio__Ff(); // 1
+extern "C" void dKy_set_bgcol_ratio__Ff(); // 1
+extern "C" void dKy_set_fogcol_ratio__Ff(); // 1
+extern "C" void dKy_set_vrboxcol_ratio__Ff(); // 1
+extern "C" static void dKy_set_vrboxsoracol_ratio__Ff(); // 1
+extern "C" static void dKy_set_vrboxkumocol_ratio__Ff(); // 1
+extern "C" void dKy_itudemo_se__Fv(); // 1
+extern "C" void dKy_get_dayofweek__Fv(); // 1
+extern "C" void dKy_set_nexttime__Ff(); // 1
+extern "C" void dKy_instant_timechg__Ff(); // 1
+extern "C" void dKy_instant_rainchg__Fv(); // 1
+extern "C" static void NewAmbColGet__FP11_GXColorS10(); // 1
+extern "C" static void dKy_ParticleColor_get_base__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf(); // 1
+extern "C" void dKy_ParticleColor_get_actor__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf(); // 1
+extern "C" void dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf(); // 1
+extern "C" static void dKy_BossLight_set__FP4cXyzP8_GXColorfUc(); // 1
+extern "C" void dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc(); // 1
+extern "C" void dKy_WolfEyeLight_set__FP4cXyzfffP8_GXColorfUcUc(); // 1
+extern "C" static void dKy_twilight_camelight_set__Fv(); // 1
+extern "C" static void dKy_WaterIn_Light_set__Fv(); // 1
+extern "C" void dKy_camera_water_in_status_set__FUc(); // 1
+extern "C" void dKy_camera_water_in_status_check__Fv(); // 1
+extern "C" void dKy_pol_efftype_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_efftype2_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_sound_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_argument_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor(); // 1
+extern "C" void dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor(); // 1
+extern "C" void dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor(); // 1
+extern "C" void dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor(); // 1
+extern "C" void dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_TeachWind_existence_chk__Fv(); // 1
+extern "C" static void dKy_SunMoon_Light_Check__Fv(); // 1
+extern "C" static void dKy_Outdoor_check__Fv(); // 1
+extern "C" static void dKy_Indoor_check__Fv(); // 1
+extern "C" bool dKy_withwarp_capture_check__Fv(); // 1
+extern "C" void dKy_depth_dist_set__FPv(); // 1
+extern "C" void dKy_darkworld_check__Fv(); // 1
+extern "C" static void dKy_F_SP121Check__FPCciPUci(); // 1
+extern "C" void dKy_darkworld_stage_check__FPCci(); // 1
+extern "C" void dKy_darkworld_spot_check__FPCci(); // 1
+extern "C" void dKy_darkworld_Area_set__FPCci(); // 1
+extern "C" static void dKy_murky_set__FP11J3DMaterial(); // 1
+extern "C" void dKy_shadow_mode_set__FUc(); // 1
+extern "C" void dKy_shadow_mode_reset__FUc(); // 1
+extern "C" static void dKy_shadow_mode_check__FUc(); // 1
+extern "C" void dKy_bg_MAxx_proc__FPv(); // 1
+extern "C" void __dt__18dScnKy_env_light_cFv(); // 1
+extern "C" void __sinit_d_kankyo_cpp(); // 1
+extern "C" static void dKankyo_DayProc__Fv(); // 1
 SECTION_RODATA extern const u8 lit_9035[12];
 SECTION_RODATA extern const u8 d_kankyo_d_kankyo__stringBase0[716];
 SECTION_DATA extern u8 d_kankyo_d_kankyo__cNullVec__6Z2Calc[12];
@@ -1022,236 +797,236 @@ SECTION_SDATA2 extern f32 lit_10932;
 // External References:
 // 
 
-SECTION_INIT void memset();
-SECTION_INIT void memcpy();
-extern "C" void OSReport_Warning();
-void mDoAud_setSceneName(char const*, s32, s32);
-void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16);
-void mDoMtx_inverseTranspose(f32 const (* )[4], f32 (* )[4]);
-void mDoExt_modelUpdateDL(J3DModel*);
-void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
-void mDoExt_adjustSolidHeap(JKRSolidHeap*);
-void mDoExt_destroySolidHeap(JKRSolidHeap*);
-void mDoExt_restoreCurrentHeap();
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
-void mDoLib_project(Vec*, Vec*);
-void dComIfGs_sense_type_change_Get();
-void dComIfG_getStageRes(char const*);
-void dComIfGp_world_dark_get();
-void dComIfGs_PolyDamageOff_Set(s8);
-void dKyd_dmpalet_getp();
-void dKyd_dmpselect_getp();
-void dKyd_dmenvr_getp();
-void dKyd_dmvrbox_getp();
-void dKyd_schejule_getp();
-void dKyd_schejule_boss_getp();
-void dKyd_xfog_table_set(u8);
-void dKyd_maple_col_getp();
-void dKyd_darkworld_tbl_getp();
-void dKyd_light_size_tbl_getp();
-void dKyd_light_tw_size_tbl_getp();
-void dKyd_BloomInf_tbl_getp(int);
-void dKyw_wether_proc();
-void dKyw_wind_set();
-void dKyw_get_wind_vec();
-void dKyw_rain_set(int);
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
-void dCam_getBody();
-void cM_rad2s(f32);
-void cM_atan2s(f32, f32);
-void cM_rndF(f32);
-void cM3d_VectorProduct2d(f32, f32, f32, f32, f32, f32);
-void cLib_addCalc(f32*, f32, f32, f32, f32);
-void GFSetFog(_GXFogType, f32, f32, f32, f32, _GXColor);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXTrans();
-extern "C" void C_MTXLightPerspective();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECSquareDistance();
-extern "C" void GXInitLightAttn();
-extern "C" void GXInitLightSpot();
-extern "C" void GXInitLightDistAttn();
-extern "C" void GXInitLightPos();
-extern "C" void GXInitLightDir();
-extern "C" void GXInitLightColor();
-extern "C" void GXLoadLightObjImm();
-extern "C" void GXSetChanAmbColor();
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savefpr_29();
-extern "C" void _restfpr_29();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_16();
-extern "C" void _savegpr_17();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_16();
-extern "C" void _restgpr_17();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void abs();
-extern "C" void memcmp();
-extern "C" void strcmp();
-extern "C" void cos();
-extern "C" void sin();
+SECTION_INIT void memset(); // 1
+SECTION_INIT void memcpy(); // 1
+extern "C" void OSReport_Warning(); // 1
+void mDoAud_setSceneName(char const*, s32, s32); // 2
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16); // 2
+void mDoMtx_inverseTranspose(f32 const (* )[4], f32 (* )[4]); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); // 2
+void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
+void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
+void mDoExt_restoreCurrentHeap(); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void mDoLib_project(Vec*, Vec*); // 2
+void dComIfGs_sense_type_change_Get(); // 2
+void dComIfG_getStageRes(char const*); // 2
+void dComIfGp_world_dark_get(); // 2
+void dComIfGs_PolyDamageOff_Set(s8); // 2
+void dKyd_dmpalet_getp(); // 2
+void dKyd_dmpselect_getp(); // 2
+void dKyd_dmenvr_getp(); // 2
+void dKyd_dmvrbox_getp(); // 2
+void dKyd_schejule_getp(); // 2
+void dKyd_schejule_boss_getp(); // 2
+void dKyd_xfog_table_set(u8); // 2
+void dKyd_maple_col_getp(); // 2
+void dKyd_darkworld_tbl_getp(); // 2
+void dKyd_light_size_tbl_getp(); // 2
+void dKyd_light_tw_size_tbl_getp(); // 2
+void dKyd_BloomInf_tbl_getp(int); // 2
+void dKyw_wether_proc(); // 2
+void dKyw_wind_set(); // 2
+void dKyw_get_wind_vec(); // 2
+void dKyw_rain_set(int); // 2
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
+void dCam_getBody(); // 2
+void cM_rad2s(f32); // 2
+void cM_atan2s(f32, f32); // 2
+void cM_rndF(f32); // 2
+void cM3d_VectorProduct2d(f32, f32, f32, f32, f32, f32); // 2
+void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
+void GFSetFog(_GXFogType, f32, f32, f32, f32, _GXColor); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void C_MTXLightPerspective(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void GXInitLightAttn(); // 1
+extern "C" void GXInitLightSpot(); // 1
+extern "C" void GXInitLightDistAttn(); // 1
+extern "C" void GXInitLightPos(); // 1
+extern "C" void GXInitLightDir(); // 1
+extern "C" void GXInitLightColor(); // 1
+extern "C" void GXLoadLightObjImm(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savefpr_29(); // 1
+extern "C" void _restfpr_29(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_16(); // 1
+extern "C" void _savegpr_17(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_16(); // 1
+extern "C" void _restgpr_17(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void abs(); // 1
+extern "C" void memcmp(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
 
-SECTION_INIT void memset();
-SECTION_INIT void memcpy();
-extern "C" void OSReport_Warning();
-extern "C" void mDoAud_setSceneName__FPCcll();
-extern "C" void __dt__4cXyzFv();
-extern "C" void create__Q213mDoGph_gInf_c7bloom_cFv();
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
-extern "C" void mDoMtx_inverseTranspose__FPA4_CfPA4_f();
-extern "C" void play__14mDoExt_baseAnmFv();
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_restoreCurrentHeap__Fv();
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern "C" void mDoLib_project__FP3VecP3Vec();
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" void getLayerNo_common__14dComIfG_play_cFPCcii();
-extern "C" void getLayerNo__14dComIfG_play_cFi();
-extern "C" void dComIfGs_sense_type_change_Get__Fv();
-extern "C" void dComIfG_getStageRes__FPCc();
-extern "C" void dComIfGp_world_dark_get__Fv();
-extern "C" void dComIfGs_PolyDamageOff_Set__FSc();
-extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi();
-extern "C" void isSwitch__12dSv_memBit_cCFi();
-extern "C" void isDungeonItem__12dSv_memBit_cCFi();
-extern "C" void offEventBit__11dSv_event_cFUs();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void isSwitch__10dSv_info_cCFii();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
-extern "C" void dKyd_dmpalet_getp__Fv();
-extern "C" void dKyd_dmpselect_getp__Fv();
-extern "C" void dKyd_dmenvr_getp__Fv();
-extern "C" void dKyd_dmvrbox_getp__Fv();
-extern "C" void dKyd_schejule_getp__Fv();
-extern "C" void dKyd_schejule_boss_getp__Fv();
-extern "C" void dKyd_xfog_table_set__FUc();
-extern "C" void dKyd_maple_col_getp__Fv();
-extern "C" void dKyd_darkworld_tbl_getp__Fv();
-extern "C" void dKyd_light_size_tbl_getp__Fv();
-extern "C" void dKyd_light_tw_size_tbl_getp__Fv();
-extern "C" void dKyd_BloomInf_tbl_getp__Fi();
-extern "C" void dKyw_wether_proc__Fv();
-extern "C" void dKyw_wind_set__Fv();
-extern "C" void dKyw_get_wind_vec__Fv();
-extern "C" void dKyw_rain_set__Fi();
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
-extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void GetPolyAtt1__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void __ct__18dBgS_CamGndChk_WtrFv();
-extern "C" void __dt__18dBgS_CamGndChk_WtrFv();
-extern "C" void __dt__15LIGHT_INFLUENCEFv();
-extern "C" void checkNowWolfEyeUp__9daPy_py_cFv();
-extern "C" void dCam_getBody__Fv();
-extern "C" void getActor__12dMsgObject_cFv();
-extern "C" void __pl__4cXyzCFRC3Vec();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void __ml__4cXyzCFf();
-extern "C" void cM_rad2s__Ff();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cM_rndF__Ff();
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
-extern "C" void cM3d_VectorProduct2d__Fffffff();
-extern "C" void cLib_addCalc__FPfffff();
-extern "C" void deleteAllParticle__14JPABaseEmitterFv();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void load2ndDynamicWave__10Z2SceneMgrFv();
-extern "C" void __ct__10Z2EnvSeMgrFv();
-extern "C" void __dt__10Z2EnvSeMgrFv();
-extern "C" void resetScene__10Z2EnvSeMgrFv();
-extern "C" void GFSetFog__F10_GXFogTypeffff8_GXColor();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void getName__10JUTNameTabCFUs();
-extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f();
-extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
-extern "C" void init__12J3DFrameCtrlFs();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXTrans();
-extern "C" void C_MTXLightPerspective();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECSquareDistance();
-extern "C" void GXInitLightAttn();
-extern "C" void GXInitLightSpot();
-extern "C" void GXInitLightDistAttn();
-extern "C" void GXInitLightPos();
-extern "C" void GXInitLightDir();
-extern "C" void GXInitLightColor();
-extern "C" void GXLoadLightObjImm();
-extern "C" void GXSetChanAmbColor();
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savefpr_29();
-extern "C" void _restfpr_29();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_16();
-extern "C" void _savegpr_17();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_16();
-extern "C" void _restgpr_17();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void abs();
-extern "C" void memcmp();
-extern "C" void strcmp();
-extern "C" void cos();
-extern "C" void sin();
+SECTION_INIT void memset(); // 1
+SECTION_INIT void memcpy(); // 1
+extern "C" void OSReport_Warning(); // 1
+extern "C" void mDoAud_setSceneName__FPCcll(); // 1
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void create__Q213mDoGph_gInf_c7bloom_cFv(); // 1
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs(); // 1
+extern "C" void mDoMtx_inverseTranspose__FPA4_CfPA4_f(); // 1
+extern "C" void play__14mDoExt_baseAnmFv(); // 1
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl(); // 1
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
+extern "C" void getLayerNo_common__14dComIfG_play_cFPCcii(); // 1
+extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
+extern "C" void dComIfGs_sense_type_change_Get__Fv(); // 1
+extern "C" void dComIfG_getStageRes__FPCc(); // 1
+extern "C" void dComIfGp_world_dark_get__Fv(); // 1
+extern "C" void dComIfGs_PolyDamageOff_Set__FSc(); // 1
+extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi(); // 1
+extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1
+extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
+extern "C" void offEventBit__11dSv_event_cFUs(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
+extern "C" void dKyd_dmpalet_getp__Fv(); // 1
+extern "C" void dKyd_dmpselect_getp__Fv(); // 1
+extern "C" void dKyd_dmenvr_getp__Fv(); // 1
+extern "C" void dKyd_dmvrbox_getp__Fv(); // 1
+extern "C" void dKyd_schejule_getp__Fv(); // 1
+extern "C" void dKyd_schejule_boss_getp__Fv(); // 1
+extern "C" void dKyd_xfog_table_set__FUc(); // 1
+extern "C" void dKyd_maple_col_getp__Fv(); // 1
+extern "C" void dKyd_darkworld_tbl_getp__Fv(); // 1
+extern "C" void dKyd_light_size_tbl_getp__Fv(); // 1
+extern "C" void dKyd_light_tw_size_tbl_getp__Fv(); // 1
+extern "C" void dKyd_BloomInf_tbl_getp__Fi(); // 1
+extern "C" void dKyw_wether_proc__Fv(); // 1
+extern "C" void dKyw_wind_set__Fv(); // 1
+extern "C" void dKyw_get_wind_vec__Fv(); // 1
+extern "C" void dKyw_rain_set__Fi(); // 1
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
+extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetPolyAtt1__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void __ct__18dBgS_CamGndChk_WtrFv(); // 1
+extern "C" void __dt__18dBgS_CamGndChk_WtrFv(); // 1
+extern "C" void __dt__15LIGHT_INFLUENCEFv(); // 1
+extern "C" void checkNowWolfEyeUp__9daPy_py_cFv(); // 1
+extern "C" void dCam_getBody__Fv(); // 1
+extern "C" void getActor__12dMsgObject_cFv(); // 1
+extern "C" void __pl__4cXyzCFRC3Vec(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ml__4cXyzCFf(); // 1
+extern "C" void cM_rad2s__Ff(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM_rndF__Ff(); // 1
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
+extern "C" void cM3d_VectorProduct2d__Fffffff(); // 1
+extern "C" void cLib_addCalc__FPfffff(); // 1
+extern "C" void deleteAllParticle__14JPABaseEmitterFv(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void load2ndDynamicWave__10Z2SceneMgrFv(); // 1
+extern "C" void __ct__10Z2EnvSeMgrFv(); // 1
+extern "C" void __dt__10Z2EnvSeMgrFv(); // 1
+extern "C" void resetScene__10Z2EnvSeMgrFv(); // 1
+extern "C" void GFSetFog__F10_GXFogTypeffff8_GXColor(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getName__10JUTNameTabCFUs(); // 1
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo(); // 1
+extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f(); // 1
+extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f(); // 1
+extern "C" void init__12J3DFrameCtrlFs(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void C_MTXLightPerspective(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void GXInitLightAttn(); // 1
+extern "C" void GXInitLightSpot(); // 1
+extern "C" void GXInitLightDistAttn(); // 1
+extern "C" void GXInitLightPos(); // 1
+extern "C" void GXInitLightDir(); // 1
+extern "C" void GXInitLightColor(); // 1
+extern "C" void GXLoadLightObjImm(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savefpr_29(); // 1
+extern "C" void _restfpr_29(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_16(); // 1
+extern "C" void _savegpr_17(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_16(); // 1
+extern "C" void _restgpr_17(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void abs(); // 1
+extern "C" void memcmp(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 SECTION_RODATA extern const u8 j3dDefaultMtx[48];
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];

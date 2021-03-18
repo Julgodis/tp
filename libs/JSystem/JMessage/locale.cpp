@@ -9,13 +9,7 @@
 // Types:
 // 
 
-// build JMessage (['JMessage']) False/False
-/* top-level dependencies (begin ['JMessage']) */
-/* top-level dependencies (end ['JMessage']) */
 struct JMessage {
-	// build locale (['JMessage', 'locale']) False/False
-	/* dependencies (begin ['JMessage', 'locale']) */
-	/* dependencies (end ['JMessage', 'locale']) */
 	struct locale {
 		/* 802A9528 */ void parseCharacter_ShiftJIS(char const**);
 		/* 802A958C */ void parseCharacter_UTF8(char const**);
@@ -28,8 +22,8 @@ struct JMessage {
 // 
 
 
-extern "C" void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc();
-extern "C" void parseCharacter_UTF8__Q28JMessage6localeFPPCc();
+extern "C" void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc(); // 1
+extern "C" void parseCharacter_UTF8__Q28JMessage6localeFPPCc(); // 1
 
 // 
 // External References:

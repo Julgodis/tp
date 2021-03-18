@@ -9,11 +9,11 @@
 // Forward References:
 // 
 
-extern "C" void GetUseSerialIO();
-extern "C" void SetUseSerialIO();
+extern "C" void GetUseSerialIO(); // 1
+extern "C" void SetUseSerialIO(); // 1
 
-extern "C" void GetUseSerialIO();
-extern "C" void SetUseSerialIO();
+extern "C" void GetUseSerialIO(); // 1
+extern "C" void SetUseSerialIO(); // 1
 
 // 
 // External References:

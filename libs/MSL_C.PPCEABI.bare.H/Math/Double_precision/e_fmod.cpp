@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __ieee754_fmod();
+extern "C" void __ieee754_fmod(); // 1
 
-extern "C" void __ieee754_fmod();
+extern "C" void __ieee754_fmod(); // 1
 SECTION_RODATA extern const u8 Zero[16];
 
 // 

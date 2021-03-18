@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __StringRead();
+extern "C" void __StringRead(); // 1
 
-extern "C" void __StringRead();
+extern "C" void __StringRead(); // 1
 
 // 
 // External References:

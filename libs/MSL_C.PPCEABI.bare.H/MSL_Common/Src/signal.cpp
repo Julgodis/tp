@@ -9,22 +9,22 @@
 // Forward References:
 // 
 
-extern "C" void raise();
+extern "C" void raise(); // 1
 
-extern "C" void raise();
+extern "C" void raise(); // 1
 SECTION_BSS extern u8 signal_funcs[24];
 
 // 
 // External References:
 // 
 
-extern "C" void exit();
-extern "C" void __end_critical_region();
-extern "C" void __begin_critical_region();
+extern "C" void exit(); // 1
+extern "C" void __end_critical_region(); // 1
+extern "C" void __begin_critical_region(); // 1
 
-extern "C" void exit();
-extern "C" void __end_critical_region();
-extern "C" void __begin_critical_region();
+extern "C" void exit(); // 1
+extern "C" void __end_critical_region(); // 1
+extern "C" void __begin_critical_region(); // 1
 
 // 
 // Declarations:

@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build cM2dGCir (['cM2dGCir']) False/False
-/* top-level dependencies (begin ['cM2dGCir']) */
-/* top-level dependencies (end ['cM2dGCir']) */
 struct cM2dGCir {
 };
 
@@ -19,9 +16,9 @@ struct cM2dGCir {
 // Forward References:
 // 
 
-void cM2d_CrossCirLin(cM2dGCir&, f32, f32, f32, f32, f32*, f32*);
+void cM2d_CrossCirLin(cM2dGCir&, f32, f32, f32, f32, f32*, f32*); // 2
 
-extern "C" void cM2d_CrossCirLin__FR8cM2dGCirffffPfPf();
+extern "C" void cM2d_CrossCirLin__FR8cM2dGCirffffPfPf(); // 1
 SECTION_SDATA2 extern f32 lit_2266;
 SECTION_SDATA2 extern f32 lit_2267;
 SECTION_SDATA2 extern u8 lit_2268[4];

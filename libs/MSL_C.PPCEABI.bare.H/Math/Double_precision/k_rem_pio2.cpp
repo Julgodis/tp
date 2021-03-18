@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __kernel_rem_pio2();
+extern "C" void __kernel_rem_pio2(); // 1
 
-extern "C" void __kernel_rem_pio2();
+extern "C" void __kernel_rem_pio2(); // 1
 SECTION_RODATA extern const u8 init_jk[16];
 SECTION_RODATA extern const u8 PIo2[64];
 SECTION_SDATA2 extern u8 Math_Double_precision_k_rem_pio2__lit_436[8];
@@ -27,15 +27,15 @@ SECTION_SDATA2 extern f64 lit_445;
 // External References:
 // 
 
-extern "C" void _savefpr_25();
-extern "C" void _restfpr_25();
-extern "C" void floor();
-extern "C" void ldexp();
+extern "C" void _savefpr_25(); // 1
+extern "C" void _restfpr_25(); // 1
+extern "C" void floor(); // 1
+extern "C" void ldexp(); // 1
 
-extern "C" void _savefpr_25();
-extern "C" void _restfpr_25();
-extern "C" void floor();
-extern "C" void ldexp();
+extern "C" void _savefpr_25(); // 1
+extern "C" void _restfpr_25(); // 1
+extern "C" void floor(); // 1
+extern "C" void ldexp(); // 1
 
 // 
 // Declarations:

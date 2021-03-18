@@ -9,57 +9,28 @@
 // Types:
 // 
 
-// build J3DSkinNList (['J3DSkinNList']) False/False
-/* top-level dependencies (begin ['J3DSkinNList']) */
-/* top-level dependencies (end ['J3DSkinNList']) */
 struct J3DSkinNList {
 	/* 8032C6E4 */ J3DSkinNList();
 	/* 8032C85C */ void calcSkin_VtxPosF32(f32 (* )[4], void*, void*);
 	/* 8032C8E4 */ void calcSkin_VtxNrmF32(f32 (* )[4], void*, void*);
 };
 
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build J3DSkinDeform (['J3DSkinDeform']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build J3DModel (['J3DModel']) False/False
-/* top-level dependencies (begin ['J3DModel']) */
-/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build J3DVertexBuffer (['J3DVertexBuffer']) False/False
-/* top-level dependencies (begin ['J3DVertexBuffer']) */
-/* top-level dependencies (end ['J3DVertexBuffer']) */
-struct J3DVertexBuffer {
-};
-
-// build J3DMtxBuffer (['J3DMtxBuffer']) False/False
-/* top-level dependencies (begin ['J3DMtxBuffer']) */
-/* top-level dependencies (end ['J3DMtxBuffer']) */
 struct J3DMtxBuffer {
 };
 
-/* top-level dependencies (begin ['J3DSkinDeform']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('J3DModel',)
-// outer dependency: ('J3DVertexBuffer',)
-// outer dependency: ('J3DMtxBuffer',)
-/* top-level dependencies (end ['J3DSkinDeform']) */
+struct J3DVertexBuffer {
+};
+
 struct J3DSkinDeform {
-	// ('J3DModelData',)
-	// ('J3DModel',)
-	// ('J3DVertexBuffer',)
-	// ('J3DMtxBuffer',)
 	/* 8032C96C */ J3DSkinDeform();
 	/* 8032C9B0 */ void initSkinInfo(J3DModelData*);
 	/* 8032CF44 */ void initMtxIndexArray(J3DModelData*);
@@ -73,28 +44,15 @@ struct J3DSkinDeform {
 	/* 8032DC74 */ void deformVtxPos_S16(J3DVertexBuffer*, J3DMtxBuffer*) const;
 	/* 8032DDB8 */ void deformVtxNrm_F32(J3DVertexBuffer*) const;
 	/* 8032DEBC */ void deformVtxNrm_S16(J3DVertexBuffer*) const;
-	/* 8032DFDC */ void deform(J3DModel*);
 	/* 8032E064 */ void deform(J3DVertexBuffer*, J3DMtxBuffer*);
+	/* 8032DFDC */ void deform(J3DModel*);
 	/* 8032E1B0 */ ~J3DSkinDeform();
 };
 
-// build J3DModelData (['J3DModelData']) True/True
-// build J3DMtxBuffer (['J3DMtxBuffer']) True/True
-// build J3DVertexBuffer (['J3DVertexBuffer']) True/True
-// build J3DModel (['J3DModel']) True/True
-// build J3DVtxColorCalc (['J3DVtxColorCalc']) False/False
-// build J3DModel (['J3DModel']) True/True
-/* top-level dependencies (begin ['J3DVtxColorCalc']) */
-// outer dependency: ('J3DModel',)
-/* top-level dependencies (end ['J3DVtxColorCalc']) */
 struct J3DVtxColorCalc {
-	// ('J3DModel',)
 	/* 8032E180 */ void calc(J3DModel*);
 };
 
-// build J3DShape (['J3DShape']) False/False
-/* top-level dependencies (begin ['J3DShape']) */
-/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80315260 */ void makeVcdVatCmd();
 };
@@ -103,31 +61,31 @@ struct J3DShape {
 // Forward References:
 // 
 
-static void J3DPSWeightMTXMultVec(f32 (* )[4], f32, Vec*, Vec*);
-static void J3DPSWeightMTXMultVecSR(f32 (* )[4], f32, Vec*, Vec*);
+static void J3DPSWeightMTXMultVec(f32 (* )[4], f32, Vec*, Vec*); // 2
+static void J3DPSWeightMTXMultVecSR(f32 (* )[4], f32, Vec*, Vec*); // 2
 
-extern "C" void __ct__12J3DSkinNListFv();
-extern "C" static void J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec();
-extern "C" static void J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec();
-extern "C" void calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv();
-extern "C" void calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv();
-extern "C" void __ct__13J3DSkinDeformFv();
-extern "C" void initSkinInfo__13J3DSkinDeformFP12J3DModelData();
-extern "C" void initMtxIndexArray__13J3DSkinDeformFP12J3DModelData();
-extern "C" void changeFastSkinDL__13J3DSkinDeformFP12J3DModelData();
-extern "C" void calcNrmMtx__13J3DSkinDeformFP12J3DMtxBuffer();
-extern "C" void transformVtxPosNrm__13J3DSkinDeformFP12J3DModelData();
-extern "C" void calcAnmInvJointMtx__13J3DSkinDeformFP12J3DMtxBuffer();
-extern "C" void deformFastVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
-extern "C" void deformFastVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
-extern "C" void deformVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
-extern "C" void deformVtxPos_S16__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
-extern "C" void deformVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBuffer();
-extern "C" void deformVtxNrm_S16__13J3DSkinDeformCFP15J3DVertexBuffer();
-extern "C" void deform__13J3DSkinDeformFP8J3DModel();
-extern "C" void deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer();
-extern "C" void calc__15J3DVtxColorCalcFP8J3DModel();
-extern "C" void __dt__13J3DSkinDeformFv();
+extern "C" void __ct__12J3DSkinNListFv(); // 1
+extern "C" static void J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec(); // 1
+extern "C" static void J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec(); // 1
+extern "C" void calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv(); // 1
+extern "C" void calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv(); // 1
+extern "C" void __ct__13J3DSkinDeformFv(); // 1
+extern "C" void initSkinInfo__13J3DSkinDeformFP12J3DModelData(); // 1
+extern "C" void initMtxIndexArray__13J3DSkinDeformFP12J3DModelData(); // 1
+extern "C" void changeFastSkinDL__13J3DSkinDeformFP12J3DModelData(); // 1
+extern "C" void calcNrmMtx__13J3DSkinDeformFP12J3DMtxBuffer(); // 1
+extern "C" void transformVtxPosNrm__13J3DSkinDeformFP12J3DModelData(); // 1
+extern "C" void calcAnmInvJointMtx__13J3DSkinDeformFP12J3DMtxBuffer(); // 1
+extern "C" void deformFastVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
+extern "C" void deformFastVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
+extern "C" void deformVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
+extern "C" void deformVtxPos_S16__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
+extern "C" void deformVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBuffer(); // 1
+extern "C" void deformVtxNrm_S16__13J3DSkinDeformCFP15J3DVertexBuffer(); // 1
+extern "C" void deform__13J3DSkinDeformFP8J3DModel(); // 1
+extern "C" void deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
+extern "C" void calc__15J3DVtxColorCalcFP8J3DModel(); // 1
+extern "C" void __dt__13J3DSkinDeformFv(); // 1
 SECTION_RODATA extern const u8 lit_1142[16];
 SECTION_RODATA extern const u8 J3DSkinDeform__lit_1270[16];
 SECTION_RODATA extern const u8 J3DSkinDeform__stringBase0[64];
@@ -142,66 +100,66 @@ SECTION_SDATA2 extern u8 lit_1578[4];
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-extern "C" void OSReport();
-void* operator new[](u32);
-void* operator new[](u32, int);
-void operator delete(void*);
-void J3DGQRSetup7(u32, u32, u32, u32);
-void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]);
-extern "C" void DCStoreRange();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXMultVec();
-extern "C" void PSMTXMultVecSR();
-extern "C" void __construct_new_array();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_17();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_17();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+extern "C" void OSReport(); // 1
+void* operator new[](u32); // 2
+void* operator new[](u32, int); // 2
+void operator delete(void*); // 2
+void J3DGQRSetup7(u32, u32, u32, u32); // 2
+void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]); // 2
+extern "C" void DCStoreRange(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSMTXMultVecSR(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_17(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_17(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void OSReport();
-extern "C" void* __nwa__FUl();
-extern "C" void* __nwa__FUli();
-extern "C" void __dl__FPv();
-extern "C" void J3DGQRSetup7__FUlUlUlUl();
-extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f();
-extern "C" void makeVcdVatCmd__8J3DShapeFv();
-extern "C" void DCStoreRange();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXMultVec();
-extern "C" void PSMTXMultVecSR();
-extern "C" void __construct_new_array();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_17();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_17();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+extern "C" void OSReport(); // 1
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void* __nwa__FUli(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void J3DGQRSetup7__FUlUlUlUl(); // 1
+extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f(); // 1
+extern "C" void makeVcdVatCmd__8J3DShapeFv(); // 1
+extern "C" void DCStoreRange(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSMTXMultVecSR(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_17(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_17(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern u8 PSMulUnit01[8];
 
 // 

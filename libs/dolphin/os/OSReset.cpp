@@ -9,21 +9,21 @@
 // Forward References:
 // 
 
-extern "C" void OSRegisterResetFunction();
-extern "C" static void __OSCallResetFunctions();
-extern "C" static void Reset();
-extern "C" static void KillThreads();
-extern "C" void __OSDoHotReset();
-extern "C" void OSResetSystem();
-extern "C" void OSGetResetCode();
+extern "C" void OSRegisterResetFunction(); // 1
+extern "C" static void __OSCallResetFunctions(); // 1
+extern "C" static void Reset(); // 1
+extern "C" static void KillThreads(); // 1
+extern "C" void __OSDoHotReset(); // 1
+extern "C" void OSResetSystem(); // 1
+extern "C" void OSGetResetCode(); // 1
 
-extern "C" void OSRegisterResetFunction();
-extern "C" static void __OSCallResetFunctions();
-extern "C" static void Reset();
-extern "C" static void KillThreads();
-extern "C" void __OSDoHotReset();
-extern "C" void OSResetSystem();
-extern "C" void OSGetResetCode();
+extern "C" void OSRegisterResetFunction(); // 1
+extern "C" static void __OSCallResetFunctions(); // 1
+extern "C" static void Reset(); // 1
+extern "C" static void KillThreads(); // 1
+extern "C" void __OSDoHotReset(); // 1
+extern "C" void OSResetSystem(); // 1
+extern "C" void OSGetResetCode(); // 1
 SECTION_DATA extern u8 OSReset__lit_153[78 + 2 /* padding */];
 SECTION_SBSS extern u8 ResetFunctionQueue[8];
 SECTION_SBSS extern u8 bootThisDol[4 + 4 /* padding */];
@@ -32,35 +32,35 @@ SECTION_SBSS extern u8 bootThisDol[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memset();
-extern "C" void OSReport();
-extern "C" void __OSStopAudioSystem();
-extern "C" void ICFlashInvalidate();
-extern "C" void LCDisable();
-extern "C" void OSDisableInterrupts();
-extern "C" void __OSReboot();
-extern "C" void __OSLockSram();
-extern "C" void __OSUnlockSram();
-extern "C" void __OSSyncSram();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" void OSCancelThread();
-extern "C" void __PADDisableRecalibration();
+SECTION_INIT void memset(); // 1
+extern "C" void OSReport(); // 1
+extern "C" void __OSStopAudioSystem(); // 1
+extern "C" void ICFlashInvalidate(); // 1
+extern "C" void LCDisable(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void __OSReboot(); // 1
+extern "C" void __OSLockSram(); // 1
+extern "C" void __OSUnlockSram(); // 1
+extern "C" void __OSSyncSram(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void OSCancelThread(); // 1
+extern "C" void __PADDisableRecalibration(); // 1
 
-SECTION_INIT void memset();
-extern "C" void OSReport();
-extern "C" void __OSStopAudioSystem();
-extern "C" void ICFlashInvalidate();
-extern "C" void LCDisable();
-extern "C" void OSDisableInterrupts();
-extern "C" void __OSReboot();
-extern "C" void __OSLockSram();
-extern "C" void __OSUnlockSram();
-extern "C" void __OSSyncSram();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" void OSCancelThread();
-extern "C" void __PADDisableRecalibration();
+SECTION_INIT void memset(); // 1
+extern "C" void OSReport(); // 1
+extern "C" void __OSStopAudioSystem(); // 1
+extern "C" void ICFlashInvalidate(); // 1
+extern "C" void LCDisable(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void __OSReboot(); // 1
+extern "C" void __OSLockSram(); // 1
+extern "C" void __OSUnlockSram(); // 1
+extern "C" void __OSSyncSram(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void OSCancelThread(); // 1
+extern "C" void __PADDisableRecalibration(); // 1
 SECTION_BSS extern u8 __OSRebootParams[28 + 4 /* padding */];
 
 // 

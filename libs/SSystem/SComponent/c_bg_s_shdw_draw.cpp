@@ -9,39 +9,21 @@
 // Types:
 // 
 
-// build cBgS_ShdwDraw (['cBgS_ShdwDraw']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['cBgS_ShdwDraw']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cBgS_ShdwDraw']) */
 struct cBgS_ShdwDraw {
-	// ('cXyz',)
 	/* 80267F88 */ cBgS_ShdwDraw();
 	/* 80267FD0 */ ~cBgS_ShdwDraw();
 	/* 80268048 */ void Set(cXyz&, cXyz&);
 };
 
-// build cXyz (['cXyz']) True/True
-// build cBgS_Chk (['cBgS_Chk']) False/False
-/* top-level dependencies (begin ['cBgS_Chk']) */
-/* top-level dependencies (end ['cBgS_Chk']) */
 struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();
 };
 
-// build cM3dGAab (['cM3dGAab']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGAab']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGAab']) */
 struct cM3dGAab {
-	// ('cXyz',)
 	/* 8026EC54 */ void Set(cXyz const*, cXyz const*);
 };
 
@@ -49,24 +31,24 @@ struct cM3dGAab {
 // Forward References:
 // 
 
-extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
+extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i(); // 1
 
-extern "C" void __ct__13cBgS_ShdwDrawFv();
-extern "C" void __dt__13cBgS_ShdwDrawFv();
-extern "C" void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz();
-extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
+extern "C" void __ct__13cBgS_ShdwDrawFv(); // 1
+extern "C" void __dt__13cBgS_ShdwDrawFv(); // 1
+extern "C" void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz(); // 1
+extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i(); // 1
 SECTION_DATA extern void*const __vt__13cBgS_ShdwDraw[4];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __ct__8cBgS_ChkFv();
-extern "C" void __dt__8cBgS_ChkFv();
-extern "C" void Set__8cM3dGAabFPC4cXyzPC4cXyz();
-extern "C" void __dl__FPv();
+extern "C" void __ct__8cBgS_ChkFv(); // 1
+extern "C" void __dt__8cBgS_ChkFv(); // 1
+extern "C" void Set__8cM3dGAabFPC4cXyzPC4cXyz(); // 1
+extern "C" void __dl__FPv(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 
 // 

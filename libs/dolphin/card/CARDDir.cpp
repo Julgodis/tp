@@ -9,33 +9,33 @@
 // Forward References:
 // 
 
-extern "C" void __CARDGetDirBlock();
-extern "C" static void CARDDir__WriteCallback();
-extern "C" static void CARDDir__EraseCallback();
-extern "C" void __CARDUpdateDir();
+extern "C" void __CARDGetDirBlock(); // 1
+extern "C" static void CARDDir__WriteCallback(); // 1
+extern "C" static void CARDDir__EraseCallback(); // 1
+extern "C" void __CARDUpdateDir(); // 1
 
-extern "C" void __CARDGetDirBlock();
-extern "C" static void CARDDir__WriteCallback();
-extern "C" static void CARDDir__EraseCallback();
-extern "C" void __CARDUpdateDir();
+extern "C" void __CARDGetDirBlock(); // 1
+extern "C" static void CARDDir__WriteCallback(); // 1
+extern "C" static void CARDDir__EraseCallback(); // 1
+extern "C" void __CARDUpdateDir(); // 1
 
 // 
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-extern "C" void DCStoreRange();
-extern "C" void __CARDEraseSector();
-extern "C" void __CARDPutControlBlock();
-extern "C" void __CARDWrite();
-extern "C" void __CARDCheckSum();
+SECTION_INIT void memcpy(); // 1
+extern "C" void DCStoreRange(); // 1
+extern "C" void __CARDEraseSector(); // 1
+extern "C" void __CARDPutControlBlock(); // 1
+extern "C" void __CARDWrite(); // 1
+extern "C" void __CARDCheckSum(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void DCStoreRange();
-extern "C" void __CARDEraseSector();
-extern "C" void __CARDPutControlBlock();
-extern "C" void __CARDWrite();
-extern "C" void __CARDCheckSum();
+SECTION_INIT void memcpy(); // 1
+extern "C" void DCStoreRange(); // 1
+extern "C" void __CARDEraseSector(); // 1
+extern "C" void __CARDPutControlBlock(); // 1
+extern "C" void __CARDWrite(); // 1
+extern "C" void __CARDCheckSum(); // 1
 SECTION_BSS extern u8 __CARDBlock[544];
 
 // 

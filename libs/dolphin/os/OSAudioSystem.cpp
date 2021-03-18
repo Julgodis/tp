@@ -9,26 +9,26 @@
 // Forward References:
 // 
 
-extern "C" void __OSInitAudioSystem();
-extern "C" void __OSStopAudioSystem();
+extern "C" void __OSInitAudioSystem(); // 1
+extern "C" void __OSStopAudioSystem(); // 1
 
-extern "C" void __OSInitAudioSystem();
-extern "C" void __OSStopAudioSystem();
+extern "C" void __OSInitAudioSystem(); // 1
+extern "C" void __OSStopAudioSystem(); // 1
 SECTION_DATA extern u8 DSPInitCode[128];
 
 // 
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-extern "C" void OSGetArenaHi();
-extern "C" void DCFlushRange();
-extern "C" void OSGetTick();
+SECTION_INIT void memcpy(); // 1
+extern "C" void OSGetArenaHi(); // 1
+extern "C" void DCFlushRange(); // 1
+extern "C" void OSGetTick(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void OSGetArenaHi();
-extern "C" void DCFlushRange();
-extern "C" void OSGetTick();
+SECTION_INIT void memcpy(); // 1
+extern "C" void OSGetArenaHi(); // 1
+extern "C" void DCFlushRange(); // 1
+extern "C" void OSGetTick(); // 1
 
 // 
 // Declarations:

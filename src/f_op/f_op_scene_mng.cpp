@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build scene_class (['scene_class']) False/False
-/* top-level dependencies (begin ['scene_class']) */
-/* top-level dependencies (end ['scene_class']) */
 struct scene_class {
 };
 
@@ -19,38 +16,38 @@ struct scene_class {
 // Forward References:
 // 
 
-void fopScnM_SearchByID(u32);
-void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
-void fopScnM_DeleteReq(scene_class*);
-void fopScnM_CreateReq(s16, s16, u16, u32);
-void fopScnM_ReRequest(s16, u32);
-void fopScnM_Management();
-void fopScnM_Init();
+void fopScnM_SearchByID(u32); // 2
+void fopScnM_ChangeReq(scene_class*, s16, s16, u16); // 2
+void fopScnM_DeleteReq(scene_class*); // 2
+void fopScnM_CreateReq(s16, s16, u16, u32); // 2
+void fopScnM_ReRequest(s16, u32); // 2
+void fopScnM_Management(); // 2
+void fopScnM_Init(); // 2
 
-extern "C" void fopScnM_SearchByID__FUi();
-extern "C" void fopScnM_ChangeReq__FP11scene_classssUs();
-extern "C" void fopScnM_DeleteReq__FP11scene_class();
-extern "C" void fopScnM_CreateReq__FssUsUl();
-extern "C" void fopScnM_ReRequest__FsUl();
-extern "C" void fopScnM_Management__Fv();
-extern "C" void fopScnM_Init__Fv();
+extern "C" void fopScnM_SearchByID__FUi(); // 1
+extern "C" void fopScnM_ChangeReq__FP11scene_classssUs(); // 1
+extern "C" void fopScnM_DeleteReq__FP11scene_class(); // 1
+extern "C" void fopScnM_CreateReq__FssUsUl(); // 1
+extern "C" void fopScnM_ReRequest__FsUl(); // 1
+extern "C" void fopScnM_Management__Fv(); // 1
+extern "C" void fopScnM_Init__Fv(); // 1
 SECTION_SDATA extern u32 l_scnRqID;
 
 // 
 // External References:
 // 
 
-extern "C" void fopScnIt_Judge__FPFPvPv_PvPv();
-void fopScnRq_Request(int, scene_class*, s16, void*, s16, u16);
-void fopScnRq_ReRequest(u32, s16, void*);
-void fopScnRq_Handler();
-void fpcSch_JudgeByID(void*, void*);
+extern "C" void fopScnIt_Judge__FPFPvPv_PvPv(); // 1
+void fopScnRq_Request(int, scene_class*, s16, void*, s16, u16); // 2
+void fopScnRq_ReRequest(u32, s16, void*); // 2
+void fopScnRq_Handler(); // 2
+void fpcSch_JudgeByID(void*, void*); // 2
 
-extern "C" void fopScnIt_Judge__FPFPvPv_PvPv();
-extern "C" void fopScnRq_Request__FiP11scene_classsPvsUs();
-extern "C" void fopScnRq_ReRequest__FUisPv();
-extern "C" void fopScnRq_Handler__Fv();
-extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void fopScnIt_Judge__FPFPvPv_PvPv(); // 1
+extern "C" void fopScnRq_Request__FiP11scene_classsPvsUs(); // 1
+extern "C" void fopScnRq_ReRequest__FUisPv(); // 1
+extern "C" void fopScnRq_Handler__Fv(); // 1
+extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
 
 // 
 // Declarations:

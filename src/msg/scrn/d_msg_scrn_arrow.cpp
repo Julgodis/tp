@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dMsgScrnArrow_c (['dMsgScrnArrow_c']) False/False
-/* top-level dependencies (begin ['dMsgScrnArrow_c']) */
-/* top-level dependencies (end ['dMsgScrnArrow_c']) */
 struct dMsgScrnArrow_c {
 	/* 8023B9B4 */ dMsgScrnArrow_c();
 	/* 8023BC78 */ ~dMsgScrnArrow_c();
@@ -23,72 +20,36 @@ struct dMsgScrnArrow_c {
 	/* 8023C010 */ void dotAnimeMove();
 };
 
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
-struct JKRExpHeap {
-};
-
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 8025564C */ void isVisible();
 };
 
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build J2DAnmLoaderDataBase (['J2DAnmLoaderDataBase']) False/False
-/* top-level dependencies (begin ['J2DAnmLoaderDataBase']) */
-/* top-level dependencies (end ['J2DAnmLoaderDataBase']) */
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
@@ -98,14 +59,14 @@ struct J2DAnmLoaderDataBase {
 // 
 
 
-extern "C" void __ct__15dMsgScrnArrow_cFv();
-extern "C" void __dt__15dMsgScrnArrow_cFv();
-extern "C" void draw__15dMsgScrnArrow_cFv();
-extern "C" void setPos__15dMsgScrnArrow_cFff();
-extern "C" void arwAnimeInit__15dMsgScrnArrow_cFv();
-extern "C" void arwAnimeMove__15dMsgScrnArrow_cFv();
-extern "C" void dotAnimeInit__15dMsgScrnArrow_cFv();
-extern "C" void dotAnimeMove__15dMsgScrnArrow_cFv();
+extern "C" void __ct__15dMsgScrnArrow_cFv(); // 1
+extern "C" void __dt__15dMsgScrnArrow_cFv(); // 1
+extern "C" void draw__15dMsgScrnArrow_cFv(); // 1
+extern "C" void setPos__15dMsgScrnArrow_cFff(); // 1
+extern "C" void arwAnimeInit__15dMsgScrnArrow_cFv(); // 1
+extern "C" void arwAnimeMove__15dMsgScrnArrow_cFv(); // 1
+extern "C" void dotAnimeInit__15dMsgScrnArrow_cFv(); // 1
+extern "C" void dotAnimeMove__15dMsgScrnArrow_cFv(); // 1
 SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_arrow__stringBase0[88];
 SECTION_DATA extern void*const __vt__15dMsgScrnArrow_c[4];
 SECTION_SDATA2 extern u8 lit_3662[4];
@@ -116,23 +77,23 @@ SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_arrow__lit_3763;
 // External References:
 // 
 
-void dPaneClass_showNullPane(J2DScreen*);
-void* operator new(u32);
-void operator delete(void*);
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
 
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" void show__13CPaneMgrAlphaFv();
-extern "C" void hide__13CPaneMgrAlphaFv();
-extern "C" void isVisible__13CPaneMgrAlphaFv();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void animation__9J2DScreenFv();
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void show__13CPaneMgrAlphaFv(); // 1
+extern "C" void hide__13CPaneMgrAlphaFv(); // 1
+extern "C" void isVisible__13CPaneMgrAlphaFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void animation__9J2DScreenFv(); // 1
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 

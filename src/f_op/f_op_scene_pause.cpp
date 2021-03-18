@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build scene_class (['scene_class']) False/False
-/* top-level dependencies (begin ['scene_class']) */
-/* top-level dependencies (end ['scene_class']) */
 struct scene_class {
 };
 
@@ -19,25 +16,25 @@ struct scene_class {
 // Forward References:
 // 
 
-void fopScnPause_Enable(scene_class*);
-void fopScnPause_Disable(scene_class*);
+void fopScnPause_Enable(scene_class*); // 2
+void fopScnPause_Disable(scene_class*); // 2
 
-extern "C" void fopScnPause_Enable__FP11scene_class();
-extern "C" void fopScnPause_Disable__FP11scene_class();
+extern "C" void fopScnPause_Enable__FP11scene_class(); // 1
+extern "C" void fopScnPause_Disable__FP11scene_class(); // 1
 
 // 
 // External References:
 // 
 
-void fpcEx_IsExist(u32);
-void fpcM_IsPause(void*, u8);
-void fpcM_PauseEnable(void*, u8);
-void fpcM_PauseDisable(void*, u8);
+void fpcEx_IsExist(u32); // 2
+void fpcM_IsPause(void*, u8); // 2
+void fpcM_PauseEnable(void*, u8); // 2
+void fpcM_PauseDisable(void*, u8); // 2
 
-extern "C" void fpcEx_IsExist__FUi();
-extern "C" void fpcM_IsPause__FPvUc();
-extern "C" void fpcM_PauseEnable__FPvUc();
-extern "C" void fpcM_PauseDisable__FPvUc();
+extern "C" void fpcEx_IsExist__FUi(); // 1
+extern "C" void fpcM_IsPause__FPvUc(); // 1
+extern "C" void fpcM_PauseEnable__FPvUc(); // 1
+extern "C" void fpcM_PauseDisable__FPvUc(); // 1
 
 // 
 // Declarations:

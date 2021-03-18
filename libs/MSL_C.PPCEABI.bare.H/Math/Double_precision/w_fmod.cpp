@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void fmod();
+extern "C" void fmod(); // 1
 
-extern "C" void fmod();
+extern "C" void fmod(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __ieee754_fmod();
+extern "C" void __ieee754_fmod(); // 1
 
-extern "C" void __ieee754_fmod();
+extern "C" void __ieee754_fmod(); // 1
 
 // 
 // Declarations:

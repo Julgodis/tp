@@ -9,69 +9,45 @@
 // Types:
 // 
 
-// build cM3dGTri (['cM3dGTri']) False/False
-// build cM3dGCyl (['cM3dGCyl']) False/False
-/* top-level dependencies (begin ['cM3dGCyl']) */
-/* top-level dependencies (end ['cM3dGCyl']) */
 struct cM3dGCyl {
 };
 
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build cM3dGPla (['cM3dGPla']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['cM3dGPla']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
-	// ('Vec',)
 	/* 8026F52C */ void SetupNP(Vec const&, Vec const&);
 	/* 8026F624 */ void Set(cM3dGPla const*);
 };
 
-/* top-level dependencies (begin ['cM3dGTri']) */
-// outer dependency: ('cM3dGCyl',)
-// outer dependency: ('Vec',)
-// outer dependency: ('cM3dGPla',)
-/* top-level dependencies (end ['cM3dGTri']) */
 struct cM3dGTri {
-	// ('cM3dGCyl',)
-	// ('Vec',)
-	// ('cM3dGPla',)
 	/* 8026F7B0 */ void cross(cM3dGCyl const*, Vec*) const;
 	/* 8026F7DC */ void setPos(Vec const*, Vec const*, Vec const*);
 	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
 	/* 8026F8C8 */ void set(Vec const*, Vec const*, Vec const*, Vec const*);
 };
 
-// build cM3dGCyl (['cM3dGCyl']) True/True
-// build Vec (['Vec']) True/True
-// build cM3dGPla (['cM3dGPla']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void cross__8cM3dGTriCFPC8cM3dGCylP3Vec();
-extern "C" void setPos__8cM3dGTriFPC3VecPC3VecPC3Vec();
-extern "C" void setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla();
-extern "C" void set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec();
+extern "C" void cross__8cM3dGTriCFPC8cM3dGCylP3Vec(); // 1
+extern "C" void setPos__8cM3dGTriFPC3VecPC3VecPC3Vec(); // 1
+extern "C" void setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla(); // 1
+extern "C" void set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec(); // 1
 
 // 
 // External References:
 // 
 
-void cM3d_CalcPla(Vec const*, Vec const*, Vec const*, Vec*, f32*);
-void cM3d_Cross_CylTri(cM3dGCyl const*, cM3dGTri const*, Vec*);
+void cM3d_CalcPla(Vec const*, Vec const*, Vec const*, Vec*, f32*); // 2
+void cM3d_Cross_CylTri(cM3dGCyl const*, cM3dGTri const*, Vec*); // 2
 
-extern "C" void cM3d_CalcPla__FPC3VecPC3VecPC3VecP3VecPf();
-extern "C" void cM3d_Cross_CylTri__FPC8cM3dGCylPC8cM3dGTriP3Vec();
-extern "C" void SetupNP__8cM3dGPlaFRC3VecRC3Vec();
-extern "C" void Set__8cM3dGPlaFPC8cM3dGPla();
+extern "C" void cM3d_CalcPla__FPC3VecPC3VecPC3VecP3VecPf(); // 1
+extern "C" void cM3d_Cross_CylTri__FPC8cM3dGCylPC8cM3dGTriP3Vec(); // 1
+extern "C" void SetupNP__8cM3dGPlaFRC3VecRC3Vec(); // 1
+extern "C" void Set__8cM3dGPlaFPC8cM3dGPla(); // 1
 
 // 
 // Declarations:

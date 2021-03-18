@@ -9,59 +9,32 @@
 // Types:
 // 
 
-// build JUTDbPrint (['JUTDbPrint']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-// build JUTFont (['JUTFont']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin ['JUTFont']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// ('JUtility', 'TColor')
 	/* 802DED70 */ void setCharColor(JUtility::TColor);
 	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
 };
 
-/* top-level dependencies (begin ['JUTDbPrint']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JUTFont',)
-/* top-level dependencies (end ['JUTDbPrint']) */
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
 struct JUTDbPrint {
-	// ('JKRHeap',)
-	// ('JUTFont',)
 	/* 802E0148 */ JUTDbPrint(JUTFont*, JKRHeap*);
 	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
 	/* 802E0204 */ void changeFont(JUTFont*);
 	/* 802E021C */ void enter(int, int, int, char const*, int);
-	/* 802E02A4 */ void flush();
 	/* 802E02DC */ void flush(int, int, int, int);
+	/* 802E02A4 */ void flush();
 	/* 802E0440 */ void drawString(int, int, int, u8 const*);
 };
 
-// build JUTFont (['JUTFont']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-// build JUtility (['JUtility']) True/True
-// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
-/* top-level dependencies (begin ['J2DOrthoGraph']) */
-/* top-level dependencies (end ['J2DOrthoGraph']) */
 struct J2DOrthoGraph {
 	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
 	/* 802E97B4 */ void setPort();
@@ -71,18 +44,18 @@ struct J2DOrthoGraph {
 // Forward References:
 // 
 
-void JUTReport(int, int, char const*, ...);
-void JUTReport(int, int, int, char const*, ...);
+void JUTReport(int, int, char const*, ...); // 2
+void JUTReport(int, int, int, char const*, ...); // 2
 
-extern "C" void __ct__10JUTDbPrintFP7JUTFontP7JKRHeap();
-extern "C" void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
-extern "C" void changeFont__10JUTDbPrintFP7JUTFont();
-extern "C" void enter__10JUTDbPrintFiiiPCci();
-extern "C" void flush__10JUTDbPrintFv();
-extern "C" void flush__10JUTDbPrintFiiii();
-extern "C" void drawString__10JUTDbPrintFiiiPCUc();
-extern "C" void JUTReport__FiiPCce();
-extern "C" void JUTReport__FiiiPCce();
+extern "C" void __ct__10JUTDbPrintFP7JUTFontP7JKRHeap(); // 1
+extern "C" void start__10JUTDbPrintFP7JUTFontP7JKRHeap(); // 1
+extern "C" void changeFont__10JUTDbPrintFP7JUTFont(); // 1
+extern "C" void enter__10JUTDbPrintFiiiPCci(); // 1
+extern "C" void flush__10JUTDbPrintFv(); // 1
+extern "C" void flush__10JUTDbPrintFiiii(); // 1
+extern "C" void drawString__10JUTDbPrintFiiiPCUc(); // 1
+extern "C" void JUTReport__FiiPCce(); // 1
+extern "C" void JUTReport__FiiiPCce(); // 1
 SECTION_SBSS extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
 SECTION_SDATA2 extern f32 JUTDbPrint__lit_835;
 SECTION_SDATA2 extern f32 JUTDbPrint__lit_836;
@@ -92,35 +65,35 @@ SECTION_SDATA2 extern f64 JUTDbPrint__lit_838;
 // External References:
 // 
 
-void* operator new(u32);
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void vsnprintf();
-extern "C" void strcpy();
+void* operator new(u32); // 2
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void vsnprintf(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
-extern "C" void free__7JKRHeapFPvP7JKRHeap();
-extern "C" void* __nw__FUl();
-extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor();
-extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb();
-extern "C" void __ct__13J2DOrthoGraphFffffff();
-extern "C" void setPort__13J2DOrthoGraphFv();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void vsnprintf();
-extern "C" void strcpy();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
+extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor(); // 1
+extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb(); // 1
+extern "C" void __ct__13J2DOrthoGraphFffffff(); // 1
+extern "C" void setPort__13J2DOrthoGraphFv(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void vsnprintf(); // 1
+extern "C" void strcpy(); // 1
 SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
 SECTION_DATA extern void*const __vt__13J2DOrthoGraph[10];
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];

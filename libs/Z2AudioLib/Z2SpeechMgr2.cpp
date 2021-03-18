@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build Z2SpeechMgr2 (['Z2SpeechMgr2']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['Z2SpeechMgr2']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2SpeechMgr2']) */
 struct Z2SpeechMgr2 {
-	// ('Vec',)
 	/* 802CBC60 */ Z2SpeechMgr2();
 	/* 802CBD88 */ void setString(u16 const*, s16, u8, u16);
 	/* 802CBF60 */ void setTextCount(s16);
@@ -33,32 +25,32 @@ struct Z2SpeechMgr2 {
 	/* 802CCF88 */ void isMidnaSpeak();
 };
 
-// build Z2SpeechStarter (['Z2SpeechStarter']) False/False
-/* top-level dependencies (begin ['Z2SpeechStarter']) */
-/* top-level dependencies (end ['Z2SpeechStarter']) */
-struct Z2SpeechStarter {
-	/* 802CBCEC */ ~Z2SpeechStarter();
-	/* 802CCFB8 */ Z2SpeechStarter();
+struct JAISoundID {
 };
 
-// build Vec (['Vec']) True/True
-// build JAISoundHandle (['JAISoundHandle']) False/False
-/* top-level dependencies (begin ['JAISoundHandle']) */
-/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
-// build JAISound (['JAISound']) False/False
-/* top-level dependencies (begin ['JAISound']) */
-/* top-level dependencies (end ['JAISound']) */
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+struct Z2SpeechStarter {
+	/* 802CBCEC */ ~Z2SpeechStarter();
+	/* 802CCFB8 */ Z2SpeechStarter();
+	/* 802CCFF8 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*, u32, f32, f32, f32, f32, f32, u32);
+};
+
 struct JAISound {
 	/* 802A2598 */ void stop();
 };
 
-// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
-/* top-level dependencies (begin ['JAISoundParamsMove']) */
-/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 	/* 802A2E0C */ void movePitch(f32, u32);
@@ -67,45 +59,25 @@ struct JAISoundParamsMove {
 	/* 802A2F14 */ void moveDolby(f32, u32);
 };
 
-// build JAISoundStarter (['JAISoundStarter']) False/False
-/* top-level dependencies (begin ['JAISoundStarter']) */
-/* top-level dependencies (end ['JAISoundStarter']) */
 struct JAISoundStarter {
 	/* 802A2F88 */ ~JAISoundStarter();
 };
 
-// build Z2SoundStarter (['Z2SoundStarter']) False/False
-// build JAISoundHandle (['JAISoundHandle']) True/True
-/* top-level dependencies (begin ['Z2SoundStarter']) */
-// outer dependency: ('JAISoundHandle',)
-/* top-level dependencies (end ['Z2SoundStarter']) */
 struct Z2SoundStarter {
-	// ('JAISoundHandle',)
 	/* 802AAB94 */ Z2SoundStarter(bool);
+	/* 802AABF4 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 };
 
-// build Z2SeqMgr (['Z2SeqMgr']) False/False
-/* top-level dependencies (begin ['Z2SeqMgr']) */
-/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
 	/* 802AF49C */ void subBgmStart(u32);
 };
 
-// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
-/* top-level dependencies (begin ['Z2EnvSeMgr']) */
-/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
 	/* 802C93E4 */ void getFogDensity();
 };
 
-// build JMath (['JMath']) False/False
-/* top-level dependencies (begin ['JMath']) */
-/* top-level dependencies (end ['JMath']) */
 struct JMath {
-	// build TRandom_fast_ (['JMath', 'TRandom_fast_']) False/False
-	/* dependencies (begin ['JMath', 'TRandom_fast_']) */
-	/* dependencies (end ['JMath', 'TRandom_fast_']) */
 	struct TRandom_fast_ {
 		/* 80339AE4 */ TRandom_fast_(u32);
 	};
@@ -116,21 +88,20 @@ struct JMath {
 // Forward References:
 // 
 
-extern "C" static void func_802CCFF8();
 
-extern "C" void __ct__12Z2SpeechMgr2Fv();
-extern "C" void __dt__15Z2SpeechStarterFv();
-extern "C" void setString__12Z2SpeechMgr2FPCUssUcUs();
-extern "C" void setTextCount__12Z2SpeechMgr2Fs();
-extern "C" void speakOneWord__12Z2SpeechMgr2Fb();
-extern "C" void isNonVerbal__12Z2SpeechMgr2Fv();
-extern "C" void selectUnit__12Z2SpeechMgr2Fb();
-extern "C" void selectTail__12Z2SpeechMgr2Fv();
-extern "C" void framework__12Z2SpeechMgr2Fv();
-extern "C" void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc();
-extern "C" void isMidnaSpeak__12Z2SpeechMgr2Fv();
-extern "C" void __ct__15Z2SpeechStarterFv();
-extern "C" static void func_802CCFF8();
+extern "C" void __ct__12Z2SpeechMgr2Fv(); // 1
+extern "C" void __dt__15Z2SpeechStarterFv(); // 1
+extern "C" void setString__12Z2SpeechMgr2FPCUssUcUs(); // 1
+extern "C" void setTextCount__12Z2SpeechMgr2Fs(); // 1
+extern "C" void speakOneWord__12Z2SpeechMgr2Fb(); // 1
+extern "C" void isNonVerbal__12Z2SpeechMgr2Fv(); // 1
+extern "C" void selectUnit__12Z2SpeechMgr2Fb(); // 1
+extern "C" void selectTail__12Z2SpeechMgr2Fv(); // 1
+extern "C" void framework__12Z2SpeechMgr2Fv(); // 1
+extern "C" void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc(); // 1
+extern "C" void isMidnaSpeak__12Z2SpeechMgr2Fv(); // 1
+extern "C" void __ct__15Z2SpeechStarterFv(); // 1
+extern "C" void func_802CCFF8(); // 1
 SECTION_RODATA extern const u8 sReply__8Z2MdnPrm[100];
 SECTION_RODATA extern const u8 sReplyTail__8Z2MdnPrm[10 + 2 /* padding */];
 SECTION_RODATA extern const u8 sJoke__8Z2MdnPrm[100];
@@ -184,38 +155,37 @@ SECTION_SBSS2 extern u8 Z2SpeechMgr2__lit_4104[2 + 2 /* padding */];
 // External References:
 // 
 
-void dComIfGp_getReverb(int);
-extern "C" void func_802AABF4();
-void operator delete(void*);
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void dComIfGp_getReverb(int); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void dComIfGp_getReverb__Fi();
-extern "C" void releaseSound__14JAISoundHandleFv();
-extern "C" void stop__8JAISoundFv();
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
-extern "C" void movePitch__18JAISoundParamsMoveFfUl();
-extern "C" void moveFxMix__18JAISoundParamsMoveFfUl();
-extern "C" void movePan__18JAISoundParamsMoveFfUl();
-extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
-extern "C" void __dt__15JAISoundStarterFv();
-extern "C" void __ct__14Z2SoundStarterFb();
-extern "C" void func_802AABF4();
-extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
-extern "C" void subBgmStart__8Z2SeqMgrFUl();
-extern "C" void getFogDensity__10Z2EnvSeMgrFv();
-extern "C" void __dl__FPv();
-extern "C" void __ct__Q25JMath13TRandom_fast_FUl();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void releaseSound__14JAISoundHandleFv(); // 1
+extern "C" void stop__8JAISoundFv(); // 1
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void movePitch__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void moveFxMix__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void movePan__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void __dt__15JAISoundStarterFv(); // 1
+extern "C" void __ct__14Z2SoundStarterFb(); // 1
+extern "C" void func_802AABF4(); // 1
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc(); // 1
+extern "C" void subBgmStart__8Z2SeqMgrFUl(); // 1
+extern "C" void getFogDensity__10Z2EnvSeMgrFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__Q25JMath13TRandom_fast_FUl(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__14Z2SoundStarter[6];
 SECTION_SBSS extern u8 data_80450B3C[4];
 SECTION_SBSS extern u8 data_80450B70[4];
@@ -921,7 +891,7 @@ f32 Z2SpeechMgr2__lit_4572 = 0.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802CCFF8() {
+asm void Z2SpeechStarter::startSound(JAISoundID field_0, JAISoundHandle* field_1, JGeometry::TVec3<f32> const* field_2, u32 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, f32 field_8, u32 field_9) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SpeechMgr2/func_802CCFF8.s"
 }

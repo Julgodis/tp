@@ -9,25 +9,25 @@
 // Forward References:
 // 
 
-extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
-extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
+extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv(); // 1
+extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv(); // 1
 
-extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
-extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
+extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv(); // 1
+extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

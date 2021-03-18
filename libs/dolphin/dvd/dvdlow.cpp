@@ -9,49 +9,49 @@
 // Forward References:
 // 
 
-extern "C" void __DVDInitWA();
-extern "C" void __DVDInterruptHandler();
-extern "C" static void dvdlow__AlarmHandler();
-extern "C" static void AlarmHandlerForTimeout();
-extern "C" static void Read();
-extern "C" static void SeekTwiceBeforeRead();
-extern "C" void DVDLowRead();
-extern "C" void DVDLowSeek();
-extern "C" void DVDLowWaitCoverClose();
-extern "C" void DVDLowReadDiskID();
-extern "C" void DVDLowStopMotor();
-extern "C" void DVDLowRequestError();
-extern "C" void DVDLowInquiry();
-extern "C" void DVDLowAudioStream();
-extern "C" void DVDLowRequestAudioStatus();
-extern "C" void DVDLowAudioBufferConfig();
-extern "C" void DVDLowReset();
-extern "C" void DVDLowBreak();
-extern "C" void DVDLowClearCallback();
-extern "C" static void __DVDLowSetWAType();
-extern "C" void __DVDLowTestAlarm();
+extern "C" void __DVDInitWA(); // 1
+extern "C" void __DVDInterruptHandler(); // 1
+extern "C" static void dvdlow__AlarmHandler(); // 1
+extern "C" static void AlarmHandlerForTimeout(); // 1
+extern "C" static void Read(); // 1
+extern "C" static void SeekTwiceBeforeRead(); // 1
+extern "C" void DVDLowRead(); // 1
+extern "C" void DVDLowSeek(); // 1
+extern "C" void DVDLowWaitCoverClose(); // 1
+extern "C" void DVDLowReadDiskID(); // 1
+extern "C" void DVDLowStopMotor(); // 1
+extern "C" void DVDLowRequestError(); // 1
+extern "C" void DVDLowInquiry(); // 1
+extern "C" void DVDLowAudioStream(); // 1
+extern "C" void DVDLowRequestAudioStatus(); // 1
+extern "C" void DVDLowAudioBufferConfig(); // 1
+extern "C" void DVDLowReset(); // 1
+extern "C" void DVDLowBreak(); // 1
+extern "C" void DVDLowClearCallback(); // 1
+extern "C" static void __DVDLowSetWAType(); // 1
+extern "C" void __DVDLowTestAlarm(); // 1
 
-extern "C" void __DVDInitWA();
-extern "C" void __DVDInterruptHandler();
-extern "C" static void dvdlow__AlarmHandler();
-extern "C" static void AlarmHandlerForTimeout();
-extern "C" static void Read();
-extern "C" static void SeekTwiceBeforeRead();
-extern "C" void DVDLowRead();
-extern "C" void DVDLowSeek();
-extern "C" void DVDLowWaitCoverClose();
-extern "C" void DVDLowReadDiskID();
-extern "C" void DVDLowStopMotor();
-extern "C" void DVDLowRequestError();
-extern "C" void DVDLowInquiry();
-extern "C" void DVDLowAudioStream();
-extern "C" void DVDLowRequestAudioStatus();
-extern "C" void DVDLowAudioBufferConfig();
-extern "C" void DVDLowReset();
-extern "C" void DVDLowBreak();
-extern "C" void DVDLowClearCallback();
-extern "C" static void __DVDLowSetWAType();
-extern "C" void __DVDLowTestAlarm();
+extern "C" void __DVDInitWA(); // 1
+extern "C" void __DVDInterruptHandler(); // 1
+extern "C" static void dvdlow__AlarmHandler(); // 1
+extern "C" static void AlarmHandlerForTimeout(); // 1
+extern "C" static void Read(); // 1
+extern "C" static void SeekTwiceBeforeRead(); // 1
+extern "C" void DVDLowRead(); // 1
+extern "C" void DVDLowSeek(); // 1
+extern "C" void DVDLowWaitCoverClose(); // 1
+extern "C" void DVDLowReadDiskID(); // 1
+extern "C" void DVDLowStopMotor(); // 1
+extern "C" void DVDLowRequestError(); // 1
+extern "C" void DVDLowInquiry(); // 1
+extern "C" void DVDLowAudioStream(); // 1
+extern "C" void DVDLowRequestAudioStatus(); // 1
+extern "C" void DVDLowAudioBufferConfig(); // 1
+extern "C" void DVDLowReset(); // 1
+extern "C" void DVDLowBreak(); // 1
+extern "C" void DVDLowClearCallback(); // 1
+extern "C" static void __DVDLowSetWAType(); // 1
+extern "C" void __DVDLowTestAlarm(); // 1
 SECTION_BSS extern u8 CommandList[60 + 4 /* padding */];
 SECTION_BSS extern u8 AlarmForWA[40];
 SECTION_BSS extern u8 AlarmForTimeout[40];
@@ -81,29 +81,29 @@ SECTION_SBSS extern u8 NextCommandNumber[4];
 // External References:
 // 
 
-extern "C" void OSInitAlarm();
-extern "C" void OSCreateAlarm();
-extern "C" void OSSetAlarm();
-extern "C" void OSCancelAlarm();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSMaskInterrupts();
-extern "C" void __OSGetSystemTime();
-extern "C" void DVDGetCurrentDiskID();
+extern "C" void OSInitAlarm(); // 1
+extern "C" void OSCreateAlarm(); // 1
+extern "C" void OSSetAlarm(); // 1
+extern "C" void OSCancelAlarm(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSMaskInterrupts(); // 1
+extern "C" void __OSGetSystemTime(); // 1
+extern "C" void DVDGetCurrentDiskID(); // 1
 
-extern "C" void OSInitAlarm();
-extern "C" void OSCreateAlarm();
-extern "C" void OSSetAlarm();
-extern "C" void OSCancelAlarm();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSMaskInterrupts();
-extern "C" void __OSGetSystemTime();
-extern "C" void DVDGetCurrentDiskID();
+extern "C" void OSInitAlarm(); // 1
+extern "C" void OSCreateAlarm(); // 1
+extern "C" void OSSetAlarm(); // 1
+extern "C" void OSCancelAlarm(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSMaskInterrupts(); // 1
+extern "C" void __OSGetSystemTime(); // 1
+extern "C" void DVDGetCurrentDiskID(); // 1
 
 // 
 // Declarations:

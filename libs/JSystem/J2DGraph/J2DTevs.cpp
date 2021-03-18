@@ -9,65 +9,35 @@
 // Types:
 // 
 
-// build J2DTexMtx (['J2DTexMtx']) False/False
-// build J2DTextureSRTInfo (['J2DTextureSRTInfo']) False/False
-/* top-level dependencies (begin ['J2DTextureSRTInfo']) */
-/* top-level dependencies (end ['J2DTextureSRTInfo']) */
-struct J2DTextureSRTInfo {
-};
-
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['J2DTexMtx']) */
-// outer dependency: ('J2DTextureSRTInfo',)
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['J2DTexMtx']) */
+struct J2DTextureSRTInfo {
+};
+
 struct J2DTexMtx {
-	// ('J2DTextureSRTInfo',)
-	// ('Vec',)
 	/* 802E9C90 */ void load(u32);
 	/* 802E9CC4 */ void calc();
 	/* 802E9D2C */ void getTextureMtx(J2DTextureSRTInfo const&, Vec, f32 (* )[4]);
 	/* 802E9EBC */ void getTextureMtxMaya(J2DTextureSRTInfo const&, f32 (* )[4]);
 };
 
-// build J2DTextureSRTInfo (['J2DTextureSRTInfo']) True/True
-// build Vec (['Vec']) True/True
-// build J2DIndTevStage (['J2DIndTevStage']) False/False
-/* top-level dependencies (begin ['J2DIndTevStage']) */
-/* top-level dependencies (end ['J2DIndTevStage']) */
 struct J2DIndTevStage {
 	/* 802EA044 */ void load(u8);
 };
 
-// build J2DIndTexMtx (['J2DIndTexMtx']) False/False
-/* top-level dependencies (begin ['J2DIndTexMtx']) */
-/* top-level dependencies (end ['J2DIndTexMtx']) */
 struct J2DIndTexMtx {
 	/* 802EA098 */ void load(u8);
 };
 
-// build J2DIndTexCoordScale (['J2DIndTexCoordScale']) False/False
-/* top-level dependencies (begin ['J2DIndTexCoordScale']) */
-/* top-level dependencies (end ['J2DIndTexCoordScale']) */
 struct J2DIndTexCoordScale {
 	/* 802EA0CC */ void load(u8);
 };
 
-// build J2DIndTexOrder (['J2DIndTexOrder']) False/False
-/* top-level dependencies (begin ['J2DIndTexOrder']) */
-/* top-level dependencies (end ['J2DIndTexOrder']) */
 struct J2DIndTexOrder {
 	/* 802EA0FC */ void load(u8);
 };
 
-// build J2DTevBlock (['J2DTevBlock']) False/False
-/* top-level dependencies (begin ['J2DTevBlock']) */
-/* top-level dependencies (end ['J2DTevBlock']) */
 struct J2DTevBlock {
 	/* 802EA12C */ bool getTevSwapModeTable(u32);
 	/* 802EA134 */ bool getTevStage(u32);
@@ -82,9 +52,6 @@ struct J2DTevBlock {
 	/* 802EA184 */ bool getIndTevStage(u32);
 };
 
-// build J2DIndBlock (['J2DIndBlock']) False/False
-/* top-level dependencies (begin ['J2DIndBlock']) */
-/* top-level dependencies (end ['J2DIndBlock']) */
 struct J2DIndBlock {
 	/* 802EA18C */ bool getIndTexCoordScale(u32);
 	/* 802EA194 */ bool getIndTexMtx(u32);
@@ -97,29 +64,29 @@ struct J2DIndBlock {
 // 
 
 
-extern "C" void load__9J2DTexMtxFUl();
-extern "C" void calc__9J2DTexMtxFv();
-extern "C" void getTextureMtx__9J2DTexMtxFRC17J2DTextureSRTInfo3VecPA4_f();
-extern "C" void getTextureMtxMaya__9J2DTexMtxFRC17J2DTextureSRTInfoPA4_f();
-extern "C" void load__14J2DIndTevStageFUc();
-extern "C" void load__12J2DIndTexMtxFUc();
-extern "C" void load__19J2DIndTexCoordScaleFUc();
-extern "C" void load__14J2DIndTexOrderFUc();
-extern "C" bool getTevSwapModeTable__11J2DTevBlockFUl();
-extern "C" bool getTevStage__11J2DTevBlockFUl();
-extern "C" bool getTevColor__11J2DTevBlockFUl();
-extern "C" bool getTevOrder__11J2DTevBlockFUl();
-extern "C" bool getTevKAlphaSel__11J2DTevBlockFUl();
-extern "C" bool getTevKColorSel__11J2DTevBlockFUl();
-extern "C" bool getTevKColor__11J2DTevBlockFUl();
-extern "C" void getFontNo__11J2DTevBlockCFv();
-extern "C" void getTexNo__11J2DTevBlockCFUl();
-extern "C" bool getTevStageNum__11J2DTevBlockCFv();
-extern "C" bool getIndTevStage__11J2DTevBlockFUl();
-extern "C" bool getIndTexCoordScale__11J2DIndBlockFUl();
-extern "C" bool getIndTexMtx__11J2DIndBlockFUl();
-extern "C" bool getIndTexOrder__11J2DIndBlockFUl();
-extern "C" bool getIndTexStageNum__11J2DIndBlockCFv();
+extern "C" void load__9J2DTexMtxFUl(); // 1
+extern "C" void calc__9J2DTexMtxFv(); // 1
+extern "C" void getTextureMtx__9J2DTexMtxFRC17J2DTextureSRTInfo3VecPA4_f(); // 1
+extern "C" void getTextureMtxMaya__9J2DTexMtxFRC17J2DTextureSRTInfoPA4_f(); // 1
+extern "C" void load__14J2DIndTevStageFUc(); // 1
+extern "C" void load__12J2DIndTexMtxFUc(); // 1
+extern "C" void load__19J2DIndTexCoordScaleFUc(); // 1
+extern "C" void load__14J2DIndTexOrderFUc(); // 1
+extern "C" bool getTevSwapModeTable__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevStage__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevColor__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevOrder__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevKAlphaSel__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevKColorSel__11J2DTevBlockFUl(); // 1
+extern "C" bool getTevKColor__11J2DTevBlockFUl(); // 1
+extern "C" void getFontNo__11J2DTevBlockCFv(); // 1
+extern "C" void getTexNo__11J2DTevBlockCFUl(); // 1
+extern "C" bool getTevStageNum__11J2DTevBlockCFv(); // 1
+extern "C" bool getIndTevStage__11J2DTevBlockFUl(); // 1
+extern "C" bool getIndTexCoordScale__11J2DIndBlockFUl(); // 1
+extern "C" bool getIndTexMtx__11J2DIndBlockFUl(); // 1
+extern "C" bool getIndTexOrder__11J2DIndBlockFUl(); // 1
+extern "C" bool getIndTexStageNum__11J2DIndBlockCFv(); // 1
 SECTION_RODATA extern const u8 j2dDefaultTexCoordInfo[32];
 SECTION_RODATA extern const u8 j2dDefaultTexMtxInfo[36];
 SECTION_RODATA extern const u8 j2dDefaultIndTexMtxInfo[28];
@@ -148,25 +115,25 @@ SECTION_SDATA2 extern u16 j2dDefaultAlphaCmp;
 // External References:
 // 
 
-extern "C" void GXSetTevIndirect();
-extern "C" void GXSetIndTexMtx();
-extern "C" void GXSetIndTexCoordScale();
-extern "C" void GXSetIndTexOrder();
-extern "C" void GXLoadTexMtxImm();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void cos();
-extern "C" void sin();
+extern "C" void GXSetTevIndirect(); // 1
+extern "C" void GXSetIndTexMtx(); // 1
+extern "C" void GXSetIndTexCoordScale(); // 1
+extern "C" void GXSetIndTexOrder(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
 
-extern "C" void GXSetTevIndirect();
-extern "C" void GXSetIndTexMtx();
-extern "C" void GXSetIndTexCoordScale();
-extern "C" void GXSetIndTexOrder();
-extern "C" void GXLoadTexMtxImm();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void cos();
-extern "C" void sin();
+extern "C" void GXSetTevIndirect(); // 1
+extern "C" void GXSetIndTexMtx(); // 1
+extern "C" void GXSetIndTexCoordScale(); // 1
+extern "C" void GXSetIndTexOrder(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
 
 // 
 // Declarations:

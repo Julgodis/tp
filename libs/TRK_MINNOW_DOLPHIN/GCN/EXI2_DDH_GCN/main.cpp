@@ -9,27 +9,27 @@
 // Forward References:
 // 
 
-extern "C" void ddh_cc_initinterrupts();
-extern "C" void ddh_cc_peek();
-extern "C" void ddh_cc_post_stop();
-extern "C" void ddh_cc_pre_continue();
-extern "C" void ddh_cc_write();
-extern "C" void ddh_cc_read();
-extern "C" bool ddh_cc_close();
-extern "C" void ddh_cc_open();
-extern "C" bool ddh_cc_shutdown();
-extern "C" void ddh_cc_initialize();
+extern "C" void ddh_cc_initinterrupts(); // 1
+extern "C" void ddh_cc_peek(); // 1
+extern "C" void ddh_cc_post_stop(); // 1
+extern "C" void ddh_cc_pre_continue(); // 1
+extern "C" void ddh_cc_write(); // 1
+extern "C" void ddh_cc_read(); // 1
+extern "C" bool ddh_cc_close(); // 1
+extern "C" void ddh_cc_open(); // 1
+extern "C" bool ddh_cc_shutdown(); // 1
+extern "C" void ddh_cc_initialize(); // 1
 
-extern "C" void ddh_cc_initinterrupts();
-extern "C" void ddh_cc_peek();
-extern "C" void ddh_cc_post_stop();
-extern "C" void ddh_cc_pre_continue();
-extern "C" void ddh_cc_write();
-extern "C" void ddh_cc_read();
-extern "C" bool ddh_cc_close();
-extern "C" void ddh_cc_open();
-extern "C" bool ddh_cc_shutdown();
-extern "C" void ddh_cc_initialize();
+extern "C" void ddh_cc_initinterrupts(); // 1
+extern "C" void ddh_cc_peek(); // 1
+extern "C" void ddh_cc_post_stop(); // 1
+extern "C" void ddh_cc_pre_continue(); // 1
+extern "C" void ddh_cc_write(); // 1
+extern "C" void ddh_cc_read(); // 1
+extern "C" bool ddh_cc_close(); // 1
+extern "C" void ddh_cc_open(); // 1
+extern "C" bool ddh_cc_shutdown(); // 1
+extern "C" void ddh_cc_initialize(); // 1
 SECTION_RODATA extern const u8 GCN_EXI2_DDH_GCN_main__lit_318[20];
 SECTION_RODATA extern const u8 GCN_EXI2_DDH_GCN_main__lit_319[41 + 3 /* padding */];
 SECTION_RODATA extern const u8 GCN_EXI2_DDH_GCN_main__lit_320[28];
@@ -45,31 +45,31 @@ SECTION_SBSS extern u8 GCN_EXI2_DDH_GCN_main__gIsInitialized[4 + 4 /* padding */
 // External References:
 // 
 
-extern "C" void CircleBufferReadBytes();
-extern "C" void CircleBufferWriteBytes();
-extern "C" void CircleBufferInitialize();
-extern "C" void CBGetBytesAvailableForRead();
-extern "C" void MWTRACE();
-extern "C" void EXI2_Init();
-extern "C" void EXI2_EnableInterrupts();
-extern "C" bool EXI2_Poll();
-extern "C" bool EXI2_ReadN();
-extern "C" bool EXI2_WriteN();
-extern "C" void EXI2_Reserve();
-extern "C" void EXI2_Unreserve();
+extern "C" void CircleBufferReadBytes(); // 1
+extern "C" void CircleBufferWriteBytes(); // 1
+extern "C" void CircleBufferInitialize(); // 1
+extern "C" void CBGetBytesAvailableForRead(); // 1
+extern "C" void MWTRACE(); // 1
+extern "C" void EXI2_Init(); // 1
+extern "C" void EXI2_EnableInterrupts(); // 1
+extern "C" bool EXI2_Poll(); // 1
+extern "C" bool EXI2_ReadN(); // 1
+extern "C" bool EXI2_WriteN(); // 1
+extern "C" void EXI2_Reserve(); // 1
+extern "C" void EXI2_Unreserve(); // 1
 
-extern "C" void CircleBufferReadBytes();
-extern "C" void CircleBufferWriteBytes();
-extern "C" void CircleBufferInitialize();
-extern "C" void CBGetBytesAvailableForRead();
-extern "C" void MWTRACE();
-extern "C" void EXI2_Init();
-extern "C" void EXI2_EnableInterrupts();
-extern "C" bool EXI2_Poll();
-extern "C" bool EXI2_ReadN();
-extern "C" bool EXI2_WriteN();
-extern "C" void EXI2_Reserve();
-extern "C" void EXI2_Unreserve();
+extern "C" void CircleBufferReadBytes(); // 1
+extern "C" void CircleBufferWriteBytes(); // 1
+extern "C" void CircleBufferInitialize(); // 1
+extern "C" void CBGetBytesAvailableForRead(); // 1
+extern "C" void MWTRACE(); // 1
+extern "C" void EXI2_Init(); // 1
+extern "C" void EXI2_EnableInterrupts(); // 1
+extern "C" bool EXI2_Poll(); // 1
+extern "C" bool EXI2_ReadN(); // 1
+extern "C" bool EXI2_WriteN(); // 1
+extern "C" void EXI2_Reserve(); // 1
+extern "C" void EXI2_Unreserve(); // 1
 
 // 
 // Declarations:

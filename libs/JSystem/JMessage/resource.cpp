@@ -9,32 +9,13 @@
 // Types:
 // 
 
-// build JMessage (['JMessage']) False/False
-// build JMessage (['JMessage']) True/False
-struct JMessage;
-// build JMessage (['JMessage']) True/True
-/* top-level dependencies (begin ['JMessage']) */
-// outer dependency: ('JMessage', 'TResource')
-// outer dependency: ('JMessage', 'TResourceContainer')
-/* top-level dependencies (end ['JMessage']) */
 struct JMessage {
-	// build TResource (['JMessage', 'TResource']) False/False
-	/* dependencies (begin ['JMessage', 'TResource']) */
-	/* dependencies (end ['JMessage', 'TResource']) */
 	struct TResource {
 		/* 802A8CDC */ void toMessageIndex_messageID(u32, u32, bool*) const;
 	};
 
-	// build TResourceContainer (['JMessage', 'TResourceContainer']) False/False
-	/* dependencies (begin ['JMessage', 'TResourceContainer']) */
-	/* dependencies (end ['JMessage', 'TResourceContainer']) */
 	struct TResourceContainer {
-		// build TCResource (['JMessage', 'TResourceContainer', 'TCResource']) False/False
-		/* dependencies (begin ['JMessage', 'TResourceContainer', 'TCResource']) */
-		// inner dependency: 0 ('JMessage', 'TResource') (for ['JMessage', 'TResourceContainer', 'TCResource'])
-		/* dependencies (end ['JMessage', 'TResourceContainer', 'TCResource']) */
 		struct TCResource {
-			// ('JMessage', 'TResource')
 			/* 802A8EC0 */ TCResource();
 			/* 802A8EF8 */ ~TCResource();
 			/* 802A8F6C */ void Get_groupID(u16);
@@ -47,22 +28,13 @@ struct JMessage {
 		/* 802A90F0 */ void setEncoding_(u8);
 	};
 
-	// build TParse (['JMessage', 'TParse']) False/False
-	/* dependencies (begin ['JMessage', 'TParse']) */
-	// inner dependency: 1 ('JMessage', 'TResourceContainer') (for ['JMessage', 'TParse'])
-	// build TResourceContainer (['JMessage', 'TResourceContainer']) True/True
-	/* dependencies (end ['JMessage', 'TParse']) */
 	struct TParse {
-		// ('JMessage', 'TResourceContainer')
 		/* 802A9130 */ TParse(JMessage::TResourceContainer*);
 		/* 802A9158 */ ~TParse();
 		/* 802A91B8 */ void parseHeader_next(void const**, u32*, u32);
 		/* 802A92F4 */ void parseBlock_next(void const**, u32*, u32);
 	};
 
-	// build locale (['JMessage', 'locale']) False/False
-	/* dependencies (begin ['JMessage', 'locale']) */
-	/* dependencies (end ['JMessage', 'locale']) */
 	struct locale {
 		/* 802A9490 */ void parseCharacter_1Byte(char const**);
 		/* 802A94A8 */ void parseCharacter_2Byte(char const**);
@@ -72,45 +44,26 @@ struct JMessage {
 
 };
 
-// build JGadget (['JGadget']) False/False
-// build JGadget (['JGadget']) True/False
-struct JGadget;
-// build JGadget (['JGadget']) True/True
-/* top-level dependencies (begin ['JGadget']) */
-// outer dependency: ('JGadget', 'TNodeLinkList', 'iterator')
-// outer dependency: ('JGadget', 'TLinkListNode')
-/* top-level dependencies (end ['JGadget']) */
-struct JGadget {
-	// build binary (['JGadget', 'binary']) False/False
-	/* dependencies (begin ['JGadget', 'binary']) */
-	/* dependencies (end ['JGadget', 'binary']) */
+namespace std {
+	/*          */ template <typename A1, typename B1>
+	/*          */ void lower_bound(/* u32 const*, u32 const*, u32 const& */);
+	/* 802A94D4 */ /* lower_bound<u32 const*, u32> */
+	void lower_bound__template0(u32 const*, u32 const*, u32 const&);
+
+};
+
+namespace JGadget {
 	struct binary {
-		// build TParse_header_block (['JGadget', 'binary', 'TParse_header_block']) False/False
-		/* dependencies (begin ['JGadget', 'binary', 'TParse_header_block']) */
-		/* dependencies (end ['JGadget', 'binary', 'TParse_header_block']) */
 		struct TParse_header_block {
 			/* 802DC8C8 */ ~TParse_header_block();
 		};
 
 	};
 
-	// build TNodeLinkList (['JGadget', 'TNodeLinkList']) False/False
-	/* dependencies (begin ['JGadget', 'TNodeLinkList']) */
-	// inner dependency: 1 ('JGadget', 'TNodeLinkList', 'iterator') (for ['JGadget', 'TNodeLinkList'])
-	// inner dependency: 1 ('JGadget', 'TLinkListNode') (for ['JGadget', 'TNodeLinkList'])
-	// build TLinkListNode (['JGadget', 'TLinkListNode']) False/False
-	/* dependencies (begin ['JGadget', 'TLinkListNode']) */
-	/* dependencies (end ['JGadget', 'TLinkListNode']) */
 	struct TLinkListNode {
 	};
 
-	/* dependencies (end ['JGadget', 'TNodeLinkList']) */
 	struct TNodeLinkList {
-		// ('JGadget', 'TNodeLinkList', 'iterator')
-		// ('JGadget', 'TLinkListNode')
-		// build iterator (['JGadget', 'TNodeLinkList', 'iterator']) False/False
-		/* dependencies (begin ['JGadget', 'TNodeLinkList', 'iterator']) */
-		/* dependencies (end ['JGadget', 'TNodeLinkList', 'iterator']) */
 		struct iterator {
 		};
 
@@ -119,31 +72,29 @@ struct JGadget {
 		/* 802DCBD4 */ void Erase(JGadget::TLinkListNode*);
 	};
 
-	// build TLinkListNode (['JGadget', 'TLinkListNode']) True/True
 };
 
 // 
 // Forward References:
 // 
 
-extern "C" static void func_802A94D4();
 
-extern "C" void toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb();
-extern "C" void __ct__Q38JMessage18TResourceContainer10TCResourceFv();
-extern "C" void __dt__Q38JMessage18TResourceContainer10TCResourceFv();
-extern "C" void Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs();
-extern "C" void Do_create__Q38JMessage18TResourceContainer10TCResourceFv();
-extern "C" void Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource();
-extern "C" void __ct__Q28JMessage18TResourceContainerFv();
-extern "C" void setEncoding__Q28JMessage18TResourceContainerFUc();
-extern "C" void setEncoding___Q28JMessage18TResourceContainerFUc();
-extern "C" void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer();
-extern "C" void __dt__Q28JMessage6TParseFv();
-extern "C" void parseHeader_next__Q28JMessage6TParseFPPCvPUlUl();
-extern "C" void parseBlock_next__Q28JMessage6TParseFPPCvPUlUl();
-extern "C" void parseCharacter_1Byte__Q28JMessage6localeFPPCc();
-extern "C" void parseCharacter_2Byte__Q28JMessage6localeFPPCc();
-extern "C" static void func_802A94D4();
+extern "C" void toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb(); // 1
+extern "C" void __ct__Q38JMessage18TResourceContainer10TCResourceFv(); // 1
+extern "C" void __dt__Q38JMessage18TResourceContainer10TCResourceFv(); // 1
+extern "C" void Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs(); // 1
+extern "C" void Do_create__Q38JMessage18TResourceContainer10TCResourceFv(); // 1
+extern "C" void Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource(); // 1
+extern "C" void __ct__Q28JMessage18TResourceContainerFv(); // 1
+extern "C" void setEncoding__Q28JMessage18TResourceContainerFUc(); // 1
+extern "C" void setEncoding___Q28JMessage18TResourceContainerFUc(); // 1
+extern "C" void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer(); // 1
+extern "C" void __dt__Q28JMessage6TParseFv(); // 1
+extern "C" void parseHeader_next__Q28JMessage6TParseFPPCvPUlUl(); // 1
+extern "C" void parseBlock_next__Q28JMessage6TParseFPPCvPUlUl(); // 1
+extern "C" void parseCharacter_1Byte__Q28JMessage6localeFPPCc(); // 1
+extern "C" void parseCharacter_2Byte__Q28JMessage6localeFPPCc(); // 1
+extern "C" void func_802A94D4(); // 1
 SECTION_DATA extern void*sapfnParseCharacter___Q28JMessage18TResourceContainer[5];
 SECTION_DATA extern void*const __vt__Q28JMessage6TParse[5];
 SECTION_DATA extern void*const __vt__Q38JMessage18TResourceContainer10TCResource[5];
@@ -153,23 +104,23 @@ SECTION_DATA extern void*const data_803C9CBC[5];
 // External References:
 // 
 
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
-extern "C" void memcmp();
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void memcmp(); // 1
 
-extern "C" void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc();
-extern "C" void parseCharacter_UTF8__Q28JMessage6localeFPPCc();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv();
-extern "C" void __dt__Q27JGadget13TNodeLinkListFv();
-extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
-extern "C" void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
-extern "C" void memcmp();
+extern "C" void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc(); // 1
+extern "C" void parseCharacter_UTF8__Q28JMessage6localeFPPCc(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv(); // 1
+extern "C" void __dt__Q27JGadget13TNodeLinkListFv(); // 1
+extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode(); // 1
+extern "C" void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void memcmp(); // 1
 SECTION_DATA extern void*const __vt__Q37JGadget6binary19TParse_header_block[5];
 SECTION_SDATA2 extern u32 ga4cSignature__Q28JMessage4data;
 
@@ -383,7 +334,7 @@ asm void JMessage::locale::parseCharacter_2Byte(char const** field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802A94D4() {
+asm void std::lower_bound__template0(u32 const* field_0, u32 const* field_1, u32 const& field_2) {
 	nofralloc
 #include "asm/JSystem/JMessage/resource/func_802A94D4.s"
 }

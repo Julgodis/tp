@@ -9,19 +9,7 @@
 // Types:
 // 
 
-// build JMessage (['JMessage']) False/False
-// build JMessage (['JMessage']) True/False
-struct JMessage;
-/* top-level dependencies (begin ['JMessage']) */
-// outer dependency: ('JMessage', 'TProcessor')
-/* top-level dependencies (end ['JMessage']) */
 struct JMessage {
-	// build TControl (['JMessage', 'TControl']) False/False
-	/* dependencies (begin ['JMessage', 'TControl']) */
-	// inner dependency: 1 ('JMessage', 'TProcessor') (for ['JMessage', 'TControl'])
-	// build TProcessor (['JMessage', 'TProcessor']) False/False
-	/* dependencies (begin ['JMessage', 'TProcessor']) */
-	/* dependencies (end ['JMessage', 'TProcessor']) */
 	struct TProcessor {
 		/* 802A7B90 */ void reset();
 		/* 802A7C54 */ void getResource_groupID(u16) const;
@@ -29,9 +17,7 @@ struct JMessage {
 		/* 802A828C */ void process_onCharacterEnd_normal_(JMessage::TProcessor*);
 	};
 
-	/* dependencies (end ['JMessage', 'TControl']) */
 	struct TControl {
-		// ('JMessage', 'TProcessor')
 		/* 802A7548 */ TControl();
 		/* 802A758C */ ~TControl();
 		/* 802A75D4 */ void reset();
@@ -42,17 +28,10 @@ struct JMessage {
 		/* 802A7A20 */ void setMessageCode_inSequence_(JMessage::TProcessor const*, u16, u16);
 	};
 
-	// build TProcessor (['JMessage', 'TProcessor']) True/True
-	// build TSequenceProcessor (['JMessage', 'TSequenceProcessor']) False/False
-	/* dependencies (begin ['JMessage', 'TSequenceProcessor']) */
-	/* dependencies (end ['JMessage', 'TSequenceProcessor']) */
 	struct TSequenceProcessor {
 		/* 802A8418 */ void process(char const*);
 	};
 
-	// build TRenderingProcessor (['JMessage', 'TRenderingProcessor']) False/False
-	/* dependencies (begin ['JMessage', 'TRenderingProcessor']) */
-	/* dependencies (end ['JMessage', 'TRenderingProcessor']) */
 	struct TRenderingProcessor {
 		/* 802A8B20 */ void process(char const*);
 	};
@@ -64,33 +43,33 @@ struct JMessage {
 // 
 
 
-extern "C" void __ct__Q28JMessage8TControlFv();
-extern "C" void __dt__Q28JMessage8TControlFv();
-extern "C" void reset__Q28JMessage8TControlFv();
-extern "C" void update__Q28JMessage8TControlFv();
-extern "C" void render__Q28JMessage8TControlFv();
-extern "C" void setMessageCode__Q28JMessage8TControlFUsUs();
-extern "C" void setMessageID__Q28JMessage8TControlFUlUlPb();
-extern "C" void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs();
+extern "C" void __ct__Q28JMessage8TControlFv(); // 1
+extern "C" void __dt__Q28JMessage8TControlFv(); // 1
+extern "C" void reset__Q28JMessage8TControlFv(); // 1
+extern "C" void update__Q28JMessage8TControlFv(); // 1
+extern "C" void render__Q28JMessage8TControlFv(); // 1
+extern "C" void setMessageCode__Q28JMessage8TControlFUsUs(); // 1
+extern "C" void setMessageID__Q28JMessage8TControlFUlUlPb(); // 1
+extern "C" void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs(); // 1
 SECTION_DATA extern void*const __vt__Q28JMessage8TControl[4];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+void operator delete(void*); // 2
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void reset__Q28JMessage10TProcessorFv();
-extern "C" void getResource_groupID__Q28JMessage10TProcessorCFUs();
-extern "C" void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb();
-extern "C" void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
-extern "C" void process__Q28JMessage18TSequenceProcessorFPCc();
-extern "C" void process__Q28JMessage19TRenderingProcessorFPCc();
-extern "C" void __dl__FPv();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void reset__Q28JMessage10TProcessorFv(); // 1
+extern "C" void getResource_groupID__Q28JMessage10TProcessorCFUs(); // 1
+extern "C" void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb(); // 1
+extern "C" void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor(); // 1
+extern "C" void process__Q28JMessage18TSequenceProcessorFPCc(); // 1
+extern "C" void process__Q28JMessage19TRenderingProcessorFPCc(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
 // 
 // Declarations:

@@ -9,28 +9,19 @@
 // Types:
 // 
 
-// build dBgPc (['dBgPc']) False/False
-// build sBgPc (['sBgPc']) False/False
-/* top-level dependencies (begin ['sBgPc']) */
-/* top-level dependencies (end ['sBgPc']) */
 struct sBgPc {
 };
 
-/* top-level dependencies (begin ['dBgPc']) */
-// outer dependency: ('sBgPc',)
-/* top-level dependencies (end ['dBgPc']) */
 struct dBgPc {
-	// ('sBgPc',)
 	/* 80074048 */ void setCode(sBgPc&);
 };
 
-// build sBgPc (['sBgPc']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void setCode__5dBgPcFR5sBgPc();
+extern "C" void setCode__5dBgPcFR5sBgPc(); // 1
 
 // 
 // External References:

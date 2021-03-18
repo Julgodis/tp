@@ -9,18 +9,7 @@
 // Types:
 // 
 
-// build JKRAssertHeap (['JKRAssertHeap']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-// build JKRHeap (['JKRHeap']) True/False
-struct JKRHeap;
-/* top-level dependencies (begin ['JKRHeap']) */
-// outer dependency: ('JKRHeap', 'TState')
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
-	// ('JKRHeap', 'TState')
-	// build TState (['JKRHeap', 'TState']) False/False
-	/* dependencies (begin ['JKRHeap', 'TState']) */
-	/* dependencies (end ['JKRHeap', 'TState']) */
 	struct TState {
 	};
 
@@ -34,11 +23,7 @@ struct JKRHeap {
 	/* 802CEDA0 */ void state_dump(JKRHeap::TState const&) const;
 };
 
-/* top-level dependencies (begin ['JKRAssertHeap']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRAssertHeap']) */
 struct JKRAssertHeap {
-	// ('JKRHeap',)
 	/* 802D12C4 */ JKRAssertHeap(void*, u32, JKRHeap*, bool);
 	/* 802D1300 */ ~JKRAssertHeap();
 	/* 802D1368 */ void create(JKRHeap*);
@@ -61,49 +46,48 @@ struct JKRAssertHeap {
 	/* 802D1474 */ bool do_getTotalFreeSize();
 };
 
-// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__13JKRAssertHeapFPvUlP7JKRHeapb();
-extern "C" void __dt__13JKRAssertHeapFv();
-extern "C" void create__13JKRAssertHeapFP7JKRHeap();
-extern "C" void do_destroy__13JKRAssertHeapFv();
-extern "C" void getHeapType__13JKRAssertHeapFv();
-extern "C" bool check__13JKRAssertHeapFv();
-extern "C" bool dump__13JKRAssertHeapFv();
-extern "C" bool dump_sort__13JKRAssertHeapFv();
-extern "C" bool do_changeGroupID__13JKRAssertHeapFUc();
-extern "C" bool do_getCurrentGroupId__13JKRAssertHeapFv();
-extern "C" bool do_alloc__13JKRAssertHeapFUli();
-extern "C" void do_free__13JKRAssertHeapFPv();
-extern "C" void do_freeAll__13JKRAssertHeapFv();
-extern "C" void do_freeTail__13JKRAssertHeapFv();
-extern "C" void do_fillFreeArea__13JKRAssertHeapFv();
-extern "C" bool do_resize__13JKRAssertHeapFPvUl();
-extern "C" bool do_getSize__13JKRAssertHeapFPv();
-extern "C" bool do_getFreeSize__13JKRAssertHeapFv();
-extern "C" bool do_getMaxFreeBlock__13JKRAssertHeapFv();
-extern "C" bool do_getTotalFreeSize__13JKRAssertHeapFv();
+extern "C" void __ct__13JKRAssertHeapFPvUlP7JKRHeapb(); // 1
+extern "C" void __dt__13JKRAssertHeapFv(); // 1
+extern "C" void create__13JKRAssertHeapFP7JKRHeap(); // 1
+extern "C" void do_destroy__13JKRAssertHeapFv(); // 1
+extern "C" void getHeapType__13JKRAssertHeapFv(); // 1
+extern "C" bool check__13JKRAssertHeapFv(); // 1
+extern "C" bool dump__13JKRAssertHeapFv(); // 1
+extern "C" bool dump_sort__13JKRAssertHeapFv(); // 1
+extern "C" bool do_changeGroupID__13JKRAssertHeapFUc(); // 1
+extern "C" bool do_getCurrentGroupId__13JKRAssertHeapFv(); // 1
+extern "C" bool do_alloc__13JKRAssertHeapFUli(); // 1
+extern "C" void do_free__13JKRAssertHeapFPv(); // 1
+extern "C" void do_freeAll__13JKRAssertHeapFv(); // 1
+extern "C" void do_freeTail__13JKRAssertHeapFv(); // 1
+extern "C" void do_fillFreeArea__13JKRAssertHeapFv(); // 1
+extern "C" bool do_resize__13JKRAssertHeapFPvUl(); // 1
+extern "C" bool do_getSize__13JKRAssertHeapFPv(); // 1
+extern "C" bool do_getFreeSize__13JKRAssertHeapFv(); // 1
+extern "C" bool do_getMaxFreeBlock__13JKRAssertHeapFv(); // 1
+extern "C" bool do_getTotalFreeSize__13JKRAssertHeapFv(); // 1
 SECTION_DATA extern void*const __vt__13JKRAssertHeap[24];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __ct__7JKRHeapFPvUlP7JKRHeapb();
-extern "C" void __dt__7JKRHeapFv();
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
-extern "C" void callAllDisposer__7JKRHeapFv();
-extern "C" void dispose__7JKRHeapFv();
-extern "C" void __dl__FPv();
-extern "C" void state_register__7JKRHeapCFPQ27JKRHeap6TStateUl();
-extern "C" void state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState();
-extern "C" void state_dump__7JKRHeapCFRCQ27JKRHeap6TState();
+extern "C" void __ct__7JKRHeapFPvUlP7JKRHeapb(); // 1
+extern "C" void __dt__7JKRHeapFv(); // 1
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
+extern "C" void callAllDisposer__7JKRHeapFv(); // 1
+extern "C" void dispose__7JKRHeapFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void state_register__7JKRHeapCFPQ27JKRHeap6TStateUl(); // 1
+extern "C" void state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState(); // 1
+extern "C" void state_dump__7JKRHeapCFRCQ27JKRHeap6TState(); // 1
 SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];
 
 // 

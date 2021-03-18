@@ -9,18 +9,7 @@
 // Types:
 // 
 
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-// build JKRHeap (['JKRHeap']) True/False
-struct JKRHeap;
-/* top-level dependencies (begin ['JKRHeap']) */
-// outer dependency: ('JKRHeap', 'TState')
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
-	// ('JKRHeap', 'TState')
-	// build TState (['JKRHeap', 'TState']) False/False
-	/* dependencies (begin ['JKRHeap', 'TState']) */
-	/* dependencies (end ['JKRHeap', 'TState']) */
 	struct TState {
 	};
 
@@ -41,14 +30,7 @@ struct JKRHeap {
 	/* 802CEDAC */ bool do_getCurrentGroupId();
 };
 
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JKRHeap', 'TState')
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
-	// ('JKRHeap',)
-	// ('JKRHeap', 'TState')
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 	/* 802D0AD0 */ void do_destroy();
 	/* 802D0B30 */ JKRSolidHeap(void*, u32, JKRHeap*, bool);
@@ -73,34 +55,33 @@ struct JKRSolidHeap {
 	/* 802D12A4 */ void do_getTotalFreeSize();
 };
 
-// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb();
-extern "C" void do_destroy__12JKRSolidHeapFv();
-extern "C" void __ct__12JKRSolidHeapFPvUlP7JKRHeapb();
-extern "C" void __dt__12JKRSolidHeapFv();
-extern "C" void adjustSize__12JKRSolidHeapFv();
-extern "C" void do_alloc__12JKRSolidHeapFUli();
-extern "C" void allocFromHead__12JKRSolidHeapFUli();
-extern "C" void allocFromTail__12JKRSolidHeapFUli();
-extern "C" void do_free__12JKRSolidHeapFPv();
-extern "C" void do_freeAll__12JKRSolidHeapFv();
-extern "C" void do_freeTail__12JKRSolidHeapFv();
-extern "C" void do_fillFreeArea__12JKRSolidHeapFv();
-extern "C" void do_resize__12JKRSolidHeapFPvUl();
-extern "C" void do_getSize__12JKRSolidHeapFPv();
-extern "C" void check__12JKRSolidHeapFv();
-extern "C" void dump__12JKRSolidHeapFv();
-extern "C" void state_register__12JKRSolidHeapCFPQ27JKRHeap6TStateUl();
-extern "C" void state_compare__12JKRSolidHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState();
-extern "C" void getHeapType__12JKRSolidHeapFv();
-extern "C" void do_getFreeSize__12JKRSolidHeapFv();
-extern "C" void do_getMaxFreeBlock__12JKRSolidHeapFv();
-extern "C" void do_getTotalFreeSize__12JKRSolidHeapFv();
+extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb(); // 1
+extern "C" void do_destroy__12JKRSolidHeapFv(); // 1
+extern "C" void __ct__12JKRSolidHeapFPvUlP7JKRHeapb(); // 1
+extern "C" void __dt__12JKRSolidHeapFv(); // 1
+extern "C" void adjustSize__12JKRSolidHeapFv(); // 1
+extern "C" void do_alloc__12JKRSolidHeapFUli(); // 1
+extern "C" void allocFromHead__12JKRSolidHeapFUli(); // 1
+extern "C" void allocFromTail__12JKRSolidHeapFUli(); // 1
+extern "C" void do_free__12JKRSolidHeapFPv(); // 1
+extern "C" void do_freeAll__12JKRSolidHeapFv(); // 1
+extern "C" void do_freeTail__12JKRSolidHeapFv(); // 1
+extern "C" void do_fillFreeArea__12JKRSolidHeapFv(); // 1
+extern "C" void do_resize__12JKRSolidHeapFPvUl(); // 1
+extern "C" void do_getSize__12JKRSolidHeapFPv(); // 1
+extern "C" void check__12JKRSolidHeapFv(); // 1
+extern "C" void dump__12JKRSolidHeapFv(); // 1
+extern "C" void state_register__12JKRSolidHeapCFPQ27JKRHeap6TStateUl(); // 1
+extern "C" void state_compare__12JKRSolidHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState(); // 1
+extern "C" void getHeapType__12JKRSolidHeapFv(); // 1
+extern "C" void do_getFreeSize__12JKRSolidHeapFv(); // 1
+extern "C" void do_getMaxFreeBlock__12JKRSolidHeapFv(); // 1
+extern "C" void do_getTotalFreeSize__12JKRSolidHeapFv(); // 1
 SECTION_RODATA extern const u8 JKRSolidHeap__stringBase0[344];
 SECTION_DATA extern void*const __vt__12JKRSolidHeap[24];
 SECTION_SDATA2 extern f32 JKRSolidHeap__lit_693;
@@ -111,40 +92,40 @@ SECTION_SDATA2 extern f64 JKRSolidHeap__lit_697;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void JUTReportConsole_f();
-extern "C" void JUTWarningConsole_f();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void JUTReportConsole_f(); // 1
+extern "C" void JUTWarningConsole_f(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" bool dump_sort__7JKRHeapFv();
-extern "C" void __ct__7JKRHeapFPvUlP7JKRHeapb();
-extern "C" void __dt__7JKRHeapFv();
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
-extern "C" void free__7JKRHeapFPvP7JKRHeap();
-extern "C" void callAllDisposer__7JKRHeapFv();
-extern "C" void resize__7JKRHeapFPvUl();
-extern "C" void getFreeSize__7JKRHeapFv();
-extern "C" void getTotalFreeSize__7JKRHeapFv();
-extern "C" void getMaxAllocatableSize__7JKRHeapFi();
-extern "C" void dispose__7JKRHeapFPvPv();
-extern "C" void dispose__7JKRHeapFv();
-extern "C" void __dl__FPv();
-extern "C" void state_dump__7JKRHeapCFRCQ27JKRHeap6TState();
-extern "C" bool do_changeGroupID__7JKRHeapFUc();
-extern "C" bool do_getCurrentGroupId__7JKRHeapFv();
-extern "C" void JUTReportConsole_f();
-extern "C" void JUTWarningConsole_f();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" bool dump_sort__7JKRHeapFv(); // 1
+extern "C" void __ct__7JKRHeapFPvUlP7JKRHeapb(); // 1
+extern "C" void __dt__7JKRHeapFv(); // 1
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
+extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void callAllDisposer__7JKRHeapFv(); // 1
+extern "C" void resize__7JKRHeapFPvUl(); // 1
+extern "C" void getFreeSize__7JKRHeapFv(); // 1
+extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
+extern "C" void getMaxAllocatableSize__7JKRHeapFi(); // 1
+extern "C" void dispose__7JKRHeapFPvPv(); // 1
+extern "C" void dispose__7JKRHeapFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void state_dump__7JKRHeapCFRCQ27JKRHeap6TState(); // 1
+extern "C" bool do_changeGroupID__7JKRHeapFUc(); // 1
+extern "C" bool do_getCurrentGroupId__7JKRHeapFv(); // 1
+extern "C" void JUTReportConsole_f(); // 1
+extern "C" void JUTWarningConsole_f(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 mErrorHandler__7JKRHeap[4];
 

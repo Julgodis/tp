@@ -9,32 +9,19 @@
 // Types:
 // 
 
-// build dVibration_c (['dVibration_c']) False/False
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266CE4 */ void norm() const;
 };
 
-/* top-level dependencies (begin ['dVibration_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dVibration_c']) */
 struct dVibration_c {
-	// ('cXyz',)
 	/* 8006F268 */ void Run();
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
-	/* 8006FB10 */ void StartQuake(int, int, cXyz);
 	/* 8006FC0C */ void StartQuake(u8 const*, int, int, cXyz);
+	/* 8006FB10 */ void StartQuake(int, int, cXyz);
 	/* 8006FD94 */ void StopQuake(int);
 	/* 8006FE00 */ void Kill();
 	/* 8006FE5C */ void CheckQuake();
@@ -44,42 +31,17 @@ struct dVibration_c {
 	/* 8006FFF8 */ void Remove();
 };
 
-// build cXyz (['cXyz']) True/True
-// build dSv_player_config_c (['dSv_player_config_c']) False/False
-/* top-level dependencies (begin ['dSv_player_config_c']) */
-/* top-level dependencies (end ['dSv_player_config_c']) */
 struct dSv_player_config_c {
 	/* 80034644 */ void checkVibration() const;
 };
 
-// build dCamera_c (['dCamera_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dCamera_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
-	// ('cXyz',)
 	/* 80181000 */ void StartShake(s32, u8*, s32, cXyz);
 	/* 80181158 */ void StopShake();
 };
 
-// build Vec (['Vec']) True/True
-// build JUTGamePad (['JUTGamePad']) False/False
-// build JUTGamePad (['JUTGamePad']) True/False
-struct JUTGamePad;
-/* top-level dependencies (begin ['JUTGamePad']) */
-// outer dependency: ('JUTGamePad', 'CRumble', 'ERumble')
-/* top-level dependencies (end ['JUTGamePad']) */
 struct JUTGamePad {
-	// build CRumble (['JUTGamePad', 'CRumble']) False/False
-	/* dependencies (begin ['JUTGamePad', 'CRumble']) */
-	// inner dependency: 1 ('JUTGamePad', 'CRumble', 'ERumble') (for ['JUTGamePad', 'CRumble'])
-	/* dependencies (end ['JUTGamePad', 'CRumble']) */
 	struct CRumble {
-		// ('JUTGamePad', 'CRumble', 'ERumble')
-		// build ERumble (['JUTGamePad', 'CRumble', 'ERumble']) False/False
-		/* dependencies (begin ['JUTGamePad', 'CRumble', 'ERumble']) */
-		/* dependencies (end ['JUTGamePad', 'CRumble', 'ERumble']) */
 		struct ERumble {
 		};
 
@@ -95,26 +57,26 @@ struct JUTGamePad {
 // Forward References:
 // 
 
-extern "C" static void func_8006F168();
-extern "C" static void func_8006F184();
-extern "C" static void func_8006F1A4();
-extern "C" static void func_8006F1D8();
+extern "C" static void func_8006F168(); // 1
+extern "C" static void func_8006F184(); // 1
+extern "C" static void func_8006F1A4(); // 1
+extern "C" static void func_8006F1D8(); // 1
 
-extern "C" static void func_8006F168();
-extern "C" static void func_8006F184();
-extern "C" static void func_8006F1A4();
-extern "C" static void func_8006F1D8();
-extern "C" void Run__12dVibration_cFv();
-extern "C" void StartShock__12dVibration_cFii4cXyz();
-extern "C" void StartQuake__12dVibration_cFii4cXyz();
-extern "C" void StartQuake__12dVibration_cFPCUcii4cXyz();
-extern "C" void StopQuake__12dVibration_cFi();
-extern "C" void Kill__12dVibration_cFv();
-extern "C" void CheckQuake__12dVibration_cFv();
-extern "C" void setDefault__12dVibration_cFv();
-extern "C" void Init__12dVibration_cFv();
-extern "C" void Pause__12dVibration_cFv();
-extern "C" void Remove__12dVibration_cFv();
+extern "C" static void func_8006F168(); // 1
+extern "C" static void func_8006F184(); // 1
+extern "C" static void func_8006F1A4(); // 1
+extern "C" static void func_8006F1D8(); // 1
+extern "C" void Run__12dVibration_cFv(); // 1
+extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
+extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
+extern "C" void StartQuake__12dVibration_cFPCUcii4cXyz(); // 1
+extern "C" void StopQuake__12dVibration_cFi(); // 1
+extern "C" void Kill__12dVibration_cFv(); // 1
+extern "C" void CheckQuake__12dVibration_cFv(); // 1
+extern "C" void setDefault__12dVibration_cFv(); // 1
+extern "C" void Init__12dVibration_cFv(); // 1
+extern "C" void Pause__12dVibration_cFv(); // 1
+extern "C" void Remove__12dVibration_cFv(); // 1
 SECTION_SBSS extern u8 data_80450F50[8];
 SECTION_SBSS extern u8 data_80450F58[8];
 SECTION_SDATA2 extern f64 d_d_vibration__lit_3756;
@@ -123,32 +85,32 @@ SECTION_SDATA2 extern f64 d_d_vibration__lit_3756;
 // External References:
 // 
 
-void dCam_getBody();
-void dKy_darkworld_check();
-void cM_rnd();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+void dCam_getBody(); // 2
+void dKy_darkworld_check(); // 2
+void cM_rnd(); // 2
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void checkVibration__19dSv_player_config_cCFv();
-extern "C" void StartShake__9dCamera_cFlPUcl4cXyz();
-extern "C" void StopShake__9dCamera_cFv();
-extern "C" void dCam_getBody__Fv();
-extern "C" void dKy_darkworld_check__Fv();
-extern "C" void __pl__4cXyzCFRC3Vec();
-extern "C" void norm__4cXyzCFv();
-extern "C" void cM_rnd__Fv();
-extern "C" void stopMotor__Q210JUTGamePad7CRumbleFib();
-extern "C" void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl();
-extern "C" void stopPatternedRumble__Q210JUTGamePad7CRumbleFs();
-extern "C" void stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+extern "C" void checkVibration__19dSv_player_config_cCFv(); // 1
+extern "C" void StartShake__9dCamera_cFlPUcl4cXyz(); // 1
+extern "C" void StopShake__9dCamera_cFv(); // 1
+extern "C" void dCam_getBody__Fv(); // 1
+extern "C" void dKy_darkworld_check__Fv(); // 1
+extern "C" void __pl__4cXyzCFRC3Vec(); // 1
+extern "C" void norm__4cXyzCFv(); // 1
+extern "C" void cM_rnd__Fv(); // 1
+extern "C" void stopMotor__Q210JUTGamePad7CRumbleFib(); // 1
+extern "C" void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl(); // 1
+extern "C" void stopPatternedRumble__Q210JUTGamePad7CRumbleFs(); // 1
+extern "C" void stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_RODATA extern const u8 MS_patt__12dVibration_c[88];
 SECTION_RODATA extern const u8 CS_patt__12dVibration_c[88];
 SECTION_RODATA extern const u8 MQ_patt__12dVibration_c[80];

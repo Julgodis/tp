@@ -9,31 +9,31 @@
 // Forward References:
 // 
 
-extern "C" void GXSetVtxDesc();
-extern "C" static void GXSetVtxDescv();
-extern "C" void __GXSetVCD();
-extern "C" void __GXCalculateVLim();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetVtxAttrFmtv();
-extern "C" void __GXSetVAT();
-extern "C" void GXSetArray();
-extern "C" void GXInvalidateVtxCache();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" static void GXSetVtxDescv(); // 1
+extern "C" void __GXSetVCD(); // 1
+extern "C" void __GXCalculateVLim(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetVtxAttrFmtv(); // 1
+extern "C" void __GXSetVAT(); // 1
+extern "C" void GXSetArray(); // 1
+extern "C" void GXInvalidateVtxCache(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
 
-extern "C" void GXSetVtxDesc();
-extern "C" static void GXSetVtxDescv();
-extern "C" void __GXSetVCD();
-extern "C" void __GXCalculateVLim();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetVtxAttrFmtv();
-extern "C" void __GXSetVAT();
-extern "C" void GXSetArray();
-extern "C" void GXInvalidateVtxCache();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" static void GXSetVtxDescv(); // 1
+extern "C" void __GXSetVCD(); // 1
+extern "C" void __GXCalculateVLim(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetVtxAttrFmtv(); // 1
+extern "C" void __GXSetVAT(); // 1
+extern "C" void GXSetArray(); // 1
+extern "C" void GXInvalidateVtxCache(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
 SECTION_DATA extern void*GXAttr__lit_176[26];
 SECTION_DATA extern void*lit_223[26];
 SECTION_DATA extern void*GXAttr__lit_476[17];
@@ -48,9 +48,9 @@ SECTION_SDATA extern u8 data_80450A88[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void __GXSetMatrixIndex();
+extern "C" void __GXSetMatrixIndex(); // 1
 
-extern "C" void __GXSetMatrixIndex();
+extern "C" void __GXSetMatrixIndex(); // 1
 SECTION_SDATA2 extern void*__GXData;
 
 // 

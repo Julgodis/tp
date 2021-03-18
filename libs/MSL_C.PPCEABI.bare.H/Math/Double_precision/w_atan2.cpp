@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void atan2();
+extern "C" void atan2(); // 1
 
-extern "C" void atan2();
+extern "C" void atan2(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __ieee754_atan2();
+extern "C" void __ieee754_atan2(); // 1
 
-extern "C" void __ieee754_atan2();
+extern "C" void __ieee754_atan2(); // 1
 
 // 
 // Declarations:

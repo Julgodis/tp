@@ -9,76 +9,49 @@
 // Types:
 // 
 
-// build daNocrm_c (['daNocrm_c']) False/False
-/* top-level dependencies (begin ['daNocrm_c']) */
-/* top-level dependencies (end ['daNocrm_c']) */
 struct daNocrm_c {
 	/* 801452DC */ void execute();
 	/* 80145508 */ void getRoomNo(int);
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-// build fopAcM_gc_c (['fopAcM_gc_c']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['fopAcM_gc_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['fopAcM_gc_c']) */
 struct fopAcM_gc_c {
-	// ('cXyz',)
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-// build cXyz (['cXyz']) True/True
-// build process_node_class (['process_node_class']) False/False
-/* top-level dependencies (begin ['process_node_class']) */
-/* top-level dependencies (end ['process_node_class']) */
 struct process_node_class {
 };
 
-// build dBgS (['dBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-/* top-level dependencies (begin ['dBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// ('cBgS_PolyInfo',)
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
 // 
 // Forward References:
 // 
 
-static void isLoadRoom(int);
-static void daNocrm_create(daNocrm_c*);
-static bool daNocrm_Delete(daNocrm_c*);
-static void daNocrm_execute(daNocrm_c*);
-static bool daNocrm_draw(daNocrm_c*);
+static void isLoadRoom(int); // 2
+static void daNocrm_create(daNocrm_c*); // 2
+static bool daNocrm_Delete(daNocrm_c*); // 2
+static void daNocrm_execute(daNocrm_c*); // 2
+static bool daNocrm_draw(daNocrm_c*); // 2
 
-extern "C" static void isLoadRoom__Fi();
-extern "C" void execute__9daNocrm_cFv();
-extern "C" void getRoomNo__9daNocrm_cFi();
-extern "C" static void daNocrm_create__FP9daNocrm_c();
-extern "C" static bool daNocrm_Delete__FP9daNocrm_c();
-extern "C" static void daNocrm_execute__FP9daNocrm_c();
-extern "C" static bool daNocrm_draw__FP9daNocrm_c();
+extern "C" static void isLoadRoom__Fi(); // 1
+extern "C" void execute__9daNocrm_cFv(); // 1
+extern "C" void getRoomNo__9daNocrm_cFi(); // 1
+extern "C" static void daNocrm_create__FP9daNocrm_c(); // 1
+extern "C" static bool daNocrm_Delete__FP9daNocrm_c(); // 1
+extern "C" static void daNocrm_execute__FP9daNocrm_c(); // 1
+extern "C" static bool daNocrm_draw__FP9daNocrm_c(); // 1
 SECTION_RODATA extern const u8 d_a_d_a_no_chg_room__stringBase0[64];
 SECTION_DATA extern void*daNocrm_METHODS[8];
 SECTION_DATA extern void*g_profile_NO_CHG_ROOM[12];
@@ -90,32 +63,32 @@ SECTION_SDATA2 extern f32 d_a_d_a_no_chg_room__lit_3833;
 // External References:
 // 
 
-extern "C" void OSReport_Warning();
-void mDoMtx_YrotM(f32 (* )[4], s16);
-void fopScnM_SearchByID(u32);
-void fpcNd_IsDeleteTiming(process_node_class*);
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXTrans();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECScale();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void OSReport_Warning(); // 1
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void fopScnM_SearchByID(u32); // 2
+void fpcNd_IsDeleteTiming(process_node_class*); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void OSReport_Warning();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void __ct__10fopAc_ac_cFv();
-extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
-extern "C" void fopScnM_SearchByID__FUi();
-extern "C" void fpcNd_IsDeleteTiming__FP18process_node_class();
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXTrans();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECScale();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void OSReport_Warning(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
+extern "C" void fopScnM_SearchByID__FUi(); // 1
+extern "C" void fpcNd_IsDeleteTiming__FP18process_node_class(); // 1
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_DATA extern void*g_fopAc_Method[8];
 SECTION_DATA extern void*g_fpcLf_Method[6];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];

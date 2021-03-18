@@ -9,99 +9,47 @@
 // Types:
 // 
 
-// build dMsgObject_HowlHIO_c (['dMsgObject_HowlHIO_c']) False/False
-/* top-level dependencies (begin ['dMsgObject_HowlHIO_c']) */
-/* top-level dependencies (end ['dMsgObject_HowlHIO_c']) */
 struct dMsgObject_HowlHIO_c {
 	/* 80232AEC */ dMsgObject_HowlHIO_c();
 	/* 80238B94 */ ~dMsgObject_HowlHIO_c();
 };
 
-// build dMsgObject_HIO_c (['dMsgObject_HIO_c']) False/False
-/* top-level dependencies (begin ['dMsgObject_HIO_c']) */
-/* top-level dependencies (end ['dMsgObject_HIO_c']) */
 struct dMsgObject_HIO_c {
 	/* 80232D6C */ dMsgObject_HIO_c();
 	/* 80238BDC */ ~dMsgObject_HIO_c();
 };
 
-// build dMsgObject_c (['dMsgObject_c']) False/False
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
-struct J2DTextBox {
-};
-
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
-struct fopAc_ac_c {
-};
-
-// build mDoDvdThd_mountXArchive_c (['mDoDvdThd_mountXArchive_c']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
-	// build EMountMode (['JKRArchive', 'EMountMode']) False/False
-	/* dependencies (begin ['JKRArchive', 'EMountMode']) */
-	/* dependencies (end ['JKRArchive', 'EMountMode']) */
 	struct EMountMode {
 	};
 
 };
 
-/* top-level dependencies (begin ['mDoDvdThd_mountXArchive_c']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JKRArchive', 'EMountMode')
-/* top-level dependencies (end ['mDoDvdThd_mountXArchive_c']) */
+struct JKRHeap {
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
 struct mDoDvdThd_mountXArchive_c {
-	// ('JKRHeap',)
-	// ('JKRArchive', 'EMountMode')
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
-// build COutFont_c (['COutFont_c']) False/False
-/* top-level dependencies (begin ['COutFont_c']) */
-/* top-level dependencies (end ['COutFont_c']) */
+struct JUTFont {
+};
+
+struct J2DTextBox {
+};
+
+struct fopAc_ac_c {
+};
+
 struct COutFont_c {
 	/* 80225C94 */ COutFont_c(u8);
 };
 
-// build msg_class (['msg_class']) False/False
-/* top-level dependencies (begin ['msg_class']) */
-/* top-level dependencies (end ['msg_class']) */
 struct msg_class {
 };
 
-// build JUTFont (['JUTFont']) False/False
-/* top-level dependencies (begin ['JUTFont']) */
-/* top-level dependencies (end ['JUTFont']) */
-struct JUTFont {
-};
-
-/* top-level dependencies (begin ['dMsgObject_c']) */
-// outer dependency: ('J2DTextBox',)
-// outer dependency: ('fopAc_ac_c',)
-// outer dependency: ('mDoDvdThd_mountXArchive_c',)
-// outer dependency: ('COutFont_c',)
-// outer dependency: ('msg_class',)
-// outer dependency: ('JUTFont',)
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
-	// ('mDoDvdThd_mountXArchive_c',)
-	// ('JUTFont',)
-	// ('J2DTextBox',)
-	// ('fopAc_ac_c',)
-	// ('COutFont_c',)
-	// ('msg_class',)
 	/* 80233284 */ void _create(msg_class*);
 	/* 80233590 */ void _execute();
 	/* 802339BC */ void _draw();
@@ -241,15 +189,6 @@ struct dMsgObject_c {
 	/* 8023864C */ void setSelectCancelPos(u8);
 };
 
-// build msg_class (['msg_class']) True/True
-// build mDoDvdThd_mountXArchive_c (['mDoDvdThd_mountXArchive_c']) True/True
-// build J2DTextBox (['J2DTextBox']) True/True
-// build JUTFont (['JUTFont']) True/True
-// build COutFont_c (['COutFont_c']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build dMsgScrnBase_c (['dMsgScrnBase_c']) False/False
-/* top-level dependencies (begin ['dMsgScrnBase_c']) */
-/* top-level dependencies (end ['dMsgScrnBase_c']) */
 struct dMsgScrnBase_c {
 	/* 80238C3C */ void exec();
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
@@ -267,27 +206,14 @@ struct dMsgScrnBase_c {
 	/* 8023C3EC */ void setRubyString(char*);
 };
 
-// build jmessage_tReference (['jmessage_tReference']) False/False
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 8026702C */ bool operator==(Vec const&) const;
 };
 
-/* top-level dependencies (begin ['jmessage_tReference']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['jmessage_tReference']) */
 struct jmessage_tReference {
-	// ('cXyz',)
 	/* 80228B04 */ jmessage_tReference();
 	/* 80229034 */ void pageSend();
 	/* 80229168 */ void selectMessage();
@@ -298,34 +224,18 @@ struct jmessage_tReference {
 	/* 80238C78 */ void setActorPos(cXyz);
 };
 
-// build cXyz (['cXyz']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-// build Vec (['Vec']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-// build dSv_player_item_c (['dSv_player_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_c']) */
-/* top-level dependencies (end ['dSv_player_item_c']) */
 struct dSv_player_item_c {
 	/* 80033030 */ void getItem(int, bool) const;
 };
 
-// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_get_item_c']) */
-/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033E60 */ void onFirstBit(u8);
 };
 
-// build dSv_player_item_record_c (['dSv_player_item_record_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_record_c']) */
-/* top-level dependencies (end ['dSv_player_item_record_c']) */
 struct dSv_player_item_record_c {
 	/* 80033F7C */ void getBombNum(u8) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 	/* 800349A4 */ void offEventBit(u16);
@@ -334,194 +244,92 @@ struct dSv_event_c {
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
-// build dEvt_control_c (['dEvt_control_c']) False/False
-/* top-level dependencies (begin ['dEvt_control_c']) */
-/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
 	/* 8004368C */ void setPtT(void*);
 };
 
-// build dDlst_list_c (['dDlst_list_c']) False/False
-// build dDlst_base_c (['dDlst_base_c']) False/False
-/* top-level dependencies (begin ['dDlst_base_c']) */
-/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin ['dDlst_list_c']) */
-// outer dependency: ('dDlst_base_c',)
-/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (['dDlst_base_c']) True/True
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 		/* 80193960 */ TColor();
 	};
 
 };
 
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
 	/* 8021C1DC */ void isFloatingMessageVisible();
 	/* 8021C218 */ void resetFloatingMessage();
 	/* 8021C238 */ void decMsgKeyWaitTimer();
 };
 
-// build dMeter2_c (['dMeter2_c']) False/False
-/* top-level dependencies (begin ['dMeter2_c']) */
-/* top-level dependencies (end ['dMeter2_c']) */
 struct dMeter2_c {
 	/* 8021F6EC */ void emphasisButtonDelete();
 };
 
-// build jmessage_tSequenceProcessor (['jmessage_tSequenceProcessor']) False/False
-// build jmessage_tReference (['jmessage_tReference']) True/True
-// build jmessage_tControl (['jmessage_tControl']) False/False
-/* top-level dependencies (begin ['jmessage_tControl']) */
-/* top-level dependencies (end ['jmessage_tControl']) */
 struct jmessage_tControl {
 };
 
-/* top-level dependencies (begin ['jmessage_tSequenceProcessor']) */
-// outer dependency: ('jmessage_tReference',)
-// outer dependency: ('jmessage_tControl',)
-/* top-level dependencies (end ['jmessage_tSequenceProcessor']) */
 struct jmessage_tSequenceProcessor {
-	// ('jmessage_tReference',)
-	// ('jmessage_tControl',)
 	/* 8022B558 */ jmessage_tSequenceProcessor(jmessage_tReference const*, jmessage_tControl*);
 };
 
-// build jmessage_tControl (['jmessage_tControl']) True/True
-// build jmessage_tRenderingProcessor (['jmessage_tRenderingProcessor']) False/False
-// build jmessage_tReference (['jmessage_tReference']) True/True
-/* top-level dependencies (begin ['jmessage_tRenderingProcessor']) */
-// outer dependency: ('jmessage_tReference',)
-/* top-level dependencies (end ['jmessage_tRenderingProcessor']) */
 struct jmessage_tRenderingProcessor {
-	// ('jmessage_tReference',)
 	/* 8022CCB0 */ jmessage_tRenderingProcessor(jmessage_tReference const*);
 	/* 8022E12C */ void resetRendering();
 };
 
-// build dMsgScrnBoss_c (['dMsgScrnBoss_c']) False/False
-/* top-level dependencies (begin ['dMsgScrnBoss_c']) */
-/* top-level dependencies (end ['dMsgScrnBoss_c']) */
 struct dMsgScrnBoss_c {
 	/* 8023C5C8 */ dMsgScrnBoss_c();
 };
 
-// build dMsgScrnItem_c (['dMsgScrnItem_c']) False/False
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 };
 
-/* top-level dependencies (begin ['dMsgScrnItem_c']) */
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['dMsgScrnItem_c']) */
 struct dMsgScrnItem_c {
-	// ('JKRExpHeap',)
 	/* 8023E79C */ dMsgScrnItem_c(u8, u8, JKRExpHeap*);
 };
 
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build dMsgScrnHowl_c (['dMsgScrnHowl_c']) False/False
-/* top-level dependencies (begin ['dMsgScrnHowl_c']) */
-/* top-level dependencies (end ['dMsgScrnHowl_c']) */
 struct dMsgScrnHowl_c {
 	/* 8024096C */ dMsgScrnHowl_c();
 	/* 80242080 */ void isKeyCheck();
 };
 
-// build dMsgScrnJimaku_c (['dMsgScrnJimaku_c']) False/False
-// build JKRExpHeap (['JKRExpHeap']) True/True
-/* top-level dependencies (begin ['dMsgScrnJimaku_c']) */
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['dMsgScrnJimaku_c']) */
 struct dMsgScrnJimaku_c {
-	// ('JKRExpHeap',)
 	/* 80244558 */ dMsgScrnJimaku_c(u8, JKRExpHeap*);
 };
 
-// build dMsgScrnKanban_c (['dMsgScrnKanban_c']) False/False
-// build JKRExpHeap (['JKRExpHeap']) True/True
-/* top-level dependencies (begin ['dMsgScrnKanban_c']) */
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['dMsgScrnKanban_c']) */
 struct dMsgScrnKanban_c {
-	// ('JKRExpHeap',)
 	/* 80244E38 */ dMsgScrnKanban_c(JKRExpHeap*);
 };
 
-// build dMsgScrnPlace_c (['dMsgScrnPlace_c']) False/False
-/* top-level dependencies (begin ['dMsgScrnPlace_c']) */
-/* top-level dependencies (end ['dMsgScrnPlace_c']) */
 struct dMsgScrnPlace_c {
 	/* 802463CC */ dMsgScrnPlace_c();
 };
 
-// build dMsgScrnStaff_c (['dMsgScrnStaff_c']) False/False
-/* top-level dependencies (begin ['dMsgScrnStaff_c']) */
-/* top-level dependencies (end ['dMsgScrnStaff_c']) */
 struct dMsgScrnStaff_c {
 	/* 80246B34 */ dMsgScrnStaff_c(u8);
 };
 
-// build dMsgScrnTalk_c (['dMsgScrnTalk_c']) False/False
-// build JKRExpHeap (['JKRExpHeap']) True/True
-/* top-level dependencies (begin ['dMsgScrnTalk_c']) */
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['dMsgScrnTalk_c']) */
 struct dMsgScrnTalk_c {
-	// ('JKRExpHeap',)
 	/* 80246FF0 */ dMsgScrnTalk_c(u8, u8, JKRExpHeap*);
 };
 
-// build dMsgScrnTree_c (['dMsgScrnTree_c']) False/False
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build JUTFont (['JUTFont']) True/True
-/* top-level dependencies (begin ['dMsgScrnTree_c']) */
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('JUTFont',)
-/* top-level dependencies (end ['dMsgScrnTree_c']) */
 struct dMsgScrnTree_c {
-	// ('JKRExpHeap',)
-	// ('JUTFont',)
 	/* 80248954 */ dMsgScrnTree_c(JUTFont*, JKRExpHeap*);
 };
 
-// build dMsgString_c (['dMsgString_c']) False/False
-/* top-level dependencies (begin ['dMsgString_c']) */
-/* top-level dependencies (end ['dMsgString_c']) */
 struct dMsgString_c {
 	/* 80249C20 */ dMsgString_c();
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-// build JMessage (['JMessage']) False/False
-// build JMessage (['JMessage']) True/False
-struct JMessage;
-/* top-level dependencies (begin ['JMessage']) */
-// outer dependency: ('JMessage', 'TResourceContainer')
-/* top-level dependencies (end ['JMessage']) */
 struct JMessage {
-	// build TControl (['JMessage', 'TControl']) False/False
-	/* dependencies (begin ['JMessage', 'TControl']) */
-	/* dependencies (end ['JMessage', 'TControl']) */
 	struct TControl {
 		/* 802A75D4 */ void reset();
 		/* 802A7634 */ void update();
@@ -530,13 +338,7 @@ struct JMessage {
 		/* 802A78F4 */ void setMessageID(u32, u32, bool*);
 	};
 
-	// build TResourceContainer (['JMessage', 'TResourceContainer']) False/False
-	/* dependencies (begin ['JMessage', 'TResourceContainer']) */
-	/* dependencies (end ['JMessage', 'TResourceContainer']) */
 	struct TResourceContainer {
-		// build TCResource (['JMessage', 'TResourceContainer', 'TCResource']) False/False
-		/* dependencies (begin ['JMessage', 'TResourceContainer', 'TCResource']) */
-		/* dependencies (end ['JMessage', 'TResourceContainer', 'TCResource']) */
 		struct TCResource {
 			/* 802A8EF8 */ ~TCResource();
 		};
@@ -544,88 +346,41 @@ struct JMessage {
 		/* 802A906C */ TResourceContainer();
 	};
 
-	// build TParse (['JMessage', 'TParse']) False/False
-	/* dependencies (begin ['JMessage', 'TParse']) */
-	// inner dependency: 1 ('JMessage', 'TResourceContainer') (for ['JMessage', 'TParse'])
-	// build TResourceContainer (['JMessage', 'TResourceContainer']) True/True
-	/* dependencies (end ['JMessage', 'TParse']) */
 	struct TParse {
-		// ('JMessage', 'TResourceContainer')
 		/* 802A9130 */ TParse(JMessage::TResourceContainer*);
 	};
 
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) True/True
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build Z2SeqMgr (['Z2SeqMgr']) False/False
-/* top-level dependencies (begin ['Z2SeqMgr']) */
-/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
 	/* 802AFF8C */ void changeBgmStatus(s32);
 };
 
-// build Z2StatusMgr (['Z2StatusMgr']) False/False
-/* top-level dependencies (begin ['Z2StatusMgr']) */
-/* top-level dependencies (end ['Z2StatusMgr']) */
 struct Z2StatusMgr {
 	/* 802B60CC */ void talkIn();
 	/* 802B6104 */ void talkOut();
 };
 
-// build Z2SpeechMgr2 (['Z2SpeechMgr2']) False/False
-/* top-level dependencies (begin ['Z2SpeechMgr2']) */
-/* top-level dependencies (end ['Z2SpeechMgr2']) */
 struct Z2SpeechMgr2 {
 	/* 802CBF60 */ void setTextCount(s16);
 };
 
-// build JGadget (['JGadget']) False/False
-// build JGadget (['JGadget']) True/False
-struct JGadget;
-/* top-level dependencies (begin ['JGadget']) */
-// outer dependency: ('JGadget', 'TNodeLinkList', 'iterator')
-/* top-level dependencies (end ['JGadget']) */
-struct JGadget {
-	// build binary (['JGadget', 'binary']) False/False
-	/* dependencies (begin ['JGadget', 'binary']) */
-	/* dependencies (end ['JGadget', 'binary']) */
+namespace JGadget {
 	struct binary {
-		// build TParse_header_block (['JGadget', 'binary', 'TParse_header_block']) False/False
-		/* dependencies (begin ['JGadget', 'binary', 'TParse_header_block']) */
-		/* dependencies (end ['JGadget', 'binary', 'TParse_header_block']) */
 		struct TParse_header_block {
 			/* 802DC910 */ void parse_next(void const**, u32);
 		};
 
 	};
 
-	// build TNodeLinkList (['JGadget', 'TNodeLinkList']) False/False
-	/* dependencies (begin ['JGadget', 'TNodeLinkList']) */
-	// inner dependency: 1 ('JGadget', 'TNodeLinkList', 'iterator') (for ['JGadget', 'TNodeLinkList'])
-	/* dependencies (end ['JGadget', 'TNodeLinkList']) */
 	struct TNodeLinkList {
-		// ('JGadget', 'TNodeLinkList', 'iterator')
-		// build iterator (['JGadget', 'TNodeLinkList', 'iterator']) False/False
-		/* dependencies (begin ['JGadget', 'TNodeLinkList', 'iterator']) */
-		/* dependencies (end ['JGadget', 'TNodeLinkList', 'iterator']) */
 		struct iterator {
 		};
 
@@ -638,199 +393,199 @@ struct JGadget {
 // Forward References:
 // 
 
-void dMsgObject_getGroupID();
-static void dMsgObject_searchSSItem(void*, void*);
-static void dMsgObject_Draw(dMsgObject_c*);
-static void dMsgObject_Execute(dMsgObject_c*);
-static bool dMsgObject_IsDelete(dMsgObject_c*);
-static void dMsgObject_Delete(dMsgObject_c*);
-static void dMsgObject_Create(msg_class*);
-static void dMsgObject_getTotalPrice();
-void dMsgObject_setTotalPrice(u16);
-void dMsgObject_addTotalPrice(s16);
-static void dMsgObject_getTotalPayment();
-void dMsgObject_setTotalPayment(u16);
-static void dMsgObject_addTotalPayment(s16);
-void dMsgObject_getFundRaising();
-void dMsgObject_setFundRaising(u16);
-static void dMsgObject_addFundRaising(s16);
-void dMsgObject_getOffering();
-void dMsgObject_addOffering(s16);
-extern "C" void __sinit_d_msg_object_cpp();
+void dMsgObject_getGroupID(); // 2
+static void dMsgObject_searchSSItem(void*, void*); // 2
+static void dMsgObject_Draw(dMsgObject_c*); // 2
+static void dMsgObject_Execute(dMsgObject_c*); // 2
+static bool dMsgObject_IsDelete(dMsgObject_c*); // 2
+static void dMsgObject_Delete(dMsgObject_c*); // 2
+static void dMsgObject_Create(msg_class*); // 2
+static void dMsgObject_getTotalPrice(); // 2
+void dMsgObject_setTotalPrice(u16); // 2
+void dMsgObject_addTotalPrice(s16); // 2
+static void dMsgObject_getTotalPayment(); // 2
+void dMsgObject_setTotalPayment(u16); // 2
+static void dMsgObject_addTotalPayment(s16); // 2
+void dMsgObject_getFundRaising(); // 2
+void dMsgObject_setFundRaising(u16); // 2
+static void dMsgObject_addFundRaising(s16); // 2
+void dMsgObject_getOffering(); // 2
+void dMsgObject_addOffering(s16); // 2
+extern "C" void __sinit_d_msg_object_cpp(); // 1
 
-extern "C" void dMsgObject_getGroupID__Fv();
-extern "C" static void dMsgObject_searchSSItem__FPvPv();
-extern "C" void __ct__20dMsgObject_HowlHIO_cFv();
-extern "C" void __ct__16dMsgObject_HIO_cFv();
-extern "C" void _create__12dMsgObject_cFP9msg_class();
-extern "C" void _execute__12dMsgObject_cFv();
-extern "C" void _draw__12dMsgObject_cFv();
-extern "C" void _delete__12dMsgObject_cFv();
-extern "C" void setMessageIndex__12dMsgObject_cFUlUlb();
-extern "C" void setMessageIndexDemo__12dMsgObject_cFUlb();
-extern "C" void getMessageIndex__12dMsgObject_cFUl();
-extern "C" void getRevoMessageIndex__12dMsgObject_cFUl();
-extern "C" void getMessageIndexAlways__12dMsgObject_cFUl();
-extern "C" void getMessageIDAlways__12dMsgObject_cFUl();
-extern "C" void getMessageGroup__12dMsgObject_cFUl();
-extern "C" void waitProc__12dMsgObject_cFv();
-extern "C" void openProc__12dMsgObject_cFv();
-extern "C" void outnowProc__12dMsgObject_cFv();
-extern "C" void outwaitProc__12dMsgObject_cFv();
-extern "C" void stopProc__12dMsgObject_cFv();
-extern "C" void continueProc__12dMsgObject_cFv();
-extern "C" void selectProc__12dMsgObject_cFv();
-extern "C" void selectEndProc__12dMsgObject_cFv();
-extern "C" void inputProc__12dMsgObject_cFv();
-extern "C" void finishProc__12dMsgObject_cFv();
-extern "C" void endProc__12dMsgObject_cFv();
-extern "C" void deleteProc__12dMsgObject_cFv();
-extern "C" void textmodeProc__12dMsgObject_cFv();
-extern "C" void talkStartInit__12dMsgObject_cFv();
-extern "C" void fukiPosCalc__12dMsgObject_cFb();
-extern "C" void setStatusLocal__12dMsgObject_cFUs();
-extern "C" void getStatusLocal__12dMsgObject_cFv();
-extern "C" void delete_screen__12dMsgObject_cFb();
-extern "C" void isSend__12dMsgObject_cFv();
-extern "C" void readMessageGroupLocal__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c();
-extern "C" void changeFlowGroupLocal__12dMsgObject_cFl();
-extern "C" void demoMessageGroupLocal__12dMsgObject_cFv();
-extern "C" void endFlowGroupLocal__12dMsgObject_cFv();
-extern "C" void changeGroupLocal__12dMsgObject_cFs();
-extern "C" void getStringLocal__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs();
-extern "C" void isGetItemMessage__12dMsgObject_cFv();
-extern "C" void isKanbanMessage__12dMsgObject_cFv();
-extern "C" void isHowlMessage__12dMsgObject_cFv();
-extern "C" void isMidonaMessage__12dMsgObject_cFv();
-extern "C" void isMidonaNormalTalkWait__12dMsgObject_cFv();
-extern "C" void isMidonaTalkWait__12dMsgObject_cFv();
-extern "C" void isPlaceMessage__12dMsgObject_cFv();
-extern "C" void isBossMessage__12dMsgObject_cFv();
-extern "C" bool isBookMessage__12dMsgObject_cFv();
-extern "C" void isStaffMessage__12dMsgObject_cFv();
-extern "C" void isSaveMessage__12dMsgObject_cFv();
-extern "C" void isTalkMessage__12dMsgObject_cFv();
-extern "C" void getSmellName__12dMsgObject_cFv();
-extern "C" void getPortalName__12dMsgObject_cFv();
-extern "C" void getBombName__12dMsgObject_cFv();
-extern "C" void getInsectName__12dMsgObject_cFv();
-extern "C" void getLetterName__12dMsgObject_cFv();
-extern "C" void getSelectBombNum__12dMsgObject_cFv();
-extern "C" void onMsgSendControlLocal__12dMsgObject_cFv();
-extern "C" void offMsgSendControlLocal__12dMsgObject_cFv();
-extern "C" void isMsgSendControlLocal__12dMsgObject_cFv();
-extern "C" void onMsgSendLocal__12dMsgObject_cFv();
-extern "C" void offMsgSendLocal__12dMsgObject_cFv();
-extern "C" void isMsgSendLocal__12dMsgObject_cFv();
-extern "C" void isMouthCheckLocal__12dMsgObject_cFv();
-extern "C" void getBombBuyPriceLocal__12dMsgObject_cFUc();
-extern "C" void addSelectBomBag__12dMsgObject_cFUc();
-extern "C" void resetSelectBomBag__12dMsgObject_cFv();
-extern "C" void getSelectBombBagIDLocal__12dMsgObject_cFv();
-extern "C" void getSelectBombPriceLocal__12dMsgObject_cFv();
-extern "C" void setEquipBombInfoLocal__12dMsgObject_cFv();
-extern "C" void updateEquipBombInfoLocal__12dMsgObject_cFv();
-extern "C" void setShopWaitTimer__12dMsgObject_cFUc();
-extern "C" void setSelectWordFlagLocal__12dMsgObject_cFUc();
-extern "C" void isHowlHearingModeLocal__12dMsgObject_cFv();
-extern "C" void isCameraCancelFlag__12dMsgObject_cFv();
-extern "C" void onCameraCancelFlag__12dMsgObject_cFv();
-extern "C" void offCameraCancelFlag__12dMsgObject_cFv();
-extern "C" void isKillMessageFlag__12dMsgObject_cFv();
-extern "C" void onKillMessageFlag__12dMsgObject_cFv();
-extern "C" void setKillMessageFlag__12dMsgObject_cFv();
-extern "C" void setKillMessageFlagLocal__12dMsgObject_cFv();
-extern "C" void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c();
-extern "C" void setNowTalkFlowNo__12dMsgObject_cFs();
-extern "C" void getNowTalkFlowNo__12dMsgObject_cFv();
-extern "C" void setDemoMessage__12dMsgObject_cFUl();
-extern "C" void setTalkHeap__12dMsgObject_cFPv();
-extern "C" void setTalkHeapLocal__12dMsgObject_cFPv();
-extern "C" void getTalkHeap__12dMsgObject_cFv();
-extern "C" void isDraw__12dMsgObject_cFv();
-extern "C" void setButtonStatusLocal__12dMsgObject_cFv();
-extern "C" void setDemoMessageLocal__12dMsgObject_cFUl();
-extern "C" void getSmellTypeMessageIDLocal__12dMsgObject_cFv();
-extern "C" void setSmellTypeLocal__12dMsgObject_cFUc();
-extern "C" void getSelectCursorPosLocal__12dMsgObject_cFv();
-extern "C" void setSelectCursorPosLocal__12dMsgObject_cFUc();
-extern "C" void setTalkActorLocal__12dMsgObject_cFP10fopAc_ac_c();
-extern "C" static void dMsgObject_Draw__FP12dMsgObject_c();
-extern "C" static void dMsgObject_Execute__FP12dMsgObject_c();
-extern "C" static bool dMsgObject_IsDelete__FP12dMsgObject_c();
-extern "C" static void dMsgObject_Delete__FP12dMsgObject_c();
-extern "C" static void dMsgObject_Create__FP9msg_class();
-extern "C" void readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c();
-extern "C" void changeFlowGroup__12dMsgObject_cFl();
-extern "C" void demoMessageGroup__12dMsgObject_cFv();
-extern "C" void endFlowGroup__12dMsgObject_cFv();
-extern "C" void changeGroup__12dMsgObject_cFs();
-extern "C" void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs();
-extern "C" void getMsgDtPtr__12dMsgObject_cFv();
-extern "C" void setProcessID__12dMsgObject_cFUi();
-extern "C" void getActor__12dMsgObject_cFv();
-extern "C" void getpTalkActor__12dMsgObject_cFv();
-extern "C" void getIdx__12dMsgObject_cFv();
-extern "C" void getNodeIdx__12dMsgObject_cFv();
-extern "C" void setStatus__12dMsgObject_cFUs();
-extern "C" void getStatus__12dMsgObject_cFv();
-extern "C" void getScrnDrawPtr__12dMsgObject_cFv();
-extern "C" void setTalkActor__12dMsgObject_cFP10fopAc_ac_c();
-extern "C" void onMsgSendControl__12dMsgObject_cFv();
-extern "C" void offMsgSendControl__12dMsgObject_cFv();
-extern "C" void isMsgSendControl__12dMsgObject_cFv();
-extern "C" void onMsgSend__12dMsgObject_cFv();
-extern "C" void offMsgSend__12dMsgObject_cFv();
-extern "C" void isMsgSend__12dMsgObject_cFv();
-extern "C" void isMouthCheck__12dMsgObject_cFv();
-extern "C" void getMessageID__12dMsgObject_cFv();
-extern "C" void getSmellTypeMessageID__12dMsgObject_cFv();
-extern "C" void setSmellType__12dMsgObject_cFUc();
-extern "C" void getSelectCursorPos__12dMsgObject_cFv();
-extern "C" void setSelectCursorPos__12dMsgObject_cFUc();
-extern "C" void setPortalMessageID__12dMsgObject_cFUs();
-extern "C" void setInsectItemNo__12dMsgObject_cFUc();
-extern "C" void setLetterNameID__12dMsgObject_cFUs();
-extern "C" void setArrowNum__12dMsgObject_cFUc();
-extern "C" void setMsgOutputType__12dMsgObject_cFUc();
-extern "C" void getMsgOutputType__12dMsgObject_cFv();
-extern "C" void getWord__12dMsgObject_cFv();
-extern "C" void getSelectWord__12dMsgObject_cFi();
-extern "C" void setSelectWordFlag__12dMsgObject_cFUc();
-extern "C" void getSelectWordFlag__12dMsgObject_cFv();
-extern "C" void isHowlHearingMode__12dMsgObject_cFv();
-extern "C" void getSelectBombBagID__12dMsgObject_cFv();
-extern "C" void getSelectBombPrice__12dMsgObject_cFv();
-extern "C" void setEquipBombInfo__12dMsgObject_cFv();
-extern "C" void getItemEquipButton__12dMsgObject_cFv();
-extern "C" void setSelectCancelPos__12dMsgObject_cFUc();
-extern "C" static void dMsgObject_getTotalPrice__Fv();
-extern "C" void dMsgObject_setTotalPrice__FUs();
-extern "C" void dMsgObject_addTotalPrice__Fs();
-extern "C" static void dMsgObject_getTotalPayment__Fv();
-extern "C" void dMsgObject_setTotalPayment__FUs();
-extern "C" static void dMsgObject_addTotalPayment__Fs();
-extern "C" void dMsgObject_getFundRaising__Fv();
-extern "C" void dMsgObject_setFundRaising__FUs();
-extern "C" static void dMsgObject_addFundRaising__Fs();
-extern "C" void dMsgObject_getOffering__Fv();
-extern "C" void dMsgObject_addOffering__Fs();
-extern "C" void __sinit_d_msg_object_cpp();
-extern "C" void __dt__20dMsgObject_HowlHIO_cFv();
-extern "C" void __dt__16dMsgObject_HIO_cFv();
-extern "C" void exec__14dMsgScrnBase_cFv();
-extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
-extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc();
-extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb();
-extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
-extern "C" void arwAnimeMove__14dMsgScrnBase_cFv();
-extern "C" void arwAnimeInit__14dMsgScrnBase_cFv();
-extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc();
-extern "C" bool isSelect__14dMsgScrnBase_cFv();
-extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv();
-extern "C" void dotAnimeMove__14dMsgScrnBase_cFv();
-extern "C" void dotAnimeInit__14dMsgScrnBase_cFv();
-extern "C" void setActorPos__19jmessage_tReferenceF4cXyz();
+extern "C" void dMsgObject_getGroupID__Fv(); // 1
+extern "C" static void dMsgObject_searchSSItem__FPvPv(); // 1
+extern "C" void __ct__20dMsgObject_HowlHIO_cFv(); // 1
+extern "C" void __ct__16dMsgObject_HIO_cFv(); // 1
+extern "C" void _create__12dMsgObject_cFP9msg_class(); // 1
+extern "C" void _execute__12dMsgObject_cFv(); // 1
+extern "C" void _draw__12dMsgObject_cFv(); // 1
+extern "C" void _delete__12dMsgObject_cFv(); // 1
+extern "C" void setMessageIndex__12dMsgObject_cFUlUlb(); // 1
+extern "C" void setMessageIndexDemo__12dMsgObject_cFUlb(); // 1
+extern "C" void getMessageIndex__12dMsgObject_cFUl(); // 1
+extern "C" void getRevoMessageIndex__12dMsgObject_cFUl(); // 1
+extern "C" void getMessageIndexAlways__12dMsgObject_cFUl(); // 1
+extern "C" void getMessageIDAlways__12dMsgObject_cFUl(); // 1
+extern "C" void getMessageGroup__12dMsgObject_cFUl(); // 1
+extern "C" void waitProc__12dMsgObject_cFv(); // 1
+extern "C" void openProc__12dMsgObject_cFv(); // 1
+extern "C" void outnowProc__12dMsgObject_cFv(); // 1
+extern "C" void outwaitProc__12dMsgObject_cFv(); // 1
+extern "C" void stopProc__12dMsgObject_cFv(); // 1
+extern "C" void continueProc__12dMsgObject_cFv(); // 1
+extern "C" void selectProc__12dMsgObject_cFv(); // 1
+extern "C" void selectEndProc__12dMsgObject_cFv(); // 1
+extern "C" void inputProc__12dMsgObject_cFv(); // 1
+extern "C" void finishProc__12dMsgObject_cFv(); // 1
+extern "C" void endProc__12dMsgObject_cFv(); // 1
+extern "C" void deleteProc__12dMsgObject_cFv(); // 1
+extern "C" void textmodeProc__12dMsgObject_cFv(); // 1
+extern "C" void talkStartInit__12dMsgObject_cFv(); // 1
+extern "C" void fukiPosCalc__12dMsgObject_cFb(); // 1
+extern "C" void setStatusLocal__12dMsgObject_cFUs(); // 1
+extern "C" void getStatusLocal__12dMsgObject_cFv(); // 1
+extern "C" void delete_screen__12dMsgObject_cFb(); // 1
+extern "C" void isSend__12dMsgObject_cFv(); // 1
+extern "C" void readMessageGroupLocal__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c(); // 1
+extern "C" void changeFlowGroupLocal__12dMsgObject_cFl(); // 1
+extern "C" void demoMessageGroupLocal__12dMsgObject_cFv(); // 1
+extern "C" void endFlowGroupLocal__12dMsgObject_cFv(); // 1
+extern "C" void changeGroupLocal__12dMsgObject_cFs(); // 1
+extern "C" void getStringLocal__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs(); // 1
+extern "C" void isGetItemMessage__12dMsgObject_cFv(); // 1
+extern "C" void isKanbanMessage__12dMsgObject_cFv(); // 1
+extern "C" void isHowlMessage__12dMsgObject_cFv(); // 1
+extern "C" void isMidonaMessage__12dMsgObject_cFv(); // 1
+extern "C" void isMidonaNormalTalkWait__12dMsgObject_cFv(); // 1
+extern "C" void isMidonaTalkWait__12dMsgObject_cFv(); // 1
+extern "C" void isPlaceMessage__12dMsgObject_cFv(); // 1
+extern "C" void isBossMessage__12dMsgObject_cFv(); // 1
+extern "C" bool isBookMessage__12dMsgObject_cFv(); // 1
+extern "C" void isStaffMessage__12dMsgObject_cFv(); // 1
+extern "C" void isSaveMessage__12dMsgObject_cFv(); // 1
+extern "C" void isTalkMessage__12dMsgObject_cFv(); // 1
+extern "C" void getSmellName__12dMsgObject_cFv(); // 1
+extern "C" void getPortalName__12dMsgObject_cFv(); // 1
+extern "C" void getBombName__12dMsgObject_cFv(); // 1
+extern "C" void getInsectName__12dMsgObject_cFv(); // 1
+extern "C" void getLetterName__12dMsgObject_cFv(); // 1
+extern "C" void getSelectBombNum__12dMsgObject_cFv(); // 1
+extern "C" void onMsgSendControlLocal__12dMsgObject_cFv(); // 1
+extern "C" void offMsgSendControlLocal__12dMsgObject_cFv(); // 1
+extern "C" void isMsgSendControlLocal__12dMsgObject_cFv(); // 1
+extern "C" void onMsgSendLocal__12dMsgObject_cFv(); // 1
+extern "C" void offMsgSendLocal__12dMsgObject_cFv(); // 1
+extern "C" void isMsgSendLocal__12dMsgObject_cFv(); // 1
+extern "C" void isMouthCheckLocal__12dMsgObject_cFv(); // 1
+extern "C" void getBombBuyPriceLocal__12dMsgObject_cFUc(); // 1
+extern "C" void addSelectBomBag__12dMsgObject_cFUc(); // 1
+extern "C" void resetSelectBomBag__12dMsgObject_cFv(); // 1
+extern "C" void getSelectBombBagIDLocal__12dMsgObject_cFv(); // 1
+extern "C" void getSelectBombPriceLocal__12dMsgObject_cFv(); // 1
+extern "C" void setEquipBombInfoLocal__12dMsgObject_cFv(); // 1
+extern "C" void updateEquipBombInfoLocal__12dMsgObject_cFv(); // 1
+extern "C" void setShopWaitTimer__12dMsgObject_cFUc(); // 1
+extern "C" void setSelectWordFlagLocal__12dMsgObject_cFUc(); // 1
+extern "C" void isHowlHearingModeLocal__12dMsgObject_cFv(); // 1
+extern "C" void isCameraCancelFlag__12dMsgObject_cFv(); // 1
+extern "C" void onCameraCancelFlag__12dMsgObject_cFv(); // 1
+extern "C" void offCameraCancelFlag__12dMsgObject_cFv(); // 1
+extern "C" void isKillMessageFlag__12dMsgObject_cFv(); // 1
+extern "C" void onKillMessageFlag__12dMsgObject_cFv(); // 1
+extern "C" void setKillMessageFlag__12dMsgObject_cFv(); // 1
+extern "C" void setKillMessageFlagLocal__12dMsgObject_cFv(); // 1
+extern "C" void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c(); // 1
+extern "C" void setNowTalkFlowNo__12dMsgObject_cFs(); // 1
+extern "C" void getNowTalkFlowNo__12dMsgObject_cFv(); // 1
+extern "C" void setDemoMessage__12dMsgObject_cFUl(); // 1
+extern "C" void setTalkHeap__12dMsgObject_cFPv(); // 1
+extern "C" void setTalkHeapLocal__12dMsgObject_cFPv(); // 1
+extern "C" void getTalkHeap__12dMsgObject_cFv(); // 1
+extern "C" void isDraw__12dMsgObject_cFv(); // 1
+extern "C" void setButtonStatusLocal__12dMsgObject_cFv(); // 1
+extern "C" void setDemoMessageLocal__12dMsgObject_cFUl(); // 1
+extern "C" void getSmellTypeMessageIDLocal__12dMsgObject_cFv(); // 1
+extern "C" void setSmellTypeLocal__12dMsgObject_cFUc(); // 1
+extern "C" void getSelectCursorPosLocal__12dMsgObject_cFv(); // 1
+extern "C" void setSelectCursorPosLocal__12dMsgObject_cFUc(); // 1
+extern "C" void setTalkActorLocal__12dMsgObject_cFP10fopAc_ac_c(); // 1
+extern "C" static void dMsgObject_Draw__FP12dMsgObject_c(); // 1
+extern "C" static void dMsgObject_Execute__FP12dMsgObject_c(); // 1
+extern "C" static bool dMsgObject_IsDelete__FP12dMsgObject_c(); // 1
+extern "C" static void dMsgObject_Delete__FP12dMsgObject_c(); // 1
+extern "C" static void dMsgObject_Create__FP9msg_class(); // 1
+extern "C" void readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c(); // 1
+extern "C" void changeFlowGroup__12dMsgObject_cFl(); // 1
+extern "C" void demoMessageGroup__12dMsgObject_cFv(); // 1
+extern "C" void endFlowGroup__12dMsgObject_cFv(); // 1
+extern "C" void changeGroup__12dMsgObject_cFs(); // 1
+extern "C" void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs(); // 1
+extern "C" void getMsgDtPtr__12dMsgObject_cFv(); // 1
+extern "C" void setProcessID__12dMsgObject_cFUi(); // 1
+extern "C" void getActor__12dMsgObject_cFv(); // 1
+extern "C" void getpTalkActor__12dMsgObject_cFv(); // 1
+extern "C" void getIdx__12dMsgObject_cFv(); // 1
+extern "C" void getNodeIdx__12dMsgObject_cFv(); // 1
+extern "C" void setStatus__12dMsgObject_cFUs(); // 1
+extern "C" void getStatus__12dMsgObject_cFv(); // 1
+extern "C" void getScrnDrawPtr__12dMsgObject_cFv(); // 1
+extern "C" void setTalkActor__12dMsgObject_cFP10fopAc_ac_c(); // 1
+extern "C" void onMsgSendControl__12dMsgObject_cFv(); // 1
+extern "C" void offMsgSendControl__12dMsgObject_cFv(); // 1
+extern "C" void isMsgSendControl__12dMsgObject_cFv(); // 1
+extern "C" void onMsgSend__12dMsgObject_cFv(); // 1
+extern "C" void offMsgSend__12dMsgObject_cFv(); // 1
+extern "C" void isMsgSend__12dMsgObject_cFv(); // 1
+extern "C" void isMouthCheck__12dMsgObject_cFv(); // 1
+extern "C" void getMessageID__12dMsgObject_cFv(); // 1
+extern "C" void getSmellTypeMessageID__12dMsgObject_cFv(); // 1
+extern "C" void setSmellType__12dMsgObject_cFUc(); // 1
+extern "C" void getSelectCursorPos__12dMsgObject_cFv(); // 1
+extern "C" void setSelectCursorPos__12dMsgObject_cFUc(); // 1
+extern "C" void setPortalMessageID__12dMsgObject_cFUs(); // 1
+extern "C" void setInsectItemNo__12dMsgObject_cFUc(); // 1
+extern "C" void setLetterNameID__12dMsgObject_cFUs(); // 1
+extern "C" void setArrowNum__12dMsgObject_cFUc(); // 1
+extern "C" void setMsgOutputType__12dMsgObject_cFUc(); // 1
+extern "C" void getMsgOutputType__12dMsgObject_cFv(); // 1
+extern "C" void getWord__12dMsgObject_cFv(); // 1
+extern "C" void getSelectWord__12dMsgObject_cFi(); // 1
+extern "C" void setSelectWordFlag__12dMsgObject_cFUc(); // 1
+extern "C" void getSelectWordFlag__12dMsgObject_cFv(); // 1
+extern "C" void isHowlHearingMode__12dMsgObject_cFv(); // 1
+extern "C" void getSelectBombBagID__12dMsgObject_cFv(); // 1
+extern "C" void getSelectBombPrice__12dMsgObject_cFv(); // 1
+extern "C" void setEquipBombInfo__12dMsgObject_cFv(); // 1
+extern "C" void getItemEquipButton__12dMsgObject_cFv(); // 1
+extern "C" void setSelectCancelPos__12dMsgObject_cFUc(); // 1
+extern "C" static void dMsgObject_getTotalPrice__Fv(); // 1
+extern "C" void dMsgObject_setTotalPrice__FUs(); // 1
+extern "C" void dMsgObject_addTotalPrice__Fs(); // 1
+extern "C" static void dMsgObject_getTotalPayment__Fv(); // 1
+extern "C" void dMsgObject_setTotalPayment__FUs(); // 1
+extern "C" static void dMsgObject_addTotalPayment__Fs(); // 1
+extern "C" void dMsgObject_getFundRaising__Fv(); // 1
+extern "C" void dMsgObject_setFundRaising__FUs(); // 1
+extern "C" static void dMsgObject_addFundRaising__Fs(); // 1
+extern "C" void dMsgObject_getOffering__Fv(); // 1
+extern "C" void dMsgObject_addOffering__Fs(); // 1
+extern "C" void __sinit_d_msg_object_cpp(); // 1
+extern "C" void __dt__20dMsgObject_HowlHIO_cFv(); // 1
+extern "C" void __dt__16dMsgObject_HIO_cFv(); // 1
+extern "C" void exec__14dMsgScrnBase_cFv(); // 1
+extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc(); // 1
+extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc(); // 1
+extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
+extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc(); // 1
+extern "C" void arwAnimeMove__14dMsgScrnBase_cFv(); // 1
+extern "C" void arwAnimeInit__14dMsgScrnBase_cFv(); // 1
+extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc(); // 1
+extern "C" bool isSelect__14dMsgScrnBase_cFv(); // 1
+extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
+extern "C" void dotAnimeMove__14dMsgScrnBase_cFv(); // 1
+extern "C" void dotAnimeInit__14dMsgScrnBase_cFv(); // 1
+extern "C" void setActorPos__19jmessage_tReferenceF4cXyz(); // 1
 SECTION_RODATA extern const u8 d_msg_d_msg_object__stringBase0[136];
 SECTION_DATA extern void*d_msg_d_msg_object__lit_4486[25];
 SECTION_DATA extern void*lit_5875[20];
@@ -884,127 +639,127 @@ SECTION_SDATA2 extern f32 d_msg_d_msg_object__lit_5950;
 // External References:
 // 
 
-void mDoExt_setCurrentHeap(JKRHeap*);
-void mDoExt_getMesgFont();
-void mDoExt_getRubyFont();
-void mDoLib_project(Vec*, Vec*);
-void fopAc_IsActor(void*);
-void fopMsgM_setStageLayer(void*);
-void fopMsgM_messageSet(u32, u32);
-extern "C" void fpcEx_Search__FPFPvPv_PvPv();
-void dComIfGs_setSelectItemIndex(int, u8);
-void dComIfGp_setHeapLockFlag(u8);
-void dComIfGp_offHeapLockFlag(int);
-void dComIfGp_getSubHeap2D(int);
-void dMeter2Info_set2DVibration();
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void __register_global_object();
-extern "C" void __construct_array();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void sprintf();
-extern "C" void strcpy();
+void mDoExt_setCurrentHeap(JKRHeap*); // 2
+void mDoExt_getMesgFont(); // 2
+void mDoExt_getRubyFont(); // 2
+void mDoLib_project(Vec*, Vec*); // 2
+void fopAc_IsActor(void*); // 2
+void fopMsgM_setStageLayer(void*); // 2
+void fopMsgM_messageSet(u32, u32); // 2
+extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+void dComIfGs_setSelectItemIndex(int, u8); // 2
+void dComIfGp_setHeapLockFlag(u8); // 2
+void dComIfGp_offHeapLockFlag(int); // 2
+void dComIfGp_getSubHeap2D(int); // 2
+void dMeter2Info_set2DVibration(); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void sprintf(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void mDoExt_getRubyFont__Fv();
-extern "C" void mDoLib_project__FP3VecP3Vec();
-extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap();
-extern "C" void fopAc_IsActor__FPv();
-extern "C" void fopMsgM_setStageLayer__FPv();
-extern "C" void fopMsgM_messageSet__FUlUl();
-extern "C" void fpcEx_Search__FPFPvPv_PvPv();
-extern "C" void dComIfGs_setSelectItemIndex__FiUc();
-extern "C" void dComIfGp_setHeapLockFlag__FUc();
-extern "C" void dComIfGp_offHeapLockFlag__Fi();
-extern "C" void dComIfGp_getSubHeap2D__Fi();
-extern "C" void getItem__17dSv_player_item_cCFib();
-extern "C" void onFirstBit__21dSv_player_get_item_cFUc();
-extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
-extern "C" void onEventBit__11dSv_event_cFUs();
-extern "C" void offEventBit__11dSv_event_cFUs();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void setEventReg__11dSv_event_cFUsUc();
-extern "C" void getEventReg__11dSv_event_cCFUs();
-extern "C" void setPtT__14dEvt_control_cFPv();
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" void __ct__Q28JUtility6TColorFv();
-extern "C" void isFloatingMessageVisible__13dMeter2Info_cFv();
-extern "C" void resetFloatingMessage__13dMeter2Info_cFv();
-extern "C" void decMsgKeyWaitTimer__13dMeter2Info_cFv();
-extern "C" void dMeter2Info_set2DVibration__Fv();
-extern "C" void emphasisButtonDelete__9dMeter2_cFv();
-extern "C" void __ct__10COutFont_cFUc();
-extern "C" void __ct__19jmessage_tReferenceFv();
-extern "C" void pageSend__19jmessage_tReferenceFv();
-extern "C" void selectMessage__19jmessage_tReferenceFv();
-extern "C" void inputNumber__19jmessage_tReferenceFv();
-extern "C" void shiftCharCountBuffer__19jmessage_tReferenceFv();
-extern "C" void resetCharCountBuffer__19jmessage_tReferenceFv();
-extern "C" void isLightEnd__19jmessage_tReferenceFv();
-extern "C" void __ct__27jmessage_tSequenceProcessorFPC19jmessage_tReferenceP17jmessage_tControl();
-extern "C" void __ct__28jmessage_tRenderingProcessorFPC19jmessage_tReference();
-extern "C" void resetRendering__28jmessage_tRenderingProcessorFv();
-extern "C" void setString__14dMsgScrnBase_cFPcPc();
-extern "C" void setRubyString__14dMsgScrnBase_cFPc();
-extern "C" void __ct__14dMsgScrnBoss_cFv();
-extern "C" void __ct__14dMsgScrnItem_cFUcUcP10JKRExpHeap();
-extern "C" void __ct__14dMsgScrnHowl_cFv();
-extern "C" void isKeyCheck__14dMsgScrnHowl_cFv();
-extern "C" void __ct__16dMsgScrnJimaku_cFUcP10JKRExpHeap();
-extern "C" void __ct__16dMsgScrnKanban_cFP10JKRExpHeap();
-extern "C" void __ct__15dMsgScrnPlace_cFv();
-extern "C" void __ct__15dMsgScrnStaff_cFUc();
-extern "C" void __ct__14dMsgScrnTalk_cFUcUcP10JKRExpHeap();
-extern "C" void __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap();
-extern "C" void __ct__12dMsgString_cFv();
-extern "C" void __dt__12dMsgString_cFv();
-extern "C" bool __eq__4cXyzCFRC3Vec();
-extern "C" void reset__Q28JMessage8TControlFv();
-extern "C" void update__Q28JMessage8TControlFv();
-extern "C" void render__Q28JMessage8TControlFv();
-extern "C" void setMessageCode__Q28JMessage8TControlFUsUs();
-extern "C" void setMessageID__Q28JMessage8TControlFUlUlPb();
-extern "C" void __dt__Q38JMessage18TResourceContainer10TCResourceFv();
-extern "C" void __ct__Q28JMessage18TResourceContainerFv();
-extern "C" void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void changeBgmStatus__8Z2SeqMgrFl();
-extern "C" void talkIn__11Z2StatusMgrFv();
-extern "C" void talkOut__11Z2StatusMgrFv();
-extern "C" void setTextCount__12Z2SpeechMgr2Fs();
-extern "C" void getTotalFreeSize__7JKRHeapFv();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
-extern "C" void erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator();
-extern "C" void __register_global_object();
-extern "C" void __construct_array();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void sprintf();
-extern "C" void strcpy();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void mDoExt_getRubyFont__Fv(); // 1
+extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
+extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap(); // 1
+extern "C" void fopAc_IsActor__FPv(); // 1
+extern "C" void fopMsgM_setStageLayer__FPv(); // 1
+extern "C" void fopMsgM_messageSet__FUlUl(); // 1
+extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+extern "C" void dComIfGs_setSelectItemIndex__FiUc(); // 1
+extern "C" void dComIfGp_setHeapLockFlag__FUc(); // 1
+extern "C" void dComIfGp_offHeapLockFlag__Fi(); // 1
+extern "C" void dComIfGp_getSubHeap2D__Fi(); // 1
+extern "C" void getItem__17dSv_player_item_cCFib(); // 1
+extern "C" void onFirstBit__21dSv_player_get_item_cFUc(); // 1
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc(); // 1
+extern "C" void onEventBit__11dSv_event_cFUs(); // 1
+extern "C" void offEventBit__11dSv_event_cFUs(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void setEventReg__11dSv_event_cFUsUc(); // 1
+extern "C" void getEventReg__11dSv_event_cCFUs(); // 1
+extern "C" void setPtT__14dEvt_control_cFPv(); // 1
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
+extern "C" void __ct__Q28JUtility6TColorFv(); // 1
+extern "C" void isFloatingMessageVisible__13dMeter2Info_cFv(); // 1
+extern "C" void resetFloatingMessage__13dMeter2Info_cFv(); // 1
+extern "C" void decMsgKeyWaitTimer__13dMeter2Info_cFv(); // 1
+extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
+extern "C" void emphasisButtonDelete__9dMeter2_cFv(); // 1
+extern "C" void __ct__10COutFont_cFUc(); // 1
+extern "C" void __ct__19jmessage_tReferenceFv(); // 1
+extern "C" void pageSend__19jmessage_tReferenceFv(); // 1
+extern "C" void selectMessage__19jmessage_tReferenceFv(); // 1
+extern "C" void inputNumber__19jmessage_tReferenceFv(); // 1
+extern "C" void shiftCharCountBuffer__19jmessage_tReferenceFv(); // 1
+extern "C" void resetCharCountBuffer__19jmessage_tReferenceFv(); // 1
+extern "C" void isLightEnd__19jmessage_tReferenceFv(); // 1
+extern "C" void __ct__27jmessage_tSequenceProcessorFPC19jmessage_tReferenceP17jmessage_tControl(); // 1
+extern "C" void __ct__28jmessage_tRenderingProcessorFPC19jmessage_tReference(); // 1
+extern "C" void resetRendering__28jmessage_tRenderingProcessorFv(); // 1
+extern "C" void setString__14dMsgScrnBase_cFPcPc(); // 1
+extern "C" void setRubyString__14dMsgScrnBase_cFPc(); // 1
+extern "C" void __ct__14dMsgScrnBoss_cFv(); // 1
+extern "C" void __ct__14dMsgScrnItem_cFUcUcP10JKRExpHeap(); // 1
+extern "C" void __ct__14dMsgScrnHowl_cFv(); // 1
+extern "C" void isKeyCheck__14dMsgScrnHowl_cFv(); // 1
+extern "C" void __ct__16dMsgScrnJimaku_cFUcP10JKRExpHeap(); // 1
+extern "C" void __ct__16dMsgScrnKanban_cFP10JKRExpHeap(); // 1
+extern "C" void __ct__15dMsgScrnPlace_cFv(); // 1
+extern "C" void __ct__15dMsgScrnStaff_cFUc(); // 1
+extern "C" void __ct__14dMsgScrnTalk_cFUcUcP10JKRExpHeap(); // 1
+extern "C" void __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap(); // 1
+extern "C" void __ct__12dMsgString_cFv(); // 1
+extern "C" void __dt__12dMsgString_cFv(); // 1
+extern "C" bool __eq__4cXyzCFRC3Vec(); // 1
+extern "C" void reset__Q28JMessage8TControlFv(); // 1
+extern "C" void update__Q28JMessage8TControlFv(); // 1
+extern "C" void render__Q28JMessage8TControlFv(); // 1
+extern "C" void setMessageCode__Q28JMessage8TControlFUsUs(); // 1
+extern "C" void setMessageID__Q28JMessage8TControlFUlUlPb(); // 1
+extern "C" void __dt__Q38JMessage18TResourceContainer10TCResourceFv(); // 1
+extern "C" void __ct__Q28JMessage18TResourceContainerFv(); // 1
+extern "C" void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void changeBgmStatus__8Z2SeqMgrFl(); // 1
+extern "C" void talkIn__11Z2StatusMgrFv(); // 1
+extern "C" void talkOut__11Z2StatusMgrFv(); // 1
+extern "C" void setTextCount__12Z2SpeechMgr2Fs(); // 1
+extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl(); // 1
+extern "C" void erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void sprintf(); // 1
+extern "C" void strcpy(); // 1
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 SECTION_DATA extern void*g_fopMsg_Method[6];
 SECTION_DATA extern void*g_fpcLf_Method[6];

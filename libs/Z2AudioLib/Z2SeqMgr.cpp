@@ -9,19 +9,11 @@
 // Types:
 // 
 
-// build Z2SeqMgr (['Z2SeqMgr']) False/False
-// build JAISoundHandle (['JAISoundHandle']) False/False
-/* top-level dependencies (begin ['JAISoundHandle']) */
-/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
-/* top-level dependencies (begin ['Z2SeqMgr']) */
-// outer dependency: ('JAISoundHandle',)
-/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
-	// ('JAISoundHandle',)
 	/* 802AEEA0 */ Z2SeqMgr();
 	/* 802AF010 */ void bgmStart(u32, u32, s32);
 	/* 802AF408 */ void bgmStop(u32, s32);
@@ -71,60 +63,34 @@ struct Z2SeqMgr {
 	/* 802B5ED4 */ void taktModeMuteOff();
 };
 
-// build JAISoundHandle (['JAISoundHandle']) True/True
-// build JAISeqMgr (['JAISeqMgr']) False/False
-/* top-level dependencies (begin ['JAISeqMgr']) */
-/* top-level dependencies (end ['JAISeqMgr']) */
 struct JAISeqMgr {
 	/* 802A1C90 */ void calc();
 	/* 802A1E3C */ void stop(u32);
 	/* 802A1EFC */ void mixOut();
 };
 
-// build JAISound (['JAISound']) False/False
-/* top-level dependencies (begin ['JAISound']) */
-/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
 	/* 802A21A0 */ void releaseHandle();
 	/* 802A24DC */ void stop(u32);
 	/* 802A2598 */ void stop();
 };
 
-// build JAISoundStatus_ (['JAISoundStatus_']) False/False
-/* top-level dependencies (begin ['JAISoundStatus_']) */
-/* top-level dependencies (end ['JAISoundStatus_']) */
 struct JAISoundStatus_ {
 	/* 802A2220 */ void lockWhenPrepared();
 	/* 802A2244 */ void unlockIfLocked();
 };
 
-// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
-/* top-level dependencies (begin ['JAISoundParamsMove']) */
-/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 	/* 802A2EBC */ void movePan(f32, u32);
 	/* 802A2F14 */ void moveDolby(f32, u32);
 };
 
-// build JAIStreamMgr (['JAIStreamMgr']) False/False
-/* top-level dependencies (begin ['JAIStreamMgr']) */
-/* top-level dependencies (end ['JAIStreamMgr']) */
 struct JAIStreamMgr {
 	/* 802A4068 */ void stop(u32);
 };
 
-// build Z2Calc (['Z2Calc']) False/False
-// build Z2Calc (['Z2Calc']) True/False
-struct Z2Calc;
-/* top-level dependencies (begin ['Z2Calc']) */
-// outer dependency: ('Z2Calc', 'CurveSign')
-/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
-	// ('Z2Calc', 'CurveSign')
-	// build CurveSign (['Z2Calc', 'CurveSign']) False/False
-	/* dependencies (begin ['Z2Calc', 'CurveSign']) */
-	/* dependencies (end ['Z2Calc', 'CurveSign']) */
 	struct CurveSign {
 	};
 
@@ -132,35 +98,20 @@ struct Z2Calc {
 	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
 };
 
-// build Z2SoundStarter (['Z2SoundStarter']) False/False
-// build JAISoundHandle (['JAISoundHandle']) True/True
-/* top-level dependencies (begin ['Z2SoundStarter']) */
-// outer dependency: ('JAISoundHandle',)
-/* top-level dependencies (end ['Z2SoundStarter']) */
 struct Z2SoundStarter {
-	// ('JAISoundHandle',)
 	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 	/* 802AAF74 */ void getPortData(JAISoundHandle*, u32, s8);
 };
 
-// build Z2StatusMgr (['Z2StatusMgr']) False/False
-/* top-level dependencies (begin ['Z2StatusMgr']) */
-/* top-level dependencies (end ['Z2StatusMgr']) */
 struct Z2StatusMgr {
 	/* 802B61E8 */ void setDemoName(char*);
 	/* 802B6734 */ void checkDayTime();
 };
 
-// build Z2SceneMgr (['Z2SceneMgr']) False/False
-/* top-level dependencies (begin ['Z2SceneMgr']) */
-/* top-level dependencies (end ['Z2SceneMgr']) */
 struct Z2SceneMgr {
 	/* 802B68E0 */ void setSceneExist(bool);
 };
 
-// build Z2SoundObjMgr (['Z2SoundObjMgr']) False/False
-/* top-level dependencies (begin ['Z2SoundObjMgr']) */
-/* top-level dependencies (end ['Z2SoundObjMgr']) */
 struct Z2SoundObjMgr {
 	/* 802BF980 */ void setForceBattleArea(bool, u16, u16, u16);
 	/* 802BF994 */ void searchEnemy();
@@ -174,53 +125,53 @@ struct Z2SoundObjMgr {
 // 
 
 
-extern "C" void __ct__8Z2SeqMgrFv();
-extern "C" void bgmStart__8Z2SeqMgrFUlUll();
-extern "C" void bgmStop__8Z2SeqMgrFUll();
-extern "C" void subBgmStart__8Z2SeqMgrFUl();
-extern "C" void subBgmStop__8Z2SeqMgrFv();
-extern "C" void subBgmStopInner__8Z2SeqMgrFv();
-extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl();
-extern "C" void bgmStreamCheckReady__8Z2SeqMgrFv();
-extern "C" void bgmStreamPlay__8Z2SeqMgrFv();
-extern "C" void bgmStreamStop__8Z2SeqMgrFUl();
-extern "C" void changeBgmStatus__8Z2SeqMgrFl();
-extern "C" void changeSubBgmStatus__8Z2SeqMgrFl();
-extern "C" void onVariantBgmJumpEnd__8Z2SeqMgrFb();
-extern "C" void changeFishingBgm__8Z2SeqMgrFl();
-extern "C" void talkInBgm__8Z2SeqMgrFv();
-extern "C" void talkOutBgm__8Z2SeqMgrFv();
-extern "C" void menuInBgm__8Z2SeqMgrFv();
-extern "C" void menuOutBgm__8Z2SeqMgrFv();
-extern "C" void fanfareFramework__8Z2SeqMgrFv();
-extern "C" void stopWolfHowlSong__8Z2SeqMgrFv();
-extern "C" void setHeightVolMod__8Z2SeqMgrFbUl();
-extern "C" void setTimeProcVolMod__8Z2SeqMgrFbUl();
-extern "C" void processBgmFramework__8Z2SeqMgrFv();
-extern "C" void checkBgmIDPlaying__8Z2SeqMgrFUl();
-extern "C" void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei();
-extern "C" void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff();
-extern "C" void resetBattleBgmParams__8Z2SeqMgrFv();
-extern "C" void setBattleBgmOff__8Z2SeqMgrFb();
-extern "C" void setBattleSearched__8Z2SeqMgrFb();
-extern "C" void setBattleDistIgnore__8Z2SeqMgrFb();
-extern "C" void setBattleGhostMute__8Z2SeqMgrFb();
-extern "C" void setBattleDistState__8Z2SeqMgrFUc();
-extern "C" void setBattleSeqState__8Z2SeqMgrFUc();
-extern "C" void setBattleLastHit__8Z2SeqMgrFUc();
-extern "C" void battleBgmFramework__8Z2SeqMgrFv();
-extern "C" void startBattleBgm__8Z2SeqMgrFb();
-extern "C" void stopBattleBgm__8Z2SeqMgrFUcUc();
-extern "C" void fieldBgmStart__8Z2SeqMgrFv();
-extern "C" void fieldRidingMute__8Z2SeqMgrFv();
-extern "C" void onFieldBgmJumpStart__8Z2SeqMgrFv();
-extern "C" void onFieldBgmJumpEnd__8Z2SeqMgrFv();
-extern "C" void fieldBgmFramework__8Z2SeqMgrFv();
-extern "C" void mbossBgmMuteProcess__8Z2SeqMgrFv();
-extern "C" void bgmSetSwordUsing__8Z2SeqMgrFl();
-extern "C" void bgmNowBattle__8Z2SeqMgrFf();
-extern "C" void taktModeMute__8Z2SeqMgrFv();
-extern "C" void taktModeMuteOff__8Z2SeqMgrFv();
+extern "C" void __ct__8Z2SeqMgrFv(); // 1
+extern "C" void bgmStart__8Z2SeqMgrFUlUll(); // 1
+extern "C" void bgmStop__8Z2SeqMgrFUll(); // 1
+extern "C" void subBgmStart__8Z2SeqMgrFUl(); // 1
+extern "C" void subBgmStop__8Z2SeqMgrFv(); // 1
+extern "C" void subBgmStopInner__8Z2SeqMgrFv(); // 1
+extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl(); // 1
+extern "C" void bgmStreamCheckReady__8Z2SeqMgrFv(); // 1
+extern "C" void bgmStreamPlay__8Z2SeqMgrFv(); // 1
+extern "C" void bgmStreamStop__8Z2SeqMgrFUl(); // 1
+extern "C" void changeBgmStatus__8Z2SeqMgrFl(); // 1
+extern "C" void changeSubBgmStatus__8Z2SeqMgrFl(); // 1
+extern "C" void onVariantBgmJumpEnd__8Z2SeqMgrFb(); // 1
+extern "C" void changeFishingBgm__8Z2SeqMgrFl(); // 1
+extern "C" void talkInBgm__8Z2SeqMgrFv(); // 1
+extern "C" void talkOutBgm__8Z2SeqMgrFv(); // 1
+extern "C" void menuInBgm__8Z2SeqMgrFv(); // 1
+extern "C" void menuOutBgm__8Z2SeqMgrFv(); // 1
+extern "C" void fanfareFramework__8Z2SeqMgrFv(); // 1
+extern "C" void stopWolfHowlSong__8Z2SeqMgrFv(); // 1
+extern "C" void setHeightVolMod__8Z2SeqMgrFbUl(); // 1
+extern "C" void setTimeProcVolMod__8Z2SeqMgrFbUl(); // 1
+extern "C" void processBgmFramework__8Z2SeqMgrFv(); // 1
+extern "C" void checkBgmIDPlaying__8Z2SeqMgrFUl(); // 1
+extern "C" void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei(); // 1
+extern "C" void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff(); // 1
+extern "C" void resetBattleBgmParams__8Z2SeqMgrFv(); // 1
+extern "C" void setBattleBgmOff__8Z2SeqMgrFb(); // 1
+extern "C" void setBattleSearched__8Z2SeqMgrFb(); // 1
+extern "C" void setBattleDistIgnore__8Z2SeqMgrFb(); // 1
+extern "C" void setBattleGhostMute__8Z2SeqMgrFb(); // 1
+extern "C" void setBattleDistState__8Z2SeqMgrFUc(); // 1
+extern "C" void setBattleSeqState__8Z2SeqMgrFUc(); // 1
+extern "C" void setBattleLastHit__8Z2SeqMgrFUc(); // 1
+extern "C" void battleBgmFramework__8Z2SeqMgrFv(); // 1
+extern "C" void startBattleBgm__8Z2SeqMgrFb(); // 1
+extern "C" void stopBattleBgm__8Z2SeqMgrFUcUc(); // 1
+extern "C" void fieldBgmStart__8Z2SeqMgrFv(); // 1
+extern "C" void fieldRidingMute__8Z2SeqMgrFv(); // 1
+extern "C" void onFieldBgmJumpStart__8Z2SeqMgrFv(); // 1
+extern "C" void onFieldBgmJumpEnd__8Z2SeqMgrFv(); // 1
+extern "C" void fieldBgmFramework__8Z2SeqMgrFv(); // 1
+extern "C" void mbossBgmMuteProcess__8Z2SeqMgrFv(); // 1
+extern "C" void bgmSetSwordUsing__8Z2SeqMgrFl(); // 1
+extern "C" void bgmNowBattle__8Z2SeqMgrFf(); // 1
+extern "C" void taktModeMute__8Z2SeqMgrFv(); // 1
+extern "C" void taktModeMuteOff__8Z2SeqMgrFv(); // 1
 SECTION_RODATA extern const u8 Z2SeqMgr__stringBase0[640];
 SECTION_DATA extern void*Z2SeqMgr__lit_3900[165];
 SECTION_DATA extern void*lit_3988[159];
@@ -264,44 +215,44 @@ SECTION_SDATA2 extern f32 lit_5913;
 // External References:
 // 
 
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void calc__9JAISeqMgrFv();
-extern "C" void stop__9JAISeqMgrFUl();
-extern "C" void mixOut__9JAISeqMgrFv();
-extern "C" void releaseSound__14JAISoundHandleFv();
-extern "C" void releaseHandle__8JAISoundFv();
-extern "C" void lockWhenPrepared__15JAISoundStatus_Fv();
-extern "C" void unlockIfLocked__15JAISoundStatus_Fv();
-extern "C" void stop__8JAISoundFUl();
-extern "C" void stop__8JAISoundFv();
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
-extern "C" void movePan__18JAISoundParamsMoveFfUl();
-extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
-extern "C" void stop__12JAIStreamMgrFUl();
-extern "C" void linearTransform__6Z2CalcFfffffb();
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
-extern "C" void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc();
-extern "C" void setDemoName__11Z2StatusMgrFPc();
-extern "C" void checkDayTime__11Z2StatusMgrFv();
-extern "C" void setSceneExist__10Z2SceneMgrFb();
-extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
-extern "C" void searchEnemy__13Z2SoundObjMgrFv();
-extern "C" void setBattleInit__13Z2SoundObjMgrFv();
-extern "C" void checkBattleFinish__13Z2SoundObjMgrFv();
-extern "C" void isTwilightBattle__13Z2SoundObjMgrFv();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void calc__9JAISeqMgrFv(); // 1
+extern "C" void stop__9JAISeqMgrFUl(); // 1
+extern "C" void mixOut__9JAISeqMgrFv(); // 1
+extern "C" void releaseSound__14JAISoundHandleFv(); // 1
+extern "C" void releaseHandle__8JAISoundFv(); // 1
+extern "C" void lockWhenPrepared__15JAISoundStatus_Fv(); // 1
+extern "C" void unlockIfLocked__15JAISoundStatus_Fv(); // 1
+extern "C" void stop__8JAISoundFUl(); // 1
+extern "C" void stop__8JAISoundFv(); // 1
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void movePan__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void stop__12JAIStreamMgrFUl(); // 1
+extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc(); // 1
+extern "C" void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc(); // 1
+extern "C" void setDemoName__11Z2StatusMgrFPc(); // 1
+extern "C" void checkDayTime__11Z2StatusMgrFv(); // 1
+extern "C" void setSceneExist__10Z2SceneMgrFb(); // 1
+extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs(); // 1
+extern "C" void searchEnemy__13Z2SoundObjMgrFv(); // 1
+extern "C" void setBattleInit__13Z2SoundObjMgrFv(); // 1
+extern "C" void checkBattleFinish__13Z2SoundObjMgrFv(); // 1
+extern "C" void isTwilightBattle__13Z2SoundObjMgrFv(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SDATA extern f32 VOL_BGM_DEFAULT__7Z2Param;
 SECTION_SDATA extern f32 VOL_BGM_TALKING__7Z2Param;
 SECTION_SDATA extern f32 VOL_BGM_PAUSING__7Z2Param;

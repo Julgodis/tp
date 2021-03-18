@@ -9,29 +9,13 @@
 // Types:
 // 
 
-// build overlap1_class (['overlap1_class']) False/False
-/* top-level dependencies (begin ['overlap1_class']) */
-/* top-level dependencies (end ['overlap1_class']) */
 struct overlap1_class {
 };
 
-// build overlap_task_class (['overlap_task_class']) False/False
-/* top-level dependencies (begin ['overlap_task_class']) */
-/* top-level dependencies (end ['overlap_task_class']) */
 struct overlap_task_class {
 };
 
-// build JUTFader (['JUTFader']) False/False
-// build JUTFader (['JUTFader']) True/False
-struct JUTFader;
-/* top-level dependencies (begin ['JUTFader']) */
-// outer dependency: ('JUTFader', 'EStatus')
-/* top-level dependencies (end ['JUTFader']) */
 struct JUTFader {
-	// ('JUTFader', 'EStatus')
-	// build EStatus (['JUTFader', 'EStatus']) False/False
-	/* dependencies (begin ['JUTFader', 'EStatus']) */
-	/* dependencies (end ['JUTFader', 'EStatus']) */
 	struct EStatus {
 	};
 
@@ -42,25 +26,25 @@ struct JUTFader {
 // Forward References:
 // 
 
-static bool dOvlpFd_Draw(overlap1_class*);
-static void dOvlpFd_startFadeIn(int);
-static void dOvlpFd_FadeOut(overlap1_class*);
-static void dOvlpFd_Wait(overlap1_class*);
-static void dOvlpFd_FadeIn(overlap1_class*);
-static void dOvlpFd_Execute(overlap1_class*);
-static bool dOvlpFd_IsDelete(overlap1_class*);
-static bool dOvlpFd_Delete(overlap1_class*);
-static void dOvlpFd_Create(void*);
+static bool dOvlpFd_Draw(overlap1_class*); // 2
+static void dOvlpFd_startFadeIn(int); // 2
+static void dOvlpFd_FadeOut(overlap1_class*); // 2
+static void dOvlpFd_Wait(overlap1_class*); // 2
+static void dOvlpFd_FadeIn(overlap1_class*); // 2
+static void dOvlpFd_Execute(overlap1_class*); // 2
+static bool dOvlpFd_IsDelete(overlap1_class*); // 2
+static bool dOvlpFd_Delete(overlap1_class*); // 2
+static void dOvlpFd_Create(void*); // 2
 
-extern "C" static bool dOvlpFd_Draw__FP14overlap1_class();
-extern "C" static void dOvlpFd_startFadeIn__Fi();
-extern "C" static void dOvlpFd_FadeOut__FP14overlap1_class();
-extern "C" static void dOvlpFd_Wait__FP14overlap1_class();
-extern "C" static void dOvlpFd_FadeIn__FP14overlap1_class();
-extern "C" static void dOvlpFd_Execute__FP14overlap1_class();
-extern "C" static bool dOvlpFd_IsDelete__FP14overlap1_class();
-extern "C" static bool dOvlpFd_Delete__FP14overlap1_class();
-extern "C" static void dOvlpFd_Create__FPv();
+extern "C" static bool dOvlpFd_Draw__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_startFadeIn__Fi(); // 1
+extern "C" static void dOvlpFd_FadeOut__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_Wait__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_FadeIn__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_Execute__FP14overlap1_class(); // 1
+extern "C" static bool dOvlpFd_IsDelete__FP14overlap1_class(); // 1
+extern "C" static bool dOvlpFd_Delete__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_Create__FPv(); // 1
 SECTION_DATA extern void*l_dOvlpFd_Method[5];
 SECTION_DATA extern void*g_profile_OVERLAP0[10];
 SECTION_DATA extern void*g_profile_OVERLAP1[10];
@@ -76,18 +60,18 @@ SECTION_SBSS extern u8 dOvlpFd_execute_f[4 + 4 /* padding */];
 // External References:
 // 
 
-void mDoAud_setFadeOutStart(u8);
-void mDoAud_setFadeInStart(u8);
-void fopOvlpM_SceneIsStart();
-void fopOvlpM_IsOutReq(overlap_task_class*);
-void fopOvlpM_Done(overlap_task_class*);
+void mDoAud_setFadeOutStart(u8); // 2
+void mDoAud_setFadeInStart(u8); // 2
+void fopOvlpM_SceneIsStart(); // 2
+void fopOvlpM_IsOutReq(overlap_task_class*); // 2
+void fopOvlpM_Done(overlap_task_class*); // 2
 
-extern "C" void mDoAud_setFadeOutStart__FUc();
-extern "C" void mDoAud_setFadeInStart__FUc();
-extern "C" void fopOvlpM_SceneIsStart__Fv();
-extern "C" void fopOvlpM_IsOutReq__FP18overlap_task_class();
-extern "C" void fopOvlpM_Done__FP18overlap_task_class();
-extern "C" void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
+extern "C" void mDoAud_setFadeOutStart__FUc(); // 1
+extern "C" void mDoAud_setFadeInStart__FUc(); // 1
+extern "C" void fopOvlpM_SceneIsStart__Fv(); // 1
+extern "C" void fopOvlpM_IsOutReq__FP18overlap_task_class(); // 1
+extern "C" void fopOvlpM_Done__FP18overlap_task_class(); // 1
+extern "C" void setStatus__8JUTFaderFQ28JUTFader7EStatusi(); // 1
 SECTION_DATA extern void*g_fopOvlp_Method[6];
 SECTION_DATA extern void*g_fpcLf_Method[6];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];

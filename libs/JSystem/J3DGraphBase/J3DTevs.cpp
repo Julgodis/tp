@@ -9,22 +9,13 @@
 // Types:
 // 
 
-// build J3DLightObj (['J3DLightObj']) False/False
-/* top-level dependencies (begin ['J3DLightObj']) */
-/* top-level dependencies (end ['J3DLightObj']) */
 struct J3DLightObj {
 	/* 80323590 */ void load(u32) const;
 };
 
-// build J3DTexCoord (['J3DTexCoord']) False/False
-/* top-level dependencies (begin ['J3DTexCoord']) */
-/* top-level dependencies (end ['J3DTexCoord']) */
 struct J3DTexCoord {
 };
 
-// build J3DTexMtx (['J3DTexMtx']) False/False
-/* top-level dependencies (begin ['J3DTexMtx']) */
-/* top-level dependencies (end ['J3DTexMtx']) */
 struct J3DTexMtx {
 	/* 803238C4 */ void load(u32) const;
 	/* 80323900 */ void calc(f32 const (* )[4]);
@@ -34,93 +25,48 @@ struct J3DTexMtx {
 	/* 803243BC */ void loadPostTexMtx(u32) const;
 };
 
-// build J3DNBTScale (['J3DNBTScale']) False/False
-/* top-level dependencies (begin ['J3DNBTScale']) */
-/* top-level dependencies (end ['J3DNBTScale']) */
 struct J3DNBTScale {
 };
 
-// build _GXTexMtxType (['_GXTexMtxType']) False/False
-/* top-level dependencies (begin ['_GXTexMtxType']) */
-/* top-level dependencies (end ['_GXTexMtxType']) */
 struct _GXTexMtxType {
 };
 
-// build _GXLightID (['_GXLightID']) False/False
-/* top-level dependencies (begin ['_GXLightID']) */
-/* top-level dependencies (end ['_GXLightID']) */
 struct _GXLightID {
 };
 
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build _GXTexGenType (['_GXTexGenType']) False/False
-/* top-level dependencies (begin ['_GXTexGenType']) */
-/* top-level dependencies (end ['_GXTexGenType']) */
 struct _GXTexGenType {
 };
 
-// build _GXTexGenSrc (['_GXTexGenSrc']) False/False
-/* top-level dependencies (begin ['_GXTexGenSrc']) */
-/* top-level dependencies (end ['_GXTexGenSrc']) */
 struct _GXTexGenSrc {
 };
 
-// build _GXTexMapID (['_GXTexMapID']) False/False
-/* top-level dependencies (begin ['_GXTexMapID']) */
-/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-// build _GXTexWrapMode (['_GXTexWrapMode']) False/False
-/* top-level dependencies (begin ['_GXTexWrapMode']) */
-/* top-level dependencies (end ['_GXTexWrapMode']) */
 struct _GXTexWrapMode {
 };
 
-// build _GXTexFilter (['_GXTexFilter']) False/False
-/* top-level dependencies (begin ['_GXTexFilter']) */
-/* top-level dependencies (end ['_GXTexFilter']) */
 struct _GXTexFilter {
 };
 
-// build _GXAnisotropy (['_GXAnisotropy']) False/False
-/* top-level dependencies (begin ['_GXAnisotropy']) */
-/* top-level dependencies (end ['_GXAnisotropy']) */
 struct _GXAnisotropy {
 };
 
-// build _GXTexFmt (['_GXTexFmt']) False/False
-/* top-level dependencies (begin ['_GXTexFmt']) */
-/* top-level dependencies (end ['_GXTexFmt']) */
 struct _GXTexFmt {
 };
 
-// build _GXTlutFmt (['_GXTlutFmt']) False/False
-/* top-level dependencies (begin ['_GXTlutFmt']) */
-/* top-level dependencies (end ['_GXTlutFmt']) */
 struct _GXTlutFmt {
 };
 
-// build _GXTlutSize (['_GXTlutSize']) False/False
-/* top-level dependencies (begin ['_GXTlutSize']) */
-/* top-level dependencies (end ['_GXTlutSize']) */
 struct _GXTlutSize {
 };
 
-// build J3DTextureSRTInfo (['J3DTextureSRTInfo']) False/False
-/* top-level dependencies (begin ['J3DTextureSRTInfo']) */
-/* top-level dependencies (end ['J3DTextureSRTInfo']) */
 struct J3DTextureSRTInfo {
 };
 
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
@@ -128,38 +74,38 @@ struct Vec {
 // Forward References:
 // 
 
-void loadTexCoordGens(u32, J3DTexCoord*);
-void isTexNoReg(void*);
-void getTexNoReg(void*);
-void loadTexNo(u32, u16 const&);
-void patchTexNo_PtrToIdx(u32, u16 const&);
-void loadNBTScale(J3DNBTScale&);
-void makeTexCoordTable();
-void makeAlphaCmpTable();
-void makeZModeTable();
-void makeTevSwapTable();
-static void J3DGDLoadTexMtxImm(f32 (* )[4], u32, _GXTexMtxType);
-static void J3DGDLoadPostTexMtxImm(f32 (* )[4], u32);
+void loadTexCoordGens(u32, J3DTexCoord*); // 2
+void isTexNoReg(void*); // 2
+void getTexNoReg(void*); // 2
+void loadTexNo(u32, u16 const&); // 2
+void patchTexNo_PtrToIdx(u32, u16 const&); // 2
+void loadNBTScale(J3DNBTScale&); // 2
+void makeTexCoordTable(); // 2
+void makeAlphaCmpTable(); // 2
+void makeZModeTable(); // 2
+void makeTevSwapTable(); // 2
+static void J3DGDLoadTexMtxImm(f32 (* )[4], u32, _GXTexMtxType); // 2
+static void J3DGDLoadPostTexMtxImm(f32 (* )[4], u32); // 2
 
-extern "C" void load__11J3DLightObjCFUl();
-extern "C" void loadTexCoordGens__FUlP11J3DTexCoord();
-extern "C" void load__9J3DTexMtxCFUl();
-extern "C" void calc__9J3DTexMtxFPA4_Cf();
-extern "C" void calcTexMtx__9J3DTexMtxFPA4_Cf();
-extern "C" void calcPostTexMtx__9J3DTexMtxFPA4_Cf();
-extern "C" void isTexNoReg__FPv();
-extern "C" void getTexNoReg__FPv();
-extern "C" void loadTexNo__FUlRCUs();
-extern "C" void patchTexNo_PtrToIdx__FUlRCUs();
-extern "C" void loadNBTScale__FR11J3DNBTScale();
-extern "C" void makeTexCoordTable__Fv();
-extern "C" void makeAlphaCmpTable__Fv();
-extern "C" void makeZModeTable__Fv();
-extern "C" void makeTevSwapTable__Fv();
-extern "C" void loadTexMtx__9J3DTexMtxCFUl();
-extern "C" void loadPostTexMtx__9J3DTexMtxCFUl();
-extern "C" static void J3DGDLoadTexMtxImm__FPA4_fUl13_GXTexMtxType();
-extern "C" static void J3DGDLoadPostTexMtxImm__FPA4_fUl();
+extern "C" void load__11J3DLightObjCFUl(); // 1
+extern "C" void loadTexCoordGens__FUlP11J3DTexCoord(); // 1
+extern "C" void load__9J3DTexMtxCFUl(); // 1
+extern "C" void calc__9J3DTexMtxFPA4_Cf(); // 1
+extern "C" void calcTexMtx__9J3DTexMtxFPA4_Cf(); // 1
+extern "C" void calcPostTexMtx__9J3DTexMtxFPA4_Cf(); // 1
+extern "C" void isTexNoReg__FPv(); // 1
+extern "C" void getTexNoReg__FPv(); // 1
+extern "C" void loadTexNo__FUlRCUs(); // 1
+extern "C" void patchTexNo_PtrToIdx__FUlRCUs(); // 1
+extern "C" void loadNBTScale__FR11J3DNBTScale(); // 1
+extern "C" void makeTexCoordTable__Fv(); // 1
+extern "C" void makeAlphaCmpTable__Fv(); // 1
+extern "C" void makeZModeTable__Fv(); // 1
+extern "C" void makeTevSwapTable__Fv(); // 1
+extern "C" void loadTexMtx__9J3DTexMtxCFUl(); // 1
+extern "C" void loadPostTexMtx__9J3DTexMtxCFUl(); // 1
+extern "C" static void J3DGDLoadTexMtxImm__FPA4_fUl13_GXTexMtxType(); // 1
+extern "C" static void J3DGDLoadPostTexMtxImm__FPA4_fUl(); // 1
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
 SECTION_RODATA extern const u8 j3dDefaultTexCoordInfo[32];
 SECTION_RODATA extern const u8 j3dDefaultTexMtxInfo[100];
@@ -203,51 +149,51 @@ SECTION_SDATA2 extern u16 j3dDefaultZModeID;
 // External References:
 // 
 
-void J3DGDSetLightAttn(_GXLightID, f32, f32, f32, f32, f32, f32);
-void J3DGDSetLightColor(_GXLightID, _GXColor);
-void J3DGDSetLightPos(_GXLightID, f32, f32, f32);
-void J3DGDSetLightDir(_GXLightID, f32, f32, f32);
-void J3DGDSetTexCoordGen(_GXTexGenType, _GXTexGenSrc);
-void J3DGDSetTexLookupMode(_GXTexMapID, _GXTexWrapMode, _GXTexWrapMode, _GXTexFilter, _GXTexFilter, f32, f32, f32, u8, u8, _GXAnisotropy);
-void J3DGDSetTexImgAttr(_GXTexMapID, u16, u16, _GXTexFmt);
-void J3DGDSetTexImgPtr(_GXTexMapID, void*);
-void J3DGDSetTexImgPtrRaw(_GXTexMapID, u32);
-void J3DGDSetTexTlut(_GXTexMapID, u32, _GXTlutFmt);
-void J3DGDLoadTlut(void*, u32, _GXTlutSize);
-void J3DGetTextureMtx(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]);
-void J3DGetTextureMtxOld(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]);
-void J3DGetTextureMtxMaya(J3DTextureSRTInfo const&, f32 (* )[4]);
-void J3DGetTextureMtxMayaOld(J3DTextureSRTInfo const&, f32 (* )[4]);
-void J3DMtxProjConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4]);
-extern "C" void PSMTXConcat();
-extern "C" void GDOverflowed();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
+void J3DGDSetLightAttn(_GXLightID, f32, f32, f32, f32, f32, f32); // 2
+void J3DGDSetLightColor(_GXLightID, _GXColor); // 2
+void J3DGDSetLightPos(_GXLightID, f32, f32, f32); // 2
+void J3DGDSetLightDir(_GXLightID, f32, f32, f32); // 2
+void J3DGDSetTexCoordGen(_GXTexGenType, _GXTexGenSrc); // 2
+void J3DGDSetTexLookupMode(_GXTexMapID, _GXTexWrapMode, _GXTexWrapMode, _GXTexFilter, _GXTexFilter, f32, f32, f32, u8, u8, _GXAnisotropy); // 2
+void J3DGDSetTexImgAttr(_GXTexMapID, u16, u16, _GXTexFmt); // 2
+void J3DGDSetTexImgPtr(_GXTexMapID, void*); // 2
+void J3DGDSetTexImgPtrRaw(_GXTexMapID, u32); // 2
+void J3DGDSetTexTlut(_GXTexMapID, u32, _GXTlutFmt); // 2
+void J3DGDLoadTlut(void*, u32, _GXTlutSize); // 2
+void J3DGetTextureMtx(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]); // 2
+void J3DGetTextureMtxOld(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]); // 2
+void J3DGetTextureMtxMaya(J3DTextureSRTInfo const&, f32 (* )[4]); // 2
+void J3DGetTextureMtxMayaOld(J3DTextureSRTInfo const&, f32 (* )[4]); // 2
+void J3DMtxProjConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4]); // 2
+extern "C" void PSMTXConcat(); // 1
+extern "C" void GDOverflowed(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void J3DGDSetLightAttn__F10_GXLightIDffffff();
-extern "C" void J3DGDSetLightColor__F10_GXLightID8_GXColor();
-extern "C" void J3DGDSetLightPos__F10_GXLightIDfff();
-extern "C" void J3DGDSetLightDir__F10_GXLightIDfff();
-extern "C" void J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc();
-extern "C" void J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy();
-extern "C" void J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt();
-extern "C" void J3DGDSetTexImgPtr__F11_GXTexMapIDPv();
-extern "C" void J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl();
-extern "C" void J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt();
-extern "C" void J3DGDLoadTlut__FPvUl11_GXTlutSize();
-extern "C" void J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f();
-extern "C" void J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f();
-extern "C" void J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f();
-extern "C" void J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f();
-extern "C" void J3DMtxProjConcat__FPA4_fPA4_fPA4_f();
-extern "C" void PSMTXConcat();
-extern "C" void GDOverflowed();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
+extern "C" void J3DGDSetLightAttn__F10_GXLightIDffffff(); // 1
+extern "C" void J3DGDSetLightColor__F10_GXLightID8_GXColor(); // 1
+extern "C" void J3DGDSetLightPos__F10_GXLightIDfff(); // 1
+extern "C" void J3DGDSetLightDir__F10_GXLightIDfff(); // 1
+extern "C" void J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc(); // 1
+extern "C" void J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy(); // 1
+extern "C" void J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt(); // 1
+extern "C" void J3DGDSetTexImgPtr__F11_GXTexMapIDPv(); // 1
+extern "C" void J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl(); // 1
+extern "C" void J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt(); // 1
+extern "C" void J3DGDLoadTlut__FPvUl11_GXTlutSize(); // 1
+extern "C" void J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f(); // 1
+extern "C" void J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f(); // 1
+extern "C" void J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f(); // 1
+extern "C" void J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f(); // 1
+extern "C" void J3DMtxProjConcat__FPA4_fPA4_fPA4_f(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void GDOverflowed(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_BSS extern u8 j3dSys[284];
 SECTION_BSS extern u8 sTexCoordScaleTable__6J3DSys[64 + 4 /* padding */];
 SECTION_SBSS extern u8 __GDCurrentDL[4];

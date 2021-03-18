@@ -9,13 +9,10 @@
 // Types:
 // 
 
-// build JASProbe (['JASProbe']) False/False
-/* top-level dependencies (begin ['JASProbe']) */
-/* top-level dependencies (end ['JASProbe']) */
 struct JASProbe {
+	/* 80290EE4 */ void start(s32, char const*);
 	/* 80290D74 */ void start(char const*);
 	/* 80290DC4 */ void stop();
-	/* 80290EE4 */ void start(s32, char const*);
 	/* 80290F24 */ void stop(s32);
 };
 
@@ -24,10 +21,10 @@ struct JASProbe {
 // 
 
 
-extern "C" void start__8JASProbeFPCc();
-extern "C" void stop__8JASProbeFv();
-extern "C" void start__8JASProbeFlPCc();
-extern "C" void stop__8JASProbeFl();
+extern "C" void start__8JASProbeFPCc(); // 1
+extern "C" void stop__8JASProbeFv(); // 1
+extern "C" void start__8JASProbeFlPCc(); // 1
+extern "C" void stop__8JASProbeFl(); // 1
 SECTION_BSS extern u8 sProbeTable__8JASProbe[64];
 SECTION_SDATA2 extern f32 JASProbe__lit_125;
 SECTION_SDATA2 extern f32 JASProbe__lit_126;
@@ -38,13 +35,13 @@ SECTION_SDATA2 extern f64 lit_129;
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSGetTime();
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSGetTime(); // 1
 
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSGetTime();
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSGetTime(); // 1
 
 // 
 // Declarations:

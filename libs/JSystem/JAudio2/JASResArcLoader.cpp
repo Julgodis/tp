@@ -9,30 +9,18 @@
 // Types:
 // 
 
-// build JASResArcLoader (['JASResArcLoader']) False/False
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5F40 */ void readResource(void*, u32, u16);
 	/* 802D6684 */ void findIdxResource(u32) const;
 	/* 802D6770 */ void findIdResource(u16) const;
 };
 
-/* top-level dependencies (begin ['JASResArcLoader']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['JASResArcLoader']) */
 struct JASResArcLoader {
-	// ('JKRArchive',)
 	/* 80290BD0 */ void getResSize(JKRArchive const*, u16);
 	/* 80290C04 */ void getResMaxSize(JKRArchive const*);
 	/* 80290C7C */ void loadResourceCallback(void*);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build JASDvd (['JASDvd']) False/False
-/* top-level dependencies (begin ['JASDvd']) */
-/* top-level dependencies (end ['JASDvd']) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 };
@@ -41,30 +29,30 @@ struct JASDvd {
 // Forward References:
 // 
 
-extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl();
+extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl(); // 1
 
-extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs();
-extern "C" void getResMaxSize__15JASResArcLoaderFPC10JKRArchive();
-extern "C" void loadResourceCallback__15JASResArcLoaderFPv();
-extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl();
+extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs(); // 1
+extern "C" void getResMaxSize__15JASResArcLoaderFPC10JKRArchive(); // 1
+extern "C" void loadResourceCallback__15JASResArcLoaderFPv(); // 1
+extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-extern "C" void OSSendMessage();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-extern "C" void getThreadPointer__6JASDvdFv();
-extern "C" void readResource__10JKRArchiveFPvUlUs();
-extern "C" void findIdxResource__10JKRArchiveCFUl();
-extern "C" void findIdResource__10JKRArchiveCFUs();
-extern "C" void OSSendMessage();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" void getThreadPointer__6JASDvdFv(); // 1
+extern "C" void readResource__10JKRArchiveFPvUlUs(); // 1
+extern "C" void findIdxResource__10JKRArchiveCFUl(); // 1
+extern "C" void findIdResource__10JKRArchiveCFUs(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
 // 
 // Declarations:

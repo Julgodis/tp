@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JAIAudible (['JAIAudible']) False/False
-/* top-level dependencies (begin ['JAIAudible']) */
-/* top-level dependencies (end ['JAIAudible']) */
 struct JAIAudible {
 	/* 8029EFAC */ ~JAIAudible();
 };
@@ -21,16 +18,16 @@ struct JAIAudible {
 // 
 
 
-extern "C" void __dt__10JAIAudibleFv();
+extern "C" void __dt__10JAIAudibleFv(); // 1
 SECTION_DATA extern void*const __vt__10JAIAudible[6];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

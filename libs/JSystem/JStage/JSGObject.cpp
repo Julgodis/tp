@@ -9,13 +9,7 @@
 // Types:
 // 
 
-// build JStage (['JStage']) False/False
-/* top-level dependencies (begin ['JStage']) */
-/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TObject (['JStage', 'TObject']) False/False
-	/* dependencies (begin ['JStage', 'TObject']) */
-	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ bool JSGGetName() const;
@@ -38,18 +32,18 @@ struct JStage {
 // 
 
 
-extern "C" void __dt__Q26JStage7TObjectFv();
-extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
-extern "C" void JSGUpdate__Q26JStage7TObjectFv();
-extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv();
-extern "C" void JSGSetFlag__Q26JStage7TObjectFUl();
-extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl();
-extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl();
-extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
-extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
-extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc();
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" void __dt__Q26JStage7TObjectFv(); // 1
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv(); // 1
+extern "C" void JSGUpdate__Q26JStage7TObjectFv(); // 1
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv(); // 1
+extern "C" void JSGSetFlag__Q26JStage7TObjectFUl(); // 1
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
+extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl(); // 1
+extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl(); // 1
+extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl(); // 1
+extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl(); // 1
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f(); // 1
 SECTION_DATA extern void*const __vt__Q26JStage7TObject[16];
 SECTION_SDATA2 extern u8 JSGObject__lit_338[4 + 4 /* padding */];
 
@@ -57,9 +51,9 @@ SECTION_SDATA2 extern u8 JSGObject__lit_338[4 + 4 /* padding */];
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

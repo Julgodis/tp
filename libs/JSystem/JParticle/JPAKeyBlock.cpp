@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JPAKeyBlock (['JPAKeyBlock']) False/False
-/* top-level dependencies (begin ['JPAKeyBlock']) */
-/* top-level dependencies (end ['JPAKeyBlock']) */
 struct JPAKeyBlock {
 	/* 8027D730 */ JPAKeyBlock(u8 const*);
 	/* 8027D740 */ void calc(f32);
@@ -22,17 +19,17 @@ struct JPAKeyBlock {
 // 
 
 
-extern "C" void __ct__11JPAKeyBlockFPCUc();
-extern "C" void calc__11JPAKeyBlockFf();
+extern "C" void __ct__11JPAKeyBlockFPCUc(); // 1
+extern "C" void calc__11JPAKeyBlockFf(); // 1
 SECTION_SDATA2 extern f64 JPAKeyBlock__lit_2215;
 
 // 
 // External References:
 // 
 
-void JPACalcKeyAnmValue(f32, u16, f32 const*);
+void JPACalcKeyAnmValue(f32, u16, f32 const*); // 2
 
-extern "C" void JPACalcKeyAnmValue__FfUsPCf();
+extern "C" void JPACalcKeyAnmValue__FfUsPCf(); // 1
 
 // 
 // Declarations:

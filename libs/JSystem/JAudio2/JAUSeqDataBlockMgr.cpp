@@ -9,65 +9,37 @@
 // Types:
 // 
 
-// build JAUSeqDataBlock (['JAUSeqDataBlock']) False/False
-/* top-level dependencies (begin ['JAUSeqDataBlock']) */
-/* top-level dependencies (end ['JAUSeqDataBlock']) */
 struct JAUSeqDataBlock {
 	/* 802A68F4 */ JAUSeqDataBlock();
 };
 
-// build JAUSeqDataBlocks (['JAUSeqDataBlocks']) False/False
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['JAUSeqDataBlocks']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['JAUSeqDataBlocks']) */
+template <typename A0>
+struct JSULink { };
+/* JSULink<JAUSeqDataBlock> */
+struct JSULink__template1 {
+};
+
 struct JAUSeqDataBlocks {
-	// ('JAISoundID',)
 	/* 802A6928 */ void getSeqData(JAISoundID);
 	/* 802A6974 */ void seekFreeBlock(u32);
+	/* 802A69D8 */ void append(JSULink<JAUSeqDataBlock>*);
+	/* 802A69F8 */ void remove(JSULink<JAUSeqDataBlock>*);
 	/* 802A6A18 */ void hasFailedBlock(JAISoundID);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build JAUDynamicSeqDataBlocks (['JAUDynamicSeqDataBlocks']) False/False
-// build JAISeqData (['JAISeqData']) False/False
-/* top-level dependencies (begin ['JAISeqData']) */
-/* top-level dependencies (end ['JAISeqData']) */
 struct JAISeqData {
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
-struct JKRArchive {
-};
-
-// build JAISeqDataUser (['JAISeqDataUser']) False/False
-/* top-level dependencies (begin ['JAISeqDataUser']) */
-/* top-level dependencies (end ['JAISeqDataUser']) */
 struct JAISeqDataUser {
 };
 
-// build JAUSeqDataBlock (['JAUSeqDataBlock']) True/True
-/* top-level dependencies (begin ['JAUDynamicSeqDataBlocks']) */
-// outer dependency: ('JAISeqData',)
-// outer dependency: ('JAISoundID',)
-// outer dependency: ('JKRArchive',)
-// outer dependency: ('JAISeqDataUser',)
-// outer dependency: ('JAUSeqDataBlock',)
-/* top-level dependencies (end ['JAUDynamicSeqDataBlocks']) */
+struct JKRArchive {
+};
+
 struct JAUDynamicSeqDataBlocks {
-	// ('JAISeqData',)
-	// ('JAISoundID',)
-	// ('JAUSeqDataBlock',)
-	// ('JKRArchive',)
-	// ('JAISeqDataUser',)
 	/* 802A6A58 */ JAUDynamicSeqDataBlocks();
 	/* 802A6AA0 */ void setSeqDataArchive(JKRArchive*);
 	/* 802A6AA8 */ void getSeqData(JAISoundID, JAISeqDataUser*, JAISeqData*, bool);
@@ -78,33 +50,15 @@ struct JAUDynamicSeqDataBlocks {
 	/* 802A6EDC */ void rearrangeLoadingSeqs_();
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build JAISeqDataUser (['JAISeqDataUser']) True/True
-// build JAISeqData (['JAISeqData']) True/True
-// build JASResArcLoader (['JASResArcLoader']) False/False
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['JASResArcLoader']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['JASResArcLoader']) */
 struct JASResArcLoader {
-	// ('JKRArchive',)
 	/* 80290BD0 */ void getResSize(JKRArchive const*, u16);
 };
 
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) True/True
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
@@ -114,54 +68,52 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-extern "C" static void func_802A69D8();
-extern "C" static void func_802A69F8();
-static void JAUDynamicSeqDataBlocks_receiveLoaded_(u32, u32);
+static void JAUDynamicSeqDataBlocks_receiveLoaded_(u32, u32); // 2
 
-extern "C" void __ct__15JAUSeqDataBlockFv();
-extern "C" void getSeqData__16JAUSeqDataBlocksF10JAISoundID();
-extern "C" void seekFreeBlock__16JAUSeqDataBlocksFUl();
-extern "C" static void func_802A69D8();
-extern "C" static void func_802A69F8();
-extern "C" void hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID();
-extern "C" void __ct__23JAUDynamicSeqDataBlocksFv();
-extern "C" void setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive();
-extern "C" void getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab();
-extern "C" void appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock();
-extern "C" static void JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl();
-extern "C" void loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser();
-extern "C" void releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser();
-extern "C" void releaseIdleDynamicSeqDataBlock___23JAUDynamicSeqDataBlocksFP14JAISeqDataUserUl();
-extern "C" void rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv();
+extern "C" void __ct__15JAUSeqDataBlockFv(); // 1
+extern "C" void getSeqData__16JAUSeqDataBlocksF10JAISoundID(); // 1
+extern "C" void seekFreeBlock__16JAUSeqDataBlocksFUl(); // 1
+extern "C" void func_802A69D8(); // 1
+extern "C" void func_802A69F8(); // 1
+extern "C" void hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID(); // 1
+extern "C" void __ct__23JAUDynamicSeqDataBlocksFv(); // 1
+extern "C" void setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive(); // 1
+extern "C" void getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab(); // 1
+extern "C" void appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock(); // 1
+extern "C" static void JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl(); // 1
+extern "C" void loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser(); // 1
+extern "C" void releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser(); // 1
+extern "C" void releaseIdleDynamicSeqDataBlock___23JAUDynamicSeqDataBlocksFP14JAISeqDataUserUl(); // 1
+extern "C" void rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs();
-extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl();
-extern "C" void __ct__10JSUPtrLinkFPv();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs(); // 1
+extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl(); // 1
+extern "C" void __ct__10JSUPtrLinkFPv(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SBSS extern u8 data_80450B50[4];
 
 // 
@@ -205,7 +157,7 @@ asm void JAUSeqDataBlocks::seekFreeBlock(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802A69D8() {
+asm void JAUSeqDataBlocks::append(JSULink<JAUSeqDataBlock>* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqDataBlockMgr/func_802A69D8.s"
 }
@@ -216,7 +168,7 @@ extern "C" asm static void func_802A69D8() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802A69F8() {
+asm void JAUSeqDataBlocks::remove(JSULink<JAUSeqDataBlock>* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAUSeqDataBlockMgr/func_802A69F8.s"
 }

@@ -9,27 +9,13 @@
 // Types:
 // 
 
-// build daObj (['daObj']) False/False
-// build dCcD_GObjInf (['dCcD_GObjInf']) False/False
-/* top-level dependencies (begin ['dCcD_GObjInf']) */
-/* top-level dependencies (end ['dCcD_GObjInf']) */
-struct dCcD_GObjInf {
-	/* 800844F8 */ void GetTgHitObj();
-	/* 8008457C */ void GetTgHitObjSe();
+struct Quaternion {
 };
 
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80009184 */ ~cXyz();
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
@@ -37,29 +23,15 @@ struct cXyz {
 	/* 80266CBC */ void outprod(Vec const&) const;
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
+struct dCcD_GObjInf {
+	/* 800844F8 */ void GetTgHitObj();
+	/* 8008457C */ void GetTgHitObjSe();
+};
+
 struct fopAc_ac_c {
 };
 
-// build Quaternion (['Quaternion']) False/False
-/* top-level dependencies (begin ['Quaternion']) */
-/* top-level dependencies (end ['Quaternion']) */
-struct Quaternion {
-};
-
-/* top-level dependencies (begin ['daObj']) */
-// outer dependency: ('dCcD_GObjInf',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-// outer dependency: ('Quaternion',)
-/* top-level dependencies (end ['daObj']) */
 struct daObj {
-	// ('dCcD_GObjInf',)
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
-	// ('Quaternion',)
 	/* 80037038 */ void eff_break_tsubo(fopAc_ac_c*, cXyz, int);
 	/* 80037180 */ void make_eff_break_kotubo(fopAc_ac_c*);
 	/* 80037210 */ void make_eff_break_kotubo2(fopAc_ac_c*);
@@ -71,168 +43,82 @@ struct daObj {
 	/* 80037900 */ void HitSeStart(cXyz const*, int, dCcD_GObjInf const*, u32);
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build cXyz (['cXyz']) True/True
-// build Quaternion (['Quaternion']) True/True
-// build dCcD_GObjInf (['dCcD_GObjInf']) True/True
-// build cCcD_CylAttr (['cCcD_CylAttr']) False/False
-/* top-level dependencies (begin ['cCcD_CylAttr']) */
-/* top-level dependencies (end ['cCcD_CylAttr']) */
 struct cCcD_CylAttr {
 	/* 80037A4C */ void GetCoCP();
 };
 
-// build cCcD_SphAttr (['cCcD_SphAttr']) False/False
-/* top-level dependencies (begin ['cCcD_SphAttr']) */
-/* top-level dependencies (end ['cCcD_SphAttr']) */
 struct cCcD_SphAttr {
 	/* 80037A54 */ void GetCoCP();
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build dPa_modelEcallBack (['dPa_modelEcallBack']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build JPABaseEmitter (['JPABaseEmitter']) False/False
-/* top-level dependencies (begin ['JPABaseEmitter']) */
-/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
 struct dKy_tevstr_c {
 };
 
-/* top-level dependencies (begin ['dPa_modelEcallBack']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dPa_modelEcallBack']) */
 struct dPa_modelEcallBack {
-	// ('J3DModelData',)
-	// ('JPABaseEmitter',)
-	// ('dKy_tevstr_c',)
 	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build J3DModelData (['J3DModelData']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build dPa_control_c (['dPa_control_c']) False/False
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
-struct csXyz {
-};
-
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build cXyz (['cXyz']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) False/False
-/* top-level dependencies (begin ['dPa_levelEcallBack']) */
-/* top-level dependencies (end ['dPa_levelEcallBack']) */
+struct csXyz {
+};
+
 struct dPa_levelEcallBack {
 };
 
-/* top-level dependencies (begin ['dPa_control_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('_GXColor',)
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dPa_levelEcallBack',)
-/* top-level dependencies (end ['dPa_control_c']) */
 struct dPa_control_c {
-	// ('_GXColor',)
-	// ('dKy_tevstr_c',)
-	// ('dPa_levelEcallBack',)
-	// ('csXyz',)
-	// ('cXyz',)
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-// build csXyz (['csXyz']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) True/True
-// build _GXColor (['_GXColor']) True/True
-// build dCcD_GAtTgCoCommonBase (['dCcD_GAtTgCoCommonBase']) False/False
-/* top-level dependencies (begin ['dCcD_GAtTgCoCommonBase']) */
-/* top-level dependencies (end ['dCcD_GAtTgCoCommonBase']) */
 struct dCcD_GAtTgCoCommonBase {
 	/* 80083688 */ void GetAc();
 };
 
-// build daPy_py_c (['daPy_py_c']) False/False
-/* top-level dependencies (begin ['daPy_py_c']) */
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015F398 */ void checkMasterSwordEquip();
 };
 
-// build Vec (['Vec']) True/True
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) True/True
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" static void func_800373F0();
-extern "C" static void func_800374EC();
+extern "C" static void func_800373F0(); // 1
+extern "C" static void func_800374EC(); // 1
 
-extern "C" void eff_break_tsubo__5daObjFP10fopAc_ac_c4cXyzi();
-extern "C" void make_eff_break_kotubo__5daObjFP10fopAc_ac_c();
-extern "C" void make_eff_break_kotubo2__5daObjFP10fopAc_ac_c();
-extern "C" void make_eff_break_gm_kotubo__5daObjFP10fopAc_ac_c();
-extern "C" void make_eff_break_gm_ootubo__5daObjFP10fopAc_ac_c();
-extern "C" void posMoveF_stream__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzff();
-extern "C" static void func_800373F0();
-extern "C" static void func_800374EC();
-extern "C" void posMoveF_grade__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzffPC4cXyzffPC4cXyz();
-extern "C" void quat_rotBaseY__5daObjFP10QuaternionRC4cXyz();
-extern "C" void HitSeStart__5daObjFPC4cXyziPC12dCcD_GObjInfUl();
-extern "C" void GetCoCP__12cCcD_CylAttrFv();
-extern "C" void GetCoCP__12cCcD_SphAttrFv();
+extern "C" void eff_break_tsubo__5daObjFP10fopAc_ac_c4cXyzi(); // 1
+extern "C" void make_eff_break_kotubo__5daObjFP10fopAc_ac_c(); // 1
+extern "C" void make_eff_break_kotubo2__5daObjFP10fopAc_ac_c(); // 1
+extern "C" void make_eff_break_gm_kotubo__5daObjFP10fopAc_ac_c(); // 1
+extern "C" void make_eff_break_gm_ootubo__5daObjFP10fopAc_ac_c(); // 1
+extern "C" void posMoveF_stream__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzff(); // 1
+extern "C" static void func_800373F0(); // 1
+extern "C" static void func_800374EC(); // 1
+extern "C" void posMoveF_grade__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzffPC4cXyzffPC4cXyz(); // 1
+extern "C" void quat_rotBaseY__5daObjFP10QuaternionRC4cXyz(); // 1
+extern "C" void HitSeStart__5daObjFPC4cXyziPC12dCcD_GObjInfUl(); // 1
+extern "C" void GetCoCP__12cCcD_CylAttrFv(); // 1
+extern "C" void GetCoCP__12cCcD_SphAttrFv(); // 1
 SECTION_RODATA extern const f32 data_80379298[4];
 SECTION_RODATA extern const u8 d_a_d_a_obj__stringBase0[8];
 SECTION_BSS extern u8 d_a_d_a_obj__lit_3677[12];
@@ -253,60 +139,60 @@ SECTION_SDATA2 extern f32 d_a_d_a_obj__lit_3956;
 // External References:
 // 
 
-void fopAcM_posMove(fopAc_ac_c*, cXyz const*);
-void dComIfGp_getReverb(int);
-void cM_atan2s(f32, f32);
-void cM3d_CrawVec(Vec const&, Vec const&, Vec*);
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECScale();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECDotProduct();
-extern "C" void C_QUATRotAxisRad();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void acos();
+void fopAcM_posMove(fopAc_ac_c*, cXyz const*); // 2
+void dComIfGp_getReverb(int); // 2
+void cM_atan2s(f32, f32); // 2
+void cM3d_CrawVec(Vec const&, Vec const&, Vec*); // 2
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void C_QUATRotAxisRad(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void acos(); // 1
 
-extern "C" void __dt__4cXyzFv();
-extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz();
-extern "C" void dComIfGp_getReverb__Fi();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc();
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
-extern "C" void GetAc__22dCcD_GAtTgCoCommonBaseFv();
-extern "C" void GetTgHitObj__12dCcD_GObjInfFv();
-extern "C" void GetTgHitObjSe__12dCcD_GObjInfFv();
-extern "C" void checkMasterSwordEquip__9daPy_py_cFv();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void __ml__4cXyzCFf();
-extern "C" void __dv__4cXyzCFf();
-extern "C" void outprod__4cXyzCFRC3Vec();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cM3d_CrawVec__FRC3VecRC3VecP3Vec();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECScale();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECDotProduct();
-extern "C" void C_QUATRotAxisRad();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void acos();
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz(); // 1
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc(); // 1
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
+extern "C" void GetAc__22dCcD_GAtTgCoCommonBaseFv(); // 1
+extern "C" void GetTgHitObj__12dCcD_GObjInfFv(); // 1
+extern "C" void GetTgHitObjSe__12dCcD_GObjInfFv(); // 1
+extern "C" void checkMasterSwordEquip__9daPy_py_cFv(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ml__4cXyzCFf(); // 1
+extern "C" void __dv__4cXyzCFf(); // 1
+extern "C" void outprod__4cXyzCFRC3Vec(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM3d_CrawVec__FRC3VecRC3VecP3Vec(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void C_QUATRotAxisRad(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void acos(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 mTsubo__13dPa_control_c[64];
 SECTION_BSS extern u8 Zero__4cXyz[12];

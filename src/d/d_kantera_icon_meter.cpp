@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dKantera_icon_c (['dKantera_icon_c']) False/False
-/* top-level dependencies (begin ['dKantera_icon_c']) */
-/* top-level dependencies (end ['dKantera_icon_c']) */
 struct dKantera_icon_c {
 	/* 801AE938 */ dKantera_icon_c();
 	/* 801AE974 */ ~dKantera_icon_c();
@@ -22,81 +19,48 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-// build dDlst_KanteraIcon_c (['dDlst_KanteraIcon_c']) False/False
-/* top-level dependencies (begin ['dDlst_KanteraIcon_c']) */
-/* top-level dependencies (end ['dDlst_KanteraIcon_c']) */
 struct dDlst_KanteraIcon_c {
 	/* 801AECB8 */ void draw();
 	/* 801AED1C */ ~dDlst_KanteraIcon_c();
 };
 
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
-struct JKRExpHeap {
-};
-
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build J2DGrafContext (['J2DGrafContext']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__15dKantera_icon_cFv();
-extern "C" void __dt__15dKantera_icon_cFv();
-extern "C" void initiate__15dKantera_icon_cFv();
-extern "C" void setAlphaRate__15dKantera_icon_cFf();
-extern "C" void setPos__15dKantera_icon_cFff();
-extern "C" void setScale__15dKantera_icon_cFff();
-extern "C" void setNowGauge__15dKantera_icon_cFUsUs();
-extern "C" void draw__19dDlst_KanteraIcon_cFv();
-extern "C" void __dt__19dDlst_KanteraIcon_cFv();
+extern "C" void __ct__15dKantera_icon_cFv(); // 1
+extern "C" void __dt__15dKantera_icon_cFv(); // 1
+extern "C" void initiate__15dKantera_icon_cFv(); // 1
+extern "C" void setAlphaRate__15dKantera_icon_cFf(); // 1
+extern "C" void setPos__15dKantera_icon_cFff(); // 1
+extern "C" void setScale__15dKantera_icon_cFff(); // 1
+extern "C" void setNowGauge__15dKantera_icon_cFUsUs(); // 1
+extern "C" void draw__19dDlst_KanteraIcon_cFv(); // 1
+extern "C" void __dt__19dDlst_KanteraIcon_cFv(); // 1
 SECTION_RODATA extern const u8 d_d_kantera_icon_meter__stringBase0[32];
 SECTION_DATA extern void*const __vt__19dDlst_KanteraIcon_c[4];
 SECTION_DATA extern void*const __vt__15dKantera_icon_c[4];
@@ -108,18 +72,18 @@ SECTION_SDATA2 extern u8 d_d_kantera_icon_meter__lit_3776[4 + 4 /* padding */];
 // External References:
 // 
 
-void dPaneClass_showNullPane(J2DScreen*);
-void* operator new(u32);
-void operator delete(void*);
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
 
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_drawHIO[3880];

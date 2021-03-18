@@ -9,50 +9,26 @@
 // Types:
 // 
 
-// build JASAramStream (['JASAramStream']) False/False
-// build JASDsp (['JASDsp']) False/False
-/* top-level dependencies (begin ['JASDsp']) */
-/* top-level dependencies (end ['JASDsp']) */
-struct JASDsp {
-	// build TChannel (['JASDsp', 'TChannel']) False/False
-	/* dependencies (begin ['JASDsp', 'TChannel']) */
-	/* dependencies (end ['JASDsp', 'TChannel']) */
-	struct TChannel {
-	};
-
-};
-
-// build JASChannel (['JASChannel']) False/False
-// build JASOscillator (['JASOscillator']) False/False
-/* top-level dependencies (begin ['JASOscillator']) */
-/* top-level dependencies (end ['JASOscillator']) */
 struct JASOscillator {
-	// build Data (['JASOscillator', 'Data']) False/False
-	/* dependencies (begin ['JASOscillator', 'Data']) */
-	/* dependencies (end ['JASOscillator', 'Data']) */
 	struct Data {
 	};
 
 };
 
-/* top-level dependencies (begin ['JASChannel']) */
-// outer dependency: ('JASOscillator', 'Data')
-/* top-level dependencies (end ['JASChannel']) */
 struct JASChannel {
-	// ('JASOscillator', 'Data')
 	/* 8029AA60 */ void playForce();
 	/* 8029AAD0 */ void release(u16);
 	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
 	/* 8029AB98 */ void setMixConfig(u32, u16);
 };
 
-/* top-level dependencies (begin ['JASAramStream']) */
-// outer dependency: ('JASDsp', 'TChannel')
-// outer dependency: ('JASChannel',)
-/* top-level dependencies (end ['JASAramStream']) */
+struct JASDsp {
+	struct TChannel {
+	};
+
+};
+
 struct JASAramStream {
-	// ('JASDsp', 'TChannel')
-	// ('JASChannel',)
 	/* 8029631C */ void initSystem(u32, u32);
 	/* 802963A8 */ JASAramStream();
 	/* 8029655C */ void prepare(s32, int);
@@ -77,88 +53,67 @@ struct JASAramStream {
 	/* 80297870 */ void channelStop(u16);
 };
 
-// build JASChannel (['JASChannel']) True/True
-// build JASDsp (['JASDsp']) True/True
-// build JASDvd (['JASDvd']) False/False
-/* top-level dependencies (begin ['JASDvd']) */
-/* top-level dependencies (end ['JASDvd']) */
+template <typename A0>
+struct JASMemPool_MultiThreaded { };
+/* JASMemPool_MultiThreaded<JASChannel> */
+struct JASMemPool_MultiThreaded__template2 {
+	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
+};
+
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 };
 
-// build JASGenericMemPool (['JASGenericMemPool']) False/False
-/* top-level dependencies (begin ['JASGenericMemPool']) */
-/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290860 */ ~JASGenericMemPool();
 	/* 80290948 */ void alloc(u32);
 };
 
-// build JASOscillator (['JASOscillator']) True/True
-// build JASDriver (['JASDriver']) False/False
-/* top-level dependencies (begin ['JASDriver']) */
-/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029C9E8 */ void getDacRate();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRAram (['JKRAram']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
-/* top-level dependencies (begin ['JKRExpandSwitch']) */
-/* top-level dependencies (end ['JKRExpandSwitch']) */
 struct JKRExpandSwitch {
 };
 
-/* top-level dependencies (begin ['JKRAram']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JKRExpandSwitch',)
-/* top-level dependencies (end ['JKRAram']) */
 struct JKRAram {
-	// ('JKRHeap',)
-	// ('JKRExpandSwitch',)
 	/* 802D233C */ void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);
 };
 
-// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv();
-extern "C" void func_802978DC();
+extern "C" void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv(); // 1
 
-extern "C" void initSystem__13JASAramStreamFUlUl();
-extern "C" void __ct__13JASAramStreamFv();
-extern "C" void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv();
-extern "C" void prepare__13JASAramStreamFli();
-extern "C" void start__13JASAramStreamFv();
-extern "C" void stop__13JASAramStreamFUs();
-extern "C" void pause__13JASAramStreamFb();
-extern "C" void cancel__13JASAramStreamFv();
-extern "C" void getBlockSamples__13JASAramStreamCFv();
-extern "C" void headerLoadTask__13JASAramStreamFPv();
-extern "C" void firstLoadTask__13JASAramStreamFPv();
-extern "C" void loadToAramTask__13JASAramStreamFPv();
-extern "C" void finishTask__13JASAramStreamFPv();
-extern "C" void prepareFinishTask__13JASAramStreamFPv();
-extern "C" void headerLoad__13JASAramStreamFUli();
-extern "C" void load__13JASAramStreamFv();
-extern "C" void channelProcCallback__13JASAramStreamFPv();
-extern "C" void dvdErrorCheck__13JASAramStreamFPv();
-extern "C" void channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv();
-extern "C" void updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel();
-extern "C" void channelProc__13JASAramStreamFv();
-extern "C" void channelStart__13JASAramStreamFv();
-extern "C" void channelStop__13JASAramStreamFUs();
-extern "C" void func_802978DC();
+extern "C" void initSystem__13JASAramStreamFUlUl(); // 1
+extern "C" void __ct__13JASAramStreamFv(); // 1
+extern "C" void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv(); // 1
+extern "C" void prepare__13JASAramStreamFli(); // 1
+extern "C" void start__13JASAramStreamFv(); // 1
+extern "C" void stop__13JASAramStreamFUs(); // 1
+extern "C" void pause__13JASAramStreamFb(); // 1
+extern "C" void cancel__13JASAramStreamFv(); // 1
+extern "C" void getBlockSamples__13JASAramStreamCFv(); // 1
+extern "C" void headerLoadTask__13JASAramStreamFPv(); // 1
+extern "C" void firstLoadTask__13JASAramStreamFPv(); // 1
+extern "C" void loadToAramTask__13JASAramStreamFPv(); // 1
+extern "C" void finishTask__13JASAramStreamFPv(); // 1
+extern "C" void prepareFinishTask__13JASAramStreamFPv(); // 1
+extern "C" void headerLoad__13JASAramStreamFUli(); // 1
+extern "C" void load__13JASAramStreamFv(); // 1
+extern "C" void channelProcCallback__13JASAramStreamFPv(); // 1
+extern "C" void dvdErrorCheck__13JASAramStreamFPv(); // 1
+extern "C" void channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv(); // 1
+extern "C" void updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel(); // 1
+extern "C" void channelProc__13JASAramStreamFv(); // 1
+extern "C" void channelStart__13JASAramStreamFv(); // 1
+extern "C" void channelStop__13JASAramStreamFUs(); // 1
+extern "C" void func_802978DC(); // 1
 SECTION_RODATA extern const u8 OSC_RELEASE_TABLE[12];
 SECTION_RODATA extern const void*const OSC_ENV[7];
 SECTION_DATA extern void*lit_613[14];
@@ -180,69 +135,69 @@ SECTION_SDATA2 extern u8 data_80455628[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv();
-extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
-extern "C" void rejectCallback__9JASDriverFPFPv_lPv();
-extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv();
-void* operator new[](u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSInitMessageQueue();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void DVDFastOpen();
-extern "C" void DVDReadPrio();
-extern "C" void DVDGetDriveStatus();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv(); // 1
+extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
+extern "C" void rejectCallback__9JASDriverFPFPv_lPv(); // 1
+extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv(); // 1
+void* operator new[](u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void DVDFastOpen(); // 1
+extern "C" void DVDReadPrio(); // 1
+extern "C" void DVDGetDriveStatus(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv();
-extern "C" void getThreadPointer__6JASDvdFv();
-extern "C" void __ct__17JASGenericMemPoolFv();
-extern "C" void __dt__17JASGenericMemPoolFv();
-extern "C" void alloc__17JASGenericMemPoolFUl();
-extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
-extern "C" void playForce__10JASChannelFv();
-extern "C" void release__10JASChannelFUs();
-extern "C" void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data();
-extern "C" void setMixConfig__10JASChannelFUlUs();
-extern "C" void getDacRate__9JASDriverFv();
-extern "C" void rejectCallback__9JASDriverFPFPv_lPv();
-extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv();
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSInitMessageQueue();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void DVDFastOpen();
-extern "C" void DVDReadPrio();
-extern "C" void DVDGetDriveStatus();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv(); // 1
+extern "C" void getThreadPointer__6JASDvdFv(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv(); // 1
+extern "C" void __dt__17JASGenericMemPoolFv(); // 1
+extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
+extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
+extern "C" void playForce__10JASChannelFv(); // 1
+extern "C" void release__10JASChannelFUs(); // 1
+extern "C" void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data(); // 1
+extern "C" void setMixConfig__10JASChannelFUlUs(); // 1
+extern "C" void getDacRate__9JASDriverFv(); // 1
+extern "C" void rejectCallback__9JASDriverFPFPv_lPv(); // 1
+extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv(); // 1
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void DVDFastOpen(); // 1
+extern "C" void DVDReadPrio(); // 1
+extern "C" void DVDGetDriveStatus(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SBSS extern u8 JASDram[4];
 
 // 
@@ -595,7 +550,7 @@ asm void JASAramStream::channelStop(u16 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802978DC() {
+asm JASMemPool_MultiThreaded__template2::~JASMemPool_MultiThreaded__template2() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/func_802978DC.s"
 }

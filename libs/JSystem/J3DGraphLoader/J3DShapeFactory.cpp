@@ -9,26 +9,13 @@
 // Types:
 // 
 
-// build J3DShapeFactory (['J3DShapeFactory']) False/False
-// build J3DShapeBlock (['J3DShapeBlock']) False/False
-/* top-level dependencies (begin ['J3DShapeBlock']) */
-/* top-level dependencies (end ['J3DShapeBlock']) */
-struct J3DShapeBlock {
-};
-
-// build _GXVtxDescList (['_GXVtxDescList']) False/False
-/* top-level dependencies (begin ['_GXVtxDescList']) */
-/* top-level dependencies (end ['_GXVtxDescList']) */
 struct _GXVtxDescList {
 };
 
-/* top-level dependencies (begin ['J3DShapeFactory']) */
-// outer dependency: ('J3DShapeBlock',)
-// outer dependency: ('_GXVtxDescList',)
-/* top-level dependencies (end ['J3DShapeFactory']) */
+struct J3DShapeBlock {
+};
+
 struct J3DShapeFactory {
-	// ('J3DShapeBlock',)
-	// ('_GXVtxDescList',)
 	/* 80337350 */ J3DShapeFactory(J3DShapeBlock const&);
 	/* 80337400 */ void create(int, u32, _GXVtxDescList*);
 	/* 803375BC */ void newShapeMtx(u32, int, int) const;
@@ -39,18 +26,10 @@ struct J3DShapeFactory {
 	/* 803379E8 */ void calcSizeShapeMtx(u32, int, int) const;
 };
 
-// build J3DShapeBlock (['J3DShapeBlock']) True/True
-// build _GXVtxDescList (['_GXVtxDescList']) True/True
-// build J3DShapeDraw (['J3DShapeDraw']) False/False
-/* top-level dependencies (begin ['J3DShapeDraw']) */
-/* top-level dependencies (end ['J3DShapeDraw']) */
 struct J3DShapeDraw {
 	/* 80314ABC */ J3DShapeDraw(u8 const*, u32);
 };
 
-// build J3DShape (['J3DShape']) False/False
-/* top-level dependencies (begin ['J3DShape']) */
-/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80314B48 */ void initialize();
 };
@@ -59,52 +38,52 @@ struct J3DShape {
 // Forward References:
 // 
 
-extern "C" static void func_80337AE0();
-extern "C" static void func_80337AF8();
-extern "C" static void func_80337B10();
-extern "C" static void func_80337B28();
+static void JSUConvertOffsetToPtr__template73(void const*, u32); // 2
+static void JSUConvertOffsetToPtr__template74(void const*, u32); // 2
+static void JSUConvertOffsetToPtr__template75(void const*, u32); // 2
+static void JSUConvertOffsetToPtr__template76(void const*, u32); // 2
 
-extern "C" void __ct__15J3DShapeFactoryFRC13J3DShapeBlock();
-extern "C" void create__15J3DShapeFactoryFiUlP14_GXVtxDescList();
-extern "C" void newShapeMtx__15J3DShapeFactoryCFUlii();
-extern "C" void newShapeDraw__15J3DShapeFactoryCFii();
-extern "C" void allocVcdVatCmdBuffer__15J3DShapeFactoryFUl();
-extern "C" void calcSize__15J3DShapeFactoryFiUl();
-extern "C" void calcSizeVcdVatCmdBuffer__15J3DShapeFactoryFUl();
-extern "C" void calcSizeShapeMtx__15J3DShapeFactoryCFUlii();
-extern "C" static void func_80337AE0();
-extern "C" static void func_80337AF8();
-extern "C" static void func_80337B10();
-extern "C" static void func_80337B28();
+extern "C" void __ct__15J3DShapeFactoryFRC13J3DShapeBlock(); // 1
+extern "C" void create__15J3DShapeFactoryFiUlP14_GXVtxDescList(); // 1
+extern "C" void newShapeMtx__15J3DShapeFactoryCFUlii(); // 1
+extern "C" void newShapeDraw__15J3DShapeFactoryCFii(); // 1
+extern "C" void allocVcdVatCmdBuffer__15J3DShapeFactoryFUl(); // 1
+extern "C" void calcSize__15J3DShapeFactoryFiUl(); // 1
+extern "C" void calcSizeVcdVatCmdBuffer__15J3DShapeFactoryFUl(); // 1
+extern "C" void calcSizeShapeMtx__15J3DShapeFactoryCFUlii(); // 1
+extern "C" static void func_80337AE0(); // 1
+extern "C" static void func_80337AF8(); // 1
+extern "C" static void func_80337B10(); // 1
+extern "C" static void func_80337B28(); // 1
 SECTION_RODATA extern const u8 J3DShapeFactory__stringBase0[48];
 
 // 
 // External References:
 // 
 
-extern "C" void OSReport();
-void* operator new(u32);
-void* operator new[](u32);
-void* operator new[](u32, int);
-extern "C" void func_80336764();
-extern "C" void func_8033677C();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+extern "C" void OSReport(); // 1
+void* operator new(u32); // 2
+void* operator new[](u32); // 2
+void* operator new[](u32, int); // 2
+void JSUConvertOffsetToPtr__template70(void const*, u32); // 2
+void JSUConvertOffsetToPtr__template71(void const*, u32); // 2
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void OSReport();
-extern "C" void* __nw__FUl();
-extern "C" void* __nwa__FUl();
-extern "C" void* __nwa__FUli();
-extern "C" void __ct__12J3DShapeDrawFPCUcUl();
-extern "C" void initialize__8J3DShapeFv();
-extern "C" void func_80336764();
-extern "C" void func_8033677C();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+extern "C" void OSReport(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void* __nwa__FUli(); // 1
+extern "C" void __ct__12J3DShapeDrawFPCUcUl(); // 1
+extern "C" void initialize__8J3DShapeFv(); // 1
+extern "C" void func_80336764(); // 1
+extern "C" void func_8033677C(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__28J3DShapeMtxYBBoardConcatView[10];
 SECTION_DATA extern void*const __vt__27J3DShapeMtxBBoardConcatView[10];
 SECTION_DATA extern void*const __vt__26J3DShapeMtxMultiConcatView[10];
@@ -220,7 +199,7 @@ asm void J3DShapeFactory::calcSizeShapeMtx(u32 field_0, int field_1, int field_2
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80337AE0() {
+asm static void JSUConvertOffsetToPtr__template73(void const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/func_80337AE0.s"
 }
@@ -231,7 +210,7 @@ extern "C" asm static void func_80337AE0() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80337AF8() {
+asm static void JSUConvertOffsetToPtr__template74(void const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/func_80337AF8.s"
 }
@@ -242,7 +221,7 @@ extern "C" asm static void func_80337AF8() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80337B10() {
+asm static void JSUConvertOffsetToPtr__template75(void const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/func_80337B10.s"
 }
@@ -253,7 +232,7 @@ extern "C" asm static void func_80337B10() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80337B28() {
+asm static void JSUConvertOffsetToPtr__template76(void const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DShapeFactory/func_80337B28.s"
 }

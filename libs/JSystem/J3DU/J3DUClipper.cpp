@@ -9,34 +9,25 @@
 // Types:
 // 
 
-// build J3DUClipper (['J3DUClipper']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['J3DUClipper']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['J3DUClipper']) */
 struct J3DUClipper {
-	// ('Vec',)
 	/* 80273778 */ void init();
 	/* 8027378C */ void calcViewFrustum();
 	/* 802738FC */ void clip(f32 const (* )[4], Vec, f32) const;
 	/* 80273A44 */ void clip(f32 const (* )[4], Vec*, Vec*) const;
 };
 
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void init__11J3DUClipperFv();
-extern "C" void calcViewFrustum__11J3DUClipperFv();
-extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf();
-extern "C" void clip__11J3DUClipperCFPA4_CfP3VecP3Vec();
+extern "C" void init__11J3DUClipperFv(); // 1
+extern "C" void calcViewFrustum__11J3DUClipperFv(); // 1
+extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf(); // 1
+extern "C" void clip__11J3DUClipperCFPA4_CfP3VecP3Vec(); // 1
 SECTION_RODATA extern const u8 J3DUClipper__lit_898[12];
 SECTION_RODATA extern const u8 J3DUClipper__lit_899[12];
 SECTION_RODATA extern const u8 lit_900[12];
@@ -53,19 +44,19 @@ SECTION_SDATA2 extern u8 lit_991[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECNormalize();
-extern "C" void PSVECCrossProduct();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void tan();
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECNormalize(); // 1
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void tan(); // 1
 
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECNormalize();
-extern "C" void PSVECCrossProduct();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void tan();
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECNormalize(); // 1
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void tan(); // 1
 
 // 
 // Declarations:

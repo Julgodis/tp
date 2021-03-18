@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JASSeqReader (['JASSeqReader']) False/False
-/* top-level dependencies (begin ['JASSeqReader']) */
-/* top-level dependencies (end ['JASSeqReader']) */
 struct JASSeqReader {
 	/* 80296108 */ void init();
 	/* 80296148 */ void init(void*);
@@ -27,13 +24,13 @@ struct JASSeqReader {
 // 
 
 
-extern "C" void init__12JASSeqReaderFv();
-extern "C" void init__12JASSeqReaderFPv();
-extern "C" void call__12JASSeqReaderFUl();
-extern "C" void loopStart__12JASSeqReaderFUl();
-extern "C" void loopEnd__12JASSeqReaderFv();
-extern "C" void ret__12JASSeqReaderFv();
-extern "C" void readMidiValue__12JASSeqReaderFv();
+extern "C" void init__12JASSeqReaderFv(); // 1
+extern "C" void init__12JASSeqReaderFPv(); // 1
+extern "C" void call__12JASSeqReaderFUl(); // 1
+extern "C" void loopStart__12JASSeqReaderFUl(); // 1
+extern "C" void loopEnd__12JASSeqReaderFv(); // 1
+extern "C" void ret__12JASSeqReaderFv(); // 1
+extern "C" void readMidiValue__12JASSeqReaderFv(); // 1
 
 // 
 // External References:

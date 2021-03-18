@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void frexp();
+extern "C" void frexp(); // 1
 
-extern "C" void frexp();
+extern "C" void frexp(); // 1
 SECTION_SDATA2 extern f64 lit_57;
 
 // 

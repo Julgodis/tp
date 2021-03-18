@@ -9,35 +9,16 @@
 // Types:
 // 
 
-// build J3DJoint (['J3DJoint']) False/False
-/* top-level dependencies (begin ['J3DJoint']) */
-/* top-level dependencies (end ['J3DJoint']) */
 struct J3DJoint {
 };
 
-// build daNpcCd_c (['daNpcCd_c']) False/False
-// build J3DModel (['J3DModel']) False/False
-/* top-level dependencies (begin ['J3DModel']) */
-/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build J3DJoint (['J3DJoint']) True/True
-// build J3DAnmTransformKey (['J3DAnmTransformKey']) False/False
-/* top-level dependencies (begin ['J3DAnmTransformKey']) */
-/* top-level dependencies (end ['J3DAnmTransformKey']) */
 struct J3DAnmTransformKey {
 };
 
-/* top-level dependencies (begin ['daNpcCd_c']) */
-// outer dependency: ('J3DModel',)
-// outer dependency: ('J3DJoint',)
-// outer dependency: ('J3DAnmTransformKey',)
-/* top-level dependencies (end ['daNpcCd_c']) */
 struct daNpcCd_c {
-	// ('J3DModel',)
-	// ('J3DJoint',)
-	// ('J3DAnmTransformKey',)
 	/* 8015605C */ void NpcCreate(int);
 	/* 801561E8 */ void ObjCreate(int);
 	/* 80156228 */ void isM_();
@@ -57,105 +38,54 @@ struct daNpcCd_c {
 	/* 80157588 */ void getObjMdlDataP(int);
 };
 
-// build J3DAnmTransformKey (['J3DAnmTransformKey']) True/True
-// build J3DModel (['J3DModel']) True/True
-// build daNpcCd_HIO_c (['daNpcCd_HIO_c']) False/False
-/* top-level dependencies (begin ['daNpcCd_HIO_c']) */
-/* top-level dependencies (end ['daNpcCd_HIO_c']) */
 struct daNpcCd_HIO_c {
 	/* 80157600 */ daNpcCd_HIO_c();
 	/* 80157964 */ ~daNpcCd_HIO_c();
 };
 
-// build daNpcCd_HIO_Child_c (['daNpcCd_HIO_Child_c']) False/False
-/* top-level dependencies (begin ['daNpcCd_HIO_Child_c']) */
-/* top-level dependencies (end ['daNpcCd_HIO_Child_c']) */
 struct daNpcCd_HIO_Child_c {
 	/* 801577A0 */ ~daNpcCd_HIO_Child_c();
 	/* 80157858 */ daNpcCd_HIO_Child_c();
 };
 
-// build daNpcCd_HIO_Jnt_c (['daNpcCd_HIO_Jnt_c']) False/False
-/* top-level dependencies (begin ['daNpcCd_HIO_Jnt_c']) */
-/* top-level dependencies (end ['daNpcCd_HIO_Jnt_c']) */
 struct daNpcCd_HIO_Jnt_c {
 	/* 80157810 */ ~daNpcCd_HIO_Jnt_c();
 	/* 801578B0 */ daNpcCd_HIO_Jnt_c();
 };
 
-// build fOpAcm_HIO_entry_c (['fOpAcm_HIO_entry_c']) False/False
-/* top-level dependencies (begin ['fOpAcm_HIO_entry_c']) */
-/* top-level dependencies (end ['fOpAcm_HIO_entry_c']) */
 struct fOpAcm_HIO_entry_c {
 	/* 801578C0 */ ~fOpAcm_HIO_entry_c();
 };
 
-// build mDoHIO_entry_c (['mDoHIO_entry_c']) False/False
-/* top-level dependencies (begin ['mDoHIO_entry_c']) */
-/* top-level dependencies (end ['mDoHIO_entry_c']) */
 struct mDoHIO_entry_c {
 	/* 8015791C */ ~mDoHIO_entry_c();
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
-// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
-/* top-level dependencies (begin ['mDoMtx_stack_c']) */
-/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-// build mDoExt_McaMorfSO (['mDoExt_McaMorfSO']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
-struct J3DModelData {
-};
-
-// build Z2Creature (['Z2Creature']) False/False
-/* top-level dependencies (begin ['Z2Creature']) */
-/* top-level dependencies (end ['Z2Creature']) */
-struct Z2Creature {
-};
-
-// build mDoExt_McaMorfCallBack2_c (['mDoExt_McaMorfCallBack2_c']) False/False
-/* top-level dependencies (begin ['mDoExt_McaMorfCallBack2_c']) */
-/* top-level dependencies (end ['mDoExt_McaMorfCallBack2_c']) */
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-// build J3DAnmTransform (['J3DAnmTransform']) False/False
-/* top-level dependencies (begin ['J3DAnmTransform']) */
-/* top-level dependencies (end ['J3DAnmTransform']) */
-struct J3DAnmTransform {
-};
-
-// build mDoExt_McaMorfCallBack1_c (['mDoExt_McaMorfCallBack1_c']) False/False
-/* top-level dependencies (begin ['mDoExt_McaMorfCallBack1_c']) */
-/* top-level dependencies (end ['mDoExt_McaMorfCallBack1_c']) */
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-/* top-level dependencies (begin ['mDoExt_McaMorfSO']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('Z2Creature',)
-// outer dependency: ('mDoExt_McaMorfCallBack2_c',)
-// outer dependency: ('J3DAnmTransform',)
-// outer dependency: ('mDoExt_McaMorfCallBack1_c',)
-/* top-level dependencies (end ['mDoExt_McaMorfSO']) */
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DAnmTransform {
+};
+
+struct Z2Creature {
+};
+
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfSO {
-	// ('J3DModelData',)
-	// ('Z2Creature',)
-	// ('mDoExt_McaMorfCallBack1_c',)
-	// ('J3DAnmTransform',)
-	// ('mDoExt_McaMorfCallBack2_c',)
 	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
 	/* 80010E70 */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32);
 	/* 800110B0 */ void play(u32, s8);
@@ -163,75 +93,29 @@ struct mDoExt_McaMorfSO {
 	/* 80011310 */ void stopZelAnime();
 };
 
-// build J3DModelData (['J3DModelData']) True/True
-// build mDoExt_McaMorfCallBack1_c (['mDoExt_McaMorfCallBack1_c']) True/True
-// build mDoExt_McaMorfCallBack2_c (['mDoExt_McaMorfCallBack2_c']) True/True
-// build J3DAnmTransform (['J3DAnmTransform']) True/True
-// build Z2Creature (['Z2Creature']) True/True
-// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
-/* top-level dependencies (begin ['request_of_phase_process_class']) */
-/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build dPa_control_c (['dPa_control_c']) False/False
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
-struct csXyz {
-};
-
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
-// build cXyz (['cXyz']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) False/False
-/* top-level dependencies (begin ['dPa_levelEcallBack']) */
-/* top-level dependencies (end ['dPa_levelEcallBack']) */
 struct dPa_levelEcallBack {
 };
 
-/* top-level dependencies (begin ['dPa_control_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('_GXColor',)
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dPa_levelEcallBack',)
-/* top-level dependencies (end ['dPa_control_c']) */
+struct dKy_tevstr_c {
+};
+
 struct dPa_control_c {
-	// ('_GXColor',)
-	// ('dKy_tevstr_c',)
-	// ('dPa_levelEcallBack',)
-	// ('csXyz',)
-	// ('cXyz',)
-	// build level_c (['dPa_control_c', 'level_c']) False/False
-	/* dependencies (begin ['dPa_control_c', 'level_c']) */
-	/* dependencies (end ['dPa_control_c', 'level_c']) */
 	struct level_c {
 		/* 8004B918 */ void getEmitter(u32);
 	};
@@ -239,102 +123,65 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build csXyz (['csXyz']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) True/True
-// build _GXColor (['_GXColor']) True/True
-// build dBgS (['dBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-/* top-level dependencies (begin ['dBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// ('cBgS_PolyInfo',)
 	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-// build daPy_py_c (['daPy_py_c']) False/False
-/* top-level dependencies (begin ['daPy_py_c']) */
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-// build cXyz (['cXyz']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-/* top-level dependencies (begin ['dScnKy_env_light_c']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
-	// ('J3DModelData',)
-	// ('cXyz',)
-	// ('dKy_tevstr_c',)
 	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-// build Z2CreatureCitizen (['Z2CreatureCitizen']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['Z2CreatureCitizen']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2CreatureCitizen']) */
 struct Z2CreatureCitizen {
-	// ('Vec',)
 	/* 802C0CE4 */ void init(Vec*, Vec*, u8, u8);
 	/* 802C0D48 */ void setMdlType(s8, bool, bool);
 };
 
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
-static void jntNodeCallBack(J3DJoint*, int);
-extern "C" void __sinit_d_a_npc_cd_cpp();
+static void jntNodeCallBack(J3DJoint*, int); // 2
+extern "C" void __sinit_d_a_npc_cd_cpp(); // 1
 
-extern "C" static void a_npc_d_a_npc_cd__jntNodeCallBack__FP8J3DJointi();
-extern "C" void NpcCreate__9daNpcCd_cFi();
-extern "C" void ObjCreate__9daNpcCd_cFi();
-extern "C" void isM___9daNpcCd_cFv();
-extern "C" void getAnmP__9daNpcCd_cFii();
-extern "C" void setAttention__9daNpcCd_cFi();
-extern "C" void loadResrc__9daNpcCd_cFii();
-extern "C" void removeResrc__9daNpcCd_cFii();
-extern "C" void setEnvTevCol__9daNpcCd_cFv();
-extern "C" void setRoomNo__9daNpcCd_cFv();
-extern "C" void animation__9daNpcCd_cFv();
-extern "C" void setAnm__9daNpcCd_cFP18J3DAnmTransformKeyffiii();
-extern "C" void drawObj__9daNpcCd_cFiP8J3DModelf();
-extern "C" void drawNpc__9daNpcCd_cFv();
-extern "C" void jntNodeCB__9daNpcCd_cFP8J3DJointP8J3DModel();
-extern "C" void setHitodamaParticle__9daNpcCd_cFv();
-extern "C" void getNpcMdlDataP__9daNpcCd_cFi();
-extern "C" void getObjMdlDataP__9daNpcCd_cFi();
-extern "C" void __ct__13daNpcCd_HIO_cFv();
-extern "C" void __dt__19daNpcCd_HIO_Child_cFv();
-extern "C" void __dt__17daNpcCd_HIO_Jnt_cFv();
-extern "C" void __ct__19daNpcCd_HIO_Child_cFv();
-extern "C" void __ct__17daNpcCd_HIO_Jnt_cFv();
-extern "C" void __dt__18fOpAcm_HIO_entry_cFv();
-extern "C" void __dt__14mDoHIO_entry_cFv();
-extern "C" void __dt__13daNpcCd_HIO_cFv();
-extern "C" void __sinit_d_a_npc_cd_cpp();
+extern "C" static void a_npc_d_a_npc_cd__jntNodeCallBack__FP8J3DJointi(); // 1
+extern "C" void NpcCreate__9daNpcCd_cFi(); // 1
+extern "C" void ObjCreate__9daNpcCd_cFi(); // 1
+extern "C" void isM___9daNpcCd_cFv(); // 1
+extern "C" void getAnmP__9daNpcCd_cFii(); // 1
+extern "C" void setAttention__9daNpcCd_cFi(); // 1
+extern "C" void loadResrc__9daNpcCd_cFii(); // 1
+extern "C" void removeResrc__9daNpcCd_cFii(); // 1
+extern "C" void setEnvTevCol__9daNpcCd_cFv(); // 1
+extern "C" void setRoomNo__9daNpcCd_cFv(); // 1
+extern "C" void animation__9daNpcCd_cFv(); // 1
+extern "C" void setAnm__9daNpcCd_cFP18J3DAnmTransformKeyffiii(); // 1
+extern "C" void drawObj__9daNpcCd_cFiP8J3DModelf(); // 1
+extern "C" void drawNpc__9daNpcCd_cFv(); // 1
+extern "C" void jntNodeCB__9daNpcCd_cFP8J3DJointP8J3DModel(); // 1
+extern "C" void setHitodamaParticle__9daNpcCd_cFv(); // 1
+extern "C" void getNpcMdlDataP__9daNpcCd_cFi(); // 1
+extern "C" void getObjMdlDataP__9daNpcCd_cFi(); // 1
+extern "C" void __ct__13daNpcCd_HIO_cFv(); // 1
+extern "C" void __dt__19daNpcCd_HIO_Child_cFv(); // 1
+extern "C" void __dt__17daNpcCd_HIO_Jnt_cFv(); // 1
+extern "C" void __ct__19daNpcCd_HIO_Child_cFv(); // 1
+extern "C" void __ct__17daNpcCd_HIO_Jnt_cFv(); // 1
+extern "C" void __dt__18fOpAcm_HIO_entry_cFv(); // 1
+extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
+extern "C" void __dt__13daNpcCd_HIO_cFv(); // 1
+extern "C" void __sinit_d_a_npc_cd_cpp(); // 1
 SECTION_RODATA extern const void*const a_npc_d_a_npc_cd__l_resMANa[6];
 SECTION_RODATA extern const u8 a_npc_d_a_npc_cd__l_resMADa[24];
 SECTION_RODATA extern const u8 a_npc_d_a_npc_cd__l_resMCNa[24];
@@ -432,69 +279,69 @@ SECTION_SDATA2 extern f32 a_npc_d_a_npc_cd__lit_4657;
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
-void mDoExt_modelUpdateDL(J3DModel*);
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
-void dComIfG_resLoad(request_of_phase_process_class*, char const*);
-void dComIfG_resDelete(request_of_phase_process_class*, char const*);
-extern "C" void func_8014D348();
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXMultVec();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void cLib_calcTimer__template2(int*); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void __dt__4cXyzFv();
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
-extern "C" void transM__14mDoMtx_stack_cFfff();
-extern "C" void scaleM__14mDoMtx_stack_cFfff();
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
-extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff();
-extern "C" void play__16mDoExt_McaMorfSOFUlSc();
-extern "C" void entryDL__16mDoExt_McaMorfSOFv();
-extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv();
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
-extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void func_8014D348();
-extern "C" void checkNowWolfEyeUp__9daPy_py_cFv();
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern "C" void init__17Z2CreatureCitizenFP3VecP3VecUcUc();
-extern "C" void setMdlType__17Z2CreatureCitizenFScbb();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXMultVec();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
+extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
+extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff(); // 1
+extern "C" void play__16mDoExt_McaMorfSOFUlSc(); // 1
+extern "C" void entryDL__16mDoExt_McaMorfSOFv(); // 1
+extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
+extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void func_8014D348(); // 1
+extern "C" void checkNowWolfEyeUp__9daPy_py_cFv(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void init__17Z2CreatureCitizenFP3VecP3VecUcUc(); // 1
+extern "C" void setMdlType__17Z2CreatureCitizenFScbb(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_env_light[4880];

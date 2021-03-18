@@ -9,11 +9,11 @@
 // Forward References:
 // 
 
-extern "C" void C_MTXPerspective();
-extern "C" void C_MTXOrtho();
+extern "C" void C_MTXPerspective(); // 1
+extern "C" void C_MTXOrtho(); // 1
 
-extern "C" void C_MTXPerspective();
-extern "C" void C_MTXOrtho();
+extern "C" void C_MTXPerspective(); // 1
+extern "C" void C_MTXOrtho(); // 1
 SECTION_SDATA2 extern f32 mtx44__lit_99;
 SECTION_SDATA2 extern f32 mtx44__lit_100;
 SECTION_SDATA2 extern u8 mtx44__lit_101[4];
@@ -25,9 +25,9 @@ SECTION_SDATA2 extern f32 mtx44__lit_106;
 // External References:
 // 
 
-extern "C" void tanf();
+extern "C" void tanf(); // 1
 
-extern "C" void tanf();
+extern "C" void tanf(); // 1
 
 // 
 // Declarations:

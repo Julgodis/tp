@@ -9,31 +9,31 @@
 // Forward References:
 // 
 
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetColorUpdate();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetPixelFmt();
-extern "C" void GXSetDither();
-extern "C" void GXSetDstAlpha();
-extern "C" void GXSetFieldMask();
-extern "C" void GXSetFieldMode();
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetColorUpdate(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetPixelFmt(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXSetDstAlpha(); // 1
+extern "C" void GXSetFieldMask(); // 1
+extern "C" void GXSetFieldMode(); // 1
 
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetColorUpdate();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetPixelFmt();
-extern "C" void GXSetDither();
-extern "C" void GXSetDstAlpha();
-extern "C" void GXSetFieldMask();
-extern "C" void GXSetFieldMode();
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetColorUpdate(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetPixelFmt(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXSetDstAlpha(); // 1
+extern "C" void GXSetFieldMask(); // 1
+extern "C" void GXSetFieldMode(); // 1
 SECTION_DATA extern u8 data_803D2838[32];
 SECTION_SDATA2 extern u8 GXPixel__lit_211[4];
 SECTION_SDATA2 extern f32 lit_212;
@@ -48,11 +48,11 @@ SECTION_SDATA2 extern f64 GXPixel__lit_219;
 // External References:
 // 
 
-extern "C" void __GXFlushTextureState();
-extern "C" void __cvt_fp2unsigned();
+extern "C" void __GXFlushTextureState(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
 
-extern "C" void __GXFlushTextureState();
-extern "C" void __cvt_fp2unsigned();
+extern "C" void __GXFlushTextureState(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
 SECTION_SDATA2 extern void*__GXData;
 
 // 

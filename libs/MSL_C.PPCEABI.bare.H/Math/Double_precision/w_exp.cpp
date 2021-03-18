@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void exp();
+extern "C" void exp(); // 1
 
-extern "C" void exp();
+extern "C" void exp(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __ieee754_exp();
+extern "C" void __ieee754_exp(); // 1
 
-extern "C" void __ieee754_exp();
+extern "C" void __ieee754_exp(); // 1
 
 // 
 // Declarations:

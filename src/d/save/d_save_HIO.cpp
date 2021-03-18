@@ -9,178 +9,115 @@
 // Types:
 // 
 
-// build dSvBit_childSwPerfectionHIO_c (['dSvBit_childSwPerfectionHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childSwPerfectionHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childSwPerfectionHIO_c']) */
 struct dSvBit_childSwPerfectionHIO_c {
 	/* 8025BB78 */ dSvBit_childSwPerfectionHIO_c();
 	/* 8025BBAC */ void init();
 	/* 8025C5B4 */ ~dSvBit_childSwPerfectionHIO_c();
 };
 
-// build dSvBit_childSwDungeonHIO_c (['dSvBit_childSwDungeonHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childSwDungeonHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childSwDungeonHIO_c']) */
 struct dSvBit_childSwDungeonHIO_c {
 	/* 8025BC14 */ dSvBit_childSwDungeonHIO_c();
 	/* 8025BC48 */ void init();
 	/* 8025C56C */ ~dSvBit_childSwDungeonHIO_c();
 };
 
-// build dSvBit_childSwZoneHIO_c (['dSvBit_childSwZoneHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childSwZoneHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childSwZoneHIO_c']) */
 struct dSvBit_childSwZoneHIO_c {
 	/* 8025BCB0 */ dSvBit_childSwZoneHIO_c();
 	/* 8025BCE4 */ void init();
 	/* 8025C524 */ ~dSvBit_childSwZoneHIO_c();
 };
 
-// build dSvBit_childSwOneZoneHIO_c (['dSvBit_childSwOneZoneHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childSwOneZoneHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childSwOneZoneHIO_c']) */
 struct dSvBit_childSwOneZoneHIO_c {
 	/* 8025BD10 */ dSvBit_childSwOneZoneHIO_c();
 	/* 8025BD44 */ void init();
 	/* 8025C4DC */ ~dSvBit_childSwOneZoneHIO_c();
 };
 
-// build dSvBit_childItPerfectionHIO_c (['dSvBit_childItPerfectionHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childItPerfectionHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childItPerfectionHIO_c']) */
 struct dSvBit_childItPerfectionHIO_c {
 	/* 8025BD70 */ dSvBit_childItPerfectionHIO_c();
 	/* 8025BDA4 */ void init();
 	/* 8025C494 */ ~dSvBit_childItPerfectionHIO_c();
 };
 
-// build dSvBit_childItDungeonHIO_c (['dSvBit_childItDungeonHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childItDungeonHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childItDungeonHIO_c']) */
 struct dSvBit_childItDungeonHIO_c {
 	/* 8025BE0C */ dSvBit_childItDungeonHIO_c();
 	/* 8025BE40 */ void init();
 	/* 8025C44C */ ~dSvBit_childItDungeonHIO_c();
 };
 
-// build dSvBit_childItZoneHIO_c (['dSvBit_childItZoneHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childItZoneHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childItZoneHIO_c']) */
 struct dSvBit_childItZoneHIO_c {
 	/* 8025BEA8 */ dSvBit_childItZoneHIO_c();
 	/* 8025BEDC */ void init();
 	/* 8025C404 */ ~dSvBit_childItZoneHIO_c();
 };
 
-// build dSvBit_childItOneZoneHIO_c (['dSvBit_childItOneZoneHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childItOneZoneHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childItOneZoneHIO_c']) */
 struct dSvBit_childItOneZoneHIO_c {
 	/* 8025BF08 */ dSvBit_childItOneZoneHIO_c();
 	/* 8025BF3C */ void init();
 	/* 8025C3BC */ ~dSvBit_childItOneZoneHIO_c();
 };
 
-// build dSvBit_childTbPerfectionHIO_c (['dSvBit_childTbPerfectionHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childTbPerfectionHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childTbPerfectionHIO_c']) */
 struct dSvBit_childTbPerfectionHIO_c {
 	/* 8025BF68 */ dSvBit_childTbPerfectionHIO_c();
 	/* 8025BF9C */ void init();
 	/* 8025C374 */ ~dSvBit_childTbPerfectionHIO_c();
 };
 
-// build dSvBit_childDarknessHIO_c (['dSvBit_childDarknessHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childDarknessHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childDarknessHIO_c']) */
 struct dSvBit_childDarknessHIO_c {
 	/* 8025C004 */ dSvBit_childDarknessHIO_c();
 	/* 8025C038 */ void init();
 	/* 8025C32C */ ~dSvBit_childDarknessHIO_c();
 };
 
-// build dSvBit_childTransformHIO_c (['dSvBit_childTransformHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childTransformHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childTransformHIO_c']) */
 struct dSvBit_childTransformHIO_c {
 	/* 8025C0A0 */ dSvBit_childTransformHIO_c();
 	/* 8025C0D4 */ void init();
 	/* 8025C2E4 */ ~dSvBit_childTransformHIO_c();
 };
 
-// build dSvBit_childOtherHIO_c (['dSvBit_childOtherHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childOtherHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childOtherHIO_c']) */
 struct dSvBit_childOtherHIO_c {
 	/* 8025C13C */ dSvBit_childOtherHIO_c();
 	/* 8025C178 */ void init();
 	/* 8025C29C */ ~dSvBit_childOtherHIO_c();
 };
 
-// build dSvBit_HIO_c (['dSvBit_HIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_HIO_c']) */
-/* top-level dependencies (end ['dSvBit_HIO_c']) */
 struct dSvBit_HIO_c {
 	/* 8025C1F8 */ void init();
 	/* 8025C6FC */ ~dSvBit_HIO_c();
 };
 
-// build dSvBit_childTreasureHIO_c (['dSvBit_childTreasureHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childTreasureHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childTreasureHIO_c']) */
 struct dSvBit_childTreasureHIO_c {
 	/* 8025C874 */ ~dSvBit_childTreasureHIO_c();
 };
 
-// build dSvBit_childItemHIO_c (['dSvBit_childItemHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childItemHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childItemHIO_c']) */
 struct dSvBit_childItemHIO_c {
 	/* 8025C8D4 */ ~dSvBit_childItemHIO_c();
 };
 
-// build dSvBit_childSwitchHIO_c (['dSvBit_childSwitchHIO_c']) False/False
-/* top-level dependencies (begin ['dSvBit_childSwitchHIO_c']) */
-/* top-level dependencies (end ['dSvBit_childSwitchHIO_c']) */
 struct dSvBit_childSwitchHIO_c {
 	/* 8025C970 */ ~dSvBit_childSwitchHIO_c();
 };
 
-// build dSv_player_status_b_c (['dSv_player_status_b_c']) False/False
-/* top-level dependencies (begin ['dSv_player_status_b_c']) */
-/* top-level dependencies (end ['dSv_player_status_b_c']) */
 struct dSv_player_status_b_c {
 	/* 80032BB0 */ void isDarkClearLV(int) const;
 	/* 80032BEC */ void isTransformLV(int) const;
 };
 
-// build dSv_light_drop_c (['dSv_light_drop_c']) False/False
-/* top-level dependencies (begin ['dSv_light_drop_c']) */
-/* top-level dependencies (end ['dSv_light_drop_c']) */
 struct dSv_light_drop_c {
 	/* 80034340 */ void getLightDropNum(u8) const;
 	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
-// build dSv_memBit_c (['dSv_memBit_c']) False/False
-/* top-level dependencies (begin ['dSv_memBit_c']) */
-/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 800347E8 */ void isTbox(int) const;
 	/* 80034860 */ void isSwitch(int) const;
 	/* 800348EC */ void isItem(int) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dSv_danBit_c (['dSv_danBit_c']) False/False
-/* top-level dependencies (begin ['dSv_danBit_c']) */
-/* top-level dependencies (end ['dSv_danBit_c']) */
 struct dSv_danBit_c {
 	/* 80034BE8 */ void isSwitch(int) const;
 	/* 80034C74 */ void isItem(int) const;
@@ -190,50 +127,50 @@ struct dSv_danBit_c {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_save_HIO_cpp();
+extern "C" void __sinit_d_save_HIO_cpp(); // 1
 
-extern "C" void __ct__29dSvBit_childSwPerfectionHIO_cFv();
-extern "C" void init__29dSvBit_childSwPerfectionHIO_cFv();
-extern "C" void __ct__26dSvBit_childSwDungeonHIO_cFv();
-extern "C" void init__26dSvBit_childSwDungeonHIO_cFv();
-extern "C" void __ct__23dSvBit_childSwZoneHIO_cFv();
-extern "C" void init__23dSvBit_childSwZoneHIO_cFv();
-extern "C" void __ct__26dSvBit_childSwOneZoneHIO_cFv();
-extern "C" void init__26dSvBit_childSwOneZoneHIO_cFv();
-extern "C" void __ct__29dSvBit_childItPerfectionHIO_cFv();
-extern "C" void init__29dSvBit_childItPerfectionHIO_cFv();
-extern "C" void __ct__26dSvBit_childItDungeonHIO_cFv();
-extern "C" void init__26dSvBit_childItDungeonHIO_cFv();
-extern "C" void __ct__23dSvBit_childItZoneHIO_cFv();
-extern "C" void init__23dSvBit_childItZoneHIO_cFv();
-extern "C" void __ct__26dSvBit_childItOneZoneHIO_cFv();
-extern "C" void init__26dSvBit_childItOneZoneHIO_cFv();
-extern "C" void __ct__29dSvBit_childTbPerfectionHIO_cFv();
-extern "C" void init__29dSvBit_childTbPerfectionHIO_cFv();
-extern "C" void __ct__25dSvBit_childDarknessHIO_cFv();
-extern "C" void init__25dSvBit_childDarknessHIO_cFv();
-extern "C" void __ct__26dSvBit_childTransformHIO_cFv();
-extern "C" void init__26dSvBit_childTransformHIO_cFv();
-extern "C" void __ct__22dSvBit_childOtherHIO_cFv();
-extern "C" void init__22dSvBit_childOtherHIO_cFv();
-extern "C" void init__12dSvBit_HIO_cFv();
-extern "C" void __dt__22dSvBit_childOtherHIO_cFv();
-extern "C" void __dt__26dSvBit_childTransformHIO_cFv();
-extern "C" void __dt__25dSvBit_childDarknessHIO_cFv();
-extern "C" void __dt__29dSvBit_childTbPerfectionHIO_cFv();
-extern "C" void __dt__26dSvBit_childItOneZoneHIO_cFv();
-extern "C" void __dt__23dSvBit_childItZoneHIO_cFv();
-extern "C" void __dt__26dSvBit_childItDungeonHIO_cFv();
-extern "C" void __dt__29dSvBit_childItPerfectionHIO_cFv();
-extern "C" void __dt__26dSvBit_childSwOneZoneHIO_cFv();
-extern "C" void __dt__23dSvBit_childSwZoneHIO_cFv();
-extern "C" void __dt__26dSvBit_childSwDungeonHIO_cFv();
-extern "C" void __dt__29dSvBit_childSwPerfectionHIO_cFv();
-extern "C" void __sinit_d_save_HIO_cpp();
-extern "C" void __dt__12dSvBit_HIO_cFv();
-extern "C" void __dt__25dSvBit_childTreasureHIO_cFv();
-extern "C" void __dt__21dSvBit_childItemHIO_cFv();
-extern "C" void __dt__23dSvBit_childSwitchHIO_cFv();
+extern "C" void __ct__29dSvBit_childSwPerfectionHIO_cFv(); // 1
+extern "C" void init__29dSvBit_childSwPerfectionHIO_cFv(); // 1
+extern "C" void __ct__26dSvBit_childSwDungeonHIO_cFv(); // 1
+extern "C" void init__26dSvBit_childSwDungeonHIO_cFv(); // 1
+extern "C" void __ct__23dSvBit_childSwZoneHIO_cFv(); // 1
+extern "C" void init__23dSvBit_childSwZoneHIO_cFv(); // 1
+extern "C" void __ct__26dSvBit_childSwOneZoneHIO_cFv(); // 1
+extern "C" void init__26dSvBit_childSwOneZoneHIO_cFv(); // 1
+extern "C" void __ct__29dSvBit_childItPerfectionHIO_cFv(); // 1
+extern "C" void init__29dSvBit_childItPerfectionHIO_cFv(); // 1
+extern "C" void __ct__26dSvBit_childItDungeonHIO_cFv(); // 1
+extern "C" void init__26dSvBit_childItDungeonHIO_cFv(); // 1
+extern "C" void __ct__23dSvBit_childItZoneHIO_cFv(); // 1
+extern "C" void init__23dSvBit_childItZoneHIO_cFv(); // 1
+extern "C" void __ct__26dSvBit_childItOneZoneHIO_cFv(); // 1
+extern "C" void init__26dSvBit_childItOneZoneHIO_cFv(); // 1
+extern "C" void __ct__29dSvBit_childTbPerfectionHIO_cFv(); // 1
+extern "C" void init__29dSvBit_childTbPerfectionHIO_cFv(); // 1
+extern "C" void __ct__25dSvBit_childDarknessHIO_cFv(); // 1
+extern "C" void init__25dSvBit_childDarknessHIO_cFv(); // 1
+extern "C" void __ct__26dSvBit_childTransformHIO_cFv(); // 1
+extern "C" void init__26dSvBit_childTransformHIO_cFv(); // 1
+extern "C" void __ct__22dSvBit_childOtherHIO_cFv(); // 1
+extern "C" void init__22dSvBit_childOtherHIO_cFv(); // 1
+extern "C" void init__12dSvBit_HIO_cFv(); // 1
+extern "C" void __dt__22dSvBit_childOtherHIO_cFv(); // 1
+extern "C" void __dt__26dSvBit_childTransformHIO_cFv(); // 1
+extern "C" void __dt__25dSvBit_childDarknessHIO_cFv(); // 1
+extern "C" void __dt__29dSvBit_childTbPerfectionHIO_cFv(); // 1
+extern "C" void __dt__26dSvBit_childItOneZoneHIO_cFv(); // 1
+extern "C" void __dt__23dSvBit_childItZoneHIO_cFv(); // 1
+extern "C" void __dt__26dSvBit_childItDungeonHIO_cFv(); // 1
+extern "C" void __dt__29dSvBit_childItPerfectionHIO_cFv(); // 1
+extern "C" void __dt__26dSvBit_childSwOneZoneHIO_cFv(); // 1
+extern "C" void __dt__23dSvBit_childSwZoneHIO_cFv(); // 1
+extern "C" void __dt__26dSvBit_childSwDungeonHIO_cFv(); // 1
+extern "C" void __dt__29dSvBit_childSwPerfectionHIO_cFv(); // 1
+extern "C" void __sinit_d_save_HIO_cpp(); // 1
+extern "C" void __dt__12dSvBit_HIO_cFv(); // 1
+extern "C" void __dt__25dSvBit_childTreasureHIO_cFv(); // 1
+extern "C" void __dt__21dSvBit_childItemHIO_cFv(); // 1
+extern "C" void __dt__23dSvBit_childSwitchHIO_cFv(); // 1
 SECTION_DATA extern void*const __vt__22dSvBit_childOtherHIO_c[3];
 SECTION_DATA extern void*const __vt__26dSvBit_childTransformHIO_c[3];
 SECTION_DATA extern void*const __vt__25dSvBit_childDarknessHIO_c[3];
@@ -257,25 +194,25 @@ SECTION_BSS extern u8 g_save_bit_HIO[1184 + 4 /* padding */];
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi();
-extern "C" void isTransformLV__21dSv_player_status_b_cCFi();
-extern "C" void getLightDropNum__16dSv_light_drop_cCFUc();
-extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc();
-extern "C" void isTbox__12dSv_memBit_cCFi();
-extern "C" void isSwitch__12dSv_memBit_cCFi();
-extern "C" void isItem__12dSv_memBit_cCFi();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void isSwitch__12dSv_danBit_cCFi();
-extern "C" void isItem__12dSv_danBit_cCFi();
-extern "C" void __dl__FPv();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi(); // 1
+extern "C" void isTransformLV__21dSv_player_status_b_cCFi(); // 1
+extern "C" void getLightDropNum__16dSv_light_drop_cCFUc(); // 1
+extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc(); // 1
+extern "C" void isTbox__12dSv_memBit_cCFi(); // 1
+extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1
+extern "C" void isItem__12dSv_memBit_cCFi(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void isSwitch__12dSv_danBit_cCFi(); // 1
+extern "C" void isItem__12dSv_danBit_cCFi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 

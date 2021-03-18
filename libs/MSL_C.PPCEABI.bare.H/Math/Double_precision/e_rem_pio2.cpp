@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __ieee754_rem_pio2();
+extern "C" void __ieee754_rem_pio2(); // 1
 
-extern "C" void __ieee754_rem_pio2();
+extern "C" void __ieee754_rem_pio2(); // 1
 SECTION_RODATA extern const u8 two_over_pi[264];
 SECTION_RODATA extern const u8 npio2_hw[128];
 SECTION_SDATA2 extern u8 Math_Double_precision_e_rem_pio2__lit_145[8];
@@ -30,9 +30,9 @@ SECTION_SDATA2 extern f64 lit_157;
 // External References:
 // 
 
-extern "C" void __kernel_rem_pio2();
+extern "C" void __kernel_rem_pio2(); // 1
 
-extern "C" void __kernel_rem_pio2();
+extern "C" void __kernel_rem_pio2(); // 1
 
 // 
 // Declarations:

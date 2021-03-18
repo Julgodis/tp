@@ -9,13 +9,13 @@
 // Forward References:
 // 
 
-extern "C" static void GetFontCode();
-extern "C" void OSGetFontEncode();
-extern "C" static void ParseStringS();
+extern "C" static void GetFontCode(); // 1
+extern "C" void OSGetFontEncode(); // 1
+extern "C" static void ParseStringS(); // 1
 
-extern "C" static void GetFontCode();
-extern "C" void OSGetFontEncode();
-extern "C" static void ParseStringS();
+extern "C" static void GetFontCode(); // 1
+extern "C" void OSGetFontEncode(); // 1
+extern "C" static void ParseStringS(); // 1
 SECTION_DATA extern u8 HankakuToCode[384];
 SECTION_DATA extern u8 Zenkaku2Code[2442 + 6 /* padding */];
 SECTION_SDATA extern u16 FontEncode;

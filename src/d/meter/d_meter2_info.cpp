@@ -9,51 +9,23 @@
 // Types:
 // 
 
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
+struct JUTFont {
+};
+
+struct cXyz {
+};
+
 struct J2DTextBox {
 	/* 8021C7F4 */ void getFont() const;
 };
 
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
-/* top-level dependencies (begin ['JMSMesgEntry_c']) */
-/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
-struct cXyz {
-};
-
-// build J2DPicture (['J2DPicture']) False/False
-/* top-level dependencies (begin ['J2DPicture']) */
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
 };
 
-// build JUTFont (['JUTFont']) False/False
-/* top-level dependencies (begin ['JUTFont']) */
-/* top-level dependencies (end ['JUTFont']) */
-struct JUTFont {
-};
-
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-// outer dependency: ('J2DTextBox',)
-// outer dependency: ('JMSMesgEntry_c',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('J2DPicture',)
-// outer dependency: ('JUTFont',)
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// ('J2DPicture',)
-	// ('JUTFont',)
-	// ('J2DTextBox',)
-	// ('JMSMesgEntry_c',)
-	// ('cXyz',)
 	/* 8021BDDC */ dMeter2Info_c();
 	/* 8021BE20 */ ~dMeter2Info_c();
 	/* 8021BE68 */ void init();
@@ -95,102 +67,56 @@ struct dMeter2Info_c {
 	/* 8021E290 */ void setSaveStageName(char const*);
 };
 
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
-// build J2DTextBox (['J2DTextBox']) True/True
-// build JUTFont (['JUTFont']) True/True
-// build cXyz (['cXyz']) True/True
-// build J2DPicture (['J2DPicture']) True/True
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-// build dSv_player_status_a_c (['dSv_player_status_a_c']) False/False
-/* top-level dependencies (begin ['dSv_player_status_a_c']) */
-/* top-level dependencies (end ['dSv_player_status_a_c']) */
 struct dSv_player_status_a_c {
 	/* 80032A5C */ void getSelectItemIndex(int) const;
 };
 
-// build dSv_player_item_c (['dSv_player_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_c']) */
-/* top-level dependencies (end ['dSv_player_item_c']) */
 struct dSv_player_item_c {
 	/* 80032FB8 */ void setItem(int, u8);
 	/* 80033030 */ void getItem(int, bool) const;
 };
 
-// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_get_item_c']) */
-/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033E94 */ void offFirstBit(u8);
 };
 
-// build dSv_player_item_record_c (['dSv_player_item_record_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_record_c']) */
-/* top-level dependencies (end ['dSv_player_item_record_c']) */
 struct dSv_player_item_record_c {
 	/* 80033F6C */ void setBombNum(u8, u8);
 	/* 80033F7C */ void getBombNum(u8) const;
 };
 
-// build dSv_light_drop_c (['dSv_light_drop_c']) False/False
-/* top-level dependencies (begin ['dSv_light_drop_c']) */
-/* top-level dependencies (end ['dSv_light_drop_c']) */
 struct dSv_light_drop_c {
 	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
-// build dSv_letter_info_c (['dSv_letter_info_c']) False/False
-/* top-level dependencies (begin ['dSv_letter_info_c']) */
-/* top-level dependencies (end ['dSv_letter_info_c']) */
 struct dSv_letter_info_c {
 	/* 80034428 */ void onLetterGetFlag(int);
 	/* 8003444C */ void isLetterGetFlag(int) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
-// build dMeterMap_c (['dMeterMap_c']) False/False
-/* top-level dependencies (begin ['dMeterMap_c']) */
-/* top-level dependencies (end ['dMeterMap_c']) */
 struct dMeterMap_c {
 	/* 8020D900 */ void isMapOpenCheck();
 };
 
-// build dMsgObject_c (['dMsgObject_c']) False/False
-/* top-level dependencies (begin ['dMsgObject_c']) */
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 802384C4 */ void setLetterNameID(u16);
 };
 
-// build dMsgFlow_c (['dMsgFlow_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ['dMsgFlow_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dMsgFlow_c']) */
 struct dMsgFlow_c {
-	// ('fopAc_ac_c',)
 	/* 80249F00 */ dMsgFlow_c();
 	/* 80249F48 */ ~dMsgFlow_c();
 	/* 80249F90 */ void init(fopAc_ac_c*, int, int, fopAc_ac_c**);
@@ -198,10 +124,6 @@ struct dMsgFlow_c {
 	/* 8024A538 */ void getMsgNo();
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
 	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
@@ -211,81 +133,81 @@ struct JKRArchive {
 // Forward References:
 // 
 
-void dMeter2Info_getNowLifeGauge();
-void dMeter2Info_getNumberTextureName(int);
-void dMeter2Info_getPlusTextureName();
-void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, ResTIMG const*);
-void dMeter2Info_setCloth(u8, bool);
-void dMeter2Info_setSword(u8, bool);
-void dMeter2Info_setShield(u8, bool);
-bool dMeter2Info_is2DActiveTouchArea();
-void dMeter2Info_isMapOpenCheck();
-void dMeter2Info_isItemOpenCheck();
-void dMeter2Info_getRecieveLetterNum();
-void dMeter2Info_getNewLetterNum();
-void dMeter2Info_setNewLetterSender();
-void dMeter2Info_recieveLetter();
-void dMeter2Info_set2DVibration();
-void dMeter2Info_set2DVibrationM();
-extern "C" void __sinit_d_meter2_info_cpp();
+void dMeter2Info_getNowLifeGauge(); // 2
+void dMeter2Info_getNumberTextureName(int); // 2
+void dMeter2Info_getPlusTextureName(); // 2
+void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, ResTIMG const*); // 2
+void dMeter2Info_setCloth(u8, bool); // 2
+void dMeter2Info_setSword(u8, bool); // 2
+void dMeter2Info_setShield(u8, bool); // 2
+bool dMeter2Info_is2DActiveTouchArea(); // 2
+void dMeter2Info_isMapOpenCheck(); // 2
+void dMeter2Info_isItemOpenCheck(); // 2
+void dMeter2Info_getRecieveLetterNum(); // 2
+void dMeter2Info_getNewLetterNum(); // 2
+void dMeter2Info_setNewLetterSender(); // 2
+void dMeter2Info_recieveLetter(); // 2
+void dMeter2Info_set2DVibration(); // 2
+void dMeter2Info_set2DVibrationM(); // 2
+extern "C" void __sinit_d_meter2_info_cpp(); // 1
 
-extern "C" void __ct__13dMeter2Info_cFv();
-extern "C" void __dt__13dMeter2Info_cFv();
-extern "C" void init__13dMeter2Info_cFv();
-extern "C" void setFloatingMessage__13dMeter2Info_cFUssb();
-extern "C" void setFloatingFlow__13dMeter2Info_cFUssb();
-extern "C" void isFloatingMessageVisible__13dMeter2Info_cFv();
-extern "C" void decFloatingMessageTimer__13dMeter2Info_cFv();
-extern "C" void resetFloatingMessage__13dMeter2Info_cFv();
-extern "C" void decMsgKeyWaitTimer__13dMeter2Info_cFv();
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc();
-extern "C" void getFont__10J2DTextBoxCFv();
-extern "C" void getStringLength__13dMeter2Info_cFP7JUTFontffPc();
-extern "C" void onDirectUseItem__13dMeter2Info_cFi();
-extern "C" void isDirectUseItem__13dMeter2Info_cFi();
-extern "C" void setMeterString__13dMeter2Info_cFl();
-extern "C" void resetWarpStatus__13dMeter2Info_cFv();
-extern "C" void warpInProc__13dMeter2Info_cFv();
-extern "C" void warpOutProc__13dMeter2Info_cFv();
-extern "C" void resetMeterString__13dMeter2Info_cFv();
-extern "C" void setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc();
-extern "C" void getItemType__13dMeter2Info_cFUc();
-extern "C" void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
-extern "C" void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture();
-extern "C" void get2ndTexture__13dMeter2Info_cFUc();
-extern "C" void get3rdTexture__13dMeter2Info_cFUc();
-extern "C" void get4thTexture__13dMeter2Info_cFUc();
-extern "C" void set1stColor__13dMeter2Info_cFUcP10J2DPicture();
-extern "C" void set2ndColor__13dMeter2Info_cFUcP10J2DPicture();
-extern "C" void set3rdColor__13dMeter2Info_cFUcP10J2DPicture();
-extern "C" void set4thColor__13dMeter2Info_cFUcP10J2DPicture();
-extern "C" void setHotSpringTimer__13dMeter2Info_cFUc();
-extern "C" void decHotSpringTimer__13dMeter2Info_cFv();
-extern "C" void changeWater__13dMeter2Info_cFUc();
-extern "C" void setMiniGameItem__13dMeter2Info_cFUc();
-extern "C" void resetMiniGameItem__13dMeter2Info_cFb();
-extern "C" void setMiniGameCount__13dMeter2Info_cFSc();
-extern "C" void setSaveStageName__13dMeter2Info_cFPCc();
-extern "C" void dMeter2Info_getNowLifeGauge__Fv();
-extern "C" void dMeter2Info_getNumberTextureName__Fi();
-extern "C" void dMeter2Info_getPlusTextureName__Fv();
-extern "C" void dMeter2Info_getPixel__FffffffPC7ResTIMG();
-extern "C" void dMeter2Info_setCloth__FUcb();
-extern "C" void dMeter2Info_setSword__FUcb();
-extern "C" void dMeter2Info_setShield__FUcb();
-extern "C" bool dMeter2Info_is2DActiveTouchArea__Fv();
-extern "C" void dMeter2Info_isMapOpenCheck__Fv();
-extern "C" void dMeter2Info_isItemOpenCheck__Fv();
-extern "C" void dMeter2Info_getRecieveLetterNum__Fv();
-extern "C" void dMeter2Info_getNewLetterNum__Fv();
-extern "C" void dMeter2Info_setNewLetterSender__Fv();
-extern "C" void dMeter2Info_recieveLetter__Fv();
-extern "C" void dMeter2Info_set2DVibration__Fv();
-extern "C" void dMeter2Info_set2DVibrationM__Fv();
-extern "C" void __sinit_d_meter2_info_cpp();
+extern "C" void __ct__13dMeter2Info_cFv(); // 1
+extern "C" void __dt__13dMeter2Info_cFv(); // 1
+extern "C" void init__13dMeter2Info_cFv(); // 1
+extern "C" void setFloatingMessage__13dMeter2Info_cFUssb(); // 1
+extern "C" void setFloatingFlow__13dMeter2Info_cFUssb(); // 1
+extern "C" void isFloatingMessageVisible__13dMeter2Info_cFv(); // 1
+extern "C" void decFloatingMessageTimer__13dMeter2Info_cFv(); // 1
+extern "C" void resetFloatingMessage__13dMeter2Info_cFv(); // 1
+extern "C" void decMsgKeyWaitTimer__13dMeter2Info_cFv(); // 1
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc(); // 1
+extern "C" void getFont__10J2DTextBoxCFv(); // 1
+extern "C" void getStringLength__13dMeter2Info_cFP7JUTFontffPc(); // 1
+extern "C" void onDirectUseItem__13dMeter2Info_cFi(); // 1
+extern "C" void isDirectUseItem__13dMeter2Info_cFi(); // 1
+extern "C" void setMeterString__13dMeter2Info_cFl(); // 1
+extern "C" void resetWarpStatus__13dMeter2Info_cFv(); // 1
+extern "C" void warpInProc__13dMeter2Info_cFv(); // 1
+extern "C" void warpOutProc__13dMeter2Info_cFv(); // 1
+extern "C" void resetMeterString__13dMeter2Info_cFv(); // 1
+extern "C" void setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc(); // 1
+extern "C" void getItemType__13dMeter2Info_cFUc(); // 1
+extern "C" void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei(); // 1
+extern "C" void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture(); // 1
+extern "C" void get2ndTexture__13dMeter2Info_cFUc(); // 1
+extern "C" void get3rdTexture__13dMeter2Info_cFUc(); // 1
+extern "C" void get4thTexture__13dMeter2Info_cFUc(); // 1
+extern "C" void set1stColor__13dMeter2Info_cFUcP10J2DPicture(); // 1
+extern "C" void set2ndColor__13dMeter2Info_cFUcP10J2DPicture(); // 1
+extern "C" void set3rdColor__13dMeter2Info_cFUcP10J2DPicture(); // 1
+extern "C" void set4thColor__13dMeter2Info_cFUcP10J2DPicture(); // 1
+extern "C" void setHotSpringTimer__13dMeter2Info_cFUc(); // 1
+extern "C" void decHotSpringTimer__13dMeter2Info_cFv(); // 1
+extern "C" void changeWater__13dMeter2Info_cFUc(); // 1
+extern "C" void setMiniGameItem__13dMeter2Info_cFUc(); // 1
+extern "C" void resetMiniGameItem__13dMeter2Info_cFb(); // 1
+extern "C" void setMiniGameCount__13dMeter2Info_cFSc(); // 1
+extern "C" void setSaveStageName__13dMeter2Info_cFPCc(); // 1
+extern "C" void dMeter2Info_getNowLifeGauge__Fv(); // 1
+extern "C" void dMeter2Info_getNumberTextureName__Fi(); // 1
+extern "C" void dMeter2Info_getPlusTextureName__Fv(); // 1
+extern "C" void dMeter2Info_getPixel__FffffffPC7ResTIMG(); // 1
+extern "C" void dMeter2Info_setCloth__FUcb(); // 1
+extern "C" void dMeter2Info_setSword__FUcb(); // 1
+extern "C" void dMeter2Info_setShield__FUcb(); // 1
+extern "C" bool dMeter2Info_is2DActiveTouchArea__Fv(); // 1
+extern "C" void dMeter2Info_isMapOpenCheck__Fv(); // 1
+extern "C" void dMeter2Info_isItemOpenCheck__Fv(); // 1
+extern "C" void dMeter2Info_getRecieveLetterNum__Fv(); // 1
+extern "C" void dMeter2Info_getNewLetterNum__Fv(); // 1
+extern "C" void dMeter2Info_setNewLetterSender__Fv(); // 1
+extern "C" void dMeter2Info_recieveLetter__Fv(); // 1
+extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
+extern "C" void dMeter2Info_set2DVibrationM__Fv(); // 1
+extern "C" void __sinit_d_meter2_info_cpp(); // 1
 SECTION_RODATA extern const u8 data_80398A78[148];
 SECTION_RODATA extern const u8 data_80398B0C[148];
 SECTION_RODATA extern const u8 data_80398BA0[148];
@@ -321,81 +243,81 @@ SECTION_SDATA2 extern f64 lit_5206;
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-void dComIfGs_setSelectItemIndex(int, u8);
-void dComIfGs_setMixItemIndex(int, u8);
-void dComIfGs_getMixItemIndex(int);
-void dComIfGp_setSelectItem(int);
-void dComIfGs_setSelectEquipClothes(u8);
-void dComIfGs_setSelectEquipSword(u8);
-void dComIfGs_setSelectEquipShield(u8);
-void dComIfGs_setWarpItemData(char const*, cXyz, s16, s8, u8, u8);
-void dComIfGs_setWarpMarkFlag(u8);
-void daNpcF_getPlayerInfoFromPlayerList(int, int, cXyz&, csXyz&);
-void operator delete(void*);
-extern "C" void DCStoreRangeNoSync();
-extern "C" void __register_global_object();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void strcpy();
+SECTION_INIT void memcpy(); // 1
+void dComIfGs_setSelectItemIndex(int, u8); // 2
+void dComIfGs_setMixItemIndex(int, u8); // 2
+void dComIfGs_getMixItemIndex(int); // 2
+void dComIfGp_setSelectItem(int); // 2
+void dComIfGs_setSelectEquipClothes(u8); // 2
+void dComIfGs_setSelectEquipSword(u8); // 2
+void dComIfGs_setSelectEquipShield(u8); // 2
+void dComIfGs_setWarpItemData(char const*, cXyz, s16, s8, u8, u8); // 2
+void dComIfGs_setWarpMarkFlag(u8); // 2
+void daNpcF_getPlayerInfoFromPlayerList(int, int, cXyz&, csXyz&); // 2
+void operator delete(void*); // 2
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void dComIfGs_setSelectItemIndex__FiUc();
-extern "C" void dComIfGs_setMixItemIndex__FiUc();
-extern "C" void dComIfGs_getMixItemIndex__Fi();
-extern "C" void dComIfGp_setSelectItem__Fi();
-extern "C" void dComIfGs_setSelectEquipClothes__FUc();
-extern "C" void dComIfGs_setSelectEquipSword__FUc();
-extern "C" void dComIfGs_setSelectEquipShield__FUc();
-extern "C" void dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc();
-extern "C" void dComIfGs_setWarpMarkFlag__FUc();
-extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi();
-extern "C" void setItem__17dSv_player_item_cFiUc();
-extern "C" void getItem__17dSv_player_item_cCFib();
-extern "C" void offFirstBit__21dSv_player_get_item_cFUc();
-extern "C" void setBombNum__24dSv_player_item_record_cFUcUc();
-extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
-extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc();
-extern "C" void onLetterGetFlag__17dSv_letter_info_cFi();
-extern "C" void isLetterGetFlag__17dSv_letter_info_cCFi();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz();
-extern "C" void isMapOpenCheck__11dMeterMap_cFv();
-extern "C" void setLetterNameID__12dMsgObject_cFUs();
-extern "C" void __ct__10dMsgFlow_cFv();
-extern "C" void __dt__10dMsgFlow_cFv();
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
-extern "C" void getMsgNo__10dMsgFlow_cFv();
-extern "C" void __ct__5csXyzFsss();
-extern "C" void __dl__FPv();
-extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
-extern "C" void readIdxResource__10JKRArchiveFPvUlUl();
-extern "C" void DCStoreRangeNoSync();
-extern "C" void __register_global_object();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void strcpy();
+SECTION_INIT void memcpy(); // 1
+extern "C" void dComIfGs_setSelectItemIndex__FiUc(); // 1
+extern "C" void dComIfGs_setMixItemIndex__FiUc(); // 1
+extern "C" void dComIfGs_getMixItemIndex__Fi(); // 1
+extern "C" void dComIfGp_setSelectItem__Fi(); // 1
+extern "C" void dComIfGs_setSelectEquipClothes__FUc(); // 1
+extern "C" void dComIfGs_setSelectEquipSword__FUc(); // 1
+extern "C" void dComIfGs_setSelectEquipShield__FUc(); // 1
+extern "C" void dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc(); // 1
+extern "C" void dComIfGs_setWarpMarkFlag__FUc(); // 1
+extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi(); // 1
+extern "C" void setItem__17dSv_player_item_cFiUc(); // 1
+extern "C" void getItem__17dSv_player_item_cCFib(); // 1
+extern "C" void offFirstBit__21dSv_player_get_item_cFUc(); // 1
+extern "C" void setBombNum__24dSv_player_item_record_cFUcUc(); // 1
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc(); // 1
+extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc(); // 1
+extern "C" void onLetterGetFlag__17dSv_letter_info_cFi(); // 1
+extern "C" void isLetterGetFlag__17dSv_letter_info_cCFi(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz(); // 1
+extern "C" void isMapOpenCheck__11dMeterMap_cFv(); // 1
+extern "C" void setLetterNameID__12dMsgObject_cFUs(); // 1
+extern "C" void __ct__10dMsgFlow_cFv(); // 1
+extern "C" void __dt__10dMsgFlow_cFv(); // 1
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
+extern "C" void getMsgNo__10dMsgFlow_cFv(); // 1
+extern "C" void __ct__5csXyzFsss(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive(); // 1
+extern "C" void readIdxResource__10JKRArchiveFPvUlUl(); // 1
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_DATA extern void*item_resource__10dItem_data[1530];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];

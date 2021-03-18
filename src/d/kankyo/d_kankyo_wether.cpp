@@ -9,198 +9,119 @@
 // Types:
 // 
 
-// build J3DPacket (['J3DPacket']) False/False
-// build J3DDrawBuffer (['J3DDrawBuffer']) False/False
-// build J3DPacket (['J3DPacket']) True/False
 struct J3DPacket;
-/* top-level dependencies (begin ['J3DDrawBuffer']) */
-// outer dependency: ('J3DPacket',)
-/* top-level dependencies (end ['J3DDrawBuffer']) */
 struct J3DDrawBuffer {
-	// ('J3DPacket',)
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
 };
 
-/* top-level dependencies (begin ['J3DPacket']) */
-// outer dependency: ('J3DDrawBuffer',)
-/* top-level dependencies (end ['J3DPacket']) */
 struct J3DPacket {
-	// ('J3DDrawBuffer',)
 	/* 80312750 */ bool entry(J3DDrawBuffer*);
 };
 
-// build dKankyo_sun_Packet (['dKankyo_sun_Packet']) False/False
-/* top-level dependencies (begin ['dKankyo_sun_Packet']) */
-/* top-level dependencies (end ['dKankyo_sun_Packet']) */
 struct dKankyo_sun_Packet {
 	/* 80056C60 */ void draw();
 	/* 80058128 */ ~dKankyo_sun_Packet();
 };
 
-// build dKankyo_sunlenz_Packet (['dKankyo_sunlenz_Packet']) False/False
-/* top-level dependencies (begin ['dKankyo_sunlenz_Packet']) */
-/* top-level dependencies (end ['dKankyo_sunlenz_Packet']) */
 struct dKankyo_sunlenz_Packet {
 	/* 80056C98 */ void draw();
 	/* 800580A4 */ ~dKankyo_sunlenz_Packet();
 };
 
-// build RAIN_EFF (['RAIN_EFF']) False/False
-/* top-level dependencies (begin ['RAIN_EFF']) */
-/* top-level dependencies (end ['RAIN_EFF']) */
 struct RAIN_EFF {
 	/* 80056CD0 */ ~RAIN_EFF();
 	/* 80056D0C */ RAIN_EFF();
 };
 
-// build dKankyo_rain_Packet (['dKankyo_rain_Packet']) False/False
-/* top-level dependencies (begin ['dKankyo_rain_Packet']) */
-/* top-level dependencies (end ['dKankyo_rain_Packet']) */
 struct dKankyo_rain_Packet {
 	/* 80056D10 */ void draw();
 	/* 80058020 */ ~dKankyo_rain_Packet();
 };
 
-// build SNOW_EFF (['SNOW_EFF']) False/False
-/* top-level dependencies (begin ['SNOW_EFF']) */
-/* top-level dependencies (end ['SNOW_EFF']) */
 struct SNOW_EFF {
 	/* 80056D58 */ ~SNOW_EFF();
 	/* 80056D94 */ SNOW_EFF();
 };
 
-// build dKankyo_snow_Packet (['dKankyo_snow_Packet']) False/False
-/* top-level dependencies (begin ['dKankyo_snow_Packet']) */
-/* top-level dependencies (end ['dKankyo_snow_Packet']) */
 struct dKankyo_snow_Packet {
 	/* 80056D98 */ void draw();
 	/* 80057F9C */ ~dKankyo_snow_Packet();
 };
 
-// build STAR_EFF (['STAR_EFF']) False/False
-/* top-level dependencies (begin ['STAR_EFF']) */
-/* top-level dependencies (end ['STAR_EFF']) */
 struct STAR_EFF {
 	/* 80056DC8 */ ~STAR_EFF();
 	/* 80056E04 */ STAR_EFF();
 };
 
-// build dKankyo_star_Packet (['dKankyo_star_Packet']) False/False
-/* top-level dependencies (begin ['dKankyo_star_Packet']) */
-/* top-level dependencies (end ['dKankyo_star_Packet']) */
 struct dKankyo_star_Packet {
 	/* 80056E08 */ void draw();
 	/* 80057F18 */ ~dKankyo_star_Packet();
 };
 
-// build CLOUD_EFF (['CLOUD_EFF']) False/False
-/* top-level dependencies (begin ['CLOUD_EFF']) */
-/* top-level dependencies (end ['CLOUD_EFF']) */
 struct CLOUD_EFF {
 	/* 80056E38 */ ~CLOUD_EFF();
 	/* 80056E74 */ CLOUD_EFF();
 };
 
-// build dKankyo_cloud_Packet (['dKankyo_cloud_Packet']) False/False
-/* top-level dependencies (begin ['dKankyo_cloud_Packet']) */
-/* top-level dependencies (end ['dKankyo_cloud_Packet']) */
 struct dKankyo_cloud_Packet {
 	/* 80056E78 */ void draw();
 	/* 80057E10 */ ~dKankyo_cloud_Packet();
 };
 
-// build HOUSI_EFF (['HOUSI_EFF']) False/False
-/* top-level dependencies (begin ['HOUSI_EFF']) */
-/* top-level dependencies (end ['HOUSI_EFF']) */
 struct HOUSI_EFF {
 	/* 80056EA8 */ ~HOUSI_EFF();
 	/* 80056EE4 */ HOUSI_EFF();
 };
 
-// build dKankyo_housi_Packet (['dKankyo_housi_Packet']) False/False
-/* top-level dependencies (begin ['dKankyo_housi_Packet']) */
-/* top-level dependencies (end ['dKankyo_housi_Packet']) */
 struct dKankyo_housi_Packet {
 	/* 80056EE8 */ void draw();
 	/* 80057E94 */ ~dKankyo_housi_Packet();
 };
 
-// build VRKUMO_EFF (['VRKUMO_EFF']) False/False
-/* top-level dependencies (begin ['VRKUMO_EFF']) */
-/* top-level dependencies (end ['VRKUMO_EFF']) */
 struct VRKUMO_EFF {
 	/* 80056F18 */ ~VRKUMO_EFF();
 	/* 80056F54 */ VRKUMO_EFF();
 };
 
-// build dKankyo_vrkumo_Packet (['dKankyo_vrkumo_Packet']) False/False
-/* top-level dependencies (begin ['dKankyo_vrkumo_Packet']) */
-/* top-level dependencies (end ['dKankyo_vrkumo_Packet']) */
 struct dKankyo_vrkumo_Packet {
 	/* 80056F58 */ void draw();
 	/* 8005820C */ ~dKankyo_vrkumo_Packet();
 };
 
-// build EF_ODOUR_EFF (['EF_ODOUR_EFF']) False/False
-/* top-level dependencies (begin ['EF_ODOUR_EFF']) */
-/* top-level dependencies (end ['EF_ODOUR_EFF']) */
 struct EF_ODOUR_EFF {
 	/* 80056F8C */ ~EF_ODOUR_EFF();
 	/* 80056FC8 */ EF_ODOUR_EFF();
 };
 
-// build dKankyo_odour_Packet (['dKankyo_odour_Packet']) False/False
-/* top-level dependencies (begin ['dKankyo_odour_Packet']) */
-/* top-level dependencies (end ['dKankyo_odour_Packet']) */
 struct dKankyo_odour_Packet {
 	/* 80056FCC */ void draw();
 	/* 80057D8C */ ~dKankyo_odour_Packet();
 };
 
-// build EF_MUD_EFF (['EF_MUD_EFF']) False/False
-/* top-level dependencies (begin ['EF_MUD_EFF']) */
-/* top-level dependencies (end ['EF_MUD_EFF']) */
 struct EF_MUD_EFF {
 	/* 80056FFC */ ~EF_MUD_EFF();
 	/* 80057038 */ EF_MUD_EFF();
 };
 
-// build dKankyo_mud_Packet (['dKankyo_mud_Packet']) False/False
-/* top-level dependencies (begin ['dKankyo_mud_Packet']) */
-/* top-level dependencies (end ['dKankyo_mud_Packet']) */
 struct dKankyo_mud_Packet {
 	/* 8005703C */ void draw();
 	/* 80057D08 */ ~dKankyo_mud_Packet();
 };
 
-// build EF_EVIL_EFF (['EF_EVIL_EFF']) False/False
-/* top-level dependencies (begin ['EF_EVIL_EFF']) */
-/* top-level dependencies (end ['EF_EVIL_EFF']) */
 struct EF_EVIL_EFF {
 	/* 8005706C */ ~EF_EVIL_EFF();
 	/* 800570A8 */ EF_EVIL_EFF();
 };
 
-// build dKankyo_evil_Packet (['dKankyo_evil_Packet']) False/False
-/* top-level dependencies (begin ['dKankyo_evil_Packet']) */
-/* top-level dependencies (end ['dKankyo_evil_Packet']) */
 struct dKankyo_evil_Packet {
 	/* 800570AC */ void draw();
 	/* 80057C84 */ ~dKankyo_evil_Packet();
 };
 
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80009184 */ ~cXyz();
 	/* 800125DC */ cXyz();
 	/* 80266AE4 */ void operator+(Vec const&) const;
@@ -209,316 +130,245 @@ struct cXyz {
 	/* 8026706C */ bool operator!=(Vec const&) const;
 };
 
-// build WIND_INFLUENCE (['WIND_INFLUENCE']) False/False
-/* top-level dependencies (begin ['WIND_INFLUENCE']) */
-/* top-level dependencies (end ['WIND_INFLUENCE']) */
 struct WIND_INFLUENCE {
 };
 
-// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
-/* top-level dependencies (begin ['dStage_roomControl_c']) */
-/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
-// build dComIfG_play_c (['dComIfG_play_c']) False/False
-/* top-level dependencies (begin ['dComIfG_play_c']) */
-/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build dPa_control_c (['dPa_control_c']) False/False
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
-struct csXyz {
-};
-
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
-// build cXyz (['cXyz']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) False/False
-/* top-level dependencies (begin ['dPa_levelEcallBack']) */
-/* top-level dependencies (end ['dPa_levelEcallBack']) */
 struct dPa_levelEcallBack {
 };
 
-/* top-level dependencies (begin ['dPa_control_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('_GXColor',)
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dPa_levelEcallBack',)
-/* top-level dependencies (end ['dPa_control_c']) */
+struct dKy_tevstr_c {
+};
+
 struct dPa_control_c {
-	// ('_GXColor',)
-	// ('dKy_tevstr_c',)
-	// ('dPa_levelEcallBack',)
-	// ('csXyz',)
-	// ('cXyz',)
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build csXyz (['csXyz']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) True/True
-// build _GXColor (['_GXColor']) True/True
-// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
-/* top-level dependencies (begin ['dScnKy_env_light_c']) */
-/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
 	/* 8019FA08 */ void getDaytime();
 };
 
-// build Vec (['Vec']) True/True
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) True/True
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['Z2EnvSeMgr']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
-	// ('Vec',)
 	/* 802C7830 */ void startRainSe(s32, s8);
 	/* 802C7FBC */ void initStrongWindSe();
 	/* 802C7FC8 */ void setWindDirection(Vec*);
 	/* 802C800C */ void startStrongWindSe(s8);
 };
 
-// build J3DDrawBuffer (['J3DDrawBuffer']) True/True
 // 
 // Forward References:
 // 
 
-static void dKyw_setDrawPacketList(J3DPacket*, int);
-static void dKyw_setDrawPacketListIndScreen(J3DPacket*, int);
-static void dKyw_setDrawPacketListSky(J3DPacket*, int);
-static void dKyw_setDrawPacketListXluBg(J3DPacket*, int);
-static void dKyw_drawSun(int);
-static void dKyw_Sun_Draw();
-static void dKyw_drawSunlenz(int);
-static void dKyw_Sunlenz_Draw();
-static void dKyw_drawRain(int);
-static void dKyw_Rain_Draw();
-static void dKyw_drawSnow(int);
-static void dKyw_Snow_Draw();
-static void dKyw_drawStar(int);
-static void dKyw_Star_Draw();
-static void dKyw_drawHousi(int);
-static void dKyw_Housi_Draw();
-static void dKyw_drawCloud(int);
-static void dKyw_Cloud_Draw();
-static void dKyw_drawVrkumo(int);
-static void dKyw_Vrkumo_Draw();
-static void dKyw_shstar_packet(int);
-static void dKyw_shstar_Draw();
-static void dKyw_odour_packet(int);
-static void dKyw_Odour_Draw();
-static void dKyw_mud_packet(int);
-static void dKyw_mud_Draw();
-static void dKyw_evil_packet(int);
-static void dKyw_evil_Draw();
-void dKyw_wether_init();
-void dKyw_wether_init2();
-void dKyw_wether_delete();
-void dKyw_wether_delete2();
-static void wether_move_thunder();
-void dKyw_wether_move();
-static void wether_move_sun();
-static void wether_move_rain();
-static void wether_move_snow();
-static void wether_move_star();
-static void wether_move_housi();
-static void wether_move_odour();
-static void wether_move_moya();
-static void wether_move_vrkumo();
-static void wether_move_mud();
-static void wether_move_evil();
-void dKyw_wether_move_draw();
-void dKyw_wether_move_draw2();
-void dKyw_wether_draw();
-void dKyw_wether_draw2();
-void dKyw_wether_proc();
-static void dKyw_wind_init();
-void dKyw_wind_set();
-void dKyw_get_wind_vec();
-void dKyw_get_wind_pow();
-void dKyw_get_wind_vecpow();
-void dKyw_plight_collision_set(cXyz*, s16, s16, f32, f32, f32, f32, f32);
-static void squal_proc();
-static void dKyw_pntwind_init();
-static void pntwind_set(WIND_INFLUENCE*);
-void dKyw_pntwind_set(WIND_INFLUENCE*);
-static void dKyw_pntlight_set(WIND_INFLUENCE*);
-static void dKyw_pntwind_cut(WIND_INFLUENCE*);
-static void pntwind_get_info(cXyz*, cXyz*, f32*, u8);
-static void dKyw_pntwind_get_info(cXyz*, cXyz*, f32*);
-void dKyw_pntlight_collision_get_info(cXyz*, cXyz*, f32*);
-void dKyw_pntwind_get_vecpow(cXyz*);
-void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*);
-void dKyw_get_AllWind_vecpow(cXyz*);
-void dKyw_custom_windpower(f32);
-void dKyw_evt_wind_set(s16, s16);
-void dKyw_evt_wind_set_go();
-void dKyw_rain_set(int);
+static void dKyw_setDrawPacketList(J3DPacket*, int); // 2
+static void dKyw_setDrawPacketListIndScreen(J3DPacket*, int); // 2
+static void dKyw_setDrawPacketListSky(J3DPacket*, int); // 2
+static void dKyw_setDrawPacketListXluBg(J3DPacket*, int); // 2
+static void dKyw_drawSun(int); // 2
+static void dKyw_Sun_Draw(); // 2
+static void dKyw_drawSunlenz(int); // 2
+static void dKyw_Sunlenz_Draw(); // 2
+static void dKyw_drawRain(int); // 2
+static void dKyw_Rain_Draw(); // 2
+static void dKyw_drawSnow(int); // 2
+static void dKyw_Snow_Draw(); // 2
+static void dKyw_drawStar(int); // 2
+static void dKyw_Star_Draw(); // 2
+static void dKyw_drawHousi(int); // 2
+static void dKyw_Housi_Draw(); // 2
+static void dKyw_drawCloud(int); // 2
+static void dKyw_Cloud_Draw(); // 2
+static void dKyw_drawVrkumo(int); // 2
+static void dKyw_Vrkumo_Draw(); // 2
+static void dKyw_shstar_packet(int); // 2
+static void dKyw_shstar_Draw(); // 2
+static void dKyw_odour_packet(int); // 2
+static void dKyw_Odour_Draw(); // 2
+static void dKyw_mud_packet(int); // 2
+static void dKyw_mud_Draw(); // 2
+static void dKyw_evil_packet(int); // 2
+static void dKyw_evil_Draw(); // 2
+void dKyw_wether_init(); // 2
+void dKyw_wether_init2(); // 2
+void dKyw_wether_delete(); // 2
+void dKyw_wether_delete2(); // 2
+static void wether_move_thunder(); // 2
+void dKyw_wether_move(); // 2
+static void wether_move_sun(); // 2
+static void wether_move_rain(); // 2
+static void wether_move_snow(); // 2
+static void wether_move_star(); // 2
+static void wether_move_housi(); // 2
+static void wether_move_odour(); // 2
+static void wether_move_moya(); // 2
+static void wether_move_vrkumo(); // 2
+static void wether_move_mud(); // 2
+static void wether_move_evil(); // 2
+void dKyw_wether_move_draw(); // 2
+void dKyw_wether_move_draw2(); // 2
+void dKyw_wether_draw(); // 2
+void dKyw_wether_draw2(); // 2
+void dKyw_wether_proc(); // 2
+static void dKyw_wind_init(); // 2
+void dKyw_wind_set(); // 2
+void dKyw_get_wind_vec(); // 2
+void dKyw_get_wind_pow(); // 2
+void dKyw_get_wind_vecpow(); // 2
+void dKyw_plight_collision_set(cXyz*, s16, s16, f32, f32, f32, f32, f32); // 2
+static void squal_proc(); // 2
+static void dKyw_pntwind_init(); // 2
+static void pntwind_set(WIND_INFLUENCE*); // 2
+void dKyw_pntwind_set(WIND_INFLUENCE*); // 2
+static void dKyw_pntlight_set(WIND_INFLUENCE*); // 2
+static void dKyw_pntwind_cut(WIND_INFLUENCE*); // 2
+static void pntwind_get_info(cXyz*, cXyz*, f32*, u8); // 2
+static void dKyw_pntwind_get_info(cXyz*, cXyz*, f32*); // 2
+void dKyw_pntlight_collision_get_info(cXyz*, cXyz*, f32*); // 2
+void dKyw_pntwind_get_vecpow(cXyz*); // 2
+void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*); // 2
+void dKyw_get_AllWind_vecpow(cXyz*); // 2
+void dKyw_custom_windpower(f32); // 2
+void dKyw_evt_wind_set(s16, s16); // 2
+void dKyw_evt_wind_set_go(); // 2
+void dKyw_rain_set(int); // 2
 
-extern "C" static void dKyw_setDrawPacketList__FP9J3DPacketi();
-extern "C" static void dKyw_setDrawPacketListIndScreen__FP9J3DPacketi();
-extern "C" static void dKyw_setDrawPacketListSky__FP9J3DPacketi();
-extern "C" static void dKyw_setDrawPacketListXluBg__FP9J3DPacketi();
-extern "C" void draw__18dKankyo_sun_PacketFv();
-extern "C" void draw__22dKankyo_sunlenz_PacketFv();
-extern "C" void __dt__8RAIN_EFFFv();
-extern "C" void __ct__8RAIN_EFFFv();
-extern "C" void draw__19dKankyo_rain_PacketFv();
-extern "C" void __dt__8SNOW_EFFFv();
-extern "C" void __ct__8SNOW_EFFFv();
-extern "C" void draw__19dKankyo_snow_PacketFv();
-extern "C" void __dt__8STAR_EFFFv();
-extern "C" void __ct__8STAR_EFFFv();
-extern "C" void draw__19dKankyo_star_PacketFv();
-extern "C" void __dt__9CLOUD_EFFFv();
-extern "C" void __ct__9CLOUD_EFFFv();
-extern "C" void draw__20dKankyo_cloud_PacketFv();
-extern "C" void __dt__9HOUSI_EFFFv();
-extern "C" void __ct__9HOUSI_EFFFv();
-extern "C" void draw__20dKankyo_housi_PacketFv();
-extern "C" void __dt__10VRKUMO_EFFFv();
-extern "C" void __ct__10VRKUMO_EFFFv();
-extern "C" void draw__21dKankyo_vrkumo_PacketFv();
-extern "C" void __dt__12EF_ODOUR_EFFFv();
-extern "C" void __ct__12EF_ODOUR_EFFFv();
-extern "C" void draw__20dKankyo_odour_PacketFv();
-extern "C" void __dt__10EF_MUD_EFFFv();
-extern "C" void __ct__10EF_MUD_EFFFv();
-extern "C" void draw__18dKankyo_mud_PacketFv();
-extern "C" void __dt__11EF_EVIL_EFFFv();
-extern "C" void __ct__11EF_EVIL_EFFFv();
-extern "C" void draw__19dKankyo_evil_PacketFv();
-extern "C" static void dKyw_drawSun__Fi();
-extern "C" static void dKyw_Sun_Draw__Fv();
-extern "C" static void dKyw_drawSunlenz__Fi();
-extern "C" static void dKyw_Sunlenz_Draw__Fv();
-extern "C" static void dKyw_drawRain__Fi();
-extern "C" static void dKyw_Rain_Draw__Fv();
-extern "C" static void dKyw_drawSnow__Fi();
-extern "C" static void dKyw_Snow_Draw__Fv();
-extern "C" static void dKyw_drawStar__Fi();
-extern "C" static void dKyw_Star_Draw__Fv();
-extern "C" static void dKyw_drawHousi__Fi();
-extern "C" static void dKyw_Housi_Draw__Fv();
-extern "C" static void dKyw_drawCloud__Fi();
-extern "C" static void dKyw_Cloud_Draw__Fv();
-extern "C" static void dKyw_drawVrkumo__Fi();
-extern "C" static void dKyw_Vrkumo_Draw__Fv();
-extern "C" static void dKyw_shstar_packet__Fi();
-extern "C" static void dKyw_shstar_Draw__Fv();
-extern "C" static void dKyw_odour_packet__Fi();
-extern "C" static void dKyw_Odour_Draw__Fv();
-extern "C" static void dKyw_mud_packet__Fi();
-extern "C" static void dKyw_mud_Draw__Fv();
-extern "C" static void dKyw_evil_packet__Fi();
-extern "C" static void dKyw_evil_Draw__Fv();
-extern "C" void dKyw_wether_init__Fv();
-extern "C" void dKyw_wether_init2__Fv();
-extern "C" void dKyw_wether_delete__Fv();
-extern "C" void __dt__19dKankyo_evil_PacketFv();
-extern "C" void __dt__18dKankyo_mud_PacketFv();
-extern "C" void __dt__20dKankyo_odour_PacketFv();
-extern "C" void __dt__20dKankyo_cloud_PacketFv();
-extern "C" void __dt__20dKankyo_housi_PacketFv();
-extern "C" void __dt__19dKankyo_star_PacketFv();
-extern "C" void __dt__19dKankyo_snow_PacketFv();
-extern "C" void __dt__19dKankyo_rain_PacketFv();
-extern "C" void __dt__22dKankyo_sunlenz_PacketFv();
-extern "C" void __dt__18dKankyo_sun_PacketFv();
-extern "C" void dKyw_wether_delete2__Fv();
-extern "C" void __dt__21dKankyo_vrkumo_PacketFv();
-extern "C" static void wether_move_thunder__Fv();
-extern "C" void dKyw_wether_move__Fv();
-extern "C" static void wether_move_sun__Fv();
-extern "C" static void wether_move_rain__Fv();
-extern "C" static void wether_move_snow__Fv();
-extern "C" static void wether_move_star__Fv();
-extern "C" static void wether_move_housi__Fv();
-extern "C" static void wether_move_odour__Fv();
-extern "C" static void wether_move_moya__Fv();
-extern "C" static void wether_move_vrkumo__Fv();
-extern "C" static void wether_move_mud__Fv();
-extern "C" static void wether_move_evil__Fv();
-extern "C" void dKyw_wether_move_draw__Fv();
-extern "C" void dKyw_wether_move_draw2__Fv();
-extern "C" void dKyw_wether_draw__Fv();
-extern "C" void dKyw_wether_draw2__Fv();
-extern "C" void dKyw_wether_proc__Fv();
-extern "C" static void dKyw_wind_init__Fv();
-extern "C" void dKyw_wind_set__Fv();
-extern "C" void dKyw_get_wind_vec__Fv();
-extern "C" void dKyw_get_wind_pow__Fv();
-extern "C" void dKyw_get_wind_vecpow__Fv();
-extern "C" void dKyw_plight_collision_set__FP4cXyzssfffff();
-extern "C" static void squal_proc__Fv();
-extern "C" static void dKyw_pntwind_init__Fv();
-extern "C" static void pntwind_set__FP14WIND_INFLUENCE();
-extern "C" void dKyw_pntwind_set__FP14WIND_INFLUENCE();
-extern "C" static void dKyw_pntlight_set__FP14WIND_INFLUENCE();
-extern "C" static void dKyw_pntwind_cut__FP14WIND_INFLUENCE();
-extern "C" static void pntwind_get_info__FP4cXyzP4cXyzPfUc();
-extern "C" static void dKyw_pntwind_get_info__FP4cXyzP4cXyzPf();
-extern "C" void dKyw_pntlight_collision_get_info__FP4cXyzP4cXyzPf();
-extern "C" void dKyw_pntwind_get_vecpow__FP4cXyz();
-extern "C" void dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf();
-extern "C" void dKyw_get_AllWind_vecpow__FP4cXyz();
-extern "C" void dKyw_custom_windpower__Ff();
-extern "C" void dKyw_evt_wind_set__Fss();
-extern "C" void dKyw_evt_wind_set_go__Fv();
-extern "C" void dKyw_rain_set__Fi();
+extern "C" static void dKyw_setDrawPacketList__FP9J3DPacketi(); // 1
+extern "C" static void dKyw_setDrawPacketListIndScreen__FP9J3DPacketi(); // 1
+extern "C" static void dKyw_setDrawPacketListSky__FP9J3DPacketi(); // 1
+extern "C" static void dKyw_setDrawPacketListXluBg__FP9J3DPacketi(); // 1
+extern "C" void draw__18dKankyo_sun_PacketFv(); // 1
+extern "C" void draw__22dKankyo_sunlenz_PacketFv(); // 1
+extern "C" void __dt__8RAIN_EFFFv(); // 1
+extern "C" void __ct__8RAIN_EFFFv(); // 1
+extern "C" void draw__19dKankyo_rain_PacketFv(); // 1
+extern "C" void __dt__8SNOW_EFFFv(); // 1
+extern "C" void __ct__8SNOW_EFFFv(); // 1
+extern "C" void draw__19dKankyo_snow_PacketFv(); // 1
+extern "C" void __dt__8STAR_EFFFv(); // 1
+extern "C" void __ct__8STAR_EFFFv(); // 1
+extern "C" void draw__19dKankyo_star_PacketFv(); // 1
+extern "C" void __dt__9CLOUD_EFFFv(); // 1
+extern "C" void __ct__9CLOUD_EFFFv(); // 1
+extern "C" void draw__20dKankyo_cloud_PacketFv(); // 1
+extern "C" void __dt__9HOUSI_EFFFv(); // 1
+extern "C" void __ct__9HOUSI_EFFFv(); // 1
+extern "C" void draw__20dKankyo_housi_PacketFv(); // 1
+extern "C" void __dt__10VRKUMO_EFFFv(); // 1
+extern "C" void __ct__10VRKUMO_EFFFv(); // 1
+extern "C" void draw__21dKankyo_vrkumo_PacketFv(); // 1
+extern "C" void __dt__12EF_ODOUR_EFFFv(); // 1
+extern "C" void __ct__12EF_ODOUR_EFFFv(); // 1
+extern "C" void draw__20dKankyo_odour_PacketFv(); // 1
+extern "C" void __dt__10EF_MUD_EFFFv(); // 1
+extern "C" void __ct__10EF_MUD_EFFFv(); // 1
+extern "C" void draw__18dKankyo_mud_PacketFv(); // 1
+extern "C" void __dt__11EF_EVIL_EFFFv(); // 1
+extern "C" void __ct__11EF_EVIL_EFFFv(); // 1
+extern "C" void draw__19dKankyo_evil_PacketFv(); // 1
+extern "C" static void dKyw_drawSun__Fi(); // 1
+extern "C" static void dKyw_Sun_Draw__Fv(); // 1
+extern "C" static void dKyw_drawSunlenz__Fi(); // 1
+extern "C" static void dKyw_Sunlenz_Draw__Fv(); // 1
+extern "C" static void dKyw_drawRain__Fi(); // 1
+extern "C" static void dKyw_Rain_Draw__Fv(); // 1
+extern "C" static void dKyw_drawSnow__Fi(); // 1
+extern "C" static void dKyw_Snow_Draw__Fv(); // 1
+extern "C" static void dKyw_drawStar__Fi(); // 1
+extern "C" static void dKyw_Star_Draw__Fv(); // 1
+extern "C" static void dKyw_drawHousi__Fi(); // 1
+extern "C" static void dKyw_Housi_Draw__Fv(); // 1
+extern "C" static void dKyw_drawCloud__Fi(); // 1
+extern "C" static void dKyw_Cloud_Draw__Fv(); // 1
+extern "C" static void dKyw_drawVrkumo__Fi(); // 1
+extern "C" static void dKyw_Vrkumo_Draw__Fv(); // 1
+extern "C" static void dKyw_shstar_packet__Fi(); // 1
+extern "C" static void dKyw_shstar_Draw__Fv(); // 1
+extern "C" static void dKyw_odour_packet__Fi(); // 1
+extern "C" static void dKyw_Odour_Draw__Fv(); // 1
+extern "C" static void dKyw_mud_packet__Fi(); // 1
+extern "C" static void dKyw_mud_Draw__Fv(); // 1
+extern "C" static void dKyw_evil_packet__Fi(); // 1
+extern "C" static void dKyw_evil_Draw__Fv(); // 1
+extern "C" void dKyw_wether_init__Fv(); // 1
+extern "C" void dKyw_wether_init2__Fv(); // 1
+extern "C" void dKyw_wether_delete__Fv(); // 1
+extern "C" void __dt__19dKankyo_evil_PacketFv(); // 1
+extern "C" void __dt__18dKankyo_mud_PacketFv(); // 1
+extern "C" void __dt__20dKankyo_odour_PacketFv(); // 1
+extern "C" void __dt__20dKankyo_cloud_PacketFv(); // 1
+extern "C" void __dt__20dKankyo_housi_PacketFv(); // 1
+extern "C" void __dt__19dKankyo_star_PacketFv(); // 1
+extern "C" void __dt__19dKankyo_snow_PacketFv(); // 1
+extern "C" void __dt__19dKankyo_rain_PacketFv(); // 1
+extern "C" void __dt__22dKankyo_sunlenz_PacketFv(); // 1
+extern "C" void __dt__18dKankyo_sun_PacketFv(); // 1
+extern "C" void dKyw_wether_delete2__Fv(); // 1
+extern "C" void __dt__21dKankyo_vrkumo_PacketFv(); // 1
+extern "C" static void wether_move_thunder__Fv(); // 1
+extern "C" void dKyw_wether_move__Fv(); // 1
+extern "C" static void wether_move_sun__Fv(); // 1
+extern "C" static void wether_move_rain__Fv(); // 1
+extern "C" static void wether_move_snow__Fv(); // 1
+extern "C" static void wether_move_star__Fv(); // 1
+extern "C" static void wether_move_housi__Fv(); // 1
+extern "C" static void wether_move_odour__Fv(); // 1
+extern "C" static void wether_move_moya__Fv(); // 1
+extern "C" static void wether_move_vrkumo__Fv(); // 1
+extern "C" static void wether_move_mud__Fv(); // 1
+extern "C" static void wether_move_evil__Fv(); // 1
+extern "C" void dKyw_wether_move_draw__Fv(); // 1
+extern "C" void dKyw_wether_move_draw2__Fv(); // 1
+extern "C" void dKyw_wether_draw__Fv(); // 1
+extern "C" void dKyw_wether_draw2__Fv(); // 1
+extern "C" void dKyw_wether_proc__Fv(); // 1
+extern "C" static void dKyw_wind_init__Fv(); // 1
+extern "C" void dKyw_wind_set__Fv(); // 1
+extern "C" void dKyw_get_wind_vec__Fv(); // 1
+extern "C" void dKyw_get_wind_pow__Fv(); // 1
+extern "C" void dKyw_get_wind_vecpow__Fv(); // 1
+extern "C" void dKyw_plight_collision_set__FP4cXyzssfffff(); // 1
+extern "C" static void squal_proc__Fv(); // 1
+extern "C" static void dKyw_pntwind_init__Fv(); // 1
+extern "C" static void pntwind_set__FP14WIND_INFLUENCE(); // 1
+extern "C" void dKyw_pntwind_set__FP14WIND_INFLUENCE(); // 1
+extern "C" static void dKyw_pntlight_set__FP14WIND_INFLUENCE(); // 1
+extern "C" static void dKyw_pntwind_cut__FP14WIND_INFLUENCE(); // 1
+extern "C" static void pntwind_get_info__FP4cXyzP4cXyzPfUc(); // 1
+extern "C" static void dKyw_pntwind_get_info__FP4cXyzP4cXyzPf(); // 1
+extern "C" void dKyw_pntlight_collision_get_info__FP4cXyzP4cXyzPf(); // 1
+extern "C" void dKyw_pntwind_get_vecpow__FP4cXyz(); // 1
+extern "C" void dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf(); // 1
+extern "C" void dKyw_get_AllWind_vecpow__FP4cXyz(); // 1
+extern "C" void dKyw_custom_windpower__Ff(); // 1
+extern "C" void dKyw_evt_wind_set__Fss(); // 1
+extern "C" void dKyw_evt_wind_set_go__Fv(); // 1
+extern "C" void dKyw_rain_set__Fi(); // 1
 SECTION_RODATA extern const u8 d_kankyo_d_kankyo_wether__stringBase0[344];
 SECTION_DATA extern void*const __vt__19dKankyo_evil_Packet[5];
 SECTION_DATA extern void*const __vt__18dKankyo_mud_Packet[5];
@@ -584,145 +434,145 @@ SECTION_SDATA2 extern f32 lit_5855;
 // External References:
 // 
 
-void dComIfGp_getReverb(int);
-void dComIfG_getStageRes(char const*);
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
-void dKyr_lenzflare_move();
-void dKyr_sun_move();
-void dKyr_rain_init();
-void dKyr_rain_move();
-void dKyr_housi_move();
-void dKyr_snow_init();
-void dKyr_snow_move();
-void dKyr_star_init();
-void dKyr_star_move();
-void cloud_shadow_move();
-void vrkumo_move();
-void dKyr_drawSun(f32 (* )[4], cXyz*, _GXColor&, u8**);
-void dKyr_drawLenzflare(f32 (* )[4], cXyz*, _GXColor&, u8**);
-void dKyr_drawRain(f32 (* )[4], u8**);
-void dKyr_drawSibuki(f32 (* )[4], u8**);
-void dKyr_drawHousi(f32 (* )[4], u8**);
-void dKyr_drawSnow(f32 (* )[4], u8**);
-void dKyr_drawStar(f32 (* )[4], u8**);
-void drawCloudShadow(f32 (* )[4], u8**);
-void drawVrkumo(f32 (* )[4], _GXColor&, u8**);
-void dKyr_thunder_init();
-void dKyr_thunder_move();
-void dKyr_shstar_init();
-void dKyr_shstar_move();
-void dKyr_odour_init();
-void dKyr_odour_move();
-void dKyr_odour_draw(f32 (* )[4], u8**);
-void dKyr_mud_init();
-void dKyr_mud_move();
-void dKyr_mud_draw(f32 (* )[4], u8**);
-void dKyr_evil_init();
-void dKyr_evil_move();
-void dKyr_evil_draw(f32 (* )[4], u8**);
-void dKy_undwater_filter_draw();
-void dKy_get_dayofweek();
-void dKy_darkworld_check();
-void cM_atan2s(f32, f32);
-void cLib_addCalc(f32*, f32, f32, f32, f32);
-void* operator new(u32, int);
-void operator delete(void*);
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECSquareDistance();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void memcmp();
-extern "C" void strcmp();
+void dComIfGp_getReverb(int); // 2
+void dComIfG_getStageRes(char const*); // 2
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
+void dKyr_lenzflare_move(); // 2
+void dKyr_sun_move(); // 2
+void dKyr_rain_init(); // 2
+void dKyr_rain_move(); // 2
+void dKyr_housi_move(); // 2
+void dKyr_snow_init(); // 2
+void dKyr_snow_move(); // 2
+void dKyr_star_init(); // 2
+void dKyr_star_move(); // 2
+void cloud_shadow_move(); // 2
+void vrkumo_move(); // 2
+void dKyr_drawSun(f32 (* )[4], cXyz*, _GXColor&, u8**); // 2
+void dKyr_drawLenzflare(f32 (* )[4], cXyz*, _GXColor&, u8**); // 2
+void dKyr_drawRain(f32 (* )[4], u8**); // 2
+void dKyr_drawSibuki(f32 (* )[4], u8**); // 2
+void dKyr_drawHousi(f32 (* )[4], u8**); // 2
+void dKyr_drawSnow(f32 (* )[4], u8**); // 2
+void dKyr_drawStar(f32 (* )[4], u8**); // 2
+void drawCloudShadow(f32 (* )[4], u8**); // 2
+void drawVrkumo(f32 (* )[4], _GXColor&, u8**); // 2
+void dKyr_thunder_init(); // 2
+void dKyr_thunder_move(); // 2
+void dKyr_shstar_init(); // 2
+void dKyr_shstar_move(); // 2
+void dKyr_odour_init(); // 2
+void dKyr_odour_move(); // 2
+void dKyr_odour_draw(f32 (* )[4], u8**); // 2
+void dKyr_mud_init(); // 2
+void dKyr_mud_move(); // 2
+void dKyr_mud_draw(f32 (* )[4], u8**); // 2
+void dKyr_evil_init(); // 2
+void dKyr_evil_move(); // 2
+void dKyr_evil_draw(f32 (* )[4], u8**); // 2
+void dKy_undwater_filter_draw(); // 2
+void dKy_get_dayofweek(); // 2
+void dKy_darkworld_check(); // 2
+void cM_atan2s(f32, f32); // 2
+void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
+void* operator new(u32, int); // 2
+void operator delete(void*); // 2
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void memcmp(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void __dt__4cXyzFv();
-extern "C" void __ct__4cXyzFv();
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" void getLayerNo__14dComIfG_play_cFi();
-extern "C" void dComIfGp_getReverb__Fi();
-extern "C" void dComIfG_getStageRes__FPCc();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
-extern "C" void dKyr_lenzflare_move__Fv();
-extern "C" void dKyr_sun_move__Fv();
-extern "C" void dKyr_rain_init__Fv();
-extern "C" void dKyr_rain_move__Fv();
-extern "C" void dKyr_housi_move__Fv();
-extern "C" void dKyr_snow_init__Fv();
-extern "C" void dKyr_snow_move__Fv();
-extern "C" void dKyr_star_init__Fv();
-extern "C" void dKyr_star_move__Fv();
-extern "C" void cloud_shadow_move__Fv();
-extern "C" void vrkumo_move__Fv();
-extern "C" void dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc();
-extern "C" void dKyr_drawLenzflare__FPA4_fP4cXyzR8_GXColorPPUc();
-extern "C" void dKyr_drawRain__FPA4_fPPUc();
-extern "C" void dKyr_drawSibuki__FPA4_fPPUc();
-extern "C" void dKyr_drawHousi__FPA4_fPPUc();
-extern "C" void dKyr_drawSnow__FPA4_fPPUc();
-extern "C" void dKyr_drawStar__FPA4_fPPUc();
-extern "C" void drawCloudShadow__FPA4_fPPUc();
-extern "C" void drawVrkumo__FPA4_fR8_GXColorPPUc();
-extern "C" void dKyr_thunder_init__Fv();
-extern "C" void dKyr_thunder_move__Fv();
-extern "C" void dKyr_shstar_init__Fv();
-extern "C" void dKyr_shstar_move__Fv();
-extern "C" void dKyr_odour_init__Fv();
-extern "C" void dKyr_odour_move__Fv();
-extern "C" void dKyr_odour_draw__FPA4_fPPUc();
-extern "C" void dKyr_mud_init__Fv();
-extern "C" void dKyr_mud_move__Fv();
-extern "C" void dKyr_mud_draw__FPA4_fPPUc();
-extern "C" void dKyr_evil_init__Fv();
-extern "C" void dKyr_evil_move__Fv();
-extern "C" void dKyr_evil_draw__FPA4_fPPUc();
-extern "C" void getDaytime__18dScnKy_env_light_cFv();
-extern "C" void dKy_undwater_filter_draw__Fv();
-extern "C" void dKy_get_dayofweek__Fv();
-extern "C" void dKy_darkworld_check__Fv();
-extern "C" void __pl__4cXyzCFRC3Vec();
-extern "C" void __ml__4cXyzCFf();
-extern "C" void normZP__4cXyzCFv();
-extern "C" bool __ne__4cXyzCFRC3Vec();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cLib_addCalc__FPfffff();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void startRainSe__10Z2EnvSeMgrFlSc();
-extern "C" void initStrongWindSe__10Z2EnvSeMgrFv();
-extern "C" void setWindDirection__10Z2EnvSeMgrFP3Vec();
-extern "C" void startStrongWindSe__10Z2EnvSeMgrFSc();
-extern "C" void* __nw__FUli();
-extern "C" void __dl__FPv();
-extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer();
-extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECSquareDistance();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void memcmp();
-extern "C" void strcmp();
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void __ct__4cXyzFv(); // 1
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
+extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void dComIfG_getStageRes__FPCc(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
+extern "C" void dKyr_lenzflare_move__Fv(); // 1
+extern "C" void dKyr_sun_move__Fv(); // 1
+extern "C" void dKyr_rain_init__Fv(); // 1
+extern "C" void dKyr_rain_move__Fv(); // 1
+extern "C" void dKyr_housi_move__Fv(); // 1
+extern "C" void dKyr_snow_init__Fv(); // 1
+extern "C" void dKyr_snow_move__Fv(); // 1
+extern "C" void dKyr_star_init__Fv(); // 1
+extern "C" void dKyr_star_move__Fv(); // 1
+extern "C" void cloud_shadow_move__Fv(); // 1
+extern "C" void vrkumo_move__Fv(); // 1
+extern "C" void dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc(); // 1
+extern "C" void dKyr_drawLenzflare__FPA4_fP4cXyzR8_GXColorPPUc(); // 1
+extern "C" void dKyr_drawRain__FPA4_fPPUc(); // 1
+extern "C" void dKyr_drawSibuki__FPA4_fPPUc(); // 1
+extern "C" void dKyr_drawHousi__FPA4_fPPUc(); // 1
+extern "C" void dKyr_drawSnow__FPA4_fPPUc(); // 1
+extern "C" void dKyr_drawStar__FPA4_fPPUc(); // 1
+extern "C" void drawCloudShadow__FPA4_fPPUc(); // 1
+extern "C" void drawVrkumo__FPA4_fR8_GXColorPPUc(); // 1
+extern "C" void dKyr_thunder_init__Fv(); // 1
+extern "C" void dKyr_thunder_move__Fv(); // 1
+extern "C" void dKyr_shstar_init__Fv(); // 1
+extern "C" void dKyr_shstar_move__Fv(); // 1
+extern "C" void dKyr_odour_init__Fv(); // 1
+extern "C" void dKyr_odour_move__Fv(); // 1
+extern "C" void dKyr_odour_draw__FPA4_fPPUc(); // 1
+extern "C" void dKyr_mud_init__Fv(); // 1
+extern "C" void dKyr_mud_move__Fv(); // 1
+extern "C" void dKyr_mud_draw__FPA4_fPPUc(); // 1
+extern "C" void dKyr_evil_init__Fv(); // 1
+extern "C" void dKyr_evil_move__Fv(); // 1
+extern "C" void dKyr_evil_draw__FPA4_fPPUc(); // 1
+extern "C" void getDaytime__18dScnKy_env_light_cFv(); // 1
+extern "C" void dKy_undwater_filter_draw__Fv(); // 1
+extern "C" void dKy_get_dayofweek__Fv(); // 1
+extern "C" void dKy_darkworld_check__Fv(); // 1
+extern "C" void __pl__4cXyzCFRC3Vec(); // 1
+extern "C" void __ml__4cXyzCFf(); // 1
+extern "C" void normZP__4cXyzCFv(); // 1
+extern "C" bool __ne__4cXyzCFRC3Vec(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cLib_addCalc__FPfffff(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void startRainSe__10Z2EnvSeMgrFlSc(); // 1
+extern "C" void initStrongWindSe__10Z2EnvSeMgrFv(); // 1
+extern "C" void setWindDirection__10Z2EnvSeMgrFP3Vec(); // 1
+extern "C" void startStrongWindSe__10Z2EnvSeMgrFSc(); // 1
+extern "C" void* __nw__FUli(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void memcmp(); // 1
+extern "C" void strcmp(); // 1
 SECTION_DATA extern void*const __vt__9J3DPacket[5];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_env_light[4880];

@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void ldexp();
+extern "C" void ldexp(); // 1
 
-extern "C" void ldexp();
+extern "C" void ldexp(); // 1
 SECTION_SDATA2 extern u8 Math_Double_precision_s_ldexp__lit_91[8];
 SECTION_SDATA2 extern f64 Math_Double_precision_s_ldexp__lit_92;
 SECTION_SDATA2 extern f64 Math_Double_precision_s_ldexp__lit_93;
@@ -22,9 +22,9 @@ SECTION_SDATA2 extern f64 Math_Double_precision_s_ldexp__lit_95;
 // External References:
 // 
 
-extern "C" void copysign();
+extern "C" void copysign(); // 1
 
-extern "C" void copysign();
+extern "C" void copysign(); // 1
 
 // 
 // Declarations:

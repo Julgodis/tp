@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __DVDPrintFatalMessage();
+extern "C" void __DVDPrintFatalMessage(); // 1
 
-extern "C" void __DVDPrintFatalMessage();
+extern "C" void __DVDPrintFatalMessage(); // 1
 SECTION_SBSS extern u8 FatalFunc[4 + 4 /* padding */];
 
 // 

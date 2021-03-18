@@ -9,48 +9,25 @@
 // Types:
 // 
 
-// build dPa_followEcallBack (['dPa_followEcallBack']) False/False
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
-struct csXyz {
+struct cXyz {
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80267128 */ void atan2sX_Z() const;
 };
 
-// build JPABaseEmitter (['JPABaseEmitter']) False/False
-// build _GXTexMapID (['_GXTexMapID']) False/False
-/* top-level dependencies (begin ['_GXTexMapID']) */
-/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-/* top-level dependencies (begin ['JPABaseEmitter']) */
-// outer dependency: ('_GXTexMapID',)
-/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
-	// ('_GXTexMapID',)
 	/* 8027EA40 */ void createParticle();
 	/* 8027EF30 */ void getCurrentCreateNumber() const;
 	/* 8027EF40 */ void getDrawCount() const;
 	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
-struct cXyz {
-	/* 80266B84 */ void operator*(f32) const;
-	/* 80267128 */ void atan2sX_Z() const;
+struct csXyz {
 };
 
-/* top-level dependencies (begin ['dPa_followEcallBack']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dPa_followEcallBack']) */
 struct dPa_followEcallBack {
-	// ('csXyz',)
-	// ('JPABaseEmitter',)
-	// ('cXyz',)
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 	/* 800495BC */ void execute(JPABaseEmitter*);
 	/* 800496B0 */ void draw(JPABaseEmitter*);
@@ -60,136 +37,50 @@ struct dPa_followEcallBack {
 	/* 80050284 */ void cleanup();
 };
 
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build cXyz (['cXyz']) True/True
-// build csXyz (['csXyz']) True/True
-// build dPa_light8EcallBack (['dPa_light8EcallBack']) False/False
-// build csXyz (['csXyz']) True/True
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dPa_light8EcallBack']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dPa_light8EcallBack']) */
 struct dPa_light8EcallBack {
-	// ('csXyz',)
-	// ('JPABaseEmitter',)
-	// ('cXyz',)
 	/* 8004979C */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 	/* 8004A340 */ void draw(JPABaseEmitter*);
 	/* 8005015C */ ~dPa_light8EcallBack();
 	/* 800501E0 */ void drawAfter(JPABaseEmitter*);
 };
 
-// build dPa_gen_b_light8EcallBack (['dPa_gen_b_light8EcallBack']) False/False
-// build csXyz (['csXyz']) True/True
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dPa_gen_b_light8EcallBack']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dPa_gen_b_light8EcallBack']) */
 struct dPa_gen_b_light8EcallBack {
-	// ('csXyz',)
-	// ('JPABaseEmitter',)
-	// ('cXyz',)
 	/* 800497B0 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 	/* 8004A364 */ void draw(JPABaseEmitter*);
 	/* 800500B8 */ ~dPa_gen_b_light8EcallBack();
 	/* 8005013C */ void drawAfter(JPABaseEmitter*);
 };
 
-// build dPa_gen_d_light8EcallBack (['dPa_gen_d_light8EcallBack']) False/False
-// build csXyz (['csXyz']) True/True
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dPa_gen_d_light8EcallBack']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dPa_gen_d_light8EcallBack']) */
 struct dPa_gen_d_light8EcallBack {
-	// ('csXyz',)
-	// ('JPABaseEmitter',)
-	// ('cXyz',)
 	/* 800497CC */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 	/* 8004A388 */ void draw(JPABaseEmitter*);
 	/* 80050098 */ void drawAfter(JPABaseEmitter*);
 	/* 800503FC */ ~dPa_gen_d_light8EcallBack();
 };
 
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build JPABaseParticle (['JPABaseParticle']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-/* top-level dependencies (begin ['JPABaseParticle']) */
-// outer dependency: ('JPABaseEmitter',)
-/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
-	// ('JPABaseEmitter',)
 	/* 80280548 */ void getWidth(JPABaseEmitter const*) const;
 	/* 80280568 */ void getHeight(JPABaseEmitter const*) const;
 };
 
-// build dPa_modelPcallBack (['dPa_modelPcallBack']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['dPa_modelPcallBack']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['dPa_modelPcallBack']) */
 struct dPa_modelPcallBack {
-	// ('JPABaseEmitter',)
-	// ('JPABaseParticle',)
 	/* 8004A460 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 80050038 */ ~dPa_modelPcallBack();
 };
 
-// build dPa_modelEcallBack (['dPa_modelEcallBack']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 	/* 803260CC */ void syncJ3DSysPointers() const;
 	/* 803260F8 */ void syncJ3DSysFlags() const;
 };
 
-// build csXyz (['csXyz']) True/True
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
 struct dKy_tevstr_c {
 };
 
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dPa_modelEcallBack']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('csXyz',)
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dPa_modelEcallBack']) */
 struct dPa_modelEcallBack {
-	// ('J3DModelData',)
-	// ('JPABaseEmitter',)
-	// ('dKy_tevstr_c',)
-	// ('csXyz',)
-	// ('cXyz',)
-	// build model_c (['dPa_modelEcallBack', 'model_c']) False/False
-	/* dependencies (begin ['dPa_modelEcallBack', 'model_c']) */
-	// inner dependency: 0 ('J3DModelData',) (for ['dPa_modelEcallBack', 'model_c'])
-	// inner dependency: 0 ('dKy_tevstr_c',) (for ['dPa_modelEcallBack', 'model_c'])
-	/* dependencies (end ['dPa_modelEcallBack', 'model_c']) */
 	struct model_c {
-		// ('J3DModelData',)
-		// ('dKy_tevstr_c',)
 		/* 8004A608 */ void set(J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 		/* 8004A7AC */ void setup();
 		/* 8004A88C */ void cleanup();
@@ -213,76 +104,55 @@ struct dPa_modelEcallBack {
 	/* 80050378 */ ~dPa_modelEcallBack();
 };
 
-// build J3DModelData (['J3DModelData']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build dPa_selectTexEcallBack (['dPa_selectTexEcallBack']) False/False
-// build csXyz (['csXyz']) True/True
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dPa_selectTexEcallBack']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dPa_selectTexEcallBack']) */
 struct dPa_selectTexEcallBack {
-	// ('csXyz',)
-	// ('JPABaseEmitter',)
-	// ('cXyz',)
 	/* 8004ADC4 */ void draw(JPABaseEmitter*);
 	/* 8004FF8C */ ~dPa_selectTexEcallBack();
 	/* 80050010 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 };
 
-// build dPa_simpleEcallBack (['dPa_simpleEcallBack']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build _GXColor (['_GXColor']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build cXyz (['cXyz']) True/True
-// build JPAEmitterManager (['JPAEmitterManager']) False/False
-// build JPADrawInfo (['JPADrawInfo']) False/False
-/* top-level dependencies (begin ['JPADrawInfo']) */
-/* top-level dependencies (end ['JPADrawInfo']) */
+struct JPAParticleCallBack {
+	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
+	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
+	/* 8027EFA4 */ ~JPAParticleCallBack();
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+struct JPAEmitterCallBack {
+	/* 80050368 */ void execute(JPABaseEmitter*);
+	/* 8005036C */ void draw(JPABaseEmitter*);
+	/* 80050370 */ void drawAfter(JPABaseEmitter*);
+	/* 80050374 */ void executeAfter(JPABaseEmitter*);
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
+};
+
 struct JPADrawInfo {
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-// build JPAResourceManager (['JPAResourceManager']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['JPAResourceManager']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['JPAResourceManager']) */
 struct JPAResourceManager {
-	// ('JKRHeap',)
-	// ('ResTIMG',)
 	/* 80273E10 */ JPAResourceManager(void const*, JKRHeap*);
 	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
 	/* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
 	/* 80273FCC */ void getResUserWork(u16) const;
 };
 
-/* top-level dependencies (begin ['JPAEmitterManager']) */
-// outer dependency: ('JPADrawInfo',)
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JPAResourceManager',)
-/* top-level dependencies (end ['JPAEmitterManager']) */
 struct JPAEmitterManager {
-	// ('JPADrawInfo',)
-	// ('JKRHeap',)
-	// ('JPAResourceManager',)
 	/* 8027DCA0 */ JPAEmitterManager(u32, u32, JKRHeap*, u8, u8);
+	/* 8027DEBC */ void createSimpleEmitterID(JGeometry::TVec3<f32> const&, u16, u8, u8, JPAEmitterCallBack*, JPAParticleCallBack*);
 	/* 8027DFA0 */ void calc(u8);
 	/* 8027E028 */ void draw(JPADrawInfo const*, u8);
 	/* 8027E220 */ void forceDeleteAllEmitter();
@@ -290,19 +160,7 @@ struct JPAEmitterManager {
 	/* 8027E354 */ void clearResourceManager(u8);
 };
 
-/* top-level dependencies (begin ['dPa_simpleEcallBack']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('_GXColor',)
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('JPAEmitterManager',)
-/* top-level dependencies (end ['dPa_simpleEcallBack']) */
 struct dPa_simpleEcallBack {
-	// ('JPABaseEmitter',)
-	// ('_GXColor',)
-	// ('dKy_tevstr_c',)
-	// ('JPAEmitterManager',)
-	// ('cXyz',)
 	/* 8004ADF4 */ dPa_simpleEcallBack();
 	/* 8004AE1C */ void executeAfter(JPABaseEmitter*);
 	/* 8004AF94 */ void draw(JPABaseEmitter*);
@@ -312,109 +170,34 @@ struct dPa_simpleEcallBack {
 	/* 8004FC08 */ ~dPa_simpleEcallBack();
 };
 
-// build JPAEmitterManager (['JPAEmitterManager']) True/True
-// build dPa_simpleData_c (['dPa_simpleData_c']) False/False
-/* top-level dependencies (begin ['dPa_simpleData_c']) */
-/* top-level dependencies (end ['dPa_simpleData_c']) */
 struct dPa_simpleData_c {
 	/* 8004B024 */ ~dPa_simpleData_c();
 	/* 8004B060 */ dPa_simpleData_c();
 };
 
-// build dPa_windPcallBack (['dPa_windPcallBack']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['dPa_windPcallBack']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['dPa_windPcallBack']) */
 struct dPa_windPcallBack {
-	// ('JPABaseEmitter',)
-	// ('JPABaseParticle',)
 	/* 8004B4E0 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FF2C */ ~dPa_windPcallBack();
 };
 
-// build dPa_control_c (['dPa_control_c']) False/False
-// build JPADrawInfo (['JPADrawInfo']) True/True
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build _GXColor (['_GXColor']) True/True
-// build dPa_control_c (['dPa_control_c']) True/False
-struct dPa_control_c;
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) False/False
-/* top-level dependencies (begin ['dPa_levelEcallBack']) */
-/* top-level dependencies (end ['dPa_levelEcallBack']) */
 struct dPa_levelEcallBack {
 	/* 8004FB18 */ ~dPa_levelEcallBack();
 	/* 8004FB8C */ void cleanup();
 };
 
-// build mDoDvdThd_toMainRam_c (['mDoDvdThd_toMainRam_c']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['mDoDvdThd_toMainRam_c']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['mDoDvdThd_toMainRam_c']) */
-struct mDoDvdThd_toMainRam_c {
-	// ('JKRHeap',)
-	/* 80016394 */ void create(char const*, u8, JKRHeap*);
-};
-
-// build csXyz (['csXyz']) True/True
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dPa_control_c']) */
-// outer dependency: ('JPADrawInfo',)
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('_GXColor',)
-// outer dependency: ('dPa_control_c', 'level_c', 'emitter_c')
-// outer dependency: ('dPa_levelEcallBack',)
-// outer dependency: ('mDoDvdThd_toMainRam_c',)
-// outer dependency: ('csXyz',)
-// outer dependency: ('cBgS_PolyInfo',)
-// outer dependency: ('fopAc_ac_c',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dPa_control_c']) */
+struct mDoDvdThd_toMainRam_c {
+	/* 80016394 */ void create(char const*, u8, JKRHeap*);
+};
+
 struct dPa_control_c {
-	// ('JPADrawInfo',)
-	// ('dKy_tevstr_c',)
-	// ('_GXColor',)
-	// ('dPa_levelEcallBack',)
-	// ('mDoDvdThd_toMainRam_c',)
-	// ('csXyz',)
-	// ('cBgS_PolyInfo',)
-	// ('fopAc_ac_c',)
-	// ('cXyz',)
-	// build level_c (['dPa_control_c', 'level_c']) False/False
-	/* dependencies (begin ['dPa_control_c', 'level_c']) */
-	// inner dependency: 1 ('dPa_control_c', 'level_c', 'emitter_c') (for ['dPa_control_c', 'level_c'])
-	// inner dependency: 0 ('dPa_levelEcallBack',) (for ['dPa_control_c', 'level_c'])
-	// inner dependency: 0 ('JPABaseEmitter',) (for ['dPa_control_c', 'level_c'])
-	/* dependencies (end ['dPa_control_c', 'level_c']) */
 	struct level_c {
-		// ('dPa_control_c', 'level_c', 'emitter_c')
-		// ('dPa_levelEcallBack',)
-		// ('JPABaseEmitter',)
-		// build emitter_c (['dPa_control_c', 'level_c', 'emitter_c']) False/False
-		/* dependencies (begin ['dPa_control_c', 'level_c', 'emitter_c']) */
-		// inner dependency: 0 ('JPABaseEmitter',) (for ['dPa_control_c', 'level_c', 'emitter_c'])
-		// inner dependency: 0 ('dPa_levelEcallBack',) (for ['dPa_control_c', 'level_c', 'emitter_c'])
-		/* dependencies (end ['dPa_control_c', 'level_c', 'emitter_c']) */
 		struct emitter_c {
-			// ('JPABaseEmitter',)
-			// ('dPa_levelEcallBack',)
 			/* 8004B504 */ void onActive();
 			/* 8004B544 */ void entry(u32, u16, JPABaseEmitter*, dPa_levelEcallBack*);
 			/* 8004B5AC */ void cleanup();
@@ -422,8 +205,8 @@ struct dPa_control_c {
 		};
 
 		/* 8004B688 */ level_c();
-		/* 8004B6F8 */ void execute(dPa_control_c::level_c::emitter_c*);
 		/* 8004B7A8 */ void execute();
+		/* 8004B6F8 */ void execute(dPa_control_c::level_c::emitter_c*);
 		/* 8004B808 */ void cleanup();
 		/* 8004B874 */ void get(u32);
 		/* 8004B8B4 */ void forceOnEventMove(u32);
@@ -450,341 +233,132 @@ struct dPa_control_c {
 	/* 8004C218 */ void setHitMark(u16, fopAc_ac_c*, cXyz const*, csXyz const*, cXyz const*, u32);
 	/* 8004C838 */ void setWaterRipple(u32*, cBgS_PolyInfo&, cXyz const*, f32, dKy_tevstr_c const*, cXyz const*, s8);
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
+	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 	/* 8004CF90 */ void getPolyColor(cBgS_PolyInfo&, int, _GXColor*, _GXColor*, u8*, f32*);
+	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 	/* 8004D068 */ void setPoly(u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 	/* 8004D128 */ void newSimple(u16, u8, u32*);
 	/* 8004D1B8 */ void setSimple(u16, cXyz const*, dKy_tevstr_c const*, u8, _GXColor const&, _GXColor const&, int, f32);
 	/* 8004D23C */ void getSimple(u16);
-	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
-	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 	/* 8004D770 */ void setStopContinue(u32);
 	/* 8004D7C4 */ void setSimpleFoot(u32, u32*, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, int, csXyz const*, cXyz const*, dPa_levelEcallBack*, s8, cXyz const*);
 	/* 8004D988 */ void setCommonPoly(u32*, cBgS_PolyInfo*, cXyz const*, cXyz const*, dKy_tevstr_c const*, u32, u32, csXyz const*, cXyz const*, s8);
 };
 
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) True/True
-// build mDoDvdThd_toMainRam_c (['mDoDvdThd_toMainRam_c']) True/True
-// build JPADrawInfo (['JPADrawInfo']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-// build dPa_wbPcallBack_c (['dPa_wbPcallBack_c']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['dPa_wbPcallBack_c']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['dPa_wbPcallBack_c']) */
 struct dPa_wbPcallBack_c {
-	// ('JPABaseEmitter',)
-	// ('JPABaseParticle',)
 	/* 8004DC28 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FECC */ ~dPa_wbPcallBack_c();
 };
 
-// build dPa_fsenthPcallBack (['dPa_fsenthPcallBack']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['dPa_fsenthPcallBack']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['dPa_fsenthPcallBack']) */
 struct dPa_fsenthPcallBack {
-	// ('JPABaseEmitter',)
-	// ('JPABaseParticle',)
 	/* 8004DCA0 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004DD0C */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FE6C */ ~dPa_fsenthPcallBack();
 };
 
-// build dPa_light8PcallBack (['dPa_light8PcallBack']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['dPa_light8PcallBack']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['dPa_light8PcallBack']) */
 struct dPa_light8PcallBack {
-	// ('JPABaseEmitter',)
-	// ('JPABaseParticle',)
 	/* 8004DD10 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004DD1C */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FE0C */ ~dPa_light8PcallBack();
 };
 
-// build dPa_gen_b_light8PcallBack (['dPa_gen_b_light8PcallBack']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['dPa_gen_b_light8PcallBack']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['dPa_gen_b_light8PcallBack']) */
 struct dPa_gen_b_light8PcallBack {
-	// ('JPABaseEmitter',)
-	// ('JPABaseParticle',)
 	/* 8004DD14 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004E6A8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FDAC */ ~dPa_gen_b_light8PcallBack();
 };
 
-// build dPa_gen_d_light8PcallBack (['dPa_gen_d_light8PcallBack']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['dPa_gen_d_light8PcallBack']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['dPa_gen_d_light8PcallBack']) */
 struct dPa_gen_d_light8PcallBack {
-	// ('JPABaseEmitter',)
-	// ('JPABaseParticle',)
 	/* 8004DD18 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004ED44 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FD4C */ ~dPa_gen_d_light8PcallBack();
 };
 
-// build dPa_hermiteEcallBack_c (['dPa_hermiteEcallBack_c']) False/False
-// build csXyz (['csXyz']) True/True
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dPa_hermiteEcallBack_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dPa_hermiteEcallBack_c']) */
 struct dPa_hermiteEcallBack_c {
-	// ('csXyz',)
-	// ('JPABaseEmitter',)
-	// ('cXyz',)
 	/* 8004F6B8 */ void setOldPosP(cXyz const*, cXyz const*);
 	/* 8004F6C4 */ void executeAfter(JPABaseEmitter*);
 	/* 8004FABC */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 	/* 8004FCC8 */ ~dPa_hermiteEcallBack_c();
 };
 
-// build dPa_particleTracePcallBack_c (['dPa_particleTracePcallBack_c']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['dPa_particleTracePcallBack_c']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['dPa_particleTracePcallBack_c']) */
 struct dPa_particleTracePcallBack_c {
-	// ('JPABaseEmitter',)
-	// ('JPABaseParticle',)
 	/* 8004FAD4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 8004FC68 */ ~dPa_particleTracePcallBack_c();
 };
 
-// build dPa_setColorEcallBack (['dPa_setColorEcallBack']) False/False
-// build csXyz (['csXyz']) True/True
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dPa_setColorEcallBack']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dPa_setColorEcallBack']) */
 struct dPa_setColorEcallBack {
-	// ('csXyz',)
-	// ('JPABaseEmitter',)
-	// ('cXyz',)
 	/* 800502B0 */ void draw(JPABaseEmitter*);
 	/* 800502E0 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 	/* 800502E4 */ ~dPa_setColorEcallBack();
 };
 
-// build JPAEmitterCallBack (['JPAEmitterCallBack']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-/* top-level dependencies (begin ['JPAEmitterCallBack']) */
-// outer dependency: ('JPABaseEmitter',)
-/* top-level dependencies (end ['JPAEmitterCallBack']) */
-struct JPAEmitterCallBack {
-	// ('JPABaseEmitter',)
-	/* 80050368 */ void execute(JPABaseEmitter*);
-	/* 8005036C */ void draw(JPABaseEmitter*);
-	/* 80050370 */ void drawAfter(JPABaseEmitter*);
-	/* 80050374 */ void executeAfter(JPABaseEmitter*);
-	/* 8027E6A4 */ ~JPAEmitterCallBack();
-};
-
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build JKRHeap (['JKRHeap']) True/True
-// build JPAParticleCallBack (['JPAParticleCallBack']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['JPAParticleCallBack']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAParticleCallBack']) */
-struct JPAParticleCallBack {
-	// ('JPABaseEmitter',)
-	// ('JPABaseParticle',)
-	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
-	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
-	/* 8027EFA4 */ ~JPAParticleCallBack();
-};
-
-// build J3DLightObj (['J3DLightObj']) False/False
-/* top-level dependencies (begin ['J3DLightObj']) */
-/* top-level dependencies (end ['J3DLightObj']) */
 struct J3DLightObj {
 	/* 80018C0C */ J3DLightObj();
 };
 
-// build fopAcM_wt_c (['fopAcM_wt_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['fopAcM_wt_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['fopAcM_wt_c']) */
 struct fopAcM_wt_c {
-	// ('cXyz',)
 	/* 8001DD84 */ void waterCheck(cXyz const*);
 };
 
-// build dJntCol_c (['dJntCol_c']) False/False
-// build csXyz (['csXyz']) True/True
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dJntCol_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dJntCol_c']) */
 struct dJntCol_c {
-	// ('csXyz',)
-	// ('cXyz',)
 	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, int) const;
 };
 
-// build cBgS (['cBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-// build cM3dGPla (['cM3dGPla']) False/False
-/* top-level dependencies (begin ['cM3dGPla']) */
-/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
 };
 
-/* top-level dependencies (begin ['cBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-// outer dependency: ('cM3dGPla',)
-/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
-	// ('cBgS_PolyInfo',)
-	// ('cM3dGPla',)
 	/* 80074660 */ void ChkPolySafe(cBgS_PolyInfo const&);
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-// build cM3dGPla (['cM3dGPla']) True/True
-// build dBgS (['dBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-/* top-level dependencies (begin ['dBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// ('cBgS_PolyInfo',)
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 };
 
-// build daPy_py_c (['daPy_py_c']) False/False
-/* top-level dependencies (begin ['daPy_py_c']) */
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-// build J3DUClipper (['J3DUClipper']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['J3DUClipper']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['J3DUClipper']) */
 struct J3DUClipper {
-	// ('Vec',)
 	/* 802738FC */ void clip(f32 const (* )[4], Vec, f32) const;
 };
 
-// build Vec (['Vec']) True/True
-// build JPAResourceManager (['JPAResourceManager']) True/True
-// build ResTIMG (['ResTIMG']) True/True
-// build _GXTexMapID (['_GXTexMapID']) True/True
-// build JKRExpHeap (['JKRExpHeap']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRExpHeap']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
-	// ('JKRHeap',)
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
-// build J3DSys (['J3DSys']) False/False
-/* top-level dependencies (begin ['J3DSys']) */
-/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
 	/* 8031073C */ void reinitGX();
 };
 
-// build J3DTexture (['J3DTexture']) False/False
-// build _GXTexMapID (['_GXTexMapID']) True/True
-/* top-level dependencies (begin ['J3DTexture']) */
-// outer dependency: ('_GXTexMapID',)
-/* top-level dependencies (end ['J3DTexture']) */
 struct J3DTexture {
-	// ('_GXTexMapID',)
 	/* 8031204C */ void loadGX(u16, _GXTexMapID) const;
 };
 
-// build J3DShape (['J3DShape']) False/False
-/* top-level dependencies (begin ['J3DShape']) */
-/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
-// build J3DLightInfo (['J3DLightInfo']) False/False
-/* top-level dependencies (begin ['J3DLightInfo']) */
-/* top-level dependencies (end ['J3DLightInfo']) */
 struct J3DLightInfo {
 	/* 803256C4 */ void operator=(J3DLightInfo const&);
 };
 
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-/* top-level dependencies (begin ['J3DAnmTexPattern']) */
-// outer dependency: ('J3DModelData',)
-/* top-level dependencies (end ['J3DAnmTexPattern']) */
 struct J3DAnmTexPattern {
-	// ('J3DModelData',)
 	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-/* top-level dependencies (begin ['J3DAnmTevRegKey']) */
-// outer dependency: ('J3DModelData',)
-/* top-level dependencies (end ['J3DAnmTevRegKey']) */
 struct J3DAnmTevRegKey {
-	// ('J3DModelData',)
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) False/False
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) True/True
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
-/* top-level dependencies (begin ['J3DMaterialTable']) */
-// outer dependency: ('J3DAnmTexPattern',)
-// outer dependency: ('J3DAnmTevRegKey',)
-/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
-	// ('J3DAnmTexPattern',)
-	// ('J3DAnmTevRegKey',)
 	/* 8032F6F8 */ void removeTexNoAnimator(J3DAnmTexPattern*);
 	/* 8032F880 */ void removeTevRegAnimator(J3DAnmTevRegKey*);
 	/* 8032FBC8 */ void entryTexNoAnimator(J3DAnmTexPattern*);
@@ -795,159 +369,159 @@ struct J3DMaterialTable {
 // Forward References:
 // 
 
-static void dPa_cleanupGX();
-static void dPa_group_id_change(u32*, u8*);
-static void initiateLighting8(_GXColor&, s16);
-static void initiate_b_Lighting8(_GXColor&);
-static void drawFirst(JPABaseEmitter*);
-static void drawFirst_l8(JPABaseEmitter*);
-static void drawSecond_light8(JPABaseEmitter*);
-static void drawSecond_b_light8(JPABaseEmitter*);
-static void static_light8EcallBack(JPABaseEmitter*);
-static void static_gen_b_light8EcallBack(JPABaseEmitter*);
-static void static_gen_d_light8EcallBack(JPABaseEmitter*);
-static void dPa_setWindPower(JPABaseParticle*);
-static void dPa_kankyocolor_set(f32, JPABaseEmitter*, dKy_tevstr_c const*, u32, cXyz const*, _GXColor const*, _GXColor const*);
-extern "C" void __sinit_d_particle_cpp();
+static void dPa_cleanupGX(); // 2
+static void dPa_group_id_change(u32*, u8*); // 2
+static void initiateLighting8(_GXColor&, s16); // 2
+static void initiate_b_Lighting8(_GXColor&); // 2
+static void drawFirst(JPABaseEmitter*); // 2
+static void drawFirst_l8(JPABaseEmitter*); // 2
+static void drawSecond_light8(JPABaseEmitter*); // 2
+static void drawSecond_b_light8(JPABaseEmitter*); // 2
+static void static_light8EcallBack(JPABaseEmitter*); // 2
+static void static_gen_b_light8EcallBack(JPABaseEmitter*); // 2
+static void static_gen_d_light8EcallBack(JPABaseEmitter*); // 2
+static void dPa_setWindPower(JPABaseParticle*); // 2
+static void dPa_kankyocolor_set(f32, JPABaseEmitter*, dKy_tevstr_c const*, u32, cXyz const*, _GXColor const*, _GXColor const*); // 2
+extern "C" void __sinit_d_particle_cpp(); // 1
 
-extern "C" static void dPa_cleanupGX__Fv();
-extern "C" void __ct__19dPa_followEcallBackFUcUc();
-extern "C" void execute__19dPa_followEcallBackFP14JPABaseEmitter();
-extern "C" void draw__19dPa_followEcallBackFP14JPABaseEmitter();
-extern "C" void setup__19dPa_followEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
-extern "C" void end__19dPa_followEcallBackFv();
-extern "C" void setup__19dPa_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
-extern "C" void setup__25dPa_gen_b_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
-extern "C" void setup__25dPa_gen_d_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
-extern "C" static void dPa_group_id_change__FPUlPUc();
-extern "C" static void initiateLighting8__FR8_GXColors();
-extern "C" static void initiate_b_Lighting8__FR8_GXColor();
-extern "C" static void drawFirst__FP14JPABaseEmitter();
-extern "C" static void drawFirst_l8__FP14JPABaseEmitter();
-extern "C" static void drawSecond_light8__FP14JPABaseEmitter();
-extern "C" static void drawSecond_b_light8__FP14JPABaseEmitter();
-extern "C" static void static_light8EcallBack__FP14JPABaseEmitter();
-extern "C" static void static_gen_b_light8EcallBack__FP14JPABaseEmitter();
-extern "C" static void static_gen_d_light8EcallBack__FP14JPABaseEmitter();
-extern "C" void draw__19dPa_light8EcallBackFP14JPABaseEmitter();
-extern "C" void draw__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter();
-extern "C" void draw__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter();
-extern "C" static void dPa_setWindPower__FP15JPABaseParticle();
-extern "C" void draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void set__Q218dPa_modelEcallBack7model_cFP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc();
-extern "C" void setup__Q218dPa_modelEcallBack7model_cFv();
-extern "C" void cleanup__Q218dPa_modelEcallBack7model_cFv();
-extern "C" void draw__Q218dPa_modelEcallBack7model_cFPA4_f();
-extern "C" void draw__18dPa_modelEcallBackFP14JPABaseEmitter();
-extern "C" void setup__18dPa_modelEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
-extern "C" void create__18dPa_modelEcallBackFUc();
-extern "C" void __dt__Q218dPa_modelEcallBack7model_cFv();
-extern "C" void remove__18dPa_modelEcallBackFv();
-extern "C" void setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc();
-extern "C" void resetModel__18dPa_modelEcallBackFP14JPABaseEmitter();
-extern "C" void setupModel__18dPa_modelEcallBackFP14JPABaseEmitter();
-extern "C" void drawModel__18dPa_modelEcallBackFP14JPABaseEmitterPA4_f();
-extern "C" void cleanupModel__18dPa_modelEcallBackFP14JPABaseEmitter();
-extern "C" void getModel__18dPa_modelEcallBackFP14JPABaseEmitter();
-extern "C" void getRotAxis__18dPa_modelEcallBackFP14JPABaseEmitter();
-extern "C" void draw__22dPa_selectTexEcallBackFP14JPABaseEmitter();
-extern "C" void __ct__19dPa_simpleEcallBackFv();
-extern "C" void executeAfter__19dPa_simpleEcallBackFP14JPABaseEmitter();
-extern "C" void draw__19dPa_simpleEcallBackFP14JPABaseEmitter();
-extern "C" void create__19dPa_simpleEcallBackFP17JPAEmitterManagerUsUc();
-extern "C" void __dt__16dPa_simpleData_cFv();
-extern "C" void __ct__16dPa_simpleData_cFv();
-extern "C" void createEmitter__19dPa_simpleEcallBackFP17JPAEmitterManager();
-extern "C" void set__19dPa_simpleEcallBackFPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif();
-extern "C" void execute__17dPa_windPcallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void onActive__Q313dPa_control_c7level_c9emitter_cFv();
-extern "C" void entry__Q313dPa_control_c7level_c9emitter_cFUlUsP14JPABaseEmitterP18dPa_levelEcallBack();
-extern "C" void cleanup__Q313dPa_control_c7level_c9emitter_cFv();
-extern "C" void __ct__Q213dPa_control_c7level_cFv();
-extern "C" void execute__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c();
-extern "C" void execute__Q213dPa_control_c7level_cFv();
-extern "C" void cleanup__Q213dPa_control_c7level_cFv();
-extern "C" void get__Q213dPa_control_c7level_cFUl();
-extern "C" void forceOnEventMove__Q213dPa_control_c7level_cFUl();
-extern "C" void allForceOnEventMove__Q213dPa_control_c7level_cFv();
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
-extern "C" void entry__Q213dPa_control_c7level_cFUsP14JPABaseEmitterP18dPa_levelEcallBack();
-extern "C" void addTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c();
-extern "C" void cutTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c();
-extern "C" void __ct__13dPa_control_cFv();
-extern "C" void getRM_ID__13dPa_control_cFUs();
-extern "C" void createCommon__13dPa_control_cFPCv();
-extern "C" void createRoomScene__13dPa_control_cFv();
-extern "C" void readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c();
-extern "C" void createScene__13dPa_control_cFPCv();
-extern "C" void removeRoomScene__13dPa_control_cFb();
-extern "C" void removeScene__13dPa_control_cFb();
-extern "C" void cleanup__13dPa_control_cFv();
-extern "C" void calc3D__13dPa_control_cFv();
-extern "C" void calc2D__13dPa_control_cFv();
-extern "C" void calcMenu__13dPa_control_cFv();
-extern "C" void draw__13dPa_control_cFP11JPADrawInfoUc();
-extern "C" void setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl();
-extern "C" void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc();
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
-extern "C" void getPolyColor__13dPa_control_cFR13cBgS_PolyInfoiP8_GXColorP8_GXColorPUcPf();
-extern "C" void setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz();
-extern "C" void newSimple__13dPa_control_cFUsUcPUl();
-extern "C" void setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif();
-extern "C" void getSimple__13dPa_control_cFUs();
-extern "C" static void dPa_kankyocolor_set__FfP14JPABaseEmitterPC12dKy_tevstr_cUlPC4cXyzPC8_GXColorPC8_GXColor();
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
-extern "C" void setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz();
-extern "C" void setStopContinue__13dPa_control_cFUl();
-extern "C" void setSimpleFoot__13dPa_control_cFUlPUlR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_ciPC5csXyzPC4cXyzP18dPa_levelEcallBackScPC4cXyz();
-extern "C" void setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc();
-extern "C" void execute__17dPa_wbPcallBack_cFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void execute__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void execute__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void execute__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void execute__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void setOldPosP__22dPa_hermiteEcallBack_cFPC4cXyzPC4cXyz();
-extern "C" void executeAfter__22dPa_hermiteEcallBack_cFP14JPABaseEmitter();
-extern "C" void setup__22dPa_hermiteEcallBack_cFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
-extern "C" void execute__28dPa_particleTracePcallBack_cFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void __dt__18dPa_levelEcallBackFv();
-extern "C" void cleanup__18dPa_levelEcallBackFv();
-extern "C" void __ct__Q218dPa_modelEcallBack7model_cFv();
-extern "C" void __ct__Q313dPa_control_c7level_c9emitter_cFv();
-extern "C" void __dt__19dPa_simpleEcallBackFv();
-extern "C" void __dt__28dPa_particleTracePcallBack_cFv();
-extern "C" void __dt__22dPa_hermiteEcallBack_cFv();
-extern "C" void __dt__25dPa_gen_d_light8PcallBackFv();
-extern "C" void __dt__25dPa_gen_b_light8PcallBackFv();
-extern "C" void __dt__19dPa_light8PcallBackFv();
-extern "C" void __dt__19dPa_fsenthPcallBackFv();
-extern "C" void __dt__17dPa_wbPcallBack_cFv();
-extern "C" void __dt__17dPa_windPcallBackFv();
-extern "C" void __dt__22dPa_selectTexEcallBackFv();
-extern "C" void setup__22dPa_selectTexEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
-extern "C" void drawAfter__18dPa_modelEcallBackFP14JPABaseEmitter();
-extern "C" void __dt__18dPa_modelPcallBackFv();
-extern "C" void drawAfter__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter();
-extern "C" void __dt__25dPa_gen_b_light8EcallBackFv();
-extern "C" void drawAfter__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter();
-extern "C" void __dt__19dPa_light8EcallBackFv();
-extern "C" void drawAfter__19dPa_light8EcallBackFP14JPABaseEmitter();
-extern "C" void __dt__19dPa_followEcallBackFv();
-extern "C" void cleanup__19dPa_followEcallBackFv();
-extern "C" void draw__21dPa_setColorEcallBackFP14JPABaseEmitter();
-extern "C" void setup__21dPa_setColorEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
-extern "C" void __dt__21dPa_setColorEcallBackFv();
-extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
-extern "C" void __dt__18dPa_modelEcallBackFv();
-extern "C" void __dt__25dPa_gen_d_light8EcallBackFv();
-extern "C" void __sinit_d_particle_cpp();
+extern "C" static void dPa_cleanupGX__Fv(); // 1
+extern "C" void __ct__19dPa_followEcallBackFUcUc(); // 1
+extern "C" void execute__19dPa_followEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void draw__19dPa_followEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void setup__19dPa_followEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc(); // 1
+extern "C" void end__19dPa_followEcallBackFv(); // 1
+extern "C" void setup__19dPa_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc(); // 1
+extern "C" void setup__25dPa_gen_b_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc(); // 1
+extern "C" void setup__25dPa_gen_d_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc(); // 1
+extern "C" static void dPa_group_id_change__FPUlPUc(); // 1
+extern "C" static void initiateLighting8__FR8_GXColors(); // 1
+extern "C" static void initiate_b_Lighting8__FR8_GXColor(); // 1
+extern "C" static void drawFirst__FP14JPABaseEmitter(); // 1
+extern "C" static void drawFirst_l8__FP14JPABaseEmitter(); // 1
+extern "C" static void drawSecond_light8__FP14JPABaseEmitter(); // 1
+extern "C" static void drawSecond_b_light8__FP14JPABaseEmitter(); // 1
+extern "C" static void static_light8EcallBack__FP14JPABaseEmitter(); // 1
+extern "C" static void static_gen_b_light8EcallBack__FP14JPABaseEmitter(); // 1
+extern "C" static void static_gen_d_light8EcallBack__FP14JPABaseEmitter(); // 1
+extern "C" void draw__19dPa_light8EcallBackFP14JPABaseEmitter(); // 1
+extern "C" void draw__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter(); // 1
+extern "C" void draw__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter(); // 1
+extern "C" static void dPa_setWindPower__FP15JPABaseParticle(); // 1
+extern "C" void draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void set__Q218dPa_modelEcallBack7model_cFP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc(); // 1
+extern "C" void setup__Q218dPa_modelEcallBack7model_cFv(); // 1
+extern "C" void cleanup__Q218dPa_modelEcallBack7model_cFv(); // 1
+extern "C" void draw__Q218dPa_modelEcallBack7model_cFPA4_f(); // 1
+extern "C" void draw__18dPa_modelEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void setup__18dPa_modelEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc(); // 1
+extern "C" void create__18dPa_modelEcallBackFUc(); // 1
+extern "C" void __dt__Q218dPa_modelEcallBack7model_cFv(); // 1
+extern "C" void remove__18dPa_modelEcallBackFv(); // 1
+extern "C" void setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc(); // 1
+extern "C" void resetModel__18dPa_modelEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void setupModel__18dPa_modelEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void drawModel__18dPa_modelEcallBackFP14JPABaseEmitterPA4_f(); // 1
+extern "C" void cleanupModel__18dPa_modelEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void getModel__18dPa_modelEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void getRotAxis__18dPa_modelEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void draw__22dPa_selectTexEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void __ct__19dPa_simpleEcallBackFv(); // 1
+extern "C" void executeAfter__19dPa_simpleEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void draw__19dPa_simpleEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void create__19dPa_simpleEcallBackFP17JPAEmitterManagerUsUc(); // 1
+extern "C" void __dt__16dPa_simpleData_cFv(); // 1
+extern "C" void __ct__16dPa_simpleData_cFv(); // 1
+extern "C" void createEmitter__19dPa_simpleEcallBackFP17JPAEmitterManager(); // 1
+extern "C" void set__19dPa_simpleEcallBackFPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif(); // 1
+extern "C" void execute__17dPa_windPcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void onActive__Q313dPa_control_c7level_c9emitter_cFv(); // 1
+extern "C" void entry__Q313dPa_control_c7level_c9emitter_cFUlUsP14JPABaseEmitterP18dPa_levelEcallBack(); // 1
+extern "C" void cleanup__Q313dPa_control_c7level_c9emitter_cFv(); // 1
+extern "C" void __ct__Q213dPa_control_c7level_cFv(); // 1
+extern "C" void execute__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c(); // 1
+extern "C" void execute__Q213dPa_control_c7level_cFv(); // 1
+extern "C" void cleanup__Q213dPa_control_c7level_cFv(); // 1
+extern "C" void get__Q213dPa_control_c7level_cFUl(); // 1
+extern "C" void forceOnEventMove__Q213dPa_control_c7level_cFUl(); // 1
+extern "C" void allForceOnEventMove__Q213dPa_control_c7level_cFv(); // 1
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
+extern "C" void entry__Q213dPa_control_c7level_cFUsP14JPABaseEmitterP18dPa_levelEcallBack(); // 1
+extern "C" void addTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c(); // 1
+extern "C" void cutTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c(); // 1
+extern "C" void __ct__13dPa_control_cFv(); // 1
+extern "C" void getRM_ID__13dPa_control_cFUs(); // 1
+extern "C" void createCommon__13dPa_control_cFPCv(); // 1
+extern "C" void createRoomScene__13dPa_control_cFv(); // 1
+extern "C" void readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c(); // 1
+extern "C" void createScene__13dPa_control_cFPCv(); // 1
+extern "C" void removeRoomScene__13dPa_control_cFb(); // 1
+extern "C" void removeScene__13dPa_control_cFb(); // 1
+extern "C" void cleanup__13dPa_control_cFv(); // 1
+extern "C" void calc3D__13dPa_control_cFv(); // 1
+extern "C" void calc2D__13dPa_control_cFv(); // 1
+extern "C" void calcMenu__13dPa_control_cFv(); // 1
+extern "C" void draw__13dPa_control_cFP11JPADrawInfoUc(); // 1
+extern "C" void setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl(); // 1
+extern "C" void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc(); // 1
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
+extern "C" void getPolyColor__13dPa_control_cFR13cBgS_PolyInfoiP8_GXColorP8_GXColorPUcPf(); // 1
+extern "C" void setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz(); // 1
+extern "C" void newSimple__13dPa_control_cFUsUcPUl(); // 1
+extern "C" void setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif(); // 1
+extern "C" void getSimple__13dPa_control_cFUs(); // 1
+extern "C" static void dPa_kankyocolor_set__FfP14JPABaseEmitterPC12dKy_tevstr_cUlPC4cXyzPC8_GXColorPC8_GXColor(); // 1
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
+extern "C" void setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz(); // 1
+extern "C" void setStopContinue__13dPa_control_cFUl(); // 1
+extern "C" void setSimpleFoot__13dPa_control_cFUlPUlR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_ciPC5csXyzPC4cXyzP18dPa_levelEcallBackScPC4cXyz(); // 1
+extern "C" void setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc(); // 1
+extern "C" void execute__17dPa_wbPcallBack_cFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void execute__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void execute__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void execute__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void execute__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void setOldPosP__22dPa_hermiteEcallBack_cFPC4cXyzPC4cXyz(); // 1
+extern "C" void executeAfter__22dPa_hermiteEcallBack_cFP14JPABaseEmitter(); // 1
+extern "C" void setup__22dPa_hermiteEcallBack_cFP14JPABaseEmitterPC4cXyzPC5csXyzSc(); // 1
+extern "C" void execute__28dPa_particleTracePcallBack_cFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void __dt__18dPa_levelEcallBackFv(); // 1
+extern "C" void cleanup__18dPa_levelEcallBackFv(); // 1
+extern "C" void __ct__Q218dPa_modelEcallBack7model_cFv(); // 1
+extern "C" void __ct__Q313dPa_control_c7level_c9emitter_cFv(); // 1
+extern "C" void __dt__19dPa_simpleEcallBackFv(); // 1
+extern "C" void __dt__28dPa_particleTracePcallBack_cFv(); // 1
+extern "C" void __dt__22dPa_hermiteEcallBack_cFv(); // 1
+extern "C" void __dt__25dPa_gen_d_light8PcallBackFv(); // 1
+extern "C" void __dt__25dPa_gen_b_light8PcallBackFv(); // 1
+extern "C" void __dt__19dPa_light8PcallBackFv(); // 1
+extern "C" void __dt__19dPa_fsenthPcallBackFv(); // 1
+extern "C" void __dt__17dPa_wbPcallBack_cFv(); // 1
+extern "C" void __dt__17dPa_windPcallBackFv(); // 1
+extern "C" void __dt__22dPa_selectTexEcallBackFv(); // 1
+extern "C" void setup__22dPa_selectTexEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc(); // 1
+extern "C" void drawAfter__18dPa_modelEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void __dt__18dPa_modelPcallBackFv(); // 1
+extern "C" void drawAfter__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter(); // 1
+extern "C" void __dt__25dPa_gen_b_light8EcallBackFv(); // 1
+extern "C" void drawAfter__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter(); // 1
+extern "C" void __dt__19dPa_light8EcallBackFv(); // 1
+extern "C" void drawAfter__19dPa_light8EcallBackFP14JPABaseEmitter(); // 1
+extern "C" void __dt__19dPa_followEcallBackFv(); // 1
+extern "C" void cleanup__19dPa_followEcallBackFv(); // 1
+extern "C" void draw__21dPa_setColorEcallBackFP14JPABaseEmitter(); // 1
+extern "C" void setup__21dPa_setColorEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc(); // 1
+extern "C" void __dt__21dPa_setColorEcallBackFv(); // 1
+extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
+extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
+extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
+extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
+extern "C" void __dt__18dPa_modelEcallBackFv(); // 1
+extern "C" void __dt__25dPa_gen_d_light8EcallBackFv(); // 1
+extern "C" void __sinit_d_particle_cpp(); // 1
 SECTION_RODATA extern const u8 d_particle_d_particle__lit_4065[12];
 SECTION_RODATA extern const u8 d_particle_d_particle__lit_5691[12];
 SECTION_RODATA extern const u8 d_particle_d_particle__lit_6363[12];
@@ -1062,266 +636,265 @@ SECTION_SDATA2 extern f32 d_particle_d_particle__lit_6846;
 // External References:
 // 
 
-extern "C" void OSReport();
-void mDoExt_getArchiveHeap();
-void mDoExt_createSolidHeapFromGame(u32, u32);
-void mDoExt_createSolidHeapFromSystem(u32, u32);
-void mDoExt_adjustSolidHeap(JKRSolidHeap*);
-void mDoExt_destroySolidHeap(JKRSolidHeap*);
-void mDoExt_setCurrentHeap(JKRHeap*);
-void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*);
-void dKy_light_influence_col(_GXColor*, f32);
-void dKy_setLight_nowroom(char);
-void dKy_setLight_nowroom_grass(char, f32);
-void dKy_setLight_again();
-void dKy_Global_amb_set(dKy_tevstr_c*);
-void dKy_SordFlush_set(cXyz, int);
-void dKy_GxFog_set();
-void dKy_GxFog_tevstr_set(dKy_tevstr_c*);
-void dKy_ParticleColor_get_actor(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32);
-void dKy_ParticleColor_get_bg(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32);
-void dKy_camera_water_in_status_check();
-void dKy_pol_efftype_get(cBgS_PolyInfo const*);
-void dKy_pol_efftype2_get(cBgS_PolyInfo const*);
-void dKy_pol_eff_prim_get(cBgS_PolyInfo const*, _GXColor*);
-void dKy_pol_eff_env_get(cBgS_PolyInfo const*, _GXColor*);
-void dKy_pol_eff2_prim_get(cBgS_PolyInfo const*, _GXColor*);
-void dKy_pol_eff2_env_get(cBgS_PolyInfo const*, _GXColor*);
-void dKy_pol_eff_alpha_get(cBgS_PolyInfo const*);
-void dKy_pol_eff_ratio_get(cBgS_PolyInfo const*);
-void dKy_pol_eff2_alpha_get(cBgS_PolyInfo const*);
-void dKy_pol_eff2_ratio_get(cBgS_PolyInfo const*);
-void cM_atan2s(f32, f32);
-void cLib_chaseS(s16*, s16, s16);
-extern "C" void func_8027DEBC();
-void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]);
-void* operator new(u32, JKRHeap*, int);
-void* operator new[](u32);
-void operator delete(void*);
-extern "C" void PSMTXIdentity();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXRotRad();
-extern "C" void PSMTXRotAxisRad();
-extern "C" void PSMTXScale();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECCrossProduct();
-extern "C" void PSVECSquareDistance();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXInvalidateVtxCache();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXFlush();
-extern "C" void GXBegin();
-extern "C" void GXEnableTexOffsets();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetCoPlanar();
-extern "C" void GXSetChanAmbColor();
-extern "C" void GXSetChanMatColor();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetColorUpdate();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXLoadNrmMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXSetClipMode();
-extern "C" void __register_global_object();
-extern "C" void __destroy_new_array();
-extern "C" void __construct_array();
-extern "C" void __construct_new_array();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_17();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_20();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_17();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_20();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void sprintf();
+extern "C" void OSReport(); // 1
+void mDoExt_getArchiveHeap(); // 2
+void mDoExt_createSolidHeapFromGame(u32, u32); // 2
+void mDoExt_createSolidHeapFromSystem(u32, u32); // 2
+void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
+void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
+void mDoExt_setCurrentHeap(JKRHeap*); // 2
+void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*); // 2
+void dKy_light_influence_col(_GXColor*, f32); // 2
+void dKy_setLight_nowroom(char); // 2
+void dKy_setLight_nowroom_grass(char, f32); // 2
+void dKy_setLight_again(); // 2
+void dKy_Global_amb_set(dKy_tevstr_c*); // 2
+void dKy_SordFlush_set(cXyz, int); // 2
+void dKy_GxFog_set(); // 2
+void dKy_GxFog_tevstr_set(dKy_tevstr_c*); // 2
+void dKy_ParticleColor_get_actor(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); // 2
+void dKy_ParticleColor_get_bg(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); // 2
+void dKy_camera_water_in_status_check(); // 2
+void dKy_pol_efftype_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_efftype2_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_eff_prim_get(cBgS_PolyInfo const*, _GXColor*); // 2
+void dKy_pol_eff_env_get(cBgS_PolyInfo const*, _GXColor*); // 2
+void dKy_pol_eff2_prim_get(cBgS_PolyInfo const*, _GXColor*); // 2
+void dKy_pol_eff2_env_get(cBgS_PolyInfo const*, _GXColor*); // 2
+void dKy_pol_eff_alpha_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_eff_ratio_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_eff2_alpha_get(cBgS_PolyInfo const*); // 2
+void dKy_pol_eff2_ratio_get(cBgS_PolyInfo const*); // 2
+void cM_atan2s(f32, f32); // 2
+void cLib_chaseS(s16*, s16, s16); // 2
+void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
+void* operator new(u32, JKRHeap*, int); // 2
+void* operator new[](u32); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXRotRad(); // 1
+extern "C" void PSMTXRotAxisRad(); // 1
+extern "C" void PSMTXScale(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXInvalidateVtxCache(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXFlush(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXEnableTexOffsets(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetCoPlanar(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetColorUpdate(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXLoadNrmMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_new_array(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_17(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_20(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_17(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_20(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void sprintf(); // 1
 
-extern "C" void OSReport();
-extern "C" void mDoExt_getArchiveHeap__Fv();
-extern "C" void mDoExt_createSolidHeapFromGame__FUlUl();
-extern "C" void mDoExt_createSolidHeapFromSystem__FUlUl();
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap();
-extern "C" void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void __ct__11J3DLightObjFv();
-extern "C" void waterCheck__11fopAcM_wt_cFPC4cXyz();
-extern "C" void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi();
-extern "C" void dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf();
-extern "C" void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo();
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
-extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void checkNowWolfEyeUp__9daPy_py_cFv();
-extern "C" void dKy_light_influence_col__FP8_GXColorf();
-extern "C" void dKy_setLight_nowroom__Fc();
-extern "C" void dKy_setLight_nowroom_grass__Fcf();
-extern "C" void dKy_setLight_again__Fv();
-extern "C" void dKy_Global_amb_set__FP12dKy_tevstr_c();
-extern "C" void dKy_SordFlush_set__F4cXyzi();
-extern "C" void dKy_GxFog_set__Fv();
-extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c();
-extern "C" void dKy_ParticleColor_get_actor__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf();
-extern "C" void dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf();
-extern "C" void dKy_camera_water_in_status_check__Fv();
-extern "C" void dKy_pol_efftype_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_efftype2_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor();
-extern "C" void dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor();
-extern "C" void dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor();
-extern "C" void dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor();
-extern "C" void dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo();
-extern "C" void dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo();
-extern "C" void __ml__4cXyzCFf();
-extern "C" void atan2sX_Z__4cXyzCFv();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cLib_chaseS__FPsss();
-extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf();
-extern "C" void __ct__18JPAResourceManagerFPCvP7JKRHeap();
-extern "C" void checkUserIndexDuplication__18JPAResourceManagerCFUs();
-extern "C" void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc();
-extern "C" void getResUserWork__18JPAResourceManagerCFUs();
-extern "C" void __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc();
-extern "C" void func_8027DEBC();
-extern "C" void calc__17JPAEmitterManagerFUc();
-extern "C" void draw__17JPAEmitterManagerFPC11JPADrawInfoUc();
-extern "C" void forceDeleteAllEmitter__17JPAEmitterManagerFv();
-extern "C" void entryResourceManager__17JPAEmitterManagerFP18JPAResourceManagerUc();
-extern "C" void clearResourceManager__17JPAEmitterManagerFUc();
-extern "C" void __dt__18JPAEmitterCallBackFv();
-extern "C" void createParticle__14JPABaseEmitterFv();
-extern "C" void getCurrentCreateNumber__14JPABaseEmitterCFv();
-extern "C" void getDrawCount__14JPABaseEmitterCFv();
-extern "C" void loadTexture__14JPABaseEmitterFUc11_GXTexMapID();
-extern "C" void __dt__19JPAParticleCallBackFv();
-extern "C" void getWidth__15JPABaseParticleCFPC14JPABaseEmitter();
-extern "C" void getHeight__15JPABaseParticleCFPC14JPABaseEmitter();
-extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
-extern "C" void free__7JKRHeapFPvP7JKRHeap();
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void* __nwa__FUl();
-extern "C" void __dl__FPv();
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
-extern "C" void reinitGX__6J3DSysFv();
-extern "C" void loadGX__10J3DTextureCFUs11_GXTexMapID();
-extern "C" void loadPreDrawSetting__8J3DShapeCFv();
-extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern "C" void syncJ3DSysPointers__12J3DModelDataCFv();
-extern "C" void syncJ3DSysFlags__12J3DModelDataCFv();
-extern "C" void searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData();
-extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData();
-extern "C" void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
-extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
-extern "C" void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
-extern "C" void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
-extern "C" void PSMTXIdentity();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXRotRad();
-extern "C" void PSMTXRotAxisRad();
-extern "C" void PSMTXScale();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECCrossProduct();
-extern "C" void PSVECSquareDistance();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXInvalidateVtxCache();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXFlush();
-extern "C" void GXBegin();
-extern "C" void GXEnableTexOffsets();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetCoPlanar();
-extern "C" void GXSetChanAmbColor();
-extern "C" void GXSetChanMatColor();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetColorUpdate();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXLoadNrmMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXSetClipMode();
-extern "C" void __register_global_object();
-extern "C" void __destroy_new_array();
-extern "C" void __construct_array();
-extern "C" void __construct_new_array();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_17();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_20();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_17();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_20();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void sprintf();
+extern "C" void OSReport(); // 1
+extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
+extern "C" void mDoExt_createSolidHeapFromGame__FUlUl(); // 1
+extern "C" void mDoExt_createSolidHeapFromSystem__FUlUl(); // 1
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
+extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap(); // 1
+extern "C" void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void __ct__11J3DLightObjFv(); // 1
+extern "C" void waterCheck__11fopAcM_wt_cFPC4cXyz(); // 1
+extern "C" void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi(); // 1
+extern "C" void dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf(); // 1
+extern "C" void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
+extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void checkNowWolfEyeUp__9daPy_py_cFv(); // 1
+extern "C" void dKy_light_influence_col__FP8_GXColorf(); // 1
+extern "C" void dKy_setLight_nowroom__Fc(); // 1
+extern "C" void dKy_setLight_nowroom_grass__Fcf(); // 1
+extern "C" void dKy_setLight_again__Fv(); // 1
+extern "C" void dKy_Global_amb_set__FP12dKy_tevstr_c(); // 1
+extern "C" void dKy_SordFlush_set__F4cXyzi(); // 1
+extern "C" void dKy_GxFog_set__Fv(); // 1
+extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c(); // 1
+extern "C" void dKy_ParticleColor_get_actor__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf(); // 1
+extern "C" void dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf(); // 1
+extern "C" void dKy_camera_water_in_status_check__Fv(); // 1
+extern "C" void dKy_pol_efftype_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_efftype2_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor(); // 1
+extern "C" void dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor(); // 1
+extern "C" void dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor(); // 1
+extern "C" void dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor(); // 1
+extern "C" void dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo(); // 1
+extern "C" void __ml__4cXyzCFf(); // 1
+extern "C" void atan2sX_Z__4cXyzCFv(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cLib_chaseS__FPsss(); // 1
+extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf(); // 1
+extern "C" void __ct__18JPAResourceManagerFPCvP7JKRHeap(); // 1
+extern "C" void checkUserIndexDuplication__18JPAResourceManagerCFUs(); // 1
+extern "C" void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc(); // 1
+extern "C" void getResUserWork__18JPAResourceManagerCFUs(); // 1
+extern "C" void __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc(); // 1
+extern "C" void func_8027DEBC(); // 1
+extern "C" void calc__17JPAEmitterManagerFUc(); // 1
+extern "C" void draw__17JPAEmitterManagerFPC11JPADrawInfoUc(); // 1
+extern "C" void forceDeleteAllEmitter__17JPAEmitterManagerFv(); // 1
+extern "C" void entryResourceManager__17JPAEmitterManagerFP18JPAResourceManagerUc(); // 1
+extern "C" void clearResourceManager__17JPAEmitterManagerFUc(); // 1
+extern "C" void __dt__18JPAEmitterCallBackFv(); // 1
+extern "C" void createParticle__14JPABaseEmitterFv(); // 1
+extern "C" void getCurrentCreateNumber__14JPABaseEmitterCFv(); // 1
+extern "C" void getDrawCount__14JPABaseEmitterCFv(); // 1
+extern "C" void loadTexture__14JPABaseEmitterFUc11_GXTexMapID(); // 1
+extern "C" void __dt__19JPAParticleCallBackFv(); // 1
+extern "C" void getWidth__15JPABaseParticleCFPC14JPABaseEmitter(); // 1
+extern "C" void getHeight__15JPABaseParticleCFPC14JPABaseEmitter(); // 1
+extern "C" void JPAGetXYZRotateMtx__FsssPA4_f(); // 1
+extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
+extern "C" void reinitGX__6J3DSysFv(); // 1
+extern "C" void loadGX__10J3DTextureCFUs11_GXTexMapID(); // 1
+extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo(); // 1
+extern "C" void syncJ3DSysPointers__12J3DModelDataCFv(); // 1
+extern "C" void syncJ3DSysFlags__12J3DModelDataCFv(); // 1
+extern "C" void searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData(); // 1
+extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData(); // 1
+extern "C" void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern(); // 1
+extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
+extern "C" void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern(); // 1
+extern "C" void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXRotRad(); // 1
+extern "C" void PSMTXRotAxisRad(); // 1
+extern "C" void PSMTXScale(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXInvalidateVtxCache(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXFlush(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXEnableTexOffsets(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetCoPlanar(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetColorUpdate(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXLoadNrmMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_new_array(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_17(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_20(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_17(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_20(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void sprintf(); // 1
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
 SECTION_DATA extern void*const __vt__19JPAParticleCallBack[5];
 SECTION_DATA extern void*const __vt__8cM3dGPla[3];

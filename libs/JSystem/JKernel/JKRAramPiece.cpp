@@ -9,28 +9,15 @@
 // Types:
 // 
 
-// build JKRAramPiece (['JKRAramPiece']) False/False
-// build JKRAMCommand (['JKRAMCommand']) False/False
-/* top-level dependencies (begin ['JKRAMCommand']) */
-/* top-level dependencies (end ['JKRAMCommand']) */
 struct JKRAMCommand {
 	/* 802D39EC */ JKRAMCommand();
 	/* 802D3A5C */ ~JKRAMCommand();
 };
 
-// build JKRAramBlock (['JKRAramBlock']) False/False
-/* top-level dependencies (begin ['JKRAramBlock']) */
-/* top-level dependencies (end ['JKRAramBlock']) */
 struct JKRAramBlock {
 };
 
-/* top-level dependencies (begin ['JKRAramPiece']) */
-// outer dependency: ('JKRAMCommand',)
-// outer dependency: ('JKRAramBlock',)
-/* top-level dependencies (end ['JKRAramPiece']) */
 struct JKRAramPiece {
-	// ('JKRAMCommand',)
-	// ('JKRAramBlock',)
 	/* 802D35F4 */ void sendCommand(JKRAMCommand*);
 	/* 802D3770 */ void sync(JKRAMCommand*, int);
 	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
@@ -38,54 +25,35 @@ struct JKRAramPiece {
 	/* 802D3944 */ void doneDMA(u32);
 };
 
-// build JKRAMCommand (['JKRAMCommand']) True/True
-// build JKRAramBlock (['JKRAramBlock']) True/True
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-// build JKRDecomp (['JKRDecomp']) False/False
-// build JKRDecompCommand (['JKRDecompCommand']) False/False
-/* top-level dependencies (begin ['JKRDecompCommand']) */
-/* top-level dependencies (end ['JKRDecompCommand']) */
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRAMCommand> */
+struct JSUList__template5 {
+	/* 802D2DF0 */ ~JSUList__template5();
+};
+
 struct JKRDecompCommand {
 };
 
-/* top-level dependencies (begin ['JKRDecomp']) */
-// outer dependency: ('JKRDecompCommand',)
-/* top-level dependencies (end ['JKRDecomp']) */
 struct JKRDecomp {
-	// ('JKRDecompCommand',)
 	/* 802DB8D0 */ void sendCommand(JKRDecompCommand*);
 };
 
-// build JKRDecompCommand (['JKRDecompCommand']) True/True
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) True/True
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JUTException (['JUTException']) False/False
-/* top-level dependencies (begin ['JUTException']) */
-/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
@@ -94,20 +62,20 @@ struct JUTException {
 // Forward References:
 // 
 
-extern "C" static void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
-extern "C" static void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
-extern "C" void __sinit_JKRAramPiece_cpp();
+extern "C" static void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
+extern "C" static void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
+extern "C" void __sinit_JKRAramPiece_cpp(); // 1
 
-extern "C" static void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
-extern "C" void sendCommand__12JKRAramPieceFP12JKRAMCommand();
-extern "C" static void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
-extern "C" void sync__12JKRAramPieceFP12JKRAMCommandi();
-extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock();
-extern "C" void startDMA__12JKRAramPieceFP12JKRAMCommand();
-extern "C" void doneDMA__12JKRAramPieceFUl();
-extern "C" void __ct__12JKRAMCommandFv();
-extern "C" void __dt__12JKRAMCommandFv();
-extern "C" void __sinit_JKRAramPiece_cpp();
+extern "C" static void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
+extern "C" void sendCommand__12JKRAramPieceFP12JKRAMCommand(); // 1
+extern "C" static void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
+extern "C" void sync__12JKRAramPieceFP12JKRAMCommandi(); // 1
+extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock(); // 1
+extern "C" void startDMA__12JKRAramPieceFP12JKRAMCommand(); // 1
+extern "C" void doneDMA__12JKRAramPieceFUl(); // 1
+extern "C" void __ct__12JKRAMCommandFv(); // 1
+extern "C" void __dt__12JKRAMCommandFv(); // 1
+extern "C" void __sinit_JKRAramPiece_cpp(); // 1
 SECTION_RODATA extern const u8 JKRAramPiece__stringBase0[104];
 SECTION_BSS extern u8 JKRAramPiece__lit_492[12];
 SECTION_BSS extern u8 sAramPieceCommandList__12JKRAramPiece[12];
@@ -117,53 +85,52 @@ SECTION_BSS extern u8 mMutex__12JKRAramPiece[24];
 // External References:
 // 
 
-extern "C" void OSReport();
-void* operator new(u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void func_802D2DF0();
-extern "C" void DCInvalidateRange();
-extern "C" void DCStoreRange();
-extern "C" void OSInitMessageQueue();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void ARQPostRequest();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
+extern "C" void OSReport(); // 1
+void* operator new(u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void DCStoreRange(); // 1
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void ARQPostRequest(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
 
-extern "C" void OSReport();
-extern "C" void free__7JKRHeapFPvP7JKRHeap();
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void func_802D2DF0();
-extern "C" void sendCommand__9JKRDecompFP16JKRDecompCommand();
-extern "C" void __ct__10JSUPtrLinkFPv();
-extern "C" void __dt__10JSUPtrLinkFv();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
-extern "C" void DCInvalidateRange();
-extern "C" void DCStoreRange();
-extern "C" void OSInitMessageQueue();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void ARQPostRequest();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
+extern "C" void OSReport(); // 1
+extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void func_802D2DF0(); // 1
+extern "C" void sendCommand__9JKRDecompFP16JKRDecompCommand(); // 1
+extern "C" void __ct__10JSUPtrLinkFPv(); // 1
+extern "C" void __dt__10JSUPtrLinkFv(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void DCStoreRange(); // 1
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void ARQPostRequest(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
 SECTION_DATA extern u8 sMessageQueue__7JKRAram[32];
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 

@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build mDoCPd_c (['mDoCPd_c']) False/False
-/* top-level dependencies (begin ['mDoCPd_c']) */
-/* top-level dependencies (end ['mDoCPd_c']) */
 struct mDoCPd_c {
 	/* 80007D74 */ void recalibrate();
 };
@@ -20,18 +17,18 @@ struct mDoCPd_c {
 // Forward References:
 // 
 
-void cAPICPad_recalibrate();
-void cAPICPad_ANY_BUTTON(u32);
+void cAPICPad_recalibrate(); // 2
+void cAPICPad_ANY_BUTTON(u32); // 2
 
-extern "C" void cAPICPad_recalibrate__Fv();
-extern "C" void cAPICPad_ANY_BUTTON__FUl();
+extern "C" void cAPICPad_recalibrate__Fv(); // 1
+extern "C" void cAPICPad_ANY_BUTTON__FUl(); // 1
 
 // 
 // External References:
 // 
 
 
-extern "C" void recalibrate__8mDoCPd_cFv();
+extern "C" void recalibrate__8mDoCPd_cFv(); // 1
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 
 // 

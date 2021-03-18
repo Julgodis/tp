@@ -9,33 +9,13 @@
 // Types:
 // 
 
-// build JUTXfb (['JUTXfb']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-};
-
-// build _GXRenderModeObj (['_GXRenderModeObj']) False/False
-/* top-level dependencies (begin ['_GXRenderModeObj']) */
-/* top-level dependencies (end ['_GXRenderModeObj']) */
 struct _GXRenderModeObj {
 };
 
-// build JUTXfb (['JUTXfb']) True/False
-struct JUTXfb;
-/* top-level dependencies (begin ['JUTXfb']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('_GXRenderModeObj',)
-// outer dependency: ('JUTXfb', 'EXfbNumber')
-/* top-level dependencies (end ['JUTXfb']) */
+struct JKRHeap {
+};
+
 struct JUTXfb {
-	// ('JKRHeap',)
-	// ('_GXRenderModeObj',)
-	// ('JUTXfb', 'EXfbNumber')
-	// build EXfbNumber (['JUTXfb', 'EXfbNumber']) False/False
-	/* dependencies (begin ['JUTXfb', 'EXfbNumber']) */
-	/* dependencies (end ['JUTXfb', 'EXfbNumber']) */
 	struct EXfbNumber {
 	};
 
@@ -49,50 +29,48 @@ struct JUTXfb {
 	/* 802E5454 */ void initiate(u16, u16, JKRHeap*, JUTXfb::EXfbNumber);
 };
 
-// build _GXRenderModeObj (['_GXRenderModeObj']) True/True
-// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void clearIndex__6JUTXfbFv();
-extern "C" void common_init__6JUTXfbFi();
-extern "C" void __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber();
-extern "C" void __dt__6JUTXfbFv();
-extern "C" void delXfb__6JUTXfbFi();
-extern "C" void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber();
-extern "C" void destroyManager__6JUTXfbFv();
-extern "C" void initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber();
+extern "C" void clearIndex__6JUTXfbFv(); // 1
+extern "C" void common_init__6JUTXfbFi(); // 1
+extern "C" void __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber(); // 1
+extern "C" void __dt__6JUTXfbFv(); // 1
+extern "C" void delXfb__6JUTXfbFi(); // 1
+extern "C" void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber(); // 1
+extern "C" void destroyManager__6JUTXfbFv(); // 1
+extern "C" void initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber(); // 1
 SECTION_SBSS extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void* operator new(u32);
-void* operator new[](u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void GXGetNumXfbLines();
-extern "C" void GXGetYScaleFactor();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void* operator new(u32); // 2
+void* operator new[](u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void GXGetNumXfbLines(); // 1
+extern "C" void GXGetYScaleFactor(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void* __nw__FUl();
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void GXGetNumXfbLines();
-extern "C" void GXGetYScaleFactor();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void* __nw__FUl(); // 1
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void GXGetNumXfbLines(); // 1
+extern "C" void GXGetYScaleFactor(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sManager__8JUTVideo[4];
 

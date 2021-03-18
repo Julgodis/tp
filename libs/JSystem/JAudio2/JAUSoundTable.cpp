@@ -9,27 +9,15 @@
 // Types:
 // 
 
-// build JAUSoundTable (['JAUSoundTable']) False/False
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['JAUSoundTable']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['JAUSoundTable']) */
 struct JAUSoundTable {
-	// ('JAISoundID',)
 	/* 802A7114 */ void init(void const*);
 	/* 802A7160 */ void getTypeID(JAISoundID) const;
 	/* 802A728C */ void getData(JAISoundID) const;
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build JAUSoundNameTable (['JAUSoundNameTable']) False/False
-/* top-level dependencies (begin ['JAUSoundNameTable']) */
-/* top-level dependencies (end ['JAUSoundNameTable']) */
 struct JAUSoundNameTable {
 	/* 802A73D4 */ void init(void const*);
 };
@@ -39,10 +27,10 @@ struct JAUSoundNameTable {
 // 
 
 
-extern "C" void init__13JAUSoundTableFPCv();
-extern "C" void getTypeID__13JAUSoundTableCF10JAISoundID();
-extern "C" void getData__13JAUSoundTableCF10JAISoundID();
-extern "C" void init__17JAUSoundNameTableFPCv();
+extern "C" void init__13JAUSoundTableFPCv(); // 1
+extern "C" void getTypeID__13JAUSoundTableCF10JAISoundID(); // 1
+extern "C" void getData__13JAUSoundTableCF10JAISoundID(); // 1
+extern "C" void init__17JAUSoundNameTableFPCv(); // 1
 
 // 
 // External References:

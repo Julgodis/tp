@@ -9,13 +9,7 @@
 // Types:
 // 
 
-// build JMath (['JMath']) False/False
-/* top-level dependencies (begin ['JMath']) */
-/* top-level dependencies (end ['JMath']) */
 struct JMath {
-	// build TRandom_fast_ (['JMath', 'TRandom_fast_']) False/False
-	/* dependencies (begin ['JMath', 'TRandom_fast_']) */
-	/* dependencies (end ['JMath', 'TRandom_fast_']) */
 	struct TRandom_fast_ {
 		/* 80339AE4 */ TRandom_fast_(u32);
 	};
@@ -27,7 +21,7 @@ struct JMath {
 // 
 
 
-extern "C" void __ct__Q25JMath13TRandom_fast_FUl();
+extern "C" void __ct__Q25JMath13TRandom_fast_FUl(); // 1
 
 // 
 // External References:

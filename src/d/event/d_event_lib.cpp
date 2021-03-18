@@ -9,13 +9,17 @@
 // Types:
 // 
 
-// build dEvLib_callback_c (['dEvLib_callback_c']) False/False
-/* top-level dependencies (begin ['dEvLib_callback_c']) */
-/* top-level dependencies (end ['dEvLib_callback_c']) */
+template <typename A0>
+struct action_class { };
+/* action_class<dEvLib_callback_c> */
+struct action_class__template0 {
+};
+
 struct dEvLib_callback_c {
 	/* 8004886C */ void eventUpdate();
 	/* 800488A4 */ void setEvent(int, int, int);
 	/* 80048940 */ void orderEvent(int, int, int);
+	/* 80048970 */ void setAction(action_class<dEvLib_callback_c>*);
 	/* 800489A8 */ void initAction();
 	/* 800489F8 */ void executeAction();
 	/* 80048A50 */ void initStart();
@@ -24,26 +28,14 @@ struct dEvLib_callback_c {
 	/* 80048B48 */ void executeRun();
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build dEvt_control_c (['dEvt_control_c']) False/False
-/* top-level dependencies (begin ['dEvt_control_c']) */
-/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-// build dEvent_manager_c (['dEvent_manager_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dEvent_manager_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dEvent_manager_c']) */
 struct dEvent_manager_c {
-	// ('fopAc_ac_c',)
 	/* 80047698 */ void getEventIdx(fopAc_ac_c*, u8);
 	/* 80047A78 */ void endCheck(s16);
 };
@@ -52,20 +44,19 @@ struct dEvent_manager_c {
 // Forward References:
 // 
 
-extern "C" static void func_80048970();
-extern "C" void __sinit_d_event_lib_cpp();
+extern "C" void __sinit_d_event_lib_cpp(); // 1
 
-extern "C" void eventUpdate__17dEvLib_callback_cFv();
-extern "C" void setEvent__17dEvLib_callback_cFiii();
-extern "C" void orderEvent__17dEvLib_callback_cFiii();
-extern "C" static void func_80048970();
-extern "C" void initAction__17dEvLib_callback_cFv();
-extern "C" void executeAction__17dEvLib_callback_cFv();
-extern "C" void initStart__17dEvLib_callback_cFv();
-extern "C" void executeStart__17dEvLib_callback_cFv();
-extern "C" void initRun__17dEvLib_callback_cFv();
-extern "C" void executeRun__17dEvLib_callback_cFv();
-extern "C" void __sinit_d_event_lib_cpp();
+extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
+extern "C" void setEvent__17dEvLib_callback_cFiii(); // 1
+extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
+extern "C" void func_80048970(); // 1
+extern "C" void initAction__17dEvLib_callback_cFv(); // 1
+extern "C" void executeAction__17dEvLib_callback_cFv(); // 1
+extern "C" void initStart__17dEvLib_callback_cFv(); // 1
+extern "C" void executeStart__17dEvLib_callback_cFv(); // 1
+extern "C" void initRun__17dEvLib_callback_cFv(); // 1
+extern "C" void executeRun__17dEvLib_callback_cFv(); // 1
+extern "C" void __sinit_d_event_lib_cpp(); // 1
 SECTION_DATA extern u8 d_event_d_event_lib__cNullVec__6Z2Calc[12];
 SECTION_DATA extern void*lit_3617[3];
 SECTION_DATA extern void*lit_3618[3];
@@ -78,18 +69,18 @@ SECTION_BSS extern u8 l_runAction[24];
 // External References:
 // 
 
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
-void fopAcM_orderMapToolEvent(fopAc_ac_c*, u8, s16, u16, u16, u16);
-extern "C" void __ptmf_test();
-extern "C" void __ptmf_scall();
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
+void fopAcM_orderMapToolEvent(fopAc_ac_c*, u8, s16, u16, u16, u16); // 2
+extern "C" void __ptmf_test(); // 1
+extern "C" void __ptmf_scall(); // 1
 
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
-extern "C" void fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs();
-extern "C" void reset__14dEvt_control_cFv();
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
-extern "C" void endCheck__16dEvent_manager_cFs();
-extern "C" void __ptmf_test();
-extern "C" void __ptmf_scall();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
+extern "C" void fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs(); // 1
+extern "C" void reset__14dEvt_control_cFv(); // 1
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
+extern "C" void endCheck__16dEvent_manager_cFs(); // 1
+extern "C" void __ptmf_test(); // 1
+extern "C" void __ptmf_scall(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 
@@ -137,7 +128,7 @@ asm void dEvLib_callback_c::orderEvent(int field_0, int field_1, int field_2) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80048970() {
+asm void dEvLib_callback_c::setAction(action_class<dEvLib_callback_c>* field_0) {
 	nofralloc
 #include "asm/d/event/d_event_lib/func_80048970.s"
 }

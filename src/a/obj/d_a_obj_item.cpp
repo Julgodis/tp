@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
@@ -28,15 +20,9 @@ struct cXyz {
 	/* 8026706C */ bool operator!=(Vec const&) const;
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build daItemBase_c (['daItemBase_c']) False/False
-/* top-level dependencies (begin ['daItemBase_c']) */
-/* top-level dependencies (end ['daItemBase_c']) */
 struct daItemBase_c {
 	/* 80037A64 */ void hide();
 	/* 80037A74 */ void show();
@@ -61,9 +47,6 @@ struct daItemBase_c {
 	/* 8015B0B8 */ void getData();
 };
 
-// build daItem_c (['daItem_c']) False/False
-/* top-level dependencies (begin ['daItem_c']) */
-/* top-level dependencies (end ['daItem_c']) */
 struct daItem_c {
 	/* 8015B0C4 */ void initBaseMtx();
 	/* 8015B108 */ void setBaseMtx();
@@ -117,16 +100,10 @@ struct daItem_c {
 	/* 8015DE38 */ void initAngle();
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-// build dCcD_GObjInf (['dCcD_GObjInf']) False/False
-/* top-level dependencies (begin ['dCcD_GObjInf']) */
-/* top-level dependencies (end ['dCcD_GObjInf']) */
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 80084460 */ void ChkTgHit();
@@ -134,197 +111,86 @@ struct dCcD_GObjInf {
 	/* 80084658 */ void ChkCoHit();
 };
 
-// build Z2SoundObjSimple (['Z2SoundObjSimple']) False/False
-/* top-level dependencies (begin ['Z2SoundObjSimple']) */
-/* top-level dependencies (end ['Z2SoundObjSimple']) */
 struct Z2SoundObjSimple {
 	/* 8015BA3C */ ~Z2SoundObjSimple();
 	/* 802BE844 */ Z2SoundObjSimple();
 };
 
-// build daPy_py_c (['daPy_py_c']) False/False
-/* top-level dependencies (begin ['daPy_py_c']) */
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015DFD8 */ void getItemPos() const;
 	/* 8015DFF4 */ void getLeftHandPos() const;
 };
 
-// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['mDoMtx_stack_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
-	// ('csXyz',)
-	// ('cXyz',)
 	/* 8000CD64 */ void transS(cXyz const&);
 	/* 8000CD9C */ void transM(f32, f32, f32);
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-// build csXyz (['csXyz']) True/True
-// build fopAcM_lc_c (['fopAcM_lc_c']) False/False
-// build cXyz (['cXyz']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['fopAcM_lc_c']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['fopAcM_lc_c']) */
 struct fopAcM_lc_c {
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 8001DC68 */ void lineCheck(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
-// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
-/* top-level dependencies (begin ['request_of_phase_process_class']) */
-/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 
-// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_get_item_c']) */
-/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033E94 */ void offFirstBit(u8);
 };
 
-// build dSv_info_c (['dSv_info_c']) False/False
-/* top-level dependencies (begin ['dSv_info_c']) */
-/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 	/* 800354E0 */ void onItem(int, int);
 	/* 80035590 */ void isItem(int, int) const;
 };
 
-// build dEvt_control_c (['dEvt_control_c']) False/False
-/* top-level dependencies (begin ['dEvt_control_c']) */
-/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 	/* 800436EC */ void setPtI_Id(u32);
 };
 
-// build dEvent_manager_c (['dEvent_manager_c']) False/False
-/* top-level dependencies (begin ['dEvent_manager_c']) */
-/* top-level dependencies (end ['dEvent_manager_c']) */
 struct dEvent_manager_c {
 	/* 80047ADC */ void endCheckOld(char const*);
 };
 
-// build dPa_followEcallBack (['dPa_followEcallBack']) False/False
-/* top-level dependencies (begin ['dPa_followEcallBack']) */
-/* top-level dependencies (end ['dPa_followEcallBack']) */
 struct dPa_followEcallBack {
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
-// build dPa_control_c (['dPa_control_c']) False/False
-// build csXyz (['csXyz']) True/True
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
-struct dKy_tevstr_c {
-};
-
-// build cXyz (['cXyz']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) False/False
-/* top-level dependencies (begin ['dPa_levelEcallBack']) */
-/* top-level dependencies (end ['dPa_levelEcallBack']) */
 struct dPa_levelEcallBack {
 };
 
-/* top-level dependencies (begin ['dPa_control_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('_GXColor',)
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dPa_levelEcallBack',)
-/* top-level dependencies (end ['dPa_control_c']) */
+struct dKy_tevstr_c {
+};
+
 struct dPa_control_c {
-	// ('_GXColor',)
-	// ('dKy_tevstr_c',)
-	// ('dPa_levelEcallBack',)
-	// ('csXyz',)
-	// ('cXyz',)
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) True/True
-// build _GXColor (['_GXColor']) True/True
-// build cBgS (['cBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-// build cM3dGPla (['cM3dGPla']) False/False
-/* top-level dependencies (begin ['cM3dGPla']) */
-/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
 };
 
-/* top-level dependencies (begin ['cBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-// outer dependency: ('cM3dGPla',)
-/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
-	// ('cBgS_PolyInfo',)
-	// ('cM3dGPla',)
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-// build cM3dGPla (['cM3dGPla']) True/True
-// build dBgS (['dBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-/* top-level dependencies (begin ['dBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// ('cBgS_PolyInfo',)
 	/* 80074B40 */ void ChkMoveBG_NoDABg(cBgS_PolyInfo const&);
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 };
 
-// build dBgS_AcchCir (['dBgS_AcchCir']) False/False
-/* top-level dependencies (begin ['dBgS_AcchCir']) */
-/* top-level dependencies (end ['dBgS_AcchCir']) */
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F58 */ void SetWall(f32, f32);
 };
 
-// build dBgS_Acch (['dBgS_Acch']) False/False
-// build dBgS_AcchCir (['dBgS_AcchCir']) True/True
-// build csXyz (['csXyz']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build cXyz (['cXyz']) True/True
-// build dBgS (['dBgS']) True/True
-/* top-level dependencies (begin ['dBgS_Acch']) */
-// outer dependency: ('dBgS_AcchCir',)
-// outer dependency: ('csXyz',)
-// outer dependency: ('fopAc_ac_c',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dBgS',)
-/* top-level dependencies (end ['dBgS_Acch']) */
 struct dBgS_Acch {
-	// ('dBgS_AcchCir',)
-	// ('csXyz',)
-	// ('fopAc_ac_c',)
-	// ('cXyz',)
-	// ('dBgS',)
 	/* 800760A0 */ dBgS_Acch();
 	/* 80076248 */ void Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*);
 	/* 80076AAC */ void CrrPos(dBgS&);
@@ -332,135 +198,59 @@ struct dBgS_Acch {
 	/* 800773A4 */ void ClrMoveBGOnly();
 };
 
-// build dBgS_PolyPassChk (['dBgS_PolyPassChk']) False/False
-/* top-level dependencies (begin ['dBgS_PolyPassChk']) */
-/* top-level dependencies (end ['dBgS_PolyPassChk']) */
 struct dBgS_PolyPassChk {
 	/* 80078E68 */ void SetObj();
 };
 
-// build dCcD_GStts (['dCcD_GStts']) False/False
-/* top-level dependencies (begin ['dCcD_GStts']) */
-/* top-level dependencies (end ['dCcD_GStts']) */
 struct dCcD_GStts {
 	/* 80083760 */ dCcD_GStts();
 };
 
-// build dCcD_Stts (['dCcD_Stts']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['dCcD_Stts']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dCcD_Stts']) */
 struct dCcD_Stts {
-	// ('fopAc_ac_c',)
 	/* 80083860 */ void Init(int, int, fopAc_ac_c*);
 };
 
-// build dCcD_Cyl (['dCcD_Cyl']) False/False
-// build dCcD_SrcCyl (['dCcD_SrcCyl']) False/False
-/* top-level dependencies (begin ['dCcD_SrcCyl']) */
-/* top-level dependencies (end ['dCcD_SrcCyl']) */
 struct dCcD_SrcCyl {
 };
 
-/* top-level dependencies (begin ['dCcD_Cyl']) */
-// outer dependency: ('dCcD_SrcCyl',)
-/* top-level dependencies (end ['dCcD_Cyl']) */
 struct dCcD_Cyl {
-	// ('dCcD_SrcCyl',)
 	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
 };
 
-// build dCcD_SrcCyl (['dCcD_SrcCyl']) True/True
-// build daPy_boomerangMove_c (['daPy_boomerangMove_c']) False/False
-// build cXyz (['cXyz']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['daPy_boomerangMove_c']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['daPy_boomerangMove_c']) */
 struct daPy_boomerangMove_c {
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 8015E5B0 */ void initOffset(cXyz const*);
 	/* 8015E654 */ void posMove(cXyz*, s16*, fopAc_ac_c*, s16);
 	/* 8015E87C */ void bgCheckAfterOffset(cXyz const*);
 };
 
-// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build cXyz (['cXyz']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-/* top-level dependencies (begin ['dScnKy_env_light_c']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
-	// ('J3DModelData',)
-	// ('cXyz',)
-	// ('dKy_tevstr_c',)
 	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-// build J3DModelData (['J3DModelData']) True/True
-// build cCcS (['cCcS']) False/False
-// build cCcD_Obj (['cCcD_Obj']) False/False
-/* top-level dependencies (begin ['cCcD_Obj']) */
-/* top-level dependencies (end ['cCcD_Obj']) */
 struct cCcD_Obj {
 };
 
-/* top-level dependencies (begin ['cCcS']) */
-// outer dependency: ('cCcD_Obj',)
-/* top-level dependencies (end ['cCcS']) */
 struct cCcS {
-	// ('cCcD_Obj',)
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-// build cCcD_Obj (['cCcD_Obj']) True/True
-// build Vec (['Vec']) True/True
-// build cM3dGCyl (['cM3dGCyl']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGCyl']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGCyl']) */
 struct cM3dGCyl {
-	// ('cXyz',)
 	/* 8026F1DC */ void SetC(cXyz const&);
 	/* 8026F1F8 */ void SetH(f32);
 	/* 8026F200 */ void SetR(f32);
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) True/True
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build Z2SoundObjBase (['Z2SoundObjBase']) False/False
-/* top-level dependencies (begin ['Z2SoundObjBase']) */
-/* top-level dependencies (end ['Z2SoundObjBase']) */
 struct Z2SoundObjBase {
 	/* 802BDF48 */ ~Z2SoundObjBase();
 	/* 802BDFF8 */ void deleteObject();
@@ -471,77 +261,77 @@ struct Z2SoundObjBase {
 // Forward References:
 // 
 
-static void Reflect(cXyz*, cBgS_PolyInfo const&, f32);
-static void itemGetCoCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
-static void itemGetTgCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
-static void daItem_Draw(daItem_c*);
-static void daItem_Execute(daItem_c*);
-static void daItem_Delete(daItem_c*);
-static void daItem_Create(fopAc_ac_c*);
-extern "C" void __sinit_d_a_obj_item_cpp();
+static void Reflect(cXyz*, cBgS_PolyInfo const&, f32); // 2
+static void itemGetCoCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
+static void itemGetTgCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
+static void daItem_Draw(daItem_c*); // 2
+static void daItem_Execute(daItem_c*); // 2
+static void daItem_Delete(daItem_c*); // 2
+static void daItem_Create(fopAc_ac_c*); // 2
+extern "C" void __sinit_d_a_obj_item_cpp(); // 1
 
-extern "C" static void Reflect__FP4cXyzRC13cBgS_PolyInfof();
-extern "C" void getData__12daItemBase_cFv();
-extern "C" void initBaseMtx__8daItem_cFv();
-extern "C" void setBaseMtx__8daItem_cFv();
-extern "C" void setBaseMtx_0__8daItem_cFv();
-extern "C" void setBaseMtx_1__8daItem_cFv();
-extern "C" static void itemGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" static void itemGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
-extern "C" void CreateInit__8daItem_cFv();
-extern "C" void setCullInfo__8daItem_cFv();
-extern "C" void _daItem_create__8daItem_cFv();
-extern "C" void __dt__16Z2SoundObjSimpleFv();
-extern "C" void _daItem_execute__8daItem_cFv();
-extern "C" void _daItem_draw__8daItem_cFv();
-extern "C" void _daItem_delete__8daItem_cFv();
-extern "C" void procInitNormal__8daItem_cFv();
-extern "C" void procMainNormal__8daItem_cFv();
-extern "C" void procMainEnemyCarry__8daItem_cFv();
-extern "C" void procInitForceGet__8daItem_cFv();
-extern "C" void procMainForceGet__8daItem_cFv();
-extern "C" void procInitSimpleGetDemo__8daItem_cFv();
-extern "C" void procMainSimpleGetDemo__8daItem_cFv();
-extern "C" void procInitGetDemoEvent__8daItem_cFv();
-extern "C" void procWaitGetDemoEvent__8daItem_cFv();
-extern "C" void procMainGetDemoEvent__8daItem_cFv();
-extern "C" void procInitBoomerangCarry__8daItem_cFv();
-extern "C" void procMainBoomerangCarry__8daItem_cFv();
-extern "C" void procInitSwOnWait__8daItem_cFv();
-extern "C" void procMainSwOnWait__8daItem_cFv();
-extern "C" void procInitBoomHitWait__8daItem_cFv();
-extern "C" void procMainBoomHitWait__8daItem_cFv();
-extern "C" void move_proc_call__8daItem_cFv();
-extern "C" void mode_wait_init__8daItem_cFv();
-extern "C" void mode_water_init__8daItem_cFv();
-extern "C" void mode_wait__8daItem_cFv();
-extern "C" void mode_water__8daItem_cFv();
-extern "C" void setTevStr__8daItem_cFv();
-extern "C" void itemGetNextExecute__8daItem_cFv();
-extern "C" void itemGet__8daItem_cFv();
-extern "C" void checkCountTimer__8daItem_cFv();
-extern "C" void checkPlayerGet__8daItem_cFv();
-extern "C" void checkYogan__8daItem_cFv();
-extern "C" void deleteItem__8daItem_cFv();
-extern "C" void itemActionForRupee__8daItem_cFv();
-extern "C" void itemActionForHeart__8daItem_cFv();
-extern "C" void itemActionForArrow__8daItem_cFv();
-extern "C" void itemActionForBoomerang__8daItem_cFv();
-extern "C" void bg_check__8daItem_cFv();
-extern "C" void set_bound_se__8daItem_cFv();
-extern "C" void CountTimer__8daItem_cFv();
-extern "C" void initAction__8daItem_cFv();
-extern "C" void initFlag__8daItem_cFv();
-extern "C" void initScale__8daItem_cFv();
-extern "C" void initSpeed__8daItem_cFi();
-extern "C" void initAngle__8daItem_cFv();
-extern "C" static void daItem_Draw__FP8daItem_c();
-extern "C" static void daItem_Execute__FP8daItem_c();
-extern "C" static void daItem_Delete__FP8daItem_c();
-extern "C" static void daItem_Create__FP10fopAc_ac_c();
-extern "C" void __sinit_d_a_obj_item_cpp();
-extern "C" void getItemPos__9daPy_py_cCFv();
-extern "C" void getLeftHandPos__9daPy_py_cCFv();
+extern "C" static void Reflect__FP4cXyzRC13cBgS_PolyInfof(); // 1
+extern "C" void getData__12daItemBase_cFv(); // 1
+extern "C" void initBaseMtx__8daItem_cFv(); // 1
+extern "C" void setBaseMtx__8daItem_cFv(); // 1
+extern "C" void setBaseMtx_0__8daItem_cFv(); // 1
+extern "C" void setBaseMtx_1__8daItem_cFv(); // 1
+extern "C" static void itemGetCoCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
+extern "C" static void itemGetTgCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
+extern "C" void CreateInit__8daItem_cFv(); // 1
+extern "C" void setCullInfo__8daItem_cFv(); // 1
+extern "C" void _daItem_create__8daItem_cFv(); // 1
+extern "C" void __dt__16Z2SoundObjSimpleFv(); // 1
+extern "C" void _daItem_execute__8daItem_cFv(); // 1
+extern "C" void _daItem_draw__8daItem_cFv(); // 1
+extern "C" void _daItem_delete__8daItem_cFv(); // 1
+extern "C" void procInitNormal__8daItem_cFv(); // 1
+extern "C" void procMainNormal__8daItem_cFv(); // 1
+extern "C" void procMainEnemyCarry__8daItem_cFv(); // 1
+extern "C" void procInitForceGet__8daItem_cFv(); // 1
+extern "C" void procMainForceGet__8daItem_cFv(); // 1
+extern "C" void procInitSimpleGetDemo__8daItem_cFv(); // 1
+extern "C" void procMainSimpleGetDemo__8daItem_cFv(); // 1
+extern "C" void procInitGetDemoEvent__8daItem_cFv(); // 1
+extern "C" void procWaitGetDemoEvent__8daItem_cFv(); // 1
+extern "C" void procMainGetDemoEvent__8daItem_cFv(); // 1
+extern "C" void procInitBoomerangCarry__8daItem_cFv(); // 1
+extern "C" void procMainBoomerangCarry__8daItem_cFv(); // 1
+extern "C" void procInitSwOnWait__8daItem_cFv(); // 1
+extern "C" void procMainSwOnWait__8daItem_cFv(); // 1
+extern "C" void procInitBoomHitWait__8daItem_cFv(); // 1
+extern "C" void procMainBoomHitWait__8daItem_cFv(); // 1
+extern "C" void move_proc_call__8daItem_cFv(); // 1
+extern "C" void mode_wait_init__8daItem_cFv(); // 1
+extern "C" void mode_water_init__8daItem_cFv(); // 1
+extern "C" void mode_wait__8daItem_cFv(); // 1
+extern "C" void mode_water__8daItem_cFv(); // 1
+extern "C" void setTevStr__8daItem_cFv(); // 1
+extern "C" void itemGetNextExecute__8daItem_cFv(); // 1
+extern "C" void itemGet__8daItem_cFv(); // 1
+extern "C" void checkCountTimer__8daItem_cFv(); // 1
+extern "C" void checkPlayerGet__8daItem_cFv(); // 1
+extern "C" void checkYogan__8daItem_cFv(); // 1
+extern "C" void deleteItem__8daItem_cFv(); // 1
+extern "C" void itemActionForRupee__8daItem_cFv(); // 1
+extern "C" void itemActionForHeart__8daItem_cFv(); // 1
+extern "C" void itemActionForArrow__8daItem_cFv(); // 1
+extern "C" void itemActionForBoomerang__8daItem_cFv(); // 1
+extern "C" void bg_check__8daItem_cFv(); // 1
+extern "C" void set_bound_se__8daItem_cFv(); // 1
+extern "C" void CountTimer__8daItem_cFv(); // 1
+extern "C" void initAction__8daItem_cFv(); // 1
+extern "C" void initFlag__8daItem_cFv(); // 1
+extern "C" void initScale__8daItem_cFv(); // 1
+extern "C" void initSpeed__8daItem_cFi(); // 1
+extern "C" void initAngle__8daItem_cFv(); // 1
+extern "C" static void daItem_Draw__FP8daItem_c(); // 1
+extern "C" static void daItem_Execute__FP8daItem_c(); // 1
+extern "C" static void daItem_Delete__FP8daItem_c(); // 1
+extern "C" static void daItem_Create__FP10fopAc_ac_c(); // 1
+extern "C" void __sinit_d_a_obj_item_cpp(); // 1
+extern "C" void getItemPos__9daPy_py_cCFv(); // 1
+extern "C" void getLeftHandPos__9daPy_py_cCFv(); // 1
 SECTION_RODATA extern const u8 a_obj_d_a_obj_item__stringBase0[16];
 SECTION_DATA extern u8 a_obj_d_a_obj_item__cNullVec__6Z2Calc[12];
 SECTION_DATA extern void*a_obj_d_a_obj_item__lit_4679[3];
@@ -597,146 +387,146 @@ SECTION_SDATA2 extern f32 a_obj_d_a_obj_item__lit_5233;
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16);
-void fopAcM_delete(fopAc_ac_c*);
-void fopAcM_delete(u32);
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
-void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*);
-void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*);
-void fopAcM_orderItemEvent(fopAc_ac_c*, u16, u16);
-void fopAcM_createItemForTrBoxDemo(cXyz const*, int, int, int, csXyz const*, cXyz const*);
-void fopAcM_effHamonSet(u32*, cXyz const*, f32, f32);
-void dComIfG_resLoad(request_of_phase_process_class*, char const*);
-void dComIfGp_getReverb(int);
-void CheckFieldItemCreateHeap(fopAc_ac_c*);
-void execItemGet(u8);
-void checkItemGet(u8, int);
-void isHeart(u8);
-extern "C" void func_80141AE8();
-void cM_atan2s(f32, f32);
-void cM_rndF(f32);
-void cM_rndFX(f32);
-void cLib_chaseF(f32*, f32, f32);
-void operator delete(void*);
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECAdd();
-extern "C" void PSVECSquareMag();
-extern "C" void C_VECReflect();
-extern "C" void __ptmf_test();
-extern "C" void __ptmf_scall();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void mDoMtx_YrotS(f32 (* )[4], s16); // 2
+void fopAcM_delete(fopAc_ac_c*); // 2
+void fopAcM_delete(u32); // 2
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*); // 2
+void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
+void fopAcM_orderItemEvent(fopAc_ac_c*, u16, u16); // 2
+void fopAcM_createItemForTrBoxDemo(cXyz const*, int, int, int, csXyz const*, cXyz const*); // 2
+void fopAcM_effHamonSet(u32*, cXyz const*, f32, f32); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfGp_getReverb(int); // 2
+void CheckFieldItemCreateHeap(fopAc_ac_c*); // 2
+void execItemGet(u8); // 2
+void checkItemGet(u8, int); // 2
+void isHeart(u8); // 2
+void cLib_calcTimer__template0(u8*); // 2
+void cM_atan2s(f32, f32); // 2
+void cM_rndF(f32); // 2
+void cM_rndFX(f32); // 2
+void cLib_chaseF(f32*, f32, f32); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void C_VECReflect(); // 1
+extern "C" void __ptmf_test(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void mDoMtx_YrotS__FPA4_fs();
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
-extern "C" void transM__14mDoMtx_stack_cFfff();
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
-extern "C" void __ct__10fopAc_ac_cFv();
-extern "C" void fopAcM_delete__FP10fopAc_ac_c();
-extern "C" void fopAcM_delete__FUi();
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
-extern "C" void fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz();
-extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c();
-extern "C" void fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs();
-extern "C" void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz();
-extern "C" void fopAcM_effHamonSet__FPUlPC4cXyzff();
-extern "C" void lineCheck__11fopAcM_lc_cFPC4cXyzPC4cXyzPC10fopAc_ac_c();
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
-extern "C" void dComIfGp_getReverb__Fi();
-extern "C" void offFirstBit__21dSv_player_get_item_cFUc();
-extern "C" void isSwitch__10dSv_info_cCFii();
-extern "C" void onItem__10dSv_info_cFii();
-extern "C" void isItem__10dSv_info_cCFii();
-extern "C" void hide__12daItemBase_cFv();
-extern "C" void show__12daItemBase_cFv();
-extern "C" void changeDraw__12daItemBase_cFv();
-extern "C" void chkDraw__12daItemBase_cFv();
-extern "C" void CheckFieldItemCreateHeap__FP10fopAc_ac_c();
-extern "C" void reset__14dEvt_control_cFv();
-extern "C" void setPtI_Id__14dEvt_control_cFUi();
-extern "C" void endCheckOld__16dEvent_manager_cFPCc();
-extern "C" void __ct__19dPa_followEcallBackFUcUc();
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
-extern "C" void ChkMoveBG_NoDABg__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void __ct__12dBgS_AcchCirFv();
-extern "C" void SetWall__12dBgS_AcchCirFff();
-extern "C" void __ct__9dBgS_AcchFv();
-extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz();
-extern "C" void CrrPos__9dBgS_AcchFR4dBgS();
-extern "C" void SetMoveBGOnly__9dBgS_AcchFv();
-extern "C" void ClrMoveBGOnly__9dBgS_AcchFv();
-extern "C" void SetObj__16dBgS_PolyPassChkFv();
-extern "C" void __ct__10dCcD_GSttsFv();
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
-extern "C" void __ct__12dCcD_GObjInfFv();
-extern "C" void ChkTgHit__12dCcD_GObjInfFv();
-extern "C" void GetTgHitObj__12dCcD_GObjInfFv();
-extern "C" void ChkCoHit__12dCcD_GObjInfFv();
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
-extern "C" void execItemGet__FUc();
-extern "C" void checkItemGet__FUci();
-extern "C" void isHeart__FUc();
-extern "C" void func_80141AE8();
-extern "C" void DeleteBase__12daItemBase_cFPCc();
-extern "C" bool clothCreate__12daItemBase_cFv();
-extern "C" bool __CreateHeap__12daItemBase_cFv();
-extern "C" void DrawBase__12daItemBase_cFv();
-extern "C" void RotateYBase__12daItemBase_cFv();
-extern "C" void setListStart__12daItemBase_cFv();
-extern "C" void settingBeforeDraw__12daItemBase_cFv();
-extern "C" void setShadow__12daItemBase_cFv();
-extern "C" void animEntry__12daItemBase_cFv();
-extern "C" void animPlay__12daItemBase_cFffffff();
-extern "C" void chkFlag__12daItemBase_cFi();
-extern "C" void getTevFrm__12daItemBase_cFv();
-extern "C" void getBtpFrm__12daItemBase_cFv();
-extern "C" void getShadowSize__12daItemBase_cFv();
-extern "C" void getCollisionH__12daItemBase_cFv();
-extern "C" void getCollisionR__12daItemBase_cFv();
-extern "C" void initOffset__20daPy_boomerangMove_cFPC4cXyz();
-extern "C" void posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs();
-extern "C" void bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz();
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern "C" void Set__4cCcSFP8cCcD_Obj();
-extern "C" void __pl__4cXyzCFRC3Vec();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void __ml__4cXyzCFf();
-extern "C" bool __eq__4cXyzCFRC3Vec();
-extern "C" bool __ne__4cXyzCFRC3Vec();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cM_rndF__Ff();
-extern "C" void cM_rndFX__Ff();
-extern "C" void SetC__8cM3dGCylFRC4cXyz();
-extern "C" void SetH__8cM3dGCylFf();
-extern "C" void SetR__8cM3dGCylFf();
-extern "C" void cLib_chaseF__FPfff();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void __dt__14Z2SoundObjBaseFv();
-extern "C" void deleteObject__14Z2SoundObjBaseFv();
-extern "C" void startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase();
-extern "C" void __ct__16Z2SoundObjSimpleFv();
-extern "C" void __dl__FPv();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECAdd();
-extern "C" void PSVECSquareMag();
-extern "C" void C_VECReflect();
-extern "C" void __ptmf_test();
-extern "C" void __ptmf_scall();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
+extern "C" void fopAcM_delete__FUi(); // 1
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+extern "C" void fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz(); // 1
+extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
+extern "C" void fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs(); // 1
+extern "C" void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz(); // 1
+extern "C" void fopAcM_effHamonSet__FPUlPC4cXyzff(); // 1
+extern "C" void lineCheck__11fopAcM_lc_cFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void offFirstBit__21dSv_player_get_item_cFUc(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void onItem__10dSv_info_cFii(); // 1
+extern "C" void isItem__10dSv_info_cCFii(); // 1
+extern "C" void hide__12daItemBase_cFv(); // 1
+extern "C" void show__12daItemBase_cFv(); // 1
+extern "C" void changeDraw__12daItemBase_cFv(); // 1
+extern "C" void chkDraw__12daItemBase_cFv(); // 1
+extern "C" void CheckFieldItemCreateHeap__FP10fopAc_ac_c(); // 1
+extern "C" void reset__14dEvt_control_cFv(); // 1
+extern "C" void setPtI_Id__14dEvt_control_cFUi(); // 1
+extern "C" void endCheckOld__16dEvent_manager_cFPCc(); // 1
+extern "C" void __ct__19dPa_followEcallBackFUcUc(); // 1
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
+extern "C" void ChkMoveBG_NoDABg__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void __ct__12dBgS_AcchCirFv(); // 1
+extern "C" void SetWall__12dBgS_AcchCirFff(); // 1
+extern "C" void __ct__9dBgS_AcchFv(); // 1
+extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
+extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
+extern "C" void SetMoveBGOnly__9dBgS_AcchFv(); // 1
+extern "C" void ClrMoveBGOnly__9dBgS_AcchFv(); // 1
+extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
+extern "C" void __ct__10dCcD_GSttsFv(); // 1
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
+extern "C" void __ct__12dCcD_GObjInfFv(); // 1
+extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
+extern "C" void GetTgHitObj__12dCcD_GObjInfFv(); // 1
+extern "C" void ChkCoHit__12dCcD_GObjInfFv(); // 1
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
+extern "C" void execItemGet__FUc(); // 1
+extern "C" void checkItemGet__FUci(); // 1
+extern "C" void isHeart__FUc(); // 1
+extern "C" void func_80141AE8(); // 1
+extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
+extern "C" bool clothCreate__12daItemBase_cFv(); // 1
+extern "C" bool __CreateHeap__12daItemBase_cFv(); // 1
+extern "C" void DrawBase__12daItemBase_cFv(); // 1
+extern "C" void RotateYBase__12daItemBase_cFv(); // 1
+extern "C" void setListStart__12daItemBase_cFv(); // 1
+extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
+extern "C" void setShadow__12daItemBase_cFv(); // 1
+extern "C" void animEntry__12daItemBase_cFv(); // 1
+extern "C" void animPlay__12daItemBase_cFffffff(); // 1
+extern "C" void chkFlag__12daItemBase_cFi(); // 1
+extern "C" void getTevFrm__12daItemBase_cFv(); // 1
+extern "C" void getBtpFrm__12daItemBase_cFv(); // 1
+extern "C" void getShadowSize__12daItemBase_cFv(); // 1
+extern "C" void getCollisionH__12daItemBase_cFv(); // 1
+extern "C" void getCollisionR__12daItemBase_cFv(); // 1
+extern "C" void initOffset__20daPy_boomerangMove_cFPC4cXyz(); // 1
+extern "C" void posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs(); // 1
+extern "C" void bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
+extern "C" void __pl__4cXyzCFRC3Vec(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ml__4cXyzCFf(); // 1
+extern "C" bool __eq__4cXyzCFRC3Vec(); // 1
+extern "C" bool __ne__4cXyzCFRC3Vec(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM_rndF__Ff(); // 1
+extern "C" void cM_rndFX__Ff(); // 1
+extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
+extern "C" void SetH__8cM3dGCylFf(); // 1
+extern "C" void SetR__8cM3dGCylFf(); // 1
+extern "C" void cLib_chaseF__FPfff(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void __dt__14Z2SoundObjBaseFv(); // 1
+extern "C" void deleteObject__14Z2SoundObjBaseFv(); // 1
+extern "C" void startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase(); // 1
+extern "C" void __ct__16Z2SoundObjSimpleFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void C_VECReflect(); // 1
+extern "C" void __ptmf_test(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_RODATA extern const u8 m_data__12daItemBase_c[56];
 SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
 SECTION_DATA extern void*g_fopAc_Method[8];

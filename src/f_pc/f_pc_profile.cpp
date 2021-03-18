@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-void fpcPf_Get(s16);
+void fpcPf_Get(s16); // 2
 
-extern "C" void fpcPf_Get__Fs();
+extern "C" void fpcPf_Get__Fs(); // 1
 SECTION_SBSS extern u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
 
 // 

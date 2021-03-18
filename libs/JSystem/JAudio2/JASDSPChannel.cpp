@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JASDSPChannel (['JASDSPChannel']) False/False
-/* top-level dependencies (begin ['JASDSPChannel']) */
-/* top-level dependencies (end ['JASDSPChannel']) */
 struct JASDSPChannel {
 	/* 8029D2F4 */ JASDSPChannel();
 	/* 8029D320 */ void free();
@@ -27,13 +24,7 @@ struct JASDSPChannel {
 	/* 8029D948 */ void getHandle(u32);
 };
 
-// build JASDsp (['JASDsp']) False/False
-/* top-level dependencies (begin ['JASDsp']) */
-/* top-level dependencies (end ['JASDsp']) */
 struct JASDsp {
-	// build TChannel (['JASDsp', 'TChannel']) False/False
-	/* dependencies (begin ['JASDsp', 'TChannel']) */
-	/* dependencies (end ['JASDsp', 'TChannel']) */
 	struct TChannel {
 		/* 8029DCA4 */ void init();
 		/* 8029DCE0 */ void playStart();
@@ -48,9 +39,6 @@ struct JASDsp {
 	/* 8029DA38 */ void getDSPHandle(int);
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
@@ -58,47 +46,47 @@ struct JKRHeap {
 // Forward References:
 // 
 
-extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
-extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
+extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
+extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
 
-extern "C" void __ct__13JASDSPChannelFv();
-extern "C" void free__13JASDSPChannelFv();
-extern "C" void start__13JASDSPChannelFv();
-extern "C" void drop__13JASDSPChannelFv();
-extern "C" void initAll__13JASDSPChannelFv();
-extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
-extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv();
-extern "C" void setPriority__13JASDSPChannelFUc();
-extern "C" void getLowestChannel__13JASDSPChannelFi();
-extern "C" void getLowestActiveChannel__13JASDSPChannelFv();
-extern "C" void updateProc__13JASDSPChannelFv();
-extern "C" void updateAll__13JASDSPChannelFv();
-extern "C" void killActiveChannel__13JASDSPChannelFv();
-extern "C" void getHandle__13JASDSPChannelFUl();
+extern "C" void __ct__13JASDSPChannelFv(); // 1
+extern "C" void free__13JASDSPChannelFv(); // 1
+extern "C" void start__13JASDSPChannelFv(); // 1
+extern "C" void drop__13JASDSPChannelFv(); // 1
+extern "C" void initAll__13JASDSPChannelFv(); // 1
+extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
+extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
+extern "C" void setPriority__13JASDSPChannelFUc(); // 1
+extern "C" void getLowestChannel__13JASDSPChannelFi(); // 1
+extern "C" void getLowestActiveChannel__13JASDSPChannelFv(); // 1
+extern "C" void updateProc__13JASDSPChannelFv(); // 1
+extern "C" void updateAll__13JASDSPChannelFv(); // 1
+extern "C" void killActiveChannel__13JASDSPChannelFv(); // 1
+extern "C" void getHandle__13JASDSPChannelFUl(); // 1
 SECTION_SBSS extern u8 sDspChannels__13JASDSPChannel[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int);
-extern "C" void __construct_new_array();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+void* operator new[](u32, JKRHeap*, int); // 2
+extern "C" void __construct_new_array(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void releaseHalt__6JASDspFUl();
-extern "C" void getDSPHandle__6JASDspFi();
-extern "C" void init__Q26JASDsp8TChannelFv();
-extern "C" void playStart__Q26JASDsp8TChannelFv();
-extern "C" void playStop__Q26JASDsp8TChannelFv();
-extern "C" void replyFinishRequest__Q26JASDsp8TChannelFv();
-extern "C" void forceStop__Q26JASDsp8TChannelFv();
-extern "C" void isFinish__Q26JASDsp8TChannelCFv();
-extern "C" void flush__Q26JASDsp8TChannelFv();
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void __construct_new_array();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void releaseHalt__6JASDspFUl(); // 1
+extern "C" void getDSPHandle__6JASDspFi(); // 1
+extern "C" void init__Q26JASDsp8TChannelFv(); // 1
+extern "C" void playStart__Q26JASDsp8TChannelFv(); // 1
+extern "C" void playStop__Q26JASDsp8TChannelFv(); // 1
+extern "C" void replyFinishRequest__Q26JASDsp8TChannelFv(); // 1
+extern "C" void forceStop__Q26JASDsp8TChannelFv(); // 1
+extern "C" void isFinish__Q26JASDsp8TChannelCFv(); // 1
+extern "C" void flush__Q26JASDsp8TChannelFv(); // 1
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_SBSS extern u8 JASDram[4];
 
 // 

@@ -9,19 +9,19 @@
 // Forward References:
 // 
 
-extern "C" void strnicmp();
-extern "C" void stricmp();
+extern "C" void strnicmp(); // 1
+extern "C" void stricmp(); // 1
 
-extern "C" void strnicmp();
-extern "C" void stricmp();
+extern "C" void strnicmp(); // 1
+extern "C" void stricmp(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __msl_strnicmp();
+extern "C" void __msl_strnicmp(); // 1
 
-extern "C" void __msl_strnicmp();
+extern "C" void __msl_strnicmp(); // 1
 SECTION_DATA extern u8 __lower_map[256];
 
 // 

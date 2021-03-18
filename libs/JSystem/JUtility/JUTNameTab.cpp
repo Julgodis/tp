@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build JUTNameTab (['JUTNameTab']) False/False
-// build ResNTAB (['ResNTAB']) False/False
-/* top-level dependencies (begin ['ResNTAB']) */
-/* top-level dependencies (end ['ResNTAB']) */
 struct ResNTAB {
 };
 
-/* top-level dependencies (begin ['JUTNameTab']) */
-// outer dependency: ('ResNTAB',)
-/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
-	// ('ResNTAB',)
 	/* 802DE9A0 */ JUTNameTab();
 	/* 802DE9E0 */ JUTNameTab(ResNTAB const*);
 	/* 802DEA1C */ void setResource(ResNTAB const*);
@@ -29,30 +21,29 @@ struct JUTNameTab {
 	/* 802DEB28 */ void calcKeyCode(char const*) const;
 };
 
-// build ResNTAB (['ResNTAB']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__10JUTNameTabFv();
-extern "C" void __ct__10JUTNameTabFPC7ResNTAB();
-extern "C" void setResource__10JUTNameTabFPC7ResNTAB();
-extern "C" void getIndex__10JUTNameTabCFPCc();
-extern "C" void getName__10JUTNameTabCFUs();
-extern "C" void calcKeyCode__10JUTNameTabCFPCc();
+extern "C" void __ct__10JUTNameTabFv(); // 1
+extern "C" void __ct__10JUTNameTabFPC7ResNTAB(); // 1
+extern "C" void setResource__10JUTNameTabFPC7ResNTAB(); // 1
+extern "C" void getIndex__10JUTNameTabCFPCc(); // 1
+extern "C" void getName__10JUTNameTabCFUs(); // 1
+extern "C" void calcKeyCode__10JUTNameTabCFPCc(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
-extern "C" void strcmp();
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
-extern "C" void strcmp();
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void strcmp(); // 1
 SECTION_DATA extern void*const __vt__10JUTNameTab[3];
 
 // 

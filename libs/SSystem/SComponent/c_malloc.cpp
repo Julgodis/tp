@@ -9,34 +9,25 @@
 // Types:
 // 
 
-// build cMl (['cMl']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
-/* top-level dependencies (begin ['cMl']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['cMl']) */
 struct cMl {
-	// ('JKRHeap',)
 	/* 80263220 */ void init(JKRHeap*);
 	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);
 };
 
-// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void init__3cMlFP7JKRHeap();
-extern "C" void memalignB__3cMlFiUl();
-extern "C" void free__3cMlFPv();
+extern "C" void init__3cMlFP7JKRHeap(); // 1
+extern "C" void memalignB__3cMlFiUl(); // 1
+extern "C" void free__3cMlFPv(); // 1
 SECTION_SBSS extern u8 Heap__3cMl[4 + 4 /* padding */];
 SECTION_SBSS extern u8 data_80451158[8];
 
@@ -45,8 +36,8 @@ SECTION_SBSS extern u8 data_80451158[8];
 // 
 
 
-extern "C" void alloc__7JKRHeapFUli();
-extern "C" void free__7JKRHeapFPv();
+extern "C" void alloc__7JKRHeapFUli(); // 1
+extern "C" void free__7JKRHeapFPv(); // 1
 
 // 
 // Declarations:

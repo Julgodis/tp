@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JAISoundInfo (['JAISoundInfo']) False/False
-/* top-level dependencies (begin ['JAISoundInfo']) */
-/* top-level dependencies (end ['JAISoundInfo']) */
 struct JAISoundInfo {
 	/* 802A2D34 */ JAISoundInfo(bool);
 	/* 802A2D50 */ ~JAISoundInfo();
@@ -22,17 +19,17 @@ struct JAISoundInfo {
 // 
 
 
-extern "C" void __ct__12JAISoundInfoFb();
-extern "C" void __dt__12JAISoundInfoFv();
+extern "C" void __ct__12JAISoundInfoFb(); // 1
+extern "C" void __dt__12JAISoundInfoFv(); // 1
 SECTION_DATA extern void*const __vt__12JAISoundInfo[10];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 SECTION_SBSS extern u8 data_80450B5C[4];
 
 // 

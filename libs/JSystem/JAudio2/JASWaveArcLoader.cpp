@@ -9,41 +9,25 @@
 // Types:
 // 
 
-// build JASWaveArcLoader (['JASWaveArcLoader']) False/False
-/* top-level dependencies (begin ['JASWaveArcLoader']) */
-/* top-level dependencies (end ['JASWaveArcLoader']) */
 struct JASWaveArcLoader {
 	/* 8029A0A0 */ void getRootHeap();
 	/* 8029A0D0 */ void setCurrentDir(char const*);
 	/* 8029A130 */ void getCurrentDir();
 };
 
-// build JASWaveArc (['JASWaveArc']) False/False
-// build JASHeap (['JASHeap']) False/False
-// build JASDisposer (['JASDisposer']) False/False
-/* top-level dependencies (begin ['JASDisposer']) */
-/* top-level dependencies (end ['JASDisposer']) */
 struct JASDisposer {
 	/* 80290BCC */ void onDispose();
 	/* 8029A7B8 */ ~JASDisposer();
 };
 
-/* top-level dependencies (begin ['JASHeap']) */
-// outer dependency: ('JASDisposer',)
-/* top-level dependencies (end ['JASHeap']) */
 struct JASHeap {
-	// ('JASDisposer',)
 	/* 80290140 */ JASHeap(JASDisposer*);
 	/* 8029021C */ void alloc(JASHeap*, u32);
 	/* 802903F4 */ void allocTail(JASHeap*, u32);
 	/* 802904E4 */ void free();
 };
 
-/* top-level dependencies (begin ['JASWaveArc']) */
-// outer dependency: ('JASHeap',)
-/* top-level dependencies (end ['JASWaveArc']) */
 struct JASWaveArc {
-	// ('JASHeap',)
 	/* 80298FA0 */ void onLoadDone();
 	/* 80298FA4 */ void onEraseDone();
 	/* 8029A13C */ JASWaveArc();
@@ -60,55 +44,29 @@ struct JASWaveArc {
 	/* 8029A70C */ void setFileName(char const*);
 };
 
-// build JASHeap (['JASHeap']) True/True
-// build JASDisposer (['JASDisposer']) True/True
-// build JASDvd (['JASDvd']) False/False
-/* top-level dependencies (begin ['JASDvd']) */
-/* top-level dependencies (end ['JASDvd']) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 };
 
-// build JASKernel (['JASKernel']) False/False
-/* top-level dependencies (begin ['JASKernel']) */
-/* top-level dependencies (end ['JASKernel']) */
 struct JASKernel {
 	/* 80290AC0 */ void getSystemHeap();
 	/* 80290B08 */ void getAramHeap();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRDvdAramRipper (['JKRDvdAramRipper']) False/False
-// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
-/* top-level dependencies (begin ['JKRExpandSwitch']) */
-/* top-level dependencies (end ['JKRExpandSwitch']) */
 struct JKRExpandSwitch {
 };
 
-/* top-level dependencies (begin ['JKRDvdAramRipper']) */
-// outer dependency: ('JKRExpandSwitch',)
-/* top-level dependencies (end ['JKRDvdAramRipper']) */
 struct JKRDvdAramRipper {
-	// ('JKRExpandSwitch',)
 	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
 };
 
-// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-/* top-level dependencies (begin ['JSUPtrList']) */
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
 	/* 802DBEAC */ ~JSUPtrList();
 };
@@ -118,22 +76,22 @@ struct JSUPtrList {
 // 
 
 
-extern "C" void getRootHeap__16JASWaveArcLoaderFv();
-extern "C" void setCurrentDir__16JASWaveArcLoaderFPCc();
-extern "C" void getCurrentDir__16JASWaveArcLoaderFv();
-extern "C" void __ct__10JASWaveArcFv();
-extern "C" void __dt__10JASWaveArcFv();
-extern "C" void loadSetup__10JASWaveArcFUl();
-extern "C" void eraseSetup__10JASWaveArcFv();
-extern "C" void loadToAramCallback__10JASWaveArcFPv();
-extern "C" void sendLoadCmd__10JASWaveArcFv();
-extern "C" void load__10JASWaveArcFP7JASHeap();
-extern "C" void loadTail__10JASWaveArcFP7JASHeap();
-extern "C" void erase__10JASWaveArcFv();
-extern "C" void onDispose__10JASWaveArcFv();
-extern "C" void setEntryNum__10JASWaveArcFl();
-extern "C" void setFileName__10JASWaveArcFPCc();
-extern "C" void __dt__11JASDisposerFv();
+extern "C" void getRootHeap__16JASWaveArcLoaderFv(); // 1
+extern "C" void setCurrentDir__16JASWaveArcLoaderFPCc(); // 1
+extern "C" void getCurrentDir__16JASWaveArcLoaderFv(); // 1
+extern "C" void __ct__10JASWaveArcFv(); // 1
+extern "C" void __dt__10JASWaveArcFv(); // 1
+extern "C" void loadSetup__10JASWaveArcFUl(); // 1
+extern "C" void eraseSetup__10JASWaveArcFv(); // 1
+extern "C" void loadToAramCallback__10JASWaveArcFPv(); // 1
+extern "C" void sendLoadCmd__10JASWaveArcFv(); // 1
+extern "C" void load__10JASWaveArcFP7JASHeap(); // 1
+extern "C" void loadTail__10JASWaveArcFP7JASHeap(); // 1
+extern "C" void erase__10JASWaveArcFv(); // 1
+extern "C" void onDispose__10JASWaveArcFv(); // 1
+extern "C" void setEntryNum__10JASWaveArcFl(); // 1
+extern "C" void setFileName__10JASWaveArcFPCc(); // 1
+extern "C" void __dt__11JASDisposerFv(); // 1
 SECTION_DATA extern u8 sCurrentDir__16JASWaveArcLoader[64];
 SECTION_DATA extern void*const __vt__10JASWaveArc[6];
 SECTION_DATA extern void*const __vt__11JASDisposer[4];
@@ -143,50 +101,50 @@ SECTION_SBSS extern u8 sAramHeap__16JASWaveArcLoader[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-void* operator new[](u32, JKRHeap*, int);
-void operator delete(void*);
-void operator delete[](void*);
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void DVDConvertPathToEntrynum();
-extern "C" void DVDFastOpen();
-extern "C" void DVDClose();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
-extern "C" void strcat();
-extern "C" void strcpy();
-extern "C" void strlen();
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
+void* operator new[](u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+void operator delete[](void*); // 2
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void DVDConvertPathToEntrynum(); // 1
+extern "C" void DVDFastOpen(); // 1
+extern "C" void DVDClose(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void strcat(); // 1
+extern "C" void strcpy(); // 1
+extern "C" void strlen(); // 1
 
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-extern "C" void getThreadPointer__6JASDvdFv();
-extern "C" void __ct__7JASHeapFP11JASDisposer();
-extern "C" void alloc__7JASHeapFP7JASHeapUl();
-extern "C" void allocTail__7JASHeapFP7JASHeapUl();
-extern "C" void free__7JASHeapFv();
-extern "C" void getSystemHeap__9JASKernelFv();
-extern "C" void getAramHeap__9JASKernelFv();
-extern "C" void onDispose__11JASDisposerFv();
-extern "C" void onLoadDone__10JASWaveArcFv();
-extern "C" void onEraseDone__10JASWaveArcFv();
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void __dla__FPv();
-extern "C" void loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl();
-extern "C" void __dt__10JSUPtrLinkFv();
-extern "C" void __dt__10JSUPtrListFv();
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void DVDConvertPathToEntrynum();
-extern "C" void DVDFastOpen();
-extern "C" void DVDClose();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
-extern "C" void strcat();
-extern "C" void strcpy();
-extern "C" void strlen();
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" void getThreadPointer__6JASDvdFv(); // 1
+extern "C" void __ct__7JASHeapFP11JASDisposer(); // 1
+extern "C" void alloc__7JASHeapFP7JASHeapUl(); // 1
+extern "C" void allocTail__7JASHeapFP7JASHeapUl(); // 1
+extern "C" void free__7JASHeapFv(); // 1
+extern "C" void getSystemHeap__9JASKernelFv(); // 1
+extern "C" void getAramHeap__9JASKernelFv(); // 1
+extern "C" void onDispose__11JASDisposerFv(); // 1
+extern "C" void onLoadDone__10JASWaveArcFv(); // 1
+extern "C" void onEraseDone__10JASWaveArcFv(); // 1
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dla__FPv(); // 1
+extern "C" void loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl(); // 1
+extern "C" void __dt__10JSUPtrLinkFv(); // 1
+extern "C" void __dt__10JSUPtrListFv(); // 1
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void DVDConvertPathToEntrynum(); // 1
+extern "C" void DVDFastOpen(); // 1
+extern "C" void DVDClose(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void strcat(); // 1
+extern "C" void strcpy(); // 1
+extern "C" void strlen(); // 1
 
 // 
 // Declarations:

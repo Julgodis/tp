@@ -9,27 +9,15 @@
 // Types:
 // 
 
-// build leafdraw_class (['leafdraw_class']) False/False
-/* top-level dependencies (begin ['leafdraw_class']) */
-/* top-level dependencies (end ['leafdraw_class']) */
 struct leafdraw_class {
 };
 
-// build leafdraw_method_class (['leafdraw_method_class']) False/False
-/* top-level dependencies (begin ['leafdraw_method_class']) */
-/* top-level dependencies (end ['leafdraw_method_class']) */
 struct leafdraw_method_class {
 };
 
-// build draw_priority_class (['draw_priority_class']) False/False
-/* top-level dependencies (begin ['draw_priority_class']) */
-/* top-level dependencies (end ['draw_priority_class']) */
 struct draw_priority_class {
 };
 
-// build process_method_class (['process_method_class']) False/False
-/* top-level dependencies (begin ['process_method_class']) */
-/* top-level dependencies (end ['process_method_class']) */
 struct process_method_class {
 };
 
@@ -37,21 +25,21 @@ struct process_method_class {
 // Forward References:
 // 
 
-void fpcLf_GetPriority(leafdraw_class const*);
-void fpcLf_DrawMethod(leafdraw_method_class*, void*);
-static void fpcLf_Draw(leafdraw_class*);
-static void fpcLf_Execute(leafdraw_class*);
-static void fpcLf_IsDelete(leafdraw_class*);
-static void fpcLf_Delete(leafdraw_class*);
-static void fpcLf_Create(leafdraw_class*);
+void fpcLf_GetPriority(leafdraw_class const*); // 2
+void fpcLf_DrawMethod(leafdraw_method_class*, void*); // 2
+static void fpcLf_Draw(leafdraw_class*); // 2
+static void fpcLf_Execute(leafdraw_class*); // 2
+static void fpcLf_IsDelete(leafdraw_class*); // 2
+static void fpcLf_Delete(leafdraw_class*); // 2
+static void fpcLf_Create(leafdraw_class*); // 2
 
-extern "C" void fpcLf_GetPriority__FPC14leafdraw_class();
-extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
-extern "C" static void fpcLf_Draw__FP14leafdraw_class();
-extern "C" static void fpcLf_Execute__FP14leafdraw_class();
-extern "C" static void fpcLf_IsDelete__FP14leafdraw_class();
-extern "C" static void fpcLf_Delete__FP14leafdraw_class();
-extern "C" static void fpcLf_Create__FP14leafdraw_class();
+extern "C" void fpcLf_GetPriority__FPC14leafdraw_class(); // 1
+extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv(); // 1
+extern "C" static void fpcLf_Draw__FP14leafdraw_class(); // 1
+extern "C" static void fpcLf_Execute__FP14leafdraw_class(); // 1
+extern "C" static void fpcLf_IsDelete__FP14leafdraw_class(); // 1
+extern "C" static void fpcLf_Delete__FP14leafdraw_class(); // 1
+extern "C" static void fpcLf_Create__FP14leafdraw_class(); // 1
 SECTION_DATA extern void*g_fpcLf_Method[6];
 SECTION_SBSS extern u8 g_fpcLf_type[4 + 4 /* padding */];
 SECTION_SBSS extern u8 struct_80450D38[8];
@@ -60,23 +48,23 @@ SECTION_SBSS extern u8 struct_80450D38[8];
 // External References:
 // 
 
-void fpcBs_MakeOfType(int*);
-void fpcDwPi_Get(draw_priority_class const*);
-void fpcDwPi_Init(draw_priority_class*, s16);
-extern "C" void fpcMtd_Method__FPFPv_iPv();
-void fpcMtd_Execute(process_method_class*, void*);
-void fpcMtd_IsDelete(process_method_class*, void*);
-void fpcMtd_Delete(process_method_class*, void*);
-void fpcMtd_Create(process_method_class*, void*);
+void fpcBs_MakeOfType(int*); // 2
+void fpcDwPi_Get(draw_priority_class const*); // 2
+void fpcDwPi_Init(draw_priority_class*, s16); // 2
+extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
+void fpcMtd_Execute(process_method_class*, void*); // 2
+void fpcMtd_IsDelete(process_method_class*, void*); // 2
+void fpcMtd_Delete(process_method_class*, void*); // 2
+void fpcMtd_Create(process_method_class*, void*); // 2
 
-extern "C" void fpcBs_MakeOfType__FPi();
-extern "C" void fpcDwPi_Get__FPC19draw_priority_class();
-extern "C" void fpcDwPi_Init__FP19draw_priority_classs();
-extern "C" void fpcMtd_Method__FPFPv_iPv();
-extern "C" void fpcMtd_Execute__FP20process_method_classPv();
-extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
-extern "C" void fpcMtd_Delete__FP20process_method_classPv();
-extern "C" void fpcMtd_Create__FP20process_method_classPv();
+extern "C" void fpcBs_MakeOfType__FPi(); // 1
+extern "C" void fpcDwPi_Get__FPC19draw_priority_class(); // 1
+extern "C" void fpcDwPi_Init__FP19draw_priority_classs(); // 1
+extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
+extern "C" void fpcMtd_Execute__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_Delete__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
 
 // 
 // Declarations:

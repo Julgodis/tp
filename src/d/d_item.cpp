@@ -9,24 +9,15 @@
 // Types:
 // 
 
-// build dComIfG_play_c (['dComIfG_play_c']) False/False
-/* top-level dependencies (begin ['dComIfG_play_c']) */
-/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002B36C */ void setItemBombNumCount(u8, s16);
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-// build dSv_player_status_a_c (['dSv_player_status_a_c']) False/False
-/* top-level dependencies (begin ['dSv_player_status_a_c']) */
-/* top-level dependencies (end ['dSv_player_status_a_c']) */
 struct dSv_player_status_a_c {
 	/* 80032AF8 */ void isMagicFlag(u8) const;
 };
 
-// build dSv_player_item_c (['dSv_player_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_c']) */
-/* top-level dependencies (end ['dSv_player_item_c']) */
 struct dSv_player_item_c {
 	/* 80032FB8 */ void setItem(int, u8);
 	/* 80033030 */ void getItem(int, bool) const;
@@ -41,63 +32,39 @@ struct dSv_player_item_c {
 	/* 80033CBC */ void setRodTypeLevelUp();
 };
 
-// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_get_item_c']) */
-/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033E60 */ void onFirstBit(u8);
 	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
-// build dSv_player_item_record_c (['dSv_player_item_record_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_record_c']) */
-/* top-level dependencies (end ['dSv_player_item_record_c']) */
 struct dSv_player_item_record_c {
 	/* 80033F7C */ void getBombNum(u8) const;
 	/* 80033F8C */ void setBottleNum(u8, u8);
 };
 
-// build dSv_player_item_max_c (['dSv_player_item_max_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_max_c']) */
-/* top-level dependencies (end ['dSv_player_item_max_c']) */
 struct dSv_player_item_max_c {
 	/* 800340F8 */ void getBombNum(u8) const;
 };
 
-// build dSv_player_collect_c (['dSv_player_collect_c']) False/False
-/* top-level dependencies (begin ['dSv_player_collect_c']) */
-/* top-level dependencies (end ['dSv_player_collect_c']) */
 struct dSv_player_collect_c {
 	/* 800341E8 */ void setCollect(int, u8);
 	/* 80034208 */ void isCollect(int, u8) const;
 };
 
-// build dSv_light_drop_c (['dSv_light_drop_c']) False/False
-/* top-level dependencies (begin ['dSv_light_drop_c']) */
-/* top-level dependencies (end ['dSv_light_drop_c']) */
 struct dSv_light_drop_c {
 	/* 80034368 */ void onLightDropGetFlag(u8);
 	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
-// build dSv_memBit_c (['dSv_memBit_c']) False/False
-/* top-level dependencies (begin ['dSv_memBit_c']) */
-/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 80034918 */ void onDungeonItem(int);
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 };
 
-// build dSv_info_c (['dSv_info_c']) False/False
-/* top-level dependencies (begin ['dSv_info_c']) */
-/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 };
@@ -106,777 +73,777 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-void execItemGet(u8);
-void checkItemGet(u8, int);
-static void item_func_HEART();
-static void item_func_GREEN_RUPEE();
-static void item_func_BLUE_RUPEE();
-static void item_func_YELLOW_RUPEE();
-static void item_func_RED_RUPEE();
-static void item_func_PURPLE_RUPEE();
-static void item_func_ORANGE_RUPEE();
-static void item_func_SILVER_RUPEE();
-static void item_func_S_MAGIC();
-static void item_func_L_MAGIC();
-static void item_func_BOMB_5();
-static void item_func_BOMB_10();
-static void item_func_BOMB_20();
-static void item_func_BOMB_30();
-static void item_func_ARROW_10();
-static void item_func_ARROW_20();
-static void item_func_ARROW_30();
-static void item_func_ARROW_1();
-static void item_func_PACHINKO_SHOT();
-static void item_func_WATER_BOMB_5();
-static void item_func_WATER_BOMB_10();
-static void item_func_WATER_BOMB_20();
-static void item_func_WATER_BOMB_30();
-static void item_func_BOMB_INSECT_5();
-static void item_func_BOMB_INSECT_10();
-static void item_func_BOMB_INSECT_20();
-static void item_func_BOMB_INSECT_30();
-static void item_func_RECOVER_FAILY();
-static void item_func_TRIPLE_HEART();
-static void item_func_SMALL_KEY();
-static void item_func_KAKERA_HEART();
-static void item_func_UTUWA_HEART();
-static void item_func_MAP();
-static void item_func_COMPUS();
-static void item_func_DUNGEON_EXIT();
-static void item_func_BOSS_KEY();
-static void item_func_DUNGEON_BACK();
-static void item_func_SWORD();
-static void item_func_MASTER_SWORD();
-static void item_func_WOOD_SHIELD();
-static void item_func_SHIELD();
-static void item_func_HYLIA_SHIELD();
-static void item_func_TKS_LETTER();
-static void item_func_WEAR_CASUAL();
-static void item_func_WEAR_KOKIRI();
-static void item_func_ARMOR();
-static void item_func_WEAR_ZORA();
-static void item_func_MAGIC_LV1();
-static void item_func_DUNGEON_EXIT_2();
-static void item_func_WALLET_LV1();
-static void item_func_WALLET_LV2();
-static void item_func_WALLET_LV3();
-static void item_func_ZORAS_JEWEL();
-static void item_func_HAWK_EYE();
-static void item_func_WOOD_STICK();
-static void item_func_BOOMERANG();
-static void item_func_SPINNER();
-static void item_func_IRONBALL();
-static void item_func_BOW();
-static void item_func_HOOKSHOT();
-static void item_func_HVY_BOOTS();
-static void item_func_COPY_ROD();
-static void item_func_W_HOOKSHOT();
-static void item_func_KANTERA();
-static void item_func_LIGHT_SWORD();
-static void item_func_FISHING_ROD_1();
-static void item_func_PACHINKO();
-static void item_func_COPY_ROD_2();
-static void item_func_BOMB_BAG_LV2();
-static void item_func_BOMB_BAG_LV1();
-static void item_func_BOMB_IN_BAG();
-static void item_func_LIGHT_ARROW();
-static void item_func_ARROW_LV1();
-static void item_func_ARROW_LV2();
-static void item_func_ARROW_LV3();
-static void item_func_LURE_ROD();
-static void item_func_BOMB_ARROW();
-static void item_func_HAWK_ARROW();
-static void item_func_BEE_ROD();
-static void item_func_JEWEL_ROD();
-static void item_func_WORM_ROD();
-static void item_func_JEWEL_BEE_ROD();
-static void item_func_JEWEL_WORM_ROD();
-static void item_func_EMPTY_BOTTLE();
-static void item_func_RED_BOTTLE();
-static void item_func_GREEN_BOTTLE();
-static void item_func_BLUE_BOTTLE();
-static void item_func_MILK_BOTTLE();
-static void item_func_HALF_MILK_BOTTLE();
-static void item_func_OIL_BOTTLE();
-static void item_func_WATER_BOTTLE();
-static void item_func_OIL_BOTTLE2();
-static void item_func_RED_BOTTLE2();
-static void item_func_UGLY_SOUP();
-static void item_func_HOT_SPRING();
-static void item_func_FAIRY_BOTTLE();
-static void item_func_HOT_SPRING2();
-static void item_func_OIL2();
-static void item_func_OIL();
-static void item_func_NORMAL_BOMB();
-static void item_func_WATER_BOMB();
-static void item_func_POKE_BOMB();
-static void item_func_FAIRY_DROP();
-static void item_func_WORM();
-static void item_func_DROP_BOTTLE();
-static void item_func_BEE_CHILD();
-static void item_func_CHUCHU_RARE();
-static void item_func_CHUCHU_RED();
-static void item_func_CHUCHU_BLUE();
-static void item_func_CHUCHU_GREEN();
-static void item_func_CHUCHU_YELLOW();
-static void item_func_CHUCHU_PURPLE();
-static void item_func_LV1_SOUP();
-static void item_func_LV2_SOUP();
-static void item_func_LV3_SOUP();
-static void item_func_LETTER();
-static void item_func_BILL();
-static void item_func_WOOD_STATUE();
-static void item_func_IRIAS_PENDANT();
-static void item_func_HORSE_FLUTE();
-static void item_func_RAFRELS_MEMO();
-static void item_func_ASHS_SCRIBBLING();
-static void item_func_CHUCHU_YELLOW2();
-static void item_func_OIL_BOTTLE3();
-static void item_func_SHOP_BEE_CHILD();
-static void item_func_CHUCHU_BLACK();
-static void item_func_LIGHT_DROP();
-static void item_func_DROP_CONTAINER();
-static void item_func_DROP_CONTAINER02();
-static void item_func_DROP_CONTAINER03();
-static void item_func_FILLED_CONTAINER();
-static void item_func_MIRROR_PIECE_2();
-static void item_func_MIRROR_PIECE_3();
-static void item_func_MIRROR_PIECE_4();
-static void item_func_SMELL_YELIA_POUCH();
-static void item_func_SMELL_PUMPKIN();
-static void item_func_SMELL_POH();
-static void item_func_SMELL_FISH();
-static void item_func_SMELL_CHILDREN();
-static void item_func_SMELL_MEDICINE();
-static void item_func_M_BEETLE();
-static void item_func_F_BEETLE();
-static void item_func_M_BUTTERFLY();
-static void item_func_F_BUTTERFLY();
-static void item_func_M_STAG_BEETLE();
-static void item_func_F_STAG_BEETLE();
-static void item_func_M_GRASSHOPPER();
-static void item_func_F_GRASSHOPPER();
-static void item_func_M_NANAFUSHI();
-static void item_func_F_NANAFUSHI();
-static void item_func_M_DANGOMUSHI();
-static void item_func_F_DANGOMUSHI();
-static void item_func_M_MANTIS();
-static void item_func_F_MANTIS();
-static void item_func_M_LADYBUG();
-static void item_func_F_LADYBUG();
-static void item_func_M_SNAIL();
-static void item_func_F_SNAIL();
-static void item_func_M_DRAGONFLY();
-static void item_func_F_DRAGONFLY();
-static void item_func_M_ANT();
-static void item_func_F_ANT();
-static void item_func_M_MAYFLY();
-static void item_func_F_MAYFLY();
-static void item_func_POU_SPIRIT();
-static void item_func_ANCIENT_DOCUMENT();
-static void item_func_AIR_LETTER();
-static void item_func_ANCIENT_DOCUMENT2();
-static void item_func_LV7_DUNGEON_EXIT();
-static void item_func_LINKS_SAVINGS();
-static void item_func_SMALL_KEY2();
-static void item_func_POU_FIRE1();
-static void item_func_POU_FIRE2();
-static void item_func_POU_FIRE3();
-static void item_func_POU_FIRE4();
-static void item_func_BOSSRIDER_KEY();
-static void item_func_TOMATO_PUREE();
-static void item_func_TASTE();
-static void item_func_LV5_BOSS_KEY();
-static void item_func_SURFBOARD();
-static void item_func_KANTERA2();
-static void item_func_L2_KEY_PIECES1();
-static void item_func_L2_KEY_PIECES2();
-static void item_func_L2_KEY_PIECES3();
-static void item_func_KEY_OF_CARAVAN();
-static void item_func_LV2_BOSS_KEY();
-static void item_func_KEY_OF_FILONE();
-static void item_func_noentry();
-static s32 item_getcheck_func_noentry();
-static s32 item_getcheck_func_HEART();
-static void item_getcheck_func_GREEN_RUPEE();
-static void item_getcheck_func_BLUE_RUPEE();
-static void item_getcheck_func_YELLOW_RUPEE();
-static void item_getcheck_func_RED_RUPEE();
-static void item_getcheck_func_PURPLE_RUPEE();
-static void item_getcheck_func_ORANGE_RUPEE();
-static void item_getcheck_func_SILVER_RUPEE();
-static s32 item_getcheck_func_S_MAGIC();
-static s32 item_getcheck_func_L_MAGIC();
-static void item_getcheck_func_BOMB_5();
-static void item_getcheck_func_BOMB_10();
-static void item_getcheck_func_BOMB_20();
-static void item_getcheck_func_BOMB_30();
-static void item_getcheck_func_ARROW_10();
-static void item_getcheck_func_ARROW_20();
-static void item_getcheck_func_ARROW_30();
-static void item_getcheck_func_ARROW_1();
-static void item_getcheck_func_PACHINKO_SHOT();
-static s32 item_getcheck_func_WATER_BOMB_5();
-static s32 item_getcheck_func_WATER_BOMB_10();
-static s32 item_getcheck_func_WATER_BOMB_20();
-static s32 item_getcheck_func_WATER_BOMB_30();
-static s32 item_getcheck_func_BOMB_INSECT_5();
-static void item_getcheck_func_BOMB_INSECT_10();
-static void item_getcheck_func_BOMB_INSECT_20();
-static void item_getcheck_func_BOMB_INSECT_30();
-static s32 item_getcheck_func_RECOVER_FAILY();
-static s32 item_getcheck_func_TRIPLE_HEART();
-static s32 item_getcheck_func_SMALL_KEY();
-static s32 item_getcheck_func_KAKERA_HEART();
-static s32 item_getcheck_func_UTUWA_HEART();
-static void item_getcheck_func_MAP();
-static s32 item_getcheck_func_COMPUS();
-static void item_getcheck_func_DUNGEON_EXIT();
-static void item_getcheck_func_BOSS_KEY();
-static void item_getcheck_func_DUNGEON_BACK();
-static void item_getcheck_func_SWORD();
-static void item_getcheck_func_MASTER_SWORD();
-static void item_getcheck_func_WOOD_SHIELD();
-static void item_getcheck_func_SHIELD();
-static void item_getcheck_func_HYLIA_SHIELD();
-static void item_getcheck_func_TKS_LETTER();
-static void item_getcheck_func_WEAR_CASUAL();
-static void item_getcheck_func_WEAR_KOKIRI();
-static void item_getcheck_func_ARMOR();
-static void item_getcheck_func_WEAR_ZORA();
-static s32 item_getcheck_func_MAGIC_LV1();
-static void item_getcheck_func_DUNGEON_EXIT_2();
-static s32 item_getcheck_func_WALLET_LV1();
-static s32 item_getcheck_func_WALLET_LV2();
-static s32 item_getcheck_func_WALLET_LV3();
-static void item_getcheck_func_ZORAS_JEWEL();
-static void item_getcheck_func_HAWK_EYE();
-static void item_getcheck_func_WOOD_STICK();
-static void item_getcheck_func_BOOMERANG();
-static void item_getcheck_func_SPINNER();
-static void item_getcheck_func_IRONBALL();
-static void item_getcheck_func_BOW();
-static void item_getcheck_func_HOOKSHOT();
-static void item_getcheck_func_HVY_BOOTS();
-static void item_getcheck_func_COPY_ROD();
-static void item_getcheck_func_W_HOOKSHOT();
-static void item_getcheck_func_KANTERA();
-static void item_getcheck_func_LIGHT_SWORD();
-static void item_getcheck_func_FISHING_ROD_1();
-static void item_getcheck_func_PACHINKO();
-static s32 item_getcheck_func_COPY_ROD_2();
-static void item_getcheck_func_BOMB_BAG_LV2();
-static void item_getcheck_func_BOMB_BAG_LV1();
-static void item_getcheck_func_BOMB_IN_BAG();
-static void item_getcheck_func_LIGHT_ARROW();
-static void item_getcheck_func_ARROW_LV1();
-static void item_getcheck_func_ARROW_LV2();
-static void item_getcheck_func_ARROW_LV3();
-static s32 item_getcheck_func_LURE_ROD();
-static s32 item_getcheck_func_BOMB_ARROW();
-static s32 item_getcheck_func_HAWK_ARROW();
-static void item_getcheck_func_BEE_ROD();
-static void item_getcheck_func_JEWEL_ROD();
-static void item_getcheck_func_WORM_ROD();
-static void item_getcheck_func_JEWEL_BEE_ROD();
-static void item_getcheck_func_JEWEL_WORM_ROD();
-static void item_getcheck_func_EMPTY_BOTTLE();
-static void item_getcheck_func_RED_BOTTLE();
-static void item_getcheck_func_GREEN_BOTTLE();
-static void item_getcheck_func_BLUE_BOTTLE();
-static void item_getcheck_func_MILK_BOTTLE();
-static void item_getcheck_func_HALF_MILK_BOTTLE();
-static void item_getcheck_func_OIL_BOTTLE();
-static void item_getcheck_func_WATER_BOTTLE();
-static void item_getcheck_func_OIL_BOTTLE2();
-static void item_getcheck_func_RED_BOTTLE2();
-static void item_getcheck_func_UGLY_SOUP();
-static void item_getcheck_func_HOT_SPRING();
-static void item_getcheck_func_FAIRY_BOTTLE();
-static void item_getcheck_func_HOT_SPRING2();
-static void item_getcheck_func_OIL2();
-static void item_getcheck_func_OIL();
-static void item_getcheck_func_NORMAL_BOMB();
-static void item_getcheck_func_WATER_BOMB();
-static void item_getcheck_func_POKE_BOMB();
-static void item_getcheck_func_FAIRY_DROP();
-static void item_getcheck_func_WORM();
-static void item_getcheck_func_DROP_BOTTLE();
-static s32 item_getcheck_func_BEE_CHILD();
-static void item_getcheck_func_CHUCHU_RARE();
-static void item_getcheck_func_CHUCHU_RED();
-static void item_getcheck_func_CHUCHU_BLUE();
-static void item_getcheck_func_CHUCHU_GREEN();
-static void item_getcheck_func_CHUCHU_YELLOW();
-static void item_getcheck_func_CHUCHU_PURPLE();
-static void item_getcheck_func_LV1_SOUP();
-static void item_getcheck_func_LV2_SOUP();
-static void item_getcheck_func_LV3_SOUP();
-static void item_getcheck_func_LETTER();
-static void item_getcheck_func_BILL();
-static void item_getcheck_func_WOOD_STATUE();
-static void item_getcheck_func_IRIAS_PENDANT();
-static void item_getcheck_func_HORSE_FLUTE();
-static void item_getcheck_func_RAFRELS_MEMO();
-static void item_getcheck_func_ASHS_SCRIBBLING();
-static void item_getcheck_func_CHUCHU_YELLOW2();
-static s32 item_getcheck_func_OIL_BOTTLE3();
-static s32 item_getcheck_func_SHOP_BEE_CHILD();
-static void item_getcheck_func_CHUCHU_BLACK();
-static void item_getcheck_func_LIGHT_DROP();
-static void item_getcheck_func_DROP_CONTAINER();
-static void item_getcheck_func_DROP_CONTAINER02();
-static void item_getcheck_func_DROP_CONTAINER03();
-static s32 item_getcheck_func_FILLED_CONTAINER();
-static s32 item_getcheck_func_MIRROR_PIECE_2();
-static s32 item_getcheck_func_MIRROR_PIECE_3();
-static s32 item_getcheck_func_MIRROR_PIECE_4();
-static void item_getcheck_func_SMELL_YELIA_POUCH();
-static s32 item_getcheck_func_SMELL_PUMPKIN();
-static void item_getcheck_func_SMELL_POH();
-static void item_getcheck_func_SMELL_FISH();
-static void item_getcheck_func_SMELL_CHILDREN();
-static void item_getcheck_func_SMELL_MEDICINE();
-static void item_getcheck_func_M_BEETLE();
-static void item_getcheck_func_F_BEETLE();
-static void item_getcheck_func_M_BUTTERFLY();
-static void item_getcheck_func_F_BUTTERFLY();
-static void item_getcheck_func_M_STAG_BEETLE();
-static void item_getcheck_func_F_STAG_BEETLE();
-static void item_getcheck_func_M_GRASSHOPPER();
-static void item_getcheck_func_F_GRASSHOPPER();
-static void item_getcheck_func_M_NANAFUSHI();
-static void item_getcheck_func_F_NANAFUSHI();
-static void item_getcheck_func_M_DANGOMUSHI();
-static void item_getcheck_func_F_DANGOMUSHI();
-static void item_getcheck_func_M_MANTIS();
-static void item_getcheck_func_F_MANTIS();
-static void item_getcheck_func_M_LADYBUG();
-static void item_getcheck_func_F_LADYBUG();
-static void item_getcheck_func_M_SNAIL();
-static void item_getcheck_func_F_SNAIL();
-static void item_getcheck_func_M_DRAGONFLY();
-static void item_getcheck_func_F_DRAGONFLY();
-static void item_getcheck_func_M_ANT();
-static void item_getcheck_func_F_ANT();
-static void item_getcheck_func_M_MAYFLY();
-static void item_getcheck_func_F_MAYFLY();
-static void item_getcheck_func_POU_SPIRIT();
-static void item_getcheck_func_ANCIENT_DOCUMENT();
-static void item_getcheck_func_AIR_LETTER();
-static void item_getcheck_func_ANCIENT_DOCUMENT2();
-static void item_getcheck_func_LV7_DUNGEON_EXIT();
-static s32 item_getcheck_func_LINKS_SAVINGS();
-static s32 item_getcheck_func_SMALL_KEY2();
-static s32 item_getcheck_func_POU_FIRE1();
-static s32 item_getcheck_func_POU_FIRE2();
-static s32 item_getcheck_func_POU_FIRE3();
-static s32 item_getcheck_func_POU_FIRE4();
-static s32 item_getcheck_func_BOSSRIDER_KEY();
-static void item_getcheck_func_TOMATO_PUREE();
-static void item_getcheck_func_TASTE();
-static void item_getcheck_func_LV5_BOSS_KEY();
-static s32 item_getcheck_func_SURFBOARD();
-static s32 item_getcheck_func_KANTERA2();
-static void item_getcheck_func_L2_KEY_PIECES1();
-static void item_getcheck_func_L2_KEY_PIECES2();
-static void item_getcheck_func_L2_KEY_PIECES3();
-static void item_getcheck_func_KEY_OF_CARAVAN();
-static void item_getcheck_func_LV2_BOSS_KEY();
-static void item_getcheck_func_KEY_OF_FILONE();
-static void isBomb(u8);
-static void isArrow(u8);
-void isBottleItem(u8);
-void isHeart(u8);
-void isInsect(u8);
-void check_itemno(int);
-static void addBombCount(u8, u8);
+void execItemGet(u8); // 2
+void checkItemGet(u8, int); // 2
+static void item_func_HEART(); // 2
+static void item_func_GREEN_RUPEE(); // 2
+static void item_func_BLUE_RUPEE(); // 2
+static void item_func_YELLOW_RUPEE(); // 2
+static void item_func_RED_RUPEE(); // 2
+static void item_func_PURPLE_RUPEE(); // 2
+static void item_func_ORANGE_RUPEE(); // 2
+static void item_func_SILVER_RUPEE(); // 2
+static void item_func_S_MAGIC(); // 2
+static void item_func_L_MAGIC(); // 2
+static void item_func_BOMB_5(); // 2
+static void item_func_BOMB_10(); // 2
+static void item_func_BOMB_20(); // 2
+static void item_func_BOMB_30(); // 2
+static void item_func_ARROW_10(); // 2
+static void item_func_ARROW_20(); // 2
+static void item_func_ARROW_30(); // 2
+static void item_func_ARROW_1(); // 2
+static void item_func_PACHINKO_SHOT(); // 2
+static void item_func_WATER_BOMB_5(); // 2
+static void item_func_WATER_BOMB_10(); // 2
+static void item_func_WATER_BOMB_20(); // 2
+static void item_func_WATER_BOMB_30(); // 2
+static void item_func_BOMB_INSECT_5(); // 2
+static void item_func_BOMB_INSECT_10(); // 2
+static void item_func_BOMB_INSECT_20(); // 2
+static void item_func_BOMB_INSECT_30(); // 2
+static void item_func_RECOVER_FAILY(); // 2
+static void item_func_TRIPLE_HEART(); // 2
+static void item_func_SMALL_KEY(); // 2
+static void item_func_KAKERA_HEART(); // 2
+static void item_func_UTUWA_HEART(); // 2
+static void item_func_MAP(); // 2
+static void item_func_COMPUS(); // 2
+static void item_func_DUNGEON_EXIT(); // 2
+static void item_func_BOSS_KEY(); // 2
+static void item_func_DUNGEON_BACK(); // 2
+static void item_func_SWORD(); // 2
+static void item_func_MASTER_SWORD(); // 2
+static void item_func_WOOD_SHIELD(); // 2
+static void item_func_SHIELD(); // 2
+static void item_func_HYLIA_SHIELD(); // 2
+static void item_func_TKS_LETTER(); // 2
+static void item_func_WEAR_CASUAL(); // 2
+static void item_func_WEAR_KOKIRI(); // 2
+static void item_func_ARMOR(); // 2
+static void item_func_WEAR_ZORA(); // 2
+static void item_func_MAGIC_LV1(); // 2
+static void item_func_DUNGEON_EXIT_2(); // 2
+static void item_func_WALLET_LV1(); // 2
+static void item_func_WALLET_LV2(); // 2
+static void item_func_WALLET_LV3(); // 2
+static void item_func_ZORAS_JEWEL(); // 2
+static void item_func_HAWK_EYE(); // 2
+static void item_func_WOOD_STICK(); // 2
+static void item_func_BOOMERANG(); // 2
+static void item_func_SPINNER(); // 2
+static void item_func_IRONBALL(); // 2
+static void item_func_BOW(); // 2
+static void item_func_HOOKSHOT(); // 2
+static void item_func_HVY_BOOTS(); // 2
+static void item_func_COPY_ROD(); // 2
+static void item_func_W_HOOKSHOT(); // 2
+static void item_func_KANTERA(); // 2
+static void item_func_LIGHT_SWORD(); // 2
+static void item_func_FISHING_ROD_1(); // 2
+static void item_func_PACHINKO(); // 2
+static void item_func_COPY_ROD_2(); // 2
+static void item_func_BOMB_BAG_LV2(); // 2
+static void item_func_BOMB_BAG_LV1(); // 2
+static void item_func_BOMB_IN_BAG(); // 2
+static void item_func_LIGHT_ARROW(); // 2
+static void item_func_ARROW_LV1(); // 2
+static void item_func_ARROW_LV2(); // 2
+static void item_func_ARROW_LV3(); // 2
+static void item_func_LURE_ROD(); // 2
+static void item_func_BOMB_ARROW(); // 2
+static void item_func_HAWK_ARROW(); // 2
+static void item_func_BEE_ROD(); // 2
+static void item_func_JEWEL_ROD(); // 2
+static void item_func_WORM_ROD(); // 2
+static void item_func_JEWEL_BEE_ROD(); // 2
+static void item_func_JEWEL_WORM_ROD(); // 2
+static void item_func_EMPTY_BOTTLE(); // 2
+static void item_func_RED_BOTTLE(); // 2
+static void item_func_GREEN_BOTTLE(); // 2
+static void item_func_BLUE_BOTTLE(); // 2
+static void item_func_MILK_BOTTLE(); // 2
+static void item_func_HALF_MILK_BOTTLE(); // 2
+static void item_func_OIL_BOTTLE(); // 2
+static void item_func_WATER_BOTTLE(); // 2
+static void item_func_OIL_BOTTLE2(); // 2
+static void item_func_RED_BOTTLE2(); // 2
+static void item_func_UGLY_SOUP(); // 2
+static void item_func_HOT_SPRING(); // 2
+static void item_func_FAIRY_BOTTLE(); // 2
+static void item_func_HOT_SPRING2(); // 2
+static void item_func_OIL2(); // 2
+static void item_func_OIL(); // 2
+static void item_func_NORMAL_BOMB(); // 2
+static void item_func_WATER_BOMB(); // 2
+static void item_func_POKE_BOMB(); // 2
+static void item_func_FAIRY_DROP(); // 2
+static void item_func_WORM(); // 2
+static void item_func_DROP_BOTTLE(); // 2
+static void item_func_BEE_CHILD(); // 2
+static void item_func_CHUCHU_RARE(); // 2
+static void item_func_CHUCHU_RED(); // 2
+static void item_func_CHUCHU_BLUE(); // 2
+static void item_func_CHUCHU_GREEN(); // 2
+static void item_func_CHUCHU_YELLOW(); // 2
+static void item_func_CHUCHU_PURPLE(); // 2
+static void item_func_LV1_SOUP(); // 2
+static void item_func_LV2_SOUP(); // 2
+static void item_func_LV3_SOUP(); // 2
+static void item_func_LETTER(); // 2
+static void item_func_BILL(); // 2
+static void item_func_WOOD_STATUE(); // 2
+static void item_func_IRIAS_PENDANT(); // 2
+static void item_func_HORSE_FLUTE(); // 2
+static void item_func_RAFRELS_MEMO(); // 2
+static void item_func_ASHS_SCRIBBLING(); // 2
+static void item_func_CHUCHU_YELLOW2(); // 2
+static void item_func_OIL_BOTTLE3(); // 2
+static void item_func_SHOP_BEE_CHILD(); // 2
+static void item_func_CHUCHU_BLACK(); // 2
+static void item_func_LIGHT_DROP(); // 2
+static void item_func_DROP_CONTAINER(); // 2
+static void item_func_DROP_CONTAINER02(); // 2
+static void item_func_DROP_CONTAINER03(); // 2
+static void item_func_FILLED_CONTAINER(); // 2
+static void item_func_MIRROR_PIECE_2(); // 2
+static void item_func_MIRROR_PIECE_3(); // 2
+static void item_func_MIRROR_PIECE_4(); // 2
+static void item_func_SMELL_YELIA_POUCH(); // 2
+static void item_func_SMELL_PUMPKIN(); // 2
+static void item_func_SMELL_POH(); // 2
+static void item_func_SMELL_FISH(); // 2
+static void item_func_SMELL_CHILDREN(); // 2
+static void item_func_SMELL_MEDICINE(); // 2
+static void item_func_M_BEETLE(); // 2
+static void item_func_F_BEETLE(); // 2
+static void item_func_M_BUTTERFLY(); // 2
+static void item_func_F_BUTTERFLY(); // 2
+static void item_func_M_STAG_BEETLE(); // 2
+static void item_func_F_STAG_BEETLE(); // 2
+static void item_func_M_GRASSHOPPER(); // 2
+static void item_func_F_GRASSHOPPER(); // 2
+static void item_func_M_NANAFUSHI(); // 2
+static void item_func_F_NANAFUSHI(); // 2
+static void item_func_M_DANGOMUSHI(); // 2
+static void item_func_F_DANGOMUSHI(); // 2
+static void item_func_M_MANTIS(); // 2
+static void item_func_F_MANTIS(); // 2
+static void item_func_M_LADYBUG(); // 2
+static void item_func_F_LADYBUG(); // 2
+static void item_func_M_SNAIL(); // 2
+static void item_func_F_SNAIL(); // 2
+static void item_func_M_DRAGONFLY(); // 2
+static void item_func_F_DRAGONFLY(); // 2
+static void item_func_M_ANT(); // 2
+static void item_func_F_ANT(); // 2
+static void item_func_M_MAYFLY(); // 2
+static void item_func_F_MAYFLY(); // 2
+static void item_func_POU_SPIRIT(); // 2
+static void item_func_ANCIENT_DOCUMENT(); // 2
+static void item_func_AIR_LETTER(); // 2
+static void item_func_ANCIENT_DOCUMENT2(); // 2
+static void item_func_LV7_DUNGEON_EXIT(); // 2
+static void item_func_LINKS_SAVINGS(); // 2
+static void item_func_SMALL_KEY2(); // 2
+static void item_func_POU_FIRE1(); // 2
+static void item_func_POU_FIRE2(); // 2
+static void item_func_POU_FIRE3(); // 2
+static void item_func_POU_FIRE4(); // 2
+static void item_func_BOSSRIDER_KEY(); // 2
+static void item_func_TOMATO_PUREE(); // 2
+static void item_func_TASTE(); // 2
+static void item_func_LV5_BOSS_KEY(); // 2
+static void item_func_SURFBOARD(); // 2
+static void item_func_KANTERA2(); // 2
+static void item_func_L2_KEY_PIECES1(); // 2
+static void item_func_L2_KEY_PIECES2(); // 2
+static void item_func_L2_KEY_PIECES3(); // 2
+static void item_func_KEY_OF_CARAVAN(); // 2
+static void item_func_LV2_BOSS_KEY(); // 2
+static void item_func_KEY_OF_FILONE(); // 2
+static void item_func_noentry(); // 2
+static s32 item_getcheck_func_noentry(); // 2
+static s32 item_getcheck_func_HEART(); // 2
+static void item_getcheck_func_GREEN_RUPEE(); // 2
+static void item_getcheck_func_BLUE_RUPEE(); // 2
+static void item_getcheck_func_YELLOW_RUPEE(); // 2
+static void item_getcheck_func_RED_RUPEE(); // 2
+static void item_getcheck_func_PURPLE_RUPEE(); // 2
+static void item_getcheck_func_ORANGE_RUPEE(); // 2
+static void item_getcheck_func_SILVER_RUPEE(); // 2
+static s32 item_getcheck_func_S_MAGIC(); // 2
+static s32 item_getcheck_func_L_MAGIC(); // 2
+static void item_getcheck_func_BOMB_5(); // 2
+static void item_getcheck_func_BOMB_10(); // 2
+static void item_getcheck_func_BOMB_20(); // 2
+static void item_getcheck_func_BOMB_30(); // 2
+static void item_getcheck_func_ARROW_10(); // 2
+static void item_getcheck_func_ARROW_20(); // 2
+static void item_getcheck_func_ARROW_30(); // 2
+static void item_getcheck_func_ARROW_1(); // 2
+static void item_getcheck_func_PACHINKO_SHOT(); // 2
+static s32 item_getcheck_func_WATER_BOMB_5(); // 2
+static s32 item_getcheck_func_WATER_BOMB_10(); // 2
+static s32 item_getcheck_func_WATER_BOMB_20(); // 2
+static s32 item_getcheck_func_WATER_BOMB_30(); // 2
+static s32 item_getcheck_func_BOMB_INSECT_5(); // 2
+static void item_getcheck_func_BOMB_INSECT_10(); // 2
+static void item_getcheck_func_BOMB_INSECT_20(); // 2
+static void item_getcheck_func_BOMB_INSECT_30(); // 2
+static s32 item_getcheck_func_RECOVER_FAILY(); // 2
+static s32 item_getcheck_func_TRIPLE_HEART(); // 2
+static s32 item_getcheck_func_SMALL_KEY(); // 2
+static s32 item_getcheck_func_KAKERA_HEART(); // 2
+static s32 item_getcheck_func_UTUWA_HEART(); // 2
+static void item_getcheck_func_MAP(); // 2
+static s32 item_getcheck_func_COMPUS(); // 2
+static void item_getcheck_func_DUNGEON_EXIT(); // 2
+static void item_getcheck_func_BOSS_KEY(); // 2
+static void item_getcheck_func_DUNGEON_BACK(); // 2
+static void item_getcheck_func_SWORD(); // 2
+static void item_getcheck_func_MASTER_SWORD(); // 2
+static void item_getcheck_func_WOOD_SHIELD(); // 2
+static void item_getcheck_func_SHIELD(); // 2
+static void item_getcheck_func_HYLIA_SHIELD(); // 2
+static void item_getcheck_func_TKS_LETTER(); // 2
+static void item_getcheck_func_WEAR_CASUAL(); // 2
+static void item_getcheck_func_WEAR_KOKIRI(); // 2
+static void item_getcheck_func_ARMOR(); // 2
+static void item_getcheck_func_WEAR_ZORA(); // 2
+static s32 item_getcheck_func_MAGIC_LV1(); // 2
+static void item_getcheck_func_DUNGEON_EXIT_2(); // 2
+static s32 item_getcheck_func_WALLET_LV1(); // 2
+static s32 item_getcheck_func_WALLET_LV2(); // 2
+static s32 item_getcheck_func_WALLET_LV3(); // 2
+static void item_getcheck_func_ZORAS_JEWEL(); // 2
+static void item_getcheck_func_HAWK_EYE(); // 2
+static void item_getcheck_func_WOOD_STICK(); // 2
+static void item_getcheck_func_BOOMERANG(); // 2
+static void item_getcheck_func_SPINNER(); // 2
+static void item_getcheck_func_IRONBALL(); // 2
+static void item_getcheck_func_BOW(); // 2
+static void item_getcheck_func_HOOKSHOT(); // 2
+static void item_getcheck_func_HVY_BOOTS(); // 2
+static void item_getcheck_func_COPY_ROD(); // 2
+static void item_getcheck_func_W_HOOKSHOT(); // 2
+static void item_getcheck_func_KANTERA(); // 2
+static void item_getcheck_func_LIGHT_SWORD(); // 2
+static void item_getcheck_func_FISHING_ROD_1(); // 2
+static void item_getcheck_func_PACHINKO(); // 2
+static s32 item_getcheck_func_COPY_ROD_2(); // 2
+static void item_getcheck_func_BOMB_BAG_LV2(); // 2
+static void item_getcheck_func_BOMB_BAG_LV1(); // 2
+static void item_getcheck_func_BOMB_IN_BAG(); // 2
+static void item_getcheck_func_LIGHT_ARROW(); // 2
+static void item_getcheck_func_ARROW_LV1(); // 2
+static void item_getcheck_func_ARROW_LV2(); // 2
+static void item_getcheck_func_ARROW_LV3(); // 2
+static s32 item_getcheck_func_LURE_ROD(); // 2
+static s32 item_getcheck_func_BOMB_ARROW(); // 2
+static s32 item_getcheck_func_HAWK_ARROW(); // 2
+static void item_getcheck_func_BEE_ROD(); // 2
+static void item_getcheck_func_JEWEL_ROD(); // 2
+static void item_getcheck_func_WORM_ROD(); // 2
+static void item_getcheck_func_JEWEL_BEE_ROD(); // 2
+static void item_getcheck_func_JEWEL_WORM_ROD(); // 2
+static void item_getcheck_func_EMPTY_BOTTLE(); // 2
+static void item_getcheck_func_RED_BOTTLE(); // 2
+static void item_getcheck_func_GREEN_BOTTLE(); // 2
+static void item_getcheck_func_BLUE_BOTTLE(); // 2
+static void item_getcheck_func_MILK_BOTTLE(); // 2
+static void item_getcheck_func_HALF_MILK_BOTTLE(); // 2
+static void item_getcheck_func_OIL_BOTTLE(); // 2
+static void item_getcheck_func_WATER_BOTTLE(); // 2
+static void item_getcheck_func_OIL_BOTTLE2(); // 2
+static void item_getcheck_func_RED_BOTTLE2(); // 2
+static void item_getcheck_func_UGLY_SOUP(); // 2
+static void item_getcheck_func_HOT_SPRING(); // 2
+static void item_getcheck_func_FAIRY_BOTTLE(); // 2
+static void item_getcheck_func_HOT_SPRING2(); // 2
+static void item_getcheck_func_OIL2(); // 2
+static void item_getcheck_func_OIL(); // 2
+static void item_getcheck_func_NORMAL_BOMB(); // 2
+static void item_getcheck_func_WATER_BOMB(); // 2
+static void item_getcheck_func_POKE_BOMB(); // 2
+static void item_getcheck_func_FAIRY_DROP(); // 2
+static void item_getcheck_func_WORM(); // 2
+static void item_getcheck_func_DROP_BOTTLE(); // 2
+static s32 item_getcheck_func_BEE_CHILD(); // 2
+static void item_getcheck_func_CHUCHU_RARE(); // 2
+static void item_getcheck_func_CHUCHU_RED(); // 2
+static void item_getcheck_func_CHUCHU_BLUE(); // 2
+static void item_getcheck_func_CHUCHU_GREEN(); // 2
+static void item_getcheck_func_CHUCHU_YELLOW(); // 2
+static void item_getcheck_func_CHUCHU_PURPLE(); // 2
+static void item_getcheck_func_LV1_SOUP(); // 2
+static void item_getcheck_func_LV2_SOUP(); // 2
+static void item_getcheck_func_LV3_SOUP(); // 2
+static void item_getcheck_func_LETTER(); // 2
+static void item_getcheck_func_BILL(); // 2
+static void item_getcheck_func_WOOD_STATUE(); // 2
+static void item_getcheck_func_IRIAS_PENDANT(); // 2
+static void item_getcheck_func_HORSE_FLUTE(); // 2
+static void item_getcheck_func_RAFRELS_MEMO(); // 2
+static void item_getcheck_func_ASHS_SCRIBBLING(); // 2
+static void item_getcheck_func_CHUCHU_YELLOW2(); // 2
+static s32 item_getcheck_func_OIL_BOTTLE3(); // 2
+static s32 item_getcheck_func_SHOP_BEE_CHILD(); // 2
+static void item_getcheck_func_CHUCHU_BLACK(); // 2
+static void item_getcheck_func_LIGHT_DROP(); // 2
+static void item_getcheck_func_DROP_CONTAINER(); // 2
+static void item_getcheck_func_DROP_CONTAINER02(); // 2
+static void item_getcheck_func_DROP_CONTAINER03(); // 2
+static s32 item_getcheck_func_FILLED_CONTAINER(); // 2
+static s32 item_getcheck_func_MIRROR_PIECE_2(); // 2
+static s32 item_getcheck_func_MIRROR_PIECE_3(); // 2
+static s32 item_getcheck_func_MIRROR_PIECE_4(); // 2
+static void item_getcheck_func_SMELL_YELIA_POUCH(); // 2
+static s32 item_getcheck_func_SMELL_PUMPKIN(); // 2
+static void item_getcheck_func_SMELL_POH(); // 2
+static void item_getcheck_func_SMELL_FISH(); // 2
+static void item_getcheck_func_SMELL_CHILDREN(); // 2
+static void item_getcheck_func_SMELL_MEDICINE(); // 2
+static void item_getcheck_func_M_BEETLE(); // 2
+static void item_getcheck_func_F_BEETLE(); // 2
+static void item_getcheck_func_M_BUTTERFLY(); // 2
+static void item_getcheck_func_F_BUTTERFLY(); // 2
+static void item_getcheck_func_M_STAG_BEETLE(); // 2
+static void item_getcheck_func_F_STAG_BEETLE(); // 2
+static void item_getcheck_func_M_GRASSHOPPER(); // 2
+static void item_getcheck_func_F_GRASSHOPPER(); // 2
+static void item_getcheck_func_M_NANAFUSHI(); // 2
+static void item_getcheck_func_F_NANAFUSHI(); // 2
+static void item_getcheck_func_M_DANGOMUSHI(); // 2
+static void item_getcheck_func_F_DANGOMUSHI(); // 2
+static void item_getcheck_func_M_MANTIS(); // 2
+static void item_getcheck_func_F_MANTIS(); // 2
+static void item_getcheck_func_M_LADYBUG(); // 2
+static void item_getcheck_func_F_LADYBUG(); // 2
+static void item_getcheck_func_M_SNAIL(); // 2
+static void item_getcheck_func_F_SNAIL(); // 2
+static void item_getcheck_func_M_DRAGONFLY(); // 2
+static void item_getcheck_func_F_DRAGONFLY(); // 2
+static void item_getcheck_func_M_ANT(); // 2
+static void item_getcheck_func_F_ANT(); // 2
+static void item_getcheck_func_M_MAYFLY(); // 2
+static void item_getcheck_func_F_MAYFLY(); // 2
+static void item_getcheck_func_POU_SPIRIT(); // 2
+static void item_getcheck_func_ANCIENT_DOCUMENT(); // 2
+static void item_getcheck_func_AIR_LETTER(); // 2
+static void item_getcheck_func_ANCIENT_DOCUMENT2(); // 2
+static void item_getcheck_func_LV7_DUNGEON_EXIT(); // 2
+static s32 item_getcheck_func_LINKS_SAVINGS(); // 2
+static s32 item_getcheck_func_SMALL_KEY2(); // 2
+static s32 item_getcheck_func_POU_FIRE1(); // 2
+static s32 item_getcheck_func_POU_FIRE2(); // 2
+static s32 item_getcheck_func_POU_FIRE3(); // 2
+static s32 item_getcheck_func_POU_FIRE4(); // 2
+static s32 item_getcheck_func_BOSSRIDER_KEY(); // 2
+static void item_getcheck_func_TOMATO_PUREE(); // 2
+static void item_getcheck_func_TASTE(); // 2
+static void item_getcheck_func_LV5_BOSS_KEY(); // 2
+static s32 item_getcheck_func_SURFBOARD(); // 2
+static s32 item_getcheck_func_KANTERA2(); // 2
+static void item_getcheck_func_L2_KEY_PIECES1(); // 2
+static void item_getcheck_func_L2_KEY_PIECES2(); // 2
+static void item_getcheck_func_L2_KEY_PIECES3(); // 2
+static void item_getcheck_func_KEY_OF_CARAVAN(); // 2
+static void item_getcheck_func_LV2_BOSS_KEY(); // 2
+static void item_getcheck_func_KEY_OF_FILONE(); // 2
+static void isBomb(u8); // 2
+static void isArrow(u8); // 2
+void isBottleItem(u8); // 2
+void isHeart(u8); // 2
+void isInsect(u8); // 2
+void check_itemno(int); // 2
+static void addBombCount(u8, u8); // 2
 
-extern "C" void execItemGet__FUc();
-extern "C" void checkItemGet__FUci();
-extern "C" static void item_func_HEART__Fv();
-extern "C" static void item_func_GREEN_RUPEE__Fv();
-extern "C" static void item_func_BLUE_RUPEE__Fv();
-extern "C" static void item_func_YELLOW_RUPEE__Fv();
-extern "C" static void item_func_RED_RUPEE__Fv();
-extern "C" static void item_func_PURPLE_RUPEE__Fv();
-extern "C" static void item_func_ORANGE_RUPEE__Fv();
-extern "C" static void item_func_SILVER_RUPEE__Fv();
-extern "C" static void item_func_S_MAGIC__Fv();
-extern "C" static void item_func_L_MAGIC__Fv();
-extern "C" static void item_func_BOMB_5__Fv();
-extern "C" static void item_func_BOMB_10__Fv();
-extern "C" static void item_func_BOMB_20__Fv();
-extern "C" static void item_func_BOMB_30__Fv();
-extern "C" static void item_func_ARROW_10__Fv();
-extern "C" static void item_func_ARROW_20__Fv();
-extern "C" static void item_func_ARROW_30__Fv();
-extern "C" static void item_func_ARROW_1__Fv();
-extern "C" static void item_func_PACHINKO_SHOT__Fv();
-extern "C" static void item_func_WATER_BOMB_5__Fv();
-extern "C" static void item_func_WATER_BOMB_10__Fv();
-extern "C" static void item_func_WATER_BOMB_20__Fv();
-extern "C" static void item_func_WATER_BOMB_30__Fv();
-extern "C" static void item_func_BOMB_INSECT_5__Fv();
-extern "C" static void item_func_BOMB_INSECT_10__Fv();
-extern "C" static void item_func_BOMB_INSECT_20__Fv();
-extern "C" static void item_func_BOMB_INSECT_30__Fv();
-extern "C" static void item_func_RECOVER_FAILY__Fv();
-extern "C" static void item_func_TRIPLE_HEART__Fv();
-extern "C" static void item_func_SMALL_KEY__Fv();
-extern "C" static void item_func_KAKERA_HEART__Fv();
-extern "C" static void item_func_UTUWA_HEART__Fv();
-extern "C" static void item_func_MAP__Fv();
-extern "C" static void item_func_COMPUS__Fv();
-extern "C" static void item_func_DUNGEON_EXIT__Fv();
-extern "C" static void item_func_BOSS_KEY__Fv();
-extern "C" static void item_func_DUNGEON_BACK__Fv();
-extern "C" static void item_func_SWORD__Fv();
-extern "C" static void item_func_MASTER_SWORD__Fv();
-extern "C" static void item_func_WOOD_SHIELD__Fv();
-extern "C" static void item_func_SHIELD__Fv();
-extern "C" static void item_func_HYLIA_SHIELD__Fv();
-extern "C" static void item_func_TKS_LETTER__Fv();
-extern "C" static void item_func_WEAR_CASUAL__Fv();
-extern "C" static void item_func_WEAR_KOKIRI__Fv();
-extern "C" static void item_func_ARMOR__Fv();
-extern "C" static void item_func_WEAR_ZORA__Fv();
-extern "C" static void item_func_MAGIC_LV1__Fv();
-extern "C" static void item_func_DUNGEON_EXIT_2__Fv();
-extern "C" static void item_func_WALLET_LV1__Fv();
-extern "C" static void item_func_WALLET_LV2__Fv();
-extern "C" static void item_func_WALLET_LV3__Fv();
-extern "C" static void item_func_ZORAS_JEWEL__Fv();
-extern "C" static void item_func_HAWK_EYE__Fv();
-extern "C" static void item_func_WOOD_STICK__Fv();
-extern "C" static void item_func_BOOMERANG__Fv();
-extern "C" static void item_func_SPINNER__Fv();
-extern "C" static void item_func_IRONBALL__Fv();
-extern "C" static void item_func_BOW__Fv();
-extern "C" static void item_func_HOOKSHOT__Fv();
-extern "C" static void item_func_HVY_BOOTS__Fv();
-extern "C" static void item_func_COPY_ROD__Fv();
-extern "C" static void item_func_W_HOOKSHOT__Fv();
-extern "C" static void item_func_KANTERA__Fv();
-extern "C" static void item_func_LIGHT_SWORD__Fv();
-extern "C" static void item_func_FISHING_ROD_1__Fv();
-extern "C" static void item_func_PACHINKO__Fv();
-extern "C" static void item_func_COPY_ROD_2__Fv();
-extern "C" static void item_func_BOMB_BAG_LV2__Fv();
-extern "C" static void item_func_BOMB_BAG_LV1__Fv();
-extern "C" static void item_func_BOMB_IN_BAG__Fv();
-extern "C" static void item_func_LIGHT_ARROW__Fv();
-extern "C" static void item_func_ARROW_LV1__Fv();
-extern "C" static void item_func_ARROW_LV2__Fv();
-extern "C" static void item_func_ARROW_LV3__Fv();
-extern "C" static void item_func_LURE_ROD__Fv();
-extern "C" static void item_func_BOMB_ARROW__Fv();
-extern "C" static void item_func_HAWK_ARROW__Fv();
-extern "C" static void item_func_BEE_ROD__Fv();
-extern "C" static void item_func_JEWEL_ROD__Fv();
-extern "C" static void item_func_WORM_ROD__Fv();
-extern "C" static void item_func_JEWEL_BEE_ROD__Fv();
-extern "C" static void item_func_JEWEL_WORM_ROD__Fv();
-extern "C" static void item_func_EMPTY_BOTTLE__Fv();
-extern "C" static void item_func_RED_BOTTLE__Fv();
-extern "C" static void item_func_GREEN_BOTTLE__Fv();
-extern "C" static void item_func_BLUE_BOTTLE__Fv();
-extern "C" static void item_func_MILK_BOTTLE__Fv();
-extern "C" static void item_func_HALF_MILK_BOTTLE__Fv();
-extern "C" static void item_func_OIL_BOTTLE__Fv();
-extern "C" static void item_func_WATER_BOTTLE__Fv();
-extern "C" static void item_func_OIL_BOTTLE2__Fv();
-extern "C" static void item_func_RED_BOTTLE2__Fv();
-extern "C" static void item_func_UGLY_SOUP__Fv();
-extern "C" static void item_func_HOT_SPRING__Fv();
-extern "C" static void item_func_FAIRY_BOTTLE__Fv();
-extern "C" static void item_func_HOT_SPRING2__Fv();
-extern "C" static void item_func_OIL2__Fv();
-extern "C" static void item_func_OIL__Fv();
-extern "C" static void item_func_NORMAL_BOMB__Fv();
-extern "C" static void item_func_WATER_BOMB__Fv();
-extern "C" static void item_func_POKE_BOMB__Fv();
-extern "C" static void item_func_FAIRY_DROP__Fv();
-extern "C" static void item_func_WORM__Fv();
-extern "C" static void item_func_DROP_BOTTLE__Fv();
-extern "C" static void item_func_BEE_CHILD__Fv();
-extern "C" static void item_func_CHUCHU_RARE__Fv();
-extern "C" static void item_func_CHUCHU_RED__Fv();
-extern "C" static void item_func_CHUCHU_BLUE__Fv();
-extern "C" static void item_func_CHUCHU_GREEN__Fv();
-extern "C" static void item_func_CHUCHU_YELLOW__Fv();
-extern "C" static void item_func_CHUCHU_PURPLE__Fv();
-extern "C" static void item_func_LV1_SOUP__Fv();
-extern "C" static void item_func_LV2_SOUP__Fv();
-extern "C" static void item_func_LV3_SOUP__Fv();
-extern "C" static void item_func_LETTER__Fv();
-extern "C" static void item_func_BILL__Fv();
-extern "C" static void item_func_WOOD_STATUE__Fv();
-extern "C" static void item_func_IRIAS_PENDANT__Fv();
-extern "C" static void item_func_HORSE_FLUTE__Fv();
-extern "C" static void item_func_RAFRELS_MEMO__Fv();
-extern "C" static void item_func_ASHS_SCRIBBLING__Fv();
-extern "C" static void item_func_CHUCHU_YELLOW2__Fv();
-extern "C" static void item_func_OIL_BOTTLE3__Fv();
-extern "C" static void item_func_SHOP_BEE_CHILD__Fv();
-extern "C" static void item_func_CHUCHU_BLACK__Fv();
-extern "C" static void item_func_LIGHT_DROP__Fv();
-extern "C" static void item_func_DROP_CONTAINER__Fv();
-extern "C" static void item_func_DROP_CONTAINER02__Fv();
-extern "C" static void item_func_DROP_CONTAINER03__Fv();
-extern "C" static void item_func_FILLED_CONTAINER__Fv();
-extern "C" static void item_func_MIRROR_PIECE_2__Fv();
-extern "C" static void item_func_MIRROR_PIECE_3__Fv();
-extern "C" static void item_func_MIRROR_PIECE_4__Fv();
-extern "C" static void item_func_SMELL_YELIA_POUCH__Fv();
-extern "C" static void item_func_SMELL_PUMPKIN__Fv();
-extern "C" static void item_func_SMELL_POH__Fv();
-extern "C" static void item_func_SMELL_FISH__Fv();
-extern "C" static void item_func_SMELL_CHILDREN__Fv();
-extern "C" static void item_func_SMELL_MEDICINE__Fv();
-extern "C" static void item_func_M_BEETLE__Fv();
-extern "C" static void item_func_F_BEETLE__Fv();
-extern "C" static void item_func_M_BUTTERFLY__Fv();
-extern "C" static void item_func_F_BUTTERFLY__Fv();
-extern "C" static void item_func_M_STAG_BEETLE__Fv();
-extern "C" static void item_func_F_STAG_BEETLE__Fv();
-extern "C" static void item_func_M_GRASSHOPPER__Fv();
-extern "C" static void item_func_F_GRASSHOPPER__Fv();
-extern "C" static void item_func_M_NANAFUSHI__Fv();
-extern "C" static void item_func_F_NANAFUSHI__Fv();
-extern "C" static void item_func_M_DANGOMUSHI__Fv();
-extern "C" static void item_func_F_DANGOMUSHI__Fv();
-extern "C" static void item_func_M_MANTIS__Fv();
-extern "C" static void item_func_F_MANTIS__Fv();
-extern "C" static void item_func_M_LADYBUG__Fv();
-extern "C" static void item_func_F_LADYBUG__Fv();
-extern "C" static void item_func_M_SNAIL__Fv();
-extern "C" static void item_func_F_SNAIL__Fv();
-extern "C" static void item_func_M_DRAGONFLY__Fv();
-extern "C" static void item_func_F_DRAGONFLY__Fv();
-extern "C" static void item_func_M_ANT__Fv();
-extern "C" static void item_func_F_ANT__Fv();
-extern "C" static void item_func_M_MAYFLY__Fv();
-extern "C" static void item_func_F_MAYFLY__Fv();
-extern "C" static void item_func_POU_SPIRIT__Fv();
-extern "C" static void item_func_ANCIENT_DOCUMENT__Fv();
-extern "C" static void item_func_AIR_LETTER__Fv();
-extern "C" static void item_func_ANCIENT_DOCUMENT2__Fv();
-extern "C" static void item_func_LV7_DUNGEON_EXIT__Fv();
-extern "C" static void item_func_LINKS_SAVINGS__Fv();
-extern "C" static void item_func_SMALL_KEY2__Fv();
-extern "C" static void item_func_POU_FIRE1__Fv();
-extern "C" static void item_func_POU_FIRE2__Fv();
-extern "C" static void item_func_POU_FIRE3__Fv();
-extern "C" static void item_func_POU_FIRE4__Fv();
-extern "C" static void item_func_BOSSRIDER_KEY__Fv();
-extern "C" static void item_func_TOMATO_PUREE__Fv();
-extern "C" static void item_func_TASTE__Fv();
-extern "C" static void item_func_LV5_BOSS_KEY__Fv();
-extern "C" static void item_func_SURFBOARD__Fv();
-extern "C" static void item_func_KANTERA2__Fv();
-extern "C" static void item_func_L2_KEY_PIECES1__Fv();
-extern "C" static void item_func_L2_KEY_PIECES2__Fv();
-extern "C" static void item_func_L2_KEY_PIECES3__Fv();
-extern "C" static void item_func_KEY_OF_CARAVAN__Fv();
-extern "C" static void item_func_LV2_BOSS_KEY__Fv();
-extern "C" static void item_func_KEY_OF_FILONE__Fv();
-extern "C" static void item_func_noentry__Fv();
-extern "C" static s32 item_getcheck_func_noentry__Fv();
-extern "C" static s32 item_getcheck_func_HEART__Fv();
-extern "C" static void item_getcheck_func_GREEN_RUPEE__Fv();
-extern "C" static void item_getcheck_func_BLUE_RUPEE__Fv();
-extern "C" static void item_getcheck_func_YELLOW_RUPEE__Fv();
-extern "C" static void item_getcheck_func_RED_RUPEE__Fv();
-extern "C" static void item_getcheck_func_PURPLE_RUPEE__Fv();
-extern "C" static void item_getcheck_func_ORANGE_RUPEE__Fv();
-extern "C" static void item_getcheck_func_SILVER_RUPEE__Fv();
-extern "C" static s32 item_getcheck_func_S_MAGIC__Fv();
-extern "C" static s32 item_getcheck_func_L_MAGIC__Fv();
-extern "C" static void item_getcheck_func_BOMB_5__Fv();
-extern "C" static void item_getcheck_func_BOMB_10__Fv();
-extern "C" static void item_getcheck_func_BOMB_20__Fv();
-extern "C" static void item_getcheck_func_BOMB_30__Fv();
-extern "C" static void item_getcheck_func_ARROW_10__Fv();
-extern "C" static void item_getcheck_func_ARROW_20__Fv();
-extern "C" static void item_getcheck_func_ARROW_30__Fv();
-extern "C" static void item_getcheck_func_ARROW_1__Fv();
-extern "C" static void item_getcheck_func_PACHINKO_SHOT__Fv();
-extern "C" static s32 item_getcheck_func_WATER_BOMB_5__Fv();
-extern "C" static s32 item_getcheck_func_WATER_BOMB_10__Fv();
-extern "C" static s32 item_getcheck_func_WATER_BOMB_20__Fv();
-extern "C" static s32 item_getcheck_func_WATER_BOMB_30__Fv();
-extern "C" static s32 item_getcheck_func_BOMB_INSECT_5__Fv();
-extern "C" static void item_getcheck_func_BOMB_INSECT_10__Fv();
-extern "C" static void item_getcheck_func_BOMB_INSECT_20__Fv();
-extern "C" static void item_getcheck_func_BOMB_INSECT_30__Fv();
-extern "C" static s32 item_getcheck_func_RECOVER_FAILY__Fv();
-extern "C" static s32 item_getcheck_func_TRIPLE_HEART__Fv();
-extern "C" static s32 item_getcheck_func_SMALL_KEY__Fv();
-extern "C" static s32 item_getcheck_func_KAKERA_HEART__Fv();
-extern "C" static s32 item_getcheck_func_UTUWA_HEART__Fv();
-extern "C" static void item_getcheck_func_MAP__Fv();
-extern "C" static s32 item_getcheck_func_COMPUS__Fv();
-extern "C" static void item_getcheck_func_DUNGEON_EXIT__Fv();
-extern "C" static void item_getcheck_func_BOSS_KEY__Fv();
-extern "C" static void item_getcheck_func_DUNGEON_BACK__Fv();
-extern "C" static void item_getcheck_func_SWORD__Fv();
-extern "C" static void item_getcheck_func_MASTER_SWORD__Fv();
-extern "C" static void item_getcheck_func_WOOD_SHIELD__Fv();
-extern "C" static void item_getcheck_func_SHIELD__Fv();
-extern "C" static void item_getcheck_func_HYLIA_SHIELD__Fv();
-extern "C" static void item_getcheck_func_TKS_LETTER__Fv();
-extern "C" static void item_getcheck_func_WEAR_CASUAL__Fv();
-extern "C" static void item_getcheck_func_WEAR_KOKIRI__Fv();
-extern "C" static void item_getcheck_func_ARMOR__Fv();
-extern "C" static void item_getcheck_func_WEAR_ZORA__Fv();
-extern "C" static s32 item_getcheck_func_MAGIC_LV1__Fv();
-extern "C" static void item_getcheck_func_DUNGEON_EXIT_2__Fv();
-extern "C" static s32 item_getcheck_func_WALLET_LV1__Fv();
-extern "C" static s32 item_getcheck_func_WALLET_LV2__Fv();
-extern "C" static s32 item_getcheck_func_WALLET_LV3__Fv();
-extern "C" static void item_getcheck_func_ZORAS_JEWEL__Fv();
-extern "C" static void item_getcheck_func_HAWK_EYE__Fv();
-extern "C" static void item_getcheck_func_WOOD_STICK__Fv();
-extern "C" static void item_getcheck_func_BOOMERANG__Fv();
-extern "C" static void item_getcheck_func_SPINNER__Fv();
-extern "C" static void item_getcheck_func_IRONBALL__Fv();
-extern "C" static void item_getcheck_func_BOW__Fv();
-extern "C" static void item_getcheck_func_HOOKSHOT__Fv();
-extern "C" static void item_getcheck_func_HVY_BOOTS__Fv();
-extern "C" static void item_getcheck_func_COPY_ROD__Fv();
-extern "C" static void item_getcheck_func_W_HOOKSHOT__Fv();
-extern "C" static void item_getcheck_func_KANTERA__Fv();
-extern "C" static void item_getcheck_func_LIGHT_SWORD__Fv();
-extern "C" static void item_getcheck_func_FISHING_ROD_1__Fv();
-extern "C" static void item_getcheck_func_PACHINKO__Fv();
-extern "C" static s32 item_getcheck_func_COPY_ROD_2__Fv();
-extern "C" static void item_getcheck_func_BOMB_BAG_LV2__Fv();
-extern "C" static void item_getcheck_func_BOMB_BAG_LV1__Fv();
-extern "C" static void item_getcheck_func_BOMB_IN_BAG__Fv();
-extern "C" static void item_getcheck_func_LIGHT_ARROW__Fv();
-extern "C" static void item_getcheck_func_ARROW_LV1__Fv();
-extern "C" static void item_getcheck_func_ARROW_LV2__Fv();
-extern "C" static void item_getcheck_func_ARROW_LV3__Fv();
-extern "C" static s32 item_getcheck_func_LURE_ROD__Fv();
-extern "C" static s32 item_getcheck_func_BOMB_ARROW__Fv();
-extern "C" static s32 item_getcheck_func_HAWK_ARROW__Fv();
-extern "C" static void item_getcheck_func_BEE_ROD__Fv();
-extern "C" static void item_getcheck_func_JEWEL_ROD__Fv();
-extern "C" static void item_getcheck_func_WORM_ROD__Fv();
-extern "C" static void item_getcheck_func_JEWEL_BEE_ROD__Fv();
-extern "C" static void item_getcheck_func_JEWEL_WORM_ROD__Fv();
-extern "C" static void item_getcheck_func_EMPTY_BOTTLE__Fv();
-extern "C" static void item_getcheck_func_RED_BOTTLE__Fv();
-extern "C" static void item_getcheck_func_GREEN_BOTTLE__Fv();
-extern "C" static void item_getcheck_func_BLUE_BOTTLE__Fv();
-extern "C" static void item_getcheck_func_MILK_BOTTLE__Fv();
-extern "C" static void item_getcheck_func_HALF_MILK_BOTTLE__Fv();
-extern "C" static void item_getcheck_func_OIL_BOTTLE__Fv();
-extern "C" static void item_getcheck_func_WATER_BOTTLE__Fv();
-extern "C" static void item_getcheck_func_OIL_BOTTLE2__Fv();
-extern "C" static void item_getcheck_func_RED_BOTTLE2__Fv();
-extern "C" static void item_getcheck_func_UGLY_SOUP__Fv();
-extern "C" static void item_getcheck_func_HOT_SPRING__Fv();
-extern "C" static void item_getcheck_func_FAIRY_BOTTLE__Fv();
-extern "C" static void item_getcheck_func_HOT_SPRING2__Fv();
-extern "C" static void item_getcheck_func_OIL2__Fv();
-extern "C" static void item_getcheck_func_OIL__Fv();
-extern "C" static void item_getcheck_func_NORMAL_BOMB__Fv();
-extern "C" static void item_getcheck_func_WATER_BOMB__Fv();
-extern "C" static void item_getcheck_func_POKE_BOMB__Fv();
-extern "C" static void item_getcheck_func_FAIRY_DROP__Fv();
-extern "C" static void item_getcheck_func_WORM__Fv();
-extern "C" static void item_getcheck_func_DROP_BOTTLE__Fv();
-extern "C" static s32 item_getcheck_func_BEE_CHILD__Fv();
-extern "C" static void item_getcheck_func_CHUCHU_RARE__Fv();
-extern "C" static void item_getcheck_func_CHUCHU_RED__Fv();
-extern "C" static void item_getcheck_func_CHUCHU_BLUE__Fv();
-extern "C" static void item_getcheck_func_CHUCHU_GREEN__Fv();
-extern "C" static void item_getcheck_func_CHUCHU_YELLOW__Fv();
-extern "C" static void item_getcheck_func_CHUCHU_PURPLE__Fv();
-extern "C" static void item_getcheck_func_LV1_SOUP__Fv();
-extern "C" static void item_getcheck_func_LV2_SOUP__Fv();
-extern "C" static void item_getcheck_func_LV3_SOUP__Fv();
-extern "C" static void item_getcheck_func_LETTER__Fv();
-extern "C" static void item_getcheck_func_BILL__Fv();
-extern "C" static void item_getcheck_func_WOOD_STATUE__Fv();
-extern "C" static void item_getcheck_func_IRIAS_PENDANT__Fv();
-extern "C" static void item_getcheck_func_HORSE_FLUTE__Fv();
-extern "C" static void item_getcheck_func_RAFRELS_MEMO__Fv();
-extern "C" static void item_getcheck_func_ASHS_SCRIBBLING__Fv();
-extern "C" static void item_getcheck_func_CHUCHU_YELLOW2__Fv();
-extern "C" static s32 item_getcheck_func_OIL_BOTTLE3__Fv();
-extern "C" static s32 item_getcheck_func_SHOP_BEE_CHILD__Fv();
-extern "C" static void item_getcheck_func_CHUCHU_BLACK__Fv();
-extern "C" static void item_getcheck_func_LIGHT_DROP__Fv();
-extern "C" static void item_getcheck_func_DROP_CONTAINER__Fv();
-extern "C" static void item_getcheck_func_DROP_CONTAINER02__Fv();
-extern "C" static void item_getcheck_func_DROP_CONTAINER03__Fv();
-extern "C" static s32 item_getcheck_func_FILLED_CONTAINER__Fv();
-extern "C" static s32 item_getcheck_func_MIRROR_PIECE_2__Fv();
-extern "C" static s32 item_getcheck_func_MIRROR_PIECE_3__Fv();
-extern "C" static s32 item_getcheck_func_MIRROR_PIECE_4__Fv();
-extern "C" static void item_getcheck_func_SMELL_YELIA_POUCH__Fv();
-extern "C" static s32 item_getcheck_func_SMELL_PUMPKIN__Fv();
-extern "C" static void item_getcheck_func_SMELL_POH__Fv();
-extern "C" static void item_getcheck_func_SMELL_FISH__Fv();
-extern "C" static void item_getcheck_func_SMELL_CHILDREN__Fv();
-extern "C" static void item_getcheck_func_SMELL_MEDICINE__Fv();
-extern "C" static void item_getcheck_func_M_BEETLE__Fv();
-extern "C" static void item_getcheck_func_F_BEETLE__Fv();
-extern "C" static void item_getcheck_func_M_BUTTERFLY__Fv();
-extern "C" static void item_getcheck_func_F_BUTTERFLY__Fv();
-extern "C" static void item_getcheck_func_M_STAG_BEETLE__Fv();
-extern "C" static void item_getcheck_func_F_STAG_BEETLE__Fv();
-extern "C" static void item_getcheck_func_M_GRASSHOPPER__Fv();
-extern "C" static void item_getcheck_func_F_GRASSHOPPER__Fv();
-extern "C" static void item_getcheck_func_M_NANAFUSHI__Fv();
-extern "C" static void item_getcheck_func_F_NANAFUSHI__Fv();
-extern "C" static void item_getcheck_func_M_DANGOMUSHI__Fv();
-extern "C" static void item_getcheck_func_F_DANGOMUSHI__Fv();
-extern "C" static void item_getcheck_func_M_MANTIS__Fv();
-extern "C" static void item_getcheck_func_F_MANTIS__Fv();
-extern "C" static void item_getcheck_func_M_LADYBUG__Fv();
-extern "C" static void item_getcheck_func_F_LADYBUG__Fv();
-extern "C" static void item_getcheck_func_M_SNAIL__Fv();
-extern "C" static void item_getcheck_func_F_SNAIL__Fv();
-extern "C" static void item_getcheck_func_M_DRAGONFLY__Fv();
-extern "C" static void item_getcheck_func_F_DRAGONFLY__Fv();
-extern "C" static void item_getcheck_func_M_ANT__Fv();
-extern "C" static void item_getcheck_func_F_ANT__Fv();
-extern "C" static void item_getcheck_func_M_MAYFLY__Fv();
-extern "C" static void item_getcheck_func_F_MAYFLY__Fv();
-extern "C" static void item_getcheck_func_POU_SPIRIT__Fv();
-extern "C" static void item_getcheck_func_ANCIENT_DOCUMENT__Fv();
-extern "C" static void item_getcheck_func_AIR_LETTER__Fv();
-extern "C" static void item_getcheck_func_ANCIENT_DOCUMENT2__Fv();
-extern "C" static void item_getcheck_func_LV7_DUNGEON_EXIT__Fv();
-extern "C" static s32 item_getcheck_func_LINKS_SAVINGS__Fv();
-extern "C" static s32 item_getcheck_func_SMALL_KEY2__Fv();
-extern "C" static s32 item_getcheck_func_POU_FIRE1__Fv();
-extern "C" static s32 item_getcheck_func_POU_FIRE2__Fv();
-extern "C" static s32 item_getcheck_func_POU_FIRE3__Fv();
-extern "C" static s32 item_getcheck_func_POU_FIRE4__Fv();
-extern "C" static s32 item_getcheck_func_BOSSRIDER_KEY__Fv();
-extern "C" static void item_getcheck_func_TOMATO_PUREE__Fv();
-extern "C" static void item_getcheck_func_TASTE__Fv();
-extern "C" static void item_getcheck_func_LV5_BOSS_KEY__Fv();
-extern "C" static s32 item_getcheck_func_SURFBOARD__Fv();
-extern "C" static s32 item_getcheck_func_KANTERA2__Fv();
-extern "C" static void item_getcheck_func_L2_KEY_PIECES1__Fv();
-extern "C" static void item_getcheck_func_L2_KEY_PIECES2__Fv();
-extern "C" static void item_getcheck_func_L2_KEY_PIECES3__Fv();
-extern "C" static void item_getcheck_func_KEY_OF_CARAVAN__Fv();
-extern "C" static void item_getcheck_func_LV2_BOSS_KEY__Fv();
-extern "C" static void item_getcheck_func_KEY_OF_FILONE__Fv();
-extern "C" static void isBomb__FUc();
-extern "C" static void isArrow__FUc();
-extern "C" void isBottleItem__FUc();
-extern "C" void isHeart__FUc();
-extern "C" void isInsect__FUc();
-extern "C" void check_itemno__Fi();
-extern "C" static void addBombCount__FUcUc();
+extern "C" void execItemGet__FUc(); // 1
+extern "C" void checkItemGet__FUci(); // 1
+extern "C" static void item_func_HEART__Fv(); // 1
+extern "C" static void item_func_GREEN_RUPEE__Fv(); // 1
+extern "C" static void item_func_BLUE_RUPEE__Fv(); // 1
+extern "C" static void item_func_YELLOW_RUPEE__Fv(); // 1
+extern "C" static void item_func_RED_RUPEE__Fv(); // 1
+extern "C" static void item_func_PURPLE_RUPEE__Fv(); // 1
+extern "C" static void item_func_ORANGE_RUPEE__Fv(); // 1
+extern "C" static void item_func_SILVER_RUPEE__Fv(); // 1
+extern "C" static void item_func_S_MAGIC__Fv(); // 1
+extern "C" static void item_func_L_MAGIC__Fv(); // 1
+extern "C" static void item_func_BOMB_5__Fv(); // 1
+extern "C" static void item_func_BOMB_10__Fv(); // 1
+extern "C" static void item_func_BOMB_20__Fv(); // 1
+extern "C" static void item_func_BOMB_30__Fv(); // 1
+extern "C" static void item_func_ARROW_10__Fv(); // 1
+extern "C" static void item_func_ARROW_20__Fv(); // 1
+extern "C" static void item_func_ARROW_30__Fv(); // 1
+extern "C" static void item_func_ARROW_1__Fv(); // 1
+extern "C" static void item_func_PACHINKO_SHOT__Fv(); // 1
+extern "C" static void item_func_WATER_BOMB_5__Fv(); // 1
+extern "C" static void item_func_WATER_BOMB_10__Fv(); // 1
+extern "C" static void item_func_WATER_BOMB_20__Fv(); // 1
+extern "C" static void item_func_WATER_BOMB_30__Fv(); // 1
+extern "C" static void item_func_BOMB_INSECT_5__Fv(); // 1
+extern "C" static void item_func_BOMB_INSECT_10__Fv(); // 1
+extern "C" static void item_func_BOMB_INSECT_20__Fv(); // 1
+extern "C" static void item_func_BOMB_INSECT_30__Fv(); // 1
+extern "C" static void item_func_RECOVER_FAILY__Fv(); // 1
+extern "C" static void item_func_TRIPLE_HEART__Fv(); // 1
+extern "C" static void item_func_SMALL_KEY__Fv(); // 1
+extern "C" static void item_func_KAKERA_HEART__Fv(); // 1
+extern "C" static void item_func_UTUWA_HEART__Fv(); // 1
+extern "C" static void item_func_MAP__Fv(); // 1
+extern "C" static void item_func_COMPUS__Fv(); // 1
+extern "C" static void item_func_DUNGEON_EXIT__Fv(); // 1
+extern "C" static void item_func_BOSS_KEY__Fv(); // 1
+extern "C" static void item_func_DUNGEON_BACK__Fv(); // 1
+extern "C" static void item_func_SWORD__Fv(); // 1
+extern "C" static void item_func_MASTER_SWORD__Fv(); // 1
+extern "C" static void item_func_WOOD_SHIELD__Fv(); // 1
+extern "C" static void item_func_SHIELD__Fv(); // 1
+extern "C" static void item_func_HYLIA_SHIELD__Fv(); // 1
+extern "C" static void item_func_TKS_LETTER__Fv(); // 1
+extern "C" static void item_func_WEAR_CASUAL__Fv(); // 1
+extern "C" static void item_func_WEAR_KOKIRI__Fv(); // 1
+extern "C" static void item_func_ARMOR__Fv(); // 1
+extern "C" static void item_func_WEAR_ZORA__Fv(); // 1
+extern "C" static void item_func_MAGIC_LV1__Fv(); // 1
+extern "C" static void item_func_DUNGEON_EXIT_2__Fv(); // 1
+extern "C" static void item_func_WALLET_LV1__Fv(); // 1
+extern "C" static void item_func_WALLET_LV2__Fv(); // 1
+extern "C" static void item_func_WALLET_LV3__Fv(); // 1
+extern "C" static void item_func_ZORAS_JEWEL__Fv(); // 1
+extern "C" static void item_func_HAWK_EYE__Fv(); // 1
+extern "C" static void item_func_WOOD_STICK__Fv(); // 1
+extern "C" static void item_func_BOOMERANG__Fv(); // 1
+extern "C" static void item_func_SPINNER__Fv(); // 1
+extern "C" static void item_func_IRONBALL__Fv(); // 1
+extern "C" static void item_func_BOW__Fv(); // 1
+extern "C" static void item_func_HOOKSHOT__Fv(); // 1
+extern "C" static void item_func_HVY_BOOTS__Fv(); // 1
+extern "C" static void item_func_COPY_ROD__Fv(); // 1
+extern "C" static void item_func_W_HOOKSHOT__Fv(); // 1
+extern "C" static void item_func_KANTERA__Fv(); // 1
+extern "C" static void item_func_LIGHT_SWORD__Fv(); // 1
+extern "C" static void item_func_FISHING_ROD_1__Fv(); // 1
+extern "C" static void item_func_PACHINKO__Fv(); // 1
+extern "C" static void item_func_COPY_ROD_2__Fv(); // 1
+extern "C" static void item_func_BOMB_BAG_LV2__Fv(); // 1
+extern "C" static void item_func_BOMB_BAG_LV1__Fv(); // 1
+extern "C" static void item_func_BOMB_IN_BAG__Fv(); // 1
+extern "C" static void item_func_LIGHT_ARROW__Fv(); // 1
+extern "C" static void item_func_ARROW_LV1__Fv(); // 1
+extern "C" static void item_func_ARROW_LV2__Fv(); // 1
+extern "C" static void item_func_ARROW_LV3__Fv(); // 1
+extern "C" static void item_func_LURE_ROD__Fv(); // 1
+extern "C" static void item_func_BOMB_ARROW__Fv(); // 1
+extern "C" static void item_func_HAWK_ARROW__Fv(); // 1
+extern "C" static void item_func_BEE_ROD__Fv(); // 1
+extern "C" static void item_func_JEWEL_ROD__Fv(); // 1
+extern "C" static void item_func_WORM_ROD__Fv(); // 1
+extern "C" static void item_func_JEWEL_BEE_ROD__Fv(); // 1
+extern "C" static void item_func_JEWEL_WORM_ROD__Fv(); // 1
+extern "C" static void item_func_EMPTY_BOTTLE__Fv(); // 1
+extern "C" static void item_func_RED_BOTTLE__Fv(); // 1
+extern "C" static void item_func_GREEN_BOTTLE__Fv(); // 1
+extern "C" static void item_func_BLUE_BOTTLE__Fv(); // 1
+extern "C" static void item_func_MILK_BOTTLE__Fv(); // 1
+extern "C" static void item_func_HALF_MILK_BOTTLE__Fv(); // 1
+extern "C" static void item_func_OIL_BOTTLE__Fv(); // 1
+extern "C" static void item_func_WATER_BOTTLE__Fv(); // 1
+extern "C" static void item_func_OIL_BOTTLE2__Fv(); // 1
+extern "C" static void item_func_RED_BOTTLE2__Fv(); // 1
+extern "C" static void item_func_UGLY_SOUP__Fv(); // 1
+extern "C" static void item_func_HOT_SPRING__Fv(); // 1
+extern "C" static void item_func_FAIRY_BOTTLE__Fv(); // 1
+extern "C" static void item_func_HOT_SPRING2__Fv(); // 1
+extern "C" static void item_func_OIL2__Fv(); // 1
+extern "C" static void item_func_OIL__Fv(); // 1
+extern "C" static void item_func_NORMAL_BOMB__Fv(); // 1
+extern "C" static void item_func_WATER_BOMB__Fv(); // 1
+extern "C" static void item_func_POKE_BOMB__Fv(); // 1
+extern "C" static void item_func_FAIRY_DROP__Fv(); // 1
+extern "C" static void item_func_WORM__Fv(); // 1
+extern "C" static void item_func_DROP_BOTTLE__Fv(); // 1
+extern "C" static void item_func_BEE_CHILD__Fv(); // 1
+extern "C" static void item_func_CHUCHU_RARE__Fv(); // 1
+extern "C" static void item_func_CHUCHU_RED__Fv(); // 1
+extern "C" static void item_func_CHUCHU_BLUE__Fv(); // 1
+extern "C" static void item_func_CHUCHU_GREEN__Fv(); // 1
+extern "C" static void item_func_CHUCHU_YELLOW__Fv(); // 1
+extern "C" static void item_func_CHUCHU_PURPLE__Fv(); // 1
+extern "C" static void item_func_LV1_SOUP__Fv(); // 1
+extern "C" static void item_func_LV2_SOUP__Fv(); // 1
+extern "C" static void item_func_LV3_SOUP__Fv(); // 1
+extern "C" static void item_func_LETTER__Fv(); // 1
+extern "C" static void item_func_BILL__Fv(); // 1
+extern "C" static void item_func_WOOD_STATUE__Fv(); // 1
+extern "C" static void item_func_IRIAS_PENDANT__Fv(); // 1
+extern "C" static void item_func_HORSE_FLUTE__Fv(); // 1
+extern "C" static void item_func_RAFRELS_MEMO__Fv(); // 1
+extern "C" static void item_func_ASHS_SCRIBBLING__Fv(); // 1
+extern "C" static void item_func_CHUCHU_YELLOW2__Fv(); // 1
+extern "C" static void item_func_OIL_BOTTLE3__Fv(); // 1
+extern "C" static void item_func_SHOP_BEE_CHILD__Fv(); // 1
+extern "C" static void item_func_CHUCHU_BLACK__Fv(); // 1
+extern "C" static void item_func_LIGHT_DROP__Fv(); // 1
+extern "C" static void item_func_DROP_CONTAINER__Fv(); // 1
+extern "C" static void item_func_DROP_CONTAINER02__Fv(); // 1
+extern "C" static void item_func_DROP_CONTAINER03__Fv(); // 1
+extern "C" static void item_func_FILLED_CONTAINER__Fv(); // 1
+extern "C" static void item_func_MIRROR_PIECE_2__Fv(); // 1
+extern "C" static void item_func_MIRROR_PIECE_3__Fv(); // 1
+extern "C" static void item_func_MIRROR_PIECE_4__Fv(); // 1
+extern "C" static void item_func_SMELL_YELIA_POUCH__Fv(); // 1
+extern "C" static void item_func_SMELL_PUMPKIN__Fv(); // 1
+extern "C" static void item_func_SMELL_POH__Fv(); // 1
+extern "C" static void item_func_SMELL_FISH__Fv(); // 1
+extern "C" static void item_func_SMELL_CHILDREN__Fv(); // 1
+extern "C" static void item_func_SMELL_MEDICINE__Fv(); // 1
+extern "C" static void item_func_M_BEETLE__Fv(); // 1
+extern "C" static void item_func_F_BEETLE__Fv(); // 1
+extern "C" static void item_func_M_BUTTERFLY__Fv(); // 1
+extern "C" static void item_func_F_BUTTERFLY__Fv(); // 1
+extern "C" static void item_func_M_STAG_BEETLE__Fv(); // 1
+extern "C" static void item_func_F_STAG_BEETLE__Fv(); // 1
+extern "C" static void item_func_M_GRASSHOPPER__Fv(); // 1
+extern "C" static void item_func_F_GRASSHOPPER__Fv(); // 1
+extern "C" static void item_func_M_NANAFUSHI__Fv(); // 1
+extern "C" static void item_func_F_NANAFUSHI__Fv(); // 1
+extern "C" static void item_func_M_DANGOMUSHI__Fv(); // 1
+extern "C" static void item_func_F_DANGOMUSHI__Fv(); // 1
+extern "C" static void item_func_M_MANTIS__Fv(); // 1
+extern "C" static void item_func_F_MANTIS__Fv(); // 1
+extern "C" static void item_func_M_LADYBUG__Fv(); // 1
+extern "C" static void item_func_F_LADYBUG__Fv(); // 1
+extern "C" static void item_func_M_SNAIL__Fv(); // 1
+extern "C" static void item_func_F_SNAIL__Fv(); // 1
+extern "C" static void item_func_M_DRAGONFLY__Fv(); // 1
+extern "C" static void item_func_F_DRAGONFLY__Fv(); // 1
+extern "C" static void item_func_M_ANT__Fv(); // 1
+extern "C" static void item_func_F_ANT__Fv(); // 1
+extern "C" static void item_func_M_MAYFLY__Fv(); // 1
+extern "C" static void item_func_F_MAYFLY__Fv(); // 1
+extern "C" static void item_func_POU_SPIRIT__Fv(); // 1
+extern "C" static void item_func_ANCIENT_DOCUMENT__Fv(); // 1
+extern "C" static void item_func_AIR_LETTER__Fv(); // 1
+extern "C" static void item_func_ANCIENT_DOCUMENT2__Fv(); // 1
+extern "C" static void item_func_LV7_DUNGEON_EXIT__Fv(); // 1
+extern "C" static void item_func_LINKS_SAVINGS__Fv(); // 1
+extern "C" static void item_func_SMALL_KEY2__Fv(); // 1
+extern "C" static void item_func_POU_FIRE1__Fv(); // 1
+extern "C" static void item_func_POU_FIRE2__Fv(); // 1
+extern "C" static void item_func_POU_FIRE3__Fv(); // 1
+extern "C" static void item_func_POU_FIRE4__Fv(); // 1
+extern "C" static void item_func_BOSSRIDER_KEY__Fv(); // 1
+extern "C" static void item_func_TOMATO_PUREE__Fv(); // 1
+extern "C" static void item_func_TASTE__Fv(); // 1
+extern "C" static void item_func_LV5_BOSS_KEY__Fv(); // 1
+extern "C" static void item_func_SURFBOARD__Fv(); // 1
+extern "C" static void item_func_KANTERA2__Fv(); // 1
+extern "C" static void item_func_L2_KEY_PIECES1__Fv(); // 1
+extern "C" static void item_func_L2_KEY_PIECES2__Fv(); // 1
+extern "C" static void item_func_L2_KEY_PIECES3__Fv(); // 1
+extern "C" static void item_func_KEY_OF_CARAVAN__Fv(); // 1
+extern "C" static void item_func_LV2_BOSS_KEY__Fv(); // 1
+extern "C" static void item_func_KEY_OF_FILONE__Fv(); // 1
+extern "C" static void item_func_noentry__Fv(); // 1
+extern "C" static s32 item_getcheck_func_noentry__Fv(); // 1
+extern "C" static s32 item_getcheck_func_HEART__Fv(); // 1
+extern "C" static void item_getcheck_func_GREEN_RUPEE__Fv(); // 1
+extern "C" static void item_getcheck_func_BLUE_RUPEE__Fv(); // 1
+extern "C" static void item_getcheck_func_YELLOW_RUPEE__Fv(); // 1
+extern "C" static void item_getcheck_func_RED_RUPEE__Fv(); // 1
+extern "C" static void item_getcheck_func_PURPLE_RUPEE__Fv(); // 1
+extern "C" static void item_getcheck_func_ORANGE_RUPEE__Fv(); // 1
+extern "C" static void item_getcheck_func_SILVER_RUPEE__Fv(); // 1
+extern "C" static s32 item_getcheck_func_S_MAGIC__Fv(); // 1
+extern "C" static s32 item_getcheck_func_L_MAGIC__Fv(); // 1
+extern "C" static void item_getcheck_func_BOMB_5__Fv(); // 1
+extern "C" static void item_getcheck_func_BOMB_10__Fv(); // 1
+extern "C" static void item_getcheck_func_BOMB_20__Fv(); // 1
+extern "C" static void item_getcheck_func_BOMB_30__Fv(); // 1
+extern "C" static void item_getcheck_func_ARROW_10__Fv(); // 1
+extern "C" static void item_getcheck_func_ARROW_20__Fv(); // 1
+extern "C" static void item_getcheck_func_ARROW_30__Fv(); // 1
+extern "C" static void item_getcheck_func_ARROW_1__Fv(); // 1
+extern "C" static void item_getcheck_func_PACHINKO_SHOT__Fv(); // 1
+extern "C" static s32 item_getcheck_func_WATER_BOMB_5__Fv(); // 1
+extern "C" static s32 item_getcheck_func_WATER_BOMB_10__Fv(); // 1
+extern "C" static s32 item_getcheck_func_WATER_BOMB_20__Fv(); // 1
+extern "C" static s32 item_getcheck_func_WATER_BOMB_30__Fv(); // 1
+extern "C" static s32 item_getcheck_func_BOMB_INSECT_5__Fv(); // 1
+extern "C" static void item_getcheck_func_BOMB_INSECT_10__Fv(); // 1
+extern "C" static void item_getcheck_func_BOMB_INSECT_20__Fv(); // 1
+extern "C" static void item_getcheck_func_BOMB_INSECT_30__Fv(); // 1
+extern "C" static s32 item_getcheck_func_RECOVER_FAILY__Fv(); // 1
+extern "C" static s32 item_getcheck_func_TRIPLE_HEART__Fv(); // 1
+extern "C" static s32 item_getcheck_func_SMALL_KEY__Fv(); // 1
+extern "C" static s32 item_getcheck_func_KAKERA_HEART__Fv(); // 1
+extern "C" static s32 item_getcheck_func_UTUWA_HEART__Fv(); // 1
+extern "C" static void item_getcheck_func_MAP__Fv(); // 1
+extern "C" static s32 item_getcheck_func_COMPUS__Fv(); // 1
+extern "C" static void item_getcheck_func_DUNGEON_EXIT__Fv(); // 1
+extern "C" static void item_getcheck_func_BOSS_KEY__Fv(); // 1
+extern "C" static void item_getcheck_func_DUNGEON_BACK__Fv(); // 1
+extern "C" static void item_getcheck_func_SWORD__Fv(); // 1
+extern "C" static void item_getcheck_func_MASTER_SWORD__Fv(); // 1
+extern "C" static void item_getcheck_func_WOOD_SHIELD__Fv(); // 1
+extern "C" static void item_getcheck_func_SHIELD__Fv(); // 1
+extern "C" static void item_getcheck_func_HYLIA_SHIELD__Fv(); // 1
+extern "C" static void item_getcheck_func_TKS_LETTER__Fv(); // 1
+extern "C" static void item_getcheck_func_WEAR_CASUAL__Fv(); // 1
+extern "C" static void item_getcheck_func_WEAR_KOKIRI__Fv(); // 1
+extern "C" static void item_getcheck_func_ARMOR__Fv(); // 1
+extern "C" static void item_getcheck_func_WEAR_ZORA__Fv(); // 1
+extern "C" static s32 item_getcheck_func_MAGIC_LV1__Fv(); // 1
+extern "C" static void item_getcheck_func_DUNGEON_EXIT_2__Fv(); // 1
+extern "C" static s32 item_getcheck_func_WALLET_LV1__Fv(); // 1
+extern "C" static s32 item_getcheck_func_WALLET_LV2__Fv(); // 1
+extern "C" static s32 item_getcheck_func_WALLET_LV3__Fv(); // 1
+extern "C" static void item_getcheck_func_ZORAS_JEWEL__Fv(); // 1
+extern "C" static void item_getcheck_func_HAWK_EYE__Fv(); // 1
+extern "C" static void item_getcheck_func_WOOD_STICK__Fv(); // 1
+extern "C" static void item_getcheck_func_BOOMERANG__Fv(); // 1
+extern "C" static void item_getcheck_func_SPINNER__Fv(); // 1
+extern "C" static void item_getcheck_func_IRONBALL__Fv(); // 1
+extern "C" static void item_getcheck_func_BOW__Fv(); // 1
+extern "C" static void item_getcheck_func_HOOKSHOT__Fv(); // 1
+extern "C" static void item_getcheck_func_HVY_BOOTS__Fv(); // 1
+extern "C" static void item_getcheck_func_COPY_ROD__Fv(); // 1
+extern "C" static void item_getcheck_func_W_HOOKSHOT__Fv(); // 1
+extern "C" static void item_getcheck_func_KANTERA__Fv(); // 1
+extern "C" static void item_getcheck_func_LIGHT_SWORD__Fv(); // 1
+extern "C" static void item_getcheck_func_FISHING_ROD_1__Fv(); // 1
+extern "C" static void item_getcheck_func_PACHINKO__Fv(); // 1
+extern "C" static s32 item_getcheck_func_COPY_ROD_2__Fv(); // 1
+extern "C" static void item_getcheck_func_BOMB_BAG_LV2__Fv(); // 1
+extern "C" static void item_getcheck_func_BOMB_BAG_LV1__Fv(); // 1
+extern "C" static void item_getcheck_func_BOMB_IN_BAG__Fv(); // 1
+extern "C" static void item_getcheck_func_LIGHT_ARROW__Fv(); // 1
+extern "C" static void item_getcheck_func_ARROW_LV1__Fv(); // 1
+extern "C" static void item_getcheck_func_ARROW_LV2__Fv(); // 1
+extern "C" static void item_getcheck_func_ARROW_LV3__Fv(); // 1
+extern "C" static s32 item_getcheck_func_LURE_ROD__Fv(); // 1
+extern "C" static s32 item_getcheck_func_BOMB_ARROW__Fv(); // 1
+extern "C" static s32 item_getcheck_func_HAWK_ARROW__Fv(); // 1
+extern "C" static void item_getcheck_func_BEE_ROD__Fv(); // 1
+extern "C" static void item_getcheck_func_JEWEL_ROD__Fv(); // 1
+extern "C" static void item_getcheck_func_WORM_ROD__Fv(); // 1
+extern "C" static void item_getcheck_func_JEWEL_BEE_ROD__Fv(); // 1
+extern "C" static void item_getcheck_func_JEWEL_WORM_ROD__Fv(); // 1
+extern "C" static void item_getcheck_func_EMPTY_BOTTLE__Fv(); // 1
+extern "C" static void item_getcheck_func_RED_BOTTLE__Fv(); // 1
+extern "C" static void item_getcheck_func_GREEN_BOTTLE__Fv(); // 1
+extern "C" static void item_getcheck_func_BLUE_BOTTLE__Fv(); // 1
+extern "C" static void item_getcheck_func_MILK_BOTTLE__Fv(); // 1
+extern "C" static void item_getcheck_func_HALF_MILK_BOTTLE__Fv(); // 1
+extern "C" static void item_getcheck_func_OIL_BOTTLE__Fv(); // 1
+extern "C" static void item_getcheck_func_WATER_BOTTLE__Fv(); // 1
+extern "C" static void item_getcheck_func_OIL_BOTTLE2__Fv(); // 1
+extern "C" static void item_getcheck_func_RED_BOTTLE2__Fv(); // 1
+extern "C" static void item_getcheck_func_UGLY_SOUP__Fv(); // 1
+extern "C" static void item_getcheck_func_HOT_SPRING__Fv(); // 1
+extern "C" static void item_getcheck_func_FAIRY_BOTTLE__Fv(); // 1
+extern "C" static void item_getcheck_func_HOT_SPRING2__Fv(); // 1
+extern "C" static void item_getcheck_func_OIL2__Fv(); // 1
+extern "C" static void item_getcheck_func_OIL__Fv(); // 1
+extern "C" static void item_getcheck_func_NORMAL_BOMB__Fv(); // 1
+extern "C" static void item_getcheck_func_WATER_BOMB__Fv(); // 1
+extern "C" static void item_getcheck_func_POKE_BOMB__Fv(); // 1
+extern "C" static void item_getcheck_func_FAIRY_DROP__Fv(); // 1
+extern "C" static void item_getcheck_func_WORM__Fv(); // 1
+extern "C" static void item_getcheck_func_DROP_BOTTLE__Fv(); // 1
+extern "C" static s32 item_getcheck_func_BEE_CHILD__Fv(); // 1
+extern "C" static void item_getcheck_func_CHUCHU_RARE__Fv(); // 1
+extern "C" static void item_getcheck_func_CHUCHU_RED__Fv(); // 1
+extern "C" static void item_getcheck_func_CHUCHU_BLUE__Fv(); // 1
+extern "C" static void item_getcheck_func_CHUCHU_GREEN__Fv(); // 1
+extern "C" static void item_getcheck_func_CHUCHU_YELLOW__Fv(); // 1
+extern "C" static void item_getcheck_func_CHUCHU_PURPLE__Fv(); // 1
+extern "C" static void item_getcheck_func_LV1_SOUP__Fv(); // 1
+extern "C" static void item_getcheck_func_LV2_SOUP__Fv(); // 1
+extern "C" static void item_getcheck_func_LV3_SOUP__Fv(); // 1
+extern "C" static void item_getcheck_func_LETTER__Fv(); // 1
+extern "C" static void item_getcheck_func_BILL__Fv(); // 1
+extern "C" static void item_getcheck_func_WOOD_STATUE__Fv(); // 1
+extern "C" static void item_getcheck_func_IRIAS_PENDANT__Fv(); // 1
+extern "C" static void item_getcheck_func_HORSE_FLUTE__Fv(); // 1
+extern "C" static void item_getcheck_func_RAFRELS_MEMO__Fv(); // 1
+extern "C" static void item_getcheck_func_ASHS_SCRIBBLING__Fv(); // 1
+extern "C" static void item_getcheck_func_CHUCHU_YELLOW2__Fv(); // 1
+extern "C" static s32 item_getcheck_func_OIL_BOTTLE3__Fv(); // 1
+extern "C" static s32 item_getcheck_func_SHOP_BEE_CHILD__Fv(); // 1
+extern "C" static void item_getcheck_func_CHUCHU_BLACK__Fv(); // 1
+extern "C" static void item_getcheck_func_LIGHT_DROP__Fv(); // 1
+extern "C" static void item_getcheck_func_DROP_CONTAINER__Fv(); // 1
+extern "C" static void item_getcheck_func_DROP_CONTAINER02__Fv(); // 1
+extern "C" static void item_getcheck_func_DROP_CONTAINER03__Fv(); // 1
+extern "C" static s32 item_getcheck_func_FILLED_CONTAINER__Fv(); // 1
+extern "C" static s32 item_getcheck_func_MIRROR_PIECE_2__Fv(); // 1
+extern "C" static s32 item_getcheck_func_MIRROR_PIECE_3__Fv(); // 1
+extern "C" static s32 item_getcheck_func_MIRROR_PIECE_4__Fv(); // 1
+extern "C" static void item_getcheck_func_SMELL_YELIA_POUCH__Fv(); // 1
+extern "C" static s32 item_getcheck_func_SMELL_PUMPKIN__Fv(); // 1
+extern "C" static void item_getcheck_func_SMELL_POH__Fv(); // 1
+extern "C" static void item_getcheck_func_SMELL_FISH__Fv(); // 1
+extern "C" static void item_getcheck_func_SMELL_CHILDREN__Fv(); // 1
+extern "C" static void item_getcheck_func_SMELL_MEDICINE__Fv(); // 1
+extern "C" static void item_getcheck_func_M_BEETLE__Fv(); // 1
+extern "C" static void item_getcheck_func_F_BEETLE__Fv(); // 1
+extern "C" static void item_getcheck_func_M_BUTTERFLY__Fv(); // 1
+extern "C" static void item_getcheck_func_F_BUTTERFLY__Fv(); // 1
+extern "C" static void item_getcheck_func_M_STAG_BEETLE__Fv(); // 1
+extern "C" static void item_getcheck_func_F_STAG_BEETLE__Fv(); // 1
+extern "C" static void item_getcheck_func_M_GRASSHOPPER__Fv(); // 1
+extern "C" static void item_getcheck_func_F_GRASSHOPPER__Fv(); // 1
+extern "C" static void item_getcheck_func_M_NANAFUSHI__Fv(); // 1
+extern "C" static void item_getcheck_func_F_NANAFUSHI__Fv(); // 1
+extern "C" static void item_getcheck_func_M_DANGOMUSHI__Fv(); // 1
+extern "C" static void item_getcheck_func_F_DANGOMUSHI__Fv(); // 1
+extern "C" static void item_getcheck_func_M_MANTIS__Fv(); // 1
+extern "C" static void item_getcheck_func_F_MANTIS__Fv(); // 1
+extern "C" static void item_getcheck_func_M_LADYBUG__Fv(); // 1
+extern "C" static void item_getcheck_func_F_LADYBUG__Fv(); // 1
+extern "C" static void item_getcheck_func_M_SNAIL__Fv(); // 1
+extern "C" static void item_getcheck_func_F_SNAIL__Fv(); // 1
+extern "C" static void item_getcheck_func_M_DRAGONFLY__Fv(); // 1
+extern "C" static void item_getcheck_func_F_DRAGONFLY__Fv(); // 1
+extern "C" static void item_getcheck_func_M_ANT__Fv(); // 1
+extern "C" static void item_getcheck_func_F_ANT__Fv(); // 1
+extern "C" static void item_getcheck_func_M_MAYFLY__Fv(); // 1
+extern "C" static void item_getcheck_func_F_MAYFLY__Fv(); // 1
+extern "C" static void item_getcheck_func_POU_SPIRIT__Fv(); // 1
+extern "C" static void item_getcheck_func_ANCIENT_DOCUMENT__Fv(); // 1
+extern "C" static void item_getcheck_func_AIR_LETTER__Fv(); // 1
+extern "C" static void item_getcheck_func_ANCIENT_DOCUMENT2__Fv(); // 1
+extern "C" static void item_getcheck_func_LV7_DUNGEON_EXIT__Fv(); // 1
+extern "C" static s32 item_getcheck_func_LINKS_SAVINGS__Fv(); // 1
+extern "C" static s32 item_getcheck_func_SMALL_KEY2__Fv(); // 1
+extern "C" static s32 item_getcheck_func_POU_FIRE1__Fv(); // 1
+extern "C" static s32 item_getcheck_func_POU_FIRE2__Fv(); // 1
+extern "C" static s32 item_getcheck_func_POU_FIRE3__Fv(); // 1
+extern "C" static s32 item_getcheck_func_POU_FIRE4__Fv(); // 1
+extern "C" static s32 item_getcheck_func_BOSSRIDER_KEY__Fv(); // 1
+extern "C" static void item_getcheck_func_TOMATO_PUREE__Fv(); // 1
+extern "C" static void item_getcheck_func_TASTE__Fv(); // 1
+extern "C" static void item_getcheck_func_LV5_BOSS_KEY__Fv(); // 1
+extern "C" static s32 item_getcheck_func_SURFBOARD__Fv(); // 1
+extern "C" static s32 item_getcheck_func_KANTERA2__Fv(); // 1
+extern "C" static void item_getcheck_func_L2_KEY_PIECES1__Fv(); // 1
+extern "C" static void item_getcheck_func_L2_KEY_PIECES2__Fv(); // 1
+extern "C" static void item_getcheck_func_L2_KEY_PIECES3__Fv(); // 1
+extern "C" static void item_getcheck_func_KEY_OF_CARAVAN__Fv(); // 1
+extern "C" static void item_getcheck_func_LV2_BOSS_KEY__Fv(); // 1
+extern "C" static void item_getcheck_func_KEY_OF_FILONE__Fv(); // 1
+extern "C" static void isBomb__FUc(); // 1
+extern "C" static void isArrow__FUc(); // 1
+extern "C" void isBottleItem__FUc(); // 1
+extern "C" void isHeart__FUc(); // 1
+extern "C" void isInsect__FUc(); // 1
+extern "C" void check_itemno__Fi(); // 1
+extern "C" static void addBombCount__FUcUc(); // 1
 SECTION_RODATA extern const u8 d_d_item__stringBase0[8];
 SECTION_DATA extern void*item_func_ptr[256];
 SECTION_DATA extern void*item_getcheck_func_ptr[256];
@@ -889,58 +856,58 @@ SECTION_SDATA2 extern f64 d_d_item__lit_3828;
 // External References:
 // 
 
-void dComIfGs_getMaxLifeGauge();
-void dComIfGs_setSelectEquipClothes(u8);
-void dComIfGs_setSelectEquipSword(u8);
-void dComIfGs_setSelectEquipShield(u8);
-void dMeter2Info_setSword(u8, bool);
-extern "C" void _savegpr_20();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_20();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
-extern "C" void strncmp();
+void dComIfGs_getMaxLifeGauge(); // 2
+void dComIfGs_setSelectEquipClothes(u8); // 2
+void dComIfGs_setSelectEquipSword(u8); // 2
+void dComIfGs_setSelectEquipShield(u8); // 2
+void dMeter2Info_setSword(u8, bool); // 2
+extern "C" void _savegpr_20(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_20(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strncmp(); // 1
 
-extern "C" void setItemBombNumCount__14dComIfG_play_cFUcs();
-extern "C" void getLayerNo__14dComIfG_play_cFi();
-extern "C" void dComIfGs_getMaxLifeGauge__Fv();
-extern "C" void dComIfGs_setSelectEquipClothes__FUc();
-extern "C" void dComIfGs_setSelectEquipSword__FUc();
-extern "C" void dComIfGs_setSelectEquipShield__FUc();
-extern "C" void isMagicFlag__21dSv_player_status_a_cCFUc();
-extern "C" void setItem__17dSv_player_item_cFiUc();
-extern "C" void getItem__17dSv_player_item_cCFib();
-extern "C" void setEmptyBottleItemIn__17dSv_player_item_cFUc();
-extern "C" void setEmptyBottle__17dSv_player_item_cFv();
-extern "C" void setEmptyBottle__17dSv_player_item_cFUc();
-extern "C" void checkBottle__17dSv_player_item_cFUc();
-extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcb();
-extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb();
-extern "C" void setEmptyBombBag__17dSv_player_item_cFv();
-extern "C" void setEmptyBombBag__17dSv_player_item_cFUcUc();
-extern "C" void setRodTypeLevelUp__17dSv_player_item_cFv();
-extern "C" void onFirstBit__21dSv_player_get_item_cFUc();
-extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
-extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
-extern "C" void setBottleNum__24dSv_player_item_record_cFUcUc();
-extern "C" void getBombNum__21dSv_player_item_max_cCFUc();
-extern "C" void setCollect__20dSv_player_collect_cFiUc();
-extern "C" void isCollect__20dSv_player_collect_cCFiUc();
-extern "C" void onLightDropGetFlag__16dSv_light_drop_cFUc();
-extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc();
-extern "C" void onDungeonItem__12dSv_memBit_cFi();
-extern "C" void isDungeonItem__12dSv_memBit_cCFi();
-extern "C" void onEventBit__11dSv_event_cFUs();
-extern "C" void onSwitch__10dSv_info_cFii();
-extern "C" void dMeter2Info_setSword__FUcb();
-extern "C" void _savegpr_20();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_20();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
-extern "C" void strncmp();
+extern "C" void setItemBombNumCount__14dComIfG_play_cFUcs(); // 1
+extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
+extern "C" void dComIfGs_getMaxLifeGauge__Fv(); // 1
+extern "C" void dComIfGs_setSelectEquipClothes__FUc(); // 1
+extern "C" void dComIfGs_setSelectEquipSword__FUc(); // 1
+extern "C" void dComIfGs_setSelectEquipShield__FUc(); // 1
+extern "C" void isMagicFlag__21dSv_player_status_a_cCFUc(); // 1
+extern "C" void setItem__17dSv_player_item_cFiUc(); // 1
+extern "C" void getItem__17dSv_player_item_cCFib(); // 1
+extern "C" void setEmptyBottleItemIn__17dSv_player_item_cFUc(); // 1
+extern "C" void setEmptyBottle__17dSv_player_item_cFv(); // 1
+extern "C" void setEmptyBottle__17dSv_player_item_cFUc(); // 1
+extern "C" void checkBottle__17dSv_player_item_cFUc(); // 1
+extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcb(); // 1
+extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb(); // 1
+extern "C" void setEmptyBombBag__17dSv_player_item_cFv(); // 1
+extern "C" void setEmptyBombBag__17dSv_player_item_cFUcUc(); // 1
+extern "C" void setRodTypeLevelUp__17dSv_player_item_cFv(); // 1
+extern "C" void onFirstBit__21dSv_player_get_item_cFUc(); // 1
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc(); // 1
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc(); // 1
+extern "C" void setBottleNum__24dSv_player_item_record_cFUcUc(); // 1
+extern "C" void getBombNum__21dSv_player_item_max_cCFUc(); // 1
+extern "C" void setCollect__20dSv_player_collect_cFiUc(); // 1
+extern "C" void isCollect__20dSv_player_collect_cCFiUc(); // 1
+extern "C" void onLightDropGetFlag__16dSv_light_drop_cFUc(); // 1
+extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc(); // 1
+extern "C" void onDungeonItem__12dSv_memBit_cFi(); // 1
+extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
+extern "C" void onEventBit__11dSv_event_cFUs(); // 1
+extern "C" void onSwitch__10dSv_info_cFii(); // 1
+extern "C" void dMeter2Info_setSword__FUcb(); // 1
+extern "C" void _savegpr_20(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_20(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strncmp(); // 1
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SBSS extern u8 struct_80450D64[4];

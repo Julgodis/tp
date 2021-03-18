@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build dMeterMap_c (['dMeterMap_c']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-/* top-level dependencies (begin ['J2DScreen']) */
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
 };
 
-/* top-level dependencies (begin ['dMeterMap_c']) */
-// outer dependency: ('J2DScreen',)
-/* top-level dependencies (end ['dMeterMap_c']) */
 struct dMeterMap_c {
-	// ('J2DScreen',)
 	/* 8020D49C */ void isEnableDispMap();
 	/* 8020D528 */ void getMapDispSizeTypeNo();
 	/* 8020D650 */ void isEnableDispMapAndMapDispSizeTypeNo();
@@ -50,148 +42,93 @@ struct dMeterMap_c {
 	/* 8020E9CC */ void keyCheck();
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
-/* top-level dependencies (begin ['dStage_roomControl_c']) */
-/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
-// build dMap_c (['dMap_c']) False/False
-/* top-level dependencies (begin ['dMap_c']) */
-/* top-level dependencies (end ['dMap_c']) */
 struct dMap_c {
 	/* 80029874 */ dMap_c(int, int, int, int);
 	/* 8002A32C */ void _move(f32, f32, int, f32);
 	/* 8002AB54 */ void _draw();
 };
 
-// build dSv_memBit_c (['dSv_memBit_c']) False/False
-/* top-level dependencies (begin ['dSv_memBit_c']) */
-/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dMapInfo_n (['dMapInfo_n']) False/False
-/* top-level dependencies (begin ['dMapInfo_n']) */
-/* top-level dependencies (end ['dMapInfo_n']) */
 struct dMapInfo_n {
 	/* 8003EE5C */ void getMapPlayerPos();
 };
 
-// build dMpath_c (['dMpath_c']) False/False
-/* top-level dependencies (begin ['dMpath_c']) */
-/* top-level dependencies (end ['dMpath_c']) */
 struct dMpath_c {
 	/* 8003F758 */ void isExistMapPathData();
 };
 
-// build dDlst_list_c (['dDlst_list_c']) False/False
-// build dDlst_base_c (['dDlst_base_c']) False/False
-/* top-level dependencies (begin ['dDlst_base_c']) */
-/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin ['dDlst_list_c']) */
-// outer dependency: ('dDlst_base_c',)
-/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (['dDlst_base_c']) True/True
-// build dMsgObject_c (['dMsgObject_c']) False/False
-/* top-level dependencies (begin ['dMsgObject_c']) */
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
-struct Vec {
-};
-
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
+struct Vec {
+};
+
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build Vec (['Vec']) True/True
-// build J2DPicture (['J2DPicture']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['J2DPicture']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-// build ResTIMG (['ResTIMG']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void isEnableDispMap__11dMeterMap_cFv();
-extern "C" void getMapDispSizeTypeNo__11dMeterMap_cFv();
-extern "C" void isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv();
-extern "C" void getMapDispEdgeBottomY_Layout__11dMeterMap_cFv();
-extern "C" void isEventRunCheck__11dMeterMap_cFv();
-extern "C" void getMapDispEdgeLeftX_Layout__11dMeterMap_cFv();
-extern "C" void getMapDispEdgeTop__11dMeterMap_cFv();
-extern "C" bool getDispPosInside_OffsetX__11dMeterMap_cFv();
-extern "C" void getDispPosOutSide_OffsetX__11dMeterMap_cFv();
-extern "C" void setDispPosInsideFlg_SE_On__11dMeterMap_cFv();
-extern "C" void setDispPosOutsideFlg_SE_On__11dMeterMap_cFv();
-extern "C" void setMapAlpha__11dMeterMap_cFUc();
-extern "C" void isMapOpenCheck__11dMeterMap_cFv();
-extern "C" void __ct__11dMeterMap_cFP9J2DScreen();
-extern "C" void __dt__11dMeterMap_cFv();
-extern "C" void _create__11dMeterMap_cFP9J2DScreen();
-extern "C" void _delete__11dMeterMap_cFv();
-extern "C" void _move__11dMeterMap_cFUl();
-extern "C" void _draw__11dMeterMap_cFv();
-extern "C" void draw__11dMeterMap_cFv();
-extern "C" void ctrlShowMap__11dMeterMap_cFv();
-extern "C" void checkMoveStatus__11dMeterMap_cFv();
-extern "C" void isShow__11dMeterMap_cFUl();
-extern "C" void isFmapScreen__11dMeterMap_cFv();
-extern "C" void isDmapScreen__11dMeterMap_cFv();
-extern "C" void meter_map_move__11dMeterMap_cFUl();
-extern "C" void keyCheck__11dMeterMap_cFv();
+extern "C" void isEnableDispMap__11dMeterMap_cFv(); // 1
+extern "C" void getMapDispSizeTypeNo__11dMeterMap_cFv(); // 1
+extern "C" void isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv(); // 1
+extern "C" void getMapDispEdgeBottomY_Layout__11dMeterMap_cFv(); // 1
+extern "C" void isEventRunCheck__11dMeterMap_cFv(); // 1
+extern "C" void getMapDispEdgeLeftX_Layout__11dMeterMap_cFv(); // 1
+extern "C" void getMapDispEdgeTop__11dMeterMap_cFv(); // 1
+extern "C" bool getDispPosInside_OffsetX__11dMeterMap_cFv(); // 1
+extern "C" void getDispPosOutSide_OffsetX__11dMeterMap_cFv(); // 1
+extern "C" void setDispPosInsideFlg_SE_On__11dMeterMap_cFv(); // 1
+extern "C" void setDispPosOutsideFlg_SE_On__11dMeterMap_cFv(); // 1
+extern "C" void setMapAlpha__11dMeterMap_cFUc(); // 1
+extern "C" void isMapOpenCheck__11dMeterMap_cFv(); // 1
+extern "C" void __ct__11dMeterMap_cFP9J2DScreen(); // 1
+extern "C" void __dt__11dMeterMap_cFv(); // 1
+extern "C" void _create__11dMeterMap_cFP9J2DScreen(); // 1
+extern "C" void _delete__11dMeterMap_cFv(); // 1
+extern "C" void _move__11dMeterMap_cFUl(); // 1
+extern "C" void _draw__11dMeterMap_cFv(); // 1
+extern "C" void draw__11dMeterMap_cFv(); // 1
+extern "C" void ctrlShowMap__11dMeterMap_cFv(); // 1
+extern "C" void checkMoveStatus__11dMeterMap_cFv(); // 1
+extern "C" void isShow__11dMeterMap_cFUl(); // 1
+extern "C" void isFmapScreen__11dMeterMap_cFv(); // 1
+extern "C" void isDmapScreen__11dMeterMap_cFv(); // 1
+extern "C" void meter_map_move__11dMeterMap_cFUl(); // 1
+extern "C" void keyCheck__11dMeterMap_cFv(); // 1
 SECTION_RODATA extern const u8 d_meter_d_meter_map__stringBase0[8];
 SECTION_DATA extern void*d_meter_d_meter_map__lit_4516[8];
 SECTION_DATA extern void*const __vt__11dMeterMap_c[4];
@@ -207,54 +144,54 @@ SECTION_SDATA2 extern f32 d_meter_d_meter_map__lit_4515;
 // External References:
 // 
 
-void fopOvlpM_IsDoingReq();
-void dComIfGp_mapShow();
-void dComIfGp_mapHide();
-void dComIfGp_checkMapShow();
-void dMw_LEFT_TRIGGER();
-void dMw_RIGHT_TRIGGER();
-void dMeter2Info_set2DVibration();
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+void fopOvlpM_IsDoingReq(); // 2
+void dComIfGp_mapShow(); // 2
+void dComIfGp_mapHide(); // 2
+void dComIfGp_checkMapShow(); // 2
+void dMw_LEFT_TRIGGER(); // 2
+void dMw_RIGHT_TRIGGER(); // 2
+void dMeter2Info_set2DVibration(); // 2
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void fopOvlpM_IsDoingReq__Fv();
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" void __ct__6dMap_cFiiii();
-extern "C" void _move__6dMap_cFffif();
-extern "C" void _draw__6dMap_cFv();
-extern "C" void dComIfGp_mapShow__Fv();
-extern "C" void dComIfGp_mapHide__Fv();
-extern "C" void dComIfGp_checkMapShow__Fv();
-extern "C" void isDungeonItem__12dSv_memBit_cCFi();
-extern "C" void onEventBit__11dSv_event_cFUs();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void getMapPlayerPos__10dMapInfo_nFv();
-extern "C" void isExistMapPathData__8dMpath_cFv();
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" void dMw_LEFT_TRIGGER__Fv();
-extern "C" void dMw_RIGHT_TRIGGER__Fv();
-extern "C" void dMeter2Info_set2DVibration__Fv();
-extern "C" void getStatus__12dMsgObject_cFv();
-extern "C" void cLib_addCalcAngleS__FPsssss();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+extern "C" void fopOvlpM_IsDoingReq__Fv(); // 1
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
+extern "C" void __ct__6dMap_cFiiii(); // 1
+extern "C" void _move__6dMap_cFffif(); // 1
+extern "C" void _draw__6dMap_cFv(); // 1
+extern "C" void dComIfGp_mapShow__Fv(); // 1
+extern "C" void dComIfGp_mapHide__Fv(); // 1
+extern "C" void dComIfGp_checkMapShow__Fv(); // 1
+extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
+extern "C" void onEventBit__11dSv_event_cFUs(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void getMapPlayerPos__10dMapInfo_nFv(); // 1
+extern "C" void isExistMapPathData__8dMpath_cFv(); // 1
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
+extern "C" void dMw_LEFT_TRIGGER__Fv(); // 1
+extern "C" void dMw_RIGHT_TRIGGER__Fv(); // 1
+extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
+extern "C" void getStatus__12dMsgObject_cFv(); // 1
+extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];

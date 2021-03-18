@@ -9,27 +9,15 @@
 // Types:
 // 
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build node_lists_tree_class (['node_lists_tree_class']) False/False
-/* top-level dependencies (begin ['node_lists_tree_class']) */
-/* top-level dependencies (end ['node_lists_tree_class']) */
 struct node_lists_tree_class {
 };
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
-// build node_class (['node_class']) False/False
-/* top-level dependencies (begin ['node_class']) */
-/* top-level dependencies (end ['node_class']) */
 struct node_class {
 };
 
@@ -37,43 +25,43 @@ struct node_class {
 // Forward References:
 // 
 
-void cTg_IsUse(create_tag_class*);
-void cTg_SingleCutFromTree(create_tag_class*);
-void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*);
-void cTg_InsertToTree(node_lists_tree_class*, int, create_tag_class*, int);
-void cTg_GetFirst(node_list_class*);
-void cTg_SingleCut(create_tag_class*);
-void cTg_Addition(node_list_class*, create_tag_class*);
-void cTg_Create(create_tag_class*, void*);
+void cTg_IsUse(create_tag_class*); // 2
+void cTg_SingleCutFromTree(create_tag_class*); // 2
+void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*); // 2
+void cTg_InsertToTree(node_lists_tree_class*, int, create_tag_class*, int); // 2
+void cTg_GetFirst(node_list_class*); // 2
+void cTg_SingleCut(create_tag_class*); // 2
+void cTg_Addition(node_list_class*, create_tag_class*); // 2
+void cTg_Create(create_tag_class*, void*); // 2
 
-extern "C" void cTg_IsUse__FP16create_tag_class();
-extern "C" void cTg_SingleCutFromTree__FP16create_tag_class();
-extern "C" void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
-extern "C" void cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi();
-extern "C" void cTg_GetFirst__FP15node_list_class();
-extern "C" void cTg_SingleCut__FP16create_tag_class();
-extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern "C" void cTg_Create__FP16create_tag_classPv();
+extern "C" void cTg_IsUse__FP16create_tag_class(); // 1
+extern "C" void cTg_SingleCutFromTree__FP16create_tag_class(); // 1
+extern "C" void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class(); // 1
+extern "C" void cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi(); // 1
+extern "C" void cTg_GetFirst__FP15node_list_class(); // 1
+extern "C" void cTg_SingleCut__FP16create_tag_class(); // 1
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class(); // 1
+extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
 
 // 
 // External References:
 // 
 
-void cLs_SingleCut(node_class*);
-void cLs_Addition(node_list_class*, node_class*);
-void cLs_GetFirst(node_list_class*);
-void cNd_Create(node_class*, void*);
-void cTr_SingleCut(node_class*);
-void cTr_Addition(node_lists_tree_class*, int, node_class*);
-void cTr_Insert(node_lists_tree_class*, int, node_class*, int);
+void cLs_SingleCut(node_class*); // 2
+void cLs_Addition(node_list_class*, node_class*); // 2
+void cLs_GetFirst(node_list_class*); // 2
+void cNd_Create(node_class*, void*); // 2
+void cTr_SingleCut(node_class*); // 2
+void cTr_Addition(node_lists_tree_class*, int, node_class*); // 2
+void cTr_Insert(node_lists_tree_class*, int, node_class*, int); // 2
 
-extern "C" void cLs_SingleCut__FP10node_class();
-extern "C" void cLs_Addition__FP15node_list_classP10node_class();
-extern "C" void cLs_GetFirst__FP15node_list_class();
-extern "C" void cNd_Create__FP10node_classPv();
-extern "C" void cTr_SingleCut__FP10node_class();
-extern "C" void cTr_Addition__FP21node_lists_tree_classiP10node_class();
-extern "C" void cTr_Insert__FP21node_lists_tree_classiP10node_classi();
+extern "C" void cLs_SingleCut__FP10node_class(); // 1
+extern "C" void cLs_Addition__FP15node_list_classP10node_class(); // 1
+extern "C" void cLs_GetFirst__FP15node_list_class(); // 1
+extern "C" void cNd_Create__FP10node_classPv(); // 1
+extern "C" void cTr_SingleCut__FP10node_class(); // 1
+extern "C" void cTr_Addition__FP21node_lists_tree_classiP10node_class(); // 1
+extern "C" void cTr_Insert__FP21node_lists_tree_classiP10node_classi(); // 1
 
 // 
 // Declarations:

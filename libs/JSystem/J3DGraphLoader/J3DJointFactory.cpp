@@ -9,26 +9,14 @@
 // Types:
 // 
 
-// build J3DJointFactory (['J3DJointFactory']) False/False
-// build J3DJointBlock (['J3DJointBlock']) False/False
-/* top-level dependencies (begin ['J3DJointBlock']) */
-/* top-level dependencies (end ['J3DJointBlock']) */
 struct J3DJointBlock {
 };
 
-/* top-level dependencies (begin ['J3DJointFactory']) */
-// outer dependency: ('J3DJointBlock',)
-/* top-level dependencies (end ['J3DJointFactory']) */
 struct J3DJointFactory {
-	// ('J3DJointBlock',)
 	/* 80337178 */ J3DJointFactory(J3DJointBlock const&);
 	/* 803371D0 */ void create(int);
 };
 
-// build J3DJointBlock (['J3DJointBlock']) True/True
-// build J3DJoint (['J3DJoint']) False/False
-/* top-level dependencies (begin ['J3DJoint']) */
-/* top-level dependencies (end ['J3DJoint']) */
 struct J3DJoint {
 	/* 8032F170 */ J3DJoint();
 };
@@ -37,22 +25,22 @@ struct J3DJoint {
 // Forward References:
 // 
 
-extern "C" static void func_80337338();
+static void JSUConvertOffsetToPtr__template72(void const*, u32); // 2
 
-extern "C" void __ct__15J3DJointFactoryFRC13J3DJointBlock();
-extern "C" void create__15J3DJointFactoryFi();
-extern "C" static void func_80337338();
+extern "C" void __ct__15J3DJointFactoryFRC13J3DJointBlock(); // 1
+extern "C" void create__15J3DJointFactoryFi(); // 1
+extern "C" static void func_80337338(); // 1
 
 // 
 // External References:
 // 
 
-void* operator new(u32);
-extern "C" void func_8033677C();
+void* operator new(u32); // 2
+void JSUConvertOffsetToPtr__template71(void const*, u32); // 2
 
-extern "C" void* __nw__FUl();
-extern "C" void __ct__8J3DJointFv();
-extern "C" void func_8033677C();
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __ct__8J3DJointFv(); // 1
+extern "C" void func_8033677C(); // 1
 
 // 
 // Declarations:
@@ -84,7 +72,7 @@ asm void J3DJointFactory::create(int field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80337338() {
+asm static void JSUConvertOffsetToPtr__template72(void const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DJointFactory/func_80337338.s"
 }

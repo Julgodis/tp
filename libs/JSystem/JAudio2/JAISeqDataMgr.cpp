@@ -9,16 +9,10 @@
 // Types:
 // 
 
-// build JAISeqDataUser (['JAISeqDataUser']) False/False
-/* top-level dependencies (begin ['JAISeqDataUser']) */
-/* top-level dependencies (end ['JAISeqDataUser']) */
 struct JAISeqDataUser {
 	/* 802A1774 */ ~JAISeqDataUser();
 };
 
-// build JAISeqDataMgr (['JAISeqDataMgr']) False/False
-/* top-level dependencies (begin ['JAISeqDataMgr']) */
-/* top-level dependencies (end ['JAISeqDataMgr']) */
 struct JAISeqDataMgr {
 	/* 802A17BC */ ~JAISeqDataMgr();
 };
@@ -28,8 +22,8 @@ struct JAISeqDataMgr {
 // 
 
 
-extern "C" void __dt__14JAISeqDataUserFv();
-extern "C" void __dt__13JAISeqDataMgrFv();
+extern "C" void __dt__14JAISeqDataUserFv(); // 1
+extern "C" void __dt__13JAISeqDataMgrFv(); // 1
 SECTION_DATA extern void*const __vt__13JAISeqDataMgr[6];
 SECTION_DATA extern void*const __vt__14JAISeqDataUser[6];
 
@@ -37,9 +31,9 @@ SECTION_DATA extern void*const __vt__14JAISeqDataUser[6];
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

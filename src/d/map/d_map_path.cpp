@@ -9,13 +9,7 @@
 // Types:
 // 
 
-// build dMpath_n (['dMpath_n']) False/False
-/* top-level dependencies (begin ['dMpath_n']) */
-/* top-level dependencies (end ['dMpath_n']) */
 struct dMpath_n {
-	// build dTexObjAggregate_c (['dMpath_n', 'dTexObjAggregate_c']) False/False
-	/* dependencies (begin ['dMpath_n', 'dTexObjAggregate_c']) */
-	/* dependencies (end ['dMpath_n', 'dTexObjAggregate_c']) */
 	struct dTexObjAggregate_c {
 		/* 8003C85C */ void create();
 		/* 8003C8F4 */ void remove();
@@ -24,91 +18,42 @@ struct dMpath_n {
 
 };
 
-// build dDrawPath_c (['dDrawPath_c']) False/False
-// build dDrawPath_c (['dDrawPath_c']) True/False
-struct dDrawPath_c;
-// build dDrawPath_c (['dDrawPath_c']) True/True
-// build dDrawPath_c (['dDrawPath_c']) True/True
-// build dDrawPath_c (['dDrawPath_c']) True/True
-// build dDrawPath_c (['dDrawPath_c']) True/True
-/* top-level dependencies (begin ['dDrawPath_c']) */
-// outer dependency: ('dDrawPath_c', 'line_class')
-// outer dependency: ('dDrawPath_c', 'room_class')
-// outer dependency: ('dDrawPath_c', 'floor_class')
-// outer dependency: ('dDrawPath_c', 'poly_class')
-// outer dependency: ('dDrawPath_c', 'group_class')
-/* top-level dependencies (end ['dDrawPath_c']) */
 struct dDrawPath_c {
-	// ('dDrawPath_c', 'room_class')
-	// ('dDrawPath_c', 'line_class')
-	// ('dDrawPath_c', 'floor_class')
-	// ('dDrawPath_c', 'poly_class')
-	// ('dDrawPath_c', 'group_class')
-	// build line_class (['dDrawPath_c', 'line_class']) False/False
-	/* dependencies (begin ['dDrawPath_c', 'line_class']) */
-	/* dependencies (end ['dDrawPath_c', 'line_class']) */
 	struct line_class {
 	};
 
-	// build poly_class (['dDrawPath_c', 'poly_class']) False/False
-	/* dependencies (begin ['dDrawPath_c', 'poly_class']) */
-	/* dependencies (end ['dDrawPath_c', 'poly_class']) */
 	struct poly_class {
 	};
 
-	// build group_class (['dDrawPath_c', 'group_class']) False/False
-	/* dependencies (begin ['dDrawPath_c', 'group_class']) */
-	/* dependencies (end ['dDrawPath_c', 'group_class']) */
 	struct group_class {
 	};
 
-	// build floor_class (['dDrawPath_c', 'floor_class']) False/False
-	/* dependencies (begin ['dDrawPath_c', 'floor_class']) */
-	/* dependencies (end ['dDrawPath_c', 'floor_class']) */
 	struct floor_class {
 	};
 
-	// build room_class (['dDrawPath_c', 'room_class']) False/False
-	/* dependencies (begin ['dDrawPath_c', 'room_class']) */
-	/* dependencies (end ['dDrawPath_c', 'room_class']) */
 	struct room_class {
 	};
 
 	/* 8002ABF0 */ bool isDrawType(int);
 	/* 8002AD3C */ ~dDrawPath_c();
 	/* 8002AD84 */ void getLineColor(int, int);
-	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
 	/* 8003CB00 */ void rendering(dDrawPath_c::group_class const*);
-	/* 8003CBBC */ void rendering(dDrawPath_c::floor_class const*);
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
+	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
+	/* 8003CBBC */ void rendering(dDrawPath_c::floor_class const*);
 	/* 8003CCC4 */ void drawPath();
 };
 
-// build dRenderingMap_c (['dRenderingMap_c']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['dRenderingMap_c']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['dRenderingMap_c']) */
 struct dRenderingMap_c {
-	// ('ResTIMG',)
 	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, u8*, u8*, u16) const;
 	/* 8003CDAC */ void renderingMap();
 };
 
-// build ResTIMG (['ResTIMG']) True/True
-// build dRenderingFDAmap_c (['dRenderingFDAmap_c']) False/False
-// build dDrawPath_c (['dDrawPath_c']) True/True
-/* top-level dependencies (begin ['dRenderingFDAmap_c']) */
-// outer dependency: ('dDrawPath_c', 'line_class')
-/* top-level dependencies (end ['dRenderingFDAmap_c']) */
 struct dRenderingFDAmap_c {
-	// ('dDrawPath_c', 'line_class')
 	/* 8002ABF8 */ ~dRenderingFDAmap_c();
 	/* 8003CE78 */ void setTevSettingNonTextureDirectColor() const;
 	/* 8003CF40 */ void setTevSettingIntensityTextureToCI() const;
@@ -120,67 +65,49 @@ struct dRenderingFDAmap_c {
 	/* 8003D6B8 */ void getDecorationLineWidth(int);
 };
 
-// build _GXTexObj (['_GXTexObj']) False/False
-/* top-level dependencies (begin ['_GXTexObj']) */
-/* top-level dependencies (end ['_GXTexObj']) */
 struct _GXTexObj {
 };
 
-// build _GXTlutObj (['_GXTlutObj']) False/False
-/* top-level dependencies (begin ['_GXTlutObj']) */
-/* top-level dependencies (end ['_GXTlutObj']) */
 struct _GXTlutObj {
 };
 
-// build dDlst_base_c (['dDlst_base_c']) False/False
-/* top-level dependencies (begin ['dDlst_base_c']) */
-/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 	/* 8002ABEC */ void draw();
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void __sinit_d_map_path_cpp();
+extern "C" void __sinit_d_map_path_cpp(); // 1
 
-extern "C" void create__Q28dMpath_n18dTexObjAggregate_cFv();
-extern "C" void remove__Q28dMpath_n18dTexObjAggregate_cFv();
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class();
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class();
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class();
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class();
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class();
-extern "C" void drawPath__11dDrawPath_cFv();
-extern "C" void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs();
-extern "C" void renderingMap__15dRenderingMap_cFv();
-extern "C" void setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv();
-extern "C" void setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv();
-extern "C" void drawBack__18dRenderingFDAmap_cCFv();
-extern "C" void preRenderingMap__18dRenderingFDAmap_cFv();
-extern "C" void postRenderingMap__18dRenderingFDAmap_cFv();
-extern "C" void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class();
-extern "C" void getDecoLineColor__18dRenderingFDAmap_cFii();
-extern "C" void getDecorationLineWidth__18dRenderingFDAmap_cFi();
-extern "C" void __sinit_d_map_path_cpp();
-extern "C" void __dt__Q28dMpath_n18dTexObjAggregate_cFv();
+extern "C" void create__Q28dMpath_n18dTexObjAggregate_cFv(); // 1
+extern "C" void remove__Q28dMpath_n18dTexObjAggregate_cFv(); // 1
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class(); // 1
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class(); // 1
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class(); // 1
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class(); // 1
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class(); // 1
+extern "C" void drawPath__11dDrawPath_cFv(); // 1
+extern "C" void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs(); // 1
+extern "C" void renderingMap__15dRenderingMap_cFv(); // 1
+extern "C" void setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv(); // 1
+extern "C" void setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv(); // 1
+extern "C" void drawBack__18dRenderingFDAmap_cCFv(); // 1
+extern "C" void preRenderingMap__18dRenderingFDAmap_cFv(); // 1
+extern "C" void postRenderingMap__18dRenderingFDAmap_cFv(); // 1
+extern "C" void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class(); // 1
+extern "C" void getDecoLineColor__18dRenderingFDAmap_cFii(); // 1
+extern "C" void getDecorationLineWidth__18dRenderingFDAmap_cFi(); // 1
+extern "C" void __sinit_d_map_path_cpp(); // 1
+extern "C" void __dt__Q28dMpath_n18dTexObjAggregate_cFv(); // 1
 SECTION_RODATA extern const u8 data_80379C30[28];
 SECTION_RODATA extern const u8 d_map_d_map_path__stringBase0[12];
 SECTION_DATA extern void*const __vt__18dRenderingFDAmap_c[26];
@@ -197,113 +124,113 @@ SECTION_SDATA2 extern f64 d_map_d_map_path__lit_3850;
 // External References:
 // 
 
-void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void C_MTXOrtho();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetArray();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXPixModeSync();
-extern "C" void GXBegin();
-extern "C" void GXSetLineWidth();
-extern "C" void GXSetPointSize();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetTexCopySrc();
-extern "C" void GXSetTexCopyDst();
-extern "C" void GXSetCopyFilter();
-extern "C" void GXCopyTex();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetTevKColorSel();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetDither();
-extern "C" void GXSetProjection();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXSetViewport();
-extern "C" void GXSetScissor();
-extern "C" void GXSetClipMode();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void C_MTXOrtho(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetArray(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXPixModeSync(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetLineWidth(); // 1
+extern "C" void GXSetPointSize(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetTexCopySrc(); // 1
+extern "C" void GXSetTexCopyDst(); // 1
+extern "C" void GXSetCopyFilter(); // 1
+extern "C" void GXCopyTex(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetTevKColorSel(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj();
-extern "C" void draw__12dDlst_base_cFv();
-extern "C" bool isDrawType__11dDrawPath_cFi();
-extern "C" void __dt__18dRenderingFDAmap_cFv();
-extern "C" void __dt__11dDrawPath_cFv();
-extern "C" void getLineColor__11dDrawPath_cFii();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void C_MTXOrtho();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetArray();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXPixModeSync();
-extern "C" void GXBegin();
-extern "C" void GXSetLineWidth();
-extern "C" void GXSetPointSize();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetTexCopySrc();
-extern "C" void GXSetTexCopyDst();
-extern "C" void GXSetCopyFilter();
-extern "C" void GXCopyTex();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetTevKColorSel();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetDither();
-extern "C" void GXSetProjection();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXSetViewport();
-extern "C" void GXSetScissor();
-extern "C" void GXSetClipMode();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj(); // 1
+extern "C" void draw__12dDlst_base_cFv(); // 1
+extern "C" bool isDrawType__11dDrawPath_cFi(); // 1
+extern "C" void __dt__18dRenderingFDAmap_cFv(); // 1
+extern "C" void __dt__11dDrawPath_cFv(); // 1
+extern "C" void getLineColor__11dDrawPath_cFii(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void C_MTXOrtho(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetArray(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXPixModeSync(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetLineWidth(); // 1
+extern "C" void GXSetPointSize(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetTexCopySrc(); // 1
+extern "C" void GXSetTexCopyDst(); // 1
+extern "C" void GXSetCopyFilter(); // 1
+extern "C" void GXCopyTex(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetTevKColorSel(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_DATA extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SDATA extern u8 g_clearColor[4];

@@ -9,27 +9,27 @@
 // Forward References:
 // 
 
-extern "C" void ARRegisterDMACallback();
-extern "C" void ARGetDMAStatus();
-extern "C" void ARStartDMA();
-extern "C" void ARAlloc();
-extern "C" void ARInit();
-extern "C" void ARGetSize();
-extern "C" static void __ARHandler();
-extern "C" void __ARClearInterrupt();
-extern "C" void __ARGetInterruptStatus();
-extern "C" static void __ARChecksize();
+extern "C" void ARRegisterDMACallback(); // 1
+extern "C" void ARGetDMAStatus(); // 1
+extern "C" void ARStartDMA(); // 1
+extern "C" void ARAlloc(); // 1
+extern "C" void ARInit(); // 1
+extern "C" void ARGetSize(); // 1
+extern "C" static void __ARHandler(); // 1
+extern "C" void __ARClearInterrupt(); // 1
+extern "C" void __ARGetInterruptStatus(); // 1
+extern "C" static void __ARChecksize(); // 1
 
-extern "C" void ARRegisterDMACallback();
-extern "C" void ARGetDMAStatus();
-extern "C" void ARStartDMA();
-extern "C" void ARAlloc();
-extern "C" void ARInit();
-extern "C" void ARGetSize();
-extern "C" static void __ARHandler();
-extern "C" void __ARClearInterrupt();
-extern "C" void __ARGetInterruptStatus();
-extern "C" static void __ARChecksize();
+extern "C" void ARRegisterDMACallback(); // 1
+extern "C" void ARGetDMAStatus(); // 1
+extern "C" void ARStartDMA(); // 1
+extern "C" void ARAlloc(); // 1
+extern "C" void ARInit(); // 1
+extern "C" void ARGetSize(); // 1
+extern "C" static void __ARHandler(); // 1
+extern "C" void __ARClearInterrupt(); // 1
+extern "C" void __ARGetInterruptStatus(); // 1
+extern "C" static void __ARChecksize(); // 1
 SECTION_DATA extern u8 ar__lit_1[68 + 4 /* padding */];
 SECTION_SDATA extern void*__ARVersion[2];
 SECTION_SBSS extern u8 __AR_Callback[4];
@@ -45,29 +45,29 @@ SECTION_SBSS extern u8 __AR_init_flag[4];
 // External References:
 // 
 
-SECTION_INIT void memset();
-extern "C" void PPCSync();
-extern "C" void OSRegisterVersion();
-extern "C" void DCInvalidateRange();
-extern "C" void DCFlushRange();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSUnmaskInterrupts();
+SECTION_INIT void memset(); // 1
+extern "C" void PPCSync(); // 1
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void DCFlushRange(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
 
-SECTION_INIT void memset();
-extern "C" void PPCSync();
-extern "C" void OSRegisterVersion();
-extern "C" void DCInvalidateRange();
-extern "C" void DCFlushRange();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSUnmaskInterrupts();
+SECTION_INIT void memset(); // 1
+extern "C" void PPCSync(); // 1
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void DCFlushRange(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
 
 // 
 // Declarations:

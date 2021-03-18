@@ -9,46 +9,23 @@
 // Types:
 // 
 
-// build J2DMaterialFactory (['J2DMaterialFactory']) False/False
-// build J2DMaterialBlock (['J2DMaterialBlock']) False/False
-/* top-level dependencies (begin ['J2DMaterialBlock']) */
-/* top-level dependencies (end ['J2DMaterialBlock']) */
-struct J2DMaterialBlock {
-};
-
-// build J2DResReference (['J2DResReference']) False/False
-/* top-level dependencies (begin ['J2DResReference']) */
-/* top-level dependencies (end ['J2DResReference']) */
-struct J2DResReference {
-	/* 8030CF10 */ void getResReference(u16) const;
-	/* 8030CF44 */ void getName(u16) const;
-};
-
-// build J2DMaterial (['J2DMaterial']) False/False
-/* top-level dependencies (begin ['J2DMaterial']) */
-/* top-level dependencies (end ['J2DMaterial']) */
 struct J2DMaterial {
 	/* 802EA410 */ void createTevBlock(int, bool);
 	/* 802EA5C4 */ void createIndBlock(int, bool);
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['J2DMaterialFactory']) */
-// outer dependency: ('J2DMaterialBlock',)
-// outer dependency: ('J2DResReference',)
-// outer dependency: ('J2DMaterial',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DMaterialFactory']) */
+struct J2DMaterialBlock {
+};
+
+struct J2DResReference {
+	/* 8030CF10 */ void getResReference(u16) const;
+	/* 8030CF44 */ void getName(u16) const;
+};
+
 struct J2DMaterialFactory {
-	// ('J2DMaterialBlock',)
-	// ('J2DResReference',)
-	// ('J2DMaterial',)
-	// ('JKRArchive',)
 	/* 802F2AD0 */ J2DMaterialFactory(J2DMaterialBlock const&);
 	/* 802F2C94 */ void countStages(int) const;
 	/* 802F2D1C */ void create(J2DMaterial*, int, u32, J2DResReference*, J2DResReference*, JKRArchive*) const;
@@ -77,48 +54,23 @@ struct J2DMaterialFactory {
 	/* 802F40D8 */ void newDither(int) const;
 };
 
-// build J2DMaterialBlock (['J2DMaterialBlock']) True/True
-// build J2DMaterial (['J2DMaterial']) True/True
-// build J2DResReference (['J2DResReference']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-// build J2DTevStage (['J2DTevStage']) False/False
-// build J2DTevStageInfo (['J2DTevStageInfo']) False/False
-/* top-level dependencies (begin ['J2DTevStageInfo']) */
-/* top-level dependencies (end ['J2DTevStageInfo']) */
 struct J2DTevStageInfo {
 };
 
-/* top-level dependencies (begin ['J2DTevStage']) */
-// outer dependency: ('J2DTevStageInfo',)
-/* top-level dependencies (end ['J2DTevStage']) */
 struct J2DTevStage {
-	// ('J2DTevStageInfo',)
+	/* 802F4110 */ J2DTevStage(J2DTevStageInfo const&);
 	/* 802F1940 */ J2DTevStage();
 	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
-	/* 802F4110 */ J2DTevStage(J2DTevStageInfo const&);
 };
 
-// build J2DTevStageInfo (['J2DTevStageInfo']) True/True
-// build JUTResReference (['JUTResReference']) False/False
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['JUTResReference']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['JUTResReference']) */
 struct JUTResReference {
-	// ('JKRArchive',)
 	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
 };
 
-// build J2DTexMtx (['J2DTexMtx']) False/False
-/* top-level dependencies (begin ['J2DTexMtx']) */
-/* top-level dependencies (end ['J2DTexMtx']) */
 struct J2DTexMtx {
 	/* 802E9CC4 */ void calc();
 };
 
-// build J2DDataManage (['J2DDataManage']) False/False
-/* top-level dependencies (begin ['J2DDataManage']) */
-/* top-level dependencies (end ['J2DDataManage']) */
 struct J2DDataManage {
 	/* 8030CE18 */ void get(char const*);
 };
@@ -127,66 +79,66 @@ struct J2DDataManage {
 // Forward References:
 // 
 
-extern "C" static void func_802F4170();
-extern "C" static void func_802F4188();
-extern "C" static void func_802F41A0();
-extern "C" static void func_802F41B8();
-extern "C" static void func_802F41D0();
-extern "C" void func_802F41E8();
-extern "C" static void func_802F4200();
-extern "C" static void func_802F4218();
-extern "C" static void func_802F4230();
-extern "C" static void func_802F4248();
-extern "C" void func_802F4260();
-extern "C" void func_802F4278();
-extern "C" void func_802F4290();
-extern "C" static void func_802F42A8();
-extern "C" void func_802F42C0();
-extern "C" static void func_802F42D8();
+static void JSUConvertOffsetToPtr__template14(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template15(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template16(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template17(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template18(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template19(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template20(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template21(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template22(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template23(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template25(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template26(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template27(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template29(void const*, void const*); // 2
 
-extern "C" void __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock();
-extern "C" void countStages__18J2DMaterialFactoryCFi();
-extern "C" void create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive();
-extern "C" void newMatColor__18J2DMaterialFactoryCFii();
-extern "C" void newColorChanNum__18J2DMaterialFactoryCFi();
-extern "C" void newColorChan__18J2DMaterialFactoryCFii();
-extern "C" void newTexGenNum__18J2DMaterialFactoryCFi();
-extern "C" void newTexCoord__18J2DMaterialFactoryCFii();
-extern "C" void newTexMtx__18J2DMaterialFactoryCFii();
-extern "C" void newCullMode__18J2DMaterialFactoryCFi();
-extern "C" void newTexNo__18J2DMaterialFactoryCFii();
-extern "C" void newFontNo__18J2DMaterialFactoryCFi();
-extern "C" void newTevOrder__18J2DMaterialFactoryCFii();
-extern "C" void newTevColor__18J2DMaterialFactoryCFii();
-extern "C" void newTevKColor__18J2DMaterialFactoryCFii();
-extern "C" void newTevStageNum__18J2DMaterialFactoryCFi();
-extern "C" void newTevStage__18J2DMaterialFactoryCFii();
-extern "C" void newTevSwapModeTable__18J2DMaterialFactoryCFii();
-extern "C" void newIndTexStageNum__18J2DMaterialFactoryCFi();
-extern "C" void newIndTexOrder__18J2DMaterialFactoryCFii();
-extern "C" void newIndTexMtx__18J2DMaterialFactoryCFii();
-extern "C" void newIndTevStage__18J2DMaterialFactoryCFii();
-extern "C" void newIndTexCoordScale__18J2DMaterialFactoryCFii();
-extern "C" void newAlphaComp__18J2DMaterialFactoryCFi();
-extern "C" void newBlend__18J2DMaterialFactoryCFi();
-extern "C" void newDither__18J2DMaterialFactoryCFi();
-extern "C" void __ct__11J2DTevStageFRC15J2DTevStageInfo();
-extern "C" static void func_802F4170();
-extern "C" static void func_802F4188();
-extern "C" static void func_802F41A0();
-extern "C" static void func_802F41B8();
-extern "C" static void func_802F41D0();
-extern "C" void func_802F41E8();
-extern "C" static void func_802F4200();
-extern "C" static void func_802F4218();
-extern "C" static void func_802F4230();
-extern "C" static void func_802F4248();
-extern "C" void func_802F4260();
-extern "C" void func_802F4278();
-extern "C" void func_802F4290();
-extern "C" static void func_802F42A8();
-extern "C" void func_802F42C0();
-extern "C" static void func_802F42D8();
+extern "C" void __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock(); // 1
+extern "C" void countStages__18J2DMaterialFactoryCFi(); // 1
+extern "C" void create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive(); // 1
+extern "C" void newMatColor__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newColorChanNum__18J2DMaterialFactoryCFi(); // 1
+extern "C" void newColorChan__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newTexGenNum__18J2DMaterialFactoryCFi(); // 1
+extern "C" void newTexCoord__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newTexMtx__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newCullMode__18J2DMaterialFactoryCFi(); // 1
+extern "C" void newTexNo__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newFontNo__18J2DMaterialFactoryCFi(); // 1
+extern "C" void newTevOrder__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newTevColor__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newTevKColor__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newTevStageNum__18J2DMaterialFactoryCFi(); // 1
+extern "C" void newTevStage__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newTevSwapModeTable__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newIndTexStageNum__18J2DMaterialFactoryCFi(); // 1
+extern "C" void newIndTexOrder__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newIndTexMtx__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newIndTevStage__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newIndTexCoordScale__18J2DMaterialFactoryCFii(); // 1
+extern "C" void newAlphaComp__18J2DMaterialFactoryCFi(); // 1
+extern "C" void newBlend__18J2DMaterialFactoryCFi(); // 1
+extern "C" void newDither__18J2DMaterialFactoryCFi(); // 1
+extern "C" void __ct__11J2DTevStageFRC15J2DTevStageInfo(); // 1
+extern "C" static void func_802F4170(); // 1
+extern "C" static void func_802F4188(); // 1
+extern "C" static void func_802F41A0(); // 1
+extern "C" static void func_802F41B8(); // 1
+extern "C" static void func_802F41D0(); // 1
+extern "C" void func_802F41E8(); // 1
+extern "C" static void func_802F4200(); // 1
+extern "C" static void func_802F4218(); // 1
+extern "C" static void func_802F4230(); // 1
+extern "C" static void func_802F4248(); // 1
+extern "C" void func_802F4260(); // 1
+extern "C" void func_802F4278(); // 1
+extern "C" void func_802F4290(); // 1
+extern "C" static void func_802F42A8(); // 1
+extern "C" void func_802F42C0(); // 1
+extern "C" static void func_802F42D8(); // 1
 SECTION_SDATA2 extern u32 lit_1887;
 SECTION_SDATA2 extern u32 lit_2039;
 SECTION_SBSS2 extern u8 lit_2018[4];
@@ -196,28 +148,28 @@ SECTION_SBSS2 extern u8 data_80456BB4[4];
 // External References:
 // 
 
-void* operator new(u32);
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_29();
-extern "C" void strcpy();
+void* operator new(u32); // 2
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void* __nw__FUl();
-extern "C" void getResource__15JUTResReferenceFPCvUlP10JKRArchive();
-extern "C" void calc__9J2DTexMtxFv();
-extern "C" void createTevBlock__11J2DMaterialFib();
-extern "C" void createIndBlock__11J2DMaterialFib();
-extern "C" void __ct__11J2DTevStageFv();
-extern "C" void setTevStageInfo__11J2DTevStageFRC15J2DTevStageInfo();
-extern "C" void get__13J2DDataManageFPCc();
-extern "C" void getResReference__15J2DResReferenceCFUs();
-extern "C" void getName__15J2DResReferenceCFUs();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_29();
-extern "C" void strcpy();
+extern "C" void* __nw__FUl(); // 1
+extern "C" void getResource__15JUTResReferenceFPCvUlP10JKRArchive(); // 1
+extern "C" void calc__9J2DTexMtxFv(); // 1
+extern "C" void createTevBlock__11J2DMaterialFib(); // 1
+extern "C" void createIndBlock__11J2DMaterialFib(); // 1
+extern "C" void __ct__11J2DTevStageFv(); // 1
+extern "C" void setTevStageInfo__11J2DTevStageFRC15J2DTevStageInfo(); // 1
+extern "C" void get__13J2DDataManageFPCc(); // 1
+extern "C" void getResReference__15J2DResReferenceCFUs(); // 1
+extern "C" void getName__15J2DResReferenceCFUs(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcpy(); // 1
 SECTION_RODATA extern const u8 j2dDefaultTexCoordInfo[32];
 SECTION_RODATA extern const u8 j2dDefaultIndTexMtxInfo[28];
 SECTION_RODATA extern const u8 j2dDefaultIndTevStageInfo[12];
@@ -551,7 +503,7 @@ asm J2DTevStage::J2DTevStage(J2DTevStageInfo const& field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802F4170() {
+asm static void JSUConvertOffsetToPtr__template14(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4170.s"
 }
@@ -562,7 +514,7 @@ extern "C" asm static void func_802F4170() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802F4188() {
+asm static void JSUConvertOffsetToPtr__template15(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4188.s"
 }
@@ -573,7 +525,7 @@ extern "C" asm static void func_802F4188() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802F41A0() {
+asm static void JSUConvertOffsetToPtr__template16(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F41A0.s"
 }
@@ -584,7 +536,7 @@ extern "C" asm static void func_802F41A0() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802F41B8() {
+asm static void JSUConvertOffsetToPtr__template17(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F41B8.s"
 }
@@ -595,7 +547,7 @@ extern "C" asm static void func_802F41B8() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802F41D0() {
+asm static void JSUConvertOffsetToPtr__template18(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F41D0.s"
 }
@@ -606,7 +558,7 @@ extern "C" asm static void func_802F41D0() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802F41E8() {
+asm void JSUConvertOffsetToPtr__template19(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F41E8.s"
 }
@@ -617,7 +569,7 @@ extern "C" asm void func_802F41E8() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802F4200() {
+asm static void JSUConvertOffsetToPtr__template20(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4200.s"
 }
@@ -628,7 +580,7 @@ extern "C" asm static void func_802F4200() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802F4218() {
+asm static void JSUConvertOffsetToPtr__template21(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4218.s"
 }
@@ -639,7 +591,7 @@ extern "C" asm static void func_802F4218() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802F4230() {
+asm static void JSUConvertOffsetToPtr__template22(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4230.s"
 }
@@ -650,7 +602,7 @@ extern "C" asm static void func_802F4230() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802F4248() {
+asm static void JSUConvertOffsetToPtr__template23(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4248.s"
 }
@@ -661,7 +613,7 @@ extern "C" asm static void func_802F4248() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802F4260() {
+asm void JSUConvertOffsetToPtr__template24(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4260.s"
 }
@@ -672,7 +624,7 @@ extern "C" asm void func_802F4260() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802F4278() {
+asm void JSUConvertOffsetToPtr__template25(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4278.s"
 }
@@ -683,7 +635,7 @@ extern "C" asm void func_802F4278() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802F4290() {
+asm void JSUConvertOffsetToPtr__template26(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4290.s"
 }
@@ -694,7 +646,7 @@ extern "C" asm void func_802F4290() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802F42A8() {
+asm static void JSUConvertOffsetToPtr__template27(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F42A8.s"
 }
@@ -705,7 +657,7 @@ extern "C" asm static void func_802F42A8() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802F42C0() {
+asm void JSUConvertOffsetToPtr__template28(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F42C0.s"
 }
@@ -716,7 +668,7 @@ extern "C" asm void func_802F42C0() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802F42D8() {
+asm static void JSUConvertOffsetToPtr__template29(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F42D8.s"
 }

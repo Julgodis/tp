@@ -9,25 +9,25 @@
 // Forward References:
 // 
 
-extern "C" void TRKDoNotifyStopped();
+extern "C" void TRKDoNotifyStopped(); // 1
 
-extern "C" void TRKDoNotifyStopped();
+extern "C" void TRKDoNotifyStopped(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void TRKReleaseBuffer();
-extern "C" void TRKGetFreeBuffer();
-extern "C" void TRKRequestSend();
-extern "C" void TRKTargetAddExceptionInfo();
-extern "C" void TRKTargetAddStopInfo();
+extern "C" void TRKReleaseBuffer(); // 1
+extern "C" void TRKGetFreeBuffer(); // 1
+extern "C" void TRKRequestSend(); // 1
+extern "C" void TRKTargetAddExceptionInfo(); // 1
+extern "C" void TRKTargetAddStopInfo(); // 1
 
-extern "C" void TRKReleaseBuffer();
-extern "C" void TRKGetFreeBuffer();
-extern "C" void TRKRequestSend();
-extern "C" void TRKTargetAddExceptionInfo();
-extern "C" void TRKTargetAddStopInfo();
+extern "C" void TRKReleaseBuffer(); // 1
+extern "C" void TRKGetFreeBuffer(); // 1
+extern "C" void TRKRequestSend(); // 1
+extern "C" void TRKTargetAddExceptionInfo(); // 1
+extern "C" void TRKTargetAddStopInfo(); // 1
 
 // 
 // Declarations:

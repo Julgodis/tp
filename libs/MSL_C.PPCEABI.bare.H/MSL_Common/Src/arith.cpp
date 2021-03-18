@@ -9,11 +9,11 @@
 // Forward References:
 // 
 
-extern "C" void div();
-extern "C" void abs();
+extern "C" void div(); // 1
+extern "C" void abs(); // 1
 
-extern "C" void div();
-extern "C" void abs();
+extern "C" void div(); // 1
+extern "C" void abs(); // 1
 
 // 
 // External References:

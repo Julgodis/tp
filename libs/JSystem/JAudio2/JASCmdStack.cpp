@@ -9,13 +9,7 @@
 // Types:
 // 
 
-// build JASPortCmd (['JASPortCmd']) False/False
-/* top-level dependencies (begin ['JASPortCmd']) */
-/* top-level dependencies (end ['JASPortCmd']) */
 struct JASPortCmd {
-	// build TPortHead (['JASPortCmd', 'TPortHead']) False/False
-	/* dependencies (begin ['JASPortCmd', 'TPortHead']) */
-	/* dependencies (end ['JASPortCmd', 'TPortHead']) */
 	struct TPortHead {
 		/* 80291094 */ void execCommandOnce();
 		/* 8029110C */ void execCommandStay();
@@ -25,35 +19,26 @@ struct JASPortCmd {
 	/* 80291060 */ void execAllCommand();
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 };
 
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JSUPtrLink (['JSUPtrLink']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void __sinit_JASCmdStack_cpp();
+extern "C" void __sinit_JASCmdStack_cpp(); // 1
 
-extern "C" void execAllCommand__10JASPortCmdFv();
-extern "C" void execCommandOnce__Q210JASPortCmd9TPortHeadFv();
-extern "C" void execCommandStay__Q210JASPortCmd9TPortHeadFv();
-extern "C" void __sinit_JASCmdStack_cpp();
-extern "C" void __dt__Q210JASPortCmd9TPortHeadFv();
+extern "C" void execAllCommand__10JASPortCmdFv(); // 1
+extern "C" void execCommandOnce__Q210JASPortCmd9TPortHeadFv(); // 1
+extern "C" void execCommandStay__Q210JASPortCmd9TPortHeadFv(); // 1
+extern "C" void __sinit_JASCmdStack_cpp(); // 1
+extern "C" void __dt__Q210JASPortCmd9TPortHeadFv(); // 1
 SECTION_BSS extern u8 JASCmdStack__lit_80[12];
 SECTION_BSS extern u8 sCommandListOnce__10JASPortCmd[12];
 SECTION_BSS extern u8 JASCmdStack__lit_82[12];
@@ -63,22 +48,22 @@ SECTION_BSS extern u8 sCommandListStay__10JASPortCmd[12];
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dl__FPv();
-extern "C" void __dt__10JSUPtrListFv();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dt__10JSUPtrListFv(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

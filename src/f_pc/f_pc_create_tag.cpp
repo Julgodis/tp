@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build create_tag (['create_tag']) False/False
-/* top-level dependencies (begin ['create_tag']) */
-/* top-level dependencies (end ['create_tag']) */
 struct create_tag {
 };
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
@@ -31,26 +22,26 @@ struct node_list_class {
 // Forward References:
 // 
 
-void fpcCtTg_ToCreateQ(create_tag*);
-void fpcCtTg_CreateQTo(create_tag*);
-void fpcCtTg_Init(create_tag*, void*);
+void fpcCtTg_ToCreateQ(create_tag*); // 2
+void fpcCtTg_CreateQTo(create_tag*); // 2
+void fpcCtTg_Init(create_tag*, void*); // 2
 
-extern "C" void fpcCtTg_ToCreateQ__FP10create_tag();
-extern "C" void fpcCtTg_CreateQTo__FP10create_tag();
-extern "C" void fpcCtTg_Init__FP10create_tagPv();
+extern "C" void fpcCtTg_ToCreateQ__FP10create_tag(); // 1
+extern "C" void fpcCtTg_CreateQTo__FP10create_tag(); // 1
+extern "C" void fpcCtTg_Init__FP10create_tagPv(); // 1
 SECTION_DATA extern u8 g_fpcCtTg_Queue[12 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void cTg_SingleCut(create_tag_class*);
-void cTg_Addition(node_list_class*, create_tag_class*);
-void cTg_Create(create_tag_class*, void*);
+void cTg_SingleCut(create_tag_class*); // 2
+void cTg_Addition(node_list_class*, create_tag_class*); // 2
+void cTg_Create(create_tag_class*, void*); // 2
 
-extern "C" void cTg_SingleCut__FP16create_tag_class();
-extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern "C" void cTg_Create__FP16create_tag_classPv();
+extern "C" void cTg_SingleCut__FP16create_tag_class(); // 1
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class(); // 1
+extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
 
 // 
 // Declarations:

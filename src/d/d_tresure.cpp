@@ -9,43 +9,16 @@
 // Types:
 // 
 
-// build dTres_c (['dTres_c']) False/False
-// build dTres_c (['dTres_c']) True/False
-struct dTres_c;
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build dTres_c (['dTres_c']) True/True
-// build dTres_c (['dTres_c']) True/True
-/* top-level dependencies (begin ['dTres_c']) */
-// outer dependency: ('dTres_c', 'data_s')
-// outer dependency: ('Vec',)
-// outer dependency: ('dTres_c', 'typeGroupData_c')
-// outer dependency: ('dTres_c', 'list_class')
-/* top-level dependencies (end ['dTres_c']) */
 struct dTres_c {
-	// ('dTres_c', 'data_s')
-	// ('Vec',)
-	// ('dTres_c', 'typeGroupData_c')
-	// ('dTres_c', 'list_class')
-	// build list_class (['dTres_c', 'list_class']) False/False
-	/* dependencies (begin ['dTres_c', 'list_class']) */
-	/* dependencies (end ['dTres_c', 'list_class']) */
 	struct list_class {
 	};
 
-	// build data_s (['dTres_c', 'data_s']) False/False
-	/* dependencies (begin ['dTres_c', 'data_s']) */
-	/* dependencies (end ['dTres_c', 'data_s']) */
 	struct data_s {
 	};
 
-	// build typeGroupData_c (['dTres_c', 'typeGroupData_c']) False/False
-	/* dependencies (begin ['dTres_c', 'typeGroupData_c']) */
-	/* dependencies (end ['dTres_c', 'typeGroupData_c']) */
 	struct typeGroupData_c {
 	};
 
@@ -66,34 +39,18 @@ struct dTres_c {
 	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
 };
 
-// build Vec (['Vec']) True/True
-// build dSv_memBit_c (['dSv_memBit_c']) False/False
-/* top-level dependencies (begin ['dSv_memBit_c']) */
-/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-// build dSv_info_c (['dSv_info_c']) False/False
-/* top-level dependencies (begin ['dSv_info_c']) */
-/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build dMapInfo_n (['dMapInfo_n']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['dMapInfo_n']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['dMapInfo_n']) */
 struct dMapInfo_n {
-	// ('Vec',)
 	/* 8003ED60 */ void correctionOriginPos(s8, Vec*);
 };
 
-// build dMapInfo_c (['dMapInfo_c']) False/False
-/* top-level dependencies (begin ['dMapInfo_c']) */
-/* top-level dependencies (end ['dMapInfo_c']) */
 struct dMapInfo_c {
 	/* 8003F40C */ void calcFloorNo(f32, bool, int);
 };
@@ -103,21 +60,21 @@ struct dMapInfo_c {
 // 
 
 
-extern "C" void createWork__7dTres_cFv();
-extern "C" void create__7dTres_cFv();
-extern "C" void remove__7dTres_cFv();
-extern "C" void reset__7dTres_cFv();
-extern "C" void addData__7dTres_cFPQ27dTres_c10list_classSc();
-extern "C" void checkTreasureBox__7dTres_cFPQ27dTres_c6data_s();
-extern "C" void onStatus__7dTres_cFUcii();
-extern "C" void offStatus__7dTres_cFUcii();
-extern "C" void getBossIconFloorNo__7dTres_cFPi();
-extern "C" void getFirstData__7dTres_cFUc();
-extern "C" void getNextData__7dTres_cFPQ27dTres_c15typeGroupData_c();
-extern "C" void getNextData__7dTres_cFPCQ27dTres_c15typeGroupData_c();
-extern "C" void setPosition__7dTres_cFiUcPC3Veci();
-extern "C" void getTypeGroupNoToType__7dTres_cFUc();
-extern "C" void getTypeToTypeGroupNo__7dTres_cFUc();
+extern "C" void createWork__7dTres_cFv(); // 1
+extern "C" void create__7dTres_cFv(); // 1
+extern "C" void remove__7dTres_cFv(); // 1
+extern "C" void reset__7dTres_cFv(); // 1
+extern "C" void addData__7dTres_cFPQ27dTres_c10list_classSc(); // 1
+extern "C" void checkTreasureBox__7dTres_cFPQ27dTres_c6data_s(); // 1
+extern "C" void onStatus__7dTres_cFUcii(); // 1
+extern "C" void offStatus__7dTres_cFUcii(); // 1
+extern "C" void getBossIconFloorNo__7dTres_cFPi(); // 1
+extern "C" void getFirstData__7dTres_cFUc(); // 1
+extern "C" void getNextData__7dTres_cFPQ27dTres_c15typeGroupData_c(); // 1
+extern "C" void getNextData__7dTres_cFPCQ27dTres_c15typeGroupData_c(); // 1
+extern "C" void setPosition__7dTres_cFiUcPC3Veci(); // 1
+extern "C" void getTypeGroupNoToType__7dTres_cFUc(); // 1
+extern "C" void getTypeToTypeGroupNo__7dTres_cFUc(); // 1
 SECTION_RODATA extern const u8 typeToTypeGroup__7dTres_c[34 + 6 /* padding */];
 SECTION_BSS extern u8 mTypeGroupListAll__7dTres_c[204 + 4 /* padding */];
 SECTION_SBSS extern u8 mTypeGroupData__7dTres_c[4];
@@ -133,37 +90,37 @@ SECTION_SDATA2 extern f64 d_d_tresure__lit_3845;
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16);
-void dPath_GetRoomPath(int, int);
-void* operator new[](u32);
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECAdd();
-extern "C" void PSVECSquareDistance();
-extern "C" void __construct_new_array();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+void mDoMtx_YrotS(f32 (* )[4], s16); // 2
+void dPath_GetRoomPath(int, int); // 2
+void* operator new[](u32); // 2
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void mDoMtx_YrotS__FPA4_fs();
-extern "C" void isDungeonItem__12dSv_memBit_cCFi();
-extern "C" void isSwitch__10dSv_info_cCFii();
-extern "C" void correctionOriginPos__10dMapInfo_nFScP3Vec();
-extern "C" void calcFloorNo__10dMapInfo_cFfbi();
-extern "C" void dPath_GetRoomPath__Fii();
-extern "C" void* __nwa__FUl();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECAdd();
-extern "C" void PSVECSquareDistance();
-extern "C" void __construct_new_array();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
+extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void correctionOriginPos__10dMapInfo_nFScP3Vec(); // 1
+extern "C" void calcFloorNo__10dMapInfo_cFfbi(); // 1
+extern "C" void dPath_GetRoomPath__Fii(); // 1
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SDATA extern u8 data_80450680[8];

@@ -9,60 +9,27 @@
 // Types:
 // 
 
-// build J3DJointTree (['J3DJointTree']) False/False
-// build J3DJoint (['J3DJoint']) False/False
-/* top-level dependencies (begin ['J3DJoint']) */
-/* top-level dependencies (end ['J3DJoint']) */
 struct J3DJoint {
 	/* 8032F13C */ void appendChild(J3DJoint*);
 	/* 8032F3F8 */ void recursiveCalc();
 };
 
-// build J3DShapeTable (['J3DShapeTable']) False/False
-/* top-level dependencies (begin ['J3DShapeTable']) */
-/* top-level dependencies (end ['J3DShapeTable']) */
-struct J3DShapeTable {
-};
-
-// build J3DMtxBuffer (['J3DMtxBuffer']) False/False
-/* top-level dependencies (begin ['J3DMtxBuffer']) */
-/* top-level dependencies (end ['J3DMtxBuffer']) */
-struct J3DMtxBuffer {
-};
-
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) False/False
-/* top-level dependencies (begin ['J3DMaterialTable']) */
-/* top-level dependencies (end ['J3DMaterialTable']) */
-struct J3DMaterialTable {
-};
-
-// build J3DModelHierarchy (['J3DModelHierarchy']) False/False
-/* top-level dependencies (begin ['J3DModelHierarchy']) */
-/* top-level dependencies (end ['J3DModelHierarchy']) */
 struct J3DModelHierarchy {
 };
 
-/* top-level dependencies (begin ['J3DJointTree']) */
-// outer dependency: ('J3DJoint',)
-// outer dependency: ('J3DShapeTable',)
-// outer dependency: ('J3DMtxBuffer',)
-// outer dependency: ('Vec',)
-// outer dependency: ('J3DMaterialTable',)
-// outer dependency: ('J3DModelHierarchy',)
-/* top-level dependencies (end ['J3DJointTree']) */
+struct J3DShapeTable {
+};
+
+struct J3DMtxBuffer {
+};
+
+struct J3DMaterialTable {
+};
+
 struct J3DJointTree {
-	// ('J3DJoint',)
-	// ('J3DShapeTable',)
-	// ('Vec',)
-	// ('J3DMtxBuffer',)
-	// ('J3DMaterialTable',)
-	// ('J3DModelHierarchy',)
 	/* 80325A18 */ J3DJointTree();
 	/* 80325A9C */ void makeHierarchy(J3DJoint*, J3DModelHierarchy const**, J3DMaterialTable*, J3DShapeTable*);
 	/* 80325C00 */ void findImportantMtxIndex();
@@ -70,25 +37,10 @@ struct J3DJointTree {
 	/* 80325D24 */ ~J3DJointTree();
 };
 
-// build J3DJoint (['J3DJoint']) True/True
-// build J3DModelHierarchy (['J3DModelHierarchy']) True/True
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-// build J3DShapeTable (['J3DShapeTable']) True/True
-// build J3DMtxBuffer (['J3DMtxBuffer']) True/True
-// build Vec (['Vec']) True/True
-// build J3DMtxCalc (['J3DMtxCalc']) False/False
-// build J3DMtxBuffer (['J3DMtxBuffer']) True/True
-/* top-level dependencies (begin ['J3DMtxCalc']) */
-// outer dependency: ('J3DMtxBuffer',)
-/* top-level dependencies (end ['J3DMtxCalc']) */
 struct J3DMtxCalc {
-	// ('J3DMtxBuffer',)
 	/* 80325D1C */ void setMtxBuffer(J3DMtxBuffer*);
 };
 
-// build J3DDrawMtxData (['J3DDrawMtxData']) False/False
-/* top-level dependencies (begin ['J3DDrawMtxData']) */
-/* top-level dependencies (end ['J3DDrawMtxData']) */
 struct J3DDrawMtxData {
 	/* 803115E0 */ J3DDrawMtxData();
 	/* 803115F4 */ ~J3DDrawMtxData();
@@ -99,12 +51,12 @@ struct J3DDrawMtxData {
 // 
 
 
-extern "C" void __ct__12J3DJointTreeFv();
-extern "C" void makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable();
-extern "C" void findImportantMtxIndex__12J3DJointTreeFv();
-extern "C" void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf();
-extern "C" void setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer();
-extern "C" void __dt__12J3DJointTreeFv();
+extern "C" void __ct__12J3DJointTreeFv(); // 1
+extern "C" void makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable(); // 1
+extern "C" void findImportantMtxIndex__12J3DJointTreeFv(); // 1
+extern "C" void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf(); // 1
+extern "C" void setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer(); // 1
+extern "C" void __dt__12J3DJointTreeFv(); // 1
 SECTION_DATA extern void*lit_871[19];
 SECTION_DATA extern void*const __vt__12J3DJointTree[5];
 SECTION_SDATA2 extern f32 lit_903;
@@ -113,17 +65,17 @@ SECTION_SDATA2 extern f32 lit_903;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void _savegpr_23();
-extern "C" void _restgpr_23();
+void operator delete(void*); // 2
+extern "C" void _savegpr_23(); // 1
+extern "C" void _restgpr_23(); // 1
 
-extern "C" void __dl__FPv();
-extern "C" void __ct__14J3DDrawMtxDataFv();
-extern "C" void __dt__14J3DDrawMtxDataFv();
-extern "C" void appendChild__8J3DJointFP8J3DJoint();
-extern "C" void recursiveCalc__8J3DJointFv();
-extern "C" void _savegpr_23();
-extern "C" void _restgpr_23();
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__14J3DDrawMtxDataFv(); // 1
+extern "C" void __dt__14J3DDrawMtxDataFv(); // 1
+extern "C" void appendChild__8J3DJointFP8J3DJoint(); // 1
+extern "C" void recursiveCalc__8J3DJointFv(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _restgpr_23(); // 1
 SECTION_SBSS extern u8 mMtxBuffer__10J3DMtxCalc[4];
 SECTION_SBSS extern u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
 

@@ -9,17 +9,7 @@
 // Types:
 // 
 
-// build JKRAramHeap (['JKRAramHeap']) False/False
-// build JKRAramHeap (['JKRAramHeap']) True/False
-struct JKRAramHeap;
-/* top-level dependencies (begin ['JKRAramHeap']) */
-// outer dependency: ('JKRAramHeap', 'EAllocMode')
-/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
-	// ('JKRAramHeap', 'EAllocMode')
-	// build EAllocMode (['JKRAramHeap', 'EAllocMode']) False/False
-	/* dependencies (begin ['JKRAramHeap', 'EAllocMode']) */
-	/* dependencies (end ['JKRAramHeap', 'EAllocMode']) */
 	struct EAllocMode {
 	};
 
@@ -33,68 +23,53 @@ struct JKRAramHeap {
 	/* 802D3218 */ void dump();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRAramBlock> */
+struct JSUList__template6 {
+	/* 802D32B0 */ ~JSUList__template6();
+};
+
 struct JKRHeap {
 	/* 802CE83C */ void findFromRoot(void*);
 };
 
-// build JKRDisposer (['JKRDisposer']) False/False
-/* top-level dependencies (begin ['JKRDisposer']) */
-/* top-level dependencies (end ['JKRDisposer']) */
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JKRAramBlock (['JKRAramBlock']) False/False
-// build JKRAramHeap (['JKRAramHeap']) True/True
-/* top-level dependencies (begin ['JKRAramBlock']) */
-// outer dependency: ('JKRAramHeap',)
-/* top-level dependencies (end ['JKRAramBlock']) */
 struct JKRAramBlock {
-	// ('JKRAramHeap',)
 	/* 802D3304 */ JKRAramBlock(u32, u32, u32, u8, bool);
 	/* 802D3434 */ void allocHead(u32, u8, JKRAramHeap*);
 	/* 802D34D0 */ void allocTail(u32, u8, JKRAramHeap*);
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 };
 
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 };
 
-// build JSUPtrLink (['JSUPtrLink']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void __sinit_JKRAramHeap_cpp();
-extern "C" static void func_802D32B0();
+extern "C" void __sinit_JKRAramHeap_cpp(); // 1
 
-extern "C" void __ct__11JKRAramHeapFUlUl();
-extern "C" void __dt__11JKRAramHeapFv();
-extern "C" void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode();
-extern "C" void allocFromHead__11JKRAramHeapFUl();
-extern "C" void allocFromTail__11JKRAramHeapFUl();
-extern "C" void getFreeSize__11JKRAramHeapFv();
-extern "C" void getTotalFreeSize__11JKRAramHeapFv();
-extern "C" void dump__11JKRAramHeapFv();
-extern "C" void __sinit_JKRAramHeap_cpp();
-extern "C" static void func_802D32B0();
+extern "C" void __ct__11JKRAramHeapFUlUl(); // 1
+extern "C" void __dt__11JKRAramHeapFv(); // 1
+extern "C" void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode(); // 1
+extern "C" void allocFromHead__11JKRAramHeapFUl(); // 1
+extern "C" void allocFromTail__11JKRAramHeapFUl(); // 1
+extern "C" void getFreeSize__11JKRAramHeapFv(); // 1
+extern "C" void getTotalFreeSize__11JKRAramHeapFv(); // 1
+extern "C" void dump__11JKRAramHeapFv(); // 1
+extern "C" void __sinit_JKRAramHeap_cpp(); // 1
+extern "C" void func_802D32B0(); // 1
 SECTION_DATA extern void*const __vt__11JKRAramHeap[4];
 SECTION_BSS extern u8 JKRAramHeap__lit_297[12];
 SECTION_BSS extern u8 sAramList__11JKRAramHeap[12];
@@ -103,32 +78,32 @@ SECTION_BSS extern u8 sAramList__11JKRAramHeap[12];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void* operator new(u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void findFromRoot__7JKRHeapFPv();
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void __ct__11JKRDisposerFv();
-extern "C" void __dt__11JKRDisposerFv();
-extern "C" void __ct__12JKRAramBlockFUlUlUlUcb();
-extern "C" void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap();
-extern "C" void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap();
-extern "C" void __dt__10JSUPtrListFv();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void findFromRoot__7JKRHeapFPv(); // 1
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__11JKRDisposerFv(); // 1
+extern "C" void __dt__11JKRDisposerFv(); // 1
+extern "C" void __ct__12JKRAramBlockFUlUlUlUcb(); // 1
+extern "C" void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap(); // 1
+extern "C" void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap(); // 1
+extern "C" void __dt__10JSUPtrListFv(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:
@@ -253,7 +228,7 @@ extern "C" asm void __sinit_JKRAramHeap_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802D32B0() {
+asm JSUList__template6::~JSUList__template6() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramHeap/func_802D32B0.s"
 }

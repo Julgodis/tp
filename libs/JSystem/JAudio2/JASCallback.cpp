@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JASCallbackMgr (['JASCallbackMgr']) False/False
-/* top-level dependencies (begin ['JASCallbackMgr']) */
-/* top-level dependencies (end ['JASCallbackMgr']) */
 struct JASCallbackMgr {
 	/* 802900C4 */ void callback();
 };
@@ -20,34 +17,34 @@ struct JASCallbackMgr {
 // Forward References:
 // 
 
-extern "C" void regist__14JASCallbackMgrFPFPv_lPv();
-extern "C" void reject__14JASCallbackMgrFPFPv_lPv();
+extern "C" void regist__14JASCallbackMgrFPFPv_lPv(); // 1
+extern "C" void reject__14JASCallbackMgrFPFPv_lPv(); // 1
 
-extern "C" void regist__14JASCallbackMgrFPFPv_lPv();
-extern "C" void reject__14JASCallbackMgrFPFPv_lPv();
-extern "C" void callback__14JASCallbackMgrFv();
+extern "C" void regist__14JASCallbackMgrFPFPv_lPv(); // 1
+extern "C" void reject__14JASCallbackMgrFPFPv_lPv(); // 1
+extern "C" void callback__14JASCallbackMgrFv(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

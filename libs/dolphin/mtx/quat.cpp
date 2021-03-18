@@ -9,13 +9,13 @@
 // Forward References:
 // 
 
-extern "C" void PSQUATMultiply();
-extern "C" void C_QUATRotAxisRad();
-extern "C" void C_QUATSlerp();
+extern "C" void PSQUATMultiply(); // 1
+extern "C" void C_QUATRotAxisRad(); // 1
+extern "C" void C_QUATSlerp(); // 1
 
-extern "C" void PSQUATMultiply();
-extern "C" void C_QUATRotAxisRad();
-extern "C" void C_QUATSlerp();
+extern "C" void PSQUATMultiply(); // 1
+extern "C" void C_QUATRotAxisRad(); // 1
+extern "C" void C_QUATSlerp(); // 1
 SECTION_SDATA2 extern u8 lit_130[4];
 SECTION_SDATA2 extern f32 quat__lit_133;
 SECTION_SDATA2 extern f32 quat__lit_135;
@@ -25,15 +25,15 @@ SECTION_SDATA2 extern f32 lit_261;
 // External References:
 // 
 
-extern "C" void PSVECNormalize();
-extern "C" void sinf();
-extern "C" void cosf();
-extern "C" void acosf();
+extern "C" void PSVECNormalize(); // 1
+extern "C" void sinf(); // 1
+extern "C" void cosf(); // 1
+extern "C" void acosf(); // 1
 
-extern "C" void PSVECNormalize();
-extern "C" void sinf();
-extern "C" void cosf();
-extern "C" void acosf();
+extern "C" void PSVECNormalize(); // 1
+extern "C" void sinf(); // 1
+extern "C" void cosf(); // 1
+extern "C" void acosf(); // 1
 
 // 
 // Declarations:

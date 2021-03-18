@@ -9,110 +9,74 @@
 // Types:
 // 
 
-// build dDvdErrorMsg_c (['dDvdErrorMsg_c']) False/False
-/* top-level dependencies (begin ['dDvdErrorMsg_c']) */
-/* top-level dependencies (end ['dDvdErrorMsg_c']) */
 struct dDvdErrorMsg_c {
 	/* 8009D194 */ void draw(s32);
 	/* 8009D354 */ void execute();
 };
 
-// build dShutdownErrorMsg_c (['dShutdownErrorMsg_c']) False/False
-/* top-level dependencies (begin ['dShutdownErrorMsg_c']) */
-/* top-level dependencies (end ['dShutdownErrorMsg_c']) */
 struct dShutdownErrorMsg_c {
 	/* 8009D790 */ void execute();
 };
 
-// build mDoGph_gInf_c (['mDoGph_gInf_c']) False/False
-/* top-level dependencies (begin ['mDoGph_gInf_c']) */
-/* top-level dependencies (end ['mDoGph_gInf_c']) */
 struct mDoGph_gInf_c {
 	/* 80007F90 */ void beginRender();
 };
 
-// build Z2AudioMgr (['Z2AudioMgr']) False/False
-/* top-level dependencies (begin ['Z2AudioMgr']) */
-/* top-level dependencies (end ['Z2AudioMgr']) */
 struct Z2AudioMgr {
 	/* 802CD974 */ void resetProcess(u32, bool);
 };
 
-// build JUTResFont (['JUTResFont']) False/False
-// build ResFONT (['ResFONT']) False/False
-/* top-level dependencies (begin ['ResFONT']) */
-/* top-level dependencies (end ['ResFONT']) */
 struct ResFONT {
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-/* top-level dependencies (begin ['JUTResFont']) */
-// outer dependency: ('ResFONT',)
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JUTResFont']) */
 struct JUTResFont {
-	// ('ResFONT',)
-	// ('JKRHeap',)
 	/* 802DEF94 */ JUTResFont(ResFONT const*, JKRHeap*);
 	/* 802DF000 */ ~JUTResFont();
 };
 
-// build ResFONT (['ResFONT']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
-/* top-level dependencies (begin ['J2DOrthoGraph']) */
-/* top-level dependencies (end ['J2DOrthoGraph']) */
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+};
+
 struct J2DOrthoGraph {
 	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
 	/* 802E97B4 */ void setPort();
+	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
 };
 
-// build J2DPicture (['J2DPicture']) False/False
-/* top-level dependencies (begin ['J2DPicture']) */
-/* top-level dependencies (end ['J2DPicture']) */
+struct ResTLUT {
+};
+
+struct ResTIMG {
+};
+
 struct J2DPicture {
+	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
 	/* 802FCFF0 */ ~J2DPicture();
 	/* 802FDC70 */ void draw(f32, f32, f32, f32, bool, bool, bool);
 };
 
-// build J2DTextBox (['J2DTextBox']) False/False
-// build ResFONT (['ResFONT']) True/True
-// build J2DTextBoxVBinding (['J2DTextBoxVBinding']) False/False
-/* top-level dependencies (begin ['J2DTextBoxVBinding']) */
-/* top-level dependencies (end ['J2DTextBoxVBinding']) */
 struct J2DTextBoxVBinding {
 };
 
-// build J2DTextBoxHBinding (['J2DTextBoxHBinding']) False/False
-/* top-level dependencies (begin ['J2DTextBoxHBinding']) */
-/* top-level dependencies (end ['J2DTextBoxHBinding']) */
 struct J2DTextBoxHBinding {
 };
 
-/* top-level dependencies (begin ['J2DTextBox']) */
-// outer dependency: ('ResFONT',)
-// outer dependency: ('J2DTextBoxVBinding',)
-// outer dependency: ('J2DTextBoxHBinding',)
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
-	// ('ResFONT',)
-	// ('J2DTextBoxVBinding',)
-	// ('J2DTextBoxHBinding',)
+	/* 802FFBC4 */ J2DTextBox(u64, JGeometry::TBox2<f32> const&, ResFONT const*, char const*, s16, J2DTextBoxHBinding, J2DTextBoxVBinding);
 	/* 802FFC58 */ void initiate(ResFONT const*, char const*, s16, J2DTextBoxHBinding, J2DTextBoxVBinding);
 	/* 803001E0 */ ~J2DTextBox();
 	/* 80300490 */ void draw(f32, f32, f32, J2DTextBoxHBinding);
 };
 
-// build J2DTextBoxHBinding (['J2DTextBoxHBinding']) True/True
-// build J2DTextBoxVBinding (['J2DTextBoxVBinding']) True/True
-// build J3DSys (['J3DSys']) False/False
-/* top-level dependencies (begin ['J3DSys']) */
-/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
 	/* 803100BC */ void drawInit();
 };
@@ -121,14 +85,14 @@ struct J3DSys {
 // Forward References:
 // 
 
-static void messageSet(u32, bool);
-static void drawCapture(u8);
+static void messageSet(u32, bool); // 2
+static void drawCapture(u8); // 2
 
-extern "C" static void messageSet__FUlb();
-extern "C" void draw__14dDvdErrorMsg_cFl();
-extern "C" void execute__14dDvdErrorMsg_cFv();
-extern "C" static void drawCapture__FUc();
-extern "C" void execute__19dShutdownErrorMsg_cFv();
+extern "C" static void messageSet__FUlb(); // 1
+extern "C" void draw__14dDvdErrorMsg_cFl(); // 1
+extern "C" void execute__14dDvdErrorMsg_cFv(); // 1
+extern "C" static void drawCapture__FUc(); // 1
+extern "C" void execute__19dShutdownErrorMsg_cFv(); // 1
 SECTION_RODATA extern const u8 black_tex[64];
 SECTION_RODATA extern const u8 msg_data[608];
 SECTION_RODATA extern const void*const font_data[18584];
@@ -151,107 +115,104 @@ SECTION_SBSS2 extern u8 d_d_error_msg__lit_3873[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport_Error();
-void mDoAud_resetRecover();
-void mDoGph_drawFilterQuad(s8, s8);
-void mDoRst_reset(int, u32, int);
-void cLib_chaseUC(u8*, u8, u8);
-extern "C" void func_802E980C();
-extern "C" void func_802FC800();
-extern "C" void func_802FFBC4();
-extern "C" void C_MTXOrtho();
-extern "C" void DVDGetDriveStatus();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetTexCopySrc();
-extern "C" void GXSetTexCopyDst();
-extern "C" void GXCopyTex();
-extern "C" void GXSetNumChans();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetDither();
-extern "C" void GXSetProjection();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
+extern "C" void OSReport_Error(); // 1
+void mDoAud_resetRecover(); // 2
+void mDoGph_drawFilterQuad(s8, s8); // 2
+void mDoRst_reset(int, u32, int); // 2
+void cLib_chaseUC(u8*, u8, u8); // 2
+extern "C" void C_MTXOrtho(); // 1
+extern "C" void DVDGetDriveStatus(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetTexCopySrc(); // 1
+extern "C" void GXSetTexCopyDst(); // 1
+extern "C" void GXCopyTex(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
 
-extern "C" void OSReport_Error();
-extern "C" void mDoAud_resetRecover__Fv();
-extern "C" void beginRender__13mDoGph_gInf_cFv();
-extern "C" void mDoGph_drawFilterQuad__FScSc();
-extern "C" void mDoRst_reset__FiUli();
-extern "C" void cLib_chaseUC__FPUcUcUc();
-extern "C" void resetProcess__10Z2AudioMgrFUlb();
-extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
-extern "C" void __dt__10JUTResFontFv();
-extern "C" void __ct__13J2DOrthoGraphFffffff();
-extern "C" void setPort__13J2DOrthoGraphFv();
-extern "C" void func_802E980C();
-extern "C" void func_802FC800();
-extern "C" void __dt__10J2DPictureFv();
-extern "C" void draw__10J2DPictureFffffbbb();
-extern "C" void func_802FFBC4();
-extern "C" void initiate__10J2DTextBoxFPC7ResFONTPCcs18J2DTextBoxHBinding18J2DTextBoxVBinding();
-extern "C" void __dt__10J2DTextBoxFv();
-extern "C" void draw__10J2DTextBoxFfff18J2DTextBoxHBinding();
-extern "C" void drawInit__6J3DSysFv();
-extern "C" void C_MTXOrtho();
-extern "C" void DVDGetDriveStatus();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetTexCopySrc();
-extern "C" void GXSetTexCopyDst();
-extern "C" void GXCopyTex();
-extern "C" void GXSetNumChans();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetDither();
-extern "C" void GXSetProjection();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
+extern "C" void OSReport_Error(); // 1
+extern "C" void mDoAud_resetRecover__Fv(); // 1
+extern "C" void beginRender__13mDoGph_gInf_cFv(); // 1
+extern "C" void mDoGph_drawFilterQuad__FScSc(); // 1
+extern "C" void mDoRst_reset__FiUli(); // 1
+extern "C" void cLib_chaseUC__FPUcUcUc(); // 1
+extern "C" void resetProcess__10Z2AudioMgrFUlb(); // 1
+extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap(); // 1
+extern "C" void __dt__10JUTResFontFv(); // 1
+extern "C" void __ct__13J2DOrthoGraphFffffff(); // 1
+extern "C" void setPort__13J2DOrthoGraphFv(); // 1
+extern "C" void func_802E980C(); // 1
+extern "C" void func_802FC800(); // 1
+extern "C" void __dt__10J2DPictureFv(); // 1
+extern "C" void draw__10J2DPictureFffffbbb(); // 1
+extern "C" void func_802FFBC4(); // 1
+extern "C" void initiate__10J2DTextBoxFPC7ResFONTPCcs18J2DTextBoxHBinding18J2DTextBoxVBinding(); // 1
+extern "C" void __dt__10J2DTextBoxFv(); // 1
+extern "C" void draw__10J2DTextBoxFfff18J2DTextBoxHBinding(); // 1
+extern "C" void drawInit__6J3DSysFv(); // 1
+extern "C" void C_MTXOrtho(); // 1
+extern "C" void DVDGetDriveStatus(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetTexCopySrc(); // 1
+extern "C" void GXSetTexCopyDst(); // 1
+extern "C" void GXCopyTex(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
 SECTION_DATA extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
 SECTION_DATA extern void*const __vt__13J2DOrthoGraph[10];

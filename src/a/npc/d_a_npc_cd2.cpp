@@ -9,35 +9,16 @@
 // Types:
 // 
 
-// build J3DJoint (['J3DJoint']) False/False
-/* top-level dependencies (begin ['J3DJoint']) */
-/* top-level dependencies (end ['J3DJoint']) */
 struct J3DJoint {
 };
 
-// build daNpcCd2_c (['daNpcCd2_c']) False/False
-// build J3DModel (['J3DModel']) False/False
-/* top-level dependencies (begin ['J3DModel']) */
-/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build J3DJoint (['J3DJoint']) True/True
-// build J3DAnmTransformKey (['J3DAnmTransformKey']) False/False
-/* top-level dependencies (begin ['J3DAnmTransformKey']) */
-/* top-level dependencies (end ['J3DAnmTransformKey']) */
 struct J3DAnmTransformKey {
 };
 
-/* top-level dependencies (begin ['daNpcCd2_c']) */
-// outer dependency: ('J3DModel',)
-// outer dependency: ('J3DJoint',)
-// outer dependency: ('J3DAnmTransformKey',)
-/* top-level dependencies (end ['daNpcCd2_c']) */
 struct daNpcCd2_c {
-	// ('J3DModel',)
-	// ('J3DJoint',)
-	// ('J3DAnmTransformKey',)
 	/* 80157D00 */ void NpcCreate(int);
 	/* 80157F28 */ void ObjCreate(int);
 	/* 80157F68 */ void ChairCreate(f32);
@@ -62,182 +43,89 @@ struct daNpcCd2_c {
 	/* 801599C4 */ void getTexAnmP(int);
 };
 
-// build J3DAnmTransformKey (['J3DAnmTransformKey']) True/True
-// build J3DModel (['J3DModel']) True/True
-// build PathTrace_c (['PathTrace_c']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ['PathTrace_c']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['PathTrace_c']) */
 struct PathTrace_c {
-	// ('Vec',)
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 80159A38 */ void setPath(int, int, int, cXyz*, bool);
 	/* 80159C14 */ void checkPoint(cXyz, f32);
 	/* 80159DC0 */ void checkPathEnd(cXyz, f32);
 	/* 80159E54 */ void getTargetPoint(Vec*);
 	/* 80159ECC */ void setAvoidPoint();
-	/* 80159F98 */ void setNextPoint(cXyz&);
 	/* 8015A0D0 */ void setNextPoint();
+	/* 80159F98 */ void setNextPoint(cXyz&);
 	/* 8015A264 */ void incIndex(int);
 	/* 8015A294 */ void decIndex(int);
 	/* 8015A370 */ void checkObstacle(fopAc_ac_c*);
 	/* 8015A3E4 */ void checkObstacleSub(fopAc_ac_c*);
 };
 
-// build cXyz (['cXyz']) True/True
-// build Vec (['Vec']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build daNpcCd2_HIO_c (['daNpcCd2_HIO_c']) False/False
-/* top-level dependencies (begin ['daNpcCd2_HIO_c']) */
-/* top-level dependencies (end ['daNpcCd2_HIO_c']) */
 struct daNpcCd2_HIO_c {
 	/* 8015A4D8 */ daNpcCd2_HIO_c();
 	/* 8015A860 */ ~daNpcCd2_HIO_c();
 };
 
-// build daNpcCd2_HIO_WChild_c (['daNpcCd2_HIO_WChild_c']) False/False
-/* top-level dependencies (begin ['daNpcCd2_HIO_WChild_c']) */
-/* top-level dependencies (end ['daNpcCd2_HIO_WChild_c']) */
 struct daNpcCd2_HIO_WChild_c {
 	/* 8015A678 */ ~daNpcCd2_HIO_WChild_c();
 	/* 8015A730 */ daNpcCd2_HIO_WChild_c();
 };
 
-// build daNpcCd2_HIO_Jnt_c (['daNpcCd2_HIO_Jnt_c']) False/False
-/* top-level dependencies (begin ['daNpcCd2_HIO_Jnt_c']) */
-/* top-level dependencies (end ['daNpcCd2_HIO_Jnt_c']) */
 struct daNpcCd2_HIO_Jnt_c {
 	/* 8015A6E8 */ ~daNpcCd2_HIO_Jnt_c();
 	/* 8015A788 */ daNpcCd2_HIO_Jnt_c();
 };
 
-// build daNpcCd2_HIO_MChild_c (['daNpcCd2_HIO_MChild_c']) False/False
-/* top-level dependencies (begin ['daNpcCd2_HIO_MChild_c']) */
-/* top-level dependencies (end ['daNpcCd2_HIO_MChild_c']) */
 struct daNpcCd2_HIO_MChild_c {
 	/* 8015A798 */ ~daNpcCd2_HIO_MChild_c();
 	/* 8015A808 */ daNpcCd2_HIO_MChild_c();
 };
 
-// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['mDoMtx_stack_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
-	// ('csXyz',)
-	// ('cXyz',)
 	/* 8000CD64 */ void transS(cXyz const&);
 	/* 8000CDD4 */ void transM(cXyz const&);
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-// build csXyz (['csXyz']) True/True
-// build mDoExt_btpAnm (['mDoExt_btpAnm']) False/False
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) False/False
-/* top-level dependencies (begin ['J3DAnmTexPattern']) */
-/* top-level dependencies (end ['J3DAnmTexPattern']) */
 struct J3DAnmTexPattern {
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) False/False
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) True/True
-/* top-level dependencies (begin ['J3DMaterialTable']) */
-// outer dependency: ('J3DAnmTexPattern',)
-/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
-	// ('J3DAnmTexPattern',)
 	/* 8032F6F8 */ void removeTexNoAnimator(J3DAnmTexPattern*);
 };
 
-/* top-level dependencies (begin ['mDoExt_btpAnm']) */
-// outer dependency: ('J3DAnmTexPattern',)
-// outer dependency: ('J3DMaterialTable',)
-/* top-level dependencies (end ['mDoExt_btpAnm']) */
 struct mDoExt_btpAnm {
-	// ('J3DAnmTexPattern',)
-	// ('J3DMaterialTable',)
 	/* 8000D54C */ void init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16);
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) True/True
-// build mDoExt_McaMorfSO (['mDoExt_McaMorfSO']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
-struct J3DModelData {
-};
-
-// build Z2Creature (['Z2Creature']) False/False
-/* top-level dependencies (begin ['Z2Creature']) */
-/* top-level dependencies (end ['Z2Creature']) */
-struct Z2Creature {
-};
-
-// build mDoExt_McaMorfCallBack2_c (['mDoExt_McaMorfCallBack2_c']) False/False
-/* top-level dependencies (begin ['mDoExt_McaMorfCallBack2_c']) */
-/* top-level dependencies (end ['mDoExt_McaMorfCallBack2_c']) */
-struct mDoExt_McaMorfCallBack2_c {
-};
-
-// build J3DAnmTransform (['J3DAnmTransform']) False/False
-/* top-level dependencies (begin ['J3DAnmTransform']) */
-/* top-level dependencies (end ['J3DAnmTransform']) */
-struct J3DAnmTransform {
-};
-
-// build mDoExt_McaMorfCallBack1_c (['mDoExt_McaMorfCallBack1_c']) False/False
-/* top-level dependencies (begin ['mDoExt_McaMorfCallBack1_c']) */
-/* top-level dependencies (end ['mDoExt_McaMorfCallBack1_c']) */
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-/* top-level dependencies (begin ['mDoExt_McaMorfSO']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('Z2Creature',)
-// outer dependency: ('mDoExt_McaMorfCallBack2_c',)
-// outer dependency: ('J3DAnmTransform',)
-// outer dependency: ('mDoExt_McaMorfCallBack1_c',)
-/* top-level dependencies (end ['mDoExt_McaMorfSO']) */
+struct mDoExt_McaMorfCallBack2_c {
+};
+
+struct J3DAnmTransform {
+};
+
+struct Z2Creature {
+};
+
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfSO {
-	// ('J3DModelData',)
-	// ('Z2Creature',)
-	// ('mDoExt_McaMorfCallBack1_c',)
-	// ('J3DAnmTransform',)
-	// ('mDoExt_McaMorfCallBack2_c',)
 	/* 800107D0 */ mDoExt_McaMorfSO(J3DModelData*, mDoExt_McaMorfCallBack1_c*, mDoExt_McaMorfCallBack2_c*, J3DAnmTransform*, int, f32, int, int, Z2Creature*, u32, u32);
 	/* 80010E70 */ void setAnm(J3DAnmTransform*, int, f32, f32, f32, f32);
 	/* 800110B0 */ void play(u32, s8);
@@ -245,82 +133,32 @@ struct mDoExt_McaMorfSO {
 	/* 80011310 */ void stopZelAnime();
 };
 
-// build J3DModelData (['J3DModelData']) True/True
-// build mDoExt_McaMorfCallBack1_c (['mDoExt_McaMorfCallBack1_c']) True/True
-// build mDoExt_McaMorfCallBack2_c (['mDoExt_McaMorfCallBack2_c']) True/True
-// build J3DAnmTransform (['J3DAnmTransform']) True/True
-// build Z2Creature (['Z2Creature']) True/True
-// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
-/* top-level dependencies (begin ['request_of_phase_process_class']) */
-/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build _GXTexObj (['_GXTexObj']) False/False
-/* top-level dependencies (begin ['_GXTexObj']) */
-/* top-level dependencies (end ['_GXTexObj']) */
 struct _GXTexObj {
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build dPa_control_c (['dPa_control_c']) False/False
-// build csXyz (['csXyz']) True/True
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
-struct dKy_tevstr_c {
-};
-
-// build cXyz (['cXyz']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) False/False
-/* top-level dependencies (begin ['dPa_levelEcallBack']) */
-/* top-level dependencies (end ['dPa_levelEcallBack']) */
 struct dPa_levelEcallBack {
 };
 
-/* top-level dependencies (begin ['dPa_control_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('_GXColor',)
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dPa_levelEcallBack',)
-/* top-level dependencies (end ['dPa_control_c']) */
+struct dKy_tevstr_c {
+};
+
 struct dPa_control_c {
-	// ('_GXColor',)
-	// ('dKy_tevstr_c',)
-	// ('dPa_levelEcallBack',)
-	// ('csXyz',)
-	// ('cXyz',)
-	// build level_c (['dPa_control_c', 'level_c']) False/False
-	/* dependencies (begin ['dPa_control_c', 'level_c']) */
-	/* dependencies (end ['dPa_control_c', 'level_c']) */
 	struct level_c {
 		/* 8004B918 */ void getEmitter(u32);
 	};
@@ -328,64 +166,28 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build dPa_levelEcallBack (['dPa_levelEcallBack']) True/True
-// build _GXColor (['_GXColor']) True/True
-// build dPath (['dPath']) False/False
-/* top-level dependencies (begin ['dPath']) */
-/* top-level dependencies (end ['dPath']) */
 struct dPath {
 };
 
-// build dBgS (['dBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-/* top-level dependencies (begin ['dBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// ('cBgS_PolyInfo',)
 	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
 };
 
-// build daPy_py_c (['daPy_py_c']) False/False
-/* top-level dependencies (begin ['daPy_py_c']) */
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-// build cXyz (['cXyz']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-/* top-level dependencies (begin ['dScnKy_env_light_c']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
-	// ('J3DModelData',)
-	// ('cXyz',)
-	// ('dKy_tevstr_c',)
 	/* 801A37C4 */ void settingTevStruct(int, cXyz*, dKy_tevstr_c*);
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-// build Z2CreatureCitizen (['Z2CreatureCitizen']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['Z2CreatureCitizen']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2CreatureCitizen']) */
 struct Z2CreatureCitizen {
-	// ('Vec',)
 	/* 802C0CE4 */ void init(Vec*, Vec*, u8, u8);
 	/* 802C0D48 */ void setMdlType(s8, bool, bool);
 };
 
-// build J3DFrameCtrl (['J3DFrameCtrl']) False/False
-/* top-level dependencies (begin ['J3DFrameCtrl']) */
-/* top-level dependencies (end ['J3DFrameCtrl']) */
 struct J3DFrameCtrl {
 	/* 803283FC */ void init(s16);
 };
@@ -394,56 +196,56 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void jntNodeCallBack(J3DJoint*, int);
-static void s_sub1(void*, void*);
-static void s_sub(void*, void*);
-extern "C" void __sinit_d_a_npc_cd2_cpp();
+static void jntNodeCallBack(J3DJoint*, int); // 2
+static void s_sub1(void*, void*); // 2
+static void s_sub(void*, void*); // 2
+extern "C" void __sinit_d_a_npc_cd2_cpp(); // 1
 
-extern "C" static void a_npc_d_a_npc_cd2__jntNodeCallBack__FP8J3DJointi();
-extern "C" void NpcCreate__10daNpcCd2_cFi();
-extern "C" void ObjCreate__10daNpcCd2_cFi();
-extern "C" void ChairCreate__10daNpcCd2_cFf();
-extern "C" void isM___10daNpcCd2_cFv();
-extern "C" void getAnmP__10daNpcCd2_cFii();
-extern "C" void setAttention__10daNpcCd2_cFi();
-extern "C" void loadResrc__10daNpcCd2_cFii();
-extern "C" void removeResrc__10daNpcCd2_cFii();
-extern "C" void setEnvTevCol__10daNpcCd2_cFv();
-extern "C" void setRoomNo__10daNpcCd2_cFv();
-extern "C" void animation__10daNpcCd2_cFi();
-extern "C" void setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii();
-extern "C" void drawShadow__10daNpcCd2_cFf();
-extern "C" void drawObj__10daNpcCd2_cFiP8J3DModelf();
-extern "C" void drawNpc__10daNpcCd2_cFv();
-extern "C" void jntNodeCB__10daNpcCd2_cFP8J3DJointP8J3DModel();
-extern "C" void setHitodamaParticle__10daNpcCd2_cFv();
-extern "C" static void s_sub1__FPvPv();
-extern "C" void getEscapeTag__10daNpcCd2_cFv();
-extern "C" void checkFearSituation__10daNpcCd2_cFv();
-extern "C" void getNpcMdlDataP__10daNpcCd2_cFi();
-extern "C" void getObjMdlDataP__10daNpcCd2_cFi();
-extern "C" void getTexAnmP__10daNpcCd2_cFi();
-extern "C" void setPath__11PathTrace_cFiiiP4cXyzb();
-extern "C" void checkPoint__11PathTrace_cF4cXyzf();
-extern "C" void checkPathEnd__11PathTrace_cF4cXyzf();
-extern "C" void getTargetPoint__11PathTrace_cFP3Vec();
-extern "C" void setAvoidPoint__11PathTrace_cFv();
-extern "C" void setNextPoint__11PathTrace_cFR4cXyz();
-extern "C" void setNextPoint__11PathTrace_cFv();
-extern "C" void incIndex__11PathTrace_cFi();
-extern "C" void decIndex__11PathTrace_cFi();
-extern "C" static void s_sub__FPvPv();
-extern "C" void checkObstacle__11PathTrace_cFP10fopAc_ac_c();
-extern "C" void checkObstacleSub__11PathTrace_cFP10fopAc_ac_c();
-extern "C" void __ct__14daNpcCd2_HIO_cFv();
-extern "C" void __dt__21daNpcCd2_HIO_WChild_cFv();
-extern "C" void __dt__18daNpcCd2_HIO_Jnt_cFv();
-extern "C" void __ct__21daNpcCd2_HIO_WChild_cFv();
-extern "C" void __ct__18daNpcCd2_HIO_Jnt_cFv();
-extern "C" void __dt__21daNpcCd2_HIO_MChild_cFv();
-extern "C" void __ct__21daNpcCd2_HIO_MChild_cFv();
-extern "C" void __dt__14daNpcCd2_HIO_cFv();
-extern "C" void __sinit_d_a_npc_cd2_cpp();
+extern "C" static void a_npc_d_a_npc_cd2__jntNodeCallBack__FP8J3DJointi(); // 1
+extern "C" void NpcCreate__10daNpcCd2_cFi(); // 1
+extern "C" void ObjCreate__10daNpcCd2_cFi(); // 1
+extern "C" void ChairCreate__10daNpcCd2_cFf(); // 1
+extern "C" void isM___10daNpcCd2_cFv(); // 1
+extern "C" void getAnmP__10daNpcCd2_cFii(); // 1
+extern "C" void setAttention__10daNpcCd2_cFi(); // 1
+extern "C" void loadResrc__10daNpcCd2_cFii(); // 1
+extern "C" void removeResrc__10daNpcCd2_cFii(); // 1
+extern "C" void setEnvTevCol__10daNpcCd2_cFv(); // 1
+extern "C" void setRoomNo__10daNpcCd2_cFv(); // 1
+extern "C" void animation__10daNpcCd2_cFi(); // 1
+extern "C" void setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii(); // 1
+extern "C" void drawShadow__10daNpcCd2_cFf(); // 1
+extern "C" void drawObj__10daNpcCd2_cFiP8J3DModelf(); // 1
+extern "C" void drawNpc__10daNpcCd2_cFv(); // 1
+extern "C" void jntNodeCB__10daNpcCd2_cFP8J3DJointP8J3DModel(); // 1
+extern "C" void setHitodamaParticle__10daNpcCd2_cFv(); // 1
+extern "C" static void s_sub1__FPvPv(); // 1
+extern "C" void getEscapeTag__10daNpcCd2_cFv(); // 1
+extern "C" void checkFearSituation__10daNpcCd2_cFv(); // 1
+extern "C" void getNpcMdlDataP__10daNpcCd2_cFi(); // 1
+extern "C" void getObjMdlDataP__10daNpcCd2_cFi(); // 1
+extern "C" void getTexAnmP__10daNpcCd2_cFi(); // 1
+extern "C" void setPath__11PathTrace_cFiiiP4cXyzb(); // 1
+extern "C" void checkPoint__11PathTrace_cF4cXyzf(); // 1
+extern "C" void checkPathEnd__11PathTrace_cF4cXyzf(); // 1
+extern "C" void getTargetPoint__11PathTrace_cFP3Vec(); // 1
+extern "C" void setAvoidPoint__11PathTrace_cFv(); // 1
+extern "C" void setNextPoint__11PathTrace_cFR4cXyz(); // 1
+extern "C" void setNextPoint__11PathTrace_cFv(); // 1
+extern "C" void incIndex__11PathTrace_cFi(); // 1
+extern "C" void decIndex__11PathTrace_cFi(); // 1
+extern "C" static void s_sub__FPvPv(); // 1
+extern "C" void checkObstacle__11PathTrace_cFP10fopAc_ac_c(); // 1
+extern "C" void checkObstacleSub__11PathTrace_cFP10fopAc_ac_c(); // 1
+extern "C" void __ct__14daNpcCd2_HIO_cFv(); // 1
+extern "C" void __dt__21daNpcCd2_HIO_WChild_cFv(); // 1
+extern "C" void __dt__18daNpcCd2_HIO_Jnt_cFv(); // 1
+extern "C" void __ct__21daNpcCd2_HIO_WChild_cFv(); // 1
+extern "C" void __ct__18daNpcCd2_HIO_Jnt_cFv(); // 1
+extern "C" void __dt__21daNpcCd2_HIO_MChild_cFv(); // 1
+extern "C" void __ct__21daNpcCd2_HIO_MChild_cFv(); // 1
+extern "C" void __dt__14daNpcCd2_HIO_cFv(); // 1
+extern "C" void __sinit_d_a_npc_cd2_cpp(); // 1
 SECTION_RODATA extern const void*const a_npc_d_a_npc_cd2__l_resMANa[6];
 SECTION_RODATA extern const u8 a_npc_d_a_npc_cd2__l_resMADa[24];
 SECTION_RODATA extern const u8 a_npc_d_a_npc_cd2__l_resMCNa[24];
@@ -559,112 +361,112 @@ SECTION_SDATA2 extern f64 lit_5359;
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-void mDoMtx_YrotM(f32 (* )[4], s16);
-void mDoExt_modelUpdateDL(J3DModel*);
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
-void fopAc_IsActor(void*);
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
-void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*);
-extern "C" void fpcEx_Search__FPFPvPv_PvPv();
-void dComIfG_resLoad(request_of_phase_process_class*, char const*);
-void dComIfG_resDelete(request_of_phase_process_class*, char const*);
-void dComIfGd_setSimpleShadow(cXyz*, f32, f32, cBgS_PolyInfo&, s16, f32, _GXTexObj*);
-void dPath_GetPnt(dPath const*, int);
-void dPath_GetRoomPath(int, int);
-extern "C" void func_8014D348();
-extern "C" void func_8014D364();
-void dKy_darkworld_check();
-void cM3d_Len2dSqPntAndSegLine(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*);
-void cLib_targetAngleY(Vec const*, Vec const*);
-void cLib_distanceAngleS(s16, s16);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECSquareDistance();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void pow();
+SECTION_INIT void memcpy(); // 1
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopAc_IsActor(void*); // 2
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
+void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*); // 2
+extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dComIfGd_setSimpleShadow(cXyz*, f32, f32, cBgS_PolyInfo&, s16, f32, _GXTexObj*); // 2
+void dPath_GetPnt(dPath const*, int); // 2
+void dPath_GetRoomPath(int, int); // 2
+void cLib_calcTimer__template2(int*); // 2
+void cLib_getRndValue__template0(int, int); // 2
+void dKy_darkworld_check(); // 2
+void cM3d_Len2dSqPntAndSegLine(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*); // 2
+void cLib_targetAngleY(Vec const*, Vec const*); // 2
+void cLib_distanceAngleS(s16, s16); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void pow(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void __dt__4cXyzFv();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
-extern "C" void transM__14mDoMtx_stack_cFRC4cXyz();
-extern "C" void scaleM__14mDoMtx_stack_cFfff();
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
-extern "C" void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss();
-extern "C" void entry__13mDoExt_btpAnmFP16J3DMaterialTables();
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
-extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff();
-extern "C" void play__16mDoExt_McaMorfSOFUlSc();
-extern "C" void entryDL__16mDoExt_McaMorfSOFv();
-extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv();
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern "C" void fopAc_IsActor__FPv();
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
-extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c();
-extern "C" void fpcEx_Search__FPFPvPv_PvPv();
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
-extern "C" void dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
-extern "C" void dPath_GetPnt__FPC5dPathi();
-extern "C" void dPath_GetRoomPath__Fii();
-extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void func_8014D348();
-extern "C" void func_8014D364();
-extern "C" void checkNowWolfEyeUp__9daPy_py_cFv();
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern "C" void dKy_darkworld_check__Fv();
-extern "C" void __ct__5csXyzFsss();
-extern "C" void cM3d_Len2dSqPntAndSegLine__FffffffPfPfPf();
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
-extern "C" void cLib_distanceAngleS__Fss();
-extern "C" void init__17Z2CreatureCitizenFP3VecP3VecUcUc();
-extern "C" void setMdlType__17Z2CreatureCitizenFScbb();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void init__12J3DFrameCtrlFs();
-extern "C" void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECSquareDistance();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void pow();
+SECTION_INIT void memcpy(); // 1
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void transM__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
+extern "C" void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss(); // 1
+extern "C" void entry__13mDoExt_btpAnmFP16J3DMaterialTables(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
+extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff(); // 1
+extern "C" void play__16mDoExt_McaMorfSOFUlSc(); // 1
+extern "C" void entryDL__16mDoExt_McaMorfSOFv(); // 1
+extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void fopAc_IsActor__FPv(); // 1
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
+extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
+extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
+extern "C" void dPath_GetPnt__FPC5dPathi(); // 1
+extern "C" void dPath_GetRoomPath__Fii(); // 1
+extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void func_8014D348(); // 1
+extern "C" void func_8014D364(); // 1
+extern "C" void checkNowWolfEyeUp__9daPy_py_cFv(); // 1
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void dKy_darkworld_check__Fv(); // 1
+extern "C" void __ct__5csXyzFsss(); // 1
+extern "C" void cM3d_Len2dSqPntAndSegLine__FffffffPfPfPf(); // 1
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
+extern "C" void cLib_distanceAngleS__Fss(); // 1
+extern "C" void init__17Z2CreatureCitizenFP3VecP3VecUcUc(); // 1
+extern "C" void setMdlType__17Z2CreatureCitizenFScbb(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void init__12J3DFrameCtrlFs(); // 1
+extern "C" void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void pow(); // 1
 SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 SECTION_DATA extern void*const __vt__18fOpAcm_HIO_entry_c[3];
 SECTION_DATA extern void*const __vt__14mDoHIO_entry_c[3];

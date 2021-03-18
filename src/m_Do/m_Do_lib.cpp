@@ -9,40 +9,22 @@
 // Types:
 // 
 
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-// build _GXTexObj (['_GXTexObj']) False/False
-/* top-level dependencies (begin ['_GXTexObj']) */
-/* top-level dependencies (end ['_GXTexObj']) */
 struct _GXTexObj {
 };
 
-// build _GXTlutObj (['_GXTlutObj']) False/False
-/* top-level dependencies (begin ['_GXTlutObj']) */
-/* top-level dependencies (end ['_GXTlutObj']) */
 struct _GXTlutObj {
 };
 
-// build mDoLib_clipper (['mDoLib_clipper']) False/False
-/* top-level dependencies (begin ['mDoLib_clipper']) */
-/* top-level dependencies (end ['mDoLib_clipper']) */
 struct mDoLib_clipper {
 	/* 8001528C */ void setup(f32, f32, f32, f32);
 };
 
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build J3DUClipper (['J3DUClipper']) False/False
-/* top-level dependencies (begin ['J3DUClipper']) */
-/* top-level dependencies (end ['J3DUClipper']) */
 struct J3DUClipper {
 	/* 80015590 */ ~J3DUClipper();
 	/* 80273778 */ void init();
@@ -53,17 +35,17 @@ struct J3DUClipper {
 // Forward References:
 // 
 
-void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*);
-void mDoLib_project(Vec*, Vec*);
-void mDoLib_pos2camera(Vec*, Vec*);
-extern "C" void __sinit_m_Do_lib_cpp();
+void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*); // 2
+void mDoLib_project(Vec*, Vec*); // 2
+void mDoLib_pos2camera(Vec*, Vec*); // 2
+extern "C" void __sinit_m_Do_lib_cpp(); // 1
 
-extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj();
-extern "C" void setup__14mDoLib_clipperFffff();
-extern "C" void mDoLib_project__FP3VecP3Vec();
-extern "C" void mDoLib_pos2camera__FP3VecP3Vec();
-extern "C" void __sinit_m_Do_lib_cpp();
-extern "C" void __dt__11J3DUClipperFv();
+extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj(); // 1
+extern "C" void setup__14mDoLib_clipperFffff(); // 1
+extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
+extern "C" void mDoLib_pos2camera__FP3VecP3Vec(); // 1
+extern "C" void __sinit_m_Do_lib_cpp(); // 1
+extern "C" void __dt__11J3DUClipperFv(); // 1
 SECTION_DATA extern void*const __vt__11J3DUClipper[4];
 SECTION_BSS extern u8 lit_3727[12];
 SECTION_BSS extern u8 mClipper__14mDoLib_clipper[92];
@@ -86,27 +68,27 @@ SECTION_SDATA2 extern f32 m_Do_m_Do_lib__lit_3791;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void PSMTXMultVec();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjCI();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXInitTlutObj();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjCI(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXInitTlutObj(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void init__11J3DUClipperFv();
-extern "C" void calcViewFrustum__11J3DUClipperFv();
-extern "C" void __dl__FPv();
-extern "C" void PSMTXMultVec();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjCI();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXInitTlutObj();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void init__11J3DUClipperFv(); // 1
+extern "C" void calcViewFrustum__11J3DUClipperFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjCI(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXInitTlutObj(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 

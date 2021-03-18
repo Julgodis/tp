@@ -9,29 +9,29 @@
 // Forward References:
 // 
 
-extern "C" void tanf();
-extern "C" void sinf();
-extern "C" void cosf();
-extern "C" void acosf();
+extern "C" void tanf(); // 1
+extern "C" void sinf(); // 1
+extern "C" void cosf(); // 1
+extern "C" void acosf(); // 1
 
-extern "C" void tanf();
-extern "C" void sinf();
-extern "C" void cosf();
-extern "C" void acosf();
+extern "C" void tanf(); // 1
+extern "C" void sinf(); // 1
+extern "C" void cosf(); // 1
+extern "C" void acosf(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void cos();
-extern "C" void sin();
-extern "C" void tan();
-extern "C" void acos();
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
+extern "C" void tan(); // 1
+extern "C" void acos(); // 1
 
-extern "C" void cos();
-extern "C" void sin();
-extern "C" void tan();
-extern "C" void acos();
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
+extern "C" void tan(); // 1
+extern "C" void acos(); // 1
 
 // 
 // Declarations:

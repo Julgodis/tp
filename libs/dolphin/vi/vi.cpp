@@ -9,55 +9,55 @@
 // Forward References:
 // 
 
-extern "C" static void __VIRetraceHandler();
-extern "C" void VISetPreRetraceCallback();
-extern "C" void VISetPostRetraceCallback();
-extern "C" static void getTiming();
-extern "C" static void __VIInit();
-extern "C" void VIInit();
-extern "C" void VIWaitForRetrace();
-extern "C" static void setFbbRegs();
-extern "C" static void setVerticalRegs();
-extern "C" void VIConfigure();
-extern "C" void VIFlush();
-extern "C" void VISetNextFrameBuffer();
-extern "C" void VIGetNextFrameBuffer();
-extern "C" void VIGetCurrentFrameBuffer();
-extern "C" void VISetBlack();
-extern "C" void VIGetRetraceCount();
-extern "C" static void GetCurrentDisplayPosition();
-extern "C" static void getCurrentFieldEvenOdd();
-extern "C" void VIGetNextField();
-extern "C" void VIGetCurrentLine();
-extern "C" void VIGetTvFormat();
-extern "C" void VIGetDTVStatus();
-extern "C" static void __VIDisplayPositionToXY();
-extern "C" static void __VIGetCurrentPosition();
+extern "C" static void __VIRetraceHandler(); // 1
+extern "C" void VISetPreRetraceCallback(); // 1
+extern "C" void VISetPostRetraceCallback(); // 1
+extern "C" static void getTiming(); // 1
+extern "C" static void __VIInit(); // 1
+extern "C" void VIInit(); // 1
+extern "C" void VIWaitForRetrace(); // 1
+extern "C" static void setFbbRegs(); // 1
+extern "C" static void setVerticalRegs(); // 1
+extern "C" void VIConfigure(); // 1
+extern "C" void VIFlush(); // 1
+extern "C" void VISetNextFrameBuffer(); // 1
+extern "C" void VIGetNextFrameBuffer(); // 1
+extern "C" void VIGetCurrentFrameBuffer(); // 1
+extern "C" void VISetBlack(); // 1
+extern "C" void VIGetRetraceCount(); // 1
+extern "C" static void GetCurrentDisplayPosition(); // 1
+extern "C" static void getCurrentFieldEvenOdd(); // 1
+extern "C" void VIGetNextField(); // 1
+extern "C" void VIGetCurrentLine(); // 1
+extern "C" void VIGetTvFormat(); // 1
+extern "C" void VIGetDTVStatus(); // 1
+extern "C" static void __VIDisplayPositionToXY(); // 1
+extern "C" static void __VIGetCurrentPosition(); // 1
 
-extern "C" static void __VIRetraceHandler();
-extern "C" void VISetPreRetraceCallback();
-extern "C" void VISetPostRetraceCallback();
-extern "C" static void getTiming();
-extern "C" static void __VIInit();
-extern "C" void VIInit();
-extern "C" void VIWaitForRetrace();
-extern "C" static void setFbbRegs();
-extern "C" static void setVerticalRegs();
-extern "C" void VIConfigure();
-extern "C" void VIFlush();
-extern "C" void VISetNextFrameBuffer();
-extern "C" void VIGetNextFrameBuffer();
-extern "C" void VIGetCurrentFrameBuffer();
-extern "C" void VISetBlack();
-extern "C" void VIGetRetraceCount();
-extern "C" static void GetCurrentDisplayPosition();
-extern "C" static void getCurrentFieldEvenOdd();
-extern "C" void VIGetNextField();
-extern "C" void VIGetCurrentLine();
-extern "C" void VIGetTvFormat();
-extern "C" void VIGetDTVStatus();
-extern "C" static void __VIDisplayPositionToXY();
-extern "C" static void __VIGetCurrentPosition();
+extern "C" static void __VIRetraceHandler(); // 1
+extern "C" void VISetPreRetraceCallback(); // 1
+extern "C" void VISetPostRetraceCallback(); // 1
+extern "C" static void getTiming(); // 1
+extern "C" static void __VIInit(); // 1
+extern "C" void VIInit(); // 1
+extern "C" void VIWaitForRetrace(); // 1
+extern "C" static void setFbbRegs(); // 1
+extern "C" static void setVerticalRegs(); // 1
+extern "C" void VIConfigure(); // 1
+extern "C" void VIFlush(); // 1
+extern "C" void VISetNextFrameBuffer(); // 1
+extern "C" void VIGetNextFrameBuffer(); // 1
+extern "C" void VIGetCurrentFrameBuffer(); // 1
+extern "C" void VISetBlack(); // 1
+extern "C" void VIGetRetraceCount(); // 1
+extern "C" static void GetCurrentDisplayPosition(); // 1
+extern "C" static void getCurrentFieldEvenOdd(); // 1
+extern "C" void VIGetNextField(); // 1
+extern "C" void VIGetCurrentLine(); // 1
+extern "C" void VIGetTvFormat(); // 1
+extern "C" void VIGetDTVStatus(); // 1
+extern "C" static void __VIDisplayPositionToXY(); // 1
+extern "C" static void __VIGetCurrentPosition(); // 1
 SECTION_DATA extern u8 vi__lit_1[68];
 SECTION_DATA extern u8 timing[380];
 SECTION_DATA extern u8 taps[50 + 2 /* padding */];
@@ -102,41 +102,41 @@ SECTION_SBSS extern u8 data_80451840[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport();
-extern "C" void OSPanic();
-extern "C" void OSRegisterVersion();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSUnmaskInterrupts();
-extern "C" void __OSLockSram();
-extern "C" void __OSUnlockSram();
-extern "C" void OSInitThreadQueue();
-extern "C" void OSSleepThread();
-extern "C" void OSWakeupThread();
-extern "C" void SIRefreshSamplingRate();
-extern "C" void __shl2i();
-extern "C" void __shr2u();
+extern "C" void OSReport(); // 1
+extern "C" void OSPanic(); // 1
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
+extern "C" void __OSLockSram(); // 1
+extern "C" void __OSUnlockSram(); // 1
+extern "C" void OSInitThreadQueue(); // 1
+extern "C" void OSSleepThread(); // 1
+extern "C" void OSWakeupThread(); // 1
+extern "C" void SIRefreshSamplingRate(); // 1
+extern "C" void __shl2i(); // 1
+extern "C" void __shr2u(); // 1
 
-extern "C" void OSReport();
-extern "C" void OSPanic();
-extern "C" void OSRegisterVersion();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSUnmaskInterrupts();
-extern "C" void __OSLockSram();
-extern "C" void __OSUnlockSram();
-extern "C" void OSInitThreadQueue();
-extern "C" void OSSleepThread();
-extern "C" void OSWakeupThread();
-extern "C" void SIRefreshSamplingRate();
-extern "C" void __shl2i();
-extern "C" void __shr2u();
+extern "C" void OSReport(); // 1
+extern "C" void OSPanic(); // 1
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
+extern "C" void __OSLockSram(); // 1
+extern "C" void __OSUnlockSram(); // 1
+extern "C" void OSInitThreadQueue(); // 1
+extern "C" void OSSleepThread(); // 1
+extern "C" void OSWakeupThread(); // 1
+extern "C" void SIRefreshSamplingRate(); // 1
+extern "C" void __shl2i(); // 1
+extern "C" void __shr2u(); // 1
 
 // 
 // Declarations:

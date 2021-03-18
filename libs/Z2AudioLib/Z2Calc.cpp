@@ -9,23 +9,10 @@
 // Types:
 // 
 
-// build Z2Calc (['Z2Calc']) False/False
-// build Z2Calc (['Z2Calc']) True/False
-struct Z2Calc;
-/* top-level dependencies (begin ['Z2Calc']) */
-// outer dependency: ('Z2Calc', 'CurveSign')
-/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
-	// ('Z2Calc', 'CurveSign')
-	// build CurveSign (['Z2Calc', 'CurveSign']) False/False
-	/* dependencies (begin ['Z2Calc', 'CurveSign']) */
-	/* dependencies (end ['Z2Calc', 'CurveSign']) */
 	struct CurveSign {
 	};
 
-	// build FNoise1f (['Z2Calc', 'FNoise1f']) False/False
-	/* dependencies (begin ['Z2Calc', 'FNoise1f']) */
-	/* dependencies (end ['Z2Calc', 'FNoise1f']) */
 	struct FNoise1f {
 		/* 802A9944 */ void setParam(f32, f32, f32);
 		/* 802A9958 */ void tau(f32);
@@ -38,13 +25,7 @@ struct Z2Calc {
 	/* 802A98D4 */ void getRandom_0_1();
 };
 
-// build JMath (['JMath']) False/False
-/* top-level dependencies (begin ['JMath']) */
-/* top-level dependencies (end ['JMath']) */
 struct JMath {
-	// build TRandom_fast_ (['JMath', 'TRandom_fast_']) False/False
-	/* dependencies (begin ['JMath', 'TRandom_fast_']) */
-	/* dependencies (end ['JMath', 'TRandom_fast_']) */
 	struct TRandom_fast_ {
 		/* 80339AE4 */ TRandom_fast_(u32);
 	};
@@ -56,13 +37,13 @@ struct JMath {
 // 
 
 
-extern "C" void linearTransform__6Z2CalcFfffffb();
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern "C" void getRandom__6Z2CalcFfff();
-extern "C" void getRandom_0_1__6Z2CalcFv();
-extern "C" void setParam__Q26Z2Calc8FNoise1fFfff();
-extern "C" void tau__Q26Z2Calc8FNoise1fFf();
-extern "C" void calcNoise1f__Q26Z2Calc8FNoise1fFv();
+extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
+extern "C" void getRandom__6Z2CalcFfff(); // 1
+extern "C" void getRandom_0_1__6Z2CalcFv(); // 1
+extern "C" void setParam__Q26Z2Calc8FNoise1fFfff(); // 1
+extern "C" void tau__Q26Z2Calc8FNoise1fFf(); // 1
+extern "C" void calcNoise1f__Q26Z2Calc8FNoise1fFv(); // 1
 SECTION_SBSS extern u8 data_80451330[4];
 SECTION_SBSS extern u8 data_80451334[4];
 SECTION_SDATA2 extern f32 cEqualCSlope__6Z2Calc;
@@ -76,12 +57,12 @@ SECTION_SDATA2 extern f32 lit_397;
 // External References:
 // 
 
-extern "C" void exp();
-extern "C" void pow();
+extern "C" void exp(); // 1
+extern "C" void pow(); // 1
 
-extern "C" void __ct__Q25JMath13TRandom_fast_FUl();
-extern "C" void exp();
-extern "C" void pow();
+extern "C" void __ct__Q25JMath13TRandom_fast_FUl(); // 1
+extern "C" void exp(); // 1
+extern "C" void pow(); // 1
 
 // 
 // Declarations:

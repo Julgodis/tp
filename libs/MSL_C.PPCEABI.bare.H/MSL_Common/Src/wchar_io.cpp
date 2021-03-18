@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void fwide();
+extern "C" void fwide(); // 1
 
-extern "C" void fwide();
+extern "C" void fwide(); // 1
 
 // 
 // External References:

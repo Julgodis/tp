@@ -9,11 +9,11 @@
 // Forward References:
 // 
 
-extern "C" void __flush_all();
-extern "C" void __close_all();
+extern "C" void __flush_all(); // 1
+extern "C" void __close_all(); // 1
 
-extern "C" void __flush_all();
-extern "C" void __close_all();
+extern "C" void __flush_all(); // 1
+extern "C" void __close_all(); // 1
 SECTION_DATA extern void*__files[80];
 SECTION_BSS extern u8 stderr_buff[256];
 SECTION_BSS extern u8 stdout_buff[256];
@@ -23,23 +23,23 @@ SECTION_BSS extern u8 stdin_buff[256];
 // External References:
 // 
 
-extern "C" void free();
-extern "C" void __end_critical_region();
-extern "C" void __begin_critical_region();
-extern "C" void fflush();
-extern "C" void fclose();
-extern "C" bool __close_console();
-extern "C" void __write_console();
-extern "C" void __read_console();
+extern "C" void free(); // 1
+extern "C" void __end_critical_region(); // 1
+extern "C" void __begin_critical_region(); // 1
+extern "C" void fflush(); // 1
+extern "C" void fclose(); // 1
+extern "C" bool __close_console(); // 1
+extern "C" void __write_console(); // 1
+extern "C" void __read_console(); // 1
 
-extern "C" void free();
-extern "C" void __end_critical_region();
-extern "C" void __begin_critical_region();
-extern "C" void fflush();
-extern "C" void fclose();
-extern "C" bool __close_console();
-extern "C" void __write_console();
-extern "C" void __read_console();
+extern "C" void free(); // 1
+extern "C" void __end_critical_region(); // 1
+extern "C" void __begin_critical_region(); // 1
+extern "C" void fflush(); // 1
+extern "C" void fclose(); // 1
+extern "C" bool __close_console(); // 1
+extern "C" void __write_console(); // 1
+extern "C" void __read_console(); // 1
 
 // 
 // Declarations:

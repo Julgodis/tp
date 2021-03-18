@@ -9,26 +9,13 @@
 // Types:
 // 
 
-// build dFile_info_c (['dFile_info_c']) False/False
-// build dSv_save_c (['dSv_save_c']) False/False
-/* top-level dependencies (begin ['dSv_save_c']) */
-/* top-level dependencies (end ['dSv_save_c']) */
 struct dSv_save_c {
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['dFile_info_c']) */
-// outer dependency: ('dSv_save_c',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['dFile_info_c']) */
 struct dFile_info_c {
-	// ('dSv_save_c',)
-	// ('JKRArchive',)
 	/* 80192434 */ dFile_info_c(JKRArchive*, u8);
 	/* 801924A0 */ ~dFile_info_c();
 	/* 80192570 */ void screenSet();
@@ -41,91 +28,41 @@ struct dFile_info_c {
 	/* 80192D60 */ void _draw();
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build dSv_save_c (['dSv_save_c']) True/True
-// build dDlst_FileInfo_c (['dDlst_FileInfo_c']) False/False
-/* top-level dependencies (begin ['dDlst_FileInfo_c']) */
-/* top-level dependencies (end ['dDlst_FileInfo_c']) */
 struct dDlst_FileInfo_c {
 	/* 80192D9C */ void draw();
 	/* 80192EC8 */ ~dDlst_FileInfo_c();
 };
 
-// build dDlst_list_c (['dDlst_list_c']) False/False
-// build dDlst_base_c (['dDlst_base_c']) False/False
-/* top-level dependencies (begin ['dDlst_base_c']) */
-/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin ['dDlst_list_c']) */
-// outer dependency: ('dDlst_base_c',)
-/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (['dDlst_base_c']) True/True
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
-/* top-level dependencies (begin ['JMSMesgEntry_c']) */
-/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-// outer dependency: ('JMSMesgEntry_c',)
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// ('JMSMesgEntry_c',)
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 };
 
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
-struct JKRExpHeap {
-};
-
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
 	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 	/* 8030074C */ void setString(s16, char const*, ...);
@@ -135,21 +72,21 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_file_sel_info_cpp();
+extern "C" void __sinit_d_file_sel_info_cpp(); // 1
 
-extern "C" void __ct__12dFile_info_cFP10JKRArchiveUc();
-extern "C" void __dt__12dFile_info_cFv();
-extern "C" void screenSet__12dFile_info_cFv();
-extern "C" void setSaveData__12dFile_info_cFP10dSv_save_ciUc();
-extern "C" void setHeartCnt__12dFile_info_cFP10dSv_save_c();
-extern "C" void setSaveDate__12dFile_info_cFP10dSv_save_c();
-extern "C" void setPlayTime__12dFile_info_cFP10dSv_save_c();
-extern "C" void modeWait__12dFile_info_cFv();
-extern "C" void modeMove__12dFile_info_cFv();
-extern "C" void _draw__12dFile_info_cFv();
-extern "C" void draw__16dDlst_FileInfo_cFv();
-extern "C" void __sinit_d_file_sel_info_cpp();
-extern "C" void __dt__16dDlst_FileInfo_cFv();
+extern "C" void __ct__12dFile_info_cFP10JKRArchiveUc(); // 1
+extern "C" void __dt__12dFile_info_cFv(); // 1
+extern "C" void screenSet__12dFile_info_cFv(); // 1
+extern "C" void setSaveData__12dFile_info_cFP10dSv_save_ciUc(); // 1
+extern "C" void setHeartCnt__12dFile_info_cFP10dSv_save_c(); // 1
+extern "C" void setSaveDate__12dFile_info_cFP10dSv_save_c(); // 1
+extern "C" void setPlayTime__12dFile_info_cFP10dSv_save_c(); // 1
+extern "C" void modeWait__12dFile_info_cFv(); // 1
+extern "C" void modeMove__12dFile_info_cFv(); // 1
+extern "C" void _draw__12dFile_info_cFv(); // 1
+extern "C" void draw__16dDlst_FileInfo_cFv(); // 1
+extern "C" void __sinit_d_file_sel_info_cpp(); // 1
+extern "C" void __dt__16dDlst_FileInfo_cFv(); // 1
 SECTION_RODATA extern const u8 d_file_d_file_sel_info__stringBase0[88];
 SECTION_DATA extern u8 d_file_d_file_sel_info__cNullVec__6Z2Calc[12 + 4 /* padding */];
 SECTION_DATA extern u8 data_803BB4A8[160];
@@ -166,55 +103,55 @@ SECTION_SDATA2 extern u8 d_file_d_file_sel_info__lit_4001[4];
 // External References:
 // 
 
-void mDoExt_getMesgFont();
-void mDoExt_removeMesgFont();
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void OSTicksToCalendarTime();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXScale();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void __div2i();
-extern "C" void __mod2i();
-extern "C" void sprintf();
-extern "C" void strcpy();
+void mDoExt_getMesgFont(); // 2
+void mDoExt_removeMesgFont(); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void OSTicksToCalendarTime(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXScale(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void __div2i(); // 1
+extern "C" void __mod2i(); // 1
+extern "C" void sprintf(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void mDoExt_removeMesgFont__Fv();
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void getStringPtr__10J2DTextBoxCFv();
-extern "C" void setString__10J2DTextBoxFsPCce();
-extern "C" void OSTicksToCalendarTime();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXScale();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void __div2i();
-extern "C" void __mod2i();
-extern "C" void sprintf();
-extern "C" void strcpy();
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void mDoExt_removeMesgFont__Fv(); // 1
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
+extern "C" void setString__10J2DTextBoxFsPCce(); // 1
+extern "C" void OSTicksToCalendarTime(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXScale(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void __div2i(); // 1
+extern "C" void __mod2i(); // 1
+extern "C" void sprintf(); // 1
+extern "C" void strcpy(); // 1
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_meter2_info[248];

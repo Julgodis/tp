@@ -9,27 +9,15 @@
 // Types:
 // 
 
-// build J2DDataManage (['J2DDataManage']) False/False
-// build JSUInputStream (['JSUInputStream']) False/False
-/* top-level dependencies (begin ['JSUInputStream']) */
-/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC298 */ void read(void*, s32);
 };
 
-/* top-level dependencies (begin ['J2DDataManage']) */
-// outer dependency: ('JSUInputStream',)
-/* top-level dependencies (end ['J2DDataManage']) */
 struct J2DDataManage {
-	// ('JSUInputStream',)
 	/* 8030CE18 */ void get(char const*);
 	/* 8030CE7C */ void get(JSUInputStream*);
 };
 
-// build JSUInputStream (['JSUInputStream']) True/True
-// build J2DResReference (['J2DResReference']) False/False
-/* top-level dependencies (begin ['J2DResReference']) */
-/* top-level dependencies (end ['J2DResReference']) */
 struct J2DResReference {
 	/* 8030CF10 */ void getResReference(u16) const;
 	/* 8030CF44 */ void getName(u16) const;
@@ -40,24 +28,24 @@ struct J2DResReference {
 // 
 
 
-extern "C" void get__13J2DDataManageFPCc();
-extern "C" void get__13J2DDataManageFP14JSUInputStream();
-extern "C" void getResReference__15J2DResReferenceCFUs();
-extern "C" void getName__15J2DResReferenceCFUs();
+extern "C" void get__13J2DDataManageFPCc(); // 1
+extern "C" void get__13J2DDataManageFP14JSUInputStream(); // 1
+extern "C" void getResReference__15J2DResReferenceCFUs(); // 1
+extern "C" void getName__15J2DResReferenceCFUs(); // 1
 SECTION_BSS extern u8 data_804349C0[257 + 7 /* padding */];
 
 // 
 // External References:
 // 
 
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void read__14JSUInputStreamFPvl();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+extern "C" void read__14JSUInputStreamFPvl(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 
 // 
 // Declarations:

@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build cBgS_LinChk (['cBgS_LinChk']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['cBgS_LinChk']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cBgS_LinChk']) */
 struct cBgS_LinChk {
-	// ('cXyz',)
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
 	/* 80267E48 */ void ct();
@@ -28,31 +20,18 @@ struct cBgS_LinChk {
 	/* 80267F40 */ void PreCalc();
 };
 
-// build cXyz (['cXyz']) True/True
-// build cBgS_Chk (['cBgS_Chk']) False/False
-/* top-level dependencies (begin ['cBgS_Chk']) */
-/* top-level dependencies (end ['cBgS_Chk']) */
 struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 	/* 80268074 */ cBgS_PolyInfo();
 	/* 802680B0 */ ~cBgS_PolyInfo();
 	/* 80268120 */ void ClearPi();
 };
 
-// build cM3dGLin (['cM3dGLin']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGLin']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// ('cXyz',)
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 };
 
@@ -60,33 +39,33 @@ struct cM3dGLin {
 // Forward References:
 // 
 
-extern "C" static void func_80267F80();
+extern "C" static void func_80267F80(); // 1
 
-extern "C" void __ct__11cBgS_LinChkFv();
-extern "C" void __dt__11cBgS_LinChkFv();
-extern "C" void ct__11cBgS_LinChkFv();
-extern "C" void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi();
-extern "C" void PreCalc__11cBgS_LinChkFv();
-extern "C" static void func_80267F80();
+extern "C" void __ct__11cBgS_LinChkFv(); // 1
+extern "C" void __dt__11cBgS_LinChkFv(); // 1
+extern "C" void ct__11cBgS_LinChkFv(); // 1
+extern "C" void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi(); // 1
+extern "C" void PreCalc__11cBgS_LinChkFv(); // 1
+extern "C" static void func_80267F80(); // 1
 SECTION_DATA extern void*const __vt__11cBgS_LinChk[6];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __ct__8cBgS_ChkFv();
-extern "C" void __dt__8cBgS_ChkFv();
-extern "C" void __ct__13cBgS_PolyInfoFv();
-extern "C" void __dt__13cBgS_PolyInfoFv();
-extern "C" void ClearPi__13cBgS_PolyInfoFv();
-extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
-extern "C" void __dl__FPv();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void __ct__8cBgS_ChkFv(); // 1
+extern "C" void __dt__8cBgS_ChkFv(); // 1
+extern "C" void __ct__13cBgS_PolyInfoFv(); // 1
+extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
+extern "C" void ClearPi__13cBgS_PolyInfoFv(); // 1
+extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGLin[3];
 SECTION_BSS extern u8 Zero__4cXyz[12];
 

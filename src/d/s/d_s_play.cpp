@@ -9,143 +9,78 @@
 // Types:
 // 
 
-// build dScnPly_c (['dScnPly_c']) False/False
-/* top-level dependencies (begin ['dScnPly_c']) */
-/* top-level dependencies (end ['dScnPly_c']) */
 struct dScnPly_c {
 	/* 80259400 */ void calcPauseTimer();
 	/* 80259AC4 */ void resetGame();
 	/* 80259BFC */ void offReset();
 };
 
-// build dScnPly_env_otherHIO_c (['dScnPly_env_otherHIO_c']) False/False
-/* top-level dependencies (begin ['dScnPly_env_otherHIO_c']) */
-/* top-level dependencies (end ['dScnPly_env_otherHIO_c']) */
 struct dScnPly_env_otherHIO_c {
 	/* 80259440 */ dScnPly_env_otherHIO_c();
 	/* 8025AC0C */ ~dScnPly_env_otherHIO_c();
 };
 
-// build dScnPly_env_debugHIO_c (['dScnPly_env_debugHIO_c']) False/False
-/* top-level dependencies (begin ['dScnPly_env_debugHIO_c']) */
-/* top-level dependencies (end ['dScnPly_env_debugHIO_c']) */
 struct dScnPly_env_debugHIO_c {
 	/* 80259468 */ dScnPly_env_debugHIO_c();
 	/* 8025ABC4 */ ~dScnPly_env_debugHIO_c();
 };
 
-// build scene_class (['scene_class']) False/False
-/* top-level dependencies (begin ['scene_class']) */
-/* top-level dependencies (end ['scene_class']) */
 struct scene_class {
 };
 
-// build dScnPly_env_HIO_c (['dScnPly_env_HIO_c']) False/False
-/* top-level dependencies (begin ['dScnPly_env_HIO_c']) */
-/* top-level dependencies (end ['dScnPly_env_HIO_c']) */
 struct dScnPly_env_HIO_c {
 	/* 8025AD04 */ ~dScnPly_env_HIO_c();
 };
 
-// build dScnPly_reg_HIO_c (['dScnPly_reg_HIO_c']) False/False
-/* top-level dependencies (begin ['dScnPly_reg_HIO_c']) */
-/* top-level dependencies (end ['dScnPly_reg_HIO_c']) */
 struct dScnPly_reg_HIO_c {
 	/* 8025AD78 */ ~dScnPly_reg_HIO_c();
 };
 
-// build dScnPly_preLoad_HIO_c (['dScnPly_preLoad_HIO_c']) False/False
-/* top-level dependencies (begin ['dScnPly_preLoad_HIO_c']) */
-/* top-level dependencies (end ['dScnPly_preLoad_HIO_c']) */
 struct dScnPly_preLoad_HIO_c {
 	/* 8025ADC0 */ ~dScnPly_preLoad_HIO_c();
 };
 
-// build mDoGph_gInf_c (['mDoGph_gInf_c']) False/False
-/* top-level dependencies (begin ['mDoGph_gInf_c']) */
-/* top-level dependencies (end ['mDoGph_gInf_c']) */
 struct mDoGph_gInf_c {
-	// build bloom_c (['mDoGph_gInf_c', 'bloom_c']) False/False
-	/* dependencies (begin ['mDoGph_gInf_c', 'bloom_c']) */
-	/* dependencies (end ['mDoGph_gInf_c', 'bloom_c']) */
 	struct bloom_c {
 		/* 800095F8 */ void remove();
 	};
 
 };
 
-// build cDylPhs (['cDylPhs']) False/False
-// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
-/* top-level dependencies (begin ['request_of_phase_process_class']) */
-/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 
-/* top-level dependencies (begin ['cDylPhs']) */
-// outer dependency: ('request_of_phase_process_class',)
-/* top-level dependencies (end ['cDylPhs']) */
 struct cDylPhs {
-	// ('request_of_phase_process_class',)
 	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
 	/* 80018890 */ void Unlink(request_of_phase_process_class*, s16);
 };
 
-// build request_of_phase_process_class (['request_of_phase_process_class']) True/True
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 };
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
-/* top-level dependencies (begin ['dStage_roomControl_c']) */
-/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024954 */ void resetArchiveBank(int);
 };
 
-// build stage_stag_info_class (['stage_stag_info_class']) False/False
-/* top-level dependencies (begin ['stage_stag_info_class']) */
-/* top-level dependencies (end ['stage_stag_info_class']) */
 struct stage_stag_info_class {
 };
 
-// build dComIfG_play_c (['dComIfG_play_c']) False/False
-// build dStage_startStage_c (['dStage_startStage_c']) False/False
-/* top-level dependencies (begin ['dStage_startStage_c']) */
-/* top-level dependencies (end ['dStage_startStage_c']) */
 struct dStage_startStage_c {
 };
 
-/* top-level dependencies (begin ['dComIfG_play_c']) */
-// outer dependency: ('dStage_startStage_c',)
-/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
-	// ('dStage_startStage_c',)
 	/* 8002B22C */ void init();
 	/* 8002B3B8 */ void setStartStage(dStage_startStage_c*);
 	/* 8002B434 */ void getLayerNo_common_common(char const*, int, int);
@@ -155,117 +90,66 @@ struct dComIfG_play_c {
 	/* 8002CA70 */ void deleteSimpleModel();
 };
 
-// build dStage_startStage_c (['dStage_startStage_c']) True/True
-// build daSus_c (['daSus_c']) False/False
-/* top-level dependencies (begin ['daSus_c']) */
-/* top-level dependencies (end ['daSus_c']) */
 struct daSus_c {
 	/* 800313BC */ void reset();
 	/* 800315A4 */ void execute();
 };
 
-// build dSv_player_status_b_c (['dSv_player_status_b_c']) False/False
-/* top-level dependencies (begin ['dSv_player_status_b_c']) */
-/* top-level dependencies (end ['dSv_player_status_b_c']) */
 struct dSv_player_status_b_c {
 	/* 80032B94 */ void onDarkClearLV(int);
 	/* 80032BD0 */ void onTransformLV(int);
 };
 
-// build dSv_player_item_c (['dSv_player_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_c']) */
-/* top-level dependencies (end ['dSv_player_item_c']) */
 struct dSv_player_item_c {
 	/* 80032FB8 */ void setItem(int, u8);
 };
 
-// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_get_item_c']) */
-/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033E60 */ void onFirstBit(u8);
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 };
 
-// build dSv_danBit_c (['dSv_danBit_c']) False/False
-/* top-level dependencies (begin ['dSv_danBit_c']) */
-/* top-level dependencies (end ['dSv_danBit_c']) */
 struct dSv_danBit_c {
 	/* 80034B98 */ void onSwitch(int);
 };
 
-// build dSv_info_c (['dSv_info_c']) False/False
-/* top-level dependencies (begin ['dSv_info_c']) */
-/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80034FCC */ void init();
 };
 
-// build dDemo_c (['dDemo_c']) False/False
-/* top-level dependencies (begin ['dDemo_c']) */
-/* top-level dependencies (end ['dDemo_c']) */
 struct dDemo_c {
 	/* 80039678 */ void create();
 	/* 80039910 */ void remove();
 	/* 80039DA4 */ void update();
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
-	// ('JKRHeap',)
 	/* 8003C078 */ void setRes(char const*, dRes_info_c*, int, char const*, u8, JKRHeap*);
 	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, int);
 	/* 8003C470 */ void syncAllRes(dRes_info_c*, int);
 	/* 8003C5BC */ void setStageRes(char const*, JKRHeap*);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build dMpath_c (['dMpath_c']) False/False
-/* top-level dependencies (begin ['dMpath_c']) */
-/* top-level dependencies (end ['dMpath_c']) */
 struct dMpath_c {
 	/* 8003FB70 */ void create();
 	/* 8003FC70 */ void remove();
 };
 
-// build dEvt_control_c (['dEvt_control_c']) False/False
-/* top-level dependencies (begin ['dEvt_control_c']) */
-/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
 	/* 80042BBC */ void Step();
 	/* 800431E8 */ void remove();
 };
 
-// build dPa_control_c (['dPa_control_c']) False/False
-// build mDoDvdThd_toMainRam_c (['mDoDvdThd_toMainRam_c']) False/False
-/* top-level dependencies (begin ['mDoDvdThd_toMainRam_c']) */
-/* top-level dependencies (end ['mDoDvdThd_toMainRam_c']) */
 struct mDoDvdThd_toMainRam_c {
 };
 
-/* top-level dependencies (begin ['dPa_control_c']) */
-// outer dependency: ('mDoDvdThd_toMainRam_c',)
-/* top-level dependencies (end ['dPa_control_c']) */
 struct dPa_control_c {
-	// ('mDoDvdThd_toMainRam_c',)
 	/* 8004BDFC */ void readScene(u8, mDoDvdThd_toMainRam_c**);
 	/* 8004BEB0 */ void createScene(void const*);
 	/* 8004BFD4 */ void removeScene(bool);
@@ -274,18 +158,11 @@ struct dPa_control_c {
 	/* 8004C0EC */ void calc2D();
 };
 
-// build mDoDvdThd_toMainRam_c (['mDoDvdThd_toMainRam_c']) True/True
-// build dDlst_window_c (['dDlst_window_c']) False/False
-/* top-level dependencies (begin ['dDlst_window_c']) */
-/* top-level dependencies (end ['dDlst_window_c']) */
 struct dDlst_window_c {
 	/* 80051AC0 */ void setViewPort(f32, f32, f32, f32, f32, f32);
 	/* 80051ADC */ void setScissor(f32, f32, f32, f32);
 };
 
-// build dVibration_c (['dVibration_c']) False/False
-/* top-level dependencies (begin ['dVibration_c']) */
-/* top-level dependencies (end ['dVibration_c']) */
 struct dVibration_c {
 	/* 8006F268 */ void Run();
 	/* 8006FF04 */ void Init();
@@ -293,36 +170,21 @@ struct dVibration_c {
 	/* 8006FFF8 */ void Remove();
 };
 
-// build dAttention_c (['dAttention_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ['dAttention_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dAttention_c']) */
 struct dAttention_c {
-	// ('fopAc_ac_c',)
 	/* 80070198 */ dAttention_c(fopAc_ac_c*, u32);
 	/* 80070774 */ ~dAttention_c();
 	/* 80072924 */ void Run();
 	/* 80072BD4 */ void Draw();
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build dBgS (['dBgS']) False/False
-/* top-level dependencies (begin ['dBgS']) */
-/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
 	/* 8007493C */ void ClrMoveFlag();
 	/* 800749A8 */ void Move();
 };
 
-// build dCcS (['dCcS']) False/False
-/* top-level dependencies (begin ['dCcS']) */
-/* top-level dependencies (end ['dCcS']) */
 struct dCcS {
 	/* 80085ED4 */ void Ct();
 	/* 80085F08 */ void Dt();
@@ -330,63 +192,36 @@ struct dCcS {
 	/* 800872D0 */ void Draw();
 };
 
-// build dTres_c (['dTres_c']) False/False
-/* top-level dependencies (begin ['dTres_c']) */
-/* top-level dependencies (end ['dTres_c']) */
 struct dTres_c {
 	/* 8009BC18 */ void create();
 	/* 8009BC60 */ void remove();
 };
 
-// build dMdl_mng_c (['dMdl_mng_c']) False/False
-/* top-level dependencies (begin ['dMdl_mng_c']) */
-/* top-level dependencies (end ['dMdl_mng_c']) */
 struct dMdl_mng_c {
 	/* 8009C7AC */ void create();
 	/* 8009C864 */ void remove();
 	/* 8009C8C0 */ void reset();
 };
 
-// build dEyeHL_mng_c (['dEyeHL_mng_c']) False/False
-/* top-level dependencies (begin ['dEyeHL_mng_c']) */
-/* top-level dependencies (end ['dEyeHL_mng_c']) */
 struct dEyeHL_mng_c {
 	/* 8009CA48 */ void update();
 };
 
-// build daPy_py_c (['daPy_py_c']) False/False
-/* top-level dependencies (begin ['daPy_py_c']) */
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 8015F660 */ void checkRoomRestartStart();
 };
 
-// build dMsgObject_c (['dMsgObject_c']) False/False
-// build mDoDvdThd_mountXArchive_c (['mDoDvdThd_mountXArchive_c']) False/False
-/* top-level dependencies (begin ['mDoDvdThd_mountXArchive_c']) */
-/* top-level dependencies (end ['mDoDvdThd_mountXArchive_c']) */
 struct mDoDvdThd_mountXArchive_c {
 };
 
-/* top-level dependencies (begin ['dMsgObject_c']) */
-// outer dependency: ('mDoDvdThd_mountXArchive_c',)
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
-	// ('mDoDvdThd_mountXArchive_c',)
 	/* 8023800C */ void readMessageGroup(mDoDvdThd_mountXArchive_c**);
 };
 
-// build mDoDvdThd_mountXArchive_c (['mDoDvdThd_mountXArchive_c']) True/True
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 	/* 80268120 */ void ClearPi();
 };
 
-// build Z2SceneMgr (['Z2SceneMgr']) False/False
-/* top-level dependencies (begin ['Z2SceneMgr']) */
-/* top-level dependencies (end ['Z2SceneMgr']) */
 struct Z2SceneMgr {
 	/* 802B68B0 */ void setInDarkness(bool);
 	/* 802BA09C */ void check1stDynamicWave();
@@ -394,9 +229,6 @@ struct Z2SceneMgr {
 	/* 802BA294 */ void sceneBgmStart();
 };
 
-// build JUTAssertion (['JUTAssertion']) False/False
-/* top-level dependencies (begin ['JUTAssertion']) */
-/* top-level dependencies (end ['JUTAssertion']) */
 struct JUTAssertion {
 	/* 802E4C3C */ void setMessageCount(int);
 };
@@ -405,51 +237,51 @@ struct JUTAssertion {
 // Forward References:
 // 
 
-static void dScnPly_Draw(dScnPly_c*);
-static void dScnPly_Execute(dScnPly_c*);
-static void dScnPly_IsDelete(dScnPly_c);
-static void dScnPly_Delete(dScnPly_c*);
-static void phase_00(dScnPly_c*);
-static void phase_01(dScnPly_c*);
-static s32 phase_0(dScnPly_c*);
-static void phase_1(dScnPly_c*);
-static void phase_1_0(dScnPly_c*);
-static void phase_2(dScnPly_c*);
-static void phase_3(dScnPly_c*);
-static void phase_4(dScnPly_c*);
-static void phase_5(dScnPly_c*);
-static void phase_6(dScnPly_c*);
-static s32 phase_compleate(void*);
-static void dScnPly_Create(scene_class*);
-extern "C" void __sinit_d_s_play_cpp();
+static void dScnPly_Draw(dScnPly_c*); // 2
+static void dScnPly_Execute(dScnPly_c*); // 2
+static void dScnPly_IsDelete(dScnPly_c); // 2
+static void dScnPly_Delete(dScnPly_c*); // 2
+static void phase_00(dScnPly_c*); // 2
+static void phase_01(dScnPly_c*); // 2
+static s32 phase_0(dScnPly_c*); // 2
+static void phase_1(dScnPly_c*); // 2
+static void phase_1_0(dScnPly_c*); // 2
+static void phase_2(dScnPly_c*); // 2
+static void phase_3(dScnPly_c*); // 2
+static void phase_4(dScnPly_c*); // 2
+static void phase_5(dScnPly_c*); // 2
+static void phase_6(dScnPly_c*); // 2
+static s32 phase_compleate(void*); // 2
+static void dScnPly_Create(scene_class*); // 2
+extern "C" void __sinit_d_s_play_cpp(); // 1
 
-extern "C" void calcPauseTimer__9dScnPly_cFv();
-extern "C" void __ct__22dScnPly_env_otherHIO_cFv();
-extern "C" void __ct__22dScnPly_env_debugHIO_cFv();
-extern "C" static void dScnPly_Draw__FP9dScnPly_c();
-extern "C" static void dScnPly_Execute__FP9dScnPly_c();
-extern "C" static void dScnPly_IsDelete__F9dScnPly_c();
-extern "C" static void dScnPly_Delete__FP9dScnPly_c();
-extern "C" void resetGame__9dScnPly_cFv();
-extern "C" void offReset__9dScnPly_cFv();
-extern "C" static void phase_00__FP9dScnPly_c();
-extern "C" static void phase_01__FP9dScnPly_c();
-extern "C" static s32 phase_0__FP9dScnPly_c();
-extern "C" static void phase_1__FP9dScnPly_c();
-extern "C" static void phase_1_0__FP9dScnPly_c();
-extern "C" static void phase_2__FP9dScnPly_c();
-extern "C" static void phase_3__FP9dScnPly_c();
-extern "C" static void phase_4__FP9dScnPly_c();
-extern "C" static void phase_5__FP9dScnPly_c();
-extern "C" static void phase_6__FP9dScnPly_c();
-extern "C" static s32 phase_compleate__FPv();
-extern "C" static void dScnPly_Create__FP11scene_class();
-extern "C" void __dt__22dScnPly_env_debugHIO_cFv();
-extern "C" void __dt__22dScnPly_env_otherHIO_cFv();
-extern "C" void __sinit_d_s_play_cpp();
-extern "C" void __dt__17dScnPly_env_HIO_cFv();
-extern "C" void __dt__17dScnPly_reg_HIO_cFv();
-extern "C" void __dt__21dScnPly_preLoad_HIO_cFv();
+extern "C" void calcPauseTimer__9dScnPly_cFv(); // 1
+extern "C" void __ct__22dScnPly_env_otherHIO_cFv(); // 1
+extern "C" void __ct__22dScnPly_env_debugHIO_cFv(); // 1
+extern "C" static void dScnPly_Draw__FP9dScnPly_c(); // 1
+extern "C" static void dScnPly_Execute__FP9dScnPly_c(); // 1
+extern "C" static void dScnPly_IsDelete__F9dScnPly_c(); // 1
+extern "C" static void dScnPly_Delete__FP9dScnPly_c(); // 1
+extern "C" void resetGame__9dScnPly_cFv(); // 1
+extern "C" void offReset__9dScnPly_cFv(); // 1
+extern "C" static void phase_00__FP9dScnPly_c(); // 1
+extern "C" static void phase_01__FP9dScnPly_c(); // 1
+extern "C" static s32 phase_0__FP9dScnPly_c(); // 1
+extern "C" static void phase_1__FP9dScnPly_c(); // 1
+extern "C" static void phase_1_0__FP9dScnPly_c(); // 1
+extern "C" static void phase_2__FP9dScnPly_c(); // 1
+extern "C" static void phase_3__FP9dScnPly_c(); // 1
+extern "C" static void phase_4__FP9dScnPly_c(); // 1
+extern "C" static void phase_5__FP9dScnPly_c(); // 1
+extern "C" static void phase_6__FP9dScnPly_c(); // 1
+extern "C" static s32 phase_compleate__FPv(); // 1
+extern "C" static void dScnPly_Create__FP11scene_class(); // 1
+extern "C" void __dt__22dScnPly_env_debugHIO_cFv(); // 1
+extern "C" void __dt__22dScnPly_env_otherHIO_cFv(); // 1
+extern "C" void __sinit_d_s_play_cpp(); // 1
+extern "C" void __dt__17dScnPly_env_HIO_cFv(); // 1
+extern "C" void __dt__17dScnPly_reg_HIO_cFv(); // 1
+extern "C" void __dt__21dScnPly_preLoad_HIO_cFv(); // 1
 SECTION_RODATA extern const void*const PreLoadInfoT[4];
 SECTION_RODATA extern const u8 d_s_d_s_play__stringBase0[176];
 SECTION_DATA extern u8 data_803C3158[46 + 2 /* padding */];
@@ -494,168 +326,168 @@ SECTION_SDATA2 extern f32 d_s_d_s_play__lit_4806;
 // External References:
 // 
 
-void mDoAud_setSceneName(char const*, s32, s32);
-void mDoAud_load1stDynamicWave();
-void mDoAud_resetRecover();
-void mDoRst_resetCallBack(int, void*);
-void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
-void fopOvlpM_IsPeek();
-void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
-void fopMsgM_createExpHeap(u32, JKRHeap*);
-void fopMsgM_destroyExpHeap(JKRExpHeap*);
-void fopDwIt_Begin();
-void fopDwIt_Next(create_tag_class*);
-void fpcM_Draw(void*);
-void dStage_stagInfo_GetParticleNo(stage_stag_info_class*, int);
-void dStage_infoCreate();
-void dStage_Create();
-void dStage_Delete();
-void dComIfG_resetToOpening(scene_class*);
-void dComIfG_resLoad(request_of_phase_process_class*, char const*);
-void dComIfG_resDelete(request_of_phase_process_class*, char const*);
-void dComIfGs_BossLife_public_Set(s8);
-void dComIfGp_calcNowRegion();
-void dComIfGp_world_dark_set(u8);
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
-void execItemGet(u8);
-void dKy_getdaytime_hour();
-void dKy_getdaytime_minute();
-void dKy_itudemo_se();
-void dKy_get_dayofweek();
-void dKy_darkworld_check();
-void dKy_darkworld_stage_check(char const*, int);
-void dKy_darkworld_spot_check(char const*, int);
-void dKy_darkworld_Area_set(char const*, int);
-void dMeter2Info_setCloth(u8, bool);
-void dMeter2Info_setSword(u8, bool);
-void dMeter2Info_setShield(u8, bool);
-extern "C" void func_80252E70();
-void operator delete(void*);
-extern "C" void JUTReportConsole_f();
-extern "C" void OSGetTime();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+void mDoAud_setSceneName(char const*, s32, s32); // 2
+void mDoAud_load1stDynamicWave(); // 2
+void mDoAud_resetRecover(); // 2
+void mDoRst_resetCallBack(int, void*); // 2
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
+void fopOvlpM_IsPeek(); // 2
+void fopScnM_ChangeReq(scene_class*, s16, s16, u16); // 2
+void fopMsgM_createExpHeap(u32, JKRHeap*); // 2
+void fopMsgM_destroyExpHeap(JKRExpHeap*); // 2
+void fopDwIt_Begin(); // 2
+void fopDwIt_Next(create_tag_class*); // 2
+void fpcM_Draw(void*); // 2
+void dStage_stagInfo_GetParticleNo(stage_stag_info_class*, int); // 2
+void dStage_infoCreate(); // 2
+void dStage_Create(); // 2
+void dStage_Delete(); // 2
+void dComIfG_resetToOpening(scene_class*); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dComIfGs_BossLife_public_Set(s8); // 2
+void dComIfGp_calcNowRegion(); // 2
+void dComIfGp_world_dark_set(u8); // 2
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void execItemGet(u8); // 2
+void dKy_getdaytime_hour(); // 2
+void dKy_getdaytime_minute(); // 2
+void dKy_itudemo_se(); // 2
+void dKy_get_dayofweek(); // 2
+void dKy_darkworld_check(); // 2
+void dKy_darkworld_stage_check(char const*, int); // 2
+void dKy_darkworld_spot_check(char const*, int); // 2
+void dKy_darkworld_Area_set(char const*, int); // 2
+void dMeter2Info_setCloth(u8, bool); // 2
+void dMeter2Info_setSword(u8, bool); // 2
+void dMeter2Info_setShield(u8, bool); // 2
+void cLib_calcTimer__template4(s8*); // 2
+void operator delete(void*); // 2
+extern "C" void JUTReportConsole_f(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void mDoAud_setSceneName__FPCcll();
-extern "C" void mDoAud_load1stDynamicWave__Fv();
-extern "C" void mDoAud_resetRecover__Fv();
-extern "C" void remove__Q213mDoGph_gInf_c7bloom_cFv();
-extern "C" void mDoRst_resetCallBack__FiPv();
-extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs();
-extern "C" void Unlink__7cDylPhsFP30request_of_phase_process_classs();
-extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
-extern "C" void fopOvlpM_IsPeek__Fv();
-extern "C" void fopScnM_ChangeReq__FP11scene_classssUs();
-extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap();
-extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
-extern "C" void fopDwIt_Begin__Fv();
-extern "C" void fopDwIt_Next__FP16create_tag_class();
-extern "C" void fpcM_Draw__FPv();
-extern "C" void resetArchiveBank__20dStage_roomControl_cFi();
-extern "C" void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi();
-extern "C" void dStage_infoCreate__Fv();
-extern "C" void dStage_Create__Fv();
-extern "C" void dStage_Delete__Fv();
-extern "C" void init__14dComIfG_play_cFv();
-extern "C" void setStartStage__14dComIfG_play_cFP19dStage_startStage_c();
-extern "C" void getLayerNo_common_common__14dComIfG_play_cFPCcii();
-extern "C" void getLayerNo_common__14dComIfG_play_cFPCcii();
-extern "C" void getLayerNo__14dComIfG_play_cFi();
-extern "C" void createSimpleModel__14dComIfG_play_cFv();
-extern "C" void deleteSimpleModel__14dComIfG_play_cFv();
-extern "C" void dComIfG_resetToOpening__FP11scene_class();
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
-extern "C" void dComIfGs_BossLife_public_Set__FSc();
-extern "C" void dComIfGp_calcNowRegion__Fv();
-extern "C" void dComIfGp_world_dark_set__FUc();
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
-extern "C" void reset__7daSus_cFv();
-extern "C" void execute__7daSus_cFv();
-extern "C" void onDarkClearLV__21dSv_player_status_b_cFi();
-extern "C" void onTransformLV__21dSv_player_status_b_cFi();
-extern "C" void setItem__17dSv_player_item_cFiUc();
-extern "C" void onFirstBit__21dSv_player_get_item_cFUc();
-extern "C" void onEventBit__11dSv_event_cFUs();
-extern "C" void onSwitch__12dSv_danBit_cFi();
-extern "C" void init__10dSv_info_cFv();
-extern "C" void create__7dDemo_cFv();
-extern "C" void remove__7dDemo_cFv();
-extern "C" void update__7dDemo_cFv();
-extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
-extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" void syncAllRes__14dRes_control_cFP11dRes_info_ci();
-extern "C" void setStageRes__14dRes_control_cFPCcP7JKRHeap();
-extern "C" void create__8dMpath_cFv();
-extern "C" void remove__8dMpath_cFv();
-extern "C" void Step__14dEvt_control_cFv();
-extern "C" void remove__14dEvt_control_cFv();
-extern "C" void readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c();
-extern "C" void createScene__13dPa_control_cFPCv();
-extern "C" void removeScene__13dPa_control_cFb();
-extern "C" void cleanup__13dPa_control_cFv();
-extern "C" void calc3D__13dPa_control_cFv();
-extern "C" void calc2D__13dPa_control_cFv();
-extern "C" void setViewPort__14dDlst_window_cFffffff();
-extern "C" void setScissor__14dDlst_window_cFffff();
-extern "C" void Run__12dVibration_cFv();
-extern "C" void Init__12dVibration_cFv();
-extern "C" void Pause__12dVibration_cFv();
-extern "C" void Remove__12dVibration_cFv();
-extern "C" void __ct__12dAttention_cFP10fopAc_ac_cUl();
-extern "C" void __dt__12dAttention_cFv();
-extern "C" void Run__12dAttention_cFv();
-extern "C" void Draw__12dAttention_cFv();
-extern "C" void ClrMoveFlag__4dBgSFv();
-extern "C" void Move__4dBgSFv();
-extern "C" void Ct__4dCcSFv();
-extern "C" void Dt__4dCcSFv();
-extern "C" void Move__4dCcSFv();
-extern "C" void Draw__4dCcSFv();
-extern "C" void execItemGet__FUc();
-extern "C" void create__7dTres_cFv();
-extern "C" void remove__7dTres_cFv();
-extern "C" void create__10dMdl_mng_cFv();
-extern "C" void remove__10dMdl_mng_cFv();
-extern "C" void reset__10dMdl_mng_cFv();
-extern "C" void update__12dEyeHL_mng_cFv();
-extern "C" void checkRoomRestartStart__9daPy_py_cFv();
-extern "C" void dKy_getdaytime_hour__Fv();
-extern "C" void dKy_getdaytime_minute__Fv();
-extern "C" void dKy_itudemo_se__Fv();
-extern "C" void dKy_get_dayofweek__Fv();
-extern "C" void dKy_darkworld_check__Fv();
-extern "C" void dKy_darkworld_stage_check__FPCci();
-extern "C" void dKy_darkworld_spot_check__FPCci();
-extern "C" void dKy_darkworld_Area_set__FPCci();
-extern "C" void dMeter2Info_setCloth__FUcb();
-extern "C" void dMeter2Info_setSword__FUcb();
-extern "C" void dMeter2Info_setShield__FUcb();
-extern "C" void readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c();
-extern "C" void func_80252E70();
-extern "C" void ClearPi__13cBgS_PolyInfoFv();
-extern "C" void setInDarkness__10Z2SceneMgrFb();
-extern "C" void check1stDynamicWave__10Z2SceneMgrFv();
-extern "C" void load2ndDynamicWave__10Z2SceneMgrFv();
-extern "C" void sceneBgmStart__10Z2SceneMgrFv();
-extern "C" void __dl__FPv();
-extern "C" void setMessageCount__12JUTAssertionFi();
-extern "C" void JUTReportConsole_f();
-extern "C" void OSGetTime();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+extern "C" void mDoAud_setSceneName__FPCcll(); // 1
+extern "C" void mDoAud_load1stDynamicWave__Fv(); // 1
+extern "C" void mDoAud_resetRecover__Fv(); // 1
+extern "C" void remove__Q213mDoGph_gInf_c7bloom_cFv(); // 1
+extern "C" void mDoRst_resetCallBack__FiPv(); // 1
+extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs(); // 1
+extern "C" void Unlink__7cDylPhsFP30request_of_phase_process_classs(); // 1
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
+extern "C" void fopOvlpM_IsPeek__Fv(); // 1
+extern "C" void fopScnM_ChangeReq__FP11scene_classssUs(); // 1
+extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap(); // 1
+extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap(); // 1
+extern "C" void fopDwIt_Begin__Fv(); // 1
+extern "C" void fopDwIt_Next__FP16create_tag_class(); // 1
+extern "C" void fpcM_Draw__FPv(); // 1
+extern "C" void resetArchiveBank__20dStage_roomControl_cFi(); // 1
+extern "C" void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi(); // 1
+extern "C" void dStage_infoCreate__Fv(); // 1
+extern "C" void dStage_Create__Fv(); // 1
+extern "C" void dStage_Delete__Fv(); // 1
+extern "C" void init__14dComIfG_play_cFv(); // 1
+extern "C" void setStartStage__14dComIfG_play_cFP19dStage_startStage_c(); // 1
+extern "C" void getLayerNo_common_common__14dComIfG_play_cFPCcii(); // 1
+extern "C" void getLayerNo_common__14dComIfG_play_cFPCcii(); // 1
+extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
+extern "C" void createSimpleModel__14dComIfG_play_cFv(); // 1
+extern "C" void deleteSimpleModel__14dComIfG_play_cFv(); // 1
+extern "C" void dComIfG_resetToOpening__FP11scene_class(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfGs_BossLife_public_Set__FSc(); // 1
+extern "C" void dComIfGp_calcNowRegion__Fv(); // 1
+extern "C" void dComIfGp_world_dark_set__FUc(); // 1
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+extern "C" void reset__7daSus_cFv(); // 1
+extern "C" void execute__7daSus_cFv(); // 1
+extern "C" void onDarkClearLV__21dSv_player_status_b_cFi(); // 1
+extern "C" void onTransformLV__21dSv_player_status_b_cFi(); // 1
+extern "C" void setItem__17dSv_player_item_cFiUc(); // 1
+extern "C" void onFirstBit__21dSv_player_get_item_cFUc(); // 1
+extern "C" void onEventBit__11dSv_event_cFUs(); // 1
+extern "C" void onSwitch__12dSv_danBit_cFi(); // 1
+extern "C" void init__10dSv_info_cFv(); // 1
+extern "C" void create__7dDemo_cFv(); // 1
+extern "C" void remove__7dDemo_cFv(); // 1
+extern "C" void update__7dDemo_cFv(); // 1
+extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap(); // 1
+extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
+extern "C" void syncAllRes__14dRes_control_cFP11dRes_info_ci(); // 1
+extern "C" void setStageRes__14dRes_control_cFPCcP7JKRHeap(); // 1
+extern "C" void create__8dMpath_cFv(); // 1
+extern "C" void remove__8dMpath_cFv(); // 1
+extern "C" void Step__14dEvt_control_cFv(); // 1
+extern "C" void remove__14dEvt_control_cFv(); // 1
+extern "C" void readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c(); // 1
+extern "C" void createScene__13dPa_control_cFPCv(); // 1
+extern "C" void removeScene__13dPa_control_cFb(); // 1
+extern "C" void cleanup__13dPa_control_cFv(); // 1
+extern "C" void calc3D__13dPa_control_cFv(); // 1
+extern "C" void calc2D__13dPa_control_cFv(); // 1
+extern "C" void setViewPort__14dDlst_window_cFffffff(); // 1
+extern "C" void setScissor__14dDlst_window_cFffff(); // 1
+extern "C" void Run__12dVibration_cFv(); // 1
+extern "C" void Init__12dVibration_cFv(); // 1
+extern "C" void Pause__12dVibration_cFv(); // 1
+extern "C" void Remove__12dVibration_cFv(); // 1
+extern "C" void __ct__12dAttention_cFP10fopAc_ac_cUl(); // 1
+extern "C" void __dt__12dAttention_cFv(); // 1
+extern "C" void Run__12dAttention_cFv(); // 1
+extern "C" void Draw__12dAttention_cFv(); // 1
+extern "C" void ClrMoveFlag__4dBgSFv(); // 1
+extern "C" void Move__4dBgSFv(); // 1
+extern "C" void Ct__4dCcSFv(); // 1
+extern "C" void Dt__4dCcSFv(); // 1
+extern "C" void Move__4dCcSFv(); // 1
+extern "C" void Draw__4dCcSFv(); // 1
+extern "C" void execItemGet__FUc(); // 1
+extern "C" void create__7dTres_cFv(); // 1
+extern "C" void remove__7dTres_cFv(); // 1
+extern "C" void create__10dMdl_mng_cFv(); // 1
+extern "C" void remove__10dMdl_mng_cFv(); // 1
+extern "C" void reset__10dMdl_mng_cFv(); // 1
+extern "C" void update__12dEyeHL_mng_cFv(); // 1
+extern "C" void checkRoomRestartStart__9daPy_py_cFv(); // 1
+extern "C" void dKy_getdaytime_hour__Fv(); // 1
+extern "C" void dKy_getdaytime_minute__Fv(); // 1
+extern "C" void dKy_itudemo_se__Fv(); // 1
+extern "C" void dKy_get_dayofweek__Fv(); // 1
+extern "C" void dKy_darkworld_check__Fv(); // 1
+extern "C" void dKy_darkworld_stage_check__FPCci(); // 1
+extern "C" void dKy_darkworld_spot_check__FPCci(); // 1
+extern "C" void dKy_darkworld_Area_set__FPCci(); // 1
+extern "C" void dMeter2Info_setCloth__FUcb(); // 1
+extern "C" void dMeter2Info_setSword__FUcb(); // 1
+extern "C" void dMeter2Info_setShield__FUcb(); // 1
+extern "C" void readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c(); // 1
+extern "C" void func_80252E70(); // 1
+extern "C" void ClearPi__13cBgS_PolyInfoFv(); // 1
+extern "C" void setInDarkness__10Z2SceneMgrFb(); // 1
+extern "C" void check1stDynamicWave__10Z2SceneMgrFv(); // 1
+extern "C" void load2ndDynamicWave__10Z2SceneMgrFv(); // 1
+extern "C" void sceneBgmStart__10Z2SceneMgrFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void setMessageCount__12JUTAssertionFi(); // 1
+extern "C" void JUTReportConsole_f(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 SECTION_DATA extern void*g_fopScn_Method[6];
 SECTION_DATA extern void*g_fpcNd_Method[6];
 SECTION_DATA extern void*const __vt__14mDoHIO_entry_c[3];

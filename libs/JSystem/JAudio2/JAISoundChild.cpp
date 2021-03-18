@@ -9,42 +9,27 @@
 // Types:
 // 
 
-// build JAISoundChild (['JAISoundChild']) False/False
-// build JASTrack (['JASTrack']) False/False
-// build JASSoundParams (['JASSoundParams']) False/False
-/* top-level dependencies (begin ['JASSoundParams']) */
-/* top-level dependencies (end ['JASSoundParams']) */
 struct JASSoundParams {
 };
 
-/* top-level dependencies (begin ['JASTrack']) */
-// outer dependency: ('JASSoundParams',)
-/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
-	// ('JASSoundParams',)
 	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
 };
 
-/* top-level dependencies (begin ['JAISoundChild']) */
-// outer dependency: ('JASTrack',)
-/* top-level dependencies (end ['JAISoundChild']) */
 struct JAISoundChild {
-	// ('JASTrack',)
 	/* 802A2AB0 */ void init();
 	/* 802A2B28 */ void mixOut(JASTrack*);
 	/* 802A2B7C */ void calc();
 };
 
-// build JASTrack (['JASTrack']) True/True
-// build JASSoundParams (['JASSoundParams']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void init__13JAISoundChildFv();
-extern "C" void mixOut__13JAISoundChildFP8JASTrack();
-extern "C" void calc__13JAISoundChildFv();
+extern "C" void init__13JAISoundChildFv(); // 1
+extern "C" void mixOut__13JAISoundChildFP8JASTrack(); // 1
+extern "C" void calc__13JAISoundChildFv(); // 1
 SECTION_SDATA2 extern f32 lit_689;
 SECTION_SDATA2 extern u8 JAISoundChild__lit_690[4];
 SECTION_SDATA2 extern f32 JAISoundChild__lit_691;
@@ -54,7 +39,7 @@ SECTION_SDATA2 extern f32 JAISoundChild__lit_691;
 // 
 
 
-extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
+extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams(); // 1
 
 // 
 // Declarations:

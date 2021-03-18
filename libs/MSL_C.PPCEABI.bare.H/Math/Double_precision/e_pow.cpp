@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __ieee754_pow();
+extern "C" void __ieee754_pow(); // 1
 
-extern "C" void __ieee754_pow();
+extern "C" void __ieee754_pow(); // 1
 SECTION_RODATA extern const u8 bp[16];
 SECTION_RODATA extern const u8 dp_h[16];
 SECTION_RODATA extern const u8 dp_l[16];
@@ -54,11 +54,11 @@ SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__lit_370;
 // External References:
 // 
 
-extern "C" void ldexp();
-extern "C" void sqrt();
+extern "C" void ldexp(); // 1
+extern "C" void sqrt(); // 1
 
-extern "C" void ldexp();
-extern "C" void sqrt();
+extern "C" void ldexp(); // 1
+extern "C" void sqrt(); // 1
 SECTION_SDATA extern u32 __float_nan;
 SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
 

@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void floor();
+extern "C" void floor(); // 1
 
-extern "C" void floor();
+extern "C" void floor(); // 1
 SECTION_SDATA2 extern f64 Math_Double_precision_s_floor__lit_124;
 SECTION_SDATA2 extern u8 Math_Double_precision_s_floor__lit_125[8];
 

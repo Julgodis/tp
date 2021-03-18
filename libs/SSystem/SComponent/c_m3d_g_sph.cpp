@@ -9,34 +9,16 @@
 // Types:
 // 
 
-// build cM3dGSph (['cM3dGSph']) False/False
-// build cM3dGCyl (['cM3dGCyl']) False/False
-/* top-level dependencies (begin ['cM3dGCyl']) */
-/* top-level dependencies (end ['cM3dGCyl']) */
-struct cM3dGCyl {
-};
-
-// build cM3dGSphS (['cM3dGSphS']) False/False
-/* top-level dependencies (begin ['cM3dGSphS']) */
-/* top-level dependencies (end ['cM3dGSphS']) */
 struct cM3dGSphS {
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
+struct cM3dGCyl {
+};
+
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['cM3dGSph']) */
-// outer dependency: ('cM3dGCyl',)
-// outer dependency: ('cM3dGSphS',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGSph']) */
 struct cM3dGSph {
-	// ('cM3dGCyl',)
-	// ('cM3dGSphS',)
-	// ('cXyz',)
 	/* 8026F648 */ void SetC(cXyz const&);
 	/* 8026F664 */ void Set(cXyz const&, f32);
 	/* 8026F6A8 */ void Set(cM3dGSphS const&);
@@ -46,12 +28,6 @@ struct cM3dGSph {
 	/* 8026F76C */ void GetMinMaxCube(cXyz&, cXyz&) const;
 };
 
-// build cXyz (['cXyz']) True/True
-// build cM3dGSphS (['cM3dGSphS']) True/True
-// build cM3dGCyl (['cM3dGCyl']) True/True
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
@@ -60,23 +36,23 @@ struct Vec {
 // 
 
 
-extern "C" void SetC__8cM3dGSphFRC4cXyz();
-extern "C" void Set__8cM3dGSphFRC4cXyzf();
-extern "C" void Set__8cM3dGSphFRC9cM3dGSphS();
-extern "C" void SetR__8cM3dGSphFf();
-extern "C" void cross__8cM3dGSphCFPC8cM3dGSphP4cXyz();
-extern "C" void cross__8cM3dGSphCFPC8cM3dGCylP4cXyz();
-extern "C" void GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz();
+extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
+extern "C" void Set__8cM3dGSphFRC4cXyzf(); // 1
+extern "C" void Set__8cM3dGSphFRC9cM3dGSphS(); // 1
+extern "C" void SetR__8cM3dGSphFf(); // 1
+extern "C" void cross__8cM3dGSphCFPC8cM3dGSphP4cXyz(); // 1
+extern "C" void cross__8cM3dGSphCFPC8cM3dGCylP4cXyz(); // 1
+extern "C" void GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz(); // 1
 
 // 
 // External References:
 // 
 
-void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, Vec*, f32*);
-void cM3d_Cross_SphSph(cM3dGSph const*, cM3dGSph const*, Vec*);
+void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, Vec*, f32*); // 2
+void cM3d_Cross_SphSph(cM3dGSph const*, cM3dGSph const*, Vec*); // 2
 
-extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf();
-extern "C" void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphP3Vec();
+extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf(); // 1
+extern "C" void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphP3Vec(); // 1
 
 // 
 // Declarations:

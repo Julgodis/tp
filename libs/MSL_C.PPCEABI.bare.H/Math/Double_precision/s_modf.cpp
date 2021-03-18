@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void modf();
+extern "C" void modf(); // 1
 
-extern "C" void modf();
+extern "C" void modf(); // 1
 
 // 
 // External References:

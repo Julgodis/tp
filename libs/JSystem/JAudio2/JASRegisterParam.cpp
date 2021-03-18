@@ -9,17 +9,7 @@
 // Types:
 // 
 
-// build JASRegisterParam (['JASRegisterParam']) False/False
-// build JASRegisterParam (['JASRegisterParam']) True/False
-struct JASRegisterParam;
-/* top-level dependencies (begin ['JASRegisterParam']) */
-// outer dependency: ('JASRegisterParam', 'RegID')
-/* top-level dependencies (end ['JASRegisterParam']) */
 struct JASRegisterParam {
-	// ('JASRegisterParam', 'RegID')
-	// build RegID (['JASRegisterParam', 'RegID']) False/False
-	/* dependencies (begin ['JASRegisterParam', 'RegID']) */
-	/* dependencies (end ['JASRegisterParam', 'RegID']) */
 	struct RegID {
 	};
 
@@ -34,10 +24,10 @@ struct JASRegisterParam {
 // 
 
 
-extern "C" void __ct__16JASRegisterParamFv();
-extern "C" void init__16JASRegisterParamFv();
-extern "C" void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl();
-extern "C" void read__16JASRegisterParamFQ216JASRegisterParam5RegID();
+extern "C" void __ct__16JASRegisterParamFv(); // 1
+extern "C" void init__16JASRegisterParamFv(); // 1
+extern "C" void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl(); // 1
+extern "C" void read__16JASRegisterParamFQ216JASRegisterParam5RegID(); // 1
 SECTION_DATA extern void*JASRegisterParam__lit_56[10];
 SECTION_DATA extern void*JASRegisterParam__lit_87[10];
 

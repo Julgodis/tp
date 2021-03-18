@@ -9,31 +9,31 @@
 // Forward References:
 // 
 
-extern "C" void OSDisableInterrupts();
-extern "C" void __RAS_OSDisableInterrupts_end();
-extern "C" void OSEnableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSGetInterruptHandler();
-extern "C" void __OSInterruptInit();
-extern "C" static void SetInterruptMask();
-extern "C" void __OSMaskInterrupts();
-extern "C" void __OSUnmaskInterrupts();
-extern "C" static void __OSDispatchInterrupt();
-extern "C" static void ExternalInterruptHandler();
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void __RAS_OSDisableInterrupts_end(); // 1
+extern "C" void OSEnableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSGetInterruptHandler(); // 1
+extern "C" void __OSInterruptInit(); // 1
+extern "C" static void SetInterruptMask(); // 1
+extern "C" void __OSMaskInterrupts(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
+extern "C" static void __OSDispatchInterrupt(); // 1
+extern "C" static void ExternalInterruptHandler(); // 1
 
-extern "C" void OSDisableInterrupts();
-extern "C" void __RAS_OSDisableInterrupts_end();
-extern "C" void OSEnableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSGetInterruptHandler();
-extern "C" void __OSInterruptInit();
-extern "C" static void SetInterruptMask();
-extern "C" void __OSMaskInterrupts();
-extern "C" void __OSUnmaskInterrupts();
-extern "C" static void __OSDispatchInterrupt();
-extern "C" static void ExternalInterruptHandler();
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void __RAS_OSDisableInterrupts_end(); // 1
+extern "C" void OSEnableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSGetInterruptHandler(); // 1
+extern "C" void __OSInterruptInit(); // 1
+extern "C" static void SetInterruptMask(); // 1
+extern "C" void __OSMaskInterrupts(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
+extern "C" static void __OSDispatchInterrupt(); // 1
+extern "C" static void ExternalInterruptHandler(); // 1
 SECTION_DATA extern u8 InterruptPrioTable[44 + 4 /* padding */];
 SECTION_SBSS extern u8 InterruptHandlerTable[4];
 SECTION_SBSS extern u8 __OSLastInterruptSrr0[4];
@@ -45,21 +45,21 @@ SECTION_SBSS extern u8 data_80451684[4];
 // External References:
 // 
 
-SECTION_INIT void memset();
-extern "C" void __OSSetExceptionHandler();
-extern "C" void OSLoadContext();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" void __OSReschedule();
-extern "C" void OSGetTime();
+SECTION_INIT void memset(); // 1
+extern "C" void __OSSetExceptionHandler(); // 1
+extern "C" void OSLoadContext(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void __OSReschedule(); // 1
+extern "C" void OSGetTime(); // 1
 
-SECTION_INIT void memset();
-extern "C" void __OSSetExceptionHandler();
-extern "C" void OSLoadContext();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" void __OSReschedule();
-extern "C" void OSGetTime();
+SECTION_INIT void memset(); // 1
+extern "C" void __OSSetExceptionHandler(); // 1
+extern "C" void OSLoadContext(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void __OSReschedule(); // 1
+extern "C" void OSGetTime(); // 1
 
 // 
 // Declarations:

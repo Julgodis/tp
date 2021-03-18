@@ -9,55 +9,55 @@
 // Forward References:
 // 
 
-extern "C" static void FormatCallback();
-extern "C" static void __CARDFormatRegionAsync();
-extern "C" void CARDFormat();
+extern "C" static void FormatCallback(); // 1
+extern "C" static void __CARDFormatRegionAsync(); // 1
+extern "C" void CARDFormat(); // 1
 
-extern "C" static void FormatCallback();
-extern "C" static void __CARDFormatRegionAsync();
-extern "C" void CARDFormat();
+extern "C" static void FormatCallback(); // 1
+extern "C" static void __CARDFormatRegionAsync(); // 1
+extern "C" void CARDFormat(); // 1
 
 // 
 // External References:
 // 
 
-SECTION_INIT void memset();
-SECTION_INIT void memcpy();
-extern "C" void DCStoreRange();
-extern "C" void __OSLockSram();
-extern "C" void __OSLockSramEx();
-extern "C" void __OSUnlockSram();
-extern "C" void __OSUnlockSramEx();
-extern "C" void OSGetTime();
-extern "C" void __CARDDefaultApiCallback();
-extern "C" void __CARDSyncCallback();
-extern "C" void __CARDEraseSector();
-extern "C" void __CARDGetFontEncode();
-extern "C" void __CARDGetControlBlock();
-extern "C" void __CARDPutControlBlock();
-extern "C" void __CARDSync();
-extern "C" void __CARDWrite();
-extern "C" void __CARDCheckSum();
-extern "C" void __shr2i();
+SECTION_INIT void memset(); // 1
+SECTION_INIT void memcpy(); // 1
+extern "C" void DCStoreRange(); // 1
+extern "C" void __OSLockSram(); // 1
+extern "C" void __OSLockSramEx(); // 1
+extern "C" void __OSUnlockSram(); // 1
+extern "C" void __OSUnlockSramEx(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void __CARDDefaultApiCallback(); // 1
+extern "C" void __CARDSyncCallback(); // 1
+extern "C" void __CARDEraseSector(); // 1
+extern "C" void __CARDGetFontEncode(); // 1
+extern "C" void __CARDGetControlBlock(); // 1
+extern "C" void __CARDPutControlBlock(); // 1
+extern "C" void __CARDSync(); // 1
+extern "C" void __CARDWrite(); // 1
+extern "C" void __CARDCheckSum(); // 1
+extern "C" void __shr2i(); // 1
 
-SECTION_INIT void memset();
-SECTION_INIT void memcpy();
-extern "C" void DCStoreRange();
-extern "C" void __OSLockSram();
-extern "C" void __OSLockSramEx();
-extern "C" void __OSUnlockSram();
-extern "C" void __OSUnlockSramEx();
-extern "C" void OSGetTime();
-extern "C" void __CARDDefaultApiCallback();
-extern "C" void __CARDSyncCallback();
-extern "C" void __CARDEraseSector();
-extern "C" void __CARDGetFontEncode();
-extern "C" void __CARDGetControlBlock();
-extern "C" void __CARDPutControlBlock();
-extern "C" void __CARDSync();
-extern "C" void __CARDWrite();
-extern "C" void __CARDCheckSum();
-extern "C" void __shr2i();
+SECTION_INIT void memset(); // 1
+SECTION_INIT void memcpy(); // 1
+extern "C" void DCStoreRange(); // 1
+extern "C" void __OSLockSram(); // 1
+extern "C" void __OSLockSramEx(); // 1
+extern "C" void __OSUnlockSram(); // 1
+extern "C" void __OSUnlockSramEx(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void __CARDDefaultApiCallback(); // 1
+extern "C" void __CARDSyncCallback(); // 1
+extern "C" void __CARDEraseSector(); // 1
+extern "C" void __CARDGetFontEncode(); // 1
+extern "C" void __CARDGetControlBlock(); // 1
+extern "C" void __CARDPutControlBlock(); // 1
+extern "C" void __CARDSync(); // 1
+extern "C" void __CARDWrite(); // 1
+extern "C" void __CARDCheckSum(); // 1
+extern "C" void __shr2i(); // 1
 SECTION_BSS extern u8 __CARDBlock[544];
 
 // 

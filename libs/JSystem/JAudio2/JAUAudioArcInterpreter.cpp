@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JAUAudioArcInterpreter (['JAUAudioArcInterpreter']) False/False
-/* top-level dependencies (begin ['JAUAudioArcInterpreter']) */
-/* top-level dependencies (end ['JAUAudioArcInterpreter']) */
 struct JAUAudioArcInterpreter {
 	/* 802A4244 */ JAUAudioArcInterpreter();
 	/* 802A4260 */ ~JAUAudioArcInterpreter();
@@ -25,20 +22,20 @@ struct JAUAudioArcInterpreter {
 // 
 
 
-extern "C" void __ct__22JAUAudioArcInterpreterFv();
-extern "C" void __dt__22JAUAudioArcInterpreterFv();
-extern "C" void parse__22JAUAudioArcInterpreterFPCv();
-extern "C" bool readCommandMore__22JAUAudioArcInterpreterFUl();
-extern "C" void readCommand___22JAUAudioArcInterpreterFv();
+extern "C" void __ct__22JAUAudioArcInterpreterFv(); // 1
+extern "C" void __dt__22JAUAudioArcInterpreterFv(); // 1
+extern "C" void parse__22JAUAudioArcInterpreterFPCv(); // 1
+extern "C" bool readCommandMore__22JAUAudioArcInterpreterFUl(); // 1
+extern "C" void readCommand___22JAUAudioArcInterpreterFv(); // 1
 SECTION_DATA extern void*const __vt__22JAUAudioArcInterpreter[18];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

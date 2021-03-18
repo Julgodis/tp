@@ -9,66 +9,29 @@
 // Types:
 // 
 
-// build JAUSection (['JAUSection']) False/False
-// build JAUSectionHeap (['JAUSectionHeap']) False/False
-// build JAISeqData (['JAISeqData']) False/False
-/* top-level dependencies (begin ['JAISeqData']) */
-/* top-level dependencies (end ['JAISeqData']) */
-struct JAISeqData {
-};
-
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
-struct JKRArchive {
+struct JAISeqData {
 };
 
-// build JAISeqDataUser (['JAISeqDataUser']) False/False
-/* top-level dependencies (begin ['JAISeqDataUser']) */
-/* top-level dependencies (end ['JAISeqDataUser']) */
-struct JAISeqDataUser {
-};
-
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE5F8 */ void freeTail();
 	/* 802CE72C */ void getFreeSize();
 };
 
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
-	// ('JKRHeap',)
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 };
 
-/* top-level dependencies (begin ['JAUSectionHeap']) */
-// outer dependency: ('JAISeqData',)
-// outer dependency: ('JAISoundID',)
-// outer dependency: ('JKRArchive',)
-// outer dependency: ('JAISeqDataUser',)
-// outer dependency: ('JKRSolidHeap',)
-/* top-level dependencies (end ['JAUSectionHeap']) */
+struct JAISeqDataUser {
+};
+
+struct JKRArchive {
+};
+
 struct JAUSectionHeap {
-	// ('JAISeqData',)
-	// ('JAISoundID',)
-	// ('JKRArchive',)
-	// ('JAISeqDataUser',)
-	// ('JKRSolidHeap',)
-	// build TSectionHeapData (['JAUSectionHeap', 'TSectionHeapData']) False/False
-	/* dependencies (begin ['JAUSectionHeap', 'TSectionHeapData']) */
-	/* dependencies (end ['JAUSectionHeap', 'TSectionHeapData']) */
 	struct TSectionHeapData {
 		/* 802A5DF4 */ TSectionHeapData();
 	};
@@ -85,17 +48,7 @@ struct JAUSectionHeap {
 	/* 802A6278 */ ~JAUSectionHeap();
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-/* top-level dependencies (begin ['JAUSection']) */
-// outer dependency: ('JAUSectionHeap',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['JAUSection']) */
 struct JAUSection {
-	// ('JAUSectionHeap',)
-	// ('JAISoundID',)
-	// build TSectionData (['JAUSection', 'TSectionData']) False/False
-	/* dependencies (begin ['JAUSection', 'TSectionData']) */
-	/* dependencies (end ['JAUSection', 'TSectionData']) */
 	struct TSectionData {
 		/* 802A4EE8 */ TSectionData();
 		/* 802A4F68 */ void resetRegisteredBankTables();
@@ -122,120 +75,60 @@ struct JAUSection {
 	/* 802A6468 */ ~JAUSection();
 };
 
-// build JAUSectionHeap (['JAUSectionHeap']) True/True
-// build JAISoundID (['JAISoundID']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-// build JKRSolidHeap (['JKRSolidHeap']) True/True
-// build JAISeqDataUser (['JAISeqDataUser']) True/True
-// build JAISeqData (['JAISeqData']) True/True
-// build JASResArcLoader (['JASResArcLoader']) False/False
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['JASResArcLoader']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['JASResArcLoader']) */
 struct JASResArcLoader {
-	// ('JKRArchive',)
 	/* 80290BD0 */ void getResSize(JKRArchive const*, u16);
 };
 
-// build JASWSParser (['JASWSParser']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JASWSParser']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JASWSParser']) */
 struct JASWSParser {
-	// ('JKRHeap',)
 	/* 80298FD8 */ void createWaveBank(void const*, JKRHeap*);
 };
 
-// build JKRHeap (['JKRHeap']) True/True
-// build JASBNKParser (['JASBNKParser']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JASBNKParser']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JASBNKParser']) */
 struct JASBNKParser {
-	// ('JKRHeap',)
 	/* 80299538 */ void createBank(void const*, JKRHeap*);
 };
 
-// build JASWaveArc (['JASWaveArc']) False/False
-// build JASHeap (['JASHeap']) False/False
-/* top-level dependencies (begin ['JASHeap']) */
-/* top-level dependencies (end ['JASHeap']) */
 struct JASHeap {
 };
 
-/* top-level dependencies (begin ['JASWaveArc']) */
-// outer dependency: ('JASHeap',)
-/* top-level dependencies (end ['JASWaveArc']) */
 struct JASWaveArc {
-	// ('JASHeap',)
 	/* 8029A4C0 */ void load(JASHeap*);
 };
 
-// build JASHeap (['JASHeap']) True/True
-// build JAISeqDataMgr (['JAISeqDataMgr']) False/False
-/* top-level dependencies (begin ['JAISeqDataMgr']) */
-/* top-level dependencies (end ['JAISeqDataMgr']) */
 struct JAISeqDataMgr {
 	/* 802A17BC */ ~JAISeqDataMgr();
 };
 
-// build JAIStreamDataMgr (['JAIStreamDataMgr']) False/False
-/* top-level dependencies (begin ['JAIStreamDataMgr']) */
-/* top-level dependencies (end ['JAIStreamDataMgr']) */
 struct JAIStreamDataMgr {
 	/* 802A3AD8 */ ~JAIStreamDataMgr();
 };
 
-// build JAUBankTable (['JAUBankTable']) False/False
-/* top-level dependencies (begin ['JAUBankTable']) */
-/* top-level dependencies (end ['JAUBankTable']) */
+template <typename A0>
+struct JSULink { };
+/* JSULink<JAUBankTable> */
+struct JSULink__template0 {
+};
+
 struct JAUBankTable {
 	/* 802A4AA0 */ void getBank(u32) const;
 };
 
-// build JAUSeqCollection (['JAUSeqCollection']) False/False
-/* top-level dependencies (begin ['JAUSeqCollection']) */
-/* top-level dependencies (end ['JAUSeqCollection']) */
+struct JAUBankTableDictionary {
+	/* 802A4A80 */ void appendBankTable(JSULink<JAUBankTable>*);
+};
+
 struct JAUSeqCollection {
 	/* 802A66AC */ void init(void const*);
 };
 
-// build JAUSeqDataMgr_SeqCollection (['JAUSeqDataMgr_SeqCollection']) False/False
-/* top-level dependencies (begin ['JAUSeqDataMgr_SeqCollection']) */
-/* top-level dependencies (end ['JAUSeqDataMgr_SeqCollection']) */
 struct JAUSeqDataMgr_SeqCollection {
 	/* 802A677C */ JAUSeqDataMgr_SeqCollection();
 };
 
-// build JAUSeqDataBlock (['JAUSeqDataBlock']) False/False
-/* top-level dependencies (begin ['JAUSeqDataBlock']) */
-/* top-level dependencies (end ['JAUSeqDataBlock']) */
 struct JAUSeqDataBlock {
 	/* 802A68F4 */ JAUSeqDataBlock();
 };
 
-// build JAUDynamicSeqDataBlocks (['JAUDynamicSeqDataBlocks']) False/False
-// build JAISeqData (['JAISeqData']) True/True
-// build JAISoundID (['JAISoundID']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-// build JAISeqDataUser (['JAISeqDataUser']) True/True
-// build JAUSeqDataBlock (['JAUSeqDataBlock']) True/True
-/* top-level dependencies (begin ['JAUDynamicSeqDataBlocks']) */
-// outer dependency: ('JAISeqData',)
-// outer dependency: ('JAISoundID',)
-// outer dependency: ('JKRArchive',)
-// outer dependency: ('JAISeqDataUser',)
-// outer dependency: ('JAUSeqDataBlock',)
-/* top-level dependencies (end ['JAUDynamicSeqDataBlocks']) */
 struct JAUDynamicSeqDataBlocks {
-	// ('JAISeqData',)
-	// ('JAISoundID',)
-	// ('JAUSeqDataBlock',)
-	// ('JKRArchive',)
-	// ('JAISeqDataUser',)
 	/* 802A6A58 */ JAUDynamicSeqDataBlocks();
 	/* 802A6AA0 */ void setSeqDataArchive(JKRArchive*);
 	/* 802A6AA8 */ void getSeqData(JAISoundID, JAISeqDataUser*, JAISeqData*, bool);
@@ -244,23 +137,14 @@ struct JAUDynamicSeqDataBlocks {
 	/* 802A6D48 */ void releaseIdleDynamicSeqDataBlock(JAISeqDataUser*);
 };
 
-// build JAUSoundTable (['JAUSoundTable']) False/False
-/* top-level dependencies (begin ['JAUSoundTable']) */
-/* top-level dependencies (end ['JAUSoundTable']) */
 struct JAUSoundTable {
 	/* 802A7114 */ void init(void const*);
 };
 
-// build JAUSoundNameTable (['JAUSoundNameTable']) False/False
-/* top-level dependencies (begin ['JAUSoundNameTable']) */
-/* top-level dependencies (end ['JAUSoundNameTable']) */
 struct JAUSoundNameTable {
 	/* 802A73D4 */ void init(void const*);
 };
 
-// build JAUStreamFileTable (['JAUStreamFileTable']) False/False
-/* top-level dependencies (begin ['JAUStreamFileTable']) */
-/* top-level dependencies (end ['JAUStreamFileTable']) */
 struct JAUStreamFileTable {
 	/* 802A7420 */ JAUStreamFileTable();
 	/* 802A742C */ void init(void const*);
@@ -268,29 +152,17 @@ struct JAUStreamFileTable {
 	/* 802A7484 */ void getFilePath(int) const;
 };
 
-// build JKRDisposer (['JKRDisposer']) False/False
-/* top-level dependencies (begin ['JKRDisposer']) */
-/* top-level dependencies (end ['JKRDisposer']) */
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) True/True
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
@@ -300,63 +172,63 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-static void JAUNewSectionHeap(JKRSolidHeap*, bool);
-void JAUNewSectionHeap(bool);
-extern "C" static void func_802A6440();
-extern "C" static void func_802A6574();
-extern "C" static void func_802A65D4();
-extern "C" static void func_802A6614();
-extern "C" static void func_802A6634();
-extern "C" static void func_802A665C();
-extern "C" static void func_802A6680();
-extern "C" static void func_802A6688();
-extern "C" static void func_802A6690();
-extern "C" static void func_802A6698();
+static void JAUNewSectionHeap(JKRSolidHeap*, bool); // 2
+void JAUNewSectionHeap(bool); // 2
+extern "C" static void func_802A6440(); // 1
+extern "C" static void func_802A6574(); // 1
+extern "C" static void func_802A65D4(); // 1
+extern "C" static void func_802A6614(); // 1
+extern "C" static void func_802A6634(); // 1
+extern "C" static void func_802A665C(); // 1
+extern "C" static void func_802A6680(); // 1
+extern "C" static void func_802A6688(); // 1
+extern "C" static void func_802A6690(); // 1
+extern "C" static void func_802A6698(); // 1
 
-extern "C" void __ct__Q210JAUSection12TSectionDataFv();
-extern "C" void resetRegisteredBankTables__Q210JAUSection12TSectionDataFv();
-extern "C" void resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv();
-extern "C" void __ct__10JAUSectionFP14JAUSectionHeapUll();
-extern "C" void finishBuild__10JAUSectionFv();
-extern "C" void dispose__10JAUSectionFv();
-extern "C" void newSoundTable__10JAUSectionFPCvUlb();
-extern "C" void newSoundNameTable__10JAUSectionFPCvUlb();
-extern "C" void newStreamFileTable__10JAUSectionFPCvb();
-extern "C" void newSeSeqCollection__10JAUSectionFPCvUl();
-extern "C" void newStaticSeqDataBlock___10JAUSectionF10JAISoundIDUl();
-extern "C" void newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl();
-extern "C" void newStaticSeqData__10JAUSectionF10JAISoundID();
-extern "C" void newCopy__10JAUSectionFPCvUll();
-extern "C" void newWaveBank__10JAUSectionFUlPCv();
-extern "C" void loadWaveArc__10JAUSectionFUlUl();
-extern "C" void newBank__10JAUSectionFPCvUl();
-extern "C" void newVoiceBank__10JAUSectionFUlUl();
-extern "C" void beginNewBankTable__10JAUSectionFUlUl();
-extern "C" void endNewBankTable__10JAUSectionFv();
-extern "C" void __ct__Q214JAUSectionHeap16TSectionHeapDataFv();
-extern "C" void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive();
-extern "C" void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb();
-extern "C" void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv();
-extern "C" static void JAUNewSectionHeap__FP12JKRSolidHeapb();
-extern "C" void JAUNewSectionHeap__Fb();
-extern "C" void __ct__14JAUSectionHeapFP12JKRSolidHeapbl();
-extern "C" void getOpenSection__14JAUSectionHeapFv();
-extern "C" void setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser();
-extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl();
-extern "C" void getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData();
-extern "C" bool releaseSeqData__14JAUSectionHeapFv();
-extern "C" void __dt__14JAUSectionHeapFv();
-extern "C" static void func_802A6440();
-extern "C" void __dt__10JAUSectionFv();
-extern "C" static void func_802A6574();
-extern "C" static void func_802A65D4();
-extern "C" static void func_802A6614();
-extern "C" static void func_802A6634();
-extern "C" static void func_802A665C();
-extern "C" static void func_802A6680();
-extern "C" static void func_802A6688();
-extern "C" static void func_802A6690();
-extern "C" static void func_802A6698();
+extern "C" void __ct__Q210JAUSection12TSectionDataFv(); // 1
+extern "C" void resetRegisteredBankTables__Q210JAUSection12TSectionDataFv(); // 1
+extern "C" void resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv(); // 1
+extern "C" void __ct__10JAUSectionFP14JAUSectionHeapUll(); // 1
+extern "C" void finishBuild__10JAUSectionFv(); // 1
+extern "C" void dispose__10JAUSectionFv(); // 1
+extern "C" void newSoundTable__10JAUSectionFPCvUlb(); // 1
+extern "C" void newSoundNameTable__10JAUSectionFPCvUlb(); // 1
+extern "C" void newStreamFileTable__10JAUSectionFPCvb(); // 1
+extern "C" void newSeSeqCollection__10JAUSectionFPCvUl(); // 1
+extern "C" void newStaticSeqDataBlock___10JAUSectionF10JAISoundIDUl(); // 1
+extern "C" void newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl(); // 1
+extern "C" void newStaticSeqData__10JAUSectionF10JAISoundID(); // 1
+extern "C" void newCopy__10JAUSectionFPCvUll(); // 1
+extern "C" void newWaveBank__10JAUSectionFUlPCv(); // 1
+extern "C" void loadWaveArc__10JAUSectionFUlUl(); // 1
+extern "C" void newBank__10JAUSectionFPCvUl(); // 1
+extern "C" void newVoiceBank__10JAUSectionFUlUl(); // 1
+extern "C" void beginNewBankTable__10JAUSectionFUlUl(); // 1
+extern "C" void endNewBankTable__10JAUSectionFv(); // 1
+extern "C" void __ct__Q214JAUSectionHeap16TSectionHeapDataFv(); // 1
+extern "C" void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive(); // 1
+extern "C" void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb(); // 1
+extern "C" void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv(); // 1
+extern "C" static void JAUNewSectionHeap__FP12JKRSolidHeapb(); // 1
+extern "C" void JAUNewSectionHeap__Fb(); // 1
+extern "C" void __ct__14JAUSectionHeapFP12JKRSolidHeapbl(); // 1
+extern "C" void getOpenSection__14JAUSectionHeapFv(); // 1
+extern "C" void setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser(); // 1
+extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl(); // 1
+extern "C" void getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData(); // 1
+extern "C" bool releaseSeqData__14JAUSectionHeapFv(); // 1
+extern "C" void __dt__14JAUSectionHeapFv(); // 1
+extern "C" static void func_802A6440(); // 1
+extern "C" void __dt__10JAUSectionFv(); // 1
+extern "C" static void func_802A6574(); // 1
+extern "C" static void func_802A65D4(); // 1
+extern "C" static void func_802A6614(); // 1
+extern "C" static void func_802A6634(); // 1
+extern "C" static void func_802A665C(); // 1
+extern "C" static void func_802A6680(); // 1
+extern "C" static void func_802A6688(); // 1
+extern "C" static void func_802A6690(); // 1
+extern "C" static void func_802A6698(); // 1
 SECTION_RODATA extern const u8 JAUSectionHeap__stringBase0[112];
 SECTION_DATA extern void*const __vt__14JAUSectionHeap[13];
 SECTION_DATA extern void*const __vt__16JAUBankTableLink[5];
@@ -369,82 +241,81 @@ SECTION_SDATA extern u8 lit_2588[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memset();
-SECTION_INIT void memcpy();
-extern "C" void func_802A4A80();
-void* operator new(u32);
-void* operator new[](u32);
-void* operator new[](u32, int);
-void* operator new[](u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void DVDConvertPathToEntrynum();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void abort();
-extern "C" void fprintf();
+SECTION_INIT void memset(); // 1
+SECTION_INIT void memcpy(); // 1
+void* operator new(u32); // 2
+void* operator new[](u32); // 2
+void* operator new[](u32, int); // 2
+void* operator new[](u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void DVDConvertPathToEntrynum(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void abort(); // 1
+extern "C" void fprintf(); // 1
 
-SECTION_INIT void memset();
-SECTION_INIT void memcpy();
-extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs();
-extern "C" void createWaveBank__11JASWSParserFPCvP7JKRHeap();
-extern "C" void createBank__12JASBNKParserFPCvP7JKRHeap();
-extern "C" void load__10JASWaveArcFP7JASHeap();
-extern "C" void __dt__13JAISeqDataMgrFv();
-extern "C" void __dt__16JAIStreamDataMgrFv();
-extern "C" void func_802A4A80();
-extern "C" void getBank__12JAUBankTableCFUl();
-extern "C" void init__16JAUSeqCollectionFPCv();
-extern "C" void __ct__27JAUSeqDataMgr_SeqCollectionFv();
-extern "C" void __ct__15JAUSeqDataBlockFv();
-extern "C" void __ct__23JAUDynamicSeqDataBlocksFv();
-extern "C" void setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive();
-extern "C" void getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab();
-extern "C" void appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock();
-extern "C" void loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser();
-extern "C" void releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser();
-extern "C" void init__13JAUSoundTableFPCv();
-extern "C" void init__17JAUSoundNameTableFPCv();
-extern "C" void __ct__18JAUStreamFileTableFv();
-extern "C" void init__18JAUStreamFileTableFPCv();
-extern "C" void getNumFiles__18JAUStreamFileTableCFv();
-extern "C" void getFilePath__18JAUStreamFileTableCFi();
-extern "C" void becomeCurrentHeap__7JKRHeapFv();
-extern "C" void freeTail__7JKRHeapFv();
-extern "C" void getFreeSize__7JKRHeapFv();
-extern "C" void* __nw__FUl();
-extern "C" void* __nwa__FUl();
-extern "C" void* __nwa__FUli();
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb();
-extern "C" void __ct__11JKRDisposerFv();
-extern "C" void __dt__11JKRDisposerFv();
-extern "C" void __ct__10JSUPtrLinkFPv();
-extern "C" void __dt__10JSUPtrLinkFv();
-extern "C" void __dt__10JSUPtrListFv();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void DVDConvertPathToEntrynum();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void abort();
-extern "C" void fprintf();
+SECTION_INIT void memset(); // 1
+SECTION_INIT void memcpy(); // 1
+extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs(); // 1
+extern "C" void createWaveBank__11JASWSParserFPCvP7JKRHeap(); // 1
+extern "C" void createBank__12JASBNKParserFPCvP7JKRHeap(); // 1
+extern "C" void load__10JASWaveArcFP7JASHeap(); // 1
+extern "C" void __dt__13JAISeqDataMgrFv(); // 1
+extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
+extern "C" void func_802A4A80(); // 1
+extern "C" void getBank__12JAUBankTableCFUl(); // 1
+extern "C" void init__16JAUSeqCollectionFPCv(); // 1
+extern "C" void __ct__27JAUSeqDataMgr_SeqCollectionFv(); // 1
+extern "C" void __ct__15JAUSeqDataBlockFv(); // 1
+extern "C" void __ct__23JAUDynamicSeqDataBlocksFv(); // 1
+extern "C" void setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive(); // 1
+extern "C" void getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab(); // 1
+extern "C" void appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock(); // 1
+extern "C" void loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser(); // 1
+extern "C" void releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser(); // 1
+extern "C" void init__13JAUSoundTableFPCv(); // 1
+extern "C" void init__17JAUSoundNameTableFPCv(); // 1
+extern "C" void __ct__18JAUStreamFileTableFv(); // 1
+extern "C" void init__18JAUStreamFileTableFPCv(); // 1
+extern "C" void getNumFiles__18JAUStreamFileTableCFv(); // 1
+extern "C" void getFilePath__18JAUStreamFileTableCFi(); // 1
+extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
+extern "C" void freeTail__7JKRHeapFv(); // 1
+extern "C" void getFreeSize__7JKRHeapFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void* __nwa__FUli(); // 1
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb(); // 1
+extern "C" void __ct__11JKRDisposerFv(); // 1
+extern "C" void __dt__11JKRDisposerFv(); // 1
+extern "C" void __ct__10JSUPtrLinkFPv(); // 1
+extern "C" void __dt__10JSUPtrLinkFv(); // 1
+extern "C" void __dt__10JSUPtrListFv(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void DVDConvertPathToEntrynum(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void abort(); // 1
+extern "C" void fprintf(); // 1
 SECTION_DATA extern void*const __vt__11JASBankList[4];
 SECTION_DATA extern void*const __vt__7JASBank[5];
 SECTION_DATA extern void*const __vt__12JASVoiceBank[6];

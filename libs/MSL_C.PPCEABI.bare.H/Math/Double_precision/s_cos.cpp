@@ -9,22 +9,22 @@
 // Forward References:
 // 
 
-extern "C" void cos();
+extern "C" void cos(); // 1
 
-extern "C" void cos();
+extern "C" void cos(); // 1
 SECTION_SDATA2 extern u8 Math_Double_precision_s_cos__lit_67[8];
 
 // 
 // External References:
 // 
 
-extern "C" void __ieee754_rem_pio2();
-extern "C" void __kernel_cos();
-extern "C" void __kernel_sin();
+extern "C" void __ieee754_rem_pio2(); // 1
+extern "C" void __kernel_cos(); // 1
+extern "C" void __kernel_sin(); // 1
 
-extern "C" void __ieee754_rem_pio2();
-extern "C" void __kernel_cos();
-extern "C" void __kernel_sin();
+extern "C" void __ieee754_rem_pio2(); // 1
+extern "C" void __kernel_cos(); // 1
+extern "C" void __kernel_sin(); // 1
 
 // 
 // Declarations:

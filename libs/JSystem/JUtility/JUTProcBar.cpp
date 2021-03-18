@@ -9,27 +9,13 @@
 // Types:
 // 
 
-// build JUTProcBar (['JUTProcBar']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin ['JUTProcBar']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['JUTProcBar']) */
 struct JUTProcBar {
-	// ('JUtility', 'TColor')
-	// build CTime (['JUTProcBar', 'CTime']) False/False
-	/* dependencies (begin ['JUTProcBar', 'CTime']) */
-	/* dependencies (end ['JUTProcBar', 'CTime']) */
 	struct CTime {
 		/* 802E7340 */ CTime();
 	};
@@ -46,10 +32,6 @@ struct JUTProcBar {
 	/* 802E6FA0 */ void drawHeapBar();
 };
 
-// build JUtility (['JUtility']) True/True
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE784 */ void getTotalFreeSize();
 };
@@ -58,24 +40,24 @@ struct JKRHeap {
 // Forward References:
 // 
 
-static void addrToXPos(void*, int);
-static void byteToXLen(int, int);
-static void heapBar(JKRHeap*, int, int, int, int, int);
+static void addrToXPos(void*, int); // 2
+static void byteToXLen(int, int); // 2
+static void heapBar(JKRHeap*, int, int, int, int, int); // 2
 
-extern "C" void __ct__10JUTProcBarFv();
-extern "C" void __dt__10JUTProcBarFv();
-extern "C" void create__10JUTProcBarFv();
-extern "C" void destroy__10JUTProcBarFv();
-extern "C" void clear__10JUTProcBarFv();
-extern "C" void bar_subroutine__10JUTProcBarFiiiiiiiQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void adjustMeterLength__10JUTProcBarFUlPfffPi();
-extern "C" void draw__10JUTProcBarFv();
-extern "C" void drawProcessBar__10JUTProcBarFv();
-extern "C" static void addrToXPos__FPvi();
-extern "C" static void byteToXLen__Fii();
-extern "C" static void heapBar__FP7JKRHeapiiiii();
-extern "C" void drawHeapBar__10JUTProcBarFv();
-extern "C" void __ct__Q210JUTProcBar5CTimeFv();
+extern "C" void __ct__10JUTProcBarFv(); // 1
+extern "C" void __dt__10JUTProcBarFv(); // 1
+extern "C" void create__10JUTProcBarFv(); // 1
+extern "C" void destroy__10JUTProcBarFv(); // 1
+extern "C" void clear__10JUTProcBarFv(); // 1
+extern "C" void bar_subroutine__10JUTProcBarFiiiiiiiQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void adjustMeterLength__10JUTProcBarFUlPfffPi(); // 1
+extern "C" void draw__10JUTProcBarFv(); // 1
+extern "C" void drawProcessBar__10JUTProcBarFv(); // 1
+extern "C" static void addrToXPos__FPvi(); // 1
+extern "C" static void byteToXLen__Fii(); // 1
+extern "C" static void heapBar__FP7JKRHeapiiiii(); // 1
+extern "C" void drawHeapBar__10JUTProcBarFv(); // 1
+extern "C" void __ct__Q210JUTProcBar5CTimeFv(); // 1
 SECTION_SDATA extern f32 oneFrameRate;
 SECTION_SDATA extern f32 oneFrameRateUser;
 SECTION_SBSS extern u8 sManager__10JUTProcBar[4];
@@ -101,38 +83,38 @@ SECTION_SDATA2 extern f32 lit_2581;
 // External References:
 // 
 
-void* operator new(u32);
-void operator delete(void*);
-void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int);
-void J2DFillBox(f32, f32, f32, f32, JUtility::TColor);
-void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8);
-extern "C" void OSGetTick();
-extern "C" void __construct_array();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int); // 2
+void J2DFillBox(f32, f32, f32, f32, JUtility::TColor); // 2
+void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8); // 2
+extern "C" void OSGetTick(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
 
-extern "C" void getTotalFreeSize__7JKRHeapFv();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void J2DDrawLine__FffffQ28JUtility6TColori();
-extern "C" void J2DFillBox__FffffQ28JUtility6TColor();
-extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc();
-extern "C" void OSGetTick();
-extern "C" void __construct_array();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
+extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void J2DDrawLine__FffffQ28JUtility6TColori(); // 1
+extern "C" void J2DFillBox__FffffQ28JUtility6TColor(); // 1
+extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc(); // 1
+extern "C" void OSGetTick(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];

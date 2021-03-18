@@ -9,142 +9,78 @@
 // Types:
 // 
 
-// build dDlst_window_c (['dDlst_window_c']) False/False
-/* top-level dependencies (begin ['dDlst_window_c']) */
-/* top-level dependencies (end ['dDlst_window_c']) */
 struct dDlst_window_c {
 	/* 80051AC0 */ void setViewPort(f32, f32, f32, f32, f32, f32);
 	/* 80051ADC */ void setScissor(f32, f32, f32, f32);
 };
 
-// build dDlst_2DTri_c (['dDlst_2DTri_c']) False/False
-/* top-level dependencies (begin ['dDlst_2DTri_c']) */
-/* top-level dependencies (end ['dDlst_2DTri_c']) */
 struct dDlst_2DTri_c {
 	/* 80051AF0 */ void draw();
 };
 
-// build dDlst_2DQuad_c (['dDlst_2DQuad_c']) False/False
-/* top-level dependencies (begin ['dDlst_2DQuad_c']) */
-/* top-level dependencies (end ['dDlst_2DQuad_c']) */
 struct dDlst_2DQuad_c {
 	/* 80051CF0 */ void draw();
 };
 
-// build dDlst_2DPoint_c (['dDlst_2DPoint_c']) False/False
-/* top-level dependencies (begin ['dDlst_2DPoint_c']) */
-/* top-level dependencies (end ['dDlst_2DPoint_c']) */
 struct dDlst_2DPoint_c {
 	/* 80051E5C */ void draw();
 };
 
-// build dDlst_2DT_c (['dDlst_2DT_c']) False/False
-/* top-level dependencies (begin ['dDlst_2DT_c']) */
-/* top-level dependencies (end ['dDlst_2DT_c']) */
 struct dDlst_2DT_c {
 	/* 80051F98 */ void draw();
 };
 
-// build dDlst_2DT2_c (['dDlst_2DT2_c']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['dDlst_2DT2_c']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['dDlst_2DT2_c']) */
 struct dDlst_2DT2_c {
-	// ('ResTIMG',)
 	/* 80052354 */ void draw();
 	/* 80052B00 */ dDlst_2DT2_c();
 	/* 80052B4C */ void init(ResTIMG*, f32, f32, f32, f32, u8, u8, u8, f32, f32);
 };
 
-// build ResTIMG (['ResTIMG']) True/True
-// build dDlst_2DM_c (['dDlst_2DM_c']) False/False
-/* top-level dependencies (begin ['dDlst_2DM_c']) */
-/* top-level dependencies (end ['dDlst_2DM_c']) */
 struct dDlst_2DM_c {
 	/* 80052C58 */ void draw();
 };
 
-// build dDlst_2Dm_c (['dDlst_2Dm_c']) False/False
-/* top-level dependencies (begin ['dDlst_2Dm_c']) */
-/* top-level dependencies (end ['dDlst_2Dm_c']) */
 struct dDlst_2Dm_c {
 	/* 8005312C */ void draw();
 };
 
-// build dDlst_2DMt_c (['dDlst_2DMt_c']) False/False
-/* top-level dependencies (begin ['dDlst_2DMt_c']) */
-/* top-level dependencies (end ['dDlst_2DMt_c']) */
 struct dDlst_2DMt_c {
 	/* 8005364C */ void draw();
 };
 
-// build J2DPicture (['J2DPicture']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin ['J2DPicture']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ('JUtility', 'TColor')
 	/* 800539DC */ void getTexture(u8) const;
 	/* 80053C44 */ void setWhite(JUtility::TColor);
 	/* 80053C6C */ void setBlack(JUtility::TColor);
 	/* 802FC050 */ J2DPicture();
 };
 
-// build dDlst_2D_c (['dDlst_2D_c']) False/False
-// build ResTIMG (['ResTIMG']) True/True
-/* top-level dependencies (begin ['dDlst_2D_c']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['dDlst_2D_c']) */
 struct dDlst_2D_c {
-	// ('ResTIMG',)
 	/* 80053A00 */ dDlst_2D_c(ResTIMG*, s16, s16, s16, s16, u8);
 	/* 80053A9C */ void draw();
 };
 
-// build dDlst_blo_c (['dDlst_blo_c']) False/False
-/* top-level dependencies (begin ['dDlst_blo_c']) */
-/* top-level dependencies (end ['dDlst_blo_c']) */
 struct dDlst_blo_c {
 	/* 80053B64 */ void draw();
 };
 
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
 };
 
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
 	/* 80053BA0 */ void clearAnmTransform();
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 	/* 80053BC0 */ void calcMtx();
 	/* 80053C00 */ void makeMatrix(f32, f32);
@@ -152,21 +88,11 @@ struct J2DPane {
 	/* 802F8004 */ void clearAnmTransform();
 };
 
-// build JUtility (['JUtility']) True/True
-// build J2DAnmBase (['J2DAnmBase']) False/False
-// build J2DScreen (['J2DScreen']) True/True
-/* top-level dependencies (begin ['J2DAnmBase']) */
-// outer dependency: ('J2DScreen',)
-/* top-level dependencies (end ['J2DAnmBase']) */
 struct J2DAnmBase {
-	// ('J2DScreen',)
 	/* 80053C94 */ ~J2DAnmBase();
 	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
 };
 
-// build cM_rnd_c (['cM_rnd_c']) False/False
-/* top-level dependencies (begin ['cM_rnd_c']) */
-/* top-level dependencies (end ['cM_rnd_c']) */
 struct cM_rnd_c {
 	/* 80053CDC */ void init(int, int, int);
 	/* 80053CEC */ void get();
@@ -175,19 +101,10 @@ struct cM_rnd_c {
 	/* 80053E60 */ void getValue(f32, f32);
 };
 
-// build dDlst_effectLine_c (['dDlst_effectLine_c']) False/False
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80009184 */ ~cXyz();
 	/* 800125DC */ cXyz();
 	/* 80266B34 */ void operator-(Vec const&) const;
@@ -195,74 +112,32 @@ struct cXyz {
 	/* 802670AC */ void isZero() const;
 };
 
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin ['dDlst_effectLine_c']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('_GXColor',)
-/* top-level dependencies (end ['dDlst_effectLine_c']) */
 struct dDlst_effectLine_c {
-	// ('cXyz',)
-	// ('_GXColor',)
 	/* 80053E9C */ void draw();
 	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
 };
 
-// build cXyz (['cXyz']) True/True
-// build _GXColor (['_GXColor']) True/True
-// build dDlst_shadowPoly_c (['dDlst_shadowPoly_c']) False/False
-// build cBgD_Vtx_t (['cBgD_Vtx_t']) False/False
-/* top-level dependencies (begin ['cBgD_Vtx_t']) */
-/* top-level dependencies (end ['cBgD_Vtx_t']) */
-struct cBgD_Vtx_t {
-};
-
-// build cM3dGPla (['cM3dGPla']) False/False
-/* top-level dependencies (begin ['cM3dGPla']) */
-/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
 };
 
-/* top-level dependencies (begin ['dDlst_shadowPoly_c']) */
-// outer dependency: ('cBgD_Vtx_t',)
-// outer dependency: ('cM3dGPla',)
-/* top-level dependencies (end ['dDlst_shadowPoly_c']) */
+struct cBgD_Vtx_t {
+};
+
 struct dDlst_shadowPoly_c {
-	// ('cBgD_Vtx_t',)
-	// ('cM3dGPla',)
 	/* 80054288 */ void set(cBgD_Vtx_t*, u16, u16, u16, cM3dGPla*);
 	/* 800543B4 */ void draw();
 };
 
-// build cBgD_Vtx_t (['cBgD_Vtx_t']) True/True
-// build cM3dGPla (['cM3dGPla']) True/True
-// build dDlst_shadowReal_c (['dDlst_shadowReal_c']) False/False
-// build J3DModel (['J3DModel']) False/False
-/* top-level dependencies (begin ['J3DModel']) */
-/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build cXyz (['cXyz']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
 struct dKy_tevstr_c {
 };
 
-/* top-level dependencies (begin ['dDlst_shadowReal_c']) */
-// outer dependency: ('J3DModel',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dDlst_shadowReal_c']) */
 struct dDlst_shadowReal_c {
-	// ('J3DModel',)
-	// ('cXyz',)
-	// ('dKy_tevstr_c',)
 	/* 800544F0 */ void reset();
 	/* 80054500 */ void imageDraw(f32 (* )[4]);
 	/* 800545D4 */ void draw();
@@ -273,67 +148,26 @@ struct dDlst_shadowReal_c {
 	/* 800562D0 */ dDlst_shadowReal_c();
 };
 
-// build cBgS_ShdwDraw (['cBgS_ShdwDraw']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cBgS_ShdwDraw']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cBgS_ShdwDraw']) */
 struct cBgS_ShdwDraw {
-	// ('cXyz',)
 	/* 80267F88 */ cBgS_ShdwDraw();
 	/* 80267FD0 */ ~cBgS_ShdwDraw();
 	/* 80268048 */ void Set(cXyz&, cXyz&);
 };
 
-// build ShdwDrawPoly_c (['ShdwDrawPoly_c']) False/False
-/* top-level dependencies (begin ['ShdwDrawPoly_c']) */
-/* top-level dependencies (end ['ShdwDrawPoly_c']) */
 struct ShdwDrawPoly_c {
 	/* 80054A6C */ ~ShdwDrawPoly_c();
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build J3DModel (['J3DModel']) True/True
-// build dDlst_shadowSimple_c (['dDlst_shadowSimple_c']) False/False
-// build _GXTexObj (['_GXTexObj']) False/False
-/* top-level dependencies (begin ['_GXTexObj']) */
-/* top-level dependencies (end ['_GXTexObj']) */
 struct _GXTexObj {
 };
 
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dDlst_shadowSimple_c']) */
-// outer dependency: ('_GXTexObj',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dDlst_shadowSimple_c']) */
 struct dDlst_shadowSimple_c {
-	// ('_GXTexObj',)
-	// ('cXyz',)
 	/* 8005520C */ void draw();
 	/* 800553EC */ void set(cXyz*, f32, f32, cXyz*, s16, f32, _GXTexObj*);
 	/* 8005638C */ dDlst_shadowSimple_c();
 };
 
-// build _GXTexObj (['_GXTexObj']) True/True
-// build dDlst_shadowControl_c (['dDlst_shadowControl_c']) False/False
-// build J3DModel (['J3DModel']) True/True
-// build _GXTexObj (['_GXTexObj']) True/True
-// build ResTIMG (['ResTIMG']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dDlst_shadowControl_c']) */
-// outer dependency: ('J3DModel',)
-// outer dependency: ('_GXTexObj',)
-// outer dependency: ('ResTIMG',)
-// outer dependency: ('dKy_tevstr_c',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dDlst_shadowControl_c']) */
 struct dDlst_shadowControl_c {
-	// ('J3DModel',)
-	// ('_GXTexObj',)
-	// ('dKy_tevstr_c',)
-	// ('ResTIMG',)
-	// ('cXyz',)
 	/* 80055684 */ void init();
 	/* 80055768 */ void reset();
 	/* 800557C8 */ void imageDraw(f32 (* )[4]);
@@ -344,36 +178,15 @@ struct dDlst_shadowControl_c {
 	/* 80055FE8 */ void setSimpleTex(ResTIMG const*);
 };
 
-// build dDlst_peekZ_c (['dDlst_peekZ_c']) False/False
-/* top-level dependencies (begin ['dDlst_peekZ_c']) */
-/* top-level dependencies (end ['dDlst_peekZ_c']) */
 struct dDlst_peekZ_c {
 	/* 80056018 */ void newData(s16, s16, u32*);
 	/* 80056080 */ void peekData();
 };
 
-// build dDlst_list_c (['dDlst_list_c']) False/False
-// build J3DPacket (['J3DPacket']) False/False
-/* top-level dependencies (begin ['J3DPacket']) */
-/* top-level dependencies (end ['J3DPacket']) */
 struct J3DPacket {
 };
 
-// build _GXColor (['_GXColor']) True/True
-// build cXyz (['cXyz']) True/True
-// build dDlst_base_c (['dDlst_base_c']) False/False
-/* top-level dependencies (begin ['dDlst_base_c']) */
-/* top-level dependencies (end ['dDlst_base_c']) */
-struct dDlst_base_c {
-};
-
-// build J3DDrawBuffer (['J3DDrawBuffer']) False/False
-// build J3DPacket (['J3DPacket']) True/True
-/* top-level dependencies (begin ['J3DDrawBuffer']) */
-// outer dependency: ('J3DPacket',)
-/* top-level dependencies (end ['J3DDrawBuffer']) */
 struct J3DDrawBuffer {
-	// ('J3DPacket',)
 	/* 80324F08 */ void initialize();
 	/* 80324F70 */ void allocBuffer(u32);
 	/* 80325008 */ ~J3DDrawBuffer();
@@ -382,19 +195,10 @@ struct J3DDrawBuffer {
 	/* 803254AC */ void draw() const;
 };
 
-/* top-level dependencies (begin ['dDlst_list_c']) */
-// outer dependency: ('J3DPacket',)
-// outer dependency: ('_GXColor',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dDlst_base_c',)
-// outer dependency: ('J3DDrawBuffer',)
-/* top-level dependencies (end ['dDlst_list_c']) */
+struct dDlst_base_c {
+};
+
 struct dDlst_list_c {
-	// ('_GXColor',)
-	// ('dDlst_base_c',)
-	// ('J3DDrawBuffer',)
-	// ('J3DPacket',)
-	// ('cXyz',)
 	/* 800560F0 */ dDlst_list_c();
 	/* 80056390 */ void init();
 	/* 8005648C */ ~dDlst_list_c();
@@ -411,93 +215,49 @@ struct dDlst_list_c {
 	/* 80056900 */ void calcWipe();
 };
 
-// build mDoExt_3DlineMatSortPacket (['mDoExt_3DlineMatSortPacket']) False/False
-/* top-level dependencies (begin ['mDoExt_3DlineMatSortPacket']) */
-/* top-level dependencies (end ['mDoExt_3DlineMatSortPacket']) */
 struct mDoExt_3DlineMatSortPacket {
 	/* 80014E20 */ ~mDoExt_3DlineMatSortPacket();
 	/* 800561C8 */ mDoExt_3DlineMatSortPacket();
 };
 
-// build dDlst_shadowTri_c (['dDlst_shadowTri_c']) False/False
-/* top-level dependencies (begin ['dDlst_shadowTri_c']) */
-/* top-level dependencies (end ['dDlst_shadowTri_c']) */
 struct dDlst_shadowTri_c {
 	/* 80056270 */ ~dDlst_shadowTri_c();
 	/* 80056344 */ dDlst_shadowTri_c();
 };
 
-// build J3DDrawBuffer (['J3DDrawBuffer']) True/True
-// build J3DPacket (['J3DPacket']) True/True
-// build dDlst_base_c (['dDlst_base_c']) True/True
-// build dDlst_shadowRealPoly_c (['dDlst_shadowRealPoly_c']) False/False
-/* top-level dependencies (begin ['dDlst_shadowRealPoly_c']) */
-/* top-level dependencies (end ['dDlst_shadowRealPoly_c']) */
 struct dDlst_shadowRealPoly_c {
 	/* 800569A0 */ void getTri();
 	/* 800569A8 */ s32 getTriMax();
 };
 
-// build Vec (['Vec']) True/True
-// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
-/* top-level dependencies (begin ['mDoMtx_stack_c']) */
-/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-// build _GXTlutObj (['_GXTlutObj']) False/False
-/* top-level dependencies (begin ['_GXTlutObj']) */
-/* top-level dependencies (end ['_GXTlutObj']) */
 struct _GXTlutObj {
 };
 
-// build cBgS (['cBgS']) False/False
-// build cBgS_ShdwDraw (['cBgS_ShdwDraw']) True/True
-/* top-level dependencies (begin ['cBgS']) */
-// outer dependency: ('cBgS_ShdwDraw',)
-/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
-	// ('cBgS_ShdwDraw',)
 	/* 80074840 */ void ShdwDraw(cBgS_ShdwDraw*);
 };
 
-// build J3DUClipper (['J3DUClipper']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['J3DUClipper']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['J3DUClipper']) */
 struct J3DUClipper {
-	// ('Vec',)
 	/* 8027378C */ void calcViewFrustum();
 	/* 80273A44 */ void clip(f32 const (* )[4], Vec*, Vec*) const;
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
 };
 
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build J3DSys (['J3DSys']) False/False
-/* top-level dependencies (begin ['J3DSys']) */
-/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
 	/* 8031073C */ void reinitGX();
 };
 
-// build J3DShapePacket (['J3DShapePacket']) False/False
-/* top-level dependencies (begin ['J3DShapePacket']) */
-/* top-level dependencies (end ['J3DShapePacket']) */
 struct J3DShapePacket {
 	/* 80312FBC */ void drawFast();
 };
 
-// build J3DShape (['J3DShape']) False/False
-/* top-level dependencies (begin ['J3DShape']) */
-/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };
@@ -506,91 +266,91 @@ struct J3DShape {
 // Forward References:
 // 
 
-static void J3DDrawBuffer__create(u32);
-static void psdRealCallBack(cBgS_ShdwDraw*, cBgD_Vtx_t*, int, int, int, cM3dGPla*);
-static void realPolygonCheck(cXyz*, f32, f32, cXyz*, dDlst_shadowPoly_c*);
-static void setkankyoShadow(dKy_tevstr_c*, f32*);
-extern "C" void __sinit_d_drawlist_cpp();
+static void J3DDrawBuffer__create(u32); // 2
+static void psdRealCallBack(cBgS_ShdwDraw*, cBgD_Vtx_t*, int, int, int, cM3dGPla*); // 2
+static void realPolygonCheck(cXyz*, f32, f32, cXyz*, dDlst_shadowPoly_c*); // 2
+static void setkankyoShadow(dKy_tevstr_c*, f32*); // 2
+extern "C" void __sinit_d_drawlist_cpp(); // 1
 
-extern "C" void setViewPort__14dDlst_window_cFffffff();
-extern "C" void setScissor__14dDlst_window_cFffff();
-extern "C" void draw__13dDlst_2DTri_cFv();
-extern "C" void draw__14dDlst_2DQuad_cFv();
-extern "C" void draw__15dDlst_2DPoint_cFv();
-extern "C" void draw__11dDlst_2DT_cFv();
-extern "C" void draw__12dDlst_2DT2_cFv();
-extern "C" void __ct__12dDlst_2DT2_cFv();
-extern "C" void init__12dDlst_2DT2_cFP7ResTIMGffffUcUcUcff();
-extern "C" void draw__11dDlst_2DM_cFv();
-extern "C" void draw__11dDlst_2Dm_cFv();
-extern "C" void draw__12dDlst_2DMt_cFv();
-extern "C" void getTexture__10J2DPictureCFUc();
-extern "C" void __ct__10dDlst_2D_cFP7ResTIMGssssUc();
-extern "C" void draw__10dDlst_2D_cFv();
-extern "C" void draw__11dDlst_blo_cFv();
-extern "C" void clearAnmTransform__9J2DScreenFv();
-extern "C" void calcMtx__7J2DPaneFv();
-extern "C" void makeMatrix__7J2DPaneFff();
-extern "C" s32 getTypeID__7J2DPaneCFv();
-extern "C" void setWhite__10J2DPictureFQ28JUtility6TColor();
-extern "C" void setBlack__10J2DPictureFQ28JUtility6TColor();
-extern "C" void __dt__10J2DAnmBaseFv();
-extern "C" void init__8cM_rnd_cFiii();
-extern "C" void get__8cM_rnd_cFv();
-extern "C" void getF__8cM_rnd_cFf();
-extern "C" void getFX__8cM_rnd_cFf();
-extern "C" void getValue__8cM_rnd_cFff();
-extern "C" void draw__18dDlst_effectLine_cFv();
-extern "C" void update__18dDlst_effectLine_cFR4cXyzR8_GXColorUsUsUsUsffff();
-extern "C" void set__18dDlst_shadowPoly_cFP10cBgD_Vtx_tUsUsUsP8cM3dGPla();
-extern "C" void draw__18dDlst_shadowPoly_cFv();
-extern "C" static void J3DDrawBuffer__create__FUl();
-extern "C" void reset__18dDlst_shadowReal_cFv();
-extern "C" void imageDraw__18dDlst_shadowReal_cFPA4_f();
-extern "C" void draw__18dDlst_shadowReal_cFv();
-extern "C" static void psdRealCallBack__FP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla();
-extern "C" static void realPolygonCheck__FP4cXyzffP4cXyzP18dDlst_shadowPoly_c();
-extern "C" void __dt__14ShdwDrawPoly_cFv();
-extern "C" static void setkankyoShadow__FP12dKy_tevstr_cPf();
-extern "C" void setShadowRealMtx__18dDlst_shadowReal_cFP4cXyzP4cXyzfffP12dKy_tevstr_c();
-extern "C" void set__18dDlst_shadowReal_cFUlP8J3DModelP4cXyzffP12dKy_tevstr_cff();
-extern "C" void add__18dDlst_shadowReal_cFP8J3DModel();
-extern "C" void draw__20dDlst_shadowSimple_cFv();
-extern "C" void set__20dDlst_shadowSimple_cFP4cXyzffP4cXyzsfP9_GXTexObj();
-extern "C" void init__21dDlst_shadowControl_cFv();
-extern "C" void reset__21dDlst_shadowControl_cFv();
-extern "C" void imageDraw__21dDlst_shadowControl_cFPA4_f();
-extern "C" void draw__21dDlst_shadowControl_cFPA4_f();
-extern "C" void setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c();
-extern "C" void addReal__21dDlst_shadowControl_cFUlP8J3DModel();
-extern "C" void setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj();
-extern "C" void setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG();
-extern "C" void newData__13dDlst_peekZ_cFssPUl();
-extern "C" void peekData__13dDlst_peekZ_cFv();
-extern "C" void __ct__12dDlst_list_cFv();
-extern "C" void __ct__26mDoExt_3DlineMatSortPacketFv();
-extern "C" void __dt__18dDlst_shadowReal_cFv();
-extern "C" void __dt__17dDlst_shadowTri_cFv();
-extern "C" void __ct__18dDlst_shadowReal_cFv();
-extern "C" void __ct__17dDlst_shadowTri_cFv();
-extern "C" void __ct__20dDlst_shadowSimple_cFv();
-extern "C" void init__12dDlst_list_cFv();
-extern "C" void __dt__12dDlst_list_cFv();
-extern "C" void reset__12dDlst_list_cFv();
-extern "C" void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz();
-extern "C" void drawOpaDrawList__12dDlst_list_cFP13J3DDrawBuffer();
-extern "C" void drawXluDrawList__12dDlst_list_cFP13J3DDrawBuffer();
-extern "C" void drawOpaListItem3d__12dDlst_list_cFv();
-extern "C" void drawXluListItem3d__12dDlst_list_cFv();
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" void draw__12dDlst_list_cFPP12dDlst_base_cPP12dDlst_base_c();
-extern "C" void wipeIn__12dDlst_list_cFfR8_GXColor();
-extern "C" void wipeIn__12dDlst_list_cFf();
-extern "C" void calcWipe__12dDlst_list_cFv();
-extern "C" void getTri__22dDlst_shadowRealPoly_cFv();
-extern "C" s32 getTriMax__22dDlst_shadowRealPoly_cFv();
-extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen();
-extern "C" void __sinit_d_drawlist_cpp();
+extern "C" void setViewPort__14dDlst_window_cFffffff(); // 1
+extern "C" void setScissor__14dDlst_window_cFffff(); // 1
+extern "C" void draw__13dDlst_2DTri_cFv(); // 1
+extern "C" void draw__14dDlst_2DQuad_cFv(); // 1
+extern "C" void draw__15dDlst_2DPoint_cFv(); // 1
+extern "C" void draw__11dDlst_2DT_cFv(); // 1
+extern "C" void draw__12dDlst_2DT2_cFv(); // 1
+extern "C" void __ct__12dDlst_2DT2_cFv(); // 1
+extern "C" void init__12dDlst_2DT2_cFP7ResTIMGffffUcUcUcff(); // 1
+extern "C" void draw__11dDlst_2DM_cFv(); // 1
+extern "C" void draw__11dDlst_2Dm_cFv(); // 1
+extern "C" void draw__12dDlst_2DMt_cFv(); // 1
+extern "C" void getTexture__10J2DPictureCFUc(); // 1
+extern "C" void __ct__10dDlst_2D_cFP7ResTIMGssssUc(); // 1
+extern "C" void draw__10dDlst_2D_cFv(); // 1
+extern "C" void draw__11dDlst_blo_cFv(); // 1
+extern "C" void clearAnmTransform__9J2DScreenFv(); // 1
+extern "C" void calcMtx__7J2DPaneFv(); // 1
+extern "C" void makeMatrix__7J2DPaneFff(); // 1
+extern "C" s32 getTypeID__7J2DPaneCFv(); // 1
+extern "C" void setWhite__10J2DPictureFQ28JUtility6TColor(); // 1
+extern "C" void setBlack__10J2DPictureFQ28JUtility6TColor(); // 1
+extern "C" void __dt__10J2DAnmBaseFv(); // 1
+extern "C" void init__8cM_rnd_cFiii(); // 1
+extern "C" void get__8cM_rnd_cFv(); // 1
+extern "C" void getF__8cM_rnd_cFf(); // 1
+extern "C" void getFX__8cM_rnd_cFf(); // 1
+extern "C" void getValue__8cM_rnd_cFff(); // 1
+extern "C" void draw__18dDlst_effectLine_cFv(); // 1
+extern "C" void update__18dDlst_effectLine_cFR4cXyzR8_GXColorUsUsUsUsffff(); // 1
+extern "C" void set__18dDlst_shadowPoly_cFP10cBgD_Vtx_tUsUsUsP8cM3dGPla(); // 1
+extern "C" void draw__18dDlst_shadowPoly_cFv(); // 1
+extern "C" static void J3DDrawBuffer__create__FUl(); // 1
+extern "C" void reset__18dDlst_shadowReal_cFv(); // 1
+extern "C" void imageDraw__18dDlst_shadowReal_cFPA4_f(); // 1
+extern "C" void draw__18dDlst_shadowReal_cFv(); // 1
+extern "C" static void psdRealCallBack__FP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla(); // 1
+extern "C" static void realPolygonCheck__FP4cXyzffP4cXyzP18dDlst_shadowPoly_c(); // 1
+extern "C" void __dt__14ShdwDrawPoly_cFv(); // 1
+extern "C" static void setkankyoShadow__FP12dKy_tevstr_cPf(); // 1
+extern "C" void setShadowRealMtx__18dDlst_shadowReal_cFP4cXyzP4cXyzfffP12dKy_tevstr_c(); // 1
+extern "C" void set__18dDlst_shadowReal_cFUlP8J3DModelP4cXyzffP12dKy_tevstr_cff(); // 1
+extern "C" void add__18dDlst_shadowReal_cFP8J3DModel(); // 1
+extern "C" void draw__20dDlst_shadowSimple_cFv(); // 1
+extern "C" void set__20dDlst_shadowSimple_cFP4cXyzffP4cXyzsfP9_GXTexObj(); // 1
+extern "C" void init__21dDlst_shadowControl_cFv(); // 1
+extern "C" void reset__21dDlst_shadowControl_cFv(); // 1
+extern "C" void imageDraw__21dDlst_shadowControl_cFPA4_f(); // 1
+extern "C" void draw__21dDlst_shadowControl_cFPA4_f(); // 1
+extern "C" void setReal__21dDlst_shadowControl_cFUlScP8J3DModelP4cXyzffP12dKy_tevstr_c(); // 1
+extern "C" void addReal__21dDlst_shadowControl_cFUlP8J3DModel(); // 1
+extern "C" void setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj(); // 1
+extern "C" void setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG(); // 1
+extern "C" void newData__13dDlst_peekZ_cFssPUl(); // 1
+extern "C" void peekData__13dDlst_peekZ_cFv(); // 1
+extern "C" void __ct__12dDlst_list_cFv(); // 1
+extern "C" void __ct__26mDoExt_3DlineMatSortPacketFv(); // 1
+extern "C" void __dt__18dDlst_shadowReal_cFv(); // 1
+extern "C" void __dt__17dDlst_shadowTri_cFv(); // 1
+extern "C" void __ct__18dDlst_shadowReal_cFv(); // 1
+extern "C" void __ct__17dDlst_shadowTri_cFv(); // 1
+extern "C" void __ct__20dDlst_shadowSimple_cFv(); // 1
+extern "C" void init__12dDlst_list_cFv(); // 1
+extern "C" void __dt__12dDlst_list_cFv(); // 1
+extern "C" void reset__12dDlst_list_cFv(); // 1
+extern "C" void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz(); // 1
+extern "C" void drawOpaDrawList__12dDlst_list_cFP13J3DDrawBuffer(); // 1
+extern "C" void drawXluDrawList__12dDlst_list_cFP13J3DDrawBuffer(); // 1
+extern "C" void drawOpaListItem3d__12dDlst_list_cFv(); // 1
+extern "C" void drawXluListItem3d__12dDlst_list_cFv(); // 1
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
+extern "C" void draw__12dDlst_list_cFPP12dDlst_base_cPP12dDlst_base_c(); // 1
+extern "C" void wipeIn__12dDlst_list_cFfR8_GXColor(); // 1
+extern "C" void wipeIn__12dDlst_list_cFf(); // 1
+extern "C" void calcWipe__12dDlst_list_cFv(); // 1
+extern "C" void getTri__22dDlst_shadowRealPoly_cFv(); // 1
+extern "C" s32 getTriMax__22dDlst_shadowRealPoly_cFv(); // 1
+extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen(); // 1
+extern "C" void __sinit_d_drawlist_cpp(); // 1
 SECTION_RODATA extern const u8 data_8037A178[42 + 2 /* padding */];
 SECTION_RODATA extern const u8 data_8037A1A4[9 + 3 /* padding */];
 SECTION_RODATA extern const u8 d_d_drawlist__stringBase0[16];
@@ -691,221 +451,221 @@ SECTION_SBSS2 extern u8 d_d_drawlist__lit_4275[4 + 4 /* padding */];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16);
-void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16);
-void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*);
-void dKy_plight_near_pos();
-void dKy_GxFog_set();
-extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
-void cLib_chaseUC(u8*, u8, u8);
-void* operator new(u32);
-void* operator new[](u32, int);
-void operator delete(void*);
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXTrans();
-extern "C" void C_MTXLightOrtho();
-extern "C" void PSMTXMultVec();
-extern "C" void C_MTXOrtho();
-extern "C" void PSVECAdd();
-extern "C" void PSVECScale();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECDotProduct();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetArray();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXPixModeSync();
-extern "C" void GXPeekZ();
-extern "C" void GXBegin();
-extern "C" void GXSetLineWidth();
-extern "C" void GXSetPointSize();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetTexCopySrc();
-extern "C" void GXSetTexCopyDst();
-extern "C" void GXCopyTex();
-extern "C" void GXSetChanMatColor();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXGetTexBufferSize();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXGetTexObjWidth();
-extern "C" void GXGetTexObjHeight();
-extern "C" void GXGetTexObjWrapS();
-extern "C" void GXGetTexObjWrapT();
-extern "C" void GXGetTexObjTlut();
-extern "C" void GXLoadTexObj();
-extern "C" void GXLoadTlut();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevOp();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetTevSwapModeTable();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetColorUpdate();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetDither();
-extern "C" void GXCallDisplayList();
-extern "C" void GXSetProjection();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXLoadTexMtxImm();
-extern "C" void GXSetViewport();
-extern "C" void GXSetScissor();
-extern "C" void GXSetClipMode();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savefpr_26();
-extern "C" void _restfpr_26();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void fmod();
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16); // 2
+void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*); // 2
+void dKy_plight_near_pos(); // 2
+void dKy_GxFog_set(); // 2
+extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i(); // 1
+void cLib_chaseUC(u8*, u8, u8); // 2
+void* operator new(u32); // 2
+void* operator new[](u32, int); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void C_MTXLightOrtho(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void C_MTXOrtho(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetArray(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXPixModeSync(); // 1
+extern "C" void GXPeekZ(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetLineWidth(); // 1
+extern "C" void GXSetPointSize(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetTexCopySrc(); // 1
+extern "C" void GXSetTexCopyDst(); // 1
+extern "C" void GXCopyTex(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXGetTexBufferSize(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXGetTexObjWidth(); // 1
+extern "C" void GXGetTexObjHeight(); // 1
+extern "C" void GXGetTexObjWrapS(); // 1
+extern "C" void GXGetTexObjWrapT(); // 1
+extern "C" void GXGetTexObjTlut(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXLoadTlut(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevOp(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetTevSwapModeTable(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetColorUpdate(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXCallDisplayList(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savefpr_26(); // 1
+extern "C" void _restfpr_26(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void fmod(); // 1
 
-extern "C" void __dt__4cXyzFv();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
-extern "C" void scaleM__14mDoMtx_stack_cFfff();
-extern "C" void __ct__4cXyzFv();
-extern "C" void __dt__26mDoExt_3DlineMatSortPacketFv();
-extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj();
-extern "C" void ShdwDraw__4cBgSFP13cBgS_ShdwDraw();
-extern "C" void dKy_plight_near_pos__Fv();
-extern "C" void dKy_GxFog_set__Fv();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void normalize__4cXyzFv();
-extern "C" void isZero__4cXyzCFv();
-extern "C" void __ct__13cBgS_ShdwDrawFv();
-extern "C" void __dt__13cBgS_ShdwDrawFv();
-extern "C" void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz();
-extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
-extern "C" void cLib_chaseUC__FPUcUcUc();
-extern "C" void calcViewFrustum__11J3DUClipperFv();
-extern "C" void clip__11J3DUClipperCFPA4_CfP3VecP3Vec();
-extern "C" void* __nw__FUl();
-extern "C" void* __nwa__FUli();
-extern "C" void __dl__FPv();
-extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
-extern "C" void clearAnmTransform__7J2DPaneFv();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void __ct__10J2DPictureFv();
-extern "C" void reinitGX__6J3DSysFv();
-extern "C" void drawFast__14J3DShapePacketFv();
-extern "C" void loadPreDrawSetting__8J3DShapeCFv();
-extern "C" void initialize__13J3DDrawBufferFv();
-extern "C" void allocBuffer__13J3DDrawBufferFUl();
-extern "C" void __dt__13J3DDrawBufferFv();
-extern "C" void frameInit__13J3DDrawBufferFv();
-extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs();
-extern "C" void draw__13J3DDrawBufferCFv();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXTrans();
-extern "C" void C_MTXLightOrtho();
-extern "C" void PSMTXMultVec();
-extern "C" void C_MTXOrtho();
-extern "C" void PSVECAdd();
-extern "C" void PSVECScale();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECDotProduct();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetArray();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXPixModeSync();
-extern "C" void GXPeekZ();
-extern "C" void GXBegin();
-extern "C" void GXSetLineWidth();
-extern "C" void GXSetPointSize();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetTexCopySrc();
-extern "C" void GXSetTexCopyDst();
-extern "C" void GXCopyTex();
-extern "C" void GXSetChanMatColor();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXGetTexBufferSize();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXGetTexObjWidth();
-extern "C" void GXGetTexObjHeight();
-extern "C" void GXGetTexObjWrapS();
-extern "C" void GXGetTexObjWrapT();
-extern "C" void GXGetTexObjTlut();
-extern "C" void GXLoadTexObj();
-extern "C" void GXLoadTlut();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevOp();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetTevSwapModeTable();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetColorUpdate();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetDither();
-extern "C" void GXCallDisplayList();
-extern "C" void GXSetProjection();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXLoadTexMtxImm();
-extern "C" void GXSetViewport();
-extern "C" void GXSetScissor();
-extern "C" void GXSetClipMode();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savefpr_26();
-extern "C" void _restfpr_26();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void fmod();
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs(); // 1
+extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void __ct__4cXyzFv(); // 1
+extern "C" void __dt__26mDoExt_3DlineMatSortPacketFv(); // 1
+extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj(); // 1
+extern "C" void ShdwDraw__4cBgSFP13cBgS_ShdwDraw(); // 1
+extern "C" void dKy_plight_near_pos__Fv(); // 1
+extern "C" void dKy_GxFog_set__Fv(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void normalize__4cXyzFv(); // 1
+extern "C" void isZero__4cXyzCFv(); // 1
+extern "C" void __ct__13cBgS_ShdwDrawFv(); // 1
+extern "C" void __dt__13cBgS_ShdwDrawFv(); // 1
+extern "C" void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz(); // 1
+extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i(); // 1
+extern "C" void cLib_chaseUC__FPUcUcUc(); // 1
+extern "C" void calcViewFrustum__11J3DUClipperFv(); // 1
+extern "C" void clip__11J3DUClipperCFPA4_CfP3VecP3Vec(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void* __nwa__FUli(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive(); // 1
+extern "C" void clearAnmTransform__7J2DPaneFv(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void __ct__10J2DPictureFv(); // 1
+extern "C" void reinitGX__6J3DSysFv(); // 1
+extern "C" void drawFast__14J3DShapePacketFv(); // 1
+extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
+extern "C" void initialize__13J3DDrawBufferFv(); // 1
+extern "C" void allocBuffer__13J3DDrawBufferFUl(); // 1
+extern "C" void __dt__13J3DDrawBufferFv(); // 1
+extern "C" void frameInit__13J3DDrawBufferFv(); // 1
+extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
+extern "C" void draw__13J3DDrawBufferCFv(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void C_MTXLightOrtho(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void C_MTXOrtho(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetArray(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXPixModeSync(); // 1
+extern "C" void GXPeekZ(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetLineWidth(); // 1
+extern "C" void GXSetPointSize(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetTexCopySrc(); // 1
+extern "C" void GXSetTexCopyDst(); // 1
+extern "C" void GXCopyTex(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXGetTexBufferSize(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXGetTexObjWidth(); // 1
+extern "C" void GXGetTexObjHeight(); // 1
+extern "C" void GXGetTexObjWrapS(); // 1
+extern "C" void GXGetTexObjWrapT(); // 1
+extern "C" void GXGetTexObjTlut(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXLoadTlut(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevOp(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetTevSwapModeTable(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetColorUpdate(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXCallDisplayList(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savefpr_26(); // 1
+extern "C" void _restfpr_26(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void fmod(); // 1
 SECTION_DATA extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 SECTION_DATA extern void*const __vt__26mDoExt_3DlineMatSortPacket[5];
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];

@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __copy();
+extern "C" void __copy(); // 1
 
-extern "C" void __copy();
+extern "C" void __copy(); // 1
 
 // 
 // External References:

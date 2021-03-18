@@ -9,42 +9,19 @@
 // Types:
 // 
 
-// build dPaPo_c (['dPaPo_c']) False/False
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
-struct csXyz {
-};
-
-// build dBgS_Acch (['dBgS_Acch']) False/False
-/* top-level dependencies (begin ['dBgS_Acch']) */
-/* top-level dependencies (end ['dBgS_Acch']) */
-struct dBgS_Acch {
-};
-
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
+struct dBgS_Acch {
+};
+
+struct csXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
-/* top-level dependencies (begin ['dPaPo_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('dBgS_Acch',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dPaPo_c']) */
 struct dPaPo_c {
-	// ('csXyz',)
-	// ('dBgS_Acch',)
-	// ('cXyz',)
-	// ('dKy_tevstr_c',)
 	/* 80050C9C */ void init(dBgS_Acch*, f32, f32);
 	/* 80050CC4 */ void checkWaterIn(cXyz*, cXyz const*, dKy_tevstr_c const*, u32, s8, f32, f32);
 	/* 80050E7C */ void setEffect(u32*, int, dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, csXyz const*, s8, u8*, u8*);
@@ -54,23 +31,7 @@ struct dPaPo_c {
 	/* 80051524 */ void getCenterEmitter(int, int);
 };
 
-// build dBgS_Acch (['dBgS_Acch']) True/True
-// build cXyz (['cXyz']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-// build csXyz (['csXyz']) True/True
-// build dPaPoT_c (['dPaPoT_c']) False/False
-// build csXyz (['csXyz']) True/True
-// build cXyz (['cXyz']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-/* top-level dependencies (begin ['dPaPoT_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dPaPoT_c']) */
 struct dPaPoT_c {
-	// ('csXyz',)
-	// ('cXyz',)
-	// ('dKy_tevstr_c',)
 	/* 8005115C */ void setEffectTwo(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
 	/* 80051294 */ void clearTwoAllID();
 	/* 80051470 */ void getRightEffType(int) const;
@@ -79,19 +40,7 @@ struct dPaPoT_c {
 	/* 800514DC */ void getLeftEmitter(int, int);
 };
 
-// build dPaPoF_c (['dPaPoF_c']) False/False
-// build csXyz (['csXyz']) True/True
-// build cXyz (['cXyz']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-/* top-level dependencies (begin ['dPaPoF_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dPaPoF_c']) */
 struct dPaPoF_c {
-	// ('csXyz',)
-	// ('cXyz',)
-	// ('dKy_tevstr_c',)
 	/* 800512E8 */ void setEffectFour(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
 	/* 80051424 */ void clearFourAllID();
 	/* 8005156C */ void getBackRightEffType(int) const;
@@ -100,30 +49,10 @@ struct dPaPoF_c {
 	/* 800515CC */ void getBackLeftEmitter(int, int);
 };
 
-// build dPa_control_c (['dPa_control_c']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build csXyz (['csXyz']) True/True
-// build cXyz (['cXyz']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
-/* top-level dependencies (begin ['dPa_control_c']) */
-// outer dependency: ('cBgS_PolyInfo',)
-// outer dependency: ('csXyz',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dPa_control_c']) */
 struct dPa_control_c {
-	// ('cBgS_PolyInfo',)
-	// ('csXyz',)
-	// ('cXyz',)
-	// ('dKy_tevstr_c',)
-	// build level_c (['dPa_control_c', 'level_c']) False/False
-	/* dependencies (begin ['dPa_control_c', 'level_c']) */
-	/* dependencies (end ['dPa_control_c', 'level_c']) */
 	struct level_c {
 		/* 8004B918 */ void getEmitter(u32);
 	};
@@ -133,24 +62,11 @@ struct dPa_control_c {
 	/* 8004D988 */ void setCommonPoly(u32*, cBgS_PolyInfo*, cXyz const*, cXyz const*, dKy_tevstr_c const*, u32, u32, csXyz const*, cXyz const*, s8);
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-// build cBgS (['cBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-/* top-level dependencies (begin ['cBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
-	// ('cBgS_PolyInfo',)
 	/* 80074660 */ void ChkPolySafe(cBgS_PolyInfo const&);
 };
 
-// build dBgS (['dBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-/* top-level dependencies (begin ['dBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// ('cBgS_PolyInfo',)
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 };
 
@@ -158,28 +74,28 @@ struct dBgS {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_particle_copoly_cpp();
+extern "C" void __sinit_d_particle_copoly_cpp(); // 1
 
-extern "C" void init__7dPaPo_cFP9dBgS_Acchff();
-extern "C" void checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff();
-extern "C" void setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc();
-extern "C" void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff();
-extern "C" void clearID__7dPaPo_cFPUlPUc();
-extern "C" void setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff();
-extern "C" void clearTwoAllID__8dPaPoT_cFv();
-extern "C" void setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff();
-extern "C" void clearFourAllID__8dPaPoF_cFv();
-extern "C" void getRightEffType__8dPaPoT_cCFi();
-extern "C" void getLeftEffType__8dPaPoT_cCFi();
-extern "C" void getCenterEffType__7dPaPo_cCFi();
-extern "C" void getRightEmitter__8dPaPoT_cFii();
-extern "C" void getLeftEmitter__8dPaPoT_cFii();
-extern "C" void getCenterEmitter__7dPaPo_cFii();
-extern "C" void getBackRightEffType__8dPaPoF_cCFi();
-extern "C" void getBackLeftEffType__8dPaPoF_cCFi();
-extern "C" void getBackRightEmitter__8dPaPoF_cFii();
-extern "C" void getBackLeftEmitter__8dPaPoF_cFii();
-extern "C" void __sinit_d_particle_copoly_cpp();
+extern "C" void init__7dPaPo_cFP9dBgS_Acchff(); // 1
+extern "C" void checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff(); // 1
+extern "C" void setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc(); // 1
+extern "C" void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff(); // 1
+extern "C" void clearID__7dPaPo_cFPUlPUc(); // 1
+extern "C" void setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff(); // 1
+extern "C" void clearTwoAllID__8dPaPoT_cFv(); // 1
+extern "C" void setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff(); // 1
+extern "C" void clearFourAllID__8dPaPoF_cFv(); // 1
+extern "C" void getRightEffType__8dPaPoT_cCFi(); // 1
+extern "C" void getLeftEffType__8dPaPoT_cCFi(); // 1
+extern "C" void getCenterEffType__7dPaPo_cCFi(); // 1
+extern "C" void getRightEmitter__8dPaPoT_cFii(); // 1
+extern "C" void getLeftEmitter__8dPaPoT_cFii(); // 1
+extern "C" void getCenterEmitter__7dPaPo_cFii(); // 1
+extern "C" void getBackRightEffType__8dPaPoF_cCFi(); // 1
+extern "C" void getBackLeftEffType__8dPaPoF_cCFi(); // 1
+extern "C" void getBackRightEmitter__8dPaPoF_cFii(); // 1
+extern "C" void getBackLeftEmitter__8dPaPoF_cFii(); // 1
+extern "C" void __sinit_d_particle_copoly_cpp(); // 1
 SECTION_DATA extern u8 d_particle_d_particle_copoly__cNullVec__6Z2Calc[12];
 SECTION_DATA extern void*d_particle_d_particle_copoly__lit_3816[3];
 SECTION_DATA extern void*lit_3817[3];
@@ -207,31 +123,31 @@ SECTION_SDATA2 extern u8 d_particle_d_particle_copoly__lit_3672[4 + 4 /* padding
 // External References:
 // 
 
-void fopKyM_createWpillar(cXyz const*, f32, int);
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_29();
+void fopKyM_createWpillar(cXyz const*, f32, int); // 2
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void fopKyM_createWpillar__FPC4cXyzfi();
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
-extern "C" void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc();
-extern "C" void setStopContinue__13dPa_control_cFUl();
-extern "C" void setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc();
-extern "C" void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo();
-extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_29();
+extern "C" void fopKyM_createWpillar__FPC4cXyzfi(); // 1
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
+extern "C" void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc(); // 1
+extern "C" void setStopContinue__13dPa_control_cFUl(); // 1
+extern "C" void setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc(); // 1
+extern "C" void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 

@@ -9,36 +9,33 @@
 // Types:
 // 
 
-// build JASTrack (['JASTrack']) False/False
-/* top-level dependencies (begin ['JASTrack']) */
-/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
 	/* 8029285C */ void setFIR(s16 const*);
 	/* 8029289C */ void setIIR(s16 const*);
 	/* 80292918 */ void writePort(u32, u16);
 };
 
-// build Z2SoundMgr (['Z2SoundMgr']) False/False
-// build JAISound (['JAISound']) False/False
-/* top-level dependencies (begin ['JAISound']) */
-/* top-level dependencies (end ['JAISound']) */
-struct JAISound {
-};
-
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SoundMgr']) */
-// outer dependency: ('JAISound',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SoundMgr']) */
+struct JAISoundHandle {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+struct JAISound {
+};
+
 struct Z2SoundMgr {
-	// ('JAISound',)
-	// ('JAISoundID',)
 	/* 802A9E80 */ Z2SoundMgr();
+	/* 802A9EE8 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 	/* 802AA1B0 */ void calc();
 	/* 802AA270 */ void setIIR(JAISound*, s16 const*);
 	/* 802AA33C */ void setFilterOff(JAISound*);
@@ -54,67 +51,41 @@ struct Z2SoundMgr {
 	/* 802AAAC4 */ void isPlayingSoundID(JAISoundID);
 };
 
-// build JAISound (['JAISound']) True/True
-// build JAISoundID (['JAISoundID']) True/True
-// build JASDriver (['JASDriver']) False/False
-/* top-level dependencies (begin ['JASDriver']) */
-/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029E188 */ void waitSubFrame();
 };
 
-// build JAISeCategoryMgr (['JAISeCategoryMgr']) False/False
-/* top-level dependencies (begin ['JAISeCategoryMgr']) */
-/* top-level dependencies (end ['JAISeCategoryMgr']) */
 struct JAISeCategoryMgr {
 	/* 8029FEEC */ void pause(bool);
 };
 
-// build JAISeMgr (['JAISeMgr']) False/False
-// build JAISoundID (['JAISoundID']) True/True
-/* top-level dependencies (begin ['JAISeMgr']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['JAISeMgr']) */
 struct JAISeMgr {
-	// ('JAISoundID',)
 	/* 802A0074 */ JAISeMgr(bool);
 	/* 802A02A0 */ void stop();
 	/* 802A02F4 */ void stopSoundID(JAISoundID);
 	/* 802A0358 */ void initParams();
 	/* 802A0574 */ void calc();
 	/* 802A0704 */ void mixOut();
+	/* 802A0768 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 	/* 802A08D0 */ void getNumActiveSe() const;
 };
 
-// build JAISeqMgr (['JAISeqMgr']) False/False
-// build JAISoundID (['JAISoundID']) True/True
-/* top-level dependencies (begin ['JAISeqMgr']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['JAISeqMgr']) */
 struct JAISeqMgr {
-	// ('JAISoundID',)
 	/* 802A1914 */ JAISeqMgr(bool);
+	/* 802A1B48 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 	/* 802A1C90 */ void calc();
 	/* 802A1DFC */ void stop();
 	/* 802A1E8C */ void stopSoundID(JAISoundID);
 	/* 802A1EFC */ void mixOut();
 };
 
-// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
-/* top-level dependencies (begin ['JAISoundParamsMove']) */
-/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 };
 
-// build JAIStreamMgr (['JAIStreamMgr']) False/False
-// build JAISoundID (['JAISoundID']) True/True
-/* top-level dependencies (begin ['JAIStreamMgr']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['JAIStreamMgr']) */
 struct JAIStreamMgr {
-	// ('JAISoundID',)
 	/* 802A3B68 */ JAIStreamMgr(bool);
+	/* 802A3C3C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 	/* 802A3EBC */ void calc();
 	/* 802A4028 */ void stop();
 	/* 802A4068 */ void stop(u32);
@@ -122,36 +93,16 @@ struct JAIStreamMgr {
 	/* 802A4118 */ void mixOut();
 };
 
-// build JAUSectionHeap (['JAUSectionHeap']) False/False
-// build JAISoundID (['JAISoundID']) True/True
-/* top-level dependencies (begin ['JAUSectionHeap']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['JAUSectionHeap']) */
 struct JAUSectionHeap {
-	// ('JAISoundID',)
 	/* 802A5EC0 */ void loadDynamicSeq(JAISoundID, bool);
 	/* 802A5EF8 */ void releaseIdleDynamicSeqDataBlock();
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-/* top-level dependencies (begin ['Z2SeMgr']) */
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
 	/* 802AD9F4 */ void seMoveVolumeAll(f32, u32);
 };
 
-// build Z2SeqMgr (['Z2SeqMgr']) False/False
-// build JAISoundHandle (['JAISoundHandle']) False/False
-/* top-level dependencies (begin ['JAISoundHandle']) */
-/* top-level dependencies (end ['JAISoundHandle']) */
-struct JAISoundHandle {
-};
-
-/* top-level dependencies (begin ['Z2SeqMgr']) */
-// outer dependency: ('JAISoundHandle',)
-/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
-	// ('JAISoundHandle',)
 	/* 802AF010 */ void bgmStart(u32, u32, s32);
 	/* 802AFF8C */ void changeBgmStatus(s32);
 	/* 802B299C */ void onVariantBgmJumpEnd(bool);
@@ -160,20 +111,10 @@ struct Z2SeqMgr {
 	/* 802B579C */ void onFieldBgmJumpEnd();
 };
 
-// build JAISoundHandle (['JAISoundHandle']) True/True
-// build Z2SoundInfo (['Z2SoundInfo']) False/False
-// build JAISoundID (['JAISoundID']) True/True
-/* top-level dependencies (begin ['Z2SoundInfo']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SoundInfo']) */
 struct Z2SoundInfo {
-	// ('JAISoundID',)
 	/* 802BBAC8 */ void getSwBit(JAISoundID) const;
 };
 
-// build Z2SpeechMgr2 (['Z2SpeechMgr2']) False/False
-/* top-level dependencies (begin ['Z2SpeechMgr2']) */
-/* top-level dependencies (end ['Z2SpeechMgr2']) */
 struct Z2SpeechMgr2 {
 	/* 802CC190 */ void speakOneWord(bool);
 };
@@ -182,25 +123,24 @@ struct Z2SpeechMgr2 {
 // Forward References:
 // 
 
-void seqCallback(JASTrack*, u16);
-extern "C" static void func_802A9EE8();
+void seqCallback(JASTrack*, u16); // 2
 
-extern "C" void seqCallback__FP8JASTrackUs();
-extern "C" void __ct__10Z2SoundMgrFv();
-extern "C" static void func_802A9EE8();
-extern "C" void calc__10Z2SoundMgrFv();
-extern "C" void setIIR__10Z2SoundMgrFP8JAISoundPCs();
-extern "C" void setFilterOff__10Z2SoundMgrFP8JAISound();
-extern "C" void resetFilterAll__10Z2SoundMgrFv();
-extern "C" void mixOut__10Z2SoundMgrFv();
-extern "C" void framework__10Z2SoundMgrFv();
-extern "C" void pauseAllGameSound__10Z2SoundMgrFb();
-extern "C" void stopSoundID__10Z2SoundMgrF10JAISoundID();
-extern "C" void stopSync__10Z2SoundMgrFv();
-extern "C" void stop__10Z2SoundMgrFv();
-extern "C" void initParams__10Z2SoundMgrFv();
-extern "C" void multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf();
-extern "C" void isPlayingSoundID__10Z2SoundMgrF10JAISoundID();
+extern "C" void seqCallback__FP8JASTrackUs(); // 1
+extern "C" void __ct__10Z2SoundMgrFv(); // 1
+extern "C" void func_802A9EE8(); // 1
+extern "C" void calc__10Z2SoundMgrFv(); // 1
+extern "C" void setIIR__10Z2SoundMgrFP8JAISoundPCs(); // 1
+extern "C" void setFilterOff__10Z2SoundMgrFP8JAISound(); // 1
+extern "C" void resetFilterAll__10Z2SoundMgrFv(); // 1
+extern "C" void mixOut__10Z2SoundMgrFv(); // 1
+extern "C" void framework__10Z2SoundMgrFv(); // 1
+extern "C" void pauseAllGameSound__10Z2SoundMgrFb(); // 1
+extern "C" void stopSoundID__10Z2SoundMgrF10JAISoundID(); // 1
+extern "C" void stopSync__10Z2SoundMgrFv(); // 1
+extern "C" void stop__10Z2SoundMgrFv(); // 1
+extern "C" void initParams__10Z2SoundMgrFv(); // 1
+extern "C" void multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf(); // 1
+extern "C" void isPlayingSoundID__10Z2SoundMgrF10JAISoundID(); // 1
 SECTION_RODATA extern const u8 cResetFilterTable[16];
 SECTION_RODATA extern const u8 Z2SoundMgr__stringBase0[32];
 SECTION_DATA extern void*Z2SoundMgr__lit_3690[22];
@@ -216,72 +156,69 @@ SECTION_SDATA2 extern f32 Z2SoundMgr__lit_4313;
 // External References:
 // 
 
-void dComIfGs_staffroll_next_go();
-extern "C" void func_802A0768();
-extern "C" void func_802A1B48();
-extern "C" void func_802A3C3C();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void sprintf();
+void dComIfGs_staffroll_next_go(); // 2
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void sprintf(); // 1
 
-extern "C" void dComIfGs_staffroll_next_go__Fv();
-extern "C" void setFIR__8JASTrackFPCs();
-extern "C" void setIIR__8JASTrackFPCs();
-extern "C" void writePort__8JASTrackFUlUs();
-extern "C" void waitSubFrame__9JASDriverFv();
-extern "C" void pause__16JAISeCategoryMgrFb();
-extern "C" void __ct__8JAISeMgrFb();
-extern "C" void stop__8JAISeMgrFv();
-extern "C" void stopSoundID__8JAISeMgrF10JAISoundID();
-extern "C" void initParams__8JAISeMgrFv();
-extern "C" void calc__8JAISeMgrFv();
-extern "C" void mixOut__8JAISeMgrFv();
-extern "C" void func_802A0768();
-extern "C" void getNumActiveSe__8JAISeMgrCFv();
-extern "C" void __ct__9JAISeqMgrFb();
-extern "C" void func_802A1B48();
-extern "C" void calc__9JAISeqMgrFv();
-extern "C" void stop__9JAISeqMgrFv();
-extern "C" void stopSoundID__9JAISeqMgrF10JAISoundID();
-extern "C" void mixOut__9JAISeqMgrFv();
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
-extern "C" void __ct__12JAIStreamMgrFb();
-extern "C" void func_802A3C3C();
-extern "C" void calc__12JAIStreamMgrFv();
-extern "C" void stop__12JAIStreamMgrFv();
-extern "C" void stop__12JAIStreamMgrFUl();
-extern "C" void stopSoundID__12JAIStreamMgrF10JAISoundID();
-extern "C" void mixOut__12JAIStreamMgrFv();
-extern "C" void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb();
-extern "C" void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv();
-extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl();
-extern "C" void bgmStart__8Z2SeqMgrFUlUll();
-extern "C" void changeBgmStatus__8Z2SeqMgrFl();
-extern "C" void onVariantBgmJumpEnd__8Z2SeqMgrFb();
-extern "C" void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff();
-extern "C" void onFieldBgmJumpStart__8Z2SeqMgrFv();
-extern "C" void onFieldBgmJumpEnd__8Z2SeqMgrFv();
-extern "C" void getSwBit__11Z2SoundInfoCF10JAISoundID();
-extern "C" void speakOneWord__12Z2SpeechMgr2Fb();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void sprintf();
+extern "C" void dComIfGs_staffroll_next_go__Fv(); // 1
+extern "C" void setFIR__8JASTrackFPCs(); // 1
+extern "C" void setIIR__8JASTrackFPCs(); // 1
+extern "C" void writePort__8JASTrackFUlUs(); // 1
+extern "C" void waitSubFrame__9JASDriverFv(); // 1
+extern "C" void pause__16JAISeCategoryMgrFb(); // 1
+extern "C" void __ct__8JAISeMgrFb(); // 1
+extern "C" void stop__8JAISeMgrFv(); // 1
+extern "C" void stopSoundID__8JAISeMgrF10JAISoundID(); // 1
+extern "C" void initParams__8JAISeMgrFv(); // 1
+extern "C" void calc__8JAISeMgrFv(); // 1
+extern "C" void mixOut__8JAISeMgrFv(); // 1
+extern "C" void func_802A0768(); // 1
+extern "C" void getNumActiveSe__8JAISeMgrCFv(); // 1
+extern "C" void __ct__9JAISeqMgrFb(); // 1
+extern "C" void func_802A1B48(); // 1
+extern "C" void calc__9JAISeqMgrFv(); // 1
+extern "C" void stop__9JAISeqMgrFv(); // 1
+extern "C" void stopSoundID__9JAISeqMgrF10JAISoundID(); // 1
+extern "C" void mixOut__9JAISeqMgrFv(); // 1
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void __ct__12JAIStreamMgrFb(); // 1
+extern "C" void func_802A3C3C(); // 1
+extern "C" void calc__12JAIStreamMgrFv(); // 1
+extern "C" void stop__12JAIStreamMgrFv(); // 1
+extern "C" void stop__12JAIStreamMgrFUl(); // 1
+extern "C" void stopSoundID__12JAIStreamMgrF10JAISoundID(); // 1
+extern "C" void mixOut__12JAIStreamMgrFv(); // 1
+extern "C" void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb(); // 1
+extern "C" void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv(); // 1
+extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl(); // 1
+extern "C" void bgmStart__8Z2SeqMgrFUlUll(); // 1
+extern "C" void changeBgmStatus__8Z2SeqMgrFl(); // 1
+extern "C" void onVariantBgmJumpEnd__8Z2SeqMgrFb(); // 1
+extern "C" void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff(); // 1
+extern "C" void onFieldBgmJumpStart__8Z2SeqMgrFv(); // 1
+extern "C" void onFieldBgmJumpEnd__8Z2SeqMgrFv(); // 1
+extern "C" void getSwBit__11Z2SoundInfoCF10JAISoundID(); // 1
+extern "C" void speakOneWord__12Z2SpeechMgr2Fb(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void sprintf(); // 1
 SECTION_RODATA extern const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
 SECTION_SBSS extern u8 data_80450B4C[4];
 SECTION_SBSS extern u8 data_80450B60[4];
@@ -391,7 +328,7 @@ f64 Z2SoundMgr__lit_3909 = 4503599627370496.0 /* cast u32 to float */;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802A9EE8() {
+asm void Z2SoundMgr::startSound(JAISoundID field_0, JAISoundHandle* field_1, JGeometry::TVec3<f32> const* field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SoundMgr/func_802A9EE8.s"
 }

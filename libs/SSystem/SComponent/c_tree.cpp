@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build node_class (['node_class']) False/False
-/* top-level dependencies (begin ['node_class']) */
-/* top-level dependencies (end ['node_class']) */
 struct node_class {
 };
 
-// build node_lists_tree_class (['node_lists_tree_class']) False/False
-/* top-level dependencies (begin ['node_lists_tree_class']) */
-/* top-level dependencies (end ['node_lists_tree_class']) */
 struct node_lists_tree_class {
 };
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
@@ -31,29 +22,29 @@ struct node_list_class {
 // Forward References:
 // 
 
-void cTr_SingleCut(node_class*);
-void cTr_Addition(node_lists_tree_class*, int, node_class*);
-void cTr_Insert(node_lists_tree_class*, int, node_class*, int);
-void cTr_Create(node_lists_tree_class*, node_list_class*, int);
+void cTr_SingleCut(node_class*); // 2
+void cTr_Addition(node_lists_tree_class*, int, node_class*); // 2
+void cTr_Insert(node_lists_tree_class*, int, node_class*, int); // 2
+void cTr_Create(node_lists_tree_class*, node_list_class*, int); // 2
 
-extern "C" void cTr_SingleCut__FP10node_class();
-extern "C" void cTr_Addition__FP21node_lists_tree_classiP10node_class();
-extern "C" void cTr_Insert__FP21node_lists_tree_classiP10node_classi();
-extern "C" void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
+extern "C" void cTr_SingleCut__FP10node_class(); // 1
+extern "C" void cTr_Addition__FP21node_lists_tree_classiP10node_class(); // 1
+extern "C" void cTr_Insert__FP21node_lists_tree_classiP10node_classi(); // 1
+extern "C" void cTr_Create__FP21node_lists_tree_classP15node_list_classi(); // 1
 
 // 
 // External References:
 // 
 
-void cLs_SingleCut(node_class*);
-void cLs_Addition(node_list_class*, node_class*);
-void cLs_Insert(node_list_class*, int, node_class*);
-void cLs_Create(node_list_class*);
+void cLs_SingleCut(node_class*); // 2
+void cLs_Addition(node_list_class*, node_class*); // 2
+void cLs_Insert(node_list_class*, int, node_class*); // 2
+void cLs_Create(node_list_class*); // 2
 
-extern "C" void cLs_SingleCut__FP10node_class();
-extern "C" void cLs_Addition__FP15node_list_classP10node_class();
-extern "C" void cLs_Insert__FP15node_list_classiP10node_class();
-extern "C" void cLs_Create__FP15node_list_class();
+extern "C" void cLs_SingleCut__FP10node_class(); // 1
+extern "C" void cLs_Addition__FP15node_list_classP10node_class(); // 1
+extern "C" void cLs_Insert__FP15node_list_classiP10node_class(); // 1
+extern "C" void cLs_Create__FP15node_list_class(); // 1
 
 // 
 // Declarations:

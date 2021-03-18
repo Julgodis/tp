@@ -9,23 +9,23 @@
 // Forward References:
 // 
 
-extern "C" void __TRK_write_console();
-extern "C" void __read_console();
+extern "C" void __TRK_write_console(); // 1
+extern "C" void __read_console(); // 1
 
-extern "C" void __TRK_write_console();
-extern "C" void __read_console();
+extern "C" void __TRK_write_console(); // 1
+extern "C" void __read_console(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void GetTRKConnected();
-extern "C" void TRKAccessFile();
-extern "C" void GetUseSerialIO();
+extern "C" void GetTRKConnected(); // 1
+extern "C" void TRKAccessFile(); // 1
+extern "C" void GetUseSerialIO(); // 1
 
-extern "C" void GetTRKConnected();
-extern "C" void TRKAccessFile();
-extern "C" void GetUseSerialIO();
+extern "C" void GetTRKConnected(); // 1
+extern "C" void TRKAccessFile(); // 1
+extern "C" void GetUseSerialIO(); // 1
 
 // 
 // Declarations:

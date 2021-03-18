@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void OSGetArenaHi();
-extern "C" void OSGetArenaLo();
-extern "C" void OSSetArenaHi();
-extern "C" void OSSetArenaLo();
-extern "C" void OSAllocFromArenaLo();
+extern "C" void OSGetArenaHi(); // 1
+extern "C" void OSGetArenaLo(); // 1
+extern "C" void OSSetArenaHi(); // 1
+extern "C" void OSSetArenaLo(); // 1
+extern "C" void OSAllocFromArenaLo(); // 1
 
-extern "C" void OSGetArenaHi();
-extern "C" void OSGetArenaLo();
-extern "C" void OSSetArenaHi();
-extern "C" void OSSetArenaLo();
-extern "C" void OSAllocFromArenaLo();
+extern "C" void OSGetArenaHi(); // 1
+extern "C" void OSGetArenaLo(); // 1
+extern "C" void OSSetArenaHi(); // 1
+extern "C" void OSSetArenaLo(); // 1
+extern "C" void OSAllocFromArenaLo(); // 1
 SECTION_SDATA extern u32 __OSArenaLo;
 SECTION_SBSS extern u8 __OSArenaHi[4 + 4 /* padding */];
 

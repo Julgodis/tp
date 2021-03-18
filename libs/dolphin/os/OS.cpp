@@ -9,41 +9,41 @@
 // Forward References:
 // 
 
-extern "C" void __OSFPRInit();
-extern "C" void OSGetConsoleType();
-extern "C" static void InquiryCallback();
-extern "C" void OSInit();
-extern "C" static void OSExceptionInit();
-extern "C" static void __OSDBIntegrator();
-extern "C" static void __OSDBJump();
-extern "C" void __OSSetExceptionHandler();
-extern "C" void __OSGetExceptionHandler();
-extern "C" static void OSExceptionVector();
-extern "C" static void __DBVECTOR();
-extern "C" static void __OSEVSetNumber();
-extern "C" static void __OSEVEnd();
-extern "C" static void OSDefaultExceptionHandler();
-extern "C" void __OSPSInit();
-extern "C" void __OSGetDIConfig();
-extern "C" void OSRegisterVersion();
+extern "C" void __OSFPRInit(); // 1
+extern "C" void OSGetConsoleType(); // 1
+extern "C" static void InquiryCallback(); // 1
+extern "C" void OSInit(); // 1
+extern "C" static void OSExceptionInit(); // 1
+extern "C" static void __OSDBIntegrator(); // 1
+extern "C" static void __OSDBJump(); // 1
+extern "C" void __OSSetExceptionHandler(); // 1
+extern "C" void __OSGetExceptionHandler(); // 1
+extern "C" static void OSExceptionVector(); // 1
+extern "C" static void __DBVECTOR(); // 1
+extern "C" static void __OSEVSetNumber(); // 1
+extern "C" static void __OSEVEnd(); // 1
+extern "C" static void OSDefaultExceptionHandler(); // 1
+extern "C" void __OSPSInit(); // 1
+extern "C" void __OSGetDIConfig(); // 1
+extern "C" void OSRegisterVersion(); // 1
 
-extern "C" void __OSFPRInit();
-extern "C" void OSGetConsoleType();
-extern "C" static void InquiryCallback();
-extern "C" void OSInit();
-extern "C" static void OSExceptionInit();
-extern "C" static void __OSDBIntegrator();
-extern "C" static void __OSDBJump();
-extern "C" void __OSSetExceptionHandler();
-extern "C" void __OSGetExceptionHandler();
-extern "C" static void OSExceptionVector();
-extern "C" static void __DBVECTOR();
-extern "C" static void __OSEVSetNumber();
-extern "C" static void __OSEVEnd();
-extern "C" static void OSDefaultExceptionHandler();
-extern "C" void __OSPSInit();
-extern "C" void __OSGetDIConfig();
-extern "C" void OSRegisterVersion();
+extern "C" void __OSFPRInit(); // 1
+extern "C" void OSGetConsoleType(); // 1
+extern "C" static void InquiryCallback(); // 1
+extern "C" void OSInit(); // 1
+extern "C" static void OSExceptionInit(); // 1
+extern "C" static void __OSDBIntegrator(); // 1
+extern "C" static void __OSDBJump(); // 1
+extern "C" void __OSSetExceptionHandler(); // 1
+extern "C" void __OSGetExceptionHandler(); // 1
+extern "C" static void OSExceptionVector(); // 1
+extern "C" static void __DBVECTOR(); // 1
+extern "C" static void __OSEVSetNumber(); // 1
+extern "C" static void __OSEVEnd(); // 1
+extern "C" static void OSDefaultExceptionHandler(); // 1
+extern "C" void __OSPSInit(); // 1
+extern "C" void __OSGetDIConfig(); // 1
+extern "C" void OSRegisterVersion(); // 1
 SECTION_DATA extern u8 OS__lit_1[68];
 SECTION_DATA extern u8 OS__lit_105[13 + 3 /* padding */];
 SECTION_DATA extern u8 OS__lit_106[22 + 2 /* padding */];
@@ -85,99 +85,99 @@ SECTION_SBSS extern u8 data_80451634[4];
 // External References:
 // 
 
-SECTION_INIT void memset();
-SECTION_INIT void memcpy();
-extern "C" void OSReport();
-extern "C" void PPCMtmmcr0();
-extern "C" void PPCMtmmcr1();
-extern "C" void PPCMtpmc1();
-extern "C" void PPCMtpmc2();
-extern "C" void PPCMtpmc3();
-extern "C" void PPCMtpmc4();
-extern "C" void PPCMfhid2();
-extern "C" void PPCMthid2();
-extern "C" void PPCDisableSpeculation();
-extern "C" void PPCSetFpNonIEEEMode();
-extern "C" void OSInitAlarm();
-extern "C" void OSGetArenaHi();
-extern "C" void OSGetArenaLo();
-extern "C" void OSSetArenaHi();
-extern "C" void OSSetArenaLo();
-extern "C" void __OSInitAudioSystem();
-extern "C" void DCInvalidateRange();
-extern "C" void DCFlushRangeNoSync();
-extern "C" void ICInvalidateRange();
-extern "C" void ICFlashInvalidate();
-extern "C" void __OSCacheInit();
-extern "C" void __OSContextInit();
-extern "C" void __OSUnhandledException();
-extern "C" void __OSGetExecParams();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSEnableInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSInterruptInit();
-extern "C" void __OSModuleInit();
-extern "C" void __OSInitMemoryProtection();
-extern "C" void OSGetResetCode();
-extern "C" void __OSResetSWInterruptHandler();
-extern "C" void __OSInitSram();
-extern "C" void __OSInitSystemCall();
-extern "C" void __OSThreadInit();
-extern "C" void __OSGetSystemTime();
-extern "C" void EXIInit();
-extern "C" void SIInit();
-extern "C" void __DBIsExceptionMarked();
-extern "C" void DBPrintf();
-extern "C" void DVDInit();
-extern "C" void DVDInquiryAsync();
-extern "C" void EnableMetroTRKInterrupts();
+SECTION_INIT void memset(); // 1
+SECTION_INIT void memcpy(); // 1
+extern "C" void OSReport(); // 1
+extern "C" void PPCMtmmcr0(); // 1
+extern "C" void PPCMtmmcr1(); // 1
+extern "C" void PPCMtpmc1(); // 1
+extern "C" void PPCMtpmc2(); // 1
+extern "C" void PPCMtpmc3(); // 1
+extern "C" void PPCMtpmc4(); // 1
+extern "C" void PPCMfhid2(); // 1
+extern "C" void PPCMthid2(); // 1
+extern "C" void PPCDisableSpeculation(); // 1
+extern "C" void PPCSetFpNonIEEEMode(); // 1
+extern "C" void OSInitAlarm(); // 1
+extern "C" void OSGetArenaHi(); // 1
+extern "C" void OSGetArenaLo(); // 1
+extern "C" void OSSetArenaHi(); // 1
+extern "C" void OSSetArenaLo(); // 1
+extern "C" void __OSInitAudioSystem(); // 1
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void DCFlushRangeNoSync(); // 1
+extern "C" void ICInvalidateRange(); // 1
+extern "C" void ICFlashInvalidate(); // 1
+extern "C" void __OSCacheInit(); // 1
+extern "C" void __OSContextInit(); // 1
+extern "C" void __OSUnhandledException(); // 1
+extern "C" void __OSGetExecParams(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSEnableInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSInterruptInit(); // 1
+extern "C" void __OSModuleInit(); // 1
+extern "C" void __OSInitMemoryProtection(); // 1
+extern "C" void OSGetResetCode(); // 1
+extern "C" void __OSResetSWInterruptHandler(); // 1
+extern "C" void __OSInitSram(); // 1
+extern "C" void __OSInitSystemCall(); // 1
+extern "C" void __OSThreadInit(); // 1
+extern "C" void __OSGetSystemTime(); // 1
+extern "C" void EXIInit(); // 1
+extern "C" void SIInit(); // 1
+extern "C" void __DBIsExceptionMarked(); // 1
+extern "C" void DBPrintf(); // 1
+extern "C" void DVDInit(); // 1
+extern "C" void DVDInquiryAsync(); // 1
+extern "C" void EnableMetroTRKInterrupts(); // 1
 
-SECTION_INIT void memset();
-SECTION_INIT void memcpy();
-extern "C" void OSReport();
-extern "C" void PPCMtmmcr0();
-extern "C" void PPCMtmmcr1();
-extern "C" void PPCMtpmc1();
-extern "C" void PPCMtpmc2();
-extern "C" void PPCMtpmc3();
-extern "C" void PPCMtpmc4();
-extern "C" void PPCMfhid2();
-extern "C" void PPCMthid2();
-extern "C" void PPCDisableSpeculation();
-extern "C" void PPCSetFpNonIEEEMode();
-extern "C" void OSInitAlarm();
-extern "C" void OSGetArenaHi();
-extern "C" void OSGetArenaLo();
-extern "C" void OSSetArenaHi();
-extern "C" void OSSetArenaLo();
-extern "C" void __OSInitAudioSystem();
-extern "C" void DCInvalidateRange();
-extern "C" void DCFlushRangeNoSync();
-extern "C" void ICInvalidateRange();
-extern "C" void ICFlashInvalidate();
-extern "C" void __OSCacheInit();
-extern "C" void __OSContextInit();
-extern "C" void __OSUnhandledException();
-extern "C" void __OSGetExecParams();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSEnableInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSInterruptInit();
-extern "C" void __OSModuleInit();
-extern "C" void __OSInitMemoryProtection();
-extern "C" void OSGetResetCode();
-extern "C" void __OSResetSWInterruptHandler();
-extern "C" void __OSInitSram();
-extern "C" void __OSInitSystemCall();
-extern "C" void __OSThreadInit();
-extern "C" void __OSGetSystemTime();
-extern "C" void EXIInit();
-extern "C" void SIInit();
-extern "C" void __DBIsExceptionMarked();
-extern "C" void DBPrintf();
-extern "C" void DVDInit();
-extern "C" void DVDInquiryAsync();
-extern "C" void EnableMetroTRKInterrupts();
+SECTION_INIT void memset(); // 1
+SECTION_INIT void memcpy(); // 1
+extern "C" void OSReport(); // 1
+extern "C" void PPCMtmmcr0(); // 1
+extern "C" void PPCMtmmcr1(); // 1
+extern "C" void PPCMtpmc1(); // 1
+extern "C" void PPCMtpmc2(); // 1
+extern "C" void PPCMtpmc3(); // 1
+extern "C" void PPCMtpmc4(); // 1
+extern "C" void PPCMfhid2(); // 1
+extern "C" void PPCMthid2(); // 1
+extern "C" void PPCDisableSpeculation(); // 1
+extern "C" void PPCSetFpNonIEEEMode(); // 1
+extern "C" void OSInitAlarm(); // 1
+extern "C" void OSGetArenaHi(); // 1
+extern "C" void OSGetArenaLo(); // 1
+extern "C" void OSSetArenaHi(); // 1
+extern "C" void OSSetArenaLo(); // 1
+extern "C" void __OSInitAudioSystem(); // 1
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void DCFlushRangeNoSync(); // 1
+extern "C" void ICInvalidateRange(); // 1
+extern "C" void ICFlashInvalidate(); // 1
+extern "C" void __OSCacheInit(); // 1
+extern "C" void __OSContextInit(); // 1
+extern "C" void __OSUnhandledException(); // 1
+extern "C" void __OSGetExecParams(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSEnableInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSInterruptInit(); // 1
+extern "C" void __OSModuleInit(); // 1
+extern "C" void __OSInitMemoryProtection(); // 1
+extern "C" void OSGetResetCode(); // 1
+extern "C" void __OSResetSWInterruptHandler(); // 1
+extern "C" void __OSInitSram(); // 1
+extern "C" void __OSInitSystemCall(); // 1
+extern "C" void __OSThreadInit(); // 1
+extern "C" void __OSGetSystemTime(); // 1
+extern "C" void EXIInit(); // 1
+extern "C" void SIInit(); // 1
+extern "C" void __DBIsExceptionMarked(); // 1
+extern "C" void DBPrintf(); // 1
+extern "C" void DVDInit(); // 1
+extern "C" void DVDInquiryAsync(); // 1
+extern "C" void EnableMetroTRKInterrupts(); // 1
 SECTION_SBSS extern u8 __DVDLongFileNameFlag[4];
 SECTION_SBSS extern u8 __PADSpec[4 + 4 /* padding */];
 

@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void ceil();
+extern "C" void ceil(); // 1
 
-extern "C" void ceil();
+extern "C" void ceil(); // 1
 SECTION_SDATA2 extern f64 Math_Double_precision_s_ceil__lit_124;
 SECTION_SDATA2 extern u8 Math_Double_precision_s_ceil__lit_125[8];
 

@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JKRFile (['JKRFile']) False/False
-/* top-level dependencies (begin ['JKRFile']) */
-/* top-level dependencies (end ['JKRFile']) */
 struct JKRFile {
 	/* 802D9518 */ void read(void*, s32, s32);
 };
@@ -21,19 +18,19 @@ struct JKRFile {
 // 
 
 
-extern "C" void read__7JKRFileFPvll();
+extern "C" void read__7JKRFileFPvll(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void VIWaitForRetrace();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void VIWaitForRetrace(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void VIWaitForRetrace();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void VIWaitForRetrace(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
 // 
 // Declarations:

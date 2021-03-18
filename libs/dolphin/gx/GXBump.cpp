@@ -9,25 +9,25 @@
 // Forward References:
 // 
 
-extern "C" void GXSetTevIndirect();
-extern "C" void GXSetIndTexMtx();
-extern "C" void GXSetIndTexCoordScale();
-extern "C" void GXSetIndTexOrder();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevDirect();
-extern "C" void __GXUpdateBPMask();
-extern "C" void __GXSetIndirectMask();
-extern "C" void __GXFlushTextureState();
+extern "C" void GXSetTevIndirect(); // 1
+extern "C" void GXSetIndTexMtx(); // 1
+extern "C" void GXSetIndTexCoordScale(); // 1
+extern "C" void GXSetIndTexOrder(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevDirect(); // 1
+extern "C" void __GXUpdateBPMask(); // 1
+extern "C" void __GXSetIndirectMask(); // 1
+extern "C" void __GXFlushTextureState(); // 1
 
-extern "C" void GXSetTevIndirect();
-extern "C" void GXSetIndTexMtx();
-extern "C" void GXSetIndTexCoordScale();
-extern "C" void GXSetIndTexOrder();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevDirect();
-extern "C" void __GXUpdateBPMask();
-extern "C" void __GXSetIndirectMask();
-extern "C" void __GXFlushTextureState();
+extern "C" void GXSetTevIndirect(); // 1
+extern "C" void GXSetIndTexMtx(); // 1
+extern "C" void GXSetIndTexCoordScale(); // 1
+extern "C" void GXSetIndTexOrder(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevDirect(); // 1
+extern "C" void __GXUpdateBPMask(); // 1
+extern "C" void __GXSetIndirectMask(); // 1
+extern "C" void __GXFlushTextureState(); // 1
 SECTION_SDATA2 extern f32 GXBump__lit_149;
 
 // 

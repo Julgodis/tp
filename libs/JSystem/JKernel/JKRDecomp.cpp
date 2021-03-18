@@ -9,20 +9,12 @@
 // Types:
 // 
 
-// build JKRDecomp (['JKRDecomp']) False/False
-// build JKRDecompCommand (['JKRDecompCommand']) False/False
-/* top-level dependencies (begin ['JKRDecompCommand']) */
-/* top-level dependencies (end ['JKRDecompCommand']) */
 struct JKRDecompCommand {
 	/* 802DBD70 */ JKRDecompCommand();
 	/* 802DBDC0 */ ~JKRDecompCommand();
 };
 
-/* top-level dependencies (begin ['JKRDecomp']) */
-// outer dependency: ('JKRDecompCommand',)
-/* top-level dependencies (end ['JKRDecomp']) */
 struct JKRDecomp {
-	// ('JKRDecompCommand',)
 	/* 802DB680 */ void create(s32);
 	/* 802DB6E0 */ JKRDecomp(s32);
 	/* 802DB730 */ ~JKRDecomp();
@@ -36,59 +28,43 @@ struct JKRDecomp {
 	/* 802DBCF8 */ void checkCompressed(u8*);
 };
 
-// build JKRDecompCommand (['JKRDecompCommand']) True/True
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRThread (['JKRThread']) False/False
-/* top-level dependencies (begin ['JKRThread']) */
-/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
 	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
-// build JKRAramPiece (['JKRAramPiece']) False/False
-// build JKRAMCommand (['JKRAMCommand']) False/False
-/* top-level dependencies (begin ['JKRAMCommand']) */
-/* top-level dependencies (end ['JKRAMCommand']) */
 struct JKRAMCommand {
 };
 
-/* top-level dependencies (begin ['JKRAramPiece']) */
-// outer dependency: ('JKRAMCommand',)
-/* top-level dependencies (end ['JKRAramPiece']) */
 struct JKRAramPiece {
-	// ('JKRAMCommand',)
 	/* 802D35F4 */ void sendCommand(JKRAMCommand*);
 };
 
-// build JKRAMCommand (['JKRAMCommand']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" static void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v();
-extern "C" static void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v();
+extern "C" static void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v(); // 1
+extern "C" static void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v(); // 1
 
-extern "C" void create__9JKRDecompFl();
-extern "C" void __ct__9JKRDecompFl();
-extern "C" void __dt__9JKRDecompFv();
-extern "C" void run__9JKRDecompFv();
-extern "C" static void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v();
-extern "C" void sendCommand__9JKRDecompFP16JKRDecompCommand();
-extern "C" static void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v();
-extern "C" void sync__9JKRDecompFP16JKRDecompCommandi();
-extern "C" void orderSync__9JKRDecompFPUcPUcUlUl();
-extern "C" void decode__9JKRDecompFPUcPUcUlUl();
-extern "C" void decodeSZP__9JKRDecompFPUcPUcUlUl();
-extern "C" void decodeSZS__9JKRDecompFPUcPUcUlUl();
-extern "C" void checkCompressed__9JKRDecompFPUc();
-extern "C" void __ct__16JKRDecompCommandFv();
-extern "C" void __dt__16JKRDecompCommandFv();
+extern "C" void create__9JKRDecompFl(); // 1
+extern "C" void __ct__9JKRDecompFl(); // 1
+extern "C" void __dt__9JKRDecompFv(); // 1
+extern "C" void run__9JKRDecompFv(); // 1
+extern "C" static void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v(); // 1
+extern "C" void sendCommand__9JKRDecompFP16JKRDecompCommand(); // 1
+extern "C" static void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v(); // 1
+extern "C" void sync__9JKRDecompFP16JKRDecompCommandi(); // 1
+extern "C" void orderSync__9JKRDecompFPUcPUcUlUl(); // 1
+extern "C" void decode__9JKRDecompFPUcPUcUlUl(); // 1
+extern "C" void decodeSZP__9JKRDecompFPUcPUcUlUl(); // 1
+extern "C" void decodeSZS__9JKRDecompFPUcPUcUlUl(); // 1
+extern "C" void checkCompressed__9JKRDecompFPUc(); // 1
+extern "C" void __ct__16JKRDecompCommandFv(); // 1
+extern "C" void __dt__16JKRDecompCommandFv(); // 1
 SECTION_DATA extern u8 sMessageBuffer__9JKRDecomp[32];
 SECTION_DATA extern u8 sMessageQueue__9JKRDecomp[32];
 SECTION_DATA extern void*const __vt__9JKRDecomp[4];
@@ -98,30 +74,30 @@ SECTION_SBSS extern u8 sDecompObject__9JKRDecomp[4 + 4 /* padding */];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void OSInitMessageQueue();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void OSResumeThread();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+void* operator new(u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void __ct__9JKRThreadFUlii();
-extern "C" void __dt__9JKRThreadFv();
-extern "C" void sendCommand__12JKRAramPieceFP12JKRAMCommand();
-extern "C" void OSInitMessageQueue();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void OSResumeThread();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__9JKRThreadFUlii(); // 1
+extern "C" void __dt__9JKRThreadFv(); // 1
+extern "C" void sendCommand__12JKRAramPieceFP12JKRAMCommand(); // 1
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 
 // 

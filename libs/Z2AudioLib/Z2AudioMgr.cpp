@@ -9,26 +9,28 @@
 // Types:
 // 
 
-// build Z2AudioMgr (['Z2AudioMgr']) False/False
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
-struct JKRArchive {
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-/* top-level dependencies (begin ['Z2AudioMgr']) */
-// outer dependency: ('JKRArchive',)
-// outer dependency: ('JKRSolidHeap',)
-/* top-level dependencies (end ['Z2AudioMgr']) */
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
+};
+
+struct JKRArchive {
+};
+
 struct Z2AudioMgr {
-	// ('JKRArchive',)
-	// ('JKRSolidHeap',)
 	/* 802CD248 */ Z2AudioMgr();
 	/* 802CD34C */ void init(JKRSolidHeap*, u32, void*, JKRArchive*);
 	/* 802CD888 */ void setOutputMode(u32);
@@ -37,13 +39,9 @@ struct Z2AudioMgr {
 	/* 802CD974 */ void resetProcess(u32, bool);
 	/* 802CD9CC */ void resetRecover();
 	/* 802CDA6C */ void hasReset() const;
+	/* 802CDB1C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-// build JASHeap (['JASHeap']) False/False
-/* top-level dependencies (begin ['JASHeap']) */
-/* top-level dependencies (end ['JASHeap']) */
 struct JASHeap {
 	/* 8029021C */ void alloc(JASHeap*, u32);
 	/* 802904E4 */ void free();
@@ -51,42 +49,24 @@ struct JASHeap {
 	/* 802A4A5C */ void __defctor();
 };
 
-// build JASGenericMemPool (['JASGenericMemPool']) False/False
-/* top-level dependencies (begin ['JASGenericMemPool']) */
-/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 802908C8 */ void newMemPool(u32, int);
 };
 
-// build JASKernel (['JASKernel']) False/False
-/* top-level dependencies (begin ['JASKernel']) */
-/* top-level dependencies (end ['JASKernel']) */
 struct JASKernel {
 	/* 80290B08 */ void getAramHeap();
 };
 
-// build JASResArcLoader (['JASResArcLoader']) False/False
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['JASResArcLoader']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['JASResArcLoader']) */
 struct JASResArcLoader {
-	// ('JKRArchive',)
 	/* 80290C04 */ void getResMaxSize(JKRArchive const*);
 };
 
-// build JASDriver (['JASDriver']) False/False
-/* top-level dependencies (begin ['JASDriver']) */
-/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029C9F0 */ void getSubFrames();
 	/* 8029E178 */ void setOutputMode(u32);
 };
 
-// build JASAudioReseter (['JASAudioReseter']) False/False
-/* top-level dependencies (begin ['JASAudioReseter']) */
-/* top-level dependencies (end ['JASAudioReseter']) */
 struct JASAudioReseter {
 	/* 8029D0B4 */ JASAudioReseter();
 	/* 8029D138 */ void start(u32, bool);
@@ -94,134 +74,68 @@ struct JASAudioReseter {
 	/* 8029D1F8 */ void checkDone() const;
 };
 
-// build JAISeMgr (['JAISeMgr']) False/False
-// build JAIAudience (['JAIAudience']) False/False
-/* top-level dependencies (begin ['JAIAudience']) */
-/* top-level dependencies (end ['JAIAudience']) */
 struct JAIAudience {
 };
 
-// build JAISeCategoryArrangement (['JAISeCategoryArrangement']) False/False
-/* top-level dependencies (begin ['JAISeCategoryArrangement']) */
-/* top-level dependencies (end ['JAISeCategoryArrangement']) */
-struct JAISeCategoryArrangement {
-};
-
-// build JAISeqDataMgr (['JAISeqDataMgr']) False/False
-/* top-level dependencies (begin ['JAISeqDataMgr']) */
-/* top-level dependencies (end ['JAISeqDataMgr']) */
 struct JAISeqDataMgr {
 };
 
-/* top-level dependencies (begin ['JAISeMgr']) */
-// outer dependency: ('JAIAudience',)
-// outer dependency: ('JAISeCategoryArrangement',)
-// outer dependency: ('JAISeqDataMgr',)
-/* top-level dependencies (end ['JAISeMgr']) */
+struct JAISeCategoryArrangement {
+};
+
 struct JAISeMgr {
-	// ('JAIAudience',)
-	// ('JAISeCategoryArrangement',)
-	// ('JAISeqDataMgr',)
 	/* 802A0268 */ void setCategoryArrangement(JAISeCategoryArrangement const&);
 	/* 802A03D8 */ void setAudience(JAIAudience*);
 	/* 802A03E0 */ void setSeqDataMgr(JAISeqDataMgr*);
 	/* 802A08D0 */ void getNumActiveSe() const;
 };
 
-// build JAISeCategoryArrangement (['JAISeCategoryArrangement']) True/True
-// build JAIAudience (['JAIAudience']) True/True
-// build JAISeqDataMgr (['JAISeqDataMgr']) True/True
-// build JAISoundInfo (['JAISoundInfo']) False/False
-/* top-level dependencies (begin ['JAISoundInfo']) */
-/* top-level dependencies (end ['JAISoundInfo']) */
 struct JAISoundInfo {
 	/* 802A2D34 */ JAISoundInfo(bool);
 };
 
-// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
-/* top-level dependencies (begin ['JAISoundParamsMove']) */
-/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 };
 
-// build JAIStreamAramMgr (['JAIStreamAramMgr']) False/False
-/* top-level dependencies (begin ['JAIStreamAramMgr']) */
-/* top-level dependencies (end ['JAIStreamAramMgr']) */
 struct JAIStreamAramMgr {
 	/* 802A3B20 */ ~JAIStreamAramMgr();
 };
 
-// build JAUAudioArcInterpreter (['JAUAudioArcInterpreter']) False/False
-/* top-level dependencies (begin ['JAUAudioArcInterpreter']) */
-/* top-level dependencies (end ['JAUAudioArcInterpreter']) */
 struct JAUAudioArcInterpreter {
 	/* 802A4260 */ ~JAUAudioArcInterpreter();
 };
 
-// build JAUAudioArcLoader (['JAUAudioArcLoader']) False/False
-/* top-level dependencies (begin ['JAUAudioArcLoader']) */
-/* top-level dependencies (end ['JAUAudioArcLoader']) */
 struct JAUAudioArcLoader {
 	/* 802A478C */ void load(void const*);
 };
 
-// build JAU_JASInitializer (['JAU_JASInitializer']) False/False
-// build JKRSolidHeap (['JKRSolidHeap']) True/True
-/* top-level dependencies (begin ['JAU_JASInitializer']) */
-// outer dependency: ('JKRSolidHeap',)
-/* top-level dependencies (end ['JAU_JASInitializer']) */
 struct JAU_JASInitializer {
-	// ('JKRSolidHeap',)
 	/* 802A4AD0 */ JAU_JASInitializer();
 	/* 802A4B28 */ void initJASystem(JKRSolidHeap*);
 };
 
-// build JAU_JAIInitializer (['JAU_JAIInitializer']) False/False
-/* top-level dependencies (begin ['JAU_JAIInitializer']) */
-/* top-level dependencies (end ['JAU_JAIInitializer']) */
 struct JAU_JAIInitializer {
 	/* 802A4D3C */ JAU_JAIInitializer();
 	/* 802A4D60 */ void initJAInterface();
 };
 
-// build JAUSection (['JAUSection']) False/False
-/* top-level dependencies (begin ['JAUSection']) */
-/* top-level dependencies (end ['JAUSection']) */
 struct JAUSection {
 	/* 802A50F8 */ void finishBuild();
 };
 
-// build JAUSectionHeap (['JAUSectionHeap']) False/False
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['JAUSectionHeap']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['JAUSectionHeap']) */
 struct JAUSectionHeap {
-	// ('JKRArchive',)
 	/* 802A5E60 */ void setSeqDataArchive(JKRArchive*);
 	/* 802A60AC */ void newDynamicSeqBlock(u32);
 };
 
-// build Z2AudioArcLoader (['Z2AudioArcLoader']) False/False
-// build JAUSection (['JAUSection']) True/True
-/* top-level dependencies (begin ['Z2AudioArcLoader']) */
-// outer dependency: ('JAUSection',)
-/* top-level dependencies (end ['Z2AudioArcLoader']) */
 struct Z2AudioArcLoader {
-	// ('JAUSection',)
 	/* 802A9A34 */ Z2AudioArcLoader(JAUSection*);
 };
 
-// build JASTrack (['JASTrack']) False/False
-/* top-level dependencies (begin ['JASTrack']) */
-/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
 };
 
-// build Z2SoundMgr (['Z2SoundMgr']) False/False
-/* top-level dependencies (begin ['Z2SoundMgr']) */
-/* top-level dependencies (end ['Z2SoundMgr']) */
 struct Z2SoundMgr {
 	/* 802A9E80 */ Z2SoundMgr();
 	/* 802AA67C */ void framework();
@@ -229,33 +143,33 @@ struct Z2SoundMgr {
 	/* 802AA908 */ void initParams();
 };
 
-// build Z2SoundStarter (['Z2SoundStarter']) False/False
-/* top-level dependencies (begin ['Z2SoundStarter']) */
-/* top-level dependencies (end ['Z2SoundStarter']) */
 struct Z2SoundStarter {
 	/* 802AAB94 */ Z2SoundStarter(bool);
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-/* top-level dependencies (begin ['Z2SeMgr']) */
-/* top-level dependencies (end ['Z2SeMgr']) */
+template <typename A0>
+struct JASMemPool { };
+/* JASMemPool<Z2SoundHandlePool> */
+struct JASMemPool__template4 {
+	/* 802AB200 */ ~JASMemPool__template4();
+};
+
+/* JASMemPool<Z2Audible> */
+struct JASMemPool__template5 {
+	/* 802BD288 */ ~JASMemPool__template5();
+};
+
 struct Z2SeMgr {
 	/* 802AB64C */ Z2SeMgr();
 	/* 802AB750 */ void initSe();
 	/* 802AE184 */ void processSeFramework();
 };
 
-// build Z2SeqMgr (['Z2SeqMgr']) False/False
-/* top-level dependencies (begin ['Z2SeqMgr']) */
-/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
 	/* 802AEEA0 */ Z2SeqMgr();
 	/* 802B33A8 */ void processBgmFramework();
 };
 
-// build Z2StatusMgr (['Z2StatusMgr']) False/False
-/* top-level dependencies (begin ['Z2StatusMgr']) */
-/* top-level dependencies (end ['Z2StatusMgr']) */
 struct Z2StatusMgr {
 	/* 802B5F1C */ Z2StatusMgr();
 	/* 802B5F7C */ void processHeartGaugeSound();
@@ -263,46 +177,28 @@ struct Z2StatusMgr {
 	/* 802B671C */ void processTime();
 };
 
-// build Z2SceneMgr (['Z2SceneMgr']) False/False
-/* top-level dependencies (begin ['Z2SceneMgr']) */
-/* top-level dependencies (end ['Z2SceneMgr']) */
 struct Z2SceneMgr {
 	/* 802B6840 */ Z2SceneMgr();
 	/* 802B9C50 */ void framework();
 };
 
-// build Z2FxLineMgr (['Z2FxLineMgr']) False/False
-/* top-level dependencies (begin ['Z2FxLineMgr']) */
-/* top-level dependencies (end ['Z2FxLineMgr']) */
 struct Z2FxLineMgr {
 	/* 802BA7DC */ Z2FxLineMgr();
 };
 
-// build Z2Audience (['Z2Audience']) False/False
-/* top-level dependencies (begin ['Z2Audience']) */
-/* top-level dependencies (end ['Z2Audience']) */
 struct Z2Audience {
 	/* 802BD130 */ Z2Audience();
 };
 
-// build Z2SoundObjMgr (['Z2SoundObjMgr']) False/False
-/* top-level dependencies (begin ['Z2SoundObjMgr']) */
-/* top-level dependencies (end ['Z2SoundObjMgr']) */
 struct Z2SoundObjMgr {
 	/* 802BF920 */ Z2SoundObjMgr();
 };
 
-// build Z2SpeechMgr2 (['Z2SpeechMgr2']) False/False
-/* top-level dependencies (begin ['Z2SpeechMgr2']) */
-/* top-level dependencies (end ['Z2SpeechMgr2']) */
 struct Z2SpeechMgr2 {
 	/* 802CBC60 */ Z2SpeechMgr2();
 	/* 802CC9D0 */ void framework();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
@@ -310,25 +206,24 @@ struct JKRHeap {
 // Forward References:
 // 
 
-extern "C" static void func_802CD7F8();
-extern "C" void func_802CDB1C();
-extern "C" static void func_802CDB68();
-extern "C" static void func_802CDC08();
-extern "C" static void func_802CDCEC();
+extern "C" static void func_802CD7F8(); // 1
+extern "C" static void func_802CDB68(); // 1
+extern "C" static void func_802CDC08(); // 1
+extern "C" static void func_802CDCEC(); // 1
 
-extern "C" void __ct__10Z2AudioMgrFv();
-extern "C" void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive();
-extern "C" static void func_802CD7F8();
-extern "C" void setOutputMode__10Z2AudioMgrFUl();
-extern "C" void zeldaGFrameWork__10Z2AudioMgrFv();
-extern "C" void gframeProcess__10Z2AudioMgrFv();
-extern "C" void resetProcess__10Z2AudioMgrFUlb();
-extern "C" void resetRecover__10Z2AudioMgrFv();
-extern "C" void hasReset__10Z2AudioMgrCFv();
-extern "C" void func_802CDB1C();
-extern "C" static void func_802CDB68();
-extern "C" static void func_802CDC08();
-extern "C" static void func_802CDCEC();
+extern "C" void __ct__10Z2AudioMgrFv(); // 1
+extern "C" void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive(); // 1
+extern "C" static void func_802CD7F8(); // 1
+extern "C" void setOutputMode__10Z2AudioMgrFUl(); // 1
+extern "C" void zeldaGFrameWork__10Z2AudioMgrFv(); // 1
+extern "C" void gframeProcess__10Z2AudioMgrFv(); // 1
+extern "C" void resetProcess__10Z2AudioMgrFUlb(); // 1
+extern "C" void resetRecover__10Z2AudioMgrFv(); // 1
+extern "C" void hasReset__10Z2AudioMgrCFv(); // 1
+extern "C" void func_802CDB1C(); // 1
+extern "C" static void func_802CDB68(); // 1
+extern "C" static void func_802CDC08(); // 1
+extern "C" static void func_802CDCEC(); // 1
 SECTION_RODATA extern const u8 Z2AudioMgr__stringBase0[128];
 SECTION_DATA extern void*const __vt__10Z2AudioMgr[3];
 SECTION_DATA extern void*const data_803CBF44[5];
@@ -344,97 +239,95 @@ SECTION_SDATA2 extern u8 Z2AudioMgr__lit_4035[4 + 4 /* padding */];
 // External References:
 // 
 
-void JAUNewSectionHeap(bool);
-void seqCallback(JASTrack*, u16);
-extern "C" void func_802AB200();
-extern "C" void func_802BD288();
-void* operator new(u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void abort();
-extern "C" void fprintf();
+void JAUNewSectionHeap(bool); // 2
+void seqCallback(JASTrack*, u16); // 2
+void* operator new(u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void abort(); // 1
+extern "C" void fprintf(); // 1
 
-extern "C" void alloc__7JASHeapFP7JASHeapUl();
-extern "C" void free__7JASHeapFv();
-extern "C" void __ct__17JASGenericMemPoolFv();
-extern "C" void newMemPool__17JASGenericMemPoolFUli();
-extern "C" void getAramHeap__9JASKernelFv();
-extern "C" void __dt__7JASHeapFv();
-extern "C" void getResMaxSize__15JASResArcLoaderFPC10JKRArchive();
-extern "C" void getSubFrames__9JASDriverFv();
-extern "C" void __ct__15JASAudioReseterFv();
-extern "C" void start__15JASAudioReseterFUlb();
-extern "C" void resume__15JASAudioReseterFv();
-extern "C" void checkDone__15JASAudioReseterCFv();
-extern "C" void setOutputMode__9JASDriverFUl();
-extern "C" void setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement();
-extern "C" void setAudience__8JAISeMgrFP11JAIAudience();
-extern "C" void setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr();
-extern "C" void getNumActiveSe__8JAISeMgrCFv();
-extern "C" void __ct__12JAISoundInfoFb();
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
-extern "C" void __dt__16JAIStreamAramMgrFv();
-extern "C" void __dt__22JAUAudioArcInterpreterFv();
-extern "C" void load__17JAUAudioArcLoaderFPCv();
-extern "C" void __defctor__7JASHeapFv();
-extern "C" void __ct__18JAU_JASInitializerFv();
-extern "C" void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap();
-extern "C" void __ct__18JAU_JAIInitializerFv();
-extern "C" void initJAInterface__18JAU_JAIInitializerFv();
-extern "C" void finishBuild__10JAUSectionFv();
-extern "C" void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive();
-extern "C" void JAUNewSectionHeap__Fb();
-extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl();
-extern "C" void __ct__16Z2AudioArcLoaderFP10JAUSection();
-extern "C" void seqCallback__FP8JASTrackUs();
-extern "C" void __ct__10Z2SoundMgrFv();
-extern "C" void framework__10Z2SoundMgrFv();
-extern "C" void stopSync__10Z2SoundMgrFv();
-extern "C" void initParams__10Z2SoundMgrFv();
-extern "C" void __ct__14Z2SoundStarterFb();
-extern "C" void func_802AB200();
-extern "C" void __ct__7Z2SeMgrFv();
-extern "C" void initSe__7Z2SeMgrFv();
-extern "C" void processSeFramework__7Z2SeMgrFv();
-extern "C" void __ct__8Z2SeqMgrFv();
-extern "C" void processBgmFramework__8Z2SeqMgrFv();
-extern "C" void __ct__11Z2StatusMgrFv();
-extern "C" void processHeartGaugeSound__11Z2StatusMgrFv();
-extern "C" void menuOut__11Z2StatusMgrFv();
-extern "C" void processTime__11Z2StatusMgrFv();
-extern "C" void __ct__10Z2SceneMgrFv();
-extern "C" void framework__10Z2SceneMgrFv();
-extern "C" void __ct__11Z2FxLineMgrFv();
-extern "C" void __ct__10Z2AudienceFv();
-extern "C" void func_802BD288();
-extern "C" void __ct__13Z2SoundObjMgrFv();
-extern "C" void __ct__12Z2SpeechMgr2Fv();
-extern "C" void framework__12Z2SpeechMgr2Fv();
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void abort();
-extern "C" void fprintf();
+extern "C" void alloc__7JASHeapFP7JASHeapUl(); // 1
+extern "C" void free__7JASHeapFv(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv(); // 1
+extern "C" void newMemPool__17JASGenericMemPoolFUli(); // 1
+extern "C" void getAramHeap__9JASKernelFv(); // 1
+extern "C" void __dt__7JASHeapFv(); // 1
+extern "C" void getResMaxSize__15JASResArcLoaderFPC10JKRArchive(); // 1
+extern "C" void getSubFrames__9JASDriverFv(); // 1
+extern "C" void __ct__15JASAudioReseterFv(); // 1
+extern "C" void start__15JASAudioReseterFUlb(); // 1
+extern "C" void resume__15JASAudioReseterFv(); // 1
+extern "C" void checkDone__15JASAudioReseterCFv(); // 1
+extern "C" void setOutputMode__9JASDriverFUl(); // 1
+extern "C" void setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement(); // 1
+extern "C" void setAudience__8JAISeMgrFP11JAIAudience(); // 1
+extern "C" void setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr(); // 1
+extern "C" void getNumActiveSe__8JAISeMgrCFv(); // 1
+extern "C" void __ct__12JAISoundInfoFb(); // 1
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void __dt__16JAIStreamAramMgrFv(); // 1
+extern "C" void __dt__22JAUAudioArcInterpreterFv(); // 1
+extern "C" void load__17JAUAudioArcLoaderFPCv(); // 1
+extern "C" void __defctor__7JASHeapFv(); // 1
+extern "C" void __ct__18JAU_JASInitializerFv(); // 1
+extern "C" void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap(); // 1
+extern "C" void __ct__18JAU_JAIInitializerFv(); // 1
+extern "C" void initJAInterface__18JAU_JAIInitializerFv(); // 1
+extern "C" void finishBuild__10JAUSectionFv(); // 1
+extern "C" void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive(); // 1
+extern "C" void JAUNewSectionHeap__Fb(); // 1
+extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl(); // 1
+extern "C" void __ct__16Z2AudioArcLoaderFP10JAUSection(); // 1
+extern "C" void seqCallback__FP8JASTrackUs(); // 1
+extern "C" void __ct__10Z2SoundMgrFv(); // 1
+extern "C" void framework__10Z2SoundMgrFv(); // 1
+extern "C" void stopSync__10Z2SoundMgrFv(); // 1
+extern "C" void initParams__10Z2SoundMgrFv(); // 1
+extern "C" void __ct__14Z2SoundStarterFb(); // 1
+extern "C" void func_802AB200(); // 1
+extern "C" void __ct__7Z2SeMgrFv(); // 1
+extern "C" void initSe__7Z2SeMgrFv(); // 1
+extern "C" void processSeFramework__7Z2SeMgrFv(); // 1
+extern "C" void __ct__8Z2SeqMgrFv(); // 1
+extern "C" void processBgmFramework__8Z2SeqMgrFv(); // 1
+extern "C" void __ct__11Z2StatusMgrFv(); // 1
+extern "C" void processHeartGaugeSound__11Z2StatusMgrFv(); // 1
+extern "C" void menuOut__11Z2StatusMgrFv(); // 1
+extern "C" void processTime__11Z2StatusMgrFv(); // 1
+extern "C" void __ct__10Z2SceneMgrFv(); // 1
+extern "C" void framework__10Z2SceneMgrFv(); // 1
+extern "C" void __ct__11Z2FxLineMgrFv(); // 1
+extern "C" void __ct__10Z2AudienceFv(); // 1
+extern "C" void func_802BD288(); // 1
+extern "C" void __ct__13Z2SoundObjMgrFv(); // 1
+extern "C" void __ct__12Z2SpeechMgr2Fv(); // 1
+extern "C" void framework__12Z2SpeechMgr2Fv(); // 1
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void abort(); // 1
+extern "C" void fprintf(); // 1
 SECTION_DATA extern void*const __vt__12JAUSoundInfo[5];
 SECTION_DATA extern void*const __vt__16JAIStreamAramMgr[5];
 SECTION_DATA extern void*const __vt__16JAIStreamDataMgr[5];
@@ -634,7 +527,7 @@ asm void Z2AudioMgr::hasReset() const {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802CDB1C() {
+asm void Z2AudioMgr::startSound(JAISoundID field_0, JAISoundHandle* field_1, JGeometry::TVec3<f32> const* field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CDB1C.s"
 }

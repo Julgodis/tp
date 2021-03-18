@@ -9,72 +9,36 @@
 // Types:
 // 
 
-// build dEnvSe_c (['dEnvSe_c']) False/False
-// build dStage_SoundInfo_c (['dStage_SoundInfo_c']) False/False
-/* top-level dependencies (begin ['dStage_SoundInfo_c']) */
-/* top-level dependencies (end ['dStage_SoundInfo_c']) */
 struct dStage_SoundInfo_c {
 };
 
-/* top-level dependencies (begin ['dEnvSe_c']) */
-// outer dependency: ('dStage_SoundInfo_c',)
-/* top-level dependencies (end ['dEnvSe_c']) */
 struct dEnvSe_c {
-	// ('dStage_SoundInfo_c',)
 	/* 80182FD8 */ void execute_common(dStage_SoundInfo_c*, s8*, u8);
 	/* 80183480 */ void execute();
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build dPath (['dPath']) False/False
-/* top-level dependencies (begin ['dPath']) */
-/* top-level dependencies (end ['dPath']) */
 struct dPath {
 };
 
-// build dStage_SoundInfo_c (['dStage_SoundInfo_c']) True/True
-// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
-/* top-level dependencies (begin ['dStage_roomControl_c']) */
-/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
-// build dCamera_c (['dCamera_c']) False/False
-/* top-level dependencies (begin ['dCamera_c']) */
-/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
 	/* 80181E64 */ void Eye();
 };
 
-// build cM3dGLin (['cM3dGLin']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cM3dGLin']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// ('Vec',)
 	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
 };
 
-// build Vec (['Vec']) True/True
-// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['Z2EnvSeMgr']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
-	// ('Vec',)
 	/* 802C6C84 */ void initStaticEnvSe(u8, u8, u8, u8, Vec*);
 	/* 802C70C8 */ void startStaticEnvSe(s8);
 	/* 802C780C */ void registWindowPos(Vec*);
@@ -96,21 +60,21 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-static bool dEnvSe_Draw(dEnvSe_c*);
-static void dEnvSe_getNearPathPos(cXyz*, cXyz*, dPath*);
-static void dEnvSe_Execute(dEnvSe_c*);
-static bool dEnvSe_IsDelete(dEnvSe_c*);
-static bool dEnvSe_Delete(dEnvSe_c*);
-static void dEnvSe_Create(dEnvSe_c*);
+static bool dEnvSe_Draw(dEnvSe_c*); // 2
+static void dEnvSe_getNearPathPos(cXyz*, cXyz*, dPath*); // 2
+static void dEnvSe_Execute(dEnvSe_c*); // 2
+static bool dEnvSe_IsDelete(dEnvSe_c*); // 2
+static bool dEnvSe_Delete(dEnvSe_c*); // 2
+static void dEnvSe_Create(dEnvSe_c*); // 2
 
-extern "C" static bool dEnvSe_Draw__FP8dEnvSe_c();
-extern "C" static void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath();
-extern "C" void execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc();
-extern "C" void execute__8dEnvSe_cFv();
-extern "C" static void dEnvSe_Execute__FP8dEnvSe_c();
-extern "C" static bool dEnvSe_IsDelete__FP8dEnvSe_c();
-extern "C" static bool dEnvSe_Delete__FP8dEnvSe_c();
-extern "C" static void dEnvSe_Create__FP8dEnvSe_c();
+extern "C" static bool dEnvSe_Draw__FP8dEnvSe_c(); // 1
+extern "C" static void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath(); // 1
+extern "C" void execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc(); // 1
+extern "C" void execute__8dEnvSe_cFv(); // 1
+extern "C" static void dEnvSe_Execute__FP8dEnvSe_c(); // 1
+extern "C" static bool dEnvSe_IsDelete__FP8dEnvSe_c(); // 1
+extern "C" static bool dEnvSe_Delete__FP8dEnvSe_c(); // 1
+extern "C" static void dEnvSe_Create__FP8dEnvSe_c(); // 1
 SECTION_RODATA extern const u8 d_d_envse__stringBase0[8];
 SECTION_DATA extern void*l_dEnvSe_Method[5];
 SECTION_DATA extern void*g_profile_ENVSE[11];
@@ -121,49 +85,49 @@ SECTION_SBSS2 extern u8 data_80456B84[4];
 // External References:
 // 
 
-void dComIfGp_getReverb(int);
-void dPath_GetRoomPath(int, int);
-void dPath_GetNextRoomPath(dPath const*, int);
-void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*);
-extern "C" void PSVECSquareDistance();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void memcmp();
+void dComIfGp_getReverb(int); // 2
+void dPath_GetRoomPath(int, int); // 2
+void dPath_GetNextRoomPath(dPath const*, int); // 2
+void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*); // 2
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void memcmp(); // 1
 
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" void dComIfGp_getReverb__Fi();
-extern "C" void dPath_GetRoomPath__Fii();
-extern "C" void dPath_GetNextRoomPath__FPC5dPathi();
-extern "C" void Eye__9dCamera_cFv();
-extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf();
-extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
-extern "C" void initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec();
-extern "C" void startStaticEnvSe__10Z2EnvSeMgrFSc();
-extern "C" void registWindowPos__10Z2EnvSeMgrFP3Vec();
-extern "C" void initRiverSe__10Z2EnvSeMgrFUcUcUcUc();
-extern "C" void registRiverSePos__10Z2EnvSeMgrFP3Vec();
-extern "C" void startRiverSe__10Z2EnvSeMgrFSc();
-extern "C" void initFallSe__10Z2EnvSeMgrFUcUcUcUc();
-extern "C" void registFallSePos__10Z2EnvSeMgrFP3Vec();
-extern "C" void startFallSe__10Z2EnvSeMgrFSc();
-extern "C" void initEtcSe__10Z2EnvSeMgrFUcUcUcUc();
-extern "C" void registEtcSePos__10Z2EnvSeMgrFP3Vec();
-extern "C" void startEtcSe__10Z2EnvSeMgrFSc();
-extern "C" void initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc();
-extern "C" void registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec();
-extern "C" void startLv3WaterSe__10Z2EnvSeMgrFSc();
-extern "C" void PSVECSquareDistance();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void memcmp();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void dPath_GetRoomPath__Fii(); // 1
+extern "C" void dPath_GetNextRoomPath__FPC5dPathi(); // 1
+extern "C" void Eye__9dCamera_cFv(); // 1
+extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf(); // 1
+extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec(); // 1
+extern "C" void initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec(); // 1
+extern "C" void startStaticEnvSe__10Z2EnvSeMgrFSc(); // 1
+extern "C" void registWindowPos__10Z2EnvSeMgrFP3Vec(); // 1
+extern "C" void initRiverSe__10Z2EnvSeMgrFUcUcUcUc(); // 1
+extern "C" void registRiverSePos__10Z2EnvSeMgrFP3Vec(); // 1
+extern "C" void startRiverSe__10Z2EnvSeMgrFSc(); // 1
+extern "C" void initFallSe__10Z2EnvSeMgrFUcUcUcUc(); // 1
+extern "C" void registFallSePos__10Z2EnvSeMgrFP3Vec(); // 1
+extern "C" void startFallSe__10Z2EnvSeMgrFSc(); // 1
+extern "C" void initEtcSe__10Z2EnvSeMgrFUcUcUcUc(); // 1
+extern "C" void registEtcSePos__10Z2EnvSeMgrFP3Vec(); // 1
+extern "C" void startEtcSe__10Z2EnvSeMgrFSc(); // 1
+extern "C" void initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc(); // 1
+extern "C" void registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec(); // 1
+extern "C" void startLv3WaterSe__10Z2EnvSeMgrFSc(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void memcmp(); // 1
 SECTION_DATA extern void*g_fopKy_Method[6];
 SECTION_DATA extern void*g_fpcLf_Method[6];
 SECTION_DATA extern void*const __vt__8cM3dGLin[3];

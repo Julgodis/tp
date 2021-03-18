@@ -9,12 +9,6 @@
 // Types:
 // 
 
-// build J3DMaterialFactory (['J3DMaterialFactory']) False/False
-// build J3DMaterialFactory (['J3DMaterialFactory']) True/False
-struct J3DMaterialFactory;
-// build J3DMaterial (['J3DMaterial']) False/False
-/* top-level dependencies (begin ['J3DMaterial']) */
-/* top-level dependencies (end ['J3DMaterial']) */
 struct J3DMaterial {
 	/* 803157A0 */ void createColorBlock(u32);
 	/* 803159A0 */ void createTexGenBlock(u32);
@@ -30,37 +24,18 @@ struct J3DMaterial {
 	/* 80332B94 */ ~J3DMaterial();
 };
 
-// build J3DMaterialBlock (['J3DMaterialBlock']) False/False
-/* top-level dependencies (begin ['J3DMaterialBlock']) */
-/* top-level dependencies (end ['J3DMaterialBlock']) */
-struct J3DMaterialBlock {
-};
-
-// build J3DMaterialDLBlock (['J3DMaterialDLBlock']) False/False
-/* top-level dependencies (begin ['J3DMaterialDLBlock']) */
-/* top-level dependencies (end ['J3DMaterialDLBlock']) */
 struct J3DMaterialDLBlock {
 };
 
-/* top-level dependencies (begin ['J3DMaterialFactory']) */
-// outer dependency: ('J3DMaterialFactory', 'MaterialType')
-// outer dependency: ('J3DMaterial',)
-// outer dependency: ('J3DMaterialBlock',)
-// outer dependency: ('J3DMaterialDLBlock',)
-/* top-level dependencies (end ['J3DMaterialFactory']) */
+struct J3DMaterialBlock {
+};
+
 struct J3DMaterialFactory {
-	// ('J3DMaterialFactory', 'MaterialType')
-	// ('J3DMaterial',)
-	// ('J3DMaterialBlock',)
-	// ('J3DMaterialDLBlock',)
-	// build MaterialType (['J3DMaterialFactory', 'MaterialType']) False/False
-	/* dependencies (begin ['J3DMaterialFactory', 'MaterialType']) */
-	/* dependencies (end ['J3DMaterialFactory', 'MaterialType']) */
 	struct MaterialType {
 	};
 
-	/* 8032FFEC */ J3DMaterialFactory(J3DMaterialBlock const&);
 	/* 80330234 */ J3DMaterialFactory(J3DMaterialDLBlock const&);
+	/* 8032FFEC */ J3DMaterialFactory(J3DMaterialBlock const&);
 	/* 803302BC */ void countUniqueMaterials();
 	/* 80330304 */ void countTexGens(int) const;
 	/* 8033033C */ void countStages(int) const;
@@ -102,93 +77,43 @@ struct J3DMaterialFactory {
 	/* 803328FC */ void newNBTScale(int) const;
 };
 
-// build J3DMaterialBlock (['J3DMaterialBlock']) True/True
-// build J3DMaterialDLBlock (['J3DMaterialDLBlock']) True/True
-// build J3DMaterial (['J3DMaterial']) True/True
-// build J3DPEBlockNull (['J3DPEBlockNull']) False/False
-/* top-level dependencies (begin ['J3DPEBlockNull']) */
-/* top-level dependencies (end ['J3DPEBlockNull']) */
 struct J3DPEBlockNull {
 	/* 803329A0 */ void load();
 	/* 803329A4 */ void getType();
 	/* 803329B0 */ ~J3DPEBlockNull();
 };
 
-// build J3DTevBlockNull (['J3DTevBlockNull']) False/False
-// build J3DTevBlock (['J3DTevBlock']) False/False
-// build J3DTevSwapModeTable (['J3DTevSwapModeTable']) False/False
-/* top-level dependencies (begin ['J3DTevSwapModeTable']) */
-/* top-level dependencies (end ['J3DTevSwapModeTable']) */
-struct J3DTevSwapModeTable {
-};
-
-// build J3DGXColor (['J3DGXColor']) False/False
-/* top-level dependencies (begin ['J3DGXColor']) */
-/* top-level dependencies (end ['J3DGXColor']) */
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
-// build J3DIndTevStage (['J3DIndTevStage']) False/False
-/* top-level dependencies (begin ['J3DIndTevStage']) */
-/* top-level dependencies (end ['J3DIndTevStage']) */
 struct J3DIndTevStage {
 	/* 8000E14C */ J3DIndTevStage();
 };
 
-// build J3DGXColorS10 (['J3DGXColorS10']) False/False
-/* top-level dependencies (begin ['J3DGXColorS10']) */
-/* top-level dependencies (end ['J3DGXColorS10']) */
 struct J3DGXColorS10 {
 	/* 8000E460 */ J3DGXColorS10();
 };
 
-// build J3DTevOrder (['J3DTevOrder']) False/False
-/* top-level dependencies (begin ['J3DTevOrder']) */
-/* top-level dependencies (end ['J3DTevOrder']) */
+struct J3DTevSwapModeTable {
+};
+
 struct J3DTevOrder {
 	/* 8000E140 */ J3DTevOrder();
 };
 
-// build J3DTevStage (['J3DTevStage']) False/False
-// build J3DTevStageInfo (['J3DTevStageInfo']) False/False
-/* top-level dependencies (begin ['J3DTevStageInfo']) */
-/* top-level dependencies (end ['J3DTevStageInfo']) */
+struct J3DTevSwapModeInfo {
+};
+
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
+};
+
 struct J3DTevStageInfo {
 };
 
-/* top-level dependencies (begin ['J3DTevStage']) */
-// outer dependency: ('J3DTevStageInfo',)
-/* top-level dependencies (end ['J3DTevStage']) */
 struct J3DTevStage {
-	// ('J3DTevStageInfo',)
 	/* 8000E230 */ J3DTevStage();
 	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
 };
 
-// build J3DTevSwapModeInfo (['J3DTevSwapModeInfo']) False/False
-/* top-level dependencies (begin ['J3DTevSwapModeInfo']) */
-/* top-level dependencies (end ['J3DTevSwapModeInfo']) */
-struct J3DTevSwapModeInfo {
-};
-
-/* top-level dependencies (begin ['J3DTevBlock']) */
-// outer dependency: ('J3DTevSwapModeTable',)
-// outer dependency: ('J3DGXColor',)
-// outer dependency: ('J3DIndTevStage',)
-// outer dependency: ('J3DGXColorS10',)
-// outer dependency: ('J3DTevOrder',)
-// outer dependency: ('J3DTevStage',)
-// outer dependency: ('J3DTevSwapModeInfo',)
-/* top-level dependencies (end ['J3DTevBlock']) */
 struct J3DTevBlock {
-	// ('J3DTevSwapModeTable',)
-	// ('J3DTevStage',)
-	// ('J3DGXColor',)
-	// ('J3DIndTevStage',)
-	// ('J3DTevOrder',)
-	// ('J3DGXColorS10',)
-	// ('J3DTevSwapModeInfo',)
 	/* 8000DBC8 */ void patchTexNoAndTexCoordScale();
 	/* 8000DBD4 */ void patch();
 	/* 8000DF84 */ bool getIndTevStage(u32);
@@ -202,17 +127,25 @@ struct J3DTevBlock {
 	/* 8000DFC8 */ bool getTevColor(u32);
 	/* 8000DFD0 */ bool getTevStageNum() const;
 	/* 8000E0A4 */ void setIndTevStage(u32, J3DIndTevStage);
+	/* 80323554 */ void setIndTevStage(u32, J3DIndTevStage const*);
 	/* 8000E0A8 */ void setTevStage(u32, J3DTevStage);
+	/* 80323550 */ void setTevStage(u32, J3DTevStage const*);
 	/* 8000E0AC */ void setTexNo(u32, u16);
+	/* 80323544 */ void setTexNo(u32, u16 const*);
 	/* 8000E0B0 */ void setTevSwapModeTable(u32, J3DTevSwapModeTable);
+	/* 80322960 */ void setTevSwapModeTable(u32, J3DTevSwapModeTable const*);
 	/* 8000E0B4 */ void setTevKAlphaSel(u32, u8);
+	/* 80322954 */ void setTevKAlphaSel(u32, u8 const*);
 	/* 8000E0B8 */ void setTevKColorSel(u32, u8);
+	/* 80322950 */ void setTevKColorSel(u32, u8 const*);
 	/* 8000E0BC */ void setTevOrder(u32, J3DTevOrder);
+	/* 80323548 */ void setTevOrder(u32, J3DTevOrder const*);
+	/* 800732AC */ void setTevKColor(u32, J3DGXColor const*);
 	/* 8000E0C0 */ void setTevKColor(u32, J3DGXColor);
+	/* 80110E80 */ void setTevColor(u32, J3DGXColorS10 const*);
 	/* 8000E0C4 */ void setTevColor(u32, J3DGXColorS10);
 	/* 8000E0C8 */ void setTevStageNum(u8);
-	/* 800732AC */ void setTevKColor(u32, J3DGXColor const*);
-	/* 80110E80 */ void setTevColor(u32, J3DGXColorS10 const*);
+	/* 8032354C */ void setTevStageNum(u8 const*);
 	/* 8031730C */ bool countDLSize();
 	/* 80317330 */ void load();
 	/* 8031CD44 */ void diff(u32);
@@ -223,28 +156,16 @@ struct J3DTevBlock {
 	/* 80321944 */ void diffTexCoordScale();
 	/* 80321948 */ void diffTexNo();
 	/* 80321FE0 */ void setTexNoOffset(u32);
-	/* 80322950 */ void setTevKColorSel(u32, u8 const*);
-	/* 80322954 */ void setTevKAlphaSel(u32, u8 const*);
 	/* 80322958 */ void setTevSwapModeInfo(u32, J3DTevSwapModeInfo);
 	/* 8032295C */ void setTevSwapModeInfo(u32, J3DTevSwapModeInfo const*);
-	/* 80322960 */ void setTevSwapModeTable(u32, J3DTevSwapModeTable const*);
 	/* 80322964 */ bool getTevRegOffset() const;
 	/* 8032296C */ void setTevRegOffset(u32);
 	/* 8032353C */ void patchTexNo();
 	/* 80323540 */ void patchTevReg();
-	/* 80323544 */ void setTexNo(u32, u16 const*);
-	/* 80323548 */ void setTevOrder(u32, J3DTevOrder const*);
-	/* 8032354C */ void setTevStageNum(u8 const*);
-	/* 80323550 */ void setTevStage(u32, J3DTevStage const*);
-	/* 80323554 */ void setIndTevStage(u32, J3DIndTevStage const*);
 	/* 80323558 */ bool getTexNoOffset() const;
 };
 
-/* top-level dependencies (begin ['J3DTevBlockNull']) */
-// outer dependency: ('J3DTevBlock',)
-/* top-level dependencies (end ['J3DTevBlockNull']) */
 struct J3DTevBlockNull {
-	// ('J3DTevBlock',)
 	/* 803176D4 */ void initialize();
 	/* 80332A0C */ void reset(J3DTevBlock*);
 	/* 80332A10 */ void ptrToIndex();
@@ -253,10 +174,6 @@ struct J3DTevBlockNull {
 	/* 80332A44 */ ~J3DTevBlockNull();
 };
 
-// build J3DTevBlock (['J3DTevBlock']) True/True
-// build J3DTexGenBlockNull (['J3DTexGenBlockNull']) False/False
-/* top-level dependencies (begin ['J3DTexGenBlockNull']) */
-/* top-level dependencies (end ['J3DTexGenBlockNull']) */
 struct J3DTexGenBlockNull {
 	/* 80332AA0 */ void calc(f32 const (* )[4]);
 	/* 80332AA4 */ void calcWithoutViewMtx(f32 const (* )[4]);
@@ -271,50 +188,24 @@ struct J3DTexGenBlockNull {
 	/* 80332AD0 */ ~J3DTexGenBlockNull();
 };
 
-// build J3DColorBlockNull (['J3DColorBlockNull']) False/False
-/* top-level dependencies (begin ['J3DColorBlockNull']) */
-/* top-level dependencies (end ['J3DColorBlockNull']) */
 struct J3DColorBlockNull {
 	/* 80332B2C */ void getType();
 	/* 80332B38 */ ~J3DColorBlockNull();
 };
 
-// build J3DPEBlock (['J3DPEBlock']) False/False
-// build J3DAlphaComp (['J3DAlphaComp']) False/False
-/* top-level dependencies (begin ['J3DAlphaComp']) */
-/* top-level dependencies (end ['J3DAlphaComp']) */
-struct J3DAlphaComp {
-};
-
-// build J3DZMode (['J3DZMode']) False/False
-/* top-level dependencies (begin ['J3DZMode']) */
-/* top-level dependencies (end ['J3DZMode']) */
-struct J3DZMode {
-};
-
-// build J3DFog (['J3DFog']) False/False
-/* top-level dependencies (begin ['J3DFog']) */
-/* top-level dependencies (end ['J3DFog']) */
 struct J3DFog {
 };
 
-// build J3DBlend (['J3DBlend']) False/False
-/* top-level dependencies (begin ['J3DBlend']) */
-/* top-level dependencies (end ['J3DBlend']) */
+struct J3DZMode {
+};
+
 struct J3DBlend {
 };
 
-/* top-level dependencies (begin ['J3DPEBlock']) */
-// outer dependency: ('J3DAlphaComp',)
-// outer dependency: ('J3DZMode',)
-// outer dependency: ('J3DFog',)
-// outer dependency: ('J3DBlend',)
-/* top-level dependencies (end ['J3DPEBlock']) */
+struct J3DAlphaComp {
+};
+
 struct J3DPEBlock {
-	// ('J3DAlphaComp',)
-	// ('J3DZMode',)
-	// ('J3DFog',)
-	// ('J3DBlend',)
 	/* 8000DBCC */ void patch();
 	/* 8000DF3C */ bool getZCompLoc() const;
 	/* 8000DF44 */ bool getZMode();
@@ -322,9 +213,13 @@ struct J3DPEBlock {
 	/* 8000DF54 */ bool getAlphaComp();
 	/* 8000DF5C */ bool getFog();
 	/* 8000E010 */ void setZCompLoc(u8);
+	/* 80317378 */ void setZCompLoc(u8 const*);
 	/* 8000E014 */ void setZMode(J3DZMode);
+	/* 80317374 */ void setZMode(J3DZMode const*);
 	/* 8000E018 */ void setBlend(J3DBlend const&);
+	/* 80317370 */ void setBlend(J3DBlend const*);
 	/* 8000E01C */ void setAlphaComp(J3DAlphaComp const&);
+	/* 8031736C */ void setAlphaComp(J3DAlphaComp const*);
 	/* 8031731C */ bool countDLSize();
 	/* 80317344 */ void diff(u32);
 	/* 80317348 */ void reset(J3DPEBlock*);
@@ -332,51 +227,34 @@ struct J3DPEBlock {
 	/* 80317360 */ void diffBlend();
 	/* 80317364 */ void setFog(J3DFog*);
 	/* 80317368 */ void setFog(J3DFog);
-	/* 8031736C */ void setAlphaComp(J3DAlphaComp const*);
-	/* 80317370 */ void setBlend(J3DBlend const*);
-	/* 80317374 */ void setZMode(J3DZMode const*);
-	/* 80317378 */ void setZCompLoc(u8 const*);
-	/* 8031737C */ void setDither(u8);
 	/* 80317380 */ void setDither(u8 const*);
+	/* 8031737C */ void setDither(u8);
 	/* 80317384 */ bool getDither() const;
 	/* 8031738C */ bool getFogOffset() const;
 	/* 80317394 */ void setFogOffset(u32);
 };
 
-// build J3DColorBlock (['J3DColorBlock']) False/False
-// build J3DLightObj (['J3DLightObj']) False/False
-/* top-level dependencies (begin ['J3DLightObj']) */
-/* top-level dependencies (end ['J3DLightObj']) */
 struct J3DLightObj {
 };
 
-// build J3DColorChan (['J3DColorChan']) False/False
-/* top-level dependencies (begin ['J3DColorChan']) */
-/* top-level dependencies (end ['J3DColorChan']) */
 struct J3DColorChan {
 };
 
-// build J3DGXColor (['J3DGXColor']) True/True
-/* top-level dependencies (begin ['J3DColorBlock']) */
-// outer dependency: ('J3DLightObj',)
-// outer dependency: ('J3DColorChan',)
-// outer dependency: ('J3DGXColor',)
-/* top-level dependencies (end ['J3DColorBlock']) */
 struct J3DColorBlock {
-	// ('J3DLightObj',)
-	// ('J3DColorChan',)
-	// ('J3DGXColor',)
 	/* 8000DBD0 */ void patchLight();
 	/* 8000DFF0 */ bool getAmbColor(u32);
 	/* 8000DFF8 */ bool getColorChan(u32);
 	/* 8000E000 */ bool getMatColor(u32);
 	/* 8000E008 */ bool getColorChanNum() const;
+	/* 801A4C0C */ void setAmbColor(u32, J3DGXColor const*);
 	/* 8000E0D4 */ void setAmbColor(u32, J3DGXColor);
+	/* 80317450 */ void setColorChan(u32, J3DColorChan const*);
 	/* 8000E0D8 */ void setColorChan(u32, J3DColorChan const&);
+	/* 80317448 */ void setMatColor(u32, J3DGXColor const*);
 	/* 8000E0DC */ void setMatColor(u32, J3DGXColor);
+	/* 8031744C */ void setColorChanNum(u8 const*);
 	/* 8000E0E0 */ void setColorChanNum(u8);
 	/* 801A4C08 */ void setLight(u32, J3DLightObj*);
-	/* 801A4C0C */ void setAmbColor(u32, J3DGXColor const*);
 	/* 80317304 */ bool countDLSize();
 	/* 80317324 */ void load();
 	/* 80317328 */ s32 getCullMode() const;
@@ -388,9 +266,6 @@ struct J3DColorBlock {
 	/* 8031743C */ void diffMatColor();
 	/* 80317440 */ void diffColorChan();
 	/* 80317444 */ void diffLightObj(u32);
-	/* 80317448 */ void setMatColor(u32, J3DGXColor const*);
-	/* 8031744C */ void setColorChanNum(u8 const*);
-	/* 80317450 */ void setColorChan(u32, J3DColorChan const*);
 	/* 80317454 */ bool getLight(u32);
 	/* 8031745C */ void setCullMode(u8);
 	/* 80317460 */ void setCullMode(u8 const*);
@@ -400,120 +275,61 @@ struct J3DColorBlock {
 	/* 80317478 */ void setColorChanOffset(u32);
 };
 
-// build J3DTexGenBlock (['J3DTexGenBlock']) False/False
-// build J3DTexMtx (['J3DTexMtx']) False/False
-/* top-level dependencies (begin ['J3DTexMtx']) */
-/* top-level dependencies (end ['J3DTexMtx']) */
-struct J3DTexMtx {
+struct J3DNBTScale {
 };
 
-// build J3DTexCoord (['J3DTexCoord']) False/False
-/* top-level dependencies (begin ['J3DTexCoord']) */
-/* top-level dependencies (end ['J3DTexCoord']) */
 struct J3DTexCoord {
 	/* 8000E464 */ J3DTexCoord();
 };
 
-// build J3DNBTScale (['J3DNBTScale']) False/False
-/* top-level dependencies (begin ['J3DNBTScale']) */
-/* top-level dependencies (end ['J3DNBTScale']) */
-struct J3DNBTScale {
+struct J3DTexMtx {
 };
 
-/* top-level dependencies (begin ['J3DTexGenBlock']) */
-// outer dependency: ('J3DTexMtx',)
-// outer dependency: ('J3DTexCoord',)
-// outer dependency: ('J3DNBTScale',)
-/* top-level dependencies (end ['J3DTexGenBlock']) */
 struct J3DTexGenBlock {
-	// ('J3DTexMtx',)
-	// ('J3DTexCoord',)
-	// ('J3DNBTScale',)
 	/* 8000DFD8 */ bool getTexMtx(u32);
 	/* 8000DFE0 */ bool getTexCoord(u32);
 	/* 8000DFE8 */ bool getTexGenNum() const;
 	/* 8000E0CC */ void setTexCoord(u32, J3DTexCoord const*);
+	/* 8031741C */ void setTexGenNum(u32 const*);
 	/* 8000E0D0 */ void setTexGenNum(u32);
 	/* 8003AB2C */ void setTexMtx(u32, J3DTexMtx*);
 	/* 803172FC */ bool countDLSize();
 	/* 80317334 */ bool getNBTScale();
 	/* 80317354 */ void reset(J3DTexGenBlock*);
-	/* 8031741C */ void setTexGenNum(u32 const*);
 	/* 80317420 */ void setNBTScale(J3DNBTScale);
 	/* 80317424 */ void setNBTScale(J3DNBTScale const*);
 	/* 80317428 */ bool getTexMtxOffset() const;
 	/* 80317430 */ void setTexMtxOffset(u32);
 };
 
-// build J3DZMode (['J3DZMode']) True/True
-// build J3DBlend (['J3DBlend']) True/True
-// build J3DAlphaComp (['J3DAlphaComp']) True/True
-// build J3DIndTevStage (['J3DIndTevStage']) True/True
-// build J3DTevStage (['J3DTevStage']) True/True
-// build J3DTevSwapModeTable (['J3DTevSwapModeTable']) True/True
-// build J3DTevOrder (['J3DTevOrder']) True/True
-// build J3DGXColor (['J3DGXColor']) True/True
-// build J3DGXColorS10 (['J3DGXColorS10']) True/True
-// build J3DTexCoord (['J3DTexCoord']) True/True
-// build J3DColorChan (['J3DColorChan']) True/True
-// build J3DTevStageInfo (['J3DTevStageInfo']) True/True
-// build J3DTexMtx (['J3DTexMtx']) True/True
-// build J3DLightObj (['J3DLightObj']) True/True
-// build J3DDisplayListObj (['J3DDisplayListObj']) False/False
-/* top-level dependencies (begin ['J3DDisplayListObj']) */
-/* top-level dependencies (end ['J3DDisplayListObj']) */
 struct J3DDisplayListObj {
 	/* 803125E4 */ void setSingleDisplayList(void*, u32);
 };
 
-// build J3DPatchedMaterial (['J3DPatchedMaterial']) False/False
-/* top-level dependencies (begin ['J3DPatchedMaterial']) */
-/* top-level dependencies (end ['J3DPatchedMaterial']) */
 struct J3DPatchedMaterial {
 	/* 80316FB8 */ void initialize();
 };
 
-// build J3DLockedMaterial (['J3DLockedMaterial']) False/False
-/* top-level dependencies (begin ['J3DLockedMaterial']) */
-/* top-level dependencies (end ['J3DLockedMaterial']) */
 struct J3DLockedMaterial {
 	/* 80317044 */ void initialize();
 };
 
-// build J3DFog (['J3DFog']) True/True
-// build J3DNBTScale (['J3DNBTScale']) True/True
-// build J3DTexGenBlockPatched (['J3DTexGenBlockPatched']) False/False
-/* top-level dependencies (begin ['J3DTexGenBlockPatched']) */
-/* top-level dependencies (end ['J3DTexGenBlockPatched']) */
 struct J3DTexGenBlockPatched {
 	/* 80317644 */ void initialize();
 };
 
-// build J3DTevBlockPatched (['J3DTevBlockPatched']) False/False
-/* top-level dependencies (begin ['J3DTevBlockPatched']) */
-/* top-level dependencies (end ['J3DTevBlockPatched']) */
 struct J3DTevBlockPatched {
 	/* 803176E0 */ void initialize();
 };
 
-// build J3DTevSwapModeInfo (['J3DTevSwapModeInfo']) True/True
-// build J3DTexMtxInfo (['J3DTexMtxInfo']) False/False
-/* top-level dependencies (begin ['J3DTexMtxInfo']) */
-/* top-level dependencies (end ['J3DTexMtxInfo']) */
 struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 };
 
-// build J3DIndTexMtxInfo (['J3DIndTexMtxInfo']) False/False
-/* top-level dependencies (begin ['J3DIndTexMtxInfo']) */
-/* top-level dependencies (end ['J3DIndTexMtxInfo']) */
 struct J3DIndTexMtxInfo {
 	/* 803257DC */ void operator=(J3DIndTexMtxInfo const&);
 };
 
-// build J3DFogInfo (['J3DFogInfo']) False/False
-/* top-level dependencies (begin ['J3DFogInfo']) */
-/* top-level dependencies (end ['J3DFogInfo']) */
 struct J3DFogInfo {
 	/* 80325800 */ void operator=(J3DFogInfo const&);
 };
@@ -522,108 +338,108 @@ struct J3DFogInfo {
 // Forward References:
 // 
 
-extern "C" static void func_80332BDC();
-extern "C" static void func_80332BF4();
-extern "C" static void func_80332C0C();
-extern "C" void func_80332C24();
-extern "C" void func_80332C3C();
-extern "C" void func_80332C54();
-extern "C" void func_80332C6C();
-extern "C" void func_80332C84();
-extern "C" void func_80332C9C();
-extern "C" void func_80332CB4();
-extern "C" void func_80332CCC();
-extern "C" void func_80332CE4();
-extern "C" void func_80332CFC();
-extern "C" void func_80332D14();
-extern "C" void func_80332D2C();
-extern "C" static void func_80332D44();
-extern "C" void func_80332D5C();
-extern "C" static void func_80332D74();
-extern "C" static void func_80332D8C();
+static void JSUConvertOffsetToPtr__template43(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template44(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template45(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template46(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template47(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template48(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template49(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template50(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template51(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template52(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template53(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template54(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template55(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template56(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template57(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template58(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template59(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template60(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template61(void const*, void const*); // 2
 
-extern "C" void __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock();
-extern "C" void __ct__18J3DMaterialFactoryFRC18J3DMaterialDLBlock();
-extern "C" void countUniqueMaterials__18J3DMaterialFactoryFv();
-extern "C" void countTexGens__18J3DMaterialFactoryCFi();
-extern "C" void countStages__18J3DMaterialFactoryCFi();
-extern "C" void create__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl();
-extern "C" void createNormalMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl();
-extern "C" void createPatchedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl();
-extern "C" void modifyPatchedCurrentMtx__18J3DMaterialFactoryCFP11J3DMateriali();
-extern "C" void createLockedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl();
-extern "C" void calcSize__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl();
-extern "C" void calcSizeNormalMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl();
-extern "C" void calcSizePatchedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl();
-extern "C" void calcSizeLockedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl();
-extern "C" void newMatColor__18J3DMaterialFactoryCFii();
-extern "C" void newColorChanNum__18J3DMaterialFactoryCFi();
-extern "C" void newColorChan__18J3DMaterialFactoryCFii();
-extern "C" void newAmbColor__18J3DMaterialFactoryCFii();
-extern "C" void newTexGenNum__18J3DMaterialFactoryCFi();
-extern "C" void newTexCoord__18J3DMaterialFactoryCFii();
-extern "C" void newTexMtx__18J3DMaterialFactoryCFii();
-extern "C" void newCullMode__18J3DMaterialFactoryCFi();
-extern "C" void newTexNo__18J3DMaterialFactoryCFii();
-extern "C" void newTevOrder__18J3DMaterialFactoryCFii();
-extern "C" void newTevColor__18J3DMaterialFactoryCFii();
-extern "C" void newTevKColor__18J3DMaterialFactoryCFii();
-extern "C" void newTevStageNum__18J3DMaterialFactoryCFi();
-extern "C" void newTevStage__18J3DMaterialFactoryCFii();
-extern "C" void newTevSwapModeTable__18J3DMaterialFactoryCFii();
-extern "C" void newIndTexStageNum__18J3DMaterialFactoryCFi();
-extern "C" void newIndTexOrder__18J3DMaterialFactoryCFii();
-extern "C" void newIndTexMtx__18J3DMaterialFactoryCFii();
-extern "C" void newIndTevStage__18J3DMaterialFactoryCFii();
-extern "C" void newIndTexCoordScale__18J3DMaterialFactoryCFii();
-extern "C" void newFog__18J3DMaterialFactoryCFi();
-extern "C" void newAlphaComp__18J3DMaterialFactoryCFi();
-extern "C" void newBlend__18J3DMaterialFactoryCFi();
-extern "C" void newZMode__18J3DMaterialFactoryCFi();
-extern "C" void newZCompLoc__18J3DMaterialFactoryCFi();
-extern "C" void newDither__18J3DMaterialFactoryCFi();
-extern "C" void newNBTScale__18J3DMaterialFactoryCFi();
-extern "C" void load__14J3DPEBlockNullFv();
-extern "C" void getType__14J3DPEBlockNullFv();
-extern "C" void __dt__14J3DPEBlockNullFv();
-extern "C" void reset__15J3DTevBlockNullFP11J3DTevBlock();
-extern "C" void ptrToIndex__15J3DTevBlockNullFv();
-extern "C" void indexToPtr__15J3DTevBlockNullFv();
-extern "C" void getType__15J3DTevBlockNullFv();
-extern "C" void __dt__15J3DTevBlockNullFv();
-extern "C" void calc__18J3DTexGenBlockNullFPA4_Cf();
-extern "C" void calcWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf();
-extern "C" void calcPostTexMtx__18J3DTexGenBlockNullFPA4_Cf();
-extern "C" void calcPostTexMtxWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf();
-extern "C" void load__18J3DTexGenBlockNullFv();
-extern "C" void patch__18J3DTexGenBlockNullFv();
-extern "C" void diff__18J3DTexGenBlockNullFUl();
-extern "C" void diffTexMtx__18J3DTexGenBlockNullFv();
-extern "C" void diffTexGen__18J3DTexGenBlockNullFv();
-extern "C" void getType__18J3DTexGenBlockNullFv();
-extern "C" void __dt__18J3DTexGenBlockNullFv();
-extern "C" void getType__17J3DColorBlockNullFv();
-extern "C" void __dt__17J3DColorBlockNullFv();
-extern "C" void __dt__11J3DMaterialFv();
-extern "C" static void func_80332BDC();
-extern "C" static void func_80332BF4();
-extern "C" static void func_80332C0C();
-extern "C" void func_80332C24();
-extern "C" void func_80332C3C();
-extern "C" void func_80332C54();
-extern "C" void func_80332C6C();
-extern "C" void func_80332C84();
-extern "C" void func_80332C9C();
-extern "C" void func_80332CB4();
-extern "C" void func_80332CCC();
-extern "C" void func_80332CE4();
-extern "C" void func_80332CFC();
-extern "C" void func_80332D14();
-extern "C" void func_80332D2C();
-extern "C" static void func_80332D44();
-extern "C" void func_80332D5C();
-extern "C" static void func_80332D74();
-extern "C" static void func_80332D8C();
+extern "C" void __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock(); // 1
+extern "C" void __ct__18J3DMaterialFactoryFRC18J3DMaterialDLBlock(); // 1
+extern "C" void countUniqueMaterials__18J3DMaterialFactoryFv(); // 1
+extern "C" void countTexGens__18J3DMaterialFactoryCFi(); // 1
+extern "C" void countStages__18J3DMaterialFactoryCFi(); // 1
+extern "C" void create__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl(); // 1
+extern "C" void createNormalMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl(); // 1
+extern "C" void createPatchedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl(); // 1
+extern "C" void modifyPatchedCurrentMtx__18J3DMaterialFactoryCFP11J3DMateriali(); // 1
+extern "C" void createLockedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl(); // 1
+extern "C" void calcSize__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl(); // 1
+extern "C" void calcSizeNormalMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl(); // 1
+extern "C" void calcSizePatchedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl(); // 1
+extern "C" void calcSizeLockedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl(); // 1
+extern "C" void newMatColor__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newColorChanNum__18J3DMaterialFactoryCFi(); // 1
+extern "C" void newColorChan__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newAmbColor__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newTexGenNum__18J3DMaterialFactoryCFi(); // 1
+extern "C" void newTexCoord__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newTexMtx__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newCullMode__18J3DMaterialFactoryCFi(); // 1
+extern "C" void newTexNo__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newTevOrder__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newTevColor__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newTevKColor__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newTevStageNum__18J3DMaterialFactoryCFi(); // 1
+extern "C" void newTevStage__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newTevSwapModeTable__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newIndTexStageNum__18J3DMaterialFactoryCFi(); // 1
+extern "C" void newIndTexOrder__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newIndTexMtx__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newIndTevStage__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newIndTexCoordScale__18J3DMaterialFactoryCFii(); // 1
+extern "C" void newFog__18J3DMaterialFactoryCFi(); // 1
+extern "C" void newAlphaComp__18J3DMaterialFactoryCFi(); // 1
+extern "C" void newBlend__18J3DMaterialFactoryCFi(); // 1
+extern "C" void newZMode__18J3DMaterialFactoryCFi(); // 1
+extern "C" void newZCompLoc__18J3DMaterialFactoryCFi(); // 1
+extern "C" void newDither__18J3DMaterialFactoryCFi(); // 1
+extern "C" void newNBTScale__18J3DMaterialFactoryCFi(); // 1
+extern "C" void load__14J3DPEBlockNullFv(); // 1
+extern "C" void getType__14J3DPEBlockNullFv(); // 1
+extern "C" void __dt__14J3DPEBlockNullFv(); // 1
+extern "C" void reset__15J3DTevBlockNullFP11J3DTevBlock(); // 1
+extern "C" void ptrToIndex__15J3DTevBlockNullFv(); // 1
+extern "C" void indexToPtr__15J3DTevBlockNullFv(); // 1
+extern "C" void getType__15J3DTevBlockNullFv(); // 1
+extern "C" void __dt__15J3DTevBlockNullFv(); // 1
+extern "C" void calc__18J3DTexGenBlockNullFPA4_Cf(); // 1
+extern "C" void calcWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf(); // 1
+extern "C" void calcPostTexMtx__18J3DTexGenBlockNullFPA4_Cf(); // 1
+extern "C" void calcPostTexMtxWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf(); // 1
+extern "C" void load__18J3DTexGenBlockNullFv(); // 1
+extern "C" void patch__18J3DTexGenBlockNullFv(); // 1
+extern "C" void diff__18J3DTexGenBlockNullFUl(); // 1
+extern "C" void diffTexMtx__18J3DTexGenBlockNullFv(); // 1
+extern "C" void diffTexGen__18J3DTexGenBlockNullFv(); // 1
+extern "C" void getType__18J3DTexGenBlockNullFv(); // 1
+extern "C" void __dt__18J3DTexGenBlockNullFv(); // 1
+extern "C" void getType__17J3DColorBlockNullFv(); // 1
+extern "C" void __dt__17J3DColorBlockNullFv(); // 1
+extern "C" void __dt__11J3DMaterialFv(); // 1
+extern "C" static void func_80332BDC(); // 1
+extern "C" static void func_80332BF4(); // 1
+extern "C" static void func_80332C0C(); // 1
+extern "C" void func_80332C24(); // 1
+extern "C" void func_80332C3C(); // 1
+extern "C" void func_80332C54(); // 1
+extern "C" void func_80332C6C(); // 1
+extern "C" void func_80332C84(); // 1
+extern "C" void func_80332C9C(); // 1
+extern "C" void func_80332CB4(); // 1
+extern "C" void func_80332CCC(); // 1
+extern "C" void func_80332CE4(); // 1
+extern "C" void func_80332CFC(); // 1
+extern "C" void func_80332D14(); // 1
+extern "C" void func_80332D2C(); // 1
+extern "C" static void func_80332D44(); // 1
+extern "C" void func_80332D5C(); // 1
+extern "C" static void func_80332D74(); // 1
+extern "C" static void func_80332D8C(); // 1
 SECTION_DATA extern void*const __vt__14J3DPEBlockNull[31];
 SECTION_DATA extern void*const __vt__15J3DTevBlockNull[55];
 SECTION_DATA extern void*const __vt__18J3DTexGenBlockNull[27];
@@ -638,195 +454,195 @@ SECTION_SBSS2 extern u8 data_80456BBC[4];
 // External References:
 // 
 
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void func_802F41E8();
-extern "C" void func_802F4260();
-extern "C" void func_802F4278();
-extern "C" void func_802F4290();
-extern "C" void func_802F42C0();
-extern "C" void __construct_array();
-extern "C" void _savegpr_18();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_18();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+void JSUConvertOffsetToPtr__template19(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template25(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template26(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_18(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void patchTexNoAndTexCoordScale__11J3DTevBlockFv();
-extern "C" void patch__10J3DPEBlockFv();
-extern "C" void patchLight__13J3DColorBlockFv();
-extern "C" void patch__11J3DTevBlockFv();
-extern "C" bool getZCompLoc__10J3DPEBlockCFv();
-extern "C" bool getZMode__10J3DPEBlockFv();
-extern "C" bool getBlend__10J3DPEBlockFv();
-extern "C" bool getAlphaComp__10J3DPEBlockFv();
-extern "C" bool getFog__10J3DPEBlockFv();
-extern "C" bool getIndTevStage__11J3DTevBlockFUl();
-extern "C" bool getTevStage__11J3DTevBlockFUl();
-extern "C" void getTexNo__11J3DTevBlockCFUl();
-extern "C" bool getTevSwapModeTable__11J3DTevBlockFUl();
-extern "C" bool getTevKAlphaSel__11J3DTevBlockFUl();
-extern "C" bool getTevKColorSel__11J3DTevBlockFUl();
-extern "C" bool getTevOrder__11J3DTevBlockFUl();
-extern "C" bool getTevKColor__11J3DTevBlockFUl();
-extern "C" bool getTevColor__11J3DTevBlockFUl();
-extern "C" bool getTevStageNum__11J3DTevBlockCFv();
-extern "C" bool getTexMtx__14J3DTexGenBlockFUl();
-extern "C" bool getTexCoord__14J3DTexGenBlockFUl();
-extern "C" bool getTexGenNum__14J3DTexGenBlockCFv();
-extern "C" bool getAmbColor__13J3DColorBlockFUl();
-extern "C" bool getColorChan__13J3DColorBlockFUl();
-extern "C" bool getMatColor__13J3DColorBlockFUl();
-extern "C" bool getColorChanNum__13J3DColorBlockCFv();
-extern "C" void setZCompLoc__10J3DPEBlockFUc();
-extern "C" void setZMode__10J3DPEBlockF8J3DZMode();
-extern "C" void setBlend__10J3DPEBlockFRC8J3DBlend();
-extern "C" void setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp();
-extern "C" void setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage();
-extern "C" void setTevStage__11J3DTevBlockFUl11J3DTevStage();
-extern "C" void setTexNo__11J3DTevBlockFUlUs();
-extern "C" void setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable();
-extern "C" void setTevKAlphaSel__11J3DTevBlockFUlUc();
-extern "C" void setTevKColorSel__11J3DTevBlockFUlUc();
-extern "C" void setTevOrder__11J3DTevBlockFUl11J3DTevOrder();
-extern "C" void setTevKColor__11J3DTevBlockFUl10J3DGXColor();
-extern "C" void setTevColor__11J3DTevBlockFUl13J3DGXColorS10();
-extern "C" void setTevStageNum__11J3DTevBlockFUc();
-extern "C" void setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord();
-extern "C" void setTexGenNum__14J3DTexGenBlockFUl();
-extern "C" void setAmbColor__13J3DColorBlockFUl10J3DGXColor();
-extern "C" void setColorChan__13J3DColorBlockFUlRC12J3DColorChan();
-extern "C" void setMatColor__13J3DColorBlockFUl10J3DGXColor();
-extern "C" void setColorChanNum__13J3DColorBlockFUc();
-extern "C" void __ct__11J3DTevOrderFv();
-extern "C" void __ct__14J3DIndTevStageFv();
-extern "C" void __ct__11J3DTevStageFv();
-extern "C" void __ct__13J3DGXColorS10Fv();
-extern "C" void __ct__11J3DTexCoordFv();
-extern "C" void __ct__10J3DGXColorFv();
-extern "C" void __ct__11J3DTevStageFRC15J3DTevStageInfo();
-extern "C" void setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx();
-extern "C" void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor();
-extern "C" void setTevColor__11J3DTevBlockFUlPC13J3DGXColorS10();
-extern "C" void setLight__13J3DColorBlockFUlP11J3DLightObj();
-extern "C" void setAmbColor__13J3DColorBlockFUlPC10J3DGXColor();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void func_802F41E8();
-extern "C" void func_802F4260();
-extern "C" void func_802F4278();
-extern "C" void func_802F4290();
-extern "C" void func_802F42C0();
-extern "C" void setSingleDisplayList__17J3DDisplayListObjFPvUl();
-extern "C" void createColorBlock__11J3DMaterialFUl();
-extern "C" void createTexGenBlock__11J3DMaterialFUl();
-extern "C" void createTevBlock__11J3DMaterialFi();
-extern "C" void createIndBlock__11J3DMaterialFi();
-extern "C" void createPEBlock__11J3DMaterialFUlUl();
-extern "C" void calcSizeColorBlock__11J3DMaterialFUl();
-extern "C" void calcSizeTexGenBlock__11J3DMaterialFUl();
-extern "C" void calcSizeTevBlock__11J3DMaterialFi();
-extern "C" void calcSizeIndBlock__11J3DMaterialFi();
-extern "C" void calcSizePEBlock__11J3DMaterialFUlUl();
-extern "C" void initialize__11J3DMaterialFv();
-extern "C" void initialize__18J3DPatchedMaterialFv();
-extern "C" void initialize__17J3DLockedMaterialFv();
-extern "C" bool countDLSize__14J3DTexGenBlockFv();
-extern "C" bool countDLSize__13J3DColorBlockFv();
-extern "C" bool countDLSize__11J3DTevBlockFv();
-extern "C" bool countDLSize__10J3DPEBlockFv();
-extern "C" void load__13J3DColorBlockFv();
-extern "C" s32 getCullMode__13J3DColorBlockCFv();
-extern "C" void load__11J3DTevBlockFv();
-extern "C" bool getNBTScale__14J3DTexGenBlockFv();
-extern "C" void patch__13J3DColorBlockFv();
-extern "C" void diff__13J3DColorBlockFUl();
-extern "C" void diff__10J3DPEBlockFUl();
-extern "C" void reset__10J3DPEBlockFP10J3DPEBlock();
-extern "C" void reset__14J3DTexGenBlockFP14J3DTexGenBlock();
-extern "C" void reset__13J3DColorBlockFP13J3DColorBlock();
-extern "C" void diffFog__10J3DPEBlockFv();
-extern "C" void diffBlend__10J3DPEBlockFv();
-extern "C" void setFog__10J3DPEBlockFP6J3DFog();
-extern "C" void setFog__10J3DPEBlockF6J3DFog();
-extern "C" void setAlphaComp__10J3DPEBlockFPC12J3DAlphaComp();
-extern "C" void setBlend__10J3DPEBlockFPC8J3DBlend();
-extern "C" void setZMode__10J3DPEBlockFPC8J3DZMode();
-extern "C" void setZCompLoc__10J3DPEBlockFPCUc();
-extern "C" void setDither__10J3DPEBlockFUc();
-extern "C" void setDither__10J3DPEBlockFPCUc();
-extern "C" bool getDither__10J3DPEBlockCFv();
-extern "C" bool getFogOffset__10J3DPEBlockCFv();
-extern "C" void setFogOffset__10J3DPEBlockFUl();
-extern "C" void setTexGenNum__14J3DTexGenBlockFPCUl();
-extern "C" void setNBTScale__14J3DTexGenBlockF11J3DNBTScale();
-extern "C" void setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale();
-extern "C" bool getTexMtxOffset__14J3DTexGenBlockCFv();
-extern "C" void setTexMtxOffset__14J3DTexGenBlockFUl();
-extern "C" void patchMatColor__13J3DColorBlockFv();
-extern "C" void diffAmbColor__13J3DColorBlockFv();
-extern "C" void diffMatColor__13J3DColorBlockFv();
-extern "C" void diffColorChan__13J3DColorBlockFv();
-extern "C" void diffLightObj__13J3DColorBlockFUl();
-extern "C" void setMatColor__13J3DColorBlockFUlPC10J3DGXColor();
-extern "C" void setColorChanNum__13J3DColorBlockFPCUc();
-extern "C" void setColorChan__13J3DColorBlockFUlPC12J3DColorChan();
-extern "C" bool getLight__13J3DColorBlockFUl();
-extern "C" void setCullMode__13J3DColorBlockFUc();
-extern "C" void setCullMode__13J3DColorBlockFPCUc();
-extern "C" bool getMatColorOffset__13J3DColorBlockCFv();
-extern "C" bool getColorChanOffset__13J3DColorBlockCFv();
-extern "C" void setMatColorOffset__13J3DColorBlockFUl();
-extern "C" void setColorChanOffset__13J3DColorBlockFUl();
-extern "C" void initialize__21J3DTexGenBlockPatchedFv();
-extern "C" void initialize__15J3DTevBlockNullFv();
-extern "C" void initialize__18J3DTevBlockPatchedFv();
-extern "C" void diff__11J3DTevBlockFUl();
-extern "C" void indexToPtr_private__11J3DTevBlockFUl();
-extern "C" void diffTevReg__11J3DTevBlockFv();
-extern "C" void diffTevStageIndirect__11J3DTevBlockFv();
-extern "C" void diffTevStage__11J3DTevBlockFv();
-extern "C" void diffTexCoordScale__11J3DTevBlockFv();
-extern "C" void diffTexNo__11J3DTevBlockFv();
-extern "C" void setTexNoOffset__11J3DTevBlockFUl();
-extern "C" void setTevKColorSel__11J3DTevBlockFUlPCUc();
-extern "C" void setTevKAlphaSel__11J3DTevBlockFUlPCUc();
-extern "C" void setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo();
-extern "C" void setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo();
-extern "C" void setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable();
-extern "C" bool getTevRegOffset__11J3DTevBlockCFv();
-extern "C" void setTevRegOffset__11J3DTevBlockFUl();
-extern "C" void patchTexNo__11J3DTevBlockFv();
-extern "C" void patchTevReg__11J3DTevBlockFv();
-extern "C" void setTexNo__11J3DTevBlockFUlPCUs();
-extern "C" void setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder();
-extern "C" void setTevStageNum__11J3DTevBlockFPCUc();
-extern "C" void setTevStage__11J3DTevBlockFUlPC11J3DTevStage();
-extern "C" void setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage();
-extern "C" bool getTexNoOffset__11J3DTevBlockCFv();
-extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
-extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
-extern "C" void __as__10J3DFogInfoFRC10J3DFogInfo();
-extern "C" void __construct_array();
-extern "C" void _savegpr_18();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_18();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void patchTexNoAndTexCoordScale__11J3DTevBlockFv(); // 1
+extern "C" void patch__10J3DPEBlockFv(); // 1
+extern "C" void patchLight__13J3DColorBlockFv(); // 1
+extern "C" void patch__11J3DTevBlockFv(); // 1
+extern "C" bool getZCompLoc__10J3DPEBlockCFv(); // 1
+extern "C" bool getZMode__10J3DPEBlockFv(); // 1
+extern "C" bool getBlend__10J3DPEBlockFv(); // 1
+extern "C" bool getAlphaComp__10J3DPEBlockFv(); // 1
+extern "C" bool getFog__10J3DPEBlockFv(); // 1
+extern "C" bool getIndTevStage__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevStage__11J3DTevBlockFUl(); // 1
+extern "C" void getTexNo__11J3DTevBlockCFUl(); // 1
+extern "C" bool getTevSwapModeTable__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevKAlphaSel__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevKColorSel__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevOrder__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevKColor__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevColor__11J3DTevBlockFUl(); // 1
+extern "C" bool getTevStageNum__11J3DTevBlockCFv(); // 1
+extern "C" bool getTexMtx__14J3DTexGenBlockFUl(); // 1
+extern "C" bool getTexCoord__14J3DTexGenBlockFUl(); // 1
+extern "C" bool getTexGenNum__14J3DTexGenBlockCFv(); // 1
+extern "C" bool getAmbColor__13J3DColorBlockFUl(); // 1
+extern "C" bool getColorChan__13J3DColorBlockFUl(); // 1
+extern "C" bool getMatColor__13J3DColorBlockFUl(); // 1
+extern "C" bool getColorChanNum__13J3DColorBlockCFv(); // 1
+extern "C" void setZCompLoc__10J3DPEBlockFUc(); // 1
+extern "C" void setZMode__10J3DPEBlockF8J3DZMode(); // 1
+extern "C" void setBlend__10J3DPEBlockFRC8J3DBlend(); // 1
+extern "C" void setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp(); // 1
+extern "C" void setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage(); // 1
+extern "C" void setTevStage__11J3DTevBlockFUl11J3DTevStage(); // 1
+extern "C" void setTexNo__11J3DTevBlockFUlUs(); // 1
+extern "C" void setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable(); // 1
+extern "C" void setTevKAlphaSel__11J3DTevBlockFUlUc(); // 1
+extern "C" void setTevKColorSel__11J3DTevBlockFUlUc(); // 1
+extern "C" void setTevOrder__11J3DTevBlockFUl11J3DTevOrder(); // 1
+extern "C" void setTevKColor__11J3DTevBlockFUl10J3DGXColor(); // 1
+extern "C" void setTevColor__11J3DTevBlockFUl13J3DGXColorS10(); // 1
+extern "C" void setTevStageNum__11J3DTevBlockFUc(); // 1
+extern "C" void setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord(); // 1
+extern "C" void setTexGenNum__14J3DTexGenBlockFUl(); // 1
+extern "C" void setAmbColor__13J3DColorBlockFUl10J3DGXColor(); // 1
+extern "C" void setColorChan__13J3DColorBlockFUlRC12J3DColorChan(); // 1
+extern "C" void setMatColor__13J3DColorBlockFUl10J3DGXColor(); // 1
+extern "C" void setColorChanNum__13J3DColorBlockFUc(); // 1
+extern "C" void __ct__11J3DTevOrderFv(); // 1
+extern "C" void __ct__14J3DIndTevStageFv(); // 1
+extern "C" void __ct__11J3DTevStageFv(); // 1
+extern "C" void __ct__13J3DGXColorS10Fv(); // 1
+extern "C" void __ct__11J3DTexCoordFv(); // 1
+extern "C" void __ct__10J3DGXColorFv(); // 1
+extern "C" void __ct__11J3DTevStageFRC15J3DTevStageInfo(); // 1
+extern "C" void setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx(); // 1
+extern "C" void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor(); // 1
+extern "C" void setTevColor__11J3DTevBlockFUlPC13J3DGXColorS10(); // 1
+extern "C" void setLight__13J3DColorBlockFUlP11J3DLightObj(); // 1
+extern "C" void setAmbColor__13J3DColorBlockFUlPC10J3DGXColor(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void func_802F41E8(); // 1
+extern "C" void func_802F4260(); // 1
+extern "C" void func_802F4278(); // 1
+extern "C" void func_802F4290(); // 1
+extern "C" void func_802F42C0(); // 1
+extern "C" void setSingleDisplayList__17J3DDisplayListObjFPvUl(); // 1
+extern "C" void createColorBlock__11J3DMaterialFUl(); // 1
+extern "C" void createTexGenBlock__11J3DMaterialFUl(); // 1
+extern "C" void createTevBlock__11J3DMaterialFi(); // 1
+extern "C" void createIndBlock__11J3DMaterialFi(); // 1
+extern "C" void createPEBlock__11J3DMaterialFUlUl(); // 1
+extern "C" void calcSizeColorBlock__11J3DMaterialFUl(); // 1
+extern "C" void calcSizeTexGenBlock__11J3DMaterialFUl(); // 1
+extern "C" void calcSizeTevBlock__11J3DMaterialFi(); // 1
+extern "C" void calcSizeIndBlock__11J3DMaterialFi(); // 1
+extern "C" void calcSizePEBlock__11J3DMaterialFUlUl(); // 1
+extern "C" void initialize__11J3DMaterialFv(); // 1
+extern "C" void initialize__18J3DPatchedMaterialFv(); // 1
+extern "C" void initialize__17J3DLockedMaterialFv(); // 1
+extern "C" bool countDLSize__14J3DTexGenBlockFv(); // 1
+extern "C" bool countDLSize__13J3DColorBlockFv(); // 1
+extern "C" bool countDLSize__11J3DTevBlockFv(); // 1
+extern "C" bool countDLSize__10J3DPEBlockFv(); // 1
+extern "C" void load__13J3DColorBlockFv(); // 1
+extern "C" s32 getCullMode__13J3DColorBlockCFv(); // 1
+extern "C" void load__11J3DTevBlockFv(); // 1
+extern "C" bool getNBTScale__14J3DTexGenBlockFv(); // 1
+extern "C" void patch__13J3DColorBlockFv(); // 1
+extern "C" void diff__13J3DColorBlockFUl(); // 1
+extern "C" void diff__10J3DPEBlockFUl(); // 1
+extern "C" void reset__10J3DPEBlockFP10J3DPEBlock(); // 1
+extern "C" void reset__14J3DTexGenBlockFP14J3DTexGenBlock(); // 1
+extern "C" void reset__13J3DColorBlockFP13J3DColorBlock(); // 1
+extern "C" void diffFog__10J3DPEBlockFv(); // 1
+extern "C" void diffBlend__10J3DPEBlockFv(); // 1
+extern "C" void setFog__10J3DPEBlockFP6J3DFog(); // 1
+extern "C" void setFog__10J3DPEBlockF6J3DFog(); // 1
+extern "C" void setAlphaComp__10J3DPEBlockFPC12J3DAlphaComp(); // 1
+extern "C" void setBlend__10J3DPEBlockFPC8J3DBlend(); // 1
+extern "C" void setZMode__10J3DPEBlockFPC8J3DZMode(); // 1
+extern "C" void setZCompLoc__10J3DPEBlockFPCUc(); // 1
+extern "C" void setDither__10J3DPEBlockFUc(); // 1
+extern "C" void setDither__10J3DPEBlockFPCUc(); // 1
+extern "C" bool getDither__10J3DPEBlockCFv(); // 1
+extern "C" bool getFogOffset__10J3DPEBlockCFv(); // 1
+extern "C" void setFogOffset__10J3DPEBlockFUl(); // 1
+extern "C" void setTexGenNum__14J3DTexGenBlockFPCUl(); // 1
+extern "C" void setNBTScale__14J3DTexGenBlockF11J3DNBTScale(); // 1
+extern "C" void setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale(); // 1
+extern "C" bool getTexMtxOffset__14J3DTexGenBlockCFv(); // 1
+extern "C" void setTexMtxOffset__14J3DTexGenBlockFUl(); // 1
+extern "C" void patchMatColor__13J3DColorBlockFv(); // 1
+extern "C" void diffAmbColor__13J3DColorBlockFv(); // 1
+extern "C" void diffMatColor__13J3DColorBlockFv(); // 1
+extern "C" void diffColorChan__13J3DColorBlockFv(); // 1
+extern "C" void diffLightObj__13J3DColorBlockFUl(); // 1
+extern "C" void setMatColor__13J3DColorBlockFUlPC10J3DGXColor(); // 1
+extern "C" void setColorChanNum__13J3DColorBlockFPCUc(); // 1
+extern "C" void setColorChan__13J3DColorBlockFUlPC12J3DColorChan(); // 1
+extern "C" bool getLight__13J3DColorBlockFUl(); // 1
+extern "C" void setCullMode__13J3DColorBlockFUc(); // 1
+extern "C" void setCullMode__13J3DColorBlockFPCUc(); // 1
+extern "C" bool getMatColorOffset__13J3DColorBlockCFv(); // 1
+extern "C" bool getColorChanOffset__13J3DColorBlockCFv(); // 1
+extern "C" void setMatColorOffset__13J3DColorBlockFUl(); // 1
+extern "C" void setColorChanOffset__13J3DColorBlockFUl(); // 1
+extern "C" void initialize__21J3DTexGenBlockPatchedFv(); // 1
+extern "C" void initialize__15J3DTevBlockNullFv(); // 1
+extern "C" void initialize__18J3DTevBlockPatchedFv(); // 1
+extern "C" void diff__11J3DTevBlockFUl(); // 1
+extern "C" void indexToPtr_private__11J3DTevBlockFUl(); // 1
+extern "C" void diffTevReg__11J3DTevBlockFv(); // 1
+extern "C" void diffTevStageIndirect__11J3DTevBlockFv(); // 1
+extern "C" void diffTevStage__11J3DTevBlockFv(); // 1
+extern "C" void diffTexCoordScale__11J3DTevBlockFv(); // 1
+extern "C" void diffTexNo__11J3DTevBlockFv(); // 1
+extern "C" void setTexNoOffset__11J3DTevBlockFUl(); // 1
+extern "C" void setTevKColorSel__11J3DTevBlockFUlPCUc(); // 1
+extern "C" void setTevKAlphaSel__11J3DTevBlockFUlPCUc(); // 1
+extern "C" void setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo(); // 1
+extern "C" void setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo(); // 1
+extern "C" void setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable(); // 1
+extern "C" bool getTevRegOffset__11J3DTevBlockCFv(); // 1
+extern "C" void setTevRegOffset__11J3DTevBlockFUl(); // 1
+extern "C" void patchTexNo__11J3DTevBlockFv(); // 1
+extern "C" void patchTevReg__11J3DTevBlockFv(); // 1
+extern "C" void setTexNo__11J3DTevBlockFUlPCUs(); // 1
+extern "C" void setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder(); // 1
+extern "C" void setTevStageNum__11J3DTevBlockFPCUc(); // 1
+extern "C" void setTevStage__11J3DTevBlockFUlPC11J3DTevStage(); // 1
+extern "C" void setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage(); // 1
+extern "C" bool getTexNoOffset__11J3DTevBlockCFv(); // 1
+extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo(); // 1
+extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo(); // 1
+extern "C" void __as__10J3DFogInfoFRC10J3DFogInfo(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_18(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_RODATA extern const u8 j3dDefaultTexCoordInfo[32];
 SECTION_RODATA extern const u8 j3dDefaultIndTexMtxInfo[28];
 SECTION_RODATA extern const u8 j3dDefaultIndTevStageInfo[12];
@@ -1680,7 +1496,7 @@ asm J3DMaterial::~J3DMaterial() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80332BDC() {
+asm static void JSUConvertOffsetToPtr__template43(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332BDC.s"
 }
@@ -1691,7 +1507,7 @@ extern "C" asm static void func_80332BDC() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80332BF4() {
+asm static void JSUConvertOffsetToPtr__template44(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332BF4.s"
 }
@@ -1702,7 +1518,7 @@ extern "C" asm static void func_80332BF4() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80332C0C() {
+asm static void JSUConvertOffsetToPtr__template45(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332C0C.s"
 }
@@ -1713,7 +1529,7 @@ extern "C" asm static void func_80332C0C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332C24() {
+asm void JSUConvertOffsetToPtr__template46(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332C24.s"
 }
@@ -1724,7 +1540,7 @@ extern "C" asm void func_80332C24() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332C3C() {
+asm void JSUConvertOffsetToPtr__template47(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332C3C.s"
 }
@@ -1735,7 +1551,7 @@ extern "C" asm void func_80332C3C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332C54() {
+asm void JSUConvertOffsetToPtr__template48(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332C54.s"
 }
@@ -1746,7 +1562,7 @@ extern "C" asm void func_80332C54() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332C6C() {
+asm void JSUConvertOffsetToPtr__template49(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332C6C.s"
 }
@@ -1757,7 +1573,7 @@ extern "C" asm void func_80332C6C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332C84() {
+asm void JSUConvertOffsetToPtr__template50(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332C84.s"
 }
@@ -1768,7 +1584,7 @@ extern "C" asm void func_80332C84() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332C9C() {
+asm void JSUConvertOffsetToPtr__template51(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332C9C.s"
 }
@@ -1779,7 +1595,7 @@ extern "C" asm void func_80332C9C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332CB4() {
+asm void JSUConvertOffsetToPtr__template52(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332CB4.s"
 }
@@ -1790,7 +1606,7 @@ extern "C" asm void func_80332CB4() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332CCC() {
+asm void JSUConvertOffsetToPtr__template53(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332CCC.s"
 }
@@ -1801,7 +1617,7 @@ extern "C" asm void func_80332CCC() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332CE4() {
+asm void JSUConvertOffsetToPtr__template54(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332CE4.s"
 }
@@ -1812,7 +1628,7 @@ extern "C" asm void func_80332CE4() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332CFC() {
+asm void JSUConvertOffsetToPtr__template55(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332CFC.s"
 }
@@ -1823,7 +1639,7 @@ extern "C" asm void func_80332CFC() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332D14() {
+asm void JSUConvertOffsetToPtr__template56(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332D14.s"
 }
@@ -1834,7 +1650,7 @@ extern "C" asm void func_80332D14() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332D2C() {
+asm void JSUConvertOffsetToPtr__template57(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332D2C.s"
 }
@@ -1845,7 +1661,7 @@ extern "C" asm void func_80332D2C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80332D44() {
+asm static void JSUConvertOffsetToPtr__template58(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332D44.s"
 }
@@ -1856,7 +1672,7 @@ extern "C" asm static void func_80332D44() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80332D5C() {
+asm void JSUConvertOffsetToPtr__template59(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332D5C.s"
 }
@@ -1867,7 +1683,7 @@ extern "C" asm void func_80332D5C() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80332D74() {
+asm static void JSUConvertOffsetToPtr__template60(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332D74.s"
 }
@@ -1878,7 +1694,7 @@ extern "C" asm static void func_80332D74() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80332D8C() {
+asm static void JSUConvertOffsetToPtr__template61(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332D8C.s"
 }

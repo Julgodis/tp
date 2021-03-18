@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void MWTRACE();
+extern "C" void MWTRACE(); // 1
 
-extern "C" void MWTRACE();
+extern "C" void MWTRACE(); // 1
 
 // 
 // External References:

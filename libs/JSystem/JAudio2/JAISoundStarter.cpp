@@ -9,32 +9,44 @@
 // Types:
 // 
 
-// build JAISoundStarter (['JAISoundStarter']) False/False
-/* top-level dependencies (begin ['JAISoundStarter']) */
-/* top-level dependencies (end ['JAISoundStarter']) */
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
 struct JAISoundStarter {
 	/* 802A2F6C */ JAISoundStarter(bool);
 	/* 802A2F88 */ ~JAISoundStarter();
+	/* 802A2FEC */ void startLevelSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 };
 
 // 
 // Forward References:
 // 
 
-extern "C" void func_802A2FEC();
 
-extern "C" void __ct__15JAISoundStarterFb();
-extern "C" void __dt__15JAISoundStarterFv();
-extern "C" void func_802A2FEC();
+extern "C" void __ct__15JAISoundStarterFb(); // 1
+extern "C" void __dt__15JAISoundStarterFv(); // 1
+extern "C" void func_802A2FEC(); // 1
 SECTION_DATA extern void*const __vt__15JAISoundStarter[4];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 SECTION_SBSS extern u8 data_80450B78[4];
 
 // 
@@ -76,7 +88,7 @@ asm JAISoundStarter::~JAISoundStarter() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802A2FEC() {
+asm void JAISoundStarter::startLevelSound(JAISoundID field_0, JAISoundHandle* field_1, JGeometry::TVec3<f32> const* field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISoundStarter/func_802A2FEC.s"
 }

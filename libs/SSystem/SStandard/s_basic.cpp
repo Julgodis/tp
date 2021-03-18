@@ -9,11 +9,11 @@
 // Forward References:
 // 
 
-static void sBs_FillArea_s(void*, u32, s16);
-void sBs_ClearArea(void*, u32);
+static void sBs_FillArea_s(void*, u32, s16); // 2
+void sBs_ClearArea(void*, u32); // 2
 
-extern "C" static void sBs_FillArea_s__FPvUls();
-extern "C" void sBs_ClearArea__FPvUl();
+extern "C" static void sBs_FillArea_s__FPvUls(); // 1
+extern "C" void sBs_ClearArea__FPvUl(); // 1
 
 // 
 // External References:

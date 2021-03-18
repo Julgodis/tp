@@ -9,15 +9,9 @@
 // Types:
 // 
 
-// build _GXChannelID (['_GXChannelID']) False/False
-/* top-level dependencies (begin ['_GXChannelID']) */
-/* top-level dependencies (end ['_GXChannelID']) */
 struct _GXChannelID {
 };
 
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
@@ -25,9 +19,9 @@ struct _GXColor {
 // Forward References:
 // 
 
-void GFSetChanAmbColor(_GXChannelID, _GXColor);
+void GFSetChanAmbColor(_GXChannelID, _GXColor); // 2
 
-extern "C" void GFSetChanAmbColor__F12_GXChannelID8_GXColor();
+extern "C" void GFSetChanAmbColor__F12_GXChannelID8_GXColor(); // 1
 
 // 
 // External References:

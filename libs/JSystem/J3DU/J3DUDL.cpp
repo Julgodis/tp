@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build J3DShapeMtx (['J3DShapeMtx']) False/False
-/* top-level dependencies (begin ['J3DShapeMtx']) */
-/* top-level dependencies (end ['J3DShapeMtx']) */
 struct J3DShapeMtx {
 	/* 80273E08 */ bool getUseMtxNum() const;
 };
@@ -21,7 +18,7 @@ struct J3DShapeMtx {
 // 
 
 
-extern "C" bool getUseMtxNum__11J3DShapeMtxCFv();
+extern "C" bool getUseMtxNum__11J3DShapeMtxCFv(); // 1
 
 // 
 // External References:

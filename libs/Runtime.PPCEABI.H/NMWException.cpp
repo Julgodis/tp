@@ -9,11 +9,11 @@
 // Forward References:
 // 
 
-extern "C" void __destroy_new_array();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void __dt__26__partial_array_destructorFv();
-extern "C" void __construct_new_array();
+extern "C" void __destroy_new_array(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __dt__26__partial_array_destructorFv(); // 1
+extern "C" void __construct_new_array(); // 1
 
 extern void*NMWException__lit_206[3];
 extern void*NMWException__lit_211[3];
@@ -21,22 +21,22 @@ extern void*lit_232[3];
 extern void*lit_240[3];
 extern void*lit_263[3];
 extern void*data_8000569C[8];
-extern "C" void __destroy_new_array();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void __dt__26__partial_array_destructorFv();
-extern "C" void __construct_new_array();
+extern "C" void __destroy_new_array(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __dt__26__partial_array_destructorFv(); // 1
+extern "C" void __construct_new_array(); // 1
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
-void operator delete[](void*);
+void operator delete(void*); // 2
+void operator delete[](void*); // 2
 
 extern void*_section_symbol_extab[18];
-extern "C" void __dl__FPv();
-extern "C" void __dla__FPv();
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dla__FPv(); // 1
 
 // 
 // Declarations:

@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build DynamicModuleControlBase (['DynamicModuleControlBase']) False/False
-/* top-level dependencies (begin ['DynamicModuleControlBase']) */
-/* top-level dependencies (end ['DynamicModuleControlBase']) */
 struct DynamicModuleControlBase {
 	/* 800188DC */ bool getModuleName() const;
 	/* 802621CC */ ~DynamicModuleControlBase();
@@ -31,9 +28,6 @@ struct DynamicModuleControlBase {
 	/* 80263210 */ bool getModuleSize() const;
 };
 
-// build DynamicModuleControl (['DynamicModuleControl']) False/False
-/* top-level dependencies (begin ['DynamicModuleControl']) */
-/* top-level dependencies (end ['DynamicModuleControl']) */
 struct DynamicModuleControl {
 	/* 800188E4 */ ~DynamicModuleControl();
 	/* 80262660 */ DynamicModuleControl(char const*);
@@ -51,9 +45,6 @@ struct DynamicModuleControl {
 	/* 80263218 */ void getModuleName() const;
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
@@ -61,46 +52,18 @@ struct JKRHeap {
 	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
 };
 
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D43A0 */ void detachResource(void*, JKRFileLoader*);
 };
 
-// build JKRFileCache (['JKRFileCache']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRFileCache']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRFileCache']) */
 struct JKRFileCache {
-	// ('JKRHeap',)
 	/* 802D49B4 */ void mount(char const*, JKRHeap*, char const*);
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-// build JKRArchive (['JKRArchive']) True/False
-struct JKRArchive;
-// build JKRHeap (['JKRHeap']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['JKRArchive']) */
-// outer dependency: ('JKRArchive', 'EMountDirection')
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JKRArchive', 'EMountMode')
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
-	// ('JKRArchive', 'EMountDirection')
-	// ('JKRHeap',)
-	// ('JKRArchive', 'EMountMode')
-	// build EMountMode (['JKRArchive', 'EMountMode']) False/False
-	/* dependencies (begin ['JKRArchive', 'EMountMode']) */
-	/* dependencies (end ['JKRArchive', 'EMountMode']) */
 	struct EMountMode {
 	};
 
-	// build EMountDirection (['JKRArchive', 'EMountDirection']) False/False
-	/* dependencies (begin ['JKRArchive', 'EMountDirection']) */
-	/* dependencies (end ['JKRArchive', 'EMountDirection']) */
 	struct EMountDirection {
 	};
 
@@ -108,80 +71,61 @@ struct JKRArchive {
 	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
 };
 
-// build JKRDvdRipper (['JKRDvdRipper']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-// build JKRDvdRipper (['JKRDvdRipper']) True/False
-struct JKRDvdRipper;
-// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
-/* top-level dependencies (begin ['JKRExpandSwitch']) */
-/* top-level dependencies (end ['JKRExpandSwitch']) */
 struct JKRExpandSwitch {
 };
 
-/* top-level dependencies (begin ['JKRDvdRipper']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JKRDvdRipper', 'EAllocDirection')
-// outer dependency: ('JKRExpandSwitch',)
-/* top-level dependencies (end ['JKRDvdRipper']) */
 struct JKRDvdRipper {
-	// ('JKRHeap',)
-	// ('JKRDvdRipper', 'EAllocDirection')
-	// ('JKRExpandSwitch',)
-	// build EAllocDirection (['JKRDvdRipper', 'EAllocDirection']) False/False
-	/* dependencies (begin ['JKRDvdRipper', 'EAllocDirection']) */
-	/* dependencies (end ['JKRDvdRipper', 'EAllocDirection']) */
 	struct EAllocDirection {
 	};
 
 	/* 802D9B98 */ void loadToMainRAM(char const*, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
 };
 
-// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
 // 
 // Forward References:
 // 
 
-static void calcSum2(u16 const*, u32);
-extern "C" void ModuleProlog();
-extern "C" void ModuleEpilog();
-extern "C" void ModuleUnresolved();
-extern "C" void ModuleConstructorsX();
-extern "C" void ModuleDestructorsX();
+static void calcSum2(u16 const*, u32); // 2
+extern "C" void ModuleProlog(); // 1
+extern "C" void ModuleEpilog(); // 1
+extern "C" void ModuleUnresolved(); // 1
+extern "C" void ModuleConstructorsX(); // 1
+extern "C" void ModuleDestructorsX(); // 1
 
-extern "C" void __dt__24DynamicModuleControlBaseFv();
-extern "C" void __ct__24DynamicModuleControlBaseFv();
-extern "C" void link__24DynamicModuleControlBaseFv();
-extern "C" void unlink__24DynamicModuleControlBaseFv();
-extern "C" void load_async__24DynamicModuleControlBaseFv();
-extern "C" void force_unlink__24DynamicModuleControlBaseFv();
-extern "C" void dump__24DynamicModuleControlBaseFv();
-extern "C" void __ct__20DynamicModuleControlFPCc();
-extern "C" void mountCallback__20DynamicModuleControlFPv();
-extern "C" void initialize__20DynamicModuleControlFv();
-extern "C" void callback__20DynamicModuleControlFPv();
-extern "C" static void calcSum2__FPCUsUl();
-extern "C" void do_load__20DynamicModuleControlFv();
-extern "C" void do_load_async__20DynamicModuleControlFv();
-extern "C" void do_unload__20DynamicModuleControlFv();
-extern "C" void dump2__20DynamicModuleControlFv();
-extern "C" void do_link__20DynamicModuleControlFv();
-extern "C" void do_unlink__20DynamicModuleControlFv();
-extern "C" void getModuleSize__20DynamicModuleControlCFv();
-extern "C" void getModuleTypeString__20DynamicModuleControlCFv();
-extern "C" void ModuleProlog();
-extern "C" void ModuleEpilog();
-extern "C" void ModuleUnresolved();
-extern "C" void ModuleConstructorsX();
-extern "C" void ModuleDestructorsX();
-extern "C" bool do_link__24DynamicModuleControlBaseFv();
-extern "C" bool do_load__24DynamicModuleControlBaseFv();
-extern "C" bool do_unload__24DynamicModuleControlBaseFv();
-extern "C" bool do_unlink__24DynamicModuleControlBaseFv();
-extern "C" bool do_load_async__24DynamicModuleControlBaseFv();
-extern "C" void dump2__24DynamicModuleControlBaseFv();
-extern "C" void getModuleTypeString__24DynamicModuleControlBaseCFv();
-extern "C" bool getModuleSize__24DynamicModuleControlBaseCFv();
-extern "C" void getModuleName__20DynamicModuleControlCFv();
+extern "C" void __dt__24DynamicModuleControlBaseFv(); // 1
+extern "C" void __ct__24DynamicModuleControlBaseFv(); // 1
+extern "C" void link__24DynamicModuleControlBaseFv(); // 1
+extern "C" void unlink__24DynamicModuleControlBaseFv(); // 1
+extern "C" void load_async__24DynamicModuleControlBaseFv(); // 1
+extern "C" void force_unlink__24DynamicModuleControlBaseFv(); // 1
+extern "C" void dump__24DynamicModuleControlBaseFv(); // 1
+extern "C" void __ct__20DynamicModuleControlFPCc(); // 1
+extern "C" void mountCallback__20DynamicModuleControlFPv(); // 1
+extern "C" void initialize__20DynamicModuleControlFv(); // 1
+extern "C" void callback__20DynamicModuleControlFPv(); // 1
+extern "C" static void calcSum2__FPCUsUl(); // 1
+extern "C" void do_load__20DynamicModuleControlFv(); // 1
+extern "C" void do_load_async__20DynamicModuleControlFv(); // 1
+extern "C" void do_unload__20DynamicModuleControlFv(); // 1
+extern "C" void dump2__20DynamicModuleControlFv(); // 1
+extern "C" void do_link__20DynamicModuleControlFv(); // 1
+extern "C" void do_unlink__20DynamicModuleControlFv(); // 1
+extern "C" void getModuleSize__20DynamicModuleControlCFv(); // 1
+extern "C" void getModuleTypeString__20DynamicModuleControlCFv(); // 1
+extern "C" void ModuleProlog(); // 1
+extern "C" void ModuleEpilog(); // 1
+extern "C" void ModuleUnresolved(); // 1
+extern "C" void ModuleConstructorsX(); // 1
+extern "C" void ModuleDestructorsX(); // 1
+extern "C" bool do_link__24DynamicModuleControlBaseFv(); // 1
+extern "C" bool do_load__24DynamicModuleControlBaseFv(); // 1
+extern "C" bool do_unload__24DynamicModuleControlBaseFv(); // 1
+extern "C" bool do_unlink__24DynamicModuleControlBaseFv(); // 1
+extern "C" bool do_load_async__24DynamicModuleControlBaseFv(); // 1
+extern "C" void dump2__24DynamicModuleControlBaseFv(); // 1
+extern "C" void getModuleTypeString__24DynamicModuleControlBaseCFv(); // 1
+extern "C" bool getModuleSize__24DynamicModuleControlBaseCFv(); // 1
+extern "C" void getModuleName__20DynamicModuleControlCFv(); // 1
 SECTION_RODATA extern const u8 DynamicLink__stringBase0[840];
 SECTION_DATA extern u8 data_803C34B0[16];
 SECTION_DATA extern void*const __vt__20DynamicModuleControl[13];
@@ -198,56 +142,56 @@ SECTION_SDATA2 extern f64 DynamicLink__lit_3774;
 // External References:
 // 
 
-extern "C" void OSReport();
-extern "C" void OSReport_Error();
-extern "C" void OSReport_Warning();
-void mDoExt_getArchiveHeap();
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
-void operator delete(void*);
-extern "C" void JUTReportConsole_f();
-extern "C" void OSGetStackPointer();
-extern "C" void OSLink();
-extern "C" void OSLinkFixed();
-extern "C" void OSUnlink();
-extern "C" void OSGetTime();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void snprintf();
+extern "C" void OSReport(); // 1
+extern "C" void OSReport_Error(); // 1
+extern "C" void OSReport_Warning(); // 1
+void mDoExt_getArchiveHeap(); // 2
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
+void operator delete(void*); // 2
+extern "C" void JUTReportConsole_f(); // 1
+extern "C" void OSGetStackPointer(); // 1
+extern "C" void OSLink(); // 1
+extern "C" void OSLinkFixed(); // 1
+extern "C" void OSUnlink(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void snprintf(); // 1
 
-extern "C" void OSReport();
-extern "C" void OSReport_Error();
-extern "C" void OSReport_Warning();
-extern "C" void mDoExt_getArchiveHeap__Fv();
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
-extern "C" bool getModuleName__24DynamicModuleControlBaseCFv();
-extern "C" void __dt__20DynamicModuleControlFv();
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
-extern "C" void free__7JKRHeapFPvP7JKRHeap();
-extern "C" void resize__7JKRHeapFPvUlP7JKRHeap();
-extern "C" void getSize__7JKRHeapFPvP7JKRHeap();
-extern "C" void __dl__FPv();
-extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader();
-extern "C" void mount__12JKRFileCacheFPCcP7JKRHeapPCc();
-extern "C" void mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection();
-extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
-extern "C" void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
-extern "C" void JUTReportConsole_f();
-extern "C" void OSGetStackPointer();
-extern "C" void OSLink();
-extern "C" void OSLinkFixed();
-extern "C" void OSUnlink();
-extern "C" void OSGetTime();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void snprintf();
+extern "C" void OSReport(); // 1
+extern "C" void OSReport_Error(); // 1
+extern "C" void OSReport_Warning(); // 1
+extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
+extern "C" bool getModuleName__24DynamicModuleControlBaseCFv(); // 1
+extern "C" void __dt__20DynamicModuleControlFv(); // 1
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
+extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void resize__7JKRHeapFPvUlP7JKRHeap(); // 1
+extern "C" void getSize__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader(); // 1
+extern "C" void mount__12JKRFileCacheFPCcP7JKRHeapPCc(); // 1
+extern "C" void mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection(); // 1
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive(); // 1
+extern "C" void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
+extern "C" void JUTReportConsole_f(); // 1
+extern "C" void OSGetStackPointer(); // 1
+extern "C" void OSLink(); // 1
+extern "C" void OSLinkFixed(); // 1
+extern "C" void OSUnlink(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void snprintf(); // 1
 
 // 
 // Declarations:

@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JAIAudience (['JAIAudience']) False/False
-/* top-level dependencies (begin ['JAIAudience']) */
-/* top-level dependencies (end ['JAIAudience']) */
 struct JAIAudience {
 	/* 8029EFF4 */ ~JAIAudience();
 };
@@ -21,16 +18,16 @@ struct JAIAudience {
 // 
 
 
-extern "C" void __dt__11JAIAudienceFv();
+extern "C" void __dt__11JAIAudienceFv(); // 1
 SECTION_DATA extern void*const __vt__11JAIAudience[8];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

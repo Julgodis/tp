@@ -9,33 +9,33 @@
 // Forward References:
 // 
 
-extern "C" void TRKNubMainLoop();
+extern "C" void TRKNubMainLoop(); // 1
 
-extern "C" void TRKNubMainLoop();
+extern "C" void TRKNubMainLoop(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void TRKDestructEvent();
-extern "C" void TRKGetNextEvent();
-extern "C" void TRKGetBuffer();
-extern "C" void TRKGetInput();
-extern "C" void TRKDispatchMessage();
-extern "C" void TRKTargetStopped();
-extern "C" void TRKTargetSupportRequest();
-extern "C" void TRKTargetInterrupt();
-extern "C" void TRKTargetContinue();
+extern "C" void TRKDestructEvent(); // 1
+extern "C" void TRKGetNextEvent(); // 1
+extern "C" void TRKGetBuffer(); // 1
+extern "C" void TRKGetInput(); // 1
+extern "C" void TRKDispatchMessage(); // 1
+extern "C" void TRKTargetStopped(); // 1
+extern "C" void TRKTargetSupportRequest(); // 1
+extern "C" void TRKTargetInterrupt(); // 1
+extern "C" void TRKTargetContinue(); // 1
 
-extern "C" void TRKDestructEvent();
-extern "C" void TRKGetNextEvent();
-extern "C" void TRKGetBuffer();
-extern "C" void TRKGetInput();
-extern "C" void TRKDispatchMessage();
-extern "C" void TRKTargetStopped();
-extern "C" void TRKTargetSupportRequest();
-extern "C" void TRKTargetInterrupt();
-extern "C" void TRKTargetContinue();
+extern "C" void TRKDestructEvent(); // 1
+extern "C" void TRKGetNextEvent(); // 1
+extern "C" void TRKGetBuffer(); // 1
+extern "C" void TRKGetInput(); // 1
+extern "C" void TRKDispatchMessage(); // 1
+extern "C" void TRKTargetStopped(); // 1
+extern "C" void TRKTargetSupportRequest(); // 1
+extern "C" void TRKTargetInterrupt(); // 1
+extern "C" void TRKTargetContinue(); // 1
 SECTION_SBSS extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 
 // 

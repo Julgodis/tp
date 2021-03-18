@@ -9,37 +9,19 @@
 // Types:
 // 
 
-// build J3DDrawBuffer (['J3DDrawBuffer']) False/False
-// build J3DPacket (['J3DPacket']) False/False
-/* top-level dependencies (begin ['J3DPacket']) */
-/* top-level dependencies (end ['J3DPacket']) */
 struct J3DPacket {
 	/* 80312758 */ void addChildPacket(J3DPacket*);
 };
 
-// build J3DMatPacket (['J3DMatPacket']) False/False
-// build J3DShapePacket (['J3DShapePacket']) False/False
-/* top-level dependencies (begin ['J3DShapePacket']) */
-/* top-level dependencies (end ['J3DShapePacket']) */
 struct J3DShapePacket {
 };
 
-/* top-level dependencies (begin ['J3DMatPacket']) */
-// outer dependency: ('J3DShapePacket',)
-/* top-level dependencies (end ['J3DMatPacket']) */
 struct J3DMatPacket {
-	// ('J3DShapePacket',)
 	/* 80312A04 */ void addShapePacket(J3DShapePacket*);
 	/* 80312A74 */ void isSame(J3DMatPacket*) const;
 };
 
-/* top-level dependencies (begin ['J3DDrawBuffer']) */
-// outer dependency: ('J3DPacket',)
-// outer dependency: ('J3DMatPacket',)
-/* top-level dependencies (end ['J3DDrawBuffer']) */
 struct J3DDrawBuffer {
-	// ('J3DPacket',)
-	// ('J3DMatPacket',)
 	/* 80324F08 */ void initialize();
 	/* 80324F70 */ void allocBuffer(u32);
 	/* 80325008 */ ~J3DDrawBuffer();
@@ -56,30 +38,27 @@ struct J3DDrawBuffer {
 	/* 80325578 */ void drawTail() const;
 };
 
-// build J3DMatPacket (['J3DMatPacket']) True/True
-// build J3DPacket (['J3DPacket']) True/True
-// build J3DShapePacket (['J3DShapePacket']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void __sinit_J3DDrawBuffer_cpp();
+extern "C" void __sinit_J3DDrawBuffer_cpp(); // 1
 
-extern "C" void initialize__13J3DDrawBufferFv();
-extern "C" void allocBuffer__13J3DDrawBufferFUl();
-extern "C" void __dt__13J3DDrawBufferFv();
-extern "C" void frameInit__13J3DDrawBufferFv();
-extern "C" void entryMatSort__13J3DDrawBufferFP12J3DMatPacket();
-extern "C" void entryMatAnmSort__13J3DDrawBufferFP12J3DMatPacket();
-extern "C" void entryZSort__13J3DDrawBufferFP12J3DMatPacket();
-extern "C" void entryModelSort__13J3DDrawBufferFP12J3DMatPacket();
-extern "C" void entryInvalidSort__13J3DDrawBufferFP12J3DMatPacket();
-extern "C" void entryNonSort__13J3DDrawBufferFP12J3DMatPacket();
-extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs();
-extern "C" void draw__13J3DDrawBufferCFv();
-extern "C" void drawHead__13J3DDrawBufferCFv();
-extern "C" void drawTail__13J3DDrawBufferCFv();
-extern "C" void __sinit_J3DDrawBuffer_cpp();
+extern "C" void initialize__13J3DDrawBufferFv(); // 1
+extern "C" void allocBuffer__13J3DDrawBufferFUl(); // 1
+extern "C" void __dt__13J3DDrawBufferFv(); // 1
+extern "C" void frameInit__13J3DDrawBufferFv(); // 1
+extern "C" void entryMatSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
+extern "C" void entryMatAnmSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
+extern "C" void entryZSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
+extern "C" void entryModelSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
+extern "C" void entryInvalidSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
+extern "C" void entryNonSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
+extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
+extern "C" void draw__13J3DDrawBufferCFv(); // 1
+extern "C" void drawHead__13J3DDrawBufferCFv(); // 1
+extern "C" void drawTail__13J3DDrawBufferCFv(); // 1
+extern "C" void __sinit_J3DDrawBuffer_cpp(); // 1
 SECTION_DATA extern void*lit_992[3];
 SECTION_DATA extern void*lit_993[3];
 SECTION_DATA extern void*J3DDrawBuffer__lit_994[3];
@@ -99,28 +78,28 @@ SECTION_SDATA2 extern f64 lit_784;
 // External References:
 // 
 
-void* operator new[](u32, int);
-void operator delete(void*);
-void operator delete[](void*);
-extern "C" void __ptmf_scall();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+void* operator new[](u32, int); // 2
+void operator delete(void*); // 2
+void operator delete[](void*); // 2
+extern "C" void __ptmf_scall(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void* __nwa__FUli();
-extern "C" void __dl__FPv();
-extern "C" void __dla__FPv();
-extern "C" void addChildPacket__9J3DPacketFP9J3DPacket();
-extern "C" void addShapePacket__12J3DMatPacketFP14J3DShapePacket();
-extern "C" void isSame__12J3DMatPacketCFP12J3DMatPacket();
-extern "C" void __ptmf_scall();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+extern "C" void* __nwa__FUli(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dla__FPv(); // 1
+extern "C" void addChildPacket__9J3DPacketFP9J3DPacket(); // 1
+extern "C" void addShapePacket__12J3DMatPacketFP14J3DShapePacket(); // 1
+extern "C" void isSame__12J3DMatPacketCFP12J3DMatPacket(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_BSS extern u8 j3dSys[284];
 
 // 

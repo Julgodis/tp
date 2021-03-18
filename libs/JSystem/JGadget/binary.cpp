@@ -9,28 +9,11 @@
 // Types:
 // 
 
-// build JGadget (['JGadget']) False/False
-// build JGadget (['JGadget']) True/False
-struct JGadget;
-/* top-level dependencies (begin ['JGadget']) */
-// outer dependency: ('JGadget', 'binary', 'TEBit')
-/* top-level dependencies (end ['JGadget']) */
-struct JGadget {
-	// build binary (['JGadget', 'binary']) False/False
-	/* dependencies (begin ['JGadget', 'binary']) */
-	// inner dependency: 1 ('JGadget', 'binary', 'TEBit') (for ['JGadget', 'binary'])
-	/* dependencies (end ['JGadget', 'binary']) */
+namespace JGadget {
 	struct binary {
-		// ('JGadget', 'binary', 'TEBit')
-		// build TEBit (['JGadget', 'binary', 'TEBit']) False/False
-		/* dependencies (begin ['JGadget', 'binary', 'TEBit']) */
-		/* dependencies (end ['JGadget', 'binary', 'TEBit']) */
 		struct TEBit {
 		};
 
-		// build TParse_header_block (['JGadget', 'binary', 'TParse_header_block']) False/False
-		/* dependencies (begin ['JGadget', 'binary', 'TParse_header_block']) */
-		/* dependencies (end ['JGadget', 'binary', 'TParse_header_block']) */
 		struct TParse_header_block {
 			/* 802DC8C8 */ ~TParse_header_block();
 			/* 802DC910 */ void parse_next(void const**, u32);
@@ -46,21 +29,21 @@ struct JGadget {
 // 
 
 
-extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
-extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv();
-extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit(); // 1
+extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv(); // 1
+extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl(); // 1
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+void operator delete(void*); // 2
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 
-extern "C" void __dl__FPv();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+extern "C" void __dl__FPv(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 SECTION_DATA extern void*const __vt__Q37JGadget6binary19TParse_header_block[5];
 
 // 

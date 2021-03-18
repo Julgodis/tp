@@ -9,51 +9,51 @@
 // Forward References:
 // 
 
-extern "C" void PPCMfmsr();
-extern "C" void PPCMtmsr();
-extern "C" void PPCMfhid0();
-extern "C" static void PPCMthid0();
-extern "C" void PPCMfl2cr();
-extern "C" void PPCMtl2cr();
-extern "C" void PPCMtdec();
-extern "C" void PPCSync();
-extern "C" void PPCHalt();
-extern "C" void PPCMtmmcr0();
-extern "C" void PPCMtmmcr1();
-extern "C" void PPCMtpmc1();
-extern "C" void PPCMtpmc2();
-extern "C" void PPCMtpmc3();
-extern "C" void PPCMtpmc4();
-extern "C" void PPCMffpscr();
-extern "C" void PPCMtfpscr();
-extern "C" void PPCMfhid2();
-extern "C" void PPCMthid2();
-extern "C" void PPCMtwpar();
-extern "C" void PPCDisableSpeculation();
-extern "C" void PPCSetFpNonIEEEMode();
+extern "C" void PPCMfmsr(); // 1
+extern "C" void PPCMtmsr(); // 1
+extern "C" void PPCMfhid0(); // 1
+extern "C" static void PPCMthid0(); // 1
+extern "C" void PPCMfl2cr(); // 1
+extern "C" void PPCMtl2cr(); // 1
+extern "C" void PPCMtdec(); // 1
+extern "C" void PPCSync(); // 1
+extern "C" void PPCHalt(); // 1
+extern "C" void PPCMtmmcr0(); // 1
+extern "C" void PPCMtmmcr1(); // 1
+extern "C" void PPCMtpmc1(); // 1
+extern "C" void PPCMtpmc2(); // 1
+extern "C" void PPCMtpmc3(); // 1
+extern "C" void PPCMtpmc4(); // 1
+extern "C" void PPCMffpscr(); // 1
+extern "C" void PPCMtfpscr(); // 1
+extern "C" void PPCMfhid2(); // 1
+extern "C" void PPCMthid2(); // 1
+extern "C" void PPCMtwpar(); // 1
+extern "C" void PPCDisableSpeculation(); // 1
+extern "C" void PPCSetFpNonIEEEMode(); // 1
 
-extern "C" void PPCMfmsr();
-extern "C" void PPCMtmsr();
-extern "C" void PPCMfhid0();
-extern "C" static void PPCMthid0();
-extern "C" void PPCMfl2cr();
-extern "C" void PPCMtl2cr();
-extern "C" void PPCMtdec();
-extern "C" void PPCSync();
-extern "C" void PPCHalt();
-extern "C" void PPCMtmmcr0();
-extern "C" void PPCMtmmcr1();
-extern "C" void PPCMtpmc1();
-extern "C" void PPCMtpmc2();
-extern "C" void PPCMtpmc3();
-extern "C" void PPCMtpmc4();
-extern "C" void PPCMffpscr();
-extern "C" void PPCMtfpscr();
-extern "C" void PPCMfhid2();
-extern "C" void PPCMthid2();
-extern "C" void PPCMtwpar();
-extern "C" void PPCDisableSpeculation();
-extern "C" void PPCSetFpNonIEEEMode();
+extern "C" void PPCMfmsr(); // 1
+extern "C" void PPCMtmsr(); // 1
+extern "C" void PPCMfhid0(); // 1
+extern "C" static void PPCMthid0(); // 1
+extern "C" void PPCMfl2cr(); // 1
+extern "C" void PPCMtl2cr(); // 1
+extern "C" void PPCMtdec(); // 1
+extern "C" void PPCSync(); // 1
+extern "C" void PPCHalt(); // 1
+extern "C" void PPCMtmmcr0(); // 1
+extern "C" void PPCMtmmcr1(); // 1
+extern "C" void PPCMtpmc1(); // 1
+extern "C" void PPCMtpmc2(); // 1
+extern "C" void PPCMtpmc3(); // 1
+extern "C" void PPCMtpmc4(); // 1
+extern "C" void PPCMffpscr(); // 1
+extern "C" void PPCMtfpscr(); // 1
+extern "C" void PPCMfhid2(); // 1
+extern "C" void PPCMthid2(); // 1
+extern "C" void PPCMtwpar(); // 1
+extern "C" void PPCDisableSpeculation(); // 1
+extern "C" void PPCSetFpNonIEEEMode(); // 1
 
 // 
 // External References:

@@ -9,38 +9,12 @@
 // Types:
 // 
 
-// build JStudio_JParticle (['JStudio_JParticle']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) False/False
-/* top-level dependencies (begin ['JPABaseEmitter']) */
-/* top-level dependencies (end ['JPABaseEmitter']) */
-struct JPABaseEmitter {
-};
-
-// build JStudio (['JStudio']) False/False
-// build JStudio (['JStudio']) True/False
-// build JStudio (['JStudio']) True/True
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
-// outer dependency: ('JStudio', 'TAdaptor_particle')
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build TObject (['JStudio', 'TObject']) False/False
-	/* dependencies (begin ['JStudio', 'TObject']) */
-	/* dependencies (end ['JStudio', 'TObject']) */
 	struct TObject {
 	};
 
-	// build stb (['JStudio', 'stb']) False/False
-	/* dependencies (begin ['JStudio', 'stb']) */
-	/* dependencies (end ['JStudio', 'stb']) */
-	struct stb {
-		// build data (['JStudio', 'stb', 'data']) False/False
-		/* dependencies (begin ['JStudio', 'stb', 'data']) */
-		/* dependencies (end ['JStudio', 'stb', 'data']) */
+	namespace stb {
 		struct data {
-			// build TParse_TBlock_object (['JStudio', 'stb', 'data', 'TParse_TBlock_object']) False/False
-			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
-			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
 			struct TParse_TBlock_object {
 			};
 
@@ -48,54 +22,24 @@ namespace JStudio {
 
 	};
 
-	// build TCreateObject (['JStudio', 'TCreateObject']) False/False
-	/* dependencies (begin ['JStudio', 'TCreateObject']) */
-	/* dependencies (end ['JStudio', 'TCreateObject']) */
 	struct TCreateObject {
 		/* 80285488 */ ~TCreateObject();
 	};
 
-	// build TObject_particle (['JStudio', 'TObject_particle']) False/False
-	/* dependencies (begin ['JStudio', 'TObject_particle']) */
-	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_particle'])
-	// build stb (['JStudio', 'stb']) True/True
-	// inner dependency: 1 ('JStudio', 'TAdaptor_particle') (for ['JStudio', 'TObject_particle'])
-	// build TAdaptor_particle (['JStudio', 'TAdaptor_particle']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_particle']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_particle']) */
 	struct TAdaptor_particle {
 	};
 
-	/* dependencies (end ['JStudio', 'TObject_particle']) */
 	struct TObject_particle {
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
-		// ('JStudio', 'TAdaptor_particle')
 		/* 8028776C */ TObject_particle(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_particle*);
 	};
 
-	// build TAdaptor_particle (['JStudio', 'TAdaptor_particle']) True/True
 };
 
-// build JStudio (['JStudio']) True/True
-// build JStudio_JParticle (['JStudio_JParticle']) True/False
-struct JStudio_JParticle;
-/* top-level dependencies (begin ['JStudio_JParticle']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JStudio', 'TObject')
-// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
-// outer dependency: ('JStudio_JParticle', 'TCreateObject')
-/* top-level dependencies (end ['JStudio_JParticle']) */
+struct JPABaseEmitter {
+};
+
 struct JStudio_JParticle {
-	// build TCreateObject (['JStudio_JParticle', 'TCreateObject']) False/False
-	/* dependencies (begin ['JStudio_JParticle', 'TCreateObject']) */
-	// inner dependency: 0 ('JPABaseEmitter',) (for ['JStudio_JParticle', 'TCreateObject'])
-	// inner dependency: 0 ('JStudio', 'TObject') (for ['JStudio_JParticle', 'TCreateObject'])
-	// inner dependency: 0 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio_JParticle', 'TCreateObject'])
-	/* dependencies (end ['JStudio_JParticle', 'TCreateObject']) */
 	struct TCreateObject {
-		// ('JPABaseEmitter',)
-		// ('JStudio', 'TObject')
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 8028E3A0 */ ~TCreateObject();
 		/* 8028E400 */ void create(JStudio::TObject**, JStudio::stb::data::TParse_TBlock_object const&);
 		/* 8028E474 */ void emitter_create(u32);
@@ -103,27 +47,29 @@ struct JStudio_JParticle {
 		/* 8028E508 */ void createObject_JPA_PARTICLE_(JStudio::stb::data::TParse_TBlock_object const&, JStudio_JParticle::TCreateObject*);
 	};
 
-	// build TAdaptor_particle (['JStudio_JParticle', 'TAdaptor_particle']) False/False
-	/* dependencies (begin ['JStudio_JParticle', 'TAdaptor_particle']) */
-	// inner dependency: 1 ('JStudio_JParticle', 'TCreateObject') (for ['JStudio_JParticle', 'TAdaptor_particle'])
-	// build TCreateObject (['JStudio_JParticle', 'TCreateObject']) True/True
-	/* dependencies (end ['JStudio_JParticle', 'TAdaptor_particle']) */
 	struct TAdaptor_particle {
-		// ('JStudio_JParticle', 'TCreateObject')
 		/* 8028E60C */ TAdaptor_particle(JStudio_JParticle::TCreateObject*);
 	};
 
 };
 
-// build JStudio (['JStudio']) True/True
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPAEmitterManager (['JPAEmitterManager']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-/* top-level dependencies (begin ['JPAEmitterManager']) */
-// outer dependency: ('JPABaseEmitter',)
-/* top-level dependencies (end ['JPAEmitterManager']) */
+struct JPAParticleCallBack {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+struct JPAEmitterCallBack {
+};
+
 struct JPAEmitterManager {
-	// ('JPABaseEmitter',)
+	/* 8027DEBC */ void createSimpleEmitterID(JGeometry::TVec3<f32> const&, u16, u8, u8, JPAEmitterCallBack*, JPAParticleCallBack*);
 	/* 8027E2D8 */ void forceDeleteEmitter(JPABaseEmitter*);
 };
 
@@ -132,11 +78,11 @@ struct JPAEmitterManager {
 // 
 
 
-extern "C" void __dt__Q217JStudio_JParticle13TCreateObjectFv();
-extern "C" void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
-extern "C" void emitter_create__Q217JStudio_JParticle13TCreateObjectFUl();
-extern "C" void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter();
-extern "C" void createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject();
+extern "C" void __dt__Q217JStudio_JParticle13TCreateObjectFv(); // 1
+extern "C" void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
+extern "C" void emitter_create__Q217JStudio_JParticle13TCreateObjectFUl(); // 1
+extern "C" void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter(); // 1
+extern "C" void createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject(); // 1
 SECTION_RODATA extern const u8 lit_1172[12 + 4 /* padding */];
 SECTION_DATA extern void*const __vt__Q217JStudio_JParticle13TCreateObject[6];
 
@@ -144,21 +90,20 @@ SECTION_DATA extern void*const __vt__Q217JStudio_JParticle13TCreateObject[6];
 // External References:
 // 
 
-extern "C" void func_8027DEBC();
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void func_8027DEBC();
-extern "C" void forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter();
-extern "C" void __dt__Q27JStudio13TCreateObjectFv();
-extern "C" void __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle();
-extern "C" void __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void func_8027DEBC(); // 1
+extern "C" void forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter(); // 1
+extern "C" void __dt__Q27JStudio13TCreateObjectFv(); // 1
+extern "C" void __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle(); // 1
+extern "C" void __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

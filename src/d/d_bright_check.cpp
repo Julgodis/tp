@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build dBrightCheck_c (['dBrightCheck_c']) False/False
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['dBrightCheck_c']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['dBrightCheck_c']) */
 struct dBrightCheck_c {
-	// ('JKRArchive',)
 	/* 80192F10 */ dBrightCheck_c(JKRArchive*);
 	/* 80192F98 */ ~dBrightCheck_c();
 	/* 80193030 */ void screenSet();
@@ -30,88 +22,42 @@ struct dBrightCheck_c {
 	/* 80193594 */ void _draw();
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build dDlst_BrightCheck_c (['dDlst_BrightCheck_c']) False/False
-/* top-level dependencies (begin ['dDlst_BrightCheck_c']) */
-/* top-level dependencies (end ['dDlst_BrightCheck_c']) */
 struct dDlst_BrightCheck_c {
 	/* 801935D0 */ void draw();
 	/* 80193648 */ ~dDlst_BrightCheck_c();
 };
 
-// build dDlst_list_c (['dDlst_list_c']) False/False
-// build dDlst_base_c (['dDlst_base_c']) False/False
-/* top-level dependencies (begin ['dDlst_base_c']) */
-/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin ['dDlst_list_c']) */
-// outer dependency: ('dDlst_base_c',)
-/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (['dDlst_base_c']) True/True
-// build dMsgString_c (['dMsgString_c']) False/False
-/* top-level dependencies (begin ['dMsgString_c']) */
-/* top-level dependencies (end ['dMsgString_c']) */
 struct dMsgString_c {
 	/* 80249C20 */ dMsgString_c();
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
-struct Vec {
-};
-
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
+struct Vec {
+};
+
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build Vec (['Vec']) True/True
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
@@ -120,18 +66,18 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_bright_check_cpp();
+extern "C" void __sinit_d_bright_check_cpp(); // 1
 
-extern "C" void __ct__14dBrightCheck_cFP10JKRArchive();
-extern "C" void __dt__14dBrightCheck_cFv();
-extern "C" void screenSet__14dBrightCheck_cFv();
-extern "C" void _move__14dBrightCheck_cFv();
-extern "C" void modeWait__14dBrightCheck_cFv();
-extern "C" void modeMove__14dBrightCheck_cFv();
-extern "C" void _draw__14dBrightCheck_cFv();
-extern "C" void draw__19dDlst_BrightCheck_cFv();
-extern "C" void __sinit_d_bright_check_cpp();
-extern "C" void __dt__19dDlst_BrightCheck_cFv();
+extern "C" void __ct__14dBrightCheck_cFP10JKRArchive(); // 1
+extern "C" void __dt__14dBrightCheck_cFv(); // 1
+extern "C" void screenSet__14dBrightCheck_cFv(); // 1
+extern "C" void _move__14dBrightCheck_cFv(); // 1
+extern "C" void modeWait__14dBrightCheck_cFv(); // 1
+extern "C" void modeMove__14dBrightCheck_cFv(); // 1
+extern "C" void _draw__14dBrightCheck_cFv(); // 1
+extern "C" void draw__19dDlst_BrightCheck_cFv(); // 1
+extern "C" void __sinit_d_bright_check_cpp(); // 1
+extern "C" void __dt__19dDlst_BrightCheck_cFv(); // 1
 SECTION_RODATA extern const u8 data_80394910[40];
 SECTION_RODATA extern const u8 data_80394938[40];
 SECTION_RODATA extern const u8 data_80394960[80];
@@ -151,29 +97,29 @@ SECTION_SDATA2 extern f32 d_d_bright_check__lit_3822;
 // External References:
 // 
 
-void mDoExt_getMesgFont();
-void mDoExt_getRubyFont();
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_22();
-extern "C" void _restgpr_22();
+void mDoExt_getMesgFont(); // 2
+void mDoExt_getRubyFont(); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _restgpr_22(); // 1
 
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void mDoExt_getRubyFont__Fv();
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" void __ct__12dMsgString_cFv();
-extern "C" void __dt__12dMsgString_cFv();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void setString__10J2DTextBoxFsPCce();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_22();
-extern "C" void _restgpr_22();
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void mDoExt_getRubyFont__Fv(); // 1
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
+extern "C" void __ct__12dMsgString_cFv(); // 1
+extern "C" void __dt__12dMsgString_cFv(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void setString__10J2DTextBoxFsPCce(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _restgpr_22(); // 1
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];

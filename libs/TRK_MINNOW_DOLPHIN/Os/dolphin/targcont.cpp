@@ -9,23 +9,23 @@
 // Forward References:
 // 
 
-extern "C" void TRKTargetContinue();
+extern "C" void TRKTargetContinue(); // 1
 
-extern "C" void TRKTargetContinue();
+extern "C" void TRKTargetContinue(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void TRKSwapAndGo();
-extern "C" void TRKTargetSetStopped();
-extern "C" void UnreserveEXI2Port();
-extern "C" void ReserveEXI2Port();
+extern "C" void TRKSwapAndGo(); // 1
+extern "C" void TRKTargetSetStopped(); // 1
+extern "C" void UnreserveEXI2Port(); // 1
+extern "C" void ReserveEXI2Port(); // 1
 
-extern "C" void TRKSwapAndGo();
-extern "C" void TRKTargetSetStopped();
-extern "C" void UnreserveEXI2Port();
-extern "C" void ReserveEXI2Port();
+extern "C" void TRKSwapAndGo(); // 1
+extern "C" void TRKTargetSetStopped(); // 1
+extern "C" void UnreserveEXI2Port(); // 1
+extern "C" void ReserveEXI2Port(); // 1
 
 // 
 // Declarations:

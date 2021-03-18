@@ -9,55 +9,34 @@
 // Types:
 // 
 
-// build dBgS_GndChk (['dBgS_GndChk']) False/False
-/* top-level dependencies (begin ['dBgS_GndChk']) */
-/* top-level dependencies (end ['dBgS_GndChk']) */
 struct dBgS_GndChk {
 	/* 8007757C */ dBgS_GndChk();
 	/* 800775F0 */ ~dBgS_GndChk();
 };
 
-// build dBgS_ObjGndChk_Wtr (['dBgS_ObjGndChk_Wtr']) False/False
-/* top-level dependencies (begin ['dBgS_ObjGndChk_Wtr']) */
-/* top-level dependencies (end ['dBgS_ObjGndChk_Wtr']) */
 struct dBgS_ObjGndChk_Wtr {
 	/* 80077678 */ dBgS_ObjGndChk_Wtr();
 	/* 80077710 */ ~dBgS_ObjGndChk_Wtr();
 };
 
-// build dBgS_ObjGndChk_Spl (['dBgS_ObjGndChk_Spl']) False/False
-/* top-level dependencies (begin ['dBgS_ObjGndChk_Spl']) */
-/* top-level dependencies (end ['dBgS_ObjGndChk_Spl']) */
 struct dBgS_ObjGndChk_Spl {
 	/* 800777B0 */ dBgS_ObjGndChk_Spl();
 	/* 80077848 */ ~dBgS_ObjGndChk_Spl();
 };
 
-// build dBgS_ObjGndChk_All (['dBgS_ObjGndChk_All']) False/False
-/* top-level dependencies (begin ['dBgS_ObjGndChk_All']) */
-/* top-level dependencies (end ['dBgS_ObjGndChk_All']) */
 struct dBgS_ObjGndChk_All {
 	/* 800778E8 */ ~dBgS_ObjGndChk_All();
 };
 
-// build dBgS_CamGndChk (['dBgS_CamGndChk']) False/False
-/* top-level dependencies (begin ['dBgS_CamGndChk']) */
-/* top-level dependencies (end ['dBgS_CamGndChk']) */
 struct dBgS_CamGndChk {
 	/* 80077988 */ ~dBgS_CamGndChk();
 };
 
-// build dBgS_CamGndChk_Wtr (['dBgS_CamGndChk_Wtr']) False/False
-/* top-level dependencies (begin ['dBgS_CamGndChk_Wtr']) */
-/* top-level dependencies (end ['dBgS_CamGndChk_Wtr']) */
 struct dBgS_CamGndChk_Wtr {
 	/* 80077A00 */ dBgS_CamGndChk_Wtr();
 	/* 80077A98 */ ~dBgS_CamGndChk_Wtr();
 };
 
-// build dBgS_Chk (['dBgS_Chk']) False/False
-/* top-level dependencies (begin ['dBgS_Chk']) */
-/* top-level dependencies (end ['dBgS_Chk']) */
 struct dBgS_Chk {
 	/* 8007749C */ dBgS_Chk();
 	/* 800774E8 */ ~dBgS_Chk();
@@ -65,17 +44,11 @@ struct dBgS_Chk {
 	/* 80077564 */ void GetGrpPassChkInfo();
 };
 
-// build dBgS_PolyPassChk (['dBgS_PolyPassChk']) False/False
-/* top-level dependencies (begin ['dBgS_PolyPassChk']) */
-/* top-level dependencies (end ['dBgS_PolyPassChk']) */
 struct dBgS_PolyPassChk {
 	/* 80078E68 */ void SetObj();
 	/* 80078E80 */ void SetCam();
 };
 
-// build cBgS_GndChk (['cBgS_GndChk']) False/False
-/* top-level dependencies (begin ['cBgS_GndChk']) */
-/* top-level dependencies (end ['cBgS_GndChk']) */
 struct cBgS_GndChk {
 	/* 80267C1C */ cBgS_GndChk();
 	/* 80267C94 */ ~cBgS_GndChk();
@@ -85,53 +58,53 @@ struct cBgS_GndChk {
 // Forward References:
 // 
 
-extern "C" static void func_80077B10();
-extern "C" static void func_80077B18();
-extern "C" static void func_80077B20();
-extern "C" static void func_80077B28();
-extern "C" static void func_80077B30();
-extern "C" static void func_80077B38();
-extern "C" static void func_80077B40();
-extern "C" static void func_80077B48();
-extern "C" static void func_80077B50();
-extern "C" static void func_80077B58();
-extern "C" static void func_80077B60();
-extern "C" static void func_80077B68();
-extern "C" static void func_80077B70();
-extern "C" static void func_80077B78();
-extern "C" static void func_80077B80();
-extern "C" static void func_80077B88();
-extern "C" static void func_80077B90();
-extern "C" static void func_80077B98();
+extern "C" static void func_80077B10(); // 1
+extern "C" static void func_80077B18(); // 1
+extern "C" static void func_80077B20(); // 1
+extern "C" static void func_80077B28(); // 1
+extern "C" static void func_80077B30(); // 1
+extern "C" static void func_80077B38(); // 1
+extern "C" static void func_80077B40(); // 1
+extern "C" static void func_80077B48(); // 1
+extern "C" static void func_80077B50(); // 1
+extern "C" static void func_80077B58(); // 1
+extern "C" static void func_80077B60(); // 1
+extern "C" static void func_80077B68(); // 1
+extern "C" static void func_80077B70(); // 1
+extern "C" static void func_80077B78(); // 1
+extern "C" static void func_80077B80(); // 1
+extern "C" static void func_80077B88(); // 1
+extern "C" static void func_80077B90(); // 1
+extern "C" static void func_80077B98(); // 1
 
-extern "C" void __ct__11dBgS_GndChkFv();
-extern "C" void __dt__11dBgS_GndChkFv();
-extern "C" void __ct__18dBgS_ObjGndChk_WtrFv();
-extern "C" void __dt__18dBgS_ObjGndChk_WtrFv();
-extern "C" void __ct__18dBgS_ObjGndChk_SplFv();
-extern "C" void __dt__18dBgS_ObjGndChk_SplFv();
-extern "C" void __dt__18dBgS_ObjGndChk_AllFv();
-extern "C" void __dt__14dBgS_CamGndChkFv();
-extern "C" void __ct__18dBgS_CamGndChk_WtrFv();
-extern "C" void __dt__18dBgS_CamGndChk_WtrFv();
-extern "C" static void func_80077B10();
-extern "C" static void func_80077B18();
-extern "C" static void func_80077B20();
-extern "C" static void func_80077B28();
-extern "C" static void func_80077B30();
-extern "C" static void func_80077B38();
-extern "C" static void func_80077B40();
-extern "C" static void func_80077B48();
-extern "C" static void func_80077B50();
-extern "C" static void func_80077B58();
-extern "C" static void func_80077B60();
-extern "C" static void func_80077B68();
-extern "C" static void func_80077B70();
-extern "C" static void func_80077B78();
-extern "C" static void func_80077B80();
-extern "C" static void func_80077B88();
-extern "C" static void func_80077B90();
-extern "C" static void func_80077B98();
+extern "C" void __ct__11dBgS_GndChkFv(); // 1
+extern "C" void __dt__11dBgS_GndChkFv(); // 1
+extern "C" void __ct__18dBgS_ObjGndChk_WtrFv(); // 1
+extern "C" void __dt__18dBgS_ObjGndChk_WtrFv(); // 1
+extern "C" void __ct__18dBgS_ObjGndChk_SplFv(); // 1
+extern "C" void __dt__18dBgS_ObjGndChk_SplFv(); // 1
+extern "C" void __dt__18dBgS_ObjGndChk_AllFv(); // 1
+extern "C" void __dt__14dBgS_CamGndChkFv(); // 1
+extern "C" void __ct__18dBgS_CamGndChk_WtrFv(); // 1
+extern "C" void __dt__18dBgS_CamGndChk_WtrFv(); // 1
+extern "C" static void func_80077B10(); // 1
+extern "C" static void func_80077B18(); // 1
+extern "C" static void func_80077B20(); // 1
+extern "C" static void func_80077B28(); // 1
+extern "C" static void func_80077B30(); // 1
+extern "C" static void func_80077B38(); // 1
+extern "C" static void func_80077B40(); // 1
+extern "C" static void func_80077B48(); // 1
+extern "C" static void func_80077B50(); // 1
+extern "C" static void func_80077B58(); // 1
+extern "C" static void func_80077B60(); // 1
+extern "C" static void func_80077B68(); // 1
+extern "C" static void func_80077B70(); // 1
+extern "C" static void func_80077B78(); // 1
+extern "C" static void func_80077B80(); // 1
+extern "C" static void func_80077B88(); // 1
+extern "C" static void func_80077B90(); // 1
+extern "C" static void func_80077B98(); // 1
 SECTION_DATA extern void*const __vt__18dBgS_CamGndChk_Wtr[12];
 SECTION_DATA extern void*const __vt__14dBgS_CamGndChk[12];
 SECTION_DATA extern void*const __vt__18dBgS_ObjGndChk_All[12];
@@ -143,17 +116,17 @@ SECTION_DATA extern void*const __vt__11dBgS_GndChk[12];
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __ct__8dBgS_ChkFv();
-extern "C" void __dt__8dBgS_ChkFv();
-extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv();
-extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv();
-extern "C" void SetObj__16dBgS_PolyPassChkFv();
-extern "C" void SetCam__16dBgS_PolyPassChkFv();
-extern "C" void __ct__11cBgS_GndChkFv();
-extern "C" void __dt__11cBgS_GndChkFv();
-extern "C" void __dl__FPv();
+extern "C" void __ct__8dBgS_ChkFv(); // 1
+extern "C" void __dt__8dBgS_ChkFv(); // 1
+extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv(); // 1
+extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv(); // 1
+extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
+extern "C" void SetCam__16dBgS_PolyPassChkFv(); // 1
+extern "C" void __ct__11cBgS_GndChkFv(); // 1
+extern "C" void __dt__11cBgS_GndChkFv(); // 1
+extern "C" void __dl__FPv(); // 1
 SECTION_DATA extern void*const __vt__14dBgS_ObjGndChk[13];
 
 // 

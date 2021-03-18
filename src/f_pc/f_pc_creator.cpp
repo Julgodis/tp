@@ -9,15 +9,9 @@
 // Types:
 // 
 
-// build base_process_class (['base_process_class']) False/False
-/* top-level dependencies (begin ['base_process_class']) */
-/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build create_request (['create_request']) False/False
-/* top-level dependencies (begin ['create_request']) */
-/* top-level dependencies (end ['create_request']) */
 struct create_request {
 };
 
@@ -25,29 +19,29 @@ struct create_request {
 // Forward References:
 // 
 
-void fpcCt_IsCreatingByID(u32);
-void fpcCt_IsDoing(base_process_class*);
-void fpcCt_Abort(base_process_class*);
-void fpcCt_Handler();
+void fpcCt_IsCreatingByID(u32); // 2
+void fpcCt_IsDoing(base_process_class*); // 2
+void fpcCt_Abort(base_process_class*); // 2
+void fpcCt_Handler(); // 2
 
-extern "C" void fpcCt_IsCreatingByID__FUi();
-extern "C" void fpcCt_IsDoing__FP18base_process_class();
-extern "C" void fpcCt_Abort__FP18base_process_class();
-extern "C" void fpcCt_Handler__Fv();
+extern "C" void fpcCt_IsCreatingByID__FUi(); // 1
+extern "C" void fpcCt_IsDoing__FP18base_process_class(); // 1
+extern "C" void fpcCt_Abort__FP18base_process_class(); // 1
+extern "C" void fpcCt_Handler__Fv(); // 1
 
 // 
 // External References:
 // 
 
-void fpcCtRq_IsCreatingByID(u32);
-void fpcCtRq_Cancel(create_request*);
-void fpcCtRq_IsDoing(create_request*);
-void fpcCtRq_Handler();
+void fpcCtRq_IsCreatingByID(u32); // 2
+void fpcCtRq_Cancel(create_request*); // 2
+void fpcCtRq_IsDoing(create_request*); // 2
+void fpcCtRq_Handler(); // 2
 
-extern "C" void fpcCtRq_IsCreatingByID__FUi();
-extern "C" void fpcCtRq_Cancel__FP14create_request();
-extern "C" void fpcCtRq_IsDoing__FP14create_request();
-extern "C" void fpcCtRq_Handler__Fv();
+extern "C" void fpcCtRq_IsCreatingByID__FUi(); // 1
+extern "C" void fpcCtRq_Cancel__FP14create_request(); // 1
+extern "C" void fpcCtRq_IsDoing__FP14create_request(); // 1
+extern "C" void fpcCtRq_Handler__Fv(); // 1
 
 // 
 // Declarations:

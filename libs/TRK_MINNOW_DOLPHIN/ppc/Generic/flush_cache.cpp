@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void TRK_flush_cache();
+extern "C" void TRK_flush_cache(); // 1
 
-extern "C" void TRK_flush_cache();
+extern "C" void TRK_flush_cache(); // 1
 
 // 
 // External References:

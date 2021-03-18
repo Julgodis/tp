@@ -9,58 +9,25 @@
 // Types:
 // 
 
-// build JStudio (['JStudio']) False/False
-// build JStudio (['JStudio']) True/False
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('JStudio', 'ctb', 'TControl')
-// outer dependency: ('JStudio', 'ctb', 'data', 'TParse_TBlock')
-// outer dependency: ('JStudio', 'ctb', 'TObject')
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build ctb (['JStudio', 'ctb']) False/False
-	/* dependencies (begin ['JStudio', 'ctb']) */
-	/* dependencies (end ['JStudio', 'ctb']) */
-	struct ctb {
-		// build TObject (['JStudio', 'ctb', 'TObject']) False/False
-		/* dependencies (begin ['JStudio', 'ctb', 'TObject']) */
-		/* dependencies (end ['JStudio', 'ctb', 'TObject']) */
+	namespace ctb {
 		struct TObject {
 			/* 80280F18 */ ~TObject();
 		};
 
-		// build TObject_TxyzRy (['JStudio', 'ctb', 'TObject_TxyzRy']) False/False
-		/* dependencies (begin ['JStudio', 'ctb', 'TObject_TxyzRy']) */
-		// inner dependency: 2 ('JStudio', 'ctb', 'data', 'TParse_TBlock') (for ['JStudio', 'ctb', 'TObject_TxyzRy'])
-		// build data (['JStudio', 'ctb', 'data']) False/False
-		/* dependencies (begin ['JStudio', 'ctb', 'data']) */
-		/* dependencies (end ['JStudio', 'ctb', 'data']) */
 		struct data {
-			// build TParse_TBlock (['JStudio', 'ctb', 'data', 'TParse_TBlock']) False/False
-			/* dependencies (begin ['JStudio', 'ctb', 'data', 'TParse_TBlock']) */
-			/* dependencies (end ['JStudio', 'ctb', 'data', 'TParse_TBlock']) */
 			struct TParse_TBlock {
 			};
 
 		};
 
-		/* dependencies (end ['JStudio', 'ctb', 'TObject_TxyzRy']) */
 		struct TObject_TxyzRy {
-			// ('JStudio', 'ctb', 'data', 'TParse_TBlock')
 			/* 80280F60 */ TObject_TxyzRy(JStudio::ctb::data::TParse_TBlock const&);
 			/* 80280FBC */ bool getScheme() const;
 			/* 80281554 */ ~TObject_TxyzRy();
 		};
 
-		// build data (['JStudio', 'ctb', 'data']) True/True
-		// build TControl (['JStudio', 'ctb', 'TControl']) False/False
-		/* dependencies (begin ['JStudio', 'ctb', 'TControl']) */
-		// inner dependency: 2 ('JStudio', 'ctb', 'TObject') (for ['JStudio', 'ctb', 'TControl'])
-		// build TObject (['JStudio', 'ctb', 'TObject']) True/True
-		/* dependencies (end ['JStudio', 'ctb', 'TControl']) */
 		struct TControl {
-			// ('JStudio', 'ctb', 'TObject')
 			/* 80280FC4 */ TControl();
 			/* 80280FF4 */ ~TControl();
 			/* 80281060 */ void appendObject(JStudio::ctb::TObject*);
@@ -71,28 +38,13 @@ namespace JStudio {
 			/* 80281230 */ void getObject_index(u32);
 		};
 
-		// build TFactory (['JStudio', 'ctb', 'TFactory']) False/False
-		/* dependencies (begin ['JStudio', 'ctb', 'TFactory']) */
-		// inner dependency: 2 ('JStudio', 'ctb', 'data', 'TParse_TBlock') (for ['JStudio', 'ctb', 'TFactory'])
-		// build data (['JStudio', 'ctb', 'data']) True/True
-		// inner dependency: 2 ('JStudio', 'ctb', 'TObject') (for ['JStudio', 'ctb', 'TFactory'])
-		// build TObject (['JStudio', 'ctb', 'TObject']) True/True
-		/* dependencies (end ['JStudio', 'ctb', 'TFactory']) */
 		struct TFactory {
-			// ('JStudio', 'ctb', 'data', 'TParse_TBlock')
-			// ('JStudio', 'ctb', 'TObject')
 			/* 80281274 */ ~TFactory();
 			/* 802812BC */ void create(JStudio::ctb::data::TParse_TBlock const&);
 			/* 80281320 */ void destroy(JStudio::ctb::TObject*);
 		};
 
-		// build TParse (['JStudio', 'ctb', 'TParse']) False/False
-		/* dependencies (begin ['JStudio', 'ctb', 'TParse']) */
-		// inner dependency: 2 ('JStudio', 'ctb', 'TControl') (for ['JStudio', 'ctb', 'TParse'])
-		// build TControl (['JStudio', 'ctb', 'TControl']) True/True
-		/* dependencies (end ['JStudio', 'ctb', 'TParse']) */
 		struct TParse {
-			// ('JStudio', 'ctb', 'TControl')
 			/* 8028135C */ TParse(JStudio::ctb::TControl*);
 			/* 8028137C */ ~TParse();
 			/* 802813DC */ void parseHeader_next(void const**, u32*, u32);
@@ -101,13 +53,7 @@ namespace JStudio {
 
 	};
 
-	// build object (['JStudio', 'object']) False/False
-	/* dependencies (begin ['JStudio', 'object']) */
-	/* dependencies (end ['JStudio', 'object']) */
 	struct object {
-		// build TIDData (['JStudio', 'object', 'TIDData']) False/False
-		/* dependencies (begin ['JStudio', 'object', 'TIDData']) */
-		/* dependencies (end ['JStudio', 'object', 'TIDData']) */
 		struct TIDData {
 			/* 80288988 */ void isEqual(JStudio::object::TIDData const&, JStudio::object::TIDData const&);
 		};
@@ -116,45 +62,18 @@ namespace JStudio {
 
 };
 
-// build JGadget (['JGadget']) False/False
-// build JGadget (['JGadget']) True/False
-struct JGadget;
-// build JGadget (['JGadget']) True/True
-/* top-level dependencies (begin ['JGadget']) */
-// outer dependency: ('JGadget', 'TNodeLinkList', 'iterator')
-// outer dependency: ('JGadget', 'TLinkListNode')
-/* top-level dependencies (end ['JGadget']) */
-struct JGadget {
-	// build binary (['JGadget', 'binary']) False/False
-	/* dependencies (begin ['JGadget', 'binary']) */
-	/* dependencies (end ['JGadget', 'binary']) */
+namespace JGadget {
 	struct binary {
-		// build TParse_header_block (['JGadget', 'binary', 'TParse_header_block']) False/False
-		/* dependencies (begin ['JGadget', 'binary', 'TParse_header_block']) */
-		/* dependencies (end ['JGadget', 'binary', 'TParse_header_block']) */
 		struct TParse_header_block {
 			/* 802DC8C8 */ ~TParse_header_block();
 		};
 
 	};
 
-	// build TNodeLinkList (['JGadget', 'TNodeLinkList']) False/False
-	/* dependencies (begin ['JGadget', 'TNodeLinkList']) */
-	// inner dependency: 1 ('JGadget', 'TNodeLinkList', 'iterator') (for ['JGadget', 'TNodeLinkList'])
-	// inner dependency: 1 ('JGadget', 'TLinkListNode') (for ['JGadget', 'TNodeLinkList'])
-	// build TLinkListNode (['JGadget', 'TLinkListNode']) False/False
-	/* dependencies (begin ['JGadget', 'TLinkListNode']) */
-	/* dependencies (end ['JGadget', 'TLinkListNode']) */
 	struct TLinkListNode {
 	};
 
-	/* dependencies (end ['JGadget', 'TNodeLinkList']) */
 	struct TNodeLinkList {
-		// ('JGadget', 'TNodeLinkList', 'iterator')
-		// ('JGadget', 'TLinkListNode')
-		// build iterator (['JGadget', 'TNodeLinkList', 'iterator']) False/False
-		/* dependencies (begin ['JGadget', 'TNodeLinkList', 'iterator']) */
-		/* dependencies (end ['JGadget', 'TNodeLinkList', 'iterator']) */
 		struct iterator {
 		};
 
@@ -163,35 +82,34 @@ struct JGadget {
 		/* 802DCBD4 */ void Erase(JGadget::TLinkListNode*);
 	};
 
-	// build TLinkListNode (['JGadget', 'TLinkListNode']) True/True
 };
 
 // 
 // Forward References:
 // 
 
-extern "C" static void func_802815B4();
+extern "C" static void func_802815B4(); // 1
 
-extern "C" void __dt__Q37JStudio3ctb7TObjectFv();
-extern "C" void __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock();
-extern "C" bool getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv();
-extern "C" void __ct__Q37JStudio3ctb8TControlFv();
-extern "C" void __dt__Q37JStudio3ctb8TControlFv();
-extern "C" void appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
-extern "C" void removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
-extern "C" void destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
-extern "C" void destroyObject_all__Q37JStudio3ctb8TControlFv();
-extern "C" void getObject__Q37JStudio3ctb8TControlFPCvUl();
-extern "C" void getObject_index__Q37JStudio3ctb8TControlFUl();
-extern "C" void __dt__Q37JStudio3ctb8TFactoryFv();
-extern "C" void create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock();
-extern "C" void destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject();
-extern "C" void __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl();
-extern "C" void __dt__Q37JStudio3ctb6TParseFv();
-extern "C" void parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl();
-extern "C" void parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl();
-extern "C" void __dt__Q37JStudio3ctb14TObject_TxyzRyFv();
-extern "C" static void func_802815B4();
+extern "C" void __dt__Q37JStudio3ctb7TObjectFv(); // 1
+extern "C" void __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock(); // 1
+extern "C" bool getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv(); // 1
+extern "C" void __ct__Q37JStudio3ctb8TControlFv(); // 1
+extern "C" void __dt__Q37JStudio3ctb8TControlFv(); // 1
+extern "C" void appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject(); // 1
+extern "C" void removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject(); // 1
+extern "C" void destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject(); // 1
+extern "C" void destroyObject_all__Q37JStudio3ctb8TControlFv(); // 1
+extern "C" void getObject__Q37JStudio3ctb8TControlFPCvUl(); // 1
+extern "C" void getObject_index__Q37JStudio3ctb8TControlFUl(); // 1
+extern "C" void __dt__Q37JStudio3ctb8TFactoryFv(); // 1
+extern "C" void create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock(); // 1
+extern "C" void destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject(); // 1
+extern "C" void __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl(); // 1
+extern "C" void __dt__Q37JStudio3ctb6TParseFv(); // 1
+extern "C" void parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl(); // 1
+extern "C" void parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl(); // 1
+extern "C" void __dt__Q37JStudio3ctb14TObject_TxyzRyFv(); // 1
+extern "C" static void func_802815B4(); // 1
 SECTION_DATA extern void*const __vt__Q37JStudio3ctb6TParse[5];
 SECTION_DATA extern void*const __vt__Q37JGadget6binary19TParse_header_block[5];
 SECTION_DATA extern void*const __vt__Q37JStudio3ctb8TFactory[5];
@@ -203,22 +121,22 @@ SECTION_DATA extern void*const __vt__Q37JStudio3ctb7TObject[4];
 // External References:
 // 
 
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
-extern "C" void memcmp();
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void memcmp(); // 1
 
-extern "C" void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv();
-extern "C" void __dt__Q27JGadget13TNodeLinkListFv();
-extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
-extern "C" void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
-extern "C" void memcmp();
+extern "C" void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv(); // 1
+extern "C" void __dt__Q27JGadget13TNodeLinkListFv(); // 1
+extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode(); // 1
+extern "C" void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void memcmp(); // 1
 SECTION_SDATA2 extern u32 ga4cSignature__Q37JStudio3ctb4data;
 
 // 

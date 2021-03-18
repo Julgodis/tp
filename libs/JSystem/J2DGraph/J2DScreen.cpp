@@ -9,111 +9,71 @@
 // Types:
 // 
 
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
-struct J2DGrafContext {
-};
-
-// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) False/False
-/* top-level dependencies (begin ['J2DAnmTextureSRTKey']) */
-/* top-level dependencies (end ['J2DAnmTextureSRTKey']) */
 struct J2DAnmTextureSRTKey {
 };
 
-// build J2DAnmColor (['J2DAnmColor']) False/False
-/* top-level dependencies (begin ['J2DAnmColor']) */
-/* top-level dependencies (end ['J2DAnmColor']) */
-struct J2DAnmColor {
-};
-
-// build J2DPane (['J2DPane']) False/False
-// build _GXCullMode (['_GXCullMode']) False/False
-/* top-level dependencies (begin ['_GXCullMode']) */
-/* top-level dependencies (end ['_GXCullMode']) */
-struct _GXCullMode {
-};
-
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build J2DAnmTransform (['J2DAnmTransform']) False/False
-/* top-level dependencies (begin ['J2DAnmTransform']) */
-/* top-level dependencies (end ['J2DAnmTransform']) */
-struct J2DAnmTransform {
-};
-
-// build ResFONT (['ResFONT']) False/False
-/* top-level dependencies (begin ['ResFONT']) */
-/* top-level dependencies (end ['ResFONT']) */
 struct ResFONT {
 };
 
-// build J2DAnmVtxColor (['J2DAnmVtxColor']) False/False
-/* top-level dependencies (begin ['J2DAnmVtxColor']) */
-/* top-level dependencies (end ['J2DAnmVtxColor']) */
+struct J2DScrnBlockHeader {
+};
+
 struct J2DAnmVtxColor {
 };
 
-// build J2DAnmBase (['J2DAnmBase']) False/False
-/* top-level dependencies (begin ['J2DAnmBase']) */
-/* top-level dependencies (end ['J2DAnmBase']) */
-struct J2DAnmBase {
+struct J2DAnmColor {
 };
 
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
+struct J2DGrafContext {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmTransform {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+};
+
+struct _GXCullMode {
+};
+
 struct ResTIMG {
 };
 
-// build JSURandomInputStream (['JSURandomInputStream']) False/False
-// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) False/False
-/* top-level dependencies (begin ['JSUStreamSeekFrom']) */
-/* top-level dependencies (end ['JSUStreamSeekFrom']) */
 struct JSUStreamSeekFrom {
 };
 
-/* top-level dependencies (begin ['JSURandomInputStream']) */
-// outer dependency: ('JSUStreamSeekFrom',)
-/* top-level dependencies (end ['JSURandomInputStream']) */
 struct JSURandomInputStream {
-	// ('JSUStreamSeekFrom',)
 	/* 802DC458 */ void peek(void*, s32);
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-// build J2DAnmVisibilityFull (['J2DAnmVisibilityFull']) False/False
-/* top-level dependencies (begin ['J2DAnmVisibilityFull']) */
-/* top-level dependencies (end ['J2DAnmVisibilityFull']) */
 struct J2DAnmVisibilityFull {
 };
 
-/* top-level dependencies (begin ['J2DPane']) */
-// outer dependency: ('_GXCullMode',)
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('J2DAnmTransform',)
-// outer dependency: ('ResFONT',)
-// outer dependency: ('J2DAnmVtxColor',)
-// outer dependency: ('J2DAnmBase',)
-// outer dependency: ('ResTIMG',)
-// outer dependency: ('JSURandomInputStream',)
-// outer dependency: ('J2DAnmVisibilityFull',)
-/* top-level dependencies (end ['J2DPane']) */
+struct J2DAnmBase {
+};
+
 struct J2DPane {
-	// ('_GXCullMode',)
-	// ('J2DGrafContext',)
-	// ('J2DAnmTransform',)
-	// ('ResFONT',)
-	// ('J2DAnmVtxColor',)
-	// ('J2DAnmBase',)
-	// ('ResTIMG',)
-	// ('JSURandomInputStream',)
-	// ('J2DAnmVisibilityFull',)
 	/* 80020158 */ void setAlpha(u8);
 	/* 80053C00 */ void makeMatrix(f32, f32);
+	/* 802F7540 */ void makeMatrix(f32, f32, f32, f32);
 	/* 802F5F9C */ J2DPane(J2DPane*, JSURandomInputStream*, u8);
+	/* 802F5D40 */ J2DPane(J2DPane*, bool, u64, JGeometry::TBox2<f32> const&);
 	/* 802F658C */ ~J2DPane();
 	/* 802F67E0 */ void draw(f32, f32, J2DGrafContext const*, bool, bool);
+	/* 802F6D18 */ void place(JGeometry::TBox2<f32> const&);
 	/* 802F6F60 */ void move(f32, f32);
 	/* 802F6FB4 */ void add(f32, f32);
 	/* 802F6FF8 */ void resize(f32, f32);
@@ -121,86 +81,32 @@ struct J2DPane {
 	/* 802F7388 */ void searchUserInfo(u64);
 	/* 802F7430 */ void isUsed(ResTIMG const*);
 	/* 802F74B8 */ void isUsed(ResFONT const*);
-	/* 802F7540 */ void makeMatrix(f32, f32, f32, f32);
 	/* 802F7680 */ void setCullBack(_GXCullMode);
+	/* 802F8428 */ void setCullBack(bool);
 	/* 802F7EF4 */ void setAnimation(J2DAnmBase*);
 	/* 802F8080 */ void animationTransform(J2DAnmTransform const*);
 	/* 802F8118 */ void setVisibileAnimation(J2DAnmVisibilityFull*);
 	/* 802F81A0 */ void setVtxColorAnimation(J2DAnmVtxColor*);
 	/* 802F8228 */ void animationPane(J2DAnmTransform const*);
 	/* 802F83CC */ void rewriteAlpha();
-	/* 802F8428 */ void setCullBack(bool);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
 	/* 802F8478 */ void drawSelf(f32, f32);
 };
 
-// build J2DAnmTransform (['J2DAnmTransform']) True/True
-// build ResFONT (['ResFONT']) True/True
-// build J2DAnmVtxColor (['J2DAnmVtxColor']) True/True
-// build J2DAnmBase (['J2DAnmBase']) True/True
-// build ResTIMG (['ResTIMG']) True/True
-// build JSURandomInputStream (['JSURandomInputStream']) True/True
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-// build J2DScrnBlockHeader (['J2DScrnBlockHeader']) False/False
-/* top-level dependencies (begin ['J2DScrnBlockHeader']) */
-/* top-level dependencies (end ['J2DScrnBlockHeader']) */
-struct J2DScrnBlockHeader {
-};
-
-// build J2DAnmVisibilityFull (['J2DAnmVisibilityFull']) True/True
-// build J2DAnmTexPattern (['J2DAnmTexPattern']) False/False
-/* top-level dependencies (begin ['J2DAnmTexPattern']) */
-/* top-level dependencies (end ['J2DAnmTexPattern']) */
-struct J2DAnmTexPattern {
-};
-
-// build J2DAnmTevRegKey (['J2DAnmTevRegKey']) False/False
-/* top-level dependencies (begin ['J2DAnmTevRegKey']) */
-/* top-level dependencies (end ['J2DAnmTevRegKey']) */
-struct J2DAnmTevRegKey {
-};
-
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('J2DAnmTextureSRTKey',)
-// outer dependency: ('J2DAnmColor',)
-// outer dependency: ('J2DPane',)
-// outer dependency: ('J2DAnmTransform',)
-// outer dependency: ('ResFONT',)
-// outer dependency: ('J2DAnmVtxColor',)
-// outer dependency: ('J2DAnmBase',)
-// outer dependency: ('ResTIMG',)
-// outer dependency: ('JSURandomInputStream',)
-// outer dependency: ('JKRArchive',)
-// outer dependency: ('J2DScrnBlockHeader',)
-// outer dependency: ('J2DAnmVisibilityFull',)
-// outer dependency: ('J2DAnmTexPattern',)
-// outer dependency: ('J2DAnmTevRegKey',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('J2DAnmTextureSRTKey',)
-	// ('J2DAnmColor',)
-	// ('J2DPane',)
-	// ('J2DAnmTransform',)
-	// ('ResFONT',)
-	// ('J2DAnmVtxColor',)
-	// ('J2DAnmBase',)
-	// ('ResTIMG',)
-	// ('JSURandomInputStream',)
-	// ('JKRArchive',)
-	// ('J2DScrnBlockHeader',)
-	// ('J2DAnmVisibilityFull',)
-	// ('J2DAnmTexPattern',)
-	// ('J2DAnmTevRegKey',)
 	/* 80053BA0 */ void clearAnmTransform();
+	/* 802F9704 */ void setAnimation(J2DAnmColor*);
 	/* 80192414 */ void setAnimation(J2DAnmTransform*);
+	/* 802F9798 */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802F99A8 */ void setAnimation(J2DAnmVtxColor*);
+	/* 802F9838 */ void setAnimation(J2DAnmTexPattern*);
+	/* 802F99C8 */ void setAnimation(J2DAnmVisibilityFull*);
+	/* 802F98CC */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802F9A54 */ void setAnimation(J2DAnmBase*);
 	/* 802F8498 */ J2DScreen();
 	/* 802F8540 */ ~J2DScreen();
 	/* 802F85A8 */ void clean();
@@ -211,6 +117,7 @@ struct J2DScreen {
 	/* 802F8894 */ void getScreenInformation(JSURandomInputStream*);
 	/* 802F8990 */ void makeHierarchyPanes(J2DPane*, JSURandomInputStream*, u32, JKRArchive*);
 	/* 802F8B98 */ void createPane(J2DScrnBlockHeader const&, JSURandomInputStream*, J2DPane*, u32, JKRArchive*);
+	/* 802F99E8 */ void createPane(J2DScrnBlockHeader const&, JSURandomInputStream*, J2DPane*, u32);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F90A0 */ void search(u64);
 	/* 802F90E0 */ void searchUserInfo(u64);
@@ -221,251 +128,85 @@ struct J2DScreen {
 	/* 802F9620 */ void isUsed(ResFONT const*);
 	/* 802F9640 */ void getNameResource(char const*);
 	/* 802F9690 */ void animation();
-	/* 802F9704 */ void setAnimation(J2DAnmColor*);
-	/* 802F9798 */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802F9838 */ void setAnimation(J2DAnmTexPattern*);
-	/* 802F98CC */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802F99A8 */ void setAnimation(J2DAnmVtxColor*);
-	/* 802F99C8 */ void setAnimation(J2DAnmVisibilityFull*);
-	/* 802F99E8 */ void createPane(J2DScrnBlockHeader const&, JSURandomInputStream*, J2DPane*, u32);
 	/* 802F9A18 */ s32 getTypeID() const;
 	/* 802F9A20 */ void calcMtx();
-	/* 802F9A54 */ void setAnimation(J2DAnmBase*);
 	/* 802F9A74 */ void setAnimationVF(J2DAnmVisibilityFull*);
 	/* 802F9A78 */ void setAnimationVC(J2DAnmVtxColor*);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build JSURandomInputStream (['JSURandomInputStream']) True/True
-// build J2DPane (['J2DPane']) True/True
-// build J2DScrnBlockHeader (['J2DScrnBlockHeader']) True/True
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build ResTIMG (['ResTIMG']) True/True
-// build ResFONT (['ResFONT']) True/True
-// build J2DAnmColor (['J2DAnmColor']) True/True
-// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) True/True
-// build J2DAnmTexPattern (['J2DAnmTexPattern']) True/True
-// build J2DAnmTevRegKey (['J2DAnmTevRegKey']) True/True
-// build J2DAnmVtxColor (['J2DAnmVtxColor']) True/True
-// build J2DAnmVisibilityFull (['J2DAnmVisibilityFull']) True/True
-// build J2DAnmBase (['J2DAnmBase']) True/True
-// build J2DAnmTransform (['J2DAnmTransform']) True/True
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-// build JSUInputStream (['JSUInputStream']) False/False
-/* top-level dependencies (begin ['JSUInputStream']) */
-/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC23C */ ~JSUInputStream();
 	/* 802DC298 */ void read(void*, s32);
 };
 
-// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) True/True
-// build JSUMemoryInputStream (['JSUMemoryInputStream']) False/False
-/* top-level dependencies (begin ['JSUMemoryInputStream']) */
-/* top-level dependencies (end ['JSUMemoryInputStream']) */
 struct JSUMemoryInputStream {
 	/* 802DC520 */ void setBuffer(void const*, s32);
 };
 
-// build JUTNameTab (['JUTNameTab']) False/False
-// build ResNTAB (['ResNTAB']) False/False
-/* top-level dependencies (begin ['ResNTAB']) */
-/* top-level dependencies (end ['ResNTAB']) */
 struct ResNTAB {
 };
 
-/* top-level dependencies (begin ['JUTNameTab']) */
-// outer dependency: ('ResNTAB',)
-/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
-	// ('ResNTAB',)
 	/* 802DE9E0 */ JUTNameTab(ResNTAB const*);
 };
 
-// build ResNTAB (['ResNTAB']) True/True
-// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
-/* top-level dependencies (begin ['J2DOrthoGraph']) */
-/* top-level dependencies (end ['J2DOrthoGraph']) */
 struct J2DOrthoGraph {
 	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
 	/* 802E97B4 */ void setPort();
 };
 
-// build J2DMaterial (['J2DMaterial']) False/False
-// build J2DAnmTexPattern (['J2DAnmTexPattern']) True/True
-// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) True/True
-// build J2DAnmColor (['J2DAnmColor']) True/True
-// build J2DAnmTevRegKey (['J2DAnmTevRegKey']) True/True
-/* top-level dependencies (begin ['J2DMaterial']) */
-// outer dependency: ('J2DAnmTexPattern',)
-// outer dependency: ('J2DAnmTextureSRTKey',)
-// outer dependency: ('J2DAnmColor',)
-// outer dependency: ('J2DAnmTevRegKey',)
-/* top-level dependencies (end ['J2DMaterial']) */
 struct J2DMaterial {
-	// ('J2DAnmTexPattern',)
-	// ('J2DAnmTextureSRTKey',)
-	// ('J2DAnmColor',)
-	// ('J2DAnmTevRegKey',)
 	/* 802EA1AC */ J2DMaterial();
 	/* 802EA2CC */ ~J2DMaterial();
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
 	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
 	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 	/* 802EAC78 */ void animation();
 };
 
-// build J2DMaterialFactory (['J2DMaterialFactory']) False/False
-// build J2DMaterialBlock (['J2DMaterialBlock']) False/False
-/* top-level dependencies (begin ['J2DMaterialBlock']) */
-/* top-level dependencies (end ['J2DMaterialBlock']) */
 struct J2DMaterialBlock {
 };
 
-// build J2DResReference (['J2DResReference']) False/False
-/* top-level dependencies (begin ['J2DResReference']) */
-/* top-level dependencies (end ['J2DResReference']) */
 struct J2DResReference {
 };
 
-// build J2DMaterial (['J2DMaterial']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['J2DMaterialFactory']) */
-// outer dependency: ('J2DMaterialBlock',)
-// outer dependency: ('J2DResReference',)
-// outer dependency: ('J2DMaterial',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DMaterialFactory']) */
 struct J2DMaterialFactory {
-	// ('J2DMaterialBlock',)
-	// ('J2DResReference',)
-	// ('J2DMaterial',)
-	// ('JKRArchive',)
 	/* 802F2AD0 */ J2DMaterialFactory(J2DMaterialBlock const&);
 	/* 802F2D1C */ void create(J2DMaterial*, int, u32, J2DResReference*, J2DResReference*, JKRArchive*) const;
 };
 
-// build J2DMaterialBlock (['J2DMaterialBlock']) True/True
-// build J2DResReference (['J2DResReference']) True/True
-// build _GXCullMode (['_GXCullMode']) True/True
-// build J2DWindow (['J2DWindow']) False/False
-// build J2DMaterial (['J2DMaterial']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-// build JSURandomInputStream (['JSURandomInputStream']) True/True
-// build J2DPane (['J2DPane']) True/True
-/* top-level dependencies (begin ['J2DWindow']) */
-// outer dependency: ('J2DMaterial',)
-// outer dependency: ('JKRArchive',)
-// outer dependency: ('JSURandomInputStream',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['J2DWindow']) */
 struct J2DWindow {
-	// ('J2DMaterial',)
-	// ('JKRArchive',)
-	// ('JSURandomInputStream',)
-	// ('J2DPane',)
-	/* 802F9B74 */ J2DWindow(J2DPane*, JSURandomInputStream*, JKRArchive*);
 	/* 802F9C10 */ J2DWindow(J2DPane*, JSURandomInputStream*, J2DMaterial*);
+	/* 802F9B74 */ J2DWindow(J2DPane*, JSURandomInputStream*, JKRArchive*);
 };
 
-// build J2DPicture (['J2DPicture']) False/False
-// build J2DMaterial (['J2DMaterial']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-// build JSURandomInputStream (['JSURandomInputStream']) True/True
-// build J2DPane (['J2DPane']) True/True
-/* top-level dependencies (begin ['J2DPicture']) */
-// outer dependency: ('J2DMaterial',)
-// outer dependency: ('JKRArchive',)
-// outer dependency: ('JSURandomInputStream',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ('J2DMaterial',)
-	// ('JKRArchive',)
-	// ('JSURandomInputStream',)
-	// ('J2DPane',)
 	/* 802FC118 */ J2DPicture(J2DPane*, JSURandomInputStream*, JKRArchive*);
 	/* 802FC1D4 */ J2DPicture(J2DPane*, JSURandomInputStream*, J2DMaterial*);
 };
 
-// build J2DTextBox (['J2DTextBox']) False/False
-// build J2DMaterial (['J2DMaterial']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-// build JSURandomInputStream (['JSURandomInputStream']) True/True
-// build J2DPane (['J2DPane']) True/True
-/* top-level dependencies (begin ['J2DTextBox']) */
-// outer dependency: ('J2DMaterial',)
-// outer dependency: ('JKRArchive',)
-// outer dependency: ('JSURandomInputStream',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
-	// ('J2DMaterial',)
-	// ('JKRArchive',)
-	// ('JSURandomInputStream',)
-	// ('J2DPane',)
 	/* 802FF6D8 */ J2DTextBox(J2DPane*, JSURandomInputStream*, JKRArchive*);
 	/* 802FF75C */ J2DTextBox(J2DPane*, JSURandomInputStream*, u32, J2DMaterial*);
 };
 
-// build J2DWindowEx (['J2DWindowEx']) False/False
-// build J2DMaterial (['J2DMaterial']) True/True
-// build JSURandomInputStream (['JSURandomInputStream']) True/True
-// build J2DPane (['J2DPane']) True/True
-/* top-level dependencies (begin ['J2DWindowEx']) */
-// outer dependency: ('J2DMaterial',)
-// outer dependency: ('JSURandomInputStream',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['J2DWindowEx']) */
 struct J2DWindowEx {
-	// ('J2DMaterial',)
-	// ('JSURandomInputStream',)
-	// ('J2DPane',)
 	/* 80300C94 */ J2DWindowEx(J2DPane*, JSURandomInputStream*, u32, J2DMaterial*);
 };
 
-// build J2DPictureEx (['J2DPictureEx']) False/False
-// build J2DMaterial (['J2DMaterial']) True/True
-// build JSURandomInputStream (['JSURandomInputStream']) True/True
-// build J2DPane (['J2DPane']) True/True
-/* top-level dependencies (begin ['J2DPictureEx']) */
-// outer dependency: ('J2DMaterial',)
-// outer dependency: ('JSURandomInputStream',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['J2DPictureEx']) */
 struct J2DPictureEx {
-	// ('J2DMaterial',)
-	// ('JSURandomInputStream',)
-	// ('J2DPane',)
 	/* 803036EC */ J2DPictureEx(J2DPane*, JSURandomInputStream*, u32, J2DMaterial*);
 };
 
-// build J2DTextBoxEx (['J2DTextBoxEx']) False/False
-// build J2DMaterial (['J2DMaterial']) True/True
-// build JSURandomInputStream (['JSURandomInputStream']) True/True
-// build J2DPane (['J2DPane']) True/True
-/* top-level dependencies (begin ['J2DTextBoxEx']) */
-// outer dependency: ('J2DMaterial',)
-// outer dependency: ('JSURandomInputStream',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['J2DTextBoxEx']) */
 struct J2DTextBoxEx {
-	// ('J2DMaterial',)
-	// ('JSURandomInputStream',)
-	// ('J2DPane',)
 	/* 803071E4 */ J2DTextBoxEx(J2DPane*, JSURandomInputStream*, u32, J2DMaterial*);
 };
 
-// build J2DDataManage (['J2DDataManage']) False/False
-/* top-level dependencies (begin ['J2DDataManage']) */
-/* top-level dependencies (end ['J2DDataManage']) */
 struct J2DDataManage {
 	/* 8030CE18 */ void get(char const*);
 };
@@ -475,38 +216,38 @@ struct J2DDataManage {
 // 
 
 
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void __dt__9J2DScreenFv();
-extern "C" void clean__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive();
-extern "C" void private_set__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive();
-extern "C" void checkSignature__9J2DScreenFP20JSURandomInputStream();
-extern "C" void getScreenInformation__9J2DScreenFP20JSURandomInputStream();
-extern "C" void makeHierarchyPanes__9J2DScreenFP7J2DPaneP20JSURandomInputStreamUlP10JKRArchive();
-extern "C" void createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void search__9J2DScreenFUx();
-extern "C" void searchUserInfo__9J2DScreenFUx();
-extern "C" void drawSelf__9J2DScreenFffPA3_A4_f();
-extern "C" void getResReference__9J2DScreenFP20JSURandomInputStreamUl();
-extern "C" void createMaterial__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive();
-extern "C" void isUsed__9J2DScreenFPC7ResTIMG();
-extern "C" void isUsed__9J2DScreenFPC7ResFONT();
-extern "C" void getNameResource__9J2DScreenFPCc();
-extern "C" void animation__9J2DScreenFv();
-extern "C" void setAnimation__9J2DScreenFP11J2DAnmColor();
-extern "C" void setAnimation__9J2DScreenFP19J2DAnmTextureSRTKey();
-extern "C" void setAnimation__9J2DScreenFP16J2DAnmTexPattern();
-extern "C" void setAnimation__9J2DScreenFP15J2DAnmTevRegKey();
-extern "C" void setAnimation__9J2DScreenFP14J2DAnmVtxColor();
-extern "C" void setAnimation__9J2DScreenFP20J2DAnmVisibilityFull();
-extern "C" void createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUl();
-extern "C" s32 getTypeID__9J2DScreenCFv();
-extern "C" void calcMtx__9J2DScreenFv();
-extern "C" void setAnimation__9J2DScreenFP10J2DAnmBase();
-extern "C" void setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull();
-extern "C" void setAnimationVC__9J2DScreenFP14J2DAnmVtxColor();
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void __dt__9J2DScreenFv(); // 1
+extern "C" void clean__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive(); // 1
+extern "C" void private_set__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive(); // 1
+extern "C" void checkSignature__9J2DScreenFP20JSURandomInputStream(); // 1
+extern "C" void getScreenInformation__9J2DScreenFP20JSURandomInputStream(); // 1
+extern "C" void makeHierarchyPanes__9J2DScreenFP7J2DPaneP20JSURandomInputStreamUlP10JKRArchive(); // 1
+extern "C" void createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void search__9J2DScreenFUx(); // 1
+extern "C" void searchUserInfo__9J2DScreenFUx(); // 1
+extern "C" void drawSelf__9J2DScreenFffPA3_A4_f(); // 1
+extern "C" void getResReference__9J2DScreenFP20JSURandomInputStreamUl(); // 1
+extern "C" void createMaterial__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive(); // 1
+extern "C" void isUsed__9J2DScreenFPC7ResTIMG(); // 1
+extern "C" void isUsed__9J2DScreenFPC7ResFONT(); // 1
+extern "C" void getNameResource__9J2DScreenFPCc(); // 1
+extern "C" void animation__9J2DScreenFv(); // 1
+extern "C" void setAnimation__9J2DScreenFP11J2DAnmColor(); // 1
+extern "C" void setAnimation__9J2DScreenFP19J2DAnmTextureSRTKey(); // 1
+extern "C" void setAnimation__9J2DScreenFP16J2DAnmTexPattern(); // 1
+extern "C" void setAnimation__9J2DScreenFP15J2DAnmTevRegKey(); // 1
+extern "C" void setAnimation__9J2DScreenFP14J2DAnmVtxColor(); // 1
+extern "C" void setAnimation__9J2DScreenFP20J2DAnmVisibilityFull(); // 1
+extern "C" void createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUl(); // 1
+extern "C" s32 getTypeID__9J2DScreenCFv(); // 1
+extern "C" void calcMtx__9J2DScreenFv(); // 1
+extern "C" void setAnimation__9J2DScreenFP10J2DAnmBase(); // 1
+extern "C" void setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull(); // 1
+extern "C" void setAnimationVC__9J2DScreenFP14J2DAnmVtxColor(); // 1
 SECTION_DATA extern void*const __vt__9J2DScreen[40];
 SECTION_SBSS extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
 SECTION_SDATA2 extern u8 lit_1561[4];
@@ -520,125 +261,123 @@ SECTION_SDATA2 extern f32 lit_1830;
 // External References:
 // 
 
-void* operator new(u32);
-void* operator new[](u32);
-void* operator new[](u32, int);
-void operator delete(void*);
-void operator delete[](void*);
-extern "C" void func_802F5D40();
-extern "C" void func_802F6D18();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXBegin();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevDirect();
-extern "C" void GXSetTevOp();
-extern "C" void GXSetTevSwapModeTable();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetScissor();
-extern "C" void GXGetScissor();
-extern "C" void __destroy_new_array();
-extern "C" void __construct_new_array();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+void* operator new(u32); // 2
+void* operator new[](u32); // 2
+void* operator new[](u32, int); // 2
+void operator delete(void*); // 2
+void operator delete[](void*); // 2
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevDirect(); // 1
+extern "C" void GXSetTevOp(); // 1
+extern "C" void GXSetTevSwapModeTable(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void GXGetScissor(); // 1
+extern "C" void __destroy_new_array(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void setAlpha__7J2DPaneFUc();
-extern "C" void clearAnmTransform__9J2DScreenFv();
-extern "C" void makeMatrix__7J2DPaneFff();
-extern "C" void setAnimation__9J2DScreenFP15J2DAnmTransform();
-extern "C" void* __nw__FUl();
-extern "C" void* __nwa__FUl();
-extern "C" void* __nwa__FUli();
-extern "C" void __dl__FPv();
-extern "C" void __dla__FPv();
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" void __dt__14JSUInputStreamFv();
-extern "C" void read__14JSUInputStreamFPvl();
-extern "C" void peek__20JSURandomInputStreamFPvl();
-extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
-extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl();
-extern "C" void __ct__10JUTNameTabFPC7ResNTAB();
-extern "C" void __ct__13J2DOrthoGraphFffffff();
-extern "C" void setPort__13J2DOrthoGraphFv();
-extern "C" void __ct__11J2DMaterialFv();
-extern "C" void __dt__11J2DMaterialFv();
-extern "C" void setAnimation__11J2DMaterialFP11J2DAnmColor();
-extern "C" void setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey();
-extern "C" void setAnimation__11J2DMaterialFP16J2DAnmTexPattern();
-extern "C" void setAnimation__11J2DMaterialFP15J2DAnmTevRegKey();
-extern "C" void animation__11J2DMaterialFv();
-extern "C" void __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock();
-extern "C" void create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive();
-extern "C" void func_802F5D40();
-extern "C" void __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc();
-extern "C" void __dt__7J2DPaneFv();
-extern "C" void draw__7J2DPaneFffPC14J2DGrafContextbb();
-extern "C" void func_802F6D18();
-extern "C" void move__7J2DPaneFff();
-extern "C" void add__7J2DPaneFff();
-extern "C" void resize__7J2DPaneFff();
-extern "C" void search__7J2DPaneFUx();
-extern "C" void searchUserInfo__7J2DPaneFUx();
-extern "C" void isUsed__7J2DPaneFPC7ResTIMG();
-extern "C" void isUsed__7J2DPaneFPC7ResFONT();
-extern "C" void makeMatrix__7J2DPaneFffff();
-extern "C" void setCullBack__7J2DPaneF11_GXCullMode();
-extern "C" void setAnimation__7J2DPaneFP10J2DAnmBase();
-extern "C" void animationTransform__7J2DPaneFPC15J2DAnmTransform();
-extern "C" void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
-extern "C" void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor();
-extern "C" void animationPane__7J2DPaneFPC15J2DAnmTransform();
-extern "C" void rewriteAlpha__7J2DPaneFv();
-extern "C" void setCullBack__7J2DPaneFb();
-extern "C" void setConnectParent__7J2DPaneFb();
-extern "C" void update__7J2DPaneFv();
-extern "C" void drawSelf__7J2DPaneFff();
-extern "C" void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive();
-extern "C" void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial();
-extern "C" void __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP10JKRArchive();
-extern "C" void __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial();
-extern "C" void __ct__10J2DTextBoxFP7J2DPaneP20JSURandomInputStreamP10JKRArchive();
-extern "C" void __ct__10J2DTextBoxFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
-extern "C" void __ct__11J2DWindowExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
-extern "C" void __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
-extern "C" void __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
-extern "C" void get__13J2DDataManageFPCc();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXBegin();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevDirect();
-extern "C" void GXSetTevOp();
-extern "C" void GXSetTevSwapModeTable();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetScissor();
-extern "C" void GXGetScissor();
-extern "C" void __destroy_new_array();
-extern "C" void __construct_new_array();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+extern "C" void setAlpha__7J2DPaneFUc(); // 1
+extern "C" void clearAnmTransform__9J2DScreenFv(); // 1
+extern "C" void makeMatrix__7J2DPaneFff(); // 1
+extern "C" void setAnimation__9J2DScreenFP15J2DAnmTransform(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void* __nwa__FUli(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dla__FPv(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
+extern "C" void __dt__14JSUInputStreamFv(); // 1
+extern "C" void read__14JSUInputStreamFPvl(); // 1
+extern "C" void peek__20JSURandomInputStreamFPvl(); // 1
+extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom(); // 1
+extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl(); // 1
+extern "C" void __ct__10JUTNameTabFPC7ResNTAB(); // 1
+extern "C" void __ct__13J2DOrthoGraphFffffff(); // 1
+extern "C" void setPort__13J2DOrthoGraphFv(); // 1
+extern "C" void __ct__11J2DMaterialFv(); // 1
+extern "C" void __dt__11J2DMaterialFv(); // 1
+extern "C" void setAnimation__11J2DMaterialFP11J2DAnmColor(); // 1
+extern "C" void setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey(); // 1
+extern "C" void setAnimation__11J2DMaterialFP16J2DAnmTexPattern(); // 1
+extern "C" void setAnimation__11J2DMaterialFP15J2DAnmTevRegKey(); // 1
+extern "C" void animation__11J2DMaterialFv(); // 1
+extern "C" void __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock(); // 1
+extern "C" void create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive(); // 1
+extern "C" void func_802F5D40(); // 1
+extern "C" void __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc(); // 1
+extern "C" void __dt__7J2DPaneFv(); // 1
+extern "C" void draw__7J2DPaneFffPC14J2DGrafContextbb(); // 1
+extern "C" void func_802F6D18(); // 1
+extern "C" void move__7J2DPaneFff(); // 1
+extern "C" void add__7J2DPaneFff(); // 1
+extern "C" void resize__7J2DPaneFff(); // 1
+extern "C" void search__7J2DPaneFUx(); // 1
+extern "C" void searchUserInfo__7J2DPaneFUx(); // 1
+extern "C" void isUsed__7J2DPaneFPC7ResTIMG(); // 1
+extern "C" void isUsed__7J2DPaneFPC7ResFONT(); // 1
+extern "C" void makeMatrix__7J2DPaneFffff(); // 1
+extern "C" void setCullBack__7J2DPaneF11_GXCullMode(); // 1
+extern "C" void setAnimation__7J2DPaneFP10J2DAnmBase(); // 1
+extern "C" void animationTransform__7J2DPaneFPC15J2DAnmTransform(); // 1
+extern "C" void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull(); // 1
+extern "C" void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor(); // 1
+extern "C" void animationPane__7J2DPaneFPC15J2DAnmTransform(); // 1
+extern "C" void rewriteAlpha__7J2DPaneFv(); // 1
+extern "C" void setCullBack__7J2DPaneFb(); // 1
+extern "C" void setConnectParent__7J2DPaneFb(); // 1
+extern "C" void update__7J2DPaneFv(); // 1
+extern "C" void drawSelf__7J2DPaneFff(); // 1
+extern "C" void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive(); // 1
+extern "C" void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial(); // 1
+extern "C" void __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP10JKRArchive(); // 1
+extern "C" void __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial(); // 1
+extern "C" void __ct__10J2DTextBoxFP7J2DPaneP20JSURandomInputStreamP10JKRArchive(); // 1
+extern "C" void __ct__10J2DTextBoxFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial(); // 1
+extern "C" void __ct__11J2DWindowExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial(); // 1
+extern "C" void __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial(); // 1
+extern "C" void __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial(); // 1
+extern "C" void get__13J2DDataManageFPCc(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevDirect(); // 1
+extern "C" void GXSetTevOp(); // 1
+extern "C" void GXSetTevSwapModeTable(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void GXGetScissor(); // 1
+extern "C" void __destroy_new_array(); // 1
+extern "C" void __construct_new_array(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_DATA extern void*const __vt__10JSUIosBase[3];
 SECTION_DATA extern void*const __vt__20JSURandomInputStream[9];
 SECTION_DATA extern void*const __vt__14JSUInputStream[7];

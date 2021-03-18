@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE72C */ void getFreeSize();
@@ -19,29 +16,17 @@ struct JKRHeap {
 	/* 802CEB78 */ void setErrorFlag(bool);
 };
 
-// build OSContext (['OSContext']) False/False
-/* top-level dependencies (begin ['OSContext']) */
-/* top-level dependencies (end ['OSContext']) */
 struct OSContext {
 };
 
-// build mDoDvdThd (['mDoDvdThd']) False/False
-/* top-level dependencies (begin ['mDoDvdThd']) */
-/* top-level dependencies (end ['mDoDvdThd']) */
 struct mDoDvdThd {
 	/* 80015858 */ void create(s32);
 };
 
-// build mDoMemCd_Ctrl_c (['mDoMemCd_Ctrl_c']) False/False
-/* top-level dependencies (begin ['mDoMemCd_Ctrl_c']) */
-/* top-level dependencies (end ['mDoMemCd_Ctrl_c']) */
 struct mDoMemCd_Ctrl_c {
 	/* 80016730 */ void ThdInit();
 };
 
-// build JUTConsole (['JUTConsole']) False/False
-/* top-level dependencies (begin ['JUTConsole']) */
-/* top-level dependencies (end ['JUTConsole']) */
 struct JUTConsole {
 	/* 802E7BB8 */ void print_f(char const*, ...);
 	/* 802E7C38 */ void print(char const*);
@@ -50,90 +35,38 @@ struct JUTConsole {
 	/* 802E81A8 */ void getLineOffset() const;
 };
 
-// build cMl (['cMl']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['cMl']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['cMl']) */
 struct cMl {
-	// ('JKRHeap',)
 	/* 80263220 */ void init(JKRHeap*);
 };
 
-// build JFWSystem (['JFWSystem']) False/False
-/* top-level dependencies (begin ['JFWSystem']) */
-/* top-level dependencies (end ['JFWSystem']) */
 struct JFWSystem {
 	/* 80271CD0 */ void firstInit();
 	/* 80271D18 */ void init();
 };
 
-// build JKRThread (['JKRThread']) False/False
-// build OSThread (['OSThread']) False/False
-/* top-level dependencies (begin ['OSThread']) */
-/* top-level dependencies (end ['OSThread']) */
 struct OSThread {
 };
 
-/* top-level dependencies (begin ['JKRThread']) */
-// outer dependency: ('OSThread',)
-/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
-	// ('OSThread',)
 	/* 802D16B8 */ JKRThread(OSThread*, int);
 };
 
-// build OSThread (['OSThread']) True/True
-// build JKRThreadSwitch (['JKRThreadSwitch']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRThreadSwitch']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRThreadSwitch']) */
 struct JKRThreadSwitch {
-	// ('JKRHeap',)
 	/* 802D1A14 */ void createManager(JKRHeap*);
 };
 
-// build JKRAramStream (['JKRAramStream']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRAramStream']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRAramStream']) */
 struct JKRAramStream {
-	// ('JKRHeap',)
 	/* 802D4034 */ void setTransBuffer(u8*, u32, JKRHeap*);
 };
 
-// build JUTDbPrint (['JUTDbPrint']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-// build JUTFont (['JUTFont']) False/False
-/* top-level dependencies (begin ['JUTFont']) */
-/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
 };
 
-/* top-level dependencies (begin ['JUTDbPrint']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JUTFont',)
-/* top-level dependencies (end ['JUTDbPrint']) */
 struct JUTDbPrint {
-	// ('JKRHeap',)
-	// ('JUTFont',)
 	/* 802E0190 */ void start(JUTFont*, JKRHeap*);
 };
 
-// build JUTFont (['JUTFont']) True/True
-// build JUTGamePad (['JUTGamePad']) False/False
-// build JUTGamePad (['JUTGamePad']) True/False
-struct JUTGamePad;
-/* top-level dependencies (begin ['JUTGamePad']) */
-// outer dependency: ('JUTGamePad', 'EPadPort')
-/* top-level dependencies (end ['JUTGamePad']) */
 struct JUTGamePad {
-	// ('JUTGamePad', 'EPadPort')
-	// build EPadPort (['JUTGamePad', 'EPadPort']) False/False
-	/* dependencies (begin ['JUTGamePad', 'EPadPort']) */
-	/* dependencies (end ['JUTGamePad', 'EPadPort']) */
 	struct EPadPort {
 	};
 
@@ -141,9 +74,6 @@ struct JUTGamePad {
 	/* 802E07B0 */ ~JUTGamePad();
 };
 
-// build JUTException (['JUTException']) False/False
-/* top-level dependencies (begin ['JUTException']) */
-/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E2F18 */ void isEnablePad() const;
 	/* 802E2F54 */ void readPad(u32*, u32*);
@@ -151,27 +81,15 @@ struct JUTException {
 	/* 802E3B0C */ void appendMapFile(char const*);
 };
 
-// build JUTAssertion (['JUTAssertion']) False/False
-/* top-level dependencies (begin ['JUTAssertion']) */
-/* top-level dependencies (end ['JUTAssertion']) */
 struct JUTAssertion {
 	/* 802E4C34 */ void setVisible(bool);
 };
 
-// build JUTVideo (['JUTVideo']) False/False
-/* top-level dependencies (begin ['JUTVideo']) */
-/* top-level dependencies (end ['JUTVideo']) */
 struct JUTVideo {
 	/* 802E4CAC */ void destroyManager();
 };
 
-// build JUTConsoleManager (['JUTConsoleManager']) False/False
-// build JUTConsole (['JUTConsole']) True/True
-/* top-level dependencies (begin ['JUTConsoleManager']) */
-// outer dependency: ('JUTConsole',)
-/* top-level dependencies (end ['JUTConsoleManager']) */
 struct JUTConsoleManager {
-	// ('JUTConsole',)
 	/* 802E8450 */ void drawDirect(bool) const;
 	/* 802E84C4 */ void setDirectConsole(JUTConsole*);
 };
@@ -180,33 +98,33 @@ struct JUTConsoleManager {
 // Forward References:
 // 
 
-static void myGetHeapTypeByString(JKRHeap*);
-static void myMemoryErrorRoutine(void*, u32, int);
-static void myHeapCheckRecursive(JKRHeap*);
-void mDoMch_HeapCheckAll();
-static void developKeyCheck(u32, u32);
-static void mDoMch_IsProgressiveMode();
-static void exceptionReadPad(u32*, u32*);
-static void exceptionRestart();
-static void myExceptionCallback(u16, OSContext*, u32, u32);
-static void fault_callback_scroll(u16, OSContext*, u32, u32);
-static void my_PrintHeap(char const*, u32);
-static void my_SysPrintHeap(char const*, void*, u32);
-void mDoMch_Create();
+static void myGetHeapTypeByString(JKRHeap*); // 2
+static void myMemoryErrorRoutine(void*, u32, int); // 2
+static void myHeapCheckRecursive(JKRHeap*); // 2
+void mDoMch_HeapCheckAll(); // 2
+static void developKeyCheck(u32, u32); // 2
+static void mDoMch_IsProgressiveMode(); // 2
+static void exceptionReadPad(u32*, u32*); // 2
+static void exceptionRestart(); // 2
+static void myExceptionCallback(u16, OSContext*, u32, u32); // 2
+static void fault_callback_scroll(u16, OSContext*, u32, u32); // 2
+static void my_PrintHeap(char const*, u32); // 2
+static void my_SysPrintHeap(char const*, void*, u32); // 2
+void mDoMch_Create(); // 2
 
-extern "C" static void myGetHeapTypeByString__FP7JKRHeap();
-extern "C" static void myMemoryErrorRoutine__FPvUli();
-extern "C" static void myHeapCheckRecursive__FP7JKRHeap();
-extern "C" void mDoMch_HeapCheckAll__Fv();
-extern "C" static void developKeyCheck__FUlUl();
-extern "C" static void mDoMch_IsProgressiveMode__Fv();
-extern "C" static void exceptionReadPad__FPUlPUl();
-extern "C" static void exceptionRestart__Fv();
-extern "C" static void myExceptionCallback__FUsP9OSContextUlUl();
-extern "C" static void fault_callback_scroll__FUsP9OSContextUlUl();
-extern "C" static void my_PrintHeap__FPCcUl();
-extern "C" static void my_SysPrintHeap__FPCcPvUl();
-extern "C" void mDoMch_Create__Fv();
+extern "C" static void myGetHeapTypeByString__FP7JKRHeap(); // 1
+extern "C" static void myMemoryErrorRoutine__FPvUli(); // 1
+extern "C" static void myHeapCheckRecursive__FP7JKRHeap(); // 1
+extern "C" void mDoMch_HeapCheckAll__Fv(); // 1
+extern "C" static void developKeyCheck__FUlUl(); // 1
+extern "C" static void mDoMch_IsProgressiveMode__Fv(); // 1
+extern "C" static void exceptionReadPad__FPUlPUl(); // 1
+extern "C" static void exceptionRestart__Fv(); // 1
+extern "C" static void myExceptionCallback__FUsP9OSContextUlUl(); // 1
+extern "C" static void fault_callback_scroll__FUsP9OSContextUlUl(); // 1
+extern "C" static void my_PrintHeap__FPCcUl(); // 1
+extern "C" static void my_SysPrintHeap__FPCcPvUl(); // 1
+extern "C" void mDoMch_Create__Fv(); // 1
 SECTION_RODATA extern const u8 m_Do_m_Do_machine__stringBase0[728];
 SECTION_DATA extern u8 g_ntscZeldaIntDf[60];
 SECTION_DATA extern u8 g_ntscZeldaProg[60];
@@ -227,131 +145,131 @@ SECTION_SDATA2 extern f32 m_Do_m_Do_machine__lit_3941;
 // External References:
 // 
 
-extern "C" void OSReportDisable();
-extern "C" void OSReportEnable();
-extern "C" void OSReport();
-extern "C" void OSReport_Error();
-extern "C" void OSReport_System();
-void mDoExt_createAssertHeap(JKRHeap*);
-void mDoExt_createDbPrintHeap(u32, JKRHeap*);
-void mDoExt_getDbPrintHeap();
-void mDoExt_createGameHeap(u32, JKRHeap*);
-void mDoExt_getGameHeap();
-void mDoExt_createZeldaHeap(u32, JKRHeap*);
-void mDoExt_getZeldaHeap();
-void mDoExt_createCommandHeap(u32, JKRHeap*);
-void mDoExt_getCommandHeap();
-void mDoExt_createArchiveHeap(u32, JKRHeap*);
-void mDoExt_getArchiveHeap();
-void mDoExt_createJ2dHeap(u32, JKRHeap*);
-void mDoExt_getJ2dHeap();
-void mDoRst_reset(int, u32, int);
-void mDoDvdErr_ThdInit();
-void exception_addition(JUTConsole*);
-void cAPICPad_recalibrate();
-void cM_initRnd(int, int, int);
-extern "C" void setErrorHandler__7JKRHeapFPFPvUli_v();
-void* operator new(u32);
-extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
-extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
-extern "C" void PPCHalt();
-extern "C" void OSGetConsoleType();
-extern "C" void OSGetArenaHi();
-extern "C" void OSGetArenaLo();
-extern "C" void OSSetArenaHi();
-extern "C" void OSEnableInterrupts();
-extern "C" void OSResetSystem();
-extern "C" void OSGetResetCode();
-extern "C" void OSGetProgressiveMode();
-extern "C" void OSSetProgressiveMode();
-extern "C" void OSGetCurrentThread();
-extern "C" void OSGetThreadPriority();
-extern "C" void OSGetTime();
-extern "C" void DVDChangeDir();
-extern "C" void VIFlush();
-extern "C" void VISetBlack();
-extern "C" void VIGetRetraceCount();
-extern "C" void VIGetDTVStatus();
-extern "C" void GXSetDrawDoneCallback();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void OSReportDisable(); // 1
+extern "C" void OSReportEnable(); // 1
+extern "C" void OSReport(); // 1
+extern "C" void OSReport_Error(); // 1
+extern "C" void OSReport_System(); // 1
+void mDoExt_createAssertHeap(JKRHeap*); // 2
+void mDoExt_createDbPrintHeap(u32, JKRHeap*); // 2
+void mDoExt_getDbPrintHeap(); // 2
+void mDoExt_createGameHeap(u32, JKRHeap*); // 2
+void mDoExt_getGameHeap(); // 2
+void mDoExt_createZeldaHeap(u32, JKRHeap*); // 2
+void mDoExt_getZeldaHeap(); // 2
+void mDoExt_createCommandHeap(u32, JKRHeap*); // 2
+void mDoExt_getCommandHeap(); // 2
+void mDoExt_createArchiveHeap(u32, JKRHeap*); // 2
+void mDoExt_getArchiveHeap(); // 2
+void mDoExt_createJ2dHeap(u32, JKRHeap*); // 2
+void mDoExt_getJ2dHeap(); // 2
+void mDoRst_reset(int, u32, int); // 2
+void mDoDvdErr_ThdInit(); // 2
+void exception_addition(JUTConsole*); // 2
+void cAPICPad_recalibrate(); // 2
+void cM_initRnd(int, int, int); // 2
+extern "C" void setErrorHandler__7JKRHeapFPFPvUli_v(); // 1
+void* operator new(u32); // 2
+extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
+extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
+extern "C" void PPCHalt(); // 1
+extern "C" void OSGetConsoleType(); // 1
+extern "C" void OSGetArenaHi(); // 1
+extern "C" void OSGetArenaLo(); // 1
+extern "C" void OSSetArenaHi(); // 1
+extern "C" void OSEnableInterrupts(); // 1
+extern "C" void OSResetSystem(); // 1
+extern "C" void OSGetResetCode(); // 1
+extern "C" void OSGetProgressiveMode(); // 1
+extern "C" void OSSetProgressiveMode(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void OSGetThreadPriority(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void DVDChangeDir(); // 1
+extern "C" void VIFlush(); // 1
+extern "C" void VISetBlack(); // 1
+extern "C" void VIGetRetraceCount(); // 1
+extern "C" void VIGetDTVStatus(); // 1
+extern "C" void GXSetDrawDoneCallback(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void OSReportDisable();
-extern "C" void OSReportEnable();
-extern "C" void OSReport();
-extern "C" void OSReport_Error();
-extern "C" void OSReport_System();
-extern "C" void mDoExt_createAssertHeap__FP7JKRHeap();
-extern "C" void mDoExt_createDbPrintHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getDbPrintHeap__Fv();
-extern "C" void mDoExt_createGameHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getGameHeap__Fv();
-extern "C" void mDoExt_createZeldaHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getZeldaHeap__Fv();
-extern "C" void mDoExt_createCommandHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getCommandHeap__Fv();
-extern "C" void mDoExt_createArchiveHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getArchiveHeap__Fv();
-extern "C" void mDoExt_createJ2dHeap__FUlP7JKRHeap();
-extern "C" void mDoExt_getJ2dHeap__Fv();
-extern "C" void mDoRst_reset__FiUli();
-extern "C" void create__9mDoDvdThdFl();
-extern "C" void mDoDvdErr_ThdInit__Fv();
-extern "C" void ThdInit__15mDoMemCd_Ctrl_cFv();
-extern "C" void exception_addition__FP10JUTConsole();
-extern "C" void init__3cMlFP7JKRHeap();
-extern "C" void cAPICPad_recalibrate__Fv();
-extern "C" void cM_initRnd__Fiii();
-extern "C" void firstInit__9JFWSystemFv();
-extern "C" void init__9JFWSystemFv();
-extern "C" void becomeCurrentHeap__7JKRHeapFv();
-extern "C" void getFreeSize__7JKRHeapFv();
-extern "C" void getTotalFreeSize__7JKRHeapFv();
-extern "C" void setErrorFlag__7JKRHeapFb();
-extern "C" void setErrorHandler__7JKRHeapFPFPvUli_v();
-extern "C" void* __nw__FUl();
-extern "C" void __ct__9JKRThreadFP8OSThreadi();
-extern "C" void createManager__15JKRThreadSwitchFP7JKRHeap();
-extern "C" void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap();
-extern "C" void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
-extern "C" void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
-extern "C" void __dt__10JUTGamePadFv();
-extern "C" void isEnablePad__12JUTExceptionCFv();
-extern "C" void readPad__12JUTExceptionFPUlPUl();
-extern "C" void waitTime__12JUTExceptionFl();
-extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
-extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
-extern "C" void appendMapFile__12JUTExceptionFPCc();
-extern "C" void setVisible__12JUTAssertionFb();
-extern "C" void destroyManager__8JUTVideoFv();
-extern "C" void print_f__10JUTConsoleFPCce();
-extern "C" void print__10JUTConsoleFPCc();
-extern "C" void scroll__10JUTConsoleFi();
-extern "C" void getUsedLine__10JUTConsoleCFv();
-extern "C" void getLineOffset__10JUTConsoleCFv();
-extern "C" void drawDirect__17JUTConsoleManagerCFb();
-extern "C" void setDirectConsole__17JUTConsoleManagerFP10JUTConsole();
-extern "C" void PPCHalt();
-extern "C" void OSGetConsoleType();
-extern "C" void OSGetArenaHi();
-extern "C" void OSGetArenaLo();
-extern "C" void OSSetArenaHi();
-extern "C" void OSEnableInterrupts();
-extern "C" void OSResetSystem();
-extern "C" void OSGetResetCode();
-extern "C" void OSGetProgressiveMode();
-extern "C" void OSSetProgressiveMode();
-extern "C" void OSGetCurrentThread();
-extern "C" void OSGetThreadPriority();
-extern "C" void OSGetTime();
-extern "C" void DVDChangeDir();
-extern "C" void VIFlush();
-extern "C" void VISetBlack();
-extern "C" void VIGetRetraceCount();
-extern "C" void VIGetDTVStatus();
-extern "C" void GXSetDrawDoneCallback();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void OSReportDisable(); // 1
+extern "C" void OSReportEnable(); // 1
+extern "C" void OSReport(); // 1
+extern "C" void OSReport_Error(); // 1
+extern "C" void OSReport_System(); // 1
+extern "C" void mDoExt_createAssertHeap__FP7JKRHeap(); // 1
+extern "C" void mDoExt_createDbPrintHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getDbPrintHeap__Fv(); // 1
+extern "C" void mDoExt_createGameHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getGameHeap__Fv(); // 1
+extern "C" void mDoExt_createZeldaHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getZeldaHeap__Fv(); // 1
+extern "C" void mDoExt_createCommandHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getCommandHeap__Fv(); // 1
+extern "C" void mDoExt_createArchiveHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
+extern "C" void mDoExt_createJ2dHeap__FUlP7JKRHeap(); // 1
+extern "C" void mDoExt_getJ2dHeap__Fv(); // 1
+extern "C" void mDoRst_reset__FiUli(); // 1
+extern "C" void create__9mDoDvdThdFl(); // 1
+extern "C" void mDoDvdErr_ThdInit__Fv(); // 1
+extern "C" void ThdInit__15mDoMemCd_Ctrl_cFv(); // 1
+extern "C" void exception_addition__FP10JUTConsole(); // 1
+extern "C" void init__3cMlFP7JKRHeap(); // 1
+extern "C" void cAPICPad_recalibrate__Fv(); // 1
+extern "C" void cM_initRnd__Fiii(); // 1
+extern "C" void firstInit__9JFWSystemFv(); // 1
+extern "C" void init__9JFWSystemFv(); // 1
+extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
+extern "C" void getFreeSize__7JKRHeapFv(); // 1
+extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
+extern "C" void setErrorFlag__7JKRHeapFb(); // 1
+extern "C" void setErrorHandler__7JKRHeapFPFPvUli_v(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __ct__9JKRThreadFP8OSThreadi(); // 1
+extern "C" void createManager__15JKRThreadSwitchFP7JKRHeap(); // 1
+extern "C" void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap(); // 1
+extern "C" void start__10JUTDbPrintFP7JUTFontP7JKRHeap(); // 1
+extern "C" void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort(); // 1
+extern "C" void __dt__10JUTGamePadFv(); // 1
+extern "C" void isEnablePad__12JUTExceptionCFv(); // 1
+extern "C" void readPad__12JUTExceptionFPUlPUl(); // 1
+extern "C" void waitTime__12JUTExceptionFl(); // 1
+extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
+extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
+extern "C" void appendMapFile__12JUTExceptionFPCc(); // 1
+extern "C" void setVisible__12JUTAssertionFb(); // 1
+extern "C" void destroyManager__8JUTVideoFv(); // 1
+extern "C" void print_f__10JUTConsoleFPCce(); // 1
+extern "C" void print__10JUTConsoleFPCc(); // 1
+extern "C" void scroll__10JUTConsoleFi(); // 1
+extern "C" void getUsedLine__10JUTConsoleCFv(); // 1
+extern "C" void getLineOffset__10JUTConsoleCFv(); // 1
+extern "C" void drawDirect__17JUTConsoleManagerCFb(); // 1
+extern "C" void setDirectConsole__17JUTConsoleManagerFP10JUTConsole(); // 1
+extern "C" void PPCHalt(); // 1
+extern "C" void OSGetConsoleType(); // 1
+extern "C" void OSGetArenaHi(); // 1
+extern "C" void OSGetArenaLo(); // 1
+extern "C" void OSSetArenaHi(); // 1
+extern "C" void OSEnableInterrupts(); // 1
+extern "C" void OSResetSystem(); // 1
+extern "C" void OSGetResetCode(); // 1
+extern "C" void OSGetProgressiveMode(); // 1
+extern "C" void OSSetProgressiveMode(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void OSGetThreadPriority(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void DVDChangeDir(); // 1
+extern "C" void VIFlush(); // 1
+extern "C" void VISetBlack(); // 1
+extern "C" void VIGetRetraceCount(); // 1
+extern "C" void VIGetDTVStatus(); // 1
+extern "C" void GXSetDrawDoneCallback(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_BSS extern u8 g_mDoMemCd_control[8192];
 SECTION_SDATA extern u32 data_80450580;
 SECTION_SDATA extern u32 memMargin__7mDoMain;

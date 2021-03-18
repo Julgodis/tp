@@ -9,189 +9,116 @@
 // Types:
 // 
 
-// build JKRDvdAramRipper (['JKRDvdAramRipper']) False/False
-// build JKRADCommand (['JKRADCommand']) False/False
-/* top-level dependencies (begin ['JKRADCommand']) */
-/* top-level dependencies (end ['JKRADCommand']) */
-struct JKRADCommand {
-	/* 802DAF1C */ JKRADCommand();
-	/* 802DAF5C */ ~JKRADCommand();
-};
-
-// build JKRDvdFile (['JKRDvdFile']) False/False
-/* top-level dependencies (begin ['JKRDvdFile']) */
-/* top-level dependencies (end ['JKRDvdFile']) */
 struct JKRDvdFile {
 	/* 802D9584 */ JKRDvdFile();
 	/* 802D9748 */ ~JKRDvdFile();
 	/* 802D98C4 */ void open(s32);
 };
 
-// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
-/* top-level dependencies (begin ['JKRExpandSwitch']) */
-/* top-level dependencies (end ['JKRExpandSwitch']) */
+struct JKRADCommand {
+	/* 802DAF1C */ JKRADCommand();
+	/* 802DAF5C */ ~JKRADCommand();
+};
+
 struct JKRExpandSwitch {
 };
 
-/* top-level dependencies (begin ['JKRDvdAramRipper']) */
-// outer dependency: ('JKRADCommand',)
-// outer dependency: ('JKRDvdFile',)
-// outer dependency: ('JKRExpandSwitch',)
-/* top-level dependencies (end ['JKRDvdAramRipper']) */
 struct JKRDvdAramRipper {
-	// ('JKRADCommand',)
-	// ('JKRDvdFile',)
-	// ('JKRExpandSwitch',)
-	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
 	/* 802DA918 */ void loadToAram(JKRDvdFile*, u32, JKRExpandSwitch, u32, u32, u32*);
+	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
 	/* 802DAA74 */ void callCommand_Async(JKRADCommand*);
 	/* 802DAE48 */ void syncAram(JKRADCommand*, int);
 };
 
-// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
-// build JKRDvdFile (['JKRDvdFile']) True/True
-// build JKRADCommand (['JKRADCommand']) True/True
-// build JSUFileInputStream (['JSUFileInputStream']) False/False
-// build JKRFile (['JKRFile']) False/False
-/* top-level dependencies (begin ['JKRFile']) */
-/* top-level dependencies (end ['JKRFile']) */
 struct JKRFile {
 };
 
-/* top-level dependencies (begin ['JSUFileInputStream']) */
-// outer dependency: ('JKRFile',)
-/* top-level dependencies (end ['JSUFileInputStream']) */
 struct JSUFileInputStream {
-	// ('JKRFile',)
 	/* 802DADD8 */ ~JSUFileInputStream();
 	/* 802DC638 */ JSUFileInputStream(JKRFile*);
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRADCommand> */
+struct JSUList__template10 {
+	/* 802DB62C */ ~JSUList__template10();
+};
+
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-// build JKRAramHeap (['JKRAramHeap']) False/False
-// build JKRAramHeap (['JKRAramHeap']) True/False
-struct JKRAramHeap;
-/* top-level dependencies (begin ['JKRAramHeap']) */
-// outer dependency: ('JKRAramHeap', 'EAllocMode')
-/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
-	// ('JKRAramHeap', 'EAllocMode')
-	// build EAllocMode (['JKRAramHeap', 'EAllocMode']) False/False
-	/* dependencies (begin ['JKRAramHeap', 'EAllocMode']) */
-	/* dependencies (end ['JKRAramHeap', 'EAllocMode']) */
 	struct EAllocMode {
 	};
 
 	/* 802D2FBC */ void alloc(u32, JKRAramHeap::EAllocMode);
 };
 
-// build JKRAramPiece (['JKRAramPiece']) False/False
-// build JKRAramBlock (['JKRAramBlock']) False/False
-/* top-level dependencies (begin ['JKRAramBlock']) */
-/* top-level dependencies (end ['JKRAramBlock']) */
 struct JKRAramBlock {
 };
 
-/* top-level dependencies (begin ['JKRAramPiece']) */
-// outer dependency: ('JKRAramBlock',)
-/* top-level dependencies (end ['JKRAramPiece']) */
 struct JKRAramPiece {
-	// ('JKRAramBlock',)
 	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
 };
 
-// build JKRAramBlock (['JKRAramBlock']) True/True
-// build JKRAramStream (['JKRAramStream']) False/False
-// build JKRAramStreamCommand (['JKRAramStreamCommand']) False/False
-/* top-level dependencies (begin ['JKRAramStreamCommand']) */
-/* top-level dependencies (end ['JKRAramStreamCommand']) */
 struct JKRAramStreamCommand {
 };
 
-// build JSUFileInputStream (['JSUFileInputStream']) True/True
-/* top-level dependencies (begin ['JKRAramStream']) */
-// outer dependency: ('JKRAramStreamCommand',)
-// outer dependency: ('JSUFileInputStream',)
-/* top-level dependencies (end ['JKRAramStream']) */
 struct JKRAramStream {
-	// ('JKRAramStreamCommand',)
-	// ('JSUFileInputStream',)
 	/* 802D3ED0 */ void write_StreamToAram_Async(JSUFileInputStream*, u32, u32, u32, u32*);
 	/* 802D3FA0 */ void sync(JKRAramStreamCommand*, int);
 };
 
-// build JKRAramStreamCommand (['JKRAramStreamCommand']) True/True
-// build JKRDecomp (['JKRDecomp']) False/False
-/* top-level dependencies (begin ['JKRDecomp']) */
-/* top-level dependencies (end ['JKRDecomp']) */
 struct JKRDecomp {
 	/* 802DBCF8 */ void checkCompressed(u8*);
 };
 
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) True/True
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JSUInputStream (['JSUInputStream']) False/False
-/* top-level dependencies (begin ['JSUInputStream']) */
-/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC23C */ ~JSUInputStream();
 };
 
-// build JKRFile (['JKRFile']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" static void loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl();
-static void JKRDecompressFromDVDToAram(JKRDvdFile*, u32, u32, u32, u32, u32, u32*);
-static void decompSZS_subroutine(u8*, u32);
-static void firstSrcData();
-static void nextSrcData(u8*);
-static void dmaBufferFlush(u32);
-extern "C" void __sinit_JKRDvdAramRipper_cpp();
-extern "C" static void func_802DB62C();
+extern "C" static void loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl(); // 1
+static void JKRDecompressFromDVDToAram(JKRDvdFile*, u32, u32, u32, u32, u32, u32*); // 2
+static void decompSZS_subroutine(u8*, u32); // 2
+static void firstSrcData(); // 2
+static void nextSrcData(u8*); // 2
+static void dmaBufferFlush(u32); // 2
+extern "C" void __sinit_JKRDvdAramRipper_cpp(); // 1
 
-extern "C" void loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl();
-extern "C" void loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl();
-extern "C" static void loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl();
-extern "C" void callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand();
-extern "C" void __dt__18JSUFileInputStreamFv();
-extern "C" void syncAram__16JKRDvdAramRipperFP12JKRADCommandi();
-extern "C" void __ct__12JKRADCommandFv();
-extern "C" void __dt__12JKRADCommandFv();
-extern "C" static void JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl();
-extern "C" static void decompSZS_subroutine__FPUcUl();
-extern "C" static void JKRDvdAramRipper__firstSrcData__Fv();
-extern "C" static void JKRDvdAramRipper__nextSrcData__FPUc();
-extern "C" static void dmaBufferFlush__FUl();
-extern "C" void __sinit_JKRDvdAramRipper_cpp();
-extern "C" static void func_802DB62C();
+extern "C" void loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl(); // 1
+extern "C" void loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl(); // 1
+extern "C" static void loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl(); // 1
+extern "C" void callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand(); // 1
+extern "C" void __dt__18JSUFileInputStreamFv(); // 1
+extern "C" void syncAram__16JKRDvdAramRipperFP12JKRADCommandi(); // 1
+extern "C" void __ct__12JKRADCommandFv(); // 1
+extern "C" void __dt__12JKRADCommandFv(); // 1
+extern "C" static void JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl(); // 1
+extern "C" static void decompSZS_subroutine__FPUcUl(); // 1
+extern "C" static void JKRDvdAramRipper__firstSrcData__Fv(); // 1
+extern "C" static void JKRDvdAramRipper__nextSrcData__FPUc(); // 1
+extern "C" static void dmaBufferFlush__FUl(); // 1
+extern "C" void __sinit_JKRDvdAramRipper_cpp(); // 1
+extern "C" void func_802DB62C(); // 1
 SECTION_BSS extern u8 JKRDvdAramRipper__lit_301[12];
 SECTION_BSS extern u8 sDvdAramAsyncList__16JKRDvdAramRipper[12];
 SECTION_BSS extern u8 JKRDvdAramRipper__decompMutex[24];
@@ -220,71 +147,71 @@ SECTION_SBSS extern u8 JKRDvdAramRipper__tsArea[4];
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-void* operator new(u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void DCInvalidateRange();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void OSGetCurrentThread();
-extern "C" void DVDReadPrio();
-extern "C" void VIWaitForRetrace();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+void* operator new(u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void DVDReadPrio(); // 1
+extern "C" void VIWaitForRetrace(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void alloc__7JKRHeapFUli();
-extern "C" void free__7JKRHeapFPvP7JKRHeap();
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode();
-extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock();
-extern "C" void write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl();
-extern "C" void sync__13JKRAramStreamFP20JKRAramStreamCommandi();
-extern "C" void __ct__10JKRDvdFileFv();
-extern "C" void __dt__10JKRDvdFileFv();
-extern "C" void open__10JKRDvdFileFl();
-extern "C" void checkCompressed__9JKRDecompFPUc();
-extern "C" void __ct__10JSUPtrLinkFPv();
-extern "C" void __dt__10JSUPtrLinkFv();
-extern "C" void __dt__10JSUPtrListFv();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" void __dt__14JSUInputStreamFv();
-extern "C" void __ct__18JSUFileInputStreamFP7JKRFile();
-extern "C" void DCInvalidateRange();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void OSGetCurrentThread();
-extern "C" void DVDReadPrio();
-extern "C" void VIWaitForRetrace();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+extern "C" void alloc__7JKRHeapFUli(); // 1
+extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode(); // 1
+extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock(); // 1
+extern "C" void write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl(); // 1
+extern "C" void sync__13JKRAramStreamFP20JKRAramStreamCommandi(); // 1
+extern "C" void __ct__10JKRDvdFileFv(); // 1
+extern "C" void __dt__10JKRDvdFileFv(); // 1
+extern "C" void open__10JKRDvdFileFl(); // 1
+extern "C" void checkCompressed__9JKRDecompFPUc(); // 1
+extern "C" void __ct__10JSUPtrLinkFPv(); // 1
+extern "C" void __dt__10JSUPtrLinkFv(); // 1
+extern "C" void __dt__10JSUPtrListFv(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void __dt__14JSUInputStreamFv(); // 1
+extern "C" void __ct__18JSUFileInputStreamFP7JKRFile(); // 1
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void DVDReadPrio(); // 1
+extern "C" void VIWaitForRetrace(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__20JSURandomInputStream[9];
 SECTION_DATA extern void*const __vt__18JSUFileInputStream[10];
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
@@ -523,7 +450,7 @@ extern "C" asm void __sinit_JKRDvdAramRipper_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802DB62C() {
+asm JSUList__template10::~JSUList__template10() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdAramRipper/func_802DB62C.s"
 }

@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build _GXCullMode (['_GXCullMode']) False/False
-/* top-level dependencies (begin ['_GXCullMode']) */
-/* top-level dependencies (end ['_GXCullMode']) */
 struct _GXCullMode {
 };
 
@@ -19,9 +16,9 @@ struct _GXCullMode {
 // Forward References:
 // 
 
-void GFSetGenMode2(u8, u8, u8, u8, _GXCullMode);
+void GFSetGenMode2(u8, u8, u8, u8, _GXCullMode); // 2
 
-extern "C" void GFSetGenMode2__FUcUcUcUc11_GXCullMode();
+extern "C" void GFSetGenMode2__FUcUcUcUc11_GXCullMode(); // 1
 SECTION_SDATA extern u8 data_804508A8[4 + 4 /* padding */];
 SECTION_SDATA extern u8 data_804508B0[8];
 

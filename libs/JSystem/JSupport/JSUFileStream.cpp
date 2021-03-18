@@ -9,26 +9,13 @@
 // Types:
 // 
 
-// build JSUFileInputStream (['JSUFileInputStream']) False/False
-// build JKRFile (['JKRFile']) False/False
-/* top-level dependencies (begin ['JKRFile']) */
-/* top-level dependencies (end ['JKRFile']) */
 struct JKRFile {
 };
 
-// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) False/False
-/* top-level dependencies (begin ['JSUStreamSeekFrom']) */
-/* top-level dependencies (end ['JSUStreamSeekFrom']) */
 struct JSUStreamSeekFrom {
 };
 
-/* top-level dependencies (begin ['JSUFileInputStream']) */
-// outer dependency: ('JKRFile',)
-// outer dependency: ('JSUStreamSeekFrom',)
-/* top-level dependencies (end ['JSUFileInputStream']) */
 struct JSUFileInputStream {
-	// ('JKRFile',)
-	// ('JSUStreamSeekFrom',)
 	/* 802DADD8 */ ~JSUFileInputStream();
 	/* 802DC638 */ JSUFileInputStream(JKRFile*);
 	/* 802DC67C */ void readData(void*, s32);
@@ -37,11 +24,6 @@ struct JSUFileInputStream {
 	/* 802DC85C */ void getPosition() const;
 };
 
-// build JKRFile (['JKRFile']) True/True
-// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) True/True
-// build JSURandomInputStream (['JSURandomInputStream']) False/False
-/* top-level dependencies (begin ['JSURandomInputStream']) */
-/* top-level dependencies (end ['JSURandomInputStream']) */
 struct JSURandomInputStream {
 	/* 802D4094 */ void getAvailable() const;
 	/* 802DC3FC */ void skip(s32);
@@ -52,29 +34,29 @@ struct JSURandomInputStream {
 // 
 
 
-extern "C" void __ct__18JSUFileInputStreamFP7JKRFile();
-extern "C" void readData__18JSUFileInputStreamFPvl();
-extern "C" void seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom();
-extern "C" void getLength__18JSUFileInputStreamCFv();
-extern "C" void getPosition__18JSUFileInputStreamCFv();
+extern "C" void __ct__18JSUFileInputStreamFP7JKRFile(); // 1
+extern "C" void readData__18JSUFileInputStreamFPvl(); // 1
+extern "C" void seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom(); // 1
+extern "C" void getLength__18JSUFileInputStreamCFv(); // 1
+extern "C" void getPosition__18JSUFileInputStreamCFv(); // 1
 SECTION_DATA extern void*const __vt__18JSUFileInputStream[10];
 
 // 
 // External References:
 // 
 
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void getAvailable__20JSURandomInputStreamCFv();
-extern "C" void __dt__18JSUFileInputStreamFv();
-extern "C" void skip__20JSURandomInputStreamFl();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void getAvailable__20JSURandomInputStreamCFv(); // 1
+extern "C" void __dt__18JSUFileInputStreamFv(); // 1
+extern "C" void skip__20JSURandomInputStreamFl(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__10JSUIosBase[3];
 SECTION_DATA extern void*const __vt__20JSURandomInputStream[9];
 SECTION_DATA extern void*const __vt__14JSUInputStream[7];

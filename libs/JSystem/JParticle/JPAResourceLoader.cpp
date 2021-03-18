@@ -9,106 +9,52 @@
 // Types:
 // 
 
-// build JPAResourceLoader (['JPAResourceLoader']) False/False
-// build JPAResourceManager (['JPAResourceManager']) False/False
-// build JPATexture (['JPATexture']) False/False
-/* top-level dependencies (begin ['JPATexture']) */
-/* top-level dependencies (end ['JPATexture']) */
 struct JPATexture {
 	/* 8027D7D4 */ JPATexture(u8 const*);
 };
 
-// build JPAResource (['JPAResource']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-/* top-level dependencies (begin ['JPAResource']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JPAResource']) */
 struct JPAResource {
-	// ('JKRHeap',)
 	/* 80274010 */ JPAResource();
 	/* 80274080 */ void init(JKRHeap*);
 };
 
-/* top-level dependencies (begin ['JPAResourceManager']) */
-// outer dependency: ('JPATexture',)
-// outer dependency: ('JPAResource',)
-/* top-level dependencies (end ['JPAResourceManager']) */
 struct JPAResourceManager {
-	// ('JPATexture',)
-	// ('JPAResource',)
 	/* 80273F8C */ void registRes(JPAResource*);
 	/* 80273FAC */ void registTex(JPATexture*);
 };
 
-/* top-level dependencies (begin ['JPAResourceLoader']) */
-// outer dependency: ('JPAResourceManager',)
-/* top-level dependencies (end ['JPAResourceLoader']) */
 struct JPAResourceLoader {
-	// ('JPAResourceManager',)
 	/* 8027D8A0 */ JPAResourceLoader(u8 const*, JPAResourceManager*);
 	/* 8027D8E0 */ void load_jpc(u8 const*, JPAResourceManager*);
 };
 
-// build JPAResourceManager (['JPAResourceManager']) True/True
-// build JPAResource (['JPAResource']) True/True
-// build JPATexture (['JPATexture']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-// build JPABaseShape (['JPABaseShape']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JPABaseShape']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JPABaseShape']) */
 struct JPABaseShape {
-	// ('JKRHeap',)
 	/* 8027A6DC */ JPABaseShape(u8 const*, JKRHeap*);
 };
 
-// build JPAExtraShape (['JPAExtraShape']) False/False
-/* top-level dependencies (begin ['JPAExtraShape']) */
-/* top-level dependencies (end ['JPAExtraShape']) */
 struct JPAExtraShape {
 	/* 8027AD88 */ JPAExtraShape(u8 const*);
 };
 
-// build JPAChildShape (['JPAChildShape']) False/False
-/* top-level dependencies (begin ['JPAChildShape']) */
-/* top-level dependencies (end ['JPAChildShape']) */
 struct JPAChildShape {
 	/* 8027B038 */ JPAChildShape(u8 const*);
 };
 
-// build JPAExTexShape (['JPAExTexShape']) False/False
-/* top-level dependencies (begin ['JPAExTexShape']) */
-/* top-level dependencies (end ['JPAExTexShape']) */
 struct JPAExTexShape {
 	/* 8027B13C */ JPAExTexShape(u8 const*);
 };
 
-// build JPADynamicsBlock (['JPADynamicsBlock']) False/False
-/* top-level dependencies (begin ['JPADynamicsBlock']) */
-/* top-level dependencies (end ['JPADynamicsBlock']) */
 struct JPADynamicsBlock {
 	/* 8027BB18 */ JPADynamicsBlock(u8 const*);
 };
 
-// build JPAFieldBlock (['JPAFieldBlock']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JPAFieldBlock']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JPAFieldBlock']) */
 struct JPAFieldBlock {
-	// ('JKRHeap',)
 	/* 8027D088 */ JPAFieldBlock(u8 const*, JKRHeap*);
 };
 
-// build JPAKeyBlock (['JPAKeyBlock']) False/False
-/* top-level dependencies (begin ['JPAKeyBlock']) */
-/* top-level dependencies (end ['JPAKeyBlock']) */
 struct JPAKeyBlock {
 	/* 8027D730 */ JPAKeyBlock(u8 const*);
 };
@@ -118,34 +64,34 @@ struct JPAKeyBlock {
 // 
 
 
-extern "C" void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
-extern "C" void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager();
+extern "C" void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager(); // 1
+extern "C" void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager(); // 1
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int);
-void* operator new[](u32, JKRHeap*, int);
-extern "C" void _savegpr_18();
-extern "C" void _restgpr_18();
+void* operator new(u32, JKRHeap*, int); // 2
+void* operator new[](u32, JKRHeap*, int); // 2
+extern "C" void _savegpr_18(); // 1
+extern "C" void _restgpr_18(); // 1
 
-extern "C" void registRes__18JPAResourceManagerFP11JPAResource();
-extern "C" void registTex__18JPAResourceManagerFP10JPATexture();
-extern "C" void __ct__11JPAResourceFv();
-extern "C" void init__11JPAResourceFP7JKRHeap();
-extern "C" void __ct__12JPABaseShapeFPCUcP7JKRHeap();
-extern "C" void __ct__13JPAExtraShapeFPCUc();
-extern "C" void __ct__13JPAChildShapeFPCUc();
-extern "C" void __ct__13JPAExTexShapeFPCUc();
-extern "C" void __ct__16JPADynamicsBlockFPCUc();
-extern "C" void __ct__13JPAFieldBlockFPCUcP7JKRHeap();
-extern "C" void __ct__11JPAKeyBlockFPCUc();
-extern "C" void __ct__10JPATextureFPCUc();
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void _savegpr_18();
-extern "C" void _restgpr_18();
+extern "C" void registRes__18JPAResourceManagerFP11JPAResource(); // 1
+extern "C" void registTex__18JPAResourceManagerFP10JPATexture(); // 1
+extern "C" void __ct__11JPAResourceFv(); // 1
+extern "C" void init__11JPAResourceFP7JKRHeap(); // 1
+extern "C" void __ct__12JPABaseShapeFPCUcP7JKRHeap(); // 1
+extern "C" void __ct__13JPAExtraShapeFPCUc(); // 1
+extern "C" void __ct__13JPAChildShapeFPCUc(); // 1
+extern "C" void __ct__13JPAExTexShapeFPCUc(); // 1
+extern "C" void __ct__16JPADynamicsBlockFPCUc(); // 1
+extern "C" void __ct__13JPAFieldBlockFPCUcP7JKRHeap(); // 1
+extern "C" void __ct__11JPAKeyBlockFPCUc(); // 1
+extern "C" void __ct__10JPATextureFPCUc(); // 1
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _restgpr_18(); // 1
 
 // 
 // Declarations:

@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dMeterString_c (['dMeterString_c']) False/False
-/* top-level dependencies (begin ['dMeterString_c']) */
-/* top-level dependencies (end ['dMeterString_c']) */
 struct dMeterString_c {
 	/* 8020ED60 */ dMeterString_c(int);
 	/* 8020EDF4 */ ~dMeterString_c();
@@ -25,136 +22,67 @@ struct dMeterString_c {
 	/* 8020FA88 */ void isLeadByte(int);
 };
 
-// build dMeterSub_c (['dMeterSub_c']) False/False
-/* top-level dependencies (begin ['dMeterSub_c']) */
-/* top-level dependencies (end ['dMeterSub_c']) */
 struct dMeterSub_c {
 	/* 80194138 */ bool isDead();
 };
 
-// build dMeter2Draw_c (['dMeter2Draw_c']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin ['dMeter2Draw_c']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['dMeter2Draw_c']) */
 struct dMeter2Draw_c {
-	// ('JUtility', 'TColor')
 	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 };
 
-// build JUtility (['JUtility']) True/True
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
-/* top-level dependencies (begin ['JMSMesgEntry_c']) */
-/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-// outer dependency: ('JMSMesgEntry_c',)
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// ('JMSMesgEntry_c',)
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 	/* 8021CC00 */ void resetMeterString();
 };
 
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 	/* 802F7FCC */ void animationTransform();
 };
 
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
-	// ('J2DPane',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build J2DPane (['J2DPane']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-// build J2DAnmLoaderDataBase (['J2DAnmLoaderDataBase']) False/False
-/* top-level dependencies (begin ['J2DAnmLoaderDataBase']) */
-/* top-level dependencies (end ['J2DAnmLoaderDataBase']) */
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
@@ -164,16 +92,16 @@ struct J2DAnmLoaderDataBase {
 // 
 
 
-extern "C" void __ct__14dMeterString_cFi();
-extern "C" void __dt__14dMeterString_cFv();
-extern "C" void _create__14dMeterString_cFv();
-extern "C" void _execute__14dMeterString_cFUl();
-extern "C" void draw__14dMeterString_cFv();
-extern "C" void _delete__14dMeterString_cFv();
-extern "C" void createString__14dMeterString_cFi();
-extern "C" void playBckAnimation__14dMeterString_cFf();
-extern "C" void drawPikari__14dMeterString_cFv();
-extern "C" void isLeadByte__14dMeterString_cFi();
+extern "C" void __ct__14dMeterString_cFi(); // 1
+extern "C" void __dt__14dMeterString_cFv(); // 1
+extern "C" void _create__14dMeterString_cFv(); // 1
+extern "C" void _execute__14dMeterString_cFUl(); // 1
+extern "C" void draw__14dMeterString_cFv(); // 1
+extern "C" void _delete__14dMeterString_cFv(); // 1
+extern "C" void createString__14dMeterString_cFi(); // 1
+extern "C" void playBckAnimation__14dMeterString_cFf(); // 1
+extern "C" void drawPikari__14dMeterString_cFv(); // 1
+extern "C" void isLeadByte__14dMeterString_cFi(); // 1
 SECTION_RODATA extern const u8 d_meter_d_meter_string__stringBase0[72];
 SECTION_DATA extern void*const __vt__14dMeterString_c[8];
 SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3758;
@@ -193,42 +121,42 @@ SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3979;
 // External References:
 // 
 
-void mDoExt_getMesgFont();
-void dComIfG_TimerDeleteRequest(int);
-void dPaneClass_showNullPane(J2DScreen*);
-void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void _savegpr_23();
-extern "C" void _restgpr_23();
-extern "C" void strcpy();
+void mDoExt_getMesgFont(); // 2
+void dComIfG_TimerDeleteRequest(int); // 2
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_23(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void dComIfG_TimerDeleteRequest__Fi();
-extern "C" bool isDead__11dMeterSub_cFv();
-extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" void resetMeterString__13dMeter2Info_cFv();
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void paneTrans__8CPaneMgrFff();
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" void dTimer_createTimer__FlUlUcUcffff();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" void getParentPane__7J2DPaneFv();
-extern "C" void animationTransform__7J2DPaneFv();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void getStringPtr__10J2DTextBoxCFv();
-extern "C" void setString__10J2DTextBoxFsPCce();
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" void _savegpr_23();
-extern "C" void _restgpr_23();
-extern "C" void strcpy();
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void dComIfG_TimerDeleteRequest__Fi(); // 1
+extern "C" bool isDead__11dMeterSub_cFv(); // 1
+extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc(); // 1
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void resetMeterString__13dMeter2Info_cFv(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void paneTrans__8CPaneMgrFff(); // 1
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void dTimer_createTimer__FlUlUcUcffff(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
+extern "C" void getParentPane__7J2DPaneFv(); // 1
+extern "C" void animationTransform__7J2DPaneFv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
+extern "C" void setString__10J2DTextBoxFsPCce(); // 1
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void strcpy(); // 1
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_DATA extern void*const __vt__11dMeterSub_c[11];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];

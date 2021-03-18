@@ -9,37 +9,19 @@
 // Types:
 // 
 
-// build J3DShapeTable (['J3DShapeTable']) False/False
-// build J3DVertexData (['J3DVertexData']) False/False
-/* top-level dependencies (begin ['J3DVertexData']) */
-/* top-level dependencies (end ['J3DVertexData']) */
 struct J3DVertexData {
 };
 
-// build J3DDrawMtxData (['J3DDrawMtxData']) False/False
-/* top-level dependencies (begin ['J3DDrawMtxData']) */
-/* top-level dependencies (end ['J3DDrawMtxData']) */
 struct J3DDrawMtxData {
 };
 
-/* top-level dependencies (begin ['J3DShapeTable']) */
-// outer dependency: ('J3DVertexData',)
-// outer dependency: ('J3DDrawMtxData',)
-/* top-level dependencies (end ['J3DShapeTable']) */
 struct J3DShapeTable {
-	// ('J3DVertexData',)
-	// ('J3DDrawMtxData',)
 	/* 803258A0 */ void hide();
 	/* 803258D8 */ void show();
 	/* 80325910 */ void initShapeNodes(J3DDrawMtxData*, J3DVertexData*);
 	/* 8032597C */ void sortVcdVatCmd();
 };
 
-// build J3DDrawMtxData (['J3DDrawMtxData']) True/True
-// build J3DVertexData (['J3DVertexData']) True/True
-// build J3DShape (['J3DShape']) False/False
-/* top-level dependencies (begin ['J3DShape']) */
-/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80314F5C */ void isSameVcdVatCmd(J3DShape*);
 	/* 80315260 */ void makeVcdVatCmd();
@@ -50,26 +32,26 @@ struct J3DShape {
 // 
 
 
-extern "C" void hide__13J3DShapeTableFv();
-extern "C" void show__13J3DShapeTableFv();
-extern "C" void initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData();
-extern "C" void sortVcdVatCmd__13J3DShapeTableFv();
+extern "C" void hide__13J3DShapeTableFv(); // 1
+extern "C" void show__13J3DShapeTableFv(); // 1
+extern "C" void initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData(); // 1
+extern "C" void sortVcdVatCmd__13J3DShapeTableFv(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
 
-extern "C" void isSameVcdVatCmd__8J3DShapeFP8J3DShape();
-extern "C" void makeVcdVatCmd__8J3DShapeFv();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
+extern "C" void isSameVcdVatCmd__8J3DShapeFP8J3DShape(); // 1
+extern "C" void makeVcdVatCmd__8J3DShapeFv(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
 
 // 
 // Declarations:

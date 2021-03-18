@@ -9,40 +9,29 @@
 // Types:
 // 
 
-// build JASGenericMemPool (['JASGenericMemPool']) False/False
-/* top-level dependencies (begin ['JASGenericMemPool']) */
-/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290948 */ void alloc(u32);
 };
 
-// build JASChannel (['JASChannel']) False/False
-// build JASOscillator (['JASOscillator']) False/False
-/* top-level dependencies (begin ['JASOscillator']) */
-/* top-level dependencies (end ['JASOscillator']) */
+template <typename A0>
+struct JASMemPool_MultiThreaded { };
+/* JASMemPool_MultiThreaded<JASChannel> */
+struct JASMemPool_MultiThreaded__template2 {
+	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
+};
+
 struct JASOscillator {
-	// build Data (['JASOscillator', 'Data']) False/False
-	/* dependencies (begin ['JASOscillator', 'Data']) */
-	/* dependencies (end ['JASOscillator', 'Data']) */
 	struct Data {
 	};
 
 };
 
-/* top-level dependencies (begin ['JASChannel']) */
-// outer dependency: ('JASOscillator', 'Data')
-/* top-level dependencies (end ['JASChannel']) */
 struct JASChannel {
-	// ('JASOscillator', 'Data')
 	/* 8029A9F0 */ void play();
 	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
 };
 
-// build JASOscillator (['JASOscillator']) True/True
-// build JASDriver (['JASDriver']) False/False
-/* top-level dependencies (begin ['JASDriver']) */
-/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029C9E8 */ void getDacRate();
 };
@@ -51,11 +40,11 @@ struct JASDriver {
 // Forward References:
 // 
 
-extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
-extern "C" static void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
+extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
+extern "C" static void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
 
-extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
-extern "C" static void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
+extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
+extern "C" static void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
 SECTION_RODATA extern const u8 data_8039B190[12];
 SECTION_RODATA extern const void*const data_8039B19C[7];
 SECTION_BSS extern u8 JASBank__lit_156[12 + 4 /* padding */];
@@ -68,30 +57,29 @@ SECTION_SDATA2 extern f32 JASBank__lit_290;
 // External References:
 // 
 
-extern "C" void func_802978DC();
-extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_25();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_25();
+extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_25(); // 1
 
-extern "C" void __ct__17JASGenericMemPoolFv();
-extern "C" void alloc__17JASGenericMemPoolFUl();
-extern "C" void func_802978DC();
-extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
-extern "C" void play__10JASChannelFv();
-extern "C" void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data();
-extern "C" void getDacRate__9JASDriverFv();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_25();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_25();
+extern "C" void __ct__17JASGenericMemPoolFv(); // 1
+extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
+extern "C" void func_802978DC(); // 1
+extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
+extern "C" void play__10JASChannelFv(); // 1
+extern "C" void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data(); // 1
+extern "C" void getDacRate__9JASDriverFv(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_25(); // 1
 SECTION_BSS extern u8 data_80431B34[16 + 4 /* padding */];
 SECTION_SBSS extern u8 struct_80451260[8];
 

@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __kernel_tan();
+extern "C" void __kernel_tan(); // 1
 
-extern "C" void __kernel_tan();
+extern "C" void __kernel_tan(); // 1
 SECTION_RODATA extern const u8 T[104];
 SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__lit_94;
 SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__lit_95;

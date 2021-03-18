@@ -9,28 +9,10 @@
 // Types:
 // 
 
-// build JStage (['JStage']) False/False
-// build JStage (['JStage']) True/False
-struct JStage;
-// build JStage (['JStage']) True/True
-/* top-level dependencies (begin ['JStage']) */
-// outer dependency: ('JStage', 'TEObject')
-// outer dependency: ('JStage', 'TObject')
-/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TSystem (['JStage', 'TSystem']) False/False
-	/* dependencies (begin ['JStage', 'TSystem']) */
-	// inner dependency: 1 ('JStage', 'TEObject') (for ['JStage', 'TSystem'])
-	// build TEObject (['JStage', 'TEObject']) False/False
-	/* dependencies (begin ['JStage', 'TEObject']) */
-	/* dependencies (end ['JStage', 'TEObject']) */
 	struct TEObject {
 	};
 
-	// inner dependency: 1 ('JStage', 'TObject') (for ['JStage', 'TSystem'])
-	// build TObject (['JStage', 'TObject']) False/False
-	/* dependencies (begin ['JStage', 'TObject']) */
-	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ bool JSGGetName() const;
@@ -46,10 +28,7 @@ struct JStage {
 		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
 	};
 
-	/* dependencies (end ['JStage', 'TSystem']) */
 	struct TSystem {
-		// ('JStage', 'TEObject')
-		// ('JStage', 'TObject')
 		/* 80280E90 */ ~TSystem();
 		/* 80280EF0 */ bool JSGFGetType() const;
 		/* 80280EF8 */ bool JSGFindObject(JStage::TObject**, char const*, JStage::TEObject) const;
@@ -59,8 +38,6 @@ struct JStage {
 		/* 80280F14 */ void JSGSetSystemData(u32, u32);
 	};
 
-	// build TObject (['JStage', 'TObject']) True/True
-	// build TEObject (['JStage', 'TEObject']) True/True
 };
 
 // 
@@ -68,34 +45,34 @@ struct JStage {
 // 
 
 
-extern "C" void __dt__Q26JStage7TSystemFv();
-extern "C" bool JSGFGetType__Q26JStage7TSystemCFv();
-extern "C" bool JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject();
-extern "C" bool JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl();
-extern "C" void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject();
-extern "C" bool JSGGetSystemData__Q26JStage7TSystemFUl();
-extern "C" void JSGSetSystemData__Q26JStage7TSystemFUlUl();
+extern "C" void __dt__Q26JStage7TSystemFv(); // 1
+extern "C" bool JSGFGetType__Q26JStage7TSystemCFv(); // 1
+extern "C" bool JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject(); // 1
+extern "C" bool JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl(); // 1
+extern "C" void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject(); // 1
+extern "C" bool JSGGetSystemData__Q26JStage7TSystemFUl(); // 1
+extern "C" void JSGSetSystemData__Q26JStage7TSystemFUlUl(); // 1
 SECTION_DATA extern void*const __vt__Q26JStage7TSystem[20];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dt__Q26JStage7TObjectFv();
-extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
-extern "C" void JSGUpdate__Q26JStage7TObjectFv();
-extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv();
-extern "C" void JSGSetFlag__Q26JStage7TObjectFUl();
-extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl();
-extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl();
-extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
-extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
-extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc();
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
-extern "C" void __dl__FPv();
+extern "C" void __dt__Q26JStage7TObjectFv(); // 1
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv(); // 1
+extern "C" void JSGUpdate__Q26JStage7TObjectFv(); // 1
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv(); // 1
+extern "C" void JSGSetFlag__Q26JStage7TObjectFUl(); // 1
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
+extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl(); // 1
+extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl(); // 1
+extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl(); // 1
+extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl(); // 1
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f(); // 1
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

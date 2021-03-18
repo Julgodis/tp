@@ -9,59 +9,40 @@
 // Types:
 // 
 
-// build JStudio_JStage (['JStudio_JStage']) False/False
-// build JStudio (['JStudio']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TActor {
+	};
+
+	struct TObject {
+	};
+
+};
+
 struct Vec {
 };
 
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build data (['JStudio', 'data']) False/False
-	/* dependencies (begin ['JStudio', 'data']) */
-	/* dependencies (end ['JStudio', 'data']) */
 	struct data {
-		// build TEOperationData (['JStudio', 'data', 'TEOperationData']) False/False
-		/* dependencies (begin ['JStudio', 'data', 'TEOperationData']) */
-		/* dependencies (end ['JStudio', 'data', 'TEOperationData']) */
 		struct TEOperationData {
 		};
 
 	};
 
-	// build TControl (['JStudio', 'TControl']) False/False
-	/* dependencies (begin ['JStudio', 'TControl']) */
-	/* dependencies (end ['JStudio', 'TControl']) */
 	struct TControl {
-		// build TTransform_translation_rotation_scaling (['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) False/False
-		/* dependencies (begin ['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) */
-		/* dependencies (end ['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) */
 		struct TTransform_translation_rotation_scaling {
 		};
 
 	};
 
-	// build TAdaptor (['JStudio', 'TAdaptor']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor']) */
-	// inner dependency: 0 ('Vec',) (for ['JStudio', 'TAdaptor'])
-	/* dependencies (end ['JStudio', 'TAdaptor']) */
 	struct TAdaptor {
-		// ('Vec',)
 		/* 80286204 */ void adaptor_setVariableValue_Vec(u32 const*, Vec const&);
 		/* 80286274 */ void adaptor_getVariableValue_Vec(Vec*, u32 const*) const;
 	};
 
-	// build TVariableValue (['JStudio', 'TVariableValue']) False/False
-	/* dependencies (begin ['JStudio', 'TVariableValue']) */
-	/* dependencies (end ['JStudio', 'TVariableValue']) */
 	struct TVariableValue {
-		// build TOutput (['JStudio', 'TVariableValue', 'TOutput']) False/False
-		/* dependencies (begin ['JStudio', 'TVariableValue', 'TOutput']) */
-		/* dependencies (end ['JStudio', 'TVariableValue', 'TOutput']) */
 		struct TOutput {
 			/* 80285E0C */ ~TOutput();
 		};
@@ -70,90 +51,23 @@ namespace JStudio {
 		/* 8028B568 */ TVariableValue();
 	};
 
-	// build TFunctionValue (['JStudio', 'TFunctionValue']) False/False
-	/* dependencies (begin ['JStudio', 'TFunctionValue']) */
-	/* dependencies (end ['JStudio', 'TFunctionValue']) */
 	struct TFunctionValue {
 		/* 80281648 */ void toFunction_outside(int);
 	};
 
-	// build math (['JStudio', 'math']) False/False
-	/* dependencies (begin ['JStudio', 'math']) */
-	// inner dependency: 0 ('Vec',) (for ['JStudio', 'math'])
-	/* dependencies (end ['JStudio', 'math']) */
 	struct math {
-		// ('Vec',)
 		/* 80285BCC */ void getFromTransformation_SRxyzT(Vec*, Vec*, Vec*, f32 const (* )[4]);
 	};
 
-	// build TAdaptor_actor (['JStudio', 'TAdaptor_actor']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_actor']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_actor']) */
 	struct TAdaptor_actor {
 		/* 802868B0 */ ~TAdaptor_actor();
 	};
 
 };
 
-// build JStudio (['JStudio']) True/True
-// build JStage (['JStage']) False/False
-/* top-level dependencies (begin ['JStage']) */
-/* top-level dependencies (end ['JStage']) */
-struct JStage {
-	// build TSystem (['JStage', 'TSystem']) False/False
-	/* dependencies (begin ['JStage', 'TSystem']) */
-	/* dependencies (end ['JStage', 'TSystem']) */
-	struct TSystem {
-	};
-
-	// build TActor (['JStage', 'TActor']) False/False
-	/* dependencies (begin ['JStage', 'TActor']) */
-	/* dependencies (end ['JStage', 'TActor']) */
-	struct TActor {
-	};
-
-	// build TObject (['JStage', 'TObject']) False/False
-	/* dependencies (begin ['JStage', 'TObject']) */
-	/* dependencies (end ['JStage', 'TObject']) */
-	struct TObject {
-	};
-
-};
-
-// build JStudio (['JStudio']) True/True
-// build JStage (['JStage']) True/True
-// build JStudio (['JStudio']) True/True
-// build JStage (['JStage']) True/True
-/* top-level dependencies (begin ['JStudio_JStage']) */
-// outer dependency: ('JStudio', 'TAdaptor')
-// outer dependency: ('JStudio', 'TControl')
-// outer dependency: ('JStage', 'TSystem')
-// outer dependency: ('JStudio', 'data', 'TEOperationData')
-// outer dependency: ('JStage', 'TActor')
-// outer dependency: ('JStudio', 'TControl', 'TTransform_translation_rotation_scaling')
-// outer dependency: ('JStage', 'TObject')
-/* top-level dependencies (end ['JStudio_JStage']) */
 struct JStudio_JStage {
-	// ('JStudio', 'TControl', 'TTransform_translation_rotation_scaling')
-	// ('JStage', 'TObject')
-	// build TAdaptor_actor (['JStudio_JStage', 'TAdaptor_actor']) False/False
-	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_actor']) */
-	// inner dependency: 0 ('JStage', 'TActor') (for ['JStudio_JStage', 'TAdaptor_actor'])
-	// inner dependency: 0 ('JStudio', 'TControl') (for ['JStudio_JStage', 'TAdaptor_actor'])
-	// inner dependency: 0 ('JStage', 'TSystem') (for ['JStudio_JStage', 'TAdaptor_actor'])
-	// inner dependency: 0 ('JStudio', 'data', 'TEOperationData') (for ['JStudio_JStage', 'TAdaptor_actor'])
-	/* dependencies (end ['JStudio_JStage', 'TAdaptor_actor']) */
 	struct TAdaptor_actor {
-		// ('JStage', 'TActor')
-		// ('JStudio', 'TControl')
-		// ('JStage', 'TSystem')
-		// ('JStudio', 'data', 'TEOperationData')
-		// build TVVOutput_ANIMATION_FRAME_ (['JStudio_JStage', 'TAdaptor_actor', 'TVVOutput_ANIMATION_FRAME_']) False/False
-		/* dependencies (begin ['JStudio_JStage', 'TAdaptor_actor', 'TVVOutput_ANIMATION_FRAME_']) */
-		// inner dependency: 0 ('JStudio', 'TAdaptor') (for ['JStudio_JStage', 'TAdaptor_actor', 'TVVOutput_ANIMATION_FRAME_'])
-		/* dependencies (end ['JStudio_JStage', 'TAdaptor_actor', 'TVVOutput_ANIMATION_FRAME_']) */
 		struct TVVOutput_ANIMATION_FRAME_ {
-			// ('JStudio', 'TAdaptor')
 			/* 8028B064 */ void operator()(f32, JStudio::TAdaptor*) const;
 			/* 8028B138 */ ~TVVOutput_ANIMATION_FRAME_();
 		};
@@ -181,12 +95,15 @@ struct JStudio_JStage {
 		/* 8028AECC */ void getJSG_SRT_(JStudio::TControl const*);
 	};
 
-	// build TAdaptor_object_ (['JStudio_JStage', 'TAdaptor_object_']) False/False
-	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_object_']) */
-	// inner dependency: 0 ('JStage', 'TObject') (for ['JStudio_JStage', 'TAdaptor_object_'])
-	/* dependencies (end ['JStudio_JStage', 'TAdaptor_object_']) */
+	template <typename A1, typename B1>
+	struct TVariableValueOutput_object_ { };
+	/* TVariableValueOutput_object_<JStudio_JStage::TAdaptor_actor, JStage::TActor> */
+	struct TVariableValueOutput_object___template0 {
+		/* 8028B580 */ ~TVariableValueOutput_object___template0();
+		/* 8028B5E0 */ void operator()(f32, JStudio::TAdaptor*) const;
+	};
+
 	struct TAdaptor_object_ {
-		// ('JStage', 'TObject')
 		/* 8028A470 */ void adaptor_object_data_(void const*, u32, void const*, u32);
 		/* 8028A4BC */ void adaptor_object_findJSGObject_(char const*);
 		/* 8028A50C */ void adaptor_object_findJSGObjectNode_(JStage::TObject const*, char const*);
@@ -196,46 +113,41 @@ struct JStudio_JStage {
 	/* 8028A328 */ void transform_toLocalFromGlobal(f32 (* )[4], JStudio::TControl::TTransform_translation_rotation_scaling const&, JStage::TObject const*, u32);
 };
 
-// build JStage (['JStage']) True/True
-// build JStudio (['JStudio']) True/True
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" static void setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void func_8028B198();
-extern "C" static void func_8028B580();
-extern "C" static void func_8028B5E0();
+extern "C" static void setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void func_8028B198(); // 1
 
-extern "C" void __ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor();
-extern "C" void __dt__Q214JStudio_JStage14TAdaptor_actorFv();
-extern "C" void adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_actorFv();
-extern "C" void adaptor_do_begin__Q214JStudio_JStage14TAdaptor_actorFv();
-extern "C" void adaptor_do_end__Q214JStudio_JStage14TAdaptor_actorFv();
-extern "C" void adaptor_do_update__Q214JStudio_JStage14TAdaptor_actorFUl();
-extern "C" void adaptor_do_data__Q214JStudio_JStage14TAdaptor_actorFPCvUlPCvUl();
-extern "C" void adaptor_do_SHAPE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_TEXTURE_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_TEXTURE_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_PARENT__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_PARENT_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_PARENT_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" static void setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void setJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl();
-extern "C" void getJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl();
-extern "C" void __cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor();
-extern "C" void __dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv();
-extern "C" void func_8028B198();
-extern "C" void __ct__Q27JStudio14TVariableValueFv();
-extern "C" static void func_8028B580();
-extern "C" static void func_8028B5E0();
+extern "C" void __ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor(); // 1
+extern "C" void __dt__Q214JStudio_JStage14TAdaptor_actorFv(); // 1
+extern "C" void adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_actorFv(); // 1
+extern "C" void adaptor_do_begin__Q214JStudio_JStage14TAdaptor_actorFv(); // 1
+extern "C" void adaptor_do_end__Q214JStudio_JStage14TAdaptor_actorFv(); // 1
+extern "C" void adaptor_do_update__Q214JStudio_JStage14TAdaptor_actorFUl(); // 1
+extern "C" void adaptor_do_data__Q214JStudio_JStage14TAdaptor_actorFPCvUlPCvUl(); // 1
+extern "C" void adaptor_do_SHAPE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_TEXTURE_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_TEXTURE_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_PARENT__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_PARENT_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_PARENT_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" static void setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void setJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl(); // 1
+extern "C" void getJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl(); // 1
+extern "C" void __cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor(); // 1
+extern "C" void __dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv(); // 1
+extern "C" void func_8028B198(); // 1
+extern "C" void __ct__Q27JStudio14TVariableValueFv(); // 1
+extern "C" void func_8028B580(); // 1
+extern "C" void func_8028B5E0(); // 1
 SECTION_DATA extern u8 lit_890[12];
 SECTION_DATA extern u8 object_actor__lit_899[12];
 SECTION_DATA extern u8 lit_916[12];
@@ -263,41 +175,41 @@ SECTION_SDATA2 extern u8 lit_1081[4 + 4 /* padding */];
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void PSMTXMultVec();
-extern "C" void __register_global_object();
-extern "C" void __construct_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void toFunction_outside__Q27JStudio14TFunctionValueFi();
-extern "C" void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf();
-extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv();
-extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
-extern "C" void adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec();
-extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl();
-extern "C" void __dt__Q27JStudio14TAdaptor_actorFv();
-extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
-extern "C" void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
-extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
-extern "C" void adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc();
-extern "C" void adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc();
-extern "C" void __dl__FPv();
-extern "C" void PSMTXMultVec();
-extern "C" void __register_global_object();
-extern "C" void __construct_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void toFunction_outside__Q27JStudio14TFunctionValueFi(); // 1
+extern "C" void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf(); // 1
+extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
+extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1
+extern "C" void adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec(); // 1
+extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl(); // 1
+extern "C" void __dt__Q27JStudio14TAdaptor_actorFv(); // 1
+extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl(); // 1
+extern "C" void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl(); // 1
+extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl(); // 1
+extern "C" void adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc(); // 1
+extern "C" void adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_RODATA extern const u8 sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor[12];
 SECTION_RODATA extern const u8 sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor[12];
 SECTION_RODATA extern const u8 sauVariableValue_3_SCALING_XYZ__Q27JStudio14TAdaptor_actor[12];
@@ -755,7 +667,7 @@ asm JStudio::TVariableValue::TVariableValue() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8028B580() {
+asm JStudio_JStage::TVariableValueOutput_object___template0::~TVariableValueOutput_object___template0() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028B580.s"
 }
@@ -766,7 +678,7 @@ extern "C" asm static void func_8028B580() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8028B5E0() {
+asm void JStudio_JStage::TVariableValueOutput_object___template0::operator()(f32 field_0, JStudio::TAdaptor* field_1) const {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-actor/func_8028B5E0.s"
 }

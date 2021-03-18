@@ -9,49 +9,24 @@
 // Types:
 // 
 
-// build COutFontSet_c (['COutFontSet_c']) False/False
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 };
 
-/* top-level dependencies (begin ['COutFontSet_c']) */
-// outer dependency: ('J2DTextBox',)
-/* top-level dependencies (end ['COutFontSet_c']) */
 struct COutFontSet_c {
-	// ('J2DTextBox',)
 	/* 80225BB8 */ COutFontSet_c();
 	/* 80225BF4 */ ~COutFontSet_c();
 	/* 80225C3C */ void initialize();
 	/* 80225C70 */ void drawFont(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8);
 };
 
-// build J2DTextBox (['J2DTextBox']) True/True
-// build COutFont_c (['COutFont_c']) False/False
-// build J2DTextBox (['J2DTextBox']) True/True
-// build J2DPicture (['J2DPicture']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['J2DPicture']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-/* top-level dependencies (begin ['COutFont_c']) */
-// outer dependency: ('J2DTextBox',)
-// outer dependency: ('J2DPicture',)
-/* top-level dependencies (end ['COutFont_c']) */
 struct COutFont_c {
-	// ('J2DTextBox',)
-	// ('J2DPicture',)
 	/* 80225C94 */ COutFont_c(u8);
 	/* 80225D60 */ ~COutFont_c();
 	/* 80225E7C */ void setPane(J2DPicture*);
@@ -65,45 +40,34 @@ struct COutFont_c {
 	/* 80228530 */ void getBtiName(int);
 };
 
-// build J2DPicture (['J2DPicture']) True/True
-// build J2DPane (['J2DPane']) False/False
-// build J2DRotateAxis (['J2DRotateAxis']) False/False
-/* top-level dependencies (begin ['J2DRotateAxis']) */
-/* top-level dependencies (end ['J2DRotateAxis']) */
 struct J2DRotateAxis {
 };
 
-/* top-level dependencies (begin ['J2DPane']) */
-// outer dependency: ('J2DRotateAxis',)
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
-	// ('J2DRotateAxis',)
 	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
 	/* 802F7AFC */ void getParentPane();
 };
 
-// build J2DRotateAxis (['J2DRotateAxis']) True/True
-// build ResTIMG (['ResTIMG']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__13COutFontSet_cFv();
-extern "C" void __dt__13COutFontSet_cFv();
-extern "C" void initialize__13COutFontSet_cFv();
-extern "C" void drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc();
-extern "C" void __ct__10COutFont_cFUc();
-extern "C" void __dt__10COutFont_cFv();
-extern "C" void setPane__10COutFont_cFP10J2DPicture();
-extern "C" void createPane__10COutFont_cFv();
-extern "C" void initialize__10COutFont_cFv();
-extern "C" void drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc();
-extern "C" void setAlphaRatio__10COutFont_cFf();
-extern "C" void draw__10COutFont_cFP10J2DTextBoxfff();
-extern "C" void reset__10COutFont_cFP10J2DTextBox();
-extern "C" void setBlendAnime__10COutFont_cFP10J2DPictures();
-extern "C" void getBtiName__10COutFont_cFi();
+extern "C" void __ct__13COutFontSet_cFv(); // 1
+extern "C" void __dt__13COutFontSet_cFv(); // 1
+extern "C" void initialize__13COutFontSet_cFv(); // 1
+extern "C" void drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc(); // 1
+extern "C" void __ct__10COutFont_cFUc(); // 1
+extern "C" void __dt__10COutFont_cFv(); // 1
+extern "C" void setPane__10COutFont_cFP10J2DPicture(); // 1
+extern "C" void createPane__10COutFont_cFv(); // 1
+extern "C" void initialize__10COutFont_cFv(); // 1
+extern "C" void drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc(); // 1
+extern "C" void setAlphaRatio__10COutFont_cFf(); // 1
+extern "C" void draw__10COutFont_cFP10J2DTextBoxfff(); // 1
+extern "C" void reset__10COutFont_cFP10J2DTextBox(); // 1
+extern "C" void setBlendAnime__10COutFont_cFP10J2DPictures(); // 1
+extern "C" void getBtiName__10COutFont_cFi(); // 1
 SECTION_RODATA extern const u8 d_msg_d_msg_out_font__stringBase0[632];
 SECTION_DATA extern void*d_msg_d_msg_out_font__lit_4395[70];
 SECTION_DATA extern void*d_msg_d_msg_out_font__lit_5000[65];
@@ -131,30 +95,30 @@ SECTION_SDATA2 extern f64 d_msg_d_msg_out_font__lit_5001;
 // External References:
 // 
 
-void fopMsgM_valueIncrease(int, int, u8);
-void dMeter2Info_getNumberTextureName(int);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+void fopMsgM_valueIncrease(int, int, u8); // 2
+void dMeter2Info_getNumberTextureName(int); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void fopMsgM_valueIncrease__FiiUc();
-extern "C" void dMeter2Info_getNumberTextureName__Fi();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
-extern "C" void getParentPane__7J2DPaneFv();
-extern "C" void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+extern "C" void fopMsgM_valueIncrease__FiiUc(); // 1
+extern "C" void dMeter2Info_getNumberTextureName__Fi(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf(); // 1
+extern "C" void getParentPane__7J2DPaneFv(); // 1
+extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 

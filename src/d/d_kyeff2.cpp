@@ -9,16 +9,10 @@
 // Types:
 // 
 
-// build dKyeff2_c (['dKyeff2_c']) False/False
-/* top-level dependencies (begin ['dKyeff2_c']) */
-/* top-level dependencies (end ['dKyeff2_c']) */
 struct dKyeff2_c {
 	/* 801ADEC4 */ void execute();
 };
 
-// build kankyo_class (['kankyo_class']) False/False
-/* top-level dependencies (begin ['kankyo_class']) */
-/* top-level dependencies (end ['kankyo_class']) */
 struct kankyo_class {
 };
 
@@ -26,18 +20,18 @@ struct kankyo_class {
 // Forward References:
 // 
 
-static void dKyeff2_Draw(dKyeff2_c*);
-static void dKyeff2_Execute(dKyeff2_c*);
-static bool dKyeff2_IsDelete(dKyeff2_c*);
-static void dKyeff2_Delete(dKyeff2_c*);
-static void dKyeff2_Create(kankyo_class*);
+static void dKyeff2_Draw(dKyeff2_c*); // 2
+static void dKyeff2_Execute(dKyeff2_c*); // 2
+static bool dKyeff2_IsDelete(dKyeff2_c*); // 2
+static void dKyeff2_Delete(dKyeff2_c*); // 2
+static void dKyeff2_Create(kankyo_class*); // 2
 
-extern "C" static void dKyeff2_Draw__FP9dKyeff2_c();
-extern "C" void execute__9dKyeff2_cFv();
-extern "C" static void dKyeff2_Execute__FP9dKyeff2_c();
-extern "C" static bool dKyeff2_IsDelete__FP9dKyeff2_c();
-extern "C" static void dKyeff2_Delete__FP9dKyeff2_c();
-extern "C" static void dKyeff2_Create__FP12kankyo_class();
+extern "C" static void dKyeff2_Draw__FP9dKyeff2_c(); // 1
+extern "C" void execute__9dKyeff2_cFv(); // 1
+extern "C" static void dKyeff2_Execute__FP9dKyeff2_c(); // 1
+extern "C" static bool dKyeff2_IsDelete__FP9dKyeff2_c(); // 1
+extern "C" static void dKyeff2_Delete__FP9dKyeff2_c(); // 1
+extern "C" static void dKyeff2_Create__FP12kankyo_class(); // 1
 SECTION_DATA extern void*l_dKyeff2_Method[5];
 SECTION_DATA extern void*g_profile_KYEFF2[11];
 
@@ -45,15 +39,15 @@ SECTION_DATA extern void*g_profile_KYEFF2[11];
 // External References:
 // 
 
-void dKyw_wether_init2();
-void dKyw_wether_delete2();
-void dKyw_wether_move_draw2();
-void dKyw_wether_draw2();
+void dKyw_wether_init2(); // 2
+void dKyw_wether_delete2(); // 2
+void dKyw_wether_move_draw2(); // 2
+void dKyw_wether_draw2(); // 2
 
-extern "C" void dKyw_wether_init2__Fv();
-extern "C" void dKyw_wether_delete2__Fv();
-extern "C" void dKyw_wether_move_draw2__Fv();
-extern "C" void dKyw_wether_draw2__Fv();
+extern "C" void dKyw_wether_init2__Fv(); // 1
+extern "C" void dKyw_wether_delete2__Fv(); // 1
+extern "C" void dKyw_wether_move_draw2__Fv(); // 1
+extern "C" void dKyw_wether_draw2__Fv(); // 1
 SECTION_DATA extern void*g_fopKy_Method[6];
 SECTION_DATA extern void*g_fpcLf_Method[6];
 

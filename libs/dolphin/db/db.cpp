@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void DBInit();
-extern "C" static void __DBExceptionDestinationAux();
-extern "C" static void __DBExceptionDestination();
-extern "C" void __DBIsExceptionMarked();
-extern "C" void DBPrintf();
+extern "C" void DBInit(); // 1
+extern "C" static void __DBExceptionDestinationAux(); // 1
+extern "C" static void __DBExceptionDestination(); // 1
+extern "C" void __DBIsExceptionMarked(); // 1
+extern "C" void DBPrintf(); // 1
 
-extern "C" void DBInit();
-extern "C" static void __DBExceptionDestinationAux();
-extern "C" static void __DBExceptionDestination();
-extern "C" void __DBIsExceptionMarked();
-extern "C" void DBPrintf();
+extern "C" void DBInit(); // 1
+extern "C" static void __DBExceptionDestinationAux(); // 1
+extern "C" static void __DBExceptionDestination(); // 1
+extern "C" void __DBIsExceptionMarked(); // 1
+extern "C" void DBPrintf(); // 1
 SECTION_DATA extern u8 lit_9[24];
 SECTION_SBSS extern u8 __DBInterface[4];
 SECTION_SBSS extern u8 DBVerbose[4];
@@ -28,13 +28,13 @@ SECTION_SBSS extern u8 DBVerbose[4];
 // External References:
 // 
 
-extern "C" void OSReport();
-extern "C" void PPCHalt();
-extern "C" void OSDumpContext();
+extern "C" void OSReport(); // 1
+extern "C" void PPCHalt(); // 1
+extern "C" void OSDumpContext(); // 1
 
-extern "C" void OSReport();
-extern "C" void PPCHalt();
-extern "C" void OSDumpContext();
+extern "C" void OSReport(); // 1
+extern "C" void PPCHalt(); // 1
+extern "C" void OSDumpContext(); // 1
 
 // 
 // Declarations:

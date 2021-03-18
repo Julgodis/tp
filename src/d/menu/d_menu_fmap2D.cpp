@@ -9,26 +9,13 @@
 // Types:
 // 
 
-// build dMenu_Fmap2DBack_c (['dMenu_Fmap2DBack_c']) False/False
-// build STControl (['STControl']) False/False
-/* top-level dependencies (begin ['STControl']) */
-/* top-level dependencies (end ['STControl']) */
 struct STControl {
 };
 
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['dMenu_Fmap2DBack_c']) */
-// outer dependency: ('STControl',)
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['dMenu_Fmap2DBack_c']) */
 struct dMenu_Fmap2DBack_c {
-	// ('STControl',)
-	// ('ResTIMG',)
 	/* 801CF56C */ dMenu_Fmap2DBack_c();
 	/* 801CFCDC */ ~dMenu_Fmap2DBack_c();
 	/* 801CFF34 */ void draw();
@@ -36,9 +23,9 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D0AC8 */ void calcAllMapPos();
 	/* 801D0BF8 */ void calcAllMapScaleRate();
 	/* 801D0C6C */ void calcAllMapPos2DFirst(f32, f32, f32*, f32*);
+	/* 801D0E00 */ void calcAllMapPos2D(f32, f32, f32*, f32*, f32, f32, f32);
 	/* 801D0D18 */ void calcAllMapPos2D(f32, f32, f32*, f32*);
 	/* 801D0D50 */ void calcAllMapPos2D(char const*, f32, f32, f32*, f32*);
-	/* 801D0E00 */ void calcAllMapPos2D(f32, f32, f32*, f32*, f32, f32, f32);
 	/* 801D0F7C */ void calcAllMapPosWorld(f32, f32, f32*, f32*);
 	/* 801D1094 */ void setSpotPane(ResTIMG*);
 	/* 801D10F4 */ void deleteSpotPane();
@@ -98,74 +85,43 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
-// build ResTIMG (['ResTIMG']) True/True
-// build STControl (['STControl']) True/True
-// build dMenu_Fmap2DTop_c (['dMenu_Fmap2DTop_c']) False/False
-// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) False/False
-/* top-level dependencies (begin ['J2DAnmTextureSRTKey']) */
-/* top-level dependencies (end ['J2DAnmTextureSRTKey']) */
-struct J2DAnmTextureSRTKey {
-};
-
-// build STControl (['STControl']) True/True
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 };
 
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
-struct J2DGrafContext {
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
+struct J2DGrafContext {
+	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
+};
+
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
 };
 
-// build JKRExpHeap (['JKRExpHeap']) True/True
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
 	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
 };
 
-/* top-level dependencies (begin ['dMenu_Fmap2DTop_c']) */
-// outer dependency: ('J2DAnmTextureSRTKey',)
-// outer dependency: ('STControl',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('CPaneMgrAlpha',)
-/* top-level dependencies (end ['dMenu_Fmap2DTop_c']) */
+struct J2DAnmTextureSRTKey {
+};
+
 struct dMenu_Fmap2DTop_c {
-	// ('J2DAnmTextureSRTKey',)
-	// ('STControl',)
-	// ('JKRExpHeap',)
-	// ('CPaneMgrAlpha',)
 	/* 801D5BD0 */ dMenu_Fmap2DTop_c(JKRExpHeap*, STControl*);
 	/* 801D6700 */ ~dMenu_Fmap2DTop_c();
 	/* 801D6A44 */ void _execute();
@@ -194,36 +150,18 @@ struct dMenu_Fmap2DTop_c {
 	/* 801D8088 */ void isWarpAccept();
 };
 
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) True/True
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build dSv_player_field_last_stay_info_c (['dSv_player_field_last_stay_info_c']) False/False
-/* top-level dependencies (begin ['dSv_player_field_last_stay_info_c']) */
-/* top-level dependencies (end ['dSv_player_field_last_stay_info_c']) */
 struct dSv_player_field_last_stay_info_c {
 	/* 80032E78 */ void isRegionBit(int) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dMenuMapCommon_c (['dMenuMapCommon_c']) False/False
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['dMenuMapCommon_c']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['dMenuMapCommon_c']) */
 struct dMenuMapCommon_c {
-	// ('JKRArchive',)
 	/* 801C2718 */ dMenuMapCommon_c();
 	/* 801C27B4 */ ~dMenuMapCommon_c();
 	/* 801C28D8 */ void initiate(JKRArchive*);
@@ -233,184 +171,82 @@ struct dMenuMapCommon_c {
 	/* 801C4600 */ void moveLightDropAnime();
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build renderingFmap_c (['renderingFmap_c']) False/False
-// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) False/False
-/* top-level dependencies (begin ['dMenu_Fmap_region_data_c']) */
-/* top-level dependencies (end ['dMenu_Fmap_region_data_c']) */
 struct dMenu_Fmap_region_data_c {
 };
 
-/* top-level dependencies (begin ['renderingFmap_c']) */
-// outer dependency: ('dMenu_Fmap_region_data_c',)
-/* top-level dependencies (end ['renderingFmap_c']) */
 struct renderingFmap_c {
-	// ('dMenu_Fmap_region_data_c',)
 	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, int, int*, int*);
 };
 
-// build dMenu_Fmap_region_data_c (['dMenu_Fmap_region_data_c']) True/True
-// build dMeterHaihai_c (['dMeterHaihai_c']) False/False
-/* top-level dependencies (begin ['dMeterHaihai_c']) */
-/* top-level dependencies (end ['dMeterHaihai_c']) */
 struct dMeterHaihai_c {
 	/* 8020AE8C */ dMeterHaihai_c(u8);
 	/* 8020B518 */ void drawHaihai(u8);
 };
 
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
-/* top-level dependencies (begin ['JMSMesgEntry_c']) */
-/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-// outer dependency: ('JMSMesgEntry_c',)
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// ('JMSMesgEntry_c',)
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
-// build dMsgScrnExplain_c (['dMsgScrnExplain_c']) False/False
-// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
-/* top-level dependencies (begin ['J2DOrthoGraph']) */
-/* top-level dependencies (end ['J2DOrthoGraph']) */
 struct J2DOrthoGraph {
 };
 
-// build STControl (['STControl']) True/True
-/* top-level dependencies (begin ['dMsgScrnExplain_c']) */
-// outer dependency: ('J2DOrthoGraph',)
-// outer dependency: ('STControl',)
-/* top-level dependencies (end ['dMsgScrnExplain_c']) */
 struct dMsgScrnExplain_c {
-	// ('J2DOrthoGraph',)
-	// ('STControl',)
 	/* 8023CC88 */ dMsgScrnExplain_c(STControl*, u8, bool, u8);
 	/* 8023D918 */ void draw(J2DOrthoGraph*);
 };
 
-// build J2DOrthoGraph (['J2DOrthoGraph']) True/True
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build J2DPane (['J2DPane']) False/False
-// build J2DRotateAxis (['J2DRotateAxis']) False/False
-/* top-level dependencies (begin ['J2DRotateAxis']) */
-/* top-level dependencies (end ['J2DRotateAxis']) */
 struct J2DRotateAxis {
 };
 
-/* top-level dependencies (begin ['J2DPane']) */
-// outer dependency: ('J2DRotateAxis',)
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
-	// ('J2DRotateAxis',)
 	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
 	/* 802F7AFC */ void getParentPane();
 };
 
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
-	// ('J2DPane',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254C90 */ void getGlobalVtx(J2DPane*, f32 (* )[3][4], u8, bool, s16);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build J2DPane (['J2DPane']) True/True
-// build CPaneMgrAlphaMorf (['CPaneMgrAlphaMorf']) False/False
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-/* top-level dependencies (begin ['CPaneMgrAlphaMorf']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['CPaneMgrAlphaMorf']) */
 struct CPaneMgrAlphaMorf {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
 	/* 80255C68 */ CPaneMgrAlphaMorf(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255DD0 */ void setBackupAlpha();
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
-struct Vec {
-};
-
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
+struct Vec {
+};
+
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AC50C */ void seStartLevel(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build Vec (['Vec']) True/True
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build J2DRotateAxis (['J2DRotateAxis']) True/True
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build J2DPicture (['J2DPicture']) False/False
-// build ResTIMG (['ResTIMG']) True/True
-/* top-level dependencies (begin ['J2DPicture']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-// build J2DAnmLoaderDataBase (['J2DAnmLoaderDataBase']) False/False
-/* top-level dependencies (begin ['J2DAnmLoaderDataBase']) */
-/* top-level dependencies (end ['J2DAnmLoaderDataBase']) */
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
@@ -419,102 +255,102 @@ struct J2DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" static void func_801D810C();
+extern "C" static void func_801D810C(); // 1
 
-extern "C" void __ct__18dMenu_Fmap2DBack_cFv();
-extern "C" void __dt__18dMenu_Fmap2DBack_cFv();
-extern "C" void draw__18dMenu_Fmap2DBack_cFv();
-extern "C" void setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff();
-extern "C" void calcAllMapPos__18dMenu_Fmap2DBack_cFv();
-extern "C" void calcAllMapScaleRate__18dMenu_Fmap2DBack_cFv();
-extern "C" void calcAllMapPos2DFirst__18dMenu_Fmap2DBack_cFffPfPf();
-extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPf();
-extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf();
-extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPffff();
-extern "C" void calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf();
-extern "C" void setSpotPane__18dMenu_Fmap2DBack_cFP7ResTIMG();
-extern "C" void deleteSpotPane__18dMenu_Fmap2DBack_cFv();
-extern "C" void zoomMapCalc__18dMenu_Fmap2DBack_cFf();
-extern "C" void zoomMapCalc2__18dMenu_Fmap2DBack_cFf();
-extern "C" void zoomMapCalcHIO__18dMenu_Fmap2DBack_cFv();
-extern "C" void scrollCalc__18dMenu_Fmap2DBack_cFf();
-extern "C" void mapBlink__18dMenu_Fmap2DBack_cFPs();
-extern "C" void setSpotCursor__18dMenu_Fmap2DBack_cFUc();
-extern "C" void allmap_move2__18dMenu_Fmap2DBack_cFP9STControl();
-extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb();
-extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb();
-extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcUcPCcfffUcb();
-extern "C" void isShowRegion__18dMenu_Fmap2DBack_cFi();
-extern "C" void getMapAreaGlobalPosX__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapAreaGlobalPosY__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapAreaSizeX__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapAreaSizeY__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapScissorAreaLY__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapScissorAreaSizeX__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapScissorAreaSizeRealX__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapScissorAreaCenterPosX__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapScissorAreaCenterPosY__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapScissorAreaSizeY__18dMenu_Fmap2DBack_cFv();
-extern "C" void getMapScissorAreaSizeRealY__18dMenu_Fmap2DBack_cFv();
-extern "C" void calcRenderingPos__18dMenu_Fmap2DBack_cFv();
-extern "C" void calcRenderingScale__18dMenu_Fmap2DBack_cFv();
-extern "C" void getPathScale__18dMenu_Fmap2DBack_cFf();
-extern "C" void getAllMapZoomRate__18dMenu_Fmap2DBack_cFv();
-extern "C" void getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi();
-extern "C" void getSpotMapZoomRate__18dMenu_Fmap2DBack_cFv();
-extern "C" void getStageOriginPath__18dMenu_Fmap2DBack_cFUcPfPf();
-extern "C" void calcOffset__18dMenu_Fmap2DBack_cFUcPCcPfPf();
-extern "C" void regionTextureDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" void stageTextureDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" void worldGridDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" void regionGridDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" void worldOriginDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" void scrollAreaDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" void regionOriginDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" void stageOriginDraw__18dMenu_Fmap2DBack_cFv();
-extern "C" void calcBlink__18dMenu_Fmap2DBack_cFv();
-extern "C" void calcBackAlpha__18dMenu_Fmap2DBack_cFb();
-extern "C" void btkAnimeLoop__18dMenu_Fmap2DBack_cFf();
-extern "C" void setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc();
-extern "C" void regionMapMove__18dMenu_Fmap2DBack_cFP9STControl();
-extern "C" void stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb();
-extern "C" void setAllAlphaRate__18dMenu_Fmap2DBack_cFfb();
-extern "C" void drawDebugStageArea__18dMenu_Fmap2DBack_cFv();
-extern "C" void drawDebugRegionArea__18dMenu_Fmap2DBack_cFv();
-extern "C" void setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff();
-extern "C" void setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff();
-extern "C" void calcDrawPriority__18dMenu_Fmap2DBack_cFv();
-extern "C" void setArrowPosAxis__18dMenu_Fmap2DBack_cFff();
-extern "C" void __ct__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl();
-extern "C" void __dt__17dMenu_Fmap2DTop_cFv();
-extern "C" void _execute__17dMenu_Fmap2DTop_cFv();
-extern "C" void setAllAlphaRate__17dMenu_Fmap2DTop_cFfb();
-extern "C" void draw__17dMenu_Fmap2DTop_cFv();
-extern "C" void btkAnimeLoop__17dMenu_Fmap2DTop_cFP19J2DAnmTextureSRTKeyf();
-extern "C" void setMoyaAlpha__17dMenu_Fmap2DTop_cFUc();
-extern "C" void setTitleNameString__17dMenu_Fmap2DTop_cFUl();
-extern "C" void setAreaNameString__17dMenu_Fmap2DTop_cFUl();
-extern "C" void setZButtonString__17dMenu_Fmap2DTop_cFUlUc();
-extern "C" void setBButtonString__17dMenu_Fmap2DTop_cFUlUc();
-extern "C" void setAButtonString__17dMenu_Fmap2DTop_cFUlUc();
-extern "C" void setCrossLRString__17dMenu_Fmap2DTop_cFUl();
-extern "C" void set3DStickString__17dMenu_Fmap2DTop_cFUl();
-extern "C" void createExplain__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl();
-extern "C" void deleteExplain__17dMenu_Fmap2DTop_cFv();
-extern "C" void setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf();
-extern "C" void setAlphaAnimeMin__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
-extern "C" void setAlphaAnimeMid__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
-extern "C" void setAlphaAnimeMax__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
-extern "C" void checkPlayerWarpAccept__17dMenu_Fmap2DTop_cFv();
-extern "C" void checkWarpAcceptRegion__17dMenu_Fmap2DTop_cFi();
-extern "C" void checkWarpAcceptRegion4__17dMenu_Fmap2DTop_cFv();
-extern "C" void checkWarpAcceptCannon__17dMenu_Fmap2DTop_cFv();
-extern "C" void setHIO__17dMenu_Fmap2DTop_cFb();
-extern "C" void isWarpAccept__17dMenu_Fmap2DTop_cFv();
-extern "C" static void func_801D810C();
+extern "C" void __ct__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void __dt__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void draw__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff(); // 1
+extern "C" void calcAllMapPos__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void calcAllMapScaleRate__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void calcAllMapPos2DFirst__18dMenu_Fmap2DBack_cFffPfPf(); // 1
+extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPf(); // 1
+extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf(); // 1
+extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPffff(); // 1
+extern "C" void calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf(); // 1
+extern "C" void setSpotPane__18dMenu_Fmap2DBack_cFP7ResTIMG(); // 1
+extern "C" void deleteSpotPane__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void zoomMapCalc__18dMenu_Fmap2DBack_cFf(); // 1
+extern "C" void zoomMapCalc2__18dMenu_Fmap2DBack_cFf(); // 1
+extern "C" void zoomMapCalcHIO__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void scrollCalc__18dMenu_Fmap2DBack_cFf(); // 1
+extern "C" void mapBlink__18dMenu_Fmap2DBack_cFPs(); // 1
+extern "C" void setSpotCursor__18dMenu_Fmap2DBack_cFUc(); // 1
+extern "C" void allmap_move2__18dMenu_Fmap2DBack_cFP9STControl(); // 1
+extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb(); // 1
+extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb(); // 1
+extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcUcPCcfffUcb(); // 1
+extern "C" void isShowRegion__18dMenu_Fmap2DBack_cFi(); // 1
+extern "C" void getMapAreaGlobalPosX__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapAreaGlobalPosY__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapAreaSizeX__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapAreaSizeY__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapScissorAreaLY__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapScissorAreaSizeX__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapScissorAreaSizeRealX__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapScissorAreaCenterPosX__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapScissorAreaCenterPosY__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapScissorAreaSizeY__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getMapScissorAreaSizeRealY__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void calcRenderingPos__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void calcRenderingScale__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getPathScale__18dMenu_Fmap2DBack_cFf(); // 1
+extern "C" void getAllMapZoomRate__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi(); // 1
+extern "C" void getSpotMapZoomRate__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void getStageOriginPath__18dMenu_Fmap2DBack_cFUcPfPf(); // 1
+extern "C" void calcOffset__18dMenu_Fmap2DBack_cFUcPCcPfPf(); // 1
+extern "C" void regionTextureDraw__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void stageTextureDraw__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void worldGridDraw__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void regionGridDraw__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void worldOriginDraw__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void scrollAreaDraw__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void regionOriginDraw__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void stageOriginDraw__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void calcBlink__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void calcBackAlpha__18dMenu_Fmap2DBack_cFb(); // 1
+extern "C" void btkAnimeLoop__18dMenu_Fmap2DBack_cFf(); // 1
+extern "C" void setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc(); // 1
+extern "C" void regionMapMove__18dMenu_Fmap2DBack_cFP9STControl(); // 1
+extern "C" void stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb(); // 1
+extern "C" void setAllAlphaRate__18dMenu_Fmap2DBack_cFfb(); // 1
+extern "C" void drawDebugStageArea__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void drawDebugRegionArea__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff(); // 1
+extern "C" void setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff(); // 1
+extern "C" void calcDrawPriority__18dMenu_Fmap2DBack_cFv(); // 1
+extern "C" void setArrowPosAxis__18dMenu_Fmap2DBack_cFff(); // 1
+extern "C" void __ct__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl(); // 1
+extern "C" void __dt__17dMenu_Fmap2DTop_cFv(); // 1
+extern "C" void _execute__17dMenu_Fmap2DTop_cFv(); // 1
+extern "C" void setAllAlphaRate__17dMenu_Fmap2DTop_cFfb(); // 1
+extern "C" void draw__17dMenu_Fmap2DTop_cFv(); // 1
+extern "C" void btkAnimeLoop__17dMenu_Fmap2DTop_cFP19J2DAnmTextureSRTKeyf(); // 1
+extern "C" void setMoyaAlpha__17dMenu_Fmap2DTop_cFUc(); // 1
+extern "C" void setTitleNameString__17dMenu_Fmap2DTop_cFUl(); // 1
+extern "C" void setAreaNameString__17dMenu_Fmap2DTop_cFUl(); // 1
+extern "C" void setZButtonString__17dMenu_Fmap2DTop_cFUlUc(); // 1
+extern "C" void setBButtonString__17dMenu_Fmap2DTop_cFUlUc(); // 1
+extern "C" void setAButtonString__17dMenu_Fmap2DTop_cFUlUc(); // 1
+extern "C" void setCrossLRString__17dMenu_Fmap2DTop_cFUl(); // 1
+extern "C" void set3DStickString__17dMenu_Fmap2DTop_cFUl(); // 1
+extern "C" void createExplain__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl(); // 1
+extern "C" void deleteExplain__17dMenu_Fmap2DTop_cFv(); // 1
+extern "C" void setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf(); // 1
+extern "C" void setAlphaAnimeMin__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha(); // 1
+extern "C" void setAlphaAnimeMid__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha(); // 1
+extern "C" void setAlphaAnimeMax__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha(); // 1
+extern "C" void checkPlayerWarpAccept__17dMenu_Fmap2DTop_cFv(); // 1
+extern "C" void checkWarpAcceptRegion__17dMenu_Fmap2DTop_cFi(); // 1
+extern "C" void checkWarpAcceptRegion4__17dMenu_Fmap2DTop_cFv(); // 1
+extern "C" void checkWarpAcceptCannon__17dMenu_Fmap2DTop_cFv(); // 1
+extern "C" void setHIO__17dMenu_Fmap2DTop_cFb(); // 1
+extern "C" void isWarpAccept__17dMenu_Fmap2DTop_cFv(); // 1
+extern "C" static void func_801D810C(); // 1
 SECTION_RODATA extern const u8 data_80396248[32];
 SECTION_RODATA extern const u8 data_80396268[32];
 SECTION_RODATA extern const u8 data_80396288[24];
@@ -568,106 +404,105 @@ SECTION_SDATA2 extern f32 lit_6325;
 // External References:
 // 
 
-void mDoExt_setCurrentHeap(JKRHeap*);
-void mDoExt_getMesgFont();
-void mDoExt_getRubyFont();
-void dComIfGs_isStageSwitch(int, int);
-void dComIfGp_getNowLevel();
-void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, ResTIMG const*);
-void dPaneClass_showNullPane(J2DScreen*);
-void cLib_addCalc2(f32*, f32, f32, f32);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void func_802E90C0();
-void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int);
-void J2DFillBox(f32, f32, f32, f32, JUtility::TColor);
-void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8);
-extern "C" void GXGetScissor();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void strcpy();
+void mDoExt_setCurrentHeap(JKRHeap*); // 2
+void mDoExt_getMesgFont(); // 2
+void mDoExt_getRubyFont(); // 2
+void dComIfGs_isStageSwitch(int, int); // 2
+void dComIfGp_getNowLevel(); // 2
+void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, ResTIMG const*); // 2
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void cLib_addCalc2(f32*, f32, f32, f32); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int); // 2
+void J2DFillBox(f32, f32, f32, f32, JUtility::TColor); // 2
+void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8); // 2
+extern "C" void GXGetScissor(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void mDoExt_getRubyFont__Fv();
-extern "C" void dComIfGs_isStageSwitch__Fii();
-extern "C" void dComIfGp_getNowLevel__Fv();
-extern "C" void isRegionBit__33dSv_player_field_last_stay_info_cCFi();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void __ct__16dMenuMapCommon_cFv();
-extern "C" void __dt__16dMenuMapCommon_cFv();
-extern "C" void initiate__16dMenuMapCommon_cFP10JKRArchive();
-extern "C" void drawIcon__16dMenuMapCommon_cFffff();
-extern "C" void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
-extern "C" void blinkMove__16dMenuMapCommon_cFs();
-extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv();
-extern "C" void getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi();
-extern "C" void __ct__14dMeterHaihai_cFUc();
-extern "C" void drawHaihai__14dMeterHaihai_cFUc();
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" void dMeter2Info_getPixel__FffffffPC7ResTIMG();
-extern "C" void __ct__17dMsgScrnExplain_cFP9STControlUcbUc();
-extern "C" void draw__17dMsgScrnExplain_cFP13J2DOrthoGraph();
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void paneTrans__8CPaneMgrFff();
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void hide__13CPaneMgrAlphaFv();
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
-extern "C" void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void setBackupAlpha__17CPaneMgrAlphaMorfFv();
-extern "C" void setAlphaMorfRate__17CPaneMgrAlphaMorfFf();
-extern "C" void cLib_addCalc2__FPffff();
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" void func_802E90C0();
-extern "C" void J2DDrawLine__FffffQ28JUtility6TColori();
-extern "C" void J2DFillBox__FffffQ28JUtility6TColor();
-extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc();
-extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
-extern "C" void getParentPane__7J2DPaneFv();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void animation__9J2DScreenFv();
-extern "C" void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" void getStringPtr__10J2DTextBoxCFv();
-extern "C" void setString__10J2DTextBoxFsPCce();
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" void GXGetScissor();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void strcpy();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void mDoExt_getRubyFont__Fv(); // 1
+extern "C" void dComIfGs_isStageSwitch__Fii(); // 1
+extern "C" void dComIfGp_getNowLevel__Fv(); // 1
+extern "C" void isRegionBit__33dSv_player_field_last_stay_info_cCFi(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void __ct__16dMenuMapCommon_cFv(); // 1
+extern "C" void __dt__16dMenuMapCommon_cFv(); // 1
+extern "C" void initiate__16dMenuMapCommon_cFP10JKRArchive(); // 1
+extern "C" void drawIcon__16dMenuMapCommon_cFffff(); // 1
+extern "C" void setIconInfo__16dMenuMapCommon_cFUcfffffUc(); // 1
+extern "C" void blinkMove__16dMenuMapCommon_cFs(); // 1
+extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv(); // 1
+extern "C" void getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi(); // 1
+extern "C" void __ct__14dMeterHaihai_cFUc(); // 1
+extern "C" void drawHaihai__14dMeterHaihai_cFUc(); // 1
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void dMeter2Info_getPixel__FffffffPC7ResTIMG(); // 1
+extern "C" void __ct__17dMsgScrnExplain_cFP9STControlUcbUc(); // 1
+extern "C" void draw__17dMsgScrnExplain_cFP13J2DOrthoGraph(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void paneTrans__8CPaneMgrFff(); // 1
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void hide__13CPaneMgrAlphaFv(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
+extern "C" void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void setBackupAlpha__17CPaneMgrAlphaMorfFv(); // 1
+extern "C" void setAlphaMorfRate__17CPaneMgrAlphaMorfFf(); // 1
+extern "C" void cLib_addCalc2__FPffff(); // 1
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
+extern "C" void func_802E90C0(); // 1
+extern "C" void J2DDrawLine__FffffQ28JUtility6TColori(); // 1
+extern "C" void J2DFillBox__FffffQ28JUtility6TColor(); // 1
+extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc(); // 1
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf(); // 1
+extern "C" void getParentPane__7J2DPaneFv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void animation__9J2DScreenFv(); // 1
+extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
+extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
+extern "C" void setString__10J2DTextBoxFsPCce(); // 1
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
+extern "C" void GXGetScissor(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];

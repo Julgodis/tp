@@ -9,51 +9,51 @@
 // Forward References:
 // 
 
-extern "C" void SIBusy();
-extern "C" void SIIsChanBusy();
-extern "C" static void CompleteTransfer();
-extern "C" static void SIInterruptHandler();
-extern "C" static void SIEnablePollingInterrupt();
-extern "C" void SIRegisterPollingHandler();
-extern "C" void SIUnregisterPollingHandler();
-extern "C" void SIInit();
-extern "C" static void __SITransfer();
-extern "C" void SIGetStatus();
-extern "C" void SISetCommand();
-extern "C" void SITransferCommands();
-extern "C" void SISetXY();
-extern "C" void SIEnablePolling();
-extern "C" void SIDisablePolling();
-extern "C" static void SIGetResponseRaw();
-extern "C" void SIGetResponse();
-extern "C" static void SIBios__AlarmHandler();
-extern "C" void SITransfer();
-extern "C" static void GetTypeCallback();
-extern "C" void SIGetType();
-extern "C" void SIGetTypeAsync();
+extern "C" void SIBusy(); // 1
+extern "C" void SIIsChanBusy(); // 1
+extern "C" static void CompleteTransfer(); // 1
+extern "C" static void SIInterruptHandler(); // 1
+extern "C" static void SIEnablePollingInterrupt(); // 1
+extern "C" void SIRegisterPollingHandler(); // 1
+extern "C" void SIUnregisterPollingHandler(); // 1
+extern "C" void SIInit(); // 1
+extern "C" static void __SITransfer(); // 1
+extern "C" void SIGetStatus(); // 1
+extern "C" void SISetCommand(); // 1
+extern "C" void SITransferCommands(); // 1
+extern "C" void SISetXY(); // 1
+extern "C" void SIEnablePolling(); // 1
+extern "C" void SIDisablePolling(); // 1
+extern "C" static void SIGetResponseRaw(); // 1
+extern "C" void SIGetResponse(); // 1
+extern "C" static void SIBios__AlarmHandler(); // 1
+extern "C" void SITransfer(); // 1
+extern "C" static void GetTypeCallback(); // 1
+extern "C" void SIGetType(); // 1
+extern "C" void SIGetTypeAsync(); // 1
 
-extern "C" void SIBusy();
-extern "C" void SIIsChanBusy();
-extern "C" static void CompleteTransfer();
-extern "C" static void SIInterruptHandler();
-extern "C" static void SIEnablePollingInterrupt();
-extern "C" void SIRegisterPollingHandler();
-extern "C" void SIUnregisterPollingHandler();
-extern "C" void SIInit();
-extern "C" static void __SITransfer();
-extern "C" void SIGetStatus();
-extern "C" void SISetCommand();
-extern "C" void SITransferCommands();
-extern "C" void SISetXY();
-extern "C" void SIEnablePolling();
-extern "C" void SIDisablePolling();
-extern "C" static void SIGetResponseRaw();
-extern "C" void SIGetResponse();
-extern "C" static void SIBios__AlarmHandler();
-extern "C" void SITransfer();
-extern "C" static void GetTypeCallback();
-extern "C" void SIGetType();
-extern "C" void SIGetTypeAsync();
+extern "C" void SIBusy(); // 1
+extern "C" void SIIsChanBusy(); // 1
+extern "C" static void CompleteTransfer(); // 1
+extern "C" static void SIInterruptHandler(); // 1
+extern "C" static void SIEnablePollingInterrupt(); // 1
+extern "C" void SIRegisterPollingHandler(); // 1
+extern "C" void SIUnregisterPollingHandler(); // 1
+extern "C" void SIInit(); // 1
+extern "C" static void __SITransfer(); // 1
+extern "C" void SIGetStatus(); // 1
+extern "C" void SISetCommand(); // 1
+extern "C" void SITransferCommands(); // 1
+extern "C" void SISetXY(); // 1
+extern "C" void SIEnablePolling(); // 1
+extern "C" void SIDisablePolling(); // 1
+extern "C" static void SIGetResponseRaw(); // 1
+extern "C" void SIGetResponse(); // 1
+extern "C" static void SIBios__AlarmHandler(); // 1
+extern "C" void SITransfer(); // 1
+extern "C" static void GetTypeCallback(); // 1
+extern "C" void SIGetType(); // 1
+extern "C" void SIGetTypeAsync(); // 1
 SECTION_DATA extern u8 SIBios__lit_1[68];
 SECTION_DATA extern u8 Si[20];
 SECTION_DATA extern u8 SIBios__Type[16];
@@ -87,31 +87,31 @@ SECTION_SBSS extern u8 __PADFixBits[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void OSRegisterVersion();
-extern "C" void OSSetAlarm();
-extern "C" void OSCancelAlarm();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSUnmaskInterrupts();
-extern "C" void OSGetWirelessID();
-extern "C" void OSSetWirelessID();
-extern "C" void __OSGetSystemTime();
-extern "C" void SISetSamplingRate();
-extern "C" void VIGetCurrentLine();
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSSetAlarm(); // 1
+extern "C" void OSCancelAlarm(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
+extern "C" void OSGetWirelessID(); // 1
+extern "C" void OSSetWirelessID(); // 1
+extern "C" void __OSGetSystemTime(); // 1
+extern "C" void SISetSamplingRate(); // 1
+extern "C" void VIGetCurrentLine(); // 1
 
-extern "C" void OSRegisterVersion();
-extern "C" void OSSetAlarm();
-extern "C" void OSCancelAlarm();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSUnmaskInterrupts();
-extern "C" void OSGetWirelessID();
-extern "C" void OSSetWirelessID();
-extern "C" void __OSGetSystemTime();
-extern "C" void SISetSamplingRate();
-extern "C" void VIGetCurrentLine();
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSSetAlarm(); // 1
+extern "C" void OSCancelAlarm(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
+extern "C" void OSGetWirelessID(); // 1
+extern "C" void OSSetWirelessID(); // 1
+extern "C" void __OSGetSystemTime(); // 1
+extern "C" void SISetSamplingRate(); // 1
+extern "C" void VIGetCurrentLine(); // 1
 
 // 
 // Declarations:

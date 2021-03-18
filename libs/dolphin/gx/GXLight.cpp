@@ -9,29 +9,29 @@
 // Forward References:
 // 
 
-extern "C" void GXInitLightAttn();
-extern "C" void GXInitLightSpot();
-extern "C" void GXInitLightDistAttn();
-extern "C" void GXInitLightPos();
-extern "C" void GXInitLightDir();
-extern "C" void GXInitLightColor();
-extern "C" void GXLoadLightObjImm();
-extern "C" void GXSetChanAmbColor();
-extern "C" void GXSetChanMatColor();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
+extern "C" void GXInitLightAttn(); // 1
+extern "C" void GXInitLightSpot(); // 1
+extern "C" void GXInitLightDistAttn(); // 1
+extern "C" void GXInitLightPos(); // 1
+extern "C" void GXInitLightDir(); // 1
+extern "C" void GXInitLightColor(); // 1
+extern "C" void GXLoadLightObjImm(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
 
-extern "C" void GXInitLightAttn();
-extern "C" void GXInitLightSpot();
-extern "C" void GXInitLightDistAttn();
-extern "C" void GXInitLightPos();
-extern "C" void GXInitLightDir();
-extern "C" void GXInitLightColor();
-extern "C" void GXLoadLightObjImm();
-extern "C" void GXSetChanAmbColor();
-extern "C" void GXSetChanMatColor();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
+extern "C" void GXInitLightAttn(); // 1
+extern "C" void GXInitLightSpot(); // 1
+extern "C" void GXInitLightDistAttn(); // 1
+extern "C" void GXInitLightPos(); // 1
+extern "C" void GXInitLightDir(); // 1
+extern "C" void GXInitLightColor(); // 1
+extern "C" void GXLoadLightObjImm(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
 SECTION_DATA extern void*GXLight__lit_145[8];
 SECTION_SDATA2 extern u8 lit_134[4];
 SECTION_SDATA2 extern f32 GXLight__lit_135;
@@ -50,9 +50,9 @@ SECTION_SDATA2 extern f32 GXLight__lit_160;
 // External References:
 // 
 
-extern "C" void cosf();
+extern "C" void cosf(); // 1
 
-extern "C" void cosf();
+extern "C" void cosf(); // 1
 SECTION_SDATA2 extern void*__GXData;
 
 // 

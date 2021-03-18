@@ -9,27 +9,27 @@
 // Types:
 // 
 
-// build Z2AudibleChannel (['Z2AudibleChannel']) False/False
-/* top-level dependencies (begin ['Z2AudibleChannel']) */
-/* top-level dependencies (end ['Z2AudibleChannel']) */
-struct Z2AudibleChannel {
-	/* 802BBE74 */ Z2AudibleChannel();
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
 };
 
-// build Z2Audible (['Z2Audible']) False/False
-// build JASSoundParams (['JASSoundParams']) False/False
-/* top-level dependencies (begin ['JASSoundParams']) */
-/* top-level dependencies (end ['JASSoundParams']) */
+struct Z2AudibleAbsPos {
+	/* 802BBCDC */ void calc(JGeometry::TVec3<f32> const&);
+	/* 802BBD18 */ void init(JGeometry::TVec3<f32>*, JGeometry::TVec3<f32> const&, JGeometry::TVec3<f32> const*);
+};
+
 struct JASSoundParams {
 	/* 8029E3B0 */ void clamp();
 	/* 8029E47C */ void combine(JASSoundParams const&, JASSoundParams const&);
 };
 
-/* top-level dependencies (begin ['Z2Audible']) */
-// outer dependency: ('JASSoundParams',)
-/* top-level dependencies (end ['Z2Audible']) */
 struct Z2Audible {
-	// ('JASSoundParams',)
+	/* 802BBD94 */ Z2Audible(JGeometry::TVec3<f32> const&, JGeometry::TVec3<f32> const*, u32, bool);
 	/* 802BBE98 */ void calc();
 	/* 802BBED0 */ void getOuterParams(int);
 	/* 802BBEE4 */ void setOuterParams(JASSoundParams const&, JASSoundParams const&, int);
@@ -38,10 +38,10 @@ struct Z2Audible {
 	/* 802BD510 */ ~Z2Audible();
 };
 
-// build JASSoundParams (['JASSoundParams']) True/True
-// build Z2Audience3DSetting (['Z2Audience3DSetting']) False/False
-/* top-level dependencies (begin ['Z2Audience3DSetting']) */
-/* top-level dependencies (end ['Z2Audience3DSetting']) */
+struct Z2AudibleChannel {
+	/* 802BBE74 */ Z2AudibleChannel();
+};
+
 struct Z2Audience3DSetting {
 	/* 802BC248 */ Z2Audience3DSetting();
 	/* 802BC284 */ void init();
@@ -51,41 +51,20 @@ struct Z2Audience3DSetting {
 	/* 802BC6F8 */ void updateDolbyDist(f32, f32);
 };
 
-// build Z2AudioCamera (['Z2AudioCamera']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build Z2Audible (['Z2Audible']) True/True
-/* top-level dependencies (begin ['Z2AudioCamera']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('Z2Audible',)
-/* top-level dependencies (end ['Z2AudioCamera']) */
 struct Z2AudioCamera {
-	// ('Vec',)
-	// ('Z2Audible',)
 	/* 802BC758 */ Z2AudioCamera();
 	/* 802BC788 */ void init();
-	/* 802BC7DC */ void setCameraState(f32 const (* )[4], Vec&, bool);
 	/* 802BC8AC */ void setCameraState(f32 (* )[4], Vec&, Vec&, f32, f32, bool, bool);
+	/* 802BC7DC */ void setCameraState(f32 const (* )[4], Vec&, bool);
 	/* 802BCBEC */ void convertAbsToRel(Z2Audible*, int);
 	/* 802BCC7C */ void convertAbsToRel(Vec&, Vec*) const;
 	/* 802BCCC0 */ void isInSight(Vec&) const;
 };
 
-// build Vec (['Vec']) True/True
-// build Z2SpotMic (['Z2SpotMic']) False/False
-// build Z2AudioCamera (['Z2AudioCamera']) True/True
-// build Z2Audible (['Z2Audible']) True/True
-/* top-level dependencies (begin ['Z2SpotMic']) */
-// outer dependency: ('Z2AudioCamera',)
-// outer dependency: ('Z2Audible',)
-/* top-level dependencies (end ['Z2SpotMic']) */
 struct Z2SpotMic {
-	// ('Z2AudioCamera',)
-	// ('Z2Audible',)
 	/* 802BCD28 */ Z2SpotMic();
 	/* 802BCDA8 */ void clearMicState(int);
 	/* 802BCDE8 */ void calcVolumeFactor(int);
@@ -95,37 +74,18 @@ struct Z2SpotMic {
 	/* 802BD03C */ void calcMicVolume(f32, int, f32);
 };
 
-// build Z2Audience (['Z2Audience']) False/False
-// build Z2AudioCamera (['Z2AudioCamera']) True/True
-// build Z2Audible (['Z2Audible']) True/True
-// build Z2AudibleChannel (['Z2AudibleChannel']) True/True
-// build JASSoundParams (['JASSoundParams']) True/True
-// build Vec (['Vec']) True/True
-// build JAIAudible (['JAIAudible']) False/False
-/* top-level dependencies (begin ['JAIAudible']) */
-/* top-level dependencies (end ['JAIAudible']) */
 struct JAIAudible {
 	/* 8029EFAC */ ~JAIAudible();
 };
 
-/* top-level dependencies (begin ['Z2Audience']) */
-// outer dependency: ('Z2AudioCamera',)
-// outer dependency: ('Z2Audible',)
-// outer dependency: ('Z2AudibleChannel',)
-// outer dependency: ('JASSoundParams',)
-// outer dependency: ('Vec',)
-// outer dependency: ('JAIAudible',)
-/* top-level dependencies (end ['Z2Audience']) */
+struct JAISoundID {
+};
+
 struct Z2Audience {
-	// ('Z2AudioCamera',)
-	// ('Z2Audible',)
-	// ('Z2AudibleChannel',)
-	// ('Vec',)
-	// ('JAIAudible',)
-	// ('JASSoundParams',)
 	/* 802BD130 */ Z2Audience();
 	/* 802BD1FC */ ~Z2Audience();
 	/* 802BD2DC */ void setAudioCamera(f32 (* )[4], Vec&, Vec&, f32, f32, bool, int, bool);
+	/* 802BD338 */ void newAudible(JGeometry::TVec3<f32> const&, JAISoundID, JGeometry::TVec3<f32> const*, u32);
 	/* 802BD4D4 */ void deleteAudible(JAIAudible*);
 	/* 802BD5B8 */ void calcPriority(JAIAudible*);
 	/* 802BD704 */ void calcOffMicSound(f32);
@@ -137,15 +97,19 @@ struct Z2Audience {
 	/* 802BDB44 */ void calcRelPosDolby(Vec const&, int);
 	/* 802BDBDC */ void calcVolume_(f32, int) const;
 	/* 802BDC44 */ void calcDeltaPriority_(f32, int, bool) const;
+	/* 802BDCB0 */ void calcPitchDoppler_(JGeometry::TVec3<f32> const&, JGeometry::TVec3<f32> const&, JGeometry::TVec3<f32> const&, f32) const;
 	/* 802BDD00 */ void calcFxMix_(f32, int) const;
 	/* 802BDD48 */ void calcPitch_(Z2AudibleChannel*, Z2Audible const*, Z2AudioCamera const*) const;
 	/* 802BDED4 */ void getMaxChannels();
 };
 
-// build JAIAudible (['JAIAudible']) True/True
-// build JASGenericMemPool (['JASGenericMemPool']) False/False
-/* top-level dependencies (begin ['JASGenericMemPool']) */
-/* top-level dependencies (end ['JASGenericMemPool']) */
+template <typename A0>
+struct JASMemPool { };
+/* JASMemPool<Z2Audible> */
+struct JASMemPool__template5 {
+	/* 802BD288 */ ~JASMemPool__template5();
+};
+
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290860 */ ~JASGenericMemPool();
@@ -153,24 +117,11 @@ struct JASGenericMemPool {
 	/* 80290994 */ void free(void*, u32);
 };
 
-// build JAIAudience (['JAIAudience']) False/False
-/* top-level dependencies (begin ['JAIAudience']) */
-/* top-level dependencies (end ['JAIAudience']) */
 struct JAIAudience {
 	/* 8029EFF4 */ ~JAIAudience();
 };
 
-// build Z2Calc (['Z2Calc']) False/False
-// build Z2Calc (['Z2Calc']) True/False
-struct Z2Calc;
-/* top-level dependencies (begin ['Z2Calc']) */
-// outer dependency: ('Z2Calc', 'CurveSign')
-/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
-	// ('Z2Calc', 'CurveSign')
-	// build CurveSign (['Z2Calc', 'CurveSign']) False/False
-	/* dependencies (begin ['Z2Calc', 'CurveSign']) */
-	/* dependencies (end ['Z2Calc', 'CurveSign']) */
 	struct CurveSign {
 	};
 
@@ -178,85 +129,67 @@ struct Z2Calc {
 	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
 };
 
-// build Z2SoundInfo (['Z2SoundInfo']) False/False
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
-struct JAISoundID {
-};
-
-/* top-level dependencies (begin ['Z2SoundInfo']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SoundInfo']) */
 struct Z2SoundInfo {
-	// ('JAISoundID',)
 	/* 802BB158 */ void getAudibleSwFull(JAISoundID);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" static void func_802BBCDC();
-extern "C" static void func_802BBD18();
-extern "C" static void func_802BBD94();
-extern "C" void func_802BD288();
-extern "C" static void func_802BD338();
-extern "C" static void func_802BDCB0();
-extern "C" void __sinit_Z2Audience_cpp();
+extern "C" void __sinit_Z2Audience_cpp(); // 1
 
-extern "C" static void func_802BBCDC();
-extern "C" static void func_802BBD18();
-extern "C" static void func_802BBD94();
-extern "C" void __ct__16Z2AudibleChannelFv();
-extern "C" void calc__9Z2AudibleFv();
-extern "C" void getOuterParams__9Z2AudibleFi();
-extern "C" void setOuterParams__9Z2AudibleFRC14JASSoundParamsRC14JASSoundParamsi();
-extern "C" void getChannel__9Z2AudibleFi();
-extern "C" void getDistVolBit__9Z2AudibleFv();
-extern "C" void __ct__19Z2Audience3DSettingFv();
-extern "C" void init__19Z2Audience3DSettingFv();
-extern "C" void initVolumeDist__19Z2Audience3DSettingFv();
-extern "C" void updateVolumeDist__19Z2Audience3DSettingFf();
-extern "C" void initDolbyDist__19Z2Audience3DSettingFv();
-extern "C" void updateDolbyDist__19Z2Audience3DSettingFff();
-extern "C" void __ct__13Z2AudioCameraFv();
-extern "C" void init__13Z2AudioCameraFv();
-extern "C" void setCameraState__13Z2AudioCameraFPA4_CfR3Vecb();
-extern "C" void setCameraState__13Z2AudioCameraFPA4_fR3VecR3Vecffbb();
-extern "C" void convertAbsToRel__13Z2AudioCameraFP9Z2Audiblei();
-extern "C" void convertAbsToRel__13Z2AudioCameraCFR3VecP3Vec();
-extern "C" void isInSight__13Z2AudioCameraCFR3Vec();
-extern "C" void __ct__9Z2SpotMicFv();
-extern "C" void clearMicState__9Z2SpotMicFi();
-extern "C" void calcVolumeFactor__9Z2SpotMicFi();
-extern "C" void setMicState__9Z2SpotMicFP13Z2AudioCamerai();
-extern "C" void calcMicDist__9Z2SpotMicFP9Z2Audible();
-extern "C" void calcMicPriority__9Z2SpotMicFf();
-extern "C" void calcMicVolume__9Z2SpotMicFfif();
-extern "C" void __ct__10Z2AudienceFv();
-extern "C" void __dt__10Z2AudienceFv();
-extern "C" void func_802BD288();
-extern "C" void setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib();
-extern "C" static void func_802BD338();
-extern "C" void deleteAudible__10Z2AudienceFP10JAIAudible();
-extern "C" void __dt__9Z2AudibleFv();
-extern "C" void calcPriority__10Z2AudienceFP10JAIAudible();
-extern "C" void calcOffMicSound__10Z2AudienceFf();
-extern "C" void mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei();
-extern "C" void setTargetVolume__10Z2AudienceFfi();
-extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci();
-extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi();
-extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci();
-extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci();
-extern "C" void calcVolume___10Z2AudienceCFfi();
-extern "C" void calcDeltaPriority___10Z2AudienceCFfib();
-extern "C" static void func_802BDCB0();
-extern "C" void calcFxMix___10Z2AudienceCFfi();
-extern "C" void calcPitch___10Z2AudienceCFP16Z2AudibleChannelPC9Z2AudiblePC13Z2AudioCamera();
-extern "C" void getMaxChannels__10Z2AudienceFv();
-extern "C" void __sinit_Z2Audience_cpp();
+extern "C" void func_802BBCDC(); // 1
+extern "C" void func_802BBD18(); // 1
+extern "C" void func_802BBD94(); // 1
+extern "C" void __ct__16Z2AudibleChannelFv(); // 1
+extern "C" void calc__9Z2AudibleFv(); // 1
+extern "C" void getOuterParams__9Z2AudibleFi(); // 1
+extern "C" void setOuterParams__9Z2AudibleFRC14JASSoundParamsRC14JASSoundParamsi(); // 1
+extern "C" void getChannel__9Z2AudibleFi(); // 1
+extern "C" void getDistVolBit__9Z2AudibleFv(); // 1
+extern "C" void __ct__19Z2Audience3DSettingFv(); // 1
+extern "C" void init__19Z2Audience3DSettingFv(); // 1
+extern "C" void initVolumeDist__19Z2Audience3DSettingFv(); // 1
+extern "C" void updateVolumeDist__19Z2Audience3DSettingFf(); // 1
+extern "C" void initDolbyDist__19Z2Audience3DSettingFv(); // 1
+extern "C" void updateDolbyDist__19Z2Audience3DSettingFff(); // 1
+extern "C" void __ct__13Z2AudioCameraFv(); // 1
+extern "C" void init__13Z2AudioCameraFv(); // 1
+extern "C" void setCameraState__13Z2AudioCameraFPA4_CfR3Vecb(); // 1
+extern "C" void setCameraState__13Z2AudioCameraFPA4_fR3VecR3Vecffbb(); // 1
+extern "C" void convertAbsToRel__13Z2AudioCameraFP9Z2Audiblei(); // 1
+extern "C" void convertAbsToRel__13Z2AudioCameraCFR3VecP3Vec(); // 1
+extern "C" void isInSight__13Z2AudioCameraCFR3Vec(); // 1
+extern "C" void __ct__9Z2SpotMicFv(); // 1
+extern "C" void clearMicState__9Z2SpotMicFi(); // 1
+extern "C" void calcVolumeFactor__9Z2SpotMicFi(); // 1
+extern "C" void setMicState__9Z2SpotMicFP13Z2AudioCamerai(); // 1
+extern "C" void calcMicDist__9Z2SpotMicFP9Z2Audible(); // 1
+extern "C" void calcMicPriority__9Z2SpotMicFf(); // 1
+extern "C" void calcMicVolume__9Z2SpotMicFfif(); // 1
+extern "C" void __ct__10Z2AudienceFv(); // 1
+extern "C" void __dt__10Z2AudienceFv(); // 1
+extern "C" void func_802BD288(); // 1
+extern "C" void setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib(); // 1
+extern "C" void func_802BD338(); // 1
+extern "C" void deleteAudible__10Z2AudienceFP10JAIAudible(); // 1
+extern "C" void __dt__9Z2AudibleFv(); // 1
+extern "C" void calcPriority__10Z2AudienceFP10JAIAudible(); // 1
+extern "C" void calcOffMicSound__10Z2AudienceFf(); // 1
+extern "C" void mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei(); // 1
+extern "C" void setTargetVolume__10Z2AudienceFfi(); // 1
+extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci(); // 1
+extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi(); // 1
+extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci(); // 1
+extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci(); // 1
+extern "C" void calcVolume___10Z2AudienceCFfi(); // 1
+extern "C" void calcDeltaPriority___10Z2AudienceCFfib(); // 1
+extern "C" void func_802BDCB0(); // 1
+extern "C" void calcFxMix___10Z2AudienceCFfi(); // 1
+extern "C" void calcPitch___10Z2AudienceCFP16Z2AudibleChannelPC9Z2AudiblePC13Z2AudioCamera(); // 1
+extern "C" void getMaxChannels__10Z2AudienceFv(); // 1
+extern "C" void __sinit_Z2Audience_cpp(); // 1
 SECTION_RODATA extern const u8 lit_1193[12 + 4 /* padding */];
 SECTION_DATA extern void*const __vt__10Z2Audience[8];
 SECTION_DATA extern void*const __vt__9Z2Audible[6];
@@ -306,56 +239,56 @@ SECTION_SDATA2 extern f32 lit_1988;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void PSMTXIdentity();
-extern "C" void PSMTXRotAxisRad();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECMag();
-extern "C" void __register_global_object();
-extern "C" void __construct_array();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void PSMTXRotAxisRad(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __ct__17JASGenericMemPoolFv();
-extern "C" void __dt__17JASGenericMemPoolFv();
-extern "C" void alloc__17JASGenericMemPoolFUl();
-extern "C" void free__17JASGenericMemPoolFPvUl();
-extern "C" void clamp__14JASSoundParamsFv();
-extern "C" void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams();
-extern "C" void __dt__10JAIAudibleFv();
-extern "C" void __dt__11JAIAudienceFv();
-extern "C" void linearTransform__6Z2CalcFfffffb();
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern "C" void getAudibleSwFull__11Z2SoundInfoF10JAISoundID();
-extern "C" void __dl__FPv();
-extern "C" void PSMTXIdentity();
-extern "C" void PSMTXRotAxisRad();
-extern "C" void PSMTXMultVec();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECMag();
-extern "C" void __register_global_object();
-extern "C" void __construct_array();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void __ct__17JASGenericMemPoolFv(); // 1
+extern "C" void __dt__17JASGenericMemPoolFv(); // 1
+extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
+extern "C" void free__17JASGenericMemPoolFPvUl(); // 1
+extern "C" void clamp__14JASSoundParamsFv(); // 1
+extern "C" void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams(); // 1
+extern "C" void __dt__10JAIAudibleFv(); // 1
+extern "C" void __dt__11JAIAudienceFv(); // 1
+extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
+extern "C" void getAudibleSwFull__11Z2SoundInfoF10JAISoundID(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void PSMTXRotAxisRad(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__10JAIAudible[6];
 SECTION_DATA extern void*const __vt__11JAIAudience[8];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
@@ -379,7 +312,7 @@ SECTION_SBSS extern u8 MIN_DISTANCE_VOLUME__7Z2Param[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802BBCDC() {
+asm void Z2AudibleAbsPos::calc(JGeometry::TVec3<f32> const& field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/func_802BBCDC.s"
 }
@@ -396,7 +329,7 @@ u8 Z2Audience__lit_848[4] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802BBD18() {
+asm void Z2AudibleAbsPos::init(JGeometry::TVec3<f32>* field_0, JGeometry::TVec3<f32> const& field_1, JGeometry::TVec3<f32> const* field_2) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/func_802BBD18.s"
 }
@@ -440,7 +373,7 @@ f32 Z2Audience__lit_896 = -1.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802BBD94() {
+asm Z2Audible::Z2Audible(JGeometry::TVec3<f32> const& field_0, JGeometry::TVec3<f32> const* field_1, u32 field_2, bool field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/func_802BBD94.s"
 }
@@ -870,7 +803,7 @@ asm Z2Audience::~Z2Audience() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802BD288() {
+asm JASMemPool__template5::~JASMemPool__template5() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/func_802BD288.s"
 }
@@ -902,7 +835,7 @@ u8 data_80451354[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802BD338() {
+asm void Z2Audience::newAudible(JGeometry::TVec3<f32> const& field_0, JAISoundID field_1, JGeometry::TVec3<f32> const* field_2, u32 field_3) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/func_802BD338.s"
 }
@@ -1045,7 +978,7 @@ asm void Z2Audience::calcDeltaPriority_(f32 field_0, int field_1, bool field_2) 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802BDCB0() {
+asm void Z2Audience::calcPitchDoppler_(JGeometry::TVec3<f32> const& field_0, JGeometry::TVec3<f32> const& field_1, JGeometry::TVec3<f32> const& field_2, f32 field_3) const {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Audience/func_802BDCB0.s"
 }

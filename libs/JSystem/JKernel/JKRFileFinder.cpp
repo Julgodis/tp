@@ -9,47 +9,25 @@
 // Types:
 // 
 
-// build JKRArcFinder (['JKRArcFinder']) False/False
-// build JKRArchive (['JKRArchive']) False/False
-// build JKRArchive (['JKRArchive']) True/False
-struct JKRArchive;
-/* top-level dependencies (begin ['JKRArchive']) */
-// outer dependency: ('JKRArchive', 'SDirEntry')
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
-	// ('JKRArchive', 'SDirEntry')
-	// build SDirEntry (['JKRArchive', 'SDirEntry']) False/False
-	/* dependencies (begin ['JKRArchive', 'SDirEntry']) */
-	/* dependencies (end ['JKRArchive', 'SDirEntry']) */
 	struct SDirEntry {
 	};
 
 	/* 802D5AC0 */ void getDirEntry(JKRArchive::SDirEntry*, u32) const;
 };
 
-/* top-level dependencies (begin ['JKRArcFinder']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['JKRArcFinder']) */
 struct JKRArcFinder {
-	// ('JKRArchive',)
 	/* 802D4638 */ JKRArcFinder(JKRArchive*, s32, s32);
 	/* 802D46C4 */ void findNextFile();
 	/* 802D4958 */ ~JKRArcFinder();
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build JKRDvdFinder (['JKRDvdFinder']) False/False
-/* top-level dependencies (begin ['JKRDvdFinder']) */
-/* top-level dependencies (end ['JKRDvdFinder']) */
 struct JKRDvdFinder {
 	/* 802D4770 */ JKRDvdFinder(char const*);
 	/* 802D47F4 */ ~JKRDvdFinder();
 	/* 802D4874 */ void findNextFile();
 };
 
-// build JKRFileFinder (['JKRFileFinder']) False/False
-/* top-level dependencies (begin ['JKRFileFinder']) */
-/* top-level dependencies (end ['JKRFileFinder']) */
 struct JKRFileFinder {
 	/* 802D4910 */ ~JKRFileFinder();
 };
@@ -59,13 +37,13 @@ struct JKRFileFinder {
 // 
 
 
-extern "C" void __ct__12JKRArcFinderFP10JKRArchivell();
-extern "C" void findNextFile__12JKRArcFinderFv();
-extern "C" void __ct__12JKRDvdFinderFPCc();
-extern "C" void __dt__12JKRDvdFinderFv();
-extern "C" void findNextFile__12JKRDvdFinderFv();
-extern "C" void __dt__13JKRFileFinderFv();
-extern "C" void __dt__12JKRArcFinderFv();
+extern "C" void __ct__12JKRArcFinderFP10JKRArchivell(); // 1
+extern "C" void findNextFile__12JKRArcFinderFv(); // 1
+extern "C" void __ct__12JKRDvdFinderFPCc(); // 1
+extern "C" void __dt__12JKRDvdFinderFv(); // 1
+extern "C" void findNextFile__12JKRDvdFinderFv(); // 1
+extern "C" void __dt__13JKRFileFinderFv(); // 1
+extern "C" void __dt__12JKRArcFinderFv(); // 1
 SECTION_DATA extern void*const __vt__12JKRDvdFinder[4];
 SECTION_DATA extern void*const __vt__12JKRArcFinder[4];
 SECTION_DATA extern void*const __vt__13JKRFileFinder[4];
@@ -74,16 +52,16 @@ SECTION_DATA extern void*const __vt__13JKRFileFinder[4];
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void DVDOpenDir();
-extern "C" void DVDReadDir();
-extern "C" bool DVDCloseDir();
+void operator delete(void*); // 2
+extern "C" void DVDOpenDir(); // 1
+extern "C" void DVDReadDir(); // 1
+extern "C" bool DVDCloseDir(); // 1
 
-extern "C" void __dl__FPv();
-extern "C" void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl();
-extern "C" void DVDOpenDir();
-extern "C" void DVDReadDir();
-extern "C" bool DVDCloseDir();
+extern "C" void __dl__FPv(); // 1
+extern "C" void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl(); // 1
+extern "C" void DVDOpenDir(); // 1
+extern "C" void DVDReadDir(); // 1
+extern "C" bool DVDCloseDir(); // 1
 
 // 
 // Declarations:

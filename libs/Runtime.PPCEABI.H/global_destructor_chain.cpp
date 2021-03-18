@@ -9,11 +9,11 @@
 // Forward References:
 // 
 
-extern "C" void __destroy_global_chain();
-extern "C" void __register_global_object();
+extern "C" void __destroy_global_chain(); // 1
+extern "C" void __register_global_object(); // 1
 
-extern "C" void __destroy_global_chain();
-extern "C" void __register_global_object();
+extern "C" void __destroy_global_chain(); // 1
+extern "C" void __register_global_object(); // 1
 SECTION_SBSS extern u8 __global_destructor_chain[4 + 4 /* padding */];
 
 // 

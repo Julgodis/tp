@@ -9,27 +9,27 @@
 // Forward References:
 // 
 
-extern "C" static void BlockReadCallback();
-extern "C" void __CARDRead();
-extern "C" static void BlockWriteCallback();
-extern "C" void __CARDWrite();
+extern "C" static void BlockReadCallback(); // 1
+extern "C" void __CARDRead(); // 1
+extern "C" static void BlockWriteCallback(); // 1
+extern "C" void __CARDWrite(); // 1
 
-extern "C" static void BlockReadCallback();
-extern "C" void __CARDRead();
-extern "C" static void BlockWriteCallback();
-extern "C" void __CARDWrite();
+extern "C" static void BlockReadCallback(); // 1
+extern "C" void __CARDRead(); // 1
+extern "C" static void BlockWriteCallback(); // 1
+extern "C" void __CARDWrite(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __CARDReadSegment();
-extern "C" void __CARDWritePage();
-extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDReadSegment(); // 1
+extern "C" void __CARDWritePage(); // 1
+extern "C" void __CARDPutControlBlock(); // 1
 
-extern "C" void __CARDReadSegment();
-extern "C" void __CARDWritePage();
-extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDReadSegment(); // 1
+extern "C" void __CARDWritePage(); // 1
+extern "C" void __CARDPutControlBlock(); // 1
 SECTION_BSS extern u8 __CARDBlock[544];
 
 // 

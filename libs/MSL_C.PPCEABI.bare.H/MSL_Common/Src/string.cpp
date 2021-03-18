@@ -9,23 +9,23 @@
 // Forward References:
 // 
 
-extern "C" void strrchr();
-extern "C" void strchr();
-extern "C" void strncmp();
-extern "C" void strcmp();
-extern "C" void strcat();
-extern "C" void strncpy();
-extern "C" void strcpy();
-extern "C" void strlen();
+extern "C" void strrchr(); // 1
+extern "C" void strchr(); // 1
+extern "C" void strncmp(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcat(); // 1
+extern "C" void strncpy(); // 1
+extern "C" void strcpy(); // 1
+extern "C" void strlen(); // 1
 
-extern "C" void strrchr();
-extern "C" void strchr();
-extern "C" void strncmp();
-extern "C" void strcmp();
-extern "C" void strcat();
-extern "C" void strncpy();
-extern "C" void strcpy();
-extern "C" void strlen();
+extern "C" void strrchr(); // 1
+extern "C" void strchr(); // 1
+extern "C" void strncmp(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcat(); // 1
+extern "C" void strncpy(); // 1
+extern "C" void strcpy(); // 1
+extern "C" void strlen(); // 1
 
 // 
 // External References:

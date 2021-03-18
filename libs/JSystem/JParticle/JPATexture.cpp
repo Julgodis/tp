@@ -9,49 +9,37 @@
 // Types:
 // 
 
-// build JPATexture (['JPATexture']) False/False
-/* top-level dependencies (begin ['JPATexture']) */
-/* top-level dependencies (end ['JPATexture']) */
 struct JPATexture {
 	/* 8027D7D4 */ JPATexture(u8 const*);
 	/* 8027D83C */ ~JPATexture();
 };
 
-// build JUTTexture (['JUTTexture']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['JUTTexture']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// ('ResTIMG',)
 	/* 802DE234 */ ~JUTTexture();
 	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
 };
 
-// build ResTIMG (['ResTIMG']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__10JPATextureFPCUc();
-extern "C" void __dt__10JPATextureFv();
+extern "C" void __ct__10JPATextureFPCUc(); // 1
+extern "C" void __dt__10JPATextureFv(); // 1
 SECTION_DATA extern void*const __vt__10JPATexture[4];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
-extern "C" void __dt__10JUTTextureFv();
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc();
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dt__10JUTTextureFv(); // 1
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc(); // 1
 
 // 
 // Declarations:

@@ -9,17 +9,11 @@
 // Types:
 // 
 
-// build dBgS_GrpPassChk (['dBgS_GrpPassChk']) False/False
-/* top-level dependencies (begin ['dBgS_GrpPassChk']) */
-/* top-level dependencies (end ['dBgS_GrpPassChk']) */
 struct dBgS_GrpPassChk {
 	/* 80077BA0 */ dBgS_GrpPassChk();
 	/* 80077BC4 */ ~dBgS_GrpPassChk();
 };
 
-// build cBgS_GrpPassChk (['cBgS_GrpPassChk']) False/False
-/* top-level dependencies (begin ['cBgS_GrpPassChk']) */
-/* top-level dependencies (end ['cBgS_GrpPassChk']) */
 struct cBgS_GrpPassChk {
 	/* 80077C20 */ ~cBgS_GrpPassChk();
 };
@@ -29,9 +23,9 @@ struct cBgS_GrpPassChk {
 // 
 
 
-extern "C" void __ct__15dBgS_GrpPassChkFv();
-extern "C" void __dt__15dBgS_GrpPassChkFv();
-extern "C" void __dt__15cBgS_GrpPassChkFv();
+extern "C" void __ct__15dBgS_GrpPassChkFv(); // 1
+extern "C" void __dt__15dBgS_GrpPassChkFv(); // 1
+extern "C" void __dt__15cBgS_GrpPassChkFv(); // 1
 SECTION_DATA extern void*const __vt__15dBgS_GrpPassChk[3];
 SECTION_DATA extern void*const __vt__15cBgS_GrpPassChk[3];
 
@@ -39,9 +33,9 @@ SECTION_DATA extern void*const __vt__15cBgS_GrpPassChk[3];
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

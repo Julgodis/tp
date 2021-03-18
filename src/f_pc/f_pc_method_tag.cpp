@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build process_method_tag_class (['process_method_tag_class']) False/False
-/* top-level dependencies (begin ['process_method_tag_class']) */
-/* top-level dependencies (end ['process_method_tag_class']) */
 struct process_method_tag_class {
 };
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
@@ -31,31 +22,31 @@ struct create_tag_class {
 // Forward References:
 // 
 
-void fpcMtdTg_Do(process_method_tag_class*);
-void fpcMtdTg_ToMethodQ(node_list_class*, process_method_tag_class*);
-void fpcMtdTg_MethodQTo(process_method_tag_class*);
-extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
+void fpcMtdTg_Do(process_method_tag_class*); // 2
+void fpcMtdTg_ToMethodQ(node_list_class*, process_method_tag_class*); // 2
+void fpcMtdTg_MethodQTo(process_method_tag_class*); // 2
+extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
 
-extern "C" void fpcMtdTg_Do__FP24process_method_tag_class();
-extern "C" void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class();
-extern "C" void fpcMtdTg_MethodQTo__FP24process_method_tag_class();
-extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
+extern "C" void fpcMtdTg_Do__FP24process_method_tag_class(); // 1
+extern "C" void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class(); // 1
+extern "C" void fpcMtdTg_MethodQTo__FP24process_method_tag_class(); // 1
+extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
 
 // 
 // External References:
 // 
 
-void cTg_SingleCut(create_tag_class*);
-void cTg_Addition(node_list_class*, create_tag_class*);
-void cTg_Create(create_tag_class*, void*);
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void cTg_SingleCut(create_tag_class*); // 2
+void cTg_Addition(node_list_class*, create_tag_class*); // 2
+void cTg_Create(create_tag_class*, void*); // 2
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void cTg_SingleCut__FP16create_tag_class();
-extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern "C" void cTg_Create__FP16create_tag_classPv();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void cTg_SingleCut__FP16create_tag_class(); // 1
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class(); // 1
+extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

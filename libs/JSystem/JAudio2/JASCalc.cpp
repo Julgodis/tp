@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JASCalc (['JASCalc']) False/False
-/* top-level dependencies (begin ['JASCalc']) */
-/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F2E8 */ void imixcopy(s16 const*, s16 const*, s16*, u32);
 	/* 8028F318 */ void bcopyfast(void const*, void*, u32);
@@ -19,21 +16,25 @@ struct JASCalc {
 	/* 8028F454 */ void bzerofast(void*, u32);
 	/* 8028F480 */ void bzero(void*, u32);
 	/* 8028F578 */ void pow2(f32);
+	/*          */ template <typename A1, typename B1>
+	/*          */ void clamp(/* s32 */);
+	/* 8028F69C */ /* clamp<s16, s32> */
+	void clamp__template0(s32);
+
 };
 
 // 
 // Forward References:
 // 
 
-extern "C" void func_8028F69C();
 
-extern "C" void imixcopy__7JASCalcFPCsPCsPsUl();
-extern "C" void bcopyfast__7JASCalcFPCvPvUl();
-extern "C" void bcopy__7JASCalcFPCvPvUl();
-extern "C" void bzerofast__7JASCalcFPvUl();
-extern "C" void bzero__7JASCalcFPvUl();
-extern "C" void pow2__7JASCalcFf();
-extern "C" void func_8028F69C();
+extern "C" void imixcopy__7JASCalcFPCsPCsPsUl(); // 1
+extern "C" void bcopyfast__7JASCalcFPCvPvUl(); // 1
+extern "C" void bcopy__7JASCalcFPCvPvUl(); // 1
+extern "C" void bzerofast__7JASCalcFPvUl(); // 1
+extern "C" void bzero__7JASCalcFPvUl(); // 1
+extern "C" void pow2__7JASCalcFf(); // 1
+extern "C" void func_8028F69C(); // 1
 SECTION_RODATA extern const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
 SECTION_RODATA extern const f32 data_8039AFB8[6];
 SECTION_SDATA2 extern f32 JASCalc__lit_847;
@@ -48,9 +49,9 @@ SECTION_SDATA2 extern f32 JASCalc__lit_995;
 // External References:
 // 
 
-extern "C" void DCZeroRange();
+extern "C" void DCZeroRange(); // 1
 
-extern "C" void DCZeroRange();
+extern "C" void DCZeroRange(); // 1
 SECTION_SDATA extern u32 __float_huge;
 
 // 
@@ -230,7 +231,7 @@ asm void JASCalc::pow2(f32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8028F69C() {
+asm void JASCalc::clamp__template0(s32 field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCalc/func_8028F69C.s"
 }

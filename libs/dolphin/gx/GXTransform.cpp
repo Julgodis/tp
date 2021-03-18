@@ -9,39 +9,39 @@
 // Forward References:
 // 
 
-extern "C" void GXProject();
-extern "C" void GXSetProjection();
-extern "C" void GXSetProjectionv();
-extern "C" void GXGetProjectionv();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXLoadNrmMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXLoadTexMtxImm();
-extern "C" static void __GXSetViewport();
-extern "C" void GXSetViewport();
-extern "C" void GXGetViewportv();
-extern "C" void GXSetScissor();
-extern "C" void GXGetScissor();
-extern "C" void GXSetScissorBoxOffset();
-extern "C" void GXSetClipMode();
-extern "C" void __GXSetMatrixIndex();
+extern "C" void GXProject(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXSetProjectionv(); // 1
+extern "C" void GXGetProjectionv(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXLoadNrmMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" static void __GXSetViewport(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void GXGetViewportv(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void GXGetScissor(); // 1
+extern "C" void GXSetScissorBoxOffset(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void __GXSetMatrixIndex(); // 1
 
-extern "C" void GXProject();
-extern "C" void GXSetProjection();
-extern "C" void GXSetProjectionv();
-extern "C" void GXGetProjectionv();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXLoadNrmMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXLoadTexMtxImm();
-extern "C" static void __GXSetViewport();
-extern "C" void GXSetViewport();
-extern "C" void GXGetViewportv();
-extern "C" void GXSetScissor();
-extern "C" void GXGetScissor();
-extern "C" void GXSetScissorBoxOffset();
-extern "C" void GXSetClipMode();
-extern "C" void __GXSetMatrixIndex();
+extern "C" void GXProject(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXSetProjectionv(); // 1
+extern "C" void GXGetProjectionv(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXLoadNrmMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" static void __GXSetViewport(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void GXGetViewportv(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void GXGetScissor(); // 1
+extern "C" void GXSetScissorBoxOffset(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void __GXSetMatrixIndex(); // 1
 SECTION_SDATA2 extern u8 lit_26[4];
 SECTION_SDATA2 extern f32 lit_27;
 SECTION_SDATA2 extern f32 lit_28;

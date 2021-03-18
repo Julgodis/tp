@@ -9,15 +9,15 @@
 // Forward References:
 // 
 
-extern "C" static void ClampStick();
-extern "C" static void ClampCircle();
-extern "C" void PADClamp();
-extern "C" void PADClampCircle();
+extern "C" static void ClampStick(); // 1
+extern "C" static void ClampCircle(); // 1
+extern "C" void PADClamp(); // 1
+extern "C" void PADClampCircle(); // 1
 
-extern "C" static void ClampStick();
-extern "C" static void ClampCircle();
-extern "C" void PADClamp();
-extern "C" void PADClampCircle();
+extern "C" static void ClampStick(); // 1
+extern "C" static void ClampCircle(); // 1
+extern "C" void PADClamp(); // 1
+extern "C" void PADClampCircle(); // 1
 SECTION_RODATA extern const u8 ClampRegion[10 + 6 /* padding */];
 SECTION_SDATA2 extern u8 Padclamp__lit_160[4 + 4 /* padding */];
 SECTION_SDATA2 extern f64 Padclamp__lit_161;

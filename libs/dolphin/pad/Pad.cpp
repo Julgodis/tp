@@ -9,47 +9,47 @@
 // Forward References:
 // 
 
-extern "C" static void UpdateOrigin();
-extern "C" static void PADOriginCallback();
-extern "C" static void PADOriginUpdateCallback();
-extern "C" static void PADProbeCallback();
-extern "C" static void PADTypeAndStatusCallback();
-extern "C" static void PADReceiveCheckCallback();
-extern "C" void PADReset();
-extern "C" void PADRecalibrate();
-extern "C" void PADInit();
-extern "C" void PADRead();
-extern "C" void PADControlMotor();
-extern "C" void PADSetSpec();
-extern "C" static void SPEC0_MakeStatus();
-extern "C" static void SPEC1_MakeStatus();
-extern "C" static void SPEC2_MakeStatus();
-extern "C" void PADSetAnalogMode();
-extern "C" static void Pad__OnReset();
-extern "C" static void SamplingHandler();
-extern "C" static void PADSetSamplingCallback();
-extern "C" void __PADDisableRecalibration();
+extern "C" static void UpdateOrigin(); // 1
+extern "C" static void PADOriginCallback(); // 1
+extern "C" static void PADOriginUpdateCallback(); // 1
+extern "C" static void PADProbeCallback(); // 1
+extern "C" static void PADTypeAndStatusCallback(); // 1
+extern "C" static void PADReceiveCheckCallback(); // 1
+extern "C" void PADReset(); // 1
+extern "C" void PADRecalibrate(); // 1
+extern "C" void PADInit(); // 1
+extern "C" void PADRead(); // 1
+extern "C" void PADControlMotor(); // 1
+extern "C" void PADSetSpec(); // 1
+extern "C" static void SPEC0_MakeStatus(); // 1
+extern "C" static void SPEC1_MakeStatus(); // 1
+extern "C" static void SPEC2_MakeStatus(); // 1
+extern "C" void PADSetAnalogMode(); // 1
+extern "C" static void Pad__OnReset(); // 1
+extern "C" static void SamplingHandler(); // 1
+extern "C" static void PADSetSamplingCallback(); // 1
+extern "C" void __PADDisableRecalibration(); // 1
 
-extern "C" static void UpdateOrigin();
-extern "C" static void PADOriginCallback();
-extern "C" static void PADOriginUpdateCallback();
-extern "C" static void PADProbeCallback();
-extern "C" static void PADTypeAndStatusCallback();
-extern "C" static void PADReceiveCheckCallback();
-extern "C" void PADReset();
-extern "C" void PADRecalibrate();
-extern "C" void PADInit();
-extern "C" void PADRead();
-extern "C" void PADControlMotor();
-extern "C" void PADSetSpec();
-extern "C" static void SPEC0_MakeStatus();
-extern "C" static void SPEC1_MakeStatus();
-extern "C" static void SPEC2_MakeStatus();
-extern "C" void PADSetAnalogMode();
-extern "C" static void Pad__OnReset();
-extern "C" static void SamplingHandler();
-extern "C" static void PADSetSamplingCallback();
-extern "C" void __PADDisableRecalibration();
+extern "C" static void UpdateOrigin(); // 1
+extern "C" static void PADOriginCallback(); // 1
+extern "C" static void PADOriginUpdateCallback(); // 1
+extern "C" static void PADProbeCallback(); // 1
+extern "C" static void PADTypeAndStatusCallback(); // 1
+extern "C" static void PADReceiveCheckCallback(); // 1
+extern "C" void PADReset(); // 1
+extern "C" void PADRecalibrate(); // 1
+extern "C" void PADInit(); // 1
+extern "C" void PADRead(); // 1
+extern "C" void PADControlMotor(); // 1
+extern "C" void PADSetSpec(); // 1
+extern "C" static void SPEC0_MakeStatus(); // 1
+extern "C" static void SPEC1_MakeStatus(); // 1
+extern "C" static void SPEC2_MakeStatus(); // 1
+extern "C" void PADSetAnalogMode(); // 1
+extern "C" static void Pad__OnReset(); // 1
+extern "C" static void SamplingHandler(); // 1
+extern "C" static void PADSetSamplingCallback(); // 1
+extern "C" void __PADDisableRecalibration(); // 1
 SECTION_DATA extern u8 Pad__lit_1[69 + 3 /* padding */];
 SECTION_DATA extern void*Pad__ResetFunctionInfo[4];
 SECTION_BSS extern u8 Pad__Type[16];
@@ -79,55 +79,55 @@ SECTION_SBSS extern u8 __PADSpec[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memset();
-extern "C" void OSRegisterVersion();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSRegisterResetFunction();
-extern "C" void OSSetWirelessID();
-extern "C" void OSGetTime();
-extern "C" void SIBusy();
-extern "C" void SIIsChanBusy();
-extern "C" void SIRegisterPollingHandler();
-extern "C" void SIUnregisterPollingHandler();
-extern "C" void SIGetStatus();
-extern "C" void SISetCommand();
-extern "C" void SITransferCommands();
-extern "C" void SIEnablePolling();
-extern "C" void SIDisablePolling();
-extern "C" void SIGetResponse();
-extern "C" void SITransfer();
-extern "C" void SIGetType();
-extern "C" void SIGetTypeAsync();
-extern "C" void SIRefreshSamplingRate();
-extern "C" void __shr2i();
+SECTION_INIT void memset(); // 1
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSRegisterResetFunction(); // 1
+extern "C" void OSSetWirelessID(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void SIBusy(); // 1
+extern "C" void SIIsChanBusy(); // 1
+extern "C" void SIRegisterPollingHandler(); // 1
+extern "C" void SIUnregisterPollingHandler(); // 1
+extern "C" void SIGetStatus(); // 1
+extern "C" void SISetCommand(); // 1
+extern "C" void SITransferCommands(); // 1
+extern "C" void SIEnablePolling(); // 1
+extern "C" void SIDisablePolling(); // 1
+extern "C" void SIGetResponse(); // 1
+extern "C" void SITransfer(); // 1
+extern "C" void SIGetType(); // 1
+extern "C" void SIGetTypeAsync(); // 1
+extern "C" void SIRefreshSamplingRate(); // 1
+extern "C" void __shr2i(); // 1
 
-SECTION_INIT void memset();
-extern "C" void OSRegisterVersion();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSRegisterResetFunction();
-extern "C" void OSSetWirelessID();
-extern "C" void OSGetTime();
-extern "C" void SIBusy();
-extern "C" void SIIsChanBusy();
-extern "C" void SIRegisterPollingHandler();
-extern "C" void SIUnregisterPollingHandler();
-extern "C" void SIGetStatus();
-extern "C" void SISetCommand();
-extern "C" void SITransferCommands();
-extern "C" void SIEnablePolling();
-extern "C" void SIDisablePolling();
-extern "C" void SIGetResponse();
-extern "C" void SITransfer();
-extern "C" void SIGetType();
-extern "C" void SIGetTypeAsync();
-extern "C" void SIRefreshSamplingRate();
-extern "C" void __shr2i();
+SECTION_INIT void memset(); // 1
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSRegisterResetFunction(); // 1
+extern "C" void OSSetWirelessID(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void SIBusy(); // 1
+extern "C" void SIIsChanBusy(); // 1
+extern "C" void SIRegisterPollingHandler(); // 1
+extern "C" void SIUnregisterPollingHandler(); // 1
+extern "C" void SIGetStatus(); // 1
+extern "C" void SISetCommand(); // 1
+extern "C" void SITransferCommands(); // 1
+extern "C" void SIEnablePolling(); // 1
+extern "C" void SIDisablePolling(); // 1
+extern "C" void SIGetResponse(); // 1
+extern "C" void SITransfer(); // 1
+extern "C" void SIGetType(); // 1
+extern "C" void SIGetTypeAsync(); // 1
+extern "C" void SIRefreshSamplingRate(); // 1
+extern "C" void __shr2i(); // 1
 SECTION_SBSS extern u8 __PADFixBits[4 + 4 /* padding */];
 
 // 

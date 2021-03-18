@@ -9,32 +9,45 @@
 // Types:
 // 
 
-// build JAISe (['JAISe']) False/False
-// build JASSoundParams (['JASSoundParams']) False/False
-/* top-level dependencies (begin ['JASSoundParams']) */
-/* top-level dependencies (end ['JASSoundParams']) */
-struct JASSoundParams {
-};
-
-// build JAISoundActivity (['JAISoundActivity']) False/False
-/* top-level dependencies (begin ['JAISoundActivity']) */
-/* top-level dependencies (end ['JAISoundActivity']) */
 struct JAISoundActivity {
 };
 
-/* top-level dependencies (begin ['JAISe']) */
-// outer dependency: ('JASSoundParams',)
-// outer dependency: ('JAISoundActivity',)
-/* top-level dependencies (end ['JAISe']) */
+struct JAIAudience {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+template <typename A0>
+struct JAISoundStrategyMgr { };
+/* JAISoundStrategyMgr<JAISe> */
+struct JAISoundStrategyMgr__template0 {
+};
+
+struct JASSoundParams {
+};
+
+struct JAISoundID {
+};
+
+struct JAISeMgr {
+};
+
 struct JAISe {
-	// ('JASSoundParams',)
-	// ('JAISoundActivity',)
+	/* 8029F03C */ JAISe(JAISeMgr*, JAISoundStrategyMgr<JAISe>*, u32);
 	/* 8029F0F8 */ void mixOut_(JASSoundParams const&);
 	/* 8029F214 */ void stopTrack_();
 	/* 8029F250 */ void startTrack_(JASSoundParams const&);
 	/* 8029F304 */ void JAISeCategoryMgr_mixOut_(bool, JASSoundParams const&, JAISoundActivity);
 	/* 8029F4CC */ void JAISeCategoryMgr_calc_();
 	/* 8029F5C8 */ void JAISound_tryDie_();
+	/* 8029F650 */ void JAISeMgr_startID_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*);
 	/* 8029F6D8 */ bool getNumChild() const;
 	/* 8029F6E0 */ bool getChild(int);
 	/* 8029F6E8 */ void releaseChild(int);
@@ -46,15 +59,7 @@ struct JAISe {
 	/* 8029F868 */ void getTempoMgr();
 };
 
-// build JASSoundParams (['JASSoundParams']) True/True
-// build JAISoundActivity (['JAISoundActivity']) True/True
-// build JASTrack (['JASTrack']) False/False
-// build JASSoundParams (['JASSoundParams']) True/True
-/* top-level dependencies (begin ['JASTrack']) */
-// outer dependency: ('JASSoundParams',)
-/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
-	// ('JASSoundParams',)
 	/* 80291228 */ JASTrack();
 	/* 80291444 */ void setChannelMgrCount(u32);
 	/* 802915D4 */ void init();
@@ -67,24 +72,13 @@ struct JASTrack {
 	/* 80292B8C */ void setTempoRate(f32);
 };
 
-// build JAISoundParams (['JAISoundParams']) False/False
-// build JASSoundParams (['JASSoundParams']) True/True
-/* top-level dependencies (begin ['JAISoundParams']) */
-// outer dependency: ('JASSoundParams',)
-/* top-level dependencies (end ['JAISoundParams']) */
 struct JAISoundParams {
-	// ('JASSoundParams',)
 	/* 802A2280 */ void mixOutAll(JASSoundParams const&, JASSoundParams*, f32);
 };
 
-// build JAISound (['JAISound']) False/False
-// build JASTrack (['JASTrack']) True/True
-/* top-level dependencies (begin ['JAISound']) */
-// outer dependency: ('JASTrack',)
-/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
-	// ('JASTrack',)
 	/* 802A22F8 */ JAISound();
+	/* 802A2328 */ void start_JAISound_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*);
 	/* 802A25E0 */ bool asSeq();
 	/* 802A25E8 */ bool asStream();
 	/* 802A25F0 */ void die_JAISound_();
@@ -93,9 +87,6 @@ struct JAISound {
 	/* 802A29DC */ void initTrack_JAISound_(JASTrack*);
 };
 
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 };
@@ -104,42 +95,40 @@ struct JSUPtrLink {
 // Forward References:
 // 
 
-extern "C" void func_8029F03C();
-extern "C" void func_8029F650();
-extern "C" static void func_8029F870();
-extern "C" static void func_8029F878();
-extern "C" static void func_8029F880();
-extern "C" static void func_8029F888();
-extern "C" static void func_8029F890();
-extern "C" static void func_8029F898();
-extern "C" static void func_8029F8A0();
-extern "C" static void func_8029F8A8();
+extern "C" static void func_8029F870(); // 1
+extern "C" static void func_8029F878(); // 1
+extern "C" static void func_8029F880(); // 1
+extern "C" static void func_8029F888(); // 1
+extern "C" static void func_8029F890(); // 1
+extern "C" static void func_8029F898(); // 1
+extern "C" static void func_8029F8A0(); // 1
+extern "C" static void func_8029F8A8(); // 1
 
-extern "C" void func_8029F03C();
-extern "C" void mixOut___5JAISeFRC14JASSoundParams();
-extern "C" void stopTrack___5JAISeFv();
-extern "C" void startTrack___5JAISeFRC14JASSoundParams();
-extern "C" void JAISeCategoryMgr_mixOut___5JAISeFbRC14JASSoundParams16JAISoundActivity();
-extern "C" void JAISeCategoryMgr_calc___5JAISeFv();
-extern "C" void JAISound_tryDie___5JAISeFv();
-extern "C" void func_8029F650();
-extern "C" bool getNumChild__5JAISeCFv();
-extern "C" bool getChild__5JAISeFi();
-extern "C" void releaseChild__5JAISeFi();
-extern "C" void prepare_getSeqData___5JAISeFv();
-extern "C" void prepare___5JAISeFv();
-extern "C" void getTrack__5JAISeFv();
-extern "C" void getChildTrack__5JAISeFi();
-extern "C" void asSe__5JAISeFv();
-extern "C" void getTempoMgr__5JAISeFv();
-extern "C" static void func_8029F870();
-extern "C" static void func_8029F878();
-extern "C" static void func_8029F880();
-extern "C" static void func_8029F888();
-extern "C" static void func_8029F890();
-extern "C" static void func_8029F898();
-extern "C" static void func_8029F8A0();
-extern "C" static void func_8029F8A8();
+extern "C" void func_8029F03C(); // 1
+extern "C" void mixOut___5JAISeFRC14JASSoundParams(); // 1
+extern "C" void stopTrack___5JAISeFv(); // 1
+extern "C" void startTrack___5JAISeFRC14JASSoundParams(); // 1
+extern "C" void JAISeCategoryMgr_mixOut___5JAISeFbRC14JASSoundParams16JAISoundActivity(); // 1
+extern "C" void JAISeCategoryMgr_calc___5JAISeFv(); // 1
+extern "C" void JAISound_tryDie___5JAISeFv(); // 1
+extern "C" void func_8029F650(); // 1
+extern "C" bool getNumChild__5JAISeCFv(); // 1
+extern "C" bool getChild__5JAISeFi(); // 1
+extern "C" void releaseChild__5JAISeFi(); // 1
+extern "C" void prepare_getSeqData___5JAISeFv(); // 1
+extern "C" void prepare___5JAISeFv(); // 1
+extern "C" void getTrack__5JAISeFv(); // 1
+extern "C" void getChildTrack__5JAISeFi(); // 1
+extern "C" void asSe__5JAISeFv(); // 1
+extern "C" void getTempoMgr__5JAISeFv(); // 1
+extern "C" static void func_8029F870(); // 1
+extern "C" static void func_8029F878(); // 1
+extern "C" static void func_8029F880(); // 1
+extern "C" static void func_8029F888(); // 1
+extern "C" static void func_8029F890(); // 1
+extern "C" static void func_8029F898(); // 1
+extern "C" static void func_8029F8A0(); // 1
+extern "C" static void func_8029F8A8(); // 1
 SECTION_DATA extern void*const __vt__5JAISe[22];
 SECTION_SDATA2 extern f32 JAISe__lit_626;
 SECTION_SDATA2 extern u8 JAISe__lit_627[4];
@@ -150,36 +139,35 @@ SECTION_SDATA2 extern f32 lit_736;
 // External References:
 // 
 
-extern "C" void func_802A2328();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __ct__8JASTrackFv();
-extern "C" void setChannelMgrCount__8JASTrackFUl();
-extern "C" void init__8JASTrackFv();
-extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
-extern "C" void setSeqData__8JASTrackFPvUl();
-extern "C" void startSeq__8JASTrackFv();
-extern "C" void stopSeq__8JASTrackFv();
-extern "C" void mute__8JASTrackFb();
-extern "C" void pause__8JASTrackFb();
-extern "C" void setTempoRate__8JASTrackFf();
-extern "C" void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf();
-extern "C" void __ct__8JAISoundFv();
-extern "C" void func_802A2328();
-extern "C" bool asSeq__8JAISoundFv();
-extern "C" bool asStream__8JAISoundFv();
-extern "C" void die_JAISound___8JAISoundFv();
-extern "C" void increasePrepareCount_JAISound___8JAISoundFv();
-extern "C" void calc_JAISound___8JAISoundFv();
-extern "C" void initTrack_JAISound___8JAISoundFP8JASTrack();
-extern "C" void __ct__10JSUPtrLinkFPv();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void __ct__8JASTrackFv(); // 1
+extern "C" void setChannelMgrCount__8JASTrackFUl(); // 1
+extern "C" void init__8JASTrackFv(); // 1
+extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams(); // 1
+extern "C" void setSeqData__8JASTrackFPvUl(); // 1
+extern "C" void startSeq__8JASTrackFv(); // 1
+extern "C" void stopSeq__8JASTrackFv(); // 1
+extern "C" void mute__8JASTrackFb(); // 1
+extern "C" void pause__8JASTrackFb(); // 1
+extern "C" void setTempoRate__8JASTrackFf(); // 1
+extern "C" void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf(); // 1
+extern "C" void __ct__8JAISoundFv(); // 1
+extern "C" void func_802A2328(); // 1
+extern "C" bool asSeq__8JAISoundFv(); // 1
+extern "C" bool asStream__8JAISoundFv(); // 1
+extern "C" void die_JAISound___8JAISoundFv(); // 1
+extern "C" void increasePrepareCount_JAISound___8JAISoundFv(); // 1
+extern "C" void calc_JAISound___8JAISoundFv(); // 1
+extern "C" void initTrack_JAISound___8JAISoundFP8JASTrack(); // 1
+extern "C" void __ct__10JSUPtrLinkFPv(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:
@@ -227,7 +215,7 @@ f32 JAISe__lit_628 = 0.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8029F03C() {
+asm JAISe::JAISe(JAISeMgr* field_0, JAISoundStrategyMgr<JAISe>* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISe/func_8029F03C.s"
 }
@@ -308,7 +296,7 @@ asm void JAISe::JAISound_tryDie_() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8029F650() {
+asm void JAISe::JAISeMgr_startID_(JAISoundID field_0, JGeometry::TVec3<f32> const* field_1, JAIAudience* field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISe/func_8029F650.s"
 }

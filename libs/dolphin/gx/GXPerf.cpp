@@ -9,13 +9,13 @@
 // Forward References:
 // 
 
-extern "C" void GXSetGPMetric();
-extern "C" void GXClearGPMetric();
-extern "C" void GXReadXfRasMetric();
+extern "C" void GXSetGPMetric(); // 1
+extern "C" void GXClearGPMetric(); // 1
+extern "C" void GXReadXfRasMetric(); // 1
 
-extern "C" void GXSetGPMetric();
-extern "C" void GXClearGPMetric();
-extern "C" void GXReadXfRasMetric();
+extern "C" void GXSetGPMetric(); // 1
+extern "C" void GXClearGPMetric(); // 1
+extern "C" void GXReadXfRasMetric(); // 1
 SECTION_DATA extern void*lit_182[23];
 SECTION_DATA extern void*lit_181[37];
 

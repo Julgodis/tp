@@ -9,25 +9,25 @@
 // Forward References:
 // 
 
-extern "C" void OSInitAlarm();
-extern "C" void OSCreateAlarm();
-extern "C" static void InsertAlarm();
-extern "C" void OSSetAlarm();
-extern "C" void OSSetPeriodicAlarm();
-extern "C" void OSCancelAlarm();
-extern "C" static void DecrementerExceptionCallback();
-extern "C" static void DecrementerExceptionHandler();
-extern "C" static void OSAlarm__OnReset();
+extern "C" void OSInitAlarm(); // 1
+extern "C" void OSCreateAlarm(); // 1
+extern "C" static void InsertAlarm(); // 1
+extern "C" void OSSetAlarm(); // 1
+extern "C" void OSSetPeriodicAlarm(); // 1
+extern "C" void OSCancelAlarm(); // 1
+extern "C" static void DecrementerExceptionCallback(); // 1
+extern "C" static void DecrementerExceptionHandler(); // 1
+extern "C" static void OSAlarm__OnReset(); // 1
 
-extern "C" void OSInitAlarm();
-extern "C" void OSCreateAlarm();
-extern "C" static void InsertAlarm();
-extern "C" void OSSetAlarm();
-extern "C" void OSSetPeriodicAlarm();
-extern "C" void OSCancelAlarm();
-extern "C" static void DecrementerExceptionCallback();
-extern "C" static void DecrementerExceptionHandler();
-extern "C" static void OSAlarm__OnReset();
+extern "C" void OSInitAlarm(); // 1
+extern "C" void OSCreateAlarm(); // 1
+extern "C" static void InsertAlarm(); // 1
+extern "C" void OSSetAlarm(); // 1
+extern "C" void OSSetPeriodicAlarm(); // 1
+extern "C" void OSCancelAlarm(); // 1
+extern "C" static void DecrementerExceptionCallback(); // 1
+extern "C" static void DecrementerExceptionHandler(); // 1
+extern "C" static void OSAlarm__OnReset(); // 1
 SECTION_DATA extern void*OSAlarm__ResetFunctionInfo[4];
 SECTION_SBSS extern u8 AlarmQueue[8];
 
@@ -35,39 +35,39 @@ SECTION_SBSS extern u8 AlarmQueue[8];
 // External References:
 // 
 
-extern "C" void PPCMtdec();
-extern "C" void __OSSetExceptionHandler();
-extern "C" void __OSGetExceptionHandler();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSLoadContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSRegisterResetFunction();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" void __OSReschedule();
-extern "C" void __OSGetSystemTime();
-extern "C" void __OSTimeToSystemTime();
-extern "C" void __DVDTestAlarm();
-extern "C" void __div2i();
+extern "C" void PPCMtdec(); // 1
+extern "C" void __OSSetExceptionHandler(); // 1
+extern "C" void __OSGetExceptionHandler(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSLoadContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSRegisterResetFunction(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void __OSReschedule(); // 1
+extern "C" void __OSGetSystemTime(); // 1
+extern "C" void __OSTimeToSystemTime(); // 1
+extern "C" void __DVDTestAlarm(); // 1
+extern "C" void __div2i(); // 1
 
-extern "C" void PPCMtdec();
-extern "C" void __OSSetExceptionHandler();
-extern "C" void __OSGetExceptionHandler();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSLoadContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSRegisterResetFunction();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" void __OSReschedule();
-extern "C" void __OSGetSystemTime();
-extern "C" void __OSTimeToSystemTime();
-extern "C" void __DVDTestAlarm();
-extern "C" void __div2i();
+extern "C" void PPCMtdec(); // 1
+extern "C" void __OSSetExceptionHandler(); // 1
+extern "C" void __OSGetExceptionHandler(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSLoadContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSRegisterResetFunction(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void __OSReschedule(); // 1
+extern "C" void __OSGetSystemTime(); // 1
+extern "C" void __OSTimeToSystemTime(); // 1
+extern "C" void __DVDTestAlarm(); // 1
+extern "C" void __div2i(); // 1
 
 // 
 // Declarations:

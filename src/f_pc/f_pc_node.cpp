@@ -9,33 +9,18 @@
 // Types:
 // 
 
-// build nodedraw_method_class (['nodedraw_method_class']) False/False
-/* top-level dependencies (begin ['nodedraw_method_class']) */
-/* top-level dependencies (end ['nodedraw_method_class']) */
 struct nodedraw_method_class {
 };
 
-// build process_node_class (['process_node_class']) False/False
-/* top-level dependencies (begin ['process_node_class']) */
-/* top-level dependencies (end ['process_node_class']) */
 struct process_node_class {
 };
 
-// build layer_class (['layer_class']) False/False
-/* top-level dependencies (begin ['layer_class']) */
-/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
-// build process_method_class (['process_method_class']) False/False
-/* top-level dependencies (begin ['process_method_class']) */
-/* top-level dependencies (end ['process_method_class']) */
 struct process_method_class {
 };
 
@@ -43,23 +28,23 @@ struct process_method_class {
 // Forward References:
 // 
 
-void fpcNd_DrawMethod(nodedraw_method_class*, void*);
-static void fpcNd_Draw(process_node_class*);
-static void fpcNd_Execute(process_node_class*);
-static void fpcNd_IsCreatingFromUnder(void*);
-void fpcNd_IsDeleteTiming(process_node_class*);
-static void fpcNd_IsDelete(process_node_class*);
-static void fpcNd_Delete(process_node_class*);
-static void fpcNd_Create(process_node_class*);
+void fpcNd_DrawMethod(nodedraw_method_class*, void*); // 2
+static void fpcNd_Draw(process_node_class*); // 2
+static void fpcNd_Execute(process_node_class*); // 2
+static void fpcNd_IsCreatingFromUnder(void*); // 2
+void fpcNd_IsDeleteTiming(process_node_class*); // 2
+static void fpcNd_IsDelete(process_node_class*); // 2
+static void fpcNd_Delete(process_node_class*); // 2
+static void fpcNd_Create(process_node_class*); // 2
 
-extern "C" void fpcNd_DrawMethod__FP21nodedraw_method_classPv();
-extern "C" static void fpcNd_Draw__FP18process_node_class();
-extern "C" static void fpcNd_Execute__FP18process_node_class();
-extern "C" static void fpcNd_IsCreatingFromUnder__FPv();
-extern "C" void fpcNd_IsDeleteTiming__FP18process_node_class();
-extern "C" static void fpcNd_IsDelete__FP18process_node_class();
-extern "C" static void fpcNd_Delete__FP18process_node_class();
-extern "C" static void fpcNd_Create__FP18process_node_class();
+extern "C" void fpcNd_DrawMethod__FP21nodedraw_method_classPv(); // 1
+extern "C" static void fpcNd_Draw__FP18process_node_class(); // 1
+extern "C" static void fpcNd_Execute__FP18process_node_class(); // 1
+extern "C" static void fpcNd_IsCreatingFromUnder__FPv(); // 1
+extern "C" void fpcNd_IsDeleteTiming__FP18process_node_class(); // 1
+extern "C" static void fpcNd_IsDelete__FP18process_node_class(); // 1
+extern "C" static void fpcNd_Delete__FP18process_node_class(); // 1
+extern "C" static void fpcNd_Create__FP18process_node_class(); // 1
 SECTION_DATA extern void*g_fpcNd_Method[6];
 SECTION_SDATA extern u32 g_fpcNd_IsCheckOfDeleteTiming;
 SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
@@ -68,39 +53,39 @@ SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(int, int);
-void fpcBs_MakeOfType(int*);
-void fpcLy_IsDeletingMesg(layer_class*);
-void fpcLy_IsCreatingMesg(layer_class*);
-void fpcLy_SetCurrentLayer(layer_class*);
-void fpcLy_CurrentLayer();
-void fpcLy_Delete(layer_class*);
-void fpcLy_Create(layer_class*, void*, node_list_class*, int);
-extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv();
-extern "C" void fpcMtd_Method__FPFPv_iPv();
-void fpcMtd_Execute(process_method_class*, void*);
-void fpcMtd_IsDelete(process_method_class*, void*);
-void fpcMtd_Delete(process_method_class*, void*);
-void fpcMtd_Create(process_method_class*, void*);
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void fpcBs_Is_JustOfType(int, int); // 2
+void fpcBs_MakeOfType(int*); // 2
+void fpcLy_IsDeletingMesg(layer_class*); // 2
+void fpcLy_IsCreatingMesg(layer_class*); // 2
+void fpcLy_SetCurrentLayer(layer_class*); // 2
+void fpcLy_CurrentLayer(); // 2
+void fpcLy_Delete(layer_class*); // 2
+void fpcLy_Create(layer_class*, void*, node_list_class*, int); // 2
+extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv(); // 1
+extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
+void fpcMtd_Execute(process_method_class*, void*); // 2
+void fpcMtd_IsDelete(process_method_class*, void*); // 2
+void fpcMtd_Delete(process_method_class*, void*); // 2
+void fpcMtd_Create(process_method_class*, void*); // 2
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void fpcBs_Is_JustOfType__Fii();
-extern "C" void fpcBs_MakeOfType__FPi();
-extern "C" void fpcLy_IsDeletingMesg__FP11layer_class();
-extern "C" void fpcLy_IsCreatingMesg__FP11layer_class();
-extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
-extern "C" void fpcLy_CurrentLayer__Fv();
-extern "C" void fpcLy_Delete__FP11layer_class();
-extern "C" void fpcLy_Create__FP11layer_classPvP15node_list_classi();
-extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv();
-extern "C" void fpcMtd_Method__FPFPv_iPv();
-extern "C" void fpcMtd_Execute__FP20process_method_classPv();
-extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
-extern "C" void fpcMtd_Delete__FP20process_method_classPv();
-extern "C" void fpcMtd_Create__FP20process_method_classPv();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
+extern "C" void fpcBs_MakeOfType__FPi(); // 1
+extern "C" void fpcLy_IsDeletingMesg__FP11layer_class(); // 1
+extern "C" void fpcLy_IsCreatingMesg__FP11layer_class(); // 1
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1
+extern "C" void fpcLy_CurrentLayer__Fv(); // 1
+extern "C" void fpcLy_Delete__FP11layer_class(); // 1
+extern "C" void fpcLy_Create__FP11layer_classPvP15node_list_classi(); // 1
+extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv(); // 1
+extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
+extern "C" void fpcMtd_Execute__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_Delete__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

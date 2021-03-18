@@ -9,26 +9,13 @@
 // Types:
 // 
 
-// build cM3dGLin (['cM3dGLin']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['cM3dGLin']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// ('Vec',)
-	// ('cXyz',)
 	/* 8026F2A8 */ cM3dGLin(cXyz const&, cXyz const&);
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
@@ -36,30 +23,28 @@ struct cM3dGLin {
 	/* 8026F3C0 */ void SetEnd(cXyz const&);
 };
 
-// build cXyz (['cXyz']) True/True
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__8cM3dGLinFRC4cXyzRC4cXyz();
-extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
-extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
-extern "C" void CalcPos__8cM3dGLinCFP3Vecf();
-extern "C" void SetEnd__8cM3dGLinFRC4cXyz();
+extern "C" void __ct__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
+extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
+extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec(); // 1
+extern "C" void CalcPos__8cM3dGLinCFP3Vecf(); // 1
+extern "C" void SetEnd__8cM3dGLinFRC4cXyz(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECScale();
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECScale(); // 1
 
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECScale();
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECScale(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGLin[3];
 
 // 

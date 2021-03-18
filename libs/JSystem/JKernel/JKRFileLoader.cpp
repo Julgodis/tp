@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D40F0 */ JKRFileLoader();
 	/* 802D4148 */ ~JKRFileLoader();
@@ -24,25 +21,23 @@ struct JKRFileLoader {
 	/* 802D44C4 */ void fetchVolumeName(char*, s32, char const*);
 };
 
-// build JKRDisposer (['JKRDisposer']) False/False
-/* top-level dependencies (begin ['JKRDisposer']) */
-/* top-level dependencies (end ['JKRDisposer']) */
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRFileLoader> */
+struct JSUList__template7 {
+	/* 802D45E4 */ ~JSUList__template7();
+};
+
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-/* top-level dependencies (begin ['JSUPtrList']) */
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
@@ -52,20 +47,19 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-extern "C" void __sinit_JKRFileLoader_cpp();
-extern "C" static void func_802D45E4();
+extern "C" void __sinit_JKRFileLoader_cpp(); // 1
 
-extern "C" void __ct__13JKRFileLoaderFv();
-extern "C" void __dt__13JKRFileLoaderFv();
-extern "C" void unmount__13JKRFileLoaderFv();
-extern "C" void getGlbResource__13JKRFileLoaderFPCc();
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" void removeResource__13JKRFileLoaderFPvP13JKRFileLoader();
-extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader();
-extern "C" void findVolume__13JKRFileLoaderFPPCc();
-extern "C" void fetchVolumeName__13JKRFileLoaderFPclPCc();
-extern "C" void __sinit_JKRFileLoader_cpp();
-extern "C" static void func_802D45E4();
+extern "C" void __ct__13JKRFileLoaderFv(); // 1
+extern "C" void __dt__13JKRFileLoaderFv(); // 1
+extern "C" void unmount__13JKRFileLoaderFv(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCc(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
+extern "C" void removeResource__13JKRFileLoaderFPvP13JKRFileLoader(); // 1
+extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader(); // 1
+extern "C" void findVolume__13JKRFileLoaderFPPCc(); // 1
+extern "C" void fetchVolumeName__13JKRFileLoaderFPclPCc(); // 1
+extern "C" void __sinit_JKRFileLoader_cpp(); // 1
+extern "C" void func_802D45E4(); // 1
 SECTION_RODATA extern const u8 JKRFileLoader__stringBase0[8];
 SECTION_DATA extern void*const __vt__13JKRFileLoader[16];
 SECTION_BSS extern u8 JKRFileLoader__lit_2182[12];
@@ -77,25 +71,25 @@ SECTION_SBSS extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void strcpy();
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void __dl__FPv();
-extern "C" void __ct__11JKRDisposerFv();
-extern "C" void __dt__11JKRDisposerFv();
-extern "C" void __ct__10JSUPtrLinkFPv();
-extern "C" void __dt__10JSUPtrLinkFv();
-extern "C" void __dt__10JSUPtrListFv();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
-extern "C" void strcpy();
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__11JKRDisposerFv(); // 1
+extern "C" void __dt__11JKRDisposerFv(); // 1
+extern "C" void __ct__10JSUPtrLinkFPv(); // 1
+extern "C" void __dt__10JSUPtrLinkFv(); // 1
+extern "C" void __dt__10JSUPtrListFv(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 SECTION_DATA extern u8 __lower_map[256];
 
 // 
@@ -266,7 +260,7 @@ extern "C" asm void __sinit_JKRFileLoader_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802D45E4() {
+asm JSUList__template7::~JSUList__template7() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRFileLoader/func_802D45E4.s"
 }

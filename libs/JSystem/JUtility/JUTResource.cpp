@@ -9,41 +9,23 @@
 // Types:
 // 
 
-// build JUTResReference (['JUTResReference']) False/False
-// build JSUInputStream (['JSUInputStream']) False/False
-/* top-level dependencies (begin ['JSUInputStream']) */
-/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC298 */ void read(void*, s32);
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
 };
 
-/* top-level dependencies (begin ['JUTResReference']) */
-// outer dependency: ('JSUInputStream',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['JUTResReference']) */
 struct JUTResReference {
-	// ('JSUInputStream',)
-	// ('JKRArchive',)
 	/* 802DE078 */ void getResource(JSUInputStream*, u32, JKRArchive*);
 	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
 	/* 802DE1BC */ void getResource(u32, JKRArchive*);
 };
 
-// build JSUInputStream (['JSUInputStream']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
-	/* 802D4224 */ void getGlbResource(char const*);
 	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
+	/* 802D4224 */ void getGlbResource(char const*);
 };
 
 // 
@@ -51,29 +33,29 @@ struct JKRFileLoader {
 // 
 
 
-extern "C" void getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive();
-extern "C" void getResource__15JUTResReferenceFPCvUlP10JKRArchive();
-extern "C" void getResource__15JUTResReferenceFUlP10JKRArchive();
+extern "C" void getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive(); // 1
+extern "C" void getResource__15JUTResReferenceFPCvUlP10JKRArchive(); // 1
+extern "C" void getResource__15JUTResReferenceFUlP10JKRArchive(); // 1
 
 // 
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void getGlbResource__13JKRFileLoaderFPCc();
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
-extern "C" void read__14JSUInputStreamFPvl();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCc(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive(); // 1
+extern "C" void read__14JSUInputStreamFPvl(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

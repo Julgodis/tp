@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void __stdio_atexit();
+extern "C" void __stdio_atexit(); // 1
 
-extern "C" void __stdio_atexit();
+extern "C" void __stdio_atexit(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __close_all();
+extern "C" void __close_all(); // 1
 
-extern "C" void __close_all();
+extern "C" void __close_all(); // 1
 SECTION_SBSS extern u8 __stdio_exit[4];
 
 // 

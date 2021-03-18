@@ -9,83 +9,41 @@
 // Types:
 // 
 
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build cM3dGLin (['cM3dGLin']) False/False
-// build Vec (['Vec']) True/True
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['cM3dGLin']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGLin']) */
 struct cM3dGLin {
-	// ('Vec',)
-	// ('cXyz',)
 	/* 8026F2A8 */ cM3dGLin(cXyz const&, cXyz const&);
 	/* 8026F31C */ void SetStartEnd(Vec const&, Vec const&);
 	/* 8026F350 */ void CalcPos(Vec*, f32) const;
 };
 
-// build cM3dGPla (['cM3dGPla']) False/False
-/* top-level dependencies (begin ['cM3dGPla']) */
-/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
 };
 
-// build cXyz (['cXyz']) True/True
-// build cM3dGAab (['cM3dGAab']) False/False
-/* top-level dependencies (begin ['cM3dGAab']) */
-/* top-level dependencies (end ['cM3dGAab']) */
 struct cM3dGAab {
 };
 
-// build cM3dGCyl (['cM3dGCyl']) False/False
-/* top-level dependencies (begin ['cM3dGCyl']) */
-/* top-level dependencies (end ['cM3dGCyl']) */
 struct cM3dGCyl {
 };
 
-// build cM3dGSph (['cM3dGSph']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGSph']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGSph']) */
 struct cM3dGSph {
-	// ('cXyz',)
 	/* 8026F648 */ void SetC(cXyz const&);
 	/* 8026F708 */ void SetR(f32);
 };
 
-// build cM3dGTri (['cM3dGTri']) False/False
-/* top-level dependencies (begin ['cM3dGTri']) */
-/* top-level dependencies (end ['cM3dGTri']) */
 struct cM3dGTri {
 };
 
-// build cM3d_Range (['cM3d_Range']) False/False
-/* top-level dependencies (begin ['cM3d_Range']) */
-/* top-level dependencies (end ['cM3d_Range']) */
 struct cM3d_Range {
 };
 
-// build cM3dGCps (['cM3dGCps']) False/False
-/* top-level dependencies (begin ['cM3dGCps']) */
-/* top-level dependencies (end ['cM3dGCps']) */
 struct cM3dGCps {
 };
 
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
@@ -93,137 +51,137 @@ struct csXyz {
 // Forward References:
 // 
 
-static void cM3d_InDivPos1(Vec const*, Vec const*, f32, Vec*);
-void cM3d_InDivPos2(Vec const*, Vec const*, f32, Vec*);
-void cM3d_Len2dSq(f32, f32, f32, f32);
-void cM3d_Len2dSqPntAndSegLine(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*);
-void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*);
-void cM3d_SignedLenPlaAndPos(cM3dGPla const*, Vec const*);
-void cM3d_VectorProduct2d(f32, f32, f32, f32, f32, f32);
-void cM3d_VectorProduct(cXyz const*, cXyz const*, cXyz const*, cXyz*);
-void cM3d_CalcPla(Vec const*, Vec const*, Vec const*, Vec*, f32*);
-void cM3d_Cross_AabAab(cM3dGAab const*, cM3dGAab const*);
-void cM3d_Cross_AabCyl(cM3dGAab const*, cM3dGCyl const*);
-void cM3d_Cross_AabSph(cM3dGAab const*, cM3dGSph const*);
-static void cM3d_Check_LinLin(cM3dGLin const*, cM3dGLin const*, f32*, f32*);
-static void cM3d_CrossInfLineVsInfPlane_proc(f32, f32, Vec const*, Vec const*, Vec*);
-void cM3d_Cross_LinPla(cM3dGLin const*, cM3dGPla const*, Vec*, bool, bool);
-void cM3d_Cross_MinMaxBoxLine(Vec const*, Vec const*, Vec const*, Vec const*);
-static void cM3d_InclusionCheckPosIn3PosBox3d(Vec const*, Vec const*, Vec const*, Vec const*, f32);
-static void cM3d_InclusionCheckPosIn3PosBox2d(f32, f32, f32, f32, f32, f32, f32, f32, f32);
-static void cM3d_CrossX_Tri(cM3dGTri const*, Vec const*, f32);
-static void cM3d_CrossX_Tri(cM3dGTri const*, Vec const*);
-static void cM3d_CrossX_LinTri_proc(cM3dGTri const*, Vec const*);
-static void cM3d_CrossY_Tri(cM3dGTri const*, Vec const*);
-static void cM3d_CrossY_LinTri_proc(cM3dGTri const*, Vec const*);
-void cM3d_CrossY_Tri(Vec const&, Vec const&, Vec const&, cM3dGPla const&, Vec const*);
-void cM3d_CrossY_Tri_Front(Vec const&, Vec const&, Vec const&, Vec const*);
-static void cM3d_CrossY_Tri(cM3dGTri const*, Vec const*, f32*);
-static void cM3d_CrossY_Tri(cM3dGTri const*, Vec const*, f32);
-static void cM3d_CrossY_Tri(cM3dGTri const*, Vec const*, cM3d_Range const*, f32*);
-static void cM3d_CrossZ_Tri(cM3dGTri const*, Vec const*, f32);
-static void cM3d_CrossZ_Tri(cM3dGTri const*, Vec const*);
-static void cM3d_CrossZ_LinTri_proc(cM3dGTri const*, Vec const*);
-void cM3d_Cross_LinTri(cM3dGLin const*, cM3dGTri const*, Vec*, bool, bool);
-static void cM3d_Cross_LinTri_Easy(cM3dGTri const*, Vec const*);
-static void cM3d_Cross_SphPnt(cM3dGSph const*, Vec const*);
-static void cM3d_Cross_LinSph(cM3dGLin const*, cM3dGSph const*, Vec*);
-void cM3d_Cross_LinSph_CrossPos(cM3dGSph const&, cM3dGLin const&, Vec*, Vec*);
-void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, f32*);
-void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, Vec*, f32*);
-void cM3d_Cross_SphSph(cM3dGSph const*, cM3dGSph const*, f32*);
-static void cM3d_Cross_SphSph(cM3dGSph const*, cM3dGSph const*, f32*, f32*);
-void cM3d_Cross_SphSph(cM3dGSph const*, cM3dGSph const*, Vec*);
-static void cM3d_CalcSphVsTriCrossPoint(cM3dGSph const*, cM3dGTri const*, Vec*);
-void cM3d_Cross_SphTri(cM3dGSph const*, cM3dGTri const*, Vec*);
-void cM3d_Cross_CylCyl(cM3dGCyl const*, cM3dGCyl const*, f32*);
-void cM3d_Cross_CylCyl(cM3dGCyl const*, cM3dGCyl const*, Vec*);
-void cM3d_Cross_CylTri(cM3dGCyl const*, cM3dGTri const*, Vec*);
-void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*);
-static void cM3d_Cross_CylPntPnt(cM3dGCyl const*, Vec const*, Vec const*, Vec*, Vec*);
-static void cM3d_Cross_CylPnt(cM3dGCyl const*, Vec const*);
-void cM3d_Cross_CpsCps(cM3dGCps const&, cM3dGCps const&, Vec*);
-void cM3d_Cross_CpsCyl(cM3dGCps const&, cM3dGCyl const&, Vec*);
-static void cM3d_Cross_CpsSph_CrossPos(cM3dGCps const&, cM3dGSph const&, Vec const&, Vec*);
-void cM3d_Cross_CpsSph(cM3dGCps const&, cM3dGSph const&, Vec*);
-void cM3d_Cross_TriTri(cM3dGTri const&, cM3dGTri const&, Vec*);
-void cM3d_Cross_CpsTri(cM3dGCps const&, cM3dGTri, Vec*);
-void cM3d_CalcVecAngle(Vec const&, s16*, s16*);
-void cM3d_CalcVecZAngle(Vec const&, csXyz*);
-static void cM3d_PlaneCrossLineProcWork(f32, f32, f32, f32, f32, f32, f32, f32*, f32*);
-static void cM3d_2PlaneCrossLine(cM3dGPla const&, cM3dGPla const&, cM3dGLin*);
-void cM3d_3PlaneCrossPos(cM3dGPla const&, cM3dGPla const&, cM3dGPla const&, Vec*);
-void cM3d_lineVsPosSuisenCross(cM3dGLin const*, Vec const*, Vec*);
-void cM3d_lineVsPosSuisenCross(Vec const&, Vec const&, Vec const&, Vec*);
-void cM3d_2PlaneLinePosNearPos(cM3dGPla const&, cM3dGPla const&, Vec const*, Vec*);
-void cM3d_CrawVec(Vec const&, Vec const&, Vec*);
-extern "C" void __sinit_c_m3d_cpp();
+static void cM3d_InDivPos1(Vec const*, Vec const*, f32, Vec*); // 2
+void cM3d_InDivPos2(Vec const*, Vec const*, f32, Vec*); // 2
+void cM3d_Len2dSq(f32, f32, f32, f32); // 2
+void cM3d_Len2dSqPntAndSegLine(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*); // 2
+void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*); // 2
+void cM3d_SignedLenPlaAndPos(cM3dGPla const*, Vec const*); // 2
+void cM3d_VectorProduct2d(f32, f32, f32, f32, f32, f32); // 2
+void cM3d_VectorProduct(cXyz const*, cXyz const*, cXyz const*, cXyz*); // 2
+void cM3d_CalcPla(Vec const*, Vec const*, Vec const*, Vec*, f32*); // 2
+void cM3d_Cross_AabAab(cM3dGAab const*, cM3dGAab const*); // 2
+void cM3d_Cross_AabCyl(cM3dGAab const*, cM3dGCyl const*); // 2
+void cM3d_Cross_AabSph(cM3dGAab const*, cM3dGSph const*); // 2
+static void cM3d_Check_LinLin(cM3dGLin const*, cM3dGLin const*, f32*, f32*); // 2
+static void cM3d_CrossInfLineVsInfPlane_proc(f32, f32, Vec const*, Vec const*, Vec*); // 2
+void cM3d_Cross_LinPla(cM3dGLin const*, cM3dGPla const*, Vec*, bool, bool); // 2
+void cM3d_Cross_MinMaxBoxLine(Vec const*, Vec const*, Vec const*, Vec const*); // 2
+static void cM3d_InclusionCheckPosIn3PosBox3d(Vec const*, Vec const*, Vec const*, Vec const*, f32); // 2
+static void cM3d_InclusionCheckPosIn3PosBox2d(f32, f32, f32, f32, f32, f32, f32, f32, f32); // 2
+static void cM3d_CrossX_Tri(cM3dGTri const*, Vec const*, f32); // 2
+static void cM3d_CrossX_Tri(cM3dGTri const*, Vec const*); // 2
+static void cM3d_CrossX_LinTri_proc(cM3dGTri const*, Vec const*); // 2
+static void cM3d_CrossY_Tri(cM3dGTri const*, Vec const*); // 2
+static void cM3d_CrossY_LinTri_proc(cM3dGTri const*, Vec const*); // 2
+void cM3d_CrossY_Tri(Vec const&, Vec const&, Vec const&, cM3dGPla const&, Vec const*); // 2
+void cM3d_CrossY_Tri_Front(Vec const&, Vec const&, Vec const&, Vec const*); // 2
+static void cM3d_CrossY_Tri(cM3dGTri const*, Vec const*, f32*); // 2
+static void cM3d_CrossY_Tri(cM3dGTri const*, Vec const*, f32); // 2
+static void cM3d_CrossY_Tri(cM3dGTri const*, Vec const*, cM3d_Range const*, f32*); // 2
+static void cM3d_CrossZ_Tri(cM3dGTri const*, Vec const*, f32); // 2
+static void cM3d_CrossZ_Tri(cM3dGTri const*, Vec const*); // 2
+static void cM3d_CrossZ_LinTri_proc(cM3dGTri const*, Vec const*); // 2
+void cM3d_Cross_LinTri(cM3dGLin const*, cM3dGTri const*, Vec*, bool, bool); // 2
+static void cM3d_Cross_LinTri_Easy(cM3dGTri const*, Vec const*); // 2
+static void cM3d_Cross_SphPnt(cM3dGSph const*, Vec const*); // 2
+static void cM3d_Cross_LinSph(cM3dGLin const*, cM3dGSph const*, Vec*); // 2
+void cM3d_Cross_LinSph_CrossPos(cM3dGSph const&, cM3dGLin const&, Vec*, Vec*); // 2
+void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, f32*); // 2
+void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, Vec*, f32*); // 2
+void cM3d_Cross_SphSph(cM3dGSph const*, cM3dGSph const*, f32*); // 2
+static void cM3d_Cross_SphSph(cM3dGSph const*, cM3dGSph const*, f32*, f32*); // 2
+void cM3d_Cross_SphSph(cM3dGSph const*, cM3dGSph const*, Vec*); // 2
+static void cM3d_CalcSphVsTriCrossPoint(cM3dGSph const*, cM3dGTri const*, Vec*); // 2
+void cM3d_Cross_SphTri(cM3dGSph const*, cM3dGTri const*, Vec*); // 2
+void cM3d_Cross_CylCyl(cM3dGCyl const*, cM3dGCyl const*, f32*); // 2
+void cM3d_Cross_CylCyl(cM3dGCyl const*, cM3dGCyl const*, Vec*); // 2
+void cM3d_Cross_CylTri(cM3dGCyl const*, cM3dGTri const*, Vec*); // 2
+void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*); // 2
+static void cM3d_Cross_CylPntPnt(cM3dGCyl const*, Vec const*, Vec const*, Vec*, Vec*); // 2
+static void cM3d_Cross_CylPnt(cM3dGCyl const*, Vec const*); // 2
+void cM3d_Cross_CpsCps(cM3dGCps const&, cM3dGCps const&, Vec*); // 2
+void cM3d_Cross_CpsCyl(cM3dGCps const&, cM3dGCyl const&, Vec*); // 2
+static void cM3d_Cross_CpsSph_CrossPos(cM3dGCps const&, cM3dGSph const&, Vec const&, Vec*); // 2
+void cM3d_Cross_CpsSph(cM3dGCps const&, cM3dGSph const&, Vec*); // 2
+void cM3d_Cross_TriTri(cM3dGTri const&, cM3dGTri const&, Vec*); // 2
+void cM3d_Cross_CpsTri(cM3dGCps const&, cM3dGTri, Vec*); // 2
+void cM3d_CalcVecAngle(Vec const&, s16*, s16*); // 2
+void cM3d_CalcVecZAngle(Vec const&, csXyz*); // 2
+static void cM3d_PlaneCrossLineProcWork(f32, f32, f32, f32, f32, f32, f32, f32*, f32*); // 2
+static void cM3d_2PlaneCrossLine(cM3dGPla const&, cM3dGPla const&, cM3dGLin*); // 2
+void cM3d_3PlaneCrossPos(cM3dGPla const&, cM3dGPla const&, cM3dGPla const&, Vec*); // 2
+void cM3d_lineVsPosSuisenCross(cM3dGLin const*, Vec const*, Vec*); // 2
+void cM3d_lineVsPosSuisenCross(Vec const&, Vec const&, Vec const&, Vec*); // 2
+void cM3d_2PlaneLinePosNearPos(cM3dGPla const&, cM3dGPla const&, Vec const*, Vec*); // 2
+void cM3d_CrawVec(Vec const&, Vec const&, Vec*); // 2
+extern "C" void __sinit_c_m3d_cpp(); // 1
 
-extern "C" static void cM3d_InDivPos1__FPC3VecPC3VecfP3Vec();
-extern "C" void cM3d_InDivPos2__FPC3VecPC3VecfP3Vec();
-extern "C" void cM3d_Len2dSq__Fffff();
-extern "C" void cM3d_Len2dSqPntAndSegLine__FffffffPfPfPf();
-extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf();
-extern "C" void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec();
-extern "C" void cM3d_VectorProduct2d__Fffffff();
-extern "C" void cM3d_VectorProduct__FPC4cXyzPC4cXyzPC4cXyzP4cXyz();
-extern "C" void cM3d_CalcPla__FPC3VecPC3VecPC3VecP3VecPf();
-extern "C" void cM3d_Cross_AabAab__FPC8cM3dGAabPC8cM3dGAab();
-extern "C" void cM3d_Cross_AabCyl__FPC8cM3dGAabPC8cM3dGCyl();
-extern "C" void cM3d_Cross_AabSph__FPC8cM3dGAabPC8cM3dGSph();
-extern "C" static void cM3d_Check_LinLin__FPC8cM3dGLinPC8cM3dGLinPfPf();
-extern "C" static void cM3d_CrossInfLineVsInfPlane_proc__FffPC3VecPC3VecP3Vec();
-extern "C" void cM3d_Cross_LinPla__FPC8cM3dGLinPC8cM3dGPlaP3Vecbb();
-extern "C" void cM3d_Cross_MinMaxBoxLine__FPC3VecPC3VecPC3VecPC3Vec();
-extern "C" static void cM3d_InclusionCheckPosIn3PosBox3d__FPC3VecPC3VecPC3VecPC3Vecf();
-extern "C" static void cM3d_InclusionCheckPosIn3PosBox2d__Ffffffffff();
-extern "C" static void cM3d_CrossX_Tri__FPC8cM3dGTriPC3Vecf();
-extern "C" static void cM3d_CrossX_Tri__FPC8cM3dGTriPC3Vec();
-extern "C" static void cM3d_CrossX_LinTri_proc__FPC8cM3dGTriPC3Vec();
-extern "C" static void cM3d_CrossY_Tri__FPC8cM3dGTriPC3Vec();
-extern "C" static void cM3d_CrossY_LinTri_proc__FPC8cM3dGTriPC3Vec();
-extern "C" void cM3d_CrossY_Tri__FRC3VecRC3VecRC3VecRC8cM3dGPlaPC3Vec();
-extern "C" void cM3d_CrossY_Tri_Front__FRC3VecRC3VecRC3VecPC3Vec();
-extern "C" static void cM3d_CrossY_Tri__FPC8cM3dGTriPC3VecPf();
-extern "C" static void cM3d_CrossY_Tri__FPC8cM3dGTriPC3Vecf();
-extern "C" static void cM3d_CrossY_Tri__FPC8cM3dGTriPC3VecPC10cM3d_RangePf();
-extern "C" static void cM3d_CrossZ_Tri__FPC8cM3dGTriPC3Vecf();
-extern "C" static void cM3d_CrossZ_Tri__FPC8cM3dGTriPC3Vec();
-extern "C" static void cM3d_CrossZ_LinTri_proc__FPC8cM3dGTriPC3Vec();
-extern "C" void cM3d_Cross_LinTri__FPC8cM3dGLinPC8cM3dGTriP3Vecbb();
-extern "C" static void cM3d_Cross_LinTri_Easy__FPC8cM3dGTriPC3Vec();
-extern "C" static void cM3d_Cross_SphPnt__FPC8cM3dGSphPC3Vec();
-extern "C" static void cM3d_Cross_LinSph__FPC8cM3dGLinPC8cM3dGSphP3Vec();
-extern "C" void cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec();
-extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphPf();
-extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf();
-extern "C" void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphPf();
-extern "C" static void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphPfPf();
-extern "C" void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphP3Vec();
-extern "C" static void cM3d_CalcSphVsTriCrossPoint__FPC8cM3dGSphPC8cM3dGTriP3Vec();
-extern "C" void cM3d_Cross_SphTri__FPC8cM3dGSphPC8cM3dGTriP3Vec();
-extern "C" void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylPf();
-extern "C" void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylP3Vec();
-extern "C" void cM3d_Cross_CylTri__FPC8cM3dGCylPC8cM3dGTriP3Vec();
-extern "C" void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec();
-extern "C" static void cM3d_Cross_CylPntPnt__FPC8cM3dGCylPC3VecPC3VecP3VecP3Vec();
-extern "C" static void cM3d_Cross_CylPnt__FPC8cM3dGCylPC3Vec();
-extern "C" void cM3d_Cross_CpsCps__FRC8cM3dGCpsRC8cM3dGCpsP3Vec();
-extern "C" void cM3d_Cross_CpsCyl__FRC8cM3dGCpsRC8cM3dGCylP3Vec();
-extern "C" static void cM3d_Cross_CpsSph_CrossPos__FRC8cM3dGCpsRC8cM3dGSphRC3VecP3Vec();
-extern "C" void cM3d_Cross_CpsSph__FRC8cM3dGCpsRC8cM3dGSphP3Vec();
-extern "C" void cM3d_Cross_TriTri__FRC8cM3dGTriRC8cM3dGTriP3Vec();
-extern "C" void cM3d_Cross_CpsTri__FRC8cM3dGCps8cM3dGTriP3Vec();
-extern "C" void cM3d_CalcVecAngle__FRC3VecPsPs();
-extern "C" void cM3d_CalcVecZAngle__FRC3VecP5csXyz();
-extern "C" static void cM3d_PlaneCrossLineProcWork__FfffffffPfPf();
-extern "C" static void cM3d_2PlaneCrossLine__FRC8cM3dGPlaRC8cM3dGPlaP8cM3dGLin();
-extern "C" void cM3d_3PlaneCrossPos__FRC8cM3dGPlaRC8cM3dGPlaRC8cM3dGPlaP3Vec();
-extern "C" void cM3d_lineVsPosSuisenCross__FPC8cM3dGLinPC3VecP3Vec();
-extern "C" void cM3d_lineVsPosSuisenCross__FRC3VecRC3VecRC3VecP3Vec();
-extern "C" void cM3d_2PlaneLinePosNearPos__FRC8cM3dGPlaRC8cM3dGPlaPC3VecP3Vec();
-extern "C" void cM3d_CrawVec__FRC3VecRC3VecP3Vec();
-extern "C" void __sinit_c_m3d_cpp();
+extern "C" static void cM3d_InDivPos1__FPC3VecPC3VecfP3Vec(); // 1
+extern "C" void cM3d_InDivPos2__FPC3VecPC3VecfP3Vec(); // 1
+extern "C" void cM3d_Len2dSq__Fffff(); // 1
+extern "C" void cM3d_Len2dSqPntAndSegLine__FffffffPfPfPf(); // 1
+extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf(); // 1
+extern "C" void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec(); // 1
+extern "C" void cM3d_VectorProduct2d__Fffffff(); // 1
+extern "C" void cM3d_VectorProduct__FPC4cXyzPC4cXyzPC4cXyzP4cXyz(); // 1
+extern "C" void cM3d_CalcPla__FPC3VecPC3VecPC3VecP3VecPf(); // 1
+extern "C" void cM3d_Cross_AabAab__FPC8cM3dGAabPC8cM3dGAab(); // 1
+extern "C" void cM3d_Cross_AabCyl__FPC8cM3dGAabPC8cM3dGCyl(); // 1
+extern "C" void cM3d_Cross_AabSph__FPC8cM3dGAabPC8cM3dGSph(); // 1
+extern "C" static void cM3d_Check_LinLin__FPC8cM3dGLinPC8cM3dGLinPfPf(); // 1
+extern "C" static void cM3d_CrossInfLineVsInfPlane_proc__FffPC3VecPC3VecP3Vec(); // 1
+extern "C" void cM3d_Cross_LinPla__FPC8cM3dGLinPC8cM3dGPlaP3Vecbb(); // 1
+extern "C" void cM3d_Cross_MinMaxBoxLine__FPC3VecPC3VecPC3VecPC3Vec(); // 1
+extern "C" static void cM3d_InclusionCheckPosIn3PosBox3d__FPC3VecPC3VecPC3VecPC3Vecf(); // 1
+extern "C" static void cM3d_InclusionCheckPosIn3PosBox2d__Ffffffffff(); // 1
+extern "C" static void cM3d_CrossX_Tri__FPC8cM3dGTriPC3Vecf(); // 1
+extern "C" static void cM3d_CrossX_Tri__FPC8cM3dGTriPC3Vec(); // 1
+extern "C" static void cM3d_CrossX_LinTri_proc__FPC8cM3dGTriPC3Vec(); // 1
+extern "C" static void cM3d_CrossY_Tri__FPC8cM3dGTriPC3Vec(); // 1
+extern "C" static void cM3d_CrossY_LinTri_proc__FPC8cM3dGTriPC3Vec(); // 1
+extern "C" void cM3d_CrossY_Tri__FRC3VecRC3VecRC3VecRC8cM3dGPlaPC3Vec(); // 1
+extern "C" void cM3d_CrossY_Tri_Front__FRC3VecRC3VecRC3VecPC3Vec(); // 1
+extern "C" static void cM3d_CrossY_Tri__FPC8cM3dGTriPC3VecPf(); // 1
+extern "C" static void cM3d_CrossY_Tri__FPC8cM3dGTriPC3Vecf(); // 1
+extern "C" static void cM3d_CrossY_Tri__FPC8cM3dGTriPC3VecPC10cM3d_RangePf(); // 1
+extern "C" static void cM3d_CrossZ_Tri__FPC8cM3dGTriPC3Vecf(); // 1
+extern "C" static void cM3d_CrossZ_Tri__FPC8cM3dGTriPC3Vec(); // 1
+extern "C" static void cM3d_CrossZ_LinTri_proc__FPC8cM3dGTriPC3Vec(); // 1
+extern "C" void cM3d_Cross_LinTri__FPC8cM3dGLinPC8cM3dGTriP3Vecbb(); // 1
+extern "C" static void cM3d_Cross_LinTri_Easy__FPC8cM3dGTriPC3Vec(); // 1
+extern "C" static void cM3d_Cross_SphPnt__FPC8cM3dGSphPC3Vec(); // 1
+extern "C" static void cM3d_Cross_LinSph__FPC8cM3dGLinPC8cM3dGSphP3Vec(); // 1
+extern "C" void cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec(); // 1
+extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphPf(); // 1
+extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf(); // 1
+extern "C" void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphPf(); // 1
+extern "C" static void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphPfPf(); // 1
+extern "C" void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphP3Vec(); // 1
+extern "C" static void cM3d_CalcSphVsTriCrossPoint__FPC8cM3dGSphPC8cM3dGTriP3Vec(); // 1
+extern "C" void cM3d_Cross_SphTri__FPC8cM3dGSphPC8cM3dGTriP3Vec(); // 1
+extern "C" void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylPf(); // 1
+extern "C" void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylP3Vec(); // 1
+extern "C" void cM3d_Cross_CylTri__FPC8cM3dGCylPC8cM3dGTriP3Vec(); // 1
+extern "C" void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec(); // 1
+extern "C" static void cM3d_Cross_CylPntPnt__FPC8cM3dGCylPC3VecPC3VecP3VecP3Vec(); // 1
+extern "C" static void cM3d_Cross_CylPnt__FPC8cM3dGCylPC3Vec(); // 1
+extern "C" void cM3d_Cross_CpsCps__FRC8cM3dGCpsRC8cM3dGCpsP3Vec(); // 1
+extern "C" void cM3d_Cross_CpsCyl__FRC8cM3dGCpsRC8cM3dGCylP3Vec(); // 1
+extern "C" static void cM3d_Cross_CpsSph_CrossPos__FRC8cM3dGCpsRC8cM3dGSphRC3VecP3Vec(); // 1
+extern "C" void cM3d_Cross_CpsSph__FRC8cM3dGCpsRC8cM3dGSphP3Vec(); // 1
+extern "C" void cM3d_Cross_TriTri__FRC8cM3dGTriRC8cM3dGTriP3Vec(); // 1
+extern "C" void cM3d_Cross_CpsTri__FRC8cM3dGCps8cM3dGTriP3Vec(); // 1
+extern "C" void cM3d_CalcVecAngle__FRC3VecPsPs(); // 1
+extern "C" void cM3d_CalcVecZAngle__FRC3VecP5csXyz(); // 1
+extern "C" static void cM3d_PlaneCrossLineProcWork__FfffffffPfPf(); // 1
+extern "C" static void cM3d_2PlaneCrossLine__FRC8cM3dGPlaRC8cM3dGPlaP8cM3dGLin(); // 1
+extern "C" void cM3d_3PlaneCrossPos__FRC8cM3dGPlaRC8cM3dGPlaRC8cM3dGPlaP3Vec(); // 1
+extern "C" void cM3d_lineVsPosSuisenCross__FPC8cM3dGLinPC3VecP3Vec(); // 1
+extern "C" void cM3d_lineVsPosSuisenCross__FRC3VecRC3VecRC3VecP3Vec(); // 1
+extern "C" void cM3d_2PlaneLinePosNearPos__FRC8cM3dGPlaRC8cM3dGPlaPC3VecP3Vec(); // 1
+extern "C" void cM3d_CrawVec__FRC3VecRC3VecP3Vec(); // 1
+extern "C" void __sinit_c_m3d_cpp(); // 1
 SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
 SECTION_SDATA2 extern u8 c_m3d__lit_2256[4 + 4 /* padding */];
 SECTION_SDATA2 extern f64 c_m3d__lit_2257;
@@ -272,48 +230,48 @@ SECTION_SDATA2 extern f32 c_m3d__lit_5508;
 // External References:
 // 
 
-void cM_atan2s(f32, f32);
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECScale();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECMag();
-extern "C" void PSVECDotProduct();
-extern "C" void PSVECCrossProduct();
-extern "C" void PSVECSquareDistance();
-extern "C" void PSVECDistance();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void cM_atan2s(f32, f32); // 2
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void PSVECDistance(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void cM_atan2s__Fff();
-extern "C" void __ct__8cM3dGLinFRC4cXyzRC4cXyz();
-extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
-extern "C" void CalcPos__8cM3dGLinCFP3Vecf();
-extern "C" void SetC__8cM3dGSphFRC4cXyz();
-extern "C" void SetR__8cM3dGSphFf();
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECScale();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECMag();
-extern "C" void PSVECDotProduct();
-extern "C" void PSVECCrossProduct();
-extern "C" void PSVECSquareDistance();
-extern "C" void PSVECDistance();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void __ct__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
+extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec(); // 1
+extern "C" void CalcPos__8cM3dGLinCFP3Vecf(); // 1
+extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
+extern "C" void SetR__8cM3dGSphFf(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void PSVECDistance(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 SECTION_DATA extern void*const __vt__8cM3dGLin[3];
 SECTION_DATA extern void*const __vt__8cM3dGSph[3];

@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void pow();
+extern "C" void pow(); // 1
 
-extern "C" void pow();
+extern "C" void pow(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __ieee754_pow();
+extern "C" void __ieee754_pow(); // 1
 
-extern "C" void __ieee754_pow();
+extern "C" void __ieee754_pow(); // 1
 
 // 
 // Declarations:

@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dSv_player_status_a_c (['dSv_player_status_a_c']) False/False
-/* top-level dependencies (begin ['dSv_player_status_a_c']) */
-/* top-level dependencies (end ['dSv_player_status_a_c']) */
 struct dSv_player_status_a_c {
 	/* 80032958 */ void init();
 	/* 80032A48 */ void setSelectItemIndex(int, u8);
@@ -22,9 +19,6 @@ struct dSv_player_status_a_c {
 	/* 80032AF8 */ void isMagicFlag(u8) const;
 };
 
-// build dSv_player_status_b_c (['dSv_player_status_b_c']) False/False
-/* top-level dependencies (begin ['dSv_player_status_b_c']) */
-/* top-level dependencies (end ['dSv_player_status_b_c']) */
 struct dSv_player_status_b_c {
 	/* 80032B50 */ void init();
 	/* 80032B94 */ void onDarkClearLV(int);
@@ -33,58 +27,31 @@ struct dSv_player_status_b_c {
 	/* 80032BEC */ void isTransformLV(int) const;
 };
 
-// build dSv_horse_place_c (['dSv_horse_place_c']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['dSv_horse_place_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dSv_horse_place_c']) */
 struct dSv_horse_place_c {
-	// ('cXyz',)
 	/* 80032C0C */ void init();
 	/* 80032C64 */ void set(char const*, cXyz const&, s16, s8);
 };
 
-// build cXyz (['cXyz']) True/True
-// build dSv_player_return_place_c (['dSv_player_return_place_c']) False/False
-/* top-level dependencies (begin ['dSv_player_return_place_c']) */
-/* top-level dependencies (end ['dSv_player_return_place_c']) */
 struct dSv_player_return_place_c {
 	/* 80032CC8 */ void init();
 	/* 80032D1C */ void set(char const*, s8, u8);
 };
 
-// build dSv_player_field_last_stay_info_c (['dSv_player_field_last_stay_info_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dSv_player_field_last_stay_info_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dSv_player_field_last_stay_info_c']) */
 struct dSv_player_field_last_stay_info_c {
-	// ('cXyz',)
 	/* 80032D60 */ void init();
 	/* 80032DE0 */ void set(char const*, cXyz const&, s16, s8, u8);
 	/* 80032E4C */ void onRegionBit(int);
 	/* 80032E78 */ void isRegionBit(int) const;
 };
 
-// build dSv_player_last_mark_info_c (['dSv_player_last_mark_info_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dSv_player_last_mark_info_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dSv_player_last_mark_info_c']) */
 struct dSv_player_last_mark_info_c {
-	// ('cXyz',)
 	/* 80032EB0 */ void init();
 	/* 80032F2C */ void setWarpItemData(char const*, cXyz const&, s16, s8, u8, u8);
 };
 
-// build dSv_player_item_c (['dSv_player_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_c']) */
-/* top-level dependencies (end ['dSv_player_item_c']) */
 struct dSv_player_item_c {
 	/* 80032F90 */ void init();
 	/* 80032FB8 */ void setItem(int, u8);
@@ -100,8 +67,8 @@ struct dSv_player_item_c {
 	/* 800336E0 */ void checkBottle(u8);
 	/* 80033754 */ void checkInsectBottle();
 	/* 800337EC */ void checkEmptyBottle();
-	/* 80033828 */ void setBombBagItemIn(u8, u8, bool);
 	/* 80033910 */ void setBombBagItemIn(u8, u8, u8, bool);
+	/* 80033828 */ void setBombBagItemIn(u8, u8, bool);
 	/* 80033A20 */ void setEmptyBombBagItemIn(u8, bool);
 	/* 80033A50 */ void setEmptyBombBagItemIn(u8, u8, bool);
 	/* 80033A88 */ void setEmptyBombBag();
@@ -112,9 +79,6 @@ struct dSv_player_item_c {
 	/* 80033D40 */ void setBaitItem(u8);
 };
 
-// build dSv_player_get_item_c (['dSv_player_get_item_c']) False/False
-/* top-level dependencies (begin ['dSv_player_get_item_c']) */
-/* top-level dependencies (end ['dSv_player_get_item_c']) */
 struct dSv_player_get_item_c {
 	/* 80033E40 */ void init();
 	/* 80033E60 */ void onFirstBit(u8);
@@ -122,9 +86,6 @@ struct dSv_player_get_item_c {
 	/* 80033EC8 */ void isFirstBit(u8) const;
 };
 
-// build dSv_player_item_record_c (['dSv_player_item_record_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_record_c']) */
-/* top-level dependencies (end ['dSv_player_item_record_c']) */
 struct dSv_player_item_record_c {
 	/* 80033F00 */ void init();
 	/* 80033F6C */ void setBombNum(u8, u8);
@@ -134,18 +95,12 @@ struct dSv_player_item_record_c {
 	/* 80034030 */ void getBottleNum(u8) const;
 };
 
-// build dSv_player_item_max_c (['dSv_player_item_max_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_max_c']) */
-/* top-level dependencies (end ['dSv_player_item_max_c']) */
 struct dSv_player_item_max_c {
 	/* 80034040 */ void init();
 	/* 800340B8 */ void setBombNum(u8, u8);
 	/* 800340F8 */ void getBombNum(u8) const;
 };
 
-// build dSv_player_collect_c (['dSv_player_collect_c']) False/False
-/* top-level dependencies (begin ['dSv_player_collect_c']) */
-/* top-level dependencies (end ['dSv_player_collect_c']) */
 struct dSv_player_collect_c {
 	/* 800341AC */ void init();
 	/* 800341E8 */ void setCollect(int, u8);
@@ -156,16 +111,10 @@ struct dSv_player_collect_c {
 	/* 80034290 */ void isCollectMirror(u8) const;
 };
 
-// build dSv_player_wolf_c (['dSv_player_wolf_c']) False/False
-/* top-level dependencies (begin ['dSv_player_wolf_c']) */
-/* top-level dependencies (end ['dSv_player_wolf_c']) */
 struct dSv_player_wolf_c {
 	/* 800342B4 */ void init();
 };
 
-// build dSv_light_drop_c (['dSv_light_drop_c']) False/False
-/* top-level dependencies (begin ['dSv_light_drop_c']) */
-/* top-level dependencies (end ['dSv_light_drop_c']) */
 struct dSv_light_drop_c {
 	/* 800342DC */ void init();
 	/* 80034320 */ void setLightDropNum(u8, u8);
@@ -174,9 +123,6 @@ struct dSv_light_drop_c {
 	/* 8003439C */ void isLightDropGetFlag(u8) const;
 };
 
-// build dSv_letter_info_c (['dSv_letter_info_c']) False/False
-/* top-level dependencies (begin ['dSv_letter_info_c']) */
-/* top-level dependencies (end ['dSv_letter_info_c']) */
 struct dSv_letter_info_c {
 	/* 800343DC */ void init();
 	/* 80034428 */ void onLetterGetFlag(int);
@@ -185,24 +131,15 @@ struct dSv_letter_info_c {
 	/* 8003449C */ void isLetterReadFlag(int) const;
 };
 
-// build dSv_fishing_info_c (['dSv_fishing_info_c']) False/False
-/* top-level dependencies (begin ['dSv_fishing_info_c']) */
-/* top-level dependencies (end ['dSv_fishing_info_c']) */
 struct dSv_fishing_info_c {
 	/* 800344C8 */ void init();
 	/* 800344FC */ void addFishCount(u8);
 };
 
-// build dSv_player_info_c (['dSv_player_info_c']) False/False
-/* top-level dependencies (begin ['dSv_player_info_c']) */
-/* top-level dependencies (end ['dSv_player_info_c']) */
 struct dSv_player_info_c {
 	/* 80034518 */ void init();
 };
 
-// build dSv_player_config_c (['dSv_player_config_c']) False/False
-/* top-level dependencies (begin ['dSv_player_config_c']) */
-/* top-level dependencies (end ['dSv_player_config_c']) */
 struct dSv_player_config_c {
 	/* 800345AC */ void init();
 	/* 80034644 */ void checkVibration() const;
@@ -212,16 +149,10 @@ struct dSv_player_config_c {
 	/* 8003469C */ void setVibration(u8);
 };
 
-// build dSv_player_c (['dSv_player_c']) False/False
-/* top-level dependencies (begin ['dSv_player_c']) */
-/* top-level dependencies (end ['dSv_player_c']) */
 struct dSv_player_c {
 	/* 800346A4 */ void init();
 };
 
-// build dSv_memBit_c (['dSv_memBit_c']) False/False
-/* top-level dependencies (begin ['dSv_memBit_c']) */
-/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 80034750 */ void init();
 	/* 800347A0 */ void onTbox(int);
@@ -237,9 +168,6 @@ struct dSv_memBit_c {
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 80034954 */ void init();
 	/* 8003498C */ void onEventBit(u16);
@@ -249,24 +177,15 @@ struct dSv_event_c {
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
-// build dSv_MiniGame_c (['dSv_MiniGame_c']) False/False
-/* top-level dependencies (begin ['dSv_MiniGame_c']) */
-/* top-level dependencies (end ['dSv_MiniGame_c']) */
 struct dSv_MiniGame_c {
 	/* 80034A1C */ void init();
 };
 
-// build dSv_memory_c (['dSv_memory_c']) False/False
-/* top-level dependencies (begin ['dSv_memory_c']) */
-/* top-level dependencies (end ['dSv_memory_c']) */
 struct dSv_memory_c {
 	/* 80030DB0 */ dSv_memory_c();
 	/* 80034A64 */ void init();
 };
 
-// build dSv_memory2_c (['dSv_memory2_c']) False/False
-/* top-level dependencies (begin ['dSv_memory2_c']) */
-/* top-level dependencies (end ['dSv_memory2_c']) */
 struct dSv_memory2_c {
 	/* 80030D80 */ dSv_memory2_c();
 	/* 80034A84 */ void init();
@@ -275,9 +194,6 @@ struct dSv_memory2_c {
 	/* 80034AEC */ void isVisitedRoom(int);
 };
 
-// build dSv_danBit_c (['dSv_danBit_c']) False/False
-/* top-level dependencies (begin ['dSv_danBit_c']) */
-/* top-level dependencies (end ['dSv_danBit_c']) */
 struct dSv_danBit_c {
 	/* 80034B14 */ void init(s8);
 	/* 80034B98 */ void onSwitch(int);
@@ -288,9 +204,6 @@ struct dSv_danBit_c {
 	/* 80034C74 */ void isItem(int) const;
 };
 
-// build dSv_zoneBit_c (['dSv_zoneBit_c']) False/False
-/* top-level dependencies (begin ['dSv_zoneBit_c']) */
-/* top-level dependencies (end ['dSv_zoneBit_c']) */
 struct dSv_zoneBit_c {
 	/* 80034CA0 */ void init();
 	/* 80034CEC */ void clearRoomSwitch();
@@ -309,9 +222,6 @@ struct dSv_zoneBit_c {
 	/* 80034E98 */ void isOneItem(int) const;
 };
 
-// build dSv_zoneActor_c (['dSv_zoneActor_c']) False/False
-/* top-level dependencies (begin ['dSv_zoneActor_c']) */
-/* top-level dependencies (end ['dSv_zoneActor_c']) */
 struct dSv_zoneActor_c {
 	/* 80034EB4 */ void init();
 	/* 80034ED4 */ void on(int);
@@ -319,36 +229,18 @@ struct dSv_zoneActor_c {
 	/* 80034F1C */ void is(int) const;
 };
 
-// build dSv_zone_c (['dSv_zone_c']) False/False
-/* top-level dependencies (begin ['dSv_zone_c']) */
-/* top-level dependencies (end ['dSv_zone_c']) */
 struct dSv_zone_c {
 	/* 80034F44 */ void init(int);
 };
 
-// build dSv_restart_c (['dSv_restart_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dSv_restart_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dSv_restart_c']) */
 struct dSv_restart_c {
-	// ('cXyz',)
 	/* 80034F80 */ void setRoom(cXyz const&, s16, s8);
 };
 
-// build dSv_turnRestart_c (['dSv_turnRestart_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dSv_turnRestart_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dSv_turnRestart_c']) */
 struct dSv_turnRestart_c {
-	// ('cXyz',)
 	/* 80034FA4 */ void set(cXyz const&, s16, s8, u32);
 };
 
-// build dSv_info_c (['dSv_info_c']) False/False
-/* top-level dependencies (begin ['dSv_info_c']) */
-/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80034FCC */ void init();
 	/* 800350BC */ void getSave(int);
@@ -369,58 +261,34 @@ struct dSv_info_c {
 	/* 80035BD0 */ void initdata_to_card(char*, int);
 };
 
-// build dSv_save_c (['dSv_save_c']) False/False
-/* top-level dependencies (begin ['dSv_save_c']) */
-/* top-level dependencies (end ['dSv_save_c']) */
 struct dSv_save_c {
 	/* 8003501C */ void init();
 	/* 800350A8 */ void getSave2(int);
 };
 
-// build dComIfG_play_c (['dComIfG_play_c']) False/False
-/* top-level dependencies (begin ['dComIfG_play_c']) */
-/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002B3A8 */ void setNowVibration(u8);
 	/* 8002B3B0 */ void getNowVibration();
 };
 
-// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
-/* top-level dependencies (begin ['dStage_roomControl_c']) */
-/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 8002D9B0 */ void getZoneNo(int);
 };
 
-// build daObjCarry_c (['daObjCarry_c']) False/False
-/* top-level dependencies (begin ['daObjCarry_c']) */
-/* top-level dependencies (end ['daObjCarry_c']) */
 struct daObjCarry_c {
 	/* 80031CF8 */ void clrSaveFlag();
 	/* 80031D04 */ void setSaveFlag();
 };
 
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
-/* top-level dependencies (begin ['JMSMesgEntry_c']) */
-/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-// outer dependency: ('JMSMesgEntry_c',)
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// ('JMSMesgEntry_c',)
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 	/* 8021DCC4 */ void setHotSpringTimer(u8);
 	/* 8021E290 */ void setSaveStageName(char const*);
 };
 
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
-// build Z2AudioMgr (['Z2AudioMgr']) False/False
-/* top-level dependencies (begin ['Z2AudioMgr']) */
-/* top-level dependencies (end ['Z2AudioMgr']) */
 struct Z2AudioMgr {
 	/* 802CD888 */ void setOutputMode(u32);
 };
@@ -429,168 +297,168 @@ struct Z2AudioMgr {
 // Forward References:
 // 
 
-static void dSv_item_rename(u8);
+static void dSv_item_rename(u8); // 2
 
-extern "C" static void dSv_item_rename__FUc();
-extern "C" void init__21dSv_player_status_a_cFv();
-extern "C" void setSelectItemIndex__21dSv_player_status_a_cFiUc();
-extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi();
-extern "C" void setMixItemIndex__21dSv_player_status_a_cFiUc();
-extern "C" void getMixItemIndex__21dSv_player_status_a_cCFi();
-extern "C" void getRupeeMax__21dSv_player_status_a_cCFv();
-extern "C" void isMagicFlag__21dSv_player_status_a_cCFUc();
-extern "C" void init__21dSv_player_status_b_cFv();
-extern "C" void onDarkClearLV__21dSv_player_status_b_cFi();
-extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi();
-extern "C" void onTransformLV__21dSv_player_status_b_cFi();
-extern "C" void isTransformLV__21dSv_player_status_b_cCFi();
-extern "C" void init__17dSv_horse_place_cFv();
-extern "C" void set__17dSv_horse_place_cFPCcRC4cXyzsSc();
-extern "C" void init__25dSv_player_return_place_cFv();
-extern "C" void set__25dSv_player_return_place_cFPCcScUc();
-extern "C" void init__33dSv_player_field_last_stay_info_cFv();
-extern "C" void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc();
-extern "C" void onRegionBit__33dSv_player_field_last_stay_info_cFi();
-extern "C" void isRegionBit__33dSv_player_field_last_stay_info_cCFi();
-extern "C" void init__27dSv_player_last_mark_info_cFv();
-extern "C" void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc();
-extern "C" void init__17dSv_player_item_cFv();
-extern "C" void setItem__17dSv_player_item_cFiUc();
-extern "C" void getItem__17dSv_player_item_cCFib();
-extern "C" void setLineUpItem__17dSv_player_item_cFv();
-extern "C" void getLineUpItem__17dSv_player_item_cCFi();
-extern "C" void setBottleItemIn__17dSv_player_item_cFUcUc();
-extern "C" void setEmptyBottleItemIn__17dSv_player_item_cFUc();
-extern "C" void setEmptyBottle__17dSv_player_item_cFv();
-extern "C" void setEmptyBottle__17dSv_player_item_cFUc();
-extern "C" void setEquipBottleItemIn__17dSv_player_item_cFUcUc();
-extern "C" void setEquipBottleItemEmpty__17dSv_player_item_cFUc();
-extern "C" void checkBottle__17dSv_player_item_cFUc();
-extern "C" void checkInsectBottle__17dSv_player_item_cFv();
-extern "C" void checkEmptyBottle__17dSv_player_item_cFv();
-extern "C" void setBombBagItemIn__17dSv_player_item_cFUcUcb();
-extern "C" void setBombBagItemIn__17dSv_player_item_cFUcUcUcb();
-extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcb();
-extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb();
-extern "C" void setEmptyBombBag__17dSv_player_item_cFv();
-extern "C" void setEmptyBombBag__17dSv_player_item_cFUcUc();
-extern "C" void checkBombBag__17dSv_player_item_cFUc();
-extern "C" void setWarashibeItem__17dSv_player_item_cFUc();
-extern "C" void setRodTypeLevelUp__17dSv_player_item_cFv();
-extern "C" void setBaitItem__17dSv_player_item_cFUc();
-extern "C" void init__21dSv_player_get_item_cFv();
-extern "C" void onFirstBit__21dSv_player_get_item_cFUc();
-extern "C" void offFirstBit__21dSv_player_get_item_cFUc();
-extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
-extern "C" void init__24dSv_player_item_record_cFv();
-extern "C" void setBombNum__24dSv_player_item_record_cFUcUc();
-extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
-extern "C" void setBottleNum__24dSv_player_item_record_cFUcUc();
-extern "C" void addBottleNum__24dSv_player_item_record_cFUcs();
-extern "C" void getBottleNum__24dSv_player_item_record_cCFUc();
-extern "C" void init__21dSv_player_item_max_cFv();
-extern "C" void setBombNum__21dSv_player_item_max_cFUcUc();
-extern "C" void getBombNum__21dSv_player_item_max_cCFUc();
-extern "C" void init__20dSv_player_collect_cFv();
-extern "C" void setCollect__20dSv_player_collect_cFiUc();
-extern "C" void isCollect__20dSv_player_collect_cCFiUc();
-extern "C" void onCollectCrystal__20dSv_player_collect_cFUc();
-extern "C" void isCollectCrystal__20dSv_player_collect_cCFUc();
-extern "C" void onCollectMirror__20dSv_player_collect_cFUc();
-extern "C" void isCollectMirror__20dSv_player_collect_cCFUc();
-extern "C" void init__17dSv_player_wolf_cFv();
-extern "C" void init__16dSv_light_drop_cFv();
-extern "C" void setLightDropNum__16dSv_light_drop_cFUcUc();
-extern "C" void getLightDropNum__16dSv_light_drop_cCFUc();
-extern "C" void onLightDropGetFlag__16dSv_light_drop_cFUc();
-extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc();
-extern "C" void init__17dSv_letter_info_cFv();
-extern "C" void onLetterGetFlag__17dSv_letter_info_cFi();
-extern "C" void isLetterGetFlag__17dSv_letter_info_cCFi();
-extern "C" void onLetterReadFlag__17dSv_letter_info_cFi();
-extern "C" void isLetterReadFlag__17dSv_letter_info_cCFi();
-extern "C" void init__18dSv_fishing_info_cFv();
-extern "C" void addFishCount__18dSv_fishing_info_cFUc();
-extern "C" void init__17dSv_player_info_cFv();
-extern "C" void init__19dSv_player_config_cFv();
-extern "C" void checkVibration__19dSv_player_config_cCFv();
-extern "C" void getSound__19dSv_player_config_cFv();
-extern "C" void setSound__19dSv_player_config_cFUc();
-extern "C" void getVibration__19dSv_player_config_cFv();
-extern "C" void setVibration__19dSv_player_config_cFUc();
-extern "C" void init__12dSv_player_cFv();
-extern "C" void init__12dSv_memBit_cFv();
-extern "C" void onTbox__12dSv_memBit_cFi();
-extern "C" void offTbox__12dSv_memBit_cFi();
-extern "C" void isTbox__12dSv_memBit_cCFi();
-extern "C" void onSwitch__12dSv_memBit_cFi();
-extern "C" void offSwitch__12dSv_memBit_cFi();
-extern "C" void isSwitch__12dSv_memBit_cCFi();
-extern "C" void revSwitch__12dSv_memBit_cFi();
-extern "C" void onItem__12dSv_memBit_cFi();
-extern "C" void isItem__12dSv_memBit_cCFi();
-extern "C" void onDungeonItem__12dSv_memBit_cFi();
-extern "C" void isDungeonItem__12dSv_memBit_cCFi();
-extern "C" void init__11dSv_event_cFv();
-extern "C" void onEventBit__11dSv_event_cFUs();
-extern "C" void offEventBit__11dSv_event_cFUs();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void setEventReg__11dSv_event_cFUsUc();
-extern "C" void getEventReg__11dSv_event_cCFUs();
-extern "C" void init__14dSv_MiniGame_cFv();
-extern "C" void init__12dSv_memory_cFv();
-extern "C" void init__13dSv_memory2_cFv();
-extern "C" void onVisitedRoom__13dSv_memory2_cFi();
-extern "C" void offVisitedRoom__13dSv_memory2_cFi();
-extern "C" void isVisitedRoom__13dSv_memory2_cFi();
-extern "C" void init__12dSv_danBit_cFSc();
-extern "C" void onSwitch__12dSv_danBit_cFi();
-extern "C" void offSwitch__12dSv_danBit_cFi();
-extern "C" void isSwitch__12dSv_danBit_cCFi();
-extern "C" void revSwitch__12dSv_danBit_cFi();
-extern "C" void onItem__12dSv_danBit_cFi();
-extern "C" void isItem__12dSv_danBit_cCFi();
-extern "C" void init__13dSv_zoneBit_cFv();
-extern "C" void clearRoomSwitch__13dSv_zoneBit_cFv();
-extern "C" void clearRoomItem__13dSv_zoneBit_cFv();
-extern "C" void onSwitch__13dSv_zoneBit_cFi();
-extern "C" void offSwitch__13dSv_zoneBit_cFi();
-extern "C" void isSwitch__13dSv_zoneBit_cCFi();
-extern "C" void revSwitch__13dSv_zoneBit_cFi();
-extern "C" void onOneSwitch__13dSv_zoneBit_cFi();
-extern "C" void offOneSwitch__13dSv_zoneBit_cFi();
-extern "C" void isOneSwitch__13dSv_zoneBit_cCFi();
-extern "C" void revOneSwitch__13dSv_zoneBit_cFi();
-extern "C" void onItem__13dSv_zoneBit_cFi();
-extern "C" void isItem__13dSv_zoneBit_cCFi();
-extern "C" void onOneItem__13dSv_zoneBit_cFi();
-extern "C" void isOneItem__13dSv_zoneBit_cCFi();
-extern "C" void init__15dSv_zoneActor_cFv();
-extern "C" void on__15dSv_zoneActor_cFi();
-extern "C" void off__15dSv_zoneActor_cFi();
-extern "C" void is__15dSv_zoneActor_cCFi();
-extern "C" void init__10dSv_zone_cFi();
-extern "C" void setRoom__13dSv_restart_cFRC4cXyzsSc();
-extern "C" void set__17dSv_turnRestart_cFRC4cXyzsScUl();
-extern "C" void init__10dSv_info_cFv();
-extern "C" void init__10dSv_save_cFv();
-extern "C" void getSave2__10dSv_save_cFi();
-extern "C" void getSave__10dSv_info_cFi();
-extern "C" void putSave__10dSv_info_cFi();
-extern "C" void initZone__10dSv_info_cFv();
-extern "C" void createZone__10dSv_info_cFi();
-extern "C" void onSwitch__10dSv_info_cFii();
-extern "C" void offSwitch__10dSv_info_cFii();
-extern "C" void isSwitch__10dSv_info_cCFii();
-extern "C" void revSwitch__10dSv_info_cFii();
-extern "C" void onItem__10dSv_info_cFii();
-extern "C" void isItem__10dSv_info_cCFii();
-extern "C" void onActor__10dSv_info_cFii();
-extern "C" void offActor__10dSv_info_cFii();
-extern "C" void isActor__10dSv_info_cCFii();
-extern "C" void memory_to_card__10dSv_info_cFPci();
-extern "C" void card_to_memory__10dSv_info_cFPci();
-extern "C" void initdata_to_card__10dSv_info_cFPci();
+extern "C" static void dSv_item_rename__FUc(); // 1
+extern "C" void init__21dSv_player_status_a_cFv(); // 1
+extern "C" void setSelectItemIndex__21dSv_player_status_a_cFiUc(); // 1
+extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi(); // 1
+extern "C" void setMixItemIndex__21dSv_player_status_a_cFiUc(); // 1
+extern "C" void getMixItemIndex__21dSv_player_status_a_cCFi(); // 1
+extern "C" void getRupeeMax__21dSv_player_status_a_cCFv(); // 1
+extern "C" void isMagicFlag__21dSv_player_status_a_cCFUc(); // 1
+extern "C" void init__21dSv_player_status_b_cFv(); // 1
+extern "C" void onDarkClearLV__21dSv_player_status_b_cFi(); // 1
+extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi(); // 1
+extern "C" void onTransformLV__21dSv_player_status_b_cFi(); // 1
+extern "C" void isTransformLV__21dSv_player_status_b_cCFi(); // 1
+extern "C" void init__17dSv_horse_place_cFv(); // 1
+extern "C" void set__17dSv_horse_place_cFPCcRC4cXyzsSc(); // 1
+extern "C" void init__25dSv_player_return_place_cFv(); // 1
+extern "C" void set__25dSv_player_return_place_cFPCcScUc(); // 1
+extern "C" void init__33dSv_player_field_last_stay_info_cFv(); // 1
+extern "C" void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc(); // 1
+extern "C" void onRegionBit__33dSv_player_field_last_stay_info_cFi(); // 1
+extern "C" void isRegionBit__33dSv_player_field_last_stay_info_cCFi(); // 1
+extern "C" void init__27dSv_player_last_mark_info_cFv(); // 1
+extern "C" void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc(); // 1
+extern "C" void init__17dSv_player_item_cFv(); // 1
+extern "C" void setItem__17dSv_player_item_cFiUc(); // 1
+extern "C" void getItem__17dSv_player_item_cCFib(); // 1
+extern "C" void setLineUpItem__17dSv_player_item_cFv(); // 1
+extern "C" void getLineUpItem__17dSv_player_item_cCFi(); // 1
+extern "C" void setBottleItemIn__17dSv_player_item_cFUcUc(); // 1
+extern "C" void setEmptyBottleItemIn__17dSv_player_item_cFUc(); // 1
+extern "C" void setEmptyBottle__17dSv_player_item_cFv(); // 1
+extern "C" void setEmptyBottle__17dSv_player_item_cFUc(); // 1
+extern "C" void setEquipBottleItemIn__17dSv_player_item_cFUcUc(); // 1
+extern "C" void setEquipBottleItemEmpty__17dSv_player_item_cFUc(); // 1
+extern "C" void checkBottle__17dSv_player_item_cFUc(); // 1
+extern "C" void checkInsectBottle__17dSv_player_item_cFv(); // 1
+extern "C" void checkEmptyBottle__17dSv_player_item_cFv(); // 1
+extern "C" void setBombBagItemIn__17dSv_player_item_cFUcUcb(); // 1
+extern "C" void setBombBagItemIn__17dSv_player_item_cFUcUcUcb(); // 1
+extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcb(); // 1
+extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb(); // 1
+extern "C" void setEmptyBombBag__17dSv_player_item_cFv(); // 1
+extern "C" void setEmptyBombBag__17dSv_player_item_cFUcUc(); // 1
+extern "C" void checkBombBag__17dSv_player_item_cFUc(); // 1
+extern "C" void setWarashibeItem__17dSv_player_item_cFUc(); // 1
+extern "C" void setRodTypeLevelUp__17dSv_player_item_cFv(); // 1
+extern "C" void setBaitItem__17dSv_player_item_cFUc(); // 1
+extern "C" void init__21dSv_player_get_item_cFv(); // 1
+extern "C" void onFirstBit__21dSv_player_get_item_cFUc(); // 1
+extern "C" void offFirstBit__21dSv_player_get_item_cFUc(); // 1
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc(); // 1
+extern "C" void init__24dSv_player_item_record_cFv(); // 1
+extern "C" void setBombNum__24dSv_player_item_record_cFUcUc(); // 1
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc(); // 1
+extern "C" void setBottleNum__24dSv_player_item_record_cFUcUc(); // 1
+extern "C" void addBottleNum__24dSv_player_item_record_cFUcs(); // 1
+extern "C" void getBottleNum__24dSv_player_item_record_cCFUc(); // 1
+extern "C" void init__21dSv_player_item_max_cFv(); // 1
+extern "C" void setBombNum__21dSv_player_item_max_cFUcUc(); // 1
+extern "C" void getBombNum__21dSv_player_item_max_cCFUc(); // 1
+extern "C" void init__20dSv_player_collect_cFv(); // 1
+extern "C" void setCollect__20dSv_player_collect_cFiUc(); // 1
+extern "C" void isCollect__20dSv_player_collect_cCFiUc(); // 1
+extern "C" void onCollectCrystal__20dSv_player_collect_cFUc(); // 1
+extern "C" void isCollectCrystal__20dSv_player_collect_cCFUc(); // 1
+extern "C" void onCollectMirror__20dSv_player_collect_cFUc(); // 1
+extern "C" void isCollectMirror__20dSv_player_collect_cCFUc(); // 1
+extern "C" void init__17dSv_player_wolf_cFv(); // 1
+extern "C" void init__16dSv_light_drop_cFv(); // 1
+extern "C" void setLightDropNum__16dSv_light_drop_cFUcUc(); // 1
+extern "C" void getLightDropNum__16dSv_light_drop_cCFUc(); // 1
+extern "C" void onLightDropGetFlag__16dSv_light_drop_cFUc(); // 1
+extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc(); // 1
+extern "C" void init__17dSv_letter_info_cFv(); // 1
+extern "C" void onLetterGetFlag__17dSv_letter_info_cFi(); // 1
+extern "C" void isLetterGetFlag__17dSv_letter_info_cCFi(); // 1
+extern "C" void onLetterReadFlag__17dSv_letter_info_cFi(); // 1
+extern "C" void isLetterReadFlag__17dSv_letter_info_cCFi(); // 1
+extern "C" void init__18dSv_fishing_info_cFv(); // 1
+extern "C" void addFishCount__18dSv_fishing_info_cFUc(); // 1
+extern "C" void init__17dSv_player_info_cFv(); // 1
+extern "C" void init__19dSv_player_config_cFv(); // 1
+extern "C" void checkVibration__19dSv_player_config_cCFv(); // 1
+extern "C" void getSound__19dSv_player_config_cFv(); // 1
+extern "C" void setSound__19dSv_player_config_cFUc(); // 1
+extern "C" void getVibration__19dSv_player_config_cFv(); // 1
+extern "C" void setVibration__19dSv_player_config_cFUc(); // 1
+extern "C" void init__12dSv_player_cFv(); // 1
+extern "C" void init__12dSv_memBit_cFv(); // 1
+extern "C" void onTbox__12dSv_memBit_cFi(); // 1
+extern "C" void offTbox__12dSv_memBit_cFi(); // 1
+extern "C" void isTbox__12dSv_memBit_cCFi(); // 1
+extern "C" void onSwitch__12dSv_memBit_cFi(); // 1
+extern "C" void offSwitch__12dSv_memBit_cFi(); // 1
+extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1
+extern "C" void revSwitch__12dSv_memBit_cFi(); // 1
+extern "C" void onItem__12dSv_memBit_cFi(); // 1
+extern "C" void isItem__12dSv_memBit_cCFi(); // 1
+extern "C" void onDungeonItem__12dSv_memBit_cFi(); // 1
+extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
+extern "C" void init__11dSv_event_cFv(); // 1
+extern "C" void onEventBit__11dSv_event_cFUs(); // 1
+extern "C" void offEventBit__11dSv_event_cFUs(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void setEventReg__11dSv_event_cFUsUc(); // 1
+extern "C" void getEventReg__11dSv_event_cCFUs(); // 1
+extern "C" void init__14dSv_MiniGame_cFv(); // 1
+extern "C" void init__12dSv_memory_cFv(); // 1
+extern "C" void init__13dSv_memory2_cFv(); // 1
+extern "C" void onVisitedRoom__13dSv_memory2_cFi(); // 1
+extern "C" void offVisitedRoom__13dSv_memory2_cFi(); // 1
+extern "C" void isVisitedRoom__13dSv_memory2_cFi(); // 1
+extern "C" void init__12dSv_danBit_cFSc(); // 1
+extern "C" void onSwitch__12dSv_danBit_cFi(); // 1
+extern "C" void offSwitch__12dSv_danBit_cFi(); // 1
+extern "C" void isSwitch__12dSv_danBit_cCFi(); // 1
+extern "C" void revSwitch__12dSv_danBit_cFi(); // 1
+extern "C" void onItem__12dSv_danBit_cFi(); // 1
+extern "C" void isItem__12dSv_danBit_cCFi(); // 1
+extern "C" void init__13dSv_zoneBit_cFv(); // 1
+extern "C" void clearRoomSwitch__13dSv_zoneBit_cFv(); // 1
+extern "C" void clearRoomItem__13dSv_zoneBit_cFv(); // 1
+extern "C" void onSwitch__13dSv_zoneBit_cFi(); // 1
+extern "C" void offSwitch__13dSv_zoneBit_cFi(); // 1
+extern "C" void isSwitch__13dSv_zoneBit_cCFi(); // 1
+extern "C" void revSwitch__13dSv_zoneBit_cFi(); // 1
+extern "C" void onOneSwitch__13dSv_zoneBit_cFi(); // 1
+extern "C" void offOneSwitch__13dSv_zoneBit_cFi(); // 1
+extern "C" void isOneSwitch__13dSv_zoneBit_cCFi(); // 1
+extern "C" void revOneSwitch__13dSv_zoneBit_cFi(); // 1
+extern "C" void onItem__13dSv_zoneBit_cFi(); // 1
+extern "C" void isItem__13dSv_zoneBit_cCFi(); // 1
+extern "C" void onOneItem__13dSv_zoneBit_cFi(); // 1
+extern "C" void isOneItem__13dSv_zoneBit_cCFi(); // 1
+extern "C" void init__15dSv_zoneActor_cFv(); // 1
+extern "C" void on__15dSv_zoneActor_cFi(); // 1
+extern "C" void off__15dSv_zoneActor_cFi(); // 1
+extern "C" void is__15dSv_zoneActor_cCFi(); // 1
+extern "C" void init__10dSv_zone_cFi(); // 1
+extern "C" void setRoom__13dSv_restart_cFRC4cXyzsSc(); // 1
+extern "C" void set__17dSv_turnRestart_cFRC4cXyzsScUl(); // 1
+extern "C" void init__10dSv_info_cFv(); // 1
+extern "C" void init__10dSv_save_cFv(); // 1
+extern "C" void getSave2__10dSv_save_cFi(); // 1
+extern "C" void getSave__10dSv_info_cFi(); // 1
+extern "C" void putSave__10dSv_info_cFi(); // 1
+extern "C" void initZone__10dSv_info_cFv(); // 1
+extern "C" void createZone__10dSv_info_cFi(); // 1
+extern "C" void onSwitch__10dSv_info_cFii(); // 1
+extern "C" void offSwitch__10dSv_info_cFii(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void revSwitch__10dSv_info_cFii(); // 1
+extern "C" void onItem__10dSv_info_cFii(); // 1
+extern "C" void isItem__10dSv_info_cCFii(); // 1
+extern "C" void onActor__10dSv_info_cFii(); // 1
+extern "C" void offActor__10dSv_info_cFii(); // 1
+extern "C" void isActor__10dSv_info_cCFii(); // 1
+extern "C" void memory_to_card__10dSv_info_cFPci(); // 1
+extern "C" void card_to_memory__10dSv_info_cFPci(); // 1
+extern "C" void initdata_to_card__10dSv_info_cFPci(); // 1
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 SECTION_RODATA extern const u8 d_save_d_save__stringBase0[100];
 SECTION_DATA extern u8 data_803A7270[23 + 1 /* padding */];
@@ -602,68 +470,68 @@ SECTION_SDATA2 extern u8 lit_3813[4];
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-extern "C" void OSReport_Error();
-void dComIfGs_setSelectItemIndex(int, u8);
-void dComIfGs_setMixItemIndex(int, u8);
-void dComIfGs_getMixItemIndex(int);
-void dComIfGp_setSelectItem(int);
-s32 dComIfGs_getBottleMax();
-void dComIfGs_setKeyNum(int, u8);
-void setInitEventBit();
-extern "C" void OSGetSoundMode();
-extern "C" void OSGetTime();
-extern "C" void __construct_array();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void __div2i();
-extern "C" void printf();
-extern "C" void strcpy();
+SECTION_INIT void memcpy(); // 1
+extern "C" void OSReport_Error(); // 1
+void dComIfGs_setSelectItemIndex(int, u8); // 2
+void dComIfGs_setMixItemIndex(int, u8); // 2
+void dComIfGs_getMixItemIndex(int); // 2
+void dComIfGp_setSelectItem(int); // 2
+s32 dComIfGs_getBottleMax(); // 2
+void dComIfGs_setKeyNum(int, u8); // 2
+void setInitEventBit(); // 2
+extern "C" void OSGetSoundMode(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void __div2i(); // 1
+extern "C" void printf(); // 1
+extern "C" void strcpy(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void OSReport_Error();
-extern "C" void setNowVibration__14dComIfG_play_cFUc();
-extern "C" void getNowVibration__14dComIfG_play_cFv();
-extern "C" void getZoneNo__20dStage_roomControl_cFi();
-extern "C" void dComIfGs_setSelectItemIndex__FiUc();
-extern "C" void dComIfGs_setMixItemIndex__FiUc();
-extern "C" void dComIfGs_getMixItemIndex__Fi();
-extern "C" void dComIfGp_setSelectItem__Fi();
-extern "C" s32 dComIfGs_getBottleMax__Fv();
-extern "C" void dComIfGs_setKeyNum__FiUc();
-extern "C" void __ct__13dSv_memory2_cFv();
-extern "C" void __ct__12dSv_memory_cFv();
-extern "C" void clrSaveFlag__12daObjCarry_cFv();
-extern "C" void setSaveFlag__12daObjCarry_cFv();
-extern "C" void setInitEventBit__Fv();
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" void setHotSpringTimer__13dMeter2Info_cFUc();
-extern "C" void setSaveStageName__13dMeter2Info_cFPCc();
-extern "C" void setOutputMode__10Z2AudioMgrFUl();
-extern "C" void OSGetSoundMode();
-extern "C" void OSGetTime();
-extern "C" void __construct_array();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void __div2i();
-extern "C" void printf();
-extern "C" void strcpy();
+SECTION_INIT void memcpy(); // 1
+extern "C" void OSReport_Error(); // 1
+extern "C" void setNowVibration__14dComIfG_play_cFUc(); // 1
+extern "C" void getNowVibration__14dComIfG_play_cFv(); // 1
+extern "C" void getZoneNo__20dStage_roomControl_cFi(); // 1
+extern "C" void dComIfGs_setSelectItemIndex__FiUc(); // 1
+extern "C" void dComIfGs_setMixItemIndex__FiUc(); // 1
+extern "C" void dComIfGs_getMixItemIndex__Fi(); // 1
+extern "C" void dComIfGp_setSelectItem__Fi(); // 1
+extern "C" s32 dComIfGs_getBottleMax__Fv(); // 1
+extern "C" void dComIfGs_setKeyNum__FiUc(); // 1
+extern "C" void __ct__13dSv_memory2_cFv(); // 1
+extern "C" void __ct__12dSv_memory_cFv(); // 1
+extern "C" void clrSaveFlag__12daObjCarry_cFv(); // 1
+extern "C" void setSaveFlag__12daObjCarry_cFv(); // 1
+extern "C" void setInitEventBit__Fv(); // 1
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void setHotSpringTimer__13dMeter2Info_cFUc(); // 1
+extern "C" void setSaveStageName__13dMeter2Info_cFPCc(); // 1
+extern "C" void setOutputMode__10Z2AudioMgrFUl(); // 1
+extern "C" void OSGetSoundMode(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void __div2i(); // 1
+extern "C" void printf(); // 1
+extern "C" void strcpy(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_meter2_info[248];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];

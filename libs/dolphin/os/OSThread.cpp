@@ -9,63 +9,63 @@
 // Forward References:
 // 
 
-extern "C" static void DefaultSwitchThreadCallback();
-extern "C" void OSSetSwitchThreadCallback();
-extern "C" void __OSThreadInit();
-extern "C" void OSInitThreadQueue();
-extern "C" void OSGetCurrentThread();
-extern "C" void OSIsThreadTerminated();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" static void UnsetRun();
-extern "C" void __OSGetEffectivePriority();
-extern "C" static void SetEffectivePriority();
-extern "C" void __OSPromoteThread();
-extern "C" static void SelectThread();
-extern "C" void __OSReschedule();
-extern "C" void OSYieldThread();
-extern "C" void OSCreateThread();
-extern "C" void OSExitThread();
-extern "C" void OSCancelThread();
-extern "C" void OSDetachThread();
-extern "C" void OSResumeThread();
-extern "C" void OSSuspendThread();
-extern "C" void OSSleepThread();
-extern "C" void OSWakeupThread();
-extern "C" void OSSetThreadPriority();
-extern "C" void OSGetThreadPriority();
-extern "C" static void CheckThreadQueue();
-extern "C" void OSCheckActiveThreads();
-extern "C" static void OSClearStack();
+extern "C" static void DefaultSwitchThreadCallback(); // 1
+extern "C" void OSSetSwitchThreadCallback(); // 1
+extern "C" void __OSThreadInit(); // 1
+extern "C" void OSInitThreadQueue(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void OSIsThreadTerminated(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" static void UnsetRun(); // 1
+extern "C" void __OSGetEffectivePriority(); // 1
+extern "C" static void SetEffectivePriority(); // 1
+extern "C" void __OSPromoteThread(); // 1
+extern "C" static void SelectThread(); // 1
+extern "C" void __OSReschedule(); // 1
+extern "C" void OSYieldThread(); // 1
+extern "C" void OSCreateThread(); // 1
+extern "C" void OSExitThread(); // 1
+extern "C" void OSCancelThread(); // 1
+extern "C" void OSDetachThread(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void OSSuspendThread(); // 1
+extern "C" void OSSleepThread(); // 1
+extern "C" void OSWakeupThread(); // 1
+extern "C" void OSSetThreadPriority(); // 1
+extern "C" void OSGetThreadPriority(); // 1
+extern "C" static void CheckThreadQueue(); // 1
+extern "C" void OSCheckActiveThreads(); // 1
+extern "C" static void OSClearStack(); // 1
 
-extern "C" static void DefaultSwitchThreadCallback();
-extern "C" void OSSetSwitchThreadCallback();
-extern "C" void __OSThreadInit();
-extern "C" void OSInitThreadQueue();
-extern "C" void OSGetCurrentThread();
-extern "C" void OSIsThreadTerminated();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" static void UnsetRun();
-extern "C" void __OSGetEffectivePriority();
-extern "C" static void SetEffectivePriority();
-extern "C" void __OSPromoteThread();
-extern "C" static void SelectThread();
-extern "C" void __OSReschedule();
-extern "C" void OSYieldThread();
-extern "C" void OSCreateThread();
-extern "C" void OSExitThread();
-extern "C" void OSCancelThread();
-extern "C" void OSDetachThread();
-extern "C" void OSResumeThread();
-extern "C" void OSSuspendThread();
-extern "C" void OSSleepThread();
-extern "C" void OSWakeupThread();
-extern "C" void OSSetThreadPriority();
-extern "C" void OSGetThreadPriority();
-extern "C" static void CheckThreadQueue();
-extern "C" void OSCheckActiveThreads();
-extern "C" static void OSClearStack();
+extern "C" static void DefaultSwitchThreadCallback(); // 1
+extern "C" void OSSetSwitchThreadCallback(); // 1
+extern "C" void __OSThreadInit(); // 1
+extern "C" void OSInitThreadQueue(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void OSIsThreadTerminated(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" static void UnsetRun(); // 1
+extern "C" void __OSGetEffectivePriority(); // 1
+extern "C" static void SetEffectivePriority(); // 1
+extern "C" void __OSPromoteThread(); // 1
+extern "C" static void SelectThread(); // 1
+extern "C" void __OSReschedule(); // 1
+extern "C" void OSYieldThread(); // 1
+extern "C" void OSCreateThread(); // 1
+extern "C" void OSExitThread(); // 1
+extern "C" void OSCancelThread(); // 1
+extern "C" void OSDetachThread(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void OSSuspendThread(); // 1
+extern "C" void OSSleepThread(); // 1
+extern "C" void OSWakeupThread(); // 1
+extern "C" void OSSetThreadPriority(); // 1
+extern "C" void OSGetThreadPriority(); // 1
+extern "C" static void CheckThreadQueue(); // 1
+extern "C" void OSCheckActiveThreads(); // 1
+extern "C" static void OSClearStack(); // 1
 SECTION_DATA extern u8 lit_831[95 + 1 /* padding */];
 SECTION_DATA extern u8 OSThread__lit_832[11 + 1 /* padding */];
 SECTION_DATA extern u8 OSThread__lit_834[95 + 1 /* padding */];
@@ -106,37 +106,37 @@ SECTION_SBSS extern u8 data_804516D0[8];
 // External References:
 // 
 
-extern "C" void OSReport();
-extern "C" void OSPanic();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSGetCurrentContext();
-extern "C" void OSSaveContext();
-extern "C" void OSLoadContext();
-extern "C" void OSGetStackPointer();
-extern "C" void OSClearContext();
-extern "C" void OSInitContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSEnableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSUnlockAllMutex();
-extern "C" void __OSCheckDeadLock();
-extern "C" void __OSCheckMutexes();
+extern "C" void OSReport(); // 1
+extern "C" void OSPanic(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSGetCurrentContext(); // 1
+extern "C" void OSSaveContext(); // 1
+extern "C" void OSLoadContext(); // 1
+extern "C" void OSGetStackPointer(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSInitContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSEnableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSUnlockAllMutex(); // 1
+extern "C" void __OSCheckDeadLock(); // 1
+extern "C" void __OSCheckMutexes(); // 1
 
-extern "C" void OSReport();
-extern "C" void OSPanic();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSGetCurrentContext();
-extern "C" void OSSaveContext();
-extern "C" void OSLoadContext();
-extern "C" void OSGetStackPointer();
-extern "C" void OSClearContext();
-extern "C" void OSInitContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSEnableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSUnlockAllMutex();
-extern "C" void __OSCheckDeadLock();
-extern "C" void __OSCheckMutexes();
+extern "C" void OSReport(); // 1
+extern "C" void OSPanic(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSGetCurrentContext(); // 1
+extern "C" void OSSaveContext(); // 1
+extern "C" void OSLoadContext(); // 1
+extern "C" void OSGetStackPointer(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSInitContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSEnableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSUnlockAllMutex(); // 1
+extern "C" void __OSCheckDeadLock(); // 1
+extern "C" void __OSCheckMutexes(); // 1
 SECTION_BSS extern u8 __OSErrorTable[68 + 12 /* padding */];
 SECTION_SDATA extern u32 __OSFpscrEnableBits;
 

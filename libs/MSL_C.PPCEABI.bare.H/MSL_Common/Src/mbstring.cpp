@@ -9,18 +9,18 @@
 // Forward References:
 // 
 
-extern "C" void wcstombs();
+extern "C" void wcstombs(); // 1
 
-extern "C" void wcstombs();
+extern "C" void wcstombs(); // 1
 SECTION_SDATA2 extern u32 MSL_Common_Src_mbstring__lit_74;
 
 // 
 // External References:
 // 
 
-extern "C" void strncpy();
+extern "C" void strncpy(); // 1
 
-extern "C" void strncpy();
+extern "C" void strncpy(); // 1
 
 // 
 // Declarations:

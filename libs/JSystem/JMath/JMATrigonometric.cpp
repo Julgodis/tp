@@ -6,14 +6,27 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+namespace std {
+	template <typename A1, typename B1>
+	struct pair { };
+	/* pair<f32, f32> */
+	struct pair__template0 {
+		/* 80339CB0 */ pair__template0();
+	};
+
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" void __sinit_JMATrigonometric_cpp();
-extern "C" static void func_80339CB0();
+extern "C" void __sinit_JMATrigonometric_cpp(); // 1
 
-extern "C" void __sinit_JMATrigonometric_cpp();
-extern "C" static void func_80339CB0();
+extern "C" void __sinit_JMATrigonometric_cpp(); // 1
+extern "C" void func_80339CB0(); // 1
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 SECTION_BSS extern u8 atanTable___5JMath[4128];
 SECTION_BSS extern u8 asinAcosTable___5JMath[4128];
@@ -28,21 +41,21 @@ SECTION_SDATA2 extern f64 JMATrigonometric__lit_441;
 // External References:
 // 
 
-extern "C" void __construct_array();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
-extern "C" void atan();
-extern "C" void cos();
-extern "C" void sin();
-extern "C" void asin();
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void atan(); // 1
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
+extern "C" void asin(); // 1
 
-extern "C" void __construct_array();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
-extern "C" void atan();
-extern "C" void cos();
-extern "C" void sin();
-extern "C" void asin();
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void atan(); // 1
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
+extern "C" void asin(); // 1
 
 // 
 // Declarations:
@@ -96,7 +109,7 @@ extern "C" asm void __sinit_JMATrigonometric_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80339CB0() {
+asm std::pair__template0::pair__template0() {
 	nofralloc
 #include "asm/JSystem/JMath/JMATrigonometric/func_80339CB0.s"
 }

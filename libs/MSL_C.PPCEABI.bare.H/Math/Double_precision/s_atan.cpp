@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void atan();
+extern "C" void atan(); // 1
 
-extern "C" void atan();
+extern "C" void atan(); // 1
 SECTION_RODATA extern const u8 atanhi[32];
 SECTION_RODATA extern const u8 atanlo[32];
 SECTION_RODATA extern const u8 aT[88];

@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" static void __ARQServiceQueueLo();
-extern "C" static void __ARQCallbackHack();
-extern "C" static void __ARQInterruptServiceRoutine();
-extern "C" void ARQInit();
-extern "C" void ARQPostRequest();
+extern "C" static void __ARQServiceQueueLo(); // 1
+extern "C" static void __ARQCallbackHack(); // 1
+extern "C" static void __ARQInterruptServiceRoutine(); // 1
+extern "C" void ARQInit(); // 1
+extern "C" void ARQPostRequest(); // 1
 
-extern "C" static void __ARQServiceQueueLo();
-extern "C" static void __ARQCallbackHack();
-extern "C" static void __ARQInterruptServiceRoutine();
-extern "C" void ARQInit();
-extern "C" void ARQPostRequest();
+extern "C" static void __ARQServiceQueueLo(); // 1
+extern "C" static void __ARQCallbackHack(); // 1
+extern "C" static void __ARQInterruptServiceRoutine(); // 1
+extern "C" void ARQInit(); // 1
+extern "C" void ARQPostRequest(); // 1
 SECTION_DATA extern u8 arq__lit_1[69 + 3 /* padding */];
 SECTION_SDATA extern void*__ARQVersion[2];
 SECTION_SBSS extern u8 __ARQRequestQueueHi[4];
@@ -37,17 +37,17 @@ SECTION_SBSS extern u8 __ARQ_init_flag[4];
 // External References:
 // 
 
-extern "C" void OSRegisterVersion();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void ARRegisterDMACallback();
-extern "C" void ARStartDMA();
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void ARRegisterDMACallback(); // 1
+extern "C" void ARStartDMA(); // 1
 
-extern "C" void OSRegisterVersion();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void ARRegisterDMACallback();
-extern "C" void ARStartDMA();
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void ARRegisterDMACallback(); // 1
+extern "C" void ARStartDMA(); // 1
 
 // 
 // Declarations:

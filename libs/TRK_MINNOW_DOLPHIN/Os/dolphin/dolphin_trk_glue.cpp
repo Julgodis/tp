@@ -9,33 +9,33 @@
 // Forward References:
 // 
 
-extern "C" static void TRKLoadContext();
-extern "C" void TRKUARTInterruptHandler();
-extern "C" void InitializeProgramEndTrap();
-extern "C" void TRK_board_display();
-extern "C" void UnreserveEXI2Port();
-extern "C" void ReserveEXI2Port();
-extern "C" void TRKWriteUARTN();
-extern "C" void TRKReadUARTN();
-extern "C" void TRKPollUART();
-extern "C" void EnableEXI2Interrupts();
-extern "C" void TRKInitializeIntDrivenUART();
-extern "C" void InitMetroTRKCommTable();
-extern "C" static void TRKEXICallBack();
+extern "C" static void TRKLoadContext(); // 1
+extern "C" void TRKUARTInterruptHandler(); // 1
+extern "C" void InitializeProgramEndTrap(); // 1
+extern "C" void TRK_board_display(); // 1
+extern "C" void UnreserveEXI2Port(); // 1
+extern "C" void ReserveEXI2Port(); // 1
+extern "C" void TRKWriteUARTN(); // 1
+extern "C" void TRKReadUARTN(); // 1
+extern "C" void TRKPollUART(); // 1
+extern "C" void EnableEXI2Interrupts(); // 1
+extern "C" void TRKInitializeIntDrivenUART(); // 1
+extern "C" void InitMetroTRKCommTable(); // 1
+extern "C" static void TRKEXICallBack(); // 1
 
-extern "C" static void TRKLoadContext();
-extern "C" void TRKUARTInterruptHandler();
-extern "C" void InitializeProgramEndTrap();
-extern "C" void TRK_board_display();
-extern "C" void UnreserveEXI2Port();
-extern "C" void ReserveEXI2Port();
-extern "C" void TRKWriteUARTN();
-extern "C" void TRKReadUARTN();
-extern "C" void TRKPollUART();
-extern "C" void EnableEXI2Interrupts();
-extern "C" void TRKInitializeIntDrivenUART();
-extern "C" void InitMetroTRKCommTable();
-extern "C" static void TRKEXICallBack();
+extern "C" static void TRKLoadContext(); // 1
+extern "C" void TRKUARTInterruptHandler(); // 1
+extern "C" void InitializeProgramEndTrap(); // 1
+extern "C" void TRK_board_display(); // 1
+extern "C" void UnreserveEXI2Port(); // 1
+extern "C" void ReserveEXI2Port(); // 1
+extern "C" void TRKWriteUARTN(); // 1
+extern "C" void TRKReadUARTN(); // 1
+extern "C" void TRKPollUART(); // 1
+extern "C" void EnableEXI2Interrupts(); // 1
+extern "C" void TRKInitializeIntDrivenUART(); // 1
+extern "C" void InitMetroTRKCommTable(); // 1
+extern "C" static void TRKEXICallBack(); // 1
 SECTION_RODATA extern const u8 data_803A2C08[4];
 SECTION_RODATA extern const u32 lit_165;
 SECTION_RODATA extern const u8 Os_dolphin_dolphin_trk_glue__lit_215[21 + 3 /* padding */];
@@ -54,83 +54,83 @@ SECTION_BSS extern u8 data_8044F828[8];
 // External References:
 // 
 
-SECTION_INIT void TRK_memcpy();
-extern "C" void OSReport();
-extern "C" void PPCHalt();
-extern "C" void DCFlushRange();
-extern "C" void ICInvalidateRange();
-extern "C" void OSEnableScheduler();
-extern "C" void TRKInterruptHandler();
-extern "C" s32 udp_cc_post_stop();
-extern "C" s32 udp_cc_pre_continue();
-extern "C" bool udp_cc_peek();
-extern "C" bool udp_cc_write();
-extern "C" bool udp_cc_read();
-extern "C" s32 udp_cc_close();
-extern "C" s32 udp_cc_open();
-extern "C" s32 udp_cc_shutdown();
-extern "C" s32 udp_cc_initialize();
-extern "C" void ddh_cc_initinterrupts();
-extern "C" void ddh_cc_peek();
-extern "C" void ddh_cc_post_stop();
-extern "C" void ddh_cc_pre_continue();
-extern "C" void ddh_cc_write();
-extern "C" void ddh_cc_read();
-extern "C" bool ddh_cc_close();
-extern "C" void ddh_cc_open();
-extern "C" bool ddh_cc_shutdown();
-extern "C" void ddh_cc_initialize();
-extern "C" void gdev_cc_initinterrupts();
-extern "C" void gdev_cc_peek();
-extern "C" void gdev_cc_post_stop();
-extern "C" void gdev_cc_pre_continue();
-extern "C" void gdev_cc_write();
-extern "C" void gdev_cc_read();
-extern "C" bool gdev_cc_close();
-extern "C" void gdev_cc_open();
-extern "C" bool gdev_cc_shutdown();
-extern "C" void gdev_cc_initialize();
-extern "C" bool AMC_IsStub();
-extern "C" bool Hu_IsStub();
+SECTION_INIT void TRK_memcpy(); // 1
+extern "C" void OSReport(); // 1
+extern "C" void PPCHalt(); // 1
+extern "C" void DCFlushRange(); // 1
+extern "C" void ICInvalidateRange(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void TRKInterruptHandler(); // 1
+extern "C" s32 udp_cc_post_stop(); // 1
+extern "C" s32 udp_cc_pre_continue(); // 1
+extern "C" bool udp_cc_peek(); // 1
+extern "C" bool udp_cc_write(); // 1
+extern "C" bool udp_cc_read(); // 1
+extern "C" s32 udp_cc_close(); // 1
+extern "C" s32 udp_cc_open(); // 1
+extern "C" s32 udp_cc_shutdown(); // 1
+extern "C" s32 udp_cc_initialize(); // 1
+extern "C" void ddh_cc_initinterrupts(); // 1
+extern "C" void ddh_cc_peek(); // 1
+extern "C" void ddh_cc_post_stop(); // 1
+extern "C" void ddh_cc_pre_continue(); // 1
+extern "C" void ddh_cc_write(); // 1
+extern "C" void ddh_cc_read(); // 1
+extern "C" bool ddh_cc_close(); // 1
+extern "C" void ddh_cc_open(); // 1
+extern "C" bool ddh_cc_shutdown(); // 1
+extern "C" void ddh_cc_initialize(); // 1
+extern "C" void gdev_cc_initinterrupts(); // 1
+extern "C" void gdev_cc_peek(); // 1
+extern "C" void gdev_cc_post_stop(); // 1
+extern "C" void gdev_cc_pre_continue(); // 1
+extern "C" void gdev_cc_write(); // 1
+extern "C" void gdev_cc_read(); // 1
+extern "C" bool gdev_cc_close(); // 1
+extern "C" void gdev_cc_open(); // 1
+extern "C" bool gdev_cc_shutdown(); // 1
+extern "C" void gdev_cc_initialize(); // 1
+extern "C" bool AMC_IsStub(); // 1
+extern "C" bool Hu_IsStub(); // 1
 
-SECTION_INIT void TRK_memcpy();
-extern "C" void OSReport();
-extern "C" void PPCHalt();
-extern "C" void DCFlushRange();
-extern "C" void ICInvalidateRange();
-extern "C" void OSEnableScheduler();
-extern "C" void TRKInterruptHandler();
-extern "C" s32 udp_cc_post_stop();
-extern "C" s32 udp_cc_pre_continue();
-extern "C" bool udp_cc_peek();
-extern "C" bool udp_cc_write();
-extern "C" bool udp_cc_read();
-extern "C" s32 udp_cc_close();
-extern "C" s32 udp_cc_open();
-extern "C" s32 udp_cc_shutdown();
-extern "C" s32 udp_cc_initialize();
-extern "C" void ddh_cc_initinterrupts();
-extern "C" void ddh_cc_peek();
-extern "C" void ddh_cc_post_stop();
-extern "C" void ddh_cc_pre_continue();
-extern "C" void ddh_cc_write();
-extern "C" void ddh_cc_read();
-extern "C" bool ddh_cc_close();
-extern "C" void ddh_cc_open();
-extern "C" bool ddh_cc_shutdown();
-extern "C" void ddh_cc_initialize();
-extern "C" void gdev_cc_initinterrupts();
-extern "C" void gdev_cc_peek();
-extern "C" void gdev_cc_post_stop();
-extern "C" void gdev_cc_pre_continue();
-extern "C" void gdev_cc_write();
-extern "C" void gdev_cc_read();
-extern "C" bool gdev_cc_close();
-extern "C" void gdev_cc_open();
-extern "C" bool gdev_cc_shutdown();
-extern "C" void gdev_cc_initialize();
-extern "C" bool AMC_IsStub();
-extern "C" bool Hu_IsStub();
+SECTION_INIT void TRK_memcpy(); // 1
+extern "C" void OSReport(); // 1
+extern "C" void PPCHalt(); // 1
+extern "C" void DCFlushRange(); // 1
+extern "C" void ICInvalidateRange(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void TRKInterruptHandler(); // 1
+extern "C" s32 udp_cc_post_stop(); // 1
+extern "C" s32 udp_cc_pre_continue(); // 1
+extern "C" bool udp_cc_peek(); // 1
+extern "C" bool udp_cc_write(); // 1
+extern "C" bool udp_cc_read(); // 1
+extern "C" s32 udp_cc_close(); // 1
+extern "C" s32 udp_cc_open(); // 1
+extern "C" s32 udp_cc_shutdown(); // 1
+extern "C" s32 udp_cc_initialize(); // 1
+extern "C" void ddh_cc_initinterrupts(); // 1
+extern "C" void ddh_cc_peek(); // 1
+extern "C" void ddh_cc_post_stop(); // 1
+extern "C" void ddh_cc_pre_continue(); // 1
+extern "C" void ddh_cc_write(); // 1
+extern "C" void ddh_cc_read(); // 1
+extern "C" bool ddh_cc_close(); // 1
+extern "C" void ddh_cc_open(); // 1
+extern "C" bool ddh_cc_shutdown(); // 1
+extern "C" void ddh_cc_initialize(); // 1
+extern "C" void gdev_cc_initinterrupts(); // 1
+extern "C" void gdev_cc_peek(); // 1
+extern "C" void gdev_cc_post_stop(); // 1
+extern "C" void gdev_cc_pre_continue(); // 1
+extern "C" void gdev_cc_write(); // 1
+extern "C" void gdev_cc_read(); // 1
+extern "C" bool gdev_cc_close(); // 1
+extern "C" void gdev_cc_open(); // 1
+extern "C" bool gdev_cc_shutdown(); // 1
+extern "C" void gdev_cc_initialize(); // 1
+extern "C" bool AMC_IsStub(); // 1
+extern "C" bool Hu_IsStub(); // 1
 
 // 
 // Declarations:

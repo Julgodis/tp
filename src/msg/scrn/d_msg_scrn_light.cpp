@@ -9,33 +9,19 @@
 // Types:
 // 
 
-// build dMsgScrnLight_HIO_c (['dMsgScrnLight_HIO_c']) False/False
-/* top-level dependencies (begin ['dMsgScrnLight_HIO_c']) */
-/* top-level dependencies (end ['dMsgScrnLight_HIO_c']) */
 struct dMsgScrnLight_HIO_c {
 	/* 8024575C */ dMsgScrnLight_HIO_c();
 	/* 802457C4 */ void updateColor(u8);
 	/* 80246348 */ ~dMsgScrnLight_HIO_c();
 };
 
-// build dMsgScrnLight_c (['dMsgScrnLight_c']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin ['dMsgScrnLight_c']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['dMsgScrnLight_c']) */
 struct dMsgScrnLight_c {
-	// ('JUtility', 'TColor')
 	/* 80245934 */ dMsgScrnLight_c(u8, u8);
 	/* 80245B00 */ ~dMsgScrnLight_c();
 	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
@@ -43,83 +29,40 @@ struct dMsgScrnLight_c {
 	/* 802460DC */ void drawCommon(f32, f32, f32, f32, f32);
 };
 
-// build JUtility (['JUtility']) True/True
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
 };
 
-// build JUtility (['JUtility']) True/True
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
-struct JKRExpHeap {
-};
-
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JUtility', 'TColor')
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JUtility', 'TColor')
-	// ('JKRExpHeap',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
 };
 
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build J2DAnmLoaderDataBase (['J2DAnmLoaderDataBase']) False/False
-/* top-level dependencies (begin ['J2DAnmLoaderDataBase']) */
-/* top-level dependencies (end ['J2DAnmLoaderDataBase']) */
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
@@ -128,17 +71,17 @@ struct J2DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_msg_scrn_light_cpp();
+extern "C" void __sinit_d_msg_scrn_light_cpp(); // 1
 
-extern "C" void __ct__19dMsgScrnLight_HIO_cFv();
-extern "C" void updateColor__19dMsgScrnLight_HIO_cFUc();
-extern "C" void __ct__15dMsgScrnLight_cFUcUc();
-extern "C" void __dt__15dMsgScrnLight_cFv();
-extern "C" void draw__15dMsgScrnLight_cFPffffffUc();
-extern "C" void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void drawCommon__15dMsgScrnLight_cFfffff();
-extern "C" void __dt__19dMsgScrnLight_HIO_cFv();
-extern "C" void __sinit_d_msg_scrn_light_cpp();
+extern "C" void __ct__19dMsgScrnLight_HIO_cFv(); // 1
+extern "C" void updateColor__19dMsgScrnLight_HIO_cFUc(); // 1
+extern "C" void __ct__15dMsgScrnLight_cFUcUc(); // 1
+extern "C" void __dt__15dMsgScrnLight_cFv(); // 1
+extern "C" void draw__15dMsgScrnLight_cFPffffffUc(); // 1
+extern "C" void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void drawCommon__15dMsgScrnLight_cFfffff(); // 1
+extern "C" void __dt__19dMsgScrnLight_HIO_cFv(); // 1
+extern "C" void __sinit_d_msg_scrn_light_cpp(); // 1
 SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_light__stringBase0[112];
 SECTION_DATA extern void*const __vt__15dMsgScrnLight_c[3];
 SECTION_DATA extern void*const __vt__19dMsgScrnLight_HIO_c[3];
@@ -152,26 +95,26 @@ SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_light__lit_3871;
 // External References:
 // 
 
-void dPaneClass_showNullPane(J2DScreen*);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void __register_global_object();
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
 
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" void animationTransform__7J2DPaneFv();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void animation__9J2DScreenFv();
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" void __register_global_object();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
+extern "C" void animationTransform__7J2DPaneFv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void animation__9J2DScreenFv(); // 1
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
+extern "C" void __register_global_object(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SBSS extern u8 data_804510D8[8];
 

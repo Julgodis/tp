@@ -9,52 +9,25 @@
 // Types:
 // 
 
-// build daPy_frameCtrl_c (['daPy_frameCtrl_c']) False/False
-/* top-level dependencies (begin ['daPy_frameCtrl_c']) */
-/* top-level dependencies (end ['daPy_frameCtrl_c']) */
 struct daPy_frameCtrl_c {
 	/* 8015E4CC */ void checkAnmEnd();
 	/* 8015E510 */ void updateFrame();
 	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
 };
 
-// build daPy_boomerangMove_c (['daPy_boomerangMove_c']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ['daPy_boomerangMove_c']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['daPy_boomerangMove_c']) */
 struct daPy_boomerangMove_c {
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 8015E5B0 */ void initOffset(cXyz const*);
 	/* 8015E654 */ void posMove(cXyz*, s16*, fopAc_ac_c*, s16);
 	/* 8015E87C */ void bgCheckAfterOffset(cXyz const*);
 };
 
-// build cXyz (['cXyz']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build daPy_py_c (['daPy_py_c']) False/False
-// build cXyz (['cXyz']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['daPy_py_c']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 8015EA0C */ void setParamData(int, int, int, int);
 	/* 8015EA20 */ void checkFishingRodItem(int);
 	/* 8015EA48 */ void checkBombItem(int);
@@ -91,29 +64,13 @@ struct daPy_py_c {
 	/* 8015F968 */ void setMidnaFaceNum(int);
 };
 
-// build daPy_actorKeep_c (['daPy_actorKeep_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['daPy_actorKeep_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['daPy_actorKeep_c']) */
 struct daPy_actorKeep_c {
-	// ('fopAc_ac_c',)
 	/* 8015EC48 */ void setActor();
 	/* 8015ECB8 */ void setData(fopAc_ac_c*);
 	/* 8015ECFC */ void clearData();
 };
 
-// build daPy_anmHeap_c (['daPy_anmHeap_c']) False/False
-// build daPy_anmHeap_c (['daPy_anmHeap_c']) True/False
-struct daPy_anmHeap_c;
-/* top-level dependencies (begin ['daPy_anmHeap_c']) */
-// outer dependency: ('daPy_anmHeap_c', 'daAlinkHEAP_TYPE')
-/* top-level dependencies (end ['daPy_anmHeap_c']) */
 struct daPy_anmHeap_c {
-	// ('daPy_anmHeap_c', 'daAlinkHEAP_TYPE')
-	// build daAlinkHEAP_TYPE (['daPy_anmHeap_c', 'daAlinkHEAP_TYPE']) False/False
-	/* dependencies (begin ['daPy_anmHeap_c', 'daAlinkHEAP_TYPE']) */
-	/* dependencies (end ['daPy_anmHeap_c', 'daAlinkHEAP_TYPE']) */
 	struct daAlinkHEAP_TYPE {
 	};
 
@@ -129,94 +86,46 @@ struct daPy_anmHeap_c {
 	/* 8015F168 */ void setAnimeHeap();
 };
 
-// build daPy_sightPacket_c (['daPy_sightPacket_c']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['daPy_sightPacket_c']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['daPy_sightPacket_c']) */
 struct daPy_sightPacket_c {
-	// ('ResTIMG',)
 	/* 80140CDC */ ~daPy_sightPacket_c();
 	/* 8015F1A0 */ void draw();
 	/* 8015F2FC */ void setSight();
 	/* 8015F384 */ void setSightImage(ResTIMG*);
 };
 
-// build ResTIMG (['ResTIMG']) True/True
-// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
-/* top-level dependencies (begin ['mDoMtx_stack_c']) */
-/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build dDlst_list_c (['dDlst_list_c']) False/False
-// build dDlst_base_c (['dDlst_base_c']) False/False
-/* top-level dependencies (begin ['dDlst_base_c']) */
-/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin ['dDlst_list_c']) */
-// outer dependency: ('dDlst_base_c',)
-/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (['dDlst_base_c']) True/True
-// build daAlink_c (['daAlink_c']) False/False
-// build cXyz (['cXyz']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-/* top-level dependencies (begin ['daAlink_c']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['daAlink_c']) */
 struct daAlink_c {
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 800A0744 */ void setLookPosFromOut(cXyz*);
 	/* 800BDF60 */ void startRestartRoom(u32, int, int, int);
 	/* 800D72BC */ void setDamagePoint(int, int, int, int);
@@ -226,127 +135,100 @@ struct daAlink_c {
 	/* 800E7AEC */ void setFmChainPosFromOut(fopAc_ac_c*, cXyz*, int);
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5ECC */ void readIdxResource(void*, u32, u32);
 };
 
-// build J3DSys (['J3DSys']) False/False
-/* top-level dependencies (begin ['J3DSys']) */
-/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
 	/* 8031073C */ void reinitGX();
 };
 
-// build J3DFrameCtrl (['J3DFrameCtrl']) False/False
-/* top-level dependencies (begin ['J3DFrameCtrl']) */
-/* top-level dependencies (end ['J3DFrameCtrl']) */
 struct J3DFrameCtrl {
 	/* 803289CC */ void update();
 };
 
-// build J3DAnmTransform (['J3DAnmTransform']) False/False
-/* top-level dependencies (begin ['J3DAnmTransform']) */
-/* top-level dependencies (end ['J3DAnmTransform']) */
 struct J3DAnmTransform {
 	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
 };
 
-// build J3DAnmTextureSRTKey (['J3DAnmTextureSRTKey']) False/False
-/* top-level dependencies (begin ['J3DAnmTextureSRTKey']) */
-/* top-level dependencies (end ['J3DAnmTextureSRTKey']) */
 struct J3DAnmTextureSRTKey {
 	/* 80329E5C */ J3DAnmTextureSRTKey();
 };
 
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) False/False
-/* top-level dependencies (begin ['J3DAnmTexPattern']) */
-/* top-level dependencies (end ['J3DAnmTexPattern']) */
 struct J3DAnmTexPattern {
 	/* 8032AED8 */ J3DAnmTexPattern();
 };
 
-// build J3DAnmLoaderDataBase (['J3DAnmLoaderDataBase']) False/False
-// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) False/False
-/* top-level dependencies (begin ['J3DAnmLoaderDataBaseFlag']) */
-/* top-level dependencies (end ['J3DAnmLoaderDataBaseFlag']) */
 struct J3DAnmLoaderDataBaseFlag {
 };
 
-/* top-level dependencies (begin ['J3DAnmLoaderDataBase']) */
-// outer dependency: ('J3DAnmLoaderDataBaseFlag',)
-/* top-level dependencies (end ['J3DAnmLoaderDataBase']) */
 struct J3DAnmLoaderDataBase {
-	// ('J3DAnmLoaderDataBaseFlag',)
 	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
 };
 
-// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) True/True
 // 
 // Forward References:
 // 
 
-void daPy_addCalcShort(s16*, s16, s16, s16, s16);
+void daPy_addCalcShort(s16*, s16, s16, s16, s16); // 2
 
-extern "C" void checkAnmEnd__16daPy_frameCtrl_cFv();
-extern "C" void updateFrame__16daPy_frameCtrl_cFv();
-extern "C" void setFrameCtrl__16daPy_frameCtrl_cFUcssff();
-extern "C" void initOffset__20daPy_boomerangMove_cFPC4cXyz();
-extern "C" void posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs();
-extern "C" void bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz();
-extern "C" void setParamData__9daPy_py_cFiiii();
-extern "C" void checkFishingRodItem__9daPy_py_cFi();
-extern "C" void checkBombItem__9daPy_py_cFi();
-extern "C" void checkBottleItem__9daPy_py_cFi();
-extern "C" void checkDrinkBottleItem__9daPy_py_cFi();
-extern "C" void checkOilBottleItem__9daPy_py_cFi();
-extern "C" void checkOpenBottleItem__9daPy_py_cFi();
-extern "C" void checkBowItem__9daPy_py_cFi();
-extern "C" void checkHookshotItem__9daPy_py_cFi();
-extern "C" void checkTradeItem__9daPy_py_cFi();
-extern "C" void checkDungeonWarpItem__9daPy_py_cFi();
-extern "C" void setActor__16daPy_actorKeep_cFv();
-extern "C" void setData__16daPy_actorKeep_cFP10fopAc_ac_c();
-extern "C" void clearData__16daPy_actorKeep_cFv();
-extern "C" void __ct__14daPy_anmHeap_cFUl();
-extern "C" void __dt__14daPy_anmHeap_cFv();
-extern "C" void initData__14daPy_anmHeap_cFv();
-extern "C" void mallocBuffer__14daPy_anmHeap_cFv();
-extern "C" void createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE();
-extern "C" void loadData__14daPy_anmHeap_cFUs();
-extern "C" void loadDataIdx__14daPy_anmHeap_cFUs();
-extern "C" void loadDataPriIdx__14daPy_anmHeap_cFUs();
-extern "C" void loadDataDemoRID__14daPy_anmHeap_cFUsUs();
-extern "C" void setAnimeHeap__14daPy_anmHeap_cFv();
-extern "C" void draw__18daPy_sightPacket_cFv();
-extern "C" void setSight__18daPy_sightPacket_cFv();
-extern "C" void setSightImage__18daPy_sightPacket_cFP7ResTIMG();
-extern "C" void checkMasterSwordEquip__9daPy_py_cFv();
-extern "C" void checkWoodShieldEquip__9daPy_py_cFv();
-extern "C" void getAttentionOffsetY__9daPy_py_cFv();
-extern "C" void checkNowWolfEyeUp__9daPy_py_cFv();
-extern "C" void forceRestartRoom__9daPy_py_cFiUli();
-extern "C" void setFmChainPos__9daPy_py_cFP10fopAc_ac_cP4cXyzi();
-extern "C" void cancelFmChainGrab__9daPy_py_cFv();
-extern "C" void setLookPos__9daPy_py_cFP4cXyz();
-extern "C" void setPlayerSe__9daPy_py_cFUl();
-extern "C" void linkGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c();
-extern "C" void wolfGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c();
-extern "C" void checkRoomRestartStart__9daPy_py_cFv();
-extern "C" void checkCarryStartLightBallA__9daPy_py_cFv();
-extern "C" void checkCarryStartLightBallB__9daPy_py_cFv();
-extern "C" void getSpinnerRideSpeed__9daPy_py_cCFv();
-extern "C" void checkSpinnerReflectEffect__9daPy_py_cFv();
-extern "C" void checkBoomerangCharge__9daPy_py_cFv();
-extern "C" bool checkBoomerangChargeTime__9daPy_py_cFv();
-extern "C" void getThrowBoomerangActor__9daPy_py_cFv();
-extern "C" void cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c();
-extern "C" void setPlayerDamage__9daPy_py_cFii();
-extern "C" void setMidnaMotionNum__9daPy_py_cFi();
-extern "C" void setMidnaFaceNum__9daPy_py_cFi();
-extern "C" void daPy_addCalcShort__FPsssss();
+extern "C" void checkAnmEnd__16daPy_frameCtrl_cFv(); // 1
+extern "C" void updateFrame__16daPy_frameCtrl_cFv(); // 1
+extern "C" void setFrameCtrl__16daPy_frameCtrl_cFUcssff(); // 1
+extern "C" void initOffset__20daPy_boomerangMove_cFPC4cXyz(); // 1
+extern "C" void posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs(); // 1
+extern "C" void bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz(); // 1
+extern "C" void setParamData__9daPy_py_cFiiii(); // 1
+extern "C" void checkFishingRodItem__9daPy_py_cFi(); // 1
+extern "C" void checkBombItem__9daPy_py_cFi(); // 1
+extern "C" void checkBottleItem__9daPy_py_cFi(); // 1
+extern "C" void checkDrinkBottleItem__9daPy_py_cFi(); // 1
+extern "C" void checkOilBottleItem__9daPy_py_cFi(); // 1
+extern "C" void checkOpenBottleItem__9daPy_py_cFi(); // 1
+extern "C" void checkBowItem__9daPy_py_cFi(); // 1
+extern "C" void checkHookshotItem__9daPy_py_cFi(); // 1
+extern "C" void checkTradeItem__9daPy_py_cFi(); // 1
+extern "C" void checkDungeonWarpItem__9daPy_py_cFi(); // 1
+extern "C" void setActor__16daPy_actorKeep_cFv(); // 1
+extern "C" void setData__16daPy_actorKeep_cFP10fopAc_ac_c(); // 1
+extern "C" void clearData__16daPy_actorKeep_cFv(); // 1
+extern "C" void __ct__14daPy_anmHeap_cFUl(); // 1
+extern "C" void __dt__14daPy_anmHeap_cFv(); // 1
+extern "C" void initData__14daPy_anmHeap_cFv(); // 1
+extern "C" void mallocBuffer__14daPy_anmHeap_cFv(); // 1
+extern "C" void createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE(); // 1
+extern "C" void loadData__14daPy_anmHeap_cFUs(); // 1
+extern "C" void loadDataIdx__14daPy_anmHeap_cFUs(); // 1
+extern "C" void loadDataPriIdx__14daPy_anmHeap_cFUs(); // 1
+extern "C" void loadDataDemoRID__14daPy_anmHeap_cFUsUs(); // 1
+extern "C" void setAnimeHeap__14daPy_anmHeap_cFv(); // 1
+extern "C" void draw__18daPy_sightPacket_cFv(); // 1
+extern "C" void setSight__18daPy_sightPacket_cFv(); // 1
+extern "C" void setSightImage__18daPy_sightPacket_cFP7ResTIMG(); // 1
+extern "C" void checkMasterSwordEquip__9daPy_py_cFv(); // 1
+extern "C" void checkWoodShieldEquip__9daPy_py_cFv(); // 1
+extern "C" void getAttentionOffsetY__9daPy_py_cFv(); // 1
+extern "C" void checkNowWolfEyeUp__9daPy_py_cFv(); // 1
+extern "C" void forceRestartRoom__9daPy_py_cFiUli(); // 1
+extern "C" void setFmChainPos__9daPy_py_cFP10fopAc_ac_cP4cXyzi(); // 1
+extern "C" void cancelFmChainGrab__9daPy_py_cFv(); // 1
+extern "C" void setLookPos__9daPy_py_cFP4cXyz(); // 1
+extern "C" void setPlayerSe__9daPy_py_cFUl(); // 1
+extern "C" void linkGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c(); // 1
+extern "C" void wolfGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c(); // 1
+extern "C" void checkRoomRestartStart__9daPy_py_cFv(); // 1
+extern "C" void checkCarryStartLightBallA__9daPy_py_cFv(); // 1
+extern "C" void checkCarryStartLightBallB__9daPy_py_cFv(); // 1
+extern "C" void getSpinnerRideSpeed__9daPy_py_cCFv(); // 1
+extern "C" void checkSpinnerReflectEffect__9daPy_py_cFv(); // 1
+extern "C" void checkBoomerangCharge__9daPy_py_cFv(); // 1
+extern "C" bool checkBoomerangChargeTime__9daPy_py_cFv(); // 1
+extern "C" void getThrowBoomerangActor__9daPy_py_cFv(); // 1
+extern "C" void cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c(); // 1
+extern "C" void setPlayerDamage__9daPy_py_cFii(); // 1
+extern "C" void setMidnaMotionNum__9daPy_py_cFi(); // 1
+extern "C" void setMidnaFaceNum__9daPy_py_cFi(); // 1
+extern "C" void daPy_addCalcShort__FPsssss(); // 1
 SECTION_RODATA extern const u8 data_80393DA8[10 + 2 /* padding */];
 SECTION_RODATA extern const u8 data_80393DB4[10 + 2 /* padding */];
 SECTION_DATA extern void*data_803BA0A0[8];
@@ -382,91 +264,91 @@ SECTION_SDATA2 extern f32 d_a_d_a_player__lit_4742;
 // External References:
 // 
 
-void mDoExt_createSolidHeapFromGameToCurrent(JKRHeap**, u32, u32);
-void mDoExt_adjustSolidHeap(JKRSolidHeap*);
-void mDoExt_destroySolidHeap(JKRSolidHeap*);
-void mDoExt_setCurrentHeap(JKRHeap*);
-void mDoLib_project(Vec*, Vec*);
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-void fpcSch_JudgeByID(void*, void*);
-void cM_atan2s(f32, f32);
-void cM_rndF(f32);
-void* operator new(u32);
-void* operator new[](u32);
-void* operator new[](u32, int);
-void operator delete(void*);
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXTrans();
-extern "C" void PSVECSquareDistance();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetTevOrder();
-extern "C" void GXCallDisplayList();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+void mDoExt_createSolidHeapFromGameToCurrent(JKRHeap**, u32, u32); // 2
+void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
+void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
+void mDoExt_setCurrentHeap(JKRHeap*); // 2
+void mDoLib_project(Vec*, Vec*); // 2
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fpcSch_JudgeByID(void*, void*); // 2
+void cM_atan2s(f32, f32); // 2
+void cM_rndF(f32); // 2
+void* operator new(u32); // 2
+void* operator new[](u32); // 2
+void* operator new[](u32, int); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXCallDisplayList(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void scaleM__14mDoMtx_stack_cFfff();
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl();
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" void mDoLib_project__FP3VecP3Vec();
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
-extern "C" void fpcSch_JudgeByID__FPvPv();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" void setLookPosFromOut__9daAlink_cFP4cXyz();
-extern "C" void startRestartRoom__9daAlink_cFUliii();
-extern "C" void setDamagePoint__9daAlink_cFiiii();
-extern "C" void cancelBoomerangLock__9daAlink_cFP10fopAc_ac_c();
-extern "C" void checkBoomerangChargeEnd__9daAlink_cFv();
-extern "C" void checkBoomerangCarry__9daAlink_cFP10fopAc_ac_c();
-extern "C" void setFmChainPosFromOut__9daAlink_cFP10fopAc_ac_cP4cXyzi();
-extern "C" void __dt__18daPy_sightPacket_cFv();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cM_rndF__Ff();
-extern "C" void freeAll__7JKRHeapFv();
-extern "C" void* __nw__FUl();
-extern "C" void* __nwa__FUl();
-extern "C" void* __nwa__FUli();
-extern "C" void __dl__FPv();
-extern "C" void readIdxResource__10JKRArchiveFPvUlUl();
-extern "C" void reinitGX__6J3DSysFv();
-extern "C" void update__12J3DFrameCtrlFv();
-extern "C" void __ct__15J3DAnmTransformFsPfPsPf();
-extern "C" void __ct__19J3DAnmTextureSRTKeyFv();
-extern "C" void __ct__16J3DAnmTexPatternFv();
-extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXTrans();
-extern "C" void PSVECSquareDistance();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXInitTexObj();
-extern "C" void GXInitTexObjLOD();
-extern "C" void GXLoadTexObj();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetTevOrder();
-extern "C" void GXCallDisplayList();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl(); // 1
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
+extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci(); // 1
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
+extern "C" void setLookPosFromOut__9daAlink_cFP4cXyz(); // 1
+extern "C" void startRestartRoom__9daAlink_cFUliii(); // 1
+extern "C" void setDamagePoint__9daAlink_cFiiii(); // 1
+extern "C" void cancelBoomerangLock__9daAlink_cFP10fopAc_ac_c(); // 1
+extern "C" void checkBoomerangChargeEnd__9daAlink_cFv(); // 1
+extern "C" void checkBoomerangCarry__9daAlink_cFP10fopAc_ac_c(); // 1
+extern "C" void setFmChainPosFromOut__9daAlink_cFP10fopAc_ac_cP4cXyzi(); // 1
+extern "C" void __dt__18daPy_sightPacket_cFv(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM_rndF__Ff(); // 1
+extern "C" void freeAll__7JKRHeapFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void* __nwa__FUli(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void readIdxResource__10JKRArchiveFPvUlUl(); // 1
+extern "C" void reinitGX__6J3DSysFv(); // 1
+extern "C" void update__12J3DFrameCtrlFv(); // 1
+extern "C" void __ct__15J3DAnmTransformFsPfPsPf(); // 1
+extern "C" void __ct__19J3DAnmTextureSRTKeyFv(); // 1
+extern "C" void __ct__16J3DAnmTexPatternFv(); // 1
+extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXInitTexObjLOD(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXCallDisplayList(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__18mDoExt_transAnmBas[5];
 SECTION_DATA extern void*const __vt__18J3DAnmTransformKey[5];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];

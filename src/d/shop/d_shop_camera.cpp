@@ -9,35 +9,17 @@
 // Types:
 // 
 
-// build ShopCam_action_c (['ShopCam_action_c']) False/False
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ['ShopCam_action_c']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['ShopCam_action_c']) */
 struct ShopCam_action_c {
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 80195C9C */ void shop_cam_action_init();
 	/* 80195E18 */ void shop_cam_action();
 	/* 8019630C */ void Save();
@@ -50,15 +32,7 @@ struct ShopCam_action_c {
 	/* 801968B8 */ void setMasterCamCtrPos(cXyz*);
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build cXyz (['cXyz']) True/True
-// build dCamera_c (['dCamera_c']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dCamera_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
-	// ('cXyz',)
 	/* 801614E8 */ void Stay();
 	/* 8016300C */ void SetTrimSize(s32);
 	/* 80180A40 */ void EventRecoverNotime();
@@ -66,22 +40,21 @@ struct dCamera_c {
 	/* 80180BA0 */ void Reset(cXyz, cXyz, f32, s16);
 };
 
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void shop_cam_action_init__16ShopCam_action_cFv();
-extern "C" void shop_cam_action__16ShopCam_action_cFv();
-extern "C" void Save__16ShopCam_action_cFv();
-extern "C" void EventRecoverNotime__16ShopCam_action_cFv();
-extern "C" void Reset__16ShopCam_action_cFv();
-extern "C" void move__16ShopCam_action_cFv();
-extern "C" void setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz();
-extern "C" void setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz();
-extern "C" void _debugSetCamera__16ShopCam_action_cFv();
-extern "C" void setMasterCamCtrPos__16ShopCam_action_cFP4cXyz();
+extern "C" void shop_cam_action_init__16ShopCam_action_cFv(); // 1
+extern "C" void shop_cam_action__16ShopCam_action_cFv(); // 1
+extern "C" void Save__16ShopCam_action_cFv(); // 1
+extern "C" void EventRecoverNotime__16ShopCam_action_cFv(); // 1
+extern "C" void Reset__16ShopCam_action_cFv(); // 1
+extern "C" void move__16ShopCam_action_cFv(); // 1
+extern "C" void setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz(); // 1
+extern "C" void setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz(); // 1
+extern "C" void _debugSetCamera__16ShopCam_action_cFv(); // 1
+extern "C" void setMasterCamCtrPos__16ShopCam_action_cFP4cXyz(); // 1
 SECTION_DATA extern u8 cam_seira_shop[56];
 SECTION_DATA extern u8 cam_seira_evnt_before[56];
 SECTION_DATA extern u8 cam_seira_evnt_after[56];
@@ -107,33 +80,33 @@ SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_4064;
 // External References:
 // 
 
-void dCam_getBody();
-void cM_atan2s(f32, f32);
-void cLib_addCalc2(f32*, f32, f32, f32);
-void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32);
-void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*);
-extern "C" void PSVECSquareMag();
-extern "C" void __ptmf_test();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
+void dCam_getBody(); // 2
+void cM_atan2s(f32, f32); // 2
+void cLib_addCalc2(f32*, f32, f32, f32); // 2
+void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32); // 2
+void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*); // 2
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void __ptmf_test(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
 
-extern "C" void Stay__9dCamera_cFv();
-extern "C" void SetTrimSize__9dCamera_cFl();
-extern "C" void EventRecoverNotime__9dCamera_cFv();
-extern "C" void Set__9dCamera_cF4cXyz4cXyzfs();
-extern "C" void Reset__9dCamera_cF4cXyz4cXyzfs();
-extern "C" void dCam_getBody__Fv();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cLib_addCalc2__FPffff();
-extern "C" void cLib_addCalcPos2__FP4cXyzRC4cXyzff();
-extern "C" void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz();
-extern "C" void PSVECSquareMag();
-extern "C" void __ptmf_test();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
+extern "C" void Stay__9dCamera_cFv(); // 1
+extern "C" void SetTrimSize__9dCamera_cFl(); // 1
+extern "C" void EventRecoverNotime__9dCamera_cFv(); // 1
+extern "C" void Set__9dCamera_cF4cXyz4cXyzfs(); // 1
+extern "C" void Reset__9dCamera_cF4cXyz4cXyzfs(); // 1
+extern "C" void dCam_getBody__Fv(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cLib_addCalc2__FPffff(); // 1
+extern "C" void cLib_addCalcPos2__FP4cXyzRC4cXyzff(); // 1
+extern "C" void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void __ptmf_test(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
 SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SDATA extern u32 __float_nan;

@@ -9,16 +9,13 @@
 // Types:
 // 
 
-// build cCcS (['cCcS']) False/False
-// build cCcD_GObjInf (['cCcD_GObjInf']) False/False
-/* top-level dependencies (begin ['cCcD_GObjInf']) */
-/* top-level dependencies (end ['cCcD_GObjInf']) */
-struct cCcD_GObjInf {
+struct cCcD_GStts {
 };
 
-// build cCcD_Stts (['cCcD_Stts']) False/False
-/* top-level dependencies (begin ['cCcD_Stts']) */
-/* top-level dependencies (end ['cCcD_Stts']) */
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+};
+
 struct cCcD_Stts {
 	/* 80263934 */ void PlusCcMove(f32, f32, f32);
 	/* 8026395C */ void ClrCcMove();
@@ -26,39 +23,14 @@ struct cCcD_Stts {
 	/* 80263984 */ void GetWeightF() const;
 };
 
-// build cCcD_GStts (['cCcD_GStts']) False/False
-/* top-level dependencies (begin ['cCcD_GStts']) */
-/* top-level dependencies (end ['cCcD_GStts']) */
-struct cCcD_GStts {
+struct cCcD_GObjInf {
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
-struct cXyz {
-	/* 80009184 */ ~cXyz();
-};
-
-// build cCcD_Obj (['cCcD_Obj']) False/False
-/* top-level dependencies (begin ['cCcD_Obj']) */
-/* top-level dependencies (end ['cCcD_Obj']) */
 struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
 
-/* top-level dependencies (begin ['cCcS']) */
-// outer dependency: ('cCcD_GObjInf',)
-// outer dependency: ('cCcD_Stts',)
-// outer dependency: ('cCcD_GStts',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('cCcD_Obj',)
-/* top-level dependencies (end ['cCcS']) */
 struct cCcS {
-	// ('cCcD_Obj',)
-	// ('cCcD_GObjInf',)
-	// ('cCcD_Stts',)
-	// ('cCcD_GStts',)
-	// ('cXyz',)
 	/* 80030BDC */ ~cCcS();
 	/* 80264A6C */ cCcS();
 	/* 80264A94 */ void Ct();
@@ -88,71 +60,30 @@ struct cCcS {
 	/* 80265E18 */ void MoveAfterCheck();
 };
 
-// build cCcD_Obj (['cCcD_Obj']) True/True
-// build cCcD_Stts (['cCcD_Stts']) True/True
-// build cXyz (['cXyz']) True/True
-// build cCcD_GObjInf (['cCcD_GObjInf']) True/True
-// build cCcD_GStts (['cCcD_GStts']) True/True
-// build cCcD_DivideInfo (['cCcD_DivideInfo']) False/False
-/* top-level dependencies (begin ['cCcD_DivideInfo']) */
-/* top-level dependencies (end ['cCcD_DivideInfo']) */
 struct cCcD_DivideInfo {
 	/* 80263368 */ void Chk(cCcD_DivideInfo const&) const;
 };
 
-// build cCcD_DivideArea (['cCcD_DivideArea']) False/False
-// build cM3dGAab (['cM3dGAab']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGAab']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGAab']) */
 struct cM3dGAab {
-	// ('cXyz',)
 	/* 8026ECF8 */ void ClearForMinMax();
 	/* 8026ED60 */ void SetMinMax(cM3dGAab const&);
 	/* 8026EE24 */ void CalcCenter(cXyz*) const;
 };
 
-// build cCcD_DivideInfo (['cCcD_DivideInfo']) True/True
-/* top-level dependencies (begin ['cCcD_DivideArea']) */
-// outer dependency: ('cM3dGAab',)
-// outer dependency: ('cCcD_DivideInfo',)
-/* top-level dependencies (end ['cCcD_DivideArea']) */
 struct cCcD_DivideArea {
-	// ('cM3dGAab',)
-	// ('cCcD_DivideInfo',)
 	/* 802633A8 */ void SetArea(cM3dGAab const&);
 	/* 802634D4 */ void CalcDivideInfo(cCcD_DivideInfo*, cM3dGAab const&, u32);
 };
 
-// build cM3dGAab (['cM3dGAab']) True/True
-// build cCcD_ObjAt (['cCcD_ObjAt']) False/False
-// build cCcD_Obj (['cCcD_Obj']) True/True
-/* top-level dependencies (begin ['cCcD_ObjAt']) */
-// outer dependency: ('cCcD_Obj',)
-/* top-level dependencies (end ['cCcD_ObjAt']) */
 struct cCcD_ObjAt {
-	// ('cCcD_Obj',)
 	/* 8026483C */ void SetHit(cCcD_Obj*);
 };
 
-// build cCcD_ObjTg (['cCcD_ObjTg']) False/False
-// build cCcD_Obj (['cCcD_Obj']) True/True
-/* top-level dependencies (begin ['cCcD_ObjTg']) */
-// outer dependency: ('cCcD_Obj',)
-/* top-level dependencies (end ['cCcD_ObjTg']) */
 struct cCcD_ObjTg {
-	// ('cCcD_Obj',)
 	/* 802648C8 */ void SetHit(cCcD_Obj*);
 };
 
-// build cCcD_ObjCo (['cCcD_ObjCo']) False/False
-// build cCcD_Obj (['cCcD_Obj']) True/True
-/* top-level dependencies (begin ['cCcD_ObjCo']) */
-// outer dependency: ('cCcD_Obj',)
-/* top-level dependencies (end ['cCcD_ObjCo']) */
 struct cCcD_ObjCo {
-	// ('cCcD_Obj',)
 	/* 802648D8 */ void SetHit(cCcD_Obj*);
 };
 
@@ -161,32 +92,32 @@ struct cCcD_ObjCo {
 // 
 
 
-extern "C" void __ct__4cCcSFv();
-extern "C" void Ct__4cCcSFv();
-extern "C" void Dt__4cCcSFv();
-extern "C" void GetWt__4cCcSCFUc();
-extern "C" void Set__4cCcSFP8cCcD_Obj();
-extern "C" void ClrCoHitInf__4cCcSFv();
-extern "C" void ClrTgHitInf__4cCcSFv();
-extern "C" void ClrAtHitInf__4cCcSFv();
-extern "C" void ChkNoHitAtTg__4cCcSFP8cCcD_ObjP8cCcD_Obj();
-extern "C" void ChkAtTg__4cCcSFv();
-extern "C" void ChkNoHitCo__4cCcSFP8cCcD_ObjP8cCcD_Obj();
-extern "C" void ChkCo__4cCcSFv();
-extern "C" void CalcTgPlusDmg__4cCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts();
-extern "C" void SetAtTgCommonHitInf__4cCcSFP8cCcD_ObjP8cCcD_ObjP4cXyz();
-extern "C" void SetCoCommonHitInf__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf();
-extern "C" void SetPosCorrect__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf();
-extern "C" void CalcArea__4cCcSFv();
-extern "C" void Move__4cCcSFv();
-extern "C" void DrawClear__4cCcSFv();
-extern "C" void SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj();
-extern "C" void SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts();
-extern "C" void SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz();
-extern "C" bool ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts();
-extern "C" bool ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts();
-extern "C" bool ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj();
-extern "C" void MoveAfterCheck__4cCcSFv();
+extern "C" void __ct__4cCcSFv(); // 1
+extern "C" void Ct__4cCcSFv(); // 1
+extern "C" void Dt__4cCcSFv(); // 1
+extern "C" void GetWt__4cCcSCFUc(); // 1
+extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
+extern "C" void ClrCoHitInf__4cCcSFv(); // 1
+extern "C" void ClrTgHitInf__4cCcSFv(); // 1
+extern "C" void ClrAtHitInf__4cCcSFv(); // 1
+extern "C" void ChkNoHitAtTg__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
+extern "C" void ChkAtTg__4cCcSFv(); // 1
+extern "C" void ChkNoHitCo__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
+extern "C" void ChkCo__4cCcSFv(); // 1
+extern "C" void CalcTgPlusDmg__4cCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts(); // 1
+extern "C" void SetAtTgCommonHitInf__4cCcSFP8cCcD_ObjP8cCcD_ObjP4cXyz(); // 1
+extern "C" void SetCoCommonHitInf__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf(); // 1
+extern "C" void SetPosCorrect__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf(); // 1
+extern "C" void CalcArea__4cCcSFv(); // 1
+extern "C" void Move__4cCcSFv(); // 1
+extern "C" void DrawClear__4cCcSFv(); // 1
+extern "C" void SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
+extern "C" void SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts(); // 1
+extern "C" void SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz(); // 1
+extern "C" bool ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts(); // 1
+extern "C" bool ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts(); // 1
+extern "C" bool ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
+extern "C" void MoveAfterCheck__4cCcSFv(); // 1
 SECTION_DATA extern void*const __vt__4cCcS[12];
 SECTION_BSS extern u8 lit_2492[12];
 SECTION_BSS extern u8 data_80430CCC[12];
@@ -204,57 +135,57 @@ SECTION_SDATA2 extern f32 lit_2766;
 // External References:
 // 
 
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECScale();
-extern "C" void PSVECMag();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dt__4cXyzFv();
-extern "C" void __dt__4cCcSFv();
-extern "C" void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo();
-extern "C" void SetArea__15cCcD_DivideAreaFRC8cM3dGAab();
-extern "C" void CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl();
-extern "C" void PlusCcMove__9cCcD_SttsFfff();
-extern "C" void ClrCcMove__9cCcD_SttsFv();
-extern "C" void PlusDmg__9cCcD_SttsFi();
-extern "C" void GetWeightF__9cCcD_SttsCFv();
-extern "C" void GetAc__8cCcD_ObjFv();
-extern "C" void SetHit__10cCcD_ObjAtFP8cCcD_Obj();
-extern "C" void SetHit__10cCcD_ObjTgFP8cCcD_Obj();
-extern "C" void SetHit__10cCcD_ObjCoFP8cCcD_Obj();
-extern "C" void ClearForMinMax__8cM3dGAabFv();
-extern "C" void SetMinMax__8cM3dGAabFRC8cM3dGAab();
-extern "C" void CalcCenter__8cM3dGAabCFP4cXyz();
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECScale();
-extern "C" void PSVECMag();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void __dt__4cCcSFv(); // 1
+extern "C" void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo(); // 1
+extern "C" void SetArea__15cCcD_DivideAreaFRC8cM3dGAab(); // 1
+extern "C" void CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl(); // 1
+extern "C" void PlusCcMove__9cCcD_SttsFfff(); // 1
+extern "C" void ClrCcMove__9cCcD_SttsFv(); // 1
+extern "C" void PlusDmg__9cCcD_SttsFi(); // 1
+extern "C" void GetWeightF__9cCcD_SttsCFv(); // 1
+extern "C" void GetAc__8cCcD_ObjFv(); // 1
+extern "C" void SetHit__10cCcD_ObjAtFP8cCcD_Obj(); // 1
+extern "C" void SetHit__10cCcD_ObjTgFP8cCcD_Obj(); // 1
+extern "C" void SetHit__10cCcD_ObjCoFP8cCcD_Obj(); // 1
+extern "C" void ClearForMinMax__8cM3dGAabFv(); // 1
+extern "C" void SetMinMax__8cM3dGAabFRC8cM3dGAab(); // 1
+extern "C" void CalcCenter__8cM3dGAabCFP4cXyz(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__15cCcD_DivideArea[3];
 SECTION_DATA extern void*const __vt__8cM3dGAab[3];
 SECTION_SDATA extern u32 __float_nan;

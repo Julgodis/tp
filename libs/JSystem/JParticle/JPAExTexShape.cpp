@@ -9,52 +9,37 @@
 // Types:
 // 
 
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
-/* top-level dependencies (begin ['JPAEmitterWorkData']) */
-/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPAExTexShape (['JPAExTexShape']) False/False
-/* top-level dependencies (begin ['JPAExTexShape']) */
-/* top-level dependencies (end ['JPAExTexShape']) */
 struct JPAExTexShape {
 	/* 8027B13C */ JPAExTexShape(u8 const*);
 };
 
-// build JUTTexture (['JUTTexture']) False/False
-// build _GXTexMapID (['_GXTexMapID']) False/False
-/* top-level dependencies (begin ['_GXTexMapID']) */
-/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-/* top-level dependencies (begin ['JUTTexture']) */
-// outer dependency: ('_GXTexMapID',)
-/* top-level dependencies (end ['JUTTexture']) */
 struct JUTTexture {
-	// ('_GXTexMapID',)
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
-// build _GXTexMapID (['_GXTexMapID']) True/True
 // 
 // Forward References:
 // 
 
-void JPALoadExTex(JPAEmitterWorkData*);
+void JPALoadExTex(JPAEmitterWorkData*); // 2
 
-extern "C" void JPALoadExTex__FP18JPAEmitterWorkData();
-extern "C" void __ct__13JPAExTexShapeFPCUc();
+extern "C" void JPALoadExTex__FP18JPAEmitterWorkData(); // 1
+extern "C" void __ct__13JPAExTexShapeFPCUc(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetTexCoordGen2(); // 1
 
-extern "C" void load__10JUTTextureF11_GXTexMapID();
-extern "C" void GXSetTexCoordGen2();
+extern "C" void load__10JUTTextureF11_GXTexMapID(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
 
 // 
 // Declarations:

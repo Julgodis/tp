@@ -9,118 +9,58 @@
 // Types:
 // 
 
-// build dThunder_c (['dThunder_c']) False/False
-/* top-level dependencies (begin ['dThunder_c']) */
-/* top-level dependencies (end ['dThunder_c']) */
 struct dThunder_c {
 	/* 801ADF58 */ void createHeap();
 	/* 801ADFB4 */ void adjustHeap();
 	/* 801AE458 */ void create();
 };
 
-// build kankyo_class (['kankyo_class']) False/False
-/* top-level dependencies (begin ['kankyo_class']) */
-/* top-level dependencies (end ['kankyo_class']) */
 struct kankyo_class {
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
-// build mDoExt_baseAnm (['mDoExt_baseAnm']) False/False
-/* top-level dependencies (begin ['mDoExt_baseAnm']) */
-/* top-level dependencies (end ['mDoExt_baseAnm']) */
 struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-// build mDoExt_brkAnm (['mDoExt_brkAnm']) False/False
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) False/False
-/* top-level dependencies (begin ['J3DAnmTevRegKey']) */
-/* top-level dependencies (end ['J3DAnmTevRegKey']) */
 struct J3DAnmTevRegKey {
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) False/False
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
-/* top-level dependencies (begin ['J3DMaterialTable']) */
-// outer dependency: ('J3DAnmTevRegKey',)
-/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
-	// ('J3DAnmTevRegKey',)
 	/* 8032F880 */ void removeTevRegAnimator(J3DAnmTevRegKey*);
 };
 
-/* top-level dependencies (begin ['mDoExt_brkAnm']) */
-// outer dependency: ('J3DAnmTevRegKey',)
-// outer dependency: ('J3DMaterialTable',)
-/* top-level dependencies (end ['mDoExt_brkAnm']) */
 struct mDoExt_brkAnm {
-	// ('J3DAnmTevRegKey',)
-	// ('J3DMaterialTable',)
 	/* 8000D70C */ void init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16);
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-// build J3DMaterialTable (['J3DMaterialTable']) True/True
-// build J3DAnmTevRegKey (['J3DAnmTevRegKey']) True/True
-// build J3DModel (['J3DModel']) False/False
-/* top-level dependencies (begin ['J3DModel']) */
-/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build Z2EnvSeMgr (['Z2EnvSeMgr']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['Z2EnvSeMgr']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2EnvSeMgr']) */
 struct Z2EnvSeMgr {
-	// ('Vec',)
 	/* 802C7E68 */ void startFarThunderSe(Vec*, s8);
 };
 
-// build J3DFrameCtrl (['J3DFrameCtrl']) False/False
-/* top-level dependencies (begin ['J3DFrameCtrl']) */
-/* top-level dependencies (end ['J3DFrameCtrl']) */
 struct J3DFrameCtrl {
 	/* 803283FC */ void init(s16);
 };
@@ -129,20 +69,20 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void dThunder_Draw(dThunder_c*);
-static void dThunder_Execute(dThunder_c*);
-static bool dThunder_IsDelete(dThunder_c*);
-static void dThunder_Delete(dThunder_c*);
-static void dThunder_Create(kankyo_class*);
+static void dThunder_Draw(dThunder_c*); // 2
+static void dThunder_Execute(dThunder_c*); // 2
+static bool dThunder_IsDelete(dThunder_c*); // 2
+static void dThunder_Delete(dThunder_c*); // 2
+static void dThunder_Create(kankyo_class*); // 2
 
-extern "C" void createHeap__10dThunder_cFv();
-extern "C" void adjustHeap__10dThunder_cFv();
-extern "C" static void dThunder_Draw__FP10dThunder_c();
-extern "C" static void dThunder_Execute__FP10dThunder_c();
-extern "C" static bool dThunder_IsDelete__FP10dThunder_c();
-extern "C" static void dThunder_Delete__FP10dThunder_c();
-extern "C" static void dThunder_Create__FP12kankyo_class();
-extern "C" void create__10dThunder_cFv();
+extern "C" void createHeap__10dThunder_cFv(); // 1
+extern "C" void adjustHeap__10dThunder_cFv(); // 1
+extern "C" static void dThunder_Draw__FP10dThunder_c(); // 1
+extern "C" static void dThunder_Execute__FP10dThunder_c(); // 1
+extern "C" static bool dThunder_IsDelete__FP10dThunder_c(); // 1
+extern "C" static void dThunder_Delete__FP10dThunder_c(); // 1
+extern "C" static void dThunder_Create__FP12kankyo_class(); // 1
+extern "C" void create__10dThunder_cFv(); // 1
 SECTION_RODATA extern const u8 d_d_ky_thunder__stringBase0[16];
 SECTION_DATA extern void*l_dThunder_Method[5];
 SECTION_DATA extern void*g_profile_KY_THUNDER[11];
@@ -187,61 +127,61 @@ SECTION_SDATA2 extern f32 d_d_ky_thunder__lit_4099;
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16);
-void mDoMtx_YrotM(f32 (* )[4], s16);
-void mDoMtx_ZrotM(f32 (* )[4], s16);
-void mDoExt_modelUpdateDL(J3DModel*);
-void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
-void mDoExt_adjustSolidHeap(JKRSolidHeap*);
-void mDoExt_destroySolidHeap(JKRSolidHeap*);
-void mDoExt_restoreCurrentHeap();
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
-void fopKyM_Delete(void*);
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
-void cM_atan2s(f32, f32);
-void cM_rndF(f32);
-void cM_rndFX(f32);
-void cLib_addCalc(f32*, f32, f32, f32, f32);
-void cLib_targetAngleY(Vec const*, Vec const*);
-extern "C" void DCStoreRangeNoSync();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXTrans();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
-extern "C" void strcmp();
+void mDoMtx_XrotM(f32 (* )[4], s16); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); // 2
+void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
+void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
+void mDoExt_restoreCurrentHeap(); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void fopKyM_Delete(void*); // 2
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
+void cM_atan2s(f32, f32); // 2
+void cM_rndF(f32); // 2
+void cM_rndFX(f32); // 2
+void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
+void cLib_targetAngleY(Vec const*, Vec const*); // 2
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void __dt__4cXyzFv();
-extern "C" void mDoMtx_XrotM__FPA4_fs();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void mDoMtx_ZrotM__FPA4_fs();
-extern "C" void play__14mDoExt_baseAnmFv();
-extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
-extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_restoreCurrentHeap__Fv();
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern "C" void fopKyM_Delete__FPv();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cM_rndF__Ff();
-extern "C" void cM_rndFX__Ff();
-extern "C" void cLib_addCalc__FPfffff();
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
-extern "C" void startFarThunderSe__10Z2EnvSeMgrFP3VecSc();
-extern "C" void init__12J3DFrameCtrlFs();
-extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
-extern "C" void DCStoreRangeNoSync();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXTrans();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
-extern "C" void strcmp();
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
+extern "C" void play__14mDoExt_baseAnmFv(); // 1
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss(); // 1
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl(); // 1
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void fopKyM_Delete__FPv(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM_rndF__Ff(); // 1
+extern "C" void cM_rndFX__Ff(); // 1
+extern "C" void cLib_addCalc__FPfffff(); // 1
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
+extern "C" void startFarThunderSe__10Z2EnvSeMgrFP3VecSc(); // 1
+extern "C" void init__12J3DFrameCtrlFs(); // 1
+extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void strcmp(); // 1
 SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
 SECTION_DATA extern void*g_fopKy_Method[6];
 SECTION_DATA extern void*g_fpcLf_Method[6];

@@ -9,21 +9,21 @@
 // Forward References:
 // 
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
-extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
+extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv(); // 1
+extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv(); // 1
 
-extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
-extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
+extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv(); // 1
+extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv(); // 1
 
 // 
 // Declarations:

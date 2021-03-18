@@ -9,27 +9,13 @@
 // Types:
 // 
 
-// build J3DModel (['J3DModel']) False/False
-/* top-level dependencies (begin ['J3DModel']) */
-/* top-level dependencies (end ['J3DModel']) */
 struct J3DModel {
 };
 
-// build dSmplMdl_draw_c (['dSmplMdl_draw_c']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build J3DModel (['J3DModel']) True/True
-/* top-level dependencies (begin ['dSmplMdl_draw_c']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('J3DModel',)
-/* top-level dependencies (end ['dSmplMdl_draw_c']) */
 struct dSmplMdl_draw_c {
-	// ('J3DModelData',)
-	// ('J3DModel',)
 	/* 80048CB4 */ dSmplMdl_draw_c();
 	/* 80048D80 */ ~dSmplMdl_draw_c();
 	/* 80048E0C */ void draw();
@@ -38,21 +24,10 @@ struct dSmplMdl_draw_c {
 	/* 80049058 */ void removeModel(J3DModelData*, int);
 };
 
-// build diff_model_c (['diff_model_c']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-// build modelList_c (['modelList_c']) False/False
-/* top-level dependencies (begin ['modelList_c']) */
-/* top-level dependencies (end ['modelList_c']) */
 struct modelList_c {
 };
 
-/* top-level dependencies (begin ['diff_model_c']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('modelList_c',)
-/* top-level dependencies (end ['diff_model_c']) */
 struct diff_model_c {
-	// ('J3DModelData',)
-	// ('modelList_c',)
 	/* 80048D60 */ diff_model_c();
 	/* 800490EC */ void create(J3DModelData*, int, u8);
 	/* 800491F4 */ void getModelData();
@@ -64,55 +39,38 @@ struct diff_model_c {
 	/* 80049408 */ void insert(modelList_c*);
 };
 
-// build J3DModelData (['J3DModelData']) True/True
-// build modelList_c (['modelList_c']) True/True
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
-// build J3DModelData (['J3DModelData']) True/True
-// build dKy_tevstr_c (['dKy_tevstr_c']) False/False
-/* top-level dependencies (begin ['dKy_tevstr_c']) */
-/* top-level dependencies (end ['dKy_tevstr_c']) */
 struct dKy_tevstr_c {
 };
 
-/* top-level dependencies (begin ['dScnKy_env_light_c']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('dKy_tevstr_c',)
-/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
-	// ('J3DModelData',)
-	// ('dKy_tevstr_c',)
 	/* 801A4DA0 */ void setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*);
 };
 
-// build dKy_tevstr_c (['dKy_tevstr_c']) True/True
 // 
 // Forward References:
 // 
 
-static void dSmplMdl_modelUpdateDL(J3DModel*);
+static void dSmplMdl_modelUpdateDL(J3DModel*); // 2
 
-extern "C" static void dSmplMdl_modelUpdateDL__FP8J3DModel();
-extern "C" void __ct__15dSmplMdl_draw_cFv();
-extern "C" void __ct__12diff_model_cFv();
-extern "C" void __dt__15dSmplMdl_draw_cFv();
-extern "C" void draw__15dSmplMdl_draw_cFv();
-extern "C" void entry__15dSmplMdl_draw_cFP8J3DModeli();
-extern "C" void addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc();
-extern "C" void removeModel__15dSmplMdl_draw_cFP12J3DModelDatai();
-extern "C" void create__12diff_model_cFP12J3DModelDataiUc();
-extern "C" void getModelData__12diff_model_cFv();
-extern "C" void remove__12diff_model_cFi();
-extern "C" void draw__12diff_model_cFv();
-extern "C" void init__12diff_model_cFv();
-extern "C" void isSame__12diff_model_cFP12J3DModelDatai();
-extern "C" void getRoomNo__12diff_model_cFv();
-extern "C" void insert__12diff_model_cFP11modelList_c();
+extern "C" static void dSmplMdl_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void __ct__15dSmplMdl_draw_cFv(); // 1
+extern "C" void __ct__12diff_model_cFv(); // 1
+extern "C" void __dt__15dSmplMdl_draw_cFv(); // 1
+extern "C" void draw__15dSmplMdl_draw_cFv(); // 1
+extern "C" void entry__15dSmplMdl_draw_cFP8J3DModeli(); // 1
+extern "C" void addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc(); // 1
+extern "C" void removeModel__15dSmplMdl_draw_cFP12J3DModelDatai(); // 1
+extern "C" void create__12diff_model_cFP12J3DModelDataiUc(); // 1
+extern "C" void getModelData__12diff_model_cFv(); // 1
+extern "C" void remove__12diff_model_cFi(); // 1
+extern "C" void draw__12diff_model_cFv(); // 1
+extern "C" void init__12diff_model_cFv(); // 1
+extern "C" void isSame__12diff_model_cFP12J3DModelDatai(); // 1
+extern "C" void getRoomNo__12diff_model_cFv(); // 1
+extern "C" void insert__12diff_model_cFP11modelList_c(); // 1
 SECTION_DATA extern void*const __vt__15dSmplMdl_draw_c[4];
 SECTION_SDATA2 extern u8 d_d_simple_model__lit_3763[4 + 4 /* padding */];
 
@@ -120,42 +78,42 @@ SECTION_SDATA2 extern u8 d_d_simple_model__lit_3763[4 + 4 /* padding */];
 // External References:
 // 
 
-void mDoExt_modelUpdateDL(J3DModel*);
-void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
-void mDoExt_adjustSolidHeapToSystem(JKRSolidHeap*);
-void mDoExt_destroySolidHeap(JKRSolidHeap*);
-void mDoExt_restoreCurrentHeap();
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
-void operator delete(void*);
-extern "C" void PSMTXCopy();
-extern "C" void __construct_array();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void mDoExt_modelUpdateDL(J3DModel*); // 2
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); // 2
+void mDoExt_adjustSolidHeapToSystem(JKRSolidHeap*); // 2
+void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
+void mDoExt_restoreCurrentHeap(); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern "C" void mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap();
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_restoreCurrentHeap__Fv();
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
-extern "C" void __dl__FPv();
-extern "C" void PSMTXCopy();
-extern "C" void __construct_array();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl(); // 1
+extern "C" void mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 SECTION_BSS extern u8 mStatus__20dStage_roomControl_c[65792];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];

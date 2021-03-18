@@ -9,18 +9,12 @@
 // Types:
 // 
 
-// build cM3dGCir (['cM3dGCir']) False/False
-/* top-level dependencies (begin ['cM3dGCir']) */
-/* top-level dependencies (end ['cM3dGCir']) */
 struct cM3dGCir {
 	/* 8026EEB4 */ cM3dGCir();
 	/* 8026EF18 */ ~cM3dGCir();
 	/* 8026EF74 */ void Set(f32, f32, f32, f32);
 };
 
-// build cM2dGCir (['cM2dGCir']) False/False
-/* top-level dependencies (begin ['cM2dGCir']) */
-/* top-level dependencies (end ['cM2dGCir']) */
 struct cM2dGCir {
 	/* 8026EED0 */ ~cM2dGCir();
 };
@@ -30,10 +24,10 @@ struct cM2dGCir {
 // 
 
 
-extern "C" void __ct__8cM3dGCirFv();
-extern "C" void __dt__8cM2dGCirFv();
-extern "C" void __dt__8cM3dGCirFv();
-extern "C" void Set__8cM3dGCirFffff();
+extern "C" void __ct__8cM3dGCirFv(); // 1
+extern "C" void __dt__8cM2dGCirFv(); // 1
+extern "C" void __dt__8cM3dGCirFv(); // 1
+extern "C" void Set__8cM3dGCirFffff(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGCir[3];
 SECTION_DATA extern void*const __vt__8cM2dGCir[3];
 
@@ -41,9 +35,9 @@ SECTION_DATA extern void*const __vt__8cM2dGCir[3];
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

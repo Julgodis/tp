@@ -9,32 +9,23 @@
 // Types:
 // 
 
-// build JASVoiceBank (['JASVoiceBank']) False/False
-// build JASInstParam (['JASInstParam']) False/False
-/* top-level dependencies (begin ['JASInstParam']) */
-/* top-level dependencies (end ['JASInstParam']) */
 struct JASInstParam {
 };
 
-/* top-level dependencies (begin ['JASVoiceBank']) */
-// outer dependency: ('JASInstParam',)
-/* top-level dependencies (end ['JASVoiceBank']) */
 struct JASVoiceBank {
-	// ('JASInstParam',)
 	/* 80297F74 */ void getInstParam(int, int, int, JASInstParam*) const;
 	/* 80297FAC */ ~JASVoiceBank();
 	/* 80298008 */ void getType() const;
 };
 
-// build JASInstParam (['JASInstParam']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void getInstParam__12JASVoiceBankCFiiiP12JASInstParam();
-extern "C" void __dt__12JASVoiceBankFv();
-extern "C" void getType__12JASVoiceBankCFv();
+extern "C" void getInstParam__12JASVoiceBankCFiiiP12JASInstParam(); // 1
+extern "C" void __dt__12JASVoiceBankFv(); // 1
+extern "C" void getType__12JASVoiceBankCFv(); // 1
 SECTION_RODATA extern const u8 sOscData__12JASVoiceBank[24];
 SECTION_DATA extern void*const __vt__12JASVoiceBank[6];
 SECTION_SBSS extern u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
@@ -43,9 +34,9 @@ SECTION_SBSS extern u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 SECTION_DATA extern void*const __vt__7JASBank[5];
 
 // 

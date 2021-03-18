@@ -9,53 +9,53 @@
 // Forward References:
 // 
 
-extern "C" static void GXCPInterruptHandler();
-extern "C" void GXInitFifoBase();
-extern "C" void GXInitFifoPtrs();
-extern "C" static void GXInitFifoLimits();
-extern "C" void GXSetCPUFifo();
-extern "C" void GXSetGPFifo();
-extern "C" void GXSaveCPUFifo();
-extern "C" static void __GXSaveCPUFifoAux();
-extern "C" void GXGetGPStatus();
-extern "C" void GXGetFifoBase();
-extern "C" void GXGetFifoSize();
-extern "C" void GXSetBreakPtCallback();
-extern "C" void __GXFifoInit();
-extern "C" static void __GXFifoReadEnable();
-extern "C" static void __GXFifoReadDisable();
-extern "C" static void __GXFifoLink();
-extern "C" static void __GXWriteFifoIntEnable();
-extern "C" static void __GXWriteFifoIntReset();
-extern "C" void __GXCleanGPFifo();
-extern "C" void GXSetCurrentGXThread();
-extern "C" void GXGetCurrentGXThread();
-extern "C" void GXGetCPUFifo();
-extern "C" void GXGetGPFifo();
+extern "C" static void GXCPInterruptHandler(); // 1
+extern "C" void GXInitFifoBase(); // 1
+extern "C" void GXInitFifoPtrs(); // 1
+extern "C" static void GXInitFifoLimits(); // 1
+extern "C" void GXSetCPUFifo(); // 1
+extern "C" void GXSetGPFifo(); // 1
+extern "C" void GXSaveCPUFifo(); // 1
+extern "C" static void __GXSaveCPUFifoAux(); // 1
+extern "C" void GXGetGPStatus(); // 1
+extern "C" void GXGetFifoBase(); // 1
+extern "C" void GXGetFifoSize(); // 1
+extern "C" void GXSetBreakPtCallback(); // 1
+extern "C" void __GXFifoInit(); // 1
+extern "C" static void __GXFifoReadEnable(); // 1
+extern "C" static void __GXFifoReadDisable(); // 1
+extern "C" static void __GXFifoLink(); // 1
+extern "C" static void __GXWriteFifoIntEnable(); // 1
+extern "C" static void __GXWriteFifoIntReset(); // 1
+extern "C" void __GXCleanGPFifo(); // 1
+extern "C" void GXSetCurrentGXThread(); // 1
+extern "C" void GXGetCurrentGXThread(); // 1
+extern "C" void GXGetCPUFifo(); // 1
+extern "C" void GXGetGPFifo(); // 1
 
-extern "C" static void GXCPInterruptHandler();
-extern "C" void GXInitFifoBase();
-extern "C" void GXInitFifoPtrs();
-extern "C" static void GXInitFifoLimits();
-extern "C" void GXSetCPUFifo();
-extern "C" void GXSetGPFifo();
-extern "C" void GXSaveCPUFifo();
-extern "C" static void __GXSaveCPUFifoAux();
-extern "C" void GXGetGPStatus();
-extern "C" void GXGetFifoBase();
-extern "C" void GXGetFifoSize();
-extern "C" void GXSetBreakPtCallback();
-extern "C" void __GXFifoInit();
-extern "C" static void __GXFifoReadEnable();
-extern "C" static void __GXFifoReadDisable();
-extern "C" static void __GXFifoLink();
-extern "C" static void __GXWriteFifoIntEnable();
-extern "C" static void __GXWriteFifoIntReset();
-extern "C" void __GXCleanGPFifo();
-extern "C" void GXSetCurrentGXThread();
-extern "C" void GXGetCurrentGXThread();
-extern "C" void GXGetCPUFifo();
-extern "C" void GXGetGPFifo();
+extern "C" static void GXCPInterruptHandler(); // 1
+extern "C" void GXInitFifoBase(); // 1
+extern "C" void GXInitFifoPtrs(); // 1
+extern "C" static void GXInitFifoLimits(); // 1
+extern "C" void GXSetCPUFifo(); // 1
+extern "C" void GXSetGPFifo(); // 1
+extern "C" void GXSaveCPUFifo(); // 1
+extern "C" static void __GXSaveCPUFifoAux(); // 1
+extern "C" void GXGetGPStatus(); // 1
+extern "C" void GXGetFifoBase(); // 1
+extern "C" void GXGetFifoSize(); // 1
+extern "C" void GXSetBreakPtCallback(); // 1
+extern "C" void __GXFifoInit(); // 1
+extern "C" static void __GXFifoReadEnable(); // 1
+extern "C" static void __GXFifoReadDisable(); // 1
+extern "C" static void __GXFifoLink(); // 1
+extern "C" static void __GXWriteFifoIntEnable(); // 1
+extern "C" static void __GXWriteFifoIntReset(); // 1
+extern "C" void __GXCleanGPFifo(); // 1
+extern "C" void GXSetCurrentGXThread(); // 1
+extern "C" void GXGetCurrentGXThread(); // 1
+extern "C" void GXGetCPUFifo(); // 1
+extern "C" void GXGetGPFifo(); // 1
 SECTION_SBSS extern u8 CPUFifo[4];
 SECTION_SBSS extern u8 GPFifo[4];
 SECTION_SBSS extern u8 __GXCurrentThread[4];
@@ -68,29 +68,29 @@ SECTION_SBSS extern u8 __GXOverflowCount[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void PPCSync();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSUnmaskInterrupts();
-extern "C" void OSGetCurrentThread();
-extern "C" void OSResumeThread();
-extern "C" void OSSuspendThread();
-extern "C" void GXFlush();
+extern "C" void PPCSync(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void OSSuspendThread(); // 1
+extern "C" void GXFlush(); // 1
 
-extern "C" void PPCSync();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSUnmaskInterrupts();
-extern "C" void OSGetCurrentThread();
-extern "C" void OSResumeThread();
-extern "C" void OSSuspendThread();
-extern "C" void GXFlush();
+extern "C" void PPCSync(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void OSSuspendThread(); // 1
+extern "C" void GXFlush(); // 1
 SECTION_SBSS extern u8 __piReg[4];
 SECTION_SBSS extern u8 __cpReg[4];
 SECTION_SDATA2 extern void*__GXData;

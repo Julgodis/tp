@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build method_filter (['method_filter']) False/False
-/* top-level dependencies (begin ['method_filter']) */
-/* top-level dependencies (end ['method_filter']) */
 struct method_filter {
 };
 
-// build layer_class (['layer_class']) False/False
-/* top-level dependencies (begin ['layer_class']) */
-/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
@@ -31,29 +22,29 @@ struct layer_class {
 // Forward References:
 // 
 
-static void fpcLnIt_MethodCall(create_tag_class*, method_filter*);
-extern "C" void fpcLnIt_Queue__FPFPvPv_i();
+static void fpcLnIt_MethodCall(create_tag_class*, method_filter*); // 2
+extern "C" void fpcLnIt_Queue__FPFPvPv_i(); // 1
 
-extern "C" static void fpcLnIt_MethodCall__FP16create_tag_classP13method_filter();
-extern "C" void fpcLnIt_Queue__FPFPvPv_i();
+extern "C" static void fpcLnIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
+extern "C" void fpcLnIt_Queue__FPFPvPv_i(); // 1
 
 // 
 // External References:
 // 
 
-void fpcLy_SetCurrentLayer(layer_class*);
-void fpcLy_CurrentLayer();
-extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
-void cTgIt_MethodCall(create_tag_class*, method_filter*);
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+void fpcLy_SetCurrentLayer(layer_class*); // 2
+void fpcLy_CurrentLayer(); // 2
+extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv(); // 1
+void cTgIt_MethodCall(create_tag_class*, method_filter*); // 2
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
-extern "C" void fpcLy_CurrentLayer__Fv();
-extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
-extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1
+extern "C" void fpcLy_CurrentLayer__Fv(); // 1
+extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv(); // 1
+extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_SDATA extern void*g_fpcLn_Queue[2];
 
 // 

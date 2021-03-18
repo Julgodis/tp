@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __kernel_sin();
+extern "C" void __kernel_sin(); // 1
 
-extern "C" void __kernel_sin();
+extern "C" void __kernel_sin(); // 1
 SECTION_SDATA2 extern f64 lit_60;
 SECTION_SDATA2 extern f64 Math_Double_precision_k_sin__lit_61;
 SECTION_SDATA2 extern f64 Math_Double_precision_k_sin__lit_62;

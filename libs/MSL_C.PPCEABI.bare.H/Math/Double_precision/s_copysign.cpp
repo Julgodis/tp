@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void copysign();
+extern "C" void copysign(); // 1
 
-extern "C" void copysign();
+extern "C" void copysign(); // 1
 
 // 
 // External References:

@@ -9,70 +9,74 @@
 // Types:
 // 
 
-// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
-/* top-level dependencies (begin ['J2DOrthoGraph']) */
-/* top-level dependencies (end ['J2DOrthoGraph']) */
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+	template <typename A1>
+	struct TVec2 { };
+	/* TVec2<f32> */
+	struct TVec2__template0 {
+	};
+
+};
+
 struct J2DOrthoGraph {
 	/* 8000B118 */ ~J2DOrthoGraph();
 	/* 802E9670 */ J2DOrthoGraph();
 	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
 	/* 802E97B4 */ void setPort();
+	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
 	/* 802E9840 */ void setLookat();
+	/* 802E987C */ void scissorBounds(JGeometry::TBox2<f32>*, JGeometry::TBox2<f32> const*);
 	/* 802E9C88 */ bool getGrafType() const;
 };
 
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build J2DGrafContext (['J2DGrafContext']) False/False
-// build JUtility (['JUtility']) True/True
-/* top-level dependencies (begin ['J2DGrafContext']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
-	// ('JUtility', 'TColor')
 	/* 802E8B08 */ J2DGrafContext(f32, f32, f32, f32);
 	/* 802E8BB4 */ void setPort();
 	/* 802E8C44 */ void setup2D();
 	/* 802E8E20 */ void setScissor();
+	/* 802E90E4 */ void place(JGeometry::TBox2<f32> const&);
+	/* 802E961C */ void place(f32, f32, f32, f32);
 	/* 802E9118 */ void setColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
 	/* 802E9234 */ void setLineWidth(u8);
-	/* 802E961C */ void place(f32, f32, f32, f32);
+	/* 802E9260 */ void fillBox(JGeometry::TBox2<f32> const&);
+	/* 802E9368 */ void drawFrame(JGeometry::TBox2<f32> const&);
+	/* 802E9564 */ void lineTo(JGeometry::TVec2<f32>);
 };
 
 // 
 // Forward References:
 // 
 
-extern "C" void func_802E980C();
-extern "C" void func_802E987C();
-void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int);
-void J2DFillBox(f32, f32, f32, f32, JUtility::TColor);
-extern "C" static void func_802E9B0C();
-void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8);
-extern "C" static void func_802E9BE8();
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int); // 2
+void J2DFillBox(f32, f32, f32, f32, JUtility::TColor); // 2
+static void J2DFillBox(JGeometry::TBox2<f32> const&, JUtility::TColor); // 2
+void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8); // 2
+static void J2DDrawFrame(JGeometry::TBox2<f32> const&, JUtility::TColor, u8); // 2
 
-extern "C" void __ct__13J2DOrthoGraphFv();
-extern "C" void __ct__13J2DOrthoGraphFffffff();
-extern "C" void setPort__13J2DOrthoGraphFv();
-extern "C" void func_802E980C();
-extern "C" void setLookat__13J2DOrthoGraphFv();
-extern "C" void func_802E987C();
-extern "C" void J2DDrawLine__FffffQ28JUtility6TColori();
-extern "C" void J2DFillBox__FffffQ28JUtility6TColor();
-extern "C" static void func_802E9B0C();
-extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc();
-extern "C" static void func_802E9BE8();
-extern "C" bool getGrafType__13J2DOrthoGraphCFv();
+extern "C" void __ct__13J2DOrthoGraphFv(); // 1
+extern "C" void __ct__13J2DOrthoGraphFffffff(); // 1
+extern "C" void setPort__13J2DOrthoGraphFv(); // 1
+extern "C" void func_802E980C(); // 1
+extern "C" void setLookat__13J2DOrthoGraphFv(); // 1
+extern "C" void func_802E987C(); // 1
+extern "C" void J2DDrawLine__FffffQ28JUtility6TColori(); // 1
+extern "C" void J2DFillBox__FffffQ28JUtility6TColor(); // 1
+extern "C" static void func_802E9B0C(); // 1
+extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc(); // 1
+extern "C" static void func_802E9BE8(); // 1
+extern "C" bool getGrafType__13J2DOrthoGraphCFv(); // 1
 SECTION_DATA extern void*const __vt__13J2DOrthoGraph[10];
 SECTION_SDATA2 extern u8 J2DOrthoGraph__lit_522[4 + 4 /* padding */];
 
@@ -80,35 +84,31 @@ SECTION_SDATA2 extern u8 J2DOrthoGraph__lit_522[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void func_802E90E4();
-extern "C" void func_802E9260();
-extern "C" void func_802E9368();
-extern "C" void func_802E9564();
-extern "C" void PSMTXIdentity();
-extern "C" void C_MTXOrtho();
-extern "C" void GXSetProjection();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void C_MTXOrtho(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dt__13J2DOrthoGraphFv();
-extern "C" void __ct__14J2DGrafContextFffff();
-extern "C" void setPort__14J2DGrafContextFv();
-extern "C" void setup2D__14J2DGrafContextFv();
-extern "C" void setScissor__14J2DGrafContextFv();
-extern "C" void func_802E90E4();
-extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void setLineWidth__14J2DGrafContextFUc();
-extern "C" void func_802E9260();
-extern "C" void func_802E9368();
-extern "C" void func_802E9564();
-extern "C" void place__14J2DGrafContextFffff();
-extern "C" void PSMTXIdentity();
-extern "C" void C_MTXOrtho();
-extern "C" void GXSetProjection();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void __dt__13J2DOrthoGraphFv(); // 1
+extern "C" void __ct__14J2DGrafContextFffff(); // 1
+extern "C" void setPort__14J2DGrafContextFv(); // 1
+extern "C" void setup2D__14J2DGrafContextFv(); // 1
+extern "C" void setScissor__14J2DGrafContextFv(); // 1
+extern "C" void func_802E90E4(); // 1
+extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void setLineWidth__14J2DGrafContextFUc(); // 1
+extern "C" void func_802E9260(); // 1
+extern "C" void func_802E9368(); // 1
+extern "C" void func_802E9564(); // 1
+extern "C" void place__14J2DGrafContextFffff(); // 1
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void C_MTXOrtho(); // 1
+extern "C" void GXSetProjection(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
 
 // 
@@ -174,7 +174,7 @@ asm void J2DOrthoGraph::setPort() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802E980C() {
+asm void J2DOrthoGraph::setOrtho(JGeometry::TBox2<f32> const& field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DOrthoGraph/func_802E980C.s"
 }
@@ -196,7 +196,7 @@ asm void J2DOrthoGraph::setLookat() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802E987C() {
+asm void J2DOrthoGraph::scissorBounds(JGeometry::TBox2<f32>* field_0, JGeometry::TBox2<f32> const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DOrthoGraph/func_802E987C.s"
 }
@@ -229,7 +229,7 @@ asm void J2DFillBox(f32 field_0, f32 field_1, f32 field_2, f32 field_3, JUtility
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802E9B0C() {
+asm static void J2DFillBox(JGeometry::TBox2<f32> const& field_0, JUtility::TColor field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DOrthoGraph/func_802E9B0C.s"
 }
@@ -251,7 +251,7 @@ asm void J2DDrawFrame(f32 field_0, f32 field_1, f32 field_2, f32 field_3, JUtili
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802E9BE8() {
+asm static void J2DDrawFrame(JGeometry::TBox2<f32> const& field_0, JUtility::TColor field_1, u8 field_2) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DOrthoGraph/func_802E9BE8.s"
 }

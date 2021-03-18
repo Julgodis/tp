@@ -9,27 +9,27 @@
 // Forward References:
 // 
 
-extern "C" static void OSNotifyLink();
-extern "C" static void OSNotifyUnlink();
-extern "C" void OSSetStringTable();
-extern "C" static void Relocate();
-extern "C" static void Link();
-extern "C" void OSLink();
-extern "C" void OSLinkFixed();
-extern "C" static void Undo();
-extern "C" void OSUnlink();
-extern "C" void __OSModuleInit();
+extern "C" static void OSNotifyLink(); // 1
+extern "C" static void OSNotifyUnlink(); // 1
+extern "C" void OSSetStringTable(); // 1
+extern "C" static void Relocate(); // 1
+extern "C" static void Link(); // 1
+extern "C" void OSLink(); // 1
+extern "C" void OSLinkFixed(); // 1
+extern "C" static void Undo(); // 1
+extern "C" void OSUnlink(); // 1
+extern "C" void __OSModuleInit(); // 1
 
-extern "C" static void OSNotifyLink();
-extern "C" static void OSNotifyUnlink();
-extern "C" void OSSetStringTable();
-extern "C" static void Relocate();
-extern "C" static void Link();
-extern "C" void OSLink();
-extern "C" void OSLinkFixed();
-extern "C" static void Undo();
-extern "C" void OSUnlink();
-extern "C" void __OSModuleInit();
+extern "C" static void OSNotifyLink(); // 1
+extern "C" static void OSNotifyUnlink(); // 1
+extern "C" void OSSetStringTable(); // 1
+extern "C" static void Relocate(); // 1
+extern "C" static void Link(); // 1
+extern "C" void OSLink(); // 1
+extern "C" void OSLinkFixed(); // 1
+extern "C" static void Undo(); // 1
+extern "C" void OSUnlink(); // 1
+extern "C" void __OSModuleInit(); // 1
 SECTION_DATA extern u8 OSLink__lit_62[37 + 3 /* padding */];
 SECTION_DATA extern u8 lit_189[39 + 1 /* padding */];
 
@@ -37,15 +37,15 @@ SECTION_DATA extern u8 lit_189[39 + 1 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memset();
-extern "C" void OSReport();
-extern "C" void DCFlushRange();
-extern "C" void ICInvalidateRange();
+SECTION_INIT void memset(); // 1
+extern "C" void OSReport(); // 1
+extern "C" void DCFlushRange(); // 1
+extern "C" void ICInvalidateRange(); // 1
 
-SECTION_INIT void memset();
-extern "C" void OSReport();
-extern "C" void DCFlushRange();
-extern "C" void ICInvalidateRange();
+SECTION_INIT void memset(); // 1
+extern "C" void OSReport(); // 1
+extern "C" void DCFlushRange(); // 1
+extern "C" void ICInvalidateRange(); // 1
 
 // 
 // Declarations:

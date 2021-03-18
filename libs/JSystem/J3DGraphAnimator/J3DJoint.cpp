@@ -9,71 +9,32 @@
 // Types:
 // 
 
-// build J3DMtxCalcJ3DSysInitBasic (['J3DMtxCalcJ3DSysInitBasic']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['J3DMtxCalcJ3DSysInitBasic']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['J3DMtxCalcJ3DSysInitBasic']) */
 struct J3DMtxCalcJ3DSysInitBasic {
-	// ('Vec',)
 	/* 8032EC28 */ void init(Vec const&, f32 const (& )[3][4]);
 };
 
-// build Vec (['Vec']) True/True
-// build J3DMtxCalcJ3DSysInitMaya (['J3DMtxCalcJ3DSysInitMaya']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['J3DMtxCalcJ3DSysInitMaya']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['J3DMtxCalcJ3DSysInitMaya']) */
 struct J3DMtxCalcJ3DSysInitMaya {
-	// ('Vec',)
 	/* 8032ECAC */ void init(Vec const&, f32 const (& )[3][4]);
 };
 
-// build J3DMtxCalcCalcTransformBasic (['J3DMtxCalcCalcTransformBasic']) False/False
-// build J3DTransformInfo (['J3DTransformInfo']) False/False
-/* top-level dependencies (begin ['J3DTransformInfo']) */
-/* top-level dependencies (end ['J3DTransformInfo']) */
 struct J3DTransformInfo {
 };
 
-/* top-level dependencies (begin ['J3DMtxCalcCalcTransformBasic']) */
-// outer dependency: ('J3DTransformInfo',)
-/* top-level dependencies (end ['J3DMtxCalcCalcTransformBasic']) */
 struct J3DMtxCalcCalcTransformBasic {
-	// ('J3DTransformInfo',)
 	/* 8032ED30 */ void calcTransform(J3DTransformInfo const&);
 };
 
-// build J3DTransformInfo (['J3DTransformInfo']) True/True
-// build J3DMtxCalcCalcTransformSoftimage (['J3DMtxCalcCalcTransformSoftimage']) False/False
-// build J3DTransformInfo (['J3DTransformInfo']) True/True
-/* top-level dependencies (begin ['J3DMtxCalcCalcTransformSoftimage']) */
-// outer dependency: ('J3DTransformInfo',)
-/* top-level dependencies (end ['J3DMtxCalcCalcTransformSoftimage']) */
 struct J3DMtxCalcCalcTransformSoftimage {
-	// ('J3DTransformInfo',)
 	/* 8032EE50 */ void calcTransform(J3DTransformInfo const&);
 };
 
-// build J3DMtxCalcCalcTransformMaya (['J3DMtxCalcCalcTransformMaya']) False/False
-// build J3DTransformInfo (['J3DTransformInfo']) True/True
-/* top-level dependencies (begin ['J3DMtxCalcCalcTransformMaya']) */
-// outer dependency: ('J3DTransformInfo',)
-/* top-level dependencies (end ['J3DMtxCalcCalcTransformMaya']) */
 struct J3DMtxCalcCalcTransformMaya {
-	// ('J3DTransformInfo',)
 	/* 8032EFBC */ void calcTransform(J3DTransformInfo const&);
 };
 
-// build J3DJoint (['J3DJoint']) False/False
-/* top-level dependencies (begin ['J3DJoint']) */
-/* top-level dependencies (end ['J3DJoint']) */
 struct J3DJoint {
 	/* 8032F13C */ void appendChild(J3DJoint*);
 	/* 8032F170 */ J3DJoint();
@@ -81,9 +42,6 @@ struct J3DJoint {
 	/* 8032F3F8 */ void recursiveCalc();
 };
 
-// build J3DMaterial (['J3DMaterial']) False/False
-/* top-level dependencies (begin ['J3DMaterial']) */
-/* top-level dependencies (end ['J3DMaterial']) */
 struct J3DMaterial {
 	/* 80316AB0 */ void setCurrentMtx();
 };
@@ -93,15 +51,15 @@ struct J3DMaterial {
 // 
 
 
-extern "C" void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf();
-extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf();
-extern "C" void calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo();
-extern "C" void calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo();
-extern "C" void calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo();
-extern "C" void appendChild__8J3DJointFP8J3DJoint();
-extern "C" void __ct__8J3DJointFv();
-extern "C" void entryIn__8J3DJointFv();
-extern "C" void recursiveCalc__8J3DJointFv();
+extern "C" void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf(); // 1
+extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf(); // 1
+extern "C" void calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo(); // 1
+extern "C" void calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo(); // 1
+extern "C" void calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo(); // 1
+extern "C" void appendChild__8J3DJointFP8J3DJoint(); // 1
+extern "C" void __ct__8J3DJointFv(); // 1
+extern "C" void entryIn__8J3DJointFv(); // 1
+extern "C" void recursiveCalc__8J3DJointFv(); // 1
 SECTION_RODATA extern const u8 J3DJoint__lit_882[12];
 SECTION_RODATA extern const u8 J3DJoint__lit_893[12];
 SECTION_RODATA extern const u8 lit_1257[12];
@@ -116,22 +74,22 @@ SECTION_SDATA2 extern u8 lit_1220[4];
 // External References:
 // 
 
-void J3DGetTranslateRotateMtx(J3DTransformInfo const&, f32 (* )[4]);
-void J3DGetTranslateRotateMtx(s16, s16, s16, f32, f32, f32, f32 (* )[4]);
-void JMAMTXApplyScale(f32 const (* )[4], f32 (* )[4], f32, f32, f32);
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
+void J3DGetTranslateRotateMtx(J3DTransformInfo const&, f32 (* )[4]); // 2
+void J3DGetTranslateRotateMtx(s16, s16, s16, f32, f32, f32, f32 (* )[4]); // 2
+void JMAMTXApplyScale(f32 const (* )[4], f32 (* )[4], f32, f32, f32); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
 
-extern "C" void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f();
-extern "C" void J3DGetTranslateRotateMtx__FsssfffPA4_f();
-extern "C" void setCurrentMtx__11J3DMaterialFv();
-extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
+extern "C" void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f(); // 1
+extern "C" void J3DGetTranslateRotateMtx__FsssfffPA4_f(); // 1
+extern "C" void setCurrentMtx__11J3DMaterialFv(); // 1
+extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
 SECTION_RODATA extern const u8 j3dDefaultTransformInfo[32];
 SECTION_BSS extern u8 j3dSys[284];
 SECTION_BSS extern u8 mCurrentMtx__6J3DSys[48];

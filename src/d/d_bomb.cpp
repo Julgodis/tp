@@ -9,34 +9,25 @@
 // Types:
 // 
 
-// build dBomb_c (['dBomb_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ['dBomb_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dBomb_c']) */
 struct dBomb_c {
-	// ('fopAc_ac_c',)
 	/* 80031F94 */ void checkStateCarry();
 	/* 80031FCC */ void checkFlowerBombWait(fopAc_ac_c*);
 	/* 80031FF4 */ void checkWaterBomb(fopAc_ac_c*);
 	/* 8003201C */ void checkInsectBombMove(fopAc_ac_c*);
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void checkStateCarry__7dBomb_cFv();
-extern "C" void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c();
-extern "C" void checkWaterBomb__7dBomb_cFP10fopAc_ac_c();
-extern "C" void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c();
+extern "C" void checkStateCarry__7dBomb_cFv(); // 1
+extern "C" void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c(); // 1
+extern "C" void checkWaterBomb__7dBomb_cFP10fopAc_ac_c(); // 1
+extern "C" void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c(); // 1
 
 // 
 // External References:

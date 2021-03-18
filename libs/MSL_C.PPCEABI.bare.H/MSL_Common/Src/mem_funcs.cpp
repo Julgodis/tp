@@ -9,15 +9,15 @@
 // Forward References:
 // 
 
-extern "C" void __copy_longs_rev_unaligned();
-extern "C" void __copy_longs_unaligned();
-extern "C" void __copy_longs_rev_aligned();
-extern "C" void __copy_longs_aligned();
+extern "C" void __copy_longs_rev_unaligned(); // 1
+extern "C" void __copy_longs_unaligned(); // 1
+extern "C" void __copy_longs_rev_aligned(); // 1
+extern "C" void __copy_longs_aligned(); // 1
 
-extern "C" void __copy_longs_rev_unaligned();
-extern "C" void __copy_longs_unaligned();
-extern "C" void __copy_longs_rev_aligned();
-extern "C" void __copy_longs_aligned();
+extern "C" void __copy_longs_rev_unaligned(); // 1
+extern "C" void __copy_longs_unaligned(); // 1
+extern "C" void __copy_longs_rev_aligned(); // 1
+extern "C" void __copy_longs_aligned(); // 1
 
 // 
 // External References:

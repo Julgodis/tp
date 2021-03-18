@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void DVDCompareDiskID();
+extern "C" void DVDCompareDiskID(); // 1
 
-extern "C" void DVDCompareDiskID();
+extern "C" void DVDCompareDiskID(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void strncmp();
+extern "C" void strncmp(); // 1
 
-extern "C" void strncmp();
+extern "C" void strncmp(); // 1
 
 // 
 // Declarations:

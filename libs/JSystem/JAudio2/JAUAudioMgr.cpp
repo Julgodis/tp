@@ -9,36 +9,27 @@
 // Types:
 // 
 
-// build JASHeap (['JASHeap']) False/False
-// build JASDisposer (['JASDisposer']) False/False
-/* top-level dependencies (begin ['JASDisposer']) */
-/* top-level dependencies (end ['JASDisposer']) */
 struct JASDisposer {
 };
 
-/* top-level dependencies (begin ['JASHeap']) */
-// outer dependency: ('JASDisposer',)
-/* top-level dependencies (end ['JASHeap']) */
 struct JASHeap {
-	// ('JASDisposer',)
 	/* 80290140 */ JASHeap(JASDisposer*);
 	/* 802A4A5C */ void __defctor();
 };
 
-// build JASDisposer (['JASDisposer']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __defctor__7JASHeapFv();
+extern "C" void __defctor__7JASHeapFv(); // 1
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ct__7JASHeapFP11JASDisposer();
+extern "C" void __ct__7JASHeapFP11JASDisposer(); // 1
 
 // 
 // Declarations:

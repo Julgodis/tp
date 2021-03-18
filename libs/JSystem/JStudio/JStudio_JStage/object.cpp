@@ -9,91 +9,39 @@
 // Types:
 // 
 
-// build JStudio_JStage (['JStudio_JStage']) False/False
-// build JStudio (['JStudio']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build TControl (['JStudio', 'TControl']) False/False
-	/* dependencies (begin ['JStudio', 'TControl']) */
-	/* dependencies (end ['JStudio', 'TControl']) */
 	struct TControl {
-		// build TTransform_translation_rotation_scaling (['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) False/False
-		/* dependencies (begin ['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) */
-		/* dependencies (end ['JStudio', 'TControl', 'TTransform_translation_rotation_scaling']) */
 		struct TTransform_translation_rotation_scaling {
 		};
 
-		// build TTransform_position (['JStudio', 'TControl', 'TTransform_position']) False/False
-		/* dependencies (begin ['JStudio', 'TControl', 'TTransform_position']) */
-		/* dependencies (end ['JStudio', 'TControl', 'TTransform_position']) */
 		struct TTransform_position {
 		};
 
 	};
 
-	// build data (['JStudio', 'data']) False/False
-	/* dependencies (begin ['JStudio', 'data']) */
-	/* dependencies (end ['JStudio', 'data']) */
 	struct data {
-		// build TEOperationData (['JStudio', 'data', 'TEOperationData']) False/False
-		/* dependencies (begin ['JStudio', 'data', 'TEOperationData']) */
-		/* dependencies (end ['JStudio', 'data', 'TEOperationData']) */
 		struct TEOperationData {
 		};
 
 	};
 
-	// build math (['JStudio', 'math']) False/False
-	/* dependencies (begin ['JStudio', 'math']) */
-	// inner dependency: 0 ('Vec',) (for ['JStudio', 'math'])
-	/* dependencies (end ['JStudio', 'math']) */
 	struct math {
-		// ('Vec',)
 		/* 80285B44 */ void getTransformation_SRxyzT(f32 (* )[4], Vec const&, Vec const&, Vec const&);
 	};
 
 };
 
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-// build JStage (['JStage']) False/False
-/* top-level dependencies (begin ['JStage']) */
-/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TObject (['JStage', 'TObject']) False/False
-	/* dependencies (begin ['JStage', 'TObject']) */
-	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 	};
 
 };
 
-/* top-level dependencies (begin ['JStudio_JStage']) */
-// outer dependency: ('JStudio', 'TControl', 'TTransform_position')
-// outer dependency: ('JStudio', 'data', 'TEOperationData')
-// outer dependency: ('JStudio', 'TControl', 'TTransform_translation_rotation_scaling')
-// outer dependency: ('JStage', 'TObject')
-/* top-level dependencies (end ['JStudio_JStage']) */
 struct JStudio_JStage {
-	// ('JStudio', 'TControl', 'TTransform_translation_rotation_scaling')
-	// ('JStudio', 'TControl', 'TTransform_position')
-	// ('JStage', 'TObject')
-	// build TAdaptor_object_ (['JStudio_JStage', 'TAdaptor_object_']) False/False
-	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_object_']) */
-	// inner dependency: 0 ('JStage', 'TObject') (for ['JStudio_JStage', 'TAdaptor_object_'])
-	// inner dependency: 0 ('JStudio', 'data', 'TEOperationData') (for ['JStudio_JStage', 'TAdaptor_object_'])
-	/* dependencies (end ['JStudio_JStage', 'TAdaptor_object_']) */
 	struct TAdaptor_object_ {
-		// ('JStage', 'TObject')
-		// ('JStudio', 'data', 'TEOperationData')
 		/* 8028A470 */ void adaptor_object_data_(void const*, u32, void const*, u32);
 		/* 8028A4BC */ void adaptor_object_findJSGObject_(char const*);
 		/* 8028A50C */ void adaptor_object_findJSGObjectNode_(JStage::TObject const*, char const*);
@@ -106,35 +54,32 @@ struct JStudio_JStage {
 	/* 8028A3CC */ void transform_toLocalFromGlobal(f32 (* )[4], JStudio::TControl::TTransform_position const&, JStage::TObject const*, u32);
 };
 
-// build JStudio (['JStudio']) True/True
-// build JStage (['JStage']) True/True
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
-extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
-extern "C" void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
-extern "C" void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
-extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
-extern "C" void adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc();
-extern "C" void adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc();
-extern "C" void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl(); // 1
+extern "C" void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl(); // 1
+extern "C" void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl(); // 1
+extern "C" void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl(); // 1
+extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl(); // 1
+extern "C" void adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc(); // 1
+extern "C" void adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc(); // 1
+extern "C" void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXTrans();
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXTrans(); // 1
 
-extern "C" void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXTrans();
+extern "C" void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXTrans(); // 1
 
 // 
 // Declarations:

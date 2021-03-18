@@ -9,38 +9,20 @@
 // Types:
 // 
 
-// build JKRAramStream (['JKRAramStream']) False/False
-// build JKRAramStreamCommand (['JKRAramStreamCommand']) False/False
-/* top-level dependencies (begin ['JKRAramStreamCommand']) */
-/* top-level dependencies (end ['JKRAramStreamCommand']) */
+struct JSUFileInputStream {
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
 struct JKRAramStreamCommand {
 	/* 802D4088 */ JKRAramStreamCommand();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-// build JSUFileInputStream (['JSUFileInputStream']) False/False
-/* top-level dependencies (begin ['JSUFileInputStream']) */
-/* top-level dependencies (end ['JSUFileInputStream']) */
-struct JSUFileInputStream {
-};
-
-/* top-level dependencies (begin ['JKRAramStream']) */
-// outer dependency: ('JKRAramStreamCommand',)
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JSUFileInputStream',)
-/* top-level dependencies (end ['JKRAramStream']) */
 struct JKRAramStream {
-	// ('JKRAramStreamCommand',)
-	// ('JKRHeap',)
-	// ('JSUFileInputStream',)
 	/* 802D3B48 */ void create(s32);
 	/* 802D3BB8 */ JKRAramStream(s32);
 	/* 802D3C08 */ ~JKRAramStream();
@@ -52,60 +34,30 @@ struct JKRAramStream {
 	/* 802D4034 */ void setTransBuffer(u8*, u32, JKRHeap*);
 };
 
-// build JKRAramStreamCommand (['JKRAramStreamCommand']) True/True
-// build JSUFileInputStream (['JSUFileInputStream']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-// build JSURandomInputStream (['JSURandomInputStream']) False/False
-// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) False/False
-/* top-level dependencies (begin ['JSUStreamSeekFrom']) */
-/* top-level dependencies (end ['JSUStreamSeekFrom']) */
 struct JSUStreamSeekFrom {
 };
 
-/* top-level dependencies (begin ['JSURandomInputStream']) */
-// outer dependency: ('JSUStreamSeekFrom',)
-/* top-level dependencies (end ['JSURandomInputStream']) */
 struct JSURandomInputStream {
-	// ('JSUStreamSeekFrom',)
 	/* 802D4094 */ void getAvailable() const;
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-// build JKRThread (['JKRThread']) False/False
-/* top-level dependencies (begin ['JKRThread']) */
-/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
 	/* 802D1568 */ JKRThread(u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
-// build JKRAramPiece (['JKRAramPiece']) False/False
-// build JKRAramBlock (['JKRAramBlock']) False/False
-/* top-level dependencies (begin ['JKRAramBlock']) */
-/* top-level dependencies (end ['JKRAramBlock']) */
 struct JKRAramBlock {
 };
 
-/* top-level dependencies (begin ['JKRAramPiece']) */
-// outer dependency: ('JKRAramBlock',)
-/* top-level dependencies (end ['JKRAramPiece']) */
 struct JKRAramPiece {
-	// ('JKRAramBlock',)
 	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
 };
 
-// build JKRAramBlock (['JKRAramBlock']) True/True
-// build JSUInputStream (['JSUInputStream']) False/False
-/* top-level dependencies (begin ['JSUInputStream']) */
-/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC298 */ void read(void*, s32);
 };
 
-// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) True/True
-// build JUTException (['JUTException']) False/False
-/* top-level dependencies (begin ['JUTException']) */
-/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
@@ -115,17 +67,17 @@ struct JUTException {
 // 
 
 
-extern "C" void create__13JKRAramStreamFl();
-extern "C" void __ct__13JKRAramStreamFl();
-extern "C" void __dt__13JKRAramStreamFv();
-extern "C" void run__13JKRAramStreamFv();
-extern "C" bool readFromAram__13JKRAramStreamFv();
-extern "C" void writeToAram__13JKRAramStreamFP20JKRAramStreamCommand();
-extern "C" void write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl();
-extern "C" void sync__13JKRAramStreamFP20JKRAramStreamCommandi();
-extern "C" void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap();
-extern "C" void __ct__20JKRAramStreamCommandFv();
-extern "C" void getAvailable__20JSURandomInputStreamCFv();
+extern "C" void create__13JKRAramStreamFl(); // 1
+extern "C" void __ct__13JKRAramStreamFl(); // 1
+extern "C" void __dt__13JKRAramStreamFv(); // 1
+extern "C" void run__13JKRAramStreamFv(); // 1
+extern "C" bool readFromAram__13JKRAramStreamFv(); // 1
+extern "C" void writeToAram__13JKRAramStreamFP20JKRAramStreamCommand(); // 1
+extern "C" void write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl(); // 1
+extern "C" void sync__13JKRAramStreamFP20JKRAramStreamCommandi(); // 1
+extern "C" void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap(); // 1
+extern "C" void __ct__20JKRAramStreamCommandFv(); // 1
+extern "C" void getAvailable__20JSURandomInputStreamCFv(); // 1
 SECTION_RODATA extern const u8 JKRAramStream__stringBase0[48];
 SECTION_DATA extern u8 sMessageBuffer__13JKRAramStream[16];
 SECTION_DATA extern u8 sMessageQueue__13JKRAramStream[32];
@@ -139,36 +91,36 @@ SECTION_SBSS extern u8 transHeap__13JKRAramStream[4];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void OSInitMessageQueue();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void OSResumeThread();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
+void* operator new(u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
 
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
-extern "C" void alloc__7JKRHeapFUli();
-extern "C" void free__7JKRHeapFPvP7JKRHeap();
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void __ct__9JKRThreadFUlii();
-extern "C" void __dt__9JKRThreadFv();
-extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock();
-extern "C" void read__14JSUInputStreamFPvl();
-extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
-extern "C" void OSInitMessageQueue();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void OSResumeThread();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
+extern "C" void alloc__7JKRHeapFUli(); // 1
+extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__9JKRThreadFUlii(); // 1
+extern "C" void __dt__9JKRThreadFv(); // 1
+extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock(); // 1
+extern "C" void read__14JSUInputStreamFPvl(); // 1
+extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom(); // 1
+extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 

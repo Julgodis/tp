@@ -9,25 +9,25 @@
 // Forward References:
 // 
 
-extern "C" s32 udp_cc_post_stop();
-extern "C" s32 udp_cc_pre_continue();
-extern "C" bool udp_cc_peek();
-extern "C" bool udp_cc_write();
-extern "C" bool udp_cc_read();
-extern "C" s32 udp_cc_close();
-extern "C" s32 udp_cc_open();
-extern "C" s32 udp_cc_shutdown();
-extern "C" s32 udp_cc_initialize();
+extern "C" s32 udp_cc_post_stop(); // 1
+extern "C" s32 udp_cc_pre_continue(); // 1
+extern "C" bool udp_cc_peek(); // 1
+extern "C" bool udp_cc_write(); // 1
+extern "C" bool udp_cc_read(); // 1
+extern "C" s32 udp_cc_close(); // 1
+extern "C" s32 udp_cc_open(); // 1
+extern "C" s32 udp_cc_shutdown(); // 1
+extern "C" s32 udp_cc_initialize(); // 1
 
-extern "C" s32 udp_cc_post_stop();
-extern "C" s32 udp_cc_pre_continue();
-extern "C" bool udp_cc_peek();
-extern "C" bool udp_cc_write();
-extern "C" bool udp_cc_read();
-extern "C" s32 udp_cc_close();
-extern "C" s32 udp_cc_open();
-extern "C" s32 udp_cc_shutdown();
-extern "C" s32 udp_cc_initialize();
+extern "C" s32 udp_cc_post_stop(); // 1
+extern "C" s32 udp_cc_pre_continue(); // 1
+extern "C" bool udp_cc_peek(); // 1
+extern "C" bool udp_cc_write(); // 1
+extern "C" bool udp_cc_read(); // 1
+extern "C" s32 udp_cc_close(); // 1
+extern "C" s32 udp_cc_open(); // 1
+extern "C" s32 udp_cc_shutdown(); // 1
+extern "C" s32 udp_cc_initialize(); // 1
 
 // 
 // External References:

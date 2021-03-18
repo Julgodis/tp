@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void asin();
+extern "C" void asin(); // 1
 
-extern "C" void asin();
+extern "C" void asin(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __ieee754_asin();
+extern "C" void __ieee754_asin(); // 1
 
-extern "C" void __ieee754_asin();
+extern "C" void __ieee754_asin(); // 1
 
 // 
 // Declarations:

@@ -1735,5 +1735,8 @@ LIBRARY_LUT = [
 NAMESPACES = set([
     "JStudio::fvb",
     "JStudio::ctb",
-    "JStudio"
+    "JStudio::stb",
+    "JStudio",
+    "JGadget",
+    "std",
 ])

@@ -9,97 +9,50 @@
 // Types:
 // 
 
-// build renderingAmap_c (['renderingAmap_c']) False/False
-// build dDrawPath_c (['dDrawPath_c']) False/False
-// build dDrawPath_c (['dDrawPath_c']) True/False
-struct dDrawPath_c;
-// build dDrawPath_c (['dDrawPath_c']) True/True
-// build dDrawPath_c (['dDrawPath_c']) True/True
-/* top-level dependencies (begin ['dDrawPath_c']) */
-// outer dependency: ('dDrawPath_c', 'room_class')
-// outer dependency: ('dDrawPath_c', 'line_class')
-// outer dependency: ('dDrawPath_c', 'poly_class')
-/* top-level dependencies (end ['dDrawPath_c']) */
 struct dDrawPath_c {
-	// ('dDrawPath_c', 'room_class')
-	// ('dDrawPath_c', 'line_class')
-	// ('dDrawPath_c', 'poly_class')
-	// build room_class (['dDrawPath_c', 'room_class']) False/False
-	/* dependencies (begin ['dDrawPath_c', 'room_class']) */
-	/* dependencies (end ['dDrawPath_c', 'room_class']) */
 	struct room_class {
 	};
 
-	// build line_class (['dDrawPath_c', 'line_class']) False/False
-	/* dependencies (begin ['dDrawPath_c', 'line_class']) */
-	/* dependencies (end ['dDrawPath_c', 'line_class']) */
 	struct line_class {
 	};
 
-	// build poly_class (['dDrawPath_c', 'poly_class']) False/False
-	/* dependencies (begin ['dDrawPath_c', 'poly_class']) */
-	/* dependencies (end ['dDrawPath_c', 'poly_class']) */
 	struct poly_class {
 	};
 
-	// build group_class (['dDrawPath_c', 'group_class']) False/False
-	/* dependencies (begin ['dDrawPath_c', 'group_class']) */
-	/* dependencies (end ['dDrawPath_c', 'group_class']) */
 	struct group_class {
 	};
 
 	/* 8002ABF0 */ bool isDrawType(int);
 	/* 8002AD3C */ ~dDrawPath_c();
 	/* 8002AD84 */ void getLineColor(int, int);
-	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
+	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
 };
 
-// build dDrawPath_c (['dDrawPath_c']) True/True
-// build dTres_c (['dTres_c']) False/False
-/* top-level dependencies (begin ['dTres_c']) */
-/* top-level dependencies (end ['dTres_c']) */
 struct dTres_c {
-	// build typeGroupData_c (['dTres_c', 'typeGroupData_c']) False/False
-	/* dependencies (begin ['dTres_c', 'typeGroupData_c']) */
-	/* dependencies (end ['dTres_c', 'typeGroupData_c']) */
 	struct typeGroupData_c {
 	};
 
-	// build data_s (['dTres_c', 'data_s']) False/False
-	/* dependencies (begin ['dTres_c', 'data_s']) */
-	/* dependencies (end ['dTres_c', 'data_s']) */
 	struct data_s {
 	};
 
 	/* 8009C4B0 */ void getTypeToTypeGroupNo(u8);
 };
 
-// build dDrawPath_c (['dDrawPath_c']) True/True
-/* top-level dependencies (begin ['renderingAmap_c']) */
-// outer dependency: ('dDrawPath_c', 'room_class')
-// outer dependency: ('dDrawPath_c', 'line_class')
-// outer dependency: ('dTres_c', 'data_s')
-// outer dependency: ('dDrawPath_c', 'poly_class')
-/* top-level dependencies (end ['renderingAmap_c']) */
 struct renderingAmap_c {
-	// ('dDrawPath_c', 'room_class')
-	// ('dDrawPath_c', 'line_class')
-	// ('dTres_c', 'data_s')
-	// ('dDrawPath_c', 'poly_class')
 	/* 800284BC */ void getIconSize(u8) const;
 	/* 800284D0 */ void draw();
 	/* 800288C4 */ void getDispType() const;
 	/* 80028960 */ void beforeDrawPath();
 	/* 800289D0 */ void afterDrawPath();
+	/* 80028A30 */ void rendering(dDrawPath_c::line_class const*);
+	/* 80028B3C */ void rendering(dDrawPath_c::poly_class const*);
 	/* 800289F0 */ void rendering(dDrawPath_c::room_class const*);
 	/* 80028A10 */ void drawPath();
-	/* 80028A30 */ void rendering(dDrawPath_c::line_class const*);
 	/* 80028B04 */ void getPlayerCursorSize();
 	/* 80028B10 */ void getRestartCursorSize();
-	/* 80028B3C */ void rendering(dDrawPath_c::poly_class const*);
 	/* 80028BB4 */ void isDrawOutSideTrim();
 	/* 80028C4C */ void getOutSideBlackLineNumber();
 	/* 80028C60 */ void isOutSideBlackLine();
@@ -122,20 +75,15 @@ struct renderingAmap_c {
 	/* 8002B000 */ bool isRendIcon() const;
 };
 
-// build dDrawPath_c (['dDrawPath_c']) True/True
-// build dMap_c (['dMap_c']) False/False
-// build dTres_c (['dTres_c']) True/True
-/* top-level dependencies (begin ['dMap_c']) */
-// outer dependency: ('dTres_c', 'typeGroupData_c')
-/* top-level dependencies (end ['dMap_c']) */
 struct dMap_c {
-	// ('dTres_c', 'typeGroupData_c')
 	/* 80028DF4 */ void getColor(int);
 	/* 80029038 */ void getIconPosition(dTres_c::typeGroupData_c*) const;
 	/* 800296EC */ void isDrawType(int);
 	/* 800296F8 */ void isRendAllRoom() const;
 	/* 80029744 */ bool isSpecialOutline();
 	/* 8002974C */ void copyPalette();
+	/* 8002A064 */ void copyPalette(int, int, f32);
+	/* 80029F84 */ void setMapPaletteColorAlphaPer(int, f32);
 	/* 800297A8 */ void setMapPaletteColorAlphaPer(int, int, f32);
 	/* 80029818 */ void resCopy();
 	/* 80029874 */ dMap_c(int, int, int, int);
@@ -144,8 +92,6 @@ struct dMap_c {
 	/* 80029C10 */ void getPack(int, f32*, f32*);
 	/* 80029D78 */ void calcMapCenterXZ(int, f32*, f32*);
 	/* 80029E1C */ void calcMapCmPerTexel(int, f32*);
-	/* 80029F84 */ void setMapPaletteColorAlphaPer(int, f32);
-	/* 8002A064 */ void copyPalette(int, int, f32);
 	/* 8002A148 */ void setAmapPaletteColor(int, u8, u8, u8, u8);
 	/* 8002A1BC */ void getDispType() const;
 	/* 8002A1DC */ void isDrawRoom(int, int) const;
@@ -158,57 +104,30 @@ struct dMap_c {
 	/* 8002AF20 */ ~dMap_c();
 };
 
-// build dTres_c (['dTres_c']) True/True
-// build dDlst_base_c (['dDlst_base_c']) False/False
-/* top-level dependencies (begin ['dDlst_base_c']) */
-/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 	/* 8002ABEC */ void draw();
 };
 
-// build dRenderingFDAmap_c (['dRenderingFDAmap_c']) False/False
-// build dDrawPath_c (['dDrawPath_c']) True/True
-/* top-level dependencies (begin ['dRenderingFDAmap_c']) */
-// outer dependency: ('dDrawPath_c', 'line_class')
-/* top-level dependencies (end ['dRenderingFDAmap_c']) */
 struct dRenderingFDAmap_c {
-	// ('dDrawPath_c', 'line_class')
 	/* 8002ABF8 */ ~dRenderingFDAmap_c();
 	/* 8003D188 */ void preRenderingMap();
 	/* 8003D320 */ void postRenderingMap();
 	/* 8003D3C0 */ void renderingDecoration(dDrawPath_c::line_class const*);
 };
 
-// build dRenderingMap_c (['dRenderingMap_c']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['dRenderingMap_c']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['dRenderingMap_c']) */
 struct dRenderingMap_c {
-	// ('ResTIMG',)
 	/* 8002AC74 */ ~dRenderingMap_c();
 	/* 8003CD38 */ void makeResTIMG(ResTIMG*, u16, u16, u8*, u8*, u16) const;
 };
 
-// build dDrawPathWithNormalPattern_c (['dDrawPathWithNormalPattern_c']) False/False
-/* top-level dependencies (begin ['dDrawPathWithNormalPattern_c']) */
-/* top-level dependencies (end ['dDrawPathWithNormalPattern_c']) */
 struct dDrawPathWithNormalPattern_c {
 	/* 8002ACE0 */ ~dDrawPathWithNormalPattern_c();
 };
 
-// build renderingPlusDoorAndCursor_c (['renderingPlusDoorAndCursor_c']) False/False
-// build dTres_c (['dTres_c']) True/True
-/* top-level dependencies (begin ['renderingPlusDoorAndCursor_c']) */
-// outer dependency: ('dTres_c', 'typeGroupData_c')
-/* top-level dependencies (end ['renderingPlusDoorAndCursor_c']) */
 struct renderingPlusDoorAndCursor_c {
-	// ('dTres_c', 'typeGroupData_c')
 	/* 8002B008 */ ~renderingPlusDoorAndCursor_c();
 	/* 800402FC */ void afterDrawPath();
 	/* 80040A94 */ void getFirstData(u8);
@@ -216,31 +135,14 @@ struct renderingPlusDoorAndCursor_c {
 	/* 80040ADC */ void getIconPosition(dTres_c::typeGroupData_c*) const;
 };
 
-// build renderingPlusDoor_c (['renderingPlusDoor_c']) False/False
-/* top-level dependencies (begin ['renderingPlusDoor_c']) */
-/* top-level dependencies (end ['renderingPlusDoor_c']) */
 struct renderingPlusDoor_c {
 	/* 8002B0B4 */ ~renderingPlusDoor_c();
 };
 
-// build renderingDAmap_c (['renderingDAmap_c']) False/False
-// build dTres_c (['dTres_c']) True/True
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build dDrawPath_c (['dDrawPath_c']) True/True
-/* top-level dependencies (begin ['renderingDAmap_c']) */
-// outer dependency: ('dTres_c', 'data_s')
-// outer dependency: ('Vec',)
-// outer dependency: ('dDrawPath_c', 'group_class')
-/* top-level dependencies (end ['renderingDAmap_c']) */
 struct renderingDAmap_c {
-	// ('dTres_c', 'data_s')
-	// ('Vec',)
-	// ('dDrawPath_c', 'group_class')
 	/* 8002B150 */ ~renderingDAmap_c();
 	/* 8003FCC8 */ void init(u8*, u16, u16, u16, u16);
 	/* 8003FD08 */ void entry(f32, f32, f32, int, s8);
@@ -262,55 +164,30 @@ struct renderingDAmap_c {
 	/* 80040AE4 */ void getIconGroupNumber(u8) const;
 };
 
-// build dSv_memBit_c (['dSv_memBit_c']) False/False
-/* top-level dependencies (begin ['dSv_memBit_c']) */
-/* top-level dependencies (end ['dSv_memBit_c']) */
 struct dSv_memBit_c {
 	/* 800347E8 */ void isTbox(int) const;
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dSv_danBit_c (['dSv_danBit_c']) False/False
-/* top-level dependencies (begin ['dSv_danBit_c']) */
-/* top-level dependencies (end ['dSv_danBit_c']) */
 struct dSv_danBit_c {
 	/* 80034BE8 */ void isSwitch(int) const;
 };
 
-// build dSv_info_c (['dSv_info_c']) False/False
-/* top-level dependencies (begin ['dSv_info_c']) */
-/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build ResTIMG (['ResTIMG']) True/True
-// build dMapInfo_n (['dMapInfo_n']) False/False
-/* top-level dependencies (begin ['dMapInfo_n']) */
-/* top-level dependencies (end ['dMapInfo_n']) */
 struct dMapInfo_n {
 	/* 8003ECA0 */ void chkGetCompass();
 	/* 8003ECD8 */ void chkGetMap();
@@ -318,86 +195,82 @@ struct dMapInfo_n {
 	/* 8003F1F4 */ void getRoomMinMaxXZ(int, f32*, f32*, f32*, f32*);
 };
 
-// build dMapInfo_c (['dMapInfo_c']) False/False
-/* top-level dependencies (begin ['dMapInfo_c']) */
-/* top-level dependencies (end ['dMapInfo_c']) */
 struct dMapInfo_c {
 	/* 8003F6C8 */ void move(int, f32);
 };
 
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void getIconSize__15renderingAmap_cCFUc();
-extern "C" void draw__15renderingAmap_cFv();
-extern "C" void getDispType__15renderingAmap_cCFv();
-extern "C" void beforeDrawPath__15renderingAmap_cFv();
-extern "C" void afterDrawPath__15renderingAmap_cFv();
-extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10room_class();
-extern "C" void drawPath__15renderingAmap_cFv();
-extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10line_class();
-extern "C" void getPlayerCursorSize__15renderingAmap_cFv();
-extern "C" void getRestartCursorSize__15renderingAmap_cFv();
-extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10poly_class();
-extern "C" void isDrawOutSideTrim__15renderingAmap_cFv();
-extern "C" void getOutSideBlackLineNumber__15renderingAmap_cFv();
-extern "C" void isOutSideBlackLine__15renderingAmap_cFv();
-extern "C" void getLineWidthSub__15renderingAmap_cFi();
-extern "C" void getDecorationLineWidth__15renderingAmap_cFi();
-extern "C" void getLineWidth__15renderingAmap_cFi();
-extern "C" void getColor__6dMap_cFi();
-extern "C" void getLineColor__15renderingAmap_cFii();
-extern "C" void getDecoLineColor__15renderingAmap_cFii();
-extern "C" void getIconPosition__6dMap_cCFPQ27dTres_c15typeGroupData_c();
-extern "C" void getIconGroupNumber__15renderingAmap_cCFUc();
-extern "C" void hasMap__15renderingAmap_cCFv();
-extern "C" void isRendDoor__15renderingAmap_cCFv();
-extern "C" bool isCheckFloor__15renderingAmap_cCFv();
-extern "C" bool isRendRestart__15renderingAmap_cCFv();
-extern "C" bool isRendCursor__15renderingAmap_cCFv();
-extern "C" void isRendAllRoom__15renderingAmap_cCFv();
-extern "C" void getStayType__15renderingAmap_cCFv();
-extern "C" void isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi();
-extern "C" void isDrawType__6dMap_cFi();
-extern "C" void isRendAllRoom__6dMap_cCFv();
-extern "C" bool isSpecialOutline__6dMap_cFv();
-extern "C" void copyPalette__6dMap_cFv();
-extern "C" void setMapPaletteColorAlphaPer__6dMap_cFiif();
-extern "C" void resCopy__6dMap_cFv();
-extern "C" void __ct__6dMap_cFiiii();
-extern "C" void _remove__6dMap_cFv();
-extern "C" void getMapMinMaxXZ__6dMap_cFiPfPfPfPf();
-extern "C" void getPack__6dMap_cFiPfPf();
-extern "C" void calcMapCenterXZ__6dMap_cFiPfPf();
-extern "C" void calcMapCmPerTexel__6dMap_cFiPf();
-extern "C" void setMapPaletteColorAlphaPer__6dMap_cFif();
-extern "C" void copyPalette__6dMap_cFiif();
-extern "C" void setAmapPaletteColor__6dMap_cFiUcUcUcUc();
-extern "C" void getDispType__6dMap_cCFv();
-extern "C" void isDrawRoom__6dMap_cCFii();
-extern "C" void getRoomNoSingle__6dMap_cFv();
-extern "C" void isDrawRoomIcon__6dMap_cCFii();
-extern "C" void _move__6dMap_cFffif();
-extern "C" void _draw__6dMap_cFv();
-extern "C" void getFirstData__6dMap_cFUc();
-extern "C" void getNextData__6dMap_cFPQ27dTres_c15typeGroupData_c();
-extern "C" void draw__12dDlst_base_cFv();
-extern "C" bool isDrawType__11dDrawPath_cFi();
-extern "C" void __dt__18dRenderingFDAmap_cFv();
-extern "C" void __dt__15dRenderingMap_cFv();
-extern "C" void __dt__28dDrawPathWithNormalPattern_cFv();
-extern "C" void __dt__11dDrawPath_cFv();
-extern "C" void getLineColor__11dDrawPath_cFii();
-extern "C" void __dt__15renderingAmap_cFv();
-extern "C" void __ct__15renderingAmap_cFv();
-extern "C" void __dt__6dMap_cFv();
-extern "C" bool isRendIcon__15renderingAmap_cCFv();
-extern "C" void __dt__28renderingPlusDoorAndCursor_cFv();
-extern "C" void __dt__19renderingPlusDoor_cFv();
-extern "C" void __dt__16renderingDAmap_cFv();
+extern "C" void getIconSize__15renderingAmap_cCFUc(); // 1
+extern "C" void draw__15renderingAmap_cFv(); // 1
+extern "C" void getDispType__15renderingAmap_cCFv(); // 1
+extern "C" void beforeDrawPath__15renderingAmap_cFv(); // 1
+extern "C" void afterDrawPath__15renderingAmap_cFv(); // 1
+extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10room_class(); // 1
+extern "C" void drawPath__15renderingAmap_cFv(); // 1
+extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10line_class(); // 1
+extern "C" void getPlayerCursorSize__15renderingAmap_cFv(); // 1
+extern "C" void getRestartCursorSize__15renderingAmap_cFv(); // 1
+extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10poly_class(); // 1
+extern "C" void isDrawOutSideTrim__15renderingAmap_cFv(); // 1
+extern "C" void getOutSideBlackLineNumber__15renderingAmap_cFv(); // 1
+extern "C" void isOutSideBlackLine__15renderingAmap_cFv(); // 1
+extern "C" void getLineWidthSub__15renderingAmap_cFi(); // 1
+extern "C" void getDecorationLineWidth__15renderingAmap_cFi(); // 1
+extern "C" void getLineWidth__15renderingAmap_cFi(); // 1
+extern "C" void getColor__6dMap_cFi(); // 1
+extern "C" void getLineColor__15renderingAmap_cFii(); // 1
+extern "C" void getDecoLineColor__15renderingAmap_cFii(); // 1
+extern "C" void getIconPosition__6dMap_cCFPQ27dTres_c15typeGroupData_c(); // 1
+extern "C" void getIconGroupNumber__15renderingAmap_cCFUc(); // 1
+extern "C" void hasMap__15renderingAmap_cCFv(); // 1
+extern "C" void isRendDoor__15renderingAmap_cCFv(); // 1
+extern "C" bool isCheckFloor__15renderingAmap_cCFv(); // 1
+extern "C" bool isRendRestart__15renderingAmap_cCFv(); // 1
+extern "C" bool isRendCursor__15renderingAmap_cCFv(); // 1
+extern "C" void isRendAllRoom__15renderingAmap_cCFv(); // 1
+extern "C" void getStayType__15renderingAmap_cCFv(); // 1
+extern "C" void isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi(); // 1
+extern "C" void isDrawType__6dMap_cFi(); // 1
+extern "C" void isRendAllRoom__6dMap_cCFv(); // 1
+extern "C" bool isSpecialOutline__6dMap_cFv(); // 1
+extern "C" void copyPalette__6dMap_cFv(); // 1
+extern "C" void setMapPaletteColorAlphaPer__6dMap_cFiif(); // 1
+extern "C" void resCopy__6dMap_cFv(); // 1
+extern "C" void __ct__6dMap_cFiiii(); // 1
+extern "C" void _remove__6dMap_cFv(); // 1
+extern "C" void getMapMinMaxXZ__6dMap_cFiPfPfPfPf(); // 1
+extern "C" void getPack__6dMap_cFiPfPf(); // 1
+extern "C" void calcMapCenterXZ__6dMap_cFiPfPf(); // 1
+extern "C" void calcMapCmPerTexel__6dMap_cFiPf(); // 1
+extern "C" void setMapPaletteColorAlphaPer__6dMap_cFif(); // 1
+extern "C" void copyPalette__6dMap_cFiif(); // 1
+extern "C" void setAmapPaletteColor__6dMap_cFiUcUcUcUc(); // 1
+extern "C" void getDispType__6dMap_cCFv(); // 1
+extern "C" void isDrawRoom__6dMap_cCFii(); // 1
+extern "C" void getRoomNoSingle__6dMap_cFv(); // 1
+extern "C" void isDrawRoomIcon__6dMap_cCFii(); // 1
+extern "C" void _move__6dMap_cFffif(); // 1
+extern "C" void _draw__6dMap_cFv(); // 1
+extern "C" void getFirstData__6dMap_cFUc(); // 1
+extern "C" void getNextData__6dMap_cFPQ27dTres_c15typeGroupData_c(); // 1
+extern "C" void draw__12dDlst_base_cFv(); // 1
+extern "C" bool isDrawType__11dDrawPath_cFi(); // 1
+extern "C" void __dt__18dRenderingFDAmap_cFv(); // 1
+extern "C" void __dt__15dRenderingMap_cFv(); // 1
+extern "C" void __dt__28dDrawPathWithNormalPattern_cFv(); // 1
+extern "C" void __dt__11dDrawPath_cFv(); // 1
+extern "C" void getLineColor__11dDrawPath_cFii(); // 1
+extern "C" void __dt__15renderingAmap_cFv(); // 1
+extern "C" void __ct__15renderingAmap_cFv(); // 1
+extern "C" void __dt__6dMap_cFv(); // 1
+extern "C" bool isRendIcon__15renderingAmap_cCFv(); // 1
+extern "C" void __dt__28renderingPlusDoorAndCursor_cFv(); // 1
+extern "C" void __dt__19renderingPlusDoor_cFv(); // 1
+extern "C" void __dt__16renderingDAmap_cFv(); // 1
 SECTION_RODATA extern const u8 data_80378E48[68];
 SECTION_RODATA extern const u8 data_80378E8C[36];
 SECTION_RODATA extern const u8 data_80378EB0[36];
@@ -438,83 +311,83 @@ SECTION_SDATA2 extern f32 d_map_d_map__lit_4692;
 // External References:
 // 
 
-void dComIfGp_isLightDropMapVisible();
-void cLib_memCpy(void*, void const*, u32);
-void* operator new(u32, int);
-void* operator new[](u32, int);
-void operator delete(void*);
-void operator delete[](void*);
-extern "C" void DCStoreRange();
-extern "C" void GXGetTexBufferSize();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+void dComIfGp_isLightDropMapVisible(); // 2
+void cLib_memCpy(void*, void const*, u32); // 2
+void* operator new(u32, int); // 2
+void* operator new[](u32, int); // 2
+void operator delete(void*); // 2
+void operator delete[](void*); // 2
+extern "C" void DCStoreRange(); // 1
+extern "C" void GXGetTexBufferSize(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void dComIfGp_isLightDropMapVisible__Fv();
-extern "C" void isTbox__12dSv_memBit_cCFi();
-extern "C" void isDungeonItem__12dSv_memBit_cCFi();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void isSwitch__12dSv_danBit_cCFi();
-extern "C" void isSwitch__10dSv_info_cCFii();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class();
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class();
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class();
-extern "C" void drawPath__11dDrawPath_cFv();
-extern "C" void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs();
-extern "C" void preRenderingMap__18dRenderingFDAmap_cFv();
-extern "C" void postRenderingMap__18dRenderingFDAmap_cFv();
-extern "C" void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class();
-extern "C" void chkGetCompass__10dMapInfo_nFv();
-extern "C" void chkGetMap__10dMapInfo_nFv();
-extern "C" void isVisitedRoom__10dMapInfo_nFi();
-extern "C" void getRoomMinMaxXZ__10dMapInfo_nFiPfPfPfPf();
-extern "C" void move__10dMapInfo_cFif();
-extern "C" void init__16renderingDAmap_cFPUcUsUsUsUs();
-extern "C" void entry__16renderingDAmap_cFfffiSc();
-extern "C" void isSwitch__16renderingDAmap_cFPCQ211dDrawPath_c11group_class();
-extern "C" void draw__16renderingDAmap_cFv();
-extern "C" void getBackColor__16renderingDAmap_cCFv();
-extern "C" void isRenderingFloor__16renderingDAmap_cFi();
-extern "C" void isDrawRoom__16renderingDAmap_cCFii();
-extern "C" void preDrawPath__16renderingDAmap_cFv();
-extern "C" void postDrawPath__16renderingDAmap_cFv();
-extern "C" void getRoomNoSingle__16renderingDAmap_cFv();
-extern "C" void getFirstRoomPointer__16renderingDAmap_cFv();
-extern "C" void getNextRoomPointer__16renderingDAmap_cFv();
-extern "C" void isDrawPath__16renderingDAmap_cFv();
-extern "C" bool getFirstDrawLayerNo__16renderingDAmap_cFv();
-extern "C" void getNextDrawLayerNo__16renderingDAmap_cFi();
-extern "C" void afterDrawPath__28renderingPlusDoorAndCursor_cFv();
-extern "C" void isDrawRoomIcon__16renderingDAmap_cCFii();
-extern "C" void isDrawIconSingle__16renderingDAmap_cCFPCQ27dTres_c6data_siibbPC3Vec();
-extern "C" void getFirstData__28renderingPlusDoorAndCursor_cFUc();
-extern "C" void getNextData__28renderingPlusDoorAndCursor_cFPQ27dTres_c15typeGroupData_c();
-extern "C" void getIconPosition__28renderingPlusDoorAndCursor_cCFPQ27dTres_c15typeGroupData_c();
-extern "C" void getIconGroupNumber__16renderingDAmap_cCFUc();
-extern "C" void getTypeToTypeGroupNo__7dTres_cFUc();
-extern "C" void cLib_memCpy__FPvPCvUl();
-extern "C" void* __nw__FUli();
-extern "C" void* __nwa__FUli();
-extern "C" void __dl__FPv();
-extern "C" void __dla__FPv();
-extern "C" void DCStoreRange();
-extern "C" void GXGetTexBufferSize();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void strcmp();
+extern "C" void dComIfGp_isLightDropMapVisible__Fv(); // 1
+extern "C" void isTbox__12dSv_memBit_cCFi(); // 1
+extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void isSwitch__12dSv_danBit_cCFi(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class(); // 1
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class(); // 1
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class(); // 1
+extern "C" void drawPath__11dDrawPath_cFv(); // 1
+extern "C" void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs(); // 1
+extern "C" void preRenderingMap__18dRenderingFDAmap_cFv(); // 1
+extern "C" void postRenderingMap__18dRenderingFDAmap_cFv(); // 1
+extern "C" void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class(); // 1
+extern "C" void chkGetCompass__10dMapInfo_nFv(); // 1
+extern "C" void chkGetMap__10dMapInfo_nFv(); // 1
+extern "C" void isVisitedRoom__10dMapInfo_nFi(); // 1
+extern "C" void getRoomMinMaxXZ__10dMapInfo_nFiPfPfPfPf(); // 1
+extern "C" void move__10dMapInfo_cFif(); // 1
+extern "C" void init__16renderingDAmap_cFPUcUsUsUsUs(); // 1
+extern "C" void entry__16renderingDAmap_cFfffiSc(); // 1
+extern "C" void isSwitch__16renderingDAmap_cFPCQ211dDrawPath_c11group_class(); // 1
+extern "C" void draw__16renderingDAmap_cFv(); // 1
+extern "C" void getBackColor__16renderingDAmap_cCFv(); // 1
+extern "C" void isRenderingFloor__16renderingDAmap_cFi(); // 1
+extern "C" void isDrawRoom__16renderingDAmap_cCFii(); // 1
+extern "C" void preDrawPath__16renderingDAmap_cFv(); // 1
+extern "C" void postDrawPath__16renderingDAmap_cFv(); // 1
+extern "C" void getRoomNoSingle__16renderingDAmap_cFv(); // 1
+extern "C" void getFirstRoomPointer__16renderingDAmap_cFv(); // 1
+extern "C" void getNextRoomPointer__16renderingDAmap_cFv(); // 1
+extern "C" void isDrawPath__16renderingDAmap_cFv(); // 1
+extern "C" bool getFirstDrawLayerNo__16renderingDAmap_cFv(); // 1
+extern "C" void getNextDrawLayerNo__16renderingDAmap_cFi(); // 1
+extern "C" void afterDrawPath__28renderingPlusDoorAndCursor_cFv(); // 1
+extern "C" void isDrawRoomIcon__16renderingDAmap_cCFii(); // 1
+extern "C" void isDrawIconSingle__16renderingDAmap_cCFPCQ27dTres_c6data_siibbPC3Vec(); // 1
+extern "C" void getFirstData__28renderingPlusDoorAndCursor_cFUc(); // 1
+extern "C" void getNextData__28renderingPlusDoorAndCursor_cFPQ27dTres_c15typeGroupData_c(); // 1
+extern "C" void getIconPosition__28renderingPlusDoorAndCursor_cCFPQ27dTres_c15typeGroupData_c(); // 1
+extern "C" void getIconGroupNumber__16renderingDAmap_cCFUc(); // 1
+extern "C" void getTypeToTypeGroupNo__7dTres_cFUc(); // 1
+extern "C" void cLib_memCpy__FPvPCvUl(); // 1
+extern "C" void* __nw__FUli(); // 1
+extern "C" void* __nwa__FUli(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dla__FPv(); // 1
+extern "C" void DCStoreRange(); // 1
+extern "C" void GXGetTexBufferSize(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void strcmp(); // 1
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_DATA extern void*const __vt__18dRenderingFDAmap_c[26];
 SECTION_DATA extern void*const __vt__11dDrawPath_c[16];

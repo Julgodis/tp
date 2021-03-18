@@ -9,22 +9,22 @@
 // Forward References:
 // 
 
-extern "C" static void ErrorCode2Num();
-extern "C" void __DVDStoreErrorCode();
+extern "C" static void ErrorCode2Num(); // 1
+extern "C" void __DVDStoreErrorCode(); // 1
 
-extern "C" static void ErrorCode2Num();
-extern "C" void __DVDStoreErrorCode();
+extern "C" static void ErrorCode2Num(); // 1
+extern "C" void __DVDStoreErrorCode(); // 1
 SECTION_DATA extern u8 ErrorTable[72];
 
 // 
 // External References:
 // 
 
-extern "C" void __OSLockSramEx();
-extern "C" void __OSUnlockSramEx();
+extern "C" void __OSLockSramEx(); // 1
+extern "C" void __OSUnlockSramEx(); // 1
 
-extern "C" void __OSLockSramEx();
-extern "C" void __OSUnlockSramEx();
+extern "C" void __OSLockSramEx(); // 1
+extern "C" void __OSUnlockSramEx(); // 1
 
 // 
 // Declarations:

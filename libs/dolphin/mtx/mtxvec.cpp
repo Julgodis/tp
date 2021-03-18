@@ -9,15 +9,15 @@
 // Forward References:
 // 
 
-extern "C" void PSMTXMultVec();
-extern "C" void PSMTXMultVecArray();
-extern "C" void PSMTXMultVecSR();
-extern "C" void PSMTXMultVecArraySR();
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSMTXMultVecArray(); // 1
+extern "C" void PSMTXMultVecSR(); // 1
+extern "C" void PSMTXMultVecArraySR(); // 1
 
-extern "C" void PSMTXMultVec();
-extern "C" void PSMTXMultVecArray();
-extern "C" void PSMTXMultVecSR();
-extern "C" void PSMTXMultVecArraySR();
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSMTXMultVecArray(); // 1
+extern "C" void PSMTXMultVecSR(); // 1
+extern "C" void PSMTXMultVecArraySR(); // 1
 
 // 
 // External References:

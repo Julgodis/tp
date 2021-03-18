@@ -9,63 +9,24 @@
 // Types:
 // 
 
-// build JStudio (['JStudio']) False/False
-// build JStudio (['JStudio']) True/False
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TSequence', 'TData')
-// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TParagraph_data', 'TData')
-// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData')
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build stb (['JStudio', 'stb']) False/False
-	/* dependencies (begin ['JStudio', 'stb']) */
-	/* dependencies (end ['JStudio', 'stb']) */
-	struct stb {
-		// build data (['JStudio', 'stb', 'data']) False/False
-		/* dependencies (begin ['JStudio', 'stb', 'data']) */
-		/* dependencies (end ['JStudio', 'stb', 'data']) */
+	namespace stb {
 		struct data {
-			// build TParse_TSequence (['JStudio', 'stb', 'data', 'TParse_TSequence']) False/False
-			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TSequence']) */
-			// inner dependency: 3 ('JStudio', 'stb', 'data', 'TParse_TSequence', 'TData') (for ['JStudio', 'stb', 'data', 'TParse_TSequence'])
-			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TSequence']) */
 			struct TParse_TSequence {
-				// ('JStudio', 'stb', 'data', 'TParse_TSequence', 'TData')
-				// build TData (['JStudio', 'stb', 'data', 'TParse_TSequence', 'TData']) False/False
-				/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TSequence', 'TData']) */
-				/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TSequence', 'TData']) */
 				struct TData {
 				};
 
 				/* 802899BC */ void getData(JStudio::stb::data::TParse_TSequence::TData*) const;
 			};
 
-			// build TParse_TParagraph (['JStudio', 'stb', 'data', 'TParse_TParagraph']) False/False
-			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TParagraph']) */
-			// inner dependency: 3 ('JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData') (for ['JStudio', 'stb', 'data', 'TParse_TParagraph'])
-			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TParagraph']) */
 			struct TParse_TParagraph {
-				// ('JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData')
-				// build TData (['JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData']) False/False
-				/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData']) */
-				/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TParagraph', 'TData']) */
 				struct TData {
 				};
 
 				/* 80289A08 */ void getData(JStudio::stb::data::TParse_TParagraph::TData*) const;
 			};
 
-			// build TParse_TParagraph_data (['JStudio', 'stb', 'data', 'TParse_TParagraph_data']) False/False
-			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TParagraph_data']) */
-			// inner dependency: 3 ('JStudio', 'stb', 'data', 'TParse_TParagraph_data', 'TData') (for ['JStudio', 'stb', 'data', 'TParse_TParagraph_data'])
-			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TParagraph_data']) */
 			struct TParse_TParagraph_data {
-				// ('JStudio', 'stb', 'data', 'TParse_TParagraph_data', 'TData')
-				// build TData (['JStudio', 'stb', 'data', 'TParse_TParagraph_data', 'TData']) False/False
-				/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TParagraph_data', 'TData']) */
-				/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TParagraph_data', 'TData']) */
 				struct TData {
 				};
 
@@ -78,22 +39,8 @@ namespace JStudio {
 
 };
 
-// build JGadget (['JGadget']) False/False
-// build JGadget (['JGadget']) True/False
-struct JGadget;
-/* top-level dependencies (begin ['JGadget']) */
-// outer dependency: ('JGadget', 'binary', 'TEBit')
-/* top-level dependencies (end ['JGadget']) */
-struct JGadget {
-	// build binary (['JGadget', 'binary']) False/False
-	/* dependencies (begin ['JGadget', 'binary']) */
-	// inner dependency: 1 ('JGadget', 'binary', 'TEBit') (for ['JGadget', 'binary'])
-	/* dependencies (end ['JGadget', 'binary']) */
+namespace JGadget {
 	struct binary {
-		// ('JGadget', 'binary', 'TEBit')
-		// build TEBit (['JGadget', 'binary', 'TEBit']) False/False
-		/* dependencies (begin ['JGadget', 'binary', 'TEBit']) */
-		/* dependencies (end ['JGadget', 'binary', 'TEBit']) */
 		struct TEBit {
 		};
 
@@ -107,16 +54,16 @@ struct JGadget {
 // 
 
 
-extern "C" void getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData();
-extern "C" void getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData();
-extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData();
+extern "C" void getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData(); // 1
+extern "C" void getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData(); // 1
+extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData(); // 1
 
 // 
 // External References:
 // 
 
 
-extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
+extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit(); // 1
 SECTION_RODATA extern const u8 gauDataSize_TEParagraph_data__Q37JStudio3stb4data[32];
 
 // 

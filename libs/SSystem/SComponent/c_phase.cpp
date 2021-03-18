@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
-/* top-level dependencies (begin ['request_of_phase_process_class']) */
-/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 
@@ -19,21 +16,21 @@ struct request_of_phase_process_class {
 // Forward References:
 // 
 
-void cPhs_Reset(request_of_phase_process_class*);
-extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
-static void cPhs_UnCompleate(request_of_phase_process_class*);
-static void cPhs_Compleate(request_of_phase_process_class*);
-static void cPhs_Next(request_of_phase_process_class*);
-void cPhs_Do(request_of_phase_process_class*, void*);
-extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
+void cPhs_Reset(request_of_phase_process_class*); // 2
+extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i(); // 1
+static void cPhs_UnCompleate(request_of_phase_process_class*); // 2
+static void cPhs_Compleate(request_of_phase_process_class*); // 2
+static void cPhs_Next(request_of_phase_process_class*); // 2
+void cPhs_Do(request_of_phase_process_class*, void*); // 2
+extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
 
-extern "C" void cPhs_Reset__FP30request_of_phase_process_class();
-extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
-extern "C" static void cPhs_UnCompleate__FP30request_of_phase_process_class();
-extern "C" static void cPhs_Compleate__FP30request_of_phase_process_class();
-extern "C" static void cPhs_Next__FP30request_of_phase_process_class();
-extern "C" void cPhs_Do__FP30request_of_phase_process_classPv();
-extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void cPhs_Reset__FP30request_of_phase_process_class(); // 1
+extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i(); // 1
+extern "C" static void cPhs_UnCompleate__FP30request_of_phase_process_class(); // 1
+extern "C" static void cPhs_Compleate__FP30request_of_phase_process_class(); // 1
+extern "C" static void cPhs_Next__FP30request_of_phase_process_class(); // 1
+extern "C" void cPhs_Do__FP30request_of_phase_process_classPv(); // 1
+extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
 
 // 
 // External References:

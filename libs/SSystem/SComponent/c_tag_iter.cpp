@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build method_filter (['method_filter']) False/False
-/* top-level dependencies (begin ['method_filter']) */
-/* top-level dependencies (end ['method_filter']) */
 struct method_filter {
 };
 
-// build judge_filter (['judge_filter']) False/False
-/* top-level dependencies (begin ['judge_filter']) */
-/* top-level dependencies (end ['judge_filter']) */
 struct judge_filter {
 };
 
@@ -31,11 +22,11 @@ struct judge_filter {
 // Forward References:
 // 
 
-void cTgIt_MethodCall(create_tag_class*, method_filter*);
-void cTgIt_JudgeFilter(create_tag_class*, judge_filter*);
+void cTgIt_MethodCall(create_tag_class*, method_filter*); // 2
+void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); // 2
 
-extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
-extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
+extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
+extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter(); // 1
 
 // 
 // External References:

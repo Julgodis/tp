@@ -9,26 +9,13 @@
 // Types:
 // 
 
-// build dCamMath (['dCamMath']) False/False
-// build cSAngle (['cSAngle']) False/False
-/* top-level dependencies (begin ['cSAngle']) */
-/* top-level dependencies (end ['cSAngle']) */
-struct cSAngle {
-};
-
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['dCamMath']) */
-// outer dependency: ('cSAngle',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dCamMath']) */
+struct cSAngle {
+};
+
 struct dCamMath {
-	// ('cSAngle',)
-	// ('cXyz',)
 	/* 8008813C */ void rationalBezierRatio(f32, f32);
 	/* 80088284 */ void zoomFovy(f32, f32);
 	/* 8008831C */ void xyzRotateX(cXyz&, cSAngle);
@@ -36,9 +23,6 @@ struct dCamMath {
 	/* 800883EC */ void xyzHorizontalDistance(cXyz&, cXyz&);
 };
 
-// build cDegree (['cDegree']) False/False
-/* top-level dependencies (begin ['cDegree']) */
-/* top-level dependencies (end ['cDegree']) */
 struct cDegree {
 	/* 800882E0 */ ~cDegree();
 	/* 8027134C */ cDegree(f32);
@@ -46,27 +30,16 @@ struct cDegree {
 	/* 80271418 */ void Cos() const;
 };
 
-// build cXyz (['cXyz']) True/True
-// build cSAngle (['cSAngle']) True/True
-// build dCstick_c (['dCstick_c']) False/False
-/* top-level dependencies (begin ['dCstick_c']) */
-/* top-level dependencies (end ['dCstick_c']) */
 struct dCstick_c {
 	/* 80088434 */ dCstick_c();
 	/* 8008845C */ bool Shift(u32);
 	/* 800889B0 */ ~dCstick_c();
 };
 
-// build dCamBGChk_c (['dCamBGChk_c']) False/False
-/* top-level dependencies (begin ['dCamBGChk_c']) */
-/* top-level dependencies (end ['dCamBGChk_c']) */
 struct dCamBGChk_c {
 	/* 80088464 */ dCamBGChk_c();
 };
 
-// build dCamParam_c (['dCamParam_c']) False/False
-/* top-level dependencies (begin ['dCamParam_c']) */
-/* top-level dependencies (end ['dCamParam_c']) */
 struct dCamParam_c {
 	/* 800884F0 */ dCamParam_c(s32);
 	/* 8008858C */ ~dCamParam_c();
@@ -74,9 +47,6 @@ struct dCamParam_c {
 	/* 80088620 */ void SearchStyle(u32);
 };
 
-// build dCamSetup_c (['dCamSetup_c']) False/False
-/* top-level dependencies (begin ['dCamSetup_c']) */
-/* top-level dependencies (end ['dCamSetup_c']) */
 struct dCamSetup_c {
 	/* 80088668 */ dCamSetup_c();
 	/* 800888B8 */ ~dCamSetup_c();
@@ -84,25 +54,13 @@ struct dCamSetup_c {
 	/* 80088988 */ void PlayerHideDist();
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build dCamera_c (['dCamera_c']) False/False
-/* top-level dependencies (begin ['dCamera_c']) */
-/* top-level dependencies (end ['dCamera_c']) */
 struct dCamera_c {
 	/* 80180A40 */ void EventRecoverNotime();
 };
@@ -112,24 +70,24 @@ struct dCamera_c {
 // 
 
 
-extern "C" void rationalBezierRatio__8dCamMathFff();
-extern "C" void zoomFovy__8dCamMathFff();
-extern "C" void __dt__7cDegreeFv();
-extern "C" void xyzRotateX__8dCamMathFR4cXyz7cSAngle();
-extern "C" void xyzRotateY__8dCamMathFR4cXyz7cSAngle();
-extern "C" void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz();
-extern "C" void __ct__9dCstick_cFv();
-extern "C" bool Shift__9dCstick_cFUl();
-extern "C" void __ct__11dCamBGChk_cFv();
-extern "C" void __ct__11dCamParam_cFl();
-extern "C" void __dt__11dCamParam_cFv();
-extern "C" void Change__11dCamParam_cFl();
-extern "C" void SearchStyle__11dCamParam_cFUl();
-extern "C" void __ct__11dCamSetup_cFv();
-extern "C" void __dt__11dCamSetup_cFv();
-extern "C" void CheckLatitudeRange__11dCamSetup_cFPs();
-extern "C" void PlayerHideDist__11dCamSetup_cFv();
-extern "C" void __dt__9dCstick_cFv();
+extern "C" void rationalBezierRatio__8dCamMathFff(); // 1
+extern "C" void zoomFovy__8dCamMathFff(); // 1
+extern "C" void __dt__7cDegreeFv(); // 1
+extern "C" void xyzRotateX__8dCamMathFR4cXyz7cSAngle(); // 1
+extern "C" void xyzRotateY__8dCamMathFR4cXyz7cSAngle(); // 1
+extern "C" void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz(); // 1
+extern "C" void __ct__9dCstick_cFv(); // 1
+extern "C" bool Shift__9dCstick_cFUl(); // 1
+extern "C" void __ct__11dCamBGChk_cFv(); // 1
+extern "C" void __ct__11dCamParam_cFl(); // 1
+extern "C" void __dt__11dCamParam_cFv(); // 1
+extern "C" void Change__11dCamParam_cFl(); // 1
+extern "C" void SearchStyle__11dCamParam_cFUl(); // 1
+extern "C" void __ct__11dCamSetup_cFv(); // 1
+extern "C" void __dt__11dCamSetup_cFv(); // 1
+extern "C" void CheckLatitudeRange__11dCamSetup_cFPs(); // 1
+extern "C" void PlayerHideDist__11dCamSetup_cFv(); // 1
+extern "C" void __dt__9dCstick_cFv(); // 1
 SECTION_RODATA extern const u8 d_d_cam_param__stringBase0[16];
 SECTION_DATA extern void*const __vt__11dCamSetup_c[3];
 SECTION_DATA extern void*const __vt__11dCamParam_c[3];
@@ -190,26 +148,26 @@ SECTION_SDATA2 extern f32 d_d_cam_param__lit_4173;
 // External References:
 // 
 
-void mDoMtx_XrotS(f32 (* )[4], s16);
-void mDoMtx_YrotS(f32 (* )[4], s16);
-void dCam_getBody();
-void cM_atan2f(f32, f32);
-void operator delete(void*);
-extern "C" void PSMTXMultVec();
-extern "C" void sqrt();
+void mDoMtx_XrotS(f32 (* )[4], s16); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16); // 2
+void dCam_getBody(); // 2
+void cM_atan2f(f32, f32); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void sqrt(); // 1
 
-extern "C" void mDoMtx_XrotS__FPA4_fs();
-extern "C" void mDoMtx_YrotS__FPA4_fs();
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
-extern "C" void EventRecoverNotime__9dCamera_cFv();
-extern "C" void dCam_getBody__Fv();
-extern "C" void cM_atan2f__Fff();
-extern "C" void __ct__7cDegreeFf();
-extern "C" void Sin__7cDegreeCFv();
-extern "C" void Cos__7cDegreeCFv();
-extern "C" void __dl__FPv();
-extern "C" void PSMTXMultVec();
-extern "C" void sqrt();
+extern "C" void mDoMtx_XrotS__FPA4_fs(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
+extern "C" void EventRecoverNotime__9dCamera_cFv(); // 1
+extern "C" void dCam_getBody__Fv(); // 1
+extern "C" void cM_atan2f__Fff(); // 1
+extern "C" void __ct__7cDegreeFf(); // 1
+extern "C" void Sin__7cDegreeCFv(); // 1
+extern "C" void Cos__7cDegreeCFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void sqrt(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 

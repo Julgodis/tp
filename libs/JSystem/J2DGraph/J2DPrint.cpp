@@ -9,59 +9,23 @@
 // Types:
 // 
 
-// build J2DPrint (['J2DPrint']) False/False
-// build J2DTextBoxVBinding (['J2DTextBoxVBinding']) False/False
-/* top-level dependencies (begin ['J2DTextBoxVBinding']) */
-/* top-level dependencies (end ['J2DTextBoxVBinding']) */
-struct J2DTextBoxVBinding {
-};
-
-// build J2DPrint (['J2DPrint']) True/False
-struct J2DPrint;
-// build J2DTextBoxHBinding (['J2DTextBoxHBinding']) False/False
-/* top-level dependencies (begin ['J2DTextBoxHBinding']) */
-/* top-level dependencies (end ['J2DTextBoxHBinding']) */
-struct J2DTextBoxHBinding {
-};
-
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build JUTFont (['JUTFont']) False/False
-// build JUtility (['JUtility']) True/True
-/* top-level dependencies (begin ['JUTFont']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// ('JUtility', 'TColor')
 	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
 };
 
-/* top-level dependencies (begin ['J2DPrint']) */
-// outer dependency: ('J2DTextBoxVBinding',)
-// outer dependency: ('J2DPrint', 'TSize')
-// outer dependency: ('J2DTextBoxHBinding',)
-// outer dependency: ('JUtility', 'TColor')
-// outer dependency: ('JUTFont',)
-/* top-level dependencies (end ['J2DPrint']) */
+struct J2DTextBoxHBinding {
+};
+
+struct J2DTextBoxVBinding {
+};
+
 struct J2DPrint {
-	// ('J2DTextBoxHBinding',)
-	// ('JUtility', 'TColor')
-	// ('JUTFont',)
-	// ('J2DTextBoxVBinding',)
-	// ('J2DPrint', 'TSize')
-	// build TSize (['J2DPrint', 'TSize']) False/False
-	/* dependencies (begin ['J2DPrint', 'TSize']) */
-	/* dependencies (end ['J2DPrint', 'TSize']) */
 	struct TSize {
 	};
 
@@ -81,13 +45,6 @@ struct J2DPrint {
 	/* 802F5AC4 */ void getNumberF32(u8 const**, f32, f32, int);
 };
 
-// build JUTFont (['JUTFont']) True/True
-// build JUtility (['JUtility']) True/True
-// build J2DTextBoxHBinding (['J2DTextBoxHBinding']) True/True
-// build J2DTextBoxVBinding (['J2DTextBoxVBinding']) True/True
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
@@ -95,23 +52,23 @@ struct JKRHeap {
 // Forward References:
 // 
 
-extern "C" static void J2DPrint_print_alpha_va();
+extern "C" static void J2DPrint_print_alpha_va(); // 1
 
-extern "C" static void J2DPrint_print_alpha_va();
-extern "C" void __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void __dt__8J2DPrintFv();
-extern "C" void private_initiate__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorb();
-extern "C" void setBuffer__8J2DPrintFUl();
-extern "C" void setFontSize__8J2DPrintFv();
-extern "C" void locate__8J2DPrintFff();
-extern "C" void print__8J2DPrintFffUcPCce();
-extern "C" void printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc();
-extern "C" void parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb();
-extern "C" void doCtrlCode__8J2DPrintFi();
-extern "C" void doEscapeCode__8J2DPrintFPPCUcUc();
-extern "C" void initchar__8J2DPrintFv();
-extern "C" void getNumberS32__8J2DPrintFPPCUclli();
-extern "C" void getNumberF32__8J2DPrintFPPCUcffi();
+extern "C" static void J2DPrint_print_alpha_va(); // 1
+extern "C" void __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void __dt__8J2DPrintFv(); // 1
+extern "C" void private_initiate__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorb(); // 1
+extern "C" void setBuffer__8J2DPrintFUl(); // 1
+extern "C" void setFontSize__8J2DPrintFv(); // 1
+extern "C" void locate__8J2DPrintFff(); // 1
+extern "C" void print__8J2DPrintFffUcPCce(); // 1
+extern "C" void printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc(); // 1
+extern "C" void parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb(); // 1
+extern "C" void doCtrlCode__8J2DPrintFi(); // 1
+extern "C" void doEscapeCode__8J2DPrintFPPCUcUc(); // 1
+extern "C" void initchar__8J2DPrintFv(); // 1
+extern "C" void getNumberS32__8J2DPrintFPPCUclli(); // 1
+extern "C" void getNumberF32__8J2DPrintFPPCUcffi(); // 1
 SECTION_DATA extern void*lit_938[24];
 SECTION_DATA extern void*const __vt__8J2DPrint[4];
 SECTION_SBSS extern u8 mStrBuff__8J2DPrint[4];
@@ -130,40 +87,40 @@ SECTION_SDATA2 extern f32 J2DPrint__lit_937;
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void _savegpr_20();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_20();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void vsnprintf();
-extern "C" void strlen();
-extern "C" void strtol();
-extern "C" void strtoul();
+void* operator new[](u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_20(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_20(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void vsnprintf(); // 1
+extern "C" void strlen(); // 1
+extern "C" void strtol(); // 1
+extern "C" void strtoul(); // 1
 
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void _savegpr_20();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_20();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void vsnprintf();
-extern "C" void strlen();
-extern "C" void strtol();
-extern "C" void strtoul();
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void _savegpr_20(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_20(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void vsnprintf(); // 1
+extern "C" void strlen(); // 1
+extern "C" void strtol(); // 1
+extern "C" void strtoul(); // 1
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 
 // 

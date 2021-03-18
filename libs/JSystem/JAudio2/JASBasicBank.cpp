@@ -9,34 +9,16 @@
 // Types:
 // 
 
-// build JASBasicBank (['JASBasicBank']) False/False
-// build JASInst (['JASInst']) False/False
-/* top-level dependencies (begin ['JASInst']) */
-/* top-level dependencies (end ['JASInst']) */
 struct JASInst {
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-};
-
-// build JASInstParam (['JASInstParam']) False/False
-/* top-level dependencies (begin ['JASInstParam']) */
-/* top-level dependencies (end ['JASInstParam']) */
 struct JASInstParam {
 };
 
-/* top-level dependencies (begin ['JASBasicBank']) */
-// outer dependency: ('JASInst',)
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JASInstParam',)
-/* top-level dependencies (end ['JASBasicBank']) */
+struct JKRHeap {
+};
+
 struct JASBasicBank {
-	// ('JASInst',)
-	// ('JKRHeap',)
-	// ('JASInstParam',)
 	/* 80297D78 */ JASBasicBank();
 	/* 80297DA4 */ void newInstTable(u8, JKRHeap*);
 	/* 80297E00 */ void getInstParam(int, int, int, JASInstParam*) const;
@@ -46,19 +28,10 @@ struct JASBasicBank {
 	/* 80297F68 */ void getType() const;
 };
 
-// build JKRHeap (['JKRHeap']) True/True
-// build JASInstParam (['JASInstParam']) True/True
-// build JASInst (['JASInst']) True/True
-// build JASBank (['JASBank']) False/False
-/* top-level dependencies (begin ['JASBank']) */
-/* top-level dependencies (end ['JASBank']) */
 struct JASBank {
 	/* 80297EC4 */ ~JASBank();
 };
 
-// build JASCalc (['JASCalc']) False/False
-/* top-level dependencies (begin ['JASCalc']) */
-/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F480 */ void bzero(void*, u32);
 };
@@ -68,14 +41,14 @@ struct JASCalc {
 // 
 
 
-extern "C" void __ct__12JASBasicBankFv();
-extern "C" void newInstTable__12JASBasicBankFUcP7JKRHeap();
-extern "C" void getInstParam__12JASBasicBankCFiiiP12JASInstParam();
-extern "C" void setInst__12JASBasicBankFiP7JASInst();
-extern "C" void getInst__12JASBasicBankCFi();
-extern "C" void __dt__7JASBankFv();
-extern "C" void __dt__12JASBasicBankFv();
-extern "C" void getType__12JASBasicBankCFv();
+extern "C" void __ct__12JASBasicBankFv(); // 1
+extern "C" void newInstTable__12JASBasicBankFUcP7JKRHeap(); // 1
+extern "C" void getInstParam__12JASBasicBankCFiiiP12JASInstParam(); // 1
+extern "C" void setInst__12JASBasicBankFiP7JASInst(); // 1
+extern "C" void getInst__12JASBasicBankCFi(); // 1
+extern "C" void __dt__7JASBankFv(); // 1
+extern "C" void __dt__12JASBasicBankFv(); // 1
+extern "C" void getType__12JASBasicBankCFv(); // 1
 SECTION_DATA extern void*const __vt__12JASBasicBank[5];
 SECTION_DATA extern void*const __vt__7JASBank[5];
 
@@ -83,16 +56,16 @@ SECTION_DATA extern void*const __vt__7JASBank[5];
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void* operator new[](u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void bzero__7JASCalcFPvUl();
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void bzero__7JASCalcFPvUl(); // 1
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

@@ -9,27 +9,19 @@
 // Types:
 // 
 
-// build dTimer_c (['dTimer_c']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-/* top-level dependencies (begin ['dTimer_c']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dTimer_c']) */
 struct dTimer_c {
-	// ('cXyz',)
 	/* 8025CA0C */ void _create();
 	/* 8025CF04 */ void _execute();
 	/* 8025D33C */ void _draw();
 	/* 8025D3BC */ void _delete();
 	/* 8025D524 */ void deleteCheck();
-	/* 8025D538 */ void start(int);
 	/* 8025D618 */ void start(int, s16);
-	/* 8025D708 */ void stock_start();
+	/* 8025D538 */ void start(int);
 	/* 8025D7C0 */ void stock_start(s16);
+	/* 8025D708 */ void stock_start();
 	/* 8025D7E8 */ void stop(u8);
 	/* 8025D86C */ void restart(u8);
 	/* 8025D920 */ void end(int);
@@ -41,31 +33,15 @@ struct dTimer_c {
 	/* 802613DC */ void createGetIn(cXyz);
 };
 
-// build dDlst_TimerScrnDraw_c (['dDlst_TimerScrnDraw_c']) False/False
-// build cXyz (['cXyz']) True/True
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
+struct JKRArchive {
+};
+
 struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 	/* 802F7FCC */ void animationTransform();
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
-struct JKRArchive {
-};
-
-/* top-level dependencies (begin ['dDlst_TimerScrnDraw_c']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('J2DPane',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['dDlst_TimerScrnDraw_c']) */
 struct dDlst_TimerScrnDraw_c {
-	// ('cXyz',)
-	// ('J2DPane',)
-	// ('JKRArchive',)
 	/* 8025DB38 */ dDlst_TimerScrnDraw_c();
 	/* 8025DBE0 */ void setHIO();
 	/* 8025DFBC */ void setScreen(s32, JKRArchive*);
@@ -94,41 +70,20 @@ struct dDlst_TimerScrnDraw_c {
 	/* 80261394 */ ~dDlst_TimerScrnDraw_c();
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build J2DPane (['J2DPane']) True/True
-// build cXyz (['cXyz']) True/True
-// build msg_class (['msg_class']) False/False
-/* top-level dependencies (begin ['msg_class']) */
-/* top-level dependencies (end ['msg_class']) */
 struct msg_class {
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 };
 
-// build dComIfG_play_c (['dComIfG_play_c']) False/False
-// build dTimer_c (['dTimer_c']) True/True
-/* top-level dependencies (begin ['dComIfG_play_c']) */
-// outer dependency: ('dTimer_c',)
-/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
-	// ('dTimer_c',)
 	/* 8002CB94 */ void setTimerNowTimeMs(int);
 	/* 8002CB9C */ void getTimerNowTimeMs();
 	/* 8002CBA4 */ void setTimerLimitTimeMs(int);
@@ -141,180 +96,84 @@ struct dComIfG_play_c {
 	/* 8002CBDC */ void getTimerPtr();
 };
 
-// build request_of_phase_process_class (['request_of_phase_process_class']) False/False
-/* top-level dependencies (begin ['request_of_phase_process_class']) */
-/* top-level dependencies (end ['request_of_phase_process_class']) */
 struct request_of_phase_process_class {
 };
 
-// build dLib_time_c (['dLib_time_c']) False/False
-/* top-level dependencies (begin ['dLib_time_c']) */
-/* top-level dependencies (end ['dLib_time_c']) */
 struct dLib_time_c {
 	/* 80032804 */ void getTime();
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) False/False
-/* top-level dependencies (begin ['dRes_info_c']) */
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
 };
 
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
 	/* 8003C1E4 */ void getResInfo(char const*, dRes_info_c*, int);
 };
 
-// build dRes_info_c (['dRes_info_c']) True/True
-// build dDlst_list_c (['dDlst_list_c']) False/False
-// build dDlst_base_c (['dDlst_base_c']) False/False
-/* top-level dependencies (begin ['dDlst_base_c']) */
-/* top-level dependencies (end ['dDlst_base_c']) */
 struct dDlst_base_c {
 };
 
-/* top-level dependencies (begin ['dDlst_list_c']) */
-// outer dependency: ('dDlst_base_c',)
-/* top-level dependencies (end ['dDlst_list_c']) */
 struct dDlst_list_c {
-	// ('dDlst_base_c',)
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-// build dDlst_base_c (['dDlst_base_c']) True/True
-// build dMeter2Draw_c (['dMeter2Draw_c']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin ['dMeter2Draw_c']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['dMeter2Draw_c']) */
 struct dMeter2Draw_c {
-	// ('JUtility', 'TColor')
 	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 };
 
-// build JUtility (['JUtility']) True/True
-// build dMeter2Info_c (['dMeter2Info_c']) False/False
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) False/False
-/* top-level dependencies (begin ['JMSMesgEntry_c']) */
-/* top-level dependencies (end ['JMSMesgEntry_c']) */
 struct JMSMesgEntry_c {
 };
 
-/* top-level dependencies (begin ['dMeter2Info_c']) */
-// outer dependency: ('JMSMesgEntry_c',)
-/* top-level dependencies (end ['dMeter2Info_c']) */
 struct dMeter2Info_c {
-	// ('JMSMesgEntry_c',)
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 };
 
-// build JMSMesgEntry_c (['JMSMesgEntry_c']) True/True
-// build dMsgObject_c (['dMsgObject_c']) False/False
-/* top-level dependencies (begin ['dMsgObject_c']) */
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build J2DPane (['J2DPane']) True/True
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
-	// ('J2DPane',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) True/True
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build JKRFileLoader (['JKRFileLoader']) False/False
-/* top-level dependencies (begin ['JKRFileLoader']) */
-/* top-level dependencies (end ['JKRFileLoader']) */
 struct JKRFileLoader {
 	/* 802D4270 */ void getGlbResource(char const*, JKRFileLoader*);
 };
 
-// build J2DGrafContext (['J2DGrafContext']) True/True
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 };
 
-// build J2DAnmLoaderDataBase (['J2DAnmLoaderDataBase']) False/False
-/* top-level dependencies (begin ['J2DAnmLoaderDataBase']) */
-/* top-level dependencies (end ['J2DAnmLoaderDataBase']) */
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
@@ -323,79 +182,79 @@ struct J2DAnmLoaderDataBase {
 // Forward References:
 // 
 
-static void dTimer_Draw(dTimer_c*);
-static void dTimer_Execute(dTimer_c*);
-static bool dTimer_IsDelete(dTimer_c*);
-static void dTimer_Delete(dTimer_c*);
-static void dTimer_Create(msg_class*);
-void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32);
-void dTimer_createStockTimer();
-void dTimer_createGetIn2D(s32, cXyz);
-static void dTimer_createStart2D(s32, u16);
-void dTimer_isStart();
-void dTimer_getRestTimeMs();
-void dTimer_show();
-void dTimer_hide();
-void dTimer_isReadyFlag();
+static void dTimer_Draw(dTimer_c*); // 2
+static void dTimer_Execute(dTimer_c*); // 2
+static bool dTimer_IsDelete(dTimer_c*); // 2
+static void dTimer_Delete(dTimer_c*); // 2
+static void dTimer_Create(msg_class*); // 2
+void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32); // 2
+void dTimer_createStockTimer(); // 2
+void dTimer_createGetIn2D(s32, cXyz); // 2
+static void dTimer_createStart2D(s32, u16); // 2
+void dTimer_isStart(); // 2
+void dTimer_getRestTimeMs(); // 2
+void dTimer_show(); // 2
+void dTimer_hide(); // 2
+void dTimer_isReadyFlag(); // 2
 
-extern "C" void _create__8dTimer_cFv();
-extern "C" void _execute__8dTimer_cFv();
-extern "C" void _draw__8dTimer_cFv();
-extern "C" void _delete__8dTimer_cFv();
-extern "C" void deleteCheck__8dTimer_cFv();
-extern "C" void start__8dTimer_cFi();
-extern "C" void start__8dTimer_cFis();
-extern "C" void stock_start__8dTimer_cFv();
-extern "C" void stock_start__8dTimer_cFs();
-extern "C" void stop__8dTimer_cFUc();
-extern "C" void restart__8dTimer_cFUc();
-extern "C" void end__8dTimer_cFi();
-extern "C" void deleteRequest__8dTimer_cFv();
-extern "C" void getTimeMs__8dTimer_cFv();
-extern "C" void getLimitTimeMs__8dTimer_cFv();
-extern "C" void getRestTimeMs__8dTimer_cFv();
-extern "C" void isStart__8dTimer_cFv();
-extern "C" void __ct__21dDlst_TimerScrnDraw_cFv();
-extern "C" void setHIO__21dDlst_TimerScrnDraw_cFv();
-extern "C" void setScreen__21dDlst_TimerScrnDraw_cFlP10JKRArchive();
-extern "C" void setScreenBase__21dDlst_TimerScrnDraw_cFv();
-extern "C" void setScreenBoatRace__21dDlst_TimerScrnDraw_cFv();
-extern "C" void setScreenRider__21dDlst_TimerScrnDraw_cFv();
-extern "C" void hideDenominator__21dDlst_TimerScrnDraw_cFv();
-extern "C" void deleteScreen__21dDlst_TimerScrnDraw_cFv();
-extern "C" void changeNumberTexture__21dDlst_TimerScrnDraw_cFP7J2DPanei();
-extern "C" void getNumber__21dDlst_TimerScrnDraw_cFi();
-extern "C" void setTimer__21dDlst_TimerScrnDraw_cFi();
-extern "C" void setCounter__21dDlst_TimerScrnDraw_cFUcUc();
-extern "C" void setParentPos__21dDlst_TimerScrnDraw_cFff();
-extern "C" void setTimerPos__21dDlst_TimerScrnDraw_cFff();
-extern "C" void setCounterPos__21dDlst_TimerScrnDraw_cFff();
-extern "C" void setImagePos__21dDlst_TimerScrnDraw_cFff();
-extern "C" void setShowType__21dDlst_TimerScrnDraw_cFUc();
-extern "C" void anime__21dDlst_TimerScrnDraw_cFv();
-extern "C" void closeAnime__21dDlst_TimerScrnDraw_cFv();
-extern "C" void createGetIn__21dDlst_TimerScrnDraw_cF4cXyz();
-extern "C" void createStart__21dDlst_TimerScrnDraw_cFUs();
-extern "C" void draw__21dDlst_TimerScrnDraw_cFv();
-extern "C" void checkStartAnimeEnd__21dDlst_TimerScrnDraw_cFv();
-extern "C" void playBckAnimation__21dDlst_TimerScrnDraw_cFf();
-extern "C" void drawPikari__21dDlst_TimerScrnDraw_cFi();
-extern "C" static void dTimer_Draw__FP8dTimer_c();
-extern "C" static void dTimer_Execute__FP8dTimer_c();
-extern "C" static bool dTimer_IsDelete__FP8dTimer_c();
-extern "C" static void dTimer_Delete__FP8dTimer_c();
-extern "C" static void dTimer_Create__FP9msg_class();
-extern "C" void dTimer_createTimer__FlUlUcUcffff();
-extern "C" void dTimer_createStockTimer__Fv();
-extern "C" void dTimer_createGetIn2D__Fl4cXyz();
-extern "C" static void dTimer_createStart2D__FlUs();
-extern "C" void dTimer_isStart__Fv();
-extern "C" void dTimer_getRestTimeMs__Fv();
-extern "C" void dTimer_show__Fv();
-extern "C" void dTimer_hide__Fv();
-extern "C" void dTimer_isReadyFlag__Fv();
-extern "C" void __dt__21dDlst_TimerScrnDraw_cFv();
-extern "C" void createGetIn__8dTimer_cF4cXyz();
+extern "C" void _create__8dTimer_cFv(); // 1
+extern "C" void _execute__8dTimer_cFv(); // 1
+extern "C" void _draw__8dTimer_cFv(); // 1
+extern "C" void _delete__8dTimer_cFv(); // 1
+extern "C" void deleteCheck__8dTimer_cFv(); // 1
+extern "C" void start__8dTimer_cFi(); // 1
+extern "C" void start__8dTimer_cFis(); // 1
+extern "C" void stock_start__8dTimer_cFv(); // 1
+extern "C" void stock_start__8dTimer_cFs(); // 1
+extern "C" void stop__8dTimer_cFUc(); // 1
+extern "C" void restart__8dTimer_cFUc(); // 1
+extern "C" void end__8dTimer_cFi(); // 1
+extern "C" void deleteRequest__8dTimer_cFv(); // 1
+extern "C" void getTimeMs__8dTimer_cFv(); // 1
+extern "C" void getLimitTimeMs__8dTimer_cFv(); // 1
+extern "C" void getRestTimeMs__8dTimer_cFv(); // 1
+extern "C" void isStart__8dTimer_cFv(); // 1
+extern "C" void __ct__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void setHIO__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void setScreen__21dDlst_TimerScrnDraw_cFlP10JKRArchive(); // 1
+extern "C" void setScreenBase__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void setScreenBoatRace__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void setScreenRider__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void hideDenominator__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void deleteScreen__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void changeNumberTexture__21dDlst_TimerScrnDraw_cFP7J2DPanei(); // 1
+extern "C" void getNumber__21dDlst_TimerScrnDraw_cFi(); // 1
+extern "C" void setTimer__21dDlst_TimerScrnDraw_cFi(); // 1
+extern "C" void setCounter__21dDlst_TimerScrnDraw_cFUcUc(); // 1
+extern "C" void setParentPos__21dDlst_TimerScrnDraw_cFff(); // 1
+extern "C" void setTimerPos__21dDlst_TimerScrnDraw_cFff(); // 1
+extern "C" void setCounterPos__21dDlst_TimerScrnDraw_cFff(); // 1
+extern "C" void setImagePos__21dDlst_TimerScrnDraw_cFff(); // 1
+extern "C" void setShowType__21dDlst_TimerScrnDraw_cFUc(); // 1
+extern "C" void anime__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void closeAnime__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void createGetIn__21dDlst_TimerScrnDraw_cF4cXyz(); // 1
+extern "C" void createStart__21dDlst_TimerScrnDraw_cFUs(); // 1
+extern "C" void draw__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void checkStartAnimeEnd__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void playBckAnimation__21dDlst_TimerScrnDraw_cFf(); // 1
+extern "C" void drawPikari__21dDlst_TimerScrnDraw_cFi(); // 1
+extern "C" static void dTimer_Draw__FP8dTimer_c(); // 1
+extern "C" static void dTimer_Execute__FP8dTimer_c(); // 1
+extern "C" static bool dTimer_IsDelete__FP8dTimer_c(); // 1
+extern "C" static void dTimer_Delete__FP8dTimer_c(); // 1
+extern "C" static void dTimer_Create__FP9msg_class(); // 1
+extern "C" void dTimer_createTimer__FlUlUcUcffff(); // 1
+extern "C" void dTimer_createStockTimer__Fv(); // 1
+extern "C" void dTimer_createGetIn2D__Fl4cXyz(); // 1
+extern "C" static void dTimer_createStart2D__FlUs(); // 1
+extern "C" void dTimer_isStart__Fv(); // 1
+extern "C" void dTimer_getRestTimeMs__Fv(); // 1
+extern "C" void dTimer_show__Fv(); // 1
+extern "C" void dTimer_hide__Fv(); // 1
+extern "C" void dTimer_isReadyFlag__Fv(); // 1
+extern "C" void __dt__21dDlst_TimerScrnDraw_cFv(); // 1
+extern "C" void createGetIn__8dTimer_cF4cXyz(); // 1
 SECTION_RODATA extern const u8 d_d_timer__stringBase0[176];
 SECTION_DATA extern void*d_d_timer__lit_5239[9];
 SECTION_DATA extern void*l_dTimer_Method[5];
@@ -431,103 +290,103 @@ SECTION_SDATA2 extern f32 lit_5547;
 // External References:
 // 
 
-void mDoExt_setCurrentHeap(JKRHeap*);
-void mDoExt_getMesgFont();
-void mDoLib_project(Vec*, Vec*);
-void fopMsgM_GetAppend(void*);
-void fopMsgM_Delete(void*);
-extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i();
-void fopMsgM_createExpHeap(u32, JKRHeap*);
-void fopMsgM_destroyExpHeap(JKRExpHeap*);
-void dComIfG_resLoad(request_of_phase_process_class*, char const*);
-void dComIfG_resDelete(request_of_phase_process_class*, char const*);
-void dMeter2Info_getNumberTextureName(int);
-void dPaneClass_showNullPane(J2DScreen*);
-void cM_rndFX(f32);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void _savefpr_28();
-extern "C" void _restfpr_28();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void __div2i();
-extern "C" void strcmp();
-extern "C" void strcpy();
+void mDoExt_setCurrentHeap(JKRHeap*); // 2
+void mDoExt_getMesgFont(); // 2
+void mDoLib_project(Vec*, Vec*); // 2
+void fopMsgM_GetAppend(void*); // 2
+void fopMsgM_Delete(void*); // 2
+extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i(); // 1
+void fopMsgM_createExpHeap(u32, JKRHeap*); // 2
+void fopMsgM_destroyExpHeap(JKRExpHeap*); // 2
+void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
+void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void dMeter2Info_getNumberTextureName(int); // 2
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void cM_rndFX(f32); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void _savefpr_28(); // 1
+extern "C" void _restfpr_28(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void __div2i(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void mDoLib_project__FP3VecP3Vec();
-extern "C" void fopMsgM_GetAppend__FPv();
-extern "C" void fopMsgM_Delete__FPv();
-extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i();
-extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap();
-extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
-extern "C" void setTimerNowTimeMs__14dComIfG_play_cFi();
-extern "C" void getTimerNowTimeMs__14dComIfG_play_cFv();
-extern "C" void setTimerLimitTimeMs__14dComIfG_play_cFi();
-extern "C" void getTimerLimitTimeMs__14dComIfG_play_cFv();
-extern "C" void setTimerMode__14dComIfG_play_cFi();
-extern "C" void getTimerMode__14dComIfG_play_cFv();
-extern "C" void setTimerType__14dComIfG_play_cFUc();
-extern "C" void getTimerType__14dComIfG_play_cFv();
-extern "C" void setTimerPtr__14dComIfG_play_cFP8dTimer_c();
-extern "C" void getTimerPtr__14dComIfG_play_cFv();
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
-extern "C" void getTime__11dLib_time_cFv();
-extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
-extern "C" void dMeter2Info_getNumberTextureName__Fi();
-extern "C" void getStatus__12dMsgObject_cFv();
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void paneTrans__8CPaneMgrFff();
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" void show__13CPaneMgrAlphaFv();
-extern "C" void hide__13CPaneMgrAlphaFv();
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" void cM_rndFX__Ff();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void getTotalFreeSize__7JKRHeapFv();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
-extern "C" void getParentPane__7J2DPaneFv();
-extern "C" void animationTransform__7J2DPaneFv();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void getStringPtr__10J2DTextBoxCFv();
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" void _savefpr_28();
-extern "C" void _restfpr_28();
-extern "C" void _savegpr_21();
-extern "C" void _savegpr_22();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_21();
-extern "C" void _restgpr_22();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void __div2i();
-extern "C" void strcmp();
-extern "C" void strcpy();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
+extern "C" void fopMsgM_GetAppend__FPv(); // 1
+extern "C" void fopMsgM_Delete__FPv(); // 1
+extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i(); // 1
+extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap(); // 1
+extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap(); // 1
+extern "C" void setTimerNowTimeMs__14dComIfG_play_cFi(); // 1
+extern "C" void getTimerNowTimeMs__14dComIfG_play_cFv(); // 1
+extern "C" void setTimerLimitTimeMs__14dComIfG_play_cFi(); // 1
+extern "C" void getTimerLimitTimeMs__14dComIfG_play_cFv(); // 1
+extern "C" void setTimerMode__14dComIfG_play_cFi(); // 1
+extern "C" void getTimerMode__14dComIfG_play_cFv(); // 1
+extern "C" void setTimerType__14dComIfG_play_cFUc(); // 1
+extern "C" void getTimerType__14dComIfG_play_cFv(); // 1
+extern "C" void setTimerPtr__14dComIfG_play_cFP8dTimer_c(); // 1
+extern "C" void getTimerPtr__14dComIfG_play_cFv(); // 1
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
+extern "C" void getTime__11dLib_time_cFv(); // 1
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci(); // 1
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
+extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc(); // 1
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
+extern "C" void dMeter2Info_getNumberTextureName__Fi(); // 1
+extern "C" void getStatus__12dMsgObject_cFv(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void paneTrans__8CPaneMgrFff(); // 1
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void show__13CPaneMgrAlphaFv(); // 1
+extern "C" void hide__13CPaneMgrAlphaFv(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void cM_rndFX__Ff(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
+extern "C" void getParentPane__7J2DPaneFv(); // 1
+extern "C" void animationTransform__7J2DPaneFv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
+extern "C" void _savefpr_28(); // 1
+extern "C" void _restfpr_28(); // 1
+extern "C" void _savegpr_21(); // 1
+extern "C" void _savegpr_22(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_21(); // 1
+extern "C" void _restgpr_22(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void __div2i(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcpy(); // 1
 SECTION_DATA extern void*g_fopMsg_Method[6];
 SECTION_DATA extern void*g_fpcLf_Method[6];
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];

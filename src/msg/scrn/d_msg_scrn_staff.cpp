@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dMsgScrnStaff_c (['dMsgScrnStaff_c']) False/False
-/* top-level dependencies (begin ['dMsgScrnStaff_c']) */
-/* top-level dependencies (end ['dMsgScrnStaff_c']) */
 struct dMsgScrnStaff_c {
 	/* 80246B34 */ dMsgScrnStaff_c(u8);
 	/* 80246DD8 */ ~dMsgScrnStaff_c();
@@ -23,9 +20,6 @@ struct dMsgScrnStaff_c {
 	/* 80246FEC */ void fontAlpha(f32);
 };
 
-// build dMsgScrnBase_c (['dMsgScrnBase_c']) False/False
-/* top-level dependencies (begin ['dMsgScrnBase_c']) */
-/* top-level dependencies (end ['dMsgScrnBase_c']) */
 struct dMsgScrnBase_c {
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
@@ -47,54 +41,27 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
-struct JKRExpHeap {
-};
-
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802542E8 */ void getGlobalPosX();
 	/* 80254364 */ void getGlobalPosY();
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
@@ -104,14 +71,14 @@ struct J2DTextBox {
 // 
 
 
-extern "C" void __ct__15dMsgScrnStaff_cFUc();
-extern "C" void __dt__15dMsgScrnStaff_cFv();
-extern "C" void exec__15dMsgScrnStaff_cFv();
-extern "C" void drawSelf__15dMsgScrnStaff_cFv();
-extern "C" void fukiAlpha__15dMsgScrnStaff_cFf();
-extern "C" void fukiScale__15dMsgScrnStaff_cFf();
-extern "C" void fukiTrans__15dMsgScrnStaff_cFff();
-extern "C" void fontAlpha__15dMsgScrnStaff_cFf();
+extern "C" void __ct__15dMsgScrnStaff_cFUc(); // 1
+extern "C" void __dt__15dMsgScrnStaff_cFv(); // 1
+extern "C" void exec__15dMsgScrnStaff_cFv(); // 1
+extern "C" void drawSelf__15dMsgScrnStaff_cFv(); // 1
+extern "C" void fukiAlpha__15dMsgScrnStaff_cFf(); // 1
+extern "C" void fukiScale__15dMsgScrnStaff_cFf(); // 1
+extern "C" void fukiTrans__15dMsgScrnStaff_cFff(); // 1
+extern "C" void fontAlpha__15dMsgScrnStaff_cFf(); // 1
 SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_staff__stringBase0[24];
 SECTION_DATA extern u8 data_803C1340[48];
 SECTION_DATA extern void*const __vt__15dMsgScrnStaff_c[22];
@@ -122,44 +89,44 @@ SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_staff__lit_3877;
 // External References:
 // 
 
-void mDoExt_getMesgFont();
-void dPaneClass_showNullPane(J2DScreen*);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+void mDoExt_getMesgFont(); // 2
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
-extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc();
-extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb();
-extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
-extern "C" void arwAnimeMove__14dMsgScrnBase_cFv();
-extern "C" void arwAnimeInit__14dMsgScrnBase_cFv();
-extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc();
-extern "C" bool isSelect__14dMsgScrnBase_cFv();
-extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv();
-extern "C" void dotAnimeMove__14dMsgScrnBase_cFv();
-extern "C" void dotAnimeInit__14dMsgScrnBase_cFv();
-extern "C" void __ct__14dMsgScrnBase_cFv();
-extern "C" void __dt__14dMsgScrnBase_cFv();
-extern "C" void init__14dMsgScrnBase_cFv();
-extern "C" void multiDraw__14dMsgScrnBase_cFv();
-extern "C" void draw__14dMsgScrnBase_cFv();
-extern "C" void drawOutFont__14dMsgScrnBase_cFfff();
-extern "C" void isTalkNow__14dMsgScrnBase_cFv();
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void getGlobalPosX__8CPaneMgrFv();
-extern "C" void getGlobalPosY__8CPaneMgrFv();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void setString__10J2DTextBoxFsPCce();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc(); // 1
+extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc(); // 1
+extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
+extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc(); // 1
+extern "C" void arwAnimeMove__14dMsgScrnBase_cFv(); // 1
+extern "C" void arwAnimeInit__14dMsgScrnBase_cFv(); // 1
+extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc(); // 1
+extern "C" bool isSelect__14dMsgScrnBase_cFv(); // 1
+extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
+extern "C" void dotAnimeMove__14dMsgScrnBase_cFv(); // 1
+extern "C" void dotAnimeInit__14dMsgScrnBase_cFv(); // 1
+extern "C" void __ct__14dMsgScrnBase_cFv(); // 1
+extern "C" void __dt__14dMsgScrnBase_cFv(); // 1
+extern "C" void init__14dMsgScrnBase_cFv(); // 1
+extern "C" void multiDraw__14dMsgScrnBase_cFv(); // 1
+extern "C" void draw__14dMsgScrnBase_cFv(); // 1
+extern "C" void drawOutFont__14dMsgScrnBase_cFfff(); // 1
+extern "C" void isTalkNow__14dMsgScrnBase_cFv(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void getGlobalPosX__8CPaneMgrFv(); // 1
+extern "C" void getGlobalPosY__8CPaneMgrFv(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void setString__10J2DTextBoxFsPCce(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 

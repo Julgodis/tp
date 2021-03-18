@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build STRUCT_DSP_TASK (['STRUCT_DSP_TASK']) False/False
-/* top-level dependencies (begin ['STRUCT_DSP_TASK']) */
-/* top-level dependencies (end ['STRUCT_DSP_TASK']) */
 struct STRUCT_DSP_TASK {
 };
 
@@ -19,11 +16,11 @@ struct STRUCT_DSP_TASK {
 // Forward References:
 // 
 
-extern "C" void DSPAddTask();
-void DSPAddPriorTask(STRUCT_DSP_TASK*);
+extern "C" void DSPAddTask(); // 1
+void DSPAddPriorTask(STRUCT_DSP_TASK*); // 2
 
-extern "C" void DSPAddTask();
-extern "C" void DSPAddPriorTask__FP15STRUCT_DSP_TASK();
+extern "C" void DSPAddTask(); // 1
+extern "C" void DSPAddPriorTask__FP15STRUCT_DSP_TASK(); // 1
 SECTION_RODATA extern const u8 osdsp__lit_81[26 + 2 /* padding */];
 SECTION_RODATA extern const u8 osdsp__lit_88[31 + 5 /* padding */];
 
@@ -31,17 +28,17 @@ SECTION_RODATA extern const u8 osdsp__lit_88[31 + 5 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __DSP_boot_task();
-extern "C" void __DSP_insert_task();
+extern "C" void OSReport(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __DSP_boot_task(); // 1
+extern "C" void __DSP_insert_task(); // 1
 
-extern "C" void OSReport();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __DSP_boot_task();
-extern "C" void __DSP_insert_task();
+extern "C" void OSReport(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __DSP_boot_task(); // 1
+extern "C" void __DSP_insert_task(); // 1
 SECTION_SBSS extern u8 DSP_prior_task[4];
 
 // 

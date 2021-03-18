@@ -9,11 +9,11 @@
 // Forward References:
 // 
 
-extern "C" void __unregister_fragment();
-extern "C" void __register_fragment();
+extern "C" void __unregister_fragment(); // 1
+extern "C" void __register_fragment(); // 1
 
-extern "C" void __unregister_fragment();
-extern "C" void __register_fragment();
+extern "C" void __unregister_fragment(); // 1
+extern "C" void __register_fragment(); // 1
 SECTION_BSS extern u8 fragmentinfo[12 + 4 /* padding */];
 
 // 

@@ -9,119 +9,105 @@
 // Types:
 // 
 
-// build JAU_JASInitializer (['JAU_JASInitializer']) False/False
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-/* top-level dependencies (begin ['JAU_JASInitializer']) */
-// outer dependency: ('JKRSolidHeap',)
-/* top-level dependencies (end ['JAU_JASInitializer']) */
 struct JAU_JASInitializer {
-	// ('JKRSolidHeap',)
 	/* 802A4AD0 */ JAU_JASInitializer();
 	/* 802A4B28 */ void initJASystem(JKRSolidHeap*);
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) True/True
-// build JAU_JAIInitializer (['JAU_JAIInitializer']) False/False
-/* top-level dependencies (begin ['JAU_JAIInitializer']) */
-/* top-level dependencies (end ['JAU_JAIInitializer']) */
 struct JAU_JAIInitializer {
 	/* 802A4D3C */ JAU_JAIInitializer();
 	/* 802A4D60 */ void initJAInterface();
 };
 
-// build JASDvd (['JASDvd']) False/False
-/* top-level dependencies (begin ['JASDvd']) */
-/* top-level dependencies (end ['JASDvd']) */
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 	/* 8028FF04 */ void createThread(s32, int, u32);
 };
 
-// build JASGenericMemPool (['JASGenericMemPool']) False/False
-/* top-level dependencies (begin ['JASGenericMemPool']) */
-/* top-level dependencies (end ['JASGenericMemPool']) */
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 802908C8 */ void newMemPool(u32, int);
 };
 
-// build JASKernel (['JASKernel']) False/False
-// build JKRSolidHeap (['JKRSolidHeap']) True/True
-/* top-level dependencies (begin ['JASKernel']) */
-// outer dependency: ('JKRSolidHeap',)
-/* top-level dependencies (end ['JASKernel']) */
 struct JASKernel {
-	// ('JKRSolidHeap',)
 	/* 802909B8 */ void setupRootHeap(JKRSolidHeap*, u32);
 	/* 80290AD0 */ void setupAramHeap(u32, u32);
 };
 
-// build JASAramStream (['JASAramStream']) False/False
-/* top-level dependencies (begin ['JASAramStream']) */
-/* top-level dependencies (end ['JASAramStream']) */
+template <typename A0>
+struct JASMemPool_MultiThreaded { };
+/* JASMemPool_MultiThreaded<JASTrack> */
+struct JASMemPool_MultiThreaded__template0 {
+	/* 802932E0 */ ~JASMemPool_MultiThreaded__template0();
+};
+
+/* JASMemPool_MultiThreaded<JASTrack::TChannelMgr> */
+struct JASMemPool_MultiThreaded__template1 {
+	/* 80293334 */ ~JASMemPool_MultiThreaded__template1();
+};
+
 struct JASAramStream {
 	/* 8029631C */ void initSystem(u32, u32);
 };
 
-// build JASWaveArcLoader (['JASWaveArcLoader']) False/False
-/* top-level dependencies (begin ['JASWaveArcLoader']) */
-/* top-level dependencies (end ['JASWaveArcLoader']) */
 struct JASWaveArcLoader {
 	/* 8029A0D0 */ void setCurrentDir(char const*);
 };
 
-// build JASAudioThread (['JASAudioThread']) False/False
-/* top-level dependencies (begin ['JASAudioThread']) */
-/* top-level dependencies (end ['JASAudioThread']) */
 struct JASAudioThread {
 	/* 8029CD4C */ void create(s32);
 };
 
-// build JASDriver (['JASDriver']) False/False
-/* top-level dependencies (begin ['JASDriver']) */
-/* top-level dependencies (end ['JASDriver']) */
 struct JASDriver {
 	/* 8029E130 */ void setDSPLevel(f32);
 	/* 8029E178 */ void setOutputMode(u32);
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
+template <typename A0>
+struct JASMemPool { };
+/* JASMemPool<JAISe> */
+struct JASMemPool__template0 {
+	/* 8029FC34 */ ~JASMemPool__template0();
+};
+
+/* JASMemPool<JAISoundChild> */
+struct JASMemPool__template1 {
+	/* 802A1268 */ ~JASMemPool__template1();
+};
+
+/* JASMemPool<JAISeq> */
+struct JASMemPool__template2 {
+	/* 802A1AF4 */ ~JASMemPool__template2();
+};
+
+/* JASMemPool<JAIStream> */
+struct JASMemPool__template3 {
+	/* 802A3E68 */ ~JASMemPool__template3();
+};
+
 struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
 };
 
-// build JKRThreadSwitch (['JKRThreadSwitch']) False/False
-// build JKRThread (['JKRThread']) False/False
-/* top-level dependencies (begin ['JKRThread']) */
-/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
 };
 
-/* top-level dependencies (begin ['JKRThreadSwitch']) */
-// outer dependency: ('JKRThread',)
-/* top-level dependencies (end ['JKRThreadSwitch']) */
 struct JKRThreadSwitch {
-	// ('JKRThread',)
 	/* 802D1A70 */ void enter(JKRThread*, int);
 };
 
-// build JKRThread (['JKRThread']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__18JAU_JASInitializerFv();
-extern "C" void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap();
-extern "C" void __ct__18JAU_JAIInitializerFv();
-extern "C" void initJAInterface__18JAU_JAIInitializerFv();
+extern "C" void __ct__18JAU_JASInitializerFv(); // 1
+extern "C" void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap(); // 1
+extern "C" void __ct__18JAU_JAIInitializerFv(); // 1
+extern "C" void initJAInterface__18JAU_JAIInitializerFv(); // 1
 SECTION_BSS extern u8 JAUInitializer__lit_757[12];
 SECTION_BSS extern u8 JAUInitializer__lit_763[12];
 SECTION_BSS extern u8 JAUInitializer__lit_855[12];
@@ -134,44 +120,38 @@ SECTION_SDATA2 extern f32 JAUInitializer__lit_730;
 // External References:
 // 
 
-extern "C" void func_802932E0();
-extern "C" void func_80293334();
-extern "C" void func_8029FC34();
-extern "C" void func_802A1268();
-extern "C" void func_802A1AF4();
-extern "C" void func_802A3E68();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSGetSoundMode();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSGetSoundMode(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void getThreadPointer__6JASDvdFv();
-extern "C" void createThread__6JASDvdFliUl();
-extern "C" void __ct__17JASGenericMemPoolFv();
-extern "C" void newMemPool__17JASGenericMemPoolFUli();
-extern "C" void setupRootHeap__9JASKernelFP12JKRSolidHeapUl();
-extern "C" void setupAramHeap__9JASKernelFUlUl();
-extern "C" void func_802932E0();
-extern "C" void func_80293334();
-extern "C" void initSystem__13JASAramStreamFUlUl();
-extern "C" void setCurrentDir__16JASWaveArcLoaderFPCc();
-extern "C" void create__14JASAudioThreadFl();
-extern "C" void setDSPLevel__9JASDriverFf();
-extern "C" void setOutputMode__9JASDriverFUl();
-extern "C" void func_8029FC34();
-extern "C" void func_802A1268();
-extern "C" void func_802A1AF4();
-extern "C" void func_802A3E68();
-extern "C" void getFreeSize__7JKRHeapFv();
-extern "C" void enter__15JKRThreadSwitchFP9JKRThreadi();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSGetSoundMode();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void getThreadPointer__6JASDvdFv(); // 1
+extern "C" void createThread__6JASDvdFliUl(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv(); // 1
+extern "C" void newMemPool__17JASGenericMemPoolFUli(); // 1
+extern "C" void setupRootHeap__9JASKernelFP12JKRSolidHeapUl(); // 1
+extern "C" void setupAramHeap__9JASKernelFUlUl(); // 1
+extern "C" void func_802932E0(); // 1
+extern "C" void func_80293334(); // 1
+extern "C" void initSystem__13JASAramStreamFUlUl(); // 1
+extern "C" void setCurrentDir__16JASWaveArcLoaderFPCc(); // 1
+extern "C" void create__14JASAudioThreadFl(); // 1
+extern "C" void setDSPLevel__9JASDriverFf(); // 1
+extern "C" void setOutputMode__9JASDriverFUl(); // 1
+extern "C" void func_8029FC34(); // 1
+extern "C" void func_802A1268(); // 1
+extern "C" void func_802A1AF4(); // 1
+extern "C" void func_802A3E68(); // 1
+extern "C" void getFreeSize__7JKRHeapFv(); // 1
+extern "C" void enter__15JKRThreadSwitchFP9JKRThreadi(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSGetSoundMode(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 data_80431AF4[16];
 SECTION_BSS extern u8 data_80431B04[16 + 4 /* padding */];
 SECTION_BSS extern u8 data_80434084[16 + 4 /* padding */];

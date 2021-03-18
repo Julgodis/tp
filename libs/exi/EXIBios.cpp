@@ -9,53 +9,53 @@
 // Forward References:
 // 
 
-extern "C" static void SetExiInterruptMask();
-extern "C" void EXIImm();
-extern "C" void EXIImmEx();
-extern "C" void EXIDma();
-extern "C" void EXISync();
-extern "C" static void EXIClearInterrupts();
-extern "C" void EXISetExiCallback();
-extern "C" static void __EXIProbe();
-extern "C" void EXIProbe();
-extern "C" void EXIProbeEx();
-extern "C" void EXIAttach();
-extern "C" void EXIDetach();
-extern "C" void EXISelect();
-extern "C" void EXIDeselect();
-extern "C" static void EXIIntrruptHandler();
-extern "C" static void TCIntrruptHandler();
-extern "C" static void EXTIntrruptHandler();
-extern "C" void EXIInit();
-extern "C" void EXILock();
-extern "C" void EXIUnlock();
-extern "C" void EXIGetState();
-extern "C" static void UnlockedHandler();
-extern "C" void EXIGetID();
+extern "C" static void SetExiInterruptMask(); // 1
+extern "C" void EXIImm(); // 1
+extern "C" void EXIImmEx(); // 1
+extern "C" void EXIDma(); // 1
+extern "C" void EXISync(); // 1
+extern "C" static void EXIClearInterrupts(); // 1
+extern "C" void EXISetExiCallback(); // 1
+extern "C" static void __EXIProbe(); // 1
+extern "C" void EXIProbe(); // 1
+extern "C" void EXIProbeEx(); // 1
+extern "C" void EXIAttach(); // 1
+extern "C" void EXIDetach(); // 1
+extern "C" void EXISelect(); // 1
+extern "C" void EXIDeselect(); // 1
+extern "C" static void EXIIntrruptHandler(); // 1
+extern "C" static void TCIntrruptHandler(); // 1
+extern "C" static void EXTIntrruptHandler(); // 1
+extern "C" void EXIInit(); // 1
+extern "C" void EXILock(); // 1
+extern "C" void EXIUnlock(); // 1
+extern "C" void EXIGetState(); // 1
+extern "C" static void UnlockedHandler(); // 1
+extern "C" void EXIGetID(); // 1
 
-extern "C" static void SetExiInterruptMask();
-extern "C" void EXIImm();
-extern "C" void EXIImmEx();
-extern "C" void EXIDma();
-extern "C" void EXISync();
-extern "C" static void EXIClearInterrupts();
-extern "C" void EXISetExiCallback();
-extern "C" static void __EXIProbe();
-extern "C" void EXIProbe();
-extern "C" void EXIProbeEx();
-extern "C" void EXIAttach();
-extern "C" void EXIDetach();
-extern "C" void EXISelect();
-extern "C" void EXIDeselect();
-extern "C" static void EXIIntrruptHandler();
-extern "C" static void TCIntrruptHandler();
-extern "C" static void EXTIntrruptHandler();
-extern "C" void EXIInit();
-extern "C" void EXILock();
-extern "C" void EXIUnlock();
-extern "C" void EXIGetState();
-extern "C" static void UnlockedHandler();
-extern "C" void EXIGetID();
+extern "C" static void SetExiInterruptMask(); // 1
+extern "C" void EXIImm(); // 1
+extern "C" void EXIImmEx(); // 1
+extern "C" void EXIDma(); // 1
+extern "C" void EXISync(); // 1
+extern "C" static void EXIClearInterrupts(); // 1
+extern "C" void EXISetExiCallback(); // 1
+extern "C" static void __EXIProbe(); // 1
+extern "C" void EXIProbe(); // 1
+extern "C" void EXIProbeEx(); // 1
+extern "C" void EXIAttach(); // 1
+extern "C" void EXIDetach(); // 1
+extern "C" void EXISelect(); // 1
+extern "C" void EXIDeselect(); // 1
+extern "C" static void EXIIntrruptHandler(); // 1
+extern "C" static void TCIntrruptHandler(); // 1
+extern "C" static void EXTIntrruptHandler(); // 1
+extern "C" void EXIInit(); // 1
+extern "C" void EXILock(); // 1
+extern "C" void EXIUnlock(); // 1
+extern "C" void EXIGetState(); // 1
+extern "C" static void UnlockedHandler(); // 1
+extern "C" void EXIGetID(); // 1
 SECTION_DATA extern u8 EXIBios__lit_1[69 + 3 /* padding */];
 SECTION_DATA extern u8 lit_473[15 + 1 /* padding */];
 SECTION_DATA extern u8 lit_474[16];
@@ -77,37 +77,37 @@ SECTION_SBSS extern u8 IDSerialPort1[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void OSGetConsoleType();
-extern "C" void __OSGetDIConfig();
-extern "C" void OSRegisterVersion();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSGetInterruptHandler();
-extern "C" void __OSMaskInterrupts();
-extern "C" void __OSUnmaskInterrupts();
-extern "C" void OSGetTime();
-extern "C" void __OSEnableBarnacle();
-extern "C" void __div2i();
-extern "C" void memmove();
+extern "C" void OSGetConsoleType(); // 1
+extern "C" void __OSGetDIConfig(); // 1
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSGetInterruptHandler(); // 1
+extern "C" void __OSMaskInterrupts(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void __OSEnableBarnacle(); // 1
+extern "C" void __div2i(); // 1
+extern "C" void memmove(); // 1
 
-extern "C" void OSGetConsoleType();
-extern "C" void __OSGetDIConfig();
-extern "C" void OSRegisterVersion();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSSetInterruptHandler();
-extern "C" void __OSGetInterruptHandler();
-extern "C" void __OSMaskInterrupts();
-extern "C" void __OSUnmaskInterrupts();
-extern "C" void OSGetTime();
-extern "C" void __OSEnableBarnacle();
-extern "C" void __div2i();
-extern "C" void memmove();
+extern "C" void OSGetConsoleType(); // 1
+extern "C" void __OSGetDIConfig(); // 1
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSSetInterruptHandler(); // 1
+extern "C" void __OSGetInterruptHandler(); // 1
+extern "C" void __OSMaskInterrupts(); // 1
+extern "C" void __OSUnmaskInterrupts(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void __OSEnableBarnacle(); // 1
+extern "C" void __div2i(); // 1
+extern "C" void memmove(); // 1
 SECTION_SBSS extern u8 __OSInIPL[4 + 4 /* padding */];
 
 // 

@@ -9,27 +9,15 @@
 // Types:
 // 
 
-// build dRes_info_c (['dRes_info_c']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 	/* 80325E14 */ void newSharedDisplayList(u32);
 	/* 80325F94 */ void makeSharedDL();
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
-	/* 802CE83C */ void findFromRoot(void*);
+struct cXyz {
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 	/* 802D5CE4 */ void getIdxResource(u32);
 	/* 802D625C */ void getFileAttribute(u32) const;
@@ -37,23 +25,12 @@ struct JKRArchive {
 	/* 802D66AC */ void findNameResource(char const*) const;
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
-struct cXyz {
+struct JKRHeap {
+	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
+	/* 802CE83C */ void findFromRoot(void*);
 };
 
-/* top-level dependencies (begin ['dRes_info_c']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JKRArchive',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dRes_info_c']) */
 struct dRes_info_c {
-	// ('J3DModelData',)
-	// ('JKRHeap',)
-	// ('JKRArchive',)
-	// ('cXyz',)
 	/* 8003A260 */ dRes_info_c();
 	/* 8003A280 */ ~dRes_info_c();
 	/* 8003A348 */ void set(char const*, char const*, u8, JKRHeap*);
@@ -69,127 +46,67 @@ struct dRes_info_c {
 	/* 8003BE38 */ void dump(dRes_info_c*, int);
 };
 
-// build JKRHeap (['JKRHeap']) True/True
-// build J3DMaterialTable (['J3DMaterialTable']) False/False
-/* top-level dependencies (begin ['J3DMaterialTable']) */
-/* top-level dependencies (end ['J3DMaterialTable']) */
 struct J3DMaterialTable {
 };
 
-// build J3DModelData (['J3DModelData']) True/True
-// build J3DTevStage (['J3DTevStage']) False/False
-// build J3DTevStageInfo (['J3DTevStageInfo']) False/False
-/* top-level dependencies (begin ['J3DTevStageInfo']) */
-/* top-level dependencies (end ['J3DTevStageInfo']) */
 struct J3DTevStageInfo {
 };
 
-/* top-level dependencies (begin ['J3DTevStage']) */
-// outer dependency: ('J3DTevStageInfo',)
-/* top-level dependencies (end ['J3DTevStage']) */
 struct J3DTevStage {
-	// ('J3DTevStageInfo',)
 	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
 	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
 };
 
-// build J3DTevStageInfo (['J3DTevStageInfo']) True/True
-// build J3DTexGenBlock (['J3DTexGenBlock']) False/False
-// build J3DTexMtx (['J3DTexMtx']) False/False
-/* top-level dependencies (begin ['J3DTexMtx']) */
-/* top-level dependencies (end ['J3DTexMtx']) */
 struct J3DTexMtx {
 };
 
-/* top-level dependencies (begin ['J3DTexGenBlock']) */
-// outer dependency: ('J3DTexMtx',)
-/* top-level dependencies (end ['J3DTexGenBlock']) */
 struct J3DTexGenBlock {
-	// ('J3DTexMtx',)
 	/* 8003AB2C */ void setTexMtx(u32, J3DTexMtx*);
 };
 
-// build J3DTexMtx (['J3DTexMtx']) True/True
-// build cXyz (['cXyz']) True/True
-// build J3DTevKColorAnm (['J3DTevKColorAnm']) False/False
-/* top-level dependencies (begin ['J3DTevKColorAnm']) */
-/* top-level dependencies (end ['J3DTevKColorAnm']) */
 struct J3DTevKColorAnm {
 	/* 8003B150 */ ~J3DTevKColorAnm();
 	/* 8003B18C */ J3DTevKColorAnm();
 };
 
-// build J3DTevColorAnm (['J3DTevColorAnm']) False/False
-/* top-level dependencies (begin ['J3DTevColorAnm']) */
-/* top-level dependencies (end ['J3DTevColorAnm']) */
 struct J3DTevColorAnm {
 	/* 8003B1A4 */ ~J3DTevColorAnm();
 	/* 8003B1E0 */ J3DTevColorAnm();
 };
 
-// build J3DTexNoAnm (['J3DTexNoAnm']) False/False
-/* top-level dependencies (begin ['J3DTexNoAnm']) */
-/* top-level dependencies (end ['J3DTexNoAnm']) */
 struct J3DTexNoAnm {
 	/* 8003B1F8 */ ~J3DTexNoAnm();
 	/* 8003B240 */ J3DTexNoAnm();
 	/* 8003C82C */ void calc(u16*) const;
 };
 
-// build J3DTexMtxAnm (['J3DTexMtxAnm']) False/False
-/* top-level dependencies (begin ['J3DTexMtxAnm']) */
-/* top-level dependencies (end ['J3DTexMtxAnm']) */
 struct J3DTexMtxAnm {
 	/* 8003B264 */ ~J3DTexMtxAnm();
 	/* 8003B2A0 */ J3DTexMtxAnm();
 };
 
-// build J3DMatColorAnm (['J3DMatColorAnm']) False/False
-/* top-level dependencies (begin ['J3DMatColorAnm']) */
-/* top-level dependencies (end ['J3DMatColorAnm']) */
 struct J3DMatColorAnm {
 	/* 8003B2B8 */ ~J3DMatColorAnm();
 	/* 8003B2F4 */ J3DMatColorAnm();
 };
 
-// build J3DAnmTransformKey (['J3DAnmTransformKey']) False/False
-// build J3DTransformInfo (['J3DTransformInfo']) False/False
-/* top-level dependencies (begin ['J3DTransformInfo']) */
-/* top-level dependencies (end ['J3DTransformInfo']) */
 struct J3DTransformInfo {
 };
 
-/* top-level dependencies (begin ['J3DAnmTransformKey']) */
-// outer dependency: ('J3DTransformInfo',)
-/* top-level dependencies (end ['J3DAnmTransformKey']) */
 struct J3DAnmTransformKey {
-	// ('J3DTransformInfo',)
 	/* 8003B8D0 */ ~J3DAnmTransformKey();
 	/* 8003C800 */ s32 getKind() const;
 	/* 8003C808 */ void getTransform(u16, J3DTransformInfo*) const;
 	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
 };
 
-// build J3DAnmTransform (['J3DAnmTransform']) False/False
-/* top-level dependencies (begin ['J3DAnmTransform']) */
-/* top-level dependencies (end ['J3DAnmTransform']) */
 struct J3DAnmTransform {
 	/* 8003B93C */ ~J3DAnmTransform();
 	/* 8003C77C */ bool getKind() const;
 	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build dRes_control_c (['dRes_control_c']) False/False
-// build dRes_info_c (['dRes_info_c']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['dRes_control_c']) */
-// outer dependency: ('dRes_info_c',)
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
-	// ('dRes_info_c',)
-	// ('JKRHeap',)
 	/* 8003BFB0 */ ~dRes_control_c();
 	/* 8003C078 */ void setRes(char const*, dRes_info_c*, int, char const*, u8, JKRHeap*);
 	/* 8003C160 */ void syncRes(char const*, dRes_info_c*, int);
@@ -207,229 +124,150 @@ struct dRes_control_c {
 	/* 8003C6B8 */ void getObjectResName2Index(char const*, char const*);
 };
 
-// build J3DAnmBase (['J3DAnmBase']) False/False
-/* top-level dependencies (begin ['J3DAnmBase']) */
-/* top-level dependencies (end ['J3DAnmBase']) */
 struct J3DAnmBase {
 	/* 8003C734 */ ~J3DAnmBase();
 };
 
-// build mDoExt_transAnmBas (['mDoExt_transAnmBas']) False/False
-/* top-level dependencies (begin ['mDoExt_transAnmBas']) */
-/* top-level dependencies (end ['mDoExt_transAnmBas']) */
 struct mDoExt_transAnmBas {
 	/* 8003C784 */ ~mDoExt_transAnmBas();
 };
 
-// build J3DTransformInfo (['J3DTransformInfo']) True/True
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
 };
 
-// build mDoDvdThd_mountArchive_c (['mDoDvdThd_mountArchive_c']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['mDoDvdThd_mountArchive_c']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['mDoDvdThd_mountArchive_c']) */
 struct mDoDvdThd_mountArchive_c {
-	// ('JKRHeap',)
 	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
-// build cBgS (['cBgS']) False/False
-/* top-level dependencies (begin ['cBgS']) */
-/* top-level dependencies (end ['cBgS']) */
 struct cBgS {
 	/* 80074578 */ void ConvDzb(void*);
 };
 
-// build dBgWKCol (['dBgWKCol']) False/False
-/* top-level dependencies (begin ['dBgWKCol']) */
-/* top-level dependencies (end ['dBgWKCol']) */
 struct dBgWKCol {
 	/* 8007E7D0 */ void initKCollision(void*);
 };
 
-// build JKRMemArchive (['JKRMemArchive']) False/False
-// build JKRMemBreakFlag (['JKRMemBreakFlag']) False/False
-/* top-level dependencies (begin ['JKRMemBreakFlag']) */
-/* top-level dependencies (end ['JKRMemBreakFlag']) */
 struct JKRMemBreakFlag {
 };
 
-/* top-level dependencies (begin ['JKRMemArchive']) */
-// outer dependency: ('JKRMemBreakFlag',)
-/* top-level dependencies (end ['JKRMemArchive']) */
 struct JKRMemArchive {
-	// ('JKRMemBreakFlag',)
 	/* 802D6A6C */ JKRMemArchive(void*, u32, JKRMemBreakFlag);
 };
 
-// build JKRMemBreakFlag (['JKRMemBreakFlag']) True/True
-// build JUTNameTab (['JUTNameTab']) False/False
-/* top-level dependencies (begin ['JUTNameTab']) */
-/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
 	/* 802DEAF8 */ void getName(u16) const;
 };
 
-// build J3DTexture (['J3DTexture']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['J3DTexture']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['J3DTexture']) */
 struct J3DTexture {
-	// ('ResTIMG',)
 	/* 8031221C */ void addResTIMG(u16, ResTIMG const*);
 };
 
-// build ResTIMG (['ResTIMG']) True/True
-// build J3DShape (['J3DShape']) False/False
-// build _GXAttr (['_GXAttr']) False/False
-/* top-level dependencies (begin ['_GXAttr']) */
-/* top-level dependencies (end ['_GXAttr']) */
 struct _GXAttr {
 };
 
-/* top-level dependencies (begin ['J3DShape']) */
-// outer dependency: ('_GXAttr',)
-/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
-	// ('_GXAttr',)
 	/* 80314BB8 */ void addTexMtxIndexInDL(_GXAttr, u32);
 	/* 80314CBC */ void addTexMtxIndexInVcd(_GXAttr);
 };
 
-// build _GXAttr (['_GXAttr']) True/True
-// build J3DTexMtxInfo (['J3DTexMtxInfo']) False/False
-/* top-level dependencies (begin ['J3DTexMtxInfo']) */
-/* top-level dependencies (end ['J3DTexMtxInfo']) */
 struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 };
 
-// build J3DAnmTexPattern (['J3DAnmTexPattern']) False/False
-/* top-level dependencies (begin ['J3DAnmTexPattern']) */
-/* top-level dependencies (end ['J3DAnmTexPattern']) */
 struct J3DAnmTexPattern {
 	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
-// build J3DMaterialAnm (['J3DMaterialAnm']) False/False
-/* top-level dependencies (begin ['J3DMaterialAnm']) */
-/* top-level dependencies (end ['J3DMaterialAnm']) */
 struct J3DMaterialAnm {
 	/* 8032C320 */ void initialize();
 };
 
-// build J3DClusterLoaderDataBase (['J3DClusterLoaderDataBase']) False/False
-/* top-level dependencies (begin ['J3DClusterLoaderDataBase']) */
-/* top-level dependencies (end ['J3DClusterLoaderDataBase']) */
 struct J3DClusterLoaderDataBase {
 	/* 80334130 */ void load(void const*);
 };
 
-// build J3DModelLoaderDataBase (['J3DModelLoaderDataBase']) False/False
-/* top-level dependencies (begin ['J3DModelLoaderDataBase']) */
-/* top-level dependencies (end ['J3DModelLoaderDataBase']) */
 struct J3DModelLoaderDataBase {
 	/* 803346BC */ void load(void const*, u32);
 };
 
-// build J3DAnmLoaderDataBase (['J3DAnmLoaderDataBase']) False/False
-// build J3DAnmBase (['J3DAnmBase']) True/True
-// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) False/False
-/* top-level dependencies (begin ['J3DAnmLoaderDataBaseFlag']) */
-/* top-level dependencies (end ['J3DAnmLoaderDataBaseFlag']) */
 struct J3DAnmLoaderDataBaseFlag {
 };
 
-/* top-level dependencies (begin ['J3DAnmLoaderDataBase']) */
-// outer dependency: ('J3DAnmBase',)
-// outer dependency: ('J3DAnmLoaderDataBaseFlag',)
-/* top-level dependencies (end ['J3DAnmLoaderDataBase']) */
 struct J3DAnmLoaderDataBase {
-	// ('J3DAnmBase',)
-	// ('J3DAnmLoaderDataBaseFlag',)
 	/* 80337B40 */ void load(void const*, J3DAnmLoaderDataBaseFlag);
 	/* 80338134 */ void setResource(J3DAnmBase*, void const*);
 };
 
-// build J3DAnmLoaderDataBaseFlag (['J3DAnmLoaderDataBaseFlag']) True/True
 // 
 // Forward References:
 // 
 
-static void setAlpha(J3DMaterialTable*);
-static void setIndirectTex(J3DModelData*);
-static void setAlpha(J3DModelData*);
-static void addWarpMaterial(J3DModelData*);
-static void getArcHeader(JKRArchive*);
-static void myGetMemBlockSize(void*);
-static void myGetMemBlockSize0(void*);
+static void setAlpha(J3DMaterialTable*); // 2
+static void setIndirectTex(J3DModelData*); // 2
+static void setAlpha(J3DModelData*); // 2
+static void addWarpMaterial(J3DModelData*); // 2
+static void getArcHeader(JKRArchive*); // 2
+static void myGetMemBlockSize(void*); // 2
+static void myGetMemBlockSize0(void*); // 2
 
-extern "C" void __ct__11dRes_info_cFv();
-extern "C" void __dt__11dRes_info_cFv();
-extern "C" void set__11dRes_info_cFPCcPCcUcP7JKRHeap();
-extern "C" static void setAlpha__FP16J3DMaterialTable();
-extern "C" static void setIndirectTex__FP12J3DModelData();
-extern "C" static void setAlpha__FP12J3DModelData();
-extern "C" static void addWarpMaterial__FP12J3DModelData();
-extern "C" void __ct__11J3DTevStageFRC15J3DTevStageInfo();
-extern "C" void setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx();
-extern "C" void onWarpMaterial__11dRes_info_cFP12J3DModelData();
-extern "C" void offWarpMaterial__11dRes_info_cFP12J3DModelData();
-extern "C" void setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff();
-extern "C" void loaderBasicBmd__11dRes_info_cFUlPv();
-extern "C" void __dt__15J3DTevKColorAnmFv();
-extern "C" void __ct__15J3DTevKColorAnmFv();
-extern "C" void __dt__14J3DTevColorAnmFv();
-extern "C" void __ct__14J3DTevColorAnmFv();
-extern "C" void __dt__11J3DTexNoAnmFv();
-extern "C" void __ct__11J3DTexNoAnmFv();
-extern "C" void __dt__12J3DTexMtxAnmFv();
-extern "C" void __ct__12J3DTexMtxAnmFv();
-extern "C" void __dt__14J3DMatColorAnmFv();
-extern "C" void __ct__14J3DMatColorAnmFv();
-extern "C" void loadResource__11dRes_info_cFv();
-extern "C" void __dt__18J3DAnmTransformKeyFv();
-extern "C" void __dt__15J3DAnmTransformFv();
-extern "C" void deleteArchiveRes__11dRes_info_cFv();
-extern "C" static void getArcHeader__FP10JKRArchive();
-extern "C" void setRes__11dRes_info_cFP10JKRArchiveP7JKRHeap();
-extern "C" void setRes__11dRes_info_cFv();
-extern "C" static void myGetMemBlockSize__FPv();
-extern "C" static void myGetMemBlockSize0__FPv();
-extern "C" void dump_long__11dRes_info_cFP11dRes_info_ci();
-extern "C" void dump__11dRes_info_cFP11dRes_info_ci();
-extern "C" void __dt__14dRes_control_cFv();
-extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
-extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" void newResInfo__14dRes_control_cFP11dRes_info_ci();
-extern "C" void getResInfoLoaded__14dRes_control_cFPCcP11dRes_info_ci();
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
-extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
-extern "C" void syncAllRes__14dRes_control_cFP11dRes_info_ci();
-extern "C" void setObjectRes__14dRes_control_cFPCcPvUlP7JKRHeap();
-extern "C" void setStageRes__14dRes_control_cFPCcP7JKRHeap();
-extern "C" void dump__14dRes_control_cFv();
-extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc();
-extern "C" void __dt__10J3DAnmBaseFv();
-extern "C" bool getKind__15J3DAnmTransformCFv();
-extern "C" void __dt__18mDoExt_transAnmBasFv();
-extern "C" s32 getKind__18J3DAnmTransformKeyCFv();
-extern "C" void getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo();
-extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void __ct__11dRes_info_cFv(); // 1
+extern "C" void __dt__11dRes_info_cFv(); // 1
+extern "C" void set__11dRes_info_cFPCcPCcUcP7JKRHeap(); // 1
+extern "C" static void setAlpha__FP16J3DMaterialTable(); // 1
+extern "C" static void setIndirectTex__FP12J3DModelData(); // 1
+extern "C" static void setAlpha__FP12J3DModelData(); // 1
+extern "C" static void addWarpMaterial__FP12J3DModelData(); // 1
+extern "C" void __ct__11J3DTevStageFRC15J3DTevStageInfo(); // 1
+extern "C" void setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx(); // 1
+extern "C" void onWarpMaterial__11dRes_info_cFP12J3DModelData(); // 1
+extern "C" void offWarpMaterial__11dRes_info_cFP12J3DModelData(); // 1
+extern "C" void setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff(); // 1
+extern "C" void loaderBasicBmd__11dRes_info_cFUlPv(); // 1
+extern "C" void __dt__15J3DTevKColorAnmFv(); // 1
+extern "C" void __ct__15J3DTevKColorAnmFv(); // 1
+extern "C" void __dt__14J3DTevColorAnmFv(); // 1
+extern "C" void __ct__14J3DTevColorAnmFv(); // 1
+extern "C" void __dt__11J3DTexNoAnmFv(); // 1
+extern "C" void __ct__11J3DTexNoAnmFv(); // 1
+extern "C" void __dt__12J3DTexMtxAnmFv(); // 1
+extern "C" void __ct__12J3DTexMtxAnmFv(); // 1
+extern "C" void __dt__14J3DMatColorAnmFv(); // 1
+extern "C" void __ct__14J3DMatColorAnmFv(); // 1
+extern "C" void loadResource__11dRes_info_cFv(); // 1
+extern "C" void __dt__18J3DAnmTransformKeyFv(); // 1
+extern "C" void __dt__15J3DAnmTransformFv(); // 1
+extern "C" void deleteArchiveRes__11dRes_info_cFv(); // 1
+extern "C" static void getArcHeader__FP10JKRArchive(); // 1
+extern "C" void setRes__11dRes_info_cFP10JKRArchiveP7JKRHeap(); // 1
+extern "C" void setRes__11dRes_info_cFv(); // 1
+extern "C" static void myGetMemBlockSize__FPv(); // 1
+extern "C" static void myGetMemBlockSize0__FPv(); // 1
+extern "C" void dump_long__11dRes_info_cFP11dRes_info_ci(); // 1
+extern "C" void dump__11dRes_info_cFP11dRes_info_ci(); // 1
+extern "C" void __dt__14dRes_control_cFv(); // 1
+extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap(); // 1
+extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
+extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci(); // 1
+extern "C" void newResInfo__14dRes_control_cFP11dRes_info_ci(); // 1
+extern "C" void getResInfoLoaded__14dRes_control_cFPCcP11dRes_info_ci(); // 1
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
+extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci(); // 1
+extern "C" void syncAllRes__14dRes_control_cFP11dRes_info_ci(); // 1
+extern "C" void setObjectRes__14dRes_control_cFPCcPvUlP7JKRHeap(); // 1
+extern "C" void setStageRes__14dRes_control_cFPCcP7JKRHeap(); // 1
+extern "C" void dump__14dRes_control_cFv(); // 1
+extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc(); // 1
+extern "C" void __dt__10J3DAnmBaseFv(); // 1
+extern "C" bool getKind__15J3DAnmTransformCFv(); // 1
+extern "C" void __dt__18mDoExt_transAnmBasFv(); // 1
+extern "C" s32 getKind__18J3DAnmTransformKeyCFv(); // 1
+extern "C" void getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo(); // 1
+extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
 SECTION_RODATA extern const u8 l_texMtxInfo[100];
 SECTION_RODATA extern const u8 data_803798A4[20];
 SECTION_RODATA extern const u8 d_d_resorce__stringBase0[888];
@@ -449,114 +287,114 @@ SECTION_SDATA2 extern f32 d_d_resorce__lit_4333;
 // External References:
 // 
 
-extern "C" void OSReport_Error();
-extern "C" void OSReport_Warning();
-void mDoMtx_YrotM(f32 (* )[4], s16);
-void mDoExt_getGameHeap();
-void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32);
-void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
-void mDoExt_adjustSolidHeap(JKRSolidHeap*);
-void mDoExt_destroySolidHeap(JKRSolidHeap*);
-void mDoExt_restoreCurrentHeap();
-void mDoExt_resIDToIndex(JKRArchive*, u16);
-void* operator new(u32);
-void* operator new[](u32);
-void operator delete(void*);
-extern "C" void JUTReportConsole_f();
-extern "C" void DCStoreRangeNoSync();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXTrans();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_20();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_20();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void memcmp();
-extern "C" void snprintf();
-extern "C" void strncpy();
-extern "C" void strlen();
-extern "C" void stricmp();
+extern "C" void OSReport_Error(); // 1
+extern "C" void OSReport_Warning(); // 1
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void mDoExt_getGameHeap(); // 2
+void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32); // 2
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); // 2
+void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
+void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
+void mDoExt_restoreCurrentHeap(); // 2
+void mDoExt_resIDToIndex(JKRArchive*, u16); // 2
+void* operator new(u32); // 2
+void* operator new[](u32); // 2
+void operator delete(void*); // 2
+extern "C" void JUTReportConsole_f(); // 1
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_20(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_20(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void memcmp(); // 1
+extern "C" void snprintf(); // 1
+extern "C" void strncpy(); // 1
+extern "C" void strlen(); // 1
+extern "C" void stricmp(); // 1
 
-extern "C" void OSReport_Error();
-extern "C" void OSReport_Warning();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo();
-extern "C" void mDoExt_getGameHeap__Fv();
-extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl();
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
-extern "C" void mDoExt_restoreCurrentHeap__Fv();
-extern "C" void mDoExt_resIDToIndex__FP10JKRArchiveUs();
-extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
-extern "C" void ConvDzb__4cBgSFPv();
-extern "C" void initKCollision__8dBgWKColFPv();
-extern "C" void getSize__7JKRHeapFPvP7JKRHeap();
-extern "C" void findFromRoot__7JKRHeapFPv();
-extern "C" void* __nw__FUl();
-extern "C" void* __nwa__FUl();
-extern "C" void __dl__FPv();
-extern "C" void getIdxResource__10JKRArchiveFUl();
-extern "C" void getFileAttribute__10JKRArchiveCFUl();
-extern "C" void findIdxResource__10JKRArchiveCFUl();
-extern "C" void findNameResource__10JKRArchiveCFPCc();
-extern "C" void __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag();
-extern "C" void getName__10JUTNameTabCFUs();
-extern "C" void JUTReportConsole_f();
-extern "C" void addResTIMG__10J3DTextureFUsPC7ResTIMG();
-extern "C" void addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl();
-extern "C" void addTexMtxIndexInVcd__8J3DShapeF7_GXAttr();
-extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
-extern "C" void newSharedDisplayList__12J3DModelDataFUl();
-extern "C" void makeSharedDL__12J3DModelDataFv();
-extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
-extern "C" void __ct__15J3DAnmTransformFsPfPsPf();
-extern "C" void calcTransform__18J3DAnmTransformKeyCFfUsP16J3DTransformInfo();
-extern "C" void getTexNo__16J3DAnmTexPatternCFUsPUs();
-extern "C" void initialize__14J3DMaterialAnmFv();
-extern "C" void load__24J3DClusterLoaderDataBaseFPCv();
-extern "C" void load__22J3DModelLoaderDataBaseFPCvUl();
-extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
-extern "C" void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv();
-extern "C" void DCStoreRangeNoSync();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXTrans();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_20();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_20();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void memcmp();
-extern "C" void snprintf();
-extern "C" void strncpy();
-extern "C" void strlen();
-extern "C" void stricmp();
+extern "C" void OSReport_Error(); // 1
+extern "C" void OSReport_Warning(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo(); // 1
+extern "C" void mDoExt_getGameHeap__Fv(); // 1
+extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl(); // 1
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl(); // 1
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
+extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
+extern "C" void mDoExt_resIDToIndex__FP10JKRArchiveUs(); // 1
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap(); // 1
+extern "C" void ConvDzb__4cBgSFPv(); // 1
+extern "C" void initKCollision__8dBgWKColFPv(); // 1
+extern "C" void getSize__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void findFromRoot__7JKRHeapFPv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getIdxResource__10JKRArchiveFUl(); // 1
+extern "C" void getFileAttribute__10JKRArchiveCFUl(); // 1
+extern "C" void findIdxResource__10JKRArchiveCFUl(); // 1
+extern "C" void findNameResource__10JKRArchiveCFPCc(); // 1
+extern "C" void __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag(); // 1
+extern "C" void getName__10JUTNameTabCFUs(); // 1
+extern "C" void JUTReportConsole_f(); // 1
+extern "C" void addResTIMG__10J3DTextureFUsPC7ResTIMG(); // 1
+extern "C" void addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl(); // 1
+extern "C" void addTexMtxIndexInVcd__8J3DShapeF7_GXAttr(); // 1
+extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo(); // 1
+extern "C" void newSharedDisplayList__12J3DModelDataFUl(); // 1
+extern "C" void makeSharedDL__12J3DModelDataFv(); // 1
+extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f(); // 1
+extern "C" void __ct__15J3DAnmTransformFsPfPsPf(); // 1
+extern "C" void calcTransform__18J3DAnmTransformKeyCFfUsP16J3DTransformInfo(); // 1
+extern "C" void getTexNo__16J3DAnmTexPatternCFUsPUs(); // 1
+extern "C" void initialize__14J3DMaterialAnmFv(); // 1
+extern "C" void load__24J3DClusterLoaderDataBaseFPCv(); // 1
+extern "C" void load__22J3DModelLoaderDataBaseFPCvUl(); // 1
+extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag(); // 1
+extern "C" void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv(); // 1
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXTrans(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_20(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_20(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void memcmp(); // 1
+extern "C" void snprintf(); // 1
+extern "C" void strncpy(); // 1
+extern "C" void strlen(); // 1
+extern "C" void stricmp(); // 1
 SECTION_RODATA extern const u8 j3dDefaultMtx[48];
 SECTION_DATA extern void*const __vt__14J3DMaterialAnm[4];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];

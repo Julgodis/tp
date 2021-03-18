@@ -9,42 +9,24 @@
 // Types:
 // 
 
-// build cCcD_Obj (['cCcD_Obj']) False/False
-/* top-level dependencies (begin ['cCcD_Obj']) */
-/* top-level dependencies (end ['cCcD_Obj']) */
 struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
 
-// build Z2Creature (['Z2Creature']) False/False
-/* top-level dependencies (begin ['Z2Creature']) */
-/* top-level dependencies (end ['Z2Creature']) */
 struct Z2Creature {
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-// build dCcU_AtInfo (['dCcU_AtInfo']) False/False
-/* top-level dependencies (begin ['dCcU_AtInfo']) */
-/* top-level dependencies (end ['dCcU_AtInfo']) */
 struct dCcU_AtInfo {
 };
 
-// build daPy_py_c (['daPy_py_c']) False/False
-/* top-level dependencies (begin ['daPy_py_c']) */
-/* top-level dependencies (end ['daPy_py_c']) */
 struct daPy_py_c {
 	/* 80088134 */ bool checkCutJumpCancelTurn() const;
 	/* 8015F398 */ void checkMasterSwordEquip();
 };
 
-// build dCcD_GObjInf (['dCcD_GObjInf']) False/False
-/* top-level dependencies (begin ['dCcD_GObjInf']) */
-/* top-level dependencies (end ['dCcD_GObjInf']) */
 struct dCcD_GObjInf {
 	/* 800845B0 */ void getHitSeID(u8, int);
 };
@@ -53,24 +35,24 @@ struct dCcD_GObjInf {
 // Forward References:
 // 
 
-void pl_cut_LRC(int);
-static void cc_pl_cut_bit_get();
-static void getMapInfo(s8);
-static void getHitId(cCcD_Obj*, int);
-void def_se_set(Z2Creature*, cCcD_Obj*, u32, fopAc_ac_c*);
-static void at_power_get(dCcU_AtInfo*);
-static void at_power_check(dCcU_AtInfo*);
-void cc_at_check(fopAc_ac_c*, dCcU_AtInfo*);
+void pl_cut_LRC(int); // 2
+static void cc_pl_cut_bit_get(); // 2
+static void getMapInfo(s8); // 2
+static void getHitId(cCcD_Obj*, int); // 2
+void def_se_set(Z2Creature*, cCcD_Obj*, u32, fopAc_ac_c*); // 2
+static void at_power_get(dCcU_AtInfo*); // 2
+static void at_power_check(dCcU_AtInfo*); // 2
+void cc_at_check(fopAc_ac_c*, dCcU_AtInfo*); // 2
 
-extern "C" void pl_cut_LRC__Fi();
-extern "C" static void cc_pl_cut_bit_get__Fv();
-extern "C" static void getMapInfo__FSc();
-extern "C" static void getHitId__FP8cCcD_Obji();
-extern "C" void def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c();
-extern "C" static void at_power_get__FP11dCcU_AtInfo();
-extern "C" static void at_power_check__FP11dCcU_AtInfo();
-extern "C" void cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo();
-extern "C" bool checkCutJumpCancelTurn__9daPy_py_cCFv();
+extern "C" void pl_cut_LRC__Fi(); // 1
+extern "C" static void cc_pl_cut_bit_get__Fv(); // 1
+extern "C" static void getMapInfo__FSc(); // 1
+extern "C" static void getHitId__FP8cCcD_Obji(); // 1
+extern "C" void def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c(); // 1
+extern "C" static void at_power_get__FP11dCcU_AtInfo(); // 1
+extern "C" static void at_power_check__FP11dCcU_AtInfo(); // 1
+extern "C" void cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo(); // 1
+extern "C" bool checkCutJumpCancelTurn__9daPy_py_cCFv(); // 1
 SECTION_DATA extern u8 plCutLRC[232];
 SECTION_SDATA2 extern u8 d_cc_d_cc_uty__lit_4212[4 + 4 /* padding */];
 SECTION_SDATA2 extern f64 d_cc_d_cc_uty__lit_4213;
@@ -84,22 +66,22 @@ SECTION_SDATA2 extern f32 lit_4218;
 // External References:
 // 
 
-void dCcD_GetGObjInf(cCcD_Obj*);
-void cM_atan2s(f32, f32);
-void cM_rndFX(f32);
-extern "C" void PSVECSquareMag();
-extern "C" void _savegpr_25();
-extern "C" void _restgpr_25();
+void dCcD_GetGObjInf(cCcD_Obj*); // 2
+void cM_atan2s(f32, f32); // 2
+void cM_rndFX(f32); // 2
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _restgpr_25(); // 1
 
-extern "C" void getHitSeID__12dCcD_GObjInfFUci();
-extern "C" void dCcD_GetGObjInf__FP8cCcD_Obj();
-extern "C" void checkMasterSwordEquip__9daPy_py_cFv();
-extern "C" void GetAc__8cCcD_ObjFv();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cM_rndFX__Ff();
-extern "C" void PSVECSquareMag();
-extern "C" void _savegpr_25();
-extern "C" void _restgpr_25();
+extern "C" void getHitSeID__12dCcD_GObjInfFUci(); // 1
+extern "C" void dCcD_GetGObjInf__FP8cCcD_Obj(); // 1
+extern "C" void checkMasterSwordEquip__9daPy_py_cFv(); // 1
+extern "C" void GetAc__8cCcD_ObjFv(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM_rndFX__Ff(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _restgpr_25(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SDATA extern u32 __float_nan;
 SECTION_SBSS extern u8 struct_80451124[4];

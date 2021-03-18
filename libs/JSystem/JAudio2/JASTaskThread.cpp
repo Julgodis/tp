@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JASTaskThread (['JASTaskThread']) False/False
-/* top-level dependencies (begin ['JASTaskThread']) */
-/* top-level dependencies (end ['JASTaskThread']) */
 struct JASTaskThread {
 	/* 8028F6C4 */ JASTaskThread(int, int, u32);
 	/* 8028F724 */ ~JASTaskThread();
@@ -19,34 +16,19 @@ struct JASTaskThread {
 	/* 8028FE88 */ void pause(bool);
 };
 
-// build JASCalc (['JASCalc']) False/False
-/* top-level dependencies (begin ['JASCalc']) */
-/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F354 */ void bcopy(void const*, void*, u32);
 };
 
-// build JASKernel (['JASKernel']) False/False
-/* top-level dependencies (begin ['JASKernel']) */
-/* top-level dependencies (end ['JASKernel']) */
 struct JASKernel {
 	/* 80290AC0 */ void getSystemHeap();
 	/* 80290AC8 */ void getCommandHeap();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRThread (['JKRThread']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRThread']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
-	// ('JKRHeap',)
 	/* 802D1610 */ JKRThread(JKRHeap*, u32, int, int);
 	/* 802D1758 */ ~JKRThread();
 };
@@ -55,65 +37,65 @@ struct JKRThread {
 // Forward References:
 // 
 
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPCvUl();
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPv();
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv();
+extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPv(); // 1
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv(); // 1
 
-extern "C" void __ct__13JASTaskThreadFiiUl();
-extern "C" void __dt__13JASTaskThreadFv();
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPCvUl();
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPv();
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv();
-extern "C" void run__13JASTaskThreadFv();
-extern "C" void pause__13JASTaskThreadFb();
+extern "C" void __ct__13JASTaskThreadFiiUl(); // 1
+extern "C" void __dt__13JASTaskThreadFv(); // 1
+extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPv(); // 1
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv(); // 1
+extern "C" void run__13JASTaskThreadFv(); // 1
+extern "C" void pause__13JASTaskThreadFb(); // 1
 SECTION_DATA extern void*const __vt__13JASTaskThread[4];
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int);
-void operator delete(void*);
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void OSInitThreadQueue();
-extern "C" void OSSleepThread();
-extern "C" void OSWakeupThread();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+void* operator new(u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void OSInitThreadQueue(); // 1
+extern "C" void OSSleepThread(); // 1
+extern "C" void OSWakeupThread(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void bcopy__7JASCalcFPCvPvUl();
-extern "C" void getSystemHeap__9JASKernelFv();
-extern "C" void getCommandHeap__9JASKernelFv();
-extern "C" void* __nw__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
-extern "C" void __ct__9JKRThreadFP7JKRHeapUlii();
-extern "C" void __dt__9JKRThreadFv();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void OSInitThreadQueue();
-extern "C" void OSSleepThread();
-extern "C" void OSWakeupThread();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
+extern "C" void bcopy__7JASCalcFPCvPvUl(); // 1
+extern "C" void getSystemHeap__9JASKernelFv(); // 1
+extern "C" void getCommandHeap__9JASKernelFv(); // 1
+extern "C" void* __nw__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__9JKRThreadFP7JKRHeapUlii(); // 1
+extern "C" void __dt__9JKRThreadFv(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void OSInitThreadQueue(); // 1
+extern "C" void OSSleepThread(); // 1
+extern "C" void OSWakeupThread(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_SBSS extern u8 JASDram[4];
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 

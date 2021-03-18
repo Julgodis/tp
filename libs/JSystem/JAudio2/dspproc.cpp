@@ -9,19 +9,19 @@
 // Forward References:
 // 
 
-void DSPReleaseHalt2(u32);
-static void setup_callback(u16);
-void DsetupTable(u32, u32, u32, u32, u32);
-void DsetMixerLevel(f32);
-void DsyncFrame2ch(u32, u32, u32);
-void DsyncFrame4ch(u32, u32, u32, u32, u32);
+void DSPReleaseHalt2(u32); // 2
+static void setup_callback(u16); // 2
+void DsetupTable(u32, u32, u32, u32, u32); // 2
+void DsetMixerLevel(f32); // 2
+void DsyncFrame2ch(u32, u32, u32); // 2
+void DsyncFrame4ch(u32, u32, u32, u32, u32); // 2
 
-extern "C" void DSPReleaseHalt2__FUl();
-extern "C" static void setup_callback__FUs();
-extern "C" void DsetupTable__FUlUlUlUlUl();
-extern "C" void DsetMixerLevel__Ff();
-extern "C" void DsyncFrame2ch__FUlUlUl();
-extern "C" void DsyncFrame4ch__FUlUlUlUlUl();
+extern "C" void DSPReleaseHalt2__FUl(); // 1
+extern "C" static void setup_callback__FUs(); // 1
+extern "C" void DsetupTable__FUlUlUlUlUl(); // 1
+extern "C" void DsetMixerLevel__Ff(); // 1
+extern "C" void DsyncFrame2ch__FUlUlUl(); // 1
+extern "C" void DsyncFrame4ch__FUlUlUlUlUl(); // 1
 SECTION_SDATA extern u16 DSP_MIXERLEVEL;
 SECTION_SBSS extern u8 flag[4 + 4 /* padding */];
 SECTION_SDATA2 extern f32 dspproc__lit_333;
@@ -30,11 +30,11 @@ SECTION_SDATA2 extern f32 dspproc__lit_333;
 // External References:
 // 
 
-void DSP_CreateMap2(u32);
-extern "C" void DSPSendCommands2__FPUlUlPFUs_v();
+void DSP_CreateMap2(u32); // 2
+extern "C" void DSPSendCommands2__FPUlUlPFUs_v(); // 1
 
-extern "C" void DSP_CreateMap2__FUl();
-extern "C" void DSPSendCommands2__FPUlUlPFUs_v();
+extern "C" void DSP_CreateMap2__FUl(); // 1
+extern "C" void DSPSendCommands2__FPUlUlPFUs_v(); // 1
 
 // 
 // Declarations:

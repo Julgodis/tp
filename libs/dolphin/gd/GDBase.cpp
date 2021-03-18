@@ -9,15 +9,15 @@
 // Forward References:
 // 
 
-extern "C" void GDInitGDLObj();
-extern "C" void GDFlushCurrToMem();
-extern "C" void GDPadCurr32();
-extern "C" void GDOverflowed();
+extern "C" void GDInitGDLObj(); // 1
+extern "C" void GDFlushCurrToMem(); // 1
+extern "C" void GDPadCurr32(); // 1
+extern "C" void GDOverflowed(); // 1
 
-extern "C" void GDInitGDLObj();
-extern "C" void GDFlushCurrToMem();
-extern "C" void GDPadCurr32();
-extern "C" void GDOverflowed();
+extern "C" void GDInitGDLObj(); // 1
+extern "C" void GDFlushCurrToMem(); // 1
+extern "C" void GDPadCurr32(); // 1
+extern "C" void GDOverflowed(); // 1
 SECTION_SBSS extern u8 __GDCurrentDL[4];
 SECTION_SBSS extern u8 overflowcb[4];
 
@@ -25,9 +25,9 @@ SECTION_SBSS extern u8 overflowcb[4];
 // External References:
 // 
 
-extern "C" void DCFlushRange();
+extern "C" void DCFlushRange(); // 1
 
-extern "C" void DCFlushRange();
+extern "C" void DCFlushRange(); // 1
 
 // 
 // Declarations:

@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build door_param2_c (['door_param2_c']) False/False
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ['door_param2_c']) */
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['door_param2_c']) */
 struct door_param2_c {
-	// ('fopAc_ac_c',)
 	/* 8003A188 */ void getKind(fopAc_ac_c*);
 	/* 8003A194 */ void getDoorModel(fopAc_ac_c*);
 	/* 8003A1A0 */ void getFrontOption(fopAc_ac_c*);
@@ -41,30 +33,29 @@ struct door_param2_c {
 	/* 8003A254 */ void getMBLightInf(fopAc_ac_c*);
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void getKind__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getDoorModel__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getFrontOption__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getBackOption__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getFRoomNo__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getBRoomNo__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getSwbit__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getSwbit2__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getSwbit3__13door_param2_cFP10fopAc_ac_c();
-extern "C" void isMsgDoor__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getEventNo__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getEventNo2__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getMsgNo__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getExitNo__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getFLightInf__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getBLightInf__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getMFLightInf__13door_param2_cFP10fopAc_ac_c();
-extern "C" void getMBLightInf__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getKind__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getDoorModel__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getFrontOption__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getBackOption__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getFRoomNo__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getBRoomNo__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getSwbit__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getSwbit2__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getSwbit3__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void isMsgDoor__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getEventNo__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getEventNo2__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getMsgNo__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getExitNo__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getFLightInf__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getBLightInf__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getMFLightInf__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getMBLightInf__13door_param2_cFP10fopAc_ac_c(); // 1
 
 // 
 // External References:

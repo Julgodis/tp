@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build scene_tag_class (['scene_tag_class']) False/False
-/* top-level dependencies (begin ['scene_tag_class']) */
-/* top-level dependencies (end ['scene_tag_class']) */
 struct scene_tag_class {
 };
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
@@ -31,26 +22,26 @@ struct node_list_class {
 // Forward References:
 // 
 
-void fopScnTg_QueueTo(scene_tag_class*);
-void fopScnTg_ToQueue(scene_tag_class*);
-void fopScnTg_Init(scene_tag_class*, void*);
+void fopScnTg_QueueTo(scene_tag_class*); // 2
+void fopScnTg_ToQueue(scene_tag_class*); // 2
+void fopScnTg_Init(scene_tag_class*, void*); // 2
 
-extern "C" void fopScnTg_QueueTo__FP15scene_tag_class();
-extern "C" void fopScnTg_ToQueue__FP15scene_tag_class();
-extern "C" void fopScnTg_Init__FP15scene_tag_classPv();
+extern "C" void fopScnTg_QueueTo__FP15scene_tag_class(); // 1
+extern "C" void fopScnTg_ToQueue__FP15scene_tag_class(); // 1
+extern "C" void fopScnTg_Init__FP15scene_tag_classPv(); // 1
 SECTION_DATA extern u8 g_fopScnTg_SceneList[12 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void cTg_SingleCut(create_tag_class*);
-void cTg_Addition(node_list_class*, create_tag_class*);
-void cTg_Create(create_tag_class*, void*);
+void cTg_SingleCut(create_tag_class*); // 2
+void cTg_Addition(node_list_class*, create_tag_class*); // 2
+void cTg_Create(create_tag_class*, void*); // 2
 
-extern "C" void cTg_SingleCut__FP16create_tag_class();
-extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern "C" void cTg_Create__FP16create_tag_classPv();
+extern "C" void cTg_SingleCut__FP16create_tag_class(); // 1
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class(); // 1
+extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
 
 // 
 // Declarations:

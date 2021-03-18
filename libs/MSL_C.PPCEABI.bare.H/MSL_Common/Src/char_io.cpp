@@ -9,31 +9,31 @@
 // Forward References:
 // 
 
-extern "C" void fputs();
-extern "C" static void __put_char();
+extern "C" void fputs(); // 1
+extern "C" static void __put_char(); // 1
 
-extern "C" void fputs();
-extern "C" static void __put_char();
+extern "C" void fputs(); // 1
+extern "C" static void __put_char(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __flush_buffer();
-extern "C" void __prep_buffer();
-extern "C" void __end_critical_region();
-extern "C" void __begin_critical_region();
-extern "C" void fseek();
-extern "C" void __stdio_atexit();
-extern "C" void fwide();
+extern "C" void __flush_buffer(); // 1
+extern "C" void __prep_buffer(); // 1
+extern "C" void __end_critical_region(); // 1
+extern "C" void __begin_critical_region(); // 1
+extern "C" void fseek(); // 1
+extern "C" void __stdio_atexit(); // 1
+extern "C" void fwide(); // 1
 
-extern "C" void __flush_buffer();
-extern "C" void __prep_buffer();
-extern "C" void __end_critical_region();
-extern "C" void __begin_critical_region();
-extern "C" void fseek();
-extern "C" void __stdio_atexit();
-extern "C" void fwide();
+extern "C" void __flush_buffer(); // 1
+extern "C" void __prep_buffer(); // 1
+extern "C" void __end_critical_region(); // 1
+extern "C" void __begin_critical_region(); // 1
+extern "C" void fseek(); // 1
+extern "C" void __stdio_atexit(); // 1
+extern "C" void fwide(); // 1
 
 // 
 // Declarations:

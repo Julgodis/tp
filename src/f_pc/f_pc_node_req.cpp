@@ -9,53 +9,29 @@
 // Types:
 // 
 
-// build node_create_request (['node_create_request']) False/False
-/* top-level dependencies (begin ['node_create_request']) */
-/* top-level dependencies (end ['node_create_request']) */
 struct node_create_request {
 };
 
-// build process_node_class (['process_node_class']) False/False
-/* top-level dependencies (begin ['process_node_class']) */
-/* top-level dependencies (end ['process_node_class']) */
 struct process_node_class {
 };
 
-// build node_create_request_method_class (['node_create_request_method_class']) False/False
-/* top-level dependencies (begin ['node_create_request_method_class']) */
-/* top-level dependencies (end ['node_create_request_method_class']) */
 struct node_create_request_method_class {
 };
 
-// build process_method_tag_class (['process_method_tag_class']) False/False
-/* top-level dependencies (begin ['process_method_tag_class']) */
-/* top-level dependencies (end ['process_method_tag_class']) */
 struct process_method_tag_class {
 };
 
-// build layer_class (['layer_class']) False/False
-/* top-level dependencies (begin ['layer_class']) */
-/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build cMl (['cMl']) False/False
-/* top-level dependencies (begin ['cMl']) */
-/* top-level dependencies (end ['cMl']) */
 struct cMl {
 	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);
 };
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
@@ -63,49 +39,49 @@ struct node_list_class {
 // Forward References:
 // 
 
-static void fpcNdRq_RequestQTo(node_create_request*);
-static void fpcNdRq_ToRequestQ(node_create_request*);
-static void fpcNdRq_phase_IsCreated(node_create_request*);
-static void fpcNdRq_phase_Create(node_create_request*);
-static s32 fpcNdRq_phase_IsDeleteTiming(node_create_request*);
-static void fpcNdRq_phase_IsDeleted(node_create_request*);
-static void fpcNdRq_phase_Delete(node_create_request*);
-static void fpcNdRq_DoPhase(node_create_request*);
-void fpcNdRq_Execute(node_create_request*);
-void fpcNdRq_Delete(node_create_request*);
-static void fpcNdRq_Cancel(node_create_request*);
-void fpcNdRq_Handler();
-static void fpcNdRq_IsPossibleTarget(process_node_class*);
-static void fpcNdRq_IsIng(process_node_class*);
-static void fpcNdRq_Create(u32);
-static void fpcNdRq_ChangeNode(u32, process_node_class*, s16, void*);
-static void fpcNdRq_DeleteNode(u32, process_node_class*);
-static void fpcNdRq_CreateNode(u32, s16, void*);
-void fpcNdRq_Request(u32, int, process_node_class*, s16, void*, node_create_request_method_class*);
-static void fpcNdRq_ReChangeNode(u32, s16, void*);
-void fpcNdRq_ReRequest(u32, s16, void*);
+static void fpcNdRq_RequestQTo(node_create_request*); // 2
+static void fpcNdRq_ToRequestQ(node_create_request*); // 2
+static void fpcNdRq_phase_IsCreated(node_create_request*); // 2
+static void fpcNdRq_phase_Create(node_create_request*); // 2
+static s32 fpcNdRq_phase_IsDeleteTiming(node_create_request*); // 2
+static void fpcNdRq_phase_IsDeleted(node_create_request*); // 2
+static void fpcNdRq_phase_Delete(node_create_request*); // 2
+static void fpcNdRq_DoPhase(node_create_request*); // 2
+void fpcNdRq_Execute(node_create_request*); // 2
+void fpcNdRq_Delete(node_create_request*); // 2
+static void fpcNdRq_Cancel(node_create_request*); // 2
+void fpcNdRq_Handler(); // 2
+static void fpcNdRq_IsPossibleTarget(process_node_class*); // 2
+static void fpcNdRq_IsIng(process_node_class*); // 2
+static void fpcNdRq_Create(u32); // 2
+static void fpcNdRq_ChangeNode(u32, process_node_class*, s16, void*); // 2
+static void fpcNdRq_DeleteNode(u32, process_node_class*); // 2
+static void fpcNdRq_CreateNode(u32, s16, void*); // 2
+void fpcNdRq_Request(u32, int, process_node_class*, s16, void*, node_create_request_method_class*); // 2
+static void fpcNdRq_ReChangeNode(u32, s16, void*); // 2
+void fpcNdRq_ReRequest(u32, s16, void*); // 2
 
-extern "C" static void fpcNdRq_RequestQTo__FP19node_create_request();
-extern "C" static void fpcNdRq_ToRequestQ__FP19node_create_request();
-extern "C" static void fpcNdRq_phase_IsCreated__FP19node_create_request();
-extern "C" static void fpcNdRq_phase_Create__FP19node_create_request();
-extern "C" static s32 fpcNdRq_phase_IsDeleteTiming__FP19node_create_request();
-extern "C" static void fpcNdRq_phase_IsDeleted__FP19node_create_request();
-extern "C" static void fpcNdRq_phase_Delete__FP19node_create_request();
-extern "C" static void fpcNdRq_DoPhase__FP19node_create_request();
-extern "C" void fpcNdRq_Execute__FP19node_create_request();
-extern "C" void fpcNdRq_Delete__FP19node_create_request();
-extern "C" static void fpcNdRq_Cancel__FP19node_create_request();
-extern "C" void fpcNdRq_Handler__Fv();
-extern "C" static void fpcNdRq_IsPossibleTarget__FP18process_node_class();
-extern "C" static void fpcNdRq_IsIng__FP18process_node_class();
-extern "C" static void fpcNdRq_Create__FUl();
-extern "C" static void fpcNdRq_ChangeNode__FUlP18process_node_classsPv();
-extern "C" static void fpcNdRq_DeleteNode__FUlP18process_node_class();
-extern "C" static void fpcNdRq_CreateNode__FUlsPv();
-extern "C" void fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class();
-extern "C" static void fpcNdRq_ReChangeNode__FUisPv();
-extern "C" void fpcNdRq_ReRequest__FUisPv();
+extern "C" static void fpcNdRq_RequestQTo__FP19node_create_request(); // 1
+extern "C" static void fpcNdRq_ToRequestQ__FP19node_create_request(); // 1
+extern "C" static void fpcNdRq_phase_IsCreated__FP19node_create_request(); // 1
+extern "C" static void fpcNdRq_phase_Create__FP19node_create_request(); // 1
+extern "C" static s32 fpcNdRq_phase_IsDeleteTiming__FP19node_create_request(); // 1
+extern "C" static void fpcNdRq_phase_IsDeleted__FP19node_create_request(); // 1
+extern "C" static void fpcNdRq_phase_Delete__FP19node_create_request(); // 1
+extern "C" static void fpcNdRq_DoPhase__FP19node_create_request(); // 1
+extern "C" void fpcNdRq_Execute__FP19node_create_request(); // 1
+extern "C" void fpcNdRq_Delete__FP19node_create_request(); // 1
+extern "C" static void fpcNdRq_Cancel__FP19node_create_request(); // 1
+extern "C" void fpcNdRq_Handler__Fv(); // 1
+extern "C" static void fpcNdRq_IsPossibleTarget__FP18process_node_class(); // 1
+extern "C" static void fpcNdRq_IsIng__FP18process_node_class(); // 1
+extern "C" static void fpcNdRq_Create__FUl(); // 1
+extern "C" static void fpcNdRq_ChangeNode__FUlP18process_node_classsPv(); // 1
+extern "C" static void fpcNdRq_DeleteNode__FUlP18process_node_class(); // 1
+extern "C" static void fpcNdRq_CreateNode__FUlsPv(); // 1
+extern "C" void fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class(); // 1
+extern "C" static void fpcNdRq_ReChangeNode__FUisPv(); // 1
+extern "C" void fpcNdRq_ReRequest__FUisPv(); // 1
 SECTION_DATA extern u8 l_fpcNdRq_Queue[12];
 SECTION_DATA extern u8 data_803A3A44[100];
 SECTION_DATA extern void*data_803A3AA8[6];
@@ -118,51 +94,51 @@ SECTION_SBSS extern u8 data_80450D4C[4];
 // External References:
 // 
 
-void fpcCtRq_IsCreatingByID(u32);
-void fpcDt_IsComplete();
-void fpcDt_Delete(void*);
-void fpcEx_IsExist(u32);
-void fpcLy_CancelQTo(process_method_tag_class*);
-void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*);
-void fpcLy_CreatingMesg(layer_class*);
-void fpcLy_CreatedMesg(layer_class*);
-void fpcLy_CurrentLayer();
-extern "C" void fpcMtd_Method__FPFPv_iPv();
-extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
-void cTg_SingleCut(create_tag_class*);
-void cTg_Addition(node_list_class*, create_tag_class*);
-void cTg_Create(create_tag_class*, void*);
-void sBs_ClearArea(void*, u32);
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void fpcCtRq_IsCreatingByID(u32); // 2
+void fpcDt_IsComplete(); // 2
+void fpcDt_Delete(void*); // 2
+void fpcEx_IsExist(u32); // 2
+void fpcLy_CancelQTo(process_method_tag_class*); // 2
+void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*); // 2
+void fpcLy_CreatingMesg(layer_class*); // 2
+void fpcLy_CreatedMesg(layer_class*); // 2
+void fpcLy_CurrentLayer(); // 2
+extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
+extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void cTg_SingleCut(create_tag_class*); // 2
+void cTg_Addition(node_list_class*, create_tag_class*); // 2
+void cTg_Create(create_tag_class*, void*); // 2
+void sBs_ClearArea(void*, u32); // 2
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void fpcCtRq_IsCreatingByID__FUi();
-extern "C" void fpcDt_IsComplete__Fv();
-extern "C" void fpcDt_Delete__FPv();
-extern "C" void fpcEx_IsExist__FUi();
-extern "C" void fpcLy_CancelQTo__FP24process_method_tag_class();
-extern "C" void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class();
-extern "C" void fpcLy_CreatingMesg__FP11layer_class();
-extern "C" void fpcLy_CreatedMesg__FP11layer_class();
-extern "C" void fpcLy_CurrentLayer__Fv();
-extern "C" void fpcMtd_Method__FPFPv_iPv();
-extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern "C" void memalignB__3cMlFiUl();
-extern "C" void free__3cMlFPv();
-extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
-extern "C" void cTg_SingleCut__FP16create_tag_class();
-extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern "C" void cTg_Create__FP16create_tag_classPv();
-extern "C" void sBs_ClearArea__FPvUl();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void fpcCtRq_IsCreatingByID__FUi(); // 1
+extern "C" void fpcDt_IsComplete__Fv(); // 1
+extern "C" void fpcDt_Delete__FPv(); // 1
+extern "C" void fpcEx_IsExist__FUi(); // 1
+extern "C" void fpcLy_CancelQTo__FP24process_method_tag_class(); // 1
+extern "C" void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class(); // 1
+extern "C" void fpcLy_CreatingMesg__FP11layer_class(); // 1
+extern "C" void fpcLy_CreatedMesg__FP11layer_class(); // 1
+extern "C" void fpcLy_CurrentLayer__Fv(); // 1
+extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
+extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+extern "C" void memalignB__3cMlFiUl(); // 1
+extern "C" void free__3cMlFPv(); // 1
+extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+extern "C" void cTg_SingleCut__FP16create_tag_class(); // 1
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class(); // 1
+extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
+extern "C" void sBs_ClearArea__FPvUl(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

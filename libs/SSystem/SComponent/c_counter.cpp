@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-void cCt_Counter(int);
+void cCt_Counter(int); // 2
 
-extern "C" void cCt_Counter__Fi();
+extern "C" void cCt_Counter__Fi(); // 1
 SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
 
 // 

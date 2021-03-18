@@ -9,31 +9,13 @@
 // Types:
 // 
 
-// build JUTFader (['JUTFader']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build JUTFader (['JUTFader']) True/False
-struct JUTFader;
-/* top-level dependencies (begin ['JUTFader']) */
-// outer dependency: ('JUtility', 'TColor')
-// outer dependency: ('JUTFader', 'EStatus')
-/* top-level dependencies (end ['JUTFader']) */
 struct JUTFader {
-	// ('JUtility', 'TColor')
-	// ('JUTFader', 'EStatus')
-	// build EStatus (['JUTFader', 'EStatus']) False/False
-	/* dependencies (begin ['JUTFader', 'EStatus']) */
-	/* dependencies (end ['JUTFader', 'EStatus']) */
 	struct EStatus {
 	};
 
@@ -46,20 +28,20 @@ struct JUTFader {
 	/* 802E5840 */ ~JUTFader();
 };
 
-// build JUtility (['JUtility']) True/True
-// build J2DGrafContext (['J2DGrafContext']) False/False
-// build JUtility (['JUtility']) True/True
-/* top-level dependencies (begin ['J2DGrafContext']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['J2DGrafContext']) */
-struct J2DGrafContext {
-	// ('JUtility', 'TColor')
-	/* 802E9118 */ void setColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
 };
 
-// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
-/* top-level dependencies (begin ['J2DOrthoGraph']) */
-/* top-level dependencies (end ['J2DOrthoGraph']) */
+struct J2DGrafContext {
+	/* 802E9118 */ void setColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
+	/* 802E9260 */ void fillBox(JGeometry::TBox2<f32> const&);
+};
+
 struct J2DOrthoGraph {
 	/* 802E9670 */ J2DOrthoGraph();
 };
@@ -69,13 +51,13 @@ struct J2DOrthoGraph {
 // 
 
 
-extern "C" void __ct__8JUTFaderFiiiiQ28JUtility6TColor();
-extern "C" void control__8JUTFaderFv();
-extern "C" void draw__8JUTFaderFv();
-extern "C" void startFadeIn__8JUTFaderFi();
-extern "C" void startFadeOut__8JUTFaderFi();
-extern "C" void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
-extern "C" void __dt__8JUTFaderFv();
+extern "C" void __ct__8JUTFaderFiiiiQ28JUtility6TColor(); // 1
+extern "C" void control__8JUTFaderFv(); // 1
+extern "C" void draw__8JUTFaderFv(); // 1
+extern "C" void startFadeIn__8JUTFaderFi(); // 1
+extern "C" void startFadeOut__8JUTFaderFi(); // 1
+extern "C" void setStatus__8JUTFaderFQ28JUTFader7EStatusi(); // 1
+extern "C" void __dt__8JUTFaderFv(); // 1
 SECTION_DATA extern void*const __vt__8JUTFader[6];
 SECTION_SDATA2 extern f64 lit_2196;
 
@@ -83,13 +65,12 @@ SECTION_SDATA2 extern f64 lit_2196;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void func_802E9260();
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
-extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void func_802E9260();
-extern "C" void __ct__13J2DOrthoGraphFv();
+extern "C" void __dl__FPv(); // 1
+extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void func_802E9260(); // 1
+extern "C" void __ct__13J2DOrthoGraphFv(); // 1
 SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
 SECTION_DATA extern void*const __vt__13J2DOrthoGraph[10];
 

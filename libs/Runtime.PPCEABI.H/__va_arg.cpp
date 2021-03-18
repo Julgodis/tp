@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __va_arg();
+extern "C" void __va_arg(); // 1
 
-extern "C" void __va_arg();
+extern "C" void __va_arg(); // 1
 
 // 
 // External References:

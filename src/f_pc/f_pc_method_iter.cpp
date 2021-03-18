@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i();
+extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i(); // 1
 
-extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i();
+extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
 
 // 
 // Declarations:

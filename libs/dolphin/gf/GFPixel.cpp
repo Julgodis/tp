@@ -9,39 +9,21 @@
 // Types:
 // 
 
-// build _GXFogType (['_GXFogType']) False/False
-/* top-level dependencies (begin ['_GXFogType']) */
-/* top-level dependencies (end ['_GXFogType']) */
 struct _GXFogType {
 };
 
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build _GXBlendMode (['_GXBlendMode']) False/False
-/* top-level dependencies (begin ['_GXBlendMode']) */
-/* top-level dependencies (end ['_GXBlendMode']) */
 struct _GXBlendMode {
 };
 
-// build _GXBlendFactor (['_GXBlendFactor']) False/False
-/* top-level dependencies (begin ['_GXBlendFactor']) */
-/* top-level dependencies (end ['_GXBlendFactor']) */
 struct _GXBlendFactor {
 };
 
-// build _GXLogicOp (['_GXLogicOp']) False/False
-/* top-level dependencies (begin ['_GXLogicOp']) */
-/* top-level dependencies (end ['_GXLogicOp']) */
 struct _GXLogicOp {
 };
 
-// build _GXCompare (['_GXCompare']) False/False
-/* top-level dependencies (begin ['_GXCompare']) */
-/* top-level dependencies (end ['_GXCompare']) */
 struct _GXCompare {
 };
 
@@ -49,13 +31,13 @@ struct _GXCompare {
 // Forward References:
 // 
 
-void GFSetFog(_GXFogType, f32, f32, f32, f32, _GXColor);
-void GFSetBlendModeEtc(_GXBlendMode, _GXBlendFactor, _GXBlendFactor, _GXLogicOp, u8, u8, u8);
-void GFSetZMode(u8, _GXCompare, u8);
+void GFSetFog(_GXFogType, f32, f32, f32, f32, _GXColor); // 2
+void GFSetBlendModeEtc(_GXBlendMode, _GXBlendFactor, _GXBlendFactor, _GXLogicOp, u8, u8, u8); // 2
+void GFSetZMode(u8, _GXCompare, u8); // 2
 
-extern "C" void GFSetFog__F10_GXFogTypeffff8_GXColor();
-extern "C" void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc();
-extern "C" void GFSetZMode__FUc10_GXCompareUc();
+extern "C" void GFSetFog__F10_GXFogTypeffff8_GXColor(); // 1
+extern "C" void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc(); // 1
+extern "C" void GFSetZMode__FUc10_GXCompareUc(); // 1
 SECTION_SDATA2 extern u8 GFPixel__lit_293[4];
 SECTION_SDATA2 extern f32 GFPixel__lit_294;
 SECTION_SDATA2 extern f64 lit_295;
@@ -68,13 +50,13 @@ SECTION_SDATA2 extern f64 GFPixel__lit_301;
 // External References:
 // 
 
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
 // 
 // Declarations:

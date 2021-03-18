@@ -9,125 +9,77 @@
 // Types:
 // 
 
-// build dMeter_menuHIO_c (['dMeter_menuHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_menuHIO_c']) */
-/* top-level dependencies (end ['dMeter_menuHIO_c']) */
 struct dMeter_menuHIO_c {
 	/* 801FE330 */ dMeter_menuHIO_c();
 	/* 8020123C */ ~dMeter_menuHIO_c();
 };
 
-// build dMeter_drawCollectHIO_c (['dMeter_drawCollectHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_drawCollectHIO_c']) */
-/* top-level dependencies (end ['dMeter_drawCollectHIO_c']) */
 struct dMeter_drawCollectHIO_c {
 	/* 801FE348 */ dMeter_drawCollectHIO_c();
 	/* 80200FE0 */ ~dMeter_drawCollectHIO_c();
 };
 
-// build dMeter_drawOptionHIO_c (['dMeter_drawOptionHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_drawOptionHIO_c']) */
-/* top-level dependencies (end ['dMeter_drawOptionHIO_c']) */
 struct dMeter_drawOptionHIO_c {
 	/* 801FE4EC */ dMeter_drawOptionHIO_c();
 	/* 80200F98 */ ~dMeter_drawOptionHIO_c();
 };
 
-// build dMeter_drawLetterHIO_c (['dMeter_drawLetterHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_drawLetterHIO_c']) */
-/* top-level dependencies (end ['dMeter_drawLetterHIO_c']) */
 struct dMeter_drawLetterHIO_c {
 	/* 801FE5CC */ dMeter_drawLetterHIO_c();
 	/* 80200F50 */ ~dMeter_drawLetterHIO_c();
 };
 
-// build dMeter_drawFishingHIO_c (['dMeter_drawFishingHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_drawFishingHIO_c']) */
-/* top-level dependencies (end ['dMeter_drawFishingHIO_c']) */
 struct dMeter_drawFishingHIO_c {
 	/* 801FE730 */ dMeter_drawFishingHIO_c();
 	/* 80200F08 */ ~dMeter_drawFishingHIO_c();
 };
 
-// build dMeter_drawInsectHIO_c (['dMeter_drawInsectHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_drawInsectHIO_c']) */
-/* top-level dependencies (end ['dMeter_drawInsectHIO_c']) */
 struct dMeter_drawInsectHIO_c {
 	/* 801FE8DC */ dMeter_drawInsectHIO_c();
 	/* 80200EC0 */ ~dMeter_drawInsectHIO_c();
 };
 
-// build dMeter_drawCalibrationHIO_c (['dMeter_drawCalibrationHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_drawCalibrationHIO_c']) */
-/* top-level dependencies (end ['dMeter_drawCalibrationHIO_c']) */
 struct dMeter_drawCalibrationHIO_c {
 	/* 801FE954 */ dMeter_drawCalibrationHIO_c();
 	/* 80200E78 */ ~dMeter_drawCalibrationHIO_c();
 };
 
-// build dMeter_drawSkillHIO_c (['dMeter_drawSkillHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_drawSkillHIO_c']) */
-/* top-level dependencies (end ['dMeter_drawSkillHIO_c']) */
 struct dMeter_drawSkillHIO_c {
 	/* 801FE990 */ dMeter_drawSkillHIO_c();
 	/* 80200E30 */ ~dMeter_drawSkillHIO_c();
 };
 
-// build dMeter_drawEmpButtonHIO_c (['dMeter_drawEmpButtonHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_drawEmpButtonHIO_c']) */
-/* top-level dependencies (end ['dMeter_drawEmpButtonHIO_c']) */
 struct dMeter_drawEmpButtonHIO_c {
 	/* 801FEAF0 */ dMeter_drawEmpButtonHIO_c();
 	/* 80200DA0 */ ~dMeter_drawEmpButtonHIO_c();
 };
 
-// build dMeter_drawMiniGameHIO_c (['dMeter_drawMiniGameHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_drawMiniGameHIO_c']) */
-/* top-level dependencies (end ['dMeter_drawMiniGameHIO_c']) */
 struct dMeter_drawMiniGameHIO_c {
 	/* 801FEFF0 */ dMeter_drawMiniGameHIO_c();
 	/* 80200DE8 */ ~dMeter_drawMiniGameHIO_c();
 };
 
-// build dMeter_drawLightDropHIO_c (['dMeter_drawLightDropHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_drawLightDropHIO_c']) */
-/* top-level dependencies (end ['dMeter_drawLightDropHIO_c']) */
 struct dMeter_drawLightDropHIO_c {
 	/* 801FF31C */ dMeter_drawLightDropHIO_c();
 	/* 80200D58 */ ~dMeter_drawLightDropHIO_c();
 };
 
-// build dMeter_drawHIO_c (['dMeter_drawHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_drawHIO_c']) */
-/* top-level dependencies (end ['dMeter_drawHIO_c']) */
 struct dMeter_drawHIO_c {
 	/* 801FF5B8 */ dMeter_drawHIO_c();
 	/* 80201128 */ ~dMeter_drawHIO_c();
 };
 
-// build dMeter_ringHIO_c (['dMeter_ringHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_ringHIO_c']) */
-/* top-level dependencies (end ['dMeter_ringHIO_c']) */
 struct dMeter_ringHIO_c {
 	/* 802001AC */ dMeter_ringHIO_c();
 	/* 802010E0 */ ~dMeter_ringHIO_c();
 };
 
-// build dMeter_mapIconHIO_c (['dMeter_mapIconHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_mapIconHIO_c']) */
-/* top-level dependencies (end ['dMeter_mapIconHIO_c']) */
 struct dMeter_mapIconHIO_c {
 	/* 802004B4 */ dMeter_mapIconHIO_c();
 	/* 80201028 */ ~dMeter_mapIconHIO_c();
 };
 
-// build dMeter_fmapHIO_c (['dMeter_fmapHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_fmapHIO_c']) */
-/* top-level dependencies (end ['dMeter_fmapHIO_c']) */
 struct dMeter_fmapHIO_c {
-	// build MapBlinkAnime (['dMeter_fmapHIO_c', 'MapBlinkAnime']) False/False
-	/* dependencies (begin ['dMeter_fmapHIO_c', 'MapBlinkAnime']) */
-	/* dependencies (end ['dMeter_fmapHIO_c', 'MapBlinkAnime']) */
 	struct MapBlinkAnime {
 		/* 80201070 */ MapBlinkAnime();
 	};
@@ -136,38 +88,23 @@ struct dMeter_fmapHIO_c {
 	/* 80200BCC */ ~dMeter_fmapHIO_c();
 };
 
-// build dMeter_cursorHIO_c (['dMeter_cursorHIO_c']) False/False
-/* top-level dependencies (begin ['dMeter_cursorHIO_c']) */
-/* top-level dependencies (end ['dMeter_cursorHIO_c']) */
 struct dMeter_cursorHIO_c {
 	/* 80200CD4 */ dMeter_cursorHIO_c();
 	/* 80201098 */ ~dMeter_cursorHIO_c();
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 	/* 800125DC */ cXyz();
 };
 
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 		/* 80193960 */ TColor();
 	};
 
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE548 */ void free(void*);
 };
@@ -176,42 +113,42 @@ struct JKRHeap {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_meter_HIO_cpp();
+extern "C" void __sinit_d_meter_HIO_cpp(); // 1
 
-extern "C" void __ct__16dMeter_menuHIO_cFv();
-extern "C" void __ct__23dMeter_drawCollectHIO_cFv();
-extern "C" void __ct__22dMeter_drawOptionHIO_cFv();
-extern "C" void __ct__22dMeter_drawLetterHIO_cFv();
-extern "C" void __ct__23dMeter_drawFishingHIO_cFv();
-extern "C" void __ct__22dMeter_drawInsectHIO_cFv();
-extern "C" void __ct__27dMeter_drawCalibrationHIO_cFv();
-extern "C" void __ct__21dMeter_drawSkillHIO_cFv();
-extern "C" void __ct__25dMeter_drawEmpButtonHIO_cFv();
-extern "C" void __ct__24dMeter_drawMiniGameHIO_cFv();
-extern "C" void __ct__25dMeter_drawLightDropHIO_cFv();
-extern "C" void __ct__16dMeter_drawHIO_cFv();
-extern "C" void __ct__16dMeter_ringHIO_cFv();
-extern "C" void __ct__19dMeter_mapIconHIO_cFv();
-extern "C" void __ct__16dMeter_fmapHIO_cFv();
-extern "C" void __dt__16dMeter_fmapHIO_cFv();
-extern "C" void __ct__18dMeter_cursorHIO_cFv();
-extern "C" void __dt__25dMeter_drawLightDropHIO_cFv();
-extern "C" void __dt__25dMeter_drawEmpButtonHIO_cFv();
-extern "C" void __dt__24dMeter_drawMiniGameHIO_cFv();
-extern "C" void __dt__21dMeter_drawSkillHIO_cFv();
-extern "C" void __dt__27dMeter_drawCalibrationHIO_cFv();
-extern "C" void __dt__22dMeter_drawInsectHIO_cFv();
-extern "C" void __dt__23dMeter_drawFishingHIO_cFv();
-extern "C" void __dt__22dMeter_drawLetterHIO_cFv();
-extern "C" void __dt__22dMeter_drawOptionHIO_cFv();
-extern "C" void __dt__23dMeter_drawCollectHIO_cFv();
-extern "C" void __dt__19dMeter_mapIconHIO_cFv();
-extern "C" void __ct__Q216dMeter_fmapHIO_c13MapBlinkAnimeFv();
-extern "C" void __dt__18dMeter_cursorHIO_cFv();
-extern "C" void __dt__16dMeter_ringHIO_cFv();
-extern "C" void __dt__16dMeter_drawHIO_cFv();
-extern "C" void __dt__16dMeter_menuHIO_cFv();
-extern "C" void __sinit_d_meter_HIO_cpp();
+extern "C" void __ct__16dMeter_menuHIO_cFv(); // 1
+extern "C" void __ct__23dMeter_drawCollectHIO_cFv(); // 1
+extern "C" void __ct__22dMeter_drawOptionHIO_cFv(); // 1
+extern "C" void __ct__22dMeter_drawLetterHIO_cFv(); // 1
+extern "C" void __ct__23dMeter_drawFishingHIO_cFv(); // 1
+extern "C" void __ct__22dMeter_drawInsectHIO_cFv(); // 1
+extern "C" void __ct__27dMeter_drawCalibrationHIO_cFv(); // 1
+extern "C" void __ct__21dMeter_drawSkillHIO_cFv(); // 1
+extern "C" void __ct__25dMeter_drawEmpButtonHIO_cFv(); // 1
+extern "C" void __ct__24dMeter_drawMiniGameHIO_cFv(); // 1
+extern "C" void __ct__25dMeter_drawLightDropHIO_cFv(); // 1
+extern "C" void __ct__16dMeter_drawHIO_cFv(); // 1
+extern "C" void __ct__16dMeter_ringHIO_cFv(); // 1
+extern "C" void __ct__19dMeter_mapIconHIO_cFv(); // 1
+extern "C" void __ct__16dMeter_fmapHIO_cFv(); // 1
+extern "C" void __dt__16dMeter_fmapHIO_cFv(); // 1
+extern "C" void __ct__18dMeter_cursorHIO_cFv(); // 1
+extern "C" void __dt__25dMeter_drawLightDropHIO_cFv(); // 1
+extern "C" void __dt__25dMeter_drawEmpButtonHIO_cFv(); // 1
+extern "C" void __dt__24dMeter_drawMiniGameHIO_cFv(); // 1
+extern "C" void __dt__21dMeter_drawSkillHIO_cFv(); // 1
+extern "C" void __dt__27dMeter_drawCalibrationHIO_cFv(); // 1
+extern "C" void __dt__22dMeter_drawInsectHIO_cFv(); // 1
+extern "C" void __dt__23dMeter_drawFishingHIO_cFv(); // 1
+extern "C" void __dt__22dMeter_drawLetterHIO_cFv(); // 1
+extern "C" void __dt__22dMeter_drawOptionHIO_cFv(); // 1
+extern "C" void __dt__23dMeter_drawCollectHIO_cFv(); // 1
+extern "C" void __dt__19dMeter_mapIconHIO_cFv(); // 1
+extern "C" void __ct__Q216dMeter_fmapHIO_c13MapBlinkAnimeFv(); // 1
+extern "C" void __dt__18dMeter_cursorHIO_cFv(); // 1
+extern "C" void __dt__16dMeter_ringHIO_cFv(); // 1
+extern "C" void __dt__16dMeter_drawHIO_cFv(); // 1
+extern "C" void __dt__16dMeter_menuHIO_cFv(); // 1
+extern "C" void __sinit_d_meter_HIO_cpp(); // 1
 SECTION_RODATA extern const u8 data_80397E50[24];
 SECTION_RODATA extern const u8 data_80397E68[24];
 SECTION_RODATA extern const u8 data_80397E80[24];
@@ -417,29 +354,29 @@ SECTION_SDATA2 extern f32 d_meter_d_meter_HIO__lit_4489;
 // External References:
 // 
 
-void mDoExt_getGameHeap();
-void operator delete(void*);
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_18();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_18();
-extern "C" void _restgpr_29();
+void mDoExt_getGameHeap(); // 2
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_18(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dt__4cXyzFv();
-extern "C" void mDoExt_getGameHeap__Fv();
-extern "C" void __ct__4cXyzFv();
-extern "C" void __ct__Q28JUtility6TColorFv();
-extern "C" void free__7JKRHeapFPv();
-extern "C" void __dl__FPv();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void __construct_array();
-extern "C" void _savegpr_18();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_18();
-extern "C" void _restgpr_29();
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void mDoExt_getGameHeap__Fv(); // 1
+extern "C" void __ct__4cXyzFv(); // 1
+extern "C" void __ct__Q28JUtility6TColorFv(); // 1
+extern "C" void free__7JKRHeapFPv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_18(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

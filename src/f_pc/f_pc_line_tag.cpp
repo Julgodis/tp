@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build line_tag (['line_tag']) False/False
-/* top-level dependencies (begin ['line_tag']) */
-/* top-level dependencies (end ['line_tag']) */
 struct line_tag {
 };
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build node_lists_tree_class (['node_lists_tree_class']) False/False
-/* top-level dependencies (begin ['node_lists_tree_class']) */
-/* top-level dependencies (end ['node_lists_tree_class']) */
 struct node_lists_tree_class {
 };
 
@@ -31,27 +22,27 @@ struct node_lists_tree_class {
 // Forward References:
 // 
 
-void fpcLnTg_Move(line_tag*, int);
-void fpcLnTg_QueueTo(line_tag*);
-void fpcLnTg_ToQueue(line_tag*, int);
-void fpcLnTg_Init(line_tag*, void*);
+void fpcLnTg_Move(line_tag*, int); // 2
+void fpcLnTg_QueueTo(line_tag*); // 2
+void fpcLnTg_ToQueue(line_tag*, int); // 2
+void fpcLnTg_Init(line_tag*, void*); // 2
 
-extern "C" void fpcLnTg_Move__FP8line_tagi();
-extern "C" void fpcLnTg_QueueTo__FP8line_tag();
-extern "C" void fpcLnTg_ToQueue__FP8line_tagi();
-extern "C" void fpcLnTg_Init__FP8line_tagPv();
+extern "C" void fpcLnTg_Move__FP8line_tagi(); // 1
+extern "C" void fpcLnTg_QueueTo__FP8line_tag(); // 1
+extern "C" void fpcLnTg_ToQueue__FP8line_tagi(); // 1
+extern "C" void fpcLnTg_Init__FP8line_tagPv(); // 1
 
 // 
 // External References:
 // 
 
-void cTg_SingleCutFromTree(create_tag_class*);
-void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*);
-void cTg_Create(create_tag_class*, void*);
+void cTg_SingleCutFromTree(create_tag_class*); // 2
+void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*); // 2
+void cTg_Create(create_tag_class*, void*); // 2
 
-extern "C" void cTg_SingleCutFromTree__FP16create_tag_class();
-extern "C" void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
-extern "C" void cTg_Create__FP16create_tag_classPv();
+extern "C" void cTg_SingleCutFromTree__FP16create_tag_class(); // 1
+extern "C" void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class(); // 1
+extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
 SECTION_SDATA extern void*g_fpcLn_Queue[2];
 
 // 

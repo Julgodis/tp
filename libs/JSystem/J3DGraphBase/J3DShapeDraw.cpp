@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build J3DShapeDraw (['J3DShapeDraw']) False/False
-/* top-level dependencies (begin ['J3DShapeDraw']) */
-/* top-level dependencies (end ['J3DShapeDraw']) */
 struct J3DShapeDraw {
 	/* 80314924 */ void countVertex(u32);
 	/* 80314974 */ void addTexMtxIndexInDL(u32, u32, u32);
@@ -25,32 +22,32 @@ struct J3DShapeDraw {
 // 
 
 
-extern "C" void countVertex__12J3DShapeDrawFUl();
-extern "C" void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl();
-extern "C" void __ct__12J3DShapeDrawFPCUcUl();
-extern "C" void draw__12J3DShapeDrawCFv();
-extern "C" void __dt__12J3DShapeDrawFv();
+extern "C" void countVertex__12J3DShapeDrawFUl(); // 1
+extern "C" void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl(); // 1
+extern "C" void __ct__12J3DShapeDrawFPCUcUl(); // 1
+extern "C" void draw__12J3DShapeDrawCFv(); // 1
+extern "C" void __dt__12J3DShapeDrawFv(); // 1
 SECTION_DATA extern void*const __vt__12J3DShapeDraw[4];
 
 // 
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-void* operator new[](u32, int);
-void operator delete(void*);
-extern "C" void DCStoreRange();
-extern "C" void GXCallDisplayList();
-extern "C" void _savegpr_18();
-extern "C" void _restgpr_18();
+SECTION_INIT void memcpy(); // 1
+void* operator new[](u32, int); // 2
+void operator delete(void*); // 2
+extern "C" void DCStoreRange(); // 1
+extern "C" void GXCallDisplayList(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _restgpr_18(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void* __nwa__FUli();
-extern "C" void __dl__FPv();
-extern "C" void DCStoreRange();
-extern "C" void GXCallDisplayList();
-extern "C" void _savegpr_18();
-extern "C" void _restgpr_18();
+SECTION_INIT void memcpy(); // 1
+extern "C" void* __nwa__FUli(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void DCStoreRange(); // 1
+extern "C" void GXCallDisplayList(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _restgpr_18(); // 1
 
 // 
 // Declarations:

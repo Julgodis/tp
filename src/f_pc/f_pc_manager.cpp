@@ -9,74 +9,41 @@
 // Types:
 // 
 
-// build base_process_class (['base_process_class']) False/False
-/* top-level dependencies (begin ['base_process_class']) */
-/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build layer_class (['layer_class']) False/False
-/* top-level dependencies (begin ['layer_class']) */
-/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
-// build dComIfG_play_c (['dComIfG_play_c']) False/False
-/* top-level dependencies (begin ['dComIfG_play_c']) */
-/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002CAC4 */ void drawSimpleModel();
 };
 
-// build dLib_time_c (['dLib_time_c']) False/False
-/* top-level dependencies (begin ['dLib_time_c']) */
-/* top-level dependencies (end ['dLib_time_c']) */
 struct dLib_time_c {
 	/* 80032880 */ void stopTime();
 	/* 800328BC */ void startTime();
 };
 
-// build dDlst_peekZ_c (['dDlst_peekZ_c']) False/False
-/* top-level dependencies (begin ['dDlst_peekZ_c']) */
-/* top-level dependencies (end ['dDlst_peekZ_c']) */
 struct dDlst_peekZ_c {
 	/* 80056080 */ void peekData();
 };
 
-// build dDvdErrorMsg_c (['dDvdErrorMsg_c']) False/False
-/* top-level dependencies (begin ['dDvdErrorMsg_c']) */
-/* top-level dependencies (end ['dDvdErrorMsg_c']) */
 struct dDvdErrorMsg_c {
 	/* 8009D354 */ void execute();
 };
 
-// build dShutdownErrorMsg_c (['dShutdownErrorMsg_c']) False/False
-/* top-level dependencies (begin ['dShutdownErrorMsg_c']) */
-/* top-level dependencies (end ['dShutdownErrorMsg_c']) */
 struct dShutdownErrorMsg_c {
 	/* 8009D790 */ void execute();
 };
 
-// build Z2SoundMgr (['Z2SoundMgr']) False/False
-/* top-level dependencies (begin ['Z2SoundMgr']) */
-/* top-level dependencies (end ['Z2SoundMgr']) */
 struct Z2SoundMgr {
 	/* 802AA6B0 */ void pauseAllGameSound(bool);
 };
 
-// build JUTGamePad (['JUTGamePad']) False/False
-/* top-level dependencies (begin ['JUTGamePad']) */
-/* top-level dependencies (end ['JUTGamePad']) */
 struct JUTGamePad {
-	// build CRumble (['JUTGamePad', 'CRumble']) False/False
-	/* dependencies (begin ['JUTGamePad', 'CRumble']) */
-	/* dependencies (end ['JUTGamePad', 'CRumble']) */
 	struct CRumble {
 		/* 802E1948 */ void stopPatternedRumble(s16);
 	};
@@ -87,31 +54,31 @@ struct JUTGamePad {
 // Forward References:
 // 
 
-void fpcM_Draw(void*);
-extern "C" static void fpcM_DrawIterater__FPFPvPv_i();
-static void fpcM_Execute(void*);
-void fpcM_Delete(void*);
-void fpcM_IsCreating(u32);
-extern "C" void fpcM_Management__FPFv_vPFv_v();
-void fpcM_Init();
-extern "C" void fpcM_FastCreate__FsPFPv_iPvPv();
-void fpcM_IsPause(void*, u8);
-void fpcM_PauseEnable(void*, u8);
-void fpcM_PauseDisable(void*, u8);
-extern "C" void fpcM_JudgeInLayer__FUiPFPvPv_PvPv();
+void fpcM_Draw(void*); // 2
+extern "C" static void fpcM_DrawIterater__FPFPvPv_i(); // 1
+static void fpcM_Execute(void*); // 2
+void fpcM_Delete(void*); // 2
+void fpcM_IsCreating(u32); // 2
+extern "C" void fpcM_Management__FPFv_vPFv_v(); // 1
+void fpcM_Init(); // 2
+extern "C" void fpcM_FastCreate__FsPFPv_iPvPv(); // 1
+void fpcM_IsPause(void*, u8); // 2
+void fpcM_PauseEnable(void*, u8); // 2
+void fpcM_PauseDisable(void*, u8); // 2
+extern "C" void fpcM_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
 
-extern "C" void fpcM_Draw__FPv();
-extern "C" static void fpcM_DrawIterater__FPFPvPv_i();
-extern "C" static void fpcM_Execute__FPv();
-extern "C" void fpcM_Delete__FPv();
-extern "C" void fpcM_IsCreating__FUi();
-extern "C" void fpcM_Management__FPFv_vPFv_v();
-extern "C" void fpcM_Init__Fv();
-extern "C" void fpcM_FastCreate__FsPFPv_iPvPv();
-extern "C" void fpcM_IsPause__FPvUc();
-extern "C" void fpcM_PauseEnable__FPvUc();
-extern "C" void fpcM_PauseDisable__FPvUc();
-extern "C" void fpcM_JudgeInLayer__FUiPFPvPv_PvPv();
+extern "C" void fpcM_Draw__FPv(); // 1
+extern "C" static void fpcM_DrawIterater__FPFPvPv_i(); // 1
+extern "C" static void fpcM_Execute__FPv(); // 1
+extern "C" void fpcM_Delete__FPv(); // 1
+extern "C" void fpcM_IsCreating__FUi(); // 1
+extern "C" void fpcM_Management__FPFv_vPFv_v(); // 1
+extern "C" void fpcM_Init__Fv(); // 1
+extern "C" void fpcM_FastCreate__FsPFPv_iPvPv(); // 1
+extern "C" void fpcM_IsPause__FPvUc(); // 1
+extern "C" void fpcM_PauseEnable__FPvUc(); // 1
+extern "C" void fpcM_PauseDisable__FPvUc(); // 1
+extern "C" void fpcM_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
 SECTION_BSS extern u8 data_803F4DB0[44];
 SECTION_BSS extern u8 data_803F4DDC[120 + 4 /* padding */];
 
@@ -119,65 +86,65 @@ SECTION_BSS extern u8 data_803F4DDC[120 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv();
-void fpcCt_IsCreatingByID(u32);
-void fpcCt_Handler();
-void fpcDt_Handler();
-void fpcDt_Delete(void*);
-void fpcEx_Execute(base_process_class*);
-extern "C" void fpcEx_Handler__FPFPvPv_i();
-void fpcLy_RootLayer();
-void fpcLy_CurrentLayer();
-void fpcLy_Layer(u32);
-void fpcLy_Create(layer_class*, void*, node_list_class*, int);
-extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
-extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv();
-void fpcLn_Create();
-void fpcPi_Handler();
-void fpcPause_IsEnable(void*, u8);
-void fpcPause_Enable(void*, u8);
-void fpcPause_Disable(void*, u8);
-void fpcDw_Execute(base_process_class*);
-extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
-extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-void cAPIGph_Painter();
-void MtxInit();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
+void fpcCt_IsCreatingByID(u32); // 2
+void fpcCt_Handler(); // 2
+void fpcDt_Handler(); // 2
+void fpcDt_Delete(void*); // 2
+void fpcEx_Execute(base_process_class*); // 2
+extern "C" void fpcEx_Handler__FPFPvPv_i(); // 1
+void fpcLy_RootLayer(); // 2
+void fpcLy_CurrentLayer(); // 2
+void fpcLy_Layer(u32); // 2
+void fpcLy_Create(layer_class*, void*, node_list_class*, int); // 2
+extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
+extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv(); // 1
+void fpcLn_Create(); // 2
+void fpcPi_Handler(); // 2
+void fpcPause_IsEnable(void*, u8); // 2
+void fpcPause_Enable(void*, u8); // 2
+void fpcPause_Disable(void*, u8); // 2
+void fpcDw_Execute(base_process_class*); // 2
+extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i(); // 1
+extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+void cAPIGph_Painter(); // 2
+void MtxInit(); // 2
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv();
-extern "C" void fpcCt_IsCreatingByID__FUi();
-extern "C" void fpcCt_Handler__Fv();
-extern "C" void fpcDt_Handler__Fv();
-extern "C" void fpcDt_Delete__FPv();
-extern "C" void fpcEx_Execute__FP18base_process_class();
-extern "C" void fpcEx_Handler__FPFPvPv_i();
-extern "C" void fpcLy_RootLayer__Fv();
-extern "C" void fpcLy_CurrentLayer__Fv();
-extern "C" void fpcLy_Layer__FUi();
-extern "C" void fpcLy_Create__FP11layer_classPvP15node_list_classi();
-extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
-extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv();
-extern "C" void fpcLn_Create__Fv();
-extern "C" void fpcPi_Handler__Fv();
-extern "C" void fpcPause_IsEnable__FPvUc();
-extern "C" void fpcPause_Enable__FPvUc();
-extern "C" void fpcPause_Disable__FPvUc();
-extern "C" void fpcDw_Execute__FP18base_process_class();
-extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
-extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern "C" void drawSimpleModel__14dComIfG_play_cFv();
-extern "C" void stopTime__11dLib_time_cFv();
-extern "C" void startTime__11dLib_time_cFv();
-extern "C" void peekData__13dDlst_peekZ_cFv();
-extern "C" void execute__14dDvdErrorMsg_cFv();
-extern "C" void execute__19dShutdownErrorMsg_cFv();
-extern "C" void cAPIGph_Painter__Fv();
-extern "C" void MtxInit__Fv();
-extern "C" void pauseAllGameSound__10Z2SoundMgrFb();
-extern "C" void stopPatternedRumble__Q210JUTGamePad7CRumbleFs();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_28();
+extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
+extern "C" void fpcCt_IsCreatingByID__FUi(); // 1
+extern "C" void fpcCt_Handler__Fv(); // 1
+extern "C" void fpcDt_Handler__Fv(); // 1
+extern "C" void fpcDt_Delete__FPv(); // 1
+extern "C" void fpcEx_Execute__FP18base_process_class(); // 1
+extern "C" void fpcEx_Handler__FPFPvPv_i(); // 1
+extern "C" void fpcLy_RootLayer__Fv(); // 1
+extern "C" void fpcLy_CurrentLayer__Fv(); // 1
+extern "C" void fpcLy_Layer__FUi(); // 1
+extern "C" void fpcLy_Create__FP11layer_classPvP15node_list_classi(); // 1
+extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
+extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv(); // 1
+extern "C" void fpcLn_Create__Fv(); // 1
+extern "C" void fpcPi_Handler__Fv(); // 1
+extern "C" void fpcPause_IsEnable__FPvUc(); // 1
+extern "C" void fpcPause_Enable__FPvUc(); // 1
+extern "C" void fpcPause_Disable__FPvUc(); // 1
+extern "C" void fpcDw_Execute__FP18base_process_class(); // 1
+extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i(); // 1
+extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+extern "C" void drawSimpleModel__14dComIfG_play_cFv(); // 1
+extern "C" void stopTime__11dLib_time_cFv(); // 1
+extern "C" void startTime__11dLib_time_cFv(); // 1
+extern "C" void peekData__13dDlst_peekZ_cFv(); // 1
+extern "C" void execute__14dDvdErrorMsg_cFv(); // 1
+extern "C" void execute__19dShutdownErrorMsg_cFv(); // 1
+extern "C" void cAPIGph_Painter__Fv(); // 1
+extern "C" void MtxInit__Fv(); // 1
+extern "C" void pauseAllGameSound__10Z2SoundMgrFb(); // 1
+extern "C" void stopPatternedRumble__Q210JUTGamePad7CRumbleFs(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_BSS extern u8 m_gamePad__8mDoCPd_c[16];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SBSS extern u8 data_80450B60[4];

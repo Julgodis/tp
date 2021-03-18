@@ -9,15 +9,15 @@
 // Forward References:
 // 
 
-extern "C" void TRKAccessFile();
-extern "C" void TRKOpenFile();
-extern "C" void TRKCloseFile();
-extern "C" void TRKPositionFile();
+extern "C" void TRKAccessFile(); // 1
+extern "C" void TRKOpenFile(); // 1
+extern "C" void TRKCloseFile(); // 1
+extern "C" void TRKPositionFile(); // 1
 
-extern "C" void TRKAccessFile();
-extern "C" void TRKOpenFile();
-extern "C" void TRKCloseFile();
-extern "C" void TRKPositionFile();
+extern "C" void TRKAccessFile(); // 1
+extern "C" void TRKOpenFile(); // 1
+extern "C" void TRKCloseFile(); // 1
+extern "C" void TRKPositionFile(); // 1
 
 // 
 // External References:

@@ -9,25 +9,17 @@
 // Types:
 // 
 
-// build JKRDvdFile (['JKRDvdFile']) False/False
-// build DVDFileInfo (['DVDFileInfo']) False/False
-/* top-level dependencies (begin ['DVDFileInfo']) */
-/* top-level dependencies (end ['DVDFileInfo']) */
 struct DVDFileInfo {
 };
 
-/* top-level dependencies (begin ['JKRDvdFile']) */
-// outer dependency: ('DVDFileInfo',)
-/* top-level dependencies (end ['JKRDvdFile']) */
 struct JKRDvdFile {
-	// ('DVDFileInfo',)
+	/* 802D96A0 */ JKRDvdFile(s32);
 	/* 802D9584 */ JKRDvdFile();
 	/* 802D95F8 */ JKRDvdFile(char const*);
-	/* 802D96A0 */ JKRDvdFile(s32);
 	/* 802D9748 */ ~JKRDvdFile();
 	/* 802D97E4 */ void initiate();
-	/* 802D9850 */ void open(char const*);
 	/* 802D98C4 */ void open(s32);
+	/* 802D9850 */ void open(char const*);
 	/* 802D9938 */ void close();
 	/* 802D99B4 */ void readData(void*, s32, s32);
 	/* 802D9A68 */ s32 writeData(void const*, s32, s32);
@@ -36,39 +28,30 @@ struct JKRDvdFile {
 	/* 802D9AF8 */ void getFileSize() const;
 };
 
-// build DVDFileInfo (['DVDFileInfo']) True/True
-// build JKRDisposer (['JKRDisposer']) False/False
-/* top-level dependencies (begin ['JKRDisposer']) */
-/* top-level dependencies (end ['JKRDisposer']) */
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRDvdFile> */
+struct JSUList__template8 {
+	/* 802D9B44 */ ~JSUList__template8();
+};
+
 struct JKRDisposer {
 	/* 802D147C */ JKRDisposer();
 	/* 802D14E4 */ ~JKRDisposer();
 };
 
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBDFC */ JSUPtrLink(void*);
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) True/True
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
 	/* 802DC15C */ void remove(JSUPtrLink*);
 };
 
-// build JUTException (['JUTException']) False/False
-/* top-level dependencies (begin ['JUTException']) */
-/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
@@ -77,24 +60,23 @@ struct JUTException {
 // Forward References:
 // 
 
-extern "C" void __sinit_JKRDvdFile_cpp();
-extern "C" static void func_802D9B44();
+extern "C" void __sinit_JKRDvdFile_cpp(); // 1
 
-extern "C" void __ct__10JKRDvdFileFv();
-extern "C" void __ct__10JKRDvdFileFPCc();
-extern "C" void __ct__10JKRDvdFileFl();
-extern "C" void __dt__10JKRDvdFileFv();
-extern "C" void initiate__10JKRDvdFileFv();
-extern "C" void open__10JKRDvdFileFPCc();
-extern "C" void open__10JKRDvdFileFl();
-extern "C" void close__10JKRDvdFileFv();
-extern "C" void readData__10JKRDvdFileFPvll();
-extern "C" s32 writeData__10JKRDvdFileFPCvll();
-extern "C" void sync__10JKRDvdFileFv();
-extern "C" void doneProcess__10JKRDvdFileFlP11DVDFileInfo();
-extern "C" void getFileSize__10JKRDvdFileCFv();
-extern "C" void __sinit_JKRDvdFile_cpp();
-extern "C" static void func_802D9B44();
+extern "C" void __ct__10JKRDvdFileFv(); // 1
+extern "C" void __ct__10JKRDvdFileFPCc(); // 1
+extern "C" void __ct__10JKRDvdFileFl(); // 1
+extern "C" void __dt__10JKRDvdFileFv(); // 1
+extern "C" void initiate__10JKRDvdFileFv(); // 1
+extern "C" void open__10JKRDvdFileFPCc(); // 1
+extern "C" void open__10JKRDvdFileFl(); // 1
+extern "C" void close__10JKRDvdFileFv(); // 1
+extern "C" void readData__10JKRDvdFileFPvll(); // 1
+extern "C" s32 writeData__10JKRDvdFileFPCvll(); // 1
+extern "C" void sync__10JKRDvdFileFv(); // 1
+extern "C" void doneProcess__10JKRDvdFileFlP11DVDFileInfo(); // 1
+extern "C" void getFileSize__10JKRDvdFileCFv(); // 1
+extern "C" void __sinit_JKRDvdFile_cpp(); // 1
+extern "C" void func_802D9B44(); // 1
 SECTION_RODATA extern const u8 JKRDvdFile__stringBase0[48];
 SECTION_DATA extern void*const __vt__10JKRDvdFile[10];
 SECTION_BSS extern u8 lit_657[12];
@@ -104,52 +86,52 @@ SECTION_BSS extern u8 sDvdList__10JKRDvdFile[12];
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void OSInitMessageQueue();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void OSGetCurrentThread();
-extern "C" void DVDFastOpen();
-extern "C" void DVDOpen();
-extern "C" void DVDClose();
-extern "C" void DVDReadAsyncPrio();
-extern "C" void DVDGetCommandBlockStatus();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void DVDFastOpen(); // 1
+extern "C" void DVDOpen(); // 1
+extern "C" void DVDClose(); // 1
+extern "C" void DVDReadAsyncPrio(); // 1
+extern "C" void DVDGetCommandBlockStatus(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dl__FPv();
-extern "C" void __ct__11JKRDisposerFv();
-extern "C" void __dt__11JKRDisposerFv();
-extern "C" void __ct__10JSUPtrLinkFPv();
-extern "C" void __dt__10JSUPtrLinkFv();
-extern "C" void __dt__10JSUPtrListFv();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
-extern "C" void OSInitMessageQueue();
-extern "C" void OSSendMessage();
-extern "C" void OSReceiveMessage();
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void OSGetCurrentThread();
-extern "C" void DVDFastOpen();
-extern "C" void DVDOpen();
-extern "C" void DVDClose();
-extern "C" void DVDReadAsyncPrio();
-extern "C" void DVDGetCommandBlockStatus();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__11JKRDisposerFv(); // 1
+extern "C" void __dt__11JKRDisposerFv(); // 1
+extern "C" void __ct__10JSUPtrLinkFPv(); // 1
+extern "C" void __dt__10JSUPtrLinkFv(); // 1
+extern "C" void __dt__10JSUPtrListFv(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
+extern "C" void OSInitMessageQueue(); // 1
+extern "C" void OSSendMessage(); // 1
+extern "C" void OSReceiveMessage(); // 1
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void DVDFastOpen(); // 1
+extern "C" void DVDOpen(); // 1
+extern "C" void DVDClose(); // 1
+extern "C" void DVDReadAsyncPrio(); // 1
+extern "C" void DVDGetCommandBlockStatus(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__7JKRFile[8];
 
 // 
@@ -344,7 +326,7 @@ extern "C" asm void __sinit_JKRDvdFile_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802D9B44() {
+asm JSUList__template8::~JSUList__template8() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdFile/func_802D9B44.s"
 }

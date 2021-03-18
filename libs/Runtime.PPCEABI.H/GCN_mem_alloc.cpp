@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __sys_free();
+extern "C" void __sys_free(); // 1
 
-extern "C" void __sys_free();
+extern "C" void __sys_free(); // 1
 SECTION_RODATA extern const u8 lit_55[54 + 2 /* padding */];
 SECTION_RODATA extern const u8 GCN_mem_alloc__lit_56[57 + 7 /* padding */];
 
@@ -19,23 +19,23 @@ SECTION_RODATA extern const u8 GCN_mem_alloc__lit_56[57 + 7 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport();
-extern "C" void OSFreeToHeap();
-extern "C" void OSSetCurrentHeap();
-extern "C" void OSInitAlloc();
-extern "C" void OSCreateHeap();
-extern "C" void OSGetArenaHi();
-extern "C" void OSGetArenaLo();
-extern "C" void OSSetArenaLo();
+extern "C" void OSReport(); // 1
+extern "C" void OSFreeToHeap(); // 1
+extern "C" void OSSetCurrentHeap(); // 1
+extern "C" void OSInitAlloc(); // 1
+extern "C" void OSCreateHeap(); // 1
+extern "C" void OSGetArenaHi(); // 1
+extern "C" void OSGetArenaLo(); // 1
+extern "C" void OSSetArenaLo(); // 1
 
-extern "C" void OSReport();
-extern "C" void OSFreeToHeap();
-extern "C" void OSSetCurrentHeap();
-extern "C" void OSInitAlloc();
-extern "C" void OSCreateHeap();
-extern "C" void OSGetArenaHi();
-extern "C" void OSGetArenaLo();
-extern "C" void OSSetArenaLo();
+extern "C" void OSReport(); // 1
+extern "C" void OSFreeToHeap(); // 1
+extern "C" void OSSetCurrentHeap(); // 1
+extern "C" void OSInitAlloc(); // 1
+extern "C" void OSCreateHeap(); // 1
+extern "C" void OSGetArenaHi(); // 1
+extern "C" void OSGetArenaLo(); // 1
+extern "C" void OSSetArenaLo(); // 1
 SECTION_SDATA extern u32 __OSCurrHeap;
 
 // 

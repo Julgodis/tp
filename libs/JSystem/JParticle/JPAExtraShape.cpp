@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
-/* top-level dependencies (begin ['JPAEmitterWorkData']) */
-/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPABaseParticle (['JPABaseParticle']) False/False
-/* top-level dependencies (begin ['JPABaseParticle']) */
-/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
 };
 
-// build JPAExtraShape (['JPAExtraShape']) False/False
-/* top-level dependencies (begin ['JPAExtraShape']) */
-/* top-level dependencies (end ['JPAExtraShape']) */
 struct JPAExtraShape {
 	/* 8027AD88 */ JPAExtraShape(u8 const*);
 	/* 8027ADBC */ void init();
@@ -33,29 +24,29 @@ struct JPAExtraShape {
 // Forward References:
 // 
 
-void JPACalcScaleX(JPAEmitterWorkData*, JPABaseParticle*);
-void JPACalcScaleY(JPAEmitterWorkData*, JPABaseParticle*);
-void JPACalcScaleCopy(JPAEmitterWorkData*, JPABaseParticle*);
-void JPACalcScaleAnmNormal(JPAEmitterWorkData*, JPABaseParticle*);
-void JPACalcScaleAnmRepeatX(JPAEmitterWorkData*, JPABaseParticle*);
-void JPACalcScaleAnmRepeatY(JPAEmitterWorkData*, JPABaseParticle*);
-void JPACalcScaleAnmReverseX(JPAEmitterWorkData*, JPABaseParticle*);
-void JPACalcScaleAnmReverseY(JPAEmitterWorkData*, JPABaseParticle*);
-void JPACalcAlphaAnm(JPAEmitterWorkData*, JPABaseParticle*);
-void JPACalcAlphaFlickAnm(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleX(JPAEmitterWorkData*, JPABaseParticle*); // 2
+void JPACalcScaleY(JPAEmitterWorkData*, JPABaseParticle*); // 2
+void JPACalcScaleCopy(JPAEmitterWorkData*, JPABaseParticle*); // 2
+void JPACalcScaleAnmNormal(JPAEmitterWorkData*, JPABaseParticle*); // 2
+void JPACalcScaleAnmRepeatX(JPAEmitterWorkData*, JPABaseParticle*); // 2
+void JPACalcScaleAnmRepeatY(JPAEmitterWorkData*, JPABaseParticle*); // 2
+void JPACalcScaleAnmReverseX(JPAEmitterWorkData*, JPABaseParticle*); // 2
+void JPACalcScaleAnmReverseY(JPAEmitterWorkData*, JPABaseParticle*); // 2
+void JPACalcAlphaAnm(JPAEmitterWorkData*, JPABaseParticle*); // 2
+void JPACalcAlphaFlickAnm(JPAEmitterWorkData*, JPABaseParticle*); // 2
 
-extern "C" void JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle();
-extern "C" void __ct__13JPAExtraShapeFPCUc();
-extern "C" void init__13JPAExtraShapeFv();
+extern "C" void JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
+extern "C" void __ct__13JPAExtraShapeFPCUc(); // 1
+extern "C" void init__13JPAExtraShapeFv(); // 1
 SECTION_SDATA2 extern f32 JPAExtraShape__lit_2270;
 SECTION_SDATA2 extern f64 JPAExtraShape__lit_2312;
 SECTION_SDATA2 extern f32 lit_2339;

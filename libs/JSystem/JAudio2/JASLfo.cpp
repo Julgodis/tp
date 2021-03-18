@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JASLfo (['JASLfo']) False/False
-/* top-level dependencies (begin ['JASLfo']) */
-/* top-level dependencies (end ['JASLfo']) */
 struct JASLfo {
 	/* 8029BD14 */ JASLfo();
 	/* 8029BD44 */ void getValue() const;
@@ -23,13 +20,13 @@ struct JASLfo {
 // Forward References:
 // 
 
-extern "C" void __sinit_JASLfo_cpp();
+extern "C" void __sinit_JASLfo_cpp(); // 1
 
-extern "C" void __ct__6JASLfoFv();
-extern "C" void getValue__6JASLfoCFv();
-extern "C" void incCounter__6JASLfoFf();
-extern "C" void resetCounter__6JASLfoFv();
-extern "C" void __sinit_JASLfo_cpp();
+extern "C" void __ct__6JASLfoFv(); // 1
+extern "C" void getValue__6JASLfoCFv(); // 1
+extern "C" void incCounter__6JASLfoFf(); // 1
+extern "C" void resetCounter__6JASLfoFv(); // 1
+extern "C" void __sinit_JASLfo_cpp(); // 1
 SECTION_BSS extern u8 sFreeRunLfo__6JASLfo[24];
 SECTION_SDATA2 extern u8 JASLfo__lit_341[4];
 SECTION_SDATA2 extern f32 JASLfo__lit_342;

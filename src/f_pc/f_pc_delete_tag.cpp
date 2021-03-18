@@ -9,21 +9,12 @@
 // Types:
 // 
 
-// build delete_tag_class (['delete_tag_class']) False/False
-/* top-level dependencies (begin ['delete_tag_class']) */
-/* top-level dependencies (end ['delete_tag_class']) */
 struct delete_tag_class {
 };
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
-// build node_list_class (['node_list_class']) False/False
-/* top-level dependencies (begin ['node_list_class']) */
-/* top-level dependencies (end ['node_list_class']) */
 struct node_list_class {
 };
 
@@ -31,30 +22,30 @@ struct node_list_class {
 // Forward References:
 // 
 
-void fpcDtTg_IsEmpty();
-void fpcDtTg_ToDeleteQ(delete_tag_class*);
-static void fpcDtTg_DeleteQTo(delete_tag_class*);
-extern "C" void fpcDtTg_Do__FP16delete_tag_classPFPv_i();
-void fpcDtTg_Init(delete_tag_class*, void*);
+void fpcDtTg_IsEmpty(); // 2
+void fpcDtTg_ToDeleteQ(delete_tag_class*); // 2
+static void fpcDtTg_DeleteQTo(delete_tag_class*); // 2
+extern "C" void fpcDtTg_Do__FP16delete_tag_classPFPv_i(); // 1
+void fpcDtTg_Init(delete_tag_class*, void*); // 2
 
-extern "C" void fpcDtTg_IsEmpty__Fv();
-extern "C" void fpcDtTg_ToDeleteQ__FP16delete_tag_class();
-extern "C" static void fpcDtTg_DeleteQTo__FP16delete_tag_class();
-extern "C" void fpcDtTg_Do__FP16delete_tag_classPFPv_i();
-extern "C" void fpcDtTg_Init__FP16delete_tag_classPv();
+extern "C" void fpcDtTg_IsEmpty__Fv(); // 1
+extern "C" void fpcDtTg_ToDeleteQ__FP16delete_tag_class(); // 1
+extern "C" static void fpcDtTg_DeleteQTo__FP16delete_tag_class(); // 1
+extern "C" void fpcDtTg_Do__FP16delete_tag_classPFPv_i(); // 1
+extern "C" void fpcDtTg_Init__FP16delete_tag_classPv(); // 1
 SECTION_DATA extern u8 g_fpcDtTg_Queue[12 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void cTg_SingleCut(create_tag_class*);
-void cTg_Addition(node_list_class*, create_tag_class*);
-void cTg_Create(create_tag_class*, void*);
+void cTg_SingleCut(create_tag_class*); // 2
+void cTg_Addition(node_list_class*, create_tag_class*); // 2
+void cTg_Create(create_tag_class*, void*); // 2
 
-extern "C" void cTg_SingleCut__FP16create_tag_class();
-extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
-extern "C" void cTg_Create__FP16create_tag_classPv();
+extern "C" void cTg_SingleCut__FP16create_tag_class(); // 1
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class(); // 1
+extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
 
 // 
 // Declarations:

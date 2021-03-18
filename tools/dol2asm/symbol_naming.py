@@ -130,9 +130,7 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
     util.escape_name(symbol.identifier)
 
     if (symbol.identifier.name and 
-        (not "@" in symbol.identifier.name) and 
-        (not "<" in symbol.identifier.name) and 
-        (not ">" in symbol.identifier.name) and isinstance(symbol, Function)):
+        (not "@" in symbol.identifier.name) and isinstance(symbol, Function)):
         name = symbol.identifier.name
         try:
             p = demangle.ParseCtx(name)
@@ -151,7 +149,7 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
                         break
 
                 if valid:
-                    symbol.func_name = p.full_name
+                    symbol.func_name = named_type_from_qulified_name(p.full_name)
                     symbol.func_is_const = p.is_const
                     symbol.special_func_name = p.special_func_name
                     symbol.argument_types = [x for x in types if x != data_types.VOID]
@@ -233,3 +231,74 @@ def execute(context, libraries):
             for sec in tu.sections.values():
                 for symbol in sec.symbols:
                     nameCollision(context, label_collisions, reference_collisions, tu.name, symbol)
+
+    types = defaultdict(lambda: defaultdict(list))
+    names = defaultdict(list)
+
+    def add_named_type(named, index=0):
+        #context.debug(named.type())
+        raw_names = tuple([x.name for x in named.names])
+        for i in range(len(raw_names) - index):
+            types[i][raw_names[0:i+1]].append(named.names[0:i+1])
+        names[raw_names].append(symbol)
+
+    def iterate_type(type):
+        if not type:
+            return
+        if data_types.is_builtin(type):
+            return
+
+        if isinstance(type, ArrayType):
+            iterate_type(type.base)
+            iterate_type(type.inner)
+            return
+
+        if isinstance(type, ConstType):
+            return iterate_type(type.of)
+        if isinstance(type, PointerType):
+            return iterate_type(type.of)
+        if isinstance(type, ReferenceType):
+            return iterate_type(type.of)
+
+        if isinstance(type, NamedType):
+            for name in type.names:
+                for template in name.templates:
+                    iterate_type(template)
+            add_named_type(type)
+
+
+    for lib in libraries:
+        for tu in lib.translation_units.values():
+            for section in tu.sections.values():
+                for symbol in section.symbols:
+                    if isinstance(symbol, Function):
+                        if symbol.is_demangled():
+                            add_named_type(symbol.func_name, 1)
+                        iterate_type(symbol.return_type)
+                        for arg_type in symbol.argument_types:
+                            iterate_type(arg_type)
+                    
+
+
+    for count, tns in types.items():
+        for type, ns in tns.items():
+            if ns[0][-1].templates:
+                context.debug("Found Type Match:")
+                groups = defaultdict(list)
+                for s in ns:
+                    groups[tuple(s)].append(s)
+                for i, ss in enumerate(groups):
+                    for s in groups[ss]:
+                        s[-1].template_index = i
+                    context.debug(f"\t{i:<3}{'::'.join([x.to_str() for x in groups[ss][0]])}")
+
+
+    for name, functions in names.items():
+        if functions[0].func_name.last.templates:
+            context.debug("Found Templated Function(s):")
+            functions.sort(key=lambda x:x.addr)
+            for i, function in enumerate(functions):
+                function.template_index = i
+                function.func_name.last.template_index = i
+                context.debug(f"\t{function.func_name.to_str(without_template=True)}")
+

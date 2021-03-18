@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build jmessage_tReference (['jmessage_tReference']) False/False
-/* top-level dependencies (begin ['jmessage_tReference']) */
-/* top-level dependencies (end ['jmessage_tReference']) */
 struct jmessage_tReference {
 	/* 80228B04 */ jmessage_tReference();
 	/* 80228CB4 */ ~jmessage_tReference();
@@ -44,20 +41,11 @@ struct jmessage_tReference {
 	/* 80232A20 */ void getActorPos();
 };
 
-// build jmessage_tControl (['jmessage_tControl']) False/False
-/* top-level dependencies (begin ['jmessage_tControl']) */
-/* top-level dependencies (end ['jmessage_tControl']) */
 struct jmessage_tControl {
 	/* 802299EC */ jmessage_tControl();
 };
 
-// build jmessage_tMeasureProcessor (['jmessage_tMeasureProcessor']) False/False
-// build jmessage_tReference (['jmessage_tReference']) True/True
-/* top-level dependencies (begin ['jmessage_tMeasureProcessor']) */
-// outer dependency: ('jmessage_tReference',)
-/* top-level dependencies (end ['jmessage_tMeasureProcessor']) */
 struct jmessage_tMeasureProcessor {
-	// ('jmessage_tReference',)
 	/* 80229A28 */ jmessage_tMeasureProcessor(jmessage_tReference const*);
 	/* 80229AC4 */ void do_begin(void const*, char const*);
 	/* 80229CB4 */ void do_end();
@@ -72,33 +60,14 @@ struct jmessage_tMeasureProcessor {
 	/* 8022B5F4 */ ~jmessage_tMeasureProcessor();
 };
 
-// build jmessage_tSequenceProcessor (['jmessage_tSequenceProcessor']) False/False
-// build jmessage_tReference (['jmessage_tReference']) True/True
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-// build jmessage_tControl (['jmessage_tControl']) True/True
-/* top-level dependencies (begin ['jmessage_tSequenceProcessor']) */
-// outer dependency: ('jmessage_tReference',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('jmessage_tControl',)
-/* top-level dependencies (end ['jmessage_tSequenceProcessor']) */
 struct jmessage_tSequenceProcessor {
-	// ('jmessage_tReference',)
-	// ('cXyz',)
-	// ('jmessage_tControl',)
 	/* 8022B558 */ jmessage_tSequenceProcessor(jmessage_tReference const*, jmessage_tControl*);
 	/* 8022B654 */ void do_reset();
 	/* 8022B658 */ void do_begin(void const*, char const*);
@@ -117,14 +86,7 @@ struct jmessage_tSequenceProcessor {
 	/* 8023299C */ ~jmessage_tSequenceProcessor();
 };
 
-// build cXyz (['cXyz']) True/True
-// build jmessage_tRenderingProcessor (['jmessage_tRenderingProcessor']) False/False
-// build jmessage_tReference (['jmessage_tReference']) True/True
-/* top-level dependencies (begin ['jmessage_tRenderingProcessor']) */
-// outer dependency: ('jmessage_tReference',)
-/* top-level dependencies (end ['jmessage_tRenderingProcessor']) */
 struct jmessage_tRenderingProcessor {
-	// ('jmessage_tReference',)
 	/* 8022CCB0 */ jmessage_tRenderingProcessor(jmessage_tReference const*);
 	/* 8022CDC8 */ void do_reset();
 	/* 8022CDCC */ void do_begin(void const*, char const*);
@@ -152,36 +114,18 @@ struct jmessage_tRenderingProcessor {
 	/* 8023293C */ ~jmessage_tRenderingProcessor();
 };
 
-// build jmessage_string_tReference (['jmessage_string_tReference']) False/False
-// build COutFont_c (['COutFont_c']) False/False
-/* top-level dependencies (begin ['COutFont_c']) */
-/* top-level dependencies (end ['COutFont_c']) */
-struct COutFont_c {
-	/* 80226CF8 */ void initialize();
+struct JUTFont {
 };
 
-// build J2DTextBox (['J2DTextBox']) False/False
-/* top-level dependencies (begin ['J2DTextBox']) */
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 };
 
-// build JUTFont (['JUTFont']) False/False
-/* top-level dependencies (begin ['JUTFont']) */
-/* top-level dependencies (end ['JUTFont']) */
-struct JUTFont {
+struct COutFont_c {
+	/* 80226CF8 */ void initialize();
 };
 
-/* top-level dependencies (begin ['jmessage_string_tReference']) */
-// outer dependency: ('COutFont_c',)
-// outer dependency: ('J2DTextBox',)
-// outer dependency: ('JUTFont',)
-/* top-level dependencies (end ['jmessage_string_tReference']) */
 struct jmessage_string_tReference {
-	// ('COutFont_c',)
-	// ('J2DTextBox',)
-	// ('JUTFont',)
 	/* 8022F8C0 */ jmessage_string_tReference();
 	/* 8022F94C */ ~jmessage_string_tReference();
 	/* 8022F9AC */ void init(J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8);
@@ -196,24 +140,12 @@ struct jmessage_string_tReference {
 	/* 8022FB24 */ void getLineCountNowPage();
 };
 
-// build J2DTextBox (['J2DTextBox']) True/True
-// build JUTFont (['JUTFont']) True/True
-// build COutFont_c (['COutFont_c']) True/True
-// build jmessage_string_tControl (['jmessage_string_tControl']) False/False
-/* top-level dependencies (begin ['jmessage_string_tControl']) */
-/* top-level dependencies (end ['jmessage_string_tControl']) */
 struct jmessage_string_tControl {
 	/* 8022FB5C */ jmessage_string_tControl();
 	/* 802328DC */ ~jmessage_string_tControl();
 };
 
-// build jmessage_string_tMeasureProcessor (['jmessage_string_tMeasureProcessor']) False/False
-// build jmessage_string_tReference (['jmessage_string_tReference']) True/True
-/* top-level dependencies (begin ['jmessage_string_tMeasureProcessor']) */
-// outer dependency: ('jmessage_string_tReference',)
-/* top-level dependencies (end ['jmessage_string_tMeasureProcessor']) */
 struct jmessage_string_tMeasureProcessor {
-	// ('jmessage_string_tReference',)
 	/* 8022FB98 */ jmessage_string_tMeasureProcessor(jmessage_string_tReference const*);
 	/* 8022FBE4 */ void do_begin(void const*, char const*);
 	/* 8022FC14 */ void do_end();
@@ -223,16 +155,7 @@ struct jmessage_string_tMeasureProcessor {
 	/* 80230A5C */ ~jmessage_string_tMeasureProcessor();
 };
 
-// build jmessage_string_tSequenceProcessor (['jmessage_string_tSequenceProcessor']) False/False
-// build jmessage_string_tControl (['jmessage_string_tControl']) True/True
-// build jmessage_string_tReference (['jmessage_string_tReference']) True/True
-/* top-level dependencies (begin ['jmessage_string_tSequenceProcessor']) */
-// outer dependency: ('jmessage_string_tControl',)
-// outer dependency: ('jmessage_string_tReference',)
-/* top-level dependencies (end ['jmessage_string_tSequenceProcessor']) */
 struct jmessage_string_tSequenceProcessor {
-	// ('jmessage_string_tControl',)
-	// ('jmessage_string_tReference',)
 	/* 80230A08 */ jmessage_string_tSequenceProcessor(jmessage_string_tReference const*, jmessage_string_tControl*);
 	/* 80230ABC */ void do_reset();
 	/* 80230AC0 */ void do_begin(void const*, char const*);
@@ -245,13 +168,7 @@ struct jmessage_string_tSequenceProcessor {
 	/* 80232858 */ ~jmessage_string_tSequenceProcessor();
 };
 
-// build jmessage_string_tRenderingProcessor (['jmessage_string_tRenderingProcessor']) False/False
-// build jmessage_string_tReference (['jmessage_string_tReference']) True/True
-/* top-level dependencies (begin ['jmessage_string_tRenderingProcessor']) */
-// outer dependency: ('jmessage_string_tReference',)
-/* top-level dependencies (end ['jmessage_string_tRenderingProcessor']) */
 struct jmessage_string_tRenderingProcessor {
-	// ('jmessage_string_tReference',)
 	/* 80230BC8 */ jmessage_string_tRenderingProcessor(jmessage_string_tReference const*);
 	/* 80230C20 */ void getLineCountNowPage();
 	/* 80230C5C */ void do_reset();
@@ -273,9 +190,6 @@ struct jmessage_string_tRenderingProcessor {
 	/* 802327F8 */ ~jmessage_string_tRenderingProcessor();
 };
 
-// build STControl (['STControl']) False/False
-/* top-level dependencies (begin ['STControl']) */
-/* top-level dependencies (end ['STControl']) */
 struct STControl {
 	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
@@ -286,24 +200,15 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-// build dSv_player_item_max_c (['dSv_player_item_max_c']) False/False
-/* top-level dependencies (begin ['dSv_player_item_max_c']) */
-/* top-level dependencies (end ['dSv_player_item_max_c']) */
 struct dSv_player_item_max_c {
 	/* 800340F8 */ void getBombNum(u8) const;
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 8003498C */ void onEventBit(u16);
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
-// build dMsgObject_c (['dMsgObject_c']) False/False
-/* top-level dependencies (begin ['dMsgObject_c']) */
-/* top-level dependencies (end ['dMsgObject_c']) */
 struct dMsgObject_c {
 	/* 802360A0 */ void talkStartInit();
 	/* 802370BC */ void isKanbanMessage();
@@ -330,42 +235,21 @@ struct dMsgObject_c {
 	/* 80238638 */ void getItemEquipButton();
 };
 
-// build dMsgUnit_c (['dMsgUnit_c']) False/False
-/* top-level dependencies (begin ['dMsgUnit_c']) */
-/* top-level dependencies (end ['dMsgUnit_c']) */
 struct dMsgUnit_c {
 	/* 80238CEC */ void setTag(int, int, char*, bool);
 };
 
-// build Vec (['Vec']) True/True
-// build JMessage (['JMessage']) False/False
-// build JMessage (['JMessage']) True/False
-struct JMessage;
-// build JMessage (['JMessage']) True/True
-/* top-level dependencies (begin ['JMessage']) */
-// outer dependency: ('JMessage', 'TControl')
-// outer dependency: ('JMessage', 'TReference')
-/* top-level dependencies (end ['JMessage']) */
 struct JMessage {
-	// build TControl (['JMessage', 'TControl']) False/False
-	/* dependencies (begin ['JMessage', 'TControl']) */
-	/* dependencies (end ['JMessage', 'TControl']) */
 	struct TControl {
 		/* 802A7548 */ TControl();
 		/* 802A758C */ ~TControl();
 	};
 
-	// build TReference (['JMessage', 'TReference']) False/False
-	/* dependencies (begin ['JMessage', 'TReference']) */
-	/* dependencies (end ['JMessage', 'TReference']) */
 	struct TReference {
 		/* 802A7AF8 */ ~TReference();
 		/* 802A7B40 */ bool do_word(u32) const;
 	};
 
-	// build TProcessor (['JMessage', 'TProcessor']) False/False
-	/* dependencies (begin ['JMessage', 'TProcessor']) */
-	/* dependencies (end ['JMessage', 'TProcessor']) */
 	struct TProcessor {
 		/* 802A7BF8 */ void stack_pushCurrent(char const*);
 		/* 802A7FC0 */ void do_reset();
@@ -377,16 +261,7 @@ struct JMessage {
 		/* 802A828C */ void process_onCharacterEnd_normal_(JMessage::TProcessor*);
 	};
 
-	// build TSequenceProcessor (['JMessage', 'TSequenceProcessor']) False/False
-	/* dependencies (begin ['JMessage', 'TSequenceProcessor']) */
-	// inner dependency: 1 ('JMessage', 'TControl') (for ['JMessage', 'TSequenceProcessor'])
-	// build TControl (['JMessage', 'TControl']) True/True
-	// inner dependency: 1 ('JMessage', 'TReference') (for ['JMessage', 'TSequenceProcessor'])
-	// build TReference (['JMessage', 'TReference']) True/True
-	/* dependencies (end ['JMessage', 'TSequenceProcessor']) */
 	struct TSequenceProcessor {
-		// ('JMessage', 'TControl')
-		// ('JMessage', 'TReference')
 		/* 802A8374 */ TSequenceProcessor(JMessage::TReference const*, JMessage::TControl*);
 		/* 802A83B8 */ ~TSequenceProcessor();
 		/* 802A8794 */ void do_branch_query(u32);
@@ -399,13 +274,7 @@ struct JMessage {
 		/* 802A87E0 */ void do_tag_(u32, void const*, u32);
 	};
 
-	// build TRenderingProcessor (['JMessage', 'TRenderingProcessor']) False/False
-	/* dependencies (begin ['JMessage', 'TRenderingProcessor']) */
-	// inner dependency: 1 ('JMessage', 'TReference') (for ['JMessage', 'TRenderingProcessor'])
-	// build TReference (['JMessage', 'TReference']) True/True
-	/* dependencies (end ['JMessage', 'TRenderingProcessor']) */
 	struct TRenderingProcessor {
-		// ('JMessage', 'TReference')
 		/* 802A8A84 */ TRenderingProcessor(JMessage::TReference const*);
 		/* 802A8AC0 */ ~TRenderingProcessor();
 		/* 802A8B20 */ void process(char const*);
@@ -416,39 +285,18 @@ struct JMessage {
 
 };
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) True/True
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB984 */ void seStart(JAISoundID, Vec const*, u32, s8, f32, f32, f32, f32, u8);
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build Z2SpeechMgr2 (['Z2SpeechMgr2']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['Z2SpeechMgr2']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2SpeechMgr2']) */
 struct Z2SpeechMgr2 {
-	// ('Vec',)
 	/* 802CBD88 */ void setString(u16 const*, s16, u8, u16);
 	/* 802CCA18 */ void playOneShotVoice(u8, u16, Vec*, s8);
 };
 
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
 	/* 802F7AFC */ void getParentPane();
@@ -458,158 +306,158 @@ struct J2DPane {
 // Forward References:
 // 
 
-static void checkCharInfoCharactor(int);
-static void changeCodeToChar(u16);
-static void change1ByteTo2Bytes(int);
-static void changeKataToHira(int);
-static void isOutfontKanjiCode(int);
-static void getFontCCColorTable(u8, u8);
-static void getFontGCColorTable(u8, u8);
-static void getOutFontNumberType(int);
-static void getPohNum();
+static void checkCharInfoCharactor(int); // 2
+static void changeCodeToChar(u16); // 2
+static void change1ByteTo2Bytes(int); // 2
+static void changeKataToHira(int); // 2
+static void isOutfontKanjiCode(int); // 2
+static void getFontCCColorTable(u8, u8); // 2
+static void getFontGCColorTable(u8, u8); // 2
+static void getOutFontNumberType(int); // 2
+static void getPohNum(); // 2
 
-extern "C" static void checkCharInfoCharactor__Fi();
-extern "C" static void changeCodeToChar__FUs();
-extern "C" static void change1ByteTo2Bytes__Fi();
-extern "C" static void changeKataToHira__Fi();
-extern "C" static void isOutfontKanjiCode__Fi();
-extern "C" static void getFontCCColorTable__FUcUc();
-extern "C" static void getFontGCColorTable__FUcUc();
-extern "C" static void getOutFontNumberType__Fi();
-extern "C" static void getPohNum__Fv();
-extern "C" void __ct__19jmessage_tReferenceFv();
-extern "C" void __dt__19jmessage_tReferenceFv();
-extern "C" void calcDistance__19jmessage_tReferenceFv();
-extern "C" void getLineMax__19jmessage_tReferenceFv();
-extern "C" void isKanban__19jmessage_tReferenceFv();
-extern "C" void isPlaceName__19jmessage_tReferenceFv();
-extern "C" void isBossName__19jmessage_tReferenceFv();
-extern "C" void isSaveSeq__19jmessage_tReferenceFv();
-extern "C" void isBook__19jmessage_tReferenceFv();
-extern "C" void isStaffRoll__19jmessage_tReferenceFv();
-extern "C" void isHowl__19jmessage_tReferenceFv();
-extern "C" void isMidona__19jmessage_tReferenceFv();
-extern "C" void resetReference__19jmessage_tReferenceFv();
-extern "C" void pageSend__19jmessage_tReferenceFv();
-extern "C" void selectMessage__19jmessage_tReferenceFv();
-extern "C" void inputNumber__19jmessage_tReferenceFv();
-extern "C" void getWord__19jmessage_tReferenceFi();
-extern "C" void resetWord__19jmessage_tReferenceFv();
-extern "C" void setCharactor__19jmessage_tReferenceFUs();
-extern "C" void addCharactor__19jmessage_tReferenceFUs();
-extern "C" void resetCharactor__19jmessage_tReferenceFv();
-extern "C" void shiftCharCountBuffer__19jmessage_tReferenceFv();
-extern "C" void resetCharCountBuffer__19jmessage_tReferenceFv();
-extern "C" void allsetCharCountBuffer__19jmessage_tReferenceFv();
-extern "C" void isCharSend__19jmessage_tReferenceFv();
-extern "C" void isLightSend__19jmessage_tReferenceFv();
-extern "C" void isLightEnd__19jmessage_tReferenceFv();
-extern "C" void decideOutFontRupeeColor__19jmessage_tReferenceFi();
-extern "C" void __ct__17jmessage_tControlFv();
-extern "C" void __ct__26jmessage_tMeasureProcessorFPC19jmessage_tReference();
-extern "C" void do_begin__26jmessage_tMeasureProcessorFPCvPCc();
-extern "C" void do_end__26jmessage_tMeasureProcessorFv();
-extern "C" void do_character__26jmessage_tMeasureProcessorFi();
-extern "C" void do_tag__26jmessage_tMeasureProcessorFUlPCvUl();
-extern "C" void do_scale__26jmessage_tMeasureProcessorFf();
-extern "C" void do_space__26jmessage_tMeasureProcessorFUl();
-extern "C" void do_pageType__26jmessage_tMeasureProcessorFi();
-extern "C" void do_name1__26jmessage_tMeasureProcessorFv();
-extern "C" void do_rubyset__26jmessage_tMeasureProcessorFPCvUl();
-extern "C" void push_word__26jmessage_tMeasureProcessorFPc();
-extern "C" void __ct__27jmessage_tSequenceProcessorFPC19jmessage_tReferenceP17jmessage_tControl();
-extern "C" void __dt__26jmessage_tMeasureProcessorFv();
-extern "C" void do_reset__27jmessage_tSequenceProcessorFv();
-extern "C" void do_begin__27jmessage_tSequenceProcessorFPCvPCc();
-extern "C" void do_end__27jmessage_tSequenceProcessorFv();
-extern "C" void do_isReady__27jmessage_tSequenceProcessorFv();
-extern "C" void do_character__27jmessage_tSequenceProcessorFi();
-extern "C" void do_tag__27jmessage_tSequenceProcessorFUlPCvUl();
-extern "C" bool do_jump_isReady__27jmessage_tSequenceProcessorFv();
-extern "C" void do_name1__27jmessage_tSequenceProcessorFv();
-extern "C" void do_space__27jmessage_tSequenceProcessorFUl();
-extern "C" void do_rubyset__27jmessage_tSequenceProcessorFPCvUl();
-extern "C" void push_word__27jmessage_tSequenceProcessorFv();
-extern "C" void messageSePlay__27jmessage_tSequenceProcessorFUcUcP4cXyz();
-extern "C" void do_jump__27jmessage_tSequenceProcessorFPCvPCc();
-extern "C" void calcStringLength__27jmessage_tSequenceProcessorFv();
-extern "C" void __ct__28jmessage_tRenderingProcessorFPC19jmessage_tReference();
-extern "C" void do_reset__28jmessage_tRenderingProcessorFv();
-extern "C" void do_begin__28jmessage_tRenderingProcessorFPCvPCc();
-extern "C" void do_end__28jmessage_tRenderingProcessorFv();
-extern "C" void do_character__28jmessage_tRenderingProcessorFi();
-extern "C" void do_tag__28jmessage_tRenderingProcessorFUlPCvUl();
-extern "C" void resetRendering__28jmessage_tRenderingProcessorFv();
-extern "C" void do_widthcenter__28jmessage_tRenderingProcessorFv();
-extern "C" void do_selwidthcenter__28jmessage_tRenderingProcessorFi();
-extern "C" void do_heightcenter__28jmessage_tRenderingProcessorFv();
-extern "C" void do_color__28jmessage_tRenderingProcessorFUc();
-extern "C" void do_scale__28jmessage_tRenderingProcessorFf();
-extern "C" void do_linedown__28jmessage_tRenderingProcessorFs();
-extern "C" void do_transY__28jmessage_tRenderingProcessorFsb();
-extern "C" void do_outfont__28jmessage_tRenderingProcessorFUcUl();
-extern "C" void do_arrow2__28jmessage_tRenderingProcessorFv();
-extern "C" void getLineLength__28jmessage_tRenderingProcessorFi();
-extern "C" void do_strcat__28jmessage_tRenderingProcessorFPcbbb();
-extern "C" void do_rubyset__28jmessage_tRenderingProcessorFPCvUl();
-extern "C" void do_rubystrcat__28jmessage_tRenderingProcessorFPcPcff();
-extern "C" void do_name1__28jmessage_tRenderingProcessorFv();
-extern "C" void do_numset__28jmessage_tRenderingProcessorFs();
-extern "C" void push_word__28jmessage_tRenderingProcessorFv();
-extern "C" void getCharInfo__28jmessage_tRenderingProcessorFfffff();
-extern "C" void __ct__26jmessage_string_tReferenceFv();
-extern "C" void __dt__26jmessage_string_tReferenceFv();
-extern "C" void init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
-extern "C" void setCharactor__26jmessage_string_tReferenceFUs();
-extern "C" void addCharactor__26jmessage_string_tReferenceFUs();
-extern "C" void resetCharactor__26jmessage_string_tReferenceFv();
-extern "C" void getLineLength__26jmessage_string_tReferenceFi();
-extern "C" void addLineLength__26jmessage_string_tReferenceFif();
-extern "C" void getOutfontLength__26jmessage_string_tReferenceFi();
-extern "C" void setOutfontLength__26jmessage_string_tReferenceFif();
-extern "C" void clearOutfontLength__26jmessage_string_tReferenceFi();
-extern "C" void getLineCountNowPage__26jmessage_string_tReferenceFv();
-extern "C" void __ct__24jmessage_string_tControlFv();
-extern "C" void __ct__33jmessage_string_tMeasureProcessorFPC26jmessage_string_tReference();
-extern "C" void do_begin__33jmessage_string_tMeasureProcessorFPCvPCc();
-extern "C" void do_end__33jmessage_string_tMeasureProcessorFv();
-extern "C" void do_character__33jmessage_string_tMeasureProcessorFi();
-extern "C" void do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl();
-extern "C" void do_rubyset__33jmessage_string_tMeasureProcessorFPCvUl();
-extern "C" void __ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl();
-extern "C" void __dt__33jmessage_string_tMeasureProcessorFv();
-extern "C" void do_reset__34jmessage_string_tSequenceProcessorFv();
-extern "C" void do_begin__34jmessage_string_tSequenceProcessorFPCvPCc();
-extern "C" void do_end__34jmessage_string_tSequenceProcessorFv();
-extern "C" bool do_isReady__34jmessage_string_tSequenceProcessorFv();
-extern "C" void do_character__34jmessage_string_tSequenceProcessorFi();
-extern "C" void do_tag__34jmessage_string_tSequenceProcessorFUlPCvUl();
-extern "C" bool do_jump_isReady__34jmessage_string_tSequenceProcessorFv();
-extern "C" void do_jump__34jmessage_string_tSequenceProcessorFPCvPCc();
-extern "C" void __ct__35jmessage_string_tRenderingProcessorFPC26jmessage_string_tReference();
-extern "C" void getLineCountNowPage__35jmessage_string_tRenderingProcessorFv();
-extern "C" void do_reset__35jmessage_string_tRenderingProcessorFv();
-extern "C" void do_begin__35jmessage_string_tRenderingProcessorFPCvPCc();
-extern "C" void do_end__35jmessage_string_tRenderingProcessorFv();
-extern "C" void do_character__35jmessage_string_tRenderingProcessorFi();
-extern "C" void do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl();
-extern "C" void do_widthcenter__35jmessage_string_tRenderingProcessorFv();
-extern "C" void do_heightcenter__35jmessage_string_tRenderingProcessorFv();
-extern "C" void do_strcat__35jmessage_string_tRenderingProcessorFPc();
-extern "C" void do_rubyset__35jmessage_string_tRenderingProcessorFPCvUl();
-extern "C" void do_rubystrcat__35jmessage_string_tRenderingProcessorFPc();
-extern "C" void do_outfont__35jmessage_string_tRenderingProcessorFUc();
-extern "C" void do_color__35jmessage_string_tRenderingProcessorFUc();
-extern "C" void do_scale__35jmessage_string_tRenderingProcessorFf();
-extern "C" void do_linedown__35jmessage_string_tRenderingProcessorFs();
-extern "C" void do_numset__35jmessage_string_tRenderingProcessorFs();
-extern "C" void push_word__35jmessage_string_tRenderingProcessorFPCc();
-extern "C" void __dt__35jmessage_string_tRenderingProcessorFv();
-extern "C" void __dt__34jmessage_string_tSequenceProcessorFv();
-extern "C" void __dt__24jmessage_string_tControlFv();
-extern "C" void __dt__28jmessage_tRenderingProcessorFv();
-extern "C" void __dt__27jmessage_tSequenceProcessorFv();
-extern "C" void getActorPos__19jmessage_tReferenceFv();
+extern "C" static void checkCharInfoCharactor__Fi(); // 1
+extern "C" static void changeCodeToChar__FUs(); // 1
+extern "C" static void change1ByteTo2Bytes__Fi(); // 1
+extern "C" static void changeKataToHira__Fi(); // 1
+extern "C" static void isOutfontKanjiCode__Fi(); // 1
+extern "C" static void getFontCCColorTable__FUcUc(); // 1
+extern "C" static void getFontGCColorTable__FUcUc(); // 1
+extern "C" static void getOutFontNumberType__Fi(); // 1
+extern "C" static void getPohNum__Fv(); // 1
+extern "C" void __ct__19jmessage_tReferenceFv(); // 1
+extern "C" void __dt__19jmessage_tReferenceFv(); // 1
+extern "C" void calcDistance__19jmessage_tReferenceFv(); // 1
+extern "C" void getLineMax__19jmessage_tReferenceFv(); // 1
+extern "C" void isKanban__19jmessage_tReferenceFv(); // 1
+extern "C" void isPlaceName__19jmessage_tReferenceFv(); // 1
+extern "C" void isBossName__19jmessage_tReferenceFv(); // 1
+extern "C" void isSaveSeq__19jmessage_tReferenceFv(); // 1
+extern "C" void isBook__19jmessage_tReferenceFv(); // 1
+extern "C" void isStaffRoll__19jmessage_tReferenceFv(); // 1
+extern "C" void isHowl__19jmessage_tReferenceFv(); // 1
+extern "C" void isMidona__19jmessage_tReferenceFv(); // 1
+extern "C" void resetReference__19jmessage_tReferenceFv(); // 1
+extern "C" void pageSend__19jmessage_tReferenceFv(); // 1
+extern "C" void selectMessage__19jmessage_tReferenceFv(); // 1
+extern "C" void inputNumber__19jmessage_tReferenceFv(); // 1
+extern "C" void getWord__19jmessage_tReferenceFi(); // 1
+extern "C" void resetWord__19jmessage_tReferenceFv(); // 1
+extern "C" void setCharactor__19jmessage_tReferenceFUs(); // 1
+extern "C" void addCharactor__19jmessage_tReferenceFUs(); // 1
+extern "C" void resetCharactor__19jmessage_tReferenceFv(); // 1
+extern "C" void shiftCharCountBuffer__19jmessage_tReferenceFv(); // 1
+extern "C" void resetCharCountBuffer__19jmessage_tReferenceFv(); // 1
+extern "C" void allsetCharCountBuffer__19jmessage_tReferenceFv(); // 1
+extern "C" void isCharSend__19jmessage_tReferenceFv(); // 1
+extern "C" void isLightSend__19jmessage_tReferenceFv(); // 1
+extern "C" void isLightEnd__19jmessage_tReferenceFv(); // 1
+extern "C" void decideOutFontRupeeColor__19jmessage_tReferenceFi(); // 1
+extern "C" void __ct__17jmessage_tControlFv(); // 1
+extern "C" void __ct__26jmessage_tMeasureProcessorFPC19jmessage_tReference(); // 1
+extern "C" void do_begin__26jmessage_tMeasureProcessorFPCvPCc(); // 1
+extern "C" void do_end__26jmessage_tMeasureProcessorFv(); // 1
+extern "C" void do_character__26jmessage_tMeasureProcessorFi(); // 1
+extern "C" void do_tag__26jmessage_tMeasureProcessorFUlPCvUl(); // 1
+extern "C" void do_scale__26jmessage_tMeasureProcessorFf(); // 1
+extern "C" void do_space__26jmessage_tMeasureProcessorFUl(); // 1
+extern "C" void do_pageType__26jmessage_tMeasureProcessorFi(); // 1
+extern "C" void do_name1__26jmessage_tMeasureProcessorFv(); // 1
+extern "C" void do_rubyset__26jmessage_tMeasureProcessorFPCvUl(); // 1
+extern "C" void push_word__26jmessage_tMeasureProcessorFPc(); // 1
+extern "C" void __ct__27jmessage_tSequenceProcessorFPC19jmessage_tReferenceP17jmessage_tControl(); // 1
+extern "C" void __dt__26jmessage_tMeasureProcessorFv(); // 1
+extern "C" void do_reset__27jmessage_tSequenceProcessorFv(); // 1
+extern "C" void do_begin__27jmessage_tSequenceProcessorFPCvPCc(); // 1
+extern "C" void do_end__27jmessage_tSequenceProcessorFv(); // 1
+extern "C" void do_isReady__27jmessage_tSequenceProcessorFv(); // 1
+extern "C" void do_character__27jmessage_tSequenceProcessorFi(); // 1
+extern "C" void do_tag__27jmessage_tSequenceProcessorFUlPCvUl(); // 1
+extern "C" bool do_jump_isReady__27jmessage_tSequenceProcessorFv(); // 1
+extern "C" void do_name1__27jmessage_tSequenceProcessorFv(); // 1
+extern "C" void do_space__27jmessage_tSequenceProcessorFUl(); // 1
+extern "C" void do_rubyset__27jmessage_tSequenceProcessorFPCvUl(); // 1
+extern "C" void push_word__27jmessage_tSequenceProcessorFv(); // 1
+extern "C" void messageSePlay__27jmessage_tSequenceProcessorFUcUcP4cXyz(); // 1
+extern "C" void do_jump__27jmessage_tSequenceProcessorFPCvPCc(); // 1
+extern "C" void calcStringLength__27jmessage_tSequenceProcessorFv(); // 1
+extern "C" void __ct__28jmessage_tRenderingProcessorFPC19jmessage_tReference(); // 1
+extern "C" void do_reset__28jmessage_tRenderingProcessorFv(); // 1
+extern "C" void do_begin__28jmessage_tRenderingProcessorFPCvPCc(); // 1
+extern "C" void do_end__28jmessage_tRenderingProcessorFv(); // 1
+extern "C" void do_character__28jmessage_tRenderingProcessorFi(); // 1
+extern "C" void do_tag__28jmessage_tRenderingProcessorFUlPCvUl(); // 1
+extern "C" void resetRendering__28jmessage_tRenderingProcessorFv(); // 1
+extern "C" void do_widthcenter__28jmessage_tRenderingProcessorFv(); // 1
+extern "C" void do_selwidthcenter__28jmessage_tRenderingProcessorFi(); // 1
+extern "C" void do_heightcenter__28jmessage_tRenderingProcessorFv(); // 1
+extern "C" void do_color__28jmessage_tRenderingProcessorFUc(); // 1
+extern "C" void do_scale__28jmessage_tRenderingProcessorFf(); // 1
+extern "C" void do_linedown__28jmessage_tRenderingProcessorFs(); // 1
+extern "C" void do_transY__28jmessage_tRenderingProcessorFsb(); // 1
+extern "C" void do_outfont__28jmessage_tRenderingProcessorFUcUl(); // 1
+extern "C" void do_arrow2__28jmessage_tRenderingProcessorFv(); // 1
+extern "C" void getLineLength__28jmessage_tRenderingProcessorFi(); // 1
+extern "C" void do_strcat__28jmessage_tRenderingProcessorFPcbbb(); // 1
+extern "C" void do_rubyset__28jmessage_tRenderingProcessorFPCvUl(); // 1
+extern "C" void do_rubystrcat__28jmessage_tRenderingProcessorFPcPcff(); // 1
+extern "C" void do_name1__28jmessage_tRenderingProcessorFv(); // 1
+extern "C" void do_numset__28jmessage_tRenderingProcessorFs(); // 1
+extern "C" void push_word__28jmessage_tRenderingProcessorFv(); // 1
+extern "C" void getCharInfo__28jmessage_tRenderingProcessorFfffff(); // 1
+extern "C" void __ct__26jmessage_string_tReferenceFv(); // 1
+extern "C" void __dt__26jmessage_string_tReferenceFv(); // 1
+extern "C" void init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc(); // 1
+extern "C" void setCharactor__26jmessage_string_tReferenceFUs(); // 1
+extern "C" void addCharactor__26jmessage_string_tReferenceFUs(); // 1
+extern "C" void resetCharactor__26jmessage_string_tReferenceFv(); // 1
+extern "C" void getLineLength__26jmessage_string_tReferenceFi(); // 1
+extern "C" void addLineLength__26jmessage_string_tReferenceFif(); // 1
+extern "C" void getOutfontLength__26jmessage_string_tReferenceFi(); // 1
+extern "C" void setOutfontLength__26jmessage_string_tReferenceFif(); // 1
+extern "C" void clearOutfontLength__26jmessage_string_tReferenceFi(); // 1
+extern "C" void getLineCountNowPage__26jmessage_string_tReferenceFv(); // 1
+extern "C" void __ct__24jmessage_string_tControlFv(); // 1
+extern "C" void __ct__33jmessage_string_tMeasureProcessorFPC26jmessage_string_tReference(); // 1
+extern "C" void do_begin__33jmessage_string_tMeasureProcessorFPCvPCc(); // 1
+extern "C" void do_end__33jmessage_string_tMeasureProcessorFv(); // 1
+extern "C" void do_character__33jmessage_string_tMeasureProcessorFi(); // 1
+extern "C" void do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl(); // 1
+extern "C" void do_rubyset__33jmessage_string_tMeasureProcessorFPCvUl(); // 1
+extern "C" void __ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl(); // 1
+extern "C" void __dt__33jmessage_string_tMeasureProcessorFv(); // 1
+extern "C" void do_reset__34jmessage_string_tSequenceProcessorFv(); // 1
+extern "C" void do_begin__34jmessage_string_tSequenceProcessorFPCvPCc(); // 1
+extern "C" void do_end__34jmessage_string_tSequenceProcessorFv(); // 1
+extern "C" bool do_isReady__34jmessage_string_tSequenceProcessorFv(); // 1
+extern "C" void do_character__34jmessage_string_tSequenceProcessorFi(); // 1
+extern "C" void do_tag__34jmessage_string_tSequenceProcessorFUlPCvUl(); // 1
+extern "C" bool do_jump_isReady__34jmessage_string_tSequenceProcessorFv(); // 1
+extern "C" void do_jump__34jmessage_string_tSequenceProcessorFPCvPCc(); // 1
+extern "C" void __ct__35jmessage_string_tRenderingProcessorFPC26jmessage_string_tReference(); // 1
+extern "C" void getLineCountNowPage__35jmessage_string_tRenderingProcessorFv(); // 1
+extern "C" void do_reset__35jmessage_string_tRenderingProcessorFv(); // 1
+extern "C" void do_begin__35jmessage_string_tRenderingProcessorFPCvPCc(); // 1
+extern "C" void do_end__35jmessage_string_tRenderingProcessorFv(); // 1
+extern "C" void do_character__35jmessage_string_tRenderingProcessorFi(); // 1
+extern "C" void do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl(); // 1
+extern "C" void do_widthcenter__35jmessage_string_tRenderingProcessorFv(); // 1
+extern "C" void do_heightcenter__35jmessage_string_tRenderingProcessorFv(); // 1
+extern "C" void do_strcat__35jmessage_string_tRenderingProcessorFPc(); // 1
+extern "C" void do_rubyset__35jmessage_string_tRenderingProcessorFPCvUl(); // 1
+extern "C" void do_rubystrcat__35jmessage_string_tRenderingProcessorFPc(); // 1
+extern "C" void do_outfont__35jmessage_string_tRenderingProcessorFUc(); // 1
+extern "C" void do_color__35jmessage_string_tRenderingProcessorFUc(); // 1
+extern "C" void do_scale__35jmessage_string_tRenderingProcessorFf(); // 1
+extern "C" void do_linedown__35jmessage_string_tRenderingProcessorFs(); // 1
+extern "C" void do_numset__35jmessage_string_tRenderingProcessorFs(); // 1
+extern "C" void push_word__35jmessage_string_tRenderingProcessorFPCc(); // 1
+extern "C" void __dt__35jmessage_string_tRenderingProcessorFv(); // 1
+extern "C" void __dt__34jmessage_string_tSequenceProcessorFv(); // 1
+extern "C" void __dt__24jmessage_string_tControlFv(); // 1
+extern "C" void __dt__28jmessage_tRenderingProcessorFv(); // 1
+extern "C" void __dt__27jmessage_tSequenceProcessorFv(); // 1
+extern "C" void getActorPos__19jmessage_tReferenceFv(); // 1
 SECTION_RODATA extern const u8 data_803995C8[36];
 SECTION_RODATA extern const u8 data_803995EC[36];
 SECTION_RODATA extern const u8 d_msg_d_msg_class__stringBase0[80];
@@ -665,131 +513,131 @@ SECTION_SDATA2 extern f32 lit_7190;
 // External References:
 // 
 
-void mDoExt_getMesgFont();
-void dComIfGp_getReverb(int);
-void dComIfGs_checkGetInsectNum();
-void dMeter2Info_getNewLetterNum();
-void dMsgObject_getFundRaising();
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void PSVECSquareMag();
-extern "C" void _savefpr_27();
-extern "C" void _restfpr_27();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void sprintf();
-extern "C" void snprintf();
-extern "C" void strcat();
-extern "C" void strcpy();
-extern "C" void strlen();
+void mDoExt_getMesgFont(); // 2
+void dComIfGp_getReverb(int); // 2
+void dComIfGs_checkGetInsectNum(); // 2
+void dMeter2Info_getNewLetterNum(); // 2
+void dMsgObject_getFundRaising(); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void _savefpr_27(); // 1
+extern "C" void _restfpr_27(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void sprintf(); // 1
+extern "C" void snprintf(); // 1
+extern "C" void strcat(); // 1
+extern "C" void strcpy(); // 1
+extern "C" void strlen(); // 1
 
-extern "C" void mDoExt_getMesgFont__Fv();
-extern "C" void dComIfGp_getReverb__Fi();
-extern "C" void dComIfGs_checkGetInsectNum__Fv();
-extern "C" void __ct__9STControlFssssffss();
-extern "C" void setWaitParm__9STControlFssssffss();
-extern "C" void checkTrigger__9STControlFv();
-extern "C" void checkLeftTrigger__9STControlFv();
-extern "C" void checkRightTrigger__9STControlFv();
-extern "C" void checkUpTrigger__9STControlFv();
-extern "C" void checkDownTrigger__9STControlFv();
-extern "C" void getBombNum__21dSv_player_item_max_cCFUc();
-extern "C" void onEventBit__11dSv_event_cFUs();
-extern "C" void getEventReg__11dSv_event_cCFUs();
-extern "C" void dMeter2Info_getNewLetterNum__Fv();
-extern "C" void initialize__10COutFont_cFv();
-extern "C" void talkStartInit__12dMsgObject_cFv();
-extern "C" void isKanbanMessage__12dMsgObject_cFv();
-extern "C" void isHowlMessage__12dMsgObject_cFv();
-extern "C" void isMidonaMessage__12dMsgObject_cFv();
-extern "C" void isPlaceMessage__12dMsgObject_cFv();
-extern "C" void isBossMessage__12dMsgObject_cFv();
-extern "C" bool isBookMessage__12dMsgObject_cFv();
-extern "C" void isStaffMessage__12dMsgObject_cFv();
-extern "C" void isSaveMessage__12dMsgObject_cFv();
-extern "C" void getSmellName__12dMsgObject_cFv();
-extern "C" void getPortalName__12dMsgObject_cFv();
-extern "C" void getBombName__12dMsgObject_cFv();
-extern "C" void getInsectName__12dMsgObject_cFv();
-extern "C" void getLetterName__12dMsgObject_cFv();
-extern "C" void getSelectBombNum__12dMsgObject_cFv();
-extern "C" void addSelectBomBag__12dMsgObject_cFUc();
-extern "C" void resetSelectBomBag__12dMsgObject_cFv();
-extern "C" void getMsgOutputType__12dMsgObject_cFv();
-extern "C" void getWord__12dMsgObject_cFv();
-extern "C" void getSelectWord__12dMsgObject_cFi();
-extern "C" void getSelectWordFlag__12dMsgObject_cFv();
-extern "C" void getSelectBombPrice__12dMsgObject_cFv();
-extern "C" void getItemEquipButton__12dMsgObject_cFv();
-extern "C" void dMsgObject_getFundRaising__Fv();
-extern "C" void setTag__10dMsgUnit_cFiiPcb();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void __ct__Q28JMessage8TControlFv();
-extern "C" void __dt__Q28JMessage8TControlFv();
-extern "C" void __dt__Q28JMessage10TReferenceFv();
-extern "C" bool do_word__Q28JMessage10TReferenceCFUl();
-extern "C" void stack_pushCurrent__Q28JMessage10TProcessorFPCc();
-extern "C" void do_reset__Q28JMessage10TProcessorFv();
-extern "C" void do_select_begin__Q28JMessage10TProcessorFUl();
-extern "C" void do_select_end__Q28JMessage10TProcessorFv();
-extern "C" void do_select_separate__Q28JMessage10TProcessorFv();
-extern "C" void do_resetStatus___Q28JMessage10TProcessorFPCc();
-extern "C" bool do_setBegin_isReady___Q28JMessage10TProcessorCFv();
-extern "C" void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
-extern "C" void __ct__Q28JMessage18TSequenceProcessorFPCQ28JMessage10TReferencePQ28JMessage8TControl();
-extern "C" void __dt__Q28JMessage18TSequenceProcessorFv();
-extern "C" void do_branch_query__Q28JMessage18TSequenceProcessorFUl();
-extern "C" s32 do_branch_queryResult__Q28JMessage18TSequenceProcessorFv();
-extern "C" void do_branch__Q28JMessage18TSequenceProcessorFPCvPCc();
-extern "C" void do_resetStatus___Q28JMessage18TSequenceProcessorFPCc();
-extern "C" void do_setBegin_isReady___Q28JMessage18TSequenceProcessorCFv();
-extern "C" void do_begin___Q28JMessage18TSequenceProcessorFPCvPCc();
-extern "C" void do_end___Q28JMessage18TSequenceProcessorFv();
-extern "C" void do_tag___Q28JMessage18TSequenceProcessorFUlPCvUl();
-extern "C" void __ct__Q28JMessage19TRenderingProcessorFPCQ28JMessage10TReference();
-extern "C" void __dt__Q28JMessage19TRenderingProcessorFv();
-extern "C" void process__Q28JMessage19TRenderingProcessorFPCc();
-extern "C" void do_begin___Q28JMessage19TRenderingProcessorFPCvPCc();
-extern "C" void do_end___Q28JMessage19TRenderingProcessorFv();
-extern "C" void do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void setString__12Z2SpeechMgr2FPCUssUcUs();
-extern "C" void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void getBounds__7J2DPaneFv();
-extern "C" void getParentPane__7J2DPaneFv();
-extern "C" void getStringPtr__10J2DTextBoxCFv();
-extern "C" void PSVECSquareMag();
-extern "C" void _savefpr_27();
-extern "C" void _restfpr_27();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void sprintf();
-extern "C" void snprintf();
-extern "C" void strcat();
-extern "C" void strcpy();
-extern "C" void strlen();
+extern "C" void mDoExt_getMesgFont__Fv(); // 1
+extern "C" void dComIfGp_getReverb__Fi(); // 1
+extern "C" void dComIfGs_checkGetInsectNum__Fv(); // 1
+extern "C" void __ct__9STControlFssssffss(); // 1
+extern "C" void setWaitParm__9STControlFssssffss(); // 1
+extern "C" void checkTrigger__9STControlFv(); // 1
+extern "C" void checkLeftTrigger__9STControlFv(); // 1
+extern "C" void checkRightTrigger__9STControlFv(); // 1
+extern "C" void checkUpTrigger__9STControlFv(); // 1
+extern "C" void checkDownTrigger__9STControlFv(); // 1
+extern "C" void getBombNum__21dSv_player_item_max_cCFUc(); // 1
+extern "C" void onEventBit__11dSv_event_cFUs(); // 1
+extern "C" void getEventReg__11dSv_event_cCFUs(); // 1
+extern "C" void dMeter2Info_getNewLetterNum__Fv(); // 1
+extern "C" void initialize__10COutFont_cFv(); // 1
+extern "C" void talkStartInit__12dMsgObject_cFv(); // 1
+extern "C" void isKanbanMessage__12dMsgObject_cFv(); // 1
+extern "C" void isHowlMessage__12dMsgObject_cFv(); // 1
+extern "C" void isMidonaMessage__12dMsgObject_cFv(); // 1
+extern "C" void isPlaceMessage__12dMsgObject_cFv(); // 1
+extern "C" void isBossMessage__12dMsgObject_cFv(); // 1
+extern "C" bool isBookMessage__12dMsgObject_cFv(); // 1
+extern "C" void isStaffMessage__12dMsgObject_cFv(); // 1
+extern "C" void isSaveMessage__12dMsgObject_cFv(); // 1
+extern "C" void getSmellName__12dMsgObject_cFv(); // 1
+extern "C" void getPortalName__12dMsgObject_cFv(); // 1
+extern "C" void getBombName__12dMsgObject_cFv(); // 1
+extern "C" void getInsectName__12dMsgObject_cFv(); // 1
+extern "C" void getLetterName__12dMsgObject_cFv(); // 1
+extern "C" void getSelectBombNum__12dMsgObject_cFv(); // 1
+extern "C" void addSelectBomBag__12dMsgObject_cFUc(); // 1
+extern "C" void resetSelectBomBag__12dMsgObject_cFv(); // 1
+extern "C" void getMsgOutputType__12dMsgObject_cFv(); // 1
+extern "C" void getWord__12dMsgObject_cFv(); // 1
+extern "C" void getSelectWord__12dMsgObject_cFi(); // 1
+extern "C" void getSelectWordFlag__12dMsgObject_cFv(); // 1
+extern "C" void getSelectBombPrice__12dMsgObject_cFv(); // 1
+extern "C" void getItemEquipButton__12dMsgObject_cFv(); // 1
+extern "C" void dMsgObject_getFundRaising__Fv(); // 1
+extern "C" void setTag__10dMsgUnit_cFiiPcb(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ct__Q28JMessage8TControlFv(); // 1
+extern "C" void __dt__Q28JMessage8TControlFv(); // 1
+extern "C" void __dt__Q28JMessage10TReferenceFv(); // 1
+extern "C" bool do_word__Q28JMessage10TReferenceCFUl(); // 1
+extern "C" void stack_pushCurrent__Q28JMessage10TProcessorFPCc(); // 1
+extern "C" void do_reset__Q28JMessage10TProcessorFv(); // 1
+extern "C" void do_select_begin__Q28JMessage10TProcessorFUl(); // 1
+extern "C" void do_select_end__Q28JMessage10TProcessorFv(); // 1
+extern "C" void do_select_separate__Q28JMessage10TProcessorFv(); // 1
+extern "C" void do_resetStatus___Q28JMessage10TProcessorFPCc(); // 1
+extern "C" bool do_setBegin_isReady___Q28JMessage10TProcessorCFv(); // 1
+extern "C" void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor(); // 1
+extern "C" void __ct__Q28JMessage18TSequenceProcessorFPCQ28JMessage10TReferencePQ28JMessage8TControl(); // 1
+extern "C" void __dt__Q28JMessage18TSequenceProcessorFv(); // 1
+extern "C" void do_branch_query__Q28JMessage18TSequenceProcessorFUl(); // 1
+extern "C" s32 do_branch_queryResult__Q28JMessage18TSequenceProcessorFv(); // 1
+extern "C" void do_branch__Q28JMessage18TSequenceProcessorFPCvPCc(); // 1
+extern "C" void do_resetStatus___Q28JMessage18TSequenceProcessorFPCc(); // 1
+extern "C" void do_setBegin_isReady___Q28JMessage18TSequenceProcessorCFv(); // 1
+extern "C" void do_begin___Q28JMessage18TSequenceProcessorFPCvPCc(); // 1
+extern "C" void do_end___Q28JMessage18TSequenceProcessorFv(); // 1
+extern "C" void do_tag___Q28JMessage18TSequenceProcessorFUlPCvUl(); // 1
+extern "C" void __ct__Q28JMessage19TRenderingProcessorFPCQ28JMessage10TReference(); // 1
+extern "C" void __dt__Q28JMessage19TRenderingProcessorFv(); // 1
+extern "C" void process__Q28JMessage19TRenderingProcessorFPCc(); // 1
+extern "C" void do_begin___Q28JMessage19TRenderingProcessorFPCvPCc(); // 1
+extern "C" void do_end___Q28JMessage19TRenderingProcessorFv(); // 1
+extern "C" void do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void setString__12Z2SpeechMgr2FPCUssUcUs(); // 1
+extern "C" void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getBounds__7J2DPaneFv(); // 1
+extern "C" void getParentPane__7J2DPaneFv(); // 1
+extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void _savefpr_27(); // 1
+extern "C" void _restfpr_27(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void sprintf(); // 1
+extern "C" void snprintf(); // 1
+extern "C" void strcat(); // 1
+extern "C" void strcpy(); // 1
+extern "C" void strlen(); // 1
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_DATA extern void*const __vt__17jmessage_tControl[3];

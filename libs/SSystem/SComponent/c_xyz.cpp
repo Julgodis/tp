@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80009184 */ ~cXyz();
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
@@ -42,32 +34,31 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void __sinit_c_xyz_cpp();
+extern "C" void __sinit_c_xyz_cpp(); // 1
 
-extern "C" void __pl__4cXyzCFRC3Vec();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void __ml__4cXyzCFf();
-extern "C" void __ml__4cXyzCFRC3Vec();
-extern "C" void __dv__4cXyzCFf();
-extern "C" void getCrossProduct__4cXyzCFRC3Vec();
-extern "C" void outprod__4cXyzCFRC3Vec();
-extern "C" void norm__4cXyzCFv();
-extern "C" void normZP__4cXyzCFv();
-extern "C" void normZC__4cXyzCFv();
-extern "C" void normalize__4cXyzFv();
-extern "C" void normalizeZP__4cXyzFv();
-extern "C" void normalizeRS__4cXyzFv();
-extern "C" bool __eq__4cXyzCFRC3Vec();
-extern "C" bool __ne__4cXyzCFRC3Vec();
-extern "C" void isZero__4cXyzCFv();
-extern "C" void atan2sX_Z__4cXyzCFv();
-extern "C" void atan2sY_XZ__4cXyzCFv();
-extern "C" void __sinit_c_xyz_cpp();
+extern "C" void __pl__4cXyzCFRC3Vec(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ml__4cXyzCFf(); // 1
+extern "C" void __ml__4cXyzCFRC3Vec(); // 1
+extern "C" void __dv__4cXyzCFf(); // 1
+extern "C" void getCrossProduct__4cXyzCFRC3Vec(); // 1
+extern "C" void outprod__4cXyzCFRC3Vec(); // 1
+extern "C" void norm__4cXyzCFv(); // 1
+extern "C" void normZP__4cXyzCFv(); // 1
+extern "C" void normZC__4cXyzCFv(); // 1
+extern "C" void normalize__4cXyzFv(); // 1
+extern "C" void normalizeZP__4cXyzFv(); // 1
+extern "C" void normalizeRS__4cXyzFv(); // 1
+extern "C" bool __eq__4cXyzCFRC3Vec(); // 1
+extern "C" bool __ne__4cXyzCFRC3Vec(); // 1
+extern "C" void isZero__4cXyzCFv(); // 1
+extern "C" void atan2sX_Z__4cXyzCFv(); // 1
+extern "C" void atan2sY_XZ__4cXyzCFv(); // 1
+extern "C" void __sinit_c_xyz_cpp(); // 1
 SECTION_RODATA extern const u8 c_xyz__lit_2299[12 + 4 /* padding */];
 SECTION_BSS extern u8 lit_2450[12];
 SECTION_BSS extern u8 Zero__4cXyz[12];
@@ -99,24 +90,24 @@ SECTION_SDATA2 extern u8 lit_2448[8];
 // External References:
 // 
 
-void cM_atan2s(f32, f32);
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECScale();
-extern "C" void PSVECNormalize();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECCrossProduct();
-extern "C" void __register_global_object();
+void cM_atan2s(f32, f32); // 2
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECNormalize(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void __register_global_object(); // 1
 
-extern "C" void __dt__4cXyzFv();
-extern "C" void cM_atan2s__Fff();
-extern "C" void PSVECAdd();
-extern "C" void PSVECSubtract();
-extern "C" void PSVECScale();
-extern "C" void PSVECNormalize();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECCrossProduct();
-extern "C" void __register_global_object();
+extern "C" void __dt__4cXyzFv(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECSubtract(); // 1
+extern "C" void PSVECScale(); // 1
+extern "C" void PSVECNormalize(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECCrossProduct(); // 1
+extern "C" void __register_global_object(); // 1
 SECTION_SDATA extern u32 __float_nan;
 SECTION_SDATA extern u32 __float_epsilon;
 

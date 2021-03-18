@@ -9,27 +9,15 @@
 // Types:
 // 
 
-// build base_process_class (['base_process_class']) False/False
-/* top-level dependencies (begin ['base_process_class']) */
-/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build layer_management_tag_class (['layer_management_tag_class']) False/False
-/* top-level dependencies (begin ['layer_management_tag_class']) */
-/* top-level dependencies (end ['layer_management_tag_class']) */
 struct layer_management_tag_class {
 };
 
-// build line_tag (['line_tag']) False/False
-/* top-level dependencies (begin ['line_tag']) */
-/* top-level dependencies (end ['line_tag']) */
 struct line_tag {
 };
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
@@ -37,51 +25,51 @@ struct create_tag_class {
 // Forward References:
 // 
 
-extern "C" void fpcEx_Search__FPFPvPv_PvPv();
-void fpcEx_SearchByID(u32);
-void fpcEx_IsExist(u32);
-void fpcEx_Execute(base_process_class*);
-static void fpcEx_ToLineQ(base_process_class*);
-void fpcEx_ExecuteQTo(base_process_class*);
-void fpcEx_ToExecuteQ(base_process_class*);
-extern "C" void fpcEx_Handler__FPFPvPv_i();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+void fpcEx_SearchByID(u32); // 2
+void fpcEx_IsExist(u32); // 2
+void fpcEx_Execute(base_process_class*); // 2
+static void fpcEx_ToLineQ(base_process_class*); // 2
+void fpcEx_ExecuteQTo(base_process_class*); // 2
+void fpcEx_ToExecuteQ(base_process_class*); // 2
+extern "C" void fpcEx_Handler__FPFPvPv_i(); // 1
 
-extern "C" void fpcEx_Search__FPFPvPv_PvPv();
-extern "C" void fpcEx_SearchByID__FUi();
-extern "C" void fpcEx_IsExist__FUi();
-extern "C" void fpcEx_Execute__FP18base_process_class();
-extern "C" static void fpcEx_ToLineQ__FP18base_process_class();
-extern "C" void fpcEx_ExecuteQTo__FP18base_process_class();
-extern "C" void fpcEx_ToExecuteQ__FP18base_process_class();
-extern "C" void fpcEx_Handler__FPFPvPv_i();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+extern "C" void fpcEx_SearchByID__FUi(); // 1
+extern "C" void fpcEx_IsExist__FUi(); // 1
+extern "C" void fpcEx_Execute__FP18base_process_class(); // 1
+extern "C" static void fpcEx_ToLineQ__FP18base_process_class(); // 1
+extern "C" void fpcEx_ExecuteQTo__FP18base_process_class(); // 1
+extern "C" void fpcEx_ToExecuteQ__FP18base_process_class(); // 1
+extern "C" void fpcEx_Handler__FPFPvPv_i(); // 1
 
 // 
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(int, int);
-void fpcBs_Execute(base_process_class*);
-extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
-extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv();
-void fpcLyTg_ToQueue(layer_management_tag_class*, u32, u16, u16);
-void fpcLyTg_QueueTo(layer_management_tag_class*);
-void fpcSch_JudgeByID(void*, void*);
-void fpcLnTg_ToQueue(line_tag*, int);
-extern "C" void fpcLnIt_Queue__FPFPvPv_i();
-void fpcPause_IsEnable(void*, u8);
-void cTg_IsUse(create_tag_class*);
+void fpcBs_Is_JustOfType(int, int); // 2
+void fpcBs_Execute(base_process_class*); // 2
+extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
+extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv(); // 1
+void fpcLyTg_ToQueue(layer_management_tag_class*, u32, u16, u16); // 2
+void fpcLyTg_QueueTo(layer_management_tag_class*); // 2
+void fpcSch_JudgeByID(void*, void*); // 2
+void fpcLnTg_ToQueue(line_tag*, int); // 2
+extern "C" void fpcLnIt_Queue__FPFPvPv_i(); // 1
+void fpcPause_IsEnable(void*, u8); // 2
+void cTg_IsUse(create_tag_class*); // 2
 
-extern "C" void fpcBs_Is_JustOfType__Fii();
-extern "C" void fpcBs_Execute__FP18base_process_class();
-extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
-extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv();
-extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
-extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class();
-extern "C" void fpcSch_JudgeByID__FPvPv();
-extern "C" void fpcLnTg_ToQueue__FP8line_tagi();
-extern "C" void fpcLnIt_Queue__FPFPvPv_i();
-extern "C" void fpcPause_IsEnable__FPvUc();
-extern "C" void cTg_IsUse__FP16create_tag_class();
+extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
+extern "C" void fpcBs_Execute__FP18base_process_class(); // 1
+extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
+extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv(); // 1
+extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs(); // 1
+extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class(); // 1
+extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
+extern "C" void fpcLnTg_ToQueue__FP8line_tagi(); // 1
+extern "C" void fpcLnIt_Queue__FPFPvPv_i(); // 1
+extern "C" void fpcPause_IsEnable__FPvUc(); // 1
+extern "C" void cTg_IsUse__FP16create_tag_class(); // 1
 SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
 
 // 

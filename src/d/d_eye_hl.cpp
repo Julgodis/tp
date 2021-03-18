@@ -9,38 +9,20 @@
 // Types:
 // 
 
-// build dEyeHL_c (['dEyeHL_c']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-/* top-level dependencies (begin ['dEyeHL_c']) */
-// outer dependency: ('J3DModelData',)
-/* top-level dependencies (end ['dEyeHL_c']) */
 struct dEyeHL_c {
-	// ('J3DModelData',)
 	/* 8009C964 */ void entry(J3DModelData*, char const*);
 	/* 8009CA28 */ void remove();
 };
 
-// build J3DModelData (['J3DModelData']) True/True
-// build dEyeHL_mng_c (['dEyeHL_mng_c']) False/False
-// build dEyeHL_c (['dEyeHL_c']) True/True
-/* top-level dependencies (begin ['dEyeHL_mng_c']) */
-// outer dependency: ('dEyeHL_c',)
-/* top-level dependencies (end ['dEyeHL_mng_c']) */
 struct dEyeHL_mng_c {
-	// ('dEyeHL_c',)
 	/* 8009CA48 */ void update();
 	/* 8009CB14 */ void entry(dEyeHL_c*);
 	/* 8009CB34 */ void remove(dEyeHL_c*);
 };
 
-// build JUTNameTab (['JUTNameTab']) False/False
-/* top-level dependencies (begin ['JUTNameTab']) */
-/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
 	/* 802DEAF8 */ void getName(u16) const;
 };
@@ -50,11 +32,11 @@ struct JUTNameTab {
 // 
 
 
-extern "C" void entry__8dEyeHL_cFP12J3DModelDataPCc();
-extern "C" void remove__8dEyeHL_cFv();
-extern "C" void update__12dEyeHL_mng_cFv();
-extern "C" void entry__12dEyeHL_mng_cFP8dEyeHL_c();
-extern "C" void remove__12dEyeHL_mng_cFP8dEyeHL_c();
+extern "C" void entry__8dEyeHL_cFP12J3DModelDataPCc(); // 1
+extern "C" void remove__8dEyeHL_cFv(); // 1
+extern "C" void update__12dEyeHL_mng_cFv(); // 1
+extern "C" void entry__12dEyeHL_mng_cFP8dEyeHL_c(); // 1
+extern "C" void remove__12dEyeHL_mng_cFP8dEyeHL_c(); // 1
 SECTION_RODATA extern const u8 d_d_eye_hl__stringBase0[64];
 SECTION_SBSS extern u8 m_obj__12dEyeHL_mng_c[4 + 4 /* padding */];
 SECTION_SBSS extern u8 struct_80450FB0[8];
@@ -67,16 +49,16 @@ SECTION_SDATA2 extern f32 d_d_eye_hl__lit_3863;
 // External References:
 // 
 
-extern "C" void OSReport_Error();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
-extern "C" void strcmp();
+extern "C" void OSReport_Error(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void OSReport_Error();
-extern "C" void getName__10JUTNameTabCFUs();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_27();
-extern "C" void strcmp();
+extern "C" void OSReport_Error(); // 1
+extern "C" void getName__10JUTNameTabCFUs(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void strcmp(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_envHIO[68];
 

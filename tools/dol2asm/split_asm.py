@@ -135,8 +135,9 @@ def main(debug, game_path):
 
     cpp_gen = True
     asm_gen = False
-    mk_gen = False
-    symbols_gen = False
+    mk_gen = True
+    symbols_gen = True
+    ref_gen = True
     no_file_generation = False
     select_modules = [0]
 
@@ -410,8 +411,7 @@ def main(debug, game_path):
     for section, symbol in require_resolve:
         symbol.resolve_references(main_context, symbol_table, section)
 
-
-    if True:
+    if ref_gen:
         g.CONSOLE.print(f"{step_count:2} Calculate reference count")
         step_count += 1
 
@@ -503,6 +503,7 @@ def main(debug, game_path):
         if cpp_gen:
             for lib_name,lib in module.libraries.items():
                 for tu_name,tu in lib.translation_units.items():
+                    #if tu_name.endswith("JAUBankTable"):
                     cpp_tasks.append((tu,tu.source_path(lib),))
 
         if asm_gen:

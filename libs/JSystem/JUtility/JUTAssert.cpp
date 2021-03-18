@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JUTAssertion (['JUTAssertion']) False/False
-/* top-level dependencies (begin ['JUTAssertion']) */
-/* top-level dependencies (end ['JUTAssertion']) */
 struct JUTAssertion {
 	/* 802E495C */ void create();
 	/* 802E4960 */ void flush_subroutine();
@@ -21,36 +18,18 @@ struct JUTAssertion {
 	/* 802E4C3C */ void setMessageCount(int);
 };
 
-// build JUTFont (['JUTFont']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin ['JUTFont']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['JUTFont']) */
 struct JUTFont {
-	// ('JUtility', 'TColor')
 	/* 802DED70 */ void setCharColor(JUtility::TColor);
 	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
 };
 
-// build JUtility (['JUtility']) True/True
-// build JUTDirectPrint (['JUTDirectPrint']) False/False
-// build JUtility (['JUtility']) True/True
-/* top-level dependencies (begin ['JUTDirectPrint']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['JUTDirectPrint']) */
 struct JUTDirectPrint {
-	// ('JUtility', 'TColor')
 	/* 802E46D8 */ void drawString(u16, u16, char*);
 	/* 802E4798 */ void setCharColor(JUtility::TColor);
 };
@@ -60,12 +39,12 @@ struct JUTDirectPrint {
 // 
 
 
-extern "C" void create__12JUTAssertionFv();
-extern "C" void flush_subroutine__12JUTAssertionFv();
-extern "C" void flushMessage__12JUTAssertionFv();
-extern "C" void flushMessage_dbPrint__12JUTAssertionFv();
-extern "C" void setVisible__12JUTAssertionFb();
-extern "C" void setMessageCount__12JUTAssertionFi();
+extern "C" void create__12JUTAssertionFv(); // 1
+extern "C" void flush_subroutine__12JUTAssertionFv(); // 1
+extern "C" void flushMessage__12JUTAssertionFv(); // 1
+extern "C" void flushMessage_dbPrint__12JUTAssertionFv(); // 1
+extern "C" void setVisible__12JUTAssertionFb(); // 1
+extern "C" void setMessageCount__12JUTAssertionFi(); // 1
 SECTION_BSS extern u8 data_80434870[64];
 SECTION_BSS extern u8 data_804348B0[256];
 SECTION_SBSS extern u8 data_80451530[4 + 4 /* padding */];
@@ -78,15 +57,15 @@ SECTION_SDATA2 extern f64 lit_728;
 // External References:
 // 
 
-extern "C" void VIGetRetraceCount();
-extern "C" void strlen();
+extern "C" void VIGetRetraceCount(); // 1
+extern "C" void strlen(); // 1
 
-extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor();
-extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb();
-extern "C" void drawString__14JUTDirectPrintFUsUsPc();
-extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor();
-extern "C" void VIGetRetraceCount();
-extern "C" void strlen();
+extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor(); // 1
+extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb(); // 1
+extern "C" void drawString__14JUTDirectPrintFUsUsPc(); // 1
+extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor(); // 1
+extern "C" void VIGetRetraceCount(); // 1
+extern "C" void strlen(); // 1
 SECTION_SDATA extern u8 data_804508F8[8];
 SECTION_SBSS extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
 SECTION_SBSS extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];

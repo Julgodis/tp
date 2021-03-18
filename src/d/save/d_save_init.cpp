@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-void setInitEventBit();
+void setInitEventBit(); // 2
 
-extern "C" void setInitEventBit__Fv();
+extern "C" void setInitEventBit__Fv(); // 1
 
 // 
 // External References:

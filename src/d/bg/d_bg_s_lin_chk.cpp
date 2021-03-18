@@ -9,108 +9,63 @@
 // Types:
 // 
 
-// build dBgS_LinChk (['dBgS_LinChk']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ['dBgS_LinChk']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dBgS_LinChk']) */
 struct dBgS_LinChk {
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 80077C68 */ dBgS_LinChk();
 	/* 80077CDC */ ~dBgS_LinChk();
 	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
-// build cXyz (['cXyz']) True/True
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build dBgS_CamLinChk (['dBgS_CamLinChk']) False/False
-/* top-level dependencies (begin ['dBgS_CamLinChk']) */
-/* top-level dependencies (end ['dBgS_CamLinChk']) */
 struct dBgS_CamLinChk {
 	/* 80077DA4 */ dBgS_CamLinChk();
 	/* 80077E00 */ ~dBgS_CamLinChk();
 };
 
-// build dBgS_CamLinChk_NorWtr (['dBgS_CamLinChk_NorWtr']) False/False
-/* top-level dependencies (begin ['dBgS_CamLinChk_NorWtr']) */
-/* top-level dependencies (end ['dBgS_CamLinChk_NorWtr']) */
 struct dBgS_CamLinChk_NorWtr {
 	/* 80077E78 */ dBgS_CamLinChk_NorWtr();
 	/* 80077EE4 */ ~dBgS_CamLinChk_NorWtr();
 };
 
-// build dBgS_ObjLinChk (['dBgS_ObjLinChk']) False/False
-/* top-level dependencies (begin ['dBgS_ObjLinChk']) */
-/* top-level dependencies (end ['dBgS_ObjLinChk']) */
 struct dBgS_ObjLinChk {
 	/* 80077F5C */ dBgS_ObjLinChk();
 	/* 80077FB8 */ ~dBgS_ObjLinChk();
 };
 
-// build dBgS_LinkLinChk (['dBgS_LinkLinChk']) False/False
-/* top-level dependencies (begin ['dBgS_LinkLinChk']) */
-/* top-level dependencies (end ['dBgS_LinkLinChk']) */
 struct dBgS_LinkLinChk {
 	/* 80078030 */ dBgS_LinkLinChk();
 	/* 8007808C */ ~dBgS_LinkLinChk();
 };
 
-// build dBgS_BombLinChk (['dBgS_BombLinChk']) False/False
-/* top-level dependencies (begin ['dBgS_BombLinChk']) */
-/* top-level dependencies (end ['dBgS_BombLinChk']) */
 struct dBgS_BombLinChk {
 	/* 80078104 */ dBgS_BombLinChk();
 	/* 80078160 */ ~dBgS_BombLinChk();
 };
 
-// build dBgS_ArrowLinChk (['dBgS_ArrowLinChk']) False/False
-/* top-level dependencies (begin ['dBgS_ArrowLinChk']) */
-/* top-level dependencies (end ['dBgS_ArrowLinChk']) */
 struct dBgS_ArrowLinChk {
 	/* 800781D8 */ dBgS_ArrowLinChk();
 	/* 80078240 */ ~dBgS_ArrowLinChk();
 };
 
-// build dBgS_BoomerangLinChk (['dBgS_BoomerangLinChk']) False/False
-/* top-level dependencies (begin ['dBgS_BoomerangLinChk']) */
-/* top-level dependencies (end ['dBgS_BoomerangLinChk']) */
 struct dBgS_BoomerangLinChk {
 	/* 800782B8 */ dBgS_BoomerangLinChk();
 	/* 80078314 */ ~dBgS_BoomerangLinChk();
 };
 
-// build dBgS_RopeLinChk (['dBgS_RopeLinChk']) False/False
-/* top-level dependencies (begin ['dBgS_RopeLinChk']) */
-/* top-level dependencies (end ['dBgS_RopeLinChk']) */
 struct dBgS_RopeLinChk {
 	/* 8007838C */ dBgS_RopeLinChk();
 	/* 800783E8 */ ~dBgS_RopeLinChk();
 };
 
-// build dBgS_HorseLinChk (['dBgS_HorseLinChk']) False/False
-/* top-level dependencies (begin ['dBgS_HorseLinChk']) */
-/* top-level dependencies (end ['dBgS_HorseLinChk']) */
 struct dBgS_HorseLinChk {
 	/* 80078460 */ dBgS_HorseLinChk();
 	/* 800784BC */ ~dBgS_HorseLinChk();
 };
 
-// build dBgS_Chk (['dBgS_Chk']) False/False
-/* top-level dependencies (begin ['dBgS_Chk']) */
-/* top-level dependencies (end ['dBgS_Chk']) */
 struct dBgS_Chk {
 	/* 8007749C */ dBgS_Chk();
 	/* 800774E8 */ ~dBgS_Chk();
@@ -118,9 +73,6 @@ struct dBgS_Chk {
 	/* 80077564 */ void GetGrpPassChkInfo();
 };
 
-// build dBgS_PolyPassChk (['dBgS_PolyPassChk']) False/False
-/* top-level dependencies (begin ['dBgS_PolyPassChk']) */
-/* top-level dependencies (end ['dBgS_PolyPassChk']) */
 struct dBgS_PolyPassChk {
 	/* 80078E68 */ void SetObj();
 	/* 80078E80 */ void SetCam();
@@ -132,13 +84,7 @@ struct dBgS_PolyPassChk {
 	/* 80078EF8 */ void SetHorse();
 };
 
-// build cBgS_LinChk (['cBgS_LinChk']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cBgS_LinChk']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cBgS_LinChk']) */
 struct cBgS_LinChk {
-	// ('cXyz',)
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
 	/* 80267ED0 */ void Set2(cXyz const*, cXyz const*, u32);
@@ -148,88 +94,88 @@ struct cBgS_LinChk {
 // Forward References:
 // 
 
-extern "C" static void func_80078534();
-extern "C" static void func_8007853C();
-extern "C" static void func_80078544();
-extern "C" static void func_8007854C();
-extern "C" static void func_80078554();
-extern "C" static void func_8007855C();
-extern "C" static void func_80078564();
-extern "C" static void func_8007856C();
-extern "C" static void func_80078574();
-extern "C" static void func_8007857C();
-extern "C" static void func_80078584();
-extern "C" static void func_8007858C();
-extern "C" static void func_80078594();
-extern "C" static void func_8007859C();
-extern "C" static void func_800785A4();
-extern "C" static void func_800785AC();
-extern "C" static void func_800785B4();
-extern "C" static void func_800785BC();
-extern "C" static void func_800785C4();
-extern "C" static void func_800785CC();
-extern "C" static void func_800785D4();
-extern "C" static void func_800785DC();
-extern "C" static void func_800785E4();
-extern "C" static void func_800785EC();
-extern "C" static void func_800785F4();
-extern "C" static void func_800785FC();
-extern "C" static void func_80078604();
-extern "C" static void func_8007860C();
-extern "C" static void func_80078614();
-extern "C" static void func_8007861C();
+extern "C" static void func_80078534(); // 1
+extern "C" static void func_8007853C(); // 1
+extern "C" static void func_80078544(); // 1
+extern "C" static void func_8007854C(); // 1
+extern "C" static void func_80078554(); // 1
+extern "C" static void func_8007855C(); // 1
+extern "C" static void func_80078564(); // 1
+extern "C" static void func_8007856C(); // 1
+extern "C" static void func_80078574(); // 1
+extern "C" static void func_8007857C(); // 1
+extern "C" static void func_80078584(); // 1
+extern "C" static void func_8007858C(); // 1
+extern "C" static void func_80078594(); // 1
+extern "C" static void func_8007859C(); // 1
+extern "C" static void func_800785A4(); // 1
+extern "C" static void func_800785AC(); // 1
+extern "C" static void func_800785B4(); // 1
+extern "C" static void func_800785BC(); // 1
+extern "C" static void func_800785C4(); // 1
+extern "C" static void func_800785CC(); // 1
+extern "C" static void func_800785D4(); // 1
+extern "C" static void func_800785DC(); // 1
+extern "C" static void func_800785E4(); // 1
+extern "C" static void func_800785EC(); // 1
+extern "C" static void func_800785F4(); // 1
+extern "C" static void func_800785FC(); // 1
+extern "C" static void func_80078604(); // 1
+extern "C" static void func_8007860C(); // 1
+extern "C" static void func_80078614(); // 1
+extern "C" static void func_8007861C(); // 1
 
-extern "C" void __ct__11dBgS_LinChkFv();
-extern "C" void __dt__11dBgS_LinChkFv();
-extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c();
-extern "C" void __ct__14dBgS_CamLinChkFv();
-extern "C" void __dt__14dBgS_CamLinChkFv();
-extern "C" void __ct__21dBgS_CamLinChk_NorWtrFv();
-extern "C" void __dt__21dBgS_CamLinChk_NorWtrFv();
-extern "C" void __ct__14dBgS_ObjLinChkFv();
-extern "C" void __dt__14dBgS_ObjLinChkFv();
-extern "C" void __ct__15dBgS_LinkLinChkFv();
-extern "C" void __dt__15dBgS_LinkLinChkFv();
-extern "C" void __ct__15dBgS_BombLinChkFv();
-extern "C" void __dt__15dBgS_BombLinChkFv();
-extern "C" void __ct__16dBgS_ArrowLinChkFv();
-extern "C" void __dt__16dBgS_ArrowLinChkFv();
-extern "C" void __ct__20dBgS_BoomerangLinChkFv();
-extern "C" void __dt__20dBgS_BoomerangLinChkFv();
-extern "C" void __ct__15dBgS_RopeLinChkFv();
-extern "C" void __dt__15dBgS_RopeLinChkFv();
-extern "C" void __ct__16dBgS_HorseLinChkFv();
-extern "C" void __dt__16dBgS_HorseLinChkFv();
-extern "C" static void func_80078534();
-extern "C" static void func_8007853C();
-extern "C" static void func_80078544();
-extern "C" static void func_8007854C();
-extern "C" static void func_80078554();
-extern "C" static void func_8007855C();
-extern "C" static void func_80078564();
-extern "C" static void func_8007856C();
-extern "C" static void func_80078574();
-extern "C" static void func_8007857C();
-extern "C" static void func_80078584();
-extern "C" static void func_8007858C();
-extern "C" static void func_80078594();
-extern "C" static void func_8007859C();
-extern "C" static void func_800785A4();
-extern "C" static void func_800785AC();
-extern "C" static void func_800785B4();
-extern "C" static void func_800785BC();
-extern "C" static void func_800785C4();
-extern "C" static void func_800785CC();
-extern "C" static void func_800785D4();
-extern "C" static void func_800785DC();
-extern "C" static void func_800785E4();
-extern "C" static void func_800785EC();
-extern "C" static void func_800785F4();
-extern "C" static void func_800785FC();
-extern "C" static void func_80078604();
-extern "C" static void func_8007860C();
-extern "C" static void func_80078614();
-extern "C" static void func_8007861C();
+extern "C" void __ct__11dBgS_LinChkFv(); // 1
+extern "C" void __dt__11dBgS_LinChkFv(); // 1
+extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
+extern "C" void __ct__14dBgS_CamLinChkFv(); // 1
+extern "C" void __dt__14dBgS_CamLinChkFv(); // 1
+extern "C" void __ct__21dBgS_CamLinChk_NorWtrFv(); // 1
+extern "C" void __dt__21dBgS_CamLinChk_NorWtrFv(); // 1
+extern "C" void __ct__14dBgS_ObjLinChkFv(); // 1
+extern "C" void __dt__14dBgS_ObjLinChkFv(); // 1
+extern "C" void __ct__15dBgS_LinkLinChkFv(); // 1
+extern "C" void __dt__15dBgS_LinkLinChkFv(); // 1
+extern "C" void __ct__15dBgS_BombLinChkFv(); // 1
+extern "C" void __dt__15dBgS_BombLinChkFv(); // 1
+extern "C" void __ct__16dBgS_ArrowLinChkFv(); // 1
+extern "C" void __dt__16dBgS_ArrowLinChkFv(); // 1
+extern "C" void __ct__20dBgS_BoomerangLinChkFv(); // 1
+extern "C" void __dt__20dBgS_BoomerangLinChkFv(); // 1
+extern "C" void __ct__15dBgS_RopeLinChkFv(); // 1
+extern "C" void __dt__15dBgS_RopeLinChkFv(); // 1
+extern "C" void __ct__16dBgS_HorseLinChkFv(); // 1
+extern "C" void __dt__16dBgS_HorseLinChkFv(); // 1
+extern "C" static void func_80078534(); // 1
+extern "C" static void func_8007853C(); // 1
+extern "C" static void func_80078544(); // 1
+extern "C" static void func_8007854C(); // 1
+extern "C" static void func_80078554(); // 1
+extern "C" static void func_8007855C(); // 1
+extern "C" static void func_80078564(); // 1
+extern "C" static void func_8007856C(); // 1
+extern "C" static void func_80078574(); // 1
+extern "C" static void func_8007857C(); // 1
+extern "C" static void func_80078584(); // 1
+extern "C" static void func_8007858C(); // 1
+extern "C" static void func_80078594(); // 1
+extern "C" static void func_8007859C(); // 1
+extern "C" static void func_800785A4(); // 1
+extern "C" static void func_800785AC(); // 1
+extern "C" static void func_800785B4(); // 1
+extern "C" static void func_800785BC(); // 1
+extern "C" static void func_800785C4(); // 1
+extern "C" static void func_800785CC(); // 1
+extern "C" static void func_800785D4(); // 1
+extern "C" static void func_800785DC(); // 1
+extern "C" static void func_800785E4(); // 1
+extern "C" static void func_800785EC(); // 1
+extern "C" static void func_800785F4(); // 1
+extern "C" static void func_800785FC(); // 1
+extern "C" static void func_80078604(); // 1
+extern "C" static void func_8007860C(); // 1
+extern "C" static void func_80078614(); // 1
+extern "C" static void func_8007861C(); // 1
 SECTION_DATA extern void*const __vt__16dBgS_HorseLinChk[12];
 SECTION_DATA extern void*const __vt__15dBgS_RopeLinChk[12];
 SECTION_DATA extern void*const __vt__20dBgS_BoomerangLinChk[12];
@@ -245,24 +191,24 @@ SECTION_DATA extern void*const __vt__11dBgS_LinChk[12];
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __ct__8dBgS_ChkFv();
-extern "C" void __dt__8dBgS_ChkFv();
-extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv();
-extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv();
-extern "C" void SetObj__16dBgS_PolyPassChkFv();
-extern "C" void SetCam__16dBgS_PolyPassChkFv();
-extern "C" void SetLink__16dBgS_PolyPassChkFv();
-extern "C" void SetArrow__16dBgS_PolyPassChkFv();
-extern "C" void SetBomb__16dBgS_PolyPassChkFv();
-extern "C" void SetBoomerang__16dBgS_PolyPassChkFv();
-extern "C" void SetRope__16dBgS_PolyPassChkFv();
-extern "C" void SetHorse__16dBgS_PolyPassChkFv();
-extern "C" void __ct__11cBgS_LinChkFv();
-extern "C" void __dt__11cBgS_LinChkFv();
-extern "C" void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi();
-extern "C" void __dl__FPv();
+extern "C" void __ct__8dBgS_ChkFv(); // 1
+extern "C" void __dt__8dBgS_ChkFv(); // 1
+extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv(); // 1
+extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv(); // 1
+extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
+extern "C" void SetCam__16dBgS_PolyPassChkFv(); // 1
+extern "C" void SetLink__16dBgS_PolyPassChkFv(); // 1
+extern "C" void SetArrow__16dBgS_PolyPassChkFv(); // 1
+extern "C" void SetBomb__16dBgS_PolyPassChkFv(); // 1
+extern "C" void SetBoomerang__16dBgS_PolyPassChkFv(); // 1
+extern "C" void SetRope__16dBgS_PolyPassChkFv(); // 1
+extern "C" void SetHorse__16dBgS_PolyPassChkFv(); // 1
+extern "C" void __ct__11cBgS_LinChkFv(); // 1
+extern "C" void __dt__11cBgS_LinChkFv(); // 1
+extern "C" void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi(); // 1
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

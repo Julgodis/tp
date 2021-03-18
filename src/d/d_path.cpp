@@ -9,45 +9,24 @@
 // Types:
 // 
 
-// build dPath (['dPath']) False/False
-/* top-level dependencies (begin ['dPath']) */
-/* top-level dependencies (end ['dPath']) */
 struct dPath {
 };
 
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) False/False
-/* top-level dependencies (begin ['cBgS_PolyInfo']) */
-/* top-level dependencies (end ['cBgS_PolyInfo']) */
 struct cBgS_PolyInfo {
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build dStage_roomControl_c (['dStage_roomControl_c']) False/False
-/* top-level dependencies (begin ['dStage_roomControl_c']) */
-/* top-level dependencies (end ['dStage_roomControl_c']) */
 struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
-// build dSv_info_c (['dSv_info_c']) False/False
-/* top-level dependencies (begin ['dSv_info_c']) */
-/* top-level dependencies (end ['dSv_info_c']) */
 struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-// build dBgS (['dBgS']) False/False
-// build cBgS_PolyInfo (['cBgS_PolyInfo']) True/True
-/* top-level dependencies (begin ['dBgS']) */
-// outer dependency: ('cBgS_PolyInfo',)
-/* top-level dependencies (end ['dBgS']) */
 struct dBgS {
-	// ('cBgS_PolyInfo',)
 	/* 80074FE0 */ void GetRoomPathId(cBgS_PolyInfo const&);
 	/* 80075030 */ void GetRoomPathPntNo(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
@@ -57,31 +36,31 @@ struct dBgS {
 // Forward References:
 // 
 
-void dPath_GetPnt(dPath const*, int);
-void dPath_GetRoomPath(int, int);
-void dPath_GetNextRoomPath(dPath const*, int);
-void dPath_GetPolyRoomPathVec(cBgS_PolyInfo const&, cXyz*, int*);
+void dPath_GetPnt(dPath const*, int); // 2
+void dPath_GetRoomPath(int, int); // 2
+void dPath_GetNextRoomPath(dPath const*, int); // 2
+void dPath_GetPolyRoomPathVec(cBgS_PolyInfo const&, cXyz*, int*); // 2
 
-extern "C" void dPath_GetPnt__FPC5dPathi();
-extern "C" void dPath_GetRoomPath__Fii();
-extern "C" void dPath_GetNextRoomPath__FPC5dPathi();
-extern "C" void dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi();
+extern "C" void dPath_GetPnt__FPC5dPathi(); // 1
+extern "C" void dPath_GetRoomPath__Fii(); // 1
+extern "C" void dPath_GetNextRoomPath__FPC5dPathi(); // 1
+extern "C" void dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi(); // 1
 SECTION_SDATA2 extern u8 d_d_path__lit_3685[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
-extern "C" void isSwitch__10dSv_info_cCFii();
-extern "C" void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
+extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 

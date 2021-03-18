@@ -9,44 +9,16 @@
 // Types:
 // 
 
-// build dJntCol_c (['dJntCol_c']) False/False
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
-struct csXyz {
-};
-
-// build J3DModel (['J3DModel']) False/False
-/* top-level dependencies (begin ['J3DModel']) */
-/* top-level dependencies (end ['J3DModel']) */
-struct J3DModel {
-};
-
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
-struct fopAc_ac_c {
-};
-
-// build dJntColData_c (['dJntColData_c']) False/False
-/* top-level dependencies (begin ['dJntColData_c']) */
-/* top-level dependencies (end ['dJntColData_c']) */
 struct dJntColData_c {
 };
 
-// build cM3dGLin (['cM3dGLin']) False/False
-// build cXyz (['cXyz']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
+struct J3DModel {
+};
+
 struct Vec {
 };
 
-/* top-level dependencies (begin ['cXyz']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
-	// ('Vec',)
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
@@ -56,31 +28,18 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
-/* top-level dependencies (begin ['cM3dGLin']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGLin']) */
+struct fopAc_ac_c {
+};
+
+struct csXyz {
+};
+
 struct cM3dGLin {
-	// ('cXyz',)
 	/* 80036A5C */ ~cM3dGLin();
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 };
 
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['dJntCol_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('J3DModel',)
-// outer dependency: ('fopAc_ac_c',)
-// outer dependency: ('dJntColData_c',)
-// outer dependency: ('cM3dGLin',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['dJntCol_c']) */
 struct dJntCol_c {
-	// ('J3DModel',)
-	// ('cM3dGLin',)
-	// ('csXyz',)
-	// ('fopAc_ac_c',)
-	// ('dJntColData_c',)
-	// ('cXyz',)
 	/* 80035C8C */ dJntCol_c();
 	/* 80035CA0 */ void init(fopAc_ac_c*, dJntColData_c const*, J3DModel*, int);
 	/* 80035CC8 */ void setNowLine(cM3dGLin*, cXyz const*, csXyz const*, cXyz*);
@@ -90,60 +49,23 @@ struct dJntCol_c {
 	/* 80036FA8 */ void setArrowPosAndAngle(cXyz const*, cXyz const*, int, cXyz*, csXyz*);
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build dJntColData_c (['dJntColData_c']) True/True
-// build J3DModel (['J3DModel']) True/True
-// build cM3dGLin (['cM3dGLin']) True/True
-// build cXyz (['cXyz']) True/True
-// build csXyz (['csXyz']) True/True
-// build cM3dGSph (['cM3dGSph']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGSph']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGSph']) */
 struct cM3dGSph {
-	// ('cXyz',)
 	/* 80036AA4 */ ~cM3dGSph();
 	/* 8026F664 */ void Set(cXyz const&, f32);
 };
 
-// build mDoMtx_stack_c (['mDoMtx_stack_c']) False/False
-// build csXyz (['csXyz']) True/True
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['mDoMtx_stack_c']) */
-// outer dependency: ('csXyz',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['mDoMtx_stack_c']) */
 struct mDoMtx_stack_c {
-	// ('csXyz',)
-	// ('cXyz',)
 	/* 8000CD64 */ void transS(cXyz const&);
 	/* 8000CD9C */ void transM(f32, f32, f32);
 	/* 8000CF0C */ void ZXYrotS(csXyz const&);
 };
 
-// build Vec (['Vec']) True/True
-// build cM3dGPla (['cM3dGPla']) False/False
-// build Vec (['Vec']) True/True
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGPla']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGPla']) */
 struct cM3dGPla {
-	// ('Vec',)
-	// ('cXyz',)
 	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
 	/* 8026F4C4 */ void SetupNP0(Vec const&, Vec const&);
 };
 
-// build cM3dGCyl (['cM3dGCyl']) False/False
-// build cXyz (['cXyz']) True/True
-/* top-level dependencies (begin ['cM3dGCyl']) */
-// outer dependency: ('cXyz',)
-/* top-level dependencies (end ['cM3dGCyl']) */
 struct cM3dGCyl {
-	// ('cXyz',)
 	/* 8026F180 */ void Set(cXyz const&, f32, f32);
 };
 
@@ -152,15 +74,15 @@ struct cM3dGCyl {
 // 
 
 
-extern "C" void __ct__9dJntCol_cFv();
-extern "C" void init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli();
-extern "C" void setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz();
-extern "C" void searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi();
-extern "C" void __dt__8cM3dGLinFv();
-extern "C" void __dt__8cM3dGSphFv();
-extern "C" void getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz();
-extern "C" void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi();
-extern "C" void setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz();
+extern "C" void __ct__9dJntCol_cFv(); // 1
+extern "C" void init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli(); // 1
+extern "C" void setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz(); // 1
+extern "C" void searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi(); // 1
+extern "C" void __dt__8cM3dGLinFv(); // 1
+extern "C" void __dt__8cM3dGSphFv(); // 1
+extern "C" void getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz(); // 1
+extern "C" void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi(); // 1
+extern "C" void setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGLin[3];
 SECTION_DATA extern void*const __vt__8cM3dGSph[3];
 SECTION_SDATA2 extern f32 d_d_jnt_col__lit_3655;
@@ -178,72 +100,72 @@ SECTION_SDATA2 extern f32 d_d_jnt_col__lit_4149;
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16);
-void mDoMtx_YrotM(f32 (* )[4], s16);
-void cM_atan2s(f32, f32);
-void cM3d_SignedLenPlaAndPos(cM3dGPla const*, Vec const*);
-void cM3d_Cross_LinPla(cM3dGLin const*, cM3dGPla const*, Vec*, bool, bool);
-void cM3d_Cross_LinSph_CrossPos(cM3dGSph const&, cM3dGLin const&, Vec*, Vec*);
-void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*);
-void cM3d_lineVsPosSuisenCross(cM3dGLin const*, Vec const*, Vec*);
-void cM3d_lineVsPosSuisenCross(Vec const&, Vec const&, Vec const&, Vec*);
-void operator delete(void*);
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXMultVec();
-extern "C" void PSMTXMultVecSR();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECDotProduct();
-extern "C" void PSVECSquareDistance();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void mDoMtx_XrotM(f32 (* )[4], s16); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16); // 2
+void cM_atan2s(f32, f32); // 2
+void cM3d_SignedLenPlaAndPos(cM3dGPla const*, Vec const*); // 2
+void cM3d_Cross_LinPla(cM3dGLin const*, cM3dGPla const*, Vec*, bool, bool); // 2
+void cM3d_Cross_LinSph_CrossPos(cM3dGSph const&, cM3dGLin const&, Vec*, Vec*); // 2
+void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*); // 2
+void cM3d_lineVsPosSuisenCross(cM3dGLin const*, Vec const*, Vec*); // 2
+void cM3d_lineVsPosSuisenCross(Vec const&, Vec const&, Vec const&, Vec*); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSMTXMultVecSR(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void mDoMtx_XrotM__FPA4_fs();
-extern "C" void mDoMtx_YrotM__FPA4_fs();
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
-extern "C" void transM__14mDoMtx_stack_cFfff();
-extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz();
-extern "C" void __pl__4cXyzCFRC3Vec();
-extern "C" void __mi__4cXyzCFRC3Vec();
-extern "C" void __ml__4cXyzCFf();
-extern "C" void __dv__4cXyzCFf();
-extern "C" void normalizeZP__4cXyzFv();
-extern "C" void atan2sX_Z__4cXyzCFv();
-extern "C" void atan2sY_XZ__4cXyzCFv();
-extern "C" void cM_atan2s__Fff();
-extern "C" void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec();
-extern "C" void cM3d_Cross_LinPla__FPC8cM3dGLinPC8cM3dGPlaP3Vecbb();
-extern "C" void cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec();
-extern "C" void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec();
-extern "C" void cM3d_lineVsPosSuisenCross__FPC8cM3dGLinPC3VecP3Vec();
-extern "C" void cM3d_lineVsPosSuisenCross__FRC3VecRC3VecRC3VecP3Vec();
-extern "C" void Set__8cM3dGCylFRC4cXyzff();
-extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
-extern "C" void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz();
-extern "C" void SetupNP0__8cM3dGPlaFRC3VecRC3Vec();
-extern "C" void Set__8cM3dGSphFRC4cXyzf();
-extern "C" void __dl__FPv();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXInverse();
-extern "C" void PSMTXMultVec();
-extern "C" void PSMTXMultVecSR();
-extern "C" void PSVECSquareMag();
-extern "C" void PSVECDotProduct();
-extern "C" void PSVECSquareDistance();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
+extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
+extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz(); // 1
+extern "C" void __pl__4cXyzCFRC3Vec(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec(); // 1
+extern "C" void __ml__4cXyzCFf(); // 1
+extern "C" void __dv__4cXyzCFf(); // 1
+extern "C" void normalizeZP__4cXyzFv(); // 1
+extern "C" void atan2sX_Z__4cXyzCFv(); // 1
+extern "C" void atan2sY_XZ__4cXyzCFv(); // 1
+extern "C" void cM_atan2s__Fff(); // 1
+extern "C" void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec(); // 1
+extern "C" void cM3d_Cross_LinPla__FPC8cM3dGLinPC8cM3dGPlaP3Vecbb(); // 1
+extern "C" void cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec(); // 1
+extern "C" void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec(); // 1
+extern "C" void cM3d_lineVsPosSuisenCross__FPC8cM3dGLinPC3VecP3Vec(); // 1
+extern "C" void cM3d_lineVsPosSuisenCross__FRC3VecRC3VecRC3VecP3Vec(); // 1
+extern "C" void Set__8cM3dGCylFRC4cXyzff(); // 1
+extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
+extern "C" void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz(); // 1
+extern "C" void SetupNP0__8cM3dGPlaFRC3VecRC3Vec(); // 1
+extern "C" void Set__8cM3dGSphFRC4cXyzf(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXInverse(); // 1
+extern "C" void PSMTXMultVec(); // 1
+extern "C" void PSMTXMultVecSR(); // 1
+extern "C" void PSVECSquareMag(); // 1
+extern "C" void PSVECDotProduct(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__8cM3dGPla[3];
 SECTION_DATA extern void*const __vt__8cM3dGCyl[3];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];

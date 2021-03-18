@@ -9,13 +9,13 @@
 // Forward References:
 // 
 
-extern "C" void __OSResetSWInterruptHandler();
-extern "C" static void OSGetResetButtonState();
-extern "C" void OSGetResetSwitchState();
+extern "C" void __OSResetSWInterruptHandler(); // 1
+extern "C" static void OSGetResetButtonState(); // 1
+extern "C" void OSGetResetSwitchState(); // 1
 
-extern "C" void __OSResetSWInterruptHandler();
-extern "C" static void OSGetResetButtonState();
-extern "C" void OSGetResetSwitchState();
+extern "C" void __OSResetSWInterruptHandler(); // 1
+extern "C" static void OSGetResetButtonState(); // 1
+extern "C" void OSGetResetSwitchState(); // 1
 SECTION_SBSS extern u8 ResetCallback[4];
 SECTION_SBSS extern u8 Down[4];
 SECTION_SBSS extern u8 OSResetSW__LastState[4 + 4 /* padding */];
@@ -28,17 +28,17 @@ SECTION_SBSS extern u8 data_804516BC[4];
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSMaskInterrupts();
-extern "C" void __OSGetSystemTime();
-extern "C" void __div2i();
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSMaskInterrupts(); // 1
+extern "C" void __OSGetSystemTime(); // 1
+extern "C" void __div2i(); // 1
 
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSMaskInterrupts();
-extern "C" void __OSGetSystemTime();
-extern "C" void __div2i();
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSMaskInterrupts(); // 1
+extern "C" void __OSGetSystemTime(); // 1
+extern "C" void __div2i(); // 1
 SECTION_SBSS extern u8 __OSStartTime[4];
 SECTION_SBSS extern u8 data_80451634[4];
 

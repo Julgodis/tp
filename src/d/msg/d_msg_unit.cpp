@@ -9,18 +9,12 @@
 // Types:
 // 
 
-// build dMsgUnit_c (['dMsgUnit_c']) False/False
-/* top-level dependencies (begin ['dMsgUnit_c']) */
-/* top-level dependencies (end ['dMsgUnit_c']) */
 struct dMsgUnit_c {
 	/* 80238C94 */ dMsgUnit_c();
 	/* 80238CA4 */ ~dMsgUnit_c();
 	/* 80238CEC */ void setTag(int, int, char*, bool);
 };
 
-// build dScnKy_env_light_c (['dScnKy_env_light_c']) False/False
-/* top-level dependencies (begin ['dScnKy_env_light_c']) */
-/* top-level dependencies (end ['dScnKy_env_light_c']) */
 struct dScnKy_env_light_c {
 	/* 8019FA08 */ void getDaytime();
 };
@@ -29,12 +23,12 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_msg_unit_cpp();
+extern "C" void __sinit_d_msg_unit_cpp(); // 1
 
-extern "C" void __ct__10dMsgUnit_cFv();
-extern "C" void __dt__10dMsgUnit_cFv();
-extern "C" void setTag__10dMsgUnit_cFiiPcb();
-extern "C" void __sinit_d_msg_unit_cpp();
+extern "C" void __ct__10dMsgUnit_cFv(); // 1
+extern "C" void __dt__10dMsgUnit_cFv(); // 1
+extern "C" void setTag__10dMsgUnit_cFiiPcb(); // 1
+extern "C" void __sinit_d_msg_unit_cpp(); // 1
 SECTION_RODATA extern const u8 d_msg_d_msg_unit__stringBase0[32];
 SECTION_DATA extern void*const __vt__10dMsgUnit_c[4];
 SECTION_BSS extern u8 lit_3640[12 + 4 /* padding */];
@@ -49,22 +43,22 @@ SECTION_SDATA2 extern f64 lit_3707;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void __register_global_object();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
-extern "C" void sprintf();
-extern "C" void strcmp();
-extern "C" void strcat();
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void sprintf(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcat(); // 1
 
-extern "C" void getDaytime__18dScnKy_env_light_cFv();
-extern "C" void __dl__FPv();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
-extern "C" void sprintf();
-extern "C" void strcmp();
-extern "C" void strcat();
+extern "C" void getDaytime__18dScnKy_env_light_cFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void sprintf(); // 1
+extern "C" void strcmp(); // 1
+extern "C" void strcat(); // 1
 SECTION_BSS extern u8 g_env_light[4880];
 SECTION_BSS extern u8 g_meter2_info[248];
 

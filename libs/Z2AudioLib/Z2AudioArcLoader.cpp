@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build Z2AudioArcLoader (['Z2AudioArcLoader']) False/False
-// build JAUSection (['JAUSection']) False/False
-/* top-level dependencies (begin ['JAUSection']) */
-/* top-level dependencies (end ['JAUSection']) */
 struct JAUSection {
 };
 
-/* top-level dependencies (begin ['Z2AudioArcLoader']) */
-// outer dependency: ('JAUSection',)
-/* top-level dependencies (end ['Z2AudioArcLoader']) */
 struct Z2AudioArcLoader {
-	// ('JAUSection',)
 	/* 802A9A34 */ Z2AudioArcLoader(JAUSection*);
 	/* 802A9A70 */ void readCommandMore(u32);
 	/* 802A9AC8 */ void readBFCA(void const*);
@@ -28,21 +20,11 @@ struct Z2AudioArcLoader {
 	/* 802A9B58 */ ~Z2AudioArcLoader();
 };
 
-// build JAUSection (['JAUSection']) True/True
-// build JAUAudioArcInterpreter (['JAUAudioArcInterpreter']) False/False
-/* top-level dependencies (begin ['JAUAudioArcInterpreter']) */
-/* top-level dependencies (end ['JAUAudioArcInterpreter']) */
 struct JAUAudioArcInterpreter {
 	/* 802A4260 */ ~JAUAudioArcInterpreter();
 };
 
-// build JAUAudioArcLoader (['JAUAudioArcLoader']) False/False
-// build JAUSection (['JAUSection']) True/True
-/* top-level dependencies (begin ['JAUAudioArcLoader']) */
-// outer dependency: ('JAUSection',)
-/* top-level dependencies (end ['JAUAudioArcLoader']) */
 struct JAUAudioArcLoader {
-	// ('JAUSection',)
 	/* 802A4740 */ JAUAudioArcLoader(JAUSection*);
 	/* 802A47AC */ void readWS(u32, void const*, u32);
 	/* 802A4804 */ void readBNK(u32, void const*);
@@ -58,92 +40,64 @@ struct JAUAudioArcLoader {
 	/* 802A49D8 */ void readMaxSeCategory(int, int, int);
 };
 
-// build JAUSectionHeap (['JAUSectionHeap']) False/False
-/* top-level dependencies (begin ['JAUSectionHeap']) */
-/* top-level dependencies (end ['JAUSectionHeap']) */
 struct JAUSectionHeap {
 	/* 802A6094 */ void getOpenSection();
 };
 
-// build Z2FxLineMgr (['Z2FxLineMgr']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-// build JKRArchive (['JKRArchive']) True/False
-struct JKRArchive;
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRArchive']) */
-// outer dependency: ('JKRArchive', 'EMountDirection')
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
-	// ('JKRArchive', 'EMountDirection')
-	// ('JKRHeap',)
-	// build EMountDirection (['JKRArchive', 'EMountDirection']) False/False
-	/* dependencies (begin ['JKRArchive', 'EMountDirection']) */
-	/* dependencies (end ['JKRArchive', 'EMountDirection']) */
 	struct EMountDirection {
 	};
 
 	/* 802D5840 */ void mount(void*, JKRHeap*, JKRArchive::EMountDirection);
 };
 
-/* top-level dependencies (begin ['Z2FxLineMgr']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['Z2FxLineMgr']) */
 struct Z2FxLineMgr {
-	// ('JKRHeap',)
-	// ('JKRArchive',)
 	/* 802BA7FC */ void initDataArc(JKRArchive*, JKRHeap*);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build JKRHeap (['JKRHeap']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__16Z2AudioArcLoaderFP10JAUSection();
-extern "C" void readCommandMore__16Z2AudioArcLoaderFUl();
-extern "C" void readBFCA__16Z2AudioArcLoaderFPCv();
-extern "C" void readBSTN__16Z2AudioArcLoaderFPCvUl();
-extern "C" void __dt__16Z2AudioArcLoaderFv();
+extern "C" void __ct__16Z2AudioArcLoaderFP10JAUSection(); // 1
+extern "C" void readCommandMore__16Z2AudioArcLoaderFUl(); // 1
+extern "C" void readBFCA__16Z2AudioArcLoaderFPCv(); // 1
+extern "C" void readBSTN__16Z2AudioArcLoaderFPCvUl(); // 1
+extern "C" void __dt__16Z2AudioArcLoaderFv(); // 1
 SECTION_DATA extern void*const __vt__16Z2AudioArcLoader[18];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dt__22JAUAudioArcInterpreterFv();
-extern "C" void __ct__17JAUAudioArcLoaderFP10JAUSection();
-extern "C" void readWS__17JAUAudioArcLoaderFUlPCvUl();
-extern "C" void readBNK__17JAUAudioArcLoaderFUlPCv();
-extern "C" void readBSC__17JAUAudioArcLoaderFPCvUl();
-extern "C" void readBST__17JAUAudioArcLoaderFPCvUl();
-extern "C" void readBMS__17JAUAudioArcLoaderFUlPCvUl();
-extern "C" void readBMS_fromArchive__17JAUAudioArcLoaderFUl();
-extern "C" void newVoiceBank__17JAUAudioArcLoaderFUlUl();
-extern "C" void newDynamicSeqBlock__17JAUAudioArcLoaderFUl();
-extern "C" void readBSFT__17JAUAudioArcLoaderFPCv();
-extern "C" void beginBNKList__17JAUAudioArcLoaderFUlUl();
-extern "C" void endBNKList__17JAUAudioArcLoaderFv();
-extern "C" void readMaxSeCategory__17JAUAudioArcLoaderFiii();
-extern "C" void getOpenSection__14JAUSectionHeapFv();
-extern "C" void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
-extern "C" void __dl__FPv();
-extern "C" void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void __dt__22JAUAudioArcInterpreterFv(); // 1
+extern "C" void __ct__17JAUAudioArcLoaderFP10JAUSection(); // 1
+extern "C" void readWS__17JAUAudioArcLoaderFUlPCvUl(); // 1
+extern "C" void readBNK__17JAUAudioArcLoaderFUlPCv(); // 1
+extern "C" void readBSC__17JAUAudioArcLoaderFPCvUl(); // 1
+extern "C" void readBST__17JAUAudioArcLoaderFPCvUl(); // 1
+extern "C" void readBMS__17JAUAudioArcLoaderFUlPCvUl(); // 1
+extern "C" void readBMS_fromArchive__17JAUAudioArcLoaderFUl(); // 1
+extern "C" void newVoiceBank__17JAUAudioArcLoaderFUlUl(); // 1
+extern "C" void newDynamicSeqBlock__17JAUAudioArcLoaderFUl(); // 1
+extern "C" void readBSFT__17JAUAudioArcLoaderFPCv(); // 1
+extern "C" void beginBNKList__17JAUAudioArcLoaderFUlUl(); // 1
+extern "C" void endBNKList__17JAUAudioArcLoaderFv(); // 1
+extern "C" void readMaxSeCategory__17JAUAudioArcLoaderFiii(); // 1
+extern "C" void getOpenSection__14JAUSectionHeapFv(); // 1
+extern "C" void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__17JAUAudioArcLoader[18];
 SECTION_SBSS extern u8 data_80450B40[4];
 SECTION_SBSS extern u8 data_80450CC0[4 + 4 /* padding */];

@@ -9,31 +9,31 @@
 // Forward References:
 // 
 
-void dKyd_dmpalet_getp();
-void dKyd_dmpselect_getp();
-void dKyd_dmenvr_getp();
-void dKyd_dmvrbox_getp();
-void dKyd_schejule_getp();
-void dKyd_schejule_boss_getp();
-void dKyd_xfog_table_set(u8);
-void dKyd_maple_col_getp();
-void dKyd_darkworld_tbl_getp();
-void dKyd_light_size_tbl_getp();
-void dKyd_light_tw_size_tbl_getp();
-void dKyd_BloomInf_tbl_getp(int);
+void dKyd_dmpalet_getp(); // 2
+void dKyd_dmpselect_getp(); // 2
+void dKyd_dmenvr_getp(); // 2
+void dKyd_dmvrbox_getp(); // 2
+void dKyd_schejule_getp(); // 2
+void dKyd_schejule_boss_getp(); // 2
+void dKyd_xfog_table_set(u8); // 2
+void dKyd_maple_col_getp(); // 2
+void dKyd_darkworld_tbl_getp(); // 2
+void dKyd_light_size_tbl_getp(); // 2
+void dKyd_light_tw_size_tbl_getp(); // 2
+void dKyd_BloomInf_tbl_getp(int); // 2
 
-extern "C" void dKyd_dmpalet_getp__Fv();
-extern "C" void dKyd_dmpselect_getp__Fv();
-extern "C" void dKyd_dmenvr_getp__Fv();
-extern "C" void dKyd_dmvrbox_getp__Fv();
-extern "C" void dKyd_schejule_getp__Fv();
-extern "C" void dKyd_schejule_boss_getp__Fv();
-extern "C" void dKyd_xfog_table_set__FUc();
-extern "C" void dKyd_maple_col_getp__Fv();
-extern "C" void dKyd_darkworld_tbl_getp__Fv();
-extern "C" void dKyd_light_size_tbl_getp__Fv();
-extern "C" void dKyd_light_tw_size_tbl_getp__Fv();
-extern "C" void dKyd_BloomInf_tbl_getp__Fi();
+extern "C" void dKyd_dmpalet_getp__Fv(); // 1
+extern "C" void dKyd_dmpselect_getp__Fv(); // 1
+extern "C" void dKyd_dmenvr_getp__Fv(); // 1
+extern "C" void dKyd_dmvrbox_getp__Fv(); // 1
+extern "C" void dKyd_schejule_getp__Fv(); // 1
+extern "C" void dKyd_schejule_boss_getp__Fv(); // 1
+extern "C" void dKyd_xfog_table_set__FUc(); // 1
+extern "C" void dKyd_maple_col_getp__Fv(); // 1
+extern "C" void dKyd_darkworld_tbl_getp__Fv(); // 1
+extern "C" void dKyd_light_size_tbl_getp__Fv(); // 1
+extern "C" void dKyd_light_tw_size_tbl_getp__Fv(); // 1
+extern "C" void dKyd_BloomInf_tbl_getp__Fi(); // 1
 SECTION_RODATA extern const u8 d_kankyo_d_kankyo_data__stringBase0[424];
 SECTION_DATA extern u8 l_kydata_BloomInf_tbl[768];
 SECTION_DATA extern void*l_darkworld_tbl[68];

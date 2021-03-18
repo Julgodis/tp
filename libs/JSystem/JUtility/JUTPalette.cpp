@@ -9,76 +9,49 @@
 // Types:
 // 
 
-// build JUTPalette (['JUTPalette']) False/False
-// build _GXTlut (['_GXTlut']) False/False
-/* top-level dependencies (begin ['_GXTlut']) */
-/* top-level dependencies (end ['_GXTlut']) */
-struct _GXTlut {
-};
-
-// build ResTLUT (['ResTLUT']) False/False
-/* top-level dependencies (begin ['ResTLUT']) */
-/* top-level dependencies (end ['ResTLUT']) */
-struct ResTLUT {
-};
-
-// build _GXTlutFmt (['_GXTlutFmt']) False/False
-/* top-level dependencies (begin ['_GXTlutFmt']) */
-/* top-level dependencies (end ['_GXTlutFmt']) */
-struct _GXTlutFmt {
-};
-
-// build JUTTransparency (['JUTTransparency']) False/False
-/* top-level dependencies (begin ['JUTTransparency']) */
-/* top-level dependencies (end ['JUTTransparency']) */
 struct JUTTransparency {
 };
 
-/* top-level dependencies (begin ['JUTPalette']) */
-// outer dependency: ('_GXTlut',)
-// outer dependency: ('ResTLUT',)
-// outer dependency: ('_GXTlutFmt',)
-// outer dependency: ('JUTTransparency',)
-/* top-level dependencies (end ['JUTPalette']) */
+struct _GXTlut {
+};
+
+struct ResTLUT {
+};
+
+struct _GXTlutFmt {
+};
+
 struct JUTPalette {
-	// ('_GXTlut',)
-	// ('ResTLUT',)
-	// ('_GXTlutFmt',)
-	// ('JUTTransparency',)
 	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
 	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
 	/* 802DE95C */ void load();
 };
 
-// build _GXTlut (['_GXTlut']) True/True
-// build ResTLUT (['ResTLUT']) True/True
-// build _GXTlutFmt (['_GXTlutFmt']) True/True
-// build JUTTransparency (['JUTTransparency']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT();
-extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv();
-extern "C" void load__10JUTPaletteFv();
+extern "C" void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT(); // 1
+extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv(); // 1
+extern "C" void load__10JUTPaletteFv(); // 1
 SECTION_RODATA extern const u8 JUTPalette__stringBase0[48];
 
 // 
 // External References:
 // 
 
-extern "C" void OSPanic();
-extern "C" void GXInitTlutObj();
-extern "C" void GXLoadTlut();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void OSPanic(); // 1
+extern "C" void GXInitTlutObj(); // 1
+extern "C" void GXLoadTlut(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void OSPanic();
-extern "C" void GXInitTlutObj();
-extern "C" void GXLoadTlut();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void OSPanic(); // 1
+extern "C" void GXInitTlutObj(); // 1
+extern "C" void GXLoadTlut(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

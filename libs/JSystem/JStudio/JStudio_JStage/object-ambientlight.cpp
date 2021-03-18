@@ -9,39 +9,17 @@
 // Types:
 // 
 
-// build JStudio_JStage (['JStudio_JStage']) False/False
-// build JStage (['JStage']) False/False
-/* top-level dependencies (begin ['JStage']) */
-/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TSystem (['JStage', 'TSystem']) False/False
-	/* dependencies (begin ['JStage', 'TSystem']) */
-	/* dependencies (end ['JStage', 'TSystem']) */
 	struct TSystem {
 	};
 
-	// build TAmbientLight (['JStage', 'TAmbientLight']) False/False
-	/* dependencies (begin ['JStage', 'TAmbientLight']) */
-	/* dependencies (end ['JStage', 'TAmbientLight']) */
 	struct TAmbientLight {
 	};
 
 };
 
-// build JStage (['JStage']) True/True
-/* top-level dependencies (begin ['JStudio_JStage']) */
-// outer dependency: ('JStage', 'TAmbientLight')
-// outer dependency: ('JStage', 'TSystem')
-/* top-level dependencies (end ['JStudio_JStage']) */
 struct JStudio_JStage {
-	// build TAdaptor_ambientLight (['JStudio_JStage', 'TAdaptor_ambientLight']) False/False
-	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_ambientLight']) */
-	// inner dependency: 0 ('JStage', 'TAmbientLight') (for ['JStudio_JStage', 'TAdaptor_ambientLight'])
-	// inner dependency: 0 ('JStage', 'TSystem') (for ['JStudio_JStage', 'TAdaptor_ambientLight'])
-	/* dependencies (end ['JStudio_JStage', 'TAdaptor_ambientLight']) */
 	struct TAdaptor_ambientLight {
-		// ('JStage', 'TAmbientLight')
-		// ('JStage', 'TSystem')
 		/* 8028B610 */ TAdaptor_ambientLight(JStage::TSystem const*, JStage::TAmbientLight*);
 		/* 8028B6AC */ ~TAdaptor_ambientLight();
 		/* 8028B720 */ void adaptor_do_prepare();
@@ -51,86 +29,63 @@ struct JStudio_JStage {
 		/* 8028B87C */ void adaptor_do_data(void const*, u32, void const*, u32);
 	};
 
-	// build TAdaptor_object_ (['JStudio_JStage', 'TAdaptor_object_']) False/False
-	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_object_']) */
-	/* dependencies (end ['JStudio_JStage', 'TAdaptor_object_']) */
 	struct TAdaptor_object_ {
 		/* 8028A470 */ void adaptor_object_data_(void const*, u32, void const*, u32);
 	};
 
 };
 
-// build JStage (['JStage']) True/True
-// build JStudio (['JStudio']) False/False
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('_GXColor',)
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build TAdaptor (['JStudio', 'TAdaptor']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor']) */
-	// inner dependency: 0 ('_GXColor',) (for ['JStudio', 'TAdaptor'])
-	/* dependencies (end ['JStudio', 'TAdaptor']) */
 	struct TAdaptor {
-		// ('_GXColor',)
 		/* 802862AC */ void adaptor_setVariableValue_GXColor(u32 const*, _GXColor const&);
 		/* 8028638C */ void adaptor_getVariableValue_GXColor(_GXColor*, u32 const*) const;
 	};
 
-	// build TAdaptor_ambientLight (['JStudio', 'TAdaptor_ambientLight']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_ambientLight']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_ambientLight']) */
 	struct TAdaptor_ambientLight {
 		/* 80286C9C */ ~TAdaptor_ambientLight();
 	};
 
-	// build TVariableValue (['JStudio', 'TVariableValue']) False/False
-	/* dependencies (begin ['JStudio', 'TVariableValue']) */
-	/* dependencies (end ['JStudio', 'TVariableValue']) */
 	struct TVariableValue {
 		/* 8028B568 */ TVariableValue();
 	};
 
 };
 
-// build _GXColor (['_GXColor']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight();
-extern "C" void __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv();
-extern "C" void adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv();
-extern "C" void adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv();
-extern "C" void adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv();
-extern "C" void adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl();
-extern "C" void adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl();
+extern "C" void __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight(); // 1
+extern "C" void __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv(); // 1
+extern "C" void adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv(); // 1
+extern "C" void adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv(); // 1
+extern "C" void adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv(); // 1
+extern "C" void adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl(); // 1
+extern "C" void adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl(); // 1
 SECTION_DATA extern void*const __vt__Q214JStudio_JStage21TAdaptor_ambientLight[8];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void __construct_array();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor();
-extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
-extern "C" void __dt__Q27JStudio21TAdaptor_ambientLightFv();
-extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
-extern "C" void __ct__Q27JStudio14TVariableValueFv();
-extern "C" void __dl__FPv();
-extern "C" void __construct_array();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor(); // 1
+extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl(); // 1
+extern "C" void __dt__Q27JStudio21TAdaptor_ambientLightFv(); // 1
+extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl(); // 1
+extern "C" void __ct__Q27JStudio14TVariableValueFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_RODATA extern const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight[16];
 SECTION_DATA extern void*const __vt__Q27JStudio21TAdaptor_ambientLight[8];
 SECTION_DATA extern void*const __vt__Q27JStudio8TAdaptor[8];

@@ -9,64 +9,53 @@
 // Types:
 // 
 
-// build JAISeqMgr (['JAISeqMgr']) False/False
-// build JAISeq (['JAISeq']) False/False
-// build JASSoundParams (['JASSoundParams']) False/False
-/* top-level dependencies (begin ['JASSoundParams']) */
-/* top-level dependencies (end ['JASSoundParams']) */
-struct JASSoundParams {
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
 };
 
-// build JAISoundActivity (['JAISoundActivity']) False/False
-/* top-level dependencies (begin ['JAISoundActivity']) */
-/* top-level dependencies (end ['JAISoundActivity']) */
 struct JAISoundActivity {
 };
 
-/* top-level dependencies (begin ['JAISeq']) */
-// outer dependency: ('JASSoundParams',)
-// outer dependency: ('JAISoundActivity',)
-/* top-level dependencies (end ['JAISeq']) */
+struct JAISeqMgr;
+struct JASSoundParams {
+};
+
+struct JAIAudience {
+};
+
+struct JAISoundID {
+};
+
+template <typename A0>
+struct JAISoundStrategyMgr { };
+/* JAISoundStrategyMgr<JAISeq> */
+struct JAISoundStrategyMgr__template1 {
+};
+
 struct JAISeq {
-	// ('JASSoundParams',)
-	// ('JAISoundActivity',)
+	/* 802A0A8C */ JAISeq(JAISeqMgr*, JAISoundStrategyMgr<JAISeq>*);
+	/* 802A0B64 */ void JAISeqMgr_startID_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*, int, int);
 	/* 802A108C */ void JAISeqMgr_calc_();
 	/* 802A14FC */ void JAISeqMgr_mixOut_(JASSoundParams const&, JAISoundActivity);
 };
 
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
-struct JAISoundID {
-};
-
-// build JAISoundHandle (['JAISoundHandle']) False/False
-/* top-level dependencies (begin ['JAISoundHandle']) */
-/* top-level dependencies (end ['JAISoundHandle']) */
-struct JAISoundHandle {
-};
-
-// build JAISeqDataRegion (['JAISeqDataRegion']) False/False
-/* top-level dependencies (begin ['JAISeqDataRegion']) */
-/* top-level dependencies (end ['JAISeqDataRegion']) */
 struct JAISeqDataRegion {
 };
 
-/* top-level dependencies (begin ['JAISeqMgr']) */
-// outer dependency: ('JAISeq',)
-// outer dependency: ('JAISoundID',)
-// outer dependency: ('JAISoundHandle',)
-// outer dependency: ('JAISeqDataRegion',)
-/* top-level dependencies (end ['JAISeqMgr']) */
+struct JAISoundHandle {
+};
+
 struct JAISeqMgr {
-	// ('JAISeq',)
-	// ('JAISoundID',)
-	// ('JAISoundHandle',)
-	// ('JAISeqDataRegion',)
 	/* 802A1804 */ void isUsingSeqData(JAISeqDataRegion const&);
 	/* 802A1870 */ void releaseSeqData(JAISeqDataRegion const&);
 	/* 802A1914 */ JAISeqMgr(bool);
 	/* 802A1A08 */ void freeDeadSeq_();
+	/* 802A1B48 */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 	/* 802A1C90 */ void calc();
 	/* 802A1DFC */ void stop();
 	/* 802A1E3C */ void stop(u32);
@@ -77,13 +66,13 @@ struct JAISeqMgr {
 	/* 802A20F0 */ ~JAISeqMgr();
 };
 
-// build JAISeqDataRegion (['JAISeqDataRegion']) True/True
-// build JAISoundID (['JAISoundID']) True/True
-// build JAISeq (['JAISeq']) True/True
-// build JAISoundHandle (['JAISoundHandle']) True/True
-// build JASGenericMemPool (['JASGenericMemPool']) False/False
-/* top-level dependencies (begin ['JASGenericMemPool']) */
-/* top-level dependencies (end ['JASGenericMemPool']) */
+template <typename A0>
+struct JASMemPool { };
+/* JASMemPool<JAISeq> */
+struct JASMemPool__template2 {
+	/* 802A1AF4 */ ~JASMemPool__template2();
+};
+
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290860 */ ~JASGenericMemPool();
@@ -91,48 +80,25 @@ struct JASGenericMemPool {
 	/* 80290994 */ void free(void*, u32);
 };
 
-// build JASTrack (['JASTrack']) False/False
-/* top-level dependencies (begin ['JASTrack']) */
-/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
 	/* 8029131C */ ~JASTrack();
 };
 
-// build JASSoundParams (['JASSoundParams']) True/True
-// build JAISoundActivity (['JAISoundActivity']) True/True
-// build JAISeqDataUser (['JAISeqDataUser']) False/False
-/* top-level dependencies (begin ['JAISeqDataUser']) */
-/* top-level dependencies (end ['JAISeqDataUser']) */
 struct JAISeqDataUser {
 	/* 802A1774 */ ~JAISeqDataUser();
 };
 
-// build JAISound (['JAISound']) False/False
-// build JAISoundHandle (['JAISoundHandle']) True/True
-/* top-level dependencies (begin ['JAISound']) */
-// outer dependency: ('JAISoundHandle',)
-/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
-	// ('JAISoundHandle',)
 	/* 802A21BC */ void attachHandle(JAISoundHandle*);
-	/* 802A24DC */ void stop(u32);
 	/* 802A2598 */ void stop();
+	/* 802A24DC */ void stop(u32);
 };
 
-// build JSUPtrLink (['JSUPtrLink']) False/False
-/* top-level dependencies (begin ['JSUPtrLink']) */
-/* top-level dependencies (end ['JSUPtrLink']) */
 struct JSUPtrLink {
 	/* 802DBE14 */ ~JSUPtrLink();
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-// build JSUPtrLink (['JSUPtrLink']) True/True
-/* top-level dependencies (begin ['JSUPtrList']) */
-// outer dependency: ('JSUPtrLink',)
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
-	// ('JSUPtrLink',)
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 	/* 802DBF4C */ void append(JSUPtrLink*);
@@ -143,23 +109,21 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-extern "C" void func_802A1AF4();
-extern "C" void func_802A1B48();
 
-extern "C" void isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion();
-extern "C" void releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion();
-extern "C" void __ct__9JAISeqMgrFb();
-extern "C" void freeDeadSeq___9JAISeqMgrFv();
-extern "C" void func_802A1AF4();
-extern "C" void func_802A1B48();
-extern "C" void calc__9JAISeqMgrFv();
-extern "C" void stop__9JAISeqMgrFv();
-extern "C" void stop__9JAISeqMgrFUl();
-extern "C" void stopSoundID__9JAISeqMgrF10JAISoundID();
-extern "C" void mixOut__9JAISeqMgrFv();
-extern "C" void beginStartSeq___9JAISeqMgrFv();
-extern "C" void endStartSeq___9JAISeqMgrFP6JAISeqP14JAISoundHandle();
-extern "C" void __dt__9JAISeqMgrFv();
+extern "C" void isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion(); // 1
+extern "C" void releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion(); // 1
+extern "C" void __ct__9JAISeqMgrFb(); // 1
+extern "C" void freeDeadSeq___9JAISeqMgrFv(); // 1
+extern "C" void func_802A1AF4(); // 1
+extern "C" void func_802A1B48(); // 1
+extern "C" void calc__9JAISeqMgrFv(); // 1
+extern "C" void stop__9JAISeqMgrFv(); // 1
+extern "C" void stop__9JAISeqMgrFUl(); // 1
+extern "C" void stopSoundID__9JAISeqMgrF10JAISoundID(); // 1
+extern "C" void mixOut__9JAISeqMgrFv(); // 1
+extern "C" void beginStartSeq___9JAISeqMgrFv(); // 1
+extern "C" void endStartSeq___9JAISeqMgrFP6JAISeqP14JAISoundHandle(); // 1
+extern "C" void __dt__9JAISeqMgrFv(); // 1
 SECTION_DATA extern void*const __vt__9JAISeqMgr[6];
 SECTION_BSS extern u8 lit_715[12];
 SECTION_BSS extern u8 data_804340CC[16 + 4 /* padding */];
@@ -171,39 +135,37 @@ SECTION_SDATA2 extern f32 JAISeqMgr__lit_693;
 // External References:
 // 
 
-extern "C" void func_802A0A8C();
-extern "C" void func_802A0B64();
-void operator delete(void*);
-extern "C" void __register_global_object();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __ct__17JASGenericMemPoolFv();
-extern "C" void __dt__17JASGenericMemPoolFv();
-extern "C" void alloc__17JASGenericMemPoolFUl();
-extern "C" void free__17JASGenericMemPoolFPvUl();
-extern "C" void __dt__8JASTrackFv();
-extern "C" void func_802A0A8C();
-extern "C" void func_802A0B64();
-extern "C" void JAISeqMgr_calc___6JAISeqFv();
-extern "C" void JAISeqMgr_mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity();
-extern "C" void __dt__14JAISeqDataUserFv();
-extern "C" void attachHandle__8JAISoundFP14JAISoundHandle();
-extern "C" void stop__8JAISoundFUl();
-extern "C" void stop__8JAISoundFv();
-extern "C" void __dl__FPv();
-extern "C" void __dt__10JSUPtrLinkFv();
-extern "C" void __dt__10JSUPtrListFv();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void append__10JSUPtrListFP10JSUPtrLink();
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_29();
+extern "C" void __ct__17JASGenericMemPoolFv(); // 1
+extern "C" void __dt__17JASGenericMemPoolFv(); // 1
+extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
+extern "C" void free__17JASGenericMemPoolFPvUl(); // 1
+extern "C" void __dt__8JASTrackFv(); // 1
+extern "C" void func_802A0A8C(); // 1
+extern "C" void func_802A0B64(); // 1
+extern "C" void JAISeqMgr_calc___6JAISeqFv(); // 1
+extern "C" void JAISeqMgr_mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity(); // 1
+extern "C" void __dt__14JAISeqDataUserFv(); // 1
+extern "C" void attachHandle__8JAISoundFP14JAISoundHandle(); // 1
+extern "C" void stop__8JAISoundFUl(); // 1
+extern "C" void stop__8JAISoundFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dt__10JSUPtrLinkFv(); // 1
+extern "C" void __dt__10JSUPtrListFv(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__6JAISeq[13];
 SECTION_DATA extern void*const __vt__14JAISeqDataUser[6];
 SECTION_SBSS extern u8 data_80450B5C[4];
@@ -293,7 +255,7 @@ asm void JAISeqMgr::freeDeadSeq_() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802A1AF4() {
+asm JASMemPool__template2::~JASMemPool__template2() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/func_802A1AF4.s"
 }
@@ -304,7 +266,7 @@ extern "C" asm void func_802A1AF4() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802A1B48() {
+asm void JAISeqMgr::startSound(JAISoundID field_0, JAISoundHandle* field_1, JGeometry::TVec3<f32> const* field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISeqMgr/func_802A1B48.s"
 }

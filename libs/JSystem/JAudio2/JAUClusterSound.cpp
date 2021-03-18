@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JAISoundHandle (['JAISoundHandle']) False/False
-/* top-level dependencies (begin ['JAISoundHandle']) */
-/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 	/* 802A4AC4 */ JAISoundHandle();
 };
@@ -21,7 +18,7 @@ struct JAISoundHandle {
 // 
 
 
-extern "C" void __ct__14JAISoundHandleFv();
+extern "C" void __ct__14JAISoundHandleFv(); // 1
 
 // 
 // External References:

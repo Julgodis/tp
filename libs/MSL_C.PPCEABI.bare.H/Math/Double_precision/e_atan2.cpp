@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __ieee754_atan2();
+extern "C" void __ieee754_atan2(); // 1
 
-extern "C" void __ieee754_atan2();
+extern "C" void __ieee754_atan2(); // 1
 SECTION_SDATA2 extern f64 Math_Double_precision_e_atan2__lit_145;
 SECTION_SDATA2 extern f64 Math_Double_precision_e_atan2__lit_146;
 SECTION_SDATA2 extern f64 Math_Double_precision_e_atan2__lit_147;
@@ -28,9 +28,9 @@ SECTION_SDATA2 extern f64 Math_Double_precision_e_atan2__lit_155;
 // External References:
 // 
 
-extern "C" void atan();
+extern "C" void atan(); // 1
 
-extern "C" void atan();
+extern "C" void atan(); // 1
 
 // 
 // Declarations:

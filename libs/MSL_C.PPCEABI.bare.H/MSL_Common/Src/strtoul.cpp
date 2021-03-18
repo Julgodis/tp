@@ -9,22 +9,22 @@
 // Forward References:
 // 
 
-extern "C" void strtol();
-extern "C" void strtoul();
-extern "C" static void __strtoul();
+extern "C" void strtol(); // 1
+extern "C" void strtoul(); // 1
+extern "C" static void __strtoul(); // 1
 
-extern "C" void strtol();
-extern "C" void strtoul();
-extern "C" static void __strtoul();
+extern "C" void strtol(); // 1
+extern "C" void strtoul(); // 1
+extern "C" static void __strtoul(); // 1
 SECTION_DATA extern void*MSL_Common_Src_strtoul__lit_431[18];
 
 // 
 // External References:
 // 
 
-extern "C" void __StringRead();
+extern "C" void __StringRead(); // 1
 
-extern "C" void __StringRead();
+extern "C" void __StringRead(); // 1
 SECTION_DATA extern u8 __ctype_map[256];
 SECTION_DATA extern u8 __upper_map[256];
 SECTION_SBSS extern u8 errno[4 + 4 /* padding */];

@@ -9,20 +9,20 @@
 // Forward References:
 // 
 
-extern "C" void tan();
+extern "C" void tan(); // 1
 
-extern "C" void tan();
+extern "C" void tan(); // 1
 SECTION_SDATA2 extern u8 lit_58[8];
 
 // 
 // External References:
 // 
 
-extern "C" void __ieee754_rem_pio2();
-extern "C" void __kernel_tan();
+extern "C" void __ieee754_rem_pio2(); // 1
+extern "C" void __kernel_tan(); // 1
 
-extern "C" void __ieee754_rem_pio2();
-extern "C" void __kernel_tan();
+extern "C" void __ieee754_rem_pio2(); // 1
+extern "C" void __kernel_tan(); // 1
 
 // 
 // Declarations:

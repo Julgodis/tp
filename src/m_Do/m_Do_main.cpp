@@ -9,96 +9,57 @@
 // Types:
 // 
 
-// build HeapCheck (['HeapCheck']) False/False
-/* top-level dependencies (begin ['HeapCheck']) */
-/* top-level dependencies (end ['HeapCheck']) */
 struct HeapCheck {
 	/* 80005728 */ void CheckHeap1();
 	/* 800058A0 */ void getUsedCount() const;
 	/* 800058C4 */ void heapDisplay() const;
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
 struct JKRExpHeap {
 	/* 802CFD64 */ void getTotalUsedSize() const;
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 800065D8 */ bool dump_sort();
 	/* 802CE72C */ void getFreeSize();
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-// build mDoCPd_c (['mDoCPd_c']) False/False
-/* top-level dependencies (begin ['mDoCPd_c']) */
-/* top-level dependencies (end ['mDoCPd_c']) */
 struct mDoCPd_c {
 	/* 80007954 */ void create();
 	/* 80007A94 */ void read();
 };
 
-// build mDoMemCd_Ctrl_c (['mDoMemCd_Ctrl_c']) False/False
-/* top-level dependencies (begin ['mDoMemCd_Ctrl_c']) */
-/* top-level dependencies (end ['mDoMemCd_Ctrl_c']) */
 struct mDoMemCd_Ctrl_c {
 	/* 80016894 */ void update();
 };
 
-// build dComIfG_inf_c (['dComIfG_inf_c']) False/False
-/* top-level dependencies (begin ['dComIfG_inf_c']) */
-/* top-level dependencies (end ['dComIfG_inf_c']) */
 struct dComIfG_inf_c {
 	/* 8002CBE4 */ void ct();
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-/* top-level dependencies (begin ['dRes_control_c']) */
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
 	/* 8003C638 */ void dump();
 };
 
-// build DynamicModuleControlBase (['DynamicModuleControlBase']) False/False
-/* top-level dependencies (begin ['DynamicModuleControlBase']) */
-/* top-level dependencies (end ['DynamicModuleControlBase']) */
 struct DynamicModuleControlBase {
 	/* 80262470 */ void dump();
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['JKRSolidHeap']) */
 struct JKRSolidHeap {
-	// ('JKRHeap',)
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 };
 
-// build JKRAramHeap (['JKRAramHeap']) False/False
-/* top-level dependencies (begin ['JKRAramHeap']) */
-/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
 	/* 802D3134 */ void getFreeSize();
 	/* 802D31AC */ void getTotalFreeSize();
 	/* 802D3218 */ void dump();
 };
 
-// build JUTAssertion (['JUTAssertion']) False/False
-/* top-level dependencies (begin ['JUTAssertion']) */
-/* top-level dependencies (end ['JUTAssertion']) */
 struct JUTAssertion {
 	/* 802E4C3C */ void setMessageCount(int);
 };
 
-// build JUTConsole (['JUTConsole']) False/False
-/* top-level dependencies (begin ['JUTConsole']) */
-/* top-level dependencies (end ['JUTConsole']) */
 struct JUTConsole {
 	/* 802E75EC */ void clear();
 	/* 802E7F7C */ void dumpToTerminal(u32);
@@ -110,31 +71,31 @@ struct JUTConsole {
 // Forward References:
 // 
 
-static void version_check();
-static void CheckHeap(u32);
-static void countUsed(JKRExpHeap*);
-static void debugDisplay();
-static void Debug_console(u32);
-static void LOAD_COPYDATE(void*);
-static void debug();
-static void main01();
-extern "C" void main();
-extern "C" void __sinit_m_Do_main_cpp();
+static void version_check(); // 2
+static void CheckHeap(u32); // 2
+static void countUsed(JKRExpHeap*); // 2
+static void debugDisplay(); // 2
+static void Debug_console(u32); // 2
+static void LOAD_COPYDATE(void*); // 2
+static void debug(); // 2
+static void main01(); // 2
+extern "C" void main(); // 1
+extern "C" void __sinit_m_Do_main_cpp(); // 1
 
-extern "C" static void version_check__Fv();
-extern "C" void CheckHeap1__9HeapCheckFv();
-extern "C" static void CheckHeap__FUl();
-extern "C" static void countUsed__FP10JKRExpHeap();
-extern "C" void getUsedCount__9HeapCheckCFv();
-extern "C" void heapDisplay__9HeapCheckCFv();
-extern "C" static void debugDisplay__Fv();
-extern "C" static void Debug_console__FUl();
-extern "C" static void LOAD_COPYDATE__FPv();
-extern "C" static void debug__Fv();
-extern "C" static void main01__Fv();
-extern "C" void main();
-extern "C" bool dump_sort__7JKRHeapFv();
-extern "C" void __sinit_m_Do_main_cpp();
+extern "C" static void version_check__Fv(); // 1
+extern "C" void CheckHeap1__9HeapCheckFv(); // 1
+extern "C" static void CheckHeap__FUl(); // 1
+extern "C" static void countUsed__FP10JKRExpHeap(); // 1
+extern "C" void getUsedCount__9HeapCheckCFv(); // 1
+extern "C" void heapDisplay__9HeapCheckCFv(); // 1
+extern "C" static void debugDisplay__Fv(); // 1
+extern "C" static void Debug_console__FUl(); // 1
+extern "C" static void LOAD_COPYDATE__FPv(); // 1
+extern "C" static void debug__Fv(); // 1
+extern "C" static void main01__Fv(); // 1
+extern "C" void main(); // 1
+extern "C" bool dump_sort__7JKRHeapFv(); // 1
+extern "C" void __sinit_m_Do_main_cpp(); // 1
 SECTION_RODATA extern const u8 m_Do_m_Do_main__stringBase0[784];
 SECTION_DATA extern u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */];
 SECTION_DATA extern void*HeapCheckTable[8];
@@ -202,117 +163,117 @@ SECTION_SDATA2 extern f64 m_Do_m_Do_main__lit_3890;
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-void OSReportInit();
-extern "C" void OSReport_Error();
-void mDoAud_Execute();
-void mDoGph_Create();
-void mDoMch_HeapCheckAll();
-void mDoMch_Create();
-void mDoExt_getGameHeap();
-void mDoExt_getZeldaHeap();
-void mDoExt_getCommandHeap();
-void mDoExt_getArchiveHeap();
-void mDoExt_getJ2dHeap();
-void mDoExt_getHostIOHeap();
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
-void cDyl_InitAsync();
-void fapGm_Execute();
-void fapGm_Create();
-void fopAcM_initManager();
-void JUTReport(int, int, char const*, ...);
-void JUTReport(int, int, int, char const*, ...);
-extern "C" void OSGetConsoleType();
-extern "C" void OSAllocFromArenaLo();
-extern "C" void OSGetResetCode();
-extern "C" void OSGetCurrentThread();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" void OSCreateThread();
-extern "C" void OSResumeThread();
-extern "C" void OSSuspendThread();
-extern "C" void OSSetThreadPriority();
-extern "C" void OSGetThreadPriority();
-extern "C" void OSCheckActiveThreads();
-extern "C" void OSGetTime();
-extern "C" void DVDOpen();
-extern "C" void DVDClose();
-extern "C" void DVDReadPrio();
-extern "C" void DVDGetCurrentDiskID();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void strcmp();
+SECTION_INIT void memcpy(); // 1
+void OSReportInit(); // 2
+extern "C" void OSReport_Error(); // 1
+void mDoAud_Execute(); // 2
+void mDoGph_Create(); // 2
+void mDoMch_HeapCheckAll(); // 2
+void mDoMch_Create(); // 2
+void mDoExt_getGameHeap(); // 2
+void mDoExt_getZeldaHeap(); // 2
+void mDoExt_getCommandHeap(); // 2
+void mDoExt_getArchiveHeap(); // 2
+void mDoExt_getJ2dHeap(); // 2
+void mDoExt_getHostIOHeap(); // 2
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
+void cDyl_InitAsync(); // 2
+void fapGm_Execute(); // 2
+void fapGm_Create(); // 2
+void fopAcM_initManager(); // 2
+void JUTReport(int, int, char const*, ...); // 2
+void JUTReport(int, int, int, char const*, ...); // 2
+extern "C" void OSGetConsoleType(); // 1
+extern "C" void OSAllocFromArenaLo(); // 1
+extern "C" void OSGetResetCode(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void OSCreateThread(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void OSSuspendThread(); // 1
+extern "C" void OSSetThreadPriority(); // 1
+extern "C" void OSGetThreadPriority(); // 1
+extern "C" void OSCheckActiveThreads(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void DVDOpen(); // 1
+extern "C" void DVDClose(); // 1
+extern "C" void DVDReadPrio(); // 1
+extern "C" void DVDGetCurrentDiskID(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void strcmp(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void OSReportInit__Fv();
-extern "C" void OSReport_Error();
-extern "C" void mDoAud_Execute__Fv();
-extern "C" void create__8mDoCPd_cFv();
-extern "C" void read__8mDoCPd_cFv();
-extern "C" void mDoGph_Create__Fv();
-extern "C" void mDoMch_HeapCheckAll__Fv();
-extern "C" void mDoMch_Create__Fv();
-extern "C" void mDoExt_getGameHeap__Fv();
-extern "C" void mDoExt_getZeldaHeap__Fv();
-extern "C" void mDoExt_getCommandHeap__Fv();
-extern "C" void mDoExt_getArchiveHeap__Fv();
-extern "C" void mDoExt_getJ2dHeap__Fv();
-extern "C" void mDoExt_getHostIOHeap__Fv();
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
-extern "C" void update__15mDoMemCd_Ctrl_cFv();
-extern "C" void cDyl_InitAsync__Fv();
-extern "C" void fapGm_Execute__Fv();
-extern "C" void fapGm_Create__Fv();
-extern "C" void fopAcM_initManager__Fv();
-extern "C" void ct__13dComIfG_inf_cFv();
-extern "C" void dump__14dRes_control_cFv();
-extern "C" void dump__24DynamicModuleControlBaseFv();
-extern "C" void getFreeSize__7JKRHeapFv();
-extern "C" void getTotalFreeSize__7JKRHeapFv();
-extern "C" void getTotalUsedSize__10JKRExpHeapCFv();
-extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb();
-extern "C" void getFreeSize__11JKRAramHeapFv();
-extern "C" void getTotalFreeSize__11JKRAramHeapFv();
-extern "C" void dump__11JKRAramHeapFv();
-extern "C" void JUTReport__FiiPCce();
-extern "C" void JUTReport__FiiiPCce();
-extern "C" void setMessageCount__12JUTAssertionFi();
-extern "C" void clear__10JUTConsoleFv();
-extern "C" void dumpToTerminal__10JUTConsoleFUi();
-extern "C" void scroll__10JUTConsoleFi();
-extern "C" void getLineOffset__10JUTConsoleCFv();
-extern "C" void OSGetConsoleType();
-extern "C" void OSAllocFromArenaLo();
-extern "C" void OSGetResetCode();
-extern "C" void OSGetCurrentThread();
-extern "C" void OSDisableScheduler();
-extern "C" void OSEnableScheduler();
-extern "C" void OSCreateThread();
-extern "C" void OSResumeThread();
-extern "C" void OSSuspendThread();
-extern "C" void OSSetThreadPriority();
-extern "C" void OSGetThreadPriority();
-extern "C" void OSCheckActiveThreads();
-extern "C" void OSGetTime();
-extern "C" void DVDOpen();
-extern "C" void DVDClose();
-extern "C" void DVDReadPrio();
-extern "C" void DVDGetCurrentDiskID();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void strcmp();
+SECTION_INIT void memcpy(); // 1
+extern "C" void OSReportInit__Fv(); // 1
+extern "C" void OSReport_Error(); // 1
+extern "C" void mDoAud_Execute__Fv(); // 1
+extern "C" void create__8mDoCPd_cFv(); // 1
+extern "C" void read__8mDoCPd_cFv(); // 1
+extern "C" void mDoGph_Create__Fv(); // 1
+extern "C" void mDoMch_HeapCheckAll__Fv(); // 1
+extern "C" void mDoMch_Create__Fv(); // 1
+extern "C" void mDoExt_getGameHeap__Fv(); // 1
+extern "C" void mDoExt_getZeldaHeap__Fv(); // 1
+extern "C" void mDoExt_getCommandHeap__Fv(); // 1
+extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
+extern "C" void mDoExt_getJ2dHeap__Fv(); // 1
+extern "C" void mDoExt_getHostIOHeap__Fv(); // 1
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
+extern "C" void update__15mDoMemCd_Ctrl_cFv(); // 1
+extern "C" void cDyl_InitAsync__Fv(); // 1
+extern "C" void fapGm_Execute__Fv(); // 1
+extern "C" void fapGm_Create__Fv(); // 1
+extern "C" void fopAcM_initManager__Fv(); // 1
+extern "C" void ct__13dComIfG_inf_cFv(); // 1
+extern "C" void dump__14dRes_control_cFv(); // 1
+extern "C" void dump__24DynamicModuleControlBaseFv(); // 1
+extern "C" void getFreeSize__7JKRHeapFv(); // 1
+extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
+extern "C" void getTotalUsedSize__10JKRExpHeapCFv(); // 1
+extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb(); // 1
+extern "C" void getFreeSize__11JKRAramHeapFv(); // 1
+extern "C" void getTotalFreeSize__11JKRAramHeapFv(); // 1
+extern "C" void dump__11JKRAramHeapFv(); // 1
+extern "C" void JUTReport__FiiPCce(); // 1
+extern "C" void JUTReport__FiiiPCce(); // 1
+extern "C" void setMessageCount__12JUTAssertionFi(); // 1
+extern "C" void clear__10JUTConsoleFv(); // 1
+extern "C" void dumpToTerminal__10JUTConsoleFUi(); // 1
+extern "C" void scroll__10JUTConsoleFi(); // 1
+extern "C" void getLineOffset__10JUTConsoleCFv(); // 1
+extern "C" void OSGetConsoleType(); // 1
+extern "C" void OSAllocFromArenaLo(); // 1
+extern "C" void OSGetResetCode(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void OSDisableScheduler(); // 1
+extern "C" void OSEnableScheduler(); // 1
+extern "C" void OSCreateThread(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void OSSuspendThread(); // 1
+extern "C" void OSSetThreadPriority(); // 1
+extern "C" void OSGetThreadPriority(); // 1
+extern "C" void OSCheckActiveThreads(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void DVDOpen(); // 1
+extern "C" void DVDClose(); // 1
+extern "C" void DVDReadPrio(); // 1
+extern "C" void DVDGetCurrentDiskID(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void strcmp(); // 1
 SECTION_BSS extern u8 m_gamePad__8mDoCPd_c[16];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 g_mDoMemCd_control[8192];

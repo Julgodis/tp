@@ -9,9 +9,9 @@
 // Forward References:
 // 
 
-extern "C" void __ieee754_acos();
+extern "C" void __ieee754_acos(); // 1
 
-extern "C" void __ieee754_acos();
+extern "C" void __ieee754_acos(); // 1
 SECTION_SDATA2 extern u8 Math_Double_precision_e_acos__lit_83[8];
 SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_84;
 SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_85;
@@ -34,9 +34,9 @@ SECTION_SDATA2 extern f64 Math_Double_precision_e_acos__lit_99;
 // External References:
 // 
 
-extern "C" void sqrt();
+extern "C" void sqrt(); // 1
 
-extern "C" void sqrt();
+extern "C" void sqrt(); // 1
 SECTION_SDATA extern u32 __float_nan;
 
 // 

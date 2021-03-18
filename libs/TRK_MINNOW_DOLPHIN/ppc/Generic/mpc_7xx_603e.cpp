@@ -9,11 +9,11 @@
 // Forward References:
 // 
 
-extern "C" void TRKSaveExtended1Block();
-extern "C" void TRKRestoreExtended1Block();
+extern "C" void TRKSaveExtended1Block(); // 1
+extern "C" void TRKRestoreExtended1Block(); // 1
 
-extern "C" void TRKSaveExtended1Block();
-extern "C" void TRKRestoreExtended1Block();
+extern "C" void TRKSaveExtended1Block(); // 1
+extern "C" void TRKRestoreExtended1Block(); // 1
 
 // 
 // External References:

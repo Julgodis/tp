@@ -9,11 +9,11 @@
 // Forward References:
 // 
 
-extern "C" void exit();
-extern "C" void abort();
+extern "C" void exit(); // 1
+extern "C" void abort(); // 1
 
-extern "C" void exit();
-extern "C" void abort();
+extern "C" void exit(); // 1
+extern "C" void abort(); // 1
 SECTION_BSS extern u8 __atexit_funcs[256];
 SECTION_SBSS extern u8 __aborting[4];
 SECTION_SBSS extern u8 __atexit_curr_func[4];
@@ -25,19 +25,19 @@ SECTION_SBSS extern u8 data_804519A0[8];
 // External References:
 // 
 
-extern "C" void _ExitProcess();
-extern "C" void __destroy_global_chain();
-extern "C" void __end_critical_region();
-extern "C" void __begin_critical_region();
-extern "C" void __kill_critical_regions();
-extern "C" void raise();
+extern "C" void _ExitProcess(); // 1
+extern "C" void __destroy_global_chain(); // 1
+extern "C" void __end_critical_region(); // 1
+extern "C" void __begin_critical_region(); // 1
+extern "C" void __kill_critical_regions(); // 1
+extern "C" void raise(); // 1
 
-extern "C" void _ExitProcess();
-extern "C" void __destroy_global_chain();
-extern "C" void __end_critical_region();
-extern "C" void __begin_critical_region();
-extern "C" void __kill_critical_regions();
-extern "C" void raise();
+extern "C" void _ExitProcess(); // 1
+extern "C" void __destroy_global_chain(); // 1
+extern "C" void __end_critical_region(); // 1
+extern "C" void __begin_critical_region(); // 1
+extern "C" void __kill_critical_regions(); // 1
+extern "C" void raise(); // 1
 extern const void*const __destroy_global_chain_reference;
 
 // 

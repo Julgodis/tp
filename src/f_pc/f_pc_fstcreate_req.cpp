@@ -9,33 +9,18 @@
 // Types:
 // 
 
-// build fast_create_request (['fast_create_request']) False/False
-/* top-level dependencies (begin ['fast_create_request']) */
-/* top-level dependencies (end ['fast_create_request']) */
 struct fast_create_request {
 };
 
-// build base_process_class (['base_process_class']) False/False
-/* top-level dependencies (begin ['base_process_class']) */
-/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build create_request (['create_request']) False/False
-/* top-level dependencies (begin ['create_request']) */
-/* top-level dependencies (end ['create_request']) */
 struct create_request {
 };
 
-// build layer_class (['layer_class']) False/False
-/* top-level dependencies (begin ['layer_class']) */
-/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build create_request_method_class (['create_request_method_class']) False/False
-/* top-level dependencies (begin ['create_request_method_class']) */
-/* top-level dependencies (end ['create_request_method_class']) */
 struct create_request_method_class {
 };
 
@@ -43,38 +28,38 @@ struct create_request_method_class {
 // Forward References:
 // 
 
-static void fpcFCtRq_Do(fast_create_request*);
-static bool fpcFCtRq_Delete(fast_create_request*);
-extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+static void fpcFCtRq_Do(fast_create_request*); // 2
+static bool fpcFCtRq_Delete(fast_create_request*); // 2
+extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
 
-extern "C" static void fpcFCtRq_Do__FP19fast_create_request();
-extern "C" static bool fpcFCtRq_Delete__FP19fast_create_request();
-extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" static void fpcFCtRq_Do__FP19fast_create_request(); // 1
+extern "C" static bool fpcFCtRq_Delete__FP19fast_create_request(); // 1
+extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
 SECTION_DATA extern void*data_803A3AE0[4];
 
 // 
 // External References:
 // 
 
-void fpcBs_MakeOfId();
-void fpcBs_Create(s16, u32, void*);
-void fpcBs_SubCreate(base_process_class*);
-void fpcCtRq_Cancel(create_request*);
-void fpcCtRq_Create(layer_class*, u32, create_request_method_class*);
-void fpcLy_SetCurrentLayer(layer_class*);
-void fpcLd_Use(s16);
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+void fpcBs_MakeOfId(); // 2
+void fpcBs_Create(s16, u32, void*); // 2
+void fpcBs_SubCreate(base_process_class*); // 2
+void fpcCtRq_Cancel(create_request*); // 2
+void fpcCtRq_Create(layer_class*, u32, create_request_method_class*); // 2
+void fpcLy_SetCurrentLayer(layer_class*); // 2
+void fpcLd_Use(s16); // 2
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 
-extern "C" void fpcBs_MakeOfId__Fv();
-extern "C" void fpcBs_Create__FsUiPv();
-extern "C" void fpcBs_SubCreate__FP18base_process_class();
-extern "C" void fpcCtRq_Cancel__FP14create_request();
-extern "C" void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class();
-extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
-extern "C" void fpcLd_Use__Fs();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+extern "C" void fpcBs_MakeOfId__Fv(); // 1
+extern "C" void fpcBs_Create__FsUiPv(); // 1
+extern "C" void fpcBs_SubCreate__FP18base_process_class(); // 1
+extern "C" void fpcCtRq_Cancel__FP14create_request(); // 1
+extern "C" void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class(); // 1
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1
+extern "C" void fpcLd_Use__Fs(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 
 // 
 // Declarations:

@@ -9,64 +9,67 @@
 // Types:
 // 
 
-// build J2DGrafContext (['J2DGrafContext']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+	template <typename A1>
+	struct TVec2 { };
+	/* TVec2<f32> */
+	struct TVec2__template0 {
+	};
+
+};
+
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-/* top-level dependencies (begin ['J2DGrafContext']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['J2DGrafContext']) */
 struct J2DGrafContext {
-	// ('JUtility', 'TColor')
 	/* 802E8B08 */ J2DGrafContext(f32, f32, f32, f32);
 	/* 802E8BB4 */ void setPort();
 	/* 802E8C44 */ void setup2D();
 	/* 802E8E20 */ void setScissor();
+	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
+	/* 802E90E4 */ void place(JGeometry::TBox2<f32> const&);
+	/* 802E961C */ void place(f32, f32, f32, f32);
 	/* 802E9118 */ void setColor(JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
 	/* 802E9234 */ void setLineWidth(u8);
+	/* 802E9260 */ void fillBox(JGeometry::TBox2<f32> const&);
+	/* 802E9368 */ void drawFrame(JGeometry::TBox2<f32> const&);
+	/* 802E9488 */ void line(JGeometry::TVec2<f32>, JGeometry::TVec2<f32>);
+	/* 802E9564 */ void lineTo(JGeometry::TVec2<f32>);
 	/* 802E95D4 */ ~J2DGrafContext();
-	/* 802E961C */ void place(f32, f32, f32, f32);
 	/* 802E9664 */ bool getGrafType() const;
 	/* 802E966C */ void setLookat();
 };
 
-// build JUtility (['JUtility']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void func_802E90C0();
-extern "C" void func_802E90E4();
-extern "C" void func_802E9260();
-extern "C" void func_802E9368();
-extern "C" static void func_802E9488();
-extern "C" void func_802E9564();
 
-extern "C" void __ct__14J2DGrafContextFffff();
-extern "C" void setPort__14J2DGrafContextFv();
-extern "C" void setup2D__14J2DGrafContextFv();
-extern "C" void setScissor__14J2DGrafContextFv();
-extern "C" void func_802E90C0();
-extern "C" void func_802E90E4();
-extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void setLineWidth__14J2DGrafContextFUc();
-extern "C" void func_802E9260();
-extern "C" void func_802E9368();
-extern "C" static void func_802E9488();
-extern "C" void func_802E9564();
-extern "C" void __dt__14J2DGrafContextFv();
-extern "C" void place__14J2DGrafContextFffff();
-extern "C" bool getGrafType__14J2DGrafContextCFv();
-extern "C" void setLookat__14J2DGrafContextFv();
+extern "C" void __ct__14J2DGrafContextFffff(); // 1
+extern "C" void setPort__14J2DGrafContextFv(); // 1
+extern "C" void setup2D__14J2DGrafContextFv(); // 1
+extern "C" void setScissor__14J2DGrafContextFv(); // 1
+extern "C" void func_802E90C0(); // 1
+extern "C" void func_802E90E4(); // 1
+extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void setLineWidth__14J2DGrafContextFUc(); // 1
+extern "C" void func_802E9260(); // 1
+extern "C" void func_802E9368(); // 1
+extern "C" void func_802E9488(); // 1
+extern "C" void func_802E9564(); // 1
+extern "C" void __dt__14J2DGrafContextFv(); // 1
+extern "C" void place__14J2DGrafContextFffff(); // 1
+extern "C" bool getGrafType__14J2DGrafContextCFv(); // 1
+extern "C" void setLookat__14J2DGrafContextFv(); // 1
 SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
 SECTION_SDATA2 extern u8 J2DGrafContext__lit_627[4];
 SECTION_SDATA2 extern f32 J2DGrafContext__lit_628;
@@ -77,67 +80,67 @@ SECTION_SDATA2 extern f64 lit_732;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void PSMTXIdentity();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXBegin();
-extern "C" void GXSetLineWidth();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevDirect();
-extern "C" void GXSetTevOp();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXLoadTexMtxImm();
-extern "C" void GXSetViewport();
-extern "C" void GXSetScissor();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void ceil();
+void operator delete(void*); // 2
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetLineWidth(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevDirect(); // 1
+extern "C" void GXSetTevOp(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void ceil(); // 1
 
-extern "C" void __dl__FPv();
-extern "C" void PSMTXIdentity();
-extern "C" void GXSetVtxDesc();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXBegin();
-extern "C" void GXSetLineWidth();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevDirect();
-extern "C" void GXSetTevOp();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXLoadTexMtxImm();
-extern "C" void GXSetViewport();
-extern "C" void GXSetScissor();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
-extern "C" void ceil();
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void GXSetVtxDesc(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXBegin(); // 1
+extern "C" void GXSetLineWidth(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevDirect(); // 1
+extern "C" void GXSetTevOp(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void ceil(); // 1
 
 // 
 // Declarations:
@@ -223,7 +226,7 @@ asm void J2DGrafContext::setScissor() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802E90C0() {
+asm void J2DGrafContext::scissor(JGeometry::TBox2<f32> const& field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E90C0.s"
 }
@@ -234,7 +237,7 @@ extern "C" asm void func_802E90C0() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802E90E4() {
+asm void J2DGrafContext::place(JGeometry::TBox2<f32> const& field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E90E4.s"
 }
@@ -267,7 +270,7 @@ asm void J2DGrafContext::setLineWidth(u8 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802E9260() {
+asm void J2DGrafContext::fillBox(JGeometry::TBox2<f32> const& field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E9260.s"
 }
@@ -278,7 +281,7 @@ extern "C" asm void func_802E9260() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802E9368() {
+asm void J2DGrafContext::drawFrame(JGeometry::TBox2<f32> const& field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E9368.s"
 }
@@ -289,7 +292,7 @@ extern "C" asm void func_802E9368() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802E9488() {
+asm void J2DGrafContext::line(JGeometry::TVec2<f32> field_0, JGeometry::TVec2<f32> field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E9488.s"
 }
@@ -300,7 +303,7 @@ extern "C" asm static void func_802E9488() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802E9564() {
+asm void J2DGrafContext::lineTo(JGeometry::TVec2<f32> field_0) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DGrafContext/func_802E9564.s"
 }

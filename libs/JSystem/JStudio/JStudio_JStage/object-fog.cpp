@@ -9,39 +9,41 @@
 // Types:
 // 
 
-// build JStudio_JStage (['JStudio_JStage']) False/False
-// build JStage (['JStage']) False/False
-/* top-level dependencies (begin ['JStage']) */
-/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TSystem (['JStage', 'TSystem']) False/False
-	/* dependencies (begin ['JStage', 'TSystem']) */
-	/* dependencies (end ['JStage', 'TSystem']) */
 	struct TSystem {
 	};
 
-	// build TFog (['JStage', 'TFog']) False/False
-	/* dependencies (begin ['JStage', 'TFog']) */
-	/* dependencies (end ['JStage', 'TFog']) */
 	struct TFog {
 	};
 
 };
 
-// build JStage (['JStage']) True/True
-/* top-level dependencies (begin ['JStudio_JStage']) */
-// outer dependency: ('JStage', 'TFog')
-// outer dependency: ('JStage', 'TSystem')
-/* top-level dependencies (end ['JStudio_JStage']) */
-struct JStudio_JStage {
-	// build TAdaptor_fog (['JStudio_JStage', 'TAdaptor_fog']) False/False
-	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_fog']) */
-	// inner dependency: 0 ('JStage', 'TFog') (for ['JStudio_JStage', 'TAdaptor_fog'])
-	// inner dependency: 0 ('JStage', 'TSystem') (for ['JStudio_JStage', 'TAdaptor_fog'])
-	/* dependencies (end ['JStudio_JStage', 'TAdaptor_fog']) */
+struct _GXColor {
+};
+
+namespace JStudio {
+	struct TAdaptor {
+		/* 802862AC */ void adaptor_setVariableValue_GXColor(u32 const*, _GXColor const&);
+		/* 8028638C */ void adaptor_getVariableValue_GXColor(_GXColor*, u32 const*) const;
+	};
+
+	struct TVariableValue {
+		struct TOutput {
+			/* 80285E0C */ ~TOutput();
+		};
+
+		/* 80285EB8 */ void update_immediate_(JStudio::TVariableValue*, f64);
+		/* 8028B568 */ TVariableValue();
+	};
+
 	struct TAdaptor_fog {
-		// ('JStage', 'TFog')
-		// ('JStage', 'TSystem')
+		/* 8028717C */ ~TAdaptor_fog();
+	};
+
+};
+
+struct JStudio_JStage {
+	struct TAdaptor_fog {
 		/* 8028C574 */ TAdaptor_fog(JStage::TSystem const*, JStage::TFog*);
 		/* 8028C610 */ ~TAdaptor_fog();
 		/* 8028C684 */ void adaptor_do_prepare();
@@ -51,80 +53,36 @@ struct JStudio_JStage {
 		/* 8028C880 */ void adaptor_do_data(void const*, u32, void const*, u32);
 	};
 
-	// build TAdaptor_object_ (['JStudio_JStage', 'TAdaptor_object_']) False/False
-	/* dependencies (begin ['JStudio_JStage', 'TAdaptor_object_']) */
-	/* dependencies (end ['JStudio_JStage', 'TAdaptor_object_']) */
+	template <typename A1, typename B1>
+	struct TVariableValueOutput_object_ { };
+	/* TVariableValueOutput_object_<JStudio_JStage::TAdaptor_fog, JStage::TFog> */
+	struct TVariableValueOutput_object___template2 {
+		/* 8028CAC0 */ ~TVariableValueOutput_object___template2();
+		/* 8028CB20 */ void operator()(f32, JStudio::TAdaptor*) const;
+	};
+
 	struct TAdaptor_object_ {
 		/* 8028A470 */ void adaptor_object_data_(void const*, u32, void const*, u32);
 	};
 
 };
 
-// build JStage (['JStage']) True/True
-// build JStudio (['JStudio']) False/False
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
-struct _GXColor {
-};
-
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('_GXColor',)
-/* top-level dependencies (end ['JStudio']) */
-namespace JStudio {
-	// build TVariableValue (['JStudio', 'TVariableValue']) False/False
-	/* dependencies (begin ['JStudio', 'TVariableValue']) */
-	/* dependencies (end ['JStudio', 'TVariableValue']) */
-	struct TVariableValue {
-		// build TOutput (['JStudio', 'TVariableValue', 'TOutput']) False/False
-		/* dependencies (begin ['JStudio', 'TVariableValue', 'TOutput']) */
-		/* dependencies (end ['JStudio', 'TVariableValue', 'TOutput']) */
-		struct TOutput {
-			/* 80285E0C */ ~TOutput();
-		};
-
-		/* 80285EB8 */ void update_immediate_(JStudio::TVariableValue*, f64);
-		/* 8028B568 */ TVariableValue();
-	};
-
-	// build TAdaptor (['JStudio', 'TAdaptor']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor']) */
-	// inner dependency: 0 ('_GXColor',) (for ['JStudio', 'TAdaptor'])
-	/* dependencies (end ['JStudio', 'TAdaptor']) */
-	struct TAdaptor {
-		// ('_GXColor',)
-		/* 802862AC */ void adaptor_setVariableValue_GXColor(u32 const*, _GXColor const&);
-		/* 8028638C */ void adaptor_getVariableValue_GXColor(_GXColor*, u32 const*) const;
-	};
-
-	// build TAdaptor_fog (['JStudio', 'TAdaptor_fog']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_fog']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_fog']) */
-	struct TAdaptor_fog {
-		/* 8028717C */ ~TAdaptor_fog();
-	};
-
-};
-
-// build _GXColor (['_GXColor']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void func_8028C8A4();
-extern "C" static void func_8028CAC0();
-extern "C" static void func_8028CB20();
+extern "C" void func_8028C8A4(); // 1
 
-extern "C" void __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog();
-extern "C" void __dt__Q214JStudio_JStage12TAdaptor_fogFv();
-extern "C" void adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv();
-extern "C" void adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv();
-extern "C" void adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv();
-extern "C" void adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl();
-extern "C" void adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl();
-extern "C" void func_8028C8A4();
-extern "C" static void func_8028CAC0();
-extern "C" static void func_8028CB20();
+extern "C" void __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog(); // 1
+extern "C" void __dt__Q214JStudio_JStage12TAdaptor_fogFv(); // 1
+extern "C" void adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv(); // 1
+extern "C" void adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv(); // 1
+extern "C" void adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv(); // 1
+extern "C" void adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl(); // 1
+extern "C" void adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl(); // 1
+extern "C" void func_8028C8A4(); // 1
+extern "C" void func_8028CAC0(); // 1
+extern "C" void func_8028CB20(); // 1
 SECTION_DATA extern u8 object_fog__lit_844[12];
 SECTION_DATA extern u8 object_fog__lit_845[12];
 SECTION_DATA extern u8 object_fog__lit_849[12];
@@ -140,30 +98,30 @@ SECTION_BSS extern u8 saoVVOutput___Q214JStudio_JStage12TAdaptor_fog[96 + 4 /* p
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void __register_global_object();
-extern "C" void __construct_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv();
-extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
-extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor();
-extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
-extern "C" void __dt__Q27JStudio12TAdaptor_fogFv();
-extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
-extern "C" void __ct__Q27JStudio14TVariableValueFv();
-extern "C" void __dl__FPv();
-extern "C" void __register_global_object();
-extern "C" void __construct_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
+extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1
+extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor(); // 1
+extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl(); // 1
+extern "C" void __dt__Q27JStudio12TAdaptor_fogFv(); // 1
+extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl(); // 1
+extern "C" void __ct__Q27JStudio14TVariableValueFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_RODATA extern const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio12TAdaptor_fog[16];
 SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
 SECTION_DATA extern void*const __vt__Q27JStudio12TAdaptor_fog[8];
@@ -336,7 +294,7 @@ extern "C" asm void func_8028C8A4() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8028CAC0() {
+asm JStudio_JStage::TVariableValueOutput_object___template2::~TVariableValueOutput_object___template2() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-fog/func_8028CAC0.s"
 }
@@ -347,7 +305,7 @@ extern "C" asm static void func_8028CAC0() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8028CB20() {
+asm void JStudio_JStage::TVariableValueOutput_object___template2::operator()(f32 field_0, JStudio::TAdaptor* field_1) const {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio_JStage/object-fog/func_8028CB20.s"
 }

@@ -9,41 +9,39 @@
 // Types:
 // 
 
-// build mDoAud_zelAudio_c (['mDoAud_zelAudio_c']) False/False
-/* top-level dependencies (begin ['mDoAud_zelAudio_c']) */
-/* top-level dependencies (end ['mDoAud_zelAudio_c']) */
 struct mDoAud_zelAudio_c {
 	/* 80006FB4 */ void reset();
 	/* 80007368 */ ~mDoAud_zelAudio_c();
 };
 
-// build Z2AudioMgr (['Z2AudioMgr']) False/False
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
+};
+
+struct JKRSolidHeap {
+	/* 802D0BF4 */ void adjustSize();
+};
+
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
+	/* 80007838 */ ~JAISoundHandle();
+	/* 802A2184 */ void releaseSound();
+};
+
 struct JKRArchive {
-	// build EMountMode (['JKRArchive', 'EMountMode']) False/False
-	/* dependencies (begin ['JKRArchive', 'EMountMode']) */
-	/* dependencies (end ['JKRArchive', 'EMountMode']) */
 	struct EMountMode {
 	};
 
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) False/False
-/* top-level dependencies (begin ['JKRSolidHeap']) */
-/* top-level dependencies (end ['JKRSolidHeap']) */
-struct JKRSolidHeap {
-	/* 802D0BF4 */ void adjustSize();
-};
-
-/* top-level dependencies (begin ['Z2AudioMgr']) */
-// outer dependency: ('JKRArchive',)
-// outer dependency: ('JKRSolidHeap',)
-/* top-level dependencies (end ['Z2AudioMgr']) */
 struct Z2AudioMgr {
-	// ('JKRArchive',)
-	// ('JKRSolidHeap',)
 	/* 800073C8 */ ~Z2AudioMgr();
 	/* 802CD248 */ Z2AudioMgr();
 	/* 802CD34C */ void init(JKRSolidHeap*, u32, void*, JKRArchive*);
@@ -52,114 +50,58 @@ struct Z2AudioMgr {
 	/* 802CD974 */ void resetProcess(u32, bool);
 	/* 802CD9CC */ void resetRecover();
 	/* 802CDA6C */ void hasReset() const;
+	/* 802CDB1C */ void startSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f32> const*);
 };
 
-// build JAISoundHandle (['JAISoundHandle']) False/False
-/* top-level dependencies (begin ['JAISoundHandle']) */
-/* top-level dependencies (end ['JAISoundHandle']) */
-struct JAISoundHandle {
-	/* 80007838 */ ~JAISoundHandle();
-	/* 802A2184 */ void releaseSound();
-};
-
-// build Z2MultiSeObj (['Z2MultiSeObj']) False/False
-/* top-level dependencies (begin ['Z2MultiSeObj']) */
-/* top-level dependencies (end ['Z2MultiSeObj']) */
 struct Z2MultiSeObj {
 	/* 80007888 */ ~Z2MultiSeObj();
 };
 
-// build JAISeCategoryMgr (['JAISeCategoryMgr']) False/False
-/* top-level dependencies (begin ['JAISeCategoryMgr']) */
-/* top-level dependencies (end ['JAISeCategoryMgr']) */
 struct JAISeCategoryMgr {
 	/* 800078DC */ ~JAISeCategoryMgr();
 };
 
-// build mDoDvdThd_mountXArchive_c (['mDoDvdThd_mountXArchive_c']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 	/* 802CE7B0 */ void changeGroupID(u8);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['mDoDvdThd_mountXArchive_c']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JKRArchive', 'EMountMode')
-/* top-level dependencies (end ['mDoDvdThd_mountXArchive_c']) */
 struct mDoDvdThd_mountXArchive_c {
-	// ('JKRHeap',)
-	// ('JKRArchive', 'EMountMode')
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-// build mDoDvdThd_toMainRam_c (['mDoDvdThd_toMainRam_c']) False/False
-// build JKRHeap (['JKRHeap']) True/True
-/* top-level dependencies (begin ['mDoDvdThd_toMainRam_c']) */
-// outer dependency: ('JKRHeap',)
-/* top-level dependencies (end ['mDoDvdThd_toMainRam_c']) */
 struct mDoDvdThd_toMainRam_c {
-	// ('JKRHeap',)
 	/* 80016394 */ void create(char const*, u8, JKRHeap*);
 };
 
-// build JASAudioReseter (['JASAudioReseter']) False/False
-/* top-level dependencies (begin ['JASAudioReseter']) */
-/* top-level dependencies (end ['JASAudioReseter']) */
 struct JASAudioReseter {
 	/* 8029D0FC */ ~JASAudioReseter();
 };
 
-// build JAISeqDataUser (['JAISeqDataUser']) False/False
-/* top-level dependencies (begin ['JAISeqDataUser']) */
-/* top-level dependencies (end ['JAISeqDataUser']) */
 struct JAISeqDataUser {
 	/* 802A1774 */ ~JAISeqDataUser();
 };
 
-// build JAISoundInfo (['JAISoundInfo']) False/False
-/* top-level dependencies (begin ['JAISoundInfo']) */
-/* top-level dependencies (end ['JAISoundInfo']) */
 struct JAISoundInfo {
 	/* 802A2D50 */ ~JAISoundInfo();
 };
 
-// build JAISoundStarter (['JAISoundStarter']) False/False
-/* top-level dependencies (begin ['JAISoundStarter']) */
-/* top-level dependencies (end ['JAISoundStarter']) */
 struct JAISoundStarter {
 	/* 802A2F88 */ ~JAISoundStarter();
 };
 
-// build JAIStreamDataMgr (['JAIStreamDataMgr']) False/False
-/* top-level dependencies (begin ['JAIStreamDataMgr']) */
-/* top-level dependencies (end ['JAIStreamDataMgr']) */
 struct JAIStreamDataMgr {
 	/* 802A3AD8 */ ~JAIStreamDataMgr();
 };
 
-// build Z2MultiSeMgr (['Z2MultiSeMgr']) False/False
-/* top-level dependencies (begin ['Z2MultiSeMgr']) */
-/* top-level dependencies (end ['Z2MultiSeMgr']) */
 struct Z2MultiSeMgr {
 	/* 802AEB34 */ ~Z2MultiSeMgr();
 };
 
-// build Z2StatusMgr (['Z2StatusMgr']) False/False
-/* top-level dependencies (begin ['Z2StatusMgr']) */
-/* top-level dependencies (end ['Z2StatusMgr']) */
 struct Z2StatusMgr {
 	/* 802B6758 */ void setEventBit(void*);
 };
 
-// build Z2SceneMgr (['Z2SceneMgr']) False/False
-/* top-level dependencies (begin ['Z2SceneMgr']) */
-/* top-level dependencies (end ['Z2SceneMgr']) */
 struct Z2SceneMgr {
 	/* 802B697C */ void setFadeOutStart(u8);
 	/* 802B6A18 */ void setFadeInStart(u8);
@@ -167,17 +109,10 @@ struct Z2SceneMgr {
 	/* 802B9D40 */ void load1stDynamicWave();
 };
 
-// build Z2Audience (['Z2Audience']) False/False
-/* top-level dependencies (begin ['Z2Audience']) */
-/* top-level dependencies (end ['Z2Audience']) */
 struct Z2Audience {
 	/* 802BD1FC */ ~Z2Audience();
 };
 
-// build JKRSolidHeap (['JKRSolidHeap']) True/True
-// build JSUPtrList (['JSUPtrList']) False/False
-/* top-level dependencies (begin ['JSUPtrList']) */
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
 	/* 802DBEAC */ ~JSUPtrList();
 };
@@ -186,31 +121,31 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-static void mDoAud_Create();
-void mDoAud_Execute();
-void mDoAud_setSceneName(char const*, s32, s32);
-void mDoAud_load1stDynamicWave();
-void mDoAud_setFadeOutStart(u8);
-void mDoAud_setFadeInStart(u8);
-void mDoAud_resetProcess();
-void mDoAud_resetRecover();
-extern "C" void __sinit_m_Do_audio_cpp();
+static void mDoAud_Create(); // 2
+void mDoAud_Execute(); // 2
+void mDoAud_setSceneName(char const*, s32, s32); // 2
+void mDoAud_load1stDynamicWave(); // 2
+void mDoAud_setFadeOutStart(u8); // 2
+void mDoAud_setFadeInStart(u8); // 2
+void mDoAud_resetProcess(); // 2
+void mDoAud_resetRecover(); // 2
+extern "C" void __sinit_m_Do_audio_cpp(); // 1
 
-extern "C" void reset__17mDoAud_zelAudio_cFv();
-extern "C" static void mDoAud_Create__Fv();
-extern "C" void mDoAud_Execute__Fv();
-extern "C" void mDoAud_setSceneName__FPCcll();
-extern "C" void mDoAud_load1stDynamicWave__Fv();
-extern "C" void mDoAud_setFadeOutStart__FUc();
-extern "C" void mDoAud_setFadeInStart__FUc();
-extern "C" void mDoAud_resetProcess__Fv();
-extern "C" void mDoAud_resetRecover__Fv();
-extern "C" void __sinit_m_Do_audio_cpp();
-extern "C" void __dt__17mDoAud_zelAudio_cFv();
-extern "C" void __dt__10Z2AudioMgrFv();
-extern "C" void __dt__14JAISoundHandleFv();
-extern "C" void __dt__12Z2MultiSeObjFv();
-extern "C" void __dt__16JAISeCategoryMgrFv();
+extern "C" void reset__17mDoAud_zelAudio_cFv(); // 1
+extern "C" static void mDoAud_Create__Fv(); // 1
+extern "C" void mDoAud_Execute__Fv(); // 1
+extern "C" void mDoAud_setSceneName__FPCcll(); // 1
+extern "C" void mDoAud_load1stDynamicWave__Fv(); // 1
+extern "C" void mDoAud_setFadeOutStart__FUc(); // 1
+extern "C" void mDoAud_setFadeInStart__FUc(); // 1
+extern "C" void mDoAud_resetProcess__Fv(); // 1
+extern "C" void mDoAud_resetRecover__Fv(); // 1
+extern "C" void __sinit_m_Do_audio_cpp(); // 1
+extern "C" void __dt__17mDoAud_zelAudio_cFv(); // 1
+extern "C" void __dt__10Z2AudioMgrFv(); // 1
+extern "C" void __dt__14JAISoundHandleFv(); // 1
+extern "C" void __dt__12Z2MultiSeObjFv(); // 1
+extern "C" void __dt__16JAISeCategoryMgrFv(); // 1
 SECTION_RODATA extern const u8 m_Do_m_Do_audio__stringBase0[104];
 SECTION_DATA extern void*const __vt__17mDoAud_zelAudio_c[3];
 SECTION_DATA extern void*const __vt__12JAUSoundInfo[5];
@@ -225,49 +160,48 @@ SECTION_SBSS extern u8 l_arcCommand[4];
 // External References:
 // 
 
-extern "C" void OSReport_Error();
-extern "C" void func_802CDB1C();
-void operator delete(void*);
-extern "C" void OSGetSoundMode();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void OSReport_Error(); // 1
+void operator delete(void*); // 2
+extern "C" void OSGetSoundMode(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void OSReport_Error();
-extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap();
-extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap();
-extern "C" void __dt__15JASAudioReseterFv();
-extern "C" void __dt__14JAISeqDataUserFv();
-extern "C" void releaseSound__14JAISoundHandleFv();
-extern "C" void __dt__12JAISoundInfoFv();
-extern "C" void __dt__15JAISoundStarterFv();
-extern "C" void __dt__16JAIStreamDataMgrFv();
-extern "C" void __dt__12Z2MultiSeMgrFv();
-extern "C" void setEventBit__11Z2StatusMgrFPv();
-extern "C" void setFadeOutStart__10Z2SceneMgrFUc();
-extern "C" void setFadeInStart__10Z2SceneMgrFUc();
-extern "C" void setSceneName__10Z2SceneMgrFPcll();
-extern "C" void load1stDynamicWave__10Z2SceneMgrFv();
-extern "C" void __dt__10Z2AudienceFv();
-extern "C" void __ct__10Z2AudioMgrFv();
-extern "C" void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive();
-extern "C" void setOutputMode__10Z2AudioMgrFUl();
-extern "C" void gframeProcess__10Z2AudioMgrFv();
-extern "C" void resetProcess__10Z2AudioMgrFUlb();
-extern "C" void resetRecover__10Z2AudioMgrFv();
-extern "C" void hasReset__10Z2AudioMgrCFv();
-extern "C" void func_802CDB1C();
-extern "C" void free__7JKRHeapFPvP7JKRHeap();
-extern "C" void changeGroupID__7JKRHeapFUc();
-extern "C" void __dl__FPv();
-extern "C" void adjustSize__12JKRSolidHeapFv();
-extern "C" void __dt__10JSUPtrListFv();
-extern "C" void OSGetSoundMode();
-extern "C" void __register_global_object();
-extern "C" void __destroy_arr();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void OSReport_Error(); // 1
+extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap(); // 1
+extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap(); // 1
+extern "C" void __dt__15JASAudioReseterFv(); // 1
+extern "C" void __dt__14JAISeqDataUserFv(); // 1
+extern "C" void releaseSound__14JAISoundHandleFv(); // 1
+extern "C" void __dt__12JAISoundInfoFv(); // 1
+extern "C" void __dt__15JAISoundStarterFv(); // 1
+extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
+extern "C" void __dt__12Z2MultiSeMgrFv(); // 1
+extern "C" void setEventBit__11Z2StatusMgrFPv(); // 1
+extern "C" void setFadeOutStart__10Z2SceneMgrFUc(); // 1
+extern "C" void setFadeInStart__10Z2SceneMgrFUc(); // 1
+extern "C" void setSceneName__10Z2SceneMgrFPcll(); // 1
+extern "C" void load1stDynamicWave__10Z2SceneMgrFv(); // 1
+extern "C" void __dt__10Z2AudienceFv(); // 1
+extern "C" void __ct__10Z2AudioMgrFv(); // 1
+extern "C" void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive(); // 1
+extern "C" void setOutputMode__10Z2AudioMgrFUl(); // 1
+extern "C" void gframeProcess__10Z2AudioMgrFv(); // 1
+extern "C" void resetProcess__10Z2AudioMgrFUlb(); // 1
+extern "C" void resetRecover__10Z2AudioMgrFv(); // 1
+extern "C" void hasReset__10Z2AudioMgrCFv(); // 1
+extern "C" void func_802CDB1C(); // 1
+extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void changeGroupID__7JKRHeapFUc(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void adjustSize__12JKRSolidHeapFv(); // 1
+extern "C" void __dt__10JSUPtrListFv(); // 1
+extern "C" void OSGetSoundMode(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_arr(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__8JAISeMgr[5];
 SECTION_DATA extern void*const __vt__16JAISeCategoryMgr[5];
 SECTION_DATA extern void*const __vt__9JAISeqMgr[6];

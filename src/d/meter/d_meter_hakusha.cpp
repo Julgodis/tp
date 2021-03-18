@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dMeterHakusha_c (['dMeterHakusha_c']) False/False
-/* top-level dependencies (begin ['dMeterHakusha_c']) */
-/* top-level dependencies (end ['dMeterHakusha_c']) */
 struct dMeterHakusha_c {
 	/* 8020C320 */ dMeterHakusha_c(void*);
 	/* 8020C384 */ ~dMeterHakusha_c();
@@ -28,36 +25,14 @@ struct dMeterHakusha_c {
 	/* 8020D480 */ void getHakushaNum();
 };
 
-// build dComIfG_play_c (['dComIfG_play_c']) False/False
-/* top-level dependencies (begin ['dComIfG_play_c']) */
-/* top-level dependencies (end ['dComIfG_play_c']) */
 struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-// build dMeterSub_c (['dMeterSub_c']) False/False
-/* top-level dependencies (begin ['dMeterSub_c']) */
-/* top-level dependencies (end ['dMeterSub_c']) */
 struct dMeterSub_c {
 	/* 80194138 */ bool isDead();
 };
 
-// build dMeter2Draw_c (['dMeter2Draw_c']) False/False
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
-struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
-	struct TColor {
-	};
-
-};
-
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
@@ -65,95 +40,60 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-/* top-level dependencies (begin ['dMeter2Draw_c']) */
-// outer dependency: ('JUtility', 'TColor')
-// outer dependency: ('CPaneMgrAlpha',)
-/* top-level dependencies (end ['dMeter2Draw_c']) */
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct dMeter2Draw_c {
-	// ('JUtility', 'TColor')
-	// ('CPaneMgrAlpha',)
 	/* 8021462C */ void drawPikariHakusha(f32, f32, f32, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
 	/* 8021A9C8 */ void setAlphaAnimeMin(CPaneMgrAlpha*, s16);
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
 };
 
-// build JUtility (['JUtility']) True/True
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) True/True
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build J2DGrafContext (['J2DGrafContext']) False/False
-/* top-level dependencies (begin ['J2DGrafContext']) */
-/* top-level dependencies (end ['J2DGrafContext']) */
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('J2DGrafContext',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('J2DGrafContext',)
-	// ('JKRArchive',)
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 };
 
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JKRExpHeap',)
-	// ('J2DPane',)
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build J2DPane (['J2DPane']) True/True
-// build JKRArchive (['JKRArchive']) True/True
-// build J2DGrafContext (['J2DGrafContext']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__15dMeterHakusha_cFPv();
-extern "C" void __dt__15dMeterHakusha_cFv();
-extern "C" void _create__15dMeterHakusha_cFv();
-extern "C" void _execute__15dMeterHakusha_cFUl();
-extern "C" void draw__15dMeterHakusha_cFv();
-extern "C" void _delete__15dMeterHakusha_cFv();
-extern "C" void alphaAnimeHakusha__15dMeterHakusha_cFUl();
-extern "C" void updateHakusha__15dMeterHakusha_cFv();
-extern "C" void setAlphaHakushaAnimeMin__15dMeterHakusha_cFv();
-extern "C" void setAlphaHakushaAnimeMax__15dMeterHakusha_cFv();
-extern "C" void setAlphaButtonAnimeMin__15dMeterHakusha_cFv();
-extern "C" void setAlphaButtonAnimeMax__15dMeterHakusha_cFv();
-extern "C" void getHakushaNum__15dMeterHakusha_cFv();
+extern "C" void __ct__15dMeterHakusha_cFPv(); // 1
+extern "C" void __dt__15dMeterHakusha_cFv(); // 1
+extern "C" void _create__15dMeterHakusha_cFv(); // 1
+extern "C" void _execute__15dMeterHakusha_cFUl(); // 1
+extern "C" void draw__15dMeterHakusha_cFv(); // 1
+extern "C" void _delete__15dMeterHakusha_cFv(); // 1
+extern "C" void alphaAnimeHakusha__15dMeterHakusha_cFUl(); // 1
+extern "C" void updateHakusha__15dMeterHakusha_cFv(); // 1
+extern "C" void setAlphaHakushaAnimeMin__15dMeterHakusha_cFv(); // 1
+extern "C" void setAlphaHakushaAnimeMax__15dMeterHakusha_cFv(); // 1
+extern "C" void setAlphaButtonAnimeMin__15dMeterHakusha_cFv(); // 1
+extern "C" void setAlphaButtonAnimeMax__15dMeterHakusha_cFv(); // 1
+extern "C" void getHakushaNum__15dMeterHakusha_cFv(); // 1
 SECTION_RODATA extern const u8 d_meter_d_meter_hakusha__stringBase0[88];
 SECTION_DATA extern u8 data_803BF288[48];
 SECTION_DATA extern void*const __vt__15dMeterHakusha_c[8];
@@ -169,42 +109,42 @@ SECTION_SDATA2 extern f64 d_meter_d_meter_hakusha__lit_4098;
 // External References:
 // 
 
-void dPaneClass_showNullPane(J2DScreen*);
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void strcmp();
+void dPaneClass_showNullPane(J2DScreen*); // 2
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void strcmp(); // 1
 
-extern "C" void getLayerNo__14dComIfG_play_cFi();
-extern "C" bool isDead__11dMeterSub_cFv();
-extern "C" void drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas();
-extern "C" void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas();
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void paneTrans__8CPaneMgrFff();
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" void show__13CPaneMgrAlphaFv();
-extern "C" void hide__13CPaneMgrAlphaFv();
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void __ct__9J2DScreenFv();
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void strcmp();
+extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
+extern "C" bool isDead__11dMeterSub_cFv(); // 1
+extern "C" void drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas(); // 1
+extern "C" void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void paneTrans__8CPaneMgrFff(); // 1
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" void show__13CPaneMgrAlphaFv(); // 1
+extern "C" void hide__13CPaneMgrAlphaFv(); // 1
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__9J2DScreenFv(); // 1
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void strcmp(); // 1
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_DATA extern void*const __vt__11dMeterSub_c[11];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];

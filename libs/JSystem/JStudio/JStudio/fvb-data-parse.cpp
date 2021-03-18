@@ -9,29 +9,10 @@
 // Types:
 // 
 
-// build JStudio (['JStudio']) False/False
-// build JStudio (['JStudio']) True/False
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build fvb (['JStudio', 'fvb']) False/False
-	/* dependencies (begin ['JStudio', 'fvb']) */
-	/* dependencies (end ['JStudio', 'fvb']) */
-	struct fvb {
-		// build data (['JStudio', 'fvb', 'data']) False/False
-		/* dependencies (begin ['JStudio', 'fvb', 'data']) */
-		/* dependencies (end ['JStudio', 'fvb', 'data']) */
+	namespace fvb {
 		struct data {
-			// build TParse_TParagraph (['JStudio', 'fvb', 'data', 'TParse_TParagraph']) False/False
-			/* dependencies (begin ['JStudio', 'fvb', 'data', 'TParse_TParagraph']) */
-			// inner dependency: 3 ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData') (for ['JStudio', 'fvb', 'data', 'TParse_TParagraph'])
-			/* dependencies (end ['JStudio', 'fvb', 'data', 'TParse_TParagraph']) */
 			struct TParse_TParagraph {
-				// ('JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData')
-				// build TData (['JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData']) False/False
-				/* dependencies (begin ['JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData']) */
-				/* dependencies (end ['JStudio', 'fvb', 'data', 'TParse_TParagraph', 'TData']) */
 				struct TData {
 				};
 
@@ -44,22 +25,8 @@ namespace JStudio {
 
 };
 
-// build JGadget (['JGadget']) False/False
-// build JGadget (['JGadget']) True/False
-struct JGadget;
-/* top-level dependencies (begin ['JGadget']) */
-// outer dependency: ('JGadget', 'binary', 'TEBit')
-/* top-level dependencies (end ['JGadget']) */
-struct JGadget {
-	// build binary (['JGadget', 'binary']) False/False
-	/* dependencies (begin ['JGadget', 'binary']) */
-	// inner dependency: 1 ('JGadget', 'binary', 'TEBit') (for ['JGadget', 'binary'])
-	/* dependencies (end ['JGadget', 'binary']) */
+namespace JGadget {
 	struct binary {
-		// ('JGadget', 'binary', 'TEBit')
-		// build TEBit (['JGadget', 'binary', 'TEBit']) False/False
-		/* dependencies (begin ['JGadget', 'binary', 'TEBit']) */
-		/* dependencies (end ['JGadget', 'binary', 'TEBit']) */
 		struct TEBit {
 		};
 
@@ -73,14 +40,14 @@ struct JGadget {
 // 
 
 
-extern "C" void getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData();
+extern "C" void getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData(); // 1
 
 // 
 // External References:
 // 
 
 
-extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
+extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit(); // 1
 
 // 
 // Declarations:

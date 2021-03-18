@@ -9,88 +9,23 @@
 // Types:
 // 
 
-// build JStudio (['JStudio']) False/False
-// build JStudio (['JStudio']) True/False
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-// build JStudio (['JStudio']) True/True
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('JStudio', 'TAdaptor_camera')
-// outer dependency: ('JStudio', 'TAdaptor_actor')
-// outer dependency: ('JStudio', 'TAdaptor_ambientLight')
-// outer dependency: ('JStudio', 'TControl')
-// outer dependency: ('JStudio', 'data', 'TEOperationData')
-// outer dependency: ('_GXColor',)
-// outer dependency: ('JStudio', 'TAdaptor_particle')
-// outer dependency: ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate')
-// outer dependency: ('Vec',)
-// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
-// outer dependency: ('JStudio', 'TAdaptor_fog')
-// outer dependency: ('JStudio', 'TAdaptor')
-// outer dependency: ('JStudio', 'TAdaptor_message')
-// outer dependency: ('JStudio', 'TAdaptor_light')
-// outer dependency: ('JStudio', 'TAdaptor_sound')
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build TVariableValue (['JStudio', 'TVariableValue']) False/False
-	/* dependencies (begin ['JStudio', 'TVariableValue']) */
-	// inner dependency: 1 ('JStudio', 'TAdaptor') (for ['JStudio', 'TVariableValue'])
-	// build TAdaptor (['JStudio', 'TAdaptor']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor']) */
-	// inner dependency: 1 ('JStudio', 'TControl') (for ['JStudio', 'TAdaptor'])
-	// build TControl (['JStudio', 'TControl']) False/False
-	/* dependencies (begin ['JStudio', 'TControl']) */
-	/* dependencies (end ['JStudio', 'TControl']) */
 	struct TControl {
 	};
 
-	// inner dependency: 1 ('JStudio', 'data', 'TEOperationData') (for ['JStudio', 'TAdaptor'])
-	// build data (['JStudio', 'data']) False/False
-	/* dependencies (begin ['JStudio', 'data']) */
-	/* dependencies (end ['JStudio', 'data']) */
 	struct data {
-		// build TEOperationData (['JStudio', 'data', 'TEOperationData']) False/False
-		/* dependencies (begin ['JStudio', 'data', 'TEOperationData']) */
-		/* dependencies (end ['JStudio', 'data', 'TEOperationData']) */
 		struct TEOperationData {
 		};
 
 	};
 
-	// inner dependency: 0 ('_GXColor',) (for ['JStudio', 'TAdaptor'])
-	// inner dependency: 1 ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate') (for ['JStudio', 'TAdaptor'])
-	// inner dependency: 0 ('Vec',) (for ['JStudio', 'TAdaptor'])
-	/* dependencies (end ['JStudio', 'TAdaptor']) */
 	struct TAdaptor {
-		// ('JStudio', 'TControl')
-		// ('JStudio', 'data', 'TEOperationData')
-		// ('_GXColor',)
-		// ('JStudio', 'TAdaptor', 'TSetVariableValue_immediate')
-		// ('Vec',)
-		// build TSetVariableValue_immediate (['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) False/False
-		/* dependencies (begin ['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) */
-		/* dependencies (end ['JStudio', 'TAdaptor', 'TSetVariableValue_immediate']) */
 		struct TSetVariableValue_immediate {
 		};
 
@@ -115,22 +50,12 @@ namespace JStudio {
 		/* 80286648 */ void adaptor_setVariableValue_FVR_INDEX_(JStudio::TAdaptor*, JStudio::TControl*, u32, void const*, u32);
 	};
 
-	/* dependencies (end ['JStudio', 'TVariableValue']) */
 	struct TVariableValue {
-		// ('JStudio', 'TAdaptor')
-		// build TOutput (['JStudio', 'TVariableValue', 'TOutput']) False/False
-		/* dependencies (begin ['JStudio', 'TVariableValue', 'TOutput']) */
-		/* dependencies (end ['JStudio', 'TVariableValue', 'TOutput']) */
 		struct TOutput {
 			/* 80285E0C */ ~TOutput();
 		};
 
-		// build TOutput_none_ (['JStudio', 'TVariableValue', 'TOutput_none_']) False/False
-		/* dependencies (begin ['JStudio', 'TVariableValue', 'TOutput_none_']) */
-		// inner dependency: 0 ('JStudio', 'TAdaptor') (for ['JStudio', 'TVariableValue', 'TOutput_none_'])
-		/* dependencies (end ['JStudio', 'TVariableValue', 'TOutput_none_']) */
 		struct TOutput_none_ {
-			// ('JStudio', 'TAdaptor')
 			/* 80285F6C */ ~TOutput_none_();
 			/* 80285FCC */ void operator()(f32, JStudio::TAdaptor*) const;
 		};
@@ -141,47 +66,21 @@ namespace JStudio {
 		/* 80285F08 */ void update_functionValue_(JStudio::TVariableValue*, f64);
 	};
 
-	// build TAdaptor (['JStudio', 'TAdaptor']) True/True
-	// build TControl (['JStudio', 'TControl']) True/True
-	// build data (['JStudio', 'data']) True/True
-	// build TObject (['JStudio', 'TObject']) False/False
-	/* dependencies (begin ['JStudio', 'TObject']) */
-	// inner dependency: 1 ('JStudio', 'TAdaptor') (for ['JStudio', 'TObject'])
-	// build TAdaptor (['JStudio', 'TAdaptor']) True/True
-	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject'])
-	// build stb (['JStudio', 'stb']) False/False
-	/* dependencies (begin ['JStudio', 'stb']) */
-	/* dependencies (end ['JStudio', 'stb']) */
-	struct stb {
-		// build data (['JStudio', 'stb', 'data']) False/False
-		/* dependencies (begin ['JStudio', 'stb', 'data']) */
-		/* dependencies (end ['JStudio', 'stb', 'data']) */
+	namespace stb {
 		struct data {
-			// build TParse_TBlock_object (['JStudio', 'stb', 'data', 'TParse_TBlock_object']) False/False
-			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
-			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
 			struct TParse_TBlock_object {
 			};
 
 		};
 
-		// build TObject (['JStudio', 'stb', 'TObject']) False/False
-		/* dependencies (begin ['JStudio', 'stb', 'TObject']) */
-		// inner dependency: 2 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'stb', 'TObject'])
-		// build data (['JStudio', 'stb', 'data']) True/True
-		/* dependencies (end ['JStudio', 'stb', 'TObject']) */
 		struct TObject {
-			// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 			/* 80288AC0 */ TObject(JStudio::stb::data::TParse_TBlock_object const&);
 			/* 80288B30 */ ~TObject();
 		};
 
 	};
 
-	/* dependencies (end ['JStudio', 'TObject']) */
 	struct TObject {
-		// ('JStudio', 'TAdaptor')
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 802866B0 */ ~TObject();
 		/* 80286734 */ void forward_value(u32);
 		/* 8028679C */ void do_begin();
@@ -191,190 +90,87 @@ namespace JStudio {
 		/* 80286864 */ TObject(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor*);
 	};
 
-	// build stb (['JStudio', 'stb']) True/True
-	// build TAdaptor_actor (['JStudio', 'TAdaptor_actor']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_actor']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_actor']) */
 	struct TAdaptor_actor {
 		/* 802868B0 */ ~TAdaptor_actor();
 	};
 
-	// build TObject_actor (['JStudio', 'TObject_actor']) False/False
-	/* dependencies (begin ['JStudio', 'TObject_actor']) */
-	// inner dependency: 1 ('JStudio', 'TAdaptor_actor') (for ['JStudio', 'TObject_actor'])
-	// build TAdaptor_actor (['JStudio', 'TAdaptor_actor']) True/True
-	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_actor'])
-	// build stb (['JStudio', 'stb']) True/True
-	/* dependencies (end ['JStudio', 'TObject_actor']) */
 	struct TObject_actor {
-		// ('JStudio', 'TAdaptor_actor')
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 80286910 */ TObject_actor(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_actor*);
 		/* 8028694C */ void do_paragraph(u32, void const*, u32);
 		/* 802881A4 */ ~TObject_actor();
 	};
 
-	// build TAdaptor_ambientLight (['JStudio', 'TAdaptor_ambientLight']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_ambientLight']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_ambientLight']) */
 	struct TAdaptor_ambientLight {
 		/* 80286C9C */ ~TAdaptor_ambientLight();
 	};
 
-	// build TObject_ambientLight (['JStudio', 'TObject_ambientLight']) False/False
-	/* dependencies (begin ['JStudio', 'TObject_ambientLight']) */
-	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_ambientLight'])
-	// build stb (['JStudio', 'stb']) True/True
-	// inner dependency: 1 ('JStudio', 'TAdaptor_ambientLight') (for ['JStudio', 'TObject_ambientLight'])
-	// build TAdaptor_ambientLight (['JStudio', 'TAdaptor_ambientLight']) True/True
-	/* dependencies (end ['JStudio', 'TObject_ambientLight']) */
 	struct TObject_ambientLight {
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
-		// ('JStudio', 'TAdaptor_ambientLight')
 		/* 80286CFC */ TObject_ambientLight(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_ambientLight*);
 		/* 80286D38 */ void do_paragraph(u32, void const*, u32);
 		/* 80288144 */ ~TObject_ambientLight();
 	};
 
-	// build TAdaptor_camera (['JStudio', 'TAdaptor_camera']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_camera']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_camera']) */
 	struct TAdaptor_camera {
 		/* 80286E1C */ ~TAdaptor_camera();
 	};
 
-	// build TObject_camera (['JStudio', 'TObject_camera']) False/False
-	/* dependencies (begin ['JStudio', 'TObject_camera']) */
-	// inner dependency: 1 ('JStudio', 'TAdaptor_camera') (for ['JStudio', 'TObject_camera'])
-	// build TAdaptor_camera (['JStudio', 'TAdaptor_camera']) True/True
-	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_camera'])
-	// build stb (['JStudio', 'stb']) True/True
-	/* dependencies (end ['JStudio', 'TObject_camera']) */
 	struct TObject_camera {
-		// ('JStudio', 'TAdaptor_camera')
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 80286E7C */ TObject_camera(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_camera*);
 		/* 80286EB8 */ void do_paragraph(u32, void const*, u32);
 		/* 802880E4 */ ~TObject_camera();
 	};
 
-	// build TAdaptor_fog (['JStudio', 'TAdaptor_fog']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_fog']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_fog']) */
 	struct TAdaptor_fog {
 		/* 8028717C */ ~TAdaptor_fog();
 	};
 
-	// build TObject_fog (['JStudio', 'TObject_fog']) False/False
-	/* dependencies (begin ['JStudio', 'TObject_fog']) */
-	// inner dependency: 1 ('JStudio', 'TAdaptor_fog') (for ['JStudio', 'TObject_fog'])
-	// build TAdaptor_fog (['JStudio', 'TAdaptor_fog']) True/True
-	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_fog'])
-	// build stb (['JStudio', 'stb']) True/True
-	/* dependencies (end ['JStudio', 'TObject_fog']) */
 	struct TObject_fog {
-		// ('JStudio', 'TAdaptor_fog')
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 802871DC */ TObject_fog(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_fog*);
 		/* 80287218 */ void do_paragraph(u32, void const*, u32);
 		/* 80288084 */ ~TObject_fog();
 	};
 
-	// build TAdaptor_light (['JStudio', 'TAdaptor_light']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_light']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_light']) */
 	struct TAdaptor_light {
 		/* 80287308 */ ~TAdaptor_light();
 	};
 
-	// build TObject_light (['JStudio', 'TObject_light']) False/False
-	/* dependencies (begin ['JStudio', 'TObject_light']) */
-	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_light'])
-	// build stb (['JStudio', 'stb']) True/True
-	// inner dependency: 1 ('JStudio', 'TAdaptor_light') (for ['JStudio', 'TObject_light'])
-	// build TAdaptor_light (['JStudio', 'TAdaptor_light']) True/True
-	/* dependencies (end ['JStudio', 'TObject_light']) */
 	struct TObject_light {
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
-		// ('JStudio', 'TAdaptor_light')
 		/* 80287368 */ TObject_light(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_light*);
 		/* 802873A4 */ void do_paragraph(u32, void const*, u32);
 		/* 80288024 */ ~TObject_light();
 	};
 
-	// build TAdaptor_message (['JStudio', 'TAdaptor_message']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_message']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_message']) */
 	struct TAdaptor_message {
 		/* 802875E0 */ ~TAdaptor_message();
 	};
 
-	// build TObject_message (['JStudio', 'TObject_message']) False/False
-	/* dependencies (begin ['JStudio', 'TObject_message']) */
-	// inner dependency: 1 ('JStudio', 'TAdaptor_message') (for ['JStudio', 'TObject_message'])
-	// build TAdaptor_message (['JStudio', 'TAdaptor_message']) True/True
-	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_message'])
-	// build stb (['JStudio', 'stb']) True/True
-	/* dependencies (end ['JStudio', 'TObject_message']) */
 	struct TObject_message {
-		// ('JStudio', 'TAdaptor_message')
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 80287640 */ TObject_message(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_message*);
 		/* 8028767C */ void do_paragraph(u32, void const*, u32);
 		/* 80287FC4 */ ~TObject_message();
 	};
 
-	// build TAdaptor_particle (['JStudio', 'TAdaptor_particle']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_particle']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_particle']) */
 	struct TAdaptor_particle {
 		/* 8028770C */ ~TAdaptor_particle();
 	};
 
-	// build TObject_particle (['JStudio', 'TObject_particle']) False/False
-	/* dependencies (begin ['JStudio', 'TObject_particle']) */
-	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_particle'])
-	// build stb (['JStudio', 'stb']) True/True
-	// inner dependency: 1 ('JStudio', 'TAdaptor_particle') (for ['JStudio', 'TObject_particle'])
-	// build TAdaptor_particle (['JStudio', 'TAdaptor_particle']) True/True
-	/* dependencies (end ['JStudio', 'TObject_particle']) */
 	struct TObject_particle {
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
-		// ('JStudio', 'TAdaptor_particle')
 		/* 8028776C */ TObject_particle(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_particle*);
 		/* 802877A8 */ void do_paragraph(u32, void const*, u32);
 		/* 80287F64 */ ~TObject_particle();
 	};
 
-	// build TAdaptor_sound (['JStudio', 'TAdaptor_sound']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_sound']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_sound']) */
 	struct TAdaptor_sound {
 		/* 80287B3C */ ~TAdaptor_sound();
 	};
 
-	// build TObject_sound (['JStudio', 'TObject_sound']) False/False
-	/* dependencies (begin ['JStudio', 'TObject_sound']) */
-	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_sound'])
-	// build stb (['JStudio', 'stb']) True/True
-	// inner dependency: 1 ('JStudio', 'TAdaptor_sound') (for ['JStudio', 'TObject_sound'])
-	// build TAdaptor_sound (['JStudio', 'TAdaptor_sound']) True/True
-	/* dependencies (end ['JStudio', 'TObject_sound']) */
 	struct TObject_sound {
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
-		// ('JStudio', 'TAdaptor_sound')
 		/* 80287B9C */ TObject_sound(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_sound*);
 		/* 80287BD8 */ void do_paragraph(u32, void const*, u32);
 		/* 80287F04 */ ~TObject_sound();
 	};
 
-	// build fvb (['JStudio', 'fvb']) False/False
-	/* dependencies (begin ['JStudio', 'fvb']) */
-	/* dependencies (end ['JStudio', 'fvb']) */
-	struct fvb {
-		// build TControl (['JStudio', 'fvb', 'TControl']) False/False
-		/* dependencies (begin ['JStudio', 'fvb', 'TControl']) */
-		/* dependencies (end ['JStudio', 'fvb', 'TControl']) */
+	namespace fvb {
 		struct TControl {
 			/* 80284834 */ void getObject(void const*, u32);
 			/* 802848D4 */ void getObject_index(u32);
@@ -384,100 +180,98 @@ namespace JStudio {
 
 };
 
-// build Vec (['Vec']) True/True
-// build _GXColor (['_GXColor']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void func_80288204();
-extern "C" static void func_802885DC();
-extern "C" static void func_8028863C();
-extern "C" static void func_8028869C();
-extern "C" static void func_802886FC();
-extern "C" static void func_8028875C();
-extern "C" static void func_802887BC();
-extern "C" static void func_80288818();
-extern "C" static void func_80288874();
-extern "C" static void func_802888D0();
-extern "C" static void func_8028892C();
+extern "C" void func_80288204(); // 1
+extern "C" static void func_802885DC(); // 1
+extern "C" static void func_8028863C(); // 1
+extern "C" static void func_8028869C(); // 1
+extern "C" static void func_802886FC(); // 1
+extern "C" static void func_8028875C(); // 1
+extern "C" static void func_802887BC(); // 1
+extern "C" static void func_80288818(); // 1
+extern "C" static void func_80288874(); // 1
+extern "C" static void func_802888D0(); // 1
+extern "C" static void func_8028892C(); // 1
 
-extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv();
-extern "C" void update__Q27JStudio14TVariableValueFdPQ27JStudio8TAdaptor();
-extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
-extern "C" void update_time___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
-extern "C" void update_functionValue___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
-extern "C" void __dt__Q37JStudio14TVariableValue13TOutput_none_Fv();
-extern "C" void __cl__Q37JStudio14TVariableValue13TOutput_none_CFfPQ27JStudio8TAdaptor();
-extern "C" void __dt__Q27JStudio8TAdaptorFv();
-extern "C" void adaptor_do_prepare__Q27JStudio8TAdaptorFv();
-extern "C" void adaptor_do_begin__Q27JStudio8TAdaptorFv();
-extern "C" void adaptor_do_end__Q27JStudio8TAdaptorFv();
-extern "C" void adaptor_do_update__Q27JStudio8TAdaptorFUl();
-extern "C" void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl();
-extern "C" void adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_setVariableValue_n__Q27JStudio8TAdaptorFPQ27JStudio8TControlPCUlUlQ37JStudio4data15TEOperationDataPCvUl();
-extern "C" void adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate();
-extern "C" void adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec();
-extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl();
-extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor();
-extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
-extern "C" void adaptor_updateVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUl();
-extern "C" void adaptor_setVariableValue_VOID___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl();
-extern "C" void adaptor_setVariableValue_IMMEDIATE___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl();
-extern "C" void adaptor_setVariableValue_TIME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl();
-extern "C" void adaptor_setVariableValue_FVR_NAME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl();
-extern "C" void adaptor_setVariableValue_FVR_INDEX___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl();
-extern "C" void __dt__Q27JStudio7TObjectFv();
-extern "C" void forward_value__Q27JStudio7TObjectFUl();
-extern "C" void do_begin__Q27JStudio7TObjectFv();
-extern "C" void do_end__Q27JStudio7TObjectFv();
-extern "C" void do_wait__Q27JStudio7TObjectFUl();
-extern "C" void do_data__Q27JStudio7TObjectFPCvUlPCvUl();
-extern "C" void __ct__Q27JStudio7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio8TAdaptor();
-extern "C" void __dt__Q27JStudio14TAdaptor_actorFv();
-extern "C" void __ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor();
-extern "C" void do_paragraph__Q27JStudio13TObject_actorFUlPCvUl();
-extern "C" void __dt__Q27JStudio21TAdaptor_ambientLightFv();
-extern "C" void __ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight();
-extern "C" void do_paragraph__Q27JStudio20TObject_ambientLightFUlPCvUl();
-extern "C" void __dt__Q27JStudio15TAdaptor_cameraFv();
-extern "C" void __ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera();
-extern "C" void do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl();
-extern "C" void __dt__Q27JStudio12TAdaptor_fogFv();
-extern "C" void __ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog();
-extern "C" void do_paragraph__Q27JStudio11TObject_fogFUlPCvUl();
-extern "C" void __dt__Q27JStudio14TAdaptor_lightFv();
-extern "C" void __ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light();
-extern "C" void do_paragraph__Q27JStudio13TObject_lightFUlPCvUl();
-extern "C" void __dt__Q27JStudio16TAdaptor_messageFv();
-extern "C" void __ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message();
-extern "C" void do_paragraph__Q27JStudio15TObject_messageFUlPCvUl();
-extern "C" void __dt__Q27JStudio17TAdaptor_particleFv();
-extern "C" void __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle();
-extern "C" void do_paragraph__Q27JStudio16TObject_particleFUlPCvUl();
-extern "C" void __dt__Q27JStudio14TAdaptor_soundFv();
-extern "C" void __ct__Q27JStudio13TObject_soundFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_sound();
-extern "C" void do_paragraph__Q27JStudio13TObject_soundFUlPCvUl();
-extern "C" void __dt__Q27JStudio13TObject_soundFv();
-extern "C" void __dt__Q27JStudio16TObject_particleFv();
-extern "C" void __dt__Q27JStudio15TObject_messageFv();
-extern "C" void __dt__Q27JStudio13TObject_lightFv();
-extern "C" void __dt__Q27JStudio11TObject_fogFv();
-extern "C" void __dt__Q27JStudio14TObject_cameraFv();
-extern "C" void __dt__Q27JStudio20TObject_ambientLightFv();
-extern "C" void __dt__Q27JStudio13TObject_actorFv();
-extern "C" void func_80288204();
-extern "C" static void func_802885DC();
-extern "C" static void func_8028863C();
-extern "C" static void func_8028869C();
-extern "C" static void func_802886FC();
-extern "C" static void func_8028875C();
-extern "C" static void func_802887BC();
-extern "C" static void func_80288818();
-extern "C" static void func_80288874();
-extern "C" static void func_802888D0();
-extern "C" static void func_8028892C();
+extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
+extern "C" void update__Q27JStudio14TVariableValueFdPQ27JStudio8TAdaptor(); // 1
+extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1
+extern "C" void update_time___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1
+extern "C" void update_functionValue___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1
+extern "C" void __dt__Q37JStudio14TVariableValue13TOutput_none_Fv(); // 1
+extern "C" void __cl__Q37JStudio14TVariableValue13TOutput_none_CFfPQ27JStudio8TAdaptor(); // 1
+extern "C" void __dt__Q27JStudio8TAdaptorFv(); // 1
+extern "C" void adaptor_do_prepare__Q27JStudio8TAdaptorFv(); // 1
+extern "C" void adaptor_do_begin__Q27JStudio8TAdaptorFv(); // 1
+extern "C" void adaptor_do_end__Q27JStudio8TAdaptorFv(); // 1
+extern "C" void adaptor_do_update__Q27JStudio8TAdaptorFUl(); // 1
+extern "C" void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl(); // 1
+extern "C" void adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_setVariableValue_n__Q27JStudio8TAdaptorFPQ27JStudio8TControlPCUlUlQ37JStudio4data15TEOperationDataPCvUl(); // 1
+extern "C" void adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate(); // 1
+extern "C" void adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec(); // 1
+extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl(); // 1
+extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor(); // 1
+extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl(); // 1
+extern "C" void adaptor_updateVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUl(); // 1
+extern "C" void adaptor_setVariableValue_VOID___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl(); // 1
+extern "C" void adaptor_setVariableValue_IMMEDIATE___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl(); // 1
+extern "C" void adaptor_setVariableValue_TIME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl(); // 1
+extern "C" void adaptor_setVariableValue_FVR_NAME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl(); // 1
+extern "C" void adaptor_setVariableValue_FVR_INDEX___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl(); // 1
+extern "C" void __dt__Q27JStudio7TObjectFv(); // 1
+extern "C" void forward_value__Q27JStudio7TObjectFUl(); // 1
+extern "C" void do_begin__Q27JStudio7TObjectFv(); // 1
+extern "C" void do_end__Q27JStudio7TObjectFv(); // 1
+extern "C" void do_wait__Q27JStudio7TObjectFUl(); // 1
+extern "C" void do_data__Q27JStudio7TObjectFPCvUlPCvUl(); // 1
+extern "C" void __ct__Q27JStudio7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio8TAdaptor(); // 1
+extern "C" void __dt__Q27JStudio14TAdaptor_actorFv(); // 1
+extern "C" void __ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor(); // 1
+extern "C" void do_paragraph__Q27JStudio13TObject_actorFUlPCvUl(); // 1
+extern "C" void __dt__Q27JStudio21TAdaptor_ambientLightFv(); // 1
+extern "C" void __ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight(); // 1
+extern "C" void do_paragraph__Q27JStudio20TObject_ambientLightFUlPCvUl(); // 1
+extern "C" void __dt__Q27JStudio15TAdaptor_cameraFv(); // 1
+extern "C" void __ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera(); // 1
+extern "C" void do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl(); // 1
+extern "C" void __dt__Q27JStudio12TAdaptor_fogFv(); // 1
+extern "C" void __ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog(); // 1
+extern "C" void do_paragraph__Q27JStudio11TObject_fogFUlPCvUl(); // 1
+extern "C" void __dt__Q27JStudio14TAdaptor_lightFv(); // 1
+extern "C" void __ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light(); // 1
+extern "C" void do_paragraph__Q27JStudio13TObject_lightFUlPCvUl(); // 1
+extern "C" void __dt__Q27JStudio16TAdaptor_messageFv(); // 1
+extern "C" void __ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message(); // 1
+extern "C" void do_paragraph__Q27JStudio15TObject_messageFUlPCvUl(); // 1
+extern "C" void __dt__Q27JStudio17TAdaptor_particleFv(); // 1
+extern "C" void __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle(); // 1
+extern "C" void do_paragraph__Q27JStudio16TObject_particleFUlPCvUl(); // 1
+extern "C" void __dt__Q27JStudio14TAdaptor_soundFv(); // 1
+extern "C" void __ct__Q27JStudio13TObject_soundFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_sound(); // 1
+extern "C" void do_paragraph__Q27JStudio13TObject_soundFUlPCvUl(); // 1
+extern "C" void __dt__Q27JStudio13TObject_soundFv(); // 1
+extern "C" void __dt__Q27JStudio16TObject_particleFv(); // 1
+extern "C" void __dt__Q27JStudio15TObject_messageFv(); // 1
+extern "C" void __dt__Q27JStudio13TObject_lightFv(); // 1
+extern "C" void __dt__Q27JStudio11TObject_fogFv(); // 1
+extern "C" void __dt__Q27JStudio14TObject_cameraFv(); // 1
+extern "C" void __dt__Q27JStudio20TObject_ambientLightFv(); // 1
+extern "C" void __dt__Q27JStudio13TObject_actorFv(); // 1
+extern "C" void func_80288204(); // 1
+extern "C" static void func_802885DC(); // 1
+extern "C" static void func_8028863C(); // 1
+extern "C" static void func_8028869C(); // 1
+extern "C" static void func_802886FC(); // 1
+extern "C" static void func_8028875C(); // 1
+extern "C" static void func_802887BC(); // 1
+extern "C" static void func_80288818(); // 1
+extern "C" static void func_80288874(); // 1
+extern "C" static void func_802888D0(); // 1
+extern "C" static void func_8028892C(); // 1
 SECTION_RODATA extern const u8 sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor[12];
 SECTION_RODATA extern const u8 sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor[12];
 SECTION_RODATA extern const u8 sauVariableValue_3_SCALING_XYZ__Q27JStudio14TAdaptor_actor[12];
@@ -631,29 +425,29 @@ SECTION_SDATA2 extern f32 lit_1967;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void __register_global_object();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void getObject__Q37JStudio3fvb8TControlFPCvUl();
-extern "C" void getObject_index__Q37JStudio3fvb8TControlFUl();
-extern "C" void __ct__Q37JStudio3stb7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_object();
-extern "C" void __dt__Q37JStudio3stb7TObjectFv();
-extern "C" void __dl__FPv();
-extern "C" void __register_global_object();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void getObject__Q37JStudio3fvb8TControlFPCvUl(); // 1
+extern "C" void getObject_index__Q37JStudio3fvb8TControlFUl(); // 1
+extern "C" void __ct__Q37JStudio3stb7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
+extern "C" void __dt__Q37JStudio3stb7TObjectFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
 SECTION_DATA extern void*const __vt__Q27JStudio16TAdaptor_message[9];
 

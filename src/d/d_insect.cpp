@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dInsect_c (['dInsect_c']) False/False
-/* top-level dependencies (begin ['dInsect_c']) */
-/* top-level dependencies (end ['dInsect_c']) */
 struct dInsect_c {
 	/* 80110648 */ void Insect_Release();
 	/* 8015E010 */ dInsect_c();
@@ -19,63 +16,36 @@ struct dInsect_c {
 	/* 8015E26C */ void CalcZBuffer(f32);
 };
 
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build csXyz (['csXyz']) False/False
-/* top-level dependencies (begin ['csXyz']) */
-/* top-level dependencies (end ['csXyz']) */
 struct csXyz {
 };
 
-// build dSv_event_c (['dSv_event_c']) False/False
-/* top-level dependencies (begin ['dSv_event_c']) */
-/* top-level dependencies (end ['dSv_event_c']) */
 struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-// build dEvt_control_c (['dEvt_control_c']) False/False
-/* top-level dependencies (begin ['dEvt_control_c']) */
-/* top-level dependencies (end ['dEvt_control_c']) */
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
 	/* 800436EC */ void setPtI_Id(u32);
 };
 
-// build dEvent_manager_c (['dEvent_manager_c']) False/False
-/* top-level dependencies (begin ['dEvent_manager_c']) */
-/* top-level dependencies (end ['dEvent_manager_c']) */
 struct dEvent_manager_c {
 	/* 80047ADC */ void endCheckOld(char const*);
 };
 
-// build dDlst_peekZ_c (['dDlst_peekZ_c']) False/False
-/* top-level dependencies (begin ['dDlst_peekZ_c']) */
-/* top-level dependencies (end ['dDlst_peekZ_c']) */
 struct dDlst_peekZ_c {
 	/* 80056018 */ void newData(s16, s16, u32*);
 };
 
-// build dMenu_Insect_c (['dMenu_Insect_c']) False/False
-/* top-level dependencies (begin ['dMenu_Insect_c']) */
-/* top-level dependencies (end ['dMenu_Insect_c']) */
 struct dMenu_Insect_c {
 	/* 801D9F3C */ void isCatchNotGiveInsect(u8);
 };
@@ -85,9 +55,9 @@ struct dMenu_Insect_c {
 // 
 
 
-extern "C" void __ct__9dInsect_cFv();
-extern "C" void Insect_GetDemoMain__9dInsect_cFv();
-extern "C" void CalcZBuffer__9dInsect_cFf();
+extern "C" void __ct__9dInsect_cFv(); // 1
+extern "C" void Insect_GetDemoMain__9dInsect_cFv(); // 1
+extern "C" void CalcZBuffer__9dInsect_cFf(); // 1
 SECTION_RODATA extern const u8 d_d_insect__stringBase0[16];
 SECTION_DATA extern void*const __vt__9dInsect_c[4];
 SECTION_SDATA2 extern f32 d_d_insect__lit_3871;
@@ -102,29 +72,29 @@ SECTION_SDATA2 extern f32 d_d_insect__lit_3877;
 // External References:
 // 
 
-void mDoLib_project(Vec*, Vec*);
-void mDoLib_pos2camera(Vec*, Vec*);
-void fopAcM_delete(fopAc_ac_c*);
-void fopAcM_orderItemEvent(fopAc_ac_c*, u16, u16);
-void fopAcM_createItemForTrBoxDemo(cXyz const*, int, int, int, csXyz const*, cXyz const*);
-void fopAcM_createItem(cXyz const*, int, int, int, csXyz const*, cXyz const*, int);
-void fopAcM_cancelCarryNow(fopAc_ac_c*);
+void mDoLib_project(Vec*, Vec*); // 2
+void mDoLib_pos2camera(Vec*, Vec*); // 2
+void fopAcM_delete(fopAc_ac_c*); // 2
+void fopAcM_orderItemEvent(fopAc_ac_c*, u16, u16); // 2
+void fopAcM_createItemForTrBoxDemo(cXyz const*, int, int, int, csXyz const*, cXyz const*); // 2
+void fopAcM_createItem(cXyz const*, int, int, int, csXyz const*, cXyz const*, int); // 2
+void fopAcM_cancelCarryNow(fopAc_ac_c*); // 2
 
-extern "C" void mDoLib_project__FP3VecP3Vec();
-extern "C" void mDoLib_pos2camera__FP3VecP3Vec();
-extern "C" void __ct__10fopAc_ac_cFv();
-extern "C" void fopAcM_delete__FP10fopAc_ac_c();
-extern "C" void fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs();
-extern "C" void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz();
-extern "C" void fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi();
-extern "C" void fopAcM_cancelCarryNow__FP10fopAc_ac_c();
-extern "C" void isEventBit__11dSv_event_cCFUs();
-extern "C" void reset__14dEvt_control_cFv();
-extern "C" void setPtI_Id__14dEvt_control_cFUi();
-extern "C" void endCheckOld__16dEvent_manager_cFPCc();
-extern "C" void newData__13dDlst_peekZ_cFssPUl();
-extern "C" void Insect_Release__9dInsect_cFv();
-extern "C" void isCatchNotGiveInsect__14dMenu_Insect_cFUc();
+extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
+extern "C" void mDoLib_pos2camera__FP3VecP3Vec(); // 1
+extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
+extern "C" void fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs(); // 1
+extern "C" void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz(); // 1
+extern "C" void fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi(); // 1
+extern "C" void fopAcM_cancelCarryNow__FP10fopAc_ac_c(); // 1
+extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void reset__14dEvt_control_cFv(); // 1
+extern "C" void setPtI_Id__14dEvt_control_cFUi(); // 1
+extern "C" void endCheckOld__16dEvent_manager_cFPCc(); // 1
+extern "C" void newData__13dDlst_peekZ_cFssPUl(); // 1
+extern "C" void Insect_Release__9dInsect_cFv(); // 1
+extern "C" void isCatchNotGiveInsect__14dMenu_Insect_cFUc(); // 1
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 

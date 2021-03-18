@@ -9,26 +9,13 @@
 // Types:
 // 
 
-// build J3DMtxBuffer (['J3DMtxBuffer']) False/False
-// build J3DModelData (['J3DModelData']) False/False
-/* top-level dependencies (begin ['J3DModelData']) */
-/* top-level dependencies (end ['J3DModelData']) */
 struct J3DModelData {
 };
 
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['J3DMtxBuffer']) */
-// outer dependency: ('J3DModelData',)
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['J3DMtxBuffer']) */
 struct J3DMtxBuffer {
-	// ('J3DModelData',)
-	// ('Vec',)
 	/* 80326214 */ void initialize();
 	/* 80326258 */ void create(J3DModelData*, u32);
 	/* 80326364 */ void createAnmMtx(J3DModelData*);
@@ -42,11 +29,6 @@ struct J3DMtxBuffer {
 	/* 80326EF0 */ void calcBBoardMtx();
 };
 
-// build J3DModelData (['J3DModelData']) True/True
-// build Vec (['Vec']) True/True
-// build J3DShape (['J3DShape']) False/False
-/* top-level dependencies (begin ['J3DShape']) */
-/* top-level dependencies (end ['J3DShape']) */
 struct J3DShape {
 	/* 80314E28 */ void countBumpMtxNum() const;
 };
@@ -55,20 +37,20 @@ struct J3DShape {
 // Forward References:
 // 
 
-void J3DCalcViewBaseMtx(f32 (* )[4], Vec const&, f32 const (& )[3][4], f32 (* )[4]);
+void J3DCalcViewBaseMtx(f32 (* )[4], Vec const&, f32 const (& )[3][4], f32 (* )[4]); // 2
 
-extern "C" void initialize__12J3DMtxBufferFv();
-extern "C" void create__12J3DMtxBufferFP12J3DModelDataUl();
-extern "C" void createAnmMtx__12J3DMtxBufferFP12J3DModelData();
-extern "C" void createWeightEnvelopeMtx__12J3DMtxBufferFP12J3DModelData();
-extern "C" void setNoUseDrawMtx__12J3DMtxBufferFv();
-extern "C" void createDoubleDrawMtx__12J3DMtxBufferFP12J3DModelDataUl();
-extern "C" void createBumpMtxArray__12J3DMtxBufferFP12J3DModelDataUl();
-extern "C" void calcWeightEnvelopeMtx__12J3DMtxBufferFv();
-extern "C" void calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf();
-extern "C" void calcNrmMtx__12J3DMtxBufferFv();
-extern "C" void calcBBoardMtx__12J3DMtxBufferFv();
-extern "C" void J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f();
+extern "C" void initialize__12J3DMtxBufferFv(); // 1
+extern "C" void create__12J3DMtxBufferFP12J3DModelDataUl(); // 1
+extern "C" void createAnmMtx__12J3DMtxBufferFP12J3DModelData(); // 1
+extern "C" void createWeightEnvelopeMtx__12J3DMtxBufferFP12J3DModelData(); // 1
+extern "C" void setNoUseDrawMtx__12J3DMtxBufferFv(); // 1
+extern "C" void createDoubleDrawMtx__12J3DMtxBufferFP12J3DModelDataUl(); // 1
+extern "C" void createBumpMtxArray__12J3DMtxBufferFP12J3DModelDataUl(); // 1
+extern "C" void calcWeightEnvelopeMtx__12J3DMtxBufferFv(); // 1
+extern "C" void calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf(); // 1
+extern "C" void calcNrmMtx__12J3DMtxBufferFv(); // 1
+extern "C" void calcBBoardMtx__12J3DMtxBufferFv(); // 1
+extern "C" void J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f(); // 1
 SECTION_BSS extern u8 sNoUseDrawMtx__12J3DMtxBuffer[48];
 SECTION_BSS extern u8 sNoUseNrmMtx__12J3DMtxBuffer[36 + 4 /* padding */];
 SECTION_SDATA extern void*sNoUseDrawMtxPtr__12J3DMtxBuffer;
@@ -81,44 +63,44 @@ SECTION_SDATA2 extern u8 lit_1321[4];
 // External References:
 // 
 
-void* operator new[](u32);
-void* operator new[](u32, int);
-void J3DCalcBBoardMtx(f32 (* )[4]);
-void J3DCalcYBBoardMtx(f32 (* )[4]);
-void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]);
-void J3DPSMtxArrayConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4], u32);
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void* operator new[](u32); // 2
+void* operator new[](u32, int); // 2
+void J3DCalcBBoardMtx(f32 (* )[4]); // 2
+void J3DCalcYBBoardMtx(f32 (* )[4]); // 2
+void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]); // 2
+void J3DPSMtxArrayConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4], u32); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void* __nwa__FUl();
-extern "C" void* __nwa__FUli();
-extern "C" void J3DCalcBBoardMtx__FPA4_f();
-extern "C" void J3DCalcYBBoardMtx__FPA4_f();
-extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f();
-extern "C" void J3DPSMtxArrayConcat__FPA4_fPA4_fPA4_fUl();
-extern "C" void countBumpMtxNum__8J3DShapeCFv();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void _savegpr_19();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_19();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void* __nwa__FUl(); // 1
+extern "C" void* __nwa__FUli(); // 1
+extern "C" void J3DCalcBBoardMtx__FPA4_f(); // 1
+extern "C" void J3DCalcYBBoardMtx__FPA4_f(); // 1
+extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f(); // 1
+extern "C" void J3DPSMtxArrayConcat__FPA4_fPA4_fPA4_fUl(); // 1
+extern "C" void countBumpMtxNum__8J3DShapeCFv(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void _savegpr_19(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_19(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 j3dSys[284];
 
 // 

@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build JSUMemoryInputStream (['JSUMemoryInputStream']) False/False
-// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) False/False
-/* top-level dependencies (begin ['JSUStreamSeekFrom']) */
-/* top-level dependencies (end ['JSUStreamSeekFrom']) */
 struct JSUStreamSeekFrom {
 };
 
-/* top-level dependencies (begin ['JSUMemoryInputStream']) */
-// outer dependency: ('JSUStreamSeekFrom',)
-/* top-level dependencies (end ['JSUMemoryInputStream']) */
 struct JSUMemoryInputStream {
-	// ('JSUStreamSeekFrom',)
 	/* 802552B8 */ ~JSUMemoryInputStream();
 	/* 802DC520 */ void setBuffer(void const*, s32);
 	/* 802DC534 */ void readData(void*, s32);
@@ -29,10 +21,6 @@ struct JSUMemoryInputStream {
 	/* 802DC630 */ void getPosition() const;
 };
 
-// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) True/True
-// build JSURandomInputStream (['JSURandomInputStream']) False/False
-/* top-level dependencies (begin ['JSURandomInputStream']) */
-/* top-level dependencies (end ['JSURandomInputStream']) */
 struct JSURandomInputStream {
 	/* 802D4094 */ void getAvailable() const;
 	/* 802DC3FC */ void skip(s32);
@@ -43,23 +31,23 @@ struct JSURandomInputStream {
 // 
 
 
-extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl();
-extern "C" void readData__20JSUMemoryInputStreamFPvl();
-extern "C" void seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom();
-extern "C" void getLength__20JSUMemoryInputStreamCFv();
-extern "C" void getPosition__20JSUMemoryInputStreamCFv();
+extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl(); // 1
+extern "C" void readData__20JSUMemoryInputStreamFPvl(); // 1
+extern "C" void seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom(); // 1
+extern "C" void getLength__20JSUMemoryInputStreamCFv(); // 1
+extern "C" void getPosition__20JSUMemoryInputStreamCFv(); // 1
 SECTION_DATA extern void*const __vt__20JSUMemoryInputStream[10];
 
 // 
 // External References:
 // 
 
-SECTION_INIT void memcpy();
+SECTION_INIT void memcpy(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void __dt__20JSUMemoryInputStreamFv();
-extern "C" void getAvailable__20JSURandomInputStreamCFv();
-extern "C" void skip__20JSURandomInputStreamFl();
+SECTION_INIT void memcpy(); // 1
+extern "C" void __dt__20JSUMemoryInputStreamFv(); // 1
+extern "C" void getAvailable__20JSURandomInputStreamCFv(); // 1
+extern "C" void skip__20JSURandomInputStreamFl(); // 1
 
 // 
 // Declarations:

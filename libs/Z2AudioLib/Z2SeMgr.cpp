@@ -9,26 +9,13 @@
 // Types:
 // 
 
-// build Z2SeMgr (['Z2SeMgr']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['Z2SeMgr']) */
-// outer dependency: ('Vec',)
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SeMgr']) */
 struct Z2SeMgr {
-	// ('Vec',)
-	// ('JAISoundID',)
 	/* 802AB64C */ Z2SeMgr();
 	/* 802AB750 */ void initSe();
 	/* 802AB80C */ void resetModY();
@@ -51,23 +38,12 @@ struct Z2SeMgr {
 	/* 802AE5B0 */ void isSoundCulling(JAISoundID);
 };
 
-// build Z2MultiSeObj (['Z2MultiSeObj']) False/False
-/* top-level dependencies (begin ['Z2MultiSeObj']) */
-/* top-level dependencies (end ['Z2MultiSeObj']) */
 struct Z2MultiSeObj {
 	/* 80007888 */ ~Z2MultiSeObj();
 	/* 802AB710 */ Z2MultiSeObj();
 };
 
-// build Vec (['Vec']) True/True
-// build JAISoundID (['JAISoundID']) True/True
-// build Z2MultiSeMgr (['Z2MultiSeMgr']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['Z2MultiSeMgr']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2MultiSeMgr']) */
 struct Z2MultiSeMgr {
-	// ('Vec',)
 	/* 802AEB04 */ Z2MultiSeMgr();
 	/* 802AEB34 */ ~Z2MultiSeMgr();
 	/* 802AEB70 */ void registMultiSePos(Vec*);
@@ -76,43 +52,25 @@ struct Z2MultiSeMgr {
 	/* 802AEDC0 */ void getDolbyPower();
 };
 
-// build JAISoundHandle (['JAISoundHandle']) False/False
-/* top-level dependencies (begin ['JAISoundHandle']) */
-/* top-level dependencies (end ['JAISoundHandle']) */
 struct JAISoundHandle {
 	/* 80007838 */ ~JAISoundHandle();
 	/* 802A2184 */ void releaseSound();
 	/* 802A4AC4 */ JAISoundHandle();
 };
 
-// build JAISeCategoryMgr (['JAISeCategoryMgr']) False/False
-/* top-level dependencies (begin ['JAISeCategoryMgr']) */
-/* top-level dependencies (end ['JAISeCategoryMgr']) */
 struct JAISeCategoryMgr {
 	/* 8029FDE0 */ void stop(u32);
 };
 
-// build JAISound (['JAISound']) False/False
-/* top-level dependencies (begin ['JAISound']) */
-/* top-level dependencies (end ['JAISound']) */
 struct JAISound {
 	/* 802A24DC */ void stop(u32);
 };
 
-// build JAISoundHandles (['JAISoundHandles']) False/False
-// build JAISoundID (['JAISoundID']) True/True
-/* top-level dependencies (begin ['JAISoundHandles']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['JAISoundHandles']) */
 struct JAISoundHandles {
-	// ('JAISoundID',)
 	/* 802A2C98 */ void getHandleSoundID(JAISoundID);
 	/* 802A2CF4 */ void getFreeHandle();
 };
 
-// build JAISoundParamsMove (['JAISoundParamsMove']) False/False
-/* top-level dependencies (begin ['JAISoundParamsMove']) */
-/* top-level dependencies (end ['JAISoundParamsMove']) */
 struct JAISoundParamsMove {
 	/* 802A2DB4 */ void moveVolume(f32, u32);
 	/* 802A2E0C */ void movePitch(f32, u32);
@@ -121,17 +79,7 @@ struct JAISoundParamsMove {
 	/* 802A2F14 */ void moveDolby(f32, u32);
 };
 
-// build Z2Calc (['Z2Calc']) False/False
-// build Z2Calc (['Z2Calc']) True/False
-struct Z2Calc;
-/* top-level dependencies (begin ['Z2Calc']) */
-// outer dependency: ('Z2Calc', 'CurveSign')
-/* top-level dependencies (end ['Z2Calc']) */
 struct Z2Calc {
-	// ('Z2Calc', 'CurveSign')
-	// build CurveSign (['Z2Calc', 'CurveSign']) False/False
-	/* dependencies (begin ['Z2Calc', 'CurveSign']) */
-	/* dependencies (end ['Z2Calc', 'CurveSign']) */
 	struct CurveSign {
 	};
 
@@ -139,50 +87,26 @@ struct Z2Calc {
 	/* 802A96F4 */ void getParamByExp(f32, f32, f32, f32, f32, f32, Z2Calc::CurveSign);
 };
 
-// build Z2SoundMgr (['Z2SoundMgr']) False/False
-// build JAISoundID (['JAISoundID']) True/True
-/* top-level dependencies (begin ['Z2SoundMgr']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['Z2SoundMgr']) */
 struct Z2SoundMgr {
-	// ('JAISoundID',)
 	/* 802AA7DC */ void stopSoundID(JAISoundID);
 	/* 802AA9E8 */ void multiVolumeSoundID(JAISoundID, f32);
 };
 
-// build Z2SoundStarter (['Z2SoundStarter']) False/False
-// build JAISoundHandle (['JAISoundHandle']) True/True
-/* top-level dependencies (begin ['Z2SoundStarter']) */
-// outer dependency: ('JAISoundHandle',)
-/* top-level dependencies (end ['Z2SoundStarter']) */
 struct Z2SoundStarter {
-	// ('JAISoundHandle',)
 	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 };
 
-// build Z2SeqMgr (['Z2SeqMgr']) False/False
-/* top-level dependencies (begin ['Z2SeqMgr']) */
-/* top-level dependencies (end ['Z2SeqMgr']) */
 struct Z2SeqMgr {
 	/* 802AF010 */ void bgmStart(u32, u32, s32);
 };
 
-// build Z2StatusMgr (['Z2StatusMgr']) False/False
-/* top-level dependencies (begin ['Z2StatusMgr']) */
-/* top-level dependencies (end ['Z2StatusMgr']) */
 struct Z2StatusMgr {
 	/* 802B613C */ void menuIn();
 	/* 802B617C */ void menuOut();
 	/* 802B61BC */ void isMovieDemo();
 };
 
-// build Z2Audience (['Z2Audience']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['Z2Audience']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2Audience']) */
 struct Z2Audience {
-	// ('Vec',)
 	/* 802BD704 */ void calcOffMicSound(f32);
 	/* 802BD92C */ void convertAbsToRel(Vec&, Vec*, int);
 	/* 802BD95C */ void calcRelPosVolume(Vec const&, f32, int);
@@ -190,13 +114,7 @@ struct Z2Audience {
 	/* 802BDB44 */ void calcRelPosDolby(Vec const&, int);
 };
 
-// build Z2SpeechMgr2 (['Z2SpeechMgr2']) False/False
-// build Vec (['Vec']) True/True
-/* top-level dependencies (begin ['Z2SpeechMgr2']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['Z2SpeechMgr2']) */
 struct Z2SpeechMgr2 {
-	// ('Vec',)
 	/* 802CCA18 */ void playOneShotVoice(u8, u16, Vec*, s8);
 };
 
@@ -205,33 +123,33 @@ struct Z2SpeechMgr2 {
 // 
 
 
-extern "C" void __ct__7Z2SeMgrFv();
-extern "C" void __ct__12Z2MultiSeObjFv();
-extern "C" void initSe__7Z2SeMgrFv();
-extern "C" void resetModY__7Z2SeMgrFv();
-extern "C" void modHeightAtCamera__7Z2SeMgrFPPC3Vec();
-extern "C" void incrCrowdSize__7Z2SeMgrFv();
-extern "C" void decrCrowdSize__7Z2SeMgrFv();
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
-extern "C" void seStop__7Z2SeMgrF10JAISoundIDUl();
-extern "C" void seStopAll__7Z2SeMgrFUl();
-extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl();
-extern "C" void messageSePlay__7Z2SeMgrFUsP3VecSc();
-extern "C" void talkInSe__7Z2SeMgrFv();
-extern "C" void talkOutSe__7Z2SeMgrFv();
-extern "C" void menuInSe__7Z2SeMgrFv();
-extern "C" void setLevObjSE__7Z2SeMgrFUlP3VecSc();
-extern "C" void setMultiTriggerSE__7Z2SeMgrFUlP3VecSc();
-extern "C" void processSeFramework__7Z2SeMgrFv();
-extern "C" void isLevelSe__7Z2SeMgrF10JAISoundID();
-extern "C" void isSoundCulling__7Z2SeMgrF10JAISoundID();
-extern "C" void __ct__12Z2MultiSeMgrFv();
-extern "C" void __dt__12Z2MultiSeMgrFv();
-extern "C" void registMultiSePos__12Z2MultiSeMgrFP3Vec();
-extern "C" void resetMultiSePos__12Z2MultiSeMgrFv();
-extern "C" void getPanPower__12Z2MultiSeMgrFv();
-extern "C" void getDolbyPower__12Z2MultiSeMgrFv();
+extern "C" void __ct__7Z2SeMgrFv(); // 1
+extern "C" void __ct__12Z2MultiSeObjFv(); // 1
+extern "C" void initSe__7Z2SeMgrFv(); // 1
+extern "C" void resetModY__7Z2SeMgrFv(); // 1
+extern "C" void modHeightAtCamera__7Z2SeMgrFPPC3Vec(); // 1
+extern "C" void incrCrowdSize__7Z2SeMgrFv(); // 1
+extern "C" void decrCrowdSize__7Z2SeMgrFv(); // 1
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
+extern "C" void seStop__7Z2SeMgrF10JAISoundIDUl(); // 1
+extern "C" void seStopAll__7Z2SeMgrFUl(); // 1
+extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl(); // 1
+extern "C" void messageSePlay__7Z2SeMgrFUsP3VecSc(); // 1
+extern "C" void talkInSe__7Z2SeMgrFv(); // 1
+extern "C" void talkOutSe__7Z2SeMgrFv(); // 1
+extern "C" void menuInSe__7Z2SeMgrFv(); // 1
+extern "C" void setLevObjSE__7Z2SeMgrFUlP3VecSc(); // 1
+extern "C" void setMultiTriggerSE__7Z2SeMgrFUlP3VecSc(); // 1
+extern "C" void processSeFramework__7Z2SeMgrFv(); // 1
+extern "C" void isLevelSe__7Z2SeMgrF10JAISoundID(); // 1
+extern "C" void isSoundCulling__7Z2SeMgrF10JAISoundID(); // 1
+extern "C" void __ct__12Z2MultiSeMgrFv(); // 1
+extern "C" void __dt__12Z2MultiSeMgrFv(); // 1
+extern "C" void registMultiSePos__12Z2MultiSeMgrFP3Vec(); // 1
+extern "C" void resetMultiSePos__12Z2MultiSeMgrFv(); // 1
+extern "C" void getPanPower__12Z2MultiSeMgrFv(); // 1
+extern "C" void getDolbyPower__12Z2MultiSeMgrFv(); // 1
 SECTION_RODATA extern const u8 Z2SeMgr__lit_5054[12];
 SECTION_RODATA extern const u8 Z2SeMgr__lit_5100[12];
 SECTION_DATA extern void*Z2SeMgr__lit_4619[24];
@@ -300,55 +218,55 @@ SECTION_SDATA2 extern f32 Z2SeMgr__lit_5134;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void PSVECSquareDistance();
-extern "C" void __construct_array();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dt__14JAISoundHandleFv();
-extern "C" void __dt__12Z2MultiSeObjFv();
-extern "C" void stop__16JAISeCategoryMgrFUl();
-extern "C" void releaseSound__14JAISoundHandleFv();
-extern "C" void stop__8JAISoundFUl();
-extern "C" void getHandleSoundID__15JAISoundHandlesF10JAISoundID();
-extern "C" void getFreeHandle__15JAISoundHandlesFv();
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
-extern "C" void movePitch__18JAISoundParamsMoveFfUl();
-extern "C" void moveFxMix__18JAISoundParamsMoveFfUl();
-extern "C" void movePan__18JAISoundParamsMoveFfUl();
-extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
-extern "C" void __ct__14JAISoundHandleFv();
-extern "C" void linearTransform__6Z2CalcFfffffb();
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
-extern "C" void stopSoundID__10Z2SoundMgrF10JAISoundID();
-extern "C" void multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf();
-extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
-extern "C" void bgmStart__8Z2SeqMgrFUlUll();
-extern "C" void menuIn__11Z2StatusMgrFv();
-extern "C" void menuOut__11Z2StatusMgrFv();
-extern "C" void isMovieDemo__11Z2StatusMgrFv();
-extern "C" void calcOffMicSound__10Z2AudienceFf();
-extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci();
-extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi();
-extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci();
-extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci();
-extern "C" void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc();
-extern "C" void __dl__FPv();
-extern "C" void PSVECSquareDistance();
-extern "C" void __construct_array();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void __dt__14JAISoundHandleFv(); // 1
+extern "C" void __dt__12Z2MultiSeObjFv(); // 1
+extern "C" void stop__16JAISeCategoryMgrFUl(); // 1
+extern "C" void releaseSound__14JAISoundHandleFv(); // 1
+extern "C" void stop__8JAISoundFUl(); // 1
+extern "C" void getHandleSoundID__15JAISoundHandlesF10JAISoundID(); // 1
+extern "C" void getFreeHandle__15JAISoundHandlesFv(); // 1
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void movePitch__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void moveFxMix__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void movePan__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void __ct__14JAISoundHandleFv(); // 1
+extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
+extern "C" void stopSoundID__10Z2SoundMgrF10JAISoundID(); // 1
+extern "C" void multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf(); // 1
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc(); // 1
+extern "C" void bgmStart__8Z2SeqMgrFUlUll(); // 1
+extern "C" void menuIn__11Z2StatusMgrFv(); // 1
+extern "C" void menuOut__11Z2StatusMgrFv(); // 1
+extern "C" void isMovieDemo__11Z2StatusMgrFv(); // 1
+extern "C" void calcOffMicSound__10Z2AudienceFf(); // 1
+extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci(); // 1
+extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi(); // 1
+extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci(); // 1
+extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci(); // 1
+extern "C" void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void PSVECSquareDistance(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SDATA extern f32 VOL_SE_SYSTEM_DEFAULT__7Z2Param;
 SECTION_SDATA extern f32 VOL_SE_LINK_VOICE_DEFAULT__7Z2Param;
 SECTION_SDATA extern f32 VOL_SE_LINK_MOTION_DEFAULT__7Z2Param;

@@ -9,38 +9,23 @@
 // Types:
 // 
 
-// build J3DLightInfo (['J3DLightInfo']) False/False
-/* top-level dependencies (begin ['J3DLightInfo']) */
-/* top-level dependencies (end ['J3DLightInfo']) */
 struct J3DLightInfo {
 	/* 803256C4 */ void operator=(J3DLightInfo const&);
 };
 
-// build J3DTexMtxInfo (['J3DTexMtxInfo']) False/False
-/* top-level dependencies (begin ['J3DTexMtxInfo']) */
-/* top-level dependencies (end ['J3DTexMtxInfo']) */
 struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 	/* 80325794 */ void setEffectMtx(f32 (* )[4]);
 };
 
-// build J3DIndTexMtxInfo (['J3DIndTexMtxInfo']) False/False
-/* top-level dependencies (begin ['J3DIndTexMtxInfo']) */
-/* top-level dependencies (end ['J3DIndTexMtxInfo']) */
 struct J3DIndTexMtxInfo {
 	/* 803257DC */ void operator=(J3DIndTexMtxInfo const&);
 };
 
-// build J3DFogInfo (['J3DFogInfo']) False/False
-/* top-level dependencies (begin ['J3DFogInfo']) */
-/* top-level dependencies (end ['J3DFogInfo']) */
 struct J3DFogInfo {
 	/* 80325800 */ void operator=(J3DFogInfo const&);
 };
 
-// build J3DNBTScaleInfo (['J3DNBTScaleInfo']) False/False
-/* top-level dependencies (begin ['J3DNBTScaleInfo']) */
-/* top-level dependencies (end ['J3DNBTScaleInfo']) */
 struct J3DNBTScaleInfo {
 	/* 8032587C */ void operator=(J3DNBTScaleInfo const&);
 };
@@ -50,12 +35,12 @@ struct J3DNBTScaleInfo {
 // 
 
 
-extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
-extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
-extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f();
-extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
-extern "C" void __as__10J3DFogInfoFRC10J3DFogInfo();
-extern "C" void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo();
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo(); // 1
+extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo(); // 1
+extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f(); // 1
+extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo(); // 1
+extern "C" void __as__10J3DFogInfoFRC10J3DFogInfo(); // 1
+extern "C" void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo(); // 1
 SECTION_SDATA2 extern f32 lit_409;
 SECTION_SDATA2 extern u8 lit_410[4];
 

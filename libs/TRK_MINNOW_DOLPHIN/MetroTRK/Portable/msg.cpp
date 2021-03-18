@@ -9,20 +9,20 @@
 // Forward References:
 // 
 
-extern "C" void TRKMessageSend();
+extern "C" void TRKMessageSend(); // 1
 
-extern "C" void TRKMessageSend();
+extern "C" void TRKMessageSend(); // 1
 SECTION_RODATA extern const u8 MetroTRK_Portable_msg__lit_98[37 + 3 /* padding */];
 
 // 
 // External References:
 // 
 
-extern "C" void TRKWriteUARTN();
-extern "C" void MWTRACE();
+extern "C" void TRKWriteUARTN(); // 1
+extern "C" void MWTRACE(); // 1
 
-extern "C" void TRKWriteUARTN();
-extern "C" void MWTRACE();
+extern "C" void TRKWriteUARTN(); // 1
+extern "C" void MWTRACE(); // 1
 
 // 
 // Declarations:

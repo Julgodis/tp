@@ -9,51 +9,24 @@
 // Types:
 // 
 
-// build JPTraceParticleCallBack4 (['JPTraceParticleCallBack4']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) False/False
-/* top-level dependencies (begin ['JPABaseEmitter']) */
-/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
 };
 
-// build JPABaseParticle (['JPABaseParticle']) False/False
-/* top-level dependencies (begin ['JPABaseParticle']) */
-/* top-level dependencies (end ['JPABaseParticle']) */
 struct JPABaseParticle {
 };
 
-/* top-level dependencies (begin ['JPTraceParticleCallBack4']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPTraceParticleCallBack4']) */
 struct JPTraceParticleCallBack4 {
-	// ('JPABaseEmitter',)
-	// ('JPABaseParticle',)
 	/* 8001817C */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 800182A4 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 80018328 */ ~JPTraceParticleCallBack4();
 };
 
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-// build JPAParticleCallBack (['JPAParticleCallBack']) False/False
-// build JPABaseEmitter (['JPABaseEmitter']) True/True
-// build JPABaseParticle (['JPABaseParticle']) True/True
-/* top-level dependencies (begin ['JPAParticleCallBack']) */
-// outer dependency: ('JPABaseEmitter',)
-// outer dependency: ('JPABaseParticle',)
-/* top-level dependencies (end ['JPAParticleCallBack']) */
 struct JPAParticleCallBack {
-	// ('JPABaseEmitter',)
-	// ('JPABaseParticle',)
 	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
@@ -61,16 +34,16 @@ struct fopAc_ac_c {
 // Forward References:
 // 
 
-void cDmrNowMidnaTalk();
-extern "C" void __sinit_c_damagereaction_cpp();
+void cDmrNowMidnaTalk(); // 2
+extern "C" void __sinit_c_damagereaction_cpp(); // 1
 
-extern "C" void execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void cDmrNowMidnaTalk__Fv();
-extern "C" void __dt__24JPTraceParticleCallBack4Fv();
-extern "C" void __sinit_c_damagereaction_cpp();
-extern "C" void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
-extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
+extern "C" void execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void cDmrNowMidnaTalk__Fv(); // 1
+extern "C" void __dt__24JPTraceParticleCallBack4Fv(); // 1
+extern "C" void __sinit_c_damagereaction_cpp(); // 1
+extern "C" void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
 SECTION_DATA extern void*const __vt__24JPTraceParticleCallBack4[5];
 SECTION_DATA extern void*const __vt__19JPAParticleCallBack[5];
 SECTION_BSS extern u8 c_c_damagereaction__lit_3741[12 + 4 /* padding */];
@@ -86,14 +59,14 @@ SECTION_SDATA2 extern f64 c_c_damagereaction__lit_3736;
 // External References:
 // 
 
-void fopAcM_getTalkEventPartner(fopAc_ac_c const*);
-void operator delete(void*);
-extern "C" void __register_global_object();
+void fopAcM_getTalkEventPartner(fopAc_ac_c const*); // 2
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
 
-extern "C" void fopAcM_getTalkEventPartner__FPC10fopAc_ac_c();
-extern "C" void __dt__19JPAParticleCallBackFv();
-extern "C" void __dl__FPv();
-extern "C" void __register_global_object();
+extern "C" void fopAcM_getTalkEventPartner__FPC10fopAc_ac_c(); // 1
+extern "C" void __dt__19JPAParticleCallBackFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __register_global_object(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 

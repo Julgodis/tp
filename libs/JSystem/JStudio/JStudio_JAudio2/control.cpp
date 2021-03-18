@@ -9,32 +9,12 @@
 // Types:
 // 
 
-// build JStudio_JAudio2 (['JStudio_JAudio2']) False/False
-// build JStudio (['JStudio']) False/False
-// build JStudio (['JStudio']) True/False
-// build JStudio (['JStudio']) True/True
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
-// outer dependency: ('JStudio', 'TAdaptor_sound')
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build TObject (['JStudio', 'TObject']) False/False
-	/* dependencies (begin ['JStudio', 'TObject']) */
-	/* dependencies (end ['JStudio', 'TObject']) */
 	struct TObject {
 	};
 
-	// build stb (['JStudio', 'stb']) False/False
-	/* dependencies (begin ['JStudio', 'stb']) */
-	/* dependencies (end ['JStudio', 'stb']) */
-	struct stb {
-		// build data (['JStudio', 'stb', 'data']) False/False
-		/* dependencies (begin ['JStudio', 'stb', 'data']) */
-		/* dependencies (end ['JStudio', 'stb', 'data']) */
+	namespace stb {
 		struct data {
-			// build TParse_TBlock_object (['JStudio', 'stb', 'data', 'TParse_TBlock_object']) False/False
-			/* dependencies (begin ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
-			/* dependencies (end ['JStudio', 'stb', 'data', 'TParse_TBlock_object']) */
 			struct TParse_TBlock_object {
 			};
 
@@ -42,95 +22,58 @@ namespace JStudio {
 
 	};
 
-	// build TCreateObject (['JStudio', 'TCreateObject']) False/False
-	/* dependencies (begin ['JStudio', 'TCreateObject']) */
-	/* dependencies (end ['JStudio', 'TCreateObject']) */
 	struct TCreateObject {
 		/* 80285488 */ ~TCreateObject();
 	};
 
-	// build TObject_sound (['JStudio', 'TObject_sound']) False/False
-	/* dependencies (begin ['JStudio', 'TObject_sound']) */
-	// inner dependency: 1 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio', 'TObject_sound'])
-	// build stb (['JStudio', 'stb']) True/True
-	// inner dependency: 1 ('JStudio', 'TAdaptor_sound') (for ['JStudio', 'TObject_sound'])
-	// build TAdaptor_sound (['JStudio', 'TAdaptor_sound']) False/False
-	/* dependencies (begin ['JStudio', 'TAdaptor_sound']) */
-	/* dependencies (end ['JStudio', 'TAdaptor_sound']) */
 	struct TAdaptor_sound {
 	};
 
-	/* dependencies (end ['JStudio', 'TObject_sound']) */
 	struct TObject_sound {
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
-		// ('JStudio', 'TAdaptor_sound')
 		/* 80287B9C */ TObject_sound(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_sound*);
 	};
 
-	// build TAdaptor_sound (['JStudio', 'TAdaptor_sound']) True/True
 };
 
-// build JStudio (['JStudio']) True/True
-// build JStudio_JAudio2 (['JStudio_JAudio2']) True/False
-struct JStudio_JAudio2;
-/* top-level dependencies (begin ['JStudio_JAudio2']) */
-// outer dependency: ('JStudio', 'TObject')
-// outer dependency: ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
-// outer dependency: ('JStudio_JAudio2', 'TCreateObject')
-/* top-level dependencies (end ['JStudio_JAudio2']) */
 struct JStudio_JAudio2 {
-	// build TCreateObject (['JStudio_JAudio2', 'TCreateObject']) False/False
-	/* dependencies (begin ['JStudio_JAudio2', 'TCreateObject']) */
-	// inner dependency: 0 ('JStudio', 'TObject') (for ['JStudio_JAudio2', 'TCreateObject'])
-	// inner dependency: 0 ('JStudio', 'stb', 'data', 'TParse_TBlock_object') (for ['JStudio_JAudio2', 'TCreateObject'])
-	/* dependencies (end ['JStudio_JAudio2', 'TCreateObject']) */
 	struct TCreateObject {
-		// ('JStudio', 'TObject')
-		// ('JStudio', 'stb', 'data', 'TParse_TBlock_object')
 		/* 8028D550 */ ~TCreateObject();
 		/* 8028D5B0 */ void create(JStudio::TObject**, JStudio::stb::data::TParse_TBlock_object const&);
 		/* 8028D624 */ void createObject_JAI_SOUND_(JStudio::stb::data::TParse_TBlock_object const&, JStudio_JAudio2::TCreateObject*);
 	};
 
-	// build TAdaptor_sound (['JStudio_JAudio2', 'TAdaptor_sound']) False/False
-	/* dependencies (begin ['JStudio_JAudio2', 'TAdaptor_sound']) */
-	// inner dependency: 1 ('JStudio_JAudio2', 'TCreateObject') (for ['JStudio_JAudio2', 'TAdaptor_sound'])
-	// build TCreateObject (['JStudio_JAudio2', 'TCreateObject']) True/True
-	/* dependencies (end ['JStudio_JAudio2', 'TAdaptor_sound']) */
 	struct TAdaptor_sound {
-		// ('JStudio_JAudio2', 'TCreateObject')
 		/* 8028D828 */ TAdaptor_sound(JStudio_JAudio2::TCreateObject*);
 	};
 
 };
 
-// build JStudio (['JStudio']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __dt__Q215JStudio_JAudio213TCreateObjectFv();
-extern "C" void create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
-extern "C" void createObject_JAI_SOUND___Q215JStudio_JAudio213TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ215JStudio_JAudio213TCreateObject();
+extern "C" void __dt__Q215JStudio_JAudio213TCreateObjectFv(); // 1
+extern "C" void create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
+extern "C" void createObject_JAI_SOUND___Q215JStudio_JAudio213TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ215JStudio_JAudio213TCreateObject(); // 1
 SECTION_DATA extern void*const __vt__Q215JStudio_JAudio213TCreateObject[4];
 
 // 
 // External References:
 // 
 
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dt__Q27JStudio13TCreateObjectFv();
-extern "C" void __ct__Q27JStudio13TObject_soundFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_sound();
-extern "C" void __ct__Q215JStudio_JAudio214TAdaptor_soundFPQ215JStudio_JAudio213TCreateObject();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void __dt__Q27JStudio13TCreateObjectFv(); // 1
+extern "C" void __ct__Q27JStudio13TObject_soundFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_sound(); // 1
+extern "C" void __ct__Q215JStudio_JAudio214TAdaptor_soundFPQ215JStudio_JAudio213TCreateObject(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

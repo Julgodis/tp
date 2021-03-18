@@ -9,33 +9,13 @@
 // Types:
 // 
 
-// build JASDrumSet (['JASDrumSet']) False/False
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-};
-
-// build JASInstParam (['JASInstParam']) False/False
-/* top-level dependencies (begin ['JASInstParam']) */
-/* top-level dependencies (end ['JASInstParam']) */
 struct JASInstParam {
 };
 
-// build JASDrumSet (['JASDrumSet']) True/False
-struct JASDrumSet;
-/* top-level dependencies (begin ['JASDrumSet']) */
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JASInstParam',)
-// outer dependency: ('JASDrumSet', 'TPerc')
-/* top-level dependencies (end ['JASDrumSet']) */
+struct JKRHeap {
+};
+
 struct JASDrumSet {
-	// ('JKRHeap',)
-	// ('JASInstParam',)
-	// ('JASDrumSet', 'TPerc')
-	// build TPerc (['JASDrumSet', 'TPerc']) False/False
-	/* dependencies (begin ['JASDrumSet', 'TPerc']) */
-	/* dependencies (end ['JASDrumSet', 'TPerc']) */
 	struct TPerc {
 		/* 802984C4 */ TPerc();
 		/* 802984E4 */ void setRelease(u32);
@@ -49,11 +29,6 @@ struct JASDrumSet {
 	/* 802984EC */ void getType() const;
 };
 
-// build JKRHeap (['JKRHeap']) True/True
-// build JASInstParam (['JASInstParam']) True/True
-// build JASCalc (['JASCalc']) False/False
-/* top-level dependencies (begin ['JASCalc']) */
-/* top-level dependencies (end ['JASCalc']) */
 struct JASCalc {
 	/* 8028F480 */ void bzero(void*, u32);
 };
@@ -63,14 +38,14 @@ struct JASCalc {
 // 
 
 
-extern "C" void __ct__10JASDrumSetFv();
-extern "C" void __dt__10JASDrumSetFv();
-extern "C" void newPercArray__10JASDrumSetFUcP7JKRHeap();
-extern "C" void getParam__10JASDrumSetCFiiP12JASInstParam();
-extern "C" void setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc();
-extern "C" void __ct__Q210JASDrumSet5TPercFv();
-extern "C" void setRelease__Q210JASDrumSet5TPercFUl();
-extern "C" void getType__10JASDrumSetCFv();
+extern "C" void __ct__10JASDrumSetFv(); // 1
+extern "C" void __dt__10JASDrumSetFv(); // 1
+extern "C" void newPercArray__10JASDrumSetFUcP7JKRHeap(); // 1
+extern "C" void getParam__10JASDrumSetCFiiP12JASInstParam(); // 1
+extern "C" void setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc(); // 1
+extern "C" void __ct__Q210JASDrumSet5TPercFv(); // 1
+extern "C" void setRelease__Q210JASDrumSet5TPercFUl(); // 1
+extern "C" void getType__10JASDrumSetCFv(); // 1
 SECTION_DATA extern void*const __vt__10JASDrumSet[6];
 SECTION_BSS extern u8 data_80431B58[24];
 SECTION_SBSS extern u8 data_80451270[4];
@@ -83,12 +58,12 @@ SECTION_SDATA2 extern f32 lit_253;
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int);
-void operator delete(void*);
+void* operator new[](u32, JKRHeap*, int); // 2
+void operator delete(void*); // 2
 
-extern "C" void bzero__7JASCalcFPvUl();
-extern "C" void* __nwa__FUlP7JKRHeapi();
-extern "C" void __dl__FPv();
+extern "C" void bzero__7JASCalcFPvUl(); // 1
+extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
+extern "C" void __dl__FPv(); // 1
 SECTION_DATA extern void*const __vt__7JASInst[5];
 
 // 

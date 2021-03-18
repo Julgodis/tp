@@ -9,33 +9,33 @@
 // Forward References:
 // 
 
-extern "C" void __CARDCompareFileName();
-extern "C" static void __CARDAccess();
-extern "C" void __CARDIsWritable();
-extern "C" void __CARDIsReadable();
-extern "C" void CARDOpen();
-extern "C" void CARDClose();
+extern "C" void __CARDCompareFileName(); // 1
+extern "C" static void __CARDAccess(); // 1
+extern "C" void __CARDIsWritable(); // 1
+extern "C" void __CARDIsReadable(); // 1
+extern "C" void CARDOpen(); // 1
+extern "C" void CARDClose(); // 1
 
-extern "C" void __CARDCompareFileName();
-extern "C" static void __CARDAccess();
-extern "C" void __CARDIsWritable();
-extern "C" void __CARDIsReadable();
-extern "C" void CARDOpen();
-extern "C" void CARDClose();
+extern "C" void __CARDCompareFileName(); // 1
+extern "C" static void __CARDAccess(); // 1
+extern "C" void __CARDIsWritable(); // 1
+extern "C" void __CARDIsReadable(); // 1
+extern "C" void CARDOpen(); // 1
+extern "C" void CARDClose(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __CARDGetControlBlock();
-extern "C" void __CARDPutControlBlock();
-extern "C" void __CARDGetDirBlock();
-extern "C" void memcmp();
+extern "C" void __CARDGetControlBlock(); // 1
+extern "C" void __CARDPutControlBlock(); // 1
+extern "C" void __CARDGetDirBlock(); // 1
+extern "C" void memcmp(); // 1
 
-extern "C" void __CARDGetControlBlock();
-extern "C" void __CARDPutControlBlock();
-extern "C" void __CARDGetDirBlock();
-extern "C" void memcmp();
+extern "C" void __CARDGetControlBlock(); // 1
+extern "C" void __CARDPutControlBlock(); // 1
+extern "C" void __CARDGetDirBlock(); // 1
+extern "C" void memcmp(); // 1
 SECTION_BSS extern u8 __CARDDiskNone[32];
 SECTION_SDATA extern u8 struct_80450A70[8];
 

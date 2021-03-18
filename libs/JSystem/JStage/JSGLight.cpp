@@ -9,61 +9,23 @@
 // Types:
 // 
 
-// build JStage (['JStage']) False/False
-// build _GXSpotFn (['_GXSpotFn']) False/False
-/* top-level dependencies (begin ['_GXSpotFn']) */
-/* top-level dependencies (end ['_GXSpotFn']) */
 struct _GXSpotFn {
 };
 
-// build JStage (['JStage']) True/False
-struct JStage;
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
-struct _GXColor {
-};
-
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-// build _GXDistAttnFn (['_GXDistAttnFn']) False/False
-/* top-level dependencies (begin ['_GXDistAttnFn']) */
-/* top-level dependencies (end ['_GXDistAttnFn']) */
+struct _GXColor {
+};
+
 struct _GXDistAttnFn {
 };
 
-/* top-level dependencies (begin ['JStage']) */
-// outer dependency: ('_GXSpotFn',)
-// outer dependency: ('JStage', 'TELight')
-// outer dependency: ('_GXColor',)
-// outer dependency: ('Vec',)
-// outer dependency: ('_GXDistAttnFn',)
-/* top-level dependencies (end ['JStage']) */
 struct JStage {
-	// build TLight (['JStage', 'TLight']) False/False
-	/* dependencies (begin ['JStage', 'TLight']) */
-	// inner dependency: 0 ('_GXSpotFn',) (for ['JStage', 'TLight'])
-	// inner dependency: 1 ('JStage', 'TELight') (for ['JStage', 'TLight'])
-	// build TELight (['JStage', 'TELight']) False/False
-	/* dependencies (begin ['JStage', 'TELight']) */
-	/* dependencies (end ['JStage', 'TELight']) */
 	struct TELight {
 	};
 
-	// inner dependency: 0 ('_GXColor',) (for ['JStage', 'TLight'])
-	// inner dependency: 0 ('Vec',) (for ['JStage', 'TLight'])
-	// inner dependency: 0 ('_GXDistAttnFn',) (for ['JStage', 'TLight'])
-	/* dependencies (end ['JStage', 'TLight']) */
 	struct TLight {
-		// ('_GXSpotFn',)
-		// ('JStage', 'TELight')
-		// ('_GXColor',)
-		// ('Vec',)
-		// ('_GXDistAttnFn',)
 		/* 80280D28 */ ~TLight();
 		/* 80280D88 */ s32 JSGFGetType() const;
 		/* 80280D90 */ bool JSGGetLightType() const;
@@ -80,10 +42,6 @@ struct JStage {
 		/* 80280DD0 */ void JSGSetDirection(Vec const&);
 	};
 
-	// build TELight (['JStage', 'TELight']) True/True
-	// build TObject (['JStage', 'TObject']) False/False
-	/* dependencies (begin ['JStage', 'TObject']) */
-	/* dependencies (end ['JStage', 'TObject']) */
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ bool JSGGetName() const;
@@ -101,29 +59,25 @@ struct JStage {
 
 };
 
-// build _GXColor (['_GXColor']) True/True
-// build _GXDistAttnFn (['_GXDistAttnFn']) True/True
-// build _GXSpotFn (['_GXSpotFn']) True/True
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __dt__Q26JStage6TLightFv();
-extern "C" s32 JSGFGetType__Q26JStage6TLightCFv();
-extern "C" bool JSGGetLightType__Q26JStage6TLightCFv();
-extern "C" void JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight();
-extern "C" void JSGGetColor__Q26JStage6TLightCFv();
-extern "C" void JSGSetColor__Q26JStage6TLightF8_GXColor();
-extern "C" void JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn();
-extern "C" void JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn();
-extern "C" void JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn();
-extern "C" void JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn();
-extern "C" void JSGGetPosition__Q26JStage6TLightCFP3Vec();
-extern "C" void JSGSetPosition__Q26JStage6TLightFRC3Vec();
-extern "C" void JSGGetDirection__Q26JStage6TLightCFP3Vec();
-extern "C" void JSGSetDirection__Q26JStage6TLightFRC3Vec();
+extern "C" void __dt__Q26JStage6TLightFv(); // 1
+extern "C" s32 JSGFGetType__Q26JStage6TLightCFv(); // 1
+extern "C" bool JSGGetLightType__Q26JStage6TLightCFv(); // 1
+extern "C" void JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight(); // 1
+extern "C" void JSGGetColor__Q26JStage6TLightCFv(); // 1
+extern "C" void JSGSetColor__Q26JStage6TLightF8_GXColor(); // 1
+extern "C" void JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn(); // 1
+extern "C" void JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn(); // 1
+extern "C" void JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn(); // 1
+extern "C" void JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn(); // 1
+extern "C" void JSGGetPosition__Q26JStage6TLightCFP3Vec(); // 1
+extern "C" void JSGSetPosition__Q26JStage6TLightFRC3Vec(); // 1
+extern "C" void JSGGetDirection__Q26JStage6TLightCFP3Vec(); // 1
+extern "C" void JSGSetDirection__Q26JStage6TLightFRC3Vec(); // 1
 SECTION_DATA extern void*const __vt__Q26JStage6TLight[28];
 SECTION_SDATA2 extern u32 JSGLight__lit_311;
 
@@ -131,21 +85,21 @@ SECTION_SDATA2 extern u32 JSGLight__lit_311;
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dt__Q26JStage7TObjectFv();
-extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
-extern "C" void JSGUpdate__Q26JStage7TObjectFv();
-extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv();
-extern "C" void JSGSetFlag__Q26JStage7TObjectFUl();
-extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl();
-extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl();
-extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
-extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
-extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc();
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
-extern "C" void __dl__FPv();
+extern "C" void __dt__Q26JStage7TObjectFv(); // 1
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv(); // 1
+extern "C" void JSGUpdate__Q26JStage7TObjectFv(); // 1
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv(); // 1
+extern "C" void JSGSetFlag__Q26JStage7TObjectFUl(); // 1
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
+extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl(); // 1
+extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl(); // 1
+extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl(); // 1
+extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl(); // 1
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f(); // 1
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

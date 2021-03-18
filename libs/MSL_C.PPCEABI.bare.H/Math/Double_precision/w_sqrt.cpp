@@ -9,17 +9,17 @@
 // Forward References:
 // 
 
-extern "C" void sqrt();
+extern "C" void sqrt(); // 1
 
-extern "C" void sqrt();
+extern "C" void sqrt(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __ieee754_sqrt();
+extern "C" void __ieee754_sqrt(); // 1
 
-extern "C" void __ieee754_sqrt();
+extern "C" void __ieee754_sqrt(); // 1
 
 // 
 // Declarations:

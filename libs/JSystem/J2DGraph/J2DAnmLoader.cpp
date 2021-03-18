@@ -9,114 +9,48 @@
 // Types:
 // 
 
-// build J2DAnmLoaderDataBase (['J2DAnmLoaderDataBase']) False/False
-/* top-level dependencies (begin ['J2DAnmLoaderDataBase']) */
-/* top-level dependencies (end ['J2DAnmLoaderDataBase']) */
 struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
 
-// build J2DAnmKeyLoader_v15 (['J2DAnmKeyLoader_v15']) False/False
-// build J3DAnmTransformKeyData (['J3DAnmTransformKeyData']) False/False
-/* top-level dependencies (begin ['J3DAnmTransformKeyData']) */
-/* top-level dependencies (end ['J3DAnmTransformKeyData']) */
-struct J3DAnmTransformKeyData {
-};
-
-// build J2DAnmTransformKey (['J2DAnmTransformKey']) False/False
-/* top-level dependencies (begin ['J2DAnmTransformKey']) */
-/* top-level dependencies (end ['J2DAnmTransformKey']) */
-struct J2DAnmTransformKey {
-};
-
-// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) False/False
-/* top-level dependencies (begin ['J2DAnmTextureSRTKey']) */
-/* top-level dependencies (end ['J2DAnmTextureSRTKey']) */
-struct J2DAnmTextureSRTKey {
-};
-
-// build J3DAnmTevRegKeyData (['J3DAnmTevRegKeyData']) False/False
-/* top-level dependencies (begin ['J3DAnmTevRegKeyData']) */
-/* top-level dependencies (end ['J3DAnmTevRegKeyData']) */
-struct J3DAnmTevRegKeyData {
-};
-
-// build J2DAnmVtxColorKey (['J2DAnmVtxColorKey']) False/False
-/* top-level dependencies (begin ['J2DAnmVtxColorKey']) */
-/* top-level dependencies (end ['J2DAnmVtxColorKey']) */
-struct J2DAnmVtxColorKey {
-};
-
-// build J2DAnmBase (['J2DAnmBase']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-/* top-level dependencies (begin ['J2DScreen']) */
-/* top-level dependencies (end ['J2DScreen']) */
-struct J2DScreen {
-};
-
-/* top-level dependencies (begin ['J2DAnmBase']) */
-// outer dependency: ('J2DScreen',)
-/* top-level dependencies (end ['J2DAnmBase']) */
-struct J2DAnmBase {
-	// ('J2DScreen',)
-	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
-};
-
-// build J3DAnmColorKeyData (['J3DAnmColorKeyData']) False/False
-/* top-level dependencies (begin ['J3DAnmColorKeyData']) */
-/* top-level dependencies (end ['J3DAnmColorKeyData']) */
 struct J3DAnmColorKeyData {
 };
 
-// build J3DAnmTextureSRTKeyData (['J3DAnmTextureSRTKeyData']) False/False
-/* top-level dependencies (begin ['J3DAnmTextureSRTKeyData']) */
-/* top-level dependencies (end ['J3DAnmTextureSRTKeyData']) */
-struct J3DAnmTextureSRTKeyData {
+struct J2DAnmTextureSRTKey {
 };
 
-// build J2DAnmColorKey (['J2DAnmColorKey']) False/False
-/* top-level dependencies (begin ['J2DAnmColorKey']) */
-/* top-level dependencies (end ['J2DAnmColorKey']) */
+struct J2DAnmTransformKey {
+};
+
 struct J2DAnmColorKey {
 };
 
-// build J3DAnmVtxColorKeyData (['J3DAnmVtxColorKeyData']) False/False
-/* top-level dependencies (begin ['J3DAnmVtxColorKeyData']) */
-/* top-level dependencies (end ['J3DAnmVtxColorKeyData']) */
-struct J3DAnmVtxColorKeyData {
+struct J2DAnmVtxColorKey {
 };
 
-// build J2DAnmTevRegKey (['J2DAnmTevRegKey']) False/False
-/* top-level dependencies (begin ['J2DAnmTevRegKey']) */
-/* top-level dependencies (end ['J2DAnmTevRegKey']) */
 struct J2DAnmTevRegKey {
 };
 
-/* top-level dependencies (begin ['J2DAnmKeyLoader_v15']) */
-// outer dependency: ('J3DAnmTransformKeyData',)
-// outer dependency: ('J2DAnmTransformKey',)
-// outer dependency: ('J2DAnmTextureSRTKey',)
-// outer dependency: ('J3DAnmTevRegKeyData',)
-// outer dependency: ('J2DAnmVtxColorKey',)
-// outer dependency: ('J2DAnmBase',)
-// outer dependency: ('J3DAnmColorKeyData',)
-// outer dependency: ('J3DAnmTextureSRTKeyData',)
-// outer dependency: ('J2DAnmColorKey',)
-// outer dependency: ('J3DAnmVtxColorKeyData',)
-// outer dependency: ('J2DAnmTevRegKey',)
-/* top-level dependencies (end ['J2DAnmKeyLoader_v15']) */
+struct J3DAnmTransformKeyData {
+};
+
+struct J3DAnmTevRegKeyData {
+};
+
+struct J3DAnmTextureSRTKeyData {
+};
+
+struct J2DScreen {
+};
+
+struct J2DAnmBase {
+	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
+};
+
+struct J3DAnmVtxColorKeyData {
+};
+
 struct J2DAnmKeyLoader_v15 {
-	// ('J3DAnmTransformKeyData',)
-	// ('J2DAnmTransformKey',)
-	// ('J2DAnmTextureSRTKey',)
-	// ('J3DAnmTevRegKeyData',)
-	// ('J2DAnmVtxColorKey',)
-	// ('J2DAnmBase',)
-	// ('J3DAnmColorKeyData',)
-	// ('J3DAnmTextureSRTKeyData',)
-	// ('J2DAnmColorKey',)
-	// ('J3DAnmVtxColorKeyData',)
-	// ('J2DAnmTevRegKey',)
 	/* 80309290 */ J2DAnmKeyLoader_v15();
 	/* 803092AC */ ~J2DAnmKeyLoader_v15();
 	/* 80309308 */ void load(void const*);
@@ -133,103 +67,38 @@ struct J2DAnmKeyLoader_v15 {
 	/* 8030A004 */ void setAnmTevReg(J2DAnmTevRegKey*, J3DAnmTevRegKeyData const*);
 };
 
-// build J2DAnmBase (['J2DAnmBase']) True/True
-// build J3DAnmTransformKeyData (['J3DAnmTransformKeyData']) True/True
-// build J2DAnmTransformKey (['J2DAnmTransformKey']) True/True
-// build J3DAnmTextureSRTKeyData (['J3DAnmTextureSRTKeyData']) True/True
-// build J2DAnmTextureSRTKey (['J2DAnmTextureSRTKey']) True/True
-// build J3DAnmColorKeyData (['J3DAnmColorKeyData']) True/True
-// build J2DAnmColorKey (['J2DAnmColorKey']) True/True
-// build J3DAnmVtxColorKeyData (['J3DAnmVtxColorKeyData']) True/True
-// build J2DAnmVtxColorKey (['J2DAnmVtxColorKey']) True/True
-// build J2DAnmFullLoader_v15 (['J2DAnmFullLoader_v15']) False/False
-// build J2DAnmVtxColorFull (['J2DAnmVtxColorFull']) False/False
-/* top-level dependencies (begin ['J2DAnmVtxColorFull']) */
-/* top-level dependencies (end ['J2DAnmVtxColorFull']) */
-struct J2DAnmVtxColorFull {
-};
-
-// build J3DAnmTransformFullData (['J3DAnmTransformFullData']) False/False
-/* top-level dependencies (begin ['J3DAnmTransformFullData']) */
-/* top-level dependencies (end ['J3DAnmTransformFullData']) */
-struct J3DAnmTransformFullData {
-};
-
-// build J2DAnmTransformFull (['J2DAnmTransformFull']) False/False
-/* top-level dependencies (begin ['J2DAnmTransformFull']) */
-/* top-level dependencies (end ['J2DAnmTransformFull']) */
 struct J2DAnmTransformFull {
 };
 
-// build J3DAnmVisibilityFullData (['J3DAnmVisibilityFullData']) False/False
-/* top-level dependencies (begin ['J3DAnmVisibilityFullData']) */
-/* top-level dependencies (end ['J3DAnmVisibilityFullData']) */
-struct J3DAnmVisibilityFullData {
+struct J3DAnmVtxColorFullData {
 };
 
-// build J3DAnmTexPatternFullData (['J3DAnmTexPatternFullData']) False/False
-/* top-level dependencies (begin ['J3DAnmTexPatternFullData']) */
-/* top-level dependencies (end ['J3DAnmTexPatternFullData']) */
 struct J3DAnmTexPatternFullData {
 };
 
-// build J2DAnmTexPattern (['J2DAnmTexPattern']) False/False
-/* top-level dependencies (begin ['J2DAnmTexPattern']) */
-/* top-level dependencies (end ['J2DAnmTexPattern']) */
+struct J2DAnmVtxColorFull {
+};
+
+struct J3DAnmVisibilityFullData {
+};
+
 struct J2DAnmTexPattern {
 };
 
-// build J2DAnmBase (['J2DAnmBase']) True/True
-// build J2DAnmVisibilityFull (['J2DAnmVisibilityFull']) False/False
-/* top-level dependencies (begin ['J2DAnmVisibilityFull']) */
-/* top-level dependencies (end ['J2DAnmVisibilityFull']) */
+struct J3DAnmTransformFullData {
+};
+
+struct J2DAnmColorFull {
+};
+
 struct J2DAnmVisibilityFull {
 	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
 };
 
-// build J2DAnmColorFull (['J2DAnmColorFull']) False/False
-/* top-level dependencies (begin ['J2DAnmColorFull']) */
-/* top-level dependencies (end ['J2DAnmColorFull']) */
-struct J2DAnmColorFull {
-};
-
-// build J3DAnmVtxColorFullData (['J3DAnmVtxColorFullData']) False/False
-/* top-level dependencies (begin ['J3DAnmVtxColorFullData']) */
-/* top-level dependencies (end ['J3DAnmVtxColorFullData']) */
-struct J3DAnmVtxColorFullData {
-};
-
-// build J3DAnmColorFullData (['J3DAnmColorFullData']) False/False
-/* top-level dependencies (begin ['J3DAnmColorFullData']) */
-/* top-level dependencies (end ['J3DAnmColorFullData']) */
 struct J3DAnmColorFullData {
 };
 
-/* top-level dependencies (begin ['J2DAnmFullLoader_v15']) */
-// outer dependency: ('J2DAnmVtxColorFull',)
-// outer dependency: ('J3DAnmTransformFullData',)
-// outer dependency: ('J2DAnmTransformFull',)
-// outer dependency: ('J3DAnmVisibilityFullData',)
-// outer dependency: ('J3DAnmTexPatternFullData',)
-// outer dependency: ('J2DAnmTexPattern',)
-// outer dependency: ('J2DAnmBase',)
-// outer dependency: ('J2DAnmVisibilityFull',)
-// outer dependency: ('J2DAnmColorFull',)
-// outer dependency: ('J3DAnmVtxColorFullData',)
-// outer dependency: ('J3DAnmColorFullData',)
-/* top-level dependencies (end ['J2DAnmFullLoader_v15']) */
 struct J2DAnmFullLoader_v15 {
-	// ('J2DAnmVtxColorFull',)
-	// ('J3DAnmTransformFullData',)
-	// ('J2DAnmTransformFull',)
-	// ('J3DAnmVisibilityFullData',)
-	// ('J3DAnmTexPatternFullData',)
-	// ('J2DAnmTexPattern',)
-	// ('J2DAnmBase',)
-	// ('J2DAnmVisibilityFull',)
-	// ('J2DAnmColorFull',)
-	// ('J3DAnmVtxColorFullData',)
-	// ('J3DAnmColorFullData',)
 	/* 80309A80 */ void load(void const*);
 	/* 80309B8C */ void setResource(J2DAnmBase*, void const*);
 	/* 80309CE8 */ J2DAnmFullLoader_v15();
@@ -246,123 +115,89 @@ struct J2DAnmFullLoader_v15 {
 	/* 8030A25C */ void setAnmVtxColor(J2DAnmVtxColorFull*, J3DAnmVtxColorFullData const*);
 };
 
-// build J3DAnmTransformFullData (['J3DAnmTransformFullData']) True/True
-// build J2DAnmTransformFull (['J2DAnmTransformFull']) True/True
-// build J3DAnmColorFullData (['J3DAnmColorFullData']) True/True
-// build J2DAnmColorFull (['J2DAnmColorFull']) True/True
-// build J3DAnmTexPatternFullData (['J3DAnmTexPatternFullData']) True/True
-// build J2DAnmTexPattern (['J2DAnmTexPattern']) True/True
-// build J3DAnmTevRegKeyData (['J3DAnmTevRegKeyData']) True/True
-// build J2DAnmTevRegKey (['J2DAnmTevRegKey']) True/True
-// build J3DAnmVisibilityFullData (['J3DAnmVisibilityFullData']) True/True
-// build J2DAnmVisibilityFull (['J2DAnmVisibilityFull']) True/True
-// build J3DAnmVtxColorFullData (['J3DAnmVtxColorFullData']) True/True
-// build J2DAnmVtxColorFull (['J2DAnmVtxColorFull']) True/True
-// build J2DAnmVtxColor (['J2DAnmVtxColor']) False/False
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-/* top-level dependencies (begin ['J2DAnmVtxColor']) */
-// outer dependency: ('_GXColor',)
-/* top-level dependencies (end ['J2DAnmVtxColor']) */
 struct J2DAnmVtxColor {
-	// ('_GXColor',)
 	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
 	/* 8030A358 */ ~J2DAnmVtxColor();
 };
 
-// build J2DAnmLoader (['J2DAnmLoader']) False/False
-/* top-level dependencies (begin ['J2DAnmLoader']) */
-/* top-level dependencies (end ['J2DAnmLoader']) */
 struct J2DAnmLoader {
 	/* 8030A410 */ ~J2DAnmLoader();
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build JUTNameTab (['JUTNameTab']) False/False
-// build ResNTAB (['ResNTAB']) False/False
-/* top-level dependencies (begin ['ResNTAB']) */
-/* top-level dependencies (end ['ResNTAB']) */
 struct ResNTAB {
 };
 
-/* top-level dependencies (begin ['JUTNameTab']) */
-// outer dependency: ('ResNTAB',)
-/* top-level dependencies (end ['JUTNameTab']) */
 struct JUTNameTab {
-	// ('ResNTAB',)
 	/* 802DE9A0 */ JUTNameTab();
 	/* 802DEA1C */ void setResource(ResNTAB const*);
 };
 
-// build ResNTAB (['ResNTAB']) True/True
-// build _GXColor (['_GXColor']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void func_8030A458();
-extern "C" void func_8030A470();
-extern "C" void func_8030A488();
-extern "C" void func_8030A4A0();
-extern "C" void func_8030A4B8();
-extern "C" void func_8030A4D0();
-extern "C" void func_8030A4E8();
-extern "C" void func_8030A500();
-extern "C" void func_8030A518();
-extern "C" void func_8030A530();
-extern "C" void func_8030A548();
-extern "C" void func_8030A560();
-extern "C" void func_8030A578();
+void JSUConvertOffsetToPtr__template30(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template31(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template32(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template33(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template34(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template35(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template36(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template37(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template38(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template39(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template40(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template41(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template42(void const*, void const*); // 2
 
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
-extern "C" void __ct__19J2DAnmKeyLoader_v15Fv();
-extern "C" void __dt__19J2DAnmKeyLoader_v15Fv();
-extern "C" void load__19J2DAnmKeyLoader_v15FPCv();
-extern "C" void setResource__19J2DAnmKeyLoader_v15FP10J2DAnmBasePCv();
-extern "C" void readAnmTransform__19J2DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData();
-extern "C" void setAnmTransform__19J2DAnmKeyLoader_v15FP18J2DAnmTransformKeyPC22J3DAnmTransformKeyData();
-extern "C" void readAnmTextureSRT__19J2DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData();
-extern "C" void setAnmTextureSRT__19J2DAnmKeyLoader_v15FP19J2DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData();
-extern "C" void readAnmColor__19J2DAnmKeyLoader_v15FPC18J3DAnmColorKeyData();
-extern "C" void setAnmColor__19J2DAnmKeyLoader_v15FP14J2DAnmColorKeyPC18J3DAnmColorKeyData();
-extern "C" void readAnmVtxColor__19J2DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData();
-extern "C" void setAnmVtxColor__19J2DAnmKeyLoader_v15FP17J2DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData();
-extern "C" void load__20J2DAnmFullLoader_v15FPCv();
-extern "C" void setResource__20J2DAnmFullLoader_v15FP10J2DAnmBasePCv();
-extern "C" void __ct__20J2DAnmFullLoader_v15Fv();
-extern "C" void __dt__20J2DAnmFullLoader_v15Fv();
-extern "C" void readAnmTransform__20J2DAnmFullLoader_v15FPC23J3DAnmTransformFullData();
-extern "C" void setAnmTransform__20J2DAnmFullLoader_v15FP19J2DAnmTransformFullPC23J3DAnmTransformFullData();
-extern "C" void readAnmColor__20J2DAnmFullLoader_v15FPC19J3DAnmColorFullData();
-extern "C" void setAnmColor__20J2DAnmFullLoader_v15FP15J2DAnmColorFullPC19J3DAnmColorFullData();
-extern "C" void readAnmTexPattern__20J2DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData();
-extern "C" void setAnmTexPattern__20J2DAnmFullLoader_v15FP16J2DAnmTexPatternPC24J3DAnmTexPatternFullData();
-extern "C" void readAnmTevReg__19J2DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData();
-extern "C" void setAnmTevReg__19J2DAnmKeyLoader_v15FP15J2DAnmTevRegKeyPC19J3DAnmTevRegKeyData();
-extern "C" void readAnmVisibility__20J2DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData();
-extern "C" void setAnmVisibility__20J2DAnmFullLoader_v15FP20J2DAnmVisibilityFullPC24J3DAnmVisibilityFullData();
-extern "C" void readAnmVtxColor__20J2DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData();
-extern "C" void setAnmVtxColor__20J2DAnmFullLoader_v15FP18J2DAnmVtxColorFullPC22J3DAnmVtxColorFullData();
-extern "C" void __dt__14J2DAnmVtxColorFv();
-extern "C" void __dt__20J2DAnmVisibilityFullFv();
-extern "C" void __dt__12J2DAnmLoaderFv();
-extern "C" void func_8030A458();
-extern "C" void func_8030A470();
-extern "C" void func_8030A488();
-extern "C" void func_8030A4A0();
-extern "C" void func_8030A4B8();
-extern "C" void func_8030A4D0();
-extern "C" void func_8030A4E8();
-extern "C" void func_8030A500();
-extern "C" void func_8030A518();
-extern "C" void func_8030A530();
-extern "C" void func_8030A548();
-extern "C" void func_8030A560();
-extern "C" void func_8030A578();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
+extern "C" void __ct__19J2DAnmKeyLoader_v15Fv(); // 1
+extern "C" void __dt__19J2DAnmKeyLoader_v15Fv(); // 1
+extern "C" void load__19J2DAnmKeyLoader_v15FPCv(); // 1
+extern "C" void setResource__19J2DAnmKeyLoader_v15FP10J2DAnmBasePCv(); // 1
+extern "C" void readAnmTransform__19J2DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData(); // 1
+extern "C" void setAnmTransform__19J2DAnmKeyLoader_v15FP18J2DAnmTransformKeyPC22J3DAnmTransformKeyData(); // 1
+extern "C" void readAnmTextureSRT__19J2DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData(); // 1
+extern "C" void setAnmTextureSRT__19J2DAnmKeyLoader_v15FP19J2DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData(); // 1
+extern "C" void readAnmColor__19J2DAnmKeyLoader_v15FPC18J3DAnmColorKeyData(); // 1
+extern "C" void setAnmColor__19J2DAnmKeyLoader_v15FP14J2DAnmColorKeyPC18J3DAnmColorKeyData(); // 1
+extern "C" void readAnmVtxColor__19J2DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData(); // 1
+extern "C" void setAnmVtxColor__19J2DAnmKeyLoader_v15FP17J2DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData(); // 1
+extern "C" void load__20J2DAnmFullLoader_v15FPCv(); // 1
+extern "C" void setResource__20J2DAnmFullLoader_v15FP10J2DAnmBasePCv(); // 1
+extern "C" void __ct__20J2DAnmFullLoader_v15Fv(); // 1
+extern "C" void __dt__20J2DAnmFullLoader_v15Fv(); // 1
+extern "C" void readAnmTransform__20J2DAnmFullLoader_v15FPC23J3DAnmTransformFullData(); // 1
+extern "C" void setAnmTransform__20J2DAnmFullLoader_v15FP19J2DAnmTransformFullPC23J3DAnmTransformFullData(); // 1
+extern "C" void readAnmColor__20J2DAnmFullLoader_v15FPC19J3DAnmColorFullData(); // 1
+extern "C" void setAnmColor__20J2DAnmFullLoader_v15FP15J2DAnmColorFullPC19J3DAnmColorFullData(); // 1
+extern "C" void readAnmTexPattern__20J2DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData(); // 1
+extern "C" void setAnmTexPattern__20J2DAnmFullLoader_v15FP16J2DAnmTexPatternPC24J3DAnmTexPatternFullData(); // 1
+extern "C" void readAnmTevReg__19J2DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData(); // 1
+extern "C" void setAnmTevReg__19J2DAnmKeyLoader_v15FP15J2DAnmTevRegKeyPC19J3DAnmTevRegKeyData(); // 1
+extern "C" void readAnmVisibility__20J2DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData(); // 1
+extern "C" void setAnmVisibility__20J2DAnmFullLoader_v15FP20J2DAnmVisibilityFullPC24J3DAnmVisibilityFullData(); // 1
+extern "C" void readAnmVtxColor__20J2DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData(); // 1
+extern "C" void setAnmVtxColor__20J2DAnmFullLoader_v15FP18J2DAnmVtxColorFullPC22J3DAnmVtxColorFullData(); // 1
+extern "C" void __dt__14J2DAnmVtxColorFv(); // 1
+extern "C" void __dt__20J2DAnmVisibilityFullFv(); // 1
+extern "C" void __dt__12J2DAnmLoaderFv(); // 1
+extern "C" void func_8030A458(); // 1
+extern "C" void func_8030A470(); // 1
+extern "C" void func_8030A488(); // 1
+extern "C" void func_8030A4A0(); // 1
+extern "C" void func_8030A4B8(); // 1
+extern "C" void func_8030A4D0(); // 1
+extern "C" void func_8030A4E8(); // 1
+extern "C" void func_8030A500(); // 1
+extern "C" void func_8030A518(); // 1
+extern "C" void func_8030A530(); // 1
+extern "C" void func_8030A548(); // 1
+extern "C" void func_8030A560(); // 1
+extern "C" void func_8030A578(); // 1
 SECTION_DATA extern void*const __vt__20J2DAnmFullLoader_v15[5];
 SECTION_DATA extern void*const __vt__19J2DAnmKeyLoader_v15[5];
 SECTION_DATA extern void*const __vt__12J2DAnmLoader[5];
@@ -374,27 +209,27 @@ SECTION_SDATA2 extern u8 J2DAnmLoader__lit_1581[4 + 4 /* padding */];
 // External References:
 // 
 
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void func_802F4260();
-extern "C" void func_802F42C0();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
 
-extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void __ct__10JUTNameTabFv();
-extern "C" void setResource__10JUTNameTabFPC7ResNTAB();
-extern "C" void func_802F4260();
-extern "C" void func_802F42C0();
-extern "C" void getColor__14J2DAnmVtxColorCFUcUsP8_GXColor();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
+extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__10JUTNameTabFv(); // 1
+extern "C" void setResource__10JUTNameTabFPC7ResNTAB(); // 1
+extern "C" void func_802F4260(); // 1
+extern "C" void func_802F42C0(); // 1
+extern "C" void getColor__14J2DAnmVtxColorCFUcUsP8_GXColor(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
 SECTION_DATA extern void*const __vt__10J2DAnmBase[4];
 SECTION_DATA extern void*const __vt__15J2DAnmTransform[9];
 SECTION_DATA extern void*const __vt__15J2DAnmTevRegKey[4];
@@ -820,7 +655,7 @@ asm J2DAnmLoader::~J2DAnmLoader() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A458() {
+asm void JSUConvertOffsetToPtr__template30(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A458.s"
 }
@@ -831,7 +666,7 @@ extern "C" asm void func_8030A458() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A470() {
+asm void JSUConvertOffsetToPtr__template31(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A470.s"
 }
@@ -842,7 +677,7 @@ extern "C" asm void func_8030A470() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A488() {
+asm void JSUConvertOffsetToPtr__template32(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A488.s"
 }
@@ -853,7 +688,7 @@ extern "C" asm void func_8030A488() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A4A0() {
+asm void JSUConvertOffsetToPtr__template33(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A4A0.s"
 }
@@ -864,7 +699,7 @@ extern "C" asm void func_8030A4A0() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A4B8() {
+asm void JSUConvertOffsetToPtr__template34(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A4B8.s"
 }
@@ -875,7 +710,7 @@ extern "C" asm void func_8030A4B8() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A4D0() {
+asm void JSUConvertOffsetToPtr__template35(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A4D0.s"
 }
@@ -886,7 +721,7 @@ extern "C" asm void func_8030A4D0() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A4E8() {
+asm void JSUConvertOffsetToPtr__template36(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A4E8.s"
 }
@@ -897,7 +732,7 @@ extern "C" asm void func_8030A4E8() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A500() {
+asm void JSUConvertOffsetToPtr__template37(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A500.s"
 }
@@ -908,7 +743,7 @@ extern "C" asm void func_8030A500() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A518() {
+asm void JSUConvertOffsetToPtr__template38(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A518.s"
 }
@@ -919,7 +754,7 @@ extern "C" asm void func_8030A518() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A530() {
+asm void JSUConvertOffsetToPtr__template39(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A530.s"
 }
@@ -930,7 +765,7 @@ extern "C" asm void func_8030A530() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A548() {
+asm void JSUConvertOffsetToPtr__template40(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A548.s"
 }
@@ -941,7 +776,7 @@ extern "C" asm void func_8030A548() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A560() {
+asm void JSUConvertOffsetToPtr__template41(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A560.s"
 }
@@ -952,7 +787,7 @@ extern "C" asm void func_8030A560() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8030A578() {
+asm void JSUConvertOffsetToPtr__template42(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DAnmLoader/func_8030A578.s"
 }

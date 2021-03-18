@@ -9,10 +9,15 @@
 // Types:
 // 
 
-// build JKRDvdRipper (['JKRDvdRipper']) False/False
-// build JKRDvdFile (['JKRDvdFile']) False/False
-/* top-level dependencies (begin ['JKRDvdFile']) */
-/* top-level dependencies (end ['JKRDvdFile']) */
+struct JKRExpandSwitch {
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
 struct JKRDvdFile {
 	/* 802D9584 */ JKRDvdFile();
 	/* 802D9748 */ ~JKRDvdFile();
@@ -20,68 +25,33 @@ struct JKRDvdFile {
 	/* 802D98C4 */ void open(s32);
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-// build JKRDvdRipper (['JKRDvdRipper']) True/False
-struct JKRDvdRipper;
-// build JKRExpandSwitch (['JKRExpandSwitch']) False/False
-/* top-level dependencies (begin ['JKRExpandSwitch']) */
-/* top-level dependencies (end ['JKRExpandSwitch']) */
-struct JKRExpandSwitch {
-};
-
-/* top-level dependencies (begin ['JKRDvdRipper']) */
-// outer dependency: ('JKRDvdFile',)
-// outer dependency: ('JKRHeap',)
-// outer dependency: ('JKRDvdRipper', 'EAllocDirection')
-// outer dependency: ('JKRExpandSwitch',)
-/* top-level dependencies (end ['JKRDvdRipper']) */
 struct JKRDvdRipper {
-	// ('JKRDvdFile',)
-	// ('JKRHeap',)
-	// ('JKRDvdRipper', 'EAllocDirection')
-	// ('JKRExpandSwitch',)
-	// build EAllocDirection (['JKRDvdRipper', 'EAllocDirection']) False/False
-	/* dependencies (begin ['JKRDvdRipper', 'EAllocDirection']) */
-	/* dependencies (end ['JKRDvdRipper', 'EAllocDirection']) */
 	struct EAllocDirection {
 	};
 
 	/* 802D9B98 */ void loadToMainRAM(char const*, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
-	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
 	/* 802D9D10 */ void loadToMainRAM(JKRDvdFile*, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
+	/* 802D9C54 */ void loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*);
 	/* 802DA7D4 */ void isErrorRetry();
 };
 
-// build JKRExpandSwitch (['JKRExpandSwitch']) True/True
-// build JKRHeap (['JKRHeap']) True/True
-// build JKRDvdFile (['JKRDvdFile']) True/True
-// build JKRDecomp (['JKRDecomp']) False/False
-/* top-level dependencies (begin ['JKRDecomp']) */
-/* top-level dependencies (end ['JKRDecomp']) */
+template <typename A0>
+struct JSUList { };
+/* JSUList<JKRDMCommand> */
+struct JSUList__template9 {
+	/* 802DA820 */ ~JSUList__template9();
+};
+
 struct JKRDecomp {
 	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
 	/* 802DBCF8 */ void checkCompressed(u8*);
 };
 
-// build JSUPtrList (['JSUPtrList']) False/False
-/* top-level dependencies (begin ['JSUPtrList']) */
-/* top-level dependencies (end ['JSUPtrList']) */
 struct JSUPtrList {
 	/* 802DBEAC */ ~JSUPtrList();
 	/* 802DBF14 */ void initiate();
 };
 
-// build JUTException (['JUTException']) False/False
-/* top-level dependencies (begin ['JUTException']) */
-/* top-level dependencies (end ['JUTException']) */
 struct JUTException {
 	/* 802E21FC */ void panic_f(char const*, int, char const*, ...);
 };
@@ -90,23 +60,22 @@ struct JUTException {
 // Forward References:
 // 
 
-static void JKRDecompressFromDVD(JKRDvdFile*, void*, u32, u32, u32, u32, u32*);
-static void decompSZS_subroutine(u8*, u8*);
-static void firstSrcData();
-static void nextSrcData(u8*);
-extern "C" void __sinit_JKRDvdRipper_cpp();
-extern "C" static void func_802DA820();
+static void JKRDecompressFromDVD(JKRDvdFile*, void*, u32, u32, u32, u32, u32*); // 2
+static void decompSZS_subroutine(u8*, u8*); // 2
+static void firstSrcData(); // 2
+static void nextSrcData(u8*); // 2
+extern "C" void __sinit_JKRDvdRipper_cpp(); // 1
 
-extern "C" void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
-extern "C" void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
-extern "C" void loadToMainRAM__12JKRDvdRipperFP10JKRDvdFilePUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
-extern "C" static void JKRDecompressFromDVD__FP10JKRDvdFilePvUlUlUlUlPUl();
-extern "C" static void JKRDvdRipper__decompSZS_subroutine__FPUcPUc();
-extern "C" static void JKRDvdRipper__firstSrcData__Fv();
-extern "C" static void JKRDvdRipper__nextSrcData__FPUc();
-extern "C" void isErrorRetry__12JKRDvdRipperFv();
-extern "C" void __sinit_JKRDvdRipper_cpp();
-extern "C" static void func_802DA820();
+extern "C" void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
+extern "C" void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
+extern "C" void loadToMainRAM__12JKRDvdRipperFP10JKRDvdFilePUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
+extern "C" static void JKRDecompressFromDVD__FP10JKRDvdFilePvUlUlUlUlPUl(); // 1
+extern "C" static void JKRDvdRipper__decompSZS_subroutine__FPUcPUc(); // 1
+extern "C" static void JKRDvdRipper__firstSrcData__Fv(); // 1
+extern "C" static void JKRDvdRipper__nextSrcData__FPUc(); // 1
+extern "C" void isErrorRetry__12JKRDvdRipperFv(); // 1
+extern "C" void __sinit_JKRDvdRipper_cpp(); // 1
+extern "C" void func_802DA820(); // 1
 SECTION_RODATA extern const u8 JKRDvdRipper__stringBase0[96];
 SECTION_BSS extern u8 JKRDvdRipper__lit_491[12];
 SECTION_BSS extern u8 sDvdAsyncList__12JKRDvdRipper[12];
@@ -133,63 +102,63 @@ SECTION_SBSS extern u8 JKRDvdRipper__tsArea[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memcpy();
-void operator delete(void*);
-extern "C" void DCInvalidateRange();
-extern "C" void DCStoreRangeNoSync();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void DVDReadPrio();
-extern "C" void VIWaitForRetrace();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_18();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_18();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+void operator delete(void*); // 2
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void DVDReadPrio(); // 1
+extern "C" void VIWaitForRetrace(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_18(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-SECTION_INIT void memcpy();
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
-extern "C" void alloc__7JKRHeapFUli();
-extern "C" void free__7JKRHeapFPvP7JKRHeap();
-extern "C" void __dl__FPv();
-extern "C" void __ct__10JKRDvdFileFv();
-extern "C" void __dt__10JKRDvdFileFv();
-extern "C" void open__10JKRDvdFileFPCc();
-extern "C" void open__10JKRDvdFileFl();
-extern "C" void orderSync__9JKRDecompFPUcPUcUlUl();
-extern "C" void checkCompressed__9JKRDecompFPUc();
-extern "C" void __dt__10JSUPtrListFv();
-extern "C" void initiate__10JSUPtrListFv();
-extern "C" void panic_f__12JUTExceptionFPCciPCce();
-extern "C" void DCInvalidateRange();
-extern "C" void DCStoreRangeNoSync();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void OSInitMutex();
-extern "C" void OSLockMutex();
-extern "C" void OSUnlockMutex();
-extern "C" void DVDReadPrio();
-extern "C" void VIWaitForRetrace();
-extern "C" void __register_global_object();
-extern "C" void _savegpr_18();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_18();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+SECTION_INIT void memcpy(); // 1
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
+extern "C" void alloc__7JKRHeapFUli(); // 1
+extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__10JKRDvdFileFv(); // 1
+extern "C" void __dt__10JKRDvdFileFv(); // 1
+extern "C" void open__10JKRDvdFileFPCc(); // 1
+extern "C" void open__10JKRDvdFileFl(); // 1
+extern "C" void orderSync__9JKRDecompFPUcPUcUlUl(); // 1
+extern "C" void checkCompressed__9JKRDecompFPUc(); // 1
+extern "C" void __dt__10JSUPtrListFv(); // 1
+extern "C" void initiate__10JSUPtrListFv(); // 1
+extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void DCStoreRangeNoSync(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSInitMutex(); // 1
+extern "C" void OSLockMutex(); // 1
+extern "C" void OSUnlockMutex(); // 1
+extern "C" void DVDReadPrio(); // 1
+extern "C" void VIWaitForRetrace(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void _savegpr_18(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_18(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 
 // 
@@ -375,7 +344,7 @@ extern "C" asm void __sinit_JKRDvdRipper_cpp() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802DA820() {
+asm JSUList__template9::~JSUList__template9() {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdRipper/func_802DA820.s"
 }

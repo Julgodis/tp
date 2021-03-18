@@ -9,62 +9,41 @@
 // Types:
 // 
 
-// build OSAlarm (['OSAlarm']) False/False
-/* top-level dependencies (begin ['OSAlarm']) */
-/* top-level dependencies (end ['OSAlarm']) */
 struct OSAlarm {
 };
 
-// build OSContext (['OSContext']) False/False
-/* top-level dependencies (begin ['OSContext']) */
-/* top-level dependencies (end ['OSContext']) */
 struct OSContext {
 };
 
-// build mDoDvdThd (['mDoDvdThd']) False/False
-/* top-level dependencies (begin ['mDoDvdThd']) */
-/* top-level dependencies (end ['mDoDvdThd']) */
 struct mDoDvdThd {
 	/* 800158B4 */ void suspend();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 };
 
-// build JKRThread (['JKRThread']) False/False
-// build OSThread (['OSThread']) False/False
-/* top-level dependencies (begin ['OSThread']) */
-/* top-level dependencies (end ['OSThread']) */
 struct OSThread {
 };
 
-/* top-level dependencies (begin ['JKRThread']) */
-// outer dependency: ('OSThread',)
-/* top-level dependencies (end ['JKRThread']) */
 struct JKRThread {
-	// ('OSThread',)
 	/* 802D16B8 */ JKRThread(OSThread*, int);
 	/* 802D1758 */ ~JKRThread();
 };
 
-// build OSThread (['OSThread']) True/True
 // 
 // Forward References:
 // 
 
-void mDoDvdErr_ThdInit();
-void mDoDvdErr_ThdCleanup();
-static void mDoDvdErr_Watch(void*);
-static void AlarmHandler(OSAlarm*, OSContext*);
+void mDoDvdErr_ThdInit(); // 2
+void mDoDvdErr_ThdCleanup(); // 2
+static void mDoDvdErr_Watch(void*); // 2
+static void AlarmHandler(OSAlarm*, OSContext*); // 2
 
-extern "C" void mDoDvdErr_ThdInit__Fv();
-extern "C" void mDoDvdErr_ThdCleanup__Fv();
-extern "C" static void mDoDvdErr_Watch__FPv();
-extern "C" static void AlarmHandler__FP7OSAlarmP9OSContext();
+extern "C" void mDoDvdErr_ThdInit__Fv(); // 1
+extern "C" void mDoDvdErr_ThdCleanup__Fv(); // 1
+extern "C" static void mDoDvdErr_Watch__FPv(); // 1
+extern "C" static void AlarmHandler__FP7OSAlarmP9OSContext(); // 1
 SECTION_BSS extern u8 DvdErr_thread[792 + 8 /* padding */];
 SECTION_BSS extern u8 DvdErr_stack[3072];
 SECTION_BSS extern u8 m_Do_m_Do_DVDError__Alarm[40 + 24 /* padding */];
@@ -73,41 +52,41 @@ SECTION_BSS extern u8 m_Do_m_Do_DVDError__Alarm[40 + 24 /* padding */];
 // External References:
 // 
 
-void mDoExt_getAssertHeap();
-extern "C" void OSCreateAlarm();
-extern "C" void OSSetPeriodicAlarm();
-extern "C" void OSCancelAlarm();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSGetCurrentThread();
-extern "C" void OSCreateThread();
-extern "C" void OSCancelThread();
-extern "C" void OSResumeThread();
-extern "C" void OSSuspendThread();
-extern "C" void OSGetThreadPriority();
-extern "C" void OSGetTime();
-extern "C" void DVDGetDriveStatus();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void mDoExt_getAssertHeap(); // 2
+extern "C" void OSCreateAlarm(); // 1
+extern "C" void OSSetPeriodicAlarm(); // 1
+extern "C" void OSCancelAlarm(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void OSCreateThread(); // 1
+extern "C" void OSCancelThread(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void OSSuspendThread(); // 1
+extern "C" void OSGetThreadPriority(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void DVDGetDriveStatus(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void mDoExt_getAssertHeap__Fv();
-extern "C" void suspend__9mDoDvdThdFv();
-extern "C" void becomeCurrentHeap__7JKRHeapFv();
-extern "C" void __ct__9JKRThreadFP8OSThreadi();
-extern "C" void __dt__9JKRThreadFv();
-extern "C" void OSCreateAlarm();
-extern "C" void OSSetPeriodicAlarm();
-extern "C" void OSCancelAlarm();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSGetCurrentThread();
-extern "C" void OSCreateThread();
-extern "C" void OSCancelThread();
-extern "C" void OSResumeThread();
-extern "C" void OSSuspendThread();
-extern "C" void OSGetThreadPriority();
-extern "C" void OSGetTime();
-extern "C" void DVDGetDriveStatus();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void mDoExt_getAssertHeap__Fv(); // 1
+extern "C" void suspend__9mDoDvdThdFv(); // 1
+extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
+extern "C" void __ct__9JKRThreadFP8OSThreadi(); // 1
+extern "C" void __dt__9JKRThreadFv(); // 1
+extern "C" void OSCreateAlarm(); // 1
+extern "C" void OSSetPeriodicAlarm(); // 1
+extern "C" void OSCancelAlarm(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSGetCurrentThread(); // 1
+extern "C" void OSCreateThread(); // 1
+extern "C" void OSCancelThread(); // 1
+extern "C" void OSResumeThread(); // 1
+extern "C" void OSSuspendThread(); // 1
+extern "C" void OSGetThreadPriority(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void DVDGetDriveStatus(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SBSS extern u8 data_80450C88[8];
 
 // 

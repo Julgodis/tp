@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build create_tag_class (['create_tag_class']) False/False
-/* top-level dependencies (begin ['create_tag_class']) */
-/* top-level dependencies (end ['create_tag_class']) */
 struct create_tag_class {
 };
 
@@ -19,13 +16,13 @@ struct create_tag_class {
 // Forward References:
 // 
 
-static void fopDwIt_GetTag();
-void fopDwIt_Begin();
-void fopDwIt_Next(create_tag_class*);
+static void fopDwIt_GetTag(); // 2
+void fopDwIt_Begin(); // 2
+void fopDwIt_Next(create_tag_class*); // 2
 
-extern "C" static void fopDwIt_GetTag__Fv();
-extern "C" void fopDwIt_Begin__Fv();
-extern "C" void fopDwIt_Next__FP16create_tag_class();
+extern "C" static void fopDwIt_GetTag__Fv(); // 1
+extern "C" void fopDwIt_Begin__Fv(); // 1
+extern "C" void fopDwIt_Next__FP16create_tag_class(); // 1
 SECTION_SBSS extern u8 l_fopDwTg_id[4 + 4 /* padding */];
 
 // 

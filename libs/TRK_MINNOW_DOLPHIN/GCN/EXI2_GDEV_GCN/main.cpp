@@ -9,27 +9,27 @@
 // Forward References:
 // 
 
-extern "C" void gdev_cc_initinterrupts();
-extern "C" void gdev_cc_peek();
-extern "C" void gdev_cc_post_stop();
-extern "C" void gdev_cc_pre_continue();
-extern "C" void gdev_cc_write();
-extern "C" void gdev_cc_read();
-extern "C" bool gdev_cc_close();
-extern "C" void gdev_cc_open();
-extern "C" bool gdev_cc_shutdown();
-extern "C" void gdev_cc_initialize();
+extern "C" void gdev_cc_initinterrupts(); // 1
+extern "C" void gdev_cc_peek(); // 1
+extern "C" void gdev_cc_post_stop(); // 1
+extern "C" void gdev_cc_pre_continue(); // 1
+extern "C" void gdev_cc_write(); // 1
+extern "C" void gdev_cc_read(); // 1
+extern "C" bool gdev_cc_close(); // 1
+extern "C" void gdev_cc_open(); // 1
+extern "C" bool gdev_cc_shutdown(); // 1
+extern "C" void gdev_cc_initialize(); // 1
 
-extern "C" void gdev_cc_initinterrupts();
-extern "C" void gdev_cc_peek();
-extern "C" void gdev_cc_post_stop();
-extern "C" void gdev_cc_pre_continue();
-extern "C" void gdev_cc_write();
-extern "C" void gdev_cc_read();
-extern "C" bool gdev_cc_close();
-extern "C" void gdev_cc_open();
-extern "C" bool gdev_cc_shutdown();
-extern "C" void gdev_cc_initialize();
+extern "C" void gdev_cc_initinterrupts(); // 1
+extern "C" void gdev_cc_peek(); // 1
+extern "C" void gdev_cc_post_stop(); // 1
+extern "C" void gdev_cc_pre_continue(); // 1
+extern "C" void gdev_cc_write(); // 1
+extern "C" void gdev_cc_read(); // 1
+extern "C" bool gdev_cc_close(); // 1
+extern "C" void gdev_cc_open(); // 1
+extern "C" bool gdev_cc_shutdown(); // 1
+extern "C" void gdev_cc_initialize(); // 1
 SECTION_RODATA extern const u8 GCN_EXI2_GDEV_GCN_main__lit_318[20];
 SECTION_RODATA extern const u8 GCN_EXI2_GDEV_GCN_main__lit_319[41 + 3 /* padding */];
 SECTION_RODATA extern const u8 GCN_EXI2_GDEV_GCN_main__lit_320[28];
@@ -45,31 +45,31 @@ SECTION_SBSS extern u8 GCN_EXI2_GDEV_GCN_main__gIsInitialized[4 + 4 /* padding *
 // External References:
 // 
 
-extern "C" void CircleBufferReadBytes();
-extern "C" void CircleBufferWriteBytes();
-extern "C" void CircleBufferInitialize();
-extern "C" void CBGetBytesAvailableForRead();
-extern "C" void MWTRACE();
-extern "C" void DBClose();
-extern "C" void DBOpen();
-extern "C" void DBWrite();
-extern "C" void DBRead();
-extern "C" void DBQueryData();
-extern "C" void DBInitInterrupts();
-extern "C" void DBInitComm();
+extern "C" void CircleBufferReadBytes(); // 1
+extern "C" void CircleBufferWriteBytes(); // 1
+extern "C" void CircleBufferInitialize(); // 1
+extern "C" void CBGetBytesAvailableForRead(); // 1
+extern "C" void MWTRACE(); // 1
+extern "C" void DBClose(); // 1
+extern "C" void DBOpen(); // 1
+extern "C" void DBWrite(); // 1
+extern "C" void DBRead(); // 1
+extern "C" void DBQueryData(); // 1
+extern "C" void DBInitInterrupts(); // 1
+extern "C" void DBInitComm(); // 1
 
-extern "C" void CircleBufferReadBytes();
-extern "C" void CircleBufferWriteBytes();
-extern "C" void CircleBufferInitialize();
-extern "C" void CBGetBytesAvailableForRead();
-extern "C" void MWTRACE();
-extern "C" void DBClose();
-extern "C" void DBOpen();
-extern "C" void DBWrite();
-extern "C" void DBRead();
-extern "C" void DBQueryData();
-extern "C" void DBInitInterrupts();
-extern "C" void DBInitComm();
+extern "C" void CircleBufferReadBytes(); // 1
+extern "C" void CircleBufferWriteBytes(); // 1
+extern "C" void CircleBufferInitialize(); // 1
+extern "C" void CBGetBytesAvailableForRead(); // 1
+extern "C" void MWTRACE(); // 1
+extern "C" void DBClose(); // 1
+extern "C" void DBOpen(); // 1
+extern "C" void DBWrite(); // 1
+extern "C" void DBRead(); // 1
+extern "C" void DBQueryData(); // 1
+extern "C" void DBInitInterrupts(); // 1
+extern "C" void DBInitComm(); // 1
 
 // 
 // Declarations:

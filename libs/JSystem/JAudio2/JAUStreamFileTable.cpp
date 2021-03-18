@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build JAUStreamFileTable (['JAUStreamFileTable']) False/False
-/* top-level dependencies (begin ['JAUStreamFileTable']) */
-/* top-level dependencies (end ['JAUStreamFileTable']) */
 struct JAUStreamFileTable {
 	/* 802A7420 */ JAUStreamFileTable();
 	/* 802A742C */ void init(void const*);
@@ -19,26 +16,14 @@ struct JAUStreamFileTable {
 	/* 802A7484 */ void getFilePath(int) const;
 };
 
-// build JAUStreamDataMgr_StreamFileTable (['JAUStreamDataMgr_StreamFileTable']) False/False
-// build JAISoundID (['JAISoundID']) False/False
-/* top-level dependencies (begin ['JAISoundID']) */
-/* top-level dependencies (end ['JAISoundID']) */
 struct JAISoundID {
 };
 
-/* top-level dependencies (begin ['JAUStreamDataMgr_StreamFileTable']) */
-// outer dependency: ('JAISoundID',)
-/* top-level dependencies (end ['JAUStreamDataMgr_StreamFileTable']) */
 struct JAUStreamDataMgr_StreamFileTable {
-	// ('JAISoundID',)
 	/* 802A74AC */ void getStreamFileEntry(JAISoundID);
 	/* 802A74E8 */ ~JAUStreamDataMgr_StreamFileTable();
 };
 
-// build JAISoundID (['JAISoundID']) True/True
-// build JAIStreamDataMgr (['JAIStreamDataMgr']) False/False
-/* top-level dependencies (begin ['JAIStreamDataMgr']) */
-/* top-level dependencies (end ['JAIStreamDataMgr']) */
 struct JAIStreamDataMgr {
 	/* 802A3AD8 */ ~JAIStreamDataMgr();
 };
@@ -48,24 +33,24 @@ struct JAIStreamDataMgr {
 // 
 
 
-extern "C" void __ct__18JAUStreamFileTableFv();
-extern "C" void init__18JAUStreamFileTableFPCv();
-extern "C" void getNumFiles__18JAUStreamFileTableCFv();
-extern "C" void getFilePath__18JAUStreamFileTableCFi();
-extern "C" void getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID();
-extern "C" void __dt__32JAUStreamDataMgr_StreamFileTableFv();
+extern "C" void __ct__18JAUStreamFileTableFv(); // 1
+extern "C" void init__18JAUStreamFileTableFPCv(); // 1
+extern "C" void getNumFiles__18JAUStreamFileTableCFv(); // 1
+extern "C" void getFilePath__18JAUStreamFileTableCFi(); // 1
+extern "C" void getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID(); // 1
+extern "C" void __dt__32JAUStreamDataMgr_StreamFileTableFv(); // 1
 SECTION_DATA extern void*const __vt__32JAUStreamDataMgr_StreamFileTable[4];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void DVDConvertPathToEntrynum();
+void operator delete(void*); // 2
+extern "C" void DVDConvertPathToEntrynum(); // 1
 
-extern "C" void __dt__16JAIStreamDataMgrFv();
-extern "C" void __dl__FPv();
-extern "C" void DVDConvertPathToEntrynum();
+extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void DVDConvertPathToEntrynum(); // 1
 
 // 
 // Declarations:

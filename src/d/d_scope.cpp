@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build dScope_c (['dScope_c']) False/False
-/* top-level dependencies (begin ['dScope_c']) */
-/* top-level dependencies (end ['dScope_c']) */
 struct dScope_c {
 	/* 80193690 */ dScope_c(u8);
 	/* 8019396C */ ~dScope_c();
@@ -26,22 +23,13 @@ struct dScope_c {
 	/* 80194054 */ void close_proc();
 };
 
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 		/* 80193960 */ TColor();
 	};
 
 };
 
-// build dMeterSub_c (['dMeterSub_c']) False/False
-/* top-level dependencies (begin ['dMeterSub_c']) */
-/* top-level dependencies (end ['dMeterSub_c']) */
 struct dMeterSub_c {
 	/* 801940D4 */ ~dMeterSub_c();
 	/* 8019411C */ bool _create();
@@ -51,47 +39,38 @@ struct dMeterSub_c {
 	/* 80194138 */ bool isDead();
 };
 
-// build J2DPicture (['J2DPicture']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['J2DPicture']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-// build ResTIMG (['ResTIMG']) True/True
 // 
 // Forward References:
 // 
 
-extern "C" void __sinit_d_scope_cpp();
+extern "C" void __sinit_d_scope_cpp(); // 1
 
-extern "C" void __ct__8dScope_cFUc();
-extern "C" void __ct__Q28JUtility6TColorFv();
-extern "C" void __dt__8dScope_cFv();
-extern "C" void _execute__8dScope_cFUl();
-extern "C" void draw__8dScope_cFv();
-extern "C" void isDead__8dScope_cFv();
-extern "C" void open_init__8dScope_cFv();
-extern "C" void open_proc__8dScope_cFv();
-extern "C" void move_init__8dScope_cFv();
-extern "C" void move_proc__8dScope_cFv();
-extern "C" void close_init__8dScope_cFv();
-extern "C" void close_proc__8dScope_cFv();
-extern "C" void __dt__11dMeterSub_cFv();
-extern "C" bool _create__11dMeterSub_cFv();
-extern "C" bool _delete__11dMeterSub_cFv();
-extern "C" void draw__11dMeterSub_cFv();
-extern "C" bool _execute__11dMeterSub_cFUl();
-extern "C" bool isDead__11dMeterSub_cFv();
-extern "C" void __sinit_d_scope_cpp();
+extern "C" void __ct__8dScope_cFUc(); // 1
+extern "C" void __ct__Q28JUtility6TColorFv(); // 1
+extern "C" void __dt__8dScope_cFv(); // 1
+extern "C" void _execute__8dScope_cFUl(); // 1
+extern "C" void draw__8dScope_cFv(); // 1
+extern "C" void isDead__8dScope_cFv(); // 1
+extern "C" void open_init__8dScope_cFv(); // 1
+extern "C" void open_proc__8dScope_cFv(); // 1
+extern "C" void move_init__8dScope_cFv(); // 1
+extern "C" void move_proc__8dScope_cFv(); // 1
+extern "C" void close_init__8dScope_cFv(); // 1
+extern "C" void close_proc__8dScope_cFv(); // 1
+extern "C" void __dt__11dMeterSub_cFv(); // 1
+extern "C" bool _create__11dMeterSub_cFv(); // 1
+extern "C" bool _delete__11dMeterSub_cFv(); // 1
+extern "C" void draw__11dMeterSub_cFv(); // 1
+extern "C" bool _execute__11dMeterSub_cFUl(); // 1
+extern "C" bool isDead__11dMeterSub_cFv(); // 1
+extern "C" void __sinit_d_scope_cpp(); // 1
 SECTION_RODATA extern const u8 d_d_scope__stringBase0[32];
 SECTION_DATA extern u8 d_d_scope__cNullVec__6Z2Calc[12];
 SECTION_DATA extern void*lit_3693[3];
@@ -121,26 +100,26 @@ SECTION_SDATA2 extern f64 d_d_scope__lit_3906;
 // External References:
 // 
 
-void* operator new(u32);
-void operator delete(void*);
-void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int);
-extern "C" void __construct_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_29();
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int); // 2
+extern "C" void __construct_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void J2DDrawLine__FffffQ28JUtility6TColori();
-extern "C" void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" void __construct_array();
-extern "C" void __ptmf_scall();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_29();
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void J2DDrawLine__FffffQ28JUtility6TColori(); // 1
+extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
+extern "C" void __construct_array(); // 1
+extern "C" void __ptmf_scall(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_meter2_info[248];

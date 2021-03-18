@@ -9,27 +9,16 @@
 // Types:
 // 
 
-// build JSUInputStream (['JSUInputStream']) False/False
-/* top-level dependencies (begin ['JSUInputStream']) */
-/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC23C */ ~JSUInputStream();
 	/* 802DC298 */ void read(void*, s32);
 	/* 802DC2F0 */ void skip(s32);
 };
 
-// build JSURandomInputStream (['JSURandomInputStream']) False/False
-// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) False/False
-/* top-level dependencies (begin ['JSUStreamSeekFrom']) */
-/* top-level dependencies (end ['JSUStreamSeekFrom']) */
 struct JSUStreamSeekFrom {
 };
 
-/* top-level dependencies (begin ['JSURandomInputStream']) */
-// outer dependency: ('JSUStreamSeekFrom',)
-/* top-level dependencies (end ['JSURandomInputStream']) */
 struct JSURandomInputStream {
-	// ('JSUStreamSeekFrom',)
 	/* 80255328 */ ~JSURandomInputStream();
 	/* 802D4094 */ void getAvailable() const;
 	/* 802DC370 */ void align(s32);
@@ -38,19 +27,18 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-// build JSUStreamSeekFrom (['JSUStreamSeekFrom']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __dt__14JSUInputStreamFv();
-extern "C" void read__14JSUInputStreamFPvl();
-extern "C" void skip__14JSUInputStreamFl();
-extern "C" void align__20JSURandomInputStreamFl();
-extern "C" void skip__20JSURandomInputStreamFl();
-extern "C" void peek__20JSURandomInputStreamFPvl();
-extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
+extern "C" void __dt__14JSUInputStreamFv(); // 1
+extern "C" void read__14JSUInputStreamFPvl(); // 1
+extern "C" void skip__14JSUInputStreamFl(); // 1
+extern "C" void align__20JSURandomInputStreamFl(); // 1
+extern "C" void skip__20JSURandomInputStreamFl(); // 1
+extern "C" void peek__20JSURandomInputStreamFPvl(); // 1
+extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom(); // 1
 SECTION_DATA extern void*const __vt__20JSURandomInputStream[9];
 SECTION_DATA extern void*const __vt__14JSUInputStream[7];
 
@@ -58,19 +46,19 @@ SECTION_DATA extern void*const __vt__14JSUInputStream[7];
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void operator delete(void*); // 2
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __dt__20JSURandomInputStreamFv();
-extern "C" void __dl__FPv();
-extern "C" void getAvailable__20JSURandomInputStreamCFv();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void __dt__20JSURandomInputStreamFv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void getAvailable__20JSURandomInputStreamCFv(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__10JSUIosBase[3];
 
 // 

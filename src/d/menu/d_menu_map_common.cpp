@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build dMenuMapCommon_c (['dMenuMapCommon_c']) False/False
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['dMenuMapCommon_c']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['dMenuMapCommon_c']) */
 struct dMenuMapCommon_c {
-	// ('JKRArchive',)
 	/* 801C2718 */ dMenuMapCommon_c();
 	/* 801C27B4 */ ~dMenuMapCommon_c();
 	/* 801C28D8 */ void initiate(JKRArchive*);
@@ -36,80 +28,49 @@ struct dMenuMapCommon_c {
 	/* 801C47C4 */ void debugIcon();
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build dSelect_cursor_c (['dSelect_cursor_c']) False/False
-// build JKRArchive (['JKRArchive']) True/True
-/* top-level dependencies (begin ['dSelect_cursor_c']) */
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['dSelect_cursor_c']) */
 struct dSelect_cursor_c {
-	// ('JKRArchive',)
 	/* 80194220 */ dSelect_cursor_c(u8, f32, JKRArchive*);
 	/* 801951C8 */ void setScale(f32);
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-// build J2DPane (['J2DPane']) False/False
-// build J2DBasePosition (['J2DBasePosition']) False/False
-/* top-level dependencies (begin ['J2DBasePosition']) */
-/* top-level dependencies (end ['J2DBasePosition']) */
-struct J2DBasePosition {
-};
-
-// build J2DRotateAxis (['J2DRotateAxis']) False/False
-/* top-level dependencies (begin ['J2DRotateAxis']) */
-/* top-level dependencies (end ['J2DRotateAxis']) */
 struct J2DRotateAxis {
 };
 
-/* top-level dependencies (begin ['J2DPane']) */
-// outer dependency: ('J2DBasePosition',)
-// outer dependency: ('J2DRotateAxis',)
-/* top-level dependencies (end ['J2DPane']) */
+struct J2DBasePosition {
+};
+
 struct J2DPane {
-	// ('J2DBasePosition',)
-	// ('J2DRotateAxis',)
 	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
 	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 	/* 802F77D0 */ void setInfluencedAlpha(bool, bool);
 };
 
-// build J2DRotateAxis (['J2DRotateAxis']) True/True
-// build J2DBasePosition (['J2DBasePosition']) True/True
-// build J2DPicture (['J2DPicture']) False/False
-// build ResTIMG (['ResTIMG']) False/False
-/* top-level dependencies (begin ['ResTIMG']) */
-/* top-level dependencies (end ['ResTIMG']) */
 struct ResTIMG {
 };
 
-/* top-level dependencies (begin ['J2DPicture']) */
-// outer dependency: ('ResTIMG',)
-/* top-level dependencies (end ['J2DPicture']) */
 struct J2DPicture {
-	// ('ResTIMG',)
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-// build ResTIMG (['ResTIMG']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__16dMenuMapCommon_cFv();
-extern "C" void __dt__16dMenuMapCommon_cFv();
-extern "C" void initiate__16dMenuMapCommon_cFP10JKRArchive();
-extern "C" void drawIcon__16dMenuMapCommon_cFffff();
-extern "C" void iconScale__16dMenuMapCommon_cFifff();
-extern "C" void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
-extern "C" void clearIconInfo__16dMenuMapCommon_cFv();
-extern "C" void setBlendRatio__16dMenuMapCommon_cFUcff();
-extern "C" void blinkMove__16dMenuMapCommon_cFs();
-extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv();
-extern "C" void getIconSizeX__16dMenuMapCommon_cFUc();
-extern "C" void getIconSizeY__16dMenuMapCommon_cFUc();
-extern "C" void debugIcon__16dMenuMapCommon_cFv();
+extern "C" void __ct__16dMenuMapCommon_cFv(); // 1
+extern "C" void __dt__16dMenuMapCommon_cFv(); // 1
+extern "C" void initiate__16dMenuMapCommon_cFP10JKRArchive(); // 1
+extern "C" void drawIcon__16dMenuMapCommon_cFffff(); // 1
+extern "C" void iconScale__16dMenuMapCommon_cFifff(); // 1
+extern "C" void setIconInfo__16dMenuMapCommon_cFUcfffffUc(); // 1
+extern "C" void clearIconInfo__16dMenuMapCommon_cFv(); // 1
+extern "C" void setBlendRatio__16dMenuMapCommon_cFUcff(); // 1
+extern "C" void blinkMove__16dMenuMapCommon_cFs(); // 1
+extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv(); // 1
+extern "C" void getIconSizeX__16dMenuMapCommon_cFUc(); // 1
+extern "C" void getIconSizeY__16dMenuMapCommon_cFUc(); // 1
+extern "C" void debugIcon__16dMenuMapCommon_cFv(); // 1
 SECTION_RODATA extern const u8 d_menu_d_menu_map_common__stringBase0[976];
 SECTION_DATA extern u8 map_icon_size[276];
 SECTION_DATA extern void*const __vt__16dMenuMapCommon_c[3];
@@ -128,26 +89,26 @@ SECTION_SDATA2 extern f64 d_menu_d_menu_map_common__lit_4140;
 // External References:
 // 
 
-void* operator new(u32);
-void operator delete(void*);
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+void* operator new(u32); // 2
+void operator delete(void*); // 2
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
-extern "C" void setScale__16dSelect_cursor_cFf();
-extern "C" void setAlphaRate__16dSelect_cursor_cFf();
-extern "C" void* __nw__FUl();
-extern "C" void __dl__FPv();
-extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
-extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition();
-extern "C" void setInfluencedAlpha__7J2DPaneFbb();
-extern "C" void __ct__10J2DPictureFPC7ResTIMG();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_29();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
+extern "C" void setScale__16dSelect_cursor_cFf(); // 1
+extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1
+extern "C" void* __nw__FUl(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf(); // 1
+extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition(); // 1
+extern "C" void setInfluencedAlpha__7J2DPaneFbb(); // 1
+extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_fmapHIO[1188];
 

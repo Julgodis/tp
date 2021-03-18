@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build camera_class (['camera_class']) False/False
-/* top-level dependencies (begin ['camera_class']) */
-/* top-level dependencies (end ['camera_class']) */
 struct camera_class {
 };
 
@@ -19,30 +16,30 @@ struct camera_class {
 // Forward References:
 // 
 
-void fopCamM_GetParam(camera_class*);
-void fopCamM_Create(int, s16, void*);
-void fopCamM_Management();
-void fopCamM_Init();
+void fopCamM_GetParam(camera_class*); // 2
+void fopCamM_Create(int, s16, void*); // 2
+void fopCamM_Management(); // 2
+void fopCamM_Init(); // 2
 
-extern "C" void fopCamM_GetParam__FP12camera_class();
-extern "C" void fopCamM_Create__FisPv();
-extern "C" void fopCamM_Management__Fv();
-extern "C" void fopCamM_Init__Fv();
+extern "C" void fopCamM_GetParam__FP12camera_class(); // 1
+extern "C" void fopCamM_Create__FisPv(); // 1
+extern "C" void fopCamM_Management__Fv(); // 1
+extern "C" void fopCamM_Init__Fv(); // 1
 SECTION_BSS extern u8 l_fopCamM_id[16];
 
 // 
 // External References:
 // 
 
-void fpcLy_CurrentLayer();
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+void fpcLy_CurrentLayer(); // 2
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void fpcLy_CurrentLayer__Fv();
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_29();
+extern "C" void fpcLy_CurrentLayer__Fv(); // 1
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_29(); // 1
 
 // 
 // Declarations:

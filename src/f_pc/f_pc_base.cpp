@@ -9,51 +9,27 @@
 // Types:
 // 
 
-// build base_process_class (['base_process_class']) False/False
-/* top-level dependencies (begin ['base_process_class']) */
-/* top-level dependencies (end ['base_process_class']) */
 struct base_process_class {
 };
 
-// build delete_tag_class (['delete_tag_class']) False/False
-/* top-level dependencies (begin ['delete_tag_class']) */
-/* top-level dependencies (end ['delete_tag_class']) */
 struct delete_tag_class {
 };
 
-// build layer_class (['layer_class']) False/False
-/* top-level dependencies (begin ['layer_class']) */
-/* top-level dependencies (end ['layer_class']) */
 struct layer_class {
 };
 
-// build layer_management_tag_class (['layer_management_tag_class']) False/False
-/* top-level dependencies (begin ['layer_management_tag_class']) */
-/* top-level dependencies (end ['layer_management_tag_class']) */
 struct layer_management_tag_class {
 };
 
-// build process_method_class (['process_method_class']) False/False
-/* top-level dependencies (begin ['process_method_class']) */
-/* top-level dependencies (end ['process_method_class']) */
 struct process_method_class {
 };
 
-// build process_priority_class (['process_priority_class']) False/False
-/* top-level dependencies (begin ['process_priority_class']) */
-/* top-level dependencies (end ['process_priority_class']) */
 struct process_priority_class {
 };
 
-// build line_tag (['line_tag']) False/False
-/* top-level dependencies (begin ['line_tag']) */
-/* top-level dependencies (end ['line_tag']) */
 struct line_tag {
 };
 
-// build cMl (['cMl']) False/False
-/* top-level dependencies (begin ['cMl']) */
-/* top-level dependencies (end ['cMl']) */
 struct cMl {
 	/* 80263228 */ void memalignB(int, u32);
 	/* 80263260 */ void free(void*);
@@ -63,25 +39,25 @@ struct cMl {
 // Forward References:
 // 
 
-void fpcBs_Is_JustOfType(int, int);
-void fpcBs_MakeOfType(int*);
-void fpcBs_MakeOfId();
-void fpcBs_Execute(base_process_class*);
-static void fpcBs_DeleteAppend(base_process_class*);
-void fpcBs_IsDelete(base_process_class*);
-void fpcBs_Delete(base_process_class*);
-void fpcBs_Create(s16, u32, void*);
-void fpcBs_SubCreate(base_process_class*);
+void fpcBs_Is_JustOfType(int, int); // 2
+void fpcBs_MakeOfType(int*); // 2
+void fpcBs_MakeOfId(); // 2
+void fpcBs_Execute(base_process_class*); // 2
+static void fpcBs_DeleteAppend(base_process_class*); // 2
+void fpcBs_IsDelete(base_process_class*); // 2
+void fpcBs_Delete(base_process_class*); // 2
+void fpcBs_Create(s16, u32, void*); // 2
+void fpcBs_SubCreate(base_process_class*); // 2
 
-extern "C" void fpcBs_Is_JustOfType__Fii();
-extern "C" void fpcBs_MakeOfType__FPi();
-extern "C" void fpcBs_MakeOfId__Fv();
-extern "C" void fpcBs_Execute__FP18base_process_class();
-extern "C" static void fpcBs_DeleteAppend__FP18base_process_class();
-extern "C" void fpcBs_IsDelete__FP18base_process_class();
-extern "C" void fpcBs_Delete__FP18base_process_class();
-extern "C" void fpcBs_Create__FsUiPv();
-extern "C" void fpcBs_SubCreate__FP18base_process_class();
+extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
+extern "C" void fpcBs_MakeOfType__FPi(); // 1
+extern "C" void fpcBs_MakeOfId__Fv(); // 1
+extern "C" void fpcBs_Execute__FP18base_process_class(); // 1
+extern "C" static void fpcBs_DeleteAppend__FP18base_process_class(); // 1
+extern "C" void fpcBs_IsDelete__FP18base_process_class(); // 1
+extern "C" void fpcBs_Delete__FP18base_process_class(); // 1
+extern "C" void fpcBs_Create__FsUiPv(); // 1
+extern "C" void fpcBs_SubCreate__FP18base_process_class(); // 1
 SECTION_SBSS extern u8 g_fpcBs_type[4];
 SECTION_SBSS extern u8 data_80450D04[4];
 SECTION_SBSS extern u8 data_80450D08[4];
@@ -92,39 +68,39 @@ SECTION_SBSS extern u8 data_80450D10[8];
 // External References:
 // 
 
-void fpcDtTg_Init(delete_tag_class*, void*);
-void fpcLy_SetCurrentLayer(layer_class*);
-void fpcLy_CurrentLayer();
-void fpcLyTg_Init(layer_management_tag_class*, u32, void*);
-void fpcMtd_Execute(process_method_class*, void*);
-void fpcMtd_IsDelete(process_method_class*, void*);
-void fpcMtd_Delete(process_method_class*, void*);
-void fpcMtd_Create(process_method_class*, void*);
-void fpcPi_Init(process_priority_class*, void*, u32, u16, u16);
-void fpcPf_Get(s16);
-void fpcLnTg_Init(line_tag*, void*);
-void fpcPause_Init(void*);
-void sBs_ClearArea(void*, u32);
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+void fpcDtTg_Init(delete_tag_class*, void*); // 2
+void fpcLy_SetCurrentLayer(layer_class*); // 2
+void fpcLy_CurrentLayer(); // 2
+void fpcLyTg_Init(layer_management_tag_class*, u32, void*); // 2
+void fpcMtd_Execute(process_method_class*, void*); // 2
+void fpcMtd_IsDelete(process_method_class*, void*); // 2
+void fpcMtd_Delete(process_method_class*, void*); // 2
+void fpcMtd_Create(process_method_class*, void*); // 2
+void fpcPi_Init(process_priority_class*, void*, u32, u16, u16); // 2
+void fpcPf_Get(s16); // 2
+void fpcLnTg_Init(line_tag*, void*); // 2
+void fpcPause_Init(void*); // 2
+void sBs_ClearArea(void*, u32); // 2
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 
-extern "C" void fpcDtTg_Init__FP16delete_tag_classPv();
-extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
-extern "C" void fpcLy_CurrentLayer__Fv();
-extern "C" void fpcLyTg_Init__FP26layer_management_tag_classUiPv();
-extern "C" void fpcMtd_Execute__FP20process_method_classPv();
-extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
-extern "C" void fpcMtd_Delete__FP20process_method_classPv();
-extern "C" void fpcMtd_Create__FP20process_method_classPv();
-extern "C" void fpcPi_Init__FP22process_priority_classPvUiUsUs();
-extern "C" void fpcPf_Get__Fs();
-extern "C" void fpcLnTg_Init__FP8line_tagPv();
-extern "C" void fpcPause_Init__FPv();
-extern "C" void memalignB__3cMlFiUl();
-extern "C" void free__3cMlFPv();
-extern "C" void sBs_ClearArea__FPvUl();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+extern "C" void fpcDtTg_Init__FP16delete_tag_classPv(); // 1
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1
+extern "C" void fpcLy_CurrentLayer__Fv(); // 1
+extern "C" void fpcLyTg_Init__FP26layer_management_tag_classUiPv(); // 1
+extern "C" void fpcMtd_Execute__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_Delete__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
+extern "C" void fpcPi_Init__FP22process_priority_classPvUiUsUs(); // 1
+extern "C" void fpcPf_Get__Fs(); // 1
+extern "C" void fpcLnTg_Init__FP8line_tagPv(); // 1
+extern "C" void fpcPause_Init__FPv(); // 1
+extern "C" void memalignB__3cMlFiUl(); // 1
+extern "C" void free__3cMlFPv(); // 1
+extern "C" void sBs_ClearArea__FPvUl(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 
 // 
 // Declarations:

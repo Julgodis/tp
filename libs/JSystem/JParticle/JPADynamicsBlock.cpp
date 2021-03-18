@@ -9,27 +9,15 @@
 // Types:
 // 
 
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) False/False
-/* top-level dependencies (begin ['JPAEmitterWorkData']) */
-/* top-level dependencies (end ['JPAEmitterWorkData']) */
 struct JPAEmitterWorkData {
 };
 
-// build JPADynamicsBlock (['JPADynamicsBlock']) False/False
-// build JPAEmitterWorkData (['JPAEmitterWorkData']) True/True
-/* top-level dependencies (begin ['JPADynamicsBlock']) */
-// outer dependency: ('JPAEmitterWorkData',)
-/* top-level dependencies (end ['JPADynamicsBlock']) */
 struct JPADynamicsBlock {
-	// ('JPAEmitterWorkData',)
 	/* 8027BB18 */ JPADynamicsBlock(u8 const*);
 	/* 8027BB4C */ void init();
 	/* 8027BBE8 */ void create(JPAEmitterWorkData*);
 };
 
-// build JPABaseEmitter (['JPABaseEmitter']) False/False
-/* top-level dependencies (begin ['JPABaseEmitter']) */
-/* top-level dependencies (end ['JPABaseEmitter']) */
 struct JPABaseEmitter {
 	/* 8027EA40 */ void createParticle();
 };
@@ -38,24 +26,24 @@ struct JPABaseEmitter {
 // Forward References:
 // 
 
-static void JPAVolumePoint(JPAEmitterWorkData*);
-static void JPAVolumeLine(JPAEmitterWorkData*);
-static void JPAVolumeCircle(JPAEmitterWorkData*);
-static void JPAVolumeCube(JPAEmitterWorkData*);
-static void JPAVolumeSphere(JPAEmitterWorkData*);
-static void JPAVolumeCylinder(JPAEmitterWorkData*);
-static void JPAVolumeTorus(JPAEmitterWorkData*);
+static void JPAVolumePoint(JPAEmitterWorkData*); // 2
+static void JPAVolumeLine(JPAEmitterWorkData*); // 2
+static void JPAVolumeCircle(JPAEmitterWorkData*); // 2
+static void JPAVolumeCube(JPAEmitterWorkData*); // 2
+static void JPAVolumeSphere(JPAEmitterWorkData*); // 2
+static void JPAVolumeCylinder(JPAEmitterWorkData*); // 2
+static void JPAVolumeTorus(JPAEmitterWorkData*); // 2
 
-extern "C" static void JPAVolumePoint__FP18JPAEmitterWorkData();
-extern "C" static void JPAVolumeLine__FP18JPAEmitterWorkData();
-extern "C" static void JPAVolumeCircle__FP18JPAEmitterWorkData();
-extern "C" static void JPAVolumeCube__FP18JPAEmitterWorkData();
-extern "C" static void JPAVolumeSphere__FP18JPAEmitterWorkData();
-extern "C" static void JPAVolumeCylinder__FP18JPAEmitterWorkData();
-extern "C" static void JPAVolumeTorus__FP18JPAEmitterWorkData();
-extern "C" void __ct__16JPADynamicsBlockFPCUc();
-extern "C" void init__16JPADynamicsBlockFv();
-extern "C" void create__16JPADynamicsBlockFP18JPAEmitterWorkData();
+extern "C" static void JPAVolumePoint__FP18JPAEmitterWorkData(); // 1
+extern "C" static void JPAVolumeLine__FP18JPAEmitterWorkData(); // 1
+extern "C" static void JPAVolumeCircle__FP18JPAEmitterWorkData(); // 1
+extern "C" static void JPAVolumeCube__FP18JPAEmitterWorkData(); // 1
+extern "C" static void JPAVolumeSphere__FP18JPAEmitterWorkData(); // 1
+extern "C" static void JPAVolumeCylinder__FP18JPAEmitterWorkData(); // 1
+extern "C" static void JPAVolumeTorus__FP18JPAEmitterWorkData(); // 1
+extern "C" void __ct__16JPADynamicsBlockFPCUc(); // 1
+extern "C" void init__16JPADynamicsBlockFv(); // 1
+extern "C" void create__16JPADynamicsBlockFP18JPAEmitterWorkData(); // 1
 SECTION_DATA extern void*lit_2631[8];
 SECTION_SDATA2 extern u8 lit_2287[4];
 SECTION_SDATA2 extern f32 JPADynamicsBlock__lit_2288;
@@ -69,7 +57,7 @@ SECTION_SDATA2 extern f64 JPADynamicsBlock__lit_2503;
 // 
 
 
-extern "C" void createParticle__14JPABaseEmitterFv();
+extern "C" void createParticle__14JPABaseEmitterFv(); // 1
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 
 // 

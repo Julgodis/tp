@@ -9,25 +9,25 @@
 // Forward References:
 // 
 
-extern "C" static void IsCard();
-extern "C" void CARDProbe();
-extern "C" void CARDProbeEx();
-extern "C" static void DoMount();
-extern "C" void __CARDMountCallback();
-extern "C" static void CARDMountAsync();
-extern "C" void CARDMount();
-extern "C" static void DoUnmount();
-extern "C" void CARDUnmount();
+extern "C" static void IsCard(); // 1
+extern "C" void CARDProbe(); // 1
+extern "C" void CARDProbeEx(); // 1
+extern "C" static void DoMount(); // 1
+extern "C" void __CARDMountCallback(); // 1
+extern "C" static void CARDMountAsync(); // 1
+extern "C" void CARDMount(); // 1
+extern "C" static void DoUnmount(); // 1
+extern "C" void CARDUnmount(); // 1
 
-extern "C" static void IsCard();
-extern "C" void CARDProbe();
-extern "C" void CARDProbeEx();
-extern "C" static void DoMount();
-extern "C" void __CARDMountCallback();
-extern "C" static void CARDMountAsync();
-extern "C" void CARDMount();
-extern "C" static void DoUnmount();
-extern "C" void CARDUnmount();
+extern "C" static void IsCard(); // 1
+extern "C" void CARDProbe(); // 1
+extern "C" void CARDProbeEx(); // 1
+extern "C" static void DoMount(); // 1
+extern "C" void __CARDMountCallback(); // 1
+extern "C" static void CARDMountAsync(); // 1
+extern "C" void CARDMount(); // 1
+extern "C" static void DoUnmount(); // 1
+extern "C" void CARDUnmount(); // 1
 SECTION_DATA extern u8 SectorSizeTable[32];
 SECTION_DATA extern u8 LatencyTable[32];
 
@@ -35,69 +35,69 @@ SECTION_DATA extern u8 LatencyTable[32];
 // External References:
 // 
 
-extern "C" void OSCancelAlarm();
-extern "C" void DCInvalidateRange();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSLockSramEx();
-extern "C" void __OSUnlockSramEx();
-extern "C" void EXISetExiCallback();
-extern "C" void EXIProbe();
-extern "C" void EXIProbeEx();
-extern "C" void EXIAttach();
-extern "C" void EXIDetach();
-extern "C" void EXILock();
-extern "C" void EXIUnlock();
-extern "C" void EXIGetState();
-extern "C" void EXIGetID();
-extern "C" void __CARDDefaultApiCallback();
-extern "C" void __CARDSyncCallback();
-extern "C" void __CARDExtHandler();
-extern "C" void __CARDExiHandler();
-extern "C" void __CARDUnlockedHandler();
-extern "C" void __CARDEnableInterrupt();
-extern "C" void __CARDReadStatus();
-extern "C" void __CARDReadVendorID();
-extern "C" void __CARDClearStatus();
-extern "C" void __CARDGetControlBlock();
-extern "C" void __CARDPutControlBlock();
-extern "C" void __CARDSync();
-extern "C" void CARDGetFastMode();
-extern "C" void __CARDUnlock();
-extern "C" void __CARDRead();
-extern "C" void __CARDVerify();
+extern "C" void OSCancelAlarm(); // 1
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSLockSramEx(); // 1
+extern "C" void __OSUnlockSramEx(); // 1
+extern "C" void EXISetExiCallback(); // 1
+extern "C" void EXIProbe(); // 1
+extern "C" void EXIProbeEx(); // 1
+extern "C" void EXIAttach(); // 1
+extern "C" void EXIDetach(); // 1
+extern "C" void EXILock(); // 1
+extern "C" void EXIUnlock(); // 1
+extern "C" void EXIGetState(); // 1
+extern "C" void EXIGetID(); // 1
+extern "C" void __CARDDefaultApiCallback(); // 1
+extern "C" void __CARDSyncCallback(); // 1
+extern "C" void __CARDExtHandler(); // 1
+extern "C" void __CARDExiHandler(); // 1
+extern "C" void __CARDUnlockedHandler(); // 1
+extern "C" void __CARDEnableInterrupt(); // 1
+extern "C" void __CARDReadStatus(); // 1
+extern "C" void __CARDReadVendorID(); // 1
+extern "C" void __CARDClearStatus(); // 1
+extern "C" void __CARDGetControlBlock(); // 1
+extern "C" void __CARDPutControlBlock(); // 1
+extern "C" void __CARDSync(); // 1
+extern "C" void CARDGetFastMode(); // 1
+extern "C" void __CARDUnlock(); // 1
+extern "C" void __CARDRead(); // 1
+extern "C" void __CARDVerify(); // 1
 
-extern "C" void OSCancelAlarm();
-extern "C" void DCInvalidateRange();
-extern "C" void OSDisableInterrupts();
-extern "C" void OSRestoreInterrupts();
-extern "C" void __OSLockSramEx();
-extern "C" void __OSUnlockSramEx();
-extern "C" void EXISetExiCallback();
-extern "C" void EXIProbe();
-extern "C" void EXIProbeEx();
-extern "C" void EXIAttach();
-extern "C" void EXIDetach();
-extern "C" void EXILock();
-extern "C" void EXIUnlock();
-extern "C" void EXIGetState();
-extern "C" void EXIGetID();
-extern "C" void __CARDDefaultApiCallback();
-extern "C" void __CARDSyncCallback();
-extern "C" void __CARDExtHandler();
-extern "C" void __CARDExiHandler();
-extern "C" void __CARDUnlockedHandler();
-extern "C" void __CARDEnableInterrupt();
-extern "C" void __CARDReadStatus();
-extern "C" void __CARDReadVendorID();
-extern "C" void __CARDClearStatus();
-extern "C" void __CARDGetControlBlock();
-extern "C" void __CARDPutControlBlock();
-extern "C" void __CARDSync();
-extern "C" void CARDGetFastMode();
-extern "C" void __CARDUnlock();
-extern "C" void __CARDRead();
-extern "C" void __CARDVerify();
+extern "C" void OSCancelAlarm(); // 1
+extern "C" void DCInvalidateRange(); // 1
+extern "C" void OSDisableInterrupts(); // 1
+extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void __OSLockSramEx(); // 1
+extern "C" void __OSUnlockSramEx(); // 1
+extern "C" void EXISetExiCallback(); // 1
+extern "C" void EXIProbe(); // 1
+extern "C" void EXIProbeEx(); // 1
+extern "C" void EXIAttach(); // 1
+extern "C" void EXIDetach(); // 1
+extern "C" void EXILock(); // 1
+extern "C" void EXIUnlock(); // 1
+extern "C" void EXIGetState(); // 1
+extern "C" void EXIGetID(); // 1
+extern "C" void __CARDDefaultApiCallback(); // 1
+extern "C" void __CARDSyncCallback(); // 1
+extern "C" void __CARDExtHandler(); // 1
+extern "C" void __CARDExiHandler(); // 1
+extern "C" void __CARDUnlockedHandler(); // 1
+extern "C" void __CARDEnableInterrupt(); // 1
+extern "C" void __CARDReadStatus(); // 1
+extern "C" void __CARDReadVendorID(); // 1
+extern "C" void __CARDClearStatus(); // 1
+extern "C" void __CARDGetControlBlock(); // 1
+extern "C" void __CARDPutControlBlock(); // 1
+extern "C" void __CARDSync(); // 1
+extern "C" void CARDGetFastMode(); // 1
+extern "C" void __CARDUnlock(); // 1
+extern "C" void __CARDRead(); // 1
+extern "C" void __CARDVerify(); // 1
 SECTION_BSS extern u8 __CARDBlock[544];
 SECTION_SDATA extern u8 struct_80450A70[8];
 

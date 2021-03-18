@@ -9,26 +9,13 @@
 // Types:
 // 
 
-// build dBgW_Base (['dBgW_Base']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) False/False
-/* top-level dependencies (begin ['fopAc_ac_c']) */
-/* top-level dependencies (end ['fopAc_ac_c']) */
 struct fopAc_ac_c {
 };
 
-/* top-level dependencies (begin ['dBgW_Base']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('fopAc_ac_c',)
-/* top-level dependencies (end ['dBgW_Base']) */
 struct dBgW_Base {
-	// ('cXyz',)
-	// ('fopAc_ac_c',)
 	/* 80074AB4 */ void SetOldShapeAngleY(s16);
 	/* 8007E5A8 */ dBgW_Base();
 	/* 8007E640 */ ~dBgW_Base();
@@ -39,28 +26,23 @@ struct dBgW_Base {
 	/* 8007E6E0 */ void CalcDiffShapeAngleY(s16);
 };
 
-// build cBgW_BgId (['cBgW_BgId']) False/False
-/* top-level dependencies (begin ['cBgW_BgId']) */
-/* top-level dependencies (end ['cBgW_BgId']) */
 struct cBgW_BgId {
 	/* 8007E5F8 */ ~cBgW_BgId();
 };
 
-// build fopAc_ac_c (['fopAc_ac_c']) True/True
-// build cXyz (['cXyz']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void __ct__9dBgW_BaseFv();
-extern "C" void __dt__9cBgW_BgIdFv();
-extern "C" void __dt__9dBgW_BaseFv();
-extern "C" void ClrDBgWBase__9dBgW_BaseFv();
-extern "C" bool ChkMemoryError__9dBgW_BaseFv();
-extern "C" void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c();
-extern "C" void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz();
-extern "C" void CalcDiffShapeAngleY__9dBgW_BaseFs();
+extern "C" void __ct__9dBgW_BaseFv(); // 1
+extern "C" void __dt__9cBgW_BgIdFv(); // 1
+extern "C" void __dt__9dBgW_BaseFv(); // 1
+extern "C" void ClrDBgWBase__9dBgW_BaseFv(); // 1
+extern "C" bool ChkMemoryError__9dBgW_BaseFv(); // 1
+extern "C" void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c(); // 1
+extern "C" void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz(); // 1
+extern "C" void CalcDiffShapeAngleY__9dBgW_BaseFs(); // 1
 SECTION_DATA extern void*const __vt__9dBgW_Base[60];
 SECTION_DATA extern void*const __vt__9cBgW_BgId[4];
 
@@ -68,10 +50,10 @@ SECTION_DATA extern void*const __vt__9cBgW_BgId[4];
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void SetOldShapeAngleY__9dBgW_BaseFs();
-extern "C" void __dl__FPv();
+extern "C" void SetOldShapeAngleY__9dBgW_BaseFs(); // 1
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

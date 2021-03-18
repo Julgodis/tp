@@ -9,26 +9,11 @@
 // Types:
 // 
 
-// build JASSeqCtrl (['JASSeqCtrl']) False/False
-// build JASTrack (['JASTrack']) False/False
-/* top-level dependencies (begin ['JASTrack']) */
-/* top-level dependencies (end ['JASTrack']) */
 struct JASTrack {
 	/* 80292220 */ void checkNoteStop(u32) const;
 };
 
-// build JASSeqCtrl (['JASSeqCtrl']) True/False
-struct JASSeqCtrl;
-/* top-level dependencies (begin ['JASSeqCtrl']) */
-// outer dependency: ('JASTrack',)
-// outer dependency: ('JASSeqCtrl', 'IntrType')
-/* top-level dependencies (end ['JASSeqCtrl']) */
 struct JASSeqCtrl {
-	// ('JASTrack',)
-	// ('JASSeqCtrl', 'IntrType')
-	// build IntrType (['JASSeqCtrl', 'IntrType']) False/False
-	/* dependencies (begin ['JASSeqCtrl', 'IntrType']) */
-	/* dependencies (end ['JASSeqCtrl', 'IntrType']) */
 	struct IntrType {
 	};
 
@@ -45,17 +30,10 @@ struct JASSeqCtrl {
 	/* 80293BE8 */ void timerProcess();
 };
 
-// build JASTrack (['JASTrack']) True/True
-// build JASSeqParser (['JASSeqParser']) False/False
-/* top-level dependencies (begin ['JASSeqParser']) */
-/* top-level dependencies (end ['JASSeqParser']) */
 struct JASSeqParser {
 	/* 80293CAC */ ~JASSeqParser();
 };
 
-// build JASSeqReader (['JASSeqReader']) False/False
-/* top-level dependencies (begin ['JASSeqReader']) */
-/* top-level dependencies (end ['JASSeqReader']) */
 struct JASSeqReader {
 	/* 80296108 */ void init();
 	/* 80296148 */ void init(void*);
@@ -65,21 +43,21 @@ struct JASSeqReader {
 // Forward References:
 // 
 
-extern "C" void __sinit_JASSeqCtrl_cpp();
+extern "C" void __sinit_JASSeqCtrl_cpp(); // 1
 
-extern "C" void __ct__10JASSeqCtrlFv();
-extern "C" void init__10JASSeqCtrlFv();
-extern "C" void start__10JASSeqCtrlFPvUl();
-extern "C" void tickProc__10JASSeqCtrlFP8JASTrack();
-extern "C" void interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType();
-extern "C" void setIntrMask__10JASSeqCtrlFUl();
-extern "C" void clrIntrMask__10JASSeqCtrlFUl();
-extern "C" void retIntr__10JASSeqCtrlFv();
-extern "C" void findIntr__10JASSeqCtrlFv();
-extern "C" void checkIntr__10JASSeqCtrlFv();
-extern "C" void timerProcess__10JASSeqCtrlFv();
-extern "C" void __sinit_JASSeqCtrl_cpp();
-extern "C" void __dt__12JASSeqParserFv();
+extern "C" void __ct__10JASSeqCtrlFv(); // 1
+extern "C" void init__10JASSeqCtrlFv(); // 1
+extern "C" void start__10JASSeqCtrlFPvUl(); // 1
+extern "C" void tickProc__10JASSeqCtrlFP8JASTrack(); // 1
+extern "C" void interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType(); // 1
+extern "C" void setIntrMask__10JASSeqCtrlFUl(); // 1
+extern "C" void clrIntrMask__10JASSeqCtrlFUl(); // 1
+extern "C" void retIntr__10JASSeqCtrlFv(); // 1
+extern "C" void findIntr__10JASSeqCtrlFv(); // 1
+extern "C" void checkIntr__10JASSeqCtrlFv(); // 1
+extern "C" void timerProcess__10JASSeqCtrlFv(); // 1
+extern "C" void __sinit_JASSeqCtrl_cpp(); // 1
+extern "C" void __dt__12JASSeqParserFv(); // 1
 SECTION_BSS extern u8 JASSeqCtrl__lit_433[12 + 4 /* padding */];
 SECTION_SBSS extern u8 sDefaultParser__10JASSeqCtrl[4 + 4 /* padding */];
 
@@ -87,14 +65,14 @@ SECTION_SBSS extern u8 sDefaultParser__10JASSeqCtrl[4 + 4 /* padding */];
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void __register_global_object();
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
 
-extern "C" void checkNoteStop__8JASTrackCFUl();
-extern "C" void init__12JASSeqReaderFv();
-extern "C" void init__12JASSeqReaderFPv();
-extern "C" void __dl__FPv();
-extern "C" void __register_global_object();
+extern "C" void checkNoteStop__8JASTrackCFUl(); // 1
+extern "C" void init__12JASSeqReaderFv(); // 1
+extern "C" void init__12JASSeqReaderFPv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __register_global_object(); // 1
 SECTION_DATA extern void*const __vt__12JASSeqParser[8];
 
 // 

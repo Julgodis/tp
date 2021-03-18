@@ -9,42 +9,24 @@
 // Types:
 // 
 
-// build dSi_HIO_c (['dSi_HIO_c']) False/False
-/* top-level dependencies (begin ['dSi_HIO_c']) */
-/* top-level dependencies (end ['dSi_HIO_c']) */
 struct dSi_HIO_c {
 	/* 80195A2C */ dSi_HIO_c();
 	/* 80195C1C */ ~dSi_HIO_c();
 };
 
-// build dSelect_icon_c (['dSelect_icon_c']) False/False
-// build J2DPane (['J2DPane']) False/False
-/* top-level dependencies (begin ['J2DPane']) */
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
 };
 
-/* top-level dependencies (begin ['dSelect_icon_c']) */
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['dSelect_icon_c']) */
 struct dSelect_icon_c {
-	// ('J2DPane',)
 	/* 80195A3C */ void animation();
 	/* 80195B40 */ void setAlpha(u8);
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
-// build J2DPane (['J2DPane']) True/True
-// build CPaneMgr (['CPaneMgr']) False/False
-/* top-level dependencies (begin ['CPaneMgr']) */
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
 	/* 80254638 */ void paneScale(f32, f32);
 };
 
-// build J2DScreen (['J2DScreen']) False/False
-/* top-level dependencies (begin ['J2DScreen']) */
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
@@ -53,14 +35,14 @@ struct J2DScreen {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_select_icon_cpp();
+extern "C" void __sinit_d_select_icon_cpp(); // 1
 
-extern "C" void __ct__9dSi_HIO_cFv();
-extern "C" void animation__14dSelect_icon_cFv();
-extern "C" void setAlpha__14dSelect_icon_cFUc();
-extern "C" void setPos__14dSelect_icon_cFP7J2DPaneff();
-extern "C" void __dt__9dSi_HIO_cFv();
-extern "C" void __sinit_d_select_icon_cpp();
+extern "C" void __ct__9dSi_HIO_cFv(); // 1
+extern "C" void animation__14dSelect_icon_cFv(); // 1
+extern "C" void setAlpha__14dSelect_icon_cFUc(); // 1
+extern "C" void setPos__14dSelect_icon_cFP7J2DPaneff(); // 1
+extern "C" void __dt__9dSi_HIO_cFv(); // 1
+extern "C" void __sinit_d_select_icon_cpp(); // 1
 SECTION_DATA extern void*const __vt__9dSi_HIO_c[4];
 SECTION_BSS extern u8 lit_3648[12 + 4 /* padding */];
 SECTION_SBSS extern u8 g_siHIO[8];
@@ -72,13 +54,13 @@ SECTION_SDATA2 extern f32 lit_3814;
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void __register_global_object();
+void operator delete(void*); // 2
+extern "C" void __register_global_object(); // 1
 
-extern "C" void paneScale__8CPaneMgrFff();
-extern "C" void __dl__FPv();
-extern "C" void animation__9J2DScreenFv();
-extern "C" void __register_global_object();
+extern "C" void paneScale__8CPaneMgrFff(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void animation__9J2DScreenFv(); // 1
+extern "C" void __register_global_object(); // 1
 
 // 
 // Declarations:

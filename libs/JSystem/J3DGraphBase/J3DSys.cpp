@@ -9,18 +9,10 @@
 // Types:
 // 
 
-// build J3DSys (['J3DSys']) False/False
-// build _GXTexCacheSize (['_GXTexCacheSize']) False/False
-/* top-level dependencies (begin ['_GXTexCacheSize']) */
-/* top-level dependencies (end ['_GXTexCacheSize']) */
 struct _GXTexCacheSize {
 };
 
-/* top-level dependencies (begin ['J3DSys']) */
-// outer dependency: ('_GXTexCacheSize',)
-/* top-level dependencies (end ['J3DSys']) */
 struct J3DSys {
-	// ('_GXTexCacheSize',)
 	/* 8030FDE8 */ J3DSys();
 	/* 8030FEC0 */ void loadPosMtxIndx(int, u16) const;
 	/* 8030FEE4 */ void loadNrmMtxIndx(int, u16) const;
@@ -36,10 +28,6 @@ struct J3DSys {
 	/* 80310E3C */ void reinitPixelProc();
 };
 
-// build _GXTexCacheSize (['_GXTexCacheSize']) True/True
-// build _GXTexMapID (['_GXTexMapID']) False/False
-/* top-level dependencies (begin ['_GXTexMapID']) */
-/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
@@ -47,22 +35,22 @@ struct _GXTexMapID {
 // Forward References:
 // 
 
-extern "C" void __sinit_J3DSys_cpp();
+extern "C" void __sinit_J3DSys_cpp(); // 1
 
-extern "C" void __ct__6J3DSysFv();
-extern "C" void loadPosMtxIndx__6J3DSysCFiUs();
-extern "C" void loadNrmMtxIndx__6J3DSysCFiUs();
-extern "C" void setTexCacheRegion__6J3DSysF15_GXTexCacheSize();
-extern "C" void drawInit__6J3DSysFv();
-extern "C" void reinitGX__6J3DSysFv();
-extern "C" void reinitGenMode__6J3DSysFv();
-extern "C" void reinitLighting__6J3DSysFv();
-extern "C" void reinitTransform__6J3DSysFv();
-extern "C" void reinitTexture__6J3DSysFv();
-extern "C" void reinitTevStages__6J3DSysFv();
-extern "C" void reinitIndStages__6J3DSysFv();
-extern "C" void reinitPixelProc__6J3DSysFv();
-extern "C" void __sinit_J3DSys_cpp();
+extern "C" void __ct__6J3DSysFv(); // 1
+extern "C" void loadPosMtxIndx__6J3DSysCFiUs(); // 1
+extern "C" void loadNrmMtxIndx__6J3DSysCFiUs(); // 1
+extern "C" void setTexCacheRegion__6J3DSysF15_GXTexCacheSize(); // 1
+extern "C" void drawInit__6J3DSysFv(); // 1
+extern "C" void reinitGX__6J3DSysFv(); // 1
+extern "C" void reinitGenMode__6J3DSysFv(); // 1
+extern "C" void reinitLighting__6J3DSysFv(); // 1
+extern "C" void reinitTransform__6J3DSysFv(); // 1
+extern "C" void reinitTexture__6J3DSysFv(); // 1
+extern "C" void reinitTevStages__6J3DSysFv(); // 1
+extern "C" void reinitIndStages__6J3DSysFv(); // 1
+extern "C" void reinitPixelProc__6J3DSysFv(); // 1
+extern "C" void __sinit_J3DSys_cpp(); // 1
 SECTION_RODATA extern const u8 J3DSys__lit_695[16];
 SECTION_RODATA extern const u8 lit_696[16];
 SECTION_RODATA extern const u8 lit_737[24];
@@ -85,117 +73,117 @@ SECTION_SDATA2 extern f32 J3DSys__lit_894;
 // External References:
 // 
 
-void J3DFifoLoadTexCached(_GXTexMapID, u32, _GXTexCacheSize, u32, _GXTexCacheSize);
-void makeTexCoordTable();
-void makeAlphaCmpTable();
-void makeZModeTable();
-void makeTevSwapTable();
-extern "C" void PSMTXIdentity();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXInvalidateVtxCache();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXFlush();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetCoPlanar();
-extern "C" void GXSetChanAmbColor();
-extern "C" void GXSetChanMatColor();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXInitTexObj();
-extern "C" void GXLoadTexObj();
-extern "C" void GXInitTexCacheRegion();
-extern "C" void GXSetTevIndirect();
-extern "C" void GXSetIndTexMtx();
-extern "C" void GXSetIndTexCoordScale();
-extern "C" void GXSetIndTexOrder();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevDirect();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetTevColorS10();
-extern "C" void GXSetTevKColor();
-extern "C" void GXSetTevKColorSel();
-extern "C" void GXSetTevKAlphaSel();
-extern "C" void GXSetTevSwapMode();
-extern "C" void GXSetTevSwapModeTable();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetColorUpdate();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetDither();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXLoadTexMtxImm();
-extern "C" void GXSetClipMode();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_28();
+void J3DFifoLoadTexCached(_GXTexMapID, u32, _GXTexCacheSize, u32, _GXTexCacheSize); // 2
+void makeTexCoordTable(); // 2
+void makeAlphaCmpTable(); // 2
+void makeZModeTable(); // 2
+void makeTevSwapTable(); // 2
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXInvalidateVtxCache(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXFlush(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetCoPlanar(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXInitTexCacheRegion(); // 1
+extern "C" void GXSetTevIndirect(); // 1
+extern "C" void GXSetIndTexMtx(); // 1
+extern "C" void GXSetIndTexCoordScale(); // 1
+extern "C" void GXSetIndTexOrder(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevDirect(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetTevColorS10(); // 1
+extern "C" void GXSetTevKColor(); // 1
+extern "C" void GXSetTevKColorSel(); // 1
+extern "C" void GXSetTevKAlphaSel(); // 1
+extern "C" void GXSetTevSwapMode(); // 1
+extern "C" void GXSetTevSwapModeTable(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetColorUpdate(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_28(); // 1
 
-extern "C" void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize();
-extern "C" void makeTexCoordTable__Fv();
-extern "C" void makeAlphaCmpTable__Fv();
-extern "C" void makeZModeTable__Fv();
-extern "C" void makeTevSwapTable__Fv();
-extern "C" void PSMTXIdentity();
-extern "C" void GXSetVtxAttrFmt();
-extern "C" void GXInvalidateVtxCache();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXFlush();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetCoPlanar();
-extern "C" void GXSetChanAmbColor();
-extern "C" void GXSetChanMatColor();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXInitTexObj();
-extern "C" void GXLoadTexObj();
-extern "C" void GXInitTexCacheRegion();
-extern "C" void GXSetTevIndirect();
-extern "C" void GXSetIndTexMtx();
-extern "C" void GXSetIndTexCoordScale();
-extern "C" void GXSetIndTexOrder();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevDirect();
-extern "C" void GXSetTevColorIn();
-extern "C" void GXSetTevAlphaIn();
-extern "C" void GXSetTevColorOp();
-extern "C" void GXSetTevAlphaOp();
-extern "C" void GXSetTevColor();
-extern "C" void GXSetTevColorS10();
-extern "C" void GXSetTevKColor();
-extern "C" void GXSetTevKColorSel();
-extern "C" void GXSetTevKAlphaSel();
-extern "C" void GXSetTevSwapMode();
-extern "C" void GXSetTevSwapModeTable();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetColorUpdate();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetDither();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXLoadTexMtxImm();
-extern "C" void GXSetClipMode();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_28();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_28();
+extern "C" void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize(); // 1
+extern "C" void makeTexCoordTable__Fv(); // 1
+extern "C" void makeAlphaCmpTable__Fv(); // 1
+extern "C" void makeZModeTable__Fv(); // 1
+extern "C" void makeTevSwapTable__Fv(); // 1
+extern "C" void PSMTXIdentity(); // 1
+extern "C" void GXSetVtxAttrFmt(); // 1
+extern "C" void GXInvalidateVtxCache(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXFlush(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetCoPlanar(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXInitTexCacheRegion(); // 1
+extern "C" void GXSetTevIndirect(); // 1
+extern "C" void GXSetIndTexMtx(); // 1
+extern "C" void GXSetIndTexCoordScale(); // 1
+extern "C" void GXSetIndTexOrder(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevDirect(); // 1
+extern "C" void GXSetTevColorIn(); // 1
+extern "C" void GXSetTevAlphaIn(); // 1
+extern "C" void GXSetTevColorOp(); // 1
+extern "C" void GXSetTevAlphaOp(); // 1
+extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetTevColorS10(); // 1
+extern "C" void GXSetTevKColor(); // 1
+extern "C" void GXSetTevKColorSel(); // 1
+extern "C" void GXSetTevKAlphaSel(); // 1
+extern "C" void GXSetTevSwapMode(); // 1
+extern "C" void GXSetTevSwapModeTable(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetColorUpdate(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_28(); // 1
 SECTION_RODATA extern const u8 j3dDefaultTexCoordInfo[32];
 SECTION_SDATA2 extern u32 j3dDefaultColInfo;
 SECTION_SDATA2 extern u32 data_804563C8;

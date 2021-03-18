@@ -9,13 +9,13 @@
 // Forward References:
 // 
 
-extern "C" void __OSReboot();
-extern "C" void OSSetSaveRegion();
-extern "C" void OSGetSaveRegion();
+extern "C" void __OSReboot(); // 1
+extern "C" void OSSetSaveRegion(); // 1
+extern "C" void OSGetSaveRegion(); // 1
 
-extern "C" void __OSReboot();
-extern "C" void OSSetSaveRegion();
-extern "C" void OSGetSaveRegion();
+extern "C" void __OSReboot(); // 1
+extern "C" void OSSetSaveRegion(); // 1
+extern "C" void OSGetSaveRegion(); // 1
 SECTION_SBSS extern u8 SaveStart[4];
 SECTION_SBSS extern u8 SaveEnd[4];
 
@@ -23,19 +23,19 @@ SECTION_SBSS extern u8 SaveEnd[4];
 // External References:
 // 
 
-extern "C" void OSSetArenaHi();
-extern "C" void OSSetArenaLo();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void __OSBootDol();
-extern "C" void OSDisableInterrupts();
+extern "C" void OSSetArenaHi(); // 1
+extern "C" void OSSetArenaLo(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void __OSBootDol(); // 1
+extern "C" void OSDisableInterrupts(); // 1
 
-extern "C" void OSSetArenaHi();
-extern "C" void OSSetArenaLo();
-extern "C" void OSSetCurrentContext();
-extern "C" void OSClearContext();
-extern "C" void __OSBootDol();
-extern "C" void OSDisableInterrupts();
+extern "C" void OSSetArenaHi(); // 1
+extern "C" void OSSetArenaLo(); // 1
+extern "C" void OSSetCurrentContext(); // 1
+extern "C" void OSClearContext(); // 1
+extern "C" void __OSBootDol(); // 1
+extern "C" void OSDisableInterrupts(); // 1
 
 // 
 // Declarations:

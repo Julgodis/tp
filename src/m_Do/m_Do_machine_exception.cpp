@@ -9,39 +9,24 @@
 // Types:
 // 
 
-// build JUTConsole (['JUTConsole']) False/False
-/* top-level dependencies (begin ['JUTConsole']) */
-/* top-level dependencies (end ['JUTConsole']) */
 struct JUTConsole {
 	/* 802E7C38 */ void print(char const*);
 	/* 802E7F7C */ void dumpToTerminal(u32);
 };
 
-// build dRes_control_c (['dRes_control_c']) False/False
-/* top-level dependencies (begin ['dRes_control_c']) */
-/* top-level dependencies (end ['dRes_control_c']) */
 struct dRes_control_c {
 	/* 8003C638 */ void dump();
 };
 
-// build DynamicModuleControlBase (['DynamicModuleControlBase']) False/False
-/* top-level dependencies (begin ['DynamicModuleControlBase']) */
-/* top-level dependencies (end ['DynamicModuleControlBase']) */
 struct DynamicModuleControlBase {
 	/* 80262470 */ void dump();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
-// build JKRAramHeap (['JKRAramHeap']) False/False
-/* top-level dependencies (begin ['JKRAramHeap']) */
-/* top-level dependencies (end ['JKRAramHeap']) */
 struct JKRAramHeap {
 	/* 802D3218 */ void dump();
 };
@@ -50,43 +35,43 @@ struct JKRAramHeap {
 // Forward References:
 // 
 
-static void print_f(char const*, ...);
-static void print(char const*);
-static void dispHeapInfo();
-static void dispGameInfo();
-static void dispDateInfo();
-static void dispConsoleToTerminal();
-void exception_addition(JUTConsole*);
+static void print_f(char const*, ...); // 2
+static void print(char const*); // 2
+static void dispHeapInfo(); // 2
+static void dispGameInfo(); // 2
+static void dispDateInfo(); // 2
+static void dispConsoleToTerminal(); // 2
+void exception_addition(JUTConsole*); // 2
 
-extern "C" static void print_f__FPCce();
-extern "C" static void print__FPCc();
-extern "C" static void dispHeapInfo__Fv();
-extern "C" static void dispGameInfo__Fv();
-extern "C" static void dispDateInfo__Fv();
-extern "C" static void dispConsoleToTerminal__Fv();
-extern "C" void exception_addition__FP10JUTConsole();
+extern "C" static void print_f__FPCce(); // 1
+extern "C" static void print__FPCc(); // 1
+extern "C" static void dispHeapInfo__Fv(); // 1
+extern "C" static void dispGameInfo__Fv(); // 1
+extern "C" static void dispDateInfo__Fv(); // 1
+extern "C" static void dispConsoleToTerminal__Fv(); // 1
+extern "C" void exception_addition__FP10JUTConsole(); // 1
 SECTION_RODATA extern const u8 m_Do_m_Do_machine_exception__stringBase0[480];
 
 // 
 // External References:
 // 
 
-extern "C" void JUTConsole_print_f_va_();
-extern "C" void OSTicksToCalendarTime();
-extern "C" void _savegpr_23();
-extern "C" void _restgpr_23();
+extern "C" void JUTConsole_print_f_va_(); // 1
+extern "C" void OSTicksToCalendarTime(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _restgpr_23(); // 1
 
-extern "C" void dump__14dRes_control_cFv();
-extern "C" void dump__24DynamicModuleControlBaseFv();
-extern "C" void getFreeSize__7JKRHeapFv();
-extern "C" void getTotalFreeSize__7JKRHeapFv();
-extern "C" void dump__11JKRAramHeapFv();
-extern "C" void print__10JUTConsoleFPCc();
-extern "C" void JUTConsole_print_f_va_();
-extern "C" void dumpToTerminal__10JUTConsoleFUi();
-extern "C" void OSTicksToCalendarTime();
-extern "C" void _savegpr_23();
-extern "C" void _restgpr_23();
+extern "C" void dump__14dRes_control_cFv(); // 1
+extern "C" void dump__24DynamicModuleControlBaseFv(); // 1
+extern "C" void getFreeSize__7JKRHeapFv(); // 1
+extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
+extern "C" void dump__11JKRAramHeapFv(); // 1
+extern "C" void print__10JUTConsoleFPCc(); // 1
+extern "C" void JUTConsole_print_f_va_(); // 1
+extern "C" void dumpToTerminal__10JUTConsoleFUi(); // 1
+extern "C" void OSTicksToCalendarTime(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _restgpr_23(); // 1
 SECTION_DATA extern u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SBSS extern u8 sPowerOnTime__7mDoMain[4];

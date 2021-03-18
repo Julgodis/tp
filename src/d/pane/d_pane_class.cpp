@@ -9,61 +9,30 @@
 // Types:
 // 
 
-// build CPaneMgr (['CPaneMgr']) False/False
-// build J2DScreen (['J2DScreen']) False/False
-// build JSURandomInputStream (['JSURandomInputStream']) False/False
-/* top-level dependencies (begin ['JSURandomInputStream']) */
-/* top-level dependencies (end ['JSURandomInputStream']) */
+struct JKRExpHeap {
+};
+
 struct JSURandomInputStream {
 	/* 80255328 */ ~JSURandomInputStream();
 };
 
-// build JKRArchive (['JKRArchive']) False/False
-/* top-level dependencies (begin ['JKRArchive']) */
-/* top-level dependencies (end ['JKRArchive']) */
 struct JKRArchive {
 };
 
-/* top-level dependencies (begin ['J2DScreen']) */
-// outer dependency: ('JSURandomInputStream',)
-// outer dependency: ('JKRArchive',)
-/* top-level dependencies (end ['J2DScreen']) */
 struct J2DScreen {
-	// ('JSURandomInputStream',)
-	// ('JKRArchive',)
 	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
 };
 
-// build JUtility (['JUtility']) False/False
-/* top-level dependencies (begin ['JUtility']) */
-/* top-level dependencies (end ['JUtility']) */
 struct JUtility {
-	// build TColor (['JUtility', 'TColor']) False/False
-	/* dependencies (begin ['JUtility', 'TColor']) */
-	/* dependencies (end ['JUtility', 'TColor']) */
 	struct TColor {
 	};
 
 };
 
-// build JKRExpHeap (['JKRExpHeap']) False/False
-/* top-level dependencies (begin ['JKRExpHeap']) */
-/* top-level dependencies (end ['JKRExpHeap']) */
-struct JKRExpHeap {
-};
-
-// build J2DPane (['J2DPane']) False/False
-// build J2DRotateAxis (['J2DRotateAxis']) False/False
-/* top-level dependencies (begin ['J2DRotateAxis']) */
-/* top-level dependencies (end ['J2DRotateAxis']) */
 struct J2DRotateAxis {
 };
 
-/* top-level dependencies (begin ['J2DPane']) */
-// outer dependency: ('J2DRotateAxis',)
-/* top-level dependencies (end ['J2DPane']) */
 struct J2DPane {
-	// ('J2DRotateAxis',)
 	/* 802F7100 */ void getBounds();
 	/* 802F71DC */ void rotate(f32, f32, J2DRotateAxis, f32);
 	/* 802F7A8C */ void getFirstChildPane();
@@ -71,19 +40,9 @@ struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 };
 
-/* top-level dependencies (begin ['CPaneMgr']) */
-// outer dependency: ('J2DScreen',)
-// outer dependency: ('JUtility', 'TColor')
-// outer dependency: ('JKRExpHeap',)
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['CPaneMgr']) */
 struct CPaneMgr {
-	// ('J2DScreen',)
-	// ('JUtility', 'TColor')
-	// ('JKRExpHeap',)
-	// ('J2DPane',)
-	/* 80253930 */ CPaneMgr();
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 80253930 */ CPaneMgr();
 	/* 80253A18 */ ~CPaneMgr();
 	/* 80253AB4 */ void setAlpha(u8);
 	/* 80253B2C */ void reinit();
@@ -102,16 +61,7 @@ struct CPaneMgr {
 	/* 80254FB8 */ void getBounds(J2DPane*);
 };
 
-// build J2DScreen (['J2DScreen']) True/True
-// build JKRExpHeap (['JKRExpHeap']) True/True
-// build J2DPane (['J2DPane']) True/True
-// build J2DWindow (['J2DWindow']) False/False
-// build JUtility (['JUtility']) True/True
-/* top-level dependencies (begin ['J2DWindow']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['J2DWindow']) */
 struct J2DWindow {
-	// ('JUtility', 'TColor')
 	/* 80254000 */ void getBlack() const;
 	/* 8025400C */ void getWhite() const;
 	/* 802543E0 */ void setWhite(JUtility::TColor);
@@ -119,55 +69,28 @@ struct J2DWindow {
 	/* 80254568 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 };
 
-// build JUtility (['JUtility']) True/True
-// build J2DTextBox (['J2DTextBox']) False/False
-// build JUtility (['JUtility']) True/True
-/* top-level dependencies (begin ['J2DTextBox']) */
-// outer dependency: ('JUtility', 'TColor')
-/* top-level dependencies (end ['J2DTextBox']) */
 struct J2DTextBox {
-	// ('JUtility', 'TColor')
 	/* 80254408 */ void setBlack(JUtility::TColor);
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
 };
 
-// build JKRArchive (['JKRArchive']) True/True
-// build JSUMemoryInputStream (['JSUMemoryInputStream']) False/False
-/* top-level dependencies (begin ['JSUMemoryInputStream']) */
-/* top-level dependencies (end ['JSUMemoryInputStream']) */
 struct JSUMemoryInputStream {
 	/* 802552B8 */ ~JSUMemoryInputStream();
 	/* 802DC520 */ void setBuffer(void const*, s32);
 };
 
-// build JSURandomInputStream (['JSURandomInputStream']) True/True
-// build JSUIosBase (['JSUIosBase']) False/False
-/* top-level dependencies (begin ['JSUIosBase']) */
-/* top-level dependencies (end ['JSUIosBase']) */
 struct JSUIosBase {
 	/* 80255388 */ ~JSUIosBase();
 };
 
-// build JKRAramArchive (['JKRAramArchive']) False/False
-/* top-level dependencies (begin ['JKRAramArchive']) */
-/* top-level dependencies (end ['JKRAramArchive']) */
 struct JKRAramArchive {
 };
 
-// build CPaneMgrAlpha (['CPaneMgrAlpha']) False/False
-// build J2DPane (['J2DPane']) True/True
-/* top-level dependencies (begin ['CPaneMgrAlpha']) */
-// outer dependency: ('J2DPane',)
-/* top-level dependencies (end ['CPaneMgrAlpha']) */
 struct CPaneMgrAlpha {
-	// ('J2DPane',)
 	/* 802553EC */ CPaneMgrAlpha();
 	/* 8025546C */ ~CPaneMgrAlpha();
 	/* 80255658 */ void rateCalc(s16, s16, u8);
@@ -176,61 +99,64 @@ struct CPaneMgrAlpha {
 	/* 80255B5C */ void childPaneSetAlpha(J2DPane*, u8);
 };
 
-// build JSUInputStream (['JSUInputStream']) False/False
-/* top-level dependencies (begin ['JSUInputStream']) */
-/* top-level dependencies (end ['JSUInputStream']) */
 struct JSUInputStream {
 	/* 802DC23C */ ~JSUInputStream();
 };
 
-// build J2DOrthoGraph (['J2DOrthoGraph']) False/False
-/* top-level dependencies (begin ['J2DOrthoGraph']) */
-/* top-level dependencies (end ['J2DOrthoGraph']) */
-struct J2DOrthoGraph {
-	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
 };
 
-// build J2DRotateAxis (['J2DRotateAxis']) True/True
+struct J2DOrthoGraph {
+	/* 802E96D0 */ J2DOrthoGraph(f32, f32, f32, f32, f32, f32);
+	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
+};
+
 // 
 // Forward References:
 // 
 
-void dPaneClass_showNullPane(J2DScreen*);
-static void dPaneClass_showNullPane(J2DPane*);
-void dPaneClass_setPriority(void**, JKRHeap*, J2DScreen*, char const*, u32, JKRArchive*);
-extern "C" void __sinit_d_pane_class_cpp();
+void dPaneClass_showNullPane(J2DScreen*); // 2
+static void dPaneClass_showNullPane(J2DPane*); // 2
+void dPaneClass_setPriority(void**, JKRHeap*, J2DScreen*, char const*, u32, JKRArchive*); // 2
+extern "C" void __sinit_d_pane_class_cpp(); // 1
 
-extern "C" void __ct__8CPaneMgrFv();
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
-extern "C" void __dt__8CPaneMgrFv();
-extern "C" void setAlpha__8CPaneMgrFUc();
-extern "C" void reinit__8CPaneMgrFv();
-extern "C" void initiate__8CPaneMgrFP7J2DPaneP10JKRExpHeap();
-extern "C" void getBlack__9J2DWindowCFv();
-extern "C" void getWhite__9J2DWindowCFv();
-extern "C" void childPaneGetSize__8CPaneMgrFP7J2DPane();
-extern "C" void childPaneSetSize__8CPaneMgrFP7J2DPaneff();
-extern "C" void getGlobalPosX__8CPaneMgrFv();
-extern "C" void getGlobalPosY__8CPaneMgrFv();
-extern "C" void setWhite__9J2DWindowFQ28JUtility6TColor();
-extern "C" void setBlack__10J2DTextBoxFQ28JUtility6TColor();
-extern "C" void setBlack__9J2DWindowFQ28JUtility6TColor();
-extern "C" void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor();
-extern "C" void paneTrans__8CPaneMgrFff();
-extern "C" void paneScale__8CPaneMgrFff();
-extern "C" void scaleAnime__8CPaneMgrFsffUc();
-extern "C" void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc();
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
-extern "C" void getBounds__8CPaneMgrFP7J2DPane();
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
-extern "C" static void dPaneClass_showNullPane__FP7J2DPane();
-extern "C" void dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive();
-extern "C" void __dt__20JSUMemoryInputStreamFv();
-extern "C" void __dt__20JSURandomInputStreamFv();
-extern "C" void __dt__10JSUIosBaseFv();
-extern "C" void __sinit_d_pane_class_cpp();
+extern "C" void __ct__8CPaneMgrFv(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
+extern "C" void __dt__8CPaneMgrFv(); // 1
+extern "C" void setAlpha__8CPaneMgrFUc(); // 1
+extern "C" void reinit__8CPaneMgrFv(); // 1
+extern "C" void initiate__8CPaneMgrFP7J2DPaneP10JKRExpHeap(); // 1
+extern "C" void getBlack__9J2DWindowCFv(); // 1
+extern "C" void getWhite__9J2DWindowCFv(); // 1
+extern "C" void childPaneGetSize__8CPaneMgrFP7J2DPane(); // 1
+extern "C" void childPaneSetSize__8CPaneMgrFP7J2DPaneff(); // 1
+extern "C" void getGlobalPosX__8CPaneMgrFv(); // 1
+extern "C" void getGlobalPosY__8CPaneMgrFv(); // 1
+extern "C" void setWhite__9J2DWindowFQ28JUtility6TColor(); // 1
+extern "C" void setBlack__10J2DTextBoxFQ28JUtility6TColor(); // 1
+extern "C" void setBlack__9J2DWindowFQ28JUtility6TColor(); // 1
+extern "C" void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor(); // 1
+extern "C" void paneTrans__8CPaneMgrFff(); // 1
+extern "C" void paneScale__8CPaneMgrFff(); // 1
+extern "C" void scaleAnime__8CPaneMgrFsffUc(); // 1
+extern "C" void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc(); // 1
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs(); // 1
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
+extern "C" void getBounds__8CPaneMgrFP7J2DPane(); // 1
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
+extern "C" static void dPaneClass_showNullPane__FP7J2DPane(); // 1
+extern "C" void dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive(); // 1
+extern "C" void __dt__20JSUMemoryInputStreamFv(); // 1
+extern "C" void __dt__20JSURandomInputStreamFv(); // 1
+extern "C" void __dt__10JSUIosBaseFv(); // 1
+extern "C" void __sinit_d_pane_class_cpp(); // 1
 SECTION_DATA extern void*const __vt__10JSUIosBase[3];
 SECTION_DATA extern void*const __vt__8CPaneMgr[5];
 SECTION_BSS extern u8 static_mBounds[16];
@@ -247,60 +173,59 @@ SECTION_SDATA2 extern f32 d_pane_d_pane_class__lit_4476;
 // External References:
 // 
 
-void mDoExt_getCurrentHeap();
-void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, char const*);
-void operator delete(void*);
-extern "C" void func_802E980C();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+void mDoExt_getCurrentHeap(); // 2
+void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, char const*); // 2
+void operator delete(void*); // 2
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void mDoExt_getCurrentHeap__Fv();
-extern "C" void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
-extern "C" void __ct__13CPaneMgrAlphaFv();
-extern "C" void __dt__13CPaneMgrAlphaFv();
-extern "C" void rateCalc__13CPaneMgrAlphaFssUc();
-extern "C" void childPaneCount__13CPaneMgrAlphaFP7J2DPane();
-extern "C" void childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane();
-extern "C" void childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc();
-extern "C" void alloc__7JKRHeapFUli();
-extern "C" void free__7JKRHeapFPv();
-extern "C" void __dl__FPv();
-extern "C" void __dt__14JSUInputStreamFv();
-extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl();
-extern "C" void __ct__13J2DOrthoGraphFffffff();
-extern "C" void func_802E980C();
-extern "C" void getBounds__7J2DPaneFv();
-extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
-extern "C" void getFirstChildPane__7J2DPaneFv();
-extern "C" void getNextChildPane__7J2DPaneFv();
-extern "C" void getParentPane__7J2DPaneFv();
-extern "C" void setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive();
-extern "C" void PSMTXCopy();
-extern "C" void PSMTXConcat();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_26();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_26();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
+extern "C" void mDoExt_getCurrentHeap__Fv(); // 1
+extern "C" void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc(); // 1
+extern "C" void __ct__13CPaneMgrAlphaFv(); // 1
+extern "C" void __dt__13CPaneMgrAlphaFv(); // 1
+extern "C" void rateCalc__13CPaneMgrAlphaFssUc(); // 1
+extern "C" void childPaneCount__13CPaneMgrAlphaFP7J2DPane(); // 1
+extern "C" void childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane(); // 1
+extern "C" void childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc(); // 1
+extern "C" void alloc__7JKRHeapFUli(); // 1
+extern "C" void free__7JKRHeapFPv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void __dt__14JSUInputStreamFv(); // 1
+extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl(); // 1
+extern "C" void __ct__13J2DOrthoGraphFffffff(); // 1
+extern "C" void func_802E980C(); // 1
+extern "C" void getBounds__7J2DPaneFv(); // 1
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf(); // 1
+extern "C" void getFirstChildPane__7J2DPaneFv(); // 1
+extern "C" void getNextChildPane__7J2DPaneFv(); // 1
+extern "C" void getParentPane__7J2DPaneFv(); // 1
+extern "C" void setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive(); // 1
+extern "C" void PSMTXCopy(); // 1
+extern "C" void PSMTXConcat(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_26(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_DATA extern void*const __vt__20JSURandomInputStream[9];
 SECTION_DATA extern void*const __vt__14JSUInputStream[7];
 SECTION_DATA extern void*const __vt__20JSUMemoryInputStream[10];

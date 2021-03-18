@@ -9,17 +9,11 @@
 // Types:
 // 
 
-// build JUTGraphFifo (['JUTGraphFifo']) False/False
-/* top-level dependencies (begin ['JUTGraphFifo']) */
-/* top-level dependencies (end ['JUTGraphFifo']) */
 struct JUTGraphFifo {
 	/* 802DEB58 */ JUTGraphFifo(u32);
 	/* 802DEC34 */ ~JUTGraphFifo();
 };
 
-// build JKRHeap (['JKRHeap']) False/False
-/* top-level dependencies (begin ['JKRHeap']) */
-/* top-level dependencies (end ['JKRHeap']) */
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
@@ -30,8 +24,8 @@ struct JKRHeap {
 // 
 
 
-extern "C" void __ct__12JUTGraphFifoFUl();
-extern "C" void __dt__12JUTGraphFifoFv();
+extern "C" void __ct__12JUTGraphFifoFUl(); // 1
+extern "C" void __dt__12JUTGraphFifoFv(); // 1
 SECTION_DATA extern void*const __vt__12JUTGraphFifo[4];
 SECTION_SBSS extern u8 data_804514B8[4];
 SECTION_SBSS extern u8 sCurrentFifo__12JUTGraphFifo[4];
@@ -41,25 +35,25 @@ SECTION_SBSS extern u8 mGpStatus__12JUTGraphFifo[5 + 3 /* padding */];
 // External References:
 // 
 
-void operator delete(void*);
-extern "C" void GXInit();
-extern "C" void GXInitFifoBase();
-extern "C" void GXInitFifoPtrs();
-extern "C" void GXSaveCPUFifo();
-extern "C" void GXGetGPStatus();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+void operator delete(void*); // 2
+extern "C" void GXInit(); // 1
+extern "C" void GXInitFifoBase(); // 1
+extern "C" void GXInitFifoPtrs(); // 1
+extern "C" void GXSaveCPUFifo(); // 1
+extern "C" void GXGetGPStatus(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 
-extern "C" void alloc__7JKRHeapFUli();
-extern "C" void free__7JKRHeapFPv();
-extern "C" void __dl__FPv();
-extern "C" void GXInit();
-extern "C" void GXInitFifoBase();
-extern "C" void GXInitFifoPtrs();
-extern "C" void GXSaveCPUFifo();
-extern "C" void GXGetGPStatus();
-extern "C" void _savegpr_26();
-extern "C" void _restgpr_26();
+extern "C" void alloc__7JKRHeapFUli(); // 1
+extern "C" void free__7JKRHeapFPv(); // 1
+extern "C" void __dl__FPv(); // 1
+extern "C" void GXInit(); // 1
+extern "C" void GXInitFifoBase(); // 1
+extern "C" void GXInitFifoPtrs(); // 1
+extern "C" void GXSaveCPUFifo(); // 1
+extern "C" void GXGetGPStatus(); // 1
+extern "C" void _savegpr_26(); // 1
+extern "C" void _restgpr_26(); // 1
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 
 // 

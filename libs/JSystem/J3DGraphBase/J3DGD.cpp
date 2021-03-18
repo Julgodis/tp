@@ -9,159 +9,81 @@
 // Types:
 // 
 
-// build _GXCullMode (['_GXCullMode']) False/False
-/* top-level dependencies (begin ['_GXCullMode']) */
-/* top-level dependencies (end ['_GXCullMode']) */
 struct _GXCullMode {
 };
 
-// build _GXLightID (['_GXLightID']) False/False
-/* top-level dependencies (begin ['_GXLightID']) */
-/* top-level dependencies (end ['_GXLightID']) */
 struct _GXLightID {
 };
 
-// build _GXColor (['_GXColor']) False/False
-/* top-level dependencies (begin ['_GXColor']) */
-/* top-level dependencies (end ['_GXColor']) */
 struct _GXColor {
 };
 
-// build _GXVtxFmt (['_GXVtxFmt']) False/False
-/* top-level dependencies (begin ['_GXVtxFmt']) */
-/* top-level dependencies (end ['_GXVtxFmt']) */
 struct _GXVtxFmt {
 };
 
-// build _GXVtxAttrFmtList (['_GXVtxAttrFmtList']) False/False
-/* top-level dependencies (begin ['_GXVtxAttrFmtList']) */
-/* top-level dependencies (end ['_GXVtxAttrFmtList']) */
 struct _GXVtxAttrFmtList {
 };
 
-// build _GXTexGenType (['_GXTexGenType']) False/False
-/* top-level dependencies (begin ['_GXTexGenType']) */
-/* top-level dependencies (end ['_GXTexGenType']) */
 struct _GXTexGenType {
 };
 
-// build _GXTexGenSrc (['_GXTexGenSrc']) False/False
-/* top-level dependencies (begin ['_GXTexGenSrc']) */
-/* top-level dependencies (end ['_GXTexGenSrc']) */
 struct _GXTexGenSrc {
 };
 
-// build _GXTexCoordID (['_GXTexCoordID']) False/False
-/* top-level dependencies (begin ['_GXTexCoordID']) */
-/* top-level dependencies (end ['_GXTexCoordID']) */
 struct _GXTexCoordID {
 };
 
-// build _GXTexMapID (['_GXTexMapID']) False/False
-/* top-level dependencies (begin ['_GXTexMapID']) */
-/* top-level dependencies (end ['_GXTexMapID']) */
 struct _GXTexMapID {
 };
 
-// build _GXTexWrapMode (['_GXTexWrapMode']) False/False
-/* top-level dependencies (begin ['_GXTexWrapMode']) */
-/* top-level dependencies (end ['_GXTexWrapMode']) */
 struct _GXTexWrapMode {
 };
 
-// build _GXTexFilter (['_GXTexFilter']) False/False
-/* top-level dependencies (begin ['_GXTexFilter']) */
-/* top-level dependencies (end ['_GXTexFilter']) */
 struct _GXTexFilter {
 };
 
-// build _GXAnisotropy (['_GXAnisotropy']) False/False
-/* top-level dependencies (begin ['_GXAnisotropy']) */
-/* top-level dependencies (end ['_GXAnisotropy']) */
 struct _GXAnisotropy {
 };
 
-// build _GXTexFmt (['_GXTexFmt']) False/False
-/* top-level dependencies (begin ['_GXTexFmt']) */
-/* top-level dependencies (end ['_GXTexFmt']) */
 struct _GXTexFmt {
 };
 
-// build _GXTlutFmt (['_GXTlutFmt']) False/False
-/* top-level dependencies (begin ['_GXTlutFmt']) */
-/* top-level dependencies (end ['_GXTlutFmt']) */
 struct _GXTlutFmt {
 };
 
-// build _GXTlutSize (['_GXTlutSize']) False/False
-/* top-level dependencies (begin ['_GXTlutSize']) */
-/* top-level dependencies (end ['_GXTlutSize']) */
 struct _GXTlutSize {
 };
 
-// build _GXIndTexMtxID (['_GXIndTexMtxID']) False/False
-/* top-level dependencies (begin ['_GXIndTexMtxID']) */
-/* top-level dependencies (end ['_GXIndTexMtxID']) */
 struct _GXIndTexMtxID {
 };
 
-// build _GXIndTexStageID (['_GXIndTexStageID']) False/False
-/* top-level dependencies (begin ['_GXIndTexStageID']) */
-/* top-level dependencies (end ['_GXIndTexStageID']) */
 struct _GXIndTexStageID {
 };
 
-// build _GXIndTexScale (['_GXIndTexScale']) False/False
-/* top-level dependencies (begin ['_GXIndTexScale']) */
-/* top-level dependencies (end ['_GXIndTexScale']) */
 struct _GXIndTexScale {
 };
 
-// build _GXTevStageID (['_GXTevStageID']) False/False
-/* top-level dependencies (begin ['_GXTevStageID']) */
-/* top-level dependencies (end ['_GXTevStageID']) */
 struct _GXTevStageID {
 };
 
-// build _GXChannelID (['_GXChannelID']) False/False
-/* top-level dependencies (begin ['_GXChannelID']) */
-/* top-level dependencies (end ['_GXChannelID']) */
 struct _GXChannelID {
 };
 
-// build _GXTevKColorID (['_GXTevKColorID']) False/False
-/* top-level dependencies (begin ['_GXTevKColorID']) */
-/* top-level dependencies (end ['_GXTevKColorID']) */
 struct _GXTevKColorID {
 };
 
-// build _GXTevRegID (['_GXTevRegID']) False/False
-/* top-level dependencies (begin ['_GXTevRegID']) */
-/* top-level dependencies (end ['_GXTevRegID']) */
 struct _GXTevRegID {
 };
 
-// build _GXColorS10 (['_GXColorS10']) False/False
-/* top-level dependencies (begin ['_GXColorS10']) */
-/* top-level dependencies (end ['_GXColorS10']) */
 struct _GXColorS10 {
 };
 
-// build _GXFogType (['_GXFogType']) False/False
-/* top-level dependencies (begin ['_GXFogType']) */
-/* top-level dependencies (end ['_GXFogType']) */
 struct _GXFogType {
 };
 
-// build _GXFogAdjTable (['_GXFogAdjTable']) False/False
-/* top-level dependencies (begin ['_GXFogAdjTable']) */
-/* top-level dependencies (end ['_GXFogAdjTable']) */
 struct _GXFogAdjTable {
 };
 
-// build _GXTexCacheSize (['_GXTexCacheSize']) False/False
-/* top-level dependencies (begin ['_GXTexCacheSize']) */
-/* top-level dependencies (end ['_GXTexCacheSize']) */
 struct _GXTexCacheSize {
 };
 
@@ -169,65 +91,65 @@ struct _GXTexCacheSize {
 // Forward References:
 // 
 
-void J3DGDSetGenMode(u8, u8, u8, u8, _GXCullMode);
-void J3DGDSetGenMode_3Param(u8, u8, u8);
-void J3DGDSetLightAttn(_GXLightID, f32, f32, f32, f32, f32, f32);
-void J3DGDSetLightColor(_GXLightID, _GXColor);
-void J3DGDSetLightPos(_GXLightID, f32, f32, f32);
-void J3DGDSetLightDir(_GXLightID, f32, f32, f32);
-void J3DGDSetVtxAttrFmtv(_GXVtxFmt, _GXVtxAttrFmtList const*, bool);
-void J3DGDSetTexCoordGen(_GXTexGenType, _GXTexGenSrc);
-void J3DGDSetTexCoordScale2(_GXTexCoordID, u16, u8, u8, u16, u8, u8);
-void J3DGDSetTexLookupMode(_GXTexMapID, _GXTexWrapMode, _GXTexWrapMode, _GXTexFilter, _GXTexFilter, f32, f32, f32, u8, u8, _GXAnisotropy);
-void J3DGDSetTexImgAttr(_GXTexMapID, u16, u16, _GXTexFmt);
-void J3DGDSetTexImgPtr(_GXTexMapID, void*);
-void J3DGDSetTexImgPtrRaw(_GXTexMapID, u32);
-void J3DGDSetTexTlut(_GXTexMapID, u32, _GXTlutFmt);
-void J3DGDLoadTlut(void*, u32, _GXTlutSize);
-void J3DGDSetIndTexMtx(_GXIndTexMtxID, f32 (* )[3], s8);
-void J3DGDSetIndTexCoordScale(_GXIndTexStageID, _GXIndTexScale, _GXIndTexScale, _GXIndTexScale, _GXIndTexScale);
-void J3DGDSetIndTexOrder(u32, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID);
-void J3DGDSetTevOrder(_GXTevStageID, _GXTexCoordID, _GXTexMapID, _GXChannelID, _GXTexCoordID, _GXTexMapID, _GXChannelID);
-void J3DGDSetTevKColor(_GXTevKColorID, _GXColor);
-void J3DGDSetTevColorS10(_GXTevRegID, _GXColorS10);
-void J3DGDSetFog(_GXFogType, f32, f32, f32, f32, _GXColor);
-void J3DGDSetFogRangeAdj(u8, u16, _GXFogAdjTable*);
-void J3DFifoLoadPosMtxImm(f32 (* )[4], u32);
-void J3DFifoLoadNrmMtxImm(f32 (* )[4], u32);
-void J3DFifoLoadNrmMtxImm3x3(f32 (* )[3], u32);
-void J3DFifoLoadNrmMtxToTexMtx(f32 (* )[4], u32);
-void J3DFifoLoadNrmMtxToTexMtx3x3(f32 (* )[3], u32);
-void J3DFifoLoadTexCached(_GXTexMapID, u32, _GXTexCacheSize, u32, _GXTexCacheSize);
+void J3DGDSetGenMode(u8, u8, u8, u8, _GXCullMode); // 2
+void J3DGDSetGenMode_3Param(u8, u8, u8); // 2
+void J3DGDSetLightAttn(_GXLightID, f32, f32, f32, f32, f32, f32); // 2
+void J3DGDSetLightColor(_GXLightID, _GXColor); // 2
+void J3DGDSetLightPos(_GXLightID, f32, f32, f32); // 2
+void J3DGDSetLightDir(_GXLightID, f32, f32, f32); // 2
+void J3DGDSetVtxAttrFmtv(_GXVtxFmt, _GXVtxAttrFmtList const*, bool); // 2
+void J3DGDSetTexCoordGen(_GXTexGenType, _GXTexGenSrc); // 2
+void J3DGDSetTexCoordScale2(_GXTexCoordID, u16, u8, u8, u16, u8, u8); // 2
+void J3DGDSetTexLookupMode(_GXTexMapID, _GXTexWrapMode, _GXTexWrapMode, _GXTexFilter, _GXTexFilter, f32, f32, f32, u8, u8, _GXAnisotropy); // 2
+void J3DGDSetTexImgAttr(_GXTexMapID, u16, u16, _GXTexFmt); // 2
+void J3DGDSetTexImgPtr(_GXTexMapID, void*); // 2
+void J3DGDSetTexImgPtrRaw(_GXTexMapID, u32); // 2
+void J3DGDSetTexTlut(_GXTexMapID, u32, _GXTlutFmt); // 2
+void J3DGDLoadTlut(void*, u32, _GXTlutSize); // 2
+void J3DGDSetIndTexMtx(_GXIndTexMtxID, f32 (* )[3], s8); // 2
+void J3DGDSetIndTexCoordScale(_GXIndTexStageID, _GXIndTexScale, _GXIndTexScale, _GXIndTexScale, _GXIndTexScale); // 2
+void J3DGDSetIndTexOrder(u32, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID); // 2
+void J3DGDSetTevOrder(_GXTevStageID, _GXTexCoordID, _GXTexMapID, _GXChannelID, _GXTexCoordID, _GXTexMapID, _GXChannelID); // 2
+void J3DGDSetTevKColor(_GXTevKColorID, _GXColor); // 2
+void J3DGDSetTevColorS10(_GXTevRegID, _GXColorS10); // 2
+void J3DGDSetFog(_GXFogType, f32, f32, f32, f32, _GXColor); // 2
+void J3DGDSetFogRangeAdj(u8, u16, _GXFogAdjTable*); // 2
+void J3DFifoLoadPosMtxImm(f32 (* )[4], u32); // 2
+void J3DFifoLoadNrmMtxImm(f32 (* )[4], u32); // 2
+void J3DFifoLoadNrmMtxImm3x3(f32 (* )[3], u32); // 2
+void J3DFifoLoadNrmMtxToTexMtx(f32 (* )[4], u32); // 2
+void J3DFifoLoadNrmMtxToTexMtx3x3(f32 (* )[3], u32); // 2
+void J3DFifoLoadTexCached(_GXTexMapID, u32, _GXTexCacheSize, u32, _GXTexCacheSize); // 2
 
-extern "C" void J3DGDSetGenMode__FUcUcUcUc11_GXCullMode();
-extern "C" void J3DGDSetGenMode_3Param__FUcUcUc();
-extern "C" void J3DGDSetLightAttn__F10_GXLightIDffffff();
-extern "C" void J3DGDSetLightColor__F10_GXLightID8_GXColor();
-extern "C" void J3DGDSetLightPos__F10_GXLightIDfff();
-extern "C" void J3DGDSetLightDir__F10_GXLightIDfff();
-extern "C" void J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb();
-extern "C" void J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc();
-extern "C" void J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc();
-extern "C" void J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy();
-extern "C" void J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt();
-extern "C" void J3DGDSetTexImgPtr__F11_GXTexMapIDPv();
-extern "C" void J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl();
-extern "C" void J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt();
-extern "C" void J3DGDLoadTlut__FPvUl11_GXTlutSize();
-extern "C" void J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc();
-extern "C" void J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale();
-extern "C" void J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID();
-extern "C" void J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID();
-extern "C" void J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor();
-extern "C" void J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10();
-extern "C" void J3DGDSetFog__F10_GXFogTypeffff8_GXColor();
-extern "C" void J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable();
-extern "C" void J3DFifoLoadPosMtxImm__FPA4_fUl();
-extern "C" void J3DFifoLoadNrmMtxImm__FPA4_fUl();
-extern "C" void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl();
-extern "C" void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl();
-extern "C" void J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl();
-extern "C" void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize();
+extern "C" void J3DGDSetGenMode__FUcUcUcUc11_GXCullMode(); // 1
+extern "C" void J3DGDSetGenMode_3Param__FUcUcUc(); // 1
+extern "C" void J3DGDSetLightAttn__F10_GXLightIDffffff(); // 1
+extern "C" void J3DGDSetLightColor__F10_GXLightID8_GXColor(); // 1
+extern "C" void J3DGDSetLightPos__F10_GXLightIDfff(); // 1
+extern "C" void J3DGDSetLightDir__F10_GXLightIDfff(); // 1
+extern "C" void J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb(); // 1
+extern "C" void J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc(); // 1
+extern "C" void J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc(); // 1
+extern "C" void J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy(); // 1
+extern "C" void J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt(); // 1
+extern "C" void J3DGDSetTexImgPtr__F11_GXTexMapIDPv(); // 1
+extern "C" void J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl(); // 1
+extern "C" void J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt(); // 1
+extern "C" void J3DGDLoadTlut__FPvUl11_GXTlutSize(); // 1
+extern "C" void J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc(); // 1
+extern "C" void J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale(); // 1
+extern "C" void J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID(); // 1
+extern "C" void J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID(); // 1
+extern "C" void J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor(); // 1
+extern "C" void J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10(); // 1
+extern "C" void J3DGDSetFog__F10_GXFogTypeffff8_GXColor(); // 1
+extern "C" void J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable(); // 1
+extern "C" void J3DFifoLoadPosMtxImm__FPA4_fUl(); // 1
+extern "C" void J3DFifoLoadNrmMtxImm__FPA4_fUl(); // 1
+extern "C" void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl(); // 1
+extern "C" void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl(); // 1
+extern "C" void J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl(); // 1
+extern "C" void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize(); // 1
 SECTION_DATA extern void*J3DGD__lit_899[17];
 SECTION_DATA extern void*lit_951[21];
 SECTION_DATA extern u8 data_803CD880[16 + 16 /* padding */];
@@ -255,35 +177,35 @@ SECTION_SDATA2 extern f64 lit_1468;
 // External References:
 // 
 
-extern "C" void GDOverflowed();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void GDOverflowed(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 
-extern "C" void GDOverflowed();
-extern "C" void __cvt_fp2unsigned();
-extern "C" void __save_gpr();
-extern "C" void _savegpr_23();
-extern "C" void _savegpr_24();
-extern "C" void _savegpr_25();
-extern "C" void _savegpr_27();
-extern "C" void _savegpr_29();
-extern "C" void __restore_gpr();
-extern "C" void _restgpr_23();
-extern "C" void _restgpr_24();
-extern "C" void _restgpr_25();
-extern "C" void _restgpr_27();
-extern "C" void _restgpr_29();
+extern "C" void GDOverflowed(); // 1
+extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void __save_gpr(); // 1
+extern "C" void _savegpr_23(); // 1
+extern "C" void _savegpr_24(); // 1
+extern "C" void _savegpr_25(); // 1
+extern "C" void _savegpr_27(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void __restore_gpr(); // 1
+extern "C" void _restgpr_23(); // 1
+extern "C" void _restgpr_24(); // 1
+extern "C" void _restgpr_25(); // 1
+extern "C" void _restgpr_27(); // 1
+extern "C" void _restgpr_29(); // 1
 SECTION_SBSS extern u8 __GDCurrentDL[4];
 
 // 

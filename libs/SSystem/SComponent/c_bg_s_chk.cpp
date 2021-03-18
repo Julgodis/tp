@@ -9,9 +9,6 @@
 // Types:
 // 
 
-// build cBgS_Chk (['cBgS_Chk']) False/False
-/* top-level dependencies (begin ['cBgS_Chk']) */
-/* top-level dependencies (end ['cBgS_Chk']) */
 struct cBgS_Chk {
 	/* 80267B4C */ cBgS_Chk();
 	/* 80267B70 */ ~cBgS_Chk();
@@ -24,19 +21,19 @@ struct cBgS_Chk {
 // 
 
 
-extern "C" void __ct__8cBgS_ChkFv();
-extern "C" void __dt__8cBgS_ChkFv();
-extern "C" void SetExtChk__8cBgS_ChkFR8cBgS_Chk();
-extern "C" void ChkSameActorPid__8cBgS_ChkCFUi();
+extern "C" void __ct__8cBgS_ChkFv(); // 1
+extern "C" void __dt__8cBgS_ChkFv(); // 1
+extern "C" void SetExtChk__8cBgS_ChkFR8cBgS_Chk(); // 1
+extern "C" void ChkSameActorPid__8cBgS_ChkCFUi(); // 1
 SECTION_DATA extern void*const __vt__8cBgS_Chk[4];
 
 // 
 // External References:
 // 
 
-void operator delete(void*);
+void operator delete(void*); // 2
 
-extern "C" void __dl__FPv();
+extern "C" void __dl__FPv(); // 1
 
 // 
 // Declarations:

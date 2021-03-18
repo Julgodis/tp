@@ -9,19 +9,19 @@
 // Forward References:
 // 
 
-extern "C" void GXCallDisplayList();
+extern "C" void GXCallDisplayList(); // 1
 
-extern "C" void GXCallDisplayList();
+extern "C" void GXCallDisplayList(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __GXSetDirtyState();
-extern "C" void __GXSendFlushPrim();
+extern "C" void __GXSetDirtyState(); // 1
+extern "C" void __GXSendFlushPrim(); // 1
 
-extern "C" void __GXSetDirtyState();
-extern "C" void __GXSendFlushPrim();
+extern "C" void __GXSetDirtyState(); // 1
+extern "C" void __GXSendFlushPrim(); // 1
 SECTION_SDATA2 extern void*__GXData;
 
 // 

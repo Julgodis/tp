@@ -9,19 +9,19 @@
 // Forward References:
 // 
 
-extern "C" static void __GXDefaultTexRegionCallback();
-extern "C" static void __GXDefaultTlutRegionCallback();
-extern "C" static void __GXShutdown();
-extern "C" void __GXInitRevisionBits();
-extern "C" void GXInit();
-extern "C" static void __GXInitGX();
+extern "C" static void __GXDefaultTexRegionCallback(); // 1
+extern "C" static void __GXDefaultTlutRegionCallback(); // 1
+extern "C" static void __GXShutdown(); // 1
+extern "C" void __GXInitRevisionBits(); // 1
+extern "C" void GXInit(); // 1
+extern "C" static void __GXInitGX(); // 1
 
-extern "C" static void __GXDefaultTexRegionCallback();
-extern "C" static void __GXDefaultTlutRegionCallback();
-extern "C" static void __GXShutdown();
-extern "C" void __GXInitRevisionBits();
-extern "C" void GXInit();
-extern "C" static void __GXInitGX();
+extern "C" static void __GXDefaultTexRegionCallback(); // 1
+extern "C" static void __GXDefaultTlutRegionCallback(); // 1
+extern "C" static void __GXShutdown(); // 1
+extern "C" void __GXInitRevisionBits(); // 1
+extern "C" void GXInit(); // 1
+extern "C" static void __GXInitGX(); // 1
 SECTION_DATA extern u8 GXInit__lit_1[68 + 28 /* padding */];
 SECTION_DATA extern u8 DefaultTexData[32];
 SECTION_DATA extern u8 GXDefaultVATList[208];
@@ -54,201 +54,201 @@ SECTION_SDATA2 extern f64 lit_334;
 // External References:
 // 
 
-extern "C" void PPCSync();
-extern "C" void PPCMfhid2();
-extern "C" void PPCMthid2();
-extern "C" void PPCMtwpar();
-extern "C" void OSRegisterVersion();
-extern "C" void OSRegisterResetFunction();
-extern "C" void OSGetTime();
-extern "C" void VIGetTvFormat();
-extern "C" void GXInitFifoBase();
-extern "C" void GXSetCPUFifo();
-extern "C" void GXSetGPFifo();
-extern "C" void GXSetBreakPtCallback();
-extern "C" void __GXFifoInit();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmtv();
-extern "C" void GXSetArray();
-extern "C" void GXInvalidateVtxCache();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXSetMisc();
-extern "C" void __GXAbort();
-extern "C" void GXPokeAlphaMode();
-extern "C" void GXPokeAlphaRead();
-extern "C" void GXPokeAlphaUpdate();
-extern "C" void GXPokeBlendMode();
-extern "C" void GXPokeColorUpdate();
-extern "C" void GXPokeDstAlpha();
-extern "C" void GXPokeDither();
-extern "C" void GXPokeZMode();
-extern "C" void GXSetDrawSyncCallback();
-extern "C" void GXSetDrawDoneCallback();
-extern "C" void __GXPEInit();
-extern "C" void GXSetLineWidth();
-extern "C" void GXSetPointSize();
-extern "C" void GXEnableTexOffsets();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetCoPlanar();
-extern "C" void GXSetDispCopySrc();
-extern "C" void GXSetDispCopyDst();
-extern "C" void GXSetDispCopyFrame2Field();
-extern "C" void GXSetCopyClamp();
-extern "C" void GXSetDispCopyYScale();
-extern "C" void GXSetCopyClear();
-extern "C" void GXSetCopyFilter();
-extern "C" void GXSetDispCopyGamma();
-extern "C" void GXClearBoundingBox();
-extern "C" void GXSetChanAmbColor();
-extern "C" void GXSetChanMatColor();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXInitTexObj();
-extern "C" void GXGetTexObjFmt();
-extern "C" void GXGetTexObjMipMap();
-extern "C" void GXLoadTexObj();
-extern "C" void GXInitTexCacheRegion();
-extern "C" void GXInitTlutRegion();
-extern "C" void GXInvalidateTexAll();
-extern "C" void GXSetTexRegionCallback();
-extern "C" void GXSetTlutRegionCallback();
-extern "C" void __GXSetTmemConfig();
-extern "C" void GXSetIndTexCoordScale();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevDirect();
-extern "C" void __GXSetIndirectMask();
-extern "C" void __GXFlushTextureState();
-extern "C" void GXSetTevOp();
-extern "C" void GXSetTevKColorSel();
-extern "C" void GXSetTevKAlphaSel();
-extern "C" void GXSetTevSwapMode();
-extern "C" void GXSetTevSwapModeTable();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetZTexture();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetColorUpdate();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetPixelFmt();
-extern "C" void GXSetDither();
-extern "C" void GXSetDstAlpha();
-extern "C" void GXSetFieldMask();
-extern "C" void GXSetFieldMode();
-extern "C" void GXSetProjectionv();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXLoadNrmMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXLoadTexMtxImm();
-extern "C" void GXSetViewport();
-extern "C" void GXSetScissor();
-extern "C" void GXSetScissorBoxOffset();
-extern "C" void GXSetClipMode();
-extern "C" void GXSetGPMetric();
-extern "C" void GXClearGPMetric();
+extern "C" void PPCSync(); // 1
+extern "C" void PPCMfhid2(); // 1
+extern "C" void PPCMthid2(); // 1
+extern "C" void PPCMtwpar(); // 1
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSRegisterResetFunction(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void VIGetTvFormat(); // 1
+extern "C" void GXInitFifoBase(); // 1
+extern "C" void GXSetCPUFifo(); // 1
+extern "C" void GXSetGPFifo(); // 1
+extern "C" void GXSetBreakPtCallback(); // 1
+extern "C" void __GXFifoInit(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmtv(); // 1
+extern "C" void GXSetArray(); // 1
+extern "C" void GXInvalidateVtxCache(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXSetMisc(); // 1
+extern "C" void __GXAbort(); // 1
+extern "C" void GXPokeAlphaMode(); // 1
+extern "C" void GXPokeAlphaRead(); // 1
+extern "C" void GXPokeAlphaUpdate(); // 1
+extern "C" void GXPokeBlendMode(); // 1
+extern "C" void GXPokeColorUpdate(); // 1
+extern "C" void GXPokeDstAlpha(); // 1
+extern "C" void GXPokeDither(); // 1
+extern "C" void GXPokeZMode(); // 1
+extern "C" void GXSetDrawSyncCallback(); // 1
+extern "C" void GXSetDrawDoneCallback(); // 1
+extern "C" void __GXPEInit(); // 1
+extern "C" void GXSetLineWidth(); // 1
+extern "C" void GXSetPointSize(); // 1
+extern "C" void GXEnableTexOffsets(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetCoPlanar(); // 1
+extern "C" void GXSetDispCopySrc(); // 1
+extern "C" void GXSetDispCopyDst(); // 1
+extern "C" void GXSetDispCopyFrame2Field(); // 1
+extern "C" void GXSetCopyClamp(); // 1
+extern "C" void GXSetDispCopyYScale(); // 1
+extern "C" void GXSetCopyClear(); // 1
+extern "C" void GXSetCopyFilter(); // 1
+extern "C" void GXSetDispCopyGamma(); // 1
+extern "C" void GXClearBoundingBox(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXGetTexObjFmt(); // 1
+extern "C" void GXGetTexObjMipMap(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXInitTexCacheRegion(); // 1
+extern "C" void GXInitTlutRegion(); // 1
+extern "C" void GXInvalidateTexAll(); // 1
+extern "C" void GXSetTexRegionCallback(); // 1
+extern "C" void GXSetTlutRegionCallback(); // 1
+extern "C" void __GXSetTmemConfig(); // 1
+extern "C" void GXSetIndTexCoordScale(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevDirect(); // 1
+extern "C" void __GXSetIndirectMask(); // 1
+extern "C" void __GXFlushTextureState(); // 1
+extern "C" void GXSetTevOp(); // 1
+extern "C" void GXSetTevKColorSel(); // 1
+extern "C" void GXSetTevKAlphaSel(); // 1
+extern "C" void GXSetTevSwapMode(); // 1
+extern "C" void GXSetTevSwapModeTable(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetZTexture(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetColorUpdate(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetPixelFmt(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXSetDstAlpha(); // 1
+extern "C" void GXSetFieldMask(); // 1
+extern "C" void GXSetFieldMode(); // 1
+extern "C" void GXSetProjectionv(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXLoadNrmMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void GXSetScissorBoxOffset(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void GXSetGPMetric(); // 1
+extern "C" void GXClearGPMetric(); // 1
 
-extern "C" void PPCSync();
-extern "C" void PPCMfhid2();
-extern "C" void PPCMthid2();
-extern "C" void PPCMtwpar();
-extern "C" void OSRegisterVersion();
-extern "C" void OSRegisterResetFunction();
-extern "C" void OSGetTime();
-extern "C" void VIGetTvFormat();
-extern "C" void GXInitFifoBase();
-extern "C" void GXSetCPUFifo();
-extern "C" void GXSetGPFifo();
-extern "C" void GXSetBreakPtCallback();
-extern "C" void __GXFifoInit();
-extern "C" void GXClearVtxDesc();
-extern "C" void GXSetVtxAttrFmtv();
-extern "C" void GXSetArray();
-extern "C" void GXInvalidateVtxCache();
-extern "C" void GXSetTexCoordGen2();
-extern "C" void GXSetNumTexGens();
-extern "C" void GXSetMisc();
-extern "C" void __GXAbort();
-extern "C" void GXPokeAlphaMode();
-extern "C" void GXPokeAlphaRead();
-extern "C" void GXPokeAlphaUpdate();
-extern "C" void GXPokeBlendMode();
-extern "C" void GXPokeColorUpdate();
-extern "C" void GXPokeDstAlpha();
-extern "C" void GXPokeDither();
-extern "C" void GXPokeZMode();
-extern "C" void GXSetDrawSyncCallback();
-extern "C" void GXSetDrawDoneCallback();
-extern "C" void __GXPEInit();
-extern "C" void GXSetLineWidth();
-extern "C" void GXSetPointSize();
-extern "C" void GXEnableTexOffsets();
-extern "C" void GXSetCullMode();
-extern "C" void GXSetCoPlanar();
-extern "C" void GXSetDispCopySrc();
-extern "C" void GXSetDispCopyDst();
-extern "C" void GXSetDispCopyFrame2Field();
-extern "C" void GXSetCopyClamp();
-extern "C" void GXSetDispCopyYScale();
-extern "C" void GXSetCopyClear();
-extern "C" void GXSetCopyFilter();
-extern "C" void GXSetDispCopyGamma();
-extern "C" void GXClearBoundingBox();
-extern "C" void GXSetChanAmbColor();
-extern "C" void GXSetChanMatColor();
-extern "C" void GXSetNumChans();
-extern "C" void GXSetChanCtrl();
-extern "C" void GXInitTexObj();
-extern "C" void GXGetTexObjFmt();
-extern "C" void GXGetTexObjMipMap();
-extern "C" void GXLoadTexObj();
-extern "C" void GXInitTexCacheRegion();
-extern "C" void GXInitTlutRegion();
-extern "C" void GXInvalidateTexAll();
-extern "C" void GXSetTexRegionCallback();
-extern "C" void GXSetTlutRegionCallback();
-extern "C" void __GXSetTmemConfig();
-extern "C" void GXSetIndTexCoordScale();
-extern "C" void GXSetNumIndStages();
-extern "C" void GXSetTevDirect();
-extern "C" void __GXSetIndirectMask();
-extern "C" void __GXFlushTextureState();
-extern "C" void GXSetTevOp();
-extern "C" void GXSetTevKColorSel();
-extern "C" void GXSetTevKAlphaSel();
-extern "C" void GXSetTevSwapMode();
-extern "C" void GXSetTevSwapModeTable();
-extern "C" void GXSetAlphaCompare();
-extern "C" void GXSetZTexture();
-extern "C" void GXSetTevOrder();
-extern "C" void GXSetNumTevStages();
-extern "C" void GXSetFog();
-extern "C" void GXSetFogRangeAdj();
-extern "C" void GXSetBlendMode();
-extern "C" void GXSetColorUpdate();
-extern "C" void GXSetAlphaUpdate();
-extern "C" void GXSetZMode();
-extern "C" void GXSetZCompLoc();
-extern "C" void GXSetPixelFmt();
-extern "C" void GXSetDither();
-extern "C" void GXSetDstAlpha();
-extern "C" void GXSetFieldMask();
-extern "C" void GXSetFieldMode();
-extern "C" void GXSetProjectionv();
-extern "C" void GXLoadPosMtxImm();
-extern "C" void GXLoadNrmMtxImm();
-extern "C" void GXSetCurrentMtx();
-extern "C" void GXLoadTexMtxImm();
-extern "C" void GXSetViewport();
-extern "C" void GXSetScissor();
-extern "C" void GXSetScissorBoxOffset();
-extern "C" void GXSetClipMode();
-extern "C" void GXSetGPMetric();
-extern "C" void GXClearGPMetric();
+extern "C" void PPCSync(); // 1
+extern "C" void PPCMfhid2(); // 1
+extern "C" void PPCMthid2(); // 1
+extern "C" void PPCMtwpar(); // 1
+extern "C" void OSRegisterVersion(); // 1
+extern "C" void OSRegisterResetFunction(); // 1
+extern "C" void OSGetTime(); // 1
+extern "C" void VIGetTvFormat(); // 1
+extern "C" void GXInitFifoBase(); // 1
+extern "C" void GXSetCPUFifo(); // 1
+extern "C" void GXSetGPFifo(); // 1
+extern "C" void GXSetBreakPtCallback(); // 1
+extern "C" void __GXFifoInit(); // 1
+extern "C" void GXClearVtxDesc(); // 1
+extern "C" void GXSetVtxAttrFmtv(); // 1
+extern "C" void GXSetArray(); // 1
+extern "C" void GXInvalidateVtxCache(); // 1
+extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXSetMisc(); // 1
+extern "C" void __GXAbort(); // 1
+extern "C" void GXPokeAlphaMode(); // 1
+extern "C" void GXPokeAlphaRead(); // 1
+extern "C" void GXPokeAlphaUpdate(); // 1
+extern "C" void GXPokeBlendMode(); // 1
+extern "C" void GXPokeColorUpdate(); // 1
+extern "C" void GXPokeDstAlpha(); // 1
+extern "C" void GXPokeDither(); // 1
+extern "C" void GXPokeZMode(); // 1
+extern "C" void GXSetDrawSyncCallback(); // 1
+extern "C" void GXSetDrawDoneCallback(); // 1
+extern "C" void __GXPEInit(); // 1
+extern "C" void GXSetLineWidth(); // 1
+extern "C" void GXSetPointSize(); // 1
+extern "C" void GXEnableTexOffsets(); // 1
+extern "C" void GXSetCullMode(); // 1
+extern "C" void GXSetCoPlanar(); // 1
+extern "C" void GXSetDispCopySrc(); // 1
+extern "C" void GXSetDispCopyDst(); // 1
+extern "C" void GXSetDispCopyFrame2Field(); // 1
+extern "C" void GXSetCopyClamp(); // 1
+extern "C" void GXSetDispCopyYScale(); // 1
+extern "C" void GXSetCopyClear(); // 1
+extern "C" void GXSetCopyFilter(); // 1
+extern "C" void GXSetDispCopyGamma(); // 1
+extern "C" void GXClearBoundingBox(); // 1
+extern "C" void GXSetChanAmbColor(); // 1
+extern "C" void GXSetChanMatColor(); // 1
+extern "C" void GXSetNumChans(); // 1
+extern "C" void GXSetChanCtrl(); // 1
+extern "C" void GXInitTexObj(); // 1
+extern "C" void GXGetTexObjFmt(); // 1
+extern "C" void GXGetTexObjMipMap(); // 1
+extern "C" void GXLoadTexObj(); // 1
+extern "C" void GXInitTexCacheRegion(); // 1
+extern "C" void GXInitTlutRegion(); // 1
+extern "C" void GXInvalidateTexAll(); // 1
+extern "C" void GXSetTexRegionCallback(); // 1
+extern "C" void GXSetTlutRegionCallback(); // 1
+extern "C" void __GXSetTmemConfig(); // 1
+extern "C" void GXSetIndTexCoordScale(); // 1
+extern "C" void GXSetNumIndStages(); // 1
+extern "C" void GXSetTevDirect(); // 1
+extern "C" void __GXSetIndirectMask(); // 1
+extern "C" void __GXFlushTextureState(); // 1
+extern "C" void GXSetTevOp(); // 1
+extern "C" void GXSetTevKColorSel(); // 1
+extern "C" void GXSetTevKAlphaSel(); // 1
+extern "C" void GXSetTevSwapMode(); // 1
+extern "C" void GXSetTevSwapModeTable(); // 1
+extern "C" void GXSetAlphaCompare(); // 1
+extern "C" void GXSetZTexture(); // 1
+extern "C" void GXSetTevOrder(); // 1
+extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetFog(); // 1
+extern "C" void GXSetFogRangeAdj(); // 1
+extern "C" void GXSetBlendMode(); // 1
+extern "C" void GXSetColorUpdate(); // 1
+extern "C" void GXSetAlphaUpdate(); // 1
+extern "C" void GXSetZMode(); // 1
+extern "C" void GXSetZCompLoc(); // 1
+extern "C" void GXSetPixelFmt(); // 1
+extern "C" void GXSetDither(); // 1
+extern "C" void GXSetDstAlpha(); // 1
+extern "C" void GXSetFieldMask(); // 1
+extern "C" void GXSetFieldMode(); // 1
+extern "C" void GXSetProjectionv(); // 1
+extern "C" void GXLoadPosMtxImm(); // 1
+extern "C" void GXLoadNrmMtxImm(); // 1
+extern "C" void GXSetCurrentMtx(); // 1
+extern "C" void GXLoadTexMtxImm(); // 1
+extern "C" void GXSetViewport(); // 1
+extern "C" void GXSetScissor(); // 1
+extern "C" void GXSetScissorBoxOffset(); // 1
+extern "C" void GXSetClipMode(); // 1
+extern "C" void GXSetGPMetric(); // 1
+extern "C" void GXClearGPMetric(); // 1
 SECTION_DATA extern u8 GXNtsc480IntDf[60];
 SECTION_DATA extern u8 GXMpal480IntDf[60];
 SECTION_DATA extern u8 GXPal528IntDf[60];

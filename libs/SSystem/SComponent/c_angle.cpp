@@ -9,17 +9,14 @@
 // Types:
 // 
 
-// build cSAngle (['cSAngle']) False/False
-/* top-level dependencies (begin ['cSAngle']) */
-/* top-level dependencies (end ['cSAngle']) */
 struct cSAngle {
 	/* 80030510 */ ~cSAngle();
-	/* 80270F68 */ cSAngle(cSAngle const&);
 	/* 80270F98 */ cSAngle(s16);
 	/* 80270FC8 */ cSAngle(f32);
-	/* 80270FF8 */ void Val(cSAngle const&);
+	/* 80270F68 */ cSAngle(cSAngle const&);
 	/* 80271004 */ void Val(s16);
 	/* 8027100C */ void Val(f32);
+	/* 80270FF8 */ void Val(cSAngle const&);
 	/* 80271030 */ void Degree() const;
 	/* 80271064 */ void Radian() const;
 	/* 80271098 */ void Norm() const;
@@ -27,21 +24,18 @@ struct cSAngle {
 	/* 802710E8 */ void Inv() const;
 	/* 802710F8 */ void Sin() const;
 	/* 80271120 */ void Cos() const;
+	/* 802711A4 */ void operator-(cSAngle const&) const;
+	/* 80271228 */ void operator-(s16) const;
 	/* 80271148 */ void operator-() const;
 	/* 80271174 */ void operator+(cSAngle const&) const;
-	/* 802711A4 */ void operator-(cSAngle const&) const;
-	/* 802711D4 */ void operator+=(cSAngle const&);
-	/* 802711E8 */ void operator-=(cSAngle const&);
 	/* 802711FC */ void operator+(s16) const;
-	/* 80271228 */ void operator-(s16) const;
+	/* 802711D4 */ void operator+=(cSAngle const&);
 	/* 80271254 */ void operator+=(s16);
+	/* 802711E8 */ void operator-=(cSAngle const&);
 	/* 80271264 */ void operator*(f32) const;
 	/* 802712B4 */ void operator*=(f32);
 };
 
-// build cDegree (['cDegree']) False/False
-/* top-level dependencies (begin ['cDegree']) */
-/* top-level dependencies (end ['cDegree']) */
 struct cDegree {
 	/* 8027134C */ cDegree(f32);
 	/* 8027137C */ void Formal();
@@ -52,35 +46,19 @@ struct cDegree {
 	/* 80271440 */ void Tan() const;
 };
 
-// build cSPolar (['cSPolar']) False/False
-// build cXyz (['cXyz']) False/False
-/* top-level dependencies (begin ['cXyz']) */
-/* top-level dependencies (end ['cXyz']) */
 struct cXyz {
 };
 
-// build cSGlobe (['cSGlobe']) False/False
-// build cSAngle (['cSAngle']) True/True
-// build cXyz (['cXyz']) True/True
-// build cSPolar (['cSPolar']) True/False
 struct cSPolar;
-/* top-level dependencies (begin ['cSGlobe']) */
-// outer dependency: ('cSAngle',)
-// outer dependency: ('cXyz',)
-// outer dependency: ('cSPolar',)
-/* top-level dependencies (end ['cSGlobe']) */
 struct cSGlobe {
-	// ('cSAngle',)
-	// ('cXyz',)
-	// ('cSPolar',)
-	/* 802717F0 */ cSGlobe(cSGlobe const&);
 	/* 80271820 */ cSGlobe(f32, s16, s16);
-	/* 80271850 */ cSGlobe(f32, cSAngle const&, cSAngle const&);
 	/* 80271880 */ cSGlobe(cXyz const&);
+	/* 802717F0 */ cSGlobe(cSGlobe const&);
+	/* 80271850 */ cSGlobe(f32, cSAngle const&, cSAngle const&);
 	/* 802718B0 */ void Formal();
-	/* 8027196C */ void Val(cSGlobe const&);
 	/* 802719A4 */ void Val(f32, s16, s16);
 	/* 80271A08 */ void Val(f32, cSAngle const&, cSAngle const&);
+	/* 8027196C */ void Val(cSGlobe const&);
 	/* 80271A70 */ void Val(cXyz const&);
 	/* 80271AB4 */ void Xyz() const;
 	/* 80271AF4 */ void Polar(cSPolar*) const;
@@ -88,13 +66,7 @@ struct cSGlobe {
 	/* 80271B7C */ void Invert();
 };
 
-/* top-level dependencies (begin ['cSPolar']) */
-// outer dependency: ('cXyz',)
-// outer dependency: ('cSGlobe',)
-/* top-level dependencies (end ['cSPolar']) */
 struct cSPolar {
-	// ('cXyz',)
-	// ('cSGlobe',)
 	/* 80271468 */ cSPolar(cXyz const&);
 	/* 80271498 */ void Formal();
 	/* 80271558 */ void Val(f32, s16, s16);
@@ -103,70 +75,75 @@ struct cSPolar {
 	/* 802717B4 */ void Globe(cSGlobe*) const;
 };
 
-// build cXyz (['cXyz']) True/True
-// build cSGlobe (['cSGlobe']) True/True
+struct cAngle {
+	/*          */ template <typename A1>
+	/*          */ void Adjust(/* f32, f32, f32 */);
+	/* 80271BA8 */ /* Adjust<f32> */
+	void Adjust__template0(f32, f32, f32);
+
+};
+
 // 
 // Forward References:
 // 
 
-void operator+(s16, cSAngle const&);
-void operator-(s16, cSAngle const&);
-extern "C" static void func_80271BA8();
-extern "C" void __sinit_c_angle_cpp();
+void operator+(s16, cSAngle const&); // 2
+void operator-(s16, cSAngle const&); // 2
+extern "C" void __sinit_c_angle_cpp(); // 1
 
-extern "C" void __ct__7cSAngleFRC7cSAngle();
-extern "C" void __ct__7cSAngleFs();
-extern "C" void __ct__7cSAngleFf();
-extern "C" void Val__7cSAngleFRC7cSAngle();
-extern "C" void Val__7cSAngleFs();
-extern "C" void Val__7cSAngleFf();
-extern "C" void Degree__7cSAngleCFv();
-extern "C" void Radian__7cSAngleCFv();
-extern "C" void Norm__7cSAngleCFv();
-extern "C" void Abs__7cSAngleCFv();
-extern "C" void Inv__7cSAngleCFv();
-extern "C" void Sin__7cSAngleCFv();
-extern "C" void Cos__7cSAngleCFv();
-extern "C" void __mi__7cSAngleCFv();
-extern "C" void __pl__7cSAngleCFRC7cSAngle();
-extern "C" void __mi__7cSAngleCFRC7cSAngle();
-extern "C" void __apl__7cSAngleFRC7cSAngle();
-extern "C" void __ami__7cSAngleFRC7cSAngle();
-extern "C" void __pl__7cSAngleCFs();
-extern "C" void __mi__7cSAngleCFs();
-extern "C" void __apl__7cSAngleFs();
-extern "C" void __ml__7cSAngleCFf();
-extern "C" void __amu__7cSAngleFf();
-extern "C" void __pl__FsRC7cSAngle();
-extern "C" void __mi__FsRC7cSAngle();
-extern "C" void __ct__7cDegreeFf();
-extern "C" void Formal__7cDegreeFv();
-extern "C" void Val__7cDegreeFf();
-extern "C" void Radian__7cDegreeCFv();
-extern "C" void Sin__7cDegreeCFv();
-extern "C" void Cos__7cDegreeCFv();
-extern "C" void Tan__7cDegreeCFv();
-extern "C" void __ct__7cSPolarFRC4cXyz();
-extern "C" void Formal__7cSPolarFv();
-extern "C" void Val__7cSPolarFfss();
-extern "C" void Val__7cSPolarFRC4cXyz();
-extern "C" void Xyz__7cSPolarCFv();
-extern "C" void Globe__7cSPolarCFP7cSGlobe();
-extern "C" void __ct__7cSGlobeFRC7cSGlobe();
-extern "C" void __ct__7cSGlobeFfss();
-extern "C" void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle();
-extern "C" void __ct__7cSGlobeFRC4cXyz();
-extern "C" void Formal__7cSGlobeFv();
-extern "C" void Val__7cSGlobeFRC7cSGlobe();
-extern "C" void Val__7cSGlobeFfss();
-extern "C" void Val__7cSGlobeFfRC7cSAngleRC7cSAngle();
-extern "C" void Val__7cSGlobeFRC4cXyz();
-extern "C" void Xyz__7cSGlobeCFv();
-extern "C" void Polar__7cSGlobeCFP7cSPolar();
-extern "C" void Norm__7cSGlobeCFv();
-extern "C" void Invert__7cSGlobeFv();
-extern "C" static void func_80271BA8();
-extern "C" void __sinit_c_angle_cpp();
+extern "C" void __ct__7cSAngleFRC7cSAngle(); // 1
+extern "C" void __ct__7cSAngleFs(); // 1
+extern "C" void __ct__7cSAngleFf(); // 1
+extern "C" void Val__7cSAngleFRC7cSAngle(); // 1
+extern "C" void Val__7cSAngleFs(); // 1
+extern "C" void Val__7cSAngleFf(); // 1
+extern "C" void Degree__7cSAngleCFv(); // 1
+extern "C" void Radian__7cSAngleCFv(); // 1
+extern "C" void Norm__7cSAngleCFv(); // 1
+extern "C" void Abs__7cSAngleCFv(); // 1
+extern "C" void Inv__7cSAngleCFv(); // 1
+extern "C" void Sin__7cSAngleCFv(); // 1
+extern "C" void Cos__7cSAngleCFv(); // 1
+extern "C" void __mi__7cSAngleCFv(); // 1
+extern "C" void __pl__7cSAngleCFRC7cSAngle(); // 1
+extern "C" void __mi__7cSAngleCFRC7cSAngle(); // 1
+extern "C" void __apl__7cSAngleFRC7cSAngle(); // 1
+extern "C" void __ami__7cSAngleFRC7cSAngle(); // 1
+extern "C" void __pl__7cSAngleCFs(); // 1
+extern "C" void __mi__7cSAngleCFs(); // 1
+extern "C" void __apl__7cSAngleFs(); // 1
+extern "C" void __ml__7cSAngleCFf(); // 1
+extern "C" void __amu__7cSAngleFf(); // 1
+extern "C" void __pl__FsRC7cSAngle(); // 1
+extern "C" void __mi__FsRC7cSAngle(); // 1
+extern "C" void __ct__7cDegreeFf(); // 1
+extern "C" void Formal__7cDegreeFv(); // 1
+extern "C" void Val__7cDegreeFf(); // 1
+extern "C" void Radian__7cDegreeCFv(); // 1
+extern "C" void Sin__7cDegreeCFv(); // 1
+extern "C" void Cos__7cDegreeCFv(); // 1
+extern "C" void Tan__7cDegreeCFv(); // 1
+extern "C" void __ct__7cSPolarFRC4cXyz(); // 1
+extern "C" void Formal__7cSPolarFv(); // 1
+extern "C" void Val__7cSPolarFfss(); // 1
+extern "C" void Val__7cSPolarFRC4cXyz(); // 1
+extern "C" void Xyz__7cSPolarCFv(); // 1
+extern "C" void Globe__7cSPolarCFP7cSGlobe(); // 1
+extern "C" void __ct__7cSGlobeFRC7cSGlobe(); // 1
+extern "C" void __ct__7cSGlobeFfss(); // 1
+extern "C" void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle(); // 1
+extern "C" void __ct__7cSGlobeFRC4cXyz(); // 1
+extern "C" void Formal__7cSGlobeFv(); // 1
+extern "C" void Val__7cSGlobeFRC7cSGlobe(); // 1
+extern "C" void Val__7cSGlobeFfss(); // 1
+extern "C" void Val__7cSGlobeFfRC7cSAngleRC7cSAngle(); // 1
+extern "C" void Val__7cSGlobeFRC4cXyz(); // 1
+extern "C" void Xyz__7cSGlobeCFv(); // 1
+extern "C" void Polar__7cSGlobeCFP7cSPolar(); // 1
+extern "C" void Norm__7cSGlobeCFv(); // 1
+extern "C" void Invert__7cSGlobeFv(); // 1
+extern "C" void func_80271BA8(); // 1
+extern "C" void __sinit_c_angle_cpp(); // 1
 SECTION_BSS extern u8 lit_2401[12];
 SECTION_BSS extern u8 lit_2402[12];
 SECTION_BSS extern u8 lit_2403[12];
@@ -194,20 +171,20 @@ SECTION_SDATA2 extern f32 c_angle__lit_2744;
 // External References:
 // 
 
-void cM_atan2f(f32, f32);
-extern "C" void __register_global_object();
-extern "C" void cos();
-extern "C" void sin();
-extern "C" void tan();
-extern "C" void sqrt();
+void cM_atan2f(f32, f32); // 2
+extern "C" void __register_global_object(); // 1
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
+extern "C" void tan(); // 1
+extern "C" void sqrt(); // 1
 
-extern "C" void __dt__7cSAngleFv();
-extern "C" void cM_atan2f__Fff();
-extern "C" void __register_global_object();
-extern "C" void cos();
-extern "C" void sin();
-extern "C" void tan();
-extern "C" void sqrt();
+extern "C" void __dt__7cSAngleFv(); // 1
+extern "C" void cM_atan2f__Fff(); // 1
+extern "C" void __register_global_object(); // 1
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
+extern "C" void tan(); // 1
+extern "C" void sqrt(); // 1
 
 // 
 // Declarations:
@@ -827,7 +804,7 @@ asm void cSGlobe::Invert() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80271BA8() {
+asm void cAngle::Adjust__template0(f32 field_0, f32 field_1, f32 field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_angle/func_80271BA8.s"
 }

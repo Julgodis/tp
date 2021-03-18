@@ -9,23 +9,11 @@
 // Types:
 // 
 
-// build JStudio (['JStudio']) False/False
-// build Vec (['Vec']) False/False
-/* top-level dependencies (begin ['Vec']) */
-/* top-level dependencies (end ['Vec']) */
 struct Vec {
 };
 
-/* top-level dependencies (begin ['JStudio']) */
-// outer dependency: ('Vec',)
-/* top-level dependencies (end ['JStudio']) */
 namespace JStudio {
-	// build math (['JStudio', 'math']) False/False
-	/* dependencies (begin ['JStudio', 'math']) */
-	// inner dependency: 0 ('Vec',) (for ['JStudio', 'math'])
-	/* dependencies (end ['JStudio', 'math']) */
 	struct math {
-		// ('Vec',)
 		/* 802859DC */ void getRotation_xyz(f32 (* )[4], f32, f32, f32);
 		/* 80285B44 */ void getTransformation_SRxyzT(f32 (* )[4], Vec const&, Vec const&, Vec const&);
 		/* 80285BCC */ void getFromTransformation_SRxyzT(Vec*, Vec*, Vec*, f32 const (* )[4]);
@@ -33,15 +21,14 @@ namespace JStudio {
 
 };
 
-// build Vec (['Vec']) True/True
 // 
 // Forward References:
 // 
 
 
-extern "C" void getRotation_xyz__Q27JStudio4mathFPA4_ffff();
-extern "C" void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec();
-extern "C" void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf();
+extern "C" void getRotation_xyz__Q27JStudio4mathFPA4_ffff(); // 1
+extern "C" void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec(); // 1
+extern "C" void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf(); // 1
 SECTION_SDATA2 extern f32 jstudio_math__lit_488;
 SECTION_SDATA2 extern u8 jstudio_math__lit_489[4];
 SECTION_SDATA2 extern u8 lit_623[8];
@@ -55,31 +42,31 @@ SECTION_SDATA2 extern f64 jstudio_math__lit_628;
 // External References:
 // 
 
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXTransApply();
-extern "C" void PSMTXScale();
-extern "C" void PSVECMag();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void cos();
-extern "C" void sin();
-extern "C" void asin();
-extern "C" void atan2();
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXTransApply(); // 1
+extern "C" void PSMTXScale(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
+extern "C" void asin(); // 1
+extern "C" void atan2(); // 1
 
-extern "C" void PSMTXConcat();
-extern "C" void PSMTXTransApply();
-extern "C" void PSMTXScale();
-extern "C" void PSVECMag();
-extern "C" void _savegpr_28();
-extern "C" void _savegpr_29();
-extern "C" void _restgpr_28();
-extern "C" void _restgpr_29();
-extern "C" void cos();
-extern "C" void sin();
-extern "C" void asin();
-extern "C" void atan2();
+extern "C" void PSMTXConcat(); // 1
+extern "C" void PSMTXTransApply(); // 1
+extern "C" void PSMTXScale(); // 1
+extern "C" void PSVECMag(); // 1
+extern "C" void _savegpr_28(); // 1
+extern "C" void _savegpr_29(); // 1
+extern "C" void _restgpr_28(); // 1
+extern "C" void _restgpr_29(); // 1
+extern "C" void cos(); // 1
+extern "C" void sin(); // 1
+extern "C" void asin(); // 1
+extern "C" void atan2(); // 1
 SECTION_SDATA extern u32 __float_epsilon;
 
 // 
