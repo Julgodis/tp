@@ -17,9 +17,9 @@ lbl_8004AB1C:
 /* 8004AB58 0000003C  7F E7 FB 78 */	mr r7, r31
 /* 8004AB5C 00000040  48 31 73 B9 */	bl __construct_new_array
 /* 8004AB60 00000044  90 6D 89 18 */	stw r3, mModel__18dPa_modelEcallBack(r13)
-/* 8004AB64 00000048  9B CD 89 1C */	stb r30, struct_80450E9C+0x0(r13)
+/* 8004AB64 00000048  9B CD 89 1C */	stb r30, -0x76e4(r13)
 /* 8004AB68 0000004C  38 00 00 00 */	li r0, 0
-/* 8004AB6C 00000050  98 0D 89 1D */	stb r0, struct_80450E9C+0x1(r13)
+/* 8004AB6C 00000050  98 0D 89 1D */	stb r0, -0x76e3(r13)
 /* 8004AB70 00000054  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8004AB74 00000058  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8004AB78 0000005C  80 01 00 14 */	lwz r0, 0x14(r1)

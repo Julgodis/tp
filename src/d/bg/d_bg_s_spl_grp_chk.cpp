@@ -41,18 +41,18 @@ struct cBgS_PolyInfo {
 // Forward References:
 // 
 
-extern "C" static void func_80078D4C(); // 1
-extern "C" static void func_80078D54(); // 1
-extern "C" static void func_80078D5C(); // 1
+extern "C" void func_80078D4C(); // 1
+extern "C" void func_80078D54(); // 1
+extern "C" void func_80078D5C(); // 1
 
 extern "C" void Set__14dBgS_SplGrpChkFR4cXyzf(); // 1
 extern "C" void __ct__14dBgS_SplGrpChkFv(); // 1
 extern "C" void __dt__14dBgS_SplGrpChkFv(); // 1
 extern "C" void Init__14dBgS_SplGrpChkFv(); // 1
-extern "C" static void func_80078D4C(); // 1
-extern "C" static void func_80078D54(); // 1
-extern "C" static void func_80078D5C(); // 1
-SECTION_DATA extern void*const __vt__14dBgS_SplGrpChk[12];
+extern "C" void func_80078D4C(); // 1
+extern "C" void func_80078D54(); // 1
+extern "C" void func_80078D5C(); // 1
+SECTION_DATA extern void* const __vt__14dBgS_SplGrpChk[12];
 SECTION_SDATA2 extern u8 d_bg_d_bg_s_spl_grp_chk__lit_319[4];
 SECTION_SDATA2 extern f32 d_bg_d_bg_s_spl_grp_chk__lit_320;
 
@@ -77,7 +77,7 @@ extern "C" void __dl__FPv(); // 1
 // Declarations:
 // 
 
-/* 80078B90-80078BB0 0020+00 rc=2 efc=2 .text      Set__14dBgS_SplGrpChkFR4cXyzf                                */
+/* 80078B90-80078BB0 0020+00 rc=0 efc=0 .text      Set__14dBgS_SplGrpChkFR4cXyzf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -89,31 +89,31 @@ asm void dBgS_SplGrpChk::Set(cXyz& field_0, f32 field_1) {
 
 
 /* ############################################################################################## */
-/* 803ABA08-803ABA38 0030+00 rc=2 efc=0 .data      __vt__14dBgS_SplGrpChk                                       */
+/* 803ABA08-803ABA38 0030+00 rc=0 efc=0 .data      __vt__14dBgS_SplGrpChk                                       */
 void* const __vt__14dBgS_SplGrpChk[12] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__14dBgS_SplGrpChkFv,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)func_80078D4C,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)func_80078D5C,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)func_80078D54,
 };
 
-/* 804526E8-804526EC 0004+00 rc=1 efc=0 .sdata2    @319                                                         */
+/* 804526E8-804526EC 0004+00 rc=0 efc=0 .sdata2    @319                                                         */
 u8 d_bg_d_bg_s_spl_grp_chk__lit_319[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804526EC-804526F0 0004+00 rc=1 efc=0 .sdata2    @320                                                         */
+/* 804526EC-804526F0 0004+00 rc=0 efc=0 .sdata2    @320                                                         */
 f32 d_bg_d_bg_s_spl_grp_chk__lit_320 = 1000000000.0f;
 
-/* 80078BB0-80078C78 00C8+00 rc=1 efc=1 .text      __ct__14dBgS_SplGrpChkFv                                     */
+/* 80078BB0-80078C78 00C8+00 rc=0 efc=0 .text      __ct__14dBgS_SplGrpChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +124,7 @@ asm dBgS_SplGrpChk::dBgS_SplGrpChk() {
 #pragma pop
 
 
-/* 80078C78-80078D0C 0094+00 rc=6 efc=2 .text      __dt__14dBgS_SplGrpChkFv                                     */
+/* 80078C78-80078D0C 0094+00 rc=0 efc=0 .text      __dt__14dBgS_SplGrpChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +135,7 @@ asm dBgS_SplGrpChk::~dBgS_SplGrpChk() {
 #pragma pop
 
 
-/* 80078D0C-80078D4C 0040+00 rc=1 efc=1 .text      Init__14dBgS_SplGrpChkFv                                     */
+/* 80078D0C-80078D4C 0040+00 rc=0 efc=0 .text      Init__14dBgS_SplGrpChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,33 +146,33 @@ asm void dBgS_SplGrpChk::Init() {
 #pragma pop
 
 
-/* 80078D4C-80078D54 0008+00 rc=1 efc=0 .text      @16@__dt__14dBgS_SplGrpChkFv                                 */
+/* 80078D4C-80078D54 0008+00 rc=0 efc=0 .text      @16@__dt__14dBgS_SplGrpChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80078D4C() {
+extern "C" asm void func_80078D4C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_spl_grp_chk/func_80078D4C.s"
 }
 #pragma pop
 
 
-/* 80078D54-80078D5C 0008+00 rc=1 efc=0 .text      @52@__dt__14dBgS_SplGrpChkFv                                 */
+/* 80078D54-80078D5C 0008+00 rc=0 efc=0 .text      @52@__dt__14dBgS_SplGrpChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80078D54() {
+extern "C" asm void func_80078D54() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_spl_grp_chk/func_80078D54.s"
 }
 #pragma pop
 
 
-/* 80078D5C-80078D64 0008+00 rc=1 efc=0 .text      @36@__dt__14dBgS_SplGrpChkFv                                 */
+/* 80078D5C-80078D64 0008+00 rc=0 efc=0 .text      @36@__dt__14dBgS_SplGrpChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80078D5C() {
+extern "C" asm void func_80078D5C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_spl_grp_chk/func_80078D5C.s"
 }

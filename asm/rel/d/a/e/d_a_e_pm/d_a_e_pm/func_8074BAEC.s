@@ -1,3 +1,0 @@
-lbl_8074BAEC:
-/* 8074BAEC 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 8074BAF0 00000004  4B FF 9E 08 */	b __dt__14dBgS_ObjGndChkFv

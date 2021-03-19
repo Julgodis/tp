@@ -9,24 +9,24 @@
 // Types:
 // 
 
-struct _GXTexMapID {
+struct ResTIMG {
 };
 
 struct _GXTlut {
 };
 
-struct JUTTransparency {
+struct _GXTexMapID {
 };
 
 struct _GXTlutFmt {
 };
 
+struct JUTTransparency {
+};
+
 struct JUTPalette {
 	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
 	/* 802DE95C */ void load();
-};
-
-struct ResTIMG {
 };
 
 struct JUTTexture {
@@ -90,7 +90,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 802DE234-802DE2A8 0074+00 rc=30 efc=30 .text      __dt__10JUTTextureFv                                         */
+/* 802DE234-802DE2A8 0074+00 rc=0 efc=0 .text      __dt__10JUTTextureFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +101,7 @@ asm JUTTexture::~JUTTexture() {
 #pragma pop
 
 
-/* 802DE2A8-802DE44C 01A4+00 rc=18 efc=18 .text      storeTIMG__10JUTTextureFPC7ResTIMGUc                         */
+/* 802DE2A8-802DE44C 01A4+00 rc=0 efc=0 .text      storeTIMG__10JUTTextureFPC7ResTIMGUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,7 +112,7 @@ asm void JUTTexture::storeTIMG(ResTIMG const* field_0, u8 field_1) {
 #pragma pop
 
 
-/* 802DE44C-802DE480 0034+00 rc=6 efc=6 .text      storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette              */
+/* 802DE44C-802DE480 0034+00 rc=0 efc=0 .text      storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,7 +123,7 @@ asm void JUTTexture::storeTIMG(ResTIMG const* field_0, JUTPalette* field_1) {
 #pragma pop
 
 
-/* 802DE480-802DE5B0 0130+00 rc=4 efc=3 .text      storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut      */
+/* 802DE480-802DE5B0 0130+00 rc=0 efc=0 .text      storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,7 +134,7 @@ asm void JUTTexture::storeTIMG(ResTIMG const* field_0, JUTPalette* field_1, _GXT
 #pragma pop
 
 
-/* 802DE5B0-802DE608 0058+00 rc=8 efc=7 .text      attachPalette__10JUTTextureFP10JUTPalette                    */
+/* 802DE5B0-802DE608 0058+00 rc=0 efc=0 .text      attachPalette__10JUTTextureFP10JUTPalette                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +145,7 @@ asm void JUTTexture::attachPalette(JUTPalette* field_0) {
 #pragma pop
 
 
-/* 802DE608-802DE658 0050+00 rc=1 efc=0 .text      init__10JUTTextureFv                                         */
+/* 802DE608-802DE658 0050+00 rc=0 efc=0 .text      init__10JUTTextureFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,19 +157,19 @@ asm void JUTTexture::init() {
 
 
 /* ############################################################################################## */
-/* 80455FD8-80455FDC 0004+00 rc=2 efc=0 .sdata2    @453                                                         */
+/* 80455FD8-80455FDC 0004+00 rc=0 efc=0 .sdata2    @453                                                         */
 f32 lit_453 = 0.125f;
 
-/* 80455FDC-80455FE0 0004+00 rc=2 efc=0 .sdata2    @454                                                         */
+/* 80455FDC-80455FE0 0004+00 rc=0 efc=0 .sdata2    @454                                                         */
 f32 lit_454 = 100.0f;
 
-/* 80455FE0-80455FE8 0008+00 rc=2 efc=0 .sdata2    @456                                                         */
+/* 80455FE0-80455FE8 0008+00 rc=0 efc=0 .sdata2    @456                                                         */
 f64 lit_456 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80455FE8-80455FF0 0008+00 rc=2 efc=0 .sdata2    @459                                                         */
+/* 80455FE8-80455FF0 0008+00 rc=0 efc=0 .sdata2    @459                                                         */
 f64 JUTTexture__lit_459 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802DE658-802DE744 00EC+00 rc=2 efc=0 .text      initTexObj__10JUTTextureFv                                   */
+/* 802DE658-802DE744 00EC+00 rc=0 efc=0 .text      initTexObj__10JUTTextureFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +180,7 @@ asm void JUTTexture::initTexObj() {
 #pragma pop
 
 
-/* 802DE744-802DE840 00FC+00 rc=2 efc=0 .text      initTexObj__10JUTTextureF7_GXTlut                            */
+/* 802DE744-802DE840 00FC+00 rc=0 efc=0 .text      initTexObj__10JUTTextureF7_GXTlut                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +191,7 @@ asm void JUTTexture::initTexObj(_GXTlut field_0) {
 #pragma pop
 
 
-/* 802DE840-802DE890 0050+00 rc=14 efc=14 .text      load__10JUTTextureF11_GXTexMapID                             */
+/* 802DE840-802DE890 0050+00 rc=0 efc=0 .text      load__10JUTTextureF11_GXTexMapID                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

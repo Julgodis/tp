@@ -39,25 +39,25 @@ struct dBgS {
 // Forward References:
 // 
 
-static void isLoadRoom(int); // 2
-static void daNocrm_create(daNocrm_c*); // 2
-static bool daNocrm_Delete(daNocrm_c*); // 2
-static void daNocrm_execute(daNocrm_c*); // 2
-static bool daNocrm_draw(daNocrm_c*); // 2
+void isLoadRoom(int); // 2
+void daNocrm_create(daNocrm_c*); // 2
+bool daNocrm_Delete(daNocrm_c*); // 2
+void daNocrm_execute(daNocrm_c*); // 2
+bool daNocrm_draw(daNocrm_c*); // 2
 
-extern "C" static void isLoadRoom__Fi(); // 1
+extern "C" void isLoadRoom__Fi(); // 1
 extern "C" void execute__9daNocrm_cFv(); // 1
 extern "C" void getRoomNo__9daNocrm_cFi(); // 1
-extern "C" static void daNocrm_create__FP9daNocrm_c(); // 1
-extern "C" static bool daNocrm_Delete__FP9daNocrm_c(); // 1
-extern "C" static void daNocrm_execute__FP9daNocrm_c(); // 1
-extern "C" static bool daNocrm_draw__FP9daNocrm_c(); // 1
-SECTION_RODATA extern const u8 d_a_d_a_no_chg_room__stringBase0[64];
-SECTION_DATA extern void*daNocrm_METHODS[8];
-SECTION_DATA extern void*g_profile_NO_CHG_ROOM[12];
+extern "C" void daNocrm_create__FP9daNocrm_c(); // 1
+extern "C" bool daNocrm_Delete__FP9daNocrm_c(); // 1
+extern "C" void daNocrm_execute__FP9daNocrm_c(); // 1
+extern "C" bool daNocrm_draw__FP9daNocrm_c(); // 1
+SECTION_RODATA extern const char* const d_a_d_a_no_chg_room__stringBase0;
+SECTION_DATA extern void* daNocrm_METHODS[8];
+SECTION_DATA extern void* g_profile_NO_CHG_ROOM[12];
 SECTION_SDATA2 extern u8 d_a_d_a_no_chg_room__lit_3762[4];
 SECTION_SDATA2 extern f32 d_a_d_a_no_chg_room__lit_3832;
-SECTION_SDATA2 extern f32 d_a_d_a_no_chg_room__lit_3833;
+SECTION_SDATA2 extern f32 d_a_d_a_no_chg_room__lit_3833[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -89,8 +89,8 @@ extern "C" void PSMTXMultVec(); // 1
 extern "C" void PSVECScale(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
-SECTION_DATA extern void*g_fopAc_Method[8];
-SECTION_DATA extern void*g_fpcLf_Method[6];
+SECTION_DATA extern void* g_fopAc_Method[8];
+SECTION_DATA extern void* g_fpcLf_Method[5 + 1 /* padding */];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_BSS extern u8 mGndCheck__11fopAcM_gc_c[84];
 SECTION_BSS extern u8 mStatus__20dStage_roomControl_c[65792];
@@ -102,11 +102,11 @@ SECTION_SBSS extern u8 data_80450D68[4];
 // Declarations:
 // 
 
-/* 801451EC-801452DC 00F0+00 rc=1 efc=0 .text      isLoadRoom__Fi                                               */
+/* 801451EC-801452DC 00F0+00 rc=0 efc=0 .text      isLoadRoom__Fi                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void isLoadRoom(int field_0) {
+asm void isLoadRoom(int field_0) {
 	nofralloc
 #include "asm/d/a/d_a_no_chg_room/isLoadRoom__Fi.s"
 }
@@ -114,12 +114,12 @@ asm static void isLoadRoom(int field_0) {
 
 
 /* ############################################################################################## */
-/* 804533C8-804533CC 0004+00 rc=2 efc=0 .sdata2    @3762                                                        */
+/* 804533C8-804533CC 0004+00 rc=0 efc=0 .sdata2    @3762                                                        */
 u8 d_a_d_a_no_chg_room__lit_3762[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801452DC-80145508 022C+00 rc=1 efc=0 .text      execute__9daNocrm_cFv                                        */
+/* 801452DC-80145508 022C+00 rc=0 efc=0 .text      execute__9daNocrm_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -130,7 +130,7 @@ asm void daNocrm_c::execute() {
 #pragma pop
 
 
-/* 80145508-801455A8 00A0+00 rc=1 efc=0 .text      getRoomNo__9daNocrm_cFi                                      */
+/* 80145508-801455A8 00A0+00 rc=0 efc=0 .text      getRoomNo__9daNocrm_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -142,67 +142,70 @@ asm void daNocrm_c::getRoomNo(int field_0) {
 
 
 /* ############################################################################################## */
-/* 80392640-80392680 003C+04 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80392640-80392680 003C+04 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80392640 = "部屋読み込み矩形：読み込みＩＤが−１ですので、自滅します！\n";
+const char* const stringBase_80392640 = "部屋読み込み矩形：読み込みＩＤが−１ですので、自滅します！\n";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_8039267C = "\0\0\0";
+char* const pad_8039267C = "\0\0\0";
 #pragma pop
 
-/* 804533CC-804533D0 0004+00 rc=1 efc=0 .sdata2    @3832                                                        */
+/* 804533CC-804533D0 0004+00 rc=0 efc=0 .sdata2    @3832                                                        */
 f32 d_a_d_a_no_chg_room__lit_3832 = 1000.0f;
 
-/* 804533D0-804533D8 0004+04 rc=1 efc=0 .sdata2    @3833                                                        */
-f32 d_a_d_a_no_chg_room__lit_3833 = 100.0f;
-/* padding 4 bytes */
+/* 804533D0-804533D8 0004+04 rc=0 efc=0 .sdata2    @3833                                                        */
+f32 d_a_d_a_no_chg_room__lit_3833[1 + 1 /* padding */] = {
+	100.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 801455A8-801456A4 00FC+00 rc=1 efc=0 .text      daNocrm_create__FP9daNocrm_c                                 */
+/* 801455A8-801456A4 00FC+00 rc=0 efc=0 .text      daNocrm_create__FP9daNocrm_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNocrm_create(daNocrm_c* field_0) {
+asm void daNocrm_create(daNocrm_c* field_0) {
 	nofralloc
 #include "asm/d/a/d_a_no_chg_room/daNocrm_create__FP9daNocrm_c.s"
 }
 #pragma pop
 
 
-/* 801456A4-801456AC 0008+00 rc=1 efc=0 .text      daNocrm_Delete__FP9daNocrm_c                                 */
-static bool daNocrm_Delete(daNocrm_c* field_0) {
+/* 801456A4-801456AC 0008+00 rc=0 efc=0 .text      daNocrm_Delete__FP9daNocrm_c                                 */
+bool daNocrm_Delete(daNocrm_c* field_0) {
 	return true;
 }
 
 
-/* 801456AC-801456CC 0020+00 rc=1 efc=0 .text      daNocrm_execute__FP9daNocrm_c                                */
+/* 801456AC-801456CC 0020+00 rc=0 efc=0 .text      daNocrm_execute__FP9daNocrm_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daNocrm_execute(daNocrm_c* field_0) {
+asm void daNocrm_execute(daNocrm_c* field_0) {
 	nofralloc
 #include "asm/d/a/d_a_no_chg_room/daNocrm_execute__FP9daNocrm_c.s"
 }
 #pragma pop
 
 
-/* 801456CC-801456D4 0008+00 rc=1 efc=0 .text      daNocrm_draw__FP9daNocrm_c                                   */
-static bool daNocrm_draw(daNocrm_c* field_0) {
+/* 801456CC-801456D4 0008+00 rc=0 efc=0 .text      daNocrm_draw__FP9daNocrm_c                                   */
+bool daNocrm_draw(daNocrm_c* field_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 803B3658-803B3678 0020+00 rc=1 efc=0 .data      daNocrm_METHODS                                              */
+/* 803B3658-803B3678 0020+00 rc=0 efc=0 .data      daNocrm_METHODS                                              */
 void* daNocrm_METHODS[8] = {
 	(void*)daNocrm_create__FP9daNocrm_c,
 	(void*)daNocrm_Delete__FP9daNocrm_c,
 	(void*)daNocrm_execute__FP9daNocrm_c,
-	NULL,
+	(void*)NULL,
 	(void*)daNocrm_draw__FP9daNocrm_c,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803B3678-803B36A8 0030+00 rc=0 efc=0 .data      g_profile_NO_CHG_ROOM                                        */
@@ -212,8 +215,8 @@ void* g_profile_NO_CHG_ROOM[12] = {
 	(void*)0x001A0000,
 	(void*)&g_fpcLf_Method,
 	(void*)0x000005CC,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)&g_fopAc_Method,
 	(void*)0x02FA0000,
 	(void*)&daNocrm_METHODS,

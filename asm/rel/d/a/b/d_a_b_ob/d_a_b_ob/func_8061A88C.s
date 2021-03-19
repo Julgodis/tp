@@ -1,3 +1,0 @@
-lbl_8061A88C:
-/* 8061A88C 00000000  38 63 FF DC */	addi r3, r3, -36
-/* 8061A890 00000004  4B FF FB F4 */	b __dt__12dBgS_ObjAcchFv

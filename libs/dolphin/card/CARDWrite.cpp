@@ -9,14 +9,14 @@
 // Forward References:
 // 
 
-extern "C" static void CARDWrite__WriteCallback(); // 1
-extern "C" static void CARDWrite__EraseCallback(); // 1
-extern "C" static void CARDWriteAsync(); // 1
+extern "C" void CARDWrite__WriteCallback(); // 1
+extern "C" void CARDWrite__EraseCallback(); // 1
+extern "C" void CARDWriteAsync(); // 1
 extern "C" void CARDWrite(); // 1
 
-extern "C" static void CARDWrite__WriteCallback(); // 1
-extern "C" static void CARDWrite__EraseCallback(); // 1
-extern "C" static void CARDWriteAsync(); // 1
+extern "C" void CARDWrite__WriteCallback(); // 1
+extern "C" void CARDWrite__EraseCallback(); // 1
+extern "C" void CARDWriteAsync(); // 1
 extern "C" void CARDWrite(); // 1
 
 // 
@@ -58,40 +58,40 @@ SECTION_BSS extern u8 __CARDBlock[544];
 // Declarations:
 // 
 
-/* 80358914-80358A84 0170+00 rc=1 efc=0 .text      WriteCallback                                                */
+/* 80358914-80358A84 0170+00 rc=0 efc=0 .text      WriteCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDWrite__WriteCallback() {
+extern "C" asm void CARDWrite__WriteCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDWrite/CARDWrite__WriteCallback.s"
 }
 #pragma pop
 
 
-/* 80358A84-80358B34 00B0+00 rc=2 efc=0 .text      EraseCallback                                                */
+/* 80358A84-80358B34 00B0+00 rc=0 efc=0 .text      EraseCallback                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDWrite__EraseCallback() {
+extern "C" asm void CARDWrite__EraseCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDWrite/CARDWrite__EraseCallback.s"
 }
 #pragma pop
 
 
-/* 80358B34-80358C48 0114+00 rc=1 efc=0 .text      CARDWriteAsync                                               */
+/* 80358B34-80358C48 0114+00 rc=0 efc=0 .text      CARDWriteAsync                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDWriteAsync() {
+extern "C" asm void CARDWriteAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDWrite/CARDWriteAsync.s"
 }
 #pragma pop
 
 
-/* 80358C48-80358C90 0048+00 rc=2 efc=2 .text      CARDWrite                                                    */
+/* 80358C48-80358C90 0048+00 rc=0 efc=0 .text      CARDWrite                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

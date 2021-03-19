@@ -33,7 +33,7 @@ extern "C" void __ct__Q25JMath13TRandom_fast_FUl(); // 1
 // Declarations:
 // 
 
-/* 80339AE4-80339AEC 0008+00 rc=3 efc=3 .text      __ct__Q25JMath13TRandom_fast_FUl                             */
+/* 80339AE4-80339AEC 0008+00 rc=0 efc=0 .text      __ct__Q25JMath13TRandom_fast_FUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

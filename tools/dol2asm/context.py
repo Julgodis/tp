@@ -1,7 +1,8 @@
-import globals
 from multiprocessing import Queue
 from dataclasses import dataclass, field
 from typing import Any
+
+from . import globals
 
 @dataclass
 class Context:

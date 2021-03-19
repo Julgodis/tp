@@ -38,7 +38,7 @@ SECTION_DATA extern u8 g_fopScnTg_SceneList[12 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 8001EC74-8001ECB0 003C+00 rc=1 efc=1 .text      fopScnIt_Judge__FPFPvPv_PvPv                                 */
+/* 8001EC74-8001ECB0 003C+00 rc=0 efc=0 .text      fopScnIt_Judge__FPFPvPv_PvPv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,16 +9,16 @@
 // Forward References:
 // 
 
-extern "C" static void GetFontCode(); // 1
+extern "C" void GetFontCode(); // 1
 extern "C" void OSGetFontEncode(); // 1
-extern "C" static void ParseStringS(); // 1
+extern "C" void ParseStringS(); // 1
 
-extern "C" static void GetFontCode(); // 1
+extern "C" void GetFontCode(); // 1
 extern "C" void OSGetFontEncode(); // 1
-extern "C" static void ParseStringS(); // 1
+extern "C" void ParseStringS(); // 1
 SECTION_DATA extern u8 HankakuToCode[384];
 SECTION_DATA extern u8 Zenkaku2Code[2442 + 6 /* padding */];
-SECTION_SDATA extern u16 FontEncode;
+SECTION_SDATA extern u16 FontEncode[1 + 3 /* padding */];
 SECTION_SBSS extern u8 FontDataAnsi[4];
 SECTION_SBSS extern u8 FontDataSjis[4];
 SECTION_SBSS extern u8 ParseString[4 + 4 /* padding */];
@@ -34,7 +34,7 @@ SECTION_SBSS extern u8 ParseString[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803CFC48-803CFDC8 0180+00 rc=1 efc=0 .data      HankakuToCode                                                */
+/* 803CFC48-803CFDC8 0180+00 rc=0 efc=0 .data      HankakuToCode                                                */
 u8 HankakuToCode[384] = {
 	0x02, 0x0C, 0x02, 0x0D, 0x02, 0x0E, 0x02, 0x0F, 0x02, 0x10, 0x02, 0x11, 0x02, 0x12, 0x02, 0x13,
 	0x02, 0x14, 0x02, 0x15, 0x02, 0x16, 0x02, 0x17, 0x02, 0x18, 0x02, 0x19, 0x02, 0x1A, 0x02, 0x1B,
@@ -62,8 +62,8 @@ u8 HankakuToCode[384] = {
 	0x02, 0xA2, 0x02, 0xA3, 0x02, 0xA4, 0x02, 0xA5, 0x02, 0xA6, 0x02, 0xA7, 0x02, 0xA8, 0x02, 0xA9,
 };
 
-/* 803CFDC8-803D0758 098A+06 rc=1 efc=0 .data      Zenkaku2Code                                                 */
-u8 Zenkaku2Code[2448] = {
+/* 803CFDC8-803D0758 098A+06 rc=0 efc=0 .data      Zenkaku2Code                                                 */
+u8 Zenkaku2Code[2442 + 6 /* padding */] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x02, 0x00, 0x03, 0x00, 0x04, 0x00, 0x05, 0x00, 0x06, 0x00, 0x07,
 	0x00, 0x08, 0x00, 0x09, 0x00, 0x0A, 0x00, 0x0B, 0x00, 0x0C, 0x00, 0x0D, 0x00, 0x0E, 0x00, 0x0F,
 	0x00, 0x10, 0x00, 0x11, 0x00, 0x12, 0x00, 0x13, 0x00, 0x14, 0x00, 0x15, 0x00, 0x16, 0x00, 0x17,
@@ -221,11 +221,11 @@ u8 Zenkaku2Code[2448] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8033D3E0-8033D554 0174+00 rc=1 efc=0 .text      GetFontCode                                                  */
+/* 8033D3E0-8033D554 0174+00 rc=0 efc=0 .text      GetFontCode                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void GetFontCode() {
+extern "C" asm void GetFontCode() {
 	nofralloc
 #include "asm/dolphin/os/OSFont/GetFontCode.s"
 }
@@ -233,20 +233,23 @@ extern "C" asm static void GetFontCode() {
 
 
 /* ############################################################################################## */
-/* 804509B0-804509B8 0002+06 rc=1 efc=0 .sdata     FontEncode                                                   */
-u16 FontEncode = 0xFFFF;
-/* padding 6 bytes */
+/* 804509B0-804509B8 0002+06 rc=0 efc=0 .sdata     FontEncode                                                   */
+u16 FontEncode[1 + 3 /* padding */] = {
+	0xFFFF,
+	/* padding */
+	0x0000, 0x0000, 0x0000,
+};
 
-/* 80451660-80451664 0004+00 rc=1 efc=0 .sbss      FontDataAnsi                                                 */
+/* 80451660-80451664 0004+00 rc=0 efc=0 .sbss      FontDataAnsi                                                 */
 u8 FontDataAnsi[4];
 
-/* 80451664-80451668 0004+00 rc=1 efc=0 .sbss      FontDataSjis                                                 */
+/* 80451664-80451668 0004+00 rc=0 efc=0 .sbss      FontDataSjis                                                 */
 u8 FontDataSjis[4];
 
-/* 80451668-80451670 0004+04 rc=1 efc=0 .sbss      ParseString                                                  */
+/* 80451668-80451670 0004+04 rc=0 efc=0 .sbss      ParseString                                                  */
 u8 ParseString[4 + 4 /* padding */];
 
-/* 8033D554-8033D5B8 0064+00 rc=1 efc=1 .text      OSGetFontEncode                                              */
+/* 8033D554-8033D5B8 0064+00 rc=0 efc=0 .text      OSGetFontEncode                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -257,11 +260,11 @@ extern "C" asm void OSGetFontEncode() {
 #pragma pop
 
 
-/* 8033D5B8-8033D6F4 013C+00 rc=1 efc=0 .text      ParseStringS                                                 */
+/* 8033D5B8-8033D6F4 013C+00 rc=0 efc=0 .text      ParseStringS                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void ParseStringS() {
+extern "C" asm void ParseStringS() {
 	nofralloc
 #include "asm/dolphin/os/OSFont/ParseStringS.s"
 }

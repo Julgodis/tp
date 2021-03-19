@@ -31,11 +31,14 @@ LIBDVD_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libdvd.a: $(LIBDVD_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libdvd.a
 	@echo $(LIBDVD_A_O_FILES) > build/LIBDVD_A_ofiles
-	$(LD) -xm l $(LIBDVD_A_LDFLAGS) -o $(BUILD_DIR)/libdvd.a @build/LIBDVD_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libdvd.a
+	@$(LD) -xm l $(LIBDVD_A_LDFLAGS) -o $(BUILD_DIR)/libdvd.a @build/LIBDVD_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libdvd.a
 
 $(BUILD_DIR)/libs/dolphin/dvd/%.o: libs/dolphin/dvd/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBDVD_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBDVD_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

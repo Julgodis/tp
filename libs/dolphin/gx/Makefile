@@ -43,11 +43,14 @@ LIBGX_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libgx.a: $(LIBGX_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libgx.a
 	@echo $(LIBGX_A_O_FILES) > build/LIBGX_A_ofiles
-	$(LD) -xm l $(LIBGX_A_LDFLAGS) -o $(BUILD_DIR)/libgx.a @build/LIBGX_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libgx.a
+	@$(LD) -xm l $(LIBGX_A_LDFLAGS) -o $(BUILD_DIR)/libgx.a @build/LIBGX_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libgx.a
 
 $(BUILD_DIR)/libs/dolphin/gx/%.o: libs/dolphin/gx/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBGX_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBGX_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

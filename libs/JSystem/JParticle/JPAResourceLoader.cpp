@@ -97,7 +97,7 @@ extern "C" void _restgpr_18(); // 1
 // Declarations:
 // 
 
-/* 8027D8A0-8027D8E0 0040+00 rc=1 efc=1 .text      __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager          */
+/* 8027D8A0-8027D8E0 0040+00 rc=0 efc=0 .text      __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,7 +108,7 @@ asm JPAResourceLoader::JPAResourceLoader(u8 const* field_0, JPAResourceManager* 
 #pragma pop
 
 
-/* 8027D8E0-8027DCA0 03C0+00 rc=1 efc=0 .text      load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager      */
+/* 8027D8E0-8027DCA0 03C0+00 rc=0 efc=0 .text      load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

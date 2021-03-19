@@ -37,19 +37,19 @@ struct JUTXfb {
 // Forward References:
 // 
 
-static void my_OSCancelAlarmAll(); // 2
-static void destroyVideo(); // 2
+void my_OSCancelAlarmAll(); // 2
+void destroyVideo(); // 2
 void mDoRst_reset(int, u32, int); // 2
 void mDoRst_resetCallBack(int, void*); // 2
 
-extern "C" static void my_OSCancelAlarmAll__Fv(); // 1
-extern "C" static void destroyVideo__Fv(); // 1
+extern "C" void my_OSCancelAlarmAll__Fv(); // 1
+extern "C" void destroyVideo__Fv(); // 1
 extern "C" void mDoRst_reset__FiUli(); // 1
 extern "C" void mDoRst_resetCallBack__FiPv(); // 1
 extern "C" void getResetData__6mDoRstFv(); // 1
-SECTION_RODATA extern const u8 m_Do_m_Do_Reset__stringBase0[16];
+SECTION_RODATA extern const char* const m_Do_m_Do_Reset__stringBase0;
 SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
-SECTION_SBSS extern u8 struct_80450C80[8];
+extern u8 struct_80450C80[8];
 SECTION_SBSS extern u8 data_80450C88[8];
 
 // 
@@ -111,28 +111,26 @@ extern "C" void GXDrawDone(); // 1
 extern "C" void GXSetDrawDoneCallback(); // 1
 extern "C" void _savegpr_27(); // 1
 SECTION_BSS extern u8 g_mDoMemCd_control[8192];
-SECTION_SBSS extern u8 struct_80450BB8[4];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 SECTION_SBSS extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
 SECTION_SBSS extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
-SECTION_SBSS extern u8 struct_80451500[4];
 SECTION_SBSS extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 800155D8-800155DC 0004+00 rc=1 efc=0 .text      my_OSCancelAlarmAll__Fv                                      */
-static void my_OSCancelAlarmAll() {
+/* 800155D8-800155DC 0004+00 rc=0 efc=0 .text      my_OSCancelAlarmAll__Fv                                      */
+void my_OSCancelAlarmAll() {
 	/* empty function */
 }
 
 
-/* 800155DC-80015614 0038+00 rc=1 efc=0 .text      destroyVideo__Fv                                             */
+/* 800155DC-80015614 0038+00 rc=0 efc=0 .text      destroyVideo__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void destroyVideo() {
+asm void destroyVideo() {
 	nofralloc
 #include "asm/m_Do/m_Do_Reset/destroyVideo__Fv.s"
 }
@@ -140,17 +138,17 @@ asm static void destroyVideo() {
 
 
 /* ############################################################################################## */
-/* 80374198-803741A8 0010+00 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80374198-803741A8 0010+00 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80374198 = "DVD_STATE_BUSY\n";
+const char* const stringBase_80374198 = "DVD_STATE_BUSY\n";
 #pragma pop
 
-/* 80450C78-80450C80 0004+04 rc=45 efc=42 .sbss      mResetData__6mDoRst                                          */
+/* 80450C78-80450C80 0004+04 rc=0 efc=0 .sbss      mResetData__6mDoRst                                          */
 u8 mResetData__6mDoRst[4 + 4 /* padding */];
 
-/* 80015614-8001574C 0138+00 rc=3 efc=3 .text      mDoRst_reset__FiUli                                          */
+/* 80015614-8001574C 0138+00 rc=0 efc=0 .text      mDoRst_reset__FiUli                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,7 +159,7 @@ asm void mDoRst_reset(int field_0, u32 field_1, int field_2) {
 #pragma pop
 
 
-/* 8001574C-800157F4 00A8+00 rc=3 efc=3 .text      mDoRst_resetCallBack__FiPv                                   */
+/* 8001574C-800157F4 00A8+00 rc=0 efc=0 .text      mDoRst_resetCallBack__FiPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,7 +170,7 @@ asm void mDoRst_resetCallBack(int field_0, void* field_1) {
 #pragma pop
 
 
-/* 800157F4-800157FC 0008+00 rc=1 efc=0 .text      getResetData__6mDoRstFv                                      */
+/* 800157F4-800157FC 0008+00 rc=0 efc=0 .text      getResetData__6mDoRstFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,11 +182,9 @@ asm void mDoRst::getResetData() {
 
 
 /* ############################################################################################## */
-/* 80450C80-80450C88 0008+00 rc=6 efc=6 .sbss      None                                                         */
+/* 80450C80-80450C88 0008+00 rc=0 efc=0 None       None                                                         */
 u8 struct_80450C80[8];
-/* 80450C80 0001 data_80450C80 */
-/* 80450C81 0007 data_80450C81 */
 
-/* 80450C88-80450C90 0008+00 rc=2 efc=2 .sbss      None                                                         */
+/* 80450C88-80450C90 0008+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_80450C88[8];
 

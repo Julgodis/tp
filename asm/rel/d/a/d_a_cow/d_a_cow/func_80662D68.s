@@ -1,3 +1,0 @@
-lbl_80662D68:
-/* 80662D68 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 80662D6C 00000004  4B FF F9 14 */	b __dt__12dBgS_ObjAcchFv

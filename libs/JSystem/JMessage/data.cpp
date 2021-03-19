@@ -10,7 +10,7 @@
 // 
 
 
-SECTION_SDATA2 extern u32 ga4cSignature__Q28JMessage4data;
+SECTION_SDATA2 extern u32 ga4cSignature__Q28JMessage4data[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -23,7 +23,10 @@ SECTION_SDATA2 extern u32 ga4cSignature__Q28JMessage4data;
 // 
 
 /* ############################################################################################## */
-/* 80455818-80455820 0004+04 rc=1 efc=1 .sdata2    ga4cSignature__Q28JMessage4data                              */
-u32 ga4cSignature__Q28JMessage4data = 0x4D455347;
-/* padding 4 bytes */
+/* 80455818-80455820 0004+04 rc=0 efc=0 .sdata2    ga4cSignature__Q28JMessage4data                              */
+u32 ga4cSignature__Q28JMessage4data[1 + 1 /* padding */] = {
+	0x4D455347,
+	/* padding */
+	0x00000000,
+};
 

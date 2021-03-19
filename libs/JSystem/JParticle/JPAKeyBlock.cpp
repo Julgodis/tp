@@ -35,7 +35,7 @@ extern "C" void JPACalcKeyAnmValue__FfUsPCf(); // 1
 // Declarations:
 // 
 
-/* 8027D730-8027D740 0010+00 rc=1 efc=1 .text      __ct__11JPAKeyBlockFPCUc                                     */
+/* 8027D730-8027D740 0010+00 rc=0 efc=0 .text      __ct__11JPAKeyBlockFPCUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -47,10 +47,10 @@ asm JPAKeyBlock::JPAKeyBlock(u8 const* field_0) {
 
 
 /* ############################################################################################## */
-/* 80455350-80455358 0008+00 rc=1 efc=0 .sdata2    @2215                                                        */
+/* 80455350-80455358 0008+00 rc=0 efc=0 .sdata2    @2215                                                        */
 f64 JPAKeyBlock__lit_2215 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8027D740-8027D7D4 0094+00 rc=1 efc=1 .text      calc__11JPAKeyBlockFf                                        */
+/* 8027D740-8027D7D4 0094+00 rc=0 efc=0 .text      calc__11JPAKeyBlockFf                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

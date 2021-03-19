@@ -1,3 +1,0 @@
-lbl_804961A8:
-/* 804961A8 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 804961AC 00000004  4B FF FC FC */	b __dt__12dBgS_ObjAcchFv

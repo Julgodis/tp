@@ -34,7 +34,7 @@ SECTION_SDATA2 extern u8 lit_326[4 + 4 /* padding */];
 SECTION_SDATA2 extern f64 JMATrigonometric__lit_436;
 SECTION_SDATA2 extern f64 JMATrigonometric__lit_437;
 SECTION_SDATA2 extern f64 JMATrigonometric__lit_438;
-SECTION_SDATA2 extern f32 JMATrigonometric__lit_439;
+SECTION_SDATA2 extern f32 JMATrigonometric__lit_439[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 JMATrigonometric__lit_441;
 
 // 
@@ -62,39 +62,42 @@ extern "C" void asin(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80439A20-80449A20 10000+00 rc=266 efc=265 .bss       sincosTable___5JMath                                         */
+/* 80439A20-80449A20 10000+00 rc=0 efc=0 .bss       sincosTable___5JMath                                         */
 u8 sincosTable___5JMath[65536];
 
-/* 80449A20-8044AA40 1020+00 rc=1 efc=0 .bss       atanTable___5JMath                                           */
+/* 80449A20-8044AA40 1020+00 rc=0 efc=0 .bss       atanTable___5JMath                                           */
 u8 atanTable___5JMath[4128];
 
-/* 8044AA40-8044BA60 1020+00 rc=2 efc=1 .bss       asinAcosTable___5JMath                                       */
+/* 8044AA40-8044BA60 1020+00 rc=0 efc=0 .bss       asinAcosTable___5JMath                                       */
 u8 asinAcosTable___5JMath[4128];
 
-/* 804564D8-804564E0 0004+04 rc=2 efc=0 .sdata2    @326                                                         */
-u8 lit_326[8] = {
+/* 804564D8-804564E0 0004+04 rc=0 efc=0 .sdata2    @326                                                         */
+u8 lit_326[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804564E0-804564E8 0008+00 rc=1 efc=0 .sdata2    @436                                                         */
+/* 804564E0-804564E8 0008+00 rc=0 efc=0 .sdata2    @436                                                         */
 f64 JMATrigonometric__lit_436 = 6.2831854820251465;
 
-/* 804564E8-804564F0 0008+00 rc=1 efc=0 .sdata2    @437                                                         */
+/* 804564E8-804564F0 0008+00 rc=0 efc=0 .sdata2    @437                                                         */
 f64 JMATrigonometric__lit_437 = 8192.0;
 
-/* 804564F0-804564F8 0008+00 rc=1 efc=0 .sdata2    @438                                                         */
+/* 804564F0-804564F8 0008+00 rc=0 efc=0 .sdata2    @438                                                         */
 f64 JMATrigonometric__lit_438 = 0.0009765625;
 
-/* 804564F8-80456500 0004+04 rc=1 efc=0 .sdata2    @439                                                         */
-f32 JMATrigonometric__lit_439 = 0.7853981852531433f;
-/* padding 4 bytes */
+/* 804564F8-80456500 0004+04 rc=0 efc=0 .sdata2    @439                                                         */
+f32 JMATrigonometric__lit_439[1 + 1 /* padding */] = {
+	0.7853981852531433f,
+	/* padding */
+	0.0f,
+};
 
-/* 80456500-80456508 0008+00 rc=1 efc=0 .sdata2    @441                                                         */
+/* 80456500-80456508 0008+00 rc=0 efc=0 .sdata2    @441                                                         */
 f64 JMATrigonometric__lit_441 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80339AEC-80339CB0 01C4+00 rc=1 efc=1 .text      __sinit_JMATrigonometric_cpp                                 */
+/* 80339AEC-80339CB0 01C4+00 rc=0 efc=0 .text      __sinit_JMATrigonometric_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +108,7 @@ extern "C" asm void __sinit_JMATrigonometric_cpp() {
 #pragma pop
 
 
-/* 80339CB0-80339CC0 0010+00 rc=1 efc=0 .text      __ct__Q23std9pair<f,f>Fv                                     */
+/* 80339CB0-80339CC0 0010+00 rc=0 efc=0 .text      __ct__Q23std9pair<f,f>Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

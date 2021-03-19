@@ -15,7 +15,7 @@ lbl_80119464:
 /* 80119498 00000034  38 61 00 14 */	addi r3, r1, 0x14
 /* 8011949C 00000038  38 81 00 30 */	addi r4, r1, 0x30
 /* 801194A0 0000003C  48 17 05 E1 */	bl getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData
-/* 801194A4 00000040  88 0D 8A 3C */	lbz r0, struct_80450FBC+0x0(r13)
+/* 801194A4 00000040  88 0D 8A 3C */	lbz r0, -0x75c4(r13)
 /* 801194A8 00000044  7C 00 07 75 */	extsb. r0, r0
 /* 801194AC 00000048  40 82 00 24 */	bne lbl_801194D0
 /* 801194B0 0000004C  38 00 00 00 */	li r0, 0
@@ -25,9 +25,9 @@ lbl_80119464:
 /* 801194C0 0000005C  38 84 56 B8 */	addi r4, r4, data_804256B8@l
 /* 801194C4 00000060  48 17 05 BD */	bl getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData
 /* 801194C8 00000064  38 00 00 01 */	li r0, 1
-/* 801194CC 00000068  98 0D 8A 3C */	stb r0, struct_80450FBC+0x0(r13)
+/* 801194CC 00000068  98 0D 8A 3C */	stb r0, -0x75c4(r13)
 lbl_801194D0:
-/* 801194D0 00000000  88 0D 8A 3D */	lbz r0, struct_80450FBC+0x1(r13)
+/* 801194D0 00000000  88 0D 8A 3D */	lbz r0, -0x75c3(r13)
 /* 801194D4 00000004  7C 00 07 75 */	extsb. r0, r0
 /* 801194D8 00000008  40 82 00 1C */	bne lbl_801194F4
 /* 801194DC 0000000C  3C 60 80 42 */	lis r3, data_804256B8@ha
@@ -35,7 +35,7 @@ lbl_801194D0:
 /* 801194E4 00000014  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 801194E8 00000018  90 0D 8A 40 */	stw r0, data_80450FC0(r13)
 /* 801194EC 0000001C  38 00 00 01 */	li r0, 1
-/* 801194F0 00000020  98 0D 8A 3D */	stb r0, struct_80450FBC+0x1(r13)
+/* 801194F0 00000020  98 0D 8A 3D */	stb r0, -0x75c3(r13)
 lbl_801194F4:
 /* 801194F4 00000000  80 A1 00 3C */	lwz r5, 0x3c(r1)
 /* 801194F8 00000004  90 A1 00 10 */	stw r5, 0x10(r1)

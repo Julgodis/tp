@@ -86,15 +86,15 @@ struct dMsgScrnBase_c {
 	/* 8023C4F4 */ void fontAlpha(f32);
 };
 
-struct JKRExpHeap {
-};
-
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+};
+
+struct JKRExpHeap {
 };
 
 struct J2DPane {
@@ -194,34 +194,34 @@ extern "C" void initGuideData__14dMsgScrnHowl_cFv(); // 1
 extern "C" void getGuideDataSize__14dMsgScrnHowl_cFv(); // 1
 extern "C" void getGuideDataType__14dMsgScrnHowl_cFi(); // 1
 extern "C" void __sinit_d_msg_scrn_howl_cpp(); // 1
-SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_howl__stringBase0[96];
+SECTION_RODATA extern const char* const msg_scrn_d_msg_scrn_howl__stringBase0;
 SECTION_DATA extern u8 msg_scrn_d_msg_scrn_howl__cNullVec__6Z2Calc[12];
-SECTION_DATA extern void*msg_scrn_d_msg_scrn_howl__lit_4173[3];
-SECTION_DATA extern void*msg_scrn_d_msg_scrn_howl__lit_4174[3];
-SECTION_DATA extern void*msg_scrn_d_msg_scrn_howl__lit_4175[3];
-SECTION_DATA extern void*msg_scrn_d_msg_scrn_howl__lit_4176[3];
-SECTION_DATA extern void*msg_scrn_d_msg_scrn_howl__lit_4177[3];
+SECTION_DATA extern void* msg_scrn_d_msg_scrn_howl__lit_4173[3];
+SECTION_DATA extern void* msg_scrn_d_msg_scrn_howl__lit_4174[3];
+SECTION_DATA extern void* msg_scrn_d_msg_scrn_howl__lit_4175[3];
+SECTION_DATA extern void* msg_scrn_d_msg_scrn_howl__lit_4176[3];
+SECTION_DATA extern void* msg_scrn_d_msg_scrn_howl__lit_4177[3];
 SECTION_DATA extern u8 msg_scrn_d_msg_scrn_howl__init_proc[60];
-SECTION_DATA extern void*msg_scrn_d_msg_scrn_howl__lit_4178[3];
-SECTION_DATA extern void*msg_scrn_d_msg_scrn_howl__lit_4179[3];
-SECTION_DATA extern void*msg_scrn_d_msg_scrn_howl__lit_4180[3];
-SECTION_DATA extern void*msg_scrn_d_msg_scrn_howl__lit_4181[3];
-SECTION_DATA extern void*msg_scrn_d_msg_scrn_howl__lit_4182[3];
+SECTION_DATA extern void* msg_scrn_d_msg_scrn_howl__lit_4178[3];
+SECTION_DATA extern void* msg_scrn_d_msg_scrn_howl__lit_4179[3];
+SECTION_DATA extern void* msg_scrn_d_msg_scrn_howl__lit_4180[3];
+SECTION_DATA extern void* msg_scrn_d_msg_scrn_howl__lit_4181[3];
+SECTION_DATA extern void* msg_scrn_d_msg_scrn_howl__lit_4182[3];
 SECTION_DATA extern u8 msg_scrn_d_msg_scrn_howl__process[60 + 4 /* padding */];
 SECTION_DATA extern u8 data_803C10D0[24];
 SECTION_DATA extern u8 data_803C10E8[56];
 SECTION_DATA extern u8 data_803C1120[56];
 SECTION_DATA extern u8 data_803C1158[56];
-SECTION_DATA extern void*const __vt__14dMsgScrnHowl_c[22];
+SECTION_DATA extern void* const __vt__14dMsgScrnHowl_c[22];
 SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_howl__lit_4427[4];
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_4428;
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_4429;
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_4430;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_4431;
+SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_4431[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_howl__lit_4434;
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_4561;
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_4562;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_4563;
+SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_4563[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_howl__lit_4587;
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_4824;
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_howl__lit_4825;
@@ -332,61 +332,61 @@ SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 // 
 
 /* ############################################################################################## */
-/* 80399A20-80399A80 005C+04 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80399A20-80399A80 005C+04 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80399A20 = "zelda_wolf_howl.blo";
-SECTION_DEAD char* const stringBase_80399A34 = "";
-SECTION_DEAD char* const stringBase_80399A35 = "tt_ginnouroko_s3tc.bti";
-SECTION_DEAD char* const stringBase_80399A4C = "tt_black_32.bti";
-SECTION_DEAD char* const stringBase_80399A5C = "tt_iastarRR.bti";
-SECTION_DEAD char* const stringBase_80399A6C = "tt_block8x8.bti";
+const char* const stringBase_80399A20 = "zelda_wolf_howl.blo";
+const char* const stringBase_80399A34 = "";
+const char* const stringBase_80399A35 = "tt_ginnouroko_s3tc.bti";
+const char* const stringBase_80399A4C = "tt_black_32.bti";
+const char* const stringBase_80399A5C = "tt_iastarRR.bti";
+const char* const stringBase_80399A6C = "tt_block8x8.bti";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_80399A7C = "\0\0\0";
+char* const pad_80399A7C = "\0\0\0";
 #pragma pop
 
-/* 803C0FD0-803C0FDC 000C+00 rc=2 efc=0 .data      cNullVec__6Z2Calc                                            */
+/* 803C0FD0-803C0FDC 000C+00 rc=0 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 msg_scrn_d_msg_scrn_howl__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803C0FDC-803C0FE8 000C+00 rc=0 efc=0 .data      @4173                                                        */
 void* msg_scrn_d_msg_scrn_howl__lit_4173[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)guide_on_init__14dMsgScrnHowl_cFv,
 };
 
 /* 803C0FE8-803C0FF4 000C+00 rc=0 efc=0 .data      @4174                                                        */
 void* msg_scrn_d_msg_scrn_howl__lit_4174[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)guide_off_init__14dMsgScrnHowl_cFv,
 };
 
 /* 803C0FF4-803C1000 000C+00 rc=0 efc=0 .data      @4175                                                        */
 void* msg_scrn_d_msg_scrn_howl__lit_4175[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)guide_stop_init__14dMsgScrnHowl_cFv,
 };
 
 /* 803C1000-803C100C 000C+00 rc=0 efc=0 .data      @4176                                                        */
 void* msg_scrn_d_msg_scrn_howl__lit_4176[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)guide_demo_play_init__14dMsgScrnHowl_cFv,
 };
 
 /* 803C100C-803C1018 000C+00 rc=0 efc=0 .data      @4177                                                        */
 void* msg_scrn_d_msg_scrn_howl__lit_4177[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)guide_off_test_init__14dMsgScrnHowl_cFv,
 };
 
-/* 803C1018-803C1054 003C+00 rc=1 efc=0 .data      init_proc                                                    */
+/* 803C1018-803C1054 003C+00 rc=0 efc=0 .data      init_proc                                                    */
 u8 msg_scrn_d_msg_scrn_howl__init_proc[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -396,41 +396,41 @@ u8 msg_scrn_d_msg_scrn_howl__init_proc[60] = {
 
 /* 803C1054-803C1060 000C+00 rc=0 efc=0 .data      @4178                                                        */
 void* msg_scrn_d_msg_scrn_howl__lit_4178[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)guide_on_proc__14dMsgScrnHowl_cFv,
 };
 
 /* 803C1060-803C106C 000C+00 rc=0 efc=0 .data      @4179                                                        */
 void* msg_scrn_d_msg_scrn_howl__lit_4179[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)guide_off_proc__14dMsgScrnHowl_cFv,
 };
 
 /* 803C106C-803C1078 000C+00 rc=0 efc=0 .data      @4180                                                        */
 void* msg_scrn_d_msg_scrn_howl__lit_4180[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)guide_stop_proc__14dMsgScrnHowl_cFv,
 };
 
 /* 803C1078-803C1084 000C+00 rc=0 efc=0 .data      @4181                                                        */
 void* msg_scrn_d_msg_scrn_howl__lit_4181[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)guide_demo_play_proc__14dMsgScrnHowl_cFv,
 };
 
 /* 803C1084-803C1090 000C+00 rc=0 efc=0 .data      @4182                                                        */
 void* msg_scrn_d_msg_scrn_howl__lit_4182[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)guide_off_test_proc__14dMsgScrnHowl_cFv,
 };
 
-/* 803C1090-803C10D0 003C+04 rc=1 efc=0 .data      process                                                      */
-u8 msg_scrn_d_msg_scrn_howl__process[64] = {
+/* 803C1090-803C10D0 003C+04 rc=0 efc=0 .data      process                                                      */
+u8 msg_scrn_d_msg_scrn_howl__process[60 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -469,10 +469,10 @@ u8 data_803C1158[56] = {
 	0x74, 0x6C, 0x69, 0x6E, 0x65, 0x73, 0x30, 0x36,
 };
 
-/* 803C1190-803C11E8 0058+00 rc=2 efc=0 .data      __vt__14dMsgScrnHowl_c                                       */
+/* 803C1190-803C11E8 0058+00 rc=0 efc=0 .data      __vt__14dMsgScrnHowl_c                                       */
 void* const __vt__14dMsgScrnHowl_c[22] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__14dMsgScrnBase_cFv,
 	(void*)__dt__14dMsgScrnHowl_cFv,
 	(void*)exec__14dMsgScrnHowl_cFv,
@@ -495,28 +495,31 @@ void* const __vt__14dMsgScrnHowl_c[22] = {
 	(void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
 
-/* 80454C50-80454C54 0004+00 rc=14 efc=0 .sdata2    @4427                                                        */
+/* 80454C50-80454C54 0004+00 rc=0 efc=0 .sdata2    @4427                                                        */
 u8 msg_scrn_d_msg_scrn_howl__lit_4427[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454C54-80454C58 0004+00 rc=1 efc=0 .sdata2    @4428                                                        */
+/* 80454C54-80454C58 0004+00 rc=0 efc=0 .sdata2    @4428                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_4428 = 350.0f;
 
-/* 80454C58-80454C5C 0004+00 rc=2 efc=0 .sdata2    @4429                                                        */
+/* 80454C58-80454C5C 0004+00 rc=0 efc=0 .sdata2    @4429                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_4429 = 255.0f;
 
-/* 80454C5C-80454C60 0004+00 rc=2 efc=0 .sdata2    @4430                                                        */
+/* 80454C5C-80454C60 0004+00 rc=0 efc=0 .sdata2    @4430                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_4430 = 3.0f;
 
-/* 80454C60-80454C68 0004+04 rc=8 efc=0 .sdata2    @4431                                                        */
-f32 msg_scrn_d_msg_scrn_howl__lit_4431 = 1.0f;
-/* padding 4 bytes */
+/* 80454C60-80454C68 0004+04 rc=0 efc=0 .sdata2    @4431                                                        */
+f32 msg_scrn_d_msg_scrn_howl__lit_4431[1 + 1 /* padding */] = {
+	1.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80454C68-80454C70 0008+00 rc=4 efc=0 .sdata2    @4434                                                        */
+/* 80454C68-80454C70 0008+00 rc=0 efc=0 .sdata2    @4434                                                        */
 f64 msg_scrn_d_msg_scrn_howl__lit_4434 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8024096C-80241784 0E18+00 rc=1 efc=1 .text      __ct__14dMsgScrnHowl_cFv                                     */
+/* 8024096C-80241784 0E18+00 rc=0 efc=0 .text      __ct__14dMsgScrnHowl_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -527,7 +530,7 @@ asm dMsgScrnHowl_c::dMsgScrnHowl_c() {
 #pragma pop
 
 
-/* 80241784-80241A70 02EC+00 rc=1 efc=0 .text      __dt__14dMsgScrnHowl_cFv                                     */
+/* 80241784-80241A70 02EC+00 rc=0 efc=0 .text      __dt__14dMsgScrnHowl_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -539,17 +542,20 @@ asm dMsgScrnHowl_c::~dMsgScrnHowl_c() {
 
 
 /* ############################################################################################## */
-/* 80454C70-80454C74 0004+00 rc=7 efc=0 .sdata2    @4561                                                        */
+/* 80454C70-80454C74 0004+00 rc=0 efc=0 .sdata2    @4561                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_4561 = 0.5f;
 
-/* 80454C74-80454C78 0004+00 rc=2 efc=0 .sdata2    @4562                                                        */
+/* 80454C74-80454C78 0004+00 rc=0 efc=0 .sdata2    @4562                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_4562 = 1.0f / 5.0f;
 
-/* 80454C78-80454C80 0004+04 rc=2 efc=0 .sdata2    @4563                                                        */
-f32 msg_scrn_d_msg_scrn_howl__lit_4563 = 1.0f / 10.0f;
-/* padding 4 bytes */
+/* 80454C78-80454C80 0004+04 rc=0 efc=0 .sdata2    @4563                                                        */
+f32 msg_scrn_d_msg_scrn_howl__lit_4563[1 + 1 /* padding */] = {
+	1.0f / 10.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80241A70-80241C30 01C0+00 rc=1 efc=0 .text      exec__14dMsgScrnHowl_cFv                                     */
+/* 80241A70-80241C30 01C0+00 rc=0 efc=0 .text      exec__14dMsgScrnHowl_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -561,10 +567,10 @@ asm void dMsgScrnHowl_c::exec() {
 
 
 /* ############################################################################################## */
-/* 80454C80-80454C88 0008+00 rc=6 efc=0 .sdata2    @4587                                                        */
+/* 80454C80-80454C88 0008+00 rc=0 efc=0 .sdata2    @4587                                                        */
 f64 msg_scrn_d_msg_scrn_howl__lit_4587 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80241C30-80241D58 0128+00 rc=1 efc=0 .text      drawSelf__14dMsgScrnHowl_cFv                                 */
+/* 80241C30-80241D58 0128+00 rc=0 efc=0 .text      drawSelf__14dMsgScrnHowl_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -575,13 +581,13 @@ asm void dMsgScrnHowl_c::drawSelf() {
 #pragma pop
 
 
-/* 80241D58-80241D5C 0004+00 rc=1 efc=0 .text      guide_on_init__14dMsgScrnHowl_cFv                            */
+/* 80241D58-80241D5C 0004+00 rc=0 efc=0 .text      guide_on_init__14dMsgScrnHowl_cFv                            */
 void dMsgScrnHowl_c::guide_on_init() {
 	/* empty function */
 }
 
 
-/* 80241D5C-80241DFC 00A0+00 rc=1 efc=0 .text      guide_on_proc__14dMsgScrnHowl_cFv                            */
+/* 80241D5C-80241DFC 00A0+00 rc=0 efc=0 .text      guide_on_proc__14dMsgScrnHowl_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -592,13 +598,13 @@ asm void dMsgScrnHowl_c::guide_on_proc() {
 #pragma pop
 
 
-/* 80241DFC-80241E00 0004+00 rc=1 efc=0 .text      guide_off_init__14dMsgScrnHowl_cFv                           */
+/* 80241DFC-80241E00 0004+00 rc=0 efc=0 .text      guide_off_init__14dMsgScrnHowl_cFv                           */
 void dMsgScrnHowl_c::guide_off_init() {
 	/* empty function */
 }
 
 
-/* 80241E00-80241E7C 007C+00 rc=1 efc=0 .text      guide_off_proc__14dMsgScrnHowl_cFv                           */
+/* 80241E00-80241E7C 007C+00 rc=0 efc=0 .text      guide_off_proc__14dMsgScrnHowl_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -609,13 +615,13 @@ asm void dMsgScrnHowl_c::guide_off_proc() {
 #pragma pop
 
 
-/* 80241E7C-80241E80 0004+00 rc=1 efc=0 .text      guide_stop_init__14dMsgScrnHowl_cFv                          */
+/* 80241E7C-80241E80 0004+00 rc=0 efc=0 .text      guide_stop_init__14dMsgScrnHowl_cFv                          */
 void dMsgScrnHowl_c::guide_stop_init() {
 	/* empty function */
 }
 
 
-/* 80241E80-80241F28 00A8+00 rc=1 efc=0 .text      guide_stop_proc__14dMsgScrnHowl_cFv                          */
+/* 80241E80-80241F28 00A8+00 rc=0 efc=0 .text      guide_stop_proc__14dMsgScrnHowl_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -626,7 +632,7 @@ asm void dMsgScrnHowl_c::guide_stop_proc() {
 #pragma pop
 
 
-/* 80241F28-80241F34 000C+00 rc=1 efc=0 .text      guide_demo_play_init__14dMsgScrnHowl_cFv                     */
+/* 80241F28-80241F34 000C+00 rc=0 efc=0 .text      guide_demo_play_init__14dMsgScrnHowl_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -637,7 +643,7 @@ asm void dMsgScrnHowl_c::guide_demo_play_init() {
 #pragma pop
 
 
-/* 80241F34-8024202C 00F8+00 rc=1 efc=0 .text      guide_demo_play_proc__14dMsgScrnHowl_cFv                     */
+/* 80241F34-8024202C 00F8+00 rc=0 efc=0 .text      guide_demo_play_proc__14dMsgScrnHowl_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -648,25 +654,25 @@ asm void dMsgScrnHowl_c::guide_demo_play_proc() {
 #pragma pop
 
 
-/* 8024202C-80242030 0004+00 rc=1 efc=0 .text      guide_off_test_init__14dMsgScrnHowl_cFv                      */
+/* 8024202C-80242030 0004+00 rc=0 efc=0 .text      guide_off_test_init__14dMsgScrnHowl_cFv                      */
 void dMsgScrnHowl_c::guide_off_test_init() {
 	/* empty function */
 }
 
 
-/* 80242030-80242034 0004+00 rc=1 efc=0 .text      guide_off_test_proc__14dMsgScrnHowl_cFv                      */
+/* 80242030-80242034 0004+00 rc=0 efc=0 .text      guide_off_test_proc__14dMsgScrnHowl_cFv                      */
 void dMsgScrnHowl_c::guide_off_test_proc() {
 	/* empty function */
 }
 
 
-/* 80242034-80242038 0004+00 rc=1 efc=0 .text      fukiScale__14dMsgScrnHowl_cFf                                */
+/* 80242034-80242038 0004+00 rc=0 efc=0 .text      fukiScale__14dMsgScrnHowl_cFf                                */
 void dMsgScrnHowl_c::fukiScale(f32 field_0) {
 	/* empty function */
 }
 
 
-/* 80242038-8024205C 0024+00 rc=1 efc=0 .text      fukiTrans__14dMsgScrnHowl_cFff                               */
+/* 80242038-8024205C 0024+00 rc=0 efc=0 .text      fukiTrans__14dMsgScrnHowl_cFff                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -677,7 +683,7 @@ asm void dMsgScrnHowl_c::fukiTrans(f32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 8024205C-80242080 0024+00 rc=1 efc=0 .text      fukiAlpha__14dMsgScrnHowl_cFf                                */
+/* 8024205C-80242080 0024+00 rc=0 efc=0 .text      fukiAlpha__14dMsgScrnHowl_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -688,7 +694,7 @@ asm void dMsgScrnHowl_c::fukiAlpha(f32 field_0) {
 #pragma pop
 
 
-/* 80242080-802420D4 0054+00 rc=1 efc=1 .text      isKeyCheck__14dMsgScrnHowl_cFv                               */
+/* 80242080-802420D4 0054+00 rc=0 efc=0 .text      isKeyCheck__14dMsgScrnHowl_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -699,7 +705,7 @@ asm void dMsgScrnHowl_c::isKeyCheck() {
 #pragma pop
 
 
-/* 802420D4-80242198 00C4+00 rc=5 efc=0 .text      resetLine__14dMsgScrnHowl_cFv                                */
+/* 802420D4-80242198 00C4+00 rc=0 efc=0 .text      resetLine__14dMsgScrnHowl_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -711,25 +717,25 @@ asm void dMsgScrnHowl_c::resetLine() {
 
 
 /* ############################################################################################## */
-/* 80454C88-80454C8C 0004+00 rc=2 efc=0 .sdata2    @4824                                                        */
+/* 80454C88-80454C8C 0004+00 rc=0 efc=0 .sdata2    @4824                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_4824 = 30.0f;
 
-/* 80454C8C-80454C90 0004+00 rc=1 efc=0 .sdata2    @4825                                                        */
+/* 80454C8C-80454C90 0004+00 rc=0 efc=0 .sdata2    @4825                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_4825 = 16.0f;
 
-/* 80454C90-80454C94 0004+00 rc=1 efc=0 .sdata2    @4826                                                        */
+/* 80454C90-80454C94 0004+00 rc=0 efc=0 .sdata2    @4826                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_4826 = 32.0f;
 
-/* 80454C94-80454C98 0004+00 rc=4 efc=0 .sdata2    @4827                                                        */
+/* 80454C94-80454C98 0004+00 rc=0 efc=0 .sdata2    @4827                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_4827 = 2.0f;
 
-/* 80454C98-80454C9C 0004+00 rc=1 efc=0 .sdata2    @4828                                                        */
+/* 80454C98-80454C9C 0004+00 rc=0 efc=0 .sdata2    @4828                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_4828 = 5.0f;
 
-/* 80454C9C-80454CA0 0004+00 rc=1 efc=0 .sdata2    @4829                                                        */
+/* 80454C9C-80454CA0 0004+00 rc=0 efc=0 .sdata2    @4829                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_4829 = 15.0f;
 
-/* 80242198-802427A8 0610+00 rc=1 efc=0 .text      drawWave__14dMsgScrnHowl_cFv                                 */
+/* 80242198-802427A8 0610+00 rc=0 efc=0 .text      drawWave__14dMsgScrnHowl_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -740,7 +746,7 @@ asm void dMsgScrnHowl_c::drawWave() {
 #pragma pop
 
 
-/* 802427A8-80242FE4 083C+00 rc=1 efc=0 .text      drawGuide__14dMsgScrnHowl_cFv                                */
+/* 802427A8-80242FE4 083C+00 rc=0 efc=0 .text      drawGuide__14dMsgScrnHowl_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -752,10 +758,10 @@ asm void dMsgScrnHowl_c::drawGuide() {
 
 
 /* ############################################################################################## */
-/* 80454CA0-80454CA4 0004+00 rc=1 efc=0 .sdata2    @5203                                                        */
+/* 80454CA0-80454CA4 0004+00 rc=0 efc=0 .sdata2    @5203                                                        */
 f32 lit_5203 = 18.0f;
 
-/* 80242FE4-802435BC 05D8+00 rc=1 efc=0 .text      drawGuide2__14dMsgScrnHowl_cFv                               */
+/* 80242FE4-802435BC 05D8+00 rc=0 efc=0 .text      drawGuide2__14dMsgScrnHowl_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -767,13 +773,13 @@ asm void dMsgScrnHowl_c::drawGuide2() {
 
 
 /* ############################################################################################## */
-/* 80454CA4-80454CA8 0004+00 rc=1 efc=0 .sdata2    @5233                                                        */
+/* 80454CA4-80454CA8 0004+00 rc=0 efc=0 .sdata2    @5233                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_5233 = 12.0f;
 
-/* 80454CA8-80454CAC 0004+00 rc=1 efc=0 .sdata2    @5234                                                        */
+/* 80454CA8-80454CAC 0004+00 rc=0 efc=0 .sdata2    @5234                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_5234 = 50.0f;
 
-/* 802435BC-80243838 027C+00 rc=1 efc=0 .text      drawEffect__14dMsgScrnHowl_cFv                               */
+/* 802435BC-80243838 027C+00 rc=0 efc=0 .text      drawEffect__14dMsgScrnHowl_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -784,7 +790,7 @@ asm void dMsgScrnHowl_c::drawEffect() {
 #pragma pop
 
 
-/* 80243838-8024389C 0064+00 rc=3 efc=0 .text      calcMain__14dMsgScrnHowl_cFv                                 */
+/* 80243838-8024389C 0064+00 rc=0 efc=0 .text      calcMain__14dMsgScrnHowl_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -795,7 +801,7 @@ asm void dMsgScrnHowl_c::calcMain() {
 #pragma pop
 
 
-/* 8024389C-80243A50 01B4+00 rc=1 efc=0 .text      calcWave__14dMsgScrnHowl_cFv                                 */
+/* 8024389C-80243A50 01B4+00 rc=0 efc=0 .text      calcWave__14dMsgScrnHowl_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -806,7 +812,7 @@ asm void dMsgScrnHowl_c::calcWave() {
 #pragma pop
 
 
-/* 80243A50-80243BE0 0190+00 rc=1 efc=0 .text      calcGuide__14dMsgScrnHowl_cFv                                */
+/* 80243A50-80243BE0 0190+00 rc=0 efc=0 .text      calcGuide__14dMsgScrnHowl_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -817,7 +823,7 @@ asm void dMsgScrnHowl_c::calcGuide() {
 #pragma pop
 
 
-/* 80243BE0-80243DCC 01EC+00 rc=2 efc=0 .text      moveLineV__14dMsgScrnHowl_cFb                                */
+/* 80243BE0-80243DCC 01EC+00 rc=0 efc=0 .text      moveLineV__14dMsgScrnHowl_cFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -828,7 +834,7 @@ asm void dMsgScrnHowl_c::moveLineV(bool field_0) {
 #pragma pop
 
 
-/* 80243DCC-80243EEC 0120+00 rc=2 efc=0 .text      moveBaseLength__14dMsgScrnHowl_cFb                           */
+/* 80243DCC-80243EEC 0120+00 rc=0 efc=0 .text      moveBaseLength__14dMsgScrnHowl_cFb                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -839,7 +845,7 @@ asm void dMsgScrnHowl_c::moveBaseLength(bool field_0) {
 #pragma pop
 
 
-/* 80243EEC-80243F58 006C+00 rc=2 efc=0 .text      getOnLineNum__14dMsgScrnHowl_cFi                             */
+/* 80243EEC-80243F58 006C+00 rc=0 efc=0 .text      getOnLineNum__14dMsgScrnHowl_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -850,7 +856,7 @@ asm void dMsgScrnHowl_c::getOnLineNum(int field_0) {
 #pragma pop
 
 
-/* 80243F58-80243F7C 0024+00 rc=2 efc=0 .text      addCount__14dMsgScrnHowl_cFs                                 */
+/* 80243F58-80243F7C 0024+00 rc=0 efc=0 .text      addCount__14dMsgScrnHowl_cFs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -861,7 +867,7 @@ asm void dMsgScrnHowl_c::addCount(s16 field_0) {
 #pragma pop
 
 
-/* 80243F7C-80243F94 0018+00 rc=2 efc=0 .text      addCountGuide__14dMsgScrnHowl_cFs                            */
+/* 80243F7C-80243F94 0018+00 rc=0 efc=0 .text      addCountGuide__14dMsgScrnHowl_cFs                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -873,10 +879,10 @@ asm void dMsgScrnHowl_c::addCountGuide(s16 field_0) {
 
 
 /* ############################################################################################## */
-/* 80454CAC-80454CB0 0004+00 rc=1 efc=0 .sdata2    @5508                                                        */
+/* 80454CAC-80454CB0 0004+00 rc=0 efc=0 .sdata2    @5508                                                        */
 f32 msg_scrn_d_msg_scrn_howl__lit_5508 = -1.0f;
 
-/* 80243F94-80244108 0174+00 rc=2 efc=0 .text      getNowPlotPitch__14dMsgScrnHowl_cFf                          */
+/* 80243F94-80244108 0174+00 rc=0 efc=0 .text      getNowPlotPitch__14dMsgScrnHowl_cFf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -887,7 +893,7 @@ asm void dMsgScrnHowl_c::getNowPlotPitch(f32 field_0) {
 #pragma pop
 
 
-/* 80244108-8024414C 0044+00 rc=2 efc=0 .text      getPlotPitch__14dMsgScrnHowl_cFf                             */
+/* 80244108-8024414C 0044+00 rc=0 efc=0 .text      getPlotPitch__14dMsgScrnHowl_cFf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -898,7 +904,7 @@ asm void dMsgScrnHowl_c::getPlotPitch(f32 field_0) {
 #pragma pop
 
 
-/* 8024414C-802441FC 00B0+00 rc=2 efc=0 .text      calcPitchLevel__14dMsgScrnHowl_cFv                           */
+/* 8024414C-802441FC 00B0+00 rc=0 efc=0 .text      calcPitchLevel__14dMsgScrnHowl_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -909,7 +915,7 @@ asm void dMsgScrnHowl_c::calcPitchLevel() {
 #pragma pop
 
 
-/* 802441FC-80244304 0108+00 rc=1 efc=0 .text      initGuideData__14dMsgScrnHowl_cFv                            */
+/* 802441FC-80244304 0108+00 rc=0 efc=0 .text      initGuideData__14dMsgScrnHowl_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -920,7 +926,7 @@ asm void dMsgScrnHowl_c::initGuideData() {
 #pragma pop
 
 
-/* 80244304-8024438C 0088+00 rc=2 efc=0 .text      getGuideDataSize__14dMsgScrnHowl_cFv                         */
+/* 80244304-8024438C 0088+00 rc=0 efc=0 .text      getGuideDataSize__14dMsgScrnHowl_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -931,7 +937,7 @@ asm void dMsgScrnHowl_c::getGuideDataSize() {
 #pragma pop
 
 
-/* 8024438C-80244454 00C8+00 rc=2 efc=0 .text      getGuideDataType__14dMsgScrnHowl_cFi                         */
+/* 8024438C-80244454 00C8+00 rc=0 efc=0 .text      getGuideDataType__14dMsgScrnHowl_cFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -942,7 +948,7 @@ asm void dMsgScrnHowl_c::getGuideDataType(int field_0) {
 #pragma pop
 
 
-/* 80244454-80244558 0104+00 rc=1 efc=1 .text      __sinit_d_msg_scrn_howl_cpp                                  */
+/* 80244454-80244558 0104+00 rc=0 efc=0 .text      __sinit_d_msg_scrn_howl_cpp                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

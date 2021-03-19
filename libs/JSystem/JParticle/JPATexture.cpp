@@ -29,7 +29,7 @@ struct JUTTexture {
 
 extern "C" void __ct__10JPATextureFPCUc(); // 1
 extern "C" void __dt__10JPATextureFv(); // 1
-SECTION_DATA extern void*const __vt__10JPATexture[4];
+SECTION_DATA extern void* const __vt__10JPATexture[3 + 1 /* padding */];
 
 // 
 // External References:
@@ -46,16 +46,16 @@ extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C4598-803C45A8 000C+04 rc=2 efc=0 .data      __vt__10JPATexture                                           */
-void* const __vt__10JPATexture[4] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803C4598-803C45A8 000C+04 rc=0 efc=0 .data      __vt__10JPATexture                                           */
+void* const __vt__10JPATexture[3 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__10JPATextureFv,
 	/* padding */
 	NULL,
 };
 
-/* 8027D7D4-8027D83C 0068+00 rc=1 efc=1 .text      __ct__10JPATextureFPCUc                                      */
+/* 8027D7D4-8027D83C 0068+00 rc=0 efc=0 .text      __ct__10JPATextureFPCUc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ asm JPATexture::JPATexture(u8 const* field_0) {
 #pragma pop
 
 
-/* 8027D83C-8027D8A0 0064+00 rc=1 efc=0 .text      __dt__10JPATextureFv                                         */
+/* 8027D83C-8027D8A0 0064+00 rc=0 efc=0 .text      __dt__10JPATextureFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

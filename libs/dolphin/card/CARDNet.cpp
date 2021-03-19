@@ -12,7 +12,7 @@
 extern "C" void CARDGetSerialNo(); // 1
 
 extern "C" void CARDGetSerialNo(); // 1
-SECTION_SDATA extern u8 struct_80450A70[8];
+extern u8 struct_80450A70[8];
 
 // 
 // External References:
@@ -28,7 +28,7 @@ extern "C" void __CARDPutControlBlock(); // 1
 // Declarations:
 // 
 
-/* 80359158-8035921C 00C4+00 rc=1 efc=1 .text      CARDGetSerialNo                                              */
+/* 80359158-8035921C 00C4+00 rc=0 efc=0 .text      CARDGetSerialNo                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -40,11 +40,11 @@ extern "C" asm void CARDGetSerialNo() {
 
 
 /* ############################################################################################## */
-/* 80450A70-80450A78 0008+00 rc=4 efc=4 .sdata     None                                                         */
+/* 80450A70-80450A78 0008+00 rc=0 efc=0 None       None                                                         */
 u8 struct_80450A70[8] = {
-	/* data_80450A70 */
+	/* 80450A70 0002 data_80450A70 __CARDVendorID */
 	0xFF, 0xFF,
-	/* data_80450A72 */
+	/* 80450A72 0006 data_80450A72 None */
 	0x1C, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

@@ -1,6 +1,6 @@
 lbl_80007FD8:
 /* 80007FD8 00000000  38 00 00 01 */	li r0, 1
-/* 80007FDC 00000004  98 0D 86 66 */	stb r0, struct_80450BE4+0x2(r13)
+/* 80007FDC 00000004  98 0D 86 66 */	stb r0, -0x799a(r13)
 /* 80007FE0 00000008  D0 2D 86 60 */	stfs f1, mFadeSpeed__13mDoGph_gInf_c(r13)
 /* 80007FE4 0000000C  88 03 00 00 */	lbz r0, 0(r3)
 /* 80007FE8 00000010  98 0D 80 14 */	stb r0, mFadeColor__13mDoGph_gInf_c(r13)

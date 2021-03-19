@@ -9,12 +9,12 @@
 // Forward References:
 // 
 
-extern "C" static void CreateCallbackFat(); // 1
-extern "C" static void CARDCreateAsync(); // 1
+extern "C" void CreateCallbackFat(); // 1
+extern "C" void CARDCreateAsync(); // 1
 extern "C" void CARDCreate(); // 1
 
-extern "C" static void CreateCallbackFat(); // 1
-extern "C" static void CARDCreateAsync(); // 1
+extern "C" void CreateCallbackFat(); // 1
+extern "C" void CARDCreateAsync(); // 1
 extern "C" void CARDCreate(); // 1
 
 // 
@@ -60,29 +60,29 @@ SECTION_BSS extern u8 __CARDBlock[544];
 // Declarations:
 // 
 
-/* 80358108-80358238 0130+00 rc=1 efc=0 .text      CreateCallbackFat                                            */
+/* 80358108-80358238 0130+00 rc=0 efc=0 .text      CreateCallbackFat                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CreateCallbackFat() {
+extern "C" asm void CreateCallbackFat() {
 	nofralloc
 #include "asm/dolphin/card/CARDCreate/CreateCallbackFat.s"
 }
 #pragma pop
 
 
-/* 80358238-80358458 0220+00 rc=1 efc=0 .text      CARDCreateAsync                                              */
+/* 80358238-80358458 0220+00 rc=0 efc=0 .text      CARDCreateAsync                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDCreateAsync() {
+extern "C" asm void CARDCreateAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDCreate/CARDCreateAsync.s"
 }
 #pragma pop
 
 
-/* 80358458-803584A0 0048+00 rc=1 efc=1 .text      CARDCreate                                                   */
+/* 80358458-803584A0 0048+00 rc=0 efc=0 .text      CARDCreate                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

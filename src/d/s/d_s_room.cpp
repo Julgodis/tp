@@ -86,52 +86,52 @@ struct JKRExpHeap {
 // Forward References:
 // 
 
-static bool dScnRoom_Draw(room_of_scene_class*); // 2
-static void getResetArchiveBank(int, u8 const**); // 2
-static void resetArchiveBank(int); // 2
-static void setArchiveBank(int); // 2
-static void objectDeleteJugge(void*, void*); // 2
-static void deleteJugge(void*, void*); // 2
-static void isCreatingCallback(create_tag*, u32*); // 2
-static void isCreating(u32); // 2
-static void loadDemoArchive(int); // 2
-static void objectSetCheck(room_of_scene_class*); // 2
-static void dScnRoom_Execute(room_of_scene_class*); // 2
-static bool dScnRoom_IsDelete(room_of_scene_class*); // 2
-static void isReadRoom(int); // 2
-static void dScnRoom_Delete(room_of_scene_class*); // 2
-static void phase_0(room_of_scene_class*); // 2
-static void phase_1(room_of_scene_class*); // 2
-static void phase_2(room_of_scene_class*); // 2
-static void phase_3(room_of_scene_class*); // 2
-static void phase_4(room_of_scene_class*); // 2
-static void dScnRoom_Create(scene_class*); // 2
+bool dScnRoom_Draw(room_of_scene_class*); // 2
+void getResetArchiveBank(int, u8 const**); // 2
+void resetArchiveBank(int); // 2
+void setArchiveBank(int); // 2
+void objectDeleteJugge(void*, void*); // 2
+void deleteJugge(void*, void*); // 2
+void isCreatingCallback(create_tag*, u32*); // 2
+void isCreating(u32); // 2
+void loadDemoArchive(int); // 2
+void objectSetCheck(room_of_scene_class*); // 2
+void dScnRoom_Execute(room_of_scene_class*); // 2
+bool dScnRoom_IsDelete(room_of_scene_class*); // 2
+void isReadRoom(int); // 2
+void dScnRoom_Delete(room_of_scene_class*); // 2
+void phase_0(room_of_scene_class*); // 2
+void phase_1(room_of_scene_class*); // 2
+void phase_2(room_of_scene_class*); // 2
+void phase_3(room_of_scene_class*); // 2
+void phase_4(room_of_scene_class*); // 2
+void dScnRoom_Create(scene_class*); // 2
 
-extern "C" static bool dScnRoom_Draw__FP19room_of_scene_class(); // 1
-extern "C" static void getResetArchiveBank__FiPPCUc(); // 1
-extern "C" static void resetArchiveBank__Fi(); // 1
-extern "C" static void setArchiveBank__Fi(); // 1
-extern "C" static void objectDeleteJugge__FPvPv(); // 1
-extern "C" static void deleteJugge__FPvPv(); // 1
-extern "C" static void isCreatingCallback__FP10create_tagPUi(); // 1
-extern "C" static void isCreating__FUi(); // 1
-extern "C" static void loadDemoArchive__Fi(); // 1
-extern "C" static void objectSetCheck__FP19room_of_scene_class(); // 1
-extern "C" static void dScnRoom_Execute__FP19room_of_scene_class(); // 1
-extern "C" static bool dScnRoom_IsDelete__FP19room_of_scene_class(); // 1
-extern "C" static void isReadRoom__Fi(); // 1
-extern "C" static void dScnRoom_Delete__FP19room_of_scene_class(); // 1
-extern "C" static void phase_0__FP19room_of_scene_class(); // 1
-extern "C" static void phase_1__FP19room_of_scene_class(); // 1
-extern "C" static void phase_2__FP19room_of_scene_class(); // 1
+extern "C" bool dScnRoom_Draw__FP19room_of_scene_class(); // 1
+extern "C" void getResetArchiveBank__FiPPCUc(); // 1
+extern "C" void resetArchiveBank__Fi(); // 1
+extern "C" void setArchiveBank__Fi(); // 1
+extern "C" void objectDeleteJugge__FPvPv(); // 1
+extern "C" void deleteJugge__FPvPv(); // 1
+extern "C" void isCreatingCallback__FP10create_tagPUi(); // 1
+extern "C" void isCreating__FUi(); // 1
+extern "C" void loadDemoArchive__Fi(); // 1
+extern "C" void objectSetCheck__FP19room_of_scene_class(); // 1
+extern "C" void dScnRoom_Execute__FP19room_of_scene_class(); // 1
+extern "C" bool dScnRoom_IsDelete__FP19room_of_scene_class(); // 1
+extern "C" void isReadRoom__Fi(); // 1
+extern "C" void dScnRoom_Delete__FP19room_of_scene_class(); // 1
+extern "C" void phase_0__FP19room_of_scene_class(); // 1
+extern "C" void phase_1__FP19room_of_scene_class(); // 1
+extern "C" void phase_2__FP19room_of_scene_class(); // 1
 extern "C" void setZoneNo__20dStage_roomControl_cFii(); // 1
-extern "C" static void phase_3__FP19room_of_scene_class(); // 1
-extern "C" static void phase_4__FP19room_of_scene_class(); // 1
-extern "C" static void dScnRoom_Create__FP11scene_class(); // 1
-SECTION_RODATA extern const u8 d_s_d_s_room__stringBase0[80];
-SECTION_DATA extern void*data_803C3260[5];
-SECTION_DATA extern void*l_dScnRoom_Method[5];
-SECTION_DATA extern void*g_profile_ROOM_SCENE[10];
+extern "C" void phase_3__FP19room_of_scene_class(); // 1
+extern "C" void phase_4__FP19room_of_scene_class(); // 1
+extern "C" void dScnRoom_Create__FP11scene_class(); // 1
+SECTION_RODATA extern const char* const d_s_d_s_room__stringBase0;
+SECTION_DATA extern void* data_803C3260[5];
+SECTION_DATA extern void* l_dScnRoom_Method[5];
+SECTION_DATA extern void* g_profile_ROOM_SCENE[10];
 
 // 
 // External References:
@@ -211,216 +211,214 @@ extern "C" void _restgpr_29(); // 1
 extern "C" void sprintf(); // 1
 extern "C" void strcmp(); // 1
 extern "C" void strnicmp(); // 1
-SECTION_DATA extern void*g_fopScn_Method[6];
-SECTION_DATA extern void*g_fpcNd_Method[6];
+SECTION_DATA extern void* g_fopScn_Method[5 + 1 /* padding */];
+SECTION_DATA extern void* g_fpcNd_Method[5 + 1 /* padding */];
 SECTION_BSS extern u8 mStatus__20dStage_roomControl_c[65792];
 SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
-SECTION_SBSS extern u8 struct_80450D64[4];
 SECTION_SBSS extern u8 mArcBankName__20dStage_roomControl_c[4];
 SECTION_SBSS extern u8 mArcBankData__20dStage_roomControl_c[4];
-SECTION_SBSS extern u8 struct_80451124[4];
 
 // 
 // Declarations:
 // 
 
-/* 8025AE1C-8025AE24 0008+00 rc=1 efc=0 .text      dScnRoom_Draw__FP19room_of_scene_class                       */
-static bool dScnRoom_Draw(room_of_scene_class* field_0) {
+/* 8025AE1C-8025AE24 0008+00 rc=0 efc=0 .text      dScnRoom_Draw__FP19room_of_scene_class                       */
+bool dScnRoom_Draw(room_of_scene_class* field_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 8039A388-8039A3D8 004B+05 rc=4 efc=0 .rodata    @stringBase0                                                 */
+/* 8039A388-8039A3D8 004B+05 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_8039A388 = "";
-SECTION_DEAD char* const stringBase_8039A389 = "pack";
-SECTION_DEAD char* const stringBase_8039A38E = "/res/Object/";
-SECTION_DEAD char* const stringBase_8039A39B = 
+const char* const stringBase_8039A388 = "";
+const char* const stringBase_8039A389 = "pack";
+const char* const stringBase_8039A38E = "/res/Object/";
+const char* const stringBase_8039A39B = 
     "Bank[%d] : %s.arc Read Error !!\n";
-SECTION_DEAD char* const stringBase_8039A3BC = "Demo%02d_%02d";
-SECTION_DEAD char* const stringBase_8039A3CA = "room.dzr";
+const char* const stringBase_8039A3BC = "Demo%02d_%02d";
+const char* const stringBase_8039A3CA = "room.dzr";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_8039A3D3 = "\0\0\0\0";
+char* const pad_8039A3D3 = "\0\0\0\0";
 #pragma pop
 
-/* 8025AE24-8025AF24 0100+00 rc=2 efc=0 .text      getResetArchiveBank__FiPPCUc                                 */
+/* 8025AE24-8025AF24 0100+00 rc=0 efc=0 .text      getResetArchiveBank__FiPPCUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void getResetArchiveBank(int field_0, u8 const** field_1) {
+asm void getResetArchiveBank(int field_0, u8 const** field_1) {
 	nofralloc
 #include "asm/d/s/d_s_room/getResetArchiveBank__FiPPCUc.s"
 }
 #pragma pop
 
 
-/* 8025AF24-8025AF4C 0028+00 rc=1 efc=0 .text      resetArchiveBank__Fi                                         */
+/* 8025AF24-8025AF4C 0028+00 rc=0 efc=0 .text      resetArchiveBank__Fi                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void resetArchiveBank(int field_0) {
+asm void resetArchiveBank(int field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/resetArchiveBank__Fi.s"
 }
 #pragma pop
 
 
-/* 8025AF4C-8025B0F0 01A4+00 rc=1 efc=0 .text      setArchiveBank__Fi                                           */
+/* 8025AF4C-8025B0F0 01A4+00 rc=0 efc=0 .text      setArchiveBank__Fi                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void setArchiveBank(int field_0) {
+asm void setArchiveBank(int field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/setArchiveBank__Fi.s"
 }
 #pragma pop
 
 
-/* 8025B0F0-8025B150 0060+00 rc=1 efc=0 .text      objectDeleteJugge__FPvPv                                     */
+/* 8025B0F0-8025B150 0060+00 rc=0 efc=0 .text      objectDeleteJugge__FPvPv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void objectDeleteJugge(void* field_0, void* field_1) {
+asm void objectDeleteJugge(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/s/d_s_room/objectDeleteJugge__FPvPv.s"
 }
 #pragma pop
 
 
-/* 8025B150-8025B174 0024+00 rc=1 efc=0 .text      deleteJugge__FPvPv                                           */
+/* 8025B150-8025B174 0024+00 rc=0 efc=0 .text      deleteJugge__FPvPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void deleteJugge(void* field_0, void* field_1) {
+asm void deleteJugge(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/s/d_s_room/deleteJugge__FPvPv.s"
 }
 #pragma pop
 
 
-/* 8025B174-8025B194 0020+00 rc=1 efc=0 .text      isCreatingCallback__FP10create_tagPUi                        */
+/* 8025B174-8025B194 0020+00 rc=0 efc=0 .text      isCreatingCallback__FP10create_tagPUi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void isCreatingCallback(create_tag* field_0, u32* field_1) {
+asm void isCreatingCallback(create_tag* field_0, u32* field_1) {
 	nofralloc
 #include "asm/d/s/d_s_room/isCreatingCallback__FP10create_tagPUi.s"
 }
 #pragma pop
 
 
-/* 8025B194-8025B1D0 003C+00 rc=2 efc=0 .text      isCreating__FUi                                              */
+/* 8025B194-8025B1D0 003C+00 rc=0 efc=0 .text      isCreating__FUi                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void isCreating(u32 field_0) {
+asm void isCreating(u32 field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/isCreating__FUi.s"
 }
 #pragma pop
 
 
-/* 8025B1D0-8025B2EC 011C+00 rc=1 efc=0 .text      loadDemoArchive__Fi                                          */
+/* 8025B1D0-8025B2EC 011C+00 rc=0 efc=0 .text      loadDemoArchive__Fi                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void loadDemoArchive(int field_0) {
+asm void loadDemoArchive(int field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/loadDemoArchive__Fi.s"
 }
 #pragma pop
 
 
-/* 8025B2EC-8025B564 0278+00 rc=3 efc=0 .text      objectSetCheck__FP19room_of_scene_class                      */
+/* 8025B2EC-8025B564 0278+00 rc=0 efc=0 .text      objectSetCheck__FP19room_of_scene_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void objectSetCheck(room_of_scene_class* field_0) {
+asm void objectSetCheck(room_of_scene_class* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/objectSetCheck__FP19room_of_scene_class.s"
 }
 #pragma pop
 
 
-/* 8025B564-8025B674 0110+00 rc=1 efc=0 .text      dScnRoom_Execute__FP19room_of_scene_class                    */
+/* 8025B564-8025B674 0110+00 rc=0 efc=0 .text      dScnRoom_Execute__FP19room_of_scene_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dScnRoom_Execute(room_of_scene_class* field_0) {
+asm void dScnRoom_Execute(room_of_scene_class* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/dScnRoom_Execute__FP19room_of_scene_class.s"
 }
 #pragma pop
 
 
-/* 8025B674-8025B67C 0008+00 rc=1 efc=0 .text      dScnRoom_IsDelete__FP19room_of_scene_class                   */
-static bool dScnRoom_IsDelete(room_of_scene_class* field_0) {
+/* 8025B674-8025B67C 0008+00 rc=0 efc=0 .text      dScnRoom_IsDelete__FP19room_of_scene_class                   */
+bool dScnRoom_IsDelete(room_of_scene_class* field_0) {
 	return true;
 }
 
 
-/* 8025B67C-8025B73C 00C0+00 rc=1 efc=0 .text      isReadRoom__Fi                                               */
+/* 8025B67C-8025B73C 00C0+00 rc=0 efc=0 .text      isReadRoom__Fi                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void isReadRoom(int field_0) {
+asm void isReadRoom(int field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/isReadRoom__Fi.s"
 }
 #pragma pop
 
 
-/* 8025B73C-8025B870 0134+00 rc=1 efc=0 .text      dScnRoom_Delete__FP19room_of_scene_class                     */
+/* 8025B73C-8025B870 0134+00 rc=0 efc=0 .text      dScnRoom_Delete__FP19room_of_scene_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dScnRoom_Delete(room_of_scene_class* field_0) {
+asm void dScnRoom_Delete(room_of_scene_class* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/dScnRoom_Delete__FP19room_of_scene_class.s"
 }
 #pragma pop
 
 
-/* 8025B870-8025B8A4 0034+00 rc=1 efc=0 .text      phase_0__FP19room_of_scene_class                             */
+/* 8025B870-8025B8A4 0034+00 rc=0 efc=0 .text      phase_0__FP19room_of_scene_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void phase_0(room_of_scene_class* field_0) {
+asm void phase_0(room_of_scene_class* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/phase_0__FP19room_of_scene_class.s"
 }
 #pragma pop
 
 
-/* 8025B8A4-8025B980 00DC+00 rc=1 efc=0 .text      phase_1__FP19room_of_scene_class                             */
+/* 8025B8A4-8025B980 00DC+00 rc=0 efc=0 .text      phase_1__FP19room_of_scene_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void phase_1(room_of_scene_class* field_0) {
+asm void phase_1(room_of_scene_class* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/phase_1__FP19room_of_scene_class.s"
 }
 #pragma pop
 
 
-/* 8025B980-8025BAAC 012C+00 rc=1 efc=0 .text      phase_2__FP19room_of_scene_class                             */
+/* 8025B980-8025BAAC 012C+00 rc=0 efc=0 .text      phase_2__FP19room_of_scene_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void phase_2(room_of_scene_class* field_0) {
+asm void phase_2(room_of_scene_class* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/phase_2__FP19room_of_scene_class.s"
 }
 #pragma pop
 
 
-/* 8025BAAC-8025BAC4 0018+00 rc=1 efc=0 .text      setZoneNo__20dStage_roomControl_cFii                         */
+/* 8025BAAC-8025BAC4 0018+00 rc=0 efc=0 .text      setZoneNo__20dStage_roomControl_cFii                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -431,22 +429,22 @@ asm void dStage_roomControl_c::setZoneNo(int field_0, int field_1) {
 #pragma pop
 
 
-/* 8025BAC4-8025BAF8 0034+00 rc=1 efc=0 .text      phase_3__FP19room_of_scene_class                             */
+/* 8025BAC4-8025BAF8 0034+00 rc=0 efc=0 .text      phase_3__FP19room_of_scene_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void phase_3(room_of_scene_class* field_0) {
+asm void phase_3(room_of_scene_class* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/phase_3__FP19room_of_scene_class.s"
 }
 #pragma pop
 
 
-/* 8025BAF8-8025BB48 0050+00 rc=1 efc=0 .text      phase_4__FP19room_of_scene_class                             */
+/* 8025BAF8-8025BB48 0050+00 rc=0 efc=0 .text      phase_4__FP19room_of_scene_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void phase_4(room_of_scene_class* field_0) {
+asm void phase_4(room_of_scene_class* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/phase_4__FP19room_of_scene_class.s"
 }
@@ -454,7 +452,7 @@ asm static void phase_4(room_of_scene_class* field_0) {
 
 
 /* ############################################################################################## */
-/* 803C3260-803C3274 0014+00 rc=1 efc=0 .data      l_method$4056                                                */
+/* 803C3260-803C3274 0014+00 rc=0 efc=0 .data      l_method$4056                                                */
 void* data_803C3260[5] = {
 	(void*)phase_0__FP19room_of_scene_class,
 	(void*)phase_1__FP19room_of_scene_class,
@@ -463,11 +461,11 @@ void* data_803C3260[5] = {
 	(void*)phase_4__FP19room_of_scene_class,
 };
 
-/* 8025BB48-8025BB78 0030+00 rc=1 efc=0 .text      dScnRoom_Create__FP11scene_class                             */
+/* 8025BB48-8025BB78 0030+00 rc=0 efc=0 .text      dScnRoom_Create__FP11scene_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dScnRoom_Create(scene_class* field_0) {
+asm void dScnRoom_Create(scene_class* field_0) {
 	nofralloc
 #include "asm/d/s/d_s_room/dScnRoom_Create__FP11scene_class.s"
 }
@@ -475,7 +473,7 @@ asm static void dScnRoom_Create(scene_class* field_0) {
 
 
 /* ############################################################################################## */
-/* 803C3274-803C3288 0014+00 rc=1 efc=0 .data      l_dScnRoom_Method                                            */
+/* 803C3274-803C3288 0014+00 rc=0 efc=0 .data      l_dScnRoom_Method                                            */
 void* l_dScnRoom_Method[5] = {
 	(void*)dScnRoom_Create__FP11scene_class,
 	(void*)dScnRoom_Delete__FP19room_of_scene_class,
@@ -491,10 +489,10 @@ void* g_profile_ROOM_SCENE[10] = {
 	(void*)0x00120000,
 	(void*)&g_fpcNd_Method,
 	(void*)0x000001DC,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)&g_fopScn_Method,
 	(void*)&l_dScnRoom_Method,
-	NULL,
+	(void*)NULL,
 };
 

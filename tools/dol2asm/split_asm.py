@@ -1,66 +1,50 @@
 #!/usr/bin/env python3
 
-import symbol_finder
 import os
 import sys
 import re
 import subprocess
-from pathlib import Path
-from collections import defaultdict
-from builder import Builder
-from read_map import MapSymbol, read_frameworkF, read_elfSymbols
-import disassembler as dasm
-import util
-from symbols import *
-import asm_exporter as asm
-import cpp_exporter as cpp
 import traceback
 import pickle
-from globals import *
-import demangle
-from intervaltree import Interval, IntervalTree
 import time
 import click
 import asyncio
 import concurrent.futures
 import random
-
-import globals as g
-from exception import Dol2ZelException
-from builder import AsyncBuilder
-
 import rich
+import logging
+import hashlib
+
+from pathlib import Path
+from collections import defaultdict
+from intervaltree import Interval, IntervalTree
 from rich.progress import Progress
 from rich.tree import Tree
 
-from data import *
-from symbol_table import GlobalSymbolTable
+from . import mp
+from . import util
+from . import symbol_finder
+from . import analyze
+from . import generate_functions
+from . import generate_symbols
+from . import merge_symbols
+from . import symbol_naming
 
-import baserom
-import analyze
-import symbol_sizes
-import sort_objects
-import generate_functions
-import generate_symbols
-import merge_symbols
-import symbol_naming
-import symbol_def
-import rellib
-import dollib
-import arclib
-import makefile
-import merge_symbols
-import mp
+from . import dollib
+from . import rellib
+from . import arclib
+from . import makefile
+from . import symbol_def
 
-import asyncio
-from functools import wraps
+from . import cpp_exporter as cpp
+from . import globals as g
 
-from multiprocessing import Manager, Pool, Queue, TimeoutError, Process
-from context import Context, MainContext
-from typing import List, Any
-from queue import Empty
-import traceback 
-import hashlib
+from .data import *
+
+from .context import *
+from .symbol_table import GlobalSymbolTable
+from .data.section import ExecutableSection
+
 
 """
 
@@ -135,9 +119,9 @@ def main(debug, game_path):
 
     cpp_gen = True
     asm_gen = False
-    mk_gen = True
-    symbols_gen = True
-    ref_gen = True
+    mk_gen = False
+    symbols_gen = False
+    ref_gen = False
     no_file_generation = False
     select_modules = [0]
 
@@ -145,7 +129,7 @@ def main(debug, game_path):
     asm_group_count = 16
 
     step_count = 1
-    process_count = 8
+    process_count = 12
 
     g.CONSOLE.print(f"dol2asm {g.VERSION} for '{g.GAME_NAME}'")
 
@@ -216,12 +200,12 @@ def main(debug, game_path):
     g.RELS = {}
     for rel_filepath in rels_path:
         with rel_filepath.open('rb') as file:
-            if not rel_filepath.name.lower() in REL_SHA1:
+            if not rel_filepath.name.lower() in g.REL_SHA1:
                 g.LOG.error(f"unknown REL file: '{rel_filepath}' ({rel_filepath.name.lower()})")
                 sys.exit(1)
 
             data = bytearray(file.read())
-            sha1_check(rel_filepath, data, REL_SHA1[rel_filepath.name.lower()])
+            sha1_check(rel_filepath, data, g.REL_SHA1[rel_filepath.name.lower()])
 
             rel = rellib.read(data)
             rel.path = rel_filepath
@@ -239,11 +223,11 @@ def main(debug, game_path):
                 continue
             
             if file.name.endswith(".rel"):
-                if not file.name.lower() in REL_SHA1:
+                if not file.name.lower() in g.REL_SHA1:
                     g.LOG.error(f"unknown REL file: '{file.name}' ({file.name.lower()})")
                     sys.exit(1)
 
-                sha1_check(file.name, file.data, REL_SHA1[file.name.lower()])
+                sha1_check(file.name, file.data, g.REL_SHA1[file.name.lower()])
 
                 rel = rellib.read(file.data)
                 rel.path = Path(file.name)
@@ -263,7 +247,7 @@ def main(debug, game_path):
     # create '.dol' executable sections
     executable_sections = [
         # symbol_finder expects the first section to be a "null" section
-        g.ExecutableSection("null", 0, 0, 0, None, [], {})
+        ExecutableSection("null", 0, 0, 0, None, [], {})
     ]
     for section in g.DOL.sections:
         cs = []
@@ -277,7 +261,7 @@ def main(debug, game_path):
             else:
                 cs.append((0, section.size))
 
-        executable_section = g.ExecutableSection(
+        executable_section = ExecutableSection(
             section.name, section.addr, section.size, 0, section.data, cs, {})
         executable_sections.append(executable_section)
 
@@ -304,7 +288,7 @@ def main(debug, game_path):
             if section.executable_flag:
                 cs.append((0, section.length))
 
-            exe_section = g.ExecutableSection(
+            exe_section = ExecutableSection(
                 section.name, section.addr, section.length, base_addr,
                 section.data, cs, {})
             exe_section.raw_offset = offset
@@ -372,15 +356,21 @@ def main(debug, game_path):
             for tu in lib.translation_units.values():
                 for section in tu.sections.values():
                     for symbol in section.symbols:
-                        if not isinstance(symbol, InitData) and not isinstance(symbol, Integer):
+                        
+                        #if symbol.addr == 2152010216:
+                        #    main_context.debug(symbol)
+                        #    sys.exit(1)
+
+                        if not isinstance(symbol, ArbitraryData) and not isinstance(symbol, Integer):
                             continue
 
+                        if not symbol.data:
+                            continue
                         if len(symbol.data) % 4 != 0:
                             continue
 
                         count = len(symbol.data) // 4
-                        values = list(struct.unpack(
-                            ">" + "I" * count, symbol.data))
+                        values = list(struct.unpack(">" + "I" * count, symbol.data))
                         is_symbols = [not not symbol_table[module.index, x] for x in values]
                         if not any(is_symbols):
                             relocations = section.relocations
@@ -388,18 +378,15 @@ def main(debug, game_path):
                             if not any(is_relocations):
                                 continue
 
-                        new_symbol = ReferenceArray(
+                        values = Integer.u32_from(symbol.data)
+                        padding_values = Integer.u32_from(symbol.padding_data)
+                        new_symbol = ReferenceArray.create(
                             symbol.identifier,
                             symbol.addr,
-                            symbol.size,
-                            data=symbol.data,
-                            padding=symbol.padding,
-                            padding_data=symbol.padding_data,
-                            _module=symbol._module,
-                            _library=symbol._library,
-                            _translation_unit=symbol._translation_unit,
-                            _section=symbol._section,
-                            source=symbol.source)
+                            values,
+                            padding_values)
+
+                        new_symbol.set_mlts(symbol._module,symbol._library,symbol._translation_unit,symbol._section)
 
                         section.replace_symbol(symbol, new_symbol)
                         symbol_table.remove_symbol(symbol)
@@ -600,4 +587,3 @@ def main(debug, game_path):
     g.CONSOLE.print(f"{step_count:2} Complete! Everything took {total_end_time-total_start_time:.2f} seconds")
     sys.exit(1)
 
-main(debug = True, game_path = Path("game/"))

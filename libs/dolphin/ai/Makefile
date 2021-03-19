@@ -17,11 +17,14 @@ LIBAI_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libai.a: $(LIBAI_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libai.a
 	@echo $(LIBAI_A_O_FILES) > build/LIBAI_A_ofiles
-	$(LD) -xm l $(LIBAI_A_LDFLAGS) -o $(BUILD_DIR)/libai.a @build/LIBAI_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libai.a
+	@$(LD) -xm l $(LIBAI_A_LDFLAGS) -o $(BUILD_DIR)/libai.a @build/LIBAI_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libai.a
 
 $(BUILD_DIR)/libs/dolphin/ai/%.o: libs/dolphin/ai/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBAI_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBAI_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

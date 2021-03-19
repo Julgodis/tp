@@ -1,3 +1,0 @@
-lbl_804BB168:
-/* 804BB168 00000000  38 63 FF DC */	addi r3, r3, -36
-/* 804BB16C 00000004  4B FF FD 2C */	b __dt__12dBgS_ObjAcchFv

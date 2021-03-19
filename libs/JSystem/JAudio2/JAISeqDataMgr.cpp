@@ -24,8 +24,8 @@ struct JAISeqDataMgr {
 
 extern "C" void __dt__14JAISeqDataUserFv(); // 1
 extern "C" void __dt__13JAISeqDataMgrFv(); // 1
-SECTION_DATA extern void*const __vt__13JAISeqDataMgr[6];
-SECTION_DATA extern void*const __vt__14JAISeqDataUser[6];
+SECTION_DATA extern void* const __vt__13JAISeqDataMgr[6];
+SECTION_DATA extern void* const __vt__14JAISeqDataUser[5 + 1 /* padding */];
 
 // 
 // External References:
@@ -40,28 +40,28 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C9928-803C9940 0018+00 rc=3 efc=2 .data      __vt__13JAISeqDataMgr                                        */
+/* 803C9928-803C9940 0018+00 rc=0 efc=0 .data      __vt__13JAISeqDataMgr                                        */
 void* const __vt__13JAISeqDataMgr[6] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__13JAISeqDataMgrFv,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 803C9940-803C9958 0014+04 rc=4 efc=3 .data      __vt__14JAISeqDataUser                                       */
-void* const __vt__14JAISeqDataUser[6] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803C9940-803C9958 0014+04 rc=0 efc=0 .data      __vt__14JAISeqDataUser                                       */
+void* const __vt__14JAISeqDataUser[5 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__14JAISeqDataUserFv,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };
 
-/* 802A1774-802A17BC 0048+00 rc=5 efc=4 .text      __dt__14JAISeqDataUserFv                                     */
+/* 802A1774-802A17BC 0048+00 rc=0 efc=0 .text      __dt__14JAISeqDataUserFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ asm JAISeqDataUser::~JAISeqDataUser() {
 #pragma pop
 
 
-/* 802A17BC-802A1804 0048+00 rc=3 efc=2 .text      __dt__13JAISeqDataMgrFv                                      */
+/* 802A17BC-802A1804 0048+00 rc=0 efc=0 .text      __dt__13JAISeqDataMgrFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -29,7 +29,7 @@ extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
 void fpcEx_SearchByID(u32); // 2
 void fpcEx_IsExist(u32); // 2
 void fpcEx_Execute(base_process_class*); // 2
-static void fpcEx_ToLineQ(base_process_class*); // 2
+void fpcEx_ToLineQ(base_process_class*); // 2
 void fpcEx_ExecuteQTo(base_process_class*); // 2
 void fpcEx_ToExecuteQ(base_process_class*); // 2
 extern "C" void fpcEx_Handler__FPFPvPv_i(); // 1
@@ -38,7 +38,7 @@ extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
 extern "C" void fpcEx_SearchByID__FUi(); // 1
 extern "C" void fpcEx_IsExist__FUi(); // 1
 extern "C" void fpcEx_Execute__FP18base_process_class(); // 1
-extern "C" static void fpcEx_ToLineQ__FP18base_process_class(); // 1
+extern "C" void fpcEx_ToLineQ__FP18base_process_class(); // 1
 extern "C" void fpcEx_ExecuteQTo__FP18base_process_class(); // 1
 extern "C" void fpcEx_ToExecuteQ__FP18base_process_class(); // 1
 extern "C" void fpcEx_Handler__FPFPvPv_i(); // 1
@@ -76,7 +76,7 @@ SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80021338-80021358 0020+00 rc=10 efc=9 .text      fpcEx_Search__FPFPvPv_PvPv                                   */
+/* 80021338-80021358 0020+00 rc=0 efc=0 .text      fpcEx_Search__FPFPvPv_PvPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ extern "C" asm void fpcEx_Search__FPFPvPv_PvPv() {
 #pragma pop
 
 
-/* 80021358-8002139C 0044+00 rc=6 efc=5 .text      fpcEx_SearchByID__FUi                                        */
+/* 80021358-8002139C 0044+00 rc=0 efc=0 .text      fpcEx_SearchByID__FUi                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ asm void fpcEx_SearchByID(u32 field_0) {
 #pragma pop
 
 
-/* 8002139C-800213C4 0028+00 rc=7 efc=7 .text      fpcEx_IsExist__FUi                                           */
+/* 8002139C-800213C4 0028+00 rc=0 efc=0 .text      fpcEx_IsExist__FUi                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ asm void fpcEx_IsExist(u32 field_0) {
 #pragma pop
 
 
-/* 800213C4-80021418 0054+00 rc=1 efc=1 .text      fpcEx_Execute__FP18base_process_class                        */
+/* 800213C4-80021418 0054+00 rc=0 efc=0 .text      fpcEx_Execute__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -120,18 +120,18 @@ asm void fpcEx_Execute(base_process_class* field_0) {
 #pragma pop
 
 
-/* 80021418-800214C4 00AC+00 rc=1 efc=0 .text      fpcEx_ToLineQ__FP18base_process_class                        */
+/* 80021418-800214C4 00AC+00 rc=0 efc=0 .text      fpcEx_ToLineQ__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcEx_ToLineQ(base_process_class* field_0) {
+asm void fpcEx_ToLineQ(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_ToLineQ__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 800214C4-80021510 004C+00 rc=1 efc=1 .text      fpcEx_ExecuteQTo__FP18base_process_class                     */
+/* 800214C4-80021510 004C+00 rc=0 efc=0 .text      fpcEx_ExecuteQTo__FP18base_process_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -142,7 +142,7 @@ asm void fpcEx_ExecuteQTo(base_process_class* field_0) {
 #pragma pop
 
 
-/* 80021510-80021568 0058+00 rc=1 efc=1 .text      fpcEx_ToExecuteQ__FP18base_process_class                     */
+/* 80021510-80021568 0058+00 rc=0 efc=0 .text      fpcEx_ToExecuteQ__FP18base_process_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -153,7 +153,7 @@ asm void fpcEx_ToExecuteQ(base_process_class* field_0) {
 #pragma pop
 
 
-/* 80021568-80021588 0020+00 rc=1 efc=1 .text      fpcEx_Handler__FPFPvPv_i                                     */
+/* 80021568-80021588 0020+00 rc=0 efc=0 .text      fpcEx_Handler__FPFPvPv_i                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

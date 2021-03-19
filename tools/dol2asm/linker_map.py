@@ -1,14 +1,15 @@
 import os
 import re
 import rich
-import globals
-from rich.progress import Progress
-from typing import Optional, List, Tuple
+
 from dataclasses import dataclass, field
-from exception import *
+from typing import Optional, List, Tuple
 from collections import defaultdict
 from pathlib import Path
-from context import Context
+
+from . import globals
+from .exception import *
+from .context import Context
 
 @dataclass
 class Symbol:
@@ -102,11 +103,11 @@ def execute(context: Context, module_id: int, linker_map_path: Path, executable_
 
     # get the name for all sections which has size and are not already known (this will probably be an list of None's)
     sects_names = [
-        x.name for x in executable_sections if not x.name in already_known_names and x.local_size > 0]
+        x.name for x in executable_sections if not x.name in already_known_names and x.size > 0]
 
     # try to match the section names with those from the linker map, i.e., assign the section a name from the linker map.
     skip = 0
-    for i, section in enumerate([x for x in executable_sections if not x.name in already_known_names and x.local_size > 0]):
+    for i, section in enumerate([x for x in executable_sections if not x.name in already_known_names and x.size > 0]):
         index = i + skip
         if index < len(map_names):
             if len(groups[map_names[index]]) == 0 and map_names[index] != ".bss":
@@ -116,9 +117,9 @@ def execute(context: Context, module_id: int, linker_map_path: Path, executable_
                 section.name = map_names[index]
 
     # sort and create linker map sections
-    executable_sections.sort(key=lambda x: x.local_addr)
+    executable_sections.sort(key=lambda x: x.start)
     for i, section in enumerate(executable_sections):
-        if section.local_size > 0:
+        if section.size > 0:
             if not section.name:
                 assert i > 1
                 last_section = executable_sections[i - 1]
@@ -128,7 +129,7 @@ def execute(context: Context, module_id: int, linker_map_path: Path, executable_
                 assert False  # TODO
 
             sections[section.name] = Section(
-                section.name, section.local_addr, section.local_size, section.code_segments)
+                section.name, section.start, section.size, section.code_segments)
             sections[section.name].first_padding = section.first_padding + section.offset_padding
             sections[section.name].data = section.data
             sections[section.name].index = i

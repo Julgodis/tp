@@ -1,7 +1,6 @@
 import os
 import tempfile
 import bz2
-import globals as g
 import rich
 import pickle 
 import time
@@ -10,8 +9,10 @@ import sys
 from rich.progress import Progress
 from typing import Any, Tuple, List, Dict
 from multiprocessing import Manager, Queue, Process
-from context import Context, MainContext
 from queue import Empty
+
+from . import globals as g
+from .context import Context, MainContext
 
 class TimeCode:
     def __init__(self, context: Context, text: str):

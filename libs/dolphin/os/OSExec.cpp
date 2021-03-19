@@ -9,22 +9,22 @@
 // Forward References:
 // 
 
-extern "C" static void PackArgs(); // 1
-extern "C" static void Run(); // 1
-extern "C" static void ReadDisc(); // 1
-extern "C" static void OSExec__Callback(); // 1
+extern "C" void PackArgs(); // 1
+extern "C" void Run(); // 1
+extern "C" void ReadDisc(); // 1
+extern "C" void OSExec__Callback(); // 1
 extern "C" void __OSGetExecParams(); // 1
-extern "C" static void GetApploaderPosition(); // 1
-extern "C" static void __OSBootDolSimple(); // 1
+extern "C" void GetApploaderPosition(); // 1
+extern "C" void __OSBootDolSimple(); // 1
 extern "C" void __OSBootDol(); // 1
 
-extern "C" static void PackArgs(); // 1
-extern "C" static void Run(); // 1
-extern "C" static void ReadDisc(); // 1
-extern "C" static void OSExec__Callback(); // 1
+extern "C" void PackArgs(); // 1
+extern "C" void Run(); // 1
+extern "C" void ReadDisc(); // 1
+extern "C" void OSExec__Callback(); // 1
 extern "C" void __OSGetExecParams(); // 1
-extern "C" static void GetApploaderPosition(); // 1
-extern "C" static void __OSBootDolSimple(); // 1
+extern "C" void GetApploaderPosition(); // 1
+extern "C" void __OSBootDolSimple(); // 1
 extern "C" void __OSBootDol(); // 1
 SECTION_DATA extern u8 OSExec__lit_115[11 + 5 /* padding */];
 SECTION_SDATA extern u8 OSExec__lit_213[3 + 5 /* padding */];
@@ -100,33 +100,33 @@ SECTION_SBSS extern u8 __OSIsGcam[4];
 // Declarations:
 // 
 
-/* 8033CA80-8033CC08 0188+00 rc=1 efc=0 .text      PackArgs                                                     */
+/* 8033CA80-8033CC08 0188+00 rc=0 efc=0 .text      PackArgs                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void PackArgs() {
+extern "C" asm void PackArgs() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/PackArgs.s"
 }
 #pragma pop
 
 
-/* 8033CC08-8033CC44 003C+00 rc=1 efc=0 .text      Run                                                          */
+/* 8033CC08-8033CC44 003C+00 rc=0 efc=0 .text      Run                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void Run() {
+extern "C" asm void Run() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/Run.s"
 }
 #pragma pop
 
 
-/* 8033CC44-8033CCB0 006C+00 rc=1 efc=0 .text      ReadDisc                                                     */
+/* 8033CC44-8033CCB0 006C+00 rc=0 efc=0 .text      ReadDisc                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void ReadDisc() {
+extern "C" asm void ReadDisc() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/ReadDisc.s"
 }
@@ -134,21 +134,21 @@ extern "C" asm static void ReadDisc() {
 
 
 /* ############################################################################################## */
-/* 80451658-8045165C 0004+00 rc=2 efc=0 .sbss      Prepared                                                     */
+/* 80451658-8045165C 0004+00 rc=0 efc=0 .sbss      Prepared                                                     */
 u8 Prepared[4];
 
-/* 8033CCB0-8033CCBC 000C+00 rc=1 efc=0 .text      Callback                                                     */
+/* 8033CCB0-8033CCBC 000C+00 rc=0 efc=0 .text      Callback                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void OSExec__Callback() {
+extern "C" asm void OSExec__Callback() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/OSExec__Callback.s"
 }
 #pragma pop
 
 
-/* 8033CCBC-8033CCFC 0040+00 rc=1 efc=1 .text      __OSGetExecParams                                            */
+/* 8033CCBC-8033CCFC 0040+00 rc=0 efc=0 .text      __OSGetExecParams                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,14 +160,14 @@ extern "C" asm void __OSGetExecParams() {
 
 
 /* ############################################################################################## */
-/* 8045165C-80451660 0004+00 rc=2 efc=0 .sbss      apploaderPosition$69                                         */
+/* 8045165C-80451660 0004+00 rc=0 efc=0 .sbss      apploaderPosition$69                                         */
 u8 data_8045165C[4];
 
-/* 8033CCFC-8033CDC0 00C4+00 rc=1 efc=0 .text      GetApploaderPosition                                         */
+/* 8033CCFC-8033CDC0 00C4+00 rc=0 efc=0 .text      GetApploaderPosition                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void GetApploaderPosition() {
+extern "C" asm void GetApploaderPosition() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/GetApploaderPosition.s"
 }
@@ -175,18 +175,18 @@ extern "C" asm static void GetApploaderPosition() {
 
 
 /* ############################################################################################## */
-/* 803CFC38-803CFC48 000B+05 rc=1 efc=0 .data      @115                                                         */
-u8 OSExec__lit_115[16] = {
+/* 803CFC38-803CFC48 000B+05 rc=0 efc=0 .data      @115                                                         */
+u8 OSExec__lit_115[11 + 5 /* padding */] = {
 	0x32, 0x30, 0x30, 0x34, 0x2F, 0x30, 0x32, 0x2F, 0x30, 0x31, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8033CDC0-8033D244 0484+00 rc=1 efc=0 .text      __OSBootDolSimple                                            */
+/* 8033CDC0-8033D244 0484+00 rc=0 efc=0 .text      __OSBootDolSimple                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __OSBootDolSimple() {
+extern "C" asm void __OSBootDolSimple() {
 	nofralloc
 #include "asm/dolphin/os/OSExec/__OSBootDolSimple.s"
 }
@@ -194,14 +194,14 @@ extern "C" asm static void __OSBootDolSimple() {
 
 
 /* ############################################################################################## */
-/* 804509A8-804509B0 0003+05 rc=1 efc=0 .sdata     @213                                                         */
-u8 OSExec__lit_213[8] = {
+/* 804509A8-804509B0 0003+05 rc=0 efc=0 .sdata     @213                                                         */
+u8 OSExec__lit_213[3 + 5 /* padding */] = {
 	0x25, 0x64, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8033D244-8033D3E0 019C+00 rc=1 efc=1 .text      __OSBootDol                                                  */
+/* 8033D244-8033D3E0 019C+00 rc=0 efc=0 .text      __OSBootDol                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

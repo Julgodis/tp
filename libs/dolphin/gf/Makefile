@@ -23,11 +23,14 @@ LIBGF_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libgf.a: $(LIBGF_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libgf.a
 	@echo $(LIBGF_A_O_FILES) > build/LIBGF_A_ofiles
-	$(LD) -xm l $(LIBGF_A_LDFLAGS) -o $(BUILD_DIR)/libgf.a @build/LIBGF_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libgf.a
+	@$(LD) -xm l $(LIBGF_A_LDFLAGS) -o $(BUILD_DIR)/libgf.a @build/LIBGF_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libgf.a
 
 $(BUILD_DIR)/libs/dolphin/gf/%.o: libs/dolphin/gf/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBGF_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBGF_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

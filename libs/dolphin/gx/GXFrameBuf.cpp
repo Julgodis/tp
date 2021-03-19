@@ -45,7 +45,7 @@ SECTION_DATA extern u8 GXNtsc480Int[60];
 SECTION_DATA extern u8 GXMpal480IntDf[60];
 SECTION_DATA extern u8 GXPal528IntDf[60];
 SECTION_DATA extern u8 GXEurgb60Hz480IntDf[60 + 4 /* padding */];
-SECTION_SDATA2 extern f32 lit_179;
+SECTION_SDATA2 extern f32 lit_179[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 GXFrameBuf__lit_234;
 
 // 
@@ -57,13 +57,13 @@ extern "C" void __cvt_fp2unsigned(); // 1
 
 extern "C" void __GetImageTileCount(); // 1
 extern "C" void __cvt_fp2unsigned(); // 1
-SECTION_SDATA2 extern void*__GXData;
+SECTION_SDATA2 extern void* __GXData;
 
 // 
 // Declarations:
 // 
 
-/* 8035CA04-8035CA80 007C+00 rc=2 efc=2 .text      GXSetDispCopySrc                                             */
+/* 8035CA04-8035CA80 007C+00 rc=0 efc=0 .text      GXSetDispCopySrc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +74,7 @@ extern "C" asm void GXSetDispCopySrc() {
 #pragma pop
 
 
-/* 8035CA80-8035CAFC 007C+00 rc=9 efc=9 .text      GXSetTexCopySrc                                              */
+/* 8035CA80-8035CAFC 007C+00 rc=0 efc=0 .text      GXSetTexCopySrc                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +85,7 @@ extern "C" asm void GXSetTexCopySrc() {
 #pragma pop
 
 
-/* 8035CAFC-8035CB30 0034+00 rc=2 efc=2 .text      GXSetDispCopyDst                                             */
+/* 8035CAFC-8035CB30 0034+00 rc=0 efc=0 .text      GXSetDispCopyDst                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +96,7 @@ extern "C" asm void GXSetDispCopyDst() {
 #pragma pop
 
 
-/* 8035CB30-8035CC60 0130+00 rc=9 efc=9 .text      GXSetTexCopyDst                                              */
+/* 8035CB30-8035CC60 0130+00 rc=0 efc=0 .text      GXSetTexCopyDst                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,7 +107,7 @@ extern "C" asm void GXSetTexCopyDst() {
 #pragma pop
 
 
-/* 8035CC60-8035CC84 0024+00 rc=1 efc=1 .text      GXSetDispCopyFrame2Field                                     */
+/* 8035CC60-8035CC84 0024+00 rc=0 efc=0 .text      GXSetDispCopyFrame2Field                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,7 +118,7 @@ extern "C" asm void GXSetDispCopyFrame2Field() {
 #pragma pop
 
 
-/* 8035CC84-8035CCDC 0058+00 rc=2 efc=2 .text      GXSetCopyClamp                                               */
+/* 8035CC84-8035CCDC 0058+00 rc=0 efc=0 .text      GXSetCopyClamp                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -130,11 +130,14 @@ extern "C" asm void GXSetCopyClamp() {
 
 
 /* ############################################################################################## */
-/* 804565A8-804565B0 0004+04 rc=3 efc=0 .sdata2    @179                                                         */
-f32 lit_179 = 256.0f;
-/* padding 4 bytes */
+/* 804565A8-804565B0 0004+04 rc=0 efc=0 .sdata2    @179                                                         */
+f32 lit_179[1 + 1 /* padding */] = {
+	256.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 8035CCDC-8035CD6C 0090+00 rc=2 efc=2 .text      GXGetNumXfbLines                                             */
+/* 8035CCDC-8035CD6C 0090+00 rc=0 efc=0 .text      GXGetNumXfbLines                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,10 +149,10 @@ extern "C" asm void GXGetNumXfbLines() {
 
 
 /* ############################################################################################## */
-/* 804565B0-804565B8 0008+00 rc=1 efc=0 .sdata2    @234                                                         */
+/* 804565B0-804565B8 0008+00 rc=0 efc=0 .sdata2    @234                                                         */
 f64 GXFrameBuf__lit_234 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8035CD6C-8035CFA4 0238+00 rc=2 efc=2 .text      GXGetYScaleFactor                                            */
+/* 8035CD6C-8035CFA4 0238+00 rc=0 efc=0 .text      GXGetYScaleFactor                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +163,7 @@ extern "C" asm void GXGetYScaleFactor() {
 #pragma pop
 
 
-/* 8035CFA4-8035D070 00CC+00 rc=2 efc=2 .text      GXSetDispCopyYScale                                          */
+/* 8035CFA4-8035D070 00CC+00 rc=0 efc=0 .text      GXSetDispCopyYScale                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +174,7 @@ extern "C" asm void GXSetDispCopyYScale() {
 #pragma pop
 
 
-/* 8035D070-8035D0E8 0078+00 rc=2 efc=2 .text      GXSetCopyClear                                               */
+/* 8035D070-8035D0E8 0078+00 rc=0 efc=0 .text      GXSetCopyClear                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +185,7 @@ extern "C" asm void GXSetCopyClear() {
 #pragma pop
 
 
-/* 8035D0E8-8035D2F0 0208+00 rc=4 efc=4 .text      GXSetCopyFilter                                              */
+/* 8035D0E8-8035D2F0 0208+00 rc=0 efc=0 .text      GXSetCopyFilter                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -193,7 +196,7 @@ extern "C" asm void GXSetCopyFilter() {
 #pragma pop
 
 
-/* 8035D2F0-8035D304 0014+00 rc=2 efc=2 .text      GXSetDispCopyGamma                                           */
+/* 8035D2F0-8035D304 0014+00 rc=0 efc=0 .text      GXSetDispCopyGamma                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -204,7 +207,7 @@ extern "C" asm void GXSetDispCopyGamma() {
 #pragma pop
 
 
-/* 8035D304-8035D46C 0168+00 rc=3 efc=3 .text      GXCopyDisp                                                   */
+/* 8035D304-8035D46C 0168+00 rc=0 efc=0 .text      GXCopyDisp                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -215,7 +218,7 @@ extern "C" asm void GXCopyDisp() {
 #pragma pop
 
 
-/* 8035D46C-8035D5F8 018C+00 rc=9 efc=9 .text      GXCopyTex                                                    */
+/* 8035D46C-8035D5F8 018C+00 rc=0 efc=0 .text      GXCopyTex                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -226,7 +229,7 @@ extern "C" asm void GXCopyTex() {
 #pragma pop
 
 
-/* 8035D5F8-8035D630 0038+00 rc=1 efc=1 .text      GXClearBoundingBox                                           */
+/* 8035D5F8-8035D630 0038+00 rc=0 efc=0 .text      GXClearBoundingBox                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +241,7 @@ extern "C" asm void GXClearBoundingBox() {
 
 
 /* ############################################################################################## */
-/* 803D2448-803D2484 003C+00 rc=2 efc=2 .data      GXNtsc480IntDf                                               */
+/* 803D2448-803D2484 003C+00 rc=0 efc=0 .data      GXNtsc480IntDf                                               */
 u8 GXNtsc480IntDf[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x02, 0x80, 0x01, 0xE0, 0x01, 0xE0, 0x00, 0x28, 0x00, 0x00, 0x02, 0x80,
 	0x01, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
@@ -246,7 +249,7 @@ u8 GXNtsc480IntDf[60] = {
 	0x06, 0x06, 0x08, 0x08, 0x0A, 0x0C, 0x0A, 0x08, 0x08, 0x00, 0x00, 0x00,
 };
 
-/* 803D2484-803D24C0 003C+00 rc=1 efc=1 .data      GXNtsc480Int                                                 */
+/* 803D2484-803D24C0 003C+00 rc=0 efc=0 .data      GXNtsc480Int                                                 */
 u8 GXNtsc480Int[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x02, 0x80, 0x01, 0xE0, 0x01, 0xE0, 0x00, 0x28, 0x00, 0x00, 0x02, 0x80,
 	0x01, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
@@ -254,7 +257,7 @@ u8 GXNtsc480Int[60] = {
 	0x06, 0x06, 0x00, 0x00, 0x15, 0x16, 0x15, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803D24C0-803D24FC 003C+00 rc=1 efc=1 .data      GXMpal480IntDf                                               */
+/* 803D24C0-803D24FC 003C+00 rc=0 efc=0 .data      GXMpal480IntDf                                               */
 u8 GXMpal480IntDf[60] = {
 	0x00, 0x00, 0x00, 0x08, 0x02, 0x80, 0x01, 0xE0, 0x01, 0xE0, 0x00, 0x28, 0x00, 0x00, 0x02, 0x80,
 	0x01, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
@@ -262,7 +265,7 @@ u8 GXMpal480IntDf[60] = {
 	0x06, 0x06, 0x08, 0x08, 0x0A, 0x0C, 0x0A, 0x08, 0x08, 0x00, 0x00, 0x00,
 };
 
-/* 803D24FC-803D2538 003C+00 rc=1 efc=1 .data      GXPal528IntDf                                                */
+/* 803D24FC-803D2538 003C+00 rc=0 efc=0 .data      GXPal528IntDf                                                */
 u8 GXPal528IntDf[60] = {
 	0x00, 0x00, 0x00, 0x04, 0x02, 0x80, 0x02, 0x10, 0x02, 0x10, 0x00, 0x28, 0x00, 0x17, 0x02, 0x80,
 	0x02, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
@@ -270,8 +273,8 @@ u8 GXPal528IntDf[60] = {
 	0x06, 0x06, 0x08, 0x08, 0x0A, 0x0C, 0x0A, 0x08, 0x08, 0x00, 0x00, 0x00,
 };
 
-/* 803D2538-803D2578 003C+04 rc=1 efc=1 .data      GXEurgb60Hz480IntDf                                          */
-u8 GXEurgb60Hz480IntDf[64] = {
+/* 803D2538-803D2578 003C+04 rc=0 efc=0 .data      GXEurgb60Hz480IntDf                                          */
+u8 GXEurgb60Hz480IntDf[60 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x14, 0x02, 0x80, 0x01, 0xE0, 0x01, 0xE0, 0x00, 0x28, 0x00, 0x00, 0x02, 0x80,
 	0x01, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
 	0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,

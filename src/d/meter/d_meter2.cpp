@@ -260,11 +260,11 @@ struct Z2StatusMgr {
 // Forward References:
 // 
 
-static void dMeter2_Draw(dMeter2_c*); // 2
-static void dMeter2_Execute(dMeter2_c*); // 2
-static bool dMeter2_IsDelete(dMeter2_c*); // 2
-static void dMeter2_Delete(dMeter2_c*); // 2
-static void dMeter2_Create(msg_class*); // 2
+void dMeter2_Draw(dMeter2_c*); // 2
+void dMeter2_Execute(dMeter2_c*); // 2
+bool dMeter2_IsDelete(dMeter2_c*); // 2
+void dMeter2_Delete(dMeter2_c*); // 2
+void dMeter2_Create(msg_class*); // 2
 
 extern "C" void _create__9dMeter2_cFv(); // 1
 extern "C" void _execute__9dMeter2_cFv(); // 1
@@ -310,18 +310,18 @@ extern "C" void killSubContents__9dMeter2_cFUc(); // 1
 extern "C" void isKeyVisible__9dMeter2_cFv(); // 1
 extern "C" void isArrowEquip__9dMeter2_cFv(); // 1
 extern "C" void isPachinkoEquip__9dMeter2_cFv(); // 1
-extern "C" static void dMeter2_Draw__FP9dMeter2_c(); // 1
-extern "C" static void dMeter2_Execute__FP9dMeter2_c(); // 1
-extern "C" static bool dMeter2_IsDelete__FP9dMeter2_c(); // 1
-extern "C" static void dMeter2_Delete__FP9dMeter2_c(); // 1
-extern "C" static void dMeter2_Create__FP9msg_class(); // 1
-SECTION_RODATA extern const u8 d_meter_d_meter2__stringBase0[24];
-SECTION_DATA extern void*d_meter_d_meter2__lit_5038[11];
-SECTION_DATA extern void*l_dMeter2_Method[5];
-SECTION_DATA extern void*g_profile_METER2[10];
+extern "C" void dMeter2_Draw__FP9dMeter2_c(); // 1
+extern "C" void dMeter2_Execute__FP9dMeter2_c(); // 1
+extern "C" bool dMeter2_IsDelete__FP9dMeter2_c(); // 1
+extern "C" void dMeter2_Delete__FP9dMeter2_c(); // 1
+extern "C" void dMeter2_Create__FP9msg_class(); // 1
+SECTION_RODATA extern const char* const d_meter_d_meter2__stringBase0;
+SECTION_DATA extern void* d_meter_d_meter2__lit_5038[11];
+SECTION_DATA extern void* l_dMeter2_Method[5];
+SECTION_DATA extern void* g_profile_METER2[10];
 SECTION_SDATA2 extern u8 d_meter_d_meter2__lit_4662[4];
 SECTION_SDATA2 extern f32 d_meter_d_meter2__lit_4663;
-SECTION_SDATA2 extern f32 d_meter_d_meter2__lit_4837;
+SECTION_SDATA2 extern f32 d_meter_d_meter2__lit_4837[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 d_meter_d_meter2__lit_5267;
 SECTION_SDATA2 extern f64 d_meter_d_meter2__lit_5268;
 SECTION_SDATA2 extern f32 lit_5791;
@@ -332,7 +332,7 @@ SECTION_SDATA2 extern f32 lit_6564;
 SECTION_SDATA2 extern f32 lit_7509;
 SECTION_SDATA2 extern f32 lit_7510;
 SECTION_SDATA2 extern f32 d_meter_d_meter2__lit_9090;
-SECTION_SDATA2 extern f32 d_meter_d_meter2__lit_9091;
+SECTION_SDATA2 extern f32 d_meter_d_meter2__lit_9091[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -528,8 +528,8 @@ extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-SECTION_DATA extern void*g_fopMsg_Method[6];
-SECTION_DATA extern void*g_fpcLf_Method[6];
+SECTION_DATA extern void* g_fopMsg_Method[5 + 1 /* padding */];
+SECTION_DATA extern void* g_fpcLf_Method[5 + 1 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_mwHIO[304];
 SECTION_BSS extern u8 g_drawHIO[3880];
@@ -545,26 +545,26 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80399338-80399350 0017+01 rc=3 efc=0 .rodata    @stringBase0                                                 */
+/* 80399338-80399350 0017+01 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80399338 = "F_SP00";
-SECTION_DEAD char* const stringBase_8039933F = "F_SP103";
-SECTION_DEAD char* const stringBase_80399347 = "R_SP127";
+const char* const stringBase_80399338 = "F_SP00";
+const char* const stringBase_8039933F = "F_SP103";
+const char* const stringBase_80399347 = "R_SP127";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_8039934F = "";
+char* const pad_8039934F = "";
 #pragma pop
 
-/* 804549C8-804549CC 0004+00 rc=9 efc=0 .sdata2    @4662                                                        */
+/* 804549C8-804549CC 0004+00 rc=0 efc=0 .sdata2    @4662                                                        */
 u8 d_meter_d_meter2__lit_4662[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804549CC-804549D0 0004+00 rc=13 efc=0 .sdata2    @4663                                                        */
+/* 804549CC-804549D0 0004+00 rc=0 efc=0 .sdata2    @4663                                                        */
 f32 d_meter_d_meter2__lit_4663 = 1.0f;
 
-/* 8021EA14-8021F128 0714+00 rc=1 efc=0 .text      _create__9dMeter2_cFv                                        */
+/* 8021EA14-8021F128 0714+00 rc=0 efc=0 .text      _create__9dMeter2_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -575,7 +575,7 @@ asm void dMeter2_c::_create() {
 #pragma pop
 
 
-/* 8021F128-8021F370 0248+00 rc=1 efc=0 .text      _execute__9dMeter2_cFv                                       */
+/* 8021F128-8021F370 0248+00 rc=0 efc=0 .text      _execute__9dMeter2_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -586,7 +586,7 @@ asm void dMeter2_c::_execute() {
 #pragma pop
 
 
-/* 8021F370-8021F49C 012C+00 rc=1 efc=0 .text      _draw__9dMeter2_cFv                                          */
+/* 8021F370-8021F49C 012C+00 rc=0 efc=0 .text      _draw__9dMeter2_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -598,11 +598,14 @@ asm void dMeter2_c::_draw() {
 
 
 /* ############################################################################################## */
-/* 804549D0-804549D8 0004+04 rc=10 efc=0 .sdata2    @4837                                                        */
-f32 d_meter_d_meter2__lit_4837 = -1.0f;
-/* padding 4 bytes */
+/* 804549D0-804549D8 0004+04 rc=0 efc=0 .sdata2    @4837                                                        */
+f32 d_meter_d_meter2__lit_4837[1 + 1 /* padding */] = {
+	-1.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 8021F49C-8021F6EC 0250+00 rc=1 efc=0 .text      _delete__9dMeter2_cFv                                        */
+/* 8021F49C-8021F6EC 0250+00 rc=0 efc=0 .text      _delete__9dMeter2_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -613,7 +616,7 @@ asm void dMeter2_c::_delete() {
 #pragma pop
 
 
-/* 8021F6EC-8021F780 0094+00 rc=6 efc=5 .text      emphasisButtonDelete__9dMeter2_cFv                           */
+/* 8021F6EC-8021F780 0094+00 rc=0 efc=0 .text      emphasisButtonDelete__9dMeter2_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -636,7 +639,7 @@ asm void dMeter2_c::setLifeZero() {
 
 
 /* ############################################################################################## */
-/* 803BFA28-803BFA54 002C+00 rc=1 efc=0 .data      @5038                                                        */
+/* 803BFA28-803BFA54 002C+00 rc=0 efc=0 .data      @5038                                                        */
 void* d_meter_d_meter2__lit_5038[11] = {
 	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x530),
 	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x3FC),
@@ -651,7 +654,7 @@ void* d_meter_d_meter2__lit_5038[11] = {
 	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x40C),
 };
 
-/* 8021F7B0-8021FD60 05B0+00 rc=2 efc=0 .text      checkStatus__9dMeter2_cFv                                    */
+/* 8021F7B0-8021FD60 05B0+00 rc=0 efc=0 .text      checkStatus__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -663,13 +666,13 @@ asm void dMeter2_c::checkStatus() {
 
 
 /* ############################################################################################## */
-/* 804549D8-804549E0 0008+00 rc=4 efc=0 .sdata2    @5267                                                        */
+/* 804549D8-804549E0 0008+00 rc=0 efc=0 .sdata2    @5267                                                        */
 f64 d_meter_d_meter2__lit_5267 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 804549E0-804549E8 0008+00 rc=2 efc=0 .sdata2    @5268                                                        */
+/* 804549E0-804549E8 0008+00 rc=0 efc=0 .sdata2    @5268                                                        */
 f64 d_meter_d_meter2__lit_5268 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8021FD60-80220180 0420+00 rc=1 efc=0 .text      moveLife__9dMeter2_cFv                                       */
+/* 8021FD60-80220180 0420+00 rc=0 efc=0 .text      moveLife__9dMeter2_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -681,10 +684,10 @@ asm void dMeter2_c::moveLife() {
 
 
 /* ############################################################################################## */
-/* 804549E8-804549EC 0004+00 rc=4 efc=0 .sdata2    @5791                                                        */
+/* 804549E8-804549EC 0004+00 rc=0 efc=0 .sdata2    @5791                                                        */
 f32 lit_5791 = 1.0f / 10.0f;
 
-/* 80220180-8022051C 039C+00 rc=1 efc=0 .text      moveKantera__9dMeter2_cFv                                    */
+/* 80220180-8022051C 039C+00 rc=0 efc=0 .text      moveKantera__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -696,10 +699,10 @@ asm void dMeter2_c::moveKantera() {
 
 
 /* ############################################################################################## */
-/* 804549EC-804549F0 0004+00 rc=2 efc=0 .sdata2    @5933                                                        */
+/* 804549EC-804549F0 0004+00 rc=0 efc=0 .sdata2    @5933                                                        */
 f32 lit_5933 = 0.5f;
 
-/* 8022051C-80220888 036C+00 rc=1 efc=0 .text      moveOxygen__9dMeter2_cFv                                     */
+/* 8022051C-80220888 036C+00 rc=0 efc=0 .text      moveOxygen__9dMeter2_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -711,13 +714,13 @@ asm void dMeter2_c::moveOxygen() {
 
 
 /* ############################################################################################## */
-/* 804549F0-804549F4 0004+00 rc=3 efc=0 .sdata2    @6051                                                        */
+/* 804549F0-804549F4 0004+00 rc=0 efc=0 .sdata2    @6051                                                        */
 f32 lit_6051 = 10.0f;
 
-/* 804549F4-804549F8 0004+00 rc=1 efc=0 .sdata2    @6052                                                        */
+/* 804549F4-804549F8 0004+00 rc=0 efc=0 .sdata2    @6052                                                        */
 f32 lit_6052 = 1.0f / 5.0f;
 
-/* 80220888-80220C30 03A8+00 rc=1 efc=0 .text      moveLightDrop__9dMeter2_cFv                                  */
+/* 80220888-80220C30 03A8+00 rc=0 efc=0 .text      moveLightDrop__9dMeter2_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -728,7 +731,7 @@ asm void dMeter2_c::moveLightDrop() {
 #pragma pop
 
 
-/* 80220C30-802210AC 047C+00 rc=1 efc=0 .text      moveRupee__9dMeter2_cFv                                      */
+/* 80220C30-802210AC 047C+00 rc=0 efc=0 .text      moveRupee__9dMeter2_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -739,7 +742,7 @@ asm void dMeter2_c::moveRupee() {
 #pragma pop
 
 
-/* 802210AC-80221244 0198+00 rc=1 efc=0 .text      moveKey__9dMeter2_cFv                                        */
+/* 802210AC-80221244 0198+00 rc=0 efc=0 .text      moveKey__9dMeter2_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -751,10 +754,10 @@ asm void dMeter2_c::moveKey() {
 
 
 /* ############################################################################################## */
-/* 804549F8-804549FC 0004+00 rc=2 efc=0 .sdata2    @6564                                                        */
+/* 804549F8-804549FC 0004+00 rc=0 efc=0 .sdata2    @6564                                                        */
 f32 lit_6564 = 1.0f / 100.0f;
 
-/* 80221244-802217F4 05B0+00 rc=1 efc=0 .text      moveButtonA__9dMeter2_cFv                                    */
+/* 80221244-802217F4 05B0+00 rc=0 efc=0 .text      moveButtonA__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -765,7 +768,7 @@ asm void dMeter2_c::moveButtonA() {
 #pragma pop
 
 
-/* 802217F4-80221EC8 06D4+00 rc=1 efc=0 .text      moveButtonB__9dMeter2_cFv                                    */
+/* 802217F4-80221EC8 06D4+00 rc=0 efc=0 .text      moveButtonB__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -776,7 +779,7 @@ asm void dMeter2_c::moveButtonB() {
 #pragma pop
 
 
-/* 80221EC8-80222000 0138+00 rc=1 efc=0 .text      moveButtonR__9dMeter2_cFv                                    */
+/* 80221EC8-80222000 0138+00 rc=0 efc=0 .text      moveButtonR__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -787,7 +790,7 @@ asm void dMeter2_c::moveButtonR() {
 #pragma pop
 
 
-/* 80222000-802222A0 02A0+00 rc=1 efc=0 .text      moveButtonZ__9dMeter2_cFv                                    */
+/* 80222000-802222A0 02A0+00 rc=0 efc=0 .text      moveButtonZ__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -798,7 +801,7 @@ asm void dMeter2_c::moveButtonZ() {
 #pragma pop
 
 
-/* 802222A0-80222364 00C4+00 rc=1 efc=0 .text      moveButton3D__9dMeter2_cFv                                   */
+/* 802222A0-80222364 00C4+00 rc=0 efc=0 .text      moveButton3D__9dMeter2_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -809,7 +812,7 @@ asm void dMeter2_c::moveButton3D() {
 #pragma pop
 
 
-/* 80222364-80222494 0130+00 rc=1 efc=0 .text      moveButtonC__9dMeter2_cFv                                    */
+/* 80222364-80222494 0130+00 rc=0 efc=0 .text      moveButtonC__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -820,7 +823,7 @@ asm void dMeter2_c::moveButtonC() {
 #pragma pop
 
 
-/* 80222494-80222518 0084+00 rc=1 efc=0 .text      moveButtonS__9dMeter2_cFv                                    */
+/* 80222494-80222518 0084+00 rc=0 efc=0 .text      moveButtonS__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -831,7 +834,7 @@ asm void dMeter2_c::moveButtonS() {
 #pragma pop
 
 
-/* 80222518-80222E88 0970+00 rc=1 efc=0 .text      moveButtonXY__9dMeter2_cFv                                   */
+/* 80222518-80222E88 0970+00 rc=0 efc=0 .text      moveButtonXY__9dMeter2_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -843,13 +846,13 @@ asm void dMeter2_c::moveButtonXY() {
 
 
 /* ############################################################################################## */
-/* 804549FC-80454A00 0004+00 rc=1 efc=0 .sdata2    @7509                                                        */
+/* 804549FC-80454A00 0004+00 rc=0 efc=0 .sdata2    @7509                                                        */
 f32 lit_7509 = 15.0f;
 
-/* 80454A00-80454A04 0004+00 rc=1 efc=0 .sdata2    @7510                                                        */
+/* 80454A00-80454A04 0004+00 rc=0 efc=0 .sdata2    @7510                                                        */
 f32 lit_7510 = 50.0f;
 
-/* 80222E88-802230F8 0270+00 rc=1 efc=0 .text      moveButtonCross__9dMeter2_cFv                                */
+/* 80222E88-802230F8 0270+00 rc=0 efc=0 .text      moveButtonCross__9dMeter2_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -860,13 +863,13 @@ asm void dMeter2_c::moveButtonCross() {
 #pragma pop
 
 
-/* 802230F8-802230FC 0004+00 rc=1 efc=0 .text      moveTouchSubMenu__9dMeter2_cFv                               */
+/* 802230F8-802230FC 0004+00 rc=0 efc=0 .text      moveTouchSubMenu__9dMeter2_cFv                               */
 void dMeter2_c::moveTouchSubMenu() {
 	/* empty function */
 }
 
 
-/* 802230FC-802231C8 00CC+00 rc=1 efc=0 .text      moveSubContents__9dMeter2_cFv                                */
+/* 802230FC-802231C8 00CC+00 rc=0 efc=0 .text      moveSubContents__9dMeter2_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -877,7 +880,7 @@ asm void dMeter2_c::moveSubContents() {
 #pragma pop
 
 
-/* 802231C8-802237D4 060C+00 rc=1 efc=0 .text      move2DContents__9dMeter2_cFv                                 */
+/* 802231C8-802237D4 060C+00 rc=0 efc=0 .text      move2DContents__9dMeter2_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -888,7 +891,7 @@ asm void dMeter2_c::move2DContents() {
 #pragma pop
 
 
-/* 802237D4-80223BC4 03F0+00 rc=1 efc=0 .text      checkSubContents__9dMeter2_cFv                               */
+/* 802237D4-80223BC4 03F0+00 rc=0 efc=0 .text      checkSubContents__9dMeter2_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -899,7 +902,7 @@ asm void dMeter2_c::checkSubContents() {
 #pragma pop
 
 
-/* 80223BC4-80223E00 023C+00 rc=1 efc=0 .text      check2DContents__9dMeter2_cFv                                */
+/* 80223BC4-80223E00 023C+00 rc=0 efc=0 .text      check2DContents__9dMeter2_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -910,7 +913,7 @@ asm void dMeter2_c::check2DContents() {
 #pragma pop
 
 
-/* 80223E00-80224258 0458+00 rc=1 efc=0 .text      moveBombNum__9dMeter2_cFv                                    */
+/* 80223E00-80224258 0458+00 rc=0 efc=0 .text      moveBombNum__9dMeter2_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -921,7 +924,7 @@ asm void dMeter2_c::moveBombNum() {
 #pragma pop
 
 
-/* 80224258-80224354 00FC+00 rc=1 efc=0 .text      moveBottleNum__9dMeter2_cFv                                  */
+/* 80224258-80224354 00FC+00 rc=0 efc=0 .text      moveBottleNum__9dMeter2_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -932,7 +935,7 @@ asm void dMeter2_c::moveBottleNum() {
 #pragma pop
 
 
-/* 80224354-80224680 032C+00 rc=1 efc=0 .text      moveArrowNum__9dMeter2_cFv                                   */
+/* 80224354-80224680 032C+00 rc=0 efc=0 .text      moveArrowNum__9dMeter2_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -943,7 +946,7 @@ asm void dMeter2_c::moveArrowNum() {
 #pragma pop
 
 
-/* 80224680-802248E4 0264+00 rc=1 efc=0 .text      movePachinkoNum__9dMeter2_cFv                                */
+/* 80224680-802248E4 0264+00 rc=0 efc=0 .text      movePachinkoNum__9dMeter2_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -954,7 +957,7 @@ asm void dMeter2_c::movePachinkoNum() {
 #pragma pop
 
 
-/* 802248E4-80224A04 0120+00 rc=1 efc=0 .text      alphaAnimeLife__9dMeter2_cFv                                 */
+/* 802248E4-80224A04 0120+00 rc=0 efc=0 .text      alphaAnimeLife__9dMeter2_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -965,7 +968,7 @@ asm void dMeter2_c::alphaAnimeLife() {
 #pragma pop
 
 
-/* 80224A04-80224BAC 01A8+00 rc=1 efc=0 .text      alphaAnimeKantera__9dMeter2_cFv                              */
+/* 80224A04-80224BAC 01A8+00 rc=0 efc=0 .text      alphaAnimeKantera__9dMeter2_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -976,7 +979,7 @@ asm void dMeter2_c::alphaAnimeKantera() {
 #pragma pop
 
 
-/* 80224BAC-80224D6C 01C0+00 rc=1 efc=0 .text      alphaAnimeOxygen__9dMeter2_cFv                               */
+/* 80224BAC-80224D6C 01C0+00 rc=0 efc=0 .text      alphaAnimeOxygen__9dMeter2_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -987,7 +990,7 @@ asm void dMeter2_c::alphaAnimeOxygen() {
 #pragma pop
 
 
-/* 80224D6C-80224DC0 0054+00 rc=1 efc=0 .text      alphaAnimeLightDrop__9dMeter2_cFv                            */
+/* 80224D6C-80224DC0 0054+00 rc=0 efc=0 .text      alphaAnimeLightDrop__9dMeter2_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -998,7 +1001,7 @@ asm void dMeter2_c::alphaAnimeLightDrop() {
 #pragma pop
 
 
-/* 80224DC0-80224F70 01B0+00 rc=1 efc=0 .text      alphaAnimeRupee__9dMeter2_cFv                                */
+/* 80224DC0-80224F70 01B0+00 rc=0 efc=0 .text      alphaAnimeRupee__9dMeter2_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1009,7 +1012,7 @@ asm void dMeter2_c::alphaAnimeRupee() {
 #pragma pop
 
 
-/* 80224F70-802250F4 0184+00 rc=1 efc=0 .text      alphaAnimeKey__9dMeter2_cFv                                  */
+/* 80224F70-802250F4 0184+00 rc=0 efc=0 .text      alphaAnimeKey__9dMeter2_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1020,7 +1023,7 @@ asm void dMeter2_c::alphaAnimeKey() {
 #pragma pop
 
 
-/* 802250F4-802254C0 03CC+00 rc=1 efc=0 .text      alphaAnimeButton__9dMeter2_cFv                               */
+/* 802250F4-802254C0 03CC+00 rc=0 efc=0 .text      alphaAnimeButton__9dMeter2_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1032,14 +1035,17 @@ asm void dMeter2_c::alphaAnimeButton() {
 
 
 /* ############################################################################################## */
-/* 80454A04-80454A08 0004+00 rc=1 efc=0 .sdata2    @9090                                                        */
+/* 80454A04-80454A08 0004+00 rc=0 efc=0 .sdata2    @9090                                                        */
 f32 d_meter_d_meter2__lit_9090 = 255.0f;
 
-/* 80454A08-80454A10 0004+04 rc=1 efc=0 .sdata2    @9091                                                        */
-f32 d_meter_d_meter2__lit_9091 = 5.0f;
-/* padding 4 bytes */
+/* 80454A08-80454A10 0004+04 rc=0 efc=0 .sdata2    @9091                                                        */
+f32 d_meter_d_meter2__lit_9091[1 + 1 /* padding */] = {
+	5.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 802254C0-802256DC 021C+00 rc=1 efc=0 .text      alphaAnimeButtonCross__9dMeter2_cFv                          */
+/* 802254C0-802256DC 021C+00 rc=0 efc=0 .text      alphaAnimeButtonCross__9dMeter2_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1050,7 +1056,7 @@ asm void dMeter2_c::alphaAnimeButtonCross() {
 #pragma pop
 
 
-/* 802256DC-802258A0 01C4+00 rc=3 efc=0 .text      isShowLightDrop__9dMeter2_cFv                                */
+/* 802256DC-802258A0 01C4+00 rc=0 efc=0 .text      isShowLightDrop__9dMeter2_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1061,7 +1067,7 @@ asm void dMeter2_c::isShowLightDrop() {
 #pragma pop
 
 
-/* 802258A0-80225960 00C0+00 rc=1 efc=0 .text      killSubContents__9dMeter2_cFUc                               */
+/* 802258A0-80225960 00C0+00 rc=0 efc=0 .text      killSubContents__9dMeter2_cFUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1072,7 +1078,7 @@ asm void dMeter2_c::killSubContents(u8 field_0) {
 #pragma pop
 
 
-/* 80225960-802259F8 0098+00 rc=1 efc=0 .text      isKeyVisible__9dMeter2_cFv                                   */
+/* 80225960-802259F8 0098+00 rc=0 efc=0 .text      isKeyVisible__9dMeter2_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1083,7 +1089,7 @@ asm void dMeter2_c::isKeyVisible() {
 #pragma pop
 
 
-/* 802259F8-80225A64 006C+00 rc=2 efc=0 .text      isArrowEquip__9dMeter2_cFv                                   */
+/* 802259F8-80225A64 006C+00 rc=0 efc=0 .text      isArrowEquip__9dMeter2_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1094,7 +1100,7 @@ asm void dMeter2_c::isArrowEquip() {
 #pragma pop
 
 
-/* 80225A64-80225AA0 003C+00 rc=2 efc=0 .text      isPachinkoEquip__9dMeter2_cFv                                */
+/* 80225A64-80225AA0 003C+00 rc=0 efc=0 .text      isPachinkoEquip__9dMeter2_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1105,50 +1111,50 @@ asm void dMeter2_c::isPachinkoEquip() {
 #pragma pop
 
 
-/* 80225AA0-80225AC0 0020+00 rc=1 efc=0 .text      dMeter2_Draw__FP9dMeter2_c                                   */
+/* 80225AA0-80225AC0 0020+00 rc=0 efc=0 .text      dMeter2_Draw__FP9dMeter2_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dMeter2_Draw(dMeter2_c* field_0) {
+asm void dMeter2_Draw(dMeter2_c* field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2/dMeter2_Draw__FP9dMeter2_c.s"
 }
 #pragma pop
 
 
-/* 80225AC0-80225AE0 0020+00 rc=1 efc=0 .text      dMeter2_Execute__FP9dMeter2_c                                */
+/* 80225AC0-80225AE0 0020+00 rc=0 efc=0 .text      dMeter2_Execute__FP9dMeter2_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dMeter2_Execute(dMeter2_c* field_0) {
+asm void dMeter2_Execute(dMeter2_c* field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2/dMeter2_Execute__FP9dMeter2_c.s"
 }
 #pragma pop
 
 
-/* 80225AE0-80225AE8 0008+00 rc=1 efc=0 .text      dMeter2_IsDelete__FP9dMeter2_c                               */
-static bool dMeter2_IsDelete(dMeter2_c* field_0) {
+/* 80225AE0-80225AE8 0008+00 rc=0 efc=0 .text      dMeter2_IsDelete__FP9dMeter2_c                               */
+bool dMeter2_IsDelete(dMeter2_c* field_0) {
 	return true;
 }
 
 
-/* 80225AE8-80225B08 0020+00 rc=1 efc=0 .text      dMeter2_Delete__FP9dMeter2_c                                 */
+/* 80225AE8-80225B08 0020+00 rc=0 efc=0 .text      dMeter2_Delete__FP9dMeter2_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dMeter2_Delete(dMeter2_c* field_0) {
+asm void dMeter2_Delete(dMeter2_c* field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2/dMeter2_Delete__FP9dMeter2_c.s"
 }
 #pragma pop
 
 
-/* 80225B08-80225BB8 00B0+00 rc=1 efc=0 .text      dMeter2_Create__FP9msg_class                                 */
+/* 80225B08-80225BB8 00B0+00 rc=0 efc=0 .text      dMeter2_Create__FP9msg_class                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dMeter2_Create(msg_class* field_0) {
+asm void dMeter2_Create(msg_class* field_0) {
 	nofralloc
 #include "asm/d/meter/d_meter2/dMeter2_Create__FP9msg_class.s"
 }
@@ -1156,7 +1162,7 @@ asm static void dMeter2_Create(msg_class* field_0) {
 
 
 /* ############################################################################################## */
-/* 803BFA54-803BFA68 0014+00 rc=1 efc=0 .data      l_dMeter2_Method                                             */
+/* 803BFA54-803BFA68 0014+00 rc=0 efc=0 .data      l_dMeter2_Method                                             */
 void* l_dMeter2_Method[5] = {
 	(void*)dMeter2_Create__FP9msg_class,
 	(void*)dMeter2_Delete__FP9dMeter2_c,
@@ -1172,8 +1178,8 @@ void* g_profile_METER2[10] = {
 	(void*)0x03160000,
 	(void*)&g_fpcLf_Method,
 	(void*)0x000004C0,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)&g_fopMsg_Method,
 	(void*)0x03010000,
 	(void*)&l_dMeter2_Method,

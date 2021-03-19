@@ -84,10 +84,10 @@ struct dDlst_shadowControl_c {
 	/* 80055A14 */ void draw(f32 (* )[4]);
 };
 
-struct J3DDrawBuffer {
+struct dDlst_base_c {
 };
 
-struct dDlst_base_c {
+struct J3DDrawBuffer {
 };
 
 struct dDlst_list_c {
@@ -149,25 +149,25 @@ struct J3DSys {
 // Forward References:
 // 
 
-static void createTimg(u16, u16, u32); // 2
-static void darwFilter(_GXColor); // 2
+void createTimg(u16, u16, u32); // 2
+void darwFilter(_GXColor); // 2
 void mDoGph_BlankingON(); // 2
 void mDoGph_BlankingOFF(); // 2
-static void dScnPly_BeforeOfPaint(); // 2
+void dScnPly_BeforeOfPaint(); // 2
 void mDoGph_BeforeOfDraw(); // 2
 void mDoGph_AfterOfDraw(); // 2
-static void drawDepth2(view_class*, view_port_class*, int); // 2
-static void trimming(view_class*, view_port_class*); // 2
+void drawDepth2(view_class*, view_port_class*, int); // 2
+void trimming(view_class*, view_port_class*); // 2
 void mDoGph_drawFilterQuad(s8, s8); // 2
-static void retry_captue_frame(view_class*, view_port_class*, int); // 2
-static void motionBlure(view_class*); // 2
-static void setLight(); // 2
-static void drawItem3D(); // 2
+void retry_captue_frame(view_class*, view_port_class*, int); // 2
+void motionBlure(view_class*); // 2
+void setLight(); // 2
+void drawItem3D(); // 2
 void mDoGph_Painter(); // 2
 void mDoGph_Create(); // 2
 extern "C" void __sinit_m_Do_graphic_cpp(); // 1
 
-extern "C" static void createTimg__FUsUsUl(); // 1
+extern "C" void createTimg__FUsUsUl(); // 1
 extern "C" void create__13mDoGph_gInf_cFv(); // 1
 extern "C" void beginRender__13mDoGph_gInf_cFv(); // 1
 extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor(); // 1
@@ -175,30 +175,30 @@ extern "C" void fadeOut_f__13mDoGph_gInf_cFfR8_GXColor(); // 1
 extern "C" void onBlure__13mDoGph_gInf_cFv(); // 1
 extern "C" void onBlure__13mDoGph_gInf_cFPA4_Cf(); // 1
 extern "C" void fadeOut__13mDoGph_gInf_cFf(); // 1
-extern "C" static void darwFilter__F8_GXColor(); // 1
+extern "C" void darwFilter__F8_GXColor(); // 1
 extern "C" void calcFade__13mDoGph_gInf_cFv(); // 1
 extern "C" void mDoGph_BlankingON__Fv(); // 1
 extern "C" void mDoGph_BlankingOFF__Fv(); // 1
-extern "C" static void dScnPly_BeforeOfPaint__Fv(); // 1
+extern "C" void dScnPly_BeforeOfPaint__Fv(); // 1
 extern "C" void mDoGph_BeforeOfDraw__Fv(); // 1
 extern "C" void mDoGph_AfterOfDraw__Fv(); // 1
-extern "C" static void drawDepth2__FP10view_classP15view_port_classi(); // 1
+extern "C" void drawDepth2__FP10view_classP15view_port_classi(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static void trimming__FP10view_classP15view_port_class(); // 1
+extern "C" void trimming__FP10view_classP15view_port_class(); // 1
 extern "C" void mDoGph_drawFilterQuad__FScSc(); // 1
 extern "C" void create__Q213mDoGph_gInf_c7bloom_cFv(); // 1
 extern "C" void remove__Q213mDoGph_gInf_c7bloom_cFv(); // 1
 extern "C" void draw__Q213mDoGph_gInf_c7bloom_cFv(); // 1
-extern "C" static void retry_captue_frame__FP10view_classP15view_port_classi(); // 1
-extern "C" static void motionBlure__FP10view_class(); // 1
-extern "C" static void setLight__Fv(); // 1
-extern "C" static void drawItem3D__Fv(); // 1
+extern "C" void retry_captue_frame__FP10view_classP15view_port_classi(); // 1
+extern "C" void motionBlure__FP10view_class(); // 1
+extern "C" void setLight__Fv(); // 1
+extern "C" void drawItem3D__Fv(); // 1
 extern "C" void mDoGph_Painter__Fv(); // 1
 extern "C" void __dt__13J2DOrthoGraphFv(); // 1
 extern "C" void mDoGph_Create__Fv(); // 1
 extern "C" void __sinit_m_Do_graphic_cpp(); // 1
 extern "C" s32 getAtnActorID__9daPy_py_cCFv(); // 1
-SECTION_RODATA extern const u8 m_Do_m_Do_graphic__stringBase0[24];
+SECTION_RODATA extern const char* const m_Do_m_Do_graphic__stringBase0;
 SECTION_BSS extern u8 mFrameBufferTexObj__13mDoGph_gInf_c[32];
 SECTION_BSS extern u8 mZbufferTexObj__13mDoGph_gInf_c[32];
 SECTION_BSS extern u8 m_bloom__13mDoGph_gInf_c[20];
@@ -212,9 +212,9 @@ SECTION_SBSS extern u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
 SECTION_SBSS extern u8 mFrameBufferTex__13mDoGph_gInf_c[4];
 SECTION_SBSS extern u8 mZbufferTimg__13mDoGph_gInf_c[4];
 SECTION_SBSS extern u8 mZbufferTex__13mDoGph_gInf_c[4];
-SECTION_SBSS extern u8 mFadeRate__13mDoGph_gInf_c[4];
-SECTION_SBSS extern u8 mFadeSpeed__13mDoGph_gInf_c[4];
-SECTION_SBSS extern u8 struct_80450BE4[4];
+SECTION_SBSS extern f32 mFadeRate__13mDoGph_gInf_c;
+SECTION_SBSS extern f32 mFadeSpeed__13mDoGph_gInf_c;
+extern u8 struct_80450BE4[4];
 SECTION_SBSS extern u8 data_80450BE8[8];
 SECTION_SDATA2 extern u8 m_Do_m_Do_graphic__lit_4062[4];
 SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_4063;
@@ -247,7 +247,7 @@ SECTION_SDATA2 extern u32 m_Do_m_Do_graphic__lit_4505;
 SECTION_SDATA2 extern u8 m_Do_m_Do_graphic__lit_4528[4];
 SECTION_SDATA2 extern u32 data_80451AB8;
 SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_4592;
-SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_4593;
+SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_4593[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 m_Do_m_Do_graphic__lit_4595;
 SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_4641;
 SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_4642;
@@ -259,7 +259,7 @@ SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_5027;
 SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_5028;
 SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_5029;
 SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_5030;
-SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_5031;
+SECTION_SDATA2 extern f32 m_Do_m_Do_graphic__lit_5031[1 + 1 /* padding */];
 SECTION_SBSS2 extern u8 m_Do_m_Do_graphic__lit_4530[4 + 4 /* padding */];
 
 // 
@@ -478,18 +478,18 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void strcmp(); // 1
 SECTION_DATA extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
-SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
-SECTION_DATA extern void*const __vt__13J2DOrthoGraph[10];
+SECTION_DATA extern void* const __vt__14J2DGrafContext[10];
+SECTION_DATA extern void* const __vt__13J2DOrthoGraph[10];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_BSS extern u8 g_HIO[64 + 4 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_env_light[4880];
-SECTION_BSS extern u8 Zero__4cXyz[12];
+SECTION_BSS extern f32 Zero__4cXyz[3];
 SECTION_BSS extern u8 mPadStatus__10JUTGamePad[48];
 SECTION_BSS extern u8 j3dSys[284];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
 SECTION_SDATA extern u32 data_80450580;
-SECTION_SDATA extern void*mRenderModeObj__15mDoMch_render_c[2];
+SECTION_SDATA extern void* mRenderModeObj__15mDoMch_render_c[1 + 1 /* padding */];
 SECTION_SDATA extern u8 g_clearColor[4];
 SECTION_SDATA extern u32 g_whiteColor;
 SECTION_SDATA extern u32 __float_nan;
@@ -505,11 +505,11 @@ SECTION_SBSS extern u8 sManager__10JUTProcBar[4];
 // Declarations:
 // 
 
-/* 80007D9C-80007E44 00A8+00 rc=1 efc=0 .text      createTimg__FUsUsUl                                          */
+/* 80007D9C-80007E44 00A8+00 rc=0 efc=0 .text      createTimg__FUsUsUl                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void createTimg(u16 field_0, u16 field_1, u32 field_2) {
+asm void createTimg(u16 field_0, u16 field_1, u32 field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/createTimg__FUsUsUl.s"
 }
@@ -517,45 +517,32 @@ asm static void createTimg(u16 field_0, u16 field_1, u32 field_2) {
 
 
 /* ############################################################################################## */
-/* 80450590-80450594 0004+00 rc=3 efc=1 .sdata     mBackColor__13mDoGph_gInf_c                                  */
+/* 80450590-80450594 0004+00 rc=0 efc=0 .sdata     mBackColor__13mDoGph_gInf_c                                  */
 u8 mBackColor__13mDoGph_gInf_c[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450594-80450598 0004+00 rc=7 efc=3 .sdata     mFadeColor__13mDoGph_gInf_c                                  */
+/* 80450594-80450598 0004+00 rc=0 efc=0 .sdata     mFadeColor__13mDoGph_gInf_c                                  */
 u8 mFadeColor__13mDoGph_gInf_c[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450BC8-80450BCC 0004+00 rc=40 efc=38 .sbss      mFader__13mDoGph_gInf_c                                      */
+/* 80450BC8-80450BCC 0004+00 rc=0 efc=0 .sbss      mFader__13mDoGph_gInf_c                                      */
 u8 mFader__13mDoGph_gInf_c[4];
 
-/* 80450BCC-80450BD0 0004+00 rc=11 efc=8 .sbss      mFrameBufferTimg__13mDoGph_gInf_c                            */
+/* 80450BCC-80450BD0 0004+00 rc=0 efc=0 .sbss      mFrameBufferTimg__13mDoGph_gInf_c                            */
 u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
 
-/* 80450BD0-80450BD4 0004+00 rc=9 efc=6 .sbss      mFrameBufferTex__13mDoGph_gInf_c                             */
+/* 80450BD0-80450BD4 0004+00 rc=0 efc=0 .sbss      mFrameBufferTex__13mDoGph_gInf_c                             */
 u8 mFrameBufferTex__13mDoGph_gInf_c[4];
 
-/* 80450BD4-80450BD8 0004+00 rc=2 efc=1 .sbss      mZbufferTimg__13mDoGph_gInf_c                                */
+/* 80450BD4-80450BD8 0004+00 rc=0 efc=0 .sbss      mZbufferTimg__13mDoGph_gInf_c                                */
 u8 mZbufferTimg__13mDoGph_gInf_c[4];
 
-/* 80450BD8-80450BDC 0004+00 rc=4 efc=1 .sbss      mZbufferTex__13mDoGph_gInf_c                                 */
+/* 80450BD8-80450BDC 0004+00 rc=0 efc=0 .sbss      mZbufferTex__13mDoGph_gInf_c                                 */
 u8 mZbufferTex__13mDoGph_gInf_c[4];
 
-/* 80450BDC-80450BE0 0004+00 rc=6 efc=3 .sbss      mFadeRate__13mDoGph_gInf_c                                   */
-u8 mFadeRate__13mDoGph_gInf_c[4];
-
-/* 80450BE0-80450BE4 0004+00 rc=3 efc=0 .sbss      mFadeSpeed__13mDoGph_gInf_c                                  */
-u8 mFadeSpeed__13mDoGph_gInf_c[4];
-
-/* 80450BE4-80450BE8 0004+00 rc=17 efc=9 .sbss      None                                                         */
-u8 struct_80450BE4[4];
-/* 80450BE4 0001 data_80450BE4 */
-/* 80450BE5 0001 data_80450BE5 */
-/* 80450BE6 0001 data_80450BE6 */
-/* 80450BE7 0001 data_80450BE7 */
-
-/* 80007E44-80007F90 014C+00 rc=1 efc=0 .text      create__13mDoGph_gInf_cFv                                    */
+/* 80007E44-80007F90 014C+00 rc=0 efc=0 .text      create__13mDoGph_gInf_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -567,10 +554,19 @@ asm void mDoGph_gInf_c::create() {
 
 
 /* ############################################################################################## */
-/* 80450BE8-80450BF0 0008+00 rc=1 efc=0 .sbss      None                                                         */
+/* 80450BDC-80450BE0 0004+00 rc=0 efc=0 .sbss      mFadeRate__13mDoGph_gInf_c                                   */
+f32 mFadeRate__13mDoGph_gInf_c;
+
+/* 80450BE0-80450BE4 0004+00 rc=0 efc=0 .sbss      mFadeSpeed__13mDoGph_gInf_c                                  */
+f32 mFadeSpeed__13mDoGph_gInf_c;
+
+/* 80450BE4-80450BE8 0004+00 rc=0 efc=0 None       None                                                         */
+u8 struct_80450BE4[4];
+
+/* 80450BE8-80450BF0 0008+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_80450BE8[8];
 
-/* 80007F90-80007FD8 0048+00 rc=3 efc=2 .text      beginRender__13mDoGph_gInf_cFv                               */
+/* 80007F90-80007FD8 0048+00 rc=0 efc=0 .text      beginRender__13mDoGph_gInf_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -582,15 +578,15 @@ asm void mDoGph_gInf_c::beginRender() {
 
 
 /* ############################################################################################## */
-/* 80451A38-80451A3C 0004+00 rc=11 efc=0 .sdata2    @4062                                                        */
+/* 80451A38-80451A3C 0004+00 rc=0 efc=0 .sdata2    @4062                                                        */
 u8 m_Do_m_Do_graphic__lit_4062[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451A3C-80451A40 0004+00 rc=8 efc=0 .sdata2    @4063                                                        */
+/* 80451A3C-80451A40 0004+00 rc=0 efc=0 .sdata2    @4063                                                        */
 f32 m_Do_m_Do_graphic__lit_4063 = 1.0f;
 
-/* 80007FD8-80008028 0050+00 rc=7 efc=6 .text      fadeOut__13mDoGph_gInf_cFfR8_GXColor                         */
+/* 80007FD8-80008028 0050+00 rc=0 efc=0 .text      fadeOut__13mDoGph_gInf_cFfR8_GXColor                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -612,7 +608,7 @@ asm void mDoGph_gInf_c::fadeOut_f(f32 field_0, _GXColor& field_1) {
 #pragma pop
 
 
-/* 80008078-800080A0 0028+00 rc=1 efc=1 .text      onBlure__13mDoGph_gInf_cFv                                   */
+/* 80008078-800080A0 0028+00 rc=0 efc=0 .text      onBlure__13mDoGph_gInf_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -624,19 +620,19 @@ asm void mDoGph_gInf_c::onBlure() {
 
 
 /* ############################################################################################## */
-/* 803DD3E8-803DD408 0020+00 rc=6 efc=3 .bss       mFrameBufferTexObj__13mDoGph_gInf_c                          */
+/* 803DD3E8-803DD408 0020+00 rc=0 efc=0 .bss       mFrameBufferTexObj__13mDoGph_gInf_c                          */
 u8 mFrameBufferTexObj__13mDoGph_gInf_c[32];
 
-/* 803DD408-803DD428 0020+00 rc=1 efc=0 .bss       mZbufferTexObj__13mDoGph_gInf_c                              */
+/* 803DD408-803DD428 0020+00 rc=0 efc=0 .bss       mZbufferTexObj__13mDoGph_gInf_c                              */
 u8 mZbufferTexObj__13mDoGph_gInf_c[32];
 
-/* 803DD428-803DD43C 0014+00 rc=5 efc=3 .bss       m_bloom__13mDoGph_gInf_c                                     */
+/* 803DD428-803DD43C 0014+00 rc=0 efc=0 .bss       m_bloom__13mDoGph_gInf_c                                     */
 u8 m_bloom__13mDoGph_gInf_c[20];
 
-/* 803DD43C-803DD470 0030+04 rc=2 efc=0 .bss       mBlureMtx__13mDoGph_gInf_c                                   */
+/* 803DD43C-803DD470 0030+04 rc=0 efc=0 .bss       mBlureMtx__13mDoGph_gInf_c                                   */
 u8 mBlureMtx__13mDoGph_gInf_c[48 + 4 /* padding */];
 
-/* 800080A0-800080D0 0030+00 rc=2 efc=1 .text      onBlure__13mDoGph_gInf_cFPA4_Cf                              */
+/* 800080A0-800080D0 0030+00 rc=0 efc=0 .text      onBlure__13mDoGph_gInf_cFPA4_Cf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -647,7 +643,7 @@ asm void mDoGph_gInf_c::onBlure(f32 const (* field_0)[4]) {
 #pragma pop
 
 
-/* 800080D0-800080F4 0024+00 rc=3 efc=3 .text      fadeOut__13mDoGph_gInf_cFf                                   */
+/* 800080D0-800080F4 0024+00 rc=0 efc=0 .text      fadeOut__13mDoGph_gInf_cFf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -659,14 +655,14 @@ asm void mDoGph_gInf_c::fadeOut(f32 field_0) {
 
 
 /* ############################################################################################## */
-/* 80451A40-80451A44 0004+00 rc=5 efc=0 .sdata2    @4105                                                        */
+/* 80451A40-80451A44 0004+00 rc=0 efc=0 .sdata2    @4105                                                        */
 f32 m_Do_m_Do_graphic__lit_4105 = 10.0f;
 
-/* 800080F4-80008330 023C+00 rc=1 efc=0 .text      darwFilter__F8_GXColor                                       */
+/* 800080F4-80008330 023C+00 rc=0 efc=0 .text      darwFilter__F8_GXColor                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void darwFilter(_GXColor field_0) {
+asm void darwFilter(_GXColor field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/darwFilter__F8_GXColor.s"
 }
@@ -674,10 +670,10 @@ asm static void darwFilter(_GXColor field_0) {
 
 
 /* ############################################################################################## */
-/* 80451A44-80451A48 0004+00 rc=1 efc=0 .sdata2    @4131                                                        */
+/* 80451A44-80451A48 0004+00 rc=0 efc=0 .sdata2    @4131                                                        */
 f32 m_Do_m_Do_graphic__lit_4131 = 255.0f;
 
-/* 80008330-8000841C 00EC+00 rc=1 efc=0 .text      calcFade__13mDoGph_gInf_cFv                                  */
+/* 80008330-8000841C 00EC+00 rc=0 efc=0 .text      calcFade__13mDoGph_gInf_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -688,30 +684,30 @@ asm void mDoGph_gInf_c::calcFade() {
 #pragma pop
 
 
-/* 8000841C-80008420 0004+00 rc=1 efc=1 .text      mDoGph_BlankingON__Fv                                        */
+/* 8000841C-80008420 0004+00 rc=0 efc=0 .text      mDoGph_BlankingON__Fv                                        */
 void mDoGph_BlankingON() {
 	/* empty function */
 }
 
 
-/* 80008420-80008424 0004+00 rc=1 efc=1 .text      mDoGph_BlankingOFF__Fv                                       */
+/* 80008420-80008424 0004+00 rc=0 efc=0 .text      mDoGph_BlankingOFF__Fv                                       */
 void mDoGph_BlankingOFF() {
 	/* empty function */
 }
 
 
-/* 80008424-80008450 002C+00 rc=1 efc=0 .text      dScnPly_BeforeOfPaint__Fv                                    */
+/* 80008424-80008450 002C+00 rc=0 efc=0 .text      dScnPly_BeforeOfPaint__Fv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dScnPly_BeforeOfPaint() {
+asm void dScnPly_BeforeOfPaint() {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/dScnPly_BeforeOfPaint__Fv.s"
 }
 #pragma pop
 
 
-/* 80008450-80008474 0024+00 rc=1 efc=1 .text      mDoGph_BeforeOfDraw__Fv                                      */
+/* 80008450-80008474 0024+00 rc=0 efc=0 .text      mDoGph_BeforeOfDraw__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -722,7 +718,7 @@ asm void mDoGph_BeforeOfDraw() {
 #pragma pop
 
 
-/* 80008474-80008630 01BC+00 rc=1 efc=1 .text      mDoGph_AfterOfDraw__Fv                                       */
+/* 80008474-80008630 01BC+00 rc=0 efc=0 .text      mDoGph_AfterOfDraw__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -734,93 +730,93 @@ asm void mDoGph_AfterOfDraw() {
 
 
 /* ############################################################################################## */
-/* 80450598-8045059C 0004+00 rc=1 efc=0 .sdata     l_tevColor0$4208                                             */
+/* 80450598-8045059C 0004+00 rc=0 efc=0 .sdata     l_tevColor0$4208                                             */
 u8 data_80450598[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045059C-804505A0 0004+00 rc=1 efc=0 .sdata     None                                                         */
+/* 8045059C-804505A0 0004+00 rc=0 efc=0 .sdata     None                                                         */
 u8 data_8045059C[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451A48-80451A4C 0004+00 rc=1 efc=0 .sdata2    @4422                                                        */
+/* 80451A48-80451A4C 0004+00 rc=0 efc=0 .sdata2    @4422                                                        */
 f32 m_Do_m_Do_graphic__lit_4422 = -255.0f;
 
-/* 80451A4C-80451A50 0004+00 rc=2 efc=0 .sdata2    @4423                                                        */
+/* 80451A4C-80451A50 0004+00 rc=0 efc=0 .sdata2    @4423                                                        */
 f32 m_Do_m_Do_graphic__lit_4423 = 60.0f;
 
-/* 80451A50-80451A54 0004+00 rc=1 efc=0 .sdata2    @4424                                                        */
+/* 80451A50-80451A54 0004+00 rc=0 efc=0 .sdata2    @4424                                                        */
 f32 m_Do_m_Do_graphic__lit_4424 = 48.0f;
 
-/* 80451A54-80451A58 0004+00 rc=1 efc=0 .sdata2    @4425                                                        */
+/* 80451A54-80451A58 0004+00 rc=0 efc=0 .sdata2    @4425                                                        */
 f32 m_Do_m_Do_graphic__lit_4425 = 400.0f;
 
-/* 80451A58-80451A60 0008+00 rc=1 efc=0 .sdata2    @4426                                                        */
+/* 80451A58-80451A60 0008+00 rc=0 efc=0 .sdata2    @4426                                                        */
 f64 m_Do_m_Do_graphic__lit_4426 = 0.5;
 
-/* 80451A60-80451A68 0008+00 rc=1 efc=0 .sdata2    @4427                                                        */
+/* 80451A60-80451A68 0008+00 rc=0 efc=0 .sdata2    @4427                                                        */
 f64 m_Do_m_Do_graphic__lit_4427 = 3.0;
 
-/* 80451A68-80451A70 0008+00 rc=1 efc=0 .sdata2    @4428                                                        */
+/* 80451A68-80451A70 0008+00 rc=0 efc=0 .sdata2    @4428                                                        */
 u8 m_Do_m_Do_graphic__lit_4428[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451A70-80451A74 0004+00 rc=1 efc=0 .sdata2    @4429                                                        */
+/* 80451A70-80451A74 0004+00 rc=0 efc=0 .sdata2    @4429                                                        */
 f32 m_Do_m_Do_graphic__lit_4429 = 280.0f;
 
-/* 80451A74-80451A78 0004+00 rc=1 efc=0 .sdata2    @4430                                                        */
+/* 80451A74-80451A78 0004+00 rc=0 efc=0 .sdata2    @4430                                                        */
 f32 m_Do_m_Do_graphic__lit_4430 = 4.0f / 5.0f;
 
-/* 80451A78-80451A7C 0004+00 rc=1 efc=0 .sdata2    @4431                                                        */
+/* 80451A78-80451A7C 0004+00 rc=0 efc=0 .sdata2    @4431                                                        */
 f32 m_Do_m_Do_graphic__lit_4431 = -180.0f;
 
-/* 80451A7C-80451A80 0004+00 rc=1 efc=0 .sdata2    @4432                                                        */
+/* 80451A7C-80451A80 0004+00 rc=0 efc=0 .sdata2    @4432                                                        */
 f32 m_Do_m_Do_graphic__lit_4432 = 75.0f;
 
-/* 80451A80-80451A84 0004+00 rc=1 efc=0 .sdata2    @4433                                                        */
+/* 80451A80-80451A84 0004+00 rc=0 efc=0 .sdata2    @4433                                                        */
 f32 m_Do_m_Do_graphic__lit_4433 = 3.0f;
 
-/* 80451A84-80451A88 0004+00 rc=1 efc=0 .sdata2    @4434                                                        */
+/* 80451A84-80451A88 0004+00 rc=0 efc=0 .sdata2    @4434                                                        */
 f32 m_Do_m_Do_graphic__lit_4434 = 999999.0f;
 
-/* 80451A88-80451A8C 0004+00 rc=1 efc=0 .sdata2    @4435                                                        */
+/* 80451A88-80451A8C 0004+00 rc=0 efc=0 .sdata2    @4435                                                        */
 f32 m_Do_m_Do_graphic__lit_4435 = 80.0f;
 
-/* 80451A8C-80451A90 0004+00 rc=1 efc=0 .sdata2    @4436                                                        */
+/* 80451A8C-80451A90 0004+00 rc=0 efc=0 .sdata2    @4436                                                        */
 f32 m_Do_m_Do_graphic__lit_4436 = 1.0f / 10.0f;
 
-/* 80451A90-80451A94 0004+00 rc=1 efc=0 .sdata2    @4437                                                        */
+/* 80451A90-80451A94 0004+00 rc=0 efc=0 .sdata2    @4437                                                        */
 f32 m_Do_m_Do_graphic__lit_4437 = 100.0f;
 
-/* 80451A94-80451A98 0004+00 rc=1 efc=0 .sdata2    @4438                                                        */
+/* 80451A94-80451A98 0004+00 rc=0 efc=0 .sdata2    @4438                                                        */
 f32 m_Do_m_Do_graphic__lit_4438 = 9.999999747378752e-05f;
 
-/* 80451A98-80451A9C 0004+00 rc=1 efc=0 .sdata2    @4439                                                        */
+/* 80451A98-80451A9C 0004+00 rc=0 efc=0 .sdata2    @4439                                                        */
 f32 m_Do_m_Do_graphic__lit_4439 = -254.0f;
 
-/* 80451A9C-80451AA0 0004+00 rc=1 efc=0 .sdata2    @4440                                                        */
+/* 80451A9C-80451AA0 0004+00 rc=0 efc=0 .sdata2    @4440                                                        */
 f32 m_Do_m_Do_graphic__lit_4440 = 509.0f;
 
-/* 80451AA0-80451AA4 0004+00 rc=1 efc=0 .sdata2    @4441                                                        */
+/* 80451AA0-80451AA4 0004+00 rc=0 efc=0 .sdata2    @4441                                                        */
 f32 m_Do_m_Do_graphic__lit_4441 = 0.0024999999441206455f;
 
-/* 80451AA4-80451AA8 0004+00 rc=1 efc=0 .sdata2    @4442                                                        */
+/* 80451AA4-80451AA8 0004+00 rc=0 efc=0 .sdata2    @4442                                                        */
 f32 m_Do_m_Do_graphic__lit_4442 = -0.0024999999441206455f;
 
-/* 80008630-80009184 0B54+00 rc=1 efc=0 .text      drawDepth2__FP10view_classP15view_port_classi                */
+/* 80008630-80009184 0B54+00 rc=0 efc=0 .text      drawDepth2__FP10view_classP15view_port_classi                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void drawDepth2(view_class* field_0, view_port_class* field_1, int field_2) {
+asm void drawDepth2(view_class* field_0, view_port_class* field_1, int field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/drawDepth2__FP10view_classP15view_port_classi.s"
 }
 #pragma pop
 
 
-/* 80009184-800091C0 003C+00 rc=53 efc=53 .text      __dt__4cXyzFv                                                */
+/* 80009184-800091C0 003C+00 rc=0 efc=0 .text      __dt__4cXyzFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -832,24 +828,24 @@ asm cXyz::~cXyz() {
 
 
 /* ############################################################################################## */
-/* 80451AA8-80451AAC 0004+00 rc=3 efc=0 .sdata2    @4480                                                        */
+/* 80451AA8-80451AAC 0004+00 rc=0 efc=0 .sdata2    @4480                                                        */
 f32 m_Do_m_Do_graphic__lit_4480 = 448.0f;
 
-/* 80451AAC-80451AB0 0004+00 rc=3 efc=0 .sdata2    @4481                                                        */
+/* 80451AAC-80451AB0 0004+00 rc=0 efc=0 .sdata2    @4481                                                        */
 f32 m_Do_m_Do_graphic__lit_4481 = 608.0f;
 
-/* 800091C0-800094B4 02F4+00 rc=1 efc=0 .text      trimming__FP10view_classP15view_port_class                   */
+/* 800091C0-800094B4 02F4+00 rc=0 efc=0 .text      trimming__FP10view_classP15view_port_class                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void trimming(view_class* field_0, view_port_class* field_1) {
+asm void trimming(view_class* field_0, view_port_class* field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/trimming__FP10view_classP15view_port_class.s"
 }
 #pragma pop
 
 
-/* 800094B4-80009544 0090+00 rc=3 efc=1 .text      mDoGph_drawFilterQuad__FScSc                                 */
+/* 800094B4-80009544 0090+00 rc=0 efc=0 .text      mDoGph_drawFilterQuad__FScSc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -861,10 +857,10 @@ asm void mDoGph_drawFilterQuad(s8 field_0, s8 field_1) {
 
 
 /* ############################################################################################## */
-/* 80451AB0-80451AB4 0004+00 rc=1 efc=0 .sdata2    @4505                                                        */
+/* 80451AB0-80451AB4 0004+00 rc=0 efc=0 .sdata2    @4505                                                        */
 u32 m_Do_m_Do_graphic__lit_4505 = 0xFFFFFFFF;
 
-/* 80009544-800095F8 00B4+00 rc=1 efc=1 .text      create__Q213mDoGph_gInf_c7bloom_cFv                          */
+/* 80009544-800095F8 00B4+00 rc=0 efc=0 .text      create__Q213mDoGph_gInf_c7bloom_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -875,7 +871,7 @@ asm void mDoGph_gInf_c::bloom_c::create() {
 #pragma pop
 
 
-/* 800095F8-80009650 0058+00 rc=1 efc=1 .text      remove__Q213mDoGph_gInf_c7bloom_cFv                          */
+/* 800095F8-80009650 0058+00 rc=0 efc=0 .text      remove__Q213mDoGph_gInf_c7bloom_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -887,28 +883,31 @@ asm void mDoGph_gInf_c::bloom_c::remove() {
 
 
 /* ############################################################################################## */
-/* 80451AB4-80451AB8 0004+00 rc=1 efc=0 .sdata2    @4528                                                        */
+/* 80451AB4-80451AB8 0004+00 rc=0 efc=0 .sdata2    @4528                                                        */
 u8 m_Do_m_Do_graphic__lit_4528[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451AB8-80451ABC 0004+00 rc=1 efc=0 .sdata2    None                                                         */
+/* 80451AB8-80451ABC 0004+00 rc=0 efc=0 .sdata2    None                                                         */
 u32 data_80451AB8 = 0x00000040;
 
-/* 80451ABC-80451AC0 0004+00 rc=1 efc=0 .sdata2    @4592                                                        */
+/* 80451ABC-80451AC0 0004+00 rc=0 efc=0 .sdata2    @4592                                                        */
 f32 m_Do_m_Do_graphic__lit_4592 = 4.0f;
 
-/* 80451AC0-80451AC8 0004+04 rc=1 efc=0 .sdata2    @4593                                                        */
-f32 m_Do_m_Do_graphic__lit_4593 = 0.00015624999650754035f;
-/* padding 4 bytes */
+/* 80451AC0-80451AC8 0004+04 rc=0 efc=0 .sdata2    @4593                                                        */
+f32 m_Do_m_Do_graphic__lit_4593[1 + 1 /* padding */] = {
+	0.00015624999650754035f,
+	/* padding */
+	0.0f,
+};
 
-/* 80451AC8-80451AD0 0008+00 rc=1 efc=0 .sdata2    @4595                                                        */
+/* 80451AC8-80451AD0 0008+00 rc=0 efc=0 .sdata2    @4595                                                        */
 f64 m_Do_m_Do_graphic__lit_4595 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80456B60-80456B68 0004+04 rc=1 efc=0 .sbss2     @4530                                                        */
+/* 80456B60-80456B68 0004+04 rc=0 efc=0 .sbss2     @4530                                                        */
 u8 m_Do_m_Do_graphic__lit_4530[4 + 4 /* padding */];
 
-/* 80009650-8000A160 0B10+00 rc=1 efc=0 .text      draw__Q213mDoGph_gInf_c7bloom_cFv                            */
+/* 80009650-8000A160 0B10+00 rc=0 efc=0 .text      draw__Q213mDoGph_gInf_c7bloom_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -919,22 +918,22 @@ asm void mDoGph_gInf_c::bloom_c::draw() {
 #pragma pop
 
 
-/* 8000A160-8000A290 0130+00 rc=1 efc=0 .text      retry_captue_frame__FP10view_classP15view_port_classi        */
+/* 8000A160-8000A290 0130+00 rc=0 efc=0 .text      retry_captue_frame__FP10view_classP15view_port_classi        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void retry_captue_frame(view_class* field_0, view_port_class* field_1, int field_2) {
+asm void retry_captue_frame(view_class* field_0, view_port_class* field_1, int field_2) {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/retry_captue_frame__FP10view_classP15view_port_classi.s"
 }
 #pragma pop
 
 
-/* 8000A290-8000A504 0274+00 rc=1 efc=0 .text      motionBlure__FP10view_class                                  */
+/* 8000A290-8000A504 0274+00 rc=0 efc=0 .text      motionBlure__FP10view_class                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void motionBlure(view_class* field_0) {
+asm void motionBlure(view_class* field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/motionBlure__FP10view_class.s"
 }
@@ -942,28 +941,28 @@ asm static void motionBlure(view_class* field_0) {
 
 
 /* ############################################################################################## */
-/* 80451AD0-80451AD4 0004+00 rc=1 efc=0 .sdata2    @4641                                                        */
+/* 80451AD0-80451AD4 0004+00 rc=0 efc=0 .sdata2    @4641                                                        */
 f32 m_Do_m_Do_graphic__lit_4641 = -35000.0f;
 
-/* 80451AD4-80451AD8 0004+00 rc=1 efc=0 .sdata2    @4642                                                        */
+/* 80451AD4-80451AD8 0004+00 rc=0 efc=0 .sdata2    @4642                                                        */
 f32 m_Do_m_Do_graphic__lit_4642 = -30000.0f;
 
-/* 8000A504-8000A58C 0088+00 rc=1 efc=0 .text      setLight__Fv                                                 */
+/* 8000A504-8000A58C 0088+00 rc=0 efc=0 .text      setLight__Fv                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void setLight() {
+asm void setLight() {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/setLight__Fv.s"
 }
 #pragma pop
 
 
-/* 8000A58C-8000A604 0078+00 rc=1 efc=0 .text      drawItem3D__Fv                                               */
+/* 8000A58C-8000A604 0078+00 rc=0 efc=0 .text      drawItem3D__Fv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void drawItem3D() {
+asm void drawItem3D() {
 	nofralloc
 #include "asm/m_Do/m_Do_graphic/drawItem3D__Fv.s"
 }
@@ -971,46 +970,49 @@ asm static void drawItem3D() {
 
 
 /* ############################################################################################## */
-/* 80373DD0-80373DE8 0017+01 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80373DD0-80373DE8 0017+01 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80373DD0 = "F_SP124";
-SECTION_DEAD char* const stringBase_80373DD8 = "D_MN08";
-SECTION_DEAD char* const stringBase_80373DDF = "F_SP127";
+const char* const stringBase_80373DD0 = "F_SP124";
+const char* const stringBase_80373DD8 = "D_MN08";
+const char* const stringBase_80373DDF = "F_SP127";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_80373DE7 = "";
+char* const pad_80373DE7 = "";
 #pragma pop
 
-/* 80451AD8-80451ADC 0004+00 rc=1 efc=0 .sdata2    @5023                                                        */
+/* 80451AD8-80451ADC 0004+00 rc=0 efc=0 .sdata2    @5023                                                        */
 f32 m_Do_m_Do_graphic__lit_5023 = -1.0f;
 
-/* 80451ADC-80451AE0 0004+00 rc=1 efc=0 .sdata2    @5024                                                        */
+/* 80451ADC-80451AE0 0004+00 rc=0 efc=0 .sdata2    @5024                                                        */
 f32 m_Do_m_Do_graphic__lit_5024 = 0.5f;
 
-/* 80451AE0-80451AE4 0004+00 rc=1 efc=0 .sdata2    @5025                                                        */
+/* 80451AE0-80451AE4 0004+00 rc=0 efc=0 .sdata2    @5025                                                        */
 f32 m_Do_m_Do_graphic__lit_5025 = -0.5f;
 
-/* 80451AE4-80451AE8 0004+00 rc=1 efc=0 .sdata2    @5026                                                        */
+/* 80451AE4-80451AE8 0004+00 rc=0 efc=0 .sdata2    @5026                                                        */
 f32 m_Do_m_Do_graphic__lit_5026 = 19.0f / 14.0f;
 
-/* 80451AE8-80451AEC 0004+00 rc=1 efc=0 .sdata2    @5027                                                        */
+/* 80451AE8-80451AEC 0004+00 rc=0 efc=0 .sdata2    @5027                                                        */
 f32 m_Do_m_Do_graphic__lit_5027 = 100000.0f;
 
-/* 80451AEC-80451AF0 0004+00 rc=1 efc=0 .sdata2    @5028                                                        */
+/* 80451AEC-80451AF0 0004+00 rc=0 efc=0 .sdata2    @5028                                                        */
 f32 m_Do_m_Do_graphic__lit_5028 = -2.0f;
 
-/* 80451AF0-80451AF4 0004+00 rc=1 efc=0 .sdata2    @5029                                                        */
+/* 80451AF0-80451AF4 0004+00 rc=0 efc=0 .sdata2    @5029                                                        */
 f32 m_Do_m_Do_graphic__lit_5029 = -100000.0f;
 
-/* 80451AF4-80451AF8 0004+00 rc=1 efc=0 .sdata2    @5030                                                        */
+/* 80451AF4-80451AF8 0004+00 rc=0 efc=0 .sdata2    @5030                                                        */
 f32 m_Do_m_Do_graphic__lit_5030 = 304.0f;
 
-/* 80451AF8-80451B00 0004+04 rc=1 efc=0 .sdata2    @5031                                                        */
-f32 m_Do_m_Do_graphic__lit_5031 = 224.0f;
-/* padding 4 bytes */
+/* 80451AF8-80451B00 0004+04 rc=0 efc=0 .sdata2    @5031                                                        */
+f32 m_Do_m_Do_graphic__lit_5031[1 + 1 /* padding */] = {
+	224.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 8000A604-8000B118 0B14+00 rc=1 efc=1 .text      mDoGph_Painter__Fv                                           */
+/* 8000A604-8000B118 0B14+00 rc=0 efc=0 .text      mDoGph_Painter__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1021,7 +1023,7 @@ asm void mDoGph_Painter() {
 #pragma pop
 
 
-/* 8000B118-8000B174 005C+00 rc=1 efc=1 .text      __dt__13J2DOrthoGraphFv                                      */
+/* 8000B118-8000B174 005C+00 rc=0 efc=0 .text      __dt__13J2DOrthoGraphFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1032,7 +1034,7 @@ asm J2DOrthoGraph::~J2DOrthoGraph() {
 #pragma pop
 
 
-/* 8000B174-8000B1D0 005C+00 rc=2 efc=2 .text      mDoGph_Create__Fv                                            */
+/* 8000B174-8000B1D0 005C+00 rc=0 efc=0 .text      mDoGph_Create__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1043,7 +1045,7 @@ asm void mDoGph_Create() {
 #pragma pop
 
 
-/* 8000B1D0-8000B1E4 0014+00 rc=1 efc=1 .text      __sinit_m_Do_graphic_cpp                                     */
+/* 8000B1D0-8000B1E4 0014+00 rc=0 efc=0 .text      __sinit_m_Do_graphic_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1054,7 +1056,7 @@ extern "C" asm void __sinit_m_Do_graphic_cpp() {
 #pragma pop
 
 
-/* 8000B1E4-8000B1EC 0008+00 rc=1 efc=1 .text      getAtnActorID__9daPy_py_cCFv                                 */
+/* 8000B1E4-8000B1EC 0008+00 rc=0 efc=0 .text      getAtnActorID__9daPy_py_cCFv                                 */
 s32 daPy_py_c::getAtnActorID() const {
 	return -1;
 }

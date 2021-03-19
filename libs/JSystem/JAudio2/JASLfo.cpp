@@ -32,7 +32,7 @@ SECTION_SDATA2 extern u8 JASLfo__lit_341[4];
 SECTION_SDATA2 extern f32 JASLfo__lit_342;
 SECTION_SDATA2 extern f32 JASLfo__lit_363;
 SECTION_SDATA2 extern f32 JASLfo__lit_364;
-SECTION_SDATA2 extern f32 JASLfo__lit_376;
+SECTION_SDATA2 extern f32 JASLfo__lit_376[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -46,15 +46,15 @@ SECTION_BSS extern u8 sincosTable___5JMath[65536];
 // 
 
 /* ############################################################################################## */
-/* 804556E0-804556E4 0004+00 rc=3 efc=0 .sdata2    @341                                                         */
+/* 804556E0-804556E4 0004+00 rc=0 efc=0 .sdata2    @341                                                         */
 u8 JASLfo__lit_341[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804556E4-804556E8 0004+00 rc=2 efc=0 .sdata2    @342                                                         */
+/* 804556E4-804556E8 0004+00 rc=0 efc=0 .sdata2    @342                                                         */
 f32 JASLfo__lit_342 = 1.0f;
 
-/* 8029BD14-8029BD44 0030+00 rc=2 efc=1 .text      __ct__6JASLfoFv                                              */
+/* 8029BD14-8029BD44 0030+00 rc=0 efc=0 .text      __ct__6JASLfoFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,13 +66,13 @@ asm JASLfo::JASLfo() {
 
 
 /* ############################################################################################## */
-/* 804556E8-804556EC 0004+00 rc=1 efc=0 .sdata2    @363                                                         */
+/* 804556E8-804556EC 0004+00 rc=0 efc=0 .sdata2    @363                                                         */
 f32 JASLfo__lit_363 = -8192.0f;
 
-/* 804556EC-804556F0 0004+00 rc=1 efc=0 .sdata2    @364                                                         */
+/* 804556EC-804556F0 0004+00 rc=0 efc=0 .sdata2    @364                                                         */
 f32 JASLfo__lit_364 = 8192.0f;
 
-/* 8029BD44-8029BDD8 0094+00 rc=3 efc=3 .text      getValue__6JASLfoCFv                                         */
+/* 8029BD44-8029BDD8 0094+00 rc=0 efc=0 .text      getValue__6JASLfoCFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,11 +84,14 @@ asm void JASLfo::getValue() const {
 
 
 /* ############################################################################################## */
-/* 804556F0-804556F8 0004+04 rc=1 efc=0 .sdata2    @376                                                         */
-f32 JASLfo__lit_376 = 1.0f / 72.0f;
-/* padding 4 bytes */
+/* 804556F0-804556F8 0004+04 rc=0 efc=0 .sdata2    @376                                                         */
+f32 JASLfo__lit_376[1 + 1 /* padding */] = {
+	1.0f / 72.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 8029BDD8-8029BE2C 0054+00 rc=2 efc=2 .text      incCounter__6JASLfoFf                                        */
+/* 8029BDD8-8029BE2C 0054+00 rc=0 efc=0 .text      incCounter__6JASLfoFf                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,10 +103,10 @@ asm void JASLfo::incCounter(f32 field_0) {
 
 
 /* ############################################################################################## */
-/* 80431C40-80431C58 0018+00 rc=3 efc=1 .bss       sFreeRunLfo__6JASLfo                                         */
+/* 80431C40-80431C58 0018+00 rc=0 efc=0 .bss       sFreeRunLfo__6JASLfo                                         */
 u8 sFreeRunLfo__6JASLfo[24];
 
-/* 8029BE2C-8029BE6C 0040+00 rc=1 efc=1 .text      resetCounter__6JASLfoFv                                      */
+/* 8029BE2C-8029BE6C 0040+00 rc=0 efc=0 .text      resetCounter__6JASLfoFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,7 +117,7 @@ asm void JASLfo::resetCounter() {
 #pragma pop
 
 
-/* 8029BE6C-8029BE94 0028+00 rc=1 efc=1 .text      __sinit_JASLfo_cpp                                           */
+/* 8029BE6C-8029BE94 0028+00 rc=0 efc=0 .text      __sinit_JASLfo_cpp                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

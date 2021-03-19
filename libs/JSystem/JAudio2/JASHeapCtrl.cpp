@@ -149,7 +149,7 @@ SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 // Declarations:
 // 
 
-/* 80290140-802901AC 006C+00 rc=3 efc=2 .text      __ct__7JASHeapFP11JASDisposer                                */
+/* 80290140-802901AC 006C+00 rc=0 efc=0 .text      __ct__7JASHeapFP11JASDisposer                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +160,7 @@ asm JASHeap::JASHeap(JASDisposer* field_0) {
 #pragma pop
 
 
-/* 802901AC-8029021C 0070+00 rc=1 efc=0 .text      initRootHeap__7JASHeapFPvUl                                  */
+/* 802901AC-8029021C 0070+00 rc=0 efc=0 .text      initRootHeap__7JASHeapFPvUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +171,7 @@ asm void JASHeap::initRootHeap(void* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 8029021C-802903F4 01D8+00 rc=2 efc=2 .text      alloc__7JASHeapFP7JASHeapUl                                  */
+/* 8029021C-802903F4 01D8+00 rc=0 efc=0 .text      alloc__7JASHeapFP7JASHeapUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +182,7 @@ asm void JASHeap::alloc(JASHeap* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 802903F4-802904E4 00F0+00 rc=1 efc=1 .text      allocTail__7JASHeapFP7JASHeapUl                              */
+/* 802903F4-802904E4 00F0+00 rc=0 efc=0 .text      allocTail__7JASHeapFP7JASHeapUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -193,7 +193,7 @@ asm void JASHeap::allocTail(JASHeap* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 802904E4-80290608 0124+00 rc=4 efc=4 .text      free__7JASHeapFv                                             */
+/* 802904E4-80290608 0124+00 rc=0 efc=0 .text      free__7JASHeapFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -204,7 +204,7 @@ asm void JASHeap::free() {
 #pragma pop
 
 
-/* 80290608-802906F0 00E8+00 rc=2 efc=0 .text      insertChild__7JASHeapFP7JASHeapP7JASHeapPvUlb                */
+/* 80290608-802906F0 00E8+00 rc=0 efc=0 .text      insertChild__7JASHeapFP7JASHeapP7JASHeapPvUlb                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -215,7 +215,7 @@ asm void JASHeap::insertChild(JASHeap* field_0, JASHeap* field_1, void* field_2,
 #pragma pop
 
 
-/* 802906F0-8029077C 008C+00 rc=3 efc=0 .text      getTailHeap__7JASHeapFv                                      */
+/* 802906F0-8029077C 008C+00 rc=0 efc=0 .text      getTailHeap__7JASHeapFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -226,7 +226,7 @@ asm void JASHeap::getTailHeap() {
 #pragma pop
 
 
-/* 8029077C-802907E0 0064+00 rc=2 efc=0 .text      getTailOffset__7JASHeapFv                                    */
+/* 8029077C-802907E0 0064+00 rc=0 efc=0 .text      getTailOffset__7JASHeapFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -237,7 +237,7 @@ asm void JASHeap::getTailOffset() {
 #pragma pop
 
 
-/* 802907E0-80290848 0068+00 rc=2 efc=0 .text      getCurOffset__7JASHeapFv                                     */
+/* 802907E0-80290848 0068+00 rc=0 efc=0 .text      getCurOffset__7JASHeapFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -248,7 +248,7 @@ asm void JASHeap::getCurOffset() {
 #pragma pop
 
 
-/* 80290848-80290860 0018+00 rc=32 efc=32 .text      __ct__17JASGenericMemPoolFv                                  */
+/* 80290848-80290860 0018+00 rc=0 efc=0 .text      __ct__17JASGenericMemPoolFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -259,7 +259,7 @@ asm JASGenericMemPool::JASGenericMemPool() {
 #pragma pop
 
 
-/* 80290860-802908C8 0068+00 rc=9 efc=9 .text      __dt__17JASGenericMemPoolFv                                  */
+/* 80290860-802908C8 0068+00 rc=0 efc=0 .text      __dt__17JASGenericMemPoolFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -271,10 +271,10 @@ asm JASGenericMemPool::~JASGenericMemPool() {
 
 
 /* ############################################################################################## */
-/* 80451210-80451214 0004+00 rc=17 efc=15 .sbss      JASDram                                                      */
+/* 80451210-80451214 0004+00 rc=0 efc=0 .sbss      JASDram                                                      */
 u8 JASDram[4];
 
-/* 802908C8-80290948 0080+00 rc=4 efc=4 .text      newMemPool__17JASGenericMemPoolFUli                          */
+/* 802908C8-80290948 0080+00 rc=0 efc=0 .text      newMemPool__17JASGenericMemPoolFUli                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -285,7 +285,7 @@ asm void JASGenericMemPool::newMemPool(u32 field_0, int field_1) {
 #pragma pop
 
 
-/* 80290948-80290994 004C+00 rc=13 efc=13 .text      alloc__17JASGenericMemPoolFUl                                */
+/* 80290948-80290994 004C+00 rc=0 efc=0 .text      alloc__17JASGenericMemPoolFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -296,7 +296,7 @@ asm void JASGenericMemPool::alloc(u32 field_0) {
 #pragma pop
 
 
-/* 80290994-802909B8 0024+00 rc=15 efc=15 .text      free__17JASGenericMemPoolFPvUl                               */
+/* 80290994-802909B8 0024+00 rc=0 efc=0 .text      free__17JASGenericMemPoolFPvUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -308,16 +308,16 @@ asm void JASGenericMemPool::free(void* field_0, u32 field_1) {
 
 
 /* ############################################################################################## */
-/* 80451214-80451218 0004+00 rc=1 efc=0 .sbss      sAramBase__9JASKernel                                        */
+/* 80451214-80451218 0004+00 rc=0 efc=0 .sbss      sAramBase__9JASKernel                                        */
 u8 sAramBase__9JASKernel[4];
 
-/* 80451218-8045121C 0004+00 rc=2 efc=0 .sbss      sSystemHeap__9JASKernel                                      */
+/* 80451218-8045121C 0004+00 rc=0 efc=0 .sbss      sSystemHeap__9JASKernel                                      */
 u8 sSystemHeap__9JASKernel[4];
 
-/* 8045121C-80451220 0004+00 rc=2 efc=0 .sbss      sCommandHeap__9JASKernel                                     */
+/* 8045121C-80451220 0004+00 rc=0 efc=0 .sbss      sCommandHeap__9JASKernel                                     */
 u8 sCommandHeap__9JASKernel[4];
 
-/* 802909B8-80290AC0 0108+00 rc=1 efc=1 .text      setupRootHeap__9JASKernelFP12JKRSolidHeapUl                  */
+/* 802909B8-80290AC0 0108+00 rc=0 efc=0 .text      setupRootHeap__9JASKernelFP12JKRSolidHeapUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -328,7 +328,7 @@ asm void JASKernel::setupRootHeap(JKRSolidHeap* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80290AC0-80290AC8 0008+00 rc=4 efc=3 .text      getSystemHeap__9JASKernelFv                                  */
+/* 80290AC0-80290AC8 0008+00 rc=0 efc=0 .text      getSystemHeap__9JASKernelFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,7 +339,7 @@ asm void JASKernel::getSystemHeap() {
 #pragma pop
 
 
-/* 80290AC8-80290AD0 0008+00 rc=6 efc=6 .text      getCommandHeap__9JASKernelFv                                 */
+/* 80290AC8-80290AD0 0008+00 rc=0 efc=0 .text      getCommandHeap__9JASKernelFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -351,13 +351,13 @@ asm void JASKernel::getCommandHeap() {
 
 
 /* ############################################################################################## */
-/* 804315D0-804315DC 000C+00 rc=1 efc=0 .bss       @313                                                         */
+/* 804315D0-804315DC 000C+00 rc=0 efc=0 .bss       @313                                                         */
 u8 lit_313[12];
 
-/* 804315DC-80431620 0044+00 rc=3 efc=0 .bss       audioAramHeap__9JASKernel                                    */
+/* 804315DC-80431620 0044+00 rc=0 efc=0 .bss       audioAramHeap__9JASKernel                                    */
 u8 audioAramHeap__9JASKernel[68];
 
-/* 80290AD0-80290B08 0038+00 rc=1 efc=1 .text      setupAramHeap__9JASKernelFUlUl                               */
+/* 80290AD0-80290B08 0038+00 rc=0 efc=0 .text      setupAramHeap__9JASKernelFUlUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -368,7 +368,7 @@ asm void JASKernel::setupAramHeap(u32 field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80290B08-80290B14 000C+00 rc=3 efc=3 .text      getAramHeap__9JASKernelFv                                    */
+/* 80290B08-80290B14 000C+00 rc=0 efc=0 .text      getAramHeap__9JASKernelFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -379,7 +379,7 @@ asm void JASKernel::getAramHeap() {
 #pragma pop
 
 
-/* 80290B14-80290B54 0040+00 rc=1 efc=1 .text      __sinit_JASHeapCtrl_cpp                                      */
+/* 80290B14-80290B54 0040+00 rc=0 efc=0 .text      __sinit_JASHeapCtrl_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -390,7 +390,7 @@ extern "C" asm void __sinit_JASHeapCtrl_cpp() {
 #pragma pop
 
 
-/* 80290B54-80290BCC 0078+00 rc=4 efc=3 .text      __dt__7JASHeapFv                                             */
+/* 80290B54-80290BCC 0078+00 rc=0 efc=0 .text      __dt__7JASHeapFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -401,7 +401,7 @@ asm JASHeap::~JASHeap() {
 #pragma pop
 
 
-/* 80290BCC-80290BD0 0004+00 rc=1 efc=1 .text      onDispose__11JASDisposerFv                                   */
+/* 80290BCC-80290BD0 0004+00 rc=0 efc=0 .text      onDispose__11JASDisposerFv                                   */
 void JASDisposer::onDispose() {
 	/* empty function */
 }

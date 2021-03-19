@@ -3,39 +3,33 @@ import os
 import sys
 import re
 import subprocess
+import struct
+import asyncio
+import functools
+
 from pathlib import Path
 from collections import defaultdict
-from builder import Builder, AsyncBuilder
-from typing import Dict
-
-import disassembler as dasm
+from typing import List, Dict
+from intervaltree import Interval, IntervalTree
+from dataclasses import dataclass, field
 from capstone import *
 from capstone.ppc import *
-from data import *
-from symbols import ReturnFunction, ReturnIntegerFunction, FirstParamFunction, GlobalFunction
-from demangle import demangle
 
-from symbol_table import GlobalSymbolTable
-from collections import defaultdict
+from . import util
+from . import rellib
+from . import globals
 
-from intervaltree import Interval, IntervalTree
-import functools
-from exception import Dol2ZelException
-import globals as g
-import util
-import struct
-import rellib
-import asyncio
-from context import Context
-import globals
-
-import data_types
-from data_types import ConstType, ReferenceType, PointerType, ArrayType
-from dataclasses import dataclass, field
+from . import disassembler as dasm
+from .context import Context
+from .builder import AsyncBuilder
+from .symbol_table import GlobalSymbolTable
+from .demangle import demangle
+from .exception import Dol2ZelException
+from .types import ConstType, ReferenceType, PointerType, ArrayType
+from .data import *
 
 SDA_BASE = 0x80458580
 SDA2_BASE = 0x80459A00
-
 
 @dataclass(eq=False)
 class Struct:
@@ -317,7 +311,7 @@ class CPPExporter:
     gst: GlobalSymbolTable
     tu: TranslationUnit = None
 
-    async def export_symbol_header(self, builder: Builder, symbol: Symbol):
+    async def export_symbol_header(self, builder: AsyncBuilder, symbol: Symbol):
         await builder.write("/* %08X-%08X %04X+%02X rc=%i efc=%i %-10s %-60s */" % (
             symbol.start, symbol.end+symbol.padding, symbol.size, symbol.padding,
             symbol.reference_count, symbol.external_reference_count,
@@ -405,422 +399,6 @@ class CPPExporter:
         if symbol._section == ".extabindex":
             await builder.write("#pragma section \"extabindex_\"")
         await builder.write_nonewline(f"{decl_type} ")
-
-    async def export_symbol_function_normal(self, builder: Builder, section: Section, function: Function, symbol_map: Dict[int, Symbol], address_interval_tree, declspec: str):
-        file_label = function.identifier.label
-        if len(file_label) > 240:
-            file_label = "func_%08X" % function.addr
-        path = section.translation_unit.asm_function_path
-        include_path = "%s/%s.s" % (path, file_label)
-
-        # Fix the filename for case-insensitive systems
-        if include_path.lower() in section.function_files:
-            file_label = "func_%08X" % function.addr
-            include_path = "%s/%s.s" % (path, file_label)
-
-        section.function_files.add(include_path.lower())
-        await util.create_dirs_for_file(Path(include_path))
-        #print("\t\t%s" % include_path)
-
-        await builder.write("#pragma push")
-        await builder.write("#pragma optimization_level 0")
-        await builder.write("#pragma optimizewithasm off")
-        if function.alignment:
-            await builder.write("#pragma function_align %i" % function.alignment)
-
-        is_static = ""
-        # TODO
-        # if function.name.is_static:
-        #    is_static = "static "
-
-        # TODO
-        # if function.name.is_function:
-        #    builder.write("%sasm %s%s %s {" % (declspec, is_static, function.return_type if function.return_type else "void", function.name.demangled.to_str()))
-        # else:
-        #    builder.write("%sasm void %s() {" % (declspec, function.identifier.label))
-
-        await builder.write("%sasm void %s() {" % (declspec, function.identifier.label))
-        await builder.write("\tnofralloc")
-        await builder.write(f"#include \"{function.include_path}\"")
-        await builder.write("}")
-        if function.padding != 0:
-            raise Dol2ZelException(
-                "function %s has padding" % function.identifier)
-            await builder.write("/* function padding */")
-        await builder.write("#pragma pop")
-        await builder.write("")
-
-        """
-        # for now always rebuild the asm
-        function_path = Path(include_path)
-        if True or not function_path.exists():
-            exe_sections = section.translation_unit.library.module.executable_sections 
-            async def callback():
-                #if function.addr != 0x802813DC:
-                #    return 
-
-                block_map = dict()
-                for block in function.blocks:
-                    block_map[block.addr] = block
-
-                async with AsyncBuilder(include_path) as include_builder:
-                    cppd = CPPDisassembler(include_builder, exe_sections, function, block_map, symbol_map, address_interval_tree)
-                    for block in function.blocks:
-                        await cppd.async_execute(block.addr, block.data, block.size)
-
-                #g.LOG.debug(f"generated asm: '{include_path}'")
-
-            return callback()
-        else:
-            #section.tu.function_skip_count += 1
-            return None
-        """
-        return None
-
-    def export_symbol_function_return(self, builder: Builder, section: Section, function: ReturnFunction, declspec: str):
-        builder.write("%svoid %s() {" % (declspec, function.name.label))
-        builder.write("\treturn;")
-        builder.write("}")
-
-    def export_symbol_function_return_integer(self, builder: Builder, section: Section, function: ReturnIntegerFunction, declspec: str):
-        builder.write("%sint %s() {" % (declspec, function.name.label))
-        builder.write("\treturn %i;" % function.integer)
-        builder.write("}")
-
-    def export_symbol_function_first_param(self, builder: Builder, section: Section, function: FirstParamFunction, declspec: str):
-        offset = function.load_offset
-        type = function.load_type
-        if function.kind != "load":
-            type = f"{type}*"
-        builder.write("%s%s %s(u8* param0) {" %
-                      (declspec, type, function.name.label))
-        if function.kind == "load":
-            builder.write(
-                "\treturn *(%s*)&param0[%i]; /* param0->field_0x%x */" % (type, offset, offset))
-        else:
-            builder.write(
-                "\treturn (%s)&param0[%i]; /* param0->field_0x%x */" % (type, offset, offset))
-        builder.write("}")
-
-    def export_symbol_function_global(self, builder: Builder, section: Section, function: GlobalFunction, symbol_map: Dict[int, Symbol], declspec: str):
-        type = function.load_type
-        symbol = function.load_symbol
-        assert symbol
-        assert not hasattr(symbol, "merged_parent")
-
-        if function.kind != "load":
-            type = f"{type}*"
-
-        label = symbol.name.label
-        builder.write("%s%s %s() {" % (declspec, type, function.name.label))
-        if function.kind == "load":
-            builder.write("\treturn *(%s*)&%s;" % (type, label))
-        else:
-            builder.write("\treturn (%s)&%s;" % (type, label))
-        builder.write("}")
-
-    async def export_symbol_function(self, builder: AsyncBuilder, section: Section, function: Function):
-        if function.size <= 0:
-            # Metrowerks doesn't support 0 instructions asm functions
-            return
-
-        #section.tu.function_count += 1
-        # TODO
-        # if function.name.demangled and not function.name.is_function:
-        #    demangled = function.name.demangled.to_str()
-        #    if demangled:
-        #        builder.write(f"// {demangled}")
-
-        task = None
-        declspec, _, _, _ = self.symbol_get_desc(section, function, False)
-        if type(function) != Function and not hasattr(function, 'decompile_fail') and not isinstance(function, SInitFunction):
-            if function.alignment:
-                await builder.write("#pragma push")
-                await builder.write("#pragma function_align %i" % function.alignment)
-
-            if isinstance(function, ReturnFunction):
-                self.export_symbol_function_return(
-                    builder, section, function, declspec)
-            elif isinstance(function, ReturnIntegerFunction):
-                self.export_symbol_function_return_integer(
-                    builder, section, function, declspec)
-            elif isinstance(function, FirstParamFunction):
-                self.export_symbol_function_first_param(
-                    builder, section, function, declspec)
-            elif isinstance(function, GlobalFunction):
-                task = self.export_symbol_function_global(
-                    builder, section, function, symbol_map, declspec)
-            else:
-                assert False
-
-            if function.alignment:
-                await builder.write("#pragma pop")
-            await builder.write("")
-        else:
-            task = await self.export_symbol_function_normal(builder, section, function, symbol_map, address_interval_tree, declspec)
-
-        return task
-
-    async def export_symbol_virtual_table(self, builder: AsyncBuilder, section: Section, vtable: VirtualTable):
-        count = len(vtable.functions) + vtable.padding // 4
-        await self.export_desc(builder, section, vtable, False)
-        await builder.write(f"void* const {vtable.identifier.label}[{count}] = {{")
-        index = 0
-        for addr, symbol in vtable.functions:
-            if addr == 0 and not symbol:
-                if index == 0:
-                    await builder.write("\tNULL, /* RTTI */")
-                else:
-                    await builder.write("\tNULL,")
-            else:
-                await builder.write(f"\t(void*){symbol.cpp_reference(vtable, addr)},")
-            index += 1
-        if vtable.padding > 0:
-            assert vtable.padding == len(vtable.padding_data)
-            assert vtable.padding % 4 == 0
-            await builder.write("\t/* padding */")
-            for i in range(vtable.padding // 4):
-                await builder.write("\tNULL,")
-        await builder.write("};")
-
-    async def export_symbol_reference_array(self, builder: AsyncBuilder, section: Section, sra: ReferenceArray):
-        const = ""
-        if section.name == ".rodata" or section.name == ".ctors" or section.name == ".dtors":
-            const = " const"
-
-        count = len(sra.references) + sra.padding // 4
-        await export_desc(builder, section, sra, False)
-        if count == 1:
-            addr = sra.references[0][0]
-            symbol = sra.references[0][1]
-            if addr == 0 and not symbol:
-                value = "NULL"
-            elif symbol:
-                value = symbol.cpp_reference(sra, addr)
-            else:
-                value = f"0x{addr:08X}"
-            await builder.write(f"void*{const} {sra.identifier.label} = (void*){value};")
-        else:
-            await builder.write(f"void*{const} {sra.identifier.label}[{count}] = {{")
-            for addr, symbol in sra.references:
-                if addr == 0 and not symbol:
-                    await builder.write("\tNULL,")
-                elif symbol:
-                    await builder.write(f"\t(void*){symbol.cpp_reference(sra, addr)},")
-                else:
-                    await builder.write(f"\t(void*)0x{addr:08X},")
-
-            if sra.padding > 0:
-                assert sra.padding == len(sra.padding_data)
-                assert sra.padding % 4 == 0
-                await builder.write("\t/* padding */")
-                for i in range(sra.padding // 4):
-                    await builder.write("\tNULL,")
-            await builder.write("};")
-
-    async def export_symbol_literal(self, builder: AsyncBuilder, section: Section, symbol: Literal):
-        if symbol.comment:
-            await builder.write(f"// {symbol.comment}")
-
-        await export_desc(builder, section, symbol, False)
-        if len(symbol.values) == 1:
-            await builder.write(f"{symbol.value_type} {symbol.identifier.label} = {symbol.values[0]};")
-        else:
-            await builder.write(f"{symbol.value_type} {symbol.identifier.label}[{len(symbol.values)}] = {{")
-            for values in util.chunks(symbol.values, 8):
-                await builder.write("\t" + ", ".join([f"{x}" for x in values]))
-            await builder.write(f"}};")
-
-        if symbol.padding > 0:
-            await builder.write(f"/* padding {symbol.padding} bytes */")
-
-    async def export_symbol_init_data(self, builder: AsyncBuilder, section: Section, init_data: InitData):
-        count = len(init_data.data) + init_data.padding
-        if count <= 0:
-            return
-
-        await export_desc(builder, section, init_data, False)
-        await builder.write(f"u8 %s[%i] = {{" % (init_data.identifier.label, count))
-        for chunk in util.chunks(init_data.data, 16):
-            hex_data = ", ".join(["0x%02X" % x for x in chunk])
-            await builder.write("\t%s," % hex_data)
-        if init_data.padding > 0:
-            assert init_data.padding == len(init_data.padding_data)
-            await builder.write("\t/* padding */")
-            for chunk in util.chunks(init_data.padding_data, 16):
-                hex_data = ", ".join(["0x%02X" % x for x in chunk])
-                await builder.write("\t%s," % hex_data)
-        await builder.write("};")
-
-    async def export_symbol_init_struct(self, builder: AsyncBuilder, section: Section, symbol: InitStruct):
-        count = 0
-        for field in symbol.members:
-            count += len(field.data)
-        count += len(symbol.padding_data)
-
-        await export_desc(builder, section, symbol, False)
-        await builder.write(f"u8 %s[%i] = {{" % (symbol.identifier.label, count))
-        for field in symbol.members:
-            await builder.write("\t/* %s */" % field.identifier.label)
-            for chunk in util.chunks(field.data, 16):
-                hex_data = ", ".join(["0x%02X" % x for x in chunk])
-                await builder.write("\t%s," % hex_data)
-
-        if symbol.padding > 0:
-            assert symbol.padding == len(symbol.padding_data)
-            await builder.write("\t/* padding */")
-            for chunk in util.chunks(symbol.padding_data, 16):
-                hex_data = ", ".join(["0x%02X" % x for x in chunk])
-                await builder.write("\t%s," % hex_data)
-        await builder.write("};")
-
-    async def export_symbol_zero_data(self, builder: AsyncBuilder, section: Section, zero: ZeroData):
-        count = zero.size + zero.padding
-        if count <= 0:
-            return
-
-        pad_str = ""
-        if zero.padding > 0:
-            pad_str = " + %i /* padding */" % zero.padding
-
-        await export_desc(builder, section, zero, False)
-        await builder.write("u8 %s[%i%s];" % (zero.identifier.label, zero.size, pad_str))
-
-    async def export_symbol_zero_struct(self, builder: AsyncBuilder, section: Section, symbol: ZeroStruct):
-        count = 0
-        for field in symbol.members:
-            count += field.size
-
-        pad_str = ""
-        if symbol.padding > 0:
-            pad_str = " + %i /* padding */" % symbol.padding
-
-        await export_desc(builder, section, symbol, False)
-        await builder.write(f"u8 %s[%i%s];" % (symbol.identifier.label, count, pad_str))
-        for field in symbol.members:
-            await builder.write("/* %08X %04X %s */" % (field.addr, field.size, field.identifier.label))
-
-    def string_to_cstr(data):
-        return "".join(data)
-
-    def escape_char(v):
-        if v == "\n":
-            return "\\n"
-        elif v == "\t":
-            return "\\t"
-        elif v == "\v":
-            return "\\v"
-        elif v == "\b":
-            return "\\b"
-        elif v == "\r":
-            return "\\r"
-        elif v == "\f":
-            return "\\f"
-        elif v == "\a":
-            return "\\a"
-        elif v == "\\":
-            return "\\\\"
-        elif v == "\"":
-            return "\\\""
-        elif ord(v) < 32:
-            return "\"\"\\x%02X\"\"" % ord(v)
-        else:
-            return v
-
-    def escape_char_hard(v):
-        return "\"\"\\x%02X\"\"" % v
-
-    def escape_string(data):
-        return [escape_char(x) for x in data]
-
-    def escape_char_hex(v):
-        if v == 0:
-            return "\\0"
-        return "\\x%02X" % v
-
-    def escape_full_string(data):
-        return [escape_char_hex(x) for x in data]
-
-    async def export_symbol_string_output(builder, label, data):
-        if len(data) < 32:
-            await builder.write(f"char* const {label} = \"{string_to_cstr(data)}\";")
-        else:
-            await builder.write(f"char* const {label} = ")
-            data_chunks = util.chunks(data, 48)
-
-            lines = []
-            for chunk in data_chunks:
-                lines += [f"    \"{string_to_cstr(chunk)}\""]
-            lines[-1] += ";"
-
-            for line in lines:
-                await builder.write(line)
-
-    async def export_symbol_string(self, builder: AsyncBuilder, section: Section, symbol: String, dead_strip: bool):
-        sjis = symbol.decoded_string.encode("shift_jisx0213")
-        if 0x5c in sjis:
-            await builder.write("// MWCC ignores mapping of some japanese characters using the ")
-            await builder.write("// byte 0x5C (ASCII '\\'). This is why this string is hex-encoded.")
-            data = escape_full_string(sjis)
-        else:
-            data = escape_string(symbol.decoded_string)
-
-        await export_desc(builder, section, symbol, False, dead=dead_strip)
-        await export_symbol_string_output(builder, symbol.identifier.label, data)
-        if symbol.padding > 0:
-            assert len(symbol.padding_data) == string.padding
-            assert symbol.padding_data[-1] == 0
-            data = escape_full_string(symbol.padding_data[:-1])
-            await builder.write("/* padding */")
-            await export_desc(builder, section, symbol, False, dead=dead_strip)
-            await export_symbol_string_output(builder, f"pad_{symbol.end:08X}", data)
-
-    async def export_symbol_string_base(self, builder: AsyncBuilder, section: Section, symbol: StringBase):
-        await builder.write("#pragma push")
-        await builder.write("#pragma force_active on")
-        await builder.write("#pragma section \".dead\"")
-        for string in symbol.strings:
-            await export_symbol_string(builder, section, string, True)
-
-        if symbol.padding > 0:
-            assert len(symbol.padding_data) == symbol.padding
-            assert symbol.padding_data[-1] == 0
-            data = escape_full_string(symbol.padding_data[:-1])
-            await builder.write("/* @stringBase0 padding */")
-            await export_desc(builder, section, symbol.strings[0], False, dead=True)
-            await export_symbol_string_output(builder, f"pad_{symbol.end:08X}", data)
-        await builder.write("#pragma pop")
-
-    async def export_symbol(self, builder: AsyncBuilder, section: Section, symbol: Symbol):
-        await export_symbol_header(builder, section, symbol)
-
-        if symbol.identifier.label == "_rom_copy_info" or symbol.identifier.label == "_bss_init_info":
-            await builder.write("/* generated by the linker */")
-            return None
-
-        if isinstance(symbol, Function):
-            return await self.export_symbol_function(builder, section, symbol)
-        elif isinstance(symbol, VirtualTable):
-            await self.export_symbol_virtual_table(builder, section, symbol)
-        elif isinstance(symbol, ReferenceArray):
-            await self.export_symbol_reference_array(builder, section, symbol)
-        elif isinstance(symbol, Literal):
-            await self.export_symbol_literal(builder, section, symbol)
-        elif isinstance(symbol, StringBase):
-            await self.export_symbol_string_base(builder, section, symbol)
-        elif isinstance(symbol, InitStruct):
-            await self.export_symbol_init_struct(builder, section, symbol)
-        elif isinstance(symbol, InitData):
-            await self.export_symbol_init_data(builder, section, symbol)
-        elif isinstance(symbol, ZeroStruct):
-            await self.export_symbol_zero_struct(builder, section, symbol)
-        elif isinstance(symbol, ZeroData):
-            await self.export_symbol_zero_data(builder, section, symbol)
-        else:
-            g.LOG.warning("cannot export unknown symbol type '%s'" %
-                          (type(symbol).__name__))
-
-        return None
 
     async def export_section_ctors(self, builder: AsyncBuilder, section: Section):
         await builder.write("#pragma section \".ctors$10\"")
@@ -1085,7 +663,7 @@ class CPPExporter:
         return struct
 
     def build_forward_type(self, forward_types, types, parent_struct, arg, indirect: bool = False):
-        if data_types.is_builtin(arg):
+        if not arg or arg.is_builtin:
             return
 
         if isinstance(arg, ConstType):
@@ -1276,9 +854,7 @@ class CPPExporter:
         return child, name
 
     def type_get_dependencies(self, deps, type):
-        if not type:
-            return
-        if data_types.is_builtin(type):
+        if not type or type.is_builtin:
             return
 
         if isinstance(type, ArrayType):

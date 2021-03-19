@@ -121,8 +121,8 @@ extern "C" void isDrawDisp__19dMenuFmapIconDisp_cFv(); // 1
 extern "C" void __dt__26fmpTresTypeGroupDataList_cFv(); // 1
 extern "C" void __dt__22fmpTresTypeGroupData_cFv(); // 1
 extern "C" void __ct__26fmpTresTypeGroupDataList_cFv(); // 1
-SECTION_DATA extern void*d_map_d_map_path_fmap__lit_4467[15];
-SECTION_DATA extern void*const __vt__19dMenuFmapIconDisp_c[3];
+SECTION_DATA extern void* d_map_d_map_path_fmap__lit_4467[15];
+SECTION_DATA extern void* const __vt__19dMenuFmapIconDisp_c[3];
 SECTION_SDATA2 extern u8 d_map_d_map_path_fmap__lit_3894[4 + 4 /* padding */];
 
 // 
@@ -187,7 +187,7 @@ SECTION_SDATA extern u32 __float_max;
 // Declarations:
 // 
 
-/* 8003D790-8003D818 0088+00 rc=1 efc=0 .text      addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s */
+/* 8003D790-8003D818 0088+00 rc=0 efc=0 .text      addTypeGroupData__26fmpTresTypeGroupDataList_cFUcPCQ27dTres_c6data_s */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ asm void fmpTresTypeGroupDataList_c::addTypeGroupData(u8 field_0, dTres_c::data_
 #pragma pop
 
 
-/* 8003D818-8003D868 0050+00 rc=2 efc=1 .text      isArrival__22dMenu_Fmap_room_data_cFv                        */
+/* 8003D818-8003D868 0050+00 rc=0 efc=0 .text      isArrival__22dMenu_Fmap_room_data_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +209,7 @@ asm void dMenu_Fmap_room_data_c::isArrival() {
 #pragma pop
 
 
-/* 8003D868-8003D92C 00C4+00 rc=1 efc=0 .text      buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii             */
+/* 8003D868-8003D92C 00C4+00 rc=0 efc=0 .text      buildTresTypeGroup__22dMenu_Fmap_room_data_cFiii             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -220,7 +220,7 @@ asm void dMenu_Fmap_room_data_c::buildTresTypeGroup(int field_0, int field_1, in
 #pragma pop
 
 
-/* 8003D92C-8003D95C 0030+00 rc=1 efc=0 .text      buildFmapRoomData__22dMenu_Fmap_room_data_cFiiffff           */
+/* 8003D92C-8003D95C 0030+00 rc=0 efc=0 .text      buildFmapRoomData__22dMenu_Fmap_room_data_cFiiffff           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -231,7 +231,7 @@ asm void dMenu_Fmap_room_data_c::buildFmapRoomData(int field_0, int field_1, f32
 #pragma pop
 
 
-/* 8003D95C-8003D9D8 007C+00 rc=1 efc=0 .text      isArrival__23dMenu_Fmap_stage_data_cFv                       */
+/* 8003D95C-8003D9D8 007C+00 rc=0 efc=0 .text      isArrival__23dMenu_Fmap_stage_data_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -243,14 +243,14 @@ asm void dMenu_Fmap_stage_data_c::isArrival() {
 
 
 /* ############################################################################################## */
-/* 80451E20-80451E28 0004+04 rc=5 efc=0 .sdata2    @3894                                                        */
-u8 d_map_d_map_path_fmap__lit_3894[8] = {
+/* 80451E20-80451E28 0004+04 rc=0 efc=0 .sdata2    @3894                                                        */
+u8 d_map_d_map_path_fmap__lit_3894[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8003D9D8-8003DB48 0170+00 rc=1 efc=0 .text      buildFmapStageData__23dMenu_Fmap_stage_data_cFiff            */
+/* 8003D9D8-8003DB48 0170+00 rc=0 efc=0 .text      buildFmapStageData__23dMenu_Fmap_stage_data_cFiff            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -261,7 +261,7 @@ asm void dMenu_Fmap_stage_data_c::buildFmapStageData(int field_0, f32 field_1, f
 #pragma pop
 
 
-/* 8003DB48-8003DB70 0028+00 rc=1 efc=1 .text      getMenuFmapStageData__24dMenu_Fmap_region_data_cFi           */
+/* 8003DB48-8003DB70 0028+00 rc=0 efc=0 .text      getMenuFmapStageData__24dMenu_Fmap_region_data_cFi           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -272,7 +272,7 @@ asm void dMenu_Fmap_region_data_c::getMenuFmapStageData(int field_0) {
 #pragma pop
 
 
-/* 8003DB70-8003DEE0 0370+00 rc=1 efc=1 .text      getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi */
+/* 8003DB70-8003DEE0 0370+00 rc=0 efc=0 .text      getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -283,7 +283,7 @@ asm void dMenu_Fmap_region_data_c::getPointStagePathInnerNo(f32 field_0, f32 fie
 #pragma pop
 
 
-/* 8003DEE0-8003E028 0148+00 rc=1 efc=1 .text      buildFmapRegionData__24dMenu_Fmap_region_data_cFi            */
+/* 8003DEE0-8003E028 0148+00 rc=0 efc=0 .text      buildFmapRegionData__24dMenu_Fmap_region_data_cFi            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -294,7 +294,7 @@ asm void dMenu_Fmap_region_data_c::buildFmapRegionData(int field_0) {
 #pragma pop
 
 
-/* 8003E028-8003E04C 0024+00 rc=1 efc=1 .text      create__23dMenu_Fmap_world_data_cFP24dMenu_Fmap_region_data_c */
+/* 8003E028-8003E04C 0024+00 rc=0 efc=0 .text      create__23dMenu_Fmap_world_data_cFP24dMenu_Fmap_region_data_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -305,7 +305,7 @@ asm void dMenu_Fmap_world_data_c::create(dMenu_Fmap_region_data_c* field_0) {
 #pragma pop
 
 
-/* 8003E04C-8003E114 00C8+00 rc=1 efc=0 .text      buildFmapWorldData__23dMenu_Fmap_world_data_cFv              */
+/* 8003E04C-8003E114 00C8+00 rc=0 efc=0 .text      buildFmapWorldData__23dMenu_Fmap_world_data_cFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -316,7 +316,7 @@ asm void dMenu_Fmap_world_data_c::buildFmapWorldData() {
 #pragma pop
 
 
-/* 8003E114-8003E1C0 00AC+00 rc=3 efc=3 .text      init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii */
+/* 8003E114-8003E1C0 00AC+00 rc=0 efc=0 .text      init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -327,7 +327,7 @@ asm void dMenuFmapIconPointer_c::init(dMenu_Fmap_region_data_c* field_0, dMenu_F
 #pragma pop
 
 
-/* 8003E1C0-8003E2BC 00FC+00 rc=2 efc=0 .text      getFirstData__22dMenuFmapIconPointer_cFv                     */
+/* 8003E1C0-8003E2BC 00FC+00 rc=0 efc=0 .text      getFirstData__22dMenuFmapIconPointer_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -338,7 +338,7 @@ asm void dMenuFmapIconPointer_c::getFirstData() {
 #pragma pop
 
 
-/* 8003E2BC-8003E350 0094+00 rc=1 efc=0 .text      getData__22dMenuFmapIconPointer_cFv                          */
+/* 8003E2BC-8003E350 0094+00 rc=0 efc=0 .text      getData__22dMenuFmapIconPointer_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -349,7 +349,7 @@ asm void dMenuFmapIconPointer_c::getData() {
 #pragma pop
 
 
-/* 8003E350-8003E37C 002C+00 rc=2 efc=0 .text      getFirstRoomData__22dMenuFmapIconPointer_cFv                 */
+/* 8003E350-8003E37C 002C+00 rc=0 efc=0 .text      getFirstRoomData__22dMenuFmapIconPointer_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -360,7 +360,7 @@ asm void dMenuFmapIconPointer_c::getFirstRoomData() {
 #pragma pop
 
 
-/* 8003E37C-8003E3A4 0028+00 rc=1 efc=0 .text      getNextRoomData__22dMenuFmapIconPointer_cFv                  */
+/* 8003E37C-8003E3A4 0028+00 rc=0 efc=0 .text      getNextRoomData__22dMenuFmapIconPointer_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -371,7 +371,7 @@ asm void dMenuFmapIconPointer_c::getNextRoomData() {
 #pragma pop
 
 
-/* 8003E3A4-8003E3D8 0034+00 rc=1 efc=0 .text      getNextStageData__22dMenuFmapIconPointer_cFv                 */
+/* 8003E3A4-8003E3D8 0034+00 rc=0 efc=0 .text      getNextStageData__22dMenuFmapIconPointer_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -382,7 +382,7 @@ asm void dMenuFmapIconPointer_c::getNextStageData() {
 #pragma pop
 
 
-/* 8003E3D8-8003E490 00B8+00 rc=1 efc=0 .text      getNextData__22dMenuFmapIconPointer_cFv                      */
+/* 8003E3D8-8003E490 00B8+00 rc=0 efc=0 .text      getNextData__22dMenuFmapIconPointer_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -393,7 +393,7 @@ asm void dMenuFmapIconPointer_c::getNextData() {
 #pragma pop
 
 
-/* 8003E490-8003E510 0080+00 rc=4 efc=3 .text      nextData__22dMenuFmapIconPointer_cFv                         */
+/* 8003E490-8003E510 0080+00 rc=0 efc=0 .text      nextData__22dMenuFmapIconPointer_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -404,7 +404,7 @@ asm void dMenuFmapIconPointer_c::nextData() {
 #pragma pop
 
 
-/* 8003E510-8003E578 0068+00 rc=3 efc=3 .text      getValidData__22dMenuFmapIconPointer_cFv                     */
+/* 8003E510-8003E578 0068+00 rc=0 efc=0 .text      getValidData__22dMenuFmapIconPointer_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -415,7 +415,7 @@ asm void dMenuFmapIconPointer_c::getValidData() {
 #pragma pop
 
 
-/* 8003E578-8003E6E8 0170+00 rc=3 efc=3 .text      getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s */
+/* 8003E578-8003E6E8 0170+00 rc=0 efc=0 .text      getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -427,7 +427,7 @@ asm void dMenuFmapIconDisp_c::getPosition(int* field_0, int* field_1, f32* field
 
 
 /* ############################################################################################## */
-/* 803A7D38-803A7D74 003C+00 rc=1 efc=0 .data      @4467                                                        */
+/* 803A7D38-803A7D74 003C+00 rc=0 efc=0 .data      @4467                                                        */
 void* d_map_d_map_path_fmap__lit_4467[15] = {
 	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
 	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0xA8),
@@ -446,7 +446,7 @@ void* d_map_d_map_path_fmap__lit_4467[15] = {
 	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x388),
 };
 
-/* 8003E6E8-8003EB10 0428+00 rc=5 efc=3 .text      isDrawDisp__19dMenuFmapIconDisp_cFv                          */
+/* 8003E6E8-8003EB10 0428+00 rc=0 efc=0 .text      isDrawDisp__19dMenuFmapIconDisp_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -457,7 +457,7 @@ asm void dMenuFmapIconDisp_c::isDrawDisp() {
 #pragma pop
 
 
-/* 8003EB10-8003EB70 0060+00 rc=2 efc=1 .text      __dt__26fmpTresTypeGroupDataList_cFv                         */
+/* 8003EB10-8003EB70 0060+00 rc=0 efc=0 .text      __dt__26fmpTresTypeGroupDataList_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -468,7 +468,7 @@ asm fmpTresTypeGroupDataList_c::~fmpTresTypeGroupDataList_c() {
 #pragma pop
 
 
-/* 8003EB70-8003EC90 0120+00 rc=1 efc=0 .text      __dt__22fmpTresTypeGroupData_cFv                             */
+/* 8003EB70-8003EC90 0120+00 rc=0 efc=0 .text      __dt__22fmpTresTypeGroupData_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -479,7 +479,7 @@ asm fmpTresTypeGroupData_c::~fmpTresTypeGroupData_c() {
 #pragma pop
 
 
-/* 8003EC90-8003ECA0 0010+00 rc=1 efc=0 .text      __ct__26fmpTresTypeGroupDataList_cFv                         */
+/* 8003EC90-8003ECA0 0010+00 rc=0 efc=0 .text      __ct__26fmpTresTypeGroupDataList_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -491,10 +491,10 @@ asm fmpTresTypeGroupDataList_c::fmpTresTypeGroupDataList_c() {
 
 
 /* ############################################################################################## */
-/* 803A7D74-803A7D80 000C+00 rc=3 efc=3 .data      __vt__19dMenuFmapIconDisp_c                                  */
+/* 803A7D74-803A7D80 000C+00 rc=0 efc=0 .data      __vt__19dMenuFmapIconDisp_c                                  */
 void* const __vt__19dMenuFmapIconDisp_c[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)isDrawDisp__19dMenuFmapIconDisp_cFv,
 };
 

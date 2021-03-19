@@ -88,8 +88,8 @@ extern "C" void fukiTrans__14dMsgScrnBase_cFff(); // 1
 extern "C" void fukiAlpha__14dMsgScrnBase_cFf(); // 1
 extern "C" void fontAlpha__14dMsgScrnBase_cFf(); // 1
 extern "C" void isTalkNow__14dMsgScrnBase_cFv(); // 1
-SECTION_DATA extern void*msg_scrn_d_msg_scrn_base__lit_3949[20];
-SECTION_DATA extern void*const __vt__14dMsgScrnBase_c[22];
+SECTION_DATA extern void* msg_scrn_d_msg_scrn_base__lit_3949[20];
+SECTION_DATA extern void* const __vt__14dMsgScrnBase_c[22];
 SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_base__lit_3820[4];
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_base__lit_3821;
 
@@ -129,7 +129,7 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void strcpy(); // 1
-SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
+SECTION_DATA extern void* const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 
@@ -137,7 +137,7 @@ SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 803C0D08-803C0D58 0050+00 rc=1 efc=0 .data      @3949                                                        */
+/* 803C0D08-803C0D58 0050+00 rc=0 efc=0 .data      @3949                                                        */
 void* msg_scrn_d_msg_scrn_base__lit_3949[20] = {
 	(void*)(((char*)isTalkNow__14dMsgScrnBase_cFv)+0x38),
 	(void*)(((char*)isTalkNow__14dMsgScrnBase_cFv)+0x38),
@@ -161,10 +161,10 @@ void* msg_scrn_d_msg_scrn_base__lit_3949[20] = {
 	(void*)(((char*)isTalkNow__14dMsgScrnBase_cFv)+0x38),
 };
 
-/* 803C0D58-803C0DB0 0058+00 rc=2 efc=0 .data      __vt__14dMsgScrnBase_c                                       */
+/* 803C0D58-803C0DB0 0058+00 rc=0 efc=0 .data      __vt__14dMsgScrnBase_c                                       */
 void* const __vt__14dMsgScrnBase_c[22] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__14dMsgScrnBase_cFv,
 	(void*)__dt__14dMsgScrnBase_cFv,
 	(void*)exec__14dMsgScrnBase_cFv,
@@ -187,7 +187,7 @@ void* const __vt__14dMsgScrnBase_c[22] = {
 	(void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
 
-/* 8023C0DC-8023C124 0048+00 rc=9 efc=9 .text      __ct__14dMsgScrnBase_cFv                                     */
+/* 8023C0DC-8023C124 0048+00 rc=0 efc=0 .text      __ct__14dMsgScrnBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ asm dMsgScrnBase_c::dMsgScrnBase_c() {
 #pragma pop
 
 
-/* 8023C124-8023C16C 0048+00 rc=10 efc=9 .text      __dt__14dMsgScrnBase_cFv                                     */
+/* 8023C124-8023C16C 0048+00 rc=0 efc=0 .text      __dt__14dMsgScrnBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,15 +210,15 @@ asm dMsgScrnBase_c::~dMsgScrnBase_c() {
 
 
 /* ############################################################################################## */
-/* 80454BA8-80454BAC 0004+00 rc=3 efc=0 .sdata2    @3820                                                        */
+/* 80454BA8-80454BAC 0004+00 rc=0 efc=0 .sdata2    @3820                                                        */
 u8 msg_scrn_d_msg_scrn_base__lit_3820[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454BAC-80454BB0 0004+00 rc=2 efc=0 .sdata2    @3821                                                        */
+/* 80454BAC-80454BB0 0004+00 rc=0 efc=0 .sdata2    @3821                                                        */
 f32 msg_scrn_d_msg_scrn_base__lit_3821 = 1.0f;
 
-/* 8023C16C-8023C234 00C8+00 rc=10 efc=9 .text      init__14dMsgScrnBase_cFv                                     */
+/* 8023C16C-8023C234 00C8+00 rc=0 efc=0 .text      init__14dMsgScrnBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,7 +229,7 @@ asm void dMsgScrnBase_c::init() {
 #pragma pop
 
 
-/* 8023C234-8023C274 0040+00 rc=10 efc=9 .text      multiDraw__14dMsgScrnBase_cFv                                */
+/* 8023C234-8023C274 0040+00 rc=0 efc=0 .text      multiDraw__14dMsgScrnBase_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,7 +240,7 @@ asm void dMsgScrnBase_c::multiDraw() {
 #pragma pop
 
 
-/* 8023C274-8023C300 008C+00 rc=8 efc=7 .text      draw__14dMsgScrnBase_cFv                                     */
+/* 8023C274-8023C300 008C+00 rc=0 efc=0 .text      draw__14dMsgScrnBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -251,7 +251,7 @@ asm void dMsgScrnBase_c::draw() {
 #pragma pop
 
 
-/* 8023C300-8023C32C 002C+00 rc=3 efc=2 .text      drawSelf__14dMsgScrnBase_cFv                                 */
+/* 8023C300-8023C32C 002C+00 rc=0 efc=0 .text      drawSelf__14dMsgScrnBase_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -262,7 +262,7 @@ asm void dMsgScrnBase_c::drawSelf() {
 #pragma pop
 
 
-/* 8023C32C-8023C360 0034+00 rc=7 efc=6 .text      drawOutFont__14dMsgScrnBase_cFfff                            */
+/* 8023C32C-8023C360 0034+00 rc=0 efc=0 .text      drawOutFont__14dMsgScrnBase_cFfff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,7 +273,7 @@ asm void dMsgScrnBase_c::drawOutFont(f32 field_0, f32 field_1, f32 field_2) {
 #pragma pop
 
 
-/* 8023C360-8023C3EC 008C+00 rc=2 efc=2 .text      setString__14dMsgScrnBase_cFPcPc                             */
+/* 8023C360-8023C3EC 008C+00 rc=0 efc=0 .text      setString__14dMsgScrnBase_cFPcPc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -284,7 +284,7 @@ asm void dMsgScrnBase_c::setString(char* field_0, char* field_1) {
 #pragma pop
 
 
-/* 8023C3EC-8023C458 006C+00 rc=2 efc=2 .text      setRubyString__14dMsgScrnBase_cFPc                           */
+/* 8023C3EC-8023C458 006C+00 rc=0 efc=0 .text      setRubyString__14dMsgScrnBase_cFPc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -295,7 +295,7 @@ asm void dMsgScrnBase_c::setRubyString(char* field_0) {
 #pragma pop
 
 
-/* 8023C458-8023C480 0028+00 rc=1 efc=0 .text      fukiScale__14dMsgScrnBase_cFf                                */
+/* 8023C458-8023C480 0028+00 rc=0 efc=0 .text      fukiScale__14dMsgScrnBase_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -306,7 +306,7 @@ asm void dMsgScrnBase_c::fukiScale(f32 field_0) {
 #pragma pop
 
 
-/* 8023C480-8023C4A4 0024+00 rc=1 efc=0 .text      fukiTrans__14dMsgScrnBase_cFff                               */
+/* 8023C480-8023C4A4 0024+00 rc=0 efc=0 .text      fukiTrans__14dMsgScrnBase_cFff                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,7 +317,7 @@ asm void dMsgScrnBase_c::fukiTrans(f32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 8023C4A4-8023C4F4 0050+00 rc=1 efc=0 .text      fukiAlpha__14dMsgScrnBase_cFf                                */
+/* 8023C4A4-8023C4F4 0050+00 rc=0 efc=0 .text      fukiAlpha__14dMsgScrnBase_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -328,7 +328,7 @@ asm void dMsgScrnBase_c::fukiAlpha(f32 field_0) {
 #pragma pop
 
 
-/* 8023C4F4-8023C574 0080+00 rc=6 efc=5 .text      fontAlpha__14dMsgScrnBase_cFf                                */
+/* 8023C4F4-8023C574 0080+00 rc=0 efc=0 .text      fontAlpha__14dMsgScrnBase_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,7 +339,7 @@ asm void dMsgScrnBase_c::fontAlpha(f32 field_0) {
 #pragma pop
 
 
-/* 8023C574-8023C5C8 0054+00 rc=9 efc=8 .text      isTalkNow__14dMsgScrnBase_cFv                                */
+/* 8023C574-8023C5C8 0054+00 rc=0 efc=0 .text      isTalkNow__14dMsgScrnBase_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

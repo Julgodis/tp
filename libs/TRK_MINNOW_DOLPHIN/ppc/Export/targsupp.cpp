@@ -29,7 +29,7 @@ extern "C" void TRKPositionFile(); // 1
 // Declarations:
 // 
 
-/* 803711D0-803711D8 0008+00 rc=2 efc=2 .text      TRKAccessFile                                                */
+/* 803711D0-803711D8 0008+00 rc=0 efc=0 .text      TRKAccessFile                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

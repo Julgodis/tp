@@ -67,7 +67,7 @@ SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 // Declarations:
 // 
 
-/* 800517B0-800517EC 003C+00 rc=7 efc=7 .text      dPath_GetPnt__FPC5dPathi                                     */
+/* 800517B0-800517EC 003C+00 rc=0 efc=0 .text      dPath_GetPnt__FPC5dPathi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -78,7 +78,7 @@ asm void dPath_GetPnt(dPath const* field_0, int field_1) {
 #pragma pop
 
 
-/* 800517EC-80051898 00AC+00 rc=13 efc=12 .text      dPath_GetRoomPath__Fii                                       */
+/* 800517EC-80051898 00AC+00 rc=0 efc=0 .text      dPath_GetRoomPath__Fii                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -89,7 +89,7 @@ asm void dPath_GetRoomPath(int field_0, int field_1) {
 #pragma pop
 
 
-/* 80051898-8005195C 00C4+00 rc=1 efc=1 .text      dPath_GetNextRoomPath__FPC5dPathi                            */
+/* 80051898-8005195C 00C4+00 rc=0 efc=0 .text      dPath_GetNextRoomPath__FPC5dPathi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,14 +101,14 @@ asm void dPath_GetNextRoomPath(dPath const* field_0, int field_1) {
 
 
 /* ############################################################################################## */
-/* 80452000-80452008 0004+04 rc=1 efc=0 .sdata2    @3685                                                        */
-u8 d_d_path__lit_3685[8] = {
+/* 80452000-80452008 0004+04 rc=0 efc=0 .sdata2    @3685                                                        */
+u8 d_d_path__lit_3685[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8005195C-80051AC0 0164+00 rc=1 efc=1 .text      dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi         */
+/* 8005195C-80051AC0 0164+00 rc=0 efc=0 .text      dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

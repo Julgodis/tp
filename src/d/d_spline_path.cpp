@@ -57,10 +57,10 @@ extern "C" void PSVECAdd(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80452BC8-80452BD0 0008+00 rc=4 efc=0 .sdata2    @3632                                                        */
+/* 80452BC8-80452BD0 0008+00 rc=0 efc=0 .sdata2    @3632                                                        */
 f64 lit_3632 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80097878-80097904 008C+00 rc=7 efc=7 .text      Init__14d2DBSplinePathFll                                    */
+/* 80097878-80097904 008C+00 rc=0 efc=0 .text      Init__14d2DBSplinePathFll                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,13 +72,13 @@ asm void d2DBSplinePath::Init(s32 field_0, s32 field_1) {
 
 
 /* ############################################################################################## */
-/* 80452BD0-80452BD4 0004+00 rc=3 efc=0 .sdata2    @3684                                                        */
+/* 80452BD0-80452BD4 0004+00 rc=0 efc=0 .sdata2    @3684                                                        */
 f32 d_d_spline_path__lit_3684 = 1.0f;
 
-/* 80452BD4-80452BD8 0004+00 rc=3 efc=0 .sdata2    @3685                                                        */
+/* 80452BD4-80452BD8 0004+00 rc=0 efc=0 .sdata2    @3685                                                        */
 f32 d_d_spline_path__lit_3685 = 0.5f;
 
-/* 80097904-80097A6C 0168+00 rc=5 efc=5 .text      Step__14d2DBSplinePathFv                                     */
+/* 80097904-80097A6C 0168+00 rc=0 efc=0 .text      Step__14d2DBSplinePathFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -89,7 +89,7 @@ asm void d2DBSplinePath::Step() {
 #pragma pop
 
 
-/* 80097A6C-80097B20 00B4+00 rc=1 efc=1 .text      Calc__14d2DBSplinePathFP4cXyz                                */
+/* 80097A6C-80097B20 00B4+00 rc=0 efc=0 .text      Calc__14d2DBSplinePathFP4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,7 +100,7 @@ asm void d2DBSplinePath::Calc(cXyz* field_0) {
 #pragma pop
 
 
-/* 80097B20-80097B68 0048+00 rc=5 efc=5 .text      Calc__14d2DBSplinePathFPf                                    */
+/* 80097B20-80097B68 0048+00 rc=0 efc=0 .text      Calc__14d2DBSplinePathFPf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -111,7 +111,7 @@ asm void d2DBSplinePath::Calc(f32* field_0) {
 #pragma pop
 
 
-/* 80097B68-80097C5C 00F4+00 rc=1 efc=1 .text      Spot__14d2DBSplinePathFPff                                   */
+/* 80097B68-80097C5C 00F4+00 rc=0 efc=0 .text      Spot__14d2DBSplinePathFPff                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

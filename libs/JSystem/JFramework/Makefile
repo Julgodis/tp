@@ -19,11 +19,14 @@ LIBJFRAMEWORK_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJFramework.a: $(LIBJFRAMEWORK_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJFramework.a
 	@echo $(LIBJFRAMEWORK_A_O_FILES) > build/LIBJFRAMEWORK_A_ofiles
-	$(LD) -xm l $(LIBJFRAMEWORK_A_LDFLAGS) -o $(BUILD_DIR)/libJFramework.a @build/LIBJFRAMEWORK_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJFramework.a
+	@$(LD) -xm l $(LIBJFRAMEWORK_A_LDFLAGS) -o $(BUILD_DIR)/libJFramework.a @build/LIBJFRAMEWORK_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJFramework.a
 
 $(BUILD_DIR)/libs/JSystem/JFramework/%.o: libs/JSystem/JFramework/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJFRAMEWORK_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJFRAMEWORK_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

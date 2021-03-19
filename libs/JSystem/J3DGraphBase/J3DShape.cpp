@@ -52,16 +52,16 @@ struct J3DShapeDraw {
 // Forward References:
 // 
 
-static void J3DLoadCPCmd(u8, u32); // 2
-static void J3DLoadArrayBasePtr(_GXAttr, void*); // 2
+void J3DLoadCPCmd(u8, u32); // 2
+void J3DLoadArrayBasePtr(_GXAttr, void*); // 2
 
 extern "C" void initialize__8J3DShapeFv(); // 1
 extern "C" void addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl(); // 1
 extern "C" void addTexMtxIndexInVcd__8J3DShapeF7_GXAttr(); // 1
 extern "C" void calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f(); // 1
 extern "C" void countBumpMtxNum__8J3DShapeCFv(); // 1
-extern "C" static void J3DLoadCPCmd__FUcUl(); // 1
-extern "C" static void J3DLoadArrayBasePtr__F7_GXAttrPv(); // 1
+extern "C" void J3DLoadCPCmd__FUcUl(); // 1
+extern "C" void J3DLoadArrayBasePtr__F7_GXAttrPv(); // 1
 extern "C" void loadVtxArray__8J3DShapeCFv(); // 1
 extern "C" void isSameVcdVatCmd__8J3DShapeFP8J3DShape(); // 1
 extern "C" void makeVtxArrayCmd__8J3DShapeFv(); // 1
@@ -73,7 +73,7 @@ extern "C" void draw__8J3DShapeCFv(); // 1
 extern "C" void simpleDraw__8J3DShapeCFv(); // 1
 extern "C" void simpleDrawCache__8J3DShapeCFv(); // 1
 SECTION_RODATA extern const u8 J3DShape__lit_697[16];
-SECTION_DATA extern void*const __vt__8J3DShape[6];
+SECTION_DATA extern void* const __vt__8J3DShape[6];
 SECTION_SBSS extern u8 data_804515C8[4];
 SECTION_SBSS extern u8 data_804515CC[4];
 SECTION_SBSS extern u8 sOldVcdVatCmd__8J3DShape[4];
@@ -136,7 +136,6 @@ SECTION_BSS extern u8 j3dSys[284];
 SECTION_SBSS extern u8 j3dDefaultViewNo[4 + 4 /* padding */];
 SECTION_SBSS extern u8 sCurrentPipeline__11J3DShapeMtx[4];
 SECTION_SBSS extern u8 sCurrentScaleFlag__11J3DShapeMtx[4];
-SECTION_SBSS extern u8 struct_804515B0[4];
 SECTION_SBSS extern u8 sTexMtxLoadType__11J3DShapeMtx[4];
 SECTION_SBSS extern u8 __GDCurrentDL[4];
 
@@ -145,14 +144,14 @@ SECTION_SBSS extern u8 __GDCurrentDL[4];
 // 
 
 /* ############################################################################################## */
-/* 804563A0-804563A8 0004+04 rc=1 efc=0 .sdata2    @687                                                         */
-u8 lit_687[8] = {
+/* 804563A0-804563A8 0004+04 rc=0 efc=0 .sdata2    @687                                                         */
+u8 lit_687[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80314B48-80314BB8 0070+00 rc=1 efc=1 .text      initialize__8J3DShapeFv                                      */
+/* 80314B48-80314BB8 0070+00 rc=0 efc=0 .text      initialize__8J3DShapeFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -164,12 +163,12 @@ asm void J3DShape::initialize() {
 
 
 /* ############################################################################################## */
-/* 803A1E98-803A1EA8 0010+00 rc=1 efc=0 .rodata    @697                                                         */
-SECTION_RODATA const u8 J3DShape__lit_697[16] = {
+/* 803A1E98-803A1EA8 0010+00 rc=0 efc=0 .rodata    @697                                                         */
+const u8 J3DShape__lit_697[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
 
-/* 80314BB8-80314CBC 0104+00 rc=1 efc=1 .text      addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl                     */
+/* 80314BB8-80314CBC 0104+00 rc=0 efc=0 .text      addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +179,7 @@ asm void J3DShape::addTexMtxIndexInDL(_GXAttr field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80314CBC-80314DA8 00EC+00 rc=1 efc=1 .text      addTexMtxIndexInVcd__8J3DShapeF7_GXAttr                      */
+/* 80314CBC-80314DA8 00EC+00 rc=0 efc=0 .text      addTexMtxIndexInVcd__8J3DShapeF7_GXAttr                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +190,7 @@ asm void J3DShape::addTexMtxIndexInVcd(_GXAttr field_0) {
 #pragma pop
 
 
-/* 80314DA8-80314E28 0080+00 rc=1 efc=1 .text      calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f               */
+/* 80314DA8-80314E28 0080+00 rc=0 efc=0 .text      calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,7 +201,7 @@ asm void J3DShape::calcNBTScale(Vec const& field_0, f32 (* field_1)[3][3], f32 (
 #pragma pop
 
 
-/* 80314E28-80314E98 0070+00 rc=1 efc=1 .text      countBumpMtxNum__8J3DShapeCFv                                */
+/* 80314E28-80314E98 0070+00 rc=0 efc=0 .text      countBumpMtxNum__8J3DShapeCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -213,29 +212,29 @@ asm void J3DShape::countBumpMtxNum() const {
 #pragma pop
 
 
-/* 80314E98-80314EB0 0018+00 rc=1 efc=0 .text      J3DLoadCPCmd__FUcUl                                          */
+/* 80314E98-80314EB0 0018+00 rc=0 efc=0 .text      J3DLoadCPCmd__FUcUl                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void J3DLoadCPCmd(u8 field_0, u32 field_1) {
+asm void J3DLoadCPCmd(u8 field_0, u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShape/J3DLoadCPCmd__FUcUl.s"
 }
 #pragma pop
 
 
-/* 80314EB0-80314EEC 003C+00 rc=1 efc=0 .text      J3DLoadArrayBasePtr__F7_GXAttrPv                             */
+/* 80314EB0-80314EEC 003C+00 rc=0 efc=0 .text      J3DLoadArrayBasePtr__F7_GXAttrPv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void J3DLoadArrayBasePtr(_GXAttr field_0, void* field_1) {
+asm void J3DLoadArrayBasePtr(_GXAttr field_0, void* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DShape/J3DLoadArrayBasePtr__F7_GXAttrPv.s"
 }
 #pragma pop
 
 
-/* 80314EEC-80314F5C 0070+00 rc=3 efc=0 .text      loadVtxArray__8J3DShapeCFv                                   */
+/* 80314EEC-80314F5C 0070+00 rc=0 efc=0 .text      loadVtxArray__8J3DShapeCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -246,7 +245,7 @@ asm void J3DShape::loadVtxArray() const {
 #pragma pop
 
 
-/* 80314F5C-80314F98 003C+00 rc=1 efc=1 .text      isSameVcdVatCmd__8J3DShapeFP8J3DShape                        */
+/* 80314F5C-80314F98 003C+00 rc=0 efc=0 .text      isSameVcdVatCmd__8J3DShapeFP8J3DShape                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -257,7 +256,7 @@ asm void J3DShape::isSameVcdVatCmd(J3DShape* field_0) {
 #pragma pop
 
 
-/* 80314F98-80315260 02C8+00 rc=1 efc=0 .text      makeVtxArrayCmd__8J3DShapeFv                                 */
+/* 80314F98-80315260 02C8+00 rc=0 efc=0 .text      makeVtxArrayCmd__8J3DShapeFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,13 +268,13 @@ asm void J3DShape::makeVtxArrayCmd() {
 
 
 /* ############################################################################################## */
-/* 804515C8-804515CC 0004+00 rc=1 efc=0 .sbss      sInterruptFlag$903                                           */
+/* 804515C8-804515CC 0004+00 rc=0 efc=0 .sbss      sInterruptFlag$903                                           */
 u8 data_804515C8[4];
 
-/* 804515CC-804515D0 0004+00 rc=1 efc=0 .sbss      None                                                         */
+/* 804515CC-804515D0 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_804515CC[4];
 
-/* 80315260-80315300 00A0+00 rc=3 efc=2 .text      makeVcdVatCmd__8J3DShapeFv                                   */
+/* 80315260-80315300 00A0+00 rc=0 efc=0 .text      makeVcdVatCmd__8J3DShapeFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -287,10 +286,10 @@ asm void J3DShape::makeVcdVatCmd() {
 
 
 /* ############################################################################################## */
-/* 804515D0-804515D4 0004+00 rc=30 efc=25 .sbss      sOldVcdVatCmd__8J3DShape                                     */
+/* 804515D0-804515D4 0004+00 rc=0 efc=0 .sbss      sOldVcdVatCmd__8J3DShape                                     */
 u8 sOldVcdVatCmd__8J3DShape[4];
 
-/* 80315300-80315398 0098+00 rc=8 efc=6 .text      loadPreDrawSetting__8J3DShapeCFv                             */
+/* 80315300-80315398 0098+00 rc=0 efc=0 .text      loadPreDrawSetting__8J3DShapeCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,10 +301,10 @@ asm void J3DShape::loadPreDrawSetting() const {
 
 
 /* ############################################################################################## */
-/* 804515D4-804515D8 0004+00 rc=3 efc=0 .sbss      None                                                         */
+/* 804515D4-804515D8 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_804515D4[4];
 
-/* 80315398-8031544C 00B4+00 rc=1 efc=0 .text      setArrayAndBindPipeline__8J3DShapeCFv                        */
+/* 80315398-8031544C 00B4+00 rc=0 efc=0 .text      setArrayAndBindPipeline__8J3DShapeCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -316,7 +315,7 @@ asm void J3DShape::setArrayAndBindPipeline() const {
 #pragma pop
 
 
-/* 8031544C-803155E0 0194+00 rc=1 efc=0 .text      drawFast__8J3DShapeCFv                                       */
+/* 8031544C-803155E0 0194+00 rc=0 efc=0 .text      drawFast__8J3DShapeCFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -327,7 +326,7 @@ asm void J3DShape::drawFast() const {
 #pragma pop
 
 
-/* 803155E0-80315628 0048+00 rc=1 efc=0 .text      draw__8J3DShapeCFv                                           */
+/* 803155E0-80315628 0048+00 rc=0 efc=0 .text      draw__8J3DShapeCFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -338,7 +337,7 @@ asm void J3DShape::draw() const {
 #pragma pop
 
 
-/* 80315628-803156AC 0084+00 rc=1 efc=0 .text      simpleDraw__8J3DShapeCFv                                     */
+/* 80315628-803156AC 0084+00 rc=0 efc=0 .text      simpleDraw__8J3DShapeCFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -349,7 +348,7 @@ asm void J3DShape::simpleDraw() const {
 #pragma pop
 
 
-/* 803156AC-803157A0 00F4+00 rc=1 efc=0 .text      simpleDrawCache__8J3DShapeCFv                                */
+/* 803156AC-803157A0 00F4+00 rc=0 efc=0 .text      simpleDrawCache__8J3DShapeCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -361,10 +360,10 @@ asm void J3DShape::simpleDrawCache() const {
 
 
 /* ############################################################################################## */
-/* 803CDC78-803CDC90 0018+00 rc=1 efc=1 .data      __vt__8J3DShape                                              */
+/* 803CDC78-803CDC90 0018+00 rc=0 efc=0 .data      __vt__8J3DShape                                              */
 void* const __vt__8J3DShape[6] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__8J3DShapeCFv,
 	(void*)drawFast__8J3DShapeCFv,
 	(void*)simpleDraw__8J3DShapeCFv,

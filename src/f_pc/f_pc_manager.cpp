@@ -55,8 +55,8 @@ struct JUTGamePad {
 // 
 
 void fpcM_Draw(void*); // 2
-extern "C" static void fpcM_DrawIterater__FPFPvPv_i(); // 1
-static void fpcM_Execute(void*); // 2
+extern "C" void fpcM_DrawIterater__FPFPvPv_i(); // 1
+void fpcM_Execute(void*); // 2
 void fpcM_Delete(void*); // 2
 void fpcM_IsCreating(u32); // 2
 extern "C" void fpcM_Management__FPFv_vPFv_v(); // 1
@@ -68,8 +68,8 @@ void fpcM_PauseDisable(void*, u8); // 2
 extern "C" void fpcM_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
 
 extern "C" void fpcM_Draw__FPv(); // 1
-extern "C" static void fpcM_DrawIterater__FPFPvPv_i(); // 1
-extern "C" static void fpcM_Execute__FPv(); // 1
+extern "C" void fpcM_DrawIterater__FPFPvPv_i(); // 1
+extern "C" void fpcM_Execute__FPv(); // 1
 extern "C" void fpcM_Delete__FPv(); // 1
 extern "C" void fpcM_IsCreating__FUi(); // 1
 extern "C" void fpcM_Management__FPFv_vPFv_v(); // 1
@@ -148,14 +148,13 @@ extern "C" void _restgpr_28(); // 1
 SECTION_BSS extern u8 m_gamePad__8mDoCPd_c[16];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SBSS extern u8 data_80450B60[4];
-SECTION_SBSS extern u8 struct_80450D38[8];
 SECTION_SBSS extern u8 data_80450EC4[4];
 
 // 
 // Declarations:
 // 
 
-/* 800220A0-800220C0 0020+00 rc=2 efc=1 .text      fpcM_Draw__FPv                                               */
+/* 800220A0-800220C0 0020+00 rc=0 efc=0 .text      fpcM_Draw__FPv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,29 +165,29 @@ asm void fpcM_Draw(void* field_0) {
 #pragma pop
 
 
-/* 800220C0-800220F8 0038+00 rc=1 efc=0 .text      fpcM_DrawIterater__FPFPvPv_i                                 */
+/* 800220C0-800220F8 0038+00 rc=0 efc=0 .text      fpcM_DrawIterater__FPFPvPv_i                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void fpcM_DrawIterater__FPFPvPv_i() {
+extern "C" asm void fpcM_DrawIterater__FPFPvPv_i() {
 	nofralloc
 #include "asm/f_pc/f_pc_manager/fpcM_DrawIterater__FPFPvPv_i.s"
 }
 #pragma pop
 
 
-/* 800220F8-80022118 0020+00 rc=1 efc=0 .text      fpcM_Execute__FPv                                            */
+/* 800220F8-80022118 0020+00 rc=0 efc=0 .text      fpcM_Execute__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcM_Execute(void* field_0) {
+asm void fpcM_Execute(void* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_manager/fpcM_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80022118-80022138 0020+00 rc=7 efc=7 .text      fpcM_Delete__FPv                                             */
+/* 80022118-80022138 0020+00 rc=0 efc=0 .text      fpcM_Delete__FPv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -199,7 +198,7 @@ asm void fpcM_Delete(void* field_0) {
 #pragma pop
 
 
-/* 80022138-80022158 0020+00 rc=6 efc=6 .text      fpcM_IsCreating__FUi                                         */
+/* 80022138-80022158 0020+00 rc=0 efc=0 .text      fpcM_IsCreating__FUi                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,7 +209,7 @@ asm void fpcM_IsCreating(u32 field_0) {
 #pragma pop
 
 
-/* 80022158-800222B8 0160+00 rc=1 efc=1 .text      fpcM_Management__FPFv_vPFv_v                                 */
+/* 80022158-800222B8 0160+00 rc=0 efc=0 .text      fpcM_Management__FPFv_vPFv_v                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -222,13 +221,13 @@ extern "C" asm void fpcM_Management__FPFv_vPFv_v() {
 
 
 /* ############################################################################################## */
-/* 803F4DB0-803F4DDC 002C+00 rc=1 efc=0 .bss       rootlayer$3716                                               */
+/* 803F4DB0-803F4DDC 002C+00 rc=0 efc=0 .bss       rootlayer$3716                                               */
 u8 data_803F4DB0[44];
 
-/* 803F4DDC-803F4E58 0078+04 rc=1 efc=0 .bss       queue$3717                                                   */
+/* 803F4DDC-803F4E58 0078+04 rc=0 efc=0 .bss       queue$3717                                                   */
 u8 data_803F4DDC[120 + 4 /* padding */];
 
-/* 800222B8-800222F4 003C+00 rc=1 efc=1 .text      fpcM_Init__Fv                                                */
+/* 800222B8-800222F4 003C+00 rc=0 efc=0 .text      fpcM_Init__Fv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -239,7 +238,7 @@ asm void fpcM_Init() {
 #pragma pop
 
 
-/* 800222F4-80022348 0054+00 rc=3 efc=3 .text      fpcM_FastCreate__FsPFPv_iPvPv                                */
+/* 800222F4-80022348 0054+00 rc=0 efc=0 .text      fpcM_FastCreate__FsPFPv_iPvPv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +249,7 @@ extern "C" asm void fpcM_FastCreate__FsPFPv_iPvPv() {
 #pragma pop
 
 
-/* 80022348-8002236C 0024+00 rc=1 efc=1 .text      fpcM_IsPause__FPvUc                                          */
+/* 80022348-8002236C 0024+00 rc=0 efc=0 .text      fpcM_IsPause__FPvUc                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -261,7 +260,7 @@ asm void fpcM_IsPause(void* field_0, u8 field_1) {
 #pragma pop
 
 
-/* 8002236C-80022390 0024+00 rc=1 efc=1 .text      fpcM_PauseEnable__FPvUc                                      */
+/* 8002236C-80022390 0024+00 rc=0 efc=0 .text      fpcM_PauseEnable__FPvUc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -272,7 +271,7 @@ asm void fpcM_PauseEnable(void* field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80022390-800223B4 0024+00 rc=1 efc=1 .text      fpcM_PauseDisable__FPvUc                                     */
+/* 80022390-800223B4 0024+00 rc=0 efc=0 .text      fpcM_PauseDisable__FPvUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -283,7 +282,7 @@ asm void fpcM_PauseDisable(void* field_0, u8 field_1) {
 #pragma pop
 
 
-/* 800223B4-80022428 0074+00 rc=1 efc=1 .text      fpcM_JudgeInLayer__FUiPFPvPv_PvPv                            */
+/* 800223B4-80022428 0074+00 rc=0 efc=0 .text      fpcM_JudgeInLayer__FUiPFPvPv_PvPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

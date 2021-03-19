@@ -33,11 +33,11 @@ struct dDrawPath_c {
 	/* 8003CCC4 */ void drawPath();
 };
 
-struct dMenu_Fmap_region_data_c {
-	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
+struct dMenu_Fmap_world_data_c {
 };
 
-struct dMenu_Fmap_world_data_c {
+struct dMenu_Fmap_region_data_c {
+	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
 };
 
 struct renderingFmap_c {
@@ -129,11 +129,11 @@ struct dDlst_list_c {
 // Forward References:
 // 
 
-static void twoValueLineInterpolation(u8, u8, f32); // 2
-static void twoColorLineInterporation(_GXColor const&, _GXColor const&, f32, _GXColor&); // 2
+void twoValueLineInterpolation(u8, u8, f32); // 2
+void twoColorLineInterporation(_GXColor const&, _GXColor const&, f32, _GXColor&); // 2
 
-extern "C" static void twoValueLineInterpolation__FUcUcf(); // 1
-extern "C" static void twoColorLineInterporation__FRC8_GXColorRC8_GXColorfR8_GXColor(); // 1
+extern "C" void twoValueLineInterpolation__FUcUcf(); // 1
+extern "C" void twoColorLineInterporation__FRC8_GXColorRC8_GXColorfR8_GXColor(); // 1
 extern "C" void init__15renderingFmap_cFPUcUsUsUsUs(); // 1
 extern "C" void entry__15renderingFmap_cFP23dMenu_Fmap_world_data_cifff(); // 1
 extern "C" void isSwitchSpecialOff__15renderingFmap_cFi(); // 1
@@ -179,9 +179,9 @@ SECTION_RODATA extern const u8 data_803961B0[32];
 SECTION_RODATA extern const u8 data_803961D0[36];
 SECTION_RODATA extern const u8 data_803961F4[36];
 SECTION_RODATA extern const u8 data_80396218[36];
-SECTION_RODATA extern const u8 d_menu_d_menu_fmap_map__stringBase0[12];
-SECTION_DATA extern void*const __vt__15dMenu_FmapMap_c[26];
-SECTION_DATA extern void*const __vt__15renderingFmap_c[26];
+SECTION_RODATA extern const char* const d_menu_d_menu_fmap_map__stringBase0;
+SECTION_DATA extern void* const __vt__15dMenu_FmapMap_c[26];
+SECTION_DATA extern void* const __vt__15renderingFmap_c[26];
 SECTION_SDATA extern u8 data_80450728[4 + 4 /* padding */];
 SECTION_SDATA2 extern f64 d_menu_d_menu_fmap_map__lit_3689;
 SECTION_SDATA2 extern u8 d_menu_d_menu_fmap_map__lit_3703[4];
@@ -192,7 +192,7 @@ SECTION_SDATA2 extern f32 d_menu_d_menu_fmap_map__lit_3771;
 SECTION_SDATA2 extern u8 m_other__22dMfm_HIO_prm_res_src_s[1 + 3 /* padding */];
 SECTION_SDATA2 extern f32 d_menu_d_menu_fmap_map__lit_4104;
 SECTION_SDATA2 extern f32 d_menu_d_menu_fmap_map__lit_4105;
-SECTION_SDATA2 extern f32 d_menu_d_menu_fmap_map__lit_4106;
+SECTION_SDATA2 extern f32 d_menu_d_menu_fmap_map__lit_4106[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 d_menu_d_menu_fmap_map__lit_4108;
 SECTION_SDATA2 extern u8 data_804541B0[5 + 3 /* padding */];
 SECTION_SDATA2 extern u8 data_804541B8[5 + 3 /* padding */];
@@ -266,40 +266,39 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
-SECTION_DATA extern void*const __vt__28dDrawPathWithNormalPattern_c[16];
-SECTION_DATA extern void*const __vt__15dRenderingMap_c[23];
-SECTION_DATA extern void*const __vt__18dRenderingFDAmap_c[26];
-SECTION_DATA extern void*const __vt__11dDrawPath_c[16];
+SECTION_DATA extern void* const __vt__12dDlst_base_c[3];
+SECTION_DATA extern void* const __vt__28dDrawPathWithNormalPattern_c[16];
+SECTION_DATA extern void* const __vt__15dRenderingMap_c[23];
+SECTION_DATA extern void* const __vt__18dRenderingFDAmap_c[26];
+SECTION_DATA extern void* const __vt__11dDrawPath_c[16];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
-SECTION_SBSS extern u8 struct_80450D64[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80454178-80454180 0008+00 rc=3 efc=0 .sdata2    @3689                                                        */
+/* 80454178-80454180 0008+00 rc=0 efc=0 .sdata2    @3689                                                        */
 f64 d_menu_d_menu_fmap_map__lit_3689 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 801CE068-801CE0CC 0064+00 rc=1 efc=0 .text      twoValueLineInterpolation__FUcUcf                            */
+/* 801CE068-801CE0CC 0064+00 rc=0 efc=0 .text      twoValueLineInterpolation__FUcUcf                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void twoValueLineInterpolation(u8 field_0, u8 field_1, f32 field_2) {
+asm void twoValueLineInterpolation(u8 field_0, u8 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/twoValueLineInterpolation__FUcUcf.s"
 }
 #pragma pop
 
 
-/* 801CE0CC-801CE15C 0090+00 rc=2 efc=0 .text      twoColorLineInterporation__FRC8_GXColorRC8_GXColorfR8_GXColor */
+/* 801CE0CC-801CE15C 0090+00 rc=0 efc=0 .text      twoColorLineInterporation__FRC8_GXColorRC8_GXColorfR8_GXColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void twoColorLineInterporation(_GXColor const& field_0, _GXColor const& field_1, f32 field_2, _GXColor& field_3) {
+asm void twoColorLineInterporation(_GXColor const& field_0, _GXColor const& field_1, f32 field_2, _GXColor& field_3) {
 	nofralloc
 #include "asm/d/menu/d_menu_fmap_map/twoColorLineInterporation__FRC8_GXColorRC8_GXColorfR8_GXColor.s"
 }
@@ -307,12 +306,12 @@ asm static void twoColorLineInterporation(_GXColor const& field_0, _GXColor cons
 
 
 /* ############################################################################################## */
-/* 80454180-80454184 0004+00 rc=3 efc=0 .sdata2    @3703                                                        */
+/* 80454180-80454184 0004+00 rc=0 efc=0 .sdata2    @3703                                                        */
 u8 d_menu_d_menu_fmap_map__lit_3703[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801CE15C-801CE188 002C+00 rc=1 efc=0 .text      init__15renderingFmap_cFPUcUsUsUsUs                          */
+/* 801CE15C-801CE188 002C+00 rc=0 efc=0 .text      init__15renderingFmap_cFPUcUsUsUsUs                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,10 +323,10 @@ asm void renderingFmap_c::init(u8* field_0, u16 field_1, u16 field_2, u16 field_
 
 
 /* ############################################################################################## */
-/* 80454184-80454188 0004+00 rc=3 efc=0 .sdata2    @3711                                                        */
+/* 80454184-80454188 0004+00 rc=0 efc=0 .sdata2    @3711                                                        */
 f32 d_menu_d_menu_fmap_map__lit_3711 = 1.0f;
 
-/* 801CE188-801CE224 009C+00 rc=1 efc=0 .text      entry__15renderingFmap_cFP23dMenu_Fmap_world_data_cifff      */
+/* 801CE188-801CE224 009C+00 rc=0 efc=0 .text      entry__15renderingFmap_cFP23dMenu_Fmap_world_data_cifff      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,43 +338,43 @@ asm void renderingFmap_c::entry(dMenu_Fmap_world_data_c* field_0, int field_1, f
 
 
 /* ############################################################################################## */
-/* 803961B0-803961D0 0020+00 rc=2 efc=0 .rodata    palNo$3985                                                   */
-SECTION_RODATA const u8 data_803961B0[32] = {
+/* 803961B0-803961D0 0020+00 rc=0 efc=0 .rodata    palNo$3985                                                   */
+const u8 data_803961B0[32] = {
 	0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x12, 0x00, 0x00, 0x00, 0x13, 0x00, 0x00, 0x00, 0x14,
 	0x00, 0x00, 0x00, 0x15, 0x00, 0x00, 0x00, 0x16, 0x00, 0x00, 0x00, 0x17, 0x00, 0x00, 0x00, 0x18,
 };
 
 /* 803961D0-803961F4 0024+00 rc=0 efc=0 .rodata    l_dungeon_onColor$4186                                       */
-SECTION_RODATA const u8 data_803961D0[36] = {
+const u8 data_803961D0[36] = {
 	0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x10, 0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x18, 0x00, 0x00, 0x00, 0x1C, 0x00, 0x00, 0x00,
 	0x20, 0x00, 0x00, 0x00,
 };
 
 /* 803961F4-80396218 0024+00 rc=0 efc=0 .rodata    l_dungeon_stayColor$4187                                     */
-SECTION_RODATA const u8 data_803961F4[36] = {
+const u8 data_803961F4[36] = {
 	0x24, 0x00, 0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x30, 0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00,
 	0x40, 0x00, 0x00, 0x00,
 };
 
 /* 80396218-8039623C 0024+00 rc=0 efc=0 .rodata    l_dungeon_pointColor$4188                                    */
-SECTION_RODATA const u8 data_80396218[36] = {
+const u8 data_80396218[36] = {
 	0x44, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x50, 0x00, 0x00, 0x00, 0x54, 0x00, 0x00, 0x00, 0x58, 0x00, 0x00, 0x00, 0x5C, 0x00, 0x00, 0x00,
 	0x60, 0x00, 0x00, 0x00,
 };
 
-/* 8039623C-80396248 0008+04 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 8039623C-80396248 0008+04 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_8039623C = "F_SP121";
+const char* const stringBase_8039623C = "F_SP121";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_80396244 = "\0\0\0";
+char* const pad_80396244 = "\0\0\0";
 #pragma pop
 
-/* 801CE224-801CE288 0064+00 rc=1 efc=0 .text      isSwitchSpecialOff__15renderingFmap_cFi                      */
+/* 801CE224-801CE288 0064+00 rc=0 efc=0 .text      isSwitchSpecialOff__15renderingFmap_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -386,7 +385,7 @@ asm void renderingFmap_c::isSwitchSpecialOff(int field_0) {
 #pragma pop
 
 
-/* 801CE288-801CE3C0 0138+00 rc=2 efc=0 .text      isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class   */
+/* 801CE288-801CE3C0 0138+00 rc=0 efc=0 .text      isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -397,7 +396,7 @@ asm void renderingFmap_c::isSwitch(dDrawPath_c::group_class const* field_0) {
 #pragma pop
 
 
-/* 801CE3C0-801CE410 0050+00 rc=3 efc=3 .text      getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi */
+/* 801CE3C0-801CE410 0050+00 rc=0 efc=0 .text      getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -409,16 +408,16 @@ asm void renderingFmap_c::getPointStagePathInnerNo(dMenu_Fmap_region_data_c* fie
 
 
 /* ############################################################################################## */
-/* 80454188-8045418C 0004+00 rc=1 efc=0 .sdata2    @3769                                                        */
+/* 80454188-8045418C 0004+00 rc=0 efc=0 .sdata2    @3769                                                        */
 f32 d_menu_d_menu_fmap_map__lit_3769 = -5000.0f;
 
-/* 8045418C-80454190 0004+00 rc=1 efc=0 .sdata2    @3770                                                        */
+/* 8045418C-80454190 0004+00 rc=0 efc=0 .sdata2    @3770                                                        */
 f32 d_menu_d_menu_fmap_map__lit_3770 = 5000.0f;
 
-/* 80454190-80454194 0004+00 rc=1 efc=0 .sdata2    @3771                                                        */
+/* 80454190-80454194 0004+00 rc=0 efc=0 .sdata2    @3771                                                        */
 f32 d_menu_d_menu_fmap_map__lit_3771 = -1.0f;
 
-/* 801CE410-801CE4D4 00C4+00 rc=2 efc=0 .text      preDrawPath__15renderingFmap_cFv                             */
+/* 801CE410-801CE4D4 00C4+00 rc=0 efc=0 .text      preDrawPath__15renderingFmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -429,13 +428,13 @@ asm void renderingFmap_c::preDrawPath() {
 #pragma pop
 
 
-/* 801CE4D4-801CE4DC 0008+00 rc=2 efc=0 .text      isDrawPath__15renderingFmap_cFv                              */
+/* 801CE4D4-801CE4DC 0008+00 rc=0 efc=0 .text      isDrawPath__15renderingFmap_cFv                              */
 bool renderingFmap_c::isDrawPath() {
 	return true;
 }
 
 
-/* 801CE4DC-801CE560 0084+00 rc=2 efc=0 .text      isDrawRoom__15renderingFmap_cFv                              */
+/* 801CE4DC-801CE560 0084+00 rc=0 efc=0 .text      isDrawRoom__15renderingFmap_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -446,7 +445,7 @@ asm void renderingFmap_c::isDrawRoom() {
 #pragma pop
 
 
-/* 801CE560-801CE5B8 0058+00 rc=2 efc=0 .text      postDrawPath__15renderingFmap_cFv                            */
+/* 801CE560-801CE5B8 0058+00 rc=0 efc=0 .text      postDrawPath__15renderingFmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -457,7 +456,7 @@ asm void renderingFmap_c::postDrawPath() {
 #pragma pop
 
 
-/* 801CE5B8-801CE5EC 0034+00 rc=2 efc=0 .text      postRenderingMap__15renderingFmap_cFv                        */
+/* 801CE5B8-801CE5EC 0034+00 rc=0 efc=0 .text      postRenderingMap__15renderingFmap_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -468,7 +467,7 @@ asm void renderingFmap_c::postRenderingMap() {
 #pragma pop
 
 
-/* 801CE5EC-801CE6A8 00BC+00 rc=2 efc=0 .text      roomSetteing__15renderingFmap_cFv                            */
+/* 801CE5EC-801CE6A8 00BC+00 rc=0 efc=0 .text      roomSetteing__15renderingFmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -479,7 +478,7 @@ asm void renderingFmap_c::roomSetteing() {
 #pragma pop
 
 
-/* 801CE6A8-801CE75C 00B4+00 rc=2 efc=0 .text      getFirstRoomPointer__15renderingFmap_cFv                     */
+/* 801CE6A8-801CE75C 00B4+00 rc=0 efc=0 .text      getFirstRoomPointer__15renderingFmap_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -490,7 +489,7 @@ asm void renderingFmap_c::getFirstRoomPointer() {
 #pragma pop
 
 
-/* 801CE75C-801CE7A8 004C+00 rc=1 efc=0 .text      getFirstRegion__15renderingFmap_cFv                          */
+/* 801CE75C-801CE7A8 004C+00 rc=0 efc=0 .text      getFirstRegion__15renderingFmap_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -501,7 +500,7 @@ asm void renderingFmap_c::getFirstRegion() {
 #pragma pop
 
 
-/* 801CE7A8-801CE80C 0064+00 rc=2 efc=0 .text      getFirstStage__15renderingFmap_cFv                           */
+/* 801CE7A8-801CE80C 0064+00 rc=0 efc=0 .text      getFirstStage__15renderingFmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -512,7 +511,7 @@ asm void renderingFmap_c::getFirstStage() {
 #pragma pop
 
 
-/* 801CE80C-801CE84C 0040+00 rc=2 efc=0 .text      getFirstRoom__15renderingFmap_cFv                            */
+/* 801CE80C-801CE84C 0040+00 rc=0 efc=0 .text      getFirstRoom__15renderingFmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -523,7 +522,7 @@ asm void renderingFmap_c::getFirstRoom() {
 #pragma pop
 
 
-/* 801CE84C-801CE8B8 006C+00 rc=1 efc=0 .text      getNextRoom__15renderingFmap_cFv                             */
+/* 801CE84C-801CE8B8 006C+00 rc=0 efc=0 .text      getNextRoom__15renderingFmap_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -534,7 +533,7 @@ asm void renderingFmap_c::getNextRoom() {
 #pragma pop
 
 
-/* 801CE8B8-801CE93C 0084+00 rc=1 efc=0 .text      getNextStage__15renderingFmap_cFv                            */
+/* 801CE8B8-801CE93C 0084+00 rc=0 efc=0 .text      getNextStage__15renderingFmap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -545,7 +544,7 @@ asm void renderingFmap_c::getNextStage() {
 #pragma pop
 
 
-/* 801CE93C-801CE9A4 0068+00 rc=1 efc=0 .text      getNextRegion__15renderingFmap_cFv                           */
+/* 801CE93C-801CE9A4 0068+00 rc=0 efc=0 .text      getNextRegion__15renderingFmap_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -556,7 +555,7 @@ asm void renderingFmap_c::getNextRegion() {
 #pragma pop
 
 
-/* 801CE9A4-801CEA38 0094+00 rc=2 efc=0 .text      getNextRoomPointer__15renderingFmap_cFv                      */
+/* 801CE9A4-801CEA38 0094+00 rc=0 efc=0 .text      getNextRoomPointer__15renderingFmap_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -567,7 +566,7 @@ asm void renderingFmap_c::getNextRoomPointer() {
 #pragma pop
 
 
-/* 801CEA38-801CEAAC 0074+00 rc=1 efc=0 .text      setFmapPaletteColor__15dMenu_FmapMap_cFQ215renderingFmap_c9palette_eUcUcUcUc */
+/* 801CEA38-801CEAAC 0074+00 rc=0 efc=0 .text      setFmapPaletteColor__15dMenu_FmapMap_cFQ215renderingFmap_c9palette_eUcUcUcUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -578,7 +577,7 @@ asm void dMenu_FmapMap_c::setFmapPaletteColor(renderingFmap_c::palette_e field_0
 #pragma pop
 
 
-/* 801CEAAC-801CEAE0 0034+00 rc=2 efc=0 .text      setFmapPaletteColor__15dMenu_FmapMap_cFQ215renderingFmap_c9palette_eRC8_GXColor */
+/* 801CEAAC-801CEAE0 0034+00 rc=0 efc=0 .text      setFmapPaletteColor__15dMenu_FmapMap_cFQ215renderingFmap_c9palette_eRC8_GXColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -589,7 +588,7 @@ asm void dMenu_FmapMap_c::setFmapPaletteColor(renderingFmap_c::palette_e field_0
 #pragma pop
 
 
-/* 801CEAE0-801CEB1C 003C+00 rc=1 efc=0 .text      isFlashRoomNoCheck__15dMenu_FmapMap_cCFi                     */
+/* 801CEAE0-801CEB1C 003C+00 rc=0 efc=0 .text      isFlashRoomNoCheck__15dMenu_FmapMap_cCFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -600,7 +599,7 @@ asm void dMenu_FmapMap_c::isFlashRoomNoCheck(int field_0) const {
 #pragma pop
 
 
-/* 801CEB1C-801CEC24 0108+00 rc=1 efc=0 .text      setPointColor__15dMenu_FmapMap_cFf                           */
+/* 801CEB1C-801CEC24 0108+00 rc=0 efc=0 .text      setPointColor__15dMenu_FmapMap_cFf                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -612,10 +611,10 @@ asm void dMenu_FmapMap_c::setPointColor(f32 field_0) {
 
 
 /* ############################################################################################## */
-/* 803BD680-803BD6E8 0068+00 rc=2 efc=0 .data      __vt__15dMenu_FmapMap_c                                      */
+/* 803BD680-803BD6E8 0068+00 rc=0 efc=0 .data      __vt__15dMenu_FmapMap_c                                      */
 void* const __vt__15dMenu_FmapMap_c[26] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__15dMenu_FmapMap_cFv,
 	(void*)__dt__15dMenu_FmapMap_cFv,
 	(void*)isDrawType__15dMenu_FmapMap_cFi,
@@ -642,16 +641,16 @@ void* const __vt__15dMenu_FmapMap_c[26] = {
 	(void*)getDecorationLineWidth__18dRenderingFDAmap_cFi,
 };
 
-/* 803BD6E8-803BD750 0068+00 rc=3 efc=0 .data      __vt__15renderingFmap_c                                      */
+/* 803BD6E8-803BD750 0068+00 rc=0 efc=0 .data      __vt__15renderingFmap_c                                      */
 void* const __vt__15renderingFmap_c[26] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__12dDlst_base_cFv,
 	(void*)__dt__15renderingFmap_cFv,
 	(void*)isDrawType__11dDrawPath_cFi,
-	NULL,
+	(void*)NULL,
 	(void*)getLineColor__11dDrawPath_cFii,
-	NULL,
+	(void*)NULL,
 	(void*)isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class,
 	(void*)isRenderingFloor__15renderingFmap_cFi,
 	(void*)getFirstRoomPointer__15renderingFmap_cFv,
@@ -667,12 +666,12 @@ void* const __vt__15renderingFmap_c[26] = {
 	(void*)isDrawPath__15renderingFmap_cFv,
 	(void*)preRenderingMap__18dRenderingFDAmap_cFv,
 	(void*)postRenderingMap__15renderingFmap_cFv,
-	NULL,
+	(void*)NULL,
 	(void*)getDecoLineColor__18dRenderingFDAmap_cFii,
 	(void*)getDecorationLineWidth__18dRenderingFDAmap_cFi,
 };
 
-/* 801CEC24-801CED38 0114+00 rc=1 efc=1 .text      __ct__15dMenu_FmapMap_cFv                                    */
+/* 801CEC24-801CED38 0114+00 rc=0 efc=0 .text      __ct__15dMenu_FmapMap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -683,7 +682,7 @@ asm dMenu_FmapMap_c::dMenu_FmapMap_c() {
 #pragma pop
 
 
-/* 801CED38-801CEDE8 00B0+00 rc=1 efc=0 .text      __dt__15dMenu_FmapMap_cFv                                    */
+/* 801CED38-801CEDE8 00B0+00 rc=0 efc=0 .text      __dt__15dMenu_FmapMap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -694,7 +693,7 @@ asm dMenu_FmapMap_c::~dMenu_FmapMap_c() {
 #pragma pop
 
 
-/* 801CEDE8-801CEE3C 0054+00 rc=1 efc=1 .text      _create__15dMenu_FmapMap_cFUsUsUsUsPv                        */
+/* 801CEDE8-801CEE3C 0054+00 rc=0 efc=0 .text      _create__15dMenu_FmapMap_cFUsUsUsUsPv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -705,7 +704,7 @@ asm void dMenu_FmapMap_c::_create(u16 field_0, u16 field_1, u16 field_2, u16 fie
 #pragma pop
 
 
-/* 801CEE3C-801CEE94 0058+00 rc=2 efc=1 .text      _delete__15dMenu_FmapMap_cFv                                 */
+/* 801CEE3C-801CEE94 0058+00 rc=0 efc=0 .text      _delete__15dMenu_FmapMap_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -717,27 +716,30 @@ asm void dMenu_FmapMap_c::_delete() {
 
 
 /* ############################################################################################## */
-/* 80454194-80454198 0001+03 rc=2 efc=0 .sdata2    m_other__22dMfm_HIO_prm_res_src_s                            */
-u8 m_other__22dMfm_HIO_prm_res_src_s[4] = {
+/* 80454194-80454198 0001+03 rc=0 efc=0 .sdata2    m_other__22dMfm_HIO_prm_res_src_s                            */
+u8 m_other__22dMfm_HIO_prm_res_src_s[1 + 3 /* padding */] = {
 	0x1E,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
-/* 80454198-8045419C 0004+00 rc=1 efc=0 .sdata2    @4104                                                        */
+/* 80454198-8045419C 0004+00 rc=0 efc=0 .sdata2    @4104                                                        */
 f32 d_menu_d_menu_fmap_map__lit_4104 = 0.5f;
 
-/* 8045419C-804541A0 0004+00 rc=1 efc=0 .sdata2    @4105                                                        */
+/* 8045419C-804541A0 0004+00 rc=0 efc=0 .sdata2    @4105                                                        */
 f32 d_menu_d_menu_fmap_map__lit_4105 = 65536.0f;
 
-/* 804541A0-804541A8 0004+04 rc=1 efc=0 .sdata2    @4106                                                        */
-f32 d_menu_d_menu_fmap_map__lit_4106 = 32768.0f;
-/* padding 4 bytes */
+/* 804541A0-804541A8 0004+04 rc=0 efc=0 .sdata2    @4106                                                        */
+f32 d_menu_d_menu_fmap_map__lit_4106[1 + 1 /* padding */] = {
+	32768.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 804541A8-804541B0 0008+00 rc=2 efc=0 .sdata2    @4108                                                        */
+/* 804541A8-804541B0 0008+00 rc=0 efc=0 .sdata2    @4108                                                        */
 f64 d_menu_d_menu_fmap_map__lit_4108 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 801CEE94-801CF0B4 0220+00 rc=1 efc=0 .text      draw__15dMenu_FmapMap_cFv                                    */
+/* 801CEE94-801CF0B4 0220+00 rc=0 efc=0 .text      draw__15dMenu_FmapMap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -748,7 +750,7 @@ asm void dMenu_FmapMap_c::draw() {
 #pragma pop
 
 
-/* 801CF0B4-801CF12C 0078+00 rc=1 efc=0 .text      rendering__15dMenu_FmapMap_cFPCQ211dDrawPath_c10line_class   */
+/* 801CF0B4-801CF12C 0078+00 rc=0 efc=0 .text      rendering__15dMenu_FmapMap_cFPCQ211dDrawPath_c10line_class   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -760,24 +762,24 @@ asm void dMenu_FmapMap_c::rendering(dDrawPath_c::line_class const* field_0) {
 
 
 /* ############################################################################################## */
-/* 804541B0-804541B8 0005+03 rc=1 efc=0 .sdata2    l_lineWidthPatData$4134                                      */
-u8 data_804541B0[8] = {
+/* 804541B0-804541B8 0005+03 rc=0 efc=0 .sdata2    l_lineWidthPatData$4134                                      */
+u8 data_804541B0[5 + 3 /* padding */] = {
 	0x00, 0x06, 0x0C, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
-/* 804541B8-804541C0 0005+03 rc=1 efc=0 .sdata2    l_lineWidthPatData2$4135                                     */
-u8 data_804541B8[8] = {
+/* 804541B8-804541C0 0005+03 rc=0 efc=0 .sdata2    l_lineWidthPatData2$4135                                     */
+u8 data_804541B8[5 + 3 /* padding */] = {
 	0x00, 0x00, 0x06, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
-/* 804541C0-804541C4 0004+00 rc=1 efc=0 .sdata2    @4152                                                        */
+/* 804541C0-804541C4 0004+00 rc=0 efc=0 .sdata2    @4152                                                        */
 f32 d_menu_d_menu_fmap_map__lit_4152 = 1.5f;
 
-/* 801CF12C-801CF1D4 00A8+00 rc=1 efc=0 .text      getLineWidth__15dMenu_FmapMap_cFi                            */
+/* 801CF12C-801CF1D4 00A8+00 rc=0 efc=0 .text      getLineWidth__15dMenu_FmapMap_cFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -788,7 +790,7 @@ asm void dMenu_FmapMap_c::getLineWidth(int field_0) {
 #pragma pop
 
 
-/* 801CF1D4-801CF1E0 000C+00 rc=1 efc=0 .text      isDrawType__15dMenu_FmapMap_cFi                              */
+/* 801CF1D4-801CF1E0 000C+00 rc=0 efc=0 .text      isDrawType__15dMenu_FmapMap_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -799,7 +801,7 @@ asm void dMenu_FmapMap_c::isDrawType(int field_0) {
 #pragma pop
 
 
-/* 801CF1E0-801CF208 0028+00 rc=1 efc=1 .text      setFlashOn__15dMenu_FmapMap_cFiiPUci                         */
+/* 801CF1E0-801CF208 0028+00 rc=0 efc=0 .text      setFlashOn__15dMenu_FmapMap_cFiiPUci                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -811,24 +813,24 @@ asm void dMenu_FmapMap_c::setFlashOn(int field_0, int field_1, u8* field_2, int 
 
 
 /* ############################################################################################## */
-/* 80450728-80450730 0004+04 rc=1 efc=0 .sdata     black$4166                                                   */
-u8 data_80450728[8] = {
+/* 80450728-80450730 0004+04 rc=0 efc=0 .sdata     black$4166                                                   */
+u8 data_80450728[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804541C4-804541C8 0004+00 rc=1 efc=0 .sdata2    borderColor0$4169                                            */
+/* 804541C4-804541C8 0004+00 rc=0 efc=0 .sdata2    borderColor0$4169                                            */
 u8 data_804541C4[4] = {
 	0x64, 0x00, 0x00, 0x00,
 };
 
-/* 804541C8-804541CC 0004+00 rc=1 efc=0 .sdata2    borderColor1$4170                                            */
+/* 804541C8-804541CC 0004+00 rc=0 efc=0 .sdata2    borderColor1$4170                                            */
 u8 data_804541C8[4] = {
 	0x68, 0x00, 0x00, 0x00,
 };
 
-/* 801CF208-801CF298 0090+00 rc=1 efc=0 .text      getLineColor__15dMenu_FmapMap_cFii                           */
+/* 801CF208-801CF298 0090+00 rc=0 efc=0 .text      getLineColor__15dMenu_FmapMap_cFii                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -840,12 +842,12 @@ asm void dMenu_FmapMap_c::getLineColor(int field_0, int field_1) {
 
 
 /* ############################################################################################## */
-/* 804541CC-804541D0 0004+00 rc=1 efc=0 .sdata2    l_mapBaseColor$4181                                          */
+/* 804541CC-804541D0 0004+00 rc=0 efc=0 .sdata2    l_mapBaseColor$4181                                          */
 u8 data_804541CC[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801CF298-801CF2A0 0008+00 rc=1 efc=0 .text      getBackColor__15dMenu_FmapMap_cCFv                           */
+/* 801CF298-801CF2A0 0008+00 rc=0 efc=0 .text      getBackColor__15dMenu_FmapMap_cCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -856,7 +858,7 @@ asm void dMenu_FmapMap_c::getBackColor() const {
 #pragma pop
 
 
-/* 801CF2A0-801CF394 00F4+00 rc=1 efc=0 .text      getColor__15dMenu_FmapMap_cFi                                */
+/* 801CF2A0-801CF394 00F4+00 rc=0 efc=0 .text      getColor__15dMenu_FmapMap_cFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -867,7 +869,7 @@ asm void dMenu_FmapMap_c::getColor(int field_0) {
 #pragma pop
 
 
-/* 801CF394-801CF450 00BC+00 rc=1 efc=0 .text      setTexture__15dMenu_FmapMap_cFUsUsUsUs                       */
+/* 801CF394-801CF450 00BC+00 rc=0 efc=0 .text      setTexture__15dMenu_FmapMap_cFUsUsUsUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -878,7 +880,7 @@ asm void dMenu_FmapMap_c::setTexture(u16 field_0, u16 field_1, u16 field_2, u16 
 #pragma pop
 
 
-/* 801CF450-801CF4D0 0080+00 rc=1 efc=1 .text      setRendering__15dMenu_FmapMap_cFP23dMenu_Fmap_world_data_ciffff */
+/* 801CF450-801CF4D0 0080+00 rc=0 efc=0 .text      setRendering__15dMenu_FmapMap_cFP23dMenu_Fmap_world_data_ciffff */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -889,7 +891,7 @@ asm void dMenu_FmapMap_c::setRendering(dMenu_Fmap_world_data_c* field_0, int fie
 #pragma pop
 
 
-/* 801CF4D0-801CF55C 008C+00 rc=1 efc=0 .text      __dt__15renderingFmap_cFv                                    */
+/* 801CF4D0-801CF55C 008C+00 rc=0 efc=0 .text      __dt__15renderingFmap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -900,19 +902,19 @@ asm renderingFmap_c::~renderingFmap_c() {
 #pragma pop
 
 
-/* 801CF55C-801CF564 0008+00 rc=2 efc=0 .text      isRenderingFloor__15renderingFmap_cFi                        */
+/* 801CF55C-801CF564 0008+00 rc=0 efc=0 .text      isRenderingFloor__15renderingFmap_cFi                        */
 bool renderingFmap_c::isRenderingFloor(int field_0) {
 	return true;
 }
 
 
-/* 801CF564-801CF568 0004+00 rc=2 efc=0 .text      beforeDrawPath__15renderingFmap_cFv                          */
+/* 801CF564-801CF568 0004+00 rc=0 efc=0 .text      beforeDrawPath__15renderingFmap_cFv                          */
 void renderingFmap_c::beforeDrawPath() {
 	/* empty function */
 }
 
 
-/* 801CF568-801CF56C 0004+00 rc=2 efc=0 .text      afterDrawPath__15renderingFmap_cFv                           */
+/* 801CF568-801CF56C 0004+00 rc=0 efc=0 .text      afterDrawPath__15renderingFmap_cFv                           */
 void renderingFmap_c::afterDrawPath() {
 	/* empty function */
 }

@@ -50,7 +50,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 8028FFA8-80290030 0088+00 rc=2 efc=2 .text      regist__14JASCallbackMgrFPFPv_lPv                            */
+/* 8028FFA8-80290030 0088+00 rc=0 efc=0 .text      regist__14JASCallbackMgrFPFPv_lPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,7 +61,7 @@ extern "C" asm void regist__14JASCallbackMgrFPFPv_lPv() {
 #pragma pop
 
 
-/* 80290030-802900C4 0094+00 rc=1 efc=1 .text      reject__14JASCallbackMgrFPFPv_lPv                            */
+/* 80290030-802900C4 0094+00 rc=0 efc=0 .text      reject__14JASCallbackMgrFPFPv_lPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ extern "C" asm void reject__14JASCallbackMgrFPFPv_lPv() {
 #pragma pop
 
 
-/* 802900C4-80290140 007C+00 rc=3 efc=3 .text      callback__14JASCallbackMgrFv                                 */
+/* 802900C4-80290140 007C+00 rc=0 efc=0 .text      callback__14JASCallbackMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -23,7 +23,7 @@ extern "C" void TRK_flush_cache(); // 1
 // Declarations:
 // 
 
-/* 8036F548-8036F580 0038+00 rc=5 efc=5 .text      TRK_flush_cache                                              */
+/* 8036F548-8036F580 0038+00 rc=0 efc=0 .text      TRK_flush_cache                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

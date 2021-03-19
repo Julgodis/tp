@@ -60,7 +60,7 @@ lbl_80007A1C:
 /* 80007A24 00000008  2C 00 00 00 */	cmpwi r0, 0
 /* 80007A28 0000000C  40 82 00 1C */	bne lbl_80007A44
 /* 80007A2C 00000010  38 80 00 00 */	li r4, 0
-/* 80007A30 00000014  98 8D 8F 81 */	stb r4, struct_80451500+0x1(r13)
+/* 80007A30 00000014  98 8D 8F 81 */	stb r4, -0x707f(r13)
 /* 80007A34 00000018  3C 60 80 01 */	lis r3, mDoRst_resetCallBack__FiPv@ha
 /* 80007A38 0000001C  38 03 57 4C */	addi r0, r3, mDoRst_resetCallBack__FiPv@l
 /* 80007A3C 00000020  90 0D 8F 6C */	stw r0, sCallback__Q210JUTGamePad13C3ButtonReset(r13)

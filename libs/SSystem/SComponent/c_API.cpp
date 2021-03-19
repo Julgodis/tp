@@ -10,7 +10,7 @@
 // 
 
 
-SECTION_DATA extern void*g_cAPI_Interface[6];
+SECTION_DATA extern void* g_cAPI_Interface[6];
 
 // 
 // External References:
@@ -35,7 +35,7 @@ extern "C" void mDoGph_Create__Fv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C3528-803C3540 0018+00 rc=3 efc=3 .data      g_cAPI_Interface                                             */
+/* 803C3528-803C3540 0018+00 rc=0 efc=0 .data      g_cAPI_Interface                                             */
 void* g_cAPI_Interface[6] = {
 	(void*)mDoGph_Create__Fv,
 	(void*)mDoGph_BeforeOfDraw__Fv,

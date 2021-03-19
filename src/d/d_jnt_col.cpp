@@ -9,10 +9,7 @@
 // Types:
 // 
 
-struct dJntColData_c {
-};
-
-struct J3DModel {
+struct csXyz {
 };
 
 struct Vec {
@@ -28,15 +25,18 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
-struct fopAc_ac_c {
-};
-
-struct csXyz {
-};
-
 struct cM3dGLin {
 	/* 80036A5C */ ~cM3dGLin();
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
+};
+
+struct J3DModel {
+};
+
+struct dJntColData_c {
+};
+
+struct fopAc_ac_c {
 };
 
 struct dJntCol_c {
@@ -83,8 +83,8 @@ extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz(); // 1
 extern "C" void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi(); // 1
 extern "C" void setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz(); // 1
-SECTION_DATA extern void*const __vt__8cM3dGLin[3];
-SECTION_DATA extern void*const __vt__8cM3dGSph[3];
+SECTION_DATA extern void* const __vt__8cM3dGLin[3];
+SECTION_DATA extern void* const __vt__8cM3dGSph[3];
 SECTION_SDATA2 extern f32 d_d_jnt_col__lit_3655;
 SECTION_SDATA2 extern f32 d_d_jnt_col__lit_4141;
 SECTION_SDATA2 extern u8 d_d_jnt_col__lit_4142[4 + 4 /* padding */];
@@ -166,8 +166,8 @@ extern "C" void _restgpr_19(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_DATA extern void*const __vt__8cM3dGPla[3];
-SECTION_DATA extern void*const __vt__8cM3dGCyl[3];
+SECTION_DATA extern void* const __vt__8cM3dGPla[3];
+SECTION_DATA extern void* const __vt__8cM3dGCyl[3];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_BSS extern u8 BaseZ__4cXyz[12];
 SECTION_SDATA extern u32 __float_nan;
@@ -177,7 +177,7 @@ SECTION_SDATA extern u32 __float_max;
 // Declarations:
 // 
 
-/* 80035C8C-80035CA0 0014+00 rc=1 efc=1 .text      __ct__9dJntCol_cFv                                           */
+/* 80035C8C-80035CA0 0014+00 rc=0 efc=0 .text      __ct__9dJntCol_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -188,7 +188,7 @@ asm dJntCol_c::dJntCol_c() {
 #pragma pop
 
 
-/* 80035CA0-80035CC8 0028+00 rc=2 efc=2 .text      init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli   */
+/* 80035CA0-80035CC8 0028+00 rc=0 efc=0 .text      init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -200,10 +200,10 @@ asm void dJntCol_c::init(fopAc_ac_c* field_0, dJntColData_c const* field_1, J3DM
 
 
 /* ############################################################################################## */
-/* 80451D60-80451D64 0004+00 rc=1 efc=0 .sdata2    @3655                                                        */
+/* 80451D60-80451D64 0004+00 rc=0 efc=0 .sdata2    @3655                                                        */
 f32 d_d_jnt_col__lit_3655 = 500.0f;
 
-/* 80035CC8-80035DC8 0100+00 rc=2 efc=0 .text      setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz       */
+/* 80035CC8-80035DC8 0100+00 rc=0 efc=0 .text      setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -215,54 +215,54 @@ asm void dJntCol_c::setNowLine(cM3dGLin* field_0, cXyz const* field_1, csXyz con
 
 
 /* ############################################################################################## */
-/* 803A78F8-803A7904 000C+00 rc=25 efc=21 .data      __vt__8cM3dGLin                                              */
+/* 803A78F8-803A7904 000C+00 rc=0 efc=0 .data      __vt__8cM3dGLin                                              */
 void* const __vt__8cM3dGLin[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__8cM3dGLinFv,
 };
 
-/* 803A7904-803A7910 000C+00 rc=12 efc=10 .data      __vt__8cM3dGSph                                              */
+/* 803A7904-803A7910 000C+00 rc=0 efc=0 .data      __vt__8cM3dGSph                                              */
 void* const __vt__8cM3dGSph[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__8cM3dGSphFv,
 };
 
-/* 80451D64-80451D68 0004+00 rc=1 efc=0 .sdata2    @4141                                                        */
+/* 80451D64-80451D68 0004+00 rc=0 efc=0 .sdata2    @4141                                                        */
 f32 d_d_jnt_col__lit_4141 = -10000000.0f;
 
-/* 80451D68-80451D70 0004+04 rc=2 efc=0 .sdata2    @4142                                                        */
-u8 d_d_jnt_col__lit_4142[8] = {
+/* 80451D68-80451D70 0004+04 rc=0 efc=0 .sdata2    @4142                                                        */
+u8 d_d_jnt_col__lit_4142[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451D70-80451D78 0008+00 rc=2 efc=0 .sdata2    @4143                                                        */
+/* 80451D70-80451D78 0008+00 rc=0 efc=0 .sdata2    @4143                                                        */
 f64 d_d_jnt_col__lit_4143 = 0.5;
 
-/* 80451D78-80451D80 0008+00 rc=2 efc=0 .sdata2    @4144                                                        */
+/* 80451D78-80451D80 0008+00 rc=0 efc=0 .sdata2    @4144                                                        */
 f64 d_d_jnt_col__lit_4144 = 3.0;
 
-/* 80451D80-80451D88 0008+00 rc=2 efc=0 .sdata2    @4145                                                        */
+/* 80451D80-80451D88 0008+00 rc=0 efc=0 .sdata2    @4145                                                        */
 u8 d_d_jnt_col__lit_4145[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451D88-80451D8C 0004+00 rc=1 efc=0 .sdata2    @4146                                                        */
+/* 80451D88-80451D8C 0004+00 rc=0 efc=0 .sdata2    @4146                                                        */
 f32 d_d_jnt_col__lit_4146 = 1.0f / 100.0f;
 
-/* 80451D8C-80451D90 0004+00 rc=2 efc=0 .sdata2    @4147                                                        */
+/* 80451D8C-80451D90 0004+00 rc=0 efc=0 .sdata2    @4147                                                        */
 f32 d_d_jnt_col__lit_4147 = 9.999999747378752e-05f;
 
-/* 80451D90-80451D94 0004+00 rc=1 efc=0 .sdata2    @4148                                                        */
+/* 80451D90-80451D94 0004+00 rc=0 efc=0 .sdata2    @4148                                                        */
 f32 d_d_jnt_col__lit_4148 = 0.5f;
 
-/* 80451D94-80451D98 0004+00 rc=1 efc=0 .sdata2    @4149                                                        */
+/* 80451D94-80451D98 0004+00 rc=0 efc=0 .sdata2    @4149                                                        */
 f32 d_d_jnt_col__lit_4149 = 1.0f;
 
-/* 80035DC8-80036A5C 0C94+00 rc=2 efc=0 .text      searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi         */
+/* 80035DC8-80036A5C 0C94+00 rc=0 efc=0 .text      searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,7 +273,7 @@ asm void dJntCol_c::searchNearPos(cM3dGLin const* field_0, cXyz const* field_1, 
 #pragma pop
 
 
-/* 80036A5C-80036AA4 0048+00 rc=4 efc=3 .text      __dt__8cM3dGLinFv                                            */
+/* 80036A5C-80036AA4 0048+00 rc=0 efc=0 .text      __dt__8cM3dGLinFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -284,7 +284,7 @@ asm cM3dGLin::~cM3dGLin() {
 #pragma pop
 
 
-/* 80036AA4-80036AEC 0048+00 rc=1 efc=0 .text      __dt__8cM3dGSphFv                                            */
+/* 80036AA4-80036AEC 0048+00 rc=0 efc=0 .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -306,7 +306,7 @@ asm void dJntCol_c::getArrowOffsetPosAndAngle(cXyz const* field_0, csXyz const* 
 #pragma pop
 
 
-/* 80036C44-80036FA8 0364+00 rc=3 efc=3 .text      getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi */
+/* 80036C44-80036FA8 0364+00 rc=0 efc=0 .text      getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

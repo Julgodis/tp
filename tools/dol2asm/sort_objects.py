@@ -1,6 +1,7 @@
-import globals as g
-import util
+
 from collections import defaultdict
+from . import util
+from .exception import Dol2ZelException
 
 class Node:
     def __init__(self, name):
@@ -50,9 +51,6 @@ def sort(keys, order_sections):
     top_nodes = [x for x in nodes.keys() if predecessor_count[x] == 0]
     if len(top_nodes) > 1:
         pass
-        #g.LOG.warning("found multiple top-level nodes (using the first one)")
-        #for node in top_nodes:
-        #    g.LOG.warning(f"    {node}")
     elif len(top_nodes) == 0:
         raise Dol2ZelException("error: found no top-level node")
 

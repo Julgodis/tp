@@ -1,3 +1,0 @@
-lbl_807C1B2C:
-/* 807C1B2C 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 807C1B30 00000004  4B FF FE 98 */	b __dt__14dBgS_ObjGndChkFv

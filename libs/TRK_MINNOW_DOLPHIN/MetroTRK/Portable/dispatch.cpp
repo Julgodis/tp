@@ -16,7 +16,7 @@ extern "C" void TRKDispatchMessage(); // 1
 extern "C" bool TRKInitializeDispatcher(); // 1
 SECTION_RODATA extern const u8 MetroTRK_Portable_dispatch__lit_126[25 + 3 /* padding */];
 SECTION_RODATA extern const u8 MetroTRK_Portable_dispatch__lit_127[29 + 7 /* padding */];
-SECTION_DATA extern void*MetroTRK_Portable_dispatch__lit_128[28];
+SECTION_DATA extern void* MetroTRK_Portable_dispatch__lit_128[27 + 1 /* padding */];
 
 // 
 // External References:
@@ -61,24 +61,24 @@ extern "C" void MWTRACE(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803A2890-803A28AC 0019+03 rc=1 efc=0 .rodata    @126                                                         */
-SECTION_RODATA const u8 MetroTRK_Portable_dispatch__lit_126[28] = {
+/* 803A2890-803A28AC 0019+03 rc=0 efc=0 .rodata    @126                                                         */
+const u8 MetroTRK_Portable_dispatch__lit_126[25 + 3 /* padding */] = {
 	0x44, 0x69, 0x73, 0x70, 0x61, 0x74, 0x63, 0x68, 0x20, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64,
 	0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
-/* 803A28AC-803A28D0 001D+07 rc=1 efc=0 .rodata    @127                                                         */
-SECTION_RODATA const u8 MetroTRK_Portable_dispatch__lit_127[36] = {
+/* 803A28AC-803A28D0 001D+07 rc=0 efc=0 .rodata    @127                                                         */
+const u8 MetroTRK_Portable_dispatch__lit_127[29 + 7 /* padding */] = {
 	0x44, 0x69, 0x73, 0x70, 0x61, 0x74, 0x63, 0x68, 0x20, 0x63, 0x6F, 0x6D, 0x70, 0x6C, 0x65, 0x74,
 	0x65, 0x20, 0x65, 0x72, 0x72, 0x20, 0x3D, 0x20, 0x25, 0x6C, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803D3190-803D3200 006C+04 rc=1 efc=0 .data      @128                                                         */
-void* MetroTRK_Portable_dispatch__lit_128[28] = {
+/* 803D3190-803D3200 006C+04 rc=0 efc=0 .data      @128                                                         */
+void* MetroTRK_Portable_dispatch__lit_128[27 + 1 /* padding */] = {
 	(void*)(((char*)TRKDispatchMessage)+0x13C),
 	(void*)(((char*)TRKDispatchMessage)+0x60),
 	(void*)(((char*)TRKDispatchMessage)+0x70),
@@ -110,7 +110,7 @@ void* MetroTRK_Portable_dispatch__lit_128[28] = {
 	NULL,
 };
 
-/* 8036DB9C-8036DD0C 0170+00 rc=2 efc=1 .text      TRKDispatchMessage                                           */
+/* 8036DB9C-8036DD0C 0170+00 rc=0 efc=0 .text      TRKDispatchMessage                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +121,7 @@ extern "C" asm void TRKDispatchMessage() {
 #pragma pop
 
 
-/* 8036DD0C-8036DD14 0008+00 rc=1 efc=1 .text      TRKInitializeDispatcher                                      */
+/* 8036DD0C-8036DD14 0008+00 rc=0 efc=0 .text      TRKInitializeDispatcher                                      */
 extern "C" bool TRKInitializeDispatcher() {
 	return false;
 }

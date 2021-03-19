@@ -37,7 +37,7 @@ extern "C" void strlen(); // 1
 // Declarations:
 // 
 
-/* 803688DC-80368924 0048+00 rc=1 efc=1 .text      strrchr                                                      */
+/* 803688DC-80368924 0048+00 rc=0 efc=0 .text      strrchr                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -48,7 +48,7 @@ extern "C" asm void strrchr() {
 #pragma pop
 
 
-/* 80368924-80368954 0030+00 rc=3 efc=3 .text      strchr                                                       */
+/* 80368924-80368954 0030+00 rc=0 efc=0 .text      strchr                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -59,7 +59,7 @@ extern "C" asm void strchr() {
 #pragma pop
 
 
-/* 80368954-80368994 0040+00 rc=6 efc=6 .text      strncmp                                                      */
+/* 80368954-80368994 0040+00 rc=0 efc=0 .text      strncmp                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ extern "C" asm void strncmp() {
 #pragma pop
 
 
-/* 80368994-80368ABC 0128+00 rc=155 efc=155 .text      strcmp                                                       */
+/* 80368994-80368ABC 0128+00 rc=0 efc=0 .text      strcmp                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +81,7 @@ extern "C" asm void strcmp() {
 #pragma pop
 
 
-/* 80368ABC-80368AE8 002C+00 rc=20 efc=20 .text      strcat                                                       */
+/* 80368ABC-80368AE8 002C+00 rc=0 efc=0 .text      strcat                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ extern "C" asm void strcat() {
 #pragma pop
 
 
-/* 80368AE8-80368B2C 0044+00 rc=9 efc=9 .text      strncpy                                                      */
+/* 80368AE8-80368B2C 0044+00 rc=0 efc=0 .text      strncpy                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ extern "C" asm void strncpy() {
 #pragma pop
 
 
-/* 80368B2C-80368BE4 00B8+00 rc=131 efc=131 .text      strcpy                                                       */
+/* 80368B2C-80368BE4 00B8+00 rc=0 efc=0 .text      strcpy                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,7 +114,7 @@ extern "C" asm void strcpy() {
 #pragma pop
 
 
-/* 80368BE4-80368C00 001C+00 rc=28 efc=28 .text      strlen                                                       */
+/* 80368BE4-80368C00 001C+00 rc=0 efc=0 .text      strlen                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -23,7 +23,7 @@ extern "C" void fwide(); // 1
 // Declarations:
 // 
 
-/* 80369114-8036919C 0088+00 rc=5 efc=5 .text      fwide                                                        */
+/* 80369114-8036919C 0088+00 rc=0 efc=0 .text      fwide                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -25,7 +25,7 @@ extern "C" void __ieee754_atan2(); // 1
 // Declarations:
 // 
 
-/* 8036C720-8036C740 0020+00 rc=6 efc=6 .text      atan2                                                        */
+/* 8036C720-8036C740 0020+00 rc=0 efc=0 .text      atan2                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

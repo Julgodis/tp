@@ -58,10 +58,10 @@ extern "C" void initRun__17dEvLib_callback_cFv(); // 1
 extern "C" void executeRun__17dEvLib_callback_cFv(); // 1
 extern "C" void __sinit_d_event_lib_cpp(); // 1
 SECTION_DATA extern u8 d_event_d_event_lib__cNullVec__6Z2Calc[12];
-SECTION_DATA extern void*lit_3617[3];
-SECTION_DATA extern void*lit_3618[3];
-SECTION_DATA extern void*d_event_d_event_lib__lit_3621[3];
-SECTION_DATA extern void*lit_3622[4];
+SECTION_DATA extern void* lit_3617[3];
+SECTION_DATA extern void* lit_3618[3];
+SECTION_DATA extern void* d_event_d_event_lib__lit_3621[3];
+SECTION_DATA extern void* lit_3622[3 + 1 /* padding */];
 SECTION_BSS extern u8 l_startAction[24];
 SECTION_BSS extern u8 l_runAction[24];
 
@@ -99,10 +99,10 @@ asm void dEvLib_callback_c::eventUpdate() {
 
 
 /* ############################################################################################## */
-/* 804246E0-804246F8 0018+00 rc=2 efc=0 .bss       l_startAction                                                */
+/* 804246E0-804246F8 0018+00 rc=0 efc=0 .bss       l_startAction                                                */
 u8 l_startAction[24];
 
-/* 800488A4-80048940 009C+00 rc=1 efc=0 .text      setEvent__17dEvLib_callback_cFiii                            */
+/* 800488A4-80048940 009C+00 rc=0 efc=0 .text      setEvent__17dEvLib_callback_cFiii                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +124,7 @@ asm void dEvLib_callback_c::orderEvent(int field_0, int field_1, int field_2) {
 #pragma pop
 
 
-/* 80048970-800489A8 0038+00 rc=3 efc=0 .text      setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c> */
+/* 80048970-800489A8 0038+00 rc=0 efc=0 .text      setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +135,7 @@ asm void dEvLib_callback_c::setAction(action_class<dEvLib_callback_c>* field_0) 
 #pragma pop
 
 
-/* 800489A8-800489F8 0050+00 rc=1 efc=0 .text      initAction__17dEvLib_callback_cFv                            */
+/* 800489A8-800489F8 0050+00 rc=0 efc=0 .text      initAction__17dEvLib_callback_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,7 +146,7 @@ asm void dEvLib_callback_c::initAction() {
 #pragma pop
 
 
-/* 800489F8-80048A50 0058+00 rc=1 efc=0 .text      executeAction__17dEvLib_callback_cFv                         */
+/* 800489F8-80048A50 0058+00 rc=0 efc=0 .text      executeAction__17dEvLib_callback_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ asm void dEvLib_callback_c::executeAction() {
 #pragma pop
 
 
-/* 80048A50-80048A70 0020+00 rc=1 efc=0 .text      initStart__17dEvLib_callback_cFv                             */
+/* 80048A50-80048A70 0020+00 rc=0 efc=0 .text      initStart__17dEvLib_callback_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,10 +169,10 @@ asm void dEvLib_callback_c::initStart() {
 
 
 /* ############################################################################################## */
-/* 804246F8-80424710 0018+00 rc=2 efc=0 .bss       l_runAction                                                  */
+/* 804246F8-80424710 0018+00 rc=0 efc=0 .bss       l_runAction                                                  */
 u8 l_runAction[24];
 
-/* 80048A70-80048B1C 00AC+00 rc=2 efc=0 .text      executeStart__17dEvLib_callback_cFv                          */
+/* 80048A70-80048B1C 00AC+00 rc=0 efc=0 .text      executeStart__17dEvLib_callback_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -183,7 +183,7 @@ asm void dEvLib_callback_c::executeStart() {
 #pragma pop
 
 
-/* 80048B1C-80048B48 002C+00 rc=1 efc=0 .text      initRun__17dEvLib_callback_cFv                               */
+/* 80048B1C-80048B48 002C+00 rc=0 efc=0 .text      initRun__17dEvLib_callback_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,7 +194,7 @@ asm void dEvLib_callback_c::initRun() {
 #pragma pop
 
 
-/* 80048B48-80048BD8 0090+00 rc=1 efc=0 .text      executeRun__17dEvLib_callback_cFv                            */
+/* 80048B48-80048BD8 0090+00 rc=0 efc=0 .text      executeRun__17dEvLib_callback_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -206,12 +206,12 @@ asm void dEvLib_callback_c::executeRun() {
 
 
 /* ############################################################################################## */
-/* 803A82B8-803A82C4 000C+00 rc=1 efc=0 .data      cNullVec__6Z2Calc                                            */
+/* 803A82B8-803A82C4 000C+00 rc=0 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_event_d_event_lib__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80048BD8-80048C54 007C+00 rc=1 efc=1 .text      __sinit_d_event_lib_cpp                                      */
+/* 80048BD8-80048C54 007C+00 rc=0 efc=0 .text      __sinit_d_event_lib_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,28 +225,28 @@ extern "C" asm void __sinit_d_event_lib_cpp() {
 /* ############################################################################################## */
 /* 803A82C4-803A82D0 000C+00 rc=0 efc=0 .data      @3617                                                        */
 void* lit_3617[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)initStart__17dEvLib_callback_cFv,
 };
 
 /* 803A82D0-803A82DC 000C+00 rc=0 efc=0 .data      @3618                                                        */
 void* lit_3618[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)executeStart__17dEvLib_callback_cFv,
 };
 
 /* 803A82DC-803A82E8 000C+00 rc=0 efc=0 .data      @3621                                                        */
 void* d_event_d_event_lib__lit_3621[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)initRun__17dEvLib_callback_cFv,
 };
 
 /* 803A82E8-803A82F8 000C+04 rc=0 efc=0 .data      @3622                                                        */
-void* lit_3622[4] = {
-	NULL,
+void* lit_3622[3 + 1 /* padding */] = {
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)executeRun__17dEvLib_callback_cFv,
 	/* padding */

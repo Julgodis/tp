@@ -151,11 +151,14 @@ LIBJAUDIO2_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJAudio2.a: $(LIBJAUDIO2_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJAudio2.a
 	@echo $(LIBJAUDIO2_A_O_FILES) > build/LIBJAUDIO2_A_ofiles
-	$(LD) -xm l $(LIBJAUDIO2_A_LDFLAGS) -o $(BUILD_DIR)/libJAudio2.a @build/LIBJAUDIO2_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJAudio2.a
+	@$(LD) -xm l $(LIBJAUDIO2_A_LDFLAGS) -o $(BUILD_DIR)/libJAudio2.a @build/LIBJAUDIO2_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJAudio2.a
 
 $(BUILD_DIR)/libs/JSystem/JAudio2/%.o: libs/JSystem/JAudio2/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJAUDIO2_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJAUDIO2_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

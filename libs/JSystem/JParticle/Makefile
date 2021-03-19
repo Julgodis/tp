@@ -45,11 +45,14 @@ LIBJPARTICLE_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJParticle.a: $(LIBJPARTICLE_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJParticle.a
 	@echo $(LIBJPARTICLE_A_O_FILES) > build/LIBJPARTICLE_A_ofiles
-	$(LD) -xm l $(LIBJPARTICLE_A_LDFLAGS) -o $(BUILD_DIR)/libJParticle.a @build/LIBJPARTICLE_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJParticle.a
+	@$(LD) -xm l $(LIBJPARTICLE_A_LDFLAGS) -o $(BUILD_DIR)/libJParticle.a @build/LIBJPARTICLE_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJParticle.a
 
 $(BUILD_DIR)/libs/JSystem/JParticle/%.o: libs/JSystem/JParticle/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJPARTICLE_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJPARTICLE_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

@@ -1,7 +1,9 @@
-import globals as g
-from symbols import *
+# TODO: REMOVE
 
-def execute(progress, task, section, map_symbols):
+from rich.progress import Progress
+from .exception import Dol2ZelException
+
+def execute(progress: Progress, task, section, map_symbols):
     map_symbols.sort(key=lambda x: (x.addr, x.size))
 
     obj = None

@@ -19,11 +19,14 @@ LIBJSTUDIO_JAUDIO2_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJStudio_JAudio2.a: $(LIBJSTUDIO_JAUDIO2_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJStudio_JAudio2.a
 	@echo $(LIBJSTUDIO_JAUDIO2_A_O_FILES) > build/LIBJSTUDIO_JAUDIO2_A_ofiles
-	$(LD) -xm l $(LIBJSTUDIO_JAUDIO2_A_LDFLAGS) -o $(BUILD_DIR)/libJStudio_JAudio2.a @build/LIBJSTUDIO_JAUDIO2_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJStudio_JAudio2.a
+	@$(LD) -xm l $(LIBJSTUDIO_JAUDIO2_A_LDFLAGS) -o $(BUILD_DIR)/libJStudio_JAudio2.a @build/LIBJSTUDIO_JAUDIO2_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJStudio_JAudio2.a
 
 $(BUILD_DIR)/libs/JSystem/JStudio/JStudio_JAudio2/%.o: libs/JSystem/JStudio/JStudio_JAudio2/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJSTUDIO_JAUDIO2_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJSTUDIO_JAUDIO2_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

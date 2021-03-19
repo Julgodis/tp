@@ -56,19 +56,19 @@ struct JKRFileCache {
 // Forward References:
 // 
 
-static void cCc_Init(); // 2
+void cCc_Init(); // 2
 void cDyl_IsLinked(s16); // 2
 void cDyl_Unlink(s16); // 2
 void cDyl_LinkASync(s16); // 2
-static void cDyl_InitCallback(void*); // 2
+void cDyl_InitCallback(void*); // 2
 void cDyl_InitAsync(); // 2
 void cDyl_InitAsyncIsDone(); // 2
 
-extern "C" static void cCc_Init__Fv(); // 1
+extern "C" void cCc_Init__Fv(); // 1
 extern "C" void cDyl_IsLinked__Fs(); // 1
 extern "C" void cDyl_Unlink__Fs(); // 1
 extern "C" void cDyl_LinkASync__Fs(); // 1
-extern "C" static void cDyl_InitCallback__FPv(); // 1
+extern "C" void cDyl_InitCallback__FPv(); // 1
 extern "C" void cDyl_InitAsync__Fv(); // 1
 extern "C" void cDyl_InitAsyncIsDone__Fv(); // 1
 extern "C" s32 phase_01__7cDylPhsFPv(); // 1
@@ -78,9 +78,9 @@ extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs(); // 1
 extern "C" void Unlink__7cDylPhsFP30request_of_phase_process_classs(); // 1
 extern "C" bool getModuleName__24DynamicModuleControlBaseCFv(); // 1
 extern "C" void __dt__20DynamicModuleControlFv(); // 1
-SECTION_RODATA extern const void*const DynamicNameTable[1514];
-SECTION_RODATA extern const u8 c_c_dylink__stringBase0[10896];
-SECTION_DATA extern void*data_803A3590[4];
+SECTION_RODATA extern const void* DynamicNameTable[1514];
+SECTION_RODATA extern const char* const c_c_dylink__stringBase0;
+SECTION_DATA extern void* data_803A3590[3 + 1 /* padding */];
 SECTION_BSS extern u8 DMC[3168];
 SECTION_SBSS extern u8 data_80450CA8[4];
 SECTION_SBSS extern u8 cDyl_Initialized[4];
@@ -127,15 +127,15 @@ extern "C" void OSSetStringTable(); // 1
 extern "C" void _savegpr_23(); // 1
 extern "C" void _restgpr_23(); // 1
 extern "C" void strcmp(); // 1
-SECTION_DATA extern void*const __vt__20DynamicModuleControl[13];
+SECTION_DATA extern void* const __vt__20DynamicModuleControl[13];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80374640-80375DE8 17A8+00 rc=1 efc=0 .rodata    DynamicNameTable                                             */
-SECTION_RODATA const void* const DynamicNameTable[1514] = {
+/* 80374640-80375DE8 17A8+00 rc=0 efc=0 .rodata    DynamicNameTable                                             */
+const void* DynamicNameTable[1514] = {
 	(void*)0x00140000,
 	(void*)&c_c_dylink__stringBase0,
 	(void*)0x00160000,
@@ -1649,27 +1649,27 @@ SECTION_RODATA const void* const DynamicNameTable[1514] = {
 	(void*)0x03100000,
 	(void*)0x803787EB,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 };
 
-/* 803F0F50-803F1BB0 0C60+00 rc=4 efc=0 .bss       DMC                                                          */
+/* 803F0F50-803F1BB0 0C60+00 rc=0 efc=0 .bss       DMC                                                          */
 u8 DMC[3168];
 
-/* 80450CA8-80450CAC 0004+00 rc=1 efc=0 .sbss      None                                                         */
+/* 80450CA8-80450CAC 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_80450CA8[4];
 
-/* 800183DC-80018544 0168+00 rc=1 efc=0 .text      cCc_Init__Fv                                                 */
+/* 800183DC-80018544 0168+00 rc=0 efc=0 .text      cCc_Init__Fv                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void cCc_Init() {
+asm void cCc_Init() {
 	nofralloc
 #include "asm/c/c_dylink/cCc_Init__Fv.s"
 }
 #pragma pop
 
 
-/* 80018544-8001857C 0038+00 rc=1 efc=1 .text      cDyl_IsLinked__Fs                                            */
+/* 80018544-8001857C 0038+00 rc=0 efc=0 .text      cDyl_IsLinked__Fs                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1680,7 +1680,7 @@ asm void cDyl_IsLinked(s16 field_0) {
 #pragma pop
 
 
-/* 8001857C-800185C0 0044+00 rc=2 efc=1 .text      cDyl_Unlink__Fs                                              */
+/* 8001857C-800185C0 0044+00 rc=0 efc=0 .text      cDyl_Unlink__Fs                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1692,781 +1692,781 @@ asm void cDyl_Unlink(s16 field_0) {
 
 
 /* ############################################################################################## */
-/* 80375DE8-80378878 2A8F+01 rc=3 efc=0 .rodata    @stringBase0                                                 */
+/* 80375DE8-80378878 2A8F+01 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80375DE8 = "d_a_alldie";
-SECTION_DEAD char* const stringBase_80375DF3 = "d_a_obj_swpush";
-SECTION_DEAD char* const stringBase_80375E02 = "d_a_obj_swpush2";
-SECTION_DEAD char* const stringBase_80375E12 = "d_a_obj_swpush5";
-SECTION_DEAD char* const stringBase_80375E22 = "d_a_tag_gstart";
-SECTION_DEAD char* const stringBase_80375E31 = "d_a_obj_lv6elevta";
-SECTION_DEAD char* const stringBase_80375E43 = "d_a_obj_so";
-SECTION_DEAD char* const stringBase_80375E4E = "d_a_obj_movebox";
-SECTION_DEAD char* const stringBase_80375E5E = "d_a_obj_swturn";
-SECTION_DEAD char* const stringBase_80375E6D = "d_a_obj_lv6swturn";
-SECTION_DEAD char* const stringBase_80375E7F = "d_a_obj_sekizoa";
-SECTION_DEAD char* const stringBase_80375E8F = "d_a_obj_gra2";
-SECTION_DEAD char* const stringBase_80375E9C = "d_a_tag_gra";
-SECTION_DEAD char* const stringBase_80375EA8 = "d_a_tag_yami";
-SECTION_DEAD char* const stringBase_80375EB5 = "d_a_obj_ladder";
-SECTION_DEAD char* const stringBase_80375EC4 = "d_a_obj_brakeeff";
-SECTION_DEAD char* const stringBase_80375ED5 = "d_a_obj_fmobj";
-SECTION_DEAD char* const stringBase_80375EE3 = "d_a_obj_lbox";
-SECTION_DEAD char* const stringBase_80375EF0 = "d_a_obj_web0";
-SECTION_DEAD char* const stringBase_80375EFD = "d_a_obj_web1";
-SECTION_DEAD char* const stringBase_80375F0A = "d_a_obj_cb";
-SECTION_DEAD char* const stringBase_80375F15 = "d_a_obj_maki";
-SECTION_DEAD char* const stringBase_80375F22 = "d_a_obj_brg";
-SECTION_DEAD char* const stringBase_80375F2E = "d_a_obj_gb";
-SECTION_DEAD char* const stringBase_80375F39 = "d_a_obj_gm";
-SECTION_DEAD char* const stringBase_80375F44 = "d_a_obj_toby";
-SECTION_DEAD char* const stringBase_80375F51 = "d_a_obj_tp";
-SECTION_DEAD char* const stringBase_80375F5C = "d_a_obj_treesh";
-SECTION_DEAD char* const stringBase_80375F6B = "d_a_obj_zdoor";
-SECTION_DEAD char* const stringBase_80375F79 = "d_a_obj_pillar";
-SECTION_DEAD char* const stringBase_80375F88 = "d_a_obj_cdoor";
-SECTION_DEAD char* const stringBase_80375F96 = "d_a_obj_groundwater";
-SECTION_DEAD char* const stringBase_80375FAA = "d_a_obj_rotBridge";
-SECTION_DEAD char* const stringBase_80375FBC = "d_a_obj_magLift";
-SECTION_DEAD char* const stringBase_80375FCC = "d_a_obj_magLiftRot";
-SECTION_DEAD char* const stringBase_80375FDF = "d_a_obj_lv1Candle00";
-SECTION_DEAD char* const stringBase_80375FF3 = "d_a_obj_lv1Candle01";
-SECTION_DEAD char* const stringBase_80376007 = "d_a_obj_TvCdlst";
-SECTION_DEAD char* const stringBase_80376017 = "d_a_obj_hsTarget";
-SECTION_DEAD char* const stringBase_80376028 = "d_a_obj_heavySw";
-SECTION_DEAD char* const stringBase_80376038 = "d_a_obj_goGate";
-SECTION_DEAD char* const stringBase_80376047 = "d_a_obj_taFence";
-SECTION_DEAD char* const stringBase_80376057 = "d_a_obj_saidan";
-SECTION_DEAD char* const stringBase_80376066 = "d_a_obj_spinLift";
-SECTION_DEAD char* const stringBase_80376077 = "d_a_obj_bmWindow";
-SECTION_DEAD char* const stringBase_80376088 = "d_a_obj_rfHole";
-SECTION_DEAD char* const stringBase_80376097 = "d_a_obj_waterPillar";
-SECTION_DEAD char* const stringBase_803760AB = "d_a_obj_syRock";
-SECTION_DEAD char* const stringBase_803760BA = "d_a_obj_bsGate";
-SECTION_DEAD char* const stringBase_803760C9 = "d_a_obj_amiShutter";
-SECTION_DEAD char* const stringBase_803760DC = "d_a_obj_waterGate";
-SECTION_DEAD char* const stringBase_803760EE = "d_a_obj_lv2Candle";
-SECTION_DEAD char* const stringBase_80376100 = "d_a_obj_togeTrap";
-SECTION_DEAD char* const stringBase_80376111 = "d_a_obj_rotTrap";
-SECTION_DEAD char* const stringBase_80376121 = "d_a_obj_sWallShutter";
-SECTION_DEAD char* const stringBase_80376136 = "d_a_obj_lv5IceWall";
-SECTION_DEAD char* const stringBase_80376149 = "d_a_obj_lv5SwIce";
-SECTION_DEAD char* const stringBase_8037615A = "d_a_obj_lv5FloorBoard";
-SECTION_DEAD char* const stringBase_80376170 = "d_a_obj_Turara";
-SECTION_DEAD char* const stringBase_8037617F = "d_a_obj_twGate";
-SECTION_DEAD char* const stringBase_8037618E = "d_a_obj_digholl";
-SECTION_DEAD char* const stringBase_8037619E = "d_a_obj_digplace";
-SECTION_DEAD char* const stringBase_803761AF = "d_a_obj_testcube";
-SECTION_DEAD char* const stringBase_803761C0 = "d_a_obj_kshutter";
-SECTION_DEAD char* const stringBase_803761D1 = "d_a_npc_coach";
-SECTION_DEAD char* const stringBase_803761DF = "d_a_npc_theB";
-SECTION_DEAD char* const stringBase_803761EC = "d_a_coach_fire";
-SECTION_DEAD char* const stringBase_803761FB = "d_a_coach_2D";
-SECTION_DEAD char* const stringBase_80376208 = "d_a_balloon_2D";
-SECTION_DEAD char* const stringBase_80376217 = "d_a_skip_2D";
-SECTION_DEAD char* const stringBase_80376223 = "d_a_obj_mvstair";
-SECTION_DEAD char* const stringBase_80376233 = "d_a_obj_cowdoor";
-SECTION_DEAD char* const stringBase_80376243 = "d_a_obj_swpropeller";
-SECTION_DEAD char* const stringBase_80376257 = "d_a_obj_bmshutter";
-SECTION_DEAD char* const stringBase_80376269 = "d_a_npc_ks";
-SECTION_DEAD char* const stringBase_80376274 = "d_a_obj_hfuta";
-SECTION_DEAD char* const stringBase_80376282 = "d_a_obj_bkdoor";
-SECTION_DEAD char* const stringBase_80376291 = "d_a_obj_cboard";
-SECTION_DEAD char* const stringBase_803762A0 = "d_a_obj_mgate";
-SECTION_DEAD char* const stringBase_803762AE = "d_a_obj_ikada";
-SECTION_DEAD char* const stringBase_803762BC = "d_a_obj_ice_l";
-SECTION_DEAD char* const stringBase_803762CA = "d_a_obj_ice_s";
-SECTION_DEAD char* const stringBase_803762D8 = "d_a_obj_enemy_create";
-SECTION_DEAD char* const stringBase_803762ED = "d_a_obj_bhbridge";
-SECTION_DEAD char* const stringBase_803762FE = "d_a_obj_kaisou";
-SECTION_DEAD char* const stringBase_8037630D = "d_a_obj_hhashi";
-SECTION_DEAD char* const stringBase_8037631C = "d_a_obj_bhashi";
-SECTION_DEAD char* const stringBase_8037632B = "d_a_obj_octhashi";
-SECTION_DEAD char* const stringBase_8037633C = "d_a_obj_thashi";
-SECTION_DEAD char* const stringBase_8037634B = "d_a_obj_crvgate";
-SECTION_DEAD char* const stringBase_8037635B = "d_a_obj_crvfence";
-SECTION_DEAD char* const stringBase_8037636C = "d_a_obj_crvhahen";
-SECTION_DEAD char* const stringBase_8037637D = "d_a_obj_crvsteel";
-SECTION_DEAD char* const stringBase_8037638E = "d_a_obj_crvlh_up";
-SECTION_DEAD char* const stringBase_8037639F = "d_a_obj_crvlh_down";
-SECTION_DEAD char* const stringBase_803763B2 = "d_a_obj_riverrock";
-SECTION_DEAD char* const stringBase_803763C4 = "d_a_obj_dust";
-SECTION_DEAD char* const stringBase_803763D1 = "d_a_obj_ita";
-SECTION_DEAD char* const stringBase_803763DD = "d_a_obj_window";
-SECTION_DEAD char* const stringBase_803763EC = "d_a_obj_metalbox";
-SECTION_DEAD char* const stringBase_803763FD = "d_a_obj_bbox";
-SECTION_DEAD char* const stringBase_8037640A = "d_a_obj_msima";
-SECTION_DEAD char* const stringBase_80376418 = "d_a_obj_myogan";
-SECTION_DEAD char* const stringBase_80376427 = "d_a_b_zant_sima";
-SECTION_DEAD char* const stringBase_80376437 = "d_a_obj_cblock";
-SECTION_DEAD char* const stringBase_80376446 = "d_a_obj_cwall";
-SECTION_DEAD char* const stringBase_80376454 = "d_a_obj_kgate";
-SECTION_DEAD char* const stringBase_80376462 = "d_a_obj_rgate";
-SECTION_DEAD char* const stringBase_80376470 = "d_a_obj_onsen";
-SECTION_DEAD char* const stringBase_8037647E = "d_a_obj_chest";
-SECTION_DEAD char* const stringBase_8037648C = "d_a_obj_bemos";
-SECTION_DEAD char* const stringBase_8037649A = "d_a_obj_rope_bridge";
-SECTION_DEAD char* const stringBase_803764AE = "d_a_obj_well_cover";
-SECTION_DEAD char* const stringBase_803764C1 = "d_a_obj_grave_stone";
-SECTION_DEAD char* const stringBase_803764D5 = "d_a_obj_zra_rock";
-SECTION_DEAD char* const stringBase_803764E6 = "d_a_obj_gra_rock";
-SECTION_DEAD char* const stringBase_803764F7 = "d_a_obj_grz_rock";
-SECTION_DEAD char* const stringBase_80376508 = "d_a_obj_graWall";
-SECTION_DEAD char* const stringBase_80376518 = "d_a_obj_onsenFire";
-SECTION_DEAD char* const stringBase_8037652A = "d_a_obj_lv6bemos";
-SECTION_DEAD char* const stringBase_8037653B = "d_a_obj_lv6bemos2";
-SECTION_DEAD char* const stringBase_8037654D = "d_a_obj_barDesk";
-SECTION_DEAD char* const stringBase_8037655D = "d_a_obj_digsnow";
-SECTION_DEAD char* const stringBase_8037656D = "d_a_obj_Y_taihou";
-SECTION_DEAD char* const stringBase_8037657E = "d_a_obj_dmelevator";
-SECTION_DEAD char* const stringBase_80376591 = "d_a_obj_lv6TogeRoll";
-SECTION_DEAD char* const stringBase_803765A5 = "d_a_obj_lv6TogeTrap";
-SECTION_DEAD char* const stringBase_803765B9 = "d_a_obj_lv6Tenbin";
-SECTION_DEAD char* const stringBase_803765CB = "d_a_obj_lv6SwGate";
-SECTION_DEAD char* const stringBase_803765DD = "d_a_obj_lv6Lblock";
-SECTION_DEAD char* const stringBase_803765EF = "d_a_obj_lv6ChangeGate";
-SECTION_DEAD char* const stringBase_80376605 = "d_a_obj_lv6FurikoTrap";
-SECTION_DEAD char* const stringBase_8037661B = "d_a_obj_lv6SzGate";
-SECTION_DEAD char* const stringBase_8037662D = "d_a_obj_lv4EdShutter";
-SECTION_DEAD char* const stringBase_80376642 = "d_a_obj_lv4Gate";
-SECTION_DEAD char* const stringBase_80376652 = "d_a_obj_lv4PoGate";
-SECTION_DEAD char* const stringBase_80376664 = "d_a_obj_lv4SlideWall";
-SECTION_DEAD char* const stringBase_80376679 = "d_a_obj_lv4HsTarget";
-SECTION_DEAD char* const stringBase_8037668D = "d_a_obj_lv7PropellerY";
-SECTION_DEAD char* const stringBase_803766A3 = "d_a_obj_lv7BsGate";
-SECTION_DEAD char* const stringBase_803766B5 = "d_a_obj_lv8OptiLift";
-SECTION_DEAD char* const stringBase_803766C9 = "d_a_obj_lv8KekkaiTrap";
-SECTION_DEAD char* const stringBase_803766DF = "d_a_obj_lv8Lift";
-SECTION_DEAD char* const stringBase_803766EF = "d_a_obj_lv8UdFloor";
-SECTION_DEAD char* const stringBase_80376702 = "d_a_obj_lv9SwShutter";
-SECTION_DEAD char* const stringBase_80376717 = "d_a_obj_tobyhouse";
-SECTION_DEAD char* const stringBase_80376729 = "d_a_obj_poCandle";
-SECTION_DEAD char* const stringBase_8037673A = "d_a_obj_lv4digsand";
-SECTION_DEAD char* const stringBase_8037674D = "d_a_obj_fallobj";
-SECTION_DEAD char* const stringBase_8037675D = "d_a_obj_smgdoor";
-SECTION_DEAD char* const stringBase_8037676D = "d_a_obj_swLight";
-SECTION_DEAD char* const stringBase_8037677D = "d_a_obj_avalanche";
-SECTION_DEAD char* const stringBase_8037678F = "d_a_obj_mirror_screw";
-SECTION_DEAD char* const stringBase_803767A4 = "d_a_obj_mirror_sand";
-SECTION_DEAD char* const stringBase_803767B8 = "d_a_obj_mirror_table";
-SECTION_DEAD char* const stringBase_803767CD = "d_a_obj_mirror_chain";
-SECTION_DEAD char* const stringBase_803767E2 = "d_a_obj_mirror_6pole";
-SECTION_DEAD char* const stringBase_803767F7 = "d_a_obj_swspinner";
-SECTION_DEAD char* const stringBase_80376809 = "d_a_obj_thdoor";
-SECTION_DEAD char* const stringBase_80376818 = "d_a_obj_lv7bridge";
-SECTION_DEAD char* const stringBase_8037682A = "d_a_obj_zrTurara";
-SECTION_DEAD char* const stringBase_8037683B = "d_a_obj_takaraDai";
-SECTION_DEAD char* const stringBase_8037684D = "d_a_obj_table";
-SECTION_DEAD char* const stringBase_8037685B = "d_a_obj_catdoor";
-SECTION_DEAD char* const stringBase_8037686B = "d_a_obj_tgake";
-SECTION_DEAD char* const stringBase_80376879 = "d_a_cstaF";
-SECTION_DEAD char* const stringBase_80376883 = "d_a_obj_lv4RailWall";
-SECTION_DEAD char* const stringBase_80376897 = "d_a_obj_lv4sand";
-SECTION_DEAD char* const stringBase_803768A7 = "d_a_obj_pdoor";
-SECTION_DEAD char* const stringBase_803768B5 = "d_a_door_push";
-SECTION_DEAD char* const stringBase_803768C3 = "d_a_obj_ganonwall2";
-SECTION_DEAD char* const stringBase_803768D6 = "d_a_obj_lv4bridge";
-SECTION_DEAD char* const stringBase_803768E8 = "d_a_obj_lv4floor";
-SECTION_DEAD char* const stringBase_803768F9 = "d_a_tag_spinner";
-SECTION_DEAD char* const stringBase_80376909 = "d_a_obj_swhang";
-SECTION_DEAD char* const stringBase_80376918 = "d_a_obj_rstair";
-SECTION_DEAD char* const stringBase_80376927 = "d_a_obj_magne_arm";
-SECTION_DEAD char* const stringBase_80376939 = "d_a_obj_kwheel00";
-SECTION_DEAD char* const stringBase_8037694A = "d_a_obj_kwheel01";
-SECTION_DEAD char* const stringBase_8037695B = "d_a_obj_lv5ychndlr";
-SECTION_DEAD char* const stringBase_8037696E = "d_a_obj_lv4prelvtr";
-SECTION_DEAD char* const stringBase_80376981 = "d_a_obj_hasu2";
-SECTION_DEAD char* const stringBase_8037698F = "d_a_obj_lv5yiblltray";
-SECTION_DEAD char* const stringBase_803769A4 = "d_a_obj_lv6egate";
-SECTION_DEAD char* const stringBase_803769B5 = "d_a_obj_pdtile";
-SECTION_DEAD char* const stringBase_803769C4 = "d_a_obj_pdwall";
-SECTION_DEAD char* const stringBase_803769D3 = "d_a_obj_lv4prwall";
-SECTION_DEAD char* const stringBase_803769E5 = "d_a_obj_klift00";
-SECTION_DEAD char* const stringBase_803769F5 = "d_a_b_oh";
-SECTION_DEAD char* const stringBase_803769FE = "d_a_obj_lv4chandelier";
-SECTION_DEAD char* const stringBase_80376A14 = "d_a_obj_lv3saka00";
-SECTION_DEAD char* const stringBase_80376A26 = "d_a_obj_lv3Water";
-SECTION_DEAD char* const stringBase_80376A37 = "d_a_obj_lv3Water2";
-SECTION_DEAD char* const stringBase_80376A49 = "d_a_obj_lv3WaterB";
-SECTION_DEAD char* const stringBase_80376A5B = "d_a_obj_hbombkoya";
-SECTION_DEAD char* const stringBase_80376A6D = "d_a_obj_szbridge";
-SECTION_DEAD char* const stringBase_80376A7E = "d_a_obj_warp_kbrg";
-SECTION_DEAD char* const stringBase_80376A90 = "d_a_obj_warp_obrg";
-SECTION_DEAD char* const stringBase_80376AA2 = "d_a_obj_burnbox";
-SECTION_DEAD char* const stringBase_80376AB2 = "d_a_obj_kjgjs";
-SECTION_DEAD char* const stringBase_80376AC0 = "d_a_obj_ihasi";
-SECTION_DEAD char* const stringBase_80376ACE = "d_a_obj_iceblock";
-SECTION_DEAD char* const stringBase_80376ADF = "d_a_obj_volcball";
-SECTION_DEAD char* const stringBase_80376AF0 = "d_a_obj_volcbom";
-SECTION_DEAD char* const stringBase_80376B00 = "d_a_obj_vground";
-SECTION_DEAD char* const stringBase_80376B10 = "d_a_obj_kkanban";
-SECTION_DEAD char* const stringBase_80376B20 = "d_a_e_ph";
-SECTION_DEAD char* const stringBase_80376B29 = "d_a_npc_zra";
-SECTION_DEAD char* const stringBase_80376B35 = "d_a_obj_chandelier";
-SECTION_DEAD char* const stringBase_80376B48 = "d_a_obj_stopper2";
-SECTION_DEAD char* const stringBase_80376B59 = "d_a_door_shutter";
-SECTION_DEAD char* const stringBase_80376B6A = "d_a_tag_hinit";
-SECTION_DEAD char* const stringBase_80376B78 = "d_a_tag_hjump";
-SECTION_DEAD char* const stringBase_80376B86 = "d_a_tag_ajnot";
-SECTION_DEAD char* const stringBase_80376B94 = "d_a_tag_hstop";
-SECTION_DEAD char* const stringBase_80376BA2 = "d_a_canoe";
-SECTION_DEAD char* const stringBase_80376BAC = "d_a_horse";
-SECTION_DEAD char* const stringBase_80376BB6 = "d_a_e_wb";
-SECTION_DEAD char* const stringBase_80376BBF = "d_a_obj_ito";
-SECTION_DEAD char* const stringBase_80376BCB = "d_a_obj_sw";
-SECTION_DEAD char* const stringBase_80376BD6 = "d_a_spinner";
-SECTION_DEAD char* const stringBase_80376BE2 = "d_a_b_ob";
-SECTION_DEAD char* const stringBase_80376BEB = "d_a_kago";
-SECTION_DEAD char* const stringBase_80376BF4 = "d_a_e_yc";
-SECTION_DEAD char* const stringBase_80376BFD = "d_a_b_ds";
-SECTION_DEAD char* const stringBase_80376C06 = "d_a_b_dr";
-SECTION_DEAD char* const stringBase_80376C0F = "d_a_b_zant_mobile";
-SECTION_DEAD char* const stringBase_80376C21 = "d_a_b_zant";
-SECTION_DEAD char* const stringBase_80376C2C = "d_a_b_zant_magic";
-SECTION_DEAD char* const stringBase_80376C3D = "d_a_tbox";
-SECTION_DEAD char* const stringBase_80376C46 = "d_a_tbox2";
-SECTION_DEAD char* const stringBase_80376C50 = "d_a_boomerang";
-SECTION_DEAD char* const stringBase_80376C5E = "d_a_midna";
-SECTION_DEAD char* const stringBase_80376C68 = "d_a_npc_tk";
-SECTION_DEAD char* const stringBase_80376C73 = "d_a_npc_worm";
-SECTION_DEAD char* const stringBase_80376C80 = "d_a_ppolamp";
-SECTION_DEAD char* const stringBase_80376C8C = "d_a_obj_bky_rock";
-SECTION_DEAD char* const stringBase_80376C9D = "d_a_hitobj";
-SECTION_DEAD char* const stringBase_80376CA8 = "d_a_ep";
-SECTION_DEAD char* const stringBase_80376CAF = "d_a_cow";
-SECTION_DEAD char* const stringBase_80376CB7 = "d_a_peru";
-SECTION_DEAD char* const stringBase_80376CC0 = "d_a_ni";
-SECTION_DEAD char* const stringBase_80376CC7 = "d_a_npc_tkj2";
-SECTION_DEAD char* const stringBase_80376CD4 = "d_a_sq";
-SECTION_DEAD char* const stringBase_80376CDB = "d_a_npc_sq";
-SECTION_DEAD char* const stringBase_80376CE6 = "d_a_do";
-SECTION_DEAD char* const stringBase_80376CED = "d_a_npc_ne";
-SECTION_DEAD char* const stringBase_80376CF8 = "d_a_npc_tr";
-SECTION_DEAD char* const stringBase_80376D03 = "d_a_npc_lf";
-SECTION_DEAD char* const stringBase_80376D0E = "d_a_obj_food";
-SECTION_DEAD char* const stringBase_80376D1B = "d_a_obj_ki";
-SECTION_DEAD char* const stringBase_80376D26 = "d_a_obj_kita";
-SECTION_DEAD char* const stringBase_80376D33 = "d_a_obj_key";
-SECTION_DEAD char* const stringBase_80376D3F = "d_a_obj_keyhole";
-SECTION_DEAD char* const stringBase_80376D4F = "d_a_obj_Lv5Key";
-SECTION_DEAD char* const stringBase_80376D5E = "d_a_obj_lp";
-SECTION_DEAD char* const stringBase_80376D69 = "d_a_obj_tatigi";
-SECTION_DEAD char* const stringBase_80376D78 = "d_a_obj_rock";
-SECTION_DEAD char* const stringBase_80376D85 = "d_a_obj_wflag";
-SECTION_DEAD char* const stringBase_80376D93 = "d_a_obj_kage";
-SECTION_DEAD char* const stringBase_80376DA0 = "d_a_obj_kanban2";
-SECTION_DEAD char* const stringBase_80376DB0 = "d_a_obj_balloon";
-SECTION_DEAD char* const stringBase_80376DC0 = "d_a_obj_suisya";
-SECTION_DEAD char* const stringBase_80376DCF = "d_a_obj_oiltubo";
-SECTION_DEAD char* const stringBase_80376DDF = "d_a_obj_roten";
-SECTION_DEAD char* const stringBase_80376DED = "d_a_obj_ss_drink";
-SECTION_DEAD char* const stringBase_80376DFE = "d_a_obj_ss_item";
-SECTION_DEAD char* const stringBase_80376E0E = "d_a_tag_ss_drink";
-SECTION_DEAD char* const stringBase_80376E1F = "d_a_tag_bottle_item";
-SECTION_DEAD char* const stringBase_80376E33 = "d_a_tag_lv5soup";
-SECTION_DEAD char* const stringBase_80376E43 = "d_a_tag_myna_light";
-SECTION_DEAD char* const stringBase_80376E56 = "d_a_tag_shop_camera";
-SECTION_DEAD char* const stringBase_80376E6A = "d_a_tag_shop_item";
-SECTION_DEAD char* const stringBase_80376E7C = "d_a_obj_ndoor";
-SECTION_DEAD char* const stringBase_80376E8A = "d_a_obj_udoor";
-SECTION_DEAD char* const stringBase_80376E98 = "d_a_obj_usaku";
-SECTION_DEAD char* const stringBase_80376EA6 = "d_a_obj_sm_door";
-SECTION_DEAD char* const stringBase_80376EB6 = "d_a_obj_bed";
-SECTION_DEAD char* const stringBase_80376EC2 = "d_a_obj_boumato";
-SECTION_DEAD char* const stringBase_80376ED2 = "d_a_obj_itamato";
-SECTION_DEAD char* const stringBase_80376EE2 = "d_a_obj_nougu";
-SECTION_DEAD char* const stringBase_80376EF0 = "d_a_obj_stick";
-SECTION_DEAD char* const stringBase_80376EFE = "d_a_obj_mie";
-SECTION_DEAD char* const stringBase_80376F0A = "d_a_obj_sekidoor";
-SECTION_DEAD char* const stringBase_80376F1B = "d_a_obj_sekizo";
-SECTION_DEAD char* const stringBase_80376F2A = "d_a_obj_smtile";
-SECTION_DEAD char* const stringBase_80376F39 = "d_a_npc_fish";
-SECTION_DEAD char* const stringBase_80376F46 = "d_a_mg_fish";
-SECTION_DEAD char* const stringBase_80376F52 = "d_a_mg_fshop";
-SECTION_DEAD char* const stringBase_80376F5F = "d_a_npc_du";
-SECTION_DEAD char* const stringBase_80376F6A = "d_a_disappear";
-SECTION_DEAD char* const stringBase_80376F78 = "d_a_obj_mato";
-SECTION_DEAD char* const stringBase_80376F85 = "d_a_obj_flag";
-SECTION_DEAD char* const stringBase_80376F92 = "d_a_obj_flag2";
-SECTION_DEAD char* const stringBase_80376FA0 = "d_a_obj_flag3";
-SECTION_DEAD char* const stringBase_80376FAE = "d_a_obj_gomikabe";
-SECTION_DEAD char* const stringBase_80376FBF = "d_a_obj_yousei";
-SECTION_DEAD char* const stringBase_80376FCE = "d_a_obj_kabuto";
-SECTION_DEAD char* const stringBase_80376FDD = "d_a_obj_cho";
-SECTION_DEAD char* const stringBase_80376FE9 = "d_a_obj_kuwagata";
-SECTION_DEAD char* const stringBase_80376FFA = "d_a_obj_nan";
-SECTION_DEAD char* const stringBase_80377006 = "d_a_obj_dan";
-SECTION_DEAD char* const stringBase_80377012 = "d_a_obj_kamakiri";
-SECTION_DEAD char* const stringBase_80377023 = "d_a_obj_ten";
-SECTION_DEAD char* const stringBase_8037702F = "d_a_obj_ari";
-SECTION_DEAD char* const stringBase_8037703B = "d_a_obj_kag";
-SECTION_DEAD char* const stringBase_80377047 = "d_a_obj_batta";
-SECTION_DEAD char* const stringBase_80377055 = "d_a_obj_tombo";
-SECTION_DEAD char* const stringBase_80377063 = "d_a_obj_katatsumuri";
-SECTION_DEAD char* const stringBase_80377077 = "d_a_obj_h_saku";
-SECTION_DEAD char* const stringBase_80377086 = "d_a_obj_yobikusa";
-SECTION_DEAD char* const stringBase_80377097 = "d_a_obj_kazeneko";
-SECTION_DEAD char* const stringBase_803770A8 = "d_a_obj_kznkarm";
-SECTION_DEAD char* const stringBase_803770B8 = "d_a_obj_nameplate";
-SECTION_DEAD char* const stringBase_803770CA = "d_a_obj_ornament_cloth";
-SECTION_DEAD char* const stringBase_803770E1 = "d_a_obj_laundry_rope";
-SECTION_DEAD char* const stringBase_803770F6 = "d_a_obj_sakuita_rope";
-SECTION_DEAD char* const stringBase_8037710B = "d_a_obj_sakuita";
-SECTION_DEAD char* const stringBase_8037711B = "d_a_obj_laundry";
-SECTION_DEAD char* const stringBase_8037712B = "d_a_warp_bug";
-SECTION_DEAD char* const stringBase_80377138 = "d_a_izumi_gate";
-SECTION_DEAD char* const stringBase_80377147 = "d_a_obj_fchain";
-SECTION_DEAD char* const stringBase_80377156 = "d_a_obj_wchain";
-SECTION_DEAD char* const stringBase_80377165 = "d_a_tag_attention";
-SECTION_DEAD char* const stringBase_80377177 = "d_a_obj_tornado";
-SECTION_DEAD char* const stringBase_80377187 = "d_a_obj_tornado2";
-SECTION_DEAD char* const stringBase_80377198 = "d_a_obj_firepillar";
-SECTION_DEAD char* const stringBase_803771AB = "d_a_obj_firepillar2";
-SECTION_DEAD char* const stringBase_803771BF = "d_a_obj_inobone";
-SECTION_DEAD char* const stringBase_803771CF = "d_a_obj_stopper";
-SECTION_DEAD char* const stringBase_803771DF = "d_a_obj_mhole";
-SECTION_DEAD char* const stringBase_803771ED = "d_a_tag_magne";
-SECTION_DEAD char* const stringBase_803771FB = "d_a_obj_bosswarp";
-SECTION_DEAD char* const stringBase_8037720C = "d_a_obj_wood_pendulum";
-SECTION_DEAD char* const stringBase_80377222 = "d_a_obj_wdStick";
-SECTION_DEAD char* const stringBase_80377232 = "d_a_obj_stairBlock";
-SECTION_DEAD char* const stringBase_80377245 = "d_a_obj_geyser";
-SECTION_DEAD char* const stringBase_80377254 = "d_a_obj_ktOnFire";
-SECTION_DEAD char* const stringBase_80377265 = "d_a_obj_fireWood";
-SECTION_DEAD char* const stringBase_80377276 = "d_a_obj_fireWood2";
-SECTION_DEAD char* const stringBase_80377288 = "d_a_obj_gpTaru";
-SECTION_DEAD char* const stringBase_80377297 = "d_a_obj_onsenTaru";
-SECTION_DEAD char* const stringBase_803772A9 = "d_a_obj_kiPot";
-SECTION_DEAD char* const stringBase_803772B7 = "d_a_tboxSw";
-SECTION_DEAD char* const stringBase_803772C2 = "d_a_obj_swchain";
-SECTION_DEAD char* const stringBase_803772D2 = "d_a_obj_wsword";
-SECTION_DEAD char* const stringBase_803772E1 = "d_a_obj_stoneMark";
-SECTION_DEAD char* const stringBase_803772F3 = "d_a_obj_lv3Candle";
-SECTION_DEAD char* const stringBase_80377305 = "d_a_obj_lv4CandleTag";
-SECTION_DEAD char* const stringBase_8037731A = "d_a_obj_lv4CandleDemoTag";
-SECTION_DEAD char* const stringBase_80377333 = "d_a_obj_damCps";
-SECTION_DEAD char* const stringBase_80377342 = "d_a_obj_smoke";
-SECTION_DEAD char* const stringBase_80377350 = "d_a_obj_waterfall";
-SECTION_DEAD char* const stringBase_80377362 = "d_a_obj_zcloth";
-SECTION_DEAD char* const stringBase_80377371 = "d_a_obj_poFire";
-SECTION_DEAD char* const stringBase_80377380 = "d_a_tag_poFire";
-SECTION_DEAD char* const stringBase_8037738F = "d_a_obj_glowSphere";
-SECTION_DEAD char* const stringBase_803773A2 = "d_a_tag_lightball";
-SECTION_DEAD char* const stringBase_803773B4 = "d_a_swLBall";
-SECTION_DEAD char* const stringBase_803773C0 = "d_a_swBall";
-SECTION_DEAD char* const stringBase_803773CB = "d_a_obj_lv3waterEff";
-SECTION_DEAD char* const stringBase_803773DF = "d_a_tag_river_back";
-SECTION_DEAD char* const stringBase_803773F2 = "d_a_tag_kago_fall";
-SECTION_DEAD char* const stringBase_80377404 = "d_a_tag_lv2prchk";
-SECTION_DEAD char* const stringBase_80377415 = "d_a_obj_lv4gear";
-SECTION_DEAD char* const stringBase_80377425 = "d_a_obj_master_sword";
-SECTION_DEAD char* const stringBase_8037743A = "d_a_obj_wood_statue";
-SECTION_DEAD char* const stringBase_8037744E = "d_a_obj_fan";
-SECTION_DEAD char* const stringBase_8037745A = "d_a_obj_iceleaf";
-SECTION_DEAD char* const stringBase_8037746A = "d_a_obj_zrTuraraRock";
-SECTION_DEAD char* const stringBase_8037747F = "d_a_tag_ret_room";
-SECTION_DEAD char* const stringBase_80377490 = "d_a_obj_wind_stone";
-SECTION_DEAD char* const stringBase_803774A3 = "d_a_tag_wara_howl";
-SECTION_DEAD char* const stringBase_803774B5 = "d_a_obj_scannon";
-SECTION_DEAD char* const stringBase_803774C5 = "d_a_obj_smw_stone";
-SECTION_DEAD char* const stringBase_803774D7 = "d_a_obj_scannon_crs";
-SECTION_DEAD char* const stringBase_803774EB = "d_a_obj_snowEffTag";
-SECTION_DEAD char* const stringBase_803774FE = "d_a_tag_CstaSw";
-SECTION_DEAD char* const stringBase_8037750D = "d_a_tag_lv6CstaSw";
-SECTION_DEAD char* const stringBase_8037751F = "d_a_obj_bubblePilar";
-SECTION_DEAD char* const stringBase_80377533 = "d_a_obj_poTbox";
-SECTION_DEAD char* const stringBase_80377542 = "d_a_obj_timeFire";
-SECTION_DEAD char* const stringBase_80377553 = "d_a_obj_tmoon";
-SECTION_DEAD char* const stringBase_80377561 = "d_a_obj_ganonwall";
-SECTION_DEAD char* const stringBase_80377573 = "d_a_obj_prop";
-SECTION_DEAD char* const stringBase_80377580 = "d_a_cstatue";
-SECTION_DEAD char* const stringBase_8037758C = "d_a_obj_swBallA";
-SECTION_DEAD char* const stringBase_8037759C = "d_a_obj_swBallB";
-SECTION_DEAD char* const stringBase_803775AC = "d_a_obj_snow_soup";
-SECTION_DEAD char* const stringBase_803775BE = "d_a_obj_nagaisu";
-SECTION_DEAD char* const stringBase_803775CE = "d_a_obj_rcircle";
-SECTION_DEAD char* const stringBase_803775DE = "d_a_obj_picture";
-SECTION_DEAD char* const stringBase_803775EE = "d_a_tag_setBall";
-SECTION_DEAD char* const stringBase_803775FE = "d_a_tag_smk_emt";
-SECTION_DEAD char* const stringBase_8037760E = "d_a_swTime";
-SECTION_DEAD char* const stringBase_80377619 = "d_a_obj_hakai_ftr";
-SECTION_DEAD char* const stringBase_8037762B = "d_a_obj_hakai_brl";
-SECTION_DEAD char* const stringBase_8037763D = "d_a_obj_crystal";
-SECTION_DEAD char* const stringBase_8037764D = "d_a_obj_scannon_ten";
-SECTION_DEAD char* const stringBase_80377661 = "d_a_obj_swBallC";
-SECTION_DEAD char* const stringBase_80377671 = "d_a_scene_exit2";
-SECTION_DEAD char* const stringBase_80377681 = "d_a_obj_hata";
-SECTION_DEAD char* const stringBase_8037768E = "d_a_obj_toaru_maki";
-SECTION_DEAD char* const stringBase_803776A1 = "d_a_tag_attack_item";
-SECTION_DEAD char* const stringBase_803776B5 = "d_a_tag_rmbit_sw";
-SECTION_DEAD char* const stringBase_803776C6 = "d_a_obj_sword";
-SECTION_DEAD char* const stringBase_803776D4 = "d_a_tag_spring";
-SECTION_DEAD char* const stringBase_803776E3 = "d_a_tag_statue_evt";
-SECTION_DEAD char* const stringBase_803776F6 = "d_a_e_ai";
-SECTION_DEAD char* const stringBase_803776FF = "d_a_e_gs";
-SECTION_DEAD char* const stringBase_80377708 = "d_a_e_gob";
-SECTION_DEAD char* const stringBase_80377712 = "d_a_e_dd";
-SECTION_DEAD char* const stringBase_8037771B = "d_a_e_dn";
-SECTION_DEAD char* const stringBase_80377724 = "d_a_e_s1";
-SECTION_DEAD char* const stringBase_8037772D = "d_a_e_mf";
-SECTION_DEAD char* const stringBase_80377736 = "d_a_e_sg";
-SECTION_DEAD char* const stringBase_8037773F = "d_a_e_bs";
-SECTION_DEAD char* const stringBase_80377748 = "d_a_e_sf";
-SECTION_DEAD char* const stringBase_80377751 = "d_a_e_sh";
-SECTION_DEAD char* const stringBase_8037775A = "d_a_e_df";
-SECTION_DEAD char* const stringBase_80377763 = "d_a_e_gm";
-SECTION_DEAD char* const stringBase_8037776C = "d_a_e_md";
-SECTION_DEAD char* const stringBase_80377775 = "d_a_e_sm";
-SECTION_DEAD char* const stringBase_8037777E = "d_a_e_sm2";
-SECTION_DEAD char* const stringBase_80377788 = "d_a_e_st";
-SECTION_DEAD char* const stringBase_80377791 = "d_a_e_st_line";
-SECTION_DEAD char* const stringBase_8037779F = "d_a_e_sb";
-SECTION_DEAD char* const stringBase_803777A8 = "d_a_e_th";
-SECTION_DEAD char* const stringBase_803777B1 = "d_a_e_cr";
-SECTION_DEAD char* const stringBase_803777BA = "d_a_e_cr_egg";
-SECTION_DEAD char* const stringBase_803777C7 = "d_a_e_db";
-SECTION_DEAD char* const stringBase_803777D0 = "d_a_e_db_leaf";
-SECTION_DEAD char* const stringBase_803777DE = "d_a_e_ga";
-SECTION_DEAD char* const stringBase_803777E7 = "d_a_e_gb";
-SECTION_DEAD char* const stringBase_803777F0 = "d_a_e_hb";
-SECTION_DEAD char* const stringBase_803777F9 = "d_a_e_hb_leaf";
-SECTION_DEAD char* const stringBase_80377807 = "d_a_e_hzelda";
-SECTION_DEAD char* const stringBase_80377814 = "d_a_e_yd";
-SECTION_DEAD char* const stringBase_8037781D = "d_a_e_yh";
-SECTION_DEAD char* const stringBase_80377826 = "d_a_e_yd_leaf";
-SECTION_DEAD char* const stringBase_80377834 = "d_a_e_hm";
-SECTION_DEAD char* const stringBase_8037783D = "d_a_e_tk";
-SECTION_DEAD char* const stringBase_80377846 = "d_a_e_tk2";
-SECTION_DEAD char* const stringBase_80377850 = "d_a_e_tk_ball";
-SECTION_DEAD char* const stringBase_8037785E = "d_a_e_rb";
-SECTION_DEAD char* const stringBase_80377867 = "d_a_e_rd";
-SECTION_DEAD char* const stringBase_80377870 = "d_a_e_rdb";
-SECTION_DEAD char* const stringBase_8037787A = "d_a_e_rdy";
-SECTION_DEAD char* const stringBase_80377884 = "d_a_e_fm";
-SECTION_DEAD char* const stringBase_8037788D = "d_a_e_fs";
-SECTION_DEAD char* const stringBase_80377896 = "d_a_e_pm";
-SECTION_DEAD char* const stringBase_8037789F = "d_a_e_po";
-SECTION_DEAD char* const stringBase_803778A8 = "d_a_e_mb";
-SECTION_DEAD char* const stringBase_803778B1 = "d_a_e_mk";
-SECTION_DEAD char* const stringBase_803778BA = "d_a_e_mm";
-SECTION_DEAD char* const stringBase_803778C3 = "d_a_e_fz";
-SECTION_DEAD char* const stringBase_803778CC = "d_a_e_zs";
-SECTION_DEAD char* const stringBase_803778D5 = "d_a_e_kk";
-SECTION_DEAD char* const stringBase_803778DE = "d_a_e_hp";
-SECTION_DEAD char* const stringBase_803778E7 = "d_a_e_zh";
-SECTION_DEAD char* const stringBase_803778F0 = "d_a_e_zm";
-SECTION_DEAD char* const stringBase_803778F9 = "d_a_e_pz";
-SECTION_DEAD char* const stringBase_80377902 = "d_a_e_fb";
-SECTION_DEAD char* const stringBase_8037790B = "d_a_e_fk";
-SECTION_DEAD char* const stringBase_80377914 = "d_a_e_ms";
-SECTION_DEAD char* const stringBase_8037791D = "d_a_e_nest";
-SECTION_DEAD char* const stringBase_80377928 = "d_a_e_nz";
-SECTION_DEAD char* const stringBase_80377931 = "d_a_e_ba";
-SECTION_DEAD char* const stringBase_8037793A = "d_a_e_bu";
-SECTION_DEAD char* const stringBase_80377943 = "d_a_e_bug";
-SECTION_DEAD char* const stringBase_8037794D = "d_a_e_bee";
-SECTION_DEAD char* const stringBase_80377957 = "d_a_e_is";
-SECTION_DEAD char* const stringBase_80377960 = "d_a_e_kg";
-SECTION_DEAD char* const stringBase_80377969 = "d_a_e_kr";
-SECTION_DEAD char* const stringBase_80377972 = "d_a_e_sw";
-SECTION_DEAD char* const stringBase_8037797B = "d_a_e_ge";
-SECTION_DEAD char* const stringBase_80377984 = "d_a_tag_watchge";
-SECTION_DEAD char* const stringBase_80377994 = "d_a_e_ym";
-SECTION_DEAD char* const stringBase_8037799D = "d_a_e_ym_tag";
-SECTION_DEAD char* const stringBase_803779AA = "d_a_e_ymb";
-SECTION_DEAD char* const stringBase_803779B4 = "d_a_tag_firewall";
-SECTION_DEAD char* const stringBase_803779C5 = "d_a_tag_waterfall";
-SECTION_DEAD char* const stringBase_803779D7 = "d_a_e_yk";
-SECTION_DEAD char* const stringBase_803779E0 = "d_a_e_yr";
-SECTION_DEAD char* const stringBase_803779E9 = "d_a_e_yg";
-SECTION_DEAD char* const stringBase_803779F2 = "d_a_e_hz";
-SECTION_DEAD char* const stringBase_803779FB = "d_a_e_ws";
-SECTION_DEAD char* const stringBase_80377A04 = "d_a_e_oc";
-SECTION_DEAD char* const stringBase_80377A0D = "d_a_e_ot";
-SECTION_DEAD char* const stringBase_80377A16 = "d_a_e_dt";
-SECTION_DEAD char* const stringBase_80377A1F = "d_a_e_bg";
-SECTION_DEAD char* const stringBase_80377A28 = "d_a_e_oct_bg";
-SECTION_DEAD char* const stringBase_80377A35 = "d_a_L7demo_dr";
-SECTION_DEAD char* const stringBase_80377A43 = "d_a_L7low_dr";
-SECTION_DEAD char* const stringBase_80377A50 = "d_a_L7op_demo_dr";
-SECTION_DEAD char* const stringBase_80377A61 = "d_a_e_tt";
-SECTION_DEAD char* const stringBase_80377A6A = "d_a_e_dk";
-SECTION_DEAD char* const stringBase_80377A73 = "d_a_e_vt";
-SECTION_DEAD char* const stringBase_80377A7C = "d_a_e_ww";
-SECTION_DEAD char* const stringBase_80377A85 = "d_a_e_gi";
-SECTION_DEAD char* const stringBase_80377A8E = "d_a_b_bh";
-SECTION_DEAD char* const stringBase_80377A97 = "d_a_b_bq";
-SECTION_DEAD char* const stringBase_80377AA0 = "d_a_b_gm";
-SECTION_DEAD char* const stringBase_80377AA9 = "d_a_b_gnd";
-SECTION_DEAD char* const stringBase_80377AB3 = "d_a_b_go";
-SECTION_DEAD char* const stringBase_80377ABC = "d_a_b_oh2";
-SECTION_DEAD char* const stringBase_80377AC6 = "d_a_b_yo";
-SECTION_DEAD char* const stringBase_80377ACF = "d_a_b_yo_ice";
-SECTION_DEAD char* const stringBase_80377ADC = "d_a_b_tn";
-SECTION_DEAD char* const stringBase_80377AE5 = "d_a_b_gg";
-SECTION_DEAD char* const stringBase_80377AEE = "d_a_b_dre";
-SECTION_DEAD char* const stringBase_80377AF8 = "d_a_b_mgn";
-SECTION_DEAD char* const stringBase_80377B02 = "d_a_e_warpappear";
-SECTION_DEAD char* const stringBase_80377B13 = "d_a_obj_smallkey";
-SECTION_DEAD char* const stringBase_80377B24 = "d_a_obj_kantera";
-SECTION_DEAD char* const stringBase_80377B34 = "d_a_obj_life_container";
-SECTION_DEAD char* const stringBase_80377B4B = "d_a_obj_shield";
-SECTION_DEAD char* const stringBase_80377B5A = "d_a_demo_item";
-SECTION_DEAD char* const stringBase_80377B68 = "d_a_shop_item";
-SECTION_DEAD char* const stringBase_80377B76 = "d_a_obj_drop";
-SECTION_DEAD char* const stringBase_80377B83 = "d_a_obj_rw";
-SECTION_DEAD char* const stringBase_80377B8E = "d_a_nbomb";
-SECTION_DEAD char* const stringBase_80377B98 = "d_a_tag_csw";
-SECTION_DEAD char* const stringBase_80377BA4 = "d_a_tag_qs";
-SECTION_DEAD char* const stringBase_80377BAF = "d_a_hozelda";
-SECTION_DEAD char* const stringBase_80377BBB = "d_a_swc00";
-SECTION_DEAD char* const stringBase_80377BC5 = "d_a_door_knob00";
-SECTION_DEAD char* const stringBase_80377BD5 = "d_a_door_dbdoor00";
-SECTION_DEAD char* const stringBase_80377BE7 = "d_a_door_boss";
-SECTION_DEAD char* const stringBase_80377BF5 = "d_a_door_bossL1";
-SECTION_DEAD char* const stringBase_80377C05 = "d_a_door_mbossL1";
-SECTION_DEAD char* const stringBase_80377C16 = "d_a_door_bossL5";
-SECTION_DEAD char* const stringBase_80377C26 = "d_a_dshutter";
-SECTION_DEAD char* const stringBase_80377C33 = "d_a_door_spiral";
-SECTION_DEAD char* const stringBase_80377C43 = "d_a_tag_chgrestart";
-SECTION_DEAD char* const stringBase_80377C56 = "d_a_tag_setrestart";
-SECTION_DEAD char* const stringBase_80377C69 = "d_a_andsw";
-SECTION_DEAD char* const stringBase_80377C73 = "d_a_andsw2";
-SECTION_DEAD char* const stringBase_80377C7E = "d_a_myna";
-SECTION_DEAD char* const stringBase_80377C87 = "d_a_npc_gnd";
-SECTION_DEAD char* const stringBase_80377C93 = "d_a_npc_gra";
-SECTION_DEAD char* const stringBase_80377C9F = "d_a_npc_grc";
-SECTION_DEAD char* const stringBase_80377CAB = "d_a_npc_grd";
-SECTION_DEAD char* const stringBase_80377CB7 = "d_a_npc_grm";
-SECTION_DEAD char* const stringBase_80377CC3 = "d_a_npc_grmc";
-SECTION_DEAD char* const stringBase_80377CD0 = "d_a_npc_gro";
-SECTION_DEAD char* const stringBase_80377CDC = "d_a_npc_grr";
-SECTION_DEAD char* const stringBase_80377CE8 = "d_a_npc_grs";
-SECTION_DEAD char* const stringBase_80377CF4 = "d_a_npc_grz";
-SECTION_DEAD char* const stringBase_80377D00 = "d_a_npc_yamid";
-SECTION_DEAD char* const stringBase_80377D0E = "d_a_npc_yamit";
-SECTION_DEAD char* const stringBase_80377D1C = "d_a_npc_yamis";
-SECTION_DEAD char* const stringBase_80377D2A = "d_a_npc_blue_ns";
-SECTION_DEAD char* const stringBase_80377D3A = "d_a_npc_kakashi";
-SECTION_DEAD char* const stringBase_80377D4A = "d_a_npc_kdk";
-SECTION_DEAD char* const stringBase_80377D56 = "d_a_npc_aru";
-SECTION_DEAD char* const stringBase_80377D62 = "d_a_npc_bans";
-SECTION_DEAD char* const stringBase_80377D6F = "d_a_npc_besu";
-SECTION_DEAD char* const stringBase_80377D7C = "d_a_npc_bou";
-SECTION_DEAD char* const stringBase_80377D88 = "d_a_npc_bouS";
-SECTION_DEAD char* const stringBase_80377D95 = "d_a_npc_clerka";
-SECTION_DEAD char* const stringBase_80377DA4 = "d_a_npc_clerkb";
-SECTION_DEAD char* const stringBase_80377DB3 = "d_a_npc_clerkt";
-SECTION_DEAD char* const stringBase_80377DC2 = "d_a_npc_wrestler";
-SECTION_DEAD char* const stringBase_80377DD3 = "d_a_tag_arena";
-SECTION_DEAD char* const stringBase_80377DE1 = "d_a_tag_instruction";
-SECTION_DEAD char* const stringBase_80377DF5 = "d_a_npc_doc";
-SECTION_DEAD char* const stringBase_80377E01 = "d_a_npc_gwolf";
-SECTION_DEAD char* const stringBase_80377E0F = "d_a_npc_len";
-SECTION_DEAD char* const stringBase_80377E1B = "d_a_npc_lud";
-SECTION_DEAD char* const stringBase_80377E27 = "d_a_npc_fairy_seirei";
-SECTION_DEAD char* const stringBase_80377E3C = "d_a_npc_fairy";
-SECTION_DEAD char* const stringBase_80377E4A = "d_a_npc_hanjo";
-SECTION_DEAD char* const stringBase_80377E58 = "d_a_npc_henna";
-SECTION_DEAD char* const stringBase_80377E66 = "d_a_npc_henna0";
-SECTION_DEAD char* const stringBase_80377E75 = "d_a_npc_hoz";
-SECTION_DEAD char* const stringBase_80377E81 = "d_a_npc_jagar";
-SECTION_DEAD char* const stringBase_80377E8F = "d_a_npc_kkri";
-SECTION_DEAD char* const stringBase_80377E9C = "d_a_npc_kn";
-SECTION_DEAD char* const stringBase_80377EA7 = "d_a_obj_knBullet";
-SECTION_DEAD char* const stringBase_80377EB8 = "d_a_npc_knj";
-SECTION_DEAD char* const stringBase_80377EC4 = "d_a_npc_kolin";
-SECTION_DEAD char* const stringBase_80377ED2 = "d_a_npc_kolinb";
-SECTION_DEAD char* const stringBase_80377EE1 = "d_a_npc_kyury";
-SECTION_DEAD char* const stringBase_80377EEF = "d_a_npc_maro";
-SECTION_DEAD char* const stringBase_80377EFC = "d_a_npc_midp";
-SECTION_DEAD char* const stringBase_80377F09 = "d_a_npc_moi";
-SECTION_DEAD char* const stringBase_80377F15 = "d_a_npc_raca";
-SECTION_DEAD char* const stringBase_80377F22 = "d_a_npc_saru";
-SECTION_DEAD char* const stringBase_80377F2F = "d_a_npc_seib";
-SECTION_DEAD char* const stringBase_80377F3C = "d_a_npc_seic";
-SECTION_DEAD char* const stringBase_80377F49 = "d_a_npc_seid";
-SECTION_DEAD char* const stringBase_80377F56 = "d_a_npc_seira";
-SECTION_DEAD char* const stringBase_80377F64 = "d_a_npc_seira2";
-SECTION_DEAD char* const stringBase_80377F73 = "d_a_npc_seirei";
-SECTION_DEAD char* const stringBase_80377F82 = "d_a_npc_shaman";
-SECTION_DEAD char* const stringBase_80377F91 = "d_a_npc_shop_maro";
-SECTION_DEAD char* const stringBase_80377FA3 = "d_a_npc_sola";
-SECTION_DEAD char* const stringBase_80377FB0 = "d_a_npc_taro";
-SECTION_DEAD char* const stringBase_80377FBD = "d_a_npc_pachi_besu";
-SECTION_DEAD char* const stringBase_80377FD0 = "d_a_npc_pachi_taro";
-SECTION_DEAD char* const stringBase_80377FE3 = "d_a_npc_pachi_maro";
-SECTION_DEAD char* const stringBase_80377FF6 = "d_a_tag_pachi";
-SECTION_DEAD char* const stringBase_80378004 = "d_a_npc_the";
-SECTION_DEAD char* const stringBase_80378010 = "d_a_npc_tkj";
-SECTION_DEAD char* const stringBase_8037801C = "d_a_npc_tks";
-SECTION_DEAD char* const stringBase_80378028 = "d_a_npc_tkc";
-SECTION_DEAD char* const stringBase_80378034 = "d_a_obj_tks";
-SECTION_DEAD char* const stringBase_80378040 = "d_a_npc_toby";
-SECTION_DEAD char* const stringBase_8037804D = "d_a_npc_uri";
-SECTION_DEAD char* const stringBase_80378059 = "d_a_npc_yelia";
-SECTION_DEAD char* const stringBase_80378067 = "d_a_npc_ykm";
-SECTION_DEAD char* const stringBase_80378073 = "d_a_npc_ykw";
-SECTION_DEAD char* const stringBase_8037807F = "d_a_npc_zanb";
-SECTION_DEAD char* const stringBase_8037808C = "d_a_npc_zant";
-SECTION_DEAD char* const stringBase_80378099 = "d_a_npc_zelda";
-SECTION_DEAD char* const stringBase_803780A7 = "d_a_npc_zelR";
-SECTION_DEAD char* const stringBase_803780B4 = "d_a_npc_zelRo";
-SECTION_DEAD char* const stringBase_803780C2 = "d_a_obj_zra_freeze";
-SECTION_DEAD char* const stringBase_803780D5 = "d_a_npc_zrc";
-SECTION_DEAD char* const stringBase_803780E1 = "d_a_npc_zrz";
-SECTION_DEAD char* const stringBase_803780ED = "d_a_obj_zraMark";
-SECTION_DEAD char* const stringBase_803780FD = "d_a_npc_myna2";
-SECTION_DEAD char* const stringBase_8037810B = "d_a_tag_myna2";
-SECTION_DEAD char* const stringBase_80378119 = "d_a_npc_cdn3";
-SECTION_DEAD char* const stringBase_80378126 = "d_a_tag_schedule";
-SECTION_DEAD char* const stringBase_80378137 = "d_a_tag_escape";
-SECTION_DEAD char* const stringBase_80378146 = "d_a_npc_chat";
-SECTION_DEAD char* const stringBase_80378153 = "d_a_npc_soldierA";
-SECTION_DEAD char* const stringBase_80378164 = "d_a_npc_soldierB";
-SECTION_DEAD char* const stringBase_80378175 = "d_a_passer_mng";
-SECTION_DEAD char* const stringBase_80378184 = "d_a_npc_passer";
-SECTION_DEAD char* const stringBase_80378193 = "d_a_npc_passer2";
-SECTION_DEAD char* const stringBase_803781A3 = "d_a_npc_post";
-SECTION_DEAD char* const stringBase_803781B0 = "d_a_npc_pouya";
-SECTION_DEAD char* const stringBase_803781BE = "d_a_formation_mng";
-SECTION_DEAD char* const stringBase_803781D0 = "d_a_npc_fguard";
-SECTION_DEAD char* const stringBase_803781DF = "d_a_guard_mng";
-SECTION_DEAD char* const stringBase_803781ED = "d_a_tag_guard";
-SECTION_DEAD char* const stringBase_803781FB = "d_a_npc_guard";
-SECTION_DEAD char* const stringBase_80378209 = "d_a_npc_ash";
-SECTION_DEAD char* const stringBase_80378215 = "d_a_npc_ashB";
-SECTION_DEAD char* const stringBase_80378222 = "d_a_npc_shad";
-SECTION_DEAD char* const stringBase_8037822F = "d_a_npc_rafrel";
-SECTION_DEAD char* const stringBase_8037823E = "d_a_npc_moir";
-SECTION_DEAD char* const stringBase_8037824B = "d_a_npc_impal";
-SECTION_DEAD char* const stringBase_80378259 = "d_a_npc_shoe";
-SECTION_DEAD char* const stringBase_80378266 = "d_a_npc_doorboy";
-SECTION_DEAD char* const stringBase_80378276 = "d_a_npc_prayer";
-SECTION_DEAD char* const stringBase_80378285 = "d_a_npc_kasi_hana";
-SECTION_DEAD char* const stringBase_80378297 = "d_a_npc_kasi_kyu";
-SECTION_DEAD char* const stringBase_803782A8 = "d_a_npc_kasi_mich";
-SECTION_DEAD char* const stringBase_803782BA = "d_a_npc_drainSol";
-SECTION_DEAD char* const stringBase_803782CB = "d_a_npc_chin";
-SECTION_DEAD char* const stringBase_803782D8 = "d_a_npc_ins";
-SECTION_DEAD char* const stringBase_803782E4 = "d_a_npc_shop0";
-SECTION_DEAD char* const stringBase_803782F2 = "d_a_npc_mk";
-SECTION_DEAD char* const stringBase_803782FD = "d_a_npc_p2";
-SECTION_DEAD char* const stringBase_80378308 = "d_a_kytag00";
-SECTION_DEAD char* const stringBase_80378314 = "d_a_kytag01";
-SECTION_DEAD char* const stringBase_80378320 = "d_a_kytag02";
-SECTION_DEAD char* const stringBase_8037832C = "d_a_kytag03";
-SECTION_DEAD char* const stringBase_80378338 = "d_a_kytag04";
-SECTION_DEAD char* const stringBase_80378344 = "d_a_kytag05";
-SECTION_DEAD char* const stringBase_80378350 = "d_a_kytag06";
-SECTION_DEAD char* const stringBase_8037835C = "d_a_kytag07";
-SECTION_DEAD char* const stringBase_80378368 = "d_a_kytag08";
-SECTION_DEAD char* const stringBase_80378374 = "d_a_kytag09";
-SECTION_DEAD char* const stringBase_80378380 = "d_a_kytag10";
-SECTION_DEAD char* const stringBase_8037838C = "d_a_kytag11";
-SECTION_DEAD char* const stringBase_80378398 = "d_a_kytag12";
-SECTION_DEAD char* const stringBase_803783A4 = "d_a_kytag13";
-SECTION_DEAD char* const stringBase_803783B0 = "d_a_kytag14";
-SECTION_DEAD char* const stringBase_803783BC = "d_a_kytag15";
-SECTION_DEAD char* const stringBase_803783C8 = "d_a_kytag16";
-SECTION_DEAD char* const stringBase_803783D4 = "d_a_kytag17";
-SECTION_DEAD char* const stringBase_803783E0 = "d_a_ykgr";
-SECTION_DEAD char* const stringBase_803783E9 = "d_a_talk";
-SECTION_DEAD char* const stringBase_803783F2 = "d_a_obj_crope";
-SECTION_DEAD char* const stringBase_80378400 = "d_a_obj_bombf";
-SECTION_DEAD char* const stringBase_8037840E = "d_a_obj_bk_leaf";
-SECTION_DEAD char* const stringBase_8037841E = "d_a_tag_mhint";
-SECTION_DEAD char* const stringBase_8037842C = "d_a_tag_mmsg";
-SECTION_DEAD char* const stringBase_80378439 = "d_a_tag_mwait";
-SECTION_DEAD char* const stringBase_80378447 = "d_a_tag_mstop";
-SECTION_DEAD char* const stringBase_80378455 = "d_a_tag_stream";
-SECTION_DEAD char* const stringBase_80378464 = "d_a_tag_sppath";
-SECTION_DEAD char* const stringBase_80378473 = "d_a_tag_wljump";
-SECTION_DEAD char* const stringBase_80378482 = "d_a_tag_TWgate";
-SECTION_DEAD char* const stringBase_80378491 = "d_a_tag_Lv6Gate";
-SECTION_DEAD char* const stringBase_803784A1 = "d_a_tag_Lv7Gate";
-SECTION_DEAD char* const stringBase_803784B1 = "d_a_tag_Lv8Gate";
-SECTION_DEAD char* const stringBase_803784C1 = "d_a_tag_theB_hint";
-SECTION_DEAD char* const stringBase_803784D3 = "d_a_tag_assistance";
-SECTION_DEAD char* const stringBase_803784E6 = "d_a_demo00";
-SECTION_DEAD char* const stringBase_803784F1 = "d_a_tag_camera";
-SECTION_DEAD char* const stringBase_80378500 = "d_a_tag_chkpoint";
-SECTION_DEAD char* const stringBase_80378511 = "d_a_tag_event";
-SECTION_DEAD char* const stringBase_8037851F = "d_a_tag_evt";
-SECTION_DEAD char* const stringBase_8037852B = "d_a_tag_telop";
-SECTION_DEAD char* const stringBase_80378539 = "d_a_tag_howl";
-SECTION_DEAD char* const stringBase_80378546 = "d_a_tag_msg";
-SECTION_DEAD char* const stringBase_80378552 = "d_a_tag_lantern";
-SECTION_DEAD char* const stringBase_80378562 = "d_a_tag_mist";
-SECTION_DEAD char* const stringBase_8037856F = "d_a_dmidna";
-SECTION_DEAD char* const stringBase_8037857A = "d_a_vrbox";
-SECTION_DEAD char* const stringBase_80378584 = "d_a_vrbox2";
-SECTION_DEAD char* const stringBase_8037858F = "d_a_bg";
-SECTION_DEAD char* const stringBase_80378596 = "d_a_set_bgobj";
-SECTION_DEAD char* const stringBase_803785A4 = "d_a_bg_obj";
-SECTION_DEAD char* const stringBase_803785AF = "d_a_mirror";
-SECTION_DEAD char* const stringBase_803785BA = "d_a_movie_player";
-SECTION_DEAD char* const stringBase_803785CB = "d_a_title";
-SECTION_DEAD char* const stringBase_803785D5 = "d_a_fr";
-SECTION_DEAD char* const stringBase_803785DC = "d_a_econt";
-SECTION_DEAD char* const stringBase_803785E6 = "d_a_mg_rod";
-SECTION_DEAD char* const stringBase_803785F1 = "d_a_e_arrow";
-SECTION_DEAD char* const stringBase_803785FD = "d_a_bullet";
-SECTION_DEAD char* const stringBase_80378608 = "d_a_swhit0";
-SECTION_DEAD char* const stringBase_80378613 = "d_a_e_th_ball";
-SECTION_DEAD char* const stringBase_80378621 = "d_a_tag_evtarea";
-SECTION_DEAD char* const stringBase_80378631 = "d_a_tag_evtmsg";
-SECTION_DEAD char* const stringBase_80378640 = "d_a_tag_kmsg";
-SECTION_DEAD char* const stringBase_8037864D = "d_a_tag_push";
-SECTION_DEAD char* const stringBase_8037865A = "d_a_e_mk_bo";
-SECTION_DEAD char* const stringBase_80378666 = "d_a_e_mm_mt";
-SECTION_DEAD char* const stringBase_80378672 = "d_a_obj_kbox";
-SECTION_DEAD char* const stringBase_8037867F = "d_a_obj_fw";
-SECTION_DEAD char* const stringBase_8037868A = "d_a_b_gos";
-SECTION_DEAD char* const stringBase_80378694 = "d_a_obj_ystone";
-SECTION_DEAD char* const stringBase_803786A3 = "d_a_mant";
-SECTION_DEAD char* const stringBase_803786AC = "d_a_crod";
-SECTION_DEAD char* const stringBase_803786B5 = "d_a_obj_pleaf";
-SECTION_DEAD char* const stringBase_803786C3 = "d_a_obj_kbacket";
-SECTION_DEAD char* const stringBase_803786D3 = "d_a_obj_yel_bag";
-SECTION_DEAD char* const stringBase_803786E3 = "d_a_obj_pumpkin";
-SECTION_DEAD char* const stringBase_803786F3 = "d_a_obj_automata";
-SECTION_DEAD char* const stringBase_80378704 = "d_a_obj_gadget";
-SECTION_DEAD char* const stringBase_80378713 = "d_a_obj_kago";
-SECTION_DEAD char* const stringBase_80378720 = "d_a_obj_carry";
-SECTION_DEAD char* const stringBase_8037872E = "d_a_obj_stone";
-SECTION_DEAD char* const stringBase_8037873C = "d_a_obj_hb";
-SECTION_DEAD char* const stringBase_80378747 = "d_a_npc_inko";
-SECTION_DEAD char* const stringBase_80378754 = "d_a_bd";
-SECTION_DEAD char* const stringBase_8037875B = "d_a_obj_eff";
-SECTION_DEAD char* const stringBase_80378767 = "d_a_e_bi";
-SECTION_DEAD char* const stringBase_80378770 = "d_a_e_bi_leaf";
-SECTION_DEAD char* const stringBase_8037877E = "d_a_startAndGoal";
-SECTION_DEAD char* const stringBase_8037878F = "d_a_npc_df";
-SECTION_DEAD char* const stringBase_8037879A = "d_a_arrow";
-SECTION_DEAD char* const stringBase_803787A4 = "d_a_path_line";
-SECTION_DEAD char* const stringBase_803787B2 = "d_a_tag_allmato";
-SECTION_DEAD char* const stringBase_803787C2 = "d_a_obj_timer";
-SECTION_DEAD char* const stringBase_803787D0 = "d_a_scene_exit";
-SECTION_DEAD char* const stringBase_803787DF = "d_a_suspend";
-SECTION_DEAD char* const stringBase_803787EB = "d_a_grass";
-SECTION_DEAD char* const stringBase_803787F5 = "cDyl_Link i_ProfName=%d\n";
-SECTION_DEAD char* const stringBase_8037880E = 
+const char* const stringBase_80375DE8 = "d_a_alldie";
+const char* const stringBase_80375DF3 = "d_a_obj_swpush";
+const char* const stringBase_80375E02 = "d_a_obj_swpush2";
+const char* const stringBase_80375E12 = "d_a_obj_swpush5";
+const char* const stringBase_80375E22 = "d_a_tag_gstart";
+const char* const stringBase_80375E31 = "d_a_obj_lv6elevta";
+const char* const stringBase_80375E43 = "d_a_obj_so";
+const char* const stringBase_80375E4E = "d_a_obj_movebox";
+const char* const stringBase_80375E5E = "d_a_obj_swturn";
+const char* const stringBase_80375E6D = "d_a_obj_lv6swturn";
+const char* const stringBase_80375E7F = "d_a_obj_sekizoa";
+const char* const stringBase_80375E8F = "d_a_obj_gra2";
+const char* const stringBase_80375E9C = "d_a_tag_gra";
+const char* const stringBase_80375EA8 = "d_a_tag_yami";
+const char* const stringBase_80375EB5 = "d_a_obj_ladder";
+const char* const stringBase_80375EC4 = "d_a_obj_brakeeff";
+const char* const stringBase_80375ED5 = "d_a_obj_fmobj";
+const char* const stringBase_80375EE3 = "d_a_obj_lbox";
+const char* const stringBase_80375EF0 = "d_a_obj_web0";
+const char* const stringBase_80375EFD = "d_a_obj_web1";
+const char* const stringBase_80375F0A = "d_a_obj_cb";
+const char* const stringBase_80375F15 = "d_a_obj_maki";
+const char* const stringBase_80375F22 = "d_a_obj_brg";
+const char* const stringBase_80375F2E = "d_a_obj_gb";
+const char* const stringBase_80375F39 = "d_a_obj_gm";
+const char* const stringBase_80375F44 = "d_a_obj_toby";
+const char* const stringBase_80375F51 = "d_a_obj_tp";
+const char* const stringBase_80375F5C = "d_a_obj_treesh";
+const char* const stringBase_80375F6B = "d_a_obj_zdoor";
+const char* const stringBase_80375F79 = "d_a_obj_pillar";
+const char* const stringBase_80375F88 = "d_a_obj_cdoor";
+const char* const stringBase_80375F96 = "d_a_obj_groundwater";
+const char* const stringBase_80375FAA = "d_a_obj_rotBridge";
+const char* const stringBase_80375FBC = "d_a_obj_magLift";
+const char* const stringBase_80375FCC = "d_a_obj_magLiftRot";
+const char* const stringBase_80375FDF = "d_a_obj_lv1Candle00";
+const char* const stringBase_80375FF3 = "d_a_obj_lv1Candle01";
+const char* const stringBase_80376007 = "d_a_obj_TvCdlst";
+const char* const stringBase_80376017 = "d_a_obj_hsTarget";
+const char* const stringBase_80376028 = "d_a_obj_heavySw";
+const char* const stringBase_80376038 = "d_a_obj_goGate";
+const char* const stringBase_80376047 = "d_a_obj_taFence";
+const char* const stringBase_80376057 = "d_a_obj_saidan";
+const char* const stringBase_80376066 = "d_a_obj_spinLift";
+const char* const stringBase_80376077 = "d_a_obj_bmWindow";
+const char* const stringBase_80376088 = "d_a_obj_rfHole";
+const char* const stringBase_80376097 = "d_a_obj_waterPillar";
+const char* const stringBase_803760AB = "d_a_obj_syRock";
+const char* const stringBase_803760BA = "d_a_obj_bsGate";
+const char* const stringBase_803760C9 = "d_a_obj_amiShutter";
+const char* const stringBase_803760DC = "d_a_obj_waterGate";
+const char* const stringBase_803760EE = "d_a_obj_lv2Candle";
+const char* const stringBase_80376100 = "d_a_obj_togeTrap";
+const char* const stringBase_80376111 = "d_a_obj_rotTrap";
+const char* const stringBase_80376121 = "d_a_obj_sWallShutter";
+const char* const stringBase_80376136 = "d_a_obj_lv5IceWall";
+const char* const stringBase_80376149 = "d_a_obj_lv5SwIce";
+const char* const stringBase_8037615A = "d_a_obj_lv5FloorBoard";
+const char* const stringBase_80376170 = "d_a_obj_Turara";
+const char* const stringBase_8037617F = "d_a_obj_twGate";
+const char* const stringBase_8037618E = "d_a_obj_digholl";
+const char* const stringBase_8037619E = "d_a_obj_digplace";
+const char* const stringBase_803761AF = "d_a_obj_testcube";
+const char* const stringBase_803761C0 = "d_a_obj_kshutter";
+const char* const stringBase_803761D1 = "d_a_npc_coach";
+const char* const stringBase_803761DF = "d_a_npc_theB";
+const char* const stringBase_803761EC = "d_a_coach_fire";
+const char* const stringBase_803761FB = "d_a_coach_2D";
+const char* const stringBase_80376208 = "d_a_balloon_2D";
+const char* const stringBase_80376217 = "d_a_skip_2D";
+const char* const stringBase_80376223 = "d_a_obj_mvstair";
+const char* const stringBase_80376233 = "d_a_obj_cowdoor";
+const char* const stringBase_80376243 = "d_a_obj_swpropeller";
+const char* const stringBase_80376257 = "d_a_obj_bmshutter";
+const char* const stringBase_80376269 = "d_a_npc_ks";
+const char* const stringBase_80376274 = "d_a_obj_hfuta";
+const char* const stringBase_80376282 = "d_a_obj_bkdoor";
+const char* const stringBase_80376291 = "d_a_obj_cboard";
+const char* const stringBase_803762A0 = "d_a_obj_mgate";
+const char* const stringBase_803762AE = "d_a_obj_ikada";
+const char* const stringBase_803762BC = "d_a_obj_ice_l";
+const char* const stringBase_803762CA = "d_a_obj_ice_s";
+const char* const stringBase_803762D8 = "d_a_obj_enemy_create";
+const char* const stringBase_803762ED = "d_a_obj_bhbridge";
+const char* const stringBase_803762FE = "d_a_obj_kaisou";
+const char* const stringBase_8037630D = "d_a_obj_hhashi";
+const char* const stringBase_8037631C = "d_a_obj_bhashi";
+const char* const stringBase_8037632B = "d_a_obj_octhashi";
+const char* const stringBase_8037633C = "d_a_obj_thashi";
+const char* const stringBase_8037634B = "d_a_obj_crvgate";
+const char* const stringBase_8037635B = "d_a_obj_crvfence";
+const char* const stringBase_8037636C = "d_a_obj_crvhahen";
+const char* const stringBase_8037637D = "d_a_obj_crvsteel";
+const char* const stringBase_8037638E = "d_a_obj_crvlh_up";
+const char* const stringBase_8037639F = "d_a_obj_crvlh_down";
+const char* const stringBase_803763B2 = "d_a_obj_riverrock";
+const char* const stringBase_803763C4 = "d_a_obj_dust";
+const char* const stringBase_803763D1 = "d_a_obj_ita";
+const char* const stringBase_803763DD = "d_a_obj_window";
+const char* const stringBase_803763EC = "d_a_obj_metalbox";
+const char* const stringBase_803763FD = "d_a_obj_bbox";
+const char* const stringBase_8037640A = "d_a_obj_msima";
+const char* const stringBase_80376418 = "d_a_obj_myogan";
+const char* const stringBase_80376427 = "d_a_b_zant_sima";
+const char* const stringBase_80376437 = "d_a_obj_cblock";
+const char* const stringBase_80376446 = "d_a_obj_cwall";
+const char* const stringBase_80376454 = "d_a_obj_kgate";
+const char* const stringBase_80376462 = "d_a_obj_rgate";
+const char* const stringBase_80376470 = "d_a_obj_onsen";
+const char* const stringBase_8037647E = "d_a_obj_chest";
+const char* const stringBase_8037648C = "d_a_obj_bemos";
+const char* const stringBase_8037649A = "d_a_obj_rope_bridge";
+const char* const stringBase_803764AE = "d_a_obj_well_cover";
+const char* const stringBase_803764C1 = "d_a_obj_grave_stone";
+const char* const stringBase_803764D5 = "d_a_obj_zra_rock";
+const char* const stringBase_803764E6 = "d_a_obj_gra_rock";
+const char* const stringBase_803764F7 = "d_a_obj_grz_rock";
+const char* const stringBase_80376508 = "d_a_obj_graWall";
+const char* const stringBase_80376518 = "d_a_obj_onsenFire";
+const char* const stringBase_8037652A = "d_a_obj_lv6bemos";
+const char* const stringBase_8037653B = "d_a_obj_lv6bemos2";
+const char* const stringBase_8037654D = "d_a_obj_barDesk";
+const char* const stringBase_8037655D = "d_a_obj_digsnow";
+const char* const stringBase_8037656D = "d_a_obj_Y_taihou";
+const char* const stringBase_8037657E = "d_a_obj_dmelevator";
+const char* const stringBase_80376591 = "d_a_obj_lv6TogeRoll";
+const char* const stringBase_803765A5 = "d_a_obj_lv6TogeTrap";
+const char* const stringBase_803765B9 = "d_a_obj_lv6Tenbin";
+const char* const stringBase_803765CB = "d_a_obj_lv6SwGate";
+const char* const stringBase_803765DD = "d_a_obj_lv6Lblock";
+const char* const stringBase_803765EF = "d_a_obj_lv6ChangeGate";
+const char* const stringBase_80376605 = "d_a_obj_lv6FurikoTrap";
+const char* const stringBase_8037661B = "d_a_obj_lv6SzGate";
+const char* const stringBase_8037662D = "d_a_obj_lv4EdShutter";
+const char* const stringBase_80376642 = "d_a_obj_lv4Gate";
+const char* const stringBase_80376652 = "d_a_obj_lv4PoGate";
+const char* const stringBase_80376664 = "d_a_obj_lv4SlideWall";
+const char* const stringBase_80376679 = "d_a_obj_lv4HsTarget";
+const char* const stringBase_8037668D = "d_a_obj_lv7PropellerY";
+const char* const stringBase_803766A3 = "d_a_obj_lv7BsGate";
+const char* const stringBase_803766B5 = "d_a_obj_lv8OptiLift";
+const char* const stringBase_803766C9 = "d_a_obj_lv8KekkaiTrap";
+const char* const stringBase_803766DF = "d_a_obj_lv8Lift";
+const char* const stringBase_803766EF = "d_a_obj_lv8UdFloor";
+const char* const stringBase_80376702 = "d_a_obj_lv9SwShutter";
+const char* const stringBase_80376717 = "d_a_obj_tobyhouse";
+const char* const stringBase_80376729 = "d_a_obj_poCandle";
+const char* const stringBase_8037673A = "d_a_obj_lv4digsand";
+const char* const stringBase_8037674D = "d_a_obj_fallobj";
+const char* const stringBase_8037675D = "d_a_obj_smgdoor";
+const char* const stringBase_8037676D = "d_a_obj_swLight";
+const char* const stringBase_8037677D = "d_a_obj_avalanche";
+const char* const stringBase_8037678F = "d_a_obj_mirror_screw";
+const char* const stringBase_803767A4 = "d_a_obj_mirror_sand";
+const char* const stringBase_803767B8 = "d_a_obj_mirror_table";
+const char* const stringBase_803767CD = "d_a_obj_mirror_chain";
+const char* const stringBase_803767E2 = "d_a_obj_mirror_6pole";
+const char* const stringBase_803767F7 = "d_a_obj_swspinner";
+const char* const stringBase_80376809 = "d_a_obj_thdoor";
+const char* const stringBase_80376818 = "d_a_obj_lv7bridge";
+const char* const stringBase_8037682A = "d_a_obj_zrTurara";
+const char* const stringBase_8037683B = "d_a_obj_takaraDai";
+const char* const stringBase_8037684D = "d_a_obj_table";
+const char* const stringBase_8037685B = "d_a_obj_catdoor";
+const char* const stringBase_8037686B = "d_a_obj_tgake";
+const char* const stringBase_80376879 = "d_a_cstaF";
+const char* const stringBase_80376883 = "d_a_obj_lv4RailWall";
+const char* const stringBase_80376897 = "d_a_obj_lv4sand";
+const char* const stringBase_803768A7 = "d_a_obj_pdoor";
+const char* const stringBase_803768B5 = "d_a_door_push";
+const char* const stringBase_803768C3 = "d_a_obj_ganonwall2";
+const char* const stringBase_803768D6 = "d_a_obj_lv4bridge";
+const char* const stringBase_803768E8 = "d_a_obj_lv4floor";
+const char* const stringBase_803768F9 = "d_a_tag_spinner";
+const char* const stringBase_80376909 = "d_a_obj_swhang";
+const char* const stringBase_80376918 = "d_a_obj_rstair";
+const char* const stringBase_80376927 = "d_a_obj_magne_arm";
+const char* const stringBase_80376939 = "d_a_obj_kwheel00";
+const char* const stringBase_8037694A = "d_a_obj_kwheel01";
+const char* const stringBase_8037695B = "d_a_obj_lv5ychndlr";
+const char* const stringBase_8037696E = "d_a_obj_lv4prelvtr";
+const char* const stringBase_80376981 = "d_a_obj_hasu2";
+const char* const stringBase_8037698F = "d_a_obj_lv5yiblltray";
+const char* const stringBase_803769A4 = "d_a_obj_lv6egate";
+const char* const stringBase_803769B5 = "d_a_obj_pdtile";
+const char* const stringBase_803769C4 = "d_a_obj_pdwall";
+const char* const stringBase_803769D3 = "d_a_obj_lv4prwall";
+const char* const stringBase_803769E5 = "d_a_obj_klift00";
+const char* const stringBase_803769F5 = "d_a_b_oh";
+const char* const stringBase_803769FE = "d_a_obj_lv4chandelier";
+const char* const stringBase_80376A14 = "d_a_obj_lv3saka00";
+const char* const stringBase_80376A26 = "d_a_obj_lv3Water";
+const char* const stringBase_80376A37 = "d_a_obj_lv3Water2";
+const char* const stringBase_80376A49 = "d_a_obj_lv3WaterB";
+const char* const stringBase_80376A5B = "d_a_obj_hbombkoya";
+const char* const stringBase_80376A6D = "d_a_obj_szbridge";
+const char* const stringBase_80376A7E = "d_a_obj_warp_kbrg";
+const char* const stringBase_80376A90 = "d_a_obj_warp_obrg";
+const char* const stringBase_80376AA2 = "d_a_obj_burnbox";
+const char* const stringBase_80376AB2 = "d_a_obj_kjgjs";
+const char* const stringBase_80376AC0 = "d_a_obj_ihasi";
+const char* const stringBase_80376ACE = "d_a_obj_iceblock";
+const char* const stringBase_80376ADF = "d_a_obj_volcball";
+const char* const stringBase_80376AF0 = "d_a_obj_volcbom";
+const char* const stringBase_80376B00 = "d_a_obj_vground";
+const char* const stringBase_80376B10 = "d_a_obj_kkanban";
+const char* const stringBase_80376B20 = "d_a_e_ph";
+const char* const stringBase_80376B29 = "d_a_npc_zra";
+const char* const stringBase_80376B35 = "d_a_obj_chandelier";
+const char* const stringBase_80376B48 = "d_a_obj_stopper2";
+const char* const stringBase_80376B59 = "d_a_door_shutter";
+const char* const stringBase_80376B6A = "d_a_tag_hinit";
+const char* const stringBase_80376B78 = "d_a_tag_hjump";
+const char* const stringBase_80376B86 = "d_a_tag_ajnot";
+const char* const stringBase_80376B94 = "d_a_tag_hstop";
+const char* const stringBase_80376BA2 = "d_a_canoe";
+const char* const stringBase_80376BAC = "d_a_horse";
+const char* const stringBase_80376BB6 = "d_a_e_wb";
+const char* const stringBase_80376BBF = "d_a_obj_ito";
+const char* const stringBase_80376BCB = "d_a_obj_sw";
+const char* const stringBase_80376BD6 = "d_a_spinner";
+const char* const stringBase_80376BE2 = "d_a_b_ob";
+const char* const stringBase_80376BEB = "d_a_kago";
+const char* const stringBase_80376BF4 = "d_a_e_yc";
+const char* const stringBase_80376BFD = "d_a_b_ds";
+const char* const stringBase_80376C06 = "d_a_b_dr";
+const char* const stringBase_80376C0F = "d_a_b_zant_mobile";
+const char* const stringBase_80376C21 = "d_a_b_zant";
+const char* const stringBase_80376C2C = "d_a_b_zant_magic";
+const char* const stringBase_80376C3D = "d_a_tbox";
+const char* const stringBase_80376C46 = "d_a_tbox2";
+const char* const stringBase_80376C50 = "d_a_boomerang";
+const char* const stringBase_80376C5E = "d_a_midna";
+const char* const stringBase_80376C68 = "d_a_npc_tk";
+const char* const stringBase_80376C73 = "d_a_npc_worm";
+const char* const stringBase_80376C80 = "d_a_ppolamp";
+const char* const stringBase_80376C8C = "d_a_obj_bky_rock";
+const char* const stringBase_80376C9D = "d_a_hitobj";
+const char* const stringBase_80376CA8 = "d_a_ep";
+const char* const stringBase_80376CAF = "d_a_cow";
+const char* const stringBase_80376CB7 = "d_a_peru";
+const char* const stringBase_80376CC0 = "d_a_ni";
+const char* const stringBase_80376CC7 = "d_a_npc_tkj2";
+const char* const stringBase_80376CD4 = "d_a_sq";
+const char* const stringBase_80376CDB = "d_a_npc_sq";
+const char* const stringBase_80376CE6 = "d_a_do";
+const char* const stringBase_80376CED = "d_a_npc_ne";
+const char* const stringBase_80376CF8 = "d_a_npc_tr";
+const char* const stringBase_80376D03 = "d_a_npc_lf";
+const char* const stringBase_80376D0E = "d_a_obj_food";
+const char* const stringBase_80376D1B = "d_a_obj_ki";
+const char* const stringBase_80376D26 = "d_a_obj_kita";
+const char* const stringBase_80376D33 = "d_a_obj_key";
+const char* const stringBase_80376D3F = "d_a_obj_keyhole";
+const char* const stringBase_80376D4F = "d_a_obj_Lv5Key";
+const char* const stringBase_80376D5E = "d_a_obj_lp";
+const char* const stringBase_80376D69 = "d_a_obj_tatigi";
+const char* const stringBase_80376D78 = "d_a_obj_rock";
+const char* const stringBase_80376D85 = "d_a_obj_wflag";
+const char* const stringBase_80376D93 = "d_a_obj_kage";
+const char* const stringBase_80376DA0 = "d_a_obj_kanban2";
+const char* const stringBase_80376DB0 = "d_a_obj_balloon";
+const char* const stringBase_80376DC0 = "d_a_obj_suisya";
+const char* const stringBase_80376DCF = "d_a_obj_oiltubo";
+const char* const stringBase_80376DDF = "d_a_obj_roten";
+const char* const stringBase_80376DED = "d_a_obj_ss_drink";
+const char* const stringBase_80376DFE = "d_a_obj_ss_item";
+const char* const stringBase_80376E0E = "d_a_tag_ss_drink";
+const char* const stringBase_80376E1F = "d_a_tag_bottle_item";
+const char* const stringBase_80376E33 = "d_a_tag_lv5soup";
+const char* const stringBase_80376E43 = "d_a_tag_myna_light";
+const char* const stringBase_80376E56 = "d_a_tag_shop_camera";
+const char* const stringBase_80376E6A = "d_a_tag_shop_item";
+const char* const stringBase_80376E7C = "d_a_obj_ndoor";
+const char* const stringBase_80376E8A = "d_a_obj_udoor";
+const char* const stringBase_80376E98 = "d_a_obj_usaku";
+const char* const stringBase_80376EA6 = "d_a_obj_sm_door";
+const char* const stringBase_80376EB6 = "d_a_obj_bed";
+const char* const stringBase_80376EC2 = "d_a_obj_boumato";
+const char* const stringBase_80376ED2 = "d_a_obj_itamato";
+const char* const stringBase_80376EE2 = "d_a_obj_nougu";
+const char* const stringBase_80376EF0 = "d_a_obj_stick";
+const char* const stringBase_80376EFE = "d_a_obj_mie";
+const char* const stringBase_80376F0A = "d_a_obj_sekidoor";
+const char* const stringBase_80376F1B = "d_a_obj_sekizo";
+const char* const stringBase_80376F2A = "d_a_obj_smtile";
+const char* const stringBase_80376F39 = "d_a_npc_fish";
+const char* const stringBase_80376F46 = "d_a_mg_fish";
+const char* const stringBase_80376F52 = "d_a_mg_fshop";
+const char* const stringBase_80376F5F = "d_a_npc_du";
+const char* const stringBase_80376F6A = "d_a_disappear";
+const char* const stringBase_80376F78 = "d_a_obj_mato";
+const char* const stringBase_80376F85 = "d_a_obj_flag";
+const char* const stringBase_80376F92 = "d_a_obj_flag2";
+const char* const stringBase_80376FA0 = "d_a_obj_flag3";
+const char* const stringBase_80376FAE = "d_a_obj_gomikabe";
+const char* const stringBase_80376FBF = "d_a_obj_yousei";
+const char* const stringBase_80376FCE = "d_a_obj_kabuto";
+const char* const stringBase_80376FDD = "d_a_obj_cho";
+const char* const stringBase_80376FE9 = "d_a_obj_kuwagata";
+const char* const stringBase_80376FFA = "d_a_obj_nan";
+const char* const stringBase_80377006 = "d_a_obj_dan";
+const char* const stringBase_80377012 = "d_a_obj_kamakiri";
+const char* const stringBase_80377023 = "d_a_obj_ten";
+const char* const stringBase_8037702F = "d_a_obj_ari";
+const char* const stringBase_8037703B = "d_a_obj_kag";
+const char* const stringBase_80377047 = "d_a_obj_batta";
+const char* const stringBase_80377055 = "d_a_obj_tombo";
+const char* const stringBase_80377063 = "d_a_obj_katatsumuri";
+const char* const stringBase_80377077 = "d_a_obj_h_saku";
+const char* const stringBase_80377086 = "d_a_obj_yobikusa";
+const char* const stringBase_80377097 = "d_a_obj_kazeneko";
+const char* const stringBase_803770A8 = "d_a_obj_kznkarm";
+const char* const stringBase_803770B8 = "d_a_obj_nameplate";
+const char* const stringBase_803770CA = "d_a_obj_ornament_cloth";
+const char* const stringBase_803770E1 = "d_a_obj_laundry_rope";
+const char* const stringBase_803770F6 = "d_a_obj_sakuita_rope";
+const char* const stringBase_8037710B = "d_a_obj_sakuita";
+const char* const stringBase_8037711B = "d_a_obj_laundry";
+const char* const stringBase_8037712B = "d_a_warp_bug";
+const char* const stringBase_80377138 = "d_a_izumi_gate";
+const char* const stringBase_80377147 = "d_a_obj_fchain";
+const char* const stringBase_80377156 = "d_a_obj_wchain";
+const char* const stringBase_80377165 = "d_a_tag_attention";
+const char* const stringBase_80377177 = "d_a_obj_tornado";
+const char* const stringBase_80377187 = "d_a_obj_tornado2";
+const char* const stringBase_80377198 = "d_a_obj_firepillar";
+const char* const stringBase_803771AB = "d_a_obj_firepillar2";
+const char* const stringBase_803771BF = "d_a_obj_inobone";
+const char* const stringBase_803771CF = "d_a_obj_stopper";
+const char* const stringBase_803771DF = "d_a_obj_mhole";
+const char* const stringBase_803771ED = "d_a_tag_magne";
+const char* const stringBase_803771FB = "d_a_obj_bosswarp";
+const char* const stringBase_8037720C = "d_a_obj_wood_pendulum";
+const char* const stringBase_80377222 = "d_a_obj_wdStick";
+const char* const stringBase_80377232 = "d_a_obj_stairBlock";
+const char* const stringBase_80377245 = "d_a_obj_geyser";
+const char* const stringBase_80377254 = "d_a_obj_ktOnFire";
+const char* const stringBase_80377265 = "d_a_obj_fireWood";
+const char* const stringBase_80377276 = "d_a_obj_fireWood2";
+const char* const stringBase_80377288 = "d_a_obj_gpTaru";
+const char* const stringBase_80377297 = "d_a_obj_onsenTaru";
+const char* const stringBase_803772A9 = "d_a_obj_kiPot";
+const char* const stringBase_803772B7 = "d_a_tboxSw";
+const char* const stringBase_803772C2 = "d_a_obj_swchain";
+const char* const stringBase_803772D2 = "d_a_obj_wsword";
+const char* const stringBase_803772E1 = "d_a_obj_stoneMark";
+const char* const stringBase_803772F3 = "d_a_obj_lv3Candle";
+const char* const stringBase_80377305 = "d_a_obj_lv4CandleTag";
+const char* const stringBase_8037731A = "d_a_obj_lv4CandleDemoTag";
+const char* const stringBase_80377333 = "d_a_obj_damCps";
+const char* const stringBase_80377342 = "d_a_obj_smoke";
+const char* const stringBase_80377350 = "d_a_obj_waterfall";
+const char* const stringBase_80377362 = "d_a_obj_zcloth";
+const char* const stringBase_80377371 = "d_a_obj_poFire";
+const char* const stringBase_80377380 = "d_a_tag_poFire";
+const char* const stringBase_8037738F = "d_a_obj_glowSphere";
+const char* const stringBase_803773A2 = "d_a_tag_lightball";
+const char* const stringBase_803773B4 = "d_a_swLBall";
+const char* const stringBase_803773C0 = "d_a_swBall";
+const char* const stringBase_803773CB = "d_a_obj_lv3waterEff";
+const char* const stringBase_803773DF = "d_a_tag_river_back";
+const char* const stringBase_803773F2 = "d_a_tag_kago_fall";
+const char* const stringBase_80377404 = "d_a_tag_lv2prchk";
+const char* const stringBase_80377415 = "d_a_obj_lv4gear";
+const char* const stringBase_80377425 = "d_a_obj_master_sword";
+const char* const stringBase_8037743A = "d_a_obj_wood_statue";
+const char* const stringBase_8037744E = "d_a_obj_fan";
+const char* const stringBase_8037745A = "d_a_obj_iceleaf";
+const char* const stringBase_8037746A = "d_a_obj_zrTuraraRock";
+const char* const stringBase_8037747F = "d_a_tag_ret_room";
+const char* const stringBase_80377490 = "d_a_obj_wind_stone";
+const char* const stringBase_803774A3 = "d_a_tag_wara_howl";
+const char* const stringBase_803774B5 = "d_a_obj_scannon";
+const char* const stringBase_803774C5 = "d_a_obj_smw_stone";
+const char* const stringBase_803774D7 = "d_a_obj_scannon_crs";
+const char* const stringBase_803774EB = "d_a_obj_snowEffTag";
+const char* const stringBase_803774FE = "d_a_tag_CstaSw";
+const char* const stringBase_8037750D = "d_a_tag_lv6CstaSw";
+const char* const stringBase_8037751F = "d_a_obj_bubblePilar";
+const char* const stringBase_80377533 = "d_a_obj_poTbox";
+const char* const stringBase_80377542 = "d_a_obj_timeFire";
+const char* const stringBase_80377553 = "d_a_obj_tmoon";
+const char* const stringBase_80377561 = "d_a_obj_ganonwall";
+const char* const stringBase_80377573 = "d_a_obj_prop";
+const char* const stringBase_80377580 = "d_a_cstatue";
+const char* const stringBase_8037758C = "d_a_obj_swBallA";
+const char* const stringBase_8037759C = "d_a_obj_swBallB";
+const char* const stringBase_803775AC = "d_a_obj_snow_soup";
+const char* const stringBase_803775BE = "d_a_obj_nagaisu";
+const char* const stringBase_803775CE = "d_a_obj_rcircle";
+const char* const stringBase_803775DE = "d_a_obj_picture";
+const char* const stringBase_803775EE = "d_a_tag_setBall";
+const char* const stringBase_803775FE = "d_a_tag_smk_emt";
+const char* const stringBase_8037760E = "d_a_swTime";
+const char* const stringBase_80377619 = "d_a_obj_hakai_ftr";
+const char* const stringBase_8037762B = "d_a_obj_hakai_brl";
+const char* const stringBase_8037763D = "d_a_obj_crystal";
+const char* const stringBase_8037764D = "d_a_obj_scannon_ten";
+const char* const stringBase_80377661 = "d_a_obj_swBallC";
+const char* const stringBase_80377671 = "d_a_scene_exit2";
+const char* const stringBase_80377681 = "d_a_obj_hata";
+const char* const stringBase_8037768E = "d_a_obj_toaru_maki";
+const char* const stringBase_803776A1 = "d_a_tag_attack_item";
+const char* const stringBase_803776B5 = "d_a_tag_rmbit_sw";
+const char* const stringBase_803776C6 = "d_a_obj_sword";
+const char* const stringBase_803776D4 = "d_a_tag_spring";
+const char* const stringBase_803776E3 = "d_a_tag_statue_evt";
+const char* const stringBase_803776F6 = "d_a_e_ai";
+const char* const stringBase_803776FF = "d_a_e_gs";
+const char* const stringBase_80377708 = "d_a_e_gob";
+const char* const stringBase_80377712 = "d_a_e_dd";
+const char* const stringBase_8037771B = "d_a_e_dn";
+const char* const stringBase_80377724 = "d_a_e_s1";
+const char* const stringBase_8037772D = "d_a_e_mf";
+const char* const stringBase_80377736 = "d_a_e_sg";
+const char* const stringBase_8037773F = "d_a_e_bs";
+const char* const stringBase_80377748 = "d_a_e_sf";
+const char* const stringBase_80377751 = "d_a_e_sh";
+const char* const stringBase_8037775A = "d_a_e_df";
+const char* const stringBase_80377763 = "d_a_e_gm";
+const char* const stringBase_8037776C = "d_a_e_md";
+const char* const stringBase_80377775 = "d_a_e_sm";
+const char* const stringBase_8037777E = "d_a_e_sm2";
+const char* const stringBase_80377788 = "d_a_e_st";
+const char* const stringBase_80377791 = "d_a_e_st_line";
+const char* const stringBase_8037779F = "d_a_e_sb";
+const char* const stringBase_803777A8 = "d_a_e_th";
+const char* const stringBase_803777B1 = "d_a_e_cr";
+const char* const stringBase_803777BA = "d_a_e_cr_egg";
+const char* const stringBase_803777C7 = "d_a_e_db";
+const char* const stringBase_803777D0 = "d_a_e_db_leaf";
+const char* const stringBase_803777DE = "d_a_e_ga";
+const char* const stringBase_803777E7 = "d_a_e_gb";
+const char* const stringBase_803777F0 = "d_a_e_hb";
+const char* const stringBase_803777F9 = "d_a_e_hb_leaf";
+const char* const stringBase_80377807 = "d_a_e_hzelda";
+const char* const stringBase_80377814 = "d_a_e_yd";
+const char* const stringBase_8037781D = "d_a_e_yh";
+const char* const stringBase_80377826 = "d_a_e_yd_leaf";
+const char* const stringBase_80377834 = "d_a_e_hm";
+const char* const stringBase_8037783D = "d_a_e_tk";
+const char* const stringBase_80377846 = "d_a_e_tk2";
+const char* const stringBase_80377850 = "d_a_e_tk_ball";
+const char* const stringBase_8037785E = "d_a_e_rb";
+const char* const stringBase_80377867 = "d_a_e_rd";
+const char* const stringBase_80377870 = "d_a_e_rdb";
+const char* const stringBase_8037787A = "d_a_e_rdy";
+const char* const stringBase_80377884 = "d_a_e_fm";
+const char* const stringBase_8037788D = "d_a_e_fs";
+const char* const stringBase_80377896 = "d_a_e_pm";
+const char* const stringBase_8037789F = "d_a_e_po";
+const char* const stringBase_803778A8 = "d_a_e_mb";
+const char* const stringBase_803778B1 = "d_a_e_mk";
+const char* const stringBase_803778BA = "d_a_e_mm";
+const char* const stringBase_803778C3 = "d_a_e_fz";
+const char* const stringBase_803778CC = "d_a_e_zs";
+const char* const stringBase_803778D5 = "d_a_e_kk";
+const char* const stringBase_803778DE = "d_a_e_hp";
+const char* const stringBase_803778E7 = "d_a_e_zh";
+const char* const stringBase_803778F0 = "d_a_e_zm";
+const char* const stringBase_803778F9 = "d_a_e_pz";
+const char* const stringBase_80377902 = "d_a_e_fb";
+const char* const stringBase_8037790B = "d_a_e_fk";
+const char* const stringBase_80377914 = "d_a_e_ms";
+const char* const stringBase_8037791D = "d_a_e_nest";
+const char* const stringBase_80377928 = "d_a_e_nz";
+const char* const stringBase_80377931 = "d_a_e_ba";
+const char* const stringBase_8037793A = "d_a_e_bu";
+const char* const stringBase_80377943 = "d_a_e_bug";
+const char* const stringBase_8037794D = "d_a_e_bee";
+const char* const stringBase_80377957 = "d_a_e_is";
+const char* const stringBase_80377960 = "d_a_e_kg";
+const char* const stringBase_80377969 = "d_a_e_kr";
+const char* const stringBase_80377972 = "d_a_e_sw";
+const char* const stringBase_8037797B = "d_a_e_ge";
+const char* const stringBase_80377984 = "d_a_tag_watchge";
+const char* const stringBase_80377994 = "d_a_e_ym";
+const char* const stringBase_8037799D = "d_a_e_ym_tag";
+const char* const stringBase_803779AA = "d_a_e_ymb";
+const char* const stringBase_803779B4 = "d_a_tag_firewall";
+const char* const stringBase_803779C5 = "d_a_tag_waterfall";
+const char* const stringBase_803779D7 = "d_a_e_yk";
+const char* const stringBase_803779E0 = "d_a_e_yr";
+const char* const stringBase_803779E9 = "d_a_e_yg";
+const char* const stringBase_803779F2 = "d_a_e_hz";
+const char* const stringBase_803779FB = "d_a_e_ws";
+const char* const stringBase_80377A04 = "d_a_e_oc";
+const char* const stringBase_80377A0D = "d_a_e_ot";
+const char* const stringBase_80377A16 = "d_a_e_dt";
+const char* const stringBase_80377A1F = "d_a_e_bg";
+const char* const stringBase_80377A28 = "d_a_e_oct_bg";
+const char* const stringBase_80377A35 = "d_a_L7demo_dr";
+const char* const stringBase_80377A43 = "d_a_L7low_dr";
+const char* const stringBase_80377A50 = "d_a_L7op_demo_dr";
+const char* const stringBase_80377A61 = "d_a_e_tt";
+const char* const stringBase_80377A6A = "d_a_e_dk";
+const char* const stringBase_80377A73 = "d_a_e_vt";
+const char* const stringBase_80377A7C = "d_a_e_ww";
+const char* const stringBase_80377A85 = "d_a_e_gi";
+const char* const stringBase_80377A8E = "d_a_b_bh";
+const char* const stringBase_80377A97 = "d_a_b_bq";
+const char* const stringBase_80377AA0 = "d_a_b_gm";
+const char* const stringBase_80377AA9 = "d_a_b_gnd";
+const char* const stringBase_80377AB3 = "d_a_b_go";
+const char* const stringBase_80377ABC = "d_a_b_oh2";
+const char* const stringBase_80377AC6 = "d_a_b_yo";
+const char* const stringBase_80377ACF = "d_a_b_yo_ice";
+const char* const stringBase_80377ADC = "d_a_b_tn";
+const char* const stringBase_80377AE5 = "d_a_b_gg";
+const char* const stringBase_80377AEE = "d_a_b_dre";
+const char* const stringBase_80377AF8 = "d_a_b_mgn";
+const char* const stringBase_80377B02 = "d_a_e_warpappear";
+const char* const stringBase_80377B13 = "d_a_obj_smallkey";
+const char* const stringBase_80377B24 = "d_a_obj_kantera";
+const char* const stringBase_80377B34 = "d_a_obj_life_container";
+const char* const stringBase_80377B4B = "d_a_obj_shield";
+const char* const stringBase_80377B5A = "d_a_demo_item";
+const char* const stringBase_80377B68 = "d_a_shop_item";
+const char* const stringBase_80377B76 = "d_a_obj_drop";
+const char* const stringBase_80377B83 = "d_a_obj_rw";
+const char* const stringBase_80377B8E = "d_a_nbomb";
+const char* const stringBase_80377B98 = "d_a_tag_csw";
+const char* const stringBase_80377BA4 = "d_a_tag_qs";
+const char* const stringBase_80377BAF = "d_a_hozelda";
+const char* const stringBase_80377BBB = "d_a_swc00";
+const char* const stringBase_80377BC5 = "d_a_door_knob00";
+const char* const stringBase_80377BD5 = "d_a_door_dbdoor00";
+const char* const stringBase_80377BE7 = "d_a_door_boss";
+const char* const stringBase_80377BF5 = "d_a_door_bossL1";
+const char* const stringBase_80377C05 = "d_a_door_mbossL1";
+const char* const stringBase_80377C16 = "d_a_door_bossL5";
+const char* const stringBase_80377C26 = "d_a_dshutter";
+const char* const stringBase_80377C33 = "d_a_door_spiral";
+const char* const stringBase_80377C43 = "d_a_tag_chgrestart";
+const char* const stringBase_80377C56 = "d_a_tag_setrestart";
+const char* const stringBase_80377C69 = "d_a_andsw";
+const char* const stringBase_80377C73 = "d_a_andsw2";
+const char* const stringBase_80377C7E = "d_a_myna";
+const char* const stringBase_80377C87 = "d_a_npc_gnd";
+const char* const stringBase_80377C93 = "d_a_npc_gra";
+const char* const stringBase_80377C9F = "d_a_npc_grc";
+const char* const stringBase_80377CAB = "d_a_npc_grd";
+const char* const stringBase_80377CB7 = "d_a_npc_grm";
+const char* const stringBase_80377CC3 = "d_a_npc_grmc";
+const char* const stringBase_80377CD0 = "d_a_npc_gro";
+const char* const stringBase_80377CDC = "d_a_npc_grr";
+const char* const stringBase_80377CE8 = "d_a_npc_grs";
+const char* const stringBase_80377CF4 = "d_a_npc_grz";
+const char* const stringBase_80377D00 = "d_a_npc_yamid";
+const char* const stringBase_80377D0E = "d_a_npc_yamit";
+const char* const stringBase_80377D1C = "d_a_npc_yamis";
+const char* const stringBase_80377D2A = "d_a_npc_blue_ns";
+const char* const stringBase_80377D3A = "d_a_npc_kakashi";
+const char* const stringBase_80377D4A = "d_a_npc_kdk";
+const char* const stringBase_80377D56 = "d_a_npc_aru";
+const char* const stringBase_80377D62 = "d_a_npc_bans";
+const char* const stringBase_80377D6F = "d_a_npc_besu";
+const char* const stringBase_80377D7C = "d_a_npc_bou";
+const char* const stringBase_80377D88 = "d_a_npc_bouS";
+const char* const stringBase_80377D95 = "d_a_npc_clerka";
+const char* const stringBase_80377DA4 = "d_a_npc_clerkb";
+const char* const stringBase_80377DB3 = "d_a_npc_clerkt";
+const char* const stringBase_80377DC2 = "d_a_npc_wrestler";
+const char* const stringBase_80377DD3 = "d_a_tag_arena";
+const char* const stringBase_80377DE1 = "d_a_tag_instruction";
+const char* const stringBase_80377DF5 = "d_a_npc_doc";
+const char* const stringBase_80377E01 = "d_a_npc_gwolf";
+const char* const stringBase_80377E0F = "d_a_npc_len";
+const char* const stringBase_80377E1B = "d_a_npc_lud";
+const char* const stringBase_80377E27 = "d_a_npc_fairy_seirei";
+const char* const stringBase_80377E3C = "d_a_npc_fairy";
+const char* const stringBase_80377E4A = "d_a_npc_hanjo";
+const char* const stringBase_80377E58 = "d_a_npc_henna";
+const char* const stringBase_80377E66 = "d_a_npc_henna0";
+const char* const stringBase_80377E75 = "d_a_npc_hoz";
+const char* const stringBase_80377E81 = "d_a_npc_jagar";
+const char* const stringBase_80377E8F = "d_a_npc_kkri";
+const char* const stringBase_80377E9C = "d_a_npc_kn";
+const char* const stringBase_80377EA7 = "d_a_obj_knBullet";
+const char* const stringBase_80377EB8 = "d_a_npc_knj";
+const char* const stringBase_80377EC4 = "d_a_npc_kolin";
+const char* const stringBase_80377ED2 = "d_a_npc_kolinb";
+const char* const stringBase_80377EE1 = "d_a_npc_kyury";
+const char* const stringBase_80377EEF = "d_a_npc_maro";
+const char* const stringBase_80377EFC = "d_a_npc_midp";
+const char* const stringBase_80377F09 = "d_a_npc_moi";
+const char* const stringBase_80377F15 = "d_a_npc_raca";
+const char* const stringBase_80377F22 = "d_a_npc_saru";
+const char* const stringBase_80377F2F = "d_a_npc_seib";
+const char* const stringBase_80377F3C = "d_a_npc_seic";
+const char* const stringBase_80377F49 = "d_a_npc_seid";
+const char* const stringBase_80377F56 = "d_a_npc_seira";
+const char* const stringBase_80377F64 = "d_a_npc_seira2";
+const char* const stringBase_80377F73 = "d_a_npc_seirei";
+const char* const stringBase_80377F82 = "d_a_npc_shaman";
+const char* const stringBase_80377F91 = "d_a_npc_shop_maro";
+const char* const stringBase_80377FA3 = "d_a_npc_sola";
+const char* const stringBase_80377FB0 = "d_a_npc_taro";
+const char* const stringBase_80377FBD = "d_a_npc_pachi_besu";
+const char* const stringBase_80377FD0 = "d_a_npc_pachi_taro";
+const char* const stringBase_80377FE3 = "d_a_npc_pachi_maro";
+const char* const stringBase_80377FF6 = "d_a_tag_pachi";
+const char* const stringBase_80378004 = "d_a_npc_the";
+const char* const stringBase_80378010 = "d_a_npc_tkj";
+const char* const stringBase_8037801C = "d_a_npc_tks";
+const char* const stringBase_80378028 = "d_a_npc_tkc";
+const char* const stringBase_80378034 = "d_a_obj_tks";
+const char* const stringBase_80378040 = "d_a_npc_toby";
+const char* const stringBase_8037804D = "d_a_npc_uri";
+const char* const stringBase_80378059 = "d_a_npc_yelia";
+const char* const stringBase_80378067 = "d_a_npc_ykm";
+const char* const stringBase_80378073 = "d_a_npc_ykw";
+const char* const stringBase_8037807F = "d_a_npc_zanb";
+const char* const stringBase_8037808C = "d_a_npc_zant";
+const char* const stringBase_80378099 = "d_a_npc_zelda";
+const char* const stringBase_803780A7 = "d_a_npc_zelR";
+const char* const stringBase_803780B4 = "d_a_npc_zelRo";
+const char* const stringBase_803780C2 = "d_a_obj_zra_freeze";
+const char* const stringBase_803780D5 = "d_a_npc_zrc";
+const char* const stringBase_803780E1 = "d_a_npc_zrz";
+const char* const stringBase_803780ED = "d_a_obj_zraMark";
+const char* const stringBase_803780FD = "d_a_npc_myna2";
+const char* const stringBase_8037810B = "d_a_tag_myna2";
+const char* const stringBase_80378119 = "d_a_npc_cdn3";
+const char* const stringBase_80378126 = "d_a_tag_schedule";
+const char* const stringBase_80378137 = "d_a_tag_escape";
+const char* const stringBase_80378146 = "d_a_npc_chat";
+const char* const stringBase_80378153 = "d_a_npc_soldierA";
+const char* const stringBase_80378164 = "d_a_npc_soldierB";
+const char* const stringBase_80378175 = "d_a_passer_mng";
+const char* const stringBase_80378184 = "d_a_npc_passer";
+const char* const stringBase_80378193 = "d_a_npc_passer2";
+const char* const stringBase_803781A3 = "d_a_npc_post";
+const char* const stringBase_803781B0 = "d_a_npc_pouya";
+const char* const stringBase_803781BE = "d_a_formation_mng";
+const char* const stringBase_803781D0 = "d_a_npc_fguard";
+const char* const stringBase_803781DF = "d_a_guard_mng";
+const char* const stringBase_803781ED = "d_a_tag_guard";
+const char* const stringBase_803781FB = "d_a_npc_guard";
+const char* const stringBase_80378209 = "d_a_npc_ash";
+const char* const stringBase_80378215 = "d_a_npc_ashB";
+const char* const stringBase_80378222 = "d_a_npc_shad";
+const char* const stringBase_8037822F = "d_a_npc_rafrel";
+const char* const stringBase_8037823E = "d_a_npc_moir";
+const char* const stringBase_8037824B = "d_a_npc_impal";
+const char* const stringBase_80378259 = "d_a_npc_shoe";
+const char* const stringBase_80378266 = "d_a_npc_doorboy";
+const char* const stringBase_80378276 = "d_a_npc_prayer";
+const char* const stringBase_80378285 = "d_a_npc_kasi_hana";
+const char* const stringBase_80378297 = "d_a_npc_kasi_kyu";
+const char* const stringBase_803782A8 = "d_a_npc_kasi_mich";
+const char* const stringBase_803782BA = "d_a_npc_drainSol";
+const char* const stringBase_803782CB = "d_a_npc_chin";
+const char* const stringBase_803782D8 = "d_a_npc_ins";
+const char* const stringBase_803782E4 = "d_a_npc_shop0";
+const char* const stringBase_803782F2 = "d_a_npc_mk";
+const char* const stringBase_803782FD = "d_a_npc_p2";
+const char* const stringBase_80378308 = "d_a_kytag00";
+const char* const stringBase_80378314 = "d_a_kytag01";
+const char* const stringBase_80378320 = "d_a_kytag02";
+const char* const stringBase_8037832C = "d_a_kytag03";
+const char* const stringBase_80378338 = "d_a_kytag04";
+const char* const stringBase_80378344 = "d_a_kytag05";
+const char* const stringBase_80378350 = "d_a_kytag06";
+const char* const stringBase_8037835C = "d_a_kytag07";
+const char* const stringBase_80378368 = "d_a_kytag08";
+const char* const stringBase_80378374 = "d_a_kytag09";
+const char* const stringBase_80378380 = "d_a_kytag10";
+const char* const stringBase_8037838C = "d_a_kytag11";
+const char* const stringBase_80378398 = "d_a_kytag12";
+const char* const stringBase_803783A4 = "d_a_kytag13";
+const char* const stringBase_803783B0 = "d_a_kytag14";
+const char* const stringBase_803783BC = "d_a_kytag15";
+const char* const stringBase_803783C8 = "d_a_kytag16";
+const char* const stringBase_803783D4 = "d_a_kytag17";
+const char* const stringBase_803783E0 = "d_a_ykgr";
+const char* const stringBase_803783E9 = "d_a_talk";
+const char* const stringBase_803783F2 = "d_a_obj_crope";
+const char* const stringBase_80378400 = "d_a_obj_bombf";
+const char* const stringBase_8037840E = "d_a_obj_bk_leaf";
+const char* const stringBase_8037841E = "d_a_tag_mhint";
+const char* const stringBase_8037842C = "d_a_tag_mmsg";
+const char* const stringBase_80378439 = "d_a_tag_mwait";
+const char* const stringBase_80378447 = "d_a_tag_mstop";
+const char* const stringBase_80378455 = "d_a_tag_stream";
+const char* const stringBase_80378464 = "d_a_tag_sppath";
+const char* const stringBase_80378473 = "d_a_tag_wljump";
+const char* const stringBase_80378482 = "d_a_tag_TWgate";
+const char* const stringBase_80378491 = "d_a_tag_Lv6Gate";
+const char* const stringBase_803784A1 = "d_a_tag_Lv7Gate";
+const char* const stringBase_803784B1 = "d_a_tag_Lv8Gate";
+const char* const stringBase_803784C1 = "d_a_tag_theB_hint";
+const char* const stringBase_803784D3 = "d_a_tag_assistance";
+const char* const stringBase_803784E6 = "d_a_demo00";
+const char* const stringBase_803784F1 = "d_a_tag_camera";
+const char* const stringBase_80378500 = "d_a_tag_chkpoint";
+const char* const stringBase_80378511 = "d_a_tag_event";
+const char* const stringBase_8037851F = "d_a_tag_evt";
+const char* const stringBase_8037852B = "d_a_tag_telop";
+const char* const stringBase_80378539 = "d_a_tag_howl";
+const char* const stringBase_80378546 = "d_a_tag_msg";
+const char* const stringBase_80378552 = "d_a_tag_lantern";
+const char* const stringBase_80378562 = "d_a_tag_mist";
+const char* const stringBase_8037856F = "d_a_dmidna";
+const char* const stringBase_8037857A = "d_a_vrbox";
+const char* const stringBase_80378584 = "d_a_vrbox2";
+const char* const stringBase_8037858F = "d_a_bg";
+const char* const stringBase_80378596 = "d_a_set_bgobj";
+const char* const stringBase_803785A4 = "d_a_bg_obj";
+const char* const stringBase_803785AF = "d_a_mirror";
+const char* const stringBase_803785BA = "d_a_movie_player";
+const char* const stringBase_803785CB = "d_a_title";
+const char* const stringBase_803785D5 = "d_a_fr";
+const char* const stringBase_803785DC = "d_a_econt";
+const char* const stringBase_803785E6 = "d_a_mg_rod";
+const char* const stringBase_803785F1 = "d_a_e_arrow";
+const char* const stringBase_803785FD = "d_a_bullet";
+const char* const stringBase_80378608 = "d_a_swhit0";
+const char* const stringBase_80378613 = "d_a_e_th_ball";
+const char* const stringBase_80378621 = "d_a_tag_evtarea";
+const char* const stringBase_80378631 = "d_a_tag_evtmsg";
+const char* const stringBase_80378640 = "d_a_tag_kmsg";
+const char* const stringBase_8037864D = "d_a_tag_push";
+const char* const stringBase_8037865A = "d_a_e_mk_bo";
+const char* const stringBase_80378666 = "d_a_e_mm_mt";
+const char* const stringBase_80378672 = "d_a_obj_kbox";
+const char* const stringBase_8037867F = "d_a_obj_fw";
+const char* const stringBase_8037868A = "d_a_b_gos";
+const char* const stringBase_80378694 = "d_a_obj_ystone";
+const char* const stringBase_803786A3 = "d_a_mant";
+const char* const stringBase_803786AC = "d_a_crod";
+const char* const stringBase_803786B5 = "d_a_obj_pleaf";
+const char* const stringBase_803786C3 = "d_a_obj_kbacket";
+const char* const stringBase_803786D3 = "d_a_obj_yel_bag";
+const char* const stringBase_803786E3 = "d_a_obj_pumpkin";
+const char* const stringBase_803786F3 = "d_a_obj_automata";
+const char* const stringBase_80378704 = "d_a_obj_gadget";
+const char* const stringBase_80378713 = "d_a_obj_kago";
+const char* const stringBase_80378720 = "d_a_obj_carry";
+const char* const stringBase_8037872E = "d_a_obj_stone";
+const char* const stringBase_8037873C = "d_a_obj_hb";
+const char* const stringBase_80378747 = "d_a_npc_inko";
+const char* const stringBase_80378754 = "d_a_bd";
+const char* const stringBase_8037875B = "d_a_obj_eff";
+const char* const stringBase_80378767 = "d_a_e_bi";
+const char* const stringBase_80378770 = "d_a_e_bi_leaf";
+const char* const stringBase_8037877E = "d_a_startAndGoal";
+const char* const stringBase_8037878F = "d_a_npc_df";
+const char* const stringBase_8037879A = "d_a_arrow";
+const char* const stringBase_803787A4 = "d_a_path_line";
+const char* const stringBase_803787B2 = "d_a_tag_allmato";
+const char* const stringBase_803787C2 = "d_a_obj_timer";
+const char* const stringBase_803787D0 = "d_a_scene_exit";
+const char* const stringBase_803787DF = "d_a_suspend";
+const char* const stringBase_803787EB = "d_a_grass";
+const char* const stringBase_803787F5 = "cDyl_Link i_ProfName=%d\n";
+const char* const stringBase_8037880E = 
     "cDyl_LinkASync: リンクに失敗しました。諦めます\n";
-SECTION_DEAD char* const stringBase_8037883E = "/";
-SECTION_DEAD char* const stringBase_80378840 = 
+const char* const stringBase_8037883E = "/";
+const char* const stringBase_80378840 = 
     "/dvd/str/Final/Release/frameworkF.str";
-SECTION_DEAD char* const stringBase_80378866 = "f_pc_profile_lst";
+const char* const stringBase_80378866 = "f_pc_profile_lst";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_80378877 = "";
+char* const pad_80378877 = "";
 #pragma pop
 
-/* 80450CAC-80450CB0 0004+00 rc=2 efc=0 .sbss      cDyl_Initialized                                             */
+/* 80450CAC-80450CB0 0004+00 rc=0 efc=0 .sbss      cDyl_Initialized                                             */
 u8 cDyl_Initialized[4];
 
-/* 800185C0-80018688 00C8+00 rc=2 efc=1 .text      cDyl_LinkASync__Fs                                           */
+/* 800185C0-80018688 00C8+00 rc=0 efc=0 .text      cDyl_LinkASync__Fs                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2477,11 +2477,11 @@ asm void cDyl_LinkASync(s16 field_0) {
 #pragma pop
 
 
-/* 80018688-80018764 00DC+00 rc=1 efc=0 .text      cDyl_InitCallback__FPv                                       */
+/* 80018688-80018764 00DC+00 rc=0 efc=0 .text      cDyl_InitCallback__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void cDyl_InitCallback(void* field_0) {
+asm void cDyl_InitCallback(void* field_0) {
 	nofralloc
 #include "asm/c/c_dylink/cDyl_InitCallback__FPv.s"
 }
@@ -2489,10 +2489,10 @@ asm static void cDyl_InitCallback(void* field_0) {
 
 
 /* ############################################################################################## */
-/* 80450CB0-80450CB8 0004+04 rc=2 efc=0 .sbss      cDyl_DVD                                                     */
+/* 80450CB0-80450CB8 0004+04 rc=0 efc=0 .sbss      cDyl_DVD                                                     */
 u8 cDyl_DVD[4 + 4 /* padding */];
 
-/* 80018764-80018798 0034+00 rc=1 efc=1 .text      cDyl_InitAsync__Fv                                           */
+/* 80018764-80018798 0034+00 rc=0 efc=0 .text      cDyl_InitAsync__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2503,7 +2503,7 @@ asm void cDyl_InitAsync() {
 #pragma pop
 
 
-/* 80018798-80018804 006C+00 rc=2 efc=2 .text      cDyl_InitAsyncIsDone__Fv                                     */
+/* 80018798-80018804 006C+00 rc=0 efc=0 .text      cDyl_InitAsyncIsDone__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2514,13 +2514,13 @@ asm void cDyl_InitAsyncIsDone() {
 #pragma pop
 
 
-/* 80018804-8001880C 0008+00 rc=1 efc=0 .text      phase_01__7cDylPhsFPv                                        */
+/* 80018804-8001880C 0008+00 rc=0 efc=0 .text      phase_01__7cDylPhsFPv                                        */
 s32 cDylPhs::phase_01(void* field_0) {
 	return 2;
 }
 
 
-/* 8001880C-80018844 0038+00 rc=1 efc=0 .text      phase_02__7cDylPhsFPs                                        */
+/* 8001880C-80018844 0038+00 rc=0 efc=0 .text      phase_02__7cDylPhsFPs                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2531,15 +2531,15 @@ asm void cDylPhs::phase_02(s16* field_0) {
 #pragma pop
 
 
-/* 80018844-8001884C 0008+00 rc=1 efc=0 .text      phase_03__7cDylPhsFPv                                        */
+/* 80018844-8001884C 0008+00 rc=0 efc=0 .text      phase_03__7cDylPhsFPv                                        */
 bool cDylPhs::phase_03(void* field_0) {
 	return false;
 }
 
 
 /* ############################################################################################## */
-/* 803A3590-803A35A0 000C+04 rc=1 efc=0 .data      l_method$3807                                                */
-void* data_803A3590[4] = {
+/* 803A3590-803A35A0 000C+04 rc=0 efc=0 .data      l_method$3807                                                */
+void* data_803A3590[3 + 1 /* padding */] = {
 	(void*)phase_01__7cDylPhsFPv,
 	(void*)phase_02__7cDylPhsFPs,
 	(void*)phase_03__7cDylPhsFPv,
@@ -2547,7 +2547,7 @@ void* data_803A3590[4] = {
 	NULL,
 };
 
-/* 8001884C-80018890 0044+00 rc=2 efc=2 .text      Link__7cDylPhsFP30request_of_phase_process_classs            */
+/* 8001884C-80018890 0044+00 rc=0 efc=0 .text      Link__7cDylPhsFP30request_of_phase_process_classs            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2558,7 +2558,7 @@ asm void cDylPhs::Link(request_of_phase_process_class* field_0, s16 field_1) {
 #pragma pop
 
 
-/* 80018890-800188DC 004C+00 rc=1 efc=1 .text      Unlink__7cDylPhsFP30request_of_phase_process_classs          */
+/* 80018890-800188DC 004C+00 rc=0 efc=0 .text      Unlink__7cDylPhsFP30request_of_phase_process_classs          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2569,13 +2569,13 @@ asm void cDylPhs::Unlink(request_of_phase_process_class* field_0, s16 field_1) {
 #pragma pop
 
 
-/* 800188DC-800188E4 0008+00 rc=1 efc=1 .text      getModuleName__24DynamicModuleControlBaseCFv                 */
+/* 800188DC-800188E4 0008+00 rc=0 efc=0 .text      getModuleName__24DynamicModuleControlBaseCFv                 */
 bool DynamicModuleControlBase::getModuleName() const {
 	return false;
 }
 
 
-/* 800188E4-80018944 0060+00 rc=1 efc=1 .text      __dt__20DynamicModuleControlFv                               */
+/* 800188E4-80018944 0060+00 rc=0 efc=0 .text      __dt__20DynamicModuleControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

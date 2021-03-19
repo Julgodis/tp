@@ -11,36 +11,36 @@
 
 extern "C" void __OSFPRInit(); // 1
 extern "C" void OSGetConsoleType(); // 1
-extern "C" static void InquiryCallback(); // 1
+extern "C" void InquiryCallback(); // 1
 extern "C" void OSInit(); // 1
-extern "C" static void OSExceptionInit(); // 1
-extern "C" static void __OSDBIntegrator(); // 1
-extern "C" static void __OSDBJump(); // 1
+extern "C" void OSExceptionInit(); // 1
+extern "C" void __OSDBIntegrator(); // 1
+extern "C" void __OSDBJump(); // 1
 extern "C" void __OSSetExceptionHandler(); // 1
 extern "C" void __OSGetExceptionHandler(); // 1
-extern "C" static void OSExceptionVector(); // 1
-extern "C" static void __DBVECTOR(); // 1
-extern "C" static void __OSEVSetNumber(); // 1
-extern "C" static void __OSEVEnd(); // 1
-extern "C" static void OSDefaultExceptionHandler(); // 1
+extern "C" void OSExceptionVector(); // 1
+extern "C" void __DBVECTOR(); // 1
+extern "C" void __OSEVSetNumber(); // 1
+extern "C" void __OSEVEnd(); // 1
+extern "C" void OSDefaultExceptionHandler(); // 1
 extern "C" void __OSPSInit(); // 1
 extern "C" void __OSGetDIConfig(); // 1
 extern "C" void OSRegisterVersion(); // 1
 
 extern "C" void __OSFPRInit(); // 1
 extern "C" void OSGetConsoleType(); // 1
-extern "C" static void InquiryCallback(); // 1
+extern "C" void InquiryCallback(); // 1
 extern "C" void OSInit(); // 1
-extern "C" static void OSExceptionInit(); // 1
-extern "C" static void __OSDBIntegrator(); // 1
-extern "C" static void __OSDBJump(); // 1
+extern "C" void OSExceptionInit(); // 1
+extern "C" void __OSDBIntegrator(); // 1
+extern "C" void __OSDBJump(); // 1
 extern "C" void __OSSetExceptionHandler(); // 1
 extern "C" void __OSGetExceptionHandler(); // 1
-extern "C" static void OSExceptionVector(); // 1
-extern "C" static void __DBVECTOR(); // 1
-extern "C" static void __OSEVSetNumber(); // 1
-extern "C" static void __OSEVEnd(); // 1
-extern "C" static void OSDefaultExceptionHandler(); // 1
+extern "C" void OSExceptionVector(); // 1
+extern "C" void __DBVECTOR(); // 1
+extern "C" void __OSEVSetNumber(); // 1
+extern "C" void __OSEVEnd(); // 1
+extern "C" void OSDefaultExceptionHandler(); // 1
 extern "C" void __OSPSInit(); // 1
 extern "C" void __OSGetDIConfig(); // 1
 extern "C" void OSRegisterVersion(); // 1
@@ -66,14 +66,14 @@ SECTION_DATA extern u8 OS__lit_155[27 + 1 /* padding */];
 SECTION_BSS extern u8 DriveInfo[32];
 SECTION_BSS extern u8 DriveBlock[48];
 SECTION_BSS extern u8 __OSRebootParams[28 + 4 /* padding */];
-SECTION_SDATA extern void*__OSVersion;
+SECTION_SDATA extern void* __OSVersion;
 SECTION_SDATA extern u8 OS__lit_116[6 + 2 /* padding */];
 SECTION_SDATA extern u32 lit_163;
 SECTION_SBSS extern u8 OS__BootInfo[4];
 SECTION_SBSS extern u8 BI2DebugFlag[4];
 SECTION_SBSS extern u8 BI2DebugFlagHolder[4];
 SECTION_SBSS extern u8 __OSIsGcam[4];
-SECTION_SBSS extern u8 ZeroF[8];
+SECTION_SBSS extern f64 ZeroF;
 SECTION_SBSS extern u8 ZeroPS[8];
 SECTION_SBSS extern u8 AreWeInitialized[4];
 SECTION_SBSS extern u8 OSExceptionTable[4];
@@ -186,25 +186,25 @@ SECTION_SBSS extern u8 __PADSpec[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80451600-80451604 0004+00 rc=2 efc=0 .sbss      BootInfo                                                     */
+/* 80451600-80451604 0004+00 rc=0 efc=0 .sbss      BootInfo                                                     */
 u8 OS__BootInfo[4];
 
-/* 80451604-80451608 0004+00 rc=2 efc=0 .sbss      BI2DebugFlag                                                 */
+/* 80451604-80451608 0004+00 rc=0 efc=0 .sbss      BI2DebugFlag                                                 */
 u8 BI2DebugFlag[4];
 
-/* 80451608-8045160C 0004+00 rc=1 efc=0 .sbss      BI2DebugFlagHolder                                           */
+/* 80451608-8045160C 0004+00 rc=0 efc=0 .sbss      BI2DebugFlagHolder                                           */
 u8 BI2DebugFlagHolder[4];
 
-/* 8045160C-80451610 0004+00 rc=2 efc=1 .sbss      __OSIsGcam                                                   */
+/* 8045160C-80451610 0004+00 rc=0 efc=0 .sbss      __OSIsGcam                                                   */
 u8 __OSIsGcam[4];
 
-/* 80451610-80451618 0008+00 rc=1 efc=0 .sbss      ZeroF                                                        */
-u8 ZeroF[8];
+/* 80451610-80451618 0008+00 rc=0 efc=0 .sbss      ZeroF                                                        */
+f64 ZeroF;
 
-/* 80451618-80451620 0008+00 rc=1 efc=0 .sbss      ZeroPS                                                       */
+/* 80451618-80451620 0008+00 rc=0 efc=0 .sbss      ZeroPS                                                       */
 u8 ZeroPS[8];
 
-/* 80339DD4-80339EFC 0128+00 rc=1 efc=1 .text      __OSFPRInit                                                  */
+/* 80339DD4-80339EFC 0128+00 rc=0 efc=0 .text      __OSFPRInit                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -215,7 +215,7 @@ extern "C" asm void __OSFPRInit() {
 #pragma pop
 
 
-/* 80339EFC-80339F24 0028+00 rc=5 efc=5 .text      OSGetConsoleType                                             */
+/* 80339EFC-80339F24 0028+00 rc=0 efc=0 .text      OSGetConsoleType                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,14 +227,14 @@ extern "C" asm void OSGetConsoleType() {
 
 
 /* ############################################################################################## */
-/* 8044BA60-8044BA80 0020+00 rc=2 efc=0 .bss       DriveInfo                                                    */
+/* 8044BA60-8044BA80 0020+00 rc=0 efc=0 .bss       DriveInfo                                                    */
 u8 DriveInfo[32];
 
-/* 80339F24-80339F60 003C+00 rc=1 efc=0 .text      InquiryCallback                                              */
+/* 80339F24-80339F60 003C+00 rc=0 efc=0 .text      InquiryCallback                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void InquiryCallback() {
+extern "C" asm void InquiryCallback() {
 	nofralloc
 #include "asm/dolphin/os/OS/InquiryCallback.s"
 }
@@ -242,7 +242,7 @@ extern "C" asm static void InquiryCallback() {
 
 
 /* ############################################################################################## */
-/* 803CF288-803CF2CC 0044+00 rc=3 efc=0 .data      @1                                                           */
+/* 803CF288-803CF2CC 0044+00 rc=0 efc=0 .data      @1                                                           */
 u8 OS__lit_1[68] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x4F, 0x53, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
@@ -251,32 +251,32 @@ u8 OS__lit_1[68] = {
 	0x20, 0x3E, 0x3E, 0x00,
 };
 
-/* 80450980-80450984 0004+00 rc=1 efc=0 .sdata     __OSVersion                                                  */
+/* 80450980-80450984 0004+00 rc=0 efc=0 .sdata     __OSVersion                                                  */
 void* __OSVersion = (void*)&OS__lit_1;
 
-/* 80450984-8045098C 0006+02 rc=1 efc=0 .sdata     @116                                                         */
-u8 OS__lit_116[8] = {
+/* 80450984-8045098C 0006+02 rc=0 efc=0 .sdata     @116                                                         */
+u8 OS__lit_116[6 + 2 /* padding */] = {
 	0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 80451620-80451624 0004+00 rc=1 efc=0 .sbss      AreWeInitialized                                             */
+/* 80451620-80451624 0004+00 rc=0 efc=0 .sbss      AreWeInitialized                                             */
 u8 AreWeInitialized[4];
 
-/* 80451624-80451628 0004+00 rc=3 efc=0 .sbss      OSExceptionTable                                             */
+/* 80451624-80451628 0004+00 rc=0 efc=0 .sbss      OSExceptionTable                                             */
 u8 OSExceptionTable[4];
 
-/* 80451628-80451630 0004+04 rc=2 efc=1 .sbss      __OSInIPL                                                    */
+/* 80451628-80451630 0004+04 rc=0 efc=0 .sbss      __OSInIPL                                                    */
 u8 __OSInIPL[4 + 4 /* padding */];
 
-/* 80451630-80451634 0004+00 rc=2 efc=1 .sbss      __OSStartTime                                                */
+/* 80451630-80451634 0004+00 rc=0 efc=0 .sbss      __OSStartTime                                                */
 u8 __OSStartTime[4];
 
-/* 80451634-80451638 0004+00 rc=2 efc=1 .sbss      None                                                         */
+/* 80451634-80451638 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_80451634[4];
 
-/* 80339F60-8033A440 04E0+00 rc=2 efc=2 .text      OSInit                                                       */
+/* 80339F60-8033A440 04E0+00 rc=0 efc=0 .text      OSInit                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -287,40 +287,40 @@ extern "C" asm void OSInit() {
 #pragma pop
 
 
-/* 8033A440-8033A6C0 0280+00 rc=1 efc=0 .text      OSExceptionInit                                              */
+/* 8033A440-8033A6C0 0280+00 rc=0 efc=0 .text      OSExceptionInit                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void OSExceptionInit() {
+extern "C" asm void OSExceptionInit() {
 	nofralloc
 #include "asm/dolphin/os/OS/OSExceptionInit.s"
 }
 #pragma pop
 
 
-/* 8033A6C0-8033A6E4 0024+00 rc=1 efc=0 .text      __OSDBIntegrator                                             */
+/* 8033A6C0-8033A6E4 0024+00 rc=0 efc=0 .text      __OSDBIntegrator                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __OSDBIntegrator() {
+extern "C" asm void __OSDBIntegrator() {
 	nofralloc
 #include "asm/dolphin/os/OS/__OSDBIntegrator.s"
 }
 #pragma pop
 
 
-/* 8033A6E4-8033A6E8 0004+00 rc=1 efc=0 .text      __OSDBJump                                                   */
+/* 8033A6E4-8033A6E8 0004+00 rc=0 efc=0 .text      __OSDBJump                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __OSDBJump() {
+extern "C" asm void __OSDBJump() {
 	nofralloc
 #include "asm/dolphin/os/OS/__OSDBJump.s"
 }
 #pragma pop
 
 
-/* 8033A6E8-8033A704 001C+00 rc=4 efc=3 .text      __OSSetExceptionHandler                                      */
+/* 8033A6E8-8033A704 001C+00 rc=0 efc=0 .text      __OSSetExceptionHandler                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -331,7 +331,7 @@ extern "C" asm void __OSSetExceptionHandler() {
 #pragma pop
 
 
-/* 8033A704-8033A718 0014+00 rc=1 efc=1 .text      __OSGetExceptionHandler                                      */
+/* 8033A704-8033A718 0014+00 rc=0 efc=0 .text      __OSGetExceptionHandler                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -342,62 +342,62 @@ extern "C" asm void __OSGetExceptionHandler() {
 #pragma pop
 
 
-/* 8033A718-8033A770 0058+00 rc=1 efc=0 .text      OSExceptionVector                                            */
+/* 8033A718-8033A770 0058+00 rc=0 efc=0 .text      OSExceptionVector                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void OSExceptionVector() {
+extern "C" asm void OSExceptionVector() {
 	nofralloc
 #include "asm/dolphin/os/OS/OSExceptionVector.s"
 }
 #pragma pop
 
 
-/* 8033A770-8033A780 0010+00 rc=1 efc=0 .text      __DBVECTOR                                                   */
+/* 8033A770-8033A780 0010+00 rc=0 efc=0 .text      __DBVECTOR                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __DBVECTOR() {
+extern "C" asm void __DBVECTOR() {
 	nofralloc
 #include "asm/dolphin/os/OS/__DBVECTOR.s"
 }
 #pragma pop
 
 
-/* 8033A780-8033A7B0 0030+00 rc=1 efc=0 .text      __OSEVSetNumber                                              */
+/* 8033A780-8033A7B0 0030+00 rc=0 efc=0 .text      __OSEVSetNumber                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __OSEVSetNumber() {
+extern "C" asm void __OSEVSetNumber() {
 	nofralloc
 #include "asm/dolphin/os/OS/__OSEVSetNumber.s"
 }
 #pragma pop
 
 
-/* 8033A7B0-8033A7B4 0004+00 rc=1 efc=0 .text      __OSEVEnd                                                    */
+/* 8033A7B0-8033A7B4 0004+00 rc=0 efc=0 .text      __OSEVEnd                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __OSEVEnd() {
+extern "C" asm void __OSEVEnd() {
 	nofralloc
 #include "asm/dolphin/os/OS/__OSEVEnd.s"
 }
 #pragma pop
 
 
-/* 8033A7B4-8033A80C 0058+00 rc=2 efc=0 .text      OSDefaultExceptionHandler                                    */
+/* 8033A7B4-8033A80C 0058+00 rc=0 efc=0 .text      OSDefaultExceptionHandler                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void OSDefaultExceptionHandler() {
+extern "C" asm void OSDefaultExceptionHandler() {
 	nofralloc
 #include "asm/dolphin/os/OS/OSDefaultExceptionHandler.s"
 }
 #pragma pop
 
 
-/* 8033A80C-8033A860 0054+00 rc=1 efc=1 .text      __OSPSInit                                                   */
+/* 8033A80C-8033A860 0054+00 rc=0 efc=0 .text      __OSPSInit                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -408,7 +408,7 @@ extern "C" asm void __OSPSInit() {
 #pragma pop
 
 
-/* 8033A860-8033A874 0014+00 rc=1 efc=1 .text      __OSGetDIConfig                                              */
+/* 8033A860-8033A874 0014+00 rc=0 efc=0 .text      __OSGetDIConfig                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -420,10 +420,10 @@ extern "C" asm void __OSGetDIConfig() {
 
 
 /* ############################################################################################## */
-/* 8045098C-80450990 0004+00 rc=1 efc=0 .sdata     @163                                                         */
+/* 8045098C-80450990 0004+00 rc=0 efc=0 .sdata     @163                                                         */
 u32 lit_163 = 0x25730A00;
 
-/* 8033A874-8033A8A0 002C+00 rc=12 efc=11 .text      OSRegisterVersion                                            */
+/* 8033A874-8033A8A0 002C+00 rc=0 efc=0 .text      OSRegisterVersion                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -436,14 +436,14 @@ extern "C" asm void OSRegisterVersion() {
 
 /* ############################################################################################## */
 /* 803CF2CC-803CF2DC 000D+03 rc=0 efc=0 .data      @105                                                         */
-u8 OS__lit_105[16] = {
+u8 OS__lit_105[13 + 3 /* padding */] = {
 	0x0A, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x4F, 0x53, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 803CF2DC-803CF2F4 0016+02 rc=0 efc=0 .data      @106                                                         */
-u8 OS__lit_106[24] = {
+u8 OS__lit_106[22 + 2 /* padding */] = {
 	0x4B, 0x65, 0x72, 0x6E, 0x65, 0x6C, 0x20, 0x62, 0x75, 0x69, 0x6C, 0x74, 0x20, 0x3A, 0x20, 0x25,
 	0x73, 0x20, 0x25, 0x73, 0x0A, 0x00,
 	/* padding */
@@ -456,7 +456,7 @@ u8 OS__lit_107[12] = {
 };
 
 /* 803CF300-803CF30C 0009+03 rc=0 efc=0 .data      @108                                                         */
-u8 OS__lit_108[12] = {
+u8 OS__lit_108[9 + 3 /* padding */] = {
 	0x30, 0x36, 0x3A, 0x32, 0x36, 0x3A, 0x34, 0x31, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
@@ -468,42 +468,42 @@ u8 OS__lit_109[16] = {
 };
 
 /* 803CF31C-803CF328 000B+01 rc=0 efc=0 .data      @110                                                         */
-u8 OS__lit_110[12] = {
+u8 OS__lit_110[11 + 1 /* padding */] = {
 	0x52, 0x65, 0x74, 0x61, 0x69, 0x6C, 0x20, 0x25, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00,
 };
 
 /* 803CF328-803CF338 000E+02 rc=0 efc=0 .data      @111                                                         */
-u8 lit_111[16] = {
+u8 lit_111[14 + 2 /* padding */] = {
 	0x4D, 0x61, 0x63, 0x20, 0x45, 0x6D, 0x75, 0x6C, 0x61, 0x74, 0x6F, 0x72, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 803CF338-803CF348 000D+03 rc=0 efc=0 .data      @112                                                         */
-u8 lit_112[16] = {
+u8 lit_112[13 + 3 /* padding */] = {
 	0x50, 0x43, 0x20, 0x45, 0x6D, 0x75, 0x6C, 0x61, 0x74, 0x6F, 0x72, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 803CF348-803CF358 000D+03 rc=0 efc=0 .data      @113                                                         */
-u8 OS__lit_113[16] = {
+u8 OS__lit_113[13 + 3 /* padding */] = {
 	0x45, 0x50, 0x50, 0x43, 0x20, 0x41, 0x72, 0x74, 0x68, 0x75, 0x72, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 803CF358-803CF368 000D+03 rc=0 efc=0 .data      @114                                                         */
-u8 lit_114[16] = {
+u8 lit_114[13 + 3 /* padding */] = {
 	0x45, 0x50, 0x50, 0x43, 0x20, 0x4D, 0x69, 0x6E, 0x6E, 0x6F, 0x77, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
 /* 803CF368-803CF384 0019+03 rc=0 efc=0 .data      @115                                                         */
-u8 OS__lit_115[28] = {
+u8 OS__lit_115[25 + 3 /* padding */] = {
 	0x44, 0x65, 0x76, 0x65, 0x6C, 0x6F, 0x70, 0x6D, 0x65, 0x6E, 0x74, 0x20, 0x48, 0x57, 0x25, 0x64,
 	0x20, 0x28, 0x25, 0x30, 0x38, 0x78, 0x29, 0x0A, 0x00,
 	/* padding */
@@ -511,14 +511,14 @@ u8 OS__lit_115[28] = {
 };
 
 /* 803CF384-803CF394 000E+02 rc=0 efc=0 .data      @117                                                         */
-u8 OS__lit_117[16] = {
+u8 OS__lit_117[14 + 2 /* padding */] = {
 	0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x25, 0x64, 0x20, 0x4D, 0x42, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
 /* 803CF394-803CF3AC 0015+03 rc=0 efc=0 .data      @118                                                         */
-u8 OS__lit_118[24] = {
+u8 OS__lit_118[21 + 3 /* padding */] = {
 	0x41, 0x72, 0x65, 0x6E, 0x61, 0x20, 0x3A, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x2D, 0x20, 0x30,
 	0x78, 0x25, 0x78, 0x0A, 0x00,
 	/* padding */
@@ -534,7 +534,7 @@ u8 __OSExceptionLocations[60] = {
 };
 
 /* 803CF3E8-803CF404 001B+01 rc=0 efc=0 .data      @152                                                         */
-u8 OS__lit_152[28] = {
+u8 OS__lit_152[27 + 1 /* padding */] = {
 	0x49, 0x6E, 0x73, 0x74, 0x61, 0x6C, 0x6C, 0x69, 0x6E, 0x67, 0x20, 0x4F, 0x53, 0x44, 0x42, 0x49,
 	0x6E, 0x74, 0x65, 0x67, 0x72, 0x61, 0x74, 0x6F, 0x72, 0x0A, 0x00,
 	/* padding */
@@ -542,7 +542,7 @@ u8 OS__lit_152[28] = {
 };
 
 /* 803CF404-803CF434 002E+02 rc=0 efc=0 .data      @153                                                         */
-u8 OS__lit_153[48] = {
+u8 OS__lit_153[46 + 2 /* padding */] = {
 	0x3E, 0x3E, 0x3E, 0x20, 0x4F, 0x53, 0x49, 0x4E, 0x49, 0x54, 0x3A, 0x20, 0x65, 0x78, 0x63, 0x65,
 	0x70, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x25, 0x64, 0x20, 0x63, 0x6F, 0x6D, 0x6D, 0x61, 0x6E, 0x64,
 	0x65, 0x65, 0x72, 0x65, 0x64, 0x20, 0x62, 0x79, 0x20, 0x54, 0x52, 0x4B, 0x0A, 0x00,
@@ -551,7 +551,7 @@ u8 OS__lit_153[48] = {
 };
 
 /* 803CF434-803CF464 002F+01 rc=0 efc=0 .data      @154                                                         */
-u8 OS__lit_154[48] = {
+u8 OS__lit_154[47 + 1 /* padding */] = {
 	0x3E, 0x3E, 0x3E, 0x20, 0x4F, 0x53, 0x49, 0x4E, 0x49, 0x54, 0x3A, 0x20, 0x65, 0x78, 0x63, 0x65,
 	0x70, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x25, 0x64, 0x20, 0x76, 0x65, 0x63, 0x74, 0x6F, 0x72, 0x65,
 	0x64, 0x20, 0x74, 0x6F, 0x20, 0x64, 0x65, 0x62, 0x75, 0x67, 0x67, 0x65, 0x72, 0x0A, 0x00,
@@ -560,7 +560,7 @@ u8 OS__lit_154[48] = {
 };
 
 /* 803CF464-803CF480 001B+01 rc=0 efc=0 .data      @155                                                         */
-u8 OS__lit_155[28] = {
+u8 OS__lit_155[27 + 1 /* padding */] = {
 	0x45, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6F, 0x6E, 0x73, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x69,
 	0x61, 0x6C, 0x69, 0x7A, 0x65, 0x64, 0x2E, 0x2E, 0x2E, 0x0A, 0x00,
 	/* padding */
@@ -570,6 +570,6 @@ u8 OS__lit_155[28] = {
 /* 8044BA80-8044BAB0 0030+00 rc=0 efc=0 .bss       DriveBlock                                                   */
 u8 DriveBlock[48];
 
-/* 8044BAB0-8044BAD0 001C+04 rc=1 efc=1 .bss       __OSRebootParams                                             */
+/* 8044BAB0-8044BAD0 001C+04 rc=0 efc=0 .bss       __OSRebootParams                                             */
 u8 __OSRebootParams[28 + 4 /* padding */];
 

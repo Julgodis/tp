@@ -43,11 +43,14 @@ LIBJSTUDIO_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJStudio.a: $(LIBJSTUDIO_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJStudio.a
 	@echo $(LIBJSTUDIO_A_O_FILES) > build/LIBJSTUDIO_A_ofiles
-	$(LD) -xm l $(LIBJSTUDIO_A_LDFLAGS) -o $(BUILD_DIR)/libJStudio.a @build/LIBJSTUDIO_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJStudio.a
+	@$(LD) -xm l $(LIBJSTUDIO_A_LDFLAGS) -o $(BUILD_DIR)/libJStudio.a @build/LIBJSTUDIO_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJStudio.a
 
 $(BUILD_DIR)/libs/JSystem/JStudio/JStudio/%.o: libs/JSystem/JStudio/JStudio/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJSTUDIO_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJSTUDIO_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

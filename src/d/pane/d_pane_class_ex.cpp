@@ -9,13 +9,13 @@
 // Types:
 // 
 
+struct J2DAnmTexPattern {
+};
+
 struct J2DAnmVisibilityFull {
 };
 
 struct J2DAnmVtxColor {
-};
-
-struct J2DAnmTexPattern {
 };
 
 struct J2DAnmTransform {
@@ -77,25 +77,25 @@ extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform(); // 1
 // Declarations:
 // 
 
-/* 80256018-8025601C 0004+00 rc=4 efc=4 .text      setAnimation__7J2DPaneFP14J2DAnmVtxColor                     */
+/* 80256018-8025601C 0004+00 rc=0 efc=0 .text      setAnimation__7J2DPaneFP14J2DAnmVtxColor                     */
 void J2DPane::setAnimation(J2DAnmVtxColor* field_0) {
 	/* empty function */
 }
 
 
-/* 8025601C-80256020 0004+00 rc=4 efc=4 .text      setAnimation__7J2DPaneFP20J2DAnmVisibilityFull               */
+/* 8025601C-80256020 0004+00 rc=0 efc=0 .text      setAnimation__7J2DPaneFP20J2DAnmVisibilityFull               */
 void J2DPane::setAnimation(J2DAnmVisibilityFull* field_0) {
 	/* empty function */
 }
 
 
-/* 80256020-80256024 0004+00 rc=4 efc=4 .text      setAnimation__7J2DPaneFP16J2DAnmTexPattern                   */
+/* 80256020-80256024 0004+00 rc=0 efc=0 .text      setAnimation__7J2DPaneFP16J2DAnmTexPattern                   */
 void J2DPane::setAnimation(J2DAnmTexPattern* field_0) {
 	/* empty function */
 }
 
 
-/* 80256024-8025602C 0008+00 rc=1 efc=1 .text      getMaterial__12J2DTextBoxExCFv                               */
+/* 80256024-8025602C 0008+00 rc=0 efc=0 .text      getMaterial__12J2DTextBoxExCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,13 +106,13 @@ asm void J2DTextBoxEx::getMaterial() const {
 #pragma pop
 
 
-/* 8025602C-80256034 0008+00 rc=1 efc=1 .text      getMaterial__10J2DTextBoxCFv                                 */
+/* 8025602C-80256034 0008+00 rc=0 efc=0 .text      getMaterial__10J2DTextBoxCFv                                 */
 bool J2DTextBox::getMaterial() const {
 	return false;
 }
 
 
-/* 80256034-8025603C 0008+00 rc=1 efc=1 .text      getMaterial__12J2DPictureExCFv                               */
+/* 80256034-8025603C 0008+00 rc=0 efc=0 .text      getMaterial__12J2DPictureExCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,13 +123,13 @@ asm void J2DPictureEx::getMaterial() const {
 #pragma pop
 
 
-/* 8025603C-80256044 0008+00 rc=1 efc=1 .text      getMaterial__10J2DPictureCFv                                 */
+/* 8025603C-80256044 0008+00 rc=0 efc=0 .text      getMaterial__10J2DPictureCFv                                 */
 bool J2DPicture::getMaterial() const {
 	return false;
 }
 
 
-/* 80256044-80256064 0020+00 rc=1 efc=1 .text      setAnimation__12J2DTextBoxExFP15J2DAnmTransform              */
+/* 80256044-80256064 0020+00 rc=0 efc=0 .text      setAnimation__12J2DTextBoxExFP15J2DAnmTransform              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,7 +140,7 @@ asm void J2DTextBoxEx::setAnimation(J2DAnmTransform* field_0) {
 #pragma pop
 
 
-/* 80256064-80256084 0020+00 rc=1 efc=1 .text      setAnimation__12J2DPictureExFP15J2DAnmTransform              */
+/* 80256064-80256084 0020+00 rc=0 efc=0 .text      setAnimation__12J2DPictureExFP15J2DAnmTransform              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,7 +151,7 @@ asm void J2DPictureEx::setAnimation(J2DAnmTransform* field_0) {
 #pragma pop
 
 
-/* 80256084-802560A4 0020+00 rc=1 efc=1 .text      setAnimation__11J2DWindowExFP15J2DAnmTransform               */
+/* 80256084-802560A4 0020+00 rc=0 efc=0 .text      setAnimation__11J2DWindowExFP15J2DAnmTransform               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

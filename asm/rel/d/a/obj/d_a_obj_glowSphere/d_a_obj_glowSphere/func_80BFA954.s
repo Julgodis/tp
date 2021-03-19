@@ -1,3 +1,0 @@
-lbl_80BFA954:
-/* 80BFA954 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 80BFA958 00000004  4B FF F1 0C */	b __dt__12dBgS_ObjAcchFv

@@ -1,15 +1,15 @@
-import globals as g
 import struct
+import logging
+
 from dataclasses import dataclass, field
 from typing import List, Dict
-import logging
-import util
+
+from . import util
 
 #
 # source:
 # http://wiki.tockdom.com/wiki/RARC_(File_Format)
 #
-
 
 NODE_SIZE = 0x10
 DIRECTORY_SIZE = 0x14

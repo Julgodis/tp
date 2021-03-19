@@ -1,3 +1,0 @@
-lbl_807F7558:
-/* 807F7558 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 807F755C 00000004  4B FF FC 04 */	b __dt__12dBgS_ObjAcchFv

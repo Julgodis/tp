@@ -46,15 +46,15 @@ SECTION_SBSS extern u8 DSP_prior_task[4];
 // 
 
 /* ############################################################################################## */
-/* 8039B8B8-8039B8D4 001A+02 rc=1 efc=0 .rodata    @81                                                          */
-SECTION_RODATA const u8 osdsp__lit_81[28] = {
+/* 8039B8B8-8039B8D4 001A+02 rc=0 efc=0 .rodata    @81                                                          */
+const u8 osdsp__lit_81[26 + 2 /* padding */] = {
 	0x50, 0x72, 0x69, 0x6F, 0x72, 0x20, 0x54, 0x61, 0x73, 0x6B, 0x20, 0x69, 0x73, 0x20, 0x6E, 0x6F,
 	0x74, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x65, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 8029EA00-8029EA84 0084+00 rc=1 efc=1 .text      DSPAddTask                                                   */
+/* 8029EA00-8029EA84 0084+00 rc=0 efc=0 .text      DSPAddTask                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,15 +67,15 @@ extern "C" asm void DSPAddTask() {
 
 
 /* ############################################################################################## */
-/* 8039B8D4-8039B8F8 001F+05 rc=1 efc=0 .rodata    @88                                                          */
-SECTION_RODATA const u8 osdsp__lit_88[36] = {
+/* 8039B8D4-8039B8F8 001F+05 rc=0 efc=0 .rodata    @88                                                          */
+const u8 osdsp__lit_88[31 + 5 /* padding */] = {
 	0x41, 0x6C, 0x72, 0x65, 0x61, 0x64, 0x79, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x65, 0x64, 0x20, 0x70,
 	0x72, 0x69, 0x6F, 0x72, 0x20, 0x44, 0x53, 0x50, 0x20, 0x74, 0x61, 0x73, 0x6B, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8029EAA0-8029EB1C 007C+00 rc=1 efc=1 .text      DSPAddPriorTask__FP15STRUCT_DSP_TASK                         */
+/* 8029EAA0-8029EB1C 007C+00 rc=0 efc=0 .text      DSPAddPriorTask__FP15STRUCT_DSP_TASK                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

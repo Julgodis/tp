@@ -23,7 +23,7 @@ extern "C" void copysign(); // 1
 // Declarations:
 // 
 
-/* 8036C000-8036C028 0028+00 rc=1 efc=1 .text      copysign                                                     */
+/* 8036C000-8036C028 0028+00 rc=0 efc=0 .text      copysign                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

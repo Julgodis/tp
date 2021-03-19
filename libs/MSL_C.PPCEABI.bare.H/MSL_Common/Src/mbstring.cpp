@@ -12,7 +12,7 @@
 extern "C" void wcstombs(); // 1
 
 extern "C" void wcstombs(); // 1
-SECTION_SDATA2 extern u32 MSL_Common_Src_mbstring__lit_74;
+SECTION_SDATA2 extern u32 MSL_Common_Src_mbstring__lit_74[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -27,11 +27,14 @@ extern "C" void strncpy(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80456668-80456670 0004+04 rc=1 efc=0 .sdata2    @74                                                          */
-u32 MSL_Common_Src_mbstring__lit_74 = 0x0000C0E0;
-/* padding 4 bytes */
+/* 80456668-80456670 0004+04 rc=0 efc=0 .sdata2    @74                                                          */
+u32 MSL_Common_Src_mbstring__lit_74[1 + 1 /* padding */] = {
+	0x0000C0E0,
+	/* padding */
+	0x00000000,
+};
 
-/* 80365F74-8036608C 0118+00 rc=1 efc=1 .text      wcstombs                                                     */
+/* 80365F74-8036608C 0118+00 rc=0 efc=0 .text      wcstombs                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

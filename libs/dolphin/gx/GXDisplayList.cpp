@@ -22,13 +22,13 @@ extern "C" void __GXSendFlushPrim(); // 1
 
 extern "C" void __GXSetDirtyState(); // 1
 extern "C" void __GXSendFlushPrim(); // 1
-SECTION_SDATA2 extern void*__GXData;
+SECTION_SDATA2 extern void* __GXData;
 
 // 
 // Declarations:
 // 
 
-/* 8035FEF0-8035FF60 0070+00 rc=20 efc=20 .text      GXCallDisplayList                                            */
+/* 8035FEF0-8035FF60 0070+00 rc=0 efc=0 .text      GXCallDisplayList                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

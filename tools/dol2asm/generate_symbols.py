@@ -1,10 +1,9 @@
-import globals as g
-from data import *
-from exception import *
 
-import util
-import linker_map
-from disassembler import Access, BranchAccess, FloatLoadAccess, DoubleLoadAccess
+from . import util
+from . import linker_map
+from .disassembler import Access, BranchAccess, FloatLoadAccess, DoubleLoadAccess
+from .data import *
+from .exception import *
 
 
 def string_decode(data: bytearray) -> Tuple[str, str]:
@@ -35,71 +34,42 @@ def string_from_data(addr: int, data: bytearray) -> String:
         Identifier("stringBase", addr, None),
         addr,
         len(data),
+        data_type=ConstType(PointerType(CHAR)),
         encoding=encoding,
         decoded_string=string)
 
 
-def symbol_from_data(section: Section, identifier: Identifier, offset: int, data: bytearray, padding_data: bytearray, symbol: linker_map.Symbol) -> List[Symbol]:
+def zero_initialized_symbol(section: Section, identifier: Identifier, symbol: linker_map.Symbol, padding: int) -> List[Symbol]:
+    if isinstance(symbol.access, FloatLoadAccess):
+        is_float_constant = identifier.name and identifier.name.startswith(
+            "__float_")
+        if symbol.size >= 4 and symbol.size % 4 == 0 and not is_float_constant:
+            return [FloatingPoint.create_f32_without_data(identifier, symbol.addr, symbol.size, padding)]
+
+    if isinstance(symbol.access, DoubleLoadAccess):
+        if symbol.size >= 8 and symbol.size % 8 == 0:
+            return [FloatingPoint.create_f64_without_data(identifier, symbol.addr, symbol.size, padding)]
+
+    return [ArbitraryData.create_without_data(identifier,symbol.addr,symbol.size,padding)]
+
+
+def value_initialized_symbol(section: Section, identifier: Identifier, offset: int, data: bytearray, padding_data: bytearray, symbol: linker_map.Symbol) -> List[Symbol]:
     """Create symbols from data. This will try to find strings, integers, floats, or other special symbols."""
 
     # all virtual tables begin with "__vt"
     if identifier.name and identifier.name.startswith("__vt"):
         assert section.name == ".data"
-        return [VirtualTable(
+        assert symbol.size % 4 == 0
+        assert len(padding_data) % 4 == 0
+        padding_values = Integer.u32_from(padding_data)
+        assert sum(padding_values) == 0
+
+        values = Integer.u32_from(data)
+        return [VirtualTable.create(
             identifier,
             symbol.addr,
-            symbol.size,
-            data=data,
-            padding=len(padding_data),
-            padding_data=padding_data,
-            source=symbol.source)]
-
-    """
-    # floats and integer literals will never be in rodata
-    if section.name != ".rodata":
-        if len(data) == 4 and len(padding_data) < 4:
-            u32_data = struct.unpack('>I', data)[0]
-            s32_data = struct.unpack('>i', data)[0]
-            float_data = util.bytes2float32(data)
-
-            # MWCC will put zero-initialized variables in .data/.sdata/.sdata2 if they were generated other code. e.g. using a float literal in code. But if we declare a variable with a 0.0 float the compiler will move it to .bss/.sbss/.sbss2. This is the reason we cannot convert variables from u8 arrays to better types.  
-            if u32_data != 0:
-                if (s32_data >= -4096 and s32_data <= 4096) and False:
-                    return [S32Data(name, s32_data, symbol.addr, offset, data, padding_data=padding_data)] 
-                elif (u32_data < 4096) and False:
-                    return [U32Data(name, u32_data, symbol.addr, offset, data, padding_data=padding_data)] 
-                elif float_data in util.float32_exact:
-                    comment = "%sf %s" % (float_data, hex(u32_data))
-                    return [Fraction32Data(name, util.float32_exact[float_data][0], util.float32_exact[float_data][1], symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
-                elif util.is_nice_float32(float_data):
-                    comment = hex(u32_data)
-                    return [Float32Data(name, float_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
-
-        elif len(data) == 8 and len(padding_data) < 4:
-            u64_data = struct.unpack('>Q', data)[0]
-            s64_data = struct.unpack('>q', data)[0]
-            double_data = util.bytes2float64(data)
-
-            if u64_data != 0:
-                if u64_data == 0x43300000_00000000:
-                    comment = "%s | compiler-generated value used in cast: (float)u32" % hex(u64_data)
-                    return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
-                elif u64_data == 0x43300000_80000000:
-                    comment = "%s | compiler-generated value used in cast: (float)s32" % hex(u64_data)
-                    return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
-
-                elif (s64_data >= -4096 and s64_data <= 4096) and False:
-                    return [S64Data(name, s64_data, symbol.addr, offset, data, padding_data=padding_data)]
-                elif (u64_data < 4096) and False:
-                    return [U64Data(name, u64_data, symbol.addr, offset, data, padding_data=padding_data)] 
-                elif double_data in util.float64_exact:
-                    comment = "%s %s" % (double_data, hex(u64_data))
-                    return [Fraction64Data(name, util.float64_exact[double_data][0], util.float64_exact[double_data][1], symbol.addr, offset, data, padding_data=padding_data, comment=comment)]     
-                elif util.is_nice_float64(double_data):
-                    comment = hex(u64_data)
-                    return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
-
-    """
+            values,
+            padding_values)]
 
     # strings will always be in rodata
     if section.name == ".rodata":
@@ -115,7 +85,8 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
 
     if section.name == ".init":
         if symbol.name == "_rom_copy_info" or symbol.name == "_bss_init_info":
-            return [LinkerGenerated(identifier, symbol.addr, symbol.size)]
+            assert len(padding_data) == 0
+            return [LinkerGenerated.create(identifier, symbol.addr, symbol.size)]
 
     # both .ctors and .dtors symbols are special
     if section.name == ".ctors":
@@ -134,174 +105,108 @@ def symbol_from_data(section: Section, identifier: Identifier, offset: int, data
 
             _ctors_data = padding_data[0:count*4]
             return [
-                ReferenceArray(identifier, symbol.addr, symbol.size,
-                               data=data,
-                               source=f".ctors0/{symbol.source}"),
-                ReferenceArray(Identifier("_ctors", symbol.addr + 4, "_ctors"), symbol.addr + 4, len(_ctors_data),
-                               data=_ctors_data,
-                               source=f".ctors1/{symbol.source}"),
+                ReferenceArray.create(
+                    identifier,
+                    symbol.addr,
+                    Integer.u32_from(data),
+                    []),
+                ReferenceArray.create(
+                    Identifier("_ctors", symbol.addr + 4, "_ctors"),
+                    symbol.addr + 4,
+                    Integer.u32_from(_ctors_data),
+                    []),
             ]
 
     if section.name == ".dtors":
         if symbol.name == "__destroy_global_chain_reference":
             assert len(data) == 4
-            __destroy_global_chain_reference = ReferenceArray(identifier, symbol.addr, symbol.size,
-                                                              data=data,
-                                                              source=f".dtors0/{symbol.source}")
+            __destroy_global_chain_reference = ReferenceArray.create(
+                identifier, symbol.addr, Integer.u32_from(data), [])
 
             if len(padding_data) == 0:
                 return [__destroy_global_chain_reference]
 
             return [
                 __destroy_global_chain_reference,
-                InitData(Identifier('pad', symbol.addr + 4, None),
-                         symbol.addr + 4,
-                         len(padding_data),
-                         data=padding_data,
-                         source=f".dtors0/padding/{symbol.source}")
+                ArbitraryData.create_with_data(
+                    Identifier('pad', symbol.addr + 4, None),
+                    symbol.addr + 4,
+                    padding_data,
+                    [])
             ]
 
         elif symbol.name == "__fini_cpp_exceptions_reference":
             assert len(data) == 4
             assert len(padding_data) == 0
-            return [ReferenceArray(identifier, symbol.addr, symbol.size,
-                                   data=data,
-                                   source=f".dtors1/{symbol.source}")]
-
+            return [ReferenceArray.create(identifier, symbol.addr, Integer.u32_from(data), [])]
 
     if isinstance(symbol.access, FloatLoadAccess):
-        is_float_constant = identifier.name and identifier.name.startswith("__float_")
+        is_float_constant = identifier.name and identifier.name.startswith(
+            "__float_")
         if symbol.size >= 4 and symbol.size % 4 == 0 and not is_float_constant:
-            values = []
-            for data4 in util.chunks(data, 4):
-                value = util.bytes2float32(data4)
-                special_value = util.special_float32(value)
-                if special_value:
-                    values.append(special_value)
-                elif value in util.float32_exact:
-                    fractions = util.float32_exact[value]
-                    values.append(f"{fractions[0]}.0f / {fractions[1]}.0f")
-                else:
-                    values.append(f"{value}f")
+            values = FloatingPoint.f32_from(data)
+            padding_values = FloatingPoint.f32_from(padding_data)
 
             # Metrowerks is very smart... if you initialize a float with 0.0f, the storage will be moved to the one of the .bss sections.
-            # Generated literals will always be (for floats and doubles) in the .sdata2 section. Thus, if we are a literal, we cannot 
+            # Generated literals will always be (for floats and doubles) in the .sdata2 section. Thus, if we are a literal, we cannot
             # use the value 0.0f.
-            if len(values) > 0 and not (len(values) == 1 and values[0] == "0.0f"): 
-                return [Float32(identifier, symbol.addr, symbol.size,
-                        value_type="f32",
-                        values=values,
-                        data=data,
-                        padding=len(padding_data),
-                        padding_data=padding_data,
-                        source=symbol.source)]
+            if len(values) > 0 and not (len(values) == 1 and values[0][0] == 0):
+                return [FloatingPoint.create_f32(identifier, symbol.addr, values, padding_values)]
 
     if isinstance(symbol.access, DoubleLoadAccess):
         if symbol.size >= 8 and symbol.size % 8 == 0:
-            values = []
-            for data8 in util.chunks(data, 8):
-                uvalue = struct.unpack('>Q', data8)[0]
-                value = util.bytes2float64(data8)
-                special_value = util.special_float64(value)
-                if special_value:
-                    values.append(special_value)
-                elif value in util.float64_exact:
-                    fractions = util.float64_exact[value]
-                    values.append(f"{fractions[0]}.0 / {fractions[1]}.0")
-                else:
-                    comment = ""
-                    if uvalue == 0x43300000_00000000:
-                        comment = " /* cast u32 to float */"
-                    elif uvalue == 0x43300000_80000000:
-                        comment = " /* cast s32 to float */"
-                    values.append(f"{value}{comment}")
+            values = FloatingPoint.f64_from(data)
+            padding_values = FloatingPoint.f64_from(padding_data)
 
             # Same comments as for the float case.
-            if  len(values) > 0 and not (len(values) == 1 and values[0] == "0.0"): 
-                return [Float64(identifier, symbol.addr, symbol.size,
-                            value_type="f64",
-                            values=values,
-                            data=data,
-                            padding=len(padding_data),
-                            padding_data=padding_data,
-                            source=symbol.source)]
+            if len(values) > 0 and not (len(values) == 1 and values[0][0] == 0):
+                return [FloatingPoint.create_f64(identifier, symbol.addr, values, padding_values)]
 
-    if symbol.size == 4:
+    if symbol.size == 4 and len(padding_data) % 4 == 0:
         if identifier.name and "$" in identifier.name:
-            # symbols with the character $ are often arrays.
+            # TODO: symbols with the character $ are often arrays.
             pass
         else:
-            value = struct.unpack('>I', data)[0]
-            if value != 0:
-                return [Integer(identifier, symbol.addr, symbol.size,
-                    value_type="u32",
-                    values=[f"0x{value:08X}"],
-                    data=data,
-                    padding=len(padding_data),
-                    padding_data=padding_data,
-                    source=symbol.source)]
+            values = Integer.u32_from(data)
+            padding_values = Integer.u32_from(padding_data)
+            if values[0] != 0:
+                return [Integer.create_u32(identifier, symbol.addr, data, values, padding_data, padding_values)]
 
-    if symbol.size == 2:
+    if symbol.size == 2 and len(padding_data) % 2 == 0:
         if identifier.name and "$" in identifier.name:
-            # symbols with the character $ are often arrays.
+            # TODO: symbols with the character $ are often arrays.
             pass
         else:
-            value = struct.unpack('>H', data)[0]
-            if value != 0:
-                return [Integer(identifier, symbol.addr, symbol.size,
-                    value_type="u16",
-                    values=[f"0x{value:04X}"],
-                    data=data,
-                    padding=len(padding_data),
-                    padding_data=padding_data,
-                    source=symbol.source)]
+            values = Integer.u16_from(data)
+            padding_values = Integer.u16_from(padding_data)
+            if values[0] != 0:
+                return [Integer.create_u16(identifier, symbol.addr, data, values, padding_data, padding_values)]
 
     # otherwise export it as raw initialized data
-    return [InitData(identifier, symbol.addr, symbol.size,
-                     data=data,
-                     padding=len(padding_data),
-                     padding_data=padding_data,
-                     source=symbol.source)]
+    return [ArbitraryData.create_with_data(identifier, symbol.addr, data, padding_data)]
 
 
 def from_group(section: Section, group: List[linker_map.Symbol]) -> List[Symbol]:
     """Create symbol from a group of linker map symbols"""
     assert len(group) == 1
     first = group[0]
-    identifier = Identifier("data", first.addr, first.name)
-    
     if first.size <= 0:
         return []
 
-    # if the section have not data, it is probably a .bss section
+    identifier = Identifier("data", first.addr, first.name)
     if not section.data:
-        # TODO FLOATS!
-        return [ZeroData(identifier, first.addr, first.size, padding=first.padding, source=first.source)]
-
-    # TODO: remove the exception and do a "real" bounds-check
-    data = bytes()
-    padding_data = bytes()
-    padding_symbols = []
-    try:
+        return zero_initialized_symbol(section, identifier, first, first.padding)
+    else:
+        data = bytes()
+        padding_data = bytes()
         data = section.get_data(first.start, first.end)
         if first.padding > 0:
             padding_data = bytes()
-            padding_data = section.get_data(
-                first.end, first.end+first.padding)
-            if first.name != "__init_cpp_exceptions_reference":
-                if not all([x == 0 for x in padding_data]):
-                    padding_symbols += [InitData(Identifier("pad", first.end, None), 
-                                            addr=first.end, 
-                                            size=first.padding,
-                                            data=padding_data,
-                                            source=first.source)]
-                    padding_data = bytes()
-        assert len(data) == first.size
-    except IndexError:
-        raise Dol2ZelException("%08X %04X (%08X-%08X %08X-%08X) is outside of section '%s'" %
-                               (first.addr, first.size, first.start-section.addr, first.end-section.addr, 0, len(section.data), section.name))
+            padding_data = section.get_data(first.end, first.end+first.padding)
 
-    return symbol_from_data(section, identifier, first.addr, data, padding_data, first) + padding_symbols
+        assert len(data) == first.size
+        assert len(padding_data) == first.padding
+        return value_initialized_symbol(section, identifier, first.addr, data, padding_data, first)
 
 
 def groups_from_symbols(symbols: List[linker_map.Symbol]) -> List[List[linker_map.Symbol]]:

@@ -11,12 +11,12 @@
 
 extern "C" void strtol(); // 1
 extern "C" void strtoul(); // 1
-extern "C" static void __strtoul(); // 1
+extern "C" void __strtoul(); // 1
 
 extern "C" void strtol(); // 1
 extern "C" void strtoul(); // 1
-extern "C" static void __strtoul(); // 1
-SECTION_DATA extern void*MSL_Common_Src_strtoul__lit_431[18];
+extern "C" void __strtoul(); // 1
+SECTION_DATA extern void* MSL_Common_Src_strtoul__lit_431[17 + 1 /* padding */];
 
 // 
 // External References:
@@ -33,7 +33,7 @@ SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80368C00-80368CF0 00F0+00 rc=3 efc=3 .text      strtol                                                       */
+/* 80368C00-80368CF0 00F0+00 rc=0 efc=0 .text      strtol                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -44,7 +44,7 @@ extern "C" asm void strtol() {
 #pragma pop
 
 
-/* 80368CF0-80368D9C 00AC+00 rc=2 efc=2 .text      strtoul                                                      */
+/* 80368CF0-80368D9C 00AC+00 rc=0 efc=0 .text      strtoul                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,8 +56,8 @@ extern "C" asm void strtoul() {
 
 
 /* ############################################################################################## */
-/* 803D3148-803D3190 0044+04 rc=1 efc=0 .data      @431                                                         */
-void* MSL_Common_Src_strtoul__lit_431[18] = {
+/* 803D3148-803D3190 0044+04 rc=0 efc=0 .data      @431                                                         */
+void* MSL_Common_Src_strtoul__lit_431[17 + 1 /* padding */] = {
 	(void*)(((char*)__strtoul)+0x310),
 	(void*)(((char*)__strtoul)+0xC4),
 	(void*)(((char*)__strtoul)+0x164),
@@ -79,11 +79,11 @@ void* MSL_Common_Src_strtoul__lit_431[18] = {
 	NULL,
 };
 
-/* 80368D9C-80369114 0378+00 rc=3 efc=0 .text      __strtoul                                                    */
+/* 80368D9C-80369114 0378+00 rc=0 efc=0 .text      __strtoul                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __strtoul() {
+extern "C" asm void __strtoul() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/strtoul/__strtoul.s"
 }

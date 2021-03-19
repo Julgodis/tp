@@ -41,7 +41,7 @@ extern "C" void getCurrentPos__15dShopItemCtrl_cFi(); // 1
 extern "C" void isHomePos__15dShopItemCtrl_cFi(); // 1
 extern "C" void setRotateAnime__15dShopItemCtrl_cFi(); // 1
 extern "C" void setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb(); // 1
-SECTION_DATA extern void*const __vt__15dShopItemCtrl_c[4];
+SECTION_DATA extern void* const __vt__15dShopItemCtrl_c[3 + 1 /* padding */];
 SECTION_SDATA2 extern u8 d_shop_d_shop_item_ctrl__lit_3659[4 + 4 /* padding */];
 SECTION_SDATA2 extern f64 d_shop_d_shop_item_ctrl__lit_3838;
 SECTION_SDATA2 extern f64 d_shop_d_shop_item_ctrl__lit_3839;
@@ -86,10 +86,10 @@ SECTION_SDATA extern u32 __float_nan;
 // 
 
 /* ############################################################################################## */
-/* 803BB888-803BB898 000C+04 rc=2 efc=0 .data      __vt__15dShopItemCtrl_c                                      */
-void* const __vt__15dShopItemCtrl_c[4] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803BB888-803BB898 000C+04 rc=0 efc=0 .data      __vt__15dShopItemCtrl_c                                      */
+void* const __vt__15dShopItemCtrl_c[3 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__15dShopItemCtrl_cFv,
 	/* padding */
 	NULL,
@@ -106,7 +106,7 @@ asm dShopItemCtrl_c::dShopItemCtrl_c() {
 #pragma pop
 
 
-/* 80196958-801969A0 0048+00 rc=2 efc=1 .text      __dt__15dShopItemCtrl_cFv                                    */
+/* 80196958-801969A0 0048+00 rc=0 efc=0 .text      __dt__15dShopItemCtrl_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,14 +118,14 @@ asm dShopItemCtrl_c::~dShopItemCtrl_c() {
 
 
 /* ############################################################################################## */
-/* 80453AD0-80453AD8 0004+04 rc=2 efc=0 .sdata2    @3659                                                        */
-u8 d_shop_d_shop_item_ctrl__lit_3659[8] = {
+/* 80453AD0-80453AD8 0004+04 rc=0 efc=0 .sdata2    @3659                                                        */
+u8 d_shop_d_shop_item_ctrl__lit_3659[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801969A0-80196A3C 009C+00 rc=3 efc=3 .text      getCurrentPos__15dShopItemCtrl_cFi                           */
+/* 801969A0-80196A3C 009C+00 rc=0 efc=0 .text      getCurrentPos__15dShopItemCtrl_cFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +136,7 @@ asm void dShopItemCtrl_c::getCurrentPos(int field_0) {
 #pragma pop
 
 
-/* 80196A3C-80196AF0 00B4+00 rc=2 efc=2 .text      isHomePos__15dShopItemCtrl_cFi                               */
+/* 80196A3C-80196AF0 00B4+00 rc=0 efc=0 .text      isHomePos__15dShopItemCtrl_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +147,7 @@ asm void dShopItemCtrl_c::isHomePos(int field_0) {
 #pragma pop
 
 
-/* 80196AF0-80196BA4 00B4+00 rc=1 efc=1 .text      setRotateAnime__15dShopItemCtrl_cFi                          */
+/* 80196AF0-80196BA4 00B4+00 rc=0 efc=0 .text      setRotateAnime__15dShopItemCtrl_cFi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,30 +159,30 @@ asm void dShopItemCtrl_c::setRotateAnime(int field_0) {
 
 
 /* ############################################################################################## */
-/* 80453AD8-80453AE0 0008+00 rc=1 efc=0 .sdata2    @3838                                                        */
+/* 80453AD8-80453AE0 0008+00 rc=0 efc=0 .sdata2    @3838                                                        */
 f64 d_shop_d_shop_item_ctrl__lit_3838 = 0.5;
 
-/* 80453AE0-80453AE8 0008+00 rc=1 efc=0 .sdata2    @3839                                                        */
+/* 80453AE0-80453AE8 0008+00 rc=0 efc=0 .sdata2    @3839                                                        */
 f64 d_shop_d_shop_item_ctrl__lit_3839 = 3.0;
 
-/* 80453AE8-80453AF0 0008+00 rc=1 efc=0 .sdata2    @3840                                                        */
+/* 80453AE8-80453AF0 0008+00 rc=0 efc=0 .sdata2    @3840                                                        */
 u8 d_shop_d_shop_item_ctrl__lit_3840[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80453AF0-80453AF4 0004+00 rc=1 efc=0 .sdata2    @3841                                                        */
+/* 80453AF0-80453AF4 0004+00 rc=0 efc=0 .sdata2    @3841                                                        */
 f32 d_shop_d_shop_item_ctrl__lit_3841 = 0.5f;
 
-/* 80453AF4-80453AF8 0004+00 rc=1 efc=0 .sdata2    @3842                                                        */
+/* 80453AF4-80453AF8 0004+00 rc=0 efc=0 .sdata2    @3842                                                        */
 f32 d_shop_d_shop_item_ctrl__lit_3842 = 1.0f / 20.0f;
 
-/* 80453AF8-80453AFC 0004+00 rc=1 efc=0 .sdata2    @3843                                                        */
+/* 80453AF8-80453AFC 0004+00 rc=0 efc=0 .sdata2    @3843                                                        */
 f32 d_shop_d_shop_item_ctrl__lit_3843 = 1.0f / 10.0f;
 
-/* 80453AFC-80453B00 0004+00 rc=1 efc=0 .sdata2    @3844                                                        */
+/* 80453AFC-80453B00 0004+00 rc=0 efc=0 .sdata2    @3844                                                        */
 f32 d_shop_d_shop_item_ctrl__lit_3844 = 1.0f / 100.0f;
 
-/* 80196BA4-80197098 04F4+00 rc=1 efc=1 .text      setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb                    */
+/* 80196BA4-80197098 04F4+00 rc=0 efc=0 .text      setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

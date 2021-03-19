@@ -9,6 +9,12 @@
 // Types:
 // 
 
+struct JStage {
+	struct TObject {
+	};
+
+};
+
 struct Vec {
 };
 
@@ -30,12 +36,6 @@ namespace JStudio {
 
 	struct math {
 		/* 80285B44 */ void getTransformation_SRxyzT(f32 (* )[4], Vec const&, Vec const&, Vec const&);
-	};
-
-};
-
-struct JStage {
-	struct TObject {
 	};
 
 };
@@ -85,7 +85,7 @@ extern "C" void PSMTXTrans(); // 1
 // Declarations:
 // 
 
-/* 8028A1F8-8028A290 0098+00 rc=2 efc=2 .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
+/* 8028A1F8-8028A290 0098+00 rc=0 efc=0 .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +96,7 @@ asm void JStudio_JStage::transform_toGlobalFromLocal(f32 (* field_0)[4], JStudio
 #pragma pop
 
 
-/* 8028A290-8028A328 0098+00 rc=3 efc=3 .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
+/* 8028A290-8028A328 0098+00 rc=0 efc=0 .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,7 +107,7 @@ asm void JStudio_JStage::transform_toGlobalFromLocal(f32 (* field_0)[4], JStudio
 #pragma pop
 
 
-/* 8028A328-8028A3CC 00A4+00 rc=1 efc=1 .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
+/* 8028A328-8028A3CC 00A4+00 rc=0 efc=0 .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,7 +118,7 @@ asm void JStudio_JStage::transform_toLocalFromGlobal(f32 (* field_0)[4], JStudio
 #pragma pop
 
 
-/* 8028A3CC-8028A470 00A4+00 rc=2 efc=2 .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
+/* 8028A3CC-8028A470 00A4+00 rc=0 efc=0 .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +129,7 @@ asm void JStudio_JStage::transform_toLocalFromGlobal(f32 (* field_0)[4], JStudio
 #pragma pop
 
 
-/* 8028A470-8028A4BC 004C+00 rc=5 efc=5 .text      adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl */
+/* 8028A470-8028A4BC 004C+00 rc=0 efc=0 .text      adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,7 +140,7 @@ asm void JStudio_JStage::TAdaptor_object_::adaptor_object_data_(void const* fiel
 #pragma pop
 
 
-/* 8028A4BC-8028A50C 0050+00 rc=4 efc=4 .text      adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc */
+/* 8028A4BC-8028A50C 0050+00 rc=0 efc=0 .text      adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,7 +151,7 @@ asm void JStudio_JStage::TAdaptor_object_::adaptor_object_findJSGObject_(char co
 #pragma pop
 
 
-/* 8028A50C-8028A550 0044+00 rc=4 efc=4 .text      adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc */
+/* 8028A50C-8028A550 0044+00 rc=0 efc=0 .text      adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +162,7 @@ asm void JStudio_JStage::TAdaptor_object_::adaptor_object_findJSGObjectNode_(JSt
 #pragma pop
 
 
-/* 8028A550-8028A5F0 00A0+00 rc=1 efc=1 .text      adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028A550-8028A5F0 00A0+00 rc=0 efc=0 .text      adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

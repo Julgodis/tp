@@ -10,7 +10,7 @@ lbl_80049C44:
 /* 80049C64 00000020  88 03 00 B9 */	lbz r0, 0xb9(r3)
 /* 80049C68 00000024  7C 04 02 14 */	add r0, r4, r0
 /* 80049C6C 00000028  7C 1F 07 34 */	extsh r31, r0
-/* 80049C70 0000002C  88 0D 87 E4 */	lbz r0, struct_80450D64+0x0(r13)
+/* 80049C70 0000002C  88 0D 87 E4 */	lbz r0, -0x781c(r13)
 /* 80049C74 00000030  7C 03 07 74 */	extsb r3, r0
 /* 80049C78 00000034  C0 22 85 50 */	lfs f1, d_particle_d_particle__lit_3964(r2)
 /* 80049C7C 00000038  48 15 CF DD */	bl dKy_setLight_nowroom_grass__Fcf

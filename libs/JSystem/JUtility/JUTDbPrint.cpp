@@ -9,6 +9,11 @@
 // Types:
 // 
 
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
 struct JUtility {
 	struct TColor {
 	};
@@ -18,11 +23,6 @@ struct JUtility {
 struct JUTFont {
 	/* 802DED70 */ void setCharColor(JUtility::TColor);
 	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
-};
-
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct JUTDbPrint {
@@ -94,8 +94,8 @@ extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void vsnprintf(); // 1
 extern "C" void strcpy(); // 1
-SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
-SECTION_DATA extern void*const __vt__13J2DOrthoGraph[10];
+SECTION_DATA extern void* const __vt__14J2DGrafContext[10];
+SECTION_DATA extern void* const __vt__13J2DOrthoGraph[10];
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 SECTION_SBSS extern u8 sManager__8JUTVideo[4];
 
@@ -103,7 +103,7 @@ SECTION_SBSS extern u8 sManager__8JUTVideo[4];
 // Declarations:
 // 
 
-/* 802E0148-802E0190 0048+00 rc=1 efc=0 .text      __ct__10JUTDbPrintFP7JUTFontP7JKRHeap                        */
+/* 802E0148-802E0190 0048+00 rc=0 efc=0 .text      __ct__10JUTDbPrintFP7JUTFontP7JKRHeap                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,10 +115,10 @@ asm JUTDbPrint::JUTDbPrint(JUTFont* field_0, JKRHeap* field_1) {
 
 
 /* ############################################################################################## */
-/* 804514C8-804514D0 0004+04 rc=9 efc=6 .sbss      sDebugPrint__10JUTDbPrint                                    */
+/* 804514C8-804514D0 0004+04 rc=0 efc=0 .sbss      sDebugPrint__10JUTDbPrint                                    */
 u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
 
-/* 802E0190-802E0204 0074+00 rc=2 efc=2 .text      start__10JUTDbPrintFP7JUTFontP7JKRHeap                       */
+/* 802E0190-802E0204 0074+00 rc=0 efc=0 .text      start__10JUTDbPrintFP7JUTFontP7JKRHeap                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +129,7 @@ asm void JUTDbPrint::start(JUTFont* field_0, JKRHeap* field_1) {
 #pragma pop
 
 
-/* 802E0204-802E021C 0018+00 rc=1 efc=1 .text      changeFont__10JUTDbPrintFP7JUTFont                           */
+/* 802E0204-802E021C 0018+00 rc=0 efc=0 .text      changeFont__10JUTDbPrintFP7JUTFont                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,7 +140,7 @@ asm void JUTDbPrint::changeFont(JUTFont* field_0) {
 #pragma pop
 
 
-/* 802E021C-802E02A4 0088+00 rc=2 efc=0 .text      enter__10JUTDbPrintFiiiPCci                                  */
+/* 802E021C-802E02A4 0088+00 rc=0 efc=0 .text      enter__10JUTDbPrintFiiiPCci                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,7 +151,7 @@ asm void JUTDbPrint::enter(int field_0, int field_1, int field_2, char const* fi
 #pragma pop
 
 
-/* 802E02A4-802E02DC 0038+00 rc=1 efc=1 .text      flush__10JUTDbPrintFv                                        */
+/* 802E02A4-802E02DC 0038+00 rc=0 efc=0 .text      flush__10JUTDbPrintFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -163,16 +163,16 @@ asm void JUTDbPrint::flush() {
 
 
 /* ############################################################################################## */
-/* 80456008-8045600C 0004+00 rc=1 efc=0 .sdata2    @835                                                         */
+/* 80456008-8045600C 0004+00 rc=0 efc=0 .sdata2    @835                                                         */
 f32 JUTDbPrint__lit_835 = -1.0f;
 
-/* 8045600C-80456010 0004+00 rc=1 efc=0 .sdata2    @836                                                         */
+/* 8045600C-80456010 0004+00 rc=0 efc=0 .sdata2    @836                                                         */
 f32 JUTDbPrint__lit_836 = 1.0f;
 
-/* 80456010-80456018 0008+00 rc=2 efc=0 .sdata2    @838                                                         */
+/* 80456010-80456018 0008+00 rc=0 efc=0 .sdata2    @838                                                         */
 f64 JUTDbPrint__lit_838 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802E02DC-802E0440 0164+00 rc=1 efc=0 .text      flush__10JUTDbPrintFiiii                                     */
+/* 802E02DC-802E0440 0164+00 rc=0 efc=0 .text      flush__10JUTDbPrintFiiii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -183,7 +183,7 @@ asm void JUTDbPrint::flush(int field_0, int field_1, int field_2, int field_3) {
 #pragma pop
 
 
-/* 802E0440-802E0530 00F0+00 rc=1 efc=0 .text      drawString__10JUTDbPrintFiiiPCUc                             */
+/* 802E0440-802E0530 00F0+00 rc=0 efc=0 .text      drawString__10JUTDbPrintFiiiPCUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,7 +194,7 @@ asm void JUTDbPrint::drawString(int field_0, int field_1, int field_2, u8 const*
 #pragma pop
 
 
-/* 802E0530-802E0600 00D0+00 rc=2 efc=2 .text      JUTReport__FiiPCce                                           */
+/* 802E0530-802E0600 00D0+00 rc=0 efc=0 .text      JUTReport__FiiPCce                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +205,7 @@ asm void JUTReport(int field_0, int field_1, char const* field_2, ...) {
 #pragma pop
 
 
-/* 802E0600-802E06DC 00DC+00 rc=1 efc=1 .text      JUTReport__FiiiPCce                                          */
+/* 802E0600-802E06DC 00DC+00 rc=0 efc=0 .text      JUTReport__FiiiPCce                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

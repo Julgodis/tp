@@ -1,10 +1,11 @@
 import pickle
-import util
-from disassembler import AccessCollector, Access
 from pathlib import Path
-from globals import ExecutableSection
 from typing import Dict
-from context import Context
+
+from . import util
+from .disassembler import AccessCollector, Access
+from .context import Context
+from .data.section import ExecutableSection
 
 def execute(context: Context, module_id: int, sections: Dict[str, ExecutableSection], cache=True) -> Dict[int, Access]:
     """Each code segment provided by the sections will be search through 
@@ -29,7 +30,7 @@ def execute(context: Context, module_id: int, sections: Dict[str, ExecutableSect
             data = section.data[start:stop]
 
             collector = AccessCollector(sections)
-            for i, addr in collector.execute_generator(start + section.local_addr, data, size):
+            for i, addr in collector.execute_generator(start + section.addr, data, size):
                 pass
 
             accesses.update(collector.accesses)

@@ -1,8 +1,9 @@
-import globals as g
-import util
-from builder import AsyncBuilder
 from pathlib import Path
-from data import *
+
+from . import util
+from . import globals as g
+from .data import *
+from .builder import AsyncBuilder
 
 async def create_library(library: Library):
     assert library.name
@@ -57,14 +58,17 @@ async def create_library(library: Library):
         await builder.write("")
         
         await builder.write(f"{target_path}: $({prefix}_O_FILES)")
+        await builder.write(f"\t@echo linking... {target_path}")
         await builder.write(f"\t@echo $({prefix}_O_FILES) > {input_file}")
-        await builder.write(f"\t$(LD) -xm l $({prefix}_LDFLAGS) -o {target_path} @{input_file}")
-        await builder.write(f"\t$(STRIP) -d -R .dead -R .comment {target_path}")
+        await builder.write(f"\t@$(LD) -xm l $({prefix}_LDFLAGS) -o {target_path} @{input_file}")
+        await builder.write(f"\t@$(STRIP) -d -R .dead -R .comment {target_path}")
         await builder.write("")
 
         await builder.write(f"{o_path}/%.o: {cpp_path}/%.cpp")
         await builder.write(f"\t@mkdir -p $(@D)")
-        await builder.write(f"\t$(CC) $(CFLAGS) $({prefix}_CFLAGS) -c -o $@ $<")
+        await builder.write(f"\t@echo building... $<")
+        await builder.write(f"\t@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<")
+        await builder.write(f"\t@$(CC) $(CFLAGS) $({prefix}_CFLAGS) -c -o $@ $@.iconv.cpp")
         await builder.write("")
     
     g.LOG.debug(f"generated Makefile: '{makefile_path}'")

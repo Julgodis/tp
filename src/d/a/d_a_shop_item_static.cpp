@@ -30,8 +30,8 @@ void CheckShopItemCreateHeap(fopAc_ac_c*); // 2
 extern "C" void getRotateP__12daShopItem_cFv(); // 1
 extern "C" void getPosP__12daShopItem_cFv(); // 1
 extern "C" void CheckShopItemCreateHeap__FP10fopAc_ac_c(); // 1
-SECTION_RODATA extern const void*const mData__12daShopItem_c[276];
-SECTION_RODATA extern const u8 d_a_d_a_shop_item_static__stringBase0[192];
+SECTION_RODATA extern const void* mData__12daShopItem_c[276];
+SECTION_RODATA extern const char* const d_a_d_a_shop_item_static__stringBase0;
 
 // 
 // External References:
@@ -44,7 +44,7 @@ extern "C" void CreateItemHeap__12daItemBase_cFPCcsssssss(); // 1
 // Declarations:
 // 
 
-/* 80037C14-80037C1C 0008+00 rc=1 efc=1 .text      getRotateP__12daShopItem_cFv                                 */
+/* 80037C14-80037C1C 0008+00 rc=0 efc=0 .text      getRotateP__12daShopItem_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +55,7 @@ asm void daShopItem_c::getRotateP() {
 #pragma pop
 
 
-/* 80037C1C-80037C24 0008+00 rc=2 efc=2 .text      getPosP__12daShopItem_cFv                                    */
+/* 80037C1C-80037C24 0008+00 rc=0 efc=0 .text      getPosP__12daShopItem_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,18 +67,18 @@ asm void daShopItem_c::getPosP() {
 
 
 /* ############################################################################################## */
-/* 803792E8-80379738 0450+00 rc=1 efc=0 .rodata    mData__12daShopItem_c                                        */
-SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
+/* 803792E8-80379738 0450+00 rc=0 efc=0 .rodata    mData__12daShopItem_c                                        */
+const void* mData__12daShopItem_c[276] = {
 	(void*)&d_a_d_a_shop_item_static__stringBase0,
 	(void*)0x0003FFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
+	(void*)NULL,
 	(void*)0x80000000,
-	NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x80379742,
@@ -86,11 +86,11 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x8037974B,
@@ -98,11 +98,11 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFF50000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x80379754,
@@ -110,11 +110,11 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x8037975E,
@@ -122,10 +122,10 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0009,
 	(void*)0x000F0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x00000004,
 	(void*)0x00000003,
 	(void*)0x01000000,
@@ -134,11 +134,11 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x80379771,
@@ -148,9 +148,9 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFF0000,
 	(void*)0x41F00000,
 	(void*)0x3F800000,
-	NULL,
+	(void*)NULL,
 	(void*)0x7FFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x8037977A,
@@ -160,9 +160,9 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFF0000,
 	(void*)0x41F00000,
 	(void*)0x3F800000,
-	NULL,
+	(void*)NULL,
 	(void*)0x7FFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x80379783,
@@ -170,95 +170,95 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0xFF000000,
 	(void*)0x8037978D,
 	(void*)0x0003FFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0xFF000000,
 	(void*)0x80379795,
 	(void*)0x0003FFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0xFF000000,
 	(void*)0x8037979D,
 	(void*)0x0003FFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0xFF000000,
 	(void*)0x803797A7,
 	(void*)0x0003FFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0xFF000000,
 	(void*)0x803797B1,
 	(void*)0x0003FFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0xFF000000,
 	(void*)0x8037975E,
 	(void*)0x0006000C,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0009,
 	(void*)0x000F0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x00000004,
 	(void*)0x00000001,
-	NULL,
+	(void*)NULL,
 	(void*)0x803797BB,
 	(void*)0x0003FFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x803797C5,
@@ -266,11 +266,11 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x803797CF,
@@ -278,11 +278,11 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFF50000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x803797D9,
@@ -290,11 +290,11 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x803797E3,
@@ -302,11 +302,11 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x803797E3,
@@ -314,11 +314,11 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x803797ED,
@@ -326,11 +326,11 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x000000FF,
 	(void*)0xFF000000,
 	(void*)0x8037975E,
@@ -338,13 +338,13 @@ SECTION_RODATA const void* const mData__12daShopItem_c[276] = {
 	(void*)0xFFFFFFFF,
 	(void*)0xFFFF0009,
 	(void*)0x000F0000,
-	NULL,
+	(void*)NULL,
 	(void*)0x3F800000,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)0x00000004,
 	(void*)0x0000000C,
-	NULL,
+	(void*)NULL,
 };
 
 /* 80037C24-80037C7C 0058+00 rc=0 efc=0 .text      CheckShopItemCreateHeap__FP10fopAc_ac_c                      */
@@ -359,31 +359,31 @@ asm void CheckShopItemCreateHeap(fopAc_ac_c* field_0) {
 
 
 /* ############################################################################################## */
-/* 80379738-803797F8 00BF+01 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80379738-803797F8 00BF+01 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80379738 = "B_mD_sold";
-SECTION_DEAD char* const stringBase_80379742 = "B_mD_oil";
-SECTION_DEAD char* const stringBase_8037974B = "O_mD_red";
-SECTION_DEAD char* const stringBase_80379754 = "B_mD_milk";
-SECTION_DEAD char* const stringBase_8037975E = "O_mD_bott";
-SECTION_DEAD char* const stringBase_80379768 = "O_mD_arw";
-SECTION_DEAD char* const stringBase_80379771 = "O_mD_SHB";
-SECTION_DEAD char* const stringBase_8037977A = "O_mD_SHA";
-SECTION_DEAD char* const stringBase_80379783 = "O_mD_bomb";
-SECTION_DEAD char* const stringBase_8037978D = "O_mD_pg";
-SECTION_DEAD char* const stringBase_80379795 = "O_mD_bi";
-SECTION_DEAD char* const stringBase_8037979D = "O_mD_bmcs";
-SECTION_DEAD char* const stringBase_803797A7 = "O_mD_bmc2";
-SECTION_DEAD char* const stringBase_803797B1 = "O_mD_jira";
-SECTION_DEAD char* const stringBase_803797BB = "O_mD_hati";
-SECTION_DEAD char* const stringBase_803797C5 = "O_mD_pach";
-SECTION_DEAD char* const stringBase_803797CF = "O_mD_blue";
-SECTION_DEAD char* const stringBase_803797D9 = "O_mD_hawk";
-SECTION_DEAD char* const stringBase_803797E3 = "O_mD_marm";
-SECTION_DEAD char* const stringBase_803797ED = "O_mD_gren";
+const char* const stringBase_80379738 = "B_mD_sold";
+const char* const stringBase_80379742 = "B_mD_oil";
+const char* const stringBase_8037974B = "O_mD_red";
+const char* const stringBase_80379754 = "B_mD_milk";
+const char* const stringBase_8037975E = "O_mD_bott";
+const char* const stringBase_80379768 = "O_mD_arw";
+const char* const stringBase_80379771 = "O_mD_SHB";
+const char* const stringBase_8037977A = "O_mD_SHA";
+const char* const stringBase_80379783 = "O_mD_bomb";
+const char* const stringBase_8037978D = "O_mD_pg";
+const char* const stringBase_80379795 = "O_mD_bi";
+const char* const stringBase_8037979D = "O_mD_bmcs";
+const char* const stringBase_803797A7 = "O_mD_bmc2";
+const char* const stringBase_803797B1 = "O_mD_jira";
+const char* const stringBase_803797BB = "O_mD_hati";
+const char* const stringBase_803797C5 = "O_mD_pach";
+const char* const stringBase_803797CF = "O_mD_blue";
+const char* const stringBase_803797D9 = "O_mD_hawk";
+const char* const stringBase_803797E3 = "O_mD_marm";
+const char* const stringBase_803797ED = "O_mD_gren";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_803797F7 = "";
+char* const pad_803797F7 = "";
 #pragma pop
 

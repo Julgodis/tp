@@ -131,13 +131,13 @@ SECTION_RODATA extern const u8 __constants[24];
 // 
 
 /* ############################################################################################## */
-/* 803A2190-803A21A8 0018+00 rc=1 efc=0 .rodata    __constants                                                  */
-SECTION_RODATA const u8 __constants[24] = {
+/* 803A2190-803A21A8 0018+00 rc=0 efc=0 .rodata    __constants                                                  */
+const u8 __constants[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x41, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803620AC-80362108 005C+00 rc=42 efc=42 .text      __cvt_fp2unsigned                                            */
+/* 803620AC-80362108 005C+00 rc=0 efc=0 .text      __cvt_fp2unsigned                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +159,7 @@ extern "C" asm void __save_fpr() {
 #pragma pop
 
 
-/* 80362134-80362138 0004+00 rc=1 efc=1 .text      _savefpr_25                                                  */
+/* 80362134-80362138 0004+00 rc=0 efc=0 .text      _savefpr_25                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -170,7 +170,7 @@ extern "C" asm void _savefpr_25() {
 #pragma pop
 
 
-/* 80362138-8036213C 0004+00 rc=1 efc=1 .text      _savefpr_26                                                  */
+/* 80362138-8036213C 0004+00 rc=0 efc=0 .text      _savefpr_26                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +181,7 @@ extern "C" asm void _savefpr_26() {
 #pragma pop
 
 
-/* 8036213C-80362140 0004+00 rc=2 efc=2 .text      _savefpr_27                                                  */
+/* 8036213C-80362140 0004+00 rc=0 efc=0 .text      _savefpr_27                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,7 +192,7 @@ extern "C" asm void _savefpr_27() {
 #pragma pop
 
 
-/* 80362140-80362144 0004+00 rc=2 efc=2 .text      _savefpr_28                                                  */
+/* 80362140-80362144 0004+00 rc=0 efc=0 .text      _savefpr_28                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -203,7 +203,7 @@ extern "C" asm void _savefpr_28() {
 #pragma pop
 
 
-/* 80362144-80362154 0010+00 rc=3 efc=3 .text      _savefpr_29                                                  */
+/* 80362144-80362154 0010+00 rc=0 efc=0 .text      _savefpr_29                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +225,7 @@ extern "C" asm void __restore_fpr() {
 #pragma pop
 
 
-/* 80362180-80362184 0004+00 rc=1 efc=1 .text      _restfpr_25                                                  */
+/* 80362180-80362184 0004+00 rc=0 efc=0 .text      _restfpr_25                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,7 +236,7 @@ extern "C" asm void _restfpr_25() {
 #pragma pop
 
 
-/* 80362184-80362188 0004+00 rc=1 efc=1 .text      _restfpr_26                                                  */
+/* 80362184-80362188 0004+00 rc=0 efc=0 .text      _restfpr_26                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,7 +247,7 @@ extern "C" asm void _restfpr_26() {
 #pragma pop
 
 
-/* 80362188-8036218C 0004+00 rc=2 efc=2 .text      _restfpr_27                                                  */
+/* 80362188-8036218C 0004+00 rc=0 efc=0 .text      _restfpr_27                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +258,7 @@ extern "C" asm void _restfpr_27() {
 #pragma pop
 
 
-/* 8036218C-80362190 0004+00 rc=2 efc=2 .text      _restfpr_28                                                  */
+/* 8036218C-80362190 0004+00 rc=0 efc=0 .text      _restfpr_28                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +269,7 @@ extern "C" asm void _restfpr_28() {
 #pragma pop
 
 
-/* 80362190-803621A0 0010+00 rc=3 efc=3 .text      _restfpr_29                                                  */
+/* 80362190-803621A0 0010+00 rc=0 efc=0 .text      _restfpr_29                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +280,7 @@ extern "C" asm void _restfpr_29() {
 #pragma pop
 
 
-/* 803621A0-803621A4 0004+00 rc=22 efc=22 .text      __save_gpr                                                   */
+/* 803621A0-803621A4 0004+00 rc=0 efc=0 .text      __save_gpr                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +291,7 @@ extern "C" asm void __save_gpr() {
 #pragma pop
 
 
-/* 803621A4-803621A8 0004+00 rc=5 efc=5 .text      _savegpr_15                                                  */
+/* 803621A4-803621A8 0004+00 rc=0 efc=0 .text      _savegpr_15                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,7 +302,7 @@ extern "C" asm void _savegpr_15() {
 #pragma pop
 
 
-/* 803621A8-803621AC 0004+00 rc=10 efc=10 .text      _savegpr_16                                                  */
+/* 803621A8-803621AC 0004+00 rc=0 efc=0 .text      _savegpr_16                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +313,7 @@ extern "C" asm void _savegpr_16() {
 #pragma pop
 
 
-/* 803621AC-803621B0 0004+00 rc=11 efc=11 .text      _savegpr_17                                                  */
+/* 803621AC-803621B0 0004+00 rc=0 efc=0 .text      _savegpr_17                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,7 +324,7 @@ extern "C" asm void _savegpr_17() {
 #pragma pop
 
 
-/* 803621B0-803621B4 0004+00 rc=13 efc=13 .text      _savegpr_18                                                  */
+/* 803621B0-803621B4 0004+00 rc=0 efc=0 .text      _savegpr_18                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -335,7 +335,7 @@ extern "C" asm void _savegpr_18() {
 #pragma pop
 
 
-/* 803621B4-803621B8 0004+00 rc=22 efc=22 .text      _savegpr_19                                                  */
+/* 803621B4-803621B8 0004+00 rc=0 efc=0 .text      _savegpr_19                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -346,7 +346,7 @@ extern "C" asm void _savegpr_19() {
 #pragma pop
 
 
-/* 803621B8-803621BC 0004+00 rc=26 efc=26 .text      _savegpr_20                                                  */
+/* 803621B8-803621BC 0004+00 rc=0 efc=0 .text      _savegpr_20                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -357,7 +357,7 @@ extern "C" asm void _savegpr_20() {
 #pragma pop
 
 
-/* 803621BC-803621C0 0004+00 rc=35 efc=35 .text      _savegpr_21                                                  */
+/* 803621BC-803621C0 0004+00 rc=0 efc=0 .text      _savegpr_21                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -368,7 +368,7 @@ extern "C" asm void _savegpr_21() {
 #pragma pop
 
 
-/* 803621C0-803621C4 0004+00 rc=60 efc=60 .text      _savegpr_22                                                  */
+/* 803621C0-803621C4 0004+00 rc=0 efc=0 .text      _savegpr_22                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -379,7 +379,7 @@ extern "C" asm void _savegpr_22() {
 #pragma pop
 
 
-/* 803621C4-803621C8 0004+00 rc=63 efc=63 .text      _savegpr_23                                                  */
+/* 803621C4-803621C8 0004+00 rc=0 efc=0 .text      _savegpr_23                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -390,7 +390,7 @@ extern "C" asm void _savegpr_23() {
 #pragma pop
 
 
-/* 803621C8-803621CC 0004+00 rc=116 efc=116 .text      _savegpr_24                                                  */
+/* 803621C8-803621CC 0004+00 rc=0 efc=0 .text      _savegpr_24                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -401,7 +401,7 @@ extern "C" asm void _savegpr_24() {
 #pragma pop
 
 
-/* 803621CC-803621D0 0004+00 rc=206 efc=206 .text      _savegpr_25                                                  */
+/* 803621CC-803621D0 0004+00 rc=0 efc=0 .text      _savegpr_25                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -412,7 +412,7 @@ extern "C" asm void _savegpr_25() {
 #pragma pop
 
 
-/* 803621D0-803621D4 0004+00 rc=308 efc=308 .text      _savegpr_26                                                  */
+/* 803621D0-803621D4 0004+00 rc=0 efc=0 .text      _savegpr_26                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -423,7 +423,7 @@ extern "C" asm void _savegpr_26() {
 #pragma pop
 
 
-/* 803621D4-803621D8 0004+00 rc=480 efc=480 .text      _savegpr_27                                                  */
+/* 803621D4-803621D8 0004+00 rc=0 efc=0 .text      _savegpr_27                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -434,7 +434,7 @@ extern "C" asm void _savegpr_27() {
 #pragma pop
 
 
-/* 803621D8-803621DC 0004+00 rc=644 efc=644 .text      _savegpr_28                                                  */
+/* 803621D8-803621DC 0004+00 rc=0 efc=0 .text      _savegpr_28                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,7 +445,7 @@ extern "C" asm void _savegpr_28() {
 #pragma pop
 
 
-/* 803621DC-803621EC 0010+00 rc=992 efc=992 .text      _savegpr_29                                                  */
+/* 803621DC-803621EC 0010+00 rc=0 efc=0 .text      _savegpr_29                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -456,7 +456,7 @@ extern "C" asm void _savegpr_29() {
 #pragma pop
 
 
-/* 803621EC-803621F0 0004+00 rc=22 efc=22 .text      __restore_gpr                                                */
+/* 803621EC-803621F0 0004+00 rc=0 efc=0 .text      __restore_gpr                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -467,7 +467,7 @@ extern "C" asm void __restore_gpr() {
 #pragma pop
 
 
-/* 803621F0-803621F4 0004+00 rc=5 efc=5 .text      _restgpr_15                                                  */
+/* 803621F0-803621F4 0004+00 rc=0 efc=0 .text      _restgpr_15                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -478,7 +478,7 @@ extern "C" asm void _restgpr_15() {
 #pragma pop
 
 
-/* 803621F4-803621F8 0004+00 rc=10 efc=10 .text      _restgpr_16                                                  */
+/* 803621F4-803621F8 0004+00 rc=0 efc=0 .text      _restgpr_16                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -489,7 +489,7 @@ extern "C" asm void _restgpr_16() {
 #pragma pop
 
 
-/* 803621F8-803621FC 0004+00 rc=11 efc=11 .text      _restgpr_17                                                  */
+/* 803621F8-803621FC 0004+00 rc=0 efc=0 .text      _restgpr_17                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -500,7 +500,7 @@ extern "C" asm void _restgpr_17() {
 #pragma pop
 
 
-/* 803621FC-80362200 0004+00 rc=13 efc=13 .text      _restgpr_18                                                  */
+/* 803621FC-80362200 0004+00 rc=0 efc=0 .text      _restgpr_18                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -511,7 +511,7 @@ extern "C" asm void _restgpr_18() {
 #pragma pop
 
 
-/* 80362200-80362204 0004+00 rc=22 efc=22 .text      _restgpr_19                                                  */
+/* 80362200-80362204 0004+00 rc=0 efc=0 .text      _restgpr_19                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -522,7 +522,7 @@ extern "C" asm void _restgpr_19() {
 #pragma pop
 
 
-/* 80362204-80362208 0004+00 rc=26 efc=26 .text      _restgpr_20                                                  */
+/* 80362204-80362208 0004+00 rc=0 efc=0 .text      _restgpr_20                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -533,7 +533,7 @@ extern "C" asm void _restgpr_20() {
 #pragma pop
 
 
-/* 80362208-8036220C 0004+00 rc=35 efc=35 .text      _restgpr_21                                                  */
+/* 80362208-8036220C 0004+00 rc=0 efc=0 .text      _restgpr_21                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -544,7 +544,7 @@ extern "C" asm void _restgpr_21() {
 #pragma pop
 
 
-/* 8036220C-80362210 0004+00 rc=60 efc=60 .text      _restgpr_22                                                  */
+/* 8036220C-80362210 0004+00 rc=0 efc=0 .text      _restgpr_22                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -555,7 +555,7 @@ extern "C" asm void _restgpr_22() {
 #pragma pop
 
 
-/* 80362210-80362214 0004+00 rc=63 efc=63 .text      _restgpr_23                                                  */
+/* 80362210-80362214 0004+00 rc=0 efc=0 .text      _restgpr_23                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -566,7 +566,7 @@ extern "C" asm void _restgpr_23() {
 #pragma pop
 
 
-/* 80362214-80362218 0004+00 rc=116 efc=116 .text      _restgpr_24                                                  */
+/* 80362214-80362218 0004+00 rc=0 efc=0 .text      _restgpr_24                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -577,7 +577,7 @@ extern "C" asm void _restgpr_24() {
 #pragma pop
 
 
-/* 80362218-8036221C 0004+00 rc=205 efc=205 .text      _restgpr_25                                                  */
+/* 80362218-8036221C 0004+00 rc=0 efc=0 .text      _restgpr_25                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -588,7 +588,7 @@ extern "C" asm void _restgpr_25() {
 #pragma pop
 
 
-/* 8036221C-80362220 0004+00 rc=308 efc=308 .text      _restgpr_26                                                  */
+/* 8036221C-80362220 0004+00 rc=0 efc=0 .text      _restgpr_26                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -599,7 +599,7 @@ extern "C" asm void _restgpr_26() {
 #pragma pop
 
 
-/* 80362220-80362224 0004+00 rc=479 efc=479 .text      _restgpr_27                                                  */
+/* 80362220-80362224 0004+00 rc=0 efc=0 .text      _restgpr_27                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -610,7 +610,7 @@ extern "C" asm void _restgpr_27() {
 #pragma pop
 
 
-/* 80362224-80362228 0004+00 rc=642 efc=642 .text      _restgpr_28                                                  */
+/* 80362224-80362228 0004+00 rc=0 efc=0 .text      _restgpr_28                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -621,7 +621,7 @@ extern "C" asm void _restgpr_28() {
 #pragma pop
 
 
-/* 80362228-80362238 0010+00 rc=991 efc=991 .text      _restgpr_29                                                  */
+/* 80362228-80362238 0010+00 rc=0 efc=0 .text      _restgpr_29                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -632,7 +632,7 @@ extern "C" asm void _restgpr_29() {
 #pragma pop
 
 
-/* 80362238-80362324 00EC+00 rc=2 efc=2 .text      __div2u                                                      */
+/* 80362238-80362324 00EC+00 rc=0 efc=0 .text      __div2u                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -643,7 +643,7 @@ extern "C" asm void __div2u() {
 #pragma pop
 
 
-/* 80362324-8036245C 0138+00 rc=16 efc=16 .text      __div2i                                                      */
+/* 80362324-8036245C 0138+00 rc=0 efc=0 .text      __div2i                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -654,7 +654,7 @@ extern "C" asm void __div2i() {
 #pragma pop
 
 
-/* 8036245C-80362540 00E4+00 rc=2 efc=2 .text      __mod2u                                                      */
+/* 8036245C-80362540 00E4+00 rc=0 efc=0 .text      __mod2u                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -665,7 +665,7 @@ extern "C" asm void __mod2u() {
 #pragma pop
 
 
-/* 80362540-8036264C 010C+00 rc=2 efc=2 .text      __mod2i                                                      */
+/* 80362540-8036264C 010C+00 rc=0 efc=0 .text      __mod2i                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -676,7 +676,7 @@ extern "C" asm void __mod2i() {
 #pragma pop
 
 
-/* 8036264C-80362670 0024+00 rc=2 efc=2 .text      __shl2i                                                      */
+/* 8036264C-80362670 0024+00 rc=0 efc=0 .text      __shl2i                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -687,7 +687,7 @@ extern "C" asm void __shl2i() {
 #pragma pop
 
 
-/* 80362670-80362694 0024+00 rc=2 efc=2 .text      __shr2u                                                      */
+/* 80362670-80362694 0024+00 rc=0 efc=0 .text      __shr2u                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -698,7 +698,7 @@ extern "C" asm void __shr2u() {
 #pragma pop
 
 
-/* 80362694-803626BC 0028+00 rc=3 efc=3 .text      __shr2i                                                      */
+/* 80362694-803626BC 0028+00 rc=0 efc=0 .text      __shr2i                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -709,7 +709,7 @@ extern "C" asm void __shr2i() {
 #pragma pop
 
 
-/* 803626BC-80362770 00B4+00 rc=1 efc=1 .text      __cvt_sll_flt                                                */
+/* 803626BC-80362770 00B4+00 rc=0 efc=0 .text      __cvt_sll_flt                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -720,7 +720,7 @@ extern "C" asm void __cvt_sll_flt() {
 #pragma pop
 
 
-/* 80362770-8036283C 00CC+00 rc=2 efc=2 .text      __cvt_dbl_usll                                               */
+/* 80362770-8036283C 00CC+00 rc=0 efc=0 .text      __cvt_dbl_usll                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

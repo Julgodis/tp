@@ -28,8 +28,8 @@ extern "C" void __ct__16JASRegisterParamFv(); // 1
 extern "C" void init__16JASRegisterParamFv(); // 1
 extern "C" void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl(); // 1
 extern "C" void read__16JASRegisterParamFQ216JASRegisterParam5RegID(); // 1
-SECTION_DATA extern void*JASRegisterParam__lit_56[10];
-SECTION_DATA extern void*JASRegisterParam__lit_87[10];
+SECTION_DATA extern void* JASRegisterParam__lit_56[10];
+SECTION_DATA extern void* JASRegisterParam__lit_87[10];
 
 // 
 // External References:
@@ -41,7 +41,7 @@ SECTION_DATA extern void*JASRegisterParam__lit_87[10];
 // Declarations:
 // 
 
-/* 80293644-80293664 0020+00 rc=1 efc=1 .text      __ct__16JASRegisterParamFv                                   */
+/* 80293644-80293664 0020+00 rc=0 efc=0 .text      __ct__16JASRegisterParamFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -52,7 +52,7 @@ asm JASRegisterParam::JASRegisterParam() {
 #pragma pop
 
 
-/* 80293664-80293684 0020+00 rc=1 efc=1 .text      init__16JASRegisterParamFv                                   */
+/* 80293664-80293684 0020+00 rc=0 efc=0 .text      init__16JASRegisterParamFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +64,7 @@ asm void JASRegisterParam::init() {
 
 
 /* ############################################################################################## */
-/* 803C5B90-803C5BB8 0028+00 rc=1 efc=0 .data      @56                                                          */
+/* 803C5B90-803C5BB8 0028+00 rc=0 efc=0 .data      @56                                                          */
 void* JASRegisterParam__lit_56[10] = {
 	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x50),
 	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x64),
@@ -78,7 +78,7 @@ void* JASRegisterParam__lit_56[10] = {
 	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x124),
 };
 
-/* 80293684-802937B8 0134+00 rc=5 efc=4 .text      write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl       */
+/* 80293684-802937B8 0134+00 rc=0 efc=0 .text      write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +90,7 @@ asm void JASRegisterParam::write(JASRegisterParam::RegID field_0, u32 field_1) {
 
 
 /* ############################################################################################## */
-/* 803C5BB8-803C5BE0 0028+00 rc=1 efc=0 .data      @87                                                          */
+/* 803C5BB8-803C5BE0 0028+00 rc=0 efc=0 .data      @87                                                          */
 void* JASRegisterParam__lit_87[10] = {
 	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x3C),
 	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x54),
@@ -104,7 +104,7 @@ void* JASRegisterParam__lit_87[10] = {
 	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xEC),
 };
 
-/* 802937B8-802938BC 0104+00 rc=2 efc=1 .text      read__16JASRegisterParamFQ216JASRegisterParam5RegID          */
+/* 802937B8-802938BC 0104+00 rc=0 efc=0 .text      read__16JASRegisterParamFQ216JASRegisterParam5RegID          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

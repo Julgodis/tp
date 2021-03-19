@@ -43,7 +43,7 @@ extern "C" void __dl__FPv(); // 1
 // Declarations:
 // 
 
-/* 80074074-80074080 000C+00 rc=1 efc=1 .text      __ct__6dBgPlcFv                                              */
+/* 80074074-80074080 000C+00 rc=0 efc=0 .text      __ct__6dBgPlcFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -54,7 +54,7 @@ asm dBgPlc::dBgPlc() {
 #pragma pop
 
 
-/* 80074080-800740BC 003C+00 rc=1 efc=1 .text      __dt__6dBgPlcFv                                              */
+/* 80074080-800740BC 003C+00 rc=0 efc=0 .text      __dt__6dBgPlcFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +65,7 @@ asm dBgPlc::~dBgPlc() {
 #pragma pop
 
 
-/* 800740BC-800740C4 0008+00 rc=1 efc=1 .text      setBase__6dBgPlcFPv                                          */
+/* 800740BC-800740C4 0008+00 rc=0 efc=0 .text      setBase__6dBgPlcFPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ asm void dBgPlc::setBase(void* field_0) {
 #pragma pop
 
 
-/* 800740C4-800740DC 0018+00 rc=1 efc=1 .text      getCode__6dBgPlcCFiPP5sBgPc                                  */
+/* 800740C4-800740DC 0018+00 rc=0 efc=0 .text      getCode__6dBgPlcCFiPP5sBgPc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ asm void dBgPlc::getCode(int field_0, sBgPc** field_1) const {
 #pragma pop
 
 
-/* 800740DC-800740F4 0018+00 rc=1 efc=1 .text      getGrpCode__6dBgPlcCFi                                       */
+/* 800740DC-800740F4 0018+00 rc=0 efc=0 .text      getGrpCode__6dBgPlcCFi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

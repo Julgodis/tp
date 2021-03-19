@@ -43,10 +43,10 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -95,11 +95,11 @@ extern "C" void fukiAlpha__16dMsgScrnKanban_cFf(); // 1
 extern "C" void fukiScale__16dMsgScrnKanban_cFf(); // 1
 extern "C" void fukiTrans__16dMsgScrnKanban_cFff(); // 1
 SECTION_RODATA extern const u8 data_80399AA0[24];
-SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_kanban__stringBase0[80];
-SECTION_DATA extern void*const __vt__16dMsgScrnKanban_c[22];
+SECTION_RODATA extern const char* const msg_scrn_d_msg_scrn_kanban__stringBase0;
+SECTION_DATA extern void* const __vt__16dMsgScrnKanban_c[22];
 SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_kanban__lit_3944[4];
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_kanban__lit_3945;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_kanban__lit_3946;
+SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_kanban__lit_3946[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_kanban__lit_4033;
 
 // 
@@ -163,27 +163,27 @@ SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 // 
 
 /* ############################################################################################## */
-/* 80399AA0-80399AB8 0018+00 rc=1 efc=0 .rodata    t_tag$3768                                                   */
-SECTION_RODATA const u8 data_80399AA0[24] = {
+/* 80399AA0-80399AB8 0018+00 rc=0 efc=0 .rodata    t_tag$3768                                                   */
+const u8 data_80399AA0[24] = {
 	0x6D, 0x67, 0x5F, 0x65, 0x34, 0x6C, 0x69, 0x6E, 0x00, 0x00, 0x00, 0x00, 0x66, 0x34, 0x5F, 0x77,
 	0x00, 0x00, 0x00, 0x00, 0x74, 0x34, 0x5F, 0x73,
 };
 
-/* 80399AB8-80399B08 004B+05 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80399AB8-80399B08 004B+05 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80399AB8 = "zelda_kanban_stone_a.blo";
-SECTION_DEAD char* const stringBase_80399AD1 = "zelda_kanban_stone_a.bck";
-SECTION_DEAD char* const stringBase_80399AEA = "zelda_kanban_stone_a.btk";
+const char* const stringBase_80399AB8 = "zelda_kanban_stone_a.blo";
+const char* const stringBase_80399AD1 = "zelda_kanban_stone_a.bck";
+const char* const stringBase_80399AEA = "zelda_kanban_stone_a.btk";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_80399B03 = "\0\0\0\0";
+char* const pad_80399B03 = "\0\0\0\0";
 #pragma pop
 
-/* 803C1240-803C1298 0058+00 rc=2 efc=0 .data      __vt__16dMsgScrnKanban_c                                     */
+/* 803C1240-803C1298 0058+00 rc=0 efc=0 .data      __vt__16dMsgScrnKanban_c                                     */
 void* const __vt__16dMsgScrnKanban_c[22] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__16dMsgScrnKanban_cFv,
 	(void*)__dt__16dMsgScrnKanban_cFv,
 	(void*)exec__16dMsgScrnKanban_cFv,
@@ -206,19 +206,22 @@ void* const __vt__16dMsgScrnKanban_c[22] = {
 	(void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
 
-/* 80454CC0-80454CC4 0004+00 rc=2 efc=0 .sdata2    @3944                                                        */
+/* 80454CC0-80454CC4 0004+00 rc=0 efc=0 .sdata2    @3944                                                        */
 u8 msg_scrn_d_msg_scrn_kanban__lit_3944[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454CC4-80454CC8 0004+00 rc=3 efc=0 .sdata2    @3945                                                        */
+/* 80454CC4-80454CC8 0004+00 rc=0 efc=0 .sdata2    @3945                                                        */
 f32 msg_scrn_d_msg_scrn_kanban__lit_3945 = 1.0f;
 
-/* 80454CC8-80454CD0 0004+04 rc=1 efc=0 .sdata2    @3946                                                        */
-f32 msg_scrn_d_msg_scrn_kanban__lit_3946 = 6.0f / 5.0f;
-/* padding 4 bytes */
+/* 80454CC8-80454CD0 0004+04 rc=0 efc=0 .sdata2    @3946                                                        */
+f32 msg_scrn_d_msg_scrn_kanban__lit_3946[1 + 1 /* padding */] = {
+	6.0f / 5.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80244E38-8024534C 0514+00 rc=1 efc=1 .text      __ct__16dMsgScrnKanban_cFP10JKRExpHeap                       */
+/* 80244E38-8024534C 0514+00 rc=0 efc=0 .text      __ct__16dMsgScrnKanban_cFP10JKRExpHeap                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,7 +232,7 @@ asm dMsgScrnKanban_c::dMsgScrnKanban_c(JKRExpHeap* field_0) {
 #pragma pop
 
 
-/* 8024534C-80245528 01DC+00 rc=1 efc=0 .text      __dt__16dMsgScrnKanban_cFv                                   */
+/* 8024534C-80245528 01DC+00 rc=0 efc=0 .text      __dt__16dMsgScrnKanban_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,10 +244,10 @@ asm dMsgScrnKanban_c::~dMsgScrnKanban_c() {
 
 
 /* ############################################################################################## */
-/* 80454CD0-80454CD8 0008+00 rc=1 efc=0 .sdata2    @4033                                                        */
+/* 80454CD0-80454CD8 0008+00 rc=0 efc=0 .sdata2    @4033                                                        */
 f64 msg_scrn_d_msg_scrn_kanban__lit_4033 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80245528-80245618 00F0+00 rc=1 efc=0 .text      exec__16dMsgScrnKanban_cFv                                   */
+/* 80245528-80245618 00F0+00 rc=0 efc=0 .text      exec__16dMsgScrnKanban_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +258,7 @@ asm void dMsgScrnKanban_c::exec() {
 #pragma pop
 
 
-/* 80245618-802456A0 0088+00 rc=1 efc=0 .text      draw__16dMsgScrnKanban_cFv                                   */
+/* 80245618-802456A0 0088+00 rc=0 efc=0 .text      draw__16dMsgScrnKanban_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +269,7 @@ asm void dMsgScrnKanban_c::draw() {
 #pragma pop
 
 
-/* 802456A0-80245754 00B4+00 rc=1 efc=0 .text      fukiAlpha__16dMsgScrnKanban_cFf                              */
+/* 802456A0-80245754 00B4+00 rc=0 efc=0 .text      fukiAlpha__16dMsgScrnKanban_cFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,13 +280,13 @@ asm void dMsgScrnKanban_c::fukiAlpha(f32 field_0) {
 #pragma pop
 
 
-/* 80245754-80245758 0004+00 rc=1 efc=0 .text      fukiScale__16dMsgScrnKanban_cFf                              */
+/* 80245754-80245758 0004+00 rc=0 efc=0 .text      fukiScale__16dMsgScrnKanban_cFf                              */
 void dMsgScrnKanban_c::fukiScale(f32 field_0) {
 	/* empty function */
 }
 
 
-/* 80245758-8024575C 0004+00 rc=1 efc=0 .text      fukiTrans__16dMsgScrnKanban_cFff                             */
+/* 80245758-8024575C 0004+00 rc=0 efc=0 .text      fukiTrans__16dMsgScrnKanban_cFff                             */
 void dMsgScrnKanban_c::fukiTrans(f32 field_0, f32 field_1) {
 	/* empty function */
 }

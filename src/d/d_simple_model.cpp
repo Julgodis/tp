@@ -53,9 +53,9 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-static void dSmplMdl_modelUpdateDL(J3DModel*); // 2
+void dSmplMdl_modelUpdateDL(J3DModel*); // 2
 
-extern "C" static void dSmplMdl_modelUpdateDL__FP8J3DModel(); // 1
+extern "C" void dSmplMdl_modelUpdateDL__FP8J3DModel(); // 1
 extern "C" void __ct__15dSmplMdl_draw_cFv(); // 1
 extern "C" void __ct__12diff_model_cFv(); // 1
 extern "C" void __dt__15dSmplMdl_draw_cFv(); // 1
@@ -71,7 +71,7 @@ extern "C" void init__12diff_model_cFv(); // 1
 extern "C" void isSame__12diff_model_cFP12J3DModelDatai(); // 1
 extern "C" void getRoomNo__12diff_model_cFv(); // 1
 extern "C" void insert__12diff_model_cFP11modelList_c(); // 1
-SECTION_DATA extern void*const __vt__15dSmplMdl_draw_c[4];
+SECTION_DATA extern void* const __vt__15dSmplMdl_draw_c[3 + 1 /* padding */];
 SECTION_SDATA2 extern u8 d_d_simple_model__lit_3763[4 + 4 /* padding */];
 
 // 
@@ -124,11 +124,11 @@ SECTION_BSS extern u8 j3dSys[284];
 // Declarations:
 // 
 
-/* 80048C54-80048CB4 0060+00 rc=1 efc=0 .text      dSmplMdl_modelUpdateDL__FP8J3DModel                          */
+/* 80048C54-80048CB4 0060+00 rc=0 efc=0 .text      dSmplMdl_modelUpdateDL__FP8J3DModel                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dSmplMdl_modelUpdateDL(J3DModel* field_0) {
+asm void dSmplMdl_modelUpdateDL(J3DModel* field_0) {
 	nofralloc
 #include "asm/d/d_simple_model/dSmplMdl_modelUpdateDL__FP8J3DModel.s"
 }
@@ -136,16 +136,16 @@ asm static void dSmplMdl_modelUpdateDL(J3DModel* field_0) {
 
 
 /* ############################################################################################## */
-/* 803A82F8-803A8308 000C+04 rc=2 efc=0 .data      __vt__15dSmplMdl_draw_c                                      */
-void* const __vt__15dSmplMdl_draw_c[4] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803A82F8-803A8308 000C+04 rc=0 efc=0 .data      __vt__15dSmplMdl_draw_c                                      */
+void* const __vt__15dSmplMdl_draw_c[3 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__15dSmplMdl_draw_cFv,
 	/* padding */
 	NULL,
 };
 
-/* 80048CB4-80048D60 00AC+00 rc=1 efc=1 .text      __ct__15dSmplMdl_draw_cFv                                    */
+/* 80048CB4-80048D60 00AC+00 rc=0 efc=0 .text      __ct__15dSmplMdl_draw_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +156,7 @@ asm dSmplMdl_draw_c::dSmplMdl_draw_c() {
 #pragma pop
 
 
-/* 80048D60-80048D80 0020+00 rc=1 efc=0 .text      __ct__12diff_model_cFv                                       */
+/* 80048D60-80048D80 0020+00 rc=0 efc=0 .text      __ct__12diff_model_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +167,7 @@ asm diff_model_c::diff_model_c() {
 #pragma pop
 
 
-/* 80048D80-80048E0C 008C+00 rc=1 efc=0 .text      __dt__15dSmplMdl_draw_cFv                                    */
+/* 80048D80-80048E0C 008C+00 rc=0 efc=0 .text      __dt__15dSmplMdl_draw_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -178,7 +178,7 @@ asm dSmplMdl_draw_c::~dSmplMdl_draw_c() {
 #pragma pop
 
 
-/* 80048E0C-80048EBC 00B0+00 rc=1 efc=1 .text      draw__15dSmplMdl_draw_cFv                                    */
+/* 80048E0C-80048EBC 00B0+00 rc=0 efc=0 .text      draw__15dSmplMdl_draw_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,7 +189,7 @@ asm void dSmplMdl_draw_c::draw() {
 #pragma pop
 
 
-/* 80048EBC-80048F70 00B4+00 rc=1 efc=1 .text      entry__15dSmplMdl_draw_cFP8J3DModeli                         */
+/* 80048EBC-80048F70 00B4+00 rc=0 efc=0 .text      entry__15dSmplMdl_draw_cFP8J3DModeli                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -200,7 +200,7 @@ asm void dSmplMdl_draw_c::entry(J3DModel* field_0, int field_1) {
 #pragma pop
 
 
-/* 80048F70-80049058 00E8+00 rc=1 efc=1 .text      addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc               */
+/* 80048F70-80049058 00E8+00 rc=0 efc=0 .text      addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -211,7 +211,7 @@ asm void dSmplMdl_draw_c::addModel(J3DModelData* field_0, int field_1, u8 field_
 #pragma pop
 
 
-/* 80049058-800490EC 0094+00 rc=1 efc=1 .text      removeModel__15dSmplMdl_draw_cFP12J3DModelDatai              */
+/* 80049058-800490EC 0094+00 rc=0 efc=0 .text      removeModel__15dSmplMdl_draw_cFP12J3DModelDatai              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -223,14 +223,14 @@ asm void dSmplMdl_draw_c::removeModel(J3DModelData* field_0, int field_1) {
 
 
 /* ############################################################################################## */
-/* 80451F38-80451F40 0004+04 rc=1 efc=0 .sdata2    @3763                                                        */
-u8 d_d_simple_model__lit_3763[8] = {
+/* 80451F38-80451F40 0004+04 rc=0 efc=0 .sdata2    @3763                                                        */
+u8 d_d_simple_model__lit_3763[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800490EC-800491F4 0108+00 rc=1 efc=0 .text      create__12diff_model_cFP12J3DModelDataiUc                    */
+/* 800490EC-800491F4 0108+00 rc=0 efc=0 .text      create__12diff_model_cFP12J3DModelDataiUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,7 +241,7 @@ asm void diff_model_c::create(J3DModelData* field_0, int field_1, u8 field_2) {
 #pragma pop
 
 
-/* 800491F4-80049210 001C+00 rc=2 efc=0 .text      getModelData__12diff_model_cFv                               */
+/* 800491F4-80049210 001C+00 rc=0 efc=0 .text      getModelData__12diff_model_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -252,7 +252,7 @@ asm void diff_model_c::getModelData() {
 #pragma pop
 
 
-/* 80049210-80049270 0060+00 rc=3 efc=0 .text      remove__12diff_model_cFi                                     */
+/* 80049210-80049270 0060+00 rc=0 efc=0 .text      remove__12diff_model_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -263,7 +263,7 @@ asm void diff_model_c::remove(int field_0) {
 #pragma pop
 
 
-/* 80049270-80049368 00F8+00 rc=1 efc=0 .text      draw__12diff_model_cFv                                       */
+/* 80049270-80049368 00F8+00 rc=0 efc=0 .text      draw__12diff_model_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -274,7 +274,7 @@ asm void diff_model_c::draw() {
 #pragma pop
 
 
-/* 80049368-80049388 0020+00 rc=2 efc=0 .text      init__12diff_model_cFv                                       */
+/* 80049368-80049388 0020+00 rc=0 efc=0 .text      init__12diff_model_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -285,7 +285,7 @@ asm void diff_model_c::init() {
 #pragma pop
 
 
-/* 80049388-800493FC 0074+00 rc=3 efc=0 .text      isSame__12diff_model_cFP12J3DModelDatai                      */
+/* 80049388-800493FC 0074+00 rc=0 efc=0 .text      isSame__12diff_model_cFP12J3DModelDatai                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -296,7 +296,7 @@ asm void diff_model_c::isSame(J3DModelData* field_0, int field_1) {
 #pragma pop
 
 
-/* 800493FC-80049408 000C+00 rc=2 efc=0 .text      getRoomNo__12diff_model_cFv                                  */
+/* 800493FC-80049408 000C+00 rc=0 efc=0 .text      getRoomNo__12diff_model_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -307,7 +307,7 @@ asm void diff_model_c::getRoomNo() {
 #pragma pop
 
 
-/* 80049408-80049420 0018+00 rc=2 efc=0 .text      insert__12diff_model_cFP11modelList_c                        */
+/* 80049408-80049420 0018+00 rc=0 efc=0 .text      insert__12diff_model_cFP11modelList_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

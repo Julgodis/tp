@@ -126,8 +126,8 @@ extern "C" void getWidth__10JUTResFontCFv(); // 1
 extern "C" void getAscent__10JUTResFontCFv(); // 1
 extern "C" void getDescent__10JUTResFontCFv(); // 1
 extern "C" void getHeight__10JUTResFontCFv(); // 1
-SECTION_RODATA extern const u8 JUTCacheFont__stringBase0[112];
-SECTION_DATA extern void*const __vt__12JUTCacheFont[20];
+SECTION_RODATA extern const char* const JUTCacheFont__stringBase0;
+SECTION_DATA extern void* const __vt__12JUTCacheFont[19 + 1 /* padding */];
 SECTION_SDATA2 extern u8 lit_721[4 + 4 /* padding */];
 
 // 
@@ -189,7 +189,7 @@ extern "C" void _restgpr_21(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_RODATA extern const void*const saoAboutEncoding___10JUTResFont[3];
+SECTION_RODATA extern const void* saoAboutEncoding___10JUTResFont[3];
 SECTION_SBSS extern u8 sAramObject__7JKRAram[4];
 
 // 
@@ -197,10 +197,10 @@ SECTION_SBSS extern u8 sAramObject__7JKRAram[4];
 // 
 
 /* ############################################################################################## */
-/* 803CC540-803CC590 004C+04 rc=2 efc=0 .data      __vt__12JUTCacheFont                                         */
-void* const __vt__12JUTCacheFont[20] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803CC540-803CC590 004C+04 rc=0 efc=0 .data      __vt__12JUTCacheFont                                         */
+void* const __vt__12JUTCacheFont[19 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__12JUTCacheFontFv,
 	(void*)setGX__10JUTResFontFv,
 	(void*)setGX__10JUTResFontFQ28JUtility6TColorQ28JUtility6TColor,
@@ -222,7 +222,7 @@ void* const __vt__12JUTCacheFont[20] = {
 	NULL,
 };
 
-/* 802DD188-802DD208 0080+00 rc=1 efc=1 .text      __ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap                   */
+/* 802DD188-802DD208 0080+00 rc=0 efc=0 .text      __ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -233,7 +233,7 @@ asm JUTCacheFont::JUTCacheFont(ResFONT const* field_0, u32 field_1, JKRHeap* fie
 #pragma pop
 
 
-/* 802DD208-802DD29C 0094+00 rc=1 efc=0 .text      __dt__12JUTCacheFontFv                                       */
+/* 802DD208-802DD29C 0094+00 rc=0 efc=0 .text      __dt__12JUTCacheFontFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -244,7 +244,7 @@ asm JUTCacheFont::~JUTCacheFont() {
 #pragma pop
 
 
-/* 802DD29C-802DD320 0084+00 rc=3 efc=0 .text      deleteMemBlocks_CacheFont__12JUTCacheFontFv                  */
+/* 802DD29C-802DD320 0084+00 rc=0 efc=0 .text      deleteMemBlocks_CacheFont__12JUTCacheFontFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +255,7 @@ asm void JUTCacheFont::deleteMemBlocks_CacheFont() {
 #pragma pop
 
 
-/* 802DD320-802DD35C 003C+00 rc=3 efc=0 .text      initialize_state__12JUTCacheFontFv                           */
+/* 802DD320-802DD35C 003C+00 rc=0 efc=0 .text      initialize_state__12JUTCacheFontFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -267,20 +267,20 @@ asm void JUTCacheFont::initialize_state() {
 
 
 /* ############################################################################################## */
-/* 8039D2F0-8039D360 0070+00 rc=2 efc=0 .rodata    @stringBase0                                                 */
+/* 8039D2F0-8039D360 0070+00 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_8039D2F0 = 
+const char* const stringBase_8039D2F0 = 
     "JUTCacheFont: Unknown data block\n";
-SECTION_DEAD char* const stringBase_8039D312 = "JUTCacheFont.cpp";
-SECTION_DEAD char* const stringBase_8039D323 = "%s";
-SECTION_DEAD char* const stringBase_8039D326 = 
+const char* const stringBase_8039D312 = "JUTCacheFont.cpp";
+const char* const stringBase_8039D323 = "%s";
+const char* const stringBase_8039D326 = 
     "trouble occurred in JKRMainRamToAram.";
-SECTION_DEAD char* const stringBase_8039D34C = "Unknown data block\n";
+const char* const stringBase_8039D34C = "Unknown data block\n";
 #pragma pop
 
-/* 802DD35C-802DD4EC 0190+00 rc=1 efc=0 .text      getMemorySize__12JUTCacheFontFPC7ResFONTPUsPUlPUsPUlPUsPUlPUl */
+/* 802DD35C-802DD4EC 0190+00 rc=0 efc=0 .text      getMemorySize__12JUTCacheFontFPC7ResFONTPUsPUlPUsPUlPUsPUlPUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +291,7 @@ asm void JUTCacheFont::getMemorySize(ResFONT const* field_0, u16* field_1, u32* 
 #pragma pop
 
 
-/* 802DD4EC-802DD54C 0060+00 rc=1 efc=0 .text      initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap             */
+/* 802DD4EC-802DD54C 0060+00 rc=0 efc=0 .text      initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,7 +302,7 @@ asm void JUTCacheFont::initiate(ResFONT const* field_0, void* field_1, u32 field
 #pragma pop
 
 
-/* 802DD54C-802DD650 0104+00 rc=1 efc=0 .text      internal_initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap    */
+/* 802DD54C-802DD650 0104+00 rc=0 efc=0 .text      internal_initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +313,7 @@ asm void JUTCacheFont::internal_initiate(ResFONT const* field_0, void* field_1, 
 #pragma pop
 
 
-/* 802DD650-802DD804 01B4+00 rc=1 efc=0 .text      allocArea__12JUTCacheFontFPvUlP7JKRHeap                      */
+/* 802DD650-802DD804 01B4+00 rc=0 efc=0 .text      allocArea__12JUTCacheFontFPvUlP7JKRHeap                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,7 +324,7 @@ asm void JUTCacheFont::allocArea(void* field_0, u32 field_1, JKRHeap* field_2) {
 #pragma pop
 
 
-/* 802DD804-802DD8EC 00E8+00 rc=1 efc=0 .text      allocArray__12JUTCacheFontFP7JKRHeap                         */
+/* 802DD804-802DD8EC 00E8+00 rc=0 efc=0 .text      allocArray__12JUTCacheFontFP7JKRHeap                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -335,7 +335,7 @@ asm void JUTCacheFont::allocArray(JKRHeap* field_0) {
 #pragma pop
 
 
-/* 802DD8EC-802DDB0C 0220+00 rc=1 efc=0 .text      setBlock__12JUTCacheFontFv                                   */
+/* 802DD8EC-802DDB0C 0220+00 rc=0 efc=0 .text      setBlock__12JUTCacheFontFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -346,7 +346,7 @@ asm void JUTCacheFont::setBlock() {
 #pragma pop
 
 
-/* 802DDB0C-802DDBBC 00B0+00 rc=1 efc=0 .text      determineBlankPage__12JUTCacheFontFv                         */
+/* 802DDB0C-802DDBBC 00B0+00 rc=0 efc=0 .text      determineBlankPage__12JUTCacheFontFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -358,14 +358,14 @@ asm void JUTCacheFont::determineBlankPage() {
 
 
 /* ############################################################################################## */
-/* 80455FD0-80455FD8 0004+04 rc=1 efc=0 .sdata2    @721                                                         */
-u8 lit_721[8] = {
+/* 80455FD0-80455FD8 0004+04 rc=0 efc=0 .sdata2    @721                                                         */
+u8 lit_721[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802DDBBC-802DDCE4 0128+00 rc=1 efc=0 .text      getGlyphFromAram__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfoPQ212JUTCacheFont10TCachePagePiPi */
+/* 802DDBBC-802DDCE4 0128+00 rc=0 efc=0 .text      getGlyphFromAram__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfoPQ212JUTCacheFont10TCachePagePiPi */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -376,7 +376,7 @@ asm void JUTCacheFont::getGlyphFromAram(JUTCacheFont::TGlyphCacheInfo* field_0, 
 #pragma pop
 
 
-/* 802DDCE4-802DDD98 00B4+00 rc=1 efc=0 .text      loadImage__12JUTCacheFontFi11_GXTexMapID                     */
+/* 802DDCE4-802DDD98 00B4+00 rc=0 efc=0 .text      loadImage__12JUTCacheFontFi11_GXTexMapID                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -387,7 +387,7 @@ asm void JUTCacheFont::loadImage(int field_0, _GXTexMapID field_1) {
 #pragma pop
 
 
-/* 802DDD98-802DDEE0 0148+00 rc=1 efc=0 .text      loadCache_char_subroutine__12JUTCacheFontFPib                */
+/* 802DDD98-802DDEE0 0148+00 rc=0 efc=0 .text      loadCache_char_subroutine__12JUTCacheFontFPib                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -398,7 +398,7 @@ asm void JUTCacheFont::loadCache_char_subroutine(int* field_0, bool field_1) {
 #pragma pop
 
 
-/* 802DDEE0-802DDF68 0088+00 rc=1 efc=0 .text      invalidiateAllCache__12JUTCacheFontFv                        */
+/* 802DDEE0-802DDF68 0088+00 rc=0 efc=0 .text      invalidiateAllCache__12JUTCacheFontFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -409,7 +409,7 @@ asm void JUTCacheFont::invalidiateAllCache() {
 #pragma pop
 
 
-/* 802DDF68-802DDFAC 0044+00 rc=2 efc=0 .text      unlink__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo    */
+/* 802DDF68-802DDFAC 0044+00 rc=0 efc=0 .text      unlink__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -420,7 +420,7 @@ asm void JUTCacheFont::unlink(JUTCacheFont::TGlyphCacheInfo* field_0) {
 #pragma pop
 
 
-/* 802DDFAC-802DDFD8 002C+00 rc=2 efc=0 .text      prepend__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo   */
+/* 802DDFAC-802DDFD8 002C+00 rc=0 efc=0 .text      prepend__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -431,7 +431,7 @@ asm void JUTCacheFont::prepend(JUTCacheFont::TGlyphCacheInfo* field_0) {
 #pragma pop
 
 
-/* 802DDFD8-802DDFE0 0008+00 rc=2 efc=1 .text      getResFont__10JUTResFontCFv                                  */
+/* 802DDFD8-802DDFE0 0008+00 rc=0 efc=0 .text      getResFont__10JUTResFontCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -442,7 +442,7 @@ asm void JUTResFont::getResFont() const {
 #pragma pop
 
 
-/* 802DDFE0-802DDFEC 000C+00 rc=2 efc=1 .text      getFontType__10JUTResFontCFv                                 */
+/* 802DDFE0-802DDFEC 000C+00 rc=0 efc=0 .text      getFontType__10JUTResFontCFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -453,7 +453,7 @@ asm void JUTResFont::getFontType() const {
 #pragma pop
 
 
-/* 802DDFEC-802DDFF8 000C+00 rc=2 efc=1 .text      getLeading__10JUTResFontCFv                                  */
+/* 802DDFEC-802DDFF8 000C+00 rc=0 efc=0 .text      getLeading__10JUTResFontCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -464,7 +464,7 @@ asm void JUTResFont::getLeading() const {
 #pragma pop
 
 
-/* 802DDFF8-802DE004 000C+00 rc=2 efc=1 .text      getWidth__10JUTResFontCFv                                    */
+/* 802DDFF8-802DE004 000C+00 rc=0 efc=0 .text      getWidth__10JUTResFontCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -475,7 +475,7 @@ asm void JUTResFont::getWidth() const {
 #pragma pop
 
 
-/* 802DE004-802DE010 000C+00 rc=2 efc=1 .text      getAscent__10JUTResFontCFv                                   */
+/* 802DE004-802DE010 000C+00 rc=0 efc=0 .text      getAscent__10JUTResFontCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -486,7 +486,7 @@ asm void JUTResFont::getAscent() const {
 #pragma pop
 
 
-/* 802DE010-802DE01C 000C+00 rc=2 efc=1 .text      getDescent__10JUTResFontCFv                                  */
+/* 802DE010-802DE01C 000C+00 rc=0 efc=0 .text      getDescent__10JUTResFontCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -497,7 +497,7 @@ asm void JUTResFont::getDescent() const {
 #pragma pop
 
 
-/* 802DE01C-802DE078 005C+00 rc=2 efc=1 .text      getHeight__10JUTResFontCFv                                   */
+/* 802DE01C-802DE078 005C+00 rc=0 efc=0 .text      getHeight__10JUTResFontCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,10 +9,10 @@
 // Forward References:
 // 
 
-static void sBs_FillArea_s(void*, u32, s16); // 2
+void sBs_FillArea_s(void*, u32, s16); // 2
 void sBs_ClearArea(void*, u32); // 2
 
-extern "C" static void sBs_FillArea_s__FPvUls(); // 1
+extern "C" void sBs_FillArea_s__FPvUls(); // 1
 extern "C" void sBs_ClearArea__FPvUl(); // 1
 
 // 
@@ -25,18 +25,18 @@ extern "C" void sBs_ClearArea__FPvUl(); // 1
 // Declarations:
 // 
 
-/* 80271C8C-80271CAC 0020+00 rc=1 efc=0 .text      sBs_FillArea_s__FPvUls                                       */
+/* 80271C8C-80271CAC 0020+00 rc=0 efc=0 .text      sBs_FillArea_s__FPvUls                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void sBs_FillArea_s(void* field_0, u32 field_1, s16 field_2) {
+asm void sBs_FillArea_s(void* field_0, u32 field_1, s16 field_2) {
 	nofralloc
 #include "asm/SSystem/SStandard/s_basic/sBs_FillArea_s__FPvUls.s"
 }
 #pragma pop
 
 
-/* 80271CAC-80271CD0 0024+00 rc=2 efc=2 .text      sBs_ClearArea__FPvUl                                         */
+/* 80271CAC-80271CD0 0024+00 rc=0 efc=0 .text      sBs_ClearArea__FPvUl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

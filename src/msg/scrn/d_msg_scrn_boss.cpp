@@ -41,15 +41,15 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-struct JKRExpHeap {
-};
-
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -80,9 +80,9 @@ extern "C" void fukiAlpha__14dMsgScrnBoss_cFf(); // 1
 extern "C" void fukiScale__14dMsgScrnBoss_cFf(); // 1
 extern "C" void fukiTrans__14dMsgScrnBoss_cFff(); // 1
 extern "C" void fontAlpha__14dMsgScrnBoss_cFf(); // 1
-SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_boss__stringBase0[24];
+SECTION_RODATA extern const char* const msg_scrn_d_msg_scrn_boss__stringBase0;
 SECTION_DATA extern u8 data_803C0DB0[56];
-SECTION_DATA extern void*const __vt__14dMsgScrnBoss_c[22];
+SECTION_DATA extern void* const __vt__14dMsgScrnBoss_c[22];
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_boss__lit_3854;
 SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_boss__lit_3916[4];
 
@@ -141,17 +141,17 @@ SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 // 
 
 /* ############################################################################################## */
-/* 803998F8-80399910 0015+03 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 803998F8-80399910 0015+03 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_803998F8 = "zelda_boss_name.blo";
-SECTION_DEAD char* const stringBase_8039990C = "";
+const char* const stringBase_803998F8 = "zelda_boss_name.blo";
+const char* const stringBase_8039990C = "";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_8039990D = "\0\0";
+char* const pad_8039990D = "\0\0";
 #pragma pop
 
-/* 803C0DB0-803C0DE8 0038+00 rc=1 efc=0 .data      t_tag$3759                                                   */
+/* 803C0DB0-803C0DE8 0038+00 rc=0 efc=0 .data      t_tag$3759                                                   */
 u8 data_803C0DB0[56] = {
 	0x00, 0x73, 0x66, 0x6F, 0x6E, 0x74, 0x62, 0x30, 0x00, 0x73, 0x66, 0x6F, 0x6E, 0x74, 0x62, 0x31,
 	0x00, 0x73, 0x66, 0x6F, 0x6E, 0x74, 0x62, 0x32, 0x00, 0x73, 0x66, 0x6F, 0x6E, 0x74, 0x6C, 0x30,
@@ -159,10 +159,10 @@ u8 data_803C0DB0[56] = {
 	0x00, 0x73, 0x66, 0x6F, 0x6E, 0x74, 0x30, 0x30,
 };
 
-/* 803C0DE8-803C0E40 0058+00 rc=2 efc=0 .data      __vt__14dMsgScrnBoss_c                                       */
+/* 803C0DE8-803C0E40 0058+00 rc=0 efc=0 .data      __vt__14dMsgScrnBoss_c                                       */
 void* const __vt__14dMsgScrnBoss_c[22] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__14dMsgScrnBase_cFv,
 	(void*)__dt__14dMsgScrnBoss_cFv,
 	(void*)exec__14dMsgScrnBoss_cFv,
@@ -185,10 +185,10 @@ void* const __vt__14dMsgScrnBoss_c[22] = {
 	(void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
 
-/* 80454BB0-80454BB4 0004+00 rc=3 efc=0 .sdata2    @3854                                                        */
+/* 80454BB0-80454BB4 0004+00 rc=0 efc=0 .sdata2    @3854                                                        */
 f32 msg_scrn_d_msg_scrn_boss__lit_3854 = 1.0f;
 
-/* 8023C5C8-8023C928 0360+00 rc=1 efc=1 .text      __ct__14dMsgScrnBoss_cFv                                     */
+/* 8023C5C8-8023C928 0360+00 rc=0 efc=0 .text      __ct__14dMsgScrnBoss_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -199,7 +199,7 @@ asm dMsgScrnBoss_c::dMsgScrnBoss_c() {
 #pragma pop
 
 
-/* 8023C928-8023CA88 0160+00 rc=1 efc=0 .text      __dt__14dMsgScrnBoss_cFv                                     */
+/* 8023C928-8023CA88 0160+00 rc=0 efc=0 .text      __dt__14dMsgScrnBoss_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,7 +210,7 @@ asm dMsgScrnBoss_c::~dMsgScrnBoss_c() {
 #pragma pop
 
 
-/* 8023CA88-8023CB98 0110+00 rc=1 efc=0 .text      exec__14dMsgScrnBoss_cFv                                     */
+/* 8023CA88-8023CB98 0110+00 rc=0 efc=0 .text      exec__14dMsgScrnBoss_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -222,12 +222,12 @@ asm void dMsgScrnBoss_c::exec() {
 
 
 /* ############################################################################################## */
-/* 80454BB4-80454BB8 0004+00 rc=1 efc=0 .sdata2    @3916                                                        */
+/* 80454BB4-80454BB8 0004+00 rc=0 efc=0 .sdata2    @3916                                                        */
 u8 msg_scrn_d_msg_scrn_boss__lit_3916[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8023CB98-8023CBF0 0058+00 rc=1 efc=0 .text      drawSelf__14dMsgScrnBoss_cFv                                 */
+/* 8023CB98-8023CBF0 0058+00 rc=0 efc=0 .text      drawSelf__14dMsgScrnBoss_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +238,7 @@ asm void dMsgScrnBoss_c::drawSelf() {
 #pragma pop
 
 
-/* 8023CBF0-8023CC7C 008C+00 rc=1 efc=0 .text      fukiAlpha__14dMsgScrnBoss_cFf                                */
+/* 8023CBF0-8023CC7C 008C+00 rc=0 efc=0 .text      fukiAlpha__14dMsgScrnBoss_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -249,19 +249,19 @@ asm void dMsgScrnBoss_c::fukiAlpha(f32 field_0) {
 #pragma pop
 
 
-/* 8023CC7C-8023CC80 0004+00 rc=1 efc=0 .text      fukiScale__14dMsgScrnBoss_cFf                                */
+/* 8023CC7C-8023CC80 0004+00 rc=0 efc=0 .text      fukiScale__14dMsgScrnBoss_cFf                                */
 void dMsgScrnBoss_c::fukiScale(f32 field_0) {
 	/* empty function */
 }
 
 
-/* 8023CC80-8023CC84 0004+00 rc=1 efc=0 .text      fukiTrans__14dMsgScrnBoss_cFff                               */
+/* 8023CC80-8023CC84 0004+00 rc=0 efc=0 .text      fukiTrans__14dMsgScrnBoss_cFff                               */
 void dMsgScrnBoss_c::fukiTrans(f32 field_0, f32 field_1) {
 	/* empty function */
 }
 
 
-/* 8023CC84-8023CC88 0004+00 rc=1 efc=0 .text      fontAlpha__14dMsgScrnBoss_cFf                                */
+/* 8023CC84-8023CC88 0004+00 rc=0 efc=0 .text      fontAlpha__14dMsgScrnBoss_cFf                                */
 void dMsgScrnBoss_c::fontAlpha(f32 field_0) {
 	/* empty function */
 }

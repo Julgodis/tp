@@ -1,10 +1,10 @@
-import re
-from pathlib import Path
-import demangle
-import asyncio
-from functools import partial, wraps
 import os
+import re
+import asyncio
+import click
 
+from pathlib import Path
+from functools import partial, wraps
 
 def wrap(func):
     @wraps(func)
@@ -46,9 +46,6 @@ def magicsplit(l, *splitters):
 #
 #
 
-import click
-from pathlib import Path
-
 class PathPath(click.Path):
     """A Click path argument that returns a pathlib Path, not a string"""
 
@@ -58,6 +55,7 @@ class PathPath(click.Path):
 #
 #
 #
+
 register_r_re = re.compile(r'r([0-9]+)')
 register_f_re = re.compile(r'r([0-9]+)')
 register_qr_re = re.compile(r'r([0-9]+)')
@@ -131,26 +129,6 @@ def escape_name(n):
         if lname:
             n.override_name = lname
             return
-    
-    """
-    try:
-        p = demangle.ParseCtx(n.name)
-        p.demangle()
-        n.demangled = p
-    except:
-        pass
-    """
-
-    """
-    if "$" in n.name:
-        sp = n.name.split("$")
-        if len(sp) == 1:
-            if is_weird(sp[0]) or is_weird(sp[1]):
-                return
-            n.label = f"{sp[0]}__ls{sp[1]}"
-            n.reference = f"{sp[0]}__ls{sp[1]}"
-            return
-    """
 
     if is_weird(n.name):
         return
@@ -179,20 +157,16 @@ create_dirs_for_file = wrap(_create_dirs_for_file)
 async def wait_all(tasks):
     await asyncio.gather(*tasks)
 
-
-import globals as g
-from exception import Dol2ZelException
+from .exception import Dol2ZelException
 
 def check_file(base, name):
     new_path = base.joinpath(name)
-    g.LOG.debug(new_path)
     if not new_path.is_file() or not new_path.exists():
         raise Dol2ZelException(f"file '{name}' was not found in the game directory ('{base}')")
     return new_path
 
 def check_dir(base, name):
     new_path = base.joinpath(name)
-    g.LOG.debug(new_path)
     if new_path.is_file() or not new_path.exists():
         raise Dol2ZelException(f"path '{name}' was not found in the game directory ('{base}')")
     return new_path

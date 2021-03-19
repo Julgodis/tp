@@ -9,24 +9,24 @@
 // Forward References:
 // 
 
-extern "C" static void IsCard(); // 1
+extern "C" void IsCard(); // 1
 extern "C" void CARDProbe(); // 1
 extern "C" void CARDProbeEx(); // 1
-extern "C" static void DoMount(); // 1
+extern "C" void DoMount(); // 1
 extern "C" void __CARDMountCallback(); // 1
-extern "C" static void CARDMountAsync(); // 1
+extern "C" void CARDMountAsync(); // 1
 extern "C" void CARDMount(); // 1
-extern "C" static void DoUnmount(); // 1
+extern "C" void DoUnmount(); // 1
 extern "C" void CARDUnmount(); // 1
 
-extern "C" static void IsCard(); // 1
+extern "C" void IsCard(); // 1
 extern "C" void CARDProbe(); // 1
 extern "C" void CARDProbeEx(); // 1
-extern "C" static void DoMount(); // 1
+extern "C" void DoMount(); // 1
 extern "C" void __CARDMountCallback(); // 1
-extern "C" static void CARDMountAsync(); // 1
+extern "C" void CARDMountAsync(); // 1
 extern "C" void CARDMount(); // 1
-extern "C" static void DoUnmount(); // 1
+extern "C" void DoUnmount(); // 1
 extern "C" void CARDUnmount(); // 1
 SECTION_DATA extern u8 SectorSizeTable[32];
 SECTION_DATA extern u8 LatencyTable[32];
@@ -99,31 +99,30 @@ extern "C" void __CARDUnlock(); // 1
 extern "C" void __CARDRead(); // 1
 extern "C" void __CARDVerify(); // 1
 SECTION_BSS extern u8 __CARDBlock[544];
-SECTION_SDATA extern u8 struct_80450A70[8];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803D2000-803D2020 0020+00 rc=3 efc=0 .data      SectorSizeTable                                              */
+/* 803D2000-803D2020 0020+00 rc=0 efc=0 .data      SectorSizeTable                                              */
 u8 SectorSizeTable[32] = {
 	0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00,
 	0x00, 0x02, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80356948-80356A14 00CC+00 rc=2 efc=0 .text      IsCard                                                       */
+/* 80356948-80356A14 00CC+00 rc=0 efc=0 .text      IsCard                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void IsCard() {
+extern "C" asm void IsCard() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/IsCard.s"
 }
 #pragma pop
 
 
-/* 80356A14-80356A4C 0038+00 rc=1 efc=1 .text      CARDProbe                                                    */
+/* 80356A14-80356A4C 0038+00 rc=0 efc=0 .text      CARDProbe                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,7 +133,7 @@ extern "C" asm void CARDProbe() {
 #pragma pop
 
 
-/* 80356A4C-80356BC8 017C+00 rc=1 efc=1 .text      CARDProbeEx                                                  */
+/* 80356A4C-80356BC8 017C+00 rc=0 efc=0 .text      CARDProbeEx                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,24 +145,24 @@ extern "C" asm void CARDProbeEx() {
 
 
 /* ############################################################################################## */
-/* 803D2020-803D2040 0020+00 rc=1 efc=0 .data      LatencyTable                                                 */
+/* 803D2020-803D2040 0020+00 rc=0 efc=0 .data      LatencyTable                                                 */
 u8 LatencyTable[32] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20,
 	0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00,
 };
 
-/* 80356BC8-8035701C 0454+00 rc=2 efc=0 .text      DoMount                                                      */
+/* 80356BC8-8035701C 0454+00 rc=0 efc=0 .text      DoMount                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void DoMount() {
+extern "C" asm void DoMount() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/DoMount.s"
 }
 #pragma pop
 
 
-/* 8035701C-80357154 0138+00 rc=3 efc=1 .text      __CARDMountCallback                                          */
+/* 8035701C-80357154 0138+00 rc=0 efc=0 .text      __CARDMountCallback                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -174,18 +173,18 @@ extern "C" asm void __CARDMountCallback() {
 #pragma pop
 
 
-/* 80357154-803572F4 01A0+00 rc=1 efc=0 .text      CARDMountAsync                                               */
+/* 80357154-803572F4 01A0+00 rc=0 efc=0 .text      CARDMountAsync                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDMountAsync() {
+extern "C" asm void CARDMountAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/CARDMountAsync.s"
 }
 #pragma pop
 
 
-/* 803572F4-8035733C 0048+00 rc=1 efc=1 .text      CARDMount                                                    */
+/* 803572F4-8035733C 0048+00 rc=0 efc=0 .text      CARDMount                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,18 +195,18 @@ extern "C" asm void CARDMount() {
 #pragma pop
 
 
-/* 8035733C-803573D8 009C+00 rc=2 efc=0 .text      DoUnmount                                                    */
+/* 8035733C-803573D8 009C+00 rc=0 efc=0 .text      DoUnmount                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void DoUnmount() {
+extern "C" asm void DoUnmount() {
 	nofralloc
 #include "asm/dolphin/card/CARDMount/DoUnmount.s"
 }
 #pragma pop
 
 
-/* 803573D8-80357484 00AC+00 rc=2 efc=2 .text      CARDUnmount                                                  */
+/* 803573D8-80357484 00AC+00 rc=0 efc=0 .text      CARDUnmount                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

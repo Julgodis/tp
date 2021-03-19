@@ -36,7 +36,7 @@ SECTION_DATA extern u8 __lower_map[256];
 // Declarations:
 // 
 
-/* 8036581C-803658C0 00A4+00 rc=1 efc=1 .text      __msl_strnicmp                                               */
+/* 8036581C-803658C0 00A4+00 rc=0 efc=0 .text      __msl_strnicmp                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -47,7 +47,7 @@ extern "C" asm void __msl_strnicmp() {
 #pragma pop
 
 
-/* 803658C0-803659F8 0138+00 rc=4 efc=4 .text      fflush                                                       */
+/* 803658C0-803659F8 0138+00 rc=0 efc=0 .text      fflush                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -58,7 +58,7 @@ extern "C" asm void fflush() {
 #pragma pop
 
 
-/* 803659F8-80365BB4 01BC+00 rc=1 efc=1 .text      fclose                                                       */
+/* 803659F8-80365BB4 01BC+00 rc=0 efc=0 .text      fclose                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

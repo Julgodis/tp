@@ -11,7 +11,7 @@ lbl_800AAABC:
 /* 800AAAE0 00000010  7C 7E 1B 78 */	mr r30, r3
 /* 800AAAE4 00000014  3C 60 80 39 */	lis r3, d_a_d_a_alink__lit_3757@ha
 /* 800AAAE8 00000018  3B E3 D6 58 */	addi r31, r3, d_a_d_a_alink__lit_3757@l
-/* 800AAAEC 0000001C  88 0D 8A 51 */	lbz r0, struct_80450FD0+0x1(r13)
+/* 800AAAEC 0000001C  88 0D 8A 51 */	lbz r0, -0x75af(r13)
 /* 800AAAF0 00000020  7C 00 07 75 */	extsb. r0, r0
 /* 800AAAF4 00000024  40 82 00 1C */	bne lbl_800AAB10
 /* 800AAAF8 00000028  C0 02 93 D4 */	lfs f0, lit_11442(r2)
@@ -19,7 +19,7 @@ lbl_800AAABC:
 /* 800AAB00 00000030  38 63 2D 88 */	addi r3, r3, data_803B2D88@l
 /* 800AAB04 00000034  D0 03 00 04 */	stfs f0, 4(r3)
 /* 800AAB08 00000038  38 00 00 01 */	li r0, 1
-/* 800AAB0C 0000003C  98 0D 8A 51 */	stb r0, struct_80450FD0+0x1(r13)
+/* 800AAB0C 0000003C  98 0D 8A 51 */	stb r0, -0x75af(r13)
 lbl_800AAB10:
 /* 800AAB10 00000000  A0 1E 2F E8 */	lhz r0, 0x2fe8(r30)
 /* 800AAB14 00000004  28 00 00 65 */	cmplwi r0, 0x65

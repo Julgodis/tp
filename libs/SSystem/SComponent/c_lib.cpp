@@ -82,12 +82,12 @@ extern "C" void MtxPosition__FP4cXyzP4cXyz(); // 1
 extern "C" void MtxPush__Fv(); // 1
 extern "C" void MtxPull__Fv(); // 1
 SECTION_BSS extern u8 mtx[480];
-SECTION_SDATA extern void*calc_mtx[2];
+SECTION_SDATA extern void* calc_mtx[1 + 1 /* padding */];
 SECTION_SDATA2 extern u8 c_lib__lit_2262[4 + 4 /* padding */];
 SECTION_SDATA2 extern f64 c_lib__lit_2379;
 SECTION_SDATA2 extern f64 lit_2380;
 SECTION_SDATA2 extern u8 lit_2381[8];
-SECTION_SDATA2 extern f32 lit_2382;
+SECTION_SDATA2 extern f32 lit_2382[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -132,7 +132,7 @@ SECTION_SDATA extern u32 __float_nan;
 // Declarations:
 // 
 
-/* 8026F93C-8026F95C 0020+00 rc=3 efc=3 .text      cLib_memCpy__FPvPCvUl                                        */
+/* 8026F93C-8026F95C 0020+00 rc=0 efc=0 .text      cLib_memCpy__FPvPCvUl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,7 +143,7 @@ asm void cLib_memCpy(void* field_0, void const* field_1, u32 field_2) {
 #pragma pop
 
 
-/* 8026F95C-8026F97C 0020+00 rc=4 efc=4 .text      cLib_memSet__FPviUl                                          */
+/* 8026F95C-8026F97C 0020+00 rc=0 efc=0 .text      cLib_memSet__FPviUl                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,14 +155,14 @@ asm void cLib_memSet(void* field_0, int field_1, u32 field_2) {
 
 
 /* ############################################################################################## */
-/* 804551E0-804551E8 0004+04 rc=9 efc=0 .sdata2    @2262                                                        */
-u8 c_lib__lit_2262[8] = {
+/* 804551E0-804551E8 0004+04 rc=0 efc=0 .sdata2    @2262                                                        */
+u8 c_lib__lit_2262[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8026F97C-8026FA3C 00C0+00 rc=50 efc=50 .text      cLib_addCalc__FPfffff                                        */
+/* 8026F97C-8026FA3C 00C0+00 rc=0 efc=0 .text      cLib_addCalc__FPfffff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -173,7 +173,7 @@ asm void cLib_addCalc(f32* field_0, f32 field_1, f32 field_2, f32 field_3, f32 f
 #pragma pop
 
 
-/* 8026FA3C-8026FA80 0044+00 rc=20 efc=20 .text      cLib_addCalc2__FPffff                                        */
+/* 8026FA3C-8026FA80 0044+00 rc=0 efc=0 .text      cLib_addCalc2__FPffff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +184,7 @@ asm void cLib_addCalc2(f32* field_0, f32 field_1, f32 field_2, f32 field_3) {
 #pragma pop
 
 
-/* 8026FA80-8026FAB8 0038+00 rc=2 efc=2 .text      cLib_addCalc0__FPfff                                         */
+/* 8026FA80-8026FAB8 0038+00 rc=0 efc=0 .text      cLib_addCalc0__FPfff                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,22 +196,25 @@ asm void cLib_addCalc0(f32* field_0, f32 field_1, f32 field_2) {
 
 
 /* ############################################################################################## */
-/* 804551E8-804551F0 0008+00 rc=7 efc=0 .sdata2    @2379                                                        */
+/* 804551E8-804551F0 0008+00 rc=0 efc=0 .sdata2    @2379                                                        */
 f64 c_lib__lit_2379 = 0.5;
 
-/* 804551F0-804551F8 0008+00 rc=7 efc=0 .sdata2    @2380                                                        */
+/* 804551F0-804551F8 0008+00 rc=0 efc=0 .sdata2    @2380                                                        */
 f64 lit_2380 = 3.0;
 
-/* 804551F8-80455200 0008+00 rc=7 efc=0 .sdata2    @2381                                                        */
+/* 804551F8-80455200 0008+00 rc=0 efc=0 .sdata2    @2381                                                        */
 u8 lit_2381[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455200-80455208 0004+04 rc=5 efc=0 .sdata2    @2382                                                        */
-f32 lit_2382 = 7.999999968033578e-11f;
-/* padding 4 bytes */
+/* 80455200-80455208 0004+04 rc=0 efc=0 .sdata2    @2382                                                        */
+f32 lit_2382[1 + 1 /* padding */] = {
+	7.999999968033578e-11f,
+	/* padding */
+	0.0f,
+};
 
-/* 8026FAB8-8026FDF4 033C+00 rc=3 efc=3 .text      cLib_addCalcPos__FP4cXyzRC4cXyzfff                           */
+/* 8026FAB8-8026FDF4 033C+00 rc=0 efc=0 .text      cLib_addCalcPos__FP4cXyzRC4cXyzfff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -222,7 +225,7 @@ asm void cLib_addCalcPos(cXyz* field_0, cXyz const& field_1, f32 field_2, f32 fi
 #pragma pop
 
 
-/* 8026FDF4-80270178 0384+00 rc=1 efc=1 .text      cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff                         */
+/* 8026FDF4-80270178 0384+00 rc=0 efc=0 .text      cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -233,7 +236,7 @@ asm void cLib_addCalcPosXZ(cXyz* field_0, cXyz const& field_1, f32 field_2, f32 
 #pragma pop
 
 
-/* 80270178-80270350 01D8+00 rc=2 efc=2 .text      cLib_addCalcPos2__FP4cXyzRC4cXyzff                           */
+/* 80270178-80270350 01D8+00 rc=0 efc=0 .text      cLib_addCalcPos2__FP4cXyzRC4cXyzff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +258,7 @@ asm void cLib_addCalcPosXZ2(cXyz* field_0, cXyz const& field_1, f32 field_2, f32
 #pragma pop
 
 
-/* 80270540-80270608 00C8+00 rc=81 efc=81 .text      cLib_addCalcAngleS__FPsssss                                  */
+/* 80270540-80270608 00C8+00 rc=0 efc=0 .text      cLib_addCalcAngleS__FPsssss                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +269,7 @@ asm void cLib_addCalcAngleS(s16* field_0, s16 field_1, s16 field_2, s16 field_3,
 #pragma pop
 
 
-/* 80270608-8027065C 0054+00 rc=2 efc=2 .text      cLib_addCalcAngleS2__FPssss                                  */
+/* 80270608-8027065C 0054+00 rc=0 efc=0 .text      cLib_addCalcAngleS2__FPssss                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,7 +280,7 @@ asm void cLib_addCalcAngleS2(s16* field_0, s16 field_1, s16 field_2, s16 field_3
 #pragma pop
 
 
-/* 8027065C-802706D0 0074+00 rc=3 efc=3 .text      cLib_chaseUC__FPUcUcUc                                       */
+/* 8027065C-802706D0 0074+00 rc=0 efc=0 .text      cLib_chaseUC__FPUcUcUc                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -288,7 +291,7 @@ asm void cLib_chaseUC(u8* field_0, u8 field_1, u8 field_2) {
 #pragma pop
 
 
-/* 802706D0-80270740 0070+00 rc=4 efc=4 .text      cLib_chaseS__FPsss                                           */
+/* 802706D0-80270740 0070+00 rc=0 efc=0 .text      cLib_chaseS__FPsss                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -299,7 +302,7 @@ asm void cLib_chaseS(s16* field_0, s16 field_1, s16 field_2) {
 #pragma pop
 
 
-/* 80270740-802707AC 006C+00 rc=70 efc=70 .text      cLib_chaseF__FPfff                                           */
+/* 80270740-802707AC 006C+00 rc=0 efc=0 .text      cLib_chaseF__FPfff                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,7 +313,7 @@ asm void cLib_chaseF(f32* field_0, f32 field_1, f32 field_2) {
 #pragma pop
 
 
-/* 802707AC-80270990 01E4+00 rc=3 efc=3 .text      cLib_chasePos__FP4cXyzRC4cXyzf                               */
+/* 802707AC-80270990 01E4+00 rc=0 efc=0 .text      cLib_chasePos__FP4cXyzRC4cXyzf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -321,7 +324,7 @@ asm void cLib_chasePos(cXyz* field_0, cXyz const& field_1, f32 field_2) {
 #pragma pop
 
 
-/* 80270990-80270B90 0200+00 rc=1 efc=1 .text      cLib_chasePosXZ__FP4cXyzRC4cXyzf                             */
+/* 80270990-80270B90 0200+00 rc=0 efc=0 .text      cLib_chasePosXZ__FP4cXyzRC4cXyzf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -332,7 +335,7 @@ asm void cLib_chasePosXZ(cXyz* field_0, cXyz const& field_1, f32 field_2) {
 #pragma pop
 
 
-/* 80270B90-80270C04 0074+00 rc=4 efc=4 .text      cLib_chaseAngleS__FPsss                                      */
+/* 80270B90-80270C04 0074+00 rc=0 efc=0 .text      cLib_chaseAngleS__FPsss                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -343,7 +346,7 @@ asm void cLib_chaseAngleS(s16* field_0, s16 field_1, s16 field_2) {
 #pragma pop
 
 
-/* 80270C04-80270C3C 0038+00 rc=39 efc=39 .text      cLib_targetAngleY__FPC3VecPC3Vec                             */
+/* 80270C04-80270C3C 0038+00 rc=0 efc=0 .text      cLib_targetAngleY__FPC3VecPC3Vec                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -365,7 +368,7 @@ asm void cLib_targetAngleY(Vec const& field_0, Vec const& field_1) {
 #pragma pop
 
 
-/* 80270C74-80270DC0 014C+00 rc=2 efc=2 .text      cLib_targetAngleX__FPC4cXyzPC4cXyz                           */
+/* 80270C74-80270DC0 014C+00 rc=0 efc=0 .text      cLib_targetAngleX__FPC4cXyzPC4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -376,7 +379,7 @@ asm void cLib_targetAngleX(cXyz const* field_0, cXyz const* field_1) {
 #pragma pop
 
 
-/* 80270DC0-80270E24 0064+00 rc=2 efc=2 .text      cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz                       */
+/* 80270DC0-80270E24 0064+00 rc=0 efc=0 .text      cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -387,7 +390,7 @@ asm void cLib_offsetPos(cXyz* field_0, cXyz const* field_1, s16 field_2, cXyz co
 #pragma pop
 
 
-/* 80270E24-80270E4C 0028+00 rc=48 efc=48 .text      cLib_distanceAngleS__Fss                                     */
+/* 80270E24-80270E4C 0028+00 rc=0 efc=0 .text      cLib_distanceAngleS__Fss                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -399,17 +402,17 @@ asm void cLib_distanceAngleS(s16 field_0, s16 field_1) {
 
 
 /* ############################################################################################## */
-/* 80430DB8-80430F98 01E0+00 rc=2 efc=0 .bss       mtx                                                          */
+/* 80430DB8-80430F98 01E0+00 rc=0 efc=0 .bss       mtx                                                          */
 u8 mtx[480];
 
-/* 80450768-80450770 0004+04 rc=8 efc=2 .sdata     calc_mtx                                                     */
-void* calc_mtx[2] = {
+/* 80450768-80450770 0004+04 rc=0 efc=0 .sdata     calc_mtx                                                     */
+void* calc_mtx[1 + 1 /* padding */] = {
 	(void*)&mtx,
 	/* padding */
 	NULL,
 };
 
-/* 80270E4C-80270E5C 0010+00 rc=1 efc=1 .text      MtxInit__Fv                                                  */
+/* 80270E4C-80270E5C 0010+00 rc=0 efc=0 .text      MtxInit__Fv                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -442,7 +445,7 @@ asm void MtxScale(f32 field_0, f32 field_1, f32 field_2, u8 field_3) {
 #pragma pop
 
 
-/* 80270EEC-80270F1C 0030+00 rc=2 efc=2 .text      MtxPosition__FP4cXyzP4cXyz                                   */
+/* 80270EEC-80270F1C 0030+00 rc=0 efc=0 .text      MtxPosition__FP4cXyzP4cXyz                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

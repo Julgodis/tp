@@ -109,9 +109,9 @@ extern "C" void getDecorationLineWidth__18dRenderingFDAmap_cFi(); // 1
 extern "C" void __sinit_d_map_path_cpp(); // 1
 extern "C" void __dt__Q28dMpath_n18dTexObjAggregate_cFv(); // 1
 SECTION_RODATA extern const u8 data_80379C30[28];
-SECTION_RODATA extern const u8 d_map_d_map_path__stringBase0[12];
-SECTION_DATA extern void*const __vt__18dRenderingFDAmap_c[26];
-SECTION_DATA extern void*const __vt__11dDrawPath_c[16];
+SECTION_RODATA extern const char* const d_map_d_map_path__stringBase0;
+SECTION_DATA extern void* const __vt__18dRenderingFDAmap_c[26];
+SECTION_DATA extern void* const __vt__11dDrawPath_c[16];
 SECTION_BSS extern u8 lit_3639[12];
 SECTION_BSS extern u8 m_texObjAgg__8dMpath_n[28];
 SECTION_SDATA2 extern u8 d_map_d_map_path__lit_3836[4];
@@ -240,22 +240,22 @@ SECTION_SDATA extern u8 g_clearColor[4];
 // 
 
 /* ############################################################################################## */
-/* 80379C30-80379C4C 001C+00 rc=1 efc=0 .rodata    data$3644                                                    */
-SECTION_RODATA const u8 data_80379C30[28] = {
+/* 80379C30-80379C4C 001C+00 rc=0 efc=0 .rodata    data$3644                                                    */
+const u8 data_80379C30[28] = {
 	0x00, 0x00, 0x00, 0x4F, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x4D, 0x00, 0x00, 0x00, 0x4E,
 	0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x51, 0x00, 0x00, 0x00, 0x52,
 };
 
-/* 80379C4C-80379C58 0007+05 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80379C4C-80379C58 0007+05 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80379C4C = "Always";
+const char* const stringBase_80379C4C = "Always";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_80379C53 = "\0\0\0\0";
+char* const pad_80379C53 = "\0\0\0\0";
 #pragma pop
 
-/* 8003C85C-8003C8F4 0098+00 rc=1 efc=1 .text      create__Q28dMpath_n18dTexObjAggregate_cFv                    */
+/* 8003C85C-8003C8F4 0098+00 rc=0 efc=0 .text      create__Q28dMpath_n18dTexObjAggregate_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +266,7 @@ asm void dMpath_n::dTexObjAggregate_c::create() {
 #pragma pop
 
 
-/* 8003C8F4-8003C94C 0058+00 rc=2 efc=1 .text      remove__Q28dMpath_n18dTexObjAggregate_cFv                    */
+/* 8003C8F4-8003C94C 0058+00 rc=0 efc=0 .text      remove__Q28dMpath_n18dTexObjAggregate_cFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,7 +277,7 @@ asm void dMpath_n::dTexObjAggregate_c::remove() {
 #pragma pop
 
 
-/* 8003C94C-8003CA40 00F4+00 rc=11 efc=9 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class       */
+/* 8003C94C-8003CA40 00F4+00 rc=0 efc=0 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -288,7 +288,7 @@ asm void dDrawPath_c::rendering(dDrawPath_c::line_class const* field_0) {
 #pragma pop
 
 
-/* 8003CA40-8003CB00 00C0+00 rc=11 efc=9 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class       */
+/* 8003CA40-8003CB00 00C0+00 rc=0 efc=0 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -299,7 +299,7 @@ asm void dDrawPath_c::rendering(dDrawPath_c::poly_class const* field_0) {
 #pragma pop
 
 
-/* 8003CB00-8003CBBC 00BC+00 rc=1 efc=0 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class      */
+/* 8003CB00-8003CBBC 00BC+00 rc=0 efc=0 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,7 +310,7 @@ asm void dDrawPath_c::rendering(dDrawPath_c::group_class const* field_0) {
 #pragma pop
 
 
-/* 8003CBBC-8003CC24 0068+00 rc=1 efc=0 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class      */
+/* 8003CBBC-8003CC24 0068+00 rc=0 efc=0 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -321,7 +321,7 @@ asm void dDrawPath_c::rendering(dDrawPath_c::floor_class const* field_0) {
 #pragma pop
 
 
-/* 8003CC24-8003CCC4 00A0+00 rc=11 efc=9 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class       */
+/* 8003CC24-8003CCC4 00A0+00 rc=0 efc=0 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -332,7 +332,7 @@ asm void dDrawPath_c::rendering(dDrawPath_c::room_class const* field_0) {
 #pragma pop
 
 
-/* 8003CCC4-8003CD38 0074+00 rc=11 efc=9 .text      drawPath__11dDrawPath_cFv                                    */
+/* 8003CCC4-8003CD38 0074+00 rc=0 efc=0 .text      drawPath__11dDrawPath_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -343,7 +343,7 @@ asm void dDrawPath_c::drawPath() {
 #pragma pop
 
 
-/* 8003CD38-8003CDAC 0074+00 rc=3 efc=3 .text      makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs        */
+/* 8003CD38-8003CDAC 0074+00 rc=0 efc=0 .text      makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -354,7 +354,7 @@ asm void dRenderingMap_c::makeResTIMG(ResTIMG* field_0, u16 field_1, u16 field_2
 #pragma pop
 
 
-/* 8003CDAC-8003CE78 00CC+00 rc=2 efc=2 .text      renderingMap__15dRenderingMap_cFv                            */
+/* 8003CDAC-8003CE78 00CC+00 rc=0 efc=0 .text      renderingMap__15dRenderingMap_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -365,7 +365,7 @@ asm void dRenderingMap_c::renderingMap() {
 #pragma pop
 
 
-/* 8003CE78-8003CF40 00C8+00 rc=5 efc=3 .text      setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv  */
+/* 8003CE78-8003CF40 00C8+00 rc=0 efc=0 .text      setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -376,7 +376,7 @@ asm void dRenderingFDAmap_c::setTevSettingNonTextureDirectColor() const {
 #pragma pop
 
 
-/* 8003CF40-8003D0AC 016C+00 rc=4 efc=3 .text      setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv   */
+/* 8003CF40-8003D0AC 016C+00 rc=0 efc=0 .text      setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -388,12 +388,12 @@ asm void dRenderingFDAmap_c::setTevSettingIntensityTextureToCI() const {
 
 
 /* ############################################################################################## */
-/* 80451E08-80451E0C 0004+00 rc=3 efc=0 .sdata2    @3836                                                        */
+/* 80451E08-80451E0C 0004+00 rc=0 efc=0 .sdata2    @3836                                                        */
 u8 d_map_d_map_path__lit_3836[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8003D0AC-8003D188 00DC+00 rc=1 efc=0 .text      drawBack__18dRenderingFDAmap_cCFv                            */
+/* 8003D0AC-8003D188 00DC+00 rc=0 efc=0 .text      drawBack__18dRenderingFDAmap_cCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -405,19 +405,19 @@ asm void dRenderingFDAmap_c::drawBack() const {
 
 
 /* ############################################################################################## */
-/* 80451E0C-80451E10 0004+00 rc=1 efc=0 .sdata2    @3846                                                        */
+/* 80451E0C-80451E10 0004+00 rc=0 efc=0 .sdata2    @3846                                                        */
 f32 d_map_d_map_path__lit_3846 = 1.0f;
 
-/* 80451E10-80451E14 0004+00 rc=1 efc=0 .sdata2    @3847                                                        */
+/* 80451E10-80451E14 0004+00 rc=0 efc=0 .sdata2    @3847                                                        */
 f32 d_map_d_map_path__lit_3847 = 0.5f;
 
-/* 80451E14-80451E18 0004+00 rc=1 efc=0 .sdata2    @3848                                                        */
+/* 80451E14-80451E18 0004+00 rc=0 efc=0 .sdata2    @3848                                                        */
 f32 d_map_d_map_path__lit_3848 = 10000.0f;
 
-/* 80451E18-80451E20 0008+00 rc=1 efc=0 .sdata2    @3850                                                        */
+/* 80451E18-80451E20 0008+00 rc=0 efc=0 .sdata2    @3850                                                        */
 f64 d_map_d_map_path__lit_3850 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8003D188-8003D320 0198+00 rc=9 efc=8 .text      preRenderingMap__18dRenderingFDAmap_cFv                      */
+/* 8003D188-8003D320 0198+00 rc=0 efc=0 .text      preRenderingMap__18dRenderingFDAmap_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -428,7 +428,7 @@ asm void dRenderingFDAmap_c::preRenderingMap() {
 #pragma pop
 
 
-/* 8003D320-8003D3C0 00A0+00 rc=8 efc=7 .text      postRenderingMap__18dRenderingFDAmap_cFv                     */
+/* 8003D320-8003D3C0 00A0+00 rc=0 efc=0 .text      postRenderingMap__18dRenderingFDAmap_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -440,13 +440,13 @@ asm void dRenderingFDAmap_c::postRenderingMap() {
 
 
 /* ############################################################################################## */
-/* 80424678-80424684 000C+00 rc=1 efc=0 .bss       @3639                                                        */
+/* 80424678-80424684 000C+00 rc=0 efc=0 .bss       @3639                                                        */
 u8 lit_3639[12];
 
-/* 80424684-804246A0 001C+00 rc=7 efc=5 .bss       m_texObjAgg__8dMpath_n                                       */
+/* 80424684-804246A0 001C+00 rc=0 efc=0 .bss       m_texObjAgg__8dMpath_n                                       */
 u8 m_texObjAgg__8dMpath_n[28];
 
-/* 8003D3C0-8003D68C 02CC+00 rc=2 efc=2 .text      renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class */
+/* 8003D3C0-8003D68C 02CC+00 rc=0 efc=0 .text      renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -457,7 +457,7 @@ asm void dRenderingFDAmap_c::renderingDecoration(dDrawPath_c::line_class const* 
 #pragma pop
 
 
-/* 8003D68C-8003D6B8 002C+00 rc=7 efc=6 .text      getDecoLineColor__18dRenderingFDAmap_cFii                    */
+/* 8003D68C-8003D6B8 002C+00 rc=0 efc=0 .text      getDecoLineColor__18dRenderingFDAmap_cFii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -468,7 +468,7 @@ asm void dRenderingFDAmap_c::getDecoLineColor(int field_0, int field_1) {
 #pragma pop
 
 
-/* 8003D6B8-8003D6E4 002C+00 rc=7 efc=6 .text      getDecorationLineWidth__18dRenderingFDAmap_cFi               */
+/* 8003D6B8-8003D6E4 002C+00 rc=0 efc=0 .text      getDecorationLineWidth__18dRenderingFDAmap_cFi               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -479,7 +479,7 @@ asm void dRenderingFDAmap_c::getDecorationLineWidth(int field_0) {
 #pragma pop
 
 
-/* 8003D6E4-8003D740 005C+00 rc=1 efc=1 .text      __sinit_d_map_path_cpp                                       */
+/* 8003D6E4-8003D740 005C+00 rc=0 efc=0 .text      __sinit_d_map_path_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -490,7 +490,7 @@ extern "C" asm void __sinit_d_map_path_cpp() {
 #pragma pop
 
 
-/* 8003D740-8003D790 0050+00 rc=1 efc=0 .text      __dt__Q28dMpath_n18dTexObjAggregate_cFv                      */
+/* 8003D740-8003D790 0050+00 rc=0 efc=0 .text      __dt__Q28dMpath_n18dTexObjAggregate_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -502,50 +502,50 @@ asm dMpath_n::dTexObjAggregate_c::~dTexObjAggregate_c() {
 
 
 /* ############################################################################################## */
-/* 803A7C90-803A7CF8 0068+00 rc=12 efc=12 .data      __vt__18dRenderingFDAmap_c                                   */
+/* 803A7C90-803A7CF8 0068+00 rc=0 efc=0 .data      __vt__18dRenderingFDAmap_c                                   */
 void* const __vt__18dRenderingFDAmap_c[26] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__12dDlst_base_cFv,
 	(void*)__dt__18dRenderingFDAmap_cFv,
 	(void*)isDrawType__11dDrawPath_cFi,
-	NULL,
+	(void*)NULL,
 	(void*)getLineColor__11dDrawPath_cFii,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)drawPath__11dDrawPath_cFv,
 	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class,
 	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class,
 	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)preRenderingMap__18dRenderingFDAmap_cFv,
 	(void*)postRenderingMap__18dRenderingFDAmap_cFv,
-	NULL,
+	(void*)NULL,
 	(void*)getDecoLineColor__18dRenderingFDAmap_cFii,
 	(void*)getDecorationLineWidth__18dRenderingFDAmap_cFi,
 };
 
-/* 803A7CF8-803A7D38 0040+00 rc=15 efc=15 .data      __vt__11dDrawPath_c                                          */
+/* 803A7CF8-803A7D38 0040+00 rc=0 efc=0 .data      __vt__11dDrawPath_c                                          */
 void* const __vt__11dDrawPath_c[16] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__12dDlst_base_cFv,
 	(void*)__dt__11dDrawPath_cFv,
 	(void*)isDrawType__11dDrawPath_cFi,
-	NULL,
+	(void*)NULL,
 	(void*)getLineColor__11dDrawPath_cFii,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)drawPath__11dDrawPath_cFv,
 	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class,
 	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class,

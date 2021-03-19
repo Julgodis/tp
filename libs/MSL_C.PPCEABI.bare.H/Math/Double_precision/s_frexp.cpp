@@ -25,10 +25,10 @@ SECTION_SDATA2 extern f64 lit_57;
 // 
 
 /* ############################################################################################## */
-/* 80456B08-80456B10 0008+00 rc=1 efc=0 .sdata2    @57                                                          */
+/* 80456B08-80456B10 0008+00 rc=0 efc=0 .sdata2    @57                                                          */
 f64 lit_57 = 1.8014398509481984e+16;
 
-/* 8036C244-8036C2D0 008C+00 rc=1 efc=1 .text      frexp                                                        */
+/* 8036C244-8036C2D0 008C+00 rc=0 efc=0 .text      frexp                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

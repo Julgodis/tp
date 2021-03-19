@@ -1,3 +1,0 @@
-lbl_80A13D90:
-/* 80A13D90 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 80A13D94 00000004  4B FF FE A0 */	b __dt__12dBgS_ObjAcchFv

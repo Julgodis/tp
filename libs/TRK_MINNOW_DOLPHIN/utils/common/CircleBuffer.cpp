@@ -37,7 +37,7 @@ extern "C" void MWInitializeCriticalSection(); // 1
 // Declarations:
 // 
 
-/* 803726A0-803727A8 0108+00 rc=2 efc=2 .text      CircleBufferReadBytes                                        */
+/* 803726A0-803727A8 0108+00 rc=0 efc=0 .text      CircleBufferReadBytes                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -48,7 +48,7 @@ extern "C" asm void CircleBufferReadBytes() {
 #pragma pop
 
 
-/* 803727A8-803728B0 0108+00 rc=4 efc=4 .text      CircleBufferWriteBytes                                       */
+/* 803727A8-803728B0 0108+00 rc=0 efc=0 .text      CircleBufferWriteBytes                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -59,7 +59,7 @@ extern "C" asm void CircleBufferWriteBytes() {
 #pragma pop
 
 
-/* 803728B0-80372900 0050+00 rc=2 efc=2 .text      CircleBufferInitialize                                       */
+/* 803728B0-80372900 0050+00 rc=0 efc=0 .text      CircleBufferInitialize                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ extern "C" asm void CircleBufferInitialize() {
 #pragma pop
 
 
-/* 80372900-80372908 0008+00 rc=2 efc=2 .text      CBGetBytesAvailableForRead                                   */
+/* 80372900-80372908 0008+00 rc=0 efc=0 .text      CBGetBytesAvailableForRead                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

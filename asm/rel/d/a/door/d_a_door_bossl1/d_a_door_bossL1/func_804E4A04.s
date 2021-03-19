@@ -1,3 +1,0 @@
-lbl_804E4A04:
-/* 804E4A04 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 804E4A08 00000004  4B FF E1 00 */	b __dt__12dBgS_ObjAcchFv

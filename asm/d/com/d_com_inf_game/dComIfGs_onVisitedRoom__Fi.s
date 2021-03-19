@@ -31,7 +31,7 @@ lbl_8002FB80:
 /* 8002FBF4 00000074  7F C4 F3 78 */	mr r4, r30
 /* 8002FBF8 00000078  48 00 32 55 */	bl onRegionBit__33dSv_player_field_last_stay_info_cFi
 lbl_8002FBFC:
-/* 8002FBFC 00000000  88 0D 87 E4 */	lbz r0, struct_80450D64+0x0(r13)
+/* 8002FBFC 00000000  88 0D 87 E4 */	lbz r0, -0x781c(r13)
 /* 8002FC00 00000004  7C 00 07 74 */	extsb r0, r0
 /* 8002FC04 00000008  1C 00 04 04 */	mulli r0, r0, 0x404
 /* 8002FC08 0000000C  7C 9D 00 2E */	lwzx r4, r29, r0

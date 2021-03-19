@@ -71,7 +71,7 @@ SECTION_SBSS extern u8 data_80450B8C[4];
 // Declarations:
 // 
 
-/* 8029D0B4-8029D0FC 0048+00 rc=1 efc=1 .text      __ct__15JASAudioReseterFv                                    */
+/* 8029D0B4-8029D0FC 0048+00 rc=0 efc=0 .text      __ct__15JASAudioReseterFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +82,7 @@ asm JASAudioReseter::JASAudioReseter() {
 #pragma pop
 
 
-/* 8029D0FC-8029D138 003C+00 rc=1 efc=1 .text      __dt__15JASAudioReseterFv                                    */
+/* 8029D0FC-8029D138 003C+00 rc=0 efc=0 .text      __dt__15JASAudioReseterFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +93,7 @@ asm JASAudioReseter::~JASAudioReseter() {
 #pragma pop
 
 
-/* 8029D138-8029D1D4 009C+00 rc=1 efc=1 .text      start__15JASAudioReseterFUlb                                 */
+/* 8029D138-8029D1D4 009C+00 rc=0 efc=0 .text      start__15JASAudioReseterFUlb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +104,7 @@ asm void JASAudioReseter::start(u32 field_0, bool field_1) {
 #pragma pop
 
 
-/* 8029D1D4-8029D1F8 0024+00 rc=1 efc=1 .text      resume__15JASAudioReseterFv                                  */
+/* 8029D1D4-8029D1F8 0024+00 rc=0 efc=0 .text      resume__15JASAudioReseterFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,7 +115,7 @@ asm void JASAudioReseter::resume() {
 #pragma pop
 
 
-/* 8029D1F8-8029D200 0008+00 rc=2 efc=2 .text      checkDone__15JASAudioReseterCFv                              */
+/* 8029D1F8-8029D200 0008+00 rc=0 efc=0 .text      checkDone__15JASAudioReseterCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,10 +127,10 @@ asm void JASAudioReseter::checkDone() const {
 
 
 /* ############################################################################################## */
-/* 80455740-80455748 0008+00 rc=1 efc=0 .sdata2    @156                                                         */
+/* 80455740-80455748 0008+00 rc=0 efc=0 .sdata2    @156                                                         */
 f64 JASAudioReseter__lit_156 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8029D200-8029D2D4 00D4+00 rc=1 efc=0 .text      calc__15JASAudioReseterFv                                    */
+/* 8029D200-8029D2D4 00D4+00 rc=0 efc=0 .text      calc__15JASAudioReseterFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,7 +141,7 @@ asm void JASAudioReseter::calc() {
 #pragma pop
 
 
-/* 8029D2D4-8029D2F4 0020+00 rc=1 efc=0 .text      callback__15JASAudioReseterFPv                               */
+/* 8029D2D4-8029D2F4 0020+00 rc=0 efc=0 .text      callback__15JASAudioReseterFPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -48,14 +48,14 @@ extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803A3990-803A39A0 000C+04 rc=3 efc=2 .data      g_fpcCtTg_Queue                                              */
-u8 g_fpcCtTg_Queue[16] = {
+/* 803A3990-803A39A0 000C+04 rc=0 efc=0 .data      g_fpcCtTg_Queue                                              */
+u8 g_fpcCtTg_Queue[12 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80020E38-80020E64 002C+00 rc=1 efc=1 .text      fpcCtTg_ToCreateQ__FP10create_tag                            */
+/* 80020E38-80020E64 002C+00 rc=0 efc=0 .text      fpcCtTg_ToCreateQ__FP10create_tag                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +66,7 @@ asm void fpcCtTg_ToCreateQ(create_tag* field_0) {
 #pragma pop
 
 
-/* 80020E64-80020E84 0020+00 rc=1 efc=1 .text      fpcCtTg_CreateQTo__FP10create_tag                            */
+/* 80020E64-80020E84 0020+00 rc=0 efc=0 .text      fpcCtTg_CreateQTo__FP10create_tag                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +77,7 @@ asm void fpcCtTg_CreateQTo(create_tag* field_0) {
 #pragma pop
 
 
-/* 80020E84-80020EA8 0024+00 rc=1 efc=1 .text      fpcCtTg_Init__FP10create_tagPv                               */
+/* 80020E84-80020EA8 0024+00 rc=0 efc=0 .text      fpcCtTg_Init__FP10create_tagPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -23,7 +23,7 @@ extern "C" void __StringRead(); // 1
 // Declarations:
 // 
 
-/* 8036878C-8036881C 0090+00 rc=2 efc=2 .text      __StringRead                                                 */
+/* 8036878C-8036881C 0090+00 rc=0 efc=0 .text      __StringRead                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

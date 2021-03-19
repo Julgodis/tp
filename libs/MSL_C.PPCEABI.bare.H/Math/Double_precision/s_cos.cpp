@@ -31,12 +31,12 @@ extern "C" void __kernel_sin(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80456AF0-80456AF8 0008+00 rc=1 efc=0 .sdata2    @67                                                          */
+/* 80456AF0-80456AF8 0008+00 rc=0 efc=0 .sdata2    @67                                                          */
 u8 Math_Double_precision_s_cos__lit_67[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8036C028-8036C0FC 00D4+00 rc=12 efc=12 .text      cos                                                          */
+/* 8036C028-8036C0FC 00D4+00 rc=0 efc=0 .text      cos                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

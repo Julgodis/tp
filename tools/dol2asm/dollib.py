@@ -1,5 +1,5 @@
-import globals as g
 import struct
+
 from dataclasses import dataclass, field
 from typing import List
 

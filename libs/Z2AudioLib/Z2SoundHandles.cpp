@@ -125,7 +125,7 @@ SECTION_SBSS extern u8 data_80451348[8];
 // Declarations:
 // 
 
-/* 802AB07C-802AB0B4 0038+00 rc=1 efc=1 .text      __ct__14Z2SoundHandlesFv                                     */
+/* 802AB07C-802AB0B4 0038+00 rc=0 efc=0 .text      __ct__14Z2SoundHandlesFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +136,7 @@ asm Z2SoundHandles::Z2SoundHandles() {
 #pragma pop
 
 
-/* 802AB0B4-802AB118 0064+00 rc=1 efc=1 .text      __dt__14Z2SoundHandlesFv                                     */
+/* 802AB0B4-802AB118 0064+00 rc=0 efc=0 .text      __dt__14Z2SoundHandlesFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +147,7 @@ asm Z2SoundHandles::~Z2SoundHandles() {
 #pragma pop
 
 
-/* 802AB118-802AB120 0008+00 rc=1 efc=1 .text      initHandlesPool__14Z2SoundHandlesFUc                         */
+/* 802AB118-802AB120 0008+00 rc=0 efc=0 .text      initHandlesPool__14Z2SoundHandlesFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,13 +159,13 @@ asm void Z2SoundHandles::initHandlesPool(u8 field_0) {
 
 
 /* ############################################################################################## */
-/* 804341B8-804341C4 000C+00 rc=3 efc=0 .bss       @632                                                         */
+/* 804341B8-804341C4 000C+00 rc=0 efc=0 .bss       @632                                                         */
 u8 Z2SoundHandles__lit_632[12];
 
-/* 804341C4-804341D8 0010+04 rc=4 efc=1 .bss       memPool_$localstatic3$getMemPool___39JASPoolAllocObject<17Z2SoundHandlePool>Fv */
+/* 804341C4-804341D8 0010+04 rc=0 efc=0 .bss       memPool_$localstatic3$getMemPool___39JASPoolAllocObject<17Z2SoundHandlePool>Fv */
 u8 data_804341C4[16 + 4 /* padding */];
 
-/* 802AB120-802AB200 00E0+00 rc=2 efc=1 .text      deleteHandlesPool__14Z2SoundHandlesFv                        */
+/* 802AB120-802AB200 00E0+00 rc=0 efc=0 .text      deleteHandlesPool__14Z2SoundHandlesFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,7 +176,7 @@ asm void Z2SoundHandles::deleteHandlesPool() {
 #pragma pop
 
 
-/* 802AB200-802AB254 0054+00 rc=4 efc=1 .text      __dt__31JASMemPool<17Z2SoundHandlePool>Fv                    */
+/* 802AB200-802AB254 0054+00 rc=0 efc=0 .text      __dt__31JASMemPool<17Z2SoundHandlePool>Fv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,7 +187,7 @@ asm JASMemPool__template4::~JASMemPool__template4() {
 #pragma pop
 
 
-/* 802AB254-802AB2A0 004C+00 rc=6 efc=6 .text      getHandleSoundID__14Z2SoundHandlesF10JAISoundID              */
+/* 802AB254-802AB2A0 004C+00 rc=0 efc=0 .text      getHandleSoundID__14Z2SoundHandlesF10JAISoundID              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ asm void Z2SoundHandles::getHandleSoundID(JAISoundID field_0) {
 #pragma pop
 
 
-/* 802AB2A0-802AB2D8 0038+00 rc=1 efc=1 .text      getHandleUserData__14Z2SoundHandlesFUl                       */
+/* 802AB2A0-802AB2D8 0038+00 rc=0 efc=0 .text      getHandleUserData__14Z2SoundHandlesFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +209,7 @@ asm void Z2SoundHandles::getHandleUserData(u32 field_0) {
 #pragma pop
 
 
-/* 802AB2D8-802AB3D0 00F8+00 rc=3 efc=3 .text      getFreeHandle__14Z2SoundHandlesFv                            */
+/* 802AB2D8-802AB3D0 00F8+00 rc=0 efc=0 .text      getFreeHandle__14Z2SoundHandlesFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -220,7 +220,7 @@ asm void Z2SoundHandles::getFreeHandle() {
 #pragma pop
 
 
-/* 802AB3D0-802AB4A0 00D0+00 rc=2 efc=2 .text      getLowPrioSound__14Z2SoundHandlesF10JAISoundID               */
+/* 802AB3D0-802AB4A0 00D0+00 rc=0 efc=0 .text      getLowPrioSound__14Z2SoundHandlesF10JAISoundID               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -231,7 +231,7 @@ asm void Z2SoundHandles::getLowPrioSound(JAISoundID field_0) {
 #pragma pop
 
 
-/* 802AB4A0-802AB504 0064+00 rc=1 efc=1 .text      stopAllSounds__14Z2SoundHandlesFUl                           */
+/* 802AB4A0-802AB504 0064+00 rc=0 efc=0 .text      stopAllSounds__14Z2SoundHandlesFUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -242,7 +242,7 @@ asm void Z2SoundHandles::stopAllSounds(u32 field_0) {
 #pragma pop
 
 
-/* 802AB504-802AB538 0034+00 rc=1 efc=1 .text      isActive__14Z2SoundHandlesCFv                                */
+/* 802AB504-802AB538 0034+00 rc=0 efc=0 .text      isActive__14Z2SoundHandlesCFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,7 +253,7 @@ asm void Z2SoundHandles::isActive() const {
 #pragma pop
 
 
-/* 802AB538-802AB64C 0114+00 rc=1 efc=1 .text      setPos__14Z2SoundHandlesFRCQ29JGeometry8TVec3<f>             */
+/* 802AB538-802AB64C 0114+00 rc=0 efc=0 .text      setPos__14Z2SoundHandlesFRCQ29JGeometry8TVec3<f>             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

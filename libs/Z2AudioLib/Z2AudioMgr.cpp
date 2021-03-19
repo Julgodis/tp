@@ -9,16 +9,10 @@
 // Types:
 // 
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
+struct JKRSolidHeap {
 };
 
-struct JKRSolidHeap {
+struct JKRArchive {
 };
 
 struct JAISoundID {
@@ -27,7 +21,13 @@ struct JAISoundID {
 struct JAISoundHandle {
 };
 
-struct JKRArchive {
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
 };
 
 struct Z2AudioMgr {
@@ -74,13 +74,13 @@ struct JASAudioReseter {
 	/* 8029D1F8 */ void checkDone() const;
 };
 
-struct JAIAudience {
+struct JAISeCategoryArrangement {
 };
 
 struct JAISeqDataMgr {
 };
 
-struct JAISeCategoryArrangement {
+struct JAIAudience {
 };
 
 struct JAISeMgr {
@@ -206,14 +206,14 @@ struct JKRHeap {
 // Forward References:
 // 
 
-extern "C" static void func_802CD7F8(); // 1
-extern "C" static void func_802CDB68(); // 1
-extern "C" static void func_802CDC08(); // 1
-extern "C" static void func_802CDCEC(); // 1
+extern "C" void func_802CD7F8(); // 1
+extern "C" void func_802CDB68(); // 1
+extern "C" void func_802CDC08(); // 1
+extern "C" void func_802CDCEC(); // 1
 
 extern "C" void __ct__10Z2AudioMgrFv(); // 1
 extern "C" void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive(); // 1
-extern "C" static void func_802CD7F8(); // 1
+extern "C" void func_802CD7F8(); // 1
 extern "C" void setOutputMode__10Z2AudioMgrFUl(); // 1
 extern "C" void zeldaGFrameWork__10Z2AudioMgrFv(); // 1
 extern "C" void gframeProcess__10Z2AudioMgrFv(); // 1
@@ -221,13 +221,13 @@ extern "C" void resetProcess__10Z2AudioMgrFUlb(); // 1
 extern "C" void resetRecover__10Z2AudioMgrFv(); // 1
 extern "C" void hasReset__10Z2AudioMgrCFv(); // 1
 extern "C" void func_802CDB1C(); // 1
-extern "C" static void func_802CDB68(); // 1
-extern "C" static void func_802CDC08(); // 1
-extern "C" static void func_802CDCEC(); // 1
-SECTION_RODATA extern const u8 Z2AudioMgr__stringBase0[128];
-SECTION_DATA extern void*const __vt__10Z2AudioMgr[3];
-SECTION_DATA extern void*const data_803CBF44[5];
-SECTION_DATA extern void*const data_803CBF58[6];
+extern "C" void func_802CDB68(); // 1
+extern "C" void func_802CDC08(); // 1
+extern "C" void func_802CDCEC(); // 1
+SECTION_RODATA extern const char* const Z2AudioMgr__stringBase0;
+SECTION_DATA extern void* const __vt__10Z2AudioMgr[3];
+SECTION_DATA extern void* const data_803CBF44[5];
+SECTION_DATA extern void* const data_803CBF58[5 + 1 /* padding */];
 SECTION_BSS extern u8 Z2AudioMgr__lit_3779[12];
 SECTION_BSS extern u8 lit_3783[12];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
@@ -328,13 +328,13 @@ extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abort(); // 1
 extern "C" void fprintf(); // 1
-SECTION_DATA extern void*const __vt__12JAUSoundInfo[5];
-SECTION_DATA extern void*const __vt__16JAIStreamAramMgr[5];
-SECTION_DATA extern void*const __vt__16JAIStreamDataMgr[5];
-SECTION_DATA extern void*const __vt__17JAUAudioArcLoader[18];
-SECTION_DATA extern void*const __vt__16Z2AudioArcLoader[18];
-SECTION_DATA extern void*const __vt__11Z2SoundInfo[20];
-SECTION_DATA extern void*__files[80];
+SECTION_DATA extern void* const __vt__12JAUSoundInfo[4 + 1 /* padding */];
+SECTION_DATA extern void* const __vt__16JAIStreamAramMgr[5];
+SECTION_DATA extern void* const __vt__16JAIStreamDataMgr[4 + 1 /* padding */];
+SECTION_DATA extern void* const __vt__17JAUAudioArcLoader[17 + 1 /* padding */];
+SECTION_DATA extern void* const __vt__16Z2AudioArcLoader[17 + 1 /* padding */];
+SECTION_DATA extern void* const __vt__11Z2SoundInfo[20];
+SECTION_DATA extern void* __files[80];
 SECTION_BSS extern u8 data_804341C4[16 + 4 /* padding */];
 SECTION_BSS extern u8 data_804341E4[16 + 4 /* padding */];
 SECTION_SDATA extern f32 VOL_BGM_DEFAULT__7Z2Param;
@@ -358,17 +358,17 @@ SECTION_SBSS extern u8 data_80451354[4];
 // 
 
 /* ############################################################################################## */
-/* 803CBF38-803CBF44 000C+00 rc=2 efc=1 .data      __vt__10Z2AudioMgr                                           */
+/* 803CBF38-803CBF44 000C+00 rc=0 efc=0 .data      __vt__10Z2AudioMgr                                           */
 void* const __vt__10Z2AudioMgr[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)func_802CDB1C,
 };
 
-/* 80451368-80451370 0004+04 rc=252 efc=251 .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
+/* 80451368-80451370 0004+04 rc=0 efc=0 .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
 u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-/* 802CD248-802CD34C 0104+00 rc=1 efc=1 .text      __ct__10Z2AudioMgrFv                                         */
+/* 802CD248-802CD34C 0104+00 rc=0 efc=0 .text      __ct__10Z2AudioMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -380,54 +380,54 @@ asm Z2AudioMgr::Z2AudioMgr() {
 
 
 /* ############################################################################################## */
-/* 8039CA58-8039CAD8 0079+07 rc=3 efc=0 .rodata    @stringBase0                                                 */
+/* 8039CA58-8039CAD8 0079+07 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_8039CA58 = "Audiores/Waves/";
-SECTION_DEAD char* const stringBase_8039CA68 = 
+const char* const stringBase_8039CA58 = "Audiores/Waves/";
+const char* const stringBase_8039CA68 = 
     "index out of range of bitset::reset";
-SECTION_DEAD char* const stringBase_8039CA8C = 
+const char* const stringBase_8039CA8C = 
     "index out of range of bitset::test";
-SECTION_DEAD char* const stringBase_8039CAAF = 
+const char* const stringBase_8039CAAF = 
     "index out of range of bitset::set";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_8039CAD1 = "\0\0\0\0\0\0";
+char* const pad_8039CAD1 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 803CBF44-803CBF58 0014+00 rc=2 efc=0 .data      __vt__26JAUStreamStaticAramMgr_<1>                           */
+/* 803CBF44-803CBF58 0014+00 rc=0 efc=0 .data      __vt__26JAUStreamStaticAramMgr_<1>                           */
 void* const data_803CBF44[5] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)func_802CDCEC,
 	(void*)func_802CDC08,
 	(void*)func_802CDB68,
 };
 
-/* 803CBF58-803CBF70 0014+04 rc=3 efc=0 .data      __vt__24JAUStreamAramMgrBase_<1>                             */
-void* const data_803CBF58[6] = {
-	NULL, /* RTTI */
-	NULL,
-	NULL,
-	NULL,
+/* 803CBF58-803CBF70 0014+04 rc=0 efc=0 .data      __vt__24JAUStreamAramMgrBase_<1>                             */
+void* const data_803CBF58[5 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)func_802CD7F8,
 	/* padding */
 	NULL,
 };
 
-/* 80434268-80434274 000C+00 rc=1 efc=0 .bss       @3779                                                        */
+/* 80434268-80434274 000C+00 rc=0 efc=0 .bss       @3779                                                        */
 u8 Z2AudioMgr__lit_3779[12];
 
-/* 80434274-80434280 000C+00 rc=1 efc=0 .bss       @3783                                                        */
+/* 80434274-80434280 000C+00 rc=0 efc=0 .bss       @3783                                                        */
 u8 lit_3783[12];
 
-/* 80455F58-80455F5C 0004+00 rc=1 efc=0 .sdata2    @3931                                                        */
+/* 80455F58-80455F5C 0004+00 rc=0 efc=0 .sdata2    @3931                                                        */
 f32 lit_3931 = 13.0f / 10.0f;
 
-/* 80455F5C-80455F60 0004+00 rc=2 efc=0 .sdata2    @3932                                                        */
+/* 80455F5C-80455F60 0004+00 rc=0 efc=0 .sdata2    @3932                                                        */
 f32 lit_3932 = 1.0f;
 
-/* 802CD34C-802CD7F8 04AC+00 rc=1 efc=1 .text      init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive          */
+/* 802CD34C-802CD7F8 04AC+00 rc=0 efc=0 .text      init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -438,18 +438,18 @@ asm void Z2AudioMgr::init(JKRSolidHeap* field_0, u32 field_1, void* field_2, JKR
 #pragma pop
 
 
-/* 802CD7F8-802CD888 0090+00 rc=1 efc=0 .text      __dt__24JAUStreamAramMgrBase_<1>Fv                           */
+/* 802CD7F8-802CD888 0090+00 rc=0 efc=0 .text      __dt__24JAUStreamAramMgrBase_<1>Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802CD7F8() {
+extern "C" asm void func_802CD7F8() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CD7F8.s"
 }
 #pragma pop
 
 
-/* 802CD888-802CD8B4 002C+00 rc=5 efc=5 .text      setOutputMode__10Z2AudioMgrFUl                               */
+/* 802CD888-802CD8B4 002C+00 rc=0 efc=0 .text      setOutputMode__10Z2AudioMgrFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -460,7 +460,7 @@ asm void Z2AudioMgr::setOutputMode(u32 field_0) {
 #pragma pop
 
 
-/* 802CD8B4-802CD904 0050+00 rc=1 efc=0 .text      zeldaGFrameWork__10Z2AudioMgrFv                              */
+/* 802CD8B4-802CD904 0050+00 rc=0 efc=0 .text      zeldaGFrameWork__10Z2AudioMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -471,7 +471,7 @@ asm void Z2AudioMgr::zeldaGFrameWork() {
 #pragma pop
 
 
-/* 802CD904-802CD974 0070+00 rc=1 efc=1 .text      gframeProcess__10Z2AudioMgrFv                                */
+/* 802CD904-802CD974 0070+00 rc=0 efc=0 .text      gframeProcess__10Z2AudioMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -482,7 +482,7 @@ asm void Z2AudioMgr::gframeProcess() {
 #pragma pop
 
 
-/* 802CD974-802CD9CC 0058+00 rc=3 efc=3 .text      resetProcess__10Z2AudioMgrFUlb                               */
+/* 802CD974-802CD9CC 0058+00 rc=0 efc=0 .text      resetProcess__10Z2AudioMgrFUlb                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -494,14 +494,14 @@ asm void Z2AudioMgr::resetProcess(u32 field_0, bool field_1) {
 
 
 /* ############################################################################################## */
-/* 80455F60-80455F68 0004+04 rc=1 efc=0 .sdata2    @4035                                                        */
-u8 Z2AudioMgr__lit_4035[8] = {
+/* 80455F60-80455F68 0004+04 rc=0 efc=0 .sdata2    @4035                                                        */
+u8 Z2AudioMgr__lit_4035[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802CD9CC-802CDA6C 00A0+00 rc=1 efc=1 .text      resetRecover__10Z2AudioMgrFv                                 */
+/* 802CD9CC-802CDA6C 00A0+00 rc=0 efc=0 .text      resetRecover__10Z2AudioMgrFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -512,7 +512,7 @@ asm void Z2AudioMgr::resetRecover() {
 #pragma pop
 
 
-/* 802CDA6C-802CDB1C 00B0+00 rc=2 efc=2 .text      hasReset__10Z2AudioMgrCFv                                    */
+/* 802CDA6C-802CDB1C 00B0+00 rc=0 efc=0 .text      hasReset__10Z2AudioMgrCFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -523,7 +523,7 @@ asm void Z2AudioMgr::hasReset() const {
 #pragma pop
 
 
-/* 802CDB1C-802CDB68 004C+00 rc=2 efc=1 .text      startSound__10Z2AudioMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+/* 802CDB1C-802CDB68 004C+00 rc=0 efc=0 .text      startSound__10Z2AudioMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -534,33 +534,33 @@ asm void Z2AudioMgr::startSound(JAISoundID field_0, JAISoundHandle* field_1, JGe
 #pragma pop
 
 
-/* 802CDB68-802CDC08 00A0+00 rc=1 efc=0 .text      __dt__26JAUStreamStaticAramMgr_<1>Fv                         */
+/* 802CDB68-802CDC08 00A0+00 rc=0 efc=0 .text      __dt__26JAUStreamStaticAramMgr_<1>Fv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802CDB68() {
+extern "C" asm void func_802CDB68() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CDB68.s"
 }
 #pragma pop
 
 
-/* 802CDC08-802CDCEC 00E4+00 rc=1 efc=0 .text      deleteStreamAram__26JAUStreamStaticAramMgr_<1>FUl            */
+/* 802CDC08-802CDCEC 00E4+00 rc=0 efc=0 .text      deleteStreamAram__26JAUStreamStaticAramMgr_<1>FUl            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802CDC08() {
+extern "C" asm void func_802CDC08() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CDC08.s"
 }
 #pragma pop
 
 
-/* 802CDCEC-802CDDC8 00DC+00 rc=1 efc=0 .text      newStreamAram__26JAUStreamStaticAramMgr_<1>FPUl              */
+/* 802CDCEC-802CDDC8 00DC+00 rc=0 efc=0 .text      newStreamAram__26JAUStreamStaticAramMgr_<1>FPUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_802CDCEC() {
+extern "C" asm void func_802CDCEC() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2AudioMgr/func_802CDCEC.s"
 }

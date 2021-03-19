@@ -53,12 +53,12 @@ extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 804505D0-804505D8 0008+00 rc=4 efc=2 .sdata     g_fopDwTg_Queue                                              */
+/* 804505D0-804505D8 0008+00 rc=0 efc=0 .sdata     g_fopDwTg_Queue                                              */
 u8 g_fopDwTg_Queue[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800204AC-800204D4 0028+00 rc=4 efc=4 .text      fopDwTg_ToDrawQ__FP16create_tag_classi                       */
+/* 800204AC-800204D4 0028+00 rc=0 efc=0 .text      fopDwTg_ToDrawQ__FP16create_tag_classi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -69,7 +69,7 @@ asm void fopDwTg_ToDrawQ(create_tag_class* field_0, int field_1) {
 #pragma pop
 
 
-/* 800204D4-800204F4 0020+00 rc=8 efc=8 .text      fopDwTg_DrawQTo__FP16create_tag_class                        */
+/* 800204D4-800204F4 0020+00 rc=0 efc=0 .text      fopDwTg_DrawQTo__FP16create_tag_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,7 +80,7 @@ asm void fopDwTg_DrawQTo(create_tag_class* field_0) {
 #pragma pop
 
 
-/* 800204F4-80020518 0024+00 rc=4 efc=4 .text      fopDwTg_Init__FP16create_tag_classPv                         */
+/* 800204F4-80020518 0024+00 rc=0 efc=0 .text      fopDwTg_Init__FP16create_tag_classPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,10 +92,10 @@ asm void fopDwTg_Init(create_tag_class* field_0, void* field_1) {
 
 
 /* ############################################################################################## */
-/* 803F1E10-803F4CF0 2EE0+00 rc=1 efc=0 .bss       lists$2216                                                   */
+/* 803F1E10-803F4CF0 2EE0+00 rc=0 efc=0 .bss       lists$2216                                                   */
 u8 data_803F1E10[12000];
 
-/* 80020518-80020548 0030+00 rc=1 efc=1 .text      fopDwTg_CreateQueue__Fv                                      */
+/* 80020518-80020548 0030+00 rc=0 efc=0 .text      fopDwTg_CreateQueue__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

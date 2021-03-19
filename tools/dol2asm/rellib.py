@@ -1,12 +1,11 @@
-import globals as g
-from dataclasses import dataclass, field
 import struct
 import os
 import yaz0
 import io
+
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import List, Optional
-
 
 R_PPC_NONE = 0
 R_PPC_ADDR32 = 1

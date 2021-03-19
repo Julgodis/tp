@@ -19,7 +19,7 @@ struct JAIAudience {
 
 
 extern "C" void __dt__11JAIAudienceFv(); // 1
-SECTION_DATA extern void*const __vt__11JAIAudience[8];
+SECTION_DATA extern void* const __vt__11JAIAudience[8];
 
 // 
 // External References:
@@ -34,19 +34,19 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C9838-803C9858 0020+00 rc=2 efc=1 .data      __vt__11JAIAudience                                          */
+/* 803C9838-803C9858 0020+00 rc=0 efc=0 .data      __vt__11JAIAudience                                          */
 void* const __vt__11JAIAudience[8] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__11JAIAudienceFv,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8029EFF4-8029F03C 0048+00 rc=2 efc=1 .text      __dt__11JAIAudienceFv                                        */
+/* 8029EFF4-8029F03C 0048+00 rc=0 efc=0 .text      __dt__11JAIAudienceFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

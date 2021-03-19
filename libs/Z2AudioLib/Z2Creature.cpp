@@ -199,10 +199,10 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-static void Z2_E_sw_modPitch(Z2SoundHandlePool*, u32); // 2
-static void Z2_E_ms_modVol(Z2SoundHandlePool*, u32); // 2
-static void Z2_E_mm_modPitch(Z2SoundHandlePool*, u32); // 2
-static void Z2_B_zan_modPitch(Z2SoundHandlePool*, u32); // 2
+void Z2_E_sw_modPitch(Z2SoundHandlePool*, u32); // 2
+void Z2_E_ms_modVol(Z2SoundHandlePool*, u32); // 2
+void Z2_E_mm_modPitch(Z2SoundHandlePool*, u32); // 2
+void Z2_B_zan_modPitch(Z2SoundHandlePool*, u32); // 2
 extern "C" void __sinit_Z2Creature_cpp(); // 1
 
 extern "C" void __ct__10Z2CreatureFv(); // 1
@@ -264,23 +264,23 @@ extern "C" void framework__12Z2CreatureOIFUlSc(); // 1
 extern "C" void startCreatureSoundLevel__12Z2CreatureOIF10JAISoundIDUlSc(); // 1
 extern "C" void startTentacleSound__12Z2CreatureOIF10JAISoundIDUcUlSc(); // 1
 extern "C" void startTentacleSoundLevel__12Z2CreatureOIF10JAISoundIDUcfUlSc(); // 1
-extern "C" static void Z2_E_sw_modPitch__FP17Z2SoundHandlePoolUl(); // 1
-extern "C" static void Z2_E_ms_modVol__FP17Z2SoundHandlePoolUl(); // 1
-extern "C" static void Z2_E_mm_modPitch__FP17Z2SoundHandlePoolUl(); // 1
-extern "C" static void Z2_B_zan_modPitch__FP17Z2SoundHandlePoolUl(); // 1
+extern "C" void Z2_E_sw_modPitch__FP17Z2SoundHandlePoolUl(); // 1
+extern "C" void Z2_E_ms_modVol__FP17Z2SoundHandlePoolUl(); // 1
+extern "C" void Z2_E_mm_modPitch__FP17Z2SoundHandlePoolUl(); // 1
+extern "C" void Z2_B_zan_modPitch__FP17Z2SoundHandlePoolUl(); // 1
 extern "C" void __sinit_Z2Creature_cpp(); // 1
 SECTION_DATA extern u8 Z2Creature__mEnemyInfo[1024];
-SECTION_DATA extern void*Z2Creature__lit_4094[30];
-SECTION_DATA extern void*Z2Creature__lit_4340[31];
-SECTION_DATA extern void*Z2Creature__lit_4411[23];
-SECTION_DATA extern void*const __vt__12Z2CreatureOI[12];
-SECTION_DATA extern void*const __vt__13Z2CreatureGob[12];
-SECTION_DATA extern void*const __vt__12Z2CreatureFM[12];
-SECTION_DATA extern void*const __vt__18Z2SoundObjBeeGroup[8];
-SECTION_DATA extern void*const __vt__16Z2CreatureSumomo[12];
-SECTION_DATA extern void*const __vt__15Z2CreatureEnemy[12];
-SECTION_DATA extern void*const __vt__17Z2CreatureCitizen[12];
-SECTION_DATA extern void*const __vt__10Z2Creature[12];
+SECTION_DATA extern void* Z2Creature__lit_4094[30];
+SECTION_DATA extern void* Z2Creature__lit_4340[31];
+SECTION_DATA extern void* Z2Creature__lit_4411[23];
+SECTION_DATA extern void* const __vt__12Z2CreatureOI[12];
+SECTION_DATA extern void* const __vt__13Z2CreatureGob[12];
+SECTION_DATA extern void* const __vt__12Z2CreatureFM[12];
+SECTION_DATA extern void* const __vt__18Z2SoundObjBeeGroup[8];
+SECTION_DATA extern void* const __vt__16Z2CreatureSumomo[12];
+SECTION_DATA extern void* const __vt__15Z2CreatureEnemy[12];
+SECTION_DATA extern void* const __vt__17Z2CreatureCitizen[12];
+SECTION_DATA extern void* const __vt__10Z2Creature[12];
 SECTION_SDATA2 extern u32 Z2Creature__sAreaDefault;
 SECTION_SDATA2 extern u32 data_80455BDC;
 SECTION_SDATA2 extern u32 Z2Creature__sAreaFloating;
@@ -299,7 +299,7 @@ SECTION_SDATA2 extern f32 Z2Creature__lit_3665;
 SECTION_SDATA2 extern f32 Z2Creature__lit_3666;
 SECTION_SDATA2 extern f32 lit_3667;
 SECTION_SDATA2 extern f32 lit_3668;
-SECTION_SDATA2 extern f32 lit_3669;
+SECTION_SDATA2 extern f32 lit_3669[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 Z2Creature__lit_3672;
 SECTION_SDATA2 extern f32 Z2Creature__lit_3716;
 SECTION_SDATA2 extern u8 Z2Creature__lit_3717[4];
@@ -397,9 +397,8 @@ extern "C" void _restgpr_23(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_DATA extern void*const __vt__15Z2SoundObjAnime[8];
-SECTION_DATA extern void*const __vt__16Z2SoundObjSimple[8];
-SECTION_SDATA extern u8 struct_80450868[4];
+SECTION_DATA extern void* const __vt__15Z2SoundObjAnime[8];
+SECTION_DATA extern void* const __vt__16Z2SoundObjSimple[8];
 SECTION_SBSS extern u8 data_80450B44[4];
 SECTION_SBSS extern u8 data_80450B48[4];
 SECTION_SBSS extern u8 data_80450B70[4];
@@ -407,7 +406,6 @@ SECTION_SBSS extern u8 data_80450B7C[4];
 SECTION_SBSS extern u8 data_80450B80[4];
 SECTION_SBSS extern u8 data_80450B84[4];
 SECTION_SBSS extern u8 data_80450B88[4];
-SECTION_SBSS extern u8 struct_80451358[8];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
@@ -415,7 +413,7 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803CB230-803CB630 0400+00 rc=1 efc=0 .data      mEnemyInfo                                                   */
+/* 803CB230-803CB630 0400+00 rc=0 efc=0 .data      mEnemyInfo                                                   */
 u8 Z2Creature__mEnemyInfo[1024] = {
 	0x44, 0x75, 0x6D, 0x6D, 0x79, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x45, 0x5F, 0x73, 0x31, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x02, 0xBC, 0x04, 0xB0, 0x07, 0xD0,
@@ -483,7 +481,7 @@ u8 Z2Creature__mEnemyInfo[1024] = {
 	0x42, 0x5F, 0x74, 0x6E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CB630-803CB6A8 0078+00 rc=1 efc=0 .data      @4094                                                        */
+/* 803CB630-803CB6A8 0078+00 rc=0 efc=0 .data      @4094                                                        */
 void* Z2Creature__lit_4094[30] = {
 	(void*)(((char*)startCreatureSound__15Z2CreatureEnemyF10JAISoundIDUlSc)+0x7C),
 	(void*)(((char*)startCreatureSound__15Z2CreatureEnemyF10JAISoundIDUlSc)+0x1E8),
@@ -517,7 +515,7 @@ void* Z2Creature__lit_4094[30] = {
 	(void*)(((char*)startCreatureSound__15Z2CreatureEnemyF10JAISoundIDUlSc)+0x1AC),
 };
 
-/* 803CB6A8-803CB724 007C+00 rc=1 efc=0 .data      @4340                                                        */
+/* 803CB6A8-803CB724 007C+00 rc=0 efc=0 .data      @4340                                                        */
 void* Z2Creature__lit_4340[31] = {
 	(void*)(((char*)startCreatureVoice__15Z2CreatureEnemyF10JAISoundIDSc)+0x214),
 	(void*)(((char*)startCreatureVoice__15Z2CreatureEnemyF10JAISoundIDSc)+0x284),
@@ -552,7 +550,7 @@ void* Z2Creature__lit_4340[31] = {
 	(void*)(((char*)startCreatureVoice__15Z2CreatureEnemyF10JAISoundIDSc)+0x270),
 };
 
-/* 803CB724-803CB780 005C+00 rc=1 efc=0 .data      @4411                                                        */
+/* 803CB724-803CB780 005C+00 rc=0 efc=0 .data      @4411                                                        */
 void* Z2Creature__lit_4411[23] = {
 	(void*)(((char*)startCollisionSE__15Z2CreatureEnemyFUlUl)+0xC8),
 	(void*)(((char*)startCollisionSE__15Z2CreatureEnemyFUlUl)+0xC8),
@@ -579,10 +577,10 @@ void* Z2Creature__lit_4411[23] = {
 	(void*)(((char*)startCollisionSE__15Z2CreatureEnemyFUlUl)+0xC8),
 };
 
-/* 803CB780-803CB7B0 0030+00 rc=1 efc=0 .data      __vt__12Z2CreatureOI                                         */
+/* 803CB780-803CB7B0 0030+00 rc=0 efc=0 .data      __vt__12Z2CreatureOI                                         */
 void* const __vt__12Z2CreatureOI[12] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)deleteObject__12Z2CreatureOIFv,
 	(void*)setSoundStarter__10Z2CreatureFP14Z2SoundStarter,
 	(void*)framework__12Z2CreatureOIFUlSc,
@@ -597,8 +595,8 @@ void* const __vt__12Z2CreatureOI[12] = {
 
 /* 803CB7B0-803CB7E0 0030+00 rc=0 efc=0 .data      __vt__13Z2CreatureGob                                        */
 void* const __vt__13Z2CreatureGob[12] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)deleteObject__10Z2CreatureFv,
 	(void*)setSoundStarter__10Z2CreatureFP14Z2SoundStarter,
 	(void*)framework__10Z2CreatureFUlSc,
@@ -611,10 +609,10 @@ void* const __vt__13Z2CreatureGob[12] = {
 	(void*)startCollisionSE__10Z2CreatureFUlUl,
 };
 
-/* 803CB7E0-803CB810 0030+00 rc=1 efc=0 .data      __vt__12Z2CreatureFM                                         */
+/* 803CB7E0-803CB810 0030+00 rc=0 efc=0 .data      __vt__12Z2CreatureFM                                         */
 void* const __vt__12Z2CreatureFM[12] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)deleteObject__12Z2CreatureFMFv,
 	(void*)setSoundStarter__10Z2CreatureFP14Z2SoundStarter,
 	(void*)framework__12Z2CreatureFMFUlSc,
@@ -627,10 +625,10 @@ void* const __vt__12Z2CreatureFM[12] = {
 	(void*)startCollisionSE__15Z2CreatureEnemyFUlUl,
 };
 
-/* 803CB810-803CB830 0020+00 rc=1 efc=0 .data      __vt__18Z2SoundObjBeeGroup                                   */
+/* 803CB810-803CB830 0020+00 rc=0 efc=0 .data      __vt__18Z2SoundObjBeeGroup                                   */
 void* const __vt__18Z2SoundObjBeeGroup[8] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)framework__14Z2SoundObjBaseFUlSc,
 	(void*)dispose__14Z2SoundObjBaseFv,
 	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
@@ -639,10 +637,10 @@ void* const __vt__18Z2SoundObjBeeGroup[8] = {
 	(void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
 };
 
-/* 803CB830-803CB860 0030+00 rc=1 efc=0 .data      __vt__16Z2CreatureSumomo                                     */
+/* 803CB830-803CB860 0030+00 rc=0 efc=0 .data      __vt__16Z2CreatureSumomo                                     */
 void* const __vt__16Z2CreatureSumomo[12] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)deleteObject__16Z2CreatureSumomoFv,
 	(void*)setSoundStarter__10Z2CreatureFP14Z2SoundStarter,
 	(void*)framework__10Z2CreatureFUlSc,
@@ -655,10 +653,10 @@ void* const __vt__16Z2CreatureSumomo[12] = {
 	(void*)startCollisionSE__10Z2CreatureFUlUl,
 };
 
-/* 803CB860-803CB890 0030+00 rc=1 efc=0 .data      __vt__15Z2CreatureEnemy                                      */
+/* 803CB860-803CB890 0030+00 rc=0 efc=0 .data      __vt__15Z2CreatureEnemy                                      */
 void* const __vt__15Z2CreatureEnemy[12] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)deleteObject__15Z2CreatureEnemyFv,
 	(void*)setSoundStarter__10Z2CreatureFP14Z2SoundStarter,
 	(void*)framework__15Z2CreatureEnemyFUlSc,
@@ -671,10 +669,10 @@ void* const __vt__15Z2CreatureEnemy[12] = {
 	(void*)startCollisionSE__15Z2CreatureEnemyFUlUl,
 };
 
-/* 803CB890-803CB8C0 0030+00 rc=2 efc=0 .data      __vt__17Z2CreatureCitizen                                    */
+/* 803CB890-803CB8C0 0030+00 rc=0 efc=0 .data      __vt__17Z2CreatureCitizen                                    */
 void* const __vt__17Z2CreatureCitizen[12] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)deleteObject__17Z2CreatureCitizenFv,
 	(void*)setSoundStarter__10Z2CreatureFP14Z2SoundStarter,
 	(void*)framework__10Z2CreatureFUlSc,
@@ -687,10 +685,10 @@ void* const __vt__17Z2CreatureCitizen[12] = {
 	(void*)startCollisionSE__10Z2CreatureFUlUl,
 };
 
-/* 803CB8C0-803CB8F0 0030+00 rc=2 efc=0 .data      __vt__10Z2Creature                                           */
+/* 803CB8C0-803CB8F0 0030+00 rc=0 efc=0 .data      __vt__10Z2Creature                                           */
 void* const __vt__10Z2Creature[12] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)deleteObject__10Z2CreatureFv,
 	(void*)setSoundStarter__10Z2CreatureFP14Z2SoundStarter,
 	(void*)framework__10Z2CreatureFUlSc,
@@ -703,7 +701,7 @@ void* const __vt__10Z2Creature[12] = {
 	(void*)startCollisionSE__10Z2CreatureFUlUl,
 };
 
-/* 802C03C8-802C0420 0058+00 rc=6 efc=3 .text      __ct__10Z2CreatureFv                                         */
+/* 802C03C8-802C0420 0058+00 rc=0 efc=0 .text      __ct__10Z2CreatureFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -714,7 +712,7 @@ asm Z2Creature::Z2Creature() {
 #pragma pop
 
 
-/* 802C0420-802C04E8 00C8+00 rc=5 efc=4 .text      __dt__10Z2CreatureFv                                         */
+/* 802C0420-802C04E8 00C8+00 rc=0 efc=0 .text      __dt__10Z2CreatureFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -725,7 +723,7 @@ asm Z2Creature::~Z2Creature() {
 #pragma pop
 
 
-/* 802C04E8-802C0530 0048+00 rc=6 efc=2 .text      deleteObject__10Z2CreatureFv                                 */
+/* 802C04E8-802C0530 0048+00 rc=0 efc=0 .text      deleteObject__10Z2CreatureFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -736,7 +734,7 @@ asm void Z2Creature::deleteObject() {
 #pragma pop
 
 
-/* 802C0530-802C05B0 0080+00 rc=6 efc=1 .text      init__10Z2CreatureFP3VecP3VecUcUc                            */
+/* 802C0530-802C05B0 0080+00 rc=0 efc=0 .text      init__10Z2CreatureFP3VecP3VecUcUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -747,7 +745,7 @@ asm void Z2Creature::init(Vec* field_0, Vec* field_1, u8 field_2, u8 field_3) {
 #pragma pop
 
 
-/* 802C05B0-802C0618 0068+00 rc=3 efc=1 .text      init__10Z2CreatureFP3VecP3VecP3VecUcUcUc                     */
+/* 802C05B0-802C0618 0068+00 rc=0 efc=0 .text      init__10Z2CreatureFP3VecP3VecP3VecUcUcUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -758,7 +756,7 @@ asm void Z2Creature::init(Vec* field_0, Vec* field_1, Vec* field_2, u8 field_3, 
 #pragma pop
 
 
-/* 802C0618-802C0628 0010+00 rc=9 efc=2 .text      setSoundStarter__10Z2CreatureFP14Z2SoundStarter              */
+/* 802C0618-802C0628 0010+00 rc=0 efc=0 .text      setSoundStarter__10Z2CreatureFP14Z2SoundStarter              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -769,7 +767,7 @@ asm void Z2Creature::setSoundStarter(Z2SoundStarter* field_0) {
 #pragma pop
 
 
-/* 802C0628-802C064C 0024+00 rc=4 efc=4 .text      initAnime__10Z2CreatureFPvbff                                */
+/* 802C0628-802C064C 0024+00 rc=0 efc=0 .text      initAnime__10Z2CreatureFPvbff                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -780,7 +778,7 @@ asm void Z2Creature::initAnime(void* field_0, bool field_1, f32 field_2, f32 fie
 #pragma pop
 
 
-/* 802C064C-802C06D0 0084+00 rc=9 efc=2 .text      framework__10Z2CreatureFUlSc                                 */
+/* 802C064C-802C06D0 0084+00 rc=0 efc=0 .text      framework__10Z2CreatureFUlSc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -791,7 +789,7 @@ asm void Z2Creature::framework(u32 field_0, s8 field_1) {
 #pragma pop
 
 
-/* 802C06D0-802C06F4 0024+00 rc=3 efc=3 .text      updateAnime__10Z2CreatureFff                                 */
+/* 802C06D0-802C06F4 0024+00 rc=0 efc=0 .text      updateAnime__10Z2CreatureFff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -814,68 +812,71 @@ asm void Z2Creature::stopAnime() {
 
 
 /* ############################################################################################## */
-/* 80455BD8-80455BDC 0004+00 rc=1 efc=0 .sdata2    sAreaDefault                                                 */
+/* 80455BD8-80455BDC 0004+00 rc=0 efc=0 .sdata2    sAreaDefault                                                 */
 u32 Z2Creature__sAreaDefault = 0x010002BC;
 
-/* 80455BDC-80455BE0 0004+00 rc=1 efc=0 .sdata2    None                                                         */
+/* 80455BDC-80455BE0 0004+00 rc=0 efc=0 .sdata2    None                                                         */
 u32 data_80455BDC = 0x044C05DC;
 
-/* 80455BE0-80455BE4 0004+00 rc=1 efc=0 .sdata2    sAreaFloating                                                */
+/* 80455BE0-80455BE4 0004+00 rc=0 efc=0 .sdata2    sAreaFloating                                                */
 u32 Z2Creature__sAreaFloating = 0x000002BC;
 
-/* 80455BE4-80455BE8 0004+00 rc=1 efc=0 .sdata2    None                                                         */
+/* 80455BE4-80455BE8 0004+00 rc=0 efc=0 .sdata2    None                                                         */
 u32 data_80455BE4 = 0x044C05DC;
 
-/* 80455BE8-80455BEC 0004+00 rc=1 efc=0 .sdata2    sAreaWide                                                    */
+/* 80455BE8-80455BEC 0004+00 rc=0 efc=0 .sdata2    sAreaWide                                                    */
 u32 Z2Creature__sAreaWide = 0x010002BC;
 
-/* 80455BEC-80455BF0 0004+00 rc=1 efc=0 .sdata2    None                                                         */
+/* 80455BEC-80455BF0 0004+00 rc=0 efc=0 .sdata2    None                                                         */
 u32 data_80455BEC = 0x05DC0CE4;
 
-/* 80455BF0-80455BF4 0004+00 rc=1 efc=0 .sdata2    sAreaWideFloating                                            */
+/* 80455BF0-80455BF4 0004+00 rc=0 efc=0 .sdata2    sAreaWideFloating                                            */
 u32 Z2Creature__sAreaWideFloating = 0x000002BC;
 
-/* 80455BF4-80455BF8 0004+00 rc=1 efc=0 .sdata2    None                                                         */
+/* 80455BF4-80455BF8 0004+00 rc=0 efc=0 .sdata2    None                                                         */
 u32 data_80455BF4 = 0x05DC0CE4;
 
-/* 80455BF8-80455BFC 0004+00 rc=1 efc=0 .sdata2    sAreaSmall                                                   */
+/* 80455BF8-80455BFC 0004+00 rc=0 efc=0 .sdata2    sAreaSmall                                                   */
 u32 Z2Creature__sAreaSmall = 0x0100012C;
 
-/* 80455BFC-80455C00 0004+00 rc=1 efc=0 .sdata2    None                                                         */
+/* 80455BFC-80455C00 0004+00 rc=0 efc=0 .sdata2    None                                                         */
 u32 data_80455BFC = 0x02BC03E8;
 
-/* 80455C00-80455C04 0004+00 rc=1 efc=0 .sdata2    sAreaSmallFloating                                           */
+/* 80455C00-80455C04 0004+00 rc=0 efc=0 .sdata2    sAreaSmallFloating                                           */
 u32 Z2Creature__sAreaSmallFloating = 0x000001F4;
 
-/* 80455C04-80455C08 0004+00 rc=1 efc=0 .sdata2    None                                                         */
+/* 80455C04-80455C08 0004+00 rc=0 efc=0 .sdata2    None                                                         */
 u32 data_80455C04 = 0x032004B0;
 
-/* 80455C08-80455C0C 0004+00 rc=3 efc=0 .sdata2    @3663                                                        */
+/* 80455C08-80455C0C 0004+00 rc=0 efc=0 .sdata2    @3663                                                        */
 f32 lit_3663 = 30.0f;
 
-/* 80455C0C-80455C10 0004+00 rc=4 efc=0 .sdata2    @3664                                                        */
+/* 80455C0C-80455C10 0004+00 rc=0 efc=0 .sdata2    @3664                                                        */
 f32 lit_3664 = 100.0f;
 
-/* 80455C10-80455C14 0004+00 rc=2 efc=0 .sdata2    @3665                                                        */
+/* 80455C10-80455C14 0004+00 rc=0 efc=0 .sdata2    @3665                                                        */
 f32 Z2Creature__lit_3665 = 3.0f / 10.0f;
 
-/* 80455C14-80455C18 0004+00 rc=4 efc=0 .sdata2    @3666                                                        */
+/* 80455C14-80455C18 0004+00 rc=0 efc=0 .sdata2    @3666                                                        */
 f32 Z2Creature__lit_3666 = 4.0f / 5.0f;
 
-/* 80455C18-80455C1C 0004+00 rc=4 efc=0 .sdata2    @3667                                                        */
+/* 80455C18-80455C1C 0004+00 rc=0 efc=0 .sdata2    @3667                                                        */
 f32 lit_3667 = 6.0f / 5.0f;
 
-/* 80455C1C-80455C20 0004+00 rc=5 efc=0 .sdata2    @3668                                                        */
+/* 80455C1C-80455C20 0004+00 rc=0 efc=0 .sdata2    @3668                                                        */
 f32 lit_3668 = 0.5f;
 
-/* 80455C20-80455C28 0004+04 rc=11 efc=0 .sdata2    @3669                                                        */
-f32 lit_3669 = 1.0f;
-/* padding 4 bytes */
+/* 80455C20-80455C28 0004+04 rc=0 efc=0 .sdata2    @3669                                                        */
+f32 lit_3669[1 + 1 /* padding */] = {
+	1.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80455C28-80455C30 0008+00 rc=8 efc=0 .sdata2    @3672                                                        */
+/* 80455C28-80455C30 0008+00 rc=0 efc=0 .sdata2    @3672                                                        */
 f64 Z2Creature__lit_3672 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802C0720-802C087C 015C+00 rc=6 efc=2 .text      startCreatureSound__10Z2CreatureF10JAISoundIDUlSc            */
+/* 802C0720-802C087C 015C+00 rc=0 efc=0 .text      startCreatureSound__10Z2CreatureF10JAISoundIDUlSc            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -887,24 +888,24 @@ asm void Z2Creature::startCreatureSound(JAISoundID field_0, u32 field_1, s8 fiel
 
 
 /* ############################################################################################## */
-/* 80455C30-80455C34 0004+00 rc=1 efc=0 .sdata2    @3716                                                        */
+/* 80455C30-80455C34 0004+00 rc=0 efc=0 .sdata2    @3716                                                        */
 f32 Z2Creature__lit_3716 = -1.0f;
 
-/* 80455C34-80455C38 0004+00 rc=6 efc=0 .sdata2    @3717                                                        */
+/* 80455C34-80455C38 0004+00 rc=0 efc=0 .sdata2    @3717                                                        */
 u8 Z2Creature__lit_3717[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455C38-80455C3C 0004+00 rc=1 efc=0 .sdata2    @3718                                                        */
+/* 80455C38-80455C3C 0004+00 rc=0 efc=0 .sdata2    @3718                                                        */
 f32 Z2Creature__lit_3718 = 92.0f;
 
-/* 80455C3C-80455C40 0004+00 rc=1 efc=0 .sdata2    @3719                                                        */
+/* 80455C3C-80455C40 0004+00 rc=0 efc=0 .sdata2    @3719                                                        */
 f32 Z2Creature__lit_3719 = 0.25f;
 
-/* 80455C40-80455C44 0004+00 rc=5 efc=0 .sdata2    @3720                                                        */
+/* 80455C40-80455C44 0004+00 rc=0 efc=0 .sdata2    @3720                                                        */
 f32 Z2Creature__lit_3720 = 2.0f / 5.0f;
 
-/* 802C087C-802C0A4C 01D0+00 rc=6 efc=2 .text      startCreatureSoundLevel__10Z2CreatureF10JAISoundIDUlSc       */
+/* 802C087C-802C0A4C 01D0+00 rc=0 efc=0 .text      startCreatureSoundLevel__10Z2CreatureF10JAISoundIDUlSc       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -915,7 +916,7 @@ asm void Z2Creature::startCreatureSoundLevel(JAISoundID field_0, u32 field_1, s8
 #pragma pop
 
 
-/* 802C0A4C-802C0AF8 00AC+00 rc=6 efc=2 .text      startCreatureVoice__10Z2CreatureF10JAISoundIDSc              */
+/* 802C0A4C-802C0AF8 00AC+00 rc=0 efc=0 .text      startCreatureVoice__10Z2CreatureF10JAISoundIDSc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -926,7 +927,7 @@ asm void Z2Creature::startCreatureVoice(JAISoundID field_0, s8 field_1) {
 #pragma pop
 
 
-/* 802C0AF8-802C0B70 0078+00 rc=5 efc=2 .text      startCreatureVoiceLevel__10Z2CreatureF10JAISoundIDSc         */
+/* 802C0AF8-802C0B70 0078+00 rc=0 efc=0 .text      startCreatureVoiceLevel__10Z2CreatureF10JAISoundIDSc         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -937,7 +938,7 @@ asm void Z2Creature::startCreatureVoiceLevel(JAISoundID field_0, s8 field_1) {
 #pragma pop
 
 
-/* 802C0B70-802C0BAC 003C+00 rc=6 efc=2 .text      startCreatureExtraSound__10Z2CreatureF10JAISoundIDUlSc       */
+/* 802C0B70-802C0BAC 003C+00 rc=0 efc=0 .text      startCreatureExtraSound__10Z2CreatureF10JAISoundIDUlSc       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -948,7 +949,7 @@ asm void Z2Creature::startCreatureExtraSound(JAISoundID field_0, u32 field_1, s8
 #pragma pop
 
 
-/* 802C0BAC-802C0BE8 003C+00 rc=6 efc=2 .text      startCreatureExtraSoundLevel__10Z2CreatureF10JAISoundIDUlSc  */
+/* 802C0BAC-802C0BE8 003C+00 rc=0 efc=0 .text      startCreatureExtraSoundLevel__10Z2CreatureF10JAISoundIDUlSc  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -959,7 +960,7 @@ asm void Z2Creature::startCreatureExtraSoundLevel(JAISoundID field_0, u32 field_
 #pragma pop
 
 
-/* 802C0BE8-802C0C10 0028+00 rc=6 efc=2 .text      startCollisionSE__10Z2CreatureFUlUl                          */
+/* 802C0BE8-802C0C10 0028+00 rc=0 efc=0 .text      startCollisionSE__10Z2CreatureFUlUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -992,7 +993,7 @@ asm Z2CreatureCitizen::~Z2CreatureCitizen() {
 #pragma pop
 
 
-/* 802C0CE4-802C0D04 0020+00 rc=2 efc=2 .text      init__17Z2CreatureCitizenFP3VecP3VecUcUc                     */
+/* 802C0CE4-802C0D04 0020+00 rc=0 efc=0 .text      init__17Z2CreatureCitizenFP3VecP3VecUcUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1003,7 +1004,7 @@ asm void Z2CreatureCitizen::init(Vec* field_0, Vec* field_1, u8 field_2, u8 fiel
 #pragma pop
 
 
-/* 802C0D04-802C0D48 0044+00 rc=1 efc=0 .text      deleteObject__17Z2CreatureCitizenFv                          */
+/* 802C0D04-802C0D48 0044+00 rc=0 efc=0 .text      deleteObject__17Z2CreatureCitizenFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1014,7 +1015,7 @@ asm void Z2CreatureCitizen::deleteObject() {
 #pragma pop
 
 
-/* 802C0D48-802C0E18 00D0+00 rc=2 efc=2 .text      setMdlType__17Z2CreatureCitizenFScbb                         */
+/* 802C0D48-802C0E18 00D0+00 rc=0 efc=0 .text      setMdlType__17Z2CreatureCitizenFScbb                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1036,7 +1037,7 @@ asm void Z2CreatureCitizen::playVoice(int field_0) {
 #pragma pop
 
 
-/* 802C0ED8-802C0F64 008C+00 rc=1 efc=0 .text      startCreatureVoice__17Z2CreatureCitizenF10JAISoundIDSc       */
+/* 802C0ED8-802C0F64 008C+00 rc=0 efc=0 .text      startCreatureVoice__17Z2CreatureCitizenF10JAISoundIDSc       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1047,7 +1048,7 @@ asm void Z2CreatureCitizen::startCreatureVoice(JAISoundID field_0, s8 field_1) {
 #pragma pop
 
 
-/* 802C0F64-802C0FC4 0060+00 rc=2 efc=0 .text      __ct__15Z2CreatureEnemyFv                                    */
+/* 802C0F64-802C0FC4 0060+00 rc=0 efc=0 .text      __ct__15Z2CreatureEnemyFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1058,7 +1059,7 @@ asm Z2CreatureEnemy::Z2CreatureEnemy() {
 #pragma pop
 
 
-/* 802C0FC4-802C1094 00D0+00 rc=3 efc=0 .text      deleteObject__15Z2CreatureEnemyFv                            */
+/* 802C0FC4-802C1094 00D0+00 rc=0 efc=0 .text      deleteObject__15Z2CreatureEnemyFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1091,7 +1092,7 @@ asm void Z2CreatureEnemy::init(Vec* field_0, Vec* field_1, Vec* field_2, u8 fiel
 #pragma pop
 
 
-/* 802C10D4-802C110C 0038+00 rc=1 efc=0 .text      framework__15Z2CreatureEnemyFUlSc                            */
+/* 802C10D4-802C110C 0038+00 rc=0 efc=0 .text      framework__15Z2CreatureEnemyFUlSc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1103,16 +1104,16 @@ asm void Z2CreatureEnemy::framework(u32 field_0, s8 field_1) {
 
 
 /* ############################################################################################## */
-/* 80455C44-80455C48 0004+00 rc=1 efc=0 .sdata2    @4090                                                        */
+/* 80455C44-80455C48 0004+00 rc=0 efc=0 .sdata2    @4090                                                        */
 f32 Z2Creature__lit_4090 = 10.0f;
 
-/* 80455C48-80455C4C 0004+00 rc=3 efc=0 .sdata2    @4091                                                        */
+/* 80455C48-80455C4C 0004+00 rc=0 efc=0 .sdata2    @4091                                                        */
 f32 Z2Creature__lit_4091 = 50.0f;
 
-/* 80455C4C-80455C50 0004+00 rc=3 efc=0 .sdata2    @4092                                                        */
+/* 80455C4C-80455C50 0004+00 rc=0 efc=0 .sdata2    @4092                                                        */
 f32 Z2Creature__lit_4092 = 1.0f / 10.0f;
 
-/* 802C110C-802C136C 0260+00 rc=4 efc=0 .text      startCreatureSound__15Z2CreatureEnemyF10JAISoundIDUlSc       */
+/* 802C110C-802C136C 0260+00 rc=0 efc=0 .text      startCreatureSound__15Z2CreatureEnemyF10JAISoundIDUlSc       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1124,31 +1125,31 @@ asm void Z2CreatureEnemy::startCreatureSound(JAISoundID field_0, u32 field_1, s8
 
 
 /* ############################################################################################## */
-/* 80455C50-80455C54 0004+00 rc=1 efc=0 .sdata2    @4187                                                        */
+/* 80455C50-80455C54 0004+00 rc=0 efc=0 .sdata2    @4187                                                        */
 f32 Z2Creature__lit_4187 = 2.0f;
 
-/* 80455C54-80455C58 0004+00 rc=4 efc=0 .sdata2    @4188                                                        */
+/* 80455C54-80455C58 0004+00 rc=0 efc=0 .sdata2    @4188                                                        */
 f32 Z2Creature__lit_4188 = 11.0f / 10.0f;
 
-/* 80455C58-80455C5C 0004+00 rc=1 efc=0 .sdata2    @4189                                                        */
+/* 80455C58-80455C5C 0004+00 rc=0 efc=0 .sdata2    @4189                                                        */
 f32 Z2Creature__lit_4189 = 4.0f;
 
-/* 80455C5C-80455C60 0004+00 rc=1 efc=0 .sdata2    @4190                                                        */
+/* 80455C5C-80455C60 0004+00 rc=0 efc=0 .sdata2    @4190                                                        */
 f32 Z2Creature__lit_4190 = 35.0f;
 
-/* 80455C60-80455C64 0004+00 rc=1 efc=0 .sdata2    @4191                                                        */
+/* 80455C60-80455C64 0004+00 rc=0 efc=0 .sdata2    @4191                                                        */
 f32 Z2Creature__lit_4191 = 3.0f / 5.0f;
 
-/* 80455C64-80455C68 0004+00 rc=3 efc=0 .sdata2    @4192                                                        */
+/* 80455C64-80455C68 0004+00 rc=0 efc=0 .sdata2    @4192                                                        */
 f32 Z2Creature__lit_4192 = 7.0f / 10.0f;
 
-/* 80455C68-80455C6C 0004+00 rc=1 efc=0 .sdata2    @4193                                                        */
+/* 80455C68-80455C6C 0004+00 rc=0 efc=0 .sdata2    @4193                                                        */
 f32 Z2Creature__lit_4193 = 4000.0f;
 
-/* 80455C6C-80455C70 0004+00 rc=1 efc=0 .sdata2    @4194                                                        */
+/* 80455C6C-80455C70 0004+00 rc=0 efc=0 .sdata2    @4194                                                        */
 f32 Z2Creature__lit_4194 = 13000.0f;
 
-/* 802C136C-802C168C 0320+00 rc=2 efc=0 .text      startCreatureSoundLevel__15Z2CreatureEnemyF10JAISoundIDUlSc  */
+/* 802C136C-802C168C 0320+00 rc=0 efc=0 .text      startCreatureSoundLevel__15Z2CreatureEnemyF10JAISoundIDUlSc  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1159,7 +1160,7 @@ asm void Z2CreatureEnemy::startCreatureSoundLevel(JAISoundID field_0, u32 field_
 #pragma pop
 
 
-/* 802C168C-802C1948 02BC+00 rc=4 efc=0 .text      startCreatureVoice__15Z2CreatureEnemyF10JAISoundIDSc         */
+/* 802C168C-802C1948 02BC+00 rc=0 efc=0 .text      startCreatureVoice__15Z2CreatureEnemyF10JAISoundIDSc         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1170,7 +1171,7 @@ asm void Z2CreatureEnemy::startCreatureVoice(JAISoundID field_0, s8 field_1) {
 #pragma pop
 
 
-/* 802C1948-802C199C 0054+00 rc=3 efc=0 .text      startCreatureVoiceLevel__15Z2CreatureEnemyF10JAISoundIDSc    */
+/* 802C1948-802C199C 0054+00 rc=0 efc=0 .text      startCreatureVoiceLevel__15Z2CreatureEnemyF10JAISoundIDSc    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1181,7 +1182,7 @@ asm void Z2CreatureEnemy::startCreatureVoiceLevel(JAISoundID field_0, s8 field_1
 #pragma pop
 
 
-/* 802C199C-802C19D8 003C+00 rc=3 efc=0 .text      startCreatureExtraSound__15Z2CreatureEnemyF10JAISoundIDUlSc  */
+/* 802C199C-802C19D8 003C+00 rc=0 efc=0 .text      startCreatureExtraSound__15Z2CreatureEnemyF10JAISoundIDUlSc  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1192,7 +1193,7 @@ asm void Z2CreatureEnemy::startCreatureExtraSound(JAISoundID field_0, u32 field_
 #pragma pop
 
 
-/* 802C19D8-802C1A14 003C+00 rc=3 efc=0 .text      startCreatureExtraSoundLevel__15Z2CreatureEnemyF10JAISoundIDUlSc */
+/* 802C19D8-802C1A14 003C+00 rc=0 efc=0 .text      startCreatureExtraSoundLevel__15Z2CreatureEnemyF10JAISoundIDUlSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1203,7 +1204,7 @@ asm void Z2CreatureEnemy::startCreatureExtraSoundLevel(JAISoundID field_0, u32 f
 #pragma pop
 
 
-/* 802C1A14-802C1B7C 0168+00 rc=4 efc=0 .text      startCollisionSE__15Z2CreatureEnemyFUlUl                     */
+/* 802C1A14-802C1B7C 0168+00 rc=0 efc=0 .text      startCollisionSE__15Z2CreatureEnemyFUlUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1258,7 +1259,7 @@ asm void Z2CreatureSumomo::playSumomoBgm(u32 field_0) {
 #pragma pop
 
 
-/* 802C1CA0-802C1D10 0070+00 rc=1 efc=0 .text      deleteObject__16Z2CreatureSumomoFv                           */
+/* 802C1CA0-802C1D10 0070+00 rc=0 efc=0 .text      deleteObject__16Z2CreatureSumomoFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1280,7 +1281,7 @@ asm Z2SoundObjBeeGroup::Z2SoundObjBeeGroup() {
 #pragma pop
 
 
-/* 802C1D4C-802C1D6C 0020+00 rc=1 efc=0 .text      init__18Z2SoundObjBeeGroupFP3VecUc                           */
+/* 802C1D4C-802C1D6C 0020+00 rc=0 efc=0 .text      init__18Z2SoundObjBeeGroupFP3VecUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1292,10 +1293,10 @@ asm void Z2SoundObjBeeGroup::init(Vec* field_0, u8 field_1) {
 
 
 /* ############################################################################################## */
-/* 80455C70-80455C74 0004+00 rc=2 efc=0 .sdata2    @4561                                                        */
+/* 80455C70-80455C74 0004+00 rc=0 efc=0 .sdata2    @4561                                                        */
 f32 Z2Creature__lit_4561 = 5.0f;
 
-/* 80455C74-80455C78 0004+00 rc=1 efc=0 .sdata2    @4562                                                        */
+/* 80455C74-80455C78 0004+00 rc=0 efc=0 .sdata2    @4562                                                        */
 f32 Z2Creature__lit_4562 = 20.0f;
 
 /* 802C1D6C-802C1F54 01E8+00 rc=0 efc=0 .text      playBeeGroupSound__18Z2SoundObjBeeGroupF10JAISoundIDUc       */
@@ -1320,7 +1321,7 @@ asm Z2CreatureFM::Z2CreatureFM() {
 #pragma pop
 
 
-/* 802C1FB0-802C1FFC 004C+00 rc=1 efc=0 .text      deleteObject__12Z2CreatureFMFv                               */
+/* 802C1FB0-802C1FFC 004C+00 rc=0 efc=0 .text      deleteObject__12Z2CreatureFMFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1342,7 +1343,7 @@ asm void Z2CreatureFM::init(Vec* field_0, Vec* field_1, Vec* field_2, Vec* field
 #pragma pop
 
 
-/* 802C20E8-802C2194 00AC+00 rc=1 efc=0 .text      framework__12Z2CreatureFMFUlSc                               */
+/* 802C20E8-802C2194 00AC+00 rc=0 efc=0 .text      framework__12Z2CreatureFMFUlSc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1365,10 +1366,10 @@ asm void Z2CreatureFM::startChainSound(JAISoundID field_0, u8 field_1, f32 field
 
 
 /* ############################################################################################## */
-/* 80455C78-80455C7C 0004+00 rc=1 efc=0 .sdata2    @4681                                                        */
+/* 80455C78-80455C7C 0004+00 rc=0 efc=0 .sdata2    @4681                                                        */
 f32 Z2Creature__lit_4681 = 53.0f / 50.0f;
 
-/* 80455C7C-80455C80 0004+00 rc=1 efc=0 .sdata2    @4682                                                        */
+/* 80455C7C-80455C80 0004+00 rc=0 efc=0 .sdata2    @4682                                                        */
 f32 Z2Creature__lit_4682 = 3.0f / 100.0f;
 
 /* 802C2290-802C24B0 0220+00 rc=0 efc=0 .text      startChainSoundLevel__12Z2CreatureFMF10JAISoundIDUcfUlSc     */
@@ -1393,7 +1394,7 @@ asm void Z2CreatureGob::init(Vec* field_0, Vec* field_1, Vec* field_2, u8 field_
 #pragma pop
 
 
-/* 802C24D0-802C2578 00A8+00 rc=1 efc=0 .text      startCreatureVoiceLevel__13Z2CreatureGobF10JAISoundIDSc      */
+/* 802C24D0-802C2578 00A8+00 rc=0 efc=0 .text      startCreatureVoiceLevel__13Z2CreatureGobF10JAISoundIDSc      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1415,7 +1416,7 @@ asm Z2CreatureOI::Z2CreatureOI() {
 #pragma pop
 
 
-/* 802C25EC-802C2670 0084+00 rc=1 efc=0 .text      deleteObject__12Z2CreatureOIFv                               */
+/* 802C25EC-802C2670 0084+00 rc=0 efc=0 .text      deleteObject__12Z2CreatureOIFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1437,7 +1438,7 @@ asm void Z2CreatureOI::init(Vec* field_0, Vec* field_1, Vec* field_2, Vec* field
 #pragma pop
 
 
-/* 802C2864-802C29D4 0170+00 rc=1 efc=0 .text      framework__12Z2CreatureOIFUlSc                               */
+/* 802C2864-802C29D4 0170+00 rc=0 efc=0 .text      framework__12Z2CreatureOIFUlSc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1449,13 +1450,13 @@ asm void Z2CreatureOI::framework(u32 field_0, s8 field_1) {
 
 
 /* ############################################################################################## */
-/* 80455C80-80455C84 0004+00 rc=1 efc=0 .sdata2    @4837                                                        */
+/* 80455C80-80455C84 0004+00 rc=0 efc=0 .sdata2    @4837                                                        */
 f32 Z2Creature__lit_4837 = 42.0f;
 
-/* 80455C84-80455C88 0004+00 rc=2 efc=0 .sdata2    @4838                                                        */
+/* 80455C84-80455C88 0004+00 rc=0 efc=0 .sdata2    @4838                                                        */
 f32 lit_4838 = 9.0f / 10.0f;
 
-/* 802C29D4-802C2C84 02B0+00 rc=1 efc=0 .text      startCreatureSoundLevel__12Z2CreatureOIF10JAISoundIDUlSc     */
+/* 802C29D4-802C2C84 02B0+00 rc=0 efc=0 .text      startCreatureSoundLevel__12Z2CreatureOIF10JAISoundIDUlSc     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1478,7 +1479,7 @@ asm void Z2CreatureOI::startTentacleSound(JAISoundID field_0, u8 field_1, u32 fi
 
 
 /* ############################################################################################## */
-/* 80455C88-80455C8C 0004+00 rc=1 efc=0 .sdata2    @4875                                                        */
+/* 80455C88-80455C8C 0004+00 rc=0 efc=0 .sdata2    @4875                                                        */
 f32 Z2Creature__lit_4875 = 60.0f;
 
 /* 802C2CD4-802C2DE0 010C+00 rc=0 efc=0 .text      startTentacleSoundLevel__12Z2CreatureOIF10JAISoundIDUcfUlSc  */
@@ -1492,11 +1493,11 @@ asm void Z2CreatureOI::startTentacleSoundLevel(JAISoundID field_0, u8 field_1, f
 #pragma pop
 
 
-/* 802C2DE0-802C2E54 0074+00 rc=3 efc=0 .text      Z2_E_sw_modPitch__FP17Z2SoundHandlePoolUl                    */
+/* 802C2DE0-802C2E54 0074+00 rc=0 efc=0 .text      Z2_E_sw_modPitch__FP17Z2SoundHandlePoolUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void Z2_E_sw_modPitch(Z2SoundHandlePool* field_0, u32 field_1) {
+asm void Z2_E_sw_modPitch(Z2SoundHandlePool* field_0, u32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/Z2_E_sw_modPitch__FP17Z2SoundHandlePoolUl.s"
 }
@@ -1504,25 +1505,25 @@ asm static void Z2_E_sw_modPitch(Z2SoundHandlePool* field_0, u32 field_1) {
 
 
 /* ############################################################################################## */
-/* 80455C8C-80455C90 0004+00 rc=1 efc=0 .sdata2    @4906                                                        */
+/* 80455C8C-80455C90 0004+00 rc=0 efc=0 .sdata2    @4906                                                        */
 f32 lit_4906 = 1.0f / 5.0f;
 
-/* 802C2E54-802C2E9C 0048+00 rc=2 efc=0 .text      Z2_E_ms_modVol__FP17Z2SoundHandlePoolUl                      */
+/* 802C2E54-802C2E9C 0048+00 rc=0 efc=0 .text      Z2_E_ms_modVol__FP17Z2SoundHandlePoolUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void Z2_E_ms_modVol(Z2SoundHandlePool* field_0, u32 field_1) {
+asm void Z2_E_ms_modVol(Z2SoundHandlePool* field_0, u32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/Z2_E_ms_modVol__FP17Z2SoundHandlePoolUl.s"
 }
 #pragma pop
 
 
-/* 802C2E9C-802C2EE4 0048+00 rc=2 efc=0 .text      Z2_E_mm_modPitch__FP17Z2SoundHandlePoolUl                    */
+/* 802C2E9C-802C2EE4 0048+00 rc=0 efc=0 .text      Z2_E_mm_modPitch__FP17Z2SoundHandlePoolUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void Z2_E_mm_modPitch(Z2SoundHandlePool* field_0, u32 field_1) {
+asm void Z2_E_mm_modPitch(Z2SoundHandlePool* field_0, u32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/Z2_E_mm_modPitch__FP17Z2SoundHandlePoolUl.s"
 }
@@ -1530,24 +1531,24 @@ asm static void Z2_E_mm_modPitch(Z2SoundHandlePool* field_0, u32 field_1) {
 
 
 /* ############################################################################################## */
-/* 80455C90-80455C94 0004+00 rc=1 efc=0 .sdata2    @4944                                                        */
+/* 80455C90-80455C94 0004+00 rc=0 efc=0 .sdata2    @4944                                                        */
 f32 lit_4944 = 300.0f;
 
-/* 80455C94-80455C98 0004+00 rc=1 efc=0 .sdata2    @4945                                                        */
+/* 80455C94-80455C98 0004+00 rc=0 efc=0 .sdata2    @4945                                                        */
 f32 lit_4945 = 1.5f;
 
-/* 802C2EE4-802C3040 015C+00 rc=2 efc=0 .text      Z2_B_zan_modPitch__FP17Z2SoundHandlePoolUl                   */
+/* 802C2EE4-802C3040 015C+00 rc=0 efc=0 .text      Z2_B_zan_modPitch__FP17Z2SoundHandlePoolUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void Z2_B_zan_modPitch(Z2SoundHandlePool* field_0, u32 field_1) {
+asm void Z2_B_zan_modPitch(Z2SoundHandlePool* field_0, u32 field_1) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2Creature/Z2_B_zan_modPitch__FP17Z2SoundHandlePoolUl.s"
 }
 #pragma pop
 
 
-/* 802C3040-802C321C 01DC+00 rc=1 efc=1 .text      __sinit_Z2Creature_cpp                                       */
+/* 802C3040-802C321C 01DC+00 rc=0 efc=0 .text      __sinit_Z2Creature_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

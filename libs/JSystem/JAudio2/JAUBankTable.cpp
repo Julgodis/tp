@@ -9,14 +9,14 @@
 // Types:
 // 
 
+struct JAUBankTable {
+	/* 802A4AA0 */ void getBank(u32) const;
+};
+
 template <typename A0>
 struct JSULink { };
 /* JSULink<JAUBankTable> */
 struct JSULink__template0 {
-};
-
-struct JAUBankTable {
-	/* 802A4AA0 */ void getBank(u32) const;
 };
 
 struct JAUBankTableDictionary {
@@ -49,7 +49,7 @@ extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
 // Declarations:
 // 
 
-/* 802A4A80-802A4AA0 0020+00 rc=1 efc=1 .text      appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable> */
+/* 802A4A80-802A4AA0 0020+00 rc=0 efc=0 .text      appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +60,7 @@ asm void JAUBankTableDictionary::appendBankTable(JSULink<JAUBankTable>* field_0)
 #pragma pop
 
 
-/* 802A4AA0-802A4AC4 0024+00 rc=2 efc=2 .text      getBank__12JAUBankTableCFUl                                  */
+/* 802A4AA0-802A4AC4 0024+00 rc=0 efc=0 .text      getBank__12JAUBankTableCFUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

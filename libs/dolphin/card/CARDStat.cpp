@@ -9,14 +9,14 @@
 // Forward References:
 // 
 
-extern "C" static void UpdateIconOffsets(); // 1
+extern "C" void UpdateIconOffsets(); // 1
 extern "C" void CARDGetStatus(); // 1
-extern "C" static void CARDSetStatusAsync(); // 1
+extern "C" void CARDSetStatusAsync(); // 1
 extern "C" void CARDSetStatus(); // 1
 
-extern "C" static void UpdateIconOffsets(); // 1
+extern "C" void UpdateIconOffsets(); // 1
 extern "C" void CARDGetStatus(); // 1
-extern "C" static void CARDSetStatusAsync(); // 1
+extern "C" void CARDSetStatusAsync(); // 1
 extern "C" void CARDSetStatus(); // 1
 
 // 
@@ -51,18 +51,18 @@ extern "C" void __div2i(); // 1
 // Declarations:
 // 
 
-/* 80358C90-80358E88 01F8+00 rc=2 efc=0 .text      UpdateIconOffsets                                            */
+/* 80358C90-80358E88 01F8+00 rc=0 efc=0 .text      UpdateIconOffsets                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void UpdateIconOffsets() {
+extern "C" asm void UpdateIconOffsets() {
 	nofralloc
 #include "asm/dolphin/card/CARDStat/UpdateIconOffsets.s"
 }
 #pragma pop
 
 
-/* 80358E88-80358F9C 0114+00 rc=2 efc=2 .text      CARDGetStatus                                                */
+/* 80358E88-80358F9C 0114+00 rc=0 efc=0 .text      CARDGetStatus                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -73,18 +73,18 @@ extern "C" asm void CARDGetStatus() {
 #pragma pop
 
 
-/* 80358F9C-80359110 0174+00 rc=1 efc=0 .text      CARDSetStatusAsync                                           */
+/* 80358F9C-80359110 0174+00 rc=0 efc=0 .text      CARDSetStatusAsync                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void CARDSetStatusAsync() {
+extern "C" asm void CARDSetStatusAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDStat/CARDSetStatusAsync.s"
 }
 #pragma pop
 
 
-/* 80359110-80359158 0048+00 rc=1 efc=1 .text      CARDSetStatus                                                */
+/* 80359110-80359158 0048+00 rc=0 efc=0 .text      CARDSetStatus                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

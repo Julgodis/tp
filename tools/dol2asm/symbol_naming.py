@@ -1,58 +1,53 @@
-import util
-import demangle
-import data_types
+
 from collections import defaultdict
-from data import *
-from data_types import ConstType, ReferenceType, PointerType, ArrayType, ClassName, NamedType, EmptyType
 
-def is_demangled_safe(parts, pointer_types):
-    for part in parts:
-        if isinstance(part, demangle.FuncParam):
-            if not is_demangled_safe([part.ret_type], pointer_types):
-                return False
-            if not is_demangled_safe(part.params, pointer_types):
-                return False
-        elif isinstance(part, demangle.ArrayParam):
-            if not is_demangled_safe([part.base_type], pointer_types):
-                return False    
-        else:
-            if part.is_ref or part.is_array or part.pointer_lvl > 0:
-                if not demangle.is_builtin_type(part.name) and not part.is_array:
-                    pointer_types.append(part)
-                continue
-
-            if not demangle.is_builtin_type(part.name):
-                return False
-
-    return True
+from .data import *
+from .types import ConstType, ReferenceType, PointerType, ArrayType, ClassName, NamedType, EmptyType
+from . import util
+from . import demangle
 
 integer_types = {
-    ("char", True, False): data_types.U8,
-    ("short", True, False): data_types.U16,
-    ("long", True, False): data_types.U32,
-    ("long long", True, False): data_types.U64,
-    ("char", False, True): data_types.S8,
-    ("char", False, False): data_types.CHAR,
-    ("short", False, True): data_types.S16,
-    ("short", False, False): data_types.S16,
-    ("long", False, True): data_types.S32,
-    ("long", False, False): data_types.S32,
-    ("long long", False, True): data_types.S64,
-    ("long long", False, False): data_types.S64,
-    ("int", False, False): data_types.INT,
-    ("int", True, False): data_types.U32,
-    ("int", False, True): data_types.S32,
+    ("char", True, False): U8,
+    ("short", True, False): U16,
+    ("long", True, False): U32,
+    ("long long", True, False): U64,
+    ("char", False, True): S8,
+    ("char", False, False): CHAR,
+    ("short", False, True): S16,
+    ("short", False, False): S16,
+    ("long", False, True): S32,
+    ("long", False, False): S32,
+    ("long long", False, True): S64,
+    ("long long", False, False): S64,
+    ("int", False, False): INT,
+    ("int", True, False): U32,
+    ("int", False, True): S32,
 }
 
 type_map = {
-    "void": data_types.VOID,
-    "bool": data_types.BOOL,
-    "float": data_types.F32,
-    "double": data_types.F64,
-    "f32": data_types.F32,
-    "f64": data_types.F64,
-    "...": data_types.VARIADIC,
+    "void": VOID,
+    "bool": BOOL,
+    "float": F32,
+    "double": F64,
+    "f32": F32,
+    "f64": F64,
+    "...": VARIADIC,
 }
+
+special_func_return_types = {
+    'ct': None,
+    'dt': None,
+
+    'eq': BOOL,
+    'ne': BOOL,
+    'lt': BOOL,
+    'gt': BOOL,
+    'dla': VOID,
+    'nwa': VOID_PTR,
+    'dl': VOID,
+    'nw': VOID_PTR,
+}
+
 
 def class_name_from(name):
     return ClassName(name.name, [
@@ -112,20 +107,6 @@ def nameCollision(context, label_collisions, reference_collisions, parent_name, 
         #else:
         symbol.identifier.override_name = obj_prefix + "__" + symbol.identifier.label
 
-special_func_return_types = {
-    'ct': None,
-    'dt': None,
-
-    'eq': data_types.BOOL,
-    'ne': data_types.BOOL,
-    'lt': data_types.BOOL,
-    'gt': data_types.BOOL,
-    'dla': data_types.VOID,
-    'nwa': data_types.VOID_PTR,
-    'dl': data_types.VOID,
-    'nw': data_types.VOID_PTR,
-}
-
 def nameFix(context, label_collisions, reference_collisions, symbol):
     util.escape_name(symbol.identifier)
 
@@ -152,7 +133,7 @@ def nameFix(context, label_collisions, reference_collisions, symbol):
                     symbol.func_name = named_type_from_qulified_name(p.full_name)
                     symbol.func_is_const = p.is_const
                     symbol.special_func_name = p.special_func_name
-                    symbol.argument_types = [x for x in types if x != data_types.VOID]
+                    symbol.argument_types = [x for x in types if x != VOID]
 
                     if symbol.special_func_name in special_func_return_types:
                         return_type = special_func_return_types[symbol.special_func_name]
@@ -245,7 +226,7 @@ def execute(context, libraries):
     def iterate_type(type):
         if not type:
             return
-        if data_types.is_builtin(type):
+        if type.is_builtin:
             return
 
         if isinstance(type, ArrayType):

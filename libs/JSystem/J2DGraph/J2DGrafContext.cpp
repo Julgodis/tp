@@ -9,6 +9,12 @@
 // Types:
 // 
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -20,12 +26,6 @@ struct JGeometry {
 	struct TVec2 { };
 	/* TVec2<f32> */
 	struct TVec2__template0 {
-	};
-
-};
-
-struct JUtility {
-	struct TColor {
 	};
 
 };
@@ -70,10 +70,10 @@ extern "C" void __dt__14J2DGrafContextFv(); // 1
 extern "C" void place__14J2DGrafContextFffff(); // 1
 extern "C" bool getGrafType__14J2DGrafContextCFv(); // 1
 extern "C" void setLookat__14J2DGrafContextFv(); // 1
-SECTION_DATA extern void*const __vt__14J2DGrafContext[10];
+SECTION_DATA extern void* const __vt__14J2DGrafContext[10];
 SECTION_SDATA2 extern u8 J2DGrafContext__lit_627[4];
 SECTION_SDATA2 extern f32 J2DGrafContext__lit_628;
-SECTION_SDATA2 extern f32 J2DGrafContext__lit_730;
+SECTION_SDATA2 extern f32 J2DGrafContext__lit_730[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 lit_732;
 
 // 
@@ -147,10 +147,10 @@ extern "C" void ceil(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803CC9B8-803CC9E0 0028+00 rc=15 efc=13 .data      __vt__14J2DGrafContext                                       */
+/* 803CC9B8-803CC9E0 0028+00 rc=0 efc=0 .data      __vt__14J2DGrafContext                                       */
 void* const __vt__14J2DGrafContext[10] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__14J2DGrafContextFv,
 	(void*)func_802E90E4,
 	(void*)place__14J2DGrafContextFffff,
@@ -161,7 +161,7 @@ void* const __vt__14J2DGrafContext[10] = {
 	(void*)setLookat__14J2DGrafContextFv,
 };
 
-/* 802E8B08-802E8BB4 00AC+00 rc=2 efc=2 .text      __ct__14J2DGrafContextFffff                                  */
+/* 802E8B08-802E8BB4 00AC+00 rc=0 efc=0 .text      __ct__14J2DGrafContextFffff                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -173,15 +173,15 @@ asm J2DGrafContext::J2DGrafContext(f32 field_0, f32 field_1, f32 field_2, f32 fi
 
 
 /* ############################################################################################## */
-/* 80456148-8045614C 0004+00 rc=5 efc=0 .sdata2    @627                                                         */
+/* 80456148-8045614C 0004+00 rc=0 efc=0 .sdata2    @627                                                         */
 u8 J2DGrafContext__lit_627[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045614C-80456150 0004+00 rc=1 efc=0 .sdata2    @628                                                         */
+/* 8045614C-80456150 0004+00 rc=0 efc=0 .sdata2    @628                                                         */
 f32 J2DGrafContext__lit_628 = 1.0f;
 
-/* 802E8BB4-802E8C44 0090+00 rc=2 efc=1 .text      setPort__14J2DGrafContextFv                                  */
+/* 802E8BB4-802E8C44 0090+00 rc=0 efc=0 .text      setPort__14J2DGrafContextFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,7 +192,7 @@ asm void J2DGrafContext::setPort() {
 #pragma pop
 
 
-/* 802E8C44-802E8E20 01DC+00 rc=2 efc=1 .text      setup2D__14J2DGrafContextFv                                  */
+/* 802E8C44-802E8E20 01DC+00 rc=0 efc=0 .text      setup2D__14J2DGrafContextFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -204,14 +204,17 @@ asm void J2DGrafContext::setup2D() {
 
 
 /* ############################################################################################## */
-/* 80456150-80456158 0004+04 rc=1 efc=0 .sdata2    @730                                                         */
-f32 J2DGrafContext__lit_730 = 1024.0f;
-/* padding 4 bytes */
+/* 80456150-80456158 0004+04 rc=0 efc=0 .sdata2    @730                                                         */
+f32 J2DGrafContext__lit_730[1 + 1 /* padding */] = {
+	1024.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80456158-80456160 0008+00 rc=1 efc=0 .sdata2    @732                                                         */
+/* 80456158-80456160 0008+00 rc=0 efc=0 .sdata2    @732                                                         */
 f64 lit_732 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802E8E20-802E90C0 02A0+00 rc=3 efc=2 .text      setScissor__14J2DGrafContextFv                               */
+/* 802E8E20-802E90C0 02A0+00 rc=0 efc=0 .text      setScissor__14J2DGrafContextFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -222,7 +225,7 @@ asm void J2DGrafContext::setScissor() {
 #pragma pop
 
 
-/* 802E90C0-802E90E4 0024+00 rc=10 efc=10 .text      scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>            */
+/* 802E90C0-802E90E4 0024+00 rc=0 efc=0 .text      scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -233,7 +236,7 @@ asm void J2DGrafContext::scissor(JGeometry::TBox2<f32> const& field_0) {
 #pragma pop
 
 
-/* 802E90E4-802E9118 0034+00 rc=2 efc=1 .text      place__14J2DGrafContextFRCQ29JGeometry8TBox2<f>              */
+/* 802E90E4-802E9118 0034+00 rc=0 efc=0 .text      place__14J2DGrafContextFRCQ29JGeometry8TBox2<f>              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -244,7 +247,7 @@ asm void J2DGrafContext::place(JGeometry::TBox2<f32> const& field_0) {
 #pragma pop
 
 
-/* 802E9118-802E9234 011C+00 rc=5 efc=4 .text      setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
+/* 802E9118-802E9234 011C+00 rc=0 efc=0 .text      setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +258,7 @@ asm void J2DGrafContext::setColor(JUtility::TColor field_0, JUtility::TColor fie
 #pragma pop
 
 
-/* 802E9234-802E9260 002C+00 rc=3 efc=2 .text      setLineWidth__14J2DGrafContextFUc                            */
+/* 802E9234-802E9260 002C+00 rc=0 efc=0 .text      setLineWidth__14J2DGrafContextFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +269,7 @@ asm void J2DGrafContext::setLineWidth(u8 field_0) {
 #pragma pop
 
 
-/* 802E9260-802E9368 0108+00 rc=2 efc=2 .text      fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f>            */
+/* 802E9260-802E9368 0108+00 rc=0 efc=0 .text      fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f>            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,7 +280,7 @@ asm void J2DGrafContext::fillBox(JGeometry::TBox2<f32> const& field_0) {
 #pragma pop
 
 
-/* 802E9368-802E9488 0120+00 rc=1 efc=1 .text      drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2<f>          */
+/* 802E9368-802E9488 0120+00 rc=0 efc=0 .text      drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2<f>          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -288,7 +291,7 @@ asm void J2DGrafContext::drawFrame(JGeometry::TBox2<f32> const& field_0) {
 #pragma pop
 
 
-/* 802E9488-802E9564 00DC+00 rc=1 efc=0 .text      line__14J2DGrafContextFQ29JGeometry8TVec2<f>Q29JGeometry8TVec2<f> */
+/* 802E9488-802E9564 00DC+00 rc=0 efc=0 .text      line__14J2DGrafContextFQ29JGeometry8TVec2<f>Q29JGeometry8TVec2<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -299,7 +302,7 @@ asm void J2DGrafContext::line(JGeometry::TVec2<f32> field_0, JGeometry::TVec2<f3
 #pragma pop
 
 
-/* 802E9564-802E95D4 0070+00 rc=1 efc=1 .text      lineTo__14J2DGrafContextFQ29JGeometry8TVec2<f>               */
+/* 802E9564-802E95D4 0070+00 rc=0 efc=0 .text      lineTo__14J2DGrafContextFQ29JGeometry8TVec2<f>               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,7 +313,7 @@ asm void J2DGrafContext::lineTo(JGeometry::TVec2<f32> field_0) {
 #pragma pop
 
 
-/* 802E95D4-802E961C 0048+00 rc=1 efc=0 .text      __dt__14J2DGrafContextFv                                     */
+/* 802E95D4-802E961C 0048+00 rc=0 efc=0 .text      __dt__14J2DGrafContextFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -321,7 +324,7 @@ asm J2DGrafContext::~J2DGrafContext() {
 #pragma pop
 
 
-/* 802E961C-802E9664 0048+00 rc=2 efc=1 .text      place__14J2DGrafContextFffff                                 */
+/* 802E961C-802E9664 0048+00 rc=0 efc=0 .text      place__14J2DGrafContextFffff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -332,13 +335,13 @@ asm void J2DGrafContext::place(f32 field_0, f32 field_1, f32 field_2, f32 field_
 #pragma pop
 
 
-/* 802E9664-802E966C 0008+00 rc=1 efc=0 .text      getGrafType__14J2DGrafContextCFv                             */
+/* 802E9664-802E966C 0008+00 rc=0 efc=0 .text      getGrafType__14J2DGrafContextCFv                             */
 bool J2DGrafContext::getGrafType() const {
 	return false;
 }
 
 
-/* 802E966C-802E9670 0004+00 rc=1 efc=0 .text      setLookat__14J2DGrafContextFv                                */
+/* 802E966C-802E9670 0004+00 rc=0 efc=0 .text      setLookat__14J2DGrafContextFv                                */
 void J2DGrafContext::setLookat() {
 	/* empty function */
 }

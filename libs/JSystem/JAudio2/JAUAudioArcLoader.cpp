@@ -78,7 +78,7 @@ extern "C" void beginBNKList__17JAUAudioArcLoaderFUlUl(); // 1
 extern "C" void endBNKList__17JAUAudioArcLoaderFv(); // 1
 extern "C" void readMaxSeCategory__17JAUAudioArcLoaderFiii(); // 1
 extern "C" void __dt__17JAUAudioArcLoaderFv(); // 1
-SECTION_DATA extern void*const __vt__17JAUAudioArcLoader[18];
+SECTION_DATA extern void* const __vt__17JAUAudioArcLoader[17 + 1 /* padding */];
 
 // 
 // External References:
@@ -115,10 +115,10 @@ SECTION_SBSS extern u8 data_80450B6C[4];
 // 
 
 /* ############################################################################################## */
-/* 803C9A78-803C9AC0 0044+04 rc=4 efc=2 .data      __vt__17JAUAudioArcLoader                                    */
-void* const __vt__17JAUAudioArcLoader[18] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803C9A78-803C9AC0 0044+04 rc=0 efc=0 .data      __vt__17JAUAudioArcLoader                                    */
+void* const __vt__17JAUAudioArcLoader[17 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__17JAUAudioArcLoaderFv,
 	(void*)readWS__17JAUAudioArcLoaderFUlPCvUl,
 	(void*)readBNK__17JAUAudioArcLoaderFUlPCv,
@@ -138,7 +138,7 @@ void* const __vt__17JAUAudioArcLoader[18] = {
 	NULL,
 };
 
-/* 802A4740-802A478C 004C+00 rc=1 efc=1 .text      __ct__17JAUAudioArcLoaderFP10JAUSection                      */
+/* 802A4740-802A478C 004C+00 rc=0 efc=0 .text      __ct__17JAUAudioArcLoaderFP10JAUSection                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -149,7 +149,7 @@ asm JAUAudioArcLoader::JAUAudioArcLoader(JAUSection* field_0) {
 #pragma pop
 
 
-/* 802A478C-802A47AC 0020+00 rc=1 efc=1 .text      load__17JAUAudioArcLoaderFPCv                                */
+/* 802A478C-802A47AC 0020+00 rc=0 efc=0 .text      load__17JAUAudioArcLoaderFPCv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +160,7 @@ asm void JAUAudioArcLoader::load(void const* field_0) {
 #pragma pop
 
 
-/* 802A47AC-802A4804 0058+00 rc=2 efc=1 .text      readWS__17JAUAudioArcLoaderFUlPCvUl                          */
+/* 802A47AC-802A4804 0058+00 rc=0 efc=0 .text      readWS__17JAUAudioArcLoaderFUlPCvUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +171,7 @@ asm void JAUAudioArcLoader::readWS(u32 field_0, void const* field_1, u32 field_2
 #pragma pop
 
 
-/* 802A4804-802A4834 0030+00 rc=2 efc=1 .text      readBNK__17JAUAudioArcLoaderFUlPCv                           */
+/* 802A4804-802A4834 0030+00 rc=0 efc=0 .text      readBNK__17JAUAudioArcLoaderFUlPCv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +182,7 @@ asm void JAUAudioArcLoader::readBNK(u32 field_0, void const* field_1) {
 #pragma pop
 
 
-/* 802A4834-802A4858 0024+00 rc=2 efc=1 .text      readBSC__17JAUAudioArcLoaderFPCvUl                           */
+/* 802A4834-802A4858 0024+00 rc=0 efc=0 .text      readBSC__17JAUAudioArcLoaderFPCvUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -193,7 +193,7 @@ asm void JAUAudioArcLoader::readBSC(void const* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 802A4858-802A4880 0028+00 rc=2 efc=1 .text      readBST__17JAUAudioArcLoaderFPCvUl                           */
+/* 802A4858-802A4880 0028+00 rc=0 efc=0 .text      readBST__17JAUAudioArcLoaderFPCvUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -204,7 +204,7 @@ asm void JAUAudioArcLoader::readBST(void const* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 802A4880-802A48A8 0028+00 rc=1 efc=0 .text      readBSTN__17JAUAudioArcLoaderFPCvUl                          */
+/* 802A4880-802A48A8 0028+00 rc=0 efc=0 .text      readBSTN__17JAUAudioArcLoaderFPCvUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -215,7 +215,7 @@ asm void JAUAudioArcLoader::readBSTN(void const* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 802A48A8-802A48D4 002C+00 rc=2 efc=1 .text      readBMS__17JAUAudioArcLoaderFUlPCvUl                         */
+/* 802A48A8-802A48D4 002C+00 rc=0 efc=0 .text      readBMS__17JAUAudioArcLoaderFUlPCvUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -226,7 +226,7 @@ asm void JAUAudioArcLoader::readBMS(u32 field_0, void const* field_1, u32 field_
 #pragma pop
 
 
-/* 802A48D4-802A4900 002C+00 rc=2 efc=1 .text      readBMS_fromArchive__17JAUAudioArcLoaderFUl                  */
+/* 802A48D4-802A4900 002C+00 rc=0 efc=0 .text      readBMS_fromArchive__17JAUAudioArcLoaderFUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -237,7 +237,7 @@ asm void JAUAudioArcLoader::readBMS_fromArchive(u32 field_0) {
 #pragma pop
 
 
-/* 802A4900-802A4930 0030+00 rc=2 efc=1 .text      newVoiceBank__17JAUAudioArcLoaderFUlUl                       */
+/* 802A4900-802A4930 0030+00 rc=0 efc=0 .text      newVoiceBank__17JAUAudioArcLoaderFUlUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -248,7 +248,7 @@ asm void JAUAudioArcLoader::newVoiceBank(u32 field_0, u32 field_1) {
 #pragma pop
 
 
-/* 802A4930-802A4968 0038+00 rc=2 efc=1 .text      newDynamicSeqBlock__17JAUAudioArcLoaderFUl                   */
+/* 802A4930-802A4968 0038+00 rc=0 efc=0 .text      newDynamicSeqBlock__17JAUAudioArcLoaderFUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -259,7 +259,7 @@ asm void JAUAudioArcLoader::newDynamicSeqBlock(u32 field_0) {
 #pragma pop
 
 
-/* 802A4968-802A4990 0028+00 rc=2 efc=1 .text      readBSFT__17JAUAudioArcLoaderFPCv                            */
+/* 802A4968-802A4990 0028+00 rc=0 efc=0 .text      readBSFT__17JAUAudioArcLoaderFPCv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -270,7 +270,7 @@ asm void JAUAudioArcLoader::readBSFT(void const* field_0) {
 #pragma pop
 
 
-/* 802A4990-802A49B4 0024+00 rc=2 efc=1 .text      beginBNKList__17JAUAudioArcLoaderFUlUl                       */
+/* 802A4990-802A49B4 0024+00 rc=0 efc=0 .text      beginBNKList__17JAUAudioArcLoaderFUlUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -281,7 +281,7 @@ asm void JAUAudioArcLoader::beginBNKList(u32 field_0, u32 field_1) {
 #pragma pop
 
 
-/* 802A49B4-802A49D8 0024+00 rc=2 efc=1 .text      endBNKList__17JAUAudioArcLoaderFv                            */
+/* 802A49B4-802A49D8 0024+00 rc=0 efc=0 .text      endBNKList__17JAUAudioArcLoaderFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,7 +292,7 @@ asm void JAUAudioArcLoader::endBNKList() {
 #pragma pop
 
 
-/* 802A49D8-802A49FC 0024+00 rc=2 efc=1 .text      readMaxSeCategory__17JAUAudioArcLoaderFiii                   */
+/* 802A49D8-802A49FC 0024+00 rc=0 efc=0 .text      readMaxSeCategory__17JAUAudioArcLoaderFiii                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -303,7 +303,7 @@ asm void JAUAudioArcLoader::readMaxSeCategory(int field_0, int field_1, int fiel
 #pragma pop
 
 
-/* 802A49FC-802A4A5C 0060+00 rc=1 efc=0 .text      __dt__17JAUAudioArcLoaderFv                                  */
+/* 802A49FC-802A4A5C 0060+00 rc=0 efc=0 .text      __dt__17JAUAudioArcLoaderFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

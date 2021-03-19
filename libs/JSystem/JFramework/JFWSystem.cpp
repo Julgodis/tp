@@ -100,9 +100,9 @@ SECTION_SDATA extern u32 aramGraphBufSize__Q29JFWSystem11CSetUpParam;
 SECTION_SDATA extern u32 streamPriority__Q29JFWSystem11CSetUpParam;
 SECTION_SDATA extern u32 decompPriority__Q29JFWSystem11CSetUpParam;
 SECTION_SDATA extern u32 aPiecePriority__Q29JFWSystem11CSetUpParam;
-SECTION_SDATA extern void*systemFontRes__Q29JFWSystem11CSetUpParam;
-SECTION_SDATA extern void*renderMode__Q29JFWSystem11CSetUpParam;
-SECTION_SDATA extern u32 exConsoleBufferSize__Q29JFWSystem11CSetUpParam;
+SECTION_SDATA extern void* systemFontRes__Q29JFWSystem11CSetUpParam;
+SECTION_SDATA extern void* renderMode__Q29JFWSystem11CSetUpParam;
+SECTION_SDATA extern u32 exConsoleBufferSize__Q29JFWSystem11CSetUpParam[1 + 1 /* padding */];
 SECTION_SBSS extern u8 rootHeap__9JFWSystem[4];
 SECTION_SBSS extern u8 systemHeap__9JFWSystem[4];
 SECTION_SBSS extern u8 mainThread__9JFWSystem[4];
@@ -157,19 +157,19 @@ SECTION_DATA extern u8 GXNtsc480IntDf[60];
 // 
 
 /* ############################################################################################## */
-/* 80450770-80450774 0004+00 rc=2 efc=1 .sdata     maxStdHeaps__Q29JFWSystem11CSetUpParam                       */
+/* 80450770-80450774 0004+00 rc=0 efc=0 .sdata     maxStdHeaps__Q29JFWSystem11CSetUpParam                       */
 u32 maxStdHeaps__Q29JFWSystem11CSetUpParam = 0x00000002;
 
-/* 80450774-80450778 0004+00 rc=2 efc=1 .sdata     sysHeapSize__Q29JFWSystem11CSetUpParam                       */
+/* 80450774-80450778 0004+00 rc=0 efc=0 .sdata     sysHeapSize__Q29JFWSystem11CSetUpParam                       */
 u32 sysHeapSize__Q29JFWSystem11CSetUpParam = 0x00400000;
 
-/* 804511A0-804511A4 0004+00 rc=2 efc=0 .sbss      rootHeap__9JFWSystem                                         */
+/* 804511A0-804511A4 0004+00 rc=0 efc=0 .sbss      rootHeap__9JFWSystem                                         */
 u8 rootHeap__9JFWSystem[4];
 
-/* 804511A4-804511A8 0004+00 rc=3 efc=1 .sbss      systemHeap__9JFWSystem                                       */
+/* 804511A4-804511A8 0004+00 rc=0 efc=0 .sbss      systemHeap__9JFWSystem                                       */
 u8 systemHeap__9JFWSystem[4];
 
-/* 80271CD0-80271D18 0048+00 rc=2 efc=1 .text      firstInit__9JFWSystemFv                                      */
+/* 80271CD0-80271D18 0048+00 rc=0 efc=0 .text      firstInit__9JFWSystemFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,62 +181,65 @@ asm void JFWSystem::firstInit() {
 
 
 /* ############################################################################################## */
-/* 80450778-8045077C 0004+00 rc=2 efc=1 .sdata     fifoBufSize__Q29JFWSystem11CSetUpParam                       */
+/* 80450778-8045077C 0004+00 rc=0 efc=0 .sdata     fifoBufSize__Q29JFWSystem11CSetUpParam                       */
 u32 fifoBufSize__Q29JFWSystem11CSetUpParam = 0x00040000;
 
-/* 8045077C-80450780 0004+00 rc=2 efc=1 .sdata     aramAudioBufSize__Q29JFWSystem11CSetUpParam                  */
+/* 8045077C-80450780 0004+00 rc=0 efc=0 .sdata     aramAudioBufSize__Q29JFWSystem11CSetUpParam                  */
 u32 aramAudioBufSize__Q29JFWSystem11CSetUpParam = 0x00800000;
 
-/* 80450780-80450784 0004+00 rc=2 efc=1 .sdata     aramGraphBufSize__Q29JFWSystem11CSetUpParam                  */
+/* 80450780-80450784 0004+00 rc=0 efc=0 .sdata     aramGraphBufSize__Q29JFWSystem11CSetUpParam                  */
 u32 aramGraphBufSize__Q29JFWSystem11CSetUpParam = 0x00600000;
 
-/* 80450784-80450788 0004+00 rc=1 efc=0 .sdata     streamPriority__Q29JFWSystem11CSetUpParam                    */
+/* 80450784-80450788 0004+00 rc=0 efc=0 .sdata     streamPriority__Q29JFWSystem11CSetUpParam                    */
 u32 streamPriority__Q29JFWSystem11CSetUpParam = 0x00000008;
 
-/* 80450788-8045078C 0004+00 rc=1 efc=0 .sdata     decompPriority__Q29JFWSystem11CSetUpParam                    */
+/* 80450788-8045078C 0004+00 rc=0 efc=0 .sdata     decompPriority__Q29JFWSystem11CSetUpParam                    */
 u32 decompPriority__Q29JFWSystem11CSetUpParam = 0x00000007;
 
-/* 8045078C-80450790 0004+00 rc=1 efc=0 .sdata     aPiecePriority__Q29JFWSystem11CSetUpParam                    */
+/* 8045078C-80450790 0004+00 rc=0 efc=0 .sdata     aPiecePriority__Q29JFWSystem11CSetUpParam                    */
 u32 aPiecePriority__Q29JFWSystem11CSetUpParam = 0x00000006;
 
-/* 80450790-80450794 0004+00 rc=1 efc=0 .sdata     systemFontRes__Q29JFWSystem11CSetUpParam                     */
+/* 80450790-80450794 0004+00 rc=0 efc=0 .sdata     systemFontRes__Q29JFWSystem11CSetUpParam                     */
 void* systemFontRes__Q29JFWSystem11CSetUpParam = (void*)&JUTResFONT_Ascfont_fix12;
 
-/* 80450794-80450798 0004+00 rc=2 efc=1 .sdata     renderMode__Q29JFWSystem11CSetUpParam                        */
+/* 80450794-80450798 0004+00 rc=0 efc=0 .sdata     renderMode__Q29JFWSystem11CSetUpParam                        */
 void* renderMode__Q29JFWSystem11CSetUpParam = (void*)&GXNtsc480IntDf;
 
-/* 80450798-804507A0 0004+04 rc=1 efc=0 .sdata     exConsoleBufferSize__Q29JFWSystem11CSetUpParam               */
-u32 exConsoleBufferSize__Q29JFWSystem11CSetUpParam = 0x000024FC;
-/* padding 4 bytes */
+/* 80450798-804507A0 0004+04 rc=0 efc=0 .sdata     exConsoleBufferSize__Q29JFWSystem11CSetUpParam               */
+u32 exConsoleBufferSize__Q29JFWSystem11CSetUpParam[1 + 1 /* padding */] = {
+	0x000024FC,
+	/* padding */
+	0x00000000,
+};
 
-/* 804511A8-804511AC 0004+00 rc=1 efc=0 .sbss      mainThread__9JFWSystem                                       */
+/* 804511A8-804511AC 0004+00 rc=0 efc=0 .sbss      mainThread__9JFWSystem                                       */
 u8 mainThread__9JFWSystem[4];
 
-/* 804511AC-804511B0 0004+00 rc=1 efc=0 .sbss      debugPrint__9JFWSystem                                       */
+/* 804511AC-804511B0 0004+00 rc=0 efc=0 .sbss      debugPrint__9JFWSystem                                       */
 u8 debugPrint__9JFWSystem[4];
 
-/* 804511B0-804511B4 0004+00 rc=1 efc=0 .sbss      systemFont__9JFWSystem                                       */
+/* 804511B0-804511B4 0004+00 rc=0 efc=0 .sbss      systemFont__9JFWSystem                                       */
 u8 systemFont__9JFWSystem[4];
 
-/* 804511B4-804511B8 0004+00 rc=1 efc=0 .sbss      systemConsoleManager__9JFWSystem                             */
+/* 804511B4-804511B8 0004+00 rc=0 efc=0 .sbss      systemConsoleManager__9JFWSystem                             */
 u8 systemConsoleManager__9JFWSystem[4];
 
-/* 804511B8-804511BC 0004+00 rc=8 efc=7 .sbss      systemConsole__9JFWSystem                                    */
+/* 804511B8-804511BC 0004+00 rc=0 efc=0 .sbss      systemConsole__9JFWSystem                                    */
 u8 systemConsole__9JFWSystem[4];
 
-/* 804511BC-804511C0 0004+00 rc=1 efc=0 .sbss      None                                                         */
+/* 804511BC-804511C0 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_804511BC[4];
 
-/* 80455240-80455244 0004+00 rc=1 efc=0 .sdata2    @2242                                                        */
+/* 80455240-80455244 0004+00 rc=0 efc=0 .sdata2    @2242                                                        */
 f32 JFWSystem__lit_2242 = 0.5f;
 
-/* 80455244-80455248 0004+00 rc=1 efc=0 .sdata2    @2243                                                        */
+/* 80455244-80455248 0004+00 rc=0 efc=0 .sdata2    @2243                                                        */
 f32 lit_2243 = 17.0f / 20.0f;
 
-/* 80455248-80455250 0008+00 rc=1 efc=0 .sdata2    @2245                                                        */
+/* 80455248-80455250 0008+00 rc=0 efc=0 .sdata2    @2245                                                        */
 f64 lit_2245 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80271D18-80272040 0328+00 rc=1 efc=1 .text      init__9JFWSystemFv                                           */
+/* 80271D18-80272040 0328+00 rc=0 efc=0 .text      init__9JFWSystemFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

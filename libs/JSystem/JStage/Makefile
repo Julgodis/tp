@@ -29,11 +29,14 @@ LIBJSTAGE_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJStage.a: $(LIBJSTAGE_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJStage.a
 	@echo $(LIBJSTAGE_A_O_FILES) > build/LIBJSTAGE_A_ofiles
-	$(LD) -xm l $(LIBJSTAGE_A_LDFLAGS) -o $(BUILD_DIR)/libJStage.a @build/LIBJSTAGE_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJStage.a
+	@$(LD) -xm l $(LIBJSTAGE_A_LDFLAGS) -o $(BUILD_DIR)/libJStage.a @build/LIBJSTAGE_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJStage.a
 
 $(BUILD_DIR)/libs/JSystem/JStage/%.o: libs/JSystem/JStage/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJSTAGE_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJSTAGE_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

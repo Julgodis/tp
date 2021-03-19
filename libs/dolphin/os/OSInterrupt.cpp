@@ -16,11 +16,11 @@ extern "C" void OSRestoreInterrupts(); // 1
 extern "C" void __OSSetInterruptHandler(); // 1
 extern "C" void __OSGetInterruptHandler(); // 1
 extern "C" void __OSInterruptInit(); // 1
-extern "C" static void SetInterruptMask(); // 1
+extern "C" void SetInterruptMask(); // 1
 extern "C" void __OSMaskInterrupts(); // 1
 extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" static void __OSDispatchInterrupt(); // 1
-extern "C" static void ExternalInterruptHandler(); // 1
+extern "C" void __OSDispatchInterrupt(); // 1
+extern "C" void ExternalInterruptHandler(); // 1
 
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void __RAS_OSDisableInterrupts_end(); // 1
@@ -29,11 +29,11 @@ extern "C" void OSRestoreInterrupts(); // 1
 extern "C" void __OSSetInterruptHandler(); // 1
 extern "C" void __OSGetInterruptHandler(); // 1
 extern "C" void __OSInterruptInit(); // 1
-extern "C" static void SetInterruptMask(); // 1
+extern "C" void SetInterruptMask(); // 1
 extern "C" void __OSMaskInterrupts(); // 1
 extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" static void __OSDispatchInterrupt(); // 1
-extern "C" static void ExternalInterruptHandler(); // 1
+extern "C" void __OSDispatchInterrupt(); // 1
+extern "C" void ExternalInterruptHandler(); // 1
 SECTION_DATA extern u8 InterruptPrioTable[44 + 4 /* padding */];
 SECTION_SBSS extern u8 InterruptHandlerTable[4];
 SECTION_SBSS extern u8 __OSLastInterruptSrr0[4];
@@ -65,7 +65,7 @@ extern "C" void OSGetTime(); // 1
 // Declarations:
 // 
 
-/* 8033D6F4-8033D700 000C+00 rc=202 efc=200 .text      OSDisableInterrupts                                          */
+/* 8033D6F4-8033D700 000C+00 rc=0 efc=0 .text      OSDisableInterrupts                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ extern "C" asm void OSDisableInterrupts() {
 #pragma pop
 
 
-/* 8033D700-8033D708 0008+00 rc=1 efc=1 .text      __RAS_OSDisableInterrupts_end                                */
+/* 8033D700-8033D708 0008+00 rc=0 efc=0 .text      __RAS_OSDisableInterrupts_end                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ extern "C" asm void __RAS_OSDisableInterrupts_end() {
 #pragma pop
 
 
-/* 8033D708-8033D71C 0014+00 rc=10 efc=10 .text      OSEnableInterrupts                                           */
+/* 8033D708-8033D71C 0014+00 rc=0 efc=0 .text      OSEnableInterrupts                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ extern "C" asm void OSEnableInterrupts() {
 #pragma pop
 
 
-/* 8033D71C-8033D740 0024+00 rc=199 efc=197 .text      OSRestoreInterrupts                                          */
+/* 8033D71C-8033D740 0024+00 rc=0 efc=0 .text      OSRestoreInterrupts                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,10 +110,10 @@ extern "C" asm void OSRestoreInterrupts() {
 
 
 /* ############################################################################################## */
-/* 80451670-80451674 0004+00 rc=4 efc=0 .sbss      InterruptHandlerTable                                        */
+/* 80451670-80451674 0004+00 rc=0 efc=0 .sbss      InterruptHandlerTable                                        */
 u8 InterruptHandlerTable[4];
 
-/* 8033D740-8033D75C 001C+00 rc=12 efc=12 .text      __OSSetInterruptHandler                                      */
+/* 8033D740-8033D75C 001C+00 rc=0 efc=0 .text      __OSSetInterruptHandler                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +124,7 @@ extern "C" asm void __OSSetInterruptHandler() {
 #pragma pop
 
 
-/* 8033D75C-8033D770 0014+00 rc=1 efc=1 .text      __OSGetInterruptHandler                                      */
+/* 8033D75C-8033D770 0014+00 rc=0 efc=0 .text      __OSGetInterruptHandler                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +135,7 @@ extern "C" asm void __OSGetInterruptHandler() {
 #pragma pop
 
 
-/* 8033D770-8033D7E4 0074+00 rc=1 efc=1 .text      __OSInterruptInit                                            */
+/* 8033D770-8033D7E4 0074+00 rc=0 efc=0 .text      __OSInterruptInit                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,18 +146,18 @@ extern "C" asm void __OSInterruptInit() {
 #pragma pop
 
 
-/* 8033D7E4-8033DABC 02D8+00 rc=2 efc=0 .text      SetInterruptMask                                             */
+/* 8033D7E4-8033DABC 02D8+00 rc=0 efc=0 .text      SetInterruptMask                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void SetInterruptMask() {
+extern "C" asm void SetInterruptMask() {
 	nofralloc
 #include "asm/dolphin/os/OSInterrupt/SetInterruptMask.s"
 }
 #pragma pop
 
 
-/* 8033DABC-8033DB44 0088+00 rc=16 efc=15 .text      __OSMaskInterrupts                                           */
+/* 8033DABC-8033DB44 0088+00 rc=0 efc=0 .text      __OSMaskInterrupts                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +168,7 @@ extern "C" asm void __OSMaskInterrupts() {
 #pragma pop
 
 
-/* 8033DB44-8033DBCC 0088+00 rc=18 efc=18 .text      __OSUnmaskInterrupts                                         */
+/* 8033DB44-8033DBCC 0088+00 rc=0 efc=0 .text      __OSUnmaskInterrupts                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,8 +180,8 @@ extern "C" asm void __OSUnmaskInterrupts() {
 
 
 /* ############################################################################################## */
-/* 803D0758-803D0788 002C+04 rc=1 efc=0 .data      InterruptPrioTable                                           */
-u8 InterruptPrioTable[48] = {
+/* 803D0758-803D0788 002C+04 rc=0 efc=0 .data      InterruptPrioTable                                           */
+u8 InterruptPrioTable[44 + 4 /* padding */] = {
 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x40, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00,
 	0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00, 0x20, 0x03, 0xFF, 0x8C, 0x00,
 	0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -189,34 +189,34 @@ u8 InterruptPrioTable[48] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451674-80451678 0004+00 rc=2 efc=1 .sbss      __OSLastInterruptSrr0                                        */
+/* 80451674-80451678 0004+00 rc=0 efc=0 .sbss      __OSLastInterruptSrr0                                        */
 u8 __OSLastInterruptSrr0[4];
 
-/* 80451678-80451680 0002+06 rc=2 efc=1 .sbss      __OSLastInterrupt                                            */
+/* 80451678-80451680 0002+06 rc=0 efc=0 .sbss      __OSLastInterrupt                                            */
 u8 __OSLastInterrupt[2 + 6 /* padding */];
 
-/* 80451680-80451684 0004+00 rc=2 efc=1 .sbss      __OSLastInterruptTime                                        */
+/* 80451680-80451684 0004+00 rc=0 efc=0 .sbss      __OSLastInterruptTime                                        */
 u8 __OSLastInterruptTime[4];
 
-/* 80451684-80451688 0004+00 rc=2 efc=1 .sbss      None                                                         */
+/* 80451684-80451688 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_80451684[4];
 
-/* 8033DBCC-8033DF10 0344+00 rc=1 efc=0 .text      __OSDispatchInterrupt                                        */
+/* 8033DBCC-8033DF10 0344+00 rc=0 efc=0 .text      __OSDispatchInterrupt                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __OSDispatchInterrupt() {
+extern "C" asm void __OSDispatchInterrupt() {
 	nofralloc
 #include "asm/dolphin/os/OSInterrupt/__OSDispatchInterrupt.s"
 }
 #pragma pop
 
 
-/* 8033DF10-8033DF60 0050+00 rc=1 efc=0 .text      ExternalInterruptHandler                                     */
+/* 8033DF10-8033DF60 0050+00 rc=0 efc=0 .text      ExternalInterruptHandler                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void ExternalInterruptHandler() {
+extern "C" asm void ExternalInterruptHandler() {
 	nofralloc
 #include "asm/dolphin/os/OSInterrupt/ExternalInterruptHandler.s"
 }

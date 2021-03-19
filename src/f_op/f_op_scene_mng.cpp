@@ -31,7 +31,7 @@ extern "C" void fopScnM_CreateReq__FssUsUl(); // 1
 extern "C" void fopScnM_ReRequest__FsUl(); // 1
 extern "C" void fopScnM_Management__Fv(); // 1
 extern "C" void fopScnM_Init__Fv(); // 1
-SECTION_SDATA extern u32 l_scnRqID;
+SECTION_SDATA extern u32 l_scnRqID[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -53,7 +53,7 @@ extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
 // Declarations:
 // 
 
-/* 8001ECB0-8001ECE0 0030+00 rc=7 efc=7 .text      fopScnM_SearchByID__FUi                                      */
+/* 8001ECB0-8001ECE0 0030+00 rc=0 efc=0 .text      fopScnM_SearchByID__FUi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,11 +65,14 @@ asm void fopScnM_SearchByID(u32 field_0) {
 
 
 /* ############################################################################################## */
-/* 804505B8-804505C0 0004+04 rc=2 efc=0 .sdata     l_scnRqID                                                    */
-u32 l_scnRqID = 0xFFFFFFFF;
-/* padding 4 bytes */
+/* 804505B8-804505C0 0004+04 rc=0 efc=0 .sdata     l_scnRqID                                                    */
+u32 l_scnRqID[1 + 1 /* padding */] = {
+	0xFFFFFFFF,
+	/* padding */
+	0x00000000,
+};
 
-/* 8001ECE0-8001ED3C 005C+00 rc=4 efc=4 .text      fopScnM_ChangeReq__FP11scene_classssUs                       */
+/* 8001ECE0-8001ED3C 005C+00 rc=0 efc=0 .text      fopScnM_ChangeReq__FP11scene_classssUs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,7 +83,7 @@ asm void fopScnM_ChangeReq(scene_class* field_0, s16 field_1, s16 field_2, u16 f
 #pragma pop
 
 
-/* 8001ED3C-8001ED84 0048+00 rc=1 efc=1 .text      fopScnM_DeleteReq__FP11scene_class                           */
+/* 8001ED3C-8001ED84 0048+00 rc=0 efc=0 .text      fopScnM_DeleteReq__FP11scene_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,7 +94,7 @@ asm void fopScnM_DeleteReq(scene_class* field_0) {
 #pragma pop
 
 
-/* 8001ED84-8001EDCC 0048+00 rc=2 efc=2 .text      fopScnM_CreateReq__FssUsUl                                   */
+/* 8001ED84-8001EDCC 0048+00 rc=0 efc=0 .text      fopScnM_CreateReq__FssUsUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,7 +105,7 @@ asm void fopScnM_CreateReq(s16 field_0, s16 field_1, u16 field_2, u32 field_3) {
 #pragma pop
 
 
-/* 8001EDCC-8001EE10 0044+00 rc=1 efc=1 .text      fopScnM_ReRequest__FsUl                                      */
+/* 8001EDCC-8001EE10 0044+00 rc=0 efc=0 .text      fopScnM_ReRequest__FsUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -113,7 +116,7 @@ asm void fopScnM_ReRequest(s16 field_0, u32 field_1) {
 #pragma pop
 
 
-/* 8001EE10-8001EE30 0020+00 rc=1 efc=1 .text      fopScnM_Management__Fv                                       */
+/* 8001EE10-8001EE30 0020+00 rc=0 efc=0 .text      fopScnM_Management__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +127,7 @@ asm void fopScnM_Management() {
 #pragma pop
 
 
-/* 8001EE30-8001EE34 0004+00 rc=1 efc=1 .text      fopScnM_Init__Fv                                             */
+/* 8001EE30-8001EE34 0004+00 rc=0 efc=0 .text      fopScnM_Init__Fv                                             */
 void fopScnM_Init() {
 	/* empty function */
 }

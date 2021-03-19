@@ -113,10 +113,10 @@ extern "C" void draw__9J3DPacketFv(); // 1
 extern "C" void entry__12J3DMatPacketFP13J3DDrawBuffer(); // 1
 SECTION_DATA extern u8 sDifferedRegister[32];
 SECTION_DATA extern u8 sSizeOfDiffered[32];
-SECTION_DATA extern void*const __vt__14J3DShapePacket[5];
-SECTION_DATA extern void*const __vt__12J3DMatPacket[5];
-SECTION_DATA extern void*const __vt__13J3DDrawPacket[5];
-SECTION_DATA extern void*const __vt__9J3DPacket[5];
+SECTION_DATA extern void* const __vt__14J3DShapePacket[5];
+SECTION_DATA extern void* const __vt__12J3DMatPacket[5];
+SECTION_DATA extern void* const __vt__13J3DDrawPacket[5];
+SECTION_DATA extern void* const __vt__9J3DPacket[5];
 SECTION_BSS extern u8 sGDLObj__17J3DDisplayListObj[16];
 SECTION_SBSS extern u8 sInterruptFlag__17J3DDisplayListObj[4 + 4 /* padding */];
 
@@ -159,7 +159,6 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
 SECTION_DATA extern u8 sortFuncTable__13J3DDrawBuffer[72];
 SECTION_BSS extern u8 j3dSys[284];
-SECTION_SBSS extern u8 struct_804515B0[4];
 SECTION_SBSS extern u8 sTexGenBlock__17J3DDifferedTexMtx[4];
 SECTION_SBSS extern u8 sTexMtxObj__17J3DDifferedTexMtx[4];
 SECTION_SBSS extern u8 sOldVcdVatCmd__8J3DShape[4];
@@ -169,7 +168,7 @@ SECTION_SBSS extern u8 __GDCurrentDL[4];
 // Declarations:
 // 
 
-/* 80312488-80312508 0080+00 rc=2 efc=1 .text      newDisplayList__17J3DDisplayListObjFUl                       */
+/* 80312488-80312508 0080+00 rc=0 efc=0 .text      newDisplayList__17J3DDisplayListObjFUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +179,7 @@ asm void J3DDisplayListObj::newDisplayList(u32 field_0) {
 #pragma pop
 
 
-/* 80312508-8031256C 0064+00 rc=2 efc=1 .text      newSingleDisplayList__17J3DDisplayListObjFUl                 */
+/* 80312508-8031256C 0064+00 rc=0 efc=0 .text      newSingleDisplayList__17J3DDisplayListObjFUl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +190,7 @@ asm void J3DDisplayListObj::newSingleDisplayList(u32 field_0) {
 #pragma pop
 
 
-/* 8031256C-803125E4 0078+00 rc=1 efc=1 .text      single_To_Double__17J3DDisplayListObjFv                      */
+/* 8031256C-803125E4 0078+00 rc=0 efc=0 .text      single_To_Double__17J3DDisplayListObjFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,7 +201,7 @@ asm void J3DDisplayListObj::single_To_Double() {
 #pragma pop
 
 
-/* 803125E4-80312604 0020+00 rc=1 efc=1 .text      setSingleDisplayList__17J3DDisplayListObjFPvUl               */
+/* 803125E4-80312604 0020+00 rc=0 efc=0 .text      setSingleDisplayList__17J3DDisplayListObjFPvUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -213,7 +212,7 @@ asm void J3DDisplayListObj::setSingleDisplayList(void* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80312604-80312618 0014+00 rc=1 efc=0 .text      swapBuffer__17J3DDisplayListObjFv                            */
+/* 80312604-80312618 0014+00 rc=0 efc=0 .text      swapBuffer__17J3DDisplayListObjFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +223,7 @@ asm void J3DDisplayListObj::swapBuffer() {
 #pragma pop
 
 
-/* 80312618-80312644 002C+00 rc=7 efc=4 .text      callDL__17J3DDisplayListObjCFv                               */
+/* 80312618-80312644 002C+00 rc=0 efc=0 .text      callDL__17J3DDisplayListObjCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,13 +235,13 @@ asm void J3DDisplayListObj::callDL() const {
 
 
 /* ############################################################################################## */
-/* 80434C70-80434C80 0010+00 rc=5 efc=3 .bss       sGDLObj__17J3DDisplayListObj                                 */
+/* 80434C70-80434C80 0010+00 rc=0 efc=0 .bss       sGDLObj__17J3DDisplayListObj                                 */
 u8 sGDLObj__17J3DDisplayListObj[16];
 
-/* 804515A0-804515A8 0004+04 rc=3 efc=0 .sbss      sInterruptFlag__17J3DDisplayListObj                          */
+/* 804515A0-804515A8 0004+04 rc=0 efc=0 .sbss      sInterruptFlag__17J3DDisplayListObj                          */
 u8 sInterruptFlag__17J3DDisplayListObj[4 + 4 /* padding */];
 
-/* 80312644-80312698 0054+00 rc=3 efc=1 .text      beginDL__17J3DDisplayListObjFv                               */
+/* 80312644-80312698 0054+00 rc=0 efc=0 .text      beginDL__17J3DDisplayListObjFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,7 +252,7 @@ asm void J3DDisplayListObj::beginDL() {
 #pragma pop
 
 
-/* 80312698-803126F4 005C+00 rc=2 efc=1 .text      endDL__17J3DDisplayListObjFv                                 */
+/* 80312698-803126F4 005C+00 rc=0 efc=0 .text      endDL__17J3DDisplayListObjFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -264,7 +263,7 @@ asm void J3DDisplayListObj::endDL() {
 #pragma pop
 
 
-/* 803126F4-80312714 0020+00 rc=1 efc=1 .text      beginPatch__17J3DDisplayListObjFv                            */
+/* 803126F4-80312714 0020+00 rc=0 efc=0 .text      beginPatch__17J3DDisplayListObjFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -275,7 +274,7 @@ asm void J3DDisplayListObj::beginPatch() {
 #pragma pop
 
 
-/* 80312714-80312750 003C+00 rc=1 efc=1 .text      endPatch__17J3DDisplayListObjFv                              */
+/* 80312714-80312750 003C+00 rc=0 efc=0 .text      endPatch__17J3DDisplayListObjFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -286,13 +285,13 @@ asm void J3DDisplayListObj::endPatch() {
 #pragma pop
 
 
-/* 80312750-80312758 0008+00 rc=19 efc=16 .text      entry__9J3DPacketFP13J3DDrawBuffer                           */
+/* 80312750-80312758 0008+00 rc=0 efc=0 .text      entry__9J3DPacketFP13J3DDrawBuffer                           */
 bool J3DPacket::entry(J3DDrawBuffer* field_0) {
 	return true;
 }
 
 
-/* 80312758-80312778 0020+00 rc=2 efc=2 .text      addChildPacket__9J3DPacketFP9J3DPacket                       */
+/* 80312758-80312778 0020+00 rc=0 efc=0 .text      addChildPacket__9J3DPacketFP9J3DPacket                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -304,55 +303,55 @@ asm void J3DPacket::addChildPacket(J3DPacket* field_0) {
 
 
 /* ############################################################################################## */
-/* 803CD900-803CD920 0020+00 rc=1 efc=0 .data      sDifferedRegister                                            */
+/* 803CD900-803CD920 0020+00 rc=0 efc=0 .data      sDifferedRegister                                            */
 u8 sDifferedRegister[32] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x01, 0x00, 0x00, 0x00,
 	0x10, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00,
 };
 
-/* 803CD920-803CD940 0020+00 rc=1 efc=0 .data      sSizeOfDiffered                                              */
+/* 803CD920-803CD940 0020+00 rc=0 efc=0 .data      sSizeOfDiffered                                              */
 u8 sSizeOfDiffered[32] = {
 	0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x15, 0x00, 0x00, 0x00, 0x78,
 	0x00, 0x00, 0x00, 0x37, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x13, 0x00, 0x00, 0x00, 0x2D,
 };
 
-/* 803CD940-803CD954 0014+00 rc=2 efc=0 .data      __vt__14J3DShapePacket                                       */
+/* 803CD940-803CD954 0014+00 rc=0 efc=0 .data      __vt__14J3DShapePacket                                       */
 void* const __vt__14J3DShapePacket[5] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__14J3DShapePacketFv,
 	(void*)__dt__14J3DShapePacketFv,
 };
 
-/* 803CD954-803CD968 0014+00 rc=2 efc=0 .data      __vt__12J3DMatPacket                                         */
+/* 803CD954-803CD968 0014+00 rc=0 efc=0 .data      __vt__12J3DMatPacket                                         */
 void* const __vt__12J3DMatPacket[5] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)entry__12J3DMatPacketFP13J3DDrawBuffer,
 	(void*)draw__12J3DMatPacketFv,
 	(void*)__dt__12J3DMatPacketFv,
 };
 
-/* 803CD968-803CD97C 0014+00 rc=2 efc=0 .data      __vt__13J3DDrawPacket                                        */
+/* 803CD968-803CD97C 0014+00 rc=0 efc=0 .data      __vt__13J3DDrawPacket                                        */
 void* const __vt__13J3DDrawPacket[5] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__13J3DDrawPacketFv,
 	(void*)__dt__13J3DDrawPacketFv,
 };
 
-/* 803CD97C-803CD990 0014+00 rc=36 efc=34 .data      __vt__9J3DPacket                                             */
+/* 803CD97C-803CD990 0014+00 rc=0 efc=0 .data      __vt__9J3DPacket                                             */
 void* const __vt__9J3DPacket[5] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__9J3DPacketFv,
 	(void*)__dt__9J3DPacketFv,
 };
 
-/* 80312778-803127B0 0038+00 rc=2 efc=0 .text      __ct__13J3DDrawPacketFv                                      */
+/* 80312778-803127B0 0038+00 rc=0 efc=0 .text      __ct__13J3DDrawPacketFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -363,7 +362,7 @@ asm J3DDrawPacket::J3DDrawPacket() {
 #pragma pop
 
 
-/* 803127B0-8031280C 005C+00 rc=3 efc=0 .text      __dt__13J3DDrawPacketFv                                      */
+/* 803127B0-8031280C 005C+00 rc=0 efc=0 .text      __dt__13J3DDrawPacketFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -374,7 +373,7 @@ asm J3DDrawPacket::~J3DDrawPacket() {
 #pragma pop
 
 
-/* 8031280C-80312898 008C+00 rc=2 efc=1 .text      newDisplayList__13J3DDrawPacketFUl                           */
+/* 8031280C-80312898 008C+00 rc=0 efc=0 .text      newDisplayList__13J3DDrawPacketFUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -385,7 +384,7 @@ asm void J3DDrawPacket::newDisplayList(u32 field_0) {
 #pragma pop
 
 
-/* 80312898-80312924 008C+00 rc=1 efc=1 .text      newSingleDisplayList__13J3DDrawPacketFUl                     */
+/* 80312898-80312924 008C+00 rc=0 efc=0 .text      newSingleDisplayList__13J3DDrawPacketFUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -396,7 +395,7 @@ asm void J3DDrawPacket::newSingleDisplayList(u32 field_0) {
 #pragma pop
 
 
-/* 80312924-80312948 0024+00 rc=1 efc=0 .text      draw__13J3DDrawPacketFv                                      */
+/* 80312924-80312948 0024+00 rc=0 efc=0 .text      draw__13J3DDrawPacketFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -407,7 +406,7 @@ asm void J3DDrawPacket::draw() {
 #pragma pop
 
 
-/* 80312948-803129A4 005C+00 rc=1 efc=1 .text      __ct__12J3DMatPacketFv                                       */
+/* 80312948-803129A4 005C+00 rc=0 efc=0 .text      __ct__12J3DMatPacketFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -418,7 +417,7 @@ asm J3DMatPacket::J3DMatPacket() {
 #pragma pop
 
 
-/* 803129A4-80312A04 0060+00 rc=2 efc=1 .text      __dt__12J3DMatPacketFv                                       */
+/* 803129A4-80312A04 0060+00 rc=0 efc=0 .text      __dt__12J3DMatPacketFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -429,7 +428,7 @@ asm J3DMatPacket::~J3DMatPacket() {
 #pragma pop
 
 
-/* 80312A04-80312A24 0020+00 rc=3 efc=3 .text      addShapePacket__12J3DMatPacketFP14J3DShapePacket             */
+/* 80312A04-80312A24 0020+00 rc=0 efc=0 .text      addShapePacket__12J3DMatPacketFP14J3DShapePacket             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -440,7 +439,7 @@ asm void J3DMatPacket::addShapePacket(J3DShapePacket* field_0) {
 #pragma pop
 
 
-/* 80312A24-80312A4C 0028+00 rc=1 efc=1 .text      beginDiff__12J3DMatPacketFv                                  */
+/* 80312A24-80312A4C 0028+00 rc=0 efc=0 .text      beginDiff__12J3DMatPacketFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -451,7 +450,7 @@ asm void J3DMatPacket::beginDiff() {
 #pragma pop
 
 
-/* 80312A4C-80312A74 0028+00 rc=1 efc=1 .text      endDiff__12J3DMatPacketFv                                    */
+/* 80312A4C-80312A74 0028+00 rc=0 efc=0 .text      endDiff__12J3DMatPacketFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -462,7 +461,7 @@ asm void J3DMatPacket::endDiff() {
 #pragma pop
 
 
-/* 80312A74-80312A9C 0028+00 rc=1 efc=1 .text      isSame__12J3DMatPacketCFP12J3DMatPacket                      */
+/* 80312A74-80312A9C 0028+00 rc=0 efc=0 .text      isSame__12J3DMatPacketCFP12J3DMatPacket                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -473,7 +472,7 @@ asm void J3DMatPacket::isSame(J3DMatPacket* field_0) const {
 #pragma pop
 
 
-/* 80312A9C-80312B20 0084+00 rc=1 efc=0 .text      draw__12J3DMatPacketFv                                       */
+/* 80312A9C-80312B20 0084+00 rc=0 efc=0 .text      draw__12J3DMatPacketFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -484,7 +483,7 @@ asm void J3DMatPacket::draw() {
 #pragma pop
 
 
-/* 80312B20-80312B74 0054+00 rc=1 efc=1 .text      __ct__14J3DShapePacketFv                                     */
+/* 80312B20-80312B74 0054+00 rc=0 efc=0 .text      __ct__14J3DShapePacketFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -495,7 +494,7 @@ asm J3DShapePacket::J3DShapePacket() {
 #pragma pop
 
 
-/* 80312B74-80312BD4 0060+00 rc=2 efc=1 .text      __dt__14J3DShapePacketFv                                     */
+/* 80312B74-80312BD4 0060+00 rc=0 efc=0 .text      __dt__14J3DShapePacketFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -506,7 +505,7 @@ asm J3DShapePacket::~J3DShapePacket() {
 #pragma pop
 
 
-/* 80312BD4-80312DBC 01E8+00 rc=1 efc=0 .text      calcDifferedBufferSize__14J3DShapePacketFUl                  */
+/* 80312BD4-80312DBC 01E8+00 rc=0 efc=0 .text      calcDifferedBufferSize__14J3DShapePacketFUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -517,7 +516,7 @@ asm void J3DShapePacket::calcDifferedBufferSize(u32 field_0) {
 #pragma pop
 
 
-/* 80312DBC-80312E08 004C+00 rc=1 efc=1 .text      newDifferedDisplayList__14J3DShapePacketFUl                  */
+/* 80312DBC-80312E08 004C+00 rc=0 efc=0 .text      newDifferedDisplayList__14J3DShapePacketFUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -528,7 +527,7 @@ asm void J3DShapePacket::newDifferedDisplayList(u32 field_0) {
 #pragma pop
 
 
-/* 80312E08-80312F24 011C+00 rc=2 efc=0 .text      prepareDraw__14J3DShapePacketCFv                             */
+/* 80312E08-80312F24 011C+00 rc=0 efc=0 .text      prepareDraw__14J3DShapePacketCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -539,7 +538,7 @@ asm void J3DShapePacket::prepareDraw() const {
 #pragma pop
 
 
-/* 80312F24-80312FBC 0098+00 rc=1 efc=0 .text      draw__14J3DShapePacketFv                                     */
+/* 80312F24-80312FBC 0098+00 rc=0 efc=0 .text      draw__14J3DShapePacketFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -550,7 +549,7 @@ asm void J3DShapePacket::draw() {
 #pragma pop
 
 
-/* 80312FBC-80313044 0088+00 rc=3 efc=2 .text      drawFast__14J3DShapePacketFv                                 */
+/* 80312FBC-80313044 0088+00 rc=0 efc=0 .text      drawFast__14J3DShapePacketFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -561,13 +560,13 @@ asm void J3DShapePacket::drawFast() {
 #pragma pop
 
 
-/* 80313044-80313048 0004+00 rc=1 efc=0 .text      draw__9J3DPacketFv                                           */
+/* 80313044-80313048 0004+00 rc=0 efc=0 .text      draw__9J3DPacketFv                                           */
 void J3DPacket::draw() {
 	/* empty function */
 }
 
 
-/* 80313048-803130A8 0060+00 rc=1 efc=0 .text      entry__12J3DMatPacketFP13J3DDrawBuffer                       */
+/* 80313048-803130A8 0060+00 rc=0 efc=0 .text      entry__12J3DMatPacketFP13J3DDrawBuffer                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

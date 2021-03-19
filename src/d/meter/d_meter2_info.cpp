@@ -9,20 +9,20 @@
 // Types:
 // 
 
-struct JUTFont {
+struct J2DPicture {
 };
 
 struct cXyz {
+};
+
+struct JMSMesgEntry_c {
 };
 
 struct J2DTextBox {
 	/* 8021C7F4 */ void getFont() const;
 };
 
-struct JMSMesgEntry_c {
-};
-
-struct J2DPicture {
+struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -220,11 +220,11 @@ SECTION_RODATA extern const u8 data_80398F18[148];
 SECTION_RODATA extern const u8 data_80398FAC[148];
 SECTION_RODATA extern const u8 data_80399040[148];
 SECTION_RODATA extern const u8 data_803990D4[148];
-SECTION_RODATA extern const u8 d_meter_d_meter2_info__stringBase0[464];
-SECTION_DATA extern void*d_meter_d_meter2_info__lit_4572[37];
+SECTION_RODATA extern const char* const d_meter_d_meter2_info__stringBase0;
+SECTION_DATA extern void* d_meter_d_meter2_info__lit_4572[37];
 SECTION_DATA extern u8 data_803BF7F4[40];
 SECTION_DATA extern u8 letter_data__12dMenu_Letter[512];
-SECTION_DATA extern void*const __vt__13dMeter2Info_c[3];
+SECTION_DATA extern void* const __vt__13dMeter2Info_c[3];
 SECTION_BSS extern u8 d_meter_d_meter2_info__lit_3846[12 + 4 /* padding */];
 SECTION_BSS extern u8 g_meter2_info[248];
 SECTION_SBSS extern u8 data_804510B8[4];
@@ -235,7 +235,7 @@ SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3918;
 SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3919;
 SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3920;
 SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3921;
-SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3922;
+SECTION_SDATA2 extern f32 d_meter_d_meter2_info__lit_3922[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 d_meter_d_meter2_info__lit_4108;
 SECTION_SDATA2 extern f64 lit_5206;
 
@@ -319,7 +319,7 @@ extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
 extern "C" void strcpy(); // 1
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
-SECTION_DATA extern void*item_resource__10dItem_data[1530];
+SECTION_DATA extern void* item_resource__10dItem_data[1530];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 
 // 
@@ -327,7 +327,7 @@ SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 803BF760-803BF7F4 0094+00 rc=1 efc=0 .data      @4572                                                        */
+/* 803BF760-803BF7F4 0094+00 rc=0 efc=0 .data      @4572                                                        */
 void* d_meter_d_meter2_info__lit_4572[37] = {
 	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x64),
 	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
@@ -368,14 +368,14 @@ void* d_meter_d_meter2_info__lit_4572[37] = {
 	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x5C),
 };
 
-/* 803BF7F4-803BF81C 0028+00 rc=1 efc=0 .data      tex_name$5183                                                */
+/* 803BF7F4-803BF81C 0028+00 rc=0 efc=0 .data      tex_name$5183                                                */
 u8 data_803BF7F4[40] = {
 	0x80, 0x39, 0x91, 0x82, 0x80, 0x39, 0x91, 0xAB, 0x80, 0x39, 0x91, 0xD4, 0x80, 0x39, 0x91, 0xFD,
 	0x80, 0x39, 0x92, 0x26, 0x80, 0x39, 0x92, 0x4F, 0x80, 0x39, 0x92, 0x78, 0x80, 0x39, 0x92, 0xA1,
 	0x80, 0x39, 0x92, 0xCA, 0x80, 0x39, 0x92, 0xF3,
 };
 
-/* 803BF81C-803BFA1C 0200+00 rc=9 efc=6 .data      letter_data__12dMenu_Letter                                  */
+/* 803BF81C-803BFA1C 0200+00 rc=0 efc=0 .data      letter_data__12dMenu_Letter                                  */
 u8 letter_data__12dMenu_Letter[512] = {
 	0x09, 0xC5, 0x0A, 0x29, 0x0A, 0x8D, 0x01, 0x0B, 0x09, 0xC6, 0x0A, 0x2A, 0x0A, 0x8E, 0x02, 0x37,
 	0x09, 0xC7, 0x0A, 0x2B, 0x0A, 0x8F, 0x02, 0x36, 0x09, 0xC8, 0x0A, 0x2C, 0x0A, 0x90, 0x00, 0x37,
@@ -411,14 +411,14 @@ u8 letter_data__12dMenu_Letter[512] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BFA1C-803BFA28 000C+00 rc=2 efc=0 .data      __vt__13dMeter2Info_c                                        */
+/* 803BFA1C-803BFA28 000C+00 rc=0 efc=0 .data      __vt__13dMeter2Info_c                                        */
 void* const __vt__13dMeter2Info_c[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__13dMeter2Info_cFv,
 };
 
-/* 8021BDDC-8021BE20 0044+00 rc=1 efc=0 .text      __ct__13dMeter2Info_cFv                                      */
+/* 8021BDDC-8021BE20 0044+00 rc=0 efc=0 .text      __ct__13dMeter2Info_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -429,7 +429,7 @@ asm dMeter2Info_c::dMeter2Info_c() {
 #pragma pop
 
 
-/* 8021BE20-8021BE68 0048+00 rc=2 efc=0 .text      __dt__13dMeter2Info_cFv                                      */
+/* 8021BE20-8021BE68 0048+00 rc=0 efc=0 .text      __dt__13dMeter2Info_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -441,8 +441,8 @@ asm dMeter2Info_c::~dMeter2Info_c() {
 
 
 /* ############################################################################################## */
-/* 80398A78-80398B0C 0094+00 rc=2 efc=0 .rodata    black_color$4634                                             */
-SECTION_RODATA const u8 data_80398A78[148] = {
+/* 80398A78-80398B0C 0094+00 rc=0 efc=0 .rodata    black_color$4634                                             */
+const u8 data_80398A78[148] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00, 0x00, 0xC0, 0x00, 0xA0, 0x60, 0x00, 0x00,
 	0xA0, 0x00, 0x00, 0x00, 0x40, 0x00, 0x60, 0x00, 0xE0, 0x00, 0x00, 0x00, 0x40, 0x40, 0x40, 0x00,
 	0x6E, 0x6E, 0x64, 0x00, 0x32, 0x00, 0x00, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x00, 0x00, 0x7F, 0x00,
@@ -456,7 +456,7 @@ SECTION_RODATA const u8 data_80398A78[148] = {
 };
 
 /* 80398B0C-80398BA0 0094+00 rc=0 efc=0 .rodata    white_color$4635                                             */
-SECTION_RODATA const u8 data_80398B0C[148] = {
+const u8 data_80398B0C[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0x60, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0xFF,
 	0xFF, 0x80, 0x80, 0xFF, 0xBE, 0x40, 0xFF, 0xFF, 0xFF, 0xC0, 0x00, 0xFF, 0xC0, 0xC0, 0xC0, 0xFF,
 	0xF5, 0xF5, 0xFF, 0xFF, 0xFF, 0xD2, 0xAA, 0xFF, 0xEF, 0xF5, 0xC9, 0xFF, 0xB0, 0xFF, 0xFF, 0xFF,
@@ -470,7 +470,7 @@ SECTION_RODATA const u8 data_80398B0C[148] = {
 };
 
 /* 80398BA0-80398C34 0094+00 rc=0 efc=0 .rodata    vertex_color_lu$4636                                         */
-SECTION_RODATA const u8 data_80398BA0[148] = {
+const u8 data_80398BA0[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0x78, 0xAF, 0xFF, 0x5C, 0xB4, 0x16, 0xFF, 0xA4, 0xFF, 0x00, 0xFF,
@@ -484,7 +484,7 @@ SECTION_RODATA const u8 data_80398BA0[148] = {
 };
 
 /* 80398C34-80398CC8 0094+00 rc=0 efc=0 .rodata    vertex_color_ru$4637                                         */
-SECTION_RODATA const u8 data_80398C34[148] = {
+const u8 data_80398C34[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0x00, 0xFF, 0xFF, 0x73, 0xFF, 0xFF, 0xFF, 0x2A, 0xFF, 0x98, 0xFF, 0x00, 0xFF,
@@ -498,7 +498,7 @@ SECTION_RODATA const u8 data_80398C34[148] = {
 };
 
 /* 80398CC8-80398D5C 0094+00 rc=0 efc=0 .rodata    vertex_color_ld$4638                                         */
-SECTION_RODATA const u8 data_80398CC8[148] = {
+const u8 data_80398CC8[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x78, 0x6E, 0x3C, 0xFF, 0xFF, 0x00, 0x00, 0xFF, 0x3C, 0x32, 0x50, 0xFF, 0x00, 0x00, 0x74, 0xFF,
@@ -512,7 +512,7 @@ SECTION_RODATA const u8 data_80398CC8[148] = {
 };
 
 /* 80398D5C-80398DF0 0094+00 rc=0 efc=0 .rodata    vertex_color_rd$4639                                         */
-SECTION_RODATA const u8 data_80398D5C[148] = {
+const u8 data_80398D5C[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x78, 0x6E, 0x3C, 0xFF, 0xFF, 0x96, 0x00, 0xFF, 0x55, 0x42, 0x00, 0xFF, 0x61, 0x48, 0xFF, 0xFF,
@@ -526,7 +526,7 @@ SECTION_RODATA const u8 data_80398D5C[148] = {
 };
 
 /* 80398DF0-80398E84 0094+00 rc=0 efc=0 .rodata    black_color$4675                                             */
-SECTION_RODATA const u8 data_80398DF0[148] = {
+const u8 data_80398DF0[148] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -540,7 +540,7 @@ SECTION_RODATA const u8 data_80398DF0[148] = {
 };
 
 /* 80398E84-80398F18 0094+00 rc=0 efc=0 .rodata    white_color$4676                                             */
-SECTION_RODATA const u8 data_80398E84[148] = {
+const u8 data_80398E84[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -554,7 +554,7 @@ SECTION_RODATA const u8 data_80398E84[148] = {
 };
 
 /* 80398F18-80398FAC 0094+00 rc=0 efc=0 .rodata    vertex_color_lu$4677                                         */
-SECTION_RODATA const u8 data_80398F18[148] = {
+const u8 data_80398F18[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -568,7 +568,7 @@ SECTION_RODATA const u8 data_80398F18[148] = {
 };
 
 /* 80398FAC-80399040 0094+00 rc=0 efc=0 .rodata    vertex_color_ru$4678                                         */
-SECTION_RODATA const u8 data_80398FAC[148] = {
+const u8 data_80398FAC[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -582,7 +582,7 @@ SECTION_RODATA const u8 data_80398FAC[148] = {
 };
 
 /* 80399040-803990D4 0094+00 rc=0 efc=0 .rodata    vertex_color_ld$4679                                         */
-SECTION_RODATA const u8 data_80399040[148] = {
+const u8 data_80399040[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -596,7 +596,7 @@ SECTION_RODATA const u8 data_80399040[148] = {
 };
 
 /* 803990D4-80399168 0094+00 rc=0 efc=0 .rodata    vertex_color_rd$4680                                         */
-SECTION_RODATA const u8 data_803990D4[148] = {
+const u8 data_803990D4[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -609,62 +609,65 @@ SECTION_RODATA const u8 data_803990D4[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-/* 80399168-80399338 01D0+00 rc=6 efc=0 .rodata    @stringBase0                                                 */
+/* 80399168-80399338 01D0+00 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80399168 = "";
-SECTION_DEAD char* const stringBase_80399169 = "zel_00.bmg";
-SECTION_DEAD char* const stringBase_80399174 = "D_MN01";
-SECTION_DEAD char* const stringBase_8039917B = "D_MN07";
-SECTION_DEAD char* const stringBase_80399182 = 
+const char* const stringBase_80399168 = "";
+const char* const stringBase_80399169 = "zel_00.bmg";
+const char* const stringBase_80399174 = "D_MN01";
+const char* const stringBase_8039917B = "D_MN07";
+const char* const stringBase_80399182 = 
     "im_font_number_32_32_ganshinkyo_0_02.bti";
-SECTION_DEAD char* const stringBase_803991AB = 
+const char* const stringBase_803991AB = 
     "im_font_number_32_32_ganshinkyo_1_02.bti";
-SECTION_DEAD char* const stringBase_803991D4 = 
+const char* const stringBase_803991D4 = 
     "im_font_number_32_32_ganshinkyo_2_02.bti";
-SECTION_DEAD char* const stringBase_803991FD = 
+const char* const stringBase_803991FD = 
     "im_font_number_32_32_ganshinkyo_3_02.bti";
-SECTION_DEAD char* const stringBase_80399226 = 
+const char* const stringBase_80399226 = 
     "im_font_number_32_32_ganshinkyo_4_03.bti";
-SECTION_DEAD char* const stringBase_8039924F = 
+const char* const stringBase_8039924F = 
     "im_font_number_32_32_ganshinkyo_5_02.bti";
-SECTION_DEAD char* const stringBase_80399278 = 
+const char* const stringBase_80399278 = 
     "im_font_number_32_32_ganshinkyo_6_02.bti";
-SECTION_DEAD char* const stringBase_803992A1 = 
+const char* const stringBase_803992A1 = 
     "im_font_number_32_32_ganshinkyo_7_02.bti";
-SECTION_DEAD char* const stringBase_803992CA = 
+const char* const stringBase_803992CA = 
     "im_font_number_32_32_ganshinkyo_8_02.bti";
-SECTION_DEAD char* const stringBase_803992F3 = 
+const char* const stringBase_803992F3 = 
     "im_font_number_32_32_ganshinkyo_9_02.bti";
-SECTION_DEAD char* const stringBase_8039931C = "im_plus_metal_24ｘ24_00.bti";
+const char* const stringBase_8039931C = "im_plus_metal_24ｘ24_00.bti";
 #pragma pop
 
-/* 80454998-8045499C 0004+00 rc=4 efc=0 .sdata2    @3916                                                        */
+/* 80454998-8045499C 0004+00 rc=0 efc=0 .sdata2    @3916                                                        */
 u8 d_meter_d_meter2_info__lit_3916[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045499C-804549A0 0004+00 rc=1 efc=0 .sdata2    @3917                                                        */
+/* 8045499C-804549A0 0004+00 rc=0 efc=0 .sdata2    @3917                                                        */
 f32 d_meter_d_meter2_info__lit_3917 = 1.0f;
 
-/* 804549A0-804549A4 0004+00 rc=1 efc=0 .sdata2    @3918                                                        */
+/* 804549A0-804549A4 0004+00 rc=0 efc=0 .sdata2    @3918                                                        */
 f32 d_meter_d_meter2_info__lit_3918 = 30.0f;
 
-/* 804549A4-804549A8 0004+00 rc=1 efc=0 .sdata2    @3919                                                        */
+/* 804549A4-804549A8 0004+00 rc=0 efc=0 .sdata2    @3919                                                        */
 f32 d_meter_d_meter2_info__lit_3919 = 304.0f;
 
-/* 804549A8-804549AC 0004+00 rc=1 efc=0 .sdata2    @3920                                                        */
+/* 804549A8-804549AC 0004+00 rc=0 efc=0 .sdata2    @3920                                                        */
 f32 d_meter_d_meter2_info__lit_3920 = 224.0f;
 
-/* 804549AC-804549B0 0004+00 rc=1 efc=0 .sdata2    @3921                                                        */
+/* 804549AC-804549B0 0004+00 rc=0 efc=0 .sdata2    @3921                                                        */
 f32 d_meter_d_meter2_info__lit_3921 = 608.0f;
 
-/* 804549B0-804549B8 0004+04 rc=1 efc=0 .sdata2    @3922                                                        */
-f32 d_meter_d_meter2_info__lit_3922 = 448.0f;
-/* padding 4 bytes */
+/* 804549B0-804549B8 0004+04 rc=0 efc=0 .sdata2    @3922                                                        */
+f32 d_meter_d_meter2_info__lit_3922[1 + 1 /* padding */] = {
+	448.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 8021BE68-8021C0E0 0278+00 rc=2 efc=1 .text      init__13dMeter2Info_cFv                                      */
+/* 8021BE68-8021C0E0 0278+00 rc=0 efc=0 .text      init__13dMeter2Info_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -675,7 +678,7 @@ asm void dMeter2Info_c::init() {
 #pragma pop
 
 
-/* 8021C0E0-8021C11C 003C+00 rc=1 efc=1 .text      setFloatingMessage__13dMeter2Info_cFUssb                     */
+/* 8021C0E0-8021C11C 003C+00 rc=0 efc=0 .text      setFloatingMessage__13dMeter2Info_cFUssb                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -697,7 +700,7 @@ asm void dMeter2Info_c::setFloatingFlow(u16 field_0, s16 field_1, bool field_2) 
 #pragma pop
 
 
-/* 8021C1DC-8021C1F0 0014+00 rc=4 efc=4 .text      isFloatingMessageVisible__13dMeter2Info_cFv                  */
+/* 8021C1DC-8021C1F0 0014+00 rc=0 efc=0 .text      isFloatingMessageVisible__13dMeter2Info_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -708,7 +711,7 @@ asm void dMeter2Info_c::isFloatingMessageVisible() {
 #pragma pop
 
 
-/* 8021C1F0-8021C218 0028+00 rc=1 efc=1 .text      decFloatingMessageTimer__13dMeter2Info_cFv                   */
+/* 8021C1F0-8021C218 0028+00 rc=0 efc=0 .text      decFloatingMessageTimer__13dMeter2Info_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -719,7 +722,7 @@ asm void dMeter2Info_c::decFloatingMessageTimer() {
 #pragma pop
 
 
-/* 8021C218-8021C238 0020+00 rc=3 efc=3 .text      resetFloatingMessage__13dMeter2Info_cFv                      */
+/* 8021C218-8021C238 0020+00 rc=0 efc=0 .text      resetFloatingMessage__13dMeter2Info_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -730,7 +733,7 @@ asm void dMeter2Info_c::resetFloatingMessage() {
 #pragma pop
 
 
-/* 8021C238-8021C250 0018+00 rc=2 efc=2 .text      decMsgKeyWaitTimer__13dMeter2Info_cFv                        */
+/* 8021C238-8021C250 0018+00 rc=0 efc=0 .text      decMsgKeyWaitTimer__13dMeter2Info_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -741,7 +744,7 @@ asm void dMeter2Info_c::decMsgKeyWaitTimer() {
 #pragma pop
 
 
-/* 8021C250-8021C370 0120+00 rc=16 efc=16 .text      getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c             */
+/* 8021C250-8021C370 0120+00 rc=0 efc=0 .text      getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -752,7 +755,7 @@ asm void dMeter2Info_c::getString(u32 field_0, char* field_1, JMSMesgEntry_c* fi
 #pragma pop
 
 
-/* 8021C370-8021C544 01D4+00 rc=1 efc=1 .text      getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c         */
+/* 8021C370-8021C544 01D4+00 rc=0 efc=0 .text      getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -763,7 +766,7 @@ asm void dMeter2Info_c::getStringKana(u32 field_0, char* field_1, JMSMesgEntry_c
 #pragma pop
 
 
-/* 8021C544-8021C6A4 0160+00 rc=32 efc=32 .text      getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c        */
+/* 8021C544-8021C6A4 0160+00 rc=0 efc=0 .text      getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -775,10 +778,10 @@ asm void dMeter2Info_c::getStringKanji(u32 field_0, char* field_1, JMSMesgEntry_
 
 
 /* ############################################################################################## */
-/* 804549B8-804549C0 0008+00 rc=2 efc=0 .sdata2    @4108                                                        */
+/* 804549B8-804549C0 0008+00 rc=0 efc=0 .sdata2    @4108                                                        */
 f64 d_meter_d_meter2_info__lit_4108 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8021C6A4-8021C7F4 0150+00 rc=1 efc=1 .text      getStringLength__13dMeter2Info_cFP10J2DTextBoxPc             */
+/* 8021C6A4-8021C7F4 0150+00 rc=0 efc=0 .text      getStringLength__13dMeter2Info_cFP10J2DTextBoxPc             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -789,7 +792,7 @@ asm void dMeter2Info_c::getStringLength(J2DTextBox* field_0, char* field_1) {
 #pragma pop
 
 
-/* 8021C7F4-8021C7FC 0008+00 rc=1 efc=1 .text      getFont__10J2DTextBoxCFv                                     */
+/* 8021C7F4-8021C7FC 0008+00 rc=0 efc=0 .text      getFont__10J2DTextBoxCFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -800,7 +803,7 @@ asm void J2DTextBox::getFont() const {
 #pragma pop
 
 
-/* 8021C7FC-8021C934 0138+00 rc=3 efc=3 .text      getStringLength__13dMeter2Info_cFP7JUTFontffPc               */
+/* 8021C7FC-8021C934 0138+00 rc=0 efc=0 .text      getStringLength__13dMeter2Info_cFP7JUTFontffPc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -811,7 +814,7 @@ asm void dMeter2Info_c::getStringLength(JUTFont* field_0, f32 field_1, f32 field
 #pragma pop
 
 
-/* 8021C934-8021C950 001C+00 rc=2 efc=2 .text      onDirectUseItem__13dMeter2Info_cFi                           */
+/* 8021C934-8021C950 001C+00 rc=0 efc=0 .text      onDirectUseItem__13dMeter2Info_cFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -822,7 +825,7 @@ asm void dMeter2Info_c::onDirectUseItem(int field_0) {
 #pragma pop
 
 
-/* 8021C950-8021C970 0020+00 rc=4 efc=4 .text      isDirectUseItem__13dMeter2Info_cFi                           */
+/* 8021C950-8021C970 0020+00 rc=0 efc=0 .text      isDirectUseItem__13dMeter2Info_cFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -834,10 +837,10 @@ asm void dMeter2Info_c::isDirectUseItem(int field_0) {
 
 
 /* ############################################################################################## */
-/* 80430178-80430188 000C+04 rc=1 efc=0 .bss       @3846                                                        */
+/* 80430178-80430188 000C+04 rc=0 efc=0 .bss       @3846                                                        */
 u8 d_meter_d_meter2_info__lit_3846[12 + 4 /* padding */];
 
-/* 80430188-80430280 00F8+00 rc=271 efc=267 .bss       g_meter2_info                                                */
+/* 80430188-80430280 00F8+00 rc=0 efc=0 .bss       g_meter2_info                                                */
 u8 g_meter2_info[248];
 
 /* 8021C970-8021C9DC 006C+00 rc=0 efc=0 .text      setMeterString__13dMeter2Info_cFl                            */
@@ -851,7 +854,7 @@ asm void dMeter2Info_c::setMeterString(s32 field_0) {
 #pragma pop
 
 
-/* 8021C9DC-8021CA04 0028+00 rc=4 efc=3 .text      resetWarpStatus__13dMeter2Info_cFv                           */
+/* 8021C9DC-8021CA04 0028+00 rc=0 efc=0 .text      resetWarpStatus__13dMeter2Info_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -862,7 +865,7 @@ asm void dMeter2Info_c::resetWarpStatus() {
 #pragma pop
 
 
-/* 8021CA04-8021CA70 006C+00 rc=2 efc=2 .text      warpInProc__13dMeter2Info_cFv                                */
+/* 8021CA04-8021CA70 006C+00 rc=0 efc=0 .text      warpInProc__13dMeter2Info_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -873,7 +876,7 @@ asm void dMeter2Info_c::warpInProc() {
 #pragma pop
 
 
-/* 8021CA70-8021CC00 0190+00 rc=1 efc=1 .text      warpOutProc__13dMeter2Info_cFv                               */
+/* 8021CA70-8021CC00 0190+00 rc=0 efc=0 .text      warpOutProc__13dMeter2Info_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -884,7 +887,7 @@ asm void dMeter2Info_c::warpOutProc() {
 #pragma pop
 
 
-/* 8021CC00-8021CC0C 000C+00 rc=1 efc=1 .text      resetMeterString__13dMeter2Info_cFv                          */
+/* 8021CC00-8021CC0C 000C+00 rc=0 efc=0 .text      resetMeterString__13dMeter2Info_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -895,7 +898,7 @@ asm void dMeter2Info_c::resetMeterString() {
 #pragma pop
 
 
-/* 8021CC0C-8021CC80 0074+00 rc=2 efc=1 .text      setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc               */
+/* 8021CC0C-8021CC80 0074+00 rc=0 efc=0 .text      setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -906,7 +909,7 @@ asm void dMeter2Info_c::setWarpInfo(char const* field_0, cXyz const& field_1, s1
 #pragma pop
 
 
-/* 8021CC80-8021CF08 0288+00 rc=2 efc=0 .text      getItemType__13dMeter2Info_cFUc                              */
+/* 8021CC80-8021CF08 0288+00 rc=0 efc=0 .text      getItemType__13dMeter2Info_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -917,7 +920,7 @@ asm void dMeter2Info_c::getItemType(u8 field_0) {
 #pragma pop
 
 
-/* 8021CF08-8021D36C 0464+00 rc=9 efc=9 .text      readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei */
+/* 8021CF08-8021D36C 0464+00 rc=0 efc=0 .text      readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -928,7 +931,7 @@ asm void dMeter2Info_c::readItemTexture(u8 field_0, void* field_1, J2DPicture* f
 #pragma pop
 
 
-/* 8021D36C-8021D44C 00E0+00 rc=2 efc=2 .text      setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture */
+/* 8021D36C-8021D44C 00E0+00 rc=0 efc=0 .text      setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -939,7 +942,7 @@ asm void dMeter2Info_c::setItemColor(u8 field_0, J2DPicture* field_1, J2DPicture
 #pragma pop
 
 
-/* 8021D44C-8021D4B8 006C+00 rc=2 efc=0 .text      get2ndTexture__13dMeter2Info_cFUc                            */
+/* 8021D44C-8021D4B8 006C+00 rc=0 efc=0 .text      get2ndTexture__13dMeter2Info_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -950,7 +953,7 @@ asm void dMeter2Info_c::get2ndTexture(u8 field_0) {
 #pragma pop
 
 
-/* 8021D4B8-8021D4FC 0044+00 rc=1 efc=0 .text      get3rdTexture__13dMeter2Info_cFUc                            */
+/* 8021D4B8-8021D4FC 0044+00 rc=0 efc=0 .text      get3rdTexture__13dMeter2Info_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -961,7 +964,7 @@ asm void dMeter2Info_c::get3rdTexture(u8 field_0) {
 #pragma pop
 
 
-/* 8021D4FC-8021D524 0028+00 rc=1 efc=0 .text      get4thTexture__13dMeter2Info_cFUc                            */
+/* 8021D4FC-8021D524 0028+00 rc=0 efc=0 .text      get4thTexture__13dMeter2Info_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -972,7 +975,7 @@ asm void dMeter2Info_c::get4thTexture(u8 field_0) {
 #pragma pop
 
 
-/* 8021D524-8021D644 0120+00 rc=2 efc=0 .text      set1stColor__13dMeter2Info_cFUcP10J2DPicture                 */
+/* 8021D524-8021D644 0120+00 rc=0 efc=0 .text      set1stColor__13dMeter2Info_cFUcP10J2DPicture                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -983,7 +986,7 @@ asm void dMeter2Info_c::set1stColor(u8 field_0, J2DPicture* field_1) {
 #pragma pop
 
 
-/* 8021D644-8021D764 0120+00 rc=2 efc=0 .text      set2ndColor__13dMeter2Info_cFUcP10J2DPicture                 */
+/* 8021D644-8021D764 0120+00 rc=0 efc=0 .text      set2ndColor__13dMeter2Info_cFUcP10J2DPicture                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -994,7 +997,7 @@ asm void dMeter2Info_c::set2ndColor(u8 field_0, J2DPicture* field_1) {
 #pragma pop
 
 
-/* 8021D764-8021DB64 0400+00 rc=2 efc=0 .text      set3rdColor__13dMeter2Info_cFUcP10J2DPicture                 */
+/* 8021D764-8021DB64 0400+00 rc=0 efc=0 .text      set3rdColor__13dMeter2Info_cFUcP10J2DPicture                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1005,7 +1008,7 @@ asm void dMeter2Info_c::set3rdColor(u8 field_0, J2DPicture* field_1) {
 #pragma pop
 
 
-/* 8021DB64-8021DCC4 0160+00 rc=2 efc=0 .text      set4thColor__13dMeter2Info_cFUcP10J2DPicture                 */
+/* 8021DB64-8021DCC4 0160+00 rc=0 efc=0 .text      set4thColor__13dMeter2Info_cFUcP10J2DPicture                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1016,7 +1019,7 @@ asm void dMeter2Info_c::set4thColor(u8 field_0, J2DPicture* field_1) {
 #pragma pop
 
 
-/* 8021DCC4-8021DCE0 001C+00 rc=2 efc=2 .text      setHotSpringTimer__13dMeter2Info_cFUc                        */
+/* 8021DCC4-8021DCE0 001C+00 rc=0 efc=0 .text      setHotSpringTimer__13dMeter2Info_cFUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1027,7 +1030,7 @@ asm void dMeter2Info_c::setHotSpringTimer(u8 field_0) {
 #pragma pop
 
 
-/* 8021DCE0-8021DD5C 007C+00 rc=1 efc=1 .text      decHotSpringTimer__13dMeter2Info_cFv                         */
+/* 8021DCE0-8021DD5C 007C+00 rc=0 efc=0 .text      decHotSpringTimer__13dMeter2Info_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1038,7 +1041,7 @@ asm void dMeter2Info_c::decHotSpringTimer() {
 #pragma pop
 
 
-/* 8021DD5C-8021DE18 00BC+00 rc=3 efc=1 .text      changeWater__13dMeter2Info_cFUc                              */
+/* 8021DD5C-8021DE18 00BC+00 rc=0 efc=0 .text      changeWater__13dMeter2Info_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1049,7 +1052,7 @@ asm void dMeter2Info_c::changeWater(u8 field_0) {
 #pragma pop
 
 
-/* 8021DE18-8021E0C4 02AC+00 rc=3 efc=3 .text      setMiniGameItem__13dMeter2Info_cFUc                          */
+/* 8021DE18-8021E0C4 02AC+00 rc=0 efc=0 .text      setMiniGameItem__13dMeter2Info_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1060,7 +1063,7 @@ asm void dMeter2Info_c::setMiniGameItem(u8 field_0) {
 #pragma pop
 
 
-/* 8021E0C4-8021E268 01A4+00 rc=3 efc=3 .text      resetMiniGameItem__13dMeter2Info_cFb                         */
+/* 8021E0C4-8021E268 01A4+00 rc=0 efc=0 .text      resetMiniGameItem__13dMeter2Info_cFb                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1082,7 +1085,7 @@ asm void dMeter2Info_c::setMiniGameCount(s8 field_0) {
 #pragma pop
 
 
-/* 8021E290-8021E2B4 0024+00 rc=3 efc=2 .text      setSaveStageName__13dMeter2Info_cFPCc                        */
+/* 8021E290-8021E2B4 0024+00 rc=0 efc=0 .text      setSaveStageName__13dMeter2Info_cFPCc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1104,7 +1107,7 @@ asm void dMeter2Info_getNowLifeGauge() {
 #pragma pop
 
 
-/* 8021E2C8-8021E2DC 0014+00 rc=11 efc=11 .text      dMeter2Info_getNumberTextureName__Fi                         */
+/* 8021E2C8-8021E2DC 0014+00 rc=0 efc=0 .text      dMeter2Info_getNumberTextureName__Fi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1116,10 +1119,10 @@ asm void dMeter2Info_getNumberTextureName(int field_0) {
 
 
 /* ############################################################################################## */
-/* 804510B8-804510BC 0004+00 rc=1 efc=0 .sbss      tex_name$5188                                                */
+/* 804510B8-804510BC 0004+00 rc=0 efc=0 .sbss      tex_name$5188                                                */
 u8 data_804510B8[4];
 
-/* 804510BC-804510C0 0004+00 rc=1 efc=0 .sbss      None                                                         */
+/* 804510BC-804510C0 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_804510BC[4];
 
 /* 8021E2DC-8021E308 002C+00 rc=0 efc=0 .text      dMeter2Info_getPlusTextureName__Fv                           */
@@ -1134,10 +1137,10 @@ asm void dMeter2Info_getPlusTextureName() {
 
 
 /* ############################################################################################## */
-/* 804549C0-804549C8 0008+00 rc=1 efc=0 .sdata2    @5206                                                        */
+/* 804549C0-804549C8 0008+00 rc=0 efc=0 .sdata2    @5206                                                        */
 f64 lit_5206 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8021E308-8021E4B0 01A8+00 rc=3 efc=3 .text      dMeter2Info_getPixel__FffffffPC7ResTIMG                      */
+/* 8021E308-8021E4B0 01A8+00 rc=0 efc=0 .text      dMeter2Info_getPixel__FffffffPC7ResTIMG                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1148,7 +1151,7 @@ asm void dMeter2Info_getPixel(f32 field_0, f32 field_1, f32 field_2, f32 field_3
 #pragma pop
 
 
-/* 8021E4B0-8021E530 0080+00 rc=2 efc=2 .text      dMeter2Info_setCloth__FUcb                                   */
+/* 8021E4B0-8021E530 0080+00 rc=0 efc=0 .text      dMeter2Info_setCloth__FUcb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1159,7 +1162,7 @@ asm void dMeter2Info_setCloth(u8 field_0, bool field_1) {
 #pragma pop
 
 
-/* 8021E530-8021E5D4 00A4+00 rc=3 efc=3 .text      dMeter2Info_setSword__FUcb                                   */
+/* 8021E530-8021E5D4 00A4+00 rc=0 efc=0 .text      dMeter2Info_setSword__FUcb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1170,7 +1173,7 @@ asm void dMeter2Info_setSword(u8 field_0, bool field_1) {
 #pragma pop
 
 
-/* 8021E5D4-8021E660 008C+00 rc=3 efc=3 .text      dMeter2Info_setShield__FUcb                                  */
+/* 8021E5D4-8021E660 008C+00 rc=0 efc=0 .text      dMeter2Info_setShield__FUcb                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1181,13 +1184,13 @@ asm void dMeter2Info_setShield(u8 field_0, bool field_1) {
 #pragma pop
 
 
-/* 8021E660-8021E668 0008+00 rc=1 efc=1 .text      dMeter2Info_is2DActiveTouchArea__Fv                          */
+/* 8021E660-8021E668 0008+00 rc=0 efc=0 .text      dMeter2Info_is2DActiveTouchArea__Fv                          */
 bool dMeter2Info_is2DActiveTouchArea() {
 	return false;
 }
 
 
-/* 8021E668-8021E688 0020+00 rc=1 efc=1 .text      dMeter2Info_isMapOpenCheck__Fv                               */
+/* 8021E668-8021E688 0020+00 rc=0 efc=0 .text      dMeter2Info_isMapOpenCheck__Fv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1198,7 +1201,7 @@ asm void dMeter2Info_isMapOpenCheck() {
 #pragma pop
 
 
-/* 8021E688-8021E6E4 005C+00 rc=2 efc=2 .text      dMeter2Info_isItemOpenCheck__Fv                              */
+/* 8021E688-8021E6E4 005C+00 rc=0 efc=0 .text      dMeter2Info_isItemOpenCheck__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1209,7 +1212,7 @@ asm void dMeter2Info_isItemOpenCheck() {
 #pragma pop
 
 
-/* 8021E6E4-8021E754 0070+00 rc=3 efc=2 .text      dMeter2Info_getRecieveLetterNum__Fv                          */
+/* 8021E6E4-8021E754 0070+00 rc=0 efc=0 .text      dMeter2Info_getRecieveLetterNum__Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1220,7 +1223,7 @@ asm void dMeter2Info_getRecieveLetterNum() {
 #pragma pop
 
 
-/* 8021E754-8021E804 00B0+00 rc=4 efc=4 .text      dMeter2Info_getNewLetterNum__Fv                              */
+/* 8021E754-8021E804 00B0+00 rc=0 efc=0 .text      dMeter2Info_getNewLetterNum__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1231,7 +1234,7 @@ asm void dMeter2Info_getNewLetterNum() {
 #pragma pop
 
 
-/* 8021E804-8021E8DC 00D8+00 rc=1 efc=1 .text      dMeter2Info_setNewLetterSender__Fv                           */
+/* 8021E804-8021E8DC 00D8+00 rc=0 efc=0 .text      dMeter2Info_setNewLetterSender__Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1242,7 +1245,7 @@ asm void dMeter2Info_setNewLetterSender() {
 #pragma pop
 
 
-/* 8021E8DC-8021E9D0 00F4+00 rc=1 efc=1 .text      dMeter2Info_recieveLetter__Fv                                */
+/* 8021E8DC-8021E9D0 00F4+00 rc=0 efc=0 .text      dMeter2Info_recieveLetter__Fv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1253,19 +1256,19 @@ asm void dMeter2Info_recieveLetter() {
 #pragma pop
 
 
-/* 8021E9D0-8021E9D4 0004+00 rc=33 efc=33 .text      dMeter2Info_set2DVibration__Fv                               */
+/* 8021E9D0-8021E9D4 0004+00 rc=0 efc=0 .text      dMeter2Info_set2DVibration__Fv                               */
 void dMeter2Info_set2DVibration() {
 	/* empty function */
 }
 
 
-/* 8021E9D4-8021E9D8 0004+00 rc=12 efc=12 .text      dMeter2Info_set2DVibrationM__Fv                              */
+/* 8021E9D4-8021E9D8 0004+00 rc=0 efc=0 .text      dMeter2Info_set2DVibrationM__Fv                              */
 void dMeter2Info_set2DVibrationM() {
 	/* empty function */
 }
 
 
-/* 8021E9D8-8021EA14 003C+00 rc=1 efc=1 .text      __sinit_d_meter2_info_cpp                                    */
+/* 8021E9D8-8021EA14 003C+00 rc=0 efc=0 .text      __sinit_d_meter2_info_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -43,7 +43,7 @@ void fpcBs_Is_JustOfType(int, int); // 2
 void fpcBs_MakeOfType(int*); // 2
 void fpcBs_MakeOfId(); // 2
 void fpcBs_Execute(base_process_class*); // 2
-static void fpcBs_DeleteAppend(base_process_class*); // 2
+void fpcBs_DeleteAppend(base_process_class*); // 2
 void fpcBs_IsDelete(base_process_class*); // 2
 void fpcBs_Delete(base_process_class*); // 2
 void fpcBs_Create(s16, u32, void*); // 2
@@ -53,7 +53,7 @@ extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
 extern "C" void fpcBs_MakeOfType__FPi(); // 1
 extern "C" void fpcBs_MakeOfId__Fv(); // 1
 extern "C" void fpcBs_Execute__FP18base_process_class(); // 1
-extern "C" static void fpcBs_DeleteAppend__FP18base_process_class(); // 1
+extern "C" void fpcBs_DeleteAppend__FP18base_process_class(); // 1
 extern "C" void fpcBs_IsDelete__FP18base_process_class(); // 1
 extern "C" void fpcBs_Delete__FP18base_process_class(); // 1
 extern "C" void fpcBs_Create__FsUiPv(); // 1
@@ -106,7 +106,7 @@ extern "C" void _restgpr_26(); // 1
 // Declarations:
 // 
 
-/* 8002064C-8002065C 0010+00 rc=14 efc=14 .text      fpcBs_Is_JustOfType__Fii                                     */
+/* 8002064C-8002065C 0010+00 rc=0 efc=0 .text      fpcBs_Is_JustOfType__Fii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,16 +118,16 @@ asm void fpcBs_Is_JustOfType(int field_0, int field_1) {
 
 
 /* ############################################################################################## */
-/* 80450D00-80450D04 0004+00 rc=1 efc=0 .sbss      g_fpcBs_type                                                 */
+/* 80450D00-80450D04 0004+00 rc=0 efc=0 .sbss      g_fpcBs_type                                                 */
 u8 g_fpcBs_type[4];
 
-/* 80450D04-80450D08 0004+00 rc=1 efc=0 .sbss      t_type$2207                                                  */
+/* 80450D04-80450D08 0004+00 rc=0 efc=0 .sbss      t_type$2207                                                  */
 u8 data_80450D04[4];
 
-/* 80450D08-80450D0C 0004+00 rc=1 efc=0 .sbss      None                                                         */
+/* 80450D08-80450D0C 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_80450D08[4];
 
-/* 8002065C-8002069C 0040+00 rc=6 efc=5 .text      fpcBs_MakeOfType__FPi                                        */
+/* 8002065C-8002069C 0040+00 rc=0 efc=0 .text      fpcBs_MakeOfType__FPi                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,13 +139,13 @@ asm void fpcBs_MakeOfType(int* field_0) {
 
 
 /* ############################################################################################## */
-/* 80450D0C-80450D10 0004+00 rc=1 efc=0 .sbss      process_id$2216                                              */
+/* 80450D0C-80450D10 0004+00 rc=0 efc=0 .sbss      process_id$2216                                              */
 u8 data_80450D0C[4];
 
-/* 80450D10-80450D18 0008+00 rc=1 efc=0 .sbss      None                                                         */
+/* 80450D10-80450D18 0008+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_80450D10[8];
 
-/* 8002069C-800206C4 0028+00 rc=2 efc=2 .text      fpcBs_MakeOfId__Fv                                           */
+/* 8002069C-800206C4 0028+00 rc=0 efc=0 .text      fpcBs_MakeOfId__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +156,7 @@ asm void fpcBs_MakeOfId() {
 #pragma pop
 
 
-/* 800206C4-80020720 005C+00 rc=1 efc=1 .text      fpcBs_Execute__FP18base_process_class                        */
+/* 800206C4-80020720 005C+00 rc=0 efc=0 .text      fpcBs_Execute__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,18 +167,18 @@ asm void fpcBs_Execute(base_process_class* field_0) {
 #pragma pop
 
 
-/* 80020720-80020760 0040+00 rc=2 efc=0 .text      fpcBs_DeleteAppend__FP18base_process_class                   */
+/* 80020720-80020760 0040+00 rc=0 efc=0 .text      fpcBs_DeleteAppend__FP18base_process_class                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcBs_DeleteAppend(base_process_class* field_0) {
+asm void fpcBs_DeleteAppend(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_base/fpcBs_DeleteAppend__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 80020760-800207BC 005C+00 rc=1 efc=1 .text      fpcBs_IsDelete__FP18base_process_class                       */
+/* 80020760-800207BC 005C+00 rc=0 efc=0 .text      fpcBs_IsDelete__FP18base_process_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,7 +189,7 @@ asm void fpcBs_IsDelete(base_process_class* field_0) {
 #pragma pop
 
 
-/* 800207BC-80020820 0064+00 rc=2 efc=2 .text      fpcBs_Delete__FP18base_process_class                         */
+/* 800207BC-80020820 0064+00 rc=0 efc=0 .text      fpcBs_Delete__FP18base_process_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -200,7 +200,7 @@ asm void fpcBs_Delete(base_process_class* field_0) {
 #pragma pop
 
 
-/* 80020820-8002091C 00FC+00 rc=2 efc=2 .text      fpcBs_Create__FsUiPv                                         */
+/* 80020820-8002091C 00FC+00 rc=0 efc=0 .text      fpcBs_Create__FsUiPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -211,7 +211,7 @@ asm void fpcBs_Create(s16 field_0, u32 field_1, void* field_2) {
 #pragma pop
 
 
-/* 8002091C-800209C8 00AC+00 rc=2 efc=2 .text      fpcBs_SubCreate__FP18base_process_class                      */
+/* 8002091C-800209C8 00AC+00 rc=0 efc=0 .text      fpcBs_SubCreate__FP18base_process_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

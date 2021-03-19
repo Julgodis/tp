@@ -1,11 +1,11 @@
-
-import globals as g
 import sys
 import time
-import rellib
+
 from intervaltree import Interval, IntervalTree
-from data import Module, Section, Symbol
 from dataclasses import dataclass, field
+
+from . import rellib
+from .data import Module, Section, Symbol
 
 class AIT(IntervalTree):
     def __reduce__(self):

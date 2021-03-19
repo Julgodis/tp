@@ -44,7 +44,7 @@ extern "C" void CalcCenter__8cM3dGAabCFP4cXyz(); // 1
 extern "C" void PlusR__8cM3dGAabFf(); // 1
 SECTION_SDATA2 extern f32 lit_416;
 SECTION_SDATA2 extern f32 lit_417;
-SECTION_SDATA2 extern f32 c_m3d_g_aab__lit_493;
+SECTION_SDATA2 extern f32 c_m3d_g_aab__lit_493[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -60,7 +60,7 @@ extern "C" void PSVECScale(); // 1
 // Declarations:
 // 
 
-/* 8026EC54-8026EC88 0034+00 rc=4 efc=4 .text      Set__8cM3dGAabFPC4cXyzPC4cXyz                                */
+/* 8026EC54-8026EC88 0034+00 rc=0 efc=0 .text      Set__8cM3dGAabFPC4cXyzPC4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +71,7 @@ asm void cM3dGAab::Set(cXyz const* field_0, cXyz const* field_1) {
 #pragma pop
 
 
-/* 8026EC88-8026ECD0 0048+00 rc=6 efc=6 .text      CrossY__8cM3dGAabCFPC4cXyz                                   */
+/* 8026EC88-8026ECD0 0048+00 rc=0 efc=0 .text      CrossY__8cM3dGAabCFPC4cXyz                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +82,7 @@ asm void cM3dGAab::CrossY(cXyz const* field_0) const {
 #pragma pop
 
 
-/* 8026ECD0-8026ECE4 0014+00 rc=6 efc=6 .text      UnderPlaneYUnder__8cM3dGAabCFf                               */
+/* 8026ECD0-8026ECE4 0014+00 rc=0 efc=0 .text      UnderPlaneYUnder__8cM3dGAabCFf                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +93,7 @@ asm void cM3dGAab::UnderPlaneYUnder(f32 field_0) const {
 #pragma pop
 
 
-/* 8026ECE4-8026ECF8 0014+00 rc=6 efc=6 .text      TopPlaneYUnder__8cM3dGAabCFf                                 */
+/* 8026ECE4-8026ECF8 0014+00 rc=0 efc=0 .text      TopPlaneYUnder__8cM3dGAabCFf                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,13 +105,13 @@ asm void cM3dGAab::TopPlaneYUnder(f32 field_0) const {
 
 
 /* ############################################################################################## */
-/* 804551D0-804551D4 0004+00 rc=1 efc=0 .sdata2    @416                                                         */
+/* 804551D0-804551D4 0004+00 rc=0 efc=0 .sdata2    @416                                                         */
 f32 lit_416 = 1000000000.0f;
 
-/* 804551D4-804551D8 0004+00 rc=1 efc=0 .sdata2    @417                                                         */
+/* 804551D4-804551D8 0004+00 rc=0 efc=0 .sdata2    @417                                                         */
 f32 lit_417 = -1000000000.0f;
 
-/* 8026ECF8-8026ED1C 0024+00 rc=6 efc=6 .text      ClearForMinMax__8cM3dGAabFv                                  */
+/* 8026ECF8-8026ED1C 0024+00 rc=0 efc=0 .text      ClearForMinMax__8cM3dGAabFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -122,7 +122,7 @@ asm void cM3dGAab::ClearForMinMax() {
 #pragma pop
 
 
-/* 8026ED1C-8026ED60 0044+00 rc=4 efc=3 .text      SetMinMax__8cM3dGAabFRC4cXyz                                 */
+/* 8026ED1C-8026ED60 0044+00 rc=0 efc=0 .text      SetMinMax__8cM3dGAabFRC4cXyz                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -133,7 +133,7 @@ asm void cM3dGAab::SetMinMax(cXyz const& field_0) {
 #pragma pop
 
 
-/* 8026ED60-8026EDA4 0044+00 rc=2 efc=2 .text      SetMinMax__8cM3dGAabFRC8cM3dGAab                             */
+/* 8026ED60-8026EDA4 0044+00 rc=0 efc=0 .text      SetMinMax__8cM3dGAabFRC8cM3dGAab                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +144,7 @@ asm void cM3dGAab::SetMinMax(cM3dGAab const& field_0) {
 #pragma pop
 
 
-/* 8026EDA4-8026EDE4 0040+00 rc=2 efc=1 .text      SetMin__8cM3dGAabFRC4cXyz                                    */
+/* 8026EDA4-8026EDE4 0040+00 rc=0 efc=0 .text      SetMin__8cM3dGAabFRC4cXyz                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +155,7 @@ asm void cM3dGAab::SetMin(cXyz const& field_0) {
 #pragma pop
 
 
-/* 8026EDE4-8026EE24 0040+00 rc=2 efc=1 .text      SetMax__8cM3dGAabFRC4cXyz                                    */
+/* 8026EDE4-8026EE24 0040+00 rc=0 efc=0 .text      SetMax__8cM3dGAabFRC4cXyz                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,11 +167,14 @@ asm void cM3dGAab::SetMax(cXyz const& field_0) {
 
 
 /* ############################################################################################## */
-/* 804551D8-804551E0 0004+04 rc=1 efc=0 .sdata2    @493                                                         */
-f32 c_m3d_g_aab__lit_493 = 0.5f;
-/* padding 4 bytes */
+/* 804551D8-804551E0 0004+04 rc=0 efc=0 .sdata2    @493                                                         */
+f32 c_m3d_g_aab__lit_493[1 + 1 /* padding */] = {
+	0.5f,
+	/* padding */
+	0.0f,
+};
 
-/* 8026EE24-8026EE68 0044+00 rc=1 efc=1 .text      CalcCenter__8cM3dGAabCFP4cXyz                                */
+/* 8026EE24-8026EE68 0044+00 rc=0 efc=0 .text      CalcCenter__8cM3dGAabCFP4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +185,7 @@ asm void cM3dGAab::CalcCenter(cXyz* field_0) const {
 #pragma pop
 
 
-/* 8026EE68-8026EEB4 004C+00 rc=1 efc=1 .text      PlusR__8cM3dGAabFf                                           */
+/* 8026EE68-8026EEB4 004C+00 rc=0 efc=0 .text      PlusR__8cM3dGAabFf                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

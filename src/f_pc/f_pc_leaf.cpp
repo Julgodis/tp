@@ -27,22 +27,22 @@ struct process_method_class {
 
 void fpcLf_GetPriority(leafdraw_class const*); // 2
 void fpcLf_DrawMethod(leafdraw_method_class*, void*); // 2
-static void fpcLf_Draw(leafdraw_class*); // 2
-static void fpcLf_Execute(leafdraw_class*); // 2
-static void fpcLf_IsDelete(leafdraw_class*); // 2
-static void fpcLf_Delete(leafdraw_class*); // 2
-static void fpcLf_Create(leafdraw_class*); // 2
+void fpcLf_Draw(leafdraw_class*); // 2
+void fpcLf_Execute(leafdraw_class*); // 2
+void fpcLf_IsDelete(leafdraw_class*); // 2
+void fpcLf_Delete(leafdraw_class*); // 2
+void fpcLf_Create(leafdraw_class*); // 2
 
 extern "C" void fpcLf_GetPriority__FPC14leafdraw_class(); // 1
 extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv(); // 1
-extern "C" static void fpcLf_Draw__FP14leafdraw_class(); // 1
-extern "C" static void fpcLf_Execute__FP14leafdraw_class(); // 1
-extern "C" static void fpcLf_IsDelete__FP14leafdraw_class(); // 1
-extern "C" static void fpcLf_Delete__FP14leafdraw_class(); // 1
-extern "C" static void fpcLf_Create__FP14leafdraw_class(); // 1
-SECTION_DATA extern void*g_fpcLf_Method[6];
+extern "C" void fpcLf_Draw__FP14leafdraw_class(); // 1
+extern "C" void fpcLf_Execute__FP14leafdraw_class(); // 1
+extern "C" void fpcLf_IsDelete__FP14leafdraw_class(); // 1
+extern "C" void fpcLf_Delete__FP14leafdraw_class(); // 1
+extern "C" void fpcLf_Create__FP14leafdraw_class(); // 1
+SECTION_DATA extern void* g_fpcLf_Method[5 + 1 /* padding */];
 SECTION_SBSS extern u8 g_fpcLf_type[4 + 4 /* padding */];
-SECTION_SBSS extern u8 struct_80450D38[8];
+extern u8 struct_80450D38[8];
 
 // 
 // External References:
@@ -70,7 +70,7 @@ extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
 // Declarations:
 // 
 
-/* 80021A00-80021A24 0024+00 rc=4 efc=4 .text      fpcLf_GetPriority__FPC14leafdraw_class                       */
+/* 80021A00-80021A24 0024+00 rc=0 efc=0 .text      fpcLf_GetPriority__FPC14leafdraw_class                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +81,7 @@ asm void fpcLf_GetPriority(leafdraw_class const* field_0) {
 #pragma pop
 
 
-/* 80021A24-80021A48 0024+00 rc=7 efc=6 .text      fpcLf_DrawMethod__FP21leafdraw_method_classPv                */
+/* 80021A24-80021A48 0024+00 rc=0 efc=0 .text      fpcLf_DrawMethod__FP21leafdraw_method_classPv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,44 +92,44 @@ asm void fpcLf_DrawMethod(leafdraw_method_class* field_0, void* field_1) {
 #pragma pop
 
 
-/* 80021A48-80021A80 0038+00 rc=1 efc=0 .text      fpcLf_Draw__FP14leafdraw_class                               */
+/* 80021A48-80021A80 0038+00 rc=0 efc=0 .text      fpcLf_Draw__FP14leafdraw_class                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcLf_Draw(leafdraw_class* field_0) {
+asm void fpcLf_Draw(leafdraw_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_leaf/fpcLf_Draw__FP14leafdraw_class.s"
 }
 #pragma pop
 
 
-/* 80021A80-80021AA8 0028+00 rc=1 efc=0 .text      fpcLf_Execute__FP14leafdraw_class                            */
+/* 80021A80-80021AA8 0028+00 rc=0 efc=0 .text      fpcLf_Execute__FP14leafdraw_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcLf_Execute(leafdraw_class* field_0) {
+asm void fpcLf_Execute(leafdraw_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_leaf/fpcLf_Execute__FP14leafdraw_class.s"
 }
 #pragma pop
 
 
-/* 80021AA8-80021AD0 0028+00 rc=1 efc=0 .text      fpcLf_IsDelete__FP14leafdraw_class                           */
+/* 80021AA8-80021AD0 0028+00 rc=0 efc=0 .text      fpcLf_IsDelete__FP14leafdraw_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcLf_IsDelete(leafdraw_class* field_0) {
+asm void fpcLf_IsDelete(leafdraw_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_leaf/fpcLf_IsDelete__FP14leafdraw_class.s"
 }
 #pragma pop
 
 
-/* 80021AD0-80021B14 0044+00 rc=1 efc=0 .text      fpcLf_Delete__FP14leafdraw_class                             */
+/* 80021AD0-80021B14 0044+00 rc=0 efc=0 .text      fpcLf_Delete__FP14leafdraw_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcLf_Delete(leafdraw_class* field_0) {
+asm void fpcLf_Delete(leafdraw_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_leaf/fpcLf_Delete__FP14leafdraw_class.s"
 }
@@ -137,14 +137,14 @@ asm static void fpcLf_Delete(leafdraw_class* field_0) {
 
 
 /* ############################################################################################## */
-/* 80450D30-80450D38 0004+04 rc=2 efc=1 .sbss      g_fpcLf_type                                                 */
+/* 80450D30-80450D38 0004+04 rc=0 efc=0 .sbss      g_fpcLf_type                                                 */
 u8 g_fpcLf_type[4 + 4 /* padding */];
 
-/* 80021B14-80021B88 0074+00 rc=1 efc=0 .text      fpcLf_Create__FP14leafdraw_class                             */
+/* 80021B14-80021B88 0074+00 rc=0 efc=0 .text      fpcLf_Create__FP14leafdraw_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcLf_Create(leafdraw_class* field_0) {
+asm void fpcLf_Create(leafdraw_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_leaf/fpcLf_Create__FP14leafdraw_class.s"
 }
@@ -152,8 +152,8 @@ asm static void fpcLf_Create(leafdraw_class* field_0) {
 
 
 /* ############################################################################################## */
-/* 803A39E8-803A3A00 0014+04 rc=27 efc=27 .data      g_fpcLf_Method                                               */
-void* g_fpcLf_Method[6] = {
+/* 803A39E8-803A3A00 0014+04 rc=0 efc=0 .data      g_fpcLf_Method                                               */
+void* g_fpcLf_Method[5 + 1 /* padding */] = {
 	(void*)fpcLf_Create__FP14leafdraw_class,
 	(void*)fpcLf_Delete__FP14leafdraw_class,
 	(void*)fpcLf_Execute__FP14leafdraw_class,
@@ -163,8 +163,6 @@ void* g_fpcLf_Method[6] = {
 	NULL,
 };
 
-/* 80450D38-80450D40 0008+00 rc=1 efc=1 .sbss      None                                                         */
+/* 80450D38-80450D40 0008+00 rc=0 efc=0 None       None                                                         */
 u8 struct_80450D38[8];
-/* 80450D38 0001 data_80450D38 */
-/* 80450D39 0007 data_80450D39 */
 

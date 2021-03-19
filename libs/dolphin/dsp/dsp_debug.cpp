@@ -23,7 +23,7 @@ extern "C" void __DSP_debug_printf(); // 1
 // Declarations:
 // 
 
-/* 80352580-803525D0 0050+00 rc=2 efc=2 .text      __DSP_debug_printf                                           */
+/* 80352580-803525D0 0050+00 rc=0 efc=0 .text      __DSP_debug_printf                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

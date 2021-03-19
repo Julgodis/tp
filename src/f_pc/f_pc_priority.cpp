@@ -35,21 +35,21 @@ struct node_list_class {
 // 
 
 void fpcPi_IsInQueue(process_priority_class*); // 2
-static void fpcPi_QueueTo(process_priority_class*); // 2
-static void fpcPi_ToQueue(process_priority_class*); // 2
-static void fpcPi_GetFromQueue(); // 2
+void fpcPi_QueueTo(process_priority_class*); // 2
+void fpcPi_ToQueue(process_priority_class*); // 2
+void fpcPi_GetFromQueue(); // 2
 void fpcPi_Delete(process_priority_class*); // 2
-static void fpcPi_IsNormal(u32, u16, u16); // 2
+void fpcPi_IsNormal(u32, u16, u16); // 2
 void fpcPi_Change(process_priority_class*, u32, u16, u16); // 2
 void fpcPi_Handler(); // 2
 void fpcPi_Init(process_priority_class*, void*, u32, u16, u16); // 2
 
 extern "C" void fpcPi_IsInQueue__FP22process_priority_class(); // 1
-extern "C" static void fpcPi_QueueTo__FP22process_priority_class(); // 1
-extern "C" static void fpcPi_ToQueue__FP22process_priority_class(); // 1
-extern "C" static void fpcPi_GetFromQueue__Fv(); // 1
+extern "C" void fpcPi_QueueTo__FP22process_priority_class(); // 1
+extern "C" void fpcPi_ToQueue__FP22process_priority_class(); // 1
+extern "C" void fpcPi_GetFromQueue__Fv(); // 1
 extern "C" void fpcPi_Delete__FP22process_priority_class(); // 1
-extern "C" static void fpcPi_IsNormal__FUiUsUs(); // 1
+extern "C" void fpcPi_IsNormal__FUiUsUs(); // 1
 extern "C" void fpcPi_Change__FP22process_priority_classUiUsUs(); // 1
 extern "C" void fpcPi_Handler__Fv(); // 1
 extern "C" void fpcPi_Init__FP22process_priority_classPvUiUsUs(); // 1
@@ -97,7 +97,7 @@ extern "C" void _restgpr_27(); // 1
 // Declarations:
 // 
 
-/* 80023130-80023150 0020+00 rc=1 efc=1 .text      fpcPi_IsInQueue__FP22process_priority_class                  */
+/* 80023130-80023150 0020+00 rc=0 efc=0 .text      fpcPi_IsInQueue__FP22process_priority_class                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,11 +108,11 @@ asm void fpcPi_IsInQueue(process_priority_class* field_0) {
 #pragma pop
 
 
-/* 80023150-80023188 0038+00 rc=1 efc=0 .text      fpcPi_QueueTo__FP22process_priority_class                    */
+/* 80023150-80023188 0038+00 rc=0 efc=0 .text      fpcPi_QueueTo__FP22process_priority_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcPi_QueueTo(process_priority_class* field_0) {
+asm void fpcPi_QueueTo(process_priority_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_priority/fpcPi_QueueTo__FP22process_priority_class.s"
 }
@@ -120,25 +120,25 @@ asm static void fpcPi_QueueTo(process_priority_class* field_0) {
 
 
 /* ############################################################################################## */
-/* 803F4E58-803F4E68 000C+04 rc=2 efc=0 .bss       l_fpcPi_Queue                                                */
+/* 803F4E58-803F4E68 000C+04 rc=0 efc=0 .bss       l_fpcPi_Queue                                                */
 u8 l_fpcPi_Queue[12 + 4 /* padding */];
 
-/* 80023188-80023214 008C+00 rc=1 efc=0 .text      fpcPi_ToQueue__FP22process_priority_class                    */
+/* 80023188-80023214 008C+00 rc=0 efc=0 .text      fpcPi_ToQueue__FP22process_priority_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcPi_ToQueue(process_priority_class* field_0) {
+asm void fpcPi_ToQueue(process_priority_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_priority/fpcPi_ToQueue__FP22process_priority_class.s"
 }
 #pragma pop
 
 
-/* 80023214-80023268 0054+00 rc=1 efc=0 .text      fpcPi_GetFromQueue__Fv                                       */
+/* 80023214-80023268 0054+00 rc=0 efc=0 .text      fpcPi_GetFromQueue__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcPi_GetFromQueue() {
+asm void fpcPi_GetFromQueue() {
 	nofralloc
 #include "asm/f_pc/f_pc_priority/fpcPi_GetFromQueue__Fv.s"
 }
@@ -146,12 +146,12 @@ asm static void fpcPi_GetFromQueue() {
 
 
 /* ############################################################################################## */
-/* 804505E8-804505F0 0008+00 rc=1 efc=0 .sdata     crear$2224                                                   */
+/* 804505E8-804505F0 0008+00 rc=0 efc=0 .sdata     crear$2224                                                   */
 u8 data_804505E8[8] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-/* 80023268-800232B4 004C+00 rc=2 efc=1 .text      fpcPi_Delete__FP22process_priority_class                     */
+/* 80023268-800232B4 004C+00 rc=0 efc=0 .text      fpcPi_Delete__FP22process_priority_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,18 +162,18 @@ asm void fpcPi_Delete(process_priority_class* field_0) {
 #pragma pop
 
 
-/* 800232B4-800232E8 0034+00 rc=2 efc=0 .text      fpcPi_IsNormal__FUiUsUs                                      */
+/* 800232B4-800232E8 0034+00 rc=0 efc=0 .text      fpcPi_IsNormal__FUiUsUs                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fpcPi_IsNormal(u32 field_0, u16 field_1, u16 field_2) {
+asm void fpcPi_IsNormal(u32 field_0, u16 field_1, u16 field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_priority/fpcPi_IsNormal__FUiUsUs.s"
 }
 #pragma pop
 
 
-/* 800232E8-80023428 0140+00 rc=3 efc=3 .text      fpcPi_Change__FP22process_priority_classUiUsUs               */
+/* 800232E8-80023428 0140+00 rc=0 efc=0 .text      fpcPi_Change__FP22process_priority_classUiUsUs               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +184,7 @@ asm void fpcPi_Change(process_priority_class* field_0, u32 field_1, u16 field_2,
 #pragma pop
 
 
-/* 80023428-800234BC 0094+00 rc=1 efc=1 .text      fpcPi_Handler__Fv                                            */
+/* 80023428-800234BC 0094+00 rc=0 efc=0 .text      fpcPi_Handler__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -195,7 +195,7 @@ asm void fpcPi_Handler() {
 #pragma pop
 
 
-/* 800234BC-80023564 00A8+00 rc=1 efc=1 .text      fpcPi_Init__FP22process_priority_classPvUiUsUs               */
+/* 800234BC-80023564 00A8+00 rc=0 efc=0 .text      fpcPi_Init__FP22process_priority_classPvUiUsUs               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -207,7 +207,7 @@ asm void fpcPi_Init(process_priority_class* field_0, void* field_1, u32 field_2,
 
 
 /* ############################################################################################## */
-/* 804505F0-804505F8 0008+00 rc=5 efc=5 .sdata     None                                                         */
+/* 804505F0-804505F8 0008+00 rc=0 efc=0 .sdata     None                                                         */
 u8 data_804505F0[8] = {
 	0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };

@@ -36,7 +36,7 @@ extern "C" void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRC
 // Declarations:
 // 
 
-/* 80288988-80288A78 00F0+00 rc=3 efc=3 .text      isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData */
+/* 80288988-80288A78 00F0+00 rc=0 efc=0 .text      isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

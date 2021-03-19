@@ -9,10 +9,16 @@
 // Types:
 // 
 
-struct _GXColor {
+struct J2DAnmTexPattern {
+	/* 8030BEE8 */ void getTexNo(u16, u16*) const;
+	/* 8030BF9C */ void getResTIMG(u16) const;
+	/* 8030BFF0 */ void getPalette(u16) const;
 };
 
 struct _GXColorS10 {
+};
+
+struct _GXColor {
 };
 
 struct J2DAnmTevRegKey {
@@ -20,21 +26,15 @@ struct J2DAnmTevRegKey {
 	/* 8030C3B4 */ void getTevKonstReg(u16, _GXColor*) const;
 };
 
+struct J2DAnmColor {
+	/* 802EB390 */ void getColor(u16, _GXColor*) const;
+};
+
 struct J3DTextureSRTInfo {
 };
 
 struct J2DAnmTextureSRTKey {
 	/* 8030B9F0 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
-};
-
-struct J2DAnmTexPattern {
-	/* 8030BEE8 */ void getTexNo(u16, u16*) const;
-	/* 8030BF9C */ void getResTIMG(u16) const;
-	/* 8030BFF0 */ void getPalette(u16) const;
-};
-
-struct J2DAnmColor {
-	/* 802EB390 */ void getColor(u16, _GXColor*) const;
 };
 
 struct J2DMaterial {
@@ -61,8 +61,9 @@ struct J2DColorBlock {
 	/* 802EB424 */ void setGX();
 };
 
-struct J2DIndTexOrder {
-	/* 802EB378 */ J2DIndTexOrder();
+struct J2DIndTexCoordScale {
+	/* 802EB290 */ ~J2DIndTexCoordScale();
+	/* 802EB2CC */ J2DIndTexCoordScale();
 };
 
 struct J2DIndTexMtx {
@@ -70,9 +71,8 @@ struct J2DIndTexMtx {
 	/* 802EB320 */ J2DIndTexMtx();
 };
 
-struct J2DIndTexCoordScale {
-	/* 802EB290 */ ~J2DIndTexCoordScale();
-	/* 802EB2CC */ J2DIndTexCoordScale();
+struct J2DIndTexOrder {
+	/* 802EB378 */ J2DIndTexOrder();
 };
 
 struct J2DIndBlock {
@@ -121,13 +121,13 @@ struct J2DColorChan {
 	/* 802EB280 */ J2DColorChan();
 };
 
+struct ResTIMG {
+};
+
 struct _GXTlut {
 };
 
 struct JUTPalette {
-};
-
-struct ResTIMG {
 };
 
 struct JUTTexture {
@@ -211,10 +211,10 @@ extern "C" void __dt__12J2DIndTexMtxFv(); // 1
 extern "C" void __ct__12J2DIndTexMtxFv(); // 1
 extern "C" void __ct__14J2DIndTexOrderFv(); // 1
 extern "C" void getColor__11J2DAnmColorCFUsP8_GXColor(); // 1
-SECTION_DATA extern void*const __vt__15J2DIndBlockNull[14];
-SECTION_DATA extern void*const __vt__11J2DIndBlock[14];
-SECTION_DATA extern void*const __vt__11J2DMaterial[3];
-SECTION_DATA extern void*const __vt__13J2DColorBlock[3];
+SECTION_DATA extern void* const __vt__15J2DIndBlockNull[14];
+SECTION_DATA extern void* const __vt__11J2DIndBlock[14];
+SECTION_DATA extern void* const __vt__11J2DMaterial[3];
+SECTION_DATA extern void* const __vt__13J2DColorBlock[3];
 SECTION_SDATA2 extern f32 lit_1943;
 SECTION_SDATA2 extern f32 lit_1944;
 SECTION_SDATA2 extern f64 lit_1946;
@@ -265,24 +265,23 @@ extern "C" void _restgpr_26(); // 1
 SECTION_RODATA extern const u8 j2dDefaultTexCoordInfo[32];
 SECTION_RODATA extern const u8 j2dDefaultTexMtxInfo[36];
 SECTION_RODATA extern const u8 j2dDefaultIndTexMtxInfo[28];
-SECTION_DATA extern void*const __vt__15J2DIndBlockFull[14];
-SECTION_DATA extern void*const __vt__11J2DTevBlock[47];
-SECTION_DATA extern void*const __vt__14J2DTexGenBlock[4];
-SECTION_SDATA2 extern u16 j2dDefaultIndTexOrderNull;
+SECTION_DATA extern void* const __vt__15J2DIndBlockFull[14];
+SECTION_DATA extern void* const __vt__11J2DTevBlock[47];
+SECTION_DATA extern void* const __vt__14J2DTexGenBlock[3 + 1 /* padding */];
+SECTION_SDATA2 extern u16 j2dDefaultIndTexOrderNull[1 + 1 /* padding */];
 SECTION_SDATA2 extern u8 j2dDefaultIndTexCoordScaleInfo[2 + 2 /* padding */];
 SECTION_SDATA2 extern u32 j2dDefaultBlendInfo;
 SECTION_SDATA2 extern u32 j2dDefaultColorChanInfo;
-SECTION_SDATA2 extern u16 j2dDefaultAlphaCmp;
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803CCA08-803CCA40 0038+00 rc=2 efc=0 .data      __vt__15J2DIndBlockNull                                      */
+/* 803CCA08-803CCA40 0038+00 rc=0 efc=0 .data      __vt__15J2DIndBlockNull                                      */
 void* const __vt__15J2DIndBlockNull[14] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)initialize__11J2DIndBlockFv,
 	(void*)setGX__15J2DIndBlockNullFv,
 	(void*)getType__15J2DIndBlockNullFv,
@@ -297,13 +296,13 @@ void* const __vt__15J2DIndBlockNull[14] = {
 	(void*)__dt__15J2DIndBlockNullFv,
 };
 
-/* 803CCA40-803CCA78 0038+00 rc=4 efc=1 .data      __vt__11J2DIndBlock                                          */
+/* 803CCA40-803CCA78 0038+00 rc=0 efc=0 .data      __vt__11J2DIndBlock                                          */
 void* const __vt__11J2DIndBlock[14] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)initialize__11J2DIndBlockFv,
 	(void*)setGX__11J2DIndBlockFv,
-	NULL,
+	(void*)NULL,
 	(void*)setIndTexStageNum__11J2DIndBlockFUc,
 	(void*)getIndTexStageNum__11J2DIndBlockCFv,
 	(void*)setIndTexOrder__11J2DIndBlockFUl14J2DIndTexOrder,
@@ -315,21 +314,21 @@ void* const __vt__11J2DIndBlock[14] = {
 	(void*)__dt__11J2DIndBlockFv,
 };
 
-/* 803CCA78-803CCA84 000C+00 rc=2 efc=0 .data      __vt__11J2DMaterial                                          */
+/* 803CCA78-803CCA84 000C+00 rc=0 efc=0 .data      __vt__11J2DMaterial                                          */
 void* const __vt__11J2DMaterial[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__11J2DMaterialFv,
 };
 
-/* 803CCA84-803CCA90 000C+00 rc=3 efc=0 .data      __vt__13J2DColorBlock                                        */
+/* 803CCA84-803CCA90 000C+00 rc=0 efc=0 .data      __vt__13J2DColorBlock                                        */
 void* const __vt__13J2DColorBlock[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__13J2DColorBlockFv,
 };
 
-/* 802EA1AC-802EA2CC 0120+00 rc=1 efc=1 .text      __ct__11J2DMaterialFv                                        */
+/* 802EA1AC-802EA2CC 0120+00 rc=0 efc=0 .text      __ct__11J2DMaterialFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -340,7 +339,7 @@ asm J2DMaterial::J2DMaterial() {
 #pragma pop
 
 
-/* 802EA2CC-802EA38C 00C0+00 rc=3 efc=2 .text      __dt__11J2DMaterialFv                                        */
+/* 802EA2CC-802EA38C 00C0+00 rc=0 efc=0 .text      __dt__11J2DMaterialFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -351,7 +350,7 @@ asm J2DMaterial::~J2DMaterial() {
 #pragma pop
 
 
-/* 802EA38C-802EA410 0084+00 rc=8 efc=8 .text      setGX__11J2DMaterialFv                                       */
+/* 802EA38C-802EA410 0084+00 rc=0 efc=0 .text      setGX__11J2DMaterialFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -362,7 +361,7 @@ asm void J2DMaterial::setGX() {
 #pragma pop
 
 
-/* 802EA410-802EA5C4 01B4+00 rc=1 efc=1 .text      createTevBlock__11J2DMaterialFib                             */
+/* 802EA410-802EA5C4 01B4+00 rc=0 efc=0 .text      createTevBlock__11J2DMaterialFib                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -373,7 +372,7 @@ asm void J2DMaterial::createTevBlock(int field_0, bool field_1) {
 #pragma pop
 
 
-/* 802EA5C4-802EA79C 01D8+00 rc=1 efc=1 .text      createIndBlock__11J2DMaterialFib                             */
+/* 802EA5C4-802EA79C 01D8+00 rc=0 efc=0 .text      createIndBlock__11J2DMaterialFib                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -384,7 +383,7 @@ asm void J2DMaterial::createIndBlock(int field_0, bool field_1) {
 #pragma pop
 
 
-/* 802EA79C-802EA84C 00B0+00 rc=1 efc=0 .text      __ct__Q211J2DMaterial21J2DMaterialAnmPointerFv               */
+/* 802EA79C-802EA84C 00B0+00 rc=0 efc=0 .text      __ct__Q211J2DMaterial21J2DMaterialAnmPointerFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -395,7 +394,7 @@ asm J2DMaterial::J2DMaterialAnmPointer::J2DMaterialAnmPointer() {
 #pragma pop
 
 
-/* 802EA84C-802EA89C 0050+00 rc=4 efc=0 .text      makeAnmPointer__11J2DMaterialFv                              */
+/* 802EA84C-802EA89C 0050+00 rc=0 efc=0 .text      makeAnmPointer__11J2DMaterialFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -406,7 +405,7 @@ asm void J2DMaterial::makeAnmPointer() {
 #pragma pop
 
 
-/* 802EA89C-802EA94C 00B0+00 rc=4 efc=4 .text      setAnimation__11J2DMaterialFP11J2DAnmColor                   */
+/* 802EA89C-802EA94C 00B0+00 rc=0 efc=0 .text      setAnimation__11J2DMaterialFP11J2DAnmColor                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -417,7 +416,7 @@ asm void J2DMaterial::setAnimation(J2DAnmColor* field_0) {
 #pragma pop
 
 
-/* 802EA94C-802EAA2C 00E0+00 rc=4 efc=4 .text      setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey           */
+/* 802EA94C-802EAA2C 00E0+00 rc=0 efc=0 .text      setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -428,7 +427,7 @@ asm void J2DMaterial::setAnimation(J2DAnmTextureSRTKey* field_0) {
 #pragma pop
 
 
-/* 802EAA2C-802EAB0C 00E0+00 rc=4 efc=4 .text      setAnimation__11J2DMaterialFP16J2DAnmTexPattern              */
+/* 802EAA2C-802EAB0C 00E0+00 rc=0 efc=0 .text      setAnimation__11J2DMaterialFP16J2DAnmTexPattern              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -439,7 +438,7 @@ asm void J2DMaterial::setAnimation(J2DAnmTexPattern* field_0) {
 #pragma pop
 
 
-/* 802EAB0C-802EAC78 016C+00 rc=4 efc=4 .text      setAnimation__11J2DMaterialFP15J2DAnmTevRegKey               */
+/* 802EAB0C-802EAC78 016C+00 rc=0 efc=0 .text      setAnimation__11J2DMaterialFP15J2DAnmTevRegKey               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -451,16 +450,16 @@ asm void J2DMaterial::setAnimation(J2DAnmTevRegKey* field_0) {
 
 
 /* ############################################################################################## */
-/* 804561B0-804561B4 0004+00 rc=1 efc=0 .sdata2    @1943                                                        */
+/* 804561B0-804561B4 0004+00 rc=0 efc=0 .sdata2    @1943                                                        */
 f32 lit_1943 = 360.0f;
 
-/* 804561B4-804561B8 0004+00 rc=1 efc=0 .sdata2    @1944                                                        */
+/* 804561B4-804561B8 0004+00 rc=0 efc=0 .sdata2    @1944                                                        */
 f32 lit_1944 = 65535.0f;
 
-/* 804561B8-804561C0 0008+00 rc=1 efc=0 .sdata2    @1946                                                        */
+/* 804561B8-804561C0 0008+00 rc=0 efc=0 .sdata2    @1946                                                        */
 f64 lit_1946 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802EAC78-802EB0F4 047C+00 rc=1 efc=1 .text      animation__11J2DMaterialFv                                   */
+/* 802EAC78-802EB0F4 047C+00 rc=0 efc=0 .text      animation__11J2DMaterialFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -471,7 +470,7 @@ asm void J2DMaterial::animation() {
 #pragma pop
 
 
-/* 802EB0F4-802EB13C 0048+00 rc=1 efc=0 .text      __dt__13J2DColorBlockFv                                      */
+/* 802EB0F4-802EB13C 0048+00 rc=0 efc=0 .text      __dt__13J2DColorBlockFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -482,7 +481,7 @@ asm J2DColorBlock::~J2DColorBlock() {
 #pragma pop
 
 
-/* 802EB13C-802EB184 0048+00 rc=1 efc=0 .text      __dt__11J2DIndBlockFv                                        */
+/* 802EB13C-802EB184 0048+00 rc=0 efc=0 .text      __dt__11J2DIndBlockFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -493,7 +492,7 @@ asm J2DIndBlock::~J2DIndBlock() {
 #pragma pop
 
 
-/* 802EB184-802EB1CC 0048+00 rc=1 efc=1 .text      __dt__11J2DTevBlockFv                                        */
+/* 802EB184-802EB1CC 0048+00 rc=0 efc=0 .text      __dt__11J2DTevBlockFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -504,43 +503,43 @@ asm J2DTevBlock::~J2DTevBlock() {
 #pragma pop
 
 
-/* 802EB1CC-802EB1D0 0004+00 rc=1 efc=0 .text      setGX__11J2DIndBlockFv                                       */
+/* 802EB1CC-802EB1D0 0004+00 rc=0 efc=0 .text      setGX__11J2DIndBlockFv                                       */
 void J2DIndBlock::setGX() {
 	/* empty function */
 }
 
 
-/* 802EB1D0-802EB1D4 0004+00 rc=1 efc=1 .text      setGX__11J2DTevBlockFv                                       */
+/* 802EB1D0-802EB1D4 0004+00 rc=0 efc=0 .text      setGX__11J2DTevBlockFv                                       */
 void J2DTevBlock::setGX() {
 	/* empty function */
 }
 
 
-/* 802EB1D4-802EB1D8 0004+00 rc=1 efc=1 .text      setTevKColor__11J2DTevBlockFUlQ28JUtility6TColor             */
+/* 802EB1D4-802EB1D8 0004+00 rc=0 efc=0 .text      setTevKColor__11J2DTevBlockFUlQ28JUtility6TColor             */
 void J2DTevBlock::setTevKColor(u32 field_0, JUtility::TColor field_1) {
 	/* empty function */
 }
 
 
-/* 802EB1D8-802EB1DC 0004+00 rc=1 efc=1 .text      setTevColor__11J2DTevBlockFUl13J2DGXColorS10                 */
+/* 802EB1D8-802EB1DC 0004+00 rc=0 efc=0 .text      setTevColor__11J2DTevBlockFUl13J2DGXColorS10                 */
 void J2DTevBlock::setTevColor(u32 field_0, J2DGXColorS10 field_1) {
 	/* empty function */
 }
 
 
-/* 802EB1DC-802EB1E0 0004+00 rc=1 efc=1 .text      setTexNo__11J2DTevBlockFUlUs                                 */
+/* 802EB1DC-802EB1E0 0004+00 rc=0 efc=0 .text      setTexNo__11J2DTevBlockFUlUs                                 */
 void J2DTevBlock::setTexNo(u32 field_0, u16 field_1) {
 	/* empty function */
 }
 
 
-/* 802EB1E0-802EB1E4 0004+00 rc=1 efc=0 .text      setGX__15J2DIndBlockNullFv                                   */
+/* 802EB1E0-802EB1E4 0004+00 rc=0 efc=0 .text      setGX__15J2DIndBlockNullFv                                   */
 void J2DIndBlockNull::setGX() {
 	/* empty function */
 }
 
 
-/* 802EB1E4-802EB1F0 000C+00 rc=1 efc=0 .text      getType__15J2DIndBlockNullFv                                 */
+/* 802EB1E4-802EB1F0 000C+00 rc=0 efc=0 .text      getType__15J2DIndBlockNullFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,7 +550,7 @@ asm void J2DIndBlockNull::getType() {
 #pragma pop
 
 
-/* 802EB1F0-802EB24C 005C+00 rc=1 efc=0 .text      __dt__15J2DIndBlockNullFv                                    */
+/* 802EB1F0-802EB24C 005C+00 rc=0 efc=0 .text      __dt__15J2DIndBlockNullFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -562,37 +561,37 @@ asm J2DIndBlockNull::~J2DIndBlockNull() {
 #pragma pop
 
 
-/* 802EB24C-802EB250 0004+00 rc=2 efc=0 .text      initialize__11J2DIndBlockFv                                  */
+/* 802EB24C-802EB250 0004+00 rc=0 efc=0 .text      initialize__11J2DIndBlockFv                                  */
 void J2DIndBlock::initialize() {
 	/* empty function */
 }
 
 
-/* 802EB250-802EB254 0004+00 rc=2 efc=0 .text      setIndTexStageNum__11J2DIndBlockFUc                          */
+/* 802EB250-802EB254 0004+00 rc=0 efc=0 .text      setIndTexStageNum__11J2DIndBlockFUc                          */
 void J2DIndBlock::setIndTexStageNum(u8 field_0) {
 	/* empty function */
 }
 
 
-/* 802EB254-802EB258 0004+00 rc=2 efc=0 .text      setIndTexOrder__11J2DIndBlockFUl14J2DIndTexOrder             */
+/* 802EB254-802EB258 0004+00 rc=0 efc=0 .text      setIndTexOrder__11J2DIndBlockFUl14J2DIndTexOrder             */
 void J2DIndBlock::setIndTexOrder(u32 field_0, J2DIndTexOrder field_1) {
 	/* empty function */
 }
 
 
-/* 802EB258-802EB25C 0004+00 rc=2 efc=0 .text      setIndTexMtx__11J2DIndBlockFUl12J2DIndTexMtx                 */
+/* 802EB258-802EB25C 0004+00 rc=0 efc=0 .text      setIndTexMtx__11J2DIndBlockFUl12J2DIndTexMtx                 */
 void J2DIndBlock::setIndTexMtx(u32 field_0, J2DIndTexMtx field_1) {
 	/* empty function */
 }
 
 
-/* 802EB25C-802EB260 0004+00 rc=2 efc=0 .text      setIndTexCoordScale__11J2DIndBlockFUl19J2DIndTexCoordScale   */
+/* 802EB25C-802EB260 0004+00 rc=0 efc=0 .text      setIndTexCoordScale__11J2DIndBlockFUl19J2DIndTexCoordScale   */
 void J2DIndBlock::setIndTexCoordScale(u32 field_0, J2DIndTexCoordScale field_1) {
 	/* empty function */
 }
 
 
-/* 802EB260-802EB280 0020+00 rc=1 efc=0 .text      __ct__11J2DTexCoordFv                                        */
+/* 802EB260-802EB280 0020+00 rc=0 efc=0 .text      __ct__11J2DTexCoordFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -603,7 +602,7 @@ asm J2DTexCoord::J2DTexCoord() {
 #pragma pop
 
 
-/* 802EB280-802EB290 0010+00 rc=1 efc=0 .text      __ct__12J2DColorChanFv                                       */
+/* 802EB280-802EB290 0010+00 rc=0 efc=0 .text      __ct__12J2DColorChanFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -614,7 +613,7 @@ asm J2DColorChan::J2DColorChan() {
 #pragma pop
 
 
-/* 802EB290-802EB2CC 003C+00 rc=2 efc=1 .text      __dt__19J2DIndTexCoordScaleFv                                */
+/* 802EB290-802EB2CC 003C+00 rc=0 efc=0 .text      __dt__19J2DIndTexCoordScaleFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -625,7 +624,7 @@ asm J2DIndTexCoordScale::~J2DIndTexCoordScale() {
 #pragma pop
 
 
-/* 802EB2CC-802EB2E4 0018+00 rc=1 efc=0 .text      __ct__19J2DIndTexCoordScaleFv                                */
+/* 802EB2CC-802EB2E4 0018+00 rc=0 efc=0 .text      __ct__19J2DIndTexCoordScaleFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -636,7 +635,7 @@ asm J2DIndTexCoordScale::J2DIndTexCoordScale() {
 #pragma pop
 
 
-/* 802EB2E4-802EB320 003C+00 rc=2 efc=1 .text      __dt__12J2DIndTexMtxFv                                       */
+/* 802EB2E4-802EB320 003C+00 rc=0 efc=0 .text      __dt__12J2DIndTexMtxFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -647,7 +646,7 @@ asm J2DIndTexMtx::~J2DIndTexMtx() {
 #pragma pop
 
 
-/* 802EB320-802EB378 0058+00 rc=1 efc=0 .text      __ct__12J2DIndTexMtxFv                                       */
+/* 802EB320-802EB378 0058+00 rc=0 efc=0 .text      __ct__12J2DIndTexMtxFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -658,7 +657,7 @@ asm J2DIndTexMtx::J2DIndTexMtx() {
 #pragma pop
 
 
-/* 802EB378-802EB390 0018+00 rc=1 efc=0 .text      __ct__14J2DIndTexOrderFv                                     */
+/* 802EB378-802EB390 0018+00 rc=0 efc=0 .text      __ct__14J2DIndTexOrderFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -669,7 +668,7 @@ asm J2DIndTexOrder::J2DIndTexOrder() {
 #pragma pop
 
 
-/* 802EB390-802EB394 0004+00 rc=1 efc=1 .text      getColor__11J2DAnmColorCFUsP8_GXColor                        */
+/* 802EB390-802EB394 0004+00 rc=0 efc=0 .text      getColor__11J2DAnmColorCFUsP8_GXColor                        */
 void J2DAnmColor::getColor(u16 field_0, _GXColor* field_1) const {
 	/* empty function */
 }

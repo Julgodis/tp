@@ -31,10 +31,10 @@ extern "C" void __begin_critical_region(); // 1
 // 
 
 /* ############################################################################################## */
-/* 8044D878-8044D890 0018+00 rc=1 efc=0 .bss       signal_funcs                                                 */
+/* 8044D878-8044D890 0018+00 rc=0 efc=0 .bss       signal_funcs                                                 */
 u8 signal_funcs[24];
 
-/* 8036881C-803688DC 00C0+00 rc=1 efc=1 .text      raise                                                        */
+/* 8036881C-803688DC 00C0+00 rc=0 efc=0 .text      raise                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

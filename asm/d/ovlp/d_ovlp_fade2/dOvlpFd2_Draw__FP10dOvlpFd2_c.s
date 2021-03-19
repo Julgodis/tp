@@ -57,7 +57,7 @@ lbl_80252D54:
 /* 80252DE4 00000090  4B E0 39 B1 */	bl set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c
 lbl_80252DE8:
 /* 80252DE8 00000000  38 00 00 00 */	li r0, 0
-/* 80252DEC 00000004  98 0D 86 64 */	stb r0, struct_80450BE4+0x0(r13)
+/* 80252DEC 00000004  98 0D 86 64 */	stb r0, -0x799c(r13)
 /* 80252DF0 00000008  38 60 00 01 */	li r3, 1
 /* 80252DF4 0000000C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80252DF8 00000010  80 01 00 14 */	lwz r0, 0x14(r1)

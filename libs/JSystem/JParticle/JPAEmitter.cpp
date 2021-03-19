@@ -13,9 +13,6 @@ struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
-struct JPAResource {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -25,18 +22,21 @@ struct JGeometry {
 
 };
 
-struct JPAEmitterManager {
-};
-
-struct _GXTexMapID {
-};
-
 struct JPAEmitterWorkData {
 };
 
 struct JPABaseParticle {
 	/* 8027EFEC */ void init_p(JPAEmitterWorkData*);
 	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
+};
+
+struct _GXTexMapID {
+};
+
+struct JPAResource {
+};
+
+struct JPAEmitterManager {
 };
 
 struct JPABaseEmitter {
@@ -76,7 +76,7 @@ SECTION_SDATA2 extern f32 JPAEmitter__lit_2440;
 SECTION_SDATA2 extern u8 JPAEmitter__lit_2441[4];
 SECTION_SDATA2 extern f32 lit_2442;
 SECTION_SDATA2 extern f32 lit_2443;
-SECTION_SDATA2 extern f32 lit_2444;
+SECTION_SDATA2 extern f32 lit_2444[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -96,14 +96,14 @@ extern "C" void PSMTXIdentity(); // 1
 extern "C" void PSMTXConcat(); // 1
 extern "C" void PSMTXScale(); // 1
 extern "C" void PSMTXMultVec(); // 1
-SECTION_DATA extern void*const __vt__18JPAEmitterCallBack[7];
+SECTION_DATA extern void* const __vt__18JPAEmitterCallBack[7];
 SECTION_SDATA extern u32 __float_epsilon;
 
 // 
 // Declarations:
 // 
 
-/* 8027E6A4-8027E6EC 0048+00 rc=14 efc=14 .text      __dt__18JPAEmitterCallBackFv                                 */
+/* 8027E6A4-8027E6EC 0048+00 rc=0 efc=0 .text      __dt__18JPAEmitterCallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,25 +115,28 @@ asm JPAEmitterCallBack::~JPAEmitterCallBack() {
 
 
 /* ############################################################################################## */
-/* 80455370-80455374 0004+00 rc=1 efc=0 .sdata2    @2440                                                        */
+/* 80455370-80455374 0004+00 rc=0 efc=0 .sdata2    @2440                                                        */
 f32 JPAEmitter__lit_2440 = 32.0f;
 
-/* 80455374-80455378 0004+00 rc=1 efc=0 .sdata2    @2441                                                        */
+/* 80455374-80455378 0004+00 rc=0 efc=0 .sdata2    @2441                                                        */
 u8 JPAEmitter__lit_2441[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455378-8045537C 0004+00 rc=1 efc=0 .sdata2    @2442                                                        */
+/* 80455378-8045537C 0004+00 rc=0 efc=0 .sdata2    @2442                                                        */
 f32 lit_2442 = 0.5f;
 
-/* 8045537C-80455380 0004+00 rc=1 efc=0 .sdata2    @2443                                                        */
+/* 8045537C-80455380 0004+00 rc=0 efc=0 .sdata2    @2443                                                        */
 f32 lit_2443 = 3.0f;
 
-/* 80455380-80455388 0004+04 rc=1 efc=0 .sdata2    @2444                                                        */
-f32 lit_2444 = 1.0f;
-/* padding 4 bytes */
+/* 80455380-80455388 0004+04 rc=0 efc=0 .sdata2    @2444                                                        */
+f32 lit_2444[1 + 1 /* padding */] = {
+	1.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 8027E6EC-8027EA40 0354+00 rc=1 efc=1 .text      init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource    */
+/* 8027E6EC-8027EA40 0354+00 rc=0 efc=0 .text      init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +147,7 @@ asm void JPABaseEmitter::init(JPAEmitterManager* field_0, JPAResource* field_1) 
 #pragma pop
 
 
-/* 8027EA40-8027EB60 0120+00 rc=3 efc=3 .text      createParticle__14JPABaseEmitterFv                           */
+/* 8027EA40-8027EB60 0120+00 rc=0 efc=0 .text      createParticle__14JPABaseEmitterFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +158,7 @@ asm void JPABaseEmitter::createParticle() {
 #pragma pop
 
 
-/* 8027EB60-8027EC60 0100+00 rc=1 efc=1 .text      createChild__14JPABaseEmitterFP15JPABaseParticle             */
+/* 8027EB60-8027EC60 0100+00 rc=0 efc=0 .text      createChild__14JPABaseEmitterFP15JPABaseParticle             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,7 +169,7 @@ asm void JPABaseEmitter::createChild(JPABaseParticle* field_0) {
 #pragma pop
 
 
-/* 8027EC60-8027EDD4 0174+00 rc=2 efc=2 .text      deleteAllParticle__14JPABaseEmitterFv                        */
+/* 8027EC60-8027EDD4 0174+00 rc=0 efc=0 .text      deleteAllParticle__14JPABaseEmitterFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -177,7 +180,7 @@ asm void JPABaseEmitter::deleteAllParticle() {
 #pragma pop
 
 
-/* 8027EDD4-8027EE14 0040+00 rc=1 efc=1 .text      processTillStartFrame__14JPABaseEmitterFv                    */
+/* 8027EDD4-8027EE14 0040+00 rc=0 efc=0 .text      processTillStartFrame__14JPABaseEmitterFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -188,7 +191,7 @@ asm void JPABaseEmitter::processTillStartFrame() {
 #pragma pop
 
 
-/* 8027EE14-8027EEB0 009C+00 rc=1 efc=1 .text      processTermination__14JPABaseEmitterFv                       */
+/* 8027EE14-8027EEB0 009C+00 rc=0 efc=0 .text      processTermination__14JPABaseEmitterFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -199,7 +202,7 @@ asm void JPABaseEmitter::processTermination() {
 #pragma pop
 
 
-/* 8027EEB0-8027EF30 0080+00 rc=1 efc=1 .text      calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f> */
+/* 8027EEB0-8027EF30 0080+00 rc=0 efc=0 .text      calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,7 +213,7 @@ asm void JPABaseEmitter::calcEmitterGlobalPosition(JGeometry::TVec3<f32>* field_
 #pragma pop
 
 
-/* 8027EF30-8027EF40 0010+00 rc=1 efc=1 .text      getCurrentCreateNumber__14JPABaseEmitterCFv                  */
+/* 8027EF30-8027EF40 0010+00 rc=0 efc=0 .text      getCurrentCreateNumber__14JPABaseEmitterCFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -221,7 +224,7 @@ asm void JPABaseEmitter::getCurrentCreateNumber() const {
 #pragma pop
 
 
-/* 8027EF40-8027EF50 0010+00 rc=3 efc=3 .text      getDrawCount__14JPABaseEmitterCFv                            */
+/* 8027EF40-8027EF50 0010+00 rc=0 efc=0 .text      getDrawCount__14JPABaseEmitterCFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -232,7 +235,7 @@ asm void JPABaseEmitter::getDrawCount() const {
 #pragma pop
 
 
-/* 8027EF50-8027EFA4 0054+00 rc=1 efc=1 .text      loadTexture__14JPABaseEmitterFUc11_GXTexMapID                */
+/* 8027EF50-8027EFA4 0054+00 rc=0 efc=0 .text      loadTexture__14JPABaseEmitterFUc11_GXTexMapID                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

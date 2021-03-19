@@ -43,11 +43,14 @@ LIBJ3DGRAPHBASE_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJ3DGraphBase.a: $(LIBJ3DGRAPHBASE_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJ3DGraphBase.a
 	@echo $(LIBJ3DGRAPHBASE_A_O_FILES) > build/LIBJ3DGRAPHBASE_A_ofiles
-	$(LD) -xm l $(LIBJ3DGRAPHBASE_A_LDFLAGS) -o $(BUILD_DIR)/libJ3DGraphBase.a @build/LIBJ3DGRAPHBASE_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ3DGraphBase.a
+	@$(LD) -xm l $(LIBJ3DGRAPHBASE_A_LDFLAGS) -o $(BUILD_DIR)/libJ3DGraphBase.a @build/LIBJ3DGRAPHBASE_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ3DGraphBase.a
 
 $(BUILD_DIR)/libs/JSystem/J3DGraphBase/%.o: libs/JSystem/J3DGraphBase/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJ3DGRAPHBASE_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJ3DGRAPHBASE_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

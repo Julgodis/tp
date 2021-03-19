@@ -16,13 +16,13 @@ extern "C" void DBRead(); // 1
 extern "C" void DBQueryData(); // 1
 extern "C" void DBInitInterrupts(); // 1
 extern "C" void DBInitComm(); // 1
-extern "C" static void DBGHandler(); // 1
-extern "C" static void MWCallback(); // 1
-extern "C" static void DBGReadStatus(); // 1
-extern "C" static void DBGWrite(); // 1
-extern "C" static void DBGRead(); // 1
-extern "C" static void DBGReadMailbox(); // 1
-extern "C" static void DBGEXIImm(); // 1
+extern "C" void DBGHandler(); // 1
+extern "C" void MWCallback(); // 1
+extern "C" void DBGReadStatus(); // 1
+extern "C" void DBGWrite(); // 1
+extern "C" void DBGRead(); // 1
+extern "C" void DBGReadMailbox(); // 1
+extern "C" void DBGEXIImm(); // 1
 
 extern "C" void DBClose(); // 1
 extern "C" void DBOpen(); // 1
@@ -31,13 +31,13 @@ extern "C" void DBRead(); // 1
 extern "C" void DBQueryData(); // 1
 extern "C" void DBInitInterrupts(); // 1
 extern "C" void DBInitComm(); // 1
-extern "C" static void DBGHandler(); // 1
-extern "C" static void MWCallback(); // 1
-extern "C" static void DBGReadStatus(); // 1
-extern "C" static void DBGWrite(); // 1
-extern "C" static void DBGRead(); // 1
-extern "C" static void DBGReadMailbox(); // 1
-extern "C" static void DBGEXIImm(); // 1
+extern "C" void DBGHandler(); // 1
+extern "C" void MWCallback(); // 1
+extern "C" void DBGReadStatus(); // 1
+extern "C" void DBGWrite(); // 1
+extern "C" void DBGRead(); // 1
+extern "C" void DBGReadMailbox(); // 1
+extern "C" void DBGEXIImm(); // 1
 SECTION_SBSS extern u8 MTRCallback[4];
 SECTION_SBSS extern u8 DBGCallback[4];
 SECTION_SBSS extern u8 SendMailData[4];
@@ -66,19 +66,19 @@ SECTION_SDATA extern u32 data_80450AF0;
 // Declarations:
 // 
 
-/* 80372D2C-80372D30 0004+00 rc=1 efc=1 .text      DBClose                                                      */
+/* 80372D2C-80372D30 0004+00 rc=0 efc=0 .text      DBClose                                                      */
 extern "C" void DBClose() {
 	/* empty function */
 }
 
 
-/* 80372D30-80372D34 0004+00 rc=1 efc=1 .text      DBOpen                                                       */
+/* 80372D30-80372D34 0004+00 rc=0 efc=0 .text      DBOpen                                                       */
 extern "C" void DBOpen() {
 	/* empty function */
 }
 
 
-/* 80372D34-80372F94 0260+00 rc=1 efc=1 .text      DBWrite                                                      */
+/* 80372D34-80372F94 0260+00 rc=0 efc=0 .text      DBWrite                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,25 +90,25 @@ extern "C" asm void DBWrite() {
 
 
 /* ############################################################################################## */
-/* 804519D0-804519D4 0004+00 rc=2 efc=0 .sbss      MTRCallback                                                  */
+/* 804519D0-804519D4 0004+00 rc=0 efc=0 .sbss      MTRCallback                                                  */
 u8 MTRCallback[4];
 
-/* 804519D4-804519D8 0004+00 rc=2 efc=0 .sbss      DBGCallback                                                  */
+/* 804519D4-804519D8 0004+00 rc=0 efc=0 .sbss      DBGCallback                                                  */
 u8 DBGCallback[4];
 
-/* 804519D8-804519DC 0004+00 rc=2 efc=0 .sbss      SendMailData                                                 */
+/* 804519D8-804519DC 0004+00 rc=0 efc=0 .sbss      SendMailData                                                 */
 u8 SendMailData[4];
 
-/* 804519DC-804519E0 0004+00 rc=2 efc=0 .sbss      RecvDataLeng                                                 */
+/* 804519DC-804519E0 0004+00 rc=0 efc=0 .sbss      RecvDataLeng                                                 */
 u8 RecvDataLeng[4];
 
-/* 804519E0-804519E4 0004+00 rc=1 efc=0 .sbss      pEXIInputFlag                                                */
+/* 804519E0-804519E4 0004+00 rc=0 efc=0 .sbss      pEXIInputFlag                                                */
 u8 pEXIInputFlag[4];
 
-/* 804519E4-804519E8 0004+00 rc=4 efc=0 .sbss      None                                                         */
+/* 804519E4-804519E8 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_804519E4[4];
 
-/* 80372F94-80373020 008C+00 rc=2 efc=2 .text      DBRead                                                       */
+/* 80372F94-80373020 008C+00 rc=0 efc=0 .text      DBRead                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +119,7 @@ extern "C" asm void DBRead() {
 #pragma pop
 
 
-/* 80373020-803730BC 009C+00 rc=2 efc=2 .text      DBQueryData                                                  */
+/* 80373020-803730BC 009C+00 rc=0 efc=0 .text      DBQueryData                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -130,7 +130,7 @@ extern "C" asm void DBQueryData() {
 #pragma pop
 
 
-/* 803730BC-80373110 0054+00 rc=1 efc=1 .text      DBInitInterrupts                                             */
+/* 803730BC-80373110 0054+00 rc=0 efc=0 .text      DBInitInterrupts                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,7 +141,7 @@ extern "C" asm void DBInitInterrupts() {
 #pragma pop
 
 
-/* 80373110-80373188 0078+00 rc=1 efc=1 .text      DBInitComm                                                   */
+/* 80373110-80373188 0078+00 rc=0 efc=0 .text      DBInitComm                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,77 +152,77 @@ extern "C" asm void DBInitComm() {
 #pragma pop
 
 
-/* 80373188-803731C8 0040+00 rc=1 efc=0 .text      DBGHandler                                                   */
+/* 80373188-803731C8 0040+00 rc=0 efc=0 .text      DBGHandler                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void DBGHandler() {
+extern "C" asm void DBGHandler() {
 	nofralloc
 #include "asm/odemuexi2/src/OdemuExi2Lib/DebuggerDriver/DBGHandler.s"
 }
 #pragma pop
 
 
-/* 803731C8-80373204 003C+00 rc=1 efc=0 .text      MWCallback                                                   */
+/* 803731C8-80373204 003C+00 rc=0 efc=0 .text      MWCallback                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void MWCallback() {
+extern "C" asm void MWCallback() {
 	nofralloc
 #include "asm/odemuexi2/src/OdemuExi2Lib/DebuggerDriver/MWCallback.s"
 }
 #pragma pop
 
 
-/* 80373204-803732B0 00AC+00 rc=1 efc=0 .text      DBGReadStatus                                                */
+/* 80373204-803732B0 00AC+00 rc=0 efc=0 .text      DBGReadStatus                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void DBGReadStatus() {
+extern "C" asm void DBGReadStatus() {
 	nofralloc
 #include "asm/odemuexi2/src/OdemuExi2Lib/DebuggerDriver/DBGReadStatus.s"
 }
 #pragma pop
 
 
-/* 803732B0-8037338C 00DC+00 rc=1 efc=0 .text      DBGWrite                                                     */
+/* 803732B0-8037338C 00DC+00 rc=0 efc=0 .text      DBGWrite                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void DBGWrite() {
+extern "C" asm void DBGWrite() {
 	nofralloc
 #include "asm/odemuexi2/src/OdemuExi2Lib/DebuggerDriver/DBGWrite.s"
 }
 #pragma pop
 
 
-/* 8037338C-80373468 00DC+00 rc=1 efc=0 .text      DBGRead                                                      */
+/* 8037338C-80373468 00DC+00 rc=0 efc=0 .text      DBGRead                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void DBGRead() {
+extern "C" asm void DBGRead() {
 	nofralloc
 #include "asm/odemuexi2/src/OdemuExi2Lib/DebuggerDriver/DBGRead.s"
 }
 #pragma pop
 
 
-/* 80373468-80373514 00AC+00 rc=1 efc=0 .text      DBGReadMailbox                                               */
+/* 80373468-80373514 00AC+00 rc=0 efc=0 .text      DBGReadMailbox                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void DBGReadMailbox() {
+extern "C" asm void DBGReadMailbox() {
 	nofralloc
 #include "asm/odemuexi2/src/OdemuExi2Lib/DebuggerDriver/DBGReadMailbox.s"
 }
 #pragma pop
 
 
-/* 80373514-803737AC 0298+00 rc=5 efc=0 .text      DBGEXIImm                                                    */
+/* 80373514-803737AC 0298+00 rc=0 efc=0 .text      DBGEXIImm                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void DBGEXIImm() {
+extern "C" asm void DBGEXIImm() {
 	nofralloc
 #include "asm/odemuexi2/src/OdemuExi2Lib/DebuggerDriver/DBGEXIImm.s"
 }

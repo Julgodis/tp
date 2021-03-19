@@ -26,7 +26,7 @@ SECTION_SBSS extern u8 __stdio_exit[4];
 // Declarations:
 // 
 
-/* 803664CC-803664DC 0010+00 rc=2 efc=2 .text      __stdio_atexit                                               */
+/* 803664CC-803664DC 0010+00 rc=0 efc=0 .text      __stdio_atexit                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

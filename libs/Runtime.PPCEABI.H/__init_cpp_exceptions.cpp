@@ -14,11 +14,15 @@ extern "C" void __init_cpp_exceptions(); // 1
 
 extern "C" void __fini_cpp_exceptions(); // 1
 extern "C" void __init_cpp_exceptions(); // 1
-extern const void*const __init_cpp_exceptions_reference;
-extern const void*const _ctors[106];
-extern const void*const __destroy_global_chain_reference;
-extern const void*const __fini_cpp_exceptions_reference;
-SECTION_SDATA extern u32 fragmentID;
+#pragma section ".ctors$10"
+__declspec(section ".ctors$10") extern const void* __init_cpp_exceptions_reference;
+#pragma section ".ctors$15"
+__declspec(section ".ctors$10") extern const void* _ctors[106];
+#pragma section ".dtors$10"
+__declspec(section ".dtors$10") extern const void* __destroy_global_chain_reference;
+#pragma section ".dtors$15"
+__declspec(section ".dtors$15") extern const void* __fini_cpp_exceptions_reference;
+SECTION_SDATA extern u32 fragmentID[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -134,7 +138,8 @@ extern "C" void __destroy_global_chain(); // 1
 extern "C" void __unregister_fragment(); // 1
 extern "C" void __register_fragment(); // 1
 
-extern void*data_8000569C[8];
+#pragma section "extabindex_"
+SECTION_EXTABINDEX extern const void* data_8000569C[8];
 extern "C" void __sinit_m_Do_main_cpp(); // 1
 extern "C" void __sinit_m_Do_audio_cpp(); // 1
 extern "C" void __sinit_m_Do_graphic_cpp(); // 1
@@ -251,11 +256,13 @@ extern "C" void __register_fragment(); // 1
 
 /* ############################################################################################## */
 #pragma section ".ctors$10"
-/* 803737C0-803737C4 0004+00 rc=1 efc=1 .ctors     __init_cpp_exceptions_reference                              */
-__declspec(section ".ctors$10") const void* const __init_cpp_exceptions_reference = (void*)__init_cpp_exceptions;
+/* 803737C0-803737C4 0004+00 rc=0 efc=0 .ctors     __init_cpp_exceptions_reference                              */
+#pragma section ".ctors$10"
+__declspec(section ".ctors$10") const void* __init_cpp_exceptions_reference = (void*)__init_cpp_exceptions;
 
 /* 803737C4-8037396C 01A8+00 rc=0 efc=0 .ctors     _ctors                                                       */
-__declspec(section ".ctors$10") const void* const _ctors[106] = {
+#pragma section ".ctors$15"
+__declspec(section ".ctors$10") const void* _ctors[106] = {
 	(void*)__sinit_m_Do_main_cpp,
 	(void*)__sinit_m_Do_audio_cpp,
 	(void*)__sinit_m_Do_graphic_cpp,
@@ -366,19 +373,24 @@ __declspec(section ".ctors$10") const void* const _ctors[106] = {
 
 /* ############################################################################################## */
 #pragma section ".dtors$10"
-/* 80373980-80373984 0004+00 rc=1 efc=1 .dtors     __destroy_global_chain_reference                             */
-__declspec(section ".dtors$10") const void* const __destroy_global_chain_reference = (void*)__destroy_global_chain;
+/* 80373980-80373984 0004+00 rc=0 efc=0 .dtors     __destroy_global_chain_reference                             */
+#pragma section ".dtors$10"
+__declspec(section ".dtors$10") const void* __destroy_global_chain_reference = (void*)__destroy_global_chain;
 
 #pragma section ".dtors$15"
 /* 80373984-80373988 0004+00 rc=0 efc=0 .dtors     __fini_cpp_exceptions_reference                              */
-__declspec(section ".dtors$15") const void* const __fini_cpp_exceptions_reference = (void*)__fini_cpp_exceptions;
+#pragma section ".dtors$15"
+__declspec(section ".dtors$15") const void* __fini_cpp_exceptions_reference = (void*)__fini_cpp_exceptions;
 
 /* ############################################################################################## */
-/* 80450AD0-80450AD8 0004+04 rc=2 efc=0 .sdata     fragmentID                                                   */
-u32 fragmentID = 0xFFFFFFFE;
-/* padding 4 bytes */
+/* 80450AD0-80450AD8 0004+04 rc=0 efc=0 .sdata     fragmentID                                                   */
+u32 fragmentID[1 + 1 /* padding */] = {
+	0xFFFFFFFE,
+	/* padding */
+	0x00000000,
+};
 
-/* 8036283C-80362870 0034+00 rc=2 efc=1 .text      __fini_cpp_exceptions                                        */
+/* 8036283C-80362870 0034+00 rc=0 efc=0 .text      __fini_cpp_exceptions                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,7 +401,7 @@ extern "C" asm void __fini_cpp_exceptions() {
 #pragma pop
 
 
-/* 80362870-803628AC 003C+00 rc=2 efc=1 .text      __init_cpp_exceptions                                        */
+/* 80362870-803628AC 003C+00 rc=0 efc=0 .text      __init_cpp_exceptions                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

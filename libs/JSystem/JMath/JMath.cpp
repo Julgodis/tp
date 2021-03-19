@@ -31,7 +31,7 @@ extern "C" void JMAFastVECNormalize__FPC3VecP3Vec(); // 1
 extern "C" void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf(); // 1
 extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff(); // 1
 SECTION_SDATA2 extern u8 JMath__lit_376[8];
-SECTION_SDATA2 extern f32 lit_411;
+SECTION_SDATA2 extern f32 lit_411[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -44,7 +44,7 @@ SECTION_BSS extern u8 sincosTable___5JMath[65536];
 // Declarations:
 // 
 
-/* 80339878-80339938 00C0+00 rc=11 efc=11 .text      JMAEulerToQuat__FsssP10Quaternion                            */
+/* 80339878-80339938 00C0+00 rc=0 efc=0 .text      JMAEulerToQuat__FsssP10Quaternion                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,12 +56,12 @@ asm void JMAEulerToQuat(s16 field_0, s16 field_1, s16 field_2, Quaternion* field
 
 
 /* ############################################################################################## */
-/* 804564C8-804564D0 0008+00 rc=1 efc=0 .sdata2    @376                                                         */
+/* 804564C8-804564D0 0008+00 rc=0 efc=0 .sdata2    @376                                                         */
 u8 JMath__lit_376[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80339938-80339A30 00F8+00 rc=5 efc=5 .text      JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion     */
+/* 80339938-80339A30 00F8+00 rc=0 efc=0 .text      JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ asm void JMAQuatLerp(Quaternion const* field_0, Quaternion const* field_1, f32 f
 #pragma pop
 
 
-/* 80339A30-80339A5C 002C+00 rc=1 efc=1 .text      JMAFastVECNormalize__FPC3VecP3Vec                            */
+/* 80339A30-80339A5C 002C+00 rc=0 efc=0 .text      JMAFastVECNormalize__FPC3VecP3Vec                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ asm void JMAFastVECNormalize(Vec const* field_0, Vec* field_1) {
 #pragma pop
 
 
-/* 80339A5C-80339A84 0028+00 rc=1 efc=1 .text      JMAVECScaleAdd__FPC3VecPC3VecP3Vecf                          */
+/* 80339A5C-80339A84 0028+00 rc=0 efc=0 .text      JMAVECScaleAdd__FPC3VecPC3VecP3Vecf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,11 +95,14 @@ asm void JMAVECScaleAdd(Vec const* field_0, Vec const* field_1, Vec* field_2, f3
 
 
 /* ############################################################################################## */
-/* 804564D0-804564D8 0004+04 rc=1 efc=0 .sdata2    @411                                                         */
-f32 lit_411 = 1.0f;
-/* padding 4 bytes */
+/* 804564D0-804564D8 0004+04 rc=0 efc=0 .sdata2    @411                                                         */
+f32 lit_411[1 + 1 /* padding */] = {
+	1.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80339A84-80339AE4 0060+00 rc=5 efc=5 .text      JMAMTXApplyScale__FPA4_CfPA4_ffff                            */
+/* 80339A84-80339AE4 0060+00 rc=0 efc=0 .text      JMAMTXApplyScale__FPA4_CfPA4_ffff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

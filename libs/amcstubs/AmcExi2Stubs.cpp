@@ -37,49 +37,49 @@ extern "C" bool AMC_IsStub(); // 1
 // Declarations:
 // 
 
-/* 80372CFC-80372D00 0004+00 rc=1 efc=1 .text      EXI2_Init                                                    */
+/* 80372CFC-80372D00 0004+00 rc=0 efc=0 .text      EXI2_Init                                                    */
 extern "C" void EXI2_Init() {
 	/* empty function */
 }
 
 
-/* 80372D00-80372D04 0004+00 rc=1 efc=1 .text      EXI2_EnableInterrupts                                        */
+/* 80372D00-80372D04 0004+00 rc=0 efc=0 .text      EXI2_EnableInterrupts                                        */
 extern "C" void EXI2_EnableInterrupts() {
 	/* empty function */
 }
 
 
-/* 80372D04-80372D0C 0008+00 rc=2 efc=2 .text      EXI2_Poll                                                    */
+/* 80372D04-80372D0C 0008+00 rc=0 efc=0 .text      EXI2_Poll                                                    */
 extern "C" bool EXI2_Poll() {
 	return false;
 }
 
 
-/* 80372D0C-80372D14 0008+00 rc=2 efc=2 .text      EXI2_ReadN                                                   */
+/* 80372D0C-80372D14 0008+00 rc=0 efc=0 .text      EXI2_ReadN                                                   */
 extern "C" bool EXI2_ReadN() {
 	return false;
 }
 
 
-/* 80372D14-80372D1C 0008+00 rc=1 efc=1 .text      EXI2_WriteN                                                  */
+/* 80372D14-80372D1C 0008+00 rc=0 efc=0 .text      EXI2_WriteN                                                  */
 extern "C" bool EXI2_WriteN() {
 	return false;
 }
 
 
-/* 80372D1C-80372D20 0004+00 rc=1 efc=1 .text      EXI2_Reserve                                                 */
+/* 80372D1C-80372D20 0004+00 rc=0 efc=0 .text      EXI2_Reserve                                                 */
 extern "C" void EXI2_Reserve() {
 	/* empty function */
 }
 
 
-/* 80372D20-80372D24 0004+00 rc=1 efc=1 .text      EXI2_Unreserve                                               */
+/* 80372D20-80372D24 0004+00 rc=0 efc=0 .text      EXI2_Unreserve                                               */
 extern "C" void EXI2_Unreserve() {
 	/* empty function */
 }
 
 
-/* 80372D24-80372D2C 0008+00 rc=1 efc=1 .text      AMC_IsStub                                                   */
+/* 80372D24-80372D2C 0008+00 rc=0 efc=0 .text      AMC_IsStub                                                   */
 extern "C" bool AMC_IsStub() {
 	return true;
 }

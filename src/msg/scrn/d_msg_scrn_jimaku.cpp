@@ -48,18 +48,18 @@ struct dMsgScrnLight_c {
 	/* 80245934 */ dMsgScrnLight_c(u8, u8);
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct CPaneMgr {
@@ -96,11 +96,11 @@ extern "C" void fukiAlpha__16dMsgScrnJimaku_cFf(); // 1
 extern "C" void fukiScale__16dMsgScrnJimaku_cFf(); // 1
 extern "C" void fukiTrans__16dMsgScrnJimaku_cFff(); // 1
 extern "C" void fontAlpha__16dMsgScrnJimaku_cFf(); // 1
-SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_jimaku__stringBase0[32];
-SECTION_DATA extern void*const __vt__16dMsgScrnJimaku_c[22];
+SECTION_RODATA extern const char* const msg_scrn_d_msg_scrn_jimaku__stringBase0;
+SECTION_DATA extern void* const __vt__16dMsgScrnJimaku_c[22];
 SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_jimaku__lit_3941[4];
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_jimaku__lit_3942;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_jimaku__lit_4021;
+SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_jimaku__lit_4021[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -173,20 +173,20 @@ SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 // 
 
 /* ############################################################################################## */
-/* 80399A80-80399AA0 001F+01 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80399A80-80399AA0 001F+01 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80399A80 = "zelda_jimaku_message_text.blo";
-SECTION_DEAD char* const stringBase_80399A9E = "";
+const char* const stringBase_80399A80 = "zelda_jimaku_message_text.blo";
+const char* const stringBase_80399A9E = "";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_80399A9F = "";
+char* const pad_80399A9F = "";
 #pragma pop
 
-/* 803C11E8-803C1240 0058+00 rc=2 efc=0 .data      __vt__16dMsgScrnJimaku_c                                     */
+/* 803C11E8-803C1240 0058+00 rc=0 efc=0 .data      __vt__16dMsgScrnJimaku_c                                     */
 void* const __vt__16dMsgScrnJimaku_c[22] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__14dMsgScrnBase_cFv,
 	(void*)__dt__16dMsgScrnJimaku_cFv,
 	(void*)exec__16dMsgScrnJimaku_cFv,
@@ -209,15 +209,15 @@ void* const __vt__16dMsgScrnJimaku_c[22] = {
 	(void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
 
-/* 80454CB0-80454CB4 0004+00 rc=2 efc=0 .sdata2    @3941                                                        */
+/* 80454CB0-80454CB4 0004+00 rc=0 efc=0 .sdata2    @3941                                                        */
 u8 msg_scrn_d_msg_scrn_jimaku__lit_3941[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454CB4-80454CB8 0004+00 rc=1 efc=0 .sdata2    @3942                                                        */
+/* 80454CB4-80454CB8 0004+00 rc=0 efc=0 .sdata2    @3942                                                        */
 f32 msg_scrn_d_msg_scrn_jimaku__lit_3942 = 6.0f / 5.0f;
 
-/* 80244558-80244A74 051C+00 rc=1 efc=1 .text      __ct__16dMsgScrnJimaku_cFUcP10JKRExpHeap                     */
+/* 80244558-80244A74 051C+00 rc=0 efc=0 .text      __ct__16dMsgScrnJimaku_cFUcP10JKRExpHeap                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,7 +228,7 @@ asm dMsgScrnJimaku_c::dMsgScrnJimaku_c(u8 field_0, JKRExpHeap* field_1) {
 #pragma pop
 
 
-/* 80244A74-80244C2C 01B8+00 rc=1 efc=0 .text      __dt__16dMsgScrnJimaku_cFv                                   */
+/* 80244A74-80244C2C 01B8+00 rc=0 efc=0 .text      __dt__16dMsgScrnJimaku_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,11 +240,14 @@ asm dMsgScrnJimaku_c::~dMsgScrnJimaku_c() {
 
 
 /* ############################################################################################## */
-/* 80454CB8-80454CC0 0004+04 rc=2 efc=0 .sdata2    @4021                                                        */
-f32 msg_scrn_d_msg_scrn_jimaku__lit_4021 = 1.0f;
-/* padding 4 bytes */
+/* 80454CB8-80454CC0 0004+04 rc=0 efc=0 .sdata2    @4021                                                        */
+f32 msg_scrn_d_msg_scrn_jimaku__lit_4021[1 + 1 /* padding */] = {
+	1.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80244C2C-80244D34 0108+00 rc=1 efc=0 .text      exec__16dMsgScrnJimaku_cFv                                   */
+/* 80244C2C-80244D34 0108+00 rc=0 efc=0 .text      exec__16dMsgScrnJimaku_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +258,7 @@ asm void dMsgScrnJimaku_c::exec() {
 #pragma pop
 
 
-/* 80244D34-80244D8C 0058+00 rc=1 efc=0 .text      drawSelf__16dMsgScrnJimaku_cFv                               */
+/* 80244D34-80244D8C 0058+00 rc=0 efc=0 .text      drawSelf__16dMsgScrnJimaku_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +269,7 @@ asm void dMsgScrnJimaku_c::drawSelf() {
 #pragma pop
 
 
-/* 80244D8C-80244E2C 00A0+00 rc=1 efc=0 .text      fukiAlpha__16dMsgScrnJimaku_cFf                              */
+/* 80244D8C-80244E2C 00A0+00 rc=0 efc=0 .text      fukiAlpha__16dMsgScrnJimaku_cFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,19 +280,19 @@ asm void dMsgScrnJimaku_c::fukiAlpha(f32 field_0) {
 #pragma pop
 
 
-/* 80244E2C-80244E30 0004+00 rc=1 efc=0 .text      fukiScale__16dMsgScrnJimaku_cFf                              */
+/* 80244E2C-80244E30 0004+00 rc=0 efc=0 .text      fukiScale__16dMsgScrnJimaku_cFf                              */
 void dMsgScrnJimaku_c::fukiScale(f32 field_0) {
 	/* empty function */
 }
 
 
-/* 80244E30-80244E34 0004+00 rc=1 efc=0 .text      fukiTrans__16dMsgScrnJimaku_cFff                             */
+/* 80244E30-80244E34 0004+00 rc=0 efc=0 .text      fukiTrans__16dMsgScrnJimaku_cFff                             */
 void dMsgScrnJimaku_c::fukiTrans(f32 field_0, f32 field_1) {
 	/* empty function */
 }
 
 
-/* 80244E34-80244E38 0004+00 rc=1 efc=0 .text      fontAlpha__16dMsgScrnJimaku_cFf                              */
+/* 80244E34-80244E38 0004+00 rc=0 efc=0 .text      fontAlpha__16dMsgScrnJimaku_cFf                              */
 void dMsgScrnJimaku_c::fontAlpha(f32 field_0) {
 	/* empty function */
 }

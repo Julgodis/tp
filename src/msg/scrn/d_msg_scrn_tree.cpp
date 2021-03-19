@@ -46,10 +46,10 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -102,11 +102,11 @@ extern "C" void fukiAlpha__14dMsgScrnTree_cFf(); // 1
 extern "C" void fukiScale__14dMsgScrnTree_cFf(); // 1
 extern "C" void fukiTrans__14dMsgScrnTree_cFff(); // 1
 SECTION_RODATA extern const u8 data_80399C18[24];
-SECTION_RODATA extern const u8 msg_scrn_d_msg_scrn_tree__stringBase0[104];
-SECTION_DATA extern void*const __vt__14dMsgScrnTree_c[22];
+SECTION_RODATA extern const char* const msg_scrn_d_msg_scrn_tree__stringBase0;
+SECTION_DATA extern void* const __vt__14dMsgScrnTree_c[22];
 SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_tree__lit_3949[4];
 SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_tree__lit_3950;
-SECTION_SDATA2 extern f32 lit_3951;
+SECTION_SDATA2 extern f32 lit_3951[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_tree__lit_4053;
 
 // 
@@ -171,29 +171,29 @@ SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 // 
 
 /* ############################################################################################## */
-/* 80399C18-80399C30 0018+00 rc=1 efc=0 .rodata    t_tag$3763                                                   */
-SECTION_RODATA const u8 data_80399C18[24] = {
+/* 80399C18-80399C30 0018+00 rc=0 efc=0 .rodata    t_tag$3763                                                   */
+const u8 data_80399C18[24] = {
 	0x6D, 0x67, 0x5F, 0x65, 0x34, 0x6C, 0x69, 0x6E, 0x00, 0x00, 0x00, 0x00, 0x66, 0x34, 0x5F, 0x77,
 	0x00, 0x00, 0x00, 0x00, 0x74, 0x34, 0x5F, 0x73,
 };
 
-/* 80399C30-80399C98 0064+04 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80399C30-80399C98 0064+04 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80399C30 = "zelda_kanban_wood_a.blo";
-SECTION_DEAD char* const stringBase_80399C48 = "zelda_kanban_wood_a.bck";
-SECTION_DEAD char* const stringBase_80399C60 = "zelda_kanban_wood_a.btk";
-SECTION_DEAD char* const stringBase_80399C78 = "zelda_kanban_wood_a_02.btk";
-SECTION_DEAD char* const stringBase_80399C93 = "";
+const char* const stringBase_80399C30 = "zelda_kanban_wood_a.blo";
+const char* const stringBase_80399C48 = "zelda_kanban_wood_a.bck";
+const char* const stringBase_80399C60 = "zelda_kanban_wood_a.btk";
+const char* const stringBase_80399C78 = "zelda_kanban_wood_a_02.btk";
+const char* const stringBase_80399C93 = "";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_80399C94 = "\0\0\0";
+char* const pad_80399C94 = "\0\0\0";
 #pragma pop
 
-/* 803C1420-803C1478 0058+00 rc=2 efc=0 .data      __vt__14dMsgScrnTree_c                                       */
+/* 803C1420-803C1478 0058+00 rc=0 efc=0 .data      __vt__14dMsgScrnTree_c                                       */
 void* const __vt__14dMsgScrnTree_c[22] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__14dMsgScrnTree_cFv,
 	(void*)__dt__14dMsgScrnTree_cFv,
 	(void*)exec__14dMsgScrnTree_cFv,
@@ -216,19 +216,22 @@ void* const __vt__14dMsgScrnTree_c[22] = {
 	(void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
 
-/* 80454D58-80454D5C 0004+00 rc=2 efc=0 .sdata2    @3949                                                        */
+/* 80454D58-80454D5C 0004+00 rc=0 efc=0 .sdata2    @3949                                                        */
 u8 msg_scrn_d_msg_scrn_tree__lit_3949[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454D5C-80454D60 0004+00 rc=3 efc=0 .sdata2    @3950                                                        */
+/* 80454D5C-80454D60 0004+00 rc=0 efc=0 .sdata2    @3950                                                        */
 f32 msg_scrn_d_msg_scrn_tree__lit_3950 = 1.0f;
 
-/* 80454D60-80454D68 0004+04 rc=1 efc=0 .sdata2    @3951                                                        */
-f32 lit_3951 = 6.0f / 5.0f;
-/* padding 4 bytes */
+/* 80454D60-80454D68 0004+04 rc=0 efc=0 .sdata2    @3951                                                        */
+f32 lit_3951[1 + 1 /* padding */] = {
+	6.0f / 5.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80248954-80248F14 05C0+00 rc=1 efc=1 .text      __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap                */
+/* 80248954-80248F14 05C0+00 rc=0 efc=0 .text      __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -239,7 +242,7 @@ asm dMsgScrnTree_c::dMsgScrnTree_c(JUTFont* field_0, JKRExpHeap* field_1) {
 #pragma pop
 
 
-/* 80248F14-80249118 0204+00 rc=1 efc=0 .text      __dt__14dMsgScrnTree_cFv                                     */
+/* 80248F14-80249118 0204+00 rc=0 efc=0 .text      __dt__14dMsgScrnTree_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -251,10 +254,10 @@ asm dMsgScrnTree_c::~dMsgScrnTree_c() {
 
 
 /* ############################################################################################## */
-/* 80454D68-80454D70 0008+00 rc=1 efc=0 .sdata2    @4053                                                        */
+/* 80454D68-80454D70 0008+00 rc=0 efc=0 .sdata2    @4053                                                        */
 f64 msg_scrn_d_msg_scrn_tree__lit_4053 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80249118-80249270 0158+00 rc=1 efc=0 .text      exec__14dMsgScrnTree_cFv                                     */
+/* 80249118-80249270 0158+00 rc=0 efc=0 .text      exec__14dMsgScrnTree_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -265,7 +268,7 @@ asm void dMsgScrnTree_c::exec() {
 #pragma pop
 
 
-/* 80249270-802492F8 0088+00 rc=1 efc=0 .text      draw__14dMsgScrnTree_cFv                                     */
+/* 80249270-802492F8 0088+00 rc=0 efc=0 .text      draw__14dMsgScrnTree_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -276,7 +279,7 @@ asm void dMsgScrnTree_c::draw() {
 #pragma pop
 
 
-/* 802492F8-802493AC 00B4+00 rc=1 efc=0 .text      fukiAlpha__14dMsgScrnTree_cFf                                */
+/* 802492F8-802493AC 00B4+00 rc=0 efc=0 .text      fukiAlpha__14dMsgScrnTree_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -287,13 +290,13 @@ asm void dMsgScrnTree_c::fukiAlpha(f32 field_0) {
 #pragma pop
 
 
-/* 802493AC-802493B0 0004+00 rc=1 efc=0 .text      fukiScale__14dMsgScrnTree_cFf                                */
+/* 802493AC-802493B0 0004+00 rc=0 efc=0 .text      fukiScale__14dMsgScrnTree_cFf                                */
 void dMsgScrnTree_c::fukiScale(f32 field_0) {
 	/* empty function */
 }
 
 
-/* 802493B0-802493B4 0004+00 rc=1 efc=0 .text      fukiTrans__14dMsgScrnTree_cFff                               */
+/* 802493B0-802493B4 0004+00 rc=0 efc=0 .text      fukiTrans__14dMsgScrnTree_cFff                               */
 void dMsgScrnTree_c::fukiTrans(f32 field_0, f32 field_1) {
 	/* empty function */
 }

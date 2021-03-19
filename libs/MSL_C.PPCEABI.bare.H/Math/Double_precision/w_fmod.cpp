@@ -25,7 +25,7 @@ extern "C" void __ieee754_fmod(); // 1
 // Declarations:
 // 
 
-/* 8036C760-8036C780 0020+00 rc=8 efc=8 .text      fmod                                                         */
+/* 8036C760-8036C780 0020+00 rc=0 efc=0 .text      fmod                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

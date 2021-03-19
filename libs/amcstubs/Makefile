@@ -17,11 +17,14 @@ LIBAMCSTUBS_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libamcstubs.a: $(LIBAMCSTUBS_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libamcstubs.a
 	@echo $(LIBAMCSTUBS_A_O_FILES) > build/LIBAMCSTUBS_A_ofiles
-	$(LD) -xm l $(LIBAMCSTUBS_A_LDFLAGS) -o $(BUILD_DIR)/libamcstubs.a @build/LIBAMCSTUBS_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libamcstubs.a
+	@$(LD) -xm l $(LIBAMCSTUBS_A_LDFLAGS) -o $(BUILD_DIR)/libamcstubs.a @build/LIBAMCSTUBS_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libamcstubs.a
 
 $(BUILD_DIR)/libs/amcstubs/%.o: libs/amcstubs/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBAMCSTUBS_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBAMCSTUBS_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

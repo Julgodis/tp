@@ -43,8 +43,8 @@ extern "C" bool ChkMemoryError__9dBgW_BaseFv(); // 1
 extern "C" void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz(); // 1
 extern "C" void CalcDiffShapeAngleY__9dBgW_BaseFs(); // 1
-SECTION_DATA extern void*const __vt__9dBgW_Base[60];
-SECTION_DATA extern void*const __vt__9cBgW_BgId[4];
+SECTION_DATA extern void* const __vt__9dBgW_Base[60];
+SECTION_DATA extern void* const __vt__9cBgW_BgId[3 + 1 /* padding */];
 
 // 
 // External References:
@@ -60,80 +60,80 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803ABCC8-803ABDB8 00F0+00 rc=2 efc=0 .data      __vt__9dBgW_Base                                             */
+/* 803ABCC8-803ABDB8 00F0+00 rc=0 efc=0 .data      __vt__9dBgW_Base                                             */
 void* const __vt__9dBgW_Base[60] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__9dBgW_BaseFv,
 	(void*)ChkMemoryError__9dBgW_BaseFv,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)SetOldShapeAngleY__9dBgW_BaseFs,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c,
 	(void*)CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
 };
 
-/* 803ABDB8-803ABDC8 000C+04 rc=3 efc=0 .data      __vt__9cBgW_BgId                                             */
-void* const __vt__9cBgW_BgId[4] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803ABDB8-803ABDC8 000C+04 rc=0 efc=0 .data      __vt__9cBgW_BgId                                             */
+void* const __vt__9cBgW_BgId[3 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__9cBgW_BgIdFv,
 	/* padding */
 	NULL,
 };
 
-/* 8007E5A8-8007E5F8 0050+00 rc=2 efc=2 .text      __ct__9dBgW_BaseFv                                           */
+/* 8007E5A8-8007E5F8 0050+00 rc=0 efc=0 .text      __ct__9dBgW_BaseFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +144,7 @@ asm dBgW_Base::dBgW_Base() {
 #pragma pop
 
 
-/* 8007E5F8-8007E640 0048+00 rc=1 efc=0 .text      __dt__9cBgW_BgIdFv                                           */
+/* 8007E5F8-8007E640 0048+00 rc=0 efc=0 .text      __dt__9cBgW_BgIdFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +155,7 @@ asm cBgW_BgId::~cBgW_BgId() {
 #pragma pop
 
 
-/* 8007E640-8007E69C 005C+00 rc=3 efc=2 .text      __dt__9dBgW_BaseFv                                           */
+/* 8007E640-8007E69C 005C+00 rc=0 efc=0 .text      __dt__9dBgW_BaseFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,7 +166,7 @@ asm dBgW_Base::~dBgW_Base() {
 #pragma pop
 
 
-/* 8007E69C-8007E6D0 0034+00 rc=2 efc=1 .text      ClrDBgWBase__9dBgW_BaseFv                                    */
+/* 8007E69C-8007E6D0 0034+00 rc=0 efc=0 .text      ClrDBgWBase__9dBgW_BaseFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -177,25 +177,25 @@ asm void dBgW_Base::ClrDBgWBase() {
 #pragma pop
 
 
-/* 8007E6D0-8007E6D8 0008+00 rc=2 efc=1 .text      ChkMemoryError__9dBgW_BaseFv                                 */
+/* 8007E6D0-8007E6D8 0008+00 rc=0 efc=0 .text      ChkMemoryError__9dBgW_BaseFv                                 */
 bool dBgW_Base::ChkMemoryError() {
 	return false;
 }
 
 
-/* 8007E6D8-8007E6DC 0004+00 rc=3 efc=2 .text      CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c      */
+/* 8007E6D8-8007E6DC 0004+00 rc=0 efc=0 .text      CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c      */
 void dBgW_Base::CallRideCallBack(fopAc_ac_c* field_0, fopAc_ac_c* field_1) {
 	/* empty function */
 }
 
 
-/* 8007E6DC-8007E6E0 0004+00 rc=3 efc=2 .text      CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz */
+/* 8007E6DC-8007E6E0 0004+00 rc=0 efc=0 .text      CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz */
 void dBgW_Base::CallArrowStickCallBack(fopAc_ac_c* field_0, fopAc_ac_c* field_1, cXyz& field_2) {
 	/* empty function */
 }
 
 
-/* 8007E6E0-8007E6F4 0014+00 rc=1 efc=1 .text      CalcDiffShapeAngleY__9dBgW_BaseFs                            */
+/* 8007E6E0-8007E6F4 0014+00 rc=0 efc=0 .text      CalcDiffShapeAngleY__9dBgW_BaseFs                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -253,10 +253,10 @@ struct dRes_control_c {
 struct csXyz {
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -382,28 +382,28 @@ struct JUTNameTab {
 // Forward References:
 // 
 
-extern "C" static void func_80037DE4(); // 1
-extern "C" static void func_80037E44(); // 1
-extern "C" static void func_80037E74(); // 1
-extern "C" static void func_80037ED4(); // 1
-static void dDemo_getJaiPointer(char const*, u32, int, u16*); // 2
+extern "C" void func_80037DE4(); // 1
+extern "C" void func_80037E44(); // 1
+extern "C" void func_80037E74(); // 1
+extern "C" void func_80037ED4(); // 1
+void dDemo_getJaiPointer(char const*, u32, int, u16*); // 2
 void dDemo_setDemoData(fopAc_ac_c*, u8, mDoExt_McaMorf*, char const*, int, u16*, u32, s8); // 2
-static void branchFile(char const*); // 2
-static void getView(); // 2
+void branchFile(char const*); // 2
+void getView(); // 2
 
-extern "C" static void func_80037DE4(); // 1
-extern "C" static void func_80037E44(); // 1
-extern "C" static void func_80037E74(); // 1
-extern "C" static void func_80037ED4(); // 1
+extern "C" void func_80037DE4(); // 1
+extern "C" void func_80037E44(); // 1
+extern "C" void func_80037E74(); // 1
+extern "C" void func_80037ED4(); // 1
 extern "C" void __ct__13dDemo_actor_cFv(); // 1
 extern "C" void __dt__13dDemo_actor_cFv(); // 1
 extern "C" void getActor__13dDemo_actor_cFv(); // 1
 extern "C" void setActor__13dDemo_actor_cFP10fopAc_ac_c(); // 1
 extern "C" void getPrm_Morf__13dDemo_actor_cFv(); // 1
 extern "C" void getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc(); // 1
-extern "C" static void dDemo_getJaiPointer__FPCcUliPUs(); // 1
+extern "C" void dDemo_getJaiPointer__FPCcUliPUs(); // 1
 extern "C" void dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc(); // 1
-extern "C" static void branchFile__FPCc(); // 1
+extern "C" void branchFile__FPCc(); // 1
 extern "C" void JSGSetData__13dDemo_actor_cFUlPCvUl(); // 1
 extern "C" void JSGSetTranslation__13dDemo_actor_cFRC3Vec(); // 1
 extern "C" void JSGSetScaling__13dDemo_actor_cFRC3Vec(); // 1
@@ -414,7 +414,7 @@ extern "C" void JSGSetAnimationFrame__13dDemo_actor_cFf(); // 1
 extern "C" void JSGSetAnimationTransition__13dDemo_actor_cFf(); // 1
 extern "C" void JSGSetTextureAnimation__13dDemo_actor_cFUl(); // 1
 extern "C" void JSGSetTextureAnimationFrame__13dDemo_actor_cFf(); // 1
-extern "C" static void getView__Fv(); // 1
+extern "C" void getView__Fv(); // 1
 extern "C" void JSGGetProjectionNear__14dDemo_camera_cCFv(); // 1
 extern "C" void JSGSetProjectionNear__14dDemo_camera_cFf(); // 1
 extern "C" void JSGGetProjectionFar__14dDemo_camera_cCFv(); // 1
@@ -477,23 +477,23 @@ extern "C" void JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv(); // 1
 extern "C" void JSGGetTranslation__13dDemo_actor_cCFP3Vec(); // 1
 extern "C" void JSGGetScaling__13dDemo_actor_cCFP3Vec(); // 1
 extern "C" void JSGGetRotation__13dDemo_actor_cCFP3Vec(); // 1
-SECTION_RODATA extern const u8 d_d_demo__stringBase0[72];
-SECTION_DATA extern void*const __vt__16dDemo_particle_c[6];
-SECTION_DATA extern void*const __vt__17jmessage_tControl[3];
-SECTION_DATA extern void*const __vt__Q27JStudio13TCreateObject[4];
-SECTION_DATA extern void*const __vt__14dDemo_system_c[20];
-SECTION_DATA extern void*const __vt__11dDemo_fog_c[23];
-SECTION_DATA extern void*const __vt__13dDemo_light_c[27];
-SECTION_DATA extern void*const __vt__15dDemo_ambient_c[17];
-SECTION_DATA extern void*const __vt__14dDemo_camera_c[37];
-SECTION_DATA extern void*const __vt__13dDemo_actor_c[35];
-SECTION_DATA extern void*const __vt__Q27JStudio16TAdaptor_message[9];
-SECTION_DATA extern void*const data_803A7BE4[4];
-SECTION_DATA extern void*const data_803A7BF4[9];
+SECTION_RODATA extern const char* const d_d_demo__stringBase0;
+SECTION_DATA extern void* const __vt__16dDemo_particle_c[6];
+SECTION_DATA extern void* const __vt__17jmessage_tControl[3];
+SECTION_DATA extern void* const __vt__Q27JStudio13TCreateObject[4];
+SECTION_DATA extern void* const __vt__14dDemo_system_c[20];
+SECTION_DATA extern void* const __vt__11dDemo_fog_c[23];
+SECTION_DATA extern void* const __vt__13dDemo_light_c[27];
+SECTION_DATA extern void* const __vt__15dDemo_ambient_c[17];
+SECTION_DATA extern void* const __vt__14dDemo_camera_c[37];
+SECTION_DATA extern void* const __vt__13dDemo_actor_c[35];
+SECTION_DATA extern void* const __vt__Q27JStudio16TAdaptor_message[9];
+SECTION_DATA extern void* const data_803A7BE4[4];
+SECTION_DATA extern void* const data_803A7BF4[9];
 SECTION_BSS extern u8 data_80424648[20];
 SECTION_BSS extern u8 d_d_demo__lit_5233[12];
 SECTION_BSS extern u8 data_80424668[12 + 4 /* padding */];
-SECTION_SDATA extern u16 m_branchId__7dDemo_c;
+SECTION_SDATA extern u16 m_branchId__7dDemo_c[1 + 3 /* padding */];
 SECTION_SBSS extern u8 m_system__7dDemo_c[4];
 SECTION_SBSS extern u8 m_control__7dDemo_c[4];
 SECTION_SBSS extern u8 m_stage__7dDemo_c[4];
@@ -506,13 +506,13 @@ SECTION_SBSS extern u8 m_object__7dDemo_c[4];
 SECTION_SBSS extern u8 m_data__7dDemo_c[4];
 SECTION_SBSS extern u8 m_frame__7dDemo_c[4];
 SECTION_SBSS extern u8 m_translation__7dDemo_c[4];
-SECTION_SBSS extern u8 m_rotationY__7dDemo_c[4];
+SECTION_SBSS extern f32 m_rotationY__7dDemo_c;
 SECTION_SBSS extern u8 m_frameNoMsg__7dDemo_c[4];
 SECTION_SBSS extern u8 m_mode__7dDemo_c[4];
 SECTION_SBSS extern u8 m_status__7dDemo_c[4];
 SECTION_SBSS extern u8 m_branchType__7dDemo_c[2 + 2 /* padding */];
 SECTION_SBSS extern u8 m_branchData__7dDemo_c[4];
-SECTION_SBSS extern u8 struct_80450E48[4];
+extern u8 struct_80450E48[4];
 SECTION_SBSS extern u8 data_80450E4C[4];
 SECTION_SBSS extern u8 data_80450E50[8];
 SECTION_SDATA2 extern u8 d_d_demo__lit_4040[4];
@@ -524,9 +524,9 @@ SECTION_SDATA2 extern f32 d_d_demo__lit_4554;
 SECTION_SDATA2 extern f32 d_d_demo__lit_4567;
 SECTION_SDATA2 extern f32 d_d_demo__lit_4642;
 SECTION_SDATA2 extern f32 d_d_demo__lit_4655;
-SECTION_SDATA2 extern f32 d_d_demo__lit_4710;
+SECTION_SDATA2 extern f32 d_d_demo__lit_4710[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 d_d_demo__lit_5123;
-SECTION_SDATA2 extern f32 lit_5322;
+SECTION_SDATA2 extern f32 lit_5322[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -664,28 +664,27 @@ extern "C" void _restgpr_29(); // 1
 extern "C" void strncmp(); // 1
 extern "C" void strcmp(); // 1
 extern "C" void strlen(); // 1
-SECTION_DATA extern void*const __vt__Q26JStage6TActor[36];
-SECTION_DATA extern void*const __vt__Q26JStage13TAmbientLight[18];
-SECTION_DATA extern void*const __vt__Q26JStage7TCamera[38];
-SECTION_DATA extern void*const __vt__Q26JStage4TFog[24];
-SECTION_DATA extern void*const __vt__Q26JStage6TLight[28];
-SECTION_DATA extern void*const __vt__Q26JStage7TObject[16];
-SECTION_DATA extern void*const __vt__Q26JStage7TSystem[20];
-SECTION_DATA extern void*const __vt__Q37JStudio3ctb8TFactory[5];
-SECTION_DATA extern void*const __vt__Q37JStudio3fvb8TFactory[5];
-SECTION_DATA extern void*const __vt__Q27JStudio8TFactory[5];
-SECTION_DATA extern void*const __vt__Q27JStudio8TAdaptor[8];
-SECTION_DATA extern void*const __vt__Q37JStudio3stb8TFactory[5];
-SECTION_DATA extern void*const __vt__Q214JStudio_JStage13TCreateObject[4];
-SECTION_DATA extern void*const __vt__Q215JStudio_JAudio213TCreateObject[4];
-SECTION_DATA extern void*const __vt__Q217JStudio_JParticle13TCreateObject[6];
+SECTION_DATA extern void* const __vt__Q26JStage6TActor[35 + 1 /* padding */];
+SECTION_DATA extern void* const __vt__Q26JStage13TAmbientLight[17 + 1 /* padding */];
+SECTION_DATA extern void* const __vt__Q26JStage7TCamera[37 + 1 /* padding */];
+SECTION_DATA extern void* const __vt__Q26JStage4TFog[23 + 1 /* padding */];
+SECTION_DATA extern void* const __vt__Q26JStage6TLight[27 + 1 /* padding */];
+SECTION_DATA extern void* const __vt__Q26JStage7TObject[15 + 1 /* padding */];
+SECTION_DATA extern void* const __vt__Q26JStage7TSystem[20];
+SECTION_DATA extern void* const __vt__Q37JStudio3ctb8TFactory[5];
+SECTION_DATA extern void* const __vt__Q37JStudio3fvb8TFactory[5];
+SECTION_DATA extern void* const __vt__Q27JStudio8TFactory[5];
+SECTION_DATA extern void* const __vt__Q27JStudio8TAdaptor[8];
+SECTION_DATA extern void* const __vt__Q37JStudio3stb8TFactory[5];
+SECTION_DATA extern void* const __vt__Q214JStudio_JStage13TCreateObject[4];
+SECTION_DATA extern void* const __vt__Q215JStudio_JAudio213TCreateObject[4];
+SECTION_DATA extern void* const __vt__Q217JStudio_JParticle13TCreateObject[6];
 SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_env_light[4880];
 SECTION_SDATA extern u32 g_blackColor;
 SECTION_SDATA extern u32 __float_max;
 SECTION_SBSS extern u8 data_80450B74[4];
-SECTION_SBSS extern u8 struct_80450D64[4];
 SECTION_SBSS extern u8 mEmitterMng__13dPa_control_c[4];
 
 // 
@@ -693,35 +692,35 @@ SECTION_SBSS extern u8 mEmitterMng__13dPa_control_c[4];
 // 
 
 /* ############################################################################################## */
-/* 803A7910-803A7928 0018+00 rc=2 efc=0 .data      __vt__16dDemo_particle_c                                     */
+/* 803A7910-803A7928 0018+00 rc=0 efc=0 .data      __vt__16dDemo_particle_c                                     */
 void* const __vt__16dDemo_particle_c[6] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__16dDemo_particle_cFv,
 	(void*)create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object,
 	(void*)emitter_create__16dDemo_particle_cFUl,
 	(void*)emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter,
 };
 
-/* 803A7928-803A7934 000C+00 rc=2 efc=1 .data      __vt__17jmessage_tControl                                    */
+/* 803A7928-803A7934 000C+00 rc=0 efc=0 .data      __vt__17jmessage_tControl                                    */
 void* const __vt__17jmessage_tControl[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__17jmessage_tControlFv,
 };
 
-/* 803A7934-803A7944 0010+00 rc=2 efc=1 .data      __vt__Q27JStudio13TCreateObject                              */
+/* 803A7934-803A7944 0010+00 rc=0 efc=0 .data      __vt__Q27JStudio13TCreateObject                              */
 void* const __vt__Q27JStudio13TCreateObject[4] = {
-	NULL, /* RTTI */
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 803A7944-803A7994 0050+00 rc=2 efc=0 .data      __vt__14dDemo_system_c                                       */
+/* 803A7944-803A7994 0050+00 rc=0 efc=0 .data      __vt__14dDemo_system_c                                       */
 void* const __vt__14dDemo_system_c[20] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__14dDemo_system_cFv,
 	(void*)JSGFGetType__Q26JStage7TSystemCFv,
 	(void*)JSGGetName__Q26JStage7TObjectCFv,
@@ -742,10 +741,10 @@ void* const __vt__14dDemo_system_c[20] = {
 	(void*)JSGSetSystemData__Q26JStage7TSystemFUlUl,
 };
 
-/* 803A7994-803A79F0 005C+00 rc=2 efc=0 .data      __vt__11dDemo_fog_c                                          */
+/* 803A7994-803A79F0 005C+00 rc=0 efc=0 .data      __vt__11dDemo_fog_c                                          */
 void* const __vt__11dDemo_fog_c[23] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__11dDemo_fog_cFv,
 	(void*)JSGFGetType__Q26JStage4TFogCFv,
 	(void*)JSGGetName__Q26JStage7TObjectCFv,
@@ -769,10 +768,10 @@ void* const __vt__11dDemo_fog_c[23] = {
 	(void*)JSGSetColor__11dDemo_fog_cF8_GXColor,
 };
 
-/* 803A79F0-803A7A5C 006C+00 rc=2 efc=0 .data      __vt__13dDemo_light_c                                        */
+/* 803A79F0-803A7A5C 006C+00 rc=0 efc=0 .data      __vt__13dDemo_light_c                                        */
 void* const __vt__13dDemo_light_c[27] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__13dDemo_light_cFv,
 	(void*)JSGFGetType__Q26JStage6TLightCFv,
 	(void*)JSGGetName__Q26JStage7TObjectCFv,
@@ -800,10 +799,10 @@ void* const __vt__13dDemo_light_c[27] = {
 	(void*)JSGSetDirection__13dDemo_light_cFRC3Vec,
 };
 
-/* 803A7A5C-803A7AA0 0044+00 rc=2 efc=0 .data      __vt__15dDemo_ambient_c                                      */
+/* 803A7A5C-803A7AA0 0044+00 rc=0 efc=0 .data      __vt__15dDemo_ambient_c                                      */
 void* const __vt__15dDemo_ambient_c[17] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__15dDemo_ambient_cFv,
 	(void*)JSGFGetType__Q26JStage13TAmbientLightCFv,
 	(void*)JSGGetName__Q26JStage7TObjectCFv,
@@ -821,10 +820,10 @@ void* const __vt__15dDemo_ambient_c[17] = {
 	(void*)JSGSetColor__15dDemo_ambient_cF8_GXColor,
 };
 
-/* 803A7AA0-803A7B34 0094+00 rc=2 efc=0 .data      __vt__14dDemo_camera_c                                       */
+/* 803A7AA0-803A7B34 0094+00 rc=0 efc=0 .data      __vt__14dDemo_camera_c                                       */
 void* const __vt__14dDemo_camera_c[37] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__14dDemo_camera_cFv,
 	(void*)JSGFGetType__Q26JStage7TCameraCFv,
 	(void*)JSGGetName__Q26JStage7TObjectCFv,
@@ -862,10 +861,10 @@ void* const __vt__14dDemo_camera_c[37] = {
 	(void*)JSGSetViewRoll__14dDemo_camera_cFf,
 };
 
-/* 803A7B34-803A7BC0 008C+00 rc=2 efc=0 .data      __vt__13dDemo_actor_c                                        */
+/* 803A7B34-803A7BC0 008C+00 rc=0 efc=0 .data      __vt__13dDemo_actor_c                                        */
 void* const __vt__13dDemo_actor_c[35] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__13dDemo_actor_cFv,
 	(void*)JSGFGetType__Q26JStage6TActorCFv,
 	(void*)JSGGetName__Q26JStage7TObjectCFv,
@@ -901,31 +900,31 @@ void* const __vt__13dDemo_actor_c[35] = {
 	(void*)JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv,
 };
 
-/* 803A7BC0-803A7BE4 0024+00 rc=2 efc=1 .data      __vt__Q27JStudio16TAdaptor_message                           */
+/* 803A7BC0-803A7BE4 0024+00 rc=0 efc=0 .data      __vt__Q27JStudio16TAdaptor_message                           */
 void* const __vt__Q27JStudio16TAdaptor_message[9] = {
-	NULL, /* RTTI */
-	NULL,
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
 	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
 	(void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
 	(void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
 	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
-	NULL,
+	(void*)NULL,
 };
 
-/* 803A7BE4-803A7BF4 0010+00 rc=2 efc=0 .data      __vt__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_message */
+/* 803A7BE4-803A7BF4 0010+00 rc=0 efc=0 .data      __vt__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_message */
 void* const data_803A7BE4[4] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)func_80037E74,
 	(void*)func_80037ED4,
 };
 
-/* 803A7BF4-803A7C18 0024+00 rc=2 efc=0 .data      __vt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_message     */
+/* 803A7BF4-803A7C18 0024+00 rc=0 efc=0 .data      __vt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_message     */
 void* const data_803A7BF4[9] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)func_80037DE4,
 	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
 	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
@@ -935,44 +934,44 @@ void* const data_803A7BF4[9] = {
 	(void*)func_80037E44,
 };
 
-/* 80037DE4-80037E44 0060+00 rc=1 efc=0 .text      __dt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFv   */
+/* 80037DE4-80037E44 0060+00 rc=0 efc=0 .text      __dt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFv   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80037DE4() {
+extern "C" asm void func_80037DE4() {
 	nofralloc
 #include "asm/d/d_demo/func_80037DE4.s"
 }
 #pragma pop
 
 
-/* 80037E44-80037E74 0030+00 rc=1 efc=0 .text      adaptor_do_MESSAGE__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFQ37JStudio4data15TEOperationDataPCvUl */
+/* 80037E44-80037E74 0030+00 rc=0 efc=0 .text      adaptor_do_MESSAGE__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80037E44() {
+extern "C" asm void func_80037E44() {
 	nofralloc
 #include "asm/d/d_demo/func_80037E44.s"
 }
 #pragma pop
 
 
-/* 80037E74-80037ED4 0060+00 rc=1 efc=0 .text      __dt__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFv */
+/* 80037E74-80037ED4 0060+00 rc=0 efc=0 .text      __dt__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80037E74() {
+extern "C" asm void func_80037E74() {
 	nofralloc
 #include "asm/d/d_demo/func_80037E74.s"
 }
 #pragma pop
 
 
-/* 80037ED4-80038020 014C+00 rc=1 efc=0 .text      create__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
+/* 80037ED4-80038020 014C+00 rc=0 efc=0 .text      create__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80037ED4() {
+extern "C" asm void func_80037ED4() {
 	nofralloc
 #include "asm/d/d_demo/func_80037ED4.s"
 }
@@ -980,15 +979,15 @@ extern "C" asm static void func_80037ED4() {
 
 
 /* ############################################################################################## */
-/* 80451DB0-80451DB4 0004+00 rc=9 efc=0 .sdata2    @4040                                                        */
+/* 80451DB0-80451DB4 0004+00 rc=0 efc=0 .sdata2    @4040                                                        */
 u8 d_d_demo__lit_4040[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451DB4-80451DB8 0004+00 rc=6 efc=0 .sdata2    @4041                                                        */
+/* 80451DB4-80451DB8 0004+00 rc=0 efc=0 .sdata2    @4041                                                        */
 f32 d_d_demo__lit_4041 = 1.0f;
 
-/* 80038020-80038098 0078+00 rc=1 efc=0 .text      __ct__13dDemo_actor_cFv                                      */
+/* 80038020-80038098 0078+00 rc=0 efc=0 .text      __ct__13dDemo_actor_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -999,7 +998,7 @@ asm dDemo_actor_c::dDemo_actor_c() {
 #pragma pop
 
 
-/* 80038098-80038128 0090+00 rc=1 efc=0 .text      __dt__13dDemo_actor_cFv                                      */
+/* 80038098-80038128 0090+00 rc=0 efc=0 .text      __dt__13dDemo_actor_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1010,7 +1009,7 @@ asm dDemo_actor_c::~dDemo_actor_c() {
 #pragma pop
 
 
-/* 80038128-8003815C 0034+00 rc=1 efc=0 .text      getActor__13dDemo_actor_cFv                                  */
+/* 80038128-8003815C 0034+00 rc=0 efc=0 .text      getActor__13dDemo_actor_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1021,7 +1020,7 @@ asm void dDemo_actor_c::getActor() {
 #pragma pop
 
 
-/* 8003815C-8003819C 0040+00 rc=2 efc=1 .text      setActor__13dDemo_actor_cFP10fopAc_ac_c                      */
+/* 8003815C-8003819C 0040+00 rc=0 efc=0 .text      setActor__13dDemo_actor_cFP10fopAc_ac_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1033,10 +1032,10 @@ asm void dDemo_actor_c::setActor(fopAc_ac_c* field_0) {
 
 
 /* ############################################################################################## */
-/* 80451DB8-80451DC0 0008+00 rc=4 efc=0 .sdata2    @4127                                                        */
+/* 80451DB8-80451DC0 0008+00 rc=0 efc=0 .sdata2    @4127                                                        */
 f64 d_d_demo__lit_4127 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8003819C-80038338 019C+00 rc=2 efc=1 .text      getPrm_Morf__13dDemo_actor_cFv                               */
+/* 8003819C-80038338 019C+00 rc=0 efc=0 .text      getPrm_Morf__13dDemo_actor_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1048,72 +1047,70 @@ asm void dDemo_actor_c::getPrm_Morf() {
 
 
 /* ############################################################################################## */
-/* 80424648-8042465C 0014+00 rc=1 efc=0 .bss       dummy$4203                                                   */
+/* 80424648-8042465C 0014+00 rc=0 efc=0 .bss       dummy$4203                                                   */
 u8 data_80424648[20];
 
-/* 80450E00-80450E04 0004+00 rc=2 efc=0 .sbss      m_system__7dDemo_c                                           */
+/* 80450E00-80450E04 0004+00 rc=0 efc=0 .sbss      m_system__7dDemo_c                                           */
 u8 m_system__7dDemo_c[4];
 
-/* 80450E04-80450E08 0004+00 rc=9 efc=3 .sbss      m_control__7dDemo_c                                          */
+/* 80450E04-80450E08 0004+00 rc=0 efc=0 .sbss      m_control__7dDemo_c                                          */
 u8 m_control__7dDemo_c[4];
 
-/* 80450E08-80450E0C 0004+00 rc=2 efc=0 .sbss      m_stage__7dDemo_c                                            */
+/* 80450E08-80450E0C 0004+00 rc=0 efc=0 .sbss      m_stage__7dDemo_c                                            */
 u8 m_stage__7dDemo_c[4];
 
-/* 80450E0C-80450E10 0004+00 rc=2 efc=0 .sbss      m_audio__7dDemo_c                                            */
+/* 80450E0C-80450E10 0004+00 rc=0 efc=0 .sbss      m_audio__7dDemo_c                                            */
 u8 m_audio__7dDemo_c[4];
 
-/* 80450E10-80450E14 0004+00 rc=2 efc=0 .sbss      m_particle__7dDemo_c                                         */
+/* 80450E10-80450E14 0004+00 rc=0 efc=0 .sbss      m_particle__7dDemo_c                                         */
 u8 m_particle__7dDemo_c[4];
 
-/* 80450E14-80450E18 0004+00 rc=2 efc=0 .sbss      m_message__7dDemo_c                                          */
+/* 80450E14-80450E18 0004+00 rc=0 efc=0 .sbss      m_message__7dDemo_c                                          */
 u8 m_message__7dDemo_c[4];
 
-/* 80450E18-80450E1C 0004+00 rc=2 efc=0 .sbss      m_factory__7dDemo_c                                          */
+/* 80450E18-80450E1C 0004+00 rc=0 efc=0 .sbss      m_factory__7dDemo_c                                          */
 u8 m_factory__7dDemo_c[4];
 
-/* 80450E1C-80450E20 0004+00 rc=3 efc=1 .sbss      m_mesgControl__7dDemo_c                                      */
+/* 80450E1C-80450E20 0004+00 rc=0 efc=0 .sbss      m_mesgControl__7dDemo_c                                      */
 u8 m_mesgControl__7dDemo_c[4];
 
-/* 80450E20-80450E24 0004+00 rc=14 efc=9 .sbss      m_object__7dDemo_c                                           */
+/* 80450E20-80450E24 0004+00 rc=0 efc=0 .sbss      m_object__7dDemo_c                                           */
 u8 m_object__7dDemo_c[4];
 
-/* 80450E24-80450E28 0004+00 rc=4 efc=0 .sbss      m_data__7dDemo_c                                             */
+/* 80450E24-80450E28 0004+00 rc=0 efc=0 .sbss      m_data__7dDemo_c                                             */
 u8 m_data__7dDemo_c[4];
 
-/* 80450E28-80450E2C 0004+00 rc=2 efc=0 .sbss      m_frame__7dDemo_c                                            */
+/* 80450E28-80450E2C 0004+00 rc=0 efc=0 .sbss      m_frame__7dDemo_c                                            */
 u8 m_frame__7dDemo_c[4];
 
-/* 80450E2C-80450E30 0004+00 rc=2 efc=0 .sbss      m_translation__7dDemo_c                                      */
+/* 80450E2C-80450E30 0004+00 rc=0 efc=0 .sbss      m_translation__7dDemo_c                                      */
 u8 m_translation__7dDemo_c[4];
 
-/* 80450E30-80450E34 0004+00 rc=2 efc=0 .sbss      m_rotationY__7dDemo_c                                        */
-u8 m_rotationY__7dDemo_c[4];
+/* 80450E30-80450E34 0004+00 rc=0 efc=0 .sbss      m_rotationY__7dDemo_c                                        */
+f32 m_rotationY__7dDemo_c;
 
-/* 80450E34-80450E38 0004+00 rc=3 efc=1 .sbss      m_frameNoMsg__7dDemo_c                                       */
+/* 80450E34-80450E38 0004+00 rc=0 efc=0 .sbss      m_frameNoMsg__7dDemo_c                                       */
 u8 m_frameNoMsg__7dDemo_c[4];
 
-/* 80450E38-80450E3C 0004+00 rc=8 efc=4 .sbss      m_mode__7dDemo_c                                             */
+/* 80450E38-80450E3C 0004+00 rc=0 efc=0 .sbss      m_mode__7dDemo_c                                             */
 u8 m_mode__7dDemo_c[4];
 
-/* 80450E3C-80450E40 0004+00 rc=3 efc=1 .sbss      m_status__7dDemo_c                                           */
+/* 80450E3C-80450E40 0004+00 rc=0 efc=0 .sbss      m_status__7dDemo_c                                           */
 u8 m_status__7dDemo_c[4];
 
-/* 80450E40-80450E44 0002+02 rc=2 efc=0 .sbss      m_branchType__7dDemo_c                                       */
+/* 80450E40-80450E44 0002+02 rc=0 efc=0 .sbss      m_branchType__7dDemo_c                                       */
 u8 m_branchType__7dDemo_c[2 + 2 /* padding */];
 
-/* 80450E44-80450E48 0004+00 rc=5 efc=0 .sbss      m_branchData__7dDemo_c                                       */
+/* 80450E44-80450E48 0004+00 rc=0 efc=0 .sbss      m_branchData__7dDemo_c                                       */
 u8 m_branchData__7dDemo_c[4];
 
-/* 80450E48-80450E4C 0004+00 rc=1 efc=0 .sbss      None                                                         */
+/* 80450E48-80450E4C 0004+00 rc=0 efc=0 None       None                                                         */
 u8 struct_80450E48[4];
-/* 80450E48 0001 data_80450E48 */
-/* 80450E49 0003 data_80450E49 */
 
-/* 80450E4C-80450E50 0004+00 rc=1 efc=0 .sbss      it$4206                                                      */
+/* 80450E4C-80450E50 0004+00 rc=0 efc=0 .sbss      it$4206                                                      */
 u8 data_80450E4C[4];
 
-/* 80038338-80038490 0158+00 rc=1 efc=1 .text      getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc                  */
+/* 80038338-80038490 0158+00 rc=0 efc=0 .text      getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1124,11 +1121,11 @@ asm void dDemo_actor_c::getDemoIDData(int* field_0, int* field_1, int* field_2, 
 #pragma pop
 
 
-/* 80038490-80038518 0088+00 rc=1 efc=0 .text      dDemo_getJaiPointer__FPCcUliPUs                              */
+/* 80038490-80038518 0088+00 rc=0 efc=0 .text      dDemo_getJaiPointer__FPCcUliPUs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dDemo_getJaiPointer(char const* field_0, u32 field_1, int field_2, u16* field_3) {
+asm void dDemo_getJaiPointer(char const* field_0, u32 field_1, int field_2, u16* field_3) {
 	nofralloc
 #include "asm/d/d_demo/dDemo_getJaiPointer__FPCcUliPUs.s"
 }
@@ -1136,7 +1133,7 @@ asm static void dDemo_getJaiPointer(char const* field_0, u32 field_1, int field_
 
 
 /* ############################################################################################## */
-/* 80451DC0-80451DC4 0004+00 rc=1 efc=0 .sdata2    @4152                                                        */
+/* 80451DC0-80451DC4 0004+00 rc=0 efc=0 .sdata2    @4152                                                        */
 f32 d_d_demo__lit_4152 = -1.0f;
 
 /* 80038518-800387A8 0290+00 rc=0 efc=0 .text      dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc */
@@ -1150,11 +1147,11 @@ asm void dDemo_setDemoData(fopAc_ac_c* field_0, u8 field_1, mDoExt_McaMorf* fiel
 #pragma pop
 
 
-/* 800387A8-800387EC 0044+00 rc=1 efc=0 .text      branchFile__FPCc                                             */
+/* 800387A8-800387EC 0044+00 rc=0 efc=0 .text      branchFile__FPCc                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void branchFile(char const* field_0) {
+asm void branchFile(char const* field_0) {
 	nofralloc
 #include "asm/d/d_demo/branchFile__FPCc.s"
 }
@@ -1162,23 +1159,26 @@ asm static void branchFile(char const* field_0) {
 
 
 /* ############################################################################################## */
-/* 803797F8-80379840 0046+02 rc=3 efc=0 .rodata    @stringBase0                                                 */
+/* 803797F8-80379840 0046+02 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_803797F8 = "-";
-SECTION_DEAD char* const stringBase_803797FA = "d_act";
-SECTION_DEAD char* const stringBase_80379800 = "デモデータ読み込みエラー！！\n";
-SECTION_DEAD char* const stringBase_8037981E = "デモデータ再読み込みエラー！！\n";
+const char* const stringBase_803797F8 = "-";
+const char* const stringBase_803797FA = "d_act";
+const char* const stringBase_80379800 = "デモデータ読み込みエラー！！\n";
+const char* const stringBase_8037981E = "デモデータ再読み込みエラー！！\n";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_8037983E = "\0";
+char* const pad_8037983E = "\0";
 #pragma pop
 
-/* 80450620-80450628 0002+06 rc=4 efc=1 .sdata     m_branchId__7dDemo_c                                         */
-u16 m_branchId__7dDemo_c = 0xFFFF;
-/* padding 6 bytes */
+/* 80450620-80450628 0002+06 rc=0 efc=0 .sdata     m_branchId__7dDemo_c                                         */
+u16 m_branchId__7dDemo_c[1 + 3 /* padding */] = {
+	0xFFFF,
+	/* padding */
+	0x0000, 0x0000, 0x0000,
+};
 
-/* 800387EC-80038920 0134+00 rc=1 efc=0 .text      JSGSetData__13dDemo_actor_cFUlPCvUl                          */
+/* 800387EC-80038920 0134+00 rc=0 efc=0 .text      JSGSetData__13dDemo_actor_cFUlPCvUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1190,13 +1190,13 @@ asm void dDemo_actor_c::JSGSetData(u32 field_0, void const* field_1, u32 field_2
 
 
 /* ############################################################################################## */
-/* 80451DC4-80451DC8 0004+00 rc=1 efc=0 .sdata2    @4553                                                        */
+/* 80451DC4-80451DC8 0004+00 rc=0 efc=0 .sdata2    @4553                                                        */
 f32 d_d_demo__lit_4553 = -1.0000000331813535e+32f;
 
-/* 80451DC8-80451DCC 0004+00 rc=1 efc=0 .sdata2    @4554                                                        */
+/* 80451DC8-80451DCC 0004+00 rc=0 efc=0 .sdata2    @4554                                                        */
 f32 d_d_demo__lit_4554 = 1.0000000331813535e+32f;
 
-/* 80038920-80038980 0060+00 rc=1 efc=0 .text      JSGSetTranslation__13dDemo_actor_cFRC3Vec                    */
+/* 80038920-80038980 0060+00 rc=0 efc=0 .text      JSGSetTranslation__13dDemo_actor_cFRC3Vec                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1207,7 +1207,7 @@ asm void dDemo_actor_c::JSGSetTranslation(Vec const& field_0) {
 #pragma pop
 
 
-/* 80038980-800389A8 0028+00 rc=1 efc=0 .text      JSGSetScaling__13dDemo_actor_cFRC3Vec                        */
+/* 80038980-800389A8 0028+00 rc=0 efc=0 .text      JSGSetScaling__13dDemo_actor_cFRC3Vec                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1219,10 +1219,10 @@ asm void dDemo_actor_c::JSGSetScaling(Vec const& field_0) {
 
 
 /* ############################################################################################## */
-/* 80451DCC-80451DD0 0004+00 rc=1 efc=0 .sdata2    @4567                                                        */
+/* 80451DCC-80451DD0 0004+00 rc=0 efc=0 .sdata2    @4567                                                        */
 f32 d_d_demo__lit_4567 = 182.04444885253906f;
 
-/* 800389A8-80038A0C 0064+00 rc=1 efc=0 .text      JSGSetRotation__13dDemo_actor_cFRC3Vec                       */
+/* 800389A8-80038A0C 0064+00 rc=0 efc=0 .text      JSGSetRotation__13dDemo_actor_cFRC3Vec                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1233,7 +1233,7 @@ asm void dDemo_actor_c::JSGSetRotation(Vec const& field_0) {
 #pragma pop
 
 
-/* 80038A0C-80038A20 0014+00 rc=1 efc=0 .text      JSGSetShape__13dDemo_actor_cFUl                              */
+/* 80038A0C-80038A20 0014+00 rc=0 efc=0 .text      JSGSetShape__13dDemo_actor_cFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1244,7 +1244,7 @@ asm void dDemo_actor_c::JSGSetShape(u32 field_0) {
 #pragma pop
 
 
-/* 80038A20-80038A40 0020+00 rc=1 efc=0 .text      JSGSetAnimation__13dDemo_actor_cFUl                          */
+/* 80038A20-80038A40 0020+00 rc=0 efc=0 .text      JSGSetAnimation__13dDemo_actor_cFUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1255,7 +1255,7 @@ asm void dDemo_actor_c::JSGSetAnimation(u32 field_0) {
 #pragma pop
 
 
-/* 80038A40-80038A54 0014+00 rc=1 efc=0 .text      JSGSetAnimationFrame__13dDemo_actor_cFf                      */
+/* 80038A40-80038A54 0014+00 rc=0 efc=0 .text      JSGSetAnimationFrame__13dDemo_actor_cFf                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1266,7 +1266,7 @@ asm void dDemo_actor_c::JSGSetAnimationFrame(f32 field_0) {
 #pragma pop
 
 
-/* 80038A54-80038A68 0014+00 rc=1 efc=0 .text      JSGSetAnimationTransition__13dDemo_actor_cFf                 */
+/* 80038A54-80038A68 0014+00 rc=0 efc=0 .text      JSGSetAnimationTransition__13dDemo_actor_cFf                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1277,7 +1277,7 @@ asm void dDemo_actor_c::JSGSetAnimationTransition(f32 field_0) {
 #pragma pop
 
 
-/* 80038A68-80038A7C 0014+00 rc=1 efc=0 .text      JSGSetTextureAnimation__13dDemo_actor_cFUl                   */
+/* 80038A68-80038A7C 0014+00 rc=0 efc=0 .text      JSGSetTextureAnimation__13dDemo_actor_cFUl                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1288,7 +1288,7 @@ asm void dDemo_actor_c::JSGSetTextureAnimation(u32 field_0) {
 #pragma pop
 
 
-/* 80038A7C-80038A90 0014+00 rc=1 efc=0 .text      JSGSetTextureAnimationFrame__13dDemo_actor_cFf               */
+/* 80038A7C-80038A90 0014+00 rc=0 efc=0 .text      JSGSetTextureAnimationFrame__13dDemo_actor_cFf               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1299,18 +1299,18 @@ asm void dDemo_actor_c::JSGSetTextureAnimationFrame(f32 field_0) {
 #pragma pop
 
 
-/* 80038A90-80038AC4 0034+00 rc=8 efc=0 .text      getView__Fv                                                  */
+/* 80038A90-80038AC4 0034+00 rc=0 efc=0 .text      getView__Fv                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void getView() {
+asm void getView() {
 	nofralloc
 #include "asm/d/d_demo/getView__Fv.s"
 }
 #pragma pop
 
 
-/* 80038AC4-80038AF8 0034+00 rc=1 efc=0 .text      JSGGetProjectionNear__14dDemo_camera_cCFv                    */
+/* 80038AC4-80038AF8 0034+00 rc=0 efc=0 .text      JSGGetProjectionNear__14dDemo_camera_cCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1321,7 +1321,7 @@ asm void dDemo_camera_c::JSGGetProjectionNear() const {
 #pragma pop
 
 
-/* 80038AF8-80038B0C 0014+00 rc=1 efc=0 .text      JSGSetProjectionNear__14dDemo_camera_cFf                     */
+/* 80038AF8-80038B0C 0014+00 rc=0 efc=0 .text      JSGSetProjectionNear__14dDemo_camera_cFf                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1332,7 +1332,7 @@ asm void dDemo_camera_c::JSGSetProjectionNear(f32 field_0) {
 #pragma pop
 
 
-/* 80038B0C-80038B40 0034+00 rc=1 efc=0 .text      JSGGetProjectionFar__14dDemo_camera_cCFv                     */
+/* 80038B0C-80038B40 0034+00 rc=0 efc=0 .text      JSGGetProjectionFar__14dDemo_camera_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1343,7 +1343,7 @@ asm void dDemo_camera_c::JSGGetProjectionFar() const {
 #pragma pop
 
 
-/* 80038B40-80038B54 0014+00 rc=1 efc=0 .text      JSGSetProjectionFar__14dDemo_camera_cFf                      */
+/* 80038B40-80038B54 0014+00 rc=0 efc=0 .text      JSGSetProjectionFar__14dDemo_camera_cFf                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1355,10 +1355,10 @@ asm void dDemo_camera_c::JSGSetProjectionFar(f32 field_0) {
 
 
 /* ############################################################################################## */
-/* 80451DD0-80451DD4 0004+00 rc=1 efc=0 .sdata2    @4642                                                        */
+/* 80451DD0-80451DD4 0004+00 rc=0 efc=0 .sdata2    @4642                                                        */
 f32 d_d_demo__lit_4642 = 60.0f;
 
-/* 80038B54-80038B88 0034+00 rc=1 efc=0 .text      JSGGetProjectionFovy__14dDemo_camera_cCFv                    */
+/* 80038B54-80038B88 0034+00 rc=0 efc=0 .text      JSGGetProjectionFovy__14dDemo_camera_cCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1369,7 +1369,7 @@ asm void dDemo_camera_c::JSGGetProjectionFovy() const {
 #pragma pop
 
 
-/* 80038B88-80038B9C 0014+00 rc=1 efc=0 .text      JSGSetProjectionFovy__14dDemo_camera_cFf                     */
+/* 80038B88-80038B9C 0014+00 rc=0 efc=0 .text      JSGSetProjectionFovy__14dDemo_camera_cFf                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1381,10 +1381,10 @@ asm void dDemo_camera_c::JSGSetProjectionFovy(f32 field_0) {
 
 
 /* ############################################################################################## */
-/* 80451DD4-80451DD8 0004+00 rc=1 efc=0 .sdata2    @4655                                                        */
+/* 80451DD4-80451DD8 0004+00 rc=0 efc=0 .sdata2    @4655                                                        */
 f32 d_d_demo__lit_4655 = 19.0f / 14.0f;
 
-/* 80038B9C-80038BD0 0034+00 rc=1 efc=0 .text      JSGGetProjectionAspect__14dDemo_camera_cCFv                  */
+/* 80038B9C-80038BD0 0034+00 rc=0 efc=0 .text      JSGGetProjectionAspect__14dDemo_camera_cCFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1395,7 +1395,7 @@ asm void dDemo_camera_c::JSGGetProjectionAspect() const {
 #pragma pop
 
 
-/* 80038BD0-80038BE4 0014+00 rc=1 efc=0 .text      JSGSetProjectionAspect__14dDemo_camera_cFf                   */
+/* 80038BD0-80038BE4 0014+00 rc=0 efc=0 .text      JSGSetProjectionAspect__14dDemo_camera_cFf                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1406,7 +1406,7 @@ asm void dDemo_camera_c::JSGSetProjectionAspect(f32 field_0) {
 #pragma pop
 
 
-/* 80038BE4-80038C44 0060+00 rc=1 efc=0 .text      JSGGetViewPosition__14dDemo_camera_cCFP3Vec                  */
+/* 80038BE4-80038C44 0060+00 rc=0 efc=0 .text      JSGGetViewPosition__14dDemo_camera_cCFP3Vec                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1417,7 +1417,7 @@ asm void dDemo_camera_c::JSGGetViewPosition(Vec* field_0) const {
 #pragma pop
 
 
-/* 80038C44-80038C6C 0028+00 rc=1 efc=0 .text      JSGSetViewPosition__14dDemo_camera_cFRC3Vec                  */
+/* 80038C44-80038C6C 0028+00 rc=0 efc=0 .text      JSGSetViewPosition__14dDemo_camera_cFRC3Vec                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1428,7 +1428,7 @@ asm void dDemo_camera_c::JSGSetViewPosition(Vec const& field_0) {
 #pragma pop
 
 
-/* 80038C6C-80038CD0 0064+00 rc=1 efc=0 .text      JSGGetViewUpVector__14dDemo_camera_cCFP3Vec                  */
+/* 80038C6C-80038CD0 0064+00 rc=0 efc=0 .text      JSGGetViewUpVector__14dDemo_camera_cCFP3Vec                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1439,7 +1439,7 @@ asm void dDemo_camera_c::JSGGetViewUpVector(Vec* field_0) const {
 #pragma pop
 
 
-/* 80038CD0-80038CF8 0028+00 rc=1 efc=0 .text      JSGSetViewUpVector__14dDemo_camera_cFRC3Vec                  */
+/* 80038CD0-80038CF8 0028+00 rc=0 efc=0 .text      JSGSetViewUpVector__14dDemo_camera_cFRC3Vec                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1450,7 +1450,7 @@ asm void dDemo_camera_c::JSGSetViewUpVector(Vec const& field_0) {
 #pragma pop
 
 
-/* 80038CF8-80038D5C 0064+00 rc=1 efc=0 .text      JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec            */
+/* 80038CF8-80038D5C 0064+00 rc=0 efc=0 .text      JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1461,7 +1461,7 @@ asm void dDemo_camera_c::JSGGetViewTargetPosition(Vec* field_0) const {
 #pragma pop
 
 
-/* 80038D5C-80038D84 0028+00 rc=1 efc=0 .text      JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec            */
+/* 80038D5C-80038D84 0028+00 rc=0 efc=0 .text      JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1473,11 +1473,14 @@ asm void dDemo_camera_c::JSGSetViewTargetPosition(Vec const& field_0) {
 
 
 /* ############################################################################################## */
-/* 80451DD8-80451DE0 0004+04 rc=2 efc=0 .sdata2    @4710                                                        */
-f32 d_d_demo__lit_4710 = 0.0054931640625f;
-/* padding 4 bytes */
+/* 80451DD8-80451DE0 0004+04 rc=0 efc=0 .sdata2    @4710                                                        */
+f32 d_d_demo__lit_4710[1 + 1 /* padding */] = {
+	0.0054931640625f,
+	/* padding */
+	0.0f,
+};
 
-/* 80038D84-80038DDC 0058+00 rc=1 efc=0 .text      JSGGetViewRoll__14dDemo_camera_cCFv                          */
+/* 80038D84-80038DDC 0058+00 rc=0 efc=0 .text      JSGGetViewRoll__14dDemo_camera_cCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1488,7 +1491,7 @@ asm void dDemo_camera_c::JSGGetViewRoll() const {
 #pragma pop
 
 
-/* 80038DDC-80038DF0 0014+00 rc=1 efc=0 .text      JSGSetViewRoll__14dDemo_camera_cFf                           */
+/* 80038DDC-80038DF0 0014+00 rc=0 efc=0 .text      JSGSetViewRoll__14dDemo_camera_cFf                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1499,7 +1502,7 @@ asm void dDemo_camera_c::JSGSetViewRoll(f32 field_0) {
 #pragma pop
 
 
-/* 80038DF0-80038E20 0030+00 rc=1 efc=0 .text      JSGSetColor__15dDemo_ambient_cF8_GXColor                     */
+/* 80038DF0-80038E20 0030+00 rc=0 efc=0 .text      JSGSetColor__15dDemo_ambient_cF8_GXColor                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1510,7 +1513,7 @@ asm void dDemo_ambient_c::JSGSetColor(_GXColor field_0) {
 #pragma pop
 
 
-/* 80038E20-80038E34 0014+00 rc=1 efc=0 .text      JSGSetLightType__13dDemo_light_cFQ26JStage7TELight           */
+/* 80038E20-80038E34 0014+00 rc=0 efc=0 .text      JSGSetLightType__13dDemo_light_cFQ26JStage7TELight           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1521,7 +1524,7 @@ asm void dDemo_light_c::JSGSetLightType(JStage::TELight field_0) {
 #pragma pop
 
 
-/* 80038E34-80038E5C 0028+00 rc=1 efc=0 .text      JSGSetPosition__13dDemo_light_cFRC3Vec                       */
+/* 80038E34-80038E5C 0028+00 rc=0 efc=0 .text      JSGSetPosition__13dDemo_light_cFRC3Vec                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1532,7 +1535,7 @@ asm void dDemo_light_c::JSGSetPosition(Vec const& field_0) {
 #pragma pop
 
 
-/* 80038E5C-80038E8C 0030+00 rc=1 efc=0 .text      JSGSetColor__13dDemo_light_cF8_GXColor                       */
+/* 80038E5C-80038E8C 0030+00 rc=0 efc=0 .text      JSGSetColor__13dDemo_light_cF8_GXColor                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1543,7 +1546,7 @@ asm void dDemo_light_c::JSGSetColor(_GXColor field_0) {
 #pragma pop
 
 
-/* 80038E8C-80038EA8 001C+00 rc=1 efc=0 .text      JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn */
+/* 80038E8C-80038EA8 001C+00 rc=0 efc=0 .text      JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1554,7 +1557,7 @@ asm void dDemo_light_c::JSGSetDistanceAttenuation(f32 field_0, f32 field_1, _GXD
 #pragma pop
 
 
-/* 80038EA8-80038EC0 0018+00 rc=1 efc=0 .text      JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn          */
+/* 80038EA8-80038EC0 0018+00 rc=0 efc=0 .text      JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1565,7 +1568,7 @@ asm void dDemo_light_c::JSGSetAngleAttenuation(f32 field_0, _GXSpotFn field_1) {
 #pragma pop
 
 
-/* 80038EC0-80038EE8 0028+00 rc=1 efc=0 .text      JSGSetDirection__13dDemo_light_cFRC3Vec                      */
+/* 80038EC0-80038EE8 0028+00 rc=0 efc=0 .text      JSGSetDirection__13dDemo_light_cFRC3Vec                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1576,7 +1579,7 @@ asm void dDemo_light_c::JSGSetDirection(Vec const& field_0) {
 #pragma pop
 
 
-/* 80038EE8-80038EFC 0014+00 rc=1 efc=0 .text      JSGSetFogFunction__11dDemo_fog_cF10_GXFogType                */
+/* 80038EE8-80038EFC 0014+00 rc=0 efc=0 .text      JSGSetFogFunction__11dDemo_fog_cF10_GXFogType                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1587,7 +1590,7 @@ asm void dDemo_fog_c::JSGSetFogFunction(_GXFogType field_0) {
 #pragma pop
 
 
-/* 80038EFC-80038F10 0014+00 rc=1 efc=0 .text      JSGSetStartZ__11dDemo_fog_cFf                                */
+/* 80038EFC-80038F10 0014+00 rc=0 efc=0 .text      JSGSetStartZ__11dDemo_fog_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1598,7 +1601,7 @@ asm void dDemo_fog_c::JSGSetStartZ(f32 field_0) {
 #pragma pop
 
 
-/* 80038F10-80038F24 0014+00 rc=1 efc=0 .text      JSGSetEndZ__11dDemo_fog_cFf                                  */
+/* 80038F10-80038F24 0014+00 rc=0 efc=0 .text      JSGSetEndZ__11dDemo_fog_cFf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1609,7 +1612,7 @@ asm void dDemo_fog_c::JSGSetEndZ(f32 field_0) {
 #pragma pop
 
 
-/* 80038F24-80038F54 0030+00 rc=1 efc=0 .text      JSGSetColor__11dDemo_fog_cF8_GXColor                         */
+/* 80038F24-80038F54 0030+00 rc=0 efc=0 .text      JSGSetColor__11dDemo_fog_cF8_GXColor                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1620,7 +1623,7 @@ asm void dDemo_fog_c::JSGSetColor(_GXColor field_0) {
 #pragma pop
 
 
-/* 80038F54-80038F70 001C+00 rc=1 efc=0 .text      __ct__14dDemo_object_cFv                                     */
+/* 80038F54-80038F70 001C+00 rc=0 efc=0 .text      __ct__14dDemo_object_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1631,7 +1634,7 @@ asm dDemo_object_c::dDemo_object_c() {
 #pragma pop
 
 
-/* 80038F70-80038FC0 0050+00 rc=1 efc=0 .text      __dt__14dDemo_object_cFv                                     */
+/* 80038F70-80038FC0 0050+00 rc=0 efc=0 .text      __dt__14dDemo_object_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1642,7 +1645,7 @@ asm dDemo_object_c::~dDemo_object_c() {
 #pragma pop
 
 
-/* 80038FC0-80039088 00C8+00 rc=1 efc=0 .text      appendActor__14dDemo_object_cFP10fopAc_ac_c                  */
+/* 80038FC0-80039088 00C8+00 rc=0 efc=0 .text      appendActor__14dDemo_object_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1653,7 +1656,7 @@ asm void dDemo_object_c::appendActor(fopAc_ac_c* field_0) {
 #pragma pop
 
 
-/* 80039088-800390AC 0024+00 rc=8 efc=6 .text      getActor__14dDemo_object_cFUc                                */
+/* 80039088-800390AC 0024+00 rc=0 efc=0 .text      getActor__14dDemo_object_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1664,7 +1667,7 @@ asm void dDemo_object_c::getActor(u8 field_0) {
 #pragma pop
 
 
-/* 800390AC-80039128 007C+00 rc=1 efc=0 .text      createCamera__14dDemo_object_cFv                             */
+/* 800390AC-80039128 007C+00 rc=0 efc=0 .text      createCamera__14dDemo_object_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1675,7 +1678,7 @@ asm void dDemo_object_c::createCamera() {
 #pragma pop
 
 
-/* 80039128-8003913C 0014+00 rc=3 efc=3 .text      getActiveCamera__14dDemo_object_cFv                          */
+/* 80039128-8003913C 0014+00 rc=0 efc=0 .text      getActiveCamera__14dDemo_object_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1686,7 +1689,7 @@ asm void dDemo_object_c::getActiveCamera() {
 #pragma pop
 
 
-/* 8003913C-800391B8 007C+00 rc=1 efc=0 .text      createAmbient__14dDemo_object_cFv                            */
+/* 8003913C-800391B8 007C+00 rc=0 efc=0 .text      createAmbient__14dDemo_object_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1697,7 +1700,7 @@ asm void dDemo_object_c::createAmbient() {
 #pragma pop
 
 
-/* 800391B8-80039258 00A0+00 rc=1 efc=0 .text      appendLight__14dDemo_object_cFv                              */
+/* 800391B8-80039258 00A0+00 rc=0 efc=0 .text      appendLight__14dDemo_object_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1708,7 +1711,7 @@ asm void dDemo_object_c::appendLight() {
 #pragma pop
 
 
-/* 80039258-800392D4 007C+00 rc=1 efc=0 .text      createFog__14dDemo_object_cFv                                */
+/* 80039258-800392D4 007C+00 rc=0 efc=0 .text      createFog__14dDemo_object_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1719,7 +1722,7 @@ asm void dDemo_object_c::createFog() {
 #pragma pop
 
 
-/* 800392D4-80039408 0134+00 rc=2 efc=0 .text      remove__14dDemo_object_cFv                                   */
+/* 800392D4-80039408 0134+00 rc=0 efc=0 .text      remove__14dDemo_object_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1730,7 +1733,7 @@ asm void dDemo_object_c::remove() {
 #pragma pop
 
 
-/* 80039408-80039468 0060+00 rc=1 efc=0 .text      __dt__11dDemo_fog_cFv                                        */
+/* 80039408-80039468 0060+00 rc=0 efc=0 .text      __dt__11dDemo_fog_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1741,7 +1744,7 @@ asm dDemo_fog_c::~dDemo_fog_c() {
 #pragma pop
 
 
-/* 80039468-800394C8 0060+00 rc=1 efc=0 .text      __dt__13dDemo_light_cFv                                      */
+/* 80039468-800394C8 0060+00 rc=0 efc=0 .text      __dt__13dDemo_light_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1752,7 +1755,7 @@ asm dDemo_light_c::~dDemo_light_c() {
 #pragma pop
 
 
-/* 800394C8-80039528 0060+00 rc=1 efc=0 .text      __dt__15dDemo_ambient_cFv                                    */
+/* 800394C8-80039528 0060+00 rc=0 efc=0 .text      __dt__15dDemo_ambient_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1763,7 +1766,7 @@ asm dDemo_ambient_c::~dDemo_ambient_c() {
 #pragma pop
 
 
-/* 80039528-80039678 0150+00 rc=1 efc=0 .text      JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
+/* 80039528-80039678 0150+00 rc=0 efc=0 .text      JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1775,10 +1778,10 @@ asm void dDemo_system_c::JSGFindObject(JStage::TObject** field_0, char const* fi
 
 
 /* ############################################################################################## */
-/* 80451DE0-80451DE8 0008+00 rc=1 efc=0 .sdata2    @5123                                                        */
+/* 80451DE0-80451DE8 0008+00 rc=0 efc=0 .sdata2    @5123                                                        */
 f64 d_d_demo__lit_5123 = 0.03333333507180214;
 
-/* 80039678-80039910 0298+00 rc=1 efc=1 .text      create__7dDemo_cFv                                           */
+/* 80039678-80039910 0298+00 rc=0 efc=0 .text      create__7dDemo_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1789,7 +1792,7 @@ asm void dDemo_c::create() {
 #pragma pop
 
 
-/* 80039910-80039AAC 019C+00 rc=1 efc=1 .text      remove__7dDemo_cFv                                           */
+/* 80039910-80039AAC 019C+00 rc=0 efc=0 .text      remove__7dDemo_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1800,7 +1803,7 @@ asm void dDemo_c::remove() {
 #pragma pop
 
 
-/* 80039AAC-80039B0C 0060+00 rc=1 efc=0 .text      __dt__14dDemo_system_cFv                                     */
+/* 80039AAC-80039B0C 0060+00 rc=0 efc=0 .text      __dt__14dDemo_system_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1811,7 +1814,7 @@ asm dDemo_system_c::~dDemo_system_c() {
 #pragma pop
 
 
-/* 80039B0C-80039B6C 0060+00 rc=1 efc=0 .text      __dt__17jmessage_tControlFv                                  */
+/* 80039B0C-80039B6C 0060+00 rc=0 efc=0 .text      __dt__17jmessage_tControlFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1823,16 +1826,16 @@ asm jmessage_tControl::~jmessage_tControl() {
 
 
 /* ############################################################################################## */
-/* 8042465C-80424668 000C+00 rc=1 efc=0 .bss       @5233                                                        */
+/* 8042465C-80424668 000C+00 rc=0 efc=0 .bss       @5233                                                        */
 u8 d_d_demo__lit_5233[12];
 
-/* 80424668-80424678 000C+04 rc=1 efc=0 .bss       l_translation$5232                                           */
+/* 80424668-80424678 000C+04 rc=0 efc=0 .bss       l_translation$5232                                           */
 u8 data_80424668[12 + 4 /* padding */];
 
-/* 80450E50-80450E58 0008+00 rc=1 efc=0 .sbss      None                                                         */
+/* 80450E50-80450E58 0008+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_80450E50[8];
 
-/* 80039B6C-80039CF8 018C+00 rc=2 efc=1 .text      start__7dDemo_cFPCUcP4cXyzf                                  */
+/* 80039B6C-80039CF8 018C+00 rc=0 efc=0 .text      start__7dDemo_cFPCUcP4cXyzf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1843,7 +1846,7 @@ asm void dDemo_c::start(u8 const* field_0, cXyz* field_1, f32 field_2) {
 #pragma pop
 
 
-/* 80039CF8-80039D4C 0054+00 rc=3 efc=2 .text      end__7dDemo_cFv                                              */
+/* 80039CF8-80039D4C 0054+00 rc=0 efc=0 .text      end__7dDemo_cFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1854,7 +1857,7 @@ asm void dDemo_c::end() {
 #pragma pop
 
 
-/* 80039D4C-80039DA4 0058+00 rc=1 efc=0 .text      branch__7dDemo_cFv                                           */
+/* 80039D4C-80039DA4 0058+00 rc=0 efc=0 .text      branch__7dDemo_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1866,11 +1869,14 @@ asm void dDemo_c::branch() {
 
 
 /* ############################################################################################## */
-/* 80451DE8-80451DF0 0004+04 rc=1 efc=0 .sdata2    @5322                                                        */
-f32 lit_5322 = 1.0f / 10.0f;
-/* padding 4 bytes */
+/* 80451DE8-80451DF0 0004+04 rc=0 efc=0 .sdata2    @5322                                                        */
+f32 lit_5322[1 + 1 /* padding */] = {
+	1.0f / 10.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80039DA4-80039EDC 0138+00 rc=1 efc=1 .text      update__7dDemo_cFv                                           */
+/* 80039DA4-80039EDC 0138+00 rc=0 efc=0 .text      update__7dDemo_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1881,7 +1887,7 @@ asm void dDemo_c::update() {
 #pragma pop
 
 
-/* 80039EDC-80039EEC 0010+00 rc=1 efc=0 .text      setBranchType__7dDemo_cFUs                                   */
+/* 80039EDC-80039EEC 0010+00 rc=0 efc=0 .text      setBranchType__7dDemo_cFUs                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1892,7 +1898,7 @@ asm void dDemo_c::setBranchType(u16 field_0) {
 #pragma pop
 
 
-/* 80039EEC-80039F04 0018+00 rc=2 efc=2 .text      setBranchId__7dDemo_cFUss                                    */
+/* 80039EEC-80039F04 0018+00 rc=0 efc=0 .text      setBranchId__7dDemo_cFUss                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1903,7 +1909,7 @@ asm void dDemo_c::setBranchId(u16 field_0, s16 field_1) {
 #pragma pop
 
 
-/* 80039F04-80039F1C 0018+00 rc=2 efc=0 .text      reset__7dDemo_cFv                                            */
+/* 80039F04-80039F1C 0018+00 rc=0 efc=0 .text      reset__7dDemo_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1914,7 +1920,7 @@ asm void dDemo_c::reset() {
 #pragma pop
 
 
-/* 80039F1C-80039F9C 0080+00 rc=1 efc=0 .text      emitter_create__16dDemo_particle_cFUl                        */
+/* 80039F1C-80039F9C 0080+00 rc=0 efc=0 .text      emitter_create__16dDemo_particle_cFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1925,7 +1931,7 @@ asm void dDemo_particle_c::emitter_create(u32 field_0) {
 #pragma pop
 
 
-/* 80039F9C-80039FFC 0060+00 rc=1 efc=0 .text      __dt__16dDemo_particle_cFv                                   */
+/* 80039F9C-80039FFC 0060+00 rc=0 efc=0 .text      __dt__16dDemo_particle_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1936,7 +1942,7 @@ asm dDemo_particle_c::~dDemo_particle_c() {
 #pragma pop
 
 
-/* 80039FFC-8003A05C 0060+00 rc=1 efc=0 .text      __dt__14dDemo_camera_cFv                                     */
+/* 80039FFC-8003A05C 0060+00 rc=0 efc=0 .text      __dt__14dDemo_camera_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1947,7 +1953,7 @@ asm dDemo_camera_c::~dDemo_camera_c() {
 #pragma pop
 
 
-/* 8003A05C-8003A088 002C+00 rc=1 efc=0 .text      JSGFindNodeID__13dDemo_actor_cCFPCc                          */
+/* 8003A05C-8003A088 002C+00 rc=0 efc=0 .text      JSGFindNodeID__13dDemo_actor_cCFPCc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1958,7 +1964,7 @@ asm void dDemo_actor_c::JSGFindNodeID(char const* field_0) const {
 #pragma pop
 
 
-/* 8003A088-8003A0C8 0040+00 rc=1 efc=0 .text      JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f           */
+/* 8003A088-8003A0C8 0040+00 rc=0 efc=0 .text      JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1969,7 +1975,7 @@ asm void dDemo_actor_c::JSGGetNodeTransformation(u32 field_0, f32 (* field_1)[4]
 #pragma pop
 
 
-/* 8003A0C8-8003A0D0 0008+00 rc=1 efc=0 .text      JSGGetAnimationFrameMax__13dDemo_actor_cCFv                  */
+/* 8003A0C8-8003A0D0 0008+00 rc=0 efc=0 .text      JSGGetAnimationFrameMax__13dDemo_actor_cCFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1980,7 +1986,7 @@ asm void dDemo_actor_c::JSGGetAnimationFrameMax() const {
 #pragma pop
 
 
-/* 8003A0D0-8003A0D8 0008+00 rc=1 efc=0 .text      JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv           */
+/* 8003A0D0-8003A0D8 0008+00 rc=0 efc=0 .text      JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1991,7 +1997,7 @@ asm void dDemo_actor_c::JSGGetTextureAnimationFrameMax() const {
 #pragma pop
 
 
-/* 8003A0D8-8003A0F4 001C+00 rc=1 efc=0 .text      JSGGetTranslation__13dDemo_actor_cCFP3Vec                    */
+/* 8003A0D8-8003A0F4 001C+00 rc=0 efc=0 .text      JSGGetTranslation__13dDemo_actor_cCFP3Vec                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2002,7 +2008,7 @@ asm void dDemo_actor_c::JSGGetTranslation(Vec* field_0) const {
 #pragma pop
 
 
-/* 8003A0F4-8003A110 001C+00 rc=1 efc=0 .text      JSGGetScaling__13dDemo_actor_cCFP3Vec                        */
+/* 8003A0F4-8003A110 001C+00 rc=0 efc=0 .text      JSGGetScaling__13dDemo_actor_cCFP3Vec                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2013,7 +2019,7 @@ asm void dDemo_actor_c::JSGGetScaling(Vec* field_0) const {
 #pragma pop
 
 
-/* 8003A110-8003A188 0078+00 rc=1 efc=0 .text      JSGGetRotation__13dDemo_actor_cCFP3Vec                       */
+/* 8003A110-8003A188 0078+00 rc=0 efc=0 .text      JSGGetRotation__13dDemo_actor_cCFP3Vec                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

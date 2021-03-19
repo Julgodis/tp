@@ -9,12 +9,12 @@
 // Forward References:
 // 
 
-extern "C" static void ProbeBarnacle(); // 1
+extern "C" void ProbeBarnacle(); // 1
 extern "C" void __OSEnableBarnacle(); // 1
 extern "C" void InitializeUART(); // 1
 extern "C" void WriteUARTN(); // 1
 
-extern "C" static void ProbeBarnacle(); // 1
+extern "C" void ProbeBarnacle(); // 1
 extern "C" void __OSEnableBarnacle(); // 1
 extern "C" void InitializeUART(); // 1
 extern "C" void WriteUARTN(); // 1
@@ -53,11 +53,11 @@ extern "C" void EXIGetID(); // 1
 // Declarations:
 // 
 
-/* 803445E8-80344774 018C+00 rc=1 efc=0 .text      ProbeBarnacle                                                */
+/* 803445E8-80344774 018C+00 rc=0 efc=0 .text      ProbeBarnacle                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void ProbeBarnacle() {
+extern "C" asm void ProbeBarnacle() {
 	nofralloc
 #include "asm/exi/EXIUart/ProbeBarnacle.s"
 }
@@ -65,19 +65,19 @@ extern "C" asm static void ProbeBarnacle() {
 
 
 /* ############################################################################################## */
-/* 804516E0-804516E4 0004+00 rc=3 efc=0 .sbss      Chan                                                         */
+/* 804516E0-804516E4 0004+00 rc=0 efc=0 .sbss      Chan                                                         */
 u8 Chan[4];
 
-/* 804516E4-804516E8 0004+00 rc=3 efc=0 .sbss      Dev                                                          */
+/* 804516E4-804516E8 0004+00 rc=0 efc=0 .sbss      Dev                                                          */
 u8 Dev[4];
 
-/* 804516E8-804516EC 0004+00 rc=3 efc=0 .sbss      Enabled                                                      */
+/* 804516E8-804516EC 0004+00 rc=0 efc=0 .sbss      Enabled                                                      */
 u8 Enabled[4];
 
-/* 804516EC-804516F0 0004+00 rc=2 efc=0 .sbss      BarnacleEnabled                                              */
+/* 804516EC-804516F0 0004+00 rc=0 efc=0 .sbss      BarnacleEnabled                                              */
 u8 BarnacleEnabled[4];
 
-/* 80344774-80344930 01BC+00 rc=1 efc=1 .text      __OSEnableBarnacle                                           */
+/* 80344774-80344930 01BC+00 rc=0 efc=0 .text      __OSEnableBarnacle                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,7 +88,7 @@ extern "C" asm void __OSEnableBarnacle() {
 #pragma pop
 
 
-/* 80344930-803449A0 0070+00 rc=1 efc=1 .text      InitializeUART                                               */
+/* 80344930-803449A0 0070+00 rc=0 efc=0 .text      InitializeUART                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +99,7 @@ extern "C" asm void InitializeUART() {
 #pragma pop
 
 
-/* 803449A0-80344BA0 0200+00 rc=1 efc=1 .text      WriteUARTN                                                   */
+/* 803449A0-80344BA0 0200+00 rc=0 efc=0 .text      WriteUARTN                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

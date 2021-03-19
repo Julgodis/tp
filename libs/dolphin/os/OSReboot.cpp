@@ -41,7 +41,7 @@ extern "C" void OSDisableInterrupts(); // 1
 // Declarations:
 // 
 
-/* 8033F5D0-8033F640 0070+00 rc=1 efc=1 .text      __OSReboot                                                   */
+/* 8033F5D0-8033F640 0070+00 rc=0 efc=0 .text      __OSReboot                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,13 +53,13 @@ extern "C" asm void __OSReboot() {
 
 
 /* ############################################################################################## */
-/* 80451688-8045168C 0004+00 rc=2 efc=0 .sbss      SaveStart                                                    */
+/* 80451688-8045168C 0004+00 rc=0 efc=0 .sbss      SaveStart                                                    */
 u8 SaveStart[4];
 
-/* 8045168C-80451690 0004+00 rc=2 efc=0 .sbss      SaveEnd                                                      */
+/* 8045168C-80451690 0004+00 rc=0 efc=0 .sbss      SaveEnd                                                      */
 u8 SaveEnd[4];
 
-/* 8033F640-8033F64C 000C+00 rc=1 efc=1 .text      OSSetSaveRegion                                              */
+/* 8033F640-8033F64C 000C+00 rc=0 efc=0 .text      OSSetSaveRegion                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ extern "C" asm void OSSetSaveRegion() {
 #pragma pop
 
 
-/* 8033F64C-8033F660 0014+00 rc=1 efc=1 .text      OSGetSaveRegion                                              */
+/* 8033F64C-8033F660 0014+00 rc=0 efc=0 .text      OSGetSaveRegion                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -1,20 +1,20 @@
-from globals import ExecutableSection, PREDEFINED_SYMBOLS, FAKE_FUNCTIONS, ENTRY_POINT
-from disassembler import Access, BranchAccess
 from dataclasses import dataclass, field
 from collections import defaultdict
 from typing import Dict, List
 from pathlib import Path
-from data import *
 from intervaltree import Interval, IntervalTree
-from context import Context
 
-import util
-import linker_map
-import analyze
-import symbol_sizes
-import sort_objects
-import generate_symbols
-import generate_functions
+from .context import Context
+from .disassembler import Access, BranchAccess
+from .data import *
+
+from . import util
+from . import linker_map
+from . import analyze
+from . import sort_objects
+from . import generate_symbols
+from . import generate_functions
+from . import globals
 
 
 def insert_access_as_symbol(context: Context,
@@ -30,14 +30,13 @@ def insert_access_as_symbol(context: Context,
     if len(in_sections) != 1:
         context.warning("multiple section for symbol at 0x%08X" %
                         (addr & 0xFFFFFFFF))
-        context.warning([(x.name, x.local_addr, x.local_addr+x.local_size)
-                         for x in sections])
+        context.warning([(x.name, x.start, x.end) for x in sections])
         context.warning([x.name for x in in_sections])
         return False
 
     # check that we don't already have a symbol for the access address
     section = in_sections[0]
-    relative_addr = access.addr - section.local_addr
+    relative_addr = access.addr - section.start
     if relative_addr in map_addrs[section.name]:
         map_addrs[section.name][relative_addr].access = access
         return False
@@ -50,8 +49,8 @@ def insert_access_as_symbol(context: Context,
     if module_id == 0:
         if section.name == ".init":
             obj = "init.o"
-        if access.addr in PREDEFINED_SYMBOLS:
-            name = PREDEFINED_SYMBOLS[access.addr]
+        if access.addr in globals.PREDEFINED_SYMBOLS:
+            name = globals.PREDEFINED_SYMBOLS[access.addr]
 
     # create new linker map symbol
     symbol = linker_map.Symbol(relative_addr, 0, 0, name, lib, obj)
@@ -76,7 +75,7 @@ def infer_location_from_other_symbols(section: linker_map.Section, symbols: List
         if section.is_addr_code(symbol.addr) and symbol.name:
             symbol.is_function = True
         # TODO: Not sure if the FAKE_FUNCTIONS are used anymore
-        if symbol.is_function and symbol.addr in FAKE_FUNCTIONS:
+        if symbol.is_function and symbol.addr in globals.FAKE_FUNCTIONS:
             symbol.is_function = False
 
         if not symbol.obj:
@@ -219,10 +218,10 @@ def search(context: Context,
     # add entrypoint to the right section. the entrypoint is required as it is not included in the linker map.
     if module_id == 0:
         for section in sections:
-            if not ENTRY_POINT in section:
+            if not globals.ENTRY_POINT in section:
                 continue
 
-            branch_access = BranchAccess(at=0x00000000, addr=ENTRY_POINT)
+            branch_access = BranchAccess(at=0x00000000, addr=globals.ENTRY_POINT)
             insert_access_as_symbol(
                 context, module_id, sections, map_sections, map_addrs, branch_access)
             break
@@ -281,8 +280,8 @@ def search(context: Context,
     # create the structure with all neccessary information, such as, libraries, translation units, sections, and symbols
     module = Module(module_id)
     module.executable_sections = sections
-    module.start = min([x.local_addr for x in sections if x.local_size > 0])
-    module.end = max([x.local_addr+x.local_size for x in sections if x.local_size > 0])
+    module.start = min([x.start for x in sections if x.size > 0])
+    module.end = max([x.end for x in sections if x.size > 0])
     for k, v in tree.items():
         library_name = k
         if library_name:
@@ -341,22 +340,12 @@ def search(context: Context,
                     else:
                         # take the group of symbols and generate "real" symbols
                         new_symbols.extend(generate_symbols.from_group(section, group))
-
+                        
                     for symbol in new_symbols:
                         section.add_symbol(symbol)
 
                 for symbol in section.symbols:
-                    symbol._module = module.index
-                    symbol._library = library.name
-                    symbol._translation_unit = translation_unit.name
-                    symbol._section = section.name
-
-                    if isinstance(symbol, ASMFunction):
-                        for block in symbol.blocks:
-                            block._module = module.index
-                            block._library = library.name
-                            block._translation_unit = translation_unit.name
-                            block._section = section.name
+                    symbol.set_mlts(module.index,library.name, translation_unit.name, section.name)
 
                 # clear data
                 section.data = None

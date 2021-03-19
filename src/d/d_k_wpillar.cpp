@@ -42,10 +42,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -77,16 +77,16 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct _GXColor {
-};
-
 struct csXyz {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dKy_tevstr_c {
+};
+
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -118,21 +118,21 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void dkWpillar_Create(kankyo_class*); // 2
-static void dkWpillar_Delete(dkWpillar_c*); // 2
-static void dkWpillar_Execute(dkWpillar_c*); // 2
-static void dkWpillar_Draw(dkWpillar_c*); // 2
+void dkWpillar_Create(kankyo_class*); // 2
+void dkWpillar_Delete(dkWpillar_c*); // 2
+void dkWpillar_Execute(dkWpillar_c*); // 2
+void dkWpillar_Draw(dkWpillar_c*); // 2
 
 extern "C" void create__11dkWpillar_cFv(); // 1
-extern "C" static void dkWpillar_Create__FP12kankyo_class(); // 1
+extern "C" void dkWpillar_Create__FP12kankyo_class(); // 1
 extern "C" void __dt__11dkWpillar_cFv(); // 1
-extern "C" static void dkWpillar_Delete__FP11dkWpillar_c(); // 1
+extern "C" void dkWpillar_Delete__FP11dkWpillar_c(); // 1
 extern "C" void execute__11dkWpillar_cFv(); // 1
-extern "C" static void dkWpillar_Execute__FP11dkWpillar_c(); // 1
+extern "C" void dkWpillar_Execute__FP11dkWpillar_c(); // 1
 extern "C" void draw__11dkWpillar_cFv(); // 1
-extern "C" static void dkWpillar_Draw__FP11dkWpillar_c(); // 1
-SECTION_DATA extern void*l_dkWpillar_Method[5];
-SECTION_DATA extern void*g_profile_WPILLAR[11];
+extern "C" void dkWpillar_Draw__FP11dkWpillar_c(); // 1
+SECTION_DATA extern void* l_dkWpillar_Method[5];
+SECTION_DATA extern void* g_profile_WPILLAR[10 + 1 /* padding */];
 SECTION_SDATA2 extern u8 d_d_k_wpillar__l_arcName[7 + 1 /* padding */];
 SECTION_SDATA2 extern f32 d_d_k_wpillar__lit_3838;
 SECTION_SDATA2 extern f32 d_d_k_wpillar__lit_3839;
@@ -192,38 +192,37 @@ extern "C" void __construct_array(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
-SECTION_DATA extern void*const __vt__12J3DFrameCtrl[3];
-SECTION_DATA extern void*g_fopKy_Method[6];
-SECTION_DATA extern void*g_fpcLf_Method[6];
+SECTION_DATA extern void* const __vt__12J3DFrameCtrl[3];
+SECTION_DATA extern void* g_fopKy_Method[5 + 1 /* padding */];
+SECTION_DATA extern void* g_fpcLf_Method[5 + 1 /* padding */];
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
 SECTION_BSS extern u8 mGndCheck__11fopAcM_gc_c[84];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_env_light[4880];
 SECTION_BSS extern u8 j3dSys[284];
-SECTION_SBSS extern u8 struct_80450D64[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80454FF0-80454FF8 0007+01 rc=1 efc=0 .sdata2    l_arcName                                                    */
-u8 d_d_k_wpillar__l_arcName[8] = {
+/* 80454FF0-80454FF8 0007+01 rc=0 efc=0 .sdata2    l_arcName                                                    */
+u8 d_d_k_wpillar__l_arcName[7 + 1 /* padding */] = {
 	0x41, 0x6C, 0x77, 0x61, 0x79, 0x73, 0x00,
 	/* padding */
 	0x00,
 };
 
-/* 80454FF8-80454FFC 0004+00 rc=1 efc=0 .sdata2    @3838                                                        */
+/* 80454FF8-80454FFC 0004+00 rc=0 efc=0 .sdata2    @3838                                                        */
 f32 d_d_k_wpillar__lit_3838 = 1.0f;
 
-/* 80454FFC-80455000 0004+00 rc=1 efc=0 .sdata2    @3839                                                        */
+/* 80454FFC-80455000 0004+00 rc=0 efc=0 .sdata2    @3839                                                        */
 f32 d_d_k_wpillar__lit_3839 = 0.5f;
 
-/* 80455000-80455004 0004+00 rc=1 efc=0 .sdata2    @3840                                                        */
+/* 80455000-80455004 0004+00 rc=0 efc=0 .sdata2    @3840                                                        */
 f32 d_d_k_wpillar__lit_3840 = 0.25f;
 
-/* 80261B54-80261F04 03B0+00 rc=1 efc=0 .text      create__11dkWpillar_cFv                                      */
+/* 80261B54-80261F04 03B0+00 rc=0 efc=0 .text      create__11dkWpillar_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -234,18 +233,18 @@ asm void dkWpillar_c::create() {
 #pragma pop
 
 
-/* 80261F04-80261F24 0020+00 rc=1 efc=0 .text      dkWpillar_Create__FP12kankyo_class                           */
+/* 80261F04-80261F24 0020+00 rc=0 efc=0 .text      dkWpillar_Create__FP12kankyo_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dkWpillar_Create(kankyo_class* field_0) {
+asm void dkWpillar_Create(kankyo_class* field_0) {
 	nofralloc
 #include "asm/d/d_k_wpillar/dkWpillar_Create__FP12kankyo_class.s"
 }
 #pragma pop
 
 
-/* 80261F24-80261FEC 00C8+00 rc=1 efc=0 .text      __dt__11dkWpillar_cFv                                        */
+/* 80261F24-80261FEC 00C8+00 rc=0 efc=0 .text      __dt__11dkWpillar_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -256,11 +255,11 @@ asm dkWpillar_c::~dkWpillar_c() {
 #pragma pop
 
 
-/* 80261FEC-80262014 0028+00 rc=1 efc=0 .text      dkWpillar_Delete__FP11dkWpillar_c                            */
+/* 80261FEC-80262014 0028+00 rc=0 efc=0 .text      dkWpillar_Delete__FP11dkWpillar_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dkWpillar_Delete(dkWpillar_c* field_0) {
+asm void dkWpillar_Delete(dkWpillar_c* field_0) {
 	nofralloc
 #include "asm/d/d_k_wpillar/dkWpillar_Delete__FP11dkWpillar_c.s"
 }
@@ -268,12 +267,12 @@ asm static void dkWpillar_Delete(dkWpillar_c* field_0) {
 
 
 /* ############################################################################################## */
-/* 80455004-80455008 0004+00 rc=1 efc=0 .sdata2    @3946                                                        */
+/* 80455004-80455008 0004+00 rc=0 efc=0 .sdata2    @3946                                                        */
 u8 d_d_k_wpillar__lit_3946[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80262014-802620A8 0094+00 rc=1 efc=0 .text      execute__11dkWpillar_cFv                                     */
+/* 80262014-802620A8 0094+00 rc=0 efc=0 .text      execute__11dkWpillar_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -284,18 +283,18 @@ asm void dkWpillar_c::execute() {
 #pragma pop
 
 
-/* 802620A8-802620C8 0020+00 rc=1 efc=0 .text      dkWpillar_Execute__FP11dkWpillar_c                           */
+/* 802620A8-802620C8 0020+00 rc=0 efc=0 .text      dkWpillar_Execute__FP11dkWpillar_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dkWpillar_Execute(dkWpillar_c* field_0) {
+asm void dkWpillar_Execute(dkWpillar_c* field_0) {
 	nofralloc
 #include "asm/d/d_k_wpillar/dkWpillar_Execute__FP11dkWpillar_c.s"
 }
 #pragma pop
 
 
-/* 802620C8-802621AC 00E4+00 rc=1 efc=0 .text      draw__11dkWpillar_cFv                                        */
+/* 802620C8-802621AC 00E4+00 rc=0 efc=0 .text      draw__11dkWpillar_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -306,11 +305,11 @@ asm void dkWpillar_c::draw() {
 #pragma pop
 
 
-/* 802621AC-802621CC 0020+00 rc=1 efc=0 .text      dkWpillar_Draw__FP11dkWpillar_c                              */
+/* 802621AC-802621CC 0020+00 rc=0 efc=0 .text      dkWpillar_Draw__FP11dkWpillar_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dkWpillar_Draw(dkWpillar_c* field_0) {
+asm void dkWpillar_Draw(dkWpillar_c* field_0) {
 	nofralloc
 #include "asm/d/d_k_wpillar/dkWpillar_Draw__FP11dkWpillar_c.s"
 }
@@ -318,24 +317,24 @@ asm static void dkWpillar_Draw(dkWpillar_c* field_0) {
 
 
 /* ############################################################################################## */
-/* 803C3470-803C3484 0014+00 rc=1 efc=0 .data      l_dkWpillar_Method                                           */
+/* 803C3470-803C3484 0014+00 rc=0 efc=0 .data      l_dkWpillar_Method                                           */
 void* l_dkWpillar_Method[5] = {
 	(void*)dkWpillar_Create__FP12kankyo_class,
 	(void*)dkWpillar_Delete__FP11dkWpillar_c,
 	(void*)dkWpillar_Execute__FP11dkWpillar_c,
-	NULL,
+	(void*)NULL,
 	(void*)dkWpillar_Draw__FP11dkWpillar_c,
 };
 
 /* 803C3484-803C34B0 0028+04 rc=0 efc=0 .data      g_profile_WPILLAR                                            */
-void* g_profile_WPILLAR[11] = {
+void* g_profile_WPILLAR[10 + 1 /* padding */] = {
 	(void*)0xFFFFFFFD,
 	(void*)0x0009FFFD,
 	(void*)0x03020000,
 	(void*)&g_fpcLf_Method,
 	(void*)0x000004D4,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)&g_fopKy_Method,
 	(void*)0x02F70000,
 	(void*)&l_dkWpillar_Method,

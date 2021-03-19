@@ -22,18 +22,18 @@ struct process_method_class {
 // Forward References:
 // 
 
-static void fopVw_Draw(view_class*); // 2
-static void fopVw_Execute(view_class*); // 2
-static void fopVw_IsDelete(void*); // 2
-static void fopVw_Delete(view_class*); // 2
-static void fopVw_Create(void*); // 2
+void fopVw_Draw(view_class*); // 2
+void fopVw_Execute(view_class*); // 2
+void fopVw_IsDelete(void*); // 2
+void fopVw_Delete(view_class*); // 2
+void fopVw_Create(void*); // 2
 
-extern "C" static void fopVw_Draw__FP10view_class(); // 1
-extern "C" static void fopVw_Execute__FP10view_class(); // 1
-extern "C" static void fopVw_IsDelete__FPv(); // 1
-extern "C" static void fopVw_Delete__FP10view_class(); // 1
-extern "C" static void fopVw_Create__FPv(); // 1
-SECTION_DATA extern void*g_fopVw_Method[6];
+extern "C" void fopVw_Draw__FP10view_class(); // 1
+extern "C" void fopVw_Execute__FP10view_class(); // 1
+extern "C" void fopVw_IsDelete__FPv(); // 1
+extern "C" void fopVw_Delete__FP10view_class(); // 1
+extern "C" void fopVw_Create__FPv(); // 1
+SECTION_DATA extern void* g_fopVw_Method[5 + 1 /* padding */];
 
 // 
 // External References:
@@ -55,55 +55,55 @@ extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
 // Declarations:
 // 
 
-/* 8001F1A8-8001F1D0 0028+00 rc=1 efc=0 .text      fopVw_Draw__FP10view_class                                   */
+/* 8001F1A8-8001F1D0 0028+00 rc=0 efc=0 .text      fopVw_Draw__FP10view_class                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fopVw_Draw(view_class* field_0) {
+asm void fopVw_Draw(view_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_view/fopVw_Draw__FP10view_class.s"
 }
 #pragma pop
 
 
-/* 8001F1D0-8001F1F8 0028+00 rc=1 efc=0 .text      fopVw_Execute__FP10view_class                                */
+/* 8001F1D0-8001F1F8 0028+00 rc=0 efc=0 .text      fopVw_Execute__FP10view_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fopVw_Execute(view_class* field_0) {
+asm void fopVw_Execute(view_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_view/fopVw_Execute__FP10view_class.s"
 }
 #pragma pop
 
 
-/* 8001F1F8-8001F220 0028+00 rc=1 efc=0 .text      fopVw_IsDelete__FPv                                          */
+/* 8001F1F8-8001F220 0028+00 rc=0 efc=0 .text      fopVw_IsDelete__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fopVw_IsDelete(void* field_0) {
+asm void fopVw_IsDelete(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_view/fopVw_IsDelete__FPv.s"
 }
 #pragma pop
 
 
-/* 8001F220-8001F248 0028+00 rc=1 efc=0 .text      fopVw_Delete__FP10view_class                                 */
+/* 8001F220-8001F248 0028+00 rc=0 efc=0 .text      fopVw_Delete__FP10view_class                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fopVw_Delete(view_class* field_0) {
+asm void fopVw_Delete(view_class* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_view/fopVw_Delete__FP10view_class.s"
 }
 #pragma pop
 
 
-/* 8001F248-8001F284 003C+00 rc=1 efc=0 .text      fopVw_Create__FPv                                            */
+/* 8001F248-8001F284 003C+00 rc=0 efc=0 .text      fopVw_Create__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void fopVw_Create(void* field_0) {
+asm void fopVw_Create(void* field_0) {
 	nofralloc
 #include "asm/f_op/f_op_view/fopVw_Create__FPv.s"
 }
@@ -111,8 +111,8 @@ asm static void fopVw_Create(void* field_0) {
 
 
 /* ############################################################################################## */
-/* 803A3928-803A3940 0014+04 rc=2 efc=2 .data      g_fopVw_Method                                               */
-void* g_fopVw_Method[6] = {
+/* 803A3928-803A3940 0014+04 rc=0 efc=0 .data      g_fopVw_Method                                               */
+void* g_fopVw_Method[5 + 1 /* padding */] = {
 	(void*)fopVw_Create__FPv,
 	(void*)fopVw_Delete__FP10view_class,
 	(void*)fopVw_Execute__FP10view_class,

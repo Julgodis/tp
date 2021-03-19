@@ -60,8 +60,8 @@ extern "C" void findVolume__13JKRFileLoaderFPPCc(); // 1
 extern "C" void fetchVolumeName__13JKRFileLoaderFPclPCc(); // 1
 extern "C" void __sinit_JKRFileLoader_cpp(); // 1
 extern "C" void func_802D45E4(); // 1
-SECTION_RODATA extern const u8 JKRFileLoader__stringBase0[8];
-SECTION_DATA extern void*const __vt__13JKRFileLoader[16];
+SECTION_RODATA extern const char* const JKRFileLoader__stringBase0;
+SECTION_DATA extern void* const __vt__13JKRFileLoader[15 + 1 /* padding */];
 SECTION_BSS extern u8 JKRFileLoader__lit_2182[12];
 SECTION_BSS extern u8 sVolumeList__13JKRFileLoader[12];
 SECTION_SDATA extern u8 data_804508C0[2 + 6 /* padding */];
@@ -97,28 +97,28 @@ SECTION_DATA extern u8 __lower_map[256];
 // 
 
 /* ############################################################################################## */
-/* 803CC1C8-803CC208 003C+04 rc=2 efc=0 .data      __vt__13JKRFileLoader                                        */
-void* const __vt__13JKRFileLoader[16] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803CC1C8-803CC208 003C+04 rc=0 efc=0 .data      __vt__13JKRFileLoader                                        */
+void* const __vt__13JKRFileLoader[15 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__13JKRFileLoaderFv,
 	(void*)unmount__13JKRFileLoaderFv,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };
 
-/* 802D40F0-802D4148 0058+00 rc=2 efc=2 .text      __ct__13JKRFileLoaderFv                                      */
+/* 802D40F0-802D4148 0058+00 rc=0 efc=0 .text      __ct__13JKRFileLoaderFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -130,10 +130,10 @@ asm JKRFileLoader::JKRFileLoader() {
 
 
 /* ############################################################################################## */
-/* 80451418-80451420 0004+04 rc=5 efc=3 .sbss      sCurrentVolume__13JKRFileLoader                              */
+/* 80451418-80451420 0004+04 rc=0 efc=0 .sbss      sCurrentVolume__13JKRFileLoader                              */
 u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 
-/* 802D4148-802D41D4 008C+00 rc=3 efc=2 .text      __dt__13JKRFileLoaderFv                                      */
+/* 802D4148-802D41D4 008C+00 rc=0 efc=0 .text      __dt__13JKRFileLoaderFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +144,7 @@ asm JKRFileLoader::~JKRFileLoader() {
 #pragma pop
 
 
-/* 802D41D4-802D4224 0050+00 rc=7 efc=6 .text      unmount__13JKRFileLoaderFv                                   */
+/* 802D41D4-802D4224 0050+00 rc=0 efc=0 .text      unmount__13JKRFileLoaderFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +155,7 @@ asm void JKRFileLoader::unmount() {
 #pragma pop
 
 
-/* 802D4224-802D4270 004C+00 rc=2 efc=2 .text      getGlbResource__13JKRFileLoaderFPCc                          */
+/* 802D4224-802D4270 004C+00 rc=0 efc=0 .text      getGlbResource__13JKRFileLoaderFPCc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,13 +167,13 @@ asm void JKRFileLoader::getGlbResource(char const* field_0) {
 
 
 /* ############################################################################################## */
-/* 80434348-80434354 000C+00 rc=1 efc=0 .bss       @2182                                                        */
+/* 80434348-80434354 000C+00 rc=0 efc=0 .bss       @2182                                                        */
 u8 JKRFileLoader__lit_2182[12];
 
-/* 80434354-80434360 000C+00 rc=19 efc=14 .bss       sVolumeList__13JKRFileLoader                                 */
+/* 80434354-80434360 000C+00 rc=0 efc=0 .bss       sVolumeList__13JKRFileLoader                                 */
 u8 sVolumeList__13JKRFileLoader[12];
 
-/* 802D4270-802D4308 0098+00 rc=29 efc=29 .text      getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader          */
+/* 802D4270-802D4308 0098+00 rc=0 efc=0 .text      getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +184,7 @@ asm void JKRFileLoader::getGlbResource(char const* field_0, JKRFileLoader* field
 #pragma pop
 
 
-/* 802D4308-802D43A0 0098+00 rc=1 efc=1 .text      removeResource__13JKRFileLoaderFPvP13JKRFileLoader           */
+/* 802D4308-802D43A0 0098+00 rc=0 efc=0 .text      removeResource__13JKRFileLoaderFPvP13JKRFileLoader           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -195,7 +195,7 @@ asm void JKRFileLoader::removeResource(void* field_0, JKRFileLoader* field_1) {
 #pragma pop
 
 
-/* 802D43A0-802D4438 0098+00 rc=2 efc=2 .text      detachResource__13JKRFileLoaderFPvP13JKRFileLoader           */
+/* 802D43A0-802D4438 0098+00 rc=0 efc=0 .text      detachResource__13JKRFileLoaderFPvP13JKRFileLoader           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -206,7 +206,7 @@ asm void JKRFileLoader::detachResource(void* field_0, JKRFileLoader* field_1) {
 #pragma pop
 
 
-/* 802D4438-802D44C4 008C+00 rc=1 efc=0 .text      findVolume__13JKRFileLoaderFPPCc                             */
+/* 802D4438-802D44C4 008C+00 rc=0 efc=0 .text      findVolume__13JKRFileLoaderFPPCc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -218,23 +218,23 @@ asm void JKRFileLoader::findVolume(char const** field_0) {
 
 
 /* ############################################################################################## */
-/* 8039D150-8039D158 0002+06 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 8039D150-8039D158 0002+06 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_8039D150 = "/";
+const char* const stringBase_8039D150 = "/";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_8039D152 = "\0\0\0\0\0";
+char* const pad_8039D152 = "\0\0\0\0\0";
 #pragma pop
 
-/* 804508C0-804508C8 0002+06 rc=1 efc=0 .sdata     rootPath$2498                                                */
-u8 data_804508C0[8] = {
+/* 804508C0-804508C8 0002+06 rc=0 efc=0 .sdata     rootPath$2498                                                */
+u8 data_804508C0[2 + 6 /* padding */] = {
 	0x2F, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802D44C4-802D45A0 00DC+00 rc=1 efc=0 .text      fetchVolumeName__13JKRFileLoaderFPclPCc                      */
+/* 802D44C4-802D45A0 00DC+00 rc=0 efc=0 .text      fetchVolumeName__13JKRFileLoaderFPclPCc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -245,7 +245,7 @@ asm void JKRFileLoader::fetchVolumeName(char* field_0, s32 field_1, char const* 
 #pragma pop
 
 
-/* 802D45A0-802D45E4 0044+00 rc=1 efc=1 .text      __sinit_JKRFileLoader_cpp                                    */
+/* 802D45A0-802D45E4 0044+00 rc=0 efc=0 .text      __sinit_JKRFileLoader_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -256,7 +256,7 @@ extern "C" asm void __sinit_JKRFileLoader_cpp() {
 #pragma pop
 
 
-/* 802D45E4-802D4638 0054+00 rc=1 efc=0 .text      __dt__24JSUList<13JKRFileLoader>Fv                           */
+/* 802D45E4-802D4638 0054+00 rc=0 efc=0 .text      __dt__24JSUList<13JKRFileLoader>Fv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

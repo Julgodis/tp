@@ -52,7 +52,7 @@ extern "C" bool JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl(); //
 extern "C" void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject(); // 1
 extern "C" bool JSGGetSystemData__Q26JStage7TSystemFUl(); // 1
 extern "C" void JSGSetSystemData__Q26JStage7TSystemFUlUl(); // 1
-SECTION_DATA extern void*const __vt__Q26JStage7TSystem[20];
+SECTION_DATA extern void* const __vt__Q26JStage7TSystem[20];
 
 // 
 // External References:
@@ -79,11 +79,11 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C4828-803C4878 0050+00 rc=2 efc=1 .data      __vt__Q26JStage7TSystem                                      */
+/* 803C4828-803C4878 0050+00 rc=0 efc=0 .data      __vt__Q26JStage7TSystem                                      */
 void* const __vt__Q26JStage7TSystem[20] = {
-	NULL, /* RTTI */
-	NULL,
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)JSGFGetType__Q26JStage7TSystemCFv,
 	(void*)JSGGetName__Q26JStage7TObjectCFv,
 	(void*)JSGUpdate__Q26JStage7TObjectFv,
@@ -103,7 +103,7 @@ void* const __vt__Q26JStage7TSystem[20] = {
 	(void*)JSGSetSystemData__Q26JStage7TSystemFUlUl,
 };
 
-/* 80280E90-80280EF0 0060+00 rc=1 efc=1 .text      __dt__Q26JStage7TSystemFv                                    */
+/* 80280E90-80280EF0 0060+00 rc=0 efc=0 .text      __dt__Q26JStage7TSystemFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,37 +114,37 @@ asm JStage::TSystem::~TSystem() {
 #pragma pop
 
 
-/* 80280EF0-80280EF8 0008+00 rc=2 efc=1 .text      JSGFGetType__Q26JStage7TSystemCFv                            */
+/* 80280EF0-80280EF8 0008+00 rc=0 efc=0 .text      JSGFGetType__Q26JStage7TSystemCFv                            */
 bool JStage::TSystem::JSGFGetType() const {
 	return true;
 }
 
 
-/* 80280EF8-80280F00 0008+00 rc=1 efc=0 .text      JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
+/* 80280EF8-80280F00 0008+00 rc=0 efc=0 .text      JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
 bool JStage::TSystem::JSGFindObject(JStage::TObject** field_0, char const* field_1, JStage::TEObject field_2) const {
 	return true;
 }
 
 
-/* 80280F00-80280F08 0008+00 rc=2 efc=1 .text      JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl   */
+/* 80280F00-80280F08 0008+00 rc=0 efc=0 .text      JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl   */
 bool JStage::TSystem::JSGCreateObject(char const* field_0, JStage::TEObject field_1, u32 field_2) {
 	return false;
 }
 
 
-/* 80280F08-80280F0C 0004+00 rc=2 efc=1 .text      JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject       */
+/* 80280F08-80280F0C 0004+00 rc=0 efc=0 .text      JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject       */
 void JStage::TSystem::JSGDestroyObject(JStage::TObject* field_0) {
 	/* empty function */
 }
 
 
-/* 80280F0C-80280F14 0008+00 rc=2 efc=1 .text      JSGGetSystemData__Q26JStage7TSystemFUl                       */
+/* 80280F0C-80280F14 0008+00 rc=0 efc=0 .text      JSGGetSystemData__Q26JStage7TSystemFUl                       */
 bool JStage::TSystem::JSGGetSystemData(u32 field_0) {
 	return false;
 }
 
 
-/* 80280F14-80280F18 0004+00 rc=2 efc=1 .text      JSGSetSystemData__Q26JStage7TSystemFUlUl                     */
+/* 80280F14-80280F18 0004+00 rc=0 efc=0 .text      JSGSetSystemData__Q26JStage7TSystemFUlUl                     */
 void JStage::TSystem::JSGSetSystemData(u32 field_0, u32 field_1) {
 	/* empty function */
 }

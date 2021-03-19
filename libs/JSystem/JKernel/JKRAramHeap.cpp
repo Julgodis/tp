@@ -70,7 +70,7 @@ extern "C" void getTotalFreeSize__11JKRAramHeapFv(); // 1
 extern "C" void dump__11JKRAramHeapFv(); // 1
 extern "C" void __sinit_JKRAramHeap_cpp(); // 1
 extern "C" void func_802D32B0(); // 1
-SECTION_DATA extern void*const __vt__11JKRAramHeap[4];
+SECTION_DATA extern void* const __vt__11JKRAramHeap[3 + 1 /* padding */];
 SECTION_BSS extern u8 JKRAramHeap__lit_297[12];
 SECTION_BSS extern u8 sAramList__11JKRAramHeap[12];
 
@@ -110,22 +110,22 @@ extern "C" void _restgpr_29(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803CC168-803CC178 000C+04 rc=2 efc=0 .data      __vt__11JKRAramHeap                                          */
-void* const __vt__11JKRAramHeap[4] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803CC168-803CC178 000C+04 rc=0 efc=0 .data      __vt__11JKRAramHeap                                          */
+void* const __vt__11JKRAramHeap[3 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__11JKRAramHeapFv,
 	/* padding */
 	NULL,
 };
 
-/* 80434300-8043430C 000C+00 rc=1 efc=0 .bss       @297                                                         */
+/* 80434300-8043430C 000C+00 rc=0 efc=0 .bss       @297                                                         */
 u8 JKRAramHeap__lit_297[12];
 
-/* 8043430C-80434318 000C+00 rc=8 efc=0 .bss       sAramList__11JKRAramHeap                                     */
+/* 8043430C-80434318 000C+00 rc=0 efc=0 .bss       sAramList__11JKRAramHeap                                     */
 u8 sAramList__11JKRAramHeap[12];
 
-/* 802D2E44-802D2F14 00D0+00 rc=1 efc=1 .text      __ct__11JKRAramHeapFUlUl                                     */
+/* 802D2E44-802D2F14 00D0+00 rc=0 efc=0 .text      __ct__11JKRAramHeapFUlUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +136,7 @@ asm JKRAramHeap::JKRAramHeap(u32 field_0, u32 field_1) {
 #pragma pop
 
 
-/* 802D2F14-802D2FBC 00A8+00 rc=1 efc=0 .text      __dt__11JKRAramHeapFv                                        */
+/* 802D2F14-802D2FBC 00A8+00 rc=0 efc=0 .text      __dt__11JKRAramHeapFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +147,7 @@ asm JKRAramHeap::~JKRAramHeap() {
 #pragma pop
 
 
-/* 802D2FBC-802D3034 0078+00 rc=5 efc=5 .text      alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode           */
+/* 802D2FBC-802D3034 0078+00 rc=0 efc=0 .text      alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,7 +158,7 @@ asm void JKRAramHeap::alloc(u32 field_0, JKRAramHeap::EAllocMode field_1) {
 #pragma pop
 
 
-/* 802D3034-802D30BC 0088+00 rc=1 efc=0 .text      allocFromHead__11JKRAramHeapFUl                              */
+/* 802D3034-802D30BC 0088+00 rc=0 efc=0 .text      allocFromHead__11JKRAramHeapFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,7 +169,7 @@ asm void JKRAramHeap::allocFromHead(u32 field_0) {
 #pragma pop
 
 
-/* 802D30BC-802D3134 0078+00 rc=1 efc=0 .text      allocFromTail__11JKRAramHeapFUl                              */
+/* 802D30BC-802D3134 0078+00 rc=0 efc=0 .text      allocFromTail__11JKRAramHeapFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +180,7 @@ asm void JKRAramHeap::allocFromTail(u32 field_0) {
 #pragma pop
 
 
-/* 802D3134-802D31AC 0078+00 rc=1 efc=1 .text      getFreeSize__11JKRAramHeapFv                                 */
+/* 802D3134-802D31AC 0078+00 rc=0 efc=0 .text      getFreeSize__11JKRAramHeapFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +191,7 @@ asm void JKRAramHeap::getFreeSize() {
 #pragma pop
 
 
-/* 802D31AC-802D3218 006C+00 rc=2 efc=2 .text      getTotalFreeSize__11JKRAramHeapFv                            */
+/* 802D31AC-802D3218 006C+00 rc=0 efc=0 .text      getTotalFreeSize__11JKRAramHeapFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,7 +202,7 @@ asm void JKRAramHeap::getTotalFreeSize() {
 #pragma pop
 
 
-/* 802D3218-802D326C 0054+00 rc=2 efc=2 .text      dump__11JKRAramHeapFv                                        */
+/* 802D3218-802D326C 0054+00 rc=0 efc=0 .text      dump__11JKRAramHeapFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -213,7 +213,7 @@ asm void JKRAramHeap::dump() {
 #pragma pop
 
 
-/* 802D326C-802D32B0 0044+00 rc=1 efc=1 .text      __sinit_JKRAramHeap_cpp                                      */
+/* 802D326C-802D32B0 0044+00 rc=0 efc=0 .text      __sinit_JKRAramHeap_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +224,7 @@ extern "C" asm void __sinit_JKRAramHeap_cpp() {
 #pragma pop
 
 
-/* 802D32B0-802D3304 0054+00 rc=1 efc=0 .text      __dt__23JSUList<12JKRAramBlock>Fv                            */
+/* 802D32B0-802D3304 0054+00 rc=0 efc=0 .text      __dt__23JSUList<12JKRAramBlock>Fv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

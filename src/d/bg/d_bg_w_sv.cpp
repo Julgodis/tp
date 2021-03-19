@@ -9,16 +9,16 @@
 // Types:
 // 
 
-struct cXyz {
-};
-
-struct cBgS_PolyInfo {
+struct cBgD_t {
 };
 
 struct csXyz {
 };
 
-struct cBgD_t {
+struct cBgS_PolyInfo {
+};
+
+struct cXyz {
 };
 
 struct dBgWSv {
@@ -36,13 +36,13 @@ struct dBgW_Base {
 	/* 80074AB4 */ void SetOldShapeAngleY(s16);
 };
 
-struct cBgS_LinChk {
-};
-
 struct cBgS_ShdwDraw {
 };
 
 struct cBgS_GndChk {
+};
+
+struct cBgS_LinChk {
 };
 
 struct cBgW {
@@ -65,9 +65,6 @@ struct cBgW {
 	/* 8007B964 */ void ChkMoveBg() const;
 };
 
-struct fopAc_ac_c {
-};
-
 struct dBgS_Acch {
 };
 
@@ -77,16 +74,19 @@ struct dBgS_RoofChk {
 struct cBgS_PolyPassChk {
 };
 
-struct dBgS_CaptPoly {
+struct dBgS_SphChk {
 };
 
-struct dBgS_SphChk {
+struct cBgS_GrpPassChk {
+};
+
+struct dBgS_CaptPoly {
 };
 
 struct dBgS_SplGrpChk {
 };
 
-struct cBgS_GrpPassChk {
+struct fopAc_ac_c {
 };
 
 struct dBgW {
@@ -148,7 +148,7 @@ extern "C" void TransPosWork__6dBgWSvFP4cXyziii(); // 1
 extern "C" void TransPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __dt__6dBgWSvFv(); // 1
-SECTION_DATA extern void*const __vt__6dBgWSv[66];
+SECTION_DATA extern void* const __vt__6dBgWSv[65 + 1 /* padding */];
 SECTION_SDATA2 extern u8 d_bg_d_bg_w_sv__lit_3807[4];
 SECTION_SDATA2 extern f32 d_bg_d_bg_w_sv__lit_3808;
 
@@ -226,8 +226,8 @@ extern "C" void* __nwa__FUl(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_27(); // 1
-SECTION_DATA extern void*const __vt__4dBgW[65];
-SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
+SECTION_DATA extern void* const __vt__4dBgW[65];
+SECTION_SBSS extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
 // 
 // Declarations:
@@ -255,7 +255,7 @@ asm void dBgWSv::CopyBackVtx() {
 #pragma pop
 
 
-/* 8008308C-80083244 01B8+00 rc=1 efc=0 .text      CrrPosWork__6dBgWSvFP4cXyziii                                */
+/* 8008308C-80083244 01B8+00 rc=0 efc=0 .text      CrrPosWork__6dBgWSvFP4cXyziii                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +266,7 @@ asm void dBgWSv::CrrPosWork(cXyz* field_0, int field_1, int field_2, int field_3
 #pragma pop
 
 
-/* 80083244-80083300 00BC+00 rc=1 efc=0 .text      CrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz     */
+/* 80083244-80083300 00BC+00 rc=0 efc=0 .text      CrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -278,15 +278,15 @@ asm void dBgWSv::CrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_
 
 
 /* ############################################################################################## */
-/* 80452758-8045275C 0004+00 rc=1 efc=0 .sdata2    @3807                                                        */
+/* 80452758-8045275C 0004+00 rc=0 efc=0 .sdata2    @3807                                                        */
 u8 d_bg_d_bg_w_sv__lit_3807[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045275C-80452760 0004+00 rc=1 efc=0 .sdata2    @3808                                                        */
+/* 8045275C-80452760 0004+00 rc=0 efc=0 .sdata2    @3808                                                        */
 f32 d_bg_d_bg_w_sv__lit_3808 = 1.0f;
 
-/* 80083300-8008351C 021C+00 rc=1 efc=0 .text      TransPosWork__6dBgWSvFP4cXyziii                              */
+/* 80083300-8008351C 021C+00 rc=0 efc=0 .text      TransPosWork__6dBgWSvFP4cXyziii                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -297,7 +297,7 @@ asm void dBgWSv::TransPosWork(cXyz* field_0, int field_1, int field_2, int field
 #pragma pop
 
 
-/* 8008351C-800835D8 00BC+00 rc=1 efc=0 .text      TransPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz   */
+/* 8008351C-800835D8 00BC+00 rc=0 efc=0 .text      TransPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -308,17 +308,17 @@ asm void dBgWSv::TransPos(cBgS_PolyInfo const& field_0, void* field_1, bool fiel
 #pragma pop
 
 
-/* 800835D8-800835DC 0004+00 rc=1 efc=0 .text      MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
+/* 800835D8-800835DC 0004+00 rc=0 efc=0 .text      MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
 void dBgWSv::MatrixCrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_2, cXyz* field_3, csXyz* field_4, csXyz* field_5) {
 	/* empty function */
 }
 
 
 /* ############################################################################################## */
-/* 803ABEB8-803ABFC0 0104+04 rc=1 efc=0 .data      __vt__6dBgWSv                                                */
-void* const __vt__6dBgWSv[66] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803ABEB8-803ABFC0 0104+04 rc=0 efc=0 .data      __vt__6dBgWSv                                                */
+void* const __vt__6dBgWSv[65 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__6dBgWSvFv,
 	(void*)ChkMemoryError__4cBgWFv,
 	(void*)ChkNotReady__4cBgWCFv,
@@ -386,7 +386,7 @@ void* const __vt__6dBgWSv[66] = {
 	NULL,
 };
 
-/* 800835DC-8008364C 0070+00 rc=1 efc=0 .text      __dt__6dBgWSvFv                                              */
+/* 800835DC-8008364C 0070+00 rc=0 efc=0 .text      __dt__6dBgWSvFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

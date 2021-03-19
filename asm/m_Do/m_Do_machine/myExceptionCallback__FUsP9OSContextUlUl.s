@@ -54,7 +54,7 @@ lbl_8000B87C:
 /* 8000B890 00000014  4B FF FD FD */	bl developKeyCheck__FUlUl
 /* 8000B894 00000018  38 60 00 1E */	li r3, 0x1e
 /* 8000B898 0000001C  48 2D 80 E9 */	bl waitTime__12JUTExceptionFl
-/* 8000B89C 00000020  88 0D 8F 81 */	lbz r0, struct_80451500+0x1(r13)
+/* 8000B89C 00000020  88 0D 8F 81 */	lbz r0, -0x707f(r13)
 /* 8000B8A0 00000024  28 00 00 00 */	cmplwi r0, 0
 /* 8000B8A4 00000028  41 82 00 08 */	beq lbl_8000B8AC
 /* 8000B8A8 0000002C  4B FF FE F1 */	bl exceptionRestart__Fv

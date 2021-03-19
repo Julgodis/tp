@@ -63,8 +63,8 @@ extern "C" void syncJ3DSysPointers__12J3DModelDataCFv(); // 1
 extern "C" void syncJ3DSysFlags__12J3DModelDataCFv(); // 1
 extern "C" void __dt__13J3DShapeTableFv(); // 1
 extern "C" void __dt__12J3DModelDataFv(); // 1
-SECTION_DATA extern void*const __vt__13J3DShapeTable[3];
-SECTION_DATA extern void*const __vt__12J3DModelData[3];
+SECTION_DATA extern void* const __vt__13J3DShapeTable[3];
+SECTION_DATA extern void* const __vt__12J3DModelData[3];
 SECTION_SBSS extern u8 data_804515E8[4];
 SECTION_SBSS extern u8 data_804515EC[4];
 
@@ -101,7 +101,7 @@ extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_DATA extern void*const __vt__12J3DJointTree[5];
+SECTION_DATA extern void* const __vt__12J3DJointTree[4 + 1 /* padding */];
 SECTION_BSS extern u8 j3dSys[284];
 SECTION_SBSS extern u8 __GDCurrentDL[4];
 
@@ -109,7 +109,7 @@ SECTION_SBSS extern u8 __GDCurrentDL[4];
 // Declarations:
 // 
 
-/* 80325D88-80325DA0 0018+00 rc=3 efc=2 .text      clear__12J3DModelDataFv                                      */
+/* 80325D88-80325DA0 0018+00 rc=0 efc=0 .text      clear__12J3DModelDataFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,21 +121,21 @@ asm void J3DModelData::clear() {
 
 
 /* ############################################################################################## */
-/* 803CED08-803CED14 000C+00 rc=3 efc=0 .data      __vt__13J3DShapeTable                                        */
+/* 803CED08-803CED14 000C+00 rc=0 efc=0 .data      __vt__13J3DShapeTable                                        */
 void* const __vt__13J3DShapeTable[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__13J3DShapeTableFv,
 };
 
-/* 803CED14-803CED20 000C+00 rc=2 efc=0 .data      __vt__12J3DModelData                                         */
+/* 803CED14-803CED20 000C+00 rc=0 efc=0 .data      __vt__12J3DModelData                                         */
 void* const __vt__12J3DModelData[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__12J3DModelDataFv,
 };
 
-/* 80325DA0-80325E14 0074+00 rc=2 efc=2 .text      __ct__12J3DModelDataFv                                       */
+/* 80325DA0-80325E14 0074+00 rc=0 efc=0 .text      __ct__12J3DModelDataFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,7 +146,7 @@ asm J3DModelData::J3DModelData() {
 #pragma pop
 
 
-/* 80325E14-80325EC8 00B4+00 rc=2 efc=2 .text      newSharedDisplayList__12J3DModelDataFUl                      */
+/* 80325E14-80325EC8 00B4+00 rc=0 efc=0 .text      newSharedDisplayList__12J3DModelDataFUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,13 +158,13 @@ asm void J3DModelData::newSharedDisplayList(u32 field_0) {
 
 
 /* ############################################################################################## */
-/* 804515E8-804515EC 0004+00 rc=1 efc=0 .sbss      sInterruptFlag$965                                           */
+/* 804515E8-804515EC 0004+00 rc=0 efc=0 .sbss      sInterruptFlag$965                                           */
 u8 data_804515E8[4];
 
-/* 804515EC-804515F0 0004+00 rc=1 efc=0 .sbss      None                                                         */
+/* 804515EC-804515F0 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_804515EC[4];
 
-/* 80325EC8-80325F94 00CC+00 rc=1 efc=1 .text      indexToPtr__12J3DModelDataFv                                 */
+/* 80325EC8-80325F94 00CC+00 rc=0 efc=0 .text      indexToPtr__12J3DModelDataFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,7 +175,7 @@ asm void J3DModelData::indexToPtr() {
 #pragma pop
 
 
-/* 80325F94-8032600C 0078+00 rc=2 efc=2 .text      makeSharedDL__12J3DModelDataFv                               */
+/* 80325F94-8032600C 0078+00 rc=0 efc=0 .text      makeSharedDL__12J3DModelDataFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -186,7 +186,7 @@ asm void J3DModelData::makeSharedDL() {
 #pragma pop
 
 
-/* 8032600C-803260CC 00C0+00 rc=3 efc=3 .text      simpleCalcMaterial__12J3DModelDataFUsPA4_f                   */
+/* 8032600C-803260CC 00C0+00 rc=0 efc=0 .text      simpleCalcMaterial__12J3DModelDataFUsPA4_f                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -197,7 +197,7 @@ asm void J3DModelData::simpleCalcMaterial(u16 field_0, f32 (* field_1)[4]) {
 #pragma pop
 
 
-/* 803260CC-803260F8 002C+00 rc=1 efc=1 .text      syncJ3DSysPointers__12J3DModelDataCFv                        */
+/* 803260CC-803260F8 002C+00 rc=0 efc=0 .text      syncJ3DSysPointers__12J3DModelDataCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -208,7 +208,7 @@ asm void J3DModelData::syncJ3DSysPointers() const {
 #pragma pop
 
 
-/* 803260F8-80326134 003C+00 rc=6 efc=5 .text      syncJ3DSysFlags__12J3DModelDataCFv                           */
+/* 803260F8-80326134 003C+00 rc=0 efc=0 .text      syncJ3DSysFlags__12J3DModelDataCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -219,7 +219,7 @@ asm void J3DModelData::syncJ3DSysFlags() const {
 #pragma pop
 
 
-/* 80326134-8032617C 0048+00 rc=1 efc=0 .text      __dt__13J3DShapeTableFv                                      */
+/* 80326134-8032617C 0048+00 rc=0 efc=0 .text      __dt__13J3DShapeTableFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -230,7 +230,7 @@ asm J3DShapeTable::~J3DShapeTable() {
 #pragma pop
 
 
-/* 8032617C-80326214 0098+00 rc=1 efc=0 .text      __dt__12J3DModelDataFv                                       */
+/* 8032617C-80326214 0098+00 rc=0 efc=0 .text      __dt__12J3DModelDataFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

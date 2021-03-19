@@ -67,8 +67,8 @@ void fopMsgM_setStageLayer(void*); // 2
 void fopMsgM_SearchByID(u32); // 2
 void fopMsgM_GetAppend(void*); // 2
 void fopMsgM_Delete(void*); // 2
-static void createAppend(fopAc_ac_c*, cXyz*, u32*, u32*, u32); // 2
-static void createTimerAppend(int, u32, u8, u8, f32, f32, f32, f32, u32); // 2
+void createAppend(fopAc_ac_c*, cXyz*, u32*, u32*, u32); // 2
+void createTimerAppend(int, u32, u8, u8, f32, f32, f32, f32, u32); // 2
 extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i(); // 1
 extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i(); // 1
 void fopMsgM_messageSet(u32, fopAc_ac_c*, u32); // 2
@@ -85,8 +85,8 @@ extern "C" void fopMsgM_setStageLayer__FPv(); // 1
 extern "C" void fopMsgM_SearchByID__FUi(); // 1
 extern "C" void fopMsgM_GetAppend__FPv(); // 1
 extern "C" void fopMsgM_Delete__FPv(); // 1
-extern "C" static void createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi(); // 1
-extern "C" static void createTimerAppend__FiUlUcUcffffUi(); // 1
+extern "C" void createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi(); // 1
+extern "C" void createTimerAppend__FiUlUcUcffffUi(); // 1
 extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i(); // 1
 extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i(); // 1
 extern "C" void fopMsgM_messageSet__FUlP10fopAc_ac_cUl(); // 1
@@ -102,8 +102,8 @@ extern "C" void append__10J2DPictureFPCcf(); // 1
 extern "C" void insert__10J2DPictureFPCcUcf(); // 1
 extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap(); // 1
 extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap(); // 1
-SECTION_DATA extern void*f_op_f_op_msg_mng__lit_4305[8];
-SECTION_SDATA extern u32 i_msgID;
+SECTION_DATA extern void* f_op_f_op_msg_mng__lit_4305[7 + 1 /* padding */];
+SECTION_SDATA extern u32 i_msgID[1 + 1 /* padding */];
 SECTION_SDATA2 extern u8 f_op_f_op_msg_mng__lit_3902[4];
 SECTION_SDATA2 extern f32 f_op_f_op_msg_mng__lit_4167;
 SECTION_SDATA2 extern f32 f_op_f_op_msg_mng__lit_4298;
@@ -170,7 +170,7 @@ SECTION_SBSS extern u8 mProcID__20dStage_roomControl_c[4];
 // Declarations:
 // 
 
-/* 8001F9B4-8001FA24 0070+00 rc=3 efc=3 .text      fopMsgM_setStageLayer__FPv                                   */
+/* 8001F9B4-8001FA24 0070+00 rc=0 efc=0 .text      fopMsgM_setStageLayer__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +181,7 @@ asm void fopMsgM_setStageLayer(void* field_0) {
 #pragma pop
 
 
-/* 8001FA24-8001FA44 0020+00 rc=17 efc=14 .text      fopMsgM_SearchByID__FUi                                      */
+/* 8001FA24-8001FA44 0020+00 rc=0 efc=0 .text      fopMsgM_SearchByID__FUi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,7 +192,7 @@ asm void fopMsgM_SearchByID(u32 field_0) {
 #pragma pop
 
 
-/* 8001FA44-8001FA4C 0008+00 rc=2 efc=2 .text      fopMsgM_GetAppend__FPv                                       */
+/* 8001FA44-8001FA4C 0008+00 rc=0 efc=0 .text      fopMsgM_GetAppend__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -203,7 +203,7 @@ asm void fopMsgM_GetAppend(void* field_0) {
 #pragma pop
 
 
-/* 8001FA4C-8001FA6C 0020+00 rc=2 efc=2 .text      fopMsgM_Delete__FPv                                          */
+/* 8001FA4C-8001FA6C 0020+00 rc=0 efc=0 .text      fopMsgM_Delete__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -215,34 +215,34 @@ asm void fopMsgM_Delete(void* field_0) {
 
 
 /* ############################################################################################## */
-/* 80451C70-80451C74 0004+00 rc=6 efc=0 .sdata2    @3902                                                        */
+/* 80451C70-80451C74 0004+00 rc=0 efc=0 .sdata2    @3902                                                        */
 u8 f_op_f_op_msg_mng__lit_3902[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8001FA6C-8001FB50 00E4+00 rc=1 efc=0 .text      createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi                   */
+/* 8001FA6C-8001FB50 00E4+00 rc=0 efc=0 .text      createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void createAppend(fopAc_ac_c* field_0, cXyz* field_1, u32* field_2, u32* field_3, u32 field_4) {
+asm void createAppend(fopAc_ac_c* field_0, cXyz* field_1, u32* field_2, u32* field_3, u32 field_4) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi.s"
 }
 #pragma pop
 
 
-/* 8001FB50-8001FC4C 00FC+00 rc=1 efc=0 .text      createTimerAppend__FiUlUcUcffffUi                            */
+/* 8001FB50-8001FC4C 00FC+00 rc=0 efc=0 .text      createTimerAppend__FiUlUcUcffffUi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void createTimerAppend(int field_0, u32 field_1, u8 field_2, u8 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, u32 field_8) {
+asm void createTimerAppend(int field_0, u32 field_1, u8 field_2, u8 field_3, f32 field_4, f32 field_5, f32 field_6, f32 field_7, u32 field_8) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/createTimerAppend__FiUlUcUcffffUi.s"
 }
 #pragma pop
 
 
-/* 8001FC4C-8001FCC0 0074+00 rc=1 efc=1 .text      fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i            */
+/* 8001FC4C-8001FCC0 0074+00 rc=0 efc=0 .text      fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,7 +253,7 @@ extern "C" asm void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i() {
 #pragma pop
 
 
-/* 8001FCC0-8001FD34 0074+00 rc=2 efc=2 .text      fop_Timer_create__FsUcUlUcUcffffPFPv_i                       */
+/* 8001FCC0-8001FD34 0074+00 rc=0 efc=0 .text      fop_Timer_create__FsUcUlUcUcffffPFPv_i                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -265,11 +265,14 @@ extern "C" asm void fop_Timer_create__FsUcUlUcUcffffPFPv_i() {
 
 
 /* ############################################################################################## */
-/* 804505C8-804505D0 0004+04 rc=4 efc=0 .sdata     i_msgID                                                      */
-u32 i_msgID = 0xFFFFFFFF;
-/* padding 4 bytes */
+/* 804505C8-804505D0 0004+04 rc=0 efc=0 .sdata     i_msgID                                                      */
+u32 i_msgID[1 + 1 /* padding */] = {
+	0xFFFFFFFF,
+	/* padding */
+	0x00000000,
+};
 
-/* 8001FD34-8001FE84 0150+00 rc=2 efc=2 .text      fopMsgM_messageSet__FUlP10fopAc_ac_cUl                       */
+/* 8001FD34-8001FE84 0150+00 rc=0 efc=0 .text      fopMsgM_messageSet__FUlP10fopAc_ac_cUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +283,7 @@ asm void fopMsgM_messageSet(u32 field_0, fopAc_ac_c* field_1, u32 field_2) {
 #pragma pop
 
 
-/* 8001FE84-8001FFC4 0140+00 rc=6 efc=6 .text      fopMsgM_messageSet__FUlUl                                    */
+/* 8001FE84-8001FFC4 0140+00 rc=0 efc=0 .text      fopMsgM_messageSet__FUlUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +294,7 @@ asm void fopMsgM_messageSet(u32 field_0, u32 field_1) {
 #pragma pop
 
 
-/* 8001FFC4-800200C0 00FC+00 rc=1 efc=1 .text      fopMsgM_messageSetDemo__FUl                                  */
+/* 8001FFC4-800200C0 00FC+00 rc=0 efc=0 .text      fopMsgM_messageSetDemo__FUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,7 +305,7 @@ asm void fopMsgM_messageSetDemo(u32 field_0) {
 #pragma pop
 
 
-/* 800200C0-80020100 0040+00 rc=7 efc=7 .text      fopMsgM_messageGet__FPcUl                                    */
+/* 800200C0-80020100 0040+00 rc=0 efc=0 .text      fopMsgM_messageGet__FPcUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +316,7 @@ asm void fopMsgM_messageGet(char* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80020100-80020108 0008+00 rc=1 efc=1 .text      fopMsgM_setMessageID__FUi                                    */
+/* 80020100-80020108 0008+00 rc=0 efc=0 .text      fopMsgM_setMessageID__FUi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,7 +327,7 @@ asm void fopMsgM_setMessageID(u32 field_0) {
 #pragma pop
 
 
-/* 80020108-80020158 0050+00 rc=2 efc=2 .text      fopMsgM_Create__FsPFPv_iPv                                   */
+/* 80020108-80020158 0050+00 rc=0 efc=0 .text      fopMsgM_Create__FsPFPv_iPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -335,7 +338,7 @@ extern "C" asm void fopMsgM_Create__FsPFPv_iPv() {
 #pragma pop
 
 
-/* 80020158-80020160 0008+00 rc=5 efc=5 .text      setAlpha__7J2DPaneFUc                                        */
+/* 80020158-80020160 0008+00 rc=0 efc=0 .text      setAlpha__7J2DPaneFUc                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -347,8 +350,8 @@ asm void J2DPane::setAlpha(u8 field_0) {
 
 
 /* ############################################################################################## */
-/* 803A3970-803A3990 001C+04 rc=1 efc=0 .data      @4305                                                        */
-void* f_op_f_op_msg_mng__lit_4305[8] = {
+/* 803A3970-803A3990 001C+04 rc=0 efc=0 .data      @4305                                                        */
+void* f_op_f_op_msg_mng__lit_4305[7 + 1 /* padding */] = {
 	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x88),
 	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x90),
 	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0xB4),
@@ -360,25 +363,25 @@ void* f_op_f_op_msg_mng__lit_4305[8] = {
 	NULL,
 };
 
-/* 80451C74-80451C78 0004+00 rc=1 efc=0 .sdata2    @4167                                                        */
+/* 80451C74-80451C78 0004+00 rc=0 efc=0 .sdata2    @4167                                                        */
 f32 f_op_f_op_msg_mng__lit_4167 = 0.5f;
 
-/* 80451C78-80451C7C 0004+00 rc=1 efc=0 .sdata2    @4298                                                        */
+/* 80451C78-80451C7C 0004+00 rc=0 efc=0 .sdata2    @4298                                                        */
 f32 f_op_f_op_msg_mng__lit_4298 = 1.0f;
 
-/* 80451C7C-80451C80 0004+00 rc=1 efc=0 .sdata2    @4299                                                        */
+/* 80451C7C-80451C80 0004+00 rc=0 efc=0 .sdata2    @4299                                                        */
 f32 f_op_f_op_msg_mng__lit_4299 = 2.0f;
 
-/* 80451C80-80451C84 0004+00 rc=1 efc=0 .sdata2    @4300                                                        */
+/* 80451C80-80451C84 0004+00 rc=0 efc=0 .sdata2    @4300                                                        */
 f32 f_op_f_op_msg_mng__lit_4300 = 32768.0f;
 
-/* 80451C84-80451C88 0004+00 rc=1 efc=0 .sdata2    @4301                                                        */
+/* 80451C84-80451C88 0004+00 rc=0 efc=0 .sdata2    @4301                                                        */
 f32 f_op_f_op_msg_mng__lit_4301 = 65535.0f;
 
-/* 80451C88-80451C90 0008+00 rc=1 efc=0 .sdata2    @4303                                                        */
+/* 80451C88-80451C90 0008+00 rc=0 efc=0 .sdata2    @4303                                                        */
 f64 f_op_f_op_msg_mng__lit_4303 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80020160-800202CC 016C+00 rc=5 efc=4 .text      fopMsgM_valueIncrease__FiiUc                                 */
+/* 80020160-800202CC 016C+00 rc=0 efc=0 .text      fopMsgM_valueIncrease__FiiUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,7 +392,7 @@ asm void fopMsgM_valueIncrease(int field_0, int field_1, u8 field_2) {
 #pragma pop
 
 
-/* 800202CC-80020338 006C+00 rc=2 efc=2 .text      setBlendRatio__10J2DPictureFff                               */
+/* 800202CC-80020338 006C+00 rc=0 efc=0 .text      setBlendRatio__10J2DPictureFff                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -400,7 +403,7 @@ asm void J2DPicture::setBlendRatio(f32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 80020338-80020368 0030+00 rc=1 efc=1 .text      append__10J2DPictureFPCcf                                    */
+/* 80020338-80020368 0030+00 rc=0 efc=0 .text      append__10J2DPictureFPCcf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -411,7 +414,7 @@ asm void J2DPicture::append(char const* field_0, f32 field_1) {
 #pragma pop
 
 
-/* 80020368-8002039C 0034+00 rc=1 efc=1 .text      insert__10J2DPictureFPCcUcf                                  */
+/* 80020368-8002039C 0034+00 rc=0 efc=0 .text      insert__10J2DPictureFPCcUcf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -422,7 +425,7 @@ asm void J2DPicture::insert(char const* field_0, u8 field_1, f32 field_2) {
 #pragma pop
 
 
-/* 8002039C-800203E0 0044+00 rc=3 efc=3 .text      fopMsgM_createExpHeap__FUlP7JKRHeap                          */
+/* 8002039C-800203E0 0044+00 rc=0 efc=0 .text      fopMsgM_createExpHeap__FUlP7JKRHeap                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -433,7 +436,7 @@ asm void fopMsgM_createExpHeap(u32 field_0, JKRHeap* field_1) {
 #pragma pop
 
 
-/* 800203E0-80020400 0020+00 rc=3 efc=3 .text      fopMsgM_destroyExpHeap__FP10JKRExpHeap                       */
+/* 800203E0-80020400 0020+00 rc=0 efc=0 .text      fopMsgM_destroyExpHeap__FP10JKRExpHeap                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

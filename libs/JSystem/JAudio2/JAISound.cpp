@@ -13,13 +13,10 @@ struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
+struct JAISoundID {
+};
 
+struct JAIAudience {
 };
 
 struct JASSoundParams {
@@ -30,10 +27,13 @@ struct JASTrack {
 	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
 };
 
-struct JAIAudience {
-};
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
 
-struct JAISoundID {
 };
 
 struct JAISound {
@@ -87,13 +87,13 @@ extern "C" void die_JAISound___8JAISoundFv(); // 1
 extern "C" void increasePrepareCount_JAISound___8JAISoundFv(); // 1
 extern "C" void calc_JAISound___8JAISoundFv(); // 1
 extern "C" void initTrack_JAISound___8JAISoundFP8JASTrack(); // 1
-SECTION_RODATA extern const u8 JAISound__stringBase0[64];
-SECTION_DATA extern void*const __vt__8JAISound[12];
+SECTION_RODATA extern const char* const JAISound__stringBase0;
+SECTION_DATA extern void* const __vt__8JAISound[12];
 SECTION_SDATA2 extern f32 lit_659;
 SECTION_SDATA2 extern f32 JAISound__lit_697;
 SECTION_SDATA2 extern u8 lit_698[4 + 4 /* padding */];
 SECTION_SDATA2 extern f64 JAISound__lit_766;
-SECTION_SDATA2 extern f32 lit_887;
+SECTION_SDATA2 extern f32 lit_887[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -113,7 +113,7 @@ extern "C" void _restgpr_26(); // 1
 // Declarations:
 // 
 
-/* 802A2184-802A21A0 001C+00 rc=14 efc=14 .text      releaseSound__14JAISoundHandleFv                             */
+/* 802A2184-802A21A0 001C+00 rc=0 efc=0 .text      releaseSound__14JAISoundHandleFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +124,7 @@ asm void JAISoundHandle::releaseSound() {
 #pragma pop
 
 
-/* 802A21A0-802A21BC 001C+00 rc=6 efc=3 .text      releaseHandle__8JAISoundFv                                   */
+/* 802A21A0-802A21BC 001C+00 rc=0 efc=0 .text      releaseHandle__8JAISoundFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +135,7 @@ asm void JAISound::releaseHandle() {
 #pragma pop
 
 
-/* 802A21BC-802A2220 0064+00 rc=3 efc=3 .text      attachHandle__8JAISoundFP14JAISoundHandle                    */
+/* 802A21BC-802A2220 0064+00 rc=0 efc=0 .text      attachHandle__8JAISoundFP14JAISoundHandle                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,7 +146,7 @@ asm void JAISound::attachHandle(JAISoundHandle* field_0) {
 #pragma pop
 
 
-/* 802A2220-802A2244 0024+00 rc=2 efc=2 .text      lockWhenPrepared__15JAISoundStatus_Fv                        */
+/* 802A2220-802A2244 0024+00 rc=0 efc=0 .text      lockWhenPrepared__15JAISoundStatus_Fv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +157,7 @@ asm void JAISoundStatus_::lockWhenPrepared() {
 #pragma pop
 
 
-/* 802A2244-802A2280 003C+00 rc=2 efc=2 .text      unlockIfLocked__15JAISoundStatus_Fv                          */
+/* 802A2244-802A2280 003C+00 rc=0 efc=0 .text      unlockIfLocked__15JAISoundStatus_Fv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,10 +169,10 @@ asm void JAISoundStatus_::unlockIfLocked() {
 
 
 /* ############################################################################################## */
-/* 804557B8-804557BC 0004+00 rc=3 efc=0 .sdata2    @659                                                         */
+/* 804557B8-804557BC 0004+00 rc=0 efc=0 .sdata2    @659                                                         */
 f32 lit_659 = 0.5f;
 
-/* 802A2280-802A22F8 0078+00 rc=4 efc=4 .text      mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf */
+/* 802A2280-802A22F8 0078+00 rc=0 efc=0 .text      mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,33 +184,33 @@ asm void JAISoundParams::mixOutAll(JASSoundParams const& field_0, JASSoundParams
 
 
 /* ############################################################################################## */
-/* 803C9970-803C99A0 0030+00 rc=1 efc=0 .data      __vt__8JAISound                                              */
+/* 803C9970-803C99A0 0030+00 rc=0 efc=0 .data      __vt__8JAISound                                              */
 void* const __vt__8JAISound[12] = {
-	NULL, /* RTTI */
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)asSe__8JAISoundFv,
 	(void*)asSeq__8JAISoundFv,
 	(void*)asStream__8JAISoundFv,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804557BC-804557C0 0004+00 rc=2 efc=0 .sdata2    @697                                                         */
+/* 804557BC-804557C0 0004+00 rc=0 efc=0 .sdata2    @697                                                         */
 f32 JAISound__lit_697 = 1.0f;
 
-/* 804557C0-804557C8 0004+04 rc=4 efc=0 .sdata2    @698                                                         */
-u8 lit_698[8] = {
+/* 804557C0-804557C8 0004+04 rc=0 efc=0 .sdata2    @698                                                         */
+u8 lit_698[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802A22F8-802A2328 0030+00 rc=3 efc=3 .text      __ct__8JAISoundFv                                            */
+/* 802A22F8-802A2328 0030+00 rc=0 efc=0 .text      __ct__8JAISoundFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -221,7 +221,7 @@ asm JAISound::JAISound() {
 #pragma pop
 
 
-/* 802A2328-802A244C 0124+00 rc=3 efc=3 .text      start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
+/* 802A2328-802A244C 0124+00 rc=0 efc=0 .text      start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -232,7 +232,7 @@ asm void JAISound::start_JAISound_(JAISoundID field_0, JGeometry::TVec3<f32> con
 #pragma pop
 
 
-/* 802A244C-802A2474 0028+00 rc=2 efc=2 .text      acceptsNewAudible__8JAISoundCFv                              */
+/* 802A244C-802A2474 0028+00 rc=0 efc=0 .text      acceptsNewAudible__8JAISoundCFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -243,7 +243,7 @@ asm void JAISound::acceptsNewAudible() const {
 #pragma pop
 
 
-/* 802A2474-802A24DC 0068+00 rc=2 efc=2 .text      newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience */
+/* 802A2474-802A24DC 0068+00 rc=0 efc=0 .text      newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,10 +255,10 @@ asm void JAISound::newAudible(JGeometry::TVec3<f32> const& field_0, JGeometry::T
 
 
 /* ############################################################################################## */
-/* 804557C8-804557D0 0008+00 rc=1 efc=0 .sdata2    @766                                                         */
+/* 804557C8-804557D0 0008+00 rc=0 efc=0 .sdata2    @766                                                         */
 f64 JAISound__lit_766 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802A24DC-802A2598 00BC+00 rc=24 efc=24 .text      stop__8JAISoundFUl                                           */
+/* 802A24DC-802A2598 00BC+00 rc=0 efc=0 .text      stop__8JAISoundFUl                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +269,7 @@ asm void JAISound::stop(u32 field_0) {
 #pragma pop
 
 
-/* 802A2598-802A25D8 0040+00 rc=23 efc=21 .text      stop__8JAISoundFv                                            */
+/* 802A2598-802A25D8 0040+00 rc=0 efc=0 .text      stop__8JAISoundFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,25 +280,25 @@ asm void JAISound::stop() {
 #pragma pop
 
 
-/* 802A25D8-802A25E0 0008+00 rc=3 efc=2 .text      asSe__8JAISoundFv                                            */
+/* 802A25D8-802A25E0 0008+00 rc=0 efc=0 .text      asSe__8JAISoundFv                                            */
 bool JAISound::asSe() {
 	return false;
 }
 
 
-/* 802A25E0-802A25E8 0008+00 rc=3 efc=2 .text      asSeq__8JAISoundFv                                           */
+/* 802A25E0-802A25E8 0008+00 rc=0 efc=0 .text      asSeq__8JAISoundFv                                           */
 bool JAISound::asSeq() {
 	return false;
 }
 
 
-/* 802A25E8-802A25F0 0008+00 rc=3 efc=2 .text      asStream__8JAISoundFv                                        */
+/* 802A25E8-802A25F0 0008+00 rc=0 efc=0 .text      asStream__8JAISoundFv                                        */
 bool JAISound::asStream() {
 	return false;
 }
 
 
-/* 802A25F0-802A266C 007C+00 rc=3 efc=3 .text      die_JAISound___8JAISoundFv                                   */
+/* 802A25F0-802A266C 007C+00 rc=0 efc=0 .text      die_JAISound___8JAISoundFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,18 +310,18 @@ asm void JAISound::die_JAISound_() {
 
 
 /* ############################################################################################## */
-/* 8039B910-8039B950 003A+06 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 8039B910-8039B950 003A+06 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_8039B910 = 
+const char* const stringBase_8039B910 = 
     "It cost %d steps to prepare Sound(ID:%08x, Addre"
     "ss%08x).\n";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_8039B94A = "\0\0\0\0\0";
+char* const pad_8039B94A = "\0\0\0\0\0";
 #pragma pop
 
-/* 802A266C-802A26B8 004C+00 rc=3 efc=3 .text      increasePrepareCount_JAISound___8JAISoundFv                  */
+/* 802A266C-802A26B8 004C+00 rc=0 efc=0 .text      increasePrepareCount_JAISound___8JAISoundFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,11 +333,14 @@ asm void JAISound::increasePrepareCount_JAISound_() {
 
 
 /* ############################################################################################## */
-/* 804557D0-804557D8 0004+04 rc=1 efc=0 .sdata2    @887                                                         */
-f32 lit_887 = 1.0f / 100.0f;
-/* padding 4 bytes */
+/* 804557D0-804557D8 0004+04 rc=0 efc=0 .sdata2    @887                                                         */
+f32 lit_887[1 + 1 /* padding */] = {
+	1.0f / 100.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 802A26B8-802A29DC 0324+00 rc=3 efc=3 .text      calc_JAISound___8JAISoundFv                                  */
+/* 802A26B8-802A29DC 0324+00 rc=0 efc=0 .text      calc_JAISound___8JAISoundFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -348,7 +351,7 @@ asm void JAISound::calc_JAISound_() {
 #pragma pop
 
 
-/* 802A29DC-802A2AB0 00D4+00 rc=2 efc=2 .text      initTrack_JAISound___8JAISoundFP8JASTrack                    */
+/* 802A29DC-802A2AB0 00D4+00 rc=0 efc=0 .text      initTrack_JAISound___8JAISoundFP8JASTrack                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

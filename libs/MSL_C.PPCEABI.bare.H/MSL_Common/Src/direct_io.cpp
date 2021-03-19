@@ -9,10 +9,10 @@
 // Forward References:
 // 
 
-extern "C" static void __fwrite(); // 1
+extern "C" void __fwrite(); // 1
 extern "C" void fwrite(); // 1
 
-extern "C" static void __fwrite(); // 1
+extern "C" void __fwrite(); // 1
 extern "C" void fwrite(); // 1
 
 // 
@@ -43,18 +43,18 @@ extern "C" void fwide(); // 1
 // Declarations:
 // 
 
-/* 80365494-803657A0 030C+00 rc=1 efc=0 .text      __fwrite                                                     */
+/* 80365494-803657A0 030C+00 rc=0 efc=0 .text      __fwrite                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __fwrite() {
+extern "C" asm void __fwrite() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/direct_io/__fwrite.s"
 }
 #pragma pop
 
 
-/* 803657A0-8036581C 007C+00 rc=1 efc=1 .text      fwrite                                                       */
+/* 803657A0-8036581C 007C+00 rc=0 efc=0 .text      fwrite                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

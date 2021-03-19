@@ -24,19 +24,19 @@ struct dDlst_KanteraIcon_c {
 	/* 801AED1C */ ~dDlst_KanteraIcon_c();
 };
 
-struct JKRExpHeap {
+struct JKRArchive {
 };
 
 struct J2DGrafContext {
-};
-
-struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -61,10 +61,10 @@ extern "C" void setScale__15dKantera_icon_cFff(); // 1
 extern "C" void setNowGauge__15dKantera_icon_cFUsUs(); // 1
 extern "C" void draw__19dDlst_KanteraIcon_cFv(); // 1
 extern "C" void __dt__19dDlst_KanteraIcon_cFv(); // 1
-SECTION_RODATA extern const u8 d_d_kantera_icon_meter__stringBase0[32];
-SECTION_DATA extern void*const __vt__19dDlst_KanteraIcon_c[4];
-SECTION_DATA extern void*const __vt__15dKantera_icon_c[4];
-SECTION_SDATA2 extern f32 d_d_kantera_icon_meter__lit_3759;
+SECTION_RODATA extern const char* const d_d_kantera_icon_meter__stringBase0;
+SECTION_DATA extern void* const __vt__19dDlst_KanteraIcon_c[4];
+SECTION_DATA extern void* const __vt__15dKantera_icon_c[3 + 1 /* padding */];
+SECTION_SDATA2 extern f32 d_d_kantera_icon_meter__lit_3759[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 d_d_kantera_icon_meter__lit_3761;
 SECTION_SDATA2 extern u8 d_d_kantera_icon_meter__lit_3776[4 + 4 /* padding */];
 
@@ -84,7 +84,7 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void __ct__9J2DScreenFv(); // 1
 extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
 extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
+SECTION_DATA extern void* const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_drawHIO[3880];
 
@@ -93,24 +93,24 @@ SECTION_BSS extern u8 g_drawHIO[3880];
 // 
 
 /* ############################################################################################## */
-/* 803BC218-803BC228 0010+00 rc=2 efc=0 .data      __vt__19dDlst_KanteraIcon_c                                  */
+/* 803BC218-803BC228 0010+00 rc=0 efc=0 .data      __vt__19dDlst_KanteraIcon_c                                  */
 void* const __vt__19dDlst_KanteraIcon_c[4] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__19dDlst_KanteraIcon_cFv,
 	(void*)__dt__19dDlst_KanteraIcon_cFv,
 };
 
-/* 803BC228-803BC238 000C+04 rc=2 efc=0 .data      __vt__15dKantera_icon_c                                      */
-void* const __vt__15dKantera_icon_c[4] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803BC228-803BC238 000C+04 rc=0 efc=0 .data      __vt__15dKantera_icon_c                                      */
+void* const __vt__15dKantera_icon_c[3 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__15dKantera_icon_cFv,
 	/* padding */
 	NULL,
 };
 
-/* 801AE938-801AE974 003C+00 rc=3 efc=3 .text      __ct__15dKantera_icon_cFv                                    */
+/* 801AE938-801AE974 003C+00 rc=0 efc=0 .text      __ct__15dKantera_icon_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +121,7 @@ asm dKantera_icon_c::dKantera_icon_c() {
 #pragma pop
 
 
-/* 801AE974-801AEA68 00F4+00 rc=1 efc=0 .text      __dt__15dKantera_icon_cFv                                    */
+/* 801AE974-801AEA68 00F4+00 rc=0 efc=0 .text      __dt__15dKantera_icon_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -133,16 +133,16 @@ asm dKantera_icon_c::~dKantera_icon_c() {
 
 
 /* ############################################################################################## */
-/* 80394F50-80394F70 001D+03 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80394F50-80394F70 001D+03 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80394F50 = "zelda_kantera_icon_mater.blo";
+const char* const stringBase_80394F50 = "zelda_kantera_icon_mater.blo";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_80394F6D = "\0\0";
+char* const pad_80394F6D = "\0\0";
 #pragma pop
 
-/* 801AEA68-801AEB7C 0114+00 rc=1 efc=0 .text      initiate__15dKantera_icon_cFv                                */
+/* 801AEA68-801AEB7C 0114+00 rc=0 efc=0 .text      initiate__15dKantera_icon_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -153,7 +153,7 @@ asm void dKantera_icon_c::initiate() {
 #pragma pop
 
 
-/* 801AEB7C-801AEBA0 0024+00 rc=4 efc=4 .text      setAlphaRate__15dKantera_icon_cFf                            */
+/* 801AEB7C-801AEBA0 0024+00 rc=0 efc=0 .text      setAlphaRate__15dKantera_icon_cFf                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -164,7 +164,7 @@ asm void dKantera_icon_c::setAlphaRate(f32 field_0) {
 #pragma pop
 
 
-/* 801AEBA0-801AEBF4 0054+00 rc=3 efc=3 .text      setPos__15dKantera_icon_cFff                                 */
+/* 801AEBA0-801AEBF4 0054+00 rc=0 efc=0 .text      setPos__15dKantera_icon_cFff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,7 +175,7 @@ asm void dKantera_icon_c::setPos(f32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 801AEBF4-801AEC44 0050+00 rc=4 efc=4 .text      setScale__15dKantera_icon_cFff                               */
+/* 801AEBF4-801AEC44 0050+00 rc=0 efc=0 .text      setScale__15dKantera_icon_cFff                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,14 +187,17 @@ asm void dKantera_icon_c::setScale(f32 field_0, f32 field_1) {
 
 
 /* ############################################################################################## */
-/* 80453EF8-80453F00 0004+04 rc=1 efc=0 .sdata2    @3759                                                        */
-f32 d_d_kantera_icon_meter__lit_3759 = 1.0f;
-/* padding 4 bytes */
+/* 80453EF8-80453F00 0004+04 rc=0 efc=0 .sdata2    @3759                                                        */
+f32 d_d_kantera_icon_meter__lit_3759[1 + 1 /* padding */] = {
+	1.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80453F00-80453F08 0008+00 rc=1 efc=0 .sdata2    @3761                                                        */
+/* 80453F00-80453F08 0008+00 rc=0 efc=0 .sdata2    @3761                                                        */
 f64 d_d_kantera_icon_meter__lit_3761 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 801AEC44-801AECB8 0074+00 rc=4 efc=4 .text      setNowGauge__15dKantera_icon_cFUsUs                          */
+/* 801AEC44-801AECB8 0074+00 rc=0 efc=0 .text      setNowGauge__15dKantera_icon_cFUsUs                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -206,14 +209,14 @@ asm void dKantera_icon_c::setNowGauge(u16 field_0, u16 field_1) {
 
 
 /* ############################################################################################## */
-/* 80453F08-80453F10 0004+04 rc=1 efc=0 .sdata2    @3776                                                        */
-u8 d_d_kantera_icon_meter__lit_3776[8] = {
+/* 80453F08-80453F10 0004+04 rc=0 efc=0 .sdata2    @3776                                                        */
+u8 d_d_kantera_icon_meter__lit_3776[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801AECB8-801AED1C 0064+00 rc=1 efc=0 .text      draw__19dDlst_KanteraIcon_cFv                                */
+/* 801AECB8-801AED1C 0064+00 rc=0 efc=0 .text      draw__19dDlst_KanteraIcon_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +227,7 @@ asm void dDlst_KanteraIcon_c::draw() {
 #pragma pop
 
 
-/* 801AED1C-801AED64 0048+00 rc=1 efc=0 .text      __dt__19dDlst_KanteraIcon_cFv                                */
+/* 801AED1C-801AED64 0048+00 rc=0 efc=0 .text      __dt__19dDlst_KanteraIcon_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

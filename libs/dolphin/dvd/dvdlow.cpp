@@ -11,10 +11,10 @@
 
 extern "C" void __DVDInitWA(); // 1
 extern "C" void __DVDInterruptHandler(); // 1
-extern "C" static void dvdlow__AlarmHandler(); // 1
-extern "C" static void AlarmHandlerForTimeout(); // 1
-extern "C" static void Read(); // 1
-extern "C" static void SeekTwiceBeforeRead(); // 1
+extern "C" void dvdlow__AlarmHandler(); // 1
+extern "C" void AlarmHandlerForTimeout(); // 1
+extern "C" void Read(); // 1
+extern "C" void SeekTwiceBeforeRead(); // 1
 extern "C" void DVDLowRead(); // 1
 extern "C" void DVDLowSeek(); // 1
 extern "C" void DVDLowWaitCoverClose(); // 1
@@ -28,15 +28,15 @@ extern "C" void DVDLowAudioBufferConfig(); // 1
 extern "C" void DVDLowReset(); // 1
 extern "C" void DVDLowBreak(); // 1
 extern "C" void DVDLowClearCallback(); // 1
-extern "C" static void __DVDLowSetWAType(); // 1
+extern "C" void __DVDLowSetWAType(); // 1
 extern "C" void __DVDLowTestAlarm(); // 1
 
 extern "C" void __DVDInitWA(); // 1
 extern "C" void __DVDInterruptHandler(); // 1
-extern "C" static void dvdlow__AlarmHandler(); // 1
-extern "C" static void AlarmHandlerForTimeout(); // 1
-extern "C" static void Read(); // 1
-extern "C" static void SeekTwiceBeforeRead(); // 1
+extern "C" void dvdlow__AlarmHandler(); // 1
+extern "C" void AlarmHandlerForTimeout(); // 1
+extern "C" void Read(); // 1
+extern "C" void SeekTwiceBeforeRead(); // 1
 extern "C" void DVDLowRead(); // 1
 extern "C" void DVDLowSeek(); // 1
 extern "C" void DVDLowWaitCoverClose(); // 1
@@ -50,7 +50,7 @@ extern "C" void DVDLowAudioBufferConfig(); // 1
 extern "C" void DVDLowReset(); // 1
 extern "C" void DVDLowBreak(); // 1
 extern "C" void DVDLowClearCallback(); // 1
-extern "C" static void __DVDLowSetWAType(); // 1
+extern "C" void __DVDLowSetWAType(); // 1
 extern "C" void __DVDLowTestAlarm(); // 1
 SECTION_BSS extern u8 CommandList[60 + 4 /* padding */];
 SECTION_BSS extern u8 AlarmForWA[40];
@@ -58,7 +58,7 @@ SECTION_BSS extern u8 AlarmForTimeout[40];
 SECTION_BSS extern u8 AlarmForBreak[40];
 SECTION_BSS extern u8 Prev[12];
 SECTION_BSS extern u8 Curr[12];
-SECTION_SDATA extern u32 FirstRead;
+SECTION_SDATA extern u32 FirstRead[1 + 1 /* padding */];
 SECTION_SBSS extern u8 StopAtNextInt[4];
 SECTION_SBSS extern u8 LastLength[4];
 SECTION_SBSS extern u8 dvdlow__Callback[4];
@@ -110,61 +110,61 @@ extern "C" void DVDGetCurrentDiskID(); // 1
 // 
 
 /* ############################################################################################## */
-/* 8044C830-8044C870 003C+04 rc=6 efc=0 .bss       CommandList                                                  */
+/* 8044C830-8044C870 003C+04 rc=0 efc=0 .bss       CommandList                                                  */
 u8 CommandList[60 + 4 /* padding */];
 
-/* 80451710-80451714 0004+00 rc=12 efc=0 .sbss      StopAtNextInt                                                */
+/* 80451710-80451714 0004+00 rc=0 efc=0 .sbss      StopAtNextInt                                                */
 u8 StopAtNextInt[4];
 
-/* 80451714-80451718 0004+00 rc=1 efc=0 .sbss      LastLength                                                   */
+/* 80451714-80451718 0004+00 rc=0 efc=0 .sbss      LastLength                                                   */
 u8 LastLength[4];
 
-/* 80451718-8045171C 0004+00 rc=13 efc=0 .sbss      Callback                                                     */
+/* 80451718-8045171C 0004+00 rc=0 efc=0 .sbss      Callback                                                     */
 u8 dvdlow__Callback[4];
 
-/* 8045171C-80451720 0004+00 rc=1 efc=0 .sbss      ResetCoverCallback                                           */
+/* 8045171C-80451720 0004+00 rc=0 efc=0 .sbss      ResetCoverCallback                                           */
 u8 ResetCoverCallback[4];
 
-/* 80451720-80451724 0004+00 rc=2 efc=0 .sbss      LastResetEnd                                                 */
+/* 80451720-80451724 0004+00 rc=0 efc=0 .sbss      LastResetEnd                                                 */
 u8 LastResetEnd[4];
 
-/* 80451724-80451728 0004+00 rc=2 efc=0 .sbss      None                                                         */
+/* 80451724-80451728 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_80451724[4];
 
-/* 80451728-8045172C 0004+00 rc=2 efc=0 .sbss      ResetOccurred                                                */
+/* 80451728-8045172C 0004+00 rc=0 efc=0 .sbss      ResetOccurred                                                */
 u8 ResetOccurred[4];
 
-/* 8045172C-80451730 0004+00 rc=3 efc=0 .sbss      WaitingCoverClose                                            */
+/* 8045172C-80451730 0004+00 rc=0 efc=0 .sbss      WaitingCoverClose                                            */
 u8 WaitingCoverClose[4];
 
-/* 80451730-80451734 0004+00 rc=2 efc=0 .sbss      Breaking                                                     */
+/* 80451730-80451734 0004+00 rc=0 efc=0 .sbss      Breaking                                                     */
 u8 Breaking[4];
 
-/* 80451734-80451738 0004+00 rc=2 efc=0 .sbss      WorkAroundType                                               */
+/* 80451734-80451738 0004+00 rc=0 efc=0 .sbss      WorkAroundType                                               */
 u8 WorkAroundType[4];
 
-/* 80451738-80451740 0004+04 rc=2 efc=0 .sbss      WorkAroundSeekLocation                                       */
+/* 80451738-80451740 0004+04 rc=0 efc=0 .sbss      WorkAroundSeekLocation                                       */
 u8 WorkAroundSeekLocation[4 + 4 /* padding */];
 
-/* 80451740-80451744 0004+00 rc=2 efc=0 .sbss      LastReadFinished                                             */
+/* 80451740-80451744 0004+00 rc=0 efc=0 .sbss      LastReadFinished                                             */
 u8 LastReadFinished[4];
 
-/* 80451744-80451748 0004+00 rc=2 efc=0 .sbss      None                                                         */
+/* 80451744-80451748 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_80451744[4];
 
-/* 80451748-8045174C 0004+00 rc=1 efc=0 .sbss      LastReadIssued                                               */
+/* 80451748-8045174C 0004+00 rc=0 efc=0 .sbss      LastReadIssued                                               */
 u8 LastReadIssued[4];
 
-/* 8045174C-80451750 0004+00 rc=1 efc=0 .sbss      None                                                         */
+/* 8045174C-80451750 0004+00 rc=0 efc=0 .sbss      None                                                         */
 u8 data_8045174C[4];
 
-/* 80451750-80451754 0004+00 rc=2 efc=0 .sbss      LastCommandWasRead                                           */
+/* 80451750-80451754 0004+00 rc=0 efc=0 .sbss      LastCommandWasRead                                           */
 u8 LastCommandWasRead[4];
 
-/* 80451754-80451758 0004+00 rc=5 efc=0 .sbss      NextCommandNumber                                            */
+/* 80451754-80451758 0004+00 rc=0 efc=0 .sbss      NextCommandNumber                                            */
 u8 NextCommandNumber[4];
 
-/* 80347674-803476B4 0040+00 rc=1 efc=1 .text      __DVDInitWA                                                  */
+/* 80347674-803476B4 0040+00 rc=0 efc=0 .text      __DVDInitWA                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,11 +176,14 @@ extern "C" asm void __DVDInitWA() {
 
 
 /* ############################################################################################## */
-/* 804509D8-804509E0 0004+04 rc=2 efc=0 .sdata     FirstRead                                                    */
-u32 FirstRead = 0x00000001;
-/* padding 4 bytes */
+/* 804509D8-804509E0 0004+04 rc=0 efc=0 .sdata     FirstRead                                                    */
+u32 FirstRead[1 + 1 /* padding */] = {
+	0x00000001,
+	/* padding */
+	0x00000000,
+};
 
-/* 803476B4-80347994 02E0+00 rc=1 efc=1 .text      __DVDInterruptHandler                                        */
+/* 803476B4-80347994 02E0+00 rc=0 efc=0 .text      __DVDInterruptHandler                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,51 +194,51 @@ extern "C" asm void __DVDInterruptHandler() {
 #pragma pop
 
 
-/* 80347994-80347A18 0084+00 rc=1 efc=0 .text      AlarmHandler                                                 */
+/* 80347994-80347A18 0084+00 rc=0 efc=0 .text      AlarmHandler                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void dvdlow__AlarmHandler() {
+extern "C" asm void dvdlow__AlarmHandler() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdlow/dvdlow__AlarmHandler.s"
 }
 #pragma pop
 
 
-/* 80347A18-80347A88 0070+00 rc=9 efc=0 .text      AlarmHandlerForTimeout                                       */
+/* 80347A18-80347A88 0070+00 rc=0 efc=0 .text      AlarmHandlerForTimeout                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void AlarmHandlerForTimeout() {
+extern "C" asm void AlarmHandlerForTimeout() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdlow/AlarmHandlerForTimeout.s"
 }
 #pragma pop
 
 
-/* 80347A88-80347B98 0110+00 rc=3 efc=0 .text      Read                                                         */
+/* 80347A88-80347B98 0110+00 rc=0 efc=0 .text      Read                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void Read() {
+extern "C" asm void Read() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdlow/Read.s"
 }
 #pragma pop
 
 
-/* 80347B98-80347C18 0080+00 rc=1 efc=0 .text      SeekTwiceBeforeRead                                          */
+/* 80347B98-80347C18 0080+00 rc=0 efc=0 .text      SeekTwiceBeforeRead                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void SeekTwiceBeforeRead() {
+extern "C" asm void SeekTwiceBeforeRead() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdlow/SeekTwiceBeforeRead.s"
 }
 #pragma pop
 
 
-/* 80347C18-80347EB0 0298+00 rc=4 efc=4 .text      DVDLowRead                                                   */
+/* 80347C18-80347EB0 0298+00 rc=0 efc=0 .text      DVDLowRead                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,10 +253,10 @@ extern "C" asm void DVDLowRead() {
 /* 8044C870-8044C898 0028+00 rc=0 efc=0 .bss       AlarmForWA                                                   */
 u8 AlarmForWA[40];
 
-/* 8044C898-8044C8C0 0028+00 rc=9 efc=0 .bss       AlarmForTimeout                                              */
+/* 8044C898-8044C8C0 0028+00 rc=0 efc=0 .bss       AlarmForTimeout                                              */
 u8 AlarmForTimeout[40];
 
-/* 80347EB0-80347F44 0094+00 rc=5 efc=2 .text      DVDLowSeek                                                   */
+/* 80347EB0-80347F44 0094+00 rc=0 efc=0 .text      DVDLowSeek                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -264,7 +267,7 @@ extern "C" asm void DVDLowSeek() {
 #pragma pop
 
 
-/* 80347F44-80347F70 002C+00 rc=3 efc=3 .text      DVDLowWaitCoverClose                                         */
+/* 80347F44-80347F70 002C+00 rc=0 efc=0 .text      DVDLowWaitCoverClose                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -275,7 +278,7 @@ extern "C" asm void DVDLowWaitCoverClose() {
 #pragma pop
 
 
-/* 80347F70-80348014 00A4+00 rc=2 efc=2 .text      DVDLowReadDiskID                                             */
+/* 80347F70-80348014 00A4+00 rc=0 efc=0 .text      DVDLowReadDiskID                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -286,7 +289,7 @@ extern "C" asm void DVDLowReadDiskID() {
 #pragma pop
 
 
-/* 80348014-803480A0 008C+00 rc=9 efc=9 .text      DVDLowStopMotor                                              */
+/* 80348014-803480A0 008C+00 rc=0 efc=0 .text      DVDLowStopMotor                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -297,7 +300,7 @@ extern "C" asm void DVDLowStopMotor() {
 #pragma pop
 
 
-/* 803480A0-8034812C 008C+00 rc=7 efc=7 .text      DVDLowRequestError                                           */
+/* 803480A0-8034812C 008C+00 rc=0 efc=0 .text      DVDLowRequestError                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -308,7 +311,7 @@ extern "C" asm void DVDLowRequestError() {
 #pragma pop
 
 
-/* 8034812C-803481C8 009C+00 rc=1 efc=1 .text      DVDLowInquiry                                                */
+/* 8034812C-803481C8 009C+00 rc=0 efc=0 .text      DVDLowInquiry                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -319,7 +322,7 @@ extern "C" asm void DVDLowInquiry() {
 #pragma pop
 
 
-/* 803481C8-80348260 0098+00 rc=2 efc=2 .text      DVDLowAudioStream                                            */
+/* 803481C8-80348260 0098+00 rc=0 efc=0 .text      DVDLowAudioStream                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -330,7 +333,7 @@ extern "C" asm void DVDLowAudioStream() {
 #pragma pop
 
 
-/* 80348260-803482EC 008C+00 rc=1 efc=1 .text      DVDLowRequestAudioStatus                                     */
+/* 80348260-803482EC 008C+00 rc=0 efc=0 .text      DVDLowRequestAudioStatus                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -341,7 +344,7 @@ extern "C" asm void DVDLowRequestAudioStatus() {
 #pragma pop
 
 
-/* 803482EC-80348388 009C+00 rc=3 efc=3 .text      DVDLowAudioBufferConfig                                      */
+/* 803482EC-80348388 009C+00 rc=0 efc=0 .text      DVDLowAudioBufferConfig                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -352,7 +355,7 @@ extern "C" asm void DVDLowAudioBufferConfig() {
 #pragma pop
 
 
-/* 80348388-80348444 00BC+00 rc=1 efc=1 .text      DVDLowReset                                                  */
+/* 80348388-80348444 00BC+00 rc=0 efc=0 .text      DVDLowReset                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -363,7 +366,7 @@ extern "C" asm void DVDLowReset() {
 #pragma pop
 
 
-/* 80348444-80348458 0014+00 rc=1 efc=1 .text      DVDLowBreak                                                  */
+/* 80348444-80348458 0014+00 rc=0 efc=0 .text      DVDLowBreak                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -374,7 +377,7 @@ extern "C" asm void DVDLowBreak() {
 #pragma pop
 
 
-/* 80348458-80348474 001C+00 rc=1 efc=1 .text      DVDLowClearCallback                                          */
+/* 80348458-80348474 001C+00 rc=0 efc=0 .text      DVDLowClearCallback                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -385,11 +388,11 @@ extern "C" asm void DVDLowClearCallback() {
 #pragma pop
 
 
-/* 80348474-803484B8 0044+00 rc=1 efc=0 .text      __DVDLowSetWAType                                            */
+/* 80348474-803484B8 0044+00 rc=0 efc=0 .text      __DVDLowSetWAType                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __DVDLowSetWAType() {
+extern "C" asm void __DVDLowSetWAType() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdlow/__DVDLowSetWAType.s"
 }
@@ -397,10 +400,10 @@ extern "C" asm static void __DVDLowSetWAType() {
 
 
 /* ############################################################################################## */
-/* 8044C8C0-8044C8E8 0028+00 rc=1 efc=0 .bss       AlarmForBreak                                                */
+/* 8044C8C0-8044C8E8 0028+00 rc=0 efc=0 .bss       AlarmForBreak                                                */
 u8 AlarmForBreak[40];
 
-/* 803484B8-803484F0 0038+00 rc=1 efc=1 .text      __DVDLowTestAlarm                                            */
+/* 803484B8-803484F0 0038+00 rc=0 efc=0 .text      __DVDLowTestAlarm                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

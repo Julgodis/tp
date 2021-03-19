@@ -19,11 +19,14 @@ LIBPAD_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libpad.a: $(LIBPAD_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libpad.a
 	@echo $(LIBPAD_A_O_FILES) > build/LIBPAD_A_ofiles
-	$(LD) -xm l $(LIBPAD_A_LDFLAGS) -o $(BUILD_DIR)/libpad.a @build/LIBPAD_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libpad.a
+	@$(LD) -xm l $(LIBPAD_A_LDFLAGS) -o $(BUILD_DIR)/libpad.a @build/LIBPAD_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libpad.a
 
 $(BUILD_DIR)/libs/dolphin/pad/%.o: libs/dolphin/pad/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBPAD_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBPAD_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

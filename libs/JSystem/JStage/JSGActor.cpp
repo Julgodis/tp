@@ -82,7 +82,7 @@ extern "C" void JSGSetTextureAnimation__Q26JStage6TActorFUl(); // 1
 extern "C" void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv(); // 1
 extern "C" void JSGSetTextureAnimationFrame__Q26JStage6TActorFf(); // 1
 extern "C" void JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv(); // 1
-SECTION_DATA extern void*const __vt__Q26JStage6TActor[36];
+SECTION_DATA extern void* const __vt__Q26JStage6TActor[35 + 1 /* padding */];
 SECTION_SDATA2 extern u8 JSGActor__lit_343[4 + 4 /* padding */];
 
 // 
@@ -110,11 +110,11 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C45A8-803C4638 008C+04 rc=2 efc=1 .data      __vt__Q26JStage6TActor                                       */
-void* const __vt__Q26JStage6TActor[36] = {
-	NULL, /* RTTI */
-	NULL,
-	NULL,
+/* 803C45A8-803C4638 008C+04 rc=0 efc=0 .data      __vt__Q26JStage6TActor                                       */
+void* const __vt__Q26JStage6TActor[35 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)JSGFGetType__Q26JStage6TActorCFv,
 	(void*)JSGGetName__Q26JStage7TObjectCFv,
 	(void*)JSGUpdate__Q26JStage7TObjectFv,
@@ -151,7 +151,7 @@ void* const __vt__Q26JStage6TActor[36] = {
 	NULL,
 };
 
-/* 80280A48-80280AA8 0060+00 rc=1 efc=1 .text      __dt__Q26JStage6TActorFv                                     */
+/* 80280A48-80280AA8 0060+00 rc=0 efc=0 .text      __dt__Q26JStage6TActorFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,81 +162,81 @@ asm JStage::TActor::~TActor() {
 #pragma pop
 
 
-/* 80280AA8-80280AB0 0008+00 rc=2 efc=1 .text      JSGFGetType__Q26JStage6TActorCFv                             */
+/* 80280AA8-80280AB0 0008+00 rc=0 efc=0 .text      JSGFGetType__Q26JStage6TActorCFv                             */
 s32 JStage::TActor::JSGFGetType() const {
 	return 2;
 }
 
 
-/* 80280AB0-80280AB4 0004+00 rc=1 efc=0 .text      JSGGetTranslation__Q26JStage6TActorCFP3Vec                   */
+/* 80280AB0-80280AB4 0004+00 rc=0 efc=0 .text      JSGGetTranslation__Q26JStage6TActorCFP3Vec                   */
 void JStage::TActor::JSGGetTranslation(Vec* field_0) const {
 	/* empty function */
 }
 
 
-/* 80280AB4-80280AB8 0004+00 rc=1 efc=0 .text      JSGSetTranslation__Q26JStage6TActorFRC3Vec                   */
+/* 80280AB4-80280AB8 0004+00 rc=0 efc=0 .text      JSGSetTranslation__Q26JStage6TActorFRC3Vec                   */
 void JStage::TActor::JSGSetTranslation(Vec const& field_0) {
 	/* empty function */
 }
 
 
-/* 80280AB8-80280ABC 0004+00 rc=1 efc=0 .text      JSGGetScaling__Q26JStage6TActorCFP3Vec                       */
+/* 80280AB8-80280ABC 0004+00 rc=0 efc=0 .text      JSGGetScaling__Q26JStage6TActorCFP3Vec                       */
 void JStage::TActor::JSGGetScaling(Vec* field_0) const {
 	/* empty function */
 }
 
 
-/* 80280ABC-80280AC0 0004+00 rc=1 efc=0 .text      JSGSetScaling__Q26JStage6TActorFRC3Vec                       */
+/* 80280ABC-80280AC0 0004+00 rc=0 efc=0 .text      JSGSetScaling__Q26JStage6TActorFRC3Vec                       */
 void JStage::TActor::JSGSetScaling(Vec const& field_0) {
 	/* empty function */
 }
 
 
-/* 80280AC0-80280AC4 0004+00 rc=1 efc=0 .text      JSGGetRotation__Q26JStage6TActorCFP3Vec                      */
+/* 80280AC0-80280AC4 0004+00 rc=0 efc=0 .text      JSGGetRotation__Q26JStage6TActorCFP3Vec                      */
 void JStage::TActor::JSGGetRotation(Vec* field_0) const {
 	/* empty function */
 }
 
 
-/* 80280AC4-80280AC8 0004+00 rc=1 efc=0 .text      JSGSetRotation__Q26JStage6TActorFRC3Vec                      */
+/* 80280AC4-80280AC8 0004+00 rc=0 efc=0 .text      JSGSetRotation__Q26JStage6TActorFRC3Vec                      */
 void JStage::TActor::JSGSetRotation(Vec const& field_0) {
 	/* empty function */
 }
 
 
-/* 80280AC8-80280AD0 0008+00 rc=2 efc=1 .text      JSGGetShape__Q26JStage6TActorCFv                             */
+/* 80280AC8-80280AD0 0008+00 rc=0 efc=0 .text      JSGGetShape__Q26JStage6TActorCFv                             */
 s32 JStage::TActor::JSGGetShape() const {
 	return -1;
 }
 
 
-/* 80280AD0-80280AD4 0004+00 rc=1 efc=0 .text      JSGSetShape__Q26JStage6TActorFUl                             */
+/* 80280AD0-80280AD4 0004+00 rc=0 efc=0 .text      JSGSetShape__Q26JStage6TActorFUl                             */
 void JStage::TActor::JSGSetShape(u32 field_0) {
 	/* empty function */
 }
 
 
-/* 80280AD4-80280ADC 0008+00 rc=2 efc=1 .text      JSGGetAnimation__Q26JStage6TActorCFv                         */
+/* 80280AD4-80280ADC 0008+00 rc=0 efc=0 .text      JSGGetAnimation__Q26JStage6TActorCFv                         */
 s32 JStage::TActor::JSGGetAnimation() const {
 	return -1;
 }
 
 
-/* 80280ADC-80280AE0 0004+00 rc=1 efc=0 .text      JSGSetAnimation__Q26JStage6TActorFUl                         */
+/* 80280ADC-80280AE0 0004+00 rc=0 efc=0 .text      JSGSetAnimation__Q26JStage6TActorFUl                         */
 void JStage::TActor::JSGSetAnimation(u32 field_0) {
 	/* empty function */
 }
 
 
 /* ############################################################################################## */
-/* 804553C8-804553D0 0004+04 rc=5 efc=0 .sdata2    @343                                                         */
-u8 JSGActor__lit_343[8] = {
+/* 804553C8-804553D0 0004+04 rc=0 efc=0 .sdata2    @343                                                         */
+u8 JSGActor__lit_343[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80280AE0-80280AE8 0008+00 rc=2 efc=1 .text      JSGGetAnimationFrame__Q26JStage6TActorCFv                    */
+/* 80280AE0-80280AE8 0008+00 rc=0 efc=0 .text      JSGGetAnimationFrame__Q26JStage6TActorCFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,13 +247,13 @@ asm void JStage::TActor::JSGGetAnimationFrame() const {
 #pragma pop
 
 
-/* 80280AE8-80280AEC 0004+00 rc=1 efc=0 .text      JSGSetAnimationFrame__Q26JStage6TActorFf                     */
+/* 80280AE8-80280AEC 0004+00 rc=0 efc=0 .text      JSGSetAnimationFrame__Q26JStage6TActorFf                     */
 void JStage::TActor::JSGSetAnimationFrame(f32 field_0) {
 	/* empty function */
 }
 
 
-/* 80280AEC-80280AF4 0008+00 rc=1 efc=0 .text      JSGGetAnimationFrameMax__Q26JStage6TActorCFv                 */
+/* 80280AEC-80280AF4 0008+00 rc=0 efc=0 .text      JSGGetAnimationFrameMax__Q26JStage6TActorCFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -264,7 +264,7 @@ asm void JStage::TActor::JSGGetAnimationFrameMax() const {
 #pragma pop
 
 
-/* 80280AF4-80280AFC 0008+00 rc=2 efc=1 .text      JSGGetAnimationTransition__Q26JStage6TActorCFv               */
+/* 80280AF4-80280AFC 0008+00 rc=0 efc=0 .text      JSGGetAnimationTransition__Q26JStage6TActorCFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -275,25 +275,25 @@ asm void JStage::TActor::JSGGetAnimationTransition() const {
 #pragma pop
 
 
-/* 80280AFC-80280B00 0004+00 rc=1 efc=0 .text      JSGSetAnimationTransition__Q26JStage6TActorFf                */
+/* 80280AFC-80280B00 0004+00 rc=0 efc=0 .text      JSGSetAnimationTransition__Q26JStage6TActorFf                */
 void JStage::TActor::JSGSetAnimationTransition(f32 field_0) {
 	/* empty function */
 }
 
 
-/* 80280B00-80280B08 0008+00 rc=2 efc=1 .text      JSGGetTextureAnimation__Q26JStage6TActorCFv                  */
+/* 80280B00-80280B08 0008+00 rc=0 efc=0 .text      JSGGetTextureAnimation__Q26JStage6TActorCFv                  */
 s32 JStage::TActor::JSGGetTextureAnimation() const {
 	return -1;
 }
 
 
-/* 80280B08-80280B0C 0004+00 rc=1 efc=0 .text      JSGSetTextureAnimation__Q26JStage6TActorFUl                  */
+/* 80280B08-80280B0C 0004+00 rc=0 efc=0 .text      JSGSetTextureAnimation__Q26JStage6TActorFUl                  */
 void JStage::TActor::JSGSetTextureAnimation(u32 field_0) {
 	/* empty function */
 }
 
 
-/* 80280B0C-80280B14 0008+00 rc=2 efc=1 .text      JSGGetTextureAnimationFrame__Q26JStage6TActorCFv             */
+/* 80280B0C-80280B14 0008+00 rc=0 efc=0 .text      JSGGetTextureAnimationFrame__Q26JStage6TActorCFv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -304,13 +304,13 @@ asm void JStage::TActor::JSGGetTextureAnimationFrame() const {
 #pragma pop
 
 
-/* 80280B14-80280B18 0004+00 rc=1 efc=0 .text      JSGSetTextureAnimationFrame__Q26JStage6TActorFf              */
+/* 80280B14-80280B18 0004+00 rc=0 efc=0 .text      JSGSetTextureAnimationFrame__Q26JStage6TActorFf              */
 void JStage::TActor::JSGSetTextureAnimationFrame(f32 field_0) {
 	/* empty function */
 }
 
 
-/* 80280B18-80280B20 0008+00 rc=1 efc=0 .text      JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv          */
+/* 80280B18-80280B20 0008+00 rc=0 efc=0 .text      JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

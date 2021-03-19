@@ -25,7 +25,7 @@ extern "C" void abs(); // 1
 // Declarations:
 // 
 
-/* 80365078-803650D0 0058+00 rc=1 efc=1 .text      div                                                          */
+/* 80365078-803650D0 0058+00 rc=0 efc=0 .text      div                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -36,7 +36,7 @@ extern "C" asm void div() {
 #pragma pop
 
 
-/* 803650D0-803650E0 0010+00 rc=66 efc=66 .text      abs                                                          */
+/* 803650D0-803650E0 0010+00 rc=0 efc=0 .text      abs                                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,7 +9,7 @@ lbl_801A572C:
 /* 801A5748 0000001C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801A574C 00000020  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801A5750 00000024  83 A3 5D 74 */	lwz r29, 0x5d74(r3)
-/* 801A5754 00000028  88 0D 8A EA */	lbz r0, struct_80451068+0x2(r13)
+/* 801A5754 00000028  88 0D 8A EA */	lbz r0, -0x7516(r13)
 /* 801A5758 0000002C  7C 00 07 75 */	extsb. r0, r0
 /* 801A575C 00000030  40 82 00 30 */	bne lbl_801A578C
 /* 801A5760 00000034  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
@@ -22,9 +22,9 @@ lbl_801A572C:
 /* 801A577C 00000050  38 BF 1D 74 */	addi r5, r31, 0x1d74
 /* 801A5780 00000054  48 1B C4 A5 */	bl __register_global_object
 /* 801A5784 00000058  38 00 00 01 */	li r0, 1
-/* 801A5788 0000005C  98 0D 8A EA */	stb r0, struct_80451068+0x2(r13)
+/* 801A5788 0000005C  98 0D 8A EA */	stb r0, -0x7516(r13)
 lbl_801A578C:
-/* 801A578C 00000000  88 0D 8A EB */	lbz r0, struct_80451068+0x3(r13)
+/* 801A578C 00000000  88 0D 8A EB */	lbz r0, -0x7515(r13)
 /* 801A5790 00000004  7C 00 07 75 */	extsb. r0, r0
 /* 801A5794 00000008  40 82 00 30 */	bne lbl_801A57C4
 /* 801A5798 0000000C  C0 02 A2 0C */	lfs f0, d_kankyo_d_kankyo__lit_4409(r2)
@@ -37,7 +37,7 @@ lbl_801A578C:
 /* 801A57B4 00000028  38 BF 1D 8C */	addi r5, r31, 0x1d8c
 /* 801A57B8 0000002C  48 1B C4 6D */	bl __register_global_object
 /* 801A57BC 00000030  38 00 00 01 */	li r0, 1
-/* 801A57C0 00000034  98 0D 8A EB */	stb r0, struct_80451068+0x3(r13)
+/* 801A57C0 00000034  98 0D 8A EB */	stb r0, -0x7515(r13)
 lbl_801A57C4:
 /* 801A57C4 00000000  48 00 5A BD */	bl dKy_camera_water_in_status_check__Fv
 /* 801A57C8 00000004  2C 03 00 00 */	cmpwi r3, 0

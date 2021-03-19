@@ -1,11 +1,13 @@
-import globals                  
 import asyncio
-import util
-from context import Context
-from data import *
-from builder import AsyncBuilder
+
 from collections import defaultdict
-from symbol_table import GlobalSymbolTable
+
+from . import globals                  
+from . import util
+from .context import Context
+from .data import *
+from .builder import AsyncBuilder
+from .symbol_table import GlobalSymbolTable
 
 def escape_text(name):
     if not name:

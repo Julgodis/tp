@@ -37,7 +37,7 @@ extern "C" void _restgpr_28(); // 1
 // Declarations:
 // 
 
-/* 80266540-802665B4 0074+00 rc=2 efc=2 .text      cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv */
+/* 80266540-802665B4 0074+00 rc=0 efc=0 .text      cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -48,7 +48,7 @@ extern "C" asm void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv
 #pragma pop
 
 
-/* 802665B4-80266624 0070+00 rc=2 efc=2 .text      cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv */
+/* 802665B4-80266624 0070+00 rc=0 efc=0 .text      cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

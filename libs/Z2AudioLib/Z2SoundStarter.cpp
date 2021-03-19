@@ -67,7 +67,7 @@ extern "C" void func_802AAC3C(); // 1
 extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc(); // 1
 extern "C" void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc(); // 1
 extern "C" void __dt__14Z2SoundStarterFv(); // 1
-SECTION_DATA extern void*const __vt__14Z2SoundStarter[6];
+SECTION_DATA extern void* const __vt__14Z2SoundStarter[5 + 1 /* padding */];
 SECTION_SDATA2 extern u8 lit_3597[4];
 SECTION_SDATA2 extern f32 lit_3598;
 SECTION_SDATA2 extern f32 lit_3599;
@@ -111,10 +111,10 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803C9D80-803C9D98 0014+04 rc=8 efc=6 .data      __vt__14Z2SoundStarter                                       */
-void* const __vt__14Z2SoundStarter[6] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803C9D80-803C9D98 0014+04 rc=0 efc=0 .data      __vt__14Z2SoundStarter                                       */
+void* const __vt__14Z2SoundStarter[5 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__14Z2SoundStarterFv,
 	(void*)func_802AABF4,
 	(void*)func_802AAC3C,
@@ -122,7 +122,7 @@ void* const __vt__14Z2SoundStarter[6] = {
 	NULL,
 };
 
-/* 802AAB94-802AABF4 0060+00 rc=4 efc=4 .text      __ct__14Z2SoundStarterFb                                     */
+/* 802AAB94-802AABF4 0060+00 rc=0 efc=0 .text      __ct__14Z2SoundStarterFb                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,18 +134,18 @@ asm Z2SoundStarter::Z2SoundStarter(bool field_0) {
 
 
 /* ############################################################################################## */
-/* 80455858-8045585C 0004+00 rc=2 efc=0 .sdata2    @3597                                                        */
+/* 80455858-8045585C 0004+00 rc=0 efc=0 .sdata2    @3597                                                        */
 u8 lit_3597[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045585C-80455860 0004+00 rc=2 efc=0 .sdata2    @3598                                                        */
+/* 8045585C-80455860 0004+00 rc=0 efc=0 .sdata2    @3598                                                        */
 f32 lit_3598 = 1.0f;
 
-/* 80455860-80455864 0004+00 rc=2 efc=0 .sdata2    @3599                                                        */
+/* 80455860-80455864 0004+00 rc=0 efc=0 .sdata2    @3599                                                        */
 f32 lit_3599 = -1.0f;
 
-/* 802AABF4-802AAC3C 0048+00 rc=6 efc=5 .text      startSound__14Z2SoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+/* 802AABF4-802AAC3C 0048+00 rc=0 efc=0 .text      startSound__14Z2SoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,13 +157,13 @@ asm void Z2SoundStarter::startSound(JAISoundID field_0, JAISoundHandle* field_1,
 
 
 /* ############################################################################################## */
-/* 80455864-80455868 0004+00 rc=1 efc=0 .sdata2    @3713                                                        */
+/* 80455864-80455868 0004+00 rc=0 efc=0 .sdata2    @3713                                                        */
 f32 Z2SoundStarter__lit_3713 = 0.5f;
 
-/* 80455868-80455870 0008+00 rc=1 efc=0 .sdata2    @3717                                                        */
+/* 80455868-80455870 0008+00 rc=0 efc=0 .sdata2    @3717                                                        */
 f64 Z2SoundStarter__lit_3717 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802AAC3C-802AAEDC 02A0+00 rc=4 efc=2 .text      startSound__14Z2SoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
+/* 802AAC3C-802AAEDC 02A0+00 rc=0 efc=0 .text      startSound__14Z2SoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -174,7 +174,7 @@ asm void Z2SoundStarter::startSound(JAISoundID field_0, JAISoundHandle* field_1,
 #pragma pop
 
 
-/* 802AAEDC-802AAF74 0098+00 rc=11 efc=10 .text      setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc        */
+/* 802AAEDC-802AAF74 0098+00 rc=0 efc=0 .text      setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +185,7 @@ asm void Z2SoundStarter::setPortData(JAISoundHandle* field_0, u32 field_1, u16 f
 #pragma pop
 
 
-/* 802AAF74-802AAFF0 007C+00 rc=1 efc=1 .text      getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc          */
+/* 802AAF74-802AAFF0 007C+00 rc=0 efc=0 .text      getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +196,7 @@ asm void Z2SoundStarter::getPortData(JAISoundHandle* field_0, u32 field_1, s8 fi
 #pragma pop
 
 
-/* 802AAFF0-802AB07C 008C+00 rc=1 efc=0 .text      __dt__14Z2SoundStarterFv                                     */
+/* 802AAFF0-802AB07C 008C+00 rc=0 efc=0 .text      __dt__14Z2SoundStarterFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

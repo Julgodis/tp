@@ -37,20 +37,20 @@ struct JKRThread {
 // Forward References:
 // 
 
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPCvUl(); // 1
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPv(); // 1
+extern "C" void allocCallStack__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" void allocCallStack__13JASTaskThreadFPFPv_vPv(); // 1
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv(); // 1
 
 extern "C" void __ct__13JASTaskThreadFiiUl(); // 1
 extern "C" void __dt__13JASTaskThreadFv(); // 1
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPCvUl(); // 1
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPv(); // 1
+extern "C" void allocCallStack__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" void allocCallStack__13JASTaskThreadFPFPv_vPv(); // 1
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv(); // 1
 extern "C" void run__13JASTaskThreadFv(); // 1
 extern "C" void pause__13JASTaskThreadFb(); // 1
-SECTION_DATA extern void*const __vt__13JASTaskThread[4];
+SECTION_DATA extern void* const __vt__13JASTaskThread[4];
 
 // 
 // External References:
@@ -104,15 +104,15 @@ SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 803C5B58-803C5B68 0010+00 rc=2 efc=0 .data      __vt__13JASTaskThread                                        */
+/* 803C5B58-803C5B68 0010+00 rc=0 efc=0 .data      __vt__13JASTaskThread                                        */
 void* const __vt__13JASTaskThread[4] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__13JASTaskThreadFv,
 	(void*)run__13JASTaskThreadFv,
 };
 
-/* 8028F6C4-8028F724 0060+00 rc=1 efc=1 .text      __ct__13JASTaskThreadFiiUl                                   */
+/* 8028F6C4-8028F724 0060+00 rc=0 efc=0 .text      __ct__13JASTaskThreadFiiUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,7 +123,7 @@ asm JASTaskThread::JASTaskThread(int field_0, int field_1, u32 field_2) {
 #pragma pop
 
 
-/* 8028F724-8028F850 012C+00 rc=1 efc=0 .text      __dt__13JASTaskThreadFv                                      */
+/* 8028F724-8028F850 012C+00 rc=0 efc=0 .text      __dt__13JASTaskThreadFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,29 +134,29 @@ asm JASTaskThread::~JASTaskThread() {
 #pragma pop
 
 
-/* 8028F850-8028F9EC 019C+00 rc=1 efc=0 .text      allocCallStack__13JASTaskThreadFPFPv_vPCvUl                  */
+/* 8028F850-8028F9EC 019C+00 rc=0 efc=0 .text      allocCallStack__13JASTaskThreadFPFPv_vPCvUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void allocCallStack__13JASTaskThreadFPFPv_vPCvUl() {
+extern "C" asm void allocCallStack__13JASTaskThreadFPFPv_vPCvUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/allocCallStack__13JASTaskThreadFPFPv_vPCvUl.s"
 }
 #pragma pop
 
 
-/* 8028F9EC-8028FB5C 0170+00 rc=1 efc=0 .text      allocCallStack__13JASTaskThreadFPFPv_vPv                     */
+/* 8028F9EC-8028FB5C 0170+00 rc=0 efc=0 .text      allocCallStack__13JASTaskThreadFPFPv_vPv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void allocCallStack__13JASTaskThreadFPFPv_vPv() {
+extern "C" asm void allocCallStack__13JASTaskThreadFPFPv_vPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/allocCallStack__13JASTaskThreadFPFPv_vPv.s"
 }
 #pragma pop
 
 
-/* 8028FB5C-8028FC54 00F8+00 rc=6 efc=6 .text      sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl                      */
+/* 8028FB5C-8028FC54 00F8+00 rc=0 efc=0 .text      sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +167,7 @@ extern "C" asm void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl() {
 #pragma pop
 
 
-/* 8028FC54-8028FD4C 00F8+00 rc=3 efc=3 .text      sendCmdMsg__13JASTaskThreadFPFPv_vPv                         */
+/* 8028FC54-8028FD4C 00F8+00 rc=0 efc=0 .text      sendCmdMsg__13JASTaskThreadFPFPv_vPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -178,7 +178,7 @@ extern "C" asm void sendCmdMsg__13JASTaskThreadFPFPv_vPv() {
 #pragma pop
 
 
-/* 8028FD4C-8028FE88 013C+00 rc=1 efc=0 .text      run__13JASTaskThreadFv                                       */
+/* 8028FD4C-8028FE88 013C+00 rc=0 efc=0 .text      run__13JASTaskThreadFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,7 +189,7 @@ asm void JASTaskThread::run() {
 #pragma pop
 
 
-/* 8028FE88-8028FEFC 0074+00 rc=1 efc=1 .text      pause__13JASTaskThreadFb                                     */
+/* 8028FE88-8028FEFC 0074+00 rc=0 efc=0 .text      pause__13JASTaskThreadFb                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

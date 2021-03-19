@@ -1,17 +1,15 @@
 
-import util
-from data import *
-from symbols import SymbolReferenceArrayData, VTableData
 from intervaltree import Interval, IntervalTree
+
+from .data import *
+from . import util
 
 def merge_symbol_from_group(context, section, group):
     if len(group) == 1:
         return None
 
-    if isinstance(group[0], InitData) or isinstance(group[0], Literal):
-        return [InitStruct.create(section, group)]
-    elif isinstance(group[0], ZeroData):
-        return [ZeroStruct.create(section, group)]
+    if isinstance(group[0], ArbitraryData):
+        return [Structure.create(section, group)]
 
     context.error(group[0])
     context.error(group[0].section.id)
@@ -55,7 +53,7 @@ def execute(context, libraries):
                 group = []
                 symbols = []
                 for sym in sec.symbols:
-                    if (isinstance(sym, InitData) or isinstance(sym, ZeroData)) and sym.addr % 4 != 0 and group:
+                    if isinstance(sym, ArbitraryData) and sym.addr % 4 != 0 and group:
                         if group[-1].padding != 0:
                             context.warning("padding in the middle of merge between: %s and %s (starting with %s)" % (group[-1].identifier, sym.identifier, group[0].identifier))
                             symbols.extend(group)

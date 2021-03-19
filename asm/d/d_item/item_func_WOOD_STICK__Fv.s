@@ -10,7 +10,7 @@ lbl_800986C4:
 /* 800986E4 00000020  4B F9 BB 05 */	bl setCollect__20dSv_player_collect_cFiUc
 /* 800986E8 00000024  38 60 00 3F */	li r3, 0x3f
 /* 800986EC 00000028  4B F9 67 D5 */	bl dComIfGs_setSelectEquipSword__FUc
-/* 800986F0 0000002C  88 AD 87 E4 */	lbz r5, struct_80450D64+0x0(r13)
+/* 800986F0 0000002C  88 AD 87 E4 */	lbz r5, -0x781c(r13)
 /* 800986F4 00000030  7C A5 07 74 */	extsb r5, r5
 /* 800986F8 00000034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800986FC 00000038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l

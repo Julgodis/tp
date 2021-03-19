@@ -39,8 +39,8 @@ extern "C" void __kernel_rem_pio2(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803A23B0-803A24B8 0108+00 rc=1 efc=0 .rodata    two_over_pi                                                  */
-SECTION_RODATA const u8 two_over_pi[264] = {
+/* 803A23B0-803A24B8 0108+00 rc=0 efc=0 .rodata    two_over_pi                                                  */
+const u8 two_over_pi[264] = {
 	0x00, 0xA2, 0xF9, 0x83, 0x00, 0x6E, 0x4E, 0x44, 0x00, 0x15, 0x29, 0xFC, 0x00, 0x27, 0x57, 0xD1,
 	0x00, 0xF5, 0x34, 0xDD, 0x00, 0xC0, 0xDB, 0x62, 0x00, 0x95, 0x99, 0x3C, 0x00, 0x43, 0x90, 0x41,
 	0x00, 0xFE, 0x51, 0x63, 0x00, 0xAB, 0xDE, 0xBB, 0x00, 0xC5, 0x61, 0xB7, 0x00, 0x24, 0x6E, 0x3A,
@@ -60,8 +60,8 @@ SECTION_RODATA const u8 two_over_pi[264] = {
 	0x00, 0x60, 0xE2, 0x7B, 0x00, 0xC0, 0x8C, 0x6B,
 };
 
-/* 803A24B8-803A2538 0080+00 rc=1 efc=0 .rodata    npio2_hw                                                     */
-SECTION_RODATA const u8 npio2_hw[128] = {
+/* 803A24B8-803A2538 0080+00 rc=0 efc=0 .rodata    npio2_hw                                                     */
+const u8 npio2_hw[128] = {
 	0x3F, 0xF9, 0x21, 0xFB, 0x40, 0x09, 0x21, 0xFB, 0x40, 0x12, 0xD9, 0x7C, 0x40, 0x19, 0x21, 0xFB,
 	0x40, 0x1F, 0x6A, 0x7A, 0x40, 0x22, 0xD9, 0x7C, 0x40, 0x25, 0xFD, 0xBB, 0x40, 0x29, 0x21, 0xFB,
 	0x40, 0x2C, 0x46, 0x3A, 0x40, 0x2F, 0x6A, 0x7A, 0x40, 0x31, 0x47, 0x5C, 0x40, 0x32, 0xD9, 0x7C,
@@ -72,42 +72,42 @@ SECTION_RODATA const u8 npio2_hw[128] = {
 	0x40, 0x46, 0xC6, 0xCB, 0x40, 0x47, 0x8F, 0xDB, 0x40, 0x48, 0x58, 0xEB, 0x40, 0x49, 0x21, 0xFB,
 };
 
-/* 80456968-80456970 0008+00 rc=1 efc=0 .sdata2    @145                                                         */
+/* 80456968-80456970 0008+00 rc=0 efc=0 .sdata2    @145                                                         */
 u8 Math_Double_precision_e_rem_pio2__lit_145[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456970-80456978 0008+00 rc=1 efc=0 .sdata2    @146                                                         */
+/* 80456970-80456978 0008+00 rc=0 efc=0 .sdata2    @146                                                         */
 f64 Math_Double_precision_e_rem_pio2__lit_146 = 1.5707963267341256;
 
-/* 80456978-80456980 0008+00 rc=1 efc=0 .sdata2    @147                                                         */
+/* 80456978-80456980 0008+00 rc=0 efc=0 .sdata2    @147                                                         */
 f64 Math_Double_precision_e_rem_pio2__lit_147 = 6.077100506506192e-11;
 
-/* 80456980-80456988 0008+00 rc=1 efc=0 .sdata2    @148                                                         */
+/* 80456980-80456988 0008+00 rc=0 efc=0 .sdata2    @148                                                         */
 f64 Math_Double_precision_e_rem_pio2__lit_148 = 6.077100506303966e-11;
 
-/* 80456988-80456990 0008+00 rc=1 efc=0 .sdata2    @149                                                         */
+/* 80456988-80456990 0008+00 rc=0 efc=0 .sdata2    @149                                                         */
 f64 Math_Double_precision_e_rem_pio2__lit_149 = 2.0222662487959506e-21;
 
-/* 80456990-80456998 0008+00 rc=1 efc=0 .sdata2    @150                                                         */
+/* 80456990-80456998 0008+00 rc=0 efc=0 .sdata2    @150                                                         */
 f64 Math_Double_precision_e_rem_pio2__lit_150 = 0.5;
 
-/* 80456998-804569A0 0008+00 rc=1 efc=0 .sdata2    @151                                                         */
+/* 80456998-804569A0 0008+00 rc=0 efc=0 .sdata2    @151                                                         */
 f64 Math_Double_precision_e_rem_pio2__lit_151 = 0.6366197723675814;
 
-/* 804569A0-804569A8 0008+00 rc=1 efc=0 .sdata2    @152                                                         */
+/* 804569A0-804569A8 0008+00 rc=0 efc=0 .sdata2    @152                                                         */
 f64 Math_Double_precision_e_rem_pio2__lit_152 = 2.0222662487111665e-21;
 
-/* 804569A8-804569B0 0008+00 rc=1 efc=0 .sdata2    @153                                                         */
+/* 804569A8-804569B0 0008+00 rc=0 efc=0 .sdata2    @153                                                         */
 f64 Math_Double_precision_e_rem_pio2__lit_153 = 8.4784276603689e-32;
 
-/* 804569B0-804569B8 0008+00 rc=1 efc=0 .sdata2    @154                                                         */
+/* 804569B0-804569B8 0008+00 rc=0 efc=0 .sdata2    @154                                                         */
 f64 Math_Double_precision_e_rem_pio2__lit_154 = 16777216.0;
 
-/* 804569B8-804569C0 0008+00 rc=1 efc=0 .sdata2    @157                                                         */
+/* 804569B8-804569C0 0008+00 rc=0 efc=0 .sdata2    @157                                                         */
 f64 lit_157 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8036A708-8036AAA8 03A0+00 rc=3 efc=3 .text      __ieee754_rem_pio2                                           */
+/* 8036A708-8036AAA8 03A0+00 rc=0 efc=0 .text      __ieee754_rem_pio2                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

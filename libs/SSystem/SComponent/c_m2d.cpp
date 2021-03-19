@@ -33,39 +33,39 @@ SECTION_SDATA2 extern u8 lit_2272[8];
 
 
 SECTION_SDATA extern u32 __float_nan;
-SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
+SECTION_SBSS extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 804550F0-804550F4 0004+00 rc=1 efc=0 .sdata2    @2266                                                        */
+/* 804550F0-804550F4 0004+00 rc=0 efc=0 .sdata2    @2266                                                        */
 f32 lit_2266 = 2.0f;
 
-/* 804550F4-804550F8 0004+00 rc=1 efc=0 .sdata2    @2267                                                        */
+/* 804550F4-804550F8 0004+00 rc=0 efc=0 .sdata2    @2267                                                        */
 f32 lit_2267 = 4.0f;
 
-/* 804550F8-804550FC 0004+00 rc=1 efc=0 .sdata2    @2268                                                        */
+/* 804550F8-804550FC 0004+00 rc=0 efc=0 .sdata2    @2268                                                        */
 u8 lit_2268[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804550FC-80455100 0004+00 rc=1 efc=0 .sdata2    @2269                                                        */
+/* 804550FC-80455100 0004+00 rc=0 efc=0 .sdata2    @2269                                                        */
 f32 c_m2d__lit_2269 = 1.0f;
 
-/* 80455100-80455108 0008+00 rc=1 efc=0 .sdata2    @2270                                                        */
+/* 80455100-80455108 0008+00 rc=0 efc=0 .sdata2    @2270                                                        */
 f64 c_m2d__lit_2270 = 0.5;
 
-/* 80455108-80455110 0008+00 rc=1 efc=0 .sdata2    @2271                                                        */
+/* 80455108-80455110 0008+00 rc=0 efc=0 .sdata2    @2271                                                        */
 f64 lit_2271 = 3.0;
 
-/* 80455110-80455118 0008+00 rc=1 efc=0 .sdata2    @2272                                                        */
+/* 80455110-80455118 0008+00 rc=0 efc=0 .sdata2    @2272                                                        */
 u8 lit_2272[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80268260-80268560 0300+00 rc=4 efc=4 .text      cM2d_CrossCirLin__FR8cM2dGCirffffPfPf                        */
+/* 80268260-80268560 0300+00 rc=0 efc=0 .text      cM2d_CrossCirLin__FR8cM2dGCirffffPfPf                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

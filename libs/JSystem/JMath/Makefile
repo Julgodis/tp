@@ -21,11 +21,14 @@ LIBJMATH_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJMath.a: $(LIBJMATH_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJMath.a
 	@echo $(LIBJMATH_A_O_FILES) > build/LIBJMATH_A_ofiles
-	$(LD) -xm l $(LIBJMATH_A_LDFLAGS) -o $(BUILD_DIR)/libJMath.a @build/LIBJMATH_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJMath.a
+	@$(LD) -xm l $(LIBJMATH_A_LDFLAGS) -o $(BUILD_DIR)/libJMath.a @build/LIBJMATH_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJMath.a
 
 $(BUILD_DIR)/libs/JSystem/JMath/%.o: libs/JSystem/JMath/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJMATH_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJMATH_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

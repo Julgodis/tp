@@ -1,8 +1,8 @@
-from data import *
-
 import struct
-import linker_map
-import data_types
+
+from . import linker_map
+from .types import *
+from .data import *
 
 # TODO: What is faster to use here? capstone or doing it our self?
 
@@ -188,19 +188,19 @@ def from_group(section: Section, group: List[linker_map.Symbol]) -> Function:
                 size=block.size,
                 padding=block.padding,
                 alignment=0,
-                return_type=data_types.VOID)]
+                return_type=VOID)]
 
         if is_return_integer_function(data):
             integer_value = get_short_value(data)
             if integer_value == 0:
                 value = "false"
-                type = data_types.BOOL
+                type = BOOL
             elif integer_value == 1:
                 value = "true"
-                type = data_types.BOOL
+                type = BOOL
             else:
                 value = f"{integer_value}"
-                type = data_types.S32
+                type = S32
 
             return [ReturnFunction(
                 Identifier("func", block.start, block.name),

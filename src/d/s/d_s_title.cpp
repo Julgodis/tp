@@ -10,16 +10,16 @@
 // 
 
 
-SECTION_DATA extern void*g_profile_WARNING_SCENE[10];
-SECTION_DATA extern void*g_profile_WARNING2_SCENE[10];
+SECTION_DATA extern void* g_profile_WARNING_SCENE[10];
+SECTION_DATA extern void* g_profile_WARNING2_SCENE[10];
 
 // 
 // External References:
 // 
 
 
-SECTION_DATA extern void*g_fopScn_Method[6];
-SECTION_DATA extern void*g_fpcNd_Method[6];
+SECTION_DATA extern void* g_fopScn_Method[5 + 1 /* padding */];
+SECTION_DATA extern void* g_fpcNd_Method[5 + 1 /* padding */];
 
 // 
 // Declarations:
@@ -28,29 +28,29 @@ SECTION_DATA extern void*g_fpcNd_Method[6];
 /* ############################################################################################## */
 /* 803C32B0-803C32D8 0028+00 rc=0 efc=0 .data      g_profile_WARNING_SCENE                                      */
 void* g_profile_WARNING_SCENE[10] = {
-	NULL,
+	(void*)NULL,
 	(void*)0x0001FFFD,
 	(void*)0x000F0000,
 	(void*)&g_fpcNd_Method,
 	(void*)0x00000204,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)&g_fopScn_Method,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803C32D8-803C3300 0028+00 rc=0 efc=0 .data      g_profile_WARNING2_SCENE                                     */
 void* g_profile_WARNING2_SCENE[10] = {
-	NULL,
+	(void*)NULL,
 	(void*)0x0001FFFD,
 	(void*)0x00100000,
 	(void*)&g_fpcNd_Method,
 	(void*)0x00000204,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)&g_fopScn_Method,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 

@@ -27,10 +27,10 @@ SECTION_SBSS extern u8 __global_destructor_chain[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80451988-80451990 0004+04 rc=2 efc=0 .sbss      __global_destructor_chain                                    */
+/* 80451988-80451990 0004+04 rc=0 efc=0 .sbss      __global_destructor_chain                                    */
 u8 __global_destructor_chain[4 + 4 /* padding */];
 
-/* 80361BDC-80361C24 0048+00 rc=2 efc=2 .text      __destroy_global_chain                                       */
+/* 80361BDC-80361C24 0048+00 rc=0 efc=0 .text      __destroy_global_chain                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,7 +41,7 @@ extern "C" asm void __destroy_global_chain() {
 #pragma pop
 
 
-/* 80361C24-80361C3C 0018+00 rc=116 efc=116 .text      __register_global_object                                     */
+/* 80361C24-80361C3C 0018+00 rc=0 efc=0 .text      __register_global_object                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

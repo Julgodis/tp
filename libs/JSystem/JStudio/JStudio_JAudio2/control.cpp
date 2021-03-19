@@ -56,7 +56,7 @@ struct JStudio_JAudio2 {
 extern "C" void __dt__Q215JStudio_JAudio213TCreateObjectFv(); // 1
 extern "C" void create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
 extern "C" void createObject_JAI_SOUND___Q215JStudio_JAudio213TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ215JStudio_JAudio213TCreateObject(); // 1
-SECTION_DATA extern void*const __vt__Q215JStudio_JAudio213TCreateObject[4];
+SECTION_DATA extern void* const __vt__Q215JStudio_JAudio213TCreateObject[4];
 
 // 
 // External References:
@@ -80,15 +80,15 @@ extern "C" void _restgpr_29(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C5A68-803C5A78 0010+00 rc=2 efc=1 .data      __vt__Q215JStudio_JAudio213TCreateObject                     */
+/* 803C5A68-803C5A78 0010+00 rc=0 efc=0 .data      __vt__Q215JStudio_JAudio213TCreateObject                     */
 void* const __vt__Q215JStudio_JAudio213TCreateObject[4] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__Q215JStudio_JAudio213TCreateObjectFv,
 	(void*)create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object,
 };
 
-/* 8028D550-8028D5B0 0060+00 rc=1 efc=0 .text      __dt__Q215JStudio_JAudio213TCreateObjectFv                   */
+/* 8028D550-8028D5B0 0060+00 rc=0 efc=0 .text      __dt__Q215JStudio_JAudio213TCreateObjectFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +99,7 @@ asm JStudio_JAudio2::TCreateObject::~TCreateObject() {
 #pragma pop
 
 
-/* 8028D5B0-8028D624 0074+00 rc=1 efc=0 .text      create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
+/* 8028D5B0-8028D624 0074+00 rc=0 efc=0 .text      create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +110,7 @@ asm void JStudio_JAudio2::TCreateObject::create(JStudio::TObject** field_0, JStu
 #pragma pop
 
 
-/* 8028D624-8028D728 0104+00 rc=1 efc=0 .text      createObject_JAI_SOUND___Q215JStudio_JAudio213TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ215JStudio_JAudio213TCreateObject */
+/* 8028D624-8028D728 0104+00 rc=0 efc=0 .text      createObject_JAI_SOUND___Q215JStudio_JAudio213TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ215JStudio_JAudio213TCreateObject */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

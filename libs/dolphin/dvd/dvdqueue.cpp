@@ -37,10 +37,10 @@ extern "C" void OSRestoreInterrupts(); // 1
 // 
 
 /* ############################################################################################## */
-/* 8044C998-8044C9B8 0020+00 rc=4 efc=0 .bss       WaitingQueue                                                 */
+/* 8044C998-8044C9B8 0020+00 rc=0 efc=0 .bss       WaitingQueue                                                 */
 u8 WaitingQueue[32];
 
-/* 8034B874-8034B8AC 0038+00 rc=5 efc=5 .text      __DVDClearWaitingQueue                                       */
+/* 8034B874-8034B8AC 0038+00 rc=0 efc=0 .text      __DVDClearWaitingQueue                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +51,7 @@ extern "C" asm void __DVDClearWaitingQueue() {
 #pragma pop
 
 
-/* 8034B8AC-8034B914 0068+00 rc=5 efc=5 .text      __DVDPushWaitingQueue                                        */
+/* 8034B8AC-8034B914 0068+00 rc=0 efc=0 .text      __DVDPushWaitingQueue                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -62,7 +62,7 @@ extern "C" asm void __DVDPushWaitingQueue() {
 #pragma pop
 
 
-/* 8034B914-8034B9B4 00A0+00 rc=2 efc=2 .text      __DVDPopWaitingQueue                                         */
+/* 8034B914-8034B9B4 00A0+00 rc=0 efc=0 .text      __DVDPopWaitingQueue                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -73,7 +73,7 @@ extern "C" asm void __DVDPopWaitingQueue() {
 #pragma pop
 
 
-/* 8034B9B4-8034BA0C 0058+00 rc=1 efc=1 .text      __DVDCheckWaitingQueue                                       */
+/* 8034B9B4-8034BA0C 0058+00 rc=0 efc=0 .text      __DVDCheckWaitingQueue                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,7 +84,7 @@ extern "C" asm void __DVDCheckWaitingQueue() {
 #pragma pop
 
 
-/* 8034BA0C-8034BA6C 0060+00 rc=1 efc=1 .text      __DVDDequeueWaitingQueue                                     */
+/* 8034BA0C-8034BA6C 0060+00 rc=0 efc=0 .text      __DVDDequeueWaitingQueue                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

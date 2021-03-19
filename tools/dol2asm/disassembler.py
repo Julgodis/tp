@@ -1,12 +1,10 @@
-import globals as g
-
 from capstone import *
 from capstone.ppc import *
 from collections import defaultdict
 from itertools import chain
 from dataclasses import dataclass, field
 
-import util
+from . import util
 
 SDA_BASE = 0x80458580
 SDA2_BASE = 0x80459A00

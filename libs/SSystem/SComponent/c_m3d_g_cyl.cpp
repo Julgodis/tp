@@ -12,10 +12,10 @@
 struct cM3dGSph {
 };
 
-struct cXyz {
+struct cM3dGCylS {
 };
 
-struct cM3dGCylS {
+struct cXyz {
 };
 
 struct cM3dGCyl {
@@ -57,13 +57,13 @@ void cM3d_Cross_CylCyl(cM3dGCyl const*, cM3dGCyl const*, Vec*); // 2
 
 extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf(); // 1
 extern "C" void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylP3Vec(); // 1
-SECTION_DATA extern void*const __vt__8cM3dGCyl[3];
+SECTION_DATA extern void* const __vt__8cM3dGCyl[3];
 
 // 
 // Declarations:
 // 
 
-/* 8026F0A8-8026F114 006C+00 rc=1 efc=1 .text      __ct__8cM3dGCylFPC4cXyzff                                    */
+/* 8026F0A8-8026F114 006C+00 rc=0 efc=0 .text      __ct__8cM3dGCylFPC4cXyzff                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +74,7 @@ asm cM3dGCyl::cM3dGCyl(cXyz const* field_0, f32 field_1, f32 field_2) {
 #pragma pop
 
 
-/* 8026F114-8026F180 006C+00 rc=1 efc=1 .text      Set__8cM3dGCylFRC9cM3dGCylS                                  */
+/* 8026F114-8026F180 006C+00 rc=0 efc=0 .text      Set__8cM3dGCylFRC9cM3dGCylS                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +85,7 @@ asm void cM3dGCyl::Set(cM3dGCylS const& field_0) {
 #pragma pop
 
 
-/* 8026F180-8026F1DC 005C+00 rc=2 efc=2 .text      Set__8cM3dGCylFRC4cXyzff                                     */
+/* 8026F180-8026F1DC 005C+00 rc=0 efc=0 .text      Set__8cM3dGCylFRC4cXyzff                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +96,7 @@ asm void cM3dGCyl::Set(cXyz const& field_0, f32 field_1, f32 field_2) {
 #pragma pop
 
 
-/* 8026F1DC-8026F1F8 001C+00 rc=16 efc=13 .text      SetC__8cM3dGCylFRC4cXyz                                      */
+/* 8026F1DC-8026F1F8 001C+00 rc=0 efc=0 .text      SetC__8cM3dGCylFRC4cXyz                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,7 +107,7 @@ asm void cM3dGCyl::SetC(cXyz const& field_0) {
 #pragma pop
 
 
-/* 8026F1F8-8026F200 0008+00 rc=14 efc=11 .text      SetH__8cM3dGCylFf                                            */
+/* 8026F1F8-8026F200 0008+00 rc=0 efc=0 .text      SetH__8cM3dGCylFf                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,7 +118,7 @@ asm void cM3dGCyl::SetH(f32 field_0) {
 #pragma pop
 
 
-/* 8026F200-8026F208 0008+00 rc=9 efc=6 .text      SetR__8cM3dGCylFf                                            */
+/* 8026F200-8026F208 0008+00 rc=0 efc=0 .text      SetR__8cM3dGCylFf                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +129,7 @@ asm void cM3dGCyl::SetR(f32 field_0) {
 #pragma pop
 
 
-/* 8026F208-8026F22C 0024+00 rc=1 efc=1 .text      cross__8cM3dGCylCFPC8cM3dGSphP4cXyz                          */
+/* 8026F208-8026F22C 0024+00 rc=0 efc=0 .text      cross__8cM3dGCylCFPC8cM3dGSphP4cXyz                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,7 +140,7 @@ asm void cM3dGCyl::cross(cM3dGSph const* field_0, cXyz* field_1) const {
 #pragma pop
 
 
-/* 8026F22C-8026F24C 0020+00 rc=1 efc=1 .text      cross__8cM3dGCylCFPC8cM3dGCylP4cXyz                          */
+/* 8026F22C-8026F24C 0020+00 rc=0 efc=0 .text      cross__8cM3dGCylCFPC8cM3dGCylP4cXyz                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,7 +151,7 @@ asm void cM3dGCyl::cross(cM3dGCyl const* field_0, cXyz* field_1) const {
 #pragma pop
 
 
-/* 8026F24C-8026F2A8 005C+00 rc=2 efc=2 .text      calcMinMax__8cM3dGCylFP4cXyzP4cXyz                           */
+/* 8026F24C-8026F2A8 005C+00 rc=0 efc=0 .text      calcMinMax__8cM3dGCylFP4cXyzP4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

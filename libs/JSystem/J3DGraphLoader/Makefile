@@ -31,11 +31,14 @@ LIBJ3DGRAPHLOADER_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJ3DGraphLoader.a: $(LIBJ3DGRAPHLOADER_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJ3DGraphLoader.a
 	@echo $(LIBJ3DGRAPHLOADER_A_O_FILES) > build/LIBJ3DGRAPHLOADER_A_ofiles
-	$(LD) -xm l $(LIBJ3DGRAPHLOADER_A_LDFLAGS) -o $(BUILD_DIR)/libJ3DGraphLoader.a @build/LIBJ3DGRAPHLOADER_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ3DGraphLoader.a
+	@$(LD) -xm l $(LIBJ3DGRAPHLOADER_A_LDFLAGS) -o $(BUILD_DIR)/libJ3DGraphLoader.a @build/LIBJ3DGRAPHLOADER_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ3DGraphLoader.a
 
 $(BUILD_DIR)/libs/JSystem/J3DGraphLoader/%.o: libs/JSystem/J3DGraphLoader/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJ3DGRAPHLOADER_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJ3DGRAPHLOADER_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

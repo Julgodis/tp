@@ -36,15 +36,15 @@ extern "C" void OSCreateHeap(); // 1
 extern "C" void OSGetArenaHi(); // 1
 extern "C" void OSGetArenaLo(); // 1
 extern "C" void OSSetArenaLo(); // 1
-SECTION_SDATA extern u32 __OSCurrHeap;
+SECTION_SDATA extern u32 __OSCurrHeap[1 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803A21A8-803A21E0 0036+02 rc=1 efc=0 .rodata    @55                                                          */
-SECTION_RODATA const u8 lit_55[56] = {
+/* 803A21A8-803A21E0 0036+02 rc=0 efc=0 .rodata    @55                                                          */
+const u8 lit_55[54 + 2 /* padding */] = {
 	0x47, 0x43, 0x4E, 0x5F, 0x4D, 0x65, 0x6D, 0x5F, 0x41, 0x6C, 0x6C, 0x6F, 0x63, 0x2E, 0x63, 0x20,
 	0x3A, 0x20, 0x49, 0x6E, 0x69, 0x74, 0x44, 0x65, 0x66, 0x61, 0x75, 0x6C, 0x74, 0x48, 0x65, 0x61,
 	0x70, 0x2E, 0x20, 0x4E, 0x6F, 0x20, 0x48, 0x65, 0x61, 0x70, 0x20, 0x41, 0x76, 0x61, 0x69, 0x6C,
@@ -53,8 +53,8 @@ SECTION_RODATA const u8 lit_55[56] = {
 	0x00, 0x00,
 };
 
-/* 803A21E0-803A2220 0039+07 rc=1 efc=0 .rodata    @56                                                          */
-SECTION_RODATA const u8 GCN_mem_alloc__lit_56[64] = {
+/* 803A21E0-803A2220 0039+07 rc=0 efc=0 .rodata    @56                                                          */
+const u8 GCN_mem_alloc__lit_56[57 + 7 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x77, 0x65, 0x72, 0x6B, 0x73, 0x20, 0x43, 0x57, 0x20, 0x72, 0x75,
 	0x6E, 0x74, 0x69, 0x6D, 0x65, 0x20, 0x6C, 0x69, 0x62, 0x72, 0x61, 0x72, 0x79, 0x20, 0x69, 0x6E,
 	0x69, 0x74, 0x69, 0x61, 0x6C, 0x69, 0x7A, 0x69, 0x6E, 0x67, 0x20, 0x64, 0x65, 0x66, 0x61, 0x75,
@@ -63,7 +63,7 @@ SECTION_RODATA const u8 GCN_mem_alloc__lit_56[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80362914-803629CC 00B8+00 rc=1 efc=1 .text      __sys_free                                                   */
+/* 80362914-803629CC 00B8+00 rc=0 efc=0 .text      __sys_free                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

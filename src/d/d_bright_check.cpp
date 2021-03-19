@@ -82,16 +82,16 @@ SECTION_RODATA extern const u8 data_80394910[40];
 SECTION_RODATA extern const u8 data_80394938[40];
 SECTION_RODATA extern const u8 data_80394960[80];
 SECTION_RODATA extern const u8 data_803949B0[40];
-SECTION_RODATA extern const u8 d_d_bright_check__stringBase0[24];
+SECTION_RODATA extern const char* const d_d_bright_check__stringBase0;
 SECTION_DATA extern u8 d_d_bright_check__cNullVec__6Z2Calc[12];
-SECTION_DATA extern void*d_d_bright_check__lit_3797[3];
-SECTION_DATA extern void*d_d_bright_check__lit_3798[3];
+SECTION_DATA extern void* d_d_bright_check__lit_3797[3];
+SECTION_DATA extern void* d_d_bright_check__lit_3798[3];
 SECTION_DATA extern u8 brightChackProc[24];
-SECTION_DATA extern void*const __vt__19dDlst_BrightCheck_c[4];
-SECTION_DATA extern void*const __vt__14dBrightCheck_c[7];
+SECTION_DATA extern void* const __vt__19dDlst_BrightCheck_c[4];
+SECTION_DATA extern void* const __vt__14dBrightCheck_c[3 + 4 /* padding */];
 SECTION_SDATA2 extern u8 d_d_bright_check__lit_3792[4];
 SECTION_SDATA2 extern f32 d_d_bright_check__lit_3821;
-SECTION_SDATA2 extern f32 d_d_bright_check__lit_3822;
+SECTION_SDATA2 extern f32 d_d_bright_check__lit_3822[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -120,7 +120,7 @@ extern "C" void setString__10J2DTextBoxFsPCce(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_22(); // 1
 extern "C" void _restgpr_22(); // 1
-SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
+SECTION_DATA extern void* const __vt__12dDlst_base_c[3];
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
@@ -130,43 +130,43 @@ SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803BB5B0-803BB5BC 000C+00 rc=1 efc=0 .data      cNullVec__6Z2Calc                                            */
+/* 803BB5B0-803BB5BC 000C+00 rc=0 efc=0 .data      cNullVec__6Z2Calc                                            */
 u8 d_d_bright_check__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 803BB5BC-803BB5C8 000C+00 rc=0 efc=0 .data      @3797                                                        */
 void* d_d_bright_check__lit_3797[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)modeWait__14dBrightCheck_cFv,
 };
 
 /* 803BB5C8-803BB5D4 000C+00 rc=0 efc=0 .data      @3798                                                        */
 void* d_d_bright_check__lit_3798[3] = {
-	NULL,
+	(void*)NULL,
 	(void*)0xFFFFFFFF,
 	(void*)modeMove__14dBrightCheck_cFv,
 };
 
-/* 803BB5D4-803BB5EC 0018+00 rc=1 efc=0 .data      brightChackProc                                              */
+/* 803BB5D4-803BB5EC 0018+00 rc=0 efc=0 .data      brightChackProc                                              */
 u8 brightChackProc[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB5EC-803BB5FC 0010+00 rc=3 efc=0 .data      __vt__19dDlst_BrightCheck_c                                  */
+/* 803BB5EC-803BB5FC 0010+00 rc=0 efc=0 .data      __vt__19dDlst_BrightCheck_c                                  */
 void* const __vt__19dDlst_BrightCheck_c[4] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__19dDlst_BrightCheck_cFv,
 	(void*)__dt__19dDlst_BrightCheck_cFv,
 };
 
-/* 803BB5FC-803BB618 000C+10 rc=2 efc=0 .data      __vt__14dBrightCheck_c                                       */
-void* const __vt__14dBrightCheck_c[7] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803BB5FC-803BB618 000C+10 rc=0 efc=0 .data      __vt__14dBrightCheck_c                                       */
+void* const __vt__14dBrightCheck_c[3 + 4 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__14dBrightCheck_cFv,
 	/* padding */
 	NULL,
@@ -175,7 +175,7 @@ void* const __vt__14dBrightCheck_c[7] = {
 	NULL,
 };
 
-/* 80192F10-80192F98 0088+00 rc=1 efc=1 .text      __ct__14dBrightCheck_cFP10JKRArchive                         */
+/* 80192F10-80192F98 0088+00 rc=0 efc=0 .text      __ct__14dBrightCheck_cFP10JKRArchive                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -186,7 +186,7 @@ asm dBrightCheck_c::dBrightCheck_c(JKRArchive* field_0) {
 #pragma pop
 
 
-/* 80192F98-80193030 0098+00 rc=1 efc=0 .text      __dt__14dBrightCheck_cFv                                     */
+/* 80192F98-80193030 0098+00 rc=0 efc=0 .text      __dt__14dBrightCheck_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,22 +198,22 @@ asm dBrightCheck_c::~dBrightCheck_c() {
 
 
 /* ############################################################################################## */
-/* 80394910-80394938 0028+00 rc=1 efc=0 .rodata    tv_btnA$3744                                                 */
-SECTION_RODATA const u8 data_80394910[40] = {
+/* 80394910-80394938 0028+00 rc=0 efc=0 .rodata    tv_btnA$3744                                                 */
+const u8 data_80394910[40] = {
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x31, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x32,
 	0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x33, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x34,
 	0x00, 0x63, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74,
 };
 
 /* 80394938-80394960 0028+00 rc=0 efc=0 .rodata    ftv_btnA$3745                                                */
-SECTION_RODATA const u8 data_80394938[40] = {
+const u8 data_80394938[40] = {
 	0x00, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x31, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x32,
 	0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x33, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74, 0x34,
 	0x00, 0x66, 0x6F, 0x6E, 0x74, 0x5F, 0x61, 0x74,
 };
 
 /* 80394960-803949B0 0050+00 rc=0 efc=0 .rodata    txTV$3751                                                    */
-SECTION_RODATA const u8 data_80394960[80] = {
+const u8 data_80394960[80] = {
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x36, 0x31, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x32,
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x39, 0x31, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x31,
 	0x6D, 0x65, 0x6E, 0x75, 0x74, 0x31, 0x30, 0x31, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x74, 0x30, 0x31,
@@ -222,26 +222,26 @@ SECTION_RODATA const u8 data_80394960[80] = {
 };
 
 /* 803949B0-803949D8 0028+00 rc=0 efc=0 .rodata    txTVhide$3752                                                */
-SECTION_RODATA const u8 data_803949B0[40] = {
+const u8 data_803949B0[40] = {
 	0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x36, 0x6E, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x39, 0x6E,
 	0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x31, 0x30, 0x6E, 0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x37, 0x6E,
 	0x00, 0x6D, 0x65, 0x6E, 0x75, 0x5F, 0x38, 0x6E,
 };
 
-/* 803949D8-803949F0 0018+00 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 803949D8-803949F0 0018+00 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_803949D8 = "zelda_option_check.blo";
-SECTION_DEAD char* const stringBase_803949EF = "";
+const char* const stringBase_803949D8 = "zelda_option_check.blo";
+const char* const stringBase_803949EF = "";
 #pragma pop
 
-/* 80453A00-80453A04 0004+00 rc=2 efc=0 .sdata2    @3792                                                        */
+/* 80453A00-80453A04 0004+00 rc=0 efc=0 .sdata2    @3792                                                        */
 u8 d_d_bright_check__lit_3792[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80193030-801934D0 04A0+00 rc=1 efc=0 .text      screenSet__14dBrightCheck_cFv                                */
+/* 80193030-801934D0 04A0+00 rc=0 efc=0 .text      screenSet__14dBrightCheck_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -252,7 +252,7 @@ asm void dBrightCheck_c::screenSet() {
 #pragma pop
 
 
-/* 801934D0-80193508 0038+00 rc=1 efc=1 .text      _move__14dBrightCheck_cFv                                    */
+/* 801934D0-80193508 0038+00 rc=0 efc=0 .text      _move__14dBrightCheck_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -263,21 +263,24 @@ asm void dBrightCheck_c::_move() {
 #pragma pop
 
 
-/* 80193508-8019350C 0004+00 rc=1 efc=0 .text      modeWait__14dBrightCheck_cFv                                 */
+/* 80193508-8019350C 0004+00 rc=0 efc=0 .text      modeWait__14dBrightCheck_cFv                                 */
 void dBrightCheck_c::modeWait() {
 	/* empty function */
 }
 
 
 /* ############################################################################################## */
-/* 80453A04-80453A08 0004+00 rc=1 efc=0 .sdata2    @3821                                                        */
+/* 80453A04-80453A08 0004+00 rc=0 efc=0 .sdata2    @3821                                                        */
 f32 d_d_bright_check__lit_3821 = 1.0f;
 
-/* 80453A08-80453A10 0004+04 rc=1 efc=0 .sdata2    @3822                                                        */
-f32 d_d_bright_check__lit_3822 = -1.0f;
-/* padding 4 bytes */
+/* 80453A08-80453A10 0004+04 rc=0 efc=0 .sdata2    @3822                                                        */
+f32 d_d_bright_check__lit_3822[1 + 1 /* padding */] = {
+	-1.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 8019350C-80193594 0088+00 rc=1 efc=0 .text      modeMove__14dBrightCheck_cFv                                 */
+/* 8019350C-80193594 0088+00 rc=0 efc=0 .text      modeMove__14dBrightCheck_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -288,7 +291,7 @@ asm void dBrightCheck_c::modeMove() {
 #pragma pop
 
 
-/* 80193594-801935D0 003C+00 rc=1 efc=1 .text      _draw__14dBrightCheck_cFv                                    */
+/* 80193594-801935D0 003C+00 rc=0 efc=0 .text      _draw__14dBrightCheck_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -299,7 +302,7 @@ asm void dBrightCheck_c::_draw() {
 #pragma pop
 
 
-/* 801935D0-80193608 0038+00 rc=1 efc=0 .text      draw__19dDlst_BrightCheck_cFv                                */
+/* 801935D0-80193608 0038+00 rc=0 efc=0 .text      draw__19dDlst_BrightCheck_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,7 +313,7 @@ asm void dDlst_BrightCheck_c::draw() {
 #pragma pop
 
 
-/* 80193608-80193648 0040+00 rc=1 efc=1 .text      __sinit_d_bright_check_cpp                                   */
+/* 80193608-80193648 0040+00 rc=0 efc=0 .text      __sinit_d_bright_check_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -321,7 +324,7 @@ extern "C" asm void __sinit_d_bright_check_cpp() {
 #pragma pop
 
 
-/* 80193648-80193690 0048+00 rc=1 efc=0 .text      __dt__19dDlst_BrightCheck_cFv                                */
+/* 80193648-80193690 0048+00 rc=0 efc=0 .text      __dt__19dDlst_BrightCheck_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

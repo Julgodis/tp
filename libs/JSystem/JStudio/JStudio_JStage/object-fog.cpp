@@ -9,15 +9,6 @@
 // Types:
 // 
 
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TFog {
-	};
-
-};
-
 struct _GXColor {
 };
 
@@ -38,6 +29,15 @@ namespace JStudio {
 
 	struct TAdaptor_fog {
 		/* 8028717C */ ~TAdaptor_fog();
+	};
+
+};
+
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TFog {
 	};
 
 };
@@ -87,8 +87,8 @@ SECTION_DATA extern u8 object_fog__lit_844[12];
 SECTION_DATA extern u8 object_fog__lit_845[12];
 SECTION_DATA extern u8 object_fog__lit_849[12];
 SECTION_DATA extern u8 object_fog__lit_850[12];
-SECTION_DATA extern void*const __vt__Q214JStudio_JStage12TAdaptor_fog[16];
-SECTION_DATA extern void*const data_803C5A10[8];
+SECTION_DATA extern void* const __vt__Q214JStudio_JStage12TAdaptor_fog[8 + 8 /* padding */];
+SECTION_DATA extern void* const data_803C5A10[4 + 4 /* padding */];
 SECTION_BSS extern u8 object_fog__lit_848[12];
 SECTION_BSS extern u8 object_fog__lit_853[12];
 SECTION_BSS extern u8 object_fog__lit_854[12];
@@ -124,9 +124,9 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
 SECTION_RODATA extern const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio12TAdaptor_fog[16];
 SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
-SECTION_DATA extern void*const __vt__Q27JStudio12TAdaptor_fog[8];
-SECTION_DATA extern void*const __vt__Q27JStudio8TAdaptor[8];
-SECTION_DATA extern void*const __vt__Q37JStudio14TVariableValue7TOutput[4];
+SECTION_DATA extern void* const __vt__Q27JStudio12TAdaptor_fog[8];
+SECTION_DATA extern void* const __vt__Q27JStudio8TAdaptor[8];
+SECTION_DATA extern void* const __vt__Q37JStudio14TVariableValue7TOutput[4];
 SECTION_SBSS extern u8 soOutput_none___Q27JStudio14TVariableValue[4 + 4 /* padding */];
 
 // 
@@ -134,7 +134,7 @@ SECTION_SBSS extern u8 soOutput_none___Q27JStudio14TVariableValue[4 + 4 /* paddi
 // 
 
 /* ############################################################################################## */
-/* 803C59A0-803C59AC 000C+00 rc=1 efc=0 .data      @844                                                         */
+/* 803C59A0-803C59AC 000C+00 rc=0 efc=0 .data      @844                                                         */
 u8 object_fog__lit_844[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
@@ -154,10 +154,10 @@ u8 object_fog__lit_850[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C59D0-803C5A10 0020+20 rc=2 efc=0 .data      __vt__Q214JStudio_JStage12TAdaptor_fog                       */
-void* const __vt__Q214JStudio_JStage12TAdaptor_fog[16] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803C59D0-803C5A10 0020+20 rc=0 efc=0 .data      __vt__Q214JStudio_JStage12TAdaptor_fog                       */
+void* const __vt__Q214JStudio_JStage12TAdaptor_fog[8 + 8 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__Q214JStudio_JStage12TAdaptor_fogFv,
 	(void*)adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv,
 	(void*)adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv,
@@ -175,7 +175,7 @@ void* const __vt__Q214JStudio_JStage12TAdaptor_fog[16] = {
 	NULL,
 };
 
-/* 8028C574-8028C610 009C+00 rc=1 efc=1 .text      __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog */
+/* 8028C574-8028C610 009C+00 rc=0 efc=0 .text      __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -186,7 +186,7 @@ asm JStudio_JStage::TAdaptor_fog::TAdaptor_fog(JStage::TSystem const* field_0, J
 #pragma pop
 
 
-/* 8028C610-8028C684 0074+00 rc=1 efc=0 .text      __dt__Q214JStudio_JStage12TAdaptor_fogFv                     */
+/* 8028C610-8028C684 0074+00 rc=0 efc=0 .text      __dt__Q214JStudio_JStage12TAdaptor_fogFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +198,7 @@ asm JStudio_JStage::TAdaptor_fog::~TAdaptor_fog() {
 
 
 /* ############################################################################################## */
-/* 80431378-80431384 000C+00 rc=1 efc=0 .bss       @848                                                         */
+/* 80431378-80431384 000C+00 rc=0 efc=0 .bss       @848                                                         */
 u8 object_fog__lit_848[12];
 
 /* 80431384-80431390 000C+00 rc=0 efc=0 .bss       @853                                                         */
@@ -207,10 +207,10 @@ u8 object_fog__lit_853[12];
 /* 80431390-8043139C 000C+00 rc=0 efc=0 .bss       @854                                                         */
 u8 object_fog__lit_854[12];
 
-/* 8043139C-80431400 0060+04 rc=2 efc=0 .bss       saoVVOutput___Q214JStudio_JStage12TAdaptor_fog               */
+/* 8043139C-80431400 0060+04 rc=0 efc=0 .bss       saoVVOutput___Q214JStudio_JStage12TAdaptor_fog               */
 u8 saoVVOutput___Q214JStudio_JStage12TAdaptor_fog[96 + 4 /* padding */];
 
-/* 8028C684-8028C6CC 0048+00 rc=1 efc=0 .text      adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv       */
+/* 8028C684-8028C6CC 0048+00 rc=0 efc=0 .text      adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -221,7 +221,7 @@ asm void JStudio_JStage::TAdaptor_fog::adaptor_do_prepare() {
 #pragma pop
 
 
-/* 8028C6CC-8028C7B4 00E8+00 rc=1 efc=0 .text      adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv         */
+/* 8028C6CC-8028C7B4 00E8+00 rc=0 efc=0 .text      adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -232,7 +232,7 @@ asm void JStudio_JStage::TAdaptor_fog::adaptor_do_begin() {
 #pragma pop
 
 
-/* 8028C7B4-8028C808 0054+00 rc=1 efc=0 .text      adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv           */
+/* 8028C7B4-8028C808 0054+00 rc=0 efc=0 .text      adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -243,7 +243,7 @@ asm void JStudio_JStage::TAdaptor_fog::adaptor_do_end() {
 #pragma pop
 
 
-/* 8028C808-8028C880 0078+00 rc=1 efc=0 .text      adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl       */
+/* 8028C808-8028C880 0078+00 rc=0 efc=0 .text      adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,7 +254,7 @@ asm void JStudio_JStage::TAdaptor_fog::adaptor_do_update(u32 field_0) {
 #pragma pop
 
 
-/* 8028C880-8028C8A4 0024+00 rc=1 efc=0 .text      adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl */
+/* 8028C880-8028C8A4 0024+00 rc=0 efc=0 .text      adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,10 +266,10 @@ asm void JStudio_JStage::TAdaptor_fog::adaptor_do_data(void const* field_0, u32 
 
 
 /* ############################################################################################## */
-/* 803C5A10-803C5A30 0010+10 rc=2 efc=0 .data      __vt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog> */
-void* const data_803C5A10[8] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803C5A10-803C5A30 0010+10 rc=0 efc=0 .data      __vt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog> */
+void* const data_803C5A10[4 + 4 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)func_8028CB20,
 	(void*)func_8028CAC0,
 	/* padding */
@@ -279,7 +279,7 @@ void* const data_803C5A10[8] = {
 	NULL,
 };
 
-/* 8028C8A4-8028CAC0 021C+00 rc=1 efc=1 .text      __sinit_object-fog_cpp                                       */
+/* 8028C8A4-8028CAC0 021C+00 rc=0 efc=0 .text      __sinit_object-fog_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -290,7 +290,7 @@ extern "C" asm void func_8028C8A4() {
 #pragma pop
 
 
-/* 8028CAC0-8028CB20 0060+00 rc=2 efc=0 .text      __dt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>Fv */
+/* 8028CAC0-8028CB20 0060+00 rc=0 efc=0 .text      __dt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -301,7 +301,7 @@ asm JStudio_JStage::TVariableValueOutput_object___template2::~TVariableValueOutp
 #pragma pop
 
 
-/* 8028CB20-8028CB50 0030+00 rc=1 efc=0 .text      __cl__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>CFfPQ27JStudio8TAdaptor */
+/* 8028CB20-8028CB50 0030+00 rc=0 efc=0 .text      __cl__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>CFfPQ27JStudio8TAdaptor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

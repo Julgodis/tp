@@ -17,7 +17,7 @@ SECTION_SBSS extern u8 sBuffer[4];
 SECTION_SBSS extern u8 sLineMax[4];
 SECTION_SBSS extern u8 sLineCount[4];
 SECTION_SBSS extern u8 sTop[4];
-SECTION_SBSS extern u8 struct_80451230[8];
+extern u8 struct_80451230[8];
 
 // 
 // External References:
@@ -36,22 +36,22 @@ extern "C" void vsnprintf(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80431660-80431678 0018+00 rc=1 efc=0 .bss       sMutex                                                       */
+/* 80431660-80431678 0018+00 rc=0 efc=0 .bss       sMutex                                                       */
 u8 sMutex[24];
 
-/* 80451220-80451224 0004+00 rc=1 efc=0 .sbss      sBuffer                                                      */
+/* 80451220-80451224 0004+00 rc=0 efc=0 .sbss      sBuffer                                                      */
 u8 sBuffer[4];
 
-/* 80451224-80451228 0004+00 rc=1 efc=0 .sbss      sLineMax                                                     */
+/* 80451224-80451228 0004+00 rc=0 efc=0 .sbss      sLineMax                                                     */
 u8 sLineMax[4];
 
-/* 80451228-8045122C 0004+00 rc=1 efc=0 .sbss      sLineCount                                                   */
+/* 80451228-8045122C 0004+00 rc=0 efc=0 .sbss      sLineCount                                                   */
 u8 sLineCount[4];
 
-/* 8045122C-80451230 0004+00 rc=1 efc=0 .sbss      sTop                                                         */
+/* 8045122C-80451230 0004+00 rc=0 efc=0 .sbss      sTop                                                         */
 u8 sTop[4];
 
-/* 80290F64-80291060 00FC+00 rc=5 efc=5 .text      JASReport__FPCce                                             */
+/* 80290F64-80291060 00FC+00 rc=0 efc=0 .text      JASReport__FPCce                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,8 +63,6 @@ asm void JASReport(char const* field_0, ...) {
 
 
 /* ############################################################################################## */
-/* 80451230-80451238 0008+00 rc=6 efc=6 .sbss      None                                                         */
+/* 80451230-80451238 0008+00 rc=0 efc=0 None       None                                                         */
 u8 struct_80451230[8];
-/* 80451230 0001 data_80451230 */
-/* 80451231 0007 data_80451231 */
 

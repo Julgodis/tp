@@ -23,7 +23,7 @@ extern "C" void TRK_fill_mem(); // 1
 // Declarations:
 // 
 
-/* 8036F580-8036F638 00B8+00 rc=1 efc=1 .text      TRK_fill_mem                                                 */
+/* 8036F580-8036F638 00B8+00 rc=0 efc=0 .text      TRK_fill_mem                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -61,11 +61,14 @@ LIBOS_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libos.a: $(LIBOS_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libos.a
 	@echo $(LIBOS_A_O_FILES) > build/LIBOS_A_ofiles
-	$(LD) -xm l $(LIBOS_A_LDFLAGS) -o $(BUILD_DIR)/libos.a @build/LIBOS_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libos.a
+	@$(LD) -xm l $(LIBOS_A_LDFLAGS) -o $(BUILD_DIR)/libos.a @build/LIBOS_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libos.a
 
 $(BUILD_DIR)/libs/dolphin/os/%.o: libs/dolphin/os/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBOS_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBOS_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

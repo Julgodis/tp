@@ -31,7 +31,7 @@ extern "C" void GetUseSerialIO(); // 1
 // Declarations:
 // 
 
-/* 8037219C-80372258 00BC+00 rc=1 efc=1 .text      __TRK_write_console                                          */
+/* 8037219C-80372258 00BC+00 rc=0 efc=0 .text      __TRK_write_console                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -42,7 +42,7 @@ extern "C" asm void __TRK_write_console() {
 #pragma pop
 
 
-/* 80372258-80372314 00BC+00 rc=1 efc=1 .text      __read_console                                               */
+/* 80372258-80372314 00BC+00 rc=0 efc=0 .text      __read_console                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

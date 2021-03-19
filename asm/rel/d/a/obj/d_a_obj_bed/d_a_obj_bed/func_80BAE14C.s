@@ -1,3 +1,0 @@
-lbl_80BAE14C:
-/* 80BAE14C 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 80BAE150 00000004  4B FF F9 B0 */	b __dt__12dBgS_ObjAcchFv

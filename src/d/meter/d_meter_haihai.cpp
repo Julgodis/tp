@@ -12,10 +12,10 @@
 struct J2DAnmTransformKey {
 };
 
-struct J2DAnmTextureSRTKey {
+struct J2DAnmColor {
 };
 
-struct J2DAnmColor {
+struct J2DAnmTextureSRTKey {
 };
 
 struct dMeterHaihai_c {
@@ -43,13 +43,10 @@ struct dMeterSub_c {
 	/* 80194138 */ bool isDead();
 };
 
-struct JKRExpHeap {
+struct JKRArchive {
 };
 
 struct J2DGrafContext {
-};
-
-struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -57,6 +54,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -102,8 +102,8 @@ extern "C" void updateHaihai__14dMeterHaihai_cFv(); // 1
 extern "C" void playBckAnime__14dMeterHaihai_cFP18J2DAnmTransformKey(); // 1
 extern "C" void playBtkAnime__14dMeterHaihai_cFP19J2DAnmTextureSRTKey(); // 1
 extern "C" void playBpkAnime__14dMeterHaihai_cFP11J2DAnmColor(); // 1
-SECTION_RODATA extern const u8 d_meter_d_meter_haihai__stringBase0[88];
-SECTION_DATA extern void*const __vt__14dMeterHaihai_c[8];
+SECTION_RODATA extern const char* const d_meter_d_meter_haihai__stringBase0;
+SECTION_DATA extern void* const __vt__14dMeterHaihai_c[8];
 SECTION_SDATA2 extern u8 d_meter_d_meter_haihai__lit_3742[4];
 SECTION_SDATA2 extern f32 d_meter_d_meter_haihai__lit_3890;
 SECTION_SDATA2 extern f32 d_meter_d_meter_haihai__lit_3891;
@@ -120,7 +120,7 @@ SECTION_SDATA2 extern f32 d_meter_d_meter_haihai__lit_3942;
 SECTION_SDATA2 extern f32 d_meter_d_meter_haihai__lit_3943;
 SECTION_SDATA2 extern f32 d_meter_d_meter_haihai__lit_4116;
 SECTION_SDATA2 extern f32 lit_4117;
-SECTION_SDATA2 extern f32 d_meter_d_meter_haihai__lit_4165;
+SECTION_SDATA2 extern f32 d_meter_d_meter_haihai__lit_4165[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 d_meter_d_meter_haihai__lit_4189;
 
 // 
@@ -148,8 +148,8 @@ extern "C" void animation__9J2DScreenFv(); // 1
 extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_DATA extern void*const __vt__12dDlst_base_c[3];
-SECTION_DATA extern void*const __vt__11dMeterSub_c[11];
+SECTION_DATA extern void* const __vt__12dDlst_base_c[3];
+SECTION_DATA extern void* const __vt__11dMeterSub_c[8 + 3 /* padding */];
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 SECTION_BSS extern u8 g_drawHIO[3880];
 
@@ -158,10 +158,10 @@ SECTION_BSS extern u8 g_drawHIO[3880];
 // 
 
 /* ############################################################################################## */
-/* 803BF268-803BF288 0020+00 rc=2 efc=0 .data      __vt__14dMeterHaihai_c                                       */
+/* 803BF268-803BF288 0020+00 rc=0 efc=0 .data      __vt__14dMeterHaihai_c                                       */
 void* const __vt__14dMeterHaihai_c[8] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)draw__14dMeterHaihai_cFv,
 	(void*)__dt__14dMeterHaihai_cFv,
 	(void*)_create__14dMeterHaihai_cFv,
@@ -170,7 +170,7 @@ void* const __vt__14dMeterHaihai_c[8] = {
 	(void*)isDead__11dMeterSub_cFv,
 };
 
-/* 8020AE8C-8020AEF0 0064+00 rc=4 efc=4 .text      __ct__14dMeterHaihai_cFUc                                    */
+/* 8020AE8C-8020AEF0 0064+00 rc=0 efc=0 .text      __ct__14dMeterHaihai_cFUc                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +181,7 @@ asm dMeterHaihai_c::dMeterHaihai_c(u8 field_0) {
 #pragma pop
 
 
-/* 8020AEF0-8020AF6C 007C+00 rc=1 efc=0 .text      __dt__14dMeterHaihai_cFv                                     */
+/* 8020AEF0-8020AF6C 007C+00 rc=0 efc=0 .text      __dt__14dMeterHaihai_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -193,22 +193,22 @@ asm dMeterHaihai_c::~dMeterHaihai_c() {
 
 
 /* ############################################################################################## */
-/* 80398158-803981B0 0058+00 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80398158-803981B0 0058+00 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80398158 = "zelda_hihi_cursor.blo";
-SECTION_DEAD char* const stringBase_8039816E = "zelda_hihi_cursor.bck";
-SECTION_DEAD char* const stringBase_80398184 = "zelda_hihi_cursor.btk";
-SECTION_DEAD char* const stringBase_8039819A = "zelda_hihi_cursor.bpk";
+const char* const stringBase_80398158 = "zelda_hihi_cursor.blo";
+const char* const stringBase_8039816E = "zelda_hihi_cursor.bck";
+const char* const stringBase_80398184 = "zelda_hihi_cursor.btk";
+const char* const stringBase_8039819A = "zelda_hihi_cursor.bpk";
 #pragma pop
 
-/* 804547B0-804547B4 0004+00 rc=6 efc=0 .sdata2    @3742                                                        */
+/* 804547B0-804547B4 0004+00 rc=0 efc=0 .sdata2    @3742                                                        */
 u8 d_meter_d_meter_haihai__lit_3742[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8020AF6C-8020B0F4 0188+00 rc=1 efc=0 .text      _create__14dMeterHaihai_cFv                                  */
+/* 8020AF6C-8020B0F4 0188+00 rc=0 efc=0 .text      _create__14dMeterHaihai_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -219,7 +219,7 @@ asm void dMeterHaihai_c::_create() {
 #pragma pop
 
 
-/* 8020B0F4-8020B140 004C+00 rc=1 efc=0 .text      _execute__14dMeterHaihai_cFUl                                */
+/* 8020B0F4-8020B140 004C+00 rc=0 efc=0 .text      _execute__14dMeterHaihai_cFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -231,34 +231,34 @@ asm void dMeterHaihai_c::_execute(u32 field_0) {
 
 
 /* ############################################################################################## */
-/* 804547B4-804547B8 0004+00 rc=2 efc=0 .sdata2    @3890                                                        */
+/* 804547B4-804547B8 0004+00 rc=0 efc=0 .sdata2    @3890                                                        */
 f32 d_meter_d_meter_haihai__lit_3890 = 13.0f / 5.0f;
 
-/* 804547B8-804547BC 0004+00 rc=2 efc=0 .sdata2    @3891                                                        */
+/* 804547B8-804547BC 0004+00 rc=0 efc=0 .sdata2    @3891                                                        */
 f32 d_meter_d_meter_haihai__lit_3891 = 39.0f;
 
-/* 804547BC-804547C0 0004+00 rc=2 efc=0 .sdata2    @3892                                                        */
+/* 804547BC-804547C0 0004+00 rc=0 efc=0 .sdata2    @3892                                                        */
 f32 d_meter_d_meter_haihai__lit_3892 = 58.0f;
 
-/* 804547C0-804547C4 0004+00 rc=2 efc=0 .sdata2    @3893                                                        */
+/* 804547C0-804547C4 0004+00 rc=0 efc=0 .sdata2    @3893                                                        */
 f32 d_meter_d_meter_haihai__lit_3893 = 304.0f;
 
-/* 804547C4-804547C8 0004+00 rc=2 efc=0 .sdata2    @3894                                                        */
+/* 804547C4-804547C8 0004+00 rc=0 efc=0 .sdata2    @3894                                                        */
 f32 d_meter_d_meter_haihai__lit_3894 = 224.0f;
 
-/* 804547C8-804547CC 0004+00 rc=6 efc=0 .sdata2    @3895                                                        */
+/* 804547C8-804547CC 0004+00 rc=0 efc=0 .sdata2    @3895                                                        */
 f32 d_meter_d_meter_haihai__lit_3895 = 0.5f;
 
-/* 804547CC-804547D0 0004+00 rc=2 efc=0 .sdata2    @3896                                                        */
+/* 804547CC-804547D0 0004+00 rc=0 efc=0 .sdata2    @3896                                                        */
 f32 d_meter_d_meter_haihai__lit_3896 = 90.0f;
 
-/* 804547D0-804547D4 0004+00 rc=2 efc=0 .sdata2    @3897                                                        */
+/* 804547D0-804547D4 0004+00 rc=0 efc=0 .sdata2    @3897                                                        */
 f32 d_meter_d_meter_haihai__lit_3897 = 180.0f;
 
-/* 804547D4-804547D8 0004+00 rc=2 efc=0 .sdata2    @3898                                                        */
+/* 804547D4-804547D8 0004+00 rc=0 efc=0 .sdata2    @3898                                                        */
 f32 d_meter_d_meter_haihai__lit_3898 = 270.0f;
 
-/* 8020B140-8020B518 03D8+00 rc=1 efc=0 .text      draw__14dMeterHaihai_cFv                                     */
+/* 8020B140-8020B518 03D8+00 rc=0 efc=0 .text      draw__14dMeterHaihai_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -270,19 +270,19 @@ asm void dMeterHaihai_c::draw() {
 
 
 /* ############################################################################################## */
-/* 804547D8-804547DC 0004+00 rc=2 efc=0 .sdata2    @3940                                                        */
+/* 804547D8-804547DC 0004+00 rc=0 efc=0 .sdata2    @3940                                                        */
 f32 d_meter_d_meter_haihai__lit_3940 = 3.0f;
 
-/* 804547DC-804547E0 0004+00 rc=2 efc=0 .sdata2    @3941                                                        */
+/* 804547DC-804547E0 0004+00 rc=0 efc=0 .sdata2    @3941                                                        */
 f32 d_meter_d_meter_haihai__lit_3941 = 5.0f;
 
-/* 804547E0-804547E4 0004+00 rc=1 efc=0 .sdata2    @3942                                                        */
+/* 804547E0-804547E4 0004+00 rc=0 efc=0 .sdata2    @3942                                                        */
 f32 d_meter_d_meter_haihai__lit_3942 = 70.0f;
 
-/* 804547E4-804547E8 0004+00 rc=1 efc=0 .sdata2    @3943                                                        */
+/* 804547E4-804547E8 0004+00 rc=0 efc=0 .sdata2    @3943                                                        */
 f32 d_meter_d_meter_haihai__lit_3943 = 50.0f;
 
-/* 8020B518-8020B814 02FC+00 rc=1 efc=1 .text      drawHaihai__14dMeterHaihai_cFUc                              */
+/* 8020B518-8020B814 02FC+00 rc=0 efc=0 .text      drawHaihai__14dMeterHaihai_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -293,7 +293,7 @@ asm void dMeterHaihai_c::drawHaihai(u8 field_0) {
 #pragma pop
 
 
-/* 8020B814-8020B9B0 019C+00 rc=2 efc=2 .text      drawHaihai__14dMeterHaihai_cFUcffff                          */
+/* 8020B814-8020B9B0 019C+00 rc=0 efc=0 .text      drawHaihai__14dMeterHaihai_cFUcffff                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -304,7 +304,7 @@ asm void dMeterHaihai_c::drawHaihai(u8 field_0, f32 field_1, f32 field_2, f32 fi
 #pragma pop
 
 
-/* 8020B9B0-8020BA4C 009C+00 rc=2 efc=0 .text      drawHaihaiLeft__14dMeterHaihai_cFff                          */
+/* 8020B9B0-8020BA4C 009C+00 rc=0 efc=0 .text      drawHaihaiLeft__14dMeterHaihai_cFff                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -315,7 +315,7 @@ asm void dMeterHaihai_c::drawHaihaiLeft(f32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 8020BA4C-8020BAE8 009C+00 rc=2 efc=0 .text      drawHaihaiRight__14dMeterHaihai_cFff                         */
+/* 8020BA4C-8020BAE8 009C+00 rc=0 efc=0 .text      drawHaihaiRight__14dMeterHaihai_cFff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -326,7 +326,7 @@ asm void dMeterHaihai_c::drawHaihaiRight(f32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 8020BAE8-8020BB84 009C+00 rc=2 efc=0 .text      drawHaihaiTop__14dMeterHaihai_cFff                           */
+/* 8020BAE8-8020BB84 009C+00 rc=0 efc=0 .text      drawHaihaiTop__14dMeterHaihai_cFff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -337,7 +337,7 @@ asm void dMeterHaihai_c::drawHaihaiTop(f32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 8020BB84-8020BC20 009C+00 rc=2 efc=0 .text      drawHaihaiBottom__14dMeterHaihai_cFff                        */
+/* 8020BB84-8020BC20 009C+00 rc=0 efc=0 .text      drawHaihaiBottom__14dMeterHaihai_cFff                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -349,13 +349,13 @@ asm void dMeterHaihai_c::drawHaihaiBottom(f32 field_0, f32 field_1) {
 
 
 /* ############################################################################################## */
-/* 804547E8-804547EC 0004+00 rc=1 efc=0 .sdata2    @4116                                                        */
+/* 804547E8-804547EC 0004+00 rc=0 efc=0 .sdata2    @4116                                                        */
 f32 d_meter_d_meter_haihai__lit_4116 = 4.0f / 5.0f;
 
-/* 804547EC-804547F0 0004+00 rc=1 efc=0 .sdata2    @4117                                                        */
+/* 804547EC-804547F0 0004+00 rc=0 efc=0 .sdata2    @4117                                                        */
 f32 lit_4117 = 3.0f / 5.0f;
 
-/* 8020BC20-8020BDAC 018C+00 rc=2 efc=1 .text      setScale__14dMeterHaihai_cFf                                 */
+/* 8020BC20-8020BDAC 018C+00 rc=0 efc=0 .text      setScale__14dMeterHaihai_cFf                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -366,7 +366,7 @@ asm void dMeterHaihai_c::setScale(f32 field_0) {
 #pragma pop
 
 
-/* 8020BDAC-8020BEA0 00F4+00 rc=1 efc=0 .text      _delete__14dMeterHaihai_cFv                                  */
+/* 8020BDAC-8020BEA0 00F4+00 rc=0 efc=0 .text      _delete__14dMeterHaihai_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -377,18 +377,21 @@ asm void dMeterHaihai_c::_delete() {
 #pragma pop
 
 
-/* 8020BEA0-8020BEA4 0004+00 rc=1 efc=0 .text      alphaAnimeHaihai__14dMeterHaihai_cFUl                        */
+/* 8020BEA0-8020BEA4 0004+00 rc=0 efc=0 .text      alphaAnimeHaihai__14dMeterHaihai_cFUl                        */
 void dMeterHaihai_c::alphaAnimeHaihai(u32 field_0) {
 	/* empty function */
 }
 
 
 /* ############################################################################################## */
-/* 804547F0-804547F8 0004+04 rc=4 efc=0 .sdata2    @4165                                                        */
-f32 d_meter_d_meter_haihai__lit_4165 = 1.0f;
-/* padding 4 bytes */
+/* 804547F0-804547F8 0004+04 rc=0 efc=0 .sdata2    @4165                                                        */
+f32 d_meter_d_meter_haihai__lit_4165[1 + 1 /* padding */] = {
+	1.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 8020BEA4-8020BF00 005C+00 rc=1 efc=0 .text      updateHaihai__14dMeterHaihai_cFv                             */
+/* 8020BEA4-8020BF00 005C+00 rc=0 efc=0 .text      updateHaihai__14dMeterHaihai_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -400,10 +403,10 @@ asm void dMeterHaihai_c::updateHaihai() {
 
 
 /* ############################################################################################## */
-/* 804547F8-80454800 0008+00 rc=3 efc=0 .sdata2    @4189                                                        */
+/* 804547F8-80454800 0008+00 rc=0 efc=0 .sdata2    @4189                                                        */
 f64 d_meter_d_meter_haihai__lit_4189 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8020BF00-8020C078 0178+00 rc=1 efc=0 .text      playBckAnime__14dMeterHaihai_cFP18J2DAnmTransformKey         */
+/* 8020BF00-8020C078 0178+00 rc=0 efc=0 .text      playBckAnime__14dMeterHaihai_cFP18J2DAnmTransformKey         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -414,7 +417,7 @@ asm void dMeterHaihai_c::playBckAnime(J2DAnmTransformKey* field_0) {
 #pragma pop
 
 
-/* 8020C078-8020C1CC 0154+00 rc=1 efc=0 .text      playBtkAnime__14dMeterHaihai_cFP19J2DAnmTextureSRTKey        */
+/* 8020C078-8020C1CC 0154+00 rc=0 efc=0 .text      playBtkAnime__14dMeterHaihai_cFP19J2DAnmTextureSRTKey        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -425,7 +428,7 @@ asm void dMeterHaihai_c::playBtkAnime(J2DAnmTextureSRTKey* field_0) {
 #pragma pop
 
 
-/* 8020C1CC-8020C320 0154+00 rc=1 efc=0 .text      playBpkAnime__14dMeterHaihai_cFP11J2DAnmColor                */
+/* 8020C1CC-8020C320 0154+00 rc=0 efc=0 .text      playBpkAnime__14dMeterHaihai_cFP11J2DAnmColor                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

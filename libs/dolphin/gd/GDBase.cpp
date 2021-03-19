@@ -33,7 +33,7 @@ extern "C" void DCFlushRange(); // 1
 // Declarations:
 // 
 
-/* 80360F98-80360FB0 0018+00 rc=6 efc=6 .text      GDInitGDLObj                                                 */
+/* 80360F98-80360FB0 0018+00 rc=0 efc=0 .text      GDInitGDLObj                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,10 +45,10 @@ extern "C" asm void GDInitGDLObj() {
 
 
 /* ############################################################################################## */
-/* 80451980-80451984 0004+00 rc=102 efc=100 .sbss      __GDCurrentDL                                                */
+/* 80451980-80451984 0004+00 rc=0 efc=0 .sbss      __GDCurrentDL                                                */
 u8 __GDCurrentDL[4];
 
-/* 80360FB0-80360FDC 002C+00 rc=2 efc=2 .text      GDFlushCurrToMem                                             */
+/* 80360FB0-80360FDC 002C+00 rc=0 efc=0 .text      GDFlushCurrToMem                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -59,7 +59,7 @@ extern "C" asm void GDFlushCurrToMem() {
 #pragma pop
 
 
-/* 80360FDC-803610D4 00F8+00 rc=2 efc=2 .text      GDPadCurr32                                                  */
+/* 80360FDC-803610D4 00F8+00 rc=0 efc=0 .text      GDPadCurr32                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,10 +71,10 @@ extern "C" asm void GDPadCurr32() {
 
 
 /* ############################################################################################## */
-/* 80451984-80451988 0004+00 rc=1 efc=0 .sbss      overflowcb                                                   */
+/* 80451984-80451988 0004+00 rc=0 efc=0 .sbss      overflowcb                                                   */
 u8 overflowcb[4];
 
-/* 803610D4-80361104 0030+00 rc=41 efc=41 .text      GDOverflowed                                                 */
+/* 803610D4-80361104 0030+00 rc=0 efc=0 .text      GDOverflowed                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

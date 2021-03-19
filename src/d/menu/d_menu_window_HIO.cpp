@@ -42,8 +42,8 @@ extern "C" void __ct__10dMw_DHIO_cFv(); // 1
 extern "C" void __dt__10dMw_DHIO_cFv(); // 1
 extern "C" void __dt__9dMw_HIO_cFv(); // 1
 extern "C" void __sinit_d_menu_window_HIO_cpp(); // 1
-SECTION_DATA extern void*const __vt__10dMw_DHIO_c[3];
-SECTION_DATA extern void*const __vt__9dMw_HIO_c[3];
+SECTION_DATA extern void* const __vt__10dMw_DHIO_c[3];
+SECTION_DATA extern void* const __vt__9dMw_HIO_c[3];
 SECTION_BSS extern u8 d_menu_d_menu_window_HIO__lit_3773[12];
 SECTION_BSS extern u8 g_mwHIO[304];
 SECTION_BSS extern u8 d_menu_d_menu_window_HIO__lit_3774[12];
@@ -73,21 +73,21 @@ SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 // 
 
 /* ############################################################################################## */
-/* 803BE8E0-803BE8EC 000C+00 rc=2 efc=0 .data      __vt__10dMw_DHIO_c                                           */
+/* 803BE8E0-803BE8EC 000C+00 rc=0 efc=0 .data      __vt__10dMw_DHIO_c                                           */
 void* const __vt__10dMw_DHIO_c[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__10dMw_DHIO_cFv,
 };
 
-/* 803BE8EC-803BE8F8 000C+00 rc=2 efc=0 .data      __vt__9dMw_HIO_c                                             */
+/* 803BE8EC-803BE8F8 000C+00 rc=0 efc=0 .data      __vt__9dMw_HIO_c                                             */
 void* const __vt__9dMw_HIO_c[3] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__9dMw_HIO_cFv,
 };
 
-/* 801F9AFC-801F9B38 003C+00 rc=1 efc=0 .text      __ct__9dMw_HIO_cFv                                           */
+/* 801F9AFC-801F9B38 003C+00 rc=0 efc=0 .text      __ct__9dMw_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,26 +99,26 @@ asm dMw_HIO_c::dMw_HIO_c() {
 
 
 /* ############################################################################################## */
-/* 80450748-8045074C 0003+01 rc=1 efc=0 .sdata     m_cloth_item$3797                                            */
-u8 data_80450748[4] = {
+/* 80450748-8045074C 0003+01 rc=0 efc=0 .sdata     m_cloth_item$3797                                            */
+u8 data_80450748[3 + 1 /* padding */] = {
 	0x2F, 0x30, 0x31,
 	/* padding */
 	0x00,
 };
 
-/* 8045074C-80450750 0004+00 rc=1 efc=0 .sdata     m_sword_item$3798                                            */
+/* 8045074C-80450750 0004+00 rc=0 efc=0 .sdata     m_sword_item$3798                                            */
 u8 data_8045074C[4] = {
 	0x28, 0x29, 0x49, 0x3F,
 };
 
-/* 80450750-80450758 0003+05 rc=1 efc=0 .sdata     m_shield_item$3799                                           */
-u8 data_80450750[8] = {
+/* 80450750-80450758 0003+05 rc=0 efc=0 .sdata     m_shield_item$3799                                           */
+u8 data_80450750[3 + 5 /* padding */] = {
 	0x2B, 0x2C, 0x2A,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801F9B38-801F9E14 02DC+00 rc=1 efc=0 .text      init__9dMw_HIO_cFv                                           */
+/* 801F9B38-801F9E14 02DC+00 rc=0 efc=0 .text      init__9dMw_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,25 +129,25 @@ asm void dMw_HIO_c::init() {
 #pragma pop
 
 
-/* 801F9E14-801F9E1C 0008+00 rc=1 efc=1 .text      getBombFlag__9dMw_HIO_cFv                                    */
+/* 801F9E14-801F9E1C 0008+00 rc=0 efc=0 .text      getBombFlag__9dMw_HIO_cFv                                    */
 bool dMw_HIO_c::getBombFlag() {
 	return false;
 }
 
 
-/* 801F9E1C-801F9E24 0008+00 rc=1 efc=1 .text      getArrowFlag__9dMw_HIO_cFv                                   */
+/* 801F9E1C-801F9E24 0008+00 rc=0 efc=0 .text      getArrowFlag__9dMw_HIO_cFv                                   */
 bool dMw_HIO_c::getArrowFlag() {
 	return false;
 }
 
 
-/* 801F9E24-801F9E2C 0008+00 rc=1 efc=1 .text      getPachinkoFlag__9dMw_HIO_cFv                                */
+/* 801F9E24-801F9E2C 0008+00 rc=0 efc=0 .text      getPachinkoFlag__9dMw_HIO_cFv                                */
 bool dMw_HIO_c::getPachinkoFlag() {
 	return false;
 }
 
 
-/* 801F9E2C-801F9E98 006C+00 rc=1 efc=0 .text      __ct__10dMw_DHIO_cFv                                         */
+/* 801F9E2C-801F9E98 006C+00 rc=0 efc=0 .text      __ct__10dMw_DHIO_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,7 +158,7 @@ asm dMw_DHIO_c::dMw_DHIO_c() {
 #pragma pop
 
 
-/* 801F9E98-801F9EE0 0048+00 rc=2 efc=0 .text      __dt__10dMw_DHIO_cFv                                         */
+/* 801F9E98-801F9EE0 0048+00 rc=0 efc=0 .text      __dt__10dMw_DHIO_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,7 +169,7 @@ asm dMw_DHIO_c::~dMw_DHIO_c() {
 #pragma pop
 
 
-/* 801F9EE0-801F9F28 0048+00 rc=2 efc=0 .text      __dt__9dMw_HIO_cFv                                           */
+/* 801F9EE0-801F9F28 0048+00 rc=0 efc=0 .text      __dt__9dMw_HIO_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,10 +181,10 @@ asm dMw_HIO_c::~dMw_HIO_c() {
 
 
 /* ############################################################################################## */
-/* 8042E860-8042E86C 000C+00 rc=1 efc=0 .bss       @3773                                                        */
+/* 8042E860-8042E86C 000C+00 rc=0 efc=0 .bss       @3773                                                        */
 u8 d_menu_d_menu_window_HIO__lit_3773[12];
 
-/* 801F9F28-801F9F84 005C+00 rc=1 efc=1 .text      __sinit_d_menu_window_HIO_cpp                                */
+/* 801F9F28-801F9F84 005C+00 rc=0 efc=0 .text      __sinit_d_menu_window_HIO_cpp                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,12 +196,12 @@ extern "C" asm void __sinit_d_menu_window_HIO_cpp() {
 
 
 /* ############################################################################################## */
-/* 8042E86C-8042E99C 0130+00 rc=4 efc=4 .bss       g_mwHIO                                                      */
+/* 8042E86C-8042E99C 0130+00 rc=0 efc=0 .bss       g_mwHIO                                                      */
 u8 g_mwHIO[304];
 
 /* 8042E99C-8042E9A8 000C+00 rc=0 efc=0 .bss       @3774                                                        */
 u8 d_menu_d_menu_window_HIO__lit_3774[12];
 
-/* 8042E9A8-8042EBB0 0208+00 rc=1 efc=1 .bss       g_mwDHIO                                                     */
+/* 8042E9A8-8042EBB0 0208+00 rc=0 efc=0 .bss       g_mwDHIO                                                     */
 u8 g_mwDHIO[520];
 

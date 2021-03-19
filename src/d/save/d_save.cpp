@@ -297,9 +297,9 @@ struct Z2AudioMgr {
 // Forward References:
 // 
 
-static void dSv_item_rename(u8); // 2
+void dSv_item_rename(u8); // 2
 
-extern "C" static void dSv_item_rename__FUc(); // 1
+extern "C" void dSv_item_rename__FUc(); // 1
 extern "C" void init__21dSv_player_status_a_cFv(); // 1
 extern "C" void setSelectItemIndex__21dSv_player_status_a_cFiUc(); // 1
 extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi(); // 1
@@ -460,7 +460,7 @@ extern "C" void memory_to_card__10dSv_info_cFPci(); // 1
 extern "C" void card_to_memory__10dSv_info_cFPci(); // 1
 extern "C" void initdata_to_card__10dSv_info_cFPci(); // 1
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
-SECTION_RODATA extern const u8 d_save_d_save__stringBase0[100];
+SECTION_RODATA extern const char* const d_save_d_save__stringBase0;
 SECTION_DATA extern u8 data_803A7270[23 + 1 /* padding */];
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 SECTION_SDATA2 extern f32 d_save_d_save__lit_3775;
@@ -541,18 +541,18 @@ SECTION_SBSS extern u8 sRumbleSupported__10JUTGamePad[4];
 // Declarations:
 // 
 
-/* 80032918-80032958 0040+00 rc=4 efc=0 .text      dSv_item_rename__FUc                                         */
+/* 80032918-80032958 0040+00 rc=0 efc=0 .text      dSv_item_rename__FUc                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dSv_item_rename(u8 field_0) {
+asm void dSv_item_rename(u8 field_0) {
 	nofralloc
 #include "asm/d/save/d_save/dSv_item_rename__FUc.s"
 }
 #pragma pop
 
 
-/* 80032958-80032A48 00F0+00 rc=1 efc=0 .text      init__21dSv_player_status_a_cFv                              */
+/* 80032958-80032A48 00F0+00 rc=0 efc=0 .text      init__21dSv_player_status_a_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -563,7 +563,7 @@ asm void dSv_player_status_a_c::init() {
 #pragma pop
 
 
-/* 80032A48-80032A5C 0014+00 rc=1 efc=1 .text      setSelectItemIndex__21dSv_player_status_a_cFiUc              */
+/* 80032A48-80032A5C 0014+00 rc=0 efc=0 .text      setSelectItemIndex__21dSv_player_status_a_cFiUc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -574,7 +574,7 @@ asm void dSv_player_status_a_c::setSelectItemIndex(int field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80032A5C-80032A78 001C+00 rc=27 efc=20 .text      getSelectItemIndex__21dSv_player_status_a_cCFi               */
+/* 80032A5C-80032A78 001C+00 rc=0 efc=0 .text      getSelectItemIndex__21dSv_player_status_a_cCFi               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -585,7 +585,7 @@ asm void dSv_player_status_a_c::getSelectItemIndex(int field_0) const {
 #pragma pop
 
 
-/* 80032A78-80032A8C 0014+00 rc=1 efc=1 .text      setMixItemIndex__21dSv_player_status_a_cFiUc                 */
+/* 80032A78-80032A8C 0014+00 rc=0 efc=0 .text      setMixItemIndex__21dSv_player_status_a_cFiUc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -596,7 +596,7 @@ asm void dSv_player_status_a_c::setMixItemIndex(int field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80032A8C-80032AA8 001C+00 rc=1 efc=1 .text      getMixItemIndex__21dSv_player_status_a_cCFi                  */
+/* 80032A8C-80032AA8 001C+00 rc=0 efc=0 .text      getMixItemIndex__21dSv_player_status_a_cCFi                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -607,7 +607,7 @@ asm void dSv_player_status_a_c::getMixItemIndex(int field_0) const {
 #pragma pop
 
 
-/* 80032AA8-80032AF8 0050+00 rc=4 efc=4 .text      getRupeeMax__21dSv_player_status_a_cCFv                      */
+/* 80032AA8-80032AF8 0050+00 rc=0 efc=0 .text      getRupeeMax__21dSv_player_status_a_cCFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -618,7 +618,7 @@ asm void dSv_player_status_a_c::getRupeeMax() const {
 #pragma pop
 
 
-/* 80032AF8-80032B50 0058+00 rc=1 efc=1 .text      isMagicFlag__21dSv_player_status_a_cCFUc                     */
+/* 80032AF8-80032B50 0058+00 rc=0 efc=0 .text      isMagicFlag__21dSv_player_status_a_cCFUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -630,10 +630,10 @@ asm void dSv_player_status_a_c::isMagicFlag(u8 field_0) const {
 
 
 /* ############################################################################################## */
-/* 80451D58-80451D5C 0004+00 rc=1 efc=0 .sdata2    @3775                                                        */
+/* 80451D58-80451D5C 0004+00 rc=0 efc=0 .sdata2    @3775                                                        */
 f32 d_save_d_save__lit_3775 = 255.0f;
 
-/* 80032B50-80032B94 0044+00 rc=1 efc=0 .text      init__21dSv_player_status_b_cFv                              */
+/* 80032B50-80032B94 0044+00 rc=0 efc=0 .text      init__21dSv_player_status_b_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -644,7 +644,7 @@ asm void dSv_player_status_b_c::init() {
 #pragma pop
 
 
-/* 80032B94-80032BB0 001C+00 rc=1 efc=1 .text      onDarkClearLV__21dSv_player_status_b_cFi                     */
+/* 80032B94-80032BB0 001C+00 rc=0 efc=0 .text      onDarkClearLV__21dSv_player_status_b_cFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -655,7 +655,7 @@ asm void dSv_player_status_b_c::onDarkClearLV(int field_0) {
 #pragma pop
 
 
-/* 80032BB0-80032BD0 0020+00 rc=4 efc=4 .text      isDarkClearLV__21dSv_player_status_b_cCFi                    */
+/* 80032BB0-80032BD0 0020+00 rc=0 efc=0 .text      isDarkClearLV__21dSv_player_status_b_cCFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -666,7 +666,7 @@ asm void dSv_player_status_b_c::isDarkClearLV(int field_0) const {
 #pragma pop
 
 
-/* 80032BD0-80032BEC 001C+00 rc=1 efc=1 .text      onTransformLV__21dSv_player_status_b_cFi                     */
+/* 80032BD0-80032BEC 001C+00 rc=0 efc=0 .text      onTransformLV__21dSv_player_status_b_cFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -677,7 +677,7 @@ asm void dSv_player_status_b_c::onTransformLV(int field_0) {
 #pragma pop
 
 
-/* 80032BEC-80032C0C 0020+00 rc=8 efc=8 .text      isTransformLV__21dSv_player_status_b_cCFi                    */
+/* 80032BEC-80032C0C 0020+00 rc=0 efc=0 .text      isTransformLV__21dSv_player_status_b_cCFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -689,8 +689,8 @@ asm void dSv_player_status_b_c::isTransformLV(int field_0) const {
 
 
 /* ############################################################################################## */
-/* 803790C0-80379234 0172+02 rc=17 efc=17 .rodata    tempBitLabels__20dSv_event_tmp_flag_c                        */
-SECTION_RODATA const u8 tempBitLabels__20dSv_event_tmp_flag_c[372] = {
+/* 803790C0-80379234 0172+02 rc=0 efc=0 .rodata    tempBitLabels__20dSv_event_tmp_flag_c                        */
+const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x0F, 0xFE, 0xFF, 0x00, 0x40, 0xFD, 0xFF, 0xFC, 0xFF, 0x00, 0x20,
 	0x00, 0x80, 0x00, 0x10, 0x00, 0x08, 0x00, 0x04, 0x00, 0x02, 0x00, 0x01, 0x01, 0x80, 0x01, 0x40,
 	0x01, 0x20, 0x01, 0x10, 0x01, 0x08, 0x01, 0x04, 0x01, 0x02, 0x01, 0x01, 0x02, 0x80, 0x02, 0x40,
@@ -719,27 +719,27 @@ SECTION_RODATA const u8 tempBitLabels__20dSv_event_tmp_flag_c[372] = {
 	0x00, 0x00,
 };
 
-/* 80379234-80379298 0062+02 rc=8 efc=0 .rodata    @stringBase0                                                 */
+/* 80379234-80379298 0062+02 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80379234 = "";
-SECTION_DEAD char* const stringBase_80379235 = "F_SP108";
-SECTION_DEAD char* const stringBase_8037923D = "合成アイテム不定＝＝＝＞%d, %d\n";
-SECTION_DEAD char* const stringBase_8037925D = "Write size:%d\n";
-SECTION_DEAD char* const stringBase_8037926C = "SAVE size:%d\n";
-SECTION_DEAD char* const stringBase_8037927A = "LOAD size:%d\n";
-SECTION_DEAD char* const stringBase_80379288 = "INIT size:%d\n";
+const char* const stringBase_80379234 = "";
+const char* const stringBase_80379235 = "F_SP108";
+const char* const stringBase_8037923D = "合成アイテム不定＝＝＝＞%d, %d\n";
+const char* const stringBase_8037925D = "Write size:%d\n";
+const char* const stringBase_8037926C = "SAVE size:%d\n";
+const char* const stringBase_8037927A = "LOAD size:%d\n";
+const char* const stringBase_80379288 = "INIT size:%d\n";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_80379296 = "\0";
+char* const pad_80379296 = "\0";
 #pragma pop
 
-/* 80451D5C-80451D60 0004+00 rc=3 efc=0 .sdata2    @3813                                                        */
+/* 80451D5C-80451D60 0004+00 rc=0 efc=0 .sdata2    @3813                                                        */
 u8 lit_3813[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80032C0C-80032C64 0058+00 rc=1 efc=0 .text      init__17dSv_horse_place_cFv                                  */
+/* 80032C0C-80032C64 0058+00 rc=0 efc=0 .text      init__17dSv_horse_place_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -761,7 +761,7 @@ asm void dSv_horse_place_c::set(char const* field_0, cXyz const& field_1, s16 fi
 #pragma pop
 
 
-/* 80032CC8-80032D1C 0054+00 rc=1 efc=0 .text      init__25dSv_player_return_place_cFv                          */
+/* 80032CC8-80032D1C 0054+00 rc=0 efc=0 .text      init__25dSv_player_return_place_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -783,7 +783,7 @@ asm void dSv_player_return_place_c::set(char const* field_0, s8 field_1, u8 fiel
 #pragma pop
 
 
-/* 80032D60-80032DE0 0080+00 rc=1 efc=0 .text      init__33dSv_player_field_last_stay_info_cFv                  */
+/* 80032D60-80032DE0 0080+00 rc=0 efc=0 .text      init__33dSv_player_field_last_stay_info_cFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -794,7 +794,7 @@ asm void dSv_player_field_last_stay_info_c::init() {
 #pragma pop
 
 
-/* 80032DE0-80032E4C 006C+00 rc=2 efc=2 .text      set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc     */
+/* 80032DE0-80032E4C 006C+00 rc=0 efc=0 .text      set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -805,7 +805,7 @@ asm void dSv_player_field_last_stay_info_c::set(char const* field_0, cXyz const&
 #pragma pop
 
 
-/* 80032E4C-80032E78 002C+00 rc=1 efc=1 .text      onRegionBit__33dSv_player_field_last_stay_info_cFi           */
+/* 80032E4C-80032E78 002C+00 rc=0 efc=0 .text      onRegionBit__33dSv_player_field_last_stay_info_cFi           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -816,7 +816,7 @@ asm void dSv_player_field_last_stay_info_c::onRegionBit(int field_0) {
 #pragma pop
 
 
-/* 80032E78-80032EB0 0038+00 rc=2 efc=2 .text      isRegionBit__33dSv_player_field_last_stay_info_cCFi          */
+/* 80032E78-80032EB0 0038+00 rc=0 efc=0 .text      isRegionBit__33dSv_player_field_last_stay_info_cCFi          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -827,7 +827,7 @@ asm void dSv_player_field_last_stay_info_c::isRegionBit(int field_0) const {
 #pragma pop
 
 
-/* 80032EB0-80032F2C 007C+00 rc=1 efc=0 .text      init__27dSv_player_last_mark_info_cFv                        */
+/* 80032EB0-80032F2C 007C+00 rc=0 efc=0 .text      init__27dSv_player_last_mark_info_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -838,7 +838,7 @@ asm void dSv_player_last_mark_info_c::init() {
 #pragma pop
 
 
-/* 80032F2C-80032F90 0064+00 rc=1 efc=1 .text      setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc */
+/* 80032F2C-80032F90 0064+00 rc=0 efc=0 .text      setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -849,7 +849,7 @@ asm void dSv_player_last_mark_info_c::setWarpItemData(char const* field_0, cXyz 
 #pragma pop
 
 
-/* 80032F90-80032FB8 0028+00 rc=1 efc=0 .text      init__17dSv_player_item_cFv                                  */
+/* 80032F90-80032FB8 0028+00 rc=0 efc=0 .text      init__17dSv_player_item_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -860,7 +860,7 @@ asm void dSv_player_item_c::init() {
 #pragma pop
 
 
-/* 80032FB8-80033030 0078+00 rc=56 efc=45 .text      setItem__17dSv_player_item_cFiUc                             */
+/* 80032FB8-80033030 0078+00 rc=0 efc=0 .text      setItem__17dSv_player_item_cFiUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -871,7 +871,7 @@ asm void dSv_player_item_c::setItem(int field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80033030-800332F8 02C8+00 rc=77 efc=70 .text      getItem__17dSv_player_item_cCFib                             */
+/* 80033030-800332F8 02C8+00 rc=0 efc=0 .text      getItem__17dSv_player_item_cCFib                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -883,15 +883,15 @@ asm void dSv_player_item_c::getItem(int field_0, bool field_1) const {
 
 
 /* ############################################################################################## */
-/* 803A7270-803A7288 0017+01 rc=1 efc=0 .data      i_item_lst$4006                                              */
-u8 data_803A7270[24] = {
+/* 803A7270-803A7288 0017+01 rc=0 efc=0 .data      i_item_lst$4006                                              */
+u8 data_803A7270[23 + 1 /* padding */] = {
 	0x0A, 0x08, 0x06, 0x02, 0x09, 0x04, 0x03, 0x00, 0x01, 0x17, 0x14, 0x05, 0x0F, 0x10, 0x11, 0x0B,
 	0x0C, 0x0D, 0x0E, 0x13, 0x12, 0x16, 0x15,
 	/* padding */
 	0x00,
 };
 
-/* 800332F8-80033354 005C+00 rc=2 efc=0 .text      setLineUpItem__17dSv_player_item_cFv                         */
+/* 800332F8-80033354 005C+00 rc=0 efc=0 .text      setLineUpItem__17dSv_player_item_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -902,7 +902,7 @@ asm void dSv_player_item_c::setLineUpItem() {
 #pragma pop
 
 
-/* 80033354-80033370 001C+00 rc=2 efc=2 .text      getLineUpItem__17dSv_player_item_cCFi                        */
+/* 80033354-80033370 001C+00 rc=0 efc=0 .text      getLineUpItem__17dSv_player_item_cCFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -913,7 +913,7 @@ asm void dSv_player_item_c::getLineUpItem(int field_0) const {
 #pragma pop
 
 
-/* 80033370-80033450 00E0+00 rc=3 efc=2 .text      setBottleItemIn__17dSv_player_item_cFUcUc                    */
+/* 80033370-80033450 00E0+00 rc=0 efc=0 .text      setBottleItemIn__17dSv_player_item_cFUcUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -924,7 +924,7 @@ asm void dSv_player_item_c::setBottleItemIn(u8 field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80033450-80033494 0044+00 rc=26 efc=26 .text      setEmptyBottleItemIn__17dSv_player_item_cFUc                 */
+/* 80033450-80033494 0044+00 rc=0 efc=0 .text      setEmptyBottleItemIn__17dSv_player_item_cFUc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -935,7 +935,7 @@ asm void dSv_player_item_c::setEmptyBottleItemIn(u8 field_0) {
 #pragma pop
 
 
-/* 80033494-80033514 0080+00 rc=1 efc=1 .text      setEmptyBottle__17dSv_player_item_cFv                        */
+/* 80033494-80033514 0080+00 rc=0 efc=0 .text      setEmptyBottle__17dSv_player_item_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -946,7 +946,7 @@ asm void dSv_player_item_c::setEmptyBottle() {
 #pragma pop
 
 
-/* 80033514-80033598 0084+00 rc=3 efc=3 .text      setEmptyBottle__17dSv_player_item_cFUc                       */
+/* 80033514-80033598 0084+00 rc=0 efc=0 .text      setEmptyBottle__17dSv_player_item_cFUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -957,7 +957,7 @@ asm void dSv_player_item_c::setEmptyBottle(u8 field_0) {
 #pragma pop
 
 
-/* 80033598-800336BC 0124+00 rc=4 efc=3 .text      setEquipBottleItemIn__17dSv_player_item_cFUcUc               */
+/* 80033598-800336BC 0124+00 rc=0 efc=0 .text      setEquipBottleItemIn__17dSv_player_item_cFUcUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -968,7 +968,7 @@ asm void dSv_player_item_c::setEquipBottleItemIn(u8 field_0, u8 field_1) {
 #pragma pop
 
 
-/* 800336BC-800336E0 0024+00 rc=4 efc=4 .text      setEquipBottleItemEmpty__17dSv_player_item_cFUc              */
+/* 800336BC-800336E0 0024+00 rc=0 efc=0 .text      setEquipBottleItemEmpty__17dSv_player_item_cFUc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -979,7 +979,7 @@ asm void dSv_player_item_c::setEquipBottleItemEmpty(u8 field_0) {
 #pragma pop
 
 
-/* 800336E0-80033754 0074+00 rc=30 efc=30 .text      checkBottle__17dSv_player_item_cFUc                          */
+/* 800336E0-80033754 0074+00 rc=0 efc=0 .text      checkBottle__17dSv_player_item_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -991,8 +991,8 @@ asm void dSv_player_item_c::checkBottle(u8 field_0) {
 
 
 /* ############################################################################################## */
-/* 803A7288-803A78F8 066C+04 rc=47 efc=45 .data      saveBitLabels__16dSv_event_flag_c                            */
-u8 saveBitLabels__16dSv_event_flag_c[1648] = {
+/* 803A7288-803A78F8 066C+04 rc=0 efc=0 .data      saveBitLabels__16dSv_event_flag_c                            */
+u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */] = {
 	0xFF, 0xFF, 0x00, 0x80, 0x00, 0x40, 0x00, 0x20, 0x00, 0x10, 0x00, 0x08, 0x00, 0x04, 0x00, 0x02,
 	0x00, 0x01, 0x01, 0x80, 0x01, 0x40, 0x01, 0x20, 0x01, 0x10, 0x01, 0x08, 0x01, 0x04, 0x01, 0x02,
 	0x01, 0x01, 0x02, 0x80, 0x02, 0x40, 0x02, 0x20, 0x02, 0x10, 0x02, 0x08, 0x02, 0x04, 0x02, 0x02,
@@ -1100,7 +1100,7 @@ u8 saveBitLabels__16dSv_event_flag_c[1648] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80033754-800337EC 0098+00 rc=1 efc=1 .text      checkInsectBottle__17dSv_player_item_cFv                     */
+/* 80033754-800337EC 0098+00 rc=0 efc=0 .text      checkInsectBottle__17dSv_player_item_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1111,7 +1111,7 @@ asm void dSv_player_item_c::checkInsectBottle() {
 #pragma pop
 
 
-/* 800337EC-80033828 003C+00 rc=1 efc=1 .text      checkEmptyBottle__17dSv_player_item_cFv                      */
+/* 800337EC-80033828 003C+00 rc=0 efc=0 .text      checkEmptyBottle__17dSv_player_item_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1122,7 +1122,7 @@ asm void dSv_player_item_c::checkEmptyBottle() {
 #pragma pop
 
 
-/* 80033828-80033910 00E8+00 rc=1 efc=0 .text      setBombBagItemIn__17dSv_player_item_cFUcUcb                  */
+/* 80033828-80033910 00E8+00 rc=0 efc=0 .text      setBombBagItemIn__17dSv_player_item_cFUcUcb                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1133,7 +1133,7 @@ asm void dSv_player_item_c::setBombBagItemIn(u8 field_0, u8 field_1, bool field_
 #pragma pop
 
 
-/* 80033910-80033A20 0110+00 rc=1 efc=0 .text      setBombBagItemIn__17dSv_player_item_cFUcUcUcb                */
+/* 80033910-80033A20 0110+00 rc=0 efc=0 .text      setBombBagItemIn__17dSv_player_item_cFUcUcUcb                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1144,7 +1144,7 @@ asm void dSv_player_item_c::setBombBagItemIn(u8 field_0, u8 field_1, u8 field_2,
 #pragma pop
 
 
-/* 80033A20-80033A50 0030+00 rc=2 efc=2 .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcb               */
+/* 80033A20-80033A50 0030+00 rc=0 efc=0 .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcb               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1155,7 +1155,7 @@ asm void dSv_player_item_c::setEmptyBombBagItemIn(u8 field_0, bool field_1) {
 #pragma pop
 
 
-/* 80033A50-80033A88 0038+00 rc=1 efc=1 .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb             */
+/* 80033A50-80033A88 0038+00 rc=0 efc=0 .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1166,7 +1166,7 @@ asm void dSv_player_item_c::setEmptyBombBagItemIn(u8 field_0, u8 field_1, bool f
 #pragma pop
 
 
-/* 80033A88-80033B08 0080+00 rc=2 efc=2 .text      setEmptyBombBag__17dSv_player_item_cFv                       */
+/* 80033A88-80033B08 0080+00 rc=0 efc=0 .text      setEmptyBombBag__17dSv_player_item_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1177,7 +1177,7 @@ asm void dSv_player_item_c::setEmptyBombBag() {
 #pragma pop
 
 
-/* 80033B08-80033BEC 00E4+00 rc=3 efc=3 .text      setEmptyBombBag__17dSv_player_item_cFUcUc                    */
+/* 80033B08-80033BEC 00E4+00 rc=0 efc=0 .text      setEmptyBombBag__17dSv_player_item_cFUcUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1188,7 +1188,7 @@ asm void dSv_player_item_c::setEmptyBombBag(u8 field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80033BEC-80033C2C 0040+00 rc=1 efc=1 .text      checkBombBag__17dSv_player_item_cFUc                         */
+/* 80033BEC-80033C2C 0040+00 rc=0 efc=0 .text      checkBombBag__17dSv_player_item_cFUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1199,7 +1199,7 @@ asm void dSv_player_item_c::checkBombBag(u8 field_0) {
 #pragma pop
 
 
-/* 80033C2C-80033CBC 0090+00 rc=2 efc=2 .text      setWarashibeItem__17dSv_player_item_cFUc                     */
+/* 80033C2C-80033CBC 0090+00 rc=0 efc=0 .text      setWarashibeItem__17dSv_player_item_cFUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1210,7 +1210,7 @@ asm void dSv_player_item_c::setWarashibeItem(u8 field_0) {
 #pragma pop
 
 
-/* 80033CBC-80033D40 0084+00 rc=1 efc=1 .text      setRodTypeLevelUp__17dSv_player_item_cFv                     */
+/* 80033CBC-80033D40 0084+00 rc=0 efc=0 .text      setRodTypeLevelUp__17dSv_player_item_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1221,7 +1221,7 @@ asm void dSv_player_item_c::setRodTypeLevelUp() {
 #pragma pop
 
 
-/* 80033D40-80033E40 0100+00 rc=2 efc=2 .text      setBaitItem__17dSv_player_item_cFUc                          */
+/* 80033D40-80033E40 0100+00 rc=0 efc=0 .text      setBaitItem__17dSv_player_item_cFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1232,7 +1232,7 @@ asm void dSv_player_item_c::setBaitItem(u8 field_0) {
 #pragma pop
 
 
-/* 80033E40-80033E60 0020+00 rc=1 efc=0 .text      init__21dSv_player_get_item_cFv                              */
+/* 80033E40-80033E60 0020+00 rc=0 efc=0 .text      init__21dSv_player_get_item_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1243,7 +1243,7 @@ asm void dSv_player_get_item_c::init() {
 #pragma pop
 
 
-/* 80033E60-80033E94 0034+00 rc=3 efc=3 .text      onFirstBit__21dSv_player_get_item_cFUc                       */
+/* 80033E60-80033E94 0034+00 rc=0 efc=0 .text      onFirstBit__21dSv_player_get_item_cFUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1254,7 +1254,7 @@ asm void dSv_player_get_item_c::onFirstBit(u8 field_0) {
 #pragma pop
 
 
-/* 80033E94-80033EC8 0034+00 rc=7 efc=7 .text      offFirstBit__21dSv_player_get_item_cFUc                      */
+/* 80033E94-80033EC8 0034+00 rc=0 efc=0 .text      offFirstBit__21dSv_player_get_item_cFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1265,7 +1265,7 @@ asm void dSv_player_get_item_c::offFirstBit(u8 field_0) {
 #pragma pop
 
 
-/* 80033EC8-80033F00 0038+00 rc=91 efc=87 .text      isFirstBit__21dSv_player_get_item_cCFUc                      */
+/* 80033EC8-80033F00 0038+00 rc=0 efc=0 .text      isFirstBit__21dSv_player_get_item_cCFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1276,7 +1276,7 @@ asm void dSv_player_get_item_c::isFirstBit(u8 field_0) const {
 #pragma pop
 
 
-/* 80033F00-80033F6C 006C+00 rc=1 efc=0 .text      init__24dSv_player_item_record_cFv                           */
+/* 80033F00-80033F6C 006C+00 rc=0 efc=0 .text      init__24dSv_player_item_record_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1287,7 +1287,7 @@ asm void dSv_player_item_record_c::init() {
 #pragma pop
 
 
-/* 80033F6C-80033F7C 0010+00 rc=8 efc=5 .text      setBombNum__24dSv_player_item_record_cFUcUc                  */
+/* 80033F6C-80033F7C 0010+00 rc=0 efc=0 .text      setBombNum__24dSv_player_item_record_cFUcUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1298,7 +1298,7 @@ asm void dSv_player_item_record_c::setBombNum(u8 field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80033F7C-80033F8C 0010+00 rc=13 efc=13 .text      getBombNum__24dSv_player_item_record_cCFUc                   */
+/* 80033F7C-80033F8C 0010+00 rc=0 efc=0 .text      getBombNum__24dSv_player_item_record_cCFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1309,7 +1309,7 @@ asm void dSv_player_item_record_c::getBombNum(u8 field_0) const {
 #pragma pop
 
 
-/* 80033F8C-80033F9C 0010+00 rc=2 efc=2 .text      setBottleNum__24dSv_player_item_record_cFUcUc                */
+/* 80033F8C-80033F9C 0010+00 rc=0 efc=0 .text      setBottleNum__24dSv_player_item_record_cFUcUc                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1320,7 +1320,7 @@ asm void dSv_player_item_record_c::setBottleNum(u8 field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80033F9C-80034030 0094+00 rc=1 efc=1 .text      addBottleNum__24dSv_player_item_record_cFUcs                 */
+/* 80033F9C-80034030 0094+00 rc=0 efc=0 .text      addBottleNum__24dSv_player_item_record_cFUcs                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1331,7 +1331,7 @@ asm void dSv_player_item_record_c::addBottleNum(u8 field_0, s16 field_1) {
 #pragma pop
 
 
-/* 80034030-80034040 0010+00 rc=4 efc=4 .text      getBottleNum__24dSv_player_item_record_cCFUc                 */
+/* 80034030-80034040 0010+00 rc=0 efc=0 .text      getBottleNum__24dSv_player_item_record_cCFUc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1342,7 +1342,7 @@ asm void dSv_player_item_record_c::getBottleNum(u8 field_0) const {
 #pragma pop
 
 
-/* 80034040-800340B8 0078+00 rc=1 efc=0 .text      init__21dSv_player_item_max_cFv                              */
+/* 80034040-800340B8 0078+00 rc=0 efc=0 .text      init__21dSv_player_item_max_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1353,7 +1353,7 @@ asm void dSv_player_item_max_c::init() {
 #pragma pop
 
 
-/* 800340B8-800340F8 0040+00 rc=1 efc=0 .text      setBombNum__21dSv_player_item_max_cFUcUc                     */
+/* 800340B8-800340F8 0040+00 rc=0 efc=0 .text      setBombNum__21dSv_player_item_max_cFUcUc                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1364,7 +1364,7 @@ asm void dSv_player_item_max_c::setBombNum(u8 field_0, u8 field_1) {
 #pragma pop
 
 
-/* 800340F8-800341AC 00B4+00 rc=17 efc=14 .text      getBombNum__21dSv_player_item_max_cCFUc                      */
+/* 800340F8-800341AC 00B4+00 rc=0 efc=0 .text      getBombNum__21dSv_player_item_max_cCFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1375,7 +1375,7 @@ asm void dSv_player_item_max_c::getBombNum(u8 field_0) const {
 #pragma pop
 
 
-/* 800341AC-800341E8 003C+00 rc=1 efc=0 .text      init__20dSv_player_collect_cFv                               */
+/* 800341AC-800341E8 003C+00 rc=0 efc=0 .text      init__20dSv_player_collect_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1386,7 +1386,7 @@ asm void dSv_player_collect_c::init() {
 #pragma pop
 
 
-/* 800341E8-80034208 0020+00 rc=8 efc=8 .text      setCollect__20dSv_player_collect_cFiUc                       */
+/* 800341E8-80034208 0020+00 rc=0 efc=0 .text      setCollect__20dSv_player_collect_cFiUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1397,7 +1397,7 @@ asm void dSv_player_collect_c::setCollect(int field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80034208-8003422C 0024+00 rc=4 efc=4 .text      isCollect__20dSv_player_collect_cCFiUc                       */
+/* 80034208-8003422C 0024+00 rc=0 efc=0 .text      isCollect__20dSv_player_collect_cCFiUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1408,7 +1408,7 @@ asm void dSv_player_collect_c::isCollect(int field_0, u8 field_1) const {
 #pragma pop
 
 
-/* 8003422C-8003424C 0020+00 rc=1 efc=1 .text      onCollectCrystal__20dSv_player_collect_cFUc                  */
+/* 8003422C-8003424C 0020+00 rc=0 efc=0 .text      onCollectCrystal__20dSv_player_collect_cFUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1419,7 +1419,7 @@ asm void dSv_player_collect_c::onCollectCrystal(u8 field_0) {
 #pragma pop
 
 
-/* 8003424C-80034270 0024+00 rc=4 efc=4 .text      isCollectCrystal__20dSv_player_collect_cCFUc                 */
+/* 8003424C-80034270 0024+00 rc=0 efc=0 .text      isCollectCrystal__20dSv_player_collect_cCFUc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1430,7 +1430,7 @@ asm void dSv_player_collect_c::isCollectCrystal(u8 field_0) const {
 #pragma pop
 
 
-/* 80034270-80034290 0020+00 rc=1 efc=1 .text      onCollectMirror__20dSv_player_collect_cFUc                   */
+/* 80034270-80034290 0020+00 rc=0 efc=0 .text      onCollectMirror__20dSv_player_collect_cFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1441,7 +1441,7 @@ asm void dSv_player_collect_c::onCollectMirror(u8 field_0) {
 #pragma pop
 
 
-/* 80034290-800342B4 0024+00 rc=4 efc=4 .text      isCollectMirror__20dSv_player_collect_cCFUc                  */
+/* 80034290-800342B4 0024+00 rc=0 efc=0 .text      isCollectMirror__20dSv_player_collect_cCFUc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1452,7 +1452,7 @@ asm void dSv_player_collect_c::isCollectMirror(u8 field_0) const {
 #pragma pop
 
 
-/* 800342B4-800342DC 0028+00 rc=1 efc=0 .text      init__17dSv_player_wolf_cFv                                  */
+/* 800342B4-800342DC 0028+00 rc=0 efc=0 .text      init__17dSv_player_wolf_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1463,7 +1463,7 @@ asm void dSv_player_wolf_c::init() {
 #pragma pop
 
 
-/* 800342DC-80034320 0044+00 rc=1 efc=0 .text      init__16dSv_light_drop_cFv                                   */
+/* 800342DC-80034320 0044+00 rc=0 efc=0 .text      init__16dSv_light_drop_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1485,7 +1485,7 @@ asm void dSv_light_drop_c::setLightDropNum(u8 field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80034340-80034368 0028+00 rc=11 efc=11 .text      getLightDropNum__16dSv_light_drop_cCFUc                      */
+/* 80034340-80034368 0028+00 rc=0 efc=0 .text      getLightDropNum__16dSv_light_drop_cCFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1496,7 +1496,7 @@ asm void dSv_light_drop_c::getLightDropNum(u8 field_0) const {
 #pragma pop
 
 
-/* 80034368-8003439C 0034+00 rc=4 efc=4 .text      onLightDropGetFlag__16dSv_light_drop_cFUc                    */
+/* 80034368-8003439C 0034+00 rc=0 efc=0 .text      onLightDropGetFlag__16dSv_light_drop_cFUc                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1507,7 +1507,7 @@ asm void dSv_light_drop_c::onLightDropGetFlag(u8 field_0) {
 #pragma pop
 
 
-/* 8003439C-800343DC 0040+00 rc=8 efc=8 .text      isLightDropGetFlag__16dSv_light_drop_cCFUc                   */
+/* 8003439C-800343DC 0040+00 rc=0 efc=0 .text      isLightDropGetFlag__16dSv_light_drop_cCFUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1518,7 +1518,7 @@ asm void dSv_light_drop_c::isLightDropGetFlag(u8 field_0) const {
 #pragma pop
 
 
-/* 800343DC-80034428 004C+00 rc=1 efc=0 .text      init__17dSv_letter_info_cFv                                  */
+/* 800343DC-80034428 004C+00 rc=0 efc=0 .text      init__17dSv_letter_info_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1529,7 +1529,7 @@ asm void dSv_letter_info_c::init() {
 #pragma pop
 
 
-/* 80034428-8003444C 0024+00 rc=2 efc=2 .text      onLetterGetFlag__17dSv_letter_info_cFi                       */
+/* 80034428-8003444C 0024+00 rc=0 efc=0 .text      onLetterGetFlag__17dSv_letter_info_cFi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1540,7 +1540,7 @@ asm void dSv_letter_info_c::onLetterGetFlag(int field_0) {
 #pragma pop
 
 
-/* 8003444C-80034474 0028+00 rc=4 efc=4 .text      isLetterGetFlag__17dSv_letter_info_cCFi                      */
+/* 8003444C-80034474 0028+00 rc=0 efc=0 .text      isLetterGetFlag__17dSv_letter_info_cCFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1551,7 +1551,7 @@ asm void dSv_letter_info_c::isLetterGetFlag(int field_0) const {
 #pragma pop
 
 
-/* 80034474-8003449C 0028+00 rc=1 efc=1 .text      onLetterReadFlag__17dSv_letter_info_cFi                      */
+/* 80034474-8003449C 0028+00 rc=0 efc=0 .text      onLetterReadFlag__17dSv_letter_info_cFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1562,7 +1562,7 @@ asm void dSv_letter_info_c::onLetterReadFlag(int field_0) {
 #pragma pop
 
 
-/* 8003449C-800344C8 002C+00 rc=3 efc=3 .text      isLetterReadFlag__17dSv_letter_info_cCFi                     */
+/* 8003449C-800344C8 002C+00 rc=0 efc=0 .text      isLetterReadFlag__17dSv_letter_info_cCFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1573,7 +1573,7 @@ asm void dSv_letter_info_c::isLetterReadFlag(int field_0) const {
 #pragma pop
 
 
-/* 800344C8-800344FC 0034+00 rc=1 efc=0 .text      init__18dSv_fishing_info_cFv                                 */
+/* 800344C8-800344FC 0034+00 rc=0 efc=0 .text      init__18dSv_fishing_info_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1595,7 +1595,7 @@ asm void dSv_fishing_info_c::addFishCount(u8 field_0) {
 #pragma pop
 
 
-/* 80034518-800345AC 0094+00 rc=1 efc=0 .text      init__17dSv_player_info_cFv                                  */
+/* 80034518-800345AC 0094+00 rc=0 efc=0 .text      init__17dSv_player_info_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1606,7 +1606,7 @@ asm void dSv_player_info_c::init() {
 #pragma pop
 
 
-/* 800345AC-80034644 0098+00 rc=1 efc=0 .text      init__19dSv_player_config_cFv                                */
+/* 800345AC-80034644 0098+00 rc=0 efc=0 .text      init__19dSv_player_config_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1617,7 +1617,7 @@ asm void dSv_player_config_c::init() {
 #pragma pop
 
 
-/* 80034644-80034684 0040+00 rc=4 efc=4 .text      checkVibration__19dSv_player_config_cCFv                     */
+/* 80034644-80034684 0040+00 rc=0 efc=0 .text      checkVibration__19dSv_player_config_cCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1628,7 +1628,7 @@ asm void dSv_player_config_c::checkVibration() const {
 #pragma pop
 
 
-/* 80034684-8003468C 0008+00 rc=3 efc=2 .text      getSound__19dSv_player_config_cFv                            */
+/* 80034684-8003468C 0008+00 rc=0 efc=0 .text      getSound__19dSv_player_config_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1639,7 +1639,7 @@ asm void dSv_player_config_c::getSound() {
 #pragma pop
 
 
-/* 8003468C-80034694 0008+00 rc=2 efc=1 .text      setSound__19dSv_player_config_cFUc                           */
+/* 8003468C-80034694 0008+00 rc=0 efc=0 .text      setSound__19dSv_player_config_cFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1650,7 +1650,7 @@ asm void dSv_player_config_c::setSound(u8 field_0) {
 #pragma pop
 
 
-/* 80034694-8003469C 0008+00 rc=2 efc=1 .text      getVibration__19dSv_player_config_cFv                        */
+/* 80034694-8003469C 0008+00 rc=0 efc=0 .text      getVibration__19dSv_player_config_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1661,7 +1661,7 @@ asm void dSv_player_config_c::getVibration() {
 #pragma pop
 
 
-/* 8003469C-800346A4 0008+00 rc=1 efc=1 .text      setVibration__19dSv_player_config_cFUc                       */
+/* 8003469C-800346A4 0008+00 rc=0 efc=0 .text      setVibration__19dSv_player_config_cFUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1672,7 +1672,7 @@ asm void dSv_player_config_c::setVibration(u8 field_0) {
 #pragma pop
 
 
-/* 800346A4-80034750 00AC+00 rc=1 efc=0 .text      init__12dSv_player_cFv                                       */
+/* 800346A4-80034750 00AC+00 rc=0 efc=0 .text      init__12dSv_player_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1683,7 +1683,7 @@ asm void dSv_player_c::init() {
 #pragma pop
 
 
-/* 80034750-800347A0 0050+00 rc=1 efc=0 .text      init__12dSv_memBit_cFv                                       */
+/* 80034750-800347A0 0050+00 rc=0 efc=0 .text      init__12dSv_memBit_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1716,7 +1716,7 @@ asm void dSv_memBit_c::offTbox(int field_0) {
 #pragma pop
 
 
-/* 800347E8-80034810 0028+00 rc=6 efc=6 .text      isTbox__12dSv_memBit_cCFi                                    */
+/* 800347E8-80034810 0028+00 rc=0 efc=0 .text      isTbox__12dSv_memBit_cCFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1727,7 +1727,7 @@ asm void dSv_memBit_c::isTbox(int field_0) const {
 #pragma pop
 
 
-/* 80034810-80034838 0028+00 rc=6 efc=5 .text      onSwitch__12dSv_memBit_cFi                                   */
+/* 80034810-80034838 0028+00 rc=0 efc=0 .text      onSwitch__12dSv_memBit_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1738,7 +1738,7 @@ asm void dSv_memBit_c::onSwitch(int field_0) {
 #pragma pop
 
 
-/* 80034838-80034860 0028+00 rc=4 efc=3 .text      offSwitch__12dSv_memBit_cFi                                  */
+/* 80034838-80034860 0028+00 rc=0 efc=0 .text      offSwitch__12dSv_memBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1749,7 +1749,7 @@ asm void dSv_memBit_c::offSwitch(int field_0) {
 #pragma pop
 
 
-/* 80034860-8003488C 002C+00 rc=12 efc=11 .text      isSwitch__12dSv_memBit_cCFi                                  */
+/* 80034860-8003488C 002C+00 rc=0 efc=0 .text      isSwitch__12dSv_memBit_cCFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1760,7 +1760,7 @@ asm void dSv_memBit_c::isSwitch(int field_0) const {
 #pragma pop
 
 
-/* 8003488C-800348C4 0038+00 rc=1 efc=0 .text      revSwitch__12dSv_memBit_cFi                                  */
+/* 8003488C-800348C4 0038+00 rc=0 efc=0 .text      revSwitch__12dSv_memBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1771,7 +1771,7 @@ asm void dSv_memBit_c::revSwitch(int field_0) {
 #pragma pop
 
 
-/* 800348C4-800348EC 0028+00 rc=1 efc=0 .text      onItem__12dSv_memBit_cFi                                     */
+/* 800348C4-800348EC 0028+00 rc=0 efc=0 .text      onItem__12dSv_memBit_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1782,7 +1782,7 @@ asm void dSv_memBit_c::onItem(int field_0) {
 #pragma pop
 
 
-/* 800348EC-80034918 002C+00 rc=3 efc=2 .text      isItem__12dSv_memBit_cCFi                                    */
+/* 800348EC-80034918 002C+00 rc=0 efc=0 .text      isItem__12dSv_memBit_cCFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1793,7 +1793,7 @@ asm void dSv_memBit_c::isItem(int field_0) const {
 #pragma pop
 
 
-/* 80034918-80034934 001C+00 rc=8 efc=8 .text      onDungeonItem__12dSv_memBit_cFi                              */
+/* 80034918-80034934 001C+00 rc=0 efc=0 .text      onDungeonItem__12dSv_memBit_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1804,7 +1804,7 @@ asm void dSv_memBit_c::onDungeonItem(int field_0) {
 #pragma pop
 
 
-/* 80034934-80034954 0020+00 rc=27 efc=27 .text      isDungeonItem__12dSv_memBit_cCFi                             */
+/* 80034934-80034954 0020+00 rc=0 efc=0 .text      isDungeonItem__12dSv_memBit_cCFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1815,7 +1815,7 @@ asm void dSv_memBit_c::isDungeonItem(int field_0) const {
 #pragma pop
 
 
-/* 80034954-8003498C 0038+00 rc=2 efc=0 .text      init__11dSv_event_cFv                                        */
+/* 80034954-8003498C 0038+00 rc=0 efc=0 .text      init__11dSv_event_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1826,7 +1826,7 @@ asm void dSv_event_c::init() {
 #pragma pop
 
 
-/* 8003498C-800349A4 0018+00 rc=28 efc=27 .text      onEventBit__11dSv_event_cFUs                                 */
+/* 8003498C-800349A4 0018+00 rc=0 efc=0 .text      onEventBit__11dSv_event_cFUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1837,7 +1837,7 @@ asm void dSv_event_c::onEventBit(u16 field_0) {
 #pragma pop
 
 
-/* 800349A4-800349BC 0018+00 rc=15 efc=14 .text      offEventBit__11dSv_event_cFUs                                */
+/* 800349A4-800349BC 0018+00 rc=0 efc=0 .text      offEventBit__11dSv_event_cFUs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1848,7 +1848,7 @@ asm void dSv_event_c::offEventBit(u16 field_0) {
 #pragma pop
 
 
-/* 800349BC-800349E0 0024+00 rc=80 efc=77 .text      isEventBit__11dSv_event_cCFUs                                */
+/* 800349BC-800349E0 0024+00 rc=0 efc=0 .text      isEventBit__11dSv_event_cCFUs                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1859,7 +1859,7 @@ asm void dSv_event_c::isEventBit(u16 field_0) const {
 #pragma pop
 
 
-/* 800349E0-80034A04 0024+00 rc=12 efc=12 .text      setEventReg__11dSv_event_cFUsUc                              */
+/* 800349E0-80034A04 0024+00 rc=0 efc=0 .text      setEventReg__11dSv_event_cFUsUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1870,7 +1870,7 @@ asm void dSv_event_c::setEventReg(u16 field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80034A04-80034A1C 0018+00 rc=19 efc=19 .text      getEventReg__11dSv_event_cCFUs                               */
+/* 80034A04-80034A1C 0018+00 rc=0 efc=0 .text      getEventReg__11dSv_event_cCFUs                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1881,7 +1881,7 @@ asm void dSv_event_c::getEventReg(u16 field_0) const {
 #pragma pop
 
 
-/* 80034A1C-80034A64 0048+00 rc=1 efc=0 .text      init__14dSv_MiniGame_cFv                                     */
+/* 80034A1C-80034A64 0048+00 rc=0 efc=0 .text      init__14dSv_MiniGame_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1892,7 +1892,7 @@ asm void dSv_MiniGame_c::init() {
 #pragma pop
 
 
-/* 80034A64-80034A84 0020+00 rc=4 efc=2 .text      init__12dSv_memory_cFv                                       */
+/* 80034A64-80034A84 0020+00 rc=0 efc=0 .text      init__12dSv_memory_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1903,7 +1903,7 @@ asm void dSv_memory_c::init() {
 #pragma pop
 
 
-/* 80034A84-80034AA4 0020+00 rc=2 efc=1 .text      init__13dSv_memory2_cFv                                      */
+/* 80034A84-80034AA4 0020+00 rc=0 efc=0 .text      init__13dSv_memory2_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1914,7 +1914,7 @@ asm void dSv_memory2_c::init() {
 #pragma pop
 
 
-/* 80034AA4-80034AC8 0024+00 rc=1 efc=1 .text      onVisitedRoom__13dSv_memory2_cFi                             */
+/* 80034AA4-80034AC8 0024+00 rc=0 efc=0 .text      onVisitedRoom__13dSv_memory2_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1925,7 +1925,7 @@ asm void dSv_memory2_c::onVisitedRoom(int field_0) {
 #pragma pop
 
 
-/* 80034AC8-80034AEC 0024+00 rc=1 efc=1 .text      offVisitedRoom__13dSv_memory2_cFi                            */
+/* 80034AC8-80034AEC 0024+00 rc=0 efc=0 .text      offVisitedRoom__13dSv_memory2_cFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1936,7 +1936,7 @@ asm void dSv_memory2_c::offVisitedRoom(int field_0) {
 #pragma pop
 
 
-/* 80034AEC-80034B14 0028+00 rc=4 efc=4 .text      isVisitedRoom__13dSv_memory2_cFi                             */
+/* 80034AEC-80034B14 0028+00 rc=0 efc=0 .text      isVisitedRoom__13dSv_memory2_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1947,7 +1947,7 @@ asm void dSv_memory2_c::isVisitedRoom(int field_0) {
 #pragma pop
 
 
-/* 80034B14-80034B98 0084+00 rc=2 efc=1 .text      init__12dSv_danBit_cFSc                                      */
+/* 80034B14-80034B98 0084+00 rc=0 efc=0 .text      init__12dSv_danBit_cFSc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1958,7 +1958,7 @@ asm void dSv_danBit_c::init(s8 field_0) {
 #pragma pop
 
 
-/* 80034B98-80034BC0 0028+00 rc=3 efc=2 .text      onSwitch__12dSv_danBit_cFi                                   */
+/* 80034B98-80034BC0 0028+00 rc=0 efc=0 .text      onSwitch__12dSv_danBit_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1969,7 +1969,7 @@ asm void dSv_danBit_c::onSwitch(int field_0) {
 #pragma pop
 
 
-/* 80034BC0-80034BE8 0028+00 rc=2 efc=1 .text      offSwitch__12dSv_danBit_cFi                                  */
+/* 80034BC0-80034BE8 0028+00 rc=0 efc=0 .text      offSwitch__12dSv_danBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1980,7 +1980,7 @@ asm void dSv_danBit_c::offSwitch(int field_0) {
 #pragma pop
 
 
-/* 80034BE8-80034C14 002C+00 rc=7 efc=6 .text      isSwitch__12dSv_danBit_cCFi                                  */
+/* 80034BE8-80034C14 002C+00 rc=0 efc=0 .text      isSwitch__12dSv_danBit_cCFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1991,7 +1991,7 @@ asm void dSv_danBit_c::isSwitch(int field_0) const {
 #pragma pop
 
 
-/* 80034C14-80034C4C 0038+00 rc=1 efc=0 .text      revSwitch__12dSv_danBit_cFi                                  */
+/* 80034C14-80034C4C 0038+00 rc=0 efc=0 .text      revSwitch__12dSv_danBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2002,7 +2002,7 @@ asm void dSv_danBit_c::revSwitch(int field_0) {
 #pragma pop
 
 
-/* 80034C4C-80034C74 0028+00 rc=1 efc=0 .text      onItem__12dSv_danBit_cFi                                     */
+/* 80034C4C-80034C74 0028+00 rc=0 efc=0 .text      onItem__12dSv_danBit_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2013,7 +2013,7 @@ asm void dSv_danBit_c::onItem(int field_0) {
 #pragma pop
 
 
-/* 80034C74-80034CA0 002C+00 rc=3 efc=2 .text      isItem__12dSv_danBit_cCFi                                    */
+/* 80034C74-80034CA0 002C+00 rc=0 efc=0 .text      isItem__12dSv_danBit_cCFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2024,7 +2024,7 @@ asm void dSv_danBit_c::isItem(int field_0) const {
 #pragma pop
 
 
-/* 80034CA0-80034CEC 004C+00 rc=1 efc=0 .text      init__13dSv_zoneBit_cFv                                      */
+/* 80034CA0-80034CEC 004C+00 rc=0 efc=0 .text      init__13dSv_zoneBit_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2035,7 +2035,7 @@ asm void dSv_zoneBit_c::init() {
 #pragma pop
 
 
-/* 80034CEC-80034CF8 000C+00 rc=3 efc=3 .text      clearRoomSwitch__13dSv_zoneBit_cFv                           */
+/* 80034CEC-80034CF8 000C+00 rc=0 efc=0 .text      clearRoomSwitch__13dSv_zoneBit_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2046,7 +2046,7 @@ asm void dSv_zoneBit_c::clearRoomSwitch() {
 #pragma pop
 
 
-/* 80034CF8-80034D04 000C+00 rc=3 efc=3 .text      clearRoomItem__13dSv_zoneBit_cFv                             */
+/* 80034CF8-80034D04 000C+00 rc=0 efc=0 .text      clearRoomItem__13dSv_zoneBit_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2057,7 +2057,7 @@ asm void dSv_zoneBit_c::clearRoomItem() {
 #pragma pop
 
 
-/* 80034D04-80034D2C 0028+00 rc=2 efc=1 .text      onSwitch__13dSv_zoneBit_cFi                                  */
+/* 80034D04-80034D2C 0028+00 rc=0 efc=0 .text      onSwitch__13dSv_zoneBit_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2068,7 +2068,7 @@ asm void dSv_zoneBit_c::onSwitch(int field_0) {
 #pragma pop
 
 
-/* 80034D2C-80034D50 0024+00 rc=2 efc=1 .text      offSwitch__13dSv_zoneBit_cFi                                 */
+/* 80034D2C-80034D50 0024+00 rc=0 efc=0 .text      offSwitch__13dSv_zoneBit_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2079,7 +2079,7 @@ asm void dSv_zoneBit_c::offSwitch(int field_0) {
 #pragma pop
 
 
-/* 80034D50-80034D78 0028+00 rc=2 efc=1 .text      isSwitch__13dSv_zoneBit_cCFi                                 */
+/* 80034D50-80034D78 0028+00 rc=0 efc=0 .text      isSwitch__13dSv_zoneBit_cCFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2090,7 +2090,7 @@ asm void dSv_zoneBit_c::isSwitch(int field_0) const {
 #pragma pop
 
 
-/* 80034D78-80034DAC 0034+00 rc=1 efc=0 .text      revSwitch__13dSv_zoneBit_cFi                                 */
+/* 80034D78-80034DAC 0034+00 rc=0 efc=0 .text      revSwitch__13dSv_zoneBit_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2101,7 +2101,7 @@ asm void dSv_zoneBit_c::revSwitch(int field_0) {
 #pragma pop
 
 
-/* 80034DAC-80034DC8 001C+00 rc=2 efc=1 .text      onOneSwitch__13dSv_zoneBit_cFi                               */
+/* 80034DAC-80034DC8 001C+00 rc=0 efc=0 .text      onOneSwitch__13dSv_zoneBit_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2112,7 +2112,7 @@ asm void dSv_zoneBit_c::onOneSwitch(int field_0) {
 #pragma pop
 
 
-/* 80034DC8-80034DE0 0018+00 rc=2 efc=1 .text      offOneSwitch__13dSv_zoneBit_cFi                              */
+/* 80034DC8-80034DE0 0018+00 rc=0 efc=0 .text      offOneSwitch__13dSv_zoneBit_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2123,7 +2123,7 @@ asm void dSv_zoneBit_c::offOneSwitch(int field_0) {
 #pragma pop
 
 
-/* 80034DE0-80034DFC 001C+00 rc=2 efc=1 .text      isOneSwitch__13dSv_zoneBit_cCFi                              */
+/* 80034DE0-80034DFC 001C+00 rc=0 efc=0 .text      isOneSwitch__13dSv_zoneBit_cCFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2134,7 +2134,7 @@ asm void dSv_zoneBit_c::isOneSwitch(int field_0) const {
 #pragma pop
 
 
-/* 80034DFC-80034E24 0028+00 rc=1 efc=0 .text      revOneSwitch__13dSv_zoneBit_cFi                              */
+/* 80034DFC-80034E24 0028+00 rc=0 efc=0 .text      revOneSwitch__13dSv_zoneBit_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2145,7 +2145,7 @@ asm void dSv_zoneBit_c::revOneSwitch(int field_0) {
 #pragma pop
 
 
-/* 80034E24-80034E50 002C+00 rc=1 efc=0 .text      onItem__13dSv_zoneBit_cFi                                    */
+/* 80034E24-80034E50 002C+00 rc=0 efc=0 .text      onItem__13dSv_zoneBit_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2156,7 +2156,7 @@ asm void dSv_zoneBit_c::onItem(int field_0) {
 #pragma pop
 
 
-/* 80034E50-80034E7C 002C+00 rc=2 efc=1 .text      isItem__13dSv_zoneBit_cCFi                                   */
+/* 80034E50-80034E7C 002C+00 rc=0 efc=0 .text      isItem__13dSv_zoneBit_cCFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2167,7 +2167,7 @@ asm void dSv_zoneBit_c::isItem(int field_0) const {
 #pragma pop
 
 
-/* 80034E7C-80034E98 001C+00 rc=1 efc=0 .text      onOneItem__13dSv_zoneBit_cFi                                 */
+/* 80034E7C-80034E98 001C+00 rc=0 efc=0 .text      onOneItem__13dSv_zoneBit_cFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2178,7 +2178,7 @@ asm void dSv_zoneBit_c::onOneItem(int field_0) {
 #pragma pop
 
 
-/* 80034E98-80034EB4 001C+00 rc=2 efc=1 .text      isOneItem__13dSv_zoneBit_cCFi                                */
+/* 80034E98-80034EB4 001C+00 rc=0 efc=0 .text      isOneItem__13dSv_zoneBit_cCFi                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2189,7 +2189,7 @@ asm void dSv_zoneBit_c::isOneItem(int field_0) const {
 #pragma pop
 
 
-/* 80034EB4-80034ED4 0020+00 rc=1 efc=0 .text      init__15dSv_zoneActor_cFv                                    */
+/* 80034EB4-80034ED4 0020+00 rc=0 efc=0 .text      init__15dSv_zoneActor_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2200,7 +2200,7 @@ asm void dSv_zoneActor_c::init() {
 #pragma pop
 
 
-/* 80034ED4-80034EF8 0024+00 rc=1 efc=0 .text      on__15dSv_zoneActor_cFi                                      */
+/* 80034ED4-80034EF8 0024+00 rc=0 efc=0 .text      on__15dSv_zoneActor_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2211,7 +2211,7 @@ asm void dSv_zoneActor_c::on(int field_0) {
 #pragma pop
 
 
-/* 80034EF8-80034F1C 0024+00 rc=1 efc=0 .text      off__15dSv_zoneActor_cFi                                     */
+/* 80034EF8-80034F1C 0024+00 rc=0 efc=0 .text      off__15dSv_zoneActor_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2222,7 +2222,7 @@ asm void dSv_zoneActor_c::off(int field_0) {
 #pragma pop
 
 
-/* 80034F1C-80034F44 0028+00 rc=1 efc=0 .text      is__15dSv_zoneActor_cCFi                                     */
+/* 80034F1C-80034F44 0028+00 rc=0 efc=0 .text      is__15dSv_zoneActor_cCFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2233,7 +2233,7 @@ asm void dSv_zoneActor_c::is(int field_0) const {
 #pragma pop
 
 
-/* 80034F44-80034F80 003C+00 rc=2 efc=0 .text      init__10dSv_zone_cFi                                         */
+/* 80034F44-80034F80 003C+00 rc=0 efc=0 .text      init__10dSv_zone_cFi                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2244,7 +2244,7 @@ asm void dSv_zone_c::init(int field_0) {
 #pragma pop
 
 
-/* 80034F80-80034FA4 0024+00 rc=3 efc=3 .text      setRoom__13dSv_restart_cFRC4cXyzsSc                          */
+/* 80034F80-80034FA4 0024+00 rc=0 efc=0 .text      setRoom__13dSv_restart_cFRC4cXyzsSc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2255,7 +2255,7 @@ asm void dSv_restart_c::setRoom(cXyz const& field_0, s16 field_1, s8 field_2) {
 #pragma pop
 
 
-/* 80034FA4-80034FCC 0028+00 rc=2 efc=2 .text      set__17dSv_turnRestart_cFRC4cXyzsScUl                        */
+/* 80034FA4-80034FCC 0028+00 rc=0 efc=0 .text      set__17dSv_turnRestart_cFRC4cXyzsScUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2266,7 +2266,7 @@ asm void dSv_turnRestart_c::set(cXyz const& field_0, s16 field_1, s8 field_2, u3
 #pragma pop
 
 
-/* 80034FCC-8003501C 0050+00 rc=2 efc=2 .text      init__10dSv_info_cFv                                         */
+/* 80034FCC-8003501C 0050+00 rc=0 efc=0 .text      init__10dSv_info_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2277,7 +2277,7 @@ asm void dSv_info_c::init() {
 #pragma pop
 
 
-/* 8003501C-800350A8 008C+00 rc=2 efc=0 .text      init__10dSv_save_cFv                                         */
+/* 8003501C-800350A8 008C+00 rc=0 efc=0 .text      init__10dSv_save_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2288,7 +2288,7 @@ asm void dSv_save_c::init() {
 #pragma pop
 
 
-/* 800350A8-800350BC 0014+00 rc=6 efc=6 .text      getSave2__10dSv_save_cFi                                     */
+/* 800350A8-800350BC 0014+00 rc=0 efc=0 .text      getSave2__10dSv_save_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2299,7 +2299,7 @@ asm void dSv_save_c::getSave2(int field_0) {
 #pragma pop
 
 
-/* 800350BC-800350F0 0034+00 rc=1 efc=1 .text      getSave__10dSv_info_cFi                                      */
+/* 800350BC-800350F0 0034+00 rc=0 efc=0 .text      getSave__10dSv_info_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2310,7 +2310,7 @@ asm void dSv_info_c::getSave(int field_0) {
 #pragma pop
 
 
-/* 800350F0-8003514C 005C+00 rc=2 efc=2 .text      putSave__10dSv_info_cFi                                      */
+/* 800350F0-8003514C 005C+00 rc=0 efc=0 .text      putSave__10dSv_info_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2321,7 +2321,7 @@ asm void dSv_info_c::putSave(int field_0) {
 #pragma pop
 
 
-/* 8003514C-800351A4 0058+00 rc=2 efc=1 .text      initZone__10dSv_info_cFv                                     */
+/* 8003514C-800351A4 0058+00 rc=0 efc=0 .text      initZone__10dSv_info_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2332,7 +2332,7 @@ asm void dSv_info_c::initZone() {
 #pragma pop
 
 
-/* 800351A4-80035200 005C+00 rc=1 efc=1 .text      createZone__10dSv_info_cFi                                   */
+/* 800351A4-80035200 005C+00 rc=0 efc=0 .text      createZone__10dSv_info_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2343,7 +2343,7 @@ asm void dSv_info_c::createZone(int field_0) {
 #pragma pop
 
 
-/* 80035200-800352B0 00B0+00 rc=8 efc=8 .text      onSwitch__10dSv_info_cFii                                    */
+/* 80035200-800352B0 00B0+00 rc=0 efc=0 .text      onSwitch__10dSv_info_cFii                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2354,7 +2354,7 @@ asm void dSv_info_c::onSwitch(int field_0, int field_1) {
 #pragma pop
 
 
-/* 800352B0-80035360 00B0+00 rc=2 efc=2 .text      offSwitch__10dSv_info_cFii                                   */
+/* 800352B0-80035360 00B0+00 rc=0 efc=0 .text      offSwitch__10dSv_info_cFii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2365,7 +2365,7 @@ asm void dSv_info_c::offSwitch(int field_0, int field_1) {
 #pragma pop
 
 
-/* 80035360-8003542C 00CC+00 rc=27 efc=27 .text      isSwitch__10dSv_info_cCFii                                   */
+/* 80035360-8003542C 00CC+00 rc=0 efc=0 .text      isSwitch__10dSv_info_cCFii                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2387,7 +2387,7 @@ asm void dSv_info_c::revSwitch(int field_0, int field_1) {
 #pragma pop
 
 
-/* 800354E0-80035590 00B0+00 rc=1 efc=1 .text      onItem__10dSv_info_cFii                                      */
+/* 800354E0-80035590 00B0+00 rc=0 efc=0 .text      onItem__10dSv_info_cFii                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2398,7 +2398,7 @@ asm void dSv_info_c::onItem(int field_0, int field_1) {
 #pragma pop
 
 
-/* 80035590-80035644 00B4+00 rc=1 efc=1 .text      isItem__10dSv_info_cCFii                                     */
+/* 80035590-80035644 00B4+00 rc=0 efc=0 .text      isItem__10dSv_info_cCFii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2409,7 +2409,7 @@ asm void dSv_info_c::isItem(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 80035644-800356B4 0070+00 rc=1 efc=1 .text      onActor__10dSv_info_cFii                                     */
+/* 80035644-800356B4 0070+00 rc=0 efc=0 .text      onActor__10dSv_info_cFii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2431,7 +2431,7 @@ asm void dSv_info_c::offActor(int field_0, int field_1) {
 #pragma pop
 
 
-/* 80035724-80035798 0074+00 rc=3 efc=3 .text      isActor__10dSv_info_cCFii                                    */
+/* 80035724-80035798 0074+00 rc=0 efc=0 .text      isActor__10dSv_info_cCFii                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2442,7 +2442,7 @@ asm void dSv_info_c::isActor(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 80035798-80035A04 026C+00 rc=1 efc=1 .text      memory_to_card__10dSv_info_cFPci                             */
+/* 80035798-80035A04 026C+00 rc=0 efc=0 .text      memory_to_card__10dSv_info_cFPci                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2453,7 +2453,7 @@ asm void dSv_info_c::memory_to_card(char* field_0, int field_1) {
 #pragma pop
 
 
-/* 80035A04-80035BD0 01CC+00 rc=2 efc=2 .text      card_to_memory__10dSv_info_cFPci                             */
+/* 80035A04-80035BD0 01CC+00 rc=0 efc=0 .text      card_to_memory__10dSv_info_cFPci                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2464,7 +2464,7 @@ asm void dSv_info_c::card_to_memory(char* field_0, int field_1) {
 #pragma pop
 
 
-/* 80035BD0-80035C88 00B8+00 rc=3 efc=3 .text      initdata_to_card__10dSv_info_cFPci                           */
+/* 80035BD0-80035C88 00B8+00 rc=0 efc=0 .text      initdata_to_card__10dSv_info_cFPci                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

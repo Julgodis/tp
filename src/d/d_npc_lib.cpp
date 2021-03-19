@@ -9,10 +9,16 @@
 // Types:
 // 
 
-struct J3DModel {
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 8026745C */ void operator+=(csXyz&);
 };
 
 struct fopAc_ac_c {
+};
+
+struct J3DModel {
 };
 
 struct Vec {
@@ -24,12 +30,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
-};
-
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 8026745C */ void operator+=(csXyz&);
 };
 
 struct dNpcLib_lookat_c {
@@ -62,15 +62,15 @@ extern "C" void setPrm__16dNpcLib_lookat_cFv(); // 1
 extern "C" void update__16dNpcLib_lookat_cFv(); // 1
 extern "C" void limitter__16dNpcLib_lookat_cFPssss(); // 1
 extern "C" void __dt__16dNpcLib_lookat_cFv(); // 1
-SECTION_DATA extern void*const __vt__16dNpcLib_lookat_c[4];
+SECTION_DATA extern void* const __vt__16dNpcLib_lookat_c[3 + 1 /* padding */];
 SECTION_SDATA2 extern u8 d_d_npc_lib__lit_3864[4];
 SECTION_SDATA2 extern f32 d_d_npc_lib__lit_3865;
 SECTION_SDATA2 extern f64 d_d_npc_lib__lit_3866;
 SECTION_SDATA2 extern f64 d_d_npc_lib__lit_3867;
 SECTION_SDATA2 extern u8 d_d_npc_lib__lit_3868[8];
-SECTION_SDATA2 extern f32 d_d_npc_lib__lit_3869;
+SECTION_SDATA2 extern f32 d_d_npc_lib__lit_3869[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 d_d_npc_lib__lit_3873;
-SECTION_SDATA2 extern f32 d_d_npc_lib__lit_3970;
+SECTION_SDATA2 extern f32 d_d_npc_lib__lit_3970[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -128,10 +128,10 @@ SECTION_SBSS extern u8 data_80451164[4];
 // 
 
 /* ############################################################################################## */
-/* 803C2B88-803C2B98 000C+04 rc=2 efc=0 .data      __vt__16dNpcLib_lookat_c                                     */
-void* const __vt__16dNpcLib_lookat_c[4] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803C2B88-803C2B98 000C+04 rc=0 efc=0 .data      __vt__16dNpcLib_lookat_c                                     */
+void* const __vt__16dNpcLib_lookat_c[3 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__16dNpcLib_lookat_cFv,
 	/* padding */
 	NULL,
@@ -160,30 +160,33 @@ asm void dNpcLib_lookat_c::init(J3DModel* field_0, int* field_1, csXyz* field_2,
 
 
 /* ############################################################################################## */
-/* 80454DE8-80454DEC 0004+00 rc=3 efc=0 .sdata2    @3864                                                        */
+/* 80454DE8-80454DEC 0004+00 rc=0 efc=0 .sdata2    @3864                                                        */
 u8 d_d_npc_lib__lit_3864[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454DEC-80454DF0 0004+00 rc=1 efc=0 .sdata2    @3865                                                        */
+/* 80454DEC-80454DF0 0004+00 rc=0 efc=0 .sdata2    @3865                                                        */
 f32 d_d_npc_lib__lit_3865 = 1.0f;
 
-/* 80454DF0-80454DF8 0008+00 rc=2 efc=0 .sdata2    @3866                                                        */
+/* 80454DF0-80454DF8 0008+00 rc=0 efc=0 .sdata2    @3866                                                        */
 f64 d_d_npc_lib__lit_3866 = 0.5;
 
-/* 80454DF8-80454E00 0008+00 rc=2 efc=0 .sdata2    @3867                                                        */
+/* 80454DF8-80454E00 0008+00 rc=0 efc=0 .sdata2    @3867                                                        */
 f64 d_d_npc_lib__lit_3867 = 3.0;
 
-/* 80454E00-80454E08 0008+00 rc=2 efc=0 .sdata2    @3868                                                        */
+/* 80454E00-80454E08 0008+00 rc=0 efc=0 .sdata2    @3868                                                        */
 u8 d_d_npc_lib__lit_3868[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454E08-80454E10 0004+04 rc=1 efc=0 .sdata2    @3869                                                        */
-f32 d_d_npc_lib__lit_3869 = 0.5f;
-/* padding 4 bytes */
+/* 80454E08-80454E10 0004+04 rc=0 efc=0 .sdata2    @3869                                                        */
+f32 d_d_npc_lib__lit_3869[1 + 1 /* padding */] = {
+	0.5f,
+	/* padding */
+	0.0f,
+};
 
-/* 80454E10-80454E18 0008+00 rc=2 efc=0 .sdata2    @3873                                                        */
+/* 80454E10-80454E18 0008+00 rc=0 efc=0 .sdata2    @3873                                                        */
 f64 d_d_npc_lib__lit_3873 = 4503601774854144.0 /* cast s32 to float */;
 
 /* 80251534-80251B60 062C+00 rc=0 efc=0 .text      action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi     */
@@ -204,11 +207,14 @@ void dNpcLib_lookat_c::dbView() {
 
 
 /* ############################################################################################## */
-/* 80454E18-80454E20 0004+04 rc=1 efc=0 .sdata2    @3970                                                        */
-f32 d_d_npc_lib__lit_3970 = 2.0f / 5.0f;
-/* padding 4 bytes */
+/* 80454E18-80454E20 0004+04 rc=0 efc=0 .sdata2    @3970                                                        */
+f32 d_d_npc_lib__lit_3970[1 + 1 /* padding */] = {
+	2.0f / 5.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80251B64-80251EF8 0394+00 rc=1 efc=0 .text      setPrm__16dNpcLib_lookat_cFv                                 */
+/* 80251B64-80251EF8 0394+00 rc=0 efc=0 .text      setPrm__16dNpcLib_lookat_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -219,7 +225,7 @@ asm void dNpcLib_lookat_c::setPrm() {
 #pragma pop
 
 
-/* 80251EF8-80252018 0120+00 rc=1 efc=0 .text      update__16dNpcLib_lookat_cFv                                 */
+/* 80251EF8-80252018 0120+00 rc=0 efc=0 .text      update__16dNpcLib_lookat_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -230,7 +236,7 @@ asm void dNpcLib_lookat_c::update() {
 #pragma pop
 
 
-/* 80252018-80252094 007C+00 rc=1 efc=0 .text      limitter__16dNpcLib_lookat_cFPssss                           */
+/* 80252018-80252094 007C+00 rc=0 efc=0 .text      limitter__16dNpcLib_lookat_cFPssss                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,7 +247,7 @@ asm void dNpcLib_lookat_c::limitter(s16* field_0, s16 field_1, s16 field_2, s16 
 #pragma pop
 
 
-/* 80252094-8025217C 00E8+00 rc=1 efc=0 .text      __dt__16dNpcLib_lookat_cFv                                   */
+/* 80252094-8025217C 00E8+00 rc=0 efc=0 .text      __dt__16dNpcLib_lookat_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

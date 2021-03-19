@@ -40,7 +40,7 @@ extern "C" void fpcM_PauseDisable__FPvUc(); // 1
 // Declarations:
 // 
 
-/* 80020548-80020594 004C+00 rc=2 efc=2 .text      fopScnPause_Enable__FP11scene_class                          */
+/* 80020548-80020594 004C+00 rc=0 efc=0 .text      fopScnPause_Enable__FP11scene_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +51,7 @@ asm void fopScnPause_Enable(scene_class* field_0) {
 #pragma pop
 
 
-/* 80020594-8002064C 00B8+00 rc=2 efc=2 .text      fopScnPause_Disable__FP11scene_class                         */
+/* 80020594-8002064C 00B8+00 rc=0 efc=0 .text      fopScnPause_Disable__FP11scene_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

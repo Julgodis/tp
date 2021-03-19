@@ -450,7 +450,7 @@ def load_f(path, name, file) -> Object:
         fail("only support big-endianess")
     if header.e_ident[elf.EI_VERSION] != 1:
         fail("invalid elf version")
-    if header.e_type != 1:
+    if header.e_type != 1 and header.e_type != 2:
         fail("invalid object file type")
     if header.e_machine != 20:
         fail("invalid target")

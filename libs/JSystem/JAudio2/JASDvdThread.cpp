@@ -53,10 +53,10 @@ SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 // 
 
 /* ############################################################################################## */
-/* 80451208-80451210 0004+04 rc=2 efc=0 .sbss      sThread__6JASDvd                                             */
+/* 80451208-80451210 0004+04 rc=0 efc=0 .sbss      sThread__6JASDvd                                             */
 u8 sThread__6JASDvd[4 + 4 /* padding */];
 
-/* 8028FEFC-8028FF04 0008+00 rc=6 efc=6 .text      getThreadPointer__6JASDvdFv                                  */
+/* 8028FEFC-8028FF04 0008+00 rc=0 efc=0 .text      getThreadPointer__6JASDvdFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,7 +67,7 @@ asm void JASDvd::getThreadPointer() {
 #pragma pop
 
 
-/* 8028FF04-8028FFA8 00A4+00 rc=1 efc=1 .text      createThread__6JASDvdFliUl                                   */
+/* 8028FF04-8028FFA8 00A4+00 rc=0 efc=0 .text      createThread__6JASDvdFliUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -28,20 +28,20 @@ extern "C" void GXSetTevDirect(); // 1
 extern "C" void __GXUpdateBPMask(); // 1
 extern "C" void __GXSetIndirectMask(); // 1
 extern "C" void __GXFlushTextureState(); // 1
-SECTION_SDATA2 extern f32 GXBump__lit_149;
+SECTION_SDATA2 extern f32 GXBump__lit_149[1 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
 
-SECTION_SDATA2 extern void*__GXData;
+SECTION_SDATA2 extern void* __GXData;
 
 // 
 // Declarations:
 // 
 
-/* 8035ECC0-8035ED2C 006C+00 rc=4 efc=3 .text      GXSetTevIndirect                                             */
+/* 8035ECC0-8035ED2C 006C+00 rc=0 efc=0 .text      GXSetTevIndirect                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,11 +53,14 @@ extern "C" asm void GXSetTevIndirect() {
 
 
 /* ############################################################################################## */
-/* 80456610-80456618 0004+04 rc=1 efc=0 .sdata2    @149                                                         */
-f32 GXBump__lit_149 = 1024.0f;
-/* padding 4 bytes */
+/* 80456610-80456618 0004+04 rc=0 efc=0 .sdata2    @149                                                         */
+f32 GXBump__lit_149[1 + 1 /* padding */] = {
+	1024.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 8035ED2C-8035EEA4 0178+00 rc=4 efc=4 .text      GXSetIndTexMtx                                               */
+/* 8035ED2C-8035EEA4 0178+00 rc=0 efc=0 .text      GXSetIndTexMtx                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +71,7 @@ extern "C" asm void GXSetIndTexMtx() {
 #pragma pop
 
 
-/* 8035EEA4-8035EFE8 0144+00 rc=5 efc=5 .text      GXSetIndTexCoordScale                                        */
+/* 8035EEA4-8035EFE8 0144+00 rc=0 efc=0 .text      GXSetIndTexCoordScale                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +82,7 @@ extern "C" asm void GXSetIndTexCoordScale() {
 #pragma pop
 
 
-/* 8035EFE8-8035F0D4 00EC+00 rc=3 efc=3 .text      GXSetIndTexOrder                                             */
+/* 8035EFE8-8035F0D4 00EC+00 rc=0 efc=0 .text      GXSetIndTexOrder                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +93,7 @@ extern "C" asm void GXSetIndTexOrder() {
 #pragma pop
 
 
-/* 8035F0D4-8035F0F8 0024+00 rc=43 efc=43 .text      GXSetNumIndStages                                            */
+/* 8035F0D4-8035F0F8 0024+00 rc=0 efc=0 .text      GXSetNumIndStages                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +104,7 @@ extern "C" asm void GXSetNumIndStages() {
 #pragma pop
 
 
-/* 8035F0F8-8035F140 0048+00 rc=16 efc=16 .text      GXSetTevDirect                                               */
+/* 8035F0F8-8035F140 0048+00 rc=0 efc=0 .text      GXSetTevDirect                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,13 +115,13 @@ extern "C" asm void GXSetTevDirect() {
 #pragma pop
 
 
-/* 8035F140-8035F144 0004+00 rc=2 efc=2 .text      __GXUpdateBPMask                                             */
+/* 8035F140-8035F144 0004+00 rc=0 efc=0 .text      __GXUpdateBPMask                                             */
 extern "C" void __GXUpdateBPMask() {
 	/* empty function */
 }
 
 
-/* 8035F144-8035F174 0030+00 rc=1 efc=1 .text      __GXSetIndirectMask                                          */
+/* 8035F144-8035F174 0030+00 rc=0 efc=0 .text      __GXSetIndirectMask                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +132,7 @@ extern "C" asm void __GXSetIndirectMask() {
 #pragma pop
 
 
-/* 8035F174-8035F198 0024+00 rc=4 efc=4 .text      __GXFlushTextureState                                        */
+/* 8035F174-8035F198 0024+00 rc=0 efc=0 .text      __GXFlushTextureState                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

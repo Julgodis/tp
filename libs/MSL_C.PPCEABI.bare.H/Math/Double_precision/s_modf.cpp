@@ -23,7 +23,7 @@ extern "C" void modf(); // 1
 // Declarations:
 // 
 
-/* 8036C494-8036C590 00FC+00 rc=1 efc=1 .text      modf                                                         */
+/* 8036C494-8036C590 00FC+00 rc=0 efc=0 .text      modf                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

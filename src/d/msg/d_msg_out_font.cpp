@@ -68,12 +68,12 @@ extern "C" void draw__10COutFont_cFP10J2DTextBoxfff(); // 1
 extern "C" void reset__10COutFont_cFP10J2DTextBox(); // 1
 extern "C" void setBlendAnime__10COutFont_cFP10J2DPictures(); // 1
 extern "C" void getBtiName__10COutFont_cFi(); // 1
-SECTION_RODATA extern const u8 d_msg_d_msg_out_font__stringBase0[632];
-SECTION_DATA extern void*d_msg_d_msg_out_font__lit_4395[70];
-SECTION_DATA extern void*d_msg_d_msg_out_font__lit_5000[65];
+SECTION_RODATA extern const char* const d_msg_d_msg_out_font__stringBase0;
+SECTION_DATA extern void* d_msg_d_msg_out_font__lit_4395[70];
+SECTION_DATA extern void* d_msg_d_msg_out_font__lit_5000[65];
 SECTION_DATA extern u8 data_803BFCAC[280];
-SECTION_DATA extern void*const __vt__10COutFont_c[9];
-SECTION_DATA extern void*const __vt__13COutFontSet_c[4];
+SECTION_DATA extern void* const __vt__10COutFont_c[9];
+SECTION_DATA extern void* const __vt__13COutFontSet_c[3 + 1 /* padding */];
 SECTION_SDATA2 extern u8 d_msg_d_msg_out_font__lit_3748[4];
 SECTION_SDATA2 extern f32 d_msg_d_msg_out_font__lit_3749;
 SECTION_SDATA2 extern f64 d_msg_d_msg_out_font__lit_4397;
@@ -127,7 +127,7 @@ SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
 // 
 
 /* ############################################################################################## */
-/* 803BFA90-803BFBA8 0118+00 rc=1 efc=0 .data      @4395                                                        */
+/* 803BFA90-803BFBA8 0118+00 rc=0 efc=0 .data      @4395                                                        */
 void* d_msg_d_msg_out_font__lit_4395[70] = {
 	(void*)(((char*)createPane__10COutFont_cFv)+0xDC),
 	(void*)(((char*)createPane__10COutFont_cFv)+0x140),
@@ -201,7 +201,7 @@ void* d_msg_d_msg_out_font__lit_4395[70] = {
 	(void*)(((char*)createPane__10COutFont_cFv)+0xDC4),
 };
 
-/* 803BFBA8-803BFCAC 0104+00 rc=1 efc=0 .data      @5000                                                        */
+/* 803BFBA8-803BFCAC 0104+00 rc=0 efc=0 .data      @5000                                                        */
 void* d_msg_d_msg_out_font__lit_5000[65] = {
 	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x5B8),
 	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x5B8),
@@ -270,7 +270,7 @@ void* d_msg_d_msg_out_font__lit_5000[65] = {
 	(void*)(((char*)draw__10COutFont_cFP10J2DTextBoxfff)+0x1248),
 };
 
-/* 803BFCAC-803BFDC4 0118+00 rc=1 efc=0 .data      mpIconName$5045                                              */
+/* 803BFCAC-803BFDC4 0118+00 rc=0 efc=0 .data      mpIconName$5045                                              */
 u8 data_803BFCAC[280] = {
 	0x80, 0x39, 0x93, 0x9B, 0x80, 0x39, 0x93, 0xA7, 0x80, 0x39, 0x93, 0xB3, 0x80, 0x39, 0x93, 0xBF,
 	0x80, 0x39, 0x93, 0xCB, 0x80, 0x39, 0x93, 0xD7, 0x80, 0x39, 0x93, 0xE3, 0x80, 0x39, 0x93, 0xEF,
@@ -292,10 +292,10 @@ u8 data_803BFCAC[280] = {
 	0x80, 0x39, 0x95, 0xAD, 0x80, 0x39, 0x95, 0xB9,
 };
 
-/* 803BFDC4-803BFDE8 0024+00 rc=2 efc=0 .data      __vt__10COutFont_c                                           */
+/* 803BFDC4-803BFDE8 0024+00 rc=0 efc=0 .data      __vt__10COutFont_c                                           */
 void* const __vt__10COutFont_c[9] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__10COutFont_cFv,
 	(void*)setPane__10COutFont_cFP10J2DPicture,
 	(void*)createPane__10COutFont_cFv,
@@ -305,16 +305,16 @@ void* const __vt__10COutFont_c[9] = {
 	(void*)setAlphaRatio__10COutFont_cFf,
 };
 
-/* 803BFDE8-803BFDF8 000C+04 rc=2 efc=0 .data      __vt__13COutFontSet_c                                        */
-void* const __vt__13COutFontSet_c[4] = {
-	NULL, /* RTTI */
-	NULL,
+/* 803BFDE8-803BFDF8 000C+04 rc=0 efc=0 .data      __vt__13COutFontSet_c                                        */
+void* const __vt__13COutFontSet_c[3 + 1 /* padding */] = {
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__13COutFontSet_cFv,
 	/* padding */
 	NULL,
 };
 
-/* 80225BB8-80225BF4 003C+00 rc=1 efc=0 .text      __ct__13COutFontSet_cFv                                      */
+/* 80225BB8-80225BF4 003C+00 rc=0 efc=0 .text      __ct__13COutFontSet_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -325,7 +325,7 @@ asm COutFontSet_c::COutFontSet_c() {
 #pragma pop
 
 
-/* 80225BF4-80225C3C 0048+00 rc=1 efc=0 .text      __dt__13COutFontSet_cFv                                      */
+/* 80225BF4-80225C3C 0048+00 rc=0 efc=0 .text      __dt__13COutFontSet_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -337,15 +337,15 @@ asm COutFontSet_c::~COutFontSet_c() {
 
 
 /* ############################################################################################## */
-/* 80454A10-80454A14 0004+00 rc=4 efc=0 .sdata2    @3748                                                        */
+/* 80454A10-80454A14 0004+00 rc=0 efc=0 .sdata2    @3748                                                        */
 u8 d_msg_d_msg_out_font__lit_3748[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454A14-80454A18 0004+00 rc=6 efc=0 .sdata2    @3749                                                        */
+/* 80454A14-80454A18 0004+00 rc=0 efc=0 .sdata2    @3749                                                        */
 f32 d_msg_d_msg_out_font__lit_3749 = 1.0f;
 
-/* 80225C3C-80225C70 0034+00 rc=2 efc=0 .text      initialize__13COutFontSet_cFv                                */
+/* 80225C3C-80225C70 0034+00 rc=0 efc=0 .text      initialize__13COutFontSet_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -356,7 +356,7 @@ asm void COutFontSet_c::initialize() {
 #pragma pop
 
 
-/* 80225C70-80225C94 0024+00 rc=1 efc=0 .text      drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc            */
+/* 80225C70-80225C94 0024+00 rc=0 efc=0 .text      drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -367,7 +367,7 @@ asm void COutFontSet_c::drawFont(J2DTextBox* field_0, u8 field_1, f32 field_2, f
 #pragma pop
 
 
-/* 80225C94-80225D60 00CC+00 rc=5 efc=5 .text      __ct__10COutFont_cFUc                                        */
+/* 80225C94-80225D60 00CC+00 rc=0 efc=0 .text      __ct__10COutFont_cFUc                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -378,7 +378,7 @@ asm COutFont_c::COutFont_c(u8 field_0) {
 #pragma pop
 
 
-/* 80225D60-80225E7C 011C+00 rc=1 efc=0 .text      __dt__10COutFont_cFv                                         */
+/* 80225D60-80225E7C 011C+00 rc=0 efc=0 .text      __dt__10COutFont_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,7 +389,7 @@ asm COutFont_c::~COutFont_c() {
 #pragma pop
 
 
-/* 80225E7C-80225EA8 002C+00 rc=1 efc=0 .text      setPane__10COutFont_cFP10J2DPicture                          */
+/* 80225E7C-80225EA8 002C+00 rc=0 efc=0 .text      setPane__10COutFont_cFP10J2DPicture                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -401,67 +401,67 @@ asm void COutFont_c::setPane(J2DPicture* field_0) {
 
 
 /* ############################################################################################## */
-/* 80399350-803995C8 0275+03 rc=1 efc=0 .rodata    @stringBase0                                                 */
+/* 80399350-803995C8 0275+03 rc=0 efc=0 .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-SECTION_DEAD char* const stringBase_80399350 = "font_07_02.bti";
-SECTION_DEAD char* const stringBase_8039935F = "font_20.bti";
-SECTION_DEAD char* const stringBase_8039936B = "font_21.bti";
-SECTION_DEAD char* const stringBase_80399377 = "font_30.bti";
-SECTION_DEAD char* const stringBase_80399383 = "font_31.bti";
-SECTION_DEAD char* const stringBase_8039938F = "font_34.bti";
-SECTION_DEAD char* const stringBase_8039939B = "font_00.bti";
-SECTION_DEAD char* const stringBase_803993A7 = "font_01.bti";
-SECTION_DEAD char* const stringBase_803993B3 = "font_09.bti";
-SECTION_DEAD char* const stringBase_803993BF = "font_04.bti";
-SECTION_DEAD char* const stringBase_803993CB = "font_05.bti";
-SECTION_DEAD char* const stringBase_803993D7 = "font_02.bti";
-SECTION_DEAD char* const stringBase_803993E3 = "font_03.bti";
-SECTION_DEAD char* const stringBase_803993EF = "font_06.bti";
-SECTION_DEAD char* const stringBase_803993FB = "font_08.bti";
-SECTION_DEAD char* const stringBase_80399407 = "font_07_01.bti";
-SECTION_DEAD char* const stringBase_80399416 = "font_10.bti";
-SECTION_DEAD char* const stringBase_80399422 = "font_15.bti";
-SECTION_DEAD char* const stringBase_8039942E = "font_12.bti";
-SECTION_DEAD char* const stringBase_8039943A = 
+const char* const stringBase_80399350 = "font_07_02.bti";
+const char* const stringBase_8039935F = "font_20.bti";
+const char* const stringBase_8039936B = "font_21.bti";
+const char* const stringBase_80399377 = "font_30.bti";
+const char* const stringBase_80399383 = "font_31.bti";
+const char* const stringBase_8039938F = "font_34.bti";
+const char* const stringBase_8039939B = "font_00.bti";
+const char* const stringBase_803993A7 = "font_01.bti";
+const char* const stringBase_803993B3 = "font_09.bti";
+const char* const stringBase_803993BF = "font_04.bti";
+const char* const stringBase_803993CB = "font_05.bti";
+const char* const stringBase_803993D7 = "font_02.bti";
+const char* const stringBase_803993E3 = "font_03.bti";
+const char* const stringBase_803993EF = "font_06.bti";
+const char* const stringBase_803993FB = "font_08.bti";
+const char* const stringBase_80399407 = "font_07_01.bti";
+const char* const stringBase_80399416 = "font_10.bti";
+const char* const stringBase_80399422 = "font_15.bti";
+const char* const stringBase_8039942E = "font_12.bti";
+const char* const stringBase_8039943A = 
     "im_map_icon_portal_4ia_40_05.bti";
-SECTION_DEAD char* const stringBase_8039945B = "font_16_backlight.bti";
-SECTION_DEAD char* const stringBase_80399471 = "font_13.bti";
-SECTION_DEAD char* const stringBase_8039947D = "font_14.bti";
-SECTION_DEAD char* const stringBase_80399489 = "im_zelda_item_icon_rupy_13.bti";
-SECTION_DEAD char* const stringBase_803994A8 = "";
-SECTION_DEAD char* const stringBase_803994A9 = "st_bompoach_lv1.bti";
-SECTION_DEAD char* const stringBase_803994BD = "font_46.bti";
-SECTION_DEAD char* const stringBase_803994C9 = "font_47.bti";
-SECTION_DEAD char* const stringBase_803994D5 = "font_35.bti";
-SECTION_DEAD char* const stringBase_803994E1 = "font_36.bti";
-SECTION_DEAD char* const stringBase_803994ED = "font_19.bti";
-SECTION_DEAD char* const stringBase_803994F9 = "font_22.bti";
-SECTION_DEAD char* const stringBase_80399505 = "font_23.bti";
-SECTION_DEAD char* const stringBase_80399511 = "font_24.bti";
-SECTION_DEAD char* const stringBase_8039951D = "font_25.bti";
-SECTION_DEAD char* const stringBase_80399529 = "font_40.bti";
-SECTION_DEAD char* const stringBase_80399535 = "font_39.bti";
-SECTION_DEAD char* const stringBase_80399541 = "font_29.bti";
-SECTION_DEAD char* const stringBase_8039954D = "font_28.bti";
-SECTION_DEAD char* const stringBase_80399559 = "font_32.bti";
-SECTION_DEAD char* const stringBase_80399565 = "font_33.bti";
-SECTION_DEAD char* const stringBase_80399571 = "font_41.bti";
-SECTION_DEAD char* const stringBase_8039957D = "font_42.bti";
-SECTION_DEAD char* const stringBase_80399589 = "font_50.bti";
-SECTION_DEAD char* const stringBase_80399595 = "font_49.bti";
-SECTION_DEAD char* const stringBase_803995A1 = "font_51.bti";
-SECTION_DEAD char* const stringBase_803995AD = "font_52.bti";
-SECTION_DEAD char* const stringBase_803995B9 = "font_53.bti";
+const char* const stringBase_8039945B = "font_16_backlight.bti";
+const char* const stringBase_80399471 = "font_13.bti";
+const char* const stringBase_8039947D = "font_14.bti";
+const char* const stringBase_80399489 = "im_zelda_item_icon_rupy_13.bti";
+const char* const stringBase_803994A8 = "";
+const char* const stringBase_803994A9 = "st_bompoach_lv1.bti";
+const char* const stringBase_803994BD = "font_46.bti";
+const char* const stringBase_803994C9 = "font_47.bti";
+const char* const stringBase_803994D5 = "font_35.bti";
+const char* const stringBase_803994E1 = "font_36.bti";
+const char* const stringBase_803994ED = "font_19.bti";
+const char* const stringBase_803994F9 = "font_22.bti";
+const char* const stringBase_80399505 = "font_23.bti";
+const char* const stringBase_80399511 = "font_24.bti";
+const char* const stringBase_8039951D = "font_25.bti";
+const char* const stringBase_80399529 = "font_40.bti";
+const char* const stringBase_80399535 = "font_39.bti";
+const char* const stringBase_80399541 = "font_29.bti";
+const char* const stringBase_8039954D = "font_28.bti";
+const char* const stringBase_80399559 = "font_32.bti";
+const char* const stringBase_80399565 = "font_33.bti";
+const char* const stringBase_80399571 = "font_41.bti";
+const char* const stringBase_8039957D = "font_42.bti";
+const char* const stringBase_80399589 = "font_50.bti";
+const char* const stringBase_80399595 = "font_49.bti";
+const char* const stringBase_803995A1 = "font_51.bti";
+const char* const stringBase_803995AD = "font_52.bti";
+const char* const stringBase_803995B9 = "font_53.bti";
 /* @stringBase0 padding */
-SECTION_DEAD char* const pad_803995C5 = "\0\0";
+char* const pad_803995C5 = "\0\0";
 #pragma pop
 
-/* 80454A18-80454A20 0008+00 rc=2 efc=0 .sdata2    @4397                                                        */
+/* 80454A18-80454A20 0008+00 rc=0 efc=0 .sdata2    @4397                                                        */
 f64 d_msg_d_msg_out_font__lit_4397 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80225EA8-80226CF8 0E50+00 rc=2 efc=0 .text      createPane__10COutFont_cFv                                   */
+/* 80225EA8-80226CF8 0E50+00 rc=0 efc=0 .text      createPane__10COutFont_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -472,7 +472,7 @@ asm void COutFont_c::createPane() {
 #pragma pop
 
 
-/* 80226CF8-80226D4C 0054+00 rc=2 efc=2 .text      initialize__10COutFont_cFv                                   */
+/* 80226CF8-80226D4C 0054+00 rc=0 efc=0 .text      initialize__10COutFont_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -483,7 +483,7 @@ asm void COutFont_c::initialize() {
 #pragma pop
 
 
-/* 80226D4C-80226DA8 005C+00 rc=1 efc=0 .text      drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc               */
+/* 80226D4C-80226DA8 005C+00 rc=0 efc=0 .text      drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -494,7 +494,7 @@ asm void COutFont_c::drawFont(J2DTextBox* field_0, u8 field_1, f32 field_2, f32 
 #pragma pop
 
 
-/* 80226DA8-80226DB0 0008+00 rc=1 efc=0 .text      setAlphaRatio__10COutFont_cFf                                */
+/* 80226DA8-80226DB0 0008+00 rc=0 efc=0 .text      setAlphaRatio__10COutFont_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -506,46 +506,46 @@ asm void COutFont_c::setAlphaRatio(f32 field_0) {
 
 
 /* ############################################################################################## */
-/* 80454A20-80454A24 0004+00 rc=1 efc=0 .sdata2    @4986                                                        */
+/* 80454A20-80454A24 0004+00 rc=0 efc=0 .sdata2    @4986                                                        */
 f32 lit_4986 = 2.0f;
 
-/* 80454A24-80454A28 0004+00 rc=1 efc=0 .sdata2    @4987                                                        */
+/* 80454A24-80454A28 0004+00 rc=0 efc=0 .sdata2    @4987                                                        */
 f32 lit_4987 = 3.0f;
 
-/* 80454A28-80454A2C 0004+00 rc=1 efc=0 .sdata2    @4988                                                        */
+/* 80454A28-80454A2C 0004+00 rc=0 efc=0 .sdata2    @4988                                                        */
 f32 lit_4988 = 0.5f;
 
-/* 80454A2C-80454A30 0004+00 rc=1 efc=0 .sdata2    @4989                                                        */
+/* 80454A2C-80454A30 0004+00 rc=0 efc=0 .sdata2    @4989                                                        */
 f32 lit_4989 = 360.0f;
 
-/* 80454A30-80454A34 0004+00 rc=1 efc=0 .sdata2    @4990                                                        */
+/* 80454A30-80454A34 0004+00 rc=0 efc=0 .sdata2    @4990                                                        */
 f32 lit_4990 = 28.0f;
 
-/* 80454A34-80454A38 0004+00 rc=1 efc=0 .sdata2    @4991                                                        */
+/* 80454A34-80454A38 0004+00 rc=0 efc=0 .sdata2    @4991                                                        */
 f32 lit_4991 = 50.0f;
 
-/* 80454A38-80454A3C 0004+00 rc=1 efc=0 .sdata2    @4992                                                        */
+/* 80454A38-80454A3C 0004+00 rc=0 efc=0 .sdata2    @4992                                                        */
 f32 lit_4992 = 205.0f;
 
-/* 80454A3C-80454A40 0004+00 rc=1 efc=0 .sdata2    @4993                                                        */
+/* 80454A3C-80454A40 0004+00 rc=0 efc=0 .sdata2    @4993                                                        */
 f32 lit_4993 = 9.0f;
 
-/* 80454A40-80454A44 0004+00 rc=1 efc=0 .sdata2    @4994                                                        */
+/* 80454A40-80454A44 0004+00 rc=0 efc=0 .sdata2    @4994                                                        */
 f32 lit_4994 = 18.0f;
 
-/* 80454A44-80454A48 0004+00 rc=1 efc=0 .sdata2    @4995                                                        */
+/* 80454A44-80454A48 0004+00 rc=0 efc=0 .sdata2    @4995                                                        */
 f32 lit_4995 = -3.0f;
 
-/* 80454A48-80454A4C 0004+00 rc=1 efc=0 .sdata2    @4996                                                        */
+/* 80454A48-80454A4C 0004+00 rc=0 efc=0 .sdata2    @4996                                                        */
 f32 lit_4996 = 4.0f;
 
-/* 80454A4C-80454A50 0004+00 rc=1 efc=0 .sdata2    @4997                                                        */
+/* 80454A4C-80454A50 0004+00 rc=0 efc=0 .sdata2    @4997                                                        */
 f32 lit_4997 = 1.25f;
 
-/* 80454A50-80454A58 0008+00 rc=1 efc=0 .sdata2    @5001                                                        */
+/* 80454A50-80454A58 0008+00 rc=0 efc=0 .sdata2    @5001                                                        */
 f64 d_msg_d_msg_out_font__lit_5001 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80226DB0-80228448 1698+00 rc=2 efc=0 .text      draw__10COutFont_cFP10J2DTextBoxfff                          */
+/* 80226DB0-80228448 1698+00 rc=0 efc=0 .text      draw__10COutFont_cFP10J2DTextBoxfff                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -556,7 +556,7 @@ asm void COutFont_c::draw(J2DTextBox* field_0, f32 field_1, f32 field_2, f32 fie
 #pragma pop
 
 
-/* 80228448-80228490 0048+00 rc=1 efc=0 .text      reset__10COutFont_cFP10J2DTextBox                            */
+/* 80228448-80228490 0048+00 rc=0 efc=0 .text      reset__10COutFont_cFP10J2DTextBox                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -567,7 +567,7 @@ asm void COutFont_c::reset(J2DTextBox* field_0) {
 #pragma pop
 
 
-/* 80228490-80228530 00A0+00 rc=1 efc=0 .text      setBlendAnime__10COutFont_cFP10J2DPictures                   */
+/* 80228490-80228530 00A0+00 rc=0 efc=0 .text      setBlendAnime__10COutFont_cFP10J2DPictures                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -578,7 +578,7 @@ asm void COutFont_c::setBlendAnime(J2DPicture* field_0, s16 field_1) {
 #pragma pop
 
 
-/* 80228530-80228578 0048+00 rc=1 efc=0 .text      getBtiName__10COutFont_cFi                                   */
+/* 80228530-80228578 0048+00 rc=0 efc=0 .text      getBtiName__10COutFont_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

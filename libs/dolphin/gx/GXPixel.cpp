@@ -37,11 +37,11 @@ extern "C" void GXSetFieldMode(); // 1
 SECTION_DATA extern u8 data_803D2838[32];
 SECTION_SDATA2 extern u8 GXPixel__lit_211[4];
 SECTION_SDATA2 extern f32 lit_212;
-SECTION_SDATA2 extern f32 GXPixel__lit_213;
+SECTION_SDATA2 extern f32 GXPixel__lit_213[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 lit_214;
-SECTION_SDATA2 extern f32 GXPixel__lit_215;
+SECTION_SDATA2 extern f32 GXPixel__lit_215[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 GXPixel__lit_216;
-SECTION_SDATA2 extern f32 GXPixel__lit_217;
+SECTION_SDATA2 extern f32 GXPixel__lit_217[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 GXPixel__lit_219;
 
 // 
@@ -53,43 +53,52 @@ extern "C" void __cvt_fp2unsigned(); // 1
 
 extern "C" void __GXFlushTextureState(); // 1
 extern "C" void __cvt_fp2unsigned(); // 1
-SECTION_SDATA2 extern void*__GXData;
+SECTION_SDATA2 extern void* __GXData;
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80456618-8045661C 0004+00 rc=1 efc=0 .sdata2    @211                                                         */
+/* 80456618-8045661C 0004+00 rc=0 efc=0 .sdata2    @211                                                         */
 u8 GXPixel__lit_211[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045661C-80456620 0004+00 rc=1 efc=0 .sdata2    @212                                                         */
+/* 8045661C-80456620 0004+00 rc=0 efc=0 .sdata2    @212                                                         */
 f32 lit_212 = 1.0f;
 
-/* 80456620-80456628 0004+04 rc=1 efc=0 .sdata2    @213                                                         */
-f32 GXPixel__lit_213 = 0.5f;
-/* padding 4 bytes */
+/* 80456620-80456628 0004+04 rc=0 efc=0 .sdata2    @213                                                         */
+f32 GXPixel__lit_213[1 + 1 /* padding */] = {
+	0.5f,
+	/* padding */
+	0.0f,
+};
 
-/* 80456628-80456630 0008+00 rc=1 efc=0 .sdata2    @214                                                         */
+/* 80456628-80456630 0008+00 rc=0 efc=0 .sdata2    @214                                                         */
 f64 lit_214 = 1.0;
 
-/* 80456630-80456638 0004+04 rc=1 efc=0 .sdata2    @215                                                         */
-f32 GXPixel__lit_215 = 2.0f;
-/* padding 4 bytes */
+/* 80456630-80456638 0004+04 rc=0 efc=0 .sdata2    @215                                                         */
+f32 GXPixel__lit_215[1 + 1 /* padding */] = {
+	2.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80456638-80456640 0008+00 rc=1 efc=0 .sdata2    @216                                                         */
+/* 80456638-80456640 0008+00 rc=0 efc=0 .sdata2    @216                                                         */
 f64 GXPixel__lit_216 = 0.5;
 
-/* 80456640-80456648 0004+04 rc=1 efc=0 .sdata2    @217                                                         */
-f32 GXPixel__lit_217 = 8388638.0f;
-/* padding 4 bytes */
+/* 80456640-80456648 0004+04 rc=0 efc=0 .sdata2    @217                                                         */
+f32 GXPixel__lit_217[1 + 1 /* padding */] = {
+	8388638.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 80456648-80456650 0008+00 rc=1 efc=0 .sdata2    @219                                                         */
+/* 80456648-80456650 0008+00 rc=0 efc=0 .sdata2    @219                                                         */
 f64 GXPixel__lit_219 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8035F8B8-8035FACC 0214+00 rc=20 efc=20 .text      GXSetFog                                                     */
+/* 8035F8B8-8035FACC 0214+00 rc=0 efc=0 .text      GXSetFog                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,7 +109,7 @@ extern "C" asm void GXSetFog() {
 #pragma pop
 
 
-/* 8035FACC-8035FBF0 0124+00 rc=9 efc=9 .text      GXSetFogRangeAdj                                             */
+/* 8035FACC-8035FBF0 0124+00 rc=0 efc=0 .text      GXSetFogRangeAdj                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -111,7 +120,7 @@ extern "C" asm void GXSetFogRangeAdj() {
 #pragma pop
 
 
-/* 8035FBF0-8035FC44 0054+00 rc=53 efc=53 .text      GXSetBlendMode                                               */
+/* 8035FBF0-8035FC44 0054+00 rc=0 efc=0 .text      GXSetBlendMode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -122,7 +131,7 @@ extern "C" asm void GXSetBlendMode() {
 #pragma pop
 
 
-/* 8035FC44-8035FC70 002C+00 rc=10 efc=10 .text      GXSetColorUpdate                                             */
+/* 8035FC44-8035FC70 002C+00 rc=0 efc=0 .text      GXSetColorUpdate                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -133,7 +142,7 @@ extern "C" asm void GXSetColorUpdate() {
 #pragma pop
 
 
-/* 8035FC70-8035FC9C 002C+00 rc=10 efc=10 .text      GXSetAlphaUpdate                                             */
+/* 8035FC70-8035FC9C 002C+00 rc=0 efc=0 .text      GXSetAlphaUpdate                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +153,7 @@ extern "C" asm void GXSetAlphaUpdate() {
 #pragma pop
 
 
-/* 8035FC9C-8035FCD0 0034+00 rc=40 efc=40 .text      GXSetZMode                                                   */
+/* 8035FC9C-8035FCD0 0034+00 rc=0 efc=0 .text      GXSetZMode                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +164,7 @@ extern "C" asm void GXSetZMode() {
 #pragma pop
 
 
-/* 8035FCD0-8035FD04 0034+00 rc=29 efc=29 .text      GXSetZCompLoc                                                */
+/* 8035FCD0-8035FD04 0034+00 rc=0 efc=0 .text      GXSetZCompLoc                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,13 +176,13 @@ extern "C" asm void GXSetZCompLoc() {
 
 
 /* ############################################################################################## */
-/* 803D2838-803D2858 0020+00 rc=1 efc=0 .data      p2f$358                                                      */
+/* 803D2838-803D2858 0020+00 rc=0 efc=0 .data      p2f$358                                                      */
 u8 data_803D2838[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
 };
 
-/* 8035FD04-8035FDD8 00D4+00 rc=2 efc=2 .text      GXSetPixelFmt                                                */
+/* 8035FD04-8035FDD8 00D4+00 rc=0 efc=0 .text      GXSetPixelFmt                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +193,7 @@ extern "C" asm void GXSetPixelFmt() {
 #pragma pop
 
 
-/* 8035FDD8-8035FE04 002C+00 rc=22 efc=22 .text      GXSetDither                                                  */
+/* 8035FDD8-8035FE04 002C+00 rc=0 efc=0 .text      GXSetDither                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -195,7 +204,7 @@ extern "C" asm void GXSetDither() {
 #pragma pop
 
 
-/* 8035FE04-8035FE40 003C+00 rc=2 efc=2 .text      GXSetDstAlpha                                                */
+/* 8035FE04-8035FE40 003C+00 rc=0 efc=0 .text      GXSetDstAlpha                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -206,7 +215,7 @@ extern "C" asm void GXSetDstAlpha() {
 #pragma pop
 
 
-/* 8035FE40-8035FE78 0038+00 rc=1 efc=1 .text      GXSetFieldMask                                               */
+/* 8035FE40-8035FE78 0038+00 rc=0 efc=0 .text      GXSetFieldMask                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -217,7 +226,7 @@ extern "C" asm void GXSetFieldMask() {
 #pragma pop
 
 
-/* 8035FE78-8035FEF0 0078+00 rc=1 efc=1 .text      GXSetFieldMode                                               */
+/* 8035FE78-8035FEF0 0078+00 rc=0 efc=0 .text      GXSetFieldMode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

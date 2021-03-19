@@ -14,7 +14,7 @@ extern "C" void __close_all(); // 1
 
 extern "C" void __flush_all(); // 1
 extern "C" void __close_all(); // 1
-SECTION_DATA extern void*__files[80];
+SECTION_DATA extern void* __files[80];
 SECTION_BSS extern u8 stderr_buff[256];
 SECTION_BSS extern u8 stdout_buff[256];
 SECTION_BSS extern u8 stdin_buff[256];
@@ -46,91 +46,91 @@ extern "C" void __read_console(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803D29B0-803D2AF0 0140+00 rc=17 efc=15 .data      __files                                                      */
+/* 803D29B0-803D2AF0 0140+00 rc=0 efc=0 .data      __files                                                      */
 void* __files[80] = {
-	NULL,
+	(void*)NULL,
 	(void*)0x0A800000,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)&stdin_buff,
 	(void*)0x00000100,
 	(void*)&stdin_buff,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)__read_console,
 	(void*)__write_console,
 	(void*)__close_console,
-	NULL,
+	(void*)NULL,
 	(void*)(((char*)&__files)+0x50),
 	(void*)0x00000001,
 	(void*)0x12800000,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)&stdout_buff,
 	(void*)0x00000100,
 	(void*)&stdout_buff,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)__read_console,
 	(void*)__write_console,
 	(void*)__close_console,
-	NULL,
+	(void*)NULL,
 	(void*)(((char*)&__files)+0xA0),
 	(void*)0x00000002,
 	(void*)0x10800000,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)&stderr_buff,
 	(void*)0x00000100,
 	(void*)&stderr_buff,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	(void*)__read_console,
 	(void*)__write_console,
 	(void*)__close_console,
-	NULL,
+	(void*)NULL,
 	(void*)(((char*)&__files)+0xF0),
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8036300C-8036307C 0070+00 rc=2 efc=2 .text      __flush_all                                                  */
+/* 8036300C-8036307C 0070+00 rc=0 efc=0 .text      __flush_all                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,7 +141,7 @@ extern "C" asm void __flush_all() {
 #pragma pop
 
 
-/* 8036307C-80363124 00A8+00 rc=1 efc=1 .text      __close_all                                                  */
+/* 8036307C-80363124 00A8+00 rc=0 efc=0 .text      __close_all                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -153,12 +153,12 @@ extern "C" asm void __close_all() {
 
 
 /* ############################################################################################## */
-/* 8044D578-8044D678 0100+00 rc=1 efc=0 .bss       stderr_buff                                                  */
+/* 8044D578-8044D678 0100+00 rc=0 efc=0 .bss       stderr_buff                                                  */
 u8 stderr_buff[256];
 
-/* 8044D678-8044D778 0100+00 rc=1 efc=0 .bss       stdout_buff                                                  */
+/* 8044D678-8044D778 0100+00 rc=0 efc=0 .bss       stdout_buff                                                  */
 u8 stdout_buff[256];
 
-/* 8044D778-8044D878 0100+00 rc=1 efc=0 .bss       stdin_buff                                                   */
+/* 8044D778-8044D878 0100+00 rc=0 efc=0 .bss       stdin_buff                                                   */
 u8 stdin_buff[256];
 

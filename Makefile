@@ -157,10 +157,12 @@ $(BUILD_DIR)/%.o: %.c
 
 $(BUILD_DIR)/%.o: %.cpp
 	@mkdir -p $(@D)
-	iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
-	$(CC) $(CFLAGS) -c -o $@ $@.iconv.cpp
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) -c -o $@ $@.iconv.cpp
+	# |& tail -n +3
 	#cp $@ $@.copy
-	$(STRIP) -d -R .dead -R .comment $@
+	@$(STRIP) -d -R .dead -R .comment $@
 #$(PYTHON) $(POSTPROC) -fsymbol-fixup $@
 
 -include include_link.mk

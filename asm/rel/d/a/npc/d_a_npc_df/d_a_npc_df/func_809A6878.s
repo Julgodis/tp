@@ -1,3 +1,0 @@
-lbl_809A6878:
-/* 809A6878 00000000  38 63 FF EC */	addi r3, r3, -20
-/* 809A687C 00000004  4B FF FF 84 */	b __dt__14dBgS_ObjGndChkFv

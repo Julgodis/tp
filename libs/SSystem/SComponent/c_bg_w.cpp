@@ -42,7 +42,7 @@ SECTION_SDATA2 extern f32 lit_2249;
 // Declarations:
 // 
 
-/* 802681C0-802681C8 0008+00 rc=1 efc=1 .text      Regist__9cBgW_BgIdFi                                         */
+/* 802681C0-802681C8 0008+00 rc=0 efc=0 .text      Regist__9cBgW_BgIdFi                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,7 +53,7 @@ asm void cBgW_BgId::Regist(int field_0) {
 #pragma pop
 
 
-/* 802681C8-802681D4 000C+00 rc=2 efc=2 .text      Release__9cBgW_BgIdFv                                        */
+/* 802681C8-802681D4 000C+00 rc=0 efc=0 .text      Release__9cBgW_BgIdFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +64,7 @@ asm void cBgW_BgId::Release() {
 #pragma pop
 
 
-/* 802681D4-802681E4 0010+00 rc=7 efc=7 .text      ChkUsed__9cBgW_BgIdCFv                                       */
+/* 802681D4-802681E4 0010+00 rc=0 efc=0 .text      ChkUsed__9cBgW_BgIdCFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,10 +76,10 @@ asm void cBgW_BgId::ChkUsed() const {
 
 
 /* ############################################################################################## */
-/* 804550E8-804550EC 0004+00 rc=1 efc=0 .sdata2    @2242                                                        */
+/* 804550E8-804550EC 0004+00 rc=0 efc=0 .sdata2    @2242                                                        */
 f32 c_bg_w__lit_2242 = 0.5f;
 
-/* 802681E4-802681FC 0018+00 rc=23 efc=22 .text      cBgW_CheckBGround__Ff                                        */
+/* 802681E4-802681FC 0018+00 rc=0 efc=0 .text      cBgW_CheckBGround__Ff                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,10 +91,10 @@ asm void cBgW_CheckBGround(f32 field_0) {
 
 
 /* ############################################################################################## */
-/* 804550EC-804550F0 0004+00 rc=1 efc=0 .sdata2    @2249                                                        */
+/* 804550EC-804550F0 0004+00 rc=0 efc=0 .sdata2    @2249                                                        */
 f32 lit_2249 = -4.0f / 5.0f;
 
-/* 802681FC-80268210 0014+00 rc=7 efc=6 .text      cBgW_CheckBRoof__Ff                                          */
+/* 802681FC-80268210 0014+00 rc=0 efc=0 .text      cBgW_CheckBRoof__Ff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ asm void cBgW_CheckBRoof(f32 field_0) {
 #pragma pop
 
 
-/* 80268210-80268260 0050+00 rc=16 efc=16 .text      cBgW_CheckBWall__Ff                                          */
+/* 80268210-80268260 0050+00 rc=0 efc=0 .text      cBgW_CheckBWall__Ff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

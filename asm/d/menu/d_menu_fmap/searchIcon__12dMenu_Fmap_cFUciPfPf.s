@@ -13,7 +13,7 @@ lbl_801CD000:
 /* 801CD02C 0000002C  38 04 7D 74 */	addi r0, r4, __vt__19dMenuFmapIconDisp_c@l
 /* 801CD030 00000030  90 01 00 48 */	stw r0, 0x48(r1)
 /* 801CD034 00000034  3B 00 00 00 */	li r24, 0
-/* 801CD038 00000038  8B 2D 87 E4 */	lbz r25, struct_80450D64+0x0(r13)
+/* 801CD038 00000038  8B 2D 87 E4 */	lbz r25, -0x781c(r13)
 /* 801CD03C 0000003C  7F 39 07 74 */	extsb r25, r25
 /* 801CD040 00000040  83 43 02 0C */	lwz r26, 0x20c(r3)
 /* 801CD044 00000044  48 00 03 25 */	bl getNowFmapStageData__12dMenu_Fmap_cFv

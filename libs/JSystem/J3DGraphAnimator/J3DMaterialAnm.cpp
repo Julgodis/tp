@@ -9,22 +9,22 @@
 // Types:
 // 
 
-struct J3DTexMtxAnm {
+struct J3DTexNoAnm {
 };
 
 struct J3DMaterial {
 };
 
-struct J3DTexNoAnm {
+struct J3DTexMtxAnm {
 };
 
-struct J3DTevColorAnm {
+struct J3DMatColorAnm {
 };
 
 struct J3DTevKColorAnm {
 };
 
-struct J3DMatColorAnm {
+struct J3DTevColorAnm {
 };
 
 struct J3DMaterialAnm {
@@ -45,10 +45,10 @@ struct J3DAnmTextureSRTKey {
 	/* 80329F14 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
 };
 
-struct _GXColor {
+struct _GXColorS10 {
 };
 
-struct _GXColorS10 {
+struct _GXColor {
 };
 
 struct J3DAnmTevRegKey {
@@ -68,7 +68,7 @@ extern "C" void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm(); // 1
 extern "C" void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm(); // 1
 extern "C" void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm(); // 1
 extern "C" void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm(); // 1
-SECTION_DATA extern void*const __vt__14J3DMaterialAnm[4];
+SECTION_DATA extern void* const __vt__14J3DMaterialAnm[4];
 
 // 
 // External References:
@@ -88,7 +88,7 @@ extern "C" void _restgpr_27(); // 1
 // Declarations:
 // 
 
-/* 8032C320-8032C3C4 00A4+00 rc=5 efc=5 .text      initialize__14J3DMaterialAnmFv                               */
+/* 8032C320-8032C3C4 00A4+00 rc=0 efc=0 .text      initialize__14J3DMaterialAnmFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +99,7 @@ asm void J3DMaterialAnm::initialize() {
 #pragma pop
 
 
-/* 8032C3C4-8032C5A4 01E0+00 rc=5 efc=4 .text      calc__14J3DMaterialAnmCFP11J3DMaterial                       */
+/* 8032C3C4-8032C5A4 01E0+00 rc=0 efc=0 .text      calc__14J3DMaterialAnmCFP11J3DMaterial                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +110,7 @@ asm void J3DMaterialAnm::calc(J3DMaterial* field_0) const {
 #pragma pop
 
 
-/* 8032C5A4-8032C5E4 0040+00 rc=2 efc=2 .text      setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm          */
+/* 8032C5A4-8032C5E4 0040+00 rc=0 efc=0 .text      setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +121,7 @@ asm void J3DMaterialAnm::setMatColorAnm(int field_0, J3DMatColorAnm* field_1) {
 #pragma pop
 
 
-/* 8032C5E4-8032C624 0040+00 rc=3 efc=3 .text      setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm              */
+/* 8032C5E4-8032C624 0040+00 rc=0 efc=0 .text      setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +132,7 @@ asm void J3DMaterialAnm::setTexMtxAnm(int field_0, J3DTexMtxAnm* field_1) {
 #pragma pop
 
 
-/* 8032C624-8032C664 0040+00 rc=2 efc=2 .text      setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm                */
+/* 8032C624-8032C664 0040+00 rc=0 efc=0 .text      setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,7 +143,7 @@ asm void J3DMaterialAnm::setTexNoAnm(int field_0, J3DTexNoAnm* field_1) {
 #pragma pop
 
 
-/* 8032C664-8032C6A4 0040+00 rc=3 efc=3 .text      setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm          */
+/* 8032C664-8032C6A4 0040+00 rc=0 efc=0 .text      setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +154,7 @@ asm void J3DMaterialAnm::setTevColorAnm(int field_0, J3DTevColorAnm* field_1) {
 #pragma pop
 
 
-/* 8032C6A4-8032C6E4 0040+00 rc=3 efc=3 .text      setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm        */
+/* 8032C6A4-8032C6E4 0040+00 rc=0 efc=0 .text      setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,10 +166,10 @@ asm void J3DMaterialAnm::setTevKColorAnm(int field_0, J3DTevKColorAnm* field_1) 
 
 
 /* ############################################################################################## */
-/* 803CEE60-803CEE70 0010+00 rc=10 efc=10 .data      __vt__14J3DMaterialAnm                                       */
+/* 803CEE60-803CEE70 0010+00 rc=0 efc=0 .data      __vt__14J3DMaterialAnm                                       */
 void* const __vt__14J3DMaterialAnm[4] = {
-	NULL, /* RTTI */
-	NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
 	(void*)__dt__14J3DMaterialAnmFv,
 	(void*)calc__14J3DMaterialAnmCFP11J3DMaterial,
 };

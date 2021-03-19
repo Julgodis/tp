@@ -21,7 +21,7 @@ extern "C" void GXGetTexObjWrapS(); // 1
 extern "C" void GXGetTexObjWrapT(); // 1
 extern "C" void GXGetTexObjMipMap(); // 1
 extern "C" void GXGetTexObjTlut(); // 1
-extern "C" static void GXLoadTexObjPreLoaded(); // 1
+extern "C" void GXLoadTexObjPreLoaded(); // 1
 extern "C" void GXLoadTexObj(); // 1
 extern "C" void GXInitTlutObj(); // 1
 extern "C" void GXLoadTlut(); // 1
@@ -31,7 +31,7 @@ extern "C" void GXInvalidateTexAll(); // 1
 extern "C" void GXSetTexRegionCallback(); // 1
 extern "C" void GXSetTlutRegionCallback(); // 1
 extern "C" void GXSetTexCoordScaleManually(); // 1
-extern "C" static void __SetSURegs(); // 1
+extern "C" void __SetSURegs(); // 1
 extern "C" void __GXSetSUTexRegs(); // 1
 extern "C" void __GXSetTmemConfig(); // 1
 
@@ -47,7 +47,7 @@ extern "C" void GXGetTexObjWrapS(); // 1
 extern "C" void GXGetTexObjWrapT(); // 1
 extern "C" void GXGetTexObjMipMap(); // 1
 extern "C" void GXGetTexObjTlut(); // 1
-extern "C" static void GXLoadTexObjPreLoaded(); // 1
+extern "C" void GXLoadTexObjPreLoaded(); // 1
 extern "C" void GXLoadTexObj(); // 1
 extern "C" void GXInitTlutObj(); // 1
 extern "C" void GXLoadTlut(); // 1
@@ -57,12 +57,12 @@ extern "C" void GXInvalidateTexAll(); // 1
 extern "C" void GXSetTexRegionCallback(); // 1
 extern "C" void GXSetTlutRegionCallback(); // 1
 extern "C" void GXSetTexCoordScaleManually(); // 1
-extern "C" static void __SetSURegs(); // 1
+extern "C" void __SetSURegs(); // 1
 extern "C" void __GXSetSUTexRegs(); // 1
 extern "C" void __GXSetTmemConfig(); // 1
-SECTION_DATA extern void*GXTexture__lit_104[61];
-SECTION_DATA extern void*GXTexture__lit_145[61];
-SECTION_DATA extern void*lit_224[16];
+SECTION_DATA extern void* GXTexture__lit_104[61];
+SECTION_DATA extern void* GXTexture__lit_145[61];
+SECTION_DATA extern void* lit_224[15 + 1 /* padding */];
 SECTION_SDATA extern u8 GXTexMode0Ids[8];
 SECTION_SDATA extern u8 GXTexMode1Ids[8];
 SECTION_SDATA extern u8 GXTexImage0Ids[8];
@@ -71,7 +71,7 @@ SECTION_SDATA extern u8 GXTexImage2Ids[8];
 SECTION_SDATA extern u8 GXTexImage3Ids[8];
 SECTION_SDATA extern u8 GXTexTlutIds[8];
 SECTION_SDATA extern u8 GXTexture__GX2HWFiltConv[6 + 2 /* padding */];
-SECTION_SDATA2 extern f32 GXTexture__lit_220;
+SECTION_SDATA2 extern f32 GXTexture__lit_220[1 + 1 /* padding */];
 SECTION_SDATA2 extern f64 lit_222;
 SECTION_SDATA2 extern f32 GXTexture__lit_288;
 SECTION_SDATA2 extern f32 lit_289;
@@ -89,14 +89,14 @@ extern "C" void __GXFlushTextureState(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void __GXFlushTextureState(); // 1
-SECTION_SDATA2 extern void*__GXData;
+SECTION_SDATA2 extern void* __GXData;
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803D2598-803D268C 00F4+00 rc=1 efc=0 .data      @104                                                         */
+/* 803D2598-803D268C 00F4+00 rc=0 efc=0 .data      @104                                                         */
 void* GXTexture__lit_104[61] = {
 	(void*)(((char*)GXGetTexBufferSize)+0x28),
 	(void*)(((char*)GXGetTexBufferSize)+0x34),
@@ -161,7 +161,7 @@ void* GXTexture__lit_104[61] = {
 	(void*)(((char*)GXGetTexBufferSize)+0x40),
 };
 
-/* 8035DC1C-8035DD78 015C+00 rc=9 efc=8 .text      GXGetTexBufferSize                                           */
+/* 8035DC1C-8035DD78 015C+00 rc=0 efc=0 .text      GXGetTexBufferSize                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -173,7 +173,7 @@ extern "C" asm void GXGetTexBufferSize() {
 
 
 /* ############################################################################################## */
-/* 803D268C-803D2780 00F4+00 rc=1 efc=0 .data      @145                                                         */
+/* 803D268C-803D2780 00F4+00 rc=0 efc=0 .data      @145                                                         */
 void* GXTexture__lit_145[61] = {
 	(void*)(((char*)__GetImageTileCount)+0x20),
 	(void*)(((char*)__GetImageTileCount)+0x2C),
@@ -238,7 +238,7 @@ void* GXTexture__lit_145[61] = {
 	(void*)(((char*)__GetImageTileCount)+0x38),
 };
 
-/* 8035DD78-8035DE40 00C8+00 rc=2 efc=1 .text      __GetImageTileCount                                          */
+/* 8035DD78-8035DE40 00C8+00 rc=0 efc=0 .text      __GetImageTileCount                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,8 +250,8 @@ extern "C" asm void __GetImageTileCount() {
 
 
 /* ############################################################################################## */
-/* 803D2780-803D27C0 003C+04 rc=1 efc=0 .data      @224                                                         */
-void* lit_224[16] = {
+/* 803D2780-803D27C0 003C+04 rc=0 efc=0 .data      @224                                                         */
+void* lit_224[15 + 1 /* padding */] = {
 	(void*)(((char*)GXInitTexObj)+0x180),
 	(void*)(((char*)GXInitTexObj)+0x194),
 	(void*)(((char*)GXInitTexObj)+0x194),
@@ -271,14 +271,17 @@ void* lit_224[16] = {
 	NULL,
 };
 
-/* 804565E8-804565F0 0004+04 rc=2 efc=0 .sdata2    @220                                                         */
-f32 GXTexture__lit_220 = 16.0f;
-/* padding 4 bytes */
+/* 804565E8-804565F0 0004+04 rc=0 efc=0 .sdata2    @220                                                         */
+f32 GXTexture__lit_220[1 + 1 /* padding */] = {
+	16.0f,
+	/* padding */
+	0.0f,
+};
 
-/* 804565F0-804565F8 0008+00 rc=1 efc=0 .sdata2    @222                                                         */
+/* 804565F0-804565F8 0008+00 rc=0 efc=0 .sdata2    @222                                                         */
 f64 lit_222 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8035DE40-8035E08C 024C+00 rc=24 efc=22 .text      GXInitTexObj                                                 */
+/* 8035DE40-8035E08C 024C+00 rc=0 efc=0 .text      GXInitTexObj                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -289,7 +292,7 @@ extern "C" asm void GXInitTexObj() {
 #pragma pop
 
 
-/* 8035E08C-8035E0D4 0048+00 rc=3 efc=3 .text      GXInitTexObjCI                                               */
+/* 8035E08C-8035E0D4 0048+00 rc=0 efc=0 .text      GXInitTexObjCI                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -301,69 +304,69 @@ extern "C" asm void GXInitTexObjCI() {
 
 
 /* ############################################################################################## */
-/* 80450A90-80450A98 0008+00 rc=1 efc=0 .sdata     GXTexMode0Ids                                                */
+/* 80450A90-80450A98 0008+00 rc=0 efc=0 .sdata     GXTexMode0Ids                                                */
 u8 GXTexMode0Ids[8] = {
 	0x80, 0x81, 0x82, 0x83, 0xA0, 0xA1, 0xA2, 0xA3,
 };
 
-/* 80450A98-80450AA0 0008+00 rc=1 efc=0 .sdata     GXTexMode1Ids                                                */
+/* 80450A98-80450AA0 0008+00 rc=0 efc=0 .sdata     GXTexMode1Ids                                                */
 u8 GXTexMode1Ids[8] = {
 	0x84, 0x85, 0x86, 0x87, 0xA4, 0xA5, 0xA6, 0xA7,
 };
 
-/* 80450AA0-80450AA8 0008+00 rc=1 efc=0 .sdata     GXTexImage0Ids                                               */
+/* 80450AA0-80450AA8 0008+00 rc=0 efc=0 .sdata     GXTexImage0Ids                                               */
 u8 GXTexImage0Ids[8] = {
 	0x88, 0x89, 0x8A, 0x8B, 0xA8, 0xA9, 0xAA, 0xAB,
 };
 
-/* 80450AA8-80450AB0 0008+00 rc=1 efc=0 .sdata     GXTexImage1Ids                                               */
+/* 80450AA8-80450AB0 0008+00 rc=0 efc=0 .sdata     GXTexImage1Ids                                               */
 u8 GXTexImage1Ids[8] = {
 	0x8C, 0x8D, 0x8E, 0x8F, 0xAC, 0xAD, 0xAE, 0xAF,
 };
 
-/* 80450AB0-80450AB8 0008+00 rc=1 efc=0 .sdata     GXTexImage2Ids                                               */
+/* 80450AB0-80450AB8 0008+00 rc=0 efc=0 .sdata     GXTexImage2Ids                                               */
 u8 GXTexImage2Ids[8] = {
 	0x90, 0x91, 0x92, 0x93, 0xB0, 0xB1, 0xB2, 0xB3,
 };
 
-/* 80450AB8-80450AC0 0008+00 rc=1 efc=0 .sdata     GXTexImage3Ids                                               */
+/* 80450AB8-80450AC0 0008+00 rc=0 efc=0 .sdata     GXTexImage3Ids                                               */
 u8 GXTexImage3Ids[8] = {
 	0x94, 0x95, 0x96, 0x97, 0xB4, 0xB5, 0xB6, 0xB7,
 };
 
-/* 80450AC0-80450AC8 0008+00 rc=1 efc=0 .sdata     GXTexTlutIds                                                 */
+/* 80450AC0-80450AC8 0008+00 rc=0 efc=0 .sdata     GXTexTlutIds                                                 */
 u8 GXTexTlutIds[8] = {
 	0x98, 0x99, 0x9A, 0x9B, 0xB8, 0xB9, 0xBA, 0xBB,
 };
 
-/* 80450AC8-80450AD0 0006+02 rc=1 efc=0 .sdata     GX2HWFiltConv                                                */
-u8 GXTexture__GX2HWFiltConv[8] = {
+/* 80450AC8-80450AD0 0006+02 rc=0 efc=0 .sdata     GX2HWFiltConv                                                */
+u8 GXTexture__GX2HWFiltConv[6 + 2 /* padding */] = {
 	0x00, 0x04, 0x01, 0x05, 0x02, 0x06,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 804565F8-804565FC 0004+00 rc=1 efc=0 .sdata2    @288                                                         */
+/* 804565F8-804565FC 0004+00 rc=0 efc=0 .sdata2    @288                                                         */
 f32 GXTexture__lit_288 = -4.0f;
 
-/* 804565FC-80456600 0004+00 rc=1 efc=0 .sdata2    @289                                                         */
+/* 804565FC-80456600 0004+00 rc=0 efc=0 .sdata2    @289                                                         */
 f32 lit_289 = 4.0f;
 
-/* 80456600-80456604 0004+00 rc=1 efc=0 .sdata2    @290                                                         */
+/* 80456600-80456604 0004+00 rc=0 efc=0 .sdata2    @290                                                         */
 f32 GXTexture__lit_290 = 3.990000009536743f;
 
-/* 80456604-80456608 0004+00 rc=1 efc=0 .sdata2    @291                                                         */
+/* 80456604-80456608 0004+00 rc=0 efc=0 .sdata2    @291                                                         */
 f32 lit_291 = 32.0f;
 
-/* 80456608-8045660C 0004+00 rc=1 efc=0 .sdata2    @292                                                         */
+/* 80456608-8045660C 0004+00 rc=0 efc=0 .sdata2    @292                                                         */
 u8 GXTexture__lit_292[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045660C-80456610 0004+00 rc=1 efc=0 .sdata2    @293                                                         */
+/* 8045660C-80456610 0004+00 rc=0 efc=0 .sdata2    @293                                                         */
 f32 GXTexture__lit_293 = 10.0f;
 
-/* 8035E0D4-8035E238 0164+00 rc=21 efc=21 .text      GXInitTexObjLOD                                              */
+/* 8035E0D4-8035E238 0164+00 rc=0 efc=0 .text      GXInitTexObjLOD                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -374,7 +377,7 @@ extern "C" asm void GXInitTexObjLOD() {
 #pragma pop
 
 
-/* 8035E238-8035E248 0010+00 rc=4 efc=4 .text      GXGetTexObjWidth                                             */
+/* 8035E238-8035E248 0010+00 rc=0 efc=0 .text      GXGetTexObjWidth                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -385,7 +388,7 @@ extern "C" asm void GXGetTexObjWidth() {
 #pragma pop
 
 
-/* 8035E248-8035E258 0010+00 rc=3 efc=3 .text      GXGetTexObjHeight                                            */
+/* 8035E248-8035E258 0010+00 rc=0 efc=0 .text      GXGetTexObjHeight                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -396,7 +399,7 @@ extern "C" asm void GXGetTexObjHeight() {
 #pragma pop
 
 
-/* 8035E258-8035E260 0008+00 rc=1 efc=1 .text      GXGetTexObjFmt                                               */
+/* 8035E258-8035E260 0008+00 rc=0 efc=0 .text      GXGetTexObjFmt                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -407,7 +410,7 @@ extern "C" asm void GXGetTexObjFmt() {
 #pragma pop
 
 
-/* 8035E260-8035E26C 000C+00 rc=1 efc=1 .text      GXGetTexObjWrapS                                             */
+/* 8035E260-8035E26C 000C+00 rc=0 efc=0 .text      GXGetTexObjWrapS                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -418,7 +421,7 @@ extern "C" asm void GXGetTexObjWrapS() {
 #pragma pop
 
 
-/* 8035E26C-8035E278 000C+00 rc=1 efc=1 .text      GXGetTexObjWrapT                                             */
+/* 8035E26C-8035E278 000C+00 rc=0 efc=0 .text      GXGetTexObjWrapT                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -429,7 +432,7 @@ extern "C" asm void GXGetTexObjWrapT() {
 #pragma pop
 
 
-/* 8035E278-8035E290 0018+00 rc=1 efc=1 .text      GXGetTexObjMipMap                                            */
+/* 8035E278-8035E290 0018+00 rc=0 efc=0 .text      GXGetTexObjMipMap                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -440,7 +443,7 @@ extern "C" asm void GXGetTexObjMipMap() {
 #pragma pop
 
 
-/* 8035E290-8035E298 0008+00 rc=1 efc=1 .text      GXGetTexObjTlut                                              */
+/* 8035E290-8035E298 0008+00 rc=0 efc=0 .text      GXGetTexObjTlut                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -451,18 +454,18 @@ extern "C" asm void GXGetTexObjTlut() {
 #pragma pop
 
 
-/* 8035E298-8035E414 017C+00 rc=1 efc=0 .text      GXLoadTexObjPreLoaded                                        */
+/* 8035E298-8035E414 017C+00 rc=0 efc=0 .text      GXLoadTexObjPreLoaded                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void GXLoadTexObjPreLoaded() {
+extern "C" asm void GXLoadTexObjPreLoaded() {
 	nofralloc
 #include "asm/dolphin/gx/GXTexture/GXLoadTexObjPreLoaded.s"
 }
 #pragma pop
 
 
-/* 8035E414-8035E468 0054+00 rc=33 efc=33 .text      GXLoadTexObj                                                 */
+/* 8035E414-8035E468 0054+00 rc=0 efc=0 .text      GXLoadTexObj                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -473,7 +476,7 @@ extern "C" asm void GXLoadTexObj() {
 #pragma pop
 
 
-/* 8035E468-8035E4A0 0038+00 rc=4 efc=4 .text      GXInitTlutObj                                                */
+/* 8035E468-8035E4A0 0038+00 rc=0 efc=0 .text      GXInitTlutObj                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -484,7 +487,7 @@ extern "C" asm void GXInitTlutObj() {
 #pragma pop
 
 
-/* 8035E4A0-8035E538 0098+00 rc=4 efc=4 .text      GXLoadTlut                                                   */
+/* 8035E4A0-8035E538 0098+00 rc=0 efc=0 .text      GXLoadTlut                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -495,7 +498,7 @@ extern "C" asm void GXLoadTlut() {
 #pragma pop
 
 
-/* 8035E538-8035E62C 00F4+00 rc=2 efc=2 .text      GXInitTexCacheRegion                                         */
+/* 8035E538-8035E62C 00F4+00 rc=0 efc=0 .text      GXInitTexCacheRegion                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -506,7 +509,7 @@ extern "C" asm void GXInitTexCacheRegion() {
 #pragma pop
 
 
-/* 8035E62C-8035E664 0038+00 rc=1 efc=1 .text      GXInitTlutRegion                                             */
+/* 8035E62C-8035E664 0038+00 rc=0 efc=0 .text      GXInitTlutRegion                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -517,7 +520,7 @@ extern "C" asm void GXInitTlutRegion() {
 #pragma pop
 
 
-/* 8035E664-8035E6AC 0048+00 rc=8 efc=8 .text      GXInvalidateTexAll                                           */
+/* 8035E664-8035E6AC 0048+00 rc=0 efc=0 .text      GXInvalidateTexAll                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -528,7 +531,7 @@ extern "C" asm void GXInvalidateTexAll() {
 #pragma pop
 
 
-/* 8035E6AC-8035E6C0 0014+00 rc=1 efc=1 .text      GXSetTexRegionCallback                                       */
+/* 8035E6AC-8035E6C0 0014+00 rc=0 efc=0 .text      GXSetTexRegionCallback                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -539,7 +542,7 @@ extern "C" asm void GXSetTexRegionCallback() {
 #pragma pop
 
 
-/* 8035E6C0-8035E6D4 0014+00 rc=1 efc=1 .text      GXSetTlutRegionCallback                                      */
+/* 8035E6C0-8035E6D4 0014+00 rc=0 efc=0 .text      GXSetTlutRegionCallback                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -550,7 +553,7 @@ extern "C" asm void GXSetTlutRegionCallback() {
 #pragma pop
 
 
-/* 8035E6D4-8035E750 007C+00 rc=1 efc=1 .text      GXSetTexCoordScaleManually                                   */
+/* 8035E6D4-8035E750 007C+00 rc=0 efc=0 .text      GXSetTexCoordScaleManually                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -561,18 +564,18 @@ extern "C" asm void GXSetTexCoordScaleManually() {
 #pragma pop
 
 
-/* 8035E750-8035E7F0 00A0+00 rc=1 efc=0 .text      __SetSURegs                                                  */
+/* 8035E750-8035E7F0 00A0+00 rc=0 efc=0 .text      __SetSURegs                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __SetSURegs() {
+extern "C" asm void __SetSURegs() {
 	nofralloc
 #include "asm/dolphin/gx/GXTexture/__SetSURegs.s"
 }
 #pragma pop
 
 
-/* 8035E7F0-8035E96C 017C+00 rc=2 efc=2 .text      __GXSetSUTexRegs                                             */
+/* 8035E7F0-8035E96C 017C+00 rc=0 efc=0 .text      __GXSetSUTexRegs                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -583,7 +586,7 @@ extern "C" asm void __GXSetSUTexRegs() {
 #pragma pop
 
 
-/* 8035E96C-8035ECC0 0354+00 rc=1 efc=1 .text      __GXSetTmemConfig                                            */
+/* 8035E96C-8035ECC0 0354+00 rc=0 efc=0 .text      __GXSetTmemConfig                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

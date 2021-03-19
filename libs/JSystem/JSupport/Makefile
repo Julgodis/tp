@@ -23,11 +23,14 @@ LIBJSUPPORT_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJSupport.a: $(LIBJSUPPORT_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJSupport.a
 	@echo $(LIBJSUPPORT_A_O_FILES) > build/LIBJSUPPORT_A_ofiles
-	$(LD) -xm l $(LIBJSUPPORT_A_LDFLAGS) -o $(BUILD_DIR)/libJSupport.a @build/LIBJSUPPORT_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJSupport.a
+	@$(LD) -xm l $(LIBJSUPPORT_A_LDFLAGS) -o $(BUILD_DIR)/libJSupport.a @build/LIBJSUPPORT_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJSupport.a
 
 $(BUILD_DIR)/libs/JSystem/JSupport/%.o: libs/JSystem/JSupport/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJSUPPORT_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJSUPPORT_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

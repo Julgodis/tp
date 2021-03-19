@@ -32,7 +32,7 @@ extern "C" void GXSetChanAmbColor(); // 1
 extern "C" void GXSetChanMatColor(); // 1
 extern "C" void GXSetNumChans(); // 1
 extern "C" void GXSetChanCtrl(); // 1
-SECTION_DATA extern void*GXLight__lit_145[8];
+SECTION_DATA extern void* GXLight__lit_145[7 + 1 /* padding */];
 SECTION_SDATA2 extern u8 lit_134[4];
 SECTION_SDATA2 extern f32 GXLight__lit_135;
 SECTION_SDATA2 extern f32 lit_136;
@@ -53,13 +53,13 @@ SECTION_SDATA2 extern f32 GXLight__lit_160;
 extern "C" void cosf(); // 1
 
 extern "C" void cosf(); // 1
-SECTION_SDATA2 extern void*__GXData;
+SECTION_SDATA2 extern void* __GXData;
 
 // 
 // Declarations:
 // 
 
-/* 8035D630-8035D64C 001C+00 rc=1 efc=1 .text      GXInitLightAttn                                              */
+/* 8035D630-8035D64C 001C+00 rc=0 efc=0 .text      GXInitLightAttn                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,8 +71,8 @@ extern "C" asm void GXInitLightAttn() {
 
 
 /* ############################################################################################## */
-/* 803D2578-803D2598 001C+04 rc=1 efc=0 .data      @145                                                         */
-void* GXLight__lit_145[8] = {
+/* 803D2578-803D2598 001C+04 rc=0 efc=0 .data      @145                                                         */
+void* GXLight__lit_145[7 + 1 /* padding */] = {
 	(void*)(((char*)GXInitLightSpot)+0x160),
 	(void*)(((char*)GXInitLightSpot)+0x70),
 	(void*)(((char*)GXInitLightSpot)+0x84),
@@ -84,42 +84,42 @@ void* GXLight__lit_145[8] = {
 	NULL,
 };
 
-/* 804565B8-804565BC 0004+00 rc=2 efc=0 .sdata2    @134                                                         */
+/* 804565B8-804565BC 0004+00 rc=0 efc=0 .sdata2    @134                                                         */
 u8 lit_134[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804565BC-804565C0 0004+00 rc=1 efc=0 .sdata2    @135                                                         */
+/* 804565BC-804565C0 0004+00 rc=0 efc=0 .sdata2    @135                                                         */
 f32 GXLight__lit_135 = 90.0f;
 
-/* 804565C0-804565C4 0004+00 rc=1 efc=0 .sdata2    @136                                                         */
+/* 804565C0-804565C4 0004+00 rc=0 efc=0 .sdata2    @136                                                         */
 f32 lit_136 = 3.1415927410125732f;
 
-/* 804565C4-804565C8 0004+00 rc=1 efc=0 .sdata2    @137                                                         */
+/* 804565C4-804565C8 0004+00 rc=0 efc=0 .sdata2    @137                                                         */
 f32 lit_137 = 180.0f;
 
-/* 804565C8-804565CC 0004+00 rc=1 efc=0 .sdata2    @138                                                         */
+/* 804565C8-804565CC 0004+00 rc=0 efc=0 .sdata2    @138                                                         */
 f32 lit_138 = -1000.0f;
 
-/* 804565CC-804565D0 0004+00 rc=1 efc=0 .sdata2    @139                                                         */
+/* 804565CC-804565D0 0004+00 rc=0 efc=0 .sdata2    @139                                                         */
 f32 lit_139 = 1000.0f;
 
-/* 804565D0-804565D4 0004+00 rc=2 efc=0 .sdata2    @140                                                         */
+/* 804565D0-804565D4 0004+00 rc=0 efc=0 .sdata2    @140                                                         */
 f32 GXLight__lit_140 = 1.0f;
 
-/* 804565D4-804565D8 0004+00 rc=1 efc=0 .sdata2    @141                                                         */
+/* 804565D4-804565D8 0004+00 rc=0 efc=0 .sdata2    @141                                                         */
 f32 lit_141 = 2.0f;
 
-/* 804565D8-804565DC 0004+00 rc=1 efc=0 .sdata2    @142                                                         */
+/* 804565D8-804565DC 0004+00 rc=0 efc=0 .sdata2    @142                                                         */
 f32 lit_142 = -4.0f;
 
-/* 804565DC-804565E0 0004+00 rc=1 efc=0 .sdata2    @143                                                         */
+/* 804565DC-804565E0 0004+00 rc=0 efc=0 .sdata2    @143                                                         */
 f32 lit_143 = 4.0f;
 
-/* 804565E0-804565E4 0004+00 rc=1 efc=0 .sdata2    @144                                                         */
+/* 804565E0-804565E4 0004+00 rc=0 efc=0 .sdata2    @144                                                         */
 f32 lit_144 = -2.0f;
 
-/* 8035D64C-8035D7DC 0190+00 rc=3 efc=2 .text      GXInitLightSpot                                              */
+/* 8035D64C-8035D7DC 0190+00 rc=0 efc=0 .text      GXInitLightSpot                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -131,10 +131,10 @@ extern "C" asm void GXInitLightSpot() {
 
 
 /* ############################################################################################## */
-/* 804565E4-804565E8 0004+00 rc=1 efc=0 .sdata2    @160                                                         */
+/* 804565E4-804565E8 0004+00 rc=0 efc=0 .sdata2    @160                                                         */
 f32 GXLight__lit_160 = 0.5f;
 
-/* 8035D7DC-8035D8AC 00D0+00 rc=2 efc=2 .text      GXInitLightDistAttn                                          */
+/* 8035D7DC-8035D8AC 00D0+00 rc=0 efc=0 .text      GXInitLightDistAttn                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +145,7 @@ extern "C" asm void GXInitLightDistAttn() {
 #pragma pop
 
 
-/* 8035D8AC-8035D8BC 0010+00 rc=3 efc=3 .text      GXInitLightPos                                               */
+/* 8035D8AC-8035D8BC 0010+00 rc=0 efc=0 .text      GXInitLightPos                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +156,7 @@ extern "C" asm void GXInitLightPos() {
 #pragma pop
 
 
-/* 8035D8BC-8035D8D8 001C+00 rc=3 efc=3 .text      GXInitLightDir                                               */
+/* 8035D8BC-8035D8D8 001C+00 rc=0 efc=0 .text      GXInitLightDir                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +167,7 @@ extern "C" asm void GXInitLightDir() {
 #pragma pop
 
 
-/* 8035D8D8-8035D8E4 000C+00 rc=3 efc=3 .text      GXInitLightColor                                             */
+/* 8035D8D8-8035D8E4 000C+00 rc=0 efc=0 .text      GXInitLightColor                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -178,7 +178,7 @@ extern "C" asm void GXInitLightColor() {
 #pragma pop
 
 
-/* 8035D8E4-8035D960 007C+00 rc=4 efc=4 .text      GXLoadLightObjImm                                            */
+/* 8035D8E4-8035D960 007C+00 rc=0 efc=0 .text      GXLoadLightObjImm                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,7 +189,7 @@ extern "C" asm void GXLoadLightObjImm() {
 #pragma pop
 
 
-/* 8035D960-8035DA48 00E8+00 rc=7 efc=7 .text      GXSetChanAmbColor                                            */
+/* 8035D960-8035DA48 00E8+00 rc=0 efc=0 .text      GXSetChanAmbColor                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -200,7 +200,7 @@ extern "C" asm void GXSetChanAmbColor() {
 #pragma pop
 
 
-/* 8035DA48-8035DB30 00E8+00 rc=20 efc=20 .text      GXSetChanMatColor                                            */
+/* 8035DA48-8035DB30 00E8+00 rc=0 efc=0 .text      GXSetChanMatColor                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -211,7 +211,7 @@ extern "C" asm void GXSetChanMatColor() {
 #pragma pop
 
 
-/* 8035DB30-8035DB6C 003C+00 rc=51 efc=51 .text      GXSetNumChans                                                */
+/* 8035DB30-8035DB6C 003C+00 rc=0 efc=0 .text      GXSetNumChans                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -222,7 +222,7 @@ extern "C" asm void GXSetNumChans() {
 #pragma pop
 
 
-/* 8035DB6C-8035DC1C 00B0+00 rc=34 efc=34 .text      GXSetChanCtrl                                                */
+/* 8035DB6C-8035DC1C 00B0+00 rc=0 efc=0 .text      GXSetChanCtrl                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

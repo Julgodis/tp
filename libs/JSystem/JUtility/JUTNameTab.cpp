@@ -44,13 +44,13 @@ extern "C" void strcmp(); // 1
 extern "C" void _savegpr_26(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void strcmp(); // 1
-SECTION_DATA extern void*const __vt__10JUTNameTab[3];
+SECTION_DATA extern void* const __vt__10JUTNameTab[3];
 
 // 
 // Declarations:
 // 
 
-/* 802DE9A0-802DE9E0 0040+00 rc=5 efc=5 .text      __ct__10JUTNameTabFv                                         */
+/* 802DE9A0-802DE9E0 0040+00 rc=0 efc=0 .text      __ct__10JUTNameTabFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,7 +61,7 @@ asm JUTNameTab::JUTNameTab() {
 #pragma pop
 
 
-/* 802DE9E0-802DEA1C 003C+00 rc=12 efc=12 .text      __ct__10JUTNameTabFPC7ResNTAB                                */
+/* 802DE9E0-802DEA1C 003C+00 rc=0 efc=0 .text      __ct__10JUTNameTabFPC7ResNTAB                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +72,7 @@ asm JUTNameTab::JUTNameTab(ResNTAB const* field_0) {
 #pragma pop
 
 
-/* 802DEA1C-802DEA58 003C+00 rc=12 efc=10 .text      setResource__10JUTNameTabFPC7ResNTAB                         */
+/* 802DEA1C-802DEA58 003C+00 rc=0 efc=0 .text      setResource__10JUTNameTabFPC7ResNTAB                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +83,7 @@ asm void JUTNameTab::setResource(ResNTAB const* field_0) {
 #pragma pop
 
 
-/* 802DEA58-802DEAF8 00A0+00 rc=9 efc=9 .text      getIndex__10JUTNameTabCFPCc                                  */
+/* 802DEA58-802DEAF8 00A0+00 rc=0 efc=0 .text      getIndex__10JUTNameTabCFPCc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +94,7 @@ asm void JUTNameTab::getIndex(char const* field_0) const {
 #pragma pop
 
 
-/* 802DEAF8-802DEB28 0030+00 rc=14 efc=14 .text      getName__10JUTNameTabCFUs                                    */
+/* 802DEAF8-802DEB28 0030+00 rc=0 efc=0 .text      getName__10JUTNameTabCFUs                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +105,7 @@ asm void JUTNameTab::getName(u16 field_0) const {
 #pragma pop
 
 
-/* 802DEB28-802DEB58 0030+00 rc=1 efc=0 .text      calcKeyCode__10JUTNameTabCFPCc                               */
+/* 802DEB28-802DEB58 0030+00 rc=0 efc=0 .text      calcKeyCode__10JUTNameTabCFPCc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,20 +9,20 @@
 // Types:
 // 
 
-struct J2DMaterial {
-	/* 802EA410 */ void createTevBlock(int, bool);
-	/* 802EA5C4 */ void createIndBlock(int, bool);
-};
-
 struct JKRArchive {
-};
-
-struct J2DMaterialBlock {
 };
 
 struct J2DResReference {
 	/* 8030CF10 */ void getResReference(u16) const;
 	/* 8030CF44 */ void getName(u16) const;
+};
+
+struct J2DMaterial {
+	/* 802EA410 */ void createTevBlock(int, bool);
+	/* 802EA5C4 */ void createIndBlock(int, bool);
+};
+
+struct J2DMaterialBlock {
 };
 
 struct J2DMaterialFactory {
@@ -79,22 +79,22 @@ struct J2DDataManage {
 // Forward References:
 // 
 
-static void JSUConvertOffsetToPtr__template14(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template15(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template16(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template17(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template18(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template14(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template15(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template16(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template17(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template18(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template19(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template20(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template21(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template22(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template23(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template20(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template21(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template22(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template23(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template25(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template26(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template27(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template27(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template29(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template29(void const*, void const*); // 2
 
 extern "C" void __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock(); // 1
 extern "C" void countStages__18J2DMaterialFactoryCFi(); // 1
@@ -123,22 +123,22 @@ extern "C" void newAlphaComp__18J2DMaterialFactoryCFi(); // 1
 extern "C" void newBlend__18J2DMaterialFactoryCFi(); // 1
 extern "C" void newDither__18J2DMaterialFactoryCFi(); // 1
 extern "C" void __ct__11J2DTevStageFRC15J2DTevStageInfo(); // 1
-extern "C" static void func_802F4170(); // 1
-extern "C" static void func_802F4188(); // 1
-extern "C" static void func_802F41A0(); // 1
-extern "C" static void func_802F41B8(); // 1
-extern "C" static void func_802F41D0(); // 1
+extern "C" void func_802F4170(); // 1
+extern "C" void func_802F4188(); // 1
+extern "C" void func_802F41A0(); // 1
+extern "C" void func_802F41B8(); // 1
+extern "C" void func_802F41D0(); // 1
 extern "C" void func_802F41E8(); // 1
-extern "C" static void func_802F4200(); // 1
-extern "C" static void func_802F4218(); // 1
-extern "C" static void func_802F4230(); // 1
-extern "C" static void func_802F4248(); // 1
+extern "C" void func_802F4200(); // 1
+extern "C" void func_802F4218(); // 1
+extern "C" void func_802F4230(); // 1
+extern "C" void func_802F4248(); // 1
 extern "C" void func_802F4260(); // 1
 extern "C" void func_802F4278(); // 1
 extern "C" void func_802F4290(); // 1
-extern "C" static void func_802F42A8(); // 1
+extern "C" void func_802F42A8(); // 1
 extern "C" void func_802F42C0(); // 1
-extern "C" static void func_802F42D8(); // 1
+extern "C" void func_802F42D8(); // 1
 SECTION_SDATA2 extern u32 lit_1887;
 SECTION_SDATA2 extern u32 lit_2039;
 SECTION_SBSS2 extern u8 lit_2018[4];
@@ -175,19 +175,18 @@ SECTION_RODATA extern const u8 j2dDefaultIndTexMtxInfo[28];
 SECTION_RODATA extern const u8 j2dDefaultIndTevStageInfo[12];
 SECTION_SBSS extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
 SECTION_SDATA2 extern u32 j2dDefaultTevOrderInfoNull;
-SECTION_SDATA2 extern u16 j2dDefaultIndTexOrderNull;
+SECTION_SDATA2 extern u16 j2dDefaultIndTexOrderNull[1 + 1 /* padding */];
 SECTION_SDATA2 extern u8 j2dDefaultIndTexCoordScaleInfo[2 + 2 /* padding */];
 SECTION_SDATA2 extern u8 j2dDefaultTevSwapMode[4];
 SECTION_SDATA2 extern u32 j2dDefaultTevSwapModeTable;
 SECTION_SDATA2 extern u32 j2dDefaultBlendInfo;
 SECTION_SDATA2 extern u32 j2dDefaultColorChanInfo;
-SECTION_SDATA2 extern u16 j2dDefaultAlphaCmp;
 
 // 
 // Declarations:
 // 
 
-/* 802F2AD0-802F2C94 01C4+00 rc=1 efc=1 .text      __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock              */
+/* 802F2AD0-802F2C94 01C4+00 rc=0 efc=0 .text      __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +197,7 @@ asm J2DMaterialFactory::J2DMaterialFactory(J2DMaterialBlock const& field_0) {
 #pragma pop
 
 
-/* 802F2C94-802F2D1C 0088+00 rc=1 efc=0 .text      countStages__18J2DMaterialFactoryCFi                         */
+/* 802F2C94-802F2D1C 0088+00 rc=0 efc=0 .text      countStages__18J2DMaterialFactoryCFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +208,7 @@ asm void J2DMaterialFactory::countStages(int field_0) const {
 #pragma pop
 
 
-/* 802F2D1C-802F362C 0910+00 rc=1 efc=1 .text      create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive */
+/* 802F2D1C-802F362C 0910+00 rc=0 efc=0 .text      create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -221,10 +220,10 @@ asm void J2DMaterialFactory::create(J2DMaterial* field_0, int field_1, u32 field
 
 
 /* ############################################################################################## */
-/* 804561C0-804561C4 0004+00 rc=1 efc=0 .sdata2    @1887                                                        */
+/* 804561C0-804561C4 0004+00 rc=0 efc=0 .sdata2    @1887                                                        */
 u32 lit_1887 = 0xFFFFFFFF;
 
-/* 802F362C-802F36CC 00A0+00 rc=1 efc=0 .text      newMatColor__18J2DMaterialFactoryCFii                        */
+/* 802F362C-802F36CC 00A0+00 rc=0 efc=0 .text      newMatColor__18J2DMaterialFactoryCFii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -235,7 +234,7 @@ asm void J2DMaterialFactory::newMatColor(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 802F36CC-802F3704 0038+00 rc=1 efc=0 .text      newColorChanNum__18J2DMaterialFactoryCFi                     */
+/* 802F36CC-802F3704 0038+00 rc=0 efc=0 .text      newColorChanNum__18J2DMaterialFactoryCFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -246,7 +245,7 @@ asm void J2DMaterialFactory::newColorChanNum(int field_0) const {
 #pragma pop
 
 
-/* 802F3704-802F3758 0054+00 rc=1 efc=0 .text      newColorChan__18J2DMaterialFactoryCFii                       */
+/* 802F3704-802F3758 0054+00 rc=0 efc=0 .text      newColorChan__18J2DMaterialFactoryCFii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -257,7 +256,7 @@ asm void J2DMaterialFactory::newColorChan(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 802F3758-802F3790 0038+00 rc=1 efc=0 .text      newTexGenNum__18J2DMaterialFactoryCFi                        */
+/* 802F3758-802F3790 0038+00 rc=0 efc=0 .text      newTexGenNum__18J2DMaterialFactoryCFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -268,7 +267,7 @@ asm void J2DMaterialFactory::newTexGenNum(int field_0) const {
 #pragma pop
 
 
-/* 802F3790-802F3804 0074+00 rc=1 efc=0 .text      newTexCoord__18J2DMaterialFactoryCFii                        */
+/* 802F3790-802F3804 0074+00 rc=0 efc=0 .text      newTexCoord__18J2DMaterialFactoryCFii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -279,7 +278,7 @@ asm void J2DMaterialFactory::newTexCoord(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 802F3804-802F38E0 00DC+00 rc=1 efc=0 .text      newTexMtx__18J2DMaterialFactoryCFii                          */
+/* 802F3804-802F38E0 00DC+00 rc=0 efc=0 .text      newTexMtx__18J2DMaterialFactoryCFii                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -290,7 +289,7 @@ asm void J2DMaterialFactory::newTexMtx(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 802F38E0-802F3920 0040+00 rc=1 efc=0 .text      newCullMode__18J2DMaterialFactoryCFi                         */
+/* 802F38E0-802F3920 0040+00 rc=0 efc=0 .text      newCullMode__18J2DMaterialFactoryCFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -301,7 +300,7 @@ asm void J2DMaterialFactory::newCullMode(int field_0) const {
 #pragma pop
 
 
-/* 802F3920-802F3968 0048+00 rc=1 efc=0 .text      newTexNo__18J2DMaterialFactoryCFii                           */
+/* 802F3920-802F3968 0048+00 rc=0 efc=0 .text      newTexNo__18J2DMaterialFactoryCFii                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -312,7 +311,7 @@ asm void J2DMaterialFactory::newTexNo(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 802F3968-802F39A8 0040+00 rc=1 efc=0 .text      newFontNo__18J2DMaterialFactoryCFi                           */
+/* 802F3968-802F39A8 0040+00 rc=0 efc=0 .text      newFontNo__18J2DMaterialFactoryCFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -323,7 +322,7 @@ asm void J2DMaterialFactory::newFontNo(int field_0) const {
 #pragma pop
 
 
-/* 802F39A8-802F3A1C 0074+00 rc=1 efc=0 .text      newTevOrder__18J2DMaterialFactoryCFii                        */
+/* 802F39A8-802F3A1C 0074+00 rc=0 efc=0 .text      newTevOrder__18J2DMaterialFactoryCFii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -335,13 +334,13 @@ asm void J2DMaterialFactory::newTevOrder(int field_0, int field_1) const {
 
 
 /* ############################################################################################## */
-/* 80456BB0-80456BB4 0004+00 rc=1 efc=0 .sbss2     @2018                                                        */
+/* 80456BB0-80456BB4 0004+00 rc=0 efc=0 .sbss2     @2018                                                        */
 u8 lit_2018[4];
 
-/* 80456BB4-80456BB8 0004+00 rc=1 efc=0 .sbss2     None                                                         */
+/* 80456BB4-80456BB8 0004+00 rc=0 efc=0 .sbss2     None                                                         */
 u8 data_80456BB4[4];
 
-/* 802F3A1C-802F3AB4 0098+00 rc=1 efc=0 .text      newTevColor__18J2DMaterialFactoryCFii                        */
+/* 802F3A1C-802F3AB4 0098+00 rc=0 efc=0 .text      newTevColor__18J2DMaterialFactoryCFii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -353,10 +352,10 @@ asm void J2DMaterialFactory::newTevColor(int field_0, int field_1) const {
 
 
 /* ############################################################################################## */
-/* 804561C4-804561C8 0004+00 rc=1 efc=0 .sdata2    @2039                                                        */
+/* 804561C4-804561C8 0004+00 rc=0 efc=0 .sdata2    @2039                                                        */
 u32 lit_2039 = 0xFFFFFFFF;
 
-/* 802F3AB4-802F3B54 00A0+00 rc=1 efc=0 .text      newTevKColor__18J2DMaterialFactoryCFii                       */
+/* 802F3AB4-802F3B54 00A0+00 rc=0 efc=0 .text      newTevKColor__18J2DMaterialFactoryCFii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -367,7 +366,7 @@ asm void J2DMaterialFactory::newTevKColor(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 802F3B54-802F3B8C 0038+00 rc=1 efc=0 .text      newTevStageNum__18J2DMaterialFactoryCFi                      */
+/* 802F3B54-802F3B8C 0038+00 rc=0 efc=0 .text      newTevStageNum__18J2DMaterialFactoryCFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -378,7 +377,7 @@ asm void J2DMaterialFactory::newTevStageNum(int field_0) const {
 #pragma pop
 
 
-/* 802F3B8C-802F3BEC 0060+00 rc=1 efc=0 .text      newTevStage__18J2DMaterialFactoryCFii                        */
+/* 802F3B8C-802F3BEC 0060+00 rc=0 efc=0 .text      newTevStage__18J2DMaterialFactoryCFii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,7 +388,7 @@ asm void J2DMaterialFactory::newTevStage(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 802F3BEC-802F3C88 009C+00 rc=1 efc=0 .text      newTevSwapModeTable__18J2DMaterialFactoryCFii                */
+/* 802F3BEC-802F3C88 009C+00 rc=0 efc=0 .text      newTevSwapModeTable__18J2DMaterialFactoryCFii                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -400,7 +399,7 @@ asm void J2DMaterialFactory::newTevSwapModeTable(int field_0, int field_1) const
 #pragma pop
 
 
-/* 802F3C88-802F3CB8 0030+00 rc=1 efc=0 .text      newIndTexStageNum__18J2DMaterialFactoryCFi                   */
+/* 802F3C88-802F3CB8 0030+00 rc=0 efc=0 .text      newIndTexStageNum__18J2DMaterialFactoryCFi                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -411,7 +410,7 @@ asm void J2DMaterialFactory::newIndTexStageNum(int field_0) const {
 #pragma pop
 
 
-/* 802F3CB8-802F3D20 0068+00 rc=1 efc=0 .text      newIndTexOrder__18J2DMaterialFactoryCFii                     */
+/* 802F3CB8-802F3D20 0068+00 rc=0 efc=0 .text      newIndTexOrder__18J2DMaterialFactoryCFii                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -422,7 +421,7 @@ asm void J2DMaterialFactory::newIndTexOrder(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 802F3D20-802F3E24 0104+00 rc=1 efc=0 .text      newIndTexMtx__18J2DMaterialFactoryCFii                       */
+/* 802F3D20-802F3E24 0104+00 rc=0 efc=0 .text      newIndTexMtx__18J2DMaterialFactoryCFii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -433,7 +432,7 @@ asm void J2DMaterialFactory::newIndTexMtx(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 802F3E24-802F3F78 0154+00 rc=1 efc=0 .text      newIndTevStage__18J2DMaterialFactoryCFii                     */
+/* 802F3E24-802F3F78 0154+00 rc=0 efc=0 .text      newIndTevStage__18J2DMaterialFactoryCFii                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -444,7 +443,7 @@ asm void J2DMaterialFactory::newIndTevStage(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 802F3F78-802F3FE0 0068+00 rc=1 efc=0 .text      newIndTexCoordScale__18J2DMaterialFactoryCFii                */
+/* 802F3F78-802F3FE0 0068+00 rc=0 efc=0 .text      newIndTexCoordScale__18J2DMaterialFactoryCFii                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -455,7 +454,7 @@ asm void J2DMaterialFactory::newIndTexCoordScale(int field_0, int field_1) const
 #pragma pop
 
 
-/* 802F3FE0-802F405C 007C+00 rc=1 efc=0 .text      newAlphaComp__18J2DMaterialFactoryCFi                        */
+/* 802F3FE0-802F405C 007C+00 rc=0 efc=0 .text      newAlphaComp__18J2DMaterialFactoryCFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -466,7 +465,7 @@ asm void J2DMaterialFactory::newAlphaComp(int field_0) const {
 #pragma pop
 
 
-/* 802F405C-802F40D8 007C+00 rc=1 efc=0 .text      newBlend__18J2DMaterialFactoryCFi                            */
+/* 802F405C-802F40D8 007C+00 rc=0 efc=0 .text      newBlend__18J2DMaterialFactoryCFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -477,7 +476,7 @@ asm void J2DMaterialFactory::newBlend(int field_0) const {
 #pragma pop
 
 
-/* 802F40D8-802F4110 0038+00 rc=1 efc=0 .text      newDither__18J2DMaterialFactoryCFi                           */
+/* 802F40D8-802F4110 0038+00 rc=0 efc=0 .text      newDither__18J2DMaterialFactoryCFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -488,7 +487,7 @@ asm void J2DMaterialFactory::newDither(int field_0) const {
 #pragma pop
 
 
-/* 802F4110-802F4170 0060+00 rc=1 efc=0 .text      __ct__11J2DTevStageFRC15J2DTevStageInfo                      */
+/* 802F4110-802F4170 0060+00 rc=0 efc=0 .text      __ct__11J2DTevStageFRC15J2DTevStageInfo                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -499,62 +498,62 @@ asm J2DTevStage::J2DTevStage(J2DTevStageInfo const& field_0) {
 #pragma pop
 
 
-/* 802F4170-802F4188 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<12J2DBlendInfo>__FPCvPCv               */
+/* 802F4170-802F4188 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<12J2DBlendInfo>__FPCvPCv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template14(void const* field_0, void const* field_1) {
+asm void JSUConvertOffsetToPtr__template14(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4170.s"
 }
 #pragma pop
 
 
-/* 802F4188-802F41A0 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<16J2DAlphaCompInfo>__FPCvPCv           */
+/* 802F4188-802F41A0 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<16J2DAlphaCompInfo>__FPCvPCv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template15(void const* field_0, void const* field_1) {
+asm void JSUConvertOffsetToPtr__template15(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4188.s"
 }
 #pragma pop
 
 
-/* 802F41A0-802F41B8 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<23J2DTevSwapModeTableInfo>__FPCvPCv    */
+/* 802F41A0-802F41B8 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<23J2DTevSwapModeTableInfo>__FPCvPCv    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template16(void const* field_0, void const* field_1) {
+asm void JSUConvertOffsetToPtr__template16(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F41A0.s"
 }
 #pragma pop
 
 
-/* 802F41B8-802F41D0 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<18J2DTevSwapModeInfo>__FPCvPCv         */
+/* 802F41B8-802F41D0 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<18J2DTevSwapModeInfo>__FPCvPCv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template17(void const* field_0, void const* field_1) {
+asm void JSUConvertOffsetToPtr__template17(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F41B8.s"
 }
 #pragma pop
 
 
-/* 802F41D0-802F41E8 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<15J2DTevStageInfo>__FPCvPCv            */
+/* 802F41D0-802F41E8 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<15J2DTevStageInfo>__FPCvPCv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template18(void const* field_0, void const* field_1) {
+asm void JSUConvertOffsetToPtr__template18(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F41D0.s"
 }
 #pragma pop
 
 
-/* 802F41E8-802F4200 0018+00 rc=3 efc=2 .text      JSUConvertOffsetToPtr<11_GXColorS10>__FPCvPCv                */
+/* 802F41E8-802F4200 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<11_GXColorS10>__FPCvPCv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -565,51 +564,51 @@ asm void JSUConvertOffsetToPtr__template19(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 802F4200-802F4218 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<15J2DTevOrderInfo>__FPCvPCv            */
+/* 802F4200-802F4218 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<15J2DTevOrderInfo>__FPCvPCv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template20(void const* field_0, void const* field_1) {
+asm void JSUConvertOffsetToPtr__template20(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4200.s"
 }
 #pragma pop
 
 
-/* 802F4218-802F4230 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<13J2DTexMtxInfo>__FPCvPCv              */
+/* 802F4218-802F4230 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<13J2DTexMtxInfo>__FPCvPCv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template21(void const* field_0, void const* field_1) {
+asm void JSUConvertOffsetToPtr__template21(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4218.s"
 }
 #pragma pop
 
 
-/* 802F4230-802F4248 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<15J2DTexCoordInfo>__FPCvPCv            */
+/* 802F4230-802F4248 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<15J2DTexCoordInfo>__FPCvPCv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template22(void const* field_0, void const* field_1) {
+asm void JSUConvertOffsetToPtr__template22(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4230.s"
 }
 #pragma pop
 
 
-/* 802F4248-802F4260 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<16J2DColorChanInfo>__FPCvPCv           */
+/* 802F4248-802F4260 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<16J2DColorChanInfo>__FPCvPCv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template23(void const* field_0, void const* field_1) {
+asm void JSUConvertOffsetToPtr__template23(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F4248.s"
 }
 #pragma pop
 
 
-/* 802F4260-802F4278 0018+00 rc=14 efc=13 .text      JSUConvertOffsetToPtr<Uc>__FPCvPCv                           */
+/* 802F4260-802F4278 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<Uc>__FPCvPCv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -620,7 +619,7 @@ asm void JSUConvertOffsetToPtr__template24(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 802F4278-802F4290 0018+00 rc=3 efc=2 .text      JSUConvertOffsetToPtr<8_GXColor>__FPCvPCv                    */
+/* 802F4278-802F4290 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<8_GXColor>__FPCvPCv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -631,7 +630,7 @@ asm void JSUConvertOffsetToPtr__template25(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 802F4290-802F42A8 0018+00 rc=3 efc=2 .text      JSUConvertOffsetToPtr<11_GXCullMode>__FPCvPCv                */
+/* 802F4290-802F42A8 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<11_GXCullMode>__FPCvPCv                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -642,18 +641,18 @@ asm void JSUConvertOffsetToPtr__template26(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 802F42A8-802F42C0 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<14J2DIndInitData>__FPCvPCv             */
+/* 802F42A8-802F42C0 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<14J2DIndInitData>__FPCvPCv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template27(void const* field_0, void const* field_1) {
+asm void JSUConvertOffsetToPtr__template27(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F42A8.s"
 }
 #pragma pop
 
 
-/* 802F42C0-802F42D8 0018+00 rc=20 efc=19 .text      JSUConvertOffsetToPtr<Us>__FPCvPCv                           */
+/* 802F42C0-802F42D8 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<Us>__FPCvPCv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -664,11 +663,11 @@ asm void JSUConvertOffsetToPtr__template28(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 802F42D8-802F42F0 0018+00 rc=1 efc=0 .text      JSUConvertOffsetToPtr<19J2DMaterialInitData>__FPCvPCv        */
+/* 802F42D8-802F42F0 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<19J2DMaterialInitData>__FPCvPCv        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void JSUConvertOffsetToPtr__template29(void const* field_0, void const* field_1) {
+asm void JSUConvertOffsetToPtr__template29(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J2DGraph/J2DMaterialFactory/func_802F42D8.s"
 }

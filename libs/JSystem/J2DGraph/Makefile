@@ -51,11 +51,14 @@ LIBJ2DGRAPH_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJ2DGraph.a: $(LIBJ2DGRAPH_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJ2DGraph.a
 	@echo $(LIBJ2DGRAPH_A_O_FILES) > build/LIBJ2DGRAPH_A_ofiles
-	$(LD) -xm l $(LIBJ2DGRAPH_A_LDFLAGS) -o $(BUILD_DIR)/libJ2DGraph.a @build/LIBJ2DGRAPH_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ2DGraph.a
+	@$(LD) -xm l $(LIBJ2DGRAPH_A_LDFLAGS) -o $(BUILD_DIR)/libJ2DGraph.a @build/LIBJ2DGRAPH_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ2DGraph.a
 
 $(BUILD_DIR)/libs/JSystem/J2DGraph/%.o: libs/JSystem/J2DGraph/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJ2DGRAPH_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJ2DGRAPH_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

@@ -65,11 +65,14 @@ LIBJKERNEL_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJKernel.a: $(LIBJKERNEL_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJKernel.a
 	@echo $(LIBJKERNEL_A_O_FILES) > build/LIBJKERNEL_A_ofiles
-	$(LD) -xm l $(LIBJKERNEL_A_LDFLAGS) -o $(BUILD_DIR)/libJKernel.a @build/LIBJKERNEL_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJKernel.a
+	@$(LD) -xm l $(LIBJKERNEL_A_LDFLAGS) -o $(BUILD_DIR)/libJKernel.a @build/LIBJKERNEL_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJKernel.a
 
 $(BUILD_DIR)/libs/JSystem/JKernel/%.o: libs/JSystem/JKernel/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJKERNEL_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJKERNEL_A_CFLAGS) -c -o $@ $@.iconv.cpp
 

@@ -37,7 +37,7 @@ extern "C" void __copy_longs_aligned(); // 1
 // Declarations:
 // 
 
-/* 8036608C-803660D8 004C+00 rc=19 efc=19 .text      memcmp                                                       */
+/* 8036608C-803660D8 004C+00 rc=0 efc=0 .text      memcmp                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -48,7 +48,7 @@ extern "C" asm void memcmp() {
 #pragma pop
 
 
-/* 803660D8-80366104 002C+00 rc=1 efc=1 .text      __memrchr                                                    */
+/* 803660D8-80366104 002C+00 rc=0 efc=0 .text      __memrchr                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -59,7 +59,7 @@ extern "C" asm void __memrchr() {
 #pragma pop
 
 
-/* 80366104-80366130 002C+00 rc=1 efc=1 .text      memchr                                                       */
+/* 80366104-80366130 002C+00 rc=0 efc=0 .text      memchr                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ extern "C" asm void memchr() {
 #pragma pop
 
 
-/* 80366130-803661FC 00CC+00 rc=2 efc=2 .text      memmove                                                      */
+/* 80366130-803661FC 00CC+00 rc=0 efc=0 .text      memmove                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

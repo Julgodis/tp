@@ -37,11 +37,14 @@ LIBJ3DGRAPHANIMATOR_A_LDFLAGS := \
 	-linkmode moreram \
 
 $(BUILD_DIR)/libJ3DGraphAnimator.a: $(LIBJ3DGRAPHANIMATOR_A_O_FILES)
+	@echo linking... $(BUILD_DIR)/libJ3DGraphAnimator.a
 	@echo $(LIBJ3DGRAPHANIMATOR_A_O_FILES) > build/LIBJ3DGRAPHANIMATOR_A_ofiles
-	$(LD) -xm l $(LIBJ3DGRAPHANIMATOR_A_LDFLAGS) -o $(BUILD_DIR)/libJ3DGraphAnimator.a @build/LIBJ3DGRAPHANIMATOR_A_ofiles
-	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ3DGraphAnimator.a
+	@$(LD) -xm l $(LIBJ3DGRAPHANIMATOR_A_LDFLAGS) -o $(BUILD_DIR)/libJ3DGraphAnimator.a @build/LIBJ3DGRAPHANIMATOR_A_ofiles
+	@$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ3DGraphAnimator.a
 
 $(BUILD_DIR)/libs/JSystem/J3DGraphAnimator/%.o: libs/JSystem/J3DGraphAnimator/%.cpp
 	@mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(LIBJ3DGRAPHANIMATOR_A_CFLAGS) -c -o $@ $<
+	@echo building... $<
+	@iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	@$(CC) $(CFLAGS) $(LIBJ3DGRAPHANIMATOR_A_CFLAGS) -c -o $@ $@.iconv.cpp
 
