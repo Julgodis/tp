@@ -1,4 +1,4 @@
-#include "m_Do/m_Do_reset/m_Do_reset.h"
+#include "m_Do/m_Do_Reset/m_Do_Reset.h"
 #include "JSystem/JUtility/JUTXfb/JUTXfb.h"
 #include "SComponent/c_API_controller_pad.h"
 #include "Z2AudioLib/Z2AudioMgr/Z2AudioMgr.h"

@@ -16,7 +16,7 @@
 #include "m_Do/m_Do_ext/m_Do_ext.h"
 #include "m_Do/m_Do_graphic/m_Do_graphic.h"
 #include "m_Do/m_Do_machine/m_Do_machine.h"
-#include "m_Do/m_Do_reset/m_Do_reset.h"
+#include "m_Do/m_Do_Reset/m_Do_Reset.h"
 #include "msl_c/string.h"
 
 extern "C" {
