@@ -45,10 +45,10 @@ struct JAISoundParamsMove {
 	/* 802A2E0C */ void movePitch(f32, u32);
 };
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAISoundHandle {
 };
 
 struct JGeometry {

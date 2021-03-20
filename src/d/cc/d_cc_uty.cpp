@@ -25,7 +25,7 @@ struct dCcU_AtInfo {
 };
 
 struct daPy_py_c {
-	/* 80088134 */ bool checkCutJumpCancelTurn() const;
+	/* 80088134 */ void checkCutJumpCancelTurn() const;
 	/* 8015F398 */ void checkMasterSwordEquip();
 };
 
@@ -54,7 +54,7 @@ extern "C" void def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c(); // 1
 extern "C" static void at_power_get__FP11dCcU_AtInfo(); // 1
 extern "C" static void at_power_check__FP11dCcU_AtInfo(); // 1
 extern "C" void cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo(); // 1
-extern "C" bool checkCutJumpCancelTurn__9daPy_py_cCFv(); // 1
+extern "C" void checkCutJumpCancelTurn__9daPy_py_cCFv(); // 1
 
 // 
 // External References:
@@ -222,8 +222,13 @@ asm void cc_at_check(fopAc_ac_c* field_0, dCcU_AtInfo* field_1) {
 
 
 /* 80088134-8008813C 0008+00 rc=1 efc=1 rfr=False None .text      checkCutJumpCancelTurn__9daPy_py_cCFv                        */
-bool daPy_py_c::checkCutJumpCancelTurn() const {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daPy_py_c::checkCutJumpCancelTurn() const {
+	nofralloc
+#include "asm/d/cc/d_cc_uty/checkCutJumpCancelTurn__9daPy_py_cCFv.s"
 }
+#pragma pop
 
 

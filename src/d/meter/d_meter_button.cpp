@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
@@ -25,9 +28,6 @@ struct J2DScreen {
 
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -193,7 +193,7 @@ struct dMsgObject_c {
 	/* 802371B0 */ void isMidonaTalkWait();
 	/* 802371E4 */ void isPlaceMessage();
 	/* 802371F8 */ void isBossMessage();
-	/* 8023720C */ bool isBookMessage();
+	/* 8023720C */ void isBookMessage();
 	/* 80237214 */ void isStaffMessage();
 	/* 802380F4 */ void getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, char*, char*, char*, s16*);
 	/* 8023822C */ void getStatus();
@@ -350,7 +350,7 @@ extern "C" void isHowlMessage__12dMsgObject_cFv(); // 1
 extern "C" void isMidonaTalkWait__12dMsgObject_cFv(); // 1
 extern "C" void isPlaceMessage__12dMsgObject_cFv(); // 1
 extern "C" void isBossMessage__12dMsgObject_cFv(); // 1
-extern "C" bool isBookMessage__12dMsgObject_cFv(); // 1
+extern "C" void isBookMessage__12dMsgObject_cFv(); // 1
 extern "C" void isStaffMessage__12dMsgObject_cFv(); // 1
 extern "C" void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs(); // 1
 extern "C" void getStatus__12dMsgObject_cFv(); // 1
@@ -1055,15 +1055,25 @@ asm void dMeterButton_c::setAlphaButton3DAnimeMax() {
 
 
 /* 80207740-80207744 0004+00 rc=1 efc=0 rfr=False None .text      setAlphaButton3DVAnimeMin__14dMeterButton_cFv                */
-void dMeterButton_c::setAlphaButton3DVAnimeMin() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMeterButton_c::setAlphaButton3DVAnimeMin() {
+	nofralloc
+#include "asm/d/meter/d_meter_button/setAlphaButton3DVAnimeMin__14dMeterButton_cFv.s"
 }
+#pragma pop
 
 
 /* 80207744-80207748 0004+00 rc=1 efc=0 rfr=False None .text      setAlphaButton3DVAnimeMax__14dMeterButton_cFv                */
-void dMeterButton_c::setAlphaButton3DVAnimeMax() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMeterButton_c::setAlphaButton3DVAnimeMax() {
+	nofralloc
+#include "asm/d/meter/d_meter_button/setAlphaButton3DVAnimeMax__14dMeterButton_cFv.s"
 }
+#pragma pop
 
 
 /* 80207748-802077EC 00A4+00 rc=1 efc=0 rfr=False None .text      setAlphaButtonCAnimeMin__14dMeterButton_cFv                  */

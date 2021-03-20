@@ -811,9 +811,14 @@ asm void JPALoadPosMtxCam(JPAEmitterWorkData* field_0) {
 
 
 /* 80277C8C-80277C90 0004+00 rc=1 efc=0 rfr=False None .text      noLoadPrj__FPC18JPAEmitterWorkDataPA4_Cf                     */
-static void noLoadPrj(JPAEmitterWorkData const* field_0, f32 const (* field_1)[4]) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void noLoadPrj(JPAEmitterWorkData const* field_0, f32 const (* field_1)[4]) {
+	nofralloc
+#include "asm/JSystem/JParticle/JPABaseShape/noLoadPrj__FPC18JPAEmitterWorkDataPA4_Cf.s"
 }
+#pragma pop
 
 
 /* 80277C90-80277CC8 0038+00 rc=1 efc=0 rfr=False None .text      loadPrj__FPC18JPAEmitterWorkDataPA4_Cf                       */

@@ -156,7 +156,7 @@ void dEv_defaultSkipZev(void*, int); // 2
 void dEv_defaultSkipStb(void*, int); // 2
 void dEv_noFinishSkipProc(void*, int); // 2
 
-extern "C" static bool func_80041480(); // 1
+extern "C" static void func_80041480(); // 1
 extern "C" static void func_80041488(); // 1
 extern "C" void __ct__14dEvt_control_cFv(); // 1
 extern "C" void __ct__12dEvt_order_cFv(); // 1
@@ -299,9 +299,14 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* 80041480-80041488 0008+00 rc=1 efc=0 rfr=False None .text      event_debug_evnt__21@unnamed@d_event_cpp@Fv                  */
-extern "C" static bool func_80041480() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void func_80041480() {
+	nofralloc
+#include "asm/d/event/d_event/func_80041480.s"
 }
+#pragma pop
 
 
 /* 80041488-80041580 00F8+00 rc=1 efc=0 rfr=False None .text      clear_tmpflag_for_message__21@unnamed@d_event_cpp@Fv         */
@@ -327,9 +332,14 @@ asm dEvt_control_c::dEvt_control_c() {
 
 
 /* 800415D4-800415D8 0004+00 rc=1 efc=0 rfr=False None .text      __ct__12dEvt_order_cFv                                       */
-dEvt_order_c::dEvt_order_c() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm dEvt_order_c::dEvt_order_c() {
+	nofralloc
+#include "asm/d/event/d_event/__ct__12dEvt_order_cFv.s"
 }
+#pragma pop
 
 
 /* 800415D8-80041668 0090+00 rc=1 efc=0 rfr=False None .text      orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv                   */

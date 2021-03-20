@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct mesg_flow_node_event {
-};
-
 struct mesg_flow_node_branch {
 };
 
-struct mesg_flow_node {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct mesg_flow_node_event {
+};
+
+struct mesg_flow_node {
 };
 
 struct dMsgFlow_c {
@@ -95,7 +95,7 @@ struct dMsgFlow_c {
 	/* 8024C144 */ void query044(mesg_flow_node_branch*, fopAc_ac_c*, int);
 	/* 8024C18C */ void query045(mesg_flow_node_branch*, fopAc_ac_c*, int);
 	/* 8024C218 */ void query046(mesg_flow_node_branch*, fopAc_ac_c*, int);
-	/* 8024C248 */ bool query047(mesg_flow_node_branch*, fopAc_ac_c*, int);
+	/* 8024C248 */ void query047(mesg_flow_node_branch*, fopAc_ac_c*, int);
 	/* 8024C250 */ void query048(mesg_flow_node_branch*, fopAc_ac_c*, int);
 	/* 8024C2A0 */ void query049(mesg_flow_node_branch*, fopAc_ac_c*, int);
 	/* 8024C2FC */ void query050(mesg_flow_node_branch*, fopAc_ac_c*, int);
@@ -114,14 +114,14 @@ struct dMsgFlow_c {
 	/* 8024C744 */ void event009(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024C76C */ void event010(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024C7F8 */ void event011(mesg_flow_node_event*, fopAc_ac_c*);
-	/* 8024C884 */ bool event012(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024C884 */ void event012(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024C88C */ void event013(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024C8CC */ void event014(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024C994 */ void event015(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024CA5C */ void event016(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024CA94 */ void event017(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024CBB0 */ void event018(mesg_flow_node_event*, fopAc_ac_c*);
-	/* 8024CCA4 */ bool event019(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024CCA4 */ void event019(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024CCAC */ void event020(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024CD84 */ void event021(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024CDAC */ void event022(mesg_flow_node_event*, fopAc_ac_c*);
@@ -144,7 +144,7 @@ struct dMsgFlow_c {
 	/* 8024D93C */ void event039(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024D970 */ void event040(mesg_flow_node_event*, fopAc_ac_c*);
 	/* 8024DA78 */ void event041(mesg_flow_node_event*, fopAc_ac_c*);
-	/* 8024DAA8 */ bool event042(mesg_flow_node_event*, fopAc_ac_c*);
+	/* 8024DAA8 */ void event042(mesg_flow_node_event*, fopAc_ac_c*);
 };
 
 struct _GXColor {
@@ -358,7 +358,7 @@ extern "C" void query043__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
 extern "C" void query044__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
 extern "C" void query045__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
 extern "C" void query046__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
-extern "C" bool query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
+extern "C" void query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
 extern "C" void query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
 extern "C" void query049__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
 extern "C" void query050__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
@@ -377,14 +377,14 @@ extern "C" void event008__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); /
 extern "C" void event009__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event010__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event011__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
-extern "C" bool event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event014__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event015__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event016__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event017__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event018__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
-extern "C" bool event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event021__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event022__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
@@ -407,7 +407,7 @@ extern "C" void event038__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); /
 extern "C" void event039__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event040__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" void event041__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
-extern "C" bool event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
+extern "C" void event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c(); // 1
 extern "C" static void func_8024DAB0(); // 1
 extern "C" void __sinit_d_msg_flow_cpp(); // 1
 extern "C" extern char const* const d_msg_d_msg_flow__stringBase0;
@@ -2365,9 +2365,14 @@ asm void dMsgFlow_c::query046(mesg_flow_node_branch* field_0, fopAc_ac_c* field_
 
 
 /* 8024C248-8024C250 0008+00 rc=1 efc=0 rfr=False None .text      query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
-bool dMsgFlow_c::query047(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, int field_2) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgFlow_c::query047(mesg_flow_node_branch* field_0, fopAc_ac_c* field_1, int field_2) {
+	nofralloc
+#include "asm/d/msg/d_msg_flow/query047__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci.s"
 }
+#pragma pop
 
 
 /* 8024C250-8024C2A0 0050+00 rc=1 efc=0 rfr=False None .text      query048__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci */
@@ -2573,9 +2578,14 @@ asm void dMsgFlow_c::event011(mesg_flow_node_event* field_0, fopAc_ac_c* field_1
 
 
 /* 8024C884-8024C88C 0008+00 rc=1 efc=0 rfr=False None .text      event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
-bool dMsgFlow_c::event012(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgFlow_c::event012(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
+	nofralloc
+#include "asm/d/msg/d_msg_flow/event012__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
+#pragma pop
 
 
 /* 8024C88C-8024C8CC 0040+00 rc=1 efc=0 rfr=False None .text      event013__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
@@ -2645,9 +2655,14 @@ asm void dMsgFlow_c::event018(mesg_flow_node_event* field_0, fopAc_ac_c* field_1
 
 
 /* 8024CCA4-8024CCAC 0008+00 rc=1 efc=0 rfr=False None .text      event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
-bool dMsgFlow_c::event019(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgFlow_c::event019(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
+	nofralloc
+#include "asm/d/msg/d_msg_flow/event019__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
+#pragma pop
 
 
 /* 8024CCAC-8024CD84 00D8+00 rc=1 efc=0 rfr=False None .text      event020__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
@@ -2901,9 +2916,14 @@ asm void dMsgFlow_c::event041(mesg_flow_node_event* field_0, fopAc_ac_c* field_1
 
 
 /* 8024DAA8-8024DAB0 0008+00 rc=1 efc=0 rfr=False None .text      event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c  */
-bool dMsgFlow_c::event042(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgFlow_c::event042(mesg_flow_node_event* field_0, fopAc_ac_c* field_1) {
+	nofralloc
+#include "asm/d/msg/d_msg_flow/event042__10dMsgFlow_cFP20mesg_flow_node_eventP10fopAc_ac_c.s"
 }
+#pragma pop
 
 
 /* 8024DAB0-8024DACC 001C+00 rc=3 efc=0 rfr=False None .text      cLib_calcTimer<l>__FPl                                       */

@@ -14,17 +14,17 @@
 struct cXyz {
 };
 
-struct JUTFont {
-};
-
-struct JMSMesgEntry_c {
+struct J2DTextBox {
+	/* 8021C7F4 */ void getFont() const;
 };
 
 struct J2DPicture {
 };
 
-struct J2DTextBox {
-	/* 8021C7F4 */ void getFont() const;
+struct JMSMesgEntry_c {
+};
+
+struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -142,7 +142,7 @@ void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, ResTIMG const*); // 2
 void dMeter2Info_setCloth(u8, bool); // 2
 void dMeter2Info_setSword(u8, bool); // 2
 void dMeter2Info_setShield(u8, bool); // 2
-bool dMeter2Info_is2DActiveTouchArea(); // 2
+void dMeter2Info_is2DActiveTouchArea(); // 2
 void dMeter2Info_isMapOpenCheck(); // 2
 void dMeter2Info_isItemOpenCheck(); // 2
 void dMeter2Info_getRecieveLetterNum(); // 2
@@ -199,7 +199,7 @@ extern "C" void dMeter2Info_getPixel__FffffffPC7ResTIMG(); // 1
 extern "C" void dMeter2Info_setCloth__FUcb(); // 1
 extern "C" void dMeter2Info_setSword__FUcb(); // 1
 extern "C" void dMeter2Info_setShield__FUcb(); // 1
-extern "C" bool dMeter2Info_is2DActiveTouchArea__Fv(); // 1
+extern "C" void dMeter2Info_is2DActiveTouchArea__Fv(); // 1
 extern "C" void dMeter2Info_isMapOpenCheck__Fv(); // 1
 extern "C" void dMeter2Info_isItemOpenCheck__Fv(); // 1
 extern "C" void dMeter2Info_getRecieveLetterNum__Fv(); // 1
@@ -1161,9 +1161,14 @@ asm void dMeter2Info_setShield(u8 field_0, bool field_1) {
 
 
 /* 8021E660-8021E668 0008+00 rc=1 efc=1 rfr=False None .text      dMeter2Info_is2DActiveTouchArea__Fv                          */
-bool dMeter2Info_is2DActiveTouchArea() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMeter2Info_is2DActiveTouchArea() {
+	nofralloc
+#include "asm/d/meter/d_meter2_info/dMeter2Info_is2DActiveTouchArea__Fv.s"
 }
+#pragma pop
 
 
 /* 8021E668-8021E688 0020+00 rc=1 efc=1 rfr=False None .text      dMeter2Info_isMapOpenCheck__Fv                               */
@@ -1233,15 +1238,25 @@ asm void dMeter2Info_recieveLetter() {
 
 
 /* 8021E9D0-8021E9D4 0004+00 rc=33 efc=33 rfr=False None .text      dMeter2Info_set2DVibration__Fv                               */
-void dMeter2Info_set2DVibration() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMeter2Info_set2DVibration() {
+	nofralloc
+#include "asm/d/meter/d_meter2_info/dMeter2Info_set2DVibration__Fv.s"
 }
+#pragma pop
 
 
 /* 8021E9D4-8021E9D8 0004+00 rc=12 efc=12 rfr=False None .text      dMeter2Info_set2DVibrationM__Fv                              */
-void dMeter2Info_set2DVibrationM() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMeter2Info_set2DVibrationM() {
+	nofralloc
+#include "asm/d/meter/d_meter2_info/dMeter2Info_set2DVibrationM__Fv.s"
 }
+#pragma pop
 
 
 /* 8021E9D8-8021EA14 003C+00 rc=1 efc=1 rfr=False None .text      __sinit_d_meter2_info_cpp                                    */

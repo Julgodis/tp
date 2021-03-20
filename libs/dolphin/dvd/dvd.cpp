@@ -114,9 +114,14 @@ extern "C" extern u8 __DVDThreadQueue[8];
 // 
 
 /* 803490EC-803490F0 0004+00 rc=1 efc=0 rfr=False None .text      defaultOptionalCommandChecker                                */
-extern "C" static void defaultOptionalCommandChecker() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void defaultOptionalCommandChecker() {
+	nofralloc
+#include "asm/dolphin/dvd/dvd/defaultOptionalCommandChecker.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

@@ -28,24 +28,24 @@ struct JUTFader {
 // Forward References:
 // 
 
-static bool dOvlpFd_Draw(overlap1_class*); // 2
+static void dOvlpFd_Draw(overlap1_class*); // 2
 static void dOvlpFd_startFadeIn(int); // 2
 static void dOvlpFd_FadeOut(overlap1_class*); // 2
 static void dOvlpFd_Wait(overlap1_class*); // 2
 static void dOvlpFd_FadeIn(overlap1_class*); // 2
 static void dOvlpFd_Execute(overlap1_class*); // 2
-static bool dOvlpFd_IsDelete(overlap1_class*); // 2
-static bool dOvlpFd_Delete(overlap1_class*); // 2
+static void dOvlpFd_IsDelete(overlap1_class*); // 2
+static void dOvlpFd_Delete(overlap1_class*); // 2
 static void dOvlpFd_Create(void*); // 2
 
-extern "C" static bool dOvlpFd_Draw__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_Draw__FP14overlap1_class(); // 1
 extern "C" static void dOvlpFd_startFadeIn__Fi(); // 1
 extern "C" static void dOvlpFd_FadeOut__FP14overlap1_class(); // 1
 extern "C" static void dOvlpFd_Wait__FP14overlap1_class(); // 1
 extern "C" static void dOvlpFd_FadeIn__FP14overlap1_class(); // 1
 extern "C" static void dOvlpFd_Execute__FP14overlap1_class(); // 1
-extern "C" static bool dOvlpFd_IsDelete__FP14overlap1_class(); // 1
-extern "C" static bool dOvlpFd_Delete__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_IsDelete__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_Delete__FP14overlap1_class(); // 1
 extern "C" static void dOvlpFd_Create__FPv(); // 1
 extern "C" extern void* g_profile_OVERLAP0[10];
 extern "C" extern void* g_profile_OVERLAP1[10];
@@ -82,9 +82,14 @@ extern "C" extern u8 sManager__10JFWDisplay[4];
 // 
 
 /* 8025217C-80252184 0008+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_Draw__FP14overlap1_class                             */
-static bool dOvlpFd_Draw(overlap1_class* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dOvlpFd_Draw(overlap1_class* field_0) {
+	nofralloc
+#include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_Draw__FP14overlap1_class.s"
 }
+#pragma pop
 
 
 /* 80252184-802521F4 0070+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_startFadeIn__Fi                                      */
@@ -147,15 +152,25 @@ asm static void dOvlpFd_Execute(overlap1_class* field_0) {
 
 
 /* 80252458-80252460 0008+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_IsDelete__FP14overlap1_class                         */
-static bool dOvlpFd_IsDelete(overlap1_class* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dOvlpFd_IsDelete(overlap1_class* field_0) {
+	nofralloc
+#include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_IsDelete__FP14overlap1_class.s"
 }
+#pragma pop
 
 
 /* 80252460-80252468 0008+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_Delete__FP14overlap1_class                           */
-static bool dOvlpFd_Delete(overlap1_class* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dOvlpFd_Delete(overlap1_class* field_0) {
+	nofralloc
+#include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_Delete__FP14overlap1_class.s"
 }
+#pragma pop
 
 
 /* 80252468-8025247C 0014+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_Create__FPv                                          */

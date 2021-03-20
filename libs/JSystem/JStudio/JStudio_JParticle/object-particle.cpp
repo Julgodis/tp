@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JPABaseEmitter {
+};
+
 struct _GXColor {
 };
 
@@ -49,9 +52,6 @@ namespace JStudio {
 		/* 8028B568 */ TVariableValue();
 	};
 
-};
-
-struct JPABaseEmitter {
 };
 
 struct JStudio_JParticle {
@@ -279,9 +279,14 @@ asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_prepare() {
 
 
 /* 8028E97C-8028E980 0004+00 rc=1 efc=0 rfr=False None .text      adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv   */
-void JStudio_JParticle::TAdaptor_particle::adaptor_do_end() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JStudio_JParticle::TAdaptor_particle::adaptor_do_end() {
+	nofralloc
+#include "asm/JSystem/JStudio/JStudio_JParticle/object-particle/adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv.s"
 }
+#pragma pop
 
 
 /* 8028E980-8028EA68 00E8+00 rc=1 efc=0 rfr=False None .text      adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl */

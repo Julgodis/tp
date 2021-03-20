@@ -41,7 +41,7 @@ struct _GXColor {
 };
 
 struct daPy_py_c {
-	/* 8006F160 */ bool getKandelaarFlamePos();
+	/* 8006F160 */ void getKandelaarFlamePos();
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
@@ -254,7 +254,7 @@ extern "C" void dKyr_evil_move__Fv(); // 1
 extern "C" static void dKyr_evil_draw2__FPA4_fPPUc(); // 1
 extern "C" static void dKyr_near_bosslight_check__F4cXyz(); // 1
 extern "C" void dKyr_evil_draw__FPA4_fPPUc(); // 1
-extern "C" bool getKandelaarFlamePos__9daPy_py_cFv(); // 1
+extern "C" void getKandelaarFlamePos__9daPy_py_cFv(); // 1
 extern "C" extern char const* const d_kankyo_d_kankyo_rain__stringBase0;
 extern "C" extern u8 lit_7955[12];
 extern "C" extern u8 lit_7956[12];
@@ -1837,15 +1837,25 @@ asm void dKyr_thunder_move() {
 
 
 /* 8006B8DC-8006B8E0 0004+00 rc=1 efc=1 rfr=False None .text      dKyr_shstar_init__Fv                                         */
-void dKyr_shstar_init() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dKyr_shstar_init() {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo_rain/dKyr_shstar_init__Fv.s"
 }
+#pragma pop
 
 
 /* 8006B8E0-8006B8E4 0004+00 rc=1 efc=1 rfr=False None .text      dKyr_shstar_move__Fv                                         */
-void dKyr_shstar_move() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dKyr_shstar_move() {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo_rain/dKyr_shstar_move__Fv.s"
 }
+#pragma pop
 
 
 /* 8006B8E4-8006B924 0040+00 rc=1 efc=1 rfr=False None .text      dKyr_odour_init__Fv                                          */
@@ -2064,9 +2074,14 @@ asm void dKyr_evil_draw(f32 (* field_0)[4], u8** field_1) {
 
 
 /* 8006F160-8006F168 0008+00 rc=1 efc=1 rfr=False None .text      getKandelaarFlamePos__9daPy_py_cFv                           */
-bool daPy_py_c::getKandelaarFlamePos() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daPy_py_c::getKandelaarFlamePos() {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo_rain/getKandelaarFlamePos__9daPy_py_cFv.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

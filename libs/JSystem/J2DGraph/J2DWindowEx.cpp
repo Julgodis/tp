@@ -17,27 +17,18 @@ struct JUtility {
 
 };
 
-struct ResFONT {
+struct J2DAnmTextureSRTKey {
 };
 
-struct _GXColor {
-};
+struct J2DWindow {
+	struct TMaterial {
+	};
 
-struct J2DAnmVtxColor {
-	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
-struct _GXCullMode {
-};
-
-struct J2DAnmTransform {
+	/* 802F9A7C */ J2DWindow();
+	/* 802FA880 */ ~J2DWindow();
+	/* 802FB000 */ void resize(f32, f32);
+	/* 802FB1D8 */ void drawSelf(f32, f32);
+	/* 802FBF98 */ void getTypeID() const;
 };
 
 struct J2DAnmBase {
@@ -51,6 +42,25 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
+struct _GXCullMode {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct ResTIMG {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -58,6 +68,16 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct ResFONT {
+};
+
+struct _GXColor {
+};
+
+struct J2DAnmVtxColor {
+	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
 };
 
 struct J2DPane {
@@ -86,30 +106,7 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct J2DTevStage {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DWindow {
-	struct TMaterial {
-	};
-
-	/* 802F9A7C */ J2DWindow();
-	/* 802FA880 */ ~J2DWindow();
-	/* 802FB000 */ void resize(f32, f32);
-	/* 802FB1D8 */ void drawSelf(f32, f32);
-	/* 802FBF98 */ s32 getTypeID() const;
-};
-
-struct J2DAnmTexPattern {
-};
-
 struct J2DAnmColor {
-};
-
-struct J2DAnmTevRegKey {
 };
 
 struct J2DMaterial {
@@ -118,6 +115,9 @@ struct J2DMaterial {
 	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
 	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+};
+
+struct J2DTevStage {
 };
 
 struct J2DWindowEx {
@@ -272,7 +272,7 @@ extern "C" void __ct__9J2DWindowFv(); // 1
 extern "C" void __dt__9J2DWindowFv(); // 1
 extern "C" void resize__9J2DWindowFff(); // 1
 extern "C" void drawSelf__9J2DWindowFff(); // 1
-extern "C" s32 getTypeID__9J2DWindowCFv(); // 1
+extern "C" void getTypeID__9J2DWindowCFv(); // 1
 extern "C" void getVisibility__20J2DAnmVisibilityFullCFUsPUc(); // 1
 extern "C" void PSMTXIdentity(); // 1
 extern "C" void PSMTXConcat(); // 1
@@ -898,8 +898,13 @@ asm void J2DWindowEx::setAnimation(J2DAnmBase* field_0) {
 
 
 /* 8030363C-80303640 0004+00 rc=1 efc=1 rfr=False None .text      getColor__14J2DAnmVtxColorCFUcUsP8_GXColor                   */
-void J2DAnmVtxColor::getColor(u8 field_0, u16 field_1, _GXColor* field_2) const {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J2DAnmVtxColor::getColor(u8 field_0, u16 field_1, _GXColor* field_2) const {
+	nofralloc
+#include "asm/JSystem/J2DGraph/J2DWindowEx/getColor__14J2DAnmVtxColorCFUcUsP8_GXColor.s"
 }
+#pragma pop
 
 

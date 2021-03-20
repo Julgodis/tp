@@ -32,7 +32,7 @@ struct dComIfG_play_c {
 };
 
 struct dMeterSub_c {
-	/* 80194138 */ bool isDead();
+	/* 80194138 */ void isDead();
 };
 
 struct JUtility {
@@ -54,6 +54,9 @@ struct dMeter2Draw_c {
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
 };
 
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
@@ -67,9 +70,6 @@ struct J2DScreen {
 };
 
 struct J2DPane {
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -107,7 +107,7 @@ void* operator new(u32); // 2
 void operator delete(void*); // 2
 
 extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" bool isDead__11dMeterSub_cFv(); // 1
+extern "C" void isDead__11dMeterSub_cFv(); // 1
 extern "C" void drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor(); // 1
 extern "C" void setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas(); // 1
 extern "C" void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas(); // 1

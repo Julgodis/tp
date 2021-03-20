@@ -73,9 +73,14 @@ extern "C" asm static void __ARQServiceQueueLo() {
 
 
 /* 80352194-80352198 0004+00 rc=1 efc=0 rfr=False None .text      __ARQCallbackHack                                            */
-extern "C" static void __ARQCallbackHack() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void __ARQCallbackHack() {
+	nofralloc
+#include "asm/dolphin/ar/arq/__ARQCallbackHack.s"
 }
+#pragma pop
 
 
 /* 80352198-80352264 00CC+00 rc=1 efc=0 rfr=False None .text      __ARQInterruptServiceRoutine                                 */

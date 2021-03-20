@@ -25,13 +25,13 @@ struct dMsgScrnBoss_c {
 struct dMsgScrnBase_c {
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
-	/* 80238C48 */ bool selectAnimeMove(u8, u8, bool);
+	/* 80238C48 */ void selectAnimeMove(u8, u8, bool);
 	/* 80238C50 */ void selectAnimeInit(u8, u8, f32, u8);
 	/* 80238C54 */ void arwAnimeMove();
 	/* 80238C58 */ void arwAnimeInit();
 	/* 80238C5C */ void fukiPosCalc(u8);
-	/* 80238C60 */ bool isSelect();
-	/* 80238C68 */ bool selectAnimeEnd();
+	/* 80238C60 */ void isSelect();
+	/* 80238C68 */ void selectAnimeEnd();
 	/* 80238C70 */ void dotAnimeMove();
 	/* 80238C74 */ void dotAnimeInit();
 	/* 8023C0DC */ dMsgScrnBase_c();
@@ -43,15 +43,15 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
+struct JKRExpHeap {
+};
+
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -96,13 +96,13 @@ void operator delete(void*); // 2
 extern "C" void mDoExt_getRubyFont__Fv(); // 1
 extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc(); // 1
 extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc(); // 1
-extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
+extern "C" void selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
 extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc(); // 1
 extern "C" void arwAnimeMove__14dMsgScrnBase_cFv(); // 1
 extern "C" void arwAnimeInit__14dMsgScrnBase_cFv(); // 1
 extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc(); // 1
-extern "C" bool isSelect__14dMsgScrnBase_cFv(); // 1
-extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
+extern "C" void isSelect__14dMsgScrnBase_cFv(); // 1
+extern "C" void selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeMove__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeInit__14dMsgScrnBase_cFv(); // 1
 extern "C" void __ct__14dMsgScrnBase_cFv(); // 1
@@ -244,20 +244,35 @@ asm void dMsgScrnBoss_c::fukiAlpha(f32 field_0) {
 
 
 /* 8023CC7C-8023CC80 0004+00 rc=1 efc=0 rfr=False None .text      fukiScale__14dMsgScrnBoss_cFf                                */
-void dMsgScrnBoss_c::fukiScale(f32 field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBoss_c::fukiScale(f32 field_0) {
+	nofralloc
+#include "asm/msg/scrn/d_msg_scrn_boss/fukiScale__14dMsgScrnBoss_cFf.s"
 }
+#pragma pop
 
 
 /* 8023CC80-8023CC84 0004+00 rc=1 efc=0 rfr=False None .text      fukiTrans__14dMsgScrnBoss_cFff                               */
-void dMsgScrnBoss_c::fukiTrans(f32 field_0, f32 field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBoss_c::fukiTrans(f32 field_0, f32 field_1) {
+	nofralloc
+#include "asm/msg/scrn/d_msg_scrn_boss/fukiTrans__14dMsgScrnBoss_cFff.s"
 }
+#pragma pop
 
 
 /* 8023CC84-8023CC88 0004+00 rc=1 efc=0 rfr=False None .text      fontAlpha__14dMsgScrnBoss_cFf                                */
-void dMsgScrnBoss_c::fontAlpha(f32 field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBoss_c::fontAlpha(f32 field_0) {
+	nofralloc
+#include "asm/msg/scrn/d_msg_scrn_boss/fontAlpha__14dMsgScrnBoss_cFf.s"
 }
+#pragma pop
 
 

@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct STControl {
-};
-
 struct CSTControl {
 };
 
 struct JKRExpHeap {
+};
+
+struct STControl {
 };
 
 struct dMenu_Fishing_c {

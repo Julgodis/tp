@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct cCcD_Obj {
+struct fopAc_ac_c {
 };
 
 struct cXyz {
 };
 
-struct fopAc_ac_c {
+struct cCcD_Obj {
 };
 
 struct dCcMassS_Obj {

@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Z2SoundHandlePool {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Z2SoundHandlePool {
 };
 
 struct Vec {
@@ -311,9 +311,14 @@ extern "C" extern u8 data_80450B88[4];
 // 
 
 /* 802C321C-802C3220 0004+00 rc=1 efc=1 rfr=False None .text      setLinkGroupInfo__14Z2CreatureLinkFUc                        */
-void Z2CreatureLink::setLinkGroupInfo(u8 field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void Z2CreatureLink::setLinkGroupInfo(u8 field_0) {
+	nofralloc
+#include "asm/Z2AudioLib/Z2LinkMgr/setLinkGroupInfo__14Z2CreatureLinkFUc.s"
 }
+#pragma pop
 
 
 /* 802C3220-802C3228 0008+00 rc=1 efc=1 rfr=False None .text      setLinkHp__14Z2CreatureLinkFll                               */

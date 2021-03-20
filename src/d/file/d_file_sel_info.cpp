@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct dSv_save_c {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct dSv_save_c {
 };
 
 struct dFile_info_c {
@@ -49,6 +49,9 @@ struct dMeter2Info_c {
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 };
 
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
@@ -56,9 +59,6 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgrAlpha {
@@ -299,15 +299,25 @@ asm void dFile_info_c::setPlayTime(dSv_save_c* field_0) {
 
 
 /* 80192D58-80192D5C 0004+00 rc=1 efc=0 rfr=False None .text      modeWait__12dFile_info_cFv                                   */
-void dFile_info_c::modeWait() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dFile_info_c::modeWait() {
+	nofralloc
+#include "asm/d/file/d_file_sel_info/modeWait__12dFile_info_cFv.s"
 }
+#pragma pop
 
 
 /* 80192D5C-80192D60 0004+00 rc=1 efc=0 rfr=False None .text      modeMove__12dFile_info_cFv                                   */
-void dFile_info_c::modeMove() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dFile_info_c::modeMove() {
+	nofralloc
+#include "asm/d/file/d_file_sel_info/modeMove__12dFile_info_cFv.s"
 }
+#pragma pop
 
 
 /* 80192D60-80192D9C 003C+00 rc=2 efc=2 rfr=False None .text      _draw__12dFile_info_cFv                                      */

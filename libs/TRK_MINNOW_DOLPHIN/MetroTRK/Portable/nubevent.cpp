@@ -25,9 +25,9 @@ extern "C" void TRKInitializeEventQueue(); // 1
 
 SECTION_INIT void TRK_memcpy(); // 1
 extern "C" void TRKReleaseBuffer(); // 1
-extern "C" bool TRKReleaseMutex(); // 1
-extern "C" bool TRKAcquireMutex(); // 1
-extern "C" bool TRKInitializeMutex(); // 1
+extern "C" void TRKReleaseMutex(); // 1
+extern "C" void TRKAcquireMutex(); // 1
+extern "C" void TRKInitializeMutex(); // 1
 
 // 
 // Declarations:

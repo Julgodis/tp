@@ -11,10 +11,7 @@
 // Types:
 // 
 
-struct J3DModelData {
-	/* 80325E14 */ void newSharedDisplayList(u32);
-	/* 80325F94 */ void makeSharedDL();
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+struct cXyz {
 };
 
 struct JKRHeap {
@@ -22,14 +19,17 @@ struct JKRHeap {
 	/* 802CE83C */ void findFromRoot(void*);
 };
 
-struct cXyz {
-};
-
 struct JKRArchive {
 	/* 802D5CE4 */ void getIdxResource(u32);
 	/* 802D625C */ void getFileAttribute(u32) const;
 	/* 802D6684 */ void findIdxResource(u32) const;
 	/* 802D66AC */ void findNameResource(char const*) const;
+};
+
+struct J3DModelData {
+	/* 80325E14 */ void newSharedDisplayList(u32);
+	/* 80325F94 */ void makeSharedDL();
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 struct dRes_info_c {
@@ -97,14 +97,14 @@ struct J3DTransformInfo {
 
 struct J3DAnmTransformKey {
 	/* 8003B8D0 */ ~J3DAnmTransformKey();
-	/* 8003C800 */ s32 getKind() const;
+	/* 8003C800 */ void getKind() const;
 	/* 8003C808 */ void getTransform(u16, J3DTransformInfo*) const;
 	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
 };
 
 struct J3DAnmTransform {
 	/* 8003B93C */ ~J3DAnmTransform();
-	/* 8003C77C */ bool getKind() const;
+	/* 8003C77C */ void getKind() const;
 	/* 80328E40 */ J3DAnmTransform(s16, f32*, s16*, f32*);
 };
 
@@ -265,9 +265,9 @@ extern "C" void setStageRes__14dRes_control_cFPCcP7JKRHeap(); // 1
 extern "C" void dump__14dRes_control_cFv(); // 1
 extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc(); // 1
 extern "C" void __dt__10J3DAnmBaseFv(); // 1
-extern "C" bool getKind__15J3DAnmTransformCFv(); // 1
+extern "C" void getKind__15J3DAnmTransformCFv(); // 1
 extern "C" void __dt__18mDoExt_transAnmBasFv(); // 1
-extern "C" s32 getKind__18J3DAnmTransformKeyCFv(); // 1
+extern "C" void getKind__18J3DAnmTransformKeyCFv(); // 1
 extern "C" void getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo(); // 1
 extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
 extern "C" extern char const* const d_d_resorce__stringBase0;
@@ -551,9 +551,14 @@ asm J3DTevStage::J3DTevStage(J3DTevStageInfo const& field_0) {
 
 
 /* 8003AB2C-8003AB30 0004+00 rc=2 efc=2 rfr=False None .text      setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx                    */
-void J3DTexGenBlock::setTexMtx(u32 field_0, J3DTexMtx* field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J3DTexGenBlock::setTexMtx(u32 field_0, J3DTexMtx* field_1) {
+	nofralloc
+#include "asm/d/d_resorce/setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx.s"
 }
+#pragma pop
 
 
 /* 8003AB30-8003AC1C 00EC+00 rc=2 efc=2 rfr=False None .text      onWarpMaterial__11dRes_info_cFP12J3DModelData                */
@@ -1075,9 +1080,14 @@ asm J3DAnmBase::~J3DAnmBase() {
 
 
 /* 8003C77C-8003C784 0008+00 rc=1 efc=0 rfr=False None .text      getKind__15J3DAnmTransformCFv                                */
-bool J3DAnmTransform::getKind() const {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J3DAnmTransform::getKind() const {
+	nofralloc
+#include "asm/d/d_resorce/getKind__15J3DAnmTransformCFv.s"
 }
+#pragma pop
 
 
 /* 8003C784-8003C800 007C+00 rc=1 efc=0 rfr=False None .text      __dt__18mDoExt_transAnmBasFv                                 */
@@ -1092,9 +1102,14 @@ asm mDoExt_transAnmBas::~mDoExt_transAnmBas() {
 
 
 /* 8003C800-8003C808 0008+00 rc=2 efc=0 rfr=False None .text      getKind__18J3DAnmTransformKeyCFv                             */
-s32 J3DAnmTransformKey::getKind() const {
-	return 8;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J3DAnmTransformKey::getKind() const {
+	nofralloc
+#include "asm/d/d_resorce/getKind__18J3DAnmTransformKeyCFv.s"
 }
+#pragma pop
 
 
 /* 8003C808-8003C82C 0024+00 rc=2 efc=0 rfr=False None .text      getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo    */

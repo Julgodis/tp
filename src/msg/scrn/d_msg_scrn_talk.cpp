@@ -472,15 +472,25 @@ asm void dMsgScrnTalk_c::selectAnimeEnd() {
 
 
 /* 802482AC-802482B0 0004+00 rc=1 efc=0 rfr=False None .text      fukiScale__14dMsgScrnTalk_cFf                                */
-void dMsgScrnTalk_c::fukiScale(f32 field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnTalk_c::fukiScale(f32 field_0) {
+	nofralloc
+#include "asm/msg/scrn/d_msg_scrn_talk/fukiScale__14dMsgScrnTalk_cFf.s"
 }
+#pragma pop
 
 
 /* 802482B0-802482B4 0004+00 rc=1 efc=0 rfr=False None .text      fukiTrans__14dMsgScrnTalk_cFff                               */
-void dMsgScrnTalk_c::fukiTrans(f32 field_0, f32 field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnTalk_c::fukiTrans(f32 field_0, f32 field_1) {
+	nofralloc
+#include "asm/msg/scrn/d_msg_scrn_talk/fukiTrans__14dMsgScrnTalk_cFff.s"
 }
+#pragma pop
 
 
 /* 802482B4-8024835C 00A8+00 rc=1 efc=0 rfr=False None .text      fukiAlpha__14dMsgScrnTalk_cFf                                */

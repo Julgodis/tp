@@ -54,14 +54,6 @@ struct Z2SoundObjArrow {
 	/* 802BEB74 */ void init(Vec*, u8);
 };
 
-struct JAISoundHandle {
-	/* 802A2184 */ void releaseSound();
-};
-
-struct Z2SoundStarter {
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -69,6 +61,14 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
+struct Z2SoundStarter {
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 };
 
 struct JAUSoundAnimationSound {

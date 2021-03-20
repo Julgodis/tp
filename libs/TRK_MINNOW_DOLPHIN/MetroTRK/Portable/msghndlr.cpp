@@ -20,8 +20,8 @@ extern "C" void TRKDoWriteRegisters(); // 1
 extern "C" void TRKDoReadRegisters(); // 1
 extern "C" void TRKDoWriteMemory(); // 1
 extern "C" void TRKDoReadMemory(); // 1
-extern "C" bool TRKDoSupportMask(); // 1
-extern "C" bool TRKDoVersions(); // 1
+extern "C" void TRKDoSupportMask(); // 1
+extern "C" void TRKDoVersions(); // 1
 extern "C" void TRKDoOverride(); // 1
 extern "C" void TRKDoReset(); // 1
 extern "C" void TRKDoDisconnect(); // 1
@@ -243,15 +243,25 @@ extern "C" asm void TRKDoReadMemory() {
 
 
 /* 8036EB24-8036EB2C 0008+00 rc=1 efc=1 rfr=False None .text      TRKDoSupportMask                                             */
-extern "C" bool TRKDoSupportMask() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void TRKDoSupportMask() {
+	nofralloc
+#include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoSupportMask.s"
 }
+#pragma pop
 
 
 /* 8036EB2C-8036EB34 0008+00 rc=1 efc=1 rfr=False None .text      TRKDoVersions                                                */
-extern "C" bool TRKDoVersions() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void TRKDoVersions() {
+	nofralloc
+#include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr/TRKDoVersions.s"
 }
+#pragma pop
 
 
 /* 8036EB34-8036EB8C 0058+00 rc=1 efc=1 rfr=False None .text      TRKDoOverride                                                */

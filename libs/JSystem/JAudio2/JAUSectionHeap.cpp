@@ -11,13 +11,10 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
 struct JAISoundID {
 };
 
-struct JAISeqData {
+struct JAISeqDataUser {
 };
 
 struct JKRHeap {
@@ -30,7 +27,10 @@ struct JKRSolidHeap {
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 };
 
-struct JAISeqDataUser {
+struct JAISeqData {
+};
+
+struct JKRArchive {
 };
 
 struct JAUSectionHeap {
@@ -46,7 +46,7 @@ struct JAUSectionHeap {
 	/* 802A60A0 */ void setSeqDataUser(JAISeqDataUser*);
 	/* 802A60AC */ void newDynamicSeqBlock(u32);
 	/* 802A61D0 */ void getSeqData(JAISoundID, JAISeqData*);
-	/* 802A6270 */ bool releaseSeqData();
+	/* 802A6270 */ void releaseSeqData();
 	/* 802A6278 */ ~JAUSectionHeap();
 };
 
@@ -208,7 +208,7 @@ extern "C" void getOpenSection__14JAUSectionHeapFv(); // 1
 extern "C" void setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser(); // 1
 extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl(); // 1
 extern "C" void getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData(); // 1
-extern "C" bool releaseSeqData__14JAUSectionHeapFv(); // 1
+extern "C" void releaseSeqData__14JAUSectionHeapFv(); // 1
 extern "C" void __dt__14JAUSectionHeapFv(); // 1
 extern "C" static void func_802A6440(); // 1
 extern "C" void __dt__10JAUSectionFv(); // 1
@@ -714,9 +714,14 @@ asm void JAUSectionHeap::getSeqData(JAISoundID field_0, JAISeqData* field_1) {
 
 
 /* 802A6270-802A6278 0008+00 rc=2 efc=0 rfr=False None .text      releaseSeqData__14JAUSectionHeapFv                           */
-bool JAUSectionHeap::releaseSeqData() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JAUSectionHeap::releaseSeqData() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAUSectionHeap/releaseSeqData__14JAUSectionHeapFv.s"
 }
+#pragma pop
 
 
 /* 802A6278-802A6440 01C8+00 rc=2 efc=0 rfr=False None .text      __dt__14JAUSectionHeapFv                                     */

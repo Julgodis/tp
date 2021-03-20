@@ -18,18 +18,6 @@ struct JPAEmitterCallBack {
 struct JPAResource {
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
-};
-
-struct JPAEmitterManager {
-};
-
 struct JPAEmitterWorkData {
 };
 
@@ -39,6 +27,18 @@ struct JPABaseParticle {
 };
 
 struct _GXTexMapID {
+};
+
+struct JPAEmitterManager {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
 };
 
 struct JPABaseEmitter {

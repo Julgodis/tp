@@ -18,9 +18,9 @@ extern "C" void gdev_cc_post_stop(); // 1
 extern "C" void gdev_cc_pre_continue(); // 1
 extern "C" void gdev_cc_write(); // 1
 extern "C" void gdev_cc_read(); // 1
-extern "C" bool gdev_cc_close(); // 1
+extern "C" void gdev_cc_close(); // 1
 extern "C" void gdev_cc_open(); // 1
-extern "C" bool gdev_cc_shutdown(); // 1
+extern "C" void gdev_cc_shutdown(); // 1
 extern "C" void gdev_cc_initialize(); // 1
 extern "C" extern u8 const GCN_EXI2_GDEV_GCN_main__lit_319[41 + 3 /* padding */];
 extern "C" extern u8 const GCN_EXI2_GDEV_GCN_main__lit_320[28];
@@ -165,9 +165,14 @@ extern "C" asm void gdev_cc_read() {
 
 
 /* 80372B98-80372BA0 0008+00 rc=1 efc=1 rfr=False None .text      gdev_cc_close                                                */
-extern "C" bool gdev_cc_close() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void gdev_cc_close() {
+	nofralloc
+#include "asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_GDEV_GCN/main/gdev_cc_close.s"
 }
+#pragma pop
 
 
 /* 80372BA0-80372BC4 0024+00 rc=1 efc=1 rfr=False None .text      gdev_cc_open                                                 */
@@ -182,9 +187,14 @@ extern "C" asm void gdev_cc_open() {
 
 
 /* 80372BC4-80372BCC 0008+00 rc=1 efc=1 rfr=False None .text      gdev_cc_shutdown                                             */
-extern "C" bool gdev_cc_shutdown() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void gdev_cc_shutdown() {
+	nofralloc
+#include "asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_GDEV_GCN/main/gdev_cc_shutdown.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

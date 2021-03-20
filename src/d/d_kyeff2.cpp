@@ -24,14 +24,14 @@ struct kankyo_class {
 
 static void dKyeff2_Draw(dKyeff2_c*); // 2
 static void dKyeff2_Execute(dKyeff2_c*); // 2
-static bool dKyeff2_IsDelete(dKyeff2_c*); // 2
+static void dKyeff2_IsDelete(dKyeff2_c*); // 2
 static void dKyeff2_Delete(dKyeff2_c*); // 2
 static void dKyeff2_Create(kankyo_class*); // 2
 
 extern "C" static void dKyeff2_Draw__FP9dKyeff2_c(); // 1
 extern "C" void execute__9dKyeff2_cFv(); // 1
 extern "C" static void dKyeff2_Execute__FP9dKyeff2_c(); // 1
-extern "C" static bool dKyeff2_IsDelete__FP9dKyeff2_c(); // 1
+extern "C" static void dKyeff2_IsDelete__FP9dKyeff2_c(); // 1
 extern "C" static void dKyeff2_Delete__FP9dKyeff2_c(); // 1
 extern "C" static void dKyeff2_Create__FP12kankyo_class(); // 1
 extern "C" extern void* g_profile_KYEFF2[10 + 1 /* padding */];
@@ -90,9 +90,14 @@ asm static void dKyeff2_Execute(dKyeff2_c* field_0) {
 
 
 /* 801ADF08-801ADF10 0008+00 rc=1 efc=0 rfr=False None .text      dKyeff2_IsDelete__FP9dKyeff2_c                               */
-static bool dKyeff2_IsDelete(dKyeff2_c* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dKyeff2_IsDelete(dKyeff2_c* field_0) {
+	nofralloc
+#include "asm/d/d_kyeff2/dKyeff2_IsDelete__FP9dKyeff2_c.s"
 }
+#pragma pop
 
 
 /* 801ADF10-801ADF34 0024+00 rc=1 efc=0 rfr=False None .text      dKyeff2_Delete__FP9dKyeff2_c                                 */

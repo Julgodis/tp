@@ -289,10 +289,10 @@ struct JUTNameTab {
 	/* 80191134 */ ~JUTNameTab();
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
 struct dMsgString_c {
@@ -308,14 +308,14 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
-};
-
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -3240,9 +3240,14 @@ asm void dFile_select_c::backDatSelWait2() {
 
 
 /* 8018AD9C-8018ADA0 0004+00 rc=1 efc=0 rfr=False None .text      nextModeWait__14dFile_select_cFv                             */
-void dFile_select_c::nextModeWait() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dFile_select_c::nextModeWait() {
+	nofralloc
+#include "asm/d/file/d_file_select/nextModeWait__14dFile_select_cFv.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */
@@ -3311,9 +3316,14 @@ asm void J2DPicture::setBlackWhite(JUtility::TColor field_0, JUtility::TColor fi
 
 
 /* 8018BF28-8018BF2C 0004+00 rc=4 efc=4 rfr=False None .text      setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey                */
-void J2DPane::setAnimation(J2DAnmTextureSRTKey* field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J2DPane::setAnimation(J2DAnmTextureSRTKey* field_0) {
+	nofralloc
+#include "asm/d/file/d_file_select/setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey.s"
 }
+#pragma pop
 
 
 /* 8018BF2C-8018C524 05F8+00 rc=1 efc=0 rfr=False None .text      screenSetCopySel__14dFile_select_cFv                         */
@@ -4236,9 +4246,14 @@ asm void dFile_select3D_c::_create(u8 field_0, u8 field_1) {
 
 
 /* 8019049C-801904A0 0004+00 rc=1 efc=0 rfr=False None .text      _delete__16dFile_select3D_cFv                                */
-void dFile_select3D_c::_delete() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dFile_select3D_c::_delete() {
+	nofralloc
+#include "asm/d/file/d_file_select/_delete__16dFile_select3D_cFv.s"
 }
+#pragma pop
 
 
 /* 801904A0-801904E4 0044+00 rc=2 efc=0 rfr=False None .text      freeHeap__16dFile_select3D_cFv                               */
@@ -4392,9 +4407,14 @@ asm void dFile_select3D_c::calcViewMtx(f32 (* field_0)[4]) {
 
 
 /* 80191130-80191134 0004+00 rc=1 efc=0 rfr=False None .text      getTransform__15J2DAnmTransformCFUsP16J3DTransformInfo       */
-void J2DAnmTransform::getTransform(u16 field_0, J3DTransformInfo* field_1) const {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J2DAnmTransform::getTransform(u16 field_0, J3DTransformInfo* field_1) const {
+	nofralloc
+#include "asm/d/file/d_file_select/getTransform__15J2DAnmTransformCFUsP16J3DTransformInfo.s"
 }
+#pragma pop
 
 
 /* 80191134-8019117C 0048+00 rc=1 efc=0 rfr=False None .text      __dt__10JUTNameTabFv                                         */

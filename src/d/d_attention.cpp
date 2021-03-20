@@ -28,6 +28,9 @@ struct dAttDraw_CallBack_c {
 	/* 80070178 */ void execute(u16, J3DTransformInfo*);
 };
 
+struct fopAc_ac_c {
+};
+
 struct Vec {
 };
 
@@ -40,9 +43,6 @@ struct cSAngle {
 	/* 80270F98 */ cSAngle(s16);
 	/* 802710E8 */ void Inv() const;
 	/* 80271228 */ void operator-(s16) const;
-};
-
-struct fopAc_ac_c {
 };
 
 struct dAttention_c {
@@ -165,10 +165,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -933,9 +933,14 @@ asm void dAttention_c::runDrawProc() {
 
 
 /* 800720F4-800720F8 0004+00 rc=1 efc=0 rfr=False None .text      runDebugDisp__12dAttention_cFv                               */
-void dAttention_c::runDebugDisp() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dAttention_c::runDebugDisp() {
+	nofralloc
+#include "asm/d/d_attention/runDebugDisp__12dAttention_cFv.s"
 }
+#pragma pop
 
 
 /* 800720F8-800722A0 01A8+00 rc=1 efc=0 rfr=False None .text      checkButton__12dAttention_cFv                                */
@@ -1071,9 +1076,14 @@ asm void dAttDraw_c::alphaAnm() {
 
 
 /* 800732AC-800732B0 0004+00 rc=3 efc=3 rfr=False None .text      setTevKColor__11J3DTevBlockFUlPC10J3DGXColor                 */
-void J3DTevBlock::setTevKColor(u32 field_0, J3DGXColor const* field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J3DTevBlock::setTevKColor(u32 field_0, J3DGXColor const* field_1) {
+	nofralloc
+#include "asm/d/d_attention/setTevKColor__11J3DTevBlockFUlPC10J3DGXColor.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

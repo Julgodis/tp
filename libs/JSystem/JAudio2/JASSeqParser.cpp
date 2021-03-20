@@ -87,8 +87,8 @@ struct JASSeqParser {
 	/* 80294A20 */ void cmdIntTimer(JASTrack*, u32*);
 	/* 80294A3C */ void cmdSyncCPU(JASTrack*, u32*);
 	/* 80294AA4 */ void cmdTempo(JASTrack*, u32*);
-	/* 80294AD4 */ s32 cmdFinish(JASTrack*, u32*);
-	/* 80294ADC */ bool cmdNop(JASTrack*, u32*);
+	/* 80294AD4 */ void cmdFinish(JASTrack*, u32*);
+	/* 80294ADC */ void cmdNop(JASTrack*, u32*);
 	/* 80294AE4 */ void cmdFIRSet(JASTrack*, u32*);
 	/* 80294B1C */ void cmdIIRSet(JASTrack*, u32*);
 	/* 80294B70 */ void cmdIIRCutOff(JASTrack*, u32*);
@@ -196,8 +196,8 @@ extern "C" void cmdRetI__12JASSeqParserFP8JASTrackPUl(); // 1
 extern "C" void cmdIntTimer__12JASSeqParserFP8JASTrackPUl(); // 1
 extern "C" void cmdSyncCPU__12JASSeqParserFP8JASTrackPUl(); // 1
 extern "C" void cmdTempo__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" s32 cmdFinish__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" bool cmdNop__12JASSeqParserFP8JASTrackPUl(); // 1
+extern "C" void cmdFinish__12JASSeqParserFP8JASTrackPUl(); // 1
+extern "C" void cmdNop__12JASSeqParserFP8JASTrackPUl(); // 1
 extern "C" void cmdFIRSet__12JASSeqParserFP8JASTrackPUl(); // 1
 extern "C" void cmdIIRSet__12JASSeqParserFP8JASTrackPUl(); // 1
 extern "C" void cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl(); // 1
@@ -1711,15 +1711,25 @@ asm void JASSeqParser::cmdTempo(JASTrack* field_0, u32* field_1) {
 
 
 /* 80294AD4-80294ADC 0008+00 rc=1 efc=0 rfr=False None .text      cmdFinish__12JASSeqParserFP8JASTrackPUl                      */
-s32 JASSeqParser::cmdFinish(JASTrack* field_0, u32* field_1) {
-	return -1;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JASSeqParser::cmdFinish(JASTrack* field_0, u32* field_1) {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASSeqParser/cmdFinish__12JASSeqParserFP8JASTrackPUl.s"
 }
+#pragma pop
 
 
 /* 80294ADC-80294AE4 0008+00 rc=1 efc=0 rfr=False None .text      cmdNop__12JASSeqParserFP8JASTrackPUl                         */
-bool JASSeqParser::cmdNop(JASTrack* field_0, u32* field_1) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JASSeqParser::cmdNop(JASTrack* field_0, u32* field_1) {
+	nofralloc
+#include "asm/JSystem/JAudio2/JASSeqParser/cmdNop__12JASSeqParserFP8JASTrackPUl.s"
 }
+#pragma pop
 
 
 /* 80294AE4-80294B1C 0038+00 rc=1 efc=0 rfr=False None .text      cmdFIRSet__12JASSeqParserFP8JASTrackPUl                      */

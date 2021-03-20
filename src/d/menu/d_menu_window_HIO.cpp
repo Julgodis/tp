@@ -14,9 +14,9 @@
 struct dMw_HIO_c {
 	/* 801F9AFC */ dMw_HIO_c();
 	/* 801F9B38 */ void init();
-	/* 801F9E14 */ bool getBombFlag();
-	/* 801F9E1C */ bool getArrowFlag();
-	/* 801F9E24 */ bool getPachinkoFlag();
+	/* 801F9E14 */ void getBombFlag();
+	/* 801F9E1C */ void getArrowFlag();
+	/* 801F9E24 */ void getPachinkoFlag();
 	/* 801F9EE0 */ ~dMw_HIO_c();
 };
 
@@ -36,9 +36,9 @@ struct dSv_player_get_item_c {
 
 extern "C" void __ct__9dMw_HIO_cFv(); // 1
 extern "C" void init__9dMw_HIO_cFv(); // 1
-extern "C" bool getBombFlag__9dMw_HIO_cFv(); // 1
-extern "C" bool getArrowFlag__9dMw_HIO_cFv(); // 1
-extern "C" bool getPachinkoFlag__9dMw_HIO_cFv(); // 1
+extern "C" void getBombFlag__9dMw_HIO_cFv(); // 1
+extern "C" void getArrowFlag__9dMw_HIO_cFv(); // 1
+extern "C" void getPachinkoFlag__9dMw_HIO_cFv(); // 1
 extern "C" void __ct__10dMw_DHIO_cFv(); // 1
 extern "C" void __dt__10dMw_DHIO_cFv(); // 1
 extern "C" void __dt__9dMw_HIO_cFv(); // 1
@@ -122,21 +122,36 @@ asm void dMw_HIO_c::init() {
 
 
 /* 801F9E14-801F9E1C 0008+00 rc=1 efc=1 rfr=False None .text      getBombFlag__9dMw_HIO_cFv                                    */
-bool dMw_HIO_c::getBombFlag() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMw_HIO_c::getBombFlag() {
+	nofralloc
+#include "asm/d/menu/d_menu_window_HIO/getBombFlag__9dMw_HIO_cFv.s"
 }
+#pragma pop
 
 
 /* 801F9E1C-801F9E24 0008+00 rc=1 efc=1 rfr=False None .text      getArrowFlag__9dMw_HIO_cFv                                   */
-bool dMw_HIO_c::getArrowFlag() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMw_HIO_c::getArrowFlag() {
+	nofralloc
+#include "asm/d/menu/d_menu_window_HIO/getArrowFlag__9dMw_HIO_cFv.s"
 }
+#pragma pop
 
 
 /* 801F9E24-801F9E2C 0008+00 rc=1 efc=1 rfr=False None .text      getPachinkoFlag__9dMw_HIO_cFv                                */
-bool dMw_HIO_c::getPachinkoFlag() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMw_HIO_c::getPachinkoFlag() {
+	nofralloc
+#include "asm/d/menu/d_menu_window_HIO/getPachinkoFlag__9dMw_HIO_cFv.s"
 }
+#pragma pop
 
 
 /* 801F9E2C-801F9E98 006C+00 rc=1 efc=0 rfr=False None .text      __ct__10dMw_DHIO_cFv                                         */

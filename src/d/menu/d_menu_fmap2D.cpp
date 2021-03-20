@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct STControl {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct STControl {
 };
 
 struct dMenu_Fmap2DBack_c {

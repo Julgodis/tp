@@ -93,8 +93,13 @@ asm void daObj_SSBase_c::getProcessID() {
 
 
 /* 8015E4C8-8015E4CC 0004+00 rc=1 efc=0 rfr=False None .text      setSoldOut__14daObj_SSBase_cFv                               */
-void daObj_SSBase_c::setSoldOut() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObj_SSBase_c::setSoldOut() {
+	nofralloc
+#include "asm/a/obj/d_a_obj_ss_base/setSoldOut__14daObj_SSBase_cFv.s"
 }
+#pragma pop
 
 

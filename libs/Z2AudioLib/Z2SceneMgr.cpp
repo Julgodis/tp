@@ -33,7 +33,7 @@ struct Z2SceneMgr {
 	/* 802BA120 */ void load2ndDynamicWave();
 	/* 802BA294 */ void sceneBgmStart();
 	/* 802BA56C */ void loadStaticWaves();
-	/* 802BA5C0 */ bool checkFirstWaves();
+	/* 802BA5C0 */ void checkFirstWaves();
 	/* 802BA5C8 */ void eraseSeWave(u32);
 	/* 802BA630 */ void eraseBgmWave(u32);
 	/* 802BA698 */ void getWaveLoadStatus(u32, u32);
@@ -173,7 +173,7 @@ extern "C" void check1stDynamicWave__10Z2SceneMgrFv(); // 1
 extern "C" void load2ndDynamicWave__10Z2SceneMgrFv(); // 1
 extern "C" void sceneBgmStart__10Z2SceneMgrFv(); // 1
 extern "C" void loadStaticWaves__10Z2SceneMgrFv(); // 1
-extern "C" bool checkFirstWaves__10Z2SceneMgrFv(); // 1
+extern "C" void checkFirstWaves__10Z2SceneMgrFv(); // 1
 extern "C" void eraseSeWave__10Z2SceneMgrFUl(); // 1
 extern "C" void eraseBgmWave__10Z2SceneMgrFUl(); // 1
 extern "C" void getWaveLoadStatus__10Z2SceneMgrFUlUl(); // 1
@@ -1078,9 +1078,14 @@ asm void Z2SceneMgr::loadStaticWaves() {
 
 
 /* 802BA5C0-802BA5C8 0008+00 rc=1 efc=1 rfr=False None .text      checkFirstWaves__10Z2SceneMgrFv                              */
-bool Z2SceneMgr::checkFirstWaves() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void Z2SceneMgr::checkFirstWaves() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SceneMgr/checkFirstWaves__10Z2SceneMgrFv.s"
 }
+#pragma pop
 
 
 /* 802BA5C8-802BA630 0068+00 rc=2 efc=0 rfr=False None .text      eraseSeWave__10Z2SceneMgrFUl                                 */

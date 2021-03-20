@@ -22,14 +22,14 @@ struct cCcD_Stts {
 	/* 80263984 */ void GetWeightF() const;
 };
 
-struct cCcD_GStts {
+struct cCcD_GObjInf {
 };
 
 struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
 
-struct cCcD_GObjInf {
+struct cCcD_GStts {
 };
 
 struct cCcS {
@@ -56,9 +56,9 @@ struct cCcS {
 	/* 80265DF4 */ void SetCoGCorrectProc(cCcD_Obj*, cCcD_Obj*);
 	/* 80265DF8 */ void SetCoGObjInf(bool, bool, cCcD_GObjInf*, cCcD_GObjInf*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*);
 	/* 80265DFC */ void SetAtTgGObjInf(bool, bool, cCcD_Obj*, cCcD_Obj*, cCcD_GObjInf*, cCcD_GObjInf*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*, cXyz*);
-	/* 80265E00 */ bool ChkNoHitGAtTg(cCcD_GObjInf const*, cCcD_GObjInf const*, cCcD_GStts*, cCcD_GStts*);
-	/* 80265E08 */ bool ChkAtTgHitAfterCross(bool, bool, cCcD_GObjInf const*, cCcD_GObjInf const*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*);
-	/* 80265E10 */ bool ChkNoHitGCo(cCcD_Obj*, cCcD_Obj*);
+	/* 80265E00 */ void ChkNoHitGAtTg(cCcD_GObjInf const*, cCcD_GObjInf const*, cCcD_GStts*, cCcD_GStts*);
+	/* 80265E08 */ void ChkAtTgHitAfterCross(bool, bool, cCcD_GObjInf const*, cCcD_GObjInf const*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*);
+	/* 80265E10 */ void ChkNoHitGCo(cCcD_Obj*, cCcD_Obj*);
 	/* 80265E18 */ void MoveAfterCheck();
 };
 
@@ -116,9 +116,9 @@ extern "C" void DrawClear__4cCcSFv(); // 1
 extern "C" void SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
 extern "C" void SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts(); // 1
 extern "C" void SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz(); // 1
-extern "C" bool ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts(); // 1
-extern "C" bool ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts(); // 1
-extern "C" bool ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
+extern "C" void ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts(); // 1
+extern "C" void ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts(); // 1
+extern "C" void ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
 extern "C" void MoveAfterCheck__4cCcSFv(); // 1
 extern "C" extern void* __vt__4cCcS[12];
 
@@ -444,44 +444,79 @@ asm void cCcS::DrawClear() {
 
 
 /* 80265DF4-80265DF8 0004+00 rc=2 efc=1 rfr=False None .text      SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj                */
-void cCcS::SetCoGCorrectProc(cCcD_Obj* field_0, cCcD_Obj* field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void cCcS::SetCoGCorrectProc(cCcD_Obj* field_0, cCcD_Obj* field_1) {
+	nofralloc
+#include "asm/SSystem/SComponent/c_cc_s/SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj.s"
 }
+#pragma pop
 
 
 /* 80265DF8-80265DFC 0004+00 rc=1 efc=0 rfr=False None .text      SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts */
-void cCcS::SetCoGObjInf(bool field_0, bool field_1, cCcD_GObjInf* field_2, cCcD_GObjInf* field_3, cCcD_Stts* field_4, cCcD_Stts* field_5, cCcD_GStts* field_6, cCcD_GStts* field_7) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void cCcS::SetCoGObjInf(bool field_0, bool field_1, cCcD_GObjInf* field_2, cCcD_GObjInf* field_3, cCcD_Stts* field_4, cCcD_Stts* field_5, cCcD_GStts* field_6, cCcD_GStts* field_7) {
+	nofralloc
+#include "asm/SSystem/SComponent/c_cc_s/func_80265DF8.s"
 }
+#pragma pop
 
 
 /* 80265DFC-80265E00 0004+00 rc=1 efc=0 rfr=False None .text      SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz */
-void cCcS::SetAtTgGObjInf(bool field_0, bool field_1, cCcD_Obj* field_2, cCcD_Obj* field_3, cCcD_GObjInf* field_4, cCcD_GObjInf* field_5, cCcD_Stts* field_6, cCcD_Stts* field_7, cCcD_GStts* field_8, cCcD_GStts* field_9, cXyz* field_10) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void cCcS::SetAtTgGObjInf(bool field_0, bool field_1, cCcD_Obj* field_2, cCcD_Obj* field_3, cCcD_GObjInf* field_4, cCcD_GObjInf* field_5, cCcD_Stts* field_6, cCcD_Stts* field_7, cCcD_GStts* field_8, cCcD_GStts* field_9, cXyz* field_10) {
+	nofralloc
+#include "asm/SSystem/SComponent/c_cc_s/func_80265DFC.s"
 }
+#pragma pop
 
 
 /* 80265E00-80265E08 0008+00 rc=1 efc=0 rfr=False None .text      ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts */
-bool cCcS::ChkNoHitGAtTg(cCcD_GObjInf const* field_0, cCcD_GObjInf const* field_1, cCcD_GStts* field_2, cCcD_GStts* field_3) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void cCcS::ChkNoHitGAtTg(cCcD_GObjInf const* field_0, cCcD_GObjInf const* field_1, cCcD_GStts* field_2, cCcD_GStts* field_3) {
+	nofralloc
+#include "asm/SSystem/SComponent/c_cc_s/ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts.s"
 }
+#pragma pop
 
 
 /* 80265E08-80265E10 0008+00 rc=1 efc=0 rfr=False None .text      ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts */
-bool cCcS::ChkAtTgHitAfterCross(bool field_0, bool field_1, cCcD_GObjInf const* field_2, cCcD_GObjInf const* field_3, cCcD_Stts* field_4, cCcD_Stts* field_5, cCcD_GStts* field_6, cCcD_GStts* field_7) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void cCcS::ChkAtTgHitAfterCross(bool field_0, bool field_1, cCcD_GObjInf const* field_2, cCcD_GObjInf const* field_3, cCcD_Stts* field_4, cCcD_Stts* field_5, cCcD_GStts* field_6, cCcD_GStts* field_7) {
+	nofralloc
+#include "asm/SSystem/SComponent/c_cc_s/func_80265E08.s"
 }
+#pragma pop
 
 
 /* 80265E10-80265E18 0008+00 rc=1 efc=0 rfr=False None .text      ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj                      */
-bool cCcS::ChkNoHitGCo(cCcD_Obj* field_0, cCcD_Obj* field_1) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void cCcS::ChkNoHitGCo(cCcD_Obj* field_0, cCcD_Obj* field_1) {
+	nofralloc
+#include "asm/SSystem/SComponent/c_cc_s/ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj.s"
 }
+#pragma pop
 
 
 /* 80265E18-80265E1C 0004+00 rc=1 efc=0 rfr=False None .text      MoveAfterCheck__4cCcSFv                                      */
-void cCcS::MoveAfterCheck() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void cCcS::MoveAfterCheck() {
+	nofralloc
+#include "asm/SSystem/SComponent/c_cc_s/MoveAfterCheck__4cCcSFv.s"
 }
+#pragma pop
 
 

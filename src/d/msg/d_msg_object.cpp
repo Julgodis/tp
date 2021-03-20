@@ -21,6 +21,16 @@ struct dMsgObject_HIO_c {
 	/* 80238BDC */ ~dMsgObject_HIO_c();
 };
 
+struct fopAc_ac_c {
+};
+
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
+};
+
+struct J2DTextBox {
+};
+
 struct JKRHeap {
 	/* 802CE784 */ void getTotalFreeSize();
 };
@@ -35,20 +45,10 @@ struct mDoDvdThd_mountXArchive_c {
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
-struct J2DTextBox {
-};
-
-struct fopAc_ac_c {
+struct msg_class {
 };
 
 struct JUTFont {
-};
-
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
-};
-
-struct msg_class {
 };
 
 struct dMsgObject_c {
@@ -96,7 +96,7 @@ struct dMsgObject_c {
 	/* 802371B0 */ void isMidonaTalkWait();
 	/* 802371E4 */ void isPlaceMessage();
 	/* 802371F8 */ void isBossMessage();
-	/* 8023720C */ bool isBookMessage();
+	/* 8023720C */ void isBookMessage();
 	/* 80237214 */ void isStaffMessage();
 	/* 80237228 */ void isSaveMessage();
 	/* 8023723C */ void isTalkMessage();
@@ -195,13 +195,13 @@ struct dMsgScrnBase_c {
 	/* 80238C3C */ void exec();
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
-	/* 80238C48 */ bool selectAnimeMove(u8, u8, bool);
+	/* 80238C48 */ void selectAnimeMove(u8, u8, bool);
 	/* 80238C50 */ void selectAnimeInit(u8, u8, f32, u8);
 	/* 80238C54 */ void arwAnimeMove();
 	/* 80238C58 */ void arwAnimeInit();
 	/* 80238C5C */ void fukiPosCalc(u8);
-	/* 80238C60 */ bool isSelect();
-	/* 80238C68 */ bool selectAnimeEnd();
+	/* 80238C60 */ void isSelect();
+	/* 80238C68 */ void selectAnimeEnd();
 	/* 80238C70 */ void dotAnimeMove();
 	/* 80238C74 */ void dotAnimeInit();
 	/* 8023C360 */ void setString(char*, char*);
@@ -399,7 +399,7 @@ void dMsgObject_getGroupID(); // 2
 static void dMsgObject_searchSSItem(void*, void*); // 2
 static void dMsgObject_Draw(dMsgObject_c*); // 2
 static void dMsgObject_Execute(dMsgObject_c*); // 2
-static bool dMsgObject_IsDelete(dMsgObject_c*); // 2
+static void dMsgObject_IsDelete(dMsgObject_c*); // 2
 static void dMsgObject_Delete(dMsgObject_c*); // 2
 static void dMsgObject_Create(msg_class*); // 2
 static void dMsgObject_getTotalPrice(); // 2
@@ -462,7 +462,7 @@ extern "C" void isMidonaNormalTalkWait__12dMsgObject_cFv(); // 1
 extern "C" void isMidonaTalkWait__12dMsgObject_cFv(); // 1
 extern "C" void isPlaceMessage__12dMsgObject_cFv(); // 1
 extern "C" void isBossMessage__12dMsgObject_cFv(); // 1
-extern "C" bool isBookMessage__12dMsgObject_cFv(); // 1
+extern "C" void isBookMessage__12dMsgObject_cFv(); // 1
 extern "C" void isStaffMessage__12dMsgObject_cFv(); // 1
 extern "C" void isSaveMessage__12dMsgObject_cFv(); // 1
 extern "C" void isTalkMessage__12dMsgObject_cFv(); // 1
@@ -513,7 +513,7 @@ extern "C" void setSelectCursorPosLocal__12dMsgObject_cFUc(); // 1
 extern "C" void setTalkActorLocal__12dMsgObject_cFP10fopAc_ac_c(); // 1
 extern "C" static void dMsgObject_Draw__FP12dMsgObject_c(); // 1
 extern "C" static void dMsgObject_Execute__FP12dMsgObject_c(); // 1
-extern "C" static bool dMsgObject_IsDelete__FP12dMsgObject_c(); // 1
+extern "C" static void dMsgObject_IsDelete__FP12dMsgObject_c(); // 1
 extern "C" static void dMsgObject_Delete__FP12dMsgObject_c(); // 1
 extern "C" static void dMsgObject_Create__FP9msg_class(); // 1
 extern "C" void readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c(); // 1
@@ -577,13 +577,13 @@ extern "C" void __dt__16dMsgObject_HIO_cFv(); // 1
 extern "C" void exec__14dMsgScrnBase_cFv(); // 1
 extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc(); // 1
 extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc(); // 1
-extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
+extern "C" void selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
 extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc(); // 1
 extern "C" void arwAnimeMove__14dMsgScrnBase_cFv(); // 1
 extern "C" void arwAnimeInit__14dMsgScrnBase_cFv(); // 1
 extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc(); // 1
-extern "C" bool isSelect__14dMsgScrnBase_cFv(); // 1
-extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
+extern "C" void isSelect__14dMsgScrnBase_cFv(); // 1
+extern "C" void selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeMove__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeInit__14dMsgScrnBase_cFv(); // 1
 extern "C" void setActorPos__19jmessage_tReferenceF4cXyz(); // 1
@@ -1157,9 +1157,14 @@ asm void dMsgObject_c::outwaitProc() {
 
 
 /* 80234FF0-80234FF4 0004+00 rc=1 efc=0 rfr=False None .text      stopProc__12dMsgObject_cFv                                   */
-void dMsgObject_c::stopProc() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgObject_c::stopProc() {
+	nofralloc
+#include "asm/d/msg/d_msg_object/stopProc__12dMsgObject_cFv.s"
 }
+#pragma pop
 
 
 /* 80234FF4-8023531C 0328+00 rc=1 efc=0 rfr=False None .text      continueProc__12dMsgObject_cFv                               */
@@ -1240,9 +1245,14 @@ asm void dMsgObject_c::deleteProc() {
 
 
 /* 8023609C-802360A0 0004+00 rc=1 efc=0 rfr=False None .text      textmodeProc__12dMsgObject_cFv                               */
-void dMsgObject_c::textmodeProc() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgObject_c::textmodeProc() {
+	nofralloc
+#include "asm/d/msg/d_msg_object/textmodeProc__12dMsgObject_cFv.s"
 }
+#pragma pop
 
 
 /* 802360A0-8023670C 066C+00 rc=2 efc=1 rfr=False None .text      talkStartInit__12dMsgObject_cFv                              */
@@ -1487,9 +1497,14 @@ asm void dMsgObject_c::isBossMessage() {
 
 
 /* 8023720C-80237214 0008+00 rc=8 efc=2 rfr=False None .text      isBookMessage__12dMsgObject_cFv                              */
-bool dMsgObject_c::isBookMessage() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgObject_c::isBookMessage() {
+	nofralloc
+#include "asm/d/msg/d_msg_object/isBookMessage__12dMsgObject_cFv.s"
 }
+#pragma pop
 
 
 /* 80237214-80237228 0014+00 rc=5 efc=2 rfr=False None .text      isStaffMessage__12dMsgObject_cFv                             */
@@ -2043,9 +2058,14 @@ asm static void dMsgObject_Execute(dMsgObject_c* field_0) {
 
 
 /* 80237F58-80237F60 0008+00 rc=1 efc=0 rfr=False None .text      dMsgObject_IsDelete__FP12dMsgObject_c                        */
-static bool dMsgObject_IsDelete(dMsgObject_c* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dMsgObject_IsDelete(dMsgObject_c* field_0) {
+	nofralloc
+#include "asm/d/msg/d_msg_object/dMsgObject_IsDelete__FP12dMsgObject_c.s"
 }
+#pragma pop
 
 
 /* 80237F60-80237F80 0020+00 rc=1 efc=0 rfr=False None .text      dMsgObject_Delete__FP12dMsgObject_c                          */
@@ -2709,75 +2729,135 @@ asm dMsgObject_HIO_c::~dMsgObject_HIO_c() {
 
 
 /* 80238C3C-80238C40 0004+00 rc=1 efc=1 rfr=False None .text      exec__14dMsgScrnBase_cFv                                     */
-void dMsgScrnBase_c::exec() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::exec() {
+	nofralloc
+#include "asm/d/msg/d_msg_object/exec__14dMsgScrnBase_cFv.s"
 }
+#pragma pop
 
 
 /* 80238C40-80238C44 0004+00 rc=8 efc=8 rfr=False None .text      setSelectRubyString__14dMsgScrnBase_cFPcPcPc                 */
-void dMsgScrnBase_c::setSelectRubyString(char* field_0, char* field_1, char* field_2) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::setSelectRubyString(char* field_0, char* field_1, char* field_2) {
+	nofralloc
+#include "asm/d/msg/d_msg_object/setSelectRubyString__14dMsgScrnBase_cFPcPcPc.s"
 }
+#pragma pop
 
 
 /* 80238C44-80238C48 0004+00 rc=8 efc=8 rfr=False None .text      setSelectString__14dMsgScrnBase_cFPcPcPc                     */
-void dMsgScrnBase_c::setSelectString(char* field_0, char* field_1, char* field_2) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::setSelectString(char* field_0, char* field_1, char* field_2) {
+	nofralloc
+#include "asm/d/msg/d_msg_object/setSelectString__14dMsgScrnBase_cFPcPcPc.s"
 }
+#pragma pop
 
 
 /* 80238C48-80238C50 0008+00 rc=8 efc=8 rfr=False None .text      selectAnimeMove__14dMsgScrnBase_cFUcUcb                      */
-bool dMsgScrnBase_c::selectAnimeMove(u8 field_0, u8 field_1, bool field_2) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::selectAnimeMove(u8 field_0, u8 field_1, bool field_2) {
+	nofralloc
+#include "asm/d/msg/d_msg_object/selectAnimeMove__14dMsgScrnBase_cFUcUcb.s"
 }
+#pragma pop
 
 
 /* 80238C50-80238C54 0004+00 rc=8 efc=8 rfr=False None .text      selectAnimeInit__14dMsgScrnBase_cFUcUcfUc                    */
-void dMsgScrnBase_c::selectAnimeInit(u8 field_0, u8 field_1, f32 field_2, u8 field_3) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::selectAnimeInit(u8 field_0, u8 field_1, f32 field_2, u8 field_3) {
+	nofralloc
+#include "asm/d/msg/d_msg_object/selectAnimeInit__14dMsgScrnBase_cFUcUcfUc.s"
 }
+#pragma pop
 
 
 /* 80238C54-80238C58 0004+00 rc=8 efc=8 rfr=False None .text      arwAnimeMove__14dMsgScrnBase_cFv                             */
-void dMsgScrnBase_c::arwAnimeMove() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::arwAnimeMove() {
+	nofralloc
+#include "asm/d/msg/d_msg_object/arwAnimeMove__14dMsgScrnBase_cFv.s"
 }
+#pragma pop
 
 
 /* 80238C58-80238C5C 0004+00 rc=8 efc=8 rfr=False None .text      arwAnimeInit__14dMsgScrnBase_cFv                             */
-void dMsgScrnBase_c::arwAnimeInit() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::arwAnimeInit() {
+	nofralloc
+#include "asm/d/msg/d_msg_object/arwAnimeInit__14dMsgScrnBase_cFv.s"
 }
+#pragma pop
 
 
 /* 80238C5C-80238C60 0004+00 rc=8 efc=8 rfr=False None .text      fukiPosCalc__14dMsgScrnBase_cFUc                             */
-void dMsgScrnBase_c::fukiPosCalc(u8 field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::fukiPosCalc(u8 field_0) {
+	nofralloc
+#include "asm/d/msg/d_msg_object/fukiPosCalc__14dMsgScrnBase_cFUc.s"
 }
+#pragma pop
 
 
 /* 80238C60-80238C68 0008+00 rc=8 efc=8 rfr=False None .text      isSelect__14dMsgScrnBase_cFv                                 */
-bool dMsgScrnBase_c::isSelect() {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::isSelect() {
+	nofralloc
+#include "asm/d/msg/d_msg_object/isSelect__14dMsgScrnBase_cFv.s"
 }
+#pragma pop
 
 
 /* 80238C68-80238C70 0008+00 rc=8 efc=8 rfr=False None .text      selectAnimeEnd__14dMsgScrnBase_cFv                           */
-bool dMsgScrnBase_c::selectAnimeEnd() {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::selectAnimeEnd() {
+	nofralloc
+#include "asm/d/msg/d_msg_object/selectAnimeEnd__14dMsgScrnBase_cFv.s"
 }
+#pragma pop
 
 
 /* 80238C70-80238C74 0004+00 rc=8 efc=8 rfr=False None .text      dotAnimeMove__14dMsgScrnBase_cFv                             */
-void dMsgScrnBase_c::dotAnimeMove() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::dotAnimeMove() {
+	nofralloc
+#include "asm/d/msg/d_msg_object/dotAnimeMove__14dMsgScrnBase_cFv.s"
 }
+#pragma pop
 
 
 /* 80238C74-80238C78 0004+00 rc=8 efc=8 rfr=False None .text      dotAnimeInit__14dMsgScrnBase_cFv                             */
-void dMsgScrnBase_c::dotAnimeInit() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnBase_c::dotAnimeInit() {
+	nofralloc
+#include "asm/d/msg/d_msg_object/dotAnimeInit__14dMsgScrnBase_cFv.s"
 }
+#pragma pop
 
 
 /* 80238C78-80238C94 001C+00 rc=2 efc=0 rfr=False None .text      setActorPos__19jmessage_tReferenceF4cXyz                     */

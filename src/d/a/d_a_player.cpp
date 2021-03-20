@@ -58,7 +58,7 @@ struct daPy_py_c {
 	/* 8015F7C8 */ void getSpinnerRideSpeed() const;
 	/* 8015F814 */ void checkSpinnerReflectEffect();
 	/* 8015F89C */ void checkBoomerangCharge();
-	/* 8015F8C8 */ bool checkBoomerangChargeTime();
+	/* 8015F8C8 */ void checkBoomerangChargeTime();
 	/* 8015F8D0 */ void getThrowBoomerangActor();
 	/* 8015F8E4 */ void cancelBoomerangLockActor(fopAc_ac_c*);
 	/* 8015F914 */ void setPlayerDamage(int, int);
@@ -224,7 +224,7 @@ extern "C" void checkCarryStartLightBallB__9daPy_py_cFv(); // 1
 extern "C" void getSpinnerRideSpeed__9daPy_py_cCFv(); // 1
 extern "C" void checkSpinnerReflectEffect__9daPy_py_cFv(); // 1
 extern "C" void checkBoomerangCharge__9daPy_py_cFv(); // 1
-extern "C" bool checkBoomerangChargeTime__9daPy_py_cFv(); // 1
+extern "C" void checkBoomerangChargeTime__9daPy_py_cFv(); // 1
 extern "C" void getThrowBoomerangActor__9daPy_py_cFv(); // 1
 extern "C" void cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c(); // 1
 extern "C" void setPlayerDamage__9daPy_py_cFii(); // 1
@@ -1047,9 +1047,14 @@ asm void daPy_py_c::checkBoomerangCharge() {
 
 
 /* 8015F8C8-8015F8D0 0008+00 rc=0 efc=0 rfr=False None .text      checkBoomerangChargeTime__9daPy_py_cFv                       */
-bool daPy_py_c::checkBoomerangChargeTime() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daPy_py_c::checkBoomerangChargeTime() {
+	nofralloc
+#include "asm/d/a/d_a_player/checkBoomerangChargeTime__9daPy_py_cFv.s"
 }
+#pragma pop
 
 
 /* 8015F8D0-8015F8E4 0014+00 rc=4 efc=1 rfr=False None .text      getThrowBoomerangActor__9daPy_py_cFv                         */

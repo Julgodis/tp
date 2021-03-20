@@ -74,7 +74,7 @@ namespace JStudio {
 
 		struct TFactory {
 			/* 802895B4 */ ~TFactory();
-			/* 802895FC */ bool create(JStudio::stb::data::TParse_TBlock_object const&);
+			/* 802895FC */ void create(JStudio::stb::data::TParse_TBlock_object const&);
 			/* 80289604 */ void destroy(JStudio::stb::TObject*);
 		};
 
@@ -83,7 +83,7 @@ namespace JStudio {
 			/* 80289660 */ ~TParse();
 			/* 802896C0 */ void parseHeader_next(void const**, u32*, u32);
 			/* 8028978C */ void parseBlock_next(void const**, u32*, u32);
-			/* 802897E0 */ bool parseHeader(JStudio::stb::data::TParse_THeader const&, u32);
+			/* 802897E0 */ void parseHeader(JStudio::stb::data::TParse_THeader const&, u32);
 			/* 802897E8 */ void parseBlock_block(JStudio::stb::data::TParse_TBlock const&, u32);
 			/* 80289820 */ void parseBlock_object(JStudio::stb::data::TParse_TBlock_object const&, u32);
 		};
@@ -151,13 +151,13 @@ extern "C" void getObject__Q37JStudio3stb8TControlFPCvUl(); // 1
 extern "C" void reset__Q37JStudio3stb8TControlFv(); // 1
 extern "C" void forward__Q37JStudio3stb8TControlFUl(); // 1
 extern "C" void __dt__Q37JStudio3stb8TFactoryFv(); // 1
-extern "C" bool create__Q37JStudio3stb8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
+extern "C" void create__Q37JStudio3stb8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
 extern "C" void destroy__Q37JStudio3stb8TFactoryFPQ37JStudio3stb7TObject(); // 1
 extern "C" void __ct__Q37JStudio3stb6TParseFPQ37JStudio3stb8TControl(); // 1
 extern "C" void __dt__Q37JStudio3stb6TParseFv(); // 1
 extern "C" void parseHeader_next__Q37JStudio3stb6TParseFPPCvPUlUl(); // 1
 extern "C" void parseBlock_next__Q37JStudio3stb6TParseFPPCvPUlUl(); // 1
-extern "C" bool parseHeader__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl(); // 1
+extern "C" void parseHeader__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl(); // 1
 extern "C" void parseBlock_block__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl(); // 1
 extern "C" void parseBlock_object__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data20TParse_TBlock_objectUl(); // 1
 extern "C" static void func_80289928(); // 1
@@ -311,33 +311,58 @@ asm void JStudio::stb::TObject::forward(u32 field_0) {
 
 
 /* 80288E18-80288E1C 0004+00 rc=2 efc=0 rfr=False None .text      do_begin__Q37JStudio3stb7TObjectFv                           */
-void JStudio::stb::TObject::do_begin() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JStudio::stb::TObject::do_begin() {
+	nofralloc
+#include "asm/JSystem/JStudio/JStudio/stb/do_begin__Q37JStudio3stb7TObjectFv.s"
 }
+#pragma pop
 
 
 /* 80288E1C-80288E20 0004+00 rc=2 efc=0 rfr=False None .text      do_end__Q37JStudio3stb7TObjectFv                             */
-void JStudio::stb::TObject::do_end() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JStudio::stb::TObject::do_end() {
+	nofralloc
+#include "asm/JSystem/JStudio/JStudio/stb/do_end__Q37JStudio3stb7TObjectFv.s"
 }
+#pragma pop
 
 
 /* 80288E20-80288E24 0004+00 rc=2 efc=0 rfr=False None .text      do_paragraph__Q37JStudio3stb7TObjectFUlPCvUl                 */
-void JStudio::stb::TObject::do_paragraph(u32 field_0, void const* field_1, u32 field_2) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JStudio::stb::TObject::do_paragraph(u32 field_0, void const* field_1, u32 field_2) {
+	nofralloc
+#include "asm/JSystem/JStudio/JStudio/stb/do_paragraph__Q37JStudio3stb7TObjectFUlPCvUl.s"
 }
+#pragma pop
 
 
 /* 80288E24-80288E28 0004+00 rc=2 efc=0 rfr=False None .text      do_wait__Q37JStudio3stb7TObjectFUl                           */
-void JStudio::stb::TObject::do_wait(u32 field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JStudio::stb::TObject::do_wait(u32 field_0) {
+	nofralloc
+#include "asm/JSystem/JStudio/JStudio/stb/do_wait__Q37JStudio3stb7TObjectFUl.s"
 }
+#pragma pop
 
 
 /* 80288E28-80288E2C 0004+00 rc=2 efc=0 rfr=False None .text      do_data__Q37JStudio3stb7TObjectFPCvUlPCvUl                   */
-void JStudio::stb::TObject::do_data(void const* field_0, u32 field_1, void const* field_2, u32 field_3) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JStudio::stb::TObject::do_data(void const* field_0, u32 field_1, void const* field_2, u32 field_3) {
+	nofralloc
+#include "asm/JSystem/JStudio/JStudio/stb/do_data__Q37JStudio3stb7TObjectFPCvUlPCvUl.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */
@@ -503,9 +528,14 @@ asm JStudio::stb::TFactory::~TFactory() {
 
 
 /* 802895FC-80289604 0008+00 rc=1 efc=0 rfr=False None .text      create__Q37JStudio3stb8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object */
-bool JStudio::stb::TFactory::create(JStudio::stb::data::TParse_TBlock_object const& field_0) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JStudio::stb::TFactory::create(JStudio::stb::data::TParse_TBlock_object const& field_0) {
+	nofralloc
+#include "asm/JSystem/JStudio/JStudio/stb/create__Q37JStudio3stb8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object.s"
 }
+#pragma pop
 
 
 /* 80289604-80289640 003C+00 rc=2 efc=1 rfr=False None .text      destroy__Q37JStudio3stb8TFactoryFPQ37JStudio3stb7TObject     */
@@ -564,9 +594,14 @@ asm void JStudio::stb::TParse::parseBlock_next(void const** field_0, u32* field_
 
 
 /* 802897E0-802897E8 0008+00 rc=1 efc=0 rfr=False None .text      parseHeader__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl */
-bool JStudio::stb::TParse::parseHeader(JStudio::stb::data::TParse_THeader const& field_0, u32 field_1) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JStudio::stb::TParse::parseHeader(JStudio::stb::data::TParse_THeader const& field_0, u32 field_1) {
+	nofralloc
+#include "asm/JSystem/JStudio/JStudio/stb/parseHeader__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl.s"
 }
+#pragma pop
 
 
 /* 802897E8-80289820 0038+00 rc=2 efc=1 rfr=False None .text      parseBlock_block__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl */

@@ -612,9 +612,14 @@ asm void Z2EnvSeMgr::framework() {
 
 
 /* 802C6998-802C699C 0004+00 rc=1 efc=1 rfr=False None .text      resetScene__10Z2EnvSeMgrFv                                   */
-void Z2EnvSeMgr::resetScene() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void Z2EnvSeMgr::resetScene() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2EnvSeMgr/resetScene__10Z2EnvSeMgrFv.s"
 }
+#pragma pop
 
 
 /* 802C699C-802C6AC0 0124+00 rc=1 efc=1 rfr=False None .text      resetSceneInner__10Z2EnvSeMgrFv                              */

@@ -227,8 +227,13 @@ asm void JUTVideo::setRenderMode(_GXRenderModeObj const* field_0) {
 
 
 /* 802E5210-802E5214 0004+00 rc=1 efc=1 rfr=False None .text      waitRetraceIfNeed__8JUTVideoFv                               */
-void JUTVideo::waitRetraceIfNeed() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JUTVideo::waitRetraceIfNeed() {
+	nofralloc
+#include "asm/JSystem/JUtility/JUTVideo/waitRetraceIfNeed__8JUTVideoFv.s"
 }
+#pragma pop
 
 

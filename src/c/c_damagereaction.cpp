@@ -98,9 +98,14 @@ asm void JPTraceParticleCallBack4::execute(JPABaseEmitter* field_0, JPABaseParti
 
 
 /* 800182A4-800182A8 0004+00 rc=1 efc=0 rfr=False None .text      draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle */
-void JPTraceParticleCallBack4::draw(JPABaseEmitter* field_0, JPABaseParticle* field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JPTraceParticleCallBack4::draw(JPABaseEmitter* field_0, JPABaseParticle* field_1) {
+	nofralloc
+#include "asm/c/c_damagereaction/draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle.s"
 }
+#pragma pop
 
 
 /* 800182A8-80018328 0080+00 rc=0 efc=0 rfr=False None .text      cDmrNowMidnaTalk__Fv                                         */
@@ -172,14 +177,24 @@ extern "C" asm void __sinit_c_damagereaction_cpp() {
 
 
 /* 800183D4-800183D8 0004+00 rc=2 efc=1 rfr=False None .text      execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
-void JPAParticleCallBack::execute(JPABaseEmitter* field_0, JPABaseParticle* field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JPAParticleCallBack::execute(JPABaseEmitter* field_0, JPABaseParticle* field_1) {
+	nofralloc
+#include "asm/c/c_damagereaction/execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle.s"
 }
+#pragma pop
 
 
 /* 800183D8-800183DC 0004+00 rc=5 efc=4 rfr=False None .text      draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
-void JPAParticleCallBack::draw(JPABaseEmitter* field_0, JPABaseParticle* field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JPAParticleCallBack::draw(JPABaseEmitter* field_0, JPABaseParticle* field_1) {
+	nofralloc
+#include "asm/c/c_damagereaction/draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle.s"
 }
+#pragma pop
 
 

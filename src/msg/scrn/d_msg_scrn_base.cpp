@@ -15,13 +15,13 @@ struct dMsgScrnBase_c {
 	/* 80238C3C */ void exec();
 	/* 80238C40 */ void setSelectRubyString(char*, char*, char*);
 	/* 80238C44 */ void setSelectString(char*, char*, char*);
-	/* 80238C48 */ bool selectAnimeMove(u8, u8, bool);
+	/* 80238C48 */ void selectAnimeMove(u8, u8, bool);
 	/* 80238C50 */ void selectAnimeInit(u8, u8, f32, u8);
 	/* 80238C54 */ void arwAnimeMove();
 	/* 80238C58 */ void arwAnimeInit();
 	/* 80238C5C */ void fukiPosCalc(u8);
-	/* 80238C60 */ bool isSelect();
-	/* 80238C68 */ bool selectAnimeEnd();
+	/* 80238C60 */ void isSelect();
+	/* 80238C68 */ void selectAnimeEnd();
 	/* 80238C70 */ void dotAnimeMove();
 	/* 80238C74 */ void dotAnimeInit();
 	/* 8023C0DC */ dMsgScrnBase_c();
@@ -102,13 +102,13 @@ extern "C" void getStatus__12dMsgObject_cFv(); // 1
 extern "C" void exec__14dMsgScrnBase_cFv(); // 1
 extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc(); // 1
 extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc(); // 1
-extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
+extern "C" void selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
 extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc(); // 1
 extern "C" void arwAnimeMove__14dMsgScrnBase_cFv(); // 1
 extern "C" void arwAnimeInit__14dMsgScrnBase_cFv(); // 1
 extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc(); // 1
-extern "C" bool isSelect__14dMsgScrnBase_cFv(); // 1
-extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
+extern "C" void isSelect__14dMsgScrnBase_cFv(); // 1
+extern "C" void selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeMove__14dMsgScrnBase_cFv(); // 1
 extern "C" void dotAnimeInit__14dMsgScrnBase_cFv(); // 1
 extern "C" void paneTrans__8CPaneMgrFff(); // 1

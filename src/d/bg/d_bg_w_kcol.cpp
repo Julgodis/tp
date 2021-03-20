@@ -11,45 +11,32 @@
 // Types:
 // 
 
-struct Vec {
+struct dBgS_SphChk {
 };
 
-struct dBgS_Acch {
-	/* 800771E4 */ void GetSpeedY();
-	/* 80077200 */ void GetWallAddY(Vec&);
-	/* 80077288 */ void SetWallPolyIndex(int, int);
-	/* 800772E8 */ void CalcMovePosWork();
-};
-
-struct dBgS_CaptPoly {
-};
-
-struct csXyz {
-};
-
-struct cBgS_GndChk {
+struct cBgS_GrpPassChk {
 };
 
 struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct cBgS_PolyPassChk {
-};
-
-struct dBgS_RoofChk {
-};
-
-struct cXyz {
+struct KC_PrismData {
 };
 
 struct dBgS_SplGrpChk {
 };
 
-struct cBgS_GrpPassChk {
+struct cBgS_LinChk {
+};
+
+struct cXyz {
 };
 
 struct cBgS_ShdwDraw {
+};
+
+struct Vec {
 };
 
 struct sBgPc {
@@ -59,13 +46,26 @@ struct dBgPc {
 	/* 80074048 */ void setCode(sBgPc&);
 };
 
-struct dBgS_SphChk {
+struct csXyz {
 };
 
-struct KC_PrismData {
+struct dBgS_Acch {
+	/* 800771E4 */ void GetSpeedY();
+	/* 80077200 */ void GetWallAddY(Vec&);
+	/* 80077288 */ void SetWallPolyIndex(int, int);
+	/* 800772E8 */ void CalcMovePosWork();
 };
 
-struct cBgS_LinChk {
+struct cBgS_PolyPassChk {
+};
+
+struct dBgS_RoofChk {
+};
+
+struct cBgS_GndChk {
+};
+
+struct dBgS_CaptPoly {
 };
 
 struct dBgWKCol {
@@ -75,9 +75,9 @@ struct dBgWKCol {
 	/* 8007E804 */ void create(void*, void*);
 	/* 8007E850 */ void getTriNrm(KC_PrismData*, Vec**) const;
 	/* 8007E86C */ void ChkNotReady() const;
-	/* 8007E87C */ bool ChkLock() const;
-	/* 8007E884 */ bool ChkMoveBg() const;
-	/* 8007E88C */ bool ChkMoveFlag() const;
+	/* 8007E87C */ void ChkLock() const;
+	/* 8007E884 */ void ChkMoveBg() const;
+	/* 8007E88C */ void ChkMoveFlag() const;
 	/* 8007E894 */ void GetTriPla(cBgS_PolyInfo const&) const;
 	/* 8007E8C0 */ void GetTriPla(int) const;
 	/* 8007E980 */ void GetTriPnt(cBgS_PolyInfo const&, cXyz*, cXyz*, cXyz*) const;
@@ -151,7 +151,7 @@ struct dBgW_Base {
 	/* 8007E5A8 */ dBgW_Base();
 	/* 8007E640 */ ~dBgW_Base();
 	/* 8007E69C */ void ClrDBgWBase();
-	/* 8007E6D0 */ bool ChkMemoryError();
+	/* 8007E6D0 */ void ChkMemoryError();
 	/* 8007E6D8 */ void CallRideCallBack(fopAc_ac_c*, fopAc_ac_c*);
 	/* 8007E6DC */ void CallArrowStickCallBack(fopAc_ac_c*, fopAc_ac_c*, cXyz&);
 };
@@ -190,9 +190,9 @@ extern "C" void initKCollision__8dBgWKColFPv(); // 1
 extern "C" void create__8dBgWKColFPvPv(); // 1
 extern "C" void getTriNrm__8dBgWKColCFP12KC_PrismDataPP3Vec(); // 1
 extern "C" void ChkNotReady__8dBgWKColCFv(); // 1
-extern "C" bool ChkLock__8dBgWKColCFv(); // 1
-extern "C" bool ChkMoveBg__8dBgWKColCFv(); // 1
-extern "C" bool ChkMoveFlag__8dBgWKColCFv(); // 1
+extern "C" void ChkLock__8dBgWKColCFv(); // 1
+extern "C" void ChkMoveBg__8dBgWKColCFv(); // 1
+extern "C" void ChkMoveFlag__8dBgWKColCFv(); // 1
 extern "C" void GetTriPla__8dBgWKColCFRC13cBgS_PolyInfo(); // 1
 extern "C" void GetTriPla__8dBgWKColCFi(); // 1
 extern "C" void GetTriPnt__8dBgWKColCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz(); // 1
@@ -278,7 +278,7 @@ extern "C" void ChkNoHorse__16dBgS_PolyPassChkFv(); // 1
 extern "C" void __ct__9dBgW_BaseFv(); // 1
 extern "C" void __dt__9dBgW_BaseFv(); // 1
 extern "C" void ClrDBgWBase__9dBgW_BaseFv(); // 1
-extern "C" bool ChkMemoryError__9dBgW_BaseFv(); // 1
+extern "C" void ChkMemoryError__9dBgW_BaseFv(); // 1
 extern "C" void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz(); // 1
 extern "C" void cM_atan2s__Fff(); // 1
@@ -455,21 +455,36 @@ asm void dBgWKCol::ChkNotReady() const {
 
 
 /* 8007E87C-8007E884 0008+00 rc=1 efc=0 rfr=False None .text      ChkLock__8dBgWKColCFv                                        */
-bool dBgWKCol::ChkLock() const {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dBgWKCol::ChkLock() const {
+	nofralloc
+#include "asm/d/bg/d_bg_w_kcol/ChkLock__8dBgWKColCFv.s"
 }
+#pragma pop
 
 
 /* 8007E884-8007E88C 0008+00 rc=1 efc=0 rfr=False None .text      ChkMoveBg__8dBgWKColCFv                                      */
-bool dBgWKCol::ChkMoveBg() const {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dBgWKCol::ChkMoveBg() const {
+	nofralloc
+#include "asm/d/bg/d_bg_w_kcol/ChkMoveBg__8dBgWKColCFv.s"
 }
+#pragma pop
 
 
 /* 8007E88C-8007E894 0008+00 rc=1 efc=0 rfr=False None .text      ChkMoveFlag__8dBgWKColCFv                                    */
-bool dBgWKCol::ChkMoveFlag() const {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dBgWKCol::ChkMoveFlag() const {
+	nofralloc
+#include "asm/d/bg/d_bg_w_kcol/ChkMoveFlag__8dBgWKColCFv.s"
 }
+#pragma pop
 
 
 /* 8007E894-8007E8C0 002C+00 rc=1 efc=0 rfr=False None .text      GetTriPla__8dBgWKColCFRC13cBgS_PolyInfo                      */
@@ -550,9 +565,14 @@ asm void dBgWKCol::GetGrpInf(cBgS_PolyInfo const& field_0) const {
 
 
 /* 8007EB6C-8007EB70 0004+00 rc=1 efc=0 rfr=False None .text      OffMoveFlag__8dBgWKColFv                                     */
-void dBgWKCol::OffMoveFlag() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dBgWKCol::OffMoveFlag() {
+	nofralloc
+#include "asm/d/bg/d_bg_w_kcol/OffMoveFlag__8dBgWKColFv.s"
 }
+#pragma pop
 
 
 /* 8007EB70-8007EBC4 0054+00 rc=39 efc=0 rfr=False None .text      getPolyCode__8dBgWKColCFiP5dBgPc                             */
@@ -1096,20 +1116,35 @@ asm void dBgWKCol::GetGrpSoundId(cBgS_PolyInfo const& field_0) {
 
 
 /* 80082F8C-80082F90 0004+00 rc=1 efc=0 rfr=False None .text      CrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz   */
-void dBgWKCol::CrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_2, cXyz* field_3, csXyz* field_4, csXyz* field_5) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dBgWKCol::CrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_2, cXyz* field_3, csXyz* field_4, csXyz* field_5) {
+	nofralloc
+#include "asm/d/bg/d_bg_w_kcol/CrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz.s"
 }
+#pragma pop
 
 
 /* 80082F90-80082F94 0004+00 rc=1 efc=0 rfr=False None .text      TransPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
-void dBgWKCol::TransPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_2, cXyz* field_3, csXyz* field_4, csXyz* field_5) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dBgWKCol::TransPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_2, cXyz* field_3, csXyz* field_4, csXyz* field_5) {
+	nofralloc
+#include "asm/d/bg/d_bg_w_kcol/TransPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz.s"
 }
+#pragma pop
 
 
 /* 80082F94-80082F98 0004+00 rc=1 efc=0 rfr=False None .text      MatrixCrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
-void dBgWKCol::MatrixCrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_2, cXyz* field_3, csXyz* field_4, csXyz* field_5) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dBgWKCol::MatrixCrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_2, cXyz* field_3, csXyz* field_4, csXyz* field_5) {
+	nofralloc
+#include "asm/d/bg/d_bg_w_kcol/MatrixCrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz.s"
 }
+#pragma pop
 
 

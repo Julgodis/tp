@@ -11,18 +11,6 @@
 // Types:
 // 
 
-struct mesg_flow_node_branch {
-};
-
-struct fopAc_ac_c {
-};
-
-struct dMsgFlow_c {
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-	/* 8024A528 */ void getEventId(int*);
-	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
-};
-
 struct Vec {
 };
 
@@ -38,6 +26,18 @@ struct STControl {
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct fopAc_ac_c {
+};
+
+struct mesg_flow_node_branch {
+};
+
+struct dMsgFlow_c {
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+	/* 8024A528 */ void getEventId(int*);
+	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
 };
 
 struct dShopSystem_c {
@@ -59,7 +59,7 @@ struct dShopSystem_c {
 	/* 80198878 */ void drawCursor();
 	/* 80198950 */ void itemRotate();
 	/* 80198A2C */ void itemZoom(cXyz*);
-	/* 801990B0 */ bool seq_wait(fopAc_ac_c*, dMsgFlow_c*);
+	/* 801990B0 */ void seq_wait(fopAc_ac_c*, dMsgFlow_c*);
 	/* 801990B8 */ void seq_start(fopAc_ac_c*, dMsgFlow_c*);
 	/* 8019936C */ void seq_select_wait(fopAc_ac_c*, dMsgFlow_c*);
 	/* 801993C4 */ void seq_select_start(fopAc_ac_c*, dMsgFlow_c*);
@@ -85,10 +85,10 @@ struct dShopSystem_c {
 	/* 8019AB24 */ void checkShopOpen();
 	/* 8019AB60 */ void checkLeftTrigger(STControl*);
 	/* 8019AB84 */ void checkRightTrigger(STControl*);
-	/* 8019ABA8 */ bool dpdMove();
-	/* 8019ACE0 */ bool beforeStartSeqAction(dMsgFlow_c*, int);
-	/* 8019ACE8 */ bool beforeSelectSeqAction(dMsgFlow_c*, int);
-	/* 8019ACF0 */ bool getResName2(int);
+	/* 8019ABA8 */ void dpdMove();
+	/* 8019ACE0 */ void beforeStartSeqAction(dMsgFlow_c*, int);
+	/* 8019ACE8 */ void beforeSelectSeqAction(dMsgFlow_c*, int);
+	/* 8019ACF0 */ void getResName2(int);
 };
 
 struct csXyz {
@@ -110,16 +110,16 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct J3DJoint {
 };
 
 struct J3DModel {
 };
 
-struct J3DJoint {
+struct daNpcT_motionAnmData_c {
 };
 
-struct daNpcT_motionAnmData_c {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpcT_c {
@@ -128,7 +128,7 @@ struct daNpcT_c {
 	/* 8014997C */ void evtProc();
 	/* 80149BB4 */ void setFootPos();
 	/* 80149D7C */ void setFootPrtcl(cXyz*, f32, f32);
-	/* 8014A05C */ bool checkCullDraw();
+	/* 8014A05C */ void checkCullDraw();
 	/* 8014A064 */ void twilight();
 	/* 8014A0B0 */ void evtOrder();
 	/* 8014A224 */ void evtChange();
@@ -145,33 +145,33 @@ struct daNpcT_c {
 	/* 8014CC24 */ void setParam();
 	/* 8014CC28 */ void drawOtherMdl();
 	/* 8014CC2C */ void drawGhost();
-	/* 8014CC30 */ bool drawDbgInfo();
-	/* 8014CC38 */ bool checkRemoveJoint(int);
-	/* 8014CC40 */ bool checkChangeJoint(int);
+	/* 8014CC30 */ void drawDbgInfo();
+	/* 8014CC38 */ void checkRemoveJoint(int);
+	/* 8014CC40 */ void checkChangeJoint(int);
 	/* 8014CC48 */ void afterJntAnm(int);
-	/* 8014CC4C */ s32 getHeadJointNo();
-	/* 8014CC54 */ s32 getNeckJointNo();
-	/* 8014CC5C */ s32 getBackboneJointNo();
+	/* 8014CC4C */ void getHeadJointNo();
+	/* 8014CC54 */ void getNeckJointNo();
+	/* 8014CC5C */ void getBackboneJointNo();
 	/* 8014CC64 */ void setAfterTalkMotion();
-	/* 8014CC68 */ bool evtCutProc();
-	/* 8014CC70 */ bool evtEndProc();
-	/* 8014CC78 */ bool evtTalk();
-	/* 8014CC80 */ bool checkChangeEvt();
-	/* 8014CC88 */ s32 getFootRJointNo();
-	/* 8014CC90 */ s32 getFootLJointNo();
-	/* 8014CC98 */ bool chkXYItems();
-	/* 8014CCA0 */ bool afterSetFaceMotionAnm(int, int, f32, int);
+	/* 8014CC68 */ void evtCutProc();
+	/* 8014CC70 */ void evtEndProc();
+	/* 8014CC78 */ void evtTalk();
+	/* 8014CC80 */ void checkChangeEvt();
+	/* 8014CC88 */ void getFootRJointNo();
+	/* 8014CC90 */ void getFootLJointNo();
+	/* 8014CC98 */ void chkXYItems();
+	/* 8014CCA0 */ void afterSetFaceMotionAnm(int, int, f32, int);
 	/* 8014CCA8 */ void changeBtp(int*, int*);
 	/* 8014CCAC */ void changeBck(int*, int*);
 	/* 8014CCB0 */ void getFaceMotionAnm(daNpcT_faceMotionAnmData_c);
-	/* 8014CCE0 */ bool afterSetMotionAnm(int, int, f32, int);
+	/* 8014CCE0 */ void afterSetMotionAnm(int, int, f32, int);
 	/* 8014CCE8 */ void changeBtk(int*, int*);
 	/* 8014CCEC */ void changeAnm(int*, int*);
 	/* 8014CCF0 */ void getMotionAnm(daNpcT_motionAnmData_c);
 	/* 8014CD20 */ ~daNpcT_c();
-	/* 8014D0A8 */ bool getEyeballLMaterialNo();
-	/* 8014D0B0 */ bool getEyeballRMaterialNo();
-	/* 8014D0B8 */ bool getEyeballMaterialNo();
+	/* 8014D0A8 */ void getEyeballLMaterialNo();
+	/* 8014D0B0 */ void getEyeballRMaterialNo();
+	/* 8014D0B8 */ void getEyeballMaterialNo();
 };
 
 struct JKRArchive {
@@ -241,7 +241,7 @@ extern "C" void moveCursor1__13dShopSystem_cFiUc(); // 1
 extern "C" void drawCursor__13dShopSystem_cFv(); // 1
 extern "C" void itemRotate__13dShopSystem_cFv(); // 1
 extern "C" void itemZoom__13dShopSystem_cFP4cXyz(); // 1
-extern "C" bool seq_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
+extern "C" void seq_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
 extern "C" void seq_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
 extern "C" void seq_select_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
 extern "C" void seq_select_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
@@ -267,11 +267,11 @@ extern "C" void setSellItemMax__13dShopSystem_cFUc(); // 1
 extern "C" void checkShopOpen__13dShopSystem_cFv(); // 1
 extern "C" void checkLeftTrigger__13dShopSystem_cFP9STControl(); // 1
 extern "C" void checkRightTrigger__13dShopSystem_cFP9STControl(); // 1
-extern "C" bool dpdMove__13dShopSystem_cFv(); // 1
+extern "C" void dpdMove__13dShopSystem_cFv(); // 1
 extern "C" void __sinit_d_shop_system_cpp(); // 1
-extern "C" bool beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
-extern "C" bool beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
-extern "C" bool getResName2__13dShopSystem_cFi(); // 1
+extern "C" void beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
+extern "C" void beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
+extern "C" void getResName2__13dShopSystem_cFi(); // 1
 extern "C" extern char const* const d_shop_d_shop_system__stringBase0;
 extern "C" extern void* d_shop_d_shop_system__lit_4056[3];
 extern "C" extern void* d_shop_d_shop_system__lit_4057[3];
@@ -335,7 +335,7 @@ extern "C" void ctrlJoint__8daNpcT_cFP8J3DJointP8J3DModel(); // 1
 extern "C" void evtProc__8daNpcT_cFv(); // 1
 extern "C" void setFootPos__8daNpcT_cFv(); // 1
 extern "C" void setFootPrtcl__8daNpcT_cFP4cXyzff(); // 1
-extern "C" bool checkCullDraw__8daNpcT_cFv(); // 1
+extern "C" void checkCullDraw__8daNpcT_cFv(); // 1
 extern "C" void twilight__8daNpcT_cFv(); // 1
 extern "C" void evtOrder__8daNpcT_cFv(); // 1
 extern "C" void evtChange__8daNpcT_cFv(); // 1
@@ -352,33 +352,33 @@ extern "C" void action__8daNpcT_cFv(); // 1
 extern "C" void setParam__8daNpcT_cFv(); // 1
 extern "C" void drawOtherMdl__8daNpcT_cFv(); // 1
 extern "C" void drawGhost__8daNpcT_cFv(); // 1
-extern "C" bool drawDbgInfo__8daNpcT_cFv(); // 1
-extern "C" bool checkRemoveJoint__8daNpcT_cFi(); // 1
-extern "C" bool checkChangeJoint__8daNpcT_cFi(); // 1
+extern "C" void drawDbgInfo__8daNpcT_cFv(); // 1
+extern "C" void checkRemoveJoint__8daNpcT_cFi(); // 1
+extern "C" void checkChangeJoint__8daNpcT_cFi(); // 1
 extern "C" void afterJntAnm__8daNpcT_cFi(); // 1
-extern "C" s32 getHeadJointNo__8daNpcT_cFv(); // 1
-extern "C" s32 getNeckJointNo__8daNpcT_cFv(); // 1
-extern "C" s32 getBackboneJointNo__8daNpcT_cFv(); // 1
+extern "C" void getHeadJointNo__8daNpcT_cFv(); // 1
+extern "C" void getNeckJointNo__8daNpcT_cFv(); // 1
+extern "C" void getBackboneJointNo__8daNpcT_cFv(); // 1
 extern "C" void setAfterTalkMotion__8daNpcT_cFv(); // 1
-extern "C" bool evtCutProc__8daNpcT_cFv(); // 1
-extern "C" bool evtEndProc__8daNpcT_cFv(); // 1
-extern "C" bool evtTalk__8daNpcT_cFv(); // 1
-extern "C" bool checkChangeEvt__8daNpcT_cFv(); // 1
-extern "C" s32 getFootRJointNo__8daNpcT_cFv(); // 1
-extern "C" s32 getFootLJointNo__8daNpcT_cFv(); // 1
-extern "C" bool chkXYItems__8daNpcT_cFv(); // 1
-extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi(); // 1
+extern "C" void evtCutProc__8daNpcT_cFv(); // 1
+extern "C" void evtEndProc__8daNpcT_cFv(); // 1
+extern "C" void evtTalk__8daNpcT_cFv(); // 1
+extern "C" void checkChangeEvt__8daNpcT_cFv(); // 1
+extern "C" void getFootRJointNo__8daNpcT_cFv(); // 1
+extern "C" void getFootLJointNo__8daNpcT_cFv(); // 1
+extern "C" void chkXYItems__8daNpcT_cFv(); // 1
+extern "C" void afterSetFaceMotionAnm__8daNpcT_cFiifi(); // 1
 extern "C" void changeBtp__8daNpcT_cFPiPi(); // 1
 extern "C" void changeBck__8daNpcT_cFPiPi(); // 1
 extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c(); // 1
-extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi(); // 1
+extern "C" void afterSetMotionAnm__8daNpcT_cFiifi(); // 1
 extern "C" void changeBtk__8daNpcT_cFPiPi(); // 1
 extern "C" void changeAnm__8daNpcT_cFPiPi(); // 1
 extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c(); // 1
 extern "C" void __dt__8daNpcT_cFv(); // 1
-extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv(); // 1
-extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv(); // 1
-extern "C" bool getEyeballMaterialNo__8daNpcT_cFv(); // 1
+extern "C" void getEyeballLMaterialNo__8daNpcT_cFv(); // 1
+extern "C" void getEyeballRMaterialNo__8daNpcT_cFv(); // 1
+extern "C" void getEyeballMaterialNo__8daNpcT_cFv(); // 1
 extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
 extern "C" void setParam__16dSelect_cursor_cFfffff(); // 1
 extern "C" void setScale__16dSelect_cursor_cFf(); // 1
@@ -925,9 +925,14 @@ asm void dShopSystem_c::itemZoom(cXyz* field_0) {
 
 
 /* 801990B0-801990B8 0008+00 rc=1 efc=0 rfr=False None .text      seq_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c         */
-bool dShopSystem_c::seq_wait(fopAc_ac_c* field_0, dMsgFlow_c* field_1) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dShopSystem_c::seq_wait(fopAc_ac_c* field_0, dMsgFlow_c* field_1) {
+	nofralloc
+#include "asm/d/shop/d_shop_system/seq_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */
@@ -1263,9 +1268,14 @@ asm void dShopSystem_c::checkRightTrigger(STControl* field_0) {
 
 
 /* 8019ABA8-8019ABB0 0008+00 rc=1 efc=0 rfr=False None .text      dpdMove__13dShopSystem_cFv                                   */
-bool dShopSystem_c::dpdMove() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dShopSystem_c::dpdMove() {
+	nofralloc
+#include "asm/d/shop/d_shop_system/dpdMove__13dShopSystem_cFv.s"
 }
+#pragma pop
 
 
 /* 8019ABB0-8019ACE0 0130+00 rc=1 efc=1 rfr=False None .text      __sinit_d_shop_system_cpp                                    */
@@ -1280,20 +1290,35 @@ extern "C" asm void __sinit_d_shop_system_cpp() {
 
 
 /* 8019ACE0-8019ACE8 0008+00 rc=1 efc=0 rfr=False None .text      beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci         */
-bool dShopSystem_c::beforeStartSeqAction(dMsgFlow_c* field_0, int field_1) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dShopSystem_c::beforeStartSeqAction(dMsgFlow_c* field_0, int field_1) {
+	nofralloc
+#include "asm/d/shop/d_shop_system/beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci.s"
 }
+#pragma pop
 
 
 /* 8019ACE8-8019ACF0 0008+00 rc=1 efc=0 rfr=False None .text      beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci        */
-bool dShopSystem_c::beforeSelectSeqAction(dMsgFlow_c* field_0, int field_1) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dShopSystem_c::beforeSelectSeqAction(dMsgFlow_c* field_0, int field_1) {
+	nofralloc
+#include "asm/d/shop/d_shop_system/beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci.s"
 }
+#pragma pop
 
 
 /* 8019ACF0-8019ACF8 0008+00 rc=1 efc=0 rfr=False None .text      getResName2__13dShopSystem_cFi                               */
-bool dShopSystem_c::getResName2(int field_0) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dShopSystem_c::getResName2(int field_0) {
+	nofralloc
+#include "asm/d/shop/d_shop_system/getResName2__13dShopSystem_cFi.s"
 }
+#pragma pop
 
 

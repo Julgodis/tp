@@ -43,17 +43,17 @@ struct dBgS {
 
 static void isLoadRoom(int); // 2
 static void daNocrm_create(daNocrm_c*); // 2
-static bool daNocrm_Delete(daNocrm_c*); // 2
+static void daNocrm_Delete(daNocrm_c*); // 2
 static void daNocrm_execute(daNocrm_c*); // 2
-static bool daNocrm_draw(daNocrm_c*); // 2
+static void daNocrm_draw(daNocrm_c*); // 2
 
 extern "C" static void isLoadRoom__Fi(); // 1
 extern "C" void execute__9daNocrm_cFv(); // 1
 extern "C" void getRoomNo__9daNocrm_cFi(); // 1
 extern "C" static void daNocrm_create__FP9daNocrm_c(); // 1
-extern "C" static bool daNocrm_Delete__FP9daNocrm_c(); // 1
+extern "C" static void daNocrm_Delete__FP9daNocrm_c(); // 1
 extern "C" static void daNocrm_execute__FP9daNocrm_c(); // 1
-extern "C" static bool daNocrm_draw__FP9daNocrm_c(); // 1
+extern "C" static void daNocrm_draw__FP9daNocrm_c(); // 1
 extern "C" extern char const* const d_a_d_a_no_chg_room__stringBase0;
 extern "C" extern void* g_profile_NO_CHG_ROOM[12];
 
@@ -163,9 +163,14 @@ asm static void daNocrm_create(daNocrm_c* field_0) {
 
 
 /* 801456A4-801456AC 0008+00 rc=1 efc=0 rfr=False None .text      daNocrm_Delete__FP9daNocrm_c                                 */
-static bool daNocrm_Delete(daNocrm_c* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daNocrm_Delete(daNocrm_c* field_0) {
+	nofralloc
+#include "asm/d/a/d_a_no_chg_room/daNocrm_Delete__FP9daNocrm_c.s"
 }
+#pragma pop
 
 
 /* 801456AC-801456CC 0020+00 rc=1 efc=0 rfr=False None .text      daNocrm_execute__FP9daNocrm_c                                */
@@ -180,9 +185,14 @@ asm static void daNocrm_execute(daNocrm_c* field_0) {
 
 
 /* 801456CC-801456D4 0008+00 rc=1 efc=0 rfr=False None .text      daNocrm_draw__FP9daNocrm_c                                   */
-static bool daNocrm_draw(daNocrm_c* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void daNocrm_draw(daNocrm_c* field_0) {
+	nofralloc
+#include "asm/d/a/d_a_no_chg_room/daNocrm_draw__FP9daNocrm_c.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

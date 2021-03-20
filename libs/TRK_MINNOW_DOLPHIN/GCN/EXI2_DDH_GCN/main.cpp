@@ -18,9 +18,9 @@ extern "C" void ddh_cc_post_stop(); // 1
 extern "C" void ddh_cc_pre_continue(); // 1
 extern "C" void ddh_cc_write(); // 1
 extern "C" void ddh_cc_read(); // 1
-extern "C" bool ddh_cc_close(); // 1
+extern "C" void ddh_cc_close(); // 1
 extern "C" void ddh_cc_open(); // 1
-extern "C" bool ddh_cc_shutdown(); // 1
+extern "C" void ddh_cc_shutdown(); // 1
 extern "C" void ddh_cc_initialize(); // 1
 extern "C" extern u8 const GCN_EXI2_DDH_GCN_main__lit_319[41 + 3 /* padding */];
 extern "C" extern u8 const GCN_EXI2_DDH_GCN_main__lit_320[28];
@@ -37,9 +37,9 @@ extern "C" void CBGetBytesAvailableForRead(); // 1
 extern "C" void MWTRACE(); // 1
 extern "C" void EXI2_Init(); // 1
 extern "C" void EXI2_EnableInterrupts(); // 1
-extern "C" bool EXI2_Poll(); // 1
-extern "C" bool EXI2_ReadN(); // 1
-extern "C" bool EXI2_WriteN(); // 1
+extern "C" void EXI2_Poll(); // 1
+extern "C" void EXI2_ReadN(); // 1
+extern "C" void EXI2_WriteN(); // 1
 extern "C" void EXI2_Reserve(); // 1
 extern "C" void EXI2_Unreserve(); // 1
 
@@ -165,9 +165,14 @@ extern "C" asm void ddh_cc_read() {
 
 
 /* 803725E4-803725EC 0008+00 rc=1 efc=1 rfr=False None .text      ddh_cc_close                                                 */
-extern "C" bool ddh_cc_close() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void ddh_cc_close() {
+	nofralloc
+#include "asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_close.s"
 }
+#pragma pop
 
 
 /* 803725EC-80372610 0024+00 rc=1 efc=1 rfr=False None .text      ddh_cc_open                                                  */
@@ -182,9 +187,14 @@ extern "C" asm void ddh_cc_open() {
 
 
 /* 80372610-80372618 0008+00 rc=1 efc=1 rfr=False None .text      ddh_cc_shutdown                                              */
-extern "C" bool ddh_cc_shutdown() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void ddh_cc_shutdown() {
+	nofralloc
+#include "asm/TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main/ddh_cc_shutdown.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

@@ -168,7 +168,7 @@ struct J2DTextBox {
 
 static void dGameover_Draw(dGameover_c*); // 2
 static void dGameover_Execute(dGameover_c*); // 2
-static bool dGameover_IsDelete(dGameover_c*); // 2
+static void dGameover_IsDelete(dGameover_c*); // 2
 static void dGameover_Delete(dGameover_c*); // 2
 static void dGameover_Create(msg_class*); // 2
 void d_GameOver_Create(u8); // 2
@@ -204,7 +204,7 @@ extern "C" void setBackAlpha__24dDlst_GameOverScrnDraw_cFf(); // 1
 extern "C" void draw__24dDlst_GameOverScrnDraw_cFv(); // 1
 extern "C" static void dGameover_Draw__FP11dGameover_c(); // 1
 extern "C" static void dGameover_Execute__FP11dGameover_c(); // 1
-extern "C" static bool dGameover_IsDelete__FP11dGameover_c(); // 1
+extern "C" static void dGameover_IsDelete__FP11dGameover_c(); // 1
 extern "C" static void dGameover_Delete__FP11dGameover_c(); // 1
 extern "C" static void dGameover_Create__FP9msg_class(); // 1
 extern "C" void d_GameOver_Create__FUc(); // 1
@@ -652,9 +652,14 @@ asm void dGameover_c::_execute() {
 
 
 /* 8019B384-8019B388 0004+00 rc=1 efc=0 rfr=False None .text      playerAnmWait_init__11dGameover_cFv                          */
-void dGameover_c::playerAnmWait_init() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dGameover_c::playerAnmWait_init() {
+	nofralloc
+#include "asm/d/d_gameover/playerAnmWait_init__11dGameover_cFv.s"
 }
+#pragma pop
 
 
 /* 8019B388-8019B3A0 0018+00 rc=1 efc=0 rfr=False None .text      playerAnmWait_proc__11dGameover_cFv                          */
@@ -764,9 +769,14 @@ asm void dGameover_c::demoFadeOut_proc() {
 
 
 /* 8019B560-8019B564 0004+00 rc=1 efc=0 rfr=False None .text      saveOpen_init__11dGameover_cFv                               */
-void dGameover_c::saveOpen_init() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dGameover_c::saveOpen_init() {
+	nofralloc
+#include "asm/d/d_gameover/saveOpen_init__11dGameover_cFv.s"
 }
+#pragma pop
 
 
 /* 8019B564-8019B5A4 0040+00 rc=1 efc=0 rfr=False None .text      saveOpen_proc__11dGameover_cFv                               */
@@ -781,9 +791,14 @@ asm void dGameover_c::saveOpen_proc() {
 
 
 /* 8019B5A4-8019B5A8 0004+00 rc=1 efc=0 rfr=False None .text      saveMove_init__11dGameover_cFv                               */
-void dGameover_c::saveMove_init() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dGameover_c::saveMove_init() {
+	nofralloc
+#include "asm/d/d_gameover/saveMove_init__11dGameover_cFv.s"
 }
+#pragma pop
 
 
 /* 8019B5A8-8019B5F0 0048+00 rc=1 efc=0 rfr=False None .text      saveMove_proc__11dGameover_cFv                               */
@@ -798,9 +813,14 @@ asm void dGameover_c::saveMove_proc() {
 
 
 /* 8019B5F0-8019B5F4 0004+00 rc=1 efc=0 rfr=False None .text      saveClose_init__11dGameover_cFv                              */
-void dGameover_c::saveClose_init() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dGameover_c::saveClose_init() {
+	nofralloc
+#include "asm/d/d_gameover/saveClose_init__11dGameover_cFv.s"
 }
+#pragma pop
 
 
 /* 8019B5F4-8019B7BC 01C8+00 rc=1 efc=0 rfr=False None .text      saveClose_proc__11dGameover_cFv                              */
@@ -815,15 +835,25 @@ asm void dGameover_c::saveClose_proc() {
 
 
 /* 8019B7BC-8019B7C0 0004+00 rc=1 efc=0 rfr=False None .text      deleteWait_init__11dGameover_cFv                             */
-void dGameover_c::deleteWait_init() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dGameover_c::deleteWait_init() {
+	nofralloc
+#include "asm/d/d_gameover/deleteWait_init__11dGameover_cFv.s"
 }
+#pragma pop
 
 
 /* 8019B7C0-8019B7C4 0004+00 rc=1 efc=0 rfr=False None .text      deleteWait_proc__11dGameover_cFv                             */
-void dGameover_c::deleteWait_proc() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dGameover_c::deleteWait_proc() {
+	nofralloc
+#include "asm/d/d_gameover/deleteWait_proc__11dGameover_cFv.s"
 }
+#pragma pop
 
 
 /* 8019B7C4-8019B864 00A0+00 rc=1 efc=0 rfr=False None .text      _draw__11dGameover_cFv                                       */
@@ -949,9 +979,14 @@ asm static void dGameover_Execute(dGameover_c* field_0) {
 
 
 /* 8019BF7C-8019BF84 0008+00 rc=1 efc=0 rfr=False None .text      dGameover_IsDelete__FP11dGameover_c                          */
-static bool dGameover_IsDelete(dGameover_c* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dGameover_IsDelete(dGameover_c* field_0) {
+	nofralloc
+#include "asm/d/d_gameover/dGameover_IsDelete__FP11dGameover_c.s"
 }
+#pragma pop
 
 
 /* 8019BF84-8019BFA4 0020+00 rc=1 efc=0 rfr=False None .text      dGameover_Delete__FP11dGameover_c                            */

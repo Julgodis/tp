@@ -93,6 +93,9 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
+struct JKRExpHeap {
+};
+
 struct J2DGrafContext {
 };
 
@@ -101,9 +104,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -1401,9 +1401,14 @@ asm void dName_c::cursorAnm() {
 
 
 /* 8024ED48-8024ED4C 0004+00 rc=1 efc=0 rfr=False None .text      Wait__7dName_cFv                                             */
-void dName_c::Wait() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dName_c::Wait() {
+	nofralloc
+#include "asm/d/d_name/Wait__7dName_cFv.s"
 }
+#pragma pop
 
 
 /* 8024ED4C-8024F034 02E8+00 rc=1 efc=0 rfr=False None .text      MojiSelect__7dName_cFv                                       */
@@ -1457,9 +1462,14 @@ asm void dName_c::MojiSelectAnm2() {
 
 
 /* 8024F1E8-8024F1EC 0004+00 rc=1 efc=0 rfr=False None .text      MojiSelectAnm3__7dName_cFv                                   */
-void dName_c::MojiSelectAnm3() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dName_c::MojiSelectAnm3() {
+	nofralloc
+#include "asm/d/d_name/MojiSelectAnm3__7dName_cFv.s"
 }
+#pragma pop
 
 
 /* 8024F1EC-8024F55C 0370+00 rc=1 efc=0 rfr=False None .text      mojiChange__7dName_cFUc                                      */
@@ -1595,9 +1605,14 @@ asm void dName_c::MenuSelectAnm2() {
 
 
 /* 8024FFA0-8024FFA4 0004+00 rc=1 efc=0 rfr=False None .text      MenuSelectAnm3__7dName_cFv                                   */
-void dName_c::MenuSelectAnm3() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dName_c::MenuSelectAnm3() {
+	nofralloc
+#include "asm/d/d_name/MenuSelectAnm3__7dName_cFv.s"
 }
+#pragma pop
 
 
 /* 8024FFA4-80250074 00D0+00 rc=1 efc=0 rfr=False None .text      menuAbtnSelect__7dName_cFv                                   */

@@ -14,6 +14,9 @@
 struct _GXColor {
 };
 
+struct dMenu_Fmap_world_data_c {
+};
+
 struct dDrawPath_c {
 	struct group_class {
 	};
@@ -27,7 +30,7 @@ struct dDrawPath_c {
 	struct room_class {
 	};
 
-	/* 8002ABF0 */ bool isDrawType(int);
+	/* 8002ABF0 */ void isDrawType(int);
 	/* 8002AD84 */ void getLineColor(int, int);
 	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
@@ -37,9 +40,6 @@ struct dDrawPath_c {
 
 struct dMenu_Fmap_region_data_c {
 	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
-};
-
-struct dMenu_Fmap_world_data_c {
 };
 
 struct renderingFmap_c {
@@ -52,7 +52,7 @@ struct renderingFmap_c {
 	/* 801CE288 */ void isSwitch(dDrawPath_c::group_class const*);
 	/* 801CE3C0 */ void getPointStagePathInnerNo(dMenu_Fmap_region_data_c*, f32, f32, int, int*, int*);
 	/* 801CE410 */ void preDrawPath();
-	/* 801CE4D4 */ bool isDrawPath();
+	/* 801CE4D4 */ void isDrawPath();
 	/* 801CE4DC */ void isDrawRoom();
 	/* 801CE560 */ void postDrawPath();
 	/* 801CE5B8 */ void postRenderingMap();
@@ -66,7 +66,7 @@ struct renderingFmap_c {
 	/* 801CE93C */ void getNextRegion();
 	/* 801CE9A4 */ void getNextRoomPointer();
 	/* 801CF4D0 */ ~renderingFmap_c();
-	/* 801CF55C */ bool isRenderingFloor(int);
+	/* 801CF55C */ void isRenderingFloor(int);
 	/* 801CF564 */ void beforeDrawPath();
 	/* 801CF568 */ void afterDrawPath();
 };
@@ -142,7 +142,7 @@ extern "C" void isSwitchSpecialOff__15renderingFmap_cFi(); // 1
 extern "C" void isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class(); // 1
 extern "C" void getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi(); // 1
 extern "C" void preDrawPath__15renderingFmap_cFv(); // 1
-extern "C" bool isDrawPath__15renderingFmap_cFv(); // 1
+extern "C" void isDrawPath__15renderingFmap_cFv(); // 1
 extern "C" void isDrawRoom__15renderingFmap_cFv(); // 1
 extern "C" void postDrawPath__15renderingFmap_cFv(); // 1
 extern "C" void postRenderingMap__15renderingFmap_cFv(); // 1
@@ -174,7 +174,7 @@ extern "C" void getColor__15dMenu_FmapMap_cFi(); // 1
 extern "C" void setTexture__15dMenu_FmapMap_cFUsUsUsUs(); // 1
 extern "C" void setRendering__15dMenu_FmapMap_cFP23dMenu_Fmap_world_data_ciffff(); // 1
 extern "C" void __dt__15renderingFmap_cFv(); // 1
-extern "C" bool isRenderingFloor__15renderingFmap_cFi(); // 1
+extern "C" void isRenderingFloor__15renderingFmap_cFi(); // 1
 extern "C" void beforeDrawPath__15renderingFmap_cFv(); // 1
 extern "C" void afterDrawPath__15renderingFmap_cFv(); // 1
 extern "C" extern u8 const data_803961D0[36];
@@ -196,7 +196,7 @@ void operator delete[](void*); // 2
 
 extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs(); // 1
 extern "C" void draw__12dDlst_base_cFv(); // 1
-extern "C" bool isDrawType__11dDrawPath_cFi(); // 1
+extern "C" void isDrawType__11dDrawPath_cFi(); // 1
 extern "C" void getLineColor__11dDrawPath_cFii(); // 1
 extern "C" void dComIfGs_isStageSwitch__Fii(); // 1
 extern "C" void dComIfGp_getNowLevel__Fv(); // 1
@@ -397,9 +397,14 @@ asm void renderingFmap_c::preDrawPath() {
 
 
 /* 801CE4D4-801CE4DC 0008+00 rc=2 efc=0 rfr=False None .text      isDrawPath__15renderingFmap_cFv                              */
-bool renderingFmap_c::isDrawPath() {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void renderingFmap_c::isDrawPath() {
+	nofralloc
+#include "asm/d/menu/d_menu_fmap_map/isDrawPath__15renderingFmap_cFv.s"
 }
+#pragma pop
 
 
 /* 801CE4DC-801CE560 0084+00 rc=2 efc=0 rfr=False None .text      isDrawRoom__15renderingFmap_cFv                              */
@@ -871,20 +876,35 @@ asm renderingFmap_c::~renderingFmap_c() {
 
 
 /* 801CF55C-801CF564 0008+00 rc=2 efc=0 rfr=False None .text      isRenderingFloor__15renderingFmap_cFi                        */
-bool renderingFmap_c::isRenderingFloor(int field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void renderingFmap_c::isRenderingFloor(int field_0) {
+	nofralloc
+#include "asm/d/menu/d_menu_fmap_map/isRenderingFloor__15renderingFmap_cFi.s"
 }
+#pragma pop
 
 
 /* 801CF564-801CF568 0004+00 rc=2 efc=0 rfr=False None .text      beforeDrawPath__15renderingFmap_cFv                          */
-void renderingFmap_c::beforeDrawPath() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void renderingFmap_c::beforeDrawPath() {
+	nofralloc
+#include "asm/d/menu/d_menu_fmap_map/beforeDrawPath__15renderingFmap_cFv.s"
 }
+#pragma pop
 
 
 /* 801CF568-801CF56C 0004+00 rc=2 efc=0 rfr=False None .text      afterDrawPath__15renderingFmap_cFv                           */
-void renderingFmap_c::afterDrawPath() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void renderingFmap_c::afterDrawPath() {
+	nofralloc
+#include "asm/d/menu/d_menu_fmap_map/afterDrawPath__15renderingFmap_cFv.s"
 }
+#pragma pop
 
 

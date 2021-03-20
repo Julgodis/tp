@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
 struct JUtility {
 	struct TColor {
 	};
 
+};
+
+struct JKRArchive {
 };
 
 struct dFile_warning_c {
@@ -47,10 +47,10 @@ struct dDlst_FileWarn_c {
 	/* 801923CC */ ~dDlst_FileWarn_c();
 };
 
-struct J2DAnmTransform {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct J2DAnmTransform {
 };
 
 struct J2DScreen {
@@ -289,9 +289,14 @@ asm void dFile_warning_c::_move() {
 
 
 /* 80191F90-80191F94 0004+00 rc=1 efc=0 rfr=False None .text      modeWait__15dFile_warning_cFv                                */
-void dFile_warning_c::modeWait() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dFile_warning_c::modeWait() {
+	nofralloc
+#include "asm/d/file/d_file_sel_warning/modeWait__15dFile_warning_cFv.s"
 }
+#pragma pop
 
 
 /* 80191F94-80191FD4 0040+00 rc=1 efc=0 rfr=False None .text      modeMove__15dFile_warning_cFv                                */

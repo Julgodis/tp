@@ -15,13 +15,14 @@ struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
 
-struct J2DAnmColorKey {
+struct J2DAnmTextureSRTKey {
 };
 
-struct J3DAnmTransformKeyData {
+struct J2DScreen {
 };
 
-struct J3DAnmTevRegKeyData {
+struct J2DAnmBase {
+	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
 };
 
 struct J2DAnmVtxColorKey {
@@ -30,26 +31,25 @@ struct J2DAnmVtxColorKey {
 struct J2DAnmTevRegKey {
 };
 
-struct J3DAnmVtxColorKeyData {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J3DAnmColorKeyData {
-};
-
 struct J2DAnmTransformKey {
 };
 
 struct J3DAnmTextureSRTKeyData {
 };
 
-struct J2DScreen {
+struct J3DAnmVtxColorKeyData {
 };
 
-struct J2DAnmBase {
-	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
+struct J3DAnmColorKeyData {
+};
+
+struct J3DAnmTevRegKeyData {
+};
+
+struct J3DAnmTransformKeyData {
+};
+
+struct J2DAnmColorKey {
 };
 
 struct J2DAnmKeyLoader_v15 {
@@ -69,35 +69,35 @@ struct J2DAnmKeyLoader_v15 {
 	/* 8030A004 */ void setAnmTevReg(J2DAnmTevRegKey*, J3DAnmTevRegKeyData const*);
 };
 
-struct J2DAnmColorFull {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J3DAnmTexPatternFullData {
-};
-
 struct J3DAnmVisibilityFullData {
-};
-
-struct J2DAnmTransformFull {
 };
 
 struct J2DAnmVisibilityFull {
 	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
 };
 
-struct J3DAnmColorFullData {
+struct J3DAnmTexPatternFullData {
 };
 
 struct J3DAnmTransformFullData {
+};
+
+struct J2DAnmTransformFull {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmColorFull {
 };
 
 struct J2DAnmVtxColorFull {
 };
 
 struct J3DAnmVtxColorFullData {
+};
+
+struct J3DAnmColorFullData {
 };
 
 struct J2DAnmFullLoader_v15 {

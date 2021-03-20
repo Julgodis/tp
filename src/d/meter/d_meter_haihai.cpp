@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J2DAnmColor {
+struct J2DAnmTextureSRTKey {
 };
 
-struct J2DAnmTextureSRTKey {
+struct J2DAnmColor {
 };
 
 struct J2DAnmTransformKey {
@@ -42,7 +42,10 @@ struct dMeterHaihai_c {
 };
 
 struct dMeterSub_c {
-	/* 80194138 */ bool isDead();
+	/* 80194138 */ void isDead();
+};
+
+struct JKRExpHeap {
 };
 
 struct J2DGrafContext {
@@ -56,9 +59,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -114,7 +114,7 @@ void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
 
-extern "C" bool isDead__11dMeterSub_cFv(); // 1
+extern "C" void isDead__11dMeterSub_cFv(); // 1
 extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
 extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
 extern "C" void* __nw__FUl(); // 1
@@ -359,9 +359,14 @@ asm void dMeterHaihai_c::_delete() {
 
 
 /* 8020BEA0-8020BEA4 0004+00 rc=1 efc=0 rfr=False None .text      alphaAnimeHaihai__14dMeterHaihai_cFUl                        */
-void dMeterHaihai_c::alphaAnimeHaihai(u32 field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMeterHaihai_c::alphaAnimeHaihai(u32 field_0) {
+	nofralloc
+#include "asm/d/meter/d_meter_haihai/alphaAnimeHaihai__14dMeterHaihai_cFUl.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

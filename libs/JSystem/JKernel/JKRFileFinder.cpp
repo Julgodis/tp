@@ -57,7 +57,7 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl(); // 1
 extern "C" void DVDOpenDir(); // 1
 extern "C" void DVDReadDir(); // 1
-extern "C" bool DVDCloseDir(); // 1
+extern "C" void DVDCloseDir(); // 1
 
 // 
 // Declarations:

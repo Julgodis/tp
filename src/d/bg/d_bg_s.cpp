@@ -26,14 +26,14 @@ struct cBgS_ChkElm {
 	/* 80074128 */ void Release();
 };
 
+struct cBgS_LinChk {
+	/* 80267F40 */ void PreCalc();
+};
+
+struct cM3dGPla {
+};
+
 struct cXyz {
-};
-
-struct cBgS_ShdwDraw {
-};
-
-struct cBgS_GndChk {
-	/* 80267D44 */ void PreCheck();
 };
 
 struct cBgS_PolyInfo {
@@ -44,11 +44,11 @@ struct cBgS_PolyInfo {
 	/* 802681AC */ void ChkBgIndex() const;
 };
 
-struct cM3dGPla {
+struct cBgS_ShdwDraw {
 };
 
-struct cBgS_LinChk {
-	/* 80267F40 */ void PreCalc();
+struct cBgS_GndChk {
+	/* 80267D44 */ void PreCheck();
 };
 
 struct cBgS {
@@ -70,8 +70,17 @@ struct cBgS {
 	/* 800748AC */ void GetGrpInf(cBgS_PolyInfo const&) const;
 };
 
+struct fopAc_ac_c {
+};
+
+struct dBgS_SphChk {
+};
+
 struct dBgS_SplGrpChk {
 	/* 80078D0C */ void Init();
+};
+
+struct csXyz {
 };
 
 struct dBgS_Acch {
@@ -80,17 +89,8 @@ struct dBgS_Acch {
 	/* 8007732C */ void CalcWallRR();
 };
 
-struct csXyz {
-};
-
-struct dBgS_SphChk {
-};
-
 struct dBgS_RoofChk {
 	/* 80079124 */ void Init();
-};
-
-struct fopAc_ac_c {
 };
 
 struct dBgS {

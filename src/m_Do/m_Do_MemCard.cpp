@@ -130,9 +130,14 @@ extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 // 
 
 /* 8001672C-80016730 0004+00 rc=1 efc=0 rfr=False None .text      __ct__15mDoMemCd_Ctrl_cFv                                    */
-mDoMemCd_Ctrl_c::mDoMemCd_Ctrl_c() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm mDoMemCd_Ctrl_c::mDoMemCd_Ctrl_c() {
+	nofralloc
+#include "asm/m_Do/m_Do_MemCard/__ct__15mDoMemCd_Ctrl_cFv.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

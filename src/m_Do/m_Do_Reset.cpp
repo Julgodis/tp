@@ -103,9 +103,14 @@ extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 // 
 
 /* 800155D8-800155DC 0004+00 rc=1 efc=0 rfr=False None .text      my_OSCancelAlarmAll__Fv                                      */
-static void my_OSCancelAlarmAll() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void my_OSCancelAlarmAll() {
+	nofralloc
+#include "asm/m_Do/m_Do_Reset/my_OSCancelAlarmAll__Fv.s"
 }
+#pragma pop
 
 
 /* 800155DC-80015614 0038+00 rc=1 efc=0 rfr=False None .text      destroyVideo__Fv                                             */

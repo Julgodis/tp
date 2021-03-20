@@ -27,20 +27,35 @@ extern "C" void __kill_critical_regions(); // 1
 // 
 
 /* 80365464-80365468 0004+00 rc=12 efc=12 rfr=False None .text      __end_critical_region                                        */
-extern "C" void __end_critical_region() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __end_critical_region() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/critical_regions.gamecube/__end_critical_region.s"
 }
+#pragma pop
 
 
 /* 80365468-8036546C 0004+00 rc=12 efc=12 rfr=False None .text      __begin_critical_region                                      */
-extern "C" void __begin_critical_region() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __begin_critical_region() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/critical_regions.gamecube/__begin_critical_region.s"
 }
+#pragma pop
 
 
 /* 8036546C-80365470 0004+00 rc=2 efc=2 rfr=False None .text      __kill_critical_regions                                      */
-extern "C" void __kill_critical_regions() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void __kill_critical_regions() {
+	nofralloc
+#include "asm/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/critical_regions.gamecube/__kill_critical_regions.s"
 }
+#pragma pop
 
 

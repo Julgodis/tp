@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct fopAc_ac_c {
+};
+
 struct Vec {
 };
 
@@ -28,9 +31,6 @@ struct dCcD_GObjInf {
 };
 
 struct Quaternion {
-};
-
-struct fopAc_ac_c {
 };
 
 struct daObj {
@@ -60,26 +60,26 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
-};
-
 struct JPABaseEmitter {
 };
 
 struct J3DModelData {
 };
 
+struct dKy_tevstr_c {
+};
+
 struct dPa_modelEcallBack {
 	/* 8004AC00 */ void setModel(JPABaseEmitter*, J3DModelData*, dKy_tevstr_c const&, u8, void*, u8, u8);
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_levelEcallBack {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
 struct dPa_control_c {

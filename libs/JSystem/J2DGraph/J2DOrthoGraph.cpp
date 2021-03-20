@@ -34,7 +34,7 @@ struct J2DOrthoGraph {
 	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
 	/* 802E9840 */ void setLookat();
 	/* 802E987C */ void scissorBounds(JGeometry::TBox2<f32>*, JGeometry::TBox2<f32> const*);
-	/* 802E9C88 */ bool getGrafType() const;
+	/* 802E9C88 */ void getGrafType() const;
 };
 
 struct JUtility {
@@ -78,7 +78,7 @@ extern "C" void J2DFillBox__FffffQ28JUtility6TColor(); // 1
 extern "C" static void func_802E9B0C(); // 1
 extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc(); // 1
 extern "C" static void func_802E9BE8(); // 1
-extern "C" bool getGrafType__13J2DOrthoGraphCFv(); // 1
+extern "C" void getGrafType__13J2DOrthoGraphCFv(); // 1
 extern "C" extern void* __vt__13J2DOrthoGraph[10];
 
 // 
@@ -254,8 +254,13 @@ asm static void J2DDrawFrame(JGeometry::TBox2<f32> const& field_0, JUtility::TCo
 
 
 /* 802E9C88-802E9C90 0008+00 rc=1 efc=0 rfr=False None .text      getGrafType__13J2DOrthoGraphCFv                              */
-bool J2DOrthoGraph::getGrafType() const {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J2DOrthoGraph::getGrafType() const {
+	nofralloc
+#include "asm/JSystem/J2DGraph/J2DOrthoGraph/getGrafType__13J2DOrthoGraphCFv.s"
 }
+#pragma pop
 
 

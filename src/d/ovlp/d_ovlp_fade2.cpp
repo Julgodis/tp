@@ -57,8 +57,8 @@ struct J2DOrthoGraph {
 
 static void dOvlpFd2_Draw(dOvlpFd2_c*); // 2
 static void dOvlpFd2_Execute(dOvlpFd2_c*); // 2
-static bool dOvlpFd2_IsDelete(dOvlpFd2_c*); // 2
-static bool dOvlpFd2_Delete(dOvlpFd2_c*); // 2
+static void dOvlpFd2_IsDelete(dOvlpFd2_c*); // 2
+static void dOvlpFd2_Delete(dOvlpFd2_c*); // 2
 static void dOvlpFd2_Create(void*); // 2
 void cLib_calcTimer__template4(s8*); // 2
 
@@ -70,8 +70,8 @@ extern "C" void execNextSnap__10dOvlpFd2_cFv(); // 1
 extern "C" void execFadeIn__10dOvlpFd2_cFv(); // 1
 extern "C" static void dOvlpFd2_Draw__FP10dOvlpFd2_c(); // 1
 extern "C" static void dOvlpFd2_Execute__FP10dOvlpFd2_c(); // 1
-extern "C" static bool dOvlpFd2_IsDelete__FP10dOvlpFd2_c(); // 1
-extern "C" static bool dOvlpFd2_Delete__FP10dOvlpFd2_c(); // 1
+extern "C" static void dOvlpFd2_IsDelete__FP10dOvlpFd2_c(); // 1
+extern "C" static void dOvlpFd2_Delete__FP10dOvlpFd2_c(); // 1
 extern "C" static void dOvlpFd2_Create__FPv(); // 1
 extern "C" void func_80252E70(); // 1
 extern "C" void __dt__15dOvlpFd2_dlst_cFv(); // 1
@@ -354,15 +354,25 @@ asm static void dOvlpFd2_Execute(dOvlpFd2_c* field_0) {
 
 
 /* 80252E34-80252E3C 0008+00 rc=1 efc=0 rfr=False None .text      dOvlpFd2_IsDelete__FP10dOvlpFd2_c                            */
-static bool dOvlpFd2_IsDelete(dOvlpFd2_c* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dOvlpFd2_IsDelete(dOvlpFd2_c* field_0) {
+	nofralloc
+#include "asm/d/ovlp/d_ovlp_fade2/dOvlpFd2_IsDelete__FP10dOvlpFd2_c.s"
 }
+#pragma pop
 
 
 /* 80252E3C-80252E44 0008+00 rc=1 efc=0 rfr=False None .text      dOvlpFd2_Delete__FP10dOvlpFd2_c                              */
-static bool dOvlpFd2_Delete(dOvlpFd2_c* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dOvlpFd2_Delete(dOvlpFd2_c* field_0) {
+	nofralloc
+#include "asm/d/ovlp/d_ovlp_fade2/dOvlpFd2_Delete__FP10dOvlpFd2_c.s"
 }
+#pragma pop
 
 
 /* 80252E44-80252E70 002C+00 rc=1 efc=0 rfr=False None .text      dOvlpFd2_Create__FPv                                         */

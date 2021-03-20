@@ -33,10 +33,10 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
-struct dEvDtData_c {
+struct fopAc_ac_c {
 };
 
-struct fopAc_ac_c {
+struct dEvDtData_c {
 };
 
 struct dEvent_manager_c {

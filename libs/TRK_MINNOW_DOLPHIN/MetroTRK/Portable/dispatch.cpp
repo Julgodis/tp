@@ -13,7 +13,7 @@
 
 
 extern "C" void TRKDispatchMessage(); // 1
-extern "C" bool TRKInitializeDispatcher(); // 1
+extern "C" void TRKInitializeDispatcher(); // 1
 
 // 
 // External References:
@@ -29,8 +29,8 @@ extern "C" void TRKDoWriteRegisters(); // 1
 extern "C" void TRKDoReadRegisters(); // 1
 extern "C" void TRKDoWriteMemory(); // 1
 extern "C" void TRKDoReadMemory(); // 1
-extern "C" bool TRKDoSupportMask(); // 1
-extern "C" bool TRKDoVersions(); // 1
+extern "C" void TRKDoSupportMask(); // 1
+extern "C" void TRKDoVersions(); // 1
 extern "C" void TRKDoOverride(); // 1
 extern "C" void TRKDoReset(); // 1
 extern "C" void TRKDoDisconnect(); // 1
@@ -103,8 +103,13 @@ extern "C" asm void TRKDispatchMessage() {
 
 
 /* 8036DD0C-8036DD14 0008+00 rc=1 efc=1 rfr=False None .text      TRKInitializeDispatcher                                      */
-extern "C" bool TRKInitializeDispatcher() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void TRKInitializeDispatcher() {
+	nofralloc
+#include "asm/TRK_MINNOW_DOLPHIN/MetroTRK/Portable/dispatch/TRKInitializeDispatcher.s"
 }
+#pragma pop
 
 

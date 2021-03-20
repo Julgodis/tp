@@ -11,40 +11,17 @@
 // Types:
 // 
 
-struct ResFONT {
+struct JUtility {
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
 };
 
-struct J2DAnmTexPattern {
+struct _GXTexMapID {
 };
 
-struct JKRArchive {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmVisibilityFull {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct _GXCullMode {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DAnmBase {
+struct J2DMirror {
 };
 
 struct JSUStreamSeekFrom {
@@ -53,6 +30,55 @@ struct JSUStreamSeekFrom {
 struct JSURandomInputStream {
 	/* 802DC458 */ void peek(void*, s32);
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct ResFONT {
+};
+
+struct JKRArchive {
+};
+
+struct _GXTlut {
+};
+
+struct ResTLUT {
+};
+
+struct JUTPalette {
+	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
+};
+
+struct J2DMaterial {
+};
+
+struct ResTIMG {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmBase {
+};
+
+struct _GXCullMode {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmVtxColor {
 };
 
 struct JGeometry {
@@ -112,35 +138,6 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct J2DMaterial {
-};
-
-struct ResTLUT {
-};
-
-struct JUtility {
-	struct TColor {
-		/* 80193960 */ TColor();
-	};
-
-};
-
-struct J2DMirror {
-};
-
-struct _GXTlut {
-};
-
-struct JUTPalette {
-	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
-};
-
-struct J2DBinding {
-};
-
-struct _GXTexMapID {
-};
-
 struct JUTTexture {
 	/* 802DE234 */ ~JUTTexture();
 	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
@@ -148,6 +145,9 @@ struct JUTTexture {
 	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
 	/* 802DE5B0 */ void attachPalette(JUTPalette*);
 	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+struct J2DBinding {
 };
 
 struct J2DPicture {
@@ -168,7 +168,7 @@ struct J2DPicture {
 	/* 8018BEE0 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 	/* 801DFA40 */ void getWhite() const;
 	/* 801DFA4C */ void getBlack() const;
-	/* 8025603C */ bool getMaterial() const;
+	/* 8025603C */ void getMaterial() const;
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 	/* 802FC118 */ J2DPicture(J2DPane*, JSURandomInputStream*, JKRArchive*);
@@ -212,7 +212,7 @@ struct J2DPicture {
 	/* 802FF1D0 */ void getTlutID(ResTIMG const*, u8);
 	/* 802FF29C */ void load(_GXTexMapID, u8);
 	/* 802FF268 */ void load(u8);
-	/* 802FF2E8 */ s32 getTypeID() const;
+	/* 802FF2E8 */ void getTypeID() const;
 	/* 802FF380 */ void prepend(char const*, f32);
 	/* 802FF320 */ void prepend(JUTTexture*, f32);
 	/* 802FF3B0 */ void prepend(ResTIMG const*, JUTPalette*, f32);
@@ -278,7 +278,7 @@ extern "C" void append__10J2DPictureFP10JUTTexturef(); // 1
 extern "C" void append__10J2DPictureFPC7ResTIMGP10JUTPalettef(); // 1
 extern "C" void load__10J2DPictureFUc(); // 1
 extern "C" void load__10J2DPictureF11_GXTexMapIDUc(); // 1
-extern "C" s32 getTypeID__10J2DPictureCFv(); // 1
+extern "C" void getTypeID__10J2DPictureCFv(); // 1
 extern "C" void append__10J2DPictureFPCcP10JUTPalettef(); // 1
 extern "C" void prepend__10J2DPictureFP10JUTTexturef(); // 1
 extern "C" void prepend__10J2DPictureFPCcP10JUTPalettef(); // 1
@@ -322,7 +322,7 @@ extern "C" void getBlack__10J2DPictureCFv(); // 1
 extern "C" void setAnimation__7J2DPaneFP14J2DAnmVtxColor(); // 1
 extern "C" void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull(); // 1
 extern "C" void setAnimation__7J2DPaneFP16J2DAnmTexPattern(); // 1
-extern "C" bool getMaterial__10J2DPictureCFv(); // 1
+extern "C" void getMaterial__10J2DPictureCFv(); // 1
 extern "C" void* __nw__FUl(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void read__14JSUInputStreamFPvl(); // 1
@@ -945,9 +945,14 @@ asm void J2DPicture::getTlutID(ResTIMG const* field_0, u8 field_1) {
 
 
 /* 802FF204-802FF208 0004+00 rc=6 efc=1 rfr=False None .text      __ct__Q29JGeometry8TVec2<s>Fv                                */
-JGeometry::TVec2__template0::TVec2__template0() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm JGeometry::TVec2__template0::TVec2__template0() {
+	nofralloc
+#include "asm/JSystem/J2DGraph/J2DPicture/func_802FF204.s"
 }
+#pragma pop
 
 
 /* 802FF208-802FF238 0030+00 rc=1 efc=0 rfr=False None .text      append__10J2DPictureFP10JUTTexturef                          */
@@ -995,9 +1000,14 @@ asm void J2DPicture::load(_GXTexMapID field_0, u8 field_1) {
 
 
 /* 802FF2E8-802FF2F0 0008+00 rc=2 efc=1 rfr=False None .text      getTypeID__10J2DPictureCFv                                   */
-s32 J2DPicture::getTypeID() const {
-	return 18;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J2DPicture::getTypeID() const {
+	nofralloc
+#include "asm/JSystem/J2DGraph/J2DPicture/getTypeID__10J2DPictureCFv.s"
 }
+#pragma pop
 
 
 /* 802FF2F0-802FF320 0030+00 rc=1 efc=0 rfr=False None .text      append__10J2DPictureFPCcP10JUTPalettef                       */
@@ -1144,8 +1154,13 @@ asm void J2DPicture::isUsed(ResFONT const* field_0) {
 
 
 /* 802FF65C-802FF660 0004+00 rc=1 efc=0 rfr=False None .text      rewriteAlpha__10J2DPictureFv                                 */
-void J2DPicture::rewriteAlpha() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J2DPicture::rewriteAlpha() {
+	nofralloc
+#include "asm/JSystem/J2DGraph/J2DPicture/rewriteAlpha__10J2DPictureFv.s"
 }
+#pragma pop
 
 

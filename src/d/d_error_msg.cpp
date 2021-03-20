@@ -28,10 +28,10 @@ struct Z2AudioMgr {
 	/* 802CD974 */ void resetProcess(u32, bool);
 };
 
-struct JKRHeap {
+struct ResFONT {
 };
 
-struct ResFONT {
+struct JKRHeap {
 };
 
 struct JUTResFont {

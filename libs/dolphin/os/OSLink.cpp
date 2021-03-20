@@ -38,15 +38,25 @@ extern "C" void ICInvalidateRange(); // 1
 // 
 
 /* 8033DF60-8033DF64 0004+00 rc=1 efc=0 rfr=False None .text      OSNotifyLink                                                 */
-extern "C" static void OSNotifyLink() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void OSNotifyLink() {
+	nofralloc
+#include "asm/dolphin/os/OSLink/OSNotifyLink.s"
 }
+#pragma pop
 
 
 /* 8033DF64-8033DF68 0004+00 rc=1 efc=0 rfr=False None .text      OSNotifyUnlink                                               */
-extern "C" static void OSNotifyUnlink() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void OSNotifyUnlink() {
+	nofralloc
+#include "asm/dolphin/os/OSLink/OSNotifyUnlink.s"
 }
+#pragma pop
 
 
 /* 8033DF68-8033DF74 000C+00 rc=1 efc=1 rfr=False None .text      OSSetStringTable                                             */

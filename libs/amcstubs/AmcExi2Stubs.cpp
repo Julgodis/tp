@@ -14,12 +14,12 @@
 
 extern "C" void EXI2_Init(); // 1
 extern "C" void EXI2_EnableInterrupts(); // 1
-extern "C" bool EXI2_Poll(); // 1
-extern "C" bool EXI2_ReadN(); // 1
-extern "C" bool EXI2_WriteN(); // 1
+extern "C" void EXI2_Poll(); // 1
+extern "C" void EXI2_ReadN(); // 1
+extern "C" void EXI2_WriteN(); // 1
 extern "C" void EXI2_Reserve(); // 1
 extern "C" void EXI2_Unreserve(); // 1
-extern "C" bool AMC_IsStub(); // 1
+extern "C" void AMC_IsStub(); // 1
 
 // 
 // External References:
@@ -32,50 +32,90 @@ extern "C" bool AMC_IsStub(); // 1
 // 
 
 /* 80372CFC-80372D00 0004+00 rc=1 efc=1 rfr=False None .text      EXI2_Init                                                    */
-extern "C" void EXI2_Init() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void EXI2_Init() {
+	nofralloc
+#include "asm/amcstubs/AmcExi2Stubs/EXI2_Init.s"
 }
+#pragma pop
 
 
 /* 80372D00-80372D04 0004+00 rc=1 efc=1 rfr=False None .text      EXI2_EnableInterrupts                                        */
-extern "C" void EXI2_EnableInterrupts() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void EXI2_EnableInterrupts() {
+	nofralloc
+#include "asm/amcstubs/AmcExi2Stubs/EXI2_EnableInterrupts.s"
 }
+#pragma pop
 
 
 /* 80372D04-80372D0C 0008+00 rc=2 efc=2 rfr=False None .text      EXI2_Poll                                                    */
-extern "C" bool EXI2_Poll() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void EXI2_Poll() {
+	nofralloc
+#include "asm/amcstubs/AmcExi2Stubs/EXI2_Poll.s"
 }
+#pragma pop
 
 
 /* 80372D0C-80372D14 0008+00 rc=2 efc=2 rfr=False None .text      EXI2_ReadN                                                   */
-extern "C" bool EXI2_ReadN() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void EXI2_ReadN() {
+	nofralloc
+#include "asm/amcstubs/AmcExi2Stubs/EXI2_ReadN.s"
 }
+#pragma pop
 
 
 /* 80372D14-80372D1C 0008+00 rc=1 efc=1 rfr=False None .text      EXI2_WriteN                                                  */
-extern "C" bool EXI2_WriteN() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void EXI2_WriteN() {
+	nofralloc
+#include "asm/amcstubs/AmcExi2Stubs/EXI2_WriteN.s"
 }
+#pragma pop
 
 
 /* 80372D1C-80372D20 0004+00 rc=1 efc=1 rfr=False None .text      EXI2_Reserve                                                 */
-extern "C" void EXI2_Reserve() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void EXI2_Reserve() {
+	nofralloc
+#include "asm/amcstubs/AmcExi2Stubs/EXI2_Reserve.s"
 }
+#pragma pop
 
 
 /* 80372D20-80372D24 0004+00 rc=1 efc=1 rfr=False None .text      EXI2_Unreserve                                               */
-extern "C" void EXI2_Unreserve() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void EXI2_Unreserve() {
+	nofralloc
+#include "asm/amcstubs/AmcExi2Stubs/EXI2_Unreserve.s"
 }
+#pragma pop
 
 
 /* 80372D24-80372D2C 0008+00 rc=1 efc=1 rfr=False None .text      AMC_IsStub                                                   */
-extern "C" bool AMC_IsStub() {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm void AMC_IsStub() {
+	nofralloc
+#include "asm/amcstubs/AmcExi2Stubs/AMC_IsStub.s"
 }
+#pragma pop
 
 

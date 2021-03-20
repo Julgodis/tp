@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct J2DAnmColor {
-};
-
 struct J2DAnmTextureSRTKey {
 };
 
 struct JKRExpHeap {
+};
+
+struct J2DAnmColor {
 };
 
 struct dMsgScrnItem_c {
@@ -518,9 +518,14 @@ asm void dMsgScrnItem_c::selectAnimeEnd() {
 
 
 /* 802400A4-802400A8 0004+00 rc=1 efc=0 rfr=False None .text      fukiScale__14dMsgScrnItem_cFf                                */
-void dMsgScrnItem_c::fukiScale(f32 field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgScrnItem_c::fukiScale(f32 field_0) {
+	nofralloc
+#include "asm/msg/scrn/d_msg_scrn_item/fukiScale__14dMsgScrnItem_cFf.s"
 }
+#pragma pop
 
 
 /* 802400A8-802400CC 0024+00 rc=1 efc=0 rfr=False None .text      fukiTrans__14dMsgScrnItem_cFff                               */

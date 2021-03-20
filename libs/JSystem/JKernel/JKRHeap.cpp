@@ -15,7 +15,7 @@ struct JKRHeap {
 	struct TState {
 	};
 
-	/* 800065D8 */ bool dump_sort();
+	/* 800065D8 */ void dump_sort();
 	/* 802CE138 */ JKRHeap(void*, u32, JKRHeap*, bool);
 	/* 802CE264 */ ~JKRHeap();
 	/* 802CE378 */ void initArena(char**, u32*, int);
@@ -52,8 +52,8 @@ struct JKRHeap {
 	/* 802CED84 */ void state_register(JKRHeap::TState*, u32) const;
 	/* 802CED88 */ void state_compare(JKRHeap::TState const&, JKRHeap::TState const&) const;
 	/* 802CEDA0 */ void state_dump(JKRHeap::TState const&) const;
-	/* 802CEDA4 */ bool do_changeGroupID(u8);
-	/* 802CEDAC */ bool do_getCurrentGroupId();
+	/* 802CEDA4 */ void do_changeGroupID(u8);
+	/* 802CEDAC */ void do_getCurrentGroupId();
 };
 
 struct JKRDisposer {
@@ -136,8 +136,8 @@ extern "C" void __dla__FPv(); // 1
 extern "C" void state_register__7JKRHeapCFPQ27JKRHeap6TStateUl(); // 1
 extern "C" void state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState(); // 1
 extern "C" void state_dump__7JKRHeapCFRCQ27JKRHeap6TState(); // 1
-extern "C" bool do_changeGroupID__7JKRHeapFUc(); // 1
-extern "C" bool do_getCurrentGroupId__7JKRHeapFv(); // 1
+extern "C" void do_changeGroupID__7JKRHeapFUc(); // 1
+extern "C" void do_getCurrentGroupId__7JKRHeapFv(); // 1
 extern "C" extern char const* const JKRHeap__stringBase0;
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
@@ -154,7 +154,7 @@ extern "C" extern u8 mMemorySize__7JKRHeap[4];
 // 
 
 
-extern "C" bool dump_sort__7JKRHeapFv(); // 1
+extern "C" void dump_sort__7JKRHeapFv(); // 1
 extern "C" void __ct__11JKRDisposerFv(); // 1
 extern "C" void __dt__11JKRDisposerFv(); // 1
 extern "C" void __ct__10JSUPtrLinkFPv(); // 1
@@ -719,9 +719,14 @@ asm void operator delete[](void* field_0) {
 
 
 /* 802CED84-802CED88 0004+00 rc=2 efc=1 rfr=False None .text      state_register__7JKRHeapCFPQ27JKRHeap6TStateUl               */
-void JKRHeap::state_register(JKRHeap::TState* field_0, u32 field_1) const {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JKRHeap::state_register(JKRHeap::TState* field_0, u32 field_1) const {
+	nofralloc
+#include "asm/JSystem/JKernel/JKRHeap/state_register__7JKRHeapCFPQ27JKRHeap6TStateUl.s"
 }
+#pragma pop
 
 
 /* 802CED88-802CEDA0 0018+00 rc=2 efc=1 rfr=False None .text      state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState */
@@ -736,20 +741,35 @@ asm void JKRHeap::state_compare(JKRHeap::TState const& field_0, JKRHeap::TState 
 
 
 /* 802CEDA0-802CEDA4 0004+00 rc=4 efc=3 rfr=False None .text      state_dump__7JKRHeapCFRCQ27JKRHeap6TState                    */
-void JKRHeap::state_dump(JKRHeap::TState const& field_0) const {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JKRHeap::state_dump(JKRHeap::TState const& field_0) const {
+	nofralloc
+#include "asm/JSystem/JKernel/JKRHeap/state_dump__7JKRHeapCFRCQ27JKRHeap6TState.s"
 }
+#pragma pop
 
 
 /* 802CEDA4-802CEDAC 0008+00 rc=2 efc=1 rfr=False None .text      do_changeGroupID__7JKRHeapFUc                                */
-bool JKRHeap::do_changeGroupID(u8 field_0) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JKRHeap::do_changeGroupID(u8 field_0) {
+	nofralloc
+#include "asm/JSystem/JKernel/JKRHeap/do_changeGroupID__7JKRHeapFUc.s"
 }
+#pragma pop
 
 
 /* 802CEDAC-802CEDB4 0008+00 rc=2 efc=1 rfr=False None .text      do_getCurrentGroupId__7JKRHeapFv                             */
-bool JKRHeap::do_getCurrentGroupId() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JKRHeap::do_getCurrentGroupId() {
+	nofralloc
+#include "asm/JSystem/JKernel/JKRHeap/do_getCurrentGroupId__7JKRHeapFv.s"
 }
+#pragma pop
 
 

@@ -15,7 +15,7 @@ struct Vec {
 };
 
 struct J3DShapeMtx {
-	/* 80273E08 */ bool getUseMtxNum() const;
+	/* 80273E08 */ void getUseMtxNum() const;
 	/* 803130A8 */ void resetMtxLoadCache();
 	/* 803130E4 */ void loadMtxIndx_PNGP(int, u16) const;
 	/* 80313128 */ void loadMtxIndx_PCPU(int, u16) const;
@@ -176,7 +176,7 @@ void J3DScaleNrmMtx(f32 (* )[4], Vec const&); // 2
 void J3DScaleNrmMtx33(f32 (* )[3], Vec const&); // 2
 void J3DMtxProjConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4]); // 2
 
-extern "C" bool getUseMtxNum__11J3DShapeMtxCFv(); // 1
+extern "C" void getUseMtxNum__11J3DShapeMtxCFv(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void J3DFifoLoadPosMtxImm__FPA4_fUl(); // 1
 extern "C" void J3DFifoLoadNrmMtxImm__FPA4_fUl(); // 1
@@ -746,9 +746,14 @@ asm void J3DShapeMtxYBBoardConcatView::getType() const {
 
 
 /* 80314598-8031459C 0004+00 rc=3 efc=0 rfr=False None .text      loadNrmMtx__21J3DShapeMtxConcatViewCFiUs                     */
-void J3DShapeMtxConcatView::loadNrmMtx(int field_0, u16 field_1) const {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J3DShapeMtxConcatView::loadNrmMtx(int field_0, u16 field_1) const {
+	nofralloc
+#include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadNrmMtx__21J3DShapeMtxConcatViewCFiUs.s"
 }
+#pragma pop
 
 
 /* 8031459C-803145A4 0008+00 rc=4 efc=0 rfr=False None .text      getUseMtxIndex__11J3DShapeMtxCFUs                            */
@@ -829,9 +834,14 @@ asm void J3DShapeMtxMultiConcatView::getUseMtxIndex(u16 field_0) const {
 
 
 /* 803146AC-803146B0 0004+00 rc=1 efc=0 rfr=False None .text      loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUs                */
-void J3DShapeMtxMultiConcatView::loadNrmMtx(int field_0, u16 field_1) const {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J3DShapeMtxMultiConcatView::loadNrmMtx(int field_0, u16 field_1) const {
+	nofralloc
+#include "asm/JSystem/J3DGraphBase/J3DShapeMtx/loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUs.s"
 }
+#pragma pop
 
 
 /* 803146B0-8031470C 005C+00 rc=1 efc=0 rfr=False None .text      __dt__16J3DShapeMtxMultiFv                                   */

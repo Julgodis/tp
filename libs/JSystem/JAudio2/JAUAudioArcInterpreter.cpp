@@ -15,7 +15,7 @@ struct JAUAudioArcInterpreter {
 	/* 802A4244 */ JAUAudioArcInterpreter();
 	/* 802A4260 */ ~JAUAudioArcInterpreter();
 	/* 802A42A8 */ void parse(void const*);
-	/* 802A4314 */ bool readCommandMore(u32);
+	/* 802A4314 */ void readCommandMore(u32);
 	/* 802A431C */ void readCommand_();
 };
 
@@ -27,7 +27,7 @@ struct JAUAudioArcInterpreter {
 extern "C" void __ct__22JAUAudioArcInterpreterFv(); // 1
 extern "C" void __dt__22JAUAudioArcInterpreterFv(); // 1
 extern "C" void parse__22JAUAudioArcInterpreterFPCv(); // 1
-extern "C" bool readCommandMore__22JAUAudioArcInterpreterFUl(); // 1
+extern "C" void readCommandMore__22JAUAudioArcInterpreterFUl(); // 1
 extern "C" void readCommand___22JAUAudioArcInterpreterFv(); // 1
 
 // 
@@ -100,9 +100,14 @@ asm void JAUAudioArcInterpreter::parse(void const* field_0) {
 
 
 /* 802A4314-802A431C 0008+00 rc=2 efc=1 rfr=False None .text      readCommandMore__22JAUAudioArcInterpreterFUl                 */
-bool JAUAudioArcInterpreter::readCommandMore(u32 field_0) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JAUAudioArcInterpreter::readCommandMore(u32 field_0) {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAUAudioArcInterpreter/readCommandMore__22JAUAudioArcInterpreterFUl.s"
 }
+#pragma pop
 
 
 /* 802A431C-802A4740 0424+00 rc=1 efc=0 rfr=False None .text      readCommand___22JAUAudioArcInterpreterFv                     */

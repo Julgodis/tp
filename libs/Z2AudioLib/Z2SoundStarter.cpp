@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAISoundHandle {
 };
 
 struct JGeometry {

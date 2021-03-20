@@ -178,38 +178,39 @@ def from_group(section: Section, group: List[linker_map.Symbol]) -> Function:
     Try to find simply pattern of function that we can decompile when generating c++ code.
     """
 
-    if len(group) == 1:
-        block = group[0]
-        data = section.get_data(block.start, block.end)
-        if is_return_function(data):
-            return [ReturnFunction(
-                Identifier("func", block.start, block.name),
-                addr=block.addr,
-                size=block.size,
-                padding=block.padding,
-                alignment=0,
-                return_type=VOID)]
+    if False:
+        if len(group) == 1:
+            block = group[0]
+            data = section.get_data(block.start, block.end)
+            if is_return_function(data):
+                return [ReturnFunction(
+                    Identifier("func", block.start, block.name),
+                    addr=block.addr,
+                    size=block.size,
+                    padding=block.padding,
+                    alignment=0,
+                    return_type=VOID)]
 
-        if is_return_integer_function(data):
-            integer_value = get_short_value(data)
-            if integer_value == 0:
-                value = "false"
-                type = BOOL
-            elif integer_value == 1:
-                value = "true"
-                type = BOOL
-            else:
-                value = f"{integer_value}"
-                type = S32
+            if is_return_integer_function(data):
+                integer_value = get_short_value(data)
+                if integer_value == 0:
+                    value = "false"
+                    type = BOOL
+                elif integer_value == 1:
+                    value = "true"
+                    type = BOOL
+                else:
+                    value = f"{integer_value}"
+                    type = S32
 
-            return [ReturnFunction(
-                Identifier("func", block.start, block.name),
-                addr=block.addr,
-                size=block.size,
-                padding=block.padding,
-                alignment=0,
-                return_type=type,
-                return_value=value)]
+                return [ReturnFunction(
+                    Identifier("func", block.start, block.name),
+                    addr=block.addr,
+                    size=block.size,
+                    padding=block.padding,
+                    alignment=0,
+                    return_type=type,
+                    return_value=value)]
 
     # TODO: Re-enable this code to find simple function patterns
     """

@@ -31,11 +31,11 @@ struct J3DLightInfo {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
-};
-
 struct J3DModelData {
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -129,10 +129,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
 struct mDoExt_btkAnm {
@@ -176,10 +176,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -389,7 +389,7 @@ void dKy_TeachWind_existence_chk(); // 2
 static void dKy_SunMoon_Light_Check(); // 2
 static void dKy_Outdoor_check(); // 2
 static void dKy_Indoor_check(); // 2
-bool dKy_withwarp_capture_check(); // 2
+void dKy_withwarp_capture_check(); // 2
 void dKy_depth_dist_set(void*); // 2
 void dKy_darkworld_check(); // 2
 static void dKy_F_SP121Check(char const*, int, u8*, int); // 2
@@ -484,7 +484,7 @@ extern "C" void drawKankyo__18dScnKy_env_light_cFv(); // 1
 extern "C" void dKy_undwater_filter_draw__Fv(); // 1
 extern "C" static void dKy_Draw__FP17sub_kankyo__class(); // 1
 extern "C" static void dKy_Execute__FP17sub_kankyo__class(); // 1
-extern "C" static bool dKy_IsDelete__FP17sub_kankyo__class(); // 1
+extern "C" static void dKy_IsDelete__FP17sub_kankyo__class(); // 1
 extern "C" static void dKy_Delete__FP17sub_kankyo__class(); // 1
 extern "C" static void dKy_Create__FPv(); // 1
 extern "C" void dKy_setLight_init__Fv(); // 1
@@ -576,7 +576,7 @@ extern "C" void dKy_TeachWind_existence_chk__Fv(); // 1
 extern "C" static void dKy_SunMoon_Light_Check__Fv(); // 1
 extern "C" static void dKy_Outdoor_check__Fv(); // 1
 extern "C" static void dKy_Indoor_check__Fv(); // 1
-extern "C" bool dKy_withwarp_capture_check__Fv(); // 1
+extern "C" void dKy_withwarp_capture_check__Fv(); // 1
 extern "C" void dKy_depth_dist_set__FPv(); // 1
 extern "C" void dKy_darkworld_check__Fv(); // 1
 extern "C" static void dKy_F_SP121Check__FPCciPUci(); // 1
@@ -1751,9 +1751,14 @@ asm BOSS_LIGHT::~BOSS_LIGHT() {
 
 
 /* 8019F474-8019F478 0004+00 rc=1 efc=0 rfr=False None .text      __ct__10BOSS_LIGHTFv                                         */
-BOSS_LIGHT::BOSS_LIGHT() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm BOSS_LIGHT::BOSS_LIGHT() {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo/__ct__10BOSS_LIGHTFv.s"
 }
+#pragma pop
 
 
 /* 8019F478-8019F4B4 003C+00 rc=2 efc=0 rfr=False None .text      __dt__13DUNGEON_LIGHTFv                                      */
@@ -1768,9 +1773,14 @@ asm DUNGEON_LIGHT::~DUNGEON_LIGHT() {
 
 
 /* 8019F4B4-8019F4B8 0004+00 rc=1 efc=0 rfr=False None .text      __ct__13DUNGEON_LIGHTFv                                      */
-DUNGEON_LIGHT::DUNGEON_LIGHT() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm DUNGEON_LIGHT::DUNGEON_LIGHT() {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo/__ct__13DUNGEON_LIGHTFv.s"
 }
+#pragma pop
 
 
 /* 8019F4B8-8019F4F4 003C+00 rc=2 efc=0 rfr=False None .text      __dt__15WIND_INF_ENTITYFv                                    */
@@ -1785,15 +1795,25 @@ asm WIND_INF_ENTITY::~WIND_INF_ENTITY() {
 
 
 /* 8019F4F4-8019F4F8 0004+00 rc=1 efc=0 rfr=False None .text      __ct__15WIND_INF_ENTITYFv                                    */
-WIND_INF_ENTITY::WIND_INF_ENTITY() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm WIND_INF_ENTITY::WIND_INF_ENTITY() {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo/__ct__15WIND_INF_ENTITYFv.s"
 }
+#pragma pop
 
 
 /* 8019F4F8-8019F4FC 0004+00 rc=1 efc=0 rfr=False None .text      __ct__15LIGHT_INFLUENCEFv                                    */
-LIGHT_INFLUENCE::LIGHT_INFLUENCE() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm LIGHT_INFLUENCE::LIGHT_INFLUENCE() {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo/__ct__15LIGHT_INFLUENCEFv.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */
@@ -2205,9 +2225,14 @@ asm void dScnKy_env_light_c::settingTevStruct(int field_0, cXyz* field_1, dKy_te
 
 
 /* 801A441C-801A4420 0004+00 rc=0 efc=0 rfr=False None .text      setLightTevColorType__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c */
-void dScnKy_env_light_c::setLightTevColorType(J3DModelData* field_0, dKy_tevstr_c* field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dScnKy_env_light_c::setLightTevColorType(J3DModelData* field_0, dKy_tevstr_c* field_1) {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo/setLightTevColorType__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */
@@ -2229,15 +2254,25 @@ asm static void setLightTevColorType_MAJI_sub(J3DMaterial* field_0, dKy_tevstr_c
 
 
 /* 801A4C08-801A4C0C 0004+00 rc=4 efc=4 rfr=False None .text      setLight__13J3DColorBlockFUlP11J3DLightObj                   */
-void J3DColorBlock::setLight(u32 field_0, J3DLightObj* field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J3DColorBlock::setLight(u32 field_0, J3DLightObj* field_1) {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo/setLight__13J3DColorBlockFUlP11J3DLightObj.s"
 }
+#pragma pop
 
 
 /* 801A4C0C-801A4C10 0004+00 rc=3 efc=3 rfr=False None .text      setAmbColor__13J3DColorBlockFUlPC10J3DGXColor                */
-void J3DColorBlock::setAmbColor(u32 field_0, J3DGXColor const* field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J3DColorBlock::setAmbColor(u32 field_0, J3DGXColor const* field_1) {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo/setAmbColor__13J3DColorBlockFUlPC10J3DGXColor.s"
 }
+#pragma pop
 
 
 /* 801A4C10-801A4DA0 0190+00 rc=1 efc=0 rfr=False None .text      dKy_cloudshadow_scroll__FP12J3DModelDataP12dKy_tevstr_ci     */
@@ -2386,9 +2421,14 @@ extern "C" asm static void dKy_Execute__FP17sub_kankyo__class() {
 
 
 /* 801A5BCC-801A5BD4 0008+00 rc=1 efc=0 rfr=False None .text      dKy_IsDelete__FP17sub_kankyo__class                          */
-extern "C" static bool dKy_IsDelete__FP17sub_kankyo__class() {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void dKy_IsDelete__FP17sub_kankyo__class() {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo/dKy_IsDelete__FP17sub_kankyo__class.s"
 }
+#pragma pop
 
 
 /* 801A5BD4-801A5C1C 0048+00 rc=1 efc=0 rfr=False None .text      dKy_Delete__FP17sub_kankyo__class                            */
@@ -3458,9 +3498,14 @@ asm static void dKy_Indoor_check() {
 
 
 /* 801AC2E0-801AC2E8 0008+00 rc=1 efc=1 rfr=False None .text      dKy_withwarp_capture_check__Fv                               */
-bool dKy_withwarp_capture_check() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dKy_withwarp_capture_check() {
+	nofralloc
+#include "asm/d/kankyo/d_kankyo/dKy_withwarp_capture_check__Fv.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

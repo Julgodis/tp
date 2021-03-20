@@ -26,8 +26,13 @@ extern "C" void setInitEventBit__Fv(); // 1
 // 
 
 /* 80035C88-80035C8C 0004+00 rc=1 efc=1 rfr=False None .text      setInitEventBit__Fv                                          */
-void setInitEventBit() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void setInitEventBit() {
+	nofralloc
+#include "asm/d/save/d_save_init/setInitEventBit__Fv.s"
 }
+#pragma pop
 
 

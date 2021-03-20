@@ -366,9 +366,14 @@ asm void JStudio_JAudio2::TAdaptor_sound::adaptor_do_prepare() {
 
 
 /* 8028DA74-8028DA78 0004+00 rc=1 efc=0 rfr=False None .text      adaptor_do_end__Q215JStudio_JAudio214TAdaptor_soundFv        */
-void JStudio_JAudio2::TAdaptor_sound::adaptor_do_end() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JStudio_JAudio2::TAdaptor_sound::adaptor_do_end() {
+	nofralloc
+#include "asm/JSystem/JStudio/JStudio_JAudio2/object-sound/adaptor_do_end__Q215JStudio_JAudio214TAdaptor_soundFv.s"
 }
+#pragma pop
 
 
 /* 8028DA78-8028DC20 01A8+00 rc=1 efc=0 rfr=False None .text      adaptor_do_update__Q215JStudio_JAudio214TAdaptor_soundFUl    */

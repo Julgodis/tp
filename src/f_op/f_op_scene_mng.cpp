@@ -129,8 +129,13 @@ asm void fopScnM_Management() {
 
 
 /* 8001EE30-8001EE34 0004+00 rc=1 efc=1 rfr=False None .text      fopScnM_Init__Fv                                             */
-void fopScnM_Init() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void fopScnM_Init() {
+	nofralloc
+#include "asm/f_op/f_op_scene_mng/fopScnM_Init__Fv.s"
 }
+#pragma pop
 
 

@@ -425,9 +425,14 @@ asm void JKRExpHeap::do_freeTail() {
 
 
 /* 802CF924-802CF928 0004+00 rc=1 efc=0 rfr=False None .text      do_fillFreeArea__10JKRExpHeapFv                              */
-void JKRExpHeap::do_fillFreeArea() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JKRExpHeap::do_fillFreeArea() {
+	nofralloc
+#include "asm/JSystem/JKernel/JKRExpHeap/do_fillFreeArea__10JKRExpHeapFv.s"
 }
+#pragma pop
 
 
 /* 802CF928-802CF978 0050+00 rc=1 efc=0 rfr=False None .text      do_changeGroupID__10JKRExpHeapFUc                            */

@@ -26,7 +26,7 @@ extern "C" void __end_critical_region(); // 1
 extern "C" void __begin_critical_region(); // 1
 extern "C" void fflush(); // 1
 extern "C" void fclose(); // 1
-extern "C" bool __close_console(); // 1
+extern "C" void __close_console(); // 1
 extern "C" void __write_console(); // 1
 extern "C" void __read_console(); // 1
 

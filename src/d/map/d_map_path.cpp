@@ -36,7 +36,7 @@ struct dDrawPath_c {
 	struct room_class {
 	};
 
-	/* 8002ABF0 */ bool isDrawType(int);
+	/* 8002ABF0 */ void isDrawType(int);
 	/* 8002AD3C */ ~dDrawPath_c();
 	/* 8002AD84 */ void getLineColor(int, int);
 	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
@@ -124,7 +124,7 @@ void operator delete(void*); // 2
 
 extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj(); // 1
 extern "C" void draw__12dDlst_base_cFv(); // 1
-extern "C" bool isDrawType__11dDrawPath_cFi(); // 1
+extern "C" void isDrawType__11dDrawPath_cFi(); // 1
 extern "C" void __dt__18dRenderingFDAmap_cFv(); // 1
 extern "C" void __dt__11dDrawPath_cFv(); // 1
 extern "C" void getLineColor__11dDrawPath_cFii(); // 1

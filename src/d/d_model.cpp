@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct dKy_tevstr_c {
-};
-
 struct dMdl_obj_c {
 };
 
 struct J3DModelData {
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dMdl_c {
@@ -43,7 +43,7 @@ struct J3DDrawBuffer {
 };
 
 struct J3DPacket {
-	/* 80312750 */ bool entry(J3DDrawBuffer*);
+	/* 80312750 */ void entry(J3DDrawBuffer*);
 };
 
 struct J3DShape {
@@ -82,7 +82,7 @@ extern "C" void dKy_setLight_again__Fv(); // 1
 extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c(); // 1
 extern "C" void* __nw__FUl(); // 1
 extern "C" void __dl__FPv(); // 1
-extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
+extern "C" void entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
 extern "C" void PSMTXConcat(); // 1

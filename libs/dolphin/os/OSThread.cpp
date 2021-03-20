@@ -97,9 +97,14 @@ extern "C" extern u32 __OSFpscrEnableBits;
 // 
 
 /* 80340AA4-80340AA8 0004+00 rc=2 efc=0 rfr=False None .text      DefaultSwitchThreadCallback                                  */
-extern "C" static void DefaultSwitchThreadCallback() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void DefaultSwitchThreadCallback() {
+	nofralloc
+#include "asm/dolphin/os/OSThread/DefaultSwitchThreadCallback.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

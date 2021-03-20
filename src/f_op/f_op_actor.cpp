@@ -96,10 +96,10 @@ struct dEvt_control_c {
 struct cXyz {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

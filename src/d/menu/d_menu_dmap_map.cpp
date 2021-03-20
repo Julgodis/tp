@@ -35,12 +35,12 @@ struct renderingDmap_c {
 	/* 801C0CB8 */ void afterDrawPath();
 	/* 801C25E4 */ void beforeDrawPath();
 	/* 801C25E8 */ void getRestartCursorSize();
-	/* 801C2614 */ bool isRendAllRoom() const;
-	/* 801C261C */ bool isRendDoor() const;
-	/* 801C2624 */ bool isCheckFloor() const;
-	/* 801C262C */ bool isRendRestart() const;
-	/* 801C2634 */ bool isRendCursor() const;
-	/* 801C263C */ bool isRendIcon() const;
+	/* 801C2614 */ void isRendAllRoom() const;
+	/* 801C261C */ void isRendDoor() const;
+	/* 801C2624 */ void isCheckFloor() const;
+	/* 801C262C */ void isRendRestart() const;
+	/* 801C2634 */ void isRendCursor() const;
+	/* 801C263C */ void isRendIcon() const;
 };
 
 struct dMenu_DmapMap_c {
@@ -119,7 +119,7 @@ struct dDrawPath_c {
 	struct group_class {
 	};
 
-	/* 8002ABF0 */ bool isDrawType(int);
+	/* 8002ABF0 */ void isDrawType(int);
 	/* 8002AD84 */ void getLineColor(int, int);
 	/* 8003CA40 */ void rendering(dDrawPath_c::poly_class const*);
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
@@ -187,7 +187,7 @@ struct renderingDAmap_c {
 	/* 80040134 */ void getFirstRoomPointer();
 	/* 800401E8 */ void getNextRoomPointer();
 	/* 800402C0 */ void isDrawPath();
-	/* 800402E0 */ bool getFirstDrawLayerNo();
+	/* 800402E0 */ void getFirstDrawLayerNo();
 	/* 800402E8 */ void getNextDrawLayerNo(int);
 	/* 800409B4 */ void isDrawRoomIcon(int, int) const;
 	/* 800409E0 */ void isDrawIconSingle(dTres_c::data_s const*, int, int, bool, bool, Vec const*) const;
@@ -259,12 +259,12 @@ extern "C" void getInitWholeMapScale__19dMenu_DmapMapCtrl_cFPfffff(); // 1
 extern "C" void getInitDispCenter__19dMenu_DmapMapCtrl_cFPfPf(); // 1
 extern "C" void beforeDrawPath__15renderingDmap_cFv(); // 1
 extern "C" void getRestartCursorSize__15renderingDmap_cFv(); // 1
-extern "C" bool isRendAllRoom__15renderingDmap_cCFv(); // 1
-extern "C" bool isRendDoor__15renderingDmap_cCFv(); // 1
-extern "C" bool isCheckFloor__15renderingDmap_cCFv(); // 1
-extern "C" bool isRendRestart__15renderingDmap_cCFv(); // 1
-extern "C" bool isRendCursor__15renderingDmap_cCFv(); // 1
-extern "C" bool isRendIcon__15renderingDmap_cCFv(); // 1
+extern "C" void isRendAllRoom__15renderingDmap_cCFv(); // 1
+extern "C" void isRendDoor__15renderingDmap_cCFv(); // 1
+extern "C" void isCheckFloor__15renderingDmap_cCFv(); // 1
+extern "C" void isRendRestart__15renderingDmap_cCFv(); // 1
+extern "C" void isRendCursor__15renderingDmap_cCFv(); // 1
+extern "C" void isRendIcon__15renderingDmap_cCFv(); // 1
 extern "C" void __sinit_d_menu_dmap_map_cpp(); // 1
 extern "C" extern u8 const data_80395950[36];
 extern "C" extern u8 const data_80395974[36];
@@ -292,7 +292,7 @@ void operator delete[](void*); // 2
 
 extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor(); // 1
 extern "C" void fopMsgM_valueIncrease__FiiUc(); // 1
-extern "C" bool isDrawType__11dDrawPath_cFi(); // 1
+extern "C" void isDrawType__11dDrawPath_cFi(); // 1
 extern "C" void getLineColor__11dDrawPath_cFii(); // 1
 extern "C" void isTbox__12dSv_memBit_cCFi(); // 1
 extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
@@ -330,7 +330,7 @@ extern "C" void getRoomNoSingle__16renderingDAmap_cFv(); // 1
 extern "C" void getFirstRoomPointer__16renderingDAmap_cFv(); // 1
 extern "C" void getNextRoomPointer__16renderingDAmap_cFv(); // 1
 extern "C" void isDrawPath__16renderingDAmap_cFv(); // 1
-extern "C" bool getFirstDrawLayerNo__16renderingDAmap_cFv(); // 1
+extern "C" void getFirstDrawLayerNo__16renderingDAmap_cFv(); // 1
 extern "C" void getNextDrawLayerNo__16renderingDAmap_cFi(); // 1
 extern "C" void afterDrawPath__19renderingPlusDoor_cFv(); // 1
 extern "C" void isDrawRoomIcon__16renderingDAmap_cCFii(); // 1
@@ -1324,9 +1324,14 @@ asm void dMenu_DmapMapCtrl_c::getInitDispCenter(f32* field_0, f32* field_1) {
 
 
 /* 801C25E4-801C25E8 0004+00 rc=1 efc=0 rfr=False None .text      beforeDrawPath__15renderingDmap_cFv                          */
-void renderingDmap_c::beforeDrawPath() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void renderingDmap_c::beforeDrawPath() {
+	nofralloc
+#include "asm/d/menu/d_menu_dmap_map/beforeDrawPath__15renderingDmap_cFv.s"
 }
+#pragma pop
 
 
 /* 801C25E8-801C2614 002C+00 rc=1 efc=0 rfr=False None .text      getRestartCursorSize__15renderingDmap_cFv                    */
@@ -1341,39 +1346,69 @@ asm void renderingDmap_c::getRestartCursorSize() {
 
 
 /* 801C2614-801C261C 0008+00 rc=1 efc=0 rfr=False None .text      isRendAllRoom__15renderingDmap_cCFv                          */
-bool renderingDmap_c::isRendAllRoom() const {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void renderingDmap_c::isRendAllRoom() const {
+	nofralloc
+#include "asm/d/menu/d_menu_dmap_map/isRendAllRoom__15renderingDmap_cCFv.s"
 }
+#pragma pop
 
 
 /* 801C261C-801C2624 0008+00 rc=1 efc=0 rfr=False None .text      isRendDoor__15renderingDmap_cCFv                             */
-bool renderingDmap_c::isRendDoor() const {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void renderingDmap_c::isRendDoor() const {
+	nofralloc
+#include "asm/d/menu/d_menu_dmap_map/isRendDoor__15renderingDmap_cCFv.s"
 }
+#pragma pop
 
 
 /* 801C2624-801C262C 0008+00 rc=1 efc=0 rfr=False None .text      isCheckFloor__15renderingDmap_cCFv                           */
-bool renderingDmap_c::isCheckFloor() const {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void renderingDmap_c::isCheckFloor() const {
+	nofralloc
+#include "asm/d/menu/d_menu_dmap_map/isCheckFloor__15renderingDmap_cCFv.s"
 }
+#pragma pop
 
 
 /* 801C262C-801C2634 0008+00 rc=1 efc=0 rfr=False None .text      isRendRestart__15renderingDmap_cCFv                          */
-bool renderingDmap_c::isRendRestart() const {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void renderingDmap_c::isRendRestart() const {
+	nofralloc
+#include "asm/d/menu/d_menu_dmap_map/isRendRestart__15renderingDmap_cCFv.s"
 }
+#pragma pop
 
 
 /* 801C2634-801C263C 0008+00 rc=1 efc=0 rfr=False None .text      isRendCursor__15renderingDmap_cCFv                           */
-bool renderingDmap_c::isRendCursor() const {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void renderingDmap_c::isRendCursor() const {
+	nofralloc
+#include "asm/d/menu/d_menu_dmap_map/isRendCursor__15renderingDmap_cCFv.s"
 }
+#pragma pop
 
 
 /* 801C263C-801C2644 0008+00 rc=1 efc=0 rfr=False None .text      isRendIcon__15renderingDmap_cCFv                             */
-bool renderingDmap_c::isRendIcon() const {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void renderingDmap_c::isRendIcon() const {
+	nofralloc
+#include "asm/d/menu/d_menu_dmap_map/isRendIcon__15renderingDmap_cCFv.s"
 }
+#pragma pop
 
 
 /* 801C2644-801C2718 00D4+00 rc=1 efc=1 rfr=False None .text      __sinit_d_menu_dmap_map_cpp                                  */

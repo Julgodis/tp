@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JPABaseEmitter {
+};
+
 namespace JStudio {
 	struct TObject {
 	};
@@ -37,9 +40,6 @@ namespace JStudio {
 
 };
 
-struct JPABaseEmitter {
-};
-
 struct JStudio_JParticle {
 	struct TCreateObject {
 		/* 8028E3A0 */ ~TCreateObject();
@@ -55,9 +55,6 @@ struct JStudio_JParticle {
 
 };
 
-struct JPAEmitterCallBack {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -65,6 +62,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JPAEmitterCallBack {
 };
 
 struct JPAParticleCallBack {

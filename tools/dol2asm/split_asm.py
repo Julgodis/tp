@@ -119,7 +119,7 @@ def main(debug, game_path):
     rel_path = Path("rel/")
 
     cpp_gen = True
-    asm_gen = False
+    asm_gen = True
     mk_gen = True
     symbols_gen = True
     ref_gen = True

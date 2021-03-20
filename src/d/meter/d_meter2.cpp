@@ -121,7 +121,7 @@ struct dDlst_list_c {
 };
 
 struct dCamera_c {
-	/* 80174EA4 */ bool CalcSubjectAngle(s16*, s16*);
+	/* 80174EA4 */ void CalcSubjectAngle(s16*, s16*);
 };
 
 struct dScope_c {
@@ -129,9 +129,9 @@ struct dScope_c {
 };
 
 struct dMw_HIO_c {
-	/* 801F9E14 */ bool getBombFlag();
-	/* 801F9E1C */ bool getArrowFlag();
-	/* 801F9E24 */ bool getPachinkoFlag();
+	/* 801F9E14 */ void getBombFlag();
+	/* 801F9E1C */ void getArrowFlag();
+	/* 801F9E24 */ void getPachinkoFlag();
 };
 
 struct dMeterButton_c {
@@ -264,7 +264,7 @@ struct Z2StatusMgr {
 
 static void dMeter2_Draw(dMeter2_c*); // 2
 static void dMeter2_Execute(dMeter2_c*); // 2
-static bool dMeter2_IsDelete(dMeter2_c*); // 2
+static void dMeter2_IsDelete(dMeter2_c*); // 2
 static void dMeter2_Delete(dMeter2_c*); // 2
 static void dMeter2_Create(msg_class*); // 2
 
@@ -314,7 +314,7 @@ extern "C" void isArrowEquip__9dMeter2_cFv(); // 1
 extern "C" void isPachinkoEquip__9dMeter2_cFv(); // 1
 extern "C" static void dMeter2_Draw__FP9dMeter2_c(); // 1
 extern "C" static void dMeter2_Execute__FP9dMeter2_c(); // 1
-extern "C" static bool dMeter2_IsDelete__FP9dMeter2_c(); // 1
+extern "C" static void dMeter2_IsDelete__FP9dMeter2_c(); // 1
 extern "C" static void dMeter2_Delete__FP9dMeter2_c(); // 1
 extern "C" static void dMeter2_Create__FP9msg_class(); // 1
 extern "C" extern char const* const d_meter_d_meter2__stringBase0;
@@ -343,7 +343,7 @@ void dComIfGp_getSelectItemNum(int); // 2
 void dComIfGp_getSelectItemMaxNum(int); // 2
 void dCam_getBody(); // 2
 void dKy_darkworld_check(); // 2
-bool dMeter2Info_is2DActiveTouchArea(); // 2
+void dMeter2Info_is2DActiveTouchArea(); // 2
 void dTimer_createStockTimer(); // 2
 void cLib_addCalc2(f32*, f32, f32, f32); // 2
 void* operator new(u32); // 2
@@ -386,13 +386,13 @@ extern "C" void getLightDropNum__16dSv_light_drop_cCFUc(); // 1
 extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc(); // 1
 extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
 extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" bool CalcSubjectAngle__9dCamera_cFPsPs(); // 1
+extern "C" void CalcSubjectAngle__9dCamera_cFPsPs(); // 1
 extern "C" void dCam_getBody__Fv(); // 1
 extern "C" void __ct__8dScope_cFUc(); // 1
 extern "C" void dKy_darkworld_check__Fv(); // 1
-extern "C" bool getBombFlag__9dMw_HIO_cFv(); // 1
-extern "C" bool getArrowFlag__9dMw_HIO_cFv(); // 1
-extern "C" bool getPachinkoFlag__9dMw_HIO_cFv(); // 1
+extern "C" void getBombFlag__9dMw_HIO_cFv(); // 1
+extern "C" void getArrowFlag__9dMw_HIO_cFv(); // 1
+extern "C" void getPachinkoFlag__9dMw_HIO_cFv(); // 1
 extern "C" void __ct__14dMeterButton_cFv(); // 1
 extern "C" void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb(); // 1
 extern "C" void isClose__14dMeterButton_cFv(); // 1
@@ -473,7 +473,7 @@ extern "C" void getButtonTimer__13dMeter2Draw_cFv(); // 1
 extern "C" void isFloatingMessageVisible__13dMeter2Info_cFv(); // 1
 extern "C" void isDirectUseItem__13dMeter2Info_cFi(); // 1
 extern "C" void decHotSpringTimer__13dMeter2Info_cFv(); // 1
-extern "C" bool dMeter2Info_is2DActiveTouchArea__Fv(); // 1
+extern "C" void dMeter2Info_is2DActiveTouchArea__Fv(); // 1
 extern "C" void isPlaceMessage__12dMsgObject_cFv(); // 1
 extern "C" void getStatus__12dMsgObject_cFv(); // 1
 extern "C" void dTimer_createStockTimer__Fv(); // 1
@@ -835,9 +835,14 @@ asm void dMeter2_c::moveButtonCross() {
 
 
 /* 802230F8-802230FC 0004+00 rc=1 efc=0 rfr=False None .text      moveTouchSubMenu__9dMeter2_cFv                               */
-void dMeter2_c::moveTouchSubMenu() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMeter2_c::moveTouchSubMenu() {
+	nofralloc
+#include "asm/d/meter/d_meter2/moveTouchSubMenu__9dMeter2_cFv.s"
 }
+#pragma pop
 
 
 /* 802230FC-802231C8 00CC+00 rc=1 efc=0 rfr=False None .text      moveSubContents__9dMeter2_cFv                                */
@@ -1105,9 +1110,14 @@ asm static void dMeter2_Execute(dMeter2_c* field_0) {
 
 
 /* 80225AE0-80225AE8 0008+00 rc=1 efc=0 rfr=False None .text      dMeter2_IsDelete__FP9dMeter2_c                               */
-static bool dMeter2_IsDelete(dMeter2_c* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dMeter2_IsDelete(dMeter2_c* field_0) {
+	nofralloc
+#include "asm/d/meter/d_meter2/dMeter2_IsDelete__FP9dMeter2_c.s"
 }
+#pragma pop
 
 
 /* 80225AE8-80225B08 0020+00 rc=1 efc=0 rfr=False None .text      dMeter2_Delete__FP9dMeter2_c                                 */

@@ -40,16 +40,6 @@ struct cXyz {
 	/* 8026706C */ bool operator!=(Vec const&) const;
 };
 
-struct stage_camera2_data_class {
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct camera_class {
-};
-
 struct cSAngle {
 	/* 80030510 */ ~cSAngle();
 	/* 80271004 */ void Val(s16);
@@ -82,6 +72,16 @@ struct cSAngle {
 	/* 802712B4 */ void operator*=(f32);
 };
 
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct camera_class {
+};
+
+struct stage_camera2_data_class {
+};
+
 struct dCamera_c {
 	struct dCamInfo_c {
 		/* 8018291C */ dCamInfo_c();
@@ -110,7 +110,7 @@ struct dCamera_c {
 	/* 80090478 */ void styleEvCamera();
 	/* 80090514 */ void gameOverEvCamera();
 	/* 80091468 */ void tactEvCamera();
-	/* 800923B8 */ bool turnToActorEvCamera();
+	/* 800923B8 */ void turnToActorEvCamera();
 	/* 800923C0 */ void stbWaitEvCamera();
 	/* 800924D0 */ void saveEvCamera();
 	/* 8009258C */ void loadEvCamera();
@@ -125,7 +125,7 @@ struct dCamera_c {
 	/* 80095FD0 */ void digHoleEvCamera();
 	/* 800965AC */ void hintTalkEvCamera();
 	/* 80096EDC */ void bspTransEvCamera();
-	/* 80097694 */ bool portalWarpEvCamera();
+	/* 80097694 */ void portalWarpEvCamera();
 	/* 8009771C */ void attentionPos(fopAc_ac_c*);
 	/* 80097738 */ void directionOf(fopAc_ac_c*);
 	/* 8009775C */ void positionOf(fopAc_ac_c*);
@@ -200,26 +200,26 @@ struct dCamera_c {
 	/* 8016E4F4 */ void talktoCamera(s32);
 	/* 80174E18 */ void talkBasePos(fopAc_ac_c*);
 	/* 80174E34 */ void talkEyePos(fopAc_ac_c*);
-	/* 80174EA4 */ bool CalcSubjectAngle(s16*, s16*);
+	/* 80174EA4 */ void CalcSubjectAngle(s16*, s16*);
 	/* 80174EAC */ void SaveZoomRatio();
 	/* 80174ED4 */ void subjectCamera(s32);
 	/* 80176074 */ void magneCamera(s32);
 	/* 801767F8 */ void colosseumCamera(s32);
-	/* 80176DF0 */ bool test1Camera(s32);
-	/* 80176DF8 */ bool test2Camera(s32);
+	/* 80176DF0 */ void test1Camera(s32);
+	/* 80176DF8 */ void test2Camera(s32);
 	/* 80176E00 */ void towerCamera(s32);
 	/* 80178E50 */ void hookshotCamera(s32);
 	/* 80179590 */ void railCamera(s32);
 	/* 8017A2A0 */ void paraRailCamera(s32);
 	/* 8017ADC0 */ void rideCamera(s32);
-	/* 8017D974 */ bool manualCamera(s32);
+	/* 8017D974 */ void manualCamera(s32);
 	/* 8017D97C */ void observeCamera(s32);
 	/* 8017DFAC */ void fixedFrameCamera(s32);
 	/* 8017E730 */ void fixedPositionCamera(s32);
 	/* 8017F25C */ void oneSideCamera(s32);
 	/* 8017F828 */ void eventCamera(s32);
 	/* 8018050C */ void currentEvCamera();
-	/* 801806D4 */ bool letCamera(s32);
+	/* 801806D4 */ void letCamera(s32);
 	/* 801806DC */ void setEventRecoveryTrans(s16);
 	/* 80180738 */ void runEventRecoveryTrans();
 	/* 80180A40 */ void EventRecoverNotime();
@@ -326,7 +326,7 @@ struct dCamForcusLine {
 };
 
 struct daAlink_c {
-	/* 8009D87C */ bool getE3Zhint();
+	/* 8009D87C */ void getE3Zhint();
 	/* 800D2ABC */ void checkCutLargeTurnState() const;
 	/* 800DE884 */ void checkBowCameraArrowPosP(s16*, s16*);
 	/* 800E1390 */ void getCopyRodCameraActor();
@@ -525,12 +525,12 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-struct csXyz {
-};
-
 struct dBgS_RoofChk {
 	/* 80078FF4 */ dBgS_RoofChk();
 	/* 80079090 */ ~dBgS_RoofChk();
+};
+
+struct csXyz {
 };
 
 struct dBgS {
@@ -605,7 +605,7 @@ struct cDegree {
 };
 
 struct dCstick_c {
-	/* 8008845C */ bool Shift(u32);
+	/* 8008845C */ void Shift(u32);
 };
 
 struct cM3dGSph {
@@ -652,7 +652,7 @@ static void init_phase1(camera_class*); // 2
 static void init_phase2(camera_class*); // 2
 static void camera_create(camera_class*); // 2
 static void camera_delete(camera_process_class*); // 2
-static bool is_camera_delete(void*); // 2
+static void is_camera_delete(void*); // 2
 static void daAlink_getAlinkActorClass(); // 2
 static void dComIfGs_isTmpBit(u16); // 2
 static void dComIfGp_getAttention(); // 2
@@ -753,27 +753,27 @@ extern "C" void talktoCamera__9dCamera_cFl(); // 1
 extern "C" void talkBasePos__9dCamera_cFP10fopAc_ac_c(); // 1
 extern "C" void talkEyePos__9dCamera_cFP10fopAc_ac_c(); // 1
 extern "C" static void func_80174E50(); // 1
-extern "C" bool CalcSubjectAngle__9dCamera_cFPsPs(); // 1
+extern "C" void CalcSubjectAngle__9dCamera_cFPsPs(); // 1
 extern "C" void SaveZoomRatio__9dCamera_cFv(); // 1
 extern "C" void subjectCamera__9dCamera_cFl(); // 1
 extern "C" void magneCamera__9dCamera_cFl(); // 1
 extern "C" void colosseumCamera__9dCamera_cFl(); // 1
-extern "C" bool test1Camera__9dCamera_cFl(); // 1
-extern "C" bool test2Camera__9dCamera_cFl(); // 1
+extern "C" void test1Camera__9dCamera_cFl(); // 1
+extern "C" void test2Camera__9dCamera_cFl(); // 1
 extern "C" void towerCamera__9dCamera_cFl(); // 1
 extern "C" void hookshotCamera__9dCamera_cFl(); // 1
 extern "C" void railCamera__9dCamera_cFl(); // 1
 extern "C" void paraRailCamera__9dCamera_cFl(); // 1
 extern "C" void rideCamera__9dCamera_cFl(); // 1
 extern "C" static void func_8017D934(); // 1
-extern "C" bool manualCamera__9dCamera_cFl(); // 1
+extern "C" void manualCamera__9dCamera_cFl(); // 1
 extern "C" void observeCamera__9dCamera_cFl(); // 1
 extern "C" void fixedFrameCamera__9dCamera_cFl(); // 1
 extern "C" void fixedPositionCamera__9dCamera_cFl(); // 1
 extern "C" void oneSideCamera__9dCamera_cFl(); // 1
 extern "C" void eventCamera__9dCamera_cFl(); // 1
 extern "C" void currentEvCamera__9dCamera_cFv(); // 1
-extern "C" bool letCamera__9dCamera_cFl(); // 1
+extern "C" void letCamera__9dCamera_cFl(); // 1
 extern "C" void setEventRecoveryTrans__9dCamera_cFs(); // 1
 extern "C" void runEventRecoveryTrans__9dCamera_cFv(); // 1
 extern "C" void EventRecoverNotime__9dCamera_cFv(); // 1
@@ -815,7 +815,7 @@ extern "C" static void init_phase1__FP12camera_class(); // 1
 extern "C" static void init_phase2__FP12camera_class(); // 1
 extern "C" static void camera_create__FP12camera_class(); // 1
 extern "C" static void camera_delete__FP20camera_process_class(); // 1
-extern "C" static bool is_camera_delete__FPv(); // 1
+extern "C" static void is_camera_delete__FPv(); // 1
 extern "C" void Init__14dCamForcusLineFv(); // 1
 extern "C" void Draw__14dCamForcusLineFv(); // 1
 extern "C" void Off__14dCamForcusLineFv(); // 1
@@ -1094,7 +1094,7 @@ extern "C" void __dt__7cDegreeFv(); // 1
 extern "C" void xyzRotateX__8dCamMathFR4cXyz7cSAngle(); // 1
 extern "C" void xyzRotateY__8dCamMathFR4cXyz7cSAngle(); // 1
 extern "C" void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz(); // 1
-extern "C" bool Shift__9dCstick_cFUl(); // 1
+extern "C" void Shift__9dCstick_cFUl(); // 1
 extern "C" void __ct__11dCamParam_cFl(); // 1
 extern "C" void __dt__11dCamParam_cFv(); // 1
 extern "C" void Change__11dCamParam_cFl(); // 1
@@ -1131,7 +1131,7 @@ extern "C" void maptoolIdEvCamera__9dCamera_cFv(); // 1
 extern "C" void styleEvCamera__9dCamera_cFv(); // 1
 extern "C" void gameOverEvCamera__9dCamera_cFv(); // 1
 extern "C" void tactEvCamera__9dCamera_cFv(); // 1
-extern "C" bool turnToActorEvCamera__9dCamera_cFv(); // 1
+extern "C" void turnToActorEvCamera__9dCamera_cFv(); // 1
 extern "C" void stbWaitEvCamera__9dCamera_cFv(); // 1
 extern "C" void saveEvCamera__9dCamera_cFv(); // 1
 extern "C" void loadEvCamera__9dCamera_cFv(); // 1
@@ -1146,7 +1146,7 @@ extern "C" void peepHoleEvCamera__9dCamera_cFv(); // 1
 extern "C" void digHoleEvCamera__9dCamera_cFv(); // 1
 extern "C" void hintTalkEvCamera__9dCamera_cFv(); // 1
 extern "C" void bspTransEvCamera__9dCamera_cFv(); // 1
-extern "C" bool portalWarpEvCamera__9dCamera_cFv(); // 1
+extern "C" void portalWarpEvCamera__9dCamera_cFv(); // 1
 extern "C" void attentionPos__9dCamera_cFP10fopAc_ac_c(); // 1
 extern "C" void directionOf__9dCamera_cFP10fopAc_ac_c(); // 1
 extern "C" void positionOf__9dCamera_cFP10fopAc_ac_c(); // 1
@@ -1157,7 +1157,7 @@ extern "C" void __as__4cXyzFRC4cXyz(); // 1
 extern "C" void __ct__4cXyzFRC4cXyz(); // 1
 extern "C" void Init__14d2DBSplinePathFll(); // 1
 extern "C" void Spot__14d2DBSplinePathFPff(); // 1
-extern "C" bool getE3Zhint__9daAlink_cFv(); // 1
+extern "C" void getE3Zhint__9daAlink_cFv(); // 1
 extern "C" void checkCutLargeTurnState__9daAlink_cCFv(); // 1
 extern "C" void checkBowCameraArrowPosP__9daAlink_cFPsPs(); // 1
 extern "C" void getCopyRodCameraActor__9daAlink_cFv(); // 1
@@ -2224,9 +2224,14 @@ extern "C" asm static void func_801602C4() {
 
 
 /* 80160300-80160304 0004+00 rc=1 efc=0 rfr=False None .text      __ct__Q29dCamera_c23@class$3665d_camera_cppFv                */
-extern "C" static void func_80160300() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+extern "C" asm static void func_80160300() {
+	nofralloc
+#include "asm/d/d_camera/func_80160300.s"
 }
+#pragma pop
 
 
 /* 80160304-80160470 016C+00 rc=1 efc=0 rfr=False None .text      __dt__9dCamera_cFv                                           */
@@ -2418,9 +2423,14 @@ asm void dCamera_c::checkForceLockTarget() {
 
 
 /* 801622B0-801622B4 0004+00 rc=1 efc=0 rfr=False None .text      infoReport__9dCamera_cFv                                     */
-void dCamera_c::infoReport() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dCamera_c::infoReport() {
+	nofralloc
+#include "asm/d/d_camera/infoReport__9dCamera_cFv.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */
@@ -3366,9 +3376,14 @@ extern "C" asm static void func_8016E410() {
 
 
 /* 8016E420-8016E424 0004+00 rc=2 efc=0 rfr=False None .text      __ct__7cSGlobeFv                                             */
-cSGlobe::cSGlobe() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cSGlobe::cSGlobe() {
+	nofralloc
+#include "asm/d/d_camera/__ct__7cSGlobeFv.s"
 }
+#pragma pop
 
 
 /* 8016E424-8016E448 0024+00 rc=1 efc=0 rfr=False None .text      LockEdge__12dAttention_cFv                                   */
@@ -3540,9 +3555,14 @@ extern "C" asm static void func_80174E50() {
 
 
 /* 80174EA4-80174EAC 0008+00 rc=1 efc=1 rfr=False None .text      CalcSubjectAngle__9dCamera_cFPsPs                            */
-bool dCamera_c::CalcSubjectAngle(s16* field_0, s16* field_1) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dCamera_c::CalcSubjectAngle(s16* field_0, s16* field_1) {
+	nofralloc
+#include "asm/d/d_camera/CalcSubjectAngle__9dCamera_cFPsPs.s"
 }
+#pragma pop
 
 
 /* 80174EAC-80174ED4 0028+00 rc=0 efc=0 rfr=False None .text      SaveZoomRatio__9dCamera_cFv                                  */
@@ -3617,15 +3637,25 @@ asm void dCamera_c::colosseumCamera(s32 field_0) {
 
 
 /* 80176DF0-80176DF8 0008+00 rc=1 efc=0 rfr=False None .text      test1Camera__9dCamera_cFl                                    */
-bool dCamera_c::test1Camera(s32 field_0) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dCamera_c::test1Camera(s32 field_0) {
+	nofralloc
+#include "asm/d/d_camera/test1Camera__9dCamera_cFl.s"
 }
+#pragma pop
 
 
 /* 80176DF8-80176E00 0008+00 rc=1 efc=0 rfr=False None .text      test2Camera__9dCamera_cFl                                    */
-bool dCamera_c::test2Camera(s32 field_0) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dCamera_c::test2Camera(s32 field_0) {
+	nofralloc
+#include "asm/d/d_camera/test2Camera__9dCamera_cFl.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */
@@ -3781,9 +3811,14 @@ extern "C" asm static void func_8017D934() {
 
 
 /* 8017D974-8017D97C 0008+00 rc=1 efc=0 rfr=False None .text      manualCamera__9dCamera_cFl                                   */
-bool dCamera_c::manualCamera(s32 field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dCamera_c::manualCamera(s32 field_0) {
+	nofralloc
+#include "asm/d/d_camera/manualCamera__9dCamera_cFl.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */
@@ -3860,9 +3895,14 @@ asm void dCamera_c::currentEvCamera() {
 
 
 /* 801806D4-801806DC 0008+00 rc=1 efc=0 rfr=False None .text      letCamera__9dCamera_cFl                                      */
-bool dCamera_c::letCamera(s32 field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dCamera_c::letCamera(s32 field_0) {
+	nofralloc
+#include "asm/d/d_camera/letCamera__9dCamera_cFl.s"
 }
+#pragma pop
 
 
 /* 801806DC-80180738 005C+00 rc=2 efc=0 rfr=False None .text      setEventRecoveryTrans__9dCamera_cFs                          */
@@ -4345,9 +4385,14 @@ asm static void camera_delete(camera_process_class* field_0) {
 
 
 /* 801824C0-801824C8 0008+00 rc=1 efc=0 rfr=False None .text      is_camera_delete__FPv                                        */
-static bool is_camera_delete(void* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void is_camera_delete(void* field_0) {
+	nofralloc
+#include "asm/d/d_camera/is_camera_delete__FPv.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */
@@ -4542,9 +4587,14 @@ asm d2DBSplinePath::~d2DBSplinePath() {
 
 
 /* 8018291C-80182920 0004+00 rc=1 efc=0 rfr=False None .text      __ct__Q29dCamera_c10dCamInfo_cFv                             */
-dCamera_c::dCamInfo_c::dCamInfo_c() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm dCamera_c::dCamInfo_c::dCamInfo_c() {
+	nofralloc
+#include "asm/d/d_camera/__ct__Q29dCamera_c10dCamInfo_cFv.s"
 }
+#pragma pop
 
 
 /* 80182920-8018295C 003C+00 rc=2 efc=0 rfr=False None .text      __dt__Q29dCamera_c10dCamInfo_cFv                             */
@@ -4647,9 +4697,14 @@ asm void daPy_py_c::checkThrowDamage() const {
 
 
 /* 801829EC-801829F0 0004+00 rc=1 efc=0 rfr=False None .text      GetNP__8cM3dGPlaFv                                           */
-void cM3dGPla::GetNP() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void cM3dGPla::GetNP() {
+	nofralloc
+#include "asm/d/d_camera/GetNP__8cM3dGPlaFv.s"
 }
+#pragma pop
 
 
 /* 801829F0-801829F8 0008+00 rc=4 efc=0 rfr=False None .text      GetCross__11cBgS_LinChkFv                                    */
@@ -4719,9 +4774,14 @@ asm void std::fabsf(f32 field_0) {
 
 
 /* 80182A48-80182A4C 0004+00 rc=2 efc=0 rfr=False None .text      __ct__7cSAngleFv                                             */
-cSAngle::cSAngle() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cSAngle::cSAngle() {
+	nofralloc
+#include "asm/d/d_camera/__ct__7cSAngleFv.s"
 }
+#pragma pop
 
 
 /* 80182A4C-80182A54 0008+00 rc=2 efc=0 rfr=False None .text      R__7cSGlobeFf                                                */

@@ -12,7 +12,7 @@
 // 
 
 struct J3DShapeMtx {
-	/* 80273E08 */ bool getUseMtxNum() const;
+	/* 80273E08 */ void getUseMtxNum() const;
 };
 
 // 
@@ -20,7 +20,7 @@ struct J3DShapeMtx {
 // 
 
 
-extern "C" bool getUseMtxNum__11J3DShapeMtxCFv(); // 1
+extern "C" void getUseMtxNum__11J3DShapeMtxCFv(); // 1
 
 // 
 // External References:
@@ -33,8 +33,13 @@ extern "C" bool getUseMtxNum__11J3DShapeMtxCFv(); // 1
 // 
 
 /* 80273E08-80273E10 0008+00 rc=4 efc=4 rfr=False None .text      getUseMtxNum__11J3DShapeMtxCFv                               */
-bool J3DShapeMtx::getUseMtxNum() const {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J3DShapeMtx::getUseMtxNum() const {
+	nofralloc
+#include "asm/JSystem/J3DU/J3DUDL/getUseMtxNum__11J3DShapeMtxCFv.s"
 }
+#pragma pop
 
 

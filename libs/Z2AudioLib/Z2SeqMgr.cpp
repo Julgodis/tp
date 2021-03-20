@@ -1376,21 +1376,36 @@ asm void Z2SeqMgr::fieldBgmFramework() {
 
 
 /* 802B5E80-802B5E84 0004+00 rc=1 efc=0 rfr=False None .text      mbossBgmMuteProcess__8Z2SeqMgrFv                             */
-void Z2SeqMgr::mbossBgmMuteProcess() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void Z2SeqMgr::mbossBgmMuteProcess() {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/mbossBgmMuteProcess__8Z2SeqMgrFv.s"
 }
+#pragma pop
 
 
 /* 802B5E84-802B5E88 0004+00 rc=2 efc=2 rfr=False None .text      bgmSetSwordUsing__8Z2SeqMgrFl                                */
-void Z2SeqMgr::bgmSetSwordUsing(s32 field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void Z2SeqMgr::bgmSetSwordUsing(s32 field_0) {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/bgmSetSwordUsing__8Z2SeqMgrFl.s"
 }
+#pragma pop
 
 
 /* 802B5E88-802B5E8C 0004+00 rc=1 efc=1 rfr=False None .text      bgmNowBattle__8Z2SeqMgrFf                                    */
-void Z2SeqMgr::bgmNowBattle(f32 field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void Z2SeqMgr::bgmNowBattle(f32 field_0) {
+	nofralloc
+#include "asm/Z2AudioLib/Z2SeqMgr/bgmNowBattle__8Z2SeqMgrFf.s"
 }
+#pragma pop
 
 
 /* 802B5E8C-802B5ED4 0048+00 rc=1 efc=1 rfr=False None .text      taktModeMute__8Z2SeqMgrFv                                    */

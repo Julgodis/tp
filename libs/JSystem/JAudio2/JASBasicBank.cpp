@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JKRHeap {
+struct JASInst {
 };
 
 struct JASInstParam {
 };
 
-struct JASInst {
+struct JKRHeap {
 };
 
 struct JASBasicBank {

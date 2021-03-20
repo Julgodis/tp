@@ -11,19 +11,7 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
-struct J2DAnmVisibilityFull {
-};
-
 struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmTexPattern {
 };
 
 struct J2DAnmBase {
@@ -38,22 +26,25 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DBasePosition {
+struct _GXCullMode {
 };
 
-struct ResFONT {
-};
-
-struct J2DRotateAxis {
+struct J2DAnmTransform {
 };
 
 struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmVtxColor {
+struct ResTIMG {
 };
 
-struct _GXCullMode {
+struct J2DAnmTexPattern {
+};
+
+struct ResFONT {
+};
+
+struct J2DAnmVtxColor {
 };
 
 struct JGeometry {
@@ -65,15 +56,24 @@ struct JGeometry {
 
 };
 
+struct J2DAnmColor {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DRotateAxis {
+};
+
+struct JKRArchive {
+};
+
 struct J2DGrafContext {
 	/* 802E8E20 */ void setScissor();
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
-struct J2DAnmColor {
-};
-
-struct ResTIMG {
+struct J2DBasePosition {
 };
 
 struct J2DPane {
@@ -81,7 +81,7 @@ struct J2DPane {
 	/* 80053BC0 */ void calcMtx();
 	/* 80053C00 */ void makeMatrix(f32, f32);
 	/* 802F7540 */ void makeMatrix(f32, f32, f32, f32);
-	/* 80053C3C */ s32 getTypeID() const;
+	/* 80053C3C */ void getTypeID() const;
 	/* 80256018 */ void setAnimation(J2DAnmVtxColor*);
 	/* 8025601C */ void setAnimation(J2DAnmVisibilityFull*);
 	/* 80256020 */ void setAnimation(J2DAnmTexPattern*);
@@ -239,7 +239,7 @@ void operator delete(void*); // 2
 extern "C" void setAlpha__7J2DPaneFUc(); // 1
 extern "C" void calcMtx__7J2DPaneFv(); // 1
 extern "C" void makeMatrix__7J2DPaneFff(); // 1
-extern "C" s32 getTypeID__7J2DPaneCFv(); // 1
+extern "C" void getTypeID__7J2DPaneCFv(); // 1
 extern "C" void setAnimation__7J2DPaneFP15J2DAnmTevRegKey(); // 1
 extern "C" void setAnimation__7J2DPaneFP11J2DAnmColor(); // 1
 extern "C" void setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey(); // 1
@@ -879,15 +879,25 @@ asm void J2DPane::updateTransform(J2DAnmTransform const* field_0) {
 
 
 /* 802F83C8-802F83CC 0004+00 rc=1 efc=0 rfr=False None .text      drawSelf__7J2DPaneFffPA3_A4_f                                */
-void J2DPane::drawSelf(f32 field_0, f32 field_1, f32 (* field_2)[3][4]) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J2DPane::drawSelf(f32 field_0, f32 field_1, f32 (* field_2)[3][4]) {
+	nofralloc
+#include "asm/JSystem/J2DGraph/J2DPane/drawSelf__7J2DPaneFffPA3_A4_f.s"
 }
+#pragma pop
 
 
 /* 802F83CC-802F83D0 0004+00 rc=2 efc=1 rfr=False None .text      rewriteAlpha__7J2DPaneFv                                     */
-void J2DPane::rewriteAlpha() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J2DPane::rewriteAlpha() {
+	nofralloc
+#include "asm/JSystem/J2DGraph/J2DPane/rewriteAlpha__7J2DPaneFv.s"
 }
+#pragma pop
 
 
 /* 802F83D0-802F83FC 002C+00 rc=7 efc=6 rfr=False None .text      setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull             */
@@ -935,15 +945,25 @@ asm void J2DPane::setConnectParent(bool field_0) {
 
 
 /* 802F8474-802F8478 0004+00 rc=8 efc=7 rfr=False None .text      update__7J2DPaneFv                                           */
-void J2DPane::update() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J2DPane::update() {
+	nofralloc
+#include "asm/JSystem/J2DGraph/J2DPane/update__7J2DPaneFv.s"
 }
+#pragma pop
 
 
 /* 802F8478-802F847C 0004+00 rc=2 efc=1 rfr=False None .text      drawSelf__7J2DPaneFff                                        */
-void J2DPane::drawSelf(f32 field_0, f32 field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void J2DPane::drawSelf(f32 field_0, f32 field_1) {
+	nofralloc
+#include "asm/JSystem/J2DGraph/J2DPane/drawSelf__7J2DPaneFff.s"
 }
+#pragma pop
 
 
 /* 802F847C-802F8498 001C+00 rc=1 efc=1 rfr=False None .text      __sinit_J2DPane_cpp                                          */

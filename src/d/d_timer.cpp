@@ -35,12 +35,12 @@ struct dTimer_c {
 	/* 802613DC */ void createGetIn(cXyz);
 };
 
+struct JKRArchive {
+};
+
 struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 	/* 802F7FCC */ void animationTransform();
-};
-
-struct JKRArchive {
 };
 
 struct dDlst_TimerScrnDraw_c {
@@ -186,7 +186,7 @@ struct J2DAnmLoaderDataBase {
 
 static void dTimer_Draw(dTimer_c*); // 2
 static void dTimer_Execute(dTimer_c*); // 2
-static bool dTimer_IsDelete(dTimer_c*); // 2
+static void dTimer_IsDelete(dTimer_c*); // 2
 static void dTimer_Delete(dTimer_c*); // 2
 static void dTimer_Create(msg_class*); // 2
 void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32); // 2
@@ -243,7 +243,7 @@ extern "C" void playBckAnimation__21dDlst_TimerScrnDraw_cFf(); // 1
 extern "C" void drawPikari__21dDlst_TimerScrnDraw_cFi(); // 1
 extern "C" static void dTimer_Draw__FP8dTimer_c(); // 1
 extern "C" static void dTimer_Execute__FP8dTimer_c(); // 1
-extern "C" static bool dTimer_IsDelete__FP8dTimer_c(); // 1
+extern "C" static void dTimer_IsDelete__FP8dTimer_c(); // 1
 extern "C" static void dTimer_Delete__FP8dTimer_c(); // 1
 extern "C" static void dTimer_Create__FP9msg_class(); // 1
 extern "C" void dTimer_createTimer__FlUlUcUcffff(); // 1
@@ -982,9 +982,14 @@ asm static void dTimer_Execute(dTimer_c* field_0) {
 
 
 /* 80260F44-80260F4C 0008+00 rc=1 efc=0 rfr=False None .text      dTimer_IsDelete__FP8dTimer_c                                 */
-static bool dTimer_IsDelete(dTimer_c* field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm static void dTimer_IsDelete(dTimer_c* field_0) {
+	nofralloc
+#include "asm/d/d_timer/dTimer_IsDelete__FP8dTimer_c.s"
 }
+#pragma pop
 
 
 /* 80260F4C-80260F6C 0020+00 rc=1 efc=0 rfr=False None .text      dTimer_Delete__FP8dTimer_c                                   */

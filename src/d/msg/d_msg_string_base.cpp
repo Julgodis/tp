@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JUTFont {
+struct COutFont_c {
 };
 
 struct J2DTextBox {
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
 struct dMsgStringBase_c {
@@ -268,9 +268,14 @@ asm void dMsgStringBase_c::getMessageLocal(u32 field_0, char* field_1) {
 
 
 /* 80249BAC-80249BB0 0004+00 rc=1 efc=0 rfr=False None .text      drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc    */
-void dMsgStringBase_c::drawFontLocal(J2DTextBox* field_0, u8 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, u8 field_7) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgStringBase_c::drawFontLocal(J2DTextBox* field_0, u8 field_1, f32 field_2, f32 field_3, f32 field_4, f32 field_5, u32 field_6, u8 field_7) {
+	nofralloc
+#include "asm/d/msg/d_msg_string_base/drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc.s"
 }
+#pragma pop
 
 
 /* 80249BB0-80249BD0 0020+00 rc=1 efc=0 rfr=False None .text      getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
@@ -307,14 +312,24 @@ asm void dMsgStringBase_c::getMessage(u32 field_0, char* field_1) {
 
 
 /* 80249C18-80249C1C 0004+00 rc=1 efc=0 rfr=False None .text      resetStringLocal__16dMsgStringBase_cFP10J2DTextBox           */
-void dMsgStringBase_c::resetStringLocal(J2DTextBox* field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgStringBase_c::resetStringLocal(J2DTextBox* field_0) {
+	nofralloc
+#include "asm/d/msg/d_msg_string_base/resetStringLocal__16dMsgStringBase_cFP10J2DTextBox.s"
 }
+#pragma pop
 
 
 /* 80249C1C-80249C20 0004+00 rc=1 efc=0 rfr=False None .text      drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf          */
-void dMsgStringBase_c::drawOutFontLocal(J2DTextBox* field_0, f32 field_1) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMsgStringBase_c::drawOutFontLocal(J2DTextBox* field_0, f32 field_1) {
+	nofralloc
+#include "asm/d/msg/d_msg_string_base/drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf.s"
 }
+#pragma pop
 
 

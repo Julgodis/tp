@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JKRHeap {
-};
-
 struct ResTIMG {
 };
 
 struct JPAResource {
+};
+
+struct JKRHeap {
 };
 
 struct JPATexture {

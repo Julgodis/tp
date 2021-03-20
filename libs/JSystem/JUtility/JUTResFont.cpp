@@ -11,16 +11,19 @@
 // Types:
 // 
 
-struct JKRHeap {
-};
-
-struct ResFONT {
-};
-
 struct JUtility {
 	struct TColor {
 	};
 
+};
+
+struct _GXTexMapID {
+};
+
+struct JKRHeap {
+};
+
+struct ResFONT {
 };
 
 struct JUTFont {
@@ -29,12 +32,9 @@ struct JUTFont {
 
 	/* 802DECF8 */ JUTFont();
 	/* 802DED24 */ void initialize_state();
-	/* 802E0108 */ bool isLeadByte_1Byte(int);
-	/* 802E0110 */ bool isLeadByte_2Byte(int);
+	/* 802E0108 */ void isLeadByte_1Byte(int);
+	/* 802E0110 */ void isLeadByte_2Byte(int);
 	/* 802E0118 */ void isLeadByte_ShiftJIS(int);
-};
-
-struct _GXTexMapID {
 };
 
 struct JUTResFont {
@@ -92,8 +92,8 @@ extern "C" void isLeadByte__10JUTResFontCFi(); // 1
 extern "C" void getFontCode__10JUTResFontCFi(); // 1
 extern "C" void loadImage__10JUTResFontFi11_GXTexMapID(); // 1
 extern "C" void convertSjis__10JUTResFontCFiPUs(); // 1
-extern "C" bool isLeadByte_1Byte__7JUTFontFi(); // 1
-extern "C" bool isLeadByte_2Byte__7JUTFontFi(); // 1
+extern "C" void isLeadByte_1Byte__7JUTFontFi(); // 1
+extern "C" void isLeadByte_2Byte__7JUTFontFi(); // 1
 extern "C" void isLeadByte_ShiftJIS__7JUTFontFi(); // 1
 extern "C" extern void* const saoAboutEncoding___10JUTResFont[3];
 extern "C" extern char const* const JUTResFont__stringBase0;
@@ -447,15 +447,25 @@ asm void JUTResFont::convertSjis(int field_0, u16* field_1) const {
 
 
 /* 802E0108-802E0110 0008+00 rc=1 efc=0 rfr=False None .text      isLeadByte_1Byte__7JUTFontFi                                 */
-bool JUTFont::isLeadByte_1Byte(int field_0) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JUTFont::isLeadByte_1Byte(int field_0) {
+	nofralloc
+#include "asm/JSystem/JUtility/JUTResFont/isLeadByte_1Byte__7JUTFontFi.s"
 }
+#pragma pop
 
 
 /* 802E0110-802E0118 0008+00 rc=1 efc=0 rfr=False None .text      isLeadByte_2Byte__7JUTFontFi                                 */
-bool JUTFont::isLeadByte_2Byte(int field_0) {
-	return true;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JUTFont::isLeadByte_2Byte(int field_0) {
+	nofralloc
+#include "asm/JSystem/JUtility/JUTResFont/isLeadByte_2Byte__7JUTFontFi.s"
 }
+#pragma pop
 
 
 /* 802E0118-802E0148 0030+00 rc=1 efc=0 rfr=False None .text      isLeadByte_ShiftJIS__7JUTFontFi                              */

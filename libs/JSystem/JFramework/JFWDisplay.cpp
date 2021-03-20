@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct _GXRenderModeObj {
-};
-
 struct JKRHeap {
 };
 
@@ -23,6 +20,9 @@ struct JUTXfb {
 
 	/* 802E53B8 */ void createManager(JKRHeap*, JUTXfb::EXfbNumber);
 	/* 802E5424 */ void destroyManager();
+};
+
+struct _GXRenderModeObj {
 };
 
 struct _GXColor {

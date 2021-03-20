@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct cXyz {
+struct cBgS_PolyInfo {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct cBgD_t {
 };
 
-struct cBgS_PolyInfo {
+struct csXyz {
 };
 
 struct dBgWSv {
@@ -38,13 +38,13 @@ struct dBgW_Base {
 	/* 80074AB4 */ void SetOldShapeAngleY(s16);
 };
 
+struct cBgS_LinChk {
+};
+
 struct cBgS_ShdwDraw {
 };
 
 struct cBgS_GndChk {
-};
-
-struct cBgS_LinChk {
 };
 
 struct cBgW {
@@ -67,28 +67,28 @@ struct cBgW {
 	/* 8007B964 */ void ChkMoveBg() const;
 };
 
-struct dBgS_SplGrpChk {
-};
-
-struct cBgS_GrpPassChk {
-};
-
-struct dBgS_Acch {
-};
-
-struct dBgS_CaptPoly {
-};
-
-struct cBgS_PolyPassChk {
+struct fopAc_ac_c {
 };
 
 struct dBgS_SphChk {
 };
 
+struct dBgS_Acch {
+};
+
+struct cBgS_PolyPassChk {
+};
+
 struct dBgS_RoofChk {
 };
 
-struct fopAc_ac_c {
+struct cBgS_GrpPassChk {
+};
+
+struct dBgS_SplGrpChk {
+};
+
+struct dBgS_CaptPoly {
 };
 
 struct dBgW {
@@ -306,9 +306,14 @@ asm void dBgWSv::TransPos(cBgS_PolyInfo const& field_0, void* field_1, bool fiel
 
 
 /* 800835D8-800835DC 0004+00 rc=1 efc=0 rfr=False None .text      MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
-void dBgWSv::MatrixCrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_2, cXyz* field_3, csXyz* field_4, csXyz* field_5) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dBgWSv::MatrixCrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_2, cXyz* field_3, csXyz* field_4, csXyz* field_5) {
+	nofralloc
+#include "asm/d/bg/d_bg_w_sv/MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

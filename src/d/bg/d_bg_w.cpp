@@ -21,19 +21,16 @@ struct cBgW_NodeTree {
 	/* 80079238 */ ~cBgW_NodeTree();
 };
 
+struct cBgS_LinChk {
+};
+
 struct cXyz {
 };
 
 struct cBgS_GrpPassChk {
 };
 
-struct cBgD_t {
-};
-
 struct cBgS_ShdwDraw {
-};
-
-struct cBgS_GndChk {
 };
 
 struct cBgS_PolyInfo {
@@ -43,7 +40,10 @@ struct cBgS_PolyInfo {
 struct cBgS_PolyPassChk {
 };
 
-struct cBgS_LinChk {
+struct cBgD_t {
+};
+
+struct cBgS_GndChk {
 };
 
 struct cBgW {
@@ -80,9 +80,9 @@ struct cBgW {
 	/* 8007AEA4 */ void ShdwDrawRp(cBgS_ShdwDraw*, int);
 	/* 8007AFC0 */ void ShdwDrawGrpRp(cBgS_ShdwDraw*, int);
 	/* 8007B084 */ void ShdwDraw(cBgS_ShdwDraw*);
-	/* 8007B0A8 */ bool ChkPolyThrough(int, cBgS_PolyPassChk*);
+	/* 8007B0A8 */ void ChkPolyThrough(int, cBgS_PolyPassChk*);
 	/* 8007B0B0 */ void ChkShdwDrawThrough(int, cBgS_PolyPassChk*);
-	/* 8007B0DC */ bool ChkGrpThrough(int, cBgS_GrpPassChk*, int);
+	/* 8007B0DC */ void ChkGrpThrough(int, cBgS_GrpPassChk*, int);
 	/* 8007B0E4 */ void GetGrpRoomIndex(cBgS_PolyInfo const&) const;
 	/* 8007B164 */ void GetBnd() const;
 	/* 8007B17C */ void GetTrans(cXyz*) const;
@@ -124,7 +124,13 @@ struct cM3dGTri {
 	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
 };
 
-struct dBgS_SplGrpChk {
+struct dBgS_SphChk {
+};
+
+struct fopAc_ac_c {
+};
+
+struct csXyz {
 };
 
 struct dBgS_Acch {
@@ -134,19 +140,13 @@ struct dBgS_Acch {
 	/* 800772E8 */ void CalcMovePosWork();
 };
 
-struct dBgS_CaptPoly {
-};
-
-struct csXyz {
-};
-
-struct dBgS_SphChk {
-};
-
 struct dBgS_RoofChk {
 };
 
-struct fopAc_ac_c {
+struct dBgS_SplGrpChk {
+};
+
+struct dBgS_CaptPoly {
 };
 
 struct dBgW {
@@ -303,9 +303,9 @@ extern "C" void RwgShdwDraw__4cBgWFiP13cBgS_ShdwDraw(); // 1
 extern "C" void ShdwDrawRp__4cBgWFP13cBgS_ShdwDrawi(); // 1
 extern "C" void ShdwDrawGrpRp__4cBgWFP13cBgS_ShdwDrawi(); // 1
 extern "C" void ShdwDraw__4cBgWFP13cBgS_ShdwDraw(); // 1
-extern "C" bool ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk(); // 1
+extern "C" void ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk(); // 1
 extern "C" void ChkShdwDrawThrough__4cBgWFiP16cBgS_PolyPassChk(); // 1
-extern "C" bool ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki(); // 1
+extern "C" void ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki(); // 1
 extern "C" void GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo(); // 1
 extern "C" void GetBnd__4cBgWCFv(); // 1
 extern "C" void GetTrans__4cBgWCFP4cXyz(); // 1
@@ -1156,9 +1156,14 @@ asm void cBgW::ShdwDraw(cBgS_ShdwDraw* field_0) {
 
 
 /* 8007B0A8-8007B0B0 0008+00 rc=1 efc=0 rfr=False None .text      ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk                   */
-bool cBgW::ChkPolyThrough(int field_0, cBgS_PolyPassChk* field_1) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void cBgW::ChkPolyThrough(int field_0, cBgS_PolyPassChk* field_1) {
+	nofralloc
+#include "asm/d/bg/d_bg_w/ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk.s"
 }
+#pragma pop
 
 
 /* 8007B0B0-8007B0DC 002C+00 rc=1 efc=0 rfr=False None .text      ChkShdwDrawThrough__4cBgWFiP16cBgS_PolyPassChk               */
@@ -1173,9 +1178,14 @@ asm void cBgW::ChkShdwDrawThrough(int field_0, cBgS_PolyPassChk* field_1) {
 
 
 /* 8007B0DC-8007B0E4 0008+00 rc=1 efc=0 rfr=False None .text      ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki                    */
-bool cBgW::ChkGrpThrough(int field_0, cBgS_GrpPassChk* field_1, int field_2) {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void cBgW::ChkGrpThrough(int field_0, cBgS_GrpPassChk* field_1, int field_2) {
+	nofralloc
+#include "asm/d/bg/d_bg_w/ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki.s"
 }
+#pragma pop
 
 
 /* 8007B0E4-8007B164 0080+00 rc=3 efc=1 rfr=False None .text      GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo                    */

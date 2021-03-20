@@ -15,7 +15,18 @@ struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
+struct JASSoundParams {
+};
+
+struct JASTrack {
+	/* 80291444 */ void setChannelMgrCount(u32);
+	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
+};
+
 struct JAISoundID {
+};
+
+struct JAIAudience {
 };
 
 struct JGeometry {
@@ -27,17 +38,6 @@ struct JGeometry {
 
 };
 
-struct JAIAudience {
-};
-
-struct JASSoundParams {
-};
-
-struct JASTrack {
-	/* 80291444 */ void setChannelMgrCount(u32);
-	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
-};
-
 struct JAISound {
 	/* 802A21A0 */ void releaseHandle();
 	/* 802A21BC */ void attachHandle(JAISoundHandle*);
@@ -47,9 +47,9 @@ struct JAISound {
 	/* 802A2474 */ void newAudible(JGeometry::TVec3<f32> const&, JGeometry::TVec3<f32> const*, u32, JAIAudience*);
 	/* 802A2598 */ void stop();
 	/* 802A24DC */ void stop(u32);
-	/* 802A25D8 */ bool asSe();
-	/* 802A25E0 */ bool asSeq();
-	/* 802A25E8 */ bool asStream();
+	/* 802A25D8 */ void asSe();
+	/* 802A25E0 */ void asSeq();
+	/* 802A25E8 */ void asStream();
 	/* 802A25F0 */ void die_JAISound_();
 	/* 802A266C */ void increasePrepareCount_JAISound_();
 	/* 802A26B8 */ void calc_JAISound_();
@@ -82,9 +82,9 @@ extern "C" void acceptsNewAudible__8JAISoundCFv(); // 1
 extern "C" void func_802A2474(); // 1
 extern "C" void stop__8JAISoundFUl(); // 1
 extern "C" void stop__8JAISoundFv(); // 1
-extern "C" bool asSe__8JAISoundFv(); // 1
-extern "C" bool asSeq__8JAISoundFv(); // 1
-extern "C" bool asStream__8JAISoundFv(); // 1
+extern "C" void asSe__8JAISoundFv(); // 1
+extern "C" void asSeq__8JAISoundFv(); // 1
+extern "C" void asStream__8JAISoundFv(); // 1
 extern "C" void die_JAISound___8JAISoundFv(); // 1
 extern "C" void increasePrepareCount_JAISound___8JAISoundFv(); // 1
 extern "C" void calc_JAISound___8JAISoundFv(); // 1
@@ -275,21 +275,36 @@ asm void JAISound::stop() {
 
 
 /* 802A25D8-802A25E0 0008+00 rc=3 efc=2 rfr=False None .text      asSe__8JAISoundFv                                            */
-bool JAISound::asSe() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JAISound::asSe() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISound/asSe__8JAISoundFv.s"
 }
+#pragma pop
 
 
 /* 802A25E0-802A25E8 0008+00 rc=3 efc=2 rfr=False None .text      asSeq__8JAISoundFv                                           */
-bool JAISound::asSeq() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JAISound::asSeq() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISound/asSeq__8JAISoundFv.s"
 }
+#pragma pop
 
 
 /* 802A25E8-802A25F0 0008+00 rc=3 efc=2 rfr=False None .text      asStream__8JAISoundFv                                        */
-bool JAISound::asStream() {
-	return false;
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void JAISound::asStream() {
+	nofralloc
+#include "asm/JSystem/JAudio2/JAISound/asStream__8JAISoundFv.s"
 }
+#pragma pop
 
 
 /* 802A25F0-802A266C 007C+00 rc=3 efc=3 rfr=False None .text      die_JAISound___8JAISoundFv                                   */

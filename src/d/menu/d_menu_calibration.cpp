@@ -294,9 +294,14 @@ asm void dMenu_Calibration_c::_move() {
 
 
 /* 801AEE2C-801AEE30 0004+00 rc=1 efc=0 rfr=False None .text      _draw__19dMenu_Calibration_cFv                               */
-void dMenu_Calibration_c::_draw() {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMenu_Calibration_c::_draw() {
+	nofralloc
+#include "asm/d/menu/d_menu_calibration/_draw__19dMenu_Calibration_cFv.s"
 }
+#pragma pop
 
 
 /* ############################################################################################## */

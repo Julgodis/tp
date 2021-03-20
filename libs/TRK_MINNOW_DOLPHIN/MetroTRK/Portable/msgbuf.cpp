@@ -35,9 +35,9 @@ extern "C" void TRKInitializeMessageBuffers(); // 1
 SECTION_INIT void TRK_memset(); // 1
 SECTION_INIT void TRK_memcpy(); // 1
 extern "C" void usr_puts_serial(); // 1
-extern "C" bool TRKReleaseMutex(); // 1
-extern "C" bool TRKAcquireMutex(); // 1
-extern "C" bool TRKInitializeMutex(); // 1
+extern "C" void TRKReleaseMutex(); // 1
+extern "C" void TRKAcquireMutex(); // 1
+extern "C" void TRKInitializeMutex(); // 1
 SECTION_BSS extern u8 gTRKBigEndian[4 + 4 /* padding */];
 
 // 

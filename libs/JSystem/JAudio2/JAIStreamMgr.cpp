@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAISoundHandle {
 };
 
 struct JGeometry {
@@ -58,6 +58,12 @@ struct JAISound {
 	/* 802A24DC */ void stop(u32);
 };
 
+struct JASSoundParams {
+};
+
+struct JAISoundActivity {
+};
+
 struct JAIAudience {
 };
 
@@ -65,12 +71,6 @@ template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAIStream> */
 struct JAISoundStrategyMgr__template2 {
-};
-
-struct JAISoundActivity {
-};
-
-struct JASSoundParams {
 };
 
 struct JAIStream {

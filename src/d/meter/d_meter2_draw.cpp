@@ -11,13 +11,16 @@
 // Types:
 // 
 
-struct JKRExpHeap {
+struct J2DAnmColor {
 };
 
 struct JUtility {
 	struct TColor {
 	};
 
+};
+
+struct JKRExpHeap {
 };
 
 struct J2DGrafContext {
@@ -34,22 +37,10 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct CPaneMgrAlpha {
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802555C8 */ void show();
-	/* 80255608 */ void hide();
-	/* 8025564C */ void isVisible();
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255828 */ void getAlphaRate();
-};
-
-struct J2DAnmColor {
+struct J2DRotateAxis {
 };
 
 struct J2DBasePosition {
-};
-
-struct J2DRotateAxis {
 };
 
 struct J2DPane {
@@ -65,6 +56,15 @@ struct CPaneMgr {
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+};
+
+struct CPaneMgrAlpha {
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 8025564C */ void isVisible();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
 };
 
 struct dMeter2Draw_c {
@@ -1367,9 +1367,14 @@ asm void dMeter2Draw_c::drawLightDrop(u8 field_0, u8 field_1, f32 field_2, f32 f
 
 
 /* 80215DA4-80215DA8 0004+00 rc=2 efc=1 rfr=False None .text      setAlphaLightDropChange__13dMeter2Draw_cFb                   */
-void dMeter2Draw_c::setAlphaLightDropChange(bool field_0) {
-	/* empty function */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void dMeter2Draw_c::setAlphaLightDropChange(bool field_0) {
+	nofralloc
+#include "asm/d/meter/d_meter2_draw/setAlphaLightDropChange__13dMeter2Draw_cFb.s"
 }
+#pragma pop
 
 
 /* 80215DA8-80215E40 0098+00 rc=1 efc=1 rfr=False None .text      getNowLightDropRateCalc__13dMeter2Draw_cFv                   */
