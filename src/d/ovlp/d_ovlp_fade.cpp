@@ -3,7 +3,9 @@
 // Translation Unit: d/ovlp/d_ovlp_fade
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/ovlp/d_ovlp_fade.h"
 
 // 
 // Types:

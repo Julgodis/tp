@@ -3,29 +3,14 @@
 // Translation Unit: MetroTRK/Portable/msghndlr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msghndlr.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRKDoSetOption(); // 1
-extern "C" void TRKDoStop(); // 1
-extern "C" void TRKDoStep(); // 1
-extern "C" void TRKDoContinue(); // 1
-extern "C" void TRKDoWriteRegisters(); // 1
-extern "C" void TRKDoReadRegisters(); // 1
-extern "C" void TRKDoWriteMemory(); // 1
-extern "C" void TRKDoReadMemory(); // 1
-extern "C" bool TRKDoSupportMask(); // 1
-extern "C" bool TRKDoVersions(); // 1
-extern "C" void TRKDoOverride(); // 1
-extern "C" void TRKDoReset(); // 1
-extern "C" void TRKDoDisconnect(); // 1
-extern "C" void TRKDoConnect(); // 1
-extern "C" void SetTRKConnected(); // 1
-extern "C" void GetTRKConnected(); // 1
-extern "C" void OutputData(); // 1
 
 extern "C" void TRKDoSetOption(); // 1
 extern "C" void TRKDoStop(); // 1
@@ -60,33 +45,6 @@ SECTION_BSS u8 IsTRKConnected[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void __TRK_reset(); // 1
-extern "C" void TRKConstructEvent(); // 1
-extern "C" void TRKPostEvent(); // 1
-extern "C" void TRKMessageSend(); // 1
-extern "C" void TRKAppendBuffer_ui8(); // 1
-extern "C" void TRKReadBuffer(); // 1
-extern "C" void TRKAppendBuffer(); // 1
-extern "C" void TRKSetBufferPosition(); // 1
-extern "C" void TRKResetBuffer(); // 1
-extern "C" void usr_puts_serial(); // 1
-extern "C" void TRKTargetAccessARAM(); // 1
-extern "C" void TRKTargetStop(); // 1
-extern "C" void TRKTargetStopped(); // 1
-extern "C" void TRKTargetGetPC(); // 1
-extern "C" void TRKTargetStepOutOfRange(); // 1
-extern "C" void TRKTargetSingleStep(); // 1
-extern "C" void TRKTargetAccessExtended2(); // 1
-extern "C" void TRKTargetAccessExtended1(); // 1
-extern "C" void TRKTargetAccessFP(); // 1
-extern "C" void TRKTargetAccessDefault(); // 1
-extern "C" void TRKTargetAccessMemory(); // 1
-extern "C" void __TRK_copy_vectors(); // 1
-extern "C" void TRKWriteUARTN(); // 1
-extern "C" void TRKTargetContinue(); // 1
-extern "C" void SetUseSerialIO(); // 1
-extern "C" void MWTRACE(); // 1
 
 SECTION_INIT void memset(); // 1
 SECTION_INIT void __TRK_reset(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_Reset
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_Reset.h"
 
 // 
 // Types:
@@ -56,30 +58,8 @@ extern "C" extern u8 data_80450C88[8];
 // External References:
 // 
 
-extern "C" void OSAttention(); // 1
 void mDoDvdErr_ThdCleanup(); // 2
 void cAPICPad_recalibrate(); // 2
-extern "C" void LCDisable(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSSetSaveRegion(); // 1
-extern "C" void OSResetSystem(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSCancelThread(); // 1
-extern "C" void OSDetachThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void DVDGetDriveStatus(); // 1
-extern "C" void DVDCheckDisk(); // 1
-extern "C" void VIWaitForRetrace(); // 1
-extern "C" void VIFlush(); // 1
-extern "C" void VISetBlack(); // 1
-extern "C" void GXSetCurrentGXThread(); // 1
-extern "C" void GXGetCurrentGXThread(); // 1
-extern "C" void GXFlush(); // 1
-extern "C" void GXAbortFrame(); // 1
-extern "C" void GXDrawDone(); // 1
-extern "C" void GXSetDrawDoneCallback(); // 1
-extern "C" void _savegpr_27(); // 1
 
 extern "C" void OSAttention(); // 1
 extern "C" void mDoDvdErr_ThdCleanup__Fv(); // 1

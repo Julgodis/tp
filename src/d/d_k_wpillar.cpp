@@ -3,7 +3,9 @@
 // Translation Unit: d/d_k_wpillar
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_k_wpillar.h"
 
 // 
 // Types:
@@ -42,10 +44,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -80,13 +82,13 @@ struct dRes_control_c {
 struct csXyz {
 };
 
+struct dKy_tevstr_c {
+};
+
 struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -147,11 +149,6 @@ void fopAcM_getWaterY(cXyz const*, f32*); // 2
 void fopKyM_Delete(void*); // 2
 void dKy_tevstr_init(dKy_tevstr_c*, s8, u8); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void play__14mDoExt_baseAnmFv(); // 1
 extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1

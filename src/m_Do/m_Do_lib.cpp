@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_lib
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_lib.h"
 
 // 
 // Types:
@@ -38,7 +40,6 @@ struct J3DUClipper {
 void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*); // 2
 void mDoLib_project(Vec*, Vec*); // 2
 void mDoLib_pos2camera(Vec*, Vec*); // 2
-extern "C" void __sinit_m_Do_lib_cpp(); // 1
 
 extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj(); // 1
 extern "C" void setup__14mDoLib_clipperFffff(); // 1
@@ -55,14 +56,6 @@ extern "C" extern f32 mFovyRate__14mDoLib_clipper;
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjCI(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXInitTlutObj(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void init__11J3DUClipperFv(); // 1
 extern "C" void calcViewFrustum__11J3DUClipperFv(); // 1

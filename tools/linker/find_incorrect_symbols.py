@@ -53,9 +53,9 @@ def find_first_incorrect():
             print("invalid symbol addr")
             print(f"{elf_symbol.section.name:>12}/{addr:08X} {name:>12}/{mod_symbol['addr']:08X} {mod_symbol['name']}")
 
-            for sym in module_0.SYMBOLS:
-                if sym['addr'] == addr:
-                    print(f"{sym['addr']:08X} {sym['name']} {sym['label']}")
+            #for sym in module_0.SYMBOLS:
+            #    if sym['addr'] == addr:
+            #        print(f"{sym['addr']:08X} {sym['addr']+sym['size']:08X} {sym['size']:04X} {sym['name']} {sym['label']}")
 
             x = keys.index(addr)
             for ri in range(x-15,x+5):
@@ -66,7 +66,7 @@ def find_first_incorrect():
                 isx = ""
                 if ri == x:
                     isx = "[->]"
-                print(f"\t{isx:<4} {key:08X} {symbol.name}")
+                print(f"\t{isx:<4} {key:08X} {key+symbol.size:08X} {symbol.size:04X} {symbol.name}")
             print()
             sys.exit(1)
 

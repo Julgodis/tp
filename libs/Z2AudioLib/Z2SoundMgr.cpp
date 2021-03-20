@@ -3,7 +3,9 @@
 // Translation Unit: Z2SoundMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2SoundMgr.h"
 
 // 
 // Types:
@@ -21,6 +23,9 @@ struct JAISoundHandle {
 struct JAISoundID {
 };
 
+struct JAISound {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -28,9 +33,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISound {
 };
 
 struct Z2SoundMgr {
@@ -149,17 +151,6 @@ extern "C" extern void* __vt__10Z2SoundMgr[3 + 1 /* padding */];
 // 
 
 void dComIfGs_staffroll_next_go(); // 2
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void sprintf(); // 1
 
 extern "C" void dComIfGs_staffroll_next_go__Fv(); // 1
 extern "C" void setFIR__8JASTrackFPCs(); // 1

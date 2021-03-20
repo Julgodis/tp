@@ -3,7 +3,9 @@
 // Translation Unit: Z2Audience
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2Audience.h"
 
 // 
 // Types:
@@ -74,11 +76,11 @@ struct Z2SpotMic {
 	/* 802BD03C */ void calcMicVolume(f32, int, f32);
 };
 
-struct JAISoundID {
-};
-
 struct JAIAudible {
 	/* 8029EFAC */ ~JAIAudible();
+};
+
+struct JAISoundID {
 };
 
 struct Z2Audience {
@@ -137,7 +139,6 @@ struct Z2SoundInfo {
 // Forward References:
 // 
 
-extern "C" void __sinit_Z2Audience_cpp(); // 1
 
 extern "C" void func_802BBCDC(); // 1
 extern "C" void func_802BBD18(); // 1
@@ -199,24 +200,6 @@ extern "C" extern u8 struct_80451358[8];
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXRotAxisRad(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__17JASGenericMemPoolFv(); // 1
 extern "C" void __dt__17JASGenericMemPoolFv(); // 1

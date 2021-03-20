@@ -3,7 +3,9 @@
 // Translation Unit: JFWDisplay
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JFramework/JFWDisplay.h"
 
 // 
 // Types:
@@ -125,7 +127,6 @@ static void JFWThreadAlarmHandler(OSAlarm*, OSContext*); // 2
 static void JFWDrawDoneAlarm(); // 2
 static void JFWGXAbortAlarmHandler(OSAlarm*, OSContext*); // 2
 static void diagnoseGpHang(); // 2
-extern "C" void __sinit_JFWDisplay_cpp(); // 1
 
 extern "C" void ctor_subroutine__10JFWDisplayFb(); // 1
 extern "C" void __ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb(); // 1
@@ -163,87 +164,8 @@ extern "C" extern u8 sManager__10JFWDisplay[4];
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void OSCreateAlarm(); // 1
-extern "C" void OSSetAlarm(); // 1
-extern "C" void OSCancelAlarm(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void VIFlush(); // 1
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" void GXInit(); // 1
-extern "C" void GXGetGPStatus(); // 1
-extern "C" void GXGetFifoBase(); // 1
-extern "C" void GXGetFifoSize(); // 1
-extern "C" void GXGetCPUFifo(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXInvalidateVtxCache(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXFlush(); // 1
-extern "C" void GXAbortFrame(); // 1
-extern "C" void GXSetDrawDone(); // 1
-extern "C" void GXDrawDone(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetDispCopySrc(); // 1
-extern "C" void GXSetDispCopyDst(); // 1
-extern "C" void GXSetCopyClamp(); // 1
-extern "C" void GXGetNumXfbLines(); // 1
-extern "C" void GXGetYScaleFactor(); // 1
-extern "C" void GXSetDispCopyYScale(); // 1
-extern "C" void GXSetCopyClear(); // 1
-extern "C" void GXSetCopyFilter(); // 1
-extern "C" void GXSetDispCopyGamma(); // 1
-extern "C" void GXCopyDisp(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXInvalidateTexAll(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetZTexture(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetAlphaUpdate(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetPixelFmt(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetDstAlpha(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void GXReadXfRasMetric(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void __cvt_dbl_usll(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void* __nw__FUl(); // 1

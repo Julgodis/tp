@@ -3,7 +3,9 @@
 // Translation Unit: c/c_dylink
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "c/c_dylink.h"
 
 // 
 // Types:
@@ -88,17 +90,11 @@ extern "C" extern char const* const c_c_dylink__stringBase0;
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-extern "C" void OSReport_Error(); // 1
 void mDoExt_getArchiveHeap(); // 2
 void fopScnM_CreateReq(s16, s16, u16, u32); // 2
 void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void OSSetStringTable(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void strcmp(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void OSReport_Error(); // 1

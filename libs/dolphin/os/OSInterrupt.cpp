@@ -3,24 +3,14 @@
 // Translation Unit: OSInterrupt
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSInterrupt.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void __RAS_OSDisableInterrupts_end(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSGetInterruptHandler(); // 1
-extern "C" void __OSInterruptInit(); // 1
-extern "C" static void SetInterruptMask(); // 1
-extern "C" void __OSMaskInterrupts(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" static void __OSDispatchInterrupt(); // 1
-extern "C" static void ExternalInterruptHandler(); // 1
 
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void __RAS_OSDisableInterrupts_end(); // 1
@@ -43,13 +33,6 @@ extern "C" extern u8 data_80451684[4];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-extern "C" void __OSSetExceptionHandler(); // 1
-extern "C" void OSLoadContext(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void __OSReschedule(); // 1
-extern "C" void OSGetTime(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void __OSSetExceptionHandler(); // 1

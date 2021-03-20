@@ -3,19 +3,13 @@
 // Translation Unit: d/a/d_a_obj
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/a/d_a_obj.h"
 
 // 
 // Types:
 // 
-
-struct Quaternion {
-};
-
-struct dCcD_GObjInf {
-	/* 800844F8 */ void GetTgHitObj();
-	/* 8008457C */ void GetTgHitObjSe();
-};
 
 struct Vec {
 };
@@ -26,6 +20,14 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266C18 */ void operator/(f32) const;
 	/* 80266CBC */ void outprod(Vec const&) const;
+};
+
+struct dCcD_GObjInf {
+	/* 800844F8 */ void GetTgHitObj();
+	/* 8008457C */ void GetTgHitObjSe();
+};
+
+struct Quaternion {
 };
 
 struct fopAc_ac_c {
@@ -58,13 +60,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dKy_tevstr_c {
+};
+
 struct JPABaseEmitter {
 };
 
 struct J3DModelData {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_modelEcallBack {
@@ -103,8 +105,6 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-extern "C" static void func_800373F0(); // 1
-extern "C" static void func_800374EC(); // 1
 
 extern "C" void eff_break_tsubo__5daObjFP10fopAc_ac_c4cXyzi(); // 1
 extern "C" void make_eff_break_kotubo__5daObjFP10fopAc_ac_c(); // 1
@@ -129,22 +129,6 @@ void fopAcM_posMove(fopAc_ac_c*, cXyz const*); // 2
 void dComIfGp_getReverb(int); // 2
 void cM_atan2s(f32, f32); // 2
 void cM3d_CrawVec(Vec const&, Vec const&, Vec*); // 2
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void C_QUATRotAxisRad(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void acos(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz(); // 1

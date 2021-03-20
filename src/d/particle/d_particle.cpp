@@ -3,11 +3,21 @@
 // Translation Unit: d/particle/d_particle
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/particle/d_particle.h"
 
 // 
 // Types:
 // 
+
+struct cXyz {
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80267128 */ void atan2sX_Z() const;
+};
+
+struct csXyz {
+};
 
 struct _GXTexMapID {
 };
@@ -17,14 +27,6 @@ struct JPABaseEmitter {
 	/* 8027EF30 */ void getCurrentCreateNumber() const;
 	/* 8027EF40 */ void getDrawCount() const;
 	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
-};
-
-struct cXyz {
-	/* 80266B84 */ void operator*(f32) const;
-	/* 80267128 */ void atan2sX_Z() const;
-};
-
-struct csXyz {
 };
 
 struct dPa_followEcallBack {
@@ -71,12 +73,12 @@ struct dPa_modelPcallBack {
 	/* 80050038 */ ~dPa_modelPcallBack();
 };
 
+struct dKy_tevstr_c {
+};
+
 struct J3DModelData {
 	/* 803260CC */ void syncJ3DSysPointers() const;
 	/* 803260F8 */ void syncJ3DSysFlags() const;
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_modelEcallBack {
@@ -110,13 +112,12 @@ struct dPa_selectTexEcallBack {
 	/* 80050010 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
+struct JPAEmitterCallBack {
+	/* 80050368 */ void execute(JPABaseEmitter*);
+	/* 8005036C */ void draw(JPABaseEmitter*);
+	/* 80050370 */ void drawAfter(JPABaseEmitter*);
+	/* 80050374 */ void executeAfter(JPABaseEmitter*);
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
 struct JKRHeap {
@@ -133,21 +134,22 @@ struct JPAResourceManager {
 	/* 80273FCC */ void getResUserWork(u16) const;
 };
 
-struct JPAEmitterCallBack {
-	/* 80050368 */ void execute(JPABaseEmitter*);
-	/* 8005036C */ void draw(JPABaseEmitter*);
-	/* 80050370 */ void drawAfter(JPABaseEmitter*);
-	/* 80050374 */ void executeAfter(JPABaseEmitter*);
-	/* 8027E6A4 */ ~JPAEmitterCallBack();
-};
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
 
-struct JPADrawInfo {
 };
 
 struct JPAParticleCallBack {
 	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
 	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
 	/* 8027EFA4 */ ~JPAParticleCallBack();
+};
+
+struct JPADrawInfo {
 };
 
 struct JPAEmitterManager {
@@ -180,9 +182,6 @@ struct dPa_windPcallBack {
 	/* 8004FF2C */ ~dPa_windPcallBack();
 };
 
-struct cBgS_PolyInfo {
-};
-
 struct mDoDvdThd_toMainRam_c {
 	/* 80016394 */ void create(char const*, u8, JKRHeap*);
 };
@@ -190,6 +189,9 @@ struct mDoDvdThd_toMainRam_c {
 struct dPa_levelEcallBack {
 	/* 8004FB18 */ ~dPa_levelEcallBack();
 	/* 8004FB8C */ void cleanup();
+};
+
+struct cBgS_PolyInfo {
 };
 
 struct fopAc_ac_c {
@@ -382,7 +384,6 @@ static void static_gen_b_light8EcallBack(JPABaseEmitter*); // 2
 static void static_gen_d_light8EcallBack(JPABaseEmitter*); // 2
 static void dPa_setWindPower(JPABaseParticle*); // 2
 static void dPa_kankyocolor_set(f32, JPABaseEmitter*, dKy_tevstr_c const*, u32, cXyz const*, _GXColor const*, _GXColor const*); // 2
-extern "C" void __sinit_d_particle_cpp(); // 1
 
 extern "C" static void dPa_cleanupGX__Fv(); // 1
 extern "C" void __ct__19dPa_followEcallBackFUcUc(); // 1
@@ -559,7 +560,6 @@ extern "C" extern u8 mParticleTracePCB__13dPa_control_c[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
 void mDoExt_getArchiveHeap(); // 2
 void mDoExt_createSolidHeapFromGame(u32, u32); // 2
 void mDoExt_createSolidHeapFromSystem(u32, u32); // 2
@@ -594,77 +594,6 @@ void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
 void* operator new(u32, JKRHeap*, int); // 2
 void* operator new[](u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXRotRad(); // 1
-extern "C" void PSMTXRotAxisRad(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXInvalidateVtxCache(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXFlush(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXEnableTexOffsets(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetCoPlanar(); // 1
-extern "C" void GXSetChanAmbColor(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetColorUpdate(); // 1
-extern "C" void GXSetAlphaUpdate(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXLoadNrmMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_new_array(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void mDoExt_getArchiveHeap__Fv(); // 1

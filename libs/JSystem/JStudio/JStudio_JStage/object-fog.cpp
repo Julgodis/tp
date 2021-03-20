@@ -3,7 +3,9 @@
 // Translation Unit: object-fog
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio_JStage/object-fog.h"
 
 // 
 // Types:
@@ -71,7 +73,6 @@ struct JStudio_JStage {
 // Forward References:
 // 
 
-extern "C" void func_8028C8A4(); // 1
 
 extern "C" void __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog(); // 1
 extern "C" void __dt__Q214JStudio_JStage12TAdaptor_fogFv(); // 1
@@ -94,13 +95,6 @@ extern "C" extern u8 object_fog__lit_854[12];
 // 
 
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
 extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1

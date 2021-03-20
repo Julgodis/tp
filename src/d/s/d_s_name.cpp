@@ -3,7 +3,9 @@
 // Translation Unit: d/s/d_s_name
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/s/d_s_name.h"
 
 // 
 // Types:
@@ -118,7 +120,6 @@ static void dScnName_Execute(dScnName_c*); // 2
 static void dScnName_IsDelete(dScnName_c*); // 2
 static void dScnName_Delete(dScnName_c*); // 2
 static void dScnName_Create(scene_class*); // 2
-extern "C" void __sinit_d_s_name_cpp(); // 1
 
 extern "C" void __ct__9dSn_HIO_cFv(); // 1
 extern "C" static void d_s_d_s_name__phase_1__FPc(); // 1
@@ -172,14 +173,6 @@ void dKy_clear_game_init(); // 2
 void dKy_setLight_init(); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void OSGetTime(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs(); // 1
 extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f(); // 1

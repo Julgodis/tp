@@ -3,17 +3,14 @@
 // Translation Unit: arq
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/ar/arq.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void __ARQServiceQueueLo(); // 1
-extern "C" static void __ARQCallbackHack(); // 1
-extern "C" static void __ARQInterruptServiceRoutine(); // 1
-extern "C" void ARQInit(); // 1
-extern "C" void ARQPostRequest(); // 1
 
 extern "C" static void __ARQServiceQueueLo(); // 1
 extern "C" static void __ARQCallbackHack(); // 1
@@ -25,11 +22,6 @@ extern "C" void ARQPostRequest(); // 1
 // External References:
 // 
 
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void ARRegisterDMACallback(); // 1
-extern "C" void ARStartDMA(); // 1
 
 extern "C" void OSRegisterVersion(); // 1
 extern "C" void OSDisableInterrupts(); // 1

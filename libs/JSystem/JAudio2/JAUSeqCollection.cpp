@@ -3,16 +3,18 @@
 // Translation Unit: JAUSeqCollection
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAUSeqCollection.h"
 
 // 
 // Types:
 // 
 
-struct JAISeqDataRegion {
+struct JAISeqData {
 };
 
-struct JAISeqData {
+struct JAISeqDataRegion {
 };
 
 struct JAUSeqCollection {
@@ -22,10 +24,10 @@ struct JAUSeqCollection {
 	/* 802A6754 */ void getSeqDataRegion(JAISeqDataRegion*);
 };
 
-struct JAISeqDataUser {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAISeqDataUser {
 };
 
 struct JAUSeqDataMgr_SeqCollection {

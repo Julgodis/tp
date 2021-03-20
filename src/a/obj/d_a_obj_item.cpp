@@ -3,7 +3,9 @@
 // Translation Unit: a/obj/d_a_obj_item
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "a/obj/d_a_obj_item.h"
 
 // 
 // Types:
@@ -160,13 +162,13 @@ struct dPa_followEcallBack {
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
+struct dKy_tevstr_c {
+};
+
 struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -268,7 +270,6 @@ static void daItem_Draw(daItem_c*); // 2
 static void daItem_Execute(daItem_c*); // 2
 static void daItem_Delete(daItem_c*); // 2
 static void daItem_Create(fopAc_ac_c*); // 2
-extern "C" void __sinit_d_a_obj_item_cpp(); // 1
 
 extern "C" static void Reflect__FP4cXyzRC13cBgS_PolyInfof(); // 1
 extern "C" void getData__12daItemBase_cFv(); // 1
@@ -372,19 +373,6 @@ void cM_rndF(f32); // 2
 void cM_rndFX(f32); // 2
 void cLib_chaseF(f32*, f32, f32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void C_VECReflect(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
 extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1

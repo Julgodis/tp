@@ -3,7 +3,9 @@
 // Translation Unit: d/d_select_icon
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_select_icon.h"
 
 // 
 // Types:
@@ -35,7 +37,6 @@ struct J2DScreen {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_select_icon_cpp(); // 1
 
 extern "C" void __ct__9dSi_HIO_cFv(); // 1
 extern "C" void animation__14dSelect_icon_cFv(); // 1
@@ -49,7 +50,6 @@ extern "C" void __sinit_d_select_icon_cpp(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
 
 extern "C" void paneScale__8CPaneMgrFff(); // 1
 extern "C" void __dl__FPv(); // 1

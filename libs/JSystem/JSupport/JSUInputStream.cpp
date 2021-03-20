@@ -3,7 +3,9 @@
 // Translation Unit: JSUInputStream
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JSupport/JSUInputStream.h"
 
 // 
 // Types:
@@ -47,10 +49,6 @@ extern "C" extern void* __vt__14JSUInputStream[6 + 1 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__20JSURandomInputStreamFv(); // 1
 extern "C" void __dl__FPv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: J3DAnimation
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphAnimator/J3DAnimation.h"
 
 // 
 // Types:
@@ -235,15 +237,6 @@ extern "C" extern void* __vt__19J3DAnmTransformFull[5 + 1 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void __ct__10JUTNameTabFv(); // 1

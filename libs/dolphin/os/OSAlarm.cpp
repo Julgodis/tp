@@ -3,21 +3,14 @@
 // Translation Unit: OSAlarm
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSAlarm.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void OSInitAlarm(); // 1
-extern "C" void OSCreateAlarm(); // 1
-extern "C" static void InsertAlarm(); // 1
-extern "C" void OSSetAlarm(); // 1
-extern "C" void OSSetPeriodicAlarm(); // 1
-extern "C" void OSCancelAlarm(); // 1
-extern "C" static void DecrementerExceptionCallback(); // 1
-extern "C" static void DecrementerExceptionHandler(); // 1
-extern "C" static void OSAlarm__OnReset(); // 1
 
 extern "C" void OSInitAlarm(); // 1
 extern "C" void OSCreateAlarm(); // 1
@@ -33,22 +26,6 @@ extern "C" static void OSAlarm__OnReset(); // 1
 // External References:
 // 
 
-extern "C" void PPCMtdec(); // 1
-extern "C" void __OSSetExceptionHandler(); // 1
-extern "C" void __OSGetExceptionHandler(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSLoadContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSRegisterResetFunction(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void __OSReschedule(); // 1
-extern "C" void __OSGetSystemTime(); // 1
-extern "C" void __OSTimeToSystemTime(); // 1
-extern "C" void __DVDTestAlarm(); // 1
-extern "C" void __div2i(); // 1
 
 extern "C" void PPCMtdec(); // 1
 extern "C" void __OSSetExceptionHandler(); // 1

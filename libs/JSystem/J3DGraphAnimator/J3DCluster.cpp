@@ -3,16 +3,18 @@
 // Translation Unit: J3DCluster
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphAnimator/J3DCluster.h"
 
 // 
 // Types:
 // 
 
-struct J3DVertexBuffer {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DVertexBuffer {
 };
 
 struct J3DAnmCluster {
@@ -62,18 +64,6 @@ extern "C" void normalizeWeight__11J3DDeformerFiPf(); // 1
 // External References:
 // 
 
-extern "C" void PPCSync(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void PPCSync(); // 1
 extern "C" void DCStoreRangeNoSync(); // 1

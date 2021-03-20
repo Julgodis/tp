@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_create_req
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_create_req.h"
 
 // 
 // Types:
@@ -76,8 +78,6 @@ void fpcLy_CreatingMesg(layer_class*); // 2
 void fpcLy_CreatedMesg(layer_class*); // 2
 void fpcMtd_Method(int (*)(void*), void*); // 2
 void fpcMtdTg_Init(process_method_tag_class*, int (*)(void*), void*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void fpcBs_MakeOfId__Fv(); // 1
 extern "C" void fpcCtIt_Method__FPFPvPv_iPv(); // 1

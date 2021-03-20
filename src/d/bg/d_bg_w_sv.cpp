@@ -3,22 +3,24 @@
 // Translation Unit: d/bg/d_bg_w_sv
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_w_sv.h"
 
 // 
 // Types:
 // 
 
-struct csXyz {
-};
-
-struct cBgS_PolyInfo {
-};
-
 struct cXyz {
 };
 
+struct csXyz {
+};
+
 struct cBgD_t {
+};
+
+struct cBgS_PolyInfo {
 };
 
 struct dBgWSv {
@@ -36,13 +38,13 @@ struct dBgW_Base {
 	/* 80074AB4 */ void SetOldShapeAngleY(s16);
 };
 
+struct cBgS_ShdwDraw {
+};
+
 struct cBgS_GndChk {
 };
 
 struct cBgS_LinChk {
-};
-
-struct cBgS_ShdwDraw {
 };
 
 struct cBgW {
@@ -65,10 +67,10 @@ struct cBgW {
 	/* 8007B964 */ void ChkMoveBg() const;
 };
 
-struct cBgS_PolyPassChk {
+struct dBgS_SplGrpChk {
 };
 
-struct dBgS_SphChk {
+struct cBgS_GrpPassChk {
 };
 
 struct dBgS_Acch {
@@ -77,13 +79,13 @@ struct dBgS_Acch {
 struct dBgS_CaptPoly {
 };
 
-struct dBgS_SplGrpChk {
+struct cBgS_PolyPassChk {
+};
+
+struct dBgS_SphChk {
 };
 
 struct dBgS_RoofChk {
-};
-
-struct cBgS_GrpPassChk {
 };
 
 struct fopAc_ac_c {
@@ -155,8 +157,6 @@ extern "C" void __dt__6dBgWSvFv(); // 1
 
 void* operator new[](u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void SetOldShapeAngleY__9dBgW_BaseFs(); // 1
 extern "C" void __dt__4cBgWFv(); // 1

@@ -3,37 +3,14 @@
 // Translation Unit: GXTexture
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXTexture.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GXGetTexBufferSize(); // 1
-extern "C" void __GetImageTileCount(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjCI(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXGetTexObjWidth(); // 1
-extern "C" void GXGetTexObjHeight(); // 1
-extern "C" void GXGetTexObjFmt(); // 1
-extern "C" void GXGetTexObjWrapS(); // 1
-extern "C" void GXGetTexObjWrapT(); // 1
-extern "C" void GXGetTexObjMipMap(); // 1
-extern "C" void GXGetTexObjTlut(); // 1
-extern "C" static void GXLoadTexObjPreLoaded(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXInitTlutObj(); // 1
-extern "C" void GXLoadTlut(); // 1
-extern "C" void GXInitTexCacheRegion(); // 1
-extern "C" void GXInitTlutRegion(); // 1
-extern "C" void GXInvalidateTexAll(); // 1
-extern "C" void GXSetTexRegionCallback(); // 1
-extern "C" void GXSetTlutRegionCallback(); // 1
-extern "C" void GXSetTexCoordScaleManually(); // 1
-extern "C" static void __SetSURegs(); // 1
-extern "C" void __GXSetSUTexRegs(); // 1
-extern "C" void __GXSetTmemConfig(); // 1
 
 extern "C" void GXGetTexBufferSize(); // 1
 extern "C" void __GetImageTileCount(); // 1
@@ -65,8 +42,6 @@ extern "C" void __GXSetTmemConfig(); // 1
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-extern "C" void __GXFlushTextureState(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void __GXFlushTextureState(); // 1

@@ -3,20 +3,14 @@
 // Translation Unit: MSL_Common/Src/string
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/string.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void strrchr(); // 1
-extern "C" void strchr(); // 1
-extern "C" void strncmp(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strncpy(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strlen(); // 1
 
 extern "C" void strrchr(); // 1
 extern "C" void strchr(); // 1

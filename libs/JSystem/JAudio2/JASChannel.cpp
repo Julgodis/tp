@@ -3,11 +3,28 @@
 // Translation Unit: JASChannel
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASChannel.h"
 
 // 
 // Types:
 // 
+
+struct JASOscillator {
+	struct Data {
+	};
+
+	struct EffectParams {
+	};
+
+	/* 8029BE94 */ JASOscillator();
+	/* 8029BEC4 */ void initStart(JASOscillator::Data const*);
+	/* 8029BF68 */ void incCounter(f32);
+	/* 8029BFC8 */ void getValue() const;
+	/* 8029BFE4 */ void release();
+	/* 8029C0E0 */ void update();
+};
 
 struct JASWaveInfo {
 };
@@ -25,21 +42,6 @@ struct JASDsp {
 		/* 8029E09C */ void setBusConnect(u8, u8);
 	};
 
-};
-
-struct JASOscillator {
-	struct Data {
-	};
-
-	struct EffectParams {
-	};
-
-	/* 8029BE94 */ JASOscillator();
-	/* 8029BEC4 */ void initStart(JASOscillator::Data const*);
-	/* 8029BF68 */ void incCounter(f32);
-	/* 8029BFC8 */ void getValue() const;
-	/* 8029BFE4 */ void release();
-	/* 8029C0E0 */ void update();
 };
 
 struct JASChannel {
@@ -138,18 +140,6 @@ extern "C" void checkBankDispose__10JASChannelCFv(); // 1
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void pow2__7JASCalcFf(); // 1
 extern "C" void __ct__17JASGenericMemPoolFv(); // 1

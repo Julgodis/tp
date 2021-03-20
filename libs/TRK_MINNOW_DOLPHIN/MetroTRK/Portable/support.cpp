@@ -3,17 +3,14 @@
 // Translation Unit: MetroTRK/Portable/support
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/support.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void HandlePositionFileSupportRequest(); // 1
-extern "C" void HandleCloseFileSupportRequest(); // 1
-extern "C" void HandleOpenFileSupportRequest(); // 1
-extern "C" void TRKRequestSend(); // 1
-extern "C" void TRKSuppAccessFile(); // 1
 
 extern "C" void HandlePositionFileSupportRequest(); // 1
 extern "C" void HandleCloseFileSupportRequest(); // 1
@@ -28,19 +25,6 @@ extern "C" extern u8 const lit_277[81 + 3 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-extern "C" void strlen(); // 1
-extern "C" void TRKMessageSend(); // 1
-extern "C" void TRKReadBuffer_ui8(); // 1
-extern "C" void TRKAppendBuffer_ui8(); // 1
-extern "C" void TRKSetBufferPosition(); // 1
-extern "C" void TRKReleaseBuffer(); // 1
-extern "C" void TRKGetBuffer(); // 1
-extern "C" void TRKGetFreeBuffer(); // 1
-extern "C" void TRKProcessInput(); // 1
-extern "C" void TRKTestForPacket(); // 1
-extern "C" void OutputData(); // 1
-extern "C" void MWTRACE(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void strlen(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: d/meter/d_meter2
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/meter/d_meter2.h"
 
 // 
 // Types:
@@ -241,10 +243,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -345,21 +347,6 @@ bool dMeter2Info_is2DActiveTouchArea(); // 2
 void dTimer_createStockTimer(); // 2
 void cLib_addCalc2(f32*, f32, f32, f32); // 2
 void* operator new(u32); // 2
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
 extern "C" void fopMsgM_setStageLayer__FPv(); // 1

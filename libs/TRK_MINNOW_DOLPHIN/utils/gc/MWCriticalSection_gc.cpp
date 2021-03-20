@@ -3,15 +3,14 @@
 // Translation Unit: utils/gc/MWCriticalSection_gc
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/utils/gc/MWCriticalSection_gc.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void MWExitCriticalSection(); // 1
-extern "C" void MWEnterCriticalSection(); // 1
-extern "C" void MWInitializeCriticalSection(); // 1
 
 extern "C" void MWExitCriticalSection(); // 1
 extern "C" void MWEnterCriticalSection(); // 1
@@ -21,8 +20,6 @@ extern "C" void MWInitializeCriticalSection(); // 1
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
 
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1

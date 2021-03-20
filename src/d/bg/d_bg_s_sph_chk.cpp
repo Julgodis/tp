@@ -3,7 +3,9 @@
 // Translation Unit: d/bg/d_bg_s_sph_chk
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_s_sph_chk.h"
 
 // 
 // Types:
@@ -36,10 +38,6 @@ struct cBgS_PolyInfo {
 // Forward References:
 // 
 
-extern "C" static void func_80078B70(); // 1
-extern "C" static void func_80078B78(); // 1
-extern "C" static void func_80078B80(); // 1
-extern "C" static void func_80078B88(); // 1
 
 extern "C" void __ct__11dBgS_SphChkFv(); // 1
 extern "C" void __dt__11dBgS_SphChkFv(); // 1

@@ -3,30 +3,44 @@
 // Translation Unit: J2DWindowEx
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DWindowEx.h"
 
 // 
 // Types:
 // 
 
-struct J2DWindow {
-	struct TMaterial {
+struct JUtility {
+	struct TColor {
 	};
 
-	/* 802F9A7C */ J2DWindow();
-	/* 802FA880 */ ~J2DWindow();
-	/* 802FB000 */ void resize(f32, f32);
-	/* 802FB1D8 */ void drawSelf(f32, f32);
-	/* 802FBF98 */ s32 getTypeID() const;
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DAnmTexPattern {
 };
 
 struct ResFONT {
+};
+
+struct _GXColor {
+};
+
+struct J2DAnmVtxColor {
+	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
+};
+
+struct ResTIMG {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
+struct _GXCullMode {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmBase {
 };
 
 struct JSUStreamSeekFrom {
@@ -37,22 +51,6 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmBase {
-};
-
-struct _GXColor {
-};
-
-struct J2DAnmVtxColor {
-	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
-};
-
-struct J2DAnmTransform {
-};
-
-struct _GXCullMode {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -60,13 +58,6 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
-struct ResTIMG {
 };
 
 struct J2DPane {
@@ -95,7 +86,27 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
+struct J2DTevStage {
+};
+
 struct J2DAnmTextureSRTKey {
+};
+
+struct J2DWindow {
+	struct TMaterial {
+	};
+
+	/* 802F9A7C */ J2DWindow();
+	/* 802FA880 */ ~J2DWindow();
+	/* 802FB000 */ void resize(f32, f32);
+	/* 802FB1D8 */ void drawSelf(f32, f32);
+	/* 802FBF98 */ s32 getTypeID() const;
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmColor {
 };
 
 struct J2DAnmTevRegKey {
@@ -107,15 +118,6 @@ struct J2DMaterial {
 	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
 	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DTevStage {
 };
 
 struct J2DWindowEx {
@@ -232,33 +234,6 @@ extern "C" extern u8 const J2DWindowEx__lit_2532[30 + 2 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void calcMtx__7J2DPaneFv(); // 1
 extern "C" void makeMatrix__7J2DPaneFff(); // 1

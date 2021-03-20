@@ -3,7 +3,9 @@
 // Translation Unit: JUTTexture
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTTexture.h"
 
 // 
 // Types:
@@ -12,18 +14,18 @@
 struct _GXTlut {
 };
 
-struct JUTTransparency {
+struct ResTIMG {
 };
 
 struct _GXTlutFmt {
 };
 
+struct JUTTransparency {
+};
+
 struct JUTPalette {
 	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
 	/* 802DE95C */ void load();
-};
-
-struct ResTIMG {
 };
 
 struct _GXTexMapID {
@@ -63,12 +65,6 @@ extern "C" void load__10JUTTextureF11_GXTexMapID(); // 1
 void* operator new(u32); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjCI(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void* __nw__FUl(); // 1
 extern "C" void __dl__FPv(); // 1

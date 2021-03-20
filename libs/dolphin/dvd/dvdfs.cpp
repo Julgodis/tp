@@ -3,28 +3,14 @@
 // Translation Unit: dvdfs
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/dvd/dvdfs.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __DVDFSInit(); // 1
-extern "C" void DVDConvertPathToEntrynum(); // 1
-extern "C" void DVDFastOpen(); // 1
-extern "C" void DVDOpen(); // 1
-extern "C" void DVDClose(); // 1
-extern "C" static void entryToPath(); // 1
-extern "C" static void DVDConvertEntrynumToPath(); // 1
-extern "C" static void DVDGetCurrentDir(); // 1
-extern "C" void DVDChangeDir(); // 1
-extern "C" void DVDReadAsyncPrio(); // 1
-extern "C" static void cbForReadAsync(); // 1
-extern "C" void DVDReadPrio(); // 1
-extern "C" static void cbForReadSync(); // 1
-extern "C" void DVDOpenDir(); // 1
-extern "C" void DVDReadDir(); // 1
-extern "C" bool DVDCloseDir(); // 1
 
 extern "C" void __DVDFSInit(); // 1
 extern "C" void DVDConvertPathToEntrynum(); // 1
@@ -49,15 +35,6 @@ extern "C" extern u8 __DVDThreadQueue[8];
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void OSPanic(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void OSWakeupThread(); // 1
-extern "C" void DVDReadAbsAsyncPrio(); // 1
-extern "C" void DVDCancel(); // 1
-extern "C" void tolower(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void OSPanic(); // 1

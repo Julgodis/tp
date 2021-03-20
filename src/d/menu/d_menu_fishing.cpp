@@ -3,19 +3,21 @@
 // Translation Unit: d/menu/d_menu_fishing
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_fishing.h"
 
 // 
 // Types:
 // 
 
-struct JKRExpHeap {
-};
-
 struct STControl {
 };
 
 struct CSTControl {
+};
+
+struct JKRExpHeap {
 };
 
 struct dMenu_Fishing_c {
@@ -98,7 +100,6 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_fishing_cpp(); // 1
 
 extern "C" void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
 extern "C" void __dt__15dMenu_Fishing_cFv(); // 1
@@ -147,22 +148,6 @@ void mDoExt_getSubFont(); // 2
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
 extern "C" void mDoExt_getMesgFont__Fv(); // 1

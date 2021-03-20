@@ -3,7 +3,9 @@
 // Translation Unit: J2DGrafContext
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DGrafContext.h"
 
 // 
 // Types:
@@ -19,7 +21,7 @@ struct JGeometry {
 	template <typename A1>
 	struct TVec2 { };
 	/* TVec2<f32> */
-	struct TVec2__template0 {
+	struct TVec2__template1 {
 	};
 
 };
@@ -77,35 +79,6 @@ extern "C" extern void* __vt__14J2DGrafContext[10];
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetLineWidth(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void ceil(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXIdentity(); // 1

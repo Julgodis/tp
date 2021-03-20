@@ -3,15 +3,14 @@
 // Translation Unit: CARDCreate
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDCreate.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void CreateCallbackFat(); // 1
-extern "C" static void CARDCreateAsync(); // 1
-extern "C" void CARDCreate(); // 1
 
 extern "C" static void CreateCallbackFat(); // 1
 extern "C" static void CARDCreateAsync(); // 1
@@ -21,22 +20,6 @@ extern "C" void CARDCreate(); // 1
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void __CARDDefaultApiCallback(); // 1
-extern "C" void __CARDSyncCallback(); // 1
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDSync(); // 1
-extern "C" void __CARDGetFatBlock(); // 1
-extern "C" void __CARDAllocBlock(); // 1
-extern "C" void __CARDGetDirBlock(); // 1
-extern "C" void __CARDUpdateDir(); // 1
-extern "C" void __CARDCompareFileName(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void memcmp(); // 1
-extern "C" void strncpy(); // 1
-extern "C" void strlen(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void OSGetTime(); // 1

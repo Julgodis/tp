@@ -3,19 +3,14 @@
 // Translation Unit: OSMemory
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSMemory.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void OSMemory__OnReset(); // 1
-extern "C" static void MEMIntrruptHandler(); // 1
-extern "C" void OSProtectRange(); // 1
-extern "C" static void Config24MB(); // 1
-extern "C" static void Config48MB(); // 1
-extern "C" static void RealMode(); // 1
-extern "C" void __OSInitMemoryProtection(); // 1
 
 extern "C" static void OSMemory__OnReset(); // 1
 extern "C" static void MEMIntrruptHandler(); // 1
@@ -29,15 +24,6 @@ extern "C" void __OSInitMemoryProtection(); // 1
 // External References:
 // 
 
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCFlushRange(); // 1
-extern "C" void __OSUnhandledException(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSMaskInterrupts(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void OSRegisterResetFunction(); // 1
 
 extern "C" void DCInvalidateRange(); // 1
 extern "C" void DCFlushRange(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: d/d_attention
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_attention.h"
 
 // 
 // Types:
@@ -26,18 +28,18 @@ struct dAttDraw_CallBack_c {
 	/* 80070178 */ void execute(u16, J3DTransformInfo*);
 };
 
-struct cSAngle {
-	/* 80270F68 */ cSAngle(cSAngle const&);
-	/* 80270F98 */ cSAngle(s16);
-	/* 802710E8 */ void Inv() const;
-	/* 80271228 */ void operator-(s16) const;
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct cSAngle {
+	/* 80270F68 */ cSAngle(cSAngle const&);
+	/* 80270F98 */ cSAngle(s16);
+	/* 802710E8 */ void Inv() const;
+	/* 80271228 */ void operator-(s16) const;
 };
 
 struct fopAc_ac_c {
@@ -163,10 +165,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -210,7 +212,6 @@ struct Z2SeqMgr {
 // Forward References:
 // 
 
-extern "C" static void func_80070018(); // 1
 static void check_event_condition(u32, u16); // 2
 static void check_flontofplayer(u32, s16, s16); // 2
 static void distace_weight(f32, s16, f32); // 2
@@ -218,7 +219,6 @@ static void distace_angle_adjust(f32, s16, f32); // 2
 static void check_distace(cXyz*, s16, cXyz*, f32, f32, f32, f32); // 2
 static void select_attention(fopAc_ac_c*, void*); // 2
 static void sound_attention(fopAc_ac_c*, void*); // 2
-extern "C" void __sinit_d_attention_cpp(); // 1
 
 extern "C" static void func_80070018(); // 1
 extern "C" void __ct__11dAttParam_cFl(); // 1
@@ -302,7 +302,6 @@ extern "C" extern u8 data_80450688[8];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void mDoExt_modelUpdateDL(J3DModel*); // 2
 void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); // 2
 void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
@@ -314,32 +313,6 @@ void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 void operator delete(void*); // 2
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void tan(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void play__14mDoExt_baseAnmFv(); // 1

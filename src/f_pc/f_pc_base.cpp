@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_base
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_base.h"
 
 // 
 // Types:
@@ -76,8 +78,6 @@ void fpcPf_Get(s16); // 2
 void fpcLnTg_Init(line_tag*, void*); // 2
 void fpcPause_Init(void*); // 2
 void sBs_ClearArea(void*, u32); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
 
 extern "C" void fpcDtTg_Init__FP16delete_tag_classPv(); // 1
 extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1

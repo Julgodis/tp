@@ -3,7 +3,9 @@
 // Translation Unit: f_op/f_op_actor_mng
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_op/f_op_actor_mng.h"
 
 // 
 // Types:
@@ -298,16 +300,6 @@ void fopAcM_getWaterStream(cXyz const*, cBgS_PolyInfo const&, cXyz*, int*, int);
 void fopAcM_getPolygonAngle(cBgS_PolyInfo const&, s16); // 2
 void fopAcM_getPolygonAngle(cM3dGPla const*, s16); // 2
 void fopAcM_initManager(); // 2
-extern "C" void __sinit_f_op_actor_mng_cpp(); // 1
-extern "C" static void func_8001E0D4(); // 1
-extern "C" static void func_8001E0DC(); // 1
-extern "C" static void func_8001E0E4(); // 1
-extern "C" static void func_8001E0EC(); // 1
-extern "C" static void func_8001E0F4(); // 1
-extern "C" static void func_8001E0FC(); // 1
-extern "C" static void func_8001E104(); // 1
-extern "C" static void func_8001E10C(); // 1
-extern "C" static void func_8001E114(); // 1
 
 extern "C" void fopAcM_FastCreate__FsPFPv_iPvPv(); // 1
 extern "C" void fopAcM_setStageLayer__FPv(); // 1
@@ -455,7 +447,6 @@ extern "C" extern f32 mWaterY__11fopAcM_wt_c[1 + 1 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport_Error(); // 1
 void mDoMtx_YrotS(f32 (* )[4], s16); // 2
 void mDoExt_getGameHeap(); // 2
 void mDoExt_createSolidHeapFromGame(u32, u32); // 2
@@ -491,35 +482,6 @@ void cLib_chaseAngleS(s16*, s16, s16); // 2
 void cLib_targetAngleY(Vec const*, Vec const*); // 2
 void MtxPosition(cXyz*, cXyz*); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void C_MTXLookAt(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void C_VECHalfAngle(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
-extern "C" void strchr(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void sqrt(); // 1
 
 extern "C" void OSReport_Error(); // 1
 extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1

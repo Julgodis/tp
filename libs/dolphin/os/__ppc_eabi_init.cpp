@@ -3,15 +3,14 @@
 // Translation Unit: __ppc_eabi_init
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/__ppc_eabi_init.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __init_user(); // 1
-extern "C" static void __init_cpp(); // 1
-extern "C" void _ExitProcess(); // 1
 
 extern "C" void __init_user(); // 1
 extern "C" static void __init_cpp(); // 1
@@ -21,7 +20,6 @@ extern "C" void _ExitProcess(); // 1
 // External References:
 // 
 
-extern "C" void PPCHalt(); // 1
 
 extern "C" void PPCHalt(); // 1
 #pragma section ".ctors$10"

@@ -3,13 +3,14 @@
 // Translation Unit: MetroTRK/Portable/mem_TRK
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/mem_TRK.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRK_fill_mem(); // 1
 
 extern "C" void TRK_fill_mem(); // 1
 

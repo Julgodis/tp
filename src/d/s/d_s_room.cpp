@@ -3,7 +3,9 @@
 // Translation Unit: d/s/d_s_room
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/s/d_s_room.h"
 
 // 
 // Types:
@@ -141,7 +143,6 @@ extern "C" extern void* g_profile_ROOM_SCENE[10];
 // External References:
 // 
 
-extern "C" void OSReport_Error(); // 1
 void mDoExt_getArchiveHeap(); // 2
 void mDoExt_setCurrentHeap(JKRHeap*); // 2
 void fopAc_IsActor(void*); // 2
@@ -156,17 +157,6 @@ void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, int); // 2
 void dComIfG_getRoomArcName(int); // 2
 void dComIfGp_ret_wp_set(s8); // 2
 void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strnicmp(); // 1
 
 extern "C" void OSReport_Error(); // 1
 extern "C" void mDoExt_getArchiveHeap__Fv(); // 1

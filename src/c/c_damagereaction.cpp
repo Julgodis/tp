@@ -3,16 +3,18 @@
 // Translation Unit: c/c_damagereaction
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "c/c_damagereaction.h"
 
 // 
 // Types:
 // 
 
-struct JPABaseParticle {
+struct JPABaseEmitter {
 };
 
-struct JPABaseEmitter {
+struct JPABaseParticle {
 };
 
 struct JPTraceParticleCallBack4 {
@@ -35,7 +37,6 @@ struct fopAc_ac_c {
 // 
 
 void cDmrNowMidnaTalk(); // 2
-extern "C" void __sinit_c_damagereaction_cpp(); // 1
 
 extern "C" void execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle(); // 1
 extern "C" void draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle(); // 1
@@ -56,7 +57,6 @@ extern "C" extern u8 JPTracePCB4[4];
 
 void fopAcM_getTalkEventPartner(fopAc_ac_c const*); // 2
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
 
 extern "C" void fopAcM_getTalkEventPartner__FPC10fopAc_ac_c(); // 1
 extern "C" void __dt__19JPAParticleCallBackFv(); // 1

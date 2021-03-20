@@ -3,7 +3,9 @@
 // Translation Unit: stb
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/stb.h"
 
 // 
 // Types:
@@ -123,7 +125,6 @@ namespace JGadget {
 // Forward References:
 // 
 
-extern "C" static void func_80289928(); // 1
 
 extern "C" void __ct__Q37JStudio3stb7TObjectFUlPCvUl(); // 1
 extern "C" void __ct__Q37JStudio3stb7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
@@ -167,13 +168,6 @@ extern "C" extern void* __vt__Q37JStudio3stb8TFactory[5];
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void memcmp(); // 1
 
 extern "C" void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData(); // 1
 extern "C" void getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: JSUList
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JSupport/JSUList.h"
 
 // 
 // Types:
@@ -48,8 +50,6 @@ extern "C" void getNthLink__10JSUPtrListCFUl(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void _savegpr_29(); // 1

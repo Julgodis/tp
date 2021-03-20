@@ -3,7 +3,9 @@
 // Translation Unit: J2DAnimation
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DAnimation.h"
 
 // 
 // Types:
@@ -23,10 +25,10 @@ struct J2DAnmTransformKey {
 	/* 8030CD7C */ void getTransform(u16, J3DTransformInfo*) const;
 };
 
-struct _GXColor {
+struct J2DScreen {
 };
 
-struct J2DScreen {
+struct _GXColor {
 };
 
 struct J2DAnmColor {
@@ -108,10 +110,10 @@ struct JUTResReference {
 struct _GXTlut {
 };
 
-struct JUTTransparency {
+struct _GXTlutFmt {
 };
 
-struct _GXTlutFmt {
+struct JUTTransparency {
 };
 
 struct JUTPalette {
@@ -184,14 +186,6 @@ extern "C" extern void* __vt__19J2DAnmTransformFull[5];
 void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void operator delete(void*); // 2
-extern "C" void __destroy_new_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen(); // 1
 extern "C" void __dt__15J2DAnmTevRegKeyFv(); // 1

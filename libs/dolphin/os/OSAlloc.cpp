@@ -3,17 +3,14 @@
 // Translation Unit: OSAlloc
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSAlloc.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void DLInsert(); // 1
-extern "C" void OSFreeToHeap(); // 1
-extern "C" void OSSetCurrentHeap(); // 1
-extern "C" void OSInitAlloc(); // 1
-extern "C" void OSCreateHeap(); // 1
 
 extern "C" static void DLInsert(); // 1
 extern "C" void OSFreeToHeap(); // 1

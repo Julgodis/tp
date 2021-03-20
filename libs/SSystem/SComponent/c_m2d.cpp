@@ -3,7 +3,9 @@
 // Translation Unit: c_m2d
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_m2d.h"
 
 // 
 // Types:

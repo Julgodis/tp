@@ -3,17 +3,14 @@
 // Translation Unit: MetroTRK/Portable/nubevent
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/nubevent.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRKDestructEvent(); // 1
-extern "C" void TRKConstructEvent(); // 1
-extern "C" void TRKPostEvent(); // 1
-extern "C" void TRKGetNextEvent(); // 1
-extern "C" void TRKInitializeEventQueue(); // 1
 
 extern "C" void TRKDestructEvent(); // 1
 extern "C" void TRKConstructEvent(); // 1
@@ -25,11 +22,6 @@ extern "C" void TRKInitializeEventQueue(); // 1
 // External References:
 // 
 
-SECTION_INIT void TRK_memcpy(); // 1
-extern "C" void TRKReleaseBuffer(); // 1
-extern "C" bool TRKReleaseMutex(); // 1
-extern "C" bool TRKAcquireMutex(); // 1
-extern "C" bool TRKInitializeMutex(); // 1
 
 SECTION_INIT void TRK_memcpy(); // 1
 extern "C" void TRKReleaseBuffer(); // 1

@@ -3,13 +3,14 @@
 // Translation Unit: GCN_mem_alloc
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Runtime.PPCEABI.H/GCN_mem_alloc.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __sys_free(); // 1
 
 extern "C" void __sys_free(); // 1
 
@@ -17,14 +18,6 @@ extern "C" void __sys_free(); // 1
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void OSFreeToHeap(); // 1
-extern "C" void OSSetCurrentHeap(); // 1
-extern "C" void OSInitAlloc(); // 1
-extern "C" void OSCreateHeap(); // 1
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void OSGetArenaLo(); // 1
-extern "C" void OSSetArenaLo(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void OSFreeToHeap(); // 1

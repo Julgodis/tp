@@ -3,7 +3,9 @@
 // Translation Unit: JKRAramPiece
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRAramPiece.h"
 
 // 
 // Types:
@@ -64,7 +66,6 @@ struct JUTException {
 // Forward References:
 // 
 
-extern "C" void __sinit_JKRAramPiece_cpp(); // 1
 
 extern "C" void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
 extern "C" void sendCommand__12JKRAramPieceFP12JKRAMCommand(); // 1
@@ -82,24 +83,8 @@ extern "C" extern char const* const JKRAramPiece__stringBase0;
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void ARQPostRequest(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1

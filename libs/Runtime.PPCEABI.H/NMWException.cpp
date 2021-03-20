@@ -3,17 +3,14 @@
 // Translation Unit: NMWException
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Runtime.PPCEABI.H/NMWException.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __destroy_new_array(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __dt__26__partial_array_destructorFv(); // 1
-extern "C" void __construct_new_array(); // 1
 
 #pragma section "extabindex_"
 extern void* NMWException__lit_211[3];

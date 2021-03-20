@@ -3,24 +3,16 @@
 // Translation Unit: c_cc_s
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_cc_s.h"
 
 // 
 // Types:
 // 
 
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
-};
-
 struct cXyz {
 	/* 80009184 */ ~cXyz();
-};
-
-struct cCcD_GObjInf {
-};
-
-struct cCcD_GStts {
 };
 
 struct cCcD_Stts {
@@ -28,6 +20,16 @@ struct cCcD_Stts {
 	/* 8026395C */ void ClrCcMove();
 	/* 80263970 */ void PlusDmg(int);
 	/* 80263984 */ void GetWeightF() const;
+};
+
+struct cCcD_GStts {
+};
+
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
+};
+
+struct cCcD_GObjInf {
 };
 
 struct cCcS {
@@ -124,23 +126,6 @@ extern "C" extern void* __vt__4cCcS[12];
 // External References:
 // 
 
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __dt__4cCcSFv(); // 1

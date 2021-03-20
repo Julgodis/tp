@@ -3,7 +3,9 @@
 // Translation Unit: J3DMaterialFactory
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphLoader/J3DMaterialFactory.h"
 
 // 
 // Types:
@@ -24,10 +26,10 @@ struct J3DMaterial {
 	/* 80332B94 */ ~J3DMaterial();
 };
 
-struct J3DMaterialDLBlock {
+struct J3DMaterialBlock {
 };
 
-struct J3DMaterialBlock {
+struct J3DMaterialDLBlock {
 };
 
 struct J3DMaterialFactory {
@@ -83,34 +85,34 @@ struct J3DPEBlockNull {
 	/* 803329B0 */ ~J3DPEBlockNull();
 };
 
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
-};
-
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
-};
-
-struct J3DTevSwapModeInfo {
-};
-
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
-struct J3DTevSwapModeTable {
-};
-
-struct J3DTevOrder {
-	/* 8000E140 */ J3DTevOrder();
-};
-
 struct J3DTevStageInfo {
 };
 
 struct J3DTevStage {
 	/* 8000E230 */ J3DTevStage();
 	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
+};
+
+struct J3DTevOrder {
+	/* 8000E140 */ J3DTevOrder();
+};
+
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
+};
+
+struct J3DTevSwapModeInfo {
+};
+
+struct J3DTevSwapModeTable {
+};
+
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
 };
 
 struct J3DTevBlock {
@@ -193,16 +195,16 @@ struct J3DColorBlockNull {
 	/* 80332B38 */ ~J3DColorBlockNull();
 };
 
-struct J3DBlend {
-};
-
-struct J3DFog {
-};
-
 struct J3DAlphaComp {
 };
 
+struct J3DBlend {
+};
+
 struct J3DZMode {
+};
+
+struct J3DFog {
 };
 
 struct J3DPEBlock {
@@ -234,10 +236,10 @@ struct J3DPEBlock {
 	/* 80317394 */ void setFogOffset(u32);
 };
 
-struct J3DLightObj {
+struct J3DColorChan {
 };
 
-struct J3DColorChan {
+struct J3DLightObj {
 };
 
 struct J3DColorBlock {
@@ -275,14 +277,14 @@ struct J3DColorBlock {
 	/* 80317478 */ void setColorChanOffset(u32);
 };
 
+struct J3DNBTScale {
+};
+
 struct J3DTexMtx {
 };
 
 struct J3DTexCoord {
 	/* 8000E464 */ J3DTexCoord();
-};
-
-struct J3DNBTScale {
 };
 
 struct J3DTexGenBlock {
@@ -452,19 +454,6 @@ void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template25(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template26(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void patchTexNoAndTexCoordScale__11J3DTevBlockFv(); // 1
 extern "C" void patch__10J3DPEBlockFv(); // 1

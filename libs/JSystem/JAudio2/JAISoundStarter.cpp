@@ -3,7 +3,9 @@
 // Translation Unit: JAISoundStarter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAISoundStarter.h"
 
 // 
 // Types:

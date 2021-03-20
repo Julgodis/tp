@@ -3,7 +3,9 @@
 // Translation Unit: d/cc/d_cc_uty
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/cc/d_cc_uty.h"
 
 // 
 // Types:
@@ -61,9 +63,6 @@ extern "C" bool checkCutJumpCancelTurn__9daPy_py_cCFv(); // 1
 void dCcD_GetGObjInf(cCcD_Obj*); // 2
 void cM_atan2s(f32, f32); // 2
 void cM_rndFX(f32); // 2
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _restgpr_25(); // 1
 
 extern "C" void getHitSeID__12dCcD_GObjInfFUci(); // 1
 extern "C" void dCcD_GetGObjInf__FP8cCcD_Obj(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: jstudio-control
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/jstudio-control.h"
 
 // 
 // Types:
@@ -13,10 +15,6 @@ struct Vec {
 };
 
 namespace JStudio {
-	struct TCreateObject {
-		/* 80285488 */ ~TCreateObject();
-	};
-
 	namespace stb {
 		struct data {
 			struct TParse_TBlock_object {
@@ -52,6 +50,10 @@ namespace JStudio {
 			/* 80289820 */ void parseBlock_object(JStudio::stb::data::TParse_TBlock_object const&, u32);
 		};
 
+	};
+
+	struct TCreateObject {
+		/* 80285488 */ ~TCreateObject();
 	};
 
 	struct TFactory {
@@ -169,15 +171,6 @@ extern "C" extern void* __vt__Q27JStudio8TFactory[5];
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXRotRad(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXTransApply(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void memcmp(); // 1
 
 extern "C" void __ct__Q37JStudio3ctb8TControlFv(); // 1
 extern "C" void __dt__Q37JStudio3ctb8TControlFv(); // 1

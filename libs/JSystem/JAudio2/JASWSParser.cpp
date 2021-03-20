@@ -3,7 +3,9 @@
 // Translation Unit: JASWSParser
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASWSParser.h"
 
 // 
 // Types:
@@ -74,10 +76,6 @@ extern "C" static void func_80299520(); // 1
 // 
 
 void* operator new(u32, JKRHeap*, int); // 2
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_23(); // 1
 
 extern "C" void __ct__16JASBasicWaveBankFv(); // 1
 extern "C" void getWaveGroup__16JASBasicWaveBankFUl(); // 1

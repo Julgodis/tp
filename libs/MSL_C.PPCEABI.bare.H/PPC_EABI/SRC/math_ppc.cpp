@@ -3,16 +3,14 @@
 // Translation Unit: PPC_EABI/SRC/math_ppc
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/math_ppc.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void tanf(); // 1
-extern "C" void sinf(); // 1
-extern "C" void cosf(); // 1
-extern "C" void acosf(); // 1
 
 extern "C" void tanf(); // 1
 extern "C" void sinf(); // 1
@@ -23,10 +21,6 @@ extern "C" void acosf(); // 1
 // External References:
 // 
 
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
-extern "C" void tan(); // 1
-extern "C" void acos(); // 1
 
 extern "C" void cos(); // 1
 extern "C" void sin(); // 1

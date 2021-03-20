@@ -3,7 +3,9 @@
 // Translation Unit: d/meter/d_meter_string
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/meter/d_meter_string.h"
 
 // 
 // Types:
@@ -44,14 +46,6 @@ struct dMeter2Info_c {
 	/* 8021CC00 */ void resetMeterString();
 };
 
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7AFC */ void getParentPane();
-	/* 802F7FCC */ void animationTransform();
-};
-
 struct J2DGrafContext {
 };
 
@@ -62,6 +56,14 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct J2DPane {
+	/* 802F7AFC */ void getParentPane();
+	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -114,9 +116,6 @@ void dPaneClass_showNullPane(J2DScreen*); // 2
 void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_23(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void dComIfG_TimerDeleteRequest__Fi(); // 1

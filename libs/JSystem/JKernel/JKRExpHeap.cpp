@@ -3,7 +3,9 @@
 // Translation Unit: JKRExpHeap
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRExpHeap.h"
 
 // 
 // Types:
@@ -131,20 +133,6 @@ extern "C" extern char const* const JKRExpHeap__stringBase0;
 // 
 
 void operator delete(void*); // 2
-extern "C" void JUTReportConsole_f(); // 1
-extern "C" void JUTReportConsole(); // 1
-extern "C" void JUTWarningConsole_f(); // 1
-extern "C" void JUTWarningConsole(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__7JKRHeapFPvUlP7JKRHeapb(); // 1
 extern "C" void __dt__7JKRHeapFv(); // 1

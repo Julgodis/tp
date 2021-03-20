@@ -3,7 +3,9 @@
 // Translation Unit: JAUSoundAnimator
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAUSoundAnimator.h"
 
 // 
 // Types:
@@ -26,8 +28,6 @@ extern "C" void getEndSoundIndex__17JAUSoundAnimationCFf(); // 1
 // External References:
 // 
 
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1

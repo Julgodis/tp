@@ -3,7 +3,9 @@
 // Translation Unit: JPAResourceManager
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAResourceManager.h"
 
 // 
 // Types:
@@ -15,10 +17,10 @@ struct JKRHeap {
 struct ResTIMG {
 };
 
-struct JPATexture {
+struct JPAResource {
 };
 
-struct JPAResource {
+struct JPATexture {
 };
 
 struct JPAResourceManager {
@@ -56,9 +58,6 @@ extern "C" void getResUserWork__18JPAResourceManagerCFUs(); // 1
 // External References:
 // 
 
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager(); // 1
 extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc(); // 1

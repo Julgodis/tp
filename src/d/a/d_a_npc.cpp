@@ -3,7 +3,9 @@
 // Translation Unit: d/a/d_a_npc
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/a/d_a_npc.h"
 
 // 
 // Types:
@@ -38,10 +40,6 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 8014D0C0 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct daNpcT_Hermite_c {
-	/* 8014CBAC */ ~daNpcT_Hermite_c();
-};
-
 struct Vec {
 };
 
@@ -52,6 +50,10 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
+};
+
+struct daNpcT_Hermite_c {
+	/* 8014CBAC */ ~daNpcT_Hermite_c();
 };
 
 struct daNpcT_Path_c {
@@ -86,36 +88,32 @@ struct daNpcT_DmgStagger_c {
 	/* 80147E3C */ void calc(int);
 };
 
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 8026745C */ void operator+=(csXyz&);
+struct J3DAnmColor {
+};
+
+struct J3DAnmTevRegKey {
 };
 
 struct dCcD_GObjInf {
 	/* 80084460 */ void ChkTgHit();
 };
 
-struct J3DAnmTevRegKey {
-};
-
-struct J3DAnmColor {
-};
-
-struct daNpcT_faceMotionAnmData_c {
+struct J3DAnmTransform {
 };
 
 struct J3DJoint {
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
+struct _GXColorS10 {
 };
 
-struct J3DAnmTexPattern {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTransform {
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 8026745C */ void operator+=(csXyz&);
 };
 
 struct daNpcT_motionAnmData_c {
@@ -124,10 +122,14 @@ struct daNpcT_motionAnmData_c {
 struct J3DAnmTransformKey {
 };
 
-struct _GXColorS10 {
+struct daNpcT_faceMotionAnmData_c {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTexPattern {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
 };
 
 struct J3DModelData {
@@ -607,13 +609,13 @@ struct dPaPoT_c {
 	/* 8005115C */ void setEffectTwo(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
 };
 
-struct dBgW_Base {
-};
-
 struct cBgS_GndChk {
 	/* 80267C1C */ cBgS_GndChk();
 	/* 80267C94 */ ~cBgS_GndChk();
 	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct dBgW_Base {
 };
 
 struct cBgS_LinChk {
@@ -752,7 +754,6 @@ void daNpcT_chkTmpBit(u32); // 2
 static void cLib_calcTimer__template1(s16*); // 2
 void cLib_calcTimer__template2(int*); // 2
 void cLib_getRndValue__template0(int, int); // 2
-extern "C" void __sinit_d_a_npc_cpp(); // 1
 static void daBaseNpc_addIdx(int, int, u16*, int); // 2
 static void daBaseNpc_subIdx(int, int, u16*, int); // 2
 static void daBaseNpc_incIdx(int, u16*, int, int); // 2
@@ -1141,7 +1142,6 @@ extern "C" extern u8 data_80450FF8[8];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
 void mDoMtx_ZXYrotS(f32 (* )[4], s16, s16, s16); // 2
 void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
 void mDoMtx_XrotS(f32 (* )[4], s16); // 2
@@ -1186,43 +1186,6 @@ void cLib_targetAngleY(Vec const*, Vec const*); // 2
 void cLib_targetAngleX(cXyz const*, cXyz const*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecArray(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_16(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_16(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strlen(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void __dt__4cXyzFv(); // 1

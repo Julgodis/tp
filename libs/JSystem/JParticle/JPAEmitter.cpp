@@ -3,7 +3,9 @@
 // Translation Unit: JPAEmitter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAEmitter.h"
 
 // 
 // Types:
@@ -11,6 +13,9 @@
 
 struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
+};
+
+struct JPAResource {
 };
 
 struct JGeometry {
@@ -22,6 +27,9 @@ struct JGeometry {
 
 };
 
+struct JPAEmitterManager {
+};
+
 struct JPAEmitterWorkData {
 };
 
@@ -30,13 +38,7 @@ struct JPABaseParticle {
 	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
 };
 
-struct JPAEmitterManager {
-};
-
 struct _GXTexMapID {
-};
-
-struct JPAResource {
 };
 
 struct JPABaseEmitter {
@@ -78,10 +80,6 @@ extern "C" void loadTexture__14JPABaseEmitterFUc11_GXTexMapID(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSMTXMultVec(); // 1
 
 extern "C" void init_p__15JPABaseParticleFP18JPAEmitterWorkData(); // 1
 extern "C" void init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: d/d_gameover
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_gameover.h"
 
 // 
 // Types:
@@ -137,9 +139,6 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
-struct ResTLUT {
-};
-
 struct ResTIMG {
 };
 
@@ -150,6 +149,9 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct ResTLUT {
 };
 
 struct J2DPicture {
@@ -171,7 +173,6 @@ static void dGameover_Delete(dGameover_c*); // 2
 static void dGameover_Create(msg_class*); // 2
 void d_GameOver_Create(u8); // 2
 void d_GameOver_Delete(u32&); // 2
-extern "C" void __sinit_d_gameover_cpp(); // 1
 
 extern "C" void draw__24dDlst_Gameover_CAPTURE_cFv(); // 1
 extern "C" void __ct__10dGov_HIO_cFv(); // 1
@@ -250,47 +251,6 @@ void dComIfGp_offHeapLockFlag(int); // 2
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetFogRangeAdj(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
 extern "C" void mDoExt_getSubFont__Fv(); // 1

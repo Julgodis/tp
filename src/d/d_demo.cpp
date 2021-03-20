@@ -3,7 +3,9 @@
 // Translation Unit: d/d_demo
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_demo.h"
 
 // 
 // Types:
@@ -77,10 +79,10 @@ struct dDemo_ambient_c {
 	/* 800394C8 */ ~dDemo_ambient_c();
 };
 
-struct _GXSpotFn {
+struct _GXDistAttnFn {
 };
 
-struct _GXDistAttnFn {
+struct _GXSpotFn {
 };
 
 struct JStage {
@@ -253,10 +255,10 @@ struct dRes_control_c {
 	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -382,10 +384,6 @@ struct JUTNameTab {
 // Forward References:
 // 
 
-extern "C" static void func_80037DE4(); // 1
-extern "C" static void func_80037E44(); // 1
-extern "C" static void func_80037E74(); // 1
-extern "C" static void func_80037ED4(); // 1
 static void dDemo_getJaiPointer(char const*, u32, int, u16*); // 2
 void dDemo_setDemoData(fopAc_ac_c*, u8, mDoExt_McaMorf*, char const*, int, u16*, u32, s8); // 2
 static void branchFile(char const*); // 2
@@ -493,7 +491,6 @@ extern "C" extern u8 m_status__7dDemo_c[4];
 // External References:
 // 
 
-extern "C" void OSReport_Error(); // 1
 void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopAcM_setStageLayer(void*); // 2
 void fopAcM_fastCreate(char const*, u32, cXyz const*, int, csXyz const*, cXyz const*, int (*)(void*), void*); // 2
@@ -502,19 +499,6 @@ void fpcSch_JudgeByID(void*, void*); // 2
 void dComIfGs_staffroll_next_go_check(); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strncmp(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strlen(); // 1
 
 extern "C" void OSReport_Error(); // 1
 extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor(); // 1

@@ -3,16 +3,18 @@
 // Translation Unit: c_m3d_g_tri
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_m3d_g_tri.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
+struct cM3dGCyl {
 };
 
-struct cM3dGCyl {
+struct Vec {
 };
 
 struct cM3dGPla {

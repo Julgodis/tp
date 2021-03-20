@@ -3,16 +3,18 @@
 // Translation Unit: msg/scrn/d_msg_scrn_tree
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "msg/scrn/d_msg_scrn_tree.h"
 
 // 
 // Types:
 // 
 
-struct JKRExpHeap {
+struct JUTFont {
 };
 
-struct JUTFont {
+struct JKRExpHeap {
 };
 
 struct dMsgScrnTree_c {
@@ -112,10 +114,6 @@ void dComIfGp_getSubHeap2D(int); // 2
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void dComIfGp_getSubHeap2D__Fi(); // 1

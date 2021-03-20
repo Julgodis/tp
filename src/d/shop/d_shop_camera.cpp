@@ -3,7 +3,9 @@
 // Translation Unit: d/shop/d_shop_camera
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/shop/d_shop_camera.h"
 
 // 
 // Types:
@@ -65,11 +67,6 @@ void cM_atan2s(f32, f32); // 2
 void cLib_addCalc2(f32*, f32, f32, f32); // 2
 void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32); // 2
 void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*); // 2
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void Stay__9dCamera_cFv(); // 1
 extern "C" void SetTrimSize__9dCamera_cFl(); // 1

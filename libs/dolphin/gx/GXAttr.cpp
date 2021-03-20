@@ -3,24 +3,14 @@
 // Translation Unit: GXAttr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXAttr.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" static void GXSetVtxDescv(); // 1
-extern "C" void __GXSetVCD(); // 1
-extern "C" void __GXCalculateVLim(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetVtxAttrFmtv(); // 1
-extern "C" void __GXSetVAT(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXInvalidateVtxCache(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
 
 extern "C" void GXSetVtxDesc(); // 1
 extern "C" static void GXSetVtxDescv(); // 1
@@ -39,7 +29,6 @@ extern "C" void GXSetNumTexGens(); // 1
 // External References:
 // 
 
-extern "C" void __GXSetMatrixIndex(); // 1
 
 extern "C" void __GXSetMatrixIndex(); // 1
 extern "C" extern void* __GXData;

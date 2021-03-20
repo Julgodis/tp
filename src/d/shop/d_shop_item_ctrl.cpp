@@ -3,7 +3,9 @@
 // Translation Unit: d/shop/d_shop_item_ctrl
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/shop/d_shop_item_ctrl.h"
 
 // 
 // Types:
@@ -51,11 +53,6 @@ void fpcSch_JudgeByID(void*, void*); // 2
 void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32); // 2
 void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
 void operator delete(void*); // 2
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
 extern "C" void fpcSch_JudgeByID__FPvPv(); // 1

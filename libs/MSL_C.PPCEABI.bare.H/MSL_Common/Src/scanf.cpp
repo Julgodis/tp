@@ -3,13 +3,14 @@
 // Translation Unit: MSL_Common/Src/scanf
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/scanf.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __StringRead(); // 1
 
 extern "C" void __StringRead(); // 1
 

@@ -3,7 +3,9 @@
 // Translation Unit: Z2AudioArcLoader
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2AudioArcLoader.h"
 
 // 
 // Types:
@@ -75,8 +77,6 @@ extern "C" extern void* __vt__16Z2AudioArcLoader[17 + 1 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__22JAUAudioArcInterpreterFv(); // 1
 extern "C" void __ct__17JAUAudioArcLoaderFP10JAUSection(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_fstcreate_req
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_fstcreate_req.h"
 
 // 
 // Types:
@@ -47,8 +49,6 @@ void fpcCtRq_Cancel(create_request*); // 2
 void fpcCtRq_Create(layer_class*, u32, create_request_method_class*); // 2
 void fpcLy_SetCurrentLayer(layer_class*); // 2
 void fpcLd_Use(s16); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
 
 extern "C" void fpcBs_MakeOfId__Fv(); // 1
 extern "C" void fpcBs_Create__FsUiPv(); // 1

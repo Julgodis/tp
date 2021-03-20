@@ -3,7 +3,9 @@
 // Translation Unit: JASDriverIF
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASDriverIF.h"
 
 // 
 // Types:
@@ -44,7 +46,6 @@ struct JASDsp {
 // Forward References:
 // 
 
-extern "C" void __sinit_JASDriverIF_cpp(); // 1
 
 extern "C" void setDSPLevel__9JASDriverFf(); // 1
 extern "C" void getChannelLevel_dsp__9JASDriverFv(); // 1
@@ -65,10 +66,6 @@ extern "C" void __ct__Q214JASCallbackMgr9TCallbackFv(); // 1
 // External References:
 // 
 
-extern "C" void OSYieldThread(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void regist__14JASCallbackMgrFPFPv_lPv(); // 1
 extern "C" void reject__14JASCallbackMgrFPFPv_lPv(); // 1

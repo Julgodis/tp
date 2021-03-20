@@ -3,7 +3,9 @@
 // Translation Unit: JAUAudioArcLoader
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAUAudioArcLoader.h"
 
 // 
 // Types:
@@ -85,8 +87,6 @@ extern "C" extern void* __vt__17JAUAudioArcLoader[17 + 1 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__22JAUAudioArcInterpreterFv(); // 1
 extern "C" void __dt__22JAUAudioArcInterpreterFv(); // 1

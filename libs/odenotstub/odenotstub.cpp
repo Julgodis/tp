@@ -3,13 +3,14 @@
 // Translation Unit: odenotstub
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "odenotstub/odenotstub.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" bool Hu_IsStub(); // 1
 
 extern "C" bool Hu_IsStub(); // 1
 

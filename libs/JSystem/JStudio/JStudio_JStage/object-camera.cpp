@@ -3,23 +3,13 @@
 // Translation Unit: object-camera
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio_JStage/object-camera.h"
 
 // 
 // Types:
 // 
-
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TCamera {
-	};
-
-	struct TObject {
-	};
-
-};
 
 struct Vec {
 };
@@ -53,6 +43,18 @@ namespace JStudio {
 
 	struct TAdaptor_camera {
 		/* 80286E1C */ ~TAdaptor_camera();
+	};
+
+};
+
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TCamera {
+	};
+
+	struct TObject {
 	};
 
 };
@@ -101,7 +103,6 @@ struct JStudio_JStage {
 // Forward References:
 // 
 
-extern "C" void func_8028C180(); // 1
 
 extern "C" void __ct__Q214JStudio_JStage15TAdaptor_cameraFPCQ26JStage7TSystemPQ26JStage7TCamera(); // 1
 extern "C" void __dt__Q214JStudio_JStage15TAdaptor_cameraFv(); // 1
@@ -141,14 +142,6 @@ extern "C" extern u8 object_camera__lit_1034[12];
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
 extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1

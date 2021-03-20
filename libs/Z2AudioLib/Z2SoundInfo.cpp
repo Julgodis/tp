@@ -3,25 +3,27 @@
 // Translation Unit: Z2SoundInfo
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2SoundInfo.h"
 
 // 
 // Types:
 // 
 
+struct JAISeq {
+};
+
 struct JAISoundID {
+};
+
+struct JAISound {
 };
 
 struct JAIStream {
 };
 
 struct JAISe {
-};
-
-struct JAISeq {
-};
-
-struct JAISound {
 };
 
 struct Z2SoundInfo {
@@ -63,10 +65,6 @@ struct Z2Calc {
 // Forward References:
 // 
 
-extern "C" static void func_802BBCBC(); // 1
-extern "C" static void func_802BBCC4(); // 1
-extern "C" static void func_802BBCCC(); // 1
-extern "C" static void func_802BBCD4(); // 1
 
 extern "C" void getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID(); // 1
 extern "C" void getSoundType__11Z2SoundInfoCF10JAISoundID(); // 1
@@ -93,15 +91,6 @@ extern "C" extern void* __vt__11Z2SoundInfo[20];
 // 
 
 void operator delete(void*); // 2
-extern "C" void DVDConvertPathToEntrynum(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__12JAISoundInfoFv(); // 1
 extern "C" void __dt__16JAIStreamDataMgrFv(); // 1

@@ -1,9 +1,7 @@
-#ifndef JAUSOUNDTABLE_H_
-#define JAUSOUNDTABLE_H_
+#ifndef JAUSOUNDTABLE_H
+#define JAUSOUNDTABLE_H
 
-extern "C" {
-void JAUSoundTable_NS_getData(void);
-void JAUSoundTable_NS_getTypeID(void);
-}
+#include "dolphin/types.h"
 
-#endif  // JAUSOUNDTABLE_H_
+
+#endif /* JAUSOUNDTABLE_H */

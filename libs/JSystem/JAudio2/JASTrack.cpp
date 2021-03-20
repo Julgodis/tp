@@ -3,7 +3,9 @@
 // Translation Unit: JASTrack
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASTrack.h"
 
 // 
 // Types:
@@ -18,14 +20,6 @@ struct JASOscillator {
 
 };
 
-struct JASChannel {
-	/* 8029AAD0 */ void release(u16);
-	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
-	/* 8029AB98 */ void setMixConfig(u32, u16);
-	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
-	/* 8029BBFC */ void free();
-};
-
 struct JASSoundParams {
 };
 
@@ -37,6 +31,14 @@ struct JASDsp {
 		/* 8029E094 */ void setDistFilter(s16);
 	};
 
+};
+
+struct JASChannel {
+	/* 8029AAD0 */ void release(u16);
+	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
+	/* 8029AB98 */ void setMixConfig(u32, u16);
+	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
+	/* 8029BBFC */ void free();
 };
 
 struct JASTrack {
@@ -189,8 +191,6 @@ namespace JGadget {
 // Forward References:
 // 
 
-extern "C" void __sinit_JASTrack_cpp(); // 1
-extern "C" static void func_80293528(); // 1
 
 extern "C" void __ct__8JASTrackFv(); // 1
 extern "C" void __dt__8JASTrackFv(); // 1
@@ -269,25 +269,7 @@ extern "C" extern u8 data_80431B04[16 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
 void operator delete(void*); // 2
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void __ct__17JASGenericMemPoolFv(); // 1

@@ -3,29 +3,14 @@
 // Translation Unit: OS
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OS.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __OSFPRInit(); // 1
-extern "C" void OSGetConsoleType(); // 1
-extern "C" static void InquiryCallback(); // 1
-extern "C" void OSInit(); // 1
-extern "C" static void OSExceptionInit(); // 1
-extern "C" static void __OSDBIntegrator(); // 1
-extern "C" static void __OSDBJump(); // 1
-extern "C" void __OSSetExceptionHandler(); // 1
-extern "C" void __OSGetExceptionHandler(); // 1
-extern "C" static void OSExceptionVector(); // 1
-extern "C" static void __DBVECTOR(); // 1
-extern "C" static void __OSEVSetNumber(); // 1
-extern "C" static void __OSEVEnd(); // 1
-extern "C" static void OSDefaultExceptionHandler(); // 1
-extern "C" void __OSPSInit(); // 1
-extern "C" void __OSGetDIConfig(); // 1
-extern "C" void OSRegisterVersion(); // 1
 
 extern "C" void __OSFPRInit(); // 1
 extern "C" void OSGetConsoleType(); // 1
@@ -73,52 +58,6 @@ extern "C" extern u8 data_80451634[4];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void PPCMtmmcr0(); // 1
-extern "C" void PPCMtmmcr1(); // 1
-extern "C" void PPCMtpmc1(); // 1
-extern "C" void PPCMtpmc2(); // 1
-extern "C" void PPCMtpmc3(); // 1
-extern "C" void PPCMtpmc4(); // 1
-extern "C" void PPCMfhid2(); // 1
-extern "C" void PPCMthid2(); // 1
-extern "C" void PPCDisableSpeculation(); // 1
-extern "C" void PPCSetFpNonIEEEMode(); // 1
-extern "C" void OSInitAlarm(); // 1
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void OSGetArenaLo(); // 1
-extern "C" void OSSetArenaHi(); // 1
-extern "C" void OSSetArenaLo(); // 1
-extern "C" void __OSInitAudioSystem(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCFlushRangeNoSync(); // 1
-extern "C" void ICInvalidateRange(); // 1
-extern "C" void ICFlashInvalidate(); // 1
-extern "C" void __OSCacheInit(); // 1
-extern "C" void __OSContextInit(); // 1
-extern "C" void __OSUnhandledException(); // 1
-extern "C" void __OSGetExecParams(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSInterruptInit(); // 1
-extern "C" void __OSModuleInit(); // 1
-extern "C" void __OSInitMemoryProtection(); // 1
-extern "C" void OSGetResetCode(); // 1
-extern "C" void __OSResetSWInterruptHandler(); // 1
-extern "C" void __OSInitSram(); // 1
-extern "C" void __OSInitSystemCall(); // 1
-extern "C" void __OSThreadInit(); // 1
-extern "C" void __OSGetSystemTime(); // 1
-extern "C" void EXIInit(); // 1
-extern "C" void SIInit(); // 1
-extern "C" void __DBIsExceptionMarked(); // 1
-extern "C" void DBPrintf(); // 1
-extern "C" void DVDInit(); // 1
-extern "C" void DVDInquiryAsync(); // 1
-extern "C" void EnableMetroTRKInterrupts(); // 1
 
 SECTION_INIT void memset(); // 1
 SECTION_INIT void memcpy(); // 1

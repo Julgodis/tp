@@ -3,7 +3,9 @@
 // Translation Unit: d/kankyo/d_kankyo
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/kankyo/d_kankyo.h"
 
 // 
 // Types:
@@ -29,11 +31,11 @@ struct J3DLightInfo {
 struct _GXColor {
 };
 
-struct J3DModelData {
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct J3DModelData {
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 struct dScnKy_env_light_c {
@@ -96,10 +98,10 @@ struct color_RGB_class {
 struct J3DMaterial {
 };
 
-struct J3DLightObj {
+struct J3DGXColor {
 };
 
-struct J3DGXColor {
+struct J3DLightObj {
 };
 
 struct J3DColorBlock {
@@ -297,10 +299,6 @@ static void cLib_addCalcU8(u8*, u8, s16, s16); // 2
 static void setLightTevColorType_MAJI_sub(J3DMaterial*, dKy_tevstr_c*, int); // 2
 static void dKy_cloudshadow_scroll(J3DModelData*, dKy_tevstr_c*, int); // 2
 void dKy_undwater_filter_draw(); // 2
-extern "C" static void dKy_Draw__FP17sub_kankyo__class(); // 1
-extern "C" static void dKy_Execute__FP17sub_kankyo__class(); // 1
-extern "C" static bool dKy_IsDelete__FP17sub_kankyo__class(); // 1
-extern "C" static void dKy_Delete__FP17sub_kankyo__class(); // 1
 static void dKy_Create(void*); // 2
 void dKy_setLight_init(); // 2
 void dKy_setLight(); // 2
@@ -403,7 +401,6 @@ void dKy_shadow_mode_set(u8); // 2
 void dKy_shadow_mode_reset(u8); // 2
 static void dKy_shadow_mode_check(u8); // 2
 void dKy_bg_MAxx_proc(void*); // 2
-extern "C" void __sinit_d_kankyo_cpp(); // 1
 static void dKankyo_DayProc(); // 2
 
 extern "C" static void dKy_WolfPowerup_AmbCol__FP11_GXColorS10(); // 1
@@ -612,9 +609,6 @@ extern "C" extern u8 struct_80451070[8];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport_Warning(); // 1
 void mDoAud_setSceneName(char const*, s32, s32); // 2
 void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16); // 2
 void mDoMtx_inverseTranspose(f32 const (* )[4], f32 (* )[4]); // 2
@@ -655,58 +649,6 @@ void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
 void GFSetFog(_GXFogType, f32, f32, f32, f32, _GXColor); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void C_MTXLightPerspective(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void GXInitLightAttn(); // 1
-extern "C" void GXInitLightSpot(); // 1
-extern "C" void GXInitLightDistAttn(); // 1
-extern "C" void GXInitLightPos(); // 1
-extern "C" void GXInitLightDir(); // 1
-extern "C" void GXInitLightColor(); // 1
-extern "C" void GXLoadLightObjImm(); // 1
-extern "C" void GXSetChanAmbColor(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetFogRangeAdj(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savefpr_29(); // 1
-extern "C" void _restfpr_29(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_16(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_16(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
-extern "C" void memcmp(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
 
 SECTION_INIT void memset(); // 1
 SECTION_INIT void memcpy(); // 1

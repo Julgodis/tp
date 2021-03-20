@@ -3,7 +3,9 @@
 // Translation Unit: d/bg/d_bg_s
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_s.h"
 
 // 
 // Types:
@@ -24,21 +26,14 @@ struct cBgS_ChkElm {
 	/* 80074128 */ void Release();
 };
 
-struct cM3dGPla {
-};
-
-struct cBgS_GndChk {
-	/* 80267D44 */ void PreCheck();
-};
-
-struct cBgS_LinChk {
-	/* 80267F40 */ void PreCalc();
-};
-
 struct cXyz {
 };
 
 struct cBgS_ShdwDraw {
+};
+
+struct cBgS_GndChk {
+	/* 80267D44 */ void PreCheck();
 };
 
 struct cBgS_PolyInfo {
@@ -47,6 +42,13 @@ struct cBgS_PolyInfo {
 	/* 8026816C */ void SetActorInfo(int, void*, u32);
 	/* 8026817C */ void ChkSafe(void const*, u32) const;
 	/* 802681AC */ void ChkBgIndex() const;
+};
+
+struct cM3dGPla {
+};
+
+struct cBgS_LinChk {
+	/* 80267F40 */ void PreCalc();
 };
 
 struct cBgS {
@@ -68,10 +70,8 @@ struct cBgS {
 	/* 800748AC */ void GetGrpInf(cBgS_PolyInfo const&) const;
 };
 
-struct csXyz {
-};
-
-struct dBgS_SphChk {
+struct dBgS_SplGrpChk {
+	/* 80078D0C */ void Init();
 };
 
 struct dBgS_Acch {
@@ -80,8 +80,10 @@ struct dBgS_Acch {
 	/* 8007732C */ void CalcWallRR();
 };
 
-struct dBgS_SplGrpChk {
-	/* 80078D0C */ void Init();
+struct csXyz {
+};
+
+struct dBgS_SphChk {
 };
 
 struct dBgS_RoofChk {
@@ -240,23 +242,6 @@ extern "C" extern u8 data_80450F68[8];
 void cBgW_CheckBGround(f32); // 2
 void cBgW_CheckBRoof(f32); // 2
 void cBgW_CheckBWall(f32); // 2
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__11cBgS_ChkElmFv(); // 1
 extern "C" void __dt__4dBgSFv(); // 1

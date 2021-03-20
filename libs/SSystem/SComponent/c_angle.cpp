@@ -3,7 +3,9 @@
 // Translation Unit: c_angle
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_angle.h"
 
 // 
 // Types:
@@ -46,10 +48,10 @@ struct cDegree {
 	/* 80271440 */ void Tan() const;
 };
 
-struct cSPolar;
 struct cXyz {
 };
 
+struct cSPolar;
 struct cSGlobe {
 	/* 80271820 */ cSGlobe(f32, s16, s16);
 	/* 80271880 */ cSGlobe(cXyz const&);
@@ -89,7 +91,6 @@ struct cAngle {
 
 void operator+(s16, cSAngle const&); // 2
 void operator-(s16, cSAngle const&); // 2
-extern "C" void __sinit_c_angle_cpp(); // 1
 
 extern "C" void __ct__7cSAngleFRC7cSAngle(); // 1
 extern "C" void __ct__7cSAngleFs(); // 1
@@ -158,11 +159,6 @@ extern "C" extern u8 _270__7cSAngle[2 + 6 /* padding */];
 // 
 
 void cM_atan2f(f32, f32); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
-extern "C" void tan(); // 1
-extern "C" void sqrt(); // 1
 
 extern "C" void __dt__7cSAngleFv(); // 1
 extern "C" void cM_atan2f__Fff(); // 1

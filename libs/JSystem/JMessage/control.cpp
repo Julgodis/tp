@@ -3,7 +3,9 @@
 // Translation Unit: control
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JMessage/control.h"
 
 // 
 // Types:
@@ -57,8 +59,6 @@ extern "C" void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void reset__Q28JMessage10TProcessorFv(); // 1
 extern "C" void getResource_groupID__Q28JMessage10TProcessorCFUs(); // 1

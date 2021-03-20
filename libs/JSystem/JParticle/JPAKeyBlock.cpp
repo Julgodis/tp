@@ -3,7 +3,9 @@
 // Translation Unit: JPAKeyBlock
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAKeyBlock.h"
 
 // 
 // Types:

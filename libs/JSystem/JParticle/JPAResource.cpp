@@ -3,19 +3,13 @@
 // Translation Unit: JPAResource
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAResource.h"
 
 // 
 // Types:
 // 
-
-struct JPAEmitterWorkData {
-};
-
-struct JPABaseParticle {
-	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
-	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
-};
 
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
@@ -24,6 +18,14 @@ struct JKRHeap {
 struct JPABaseEmitter {
 	/* 8027EDD4 */ void processTillStartFrame();
 	/* 8027EE14 */ void processTermination();
+};
+
+struct JPAEmitterWorkData {
+};
+
+struct JPABaseParticle {
+	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
+	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
 };
 
 struct JPAResource {
@@ -179,36 +181,6 @@ void JPACalcChildScaleOut(JPAEmitterWorkData*, JPABaseParticle*); // 2
 void JPALoadExTex(JPAEmitterWorkData*); // 2
 void JPAGetDirMtx(JGeometry::TVec3<f32> const&, f32 (* )[4]); // 2
 void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXSetMisc(); // 1
-extern "C" void GXSetTevIndirect(); // 1
-extern "C" void GXSetIndTexMtx(); // 1
-extern "C" void GXSetIndTexCoordScale(); // 1
-extern "C" void GXSetIndTexOrder(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void JPASetPointSize__FP18JPAEmitterWorkData(); // 1
 extern "C" void JPASetLineWidth__FP18JPAEmitterWorkData(); // 1

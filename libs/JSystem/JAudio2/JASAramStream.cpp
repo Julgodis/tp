@@ -3,7 +3,9 @@
 // Translation Unit: JASAramStream
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASAramStream.h"
 
 // 
 // Types:
@@ -132,25 +134,6 @@ extern "C" extern u8 struct_80451260[8];
 
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void DVDFastOpen(); // 1
-extern "C" void DVDReadPrio(); // 1
-extern "C" void DVDGetDriveStatus(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv(); // 1

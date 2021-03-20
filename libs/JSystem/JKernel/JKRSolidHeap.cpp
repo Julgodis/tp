@@ -3,7 +3,9 @@
 // Translation Unit: JKRSolidHeap
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRSolidHeap.h"
 
 // 
 // Types:
@@ -89,14 +91,6 @@ extern "C" extern char const* const JKRSolidHeap__stringBase0;
 // 
 
 void operator delete(void*); // 2
-extern "C" void JUTReportConsole_f(); // 1
-extern "C" void JUTWarningConsole_f(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" bool dump_sort__7JKRHeapFv(); // 1
 extern "C" void __ct__7JKRHeapFPvUlP7JKRHeapb(); // 1

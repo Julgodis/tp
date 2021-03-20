@@ -3,7 +3,9 @@
 // Translation Unit: JASCalc
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASCalc.h"
 
 // 
 // Types:
@@ -41,7 +43,6 @@ extern "C" extern u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
 // External References:
 // 
 
-extern "C" void DCZeroRange(); // 1
 
 extern "C" void DCZeroRange(); // 1
 extern "C" extern u32 __float_huge;

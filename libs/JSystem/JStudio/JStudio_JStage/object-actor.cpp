@@ -3,23 +3,13 @@
 // Translation Unit: object-actor
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio_JStage/object-actor.h"
 
 // 
 // Types:
 // 
-
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TActor {
-	};
-
-	struct TObject {
-	};
-
-};
 
 struct Vec {
 };
@@ -61,6 +51,18 @@ namespace JStudio {
 
 	struct TAdaptor_actor {
 		/* 802868B0 */ ~TAdaptor_actor();
+	};
+
+};
+
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TActor {
+	};
+
+	struct TObject {
 	};
 
 };
@@ -117,8 +119,6 @@ struct JStudio_JStage {
 // Forward References:
 // 
 
-extern "C" static void setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl(); // 1
-extern "C" void func_8028B198(); // 1
 
 extern "C" void __ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor(); // 1
 extern "C" void __dt__Q214JStudio_JStage14TAdaptor_actorFv(); // 1
@@ -166,16 +166,6 @@ extern "C" extern u8 lit_1103[12];
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void toFunction_outside__Q27JStudio14TFunctionValueFi(); // 1
 extern "C" void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf(); // 1

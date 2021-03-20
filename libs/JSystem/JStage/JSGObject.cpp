@@ -3,7 +3,9 @@
 // Translation Unit: JSGObject
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStage/JSGObject.h"
 
 // 
 // Types:

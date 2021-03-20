@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_printf
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_printf.h"
 
 // 
 // Forward References:
@@ -11,24 +13,7 @@
 
 static void OSSwitchFiberEx(u32, u32, u32, u32, u32, u32); // 2
 static void my_PutString(char const*); // 2
-extern "C" static void OSVAttention__FPCcP16__va_list_struct(); // 1
-extern "C" void OSAttention(); // 1
-extern "C" void OSReportDisable(); // 1
-extern "C" void OSReportEnable(); // 1
-extern "C" static void OSReportForceEnableOn(); // 1
-extern "C" static void OSReportForceEnableOff(); // 1
 void OSReportInit(); // 2
-extern "C" static void mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct(); // 1
-extern "C" static void mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct(); // 1
-extern "C" static void mDoPrintf_vprintf__FPCcP16__va_list_struct(); // 1
-extern "C" static void mDoPrintf_VReport(); // 1
-extern "C" static void OSVReport(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void OSReport_FatalError(); // 1
-extern "C" void OSReport_Error(); // 1
-extern "C" void OSReport_Warning(); // 1
-extern "C" void OSReport_System(); // 1
-extern "C" void OSPanic(); // 1
 
 extern "C" static void OSSwitchFiberEx__FUlUlUlUlUlUl(); // 1
 extern "C" static void my_PutString__FPCc(); // 1
@@ -57,15 +42,6 @@ extern "C" extern char const* const m_Do_m_Do_printf__stringBase0;
 // 
 
 void mDoExt_GetCurrentRunningThread(); // 2
-extern "C" void PPCHalt(); // 1
-extern "C" void OSGetStackPointer(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void fputs(); // 1
-extern "C" void fflush(); // 1
-extern "C" void vprintf(); // 1
 
 extern "C" void mDoExt_GetCurrentRunningThread__Fv(); // 1
 extern "C" void PPCHalt(); // 1

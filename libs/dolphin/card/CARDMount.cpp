@@ -3,21 +3,14 @@
 // Translation Unit: CARDMount
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDMount.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void IsCard(); // 1
-extern "C" void CARDProbe(); // 1
-extern "C" void CARDProbeEx(); // 1
-extern "C" static void DoMount(); // 1
-extern "C" void __CARDMountCallback(); // 1
-extern "C" static void CARDMountAsync(); // 1
-extern "C" void CARDMount(); // 1
-extern "C" static void DoUnmount(); // 1
-extern "C" void CARDUnmount(); // 1
 
 extern "C" static void IsCard(); // 1
 extern "C" void CARDProbe(); // 1
@@ -33,37 +26,6 @@ extern "C" void CARDUnmount(); // 1
 // External References:
 // 
 
-extern "C" void OSCancelAlarm(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSLockSramEx(); // 1
-extern "C" void __OSUnlockSramEx(); // 1
-extern "C" void EXISetExiCallback(); // 1
-extern "C" void EXIProbe(); // 1
-extern "C" void EXIProbeEx(); // 1
-extern "C" void EXIAttach(); // 1
-extern "C" void EXIDetach(); // 1
-extern "C" void EXILock(); // 1
-extern "C" void EXIUnlock(); // 1
-extern "C" void EXIGetState(); // 1
-extern "C" void EXIGetID(); // 1
-extern "C" void __CARDDefaultApiCallback(); // 1
-extern "C" void __CARDSyncCallback(); // 1
-extern "C" void __CARDExtHandler(); // 1
-extern "C" void __CARDExiHandler(); // 1
-extern "C" void __CARDUnlockedHandler(); // 1
-extern "C" void __CARDEnableInterrupt(); // 1
-extern "C" void __CARDReadStatus(); // 1
-extern "C" void __CARDReadVendorID(); // 1
-extern "C" void __CARDClearStatus(); // 1
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDSync(); // 1
-extern "C" void CARDGetFastMode(); // 1
-extern "C" void __CARDUnlock(); // 1
-extern "C" void __CARDRead(); // 1
-extern "C" void __CARDVerify(); // 1
 
 extern "C" void OSCancelAlarm(); // 1
 extern "C" void DCInvalidateRange(); // 1

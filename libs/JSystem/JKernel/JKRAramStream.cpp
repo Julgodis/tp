@@ -3,19 +3,21 @@
 // Translation Unit: JKRAramStream
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRAramStream.h"
 
 // 
 // Types:
 // 
 
+struct JSUFileInputStream {
+};
+
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-struct JSUFileInputStream {
 };
 
 struct JKRAramStreamCommand {
@@ -86,14 +88,6 @@ extern "C" extern char const* const JKRAramStream__stringBase0;
 
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
 
 extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
 extern "C" void alloc__7JKRHeapFUli(); // 1

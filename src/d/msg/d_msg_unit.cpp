@@ -3,7 +3,9 @@
 // Translation Unit: d/msg/d_msg_unit
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/msg/d_msg_unit.h"
 
 // 
 // Types:
@@ -23,7 +25,6 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_msg_unit_cpp(); // 1
 
 extern "C" void __ct__10dMsgUnit_cFv(); // 1
 extern "C" void __dt__10dMsgUnit_cFv(); // 1
@@ -38,12 +39,6 @@ extern "C" extern u8 data_804510D8[8];
 // 
 
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcat(); // 1
 
 extern "C" void getDaytime__18dScnKy_env_light_cFv(); // 1
 extern "C" void __dl__FPv(); // 1

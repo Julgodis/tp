@@ -3,7 +3,9 @@
 // Translation Unit: d/event/d_event_data
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/event/d_event_data.h"
 
 // 
 // Types:
@@ -122,10 +124,10 @@ struct dMsgObject_c {
 	/* 8023806C */ void demoMessageGroup();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -198,19 +200,6 @@ void d_GameOver_Delete(u32&); // 2
 void dKy_set_nexttime(f32); // 2
 void dKy_instant_timechg(f32); // 2
 void dKy_instant_rainchg(); // 2
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor(); // 1
 extern "C" void fadeOut__13mDoGph_gInf_cFf(); // 1

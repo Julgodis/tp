@@ -3,7 +3,9 @@
 // Translation Unit: functionvalue
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/functionvalue.h"
 
 // 
 // Types:
@@ -172,9 +174,9 @@ namespace std {
 
 namespace JGadget {
 /* 80283858 */ void findUpperBound_binary_current__template2(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&);
-/* 802835DC */ void findUpperBound_binary_current__template2(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, f64 const&);
-/* 80283634 */ void findUpperBound_binary_current__template0(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, f64 const&, std::less<f64>);
-/* 802838C8 */ void findUpperBound_binary_current__template5(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&, std::less<f64>);
+/* 802835DC */ void findUpperBound_binary_current__template0(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, f64 const&);
+/* 80283634 */ void findUpperBound_binary_current__template1(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, f64 const&, std::less<f64>);
+/* 802838C8 */ void findUpperBound_binary_current__template3(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, f64 const&, std::less<f64>);
 }
 
 // 
@@ -275,14 +277,6 @@ extern "C" extern void* __vt__Q27JStudio24TFunctionValue_composite[8];
 // 
 
 void operator delete(void*); // 2
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savefpr_29(); // 1
-extern "C" void _restfpr_29(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void div(); // 1
-extern "C" void floor(); // 1
-extern "C" void fmod(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void func_802DCCD0(); // 1
@@ -1155,7 +1149,7 @@ asm void JStudio::functionvalue::extrapolateParameter_clamp(f64 field_0, f64 fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JGadget::findUpperBound_binary_current__template2(JStudio::TFunctionValue_list_parameter::TIterator_data_ field_0, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_1, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_2, f64 const& field_3) {
+asm void JGadget::findUpperBound_binary_current__template0(JStudio::TFunctionValue_list_parameter::TIterator_data_ field_0, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_1, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_2, f64 const& field_3) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_802835DC.s"
 }
@@ -1166,7 +1160,7 @@ asm void JGadget::findUpperBound_binary_current__template2(JStudio::TFunctionVal
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JGadget::findUpperBound_binary_current__template0(JStudio::TFunctionValue_list_parameter::TIterator_data_ field_0, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_1, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_2, f64 const& field_3, std::less<f64> field_4) {
+asm void JGadget::findUpperBound_binary_current__template1(JStudio::TFunctionValue_list_parameter::TIterator_data_ field_0, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_1, JStudio::TFunctionValue_list_parameter::TIterator_data_ field_2, f64 const& field_3, std::less<f64> field_4) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_80283634.s"
 }
@@ -1188,7 +1182,7 @@ asm void JGadget::findUpperBound_binary_current__template2(JStudio::TFunctionVal
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JGadget::findUpperBound_binary_current__template5(JStudio::TFunctionValue_hermite::TIterator_data_ field_0, JStudio::TFunctionValue_hermite::TIterator_data_ field_1, JStudio::TFunctionValue_hermite::TIterator_data_ field_2, f64 const& field_3, std::less<f64> field_4) {
+asm void JGadget::findUpperBound_binary_current__template3(JStudio::TFunctionValue_hermite::TIterator_data_ field_0, JStudio::TFunctionValue_hermite::TIterator_data_ field_1, JStudio::TFunctionValue_hermite::TIterator_data_ field_2, f64 const& field_3, std::less<f64> field_4) {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/functionvalue/func_802838C8.s"
 }

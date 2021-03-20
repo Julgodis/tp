@@ -3,16 +3,14 @@
 // Translation Unit: EXIUart
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "exi/EXIUart.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void ProbeBarnacle(); // 1
-extern "C" void __OSEnableBarnacle(); // 1
-extern "C" void InitializeUART(); // 1
-extern "C" void WriteUARTN(); // 1
 
 extern "C" static void ProbeBarnacle(); // 1
 extern "C" void __OSEnableBarnacle(); // 1
@@ -23,16 +21,6 @@ extern "C" void WriteUARTN(); // 1
 // External References:
 // 
 
-extern "C" void OSGetConsoleType(); // 1
-extern "C" void EXIImm(); // 1
-extern "C" void EXISync(); // 1
-extern "C" void EXIAttach(); // 1
-extern "C" void EXIDetach(); // 1
-extern "C" void EXISelect(); // 1
-extern "C" void EXIDeselect(); // 1
-extern "C" void EXILock(); // 1
-extern "C" void EXIUnlock(); // 1
-extern "C" void EXIGetID(); // 1
 
 extern "C" void OSGetConsoleType(); // 1
 extern "C" void EXIImm(); // 1

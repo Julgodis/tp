@@ -3,7 +3,9 @@
 // Translation Unit: resource
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JMessage/resource.h"
 
 // 
 // Types:
@@ -102,9 +104,6 @@ extern "C" void func_802A94D4(); // 1
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void memcmp(); // 1
 
 extern "C" void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc(); // 1
 extern "C" void parseCharacter_UTF8__Q28JMessage6localeFPPCc(); // 1

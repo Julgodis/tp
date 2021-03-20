@@ -3,7 +3,9 @@
 // Translation Unit: d/d_eye_hl
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_eye_hl.h"
 
 // 
 // Types:
@@ -46,10 +48,6 @@ extern "C" extern u8 struct_80450FBC[4];
 // External References:
 // 
 
-extern "C" void OSReport_Error(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void OSReport_Error(); // 1
 extern "C" void getName__10JUTNameTabCFUs(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: JASBNKParser
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASBNKParser.h"
 
 // 
 // Types:
@@ -11,6 +13,15 @@
 
 struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
+};
+
+struct JASOscillator {
+	struct Point {
+	};
+
+	struct Data {
+	};
+
 };
 
 struct JASInst {
@@ -21,15 +32,6 @@ struct JASBasicBank {
 	/* 80297DA4 */ void newInstTable(u8, JKRHeap*);
 	/* 80297E68 */ void setInst(int, JASInst*);
 	/* 80297E80 */ void getInst(int) const;
-};
-
-struct JASOscillator {
-	struct Point {
-	};
-
-	struct Data {
-	};
-
 };
 
 struct JASBNKParser {
@@ -98,7 +100,6 @@ static void JSUConvertOffsetToPtr__template10(void const*, u32); // 2
 static void JSUConvertOffsetToPtr__template11(void const*, u32); // 2
 static void JSUConvertOffsetToPtr__template12(void const*, u32); // 2
 static void JSUConvertOffsetToPtr__template13(void const*, u32); // 2
-extern "C" void __sinit_JASBNKParser_cpp(); // 1
 
 extern "C" void createBank__12JASBNKParserFPCvP7JKRHeap(); // 1
 extern "C" void createBasicBank__12JASBNKParserFPCvP7JKRHeap(); // 1
@@ -122,15 +123,6 @@ extern "C" void __sinit_JASBNKParser_cpp(); // 1
 
 void* operator new(u32, JKRHeap*, int); // 2
 void* operator new[](u32, JKRHeap*, int); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void bcopy__7JASCalcFPCvPvUl(); // 1
 extern "C" void __ct__17JASGenericMemPoolFv(); // 1

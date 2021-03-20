@@ -3,23 +3,14 @@
 // Translation Unit: OSMutex
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSMutex.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void __OSUnlockAllMutex(); // 1
-extern "C" void OSTryLockMutex(); // 1
-extern "C" void OSInitCond(); // 1
-extern "C" void OSWaitCond(); // 1
-extern "C" void OSSignalCond(); // 1
-extern "C" static void __OSCheckMutex(); // 1
-extern "C" void __OSCheckDeadLock(); // 1
-extern "C" void __OSCheckMutexes(); // 1
 
 extern "C" void OSInitMutex(); // 1
 extern "C" void OSLockMutex(); // 1
@@ -37,16 +28,6 @@ extern "C" void __OSCheckMutexes(); // 1
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitThreadQueue(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void __OSGetEffectivePriority(); // 1
-extern "C" void __OSPromoteThread(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void OSWakeupThread(); // 1
 
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: Z2Calc
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2Calc.h"
 
 // 
 // Types:
@@ -51,8 +53,6 @@ extern "C" extern f32 cEqualPSlope__6Z2Calc;
 // External References:
 // 
 
-extern "C" void exp(); // 1
-extern "C" void pow(); // 1
 
 extern "C" void __ct__Q25JMath13TRandom_fast_FUl(); // 1
 extern "C" void exp(); // 1

@@ -3,13 +3,14 @@
 // Translation Unit: Math/Double_precision/s_modf
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/Math/Double_precision/s_modf.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void modf(); // 1
 
 extern "C" void modf(); // 1
 

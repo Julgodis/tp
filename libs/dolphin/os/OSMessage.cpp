@@ -3,16 +3,14 @@
 // Translation Unit: OSMessage
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSMessage.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSJamMessage(); // 1
 
 extern "C" void OSInitMessageQueue(); // 1
 extern "C" void OSSendMessage(); // 1
@@ -23,11 +21,6 @@ extern "C" void OSJamMessage(); // 1
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitThreadQueue(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void OSWakeupThread(); // 1
 
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1

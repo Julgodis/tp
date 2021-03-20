@@ -3,7 +3,9 @@
 // Translation Unit: d/d_spline_path
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_spline_path.h"
 
 // 
 // Types:
@@ -45,7 +47,6 @@ extern "C" void bSpline2__10dPathCurveFf(); // 1
 // External References:
 // 
 
-extern "C" void PSVECAdd(); // 1
 
 extern "C" void PSVECAdd(); // 1
 

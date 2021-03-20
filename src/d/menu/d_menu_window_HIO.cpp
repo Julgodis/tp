@@ -3,7 +3,9 @@
 // Translation Unit: d/menu/d_menu_window_HIO
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_window_HIO.h"
 
 // 
 // Types:
@@ -31,7 +33,6 @@ struct dSv_player_get_item_c {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_window_HIO_cpp(); // 1
 
 extern "C" void __ct__9dMw_HIO_cFv(); // 1
 extern "C" void init__9dMw_HIO_cFv(); // 1
@@ -51,9 +52,6 @@ extern "C" extern u8 g_mwDHIO[520];
 // 
 
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
 
 extern "C" void isFirstBit__21dSv_player_get_item_cCFUc(); // 1
 extern "C" void __dl__FPv(); // 1

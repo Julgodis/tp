@@ -3,17 +3,13 @@
 // Translation Unit: d/bg/d_bg_w_kcol
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_w_kcol.h"
 
 // 
 // Types:
 // 
-
-struct KC_PrismData {
-};
-
-struct csXyz {
-};
 
 struct Vec {
 };
@@ -25,13 +21,35 @@ struct dBgS_Acch {
 	/* 800772E8 */ void CalcMovePosWork();
 };
 
-struct dBgS_SplGrpChk {
+struct dBgS_CaptPoly {
+};
+
+struct csXyz {
+};
+
+struct cBgS_GndChk {
+};
+
+struct cBgS_PolyInfo {
+	/* 802681A4 */ void SetPolyIndex(int);
+};
+
+struct cBgS_PolyPassChk {
 };
 
 struct dBgS_RoofChk {
 };
 
+struct cXyz {
+};
+
+struct dBgS_SplGrpChk {
+};
+
 struct cBgS_GrpPassChk {
+};
+
+struct cBgS_ShdwDraw {
 };
 
 struct sBgPc {
@@ -41,29 +59,13 @@ struct dBgPc {
 	/* 80074048 */ void setCode(sBgPc&);
 };
 
-struct cBgS_PolyPassChk {
-};
-
-struct cXyz {
-};
-
-struct cBgS_LinChk {
-};
-
 struct dBgS_SphChk {
 };
 
-struct cBgS_ShdwDraw {
+struct KC_PrismData {
 };
 
-struct cBgS_PolyInfo {
-	/* 802681A4 */ void SetPolyIndex(int);
-};
-
-struct dBgS_CaptPoly {
-};
-
-struct cBgS_GndChk {
+struct cBgS_LinChk {
 };
 
 struct dBgWKCol {
@@ -260,22 +262,6 @@ void cM3d_Len2dSq(f32, f32, f32, f32); // 2
 void cM3d_Len2dSqPntAndSegLine(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*); // 2
 void cM3d_Cross_SphTri(cM3dGSph const*, cM3dGTri const*, Vec*); // 2
 void operator delete(void*); // 2
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void setCode__5dBgPcFR5sBgPc(); // 1
 extern "C" void __ct__6dBgPlcFv(); // 1

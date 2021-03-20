@@ -3,14 +3,14 @@
 // Translation Unit: dvderror
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/dvd/dvderror.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void ErrorCode2Num(); // 1
-extern "C" void __DVDStoreErrorCode(); // 1
 
 extern "C" static void ErrorCode2Num(); // 1
 extern "C" void __DVDStoreErrorCode(); // 1
@@ -19,8 +19,6 @@ extern "C" void __DVDStoreErrorCode(); // 1
 // External References:
 // 
 
-extern "C" void __OSLockSramEx(); // 1
-extern "C" void __OSUnlockSramEx(); // 1
 
 extern "C" void __OSLockSramEx(); // 1
 extern "C" void __OSUnlockSramEx(); // 1

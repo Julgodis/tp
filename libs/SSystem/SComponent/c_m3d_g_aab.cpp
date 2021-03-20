@@ -3,7 +3,9 @@
 // Translation Unit: c_m3d_g_aab
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_m3d_g_aab.h"
 
 // 
 // Types:
@@ -47,8 +49,6 @@ extern "C" void PlusR__8cM3dGAabFf(); // 1
 // External References:
 // 
 
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECScale(); // 1
 
 extern "C" void PSVECAdd(); // 1
 extern "C" void PSVECScale(); // 1

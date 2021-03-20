@@ -3,7 +3,9 @@
 // Translation Unit: msg/scrn/d_msg_scrn_staff
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "msg/scrn/d_msg_scrn_staff.h"
 
 // 
 // Types:
@@ -41,15 +43,15 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-struct JKRExpHeap {
-};
-
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -89,8 +91,6 @@ void mDoExt_getMesgFont(); // 2
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc(); // 1

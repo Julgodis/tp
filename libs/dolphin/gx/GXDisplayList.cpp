@@ -3,13 +3,14 @@
 // Translation Unit: GXDisplayList
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXDisplayList.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GXCallDisplayList(); // 1
 
 extern "C" void GXCallDisplayList(); // 1
 
@@ -17,8 +18,6 @@ extern "C" void GXCallDisplayList(); // 1
 // External References:
 // 
 
-extern "C" void __GXSetDirtyState(); // 1
-extern "C" void __GXSendFlushPrim(); // 1
 
 extern "C" void __GXSetDirtyState(); // 1
 extern "C" void __GXSendFlushPrim(); // 1

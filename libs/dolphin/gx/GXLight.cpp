@@ -3,23 +3,14 @@
 // Translation Unit: GXLight
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXLight.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GXInitLightAttn(); // 1
-extern "C" void GXInitLightSpot(); // 1
-extern "C" void GXInitLightDistAttn(); // 1
-extern "C" void GXInitLightPos(); // 1
-extern "C" void GXInitLightDir(); // 1
-extern "C" void GXInitLightColor(); // 1
-extern "C" void GXLoadLightObjImm(); // 1
-extern "C" void GXSetChanAmbColor(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
 
 extern "C" void GXInitLightAttn(); // 1
 extern "C" void GXInitLightSpot(); // 1
@@ -37,7 +28,6 @@ extern "C" void GXSetChanCtrl(); // 1
 // External References:
 // 
 
-extern "C" void cosf(); // 1
 
 extern "C" void cosf(); // 1
 extern "C" extern void* __GXData;

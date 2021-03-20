@@ -3,7 +3,9 @@
 // Translation Unit: JKRDvdRipper
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRDvdRipper.h"
 
 // 
 // Types:
@@ -12,17 +14,17 @@
 struct JKRExpandSwitch {
 };
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
 struct JKRDvdFile {
 	/* 802D9584 */ JKRDvdFile();
 	/* 802D9748 */ ~JKRDvdFile();
 	/* 802D9850 */ void open(char const*);
 	/* 802D98C4 */ void open(s32);
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct JKRDvdRipper {
@@ -64,7 +66,6 @@ static void JKRDecompressFromDVD(JKRDvdFile*, void*, u32, u32, u32, u32, u32*); 
 static void decompSZS_subroutine(u8*, u8*); // 2
 static void firstSrcData(); // 2
 static void nextSrcData(u8*); // 2
-extern "C" void __sinit_JKRDvdRipper_cpp(); // 1
 
 extern "C" void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
 extern "C" void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
@@ -83,28 +84,7 @@ extern "C" extern u32 sSZSBufferSize__12JKRDvdRipper;
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void operator delete(void*); // 2
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void DVDReadPrio(); // 1
-extern "C" void VIWaitForRetrace(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1

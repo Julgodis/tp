@@ -3,14 +3,13 @@
 // Translation Unit: m_Do/m_Do_controller_pad
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_controller_pad.h"
 
 // 
 // Types:
 // 
-
-struct interface_of_controller_pad {
-};
 
 struct JUTGamePad {
 	struct EPadPort {
@@ -24,6 +23,9 @@ struct JUTGamePad {
 	/* 802E08E4 */ void read();
 	/* 802E1024 */ void clearForReset();
 	/* 802E199C */ void getGamePad(int);
+};
+
+struct interface_of_controller_pad {
 };
 
 struct mDoCPd_c {
@@ -54,9 +56,6 @@ extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 void mDoRst_resetCallBack(int, void*); // 2
 void cLib_memSet(void*, int, u32); // 2
 void* operator new(u32); // 2
-extern "C" void PADSetAnalogMode(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void mDoRst_resetCallBack__FiPv(); // 1
 extern "C" void cLib_memSet__FPviUl(); // 1

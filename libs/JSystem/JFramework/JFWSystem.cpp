@@ -3,7 +3,9 @@
 // Translation Unit: JFWSystem
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JFramework/JFWSystem.h"
 
 // 
 // Types:
@@ -106,11 +108,6 @@ extern "C" extern u8 systemConsole__9JFWSystem[4];
 // 
 
 void* operator new(u32); // 2
-extern "C" void JUTSetReportConsole(); // 1
-extern "C" void JUTSetWarningConsole(); // 1
-extern "C" void OSInit(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void DVDInit(); // 1
 
 extern "C" void alloc__7JKRHeapFUli(); // 1
 extern "C" void* __nw__FUl(); // 1

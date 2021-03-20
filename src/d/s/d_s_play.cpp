@@ -3,7 +3,9 @@
 // Translation Unit: d/s/d_s_play
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/s/d_s_play.h"
 
 // 
 // Types:
@@ -253,7 +255,6 @@ static void phase_5(dScnPly_c*); // 2
 static void phase_6(dScnPly_c*); // 2
 static s32 phase_compleate(void*); // 2
 static void dScnPly_Create(scene_class*); // 2
-extern "C" void __sinit_d_s_play_cpp(); // 1
 
 extern "C" void calcPauseTimer__9dScnPly_cFv(); // 1
 extern "C" void __ct__22dScnPly_env_otherHIO_cFv(); // 1
@@ -331,16 +332,6 @@ void dMeter2Info_setSword(u8, bool); // 2
 void dMeter2Info_setShield(u8, bool); // 2
 void cLib_calcTimer__template4(s8*); // 2
 void operator delete(void*); // 2
-extern "C" void JUTReportConsole_f(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void mDoAud_setSceneName__FPCcll(); // 1
 extern "C" void mDoAud_load1stDynamicWave__Fv(); // 1

@@ -3,13 +3,14 @@
 // Translation Unit: MSL_Common/Src/misc_io
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/misc_io.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __stdio_atexit(); // 1
 
 extern "C" void __stdio_atexit(); // 1
 
@@ -17,7 +18,6 @@ extern "C" void __stdio_atexit(); // 1
 // External References:
 // 
 
-extern "C" void __close_all(); // 1
 
 extern "C" void __close_all(); // 1
 extern "C" extern u8 __stdio_exit[4];

@@ -3,16 +3,14 @@
 // Translation Unit: utils/common/CircleBuffer
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/utils/common/CircleBuffer.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void CircleBufferReadBytes(); // 1
-extern "C" void CircleBufferWriteBytes(); // 1
-extern "C" void CircleBufferInitialize(); // 1
-extern "C" void CBGetBytesAvailableForRead(); // 1
 
 extern "C" void CircleBufferReadBytes(); // 1
 extern "C" void CircleBufferWriteBytes(); // 1
@@ -23,10 +21,6 @@ extern "C" void CBGetBytesAvailableForRead(); // 1
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void MWExitCriticalSection(); // 1
-extern "C" void MWEnterCriticalSection(); // 1
-extern "C" void MWInitializeCriticalSection(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void MWExitCriticalSection(); // 1

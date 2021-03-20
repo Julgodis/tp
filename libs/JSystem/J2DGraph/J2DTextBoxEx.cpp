@@ -3,22 +3,40 @@
 // Translation Unit: J2DTextBoxEx
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DTextBoxEx.h"
 
 // 
 // Types:
 // 
 
-struct J2DTextBoxHBinding {
-};
+struct JUtility {
+	struct TColor {
+	};
 
-struct J2DAnmColor {
-};
-
-struct J2DAnmTexPattern {
 };
 
 struct ResFONT {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct ResTIMG {
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
+struct _GXCullMode {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmBase {
 };
 
 struct JSUStreamSeekFrom {
@@ -27,25 +45,6 @@ struct JSUStreamSeekFrom {
 struct JSURandomInputStream {
 	/* 802DC458 */ void peek(void*, s32);
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmTransform {
-};
-
-struct _GXCullMode {
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
-struct ResTIMG {
 };
 
 struct J2DPane {
@@ -71,10 +70,19 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct JUTFont {
+struct J2DTevStage {
 };
 
 struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DTextBoxHBinding {
+};
+
+struct J2DAnmColor {
 };
 
 struct J2DAnmTevRegKey {
@@ -88,13 +96,7 @@ struct J2DMaterial {
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DTevStage {
+struct JUTFont {
 };
 
 struct J2DTextBoxEx {
@@ -207,20 +209,6 @@ extern "C" extern char const* const J2DTextBoxEx__stringBase0;
 
 void* operator new[](u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void calcMtx__7J2DPaneFv(); // 1
 extern "C" void makeMatrix__7J2DPaneFff(); // 1

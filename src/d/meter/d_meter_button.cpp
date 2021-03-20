@@ -3,18 +3,13 @@
 // Translation Unit: d/meter/d_meter_button
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/meter/d_meter_button.h"
 
 // 
 // Types:
 // 
-
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-};
 
 struct J2DGrafContext {
 };
@@ -26,6 +21,13 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -143,17 +145,17 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct dMeter2Draw_c {
@@ -203,10 +205,10 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -327,22 +329,6 @@ void dPaneClass_showNullPane(J2DScreen*); // 2
 void cLib_addCalc2(f32*, f32, f32, f32); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_getCurrentHeap__Fv(); // 1
 extern "C" void mDoExt_getMesgFont__Fv(); // 1

@@ -3,21 +3,13 @@
 // Translation Unit: d/shop/d_shop_system
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/shop/d_shop_system.h"
 
 // 
 // Types:
 // 
-
-struct STControl {
-	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
-	/* 800320AC */ void init();
-	/* 8003219C */ void checkTrigger();
-	/* 8003242C */ void checkLeftTrigger();
-	/* 800324A8 */ void checkRightTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
-};
 
 struct mesg_flow_node_branch {
 };
@@ -36,6 +28,16 @@ struct Vec {
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct STControl {
+	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 800320AC */ void init();
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
 };
 
 struct dShopSystem_c {
@@ -108,16 +110,16 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct J3DModel {
 };
 
-struct daNpcT_motionAnmData_c {
+struct J3DJoint {
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_motionAnmData_c {
 };
 
 struct daNpcT_c {
@@ -218,7 +220,6 @@ struct Z2SeMgr {
 
 static void dShopSystem_searchItemActor(void*, void*); // 2
 static void dShopSystem_searchCameraActor(void*, void*); // 2
-extern "C" void __sinit_d_shop_system_cpp(); // 1
 
 extern "C" static void dShopSystem_searchItemActor__FPvPv(); // 1
 extern "C" static void dShopSystem_searchCameraActor__FPvPv(); // 1
@@ -306,16 +307,6 @@ void cM_atan2s(f32, f32); // 2
 void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
 extern "C" void fopAc_IsActor__FPv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: JKRDvdFile
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRDvdFile.h"
 
 // 
 // Types:
@@ -60,7 +62,6 @@ struct JUTException {
 // Forward References:
 // 
 
-extern "C" void __sinit_JKRDvdFile_cpp(); // 1
 
 extern "C" void __ct__10JKRDvdFileFv(); // 1
 extern "C" void __ct__10JKRDvdFileFPCc(); // 1
@@ -84,23 +85,6 @@ extern "C" extern char const* const JKRDvdFile__stringBase0;
 // 
 
 void operator delete(void*); // 2
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void DVDFastOpen(); // 1
-extern "C" void DVDOpen(); // 1
-extern "C" void DVDClose(); // 1
-extern "C" void DVDReadAsyncPrio(); // 1
-extern "C" void DVDGetCommandBlockStatus(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void __ct__11JKRDisposerFv(); // 1

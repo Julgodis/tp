@@ -3,7 +3,9 @@
 // Translation Unit: c_tree_iter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_tree_iter.h"
 
 // 
 // Types:
@@ -34,10 +36,6 @@ extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv(); 
 
 void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); // 2
 void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*); // 2
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
 extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1

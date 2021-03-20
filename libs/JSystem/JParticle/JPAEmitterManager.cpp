@@ -3,36 +3,25 @@
 // Translation Unit: JPAEmitterManager
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAEmitterManager.h"
 
 // 
 // Types:
 // 
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
+struct JPAEmitterCallBack {
 };
 
 struct JKRHeap {
 };
 
-struct JPAResourceManager {
-	/* 80273E68 */ void getResource(u16) const;
-};
-
-struct JPAEmitterCallBack {
-};
-
 struct JPAEmitterManager;
+struct JPABaseEmitter;
 struct JPAEmitterWorkData {
 };
 
-struct JPABaseEmitter;
 struct JPAResource {
 	/* 802755E8 */ void calc(JPAEmitterWorkData*, JPABaseEmitter*);
 	/* 80275A94 */ void draw(JPAEmitterWorkData*, JPABaseEmitter*);
@@ -45,10 +34,23 @@ struct JPABaseEmitter {
 	/* 8027EC60 */ void deleteAllParticle();
 };
 
-struct JPADrawInfo {
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
 };
 
 struct JPAParticleCallBack {
+};
+
+struct JPAResourceManager {
+	/* 80273E68 */ void getResource(u16) const;
+};
+
+struct JPADrawInfo {
 };
 
 struct JPAEmitterManager {
@@ -122,27 +124,6 @@ extern "C" void __ct__14JPABaseEmitterFv(); // 1
 void* operator new(u32, JKRHeap*, int); // 2
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXEnableTexOffsets(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetCoPlanar(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void getResource__18JPAResourceManagerCFUs(); // 1
 extern "C" void calc__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter(); // 1

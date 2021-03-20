@@ -3,16 +3,18 @@
 // Translation Unit: J2DTevs
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DTevs.h"
 
 // 
 // Types:
 // 
 
-struct J2DTextureSRTInfo {
+struct Vec {
 };
 
-struct Vec {
+struct J2DTextureSRTInfo {
 };
 
 struct J2DTexMtx {
@@ -109,15 +111,6 @@ extern "C" extern u8 struct_804561AC[4];
 // External References:
 // 
 
-extern "C" void GXSetTevIndirect(); // 1
-extern "C" void GXSetIndTexMtx(); // 1
-extern "C" void GXSetIndTexCoordScale(); // 1
-extern "C" void GXSetIndTexOrder(); // 1
-extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
 
 extern "C" void GXSetTevIndirect(); // 1
 extern "C" void GXSetIndTexMtx(); // 1

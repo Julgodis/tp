@@ -3,14 +3,13 @@
 // Translation Unit: d/particle/d_particle_copoly
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/particle/d_particle_copoly.h"
 
 // 
 // Types:
 // 
-
-struct csXyz {
-};
 
 struct dBgS_Acch {
 };
@@ -19,6 +18,9 @@ struct cXyz {
 };
 
 struct dKy_tevstr_c {
+};
+
+struct csXyz {
 };
 
 struct dPaPo_c {
@@ -74,7 +76,6 @@ struct dBgS {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_particle_copoly_cpp(); // 1
 
 extern "C" void init__7dPaPo_cFP9dBgS_Acchff(); // 1
 extern "C" void checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff(); // 1
@@ -122,14 +123,6 @@ extern "C" extern u8 m_emitterFourData__8dPaPoF_c[60 + 28 /* padding */];
 // 
 
 void fopKyM_createWpillar(cXyz const*, f32, int); // 2
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void fopKyM_createWpillar__FPC4cXyzfi(); // 1
 extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1

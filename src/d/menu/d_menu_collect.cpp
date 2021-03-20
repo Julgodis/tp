@@ -3,19 +3,15 @@
 // Translation Unit: d/menu/d_menu_collect
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_collect.h"
 
 // 
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE5CC */ void freeAll();
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+struct J2DAnmTextureSRTKey {
 };
 
 struct STControl {
@@ -26,10 +22,16 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct J2DAnmTextureSRTKey {
+struct CSTControl {
 };
 
-struct CSTControl {
+struct JKRHeap {
+	/* 802CE5CC */ void freeAll();
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
 struct dMenu_Collect2D_c {
@@ -417,7 +419,6 @@ struct J3DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_collect_cpp(); // 1
 
 extern "C" void __ct__17dMenu_Collect2D_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
 extern "C" void __dt__17dMenu_Collect2D_cFv(); // 1
@@ -603,31 +604,6 @@ void dPaneClass_showNullPane(J2DScreen*); // 2
 void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void tan(); // 1
 
 extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
 extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1

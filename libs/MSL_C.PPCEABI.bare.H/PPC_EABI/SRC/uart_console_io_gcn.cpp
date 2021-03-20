@@ -3,14 +3,14 @@
 // Translation Unit: PPC_EABI/SRC/uart_console_io_gcn
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/uart_console_io_gcn.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" bool __close_console(); // 1
-extern "C" void __write_console(); // 1
 
 extern "C" bool __close_console(); // 1
 extern "C" void __write_console(); // 1
@@ -19,10 +19,6 @@ extern "C" void __write_console(); // 1
 // External References:
 // 
 
-extern "C" void OSGetConsoleType(); // 1
-extern "C" void InitializeUART(); // 1
-extern "C" void WriteUARTN(); // 1
-extern "C" void __TRK_write_console(); // 1
 
 extern "C" void OSGetConsoleType(); // 1
 extern "C" void InitializeUART(); // 1

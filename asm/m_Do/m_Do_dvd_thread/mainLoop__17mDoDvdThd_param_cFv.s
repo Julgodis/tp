@@ -13,7 +13,7 @@ lbl_80015B00:
 /* 80015B00 00000000  7F C3 F3 78 */	mr r3, r30
 /* 80015B04 00000004  80 81 00 08 */	lwz r4, 8(r1)
 /* 80015B08 00000008  4B FF FF 35 */	bl cut__17mDoDvdThd_param_cFP19mDoDvdThd_command_c
-/* 80015B0C 0000000C  88 0D 87 00 */	lbz r0, -0x7900(r13)
+/* 80015B0C 0000000C  88 0D 87 00 */	lbz r0, struct_80450C80+0x0(r13)
 /* 80015B10 00000010  28 00 00 00 */	cmplwi r0, 0
 /* 80015B14 00000014  41 82 00 1C */	beq lbl_80015B30
 /* 80015B18 00000018  48 27 A3 E5 */	bl getThreadPointer__6JASDvdFv

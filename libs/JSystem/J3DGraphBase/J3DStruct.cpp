@@ -3,7 +3,9 @@
 // Translation Unit: J3DStruct
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DStruct.h"
 
 // 
 // Types:

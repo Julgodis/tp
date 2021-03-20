@@ -3,7 +3,9 @@
 // Translation Unit: f_op/f_op_view
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_op/f_op_view.h"
 
 // 
 // Types:

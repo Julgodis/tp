@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_dvd_thread
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_dvd_thread.h"
 
 // 
 // Types:
@@ -115,7 +117,6 @@ struct JKRDvdRipper {
 
 static void my_DVDConvertPathToEntrynum(char const*); // 2
 static void cb(void*); // 2
-extern "C" void __sinit_m_Do_dvd_thread_cpp(); // 1
 
 extern "C" void main__9mDoDvdThdFPv(); // 1
 extern "C" void create__9mDoDvdThdFl(); // 1
@@ -155,8 +156,6 @@ extern "C" extern u8 l_threadStack__9mDoDvdThd[4096];
 // External References:
 // 
 
-extern "C" void OSReport_FatalError(); // 1
-extern "C" void OSReport_Error(); // 1
 void mDoExt_getAssertHeap(); // 2
 void mDoExt_getGameHeap(); // 2
 void mDoExt_getZeldaHeap(); // 2
@@ -170,25 +169,6 @@ void cLs_Create(node_list_class*); // 2
 void cNd_ForcedClear(node_class*); // 2
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void DVDConvertPathToEntrynum(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void OSReport_FatalError(); // 1
 extern "C" void OSReport_Error(); // 1

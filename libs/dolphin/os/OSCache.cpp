@@ -3,31 +3,14 @@
 // Translation Unit: OSCache
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSCache.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void DCEnable(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCFlushRange(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void DCFlushRangeNoSync(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void DCZeroRange(); // 1
-extern "C" void ICInvalidateRange(); // 1
-extern "C" void ICFlashInvalidate(); // 1
-extern "C" static void ICEnable(); // 1
-extern "C" static void __LCEnable(); // 1
-extern "C" void LCEnable(); // 1
-extern "C" void LCDisable(); // 1
-extern "C" static void LCStoreBlocks(); // 1
-extern "C" void LCStoreData(); // 1
-extern "C" void LCQueueWait(); // 1
-extern "C" static void L2GlobalInvalidate(); // 1
-extern "C" static void DMAErrorHandler(); // 1
-extern "C" void __OSCacheInit(); // 1
 
 extern "C" static void DCEnable(); // 1
 extern "C" void DCInvalidateRange(); // 1
@@ -66,20 +49,6 @@ extern "C" extern u8 OSCache__lit_107[46 + 6 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void PPCMfmsr(); // 1
-extern "C" void PPCMtmsr(); // 1
-extern "C" void PPCMfhid0(); // 1
-extern "C" void PPCMfl2cr(); // 1
-extern "C" void PPCMtl2cr(); // 1
-extern "C" void PPCHalt(); // 1
-extern "C" void PPCMfhid2(); // 1
-extern "C" void PPCMthid2(); // 1
-extern "C" void OSDumpContext(); // 1
-extern "C" void OSSetErrorHandler(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void DBPrintf(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void PPCMfmsr(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: JUTFontData_Ascfont_fix12
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTFontData_Ascfont_fix12.h"
 
 // 
 // Forward References:

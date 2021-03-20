@@ -1,9 +1,7 @@
-#ifndef JASSOUNDPARAMS_H_
-#define JASSOUNDPARAMS_H_
+#ifndef JASSOUNDPARAMS_H
+#define JASSOUNDPARAMS_H
 
-extern "C" {
-void JASSoundParams_NS_clamp(void);
-void JASSoundParams_NS_combine(void);
-}
+#include "dolphin/types.h"
 
-#endif  // JASSOUNDPARAMS_H_
+
+#endif /* JASSOUNDPARAMS_H */

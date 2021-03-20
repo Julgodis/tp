@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_node
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_node.h"
 
 // 
 // Types:
@@ -66,8 +68,6 @@ void fpcMtd_Execute(process_method_class*, void*); // 2
 void fpcMtd_IsDelete(process_method_class*, void*); // 2
 void fpcMtd_Delete(process_method_class*, void*); // 2
 void fpcMtd_Create(process_method_class*, void*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
 extern "C" void fpcBs_MakeOfType__FPi(); // 1

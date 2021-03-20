@@ -115,11 +115,12 @@ def main(debug, game_path):
     asm_path = Path("asm/")
     lib_path = Path("libs/")
     src_path = Path("src/")
+    inc_path = Path("include/")
     rel_path = Path("rel/")
 
     cpp_gen = True
     asm_gen = False
-    mk_gen = False
+    mk_gen = True
     symbols_gen = True
     ref_gen = True
     no_file_generation = False
@@ -356,11 +357,6 @@ def main(debug, game_path):
             for tu in lib.translation_units.values():
                 for section in tu.sections.values():
                     for symbol in section.symbols:
-                        
-                        #if symbol.addr == 2152010216:
-                        #    main_context.debug(symbol)
-                        #    sys.exit(1)
-
                         if not isinstance(symbol, ArbitraryData) and not isinstance(symbol, Integer):
                             continue
 
@@ -505,11 +501,13 @@ def main(debug, game_path):
         if module.index == 0:
             base = module.libraries[None]
             base.lib_path = src_path
+            base.inc_path = inc_path
             base.asm_path = asm_path
 
             for lib in module.libraries.values():
                 if lib.name != None:
                     lib.lib_path = lib_path
+                    lib.inc_path = inc_path
                     lib.asm_path = asm_path
                     lib.mk_path = lib_path
         else:
@@ -522,6 +520,7 @@ def main(debug, game_path):
             for lib in module.libraries.values():
                 if lib.name != None:
                     lib.lib_path = rel_path.joinpath(f"{rel_name}/libs/")
+                    lib.inc_path = inc_path.joinpath(f"rel/{rel_name}/libs/")
                     lib.asm_path = asm_path.joinpath(
                         f"rel/{rel_name}/libs/")
                     lib.mk_path = rel_path.joinpath(
@@ -530,6 +529,7 @@ def main(debug, game_path):
             base = module.libraries[None]
             base.name = rel_name
             base.lib_path = rel_path
+            base.inc_path = rel_path.joinpath(f"rel/")
             base.asm_path = asm_path.joinpath("rel/")
             base.mk_path = rel_path
 
@@ -557,8 +557,8 @@ def main(debug, game_path):
         if cpp_gen:
             for lib_name,lib in module.libraries.items():
                 for tu_name,tu in lib.translation_units.items():
-                    #if tu_name == "d/map/d_map_path_dmap":
-                    cpp_tasks.append((tu,tu.source_path(lib),))
+                    #if tu_name == "m_Do/m_Do_ext":
+                    cpp_tasks.append((tu,tu.source_path(lib),tu.include_path(lib),tu.include_path(lib).relative_to(inc_path),))
 
         if asm_gen:
             asm_path_tasks = []

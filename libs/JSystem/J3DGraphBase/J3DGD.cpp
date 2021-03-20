@@ -3,7 +3,9 @@
 // Translation Unit: J3DGD
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DGD.h"
 
 // 
 // Types:
@@ -156,20 +158,6 @@ extern "C" extern u8 pad_8045094C[4];
 // External References:
 // 
 
-extern "C" void GDOverflowed(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void GDOverflowed(); // 1
 extern "C" void __cvt_fp2unsigned(); // 1

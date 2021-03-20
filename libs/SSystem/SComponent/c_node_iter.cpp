@@ -3,7 +3,9 @@
 // Translation Unit: c_node_iter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_node_iter.h"
 
 // 
 // Types:
@@ -26,10 +28,6 @@ extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv(); // 1
 // External References:
 // 
 
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1

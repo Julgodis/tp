@@ -3,7 +3,9 @@
 // Translation Unit: J3DJointFactory
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphLoader/J3DJointFactory.h"
 
 // 
 // Types:

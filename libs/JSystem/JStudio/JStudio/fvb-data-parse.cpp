@@ -3,7 +3,9 @@
 // Translation Unit: fvb-data-parse
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/fvb-data-parse.h"
 
 // 
 // Types:

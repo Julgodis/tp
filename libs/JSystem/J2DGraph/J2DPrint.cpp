@@ -3,7 +3,9 @@
 // Translation Unit: J2DPrint
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DPrint.h"
 
 // 
 // Types:
@@ -15,11 +17,11 @@ struct JUtility {
 
 };
 
-struct JUTFont {
-	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
+struct J2DTextBoxHBinding {
 };
 
-struct J2DTextBoxHBinding {
+struct JUTFont {
+	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
 };
 
 struct J2DTextBoxVBinding {
@@ -52,7 +54,6 @@ struct JKRHeap {
 // Forward References:
 // 
 
-extern "C" static void J2DPrint_print_alpha_va(); // 1
 
 extern "C" static void J2DPrint_print_alpha_va(); // 1
 extern "C" void __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor(); // 1
@@ -76,20 +77,6 @@ extern "C" void getNumberF32__8J2DPrintFPPCUcffi(); // 1
 
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void vsnprintf(); // 1
-extern "C" void strlen(); // 1
-extern "C" void strtol(); // 1
-extern "C" void strtoul(); // 1
 
 extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
 extern "C" void __dl__FPv(); // 1

@@ -3,14 +3,13 @@
 // Translation Unit: d/menu/d_menu_skill
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_skill.h"
 
 // 
 // Types:
 // 
-
-struct JKRExpHeap {
-};
 
 struct STControl {
 	/* 80032524 */ void checkUpTrigger();
@@ -18,6 +17,9 @@ struct STControl {
 };
 
 struct CSTControl {
+};
+
+struct JKRExpHeap {
 };
 
 struct dMenu_Skill_c {
@@ -116,10 +118,10 @@ struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -142,7 +144,6 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_skill_cpp(); // 1
 
 extern "C" void __ct__13dMenu_Skill_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
 extern "C" void __dt__13dMenu_Skill_cFv(); // 1
@@ -208,23 +209,6 @@ void dMeter2Info_set2DVibration(); // 2
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
 extern "C" void mDoExt_getMesgFont__Fv(); // 1

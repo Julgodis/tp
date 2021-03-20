@@ -3,7 +3,9 @@
 // Translation Unit: J3DShapeMtx
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DShapeMtx.h"
 
 // 
 // Types:
@@ -86,7 +88,6 @@ struct J3DTextureSRTInfo {
 // Forward References:
 // 
 
-extern "C" void __sinit_J3DShapeMtx_cpp(); // 1
 
 extern "C" void resetMtxLoadCache__11J3DShapeMtxFv(); // 1
 extern "C" void loadMtxIndx_PNGP__11J3DShapeMtxCFiUs(); // 1
@@ -174,22 +175,6 @@ void J3DGetTextureMtxMayaOld(J3DTextureSRTInfo const&, f32 (* )[4]); // 2
 void J3DScaleNrmMtx(f32 (* )[4], Vec const&); // 2
 void J3DScaleNrmMtx33(f32 (* )[3], Vec const&); // 2
 void J3DMtxProjConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4]); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" bool getUseMtxNum__11J3DShapeMtxCFv(); // 1
 extern "C" void __dl__FPv(); // 1

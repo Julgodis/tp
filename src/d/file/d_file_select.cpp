@@ -3,7 +3,9 @@
 // Translation Unit: d/file/d_file_select
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/file/d_file_select.h"
 
 // 
 // Types:
@@ -210,9 +212,6 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-struct ResTLUT {
-};
-
 struct ResTIMG {
 };
 
@@ -223,6 +222,9 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct ResTLUT {
 };
 
 struct J2DPicture {
@@ -287,10 +289,10 @@ struct JUTNameTab {
 	/* 80191134 */ ~JUTNameTab();
 };
 
-struct COutFont_c {
+struct JUTFont {
 };
 
-struct JUTFont {
+struct COutFont_c {
 };
 
 struct dMsgString_c {
@@ -551,7 +553,6 @@ struct J3DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_file_select_cpp(); // 1
 
 extern "C" void __ct__9dFs_HIO_cFv(); // 1
 extern "C" void __ct__14dFile_select_cFP10JKRArchive(); // 1
@@ -870,7 +871,6 @@ extern "C" extern void* __vt__10JUTNameTab[3];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void mDoMtx_XYZrotM(f32 (* )[4], s16, s16, s16); // 2
 void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16); // 2
 void mDoExt_modelUpdateDL(J3DModel*); // 2
@@ -889,36 +889,6 @@ void dPaneClass_showNullPane(J2DScreen*); // 2
 void cAPICPad_ANY_BUTTON(u32); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void DVDGetDriveStatus(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void tan(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void mDoMtx_XYZrotM__FPA4_fsss(); // 1

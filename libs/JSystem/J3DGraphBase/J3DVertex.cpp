@@ -3,7 +3,9 @@
 // Translation Unit: J3DVertex
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DVertex.h"
 
 // 
 // Types:
@@ -52,16 +54,8 @@ extern "C" void __dt__14J3DDrawMtxDataFv(); // 1
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void* operator new[](u32, int); // 2
 void operator delete(void*); // 2
-extern "C" void DCStoreRange(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void* __nwa__FUli(); // 1

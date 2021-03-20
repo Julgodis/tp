@@ -3,7 +3,9 @@
 // Translation Unit: d/d_tresure
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_tresure.h"
 
 // 
 // Types:
@@ -84,16 +86,6 @@ extern "C" extern u8 mTypeGroupListAll__7dTres_c[204 + 4 /* padding */];
 void mDoMtx_YrotS(f32 (* )[4], s16); // 2
 void dPath_GetRoomPath(int, int); // 2
 void* operator new[](u32); // 2
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
 extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1

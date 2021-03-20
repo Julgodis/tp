@@ -3,33 +3,14 @@
 // Translation Unit: GXMisc
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXMisc.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GXSetMisc(); // 1
-extern "C" void GXFlush(); // 1
-extern "C" void __GXAbort(); // 1
-extern "C" void GXAbortFrame(); // 1
-extern "C" void GXSetDrawDone(); // 1
-extern "C" void GXDrawDone(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXPokeAlphaMode(); // 1
-extern "C" void GXPokeAlphaRead(); // 1
-extern "C" void GXPokeAlphaUpdate(); // 1
-extern "C" void GXPokeBlendMode(); // 1
-extern "C" void GXPokeColorUpdate(); // 1
-extern "C" void GXPokeDstAlpha(); // 1
-extern "C" void GXPokeDither(); // 1
-extern "C" void GXPokeZMode(); // 1
-extern "C" void GXPeekZ(); // 1
-extern "C" void GXSetDrawSyncCallback(); // 1
-extern "C" static void GXTokenInterruptHandler(); // 1
-extern "C" void GXSetDrawDoneCallback(); // 1
-extern "C" static void GXFinishInterruptHandler(); // 1
-extern "C" void __GXPEInit(); // 1
 
 extern "C" void GXSetMisc(); // 1
 extern "C" void GXFlush(); // 1
@@ -58,21 +39,6 @@ extern "C" extern u8 pad_8045197C[4];
 // External References:
 // 
 
-extern "C" void PPCSync(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void OSInitThreadQueue(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void OSWakeupThread(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void __GXInitRevisionBits(); // 1
-extern "C" void __GXCleanGPFifo(); // 1
-extern "C" void GXGetGPFifo(); // 1
-extern "C" void __GXSetDirtyState(); // 1
 
 extern "C" void PPCSync(); // 1
 extern "C" void OSSetCurrentContext(); // 1

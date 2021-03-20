@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_deletor
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_deletor.h"
 
 // 
 // Types:
@@ -80,8 +82,6 @@ void fpcPi_Delete(process_priority_class*); // 2
 void fpcLnTg_QueueTo(line_tag*); // 2
 void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); // 2
 void cTg_IsUse(create_tag_class*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
 extern "C" void fpcBs_IsDelete__FP18base_process_class(); // 1

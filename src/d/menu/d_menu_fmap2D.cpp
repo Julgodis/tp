@@ -3,16 +3,18 @@
 // Translation Unit: d/menu/d_menu_fmap2D
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_fmap2D.h"
 
 // 
 // Types:
 // 
 
-struct ResTIMG {
+struct STControl {
 };
 
-struct STControl {
+struct ResTIMG {
 };
 
 struct dMenu_Fmap2DBack_c {
@@ -85,10 +87,10 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
-struct JKRExpHeap {
+struct J2DAnmTextureSRTKey {
 };
 
-struct J2DAnmTextureSRTKey {
+struct JKRExpHeap {
 };
 
 struct JGeometry {
@@ -218,10 +220,10 @@ struct CPaneMgrAlphaMorf {
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -255,7 +257,6 @@ struct J2DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" static void func_801D810C(); // 1
 
 extern "C" void __ct__18dMenu_Fmap2DBack_cFv(); // 1
 extern "C" void __dt__18dMenu_Fmap2DBack_cFv(); // 1
@@ -384,23 +385,6 @@ void operator delete(void*); // 2
 void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int); // 2
 void J2DFillBox(f32, f32, f32, f32, JUtility::TColor); // 2
 void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8); // 2
-extern "C" void GXGetScissor(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
 extern "C" void mDoExt_getMesgFont__Fv(); // 1

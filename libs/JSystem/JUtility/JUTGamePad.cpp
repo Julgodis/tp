@@ -3,7 +3,9 @@
 // Translation Unit: JUTGamePad
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTGamePad.h"
 
 // 
 // Types:
@@ -23,10 +25,10 @@ struct JUTGamePad {
 		/* 802E1CD8 */ CButton();
 	};
 
-	struct EWhichStick {
+	struct EStickMode {
 	};
 
-	struct EStickMode {
+	struct EWhichStick {
 	};
 
 	struct CStick {
@@ -106,7 +108,6 @@ struct JSUPtrList {
 // 
 
 static void getNumBit(u8*, int); // 2
-extern "C" void __sinit_JUTGamePad_cpp(); // 1
 
 extern "C" void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort(); // 1
 extern "C" void __dt__10JUTGamePadFv(); // 1
@@ -159,28 +160,6 @@ extern "C" extern u8 struct_80451500[4];
 // 
 
 void operator delete(void*); // 2
-extern "C" void OSGetResetSwitchState(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void PADClamp(); // 1
-extern "C" void PADClampCircle(); // 1
-extern "C" void PADReset(); // 1
-extern "C" void PADRecalibrate(); // 1
-extern "C" void PADInit(); // 1
-extern "C" void PADRead(); // 1
-extern "C" void PADControlMotor(); // 1
-extern "C" void PADSetSpec(); // 1
-extern "C" void PADSetAnalogMode(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void atan2(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void __ct__11JKRDisposerFv(); // 1

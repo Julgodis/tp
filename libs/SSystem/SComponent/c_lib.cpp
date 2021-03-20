@@ -3,7 +3,9 @@
 // Translation Unit: c_lib
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_lib.h"
 
 // 
 // Types:
@@ -87,19 +89,7 @@ extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
 void cM_atan2s(f32, f32); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void abs(); // 1
 
 SECTION_INIT void memset(); // 1
 SECTION_INIT void memcpy(); // 1

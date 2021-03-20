@@ -3,14 +3,14 @@
 // Translation Unit: OSAudioSystem
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSAudioSystem.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __OSInitAudioSystem(); // 1
-extern "C" void __OSStopAudioSystem(); // 1
 
 extern "C" void __OSInitAudioSystem(); // 1
 extern "C" void __OSStopAudioSystem(); // 1
@@ -19,10 +19,6 @@ extern "C" void __OSStopAudioSystem(); // 1
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void DCFlushRange(); // 1
-extern "C" void OSGetTick(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void OSGetArenaHi(); // 1

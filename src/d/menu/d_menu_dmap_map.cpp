@@ -3,7 +3,9 @@
 // Translation Unit: d/menu/d_menu_dmap_map
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_dmap_map.h"
 
 // 
 // Types:
@@ -200,7 +202,6 @@ struct renderingPlusDoor_c {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_dmap_map_cpp(); // 1
 
 extern "C" void hasMap__15renderingDmap_cCFv(); // 1
 extern "C" void isDrawIconSingle2__15renderingDmap_cCFPCQ27dTres_c6data_sbbi(); // 1
@@ -288,23 +289,6 @@ void fopMsgM_valueIncrease(int, int, u8); // 2
 void* operator new(u32, int); // 2
 void* operator new[](u32, int); // 2
 void operator delete[](void*); // 2
-extern "C" void GXGetTexBufferSize(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savefpr_28(); // 1
-extern "C" void _restfpr_28(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void ceil(); // 1
-extern "C" void floor(); // 1
-extern "C" void fmod(); // 1
 
 extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor(); // 1
 extern "C" void fopMsgM_valueIncrease__FiiUc(); // 1

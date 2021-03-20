@@ -4,7 +4,7 @@ lbl_801AE000:
 /* 801AE008 00000008  90 01 00 54 */	stw r0, 0x54(r1)
 /* 801AE00C 0000000C  93 E1 00 4C */	stw r31, 0x4c(r1)
 /* 801AE010 00000010  7C 7F 1B 78 */	mr r31, r3
-/* 801AE014 00000014  88 0D 8A F0 */	lbz r0, -0x7510(r13)
+/* 801AE014 00000014  88 0D 8A F0 */	lbz r0, struct_80451070+0x0(r13)
 /* 801AE018 00000018  7C 00 07 75 */	extsb. r0, r0
 /* 801AE01C 0000001C  40 82 00 3C */	bne lbl_801AE058
 /* 801AE020 00000020  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__lit_3882(r2)
@@ -20,9 +20,9 @@ lbl_801AE000:
 /* 801AE048 00000048  38 A5 E7 F0 */	addi r5, r5, d_d_ky_thunder__lit_3816@l
 /* 801AE04C 0000004C  48 1B 3B D9 */	bl __register_global_object
 /* 801AE050 00000050  38 00 00 01 */	li r0, 1
-/* 801AE054 00000054  98 0D 8A F0 */	stb r0, -0x7510(r13)
+/* 801AE054 00000054  98 0D 8A F0 */	stb r0, struct_80451070+0x0(r13)
 lbl_801AE058:
-/* 801AE058 00000000  88 0D 8A F1 */	lbz r0, -0x750f(r13)
+/* 801AE058 00000000  88 0D 8A F1 */	lbz r0, struct_80451070+0x1(r13)
 /* 801AE05C 00000004  7C 00 07 75 */	extsb. r0, r0
 /* 801AE060 00000008  40 82 00 34 */	bne lbl_801AE094
 /* 801AE064 0000000C  C0 02 A4 7C */	lfs f0, d_d_ky_thunder__lit_3885(r2)
@@ -36,7 +36,7 @@ lbl_801AE058:
 /* 801AE084 0000002C  38 A5 E7 FC */	addi r5, r5, d_d_ky_thunder__lit_3818@l
 /* 801AE088 00000030  48 1B 3B 9D */	bl __register_global_object
 /* 801AE08C 00000034  38 00 00 01 */	li r0, 1
-/* 801AE090 00000038  98 0D 8A F1 */	stb r0, -0x750f(r13)
+/* 801AE090 00000038  98 0D 8A F1 */	stb r0, struct_80451070+0x1(r13)
 lbl_801AE094:
 /* 801AE094 00000000  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 801AE098 00000004  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

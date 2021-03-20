@@ -3,7 +3,9 @@
 // Translation Unit: ctb
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/ctb.h"
 
 // 
 // Types:
@@ -88,7 +90,6 @@ namespace JGadget {
 // Forward References:
 // 
 
-extern "C" static void func_802815B4(); // 1
 
 extern "C" void __dt__Q37JStudio3ctb7TObjectFv(); // 1
 extern "C" void __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock(); // 1
@@ -119,9 +120,6 @@ extern "C" extern void* __vt__Q37JStudio3ctb8TFactory[5];
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void memcmp(); // 1
 
 extern "C" void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData(); // 1
 extern "C" void* __nw__FUl(); // 1

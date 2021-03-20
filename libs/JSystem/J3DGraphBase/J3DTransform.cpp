@@ -3,7 +3,9 @@
 // Translation Unit: J3DTransform
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DTransform.h"
 
 // 
 // Types:
@@ -62,7 +64,6 @@ extern "C" extern u8 PSMulUnit01[8];
 // External References:
 // 
 
-extern "C" void PSVECNormalize(); // 1
 
 extern "C" void PSVECNormalize(); // 1
 extern "C" extern u8 sincosTable___5JMath[65536];

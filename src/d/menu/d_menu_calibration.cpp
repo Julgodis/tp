@@ -3,7 +3,9 @@
 // Translation Unit: d/menu/d_menu_calibration
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_calibration.h"
 
 // 
 // Types:
@@ -59,10 +61,10 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -77,7 +79,6 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_calibration_cpp(); // 1
 
 extern "C" void __dt__19dMenu_Calibration_cFv(); // 1
 extern "C" void _move__19dMenu_Calibration_cFv(); // 1
@@ -122,12 +123,6 @@ extern "C" extern void* d_menu_d_menu_calibration__lit_3810[3];
 
 void dMeter2Info_set2DVibration(); // 2
 void operator delete(void*); // 2
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb(); // 1
 extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1

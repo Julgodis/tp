@@ -3,7 +3,9 @@
 // Translation Unit: object-id
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/object-id.h"
 
 // 
 // Types:

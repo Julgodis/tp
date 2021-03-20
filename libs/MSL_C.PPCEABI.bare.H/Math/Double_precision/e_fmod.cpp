@@ -3,13 +3,14 @@
 // Translation Unit: Math/Double_precision/e_fmod
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/Math/Double_precision/e_fmod.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __ieee754_fmod(); // 1
 
 extern "C" void __ieee754_fmod(); // 1
 

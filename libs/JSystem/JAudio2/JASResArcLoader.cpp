@@ -3,7 +3,9 @@
 // Translation Unit: JASResArcLoader
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASResArcLoader.h"
 
 // 
 // Types:
@@ -44,9 +46,6 @@ extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_
 // External References:
 // 
 
-extern "C" void OSSendMessage(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
 extern "C" void getThreadPointer__6JASDvdFv(); // 1

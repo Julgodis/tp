@@ -3,7 +3,9 @@
 // Translation Unit: f_op/f_op_actor_iter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_op/f_op_actor_iter.h"
 
 // 
 // Types:

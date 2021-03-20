@@ -3,13 +3,14 @@
 // Translation Unit: dvdidutils
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/dvd/dvdidutils.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void DVDCompareDiskID(); // 1
 
 extern "C" void DVDCompareDiskID(); // 1
 
@@ -17,7 +18,6 @@ extern "C" void DVDCompareDiskID(); // 1
 // External References:
 // 
 
-extern "C" void strncmp(); // 1
 
 extern "C" void strncmp(); // 1
 

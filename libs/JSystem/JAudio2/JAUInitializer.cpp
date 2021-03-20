@@ -3,7 +3,9 @@
 // Translation Unit: JAUInitializer
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAUInitializer.h"
 
 // 
 // Types:
@@ -117,12 +119,6 @@ extern "C" extern u8 JAUInitializer__lit_867[12 + 96 /* padding */];
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSGetSoundMode(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void getThreadPointer__6JASDvdFv(); // 1
 extern "C" void createThread__6JASDvdFliUl(); // 1

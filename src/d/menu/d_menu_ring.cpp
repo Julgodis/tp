@@ -3,19 +3,21 @@
 // Translation Unit: d/menu/d_menu_ring
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_ring.h"
 
 // 
 // Types:
 // 
 
-struct JKRExpHeap {
-};
-
 struct STControl {
 };
 
 struct CSTControl {
+};
+
+struct JKRExpHeap {
 };
 
 struct dMenu_Ring_c {
@@ -151,19 +153,19 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct J2DBasePosition {
-};
-
-struct J2DPane {
-	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
-};
-
 struct J2DGrafContext {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct J2DBasePosition {
+};
+
+struct J2DPane {
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 };
 
 struct CPaneMgr {
@@ -212,7 +214,6 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_ring_cpp(); // 1
 
 extern "C" void __ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc(); // 1
 extern "C" void __dt__12dMenu_Ring_cFv(); // 1
@@ -315,30 +316,6 @@ void* operator new[](u32); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2
 void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8); // 2
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void dComIfGs_setSelectItemIndex__FiUc(); // 1

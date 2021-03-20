@@ -3,13 +3,14 @@
 // Translation Unit: __va_arg
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Runtime.PPCEABI.H/__va_arg.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __va_arg(); // 1
 
 extern "C" void __va_arg(); // 1
 

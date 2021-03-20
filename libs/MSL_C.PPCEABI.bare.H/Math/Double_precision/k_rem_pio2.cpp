@@ -3,13 +3,14 @@
 // Translation Unit: Math/Double_precision/k_rem_pio2
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/Math/Double_precision/k_rem_pio2.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __kernel_rem_pio2(); // 1
 
 extern "C" void __kernel_rem_pio2(); // 1
 
@@ -17,10 +18,6 @@ extern "C" void __kernel_rem_pio2(); // 1
 // External References:
 // 
 
-extern "C" void _savefpr_25(); // 1
-extern "C" void _restfpr_25(); // 1
-extern "C" void floor(); // 1
-extern "C" void ldexp(); // 1
 
 extern "C" void _savefpr_25(); // 1
 extern "C" void _restfpr_25(); // 1

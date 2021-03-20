@@ -3,7 +3,9 @@
 // Translation Unit: processor
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JMessage/processor.h"
 
 // 
 // Types:
@@ -179,12 +181,6 @@ extern "C" extern void* __vt__Q28JMessage10TReference[4 + 1 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs(); // 1
 extern "C" void toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb(); // 1

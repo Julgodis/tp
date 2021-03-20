@@ -3,7 +3,9 @@
 // Translation Unit: JASRegisterParam
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASRegisterParam.h"
 
 // 
 // Types:

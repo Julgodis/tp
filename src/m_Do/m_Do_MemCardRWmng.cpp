@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_MemCardRWmng
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_MemCardRWmng.h"
 
 // 
 // Types:
@@ -44,20 +46,6 @@ extern "C" extern char const* const m_Do_m_Do_MemCardRWmng__stringBase0;
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void OSTicksToCalendarTime(); // 1
-extern "C" void CARDRead(); // 1
-extern "C" void CARDWrite(); // 1
-extern "C" void CARDGetStatus(); // 1
-extern "C" void CARDSetStatus(); // 1
-extern "C" void CARDGetSerialNo(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void snprintf(); // 1
 
 SECTION_INIT void memset(); // 1
 SECTION_INIT void memcpy(); // 1

@@ -11,7 +11,7 @@ lbl_80015614:
 /* 80015638 00000024  48 2C FB DD */	bl clearIndex__6JUTXfbFv
 /* 8001563C 00000028  48 00 10 21 */	bl mDoDvdErr_ThdCleanup__Fv
 /* 80015640 0000002C  48 24 DC 4D */	bl cAPICPad_recalibrate__Fv
-/* 80015644 00000030  88 0D 86 38 */	lbz r0, -0x79c8(r13)
+/* 80015644 00000030  88 0D 86 38 */	lbz r0, struct_80450BB8+0x0(r13)
 /* 80015648 00000034  28 00 00 00 */	cmplwi r0, 0
 /* 8001564C 00000038  41 82 00 14 */	beq lbl_80015660
 lbl_80015650:

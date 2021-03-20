@@ -3,34 +3,14 @@
 // Translation Unit: SIBios
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/si/SIBios.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void SIBusy(); // 1
-extern "C" void SIIsChanBusy(); // 1
-extern "C" static void CompleteTransfer(); // 1
-extern "C" static void SIInterruptHandler(); // 1
-extern "C" static void SIEnablePollingInterrupt(); // 1
-extern "C" void SIRegisterPollingHandler(); // 1
-extern "C" void SIUnregisterPollingHandler(); // 1
-extern "C" void SIInit(); // 1
-extern "C" static void __SITransfer(); // 1
-extern "C" void SIGetStatus(); // 1
-extern "C" void SISetCommand(); // 1
-extern "C" void SITransferCommands(); // 1
-extern "C" void SISetXY(); // 1
-extern "C" void SIEnablePolling(); // 1
-extern "C" void SIDisablePolling(); // 1
-extern "C" static void SIGetResponseRaw(); // 1
-extern "C" void SIGetResponse(); // 1
-extern "C" static void SIBios__AlarmHandler(); // 1
-extern "C" void SITransfer(); // 1
-extern "C" static void GetTypeCallback(); // 1
-extern "C" void SIGetType(); // 1
-extern "C" void SIGetTypeAsync(); // 1
 
 extern "C" void SIBusy(); // 1
 extern "C" void SIIsChanBusy(); // 1
@@ -75,18 +55,6 @@ extern "C" extern u8 __PADFixBits[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void OSSetAlarm(); // 1
-extern "C" void OSCancelAlarm(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void OSGetWirelessID(); // 1
-extern "C" void OSSetWirelessID(); // 1
-extern "C" void __OSGetSystemTime(); // 1
-extern "C" void SISetSamplingRate(); // 1
-extern "C" void VIGetCurrentLine(); // 1
 
 extern "C" void OSRegisterVersion(); // 1
 extern "C" void OSSetAlarm(); // 1

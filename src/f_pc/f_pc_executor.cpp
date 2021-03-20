@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_executor
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_executor.h"
 
 // 
 // Types:

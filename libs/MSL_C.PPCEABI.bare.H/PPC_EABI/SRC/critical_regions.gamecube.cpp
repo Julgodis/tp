@@ -3,15 +3,14 @@
 // Translation Unit: PPC_EABI/SRC/critical_regions.gamecube
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/critical_regions.gamecube.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __end_critical_region(); // 1
-extern "C" void __begin_critical_region(); // 1
-extern "C" void __kill_critical_regions(); // 1
 
 extern "C" void __end_critical_region(); // 1
 extern "C" void __begin_critical_region(); // 1

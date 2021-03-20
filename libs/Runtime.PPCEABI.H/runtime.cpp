@@ -3,66 +3,14 @@
 // Translation Unit: runtime
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Runtime.PPCEABI.H/runtime.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void __save_fpr(); // 1
-extern "C" void _savefpr_25(); // 1
-extern "C" void _savefpr_26(); // 1
-extern "C" void _savefpr_27(); // 1
-extern "C" void _savefpr_28(); // 1
-extern "C" void _savefpr_29(); // 1
-extern "C" void __restore_fpr(); // 1
-extern "C" void _restfpr_25(); // 1
-extern "C" void _restfpr_26(); // 1
-extern "C" void _restfpr_27(); // 1
-extern "C" void _restfpr_28(); // 1
-extern "C" void _restfpr_29(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_15(); // 1
-extern "C" void _savegpr_16(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_15(); // 1
-extern "C" void _restgpr_16(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void __div2u(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void __mod2u(); // 1
-extern "C" void __mod2i(); // 1
-extern "C" void __shl2i(); // 1
-extern "C" void __shr2u(); // 1
-extern "C" void __shr2i(); // 1
-extern "C" void __cvt_sll_flt(); // 1
-extern "C" void __cvt_dbl_usll(); // 1
 
 extern "C" void __cvt_fp2unsigned(); // 1
 extern "C" void __save_fpr(); // 1

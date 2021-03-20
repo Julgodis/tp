@@ -3,16 +3,18 @@
 // Translation Unit: c_m3d_g_pla
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_m3d_g_pla.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
+struct cXyz {
 };
 
-struct cXyz {
+struct Vec {
 };
 
 struct cM3dGPla {
@@ -43,10 +45,6 @@ extern "C" void Set__8cM3dGPlaFPC8cM3dGPla(); // 1
 // 
 
 void cM3d_InDivPos2(Vec const*, Vec const*, f32, Vec*); // 2
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void cM3d_InDivPos2__FPC3VecPC3VecfP3Vec(); // 1
 extern "C" void PSVECNormalize(); // 1

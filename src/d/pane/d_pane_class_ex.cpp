@@ -3,19 +3,21 @@
 // Translation Unit: d/pane/d_pane_class_ex
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/pane/d_pane_class_ex.h"
 
 // 
 // Types:
 // 
 
-struct J2DAnmTexPattern {
-};
-
 struct J2DAnmTransform {
 };
 
 struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmTexPattern {
 };
 
 struct J2DAnmVtxColor {

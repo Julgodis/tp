@@ -3,7 +3,9 @@
 // Translation Unit: JASDrumSet
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASDrumSet.h"
 
 // 
 // Types:

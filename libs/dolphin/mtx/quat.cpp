@@ -3,15 +3,14 @@
 // Translation Unit: quat
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/mtx/quat.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void PSQUATMultiply(); // 1
-extern "C" void C_QUATRotAxisRad(); // 1
-extern "C" void C_QUATSlerp(); // 1
 
 extern "C" void PSQUATMultiply(); // 1
 extern "C" void C_QUATRotAxisRad(); // 1
@@ -21,10 +20,6 @@ extern "C" void C_QUATSlerp(); // 1
 // External References:
 // 
 
-extern "C" void PSVECNormalize(); // 1
-extern "C" void sinf(); // 1
-extern "C" void cosf(); // 1
-extern "C" void acosf(); // 1
 
 extern "C" void PSVECNormalize(); // 1
 extern "C" void sinf(); // 1

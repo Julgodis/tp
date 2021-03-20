@@ -3,7 +3,9 @@
 // Translation Unit: d/event/d_event_manager
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/event/d_event_manager.h"
 
 // 
 // Types:
@@ -24,14 +26,14 @@ struct dEvDtEvent_c {
 	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
 };
 
-struct dEvDtData_c {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dEvDtData_c {
 };
 
 struct fopAc_ac_c {
@@ -222,26 +224,6 @@ void dEv_defaultSkipProc(void*, int); // 2
 void dEv_defaultSkipZev(void*, int); // 2
 void dEv_defaultSkipStb(void*, int); // 2
 void dCam_getBody(); // 2
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strchr(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
 extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1

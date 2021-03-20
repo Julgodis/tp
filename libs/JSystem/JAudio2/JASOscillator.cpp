@@ -3,7 +3,9 @@
 // Translation Unit: JASOscillator
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASOscillator.h"
 
 // 
 // Types:
@@ -39,7 +41,6 @@ extern "C" void updateCurrentValue__13JASOscillatorFf(); // 1
 // External References:
 // 
 
-extern "C" void __cvt_fp2unsigned(); // 1
 
 extern "C" void __cvt_fp2unsigned(); // 1
 

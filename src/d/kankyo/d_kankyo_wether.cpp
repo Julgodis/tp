@@ -3,7 +3,9 @@
 // Translation Unit: d/kankyo/d_kankyo_wether
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/kankyo/d_kankyo_wether.h"
 
 // 
 // Types:
@@ -151,13 +153,13 @@ struct dRes_control_c {
 struct csXyz {
 };
 
+struct dKy_tevstr_c {
+};
+
 struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -420,23 +422,6 @@ void cM_atan2s(f32, f32); // 2
 void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
 void* operator new(u32, int); // 2
 void operator delete(void*); // 2
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void memcmp(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1

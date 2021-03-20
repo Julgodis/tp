@@ -3,7 +3,9 @@
 // Translation Unit: c_cc_d
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_cc_d.h"
 
 // 
 // Types:
@@ -77,12 +79,12 @@ struct cCcD_ShapeAttr {
 	/* 802649E0 */ bool CrossCo(cCcD_ShapeAttr const&, f32*) const;
 };
 
+struct cCcD_TriAttr;
+struct cCcD_SphAttr;
 struct cCcD_PntAttr {
 };
 
 struct cCcD_CylAttr;
-struct cCcD_TriAttr;
-struct cCcD_SphAttr;
 struct cCcD_AabAttr {
 };
 
@@ -106,29 +108,6 @@ struct cCcD_CpsAttr {
 	/* 80264014 */ void GetNVec(cXyz const&, cXyz*) const;
 };
 
-struct cCcD_SphAttr {
-	/* 80084B44 */ void GetCoCP() const;
-	/* 80037A54 */ void GetCoCP();
-	/* 80264538 */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
-	/* 802645C0 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
-	/* 80084B4C */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
-	/* 80084B54 */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
-	/* 80084B5C */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
-	/* 802644EC */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
-	/* 8026457C */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
-	/* 80264688 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
-	/* 80084B94 */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
-	/* 80084B9C */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
-	/* 80084BA4 */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
-	/* 80084BAC */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
-	/* 80264644 */ void CrossCo(cCcD_SphAttr const&, f32*) const;
-	/* 802645F8 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
-	/* 8008721C */ ~cCcD_SphAttr();
-	/* 802646E0 */ void CalcAabBox();
-	/* 8026476C */ void GetNVec(cXyz const&, cXyz*) const;
-	/* 80264808 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
-};
-
 struct cCcD_CylAttr {
 	/* 80084CC0 */ void GetCoCP() const;
 	/* 80037A4C */ void GetCoCP();
@@ -150,6 +129,29 @@ struct cCcD_CylAttr {
 	/* 80264368 */ void CalcAabBox();
 	/* 802643D0 */ void GetNVec(cXyz const&, cXyz*) const;
 	/* 802644B8 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
+};
+
+struct cCcD_SphAttr {
+	/* 80084B44 */ void GetCoCP() const;
+	/* 80037A54 */ void GetCoCP();
+	/* 80264538 */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
+	/* 802645C0 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
+	/* 80084B4C */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
+	/* 80084B54 */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
+	/* 80084B5C */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
+	/* 802644EC */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
+	/* 8026457C */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
+	/* 80264688 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
+	/* 80084B94 */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
+	/* 80084B9C */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
+	/* 80084BA4 */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
+	/* 80084BAC */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
+	/* 80264644 */ void CrossCo(cCcD_SphAttr const&, f32*) const;
+	/* 802645F8 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
+	/* 8008721C */ ~cCcD_SphAttr();
+	/* 802646E0 */ void CalcAabBox();
+	/* 8026476C */ void GetNVec(cXyz const&, cXyz*) const;
+	/* 80264808 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
 };
 
 struct cCcD_TriAttr {
@@ -223,11 +225,6 @@ struct cM3dGCps {
 // Forward References:
 // 
 
-extern "C" void __sinit_c_cc_d_cpp(); // 1
-extern "C" static void func_80264A4C(); // 1
-extern "C" static void func_80264A54(); // 1
-extern "C" static void func_80264A5C(); // 1
-extern "C" static void func_80264A64(); // 1
 
 extern "C" void Set__15cCcD_DivideInfoFUlUlUl(); // 1
 extern "C" void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo(); // 1
@@ -327,17 +324,6 @@ void cM3d_Cross_CpsSph(cM3dGCps const&, cM3dGSph const&, Vec*); // 2
 void cM3d_Cross_TriTri(cM3dGTri const&, cM3dGTri const&, Vec*); // 2
 void cM3d_Cross_CpsTri(cM3dGCps const&, cM3dGTri, Vec*); // 2
 void operator delete(void*); // 2
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void GetCoCP__12cCcD_CylAttrFv(); // 1

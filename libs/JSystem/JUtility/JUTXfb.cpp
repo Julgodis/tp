@@ -3,7 +3,9 @@
 // Translation Unit: JUTXfb
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTXfb.h"
 
 // 
 // Types:
@@ -51,14 +53,6 @@ extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 void* operator new(u32); // 2
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void GXGetNumXfbLines(); // 1
-extern "C" void GXGetYScaleFactor(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void* __nw__FUl(); // 1
 extern "C" void* __nwa__FUlP7JKRHeapi(); // 1

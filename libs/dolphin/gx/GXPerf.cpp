@@ -3,15 +3,14 @@
 // Translation Unit: GXPerf
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXPerf.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GXSetGPMetric(); // 1
-extern "C" void GXClearGPMetric(); // 1
-extern "C" void GXReadXfRasMetric(); // 1
 
 extern "C" void GXSetGPMetric(); // 1
 extern "C" void GXClearGPMetric(); // 1

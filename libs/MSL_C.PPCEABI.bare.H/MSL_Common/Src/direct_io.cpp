@@ -3,14 +3,14 @@
 // Translation Unit: MSL_Common/Src/direct_io
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/direct_io.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void __fwrite(); // 1
-extern "C" void fwrite(); // 1
 
 extern "C" static void __fwrite(); // 1
 extern "C" void fwrite(); // 1
@@ -19,15 +19,6 @@ extern "C" void fwrite(); // 1
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void __flush_buffer(); // 1
-extern "C" void __prep_buffer(); // 1
-extern "C" void __end_critical_region(); // 1
-extern "C" void __begin_critical_region(); // 1
-extern "C" void fseek(); // 1
-extern "C" void __memrchr(); // 1
-extern "C" void __stdio_atexit(); // 1
-extern "C" void fwide(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void __flush_buffer(); // 1

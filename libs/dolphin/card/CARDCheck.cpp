@@ -3,19 +3,14 @@
 // Translation Unit: CARDCheck
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDCheck.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __CARDCheckSum(); // 1
-extern "C" static void VerifyID(); // 1
-extern "C" static void VerifyDir(); // 1
-extern "C" static void VerifyFAT(); // 1
-extern "C" void __CARDVerify(); // 1
-extern "C" static void CARDCheckExAsync(); // 1
-extern "C" void CARDCheck(); // 1
 
 extern "C" void __CARDCheckSum(); // 1
 extern "C" static void VerifyID(); // 1
@@ -29,20 +24,6 @@ extern "C" void CARDCheck(); // 1
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSLockSramEx(); // 1
-extern "C" void __OSUnlockSramEx(); // 1
-extern "C" void __CARDSyncCallback(); // 1
-extern "C" void __CARDGetFontEncode(); // 1
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDSync(); // 1
-extern "C" void __CARDUpdateFatBlock(); // 1
-extern "C" void __CARDUpdateDir(); // 1
-extern "C" void __shr2i(); // 1
 
 SECTION_INIT void memset(); // 1
 SECTION_INIT void memcpy(); // 1

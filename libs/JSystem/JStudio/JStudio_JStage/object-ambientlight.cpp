@@ -3,7 +3,9 @@
 // Translation Unit: object-ambientlight
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio_JStage/object-ambientlight.h"
 
 // 
 // Types:
@@ -72,9 +74,6 @@ extern "C" void adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUl
 // 
 
 void operator delete(void*); // 2
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor(); // 1
 extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl(); // 1

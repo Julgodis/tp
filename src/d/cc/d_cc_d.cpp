@@ -3,7 +3,9 @@
 // Translation Unit: d/cc/d_cc_d
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/cc/d_cc_d.h"
 
 // 
 // Types:
@@ -194,6 +196,7 @@ struct dCcD_Sph {
 	/* 80084BF4 */ ~dCcD_Sph();
 };
 
+struct cCcD_SphAttr;
 struct cCcD_ShapeAttr {
 	struct Shape {
 	};
@@ -203,32 +206,12 @@ struct cCcD_ShapeAttr {
 	/* 80263A64 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
 };
 
-struct cCcD_SphAttr;
 struct cCcD_PntAttr {
 };
 
+struct cCcD_TriAttr;
 struct cCcD_CylAttr;
 struct cCcD_AabAttr {
-};
-
-struct cCcD_CpsAttr;
-struct cCcD_TriAttr {
-	/* 80084E44 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
-	/* 80263A88 */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
-	/* 80084E4C */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
-	/* 80263BCC */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
-	/* 80263B90 */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
-	/* 80084E54 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
-	/* 80263B58 */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
-	/* 80084EBC */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
-	/* 80084EA4 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
-	/* 80084E8C */ bool CrossCo(cCcD_SphAttr const&, f32*) const;
-	/* 80084EAC */ bool CrossCo(cCcD_CpsAttr const&, f32*) const;
-	/* 80084E94 */ bool CrossCo(cCcD_CylAttr const&, f32*) const;
-	/* 80084EB4 */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
-	/* 80084E9C */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
-	/* 80263C04 */ void CalcAabBox();
-	/* 80263C9C */ void GetNVec(cXyz const&, cXyz*) const;
 };
 
 struct cCcD_CpsAttr {
@@ -270,6 +253,25 @@ struct cCcD_CylAttr {
 	/* 80264368 */ void CalcAabBox();
 	/* 802643D0 */ void GetNVec(cXyz const&, cXyz*) const;
 	/* 802644B8 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
+};
+
+struct cCcD_TriAttr {
+	/* 80084E44 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
+	/* 80263A88 */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
+	/* 80084E4C */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
+	/* 80263BCC */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
+	/* 80263B90 */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
+	/* 80084E54 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
+	/* 80263B58 */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
+	/* 80084EBC */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
+	/* 80084EA4 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
+	/* 80084E8C */ bool CrossCo(cCcD_SphAttr const&, f32*) const;
+	/* 80084EAC */ bool CrossCo(cCcD_CpsAttr const&, f32*) const;
+	/* 80084E94 */ bool CrossCo(cCcD_CylAttr const&, f32*) const;
+	/* 80084EB4 */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
+	/* 80084E9C */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
+	/* 80263C04 */ void CalcAabBox();
+	/* 80263C9C */ void GetNVec(cXyz const&, cXyz*) const;
 };
 
 struct cCcD_SphAttr {
@@ -329,15 +331,6 @@ struct cM3dGSph {
 // 
 
 void dCcD_GetGObjInf(cCcD_Obj*); // 2
-extern "C" static void func_80085298(); // 1
-extern "C" static void func_800852A0(); // 1
-extern "C" static void func_800852A8(); // 1
-extern "C" static void func_800852B0(); // 1
-extern "C" static void func_800852B8(); // 1
-extern "C" static void func_800852C0(); // 1
-extern "C" static void func_800852C8(); // 1
-extern "C" static void func_800852D0(); // 1
-extern "C" static void func_800852D8(); // 1
 
 extern "C" void ClrActorInfo__22dCcD_GAtTgCoCommonBaseFv(); // 1
 extern "C" void ct__22dCcD_GAtTgCoCommonBaseFv(); // 1
@@ -480,9 +473,6 @@ extern "C" extern void* __vt__10cCcD_GStts[3];
 void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 void operator delete(void*); // 2
-extern "C" void PSVECSubtract(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
 extern "C" void fpcSch_JudgeByID__FPvPv(); // 1

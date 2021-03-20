@@ -3,19 +3,21 @@
 // Translation Unit: Z2LinkMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2LinkMgr.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
-};
-
 struct Z2SoundHandlePool {
 };
 
 struct JAISoundID {
+};
+
+struct Vec {
 };
 
 struct Z2SoundObjBase {
@@ -184,8 +186,6 @@ struct Z2Creature {
 // Forward References:
 // 
 
-extern "C" static void func_802C588C(); // 1
-extern "C" static void func_802C5894(); // 1
 
 extern "C" void setLinkGroupInfo__14Z2CreatureLinkFUc(); // 1
 extern "C" void setLinkHp__14Z2CreatureLinkFll(); // 1
@@ -237,13 +237,6 @@ extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
 extern "C" void stop__8JAISoundFUl(); // 1

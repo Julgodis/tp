@@ -3,7 +3,9 @@
 // Translation Unit: JAISound
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAISound.h"
 
 // 
 // Types:
@@ -11,6 +13,9 @@
 
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
+};
+
+struct JAISoundID {
 };
 
 struct JGeometry {
@@ -23,9 +28,6 @@ struct JGeometry {
 };
 
 struct JAIAudience {
-};
-
-struct JAISoundID {
 };
 
 struct JASSoundParams {
@@ -94,8 +96,6 @@ extern "C" extern char const* const JAISound__stringBase0;
 // 
 
 void JASReport(char const*, ...); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
 
 extern "C" void JASReport__FPCce(); // 1
 extern "C" void setChannelMgrCount__8JASTrackFUl(); // 1

@@ -3,16 +3,36 @@
 // Translation Unit: d/cc/d_cc_s
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/cc/d_cc_s.h"
 
 // 
 // Types:
 // 
 
+struct cXyz {
+};
+
+struct cCcD_Stts {
+	/* 80263934 */ void PlusCcMove(f32, f32, f32);
+	/* 80263970 */ void PlusDmg(int);
+};
+
+struct dCcD_GStts {
+};
+
+struct cCcD_GStts {
+};
+
 struct cCcD_ShapeAttr {
 	struct Shape {
 	};
 
+};
+
+struct dCcD_GObjInf {
+	/* 800843DC */ void ChkAtNoGuard();
 };
 
 struct csXyz {
@@ -22,28 +42,10 @@ struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
 
-struct cXyz {
-};
-
-struct dCcD_GObjInf {
-	/* 800843DC */ void ChkAtNoGuard();
-};
-
 struct cCcD_GObjInf {
 };
 
 struct fopAc_ac_c {
-};
-
-struct cCcD_GStts {
-};
-
-struct cCcD_Stts {
-	/* 80263934 */ void PlusCcMove(f32, f32, f32);
-	/* 80263970 */ void PlusDmg(int);
-};
-
-struct dCcD_GStts {
 };
 
 struct dCcS {
@@ -176,25 +178,6 @@ extern "C" extern void* __vt__4dCcS[13];
 void cM3d_CalcVecZAngle(Vec const&, csXyz*); // 2
 void cLib_distanceAngleS(s16, s16); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz(); // 1
 extern "C" void __dt__4dCcSFv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: c_bg_s_poly_info
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_bg_s_poly_info.h"
 
 // 
 // Types:

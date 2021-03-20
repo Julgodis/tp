@@ -3,7 +3,9 @@
 // Translation Unit: JASAudioThread
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASAudioThread.h"
 
 // 
 // Types:
@@ -85,18 +87,6 @@ extern "C" extern u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];
 
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSJamMessage(); // 1
-extern "C" void OSInitThreadQueue(); // 1
-extern "C" void OSExitThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void DSPCheckMailFromDSP(); // 1
-extern "C" void DSPReadMailFromDSP(); // 1
-extern "C" void __register_global_object(); // 1
 
 extern "C" void __ct__17JASGenericMemPoolFv(); // 1
 extern "C" void newMemPool__17JASGenericMemPoolFUli(); // 1

@@ -3,20 +3,14 @@
 // Translation Unit: OSExec
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSExec.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void PackArgs(); // 1
-extern "C" static void Run(); // 1
-extern "C" static void ReadDisc(); // 1
-extern "C" static void OSExec__Callback(); // 1
-extern "C" void __OSGetExecParams(); // 1
-extern "C" static void GetApploaderPosition(); // 1
-extern "C" static void __OSBootDolSimple(); // 1
-extern "C" void __OSBootDol(); // 1
 
 extern "C" static void PackArgs(); // 1
 extern "C" static void Run(); // 1
@@ -31,35 +25,6 @@ extern "C" void __OSBootDol(); // 1
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void OSSetArenaLo(); // 1
-extern "C" void OSAllocFromArenaLo(); // 1
-extern "C" void ICInvalidateRange(); // 1
-extern "C" void ICFlashInvalidate(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void __OSMaskInterrupts(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void OSGetSaveRegion(); // 1
-extern "C" void __OSDoHotReset(); // 1
-extern "C" void DVDInit(); // 1
-extern "C" void DVDReadAbsAsyncPrio(); // 1
-extern "C" void DVDCancelStreamAsync(); // 1
-extern "C" void DVDGetCommandBlockStatus(); // 1
-extern "C" void DVDSetAutoInvalidation(); // 1
-extern "C" void DVDResume(); // 1
-extern "C" void DVDGetCurrentDiskID(); // 1
-extern "C" void DVDCheckDisk(); // 1
-extern "C" void __DVDPrepareResetAsync(); // 1
-extern "C" void AISetStreamPlayState(); // 1
-extern "C" void AISetStreamVolLeft(); // 1
-extern "C" void AISetStreamVolRight(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strncmp(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strlen(); // 1
 
 SECTION_INIT void memset(); // 1
 SECTION_INIT void memcpy(); // 1

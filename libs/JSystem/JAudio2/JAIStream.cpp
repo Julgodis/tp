@@ -3,7 +3,9 @@
 // Translation Unit: JAIStream
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAIStream.h"
 
 // 
 // Types:
@@ -19,6 +21,12 @@ struct JASAramStream {
 	/* 802966CC */ void cancel();
 };
 
+struct JAIStreamMgr {
+};
+
+struct JAISoundID {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -31,9 +39,6 @@ struct JGeometry {
 struct JAIAudience {
 };
 
-struct JAISoundID {
-};
-
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAIStream> */
@@ -44,9 +49,6 @@ struct JAISoundActivity {
 };
 
 struct JASSoundParams {
-};
-
-struct JAIStreamMgr {
 };
 
 struct JAIStream {
@@ -133,11 +135,6 @@ extern "C" extern void* __vt__9JAIStream[12];
 // External References:
 // 
 
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__17JASGenericMemPoolFv(); // 1
 extern "C" void alloc__17JASGenericMemPoolFUl(); // 1

@@ -1,8 +1,7 @@
-#ifndef JASRESARCLOADER_H_
-#define JASRESARCLOADER_H_
+#ifndef JASRESARCLOADER_H
+#define JASRESARCLOADER_H
 
-extern "C" {
-void JASResArcLoader_NS_getResMaxSize(void);
-}
+#include "dolphin/types.h"
 
-#endif  // JASRESARCLOADER_H_
+
+#endif /* JASRESARCLOADER_H */

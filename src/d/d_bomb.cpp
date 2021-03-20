@@ -3,7 +3,9 @@
 // Translation Unit: d/d_bomb
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_bomb.h"
 
 // 
 // Types:

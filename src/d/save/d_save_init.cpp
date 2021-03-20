@@ -3,7 +3,9 @@
 // Translation Unit: d/save/d_save_init
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/save/d_save_init.h"
 
 // 
 // Forward References:

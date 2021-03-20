@@ -3,15 +3,14 @@
 // Translation Unit: CARDFormat
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDFormat.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void FormatCallback(); // 1
-extern "C" static void __CARDFormatRegionAsync(); // 1
-extern "C" void CARDFormat(); // 1
 
 extern "C" static void FormatCallback(); // 1
 extern "C" static void __CARDFormatRegionAsync(); // 1
@@ -21,24 +20,6 @@ extern "C" void CARDFormat(); // 1
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void __OSLockSram(); // 1
-extern "C" void __OSLockSramEx(); // 1
-extern "C" void __OSUnlockSram(); // 1
-extern "C" void __OSUnlockSramEx(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void __CARDDefaultApiCallback(); // 1
-extern "C" void __CARDSyncCallback(); // 1
-extern "C" void __CARDEraseSector(); // 1
-extern "C" void __CARDGetFontEncode(); // 1
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDSync(); // 1
-extern "C" void __CARDWrite(); // 1
-extern "C" void __CARDCheckSum(); // 1
-extern "C" void __shr2i(); // 1
 
 SECTION_INIT void memset(); // 1
 SECTION_INIT void memcpy(); // 1

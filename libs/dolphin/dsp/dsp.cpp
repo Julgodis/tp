@@ -3,18 +3,14 @@
 // Translation Unit: dsp
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/dsp/dsp.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void DSPCheckMailToDSP(); // 1
-extern "C" void DSPCheckMailFromDSP(); // 1
-extern "C" void DSPReadMailFromDSP(); // 1
-extern "C" void DSPSendMailToDSP(); // 1
-extern "C" void DSPAssertInt(); // 1
-extern "C" void DSPInit(); // 1
 
 extern "C" void DSPCheckMailToDSP(); // 1
 extern "C" void DSPCheckMailFromDSP(); // 1
@@ -30,13 +26,6 @@ extern "C" extern u8 lit_21[9 + 3 /* padding */];
 // External References:
 // 
 
-extern "C" void __DSPHandler(); // 1
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void __DSP_debug_printf(); // 1
 
 extern "C" void __DSPHandler(); // 1
 extern "C" void OSRegisterVersion(); // 1

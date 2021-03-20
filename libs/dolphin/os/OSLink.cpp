@@ -3,22 +3,14 @@
 // Translation Unit: OSLink
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSLink.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void OSNotifyLink(); // 1
-extern "C" static void OSNotifyUnlink(); // 1
-extern "C" void OSSetStringTable(); // 1
-extern "C" static void Relocate(); // 1
-extern "C" static void Link(); // 1
-extern "C" void OSLink(); // 1
-extern "C" void OSLinkFixed(); // 1
-extern "C" static void Undo(); // 1
-extern "C" void OSUnlink(); // 1
-extern "C" void __OSModuleInit(); // 1
 
 extern "C" static void OSNotifyLink(); // 1
 extern "C" static void OSNotifyUnlink(); // 1
@@ -35,10 +27,6 @@ extern "C" void __OSModuleInit(); // 1
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void DCFlushRange(); // 1
-extern "C" void ICInvalidateRange(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void OSReport(); // 1

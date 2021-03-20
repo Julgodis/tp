@@ -3,7 +3,9 @@
 // Translation Unit: d/ovlp/d_ovlp_fade2
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/ovlp/d_ovlp_fade2.h"
 
 // 
 // Types:
@@ -88,41 +90,6 @@ void cLib_addCalc2(f32*, f32, f32, f32); // 2
 void cLib_addCalc0(f32*, f32, f32); // 2
 void cLib_chaseAngleS(s16*, s16, s16); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __ptmf_scall(); // 1
 
 extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
 extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1

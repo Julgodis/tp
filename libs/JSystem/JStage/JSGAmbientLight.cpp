@@ -3,7 +3,9 @@
 // Translation Unit: JSGAmbientLight
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStage/JSGAmbientLight.h"
 
 // 
 // Types:

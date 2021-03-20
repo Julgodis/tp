@@ -3,7 +3,9 @@
 // Translation Unit: J3DUDL
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DU/J3DUDL.h"
 
 // 
 // Types:

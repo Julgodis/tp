@@ -3,15 +3,14 @@
 // Translation Unit: MetroTRK/Portable/mutex_TRK
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/mutex_TRK.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" bool TRKReleaseMutex(); // 1
-extern "C" bool TRKAcquireMutex(); // 1
-extern "C" bool TRKInitializeMutex(); // 1
 
 extern "C" bool TRKReleaseMutex(); // 1
 extern "C" bool TRKAcquireMutex(); // 1

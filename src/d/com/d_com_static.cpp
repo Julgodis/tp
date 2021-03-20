@@ -3,7 +3,9 @@
 // Translation Unit: d/com/d_com_static
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/com/d_com_static.h"
 
 // 
 // Types:
@@ -130,9 +132,6 @@ void daNpcKakashi_setSwdTutorialResult(bool); // 2
 void daNpcKakashi_getSuccessCount(); // 2
 void daNpcKakashi_incSuccessCount(); // 2
 void daNpcKakashi_clrSuccessCount(); // 2
-extern "C" void __sinit_d_com_static_cpp(); // 1
-extern "C" static void func_80031EAC(); // 1
-extern "C" static void func_80031EF0(); // 1
 
 extern "C" void set__Q27daSus_c6data_cFScRC4cXyzRC4cXyzUcUcUc(); // 1
 extern "C" void reset__Q27daSus_c6data_cFv(); // 1
@@ -215,16 +214,6 @@ void mDoMch_Create(); // 2
 void fopAcM_delete(fopAc_ac_c*); // 2
 void fpoAcM_relativePos(fopAc_ac_c const*, cXyz const*, cXyz*); // 2
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void mDoMch_Create__Fv(); // 1

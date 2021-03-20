@@ -3,19 +3,13 @@
 // Translation Unit: J3DJointTree
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphAnimator/J3DJointTree.h"
 
 // 
 // Types:
 // 
-
-struct J3DJoint {
-	/* 8032F13C */ void appendChild(J3DJoint*);
-	/* 8032F3F8 */ void recursiveCalc();
-};
-
-struct Vec {
-};
 
 struct J3DModelHierarchy {
 };
@@ -26,7 +20,15 @@ struct J3DMaterialTable {
 struct J3DMtxBuffer {
 };
 
+struct J3DJoint {
+	/* 8032F13C */ void appendChild(J3DJoint*);
+	/* 8032F3F8 */ void recursiveCalc();
+};
+
 struct J3DShapeTable {
+};
+
+struct Vec {
 };
 
 struct J3DJointTree {
@@ -64,8 +66,6 @@ extern "C" extern void* __vt__12J3DJointTree[4 + 1 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_23(); // 1
-extern "C" void _restgpr_23(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void __ct__14J3DDrawMtxDataFv(); // 1

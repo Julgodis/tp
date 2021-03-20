@@ -3,7 +3,9 @@
 // Translation Unit: f_op/f_op_kankyo_mng
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_op/f_op_kankyo_mng.h"
 
 // 
 // Types:
@@ -18,13 +20,13 @@ struct layer_class {
 struct csXyz {
 };
 
+struct dKy_tevstr_c {
+};
+
 struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -66,10 +68,6 @@ void fpcM_Delete(void*); // 2
 void fpcM_FastCreate(s16, int (*)(void*), void*, void*); // 2
 void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
 void cLib_memSet(void*, int, u32); // 2
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void fpcLy_CurrentLayer__Fv(); // 1
 extern "C" void fpcM_Delete__FPv(); // 1

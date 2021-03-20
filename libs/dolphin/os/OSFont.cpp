@@ -3,15 +3,14 @@
 // Translation Unit: OSFont
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSFont.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void GetFontCode(); // 1
-extern "C" void OSGetFontEncode(); // 1
-extern "C" static void ParseStringS(); // 1
 
 extern "C" static void GetFontCode(); // 1
 extern "C" void OSGetFontEncode(); // 1

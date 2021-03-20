@@ -3,7 +3,9 @@
 // Translation Unit: d/msg/d_msg_object
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/msg/d_msg_object.h"
 
 // 
 // Types:
@@ -17,16 +19,6 @@ struct dMsgObject_HowlHIO_c {
 struct dMsgObject_HIO_c {
 	/* 80232D6C */ dMsgObject_HIO_c();
 	/* 80238BDC */ ~dMsgObject_HIO_c();
-};
-
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
-};
-
-struct fopAc_ac_c {
-};
-
-struct J2DTextBox {
 };
 
 struct JKRHeap {
@@ -43,10 +35,20 @@ struct mDoDvdThd_mountXArchive_c {
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
-struct msg_class {
+struct J2DTextBox {
+};
+
+struct fopAc_ac_c {
 };
 
 struct JUTFont {
+};
+
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
+};
+
+struct msg_class {
 };
 
 struct dMsgObject_c {
@@ -411,7 +413,6 @@ void dMsgObject_setFundRaising(u16); // 2
 static void dMsgObject_addFundRaising(s16); // 2
 void dMsgObject_getOffering(); // 2
 void dMsgObject_addOffering(s16); // 2
-extern "C" void __sinit_d_msg_object_cpp(); // 1
 
 extern "C" void dMsgObject_getGroupID__Fv(); // 1
 extern "C" static void dMsgObject_searchSSItem__FPvPv(); // 1
@@ -609,22 +610,6 @@ void dComIfGp_getSubHeap2D(int); // 2
 void dMeter2Info_set2DVibration(); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
 extern "C" void mDoExt_getMesgFont__Fv(); // 1

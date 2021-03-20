@@ -3,19 +3,21 @@
 // Translation Unit: d/file/d_file_sel_warning
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/file/d_file_sel_warning.h"
 
 // 
 // Types:
 // 
 
+struct JKRArchive {
+};
+
 struct JUtility {
 	struct TColor {
 	};
 
-};
-
-struct JKRArchive {
 };
 
 struct dFile_warning_c {
@@ -94,7 +96,6 @@ struct J2DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_file_sel_warning_cpp(); // 1
 
 extern "C" void __ct__15dFile_warning_cFP10JKRArchiveUc(); // 1
 extern "C" void __dt__15dFile_warning_cFv(); // 1
@@ -127,7 +128,6 @@ void mDoExt_getMesgFont(); // 2
 void mDoExt_removeMesgFont(); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __ptmf_scall(); // 1
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void mDoExt_removeMesgFont__Fv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: f_ap/f_ap_game
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_ap/f_ap_game.h"
 
 // 
 // Types:
@@ -21,7 +23,6 @@ struct fapGm_HIO_c {
 static void fapGm_After(); // 2
 void fapGm_Execute(); // 2
 void fapGm_Create(); // 2
-extern "C" void __sinit_f_ap_game_cpp(); // 1
 
 extern "C" void __ct__11fapGm_HIO_cFv(); // 1
 extern "C" static void fapGm_After__Fv(); // 1
@@ -46,7 +47,6 @@ void fpcM_Management(void (*)(void), void (*)(void)); // 2
 void fpcM_Init(); // 2
 void cCt_Counter(int); // 2
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
 
 extern "C" void fopCamM_Management__Fv(); // 1
 extern "C" void fopCamM_Init__Fv(); // 1

@@ -7,10 +7,15 @@ from .base import *
 class PointerType(Type):
     of: Type
 
+    def __hash__(self):
+        return hash(("pointer", self.of))
+
     def type(self) -> str:
         return f"{self.of.type()}*"
 
-    def dependencies(self) -> Set["Type"]:
-        return self.of.dependencies()
+    def traverse(self, callback, depth):
+        should_exit = callback(self, depth)
+        if not should_exit:
+            self.of.traverse(callback, depth + 1)
 
         

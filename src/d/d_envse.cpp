@@ -3,7 +3,9 @@
 // Translation Unit: d/d_envse
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_envse.h"
 
 // 
 // Types:
@@ -86,14 +88,6 @@ void dComIfGp_getReverb(int); // 2
 void dPath_GetRoomPath(int, int); // 2
 void dPath_GetNextRoomPath(dPath const*, int); // 2
 void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*); // 2
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void memcmp(); // 1
 
 extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
 extern "C" void dComIfGp_getReverb__Fi(); // 1

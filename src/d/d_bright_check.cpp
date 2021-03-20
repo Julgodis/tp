@@ -3,7 +3,9 @@
 // Translation Unit: d/d_bright_check
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_bright_check.h"
 
 // 
 // Types:
@@ -39,10 +41,10 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -66,7 +68,6 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_bright_check_cpp(); // 1
 
 extern "C" void __ct__14dBrightCheck_cFP10JKRArchive(); // 1
 extern "C" void __dt__14dBrightCheck_cFv(); // 1
@@ -93,9 +94,6 @@ void mDoExt_getMesgFont(); // 2
 void mDoExt_getRubyFont(); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _restgpr_22(); // 1
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void mDoExt_getRubyFont__Fv(); // 1

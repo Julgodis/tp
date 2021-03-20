@@ -3,15 +3,14 @@
 // Translation Unit: OSReboot
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSReboot.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __OSReboot(); // 1
-extern "C" void OSSetSaveRegion(); // 1
-extern "C" void OSGetSaveRegion(); // 1
 
 extern "C" void __OSReboot(); // 1
 extern "C" void OSSetSaveRegion(); // 1
@@ -21,12 +20,6 @@ extern "C" void OSGetSaveRegion(); // 1
 // External References:
 // 
 
-extern "C" void OSSetArenaHi(); // 1
-extern "C" void OSSetArenaLo(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void __OSBootDol(); // 1
-extern "C" void OSDisableInterrupts(); // 1
 
 extern "C" void OSSetArenaHi(); // 1
 extern "C" void OSSetArenaLo(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: msg/scrn/d_msg_scrn_jimaku
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "msg/scrn/d_msg_scrn_jimaku.h"
 
 // 
 // Types:
@@ -48,18 +50,18 @@ struct dMsgScrnLight_c {
 	/* 80245934 */ dMsgScrnLight_c(u8, u8);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct CPaneMgr {
@@ -102,20 +104,11 @@ extern "C" extern char const* const msg_scrn_d_msg_scrn_jimaku__stringBase0;
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
 void mDoExt_getMesgFont(); // 2
 void dComIfGp_getSubHeap2D(int); // 2
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void mDoExt_getMesgFont__Fv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: Z2SeqMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2SeqMgr.h"
 
 // 
 // Types:
@@ -178,12 +180,6 @@ extern "C" extern char const* const Z2SeqMgr__stringBase0;
 // External References:
 // 
 
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void calc__9JAISeqMgrFv(); // 1
 extern "C" void stop__9JAISeqMgrFUl(); // 1

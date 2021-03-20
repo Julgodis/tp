@@ -3,21 +3,14 @@
 // Translation Unit: GXGeometry
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXGeometry.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __GXSetDirtyState(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void __GXSendFlushPrim(); // 1
-extern "C" void GXSetLineWidth(); // 1
-extern "C" void GXSetPointSize(); // 1
-extern "C" void GXEnableTexOffsets(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetCoPlanar(); // 1
-extern "C" static void __GXSetGenMode(); // 1
 
 extern "C" void __GXSetDirtyState(); // 1
 extern "C" void GXBegin(); // 1
@@ -33,11 +26,6 @@ extern "C" static void __GXSetGenMode(); // 1
 // External References:
 // 
 
-extern "C" void __GXSetVCD(); // 1
-extern "C" void __GXCalculateVLim(); // 1
-extern "C" void __GXSetVAT(); // 1
-extern "C" void __GXSetSUTexRegs(); // 1
-extern "C" void __GXUpdateBPMask(); // 1
 
 extern "C" void __GXSetVCD(); // 1
 extern "C" void __GXCalculateVLim(); // 1

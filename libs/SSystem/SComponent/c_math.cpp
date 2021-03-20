@@ -3,7 +3,9 @@
 // Translation Unit: c_math
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_math.h"
 
 // 
 // Forward References:
@@ -39,7 +41,6 @@ extern "C" void cM_rndFX2__Ff(); // 1
 // External References:
 // 
 
-extern "C" void fmod(); // 1
 
 extern "C" void fmod(); // 1
 extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];

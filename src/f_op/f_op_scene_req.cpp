@@ -3,7 +3,9 @@
 // Translation Unit: f_op/f_op_scene_req
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_op/f_op_scene_req.h"
 
 // 
 // Types:
@@ -79,8 +81,6 @@ void fpcNdRq_Request(u32, int, process_node_class*, s16, void*, node_create_requ
 void fpcNdRq_ReRequest(u32, s16, void*); // 2
 void cPhs_Set(request_of_phase_process_class*, int (**)(void*)); // 2
 void cPhs_Do(request_of_phase_process_class*, void*); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
 
 extern "C" void fopOvlpM_ToldAboutID__FUi(); // 1
 extern "C" void fopOvlpM_IsDone__Fv(); // 1

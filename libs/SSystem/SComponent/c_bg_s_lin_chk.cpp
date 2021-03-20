@@ -3,7 +3,9 @@
 // Translation Unit: c_bg_s_lin_chk
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_bg_s_lin_chk.h"
 
 // 
 // Types:
@@ -39,7 +41,6 @@ struct cM3dGLin {
 // Forward References:
 // 
 
-extern "C" static void func_80267F80(); // 1
 
 extern "C" void __ct__11cBgS_LinChkFv(); // 1
 extern "C" void __dt__11cBgS_LinChkFv(); // 1
@@ -53,8 +54,6 @@ extern "C" static void func_80267F80(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__8cBgS_ChkFv(); // 1
 extern "C" void __dt__8cBgS_ChkFv(); // 1

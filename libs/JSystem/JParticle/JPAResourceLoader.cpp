@@ -3,15 +3,13 @@
 // Translation Unit: JPAResourceLoader
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAResourceLoader.h"
 
 // 
 // Types:
 // 
-
-struct JPATexture {
-	/* 8027D7D4 */ JPATexture(u8 const*);
-};
 
 struct JKRHeap {
 };
@@ -19,6 +17,10 @@ struct JKRHeap {
 struct JPAResource {
 	/* 80274010 */ JPAResource();
 	/* 80274080 */ void init(JKRHeap*);
+};
+
+struct JPATexture {
+	/* 8027D7D4 */ JPATexture(u8 const*);
 };
 
 struct JPAResourceManager {
@@ -73,8 +75,6 @@ extern "C" void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager(); // 1
 
 void* operator new(u32, JKRHeap*, int); // 2
 void* operator new[](u32, JKRHeap*, int); // 2
-extern "C" void _savegpr_18(); // 1
-extern "C" void _restgpr_18(); // 1
 
 extern "C" void registRes__18JPAResourceManagerFP11JPAResource(); // 1
 extern "C" void registTex__18JPAResourceManagerFP10JPATexture(); // 1

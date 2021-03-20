@@ -3,7 +3,9 @@
 // Translation Unit: JKRFileCache
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRFileCache.h"
 
 // 
 // Types:
@@ -114,27 +116,8 @@ extern "C" extern char const* const JKRFileCache__stringBase0;
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void DVDChangeDir(); // 1
-extern "C" void DVDOpenDir(); // 1
-extern "C" void DVDReadDir(); // 1
-extern "C" bool DVDCloseDir(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void tolower(); // 1
-extern "C" void strrchr(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strlen(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1

@@ -3,13 +3,14 @@
 // Translation Unit: Math/Double_precision/k_tan
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/Math/Double_precision/k_tan.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __kernel_tan(); // 1
 
 extern "C" void __kernel_tan(); // 1
 

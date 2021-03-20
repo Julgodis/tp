@@ -1,10 +1,7 @@
-#ifndef JAISOUNDSTARTER_H_
-#define JAISOUNDSTARTER_H_
+#ifndef JAISOUNDSTARTER_H
+#define JAISOUNDSTARTER_H
 
-extern "C" {
-void JAISoundStarter_NS_ctor(void);
-void JAISoundStarter_NS_dtor(void);
-void JAISoundStarter_NS_startLevelSound(void);
-}
+#include "dolphin/types.h"
 
-#endif  // JAISOUNDSTARTER_H_
+
+#endif /* JAISOUNDSTARTER_H */

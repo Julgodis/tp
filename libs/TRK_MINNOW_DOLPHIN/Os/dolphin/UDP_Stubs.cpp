@@ -3,21 +3,14 @@
 // Translation Unit: Os/dolphin/UDP_Stubs
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/Os/dolphin/UDP_Stubs.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" s32 udp_cc_post_stop(); // 1
-extern "C" s32 udp_cc_pre_continue(); // 1
-extern "C" bool udp_cc_peek(); // 1
-extern "C" bool udp_cc_write(); // 1
-extern "C" bool udp_cc_read(); // 1
-extern "C" s32 udp_cc_close(); // 1
-extern "C" s32 udp_cc_open(); // 1
-extern "C" s32 udp_cc_shutdown(); // 1
-extern "C" s32 udp_cc_initialize(); // 1
 
 extern "C" s32 udp_cc_post_stop(); // 1
 extern "C" s32 udp_cc_pre_continue(); // 1

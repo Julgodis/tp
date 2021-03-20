@@ -3,13 +3,14 @@
 // Translation Unit: ppc/Generic/flush_cache
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/ppc/Generic/flush_cache.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRK_flush_cache(); // 1
 
 extern "C" void TRK_flush_cache(); // 1
 

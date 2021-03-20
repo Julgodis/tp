@@ -3,14 +3,14 @@
 // Translation Unit: MSL_Common/Src/arith
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/arith.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void div(); // 1
-extern "C" void abs(); // 1
 
 extern "C" void div(); // 1
 extern "C" void abs(); // 1

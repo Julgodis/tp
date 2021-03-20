@@ -3,7 +3,9 @@
 // Translation Unit: f_op/f_op_msg_mng
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_op/f_op_msg_mng.h"
 
 // 
 // Types:
@@ -118,14 +120,6 @@ void fpcLy_CurrentLayer(); // 2
 void fpcM_Delete(void*); // 2
 void fpcPi_Change(process_priority_class*, u32, u16, u16); // 2
 void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void mDoExt_getGameHeap__Fv(); // 1
 extern "C" void fopScnM_SearchByID__FUi(); // 1

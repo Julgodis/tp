@@ -3,16 +3,14 @@
 // Translation Unit: mtxvec
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/mtx/mtxvec.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecArray(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSMTXMultVecArraySR(); // 1
 
 extern "C" void PSMTXMultVec(); // 1
 extern "C" void PSMTXMultVecArray(); // 1

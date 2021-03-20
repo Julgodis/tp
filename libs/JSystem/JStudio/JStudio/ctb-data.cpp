@@ -3,7 +3,9 @@
 // Translation Unit: ctb-data
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/ctb-data.h"
 
 // 
 // Forward References:

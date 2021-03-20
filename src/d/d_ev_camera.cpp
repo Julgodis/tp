@@ -3,7 +3,9 @@
 // Translation Unit: d/d_ev_camera
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_ev_camera.h"
 
 // 
 // Types:
@@ -208,14 +210,8 @@ struct d2DBSplinePath {
 // Forward References:
 // 
 
-extern "C" static void func_800889F8(); // 1
-extern "C" static void func_8008E750(); // 1
-extern "C" static void func_8008FA94(); // 1
 static void dComIfGp_saveCameraPosition(int, cXyz*, cXyz*, f32, s16); // 2
-extern "C" void __sinit_d_ev_camera_cpp(); // 1
 void fopAcM_GetID(void const*); // 2
-extern "C" static void func_80097810(); // 1
-extern "C" static void func_8009784C(); // 1
 
 extern "C" static void func_800889F8(); // 1
 extern "C" void StartEventCamera__9dCamera_cFiie(); // 1
@@ -315,26 +311,6 @@ void cM_rndFX(f32); // 2
 void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*); // 2
 void operator+(s16, cSAngle const&); // 2
 void operator delete(void*); // 2
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __va_arg(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void mDoLib_project__FP3VecP3Vec(); // 1

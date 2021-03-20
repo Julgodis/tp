@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_manager
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_manager.h"
 
 // 
 // Types:
@@ -107,8 +109,6 @@ void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*)); // 2
 void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
 void cAPIGph_Painter(); // 2
 void MtxInit(); // 2
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
 extern "C" void fpcCt_IsCreatingByID__FUi(); // 1

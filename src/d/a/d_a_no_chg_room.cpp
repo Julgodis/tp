@@ -3,7 +3,9 @@
 // Translation Unit: d/a/d_a_no_chg_room
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/a/d_a_no_chg_room.h"
 
 // 
 // Types:
@@ -59,17 +61,9 @@ extern "C" extern void* g_profile_NO_CHG_ROOM[12];
 // External References:
 // 
 
-extern "C" void OSReport_Warning(); // 1
 void mDoMtx_YrotM(f32 (* )[4], s16); // 2
 void fopScnM_SearchByID(u32); // 2
 void fpcNd_IsDeleteTiming(process_node_class*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void OSReport_Warning(); // 1
 extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1

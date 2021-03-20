@@ -3,13 +3,14 @@
 // Translation Unit: MetroTRK/Portable/notify
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/notify.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRKDoNotifyStopped(); // 1
 
 extern "C" void TRKDoNotifyStopped(); // 1
 
@@ -17,11 +18,6 @@ extern "C" void TRKDoNotifyStopped(); // 1
 // External References:
 // 
 
-extern "C" void TRKReleaseBuffer(); // 1
-extern "C" void TRKGetFreeBuffer(); // 1
-extern "C" void TRKRequestSend(); // 1
-extern "C" void TRKTargetAddExceptionInfo(); // 1
-extern "C" void TRKTargetAddStopInfo(); // 1
 
 extern "C" void TRKReleaseBuffer(); // 1
 extern "C" void TRKGetFreeBuffer(); // 1

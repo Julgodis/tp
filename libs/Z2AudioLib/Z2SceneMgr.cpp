@@ -3,7 +3,9 @@
 // Translation Unit: Z2SceneMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2SceneMgr.h"
 
 // 
 // Types:
@@ -185,11 +187,6 @@ extern "C" extern char const* const Z2SceneMgr__stringBase0;
 
 void dComIfGs_isStageSwitch(int, int); // 2
 void dComIfGs_isEventBit(u16); // 2
-extern "C" void _savegpr_16(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_16(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void dComIfGs_isStageSwitch__Fii(); // 1
 extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1

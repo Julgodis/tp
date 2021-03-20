@@ -3,16 +3,13 @@
 // Translation Unit: J2DMaterialFactory
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DMaterialFactory.h"
 
 // 
 // Types:
 // 
-
-struct J2DMaterial {
-	/* 802EA410 */ void createTevBlock(int, bool);
-	/* 802EA5C4 */ void createIndBlock(int, bool);
-};
 
 struct J2DMaterialBlock {
 };
@@ -23,6 +20,11 @@ struct J2DResReference {
 };
 
 struct JKRArchive {
+};
+
+struct J2DMaterial {
+	/* 802EA410 */ void createTevBlock(int, bool);
+	/* 802EA5C4 */ void createIndBlock(int, bool);
 };
 
 struct J2DMaterialFactory {
@@ -145,11 +147,6 @@ extern "C" static void func_802F42D8(); // 1
 // 
 
 void* operator new(u32); // 2
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void* __nw__FUl(); // 1
 extern "C" void getResource__15JUTResReferenceFPCvUlP10JKRArchive(); // 1

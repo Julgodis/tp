@@ -3,7 +3,9 @@
 // Translation Unit: JKRDisposer
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRDisposer.h"
 
 // 
 // Types:

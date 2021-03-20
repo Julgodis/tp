@@ -3,16 +3,18 @@
 // Translation Unit: J3DShape
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DShape.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
+struct _GXAttr {
 };
 
-struct _GXAttr {
+struct Vec {
 };
 
 struct J3DShape {
@@ -83,24 +85,6 @@ void* operator new[](u32); // 2
 void J3DGDSetVtxAttrFmtv(_GXVtxFmt, _GXVtxAttrFmtList const*, bool); // 2
 void J3DFifoLoadPosMtxImm(f32 (* )[4], u32); // 2
 void J3DFifoLoadNrmMtxImm(f32 (* )[4], u32); // 2
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void GDInitGDLObj(); // 1
-extern "C" void GDFlushCurrToMem(); // 1
-extern "C" void GDPadCurr32(); // 1
-extern "C" void GDSetVtxDescv(); // 1
-extern "C" void GDSetArray(); // 1
-extern "C" void GDSetArrayRaw(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void* __nwa__FUl(); // 1
 extern "C" void J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb(); // 1

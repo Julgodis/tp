@@ -3,7 +3,9 @@
 // Translation Unit: d/d_simple_model
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_simple_model.h"
 
 // 
 // Types:
@@ -83,16 +85,6 @@ void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
 void mDoExt_restoreCurrentHeap(); // 2
 void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
 extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl(); // 1

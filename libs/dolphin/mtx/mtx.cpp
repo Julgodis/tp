@@ -3,28 +3,14 @@
 // Translation Unit: mtx
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/mtx/mtx.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXRotRad(); // 1
-extern "C" static void PSMTXRotTrig(); // 1
-extern "C" static void __PSMTXRotAxisRadInternal(); // 1
-extern "C" void PSMTXRotAxisRad(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXTransApply(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSMTXScaleApply(); // 1
-extern "C" void PSMTXQuat(); // 1
-extern "C" void C_MTXLookAt(); // 1
-extern "C" void C_MTXLightPerspective(); // 1
-extern "C" void C_MTXLightOrtho(); // 1
 
 extern "C" void PSMTXIdentity(); // 1
 extern "C" void PSMTXCopy(); // 1
@@ -47,11 +33,6 @@ extern "C" void C_MTXLightOrtho(); // 1
 // External References:
 // 
 
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void tanf(); // 1
-extern "C" void sinf(); // 1
-extern "C" void cosf(); // 1
 
 extern "C" void PSVECNormalize(); // 1
 extern "C" void PSVECCrossProduct(); // 1

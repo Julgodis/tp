@@ -3,7 +3,9 @@
 // Translation Unit: d/d_kyeff2
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_kyeff2.h"
 
 // 
 // Types:

@@ -3,7 +3,9 @@
 // Translation Unit: d/d_drawlist
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_drawlist.h"
 
 // 
 // Types:
@@ -120,10 +122,10 @@ struct dDlst_effectLine_c {
 	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
 };
 
-struct cM3dGPla {
+struct cBgD_Vtx_t {
 };
 
-struct cBgD_Vtx_t {
+struct cM3dGPla {
 };
 
 struct dDlst_shadowPoly_c {
@@ -184,6 +186,9 @@ struct dDlst_peekZ_c {
 	/* 80056080 */ void peekData();
 };
 
+struct dDlst_base_c {
+};
+
 struct J3DPacket {
 };
 
@@ -194,9 +199,6 @@ struct J3DDrawBuffer {
 	/* 80325068 */ void frameInit();
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
 	/* 803254AC */ void draw() const;
-};
-
-struct dDlst_base_c {
 };
 
 struct dDlst_list_c {
@@ -271,7 +273,6 @@ static void J3DDrawBuffer__create(u32); // 2
 static void psdRealCallBack(cBgS_ShdwDraw*, cBgD_Vtx_t*, int, int, int, cM3dGPla*); // 2
 static void realPolygonCheck(cXyz*, f32, f32, cXyz*, dDlst_shadowPoly_c*); // 2
 static void setkankyoShadow(dKy_tevstr_c*, f32*); // 2
-extern "C" void __sinit_d_drawlist_cpp(); // 1
 
 extern "C" void setViewPort__14dDlst_window_cFffffff(); // 1
 extern "C" void setScissor__14dDlst_window_cFffff(); // 1
@@ -397,90 +398,6 @@ void cLib_chaseUC(u8*, u8, u8); // 2
 void* operator new(u32); // 2
 void* operator new[](u32, int); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void C_MTXLightOrtho(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXPeekZ(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetLineWidth(); // 1
-extern "C" void GXSetPointSize(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXGetTexBufferSize(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXGetTexObjWidth(); // 1
-extern "C" void GXGetTexObjHeight(); // 1
-extern "C" void GXGetTexObjWrapS(); // 1
-extern "C" void GXGetTexObjWrapT(); // 1
-extern "C" void GXGetTexObjTlut(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXLoadTlut(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetColorUpdate(); // 1
-extern "C" void GXSetAlphaUpdate(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savefpr_26(); // 1
-extern "C" void _restfpr_26(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void fmod(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1

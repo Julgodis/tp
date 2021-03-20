@@ -3,14 +3,14 @@
 // Translation Unit: mtx44
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/mtx/mtx44.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void C_MTXOrtho(); // 1
 
 extern "C" void C_MTXPerspective(); // 1
 extern "C" void C_MTXOrtho(); // 1
@@ -19,7 +19,6 @@ extern "C" void C_MTXOrtho(); // 1
 // External References:
 // 
 
-extern "C" void tanf(); // 1
 
 extern "C" void tanf(); // 1
 

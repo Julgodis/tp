@@ -3,7 +3,9 @@
 // Translation Unit: f_op/f_op_camera_mng
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_op/f_op_camera_mng.h"
 
 // 
 // Types:
@@ -35,8 +37,6 @@ extern "C" void fopCamM_Init__Fv(); // 1
 
 void fpcLy_CurrentLayer(); // 2
 void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void fpcLy_CurrentLayer__Fv(); // 1
 extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1

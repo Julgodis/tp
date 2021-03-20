@@ -21,11 +21,9 @@ class ClassName:
             return f"{self.name}<{args}>"
         return self.name
 
-    def dependencies(self) -> Set["Type"]:
-        deps = set()
+    def traverse(self, callback, depth):
         for template in self.templates:
-            deps.update(template.dependencies())
-        return deps
+            template.traverse(callback, depth)
 
 @dataclass(frozen=True,eq=True)
 class NamedType(Type):
@@ -40,12 +38,11 @@ class NamedType(Type):
     def to_str(self, specialize_templates: bool = False, without_template: bool = False) -> str:
         return self.type(specialize_templates=specialize_templates,without_template = without_template)
 
-    def dependencies(self) -> Set["Type"]:
-        deps = set()
-        deps.add(self)
-        for name in self.names:
-            deps.update(name.dependencies())
-        return deps
+    def traverse(self, callback, depth):
+        should_exit = callback(self, depth)
+        if not should_exit:
+            for name in self.names:
+                name.traverse(callback, depth + 1)
 
     @property
     def has_class_template(self) -> bool:

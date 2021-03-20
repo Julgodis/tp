@@ -3,13 +3,14 @@
 // Translation Unit: MSL_Common/Src/ctype
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/ctype.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void tolower(); // 1
 
 extern "C" void tolower(); // 1
 extern "C" extern u8 __ctype_map[256];

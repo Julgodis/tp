@@ -3,14 +3,14 @@
 // Translation Unit: fstload
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/dvd/fstload.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void cb(); // 1
-extern "C" void __fstLoad(); // 1
 
 extern "C" static void cb(); // 1
 extern "C" void __fstLoad(); // 1
@@ -23,14 +23,6 @@ extern "C" extern u8 lit_44[20];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void OSSetArenaHi(); // 1
-extern "C" void DVDReadAbsAsyncForBS(); // 1
-extern "C" void DVDReadDiskID(); // 1
-extern "C" void DVDReset(); // 1
-extern "C" void DVDGetDriveStatus(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void OSReport(); // 1

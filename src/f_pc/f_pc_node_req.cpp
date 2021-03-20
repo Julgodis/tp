@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_node_req
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_node_req.h"
 
 // 
 // Types:
@@ -107,10 +109,6 @@ void cTg_SingleCut(create_tag_class*); // 2
 void cTg_Addition(node_list_class*, create_tag_class*); // 2
 void cTg_Create(create_tag_class*, void*); // 2
 void sBs_ClearArea(void*, u32); // 2
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void fpcCtRq_IsCreatingByID__FUi(); // 1
 extern "C" void fpcDt_IsComplete__Fv(); // 1

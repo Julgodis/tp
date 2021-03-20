@@ -3,7 +3,9 @@
 // Translation Unit: c_tree
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_tree.h"
 
 // 
 // Types:

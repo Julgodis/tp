@@ -3,19 +3,21 @@
 // Translation Unit: c_m3d_g_cyl
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_m3d_g_cyl.h"
 
 // 
 // Types:
 // 
 
-struct cM3dGCylS {
-};
-
 struct cXyz {
 };
 
 struct cM3dGSph {
+};
+
+struct cM3dGCylS {
 };
 
 struct cM3dGCyl {

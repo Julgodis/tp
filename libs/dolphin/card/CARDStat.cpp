@@ -3,16 +3,14 @@
 // Translation Unit: CARDStat
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDStat.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void UpdateIconOffsets(); // 1
-extern "C" void CARDGetStatus(); // 1
-extern "C" static void CARDSetStatusAsync(); // 1
-extern "C" void CARDSetStatus(); // 1
 
 extern "C" static void UpdateIconOffsets(); // 1
 extern "C" void CARDGetStatus(); // 1
@@ -23,17 +21,6 @@ extern "C" void CARDSetStatus(); // 1
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void __CARDSyncCallback(); // 1
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDSync(); // 1
-extern "C" void __CARDGetDirBlock(); // 1
-extern "C" void __CARDUpdateDir(); // 1
-extern "C" void __CARDIsWritable(); // 1
-extern "C" void __CARDIsReadable(); // 1
-extern "C" void __div2i(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void OSGetTime(); // 1

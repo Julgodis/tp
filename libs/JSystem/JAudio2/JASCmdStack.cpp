@@ -3,7 +3,9 @@
 // Translation Unit: JASCmdStack
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASCmdStack.h"
 
 // 
 // Types:
@@ -32,7 +34,6 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-extern "C" void __sinit_JASCmdStack_cpp(); // 1
 
 extern "C" void execAllCommand__10JASPortCmdFv(); // 1
 extern "C" void execCommandOnce__Q210JASPortCmd9TPortHeadFv(); // 1
@@ -46,11 +47,6 @@ extern "C" extern u8 JASCmdStack__lit_82[12];
 // 
 
 void operator delete(void*); // 2
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void __dt__10JSUPtrListFv(); // 1

@@ -3,17 +3,15 @@
 // Translation Unit: d/menu/d_menu_fmap_map
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_fmap_map.h"
 
 // 
 // Types:
 // 
 
 struct _GXColor {
-};
-
-struct dMenu_Fmap_region_data_c {
-	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
 };
 
 struct dDrawPath_c {
@@ -35,6 +33,10 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
+};
+
+struct dMenu_Fmap_region_data_c {
+	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
 };
 
 struct dMenu_Fmap_world_data_c {
@@ -191,20 +193,6 @@ void* operator new(u32, int); // 2
 void* operator new[](u32, int); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2
-extern "C" void DCStoreRange(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetMisc(); // 1
-extern "C" void GXGetTexBufferSize(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs(); // 1
 extern "C" void draw__12dDlst_base_cFv(); // 1

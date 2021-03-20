@@ -3,22 +3,24 @@
 // Translation Unit: JAISeMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAISeMgr.h"
 
 // 
 // Types:
 // 
 
-struct JAISoundID {
-};
-
-struct JAISeqDataRegion {
+struct JAISoundActivity {
 };
 
 struct JAISoundParamsMove {
 };
 
-struct JAISoundActivity {
+struct JAISoundID {
+};
+
+struct JAISeqDataRegion {
 };
 
 struct JAISeCategoryMgr {
@@ -44,6 +46,18 @@ struct JASMemPool__template0 {
 	/* 8029FC34 */ ~JASMemPool__template0();
 };
 
+struct JAISeCategoryArrangement {
+};
+
+struct JAISoundHandle {
+};
+
+struct JAISeqDataMgr {
+};
+
+struct JAIAudience {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -51,18 +65,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAIAudience {
-};
-
-struct JAISoundHandle {
-};
-
-struct JAISeCategoryArrangement {
-};
-
-struct JAISeqDataMgr {
 };
 
 struct JAISeMgr {
@@ -177,17 +179,6 @@ extern "C" extern u8 data_80434084[16 + 4 /* padding */];
 
 void JASReport(char const*, ...); // 2
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__16JAISeCategoryMgrFv(); // 1
 extern "C" void __ct__17JASGenericMemPoolFv(); // 1

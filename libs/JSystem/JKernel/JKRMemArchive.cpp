@@ -3,7 +3,9 @@
 // Translation Unit: JKRMemArchive
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRMemArchive.h"
 
 // 
 // Types:
@@ -109,13 +111,7 @@ extern "C" extern char const* const JKRMemArchive__stringBase0;
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void operator delete(void*); // 2
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1

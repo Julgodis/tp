@@ -3,11 +3,16 @@
 // Translation Unit: d/bg/d_bg_s_movebg_actor
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_s_movebg_actor.h"
 
 // 
 // Types:
 // 
+
+struct cXyz {
+};
 
 struct csXyz {
 };
@@ -18,9 +23,6 @@ struct dBgW {
 };
 
 struct cBgS_PolyInfo {
-};
-
-struct cXyz {
 };
 
 struct dBgS_MoveBgActor {
@@ -104,10 +106,6 @@ extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
 void mDoMtx_YrotM(f32 (* )[4], s16); // 2
 void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
 void* operator new(u32); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
 extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1

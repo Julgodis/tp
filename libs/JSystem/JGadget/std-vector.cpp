@@ -3,7 +3,9 @@
 // Translation Unit: std-vector
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JGadget/std-vector.h"
 
 // 
 // Types:
@@ -58,10 +60,6 @@ extern "C" void func_802DD130(); // 1
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void* __nw__FUl(); // 1
 extern "C" void __dl__FPv(); // 1

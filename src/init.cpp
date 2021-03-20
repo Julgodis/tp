@@ -3,26 +3,14 @@
 // Translation Unit: init
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "init.h"
 
 // 
 // Forward References:
 // 
 
-SECTION_INIT static void __check_pad3(); // 1
-SECTION_INIT static void __set_debug_bba(); // 1
-SECTION_INIT static void __get_debug_bba(); // 1
-SECTION_INIT void __start(); // 1
-SECTION_INIT static void __init_registers(); // 1
-SECTION_INIT static void __init_data(); // 1
-SECTION_INIT static void __init_hardware(); // 1
-SECTION_INIT static void __flush_cache(); // 1
-SECTION_INIT void memset(); // 1
-SECTION_INIT static void __fill_mem(); // 1
-SECTION_INIT void memcpy(); // 1
-SECTION_INIT void TRK_memset(); // 1
-SECTION_INIT void TRK_memcpy(); // 1
-SECTION_INIT void __TRK_reset(); // 1
 
 SECTION_INIT static void __check_pad3(); // 1
 SECTION_INIT static void __set_debug_bba(); // 1
@@ -48,19 +36,6 @@ extern "C" extern void* _section_symbol_extab[18];
 // External References:
 // 
 
-extern "C" void main(); // 1
-extern "C" void __OSFPRInit(); // 1
-extern "C" void OSInit(); // 1
-extern "C" void __OSPSInit(); // 1
-extern "C" void __OSCacheInit(); // 1
-extern "C" void OSResetSystem(); // 1
-extern "C" void __init_user(); // 1
-extern "C" void DBInit(); // 1
-extern "C" void __dt__26__partial_array_destructorFv(); // 1
-extern "C" void exit(); // 1
-extern "C" void TRK_fill_mem(); // 1
-extern "C" void InitMetroTRK(); // 1
-extern "C" void InitMetroTRK_BBA(); // 1
 
 extern "C" void main(); // 1
 extern "C" void __OSFPRInit(); // 1

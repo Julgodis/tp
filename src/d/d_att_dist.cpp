@@ -3,7 +3,9 @@
 // Translation Unit: d/d_att_dist
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_att_dist.h"
 
 // 
 // Forward References:

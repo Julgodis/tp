@@ -3,7 +3,9 @@
 // Translation Unit: msg/scrn/d_msg_scrn_base
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "msg/scrn/d_msg_scrn_base.h"
 
 // 
 // Types:
@@ -94,11 +96,6 @@ extern "C" void isTalkNow__14dMsgScrnBase_cFv(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
 extern "C" void getStatus__12dMsgObject_cFv(); // 1

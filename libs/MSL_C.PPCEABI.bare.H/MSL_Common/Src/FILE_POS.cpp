@@ -3,15 +3,14 @@
 // Translation Unit: MSL_Common/Src/FILE_POS
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/FILE_POS.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void fseek(); // 1
-extern "C" static void _fseek(); // 1
-extern "C" void ftell(); // 1
 
 extern "C" void fseek(); // 1
 extern "C" static void _fseek(); // 1
@@ -21,9 +20,6 @@ extern "C" void ftell(); // 1
 // External References:
 // 
 
-extern "C" void __flush_buffer(); // 1
-extern "C" void __end_critical_region(); // 1
-extern "C" void __begin_critical_region(); // 1
 
 extern "C" void __flush_buffer(); // 1
 extern "C" void __end_critical_region(); // 1

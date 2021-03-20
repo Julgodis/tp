@@ -3,16 +3,14 @@
 // Translation Unit: CARDRdwr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDRdwr.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void BlockReadCallback(); // 1
-extern "C" void __CARDRead(); // 1
-extern "C" static void BlockWriteCallback(); // 1
-extern "C" void __CARDWrite(); // 1
 
 extern "C" static void BlockReadCallback(); // 1
 extern "C" void __CARDRead(); // 1
@@ -23,9 +21,6 @@ extern "C" void __CARDWrite(); // 1
 // External References:
 // 
 
-extern "C" void __CARDReadSegment(); // 1
-extern "C" void __CARDWritePage(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
 
 extern "C" void __CARDReadSegment(); // 1
 extern "C" void __CARDWritePage(); // 1

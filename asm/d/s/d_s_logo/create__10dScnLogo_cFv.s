@@ -84,7 +84,7 @@ lbl_80257C0C:
 /* 80257C14 00000008  98 03 00 13 */	stb r0, 0x13(r3)
 lbl_80257C18:
 /* 80257C18 00000000  38 80 00 00 */	li r4, 0
-/* 80257C1C 00000004  98 8D 8F 81 */	stb r4, -0x707f(r13)
+/* 80257C1C 00000004  98 8D 8F 81 */	stb r4, struct_80451500+0x1(r13)
 /* 80257C20 00000008  3C 60 80 01 */	lis r3, mDoRst_resetCallBack__FiPv@ha
 /* 80257C24 0000000C  38 03 57 4C */	addi r0, r3, mDoRst_resetCallBack__FiPv@l
 /* 80257C28 00000010  90 0D 8F 6C */	stw r0, sCallback__Q210JUTGamePad13C3ButtonReset(r13)

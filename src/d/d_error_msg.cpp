@@ -3,7 +3,9 @@
 // Translation Unit: d/d_error_msg
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_error_msg.h"
 
 // 
 // Types:
@@ -26,10 +28,10 @@ struct Z2AudioMgr {
 	/* 802CD974 */ void resetProcess(u32, bool);
 };
 
-struct ResFONT {
+struct JKRHeap {
 };
 
-struct JKRHeap {
+struct ResFONT {
 };
 
 struct JUTResFont {
@@ -52,10 +54,10 @@ struct J2DOrthoGraph {
 	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
 };
 
-struct ResTLUT {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct ResTLUT {
 };
 
 struct J2DPicture {
@@ -64,10 +66,10 @@ struct J2DPicture {
 	/* 802FDC70 */ void draw(f32, f32, f32, f32, bool, bool, bool);
 };
 
-struct J2DTextBoxVBinding {
+struct J2DTextBoxHBinding {
 };
 
-struct J2DTextBoxHBinding {
+struct J2DTextBoxVBinding {
 };
 
 struct J2DTextBox {
@@ -99,47 +101,10 @@ extern "C" extern char const* const d_d_error_msg__stringBase0;
 // External References:
 // 
 
-extern "C" void OSReport_Error(); // 1
 void mDoAud_resetRecover(); // 2
 void mDoGph_drawFilterQuad(s8, s8); // 2
 void mDoRst_reset(int, u32, int); // 2
 void cLib_chaseUC(u8*, u8, u8); // 2
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void DVDGetDriveStatus(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetFogRangeAdj(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetAlphaUpdate(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void OSReport_Error(); // 1
 extern "C" void mDoAud_resetRecover__Fv(); // 1

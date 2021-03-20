@@ -3,7 +3,9 @@
 // Translation Unit: JUTPalette
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTPalette.h"
 
 // 
 // Types:
@@ -12,13 +14,13 @@
 struct _GXTlut {
 };
 
-struct ResTLUT {
-};
-
 struct JUTTransparency {
 };
 
 struct _GXTlutFmt {
+};
+
+struct ResTLUT {
 };
 
 struct JUTPalette {
@@ -41,11 +43,6 @@ extern "C" extern char const* const JUTPalette__stringBase0;
 // External References:
 // 
 
-extern "C" void OSPanic(); // 1
-extern "C" void GXInitTlutObj(); // 1
-extern "C" void GXLoadTlut(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void OSPanic(); // 1
 extern "C" void GXInitTlutObj(); // 1

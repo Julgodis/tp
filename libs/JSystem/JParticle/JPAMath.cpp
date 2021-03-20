@@ -3,7 +3,9 @@
 // Translation Unit: JPAMath
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAMath.h"
 
 // 
 // Types:
@@ -40,10 +42,6 @@ extern "C" void JPACalcKeyAnmValue__FfUsPCf(); // 1
 // External References:
 // 
 
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void PSMTXIdentity(); // 1
 extern "C" void PSVECMag(); // 1

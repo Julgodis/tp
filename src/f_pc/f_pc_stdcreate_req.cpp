@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_stdcreate_req
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_stdcreate_req.h"
 
 // 
 // Types:
@@ -64,8 +66,6 @@ void fpcLd_Free(s16); // 2
 void fpcLd_Load(s16); // 2
 void cPhs_Set(request_of_phase_process_class*, int (**)(void*)); // 2
 void cPhs_Do(request_of_phase_process_class*, void*); // 2
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
 extern "C" void fpcBs_Create__FsUiPv(); // 1

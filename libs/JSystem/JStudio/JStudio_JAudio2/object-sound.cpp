@@ -3,7 +3,9 @@
 // Translation Unit: object-sound
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio_JAudio2/object-sound.h"
 
 // 
 // Types:
@@ -134,12 +136,6 @@ struct JAISoundStarter {
 // Forward References:
 // 
 
-extern "C" static void func_8028D728(); // 1
-extern "C" static void func_8028D750(); // 1
-extern "C" static void func_8028D778(); // 1
-extern "C" static void func_8028D7A0(); // 1
-extern "C" static void func_8028D800(); // 1
-extern "C" void func_8028E0F4(); // 1
 
 extern "C" static void func_8028D728(); // 1
 extern "C" static void func_8028D750(); // 1
@@ -181,10 +177,6 @@ extern "C" extern u8 lit_1822[12];
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
 
 extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
 extern "C" void adaptor_do_begin__Q27JStudio8TAdaptorFv(); // 1

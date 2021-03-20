@@ -3,7 +3,9 @@
 // Translation Unit: d/msg/d_msg_out_font
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/msg/d_msg_out_font.h"
 
 // 
 // Types:
@@ -78,12 +80,6 @@ void fopMsgM_valueIncrease(int, int, u8); // 2
 void dMeter2Info_getNumberTextureName(int); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void fopMsgM_valueIncrease__FiiUc(); // 1
 extern "C" void dMeter2Info_getNumberTextureName__Fi(); // 1

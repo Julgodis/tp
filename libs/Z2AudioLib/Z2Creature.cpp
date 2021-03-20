@@ -3,19 +3,21 @@
 // Translation Unit: Z2Creature
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2Creature.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
-};
-
 struct JAISoundID {
 };
 
 struct Z2SoundStarter {
+};
+
+struct Vec {
 };
 
 struct Z2Creature {
@@ -203,7 +205,6 @@ static void Z2_E_sw_modPitch(Z2SoundHandlePool*, u32); // 2
 static void Z2_E_ms_modVol(Z2SoundHandlePool*, u32); // 2
 static void Z2_E_mm_modPitch(Z2SoundHandlePool*, u32); // 2
 static void Z2_B_zan_modPitch(Z2SoundHandlePool*, u32); // 2
-extern "C" void __sinit_Z2Creature_cpp(); // 1
 
 extern "C" void __ct__10Z2CreatureFv(); // 1
 extern "C" void __dt__10Z2CreatureFv(); // 1
@@ -276,17 +277,6 @@ extern "C" extern void* __vt__13Z2CreatureGob[12];
 // 
 
 void operator delete(void*); // 2
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__16Z2SoundObjSimpleFv(); // 1
 extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1

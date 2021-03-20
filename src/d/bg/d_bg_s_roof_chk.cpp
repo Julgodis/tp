@@ -3,7 +3,9 @@
 // Translation Unit: d/bg/d_bg_s_roof_chk
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_s_roof_chk.h"
 
 // 
 // Types:
@@ -37,9 +39,6 @@ struct cBgS_PolyInfo {
 // Forward References:
 // 
 
-extern "C" static void func_8007914C(); // 1
-extern "C" static void func_80079154(); // 1
-extern "C" static void func_8007915C(); // 1
 
 extern "C" void __ct__12dBgS_RoofChkFv(); // 1
 extern "C" void __dt__12dBgS_RoofChkFv(); // 1

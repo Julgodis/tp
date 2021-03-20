@@ -3,7 +3,9 @@
 // Translation Unit: c_API_graphic
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_API_graphic.h"
 
 // 
 // Forward References:

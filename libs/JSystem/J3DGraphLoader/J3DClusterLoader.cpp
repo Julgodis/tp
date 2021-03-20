@@ -3,7 +3,9 @@
 // Translation Unit: J3DClusterLoader
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphLoader/J3DClusterLoader.h"
 
 // 
 // Types:
@@ -65,8 +67,6 @@ extern "C" extern char const* const J3DClusterLoader__stringBase0;
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
 void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void* operator new[](u32, int); // 2
@@ -74,11 +74,6 @@ void operator delete(void*); // 2
 void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template39(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template41(void const*, void const*); // 2
-extern "C" void DCStoreRange(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_26(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void OSReport(); // 1

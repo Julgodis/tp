@@ -3,7 +3,9 @@
 // Translation Unit: GFPixel
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gf/GFPixel.h"
 
 // 
 // Types:
@@ -43,9 +45,6 @@ extern "C" void GFSetZMode__FUc10_GXCompareUc(); // 1
 // External References:
 // 
 
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void __cvt_fp2unsigned(); // 1
 extern "C" void _savegpr_28(); // 1

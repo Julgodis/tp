@@ -3,16 +3,14 @@
 // Translation Unit: GDBase
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gd/GDBase.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GDInitGDLObj(); // 1
-extern "C" void GDFlushCurrToMem(); // 1
-extern "C" void GDPadCurr32(); // 1
-extern "C" void GDOverflowed(); // 1
 
 extern "C" void GDInitGDLObj(); // 1
 extern "C" void GDFlushCurrToMem(); // 1
@@ -24,7 +22,6 @@ extern "C" extern u8 __GDCurrentDL[4];
 // External References:
 // 
 
-extern "C" void DCFlushRange(); // 1
 
 extern "C" void DCFlushRange(); // 1
 

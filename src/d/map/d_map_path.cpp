@@ -3,7 +3,9 @@
 // Translation Unit: d/map/d_map_path
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/map/d_map_path.h"
 
 // 
 // Types:
@@ -86,7 +88,6 @@ struct dRes_control_c {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_map_path_cpp(); // 1
 
 extern "C" void create__Q28dMpath_n18dTexObjAggregate_cFv(); // 1
 extern "C" void remove__Q28dMpath_n18dTexObjAggregate_cFv(); // 1
@@ -120,53 +121,6 @@ extern "C" extern u8 m_texObjAgg__8dMpath_n[28];
 void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetLineWidth(); // 1
-extern "C" void GXSetPointSize(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXSetCopyFilter(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevKColorSel(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj(); // 1
 extern "C" void draw__12dDlst_base_cFv(); // 1

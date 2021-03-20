@@ -3,14 +3,14 @@
 // Translation Unit: OSError
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSError.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void OSSetErrorHandler(); // 1
-extern "C" void __OSUnhandledException(); // 1
 
 extern "C" void OSSetErrorHandler(); // 1
 extern "C" void __OSUnhandledException(); // 1
@@ -35,21 +35,6 @@ extern "C" extern u32 __OSFpscrEnableBits;
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void PPCMfmsr(); // 1
-extern "C" void PPCMtmsr(); // 1
-extern "C" void PPCHalt(); // 1
-extern "C" void PPCMffpscr(); // 1
-extern "C" void PPCMtfpscr(); // 1
-extern "C" void OSSaveFPUContext(); // 1
-extern "C" void OSLoadContext(); // 1
-extern "C" void OSDumpContext(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void __OSReschedule(); // 1
-extern "C" void OSGetTime(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void PPCMfmsr(); // 1

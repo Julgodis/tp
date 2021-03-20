@@ -3,7 +3,9 @@
 // Translation Unit: d/d_name
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_name.h"
 
 // 
 // Types:
@@ -91,9 +93,6 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -102,6 +101,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -116,10 +118,10 @@ struct CPaneMgrAlpha {
 	/* 80255608 */ void hide();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -144,7 +146,6 @@ struct J2DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_name_cpp(); // 1
 
 extern "C" void __ct__9dNm_HIO_cFv(); // 1
 extern "C" void __ct__7dName_cFP7J2DPane(); // 1
@@ -227,26 +228,6 @@ void fopMsgM_messageGet(char*, u32); // 2
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void mDoExt_removeMesgFont__Fv(); // 1

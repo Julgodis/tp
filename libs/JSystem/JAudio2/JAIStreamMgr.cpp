@@ -3,7 +3,9 @@
 // Translation Unit: JAIStreamMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAIStreamMgr.h"
 
 // 
 // Types:
@@ -110,11 +112,6 @@ extern "C" extern u8 data_804340FC[16 + 4 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__17JASGenericMemPoolFv(); // 1
 extern "C" void __dt__17JASGenericMemPoolFv(); // 1

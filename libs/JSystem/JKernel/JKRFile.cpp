@@ -3,7 +3,9 @@
 // Translation Unit: JKRFile
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRFile.h"
 
 // 
 // Types:
@@ -24,9 +26,6 @@ extern "C" void read__7JKRFileFPvll(); // 1
 // External References:
 // 
 
-extern "C" void VIWaitForRetrace(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void VIWaitForRetrace(); // 1
 extern "C" void _savegpr_28(); // 1

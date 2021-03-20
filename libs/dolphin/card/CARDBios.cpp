@@ -3,38 +3,14 @@
 // Translation Unit: CARDBios
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDBios.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __CARDDefaultApiCallback(); // 1
-extern "C" void __CARDSyncCallback(); // 1
-extern "C" void __CARDExtHandler(); // 1
-extern "C" void __CARDExiHandler(); // 1
-extern "C" static void __CARDTxHandler(); // 1
-extern "C" void __CARDUnlockedHandler(); // 1
-extern "C" void __CARDEnableInterrupt(); // 1
-extern "C" void __CARDReadStatus(); // 1
-extern "C" void __CARDReadVendorID(); // 1
-extern "C" void __CARDClearStatus(); // 1
-extern "C" static void TimeoutHandler(); // 1
-extern "C" static void Retry(); // 1
-extern "C" static void UnlockedCallback(); // 1
-extern "C" static void __CARDStart(); // 1
-extern "C" void __CARDReadSegment(); // 1
-extern "C" void __CARDWritePage(); // 1
-extern "C" void __CARDEraseSector(); // 1
-extern "C" void CARDInit(); // 1
-extern "C" void __CARDGetFontEncode(); // 1
-extern "C" static void __CARDSetDiskID(); // 1
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void CARDFreeBlocks(); // 1
-extern "C" void __CARDSync(); // 1
-extern "C" static void CARDBios__OnReset(); // 1
-extern "C" void CARDGetFastMode(); // 1
 
 extern "C" void __CARDDefaultApiCallback(); // 1
 extern "C" void __CARDSyncCallback(); // 1
@@ -69,32 +45,6 @@ extern "C" extern u8 __CARDDiskNone[32];
 // External References:
 // 
 
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void OSInitAlarm(); // 1
-extern "C" void OSCreateAlarm(); // 1
-extern "C" void OSSetAlarm(); // 1
-extern "C" void OSCancelAlarm(); // 1
-extern "C" void OSGetFontEncode(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSRegisterResetFunction(); // 1
-extern "C" void OSInitThreadQueue(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void OSWakeupThread(); // 1
-extern "C" void EXIImm(); // 1
-extern "C" void EXIImmEx(); // 1
-extern "C" void EXIDma(); // 1
-extern "C" void EXISync(); // 1
-extern "C" void EXISetExiCallback(); // 1
-extern "C" void EXIProbe(); // 1
-extern "C" void EXISelect(); // 1
-extern "C" void EXIDeselect(); // 1
-extern "C" void EXILock(); // 1
-extern "C" void EXIUnlock(); // 1
-extern "C" void DSPInit(); // 1
-extern "C" void __CARDGetFatBlock(); // 1
-extern "C" void __CARDGetDirBlock(); // 1
-extern "C" void CARDUnmount(); // 1
 
 extern "C" void OSRegisterVersion(); // 1
 extern "C" void OSInitAlarm(); // 1

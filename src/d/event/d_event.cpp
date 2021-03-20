@@ -3,7 +3,9 @@
 // Translation Unit: d/event/d_event
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/event/d_event.h"
 
 // 
 // Types:
@@ -149,8 +151,6 @@ struct Z2StatusMgr {
 // Forward References:
 // 
 
-extern "C" static bool func_80041480(); // 1
-extern "C" static void func_80041488(); // 1
 void dEv_defaultSkipProc(void*, int); // 2
 void dEv_defaultSkipZev(void*, int); // 2
 void dEv_defaultSkipStb(void*, int); // 2
@@ -230,22 +230,6 @@ void dComIfG_getStageRes(char const*); // 2
 void dComIfG_getRoomArcName(int); // 2
 void dComIfGs_onVisitedRoom(int); // 2
 void dCam_getBody(); // 2
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strncpy(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void fadeOut__13mDoGph_gInf_cFf(); // 1
 extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1

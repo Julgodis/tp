@@ -3,7 +3,9 @@
 // Translation Unit: JASProbe
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASProbe.h"
 
 // 
 // Types:
@@ -30,9 +32,6 @@ extern "C" void stop__8JASProbeFl(); // 1
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSGetTime(); // 1
 
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1

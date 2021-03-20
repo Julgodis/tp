@@ -3,7 +3,9 @@
 // Translation Unit: c_sxyz
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_sxyz.h"
 
 // 
 // Types:
@@ -22,7 +24,6 @@ struct csXyz {
 // Forward References:
 // 
 
-extern "C" void __sinit_c_sxyz_cpp(); // 1
 
 extern "C" void __ct__5csXyzFsss(); // 1
 extern "C" void __pl__5csXyzFR5csXyz(); // 1
@@ -37,7 +38,6 @@ extern "C" extern u8 data_80451164[4];
 // External References:
 // 
 
-extern "C" void __register_global_object(); // 1
 
 extern "C" void __dt__5csXyzFv(); // 1
 extern "C" void __register_global_object(); // 1

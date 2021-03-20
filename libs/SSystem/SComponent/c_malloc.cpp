@@ -3,7 +3,9 @@
 // Translation Unit: c_malloc
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_malloc.h"
 
 // 
 // Types:

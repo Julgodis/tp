@@ -3,7 +3,9 @@
 // Translation Unit: c_bg_w
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_bg_w.h"
 
 // 
 // Types:

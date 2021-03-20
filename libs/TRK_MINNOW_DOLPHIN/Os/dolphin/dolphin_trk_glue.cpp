@@ -3,25 +3,14 @@
 // Translation Unit: Os/dolphin/dolphin_trk_glue
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk_glue.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void TRKLoadContext(); // 1
-extern "C" void TRKUARTInterruptHandler(); // 1
-extern "C" void InitializeProgramEndTrap(); // 1
-extern "C" void TRK_board_display(); // 1
-extern "C" void UnreserveEXI2Port(); // 1
-extern "C" void ReserveEXI2Port(); // 1
-extern "C" void TRKWriteUARTN(); // 1
-extern "C" void TRKReadUARTN(); // 1
-extern "C" void TRKPollUART(); // 1
-extern "C" void EnableEXI2Interrupts(); // 1
-extern "C" void TRKInitializeIntDrivenUART(); // 1
-extern "C" void InitMetroTRKCommTable(); // 1
-extern "C" static void TRKEXICallBack(); // 1
 
 extern "C" static void TRKLoadContext(); // 1
 extern "C" void TRKUARTInterruptHandler(); // 1
@@ -51,44 +40,6 @@ SECTION_BSS extern u8 data_8044F828[8];
 // External References:
 // 
 
-SECTION_INIT void TRK_memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void PPCHalt(); // 1
-extern "C" void DCFlushRange(); // 1
-extern "C" void ICInvalidateRange(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void TRKInterruptHandler(); // 1
-extern "C" s32 udp_cc_post_stop(); // 1
-extern "C" s32 udp_cc_pre_continue(); // 1
-extern "C" bool udp_cc_peek(); // 1
-extern "C" bool udp_cc_write(); // 1
-extern "C" bool udp_cc_read(); // 1
-extern "C" s32 udp_cc_close(); // 1
-extern "C" s32 udp_cc_open(); // 1
-extern "C" s32 udp_cc_shutdown(); // 1
-extern "C" s32 udp_cc_initialize(); // 1
-extern "C" void ddh_cc_initinterrupts(); // 1
-extern "C" void ddh_cc_peek(); // 1
-extern "C" void ddh_cc_post_stop(); // 1
-extern "C" void ddh_cc_pre_continue(); // 1
-extern "C" void ddh_cc_write(); // 1
-extern "C" void ddh_cc_read(); // 1
-extern "C" bool ddh_cc_close(); // 1
-extern "C" void ddh_cc_open(); // 1
-extern "C" bool ddh_cc_shutdown(); // 1
-extern "C" void ddh_cc_initialize(); // 1
-extern "C" void gdev_cc_initinterrupts(); // 1
-extern "C" void gdev_cc_peek(); // 1
-extern "C" void gdev_cc_post_stop(); // 1
-extern "C" void gdev_cc_pre_continue(); // 1
-extern "C" void gdev_cc_write(); // 1
-extern "C" void gdev_cc_read(); // 1
-extern "C" bool gdev_cc_close(); // 1
-extern "C" void gdev_cc_open(); // 1
-extern "C" bool gdev_cc_shutdown(); // 1
-extern "C" void gdev_cc_initialize(); // 1
-extern "C" bool AMC_IsStub(); // 1
-extern "C" bool Hu_IsStub(); // 1
 
 SECTION_INIT void TRK_memcpy(); // 1
 extern "C" void OSReport(); // 1

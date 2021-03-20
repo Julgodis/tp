@@ -3,7 +3,9 @@
 // Translation Unit: MSL_Common/Src/float
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/float.h"
 
 // 
 // Forward References:

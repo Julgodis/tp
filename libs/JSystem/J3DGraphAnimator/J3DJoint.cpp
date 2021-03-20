@@ -3,7 +3,9 @@
 // Translation Unit: J3DJoint
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphAnimator/J3DJoint.h"
 
 // 
 // Types:
@@ -71,10 +73,6 @@ extern "C" extern u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
 void J3DGetTranslateRotateMtx(J3DTransformInfo const&, f32 (* )[4]); // 2
 void J3DGetTranslateRotateMtx(s16, s16, s16, f32, f32, f32, f32 (* )[4]); // 2
 void JMAMTXApplyScale(f32 const (* )[4], f32 (* )[4], f32, f32, f32); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f(); // 1
 extern "C" void J3DGetTranslateRotateMtx__FsssfffPA4_f(); // 1

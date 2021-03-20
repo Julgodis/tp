@@ -3,7 +3,9 @@
 // Translation Unit: d/menu/d_menu_map_common
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_map_common.h"
 
 // 
 // Types:
@@ -34,10 +36,10 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct J2DRotateAxis {
+struct J2DBasePosition {
 };
 
-struct J2DBasePosition {
+struct J2DRotateAxis {
 };
 
 struct J2DPane {
@@ -79,10 +81,6 @@ extern "C" extern char const* const d_menu_d_menu_map_common__stringBase0;
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
 extern "C" void setScale__16dSelect_cursor_cFf(); // 1

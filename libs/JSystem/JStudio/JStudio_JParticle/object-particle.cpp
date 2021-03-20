@@ -3,19 +3,18 @@
 // Translation Unit: object-particle
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio_JParticle/object-particle.h"
 
 // 
 // Types:
 // 
 
-struct JPABaseEmitter {
+struct _GXColor {
 };
 
 struct Vec {
-};
-
-struct _GXColor {
 };
 
 namespace JStudio {
@@ -50,6 +49,9 @@ namespace JStudio {
 		/* 8028B568 */ TVariableValue();
 	};
 
+};
+
+struct JPABaseEmitter {
 };
 
 struct JStudio_JParticle {
@@ -146,11 +148,6 @@ extern "C" void endParticle_fadeOut___Q217JStudio_JParticle17TAdaptor_particleFU
 void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
 void JPASetRMtxSTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3<f32>*, JGeometry::TVec3<f32>*); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void __dt__18JPAEmitterCallBackFv(); // 1
 extern "C" void JPAGetXYZRotateMtx__FsssPA4_f(); // 1

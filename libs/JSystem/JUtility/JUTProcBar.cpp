@@ -3,7 +3,9 @@
 // Translation Unit: JUTProcBar
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTProcBar.h"
 
 // 
 // Types:
@@ -69,16 +71,6 @@ void operator delete(void*); // 2
 void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int); // 2
 void J2DFillBox(f32, f32, f32, f32, JUtility::TColor); // 2
 void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8); // 2
-extern "C" void OSGetTick(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
 extern "C" void* __nw__FUl(); // 1

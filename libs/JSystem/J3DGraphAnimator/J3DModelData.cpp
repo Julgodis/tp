@@ -3,7 +3,9 @@
 // Translation Unit: J3DModelData
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphAnimator/J3DModelData.h"
 
 // 
 // Types:
@@ -69,15 +71,6 @@ extern "C" void __dt__12J3DModelDataFv(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void GDInitGDLObj(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void __ct__13J3DVertexDataFv(); // 1

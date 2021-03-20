@@ -3,16 +3,14 @@
 // Translation Unit: Padclamp
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/pad/Padclamp.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void ClampStick(); // 1
-extern "C" static void ClampCircle(); // 1
-extern "C" void PADClamp(); // 1
-extern "C" void PADClampCircle(); // 1
 
 extern "C" static void ClampStick(); // 1
 extern "C" static void ClampCircle(); // 1

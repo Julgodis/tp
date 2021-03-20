@@ -3,7 +3,9 @@
 // Translation Unit: JASCallback
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASCallback.h"
 
 // 
 // Types:
@@ -28,14 +30,6 @@ extern "C" void callback__14JASCallbackMgrFv(); // 1
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1

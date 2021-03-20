@@ -3,13 +3,14 @@
 // Translation Unit: MSL_Common/Src/mbstring
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/mbstring.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void wcstombs(); // 1
 
 extern "C" void wcstombs(); // 1
 
@@ -17,7 +18,6 @@ extern "C" void wcstombs(); // 1
 // External References:
 // 
 
-extern "C" void strncpy(); // 1
 
 extern "C" void strncpy(); // 1
 

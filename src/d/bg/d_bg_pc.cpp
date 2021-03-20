@@ -3,7 +3,9 @@
 // Translation Unit: d/bg/d_bg_pc
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_pc.h"
 
 // 
 // Types:

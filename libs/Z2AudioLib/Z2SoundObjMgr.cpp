@@ -3,7 +3,9 @@
 // Translation Unit: Z2SoundObjMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2SoundObjMgr.h"
 
 // 
 // Types:
@@ -60,7 +62,6 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-extern "C" void __sinit_Z2SoundObjMgr_cpp(); // 1
 
 extern "C" void __ct__13Z2SoundObjMgrFv(); // 1
 extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs(); // 1
@@ -78,13 +79,6 @@ extern "C" void __sinit_Z2SoundObjMgr_cpp(); // 1
 // External References:
 // 
 
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
 extern "C" void changeBgmStatus__8Z2SeqMgrFl(); // 1

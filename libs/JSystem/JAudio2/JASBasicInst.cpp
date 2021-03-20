@@ -3,7 +3,9 @@
 // Translation Unit: JASBasicInst
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASBasicInst.h"
 
 // 
 // Types:
@@ -12,13 +14,13 @@
 struct JKRHeap {
 };
 
+struct JASInstParam {
+};
+
 struct JASOscillator {
 	struct Data {
 	};
 
-};
-
-struct JASInstParam {
 };
 
 struct JASBasicInst {
@@ -67,10 +69,6 @@ extern "C" extern void* __vt__7JASInst[5];
 
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void __destroy_new_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void bzero__7JASCalcFPvUl(); // 1
 extern "C" void* __nwa__FUlP7JKRHeapi(); // 1

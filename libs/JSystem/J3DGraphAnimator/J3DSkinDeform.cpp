@@ -3,7 +3,9 @@
 // Translation Unit: J3DSkinDeform
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphAnimator/J3DSkinDeform.h"
 
 // 
 // Types:
@@ -18,10 +20,10 @@ struct J3DSkinNList {
 struct Vec {
 };
 
-struct J3DVertexBuffer {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DVertexBuffer {
 };
 
 struct J3DModelData {
@@ -92,35 +94,11 @@ extern "C" extern char const* const J3DSkinDeform__stringBase0;
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
 void* operator new[](u32); // 2
 void* operator new[](u32, int); // 2
 void operator delete(void*); // 2
 void J3DGQRSetup7(u32, u32, u32, u32); // 2
 void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]); // 2
-extern "C" void DCStoreRange(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void OSReport(); // 1

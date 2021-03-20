@@ -3,7 +3,9 @@
 // Translation Unit: d/meter/d_meter_map
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/meter/d_meter_map.h"
 
 // 
 // Types:
@@ -80,10 +82,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -145,13 +147,6 @@ void dMeter2Info_set2DVibration(); // 2
 void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void fopOvlpM_IsDoingReq__Fv(); // 1
 extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1

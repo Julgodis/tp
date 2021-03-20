@@ -3,14 +3,14 @@
 // Translation Unit: Os/dolphin/target_options
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/Os/dolphin/target_options.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GetUseSerialIO(); // 1
-extern "C" void SetUseSerialIO(); // 1
 
 extern "C" void GetUseSerialIO(); // 1
 extern "C" void SetUseSerialIO(); // 1

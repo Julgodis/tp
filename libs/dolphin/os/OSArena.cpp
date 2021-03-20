@@ -3,17 +3,14 @@
 // Translation Unit: OSArena
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSArena.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void OSGetArenaLo(); // 1
-extern "C" void OSSetArenaHi(); // 1
-extern "C" void OSSetArenaLo(); // 1
-extern "C" void OSAllocFromArenaLo(); // 1
 
 extern "C" void OSGetArenaHi(); // 1
 extern "C" void OSGetArenaLo(); // 1

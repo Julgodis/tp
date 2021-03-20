@@ -3,13 +3,15 @@
 // Translation Unit: d/pane/d_pane_class_alpha
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/pane/d_pane_class_alpha.h"
 
 // 
 // Types:
 // 
 
-struct JKRExpHeap {
+struct J2DScreen {
 };
 
 struct J2DPane {
@@ -17,7 +19,7 @@ struct J2DPane {
 	/* 802F7AC4 */ void getNextChildPane();
 };
 
-struct J2DScreen {
+struct JKRExpHeap {
 };
 
 struct CPaneMgrAlpha {
@@ -89,10 +91,6 @@ extern "C" void childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef(); // 1
 
 void mDoExt_getCurrentHeap(); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void mDoExt_getCurrentHeap__Fv(); // 1
 extern "C" void alloc__7JKRHeapFUli(); // 1

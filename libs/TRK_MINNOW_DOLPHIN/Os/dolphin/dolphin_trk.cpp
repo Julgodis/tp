@@ -3,20 +3,14 @@
 // Translation Unit: Os/dolphin/dolphin_trk
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/Os/dolphin/dolphin_trk.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void InitMetroTRK(); // 1
-extern "C" void InitMetroTRK_BBA(); // 1
-extern "C" void TRK__write_aram(); // 1
-extern "C" void TRK__read_aram(); // 1
-extern "C" void TRKInitializeTarget(); // 1
-extern "C" void __TRK_copy_vectors(); // 1
-extern "C" void TRKTargetTranslate(); // 1
-extern "C" void EnableMetroTRKInterrupts(); // 1
 
 extern "C" void InitMetroTRK(); // 1
 extern "C" void InitMetroTRK_BBA(); // 1
@@ -32,17 +26,6 @@ SECTION_BSS u8 lc_base[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void TRK_memcpy(); // 1
-extern "C" void ARGetDMAStatus(); // 1
-extern "C" void ARStartDMA(); // 1
-extern "C" void __ARClearInterrupt(); // 1
-extern "C" void __ARGetInterruptStatus(); // 1
-extern "C" void TRK_flush_cache(); // 1
-extern "C" void __TRK_get_MSR(); // 1
-extern "C" void TRKSaveExtended1Block(); // 1
-extern "C" void TRK_main(); // 1
-extern "C" void EnableEXI2Interrupts(); // 1
-extern "C" void InitMetroTRKCommTable(); // 1
 
 SECTION_INIT void TRK_memcpy(); // 1
 extern "C" extern u8 __TRK_unknown_data[7988];

@@ -3,16 +3,14 @@
 // Translation Unit: CARDWrite
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDWrite.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void CARDWrite__WriteCallback(); // 1
-extern "C" static void CARDWrite__EraseCallback(); // 1
-extern "C" static void CARDWriteAsync(); // 1
-extern "C" void CARDWrite(); // 1
 
 extern "C" static void CARDWrite__WriteCallback(); // 1
 extern "C" static void CARDWrite__EraseCallback(); // 1
@@ -23,20 +21,6 @@ extern "C" void CARDWrite(); // 1
 // External References:
 // 
 
-extern "C" void DCStoreRange(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void __CARDDefaultApiCallback(); // 1
-extern "C" void __CARDSyncCallback(); // 1
-extern "C" void __CARDEraseSector(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDSync(); // 1
-extern "C" void __CARDWrite(); // 1
-extern "C" void __CARDGetFatBlock(); // 1
-extern "C" void __CARDGetDirBlock(); // 1
-extern "C" void __CARDUpdateDir(); // 1
-extern "C" void __CARDIsWritable(); // 1
-extern "C" void __CARDSeek(); // 1
-extern "C" void __div2i(); // 1
 
 extern "C" void DCStoreRange(); // 1
 extern "C" void OSGetTime(); // 1

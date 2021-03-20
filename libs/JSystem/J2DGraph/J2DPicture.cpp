@@ -3,22 +3,48 @@
 // Translation Unit: J2DPicture
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DPicture.h"
 
 // 
 // Types:
 // 
 
-struct J2DBinding {
-};
-
-struct J2DAnmColor {
+struct ResFONT {
 };
 
 struct J2DAnmTexPattern {
 };
 
-struct ResFONT {
+struct JKRArchive {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct ResTIMG {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct _GXCullMode {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmBase {
 };
 
 struct JSUStreamSeekFrom {
@@ -27,18 +53,6 @@ struct JSUStreamSeekFrom {
 struct JSURandomInputStream {
 	/* 802DC458 */ void peek(void*, s32);
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmTransform {
-};
-
-struct _GXCullMode {
 };
 
 struct JGeometry {
@@ -51,25 +65,10 @@ struct JGeometry {
 	template <typename A1>
 	struct TVec2 { };
 	/* TVec2<s16> */
-	struct TVec2__template1 {
-		/* 802FF204 */ TVec2__template1();
+	struct TVec2__template0 {
+		/* 802FF204 */ TVec2__template0();
 	};
 
-};
-
-struct J2DAnmVisibilityFull {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct JKRArchive {
-};
-
-struct ResTIMG {
-};
-
-struct J2DAnmTevRegKey {
 };
 
 struct J2DPane {
@@ -113,14 +112,30 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct _GXTlut {
+struct J2DMaterial {
 };
 
 struct ResTLUT {
 };
 
+struct JUtility {
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
+};
+
+struct J2DMirror {
+};
+
+struct _GXTlut {
+};
+
 struct JUTPalette {
 	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
+};
+
+struct J2DBinding {
 };
 
 struct _GXTexMapID {
@@ -133,19 +148,6 @@ struct JUTTexture {
 	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
 	/* 802DE5B0 */ void attachPalette(JUTPalette*);
 	/* 802DE840 */ void load(_GXTexMapID);
-};
-
-struct J2DMirror {
-};
-
-struct J2DMaterial {
-};
-
-struct JUtility {
-	struct TColor {
-		/* 80193960 */ TColor();
-	};
-
 };
 
 struct J2DPicture {
@@ -298,47 +300,6 @@ extern "C" void rewriteAlpha__10J2DPictureFv(); // 1
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevKColor(); // 1
-extern "C" void GXSetTevKColorSel(); // 1
-extern "C" void GXSetTevKAlphaSel(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void setAlpha__7J2DPaneFUc(); // 1
 extern "C" void setBlendRatio__10J2DPictureFff(); // 1
@@ -984,7 +945,7 @@ asm void J2DPicture::getTlutID(ResTIMG const* field_0, u8 field_1) {
 
 
 /* 802FF204-802FF208 0004+00 rc=6 efc=1 rfr=False None .text      __ct__Q29JGeometry8TVec2<s>Fv                                */
-JGeometry::TVec2__template1::TVec2__template1() {
+JGeometry::TVec2__template0::TVec2__template0() {
 	/* empty function */
 }
 

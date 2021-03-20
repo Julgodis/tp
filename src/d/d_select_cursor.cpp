@@ -3,7 +3,9 @@
 // Translation Unit: d/d_select_cursor
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_select_cursor.h"
 
 // 
 // Types:
@@ -14,20 +16,20 @@ struct dSelect_cursorHIO_c {
 	/* 80195978 */ ~dSelect_cursorHIO_c();
 };
 
-struct J2DAnmTransformKey {
-	/* 801959C0 */ ~J2DAnmTransformKey();
-};
-
 struct J2DAnmTextureSRTKey {
 };
 
 struct J2DPane {
 };
 
-struct J2DAnmColor {
+struct JKRArchive {
 };
 
-struct JKRArchive {
+struct J2DAnmTransformKey {
+	/* 801959C0 */ ~J2DAnmTransformKey();
+};
+
+struct J2DAnmColor {
 };
 
 struct dSelect_cursor_c {
@@ -54,9 +56,6 @@ struct dSelect_icon_c {
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -65,6 +64,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -125,15 +127,6 @@ extern "C" extern void* data_803BB74C[4 + 12 /* padding */];
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void animation__14dSelect_icon_cFv(); // 1
 extern "C" void setAlpha__14dSelect_icon_cFUc(); // 1

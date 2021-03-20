@@ -3,7 +3,9 @@
 // Translation Unit: a/npc/d_a_npc_cd2
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "a/npc/d_a_npc_cd2.h"
 
 // 
 // Types:
@@ -43,14 +45,14 @@ struct daNpcCd2_c {
 	/* 801599C4 */ void getTexAnmP(int);
 };
 
-struct Vec {
-};
-
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
 struct fopAc_ac_c {
+};
+
+struct Vec {
 };
 
 struct PathTrace_c {
@@ -110,19 +112,19 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct Z2Creature {
 };
 
 struct J3DAnmTransform {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -149,13 +151,13 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dKy_tevstr_c {
+};
+
 struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -199,7 +201,6 @@ struct J3DFrameCtrl {
 static void jntNodeCallBack(J3DJoint*, int); // 2
 static void s_sub1(void*, void*); // 2
 static void s_sub(void*, void*); // 2
-extern "C" void __sinit_d_a_npc_cd2_cpp(); // 1
 
 extern "C" static void a_npc_d_a_npc_cd2__jntNodeCallBack__FP8J3DJointi(); // 1
 extern "C" void NpcCreate__10daNpcCd2_cFi(); // 1
@@ -289,7 +290,6 @@ extern "C" extern u8 data_80451010[8];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void mDoMtx_YrotM(f32 (* )[4], s16); // 2
 void mDoExt_modelUpdateDL(J3DModel*); // 2
 void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
@@ -310,25 +310,6 @@ void cLib_targetAngleY(Vec const*, Vec const*); // 2
 void cLib_distanceAngleS(s16, s16); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void pow(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void __dt__4cXyzFv(); // 1

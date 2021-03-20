@@ -22,8 +22,11 @@ class ArrayType(Type):
         else:
             return f"{self.base.type()} ({self.inner.decl(label)}){size}"
 
-    def dependencies(self) -> Set["Type"]:
-        return self.base.dependencies() | self.inner.dependencies()
+    def traverse(self, callback, depth):
+        should_exit = callback(self, depth)
+        if not should_exit:
+            self.base.traverse(callback, depth + 1)
+            self.inner.traverse(callback, depth + 1)
 
     @staticmethod
     def create(base: Type, count: int) -> "ArrayType":

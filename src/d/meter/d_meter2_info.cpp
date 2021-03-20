@@ -3,7 +3,9 @@
 // Translation Unit: d/meter/d_meter2_info
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/meter/d_meter2_info.h"
 
 // 
 // Types:
@@ -12,17 +14,17 @@
 struct cXyz {
 };
 
-struct J2DPicture {
-};
-
-struct J2DTextBox {
-	/* 8021C7F4 */ void getFont() const;
+struct JUTFont {
 };
 
 struct JMSMesgEntry_c {
 };
 
-struct JUTFont {
+struct J2DPicture {
+};
+
+struct J2DTextBox {
+	/* 8021C7F4 */ void getFont() const;
 };
 
 struct dMeter2Info_c {
@@ -149,7 +151,6 @@ void dMeter2Info_setNewLetterSender(); // 2
 void dMeter2Info_recieveLetter(); // 2
 void dMeter2Info_set2DVibration(); // 2
 void dMeter2Info_set2DVibrationM(); // 2
-extern "C" void __sinit_d_meter2_info_cpp(); // 1
 
 extern "C" void __ct__13dMeter2Info_cFv(); // 1
 extern "C" void __dt__13dMeter2Info_cFv(); // 1
@@ -227,7 +228,6 @@ extern "C" extern u8 g_meter2_info[248];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void dComIfGs_setSelectItemIndex(int, u8); // 2
 void dComIfGs_setMixItemIndex(int, u8); // 2
 void dComIfGs_getMixItemIndex(int); // 2
@@ -239,21 +239,6 @@ void dComIfGs_setWarpItemData(char const*, cXyz, s16, s8, u8, u8); // 2
 void dComIfGs_setWarpMarkFlag(u8); // 2
 void daNpcF_getPlayerInfoFromPlayerList(int, int, cXyz&, csXyz&); // 2
 void operator delete(void*); // 2
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void dComIfGs_setSelectItemIndex__FiUc(); // 1

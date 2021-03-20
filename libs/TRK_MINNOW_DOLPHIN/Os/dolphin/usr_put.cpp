@@ -3,14 +3,14 @@
 // Translation Unit: Os/dolphin/usr_put
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/Os/dolphin/usr_put.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void usr_put_initialize(); // 1
-extern "C" void usr_puts_serial(); // 1
 
 extern "C" void usr_put_initialize(); // 1
 extern "C" void usr_puts_serial(); // 1
@@ -19,9 +19,6 @@ extern "C" void usr_puts_serial(); // 1
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void SetTRKConnected(); // 1
-extern "C" void GetTRKConnected(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void SetTRKConnected(); // 1

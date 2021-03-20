@@ -3,7 +3,9 @@
 // Translation Unit: d/d_kyeff
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_kyeff.h"
 
 // 
 // Types:
@@ -49,9 +51,6 @@ void dKyw_wether_move(); // 2
 void dKyw_wether_move_draw(); // 2
 void dKyw_wether_draw(); // 2
 void dKy_FiveSenses_fullthrottle_dark(); // 2
-extern "C" void OSGetTime(); // 1
-extern "C" void OSTicksToCalendarTime(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void dKyw_wether_init__Fv(); // 1
 extern "C" void dKyw_wether_delete__Fv(); // 1

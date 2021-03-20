@@ -3,7 +3,9 @@
 // Translation Unit: JUTResFont
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTResFont.h"
 
 // 
 // Types:
@@ -12,16 +14,13 @@
 struct JKRHeap {
 };
 
+struct ResFONT {
+};
+
 struct JUtility {
 	struct TColor {
 	};
 
-};
-
-struct ResFONT {
-};
-
-struct _GXTexMapID {
 };
 
 struct JUTFont {
@@ -33,6 +32,9 @@ struct JUTFont {
 	/* 802E0108 */ bool isLeadByte_1Byte(int);
 	/* 802E0110 */ bool isLeadByte_2Byte(int);
 	/* 802E0118 */ void isLeadByte_ShiftJIS(int);
+};
+
+struct _GXTexMapID {
 };
 
 struct JUTResFont {
@@ -103,34 +105,6 @@ extern "C" extern char const* const JUTResFont__stringBase0;
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2
-extern "C" void JUTReportConsole(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
 extern "C" void __dl__FPv(); // 1

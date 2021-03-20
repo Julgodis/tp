@@ -3,7 +3,9 @@
 // Translation Unit: JUTNameTab
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTNameTab.h"
 
 // 
 // Types:
@@ -37,9 +39,6 @@ extern "C" void calcKeyCode__10JUTNameTabCFPCc(); // 1
 // External References:
 // 
 
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void _savegpr_26(); // 1
 extern "C" void _restgpr_26(); // 1

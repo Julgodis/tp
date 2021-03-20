@@ -3,28 +3,14 @@
 // Translation Unit: GXTev
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXTev.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevColorS10(); // 1
-extern "C" void GXSetTevKColor(); // 1
-extern "C" void GXSetTevKColorSel(); // 1
-extern "C" void GXSetTevKAlphaSel(); // 1
-extern "C" void GXSetTevSwapMode(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetZTexture(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
 
 extern "C" void GXSetTevOp(); // 1
 extern "C" void GXSetTevColorIn(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: JPADynamicsBlock
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPADynamicsBlock.h"
 
 // 
 // Types:

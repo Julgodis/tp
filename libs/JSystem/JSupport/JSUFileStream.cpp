@@ -3,16 +3,18 @@
 // Translation Unit: JSUFileStream
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JSupport/JSUFileStream.h"
 
 // 
 // Types:
 // 
 
-struct JSUStreamSeekFrom {
+struct JKRFile {
 };
 
-struct JKRFile {
+struct JSUStreamSeekFrom {
 };
 
 struct JSUFileInputStream {
@@ -45,10 +47,6 @@ extern "C" extern void* __vt__18JSUFileInputStream[9 + 1 /* padding */];
 // External References:
 // 
 
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void getAvailable__20JSURandomInputStreamCFv(); // 1
 extern "C" void __dt__18JSUFileInputStreamFv(); // 1

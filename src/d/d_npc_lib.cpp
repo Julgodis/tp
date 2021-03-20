@@ -3,7 +3,9 @@
 // Translation Unit: d/d_npc_lib
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_npc_lib.h"
 
 // 
 // Types:
@@ -69,19 +71,6 @@ extern "C" void __dt__16dNpcLib_lookat_cFv(); // 1
 
 void cM_atan2s(f32, f32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1

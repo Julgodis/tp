@@ -3,7 +3,9 @@
 // Translation Unit: d/save/d_save
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/save/d_save.h"
 
 // 
 // Types:
@@ -467,8 +469,6 @@ extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport_Error(); // 1
 void dComIfGs_setSelectItemIndex(int, u8); // 2
 void dComIfGs_setMixItemIndex(int, u8); // 2
 void dComIfGs_getMixItemIndex(int); // 2
@@ -476,22 +476,6 @@ void dComIfGp_setSelectItem(int); // 2
 s32 dComIfGs_getBottleMax(); // 2
 void dComIfGs_setKeyNum(int, u8); // 2
 void setInitEventBit(); // 2
-extern "C" void OSGetSoundMode(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void printf(); // 1
-extern "C" void strcpy(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void OSReport_Error(); // 1

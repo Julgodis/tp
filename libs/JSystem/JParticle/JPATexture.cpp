@@ -3,7 +3,9 @@
 // Translation Unit: JPATexture
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPATexture.h"
 
 // 
 // Types:

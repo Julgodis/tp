@@ -3,7 +3,9 @@
 // Translation Unit: JASSeqParser
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASSeqParser.h"
 
 // 
 // Types:
@@ -106,7 +108,6 @@ struct JASSeqParser {
 	/* 80295498 */ void execNoteOnGate(JASTrack*, u32, u32, u32, u32);
 	/* 80295540 */ void execNoteOnMidi(JASTrack*, u32, u32, u32);
 	/* 80295570 */ void execNoteOff(JASTrack*, u32);
-	/* 8029559C */ void execCommand(JASTrack*, s32 (JASSeqParser::*)(JASTrack*, u32*), u32, u32*);
 	/* 802955C8 */ void parseNoteOff(JASTrack*, u8);
 	/* 80295600 */ void parseNoteOn(JASTrack*, u8);
 	/* 802956B0 */ void parseCommand(JASTrack*, u8, u16);
@@ -153,7 +154,6 @@ struct JMath {
 // Forward References:
 // 
 
-extern "C" void __sinit_JASSeqParser_cpp(); // 1
 
 extern "C" void conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition(); // 1
 extern "C" void writeReg__12JASSeqParserFP8JASTrackUlUl(); // 1
@@ -217,7 +217,7 @@ extern "C" void cmdPrintf__12JASSeqParserFP8JASTrackPUl(); // 1
 extern "C" void execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl(); // 1
 extern "C" void execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl(); // 1
 extern "C" void execNoteOff__12JASSeqParserFP8JASTrackUl(); // 1
-extern "C" void execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl(); // 1
+extern "C" static void execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl(); // 1
 extern "C" void parseNoteOff__12JASSeqParserFP8JASTrackUc(); // 1
 extern "C" void parseNoteOn__12JASSeqParserFP8JASTrackUc(); // 1
 extern "C" void parseCommand__12JASSeqParserFP8JASTrackUcUs(); // 1
@@ -289,17 +289,6 @@ extern "C" extern u8 sCallBackFunc__12JASSeqParser[4];
 // 
 
 void JASReport(char const*, ...); // 2
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void JASReport__FPCce(); // 1
 extern "C" void setSeqData__8JASTrackFPvUl(); // 1
@@ -1999,7 +1988,7 @@ asm void JASSeqParser::execNoteOff(JASTrack* field_0, u32 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JASSeqParser::execCommand(JASTrack* field_0, s32 (JASSeqParser::*)(JASTrack*, u32*), u32 field_2, u32* field_3) {
+extern "C" asm static void execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASSeqParser/execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl.s"
 }

@@ -3,16 +3,18 @@
 // Translation Unit: JASAiCtrl
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASAiCtrl.h"
 
 // 
 // Types:
 // 
 
-struct JASMixMode {
+struct JASOutputRate {
 };
 
-struct JASOutputRate {
+struct JASMixMode {
 };
 
 struct JASDriver {
@@ -110,25 +112,6 @@ extern "C" extern char const* const JASAiCtrl__stringBase0;
 
 void JASReport(char const*, ...); // 2
 void* operator new[](u32, JKRHeap*, int); // 2
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void AIRegisterDMACallback(); // 1
-extern "C" void AIInitDMA(); // 1
-extern "C" void AIStartDMA(); // 1
-extern "C" void AIStopDMA(); // 1
-extern "C" void AISetDSPSampleRate(); // 1
-extern "C" void AIInit(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void imixcopy__7JASCalcFPCsPCsPsUl(); // 1
 extern "C" void bzero__7JASCalcFPvUl(); // 1

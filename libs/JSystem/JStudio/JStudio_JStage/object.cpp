@@ -3,17 +3,13 @@
 // Translation Unit: object
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio_JStage/object.h"
 
 // 
 // Types:
 // 
-
-struct JStage {
-	struct TObject {
-	};
-
-};
 
 struct Vec {
 };
@@ -36,6 +32,12 @@ namespace JStudio {
 
 	struct math {
 		/* 80285B44 */ void getTransformation_SRxyzT(f32 (* )[4], Vec const&, Vec const&, Vec const&);
+	};
+
+};
+
+struct JStage {
+	struct TObject {
 	};
 
 };
@@ -72,9 +74,6 @@ extern "C" void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37
 // External References:
 // 
 
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
 
 extern "C" void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec(); // 1
 extern "C" void PSMTXConcat(); // 1

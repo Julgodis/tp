@@ -3,7 +3,9 @@
 // Translation Unit: Z2Param
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2Param.h"
 
 // 
 // Forward References:

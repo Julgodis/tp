@@ -3,7 +3,9 @@
 // Translation Unit: d/d_vibration
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_vibration.h"
 
 // 
 // Types:
@@ -57,10 +59,6 @@ struct JUTGamePad {
 // Forward References:
 // 
 
-extern "C" static void func_8006F168(); // 1
-extern "C" static void func_8006F184(); // 1
-extern "C" static void func_8006F1A4(); // 1
-extern "C" static void func_8006F1D8(); // 1
 
 extern "C" static void func_8006F168(); // 1
 extern "C" static void func_8006F184(); // 1
@@ -86,11 +84,6 @@ extern "C" extern u8 data_80450F58[8];
 void dCam_getBody(); // 2
 void dKy_darkworld_check(); // 2
 void cM_rnd(); // 2
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void checkVibration__19dSv_player_config_cCFv(); // 1
 extern "C" void StartShake__9dCamera_cFlPUcl4cXyz(); // 1

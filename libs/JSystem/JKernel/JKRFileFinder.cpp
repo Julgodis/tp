@@ -3,7 +3,9 @@
 // Translation Unit: JKRFileFinder
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRFileFinder.h"
 
 // 
 // Types:
@@ -50,9 +52,6 @@ extern "C" void __dt__12JKRArcFinderFv(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void DVDOpenDir(); // 1
-extern "C" void DVDReadDir(); // 1
-extern "C" bool DVDCloseDir(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl(); // 1

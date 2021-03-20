@@ -3,7 +3,9 @@
 // Translation Unit: J3DPacket
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DPacket.h"
 
 // 
 // Types:
@@ -118,20 +120,9 @@ extern "C" extern u8 sGDLObj__17J3DDisplayListObj[16];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void* operator new(u32); // 2
 void* operator new[](u32, int); // 2
 void operator delete(void*); // 2
-extern "C" void DCStoreRange(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void GDInitGDLObj(); // 1
-extern "C" void GDFlushCurrToMem(); // 1
-extern "C" void GDPadCurr32(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void __dt__9J3DPacketFv(); // 1

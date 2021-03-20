@@ -3,26 +3,14 @@
 // Translation Unit: src/OdemuExi2Lib/DebuggerDriver
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "odemuexi2/src/OdemuExi2Lib/DebuggerDriver.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void DBClose(); // 1
-extern "C" void DBOpen(); // 1
-extern "C" void DBWrite(); // 1
-extern "C" void DBRead(); // 1
-extern "C" void DBQueryData(); // 1
-extern "C" void DBInitInterrupts(); // 1
-extern "C" void DBInitComm(); // 1
-extern "C" static void DBGHandler(); // 1
-extern "C" static void MWCallback(); // 1
-extern "C" static void DBGReadStatus(); // 1
-extern "C" static void DBGWrite(); // 1
-extern "C" static void DBGRead(); // 1
-extern "C" static void DBGReadMailbox(); // 1
-extern "C" static void DBGEXIImm(); // 1
 
 extern "C" void DBClose(); // 1
 extern "C" void DBOpen(); // 1
@@ -43,11 +31,6 @@ extern "C" static void DBGEXIImm(); // 1
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSMaskInterrupts(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
 
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1

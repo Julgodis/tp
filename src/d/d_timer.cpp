@@ -3,7 +3,9 @@
 // Translation Unit: d/d_timer
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_timer.h"
 
 // 
 // Types:
@@ -277,23 +279,6 @@ void dPaneClass_showNullPane(J2DScreen*); // 2
 void cM_rndFX(f32); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savefpr_28(); // 1
-extern "C" void _restfpr_28(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
 extern "C" void mDoExt_getMesgFont__Fv(); // 1

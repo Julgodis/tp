@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_layer_tag
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_layer_tag.h"
 
 // 
 // Types:
@@ -41,10 +43,6 @@ void fpcLy_ToQueue(layer_class*, int, create_tag_class*); // 2
 void fpcLy_QueueTo(layer_class*, create_tag_class*); // 2
 void fpcLy_Layer(u32); // 2
 void cTg_Create(create_tag_class*, void*); // 2
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi(); // 1
 extern "C" void fpcLy_ToQueue__FP11layer_classiP16create_tag_class(); // 1

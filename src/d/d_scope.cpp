@@ -3,7 +3,9 @@
 // Translation Unit: d/d_scope
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_scope.h"
 
 // 
 // Types:
@@ -50,7 +52,6 @@ struct J2DPicture {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_scope_cpp(); // 1
 
 extern "C" void __ct__8dScope_cFUc(); // 1
 extern "C" void __ct__Q28JUtility6TColorFv(); // 1
@@ -87,12 +88,6 @@ extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
 void* operator new(u32); // 2
 void operator delete(void*); // 2
 void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int); // 2
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void* __nw__FUl(); // 1
 extern "C" void __dl__FPv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: JUTResource
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTResource.h"
 
 // 
 // Types:
@@ -41,11 +43,6 @@ extern "C" void getResource__15JUTResReferenceFUlP10JKRArchive(); // 1
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void getGlbResource__13JKRFileLoaderFPCc(); // 1

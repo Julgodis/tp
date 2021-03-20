@@ -3,7 +3,9 @@
 // Translation Unit: JASVoiceBank
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASVoiceBank.h"
 
 // 
 // Types:

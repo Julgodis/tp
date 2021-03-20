@@ -3,13 +3,14 @@
 // Translation Unit: MetroTRK/Portable/main_TRK
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/main_TRK.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRK_main(); // 1
 
 extern "C" void TRK_main(); // 1
 SECTION_BSS u8 TRK_mainError[4 + 4 /* padding */];
@@ -18,11 +19,6 @@ SECTION_BSS u8 TRK_mainError[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void TRKNubMainLoop(); // 1
-extern "C" void TRKNubWelcome(); // 1
-extern "C" void TRKTerminateNub(); // 1
-extern "C" void TRKInitializeNub(); // 1
-extern "C" void MWTRACE(); // 1
 
 extern "C" void TRKNubMainLoop(); // 1
 extern "C" void TRKNubWelcome(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: fvb
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/fvb.h"
 
 // 
 // Types:
@@ -182,15 +184,6 @@ namespace JStudio {
 // Forward References:
 // 
 
-extern "C" static void func_802841EC(); // 1
-extern "C" static void func_802841F8(); // 1
-extern "C" static void func_80284204(); // 1
-extern "C" static void func_80284210(); // 1
-extern "C" static void func_8028421C(); // 1
-extern "C" static void func_80284228(); // 1
-extern "C" static void func_80284234(); // 1
-extern "C" static void func_80284240(); // 1
-extern "C" static void func_80285018(); // 1
 
 extern "C" void __dt__Q37JStudio3fvb7TObjectFv(); // 1
 extern "C" void prepare__Q37JStudio3fvb7TObjectFRCQ47JStudio3fvb4data13TParse_TBlockPQ37JStudio3fvb8TControl(); // 1
@@ -244,13 +237,6 @@ extern "C" extern void* __vt__Q37JStudio3fvb8TFactory[5];
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void memcmp(); // 1
 
 extern "C" void __dt__Q27JStudio14TFunctionValueFv(); // 1
 extern "C" void range_set__Q27JStudio29TFunctionValueAttribute_rangeFdd(); // 1

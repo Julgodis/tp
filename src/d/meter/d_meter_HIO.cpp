@@ -3,7 +3,9 @@
 // Translation Unit: d/meter/d_meter_HIO
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/meter/d_meter_HIO.h"
 
 // 
 // Types:
@@ -113,7 +115,6 @@ struct JKRHeap {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_meter_HIO_cpp(); // 1
 
 extern "C" void __ct__16dMeter_menuHIO_cFv(); // 1
 extern "C" void __ct__23dMeter_drawCollectHIO_cFv(); // 1
@@ -185,13 +186,6 @@ extern "C" extern u8 g_menuHIO[8];
 
 void mDoExt_getGameHeap(); // 2
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void mDoExt_getGameHeap__Fv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: JUTAssert
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTAssert.h"
 
 // 
 // Types:
@@ -50,8 +52,6 @@ extern "C" void setMessageCount__12JUTAssertionFi(); // 1
 // External References:
 // 
 
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" void strlen(); // 1
 
 extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor(); // 1
 extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb(); // 1

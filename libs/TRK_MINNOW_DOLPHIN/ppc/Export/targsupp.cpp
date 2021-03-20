@@ -3,16 +3,14 @@
 // Translation Unit: ppc/Export/targsupp
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/ppc/Export/targsupp.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRKAccessFile(); // 1
-extern "C" void TRKOpenFile(); // 1
-extern "C" void TRKCloseFile(); // 1
-extern "C" void TRKPositionFile(); // 1
 
 extern "C" void TRKAccessFile(); // 1
 extern "C" void TRKOpenFile(); // 1

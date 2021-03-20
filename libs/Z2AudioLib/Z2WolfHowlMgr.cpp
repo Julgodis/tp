@@ -3,7 +3,9 @@
 // Translation Unit: Z2WolfHowlMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2WolfHowlMgr.h"
 
 // 
 // Types:
@@ -83,7 +85,6 @@ struct Z2SeqMgr {
 // Forward References:
 // 
 
-extern "C" void __sinit_Z2WolfHowlMgr_cpp(); // 1
 
 extern "C" void __ct__13Z2WolfHowlMgrFv(); // 1
 extern "C" void resetState__13Z2WolfHowlMgrFv(); // 1
@@ -106,11 +107,6 @@ extern "C" void __sinit_Z2WolfHowlMgr_cpp(); // 1
 // External References:
 // 
 
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void stop__8JAISoundFUl(); // 1
 extern "C" void stop__8JAISoundFv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: JKRThread
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRThread.h"
 
 // 
 // Types:
@@ -85,7 +87,6 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-extern "C" void __sinit_JKRThread_cpp(); // 1
 
 extern "C" void __ct__9JKRThreadFUlii(); // 1
 extern "C" void __ct__9JKRThreadFP7JKRHeapUlii(); // 1
@@ -118,26 +119,6 @@ extern "C" extern u8 sManager__15JKRThreadSwitch[4];
 
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void JUTWarningConsole(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSetSwitchThreadCallback(); // 1
-extern "C" void OSIsThreadTerminated(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSCancelThread(); // 1
-extern "C" void OSDetachThread(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void __cvt_sll_flt(); // 1
-extern "C" void sprintf(); // 1
 
 extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
 extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1

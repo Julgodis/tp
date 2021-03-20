@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_machine
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_machine.h"
 
 // 
 // Types:
@@ -136,11 +138,6 @@ extern "C" extern void* mRenderModeObj__15mDoMch_render_c[1 + 1 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReportDisable(); // 1
-extern "C" void OSReportEnable(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void OSReport_Error(); // 1
-extern "C" void OSReport_System(); // 1
 void mDoExt_createAssertHeap(JKRHeap*); // 2
 void mDoExt_createDbPrintHeap(u32, JKRHeap*); // 2
 void mDoExt_getDbPrintHeap(); // 2
@@ -160,27 +157,6 @@ void exception_addition(JUTConsole*); // 2
 void cAPICPad_recalibrate(); // 2
 void cM_initRnd(int, int, int); // 2
 void* operator new(u32); // 2
-extern "C" void PPCHalt(); // 1
-extern "C" void OSGetConsoleType(); // 1
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void OSGetArenaLo(); // 1
-extern "C" void OSSetArenaHi(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void OSResetSystem(); // 1
-extern "C" void OSGetResetCode(); // 1
-extern "C" void OSGetProgressiveMode(); // 1
-extern "C" void OSSetProgressiveMode(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSGetThreadPriority(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void DVDChangeDir(); // 1
-extern "C" void VIFlush(); // 1
-extern "C" void VISetBlack(); // 1
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" void VIGetDTVStatus(); // 1
-extern "C" void GXSetDrawDoneCallback(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void OSReportDisable(); // 1
 extern "C" void OSReportEnable(); // 1

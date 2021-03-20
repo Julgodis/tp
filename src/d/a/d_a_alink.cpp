@@ -3,11 +3,21 @@
 // Translation Unit: d/a/d_a_alink
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/a/d_a_alink.h"
 
 // 
 // Types:
 // 
+
+struct JKRHeap {
+	/* 802CE5CC */ void freeAll();
+};
+
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
 
 struct csXyz {
 	/* 80018BD0 */ ~csXyz();
@@ -15,33 +25,20 @@ struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084318 */ void ResetAtHit();
-	/* 800843A8 */ void GetAtHitGObj();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844B8 */ void ResetTgHit();
-	/* 80084548 */ void GetTgHitGObj();
-	/* 8008457C */ void GetTgHitObjSe();
-	/* 800845B0 */ void getHitSeID(u8, int);
-	/* 80084658 */ void ChkCoHit();
-	/* 800846B0 */ void ResetCoHit();
-};
-
-struct J3DAnmBase {
+struct dAttList_c {
+	/* 80073864 */ void getActor();
 };
 
 struct J3DModelData {
 };
 
-struct _GXColorS10 {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTevRegKey {
-	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
-	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
 struct daPy_anmHeap_c {
@@ -59,20 +56,48 @@ struct daPy_anmHeap_c {
 	/* 8015F168 */ void setAnimeHeap();
 };
 
-struct J3DAnmTransform {
+struct JPABaseEmitter {
 };
 
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
+struct dDemo_actor_c {
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
 };
 
-struct cBgS_PolyInfo {
-	/* 80268074 */ cBgS_PolyInfo();
-	/* 802680B0 */ ~cBgS_PolyInfo();
-	/* 80268120 */ void ClearPi();
-	/* 80268148 */ void SetPolyInfo(cBgS_PolyInfo const&);
+struct J3DAnmBase {
+};
+
+struct daAlink_footData_c {
+	/* 800CFCB8 */ ~daAlink_footData_c();
+	/* 800CFCF4 */ daAlink_footData_c();
+};
+
+struct fopAc_ac_c {
+	/* 80018B64 */ fopAc_ac_c();
+	/* 80018C8C */ ~fopAc_ac_c();
+};
+
+struct _GXColorS10 {
+};
+
+struct J3DAnmTevRegKey {
+	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
+	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084318 */ void ResetAtHit();
+	/* 800843A8 */ void GetAtHitGObj();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844B8 */ void ResetTgHit();
+	/* 80084548 */ void GetTgHitGObj();
+	/* 8008457C */ void GetTgHitObjSe();
+	/* 800845B0 */ void getHitSeID(u8, int);
+	/* 80084658 */ void ChkCoHit();
+	/* 800846B0 */ void ResetCoHit();
 };
 
 struct J3DDeformData {
@@ -86,8 +111,7 @@ struct J3DModel {
 	/* 80327C58 */ void calcWeightEnvelopeMtx();
 };
 
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
+struct daAlinkHIO_anm_c {
 };
 
 struct Vec {
@@ -112,47 +136,14 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
-struct fopAc_ac_c {
-	/* 80018B64 */ fopAc_ac_c();
-	/* 80018C8C */ ~fopAc_ac_c();
+struct cM3dGPla {
+	/* 8001DB90 */ ~cM3dGPla();
+	/* 801411F0 */ cM3dGPla();
+	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
+	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
 };
 
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct fopEn_enemy_c {
-};
-
-struct dBgW_Base {
-	struct PushPullLabel {
-	};
-
-};
-
-struct JKRHeap {
-	/* 802CE5CC */ void freeAll();
-};
-
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct daAlink_footData_c {
-	/* 800CFCB8 */ ~daAlink_footData_c();
-	/* 800CFCF4 */ daAlink_footData_c();
-};
-
-struct dDemo_actor_c {
-	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
-};
-
-struct daAlinkHIO_anm_c {
-};
-
-struct dAttList_c {
-	/* 80073864 */ void getActor();
+struct dCcG_At_Spl {
 };
 
 struct daPy_frameCtrl_c {
@@ -163,17 +154,21 @@ struct daPy_frameCtrl_c {
 	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
 };
 
-struct JPABaseEmitter {
+struct cBgS_PolyInfo {
+	/* 80268074 */ cBgS_PolyInfo();
+	/* 802680B0 */ ~cBgS_PolyInfo();
+	/* 80268120 */ void ClearPi();
+	/* 80268148 */ void SetPolyInfo(cBgS_PolyInfo const&);
 };
 
-struct cM3dGPla {
-	/* 8001DB90 */ ~cM3dGPla();
-	/* 801411F0 */ cM3dGPla();
-	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
-	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
-struct dCcG_At_Spl {
+struct dBgW_Base {
+	struct PushPullLabel {
+	};
+
 };
 
 struct daPy_py_c {
@@ -404,6 +399,13 @@ struct daPy_py_c {
 	/* 8015F3C4 */ void checkWoodShieldEquip();
 	/* 8015F698 */ void checkCarryStartLightBallA();
 	/* 8015F730 */ void checkCarryStartLightBallB();
+};
+
+struct fopEn_enemy_c {
+};
+
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
 };
 
 struct daAlink_c {
@@ -2420,10 +2422,10 @@ struct J3DTevBlock {
 	/* 80110E80 */ void setTevColor(u32, J3DGXColorS10 const*);
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmColor {
 };
 
-struct J2DAnmColor {
+struct J2DAnmTevRegKey {
 };
 
 struct J2DPane {
@@ -2600,7 +2602,7 @@ struct daObj {
 	/*          */ template <typename A1>
 	/*          */ void PrmAbstract(/* fopAc_ac_c const*, daObjMovebox::Act_c::Prm_e, daObjMovebox::Act_c::Prm_e */);
 	/* 80141ACC */ /* PrmAbstract<daObjMovebox::Act_c::Prm_e> */
-	void PrmAbstract__template1(fopAc_ac_c const*, daObjMovebox::Act_c::Prm_e, daObjMovebox::Act_c::Prm_e);
+	void PrmAbstract__template0(fopAc_ac_c const*, daObjMovebox::Act_c::Prm_e, daObjMovebox::Act_c::Prm_e);
 
 };
 
@@ -3110,13 +3112,13 @@ struct JASKernel {
 	/* 80290B08 */ void getAramHeap();
 };
 
-struct JAISeqMgr {
-};
-
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAISeq> */
 struct JAISoundStrategyMgr__template1 {
+};
+
+struct JAISeqMgr {
 };
 
 struct JAISeq {
@@ -3280,17 +3282,6 @@ static void dComIfGs_getRupee(); // 2
 static void dComIfGp_setItemRupeeCount(s32); // 2
 static void dMeter2Info_setFloatingMessage(u16, s16, bool); // 2
 void cLib_calcTimer__template0(u8*); // 2
-extern "C" void __sinit_d_a_alink_cpp(); // 1
-extern "C" static void func_801446D4(); // 1
-extern "C" static void func_801446DC(); // 1
-extern "C" static void func_801446E4(); // 1
-extern "C" static void func_801446EC(); // 1
-extern "C" static void func_801446F4(); // 1
-extern "C" static void func_801446FC(); // 1
-extern "C" static void func_80144704(); // 1
-extern "C" static void func_8014470C(); // 1
-extern "C" static void func_80144714(); // 1
-extern "C" static void func_8014471C(); // 1
 
 extern "C" bool getE3Zhint__9daAlink_cFv(); // 1
 extern "C" void getAlinkArcName__9daAlink_cFv(); // 1
@@ -6221,85 +6212,6 @@ void* operator new[](u32); // 2
 void* operator new[](u32, int); // 2
 void operator delete(void*); // 2
 void JMAEulerToQuat(s16, s16, s16, Quaternion*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXRotAxisRad(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXQuat(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXLoadLightObjImm(); // 1
-extern "C" void GXSetChanAmbColor(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXLoadNrmMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_15(); // 1
-extern "C" void _savegpr_16(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_15(); // 1
-extern "C" void _restgpr_16(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strlen(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" s32 getAtnActorID__9daPy_py_cCFv(); // 1
@@ -38810,7 +38722,7 @@ asm void daCrod_c::setControllActorData() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daObj::PrmAbstract__template1(fopAc_ac_c const* field_0, daObjMovebox::Act_c::Prm_e field_1, daObjMovebox::Act_c::Prm_e field_2) {
+asm void daObj::PrmAbstract__template0(fopAc_ac_c const* field_0, daObjMovebox::Act_c::Prm_e field_1, daObjMovebox::Act_c::Prm_e field_2) {
 	nofralloc
 #include "asm/d/a/d_a_alink/func_80141ACC.s"
 }

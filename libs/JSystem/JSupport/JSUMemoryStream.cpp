@@ -3,7 +3,9 @@
 // Translation Unit: JSUMemoryStream
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JSupport/JSUMemoryStream.h"
 
 // 
 // Types:
@@ -42,7 +44,6 @@ extern "C" extern void* __vt__20JSUMemoryInputStream[9 + 1 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void __dt__20JSUMemoryInputStreamFv(); // 1

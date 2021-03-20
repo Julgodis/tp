@@ -3,7 +3,9 @@
 // Translation Unit: d/d_door_param2
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_door_param2.h"
 
 // 
 // Types:

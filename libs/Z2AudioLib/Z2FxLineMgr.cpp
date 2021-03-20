@@ -3,7 +3,9 @@
 // Translation Unit: Z2FxLineMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2FxLineMgr.h"
 
 // 
 // Types:
@@ -13,12 +15,12 @@ struct JKRHeap {
 	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
-struct Z2FxLineConfig {
-};
-
 struct JKRArchive {
 	/* 802D5D38 */ void getResource(u16);
 	/* 802D610C */ void countResource() const;
+};
+
+struct Z2FxLineConfig {
 };
 
 struct Z2FxLineMgr {
@@ -65,10 +67,6 @@ extern "C" void setSceneFx__11Z2FxLineMgrFl(); // 1
 // 
 
 void* operator new[](u32, JKRHeap*, int); // 2
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_(); // 1
 extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1

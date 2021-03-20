@@ -3,27 +3,14 @@
 // Translation Unit: MSL_Common/Src/printf
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void sprintf(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void vsnprintf(); // 1
-extern "C" void vprintf(); // 1
-extern "C" void fprintf(); // 1
-extern "C" void printf(); // 1
-extern "C" static void __StringWrite(); // 1
-extern "C" static void __FileWrite(); // 1
-extern "C" static void __pformatter(); // 1
-extern "C" static void float2str(); // 1
-extern "C" static void round_decimal(); // 1
-extern "C" static void double2hex(); // 1
-extern "C" static void longlong2str(); // 1
-extern "C" static void long2str(); // 1
-extern "C" static void parse_format(); // 1
 
 extern "C" void sprintf(); // 1
 extern "C" void snprintf(); // 1
@@ -46,20 +33,6 @@ extern "C" extern char const* const MSL_Common_Src_printf__stringBase0;
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void __va_arg(); // 1
-extern "C" void __div2u(); // 1
-extern "C" void __mod2u(); // 1
-extern "C" void __num2dec(); // 1
-extern "C" void __end_critical_region(); // 1
-extern "C" void __begin_critical_region(); // 1
-extern "C" void fwrite(); // 1
-extern "C" void wcstombs(); // 1
-extern "C" void memchr(); // 1
-extern "C" void strchr(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strlen(); // 1
-extern "C" void fwide(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void __va_arg(); // 1

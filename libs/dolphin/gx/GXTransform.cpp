@@ -3,28 +3,14 @@
 // Translation Unit: GXTransform
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXTransform.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GXProject(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXSetProjectionv(); // 1
-extern "C" void GXGetProjectionv(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXLoadNrmMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" static void __GXSetViewport(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXGetViewportv(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void GXGetScissor(); // 1
-extern "C" void GXSetScissorBoxOffset(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __GXSetMatrixIndex(); // 1
 
 extern "C" void GXProject(); // 1
 extern "C" void GXSetProjection(); // 1

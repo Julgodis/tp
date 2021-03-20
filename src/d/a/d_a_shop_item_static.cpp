@@ -3,7 +3,9 @@
 // Translation Unit: d/a/d_a_shop_item_static
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/a/d_a_shop_item_static.h"
 
 // 
 // Types:

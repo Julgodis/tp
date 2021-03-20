@@ -3,17 +3,22 @@
 // Translation Unit: J3DMatBlock
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DMatBlock.h"
 
 // 
 // Types:
 // 
 
-struct J3DLightObj {
-	/* 80323590 */ void load(u32) const;
+struct J3DColorChan {
 };
 
 struct J3DGXColor {
+};
+
+struct J3DLightObj {
+	/* 80323590 */ void load(u32) const;
 };
 
 struct J3DColorBlock {
@@ -24,9 +29,6 @@ struct J3DColorBlock {
 	/* 80317438 */ void diffAmbColor();
 	/* 80317444 */ void diffLightObj(u32);
 	/* 80317454 */ bool getLight(u32);
-};
-
-struct J3DColorChan {
 };
 
 struct J3DColorBlockLightOff {
@@ -184,7 +186,10 @@ struct J3DTevBlockNull {
 	/* 803176D4 */ void initialize();
 };
 
-struct J3DIndTevStage {
+struct J3DTevStage {
+};
+
+struct J3DTevOrder {
 };
 
 struct J3DGXColorS10 {
@@ -196,10 +201,7 @@ struct J3DTevSwapModeInfo {
 struct J3DTevSwapModeTable {
 };
 
-struct J3DTevOrder {
-};
-
-struct J3DTevStage {
+struct J3DIndTevStage {
 };
 
 struct J3DTevBlock {
@@ -507,15 +509,15 @@ struct J3DTevBlock16 {
 struct J3DIndBlock {
 };
 
+struct J3DIndTexCoordScale {
+	/* 8000E024 */ ~J3DIndTexCoordScale();
+};
+
 struct J3DIndTexMtx {
 	/* 8000E064 */ ~J3DIndTexMtx();
 };
 
 struct J3DIndTexOrder {
-};
-
-struct J3DIndTexCoordScale {
-	/* 8000E024 */ ~J3DIndTexCoordScale();
 };
 
 struct J3DIndBlockFull {
@@ -539,16 +541,16 @@ struct J3DIndBlockFull {
 	/* 803234A0 */ ~J3DIndBlockFull();
 };
 
-struct J3DBlend {
-};
-
 struct J3DAlphaComp {
 };
 
-struct J3DFog {
+struct J3DBlend {
 };
 
 struct J3DZMode {
+};
+
+struct J3DFog {
 };
 
 struct J3DPEBlock {
@@ -714,7 +716,6 @@ struct J3DNBTScaleInfo {
 // Forward References:
 // 
 
-extern "C" void __sinit_J3DMatBlock_cpp(); // 1
 
 extern "C" void initialize__21J3DColorBlockLightOffFv(); // 1
 extern "C" void initialize__22J3DColorBlockAmbientOnFv(); // 1
@@ -1194,8 +1195,6 @@ extern "C" extern void* __vt__21J3DColorBlockLightOff[36 + 1 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
 void operator delete(void*); // 2
 void J3DGDSetTexCoordScale2(_GXTexCoordID, u16, u8, u8, u16, u8, u8); // 2
 void J3DGDSetIndTexMtx(_GXIndTexMtxID, f32 (* )[3], s8); // 2
@@ -1211,24 +1210,6 @@ void isTexNoReg(void*); // 2
 void getTexNoReg(void*); // 2
 void loadTexNo(u32, u16 const&); // 2
 void patchTexNo_PtrToIdx(u32, u16 const&); // 2
-extern "C" void DCStoreRange(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void GDOverflowed(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void OSReport(); // 1

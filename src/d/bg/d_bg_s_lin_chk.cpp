@@ -3,7 +3,9 @@
 // Translation Unit: d/bg/d_bg_s_lin_chk
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_s_lin_chk.h"
 
 // 
 // Types:
@@ -94,36 +96,6 @@ struct cBgS_LinChk {
 // Forward References:
 // 
 
-extern "C" static void func_80078534(); // 1
-extern "C" static void func_8007853C(); // 1
-extern "C" static void func_80078544(); // 1
-extern "C" static void func_8007854C(); // 1
-extern "C" static void func_80078554(); // 1
-extern "C" static void func_8007855C(); // 1
-extern "C" static void func_80078564(); // 1
-extern "C" static void func_8007856C(); // 1
-extern "C" static void func_80078574(); // 1
-extern "C" static void func_8007857C(); // 1
-extern "C" static void func_80078584(); // 1
-extern "C" static void func_8007858C(); // 1
-extern "C" static void func_80078594(); // 1
-extern "C" static void func_8007859C(); // 1
-extern "C" static void func_800785A4(); // 1
-extern "C" static void func_800785AC(); // 1
-extern "C" static void func_800785B4(); // 1
-extern "C" static void func_800785BC(); // 1
-extern "C" static void func_800785C4(); // 1
-extern "C" static void func_800785CC(); // 1
-extern "C" static void func_800785D4(); // 1
-extern "C" static void func_800785DC(); // 1
-extern "C" static void func_800785E4(); // 1
-extern "C" static void func_800785EC(); // 1
-extern "C" static void func_800785F4(); // 1
-extern "C" static void func_800785FC(); // 1
-extern "C" static void func_80078604(); // 1
-extern "C" static void func_8007860C(); // 1
-extern "C" static void func_80078614(); // 1
-extern "C" static void func_8007861C(); // 1
 
 extern "C" void __ct__11dBgS_LinChkFv(); // 1
 extern "C" void __dt__11dBgS_LinChkFv(); // 1

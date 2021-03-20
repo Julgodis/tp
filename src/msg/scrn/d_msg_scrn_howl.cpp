@@ -3,7 +3,9 @@
 // Translation Unit: msg/scrn/d_msg_scrn_howl
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "msg/scrn/d_msg_scrn_howl.h"
 
 // 
 // Types:
@@ -86,19 +88,19 @@ struct dMsgScrnBase_c {
 	/* 8023C4F4 */ void fontAlpha(f32);
 };
 
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-};
-
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -154,7 +156,6 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_msg_scrn_howl_cpp(); // 1
 
 extern "C" void __ct__14dMsgScrnHowl_cFv(); // 1
 extern "C" void __dt__14dMsgScrnHowl_cFv(); // 1
@@ -219,22 +220,6 @@ void dPaneClass_showNullPane(J2DScreen*); // 2
 void cLib_addCalc2(f32*, f32, f32, f32); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void GXGetScissor(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc(); // 1

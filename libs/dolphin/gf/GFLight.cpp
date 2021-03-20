@@ -3,7 +3,9 @@
 // Translation Unit: GFLight
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gf/GFLight.h"
 
 // 
 // Types:

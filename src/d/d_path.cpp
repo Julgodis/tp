@@ -3,7 +3,9 @@
 // Translation Unit: d/d_path
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_path.h"
 
 // 
 // Types:
@@ -50,8 +52,6 @@ extern "C" void dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi(); // 1
 // External References:
 // 
 
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
 
 extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
 extern "C" void isSwitch__10dSv_info_cCFii(); // 1

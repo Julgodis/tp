@@ -3,7 +3,9 @@
 // Translation Unit: J2DMatBlock
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DMatBlock.h"
 
 // 
 // Types:
@@ -27,49 +29,7 @@ struct J2DTexGenBlock {
 	/* 802EB7E0 */ void getTexMtx(u32, J2DTexMtx&);
 };
 
-struct J2DTevSwapModeInfo {
-};
-
-struct _GXTlut {
-};
-
-struct ResTLUT {
-};
-
-struct JUTPalette {
-	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
-};
-
-struct J2DTevSwapModeTable {
-	/* 802F1934 */ J2DTevSwapModeTable();
-};
-
-struct ResTIMG {
-};
-
-struct _GXTexMapID {
-};
-
-struct JUTTexture {
-	/* 802DE234 */ ~JUTTexture();
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
-	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
-	/* 802DE5B0 */ void attachPalette(JUTPalette*);
-	/* 802DE840 */ void load(_GXTexMapID);
-};
-
 struct ResFONT {
-};
-
-struct J2DTevOrder {
-	/* 802F1B70 */ J2DTevOrder();
-};
-
-struct JUTFont {
-};
-
-struct J2DGXColorS10 {
-	/* 802F1B90 */ J2DGXColorS10();
 };
 
 struct JUtility {
@@ -90,6 +50,48 @@ struct J2DTevStage {
 struct J2DIndTevStage {
 	/* 802EA044 */ void load(u8);
 	/* 802F18A0 */ J2DIndTevStage();
+};
+
+struct ResTLUT {
+};
+
+struct JUTFont {
+};
+
+struct _GXTlut {
+};
+
+struct JUTPalette {
+	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
+};
+
+struct J2DTevSwapModeInfo {
+};
+
+struct _GXTexMapID {
+};
+
+struct ResTIMG {
+};
+
+struct JUTTexture {
+	/* 802DE234 */ ~JUTTexture();
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
+	/* 802DE5B0 */ void attachPalette(JUTPalette*);
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+struct J2DTevOrder {
+	/* 802F1B70 */ J2DTevOrder();
+};
+
+struct J2DGXColorS10 {
+	/* 802F1B90 */ J2DGXColorS10();
+};
+
+struct J2DTevSwapModeTable {
+	/* 802F1934 */ J2DTevSwapModeTable();
 };
 
 struct J2DTevBlock {
@@ -383,10 +385,6 @@ struct J2DTevBlock16 {
 	/* 802F1FAC */ void setFontUndeleteFlag();
 };
 
-struct J2DIndTexOrder {
-	/* 802EA0FC */ void load(u8);
-};
-
 struct J2DIndTexMtx {
 	/* 802EA098 */ void load(u8);
 	/* 802EB2E4 */ ~J2DIndTexMtx();
@@ -395,6 +393,10 @@ struct J2DIndTexMtx {
 struct J2DIndTexCoordScale {
 	/* 802EA0CC */ void load(u8);
 	/* 802EB290 */ ~J2DIndTexCoordScale();
+};
+
+struct J2DIndTexOrder {
+	/* 802EA0FC */ void load(u8);
 };
 
 struct J2DIndBlockFull {
@@ -723,40 +725,6 @@ extern "C" extern void* __vt__14J2DTexGenBlock[3 + 1 /* padding */];
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColorS10(); // 1
-extern "C" void GXSetTevKColor(); // 1
-extern "C" void GXSetTevKColorSel(); // 1
-extern "C" void GXSetTevKAlphaSel(); // 1
-extern "C" void GXSetTevSwapMode(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__Q28JUtility6TColorFv(); // 1
 extern "C" void* __nw__FUl(); // 1

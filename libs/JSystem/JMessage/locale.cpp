@@ -3,7 +3,9 @@
 // Translation Unit: locale
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JMessage/locale.h"
 
 // 
 // Types:

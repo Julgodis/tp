@@ -3,7 +3,9 @@
 // Translation Unit: GFGeometry
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gf/GFGeometry.h"
 
 // 
 // Types:

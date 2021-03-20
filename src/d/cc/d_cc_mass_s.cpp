@@ -3,7 +3,9 @@
 // Translation Unit: d/cc/d_cc_mass_s
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/cc/d_cc_mass_s.h"
 
 // 
 // Types:
@@ -29,13 +31,13 @@ struct dCcMassS_HitInf {
 	/* 80085334 */ void ClearPointer();
 };
 
-struct Vec {
-};
-
 struct cM3dGCps {
 	/* 8026EF88 */ cM3dGCps();
 	/* 8026EFA4 */ ~cM3dGCps();
 	/* 8026F080 */ void SetCps(cM3dGCps const&);
+};
+
+struct Vec {
 };
 
 struct dCcMassS_Mng {
@@ -118,17 +120,6 @@ extern "C" void GetCamTopPos__12dCcMassS_MngFP3Vec(); // 1
 
 void cM_rndF(f32); // 2
 void operator delete(void*); // 2
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__12dCcMassS_ObjFv(); // 1
 extern "C" void Set__15cCcD_DivideInfoFUlUlUl(); // 1

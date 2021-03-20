@@ -3,7 +3,9 @@
 // Translation Unit: J2DOrthoGraph
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DOrthoGraph.h"
 
 // 
 // Types:
@@ -19,7 +21,7 @@ struct JGeometry {
 	template <typename A1>
 	struct TVec2 { };
 	/* TVec2<f32> */
-	struct TVec2__template0 {
+	struct TVec2__template1 {
 	};
 
 };
@@ -83,12 +85,6 @@ extern "C" extern void* __vt__13J2DOrthoGraph[10];
 // External References:
 // 
 
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__13J2DOrthoGraphFv(); // 1
 extern "C" void __ct__14J2DGrafContextFffff(); // 1

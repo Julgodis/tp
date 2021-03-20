@@ -3,16 +3,18 @@
 // Translation Unit: J3DShapeFactory
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphLoader/J3DShapeFactory.h"
 
 // 
 // Types:
 // 
 
-struct J3DShapeBlock {
+struct _GXVtxDescList {
 };
 
-struct _GXVtxDescList {
+struct J3DShapeBlock {
 };
 
 struct J3DShapeFactory {
@@ -61,16 +63,11 @@ extern "C" extern char const* const J3DShapeFactory__stringBase0;
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
 void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void* operator new[](u32, int); // 2
 void JSUConvertOffsetToPtr__template70(void const*, u32); // 2
 void JSUConvertOffsetToPtr__template71(void const*, u32); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void* __nw__FUl(); // 1

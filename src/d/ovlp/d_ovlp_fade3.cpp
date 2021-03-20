@@ -3,7 +3,9 @@
 // Translation Unit: d/ovlp/d_ovlp_fade3
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/ovlp/d_ovlp_fade3.h"
 
 // 
 // Types:
@@ -97,45 +99,6 @@ void dCam_getBody(); // 2
 void cLib_calcTimer__template4(s8*); // 2
 void cLib_addCalc0(f32*, f32, f32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __ptmf_scall(); // 1
 
 extern "C" void mDoAud_setFadeOutStart__FUc(); // 1
 extern "C" void mDoAud_setFadeInStart__FUc(); // 1

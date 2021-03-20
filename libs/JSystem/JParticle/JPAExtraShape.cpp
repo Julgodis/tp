@@ -3,7 +3,9 @@
 // Translation Unit: JPAExtraShape
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAExtraShape.h"
 
 // 
 // Types:

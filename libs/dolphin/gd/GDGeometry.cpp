@@ -3,15 +3,14 @@
 // Translation Unit: GDGeometry
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gd/GDGeometry.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GDSetVtxDescv(); // 1
-extern "C" void GDSetArray(); // 1
-extern "C" void GDSetArrayRaw(); // 1
 
 extern "C" void GDSetVtxDescv(); // 1
 extern "C" void GDSetArray(); // 1
@@ -21,7 +20,6 @@ extern "C" void GDSetArrayRaw(); // 1
 // External References:
 // 
 
-extern "C" void GDOverflowed(); // 1
 
 extern "C" void GDOverflowed(); // 1
 extern "C" extern u8 __GDCurrentDL[4];

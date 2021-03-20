@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_mtx
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_mtx.h"
 
 // 
 // Types:
@@ -66,7 +68,6 @@ void mDoMtx_concatProjView(f32 const (* )[4], f32 const (* )[4], f32 (* )[4]); /
 void mDoMtx_inverseTranspose(f32 const (* )[4], f32 (* )[4]); // 2
 void mDoMtx_QuatConcat(Quaternion const*, Quaternion const*, Quaternion*); // 2
 void mDoMtx_MtxToRot(f32 const (* )[4], csXyz*); // 2
-extern "C" void __sinit_m_Do_mtx_cpp(); // 1
 
 extern "C" static void mDoMtx_XYZrotS__FPA4_fsss(); // 1
 extern "C" void mDoMtx_XYZrotM__FPA4_fsss(); // 1
@@ -111,17 +112,6 @@ extern "C" extern u8 mDoMtx_quatStack[284 + 4 /* padding */];
 
 void cM_atan2s(f32, f32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSMTXQuat(); // 1
-extern "C" void C_MTXLookAt(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __mi__4cXyzCFRC3Vec(); // 1
 extern "C" void outprod__4cXyzCFRC3Vec(); // 1

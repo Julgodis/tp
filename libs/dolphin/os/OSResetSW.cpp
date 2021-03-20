@@ -3,15 +3,14 @@
 // Translation Unit: OSResetSW
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSResetSW.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __OSResetSWInterruptHandler(); // 1
-extern "C" static void OSGetResetButtonState(); // 1
-extern "C" void OSGetResetSwitchState(); // 1
 
 extern "C" void __OSResetSWInterruptHandler(); // 1
 extern "C" static void OSGetResetButtonState(); // 1
@@ -21,11 +20,6 @@ extern "C" void OSGetResetSwitchState(); // 1
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSMaskInterrupts(); // 1
-extern "C" void __OSGetSystemTime(); // 1
-extern "C" void __div2i(); // 1
 
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1

@@ -3,16 +3,18 @@
 // Translation Unit: J3DMtxBuffer
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphAnimator/J3DMtxBuffer.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct J3DMtxBuffer {
@@ -62,18 +64,6 @@ void J3DCalcBBoardMtx(f32 (* )[4]); // 2
 void J3DCalcYBBoardMtx(f32 (* )[4]); // 2
 void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]); // 2
 void J3DPSMtxArrayConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4], u32); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void* __nwa__FUl(); // 1
 extern "C" void* __nwa__FUli(); // 1

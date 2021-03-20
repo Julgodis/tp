@@ -3,18 +3,14 @@
 // Translation Unit: OSTime
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSTime.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void OSGetTime(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void __OSGetSystemTime(); // 1
-extern "C" void __OSTimeToSystemTime(); // 1
-extern "C" static void GetDates(); // 1
-extern "C" void OSTicksToCalendarTime(); // 1
 
 extern "C" void OSGetTime(); // 1
 extern "C" void OSGetTick(); // 1
@@ -27,10 +23,6 @@ extern "C" void OSTicksToCalendarTime(); // 1
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void __mod2i(); // 1
 
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1

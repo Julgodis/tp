@@ -3,7 +3,9 @@
 // Translation Unit: d/com/d_com_inf_actor
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/com/d_com_inf_actor.h"
 
 // 
 // Forward References:

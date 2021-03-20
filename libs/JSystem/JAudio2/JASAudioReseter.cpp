@@ -3,7 +3,9 @@
 // Translation Unit: JASAudioReseter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASAudioReseter.h"
 
 // 
 // Types:
@@ -52,8 +54,6 @@ extern "C" void callback__15JASAudioReseterFPv(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
 
 extern "C" void stop__14JASAudioThreadFv(); // 1
 extern "C" void drop__13JASDSPChannelFv(); // 1

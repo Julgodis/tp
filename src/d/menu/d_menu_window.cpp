@@ -3,7 +3,9 @@
 // Translation Unit: d/menu/d_menu_window
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_window.h"
 
 // 
 // Types:
@@ -150,10 +152,10 @@ struct dMenu_Collect2D_c {
 	/* 801B5FAC */ bool isOutCheck();
 };
 
-struct JKRExpHeap {
+struct CSTControl {
 };
 
-struct CSTControl {
+struct JKRExpHeap {
 };
 
 struct dMenu_Collect_c {
@@ -268,10 +270,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -300,7 +302,6 @@ static void dMw_Execute(dMw_c*); // 2
 static bool dMw_IsDelete(dMw_c*); // 2
 static void dMw_Delete(dMw_c*); // 2
 static void dMw_Create(msg_class*); // 2
-extern "C" void __sinit_d_menu_window_cpp(); // 1
 
 extern "C" void dMw_UP_TRIGGER__Fv(); // 1
 extern "C" void dMw_DOWN_TRIGGER__Fv(); // 1
@@ -507,7 +508,6 @@ extern "C" extern void* g_profile_MENUWINDOW[10 + 6 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport_Error(); // 1
 void mDoExt_setCurrentHeap(JKRHeap*); // 2
 void mDoExt_getCurrentHeap(); // 2
 void mDoExt_removeMesgFont(); // 2
@@ -521,42 +521,6 @@ void dMeter2Info_set2DVibration(); // 2
 void dMeter2Info_set2DVibrationM(); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetFogRangeAdj(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void OSReport_Error(); // 1
 extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1

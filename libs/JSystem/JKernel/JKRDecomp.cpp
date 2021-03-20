@@ -3,7 +3,9 @@
 // Translation Unit: JKRDecomp
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRDecomp.h"
 
 // 
 // Types:
@@ -72,14 +74,6 @@ extern "C" void __dt__16JKRDecompCommandFv(); // 1
 
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void* __nw__FUlP7JKRHeapi(); // 1
 extern "C" void __dl__FPv(); // 1

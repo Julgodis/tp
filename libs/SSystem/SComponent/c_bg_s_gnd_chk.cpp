@@ -3,16 +3,18 @@
 // Translation Unit: c_bg_s_gnd_chk
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_bg_s_gnd_chk.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
+struct cXyz {
 };
 
-struct cXyz {
+struct Vec {
 };
 
 struct cBgS_GndChk {
@@ -37,7 +39,6 @@ struct cBgS_PolyInfo {
 // Forward References:
 // 
 
-extern "C" static void func_80267D54(); // 1
 
 extern "C" void __ct__11cBgS_GndChkFv(); // 1
 extern "C" void __dt__11cBgS_GndChkFv(); // 1

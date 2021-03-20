@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_priority
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_priority.h"
 
 // 
 // Types:
@@ -70,10 +72,6 @@ void cTg_GetFirst(node_list_class*); // 2
 void cTg_SingleCut(create_tag_class*); // 2
 void cTg_Addition(node_list_class*, create_tag_class*); // 2
 void cTg_Create(create_tag_class*, void*); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void fpcLy_CancelQTo__FP24process_method_tag_class(); // 1
 extern "C" void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class(); // 1

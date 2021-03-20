@@ -3,7 +3,9 @@
 // Translation Unit: Z2SoundStarter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2SoundStarter.h"
 
 // 
 // Types:
@@ -74,10 +76,6 @@ extern "C" extern void* __vt__14Z2SoundStarter[5 + 1 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void openChild__8JASTrackFUl(); // 1
 extern "C" void writePort__8JASTrackFUlUs(); // 1

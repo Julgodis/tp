@@ -3,14 +3,13 @@
 // Translation Unit: d/menu/d_menu_insect
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_insect.h"
 
 // 
 // Types:
 // 
-
-struct JKRExpHeap {
-};
 
 struct STControl {
 	/* 8003219C */ void checkTrigger();
@@ -21,6 +20,9 @@ struct STControl {
 };
 
 struct CSTControl {
+};
+
+struct JKRExpHeap {
 };
 
 struct dMenu_Insect_c {
@@ -93,10 +95,10 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct JMSMesgEntry_c {
+struct JUTFont {
 };
 
-struct JUTFont {
+struct JMSMesgEntry_c {
 };
 
 struct ResTIMG {
@@ -156,10 +158,10 @@ struct CPaneMgrAlpha {
 	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -175,7 +177,6 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_insect_cpp(); // 1
 
 extern "C" void __ct__14dMenu_Insect_cFP10JKRExpHeapP9STControlP10CSTControlUc(); // 1
 extern "C" void __dt__14dMenu_Insect_cFv(); // 1
@@ -237,20 +238,6 @@ void dMeter2Info_set2DVibration(); // 2
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
 extern "C" void mDoExt_getMesgFont__Fv(); // 1

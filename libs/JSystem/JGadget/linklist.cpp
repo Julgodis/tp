@@ -3,7 +3,9 @@
 // Translation Unit: linklist
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JGadget/linklist.h"
 
 // 
 // Types:
@@ -46,12 +48,6 @@ extern "C" void Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode(); 
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void _savegpr_27(); // 1

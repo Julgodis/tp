@@ -3,18 +3,14 @@
 // Translation Unit: CARDOpen
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDOpen.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __CARDCompareFileName(); // 1
-extern "C" static void __CARDAccess(); // 1
-extern "C" void __CARDIsWritable(); // 1
-extern "C" void __CARDIsReadable(); // 1
-extern "C" void CARDOpen(); // 1
-extern "C" void CARDClose(); // 1
 
 extern "C" void __CARDCompareFileName(); // 1
 extern "C" static void __CARDAccess(); // 1
@@ -27,10 +23,6 @@ extern "C" void CARDClose(); // 1
 // External References:
 // 
 
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDGetDirBlock(); // 1
-extern "C" void memcmp(); // 1
 
 extern "C" void __CARDGetControlBlock(); // 1
 extern "C" void __CARDPutControlBlock(); // 1

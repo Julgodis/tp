@@ -3,27 +3,14 @@
 // Translation Unit: GXFrameBuf
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXFrameBuf.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GXSetDispCopySrc(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetDispCopyDst(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXSetDispCopyFrame2Field(); // 1
-extern "C" void GXSetCopyClamp(); // 1
-extern "C" void GXGetNumXfbLines(); // 1
-extern "C" void GXGetYScaleFactor(); // 1
-extern "C" void GXSetDispCopyYScale(); // 1
-extern "C" void GXSetCopyClear(); // 1
-extern "C" void GXSetCopyFilter(); // 1
-extern "C" void GXSetDispCopyGamma(); // 1
-extern "C" void GXCopyDisp(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXClearBoundingBox(); // 1
 
 extern "C" void GXSetDispCopySrc(); // 1
 extern "C" void GXSetTexCopySrc(); // 1
@@ -50,8 +37,6 @@ extern "C" extern u8 GXEurgb60Hz480IntDf[60 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void __GetImageTileCount(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
 
 extern "C" void __GetImageTileCount(); // 1
 extern "C" void __cvt_fp2unsigned(); // 1

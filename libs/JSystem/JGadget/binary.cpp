@@ -3,7 +3,9 @@
 // Translation Unit: binary
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JGadget/binary.h"
 
 // 
 // Types:
@@ -38,8 +40,6 @@ extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl(); // 
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void _savegpr_26(); // 1

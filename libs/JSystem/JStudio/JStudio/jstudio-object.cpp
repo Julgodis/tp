@@ -3,26 +3,28 @@
 // Translation Unit: jstudio-object
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/jstudio-object.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
-};
-
 struct _GXColor {
 };
 
-namespace JStudio {
-	struct TControl {
-	};
+struct Vec {
+};
 
+namespace JStudio {
 	struct data {
 		struct TEOperationData {
 		};
 
+	};
+
+	struct TControl {
 	};
 
 	struct TAdaptor {
@@ -184,17 +186,6 @@ namespace JStudio {
 // Forward References:
 // 
 
-extern "C" void func_80288204(); // 1
-extern "C" static void func_802885DC(); // 1
-extern "C" static void func_8028863C(); // 1
-extern "C" static void func_8028869C(); // 1
-extern "C" static void func_802886FC(); // 1
-extern "C" static void func_8028875C(); // 1
-extern "C" static void func_802887BC(); // 1
-extern "C" static void func_80288818(); // 1
-extern "C" static void func_80288874(); // 1
-extern "C" static void func_802888D0(); // 1
-extern "C" static void func_8028892C(); // 1
 
 extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
 extern "C" void update__Q27JStudio14TVariableValueFdPQ27JStudio8TAdaptor(); // 1
@@ -385,14 +376,6 @@ extern "C" extern u8 data_80451200[8];
 // 
 
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void getObject__Q37JStudio3fvb8TControlFPCvUl(); // 1
 extern "C" void getObject_index__Q37JStudio3fvb8TControlFUl(); // 1

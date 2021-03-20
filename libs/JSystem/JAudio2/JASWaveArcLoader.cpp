@@ -3,7 +3,9 @@
 // Translation Unit: JASWaveArcLoader
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASWaveArcLoader.h"
 
 // 
 // Types:
@@ -104,17 +106,6 @@ extern "C" void __dt__11JASDisposerFv(); // 1
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void DVDConvertPathToEntrynum(); // 1
-extern "C" void DVDFastOpen(); // 1
-extern "C" void DVDClose(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strlen(); // 1
 
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
 extern "C" void getThreadPointer__6JASDvdFv(); // 1

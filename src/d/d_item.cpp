@@ -3,7 +3,9 @@
 // Translation Unit: d/d_item
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_item.h"
 
 // 
 // Types:
@@ -856,13 +858,6 @@ void dComIfGs_setSelectEquipClothes(u8); // 2
 void dComIfGs_setSelectEquipSword(u8); // 2
 void dComIfGs_setSelectEquipShield(u8); // 2
 void dMeter2Info_setSword(u8, bool); // 2
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strncmp(); // 1
 
 extern "C" void setItemBombNumCount__14dComIfG_play_cFUcs(); // 1
 extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1

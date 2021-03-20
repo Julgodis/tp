@@ -3,7 +3,9 @@
 // Translation Unit: control
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio_JStage/control.h"
 
 // 
 // Types:
@@ -116,11 +118,6 @@ struct JStudio_JStage {
 // Forward References:
 // 
 
-extern "C" static void func_80289CE4(); // 1
-extern "C" static void func_80289DE8(); // 1
-extern "C" static void func_80289EEC(); // 1
-extern "C" static void func_80289FF0(); // 1
-extern "C" static void func_8028A0F4(); // 1
 
 extern "C" void __dt__Q214JStudio_JStage13TCreateObjectFv(); // 1
 extern "C" void create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
@@ -137,8 +134,6 @@ extern "C" extern void* __vt__Q214JStudio_JStage13TCreateObject[4];
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void __dt__Q27JStudio13TCreateObjectFv(); // 1
 extern "C" void __ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor(); // 1

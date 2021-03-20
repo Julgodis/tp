@@ -3,14 +3,14 @@
 // Translation Unit: ppc/Generic/mpc_7xx_603e
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/ppc/Generic/mpc_7xx_603e.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRKSaveExtended1Block(); // 1
-extern "C" void TRKRestoreExtended1Block(); // 1
 
 extern "C" void TRKSaveExtended1Block(); // 1
 extern "C" void TRKRestoreExtended1Block(); // 1

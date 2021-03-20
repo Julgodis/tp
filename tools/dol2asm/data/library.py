@@ -11,6 +11,7 @@ class Library:
         default_factory=dict, repr=False)
     module_path: Path = None
     lib_path: Path = None
+    inc_path: Path = None
     asm_path: Path = None
     mk_path: Path = None
 
@@ -29,6 +30,12 @@ class Library:
         if not self.name:
             return self.lib_path
         return self.lib_path.joinpath(self.name)
+
+    @property
+    def include_path(self):
+        if not self.name:
+            return self.inc_path
+        return self.inc_path.joinpath(self.name)
 
     @property
     def asm_function_path(self):

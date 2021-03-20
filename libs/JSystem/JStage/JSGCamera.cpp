@@ -3,7 +3,9 @@
 // Translation Unit: JSGCamera
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStage/JSGCamera.h"
 
 // 
 // Types:

@@ -3,7 +3,9 @@
 // Translation Unit: JPAChildShape
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAChildShape.h"
 
 // 
 // Types:
@@ -36,7 +38,6 @@ extern "C" void __ct__13JPAChildShapeFPCUc(); // 1
 // External References:
 // 
 
-extern "C" void GXSetTevColor(); // 1
 
 extern "C" void GXSetTevColor(); // 1
 

@@ -3,13 +3,14 @@
 // Translation Unit: dvdFatal
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/dvd/dvdFatal.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __DVDPrintFatalMessage(); // 1
 
 extern "C" void __DVDPrintFatalMessage(); // 1
 

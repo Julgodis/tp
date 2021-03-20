@@ -1,5 +1,7 @@
+#ifndef JUTEXCEPTION_H
+#define JUTEXCEPTION_H
+
+#include "dolphin/types.h"
 
 
-namespace JUTException {
-    void panic_f(char const *, int, char const *,...);
-}
+#endif /* JUTEXCEPTION_H */

@@ -3,14 +3,14 @@
 // Translation Unit: MSL_Common/Src/extras
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/extras.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void strnicmp(); // 1
-extern "C" void stricmp(); // 1
 
 extern "C" void strnicmp(); // 1
 extern "C" void stricmp(); // 1
@@ -19,7 +19,6 @@ extern "C" void stricmp(); // 1
 // External References:
 // 
 
-extern "C" void __msl_strnicmp(); // 1
 
 extern "C" void __msl_strnicmp(); // 1
 extern "C" extern u8 __lower_map[256];

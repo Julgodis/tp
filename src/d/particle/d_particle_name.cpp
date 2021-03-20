@@ -3,7 +3,9 @@
 // Translation Unit: d/particle/d_particle_name
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/particle/d_particle_name.h"
 
 // 
 // Forward References:

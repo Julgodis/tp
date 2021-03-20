@@ -3,11 +3,16 @@
 // Translation Unit: J3DMaterialFactory_v21
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphLoader/J3DMaterialFactory_v21.h"
 
 // 
 // Types:
 // 
+
+struct J3DMaterialBlock_v21 {
+};
 
 struct J3DMaterial {
 	/* 803157A0 */ void createColorBlock(u32);
@@ -16,9 +21,6 @@ struct J3DMaterial {
 	/* 80315E78 */ void createIndBlock(int);
 	/* 80315F60 */ void createPEBlock(u32, u32);
 	/* 80316240 */ void initialize();
-};
-
-struct J3DMaterialBlock_v21 {
 };
 
 struct J3DMaterialFactory_v21 {
@@ -123,10 +125,6 @@ void JSUConvertOffsetToPtr__template55(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template56(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template57(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template59(void const*, void const*); // 2
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__11J3DTevStageFv(); // 1
 extern "C" void __ct__11J3DTevStageFRC15J3DTevStageInfo(); // 1

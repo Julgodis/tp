@@ -3,36 +3,14 @@
 // Translation Unit: vi
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/vi/vi.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void __VIRetraceHandler(); // 1
-extern "C" void VISetPreRetraceCallback(); // 1
-extern "C" void VISetPostRetraceCallback(); // 1
-extern "C" static void getTiming(); // 1
-extern "C" static void __VIInit(); // 1
-extern "C" void VIInit(); // 1
-extern "C" void VIWaitForRetrace(); // 1
-extern "C" static void setFbbRegs(); // 1
-extern "C" static void setVerticalRegs(); // 1
-extern "C" void VIConfigure(); // 1
-extern "C" void VIFlush(); // 1
-extern "C" void VISetNextFrameBuffer(); // 1
-extern "C" void VIGetNextFrameBuffer(); // 1
-extern "C" void VIGetCurrentFrameBuffer(); // 1
-extern "C" void VISetBlack(); // 1
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" static void GetCurrentDisplayPosition(); // 1
-extern "C" static void getCurrentFieldEvenOdd(); // 1
-extern "C" void VIGetNextField(); // 1
-extern "C" void VIGetCurrentLine(); // 1
-extern "C" void VIGetTvFormat(); // 1
-extern "C" void VIGetDTVStatus(); // 1
-extern "C" static void __VIDisplayPositionToXY(); // 1
-extern "C" static void __VIGetCurrentPosition(); // 1
 
 extern "C" static void __VIRetraceHandler(); // 1
 extern "C" void VISetPreRetraceCallback(); // 1
@@ -74,23 +52,6 @@ extern "C" extern u8 pad_80450A19[4];
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void OSPanic(); // 1
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void __OSLockSram(); // 1
-extern "C" void __OSUnlockSram(); // 1
-extern "C" void OSInitThreadQueue(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void OSWakeupThread(); // 1
-extern "C" void SIRefreshSamplingRate(); // 1
-extern "C" void __shl2i(); // 1
-extern "C" void __shr2u(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void OSPanic(); // 1

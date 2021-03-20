@@ -3,7 +3,9 @@
 // Translation Unit: JSGActor
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStage/JSGActor.h"
 
 // 
 // Types:

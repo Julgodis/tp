@@ -3,7 +3,9 @@
 // Translation Unit: JKRAramArchive
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRAramArchive.h"
 
 // 
 // Types:
@@ -135,19 +137,8 @@ extern "C" extern void* __vt__7JKRFile[8];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1

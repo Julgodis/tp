@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_MemCard
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_MemCard.h"
 
 // 
 // Types:
@@ -53,7 +55,6 @@ struct JKRThread {
 // 
 
 static void mDoMemCd_main(void*); // 2
-extern "C" void __sinit_m_Do_MemCard_cpp(); // 1
 
 extern "C" void __ct__15mDoMemCd_Ctrl_cFv(); // 1
 extern "C" void ThdInit__15mDoMemCd_Ctrl_cFv(); // 1
@@ -85,36 +86,9 @@ extern "C" extern u8 g_mDoMemCd_control[8192];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void mDoExt_getAssertHeap(); // 2
 void mDoMemCdRWm_Store(CARDFileInfo*, void*, u32); // 2
 void mDoMemCdRWm_Restore(CARDFileInfo*, void*, u32); // 2
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void OSTryLockMutex(); // 1
-extern "C" void OSInitCond(); // 1
-extern "C" void OSWaitCond(); // 1
-extern "C" void OSSignalCond(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSGetThreadPriority(); // 1
-extern "C" void CARDInit(); // 1
-extern "C" void CARDFreeBlocks(); // 1
-extern "C" void CARDCheck(); // 1
-extern "C" void CARDProbe(); // 1
-extern "C" void CARDProbeEx(); // 1
-extern "C" void CARDMount(); // 1
-extern "C" void CARDUnmount(); // 1
-extern "C" void CARDFormat(); // 1
-extern "C" void CARDOpen(); // 1
-extern "C" void CARDClose(); // 1
-extern "C" void CARDCreate(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void mDoExt_getAssertHeap__Fv(); // 1

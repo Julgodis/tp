@@ -3,7 +3,9 @@
 // Translation Unit: d/bg/d_bg_s_acch
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_s_acch.h"
 
 // 
 // Types:
@@ -19,13 +21,10 @@ struct dBgS_AcchCir {
 	/* 80077414 */ ~dBgS_AcchCir();
 };
 
-struct Vec {
+struct cXyz {
 };
 
 struct csXyz {
-};
-
-struct cXyz {
 };
 
 struct fopAc_ac_c {
@@ -36,18 +35,18 @@ struct dBgS_SplGrpChk {
 	/* 80078C78 */ ~dBgS_SplGrpChk();
 };
 
-struct dBgS_Acch;
-struct dBgS_RoofChk {
-	/* 80078FF4 */ dBgS_RoofChk();
-	/* 80079090 */ ~dBgS_RoofChk();
-};
-
 struct cBgS_PolyInfo {
 	/* 80268074 */ cBgS_PolyInfo();
 	/* 802680B0 */ ~cBgS_PolyInfo();
 	/* 80268120 */ void ClearPi();
 	/* 8026816C */ void SetActorInfo(int, void*, u32);
 	/* 802681A4 */ void SetPolyIndex(int);
+};
+
+struct dBgS_Acch;
+struct dBgS_RoofChk {
+	/* 80078FF4 */ dBgS_RoofChk();
+	/* 80079090 */ ~dBgS_RoofChk();
 };
 
 struct dBgS {
@@ -57,6 +56,9 @@ struct dBgS {
 	/* 80075564 */ void SplGrpChk(dBgS_SplGrpChk*);
 	/* 80075774 */ void MoveBgCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*, bool, bool);
 	/* 80075B84 */ void RideCallBack(cBgS_PolyInfo const&, fopAc_ac_c*);
+};
+
+struct Vec {
 };
 
 struct dBgS_Acch {
@@ -96,12 +98,12 @@ struct daPy_py_c {
 	/* 80077494 */ bool checkPlayerFly() const;
 };
 
-struct cM3dGPla {
-	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
-};
-
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cM3dGPla {
+	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
 };
 
 struct cBgS_LinChk {
@@ -161,8 +163,6 @@ struct cM3dGLin {
 // Forward References:
 // 
 
-extern "C" static void func_80077484(); // 1
-extern "C" static void func_8007748C(); // 1
 
 extern "C" void __ct__12dBgS_AcchCirFv(); // 1
 extern "C" void ClrWallHit__12dBgS_AcchCirFv(); // 1
@@ -212,13 +212,6 @@ extern "C" extern void* __vt__12dBgS_AcchCir[3];
 
 void cBgW_CheckBGround(f32); // 2
 void operator delete(void*); // 2
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void LineCross__4cBgSFP11cBgS_LinChk(); // 1
 extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: J3DTevs
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DTevs.h"
 
 // 
 // Types:
@@ -153,12 +155,6 @@ void J3DGetTextureMtxOld(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]); // 
 void J3DGetTextureMtxMaya(J3DTextureSRTInfo const&, f32 (* )[4]); // 2
 void J3DGetTextureMtxMayaOld(J3DTextureSRTInfo const&, f32 (* )[4]); // 2
 void J3DMtxProjConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4]); // 2
-extern "C" void PSMTXConcat(); // 1
-extern "C" void GDOverflowed(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void J3DGDSetLightAttn__F10_GXLightIDffffff(); // 1
 extern "C" void J3DGDSetLightColor__F10_GXLightID8_GXColor(); // 1

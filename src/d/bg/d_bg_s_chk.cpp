@@ -3,7 +3,9 @@
 // Translation Unit: d/bg/d_bg_s_chk
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_s_chk.h"
 
 // 
 // Types:
@@ -30,7 +32,6 @@ struct dBgS_PolyPassChk {
 // Forward References:
 // 
 
-extern "C" static void func_80077574(); // 1
 
 extern "C" void __ct__8dBgS_ChkFv(); // 1
 extern "C" void __dt__8dBgS_ChkFv(); // 1

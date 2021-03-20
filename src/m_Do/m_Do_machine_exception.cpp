@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_machine_exception
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_machine_exception.h"
 
 // 
 // Types:
@@ -56,10 +58,6 @@ extern "C" extern char const* const m_Do_m_Do_machine_exception__stringBase0;
 // External References:
 // 
 
-extern "C" void JUTConsole_print_f_va_(); // 1
-extern "C" void OSTicksToCalendarTime(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _restgpr_23(); // 1
 
 extern "C" void dump__14dRes_control_cFv(); // 1
 extern "C" void dump__24DynamicModuleControlBaseFv(); // 1

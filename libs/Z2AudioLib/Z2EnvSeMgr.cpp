@@ -3,16 +3,18 @@
 // Translation Unit: Z2EnvSeMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2EnvSeMgr.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2EnvSeBase {
@@ -218,13 +220,6 @@ extern "C" void startLv3WaterSe__10Z2EnvSeMgrFSc(); // 1
 void dComIfGp_getReverb(int); // 2
 void operator delete(void*); // 2
 void JMAFastVECNormalize(Vec const*, Vec*); // 2
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void dComIfGp_getReverb__Fi(); // 1
 extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1

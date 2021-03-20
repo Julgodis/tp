@@ -3,7 +3,9 @@
 // Translation Unit: JAUSeqDataBlockMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAUSeqDataBlockMgr.h"
 
 // 
 // Types:
@@ -33,10 +35,10 @@ struct JAUSeqDataBlocks {
 struct JKRArchive {
 };
 
-struct JAISeqDataUser {
+struct JAISeqData {
 };
 
-struct JAISeqData {
+struct JAISeqDataUser {
 };
 
 struct JAUDynamicSeqDataBlocks {
@@ -91,14 +93,6 @@ extern "C" void rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv(); // 1
 // External References:
 // 
 
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs(); // 1
 extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl(); // 1

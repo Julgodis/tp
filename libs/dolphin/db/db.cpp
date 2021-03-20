@@ -3,17 +3,14 @@
 // Translation Unit: db
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/db/db.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void DBInit(); // 1
-extern "C" static void __DBExceptionDestinationAux(); // 1
-extern "C" static void __DBExceptionDestination(); // 1
-extern "C" void __DBIsExceptionMarked(); // 1
-extern "C" void DBPrintf(); // 1
 
 extern "C" void DBInit(); // 1
 extern "C" static void __DBExceptionDestinationAux(); // 1
@@ -25,9 +22,6 @@ extern "C" void DBPrintf(); // 1
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void PPCHalt(); // 1
-extern "C" void OSDumpContext(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void PPCHalt(); // 1

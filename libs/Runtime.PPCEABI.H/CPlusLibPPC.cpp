@@ -3,13 +3,14 @@
 // Translation Unit: CPlusLibPPC
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Runtime.PPCEABI.H/CPlusLibPPC.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __copy(); // 1
 
 extern "C" void __copy(); // 1
 

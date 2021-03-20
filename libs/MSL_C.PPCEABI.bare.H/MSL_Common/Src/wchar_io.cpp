@@ -3,13 +3,14 @@
 // Translation Unit: MSL_Common/Src/wchar_io
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/wchar_io.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void fwide(); // 1
 
 extern "C" void fwide(); // 1
 

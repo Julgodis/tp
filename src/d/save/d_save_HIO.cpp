@@ -3,7 +3,9 @@
 // Translation Unit: d/save/d_save_HIO
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/save/d_save_HIO.h"
 
 // 
 // Types:
@@ -127,7 +129,6 @@ struct dSv_danBit_c {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_save_HIO_cpp(); // 1
 
 extern "C" void __ct__29dSvBit_childSwPerfectionHIO_cFv(); // 1
 extern "C" void init__29dSvBit_childSwPerfectionHIO_cFv(); // 1
@@ -178,9 +179,6 @@ extern "C" extern u8 g_save_bit_HIO[1184 + 4 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi(); // 1
 extern "C" void isTransformLV__21dSv_player_status_b_cCFi(); // 1

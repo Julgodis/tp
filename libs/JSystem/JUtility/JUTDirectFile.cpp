@@ -3,7 +3,9 @@
 // Translation Unit: JUTDirectFile
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTDirectFile.h"
 
 // 
 // Types:
@@ -35,16 +37,6 @@ extern "C" void fgets__13JUTDirectFileFPvi(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void DVDOpen(); // 1
-extern "C" void DVDClose(); // 1
-extern "C" void DVDReadAsyncPrio(); // 1
-extern "C" void DVDGetCommandBlockStatus(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void OSEnableInterrupts(); // 1

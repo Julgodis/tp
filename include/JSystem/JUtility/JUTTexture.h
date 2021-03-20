@@ -1,6 +1,7 @@
-#ifndef JSYSTEM_JUTILITY_TEXTURE_H
-#define JSYSTEM_JUTILITY_TEXTURE_H
+#ifndef JUTTEXTURE_H
+#define JUTTEXTURE_H
 
-struct ResTIMG {};
+#include "dolphin/types.h"
 
-#endif  // JSYSTEM_JUTILITY_TEXTURE_H
+
+#endif /* JUTTEXTURE_H */

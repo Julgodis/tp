@@ -3,7 +3,9 @@
 // Translation Unit: d/d_lib
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_lib.h"
 
 // 
 // Types:
@@ -105,10 +107,6 @@ extern "C" extern u8 struct_80450DF0[8];
 // 
 
 void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-extern "C" void OSGetTime(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
 extern "C" void searchMapEventData__14dEvt_control_cFUc(); // 1

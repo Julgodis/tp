@@ -3,28 +3,15 @@
 // Translation Unit: J3DModelLoader
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphLoader/J3DModelLoader.h"
 
 // 
 // Types:
 // 
 
-struct J3DDrawBlock {
-};
-
-struct J3DEnvelopeBlock {
-};
-
-struct J3DJointBlock {
-};
-
-struct J3DVertexBlock {
-};
-
 struct J3DModelInfoBlock {
-};
-
-struct J3DMaterialDLBlock {
 };
 
 struct J3DMaterialBlock_v21 {
@@ -33,10 +20,25 @@ struct J3DMaterialBlock_v21 {
 struct J3DShapeBlock {
 };
 
+struct J3DJointBlock {
+};
+
+struct J3DDrawBlock {
+};
+
+struct J3DMaterialDLBlock {
+};
+
+struct J3DEnvelopeBlock {
+};
+
 struct J3DTextureBlock {
 };
 
 struct J3DMaterialBlock {
+};
+
+struct J3DVertexBlock {
 };
 
 struct J3DModelLoader {
@@ -156,10 +158,10 @@ struct J3DShapeTable {
 	/* 8032597C */ void sortVcdVatCmd();
 };
 
-struct J3DJoint {
+struct J3DModelHierarchy {
 };
 
-struct J3DModelHierarchy {
+struct J3DJoint {
 };
 
 struct J3DMaterialTable {
@@ -230,7 +232,6 @@ struct J3DShapeFactory {
 
 static void getFmtType(_GXVtxAttrFmtList*, _GXAttr); // 2
 static void JSUConvertOffsetToPtr__template66(void const*, void const*); // 2
-extern "C" static void func_80336704(); // 1
 static void JSUConvertOffsetToPtr__template67(void const*, void const*); // 2
 static void JSUConvertOffsetToPtr__template68(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template69(void const*, void const*); // 2
@@ -289,7 +290,6 @@ extern "C" extern char const* const J3DModelLoader__stringBase0;
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
 void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void* operator new[](u32, int); // 2
@@ -298,18 +298,6 @@ void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template39(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template41(void const*, void const*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform(); // 1

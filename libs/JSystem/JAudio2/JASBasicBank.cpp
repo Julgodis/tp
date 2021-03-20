@@ -3,7 +3,9 @@
 // Translation Unit: JASBasicBank
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASBasicBank.h"
 
 // 
 // Types:
@@ -12,10 +14,10 @@
 struct JKRHeap {
 };
 
-struct JASInst {
+struct JASInstParam {
 };
 
-struct JASInstParam {
+struct JASInst {
 };
 
 struct JASBasicBank {
@@ -57,8 +59,6 @@ extern "C" extern void* __vt__7JASBank[5];
 
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void bzero__7JASCalcFPvUl(); // 1
 extern "C" void* __nwa__FUlP7JKRHeapi(); // 1

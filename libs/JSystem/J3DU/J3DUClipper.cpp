@@ -3,7 +3,9 @@
 // Translation Unit: J3DUClipper
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DU/J3DUClipper.h"
 
 // 
 // Types:
@@ -38,12 +40,6 @@ extern "C" extern char const* const J3DUClipper__stringBase0;
 // External References:
 // 
 
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void tan(); // 1
 
 extern "C" void PSMTXMultVec(); // 1
 extern "C" void PSVECNormalize(); // 1

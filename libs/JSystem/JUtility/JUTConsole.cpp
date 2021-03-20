@@ -3,7 +3,9 @@
 // Translation Unit: JUTConsole
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTConsole.h"
 
 // 
 // Types:
@@ -88,16 +90,6 @@ struct J2DOrthoGraph {
 // Forward References:
 // 
 
-extern "C" void JUTConsole_print_f_va_(); // 1
-extern "C" void JUTSetReportConsole(); // 1
-extern "C" static void JUTGetReportConsole(); // 1
-extern "C" void JUTSetWarningConsole(); // 1
-extern "C" static void JUTGetWarningConsole(); // 1
-extern "C" static void JUTReportConsole_f_va(); // 1
-extern "C" void JUTReportConsole_f(); // 1
-extern "C" void JUTReportConsole(); // 1
-extern "C" void JUTWarningConsole_f(); // 1
-extern "C" void JUTWarningConsole(); // 1
 
 extern "C" void create__10JUTConsoleFUiUiP7JKRHeap(); // 1
 extern "C" void create__10JUTConsoleFUiPvUl(); // 1
@@ -137,23 +129,9 @@ extern "C" extern u8 sManager__17JUTConsoleManager[4];
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
 void J2DFillBox(f32, f32, f32, f32, JUtility::TColor); // 2
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void vsnprintf(); // 1
-extern "C" void strlen(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1

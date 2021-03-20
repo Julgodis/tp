@@ -3,13 +3,14 @@
 // Translation Unit: MetroTRK/Portable/msg
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msg.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRKMessageSend(); // 1
 
 extern "C" void TRKMessageSend(); // 1
 
@@ -17,8 +18,6 @@ extern "C" void TRKMessageSend(); // 1
 // External References:
 // 
 
-extern "C" void TRKWriteUARTN(); // 1
-extern "C" void MWTRACE(); // 1
 
 extern "C" void TRKWriteUARTN(); // 1
 extern "C" void MWTRACE(); // 1

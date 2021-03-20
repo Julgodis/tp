@@ -3,7 +3,9 @@
 // Translation Unit: random
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JMath/random.h"
 
 // 
 // Types:

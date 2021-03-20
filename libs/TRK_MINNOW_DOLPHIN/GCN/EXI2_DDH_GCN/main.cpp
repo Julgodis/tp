@@ -3,22 +3,14 @@
 // Translation Unit: GCN/EXI2_DDH_GCN/main
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/GCN/EXI2_DDH_GCN/main.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void ddh_cc_initinterrupts(); // 1
-extern "C" void ddh_cc_peek(); // 1
-extern "C" void ddh_cc_post_stop(); // 1
-extern "C" void ddh_cc_pre_continue(); // 1
-extern "C" void ddh_cc_write(); // 1
-extern "C" void ddh_cc_read(); // 1
-extern "C" bool ddh_cc_close(); // 1
-extern "C" void ddh_cc_open(); // 1
-extern "C" bool ddh_cc_shutdown(); // 1
-extern "C" void ddh_cc_initialize(); // 1
 
 extern "C" void ddh_cc_initinterrupts(); // 1
 extern "C" void ddh_cc_peek(); // 1
@@ -37,18 +29,6 @@ extern "C" extern u8 const GCN_EXI2_DDH_GCN_main__lit_320[28];
 // External References:
 // 
 
-extern "C" void CircleBufferReadBytes(); // 1
-extern "C" void CircleBufferWriteBytes(); // 1
-extern "C" void CircleBufferInitialize(); // 1
-extern "C" void CBGetBytesAvailableForRead(); // 1
-extern "C" void MWTRACE(); // 1
-extern "C" void EXI2_Init(); // 1
-extern "C" void EXI2_EnableInterrupts(); // 1
-extern "C" bool EXI2_Poll(); // 1
-extern "C" bool EXI2_ReadN(); // 1
-extern "C" bool EXI2_WriteN(); // 1
-extern "C" void EXI2_Reserve(); // 1
-extern "C" void EXI2_Unreserve(); // 1
 
 extern "C" void CircleBufferReadBytes(); // 1
 extern "C" void CircleBufferWriteBytes(); // 1

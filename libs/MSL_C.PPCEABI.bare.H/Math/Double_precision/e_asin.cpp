@@ -3,13 +3,14 @@
 // Translation Unit: Math/Double_precision/e_asin
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/Math/Double_precision/e_asin.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __ieee754_asin(); // 1
 
 extern "C" void __ieee754_asin(); // 1
 
@@ -17,7 +18,6 @@ extern "C" void __ieee754_asin(); // 1
 // External References:
 // 
 
-extern "C" void sqrt(); // 1
 
 extern "C" void sqrt(); // 1
 extern "C" extern u32 __float_nan;

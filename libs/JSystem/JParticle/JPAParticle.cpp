@@ -3,7 +3,9 @@
 // Translation Unit: JPAParticle
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAParticle.h"
 
 // 
 // Types:
@@ -13,12 +15,12 @@ struct JPAParticleCallBack {
 	/* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
-struct JPAEmitterWorkData {
-};
-
 struct JPABaseParticle;
 struct JPABaseEmitter {
 	/* 8027EB60 */ void createChild(JPABaseParticle*);
+};
+
+struct JPAEmitterWorkData {
 };
 
 struct JPABaseParticle {
@@ -61,12 +63,6 @@ extern "C" void getHeight__15JPABaseParticleCFPC14JPABaseEmitter(); // 1
 void JPAGetYZRotateMtx(s16, s16, f32 (* )[4]); // 2
 void operator delete(void*); // 2
 void JMAVECScaleAdd(Vec const*, Vec const*, Vec*, f32); // 2
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void calc_p__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
 extern "C" void calc_c__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle(); // 1

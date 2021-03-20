@@ -3,26 +3,14 @@
 // Translation Unit: MetroTRK/Portable/msgbuf
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/msgbuf.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRKReadBuffer_ui32(); // 1
-extern "C" void TRKReadBuffer_ui8(); // 1
-extern "C" void TRKReadBuffer1_ui64(); // 1
-extern "C" void TRKAppendBuffer_ui32(); // 1
-extern "C" void TRKAppendBuffer_ui8(); // 1
-extern "C" void TRKAppendBuffer1_ui64(); // 1
-extern "C" void TRKReadBuffer(); // 1
-extern "C" void TRKAppendBuffer(); // 1
-extern "C" void TRKSetBufferPosition(); // 1
-extern "C" void TRKResetBuffer(); // 1
-extern "C" void TRKReleaseBuffer(); // 1
-extern "C" void TRKGetBuffer(); // 1
-extern "C" void TRKGetFreeBuffer(); // 1
-extern "C" void TRKInitializeMessageBuffers(); // 1
 
 extern "C" void TRKReadBuffer_ui32(); // 1
 extern "C" void TRKReadBuffer_ui8(); // 1
@@ -43,12 +31,6 @@ extern "C" void TRKInitializeMessageBuffers(); // 1
 // External References:
 // 
 
-SECTION_INIT void TRK_memset(); // 1
-SECTION_INIT void TRK_memcpy(); // 1
-extern "C" void usr_puts_serial(); // 1
-extern "C" bool TRKReleaseMutex(); // 1
-extern "C" bool TRKAcquireMutex(); // 1
-extern "C" bool TRKInitializeMutex(); // 1
 
 SECTION_INIT void TRK_memset(); // 1
 SECTION_INIT void TRK_memcpy(); // 1

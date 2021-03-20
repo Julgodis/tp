@@ -3,19 +3,21 @@
 // Translation Unit: d/meter/d_meter_haihai
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/meter/d_meter_haihai.h"
 
 // 
 // Types:
 // 
 
-struct J2DAnmTransformKey {
+struct J2DAnmColor {
 };
 
 struct J2DAnmTextureSRTKey {
 };
 
-struct J2DAnmColor {
+struct J2DAnmTransformKey {
 };
 
 struct dMeterHaihai_c {
@@ -43,9 +45,6 @@ struct dMeterSub_c {
 	/* 80194138 */ bool isDead();
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -57,6 +56,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -111,8 +113,6 @@ extern "C" extern char const* const d_meter_d_meter_haihai__stringBase0;
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" bool isDead__11dMeterSub_cFv(); // 1
 extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1

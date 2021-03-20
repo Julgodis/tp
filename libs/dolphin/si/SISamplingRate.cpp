@@ -3,14 +3,14 @@
 // Translation Unit: SISamplingRate
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/si/SISamplingRate.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void SISetSamplingRate(); // 1
-extern "C" void SIRefreshSamplingRate(); // 1
 
 extern "C" void SISetSamplingRate(); // 1
 extern "C" void SIRefreshSamplingRate(); // 1
@@ -21,11 +21,6 @@ extern "C" extern u8 lit_16[51 + 5 /* padding */];
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void SISetXY(); // 1
-extern "C" void VIGetTvFormat(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void OSDisableInterrupts(); // 1

@@ -3,24 +3,14 @@
 // Translation Unit: vec
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/mtx/vec.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void C_VECHalfAngle(); // 1
-extern "C" void C_VECReflect(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void PSVECDistance(); // 1
 
 extern "C" void PSVECAdd(); // 1
 extern "C" void PSVECSubtract(); // 1

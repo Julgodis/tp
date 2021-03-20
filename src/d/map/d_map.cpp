@@ -3,7 +3,9 @@
 // Translation Unit: d/map/d_map
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/map/d_map.h"
 
 // 
 // Types:
@@ -289,17 +291,6 @@ void* operator new(u32, int); // 2
 void* operator new[](u32, int); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2
-extern "C" void DCStoreRange(); // 1
-extern "C" void GXGetTexBufferSize(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void dComIfGp_isLightDropMapVisible__Fv(); // 1
 extern "C" void isTbox__12dSv_memBit_cCFi(); // 1

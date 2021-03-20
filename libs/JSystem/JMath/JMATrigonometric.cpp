@@ -3,7 +3,9 @@
 // Translation Unit: JMATrigonometric
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JMath/JMATrigonometric.h"
 
 // 
 // Types:
@@ -23,7 +25,6 @@ namespace std {
 // Forward References:
 // 
 
-extern "C" void __sinit_JMATrigonometric_cpp(); // 1
 
 extern "C" void __sinit_JMATrigonometric_cpp(); // 1
 extern "C" void func_80339CB0(); // 1
@@ -34,13 +35,6 @@ extern "C" extern u8 asinAcosTable___5JMath[4128];
 // External References:
 // 
 
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void atan(); // 1
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
-extern "C" void asin(); // 1
 
 extern "C" void __construct_array(); // 1
 extern "C" void _savegpr_27(); // 1

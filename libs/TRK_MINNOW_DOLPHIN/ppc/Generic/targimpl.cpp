@@ -3,41 +3,14 @@
 // Translation Unit: ppc/Generic/targimpl
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/ppc/Generic/targimpl.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __TRK_get_MSR(); // 1
-extern "C" static void __TRK_set_MSR(); // 1
-extern "C" static void TRK_ppc_memcpy(); // 1
-extern "C" void TRKInterruptHandler(); // 1
-extern "C" static void TRKExceptionHandler(); // 1
-extern "C" void TRKSwapAndGo(); // 1
-extern "C" static void TRKInterruptHandlerEnableInterrupts(); // 1
-extern "C" static void ReadFPSCR(); // 1
-extern "C" static void WriteFPSCR(); // 1
-extern "C" void TRKTargetAccessARAM(); // 1
-extern "C" void TRKTargetSetInputPendingPtr(); // 1
-extern "C" void TRKTargetStop(); // 1
-extern "C" void TRKTargetSetStopped(); // 1
-extern "C" void TRKTargetStopped(); // 1
-extern "C" void TRKTargetSupportRequest(); // 1
-extern "C" void TRKTargetGetPC(); // 1
-extern "C" void TRKTargetStepOutOfRange(); // 1
-extern "C" void TRKTargetSingleStep(); // 1
-extern "C" void TRKTargetAddExceptionInfo(); // 1
-extern "C" void TRKTargetAddStopInfo(); // 1
-extern "C" void TRKTargetInterrupt(); // 1
-extern "C" static void TRKPostInterruptEvent(); // 1
-extern "C" void TRKTargetAccessExtended2(); // 1
-extern "C" void TRKTargetAccessExtended1(); // 1
-extern "C" void TRKTargetAccessFP(); // 1
-extern "C" void TRKTargetAccessDefault(); // 1
-extern "C" static void TRKTargetReadInstruction(); // 1
-extern "C" void TRKTargetAccessMemory(); // 1
-extern "C" static void TRKValidMemory32(); // 1
 
 extern "C" void __TRK_get_MSR(); // 1
 extern "C" static void __TRK_set_MSR(); // 1
@@ -77,27 +50,6 @@ extern "C" extern u8 gTRKCPUState[1072];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-extern "C" void TRKConstructEvent(); // 1
-extern "C" void TRKPostEvent(); // 1
-extern "C" void TRKReadBuffer_ui32(); // 1
-extern "C" void TRKReadBuffer1_ui64(); // 1
-extern "C" void TRKAppendBuffer_ui32(); // 1
-extern "C" void TRKAppendBuffer_ui8(); // 1
-extern "C" void TRKAppendBuffer1_ui64(); // 1
-extern "C" void HandlePositionFileSupportRequest(); // 1
-extern "C" void HandleCloseFileSupportRequest(); // 1
-extern "C" void HandleOpenFileSupportRequest(); // 1
-extern "C" void TRKSuppAccessFile(); // 1
-extern "C" void TRKDoNotifyStopped(); // 1
-extern "C" void TRK_flush_cache(); // 1
-extern "C" void TRKSaveExtended1Block(); // 1
-extern "C" void TRKRestoreExtended1Block(); // 1
-extern "C" void TRK__write_aram(); // 1
-extern "C" void TRK__read_aram(); // 1
-extern "C" void TRKTargetTranslate(); // 1
-extern "C" void TRKUARTInterruptHandler(); // 1
-extern "C" void MWTRACE(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void TRKConstructEvent(); // 1

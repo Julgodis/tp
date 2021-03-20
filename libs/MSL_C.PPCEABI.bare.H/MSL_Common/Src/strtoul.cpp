@@ -3,15 +3,14 @@
 // Translation Unit: MSL_Common/Src/strtoul
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/strtoul.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void strtol(); // 1
-extern "C" void strtoul(); // 1
-extern "C" static void __strtoul(); // 1
 
 extern "C" void strtol(); // 1
 extern "C" void strtoul(); // 1
@@ -21,7 +20,6 @@ extern "C" static void __strtoul(); // 1
 // External References:
 // 
 
-extern "C" void __StringRead(); // 1
 
 extern "C" void __StringRead(); // 1
 extern "C" extern u8 __ctype_map[256];

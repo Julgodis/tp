@@ -3,7 +3,9 @@
 // Translation Unit: c_list_iter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_list_iter.h"
 
 // 
 // Types:

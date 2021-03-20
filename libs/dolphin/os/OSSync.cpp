@@ -3,15 +3,14 @@
 // Translation Unit: OSSync
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSSync.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void SystemCallVector(); // 1
-extern "C" static void __OSSystemCallVectorEnd(); // 1
-extern "C" void __OSInitSystemCall(); // 1
 
 extern "C" static void SystemCallVector(); // 1
 extern "C" static void __OSSystemCallVectorEnd(); // 1
@@ -21,9 +20,6 @@ extern "C" void __OSInitSystemCall(); // 1
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void DCFlushRangeNoSync(); // 1
-extern "C" void ICInvalidateRange(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void DCFlushRangeNoSync(); // 1

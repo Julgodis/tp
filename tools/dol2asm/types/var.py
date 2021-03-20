@@ -3,6 +3,10 @@ from .base import *
 
 @dataclass(frozen=True,eq=True)
 class VariadicType(Type):
+
+    def __hash__(self):
+        return hash("VARIADIC_TYPE")
+
     def type(self) -> str:
         return f"..."
 

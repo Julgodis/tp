@@ -3,7 +3,9 @@
 // Translation Unit: JUTCacheFont
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTCacheFont.h"
 
 // 
 // Types:
@@ -132,25 +134,10 @@ extern "C" extern char const* const JUTCacheFont__stringBase0;
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void* operator new(u32, JKRHeap*, int); // 2
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2
-extern "C" void JUTReportConsole(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void* __nw__FUlP7JKRHeapi(); // 1

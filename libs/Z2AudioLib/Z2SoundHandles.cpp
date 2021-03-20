@@ -3,11 +3,16 @@
 // Translation Unit: Z2SoundHandles
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2SoundHandles.h"
 
 // 
 // Types:
 // 
+
+struct JAISoundID {
+};
 
 struct JGeometry {
 	template <typename A1>
@@ -16,9 +21,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundID {
 };
 
 struct Z2SoundHandles {
@@ -93,11 +95,6 @@ extern "C" extern u8 data_804341C4[16 + 4 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void __ct__17JASGenericMemPoolFv(); // 1
 extern "C" void __dt__17JASGenericMemPoolFv(); // 1

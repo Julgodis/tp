@@ -3,15 +3,14 @@
 // Translation Unit: MetroTRK/Portable/nubinit
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/nubinit.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRKNubWelcome(); // 1
-extern "C" void TRKTerminateNub(); // 1
-extern "C" void TRKInitializeNub(); // 1
 
 extern "C" void TRKNubWelcome(); // 1
 extern "C" void TRKTerminateNub(); // 1
@@ -22,18 +21,6 @@ SECTION_BSS extern u8 gTRKBigEndian[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void TRKInitializeEventQueue(); // 1
-extern "C" void TRKInitializeMessageBuffers(); // 1
-extern "C" bool TRKTerminateSerialHandler(); // 1
-extern "C" void TRKInitializeSerialHandler(); // 1
-extern "C" void usr_put_initialize(); // 1
-extern "C" bool TRKInitializeDispatcher(); // 1
-extern "C" void TRKTargetSetInputPendingPtr(); // 1
-extern "C" void TRKInitializeTarget(); // 1
-extern "C" void InitializeProgramEndTrap(); // 1
-extern "C" void TRK_board_display(); // 1
-extern "C" void TRKInitializeIntDrivenUART(); // 1
-extern "C" void MWTRACE(); // 1
 
 extern "C" void TRKInitializeEventQueue(); // 1
 extern "C" void TRKInitializeMessageBuffers(); // 1

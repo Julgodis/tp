@@ -3,18 +3,14 @@
 // Translation Unit: CARDUnlock
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDUnlock.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void bitrev(); // 1
-extern "C" static void ReadArrayUnlock(); // 1
-extern "C" static void DummyLen(); // 1
-extern "C" void __CARDUnlock(); // 1
-extern "C" static void InitCallback(); // 1
-extern "C" static void DoneCallback(); // 1
 
 extern "C" static void bitrev(); // 1
 extern "C" static void ReadArrayUnlock(); // 1
@@ -27,20 +23,6 @@ extern "C" static void DoneCallback(); // 1
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-extern "C" void DSPAddTask(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCFlushRange(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void EXIImmEx(); // 1
-extern "C" void EXIProbe(); // 1
-extern "C" void EXISelect(); // 1
-extern "C" void EXIDeselect(); // 1
-extern "C" void EXIUnlock(); // 1
-extern "C" void DSPCheckMailToDSP(); // 1
-extern "C" void DSPSendMailToDSP(); // 1
-extern "C" void __CARDReadStatus(); // 1
-extern "C" void __CARDMountCallback(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void DSPAddTask(); // 1

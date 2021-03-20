@@ -3,7 +3,9 @@
 // Translation Unit: JASSimpleWaveBank
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASSimpleWaveBank.h"
 
 // 
 // Types:
@@ -44,7 +46,6 @@ struct JASWaveArc {
 // Forward References:
 // 
 
-extern "C" static void func_80298FA8(); // 1
 
 extern "C" void __ct__17JASSimpleWaveBankFv(); // 1
 extern "C" void __dt__17JASSimpleWaveBankFv(); // 1
@@ -67,10 +68,6 @@ extern "C" static void func_80298FA8(); // 1
 
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void __destroy_new_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__10JASWaveArcFv(); // 1
 extern "C" void __dt__10JASWaveArcFv(); // 1

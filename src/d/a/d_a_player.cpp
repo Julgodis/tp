@@ -3,7 +3,9 @@
 // Translation Unit: d/a/d_a_player
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/a/d_a_player.h"
 
 // 
 // Types:
@@ -250,25 +252,6 @@ void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void* operator new[](u32, int); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
 extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: c_m3d
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_m3d.h"
 
 // 
 // Types:
@@ -115,7 +117,6 @@ void cM3d_lineVsPosSuisenCross(cM3dGLin const*, Vec const*, Vec*); // 2
 void cM3d_lineVsPosSuisenCross(Vec const&, Vec const&, Vec const&, Vec*); // 2
 void cM3d_2PlaneLinePosNearPos(cM3dGPla const&, cM3dGPla const&, Vec const*, Vec*); // 2
 void cM3d_CrawVec(Vec const&, Vec const&, Vec*); // 2
-extern "C" void __sinit_c_m3d_cpp(); // 1
 
 extern "C" static void cM3d_InDivPos1__FPC3VecPC3VecfP3Vec(); // 1
 extern "C" void cM3d_InDivPos2__FPC3VecPC3VecfP3Vec(); // 1
@@ -189,23 +190,6 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 // 
 
 void cM_atan2s(f32, f32); // 2
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void PSVECDistance(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void cM_atan2s__Fff(); // 1
 extern "C" void __ct__8cM3dGLinFRC4cXyzRC4cXyz(); // 1

@@ -3,13 +3,14 @@
 // Translation Unit: utils/common/MWTrace
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/utils/common/MWTrace.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void MWTRACE(); // 1
 
 extern "C" void MWTRACE(); // 1
 

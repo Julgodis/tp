@@ -3,7 +3,9 @@
 // Translation Unit: GFTev
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gf/GFTev.h"
 
 // 
 // Types:

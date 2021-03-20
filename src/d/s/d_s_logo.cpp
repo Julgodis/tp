@@ -3,7 +3,9 @@
 // Translation Unit: d/s/d_s_logo
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/s/d_s_logo.h"
 
 // 
 // Types:
@@ -125,10 +127,10 @@ struct JFWDisplay {
 	/* 80272C60 */ void waitBlanking(int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -171,7 +173,6 @@ static void dScnLogo_Draw(dScnLogo_c*); // 2
 static void dScnLogo_Delete(dScnLogo_c*); // 2
 static bool dScnLogo_IsDelete(dScnLogo_c*); // 2
 static void cLib_calcTimer__template5(u16*); // 2
-extern "C" void __sinit_d_s_logo_cpp(); // 1
 
 extern "C" void __ct__10dLog_HIO_cFv(); // 1
 extern "C" void preLoad_dyl_create__10dScnLogo_cFv(); // 1
@@ -238,7 +239,6 @@ extern "C" extern void* g_profile_LOGO_SCENE[10];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
 void mDoExt_getGameHeap(); // 2
 void mDoExt_getJ2dHeap(); // 2
 void mDoExt_setCurrentHeap(JKRHeap*); // 2
@@ -256,19 +256,6 @@ void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2
-extern "C" void OSGetProgressiveMode(); // 1
-extern "C" void OSSetProgressiveMode(); // 1
-extern "C" void VIGetDTVStatus(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void mDoExt_getGameHeap__Fv(); // 1

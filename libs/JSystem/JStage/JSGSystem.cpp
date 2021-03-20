@@ -3,13 +3,18 @@
 // Translation Unit: JSGSystem
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStage/JSGSystem.h"
 
 // 
 // Types:
 // 
 
 struct JStage {
+	struct TEObject {
+	};
+
 	struct TObject {
 		/* 80280DD4 */ ~TObject();
 		/* 80280E1C */ bool JSGGetName() const;
@@ -23,9 +28,6 @@ struct JStage {
 		/* 80280E48 */ void JSGSetRelation(bool, JStage::TObject*, u32);
 		/* 80280E4C */ s32 JSGFindNodeID(char const*) const;
 		/* 80280E54 */ void JSGGetNodeTransformation(u32, f32 (* )[4]) const;
-	};
-
-	struct TEObject {
 	};
 
 	struct TSystem {

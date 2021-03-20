@@ -3,19 +3,23 @@
 // Translation Unit: d/pane/d_pane_class
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/pane/d_pane_class.h"
 
 // 
 // Types:
 // 
 
-struct JUtility {
-	struct TColor {
-	};
-
+struct JSURandomInputStream {
+	/* 80255328 */ ~JSURandomInputStream();
 };
 
-struct JKRExpHeap {
+struct JKRArchive {
+};
+
+struct J2DScreen {
+	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
 };
 
 struct J2DRotateAxis {
@@ -29,15 +33,13 @@ struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 };
 
-struct JSURandomInputStream {
-	/* 80255328 */ ~JSURandomInputStream();
+struct JKRExpHeap {
 };
 
-struct JKRArchive {
-};
+struct JUtility {
+	struct TColor {
+	};
 
-struct J2DScreen {
-	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
 };
 
 struct CPaneMgr {
@@ -124,7 +126,6 @@ struct J2DOrthoGraph {
 void dPaneClass_showNullPane(J2DScreen*); // 2
 static void dPaneClass_showNullPane(J2DPane*); // 2
 void dPaneClass_setPriority(void**, JKRHeap*, J2DScreen*, char const*, u32, JKRArchive*); // 2
-extern "C" void __sinit_d_pane_class_cpp(); // 1
 
 extern "C" void __ct__8CPaneMgrFv(); // 1
 extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
@@ -166,20 +167,6 @@ extern "C" extern void* __vt__10JSUIosBase[3];
 void mDoExt_getCurrentHeap(); // 2
 void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, char const*); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void mDoExt_getCurrentHeap__Fv(); // 1
 extern "C" void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc(); // 1

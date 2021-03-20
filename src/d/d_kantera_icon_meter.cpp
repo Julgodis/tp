@@ -3,7 +3,9 @@
 // Translation Unit: d/d_kantera_icon_meter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_kantera_icon_meter.h"
 
 // 
 // Types:
@@ -24,9 +26,6 @@ struct dDlst_KanteraIcon_c {
 	/* 801AED1C */ ~dDlst_KanteraIcon_c();
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -37,6 +36,9 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {

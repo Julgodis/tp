@@ -3,7 +3,9 @@
 // Translation Unit: J2DManage
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DManage.h"
 
 // 
 // Types:
@@ -37,9 +39,6 @@ extern "C" void getName__15J2DResReferenceCFUs(); // 1
 // External References:
 // 
 
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void read__14JSUInputStreamFPvl(); // 1
 extern "C" void _savegpr_29(); // 1

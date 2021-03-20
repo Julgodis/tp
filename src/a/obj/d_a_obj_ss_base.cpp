@@ -3,7 +3,9 @@
 // Translation Unit: a/obj/d_a_obj_ss_base
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "a/obj/d_a_obj_ss_base.h"
 
 // 
 // Types:

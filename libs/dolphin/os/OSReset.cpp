@@ -3,19 +3,14 @@
 // Translation Unit: OSReset
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSReset.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void OSRegisterResetFunction(); // 1
-extern "C" static void __OSCallResetFunctions(); // 1
-extern "C" static void Reset(); // 1
-extern "C" static void KillThreads(); // 1
-extern "C" void __OSDoHotReset(); // 1
-extern "C" void OSResetSystem(); // 1
-extern "C" void OSGetResetCode(); // 1
 
 extern "C" void OSRegisterResetFunction(); // 1
 extern "C" static void __OSCallResetFunctions(); // 1
@@ -29,20 +24,6 @@ extern "C" void OSGetResetCode(); // 1
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void __OSStopAudioSystem(); // 1
-extern "C" void ICFlashInvalidate(); // 1
-extern "C" void LCDisable(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void __OSReboot(); // 1
-extern "C" void __OSLockSram(); // 1
-extern "C" void __OSUnlockSram(); // 1
-extern "C" void __OSSyncSram(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void OSCancelThread(); // 1
-extern "C" void __PADDisableRecalibration(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void OSReport(); // 1

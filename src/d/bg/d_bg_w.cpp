@@ -3,7 +3,9 @@
 // Translation Unit: d/bg/d_bg_w
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_w.h"
 
 // 
 // Types:
@@ -19,29 +21,29 @@ struct cBgW_NodeTree {
 	/* 80079238 */ ~cBgW_NodeTree();
 };
 
-struct cBgS_PolyPassChk {
-};
-
 struct cXyz {
 };
 
-struct cBgS_LinChk {
+struct cBgS_GrpPassChk {
+};
+
+struct cBgD_t {
 };
 
 struct cBgS_ShdwDraw {
+};
+
+struct cBgS_GndChk {
 };
 
 struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
-struct cBgD_t {
+struct cBgS_PolyPassChk {
 };
 
-struct cBgS_GndChk {
-};
-
-struct cBgS_GrpPassChk {
+struct cBgS_LinChk {
 };
 
 struct cBgW {
@@ -110,11 +112,11 @@ struct cBgW_GrpElm {
 	/* 8007A1E4 */ cBgW_GrpElm();
 };
 
-struct Vec {
-};
-
 struct cM3dGPla {
 	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
+};
+
+struct Vec {
 };
 
 struct cM3dGTri {
@@ -122,10 +124,7 @@ struct cM3dGTri {
 	/* 8026F85C */ void setBg(Vec const*, Vec const*, Vec const*, cM3dGPla const*);
 };
 
-struct csXyz {
-};
-
-struct dBgS_SphChk {
+struct dBgS_SplGrpChk {
 };
 
 struct dBgS_Acch {
@@ -138,7 +137,10 @@ struct dBgS_Acch {
 struct dBgS_CaptPoly {
 };
 
-struct dBgS_SplGrpChk {
+struct csXyz {
+};
+
+struct dBgS_SphChk {
 };
 
 struct dBgS_RoofChk {
@@ -417,29 +419,6 @@ void cM3d_Cross_SphTri(cM3dGSph const*, cM3dGTri const*, Vec*); // 2
 void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void SetOldShapeAngleY__9dBgW_BaseFs(); // 1
 extern "C" void GetSpeedY__9dBgS_AcchFv(); // 1

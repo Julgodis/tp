@@ -11,6 +11,9 @@ class TranslationUnit:
     def source_path(self, library):
         return library.source_path.joinpath(f"{self.name}.cpp")
 
+    def include_path(self, library):
+        return library.include_path.joinpath(f"{self.name}.h")
+
     def object_path(self, library):
         return library.source_path.joinpath(f"{self.name}.o")
 

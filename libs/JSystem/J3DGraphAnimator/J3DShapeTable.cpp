@@ -3,7 +3,9 @@
 // Translation Unit: J3DShapeTable
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphAnimator/J3DShapeTable.h"
 
 // 
 // Types:
@@ -41,10 +43,6 @@ extern "C" void sortVcdVatCmd__13J3DShapeTableFv(); // 1
 // External References:
 // 
 
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void isSameVcdVatCmd__8J3DShapeFP8J3DShape(); // 1
 extern "C" void makeVcdVatCmd__8J3DShapeFv(); // 1

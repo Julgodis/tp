@@ -6,6 +6,9 @@ from .base import *
 class BuiltinType(Type):
     name: str
 
+    def __hash__(self):
+        return hash(self.name)
+
     def type(self) -> str:
         return self.name
 

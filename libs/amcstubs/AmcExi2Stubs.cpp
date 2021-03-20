@@ -3,20 +3,14 @@
 // Translation Unit: AmcExi2Stubs
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "amcstubs/AmcExi2Stubs.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void EXI2_Init(); // 1
-extern "C" void EXI2_EnableInterrupts(); // 1
-extern "C" bool EXI2_Poll(); // 1
-extern "C" bool EXI2_ReadN(); // 1
-extern "C" bool EXI2_WriteN(); // 1
-extern "C" void EXI2_Reserve(); // 1
-extern "C" void EXI2_Unreserve(); // 1
-extern "C" bool AMC_IsStub(); // 1
 
 extern "C" void EXI2_Init(); // 1
 extern "C" void EXI2_EnableInterrupts(); // 1

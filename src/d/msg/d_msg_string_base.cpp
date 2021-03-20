@@ -3,19 +3,21 @@
 // Translation Unit: d/msg/d_msg_string_base
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/msg/d_msg_string_base.h"
 
 // 
 // Types:
 // 
 
+struct JUTFont {
+};
+
 struct J2DTextBox {
 };
 
 struct COutFont_c {
-};
-
-struct JUTFont {
 };
 
 struct dMsgStringBase_c {
@@ -121,15 +123,6 @@ extern "C" extern char const* const d_msg_d_msg_string_base__stringBase0;
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void __ct__26jmessage_string_tReferenceFv(); // 1
 extern "C" void init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc(); // 1

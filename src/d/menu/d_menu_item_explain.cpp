@@ -3,14 +3,13 @@
 // Translation Unit: d/menu/d_menu_item_explain
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_item_explain.h"
 
 // 
 // Types:
 // 
-
-struct JKRExpHeap {
-};
 
 struct STControl {
 	/* 8003219C */ void checkTrigger();
@@ -18,10 +17,13 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct J2DOrthoGraph {
+struct JKRExpHeap {
 };
 
 struct JKRArchive {
+};
+
+struct J2DOrthoGraph {
 };
 
 struct dMenu_ItemExplain_c {
@@ -71,13 +73,10 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct JMSMesgEntry_c {
-};
-
 struct JUTFont {
 };
 
-struct ResTLUT {
+struct JMSMesgEntry_c {
 };
 
 struct ResTIMG {
@@ -90,6 +89,9 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct ResTLUT {
 };
 
 struct J2DPicture {
@@ -151,10 +153,10 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -184,7 +186,6 @@ struct J2DTextBox {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_item_explain_cpp(); // 1
 
 extern "C" void __ct__19dMenu_ItemExplain_cFP10JKRExpHeapP10JKRArchiveP9STControlb(); // 1
 extern "C" void __dt__19dMenu_ItemExplain_cFv(); // 1
@@ -237,19 +238,6 @@ void dMeter2Info_getNumberTextureName(int); // 2
 void dMeter2Info_set2DVibration(); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void strcat(); // 1
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void dComIfGs_isDungeonItemWarp__Fi(); // 1

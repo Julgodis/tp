@@ -3,40 +3,14 @@
 // Translation Unit: OSThread
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSThread.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void DefaultSwitchThreadCallback(); // 1
-extern "C" void OSSetSwitchThreadCallback(); // 1
-extern "C" void __OSThreadInit(); // 1
-extern "C" void OSInitThreadQueue(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSIsThreadTerminated(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" static void UnsetRun(); // 1
-extern "C" void __OSGetEffectivePriority(); // 1
-extern "C" static void SetEffectivePriority(); // 1
-extern "C" void __OSPromoteThread(); // 1
-extern "C" static void SelectThread(); // 1
-extern "C" void __OSReschedule(); // 1
-extern "C" void OSYieldThread(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSExitThread(); // 1
-extern "C" void OSCancelThread(); // 1
-extern "C" void OSDetachThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void OSWakeupThread(); // 1
-extern "C" void OSSetThreadPriority(); // 1
-extern "C" void OSGetThreadPriority(); // 1
-extern "C" static void CheckThreadQueue(); // 1
-extern "C" void OSCheckActiveThreads(); // 1
-extern "C" static void OSClearStack(); // 1
 
 extern "C" static void DefaultSwitchThreadCallback(); // 1
 extern "C" void OSSetSwitchThreadCallback(); // 1
@@ -99,21 +73,6 @@ extern "C" extern u8 data_804516D0[8];
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void OSPanic(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSGetCurrentContext(); // 1
-extern "C" void OSSaveContext(); // 1
-extern "C" void OSLoadContext(); // 1
-extern "C" void OSGetStackPointer(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void OSInitContext(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSUnlockAllMutex(); // 1
-extern "C" void __OSCheckDeadLock(); // 1
-extern "C" void __OSCheckMutexes(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void OSPanic(); // 1

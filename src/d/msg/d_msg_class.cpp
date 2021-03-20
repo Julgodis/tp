@@ -3,7 +3,9 @@
 // Translation Unit: d/msg/d_msg_class
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/msg/d_msg_class.h"
 
 // 
 // Types:
@@ -114,15 +116,15 @@ struct jmessage_tRenderingProcessor {
 	/* 8023293C */ ~jmessage_tRenderingProcessor();
 };
 
+struct JUTFont {
+};
+
 struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 };
 
 struct COutFont_c {
 	/* 80226CF8 */ void initialize();
-};
-
-struct JUTFont {
 };
 
 struct jmessage_string_tReference {
@@ -471,26 +473,6 @@ void dMeter2Info_getNewLetterNum(); // 2
 void dMsgObject_getFundRaising(); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void _savefpr_27(); // 1
-extern "C" void _restfpr_27(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strlen(); // 1
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void dComIfGp_getReverb__Fi(); // 1

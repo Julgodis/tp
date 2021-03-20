@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_draw
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_draw.h"
 
 // 
 // Types:
@@ -35,8 +37,6 @@ void fpcLy_CurrentLayer(); // 2
 void fpcPause_IsEnable(void*, u8); // 2
 void cAPIGph_BeforeOfDraw(); // 2
 void cAPIGph_AfterOfDraw(); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
 extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1

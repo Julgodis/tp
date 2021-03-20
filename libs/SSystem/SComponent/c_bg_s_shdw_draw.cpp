@@ -3,19 +3,21 @@
 // Translation Unit: c_bg_s_shdw_draw
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_bg_s_shdw_draw.h"
 
 // 
 // Types:
 // 
 
-struct cM3dGPla {
-};
-
 struct cXyz {
 };
 
 struct cBgD_Vtx_t {
+};
+
+struct cM3dGPla {
 };
 
 struct cBgS_ShdwDraw {

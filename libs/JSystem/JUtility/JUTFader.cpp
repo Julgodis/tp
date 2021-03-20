@@ -3,7 +3,9 @@
 // Translation Unit: JUTFader
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTFader.h"
 
 // 
 // Types:

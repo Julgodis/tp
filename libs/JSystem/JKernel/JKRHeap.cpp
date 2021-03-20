@@ -3,7 +3,9 @@
 // Translation Unit: JKRHeap
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRHeap.h"
 
 // 
 // Types:
@@ -151,20 +153,6 @@ extern "C" extern u8 mMemorySize__7JKRHeap[4];
 // External References:
 // 
 
-extern "C" void OSInitAlloc(); // 1
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void OSGetArenaLo(); // 1
-extern "C" void OSSetArenaHi(); // 1
-extern "C" void OSSetArenaLo(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" bool dump_sort__7JKRHeapFv(); // 1
 extern "C" void __ct__11JKRDisposerFv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: c_xyz
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_xyz.h"
 
 // 
 // Types:
@@ -38,7 +40,6 @@ struct cXyz {
 // Forward References:
 // 
 
-extern "C" void __sinit_c_xyz_cpp(); // 1
 
 extern "C" void __pl__4cXyzCFRC3Vec(); // 1
 extern "C" void __mi__4cXyzCFRC3Vec(); // 1
@@ -80,13 +81,6 @@ extern "C" extern u8 BaseXYZ__4cXyz[12];
 // 
 
 void cM_atan2s(f32, f32); // 2
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void __register_global_object(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void cM_atan2s__Fff(); // 1

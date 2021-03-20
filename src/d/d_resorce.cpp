@@ -3,21 +3,23 @@
 // Translation Unit: d/d_resorce
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_resorce.h"
 
 // 
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
-	/* 802CE83C */ void findFromRoot(void*);
-};
-
 struct J3DModelData {
 	/* 80325E14 */ void newSharedDisplayList(u32);
 	/* 80325F94 */ void makeSharedDL();
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
+struct JKRHeap {
+	/* 802CE6B0 */ void getSize(void*, JKRHeap*);
+	/* 802CE83C */ void findFromRoot(void*);
 };
 
 struct cXyz {
@@ -279,8 +281,6 @@ extern "C" extern void* __vt__11J3DTexNoAnm[3];
 // External References:
 // 
 
-extern "C" void OSReport_Error(); // 1
-extern "C" void OSReport_Warning(); // 1
 void mDoMtx_YrotM(f32 (* )[4], s16); // 2
 void mDoExt_getGameHeap(); // 2
 void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32); // 2
@@ -292,33 +292,6 @@ void mDoExt_resIDToIndex(JKRArchive*, u16); // 2
 void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void operator delete(void*); // 2
-extern "C" void JUTReportConsole_f(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void memcmp(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void strncpy(); // 1
-extern "C" void strlen(); // 1
-extern "C" void stricmp(); // 1
 
 extern "C" void OSReport_Error(); // 1
 extern "C" void OSReport_Warning(); // 1

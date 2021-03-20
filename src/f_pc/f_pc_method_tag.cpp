@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_method_tag
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_method_tag.h"
 
 // 
 // Types:
@@ -39,8 +41,6 @@ extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
 void cTg_SingleCut(create_tag_class*); // 2
 void cTg_Addition(node_list_class*, create_tag_class*); // 2
 void cTg_Create(create_tag_class*, void*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void cTg_SingleCut__FP16create_tag_class(); // 1
 extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class(); // 1

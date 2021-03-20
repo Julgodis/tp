@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_main
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_main.h"
 
 // 
 // Types:
@@ -83,8 +85,6 @@ static void Debug_console(u32); // 2
 static void LOAD_COPYDATE(void*); // 2
 static void debug(); // 2
 static void main01(); // 2
-extern "C" void main(); // 1
-extern "C" void __sinit_m_Do_main_cpp(); // 1
 
 extern "C" static void version_check__Fv(); // 1
 extern "C" void CheckHeap1__9HeapCheckFv(); // 1
@@ -140,9 +140,7 @@ extern "C" extern u8 data_80450B9C[4];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void OSReportInit(); // 2
-extern "C" void OSReport_Error(); // 1
 void mDoAud_Execute(); // 2
 void mDoGph_Create(); // 2
 void mDoMch_HeapCheckAll(); // 2
@@ -159,32 +157,6 @@ void fapGm_Create(); // 2
 void fopAcM_initManager(); // 2
 void JUTReport(int, int, char const*, ...); // 2
 void JUTReport(int, int, int, char const*, ...); // 2
-extern "C" void OSGetConsoleType(); // 1
-extern "C" void OSAllocFromArenaLo(); // 1
-extern "C" void OSGetResetCode(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void OSSetThreadPriority(); // 1
-extern "C" void OSGetThreadPriority(); // 1
-extern "C" void OSCheckActiveThreads(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void DVDOpen(); // 1
-extern "C" void DVDClose(); // 1
-extern "C" void DVDReadPrio(); // 1
-extern "C" void DVDGetCurrentDiskID(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void strcmp(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void OSReportInit__Fv(); // 1

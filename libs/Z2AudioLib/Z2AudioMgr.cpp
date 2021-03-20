@@ -3,11 +3,19 @@
 // Translation Unit: Z2AudioMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2AudioMgr.h"
 
 // 
 // Types:
 // 
+
+struct JAISoundHandle {
+};
+
+struct JKRArchive {
+};
 
 struct JGeometry {
 	template <typename A1>
@@ -18,13 +26,7 @@ struct JGeometry {
 
 };
 
-struct JAISoundHandle {
-};
-
 struct JAISoundID {
-};
-
-struct JKRArchive {
 };
 
 struct JKRSolidHeap {
@@ -74,13 +76,13 @@ struct JASAudioReseter {
 	/* 8029D1F8 */ void checkDone() const;
 };
 
-struct JAIAudience {
+struct JAISeCategoryArrangement {
 };
 
 struct JAISeqDataMgr {
 };
 
-struct JAISeCategoryArrangement {
+struct JAIAudience {
 };
 
 struct JAISeMgr {
@@ -206,10 +208,6 @@ struct JKRHeap {
 // Forward References:
 // 
 
-extern "C" static void func_802CD7F8(); // 1
-extern "C" static void func_802CDB68(); // 1
-extern "C" static void func_802CDC08(); // 1
-extern "C" static void func_802CDCEC(); // 1
 
 extern "C" void __ct__10Z2AudioMgrFv(); // 1
 extern "C" void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive(); // 1
@@ -236,19 +234,6 @@ void JAUNewSectionHeap(bool); // 2
 void seqCallback(JASTrack*, u16); // 2
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abort(); // 1
-extern "C" void fprintf(); // 1
 
 extern "C" void alloc__7JASHeapFP7JASHeapUl(); // 1
 extern "C" void free__7JASHeapFv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: JASLfo
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASLfo.h"
 
 // 
 // Types:
@@ -20,7 +22,6 @@ struct JASLfo {
 // Forward References:
 // 
 
-extern "C" void __sinit_JASLfo_cpp(); // 1
 
 extern "C" void __ct__6JASLfoFv(); // 1
 extern "C" void getValue__6JASLfoCFv(); // 1

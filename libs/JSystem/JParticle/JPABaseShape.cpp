@@ -3,7 +3,9 @@
 // Translation Unit: JPABaseShape
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPABaseShape.h"
 
 // 
 // Types:
@@ -233,35 +235,6 @@ extern "C" extern u8 st_aa__12JPABaseShape[32 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSMTXMultVecArraySR(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetLineWidth(); // 1
-extern "C" void GXSetPointSize(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void func_8027EEB0(); // 1
 extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1

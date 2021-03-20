@@ -3,24 +3,14 @@
 // Translation Unit: GXPixel
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXPixel.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetFogRangeAdj(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetColorUpdate(); // 1
-extern "C" void GXSetAlphaUpdate(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetPixelFmt(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetDstAlpha(); // 1
-extern "C" void GXSetFieldMask(); // 1
-extern "C" void GXSetFieldMode(); // 1
 
 extern "C" void GXSetFog(); // 1
 extern "C" void GXSetFogRangeAdj(); // 1
@@ -39,8 +29,6 @@ extern "C" void GXSetFieldMode(); // 1
 // External References:
 // 
 
-extern "C" void __GXFlushTextureState(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
 
 extern "C" void __GXFlushTextureState(); // 1
 extern "C" void __cvt_fp2unsigned(); // 1

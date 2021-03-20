@@ -3,16 +3,14 @@
 // Translation Unit: MSL_Common/Src/mem_funcs
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/mem_funcs.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __copy_longs_rev_unaligned(); // 1
-extern "C" void __copy_longs_unaligned(); // 1
-extern "C" void __copy_longs_rev_aligned(); // 1
-extern "C" void __copy_longs_aligned(); // 1
 
 extern "C" void __copy_longs_rev_unaligned(); // 1
 extern "C" void __copy_longs_unaligned(); // 1

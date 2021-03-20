@@ -3,14 +3,14 @@
 // Translation Unit: MSL_Common/Src/abort_exit
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/abort_exit.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void exit(); // 1
-extern "C" void abort(); // 1
 
 extern "C" void exit(); // 1
 extern "C" void abort(); // 1
@@ -21,12 +21,6 @@ extern "C" extern u8 data_804519A0[8];
 // External References:
 // 
 
-extern "C" void _ExitProcess(); // 1
-extern "C" void __destroy_global_chain(); // 1
-extern "C" void __end_critical_region(); // 1
-extern "C" void __begin_critical_region(); // 1
-extern "C" void __kill_critical_regions(); // 1
-extern "C" void raise(); // 1
 
 extern "C" void _ExitProcess(); // 1
 extern "C" void __destroy_global_chain(); // 1

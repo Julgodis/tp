@@ -3,7 +3,9 @@
 // Translation Unit: c_list
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_list.h"
 
 // 
 // Types:
@@ -46,8 +48,6 @@ void cNd_Addition(node_class*, node_class*); // 2
 void cNd_Insert(node_class*, node_class*); // 2
 void cNd_SetObject(node_class*, void*); // 2
 void cNd_ClearObject(node_class*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void cNd_LengthOf__FP10node_class(); // 1
 extern "C" void cNd_First__FP10node_class(); // 1

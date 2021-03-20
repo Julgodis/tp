@@ -1,11 +1,7 @@
-#ifndef JASAUDIORESETER_H_
-#define JASAUDIORESETER_H_
+#ifndef JASAUDIORESETER_H
+#define JASAUDIORESETER_H
 
-extern "C" {
-void JASAudioReseter(void);
-void JASAudioReseter_NS_checkDone(void);
-void JASAudioReseter_NS_resume(void);
-void JASAudioReseter_NS_start(void);
-}
+#include "dolphin/types.h"
 
-#endif  // JASAUDIORESETER_H_
+
+#endif /* JASAUDIORESETER_H */

@@ -3,7 +3,9 @@
 // Translation Unit: JKRFileLoader
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRFileLoader.h"
 
 // 
 // Types:
@@ -47,7 +49,6 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-extern "C" void __sinit_JKRFileLoader_cpp(); // 1
 
 extern "C" void __ct__13JKRFileLoaderFv(); // 1
 extern "C" void __dt__13JKRFileLoaderFv(); // 1
@@ -69,11 +70,6 @@ extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void __dl__FPv(); // 1
 extern "C" void __ct__11JKRDisposerFv(); // 1

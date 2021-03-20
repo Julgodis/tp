@@ -3,16 +3,18 @@
 // Translation Unit: c_m3d_g_lin
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_m3d_g_lin.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
+struct cXyz {
 };
 
-struct cXyz {
+struct Vec {
 };
 
 struct cM3dGLin {
@@ -38,9 +40,6 @@ extern "C" void SetEnd__8cM3dGLinFRC4cXyz(); // 1
 // External References:
 // 
 
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
 
 extern "C" void PSVECAdd(); // 1
 extern "C" void PSVECSubtract(); // 1

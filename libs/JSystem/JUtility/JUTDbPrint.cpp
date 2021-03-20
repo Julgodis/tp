@@ -3,16 +3,13 @@
 // Translation Unit: JUTDbPrint
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTDbPrint.h"
 
 // 
 // Types:
 // 
-
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-};
 
 struct JUtility {
 	struct TColor {
@@ -23,6 +20,11 @@ struct JUtility {
 struct JUTFont {
 	/* 802DED70 */ void setCharColor(JUtility::TColor);
 	/* 802DEE28 */ void drawString_size_scale(f32, f32, f32, f32, char const*, u32, bool);
+};
+
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct JUTDbPrint {
@@ -63,16 +65,6 @@ extern "C" extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
 // 
 
 void* operator new(u32); // 2
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void vsnprintf(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
 extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1

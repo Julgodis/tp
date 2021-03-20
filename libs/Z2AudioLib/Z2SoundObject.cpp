@@ -3,19 +3,21 @@
 // Translation Unit: Z2SoundObject
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2SoundObject.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
-};
-
 struct Z2SoundHandlePool {
 };
 
 struct JAISoundID {
+};
+
+struct Vec {
 };
 
 struct Z2SoundObjBase {
@@ -52,9 +54,6 @@ struct Z2SoundObjArrow {
 	/* 802BEB74 */ void init(Vec*, u8);
 };
 
-struct JAUSoundAnimationSound {
-};
-
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
@@ -70,6 +69,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAUSoundAnimationSound {
 };
 
 struct Z2SoundObjAnime {
@@ -179,12 +181,6 @@ extern "C" extern void* __vt__16Z2SoundObjSimple[8];
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void releaseSound__14JAISoundHandleFv(); // 1
 extern "C" void acceptsNewAudible__8JAISoundCFv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: d/menu/d_menu_fmap
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_fmap.h"
 
 // 
 // Types:
@@ -14,16 +16,6 @@ struct dMf_HIO_c {
 	/* 801CDA2C */ ~dMf_HIO_c();
 };
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE548 */ void free(void*);
-	/* 802CE784 */ void getTotalFreeSize();
-};
-
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
 struct dMenu_Fmap_stage_data_c {
 };
 
@@ -32,6 +24,16 @@ struct STControl {
 };
 
 struct CSTControl {
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE548 */ void free(void*);
+	/* 802CE784 */ void getTotalFreeSize();
+};
+
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
 struct dMenu_Fmap_c {
@@ -330,10 +332,10 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -345,7 +347,6 @@ struct Z2SeMgr {
 // 
 
 void dMenuFmap_getStartStageName(void*); // 2
-extern "C" void __sinit_d_menu_fmap_cpp(); // 1
 
 extern "C" void __ct__9dMf_HIO_cFv(); // 1
 extern "C" void dMenuFmap_getStartStageName__FPv(); // 1
@@ -559,33 +560,6 @@ void dMeter2Info_set2DVibrationM(); // 2
 void cLib_addCalc2(f32*, f32, f32, f32); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_15(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_15(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap(); // 1
 extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap(); // 1

@@ -3,32 +3,14 @@
 // Translation Unit: Pad
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/pad/Pad.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void UpdateOrigin(); // 1
-extern "C" static void PADOriginCallback(); // 1
-extern "C" static void PADOriginUpdateCallback(); // 1
-extern "C" static void PADProbeCallback(); // 1
-extern "C" static void PADTypeAndStatusCallback(); // 1
-extern "C" static void PADReceiveCheckCallback(); // 1
-extern "C" void PADReset(); // 1
-extern "C" void PADRecalibrate(); // 1
-extern "C" void PADInit(); // 1
-extern "C" void PADRead(); // 1
-extern "C" void PADControlMotor(); // 1
-extern "C" void PADSetSpec(); // 1
-extern "C" static void SPEC0_MakeStatus(); // 1
-extern "C" static void SPEC1_MakeStatus(); // 1
-extern "C" static void SPEC2_MakeStatus(); // 1
-extern "C" void PADSetAnalogMode(); // 1
-extern "C" static void Pad__OnReset(); // 1
-extern "C" static void SamplingHandler(); // 1
-extern "C" static void PADSetSamplingCallback(); // 1
-extern "C" void __PADDisableRecalibration(); // 1
 
 extern "C" static void UpdateOrigin(); // 1
 extern "C" static void PADOriginCallback(); // 1
@@ -57,30 +39,6 @@ extern "C" extern u8 __PADSpec[4 + 4 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSRegisterResetFunction(); // 1
-extern "C" void OSSetWirelessID(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void SIBusy(); // 1
-extern "C" void SIIsChanBusy(); // 1
-extern "C" void SIRegisterPollingHandler(); // 1
-extern "C" void SIUnregisterPollingHandler(); // 1
-extern "C" void SIGetStatus(); // 1
-extern "C" void SISetCommand(); // 1
-extern "C" void SITransferCommands(); // 1
-extern "C" void SIEnablePolling(); // 1
-extern "C" void SIDisablePolling(); // 1
-extern "C" void SIGetResponse(); // 1
-extern "C" void SITransfer(); // 1
-extern "C" void SIGetType(); // 1
-extern "C" void SIGetTypeAsync(); // 1
-extern "C" void SIRefreshSamplingRate(); // 1
-extern "C" void __shr2i(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void OSRegisterVersion(); // 1

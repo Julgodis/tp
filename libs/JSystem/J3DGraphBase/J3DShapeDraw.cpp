@@ -3,7 +3,9 @@
 // Translation Unit: J3DShapeDraw
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DShapeDraw.h"
 
 // 
 // Types:
@@ -32,13 +34,8 @@ extern "C" void __dt__12J3DShapeDrawFv(); // 1
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void* operator new[](u32, int); // 2
 void operator delete(void*); // 2
-extern "C" void DCStoreRange(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _restgpr_18(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void* __nwa__FUli(); // 1

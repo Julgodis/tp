@@ -3,19 +3,21 @@
 // Translation Unit: d/d_model
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_model.h"
 
 // 
 // Types:
 // 
 
+struct dKy_tevstr_c {
+};
+
 struct dMdl_obj_c {
 };
 
 struct J3DModelData {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dMdl_c {
@@ -74,17 +76,6 @@ void dKy_setLight_again(); // 2
 void dKy_GxFog_tevstr_set(dKy_tevstr_c*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXConcat(); // 1
-extern "C" void GXSetChanAmbColor(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXLoadNrmMtxImm(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void dKy_setLight_nowroom_actor__FP12dKy_tevstr_c(); // 1
 extern "C" void dKy_setLight_again__Fv(); // 1

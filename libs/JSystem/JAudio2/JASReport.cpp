@@ -3,7 +3,9 @@
 // Translation Unit: JASReport
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASReport.h"
 
 // 
 // Forward References:
@@ -18,9 +20,6 @@ extern "C" extern u8 struct_80451230[8];
 // External References:
 // 
 
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void vsnprintf(); // 1
 
 extern "C" void OSLockMutex(); // 1
 extern "C" void OSUnlockMutex(); // 1

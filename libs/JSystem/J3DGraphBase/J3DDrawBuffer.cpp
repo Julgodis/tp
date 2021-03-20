@@ -3,11 +3,17 @@
 // Translation Unit: J3DDrawBuffer
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DDrawBuffer.h"
 
 // 
 // Types:
 // 
+
+struct J3DPacket {
+	/* 80312758 */ void addChildPacket(J3DPacket*);
+};
 
 struct J3DShapePacket {
 };
@@ -15,10 +21,6 @@ struct J3DShapePacket {
 struct J3DMatPacket {
 	/* 80312A04 */ void addShapePacket(J3DShapePacket*);
 	/* 80312A74 */ void isSame(J3DMatPacket*) const;
-};
-
-struct J3DPacket {
-	/* 80312758 */ void addChildPacket(J3DPacket*);
 };
 
 struct J3DDrawBuffer {
@@ -42,7 +44,6 @@ struct J3DDrawBuffer {
 // Forward References:
 // 
 
-extern "C" void __sinit_J3DDrawBuffer_cpp(); // 1
 
 extern "C" void initialize__13J3DDrawBufferFv(); // 1
 extern "C" void allocBuffer__13J3DDrawBufferFUl(); // 1
@@ -76,12 +77,6 @@ extern "C" extern u8 entryNum__13J3DDrawBuffer[4 + 4 /* padding */];
 void* operator new[](u32, int); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void* __nwa__FUli(); // 1
 extern "C" void __dl__FPv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: JPAExTexShape
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAExTexShape.h"
 
 // 
 // Types:
@@ -36,7 +38,6 @@ extern "C" void __ct__13JPAExTexShapeFPCUc(); // 1
 // External References:
 // 
 
-extern "C" void GXSetTexCoordGen2(); // 1
 
 extern "C" void load__10JUTTextureF11_GXTexMapID(); // 1
 extern "C" void GXSetTexCoordGen2(); // 1

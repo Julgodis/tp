@@ -3,7 +3,9 @@
 // Translation Unit: f_op/f_op_overlap_req
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_op/f_op_overlap_req.h"
 
 // 
 // Types:
@@ -70,8 +72,6 @@ void cReq_Is_Done(request_base_class*); // 2
 void cReq_Done(request_base_class*); // 2
 void cReq_Command(request_base_class*, u8); // 2
 void cReq_Create(request_base_class*, u8); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void fpcEx_SearchByID__FUi(); // 1
 extern "C" void fpcLy_RootLayer__Fv(); // 1

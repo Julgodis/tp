@@ -3,7 +3,9 @@
 // Translation Unit: JUTException
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTException.h"
 
 // 
 // Types:
@@ -122,9 +124,7 @@ struct JUTDirectFile {
 // Forward References:
 // 
 
-extern "C" static void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct(); // 1
 static void search_name_part(u8*, u8*, int); // 2
-extern "C" void __sinit_JUTException_cpp(); // 1
 
 extern "C" void __ct__12JUTExceptionFP14JUTDirectPrint(); // 1
 extern "C" void create__12JUTExceptionFP14JUTDirectPrint(); // 1
@@ -168,59 +168,9 @@ extern "C" extern u8 sConsole__12JUTException[4];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void OSPanic(); // 1
 void* operator new(u32); // 2
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void PPCMfmsr(); // 1
-extern "C" void PPCMtmsr(); // 1
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void OSGetCurrentContext(); // 1
-extern "C" void OSGetStackPointer(); // 1
-extern "C" void OSFillFPUContext(); // 1
-extern "C" void OSSetErrorHandler(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSProtectRange(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void OSYieldThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void VISetPreRetraceCallback(); // 1
-extern "C" void VISetPostRetraceCallback(); // 1
-extern "C" void VIConfigure(); // 1
-extern "C" void VIFlush(); // 1
-extern "C" void VISetNextFrameBuffer(); // 1
-extern "C" void VIGetCurrentFrameBuffer(); // 1
-extern "C" void VISetBlack(); // 1
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_16(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_16(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void vsnprintf(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strtol(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void OSReport(); // 1

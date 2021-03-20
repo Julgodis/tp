@@ -3,7 +3,9 @@
 // Translation Unit: d/d_ky_thunder
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_ky_thunder.h"
 
 // 
 // Types:
@@ -106,13 +108,6 @@ void cM_rndF(f32); // 2
 void cM_rndFX(f32); // 2
 void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
 void cLib_targetAngleY(Vec const*, Vec const*); // 2
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1

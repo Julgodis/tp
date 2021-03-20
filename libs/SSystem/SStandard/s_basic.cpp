@@ -3,7 +3,9 @@
 // Translation Unit: s_basic
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SStandard/s_basic.h"
 
 // 
 // Forward References:

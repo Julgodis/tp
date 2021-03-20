@@ -3,13 +3,21 @@
 // Translation Unit: JAUSectionHeap
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAUSectionHeap.h"
 
 // 
 // Types:
 // 
 
+struct JKRArchive {
+};
+
 struct JAISoundID {
+};
+
+struct JAISeqData {
 };
 
 struct JKRHeap {
@@ -22,13 +30,7 @@ struct JKRSolidHeap {
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
 };
 
-struct JKRArchive {
-};
-
 struct JAISeqDataUser {
-};
-
-struct JAISeqData {
 };
 
 struct JAUSectionHeap {
@@ -102,14 +104,14 @@ struct JAIStreamDataMgr {
 	/* 802A3AD8 */ ~JAIStreamDataMgr();
 };
 
-struct JAUBankTable {
-	/* 802A4AA0 */ void getBank(u32) const;
-};
-
 template <typename A0>
 struct JSULink { };
 /* JSULink<JAUBankTable> */
 struct JSULink__template0 {
+};
+
+struct JAUBankTable {
+	/* 802A4AA0 */ void getBank(u32) const;
 };
 
 struct JAUBankTableDictionary {
@@ -174,16 +176,6 @@ struct JSUPtrList {
 
 static void JAUNewSectionHeap(JKRSolidHeap*, bool); // 2
 void JAUNewSectionHeap(bool); // 2
-extern "C" static void func_802A6440(); // 1
-extern "C" static void func_802A6574(); // 1
-extern "C" static void func_802A65D4(); // 1
-extern "C" static void func_802A6614(); // 1
-extern "C" static void func_802A6634(); // 1
-extern "C" static void func_802A665C(); // 1
-extern "C" static void func_802A6680(); // 1
-extern "C" static void func_802A6688(); // 1
-extern "C" static void func_802A6690(); // 1
-extern "C" static void func_802A6698(); // 1
 
 extern "C" void __ct__Q210JAUSection12TSectionDataFv(); // 1
 extern "C" void resetRegisteredBankTables__Q210JAUSection12TSectionDataFv(); // 1
@@ -235,26 +227,11 @@ extern "C" extern char const* const JAUSectionHeap__stringBase0;
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
 void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void* operator new[](u32, int); // 2
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void DVDConvertPathToEntrynum(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abort(); // 1
-extern "C" void fprintf(); // 1
 
 SECTION_INIT void memset(); // 1
 SECTION_INIT void memcpy(); // 1

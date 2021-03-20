@@ -3,7 +3,9 @@
 // Translation Unit: JKRArchivePri
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRArchivePri.h"
 
 // 
 // Types:
@@ -72,14 +74,6 @@ extern "C" extern u8 sCurrentDirID__10JKRArchive[4 + 4 /* padding */];
 // 
 
 void operator delete(void*); // 2
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void tolower(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void findFromRoot__7JKRHeapFPv(); // 1
 extern "C" void __dl__FPv(); // 1

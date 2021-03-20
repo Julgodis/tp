@@ -3,13 +3,14 @@
 // Translation Unit: osdsp_task
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/osdsp_task.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __DSPHandler(); // 1
 void DsyncFrame2(u32, u32, u32); // 2
 static void DsyncFrame3(u32, u32, u32, u32, u32); // 2
 static void Dsp_Update_Request(); // 2
@@ -34,14 +35,6 @@ extern "C" extern u8 data_80451328[8];
 
 void DsyncFrame2ch(u32, u32, u32); // 2
 void DsyncFrame4ch(u32, u32, u32, u32, u32); // 2
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void DSPCheckMailToDSP(); // 1
-extern "C" void DSPCheckMailFromDSP(); // 1
-extern "C" void DSPReadMailFromDSP(); // 1
-extern "C" void DSPSendMailToDSP(); // 1
-extern "C" void __DSP_exec_task(); // 1
-extern "C" void __DSP_remove_task(); // 1
 
 extern "C" void DsyncFrame2ch__FUlUlUl(); // 1
 extern "C" void DsyncFrame4ch__FUlUlUlUlUl(); // 1

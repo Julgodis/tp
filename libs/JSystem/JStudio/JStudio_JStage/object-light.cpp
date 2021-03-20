@@ -3,16 +3,18 @@
 // Translation Unit: object-light
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio_JStage/object-light.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct Vec {
 };
 
 namespace JStudio {
@@ -82,7 +84,6 @@ struct JStudio_JStage {
 // Forward References:
 // 
 
-extern "C" void func_8028D2B8(); // 1
 
 extern "C" void __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight(); // 1
 extern "C" void __dt__Q214JStudio_JStage14TAdaptor_lightFv(); // 1
@@ -107,17 +108,6 @@ extern "C" extern u8 object_light__lit_935[12];
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
-extern "C" void atan2(); // 1
 
 extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
 extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1

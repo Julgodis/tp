@@ -3,7 +3,9 @@
 // Translation Unit: JASDSPInterface
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASDSPInterface.h"
 
 // 
 // Types:
@@ -118,14 +120,6 @@ void DspBoot(void (*)(void*)); // 2
 void DspFinishWork(u16); // 2
 void DsyncFrame2(u32, u32, u32); // 2
 void* operator new[](u32, JKRHeap*, int); // 2
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCFlushRange(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void cDyl_InitAsyncIsDone__Fv(); // 1
 extern "C" void bzero__7JASCalcFPvUl(); // 1

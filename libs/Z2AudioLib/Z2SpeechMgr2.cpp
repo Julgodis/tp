@@ -3,7 +3,9 @@
 // Translation Unit: Z2SpeechMgr2
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2SpeechMgr2.h"
 
 // 
 // Types:
@@ -110,12 +112,6 @@ extern "C" extern void* __vt__15Z2SpeechStarter[5];
 
 void dComIfGp_getReverb(int); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void dComIfGp_getReverb__Fi(); // 1
 extern "C" void releaseSound__14JAISoundHandleFv(); // 1

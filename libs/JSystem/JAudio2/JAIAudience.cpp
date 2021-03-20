@@ -3,7 +3,9 @@
 // Translation Unit: JAIAudience
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAIAudience.h"
 
 // 
 // Types:

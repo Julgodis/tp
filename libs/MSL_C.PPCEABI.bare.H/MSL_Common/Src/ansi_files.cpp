@@ -3,14 +3,14 @@
 // Translation Unit: MSL_Common/Src/ansi_files
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/ansi_files.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __flush_all(); // 1
-extern "C" void __close_all(); // 1
 
 extern "C" void __flush_all(); // 1
 extern "C" void __close_all(); // 1
@@ -20,14 +20,6 @@ extern "C" extern void* __files[80];
 // External References:
 // 
 
-extern "C" void free(); // 1
-extern "C" void __end_critical_region(); // 1
-extern "C" void __begin_critical_region(); // 1
-extern "C" void fflush(); // 1
-extern "C" void fclose(); // 1
-extern "C" bool __close_console(); // 1
-extern "C" void __write_console(); // 1
-extern "C" void __read_console(); // 1
 
 extern "C" void free(); // 1
 extern "C" void __end_critical_region(); // 1

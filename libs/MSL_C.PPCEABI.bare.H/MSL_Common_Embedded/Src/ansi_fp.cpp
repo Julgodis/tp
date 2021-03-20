@@ -3,16 +3,14 @@
 // Translation Unit: MSL_Common_Embedded/Src/ansi_fp
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common_Embedded/Src/ansi_fp.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __num2dec(); // 1
-extern "C" static void __num2dec_internal(); // 1
-extern "C" static void __two_exp(); // 1
-extern "C" static void __timesdec(); // 1
 
 extern "C" void __num2dec(); // 1
 extern "C" static void __num2dec_internal(); // 1
@@ -24,12 +22,6 @@ extern "C" extern char const* const MSL_Common_Embedded_Src_ansi_fp__stringBase0
 // External References:
 // 
 
-extern "C" void __div2u(); // 1
-extern "C" void __mod2u(); // 1
-extern "C" void __cvt_dbl_usll(); // 1
-extern "C" void frexp(); // 1
-extern "C" void ldexp(); // 1
-extern "C" void modf(); // 1
 
 extern "C" void __div2u(); // 1
 extern "C" void __mod2u(); // 1

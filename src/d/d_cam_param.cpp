@@ -3,16 +3,18 @@
 // Translation Unit: d/d_cam_param
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_cam_param.h"
 
 // 
 // Types:
 // 
 
-struct cSAngle {
+struct cXyz {
 };
 
-struct cXyz {
+struct cSAngle {
 };
 
 struct dCamMath {
@@ -99,8 +101,6 @@ void mDoMtx_YrotS(f32 (* )[4], s16); // 2
 void dCam_getBody(); // 2
 void cM_atan2f(f32, f32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void sqrt(); // 1
 
 extern "C" void mDoMtx_XrotS__FPA4_fs(); // 1
 extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1

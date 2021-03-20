@@ -3,35 +3,14 @@
 // Translation Unit: GXFifo
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXFifo.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void GXCPInterruptHandler(); // 1
-extern "C" void GXInitFifoBase(); // 1
-extern "C" void GXInitFifoPtrs(); // 1
-extern "C" static void GXInitFifoLimits(); // 1
-extern "C" void GXSetCPUFifo(); // 1
-extern "C" void GXSetGPFifo(); // 1
-extern "C" void GXSaveCPUFifo(); // 1
-extern "C" static void __GXSaveCPUFifoAux(); // 1
-extern "C" void GXGetGPStatus(); // 1
-extern "C" void GXGetFifoBase(); // 1
-extern "C" void GXGetFifoSize(); // 1
-extern "C" void GXSetBreakPtCallback(); // 1
-extern "C" void __GXFifoInit(); // 1
-extern "C" static void __GXFifoReadEnable(); // 1
-extern "C" static void __GXFifoReadDisable(); // 1
-extern "C" static void __GXFifoLink(); // 1
-extern "C" static void __GXWriteFifoIntEnable(); // 1
-extern "C" static void __GXWriteFifoIntReset(); // 1
-extern "C" void __GXCleanGPFifo(); // 1
-extern "C" void GXSetCurrentGXThread(); // 1
-extern "C" void GXGetCurrentGXThread(); // 1
-extern "C" void GXGetCPUFifo(); // 1
-extern "C" void GXGetGPFifo(); // 1
 
 extern "C" static void GXCPInterruptHandler(); // 1
 extern "C" void GXInitFifoBase(); // 1
@@ -61,17 +40,6 @@ extern "C" void GXGetGPFifo(); // 1
 // External References:
 // 
 
-extern "C" void PPCSync(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void GXFlush(); // 1
 
 extern "C" void PPCSync(); // 1
 extern "C" void OSSetCurrentContext(); // 1

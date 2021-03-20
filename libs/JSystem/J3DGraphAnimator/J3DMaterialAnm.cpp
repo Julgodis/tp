@@ -3,28 +3,30 @@
 // Translation Unit: J3DMaterialAnm
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphAnimator/J3DMaterialAnm.h"
 
 // 
 // Types:
 // 
 
-struct J3DMatColorAnm {
-};
-
-struct J3DTevColorAnm {
-};
-
-struct J3DTevKColorAnm {
+struct J3DTexNoAnm {
 };
 
 struct J3DMaterial {
 };
 
+struct J3DTevKColorAnm {
+};
+
+struct J3DMatColorAnm {
+};
+
 struct J3DTexMtxAnm {
 };
 
-struct J3DTexNoAnm {
+struct J3DTevColorAnm {
 };
 
 struct J3DMaterialAnm {
@@ -74,8 +76,6 @@ extern "C" extern void* __vt__14J3DMaterialAnm[4];
 // External References:
 // 
 
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void __dt__14J3DMaterialAnmFv(); // 1
 extern "C" void calcTransform__19J3DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo(); // 1

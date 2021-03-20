@@ -3,7 +3,9 @@
 // Translation Unit: stb-data-parse
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/stb-data-parse.h"
 
 // 
 // Types:

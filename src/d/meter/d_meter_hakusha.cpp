@@ -3,7 +3,9 @@
 // Translation Unit: d/meter/d_meter_hakusha
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/meter/d_meter_hakusha.h"
 
 // 
 // Types:
@@ -33,6 +35,12 @@ struct dMeterSub_c {
 	/* 80194138 */ bool isDead();
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct CPaneMgrAlpha {
 	/* 802555C8 */ void show();
 	/* 80255608 */ void hide();
@@ -40,22 +48,10 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct dMeter2Draw_c {
 	/* 8021462C */ void drawPikariHakusha(f32, f32, f32, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor);
 	/* 8021A9C8 */ void setAlphaAnimeMin(CPaneMgrAlpha*, s16);
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
-};
-
-struct JKRExpHeap {
-};
-
-struct J2DPane {
 };
 
 struct J2DGrafContext {
@@ -68,6 +64,12 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct J2DPane {
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -103,13 +105,6 @@ extern "C" extern char const* const d_meter_d_meter_hakusha__stringBase0;
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
 extern "C" bool isDead__11dMeterSub_cFv(); // 1

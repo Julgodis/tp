@@ -3,16 +3,18 @@
 // Translation Unit: d/map/d_map_path_dmap
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/map/d_map_path_dmap.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
+struct dStage_FileList2_dt_c {
 };
 
-struct dStage_FileList2_dt_c {
+struct Vec {
 };
 
 struct dMapInfo_n {
@@ -182,7 +184,6 @@ struct dDlst_list_c {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_map_path_dmap_cpp(); // 1
 
 extern "C" void chkGetCompass__10dMapInfo_nFv(); // 1
 extern "C" void chkGetMap__10dMapInfo_nFv(); // 1
@@ -279,34 +280,6 @@ void dStage_GetKeepDoorInfo(); // 2
 void dStage_GetRoomKeepDoorInfo(); // 2
 void dComIfGs_isVisitedRoom(int); // 2
 void* operator new(u32); // 2
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecArray(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXSetMisc(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXInvalidateTexAll(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void floor(); // 1
 
 extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
 extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1

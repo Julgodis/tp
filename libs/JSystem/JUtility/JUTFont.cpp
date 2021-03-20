@@ -3,7 +3,9 @@
 // Translation Unit: JUTFont
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTFont.h"
 
 // 
 // Types:
@@ -38,8 +40,6 @@ extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb(); // 1
 // External References:
 // 
 
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_27(); // 1

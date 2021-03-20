@@ -40,7 +40,7 @@ lbl_802B428C:
 /* 802B42AC 00000020  38 9E 00 04 */	addi r4, r30, 4
 /* 802B42B0 00000024  38 A0 00 02 */	li r5, 2
 /* 802B42B4 00000028  C0 22 BF 98 */	lfs f1, lit_3372(r2)
-/* 802B42B8 0000002C  88 CD 82 E4 */	lbz r6, -0x7d1c(r13)
+/* 802B42B8 0000002C  88 CD 82 E4 */	lbz r6, struct_80450864+0x0(r13)
 /* 802B42BC 00000030  C0 42 BF B4 */	lfs f2, Z2SeqMgr__lit_4727(r2)
 /* 802B42C0 00000034  FC 60 10 90 */	fmr f3, f2
 /* 802B42C4 00000038  4B FF FD 29 */	bl setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff
@@ -48,7 +48,7 @@ lbl_802B428C:
 /* 802B42CC 00000040  38 9E 00 04 */	addi r4, r30, 4
 /* 802B42D0 00000044  38 A0 00 03 */	li r5, 3
 /* 802B42D4 00000048  C0 22 BF 98 */	lfs f1, lit_3372(r2)
-/* 802B42D8 0000004C  88 CD 82 E4 */	lbz r6, -0x7d1c(r13)
+/* 802B42D8 0000004C  88 CD 82 E4 */	lbz r6, struct_80450864+0x0(r13)
 /* 802B42DC 00000050  C0 42 BF B4 */	lfs f2, Z2SeqMgr__lit_4727(r2)
 /* 802B42E0 00000054  FC 60 10 90 */	fmr f3, f2
 /* 802B42E4 00000058  4B FF FD 09 */	bl setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff
@@ -56,7 +56,7 @@ lbl_802B428C:
 /* 802B42EC 00000060  38 9E 00 04 */	addi r4, r30, 4
 /* 802B42F0 00000064  38 A0 00 0C */	li r5, 0xc
 /* 802B42F4 00000068  C0 22 BF 98 */	lfs f1, lit_3372(r2)
-/* 802B42F8 0000006C  88 CD 82 E4 */	lbz r6, -0x7d1c(r13)
+/* 802B42F8 0000006C  88 CD 82 E4 */	lbz r6, struct_80450864+0x0(r13)
 /* 802B42FC 00000070  C0 42 BF B4 */	lfs f2, Z2SeqMgr__lit_4727(r2)
 /* 802B4300 00000074  FC 60 10 90 */	fmr f3, f2
 /* 802B4304 00000078  4B FF FC E9 */	bl setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff
@@ -64,7 +64,7 @@ lbl_802B428C:
 /* 802B430C 00000080  38 9E 00 04 */	addi r4, r30, 4
 /* 802B4310 00000084  38 A0 00 0E */	li r5, 0xe
 /* 802B4314 00000088  C0 22 BF 98 */	lfs f1, lit_3372(r2)
-/* 802B4318 0000008C  88 CD 82 E4 */	lbz r6, -0x7d1c(r13)
+/* 802B4318 0000008C  88 CD 82 E4 */	lbz r6, struct_80450864+0x0(r13)
 /* 802B431C 00000090  C0 42 BF B4 */	lfs f2, Z2SeqMgr__lit_4727(r2)
 /* 802B4320 00000094  FC 60 10 90 */	fmr f3, f2
 /* 802B4324 00000098  4B FF FC C9 */	bl setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff
@@ -74,7 +74,7 @@ lbl_802B432C:
 /* 802B4330 00000004  38 9E 00 04 */	addi r4, r30, 4
 /* 802B4334 00000008  38 A0 00 02 */	li r5, 2
 /* 802B4338 0000000C  C0 22 BF 9C */	lfs f1, lit_3373(r2)
-/* 802B433C 00000010  88 CD 82 E5 */	lbz r6, -0x7d1b(r13)
+/* 802B433C 00000010  88 CD 82 E5 */	lbz r6, struct_80450864+0x1(r13)
 /* 802B4340 00000014  C0 42 BF B4 */	lfs f2, Z2SeqMgr__lit_4727(r2)
 /* 802B4344 00000018  FC 60 10 90 */	fmr f3, f2
 /* 802B4348 0000001C  4B FF FC A5 */	bl setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff
@@ -82,7 +82,7 @@ lbl_802B432C:
 /* 802B4350 00000024  38 9E 00 04 */	addi r4, r30, 4
 /* 802B4354 00000028  38 A0 00 03 */	li r5, 3
 /* 802B4358 0000002C  C0 22 BF 9C */	lfs f1, lit_3373(r2)
-/* 802B435C 00000030  88 CD 82 E5 */	lbz r6, -0x7d1b(r13)
+/* 802B435C 00000030  88 CD 82 E5 */	lbz r6, struct_80450864+0x1(r13)
 /* 802B4360 00000034  C0 42 BF B4 */	lfs f2, Z2SeqMgr__lit_4727(r2)
 /* 802B4364 00000038  FC 60 10 90 */	fmr f3, f2
 /* 802B4368 0000003C  4B FF FC 85 */	bl setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff
@@ -90,7 +90,7 @@ lbl_802B432C:
 /* 802B4370 00000044  38 9E 00 04 */	addi r4, r30, 4
 /* 802B4374 00000048  38 A0 00 0C */	li r5, 0xc
 /* 802B4378 0000004C  C0 22 BF 9C */	lfs f1, lit_3373(r2)
-/* 802B437C 00000050  88 CD 82 E5 */	lbz r6, -0x7d1b(r13)
+/* 802B437C 00000050  88 CD 82 E5 */	lbz r6, struct_80450864+0x1(r13)
 /* 802B4380 00000054  C0 42 BF B4 */	lfs f2, Z2SeqMgr__lit_4727(r2)
 /* 802B4384 00000058  FC 60 10 90 */	fmr f3, f2
 /* 802B4388 0000005C  4B FF FC 65 */	bl setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff
@@ -98,7 +98,7 @@ lbl_802B432C:
 /* 802B4390 00000064  38 9E 00 04 */	addi r4, r30, 4
 /* 802B4394 00000068  38 A0 00 0E */	li r5, 0xe
 /* 802B4398 0000006C  C0 22 BF 9C */	lfs f1, lit_3373(r2)
-/* 802B439C 00000070  88 CD 82 E5 */	lbz r6, -0x7d1b(r13)
+/* 802B439C 00000070  88 CD 82 E5 */	lbz r6, struct_80450864+0x1(r13)
 /* 802B43A0 00000074  C0 42 BF B4 */	lfs f2, Z2SeqMgr__lit_4727(r2)
 /* 802B43A4 00000078  FC 60 10 90 */	fmr f3, f2
 /* 802B43A8 0000007C  4B FF FC 45 */	bl setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff

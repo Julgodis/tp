@@ -3,7 +3,9 @@
 // Translation Unit: f_op/f_op_actor
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_op/f_op_actor.h"
 
 // 
 // Types:
@@ -91,10 +93,10 @@ struct dEvt_control_c {
 	/* 80042FA8 */ void moveApproval(void*);
 };
 
-struct dPa_levelEcallBack {
+struct cXyz {
 };
 
-struct cXyz {
+struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
@@ -185,10 +187,6 @@ void dKy_tevstr_init(dKy_tevstr_c*, s8, u8); // 2
 void dKy_depth_dist_set(void*); // 2
 void cLib_chaseF(f32*, f32, f32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
 extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1

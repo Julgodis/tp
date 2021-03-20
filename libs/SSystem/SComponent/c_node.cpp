@@ -3,7 +3,9 @@
 // Translation Unit: c_node
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_node.h"
 
 // 
 // Types:
@@ -48,8 +50,6 @@ extern "C" void cNd_Create__FP10node_classPv(); // 1
 // External References:
 // 
 
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1

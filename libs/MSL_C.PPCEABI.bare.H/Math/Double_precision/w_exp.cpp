@@ -3,13 +3,14 @@
 // Translation Unit: Math/Double_precision/w_exp
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/Math/Double_precision/w_exp.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void exp(); // 1
 
 extern "C" void exp(); // 1
 
@@ -17,7 +18,6 @@ extern "C" void exp(); // 1
 // External References:
 // 
 
-extern "C" void __ieee754_exp(); // 1
 
 extern "C" void __ieee754_exp(); // 1
 

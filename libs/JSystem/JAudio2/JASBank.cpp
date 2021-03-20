@@ -3,7 +3,9 @@
 // Translation Unit: JASBank
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASBank.h"
 
 // 
 // Types:
@@ -60,13 +62,6 @@ extern "C" void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelP
 // External References:
 // 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
 
 extern "C" void __ct__17JASGenericMemPoolFv(); // 1
 extern "C" void alloc__17JASGenericMemPoolFUl(); // 1

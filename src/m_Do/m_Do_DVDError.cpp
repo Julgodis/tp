@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_DVDError
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_DVDError.h"
 
 // 
 // Types:
@@ -51,20 +53,6 @@ extern "C" extern u8 DvdErr_stack[3072];
 // 
 
 void mDoExt_getAssertHeap(); // 2
-extern "C" void OSCreateAlarm(); // 1
-extern "C" void OSSetPeriodicAlarm(); // 1
-extern "C" void OSCancelAlarm(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSCancelThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void OSGetThreadPriority(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void DVDGetDriveStatus(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void mDoExt_getAssertHeap__Fv(); // 1
 extern "C" void suspend__9mDoDvdThdFv(); // 1

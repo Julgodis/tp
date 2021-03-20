@@ -3,17 +3,13 @@
 // Translation Unit: d/d_jnt_col
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_jnt_col.h"
 
 // 
 // Types:
 // 
-
-struct J3DModel {
-};
-
-struct csXyz {
-};
 
 struct Vec {
 };
@@ -28,7 +24,10 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
-struct fopAc_ac_c {
+struct csXyz {
+};
+
+struct dJntColData_c {
 };
 
 struct cM3dGLin {
@@ -36,7 +35,10 @@ struct cM3dGLin {
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
 };
 
-struct dJntColData_c {
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
 };
 
 struct dJntCol_c {
@@ -100,21 +102,6 @@ void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*); // 2
 void cM3d_lineVsPosSuisenCross(cM3dGLin const*, Vec const*, Vec*); // 2
 void cM3d_lineVsPosSuisenCross(Vec const&, Vec const&, Vec const&, Vec*); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
 extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1

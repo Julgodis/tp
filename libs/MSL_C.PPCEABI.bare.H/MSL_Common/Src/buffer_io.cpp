@@ -3,14 +3,14 @@
 // Translation Unit: MSL_Common/Src/buffer_io
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/MSL_Common/Src/buffer_io.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __flush_buffer(); // 1
-extern "C" void __prep_buffer(); // 1
 
 extern "C" void __flush_buffer(); // 1
 extern "C" void __prep_buffer(); // 1

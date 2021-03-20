@@ -3,7 +3,9 @@
 // Translation Unit: f_op/f_op_draw_tag
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_op/f_op_draw_tag.h"
 
 // 
 // Types:

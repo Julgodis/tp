@@ -3,7 +3,9 @@
 // Translation Unit: dsptask
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/dsptask.h"
 
 // 
 // Types:
@@ -37,16 +39,6 @@ extern "C" void DspFinishWork__FUs(); // 1
 void DSPAddPriorTask(STRUCT_DSP_TASK*); // 2
 void Dsp_Running_Check(); // 2
 void Dsp_Running_Start(); // 2
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void DSPCheckMailToDSP(); // 1
-extern "C" void DSPCheckMailFromDSP(); // 1
-extern "C" void DSPReadMailFromDSP(); // 1
-extern "C" void DSPSendMailToDSP(); // 1
-extern "C" void DSPAssertInt(); // 1
-extern "C" void DSPInit(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
 
 extern "C" void DSPAddPriorTask__FP15STRUCT_DSP_TASK(); // 1
 extern "C" void Dsp_Running_Check__Fv(); // 1

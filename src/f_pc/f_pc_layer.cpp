@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_layer
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_layer.h"
 
 // 
 // Types:
@@ -91,8 +93,6 @@ void cTr_Create(node_lists_tree_class*, node_list_class*, int); // 2
 void cTg_SingleCutFromTree(create_tag_class*); // 2
 void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*); // 2
 void cTg_InsertToTree(node_lists_tree_class*, int, create_tag_class*, int); // 2
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i(); // 1
 extern "C" void fpcMtdTg_Do__FP24process_method_tag_class(); // 1

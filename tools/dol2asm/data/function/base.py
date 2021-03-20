@@ -151,12 +151,14 @@ class Function(Symbol):
         if not template_args:
             template_args = []
 
+        if c_export:
+            # export unmangled name
+            await self.export_function_header(exporter, builder, forward=True, original=True)
+            await builder.write(f"; // 1")
+            return
+
         if full_qualified_name:
-            if c_export or not self.is_demangled():
-                # export unmangled name
-                await self.export_function_header(exporter, builder, forward=True, original=True)
-                await builder.write(f"; // 1")
-            elif self.is_demangled():
+            if self.is_demangled():
                 # forward references are not written for class functions
                 if not self.has_class:
                     await self.export_function_header(exporter, builder, forward=True, full_qualified_name=True, specialize_templates=True)

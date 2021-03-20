@@ -264,7 +264,12 @@ class ParseCtx:
                 return self.demangle_array(cur_type)
             elif cur_char == 'M':
                 self.index += 1
-                class_name = QualifiedName([self.demangle_class()])
+
+                if self.peek_next_char() != 'Q':
+                    self.index += 1
+                    class_name = self.demangle_qualified_name()
+                else:
+                    class_name = QualifiedName([self.demangle_class()])
 
                 if self.peek_next_char() != 'F':
                     raise ParseError(f"expected character 'F' after class name")

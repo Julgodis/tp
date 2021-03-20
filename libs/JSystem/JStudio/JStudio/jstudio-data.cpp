@@ -3,7 +3,9 @@
 // Translation Unit: jstudio-data
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/jstudio-data.h"
 
 // 
 // Forward References:

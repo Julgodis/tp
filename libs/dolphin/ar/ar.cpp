@@ -3,22 +3,14 @@
 // Translation Unit: ar
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/ar/ar.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void ARRegisterDMACallback(); // 1
-extern "C" void ARGetDMAStatus(); // 1
-extern "C" void ARStartDMA(); // 1
-extern "C" void ARAlloc(); // 1
-extern "C" void ARInit(); // 1
-extern "C" void ARGetSize(); // 1
-extern "C" static void __ARHandler(); // 1
-extern "C" void __ARClearInterrupt(); // 1
-extern "C" void __ARGetInterruptStatus(); // 1
-extern "C" static void __ARChecksize(); // 1
 
 extern "C" void ARRegisterDMACallback(); // 1
 extern "C" void ARGetDMAStatus(); // 1
@@ -35,17 +27,6 @@ extern "C" static void __ARChecksize(); // 1
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-extern "C" void PPCSync(); // 1
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCFlushRange(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void PPCSync(); // 1

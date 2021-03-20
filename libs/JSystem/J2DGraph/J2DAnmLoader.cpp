@@ -3,7 +3,9 @@
 // Translation Unit: J2DAnmLoader
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DAnmLoader.h"
 
 // 
 // Types:
@@ -13,7 +15,34 @@ struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
 
+struct J2DAnmColorKey {
+};
+
 struct J3DAnmTransformKeyData {
+};
+
+struct J3DAnmTevRegKeyData {
+};
+
+struct J2DAnmVtxColorKey {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J3DAnmVtxColorKeyData {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J3DAnmColorKeyData {
+};
+
+struct J2DAnmTransformKey {
+};
+
+struct J3DAnmTextureSRTKeyData {
 };
 
 struct J2DScreen {
@@ -21,33 +50,6 @@ struct J2DScreen {
 
 struct J2DAnmBase {
 	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
-};
-
-struct J3DAnmTevRegKeyData {
-};
-
-struct J2DAnmTransformKey {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J3DAnmTextureSRTKeyData {
-};
-
-struct J3DAnmColorKeyData {
-};
-
-struct J2DAnmVtxColorKey {
-};
-
-struct J2DAnmColorKey {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J3DAnmVtxColorKeyData {
 };
 
 struct J2DAnmKeyLoader_v15 {
@@ -70,13 +72,20 @@ struct J2DAnmKeyLoader_v15 {
 struct J2DAnmColorFull {
 };
 
+struct J2DAnmTexPattern {
+};
+
+struct J3DAnmTexPatternFullData {
+};
+
+struct J3DAnmVisibilityFullData {
+};
+
 struct J2DAnmTransformFull {
 };
 
-struct J3DAnmVtxColorFullData {
-};
-
-struct J2DAnmTexPattern {
+struct J2DAnmVisibilityFull {
+	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
 };
 
 struct J3DAnmColorFullData {
@@ -85,17 +94,10 @@ struct J3DAnmColorFullData {
 struct J3DAnmTransformFullData {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030A3B4 */ ~J2DAnmVisibilityFull();
-};
-
 struct J2DAnmVtxColorFull {
 };
 
-struct J3DAnmTexPatternFullData {
-};
-
-struct J3DAnmVisibilityFullData {
+struct J3DAnmVtxColorFullData {
 };
 
 struct J2DAnmFullLoader_v15 {
@@ -208,10 +210,6 @@ void* operator new(u32); // 2
 void operator delete(void*); // 2
 void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen(); // 1
 extern "C" void* __nw__FUl(); // 1

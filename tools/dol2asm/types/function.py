@@ -17,16 +17,15 @@ class FunctionType(Type):
     def type(self) -> str:
         return self.decl("")
 
-    def dependencies(self) -> Set["Type"]:
-        deps = set()
-        deps.update(self.inner.dependencies())
-        if self.return_type:
-            deps.update(self.return_type.dependencies())
-        if self.inner_class:
-            deps.update(self.inner_class.dependencies())
-        for arg in self.argument_types:
-            deps.update(arg.dependencies())
-        return deps
+    def traverse(self, callback, depth):
+        should_exit = callback(self, depth)
+        if not should_exit:
+            self.inner.traverse(callback, depth + 1)
+            self.return_type.traverse(callback, depth + 1)
+            for arg in self.argument_types:
+                arg.traverse(callback, depth + 1)
+            if self.inner_class:
+                self.inner_class.traverse(callback, depth + 1)
 
     def decl(self, label: str) -> str:
         class_name = ""

@@ -3,7 +3,9 @@
 // Translation Unit: jstudio-math
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio/jstudio-math.h"
 
 // 
 // Types:
@@ -34,18 +36,6 @@ extern "C" void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4
 // External References:
 // 
 
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTransApply(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
-extern "C" void asin(); // 1
-extern "C" void atan2(); // 1
 
 extern "C" void PSMTXConcat(); // 1
 extern "C" void PSMTXTransApply(); // 1

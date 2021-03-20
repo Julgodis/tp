@@ -3,14 +3,13 @@
 // Translation Unit: control
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStudio/JStudio_JParticle/control.h"
 
 // 
 // Types:
 // 
-
-struct JPABaseEmitter {
-};
 
 namespace JStudio {
 	struct TObject {
@@ -38,6 +37,9 @@ namespace JStudio {
 
 };
 
+struct JPABaseEmitter {
+};
+
 struct JStudio_JParticle {
 	struct TCreateObject {
 		/* 8028E3A0 */ ~TCreateObject();
@@ -53,6 +55,9 @@ struct JStudio_JParticle {
 
 };
 
+struct JPAEmitterCallBack {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -63,9 +68,6 @@ struct JGeometry {
 };
 
 struct JPAParticleCallBack {
-};
-
-struct JPAEmitterCallBack {
 };
 
 struct JPAEmitterManager {
@@ -91,8 +93,6 @@ extern "C" extern void* __vt__Q217JStudio_JParticle13TCreateObject[6];
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void func_8027DEBC(); // 1
 extern "C" void forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter(); // 1

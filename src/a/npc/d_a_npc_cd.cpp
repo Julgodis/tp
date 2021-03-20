@@ -3,7 +3,9 @@
 // Translation Unit: a/npc/d_a_npc_cd
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "a/npc/d_a_npc_cd.h"
 
 // 
 // Types:
@@ -70,19 +72,19 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct Z2Creature {
 };
 
 struct J3DAnmTransform {
-};
-
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -106,13 +108,13 @@ struct dRes_control_c {
 struct csXyz {
 };
 
+struct dKy_tevstr_c {
+};
+
 struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -153,7 +155,6 @@ struct Z2CreatureCitizen {
 // 
 
 static void jntNodeCallBack(J3DJoint*, int); // 2
-extern "C" void __sinit_d_a_npc_cd_cpp(); // 1
 
 extern "C" static void a_npc_d_a_npc_cd__jntNodeCallBack__FP8J3DJointi(); // 1
 extern "C" void NpcCreate__9daNpcCd_cFi(); // 1
@@ -226,7 +227,6 @@ extern "C" extern u8 data_804284A8[360];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
 void mDoExt_modelUpdateDL(J3DModel*); // 2
 void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
@@ -235,19 +235,6 @@ void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
 void cLib_calcTimer__template2(int*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void __dt__4cXyzFv(); // 1

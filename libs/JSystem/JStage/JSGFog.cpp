@@ -3,7 +3,9 @@
 // Translation Unit: JSGFog
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStage/JSGFog.h"
 
 // 
 // Types:

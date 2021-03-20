@@ -3,13 +3,14 @@
 // Translation Unit: Math/Double_precision/e_pow
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/Math/Double_precision/e_pow.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __ieee754_pow(); // 1
 
 extern "C" void __ieee754_pow(); // 1
 extern "C" extern u8 const dp_h[16];
@@ -19,8 +20,6 @@ extern "C" extern u8 const dp_l[16];
 // External References:
 // 
 
-extern "C" void ldexp(); // 1
-extern "C" void sqrt(); // 1
 
 extern "C" void ldexp(); // 1
 extern "C" void sqrt(); // 1

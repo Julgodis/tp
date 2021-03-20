@@ -3,7 +3,9 @@
 // Translation Unit: DynamicLink
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "DynamicLink.h"
 
 // 
 // Types:
@@ -90,11 +92,6 @@ struct JKRDvdRipper {
 // 
 
 static void calcSum2(u16 const*, u32); // 2
-extern "C" void ModuleProlog(); // 1
-extern "C" void ModuleEpilog(); // 1
-extern "C" void ModuleUnresolved(); // 1
-extern "C" void ModuleConstructorsX(); // 1
-extern "C" void ModuleDestructorsX(); // 1
 
 extern "C" void __dt__24DynamicModuleControlBaseFv(); // 1
 extern "C" void __ct__24DynamicModuleControlBaseFv(); // 1
@@ -137,24 +134,8 @@ extern "C" extern void* __vt__20DynamicModuleControl[13];
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void OSReport_Error(); // 1
-extern "C" void OSReport_Warning(); // 1
 void mDoExt_getArchiveHeap(); // 2
 void operator delete(void*); // 2
-extern "C" void JUTReportConsole_f(); // 1
-extern "C" void OSGetStackPointer(); // 1
-extern "C" void OSLink(); // 1
-extern "C" void OSLinkFixed(); // 1
-extern "C" void OSUnlink(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void snprintf(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void OSReport_Error(); // 1

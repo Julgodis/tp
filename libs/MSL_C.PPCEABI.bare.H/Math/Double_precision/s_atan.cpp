@@ -3,13 +3,14 @@
 // Translation Unit: Math/Double_precision/s_atan
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/Math/Double_precision/s_atan.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void atan(); // 1
 
 extern "C" void atan(); // 1
 extern "C" extern u8 const atanlo[32];

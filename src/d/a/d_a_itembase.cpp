@@ -3,7 +3,9 @@
 // Translation Unit: d/a/d_a_itembase
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/a/d_a_itembase.h"
 
 // 
 // Types:
@@ -71,10 +73,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -156,10 +158,6 @@ void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
 void dComIfGd_setSimpleShadow(cXyz*, f32, f32, cBgS_PolyInfo&, s16, f32, _GXTexObj*); // 2
 void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*); // 2
 void* operator new(u32); // 2
-extern "C" void _savefpr_27(); // 1
-extern "C" void _restfpr_27(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _restgpr_21(); // 1
 
 extern "C" void play__14mDoExt_baseAnmFv(); // 1
 extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss(); // 1

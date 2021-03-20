@@ -3,7 +3,9 @@
 // Translation Unit: JUTGraphFifo
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTGraphFifo.h"
 
 // 
 // Types:
@@ -32,13 +34,6 @@ extern "C" void __dt__12JUTGraphFifoFv(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void GXInit(); // 1
-extern "C" void GXInitFifoBase(); // 1
-extern "C" void GXInitFifoPtrs(); // 1
-extern "C" void GXSaveCPUFifo(); // 1
-extern "C" void GXGetGPStatus(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
 
 extern "C" void alloc__7JKRHeapFUli(); // 1
 extern "C" void free__7JKRHeapFPv(); // 1

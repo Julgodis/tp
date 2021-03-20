@@ -3,7 +3,9 @@
 // Translation Unit: msg/scrn/d_msg_scrn_light
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "msg/scrn/d_msg_scrn_light.h"
 
 // 
 // Types:
@@ -29,9 +31,6 @@ struct dMsgScrnLight_c {
 	/* 802460DC */ void drawCommon(f32, f32, f32, f32, f32);
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -43,6 +42,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -71,7 +73,6 @@ struct J2DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_msg_scrn_light_cpp(); // 1
 
 extern "C" void __ct__19dMsgScrnLight_HIO_cFv(); // 1
 extern "C" void updateColor__19dMsgScrnLight_HIO_cFUc(); // 1
@@ -91,7 +92,6 @@ extern "C" extern char const* const msg_scrn_d_msg_scrn_light__stringBase0;
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
 
 extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
 extern "C" void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor(); // 1

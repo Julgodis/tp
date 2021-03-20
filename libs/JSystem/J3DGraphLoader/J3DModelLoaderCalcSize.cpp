@@ -3,28 +3,30 @@
 // Translation Unit: J3DModelLoaderCalcSize
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphLoader/J3DModelLoaderCalcSize.h"
 
 // 
 // Types:
 // 
 
-struct J3DDrawBlock {
+struct J3DModelInfoBlock {
 };
 
-struct J3DEnvelopeBlock {
+struct J3DShapeBlock {
+};
+
+struct J3DDrawBlock {
 };
 
 struct J3DJointBlock {
 };
 
-struct J3DModelInfoBlock {
-};
-
 struct J3DMaterialDLBlock {
 };
 
-struct J3DShapeBlock {
+struct J3DEnvelopeBlock {
 };
 
 struct J3DTextureBlock {
@@ -99,16 +101,7 @@ extern "C" extern char const* const J3DModelLoaderCalcSize__stringBase0;
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
 void JSUConvertOffsetToPtr__template69(void const*, void const*); // 2
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock(); // 1

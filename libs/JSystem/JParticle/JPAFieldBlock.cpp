@@ -3,7 +3,9 @@
 // Translation Unit: JPAFieldBlock
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JParticle/JPAFieldBlock.h"
 
 // 
 // Types:
@@ -17,10 +19,10 @@ struct JPAFieldBlock {
 	/* 8027D0C0 */ void init(JKRHeap*);
 };
 
-struct JPABaseParticle {
+struct JPAEmitterWorkData {
 };
 
-struct JPAEmitterWorkData {
+struct JPABaseParticle {
 };
 
 struct JPAFieldBase {
@@ -124,12 +126,6 @@ extern "C" void __dt__15JPAFieldGravityFv(); // 1
 
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXRotAxisRad(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
 extern "C" void* __nw__FUlP7JKRHeapi(); // 1

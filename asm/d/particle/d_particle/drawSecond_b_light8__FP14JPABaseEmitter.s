@@ -7,7 +7,7 @@ lbl_80049E40:
 /* 80049E54 00000014  7C 7E 1B 78 */	mr r30, r3
 /* 80049E58 00000018  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80049E5C 0000001C  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 80049E60 00000020  88 0D 87 E4 */	lbz r0, -0x781c(r13)
+/* 80049E60 00000020  88 0D 87 E4 */	lbz r0, struct_80450D64+0x0(r13)
 /* 80049E64 00000024  7C 03 07 74 */	extsb r3, r0
 /* 80049E68 00000028  48 15 CD B9 */	bl dKy_setLight_nowroom__Fc
 /* 80049E6C 0000002C  38 60 00 01 */	li r3, 1

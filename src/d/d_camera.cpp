@@ -3,7 +3,9 @@
 // Translation Unit: d/d_camera
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_camera.h"
 
 // 
 // Types:
@@ -14,6 +16,38 @@ struct fopAc_ac_c {
 
 struct dCamMapToolData {
 	/* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+	/* 800977F4 */ cXyz(cXyz const&);
+	/* 8014195C */ cXyz(f32, f32, f32);
+	/* 800125DC */ cXyz();
+	/* 8008E790 */ void abs() const;
+	/* 8008E8D0 */ void operator-=(Vec const&);
+	/* 8008E904 */ void operator+=(Vec const&);
+	/* 800977D8 */ void operator=(cXyz const&);
+	/* 80182D8C */ void set(f32, f32, f32);
+	/* 80266AE4 */ void operator+(Vec const&) const;
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80266BD0 */ void operator*(Vec const&) const;
+	/* 80266CE4 */ void norm() const;
+	/* 80266EF4 */ void normalize();
+	/* 8026706C */ bool operator!=(Vec const&) const;
+};
+
+struct stage_camera2_data_class {
+};
+
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct camera_class {
 };
 
 struct cSAngle {
@@ -46,38 +80,6 @@ struct cSAngle {
 	/* 802711E8 */ void operator-=(cSAngle const&);
 	/* 80271264 */ void operator*(f32) const;
 	/* 802712B4 */ void operator*=(f32);
-};
-
-struct camera_class {
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80009184 */ ~cXyz();
-	/* 800977F4 */ cXyz(cXyz const&);
-	/* 8014195C */ cXyz(f32, f32, f32);
-	/* 800125DC */ cXyz();
-	/* 8008E790 */ void abs() const;
-	/* 8008E8D0 */ void operator-=(Vec const&);
-	/* 8008E904 */ void operator+=(Vec const&);
-	/* 800977D8 */ void operator=(cXyz const&);
-	/* 80182D8C */ void set(f32, f32, f32);
-	/* 80266AE4 */ void operator+(Vec const&) const;
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 80266B84 */ void operator*(f32) const;
-	/* 80266BD0 */ void operator*(Vec const&) const;
-	/* 80266CE4 */ void norm() const;
-	/* 80266EF4 */ void normalize();
-	/* 8026706C */ bool operator!=(Vec const&) const;
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
-struct stage_camera2_data_class {
 };
 
 struct dCamera_c {
@@ -509,11 +511,11 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct cBgS_PolyInfo {
-};
-
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS_PolyInfo {
 };
 
 struct cBgS {
@@ -635,23 +637,7 @@ struct Z2Audience {
 // Forward References:
 // 
 
-extern "C" static void func_8015FA2C(); // 1
-extern "C" static void func_8015FA4C(); // 1
-extern "C" static void func_8015FADC(); // 1
-extern "C" static void func_8015FB28(); // 1
-extern "C" static void func_8015FBF8(); // 1
-extern "C" static void func_801602C4(); // 1
-extern "C" static void func_80160300(); // 1
 static void sph_chk_callback(dBgS_SphChk*, cBgD_Vtx_t*, int, int, int, cM3dGPla*, void*); // 2
-extern "C" static void func_80167CB8(); // 1
-extern "C" static void func_8016C25C(); // 1
-extern "C" static void func_8016C2D4(); // 1
-extern "C" static void func_8016C330(); // 1
-extern "C" static void func_8016C34C(); // 1
-extern "C" static void func_8016C368(); // 1
-extern "C" static void func_8016E410(); // 1
-extern "C" static void func_80174E50(); // 1
-extern "C" static void func_8017D934(); // 1
 void dCam_getAngleY(camera_class*); // 2
 void dCam_getAngleX(camera_class*); // 2
 void dCam_getControledAngleY(camera_class*); // 2
@@ -667,11 +653,6 @@ static void init_phase2(camera_class*); // 2
 static void camera_create(camera_class*); // 2
 static void camera_delete(camera_process_class*); // 2
 static bool is_camera_delete(void*); // 2
-extern "C" void __sinit_d_camera_cpp(); // 1
-extern "C" static void func_801827EC(); // 1
-extern "C" static void func_801827F4(); // 1
-extern "C" static void func_801827FC(); // 1
-extern "C" static void func_80182804(); // 1
 static void daAlink_getAlinkActorClass(); // 2
 static void dComIfGs_isTmpBit(u16); // 2
 static void dComIfGp_getAttention(); // 2
@@ -1021,49 +1002,6 @@ void cM3d_2PlaneLinePosNearPos(cM3dGPla const&, cM3dGPla const&, Vec const*, Vec
 void operator+(s16, cSAngle const&); // 2
 void operator-(s16, cSAngle const&); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savefpr_29(); // 1
-extern "C" void _restfpr_29(); // 1
-extern "C" void _savegpr_16(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_16(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strncmp(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void tan(); // 1
 
 extern "C" void onBlure__13mDoGph_gInf_cFv(); // 1
 extern "C" void onBlure__13mDoGph_gInf_cFPA4_Cf(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: J3DSys
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DSys.h"
 
 // 
 // Types:
@@ -35,7 +37,6 @@ struct _GXTexMapID {
 // Forward References:
 // 
 
-extern "C" void __sinit_J3DSys_cpp(); // 1
 
 extern "C" void __ct__6J3DSysFv(); // 1
 extern "C" void loadPosMtxIndx__6J3DSysCFiUs(); // 1
@@ -67,56 +68,6 @@ void makeTexCoordTable(); // 2
 void makeAlphaCmpTable(); // 2
 void makeZModeTable(); // 2
 void makeTevSwapTable(); // 2
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXInvalidateVtxCache(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXFlush(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetCoPlanar(); // 1
-extern "C" void GXSetChanAmbColor(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXInitTexCacheRegion(); // 1
-extern "C" void GXSetTevIndirect(); // 1
-extern "C" void GXSetIndTexMtx(); // 1
-extern "C" void GXSetIndTexCoordScale(); // 1
-extern "C" void GXSetIndTexOrder(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevColorS10(); // 1
-extern "C" void GXSetTevKColor(); // 1
-extern "C" void GXSetTevKColorSel(); // 1
-extern "C" void GXSetTevKAlphaSel(); // 1
-extern "C" void GXSetTevSwapMode(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetFogRangeAdj(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetColorUpdate(); // 1
-extern "C" void GXSetAlphaUpdate(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize(); // 1
 extern "C" void makeTexCoordTable__Fv(); // 1

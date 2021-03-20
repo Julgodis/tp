@@ -3,7 +3,9 @@
 // Translation Unit: JASHeapCtrl
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASHeapCtrl.h"
 
 // 
 // Types:
@@ -68,7 +70,6 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-extern "C" void __sinit_JASHeapCtrl_cpp(); // 1
 
 extern "C" void __ct__7JASHeapFP11JASDisposer(); // 1
 extern "C" void initRootHeap__7JASHeapFPvUl(); // 1
@@ -102,18 +103,6 @@ void* operator new(u32, JKRHeap*, int); // 2
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void* __nw__FUlP7JKRHeapi(); // 1
 extern "C" void* __nwa__FUlP7JKRHeapi(); // 1

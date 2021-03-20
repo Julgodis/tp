@@ -3,7 +3,9 @@
 // Translation Unit: d/bg/d_bg_s_grp_pass_chk
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_s_grp_pass_chk.h"
 
 // 
 // Types:

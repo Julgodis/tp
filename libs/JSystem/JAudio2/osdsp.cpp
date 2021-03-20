@@ -3,7 +3,9 @@
 // Translation Unit: osdsp
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/osdsp.h"
 
 // 
 // Types:
@@ -16,7 +18,6 @@ struct STRUCT_DSP_TASK {
 // Forward References:
 // 
 
-extern "C" void DSPAddTask(); // 1
 void DSPAddPriorTask(STRUCT_DSP_TASK*); // 2
 
 extern "C" void DSPAddTask(); // 1
@@ -26,11 +27,6 @@ extern "C" void DSPAddPriorTask__FP15STRUCT_DSP_TASK(); // 1
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __DSP_boot_task(); // 1
-extern "C" void __DSP_insert_task(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void OSDisableInterrupts(); // 1

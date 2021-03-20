@@ -3,19 +3,21 @@
 // Translation Unit: J3DMaterialAttach
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphAnimator/J3DMaterialAttach.h"
 
 // 
 // Types:
 // 
 
-struct J3DAnmTextureSRTKey {
-};
-
 struct J3DAnmColor {
 };
 
 struct J3DAnmTevRegKey {
+};
+
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DAnmTexPattern {
@@ -40,19 +42,19 @@ struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 };
 
-struct J3DMatColorAnm {
-};
-
-struct J3DTevColorAnm {
+struct J3DTexNoAnm {
 };
 
 struct J3DTevKColorAnm {
 };
 
+struct J3DMatColorAnm {
+};
+
 struct J3DTexMtxAnm {
 };
 
-struct J3DTexNoAnm {
+struct J3DTevColorAnm {
 };
 
 struct J3DMaterialAnm {
@@ -87,14 +89,6 @@ extern "C" void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); //
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void* __nw__FUl(); // 1
 extern "C" void __dl__FPv(); // 1

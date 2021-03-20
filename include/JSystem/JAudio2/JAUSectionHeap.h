@@ -1,12 +1,7 @@
-#ifndef JAUSECTIONHEAP_H_
-#define JAUSECTIONHEAP_H_
+#ifndef JAUSECTIONHEAP_H
+#define JAUSECTIONHEAP_H
 
-extern "C" {
-void JAUSectionHeap_NS_getOpenSection(void);
-void JAUSectionHeap_NS_loadDynamicSeq(void);
-void JAUSectionHeap_NS_newDynamicSeqBlock(void);
-void JAUSectionHeap_NS_releaseIdleDynamicSeqDataBlock(void);
-void JAUSectionHeap_NS_setSeqDataArchive(void);
-}
+#include "dolphin/types.h"
 
-#endif  // JAUSECTIONHEAP_H_
+
+#endif /* JAUSECTIONHEAP_H */

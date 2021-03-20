@@ -3,7 +3,9 @@
 // Translation Unit: JKRAramBlock
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRAramBlock.h"
 
 // 
 // Types:
@@ -48,10 +50,6 @@ extern "C" void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap(); // 1
 
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
 
 extern "C" void* __nw__FUlP7JKRHeapi(); // 1
 extern "C" void __dl__FPv(); // 1

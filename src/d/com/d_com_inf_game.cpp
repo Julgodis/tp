@@ -3,19 +3,21 @@
 // Translation Unit: d/com/d_com_inf_game
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/com/d_com_inf_game.h"
 
 // 
 // Types:
 // 
 
+struct cXyz {
+};
+
 struct J3DModel {
 };
 
 struct dStage_startStage_c {
-};
-
-struct cXyz {
 };
 
 struct dTimer_c {
@@ -517,7 +519,6 @@ void dComIfGs_offVisitedRoom(int); // 2
 void dComIfGs_isVisitedRoom(int); // 2
 void dComIfGs_staffroll_next_go(); // 2
 void dComIfGs_staffroll_next_go_check(); // 2
-extern "C" void __sinit_d_com_inf_game_cpp(); // 1
 
 extern "C" void ct__14dComIfG_play_cFv(); // 1
 extern "C" void init__14dComIfG_play_cFv(); // 1
@@ -722,8 +723,6 @@ extern "C" extern u32 g_saftyWhiteColor;
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-extern "C" void OSReport_Error(); // 1
 void mDoAud_setSceneName(char const*, s32, s32); // 2
 void mDoAud_resetProcess(); // 2
 void mDoExt_destroyExpHeap(JKRExpHeap*); // 2
@@ -737,25 +736,6 @@ void dMenuFmap_getStartStageName(void*); // 2
 void cPhs_Handler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
 
 SECTION_INIT void memset(); // 1
 extern "C" void OSReport_Error(); // 1

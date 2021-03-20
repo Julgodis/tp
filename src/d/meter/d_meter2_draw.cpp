@@ -3,13 +3,21 @@
 // Translation Unit: d/meter/d_meter2_draw
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/meter/d_meter2_draw.h"
 
 // 
 // Types:
 // 
 
 struct JKRExpHeap {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct J2DGrafContext {
@@ -35,10 +43,13 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct J2DRotateAxis {
+struct J2DAnmColor {
 };
 
 struct J2DBasePosition {
+};
+
+struct J2DRotateAxis {
 };
 
 struct J2DPane {
@@ -49,20 +60,11 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct CPaneMgr {
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
-};
-
-struct J2DAnmColor {
 };
 
 struct dMeter2Draw_c {
@@ -193,9 +195,6 @@ struct dKantera_icon_c {
 struct JMSMesgEntry_c {
 };
 
-struct ResTLUT {
-};
-
 struct ResTIMG {
 };
 
@@ -206,6 +205,9 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct ResTLUT {
 };
 
 struct J2DPicture {
@@ -226,10 +228,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -388,28 +390,6 @@ void dPaneClass_showNullPane(J2DScreen*); // 2
 void cLib_addCalc2(f32*, f32, f32, f32); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void _savegpr_15(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_15(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
 extern "C" void mDoExt_getMesgFont__Fv(); // 1

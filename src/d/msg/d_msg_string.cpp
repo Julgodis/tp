@@ -3,20 +3,22 @@
 // Translation Unit: d/msg/d_msg_string
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/msg/d_msg_string.h"
 
 // 
 // Types:
 // 
+
+struct JUTFont {
+};
 
 struct J2DTextBox {
 };
 
 struct COutFont_c {
 	/* 80225C94 */ COutFont_c(u8);
-};
-
-struct JUTFont {
 };
 
 struct dMsgString_c {

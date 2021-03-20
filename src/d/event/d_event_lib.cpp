@@ -3,7 +3,9 @@
 // Translation Unit: d/event/d_event_lib
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/event/d_event_lib.h"
 
 // 
 // Types:
@@ -44,7 +46,6 @@ struct dEvent_manager_c {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_event_lib_cpp(); // 1
 
 extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
 extern "C" void setEvent__17dEvLib_callback_cFiii(); // 1
@@ -68,8 +69,6 @@ extern "C" extern void* lit_3622[3 + 1 /* padding */];
 
 void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
 void fopAcM_orderMapToolEvent(fopAc_ac_c*, u8, s16, u16, u16, u16); // 2
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
 
 extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
 extern "C" void fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs(); // 1

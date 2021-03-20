@@ -3,7 +3,9 @@
 // Translation Unit: J3DMaterial
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphBase/J3DMaterial.h"
 
 // 
 // Types:
@@ -78,15 +80,15 @@ struct J3DColorBlockLightOff {
 	/* 8031747C */ void initialize();
 };
 
-struct J3DLightObj {
-};
-
 struct J3DColorChan {
 	/* 8000E47C */ J3DColorChan();
 };
 
 struct J3DGXColor {
 	/* 8000E538 */ J3DGXColor();
+};
+
+struct J3DLightObj {
 };
 
 struct J3DColorBlock {
@@ -130,14 +132,14 @@ struct J3DTexGenBlockPatched {
 	/* 80317644 */ void initialize();
 };
 
+struct J3DNBTScale {
+};
+
 struct J3DTexMtx {
 };
 
 struct J3DTexCoord {
 	/* 8000E464 */ J3DTexCoord();
-};
-
-struct J3DNBTScale {
 };
 
 struct J3DTexGenBlock {
@@ -165,6 +167,11 @@ struct J3DTevBlock {
 	/* 80317350 */ void reset(J3DTevBlock*);
 };
 
+struct J3DIndTexCoordScale {
+	/* 8000E024 */ ~J3DIndTexCoordScale();
+	/* 8000E0E4 */ J3DIndTexCoordScale();
+};
+
 struct J3DIndTexMtx {
 	/* 8000E064 */ ~J3DIndTexMtx();
 	/* 8000E0F0 */ J3DIndTexMtx();
@@ -172,11 +179,6 @@ struct J3DIndTexMtx {
 
 struct J3DIndTexOrder {
 	/* 8000E128 */ J3DIndTexOrder();
-};
-
-struct J3DIndTexCoordScale {
-	/* 8000E024 */ ~J3DIndTexCoordScale();
-	/* 8000E0E4 */ J3DIndTexCoordScale();
 };
 
 struct J3DIndBlock {
@@ -196,16 +198,16 @@ struct J3DIndBlock {
 	/* 80317410 */ void setIndTexOrder(u32, J3DIndTexOrder);
 };
 
-struct J3DBlend {
-};
-
-struct J3DFog {
-};
-
 struct J3DAlphaComp {
 };
 
+struct J3DBlend {
+};
+
 struct J3DZMode {
+};
+
+struct J3DFog {
 };
 
 struct J3DPEBlock {
@@ -456,15 +458,6 @@ void operator delete(void*); // 2
 void J3DGDSetGenMode(u8, u8, u8, u8, _GXCullMode); // 2
 void J3DGDSetGenMode_3Param(u8, u8, u8); // 2
 void loadNBTScale(J3DNBTScale&); // 2
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void patch__10J3DPEBlockFv(); // 1
 extern "C" void patchLight__13J3DColorBlockFv(); // 1

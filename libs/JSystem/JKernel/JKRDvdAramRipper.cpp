@@ -3,11 +3,18 @@
 // Translation Unit: JKRDvdAramRipper
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRDvdAramRipper.h"
 
 // 
 // Types:
 // 
+
+struct JKRADCommand {
+	/* 802DAF1C */ JKRADCommand();
+	/* 802DAF5C */ ~JKRADCommand();
+};
 
 struct JKRExpandSwitch {
 };
@@ -16,11 +23,6 @@ struct JKRDvdFile {
 	/* 802D9584 */ JKRDvdFile();
 	/* 802D9748 */ ~JKRDvdFile();
 	/* 802D98C4 */ void open(s32);
-};
-
-struct JKRADCommand {
-	/* 802DAF1C */ JKRADCommand();
-	/* 802DAF5C */ ~JKRADCommand();
 };
 
 struct JKRDvdAramRipper {
@@ -102,7 +104,6 @@ static void decompSZS_subroutine(u8*, u32); // 2
 static void firstSrcData(); // 2
 static void nextSrcData(u8*); // 2
 static void dmaBufferFlush(u32); // 2
-extern "C" void __sinit_JKRDvdAramRipper_cpp(); // 1
 
 extern "C" void loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl(); // 1
 extern "C" void loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl(); // 1
@@ -125,29 +126,8 @@ extern "C" extern u32 sSZSBufferSize__16JKRDvdAramRipper;
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void DVDReadPrio(); // 1
-extern "C" void VIWaitForRetrace(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void alloc__7JKRHeapFUli(); // 1

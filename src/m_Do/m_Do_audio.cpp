@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_audio
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_audio.h"
 
 // 
 // Types:
@@ -12,6 +14,17 @@
 struct mDoAud_zelAudio_c {
 	/* 80006FB4 */ void reset();
 	/* 80007368 */ ~mDoAud_zelAudio_c();
+};
+
+struct JAISoundHandle {
+	/* 80007838 */ ~JAISoundHandle();
+	/* 802A2184 */ void releaseSound();
+};
+
+struct JKRArchive {
+	struct EMountMode {
+	};
+
 };
 
 struct JGeometry {
@@ -23,18 +36,7 @@ struct JGeometry {
 
 };
 
-struct JAISoundHandle {
-	/* 80007838 */ ~JAISoundHandle();
-	/* 802A2184 */ void releaseSound();
-};
-
 struct JAISoundID {
-};
-
-struct JKRArchive {
-	struct EMountMode {
-	};
-
 };
 
 struct JKRSolidHeap {
@@ -129,7 +131,6 @@ void mDoAud_setFadeOutStart(u8); // 2
 void mDoAud_setFadeInStart(u8); // 2
 void mDoAud_resetProcess(); // 2
 void mDoAud_resetRecover(); // 2
-extern "C" void __sinit_m_Do_audio_cpp(); // 1
 
 extern "C" void reset__17mDoAud_zelAudio_cFv(); // 1
 extern "C" static void mDoAud_Create__Fv(); // 1
@@ -155,13 +156,7 @@ extern "C" extern u8 g_mDoAud_audioHeap[4];
 // External References:
 // 
 
-extern "C" void OSReport_Error(); // 1
 void operator delete(void*); // 2
-extern "C" void OSGetSoundMode(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void OSReport_Error(); // 1
 extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap(); // 1

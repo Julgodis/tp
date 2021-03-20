@@ -3,15 +3,14 @@
 // Translation Unit: ptmf
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Runtime.PPCEABI.H/ptmf.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_cmpr(); // 1
-extern "C" void __ptmf_scall(); // 1
 
 extern "C" void __ptmf_test(); // 1
 extern "C" void __ptmf_cmpr(); // 1

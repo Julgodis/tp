@@ -3,11 +3,22 @@
 // Translation Unit: d/menu/d_menu_dmap
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_dmap.h"
 
 // 
 // Types:
 // 
+
+struct STControl {
+	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
 
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
@@ -18,15 +29,6 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct STControl {
-	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
-	/* 8003219C */ void checkTrigger();
-	/* 8003242C */ void checkLeftTrigger();
-	/* 800324A8 */ void checkRightTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
 };
 
 struct dMenu_DmapBg_c {
@@ -58,12 +60,6 @@ struct dMenu_DmapBg_c {
 	/* 801BB468 */ void drawCursor();
 };
 
-struct CSTControl {
-};
-
-struct J2DOrthoGraph {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -85,6 +81,12 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct CSTControl {
+};
+
+struct J2DOrthoGraph {
 };
 
 struct dMenu_Dmap_c {
@@ -311,10 +313,10 @@ struct CPaneMgrAlphaMorf {
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -339,8 +341,6 @@ struct J2DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_dmap_cpp(); // 1
-extern "C" static void func_801C0844(); // 1
 
 extern "C" void __ct__14dMenu_DmapBg_cFP10JKRExpHeapP9STControl(); // 1
 extern "C" void mapScreenInit__14dMenu_DmapBg_cFv(); // 1
@@ -470,8 +470,6 @@ extern "C" extern void* lit_4885[3];
 // External References:
 // 
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
 void mDoExt_getJ2dHeap(); // 2
 void mDoExt_destroyExpHeap(JKRExpHeap*); // 2
 void mDoExt_setCurrentHeap(JKRHeap*); // 2
@@ -488,23 +486,6 @@ void dPaneClass_showNullPane(J2DScreen*); // 2
 void cLib_addCalc2(f32*, f32, f32, f32); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void GXGetScissor(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
 
 SECTION_INIT void memset(); // 1
 SECTION_INIT void memcpy(); // 1

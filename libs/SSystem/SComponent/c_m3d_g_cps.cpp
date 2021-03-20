@@ -3,16 +3,18 @@
 // Translation Unit: c_m3d_g_cps
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_m3d_g_cps.h"
 
 // 
 // Types:
 // 
 
-struct cM3dGCpsS {
+struct cXyz {
 };
 
-struct cXyz {
+struct cM3dGCpsS {
 };
 
 struct cM3dGCps {

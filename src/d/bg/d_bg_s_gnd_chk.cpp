@@ -3,7 +3,9 @@
 // Translation Unit: d/bg/d_bg_s_gnd_chk
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/bg/d_bg_s_gnd_chk.h"
 
 // 
 // Types:
@@ -58,24 +60,6 @@ struct cBgS_GndChk {
 // Forward References:
 // 
 
-extern "C" static void func_80077B10(); // 1
-extern "C" static void func_80077B18(); // 1
-extern "C" static void func_80077B20(); // 1
-extern "C" static void func_80077B28(); // 1
-extern "C" static void func_80077B30(); // 1
-extern "C" static void func_80077B38(); // 1
-extern "C" static void func_80077B40(); // 1
-extern "C" static void func_80077B48(); // 1
-extern "C" static void func_80077B50(); // 1
-extern "C" static void func_80077B58(); // 1
-extern "C" static void func_80077B60(); // 1
-extern "C" static void func_80077B68(); // 1
-extern "C" static void func_80077B70(); // 1
-extern "C" static void func_80077B78(); // 1
-extern "C" static void func_80077B80(); // 1
-extern "C" static void func_80077B88(); // 1
-extern "C" static void func_80077B90(); // 1
-extern "C" static void func_80077B98(); // 1
 
 extern "C" void __ct__11dBgS_GndChkFv(); // 1
 extern "C" void __dt__11dBgS_GndChkFv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: f_pc/f_pc_line_iter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "f_pc/f_pc_line_iter.h"
 
 // 
 // Types:
@@ -42,8 +44,6 @@ void fpcLy_SetCurrentLayer(layer_class*); // 2
 void fpcLy_CurrentLayer(); // 2
 void cTrIt_Method(node_lists_tree_class*, int (*)(node_class*, void*), void*); // 2
 void cTgIt_MethodCall(create_tag_class*, method_filter*); // 2
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
 
 extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1
 extern "C" void fpcLy_CurrentLayer__Fv(); // 1

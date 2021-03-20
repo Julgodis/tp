@@ -3,33 +3,40 @@
 // Translation Unit: J2DPictureEx
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DPictureEx.h"
 
 // 
 // Types:
 // 
 
-struct J2DAnmColor {
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
-struct _GXTlut {
+struct ResFONT {
 };
 
-struct JUTPalette {
+struct J2DAnmVtxColor {
 };
 
 struct ResTIMG {
 };
 
-struct JUTTexture {
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
-	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
-struct J2DAnmTexPattern {
+struct _GXCullMode {
 };
 
-struct ResFONT {
+struct J2DAnmTransform {
+};
+
+struct J2DAnmBase {
 };
 
 struct JSUStreamSeekFrom {
@@ -38,22 +45,6 @@ struct JSUStreamSeekFrom {
 struct JSURandomInputStream {
 	/* 802DC458 */ void peek(void*, s32);
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmTransform {
-};
-
-struct _GXCullMode {
-};
-
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
 };
 
 struct J2DPane {
@@ -81,26 +72,27 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct ResTLUT {
+struct J2DTevStage {
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
+struct _GXTlut {
+};
 
-	template <typename A1>
-	struct TVec2 { };
-	/* TVec2<s16> */
-	struct TVec2__template1 {
-		/* 802FF204 */ TVec2__template1();
-	};
+struct JUTPalette {
+};
 
+struct JUTTexture {
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
 };
 
 struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmColor {
 };
 
 struct J2DAnmTevRegKey {
@@ -114,16 +106,26 @@ struct J2DMaterial {
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DTevStage {
+struct ResTLUT {
 };
 
 struct _GXTexMapID {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+	template <typename A1>
+	struct TVec2 { };
+	/* TVec2<s16> */
+	struct TVec2__template0 {
+		/* 802FF204 */ TVec2__template0();
+	};
+
 };
 
 struct J2DPictureEx {
@@ -317,36 +319,6 @@ extern "C" extern u8 const lit_2557[40];
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void setBlendRatio__10J2DPictureFff(); // 1
 extern "C" void calcMtx__7J2DPaneFv(); // 1

@@ -3,16 +3,14 @@
 // Translation Unit: dsp_task
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/dsp/dsp_task.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __DSP_exec_task(); // 1
-extern "C" void __DSP_boot_task(); // 1
-extern "C" void __DSP_insert_task(); // 1
-extern "C" void __DSP_remove_task(); // 1
 
 extern "C" void __DSP_exec_task(); // 1
 extern "C" void __DSP_boot_task(); // 1
@@ -33,11 +31,6 @@ extern "C" extern u8 __DSP_curr_task[4];
 // External References:
 // 
 
-extern "C" void DSPCheckMailToDSP(); // 1
-extern "C" void DSPCheckMailFromDSP(); // 1
-extern "C" void DSPReadMailFromDSP(); // 1
-extern "C" void DSPSendMailToDSP(); // 1
-extern "C" void __DSP_debug_printf(); // 1
 
 extern "C" void DSPCheckMailToDSP(); // 1
 extern "C" void DSPCheckMailFromDSP(); // 1

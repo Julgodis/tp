@@ -3,7 +3,9 @@
 // Translation Unit: d/menu/d_menu_save
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/menu/d_menu_save.h"
 
 // 
 // Types:
@@ -255,15 +257,6 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JKRExpHeap {
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct J2DGrafContext {
 };
 
@@ -272,6 +265,15 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct CPaneMgr {
@@ -286,10 +288,10 @@ struct CPaneMgrAlpha {
 	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -319,7 +321,6 @@ struct J2DAnmLoaderDataBase {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_menu_save_cpp(); // 1
 
 extern "C" void __ct__9dMs_HIO_cFv(); // 1
 extern "C" void __ct__12dMenu_save_cFv(); // 1
@@ -547,23 +548,6 @@ void dPaneClass_showNullPane(J2DScreen*); // 2
 void cAPICPad_ANY_BUTTON(u32); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void printf(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_getJ2dHeap__Fv(); // 1
 extern "C" void mDoExt_getMesgFont__Fv(); // 1

@@ -3,13 +3,20 @@
 // Translation Unit: J3DModel
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J3DGraphAnimator/J3DModel.h"
 
 // 
 // Types:
 // 
 
 struct J3DModel;
+struct J3DDeformData {
+	/* 8032E230 */ void offAllFlag(u32);
+	/* 8032E274 */ void deform(J3DModel*);
+};
+
 struct J3DModelData {
 	/* 803260F8 */ void syncJ3DSysFlags() const;
 };
@@ -20,11 +27,6 @@ struct J3DSkinDeform {
 	/* 8032D378 */ void changeFastSkinDL(J3DModelData*);
 	/* 8032D738 */ void transformVtxPosNrm(J3DModelData*);
 	/* 8032DFDC */ void deform(J3DModel*);
-};
-
-struct J3DDeformData {
-	/* 8032E230 */ void offAllFlag(u32);
-	/* 8032E274 */ void deform(J3DModel*);
 };
 
 struct J3DModel {
@@ -155,23 +157,6 @@ void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void operator delete(void*); // 2
 void J3DCalcViewBaseMtx(f32 (* )[4], Vec const&, f32 const (& )[3][4], f32 (* )[4]); // 2
-extern "C" void DCStoreRange(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void* __nw__FUl(); // 1
 extern "C" void* __nwa__FUl(); // 1

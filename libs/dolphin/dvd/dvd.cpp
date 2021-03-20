@@ -3,59 +3,14 @@
 // Translation Unit: dvd
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/dvd/dvd.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void defaultOptionalCommandChecker(); // 1
-extern "C" void DVDInit(); // 1
-extern "C" static void stateReadingFST(); // 1
-extern "C" static void cbForStateReadingFST(); // 1
-extern "C" static void cbForStateError(); // 1
-extern "C" static void stateTimeout(); // 1
-extern "C" static void stateGettingError(); // 1
-extern "C" static void CategorizeError(); // 1
-extern "C" static void cbForStateGettingError(); // 1
-extern "C" static void cbForUnrecoveredError(); // 1
-extern "C" static void cbForUnrecoveredErrorRetry(); // 1
-extern "C" static void stateGoToRetry(); // 1
-extern "C" static void cbForStateGoToRetry(); // 1
-extern "C" static void stateCheckID(); // 1
-extern "C" static void stateCheckID3(); // 1
-extern "C" static void stateCheckID2a(); // 1
-extern "C" static void cbForStateCheckID2a(); // 1
-extern "C" static void stateCheckID2(); // 1
-extern "C" static void cbForStateCheckID1(); // 1
-extern "C" static void cbForStateCheckID2(); // 1
-extern "C" static void cbForStateCheckID3(); // 1
-extern "C" static void dvd__AlarmHandler(); // 1
-extern "C" static void stateCoverClosed(); // 1
-extern "C" static void stateCoverClosed_CMD(); // 1
-extern "C" static void cbForStateCoverClosed(); // 1
-extern "C" static void stateMotorStopped(); // 1
-extern "C" static void cbForStateMotorStopped(); // 1
-extern "C" static void stateReady(); // 1
-extern "C" static void stateBusy(); // 1
-extern "C" static void cbForStateBusy(); // 1
-extern "C" void DVDReadAbsAsyncPrio(); // 1
-extern "C" void DVDReadAbsAsyncForBS(); // 1
-extern "C" void DVDReadDiskID(); // 1
-extern "C" void DVDCancelStreamAsync(); // 1
-extern "C" void DVDInquiryAsync(); // 1
-extern "C" void DVDReset(); // 1
-extern "C" void DVDGetCommandBlockStatus(); // 1
-extern "C" void DVDGetDriveStatus(); // 1
-extern "C" void DVDSetAutoInvalidation(); // 1
-extern "C" void DVDResume(); // 1
-extern "C" static void DVDCancelAsync(); // 1
-extern "C" void DVDCancel(); // 1
-extern "C" static void cbForCancelSync(); // 1
-extern "C" void DVDGetCurrentDiskID(); // 1
-extern "C" void DVDCheckDisk(); // 1
-extern "C" void __DVDPrepareResetAsync(); // 1
-extern "C" void __DVDTestAlarm(); // 1
 
 extern "C" static void defaultOptionalCommandChecker(); // 1
 extern "C" void DVDInit(); // 1
@@ -110,47 +65,6 @@ extern "C" extern u8 lit_789[65 + 3 /* padding */];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void OSPanic(); // 1
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void OSCreateAlarm(); // 1
-extern "C" void OSSetAlarm(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void OSInitThreadQueue(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void OSWakeupThread(); // 1
-extern "C" void __DVDInitWA(); // 1
-extern "C" void __DVDInterruptHandler(); // 1
-extern "C" void DVDLowRead(); // 1
-extern "C" void DVDLowSeek(); // 1
-extern "C" void DVDLowWaitCoverClose(); // 1
-extern "C" void DVDLowReadDiskID(); // 1
-extern "C" void DVDLowStopMotor(); // 1
-extern "C" void DVDLowRequestError(); // 1
-extern "C" void DVDLowInquiry(); // 1
-extern "C" void DVDLowAudioStream(); // 1
-extern "C" void DVDLowRequestAudioStatus(); // 1
-extern "C" void DVDLowAudioBufferConfig(); // 1
-extern "C" void DVDLowReset(); // 1
-extern "C" void DVDLowBreak(); // 1
-extern "C" void DVDLowClearCallback(); // 1
-extern "C" void __DVDLowTestAlarm(); // 1
-extern "C" void __DVDFSInit(); // 1
-extern "C" void __DVDClearWaitingQueue(); // 1
-extern "C" void __DVDPushWaitingQueue(); // 1
-extern "C" void __DVDPopWaitingQueue(); // 1
-extern "C" void __DVDCheckWaitingQueue(); // 1
-extern "C" void __DVDDequeueWaitingQueue(); // 1
-extern "C" void __DVDStoreErrorCode(); // 1
-extern "C" void DVDCompareDiskID(); // 1
-extern "C" void __DVDPrintFatalMessage(); // 1
-extern "C" void __fstLoad(); // 1
-extern "C" void memcmp(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void OSReport(); // 1

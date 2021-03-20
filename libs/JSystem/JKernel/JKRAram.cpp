@@ -3,11 +3,16 @@
 // Translation Unit: JKRAram
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRAram.h"
 
 // 
 // Types:
 // 
+
+struct JKRExpandSwitch {
+};
 
 struct JKRAramBlock {
 };
@@ -16,9 +21,6 @@ struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-struct JKRExpandSwitch {
 };
 
 struct JKRAram {
@@ -87,7 +89,6 @@ static void JKRDecompressFromAramToMainRam(u32, void*, u32, u32, u32, u32*); // 
 static void decompSZS_subroutine(u8*, u8*); // 2
 static void firstSrcData(); // 2
 static void nextSrcData(u8*); // 2
-extern "C" void __sinit_JKRAram_cpp(); // 1
 
 extern "C" void create__7JKRAramFUlUllll(); // 1
 extern "C" void __ct__7JKRAramFUlUll(); // 1
@@ -112,35 +113,8 @@ extern "C" extern u8 sAramObject__7JKRAram[4];
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void ARAlloc(); // 1
-extern "C" void ARInit(); // 1
-extern "C" void ARGetSize(); // 1
-extern "C" void ARQInit(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1

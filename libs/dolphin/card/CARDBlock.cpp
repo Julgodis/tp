@@ -3,17 +3,14 @@
 // Translation Unit: CARDBlock
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDBlock.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __CARDGetFatBlock(); // 1
-extern "C" static void CARDBlock__WriteCallback(); // 1
-extern "C" static void CARDBlock__EraseCallback(); // 1
-extern "C" void __CARDAllocBlock(); // 1
-extern "C" void __CARDUpdateFatBlock(); // 1
 
 extern "C" void __CARDGetFatBlock(); // 1
 extern "C" static void CARDBlock__WriteCallback(); // 1
@@ -25,12 +22,6 @@ extern "C" void __CARDUpdateFatBlock(); // 1
 // External References:
 // 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void __CARDEraseSector(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDWrite(); // 1
-extern "C" void __CARDCheckSum(); // 1
 
 SECTION_INIT void memcpy(); // 1
 extern "C" void DCStoreRange(); // 1

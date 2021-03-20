@@ -3,7 +3,9 @@
 // Translation Unit: JKRAssertHeap
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRAssertHeap.h"
 
 // 
 // Types:

@@ -3,7 +3,9 @@
 // Translation Unit: c_counter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "SSystem/SComponent/c_counter.h"
 
 // 
 // Forward References:

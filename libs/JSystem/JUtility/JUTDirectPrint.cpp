@@ -3,7 +3,9 @@
 // Translation Unit: JUTDirectPrint
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTDirectPrint.h"
 
 // 
 // Types:
@@ -41,7 +43,6 @@ namespace JStudio {
 // Forward References:
 // 
 
-extern "C" static void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb(); // 1
 
 extern "C" void __ct__14JUTDirectPrintFv(); // 1
 extern "C" void start__14JUTDirectPrintFv(); // 1
@@ -65,12 +66,6 @@ extern "C" extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
 
 void fpcBs_Delete(base_process_class*); // 2
 void* operator new(u32); // 2
-extern "C" void DCStoreRange(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void vsnprintf(); // 1
 
 extern "C" void fpcBs_Delete__FP18base_process_class(); // 1
 extern "C" void __dt__Q27JStudio29TFunctionValue_list_parameterFv(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: m_Do/m_Do_ext
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "m_Do/m_Do_ext.h"
 
 // 
 // Types:
@@ -17,14 +19,14 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable;
-struct J3DAnmTextureSRTKey {
-	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
-};
-
 struct J3DAnmColor;
+struct J3DMaterialTable;
 struct J3DAnmTevRegKey {
 	/* 8032B780 */ void searchUpdateMaterialID(J3DMaterialTable*);
+};
+
+struct J3DAnmTextureSRTKey {
+	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
 struct J3DAnmTexPattern {
@@ -62,10 +64,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_bckAnm {
@@ -124,8 +126,12 @@ struct J3DModel {
 	/* 803279A0 */ void diff();
 };
 
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
+struct J3DTevStageInfo {
+};
+
+struct J3DTevStage {
+	/* 8000E230 */ J3DTevStage();
+	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
 };
 
 struct J3DGXColorS10 {
@@ -136,20 +142,16 @@ struct J3DGXColor {
 	/* 8000E538 */ J3DGXColor();
 };
 
-struct J3DTevSwapModeTable {
-	/* 8000E134 */ J3DTevSwapModeTable();
-};
-
 struct J3DTevOrder {
 	/* 8000E140 */ J3DTevOrder();
 };
 
-struct J3DTevStageInfo {
+struct J3DTevSwapModeTable {
+	/* 8000E134 */ J3DTevSwapModeTable();
 };
 
-struct J3DTevStage {
-	/* 8000E230 */ J3DTevStage();
-	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
 };
 
 struct J3DTevBlock {
@@ -177,10 +179,10 @@ struct J3DTevBlock {
 	/* 8000E0C8 */ void setTevStageNum(u8);
 };
 
-struct J3DBlend {
+struct J3DAlphaComp {
 };
 
-struct J3DAlphaComp {
+struct J3DBlend {
 };
 
 struct J3DZMode {
@@ -345,10 +347,10 @@ struct J3DMtxCalcNoAnmBase {
 	/* 8000FA8C */ ~J3DMtxCalcNoAnmBase();
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorf {
@@ -401,10 +403,10 @@ struct mDoExt_3Dline_c {
 	/* 800126BC */ mDoExt_3Dline_c();
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
 struct mDoExt_3DlineMat0_c {
@@ -537,10 +539,10 @@ struct J3DIndTexMtxInfo {
 struct J3DTevKColorAnm {
 };
 
-struct J3DTexMtxAnm {
+struct J3DTevColorAnm {
 };
 
-struct J3DTevColorAnm {
+struct J3DTexMtxAnm {
 };
 
 struct J3DMaterialAnm {
@@ -864,8 +866,6 @@ extern "C" extern u8 archiveHeap[4];
 // External References:
 // 
 
-extern "C" void OSReport_FatalError(); // 1
-extern "C" void OSReport_Error(); // 1
 void dComIfG_getStageRes(char const*); // 2
 void dKy_setLight_again(); // 2
 void dKy_Global_amb_set(dKy_tevstr_c*); // 2
@@ -879,56 +879,6 @@ void* operator new[](u32); // 2
 void operator delete(void*); // 2
 void JMAEulerToQuat(s16, s16, s16, Quaternion*); // 2
 void JMAQuatLerp(Quaternion const*, Quaternion const*, f32, Quaternion*); // 2
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXQuat(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXGetTexObjWidth(); // 1
-extern "C" void GXGetTexObjHeight(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetTexCoordScaleManually(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXLoadNrmMtxImm(); // 1
-extern "C" void GDInitGDLObj(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_15(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_15(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void OSReport_FatalError(); // 1
 extern "C" void OSReport_Error(); // 1

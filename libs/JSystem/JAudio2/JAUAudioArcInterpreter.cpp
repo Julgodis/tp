@@ -3,7 +3,9 @@
 // Translation Unit: JAUAudioArcInterpreter
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAUAudioArcInterpreter.h"
 
 // 
 // Types:

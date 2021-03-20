@@ -3,19 +3,21 @@
 // Translation Unit: JSGLight
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JStage/JSGLight.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
+struct _GXDistAttnFn {
 };
 
 struct _GXSpotFn {
 };
 
-struct _GXDistAttnFn {
+struct Vec {
 };
 
 struct _GXColor {

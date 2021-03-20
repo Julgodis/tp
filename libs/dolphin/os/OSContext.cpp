@@ -3,26 +3,14 @@
 // Translation Unit: OSContext
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSContext.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void __OSLoadFPUContext(); // 1
-extern "C" static void __OSSaveFPUContext(); // 1
-extern "C" void OSSaveFPUContext(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSGetCurrentContext(); // 1
-extern "C" void OSSaveContext(); // 1
-extern "C" void OSLoadContext(); // 1
-extern "C" void OSGetStackPointer(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void OSInitContext(); // 1
-extern "C" void OSDumpContext(); // 1
-extern "C" static void OSSwitchFPUContext(); // 1
-extern "C" void __OSContextInit(); // 1
-extern "C" void OSFillFPUContext(); // 1
 
 extern "C" static void __OSLoadFPUContext(); // 1
 extern "C" static void __OSSaveFPUContext(); // 1
@@ -54,13 +42,6 @@ extern "C" extern u8 OSContext__lit_72[28];
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void __OSSetExceptionHandler(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void __RAS_OSDisableInterrupts_end(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void DBPrintf(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void __OSSetExceptionHandler(); // 1

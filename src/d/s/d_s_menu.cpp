@@ -3,7 +3,9 @@
 // Translation Unit: d/s/d_s_menu
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/s/d_s_menu.h"
 
 // 
 // Forward References:

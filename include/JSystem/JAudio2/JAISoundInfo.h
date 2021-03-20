@@ -1,9 +1,7 @@
-#ifndef JAISOUNDINFO_H_
-#define JAISOUNDINFO_H_
+#ifndef JAISOUNDINFO_H
+#define JAISOUNDINFO_H
 
-extern "C" {
-void JAISoundInfo(void);
-void JAISoundInfo_NS_dtor(void);
-}
+#include "dolphin/types.h"
 
-#endif  // JAISOUNDINFO_H_
+
+#endif /* JAISOUNDINFO_H */

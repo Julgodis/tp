@@ -3,7 +3,9 @@
 // Translation Unit: JASSeqReader
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASSeqReader.h"
 
 // 
 // Types:

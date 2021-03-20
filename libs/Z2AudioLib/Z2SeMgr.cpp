@@ -3,16 +3,18 @@
 // Translation Unit: Z2SeMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2SeMgr.h"
 
 // 
 // Types:
 // 
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -156,15 +158,6 @@ extern "C" void getDolbyPower__12Z2MultiSeMgrFv(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __dt__14JAISoundHandleFv(); // 1
 extern "C" void __dt__12Z2MultiSeObjFv(); // 1

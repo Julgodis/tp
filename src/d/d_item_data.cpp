@@ -3,7 +3,9 @@
 // Translation Unit: d/d_item_data
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_item_data.h"
 
 // 
 // Forward References:

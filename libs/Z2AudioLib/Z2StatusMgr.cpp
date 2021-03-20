@@ -3,7 +3,9 @@
 // Translation Unit: Z2StatusMgr
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "Z2AudioLib/Z2StatusMgr.h"
 
 // 
 // Types:
@@ -99,10 +101,6 @@ extern "C" extern char const* const Z2StatusMgr__stringBase0;
 // External References:
 // 
 
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strncmp(); // 1
-extern "C" void strcmp(); // 1
 
 extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
 extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1

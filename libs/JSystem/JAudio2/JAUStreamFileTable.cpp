@@ -3,7 +3,9 @@
 // Translation Unit: JAUStreamFileTable
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAUStreamFileTable.h"
 
 // 
 // Types:
@@ -46,7 +48,6 @@ extern "C" extern void* __vt__32JAUStreamDataMgr_StreamFileTable[4];
 // 
 
 void operator delete(void*); // 2
-extern "C" void DVDConvertPathToEntrynum(); // 1
 
 extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
 extern "C" void __dl__FPv(); // 1

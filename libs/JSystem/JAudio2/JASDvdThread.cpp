@@ -3,7 +3,9 @@
 // Translation Unit: JASDvdThread
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASDvdThread.h"
 
 // 
 // Types:
@@ -34,9 +36,6 @@ extern "C" void createThread__6JASDvdFliUl(); // 1
 // 
 
 void* operator new(u32, JKRHeap*, int); // 2
-extern "C" void OSResumeThread(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__13JASTaskThreadFiiUl(); // 1
 extern "C" void* __nw__FUlP7JKRHeapi(); // 1

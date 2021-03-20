@@ -3,33 +3,14 @@
 // Translation Unit: dvdlow
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/dvd/dvdlow.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __DVDInitWA(); // 1
-extern "C" void __DVDInterruptHandler(); // 1
-extern "C" static void dvdlow__AlarmHandler(); // 1
-extern "C" static void AlarmHandlerForTimeout(); // 1
-extern "C" static void Read(); // 1
-extern "C" static void SeekTwiceBeforeRead(); // 1
-extern "C" void DVDLowRead(); // 1
-extern "C" void DVDLowSeek(); // 1
-extern "C" void DVDLowWaitCoverClose(); // 1
-extern "C" void DVDLowReadDiskID(); // 1
-extern "C" void DVDLowStopMotor(); // 1
-extern "C" void DVDLowRequestError(); // 1
-extern "C" void DVDLowInquiry(); // 1
-extern "C" void DVDLowAudioStream(); // 1
-extern "C" void DVDLowRequestAudioStatus(); // 1
-extern "C" void DVDLowAudioBufferConfig(); // 1
-extern "C" void DVDLowReset(); // 1
-extern "C" void DVDLowBreak(); // 1
-extern "C" void DVDLowClearCallback(); // 1
-extern "C" static void __DVDLowSetWAType(); // 1
-extern "C" void __DVDLowTestAlarm(); // 1
 
 extern "C" void __DVDInitWA(); // 1
 extern "C" void __DVDInterruptHandler(); // 1
@@ -60,17 +41,6 @@ extern "C" extern u8 Curr[12];
 // External References:
 // 
 
-extern "C" void OSInitAlarm(); // 1
-extern "C" void OSCreateAlarm(); // 1
-extern "C" void OSSetAlarm(); // 1
-extern "C" void OSCancelAlarm(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSMaskInterrupts(); // 1
-extern "C" void __OSGetSystemTime(); // 1
-extern "C" void DVDGetCurrentDiskID(); // 1
 
 extern "C" void OSInitAlarm(); // 1
 extern "C" void OSCreateAlarm(); // 1

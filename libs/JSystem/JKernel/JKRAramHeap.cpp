@@ -3,7 +3,9 @@
 // Translation Unit: JKRAramHeap
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JKernel/JKRAramHeap.h"
 
 // 
 // Types:
@@ -58,7 +60,6 @@ struct JSUPtrList {
 // Forward References:
 // 
 
-extern "C" void __sinit_JKRAramHeap_cpp(); // 1
 
 extern "C" void __ct__11JKRAramHeapFUlUl(); // 1
 extern "C" void __dt__11JKRAramHeapFv(); // 1
@@ -77,12 +78,6 @@ extern "C" void func_802D32B0(); // 1
 
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void findFromRoot__7JKRHeapFPv(); // 1
 extern "C" void* __nw__FUlP7JKRHeapi(); // 1

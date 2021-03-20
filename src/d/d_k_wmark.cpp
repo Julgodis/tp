@@ -3,7 +3,9 @@
 // Translation Unit: d/d_k_wmark
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_k_wmark.h"
 
 // 
 // Types:
@@ -112,14 +114,6 @@ void fopKyM_Delete(void*); // 2
 void dKy_tevstr_init(dKy_tevstr_c*, s8, u8); // 2
 void cM_atan2s(f32, f32); // 2
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void abs(); // 1
 
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1

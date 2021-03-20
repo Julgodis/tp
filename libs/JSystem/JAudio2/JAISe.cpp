@@ -3,11 +3,16 @@
 // Translation Unit: JAISe
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JAISe.h"
 
 // 
 // Types:
 // 
+
+struct JAISoundID {
+};
 
 struct JGeometry {
 	template <typename A1>
@@ -21,7 +26,7 @@ struct JGeometry {
 struct JAIAudience {
 };
 
-struct JAISoundID {
+struct JAISeMgr {
 };
 
 template <typename A0>
@@ -34,9 +39,6 @@ struct JAISoundActivity {
 };
 
 struct JASSoundParams {
-};
-
-struct JAISeMgr {
 };
 
 struct JAISe {
@@ -95,14 +97,6 @@ struct JSUPtrLink {
 // Forward References:
 // 
 
-extern "C" static void func_8029F870(); // 1
-extern "C" static void func_8029F878(); // 1
-extern "C" static void func_8029F880(); // 1
-extern "C" static void func_8029F888(); // 1
-extern "C" static void func_8029F890(); // 1
-extern "C" static void func_8029F898(); // 1
-extern "C" static void func_8029F8A0(); // 1
-extern "C" static void func_8029F8A8(); // 1
 
 extern "C" void func_8029F03C(); // 1
 extern "C" void mixOut___5JAISeFRC14JASSoundParams(); // 1
@@ -135,10 +129,6 @@ extern "C" extern void* __vt__5JAISe[22];
 // External References:
 // 
 
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void __ct__8JASTrackFv(); // 1
 extern "C" void setChannelMgrCount__8JASTrackFUl(); // 1

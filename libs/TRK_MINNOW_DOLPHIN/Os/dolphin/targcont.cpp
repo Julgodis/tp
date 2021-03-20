@@ -3,13 +3,14 @@
 // Translation Unit: Os/dolphin/targcont
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/Os/dolphin/targcont.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void TRKTargetContinue(); // 1
 
 extern "C" void TRKTargetContinue(); // 1
 
@@ -17,10 +18,6 @@ extern "C" void TRKTargetContinue(); // 1
 // External References:
 // 
 
-extern "C" void TRKSwapAndGo(); // 1
-extern "C" void TRKTargetSetStopped(); // 1
-extern "C" void UnreserveEXI2Port(); // 1
-extern "C" void ReserveEXI2Port(); // 1
 
 extern "C" void TRKSwapAndGo(); // 1
 extern "C" void TRKTargetSetStopped(); // 1

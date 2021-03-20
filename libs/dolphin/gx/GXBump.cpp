@@ -3,21 +3,14 @@
 // Translation Unit: GXBump
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/gx/GXBump.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void GXSetTevIndirect(); // 1
-extern "C" void GXSetIndTexMtx(); // 1
-extern "C" void GXSetIndTexCoordScale(); // 1
-extern "C" void GXSetIndTexOrder(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void __GXUpdateBPMask(); // 1
-extern "C" void __GXSetIndirectMask(); // 1
-extern "C" void __GXFlushTextureState(); // 1
 
 extern "C" void GXSetTevIndirect(); // 1
 extern "C" void GXSetIndTexMtx(); // 1

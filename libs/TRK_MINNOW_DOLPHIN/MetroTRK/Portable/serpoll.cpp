@@ -3,17 +3,14 @@
 // Translation Unit: MetroTRK/Portable/serpoll
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "TRK_MINNOW_DOLPHIN/MetroTRK/Portable/serpoll.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" bool TRKTerminateSerialHandler(); // 1
-extern "C" void TRKInitializeSerialHandler(); // 1
-extern "C" void TRKProcessInput(); // 1
-extern "C" void TRKGetInput(); // 1
-extern "C" void TRKTestForPacket(); // 1
 
 extern "C" bool TRKTerminateSerialHandler(); // 1
 extern "C" void TRKInitializeSerialHandler(); // 1
@@ -36,16 +33,6 @@ extern "C" extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void TRKConstructEvent(); // 1
-extern "C" void TRKPostEvent(); // 1
-extern "C" void TRKAppendBuffer_ui8(); // 1
-extern "C" void TRKSetBufferPosition(); // 1
-extern "C" void TRKReleaseBuffer(); // 1
-extern "C" void TRKGetBuffer(); // 1
-extern "C" void TRKGetFreeBuffer(); // 1
-extern "C" void TRKReadUARTN(); // 1
-extern "C" void TRKPollUART(); // 1
-extern "C" void MWTRACE(); // 1
 
 extern "C" void TRKConstructEvent(); // 1
 extern "C" void TRKPostEvent(); // 1

@@ -3,7 +3,9 @@
 // Translation Unit: msg/scrn/d_msg_scrn_explain
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "msg/scrn/d_msg_scrn_explain.h"
 
 // 
 // Types:
@@ -41,10 +43,10 @@ struct dMsgScrnExplain_c {
 	/* 8023E654 */ void checkTriggerB();
 };
 
-struct JMSMesgEntry_c {
+struct JUTFont {
 };
 
-struct JUTFont {
+struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {
@@ -92,13 +94,6 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-};
-
 struct J2DGrafContext {
 };
 
@@ -111,6 +106,13 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+struct JKRExpHeap {
+};
+
 struct CPaneMgr {
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802545B0 */ void paneTrans(f32, f32);
@@ -121,10 +123,10 @@ struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -146,7 +148,6 @@ struct J2DPicture {
 // Forward References:
 // 
 
-extern "C" void __sinit_d_msg_scrn_explain_cpp(); // 1
 
 extern "C" void __ct__17dMsgScrnExplain_cFP9STControlUcbUc(); // 1
 extern "C" void __dt__17dMsgScrnExplain_cFv(); // 1
@@ -192,18 +193,6 @@ void dMeter2Info_set2DVibrationM(); // 2
 void dPaneClass_showNullPane(J2DScreen*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void mDoExt_getMesgFont__Fv(); // 1
 extern "C" void checkTrigger__9STControlFv(); // 1

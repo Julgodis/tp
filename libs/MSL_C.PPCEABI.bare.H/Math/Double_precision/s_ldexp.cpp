@@ -3,13 +3,14 @@
 // Translation Unit: Math/Double_precision/s_ldexp
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "MSL_C.PPCEABI.bare.H/Math/Double_precision/s_ldexp.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void ldexp(); // 1
 
 extern "C" void ldexp(); // 1
 
@@ -17,7 +18,6 @@ extern "C" void ldexp(); // 1
 // External References:
 // 
 
-extern "C" void copysign(); // 1
 
 extern "C" void copysign(); // 1
 

@@ -3,29 +3,14 @@
 // Translation Unit: OSRtc
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/os/OSRtc.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" static void WriteSramCallback(); // 1
-extern "C" static void WriteSram(); // 1
-extern "C" void __OSInitSram(); // 1
-extern "C" void __OSLockSram(); // 1
-extern "C" void __OSLockSramEx(); // 1
-extern "C" static void UnlockSram(); // 1
-extern "C" void __OSUnlockSram(); // 1
-extern "C" void __OSUnlockSramEx(); // 1
-extern "C" void __OSSyncSram(); // 1
-extern "C" void OSGetSoundMode(); // 1
-extern "C" void OSSetSoundMode(); // 1
-extern "C" void OSGetProgressiveMode(); // 1
-extern "C" void OSSetProgressiveMode(); // 1
-extern "C" void OSGetWirelessID(); // 1
-extern "C" void OSSetWirelessID(); // 1
-extern "C" static void OSGetGbsMode(); // 1
-extern "C" static void OSSetGbsMode(); // 1
 
 extern "C" static void WriteSramCallback(); // 1
 extern "C" static void WriteSram(); // 1
@@ -49,17 +34,6 @@ extern "C" static void OSSetGbsMode(); // 1
 // External References:
 // 
 
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void EXIImm(); // 1
-extern "C" void EXIImmEx(); // 1
-extern "C" void EXIDma(); // 1
-extern "C" void EXISync(); // 1
-extern "C" void EXISelect(); // 1
-extern "C" void EXIDeselect(); // 1
-extern "C" void EXILock(); // 1
-extern "C" void EXIUnlock(); // 1
 
 extern "C" void DCInvalidateRange(); // 1
 extern "C" void OSDisableInterrupts(); // 1

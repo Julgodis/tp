@@ -3,7 +3,9 @@
 // Translation Unit: JUTVideo
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JUtility/JUTVideo.h"
 
 // 
 // Types:
@@ -56,23 +58,6 @@ extern "C" extern u8 sVideoInterval__8JUTVideo[4];
 
 void* operator new(u32); // 2
 void operator delete(void*); // 2
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void VISetPreRetraceCallback(); // 1
-extern "C" void VISetPostRetraceCallback(); // 1
-extern "C" void VIInit(); // 1
-extern "C" void VIWaitForRetrace(); // 1
-extern "C" void VIConfigure(); // 1
-extern "C" void VIFlush(); // 1
-extern "C" void VISetNextFrameBuffer(); // 1
-extern "C" void VIGetNextFrameBuffer(); // 1
-extern "C" void VISetBlack(); // 1
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" void GXFlush(); // 1
-extern "C" void GXSetDrawDone(); // 1
-extern "C" void GXSetDrawDoneCallback(); // 1
-extern "C" void GXCopyDisp(); // 1
 
 extern "C" void* __nw__FUl(); // 1
 extern "C" void __dl__FPv(); // 1

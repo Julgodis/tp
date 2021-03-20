@@ -3,25 +3,15 @@
 // Translation Unit: J2DPane
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/J2DGraph/J2DPane.h"
 
 // 
 // Types:
 // 
 
-struct J2DAnmColor {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
+struct JKRArchive {
 };
 
 struct J2DAnmVisibilityFull {
@@ -30,19 +20,13 @@ struct J2DAnmVisibilityFull {
 struct J2DAnmTextureSRTKey {
 };
 
-struct JKRArchive {
+struct J2DAnmTransform {
 };
 
-struct J2DBasePosition {
+struct J2DAnmTexPattern {
 };
 
-struct J2DAnmTevRegKey {
-};
-
-struct J2DRotateAxis {
-};
-
-struct ResFONT {
+struct J2DAnmBase {
 };
 
 struct JSUStreamSeekFrom {
@@ -54,24 +38,42 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmBase {
+struct J2DBasePosition {
+};
+
+struct ResFONT {
+};
+
+struct J2DRotateAxis {
+};
+
+struct J2DAnmTevRegKey {
 };
 
 struct J2DAnmVtxColor {
 };
 
-struct J2DAnmTransform {
-};
-
 struct _GXCullMode {
 };
 
-struct ResTIMG {
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
 };
 
 struct J2DGrafContext {
 	/* 802E8E20 */ void setScissor();
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
+};
+
+struct J2DAnmColor {
+};
+
+struct ResTIMG {
 };
 
 struct J2DPane {
@@ -172,7 +174,6 @@ struct J2DDataManage {
 // Forward References:
 // 
 
-extern "C" void __sinit_J2DPane_cpp(); // 1
 
 extern "C" void __ct__7J2DPaneFv(); // 1
 extern "C" void initiate__7J2DPaneFv(); // 1
@@ -234,21 +235,6 @@ extern "C" void __sinit_J2DPane_cpp(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXRotRad(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXTransApply(); // 1
-extern "C" void PSMTXScaleApply(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
 
 extern "C" void setAlpha__7J2DPaneFUc(); // 1
 extern "C" void calcMtx__7J2DPaneFv(); // 1

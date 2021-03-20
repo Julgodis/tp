@@ -3,13 +3,14 @@
 // Translation Unit: dsp_debug
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/dsp/dsp_debug.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __DSP_debug_printf(); // 1
 
 extern "C" void __DSP_debug_printf(); // 1
 

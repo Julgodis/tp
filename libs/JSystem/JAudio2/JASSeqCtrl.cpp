@@ -3,7 +3,9 @@
 // Translation Unit: JASSeqCtrl
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "JSystem/JAudio2/JASSeqCtrl.h"
 
 // 
 // Types:
@@ -43,7 +45,6 @@ struct JASSeqReader {
 // Forward References:
 // 
 
-extern "C" void __sinit_JASSeqCtrl_cpp(); // 1
 
 extern "C" void __ct__10JASSeqCtrlFv(); // 1
 extern "C" void init__10JASSeqCtrlFv(); // 1
@@ -64,7 +65,6 @@ extern "C" void __dt__12JASSeqParserFv(); // 1
 // 
 
 void operator delete(void*); // 2
-extern "C" void __register_global_object(); // 1
 
 extern "C" void checkNoteStop__8JASTrackCFUl(); // 1
 extern "C" void init__12JASSeqReaderFv(); // 1

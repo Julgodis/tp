@@ -3,16 +3,14 @@
 // Translation Unit: CARDRead
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/card/CARDRead.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void __CARDSeek(); // 1
-extern "C" static void ReadCallback(); // 1
-extern "C" static void CARDReadAsync(); // 1
-extern "C" void CARDRead(); // 1
 
 extern "C" void __CARDSeek(); // 1
 extern "C" static void ReadCallback(); // 1
@@ -23,16 +21,6 @@ extern "C" void CARDRead(); // 1
 // External References:
 // 
 
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void __CARDDefaultApiCallback(); // 1
-extern "C" void __CARDSyncCallback(); // 1
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDSync(); // 1
-extern "C" void __CARDRead(); // 1
-extern "C" void __CARDGetFatBlock(); // 1
-extern "C" void __CARDGetDirBlock(); // 1
-extern "C" void __CARDIsReadable(); // 1
 
 extern "C" void DCInvalidateRange(); // 1
 extern "C" void __CARDDefaultApiCallback(); // 1

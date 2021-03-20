@@ -3,7 +3,9 @@
 // Translation Unit: d/d_stage
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "d/d_stage.h"
 
 // 
 // Types:
@@ -47,91 +49,91 @@ struct dStage_roomControl_c {
 	/* 80024DB0 */ void SetTimePass(int);
 };
 
-struct dStage_MemoryConfig_c {
+struct stage_envr_info_class {
 };
 
 struct roomRead_class {
 };
 
-struct stage_plight_info_class {
-};
-
-struct stage_map_info_dummy_class {
-};
-
-struct stage_camera_class {
-};
-
-struct stage_envr_info_class {
-};
-
-struct stage_map_info_class {
-};
-
-struct dStage_MapEventInfo_c {
-};
-
-struct dStage_Lbnk_c {
-};
-
-struct stage_vrboxcol_info_class {
-};
-
-struct stage_pure_lightvec_info_class {
-};
-
-struct dStage_Multi_c {
-};
-
-struct dStage_FileList2_dt_c {
-};
-
 struct stage_arrow_class {
-};
-
-struct dStage_FileList_dt_c {
-};
-
-struct dStage_FloorInfo_c {
-};
-
-struct dStage_MemoryMap_c {
-};
-
-struct stage_pselect_info_class {
-};
-
-struct dStage_SoundInfo_c {
-};
-
-struct stage_palette_info_class {
-};
-
-struct stage_tresure_class {
-};
-
-struct stage_vrbox_info_class {
-};
-
-struct stage_actor_class {
-};
-
-struct dStage_dPath_c {
-};
-
-struct dStage_DMap_c {
-};
-
-struct dStage_Elst_c {
-};
-
-struct stage_scls_info_dummy_class {
 };
 
 struct dStage_dPnt_c {
 };
 
+struct stage_map_info_class {
+};
+
+struct stage_map_info_dummy_class {
+};
+
+struct stage_pselect_info_class {
+};
+
+struct dStage_FloorInfo_c {
+};
+
+struct dStage_Multi_c {
+};
+
+struct dStage_MapEventInfo_c {
+};
+
+struct dStage_DMap_c {
+};
+
+struct stage_palette_info_class {
+};
+
+struct stage_camera_class {
+};
+
+struct stage_tresure_class {
+};
+
+struct stage_vrboxcol_info_class {
+};
+
+struct dStage_Lbnk_c {
+};
+
+struct dStage_FileList2_dt_c {
+};
+
+struct stage_pure_lightvec_info_class {
+};
+
 struct stage_stag_info_class {
+};
+
+struct stage_plight_info_class {
+};
+
+struct dStage_Elst_c {
+};
+
+struct dStage_dPath_c {
+};
+
+struct dStage_MemoryConfig_c {
+};
+
+struct stage_scls_info_dummy_class {
+};
+
+struct dStage_MemoryMap_c {
+};
+
+struct stage_vrbox_info_class {
+};
+
+struct dStage_SoundInfo_c {
+};
+
+struct stage_actor_class {
+};
+
+struct dStage_FileList_dt_c {
 };
 
 struct dStage_stageDt_c {
@@ -548,8 +550,6 @@ void dStage_changeSceneExitId(cBgS_PolyInfo&, f32, u32, s8, s16); // 2
 void dStage_changeScene(int, f32, u32, s8, s16, int); // 2
 void dStage_changeScene4Event(int, s8, int, bool, f32, u32, s16, int); // 2
 void dStage_restartRoom(u32, u32, int); // 2
-extern "C" void __sinit_d_stage_cpp(); // 1
-extern "C" static void func_80028328(); // 1
 
 extern "C" void set__18dStage_nextStage_cFPCcScsScScUc(); // 1
 extern "C" static void dStage_SetErrorRoom__Fv(); // 1
@@ -866,8 +866,6 @@ extern "C" extern u8 pad_80450D7C[4];
 // External References:
 // 
 
-extern "C" void OSReport(); // 1
-extern "C" void OSReport_Error(); // 1
 void mDoExt_getArchiveHeap(); // 2
 void mDoExt_destroyExpHeap(JKRExpHeap*); // 2
 void fopAcM_FastCreate(s16, int (*)(void*), void*, void*); // 2
@@ -888,26 +886,6 @@ void dKy_set_nexttime(f32); // 2
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strncpy(); // 1
-extern "C" void strcpy(); // 1
 
 extern "C" void OSReport(); // 1
 extern "C" void OSReport_Error(); // 1

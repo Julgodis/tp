@@ -3,31 +3,14 @@
 // Translation Unit: ai
 // 
 
+#include "dol2asm.h"
 #include "dolphin/types.h"
+#include "dolphin/ai/ai.h"
 
 // 
 // Forward References:
 // 
 
-extern "C" void AIRegisterDMACallback(); // 1
-extern "C" void AIInitDMA(); // 1
-extern "C" void AIStartDMA(); // 1
-extern "C" void AIStopDMA(); // 1
-extern "C" void AISetStreamPlayState(); // 1
-extern "C" static void AIGetStreamPlayState(); // 1
-extern "C" void AISetDSPSampleRate(); // 1
-extern "C" static void AIGetDSPSampleRate(); // 1
-extern "C" static void __AI_set_stream_sample_rate(); // 1
-extern "C" static void AIGetStreamSampleRate(); // 1
-extern "C" void AISetStreamVolLeft(); // 1
-extern "C" static void AIGetStreamVolLeft(); // 1
-extern "C" void AISetStreamVolRight(); // 1
-extern "C" static void AIGetStreamVolRight(); // 1
-extern "C" void AIInit(); // 1
-extern "C" static void __AISHandler(); // 1
-extern "C" static void __AIDHandler(); // 1
-extern "C" static void __AICallbackStackSwitch(); // 1
-extern "C" static void __AI_SRC_INIT(); // 1
 
 extern "C" void AIRegisterDMACallback(); // 1
 extern "C" void AIInitDMA(); // 1
@@ -53,14 +36,6 @@ extern "C" static void __AI_SRC_INIT(); // 1
 // External References:
 // 
 
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void OSGetTime(); // 1
 
 extern "C" void OSRegisterVersion(); // 1
 extern "C" void OSSetCurrentContext(); // 1
