@@ -47,70 +47,13 @@ struct dStage_roomControl_c {
 	/* 80024DB0 */ void SetTimePass(int);
 };
 
-struct stage_vrboxcol_info_class {
-};
-
-struct stage_tresure_class {
-};
-
-struct dStage_dPnt_c {
-};
-
-struct dStage_Multi_c {
-};
-
-struct stage_map_info_class {
-};
-
-struct dStage_DMap_c {
-};
-
-struct dStage_Elst_c {
+struct dStage_MemoryConfig_c {
 };
 
 struct roomRead_class {
 };
 
-struct stage_arrow_class {
-};
-
 struct stage_plight_info_class {
-};
-
-struct stage_pselect_info_class {
-};
-
-struct dStage_MapEventInfo_c {
-};
-
-struct dStage_FileList2_dt_c {
-};
-
-struct dStage_SoundInfo_c {
-};
-
-struct stage_stag_info_class {
-};
-
-struct dStage_FloorInfo_c {
-};
-
-struct dStage_MemoryMap_c {
-};
-
-struct stage_actor_class {
-};
-
-struct dStage_MemoryConfig_c {
-};
-
-struct stage_scls_info_dummy_class {
-};
-
-struct dStage_FileList_dt_c {
-};
-
-struct stage_vrbox_info_class {
 };
 
 struct stage_map_info_dummy_class {
@@ -122,16 +65,73 @@ struct stage_camera_class {
 struct stage_envr_info_class {
 };
 
-struct stage_palette_info_class {
+struct stage_map_info_class {
+};
+
+struct dStage_MapEventInfo_c {
 };
 
 struct dStage_Lbnk_c {
 };
 
-struct dStage_dPath_c {
+struct stage_vrboxcol_info_class {
 };
 
 struct stage_pure_lightvec_info_class {
+};
+
+struct dStage_Multi_c {
+};
+
+struct dStage_FileList2_dt_c {
+};
+
+struct stage_arrow_class {
+};
+
+struct dStage_FileList_dt_c {
+};
+
+struct dStage_FloorInfo_c {
+};
+
+struct dStage_MemoryMap_c {
+};
+
+struct stage_pselect_info_class {
+};
+
+struct dStage_SoundInfo_c {
+};
+
+struct stage_palette_info_class {
+};
+
+struct stage_tresure_class {
+};
+
+struct stage_vrbox_info_class {
+};
+
+struct stage_actor_class {
+};
+
+struct dStage_dPath_c {
+};
+
+struct dStage_DMap_c {
+};
+
+struct dStage_Elst_c {
+};
+
+struct stage_scls_info_dummy_class {
+};
+
+struct dStage_dPnt_c {
+};
+
+struct stage_stag_info_class {
 };
 
 struct dStage_stageDt_c {
@@ -373,11 +373,14 @@ struct J3DLightObj {
 struct fopAc_ac_c {
 };
 
-struct dComIfG_play_c {
-	/* 8002C97C */ void getLayerNo(int);
+struct cXyz {
 };
 
-struct cXyz {
+struct layer_class {
+};
+
+struct dComIfG_play_c {
+	/* 8002C97C */ void getLayerNo(int);
 };
 
 struct daSus_c {
@@ -867,16 +870,16 @@ extern "C" void OSReport(); // 1
 extern "C" void OSReport_Error(); // 1
 void mDoExt_getArchiveHeap(); // 2
 void mDoExt_destroyExpHeap(JKRExpHeap*); // 2
-extern "C" void fopAcM_FastCreate__FsPFPv_iPvPv(); // 1
+void fopAcM_FastCreate(s16, int (*)(void*), void*, void*); // 2
 void fopAcM_CreateAppend(); // 2
 void fopAcM_delete(fopAc_ac_c*); // 2
 void fopCamM_Create(int, s16, void*); // 2
 void fopScnM_SearchByID(u32); // 2
 void fopScnM_CreateReq(s16, s16, u16, u32); // 2
-extern "C" void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i(); // 1
-extern "C" void fopMsgM_Create__FsPFPv_iPv(); // 1
+void fopKyM_fastCreate(s16, int, cXyz*, cXyz*, int (*)(void*)); // 2
+void fopMsgM_Create(s16, int (*)(void*), void*); // 2
 void fpcLy_CurrentLayer(); // 2
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
 void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int); // 2
 void dComIfG_getStageRes(char const*); // 2
 void dComIfG_getOldStageRes(char const*); // 2

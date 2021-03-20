@@ -12,6 +12,10 @@
 struct JASTaskThread {
 	/* 8028F6C4 */ JASTaskThread(int, int, u32);
 	/* 8028F724 */ ~JASTaskThread();
+	/* 8028F9EC */ void allocCallStack(void (*)(void*), void*);
+	/* 8028F850 */ void allocCallStack(void (*)(void*), void const*, u32);
+	/* 8028FC54 */ void sendCmdMsg(void (*)(void*), void*);
+	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
 	/* 8028FD4C */ void run();
 	/* 8028FE88 */ void pause(bool);
 };
@@ -37,15 +41,11 @@ struct JKRThread {
 // Forward References:
 // 
 
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPCvUl(); // 1
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPv(); // 1
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv(); // 1
 
 extern "C" void __ct__13JASTaskThreadFiiUl(); // 1
 extern "C" void __dt__13JASTaskThreadFv(); // 1
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPCvUl(); // 1
-extern "C" static void allocCallStack__13JASTaskThreadFPFPv_vPv(); // 1
+extern "C" void allocCallStack__13JASTaskThreadFPFPv_vPCvUl(); // 1
+extern "C" void allocCallStack__13JASTaskThreadFPFPv_vPv(); // 1
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
 extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv(); // 1
 extern "C" void run__13JASTaskThreadFv(); // 1
@@ -137,7 +137,7 @@ asm JASTaskThread::~JASTaskThread() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void allocCallStack__13JASTaskThreadFPFPv_vPCvUl() {
+asm void JASTaskThread::allocCallStack(void (*)(void*), void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/allocCallStack__13JASTaskThreadFPFPv_vPCvUl.s"
 }
@@ -148,7 +148,7 @@ extern "C" asm static void allocCallStack__13JASTaskThreadFPFPv_vPCvUl() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void allocCallStack__13JASTaskThreadFPFPv_vPv() {
+asm void JASTaskThread::allocCallStack(void (*)(void*), void* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/allocCallStack__13JASTaskThreadFPFPv_vPv.s"
 }
@@ -159,7 +159,7 @@ extern "C" asm static void allocCallStack__13JASTaskThreadFPFPv_vPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl() {
+asm void JASTaskThread::sendCmdMsg(void (*)(void*), void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl.s"
 }
@@ -170,7 +170,7 @@ extern "C" asm void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void sendCmdMsg__13JASTaskThreadFPFPv_vPv() {
+asm void JASTaskThread::sendCmdMsg(void (*)(void*), void* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASTaskThread/sendCmdMsg__13JASTaskThreadFPFPv_vPv.s"
 }

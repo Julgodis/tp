@@ -9,7 +9,7 @@
 // Types:
 // 
 
-struct JPAResource {
+struct JKRHeap {
 };
 
 struct ResTIMG {
@@ -18,7 +18,7 @@ struct ResTIMG {
 struct JPATexture {
 };
 
-struct JKRHeap {
+struct JPAResource {
 };
 
 struct JPAResourceManager {

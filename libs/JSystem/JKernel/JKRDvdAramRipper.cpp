@@ -9,13 +9,13 @@
 // Types:
 // 
 
+struct JKRExpandSwitch {
+};
+
 struct JKRDvdFile {
 	/* 802D9584 */ JKRDvdFile();
 	/* 802D9748 */ ~JKRDvdFile();
 	/* 802D98C4 */ void open(s32);
-};
-
-struct JKRExpandSwitch {
 };
 
 struct JKRADCommand {
@@ -24,8 +24,9 @@ struct JKRADCommand {
 };
 
 struct JKRDvdAramRipper {
-	/* 802DA918 */ void loadToAram(JKRDvdFile*, u32, JKRExpandSwitch, u32, u32, u32*);
 	/* 802DA874 */ void loadToAram(s32, u32, JKRExpandSwitch, u32, u32, u32*);
+	/* 802DA918 */ void loadToAram(JKRDvdFile*, u32, JKRExpandSwitch, u32, u32, u32*);
+	/* 802DA9C0 */ void loadToAram_Async(JKRDvdFile*, u32, JKRExpandSwitch, void (*)(u32), u32, u32, u32*);
 	/* 802DAA74 */ void callCommand_Async(JKRADCommand*);
 	/* 802DAE48 */ void syncAram(JKRADCommand*, int);
 };
@@ -96,7 +97,6 @@ struct JSUInputStream {
 // Forward References:
 // 
 
-extern "C" static void loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl(); // 1
 static void JKRDecompressFromDVDToAram(JKRDvdFile*, u32, u32, u32, u32, u32, u32*); // 2
 static void decompSZS_subroutine(u8*, u32); // 2
 static void firstSrcData(); // 2
@@ -106,7 +106,7 @@ extern "C" void __sinit_JKRDvdAramRipper_cpp(); // 1
 
 extern "C" void loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl(); // 1
 extern "C" void loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl(); // 1
-extern "C" static void loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl(); // 1
+extern "C" void loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl(); // 1
 extern "C" void callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand(); // 1
 extern "C" void __dt__18JSUFileInputStreamFv(); // 1
 extern "C" void syncAram__16JKRDvdAramRipperFP12JKRADCommandi(); // 1
@@ -225,7 +225,7 @@ asm void JKRDvdAramRipper::loadToAram(JKRDvdFile* field_0, u32 field_1, JKRExpan
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl() {
+asm void JKRDvdAramRipper::loadToAram_Async(JKRDvdFile* field_0, u32 field_1, JKRExpandSwitch field_2, void (*)(u32), u32 field_4, u32 field_5, u32* field_6) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDvdAramRipper/func_802DA9C0.s"
 }

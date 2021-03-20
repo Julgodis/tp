@@ -9,11 +9,11 @@
 // Types:
 // 
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct J2DGrafContext {
@@ -203,10 +203,10 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

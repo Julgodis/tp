@@ -9,6 +9,15 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 8026745C */ void operator+=(csXyz&);
+};
+
 struct Vec {
 };
 
@@ -18,15 +27,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
-};
-
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 8026745C */ void operator+=(csXyz&);
-};
-
-struct J3DModel {
 };
 
 struct fopAc_ac_c {

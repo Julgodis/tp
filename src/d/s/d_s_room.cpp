@@ -38,11 +38,17 @@ struct cXyz {
 struct csXyz {
 };
 
+struct layer_class {
+};
+
 struct dStage_dt_c {
 };
 
 struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
+};
+
+struct request_of_phase_process_class {
 };
 
 struct dSv_zoneBit_c {
@@ -142,14 +148,14 @@ void fopAc_IsActor(void*); // 2
 void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
 void fopScnM_DeleteReq(scene_class*); // 2
 void fpcBs_Is_JustOfType(int, int); // 2
-extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv(); // 1
+void fpcCtIt_Judge(void* (*)(void*, void*), void*); // 2
+void fpcLyIt_Judge(layer_class*, void* (*)(void*, void*), void*); // 2
 void fpcM_Delete(void*); // 2
 void dStage_dt_c_roomLoader(void*, dStage_dt_c*, int); // 2
 void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, int); // 2
 void dComIfG_getRoomArcName(int); // 2
 void dComIfGp_ret_wp_set(s8); // 2
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 extern "C" void _savegpr_25(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_28(); // 1

@@ -9,34 +9,34 @@
 // Types:
 // 
 
-struct J3DModelInfoBlock {
-};
-
-struct J3DVertexBlock {
-};
-
-struct J3DMaterialBlock {
-};
-
-struct J3DJointBlock {
-};
-
-struct J3DMaterialBlock_v21 {
-};
-
-struct J3DMaterialDLBlock {
-};
-
-struct J3DShapeBlock {
+struct J3DDrawBlock {
 };
 
 struct J3DEnvelopeBlock {
 };
 
-struct J3DDrawBlock {
+struct J3DJointBlock {
+};
+
+struct J3DVertexBlock {
+};
+
+struct J3DModelInfoBlock {
+};
+
+struct J3DMaterialDLBlock {
+};
+
+struct J3DMaterialBlock_v21 {
+};
+
+struct J3DShapeBlock {
 };
 
 struct J3DTextureBlock {
+};
+
+struct J3DMaterialBlock {
 };
 
 struct J3DModelLoader {
@@ -156,15 +156,15 @@ struct J3DShapeTable {
 	/* 8032597C */ void sortVcdVatCmd();
 };
 
-struct J3DMaterialTable {
-	/* 8032F5A8 */ void clear();
-	/* 8032F5D0 */ J3DMaterialTable();
+struct J3DJoint {
 };
 
 struct J3DModelHierarchy {
 };
 
-struct J3DJoint {
+struct J3DMaterialTable {
+	/* 8032F5A8 */ void clear();
+	/* 8032F5D0 */ J3DMaterialTable();
 };
 
 struct J3DJointTree {

@@ -45,6 +45,10 @@ struct DynamicModuleControl {
 	/* 80263218 */ void getModuleName() const;
 };
 
+struct mDoDvdThd_callback_c {
+	/* 80015C74 */ void create(void* (*)(void*), void*);
+};
+
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
@@ -137,7 +141,6 @@ extern "C" void OSReport(); // 1
 extern "C" void OSReport_Error(); // 1
 extern "C" void OSReport_Warning(); // 1
 void mDoExt_getArchiveHeap(); // 2
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
 void operator delete(void*); // 2
 extern "C" void JUTReportConsole_f(); // 1
 extern "C" void OSGetStackPointer(); // 1

@@ -9,13 +9,13 @@
 // Types:
 // 
 
+struct JKRExpHeap {
+};
+
 struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmColor {
-};
-
-struct JKRExpHeap {
 };
 
 struct dMsgScrnItem_c {

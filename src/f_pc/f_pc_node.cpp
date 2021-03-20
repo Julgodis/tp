@@ -60,8 +60,8 @@ void fpcLy_SetCurrentLayer(layer_class*); // 2
 void fpcLy_CurrentLayer(); // 2
 void fpcLy_Delete(layer_class*); // 2
 void fpcLy_Create(layer_class*, void*, node_list_class*, int); // 2
-extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv(); // 1
-extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
+void fpcLyIt_Judge(layer_class*, void* (*)(void*, void*), void*); // 2
+void fpcMtd_Method(int (*)(void*), void*); // 2
 void fpcMtd_Execute(process_method_class*, void*); // 2
 void fpcMtd_IsDelete(process_method_class*, void*); // 2
 void fpcMtd_Delete(process_method_class*, void*); // 2

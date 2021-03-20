@@ -9,16 +9,6 @@
 // Types:
 // 
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmTransform {
-};
-
 struct J2DWindow {
 	struct TMaterial {
 	};
@@ -30,14 +20,13 @@ struct J2DWindow {
 	/* 802FBF98 */ s32 getTypeID() const;
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmColor {
 };
 
-struct _GXColor {
+struct J2DAnmTexPattern {
 };
 
-struct J2DAnmVtxColor {
-	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
+struct ResFONT {
 };
 
 struct JSUStreamSeekFrom {
@@ -48,19 +37,20 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DTevStage {
-};
-
-struct ResTIMG {
-};
-
 struct J2DAnmBase {
 };
 
-struct _GXCullMode {
+struct _GXColor {
 };
 
-struct ResFONT {
+struct J2DAnmVtxColor {
+	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
+};
+
+struct J2DAnmTransform {
+};
+
+struct _GXCullMode {
 };
 
 struct JGeometry {
@@ -70,6 +60,13 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
+struct ResTIMG {
 };
 
 struct J2DPane {
@@ -98,16 +95,10 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct J2DAnmTexPattern {
+struct J2DAnmTextureSRTKey {
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DAnmColor {
+struct J2DAnmTevRegKey {
 };
 
 struct J2DMaterial {
@@ -116,6 +107,15 @@ struct J2DMaterial {
 	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
 	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
 	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct J2DTevStage {
 };
 
 struct J2DWindowEx {

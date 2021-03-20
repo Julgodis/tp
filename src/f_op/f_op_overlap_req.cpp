@@ -63,8 +63,8 @@ void fpcLy_SetCurrentLayer(layer_class*); // 2
 void fpcLy_CurrentLayer(); // 2
 void fpcM_Delete(void*); // 2
 void fpcM_IsCreating(u32); // 2
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
-extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i(); // 1
+void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
+void cPhs_Set(request_of_phase_process_class*, int (**)(void*)); // 2
 void cPhs_Do(request_of_phase_process_class*, void*); // 2
 void cReq_Is_Done(request_base_class*); // 2
 void cReq_Done(request_base_class*); // 2

@@ -27,6 +27,12 @@ struct process_priority_class {
 struct line_tag {
 };
 
+struct node_list_class {
+};
+
+struct node_class {
+};
+
 struct create_tag_class {
 };
 
@@ -59,20 +65,20 @@ void fpcCt_IsDoing(base_process_class*); // 2
 void fpcCt_Abort(base_process_class*); // 2
 void fpcDtTg_IsEmpty(); // 2
 void fpcDtTg_ToDeleteQ(delete_tag_class*); // 2
-extern "C" void fpcDtTg_Do__FP16delete_tag_classPFPv_i(); // 1
+void fpcDtTg_Do(delete_tag_class*, int (*)(void*)); // 2
 void fpcEx_IsExist(u32); // 2
 void fpcEx_ExecuteQTo(base_process_class*); // 2
 void fpcLy_DeletingMesg(layer_class*); // 2
 void fpcLy_DeletedMesg(layer_class*); // 2
 void fpcLy_SetCurrentLayer(layer_class*); // 2
 void fpcLy_Cancel(layer_class*); // 2
-extern "C" void fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv(); // 1
+void fpcLyIt_OnlyHereLY(layer_class*, int (*)(void*, void*), void*); // 2
 void fpcLd_Free(s16); // 2
 void fpcNd_IsDeleteTiming(process_node_class*); // 2
 void fpcPi_IsInQueue(process_priority_class*); // 2
 void fpcPi_Delete(process_priority_class*); // 2
 void fpcLnTg_QueueTo(line_tag*); // 2
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
+void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); // 2
 void cTg_IsUse(create_tag_class*); // 2
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1

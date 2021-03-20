@@ -14,9 +14,6 @@ struct dMf_HIO_c {
 	/* 801CDA2C */ ~dMf_HIO_c();
 };
 
-struct CSTControl {
-};
-
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE548 */ void free(void*);
@@ -32,6 +29,9 @@ struct dMenu_Fmap_stage_data_c {
 
 struct STControl {
 	/* 8003219C */ void checkTrigger();
+};
+
+struct CSTControl {
 };
 
 struct dMenu_Fmap_c {
@@ -330,10 +330,10 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

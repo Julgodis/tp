@@ -695,6 +695,21 @@ class CPPExporter:
         if not arg or arg.is_builtin:
             return
 
+        if isinstance(arg, ArrayType):
+            self.build_forward_type(forward_types, types, parent_struct, arg.base, indirect=True)
+            self.build_forward_type(forward_types, types, parent_struct, arg.inner, indirect=True)
+            return
+
+        if isinstance(arg, FunctionType):
+            self.build_forward_type(forward_types, types, parent_struct, arg.inner, indirect=True)
+            if arg.return_type:
+                self.build_forward_type(forward_types, types, parent_struct, arg.return_type, indirect=indirect)
+            for arg_type in arg.argument_types:
+                self.build_forward_type(forward_types, types, parent_struct, arg_type, indirect=indirect)
+            if arg.inner_class:
+                self.build_forward_type(forward_types, types, parent_struct, arg.return_type, indirect=indirect)
+            return
+
         if isinstance(arg, ConstType):
             return self.build_forward_type(forward_types, types, parent_struct, arg.of, indirect=indirect)
         if isinstance(arg, PointerType):
@@ -882,33 +897,13 @@ class CPPExporter:
         child = parent.types[name[1]]
         return child, name
 
-    def type_get_dependencies(self, deps, type):
-        if not type or type.is_builtin:
-            return
-
-        if isinstance(type, ArrayType):
-            self.type_get_dependencies(deps, type.base)
-            self.type_get_dependencies(deps, type.inner)
-            return
-
-        if isinstance(type, ConstType):
-            return self.type_get_dependencies(deps, type.of)
-        if isinstance(type, PointerType):
-            return self.type_get_dependencies(deps, type.of)
-        if isinstance(type, ReferenceType):
-            return self.type_get_dependencies(deps, type.of)
-
-        if isinstance(type, NamedType):
-            deps.add (type)
-            for name in type.names:
-                for template in name.templates:
-                    self.type_get_dependencies(deps, template)
-
     def function_get_dependencies(self, func):
         deps = set()
-        self.type_get_dependencies(deps, func.return_type)
+        if func.return_type:
+            deps.update(func.return_type.dependencies())
         for arg_type in func.argument_types:
-            self.type_get_dependencies(deps, arg_type)
+            if arg_type:
+                deps.update(arg_type.dependencies())
         return deps
 
     def get_struct_from_names(self, parent, names):

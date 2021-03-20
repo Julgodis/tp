@@ -86,11 +86,11 @@ struct dMsgScrnBase_c {
 	/* 8023C4F4 */ void fontAlpha(f32);
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct JKRArchive {

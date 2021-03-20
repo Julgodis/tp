@@ -22,6 +22,7 @@ struct J3DAnmTextureSRTKey {
 	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
+struct J3DAnmColor;
 struct J3DAnmTevRegKey {
 	/* 8032B780 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
@@ -30,15 +31,15 @@ struct J3DAnmTexPattern {
 	/* 8032B004 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
-struct J3DAnmColor {
-	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
-};
-
 struct J3DMaterialTable {
 	/* 8032FAF4 */ void entryMatColorAnimator(J3DAnmColor*);
 	/* 8032FBC8 */ void entryTexNoAnimator(J3DAnmTexPattern*);
 	/* 8032FCC4 */ void entryTexMtxAnimator(J3DAnmTextureSRTKey*);
 	/* 8032FE70 */ void entryTevRegAnimator(J3DAnmTevRegKey*);
+};
+
+struct J3DAnmColor {
+	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
 struct mDoExt_bpkAnm {
@@ -123,6 +124,22 @@ struct J3DModel {
 	/* 803279A0 */ void diff();
 };
 
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
+};
+
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
+};
+
+struct J3DTevSwapModeTable {
+	/* 8000E134 */ J3DTevSwapModeTable();
+};
+
 struct J3DTevOrder {
 	/* 8000E140 */ J3DTevOrder();
 };
@@ -133,22 +150,6 @@ struct J3DTevStageInfo {
 struct J3DTevStage {
 	/* 8000E230 */ J3DTevStage();
 	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
-};
-
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
-};
-
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
-};
-
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
-struct J3DTevSwapModeTable {
-	/* 8000E134 */ J3DTevSwapModeTable();
 };
 
 struct J3DTevBlock {
@@ -176,13 +177,13 @@ struct J3DTevBlock {
 	/* 8000E0C8 */ void setTevStageNum(u8);
 };
 
+struct J3DBlend {
+};
+
 struct J3DAlphaComp {
 };
 
 struct J3DZMode {
-};
-
-struct J3DBlend {
 };
 
 struct J3DPEBlock {
@@ -344,10 +345,10 @@ struct J3DMtxCalcNoAnmBase {
 	/* 8000FA8C */ ~J3DMtxCalcNoAnmBase();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorf {
@@ -533,13 +534,13 @@ struct J3DIndTexMtxInfo {
 	/* 803257DC */ void operator=(J3DIndTexMtxInfo const&);
 };
 
-struct J3DTevColorAnm {
+struct J3DTevKColorAnm {
 };
 
 struct J3DTexMtxAnm {
 };
 
-struct J3DTevKColorAnm {
+struct J3DTevColorAnm {
 };
 
 struct J3DMaterialAnm {

@@ -55,17 +55,17 @@ struct JUTGamePad {
 // 
 
 void fpcM_Draw(void*); // 2
-extern "C" static void fpcM_DrawIterater__FPFPvPv_i(); // 1
+static void fpcM_DrawIterater(int (*)(void*, void*)); // 2
 static void fpcM_Execute(void*); // 2
 void fpcM_Delete(void*); // 2
 void fpcM_IsCreating(u32); // 2
-extern "C" void fpcM_Management__FPFv_vPFv_v(); // 1
+void fpcM_Management(void (*)(void), void (*)(void)); // 2
 void fpcM_Init(); // 2
-extern "C" void fpcM_FastCreate__FsPFPv_iPvPv(); // 1
+void fpcM_FastCreate(s16, int (*)(void*), void*, void*); // 2
 void fpcM_IsPause(void*, u8); // 2
 void fpcM_PauseEnable(void*, u8); // 2
 void fpcM_PauseDisable(void*, u8); // 2
-extern "C" void fpcM_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
+void fpcM_JudgeInLayer(u32, void* (*)(void*, void*), void*); // 2
 
 extern "C" void fpcM_Draw__FPv(); // 1
 extern "C" static void fpcM_DrawIterater__FPFPvPv_i(); // 1
@@ -84,27 +84,27 @@ extern "C" void fpcM_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
 // External References:
 // 
 
-extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
+void fpcCtIt_JudgeInLayer(u32, void* (*)(void*, void*), void*); // 2
 void fpcCt_IsCreatingByID(u32); // 2
 void fpcCt_Handler(); // 2
 void fpcDt_Handler(); // 2
 void fpcDt_Delete(void*); // 2
 void fpcEx_Execute(base_process_class*); // 2
-extern "C" void fpcEx_Handler__FPFPvPv_i(); // 1
+void fpcEx_Handler(int (*)(void*, void*)); // 2
 void fpcLy_RootLayer(); // 2
 void fpcLy_CurrentLayer(); // 2
 void fpcLy_Layer(u32); // 2
 void fpcLy_Create(layer_class*, void*, node_list_class*, int); // 2
-extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
-extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv(); // 1
+void fpcLyIt_OnlyHere(layer_class*, int (*)(void*, void*), void*); // 2
+void fpcLyIt_Judge(layer_class*, void* (*)(void*, void*), void*); // 2
 void fpcLn_Create(); // 2
 void fpcPi_Handler(); // 2
 void fpcPause_IsEnable(void*, u8); // 2
 void fpcPause_Enable(void*, u8); // 2
 void fpcPause_Disable(void*, u8); // 2
 void fpcDw_Execute(base_process_class*); // 2
-extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i(); // 1
-extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*)); // 2
+void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
 void cAPIGph_Painter(); // 2
 void MtxInit(); // 2
 extern "C" void _savegpr_28(); // 1
@@ -168,7 +168,7 @@ asm void fpcM_Draw(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void fpcM_DrawIterater__FPFPvPv_i() {
+asm static void fpcM_DrawIterater(int (*)(void*, void*)) {
 	nofralloc
 #include "asm/f_pc/f_pc_manager/fpcM_DrawIterater__FPFPvPv_i.s"
 }
@@ -212,7 +212,7 @@ asm void fpcM_IsCreating(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcM_Management__FPFv_vPFv_v() {
+asm void fpcM_Management(void (*)(void), void (*)(void)) {
 	nofralloc
 #include "asm/f_pc/f_pc_manager/fpcM_Management__FPFv_vPFv_v.s"
 }
@@ -241,7 +241,7 @@ asm void fpcM_Init() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcM_FastCreate__FsPFPv_iPvPv() {
+asm void fpcM_FastCreate(s16 field_0, int (*)(void*), void* field_2, void* field_3) {
 	nofralloc
 #include "asm/f_pc/f_pc_manager/fpcM_FastCreate__FsPFPv_iPvPv.s"
 }
@@ -285,7 +285,7 @@ asm void fpcM_PauseDisable(void* field_0, u8 field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcM_JudgeInLayer__FUiPFPvPv_PvPv() {
+asm void fpcM_JudgeInLayer(u32 field_0, void* (*)(void*, void*), void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_manager/fpcM_JudgeInLayer__FUiPFPvPv_PvPv.s"
 }

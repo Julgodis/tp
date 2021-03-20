@@ -12,10 +12,10 @@
 struct J3DJoint {
 };
 
-struct J3DAnmTransformKey {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DAnmTransformKey {
 };
 
 struct daNpcCd2_c {
@@ -43,14 +43,14 @@ struct daNpcCd2_c {
 	/* 801599C4 */ void getTexAnmP(int);
 };
 
+struct Vec {
+};
+
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
 struct fopAc_ac_c {
-};
-
-struct Vec {
 };
 
 struct PathTrace_c {
@@ -110,19 +110,19 @@ struct mDoExt_btpAnm {
 	/* 8000D5E8 */ void entry(J3DMaterialTable*, s16);
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct J3DAnmTransform {
 };
 
 struct J3DModelData {
+};
+
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -296,7 +296,7 @@ void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
 void fopAc_IsActor(void*); // 2
 void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+void fpcEx_Search(void* (*)(void*, void*), void*); // 2
 void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
 void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
 void dComIfGd_setSimpleShadow(cXyz*, f32, f32, cBgS_PolyInfo&, s16, f32, _GXTexObj*); // 2

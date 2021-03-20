@@ -12,10 +12,10 @@
 struct standard_create_request_class {
 };
 
-struct base_process_class {
+struct layer_class {
 };
 
-struct layer_class {
+struct base_process_class {
 };
 
 struct create_request_method_class {
@@ -37,7 +37,7 @@ static s32 fpcSCtRq_phase_Done(standard_create_request_class*); // 2
 static void fpcSCtRq_Handler(standard_create_request_class*); // 2
 static bool fpcSCtRq_Delete(standard_create_request_class*); // 2
 static bool fpcSCtRq_Cancel(standard_create_request_class*); // 2
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
 
 extern "C" static void fpcSCtRq_phase_Load__FP29standard_create_request_class(); // 1
 extern "C" static void fpcSCtRq_phase_CreateProcess__FP29standard_create_request_class(); // 1
@@ -62,7 +62,7 @@ void fpcLy_IsCreatingMesg(layer_class*); // 2
 void fpcLy_SetCurrentLayer(layer_class*); // 2
 void fpcLd_Free(s16); // 2
 void fpcLd_Load(s16); // 2
-extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i(); // 1
+void cPhs_Set(request_of_phase_process_class*, int (**)(void*)); // 2
 void cPhs_Do(request_of_phase_process_class*, void*); // 2
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_27(); // 1
@@ -192,7 +192,7 @@ SECTION_DATA static void* data_803A3AFC[7] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv() {
+asm void fpcSCtRq_Request(layer_class* field_0, s16 field_1, int (*)(void*, void*), void* field_3, void* field_4) {
 	nofralloc
 #include "asm/f_pc/f_pc_stdcreate_req/fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv.s"
 }

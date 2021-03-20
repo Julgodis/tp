@@ -41,6 +41,7 @@ struct JASDsp {
 		/* 8029E09C */ void setBusConnect(u8, u8);
 	};
 
+	/* 8029D958 */ void boot(void (*)(void*));
 	/* 8029D9A4 */ void releaseHalt(u32);
 	/* 8029D9C4 */ void finishWork(u16);
 	/* 8029D9E4 */ void syncFrame(u32, u32, u32);
@@ -65,7 +66,6 @@ struct JKRHeap {
 // Forward References:
 // 
 
-extern "C" void boot__6JASDspFPFPv_v(); // 1
 void DSP_CreateMap2(u32); // 2
 
 extern "C" void boot__6JASDspFPFPv_v(); // 1
@@ -114,7 +114,7 @@ void cDyl_InitAsyncIsDone(); // 2
 void DSPReleaseHalt2(u32); // 2
 void DsetupTable(u32, u32, u32, u32, u32); // 2
 void DsetMixerLevel(f32); // 2
-extern "C" void DspBoot__FPFPv_v(); // 1
+void DspBoot(void (*)(void*)); // 2
 void DspFinishWork(u16); // 2
 void DsyncFrame2(u32, u32, u32); // 2
 void* operator new[](u32, JKRHeap*, int); // 2
@@ -167,7 +167,7 @@ static u8 struct_804512F4[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void boot__6JASDspFPFPv_v() {
+asm void JASDsp::boot(void (*)(void*)) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPInterface/boot__6JASDspFPFPv_v.s"
 }

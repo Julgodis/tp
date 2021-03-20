@@ -46,7 +46,7 @@ extern "C" void setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb(); // 1
 // External References:
 // 
 
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32); // 2
 void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2

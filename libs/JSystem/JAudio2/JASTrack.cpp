@@ -160,9 +160,14 @@ struct JASSeqCtrl {
 	/* 80293ABC */ void interrupt(JASSeqCtrl::IntrType);
 };
 
+struct JASBank {
+	/* 80297930 */ void noteOn(JASBank const*, int, u8, u8, u16, void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void*);
+};
+
 struct JASDriver {
 	/* 8029C9E8 */ void getDacRate();
 	/* 8029C9F0 */ void getSubFrames();
+	/* 8029E274 */ void registerSubFrameCallback(s32 (*)(void*), void*);
 };
 
 namespace JGadget {
@@ -265,8 +270,6 @@ extern "C" extern u8 data_80431B04[16 + 4 /* padding */];
 // 
 
 SECTION_INIT void memset(); // 1
-extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
-extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv(); // 1
 void operator delete(void*); // 2
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1

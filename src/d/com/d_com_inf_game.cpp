@@ -9,16 +9,13 @@
 // Types:
 // 
 
-struct J3DModelData {
-};
-
-struct cXyz {
+struct J3DModel {
 };
 
 struct dStage_startStage_c {
 };
 
-struct J3DModel {
+struct cXyz {
 };
 
 struct dTimer_c {
@@ -29,6 +26,9 @@ struct dTimer_c {
 	/* 8025D86C */ void restart(u8);
 	/* 8025D920 */ void end(int);
 	/* 8025D9E0 */ void deleteRequest();
+};
+
+struct J3DModelData {
 };
 
 struct dComIfG_play_c {
@@ -511,7 +511,7 @@ void dComIfGp_SelectWarpPt_set(u8); // 2
 void dComIfGp_TargetWarpPt_get(); // 2
 void dComIfGp_SelectWarpPt_get(); // 2
 void dComIfGp_TransportWarp_check(); // 2
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 void dComIfGs_onVisitedRoom(int); // 2
 void dComIfGs_offVisitedRoom(int); // 2
 void dComIfGs_isVisitedRoom(int); // 2
@@ -734,7 +734,7 @@ void checkItemGet(u8, int); // 2
 void dKy_daynight_check(); // 2
 void dKy_darkworld_stage_check(char const*, int); // 2
 void dMenuFmap_getStartStageName(void*); // 2
-extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void cPhs_Handler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
 extern "C" void __register_global_object(); // 1
@@ -2571,7 +2571,7 @@ asm void dComIfGp_TransportWarp_check() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv() {
+asm void dComLbG_PhaseHandler(request_of_phase_process_class* field_0, int (**)(void*), void* field_2) {
 	nofralloc
 #include "asm/d/com/d_com_inf_game/dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv.s"
 }

@@ -9,16 +9,18 @@
 // Types:
 // 
 
+struct JKRAramBlock {
+};
+
 struct JKRAMCommand {
 	/* 802D39EC */ JKRAMCommand();
 	/* 802D3A5C */ ~JKRAMCommand();
 };
 
-struct JKRAramBlock {
-};
-
 struct JKRAramPiece {
+	/* 802D3574 */ void prepareCommand(int, u32, u32, u32, JKRAramBlock*, void (*)(u32));
 	/* 802D35F4 */ void sendCommand(JKRAMCommand*);
+	/* 802D3614 */ void orderAsync(int, u32, u32, u32, JKRAramBlock*, void (*)(u32));
 	/* 802D3770 */ void sync(JKRAMCommand*, int);
 	/* 802D3838 */ void orderSync(int, u32, u32, u32, JKRAramBlock*);
 	/* 802D38CC */ void startDMA(JKRAMCommand*);
@@ -62,13 +64,11 @@ struct JUTException {
 // Forward References:
 // 
 
-extern "C" static void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
-extern "C" static void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
 extern "C" void __sinit_JKRAramPiece_cpp(); // 1
 
-extern "C" static void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
+extern "C" void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
 extern "C" void sendCommand__12JKRAramPieceFP12JKRAMCommand(); // 1
-extern "C" static void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
+extern "C" void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
 extern "C" void sync__12JKRAramPieceFP12JKRAMCommandi(); // 1
 extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock(); // 1
 extern "C" void startDMA__12JKRAramPieceFP12JKRAMCommand(); // 1
@@ -139,7 +139,7 @@ extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v() {
+asm void JKRAramPiece::prepareCommand(int field_0, u32 field_1, u32 field_2, u32 field_3, JKRAramBlock* field_4, void (*)(u32)) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v.s"
 }
@@ -184,7 +184,7 @@ static u8 mMutex__12JKRAramPiece[24];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v() {
+asm void JKRAramPiece::orderAsync(int field_0, u32 field_1, u32 field_2, u32 field_3, JKRAramBlock* field_4, void (*)(u32)) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRAramPiece/orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v.s"
 }

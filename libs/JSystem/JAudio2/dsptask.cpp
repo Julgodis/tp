@@ -17,10 +17,10 @@ struct STRUCT_DSP_TASK {
 // 
 
 static void DspHandShake(void*); // 2
-extern "C" void DspBoot__FPFPv_v(); // 1
-extern "C" void DSPSendCommands2__FPUlUlPFUs_v(); // 1
+void DspBoot(void (*)(void*)); // 2
+void DSPSendCommands2(u32*, u32, void (*)(u16)); // 2
 static void DspInitWork(); // 2
-extern "C" static void DspStartWork__FUlPFUs_v(); // 1
+static void DspStartWork(u32, void (*)(u16)); // 2
 void DspFinishWork(u16); // 2
 
 extern "C" static void DspHandShake__FPv(); // 1
@@ -590,7 +590,7 @@ static u8 AUDIO_YIELD_BUFFER[8192];
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-extern "C" asm void DspBoot__FPFPv_v() {
+asm void DspBoot(void (*)(void*)) {
 	nofralloc
 #include "asm/JSystem/JAudio2/dsptask/DspBoot__FPFPv_v.s"
 }
@@ -602,7 +602,7 @@ extern "C" asm void DspBoot__FPFPv_v() {
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-extern "C" asm void DSPSendCommands2__FPUlUlPFUs_v() {
+asm void DSPSendCommands2(u32* field_0, u32 field_1, void (*)(u16)) {
 	nofralloc
 #include "asm/JSystem/JAudio2/dsptask/DSPSendCommands2__FPUlUlPFUs_v.s"
 }
@@ -637,7 +637,7 @@ static u8 taskwritep[4];
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-extern "C" asm static void DspStartWork__FUlPFUs_v() {
+asm static void DspStartWork(u32 field_0, void (*)(u16)) {
 	nofralloc
 #include "asm/JSystem/JAudio2/dsptask/DspStartWork__FUlPFUs_v.s"
 }

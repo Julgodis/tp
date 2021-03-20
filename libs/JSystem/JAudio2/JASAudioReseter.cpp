@@ -31,6 +31,7 @@ struct JASDSPChannel {
 struct JASDriver {
 	/* 8029E130 */ void setDSPLevel(f32);
 	/* 8029E158 */ void getDSPLevel();
+	/* 8029E240 */ void registerDspSyncCallback(s32 (*)(void*), void*);
 };
 
 // 
@@ -50,7 +51,6 @@ extern "C" void callback__15JASAudioReseterFPv(); // 1
 // External References:
 // 
 
-extern "C" void registerDspSyncCallback__9JASDriverFPFPv_lPv(); // 1
 void operator delete(void*); // 2
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1

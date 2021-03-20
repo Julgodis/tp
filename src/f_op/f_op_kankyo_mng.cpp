@@ -12,6 +12,12 @@
 struct cXyz {
 };
 
+struct layer_class {
+};
+
+struct csXyz {
+};
+
 struct dPa_levelEcallBack {
 };
 
@@ -19,9 +25,6 @@ struct _GXColor {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -39,9 +42,9 @@ struct cMl {
 static void fopKyM_CreateAppend(); // 2
 static void createAppend(int, cXyz*, cXyz*); // 2
 void fopKyM_Delete(void*); // 2
-extern "C" static void fopKyM_Create__FsPFPv_iPv(); // 1
-extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i(); // 1
-extern "C" void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i(); // 1
+static void fopKyM_Create(s16, int (*)(void*), void*); // 2
+void fopKyM_create(s16, int, cXyz*, cXyz*, int (*)(void*)); // 2
+void fopKyM_fastCreate(s16, int, cXyz*, cXyz*, int (*)(void*)); // 2
 void fopKyM_createWpillar(cXyz const*, f32, int); // 2
 void fopKyM_createMpillar(cXyz const*, f32); // 2
 
@@ -60,8 +63,8 @@ extern "C" void fopKyM_createMpillar__FPC4cXyzf(); // 1
 
 void fpcLy_CurrentLayer(); // 2
 void fpcM_Delete(void*); // 2
-extern "C" void fpcM_FastCreate__FsPFPv_iPvPv(); // 1
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+void fpcM_FastCreate(s16, int (*)(void*), void*, void*); // 2
+void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
 void cLib_memSet(void*, int, u32); // 2
 extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
@@ -130,7 +133,7 @@ asm void fopKyM_Delete(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void fopKyM_Create__FsPFPv_iPv() {
+asm static void fopKyM_Create(s16 field_0, int (*)(void*), void* field_2) {
 	nofralloc
 #include "asm/f_op/f_op_kankyo_mng/fopKyM_Create__FsPFPv_iPv.s"
 }
@@ -141,7 +144,7 @@ extern "C" asm static void fopKyM_Create__FsPFPv_iPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i() {
+asm void fopKyM_create(s16 field_0, int field_1, cXyz* field_2, cXyz* field_3, int (*)(void*)) {
 	nofralloc
 #include "asm/f_op/f_op_kankyo_mng/fopKyM_create__FsiP4cXyzP4cXyzPFPv_i.s"
 }
@@ -152,7 +155,7 @@ extern "C" asm void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i() {
+asm void fopKyM_fastCreate(s16 field_0, int field_1, cXyz* field_2, cXyz* field_3, int (*)(void*)) {
 	nofralloc
 #include "asm/f_op/f_op_kankyo_mng/fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i.s"
 }

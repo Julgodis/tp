@@ -9,13 +9,13 @@
 // Types:
 // 
 
-struct CSTControl {
-};
-
 struct JKRExpHeap {
 };
 
 struct STControl {
+};
+
+struct CSTControl {
 };
 
 struct dMenu_Ring_c {

@@ -9,15 +9,6 @@
 // Types:
 // 
 
-struct JAIAudience {
-};
-
-template <typename A0>
-struct JAISoundStrategyMgr { };
-/* JAISoundStrategyMgr<JAISeq> */
-struct JAISoundStrategyMgr__template1 {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -27,16 +18,25 @@ struct JGeometry {
 
 };
 
-struct JASSoundParams {
-};
-
-struct JAISoundActivity {
+struct JAIAudience {
 };
 
 struct JAISoundID {
 };
 
 struct JAISeqMgr {
+};
+
+template <typename A0>
+struct JAISoundStrategyMgr { };
+/* JAISoundStrategyMgr<JAISeq> */
+struct JAISoundStrategyMgr__template1 {
+};
+
+struct JAISoundActivity {
+};
+
+struct JASSoundParams {
 };
 
 struct JAISeq {

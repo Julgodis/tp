@@ -6,11 +6,24 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct node_lists_tree_class {
+};
+
+struct node_class {
+};
+
+struct node_list_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv(); // 1
-extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv(); // 1
+void cTrIt_Method(node_lists_tree_class*, int (*)(node_class*, void*), void*); // 2
+void cTrIt_Judge(node_lists_tree_class*, void* (*)(node_class*, void*), void*); // 2
 
 extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv(); // 1
 extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv(); // 1
@@ -19,8 +32,8 @@ extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv(); 
 // External References:
 // 
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
+void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); // 2
+void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*); // 2
 extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_27(); // 1
@@ -41,7 +54,7 @@ extern "C" void _restgpr_28(); // 1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv() {
+asm void cTrIt_Method(node_lists_tree_class* field_0, int (*)(node_class*, void*), void* field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tree_iter/cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv.s"
 }
@@ -52,7 +65,7 @@ extern "C" asm void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv() {
+asm void cTrIt_Judge(node_lists_tree_class* field_0, void* (*)(node_class*, void*), void* field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_tree_iter/cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv.s"
 }

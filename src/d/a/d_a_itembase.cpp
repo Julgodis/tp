@@ -36,10 +36,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmColor {
 };
 
-struct J3DAnmColor {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_bpkAnm {

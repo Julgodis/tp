@@ -15,13 +15,6 @@ struct dEvent_exception_c {
 	/* 80046480 */ void getEventName();
 };
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
 struct dEvDtStaff_c {
 	/* 80044134 */ void init();
 };
@@ -31,10 +24,17 @@ struct dEvDtEvent_c {
 	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
 };
 
-struct fopAc_ac_c {
+struct dEvDtData_c {
 };
 
-struct dEvDtData_c {
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct fopAc_ac_c {
 };
 
 struct dEvent_manager_c {
@@ -108,6 +108,7 @@ struct dRes_control_c {
 
 struct dEvt_control_c {
 	/* 80042468 */ void reset();
+	/* 80042914 */ void setSkipProc(void*, int (*)(void*, int), int);
 	/* 800429A8 */ void onSkipFade();
 	/* 80043278 */ void getStageEventDt();
 	/* 80043280 */ void sceneChange(int);
@@ -210,7 +211,7 @@ extern "C" extern char const* const d_event_d_event_manager__stringBase0;
 // External References:
 // 
 
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
 void fopAcM_orderMapToolAutoNextEvent(fopAc_ac_c*, u8, s16, u16, u16, u16); // 2
 void fopAcM_searchFromName4Event(char const*, s16); // 2
@@ -220,7 +221,6 @@ void dComIfGp_SelectWarpPt_get(); // 2
 void dEv_defaultSkipProc(void*, int); // 2
 void dEv_defaultSkipZev(void*, int); // 2
 void dEv_defaultSkipStb(void*, int); // 2
-extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
 void dCam_getBody(); // 2
 extern "C" void PSVECSquareMag(); // 1
 extern "C" void __construct_array(); // 1

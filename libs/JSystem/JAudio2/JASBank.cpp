@@ -9,6 +9,29 @@
 // Types:
 // 
 
+struct JASDsp {
+	struct TChannel {
+	};
+
+};
+
+struct JASOscillator {
+	struct Data {
+	};
+
+};
+
+struct JASChannel {
+	/* 8029A800 */ JASChannel(void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void*);
+	/* 8029A9F0 */ void play();
+	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
+};
+
+struct JASBank {
+	/* 80297930 */ void noteOn(JASBank const*, int, u8, u8, u16, void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void*);
+	/* 80297C40 */ void noteOnOsc(int, u8, u8, u16, void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void*);
+};
+
 struct JASGenericMemPool {
 	/* 80290848 */ JASGenericMemPool();
 	/* 80290948 */ void alloc(u32);
@@ -21,17 +44,6 @@ struct JASMemPool_MultiThreaded__template2 {
 	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
 };
 
-struct JASOscillator {
-	struct Data {
-	};
-
-};
-
-struct JASChannel {
-	/* 8029A9F0 */ void play();
-	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
-};
-
 struct JASDriver {
 	/* 8029C9E8 */ void getDacRate();
 };
@@ -40,17 +52,14 @@ struct JASDriver {
 // Forward References:
 // 
 
-extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
-extern "C" static void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
 
 extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
-extern "C" static void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
+extern "C" void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
 
 // 
 // External References:
 // 
 
-extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1
 extern "C" void __register_global_object(); // 1
@@ -99,7 +108,7 @@ SECTION_SDATA2 static f32 lit_250 = 0.5f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv() {
+asm void JASBank::noteOn(JASBank const* field_0, int field_1, u8 field_2, u8 field_3, u16 field_4, void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void* field_6) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBank/noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv.s"
 }
@@ -131,7 +140,7 @@ SECTION_SDATA2 static f32 JASBank__lit_290 = 16736.015625f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv() {
+asm void JASBank::noteOnOsc(int field_0, u8 field_1, u8 field_2, u16 field_3, void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void* field_5) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBank/noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv.s"
 }

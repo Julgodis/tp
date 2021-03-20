@@ -46,10 +46,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cBgS_PolyInfo {
+struct cM3dGPla {
 };
 
-struct cM3dGPla {
+struct cBgS_PolyInfo {
 };
 
 struct cBgS {

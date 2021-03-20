@@ -42,12 +42,12 @@ struct J2DAnmColorKey {
 	/* 80239BE0 */ ~J2DAnmColorKey();
 };
 
-struct JKRArchive {
-};
-
 struct J2DPane {
 	/* 802F7100 */ void getBounds();
 	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {

@@ -26,18 +26,18 @@ struct dAttDraw_CallBack_c {
 	/* 80070178 */ void execute(u16, J3DTransformInfo*);
 };
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
 struct cSAngle {
 	/* 80270F68 */ cSAngle(cSAngle const&);
 	/* 80270F98 */ cSAngle(s16);
 	/* 802710E8 */ void Inv() const;
 	/* 80271228 */ void operator-(s16) const;
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct fopAc_ac_c {
@@ -136,10 +136,10 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmColor {
 };
 
-struct J3DAnmColor {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_bpkAnm {
@@ -309,8 +309,8 @@ void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
 void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
 void mDoExt_restoreCurrentHeap(); // 2
 void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-extern "C" void fopAcIt_Executor__FPFPvPv_iPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Executor(int (*)(void*, void*), void*); // 2
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 void operator delete(void*); // 2

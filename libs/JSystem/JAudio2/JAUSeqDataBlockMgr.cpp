@@ -33,10 +33,10 @@ struct JAUSeqDataBlocks {
 struct JKRArchive {
 };
 
-struct JAISeqData {
+struct JAISeqDataUser {
 };
 
-struct JAISeqDataUser {
+struct JAISeqData {
 };
 
 struct JAUDynamicSeqDataBlocks {
@@ -52,6 +52,7 @@ struct JAUDynamicSeqDataBlocks {
 
 struct JASResArcLoader {
 	/* 80290BD0 */ void getResSize(JKRArchive const*, u16);
+	/* 80290D18 */ void loadResourceAsync(JKRArchive*, u16, u8*, u32, void (*)(u32, u32), u32);
 };
 
 struct JSUPtrLink {
@@ -90,7 +91,6 @@ extern "C" void rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv(); // 1
 // External References:
 // 
 
-extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl(); // 1
 extern "C" void _savegpr_24(); // 1
 extern "C" void _savegpr_25(); // 1
 extern "C" void _savegpr_27(); // 1

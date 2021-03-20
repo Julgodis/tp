@@ -20,7 +20,7 @@ struct layer_class {
 // 
 
 void fpcDw_Execute(base_process_class*); // 2
-extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i(); // 1
+void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*)); // 2
 
 extern "C" void fpcDw_Execute__FP18base_process_class(); // 1
 extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i(); // 1
@@ -67,7 +67,7 @@ asm void fpcDw_Execute(base_process_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i() {
+asm void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*)) {
 	nofralloc
 #include "asm/f_pc/f_pc_draw/fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i.s"
 }

@@ -9,10 +9,10 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2EnvSeBase {

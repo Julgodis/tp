@@ -9,8 +9,18 @@
 // Types:
 // 
 
+struct cCcD_Obj {
+};
+
+struct cXyz {
+};
+
+struct fopAc_ac_c {
+};
+
 struct dCcMassS_Obj {
 	/* 800300F4 */ ~dCcMassS_Obj();
+	/* 800852E0 */ void Set(cCcD_Obj*, u8, void (*)(fopAc_ac_c*, cXyz*, u32));
 	/* 800852F0 */ void Clear();
 	/* 800855C8 */ dCcMassS_Obj();
 };
@@ -19,22 +29,13 @@ struct dCcMassS_HitInf {
 	/* 80085334 */ void ClearPointer();
 };
 
-struct fopAc_ac_c {
+struct Vec {
 };
 
 struct cM3dGCps {
 	/* 8026EF88 */ cM3dGCps();
 	/* 8026EFA4 */ ~cM3dGCps();
 	/* 8026F080 */ void SetCps(cM3dGCps const&);
-};
-
-struct Vec {
-};
-
-struct cXyz {
-};
-
-struct cCcD_Obj {
 };
 
 struct dCcMassS_Mng {
@@ -92,9 +93,8 @@ struct cM3dGCyl {
 // Forward References:
 // 
 
-extern "C" static void Set__12dCcMassS_ObjFP8cCcD_ObjUcPFP10fopAc_ac_cP4cXyzUl_v(); // 1
 
-extern "C" static void Set__12dCcMassS_ObjFP8cCcD_ObjUcPFP10fopAc_ac_cP4cXyzUl_v(); // 1
+extern "C" void Set__12dCcMassS_ObjFP8cCcD_ObjUcPFP10fopAc_ac_cP4cXyzUl_v(); // 1
 extern "C" void Clear__12dCcMassS_ObjFv(); // 1
 extern "C" void ClearPointer__15dCcMassS_HitInfFv(); // 1
 extern "C" void __ct__12dCcMassS_MngFv(); // 1
@@ -177,7 +177,7 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void Set__12dCcMassS_ObjFP8cCcD_ObjUcPFP10fopAc_ac_cP4cXyzUl_v() {
+asm void dCcMassS_Obj::Set(cCcD_Obj* field_0, u8 field_1, void (*)(fopAc_ac_c*, cXyz*, u32)) {
 	nofralloc
 #include "asm/d/cc/d_cc_mass_s/Set__12dCcMassS_ObjFP8cCcD_ObjUcPFP10fopAc_ac_cP4cXyzUl_v.s"
 }

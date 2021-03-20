@@ -120,10 +120,10 @@ struct dDlst_effectLine_c {
 	/* 800541F4 */ void update(cXyz&, _GXColor&, u16, u16, u16, u16, f32, f32, f32, f32);
 };
 
-struct cBgD_Vtx_t {
+struct cM3dGPla {
 };
 
-struct cM3dGPla {
+struct cBgD_Vtx_t {
 };
 
 struct dDlst_shadowPoly_c {
@@ -152,6 +152,7 @@ struct cBgS_ShdwDraw {
 	/* 80267F88 */ cBgS_ShdwDraw();
 	/* 80267FD0 */ ~cBgS_ShdwDraw();
 	/* 80268048 */ void Set(cXyz&, cXyz&);
+	/* 8026806C */ void SetCallback(int (*)(cBgS_ShdwDraw*, cBgD_Vtx_t*, int, int, int, cM3dGPla*));
 };
 
 struct ShdwDrawPoly_c {
@@ -392,7 +393,6 @@ void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16); // 2
 void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*); // 2
 void dKy_plight_near_pos(); // 2
 void dKy_GxFog_set(); // 2
-extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i(); // 1
 void cLib_chaseUC(u8*, u8, u8); // 2
 void* operator new(u32); // 2
 void* operator new[](u32, int); // 2

@@ -36,7 +36,7 @@ extern "C" void fopScnM_Init__Fv(); // 1
 // External References:
 // 
 
-extern "C" void fopScnIt_Judge__FPFPvPv_PvPv(); // 1
+void fopScnIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopScnRq_Request(int, scene_class*, s16, void*, s16, u16); // 2
 void fopScnRq_ReRequest(u32, s16, void*); // 2
 void fopScnRq_Handler(); // 2

@@ -79,7 +79,7 @@ extern "C" void fpcLy_Create__FP11layer_classPvP15node_list_classi(); // 1
 // External References:
 // 
 
-extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i(); // 1
+void fpcMtdIt_Method(node_list_class*, int (*)(void*)); // 2
 void fpcMtdTg_Do(process_method_tag_class*); // 2
 void fpcMtdTg_ToMethodQ(node_list_class*, process_method_tag_class*); // 2
 void fpcMtdTg_MethodQTo(process_method_tag_class*); // 2

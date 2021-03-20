@@ -77,7 +77,7 @@ void fpcNdRq_Delete(node_create_request*); // 2
 void fpcNdRq_Handler(); // 2
 void fpcNdRq_Request(u32, int, process_node_class*, s16, void*, node_create_request_method_class*); // 2
 void fpcNdRq_ReRequest(u32, s16, void*); // 2
-extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i(); // 1
+void cPhs_Set(request_of_phase_process_class*, int (**)(void*)); // 2
 void cPhs_Do(request_of_phase_process_class*, void*); // 2
 extern "C" void _savegpr_26(); // 1
 extern "C" void _restgpr_26(); // 1

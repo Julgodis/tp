@@ -79,6 +79,7 @@ struct dDemo_c {
 };
 
 struct dEvt_control_c {
+	/* 80042914 */ void setSkipProc(void*, int (*)(void*, int), int);
 	/* 80042958 */ void setSkipZev(void*, char*);
 	/* 80043278 */ void getStageEventDt();
 	/* 800432EC */ void convPId(u32);
@@ -121,10 +122,10 @@ struct dMsgObject_c {
 	/* 8023806C */ void demoMessageGroup();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -191,7 +192,6 @@ void dComIfGs_onStageSwitch(int, int); // 2
 void dComIfGs_offStageSwitch(int, int); // 2
 void dComIfGs_isStageSwitch(int, int); // 2
 void dEv_defaultSkipProc(void*, int); // 2
-extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
 void dCam_getBody(); // 2
 void d_GameOver_Create(u8); // 2
 void d_GameOver_Delete(u32&); // 2

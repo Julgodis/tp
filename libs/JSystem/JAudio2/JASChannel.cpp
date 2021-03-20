@@ -9,21 +9,6 @@
 // Types:
 // 
 
-struct JASOscillator {
-	struct Data {
-	};
-
-	struct EffectParams {
-	};
-
-	/* 8029BE94 */ JASOscillator();
-	/* 8029BEC4 */ void initStart(JASOscillator::Data const*);
-	/* 8029BF68 */ void incCounter(f32);
-	/* 8029BFC8 */ void getValue() const;
-	/* 8029BFE4 */ void release();
-	/* 8029C0E0 */ void update();
-};
-
 struct JASWaveInfo {
 };
 
@@ -42,10 +27,26 @@ struct JASDsp {
 
 };
 
+struct JASOscillator {
+	struct Data {
+	};
+
+	struct EffectParams {
+	};
+
+	/* 8029BE94 */ JASOscillator();
+	/* 8029BEC4 */ void initStart(JASOscillator::Data const*);
+	/* 8029BF68 */ void incCounter(f32);
+	/* 8029BFC8 */ void getValue() const;
+	/* 8029BFE4 */ void release();
+	/* 8029C0E0 */ void update();
+};
+
 struct JASChannel {
 	struct PanVector {
 	};
 
+	/* 8029A800 */ JASChannel(void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void*);
 	/* 8029A918 */ ~JASChannel();
 	/* 8029A9F0 */ void play();
 	/* 8029AA60 */ void playForce();
@@ -101,6 +102,8 @@ struct JASDSPChannel {
 	/* 8029D320 */ void free();
 	/* 8029D330 */ void start();
 	/* 8029D340 */ void drop();
+	/* 8029D44C */ void alloc(u8, s32 (*)(u32, JASDsp::TChannel*, void*), void*);
+	/* 8029D4BC */ void allocForce(u8, s32 (*)(u32, JASDsp::TChannel*, void*), void*);
 	/* 8029D534 */ void setPriority(u8);
 };
 
@@ -108,7 +111,6 @@ struct JASDSPChannel {
 // Forward References:
 // 
 
-extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
 
 extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
 extern "C" void __dt__10JASChannelFv(); // 1
@@ -136,8 +138,6 @@ extern "C" void checkBankDispose__10JASChannelCFv(); // 1
 // External References:
 // 
 
-extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
-extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
 extern "C" void OSDisableInterrupts(); // 1
 extern "C" void OSRestoreInterrupts(); // 1
 extern "C" void OSInitMessageQueue(); // 1
@@ -224,7 +224,7 @@ SECTION_SDATA2 static f32 lit_546[1 + 1 /* padding */] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv() {
+asm JASChannel::JASChannel(void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASChannel/__ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv.s"
 }

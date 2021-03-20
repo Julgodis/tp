@@ -13,13 +13,13 @@ struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
-struct JPAResource {
-};
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
 
-struct _GXTexMapID {
-};
-
-struct JPAEmitterManager {
 };
 
 struct JPAEmitterWorkData {
@@ -30,13 +30,13 @@ struct JPABaseParticle {
 	/* 8027F8C8 */ void init_c(JPAEmitterWorkData*, JPABaseParticle*);
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
+struct JPAEmitterManager {
+};
 
+struct _GXTexMapID {
+};
+
+struct JPAResource {
 };
 
 struct JPABaseEmitter {

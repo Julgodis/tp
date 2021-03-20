@@ -42,7 +42,7 @@ void fopOvlpM_Init(); // 2
 void fopScnM_Management(); // 2
 void fopScnM_Init(); // 2
 void fopDwTg_CreateQueue(); // 2
-extern "C" void fpcM_Management__FPFv_vPFv_v(); // 1
+void fpcM_Management(void (*)(void), void (*)(void)); // 2
 void fpcM_Init(); // 2
 void cCt_Counter(int); // 2
 void operator delete(void*); // 2

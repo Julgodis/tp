@@ -28,7 +28,7 @@ extern "C" void DsyncFrame4ch__FUlUlUlUlUl(); // 1
 // 
 
 void DSP_CreateMap2(u32); // 2
-extern "C" void DSPSendCommands2__FPUlUlPFUs_v(); // 1
+void DSPSendCommands2(u32*, u32, void (*)(u16)); // 2
 
 extern "C" void DSP_CreateMap2__FUl(); // 1
 extern "C" void DSPSendCommands2__FPUlUlPFUs_v(); // 1

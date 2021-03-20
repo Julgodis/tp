@@ -9,7 +9,7 @@
 // Types:
 // 
 
-struct _GXColor {
+struct _GXRenderModeObj {
 };
 
 struct JKRHeap {
@@ -23,7 +23,7 @@ struct JUTXfb {
 	/* 802E5424 */ void destroyManager();
 };
 
-struct _GXRenderModeObj {
+struct _GXColor {
 };
 
 struct JFWDisplay {

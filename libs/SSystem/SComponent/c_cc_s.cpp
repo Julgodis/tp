@@ -9,12 +9,18 @@
 // Types:
 // 
 
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
+};
+
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
+struct cCcD_GObjInf {
+};
+
+struct cCcD_GStts {
 };
 
 struct cCcD_Stts {
@@ -22,12 +28,6 @@ struct cCcD_Stts {
 	/* 8026395C */ void ClrCcMove();
 	/* 80263970 */ void PlusDmg(int);
 	/* 80263984 */ void GetWeightF() const;
-};
-
-struct cCcD_GObjInf {
-};
-
-struct cCcD_GStts {
 };
 
 struct cCcS {

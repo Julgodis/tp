@@ -27,36 +27,7 @@ struct J2DTexGenBlock {
 	/* 802EB7E0 */ void getTexMtx(u32, J2DTexMtx&);
 };
 
-struct _GXTexMapID {
-};
-
-struct J2DTevStageInfo {
-};
-
-struct J2DTevStage {
-	/* 802F1940 */ J2DTevStage();
-	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
-};
-
-struct JUtility {
-	struct TColor {
-		/* 80193960 */ TColor();
-	};
-
-};
-
-struct J2DTevOrder {
-	/* 802F1B70 */ J2DTevOrder();
-};
-
-struct J2DGXColorS10 {
-	/* 802F1B90 */ J2DGXColorS10();
-};
-
 struct J2DTevSwapModeInfo {
-};
-
-struct ResTIMG {
 };
 
 struct _GXTlut {
@@ -69,6 +40,16 @@ struct JUTPalette {
 	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
 };
 
+struct J2DTevSwapModeTable {
+	/* 802F1934 */ J2DTevSwapModeTable();
+};
+
+struct ResTIMG {
+};
+
+struct _GXTexMapID {
+};
+
 struct JUTTexture {
 	/* 802DE234 */ ~JUTTexture();
 	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
@@ -77,19 +58,38 @@ struct JUTTexture {
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
+struct ResFONT {
+};
+
+struct J2DTevOrder {
+	/* 802F1B70 */ J2DTevOrder();
+};
+
 struct JUTFont {
 };
 
-struct J2DTevSwapModeTable {
-	/* 802F1934 */ J2DTevSwapModeTable();
+struct J2DGXColorS10 {
+	/* 802F1B90 */ J2DGXColorS10();
+};
+
+struct JUtility {
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
+};
+
+struct J2DTevStageInfo {
+};
+
+struct J2DTevStage {
+	/* 802F1940 */ J2DTevStage();
+	/* 802F19A8 */ void setTevStageInfo(J2DTevStageInfo const&);
 };
 
 struct J2DIndTevStage {
 	/* 802EA044 */ void load(u8);
 	/* 802F18A0 */ J2DIndTevStage();
-};
-
-struct ResFONT {
 };
 
 struct J2DTevBlock {
@@ -383,9 +383,8 @@ struct J2DTevBlock16 {
 	/* 802F1FAC */ void setFontUndeleteFlag();
 };
 
-struct J2DIndTexCoordScale {
-	/* 802EA0CC */ void load(u8);
-	/* 802EB290 */ ~J2DIndTexCoordScale();
+struct J2DIndTexOrder {
+	/* 802EA0FC */ void load(u8);
 };
 
 struct J2DIndTexMtx {
@@ -393,8 +392,9 @@ struct J2DIndTexMtx {
 	/* 802EB2E4 */ ~J2DIndTexMtx();
 };
 
-struct J2DIndTexOrder {
-	/* 802EA0FC */ void load(u8);
+struct J2DIndTexCoordScale {
+	/* 802EA0CC */ void load(u8);
+	/* 802EB290 */ ~J2DIndTexCoordScale();
 };
 
 struct J2DIndBlockFull {

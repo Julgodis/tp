@@ -9,6 +9,12 @@
 // Types:
 // 
 
+struct JStage {
+	struct TObject {
+	};
+
+};
+
 struct Vec {
 };
 
@@ -30,12 +36,6 @@ namespace JStudio {
 
 	struct math {
 		/* 80285B44 */ void getTransformation_SRxyzT(f32 (* )[4], Vec const&, Vec const&, Vec const&);
-	};
-
-};
-
-struct JStage {
-	struct TObject {
 	};
 
 };

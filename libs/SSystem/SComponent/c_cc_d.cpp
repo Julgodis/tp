@@ -77,12 +77,12 @@ struct cCcD_ShapeAttr {
 	/* 802649E0 */ bool CrossCo(cCcD_ShapeAttr const&, f32*) const;
 };
 
-struct cCcD_CylAttr;
 struct cCcD_PntAttr {
 };
 
-struct cCcD_SphAttr;
+struct cCcD_CylAttr;
 struct cCcD_TriAttr;
+struct cCcD_SphAttr;
 struct cCcD_AabAttr {
 };
 

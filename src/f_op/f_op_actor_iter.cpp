@@ -9,6 +9,12 @@
 // Types:
 // 
 
+struct node_list_class {
+};
+
+struct node_class {
+};
+
 struct create_tag_class {
 };
 
@@ -22,8 +28,8 @@ struct judge_filter {
 // Forward References:
 // 
 
-extern "C" void fopAcIt_Executor__FPFPvPv_iPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Executor(int (*)(void*, void*), void*); // 2
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 
 extern "C" void fopAcIt_Executor__FPFPvPv_iPv(); // 1
 extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
@@ -32,8 +38,8 @@ extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
 // External References:
 // 
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
+void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); // 2
+void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*); // 2
 void cTgIt_MethodCall(create_tag_class*, method_filter*); // 2
 void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); // 2
 
@@ -51,7 +57,7 @@ extern "C" extern u8 g_fopAcTg_Queue[12 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopAcIt_Executor__FPFPvPv_iPv() {
+asm void fopAcIt_Executor(int (*)(void*, void*), void* field_1) {
 	nofralloc
 #include "asm/f_op/f_op_actor_iter/fopAcIt_Executor__FPFPvPv_iPv.s"
 }
@@ -62,7 +68,7 @@ extern "C" asm void fopAcIt_Executor__FPFPvPv_iPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopAcIt_Judge__FPFPvPv_PvPv() {
+asm void fopAcIt_Judge(void* (*)(void*, void*), void* field_1) {
 	nofralloc
 #include "asm/f_op/f_op_actor_iter/fopAcIt_Judge__FPFPvPv_PvPv.s"
 }

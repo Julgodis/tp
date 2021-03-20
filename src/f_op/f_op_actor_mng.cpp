@@ -25,6 +25,10 @@ struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
+struct JKRHeap {
+	/* 802CE72C */ void getFreeSize();
+};
+
 struct J3DModelData {
 };
 
@@ -85,11 +89,10 @@ struct daPy_py_c {
 struct JKRSolidHeap {
 };
 
-struct JKRHeap {
-	/* 802CE72C */ void getFreeSize();
+struct process_priority_class {
 };
 
-struct process_priority_class {
+struct layer_class {
 };
 
 struct daTagStream_c {
@@ -128,11 +131,11 @@ struct dPa_control_c {
 	/* 8004D7C4 */ void setSimpleFoot(u32, u32*, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, int, csXyz const*, cXyz const*, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
-struct cBgS_LinChk {
-};
-
 struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
+};
+
+struct cBgS_LinChk {
 };
 
 struct cBgS {
@@ -142,14 +145,14 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-struct dBgS_RoofChk {
-	/* 80078FF4 */ dBgS_RoofChk();
-	/* 80079090 */ ~dBgS_RoofChk();
-};
-
 struct dBgS_SplGrpChk {
 	/* 80078B90 */ void Set(cXyz&, f32);
 	/* 80078C78 */ ~dBgS_SplGrpChk();
+};
+
+struct dBgS_RoofChk {
+	/* 80078FF4 */ dBgS_RoofChk();
+	/* 80079090 */ ~dBgS_RoofChk();
 };
 
 struct dBgS {
@@ -196,7 +199,7 @@ struct J3DTexMtxInfo {
 // Forward References:
 // 
 
-extern "C" void fopAcM_FastCreate__FsPFPv_iPvPv(); // 1
+void fopAcM_FastCreate(s16, int (*)(void*), void*, void*); // 2
 void fopAcM_setStageLayer(void*); // 2
 static void fopAcM_setRoomLayer(void*, int); // 2
 void fopAcM_SearchByID(u32, fopAc_ac_c**); // 2
@@ -206,16 +209,16 @@ static void createAppend(u16, u32, cXyz const*, int, csXyz const*, cXyz const*, 
 static void fopAcM_Log(fopAc_ac_c const*, char const*); // 2
 void fopAcM_delete(fopAc_ac_c*); // 2
 void fopAcM_delete(u32); // 2
-extern "C" static void fopAcM_create__FsUsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i(); // 1
+static void fopAcM_create(s16, u16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*)); // 2
 void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
-extern "C" void fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv(); // 1
-extern "C" void fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv(); // 1
-extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i(); // 1
-extern "C" void fopAcM_createChildFromOffset__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i(); // 1
+void fopAcM_fastCreate(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*), void*); // 2
+void fopAcM_fastCreate(char const*, u32, cXyz const*, int, csXyz const*, cXyz const*, int (*)(void*), void*); // 2
+void fopAcM_createChild(s16, u32, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*)); // 2
+void fopAcM_createChildFromOffset(s16, u32, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*)); // 2
 void fopAcM_DeleteHeap(fopAc_ac_c*); // 2
-extern "C" static void fopAcM_callCallback__FP10fopAc_ac_cPFP10fopAc_ac_c_iP7JKRHeap(); // 1
-extern "C" static void fopAcM_entrySolidHeap___FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+static void fopAcM_callCallback(fopAc_ac_c*, int (*)(fopAc_ac_c*), JKRHeap*); // 2
+static void fopAcM_entrySolidHeap_(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
 void fopAcM_SetMin(fopAc_ac_c*, f32, f32, f32); // 2
 void fopAcM_SetMax(fopAc_ac_c*, f32, f32, f32); // 2
 static void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
@@ -265,7 +268,7 @@ static void fopAcM_createItemForDirectGet(cXyz const*, int, int, csXyz const*, c
 void fopAcM_createItemForSimpleDemo(cXyz const*, int, int, csXyz const*, cXyz const*, f32, f32); // 2
 void fopAcM_createItem(cXyz const*, int, int, int, csXyz const*, cXyz const*, int); // 2
 static void fopAcM_fastCreateItem2(cXyz const*, int, int, int, int, csXyz const*, cXyz const*); // 2
-extern "C" static void fopAcM_fastCreateItem__FPC4cXyziiPC5csXyzPC4cXyzPfPfiiPFPv_i(); // 1
+static void fopAcM_fastCreateItem(cXyz const*, int, int, csXyz const*, cXyz const*, f32*, f32*, int, int, int (*)(void*)); // 2
 void fopAcM_createBokkuri(u16, cXyz const*, int, int, int, cXyz const*, int, int); // 2
 void fopAcM_createWarpHole(cXyz const*, csXyz const*, int, u8, u8, u8); // 2
 static void enemySearchJugge(void*, void*); // 2
@@ -460,19 +463,19 @@ void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
 void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
 void mDoExt_setCurrentHeap(JKRHeap*); // 2
 void fopAc_IsActor(void*); // 2
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopScnM_SearchByID(u32); // 2
 void fpcBs_Is_JustOfType(int, int); // 2
 void fpcEx_IsExist(u32); // 2
 void fpcLy_CurrentLayer(); // 2
 void fpcM_Delete(void*); // 2
 void fpcM_IsCreating(u32); // 2
-extern "C" void fpcM_FastCreate__FsPFPv_iPvPv(); // 1
-extern "C" void fpcM_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
+void fpcM_FastCreate(s16, int (*)(void*), void*, void*); // 2
+void fpcM_JudgeInLayer(u32, void* (*)(void*, void*), void*); // 2
 void fpcPi_Change(process_priority_class*, u32, u16, u16); // 2
 void fpcSch_JudgeForPName(void*, void*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
 void dStage_searchName(char const*); // 2
 void dStage_getName2(s16, s8); // 2
 void dPath_GetPolyRoomPathVec(cBgS_PolyInfo const&, cXyz*, int*); // 2
@@ -653,7 +656,7 @@ extern "C" extern u8 data_80451164[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopAcM_FastCreate__FsPFPv_iPvPv() {
+asm void fopAcM_FastCreate(s16 field_0, int (*)(void*), void* field_2, void* field_3) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_FastCreate__FsPFPv_iPvPv.s"
 }
@@ -803,7 +806,7 @@ asm void fopAcM_delete(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void fopAcM_create__FsUsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i() {
+asm static void fopAcM_create(s16 field_0, u16 field_1, u32 field_2, cXyz const* field_3, int field_4, csXyz const* field_5, cXyz const* field_6, s8 field_7, int (*)(void*)) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_create__FsUsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i.s"
 }
@@ -825,7 +828,7 @@ asm void fopAcM_create(s16 field_0, u32 field_1, cXyz const* field_2, int field_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv() {
+asm void fopAcM_fastCreate(s16 field_0, u32 field_1, cXyz const* field_2, int field_3, csXyz const* field_4, cXyz const* field_5, s8 field_6, int (*)(void*), void* field_8) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv.s"
 }
@@ -836,7 +839,7 @@ extern "C" asm void fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv() {
+asm void fopAcM_fastCreate(char const* field_0, u32 field_1, cXyz const* field_2, int field_3, csXyz const* field_4, cXyz const* field_5, int (*)(void*), void* field_7) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv.s"
 }
@@ -847,7 +850,7 @@ extern "C" asm void fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i() {
+asm void fopAcM_createChild(s16 field_0, u32 field_1, u32 field_2, cXyz const* field_3, int field_4, csXyz const* field_5, cXyz const* field_6, s8 field_7, int (*)(void*)) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i.s"
 }
@@ -858,7 +861,7 @@ extern "C" asm void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i() 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopAcM_createChildFromOffset__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i() {
+asm void fopAcM_createChildFromOffset(s16 field_0, u32 field_1, u32 field_2, cXyz const* field_3, int field_4, csXyz const* field_5, cXyz const* field_6, s8 field_7, int (*)(void*)) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_createChildFromOffset__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i.s"
 }
@@ -880,7 +883,7 @@ asm void fopAcM_DeleteHeap(fopAc_ac_c* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void fopAcM_callCallback__FP10fopAc_ac_cPFP10fopAc_ac_c_iP7JKRHeap() {
+asm static void fopAcM_callCallback(fopAc_ac_c* field_0, int (*)(fopAc_ac_c*), JKRHeap* field_2) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_callCallback__FP10fopAc_ac_cPFP10fopAc_ac_c_iP7JKRHeap.s"
 }
@@ -895,7 +898,7 @@ static u8 struct_80450CC8[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void fopAcM_entrySolidHeap___FP10fopAc_ac_cPFP10fopAc_ac_c_iUl() {
+asm static void fopAcM_entrySolidHeap_(fopAc_ac_c* field_0, int (*)(fopAc_ac_c*), u32 field_2) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_entrySolidHeap___FP10fopAc_ac_cPFP10fopAc_ac_c_iUl.s"
 }
@@ -906,7 +909,7 @@ extern "C" asm static void fopAcM_entrySolidHeap___FP10fopAc_ac_cPFP10fopAc_ac_c
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl() {
+asm void fopAcM_entrySolidHeap(fopAc_ac_c* field_0, int (*)(fopAc_ac_c*), u32 field_2) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl.s"
 }
@@ -1543,7 +1546,7 @@ SECTION_SDATA2 static f32 lit_5812 = 1.0f / 5.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void fopAcM_fastCreateItem__FPC4cXyziiPC5csXyzPC4cXyzPfPfiiPFPv_i() {
+asm static void fopAcM_fastCreateItem(cXyz const* field_0, int field_1, int field_2, csXyz const* field_3, cXyz const* field_4, f32* field_5, f32* field_6, int field_7, int field_8, int (*)(void*)) {
 	nofralloc
 #include "asm/f_op/f_op_actor_mng/fopAcM_fastCreateItem__FPC4cXyziiPC5csXyzPC4cXyzPfPfiiPFPv_i.s"
 }

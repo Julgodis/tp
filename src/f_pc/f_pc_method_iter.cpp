@@ -6,10 +6,20 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct node_list_class {
+};
+
+struct node_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i(); // 1
+void fpcMtdIt_Method(node_list_class*, int (*)(void*)); // 2
 
 extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i(); // 1
 
@@ -17,7 +27,7 @@ extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i(); // 1
 // External References:
 // 
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
+void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); // 2
 
 extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
 
@@ -29,7 +39,7 @@ extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcMtdIt_Method__FP15node_list_classPFPv_i() {
+asm void fpcMtdIt_Method(node_list_class* field_0, int (*)(void*)) {
 	nofralloc
 #include "asm/f_pc/f_pc_method_iter/fpcMtdIt_Method__FP15node_list_classPFPv_i.s"
 }

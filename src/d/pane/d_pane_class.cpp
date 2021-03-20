@@ -9,6 +9,15 @@
 // Types:
 // 
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JKRExpHeap {
+};
+
 struct J2DRotateAxis {
 };
 
@@ -20,24 +29,15 @@ struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 };
 
-struct JKRExpHeap {
+struct JSURandomInputStream {
+	/* 80255328 */ ~JSURandomInputStream();
 };
 
 struct JKRArchive {
 };
 
-struct JSURandomInputStream {
-	/* 80255328 */ ~JSURandomInputStream();
-};
-
 struct J2DScreen {
 	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct CPaneMgr {

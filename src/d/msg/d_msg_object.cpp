@@ -19,6 +19,16 @@ struct dMsgObject_HIO_c {
 	/* 80238BDC */ ~dMsgObject_HIO_c();
 };
 
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
+};
+
+struct fopAc_ac_c {
+};
+
+struct J2DTextBox {
+};
+
 struct JKRHeap {
 	/* 802CE784 */ void getTotalFreeSize();
 };
@@ -33,17 +43,7 @@ struct mDoDvdThd_mountXArchive_c {
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
-struct fopAc_ac_c {
-};
-
 struct msg_class {
-};
-
-struct J2DTextBox {
-};
-
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
 };
 
 struct JUTFont {
@@ -601,7 +601,7 @@ void mDoLib_project(Vec*, Vec*); // 2
 void fopAc_IsActor(void*); // 2
 void fopMsgM_setStageLayer(void*); // 2
 void fopMsgM_messageSet(u32, u32); // 2
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+void fpcEx_Search(void* (*)(void*, void*), void*); // 2
 void dComIfGs_setSelectItemIndex(int, u8); // 2
 void dComIfGp_setHeapLockFlag(u8); // 2
 void dComIfGp_offHeapLockFlag(int); // 2

@@ -316,7 +316,7 @@ void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
 void dComIfGs_BossLife_public_Set(s8); // 2
 void dComIfGp_calcNowRegion(); // 2
 void dComIfGp_world_dark_set(u8); // 2
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 void execItemGet(u8); // 2
 void dKy_getdaytime_hour(); // 2
 void dKy_getdaytime_minute(); // 2

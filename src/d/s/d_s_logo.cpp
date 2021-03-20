@@ -125,10 +125,10 @@ struct JFWDisplay {
 	/* 80272C60 */ void waitBlanking(int);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -251,7 +251,7 @@ void mDoRst_resetCallBack(int, void*); // 2
 void cDyl_InitAsyncIsDone(); // 2
 void fopScnM_ChangeReq(scene_class*, s16, s16, u16); // 2
 void dComIfG_changeOpeningScene(scene_class*, s16); // 2
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 void* operator new(u32); // 2
 void* operator new[](u32); // 2
 void operator delete(void*); // 2

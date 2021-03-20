@@ -9,10 +9,10 @@
 // Types:
 // 
 
-struct _GXVtxDescList {
+struct J3DShapeBlock {
 };
 
-struct J3DShapeBlock {
+struct _GXVtxDescList {
 };
 
 struct J3DShapeFactory {

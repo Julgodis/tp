@@ -64,7 +64,7 @@ void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*); // 2
 void fpcLy_Layer(u32); // 2
 void fpcLyTg_Move(layer_management_tag_class*, u32, u16, u16); // 2
 void fpcLnTg_Move(line_tag*, int); // 2
-extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
+void fpcMtdTg_Init(process_method_tag_class*, int (*)(void*), void*); // 2
 void cTg_IsUse(create_tag_class*); // 2
 void cTg_GetFirst(node_list_class*); // 2
 void cTg_SingleCut(create_tag_class*); // 2

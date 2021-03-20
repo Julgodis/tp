@@ -19,6 +19,11 @@ struct JASResArcLoader {
 	/* 80290BD0 */ void getResSize(JKRArchive const*, u16);
 	/* 80290C04 */ void getResMaxSize(JKRArchive const*);
 	/* 80290C7C */ void loadResourceCallback(void*);
+	/* 80290D18 */ void loadResourceAsync(JKRArchive*, u16, u8*, u32, void (*)(u32, u32), u32);
+};
+
+struct JASTaskThread {
+	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
 };
 
 struct JASDvd {
@@ -29,7 +34,6 @@ struct JASDvd {
 // Forward References:
 // 
 
-extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl(); // 1
 
 extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs(); // 1
 extern "C" void getResMaxSize__15JASResArcLoaderFPC10JKRArchive(); // 1
@@ -40,7 +44,6 @@ extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_
 // External References:
 // 
 
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
 extern "C" void OSSendMessage(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
@@ -95,7 +98,7 @@ asm void JASResArcLoader::loadResourceCallback(void* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl() {
+asm void JASResArcLoader::loadResourceAsync(JKRArchive* field_0, u16 field_1, u8* field_2, u32 field_3, void (*)(u32, u32), u32 field_5) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASResArcLoader/loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl.s"
 }

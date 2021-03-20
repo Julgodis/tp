@@ -15,6 +15,12 @@ struct create_tag {
 struct fpcCtIt_jilprm_c {
 };
 
+struct node_list_class {
+};
+
+struct node_class {
+};
+
 struct create_tag_class {
 };
 
@@ -28,10 +34,10 @@ struct judge_filter {
 // Forward References:
 // 
 
-extern "C" void fpcCtIt_Method__FPFPvPv_iPv(); // 1
-extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv(); // 1
+void fpcCtIt_Method(int (*)(void*, void*), void*); // 2
+void fpcCtIt_Judge(void* (*)(void*, void*), void*); // 2
 static void fpcCtIt_filter_JudgeInLayer(create_tag*, fpcCtIt_jilprm_c*); // 2
-extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
+void fpcCtIt_JudgeInLayer(u32, void* (*)(void*, void*), void*); // 2
 
 extern "C" void fpcCtIt_Method__FPFPvPv_iPv(); // 1
 extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv(); // 1
@@ -42,8 +48,8 @@ extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
 // External References:
 // 
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
+void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); // 2
+void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*); // 2
 void cTgIt_MethodCall(create_tag_class*, method_filter*); // 2
 void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); // 2
 
@@ -61,7 +67,7 @@ extern "C" extern u8 g_fpcCtTg_Queue[12 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcCtIt_Method__FPFPvPv_iPv() {
+asm void fpcCtIt_Method(int (*)(void*, void*), void* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_create_iter/fpcCtIt_Method__FPFPvPv_iPv.s"
 }
@@ -72,7 +78,7 @@ extern "C" asm void fpcCtIt_Method__FPFPvPv_iPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcCtIt_Judge__FPFPvPv_PvPv() {
+asm void fpcCtIt_Judge(void* (*)(void*, void*), void* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_create_iter/fpcCtIt_Judge__FPFPvPv_PvPv.s"
 }
@@ -94,7 +100,7 @@ asm static void fpcCtIt_filter_JudgeInLayer(create_tag* field_0, fpcCtIt_jilprm_
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv() {
+asm void fpcCtIt_JudgeInLayer(u32 field_0, void* (*)(void*, void*), void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_create_iter/fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv.s"
 }

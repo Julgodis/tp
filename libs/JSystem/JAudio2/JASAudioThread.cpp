@@ -37,6 +37,7 @@ struct JASMemPool_MultiThreaded__template2 {
 };
 
 struct JASDriver {
+	/* 8029C388 */ void initAI(void (*)(void));
 	/* 8029C4E4 */ void startDMA();
 	/* 8029C504 */ void stopDMA();
 	/* 8029C568 */ void updateDac();
@@ -50,6 +51,7 @@ struct JASDSPChannel {
 };
 
 struct JASDsp {
+	/* 8029D958 */ void boot(void (*)(void*));
 	/* 8029D9C4 */ void finishWork(u16);
 	/* 8029DAC8 */ void initBuffer();
 };
@@ -81,8 +83,6 @@ extern "C" extern u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];
 // External References:
 // 
 
-extern "C" void initAI__9JASDriverFPFv_v(); // 1
-extern "C" void boot__6JASDspFPFPv_v(); // 1
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
 extern "C" void OSDisableInterrupts(); // 1

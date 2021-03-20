@@ -30,6 +30,10 @@ struct mDoCPd_c {
 	/* 80007A94 */ void read();
 };
 
+struct mDoDvdThd_callback_c {
+	/* 80015C74 */ void create(void* (*)(void*), void*);
+};
+
 struct mDoMemCd_Ctrl_c {
 	/* 80016894 */ void update();
 };
@@ -149,7 +153,6 @@ void mDoExt_getCommandHeap(); // 2
 void mDoExt_getArchiveHeap(); // 2
 void mDoExt_getJ2dHeap(); // 2
 void mDoExt_getHostIOHeap(); // 2
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
 void cDyl_InitAsync(); // 2
 void fapGm_Execute(); // 2
 void fapGm_Create(); // 2

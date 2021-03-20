@@ -9,16 +9,16 @@
 // Types:
 // 
 
-struct J3DPacket {
-	/* 80312758 */ void addChildPacket(J3DPacket*);
-};
-
 struct J3DShapePacket {
 };
 
 struct J3DMatPacket {
 	/* 80312A04 */ void addShapePacket(J3DShapePacket*);
 	/* 80312A74 */ void isSame(J3DMatPacket*) const;
+};
+
+struct J3DPacket {
+	/* 80312758 */ void addChildPacket(J3DPacket*);
 };
 
 struct J3DDrawBuffer {

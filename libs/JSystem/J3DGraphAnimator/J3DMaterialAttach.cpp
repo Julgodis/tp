@@ -12,13 +12,13 @@
 struct J3DAnmTextureSRTKey {
 };
 
+struct J3DAnmColor {
+};
+
 struct J3DAnmTevRegKey {
 };
 
 struct J3DAnmTexPattern {
-};
-
-struct J3DAnmColor {
 };
 
 struct J3DMaterialTable {
@@ -43,10 +43,10 @@ struct J3DTexMtxInfo {
 struct J3DMatColorAnm {
 };
 
-struct J3DTevKColorAnm {
+struct J3DTevColorAnm {
 };
 
-struct J3DTevColorAnm {
+struct J3DTevKColorAnm {
 };
 
 struct J3DTexMtxAnm {

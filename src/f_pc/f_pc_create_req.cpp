@@ -63,8 +63,8 @@ extern "C" void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class(
 // 
 
 void fpcBs_MakeOfId(); // 2
-extern "C" void fpcCtIt_Method__FPFPvPv_iPv(); // 1
-extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv(); // 1
+void fpcCtIt_Method(int (*)(void*, void*), void*); // 2
+void fpcCtIt_Judge(void* (*)(void*, void*), void*); // 2
 void fpcCtTg_ToCreateQ(create_tag*); // 2
 void fpcCtTg_CreateQTo(create_tag*); // 2
 void fpcCtTg_Init(create_tag*, void*); // 2
@@ -74,8 +74,8 @@ void fpcLy_CancelQTo(process_method_tag_class*); // 2
 void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*); // 2
 void fpcLy_CreatingMesg(layer_class*); // 2
 void fpcLy_CreatedMesg(layer_class*); // 2
-extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
-extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
+void fpcMtd_Method(int (*)(void*), void*); // 2
+void fpcMtdTg_Init(process_method_tag_class*, int (*)(void*), void*); // 2
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
 

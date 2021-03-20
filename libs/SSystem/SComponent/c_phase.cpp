@@ -17,12 +17,12 @@ struct request_of_phase_process_class {
 // 
 
 void cPhs_Reset(request_of_phase_process_class*); // 2
-extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i(); // 1
+void cPhs_Set(request_of_phase_process_class*, int (**)(void*)); // 2
 static void cPhs_UnCompleate(request_of_phase_process_class*); // 2
 static void cPhs_Compleate(request_of_phase_process_class*); // 2
 static void cPhs_Next(request_of_phase_process_class*); // 2
 void cPhs_Do(request_of_phase_process_class*, void*); // 2
-extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void cPhs_Handler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 
 extern "C" void cPhs_Reset__FP30request_of_phase_process_class(); // 1
 extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i(); // 1
@@ -57,7 +57,7 @@ asm void cPhs_Reset(request_of_phase_process_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void cPhs_Set__FP30request_of_phase_process_classPPFPv_i() {
+asm void cPhs_Set(request_of_phase_process_class* field_0, int (**)(void*)) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_phase/cPhs_Set__FP30request_of_phase_process_classPPFPv_i.s"
 }
@@ -112,7 +112,7 @@ asm void cPhs_Do(request_of_phase_process_class* field_0, void* field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv() {
+asm void cPhs_Handler(request_of_phase_process_class* field_0, int (**)(void*), void* field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_phase/cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv.s"
 }

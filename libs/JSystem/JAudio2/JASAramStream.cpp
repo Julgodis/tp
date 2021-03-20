@@ -9,6 +9,12 @@
 // Types:
 // 
 
+struct JASDsp {
+	struct TChannel {
+	};
+
+};
+
 struct JASOscillator {
 	struct Data {
 	};
@@ -16,21 +22,17 @@ struct JASOscillator {
 };
 
 struct JASChannel {
+	/* 8029A800 */ JASChannel(void (*)(u32, JASChannel*, JASDsp::TChannel*, void*), void*);
 	/* 8029AA60 */ void playForce();
 	/* 8029AAD0 */ void release(u16);
 	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
 	/* 8029AB98 */ void setMixConfig(u32, u16);
 };
 
-struct JASDsp {
-	struct TChannel {
-	};
-
-};
-
 struct JASAramStream {
 	/* 8029631C */ void initSystem(u32, u32);
 	/* 802963A8 */ JASAramStream();
+	/* 8029649C */ void init(u32, u32, void (*)(u32, JASAramStream*, void*), void*);
 	/* 8029655C */ void prepare(s32, int);
 	/* 80296618 */ void start();
 	/* 8029664C */ void stop(u16);
@@ -60,6 +62,11 @@ struct JASMemPool_MultiThreaded__template2 {
 	/* 802978DC */ ~JASMemPool_MultiThreaded__template2();
 };
 
+struct JASTaskThread {
+	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
+	/* 8028FC54 */ void sendCmdMsg(void (*)(void*), void*);
+};
+
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 };
@@ -72,6 +79,8 @@ struct JASGenericMemPool {
 
 struct JASDriver {
 	/* 8029C9E8 */ void getDacRate();
+	/* 8029E1C4 */ void rejectCallback(s32 (*)(void*), void*);
+	/* 8029E274 */ void registerSubFrameCallback(s32 (*)(void*), void*);
 };
 
 struct JKRHeap {
@@ -88,7 +97,6 @@ struct JKRAram {
 // Forward References:
 // 
 
-extern "C" void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv(); // 1
 
 extern "C" void initSystem__13JASAramStreamFUlUl(); // 1
 extern "C" void __ct__13JASAramStreamFv(); // 1
@@ -122,11 +130,6 @@ extern "C" extern u8 struct_80451260[8];
 // External References:
 // 
 
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPv(); // 1
-extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
-extern "C" void rejectCallback__9JASDriverFPFPv_lPv(); // 1
-extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv(); // 1
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
 extern "C" void OSDisableInterrupts(); // 1
@@ -245,7 +248,7 @@ asm JASAramStream::JASAramStream() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv() {
+asm void JASAramStream::init(u32 field_0, u32 field_1, void (*)(u32, JASAramStream*, void*), void* field_3) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAramStream/init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv.s"
 }

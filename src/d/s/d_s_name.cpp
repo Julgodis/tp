@@ -167,7 +167,7 @@ void fopScnM_ChangeReq(scene_class*, s16, s16, u16); // 2
 void dComIfG_resetToOpening(scene_class*); // 2
 void dComIfGp_setNextStage(char const*, s16, s8, s8); // 2
 void dComIfGs_gameStart(); // 2
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 void dKy_clear_game_init(); // 2
 void dKy_setLight_init(); // 2
 void* operator new(u32); // 2

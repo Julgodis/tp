@@ -12,13 +12,13 @@
 struct fast_create_request {
 };
 
+struct layer_class {
+};
+
 struct base_process_class {
 };
 
 struct create_request {
-};
-
-struct layer_class {
 };
 
 struct create_request_method_class {
@@ -30,7 +30,7 @@ struct create_request_method_class {
 
 static void fpcFCtRq_Do(fast_create_request*); // 2
 static bool fpcFCtRq_Delete(fast_create_request*); // 2
-extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
 
 extern "C" static void fpcFCtRq_Do__FP19fast_create_request(); // 1
 extern "C" static bool fpcFCtRq_Delete__FP19fast_create_request(); // 1
@@ -95,7 +95,7 @@ SECTION_DATA static void* data_803A3AE0[3 + 1 /* padding */] = {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv() {
+asm void fpcFCtRq_Request(layer_class* field_0, s16 field_1, int (*)(void*, void*), void* field_3, void* field_4) {
 	nofralloc
 #include "asm/f_pc/f_pc_fstcreate_req/fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv.s"
 }

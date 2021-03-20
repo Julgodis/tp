@@ -17,6 +17,9 @@ struct JASDriver {
 	/* 8029E178 */ void setOutputMode(u32);
 	/* 8029E180 */ void getOutputMode();
 	/* 8029E188 */ void waitSubFrame();
+	/* 8029E1C4 */ void rejectCallback(s32 (*)(void*), void*);
+	/* 8029E240 */ void registerDspSyncCallback(s32 (*)(void*), void*);
+	/* 8029E274 */ void registerSubFrameCallback(s32 (*)(void*), void*);
 	/* 8029E2A8 */ void subframeCallback();
 	/* 8029E2D0 */ void DSPSyncCallback();
 	/* 8029E2F8 */ void updateDacCallback();
@@ -27,6 +30,8 @@ struct JASCallbackMgr {
 		/* 8029E3A0 */ TCallback();
 	};
 
+	/* 8028FFA8 */ void regist(s32 (*)(void*), void*);
+	/* 80290030 */ void reject(s32 (*)(void*), void*);
 	/* 802900C4 */ void callback();
 };
 
@@ -39,9 +44,6 @@ struct JASDsp {
 // Forward References:
 // 
 
-extern "C" void rejectCallback__9JASDriverFPFPv_lPv(); // 1
-extern "C" void registerDspSyncCallback__9JASDriverFPFPv_lPv(); // 1
-extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv(); // 1
 extern "C" void __sinit_JASDriverIF_cpp(); // 1
 
 extern "C" void setDSPLevel__9JASDriverFf(); // 1
@@ -63,8 +65,6 @@ extern "C" void __ct__Q214JASCallbackMgr9TCallbackFv(); // 1
 // External References:
 // 
 
-extern "C" void regist__14JASCallbackMgrFPFPv_lPv(); // 1
-extern "C" void reject__14JASCallbackMgrFPFPv_lPv(); // 1
 extern "C" void OSYieldThread(); // 1
 extern "C" void __construct_array(); // 1
 extern "C" void _savegpr_28(); // 1
@@ -171,7 +171,7 @@ static u8 sDspSyncCallback__9JASDriver[256];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void rejectCallback__9JASDriverFPFPv_lPv() {
+asm void JASDriver::rejectCallback(s32 (*)(void*), void* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDriverIF/rejectCallback__9JASDriverFPFPv_lPv.s"
 }
@@ -182,7 +182,7 @@ extern "C" asm void rejectCallback__9JASDriverFPFPv_lPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void registerDspSyncCallback__9JASDriverFPFPv_lPv() {
+asm void JASDriver::registerDspSyncCallback(s32 (*)(void*), void* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDriverIF/registerDspSyncCallback__9JASDriverFPFPv_lPv.s"
 }
@@ -197,7 +197,7 @@ static u8 sSubFrameCallback__9JASDriver[256];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void registerSubFrameCallback__9JASDriverFPFPv_lPv() {
+asm void JASDriver::registerSubFrameCallback(s32 (*)(void*), void* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDriverIF/registerSubFrameCallback__9JASDriverFPFPv_lPv.s"
 }

@@ -36,6 +36,9 @@ struct JKRExpHeap {
 struct process_priority_class {
 };
 
+struct layer_class {
+};
+
 struct JMSMesgEntry_c {
 };
 
@@ -69,14 +72,14 @@ void fopMsgM_GetAppend(void*); // 2
 void fopMsgM_Delete(void*); // 2
 static void createAppend(fopAc_ac_c*, cXyz*, u32*, u32*, u32); // 2
 static void createTimerAppend(int, u32, u8, u8, f32, f32, f32, f32, u32); // 2
-extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i(); // 1
-extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i(); // 1
+void fopMsgM_create(s16, fopAc_ac_c*, cXyz*, u32*, u32*, int (*)(void*)); // 2
+void fop_Timer_create(s16, u8, u32, u8, u8, f32, f32, f32, f32, int (*)(void*)); // 2
 void fopMsgM_messageSet(u32, fopAc_ac_c*, u32); // 2
 void fopMsgM_messageSet(u32, u32); // 2
 void fopMsgM_messageSetDemo(u32); // 2
 void fopMsgM_messageGet(char*, u32); // 2
 void fopMsgM_setMessageID(u32); // 2
-extern "C" void fopMsgM_Create__FsPFPv_iPv(); // 1
+void fopMsgM_Create(s16, int (*)(void*), void*); // 2
 void fopMsgM_valueIncrease(int, int, u8); // 2
 void fopMsgM_createExpHeap(u32, JKRHeap*); // 2
 void fopMsgM_destroyExpHeap(JKRExpHeap*); // 2
@@ -114,7 +117,7 @@ void fpcEx_SearchByID(u32); // 2
 void fpcLy_CurrentLayer(); // 2
 void fpcM_Delete(void*); // 2
 void fpcPi_Change(process_priority_class*, u32, u16, u16); // 2
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
 extern "C" void _savegpr_26(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_28(); // 1
@@ -237,7 +240,7 @@ asm static void createTimerAppend(int field_0, u32 field_1, u8 field_2, u8 field
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i() {
+asm void fopMsgM_create(s16 field_0, fopAc_ac_c* field_1, cXyz* field_2, u32* field_3, u32* field_4, int (*)(void*)) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i.s"
 }
@@ -248,7 +251,7 @@ extern "C" asm void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fop_Timer_create__FsUcUlUcUcffffPFPv_i() {
+asm void fop_Timer_create(s16 field_0, u8 field_1, u32 field_2, u8 field_3, u8 field_4, f32 field_5, f32 field_6, f32 field_7, f32 field_8, int (*)(void*)) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/fop_Timer_create__FsUcUlUcUcffffPFPv_i.s"
 }
@@ -322,7 +325,7 @@ asm void fopMsgM_setMessageID(u32 field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopMsgM_Create__FsPFPv_iPv() {
+asm void fopMsgM_Create(s16 field_0, int (*)(void*), void* field_2) {
 	nofralloc
 #include "asm/f_op/f_op_msg_mng/fopMsgM_Create__FsPFPv_iPv.s"
 }

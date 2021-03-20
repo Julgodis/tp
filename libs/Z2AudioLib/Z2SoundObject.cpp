@@ -9,13 +9,13 @@
 // Types:
 // 
 
+struct Vec {
+};
+
 struct Z2SoundHandlePool {
 };
 
 struct JAISoundID {
-};
-
-struct Vec {
 };
 
 struct Z2SoundObjBase {
@@ -52,6 +52,9 @@ struct Z2SoundObjArrow {
 	/* 802BEB74 */ void init(Vec*, u8);
 };
 
+struct JAUSoundAnimationSound {
+};
+
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
@@ -67,9 +70,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAUSoundAnimationSound {
 };
 
 struct Z2SoundObjAnime {

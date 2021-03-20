@@ -9,10 +9,14 @@
 // Types:
 // 
 
+struct JASMixMode {
+};
+
 struct JASOutputRate {
 };
 
 struct JASDriver {
+	/* 8029C388 */ void initAI(void (*)(void));
 	/* 8029C4E4 */ void startDMA();
 	/* 8029C504 */ void stopDMA();
 	/* 8029C524 */ void setOutputRate(JASOutputRate);
@@ -20,10 +24,15 @@ struct JASDriver {
 	/* 8029C6C4 */ void updateDSP();
 	/* 8029C7E0 */ void readDspBuffer(s16*, u32);
 	/* 8029C900 */ void finishDSPFrame();
+	/* 8029C9DC */ void registerMixCallback(s16* (*)(s32), JASMixMode);
 	/* 8029C9E8 */ void getDacRate();
 	/* 8029C9F0 */ void getSubFrames();
 	/* 8029C9F8 */ void getDacSize();
 	/* 8029CA04 */ void getFrameSamples();
+	/* 8029CA10 */ void mixMonoTrack(s16*, u32, s16* (*)(s32));
+	/* 8029CAC0 */ void mixMonoTrackWide(s16*, u32, s16* (*)(s32));
+	/* 8029CB70 */ void mixExtraTrack(s16*, u32, s16* (*)(s32));
+	/* 8029CC50 */ void mixInterleaveTrack(s16*, u32, s16* (*)(s32));
 	/* 8029CCD4 */ void getSubFrameCounter();
 	/* 8029E2A8 */ void subframeCallback();
 	/* 8029E2D0 */ void DSPSyncCallback();
@@ -74,12 +83,6 @@ struct JKRHeap {
 // Forward References:
 // 
 
-extern "C" void initAI__9JASDriverFPFv_v(); // 1
-extern "C" void registerMixCallback__9JASDriverFPFl_Ps10JASMixMode(); // 1
-extern "C" static void mixMonoTrack__9JASDriverFPsUlPFl_Ps(); // 1
-extern "C" static void mixMonoTrackWide__9JASDriverFPsUlPFl_Ps(); // 1
-extern "C" static void mixExtraTrack__9JASDriverFPsUlPFl_Ps(); // 1
-extern "C" static void mixInterleaveTrack__9JASDriverFPsUlPFl_Ps(); // 1
 
 extern "C" void initAI__9JASDriverFPFv_v(); // 1
 extern "C" void startDMA__9JASDriverFv(); // 1
@@ -94,10 +97,10 @@ extern "C" void getDacRate__9JASDriverFv(); // 1
 extern "C" void getSubFrames__9JASDriverFv(); // 1
 extern "C" void getDacSize__9JASDriverFv(); // 1
 extern "C" void getFrameSamples__9JASDriverFv(); // 1
-extern "C" static void mixMonoTrack__9JASDriverFPsUlPFl_Ps(); // 1
-extern "C" static void mixMonoTrackWide__9JASDriverFPsUlPFl_Ps(); // 1
-extern "C" static void mixExtraTrack__9JASDriverFPsUlPFl_Ps(); // 1
-extern "C" static void mixInterleaveTrack__9JASDriverFPsUlPFl_Ps(); // 1
+extern "C" void mixMonoTrack__9JASDriverFPsUlPFl_Ps(); // 1
+extern "C" void mixMonoTrackWide__9JASDriverFPsUlPFl_Ps(); // 1
+extern "C" void mixExtraTrack__9JASDriverFPsUlPFl_Ps(); // 1
+extern "C" void mixInterleaveTrack__9JASDriverFPsUlPFl_Ps(); // 1
 extern "C" void getSubFrameCounter__9JASDriverFv(); // 1
 extern "C" extern char const* const JASAiCtrl__stringBase0;
 
@@ -209,7 +212,7 @@ static u8 sOutputRate__9JASDriver[4];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void initAI__9JASDriverFPFv_v() {
+asm void JASDriver::initAI(void (*)(void)) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAiCtrl/initAI__9JASDriverFPFv_v.s"
 }
@@ -374,7 +377,7 @@ asm void JASDriver::finishDSPFrame() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void registerMixCallback__9JASDriverFPFl_Ps10JASMixMode() {
+asm void JASDriver::registerMixCallback(s16* (*)(s32), JASMixMode field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAiCtrl/registerMixCallback__9JASDriverFPFl_Ps10JASMixMode.s"
 }
@@ -429,7 +432,7 @@ asm void JASDriver::getFrameSamples() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void mixMonoTrack__9JASDriverFPsUlPFl_Ps() {
+asm void JASDriver::mixMonoTrack(s16* field_0, u32 field_1, s16* (*)(s32)) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAiCtrl/mixMonoTrack__9JASDriverFPsUlPFl_Ps.s"
 }
@@ -440,7 +443,7 @@ extern "C" asm static void mixMonoTrack__9JASDriverFPsUlPFl_Ps() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void mixMonoTrackWide__9JASDriverFPsUlPFl_Ps() {
+asm void JASDriver::mixMonoTrackWide(s16* field_0, u32 field_1, s16* (*)(s32)) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAiCtrl/mixMonoTrackWide__9JASDriverFPsUlPFl_Ps.s"
 }
@@ -451,7 +454,7 @@ extern "C" asm static void mixMonoTrackWide__9JASDriverFPsUlPFl_Ps() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void mixExtraTrack__9JASDriverFPsUlPFl_Ps() {
+asm void JASDriver::mixExtraTrack(s16* field_0, u32 field_1, s16* (*)(s32)) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAiCtrl/mixExtraTrack__9JASDriverFPsUlPFl_Ps.s"
 }
@@ -462,7 +465,7 @@ extern "C" asm static void mixExtraTrack__9JASDriverFPsUlPFl_Ps() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void mixInterleaveTrack__9JASDriverFPsUlPFl_Ps() {
+asm void JASDriver::mixInterleaveTrack(s16* field_0, u32 field_1, s16* (*)(s32)) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASAiCtrl/mixInterleaveTrack__9JASDriverFPsUlPFl_Ps.s"
 }

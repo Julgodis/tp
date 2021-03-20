@@ -9,10 +9,10 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
+struct Vec {
 };
 
-struct Vec {
+struct fopAc_ac_c {
 };
 
 struct dDemo_actor_c {
@@ -238,6 +238,9 @@ struct mDoGph_gInf_c {
 	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
 };
 
+struct csXyz {
+};
+
 struct daMP_c {
 	/* 80031AD0 */ void daMP_c_THPPlayerPlay();
 };
@@ -254,9 +257,6 @@ struct dPa_levelEcallBack {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -494,9 +494,9 @@ extern "C" extern u8 m_status__7dDemo_c[4];
 // 
 
 extern "C" void OSReport_Error(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopAcM_setStageLayer(void*); // 2
-extern "C" void fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv(); // 1
+void fopAcM_fastCreate(char const*, u32, cXyz const*, int, csXyz const*, cXyz const*, int (*)(void*), void*); // 2
 void fopAcM_searchFromName(char const*, u32, u32); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 void dComIfGs_staffroll_next_go_check(); // 2

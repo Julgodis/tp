@@ -58,10 +58,10 @@ struct dMenu_DmapBg_c {
 	/* 801BB468 */ void drawCursor();
 };
 
-struct J2DOrthoGraph {
+struct CSTControl {
 };
 
-struct CSTControl {
+struct J2DOrthoGraph {
 };
 
 struct JGeometry {
@@ -311,10 +311,10 @@ struct CPaneMgrAlphaMorf {
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

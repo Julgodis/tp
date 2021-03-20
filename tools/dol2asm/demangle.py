@@ -122,7 +122,7 @@ class FuncParam:
     ret_type: Optional[Param] = None
     inner_type: Optional[Param] = None
     params: List[Param] = field(default_factory=list)
-    class_name: str = None
+    class_name: QualifiedName = None
 
     def to_str(self) -> str:
         ret = ''
@@ -264,12 +264,46 @@ class ParseCtx:
                 return self.demangle_array(cur_type)
             elif cur_char == 'M':
                 self.index += 1
-                class_name = self.demangle_class()
+                class_name = QualifiedName([self.demangle_class()])
 
                 if self.peek_next_char() != 'F':
                     raise ParseError(f"expected character 'F' after class name")
                 self.index += 1
-                
+
+                # This name 
+                #   execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl
+                # should be demangled to something like this:
+                #   void execCommand(JASTrack* , s32 (JASSeqParser::*)(void const*, void*, JASTrack*, u32*), u32, u32*);
+                #
+                # But metrowerks will mangle the name of the code about to:
+                #    execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvPCvPvP8JASTrackPUl_lUlPUl
+                #
+                # Notice, the extra pair of PCvPv (void const*, void*) in the middle. These seems to be added by the compiler
+                # for some unknown reason???
+                # The fix is to remove the extra pair of PCvPv. Thus, this code would look like this
+                #   void execCommand(JASTrack* , s32 (JASSeqParser::*)(JASTrack*, u32*), u32, u32*);
+                # and it compiles to the correct mangled name:
+                #   execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl
+
+                # TODO: not very nice
+                if self.peek_next_char() != 'P':
+                    raise ParseError(f"expected character 'P' after class name")
+                self.index += 1
+                if self.peek_next_char() != 'C':
+                    raise ParseError(f"expected character 'C' after class name")
+                self.index += 1
+                if self.peek_next_char() != 'v':
+                    raise ParseError(f"expected character 'v' after class name")
+                self.index += 1
+                if self.peek_next_char() != 'P':
+                    raise ParseError(f"expected character 'P' after class name")
+                self.index += 1
+                if self.peek_next_char() != 'v':
+                    raise ParseError(f"expected character 'v' after class name")
+                self.index += 1
+
+                # the member function does not encode the pointer
+                cur_type.pointer_lvl += 1
 
                 func = self.demangle_function(cur_type)
                 func.class_name = class_name

@@ -9,21 +9,6 @@
 // Types:
 // 
 
-struct JASDSPChannel {
-	/* 8029D2F4 */ JASDSPChannel();
-	/* 8029D320 */ void free();
-	/* 8029D330 */ void start();
-	/* 8029D340 */ void drop();
-	/* 8029D3C8 */ void initAll();
-	/* 8029D534 */ void setPriority(u8);
-	/* 8029D540 */ void getLowestChannel(int);
-	/* 8029D5D0 */ void getLowestActiveChannel();
-	/* 8029D65C */ void updateProc();
-	/* 8029D89C */ void updateAll();
-	/* 8029D910 */ void killActiveChannel();
-	/* 8029D948 */ void getHandle(u32);
-};
-
 struct JASDsp {
 	struct TChannel {
 		/* 8029DCA4 */ void init();
@@ -39,6 +24,23 @@ struct JASDsp {
 	/* 8029DA38 */ void getDSPHandle(int);
 };
 
+struct JASDSPChannel {
+	/* 8029D2F4 */ JASDSPChannel();
+	/* 8029D320 */ void free();
+	/* 8029D330 */ void start();
+	/* 8029D340 */ void drop();
+	/* 8029D3C8 */ void initAll();
+	/* 8029D44C */ void alloc(u8, s32 (*)(u32, JASDsp::TChannel*, void*), void*);
+	/* 8029D4BC */ void allocForce(u8, s32 (*)(u32, JASDsp::TChannel*, void*), void*);
+	/* 8029D534 */ void setPriority(u8);
+	/* 8029D540 */ void getLowestChannel(int);
+	/* 8029D5D0 */ void getLowestActiveChannel();
+	/* 8029D65C */ void updateProc();
+	/* 8029D89C */ void updateAll();
+	/* 8029D910 */ void killActiveChannel();
+	/* 8029D948 */ void getHandle(u32);
+};
+
 struct JKRHeap {
 };
 
@@ -46,8 +48,6 @@ struct JKRHeap {
 // Forward References:
 // 
 
-extern "C" void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
-extern "C" void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv(); // 1
 
 extern "C" void __ct__13JASDSPChannelFv(); // 1
 extern "C" void free__13JASDSPChannelFv(); // 1
@@ -155,7 +155,7 @@ asm void JASDSPChannel::initAll() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv() {
+asm void JASDSPChannel::alloc(u8 field_0, s32 (*)(u32, JASDsp::TChannel*, void*), void* field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv.s"
 }
@@ -166,7 +166,7 @@ extern "C" asm void alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv() {
+asm void JASDSPChannel::allocForce(u8 field_0, s32 (*)(u32, JASDsp::TChannel*, void*), void* field_2) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASDSPChannel/allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv.s"
 }

@@ -18,12 +18,18 @@ struct method_filter {
 struct layer_class {
 };
 
+struct node_lists_tree_class {
+};
+
+struct node_class {
+};
+
 // 
 // Forward References:
 // 
 
 static void fpcLnIt_MethodCall(create_tag_class*, method_filter*); // 2
-extern "C" void fpcLnIt_Queue__FPFPvPv_i(); // 1
+void fpcLnIt_Queue(int (*)(void*, void*)); // 2
 
 extern "C" static void fpcLnIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
 extern "C" void fpcLnIt_Queue__FPFPvPv_i(); // 1
@@ -34,7 +40,7 @@ extern "C" void fpcLnIt_Queue__FPFPvPv_i(); // 1
 
 void fpcLy_SetCurrentLayer(layer_class*); // 2
 void fpcLy_CurrentLayer(); // 2
-extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv(); // 1
+void cTrIt_Method(node_lists_tree_class*, int (*)(node_class*, void*), void*); // 2
 void cTgIt_MethodCall(create_tag_class*, method_filter*); // 2
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
@@ -66,7 +72,7 @@ asm static void fpcLnIt_MethodCall(create_tag_class* field_0, method_filter* fie
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcLnIt_Queue__FPFPvPv_i() {
+asm void fpcLnIt_Queue(int (*)(void*, void*)) {
 	nofralloc
 #include "asm/f_pc/f_pc_line_iter/fpcLnIt_Queue__FPFPvPv_i.s"
 }

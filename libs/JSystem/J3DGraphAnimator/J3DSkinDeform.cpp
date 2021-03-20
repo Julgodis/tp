@@ -24,10 +24,10 @@ struct J3DVertexBuffer {
 struct J3DModel {
 };
 
-struct J3DMtxBuffer {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct J3DMtxBuffer {
 };
 
 struct J3DSkinDeform {

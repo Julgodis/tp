@@ -22,6 +22,9 @@ class ArrayType(Type):
         else:
             return f"{self.base.type()} ({self.inner.decl(label)}){size}"
 
+    def dependencies(self) -> Set["Type"]:
+        return self.base.dependencies() | self.inner.dependencies()
+
     @staticmethod
     def create(base: Type, count: int) -> "ArrayType":
         return ArrayType(base, EmptyType(), [count])
@@ -41,6 +44,9 @@ class PaddingArrayType(Type):
         return hash((self.base, self.size, self.padding))
 
     def type(self) -> str:
+        assert False
+
+    def dependencies(self) -> Set["Type"]:
         assert False
 
     def decl(self, label: str) -> str:

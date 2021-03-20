@@ -1,6 +1,7 @@
 
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Set
+
 from .base import *
 
 @dataclass(eq=True)
@@ -20,6 +21,11 @@ class ClassName:
             return f"{self.name}<{args}>"
         return self.name
 
+    def dependencies(self) -> Set["Type"]:
+        deps = set()
+        for template in self.templates:
+            deps.update(template.dependencies())
+        return deps
 
 @dataclass(frozen=True,eq=True)
 class NamedType(Type):
@@ -33,6 +39,13 @@ class NamedType(Type):
 
     def to_str(self, specialize_templates: bool = False, without_template: bool = False) -> str:
         return self.type(specialize_templates=specialize_templates,without_template = without_template)
+
+    def dependencies(self) -> Set["Type"]:
+        deps = set()
+        deps.add(self)
+        for name in self.names:
+            deps.update(name.dependencies())
+        return deps
 
     @property
     def has_class_template(self) -> bool:

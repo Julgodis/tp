@@ -52,10 +52,10 @@ struct dMeter2Draw_c {
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
 };
 
-struct J2DPane {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct J2DPane {
 };
 
 struct J2DGrafContext {

@@ -25,7 +25,7 @@ struct node_list_class {
 void fpcDtTg_IsEmpty(); // 2
 void fpcDtTg_ToDeleteQ(delete_tag_class*); // 2
 static void fpcDtTg_DeleteQTo(delete_tag_class*); // 2
-extern "C" void fpcDtTg_Do__FP16delete_tag_classPFPv_i(); // 1
+void fpcDtTg_Do(delete_tag_class*, int (*)(void*)); // 2
 void fpcDtTg_Init(delete_tag_class*, void*); // 2
 
 extern "C" void fpcDtTg_IsEmpty__Fv(); // 1
@@ -96,7 +96,7 @@ asm static void fpcDtTg_DeleteQTo(delete_tag_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcDtTg_Do__FP16delete_tag_classPFPv_i() {
+asm void fpcDtTg_Do(delete_tag_class* field_0, int (*)(void*)) {
 	nofralloc
 #include "asm/f_pc/f_pc_delete_tag/fpcDtTg_Do__FP16delete_tag_classPFPv_i.s"
 }

@@ -12,6 +12,9 @@
 struct base_process_class {
 };
 
+struct layer_class {
+};
+
 struct layer_management_tag_class {
 };
 
@@ -25,14 +28,14 @@ struct create_tag_class {
 // Forward References:
 // 
 
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+void fpcEx_Search(void* (*)(void*, void*), void*); // 2
 void fpcEx_SearchByID(u32); // 2
 void fpcEx_IsExist(u32); // 2
 void fpcEx_Execute(base_process_class*); // 2
 static void fpcEx_ToLineQ(base_process_class*); // 2
 void fpcEx_ExecuteQTo(base_process_class*); // 2
 void fpcEx_ToExecuteQ(base_process_class*); // 2
-extern "C" void fpcEx_Handler__FPFPvPv_i(); // 1
+void fpcEx_Handler(int (*)(void*, void*)); // 2
 
 extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
 extern "C" void fpcEx_SearchByID__FUi(); // 1
@@ -49,13 +52,13 @@ extern "C" void fpcEx_Handler__FPFPvPv_i(); // 1
 
 void fpcBs_Is_JustOfType(int, int); // 2
 void fpcBs_Execute(base_process_class*); // 2
-extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
-extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv(); // 1
+void fpcLyIt_OnlyHere(layer_class*, int (*)(void*, void*), void*); // 2
+void fpcLyIt_AllJudge(void* (*)(void*, void*), void*); // 2
 void fpcLyTg_ToQueue(layer_management_tag_class*, u32, u16, u16); // 2
 void fpcLyTg_QueueTo(layer_management_tag_class*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 void fpcLnTg_ToQueue(line_tag*, int); // 2
-extern "C" void fpcLnIt_Queue__FPFPvPv_i(); // 1
+void fpcLnIt_Queue(int (*)(void*, void*)); // 2
 void fpcPause_IsEnable(void*, u8); // 2
 void cTg_IsUse(create_tag_class*); // 2
 
@@ -80,7 +83,7 @@ extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcEx_Search__FPFPvPv_PvPv() {
+asm void fpcEx_Search(void* (*)(void*, void*), void* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_Search__FPFPvPv_PvPv.s"
 }
@@ -157,7 +160,7 @@ asm void fpcEx_ToExecuteQ(base_process_class* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcEx_Handler__FPFPvPv_i() {
+asm void fpcEx_Handler(int (*)(void*, void*)) {
 	nofralloc
 #include "asm/f_pc/f_pc_executor/fpcEx_Handler__FPFPvPv_i.s"
 }

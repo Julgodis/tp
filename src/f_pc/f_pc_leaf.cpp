@@ -51,7 +51,7 @@ extern "C" extern u8 struct_80450D38[8];
 void fpcBs_MakeOfType(int*); // 2
 void fpcDwPi_Get(draw_priority_class const*); // 2
 void fpcDwPi_Init(draw_priority_class*, s16); // 2
-extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
+void fpcMtd_Method(int (*)(void*), void*); // 2
 void fpcMtd_Execute(process_method_class*, void*); // 2
 void fpcMtd_IsDelete(process_method_class*, void*); // 2
 void fpcMtd_Delete(process_method_class*, void*); // 2

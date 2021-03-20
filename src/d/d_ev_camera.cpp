@@ -305,7 +305,7 @@ extern "C" extern u8 d_d_ev_camera__lit_4203[12];
 // 
 
 void mDoLib_project(Vec*, Vec*); // 2
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopAcM_searchFromName4Event(char const*, s16); // 2
 void fopCamM_GetParam(camera_class*); // 2
 void fpcSch_JudgeForPName(void*, void*); // 2

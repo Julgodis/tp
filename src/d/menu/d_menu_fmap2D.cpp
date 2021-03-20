@@ -85,10 +85,10 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
-struct J2DAnmTextureSRTKey {
+struct JKRExpHeap {
 };
 
-struct JKRExpHeap {
+struct J2DAnmTextureSRTKey {
 };
 
 struct JGeometry {
@@ -218,10 +218,10 @@ struct CPaneMgrAlphaMorf {
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

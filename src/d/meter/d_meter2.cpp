@@ -241,10 +241,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -325,7 +325,7 @@ extern "C" extern void* g_profile_METER2[10];
 void mDoExt_setCurrentHeap(JKRHeap*); // 2
 void fopMsgM_setStageLayer(void*); // 2
 void fopMsgM_setMessageID(u32); // 2
-extern "C" void fopMsgM_Create__FsPFPv_iPv(); // 1
+void fopMsgM_Create(s16, int (*)(void*), void*); // 2
 void fopMsgM_createExpHeap(u32, JKRHeap*); // 2
 void fopMsgM_destroyExpHeap(JKRExpHeap*); // 2
 void dComIfGs_setSelectItemIndex(int, u8); // 2

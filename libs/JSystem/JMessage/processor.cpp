@@ -22,6 +22,7 @@ struct JMessage {
 		/* 802A7C30 */ void stack_popCurrent();
 		/* 802A7C54 */ void getResource_groupID(u16) const;
 		/* 802A7CD4 */ void toMessageCode_messageID(u32, u32, bool*) const;
+		/* 802A7E38 */ void on_select_begin(char const* (*)(JMessage::TProcessor*), void const*, char const*, u32);
 		/* 802A7EDC */ void on_select_end();
 		/* 802A7F34 */ void on_select_separate();
 		/* 802A7FC0 */ void do_reset();
@@ -54,8 +55,10 @@ struct JMessage {
 		/* 802A83B8 */ ~TSequenceProcessor();
 		/* 802A8418 */ void process(char const*);
 		/* 802A85A4 */ void on_isReady();
+		/* 802A85D0 */ void on_jump_register(void const* (*)(JMessage::TSequenceProcessor const*), u32);
 		/* 802A85E4 */ void on_jump_isReady();
 		/* 802A8610 */ void on_jump(void const*, char const*);
+		/* 802A8690 */ void on_branch_register(void const* (*)(JMessage::TSequenceProcessor const*, u32), void const*, u32);
 		/* 802A86A0 */ void on_branch_query(u32);
 		/* 802A86D4 */ void on_branch_queryResult();
 		/* 802A8700 */ void on_branch(void const*, char const*);
@@ -104,9 +107,6 @@ struct JMessage {
 // Forward References:
 // 
 
-extern "C" static void on_select_begin__Q28JMessage10TProcessorFPFPQ28JMessage10TProcessor_PCcPCvPCcUl(); // 1
-extern "C" static void on_jump_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessor_PCvUl(); // 1
-extern "C" static void on_branch_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessorUl_PCvPCvUl(); // 1
 
 extern "C" void __dt__Q28JMessage10TReferenceFv(); // 1
 extern "C" bool do_word__Q28JMessage10TReferenceCFUl(); // 1
@@ -116,7 +116,7 @@ extern "C" void stack_pushCurrent__Q28JMessage10TProcessorFPCc(); // 1
 extern "C" void stack_popCurrent__Q28JMessage10TProcessorFv(); // 1
 extern "C" void getResource_groupID__Q28JMessage10TProcessorCFUs(); // 1
 extern "C" void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb(); // 1
-extern "C" static void on_select_begin__Q28JMessage10TProcessorFPFPQ28JMessage10TProcessor_PCcPCvPCcUl(); // 1
+extern "C" void on_select_begin__Q28JMessage10TProcessorFPFPQ28JMessage10TProcessor_PCcPCvPCcUl(); // 1
 extern "C" void on_select_end__Q28JMessage10TProcessorFv(); // 1
 extern "C" void on_select_separate__Q28JMessage10TProcessorFv(); // 1
 extern "C" void do_reset__Q28JMessage10TProcessorFv(); // 1
@@ -140,10 +140,10 @@ extern "C" void __ct__Q28JMessage18TSequenceProcessorFPCQ28JMessage10TReferenceP
 extern "C" void __dt__Q28JMessage18TSequenceProcessorFv(); // 1
 extern "C" void process__Q28JMessage18TSequenceProcessorFPCc(); // 1
 extern "C" void on_isReady__Q28JMessage18TSequenceProcessorFv(); // 1
-extern "C" static void on_jump_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessor_PCvUl(); // 1
+extern "C" void on_jump_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessor_PCvUl(); // 1
 extern "C" void on_jump_isReady__Q28JMessage18TSequenceProcessorFv(); // 1
 extern "C" void on_jump__Q28JMessage18TSequenceProcessorFPCvPCc(); // 1
-extern "C" static void on_branch_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessorUl_PCvPCvUl(); // 1
+extern "C" void on_branch_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessorUl_PCvPCvUl(); // 1
 extern "C" void on_branch_query__Q28JMessage18TSequenceProcessorFUl(); // 1
 extern "C" void on_branch_queryResult__Q28JMessage18TSequenceProcessorFv(); // 1
 extern "C" void on_branch__Q28JMessage18TSequenceProcessorFPCvPCc(); // 1
@@ -378,7 +378,7 @@ asm void JMessage::TProcessor::toMessageCode_messageID(u32 field_0, u32 field_1,
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void on_select_begin__Q28JMessage10TProcessorFPFPQ28JMessage10TProcessor_PCcPCvPCcUl() {
+asm void JMessage::TProcessor::on_select_begin(char const* (*)(JMessage::TProcessor*), void const* field_1, char const* field_2, u32 field_3) {
 	nofralloc
 #include "asm/JSystem/JMessage/processor/on_select_begin__Q28JMessage10TProcessorFPFPQ28JMessage10TProcessor_PCcPCvPCcUl.s"
 }
@@ -592,7 +592,7 @@ asm void JMessage::TSequenceProcessor::on_isReady() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void on_jump_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessor_PCvUl() {
+asm void JMessage::TSequenceProcessor::on_jump_register(void const* (*)(JMessage::TSequenceProcessor const*), u32 field_1) {
 	nofralloc
 #include "asm/JSystem/JMessage/processor/func_802A85D0.s"
 }
@@ -625,7 +625,7 @@ asm void JMessage::TSequenceProcessor::on_jump(void const* field_0, char const* 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void on_branch_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessorUl_PCvPCvUl() {
+asm void JMessage::TSequenceProcessor::on_branch_register(void const* (*)(JMessage::TSequenceProcessor const*, u32), void const* field_1, u32 field_2) {
 	nofralloc
 #include "asm/JSystem/JMessage/processor/func_802A8690.s"
 }

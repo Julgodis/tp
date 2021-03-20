@@ -12,6 +12,12 @@
 struct layer_class {
 };
 
+struct node_lists_tree_class {
+};
+
+struct node_class {
+};
+
 struct create_tag_class {
 };
 
@@ -25,10 +31,10 @@ struct judge_filter {
 // Forward References:
 // 
 
-extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
-extern "C" void fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv(); // 1
-extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv(); // 1
-extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv(); // 1
+void fpcLyIt_OnlyHere(layer_class*, int (*)(void*, void*), void*); // 2
+void fpcLyIt_OnlyHereLY(layer_class*, int (*)(void*, void*), void*); // 2
+void fpcLyIt_Judge(layer_class*, void* (*)(void*, void*), void*); // 2
+void fpcLyIt_AllJudge(void* (*)(void*, void*), void*); // 2
 
 extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
 extern "C" void fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv(); // 1
@@ -42,8 +48,8 @@ extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv(); // 1
 void fpcLy_RootLayer(); // 2
 void fpcLy_SetCurrentLayer(layer_class*); // 2
 void fpcLy_CurrentLayer(); // 2
-extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv(); // 1
-extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv(); // 1
+void cTrIt_Method(node_lists_tree_class*, int (*)(node_class*, void*), void*); // 2
+void cTrIt_Judge(node_lists_tree_class*, void* (*)(node_class*, void*), void*); // 2
 void cTgIt_MethodCall(create_tag_class*, method_filter*); // 2
 void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); // 2
 extern "C" void _savegpr_28(); // 1
@@ -67,7 +73,7 @@ extern "C" void _restgpr_28(); // 1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv() {
+asm void fpcLyIt_OnlyHere(layer_class* field_0, int (*)(void*, void*), void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer_iter/fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv.s"
 }
@@ -78,7 +84,7 @@ extern "C" asm void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv() {
+asm void fpcLyIt_OnlyHereLY(layer_class* field_0, int (*)(void*, void*), void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer_iter/fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv.s"
 }
@@ -89,7 +95,7 @@ extern "C" asm void fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv() {
+asm void fpcLyIt_Judge(layer_class* field_0, void* (*)(void*, void*), void* field_2) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer_iter/fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv.s"
 }
@@ -100,7 +106,7 @@ extern "C" asm void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fpcLyIt_AllJudge__FPFPvPv_PvPv() {
+asm void fpcLyIt_AllJudge(void* (*)(void*, void*), void* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_layer_iter/fpcLyIt_AllJudge__FPFPvPv_PvPv.s"
 }

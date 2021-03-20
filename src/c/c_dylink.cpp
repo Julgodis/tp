@@ -34,6 +34,10 @@ struct DynamicModuleControl {
 	/* 8026275C */ void initialize();
 };
 
+struct mDoDvdThd_callback_c {
+	/* 80015C74 */ void create(void* (*)(void*), void*);
+};
+
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 };
@@ -87,9 +91,8 @@ extern "C" extern char const* const c_c_dylink__stringBase0;
 SECTION_INIT void memset(); // 1
 extern "C" void OSReport_Error(); // 1
 void mDoExt_getArchiveHeap(); // 2
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
 void fopScnM_CreateReq(s16, s16, u16, u32); // 2
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 void* operator new(u32); // 2
 void operator delete(void*); // 2
 extern "C" void OSSetStringTable(); // 1

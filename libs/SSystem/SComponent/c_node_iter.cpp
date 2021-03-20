@@ -6,11 +6,18 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct node_class {
+};
+
+// 
 // Forward References:
 // 
 
-extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv(); // 1
-extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv(); // 1
+void cNdIt_Method(node_class*, int (*)(node_class*, void*), void*); // 2
+void cNdIt_Judge(node_class*, void* (*)(node_class*, void*), void*); // 2
 
 extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv(); // 1
 extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv(); // 1
@@ -37,7 +44,7 @@ extern "C" void _restgpr_29(); // 1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void cNdIt_Method__FP10node_classPFP10node_classPv_iPv() {
+asm void cNdIt_Method(node_class* field_0, int (*)(node_class*, void*), void* field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_node_iter/cNdIt_Method__FP10node_classPFP10node_classPv_iPv.s"
 }
@@ -48,7 +55,7 @@ extern "C" asm void cNdIt_Method__FP10node_classPFP10node_classPv_iPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv() {
+asm void cNdIt_Judge(node_class* field_0, void* (*)(node_class*, void*), void* field_2) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_node_iter/cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv.s"
 }

@@ -9,9 +9,6 @@
 // Types:
 // 
 
-struct CSTControl {
-};
-
 struct JKRExpHeap {
 };
 
@@ -21,6 +18,9 @@ struct STControl {
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct CSTControl {
 };
 
 struct dMenu_Insect_c {
@@ -79,10 +79,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct JKRArchive {
+struct J2DPane {
 };
 
-struct J2DPane {
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {
@@ -96,14 +96,14 @@ struct dSelect_cursor_c {
 struct JMSMesgEntry_c {
 };
 
+struct JUTFont {
+};
+
 struct ResTIMG {
 };
 
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
-};
-
-struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -156,10 +156,10 @@ struct CPaneMgrAlpha {
 	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

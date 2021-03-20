@@ -32,6 +32,8 @@ struct mDoDvdThd_param_c {
 
 struct mDoDvdThd_callback_c {
 	/* 80015BB8 */ ~mDoDvdThd_callback_c();
+	/* 80015C18 */ mDoDvdThd_callback_c(void* (*)(void*), void*);
+	/* 80015C74 */ void create(void* (*)(void*), void*);
 	/* 80015CF0 */ void execute();
 };
 
@@ -77,6 +79,10 @@ struct node_class {
 struct node_list_class {
 };
 
+struct JASTaskThread {
+	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
+};
+
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 };
@@ -109,8 +115,6 @@ struct JKRDvdRipper {
 
 static void my_DVDConvertPathToEntrynum(char const*); // 2
 static void cb(void*); // 2
-extern "C" static void __ct__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
 extern "C" void __sinit_m_Do_dvd_thread_cpp(); // 1
 
 extern "C" void main__9mDoDvdThdFPv(); // 1
@@ -128,7 +132,7 @@ extern "C" static void cb__FPv(); // 1
 extern "C" void mainLoop__17mDoDvdThd_param_cFv(); // 1
 extern "C" void __ct__19mDoDvdThd_command_cFv(); // 1
 extern "C" void __dt__20mDoDvdThd_callback_cFv(); // 1
-extern "C" static void __ct__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
+extern "C" void __ct__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
 extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
 extern "C" void execute__20mDoDvdThd_callback_cFv(); // 1
 extern "C" void __dt__24mDoDvdThd_mountArchive_cFv(); // 1
@@ -164,7 +168,6 @@ void cLs_SingleCut(node_class*); // 2
 void cLs_Addition(node_list_class*, node_class*); // 2
 void cLs_Create(node_list_class*); // 2
 void cNd_ForcedClear(node_class*); // 2
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
 void* operator new(u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
 extern "C" void OSInitMessageQueue(); // 1
@@ -488,7 +491,7 @@ asm mDoDvdThd_callback_c::~mDoDvdThd_callback_c() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void __ct__20mDoDvdThd_callback_cFPFPv_PvPv() {
+asm mDoDvdThd_callback_c::mDoDvdThd_callback_c(void* (*)(void*), void* field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_dvd_thread/__ct__20mDoDvdThd_callback_cFPFPv_PvPv.s"
 }
@@ -506,7 +509,7 @@ static u8 l_param__9mDoDvdThd[72 + 24 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void create__20mDoDvdThd_callback_cFPFPv_PvPv() {
+asm void mDoDvdThd_callback_c::create(void* (*)(void*), void* field_1) {
 	nofralloc
 #include "asm/m_Do/m_Do_dvd_thread/create__20mDoDvdThd_callback_cFPFPv_PvPv.s"
 }

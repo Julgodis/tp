@@ -38,6 +38,10 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 8014D0C0 */ ~daNpcT_MotionSeqMngr_c();
 };
 
+struct daNpcT_Hermite_c {
+	/* 8014CBAC */ ~daNpcT_Hermite_c();
+};
+
 struct Vec {
 };
 
@@ -48,10 +52,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
-};
-
-struct daNpcT_Hermite_c {
-	/* 8014CBAC */ ~daNpcT_Hermite_c();
 };
 
 struct daNpcT_Path_c {
@@ -86,40 +86,6 @@ struct daNpcT_DmgStagger_c {
 	/* 80147E3C */ void calc(int);
 };
 
-struct J3DAnmTransformKey {
-};
-
-struct _GXColorS10 {
-};
-
-struct J3DAnmTransform {
-};
-
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
-};
-
-struct daNpcT_motionAnmData_c {
-};
-
-struct J3DAnmTextureSRTKey {
-};
-
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct J3DAnmColor {
-};
-
-struct J3DJoint {
-};
-
-struct J3DAnmTevRegKey {
-};
-
-struct J3DAnmTexPattern {
-};
-
 struct csXyz {
 	/* 80018BD0 */ ~csXyz();
 	/* 80112C80 */ csXyz();
@@ -128,6 +94,40 @@ struct csXyz {
 
 struct dCcD_GObjInf {
 	/* 80084460 */ void ChkTgHit();
+};
+
+struct J3DAnmTevRegKey {
+};
+
+struct J3DAnmColor {
+};
+
+struct daNpcT_faceMotionAnmData_c {
+};
+
+struct J3DJoint {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
+};
+
+struct J3DAnmTexPattern {
+};
+
+struct J3DAnmTransform {
+};
+
+struct daNpcT_motionAnmData_c {
+};
+
+struct J3DAnmTransformKey {
+};
+
+struct _GXColorS10 {
+};
+
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DModelData {
@@ -313,9 +313,19 @@ struct daBaseNpc_c {
 	/* 8014F4AC */ bool dbgDraw();
 };
 
+struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
+};
+
 struct daBaseNpc_moveBgActor_c {
 	/* 8014F4B4 */ daBaseNpc_moveBgActor_c();
 	/* 8014F518 */ void MoveBGCreateHeap();
+	/* 8014F60C */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32);
 	/* 8014F6FC */ void MoveBGDelete();
 	/* 8014F770 */ void MoveBGExecute();
 	/* 801503BC */ bool CreateHeap();
@@ -327,10 +337,6 @@ struct daBaseNpc_moveBgActor_c {
 	/* 801503EC */ bool ToFore();
 	/* 801503F4 */ bool ToBack();
 	/* 80155FB0 */ ~daBaseNpc_moveBgActor_c();
-};
-
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct daNpcF_ActorMngr_c {
@@ -426,6 +432,7 @@ struct daNpcF_c {
 	/* 80154250 */ void setAngle(s16);
 	/* 80154278 */ void getDistTableIdx(int, int);
 	/* 801542A0 */ void getEvtAreaTagP(int, int);
+	/* 8015436C */ void getAttnActorP(int, void* (*)(void*, void*), f32, f32, f32, f32, s16, int, int);
 	/* 80154730 */ void chkActorInSight2(fopAc_ac_c*, f32, s16);
 	/* 80154834 */ void chkPointInArea(cXyz, cXyz, f32, f32, f32, s16);
 	/* 801548F4 */ void chkPointInArea(cXyz, cXyz, cXyz, s16);
@@ -600,7 +607,7 @@ struct dPaPoT_c {
 	/* 8005115C */ void setEffectTwo(dKy_tevstr_c const*, cXyz const*, u32, u32, cXyz const*, cXyz const*, cXyz const*, csXyz const*, cXyz const*, s8, f32, f32);
 };
 
-struct cBgS_LinChk {
+struct dBgW_Base {
 };
 
 struct cBgS_GndChk {
@@ -609,7 +616,7 @@ struct cBgS_GndChk {
 	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
-struct dBgW_Base {
+struct cBgS_LinChk {
 };
 
 struct cBgS {
@@ -655,11 +662,6 @@ struct cBgD_t {
 
 struct cBgW {
 	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
-};
-
-struct dBgW {
-	/* 8007B970 */ dBgW();
-	/* 8007B9C0 */ void Move();
 };
 
 struct dCcD_GAtTgCoCommonBase {
@@ -757,7 +759,6 @@ static void daBaseNpc_incIdx(int, u16*, int, int); // 2
 static void daBaseNpc_decIdx(int, u16*, int, int); // 2
 static void daNpcBase_BBasis(int, int, int, int*); // 2
 static void CheckCreateHeap(fopAc_ac_c*); // 2
-extern "C" void MoveBGCreate__23daBaseNpc_moveBgActor_cFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUl(); // 1
 static void daBaseNpc_PntVsLineSegmentLengthSquare2D(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*); // 2
 static void daBaseNpc_putNurbs(dPnt*, int, int, dPnt*, int); // 2
 static void daBaseNpc_chkPnt(cXyz, dPnt*, u16, u16, int, int); // 2
@@ -766,7 +767,6 @@ static void daNpcF_addIdx(int, int, u16&, int); // 2
 static void daNpcF_subIdx(int, int, u16&, int); // 2
 static void daNpcF_incIdx(int, u16&, int, int); // 2
 static void daNpcF_decIdx(int, u16&, int, int); // 2
-extern "C" void getAttnActorP__8daNpcF_cFiPFPvPv_Pvffffsii(); // 1
 static void daNpcF_pntVsLineSegmentLengthSquare2D(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*); // 2
 static bool daNpcF_putNurbs(dPnt*, int, int, dPnt*, int); // 2
 static void daNpcF_chkPassed(cXyz, dPnt*, u16, u16, int, int); // 2
@@ -1150,7 +1150,7 @@ void mDoMtx_YrotM(f32 (* )[4], s16); // 2
 void mDoLib_project(Vec*, Vec*); // 2
 void fopAc_IsActor(void*); // 2
 void fopAcM_SearchByID(u32, fopAc_ac_c**); // 2
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
 void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*); // 2
 void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
@@ -1161,8 +1161,8 @@ void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
 void fopAcM_setEffectMtx(fopAc_ac_c const*, J3DModelData const*); // 2
 void fopAcM_getPolygonAngle(cBgS_PolyInfo const&, s16); // 2
 void fopAcM_getPolygonAngle(cM3dGPla const*, s16); // 2
-extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+void fopKyM_create(s16, int, cXyz*, cXyz*, int (*)(void*)); // 2
+void fpcEx_Search(void* (*)(void*, void*), void*); // 2
 void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
 void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
 void dComIfGp_getReverb(int); // 2
@@ -4079,7 +4079,7 @@ asm void daBaseNpc_moveBgActor_c::MoveBGCreateHeap() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void MoveBGCreate__23daBaseNpc_moveBgActor_cFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUl() {
+asm void daBaseNpc_moveBgActor_c::MoveBGCreate(char const* field_0, int field_1, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32 field_3) {
 	nofralloc
 #include "asm/d/a/d_a_npc/MoveBGCreate__23daBaseNpc_moveBgActor_cFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUl.s"
 }
@@ -5098,7 +5098,7 @@ SECTION_SDATA2 static f32 lit_11605 = 450.0f;
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void getAttnActorP__8daNpcF_cFiPFPvPv_Pvffffsii() {
+asm void daNpcF_c::getAttnActorP(int field_0, void* (*)(void*, void*), f32 field_2, f32 field_3, f32 field_4, f32 field_5, s16 field_6, int field_7, int field_8) {
 	nofralloc
 #include "asm/d/a/d_a_npc/getAttnActorP__8daNpcF_cFiPFPvPv_Pvffffsii.s"
 }

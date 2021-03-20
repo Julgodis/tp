@@ -258,6 +258,12 @@ struct dMsgString_c {
 struct JKRExpHeap {
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct J2DGrafContext {
 };
 
@@ -266,12 +272,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct CPaneMgr {
@@ -286,10 +286,10 @@ struct CPaneMgrAlpha {
 	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

@@ -48,18 +48,18 @@ struct dMsgScrnLight_c {
 	/* 80245934 */ dMsgScrnLight_c(u8, u8);
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct CPaneMgr {

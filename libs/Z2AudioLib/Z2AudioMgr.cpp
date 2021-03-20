@@ -9,15 +9,6 @@
 // Types:
 // 
 
-struct JKRSolidHeap {
-};
-
-struct JAISoundHandle {
-};
-
-struct JKRArchive {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -27,7 +18,16 @@ struct JGeometry {
 
 };
 
+struct JAISoundHandle {
+};
+
 struct JAISoundID {
+};
+
+struct JKRArchive {
+};
+
+struct JKRSolidHeap {
 };
 
 struct Z2AudioMgr {

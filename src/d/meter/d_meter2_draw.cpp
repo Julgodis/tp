@@ -35,19 +35,10 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DAnmColor {
+struct J2DRotateAxis {
 };
 
 struct J2DBasePosition {
-};
-
-struct J2DRotateAxis {
 };
 
 struct J2DPane {
@@ -58,11 +49,20 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct CPaneMgr {
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
 	/* 802545B0 */ void paneTrans(f32, f32);
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
+};
+
+struct J2DAnmColor {
 };
 
 struct dMeter2Draw_c {
@@ -193,6 +193,12 @@ struct dKantera_icon_c {
 struct JMSMesgEntry_c {
 };
 
+struct ResTLUT {
+};
+
+struct ResTIMG {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -200,12 +206,6 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
-};
-
-struct ResTIMG {
-};
-
-struct ResTLUT {
 };
 
 struct J2DPicture {
@@ -226,10 +226,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

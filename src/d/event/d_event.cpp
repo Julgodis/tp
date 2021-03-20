@@ -38,6 +38,7 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 	/* 800425B4 */ void clearSkipSystem();
 	/* 8004290C */ void getSkipEventName();
+	/* 80042914 */ void setSkipProc(void*, int (*)(void*, int), int);
 	/* 80042958 */ void setSkipZev(void*, char*);
 	/* 800429A8 */ void onSkipFade();
 	/* 800429B4 */ void offSkipFade();
@@ -154,7 +155,6 @@ void dEv_defaultSkipProc(void*, int); // 2
 void dEv_defaultSkipZev(void*, int); // 2
 void dEv_defaultSkipStb(void*, int); // 2
 void dEv_noFinishSkipProc(void*, int); // 2
-extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
 
 extern "C" static bool func_80041480(); // 1
 extern "C" static void func_80041488(); // 1
@@ -220,7 +220,7 @@ extern "C" extern char const* const d_event_d_event__stringBase0;
 // External References:
 // 
 
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
 void fopAcM_getItemEventPartner(fopAc_ac_c const*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
@@ -678,7 +678,7 @@ asm void dEvt_control_c::getSkipEventName() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void setSkipProc__14dEvt_control_cFPvPFPvi_ii() {
+asm void dEvt_control_c::setSkipProc(void* field_0, int (*)(void*, int), int field_2) {
 	nofralloc
 #include "asm/d/event/d_event/setSkipProc__14dEvt_control_cFPvPFPvi_ii.s"
 }

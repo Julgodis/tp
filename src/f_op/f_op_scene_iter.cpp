@@ -9,6 +9,12 @@
 // Types:
 // 
 
+struct node_list_class {
+};
+
+struct node_class {
+};
+
 struct create_tag_class {
 };
 
@@ -19,7 +25,7 @@ struct judge_filter {
 // Forward References:
 // 
 
-extern "C" void fopScnIt_Judge__FPFPvPv_PvPv(); // 1
+void fopScnIt_Judge(void* (*)(void*, void*), void*); // 2
 
 extern "C" void fopScnIt_Judge__FPFPvPv_PvPv(); // 1
 
@@ -27,7 +33,7 @@ extern "C" void fopScnIt_Judge__FPFPvPv_PvPv(); // 1
 // External References:
 // 
 
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
+void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*); // 2
 void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); // 2
 
 extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
@@ -42,7 +48,7 @@ extern "C" extern u8 g_fopScnTg_SceneList[12 + 4 /* padding */];
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void fopScnIt_Judge__FPFPvPv_PvPv() {
+asm void fopScnIt_Judge(void* (*)(void*, void*), void* field_1) {
 	nofralloc
 #include "asm/f_op/f_op_scene_iter/fopScnIt_Judge__FPFPvPv_PvPv.s"
 }

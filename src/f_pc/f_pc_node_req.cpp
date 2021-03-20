@@ -29,6 +29,9 @@ struct cMl {
 	/* 80263260 */ void free(void*);
 };
 
+struct request_of_phase_process_class {
+};
+
 struct create_tag_class {
 };
 
@@ -96,10 +99,10 @@ void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*); // 2
 void fpcLy_CreatingMesg(layer_class*); // 2
 void fpcLy_CreatedMesg(layer_class*); // 2
 void fpcLy_CurrentLayer(); // 2
-extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
-extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
-extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void fpcMtd_Method(int (*)(void*), void*); // 2
+void fpcMtdTg_Init(process_method_tag_class*, int (*)(void*), void*); // 2
+void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
+void cPhs_Handler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 void cTg_SingleCut(create_tag_class*); // 2
 void cTg_Addition(node_list_class*, create_tag_class*); // 2
 void cTg_Create(create_tag_class*, void*); // 2

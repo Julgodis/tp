@@ -14,6 +14,7 @@ struct JKRHeap {
 	/* 802CE72C */ void getFreeSize();
 	/* 802CE784 */ void getTotalFreeSize();
 	/* 802CEB78 */ void setErrorFlag(bool);
+	/* 802CEB88 */ void setErrorHandler(void (*)(void*, u32, int));
 };
 
 struct OSContext {
@@ -78,6 +79,8 @@ struct JUTException {
 	/* 802E2F18 */ void isEnablePad() const;
 	/* 802E2F54 */ void readPad(u32*, u32*);
 	/* 802E3980 */ void waitTime(s32);
+	/* 802E3AEC */ void setPreUserCallback(void (*)(u16, OSContext*, u32, u32));
+	/* 802E3AFC */ void setPostUserCallback(void (*)(u16, OSContext*, u32, u32));
 	/* 802E3B0C */ void appendMapFile(char const*);
 };
 
@@ -156,10 +159,7 @@ void mDoDvdErr_ThdInit(); // 2
 void exception_addition(JUTConsole*); // 2
 void cAPICPad_recalibrate(); // 2
 void cM_initRnd(int, int, int); // 2
-extern "C" void setErrorHandler__7JKRHeapFPFPvUli_v(); // 1
 void* operator new(u32); // 2
-extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
-extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
 extern "C" void PPCHalt(); // 1
 extern "C" void OSGetConsoleType(); // 1
 extern "C" void OSGetArenaHi(); // 1

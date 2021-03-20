@@ -29,11 +29,11 @@ struct J3DLightInfo {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
-};
-
 struct J3DModelData {
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -96,10 +96,10 @@ struct color_RGB_class {
 struct J3DMaterial {
 };
 
-struct J3DGXColor {
+struct J3DLightObj {
 };
 
-struct J3DLightObj {
+struct J3DGXColor {
 };
 
 struct J3DColorBlock {
@@ -174,10 +174,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {

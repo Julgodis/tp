@@ -354,7 +354,7 @@ extern "C" extern void* g_profile_ITEM[12];
 void mDoMtx_YrotS(f32 (* )[4], s16); // 2
 void fopAcM_delete(fopAc_ac_c*); // 2
 void fopAcM_delete(u32); // 2
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
 void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*); // 2
 void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fopAcM_orderItemEvent(fopAc_ac_c*, u16, u16); // 2

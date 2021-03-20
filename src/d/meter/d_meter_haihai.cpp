@@ -9,13 +9,13 @@
 // Types:
 // 
 
+struct J2DAnmTransformKey {
+};
+
 struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmColor {
-};
-
-struct J2DAnmTransformKey {
 };
 
 struct dMeterHaihai_c {

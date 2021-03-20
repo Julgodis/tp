@@ -45,6 +45,7 @@ struct JKRHeap {
 	/* 802CEAC0 */ void dispose();
 	/* 802CEB18 */ void copyMemory(void*, void*, u32);
 	/* 802CEB78 */ void setErrorFlag(bool);
+	/* 802CEB88 */ void setErrorHandler(void (*)(void*, u32, int));
 	/* 802CEBA8 */ void isSubHeap(JKRHeap*) const;
 	/* 802CED84 */ void state_register(JKRHeap::TState*, u32) const;
 	/* 802CED88 */ void state_compare(JKRHeap::TState const&, JKRHeap::TState const&) const;
@@ -79,7 +80,6 @@ struct JUTException {
 // 
 
 static void JKRDefaultMemoryErrorRoutine(void*, u32, int); // 2
-extern "C" void setErrorHandler__7JKRHeapFPFPvUli_v(); // 1
 void* operator new(u32); // 2
 void* operator new(u32, int); // 2
 void* operator new(u32, JKRHeap*, int); // 2
@@ -624,7 +624,7 @@ asm void JKRHeap::setErrorFlag(bool field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void setErrorHandler__7JKRHeapFPFPvUli_v() {
+asm void JKRHeap::setErrorHandler(void (*)(void*, u32, int)) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRHeap/setErrorHandler__7JKRHeapFPFPvUli_v.s"
 }

@@ -1,5 +1,6 @@
 
 from dataclasses import dataclass, field
+from typing import Set
 
 @dataclass(frozen=True,eq=True)
 class Type:
@@ -11,6 +12,9 @@ class Type:
         if type_str:
             type_str = f"{type_str} "
         return f"{type_str}{label}"
+
+    def dependencies(self) -> Set["Type"]:
+        return set()
 
     @property
     def is_builtin(self):

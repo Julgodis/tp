@@ -9,16 +9,6 @@
 // Types:
 // 
 
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct fopAc_ac_c {
-};
-
 struct STControl {
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 800320AC */ void init();
@@ -32,10 +22,20 @@ struct STControl {
 struct mesg_flow_node_branch {
 };
 
+struct fopAc_ac_c {
+};
+
 struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 	/* 8024A528 */ void getEventId(int*);
 	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct dShopSystem_c {
@@ -108,7 +108,7 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct J3DJoint {
 };
 
 struct J3DModel {
@@ -117,7 +117,7 @@ struct J3DModel {
 struct daNpcT_motionAnmData_c {
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpcT_c {
@@ -291,12 +291,12 @@ extern "C" extern void* d_shop_d_shop_system__lit_4067[3];
 
 void mDoLib_project(Vec*, Vec*); // 2
 void fopAc_IsActor(void*); // 2
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopAcM_delete(u32); // 2
 void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
 void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fopAcM_createItemForPresentDemo(cXyz const*, int, u8, int, int, csXyz const*, cXyz const*); // 2
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
+void fpcEx_Search(void* (*)(void*, void*), void*); // 2
 void fpcEx_IsExist(u32); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 void checkItemGet(u8, int); // 2

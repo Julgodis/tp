@@ -287,7 +287,7 @@ void mDoMtx_XrotM(f32 (* )[4], s16); // 2
 void mDoMtx_YrotM(f32 (* )[4], s16); // 2
 void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
 void mDoLib_project(Vec*, Vec*); // 2
-extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i(); // 1
+void fopKyM_create(s16, int, cXyz*, cXyz*, int (*)(void*)); // 2
 void dComIfG_getStageRes(char const*); // 2
 void dComIfGs_PolyDamageOff_Set(s8); // 2
 void dKyw_get_wind_vec(); // 2

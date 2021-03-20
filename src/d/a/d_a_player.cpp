@@ -242,7 +242,7 @@ void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
 void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
 void mDoExt_setCurrentHeap(JKRHeap*); // 2
 void mDoLib_project(Vec*, Vec*); // 2
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 void cM_atan2s(f32, f32); // 2
 void cM_rndF(f32); // 2

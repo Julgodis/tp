@@ -19,7 +19,9 @@ struct JKRDecomp {
 	/* 802DB6E0 */ JKRDecomp(s32);
 	/* 802DB730 */ ~JKRDecomp();
 	/* 802DB790 */ void run();
+	/* 802DB858 */ void prepareCommand(u8*, u8*, u32, u32, void (*)(u32));
 	/* 802DB8D0 */ void sendCommand(JKRDecompCommand*);
+	/* 802DB900 */ void orderAsync(u8*, u8*, u32, u32, void (*)(u32));
 	/* 802DB934 */ void sync(JKRDecompCommand*, int);
 	/* 802DB988 */ void orderSync(u8*, u8*, u32, u32);
 	/* 802DB9DC */ void decode(u8*, u8*, u32, u32);
@@ -47,16 +49,14 @@ struct JKRAramPiece {
 // Forward References:
 // 
 
-extern "C" static void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v(); // 1
-extern "C" static void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v(); // 1
 
 extern "C" void create__9JKRDecompFl(); // 1
 extern "C" void __ct__9JKRDecompFl(); // 1
 extern "C" void __dt__9JKRDecompFv(); // 1
 extern "C" void run__9JKRDecompFv(); // 1
-extern "C" static void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v(); // 1
+extern "C" void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v(); // 1
 extern "C" void sendCommand__9JKRDecompFP16JKRDecompCommand(); // 1
-extern "C" static void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v(); // 1
+extern "C" void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v(); // 1
 extern "C" void sync__9JKRDecompFP16JKRDecompCommandi(); // 1
 extern "C" void orderSync__9JKRDecompFPUcPUcUlUl(); // 1
 extern "C" void decode__9JKRDecompFPUcPUcUlUl(); // 1
@@ -173,7 +173,7 @@ asm void JKRDecomp::run() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v() {
+asm void JKRDecomp::prepareCommand(u8* field_0, u8* field_1, u32 field_2, u32 field_3, void (*)(u32)) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/prepareCommand__9JKRDecompFPUcPUcUlUlPFUl_v.s"
 }
@@ -195,7 +195,7 @@ asm void JKRDecomp::sendCommand(JKRDecompCommand* field_0) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v() {
+asm void JKRDecomp::orderAsync(u8* field_0, u8* field_1, u32 field_2, u32 field_3, void (*)(u32)) {
 	nofralloc
 #include "asm/JSystem/JKernel/JKRDecomp/orderAsync__9JKRDecompFPUcPUcUlUlPFUl_v.s"
 }

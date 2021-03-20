@@ -13,25 +13,8 @@ struct Vec {
 };
 
 namespace JStudio {
-	namespace ctb {
-		struct TObject {
-		};
-
-		struct TControl {
-			/* 80280FC4 */ TControl();
-			/* 80280FF4 */ ~TControl();
-			/* 80281230 */ void getObject_index(u32);
-		};
-
-		struct TFactory {
-			/* 80281274 */ ~TFactory();
-		};
-
-		struct TParse {
-			/* 8028135C */ TParse(JStudio::ctb::TControl*);
-			/* 8028137C */ ~TParse();
-		};
-
+	struct TCreateObject {
+		/* 80285488 */ ~TCreateObject();
 	};
 
 	namespace stb {
@@ -71,14 +54,31 @@ namespace JStudio {
 
 	};
 
-	struct TCreateObject {
-		/* 80285488 */ ~TCreateObject();
-	};
-
 	struct TFactory {
 		/* 802854D0 */ ~TFactory();
 		/* 80285560 */ void appendCreateObject(JStudio::TCreateObject*);
 		/* 802855AC */ void create(JStudio::stb::data::TParse_TBlock_object const&);
+	};
+
+	namespace ctb {
+		struct TObject {
+		};
+
+		struct TControl {
+			/* 80280FC4 */ TControl();
+			/* 80280FF4 */ ~TControl();
+			/* 80281230 */ void getObject_index(u32);
+		};
+
+		struct TFactory {
+			/* 80281274 */ ~TFactory();
+		};
+
+		struct TParse {
+			/* 8028135C */ TParse(JStudio::ctb::TControl*);
+			/* 8028137C */ ~TParse();
+		};
+
 	};
 
 	struct TControl {

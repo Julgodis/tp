@@ -44,6 +44,10 @@ struct JASWaveArc {
 	/* 8029A70C */ void setFileName(char const*);
 };
 
+struct JASTaskThread {
+	/* 8028FB5C */ void sendCmdMsg(void (*)(void*), void const*, u32);
+};
+
 struct JASDvd {
 	/* 8028FEFC */ void getThreadPointer();
 };
@@ -97,7 +101,6 @@ extern "C" void __dt__11JASDisposerFv(); // 1
 // External References:
 // 
 
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
 void* operator new[](u32, JKRHeap*, int); // 2
 void operator delete(void*); // 2
 void operator delete[](void*); // 2

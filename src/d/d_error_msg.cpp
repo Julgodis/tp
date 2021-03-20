@@ -52,10 +52,10 @@ struct J2DOrthoGraph {
 	/* 802E980C */ void setOrtho(JGeometry::TBox2<f32> const&, f32, f32);
 };
 
-struct ResTIMG {
+struct ResTLUT {
 };
 
-struct ResTLUT {
+struct ResTIMG {
 };
 
 struct J2DPicture {
@@ -64,10 +64,10 @@ struct J2DPicture {
 	/* 802FDC70 */ void draw(f32, f32, f32, f32, bool, bool, bool);
 };
 
-struct J2DTextBoxHBinding {
+struct J2DTextBoxVBinding {
 };
 
-struct J2DTextBoxVBinding {
+struct J2DTextBoxHBinding {
 };
 
 struct J2DTextBox {

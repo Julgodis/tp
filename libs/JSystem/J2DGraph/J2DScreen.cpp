@@ -9,31 +9,27 @@
 // Types:
 // 
 
-struct J2DGrafContext {
+struct ResFONT {
 };
 
-struct J2DAnmTextureSRTKey {
+struct JSUStreamSeekFrom {
 };
 
-struct J2DAnmVisibilityFull {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct ResTIMG {
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
 struct J2DAnmBase {
 };
 
-struct _GXCullMode {
+struct J2DAnmVtxColor {
 };
 
-struct ResFONT {
+struct J2DAnmTransform {
+};
+
+struct _GXCullMode {
 };
 
 struct JGeometry {
@@ -45,12 +41,13 @@ struct JGeometry {
 
 };
 
-struct JSUStreamSeekFrom {
+struct J2DAnmVisibilityFull {
 };
 
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+struct ResTIMG {
+};
+
+struct J2DGrafContext {
 };
 
 struct J2DPane {
@@ -82,19 +79,22 @@ struct J2DPane {
 	/* 802F8478 */ void drawSelf(f32, f32);
 };
 
+struct J2DAnmColor {
+};
+
 struct J2DAnmTexPattern {
 };
 
 struct J2DScrnBlockHeader {
 };
 
+struct J2DAnmTextureSRTKey {
+};
+
 struct JKRArchive {
 };
 
 struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmColor {
 };
 
 struct J2DScreen {

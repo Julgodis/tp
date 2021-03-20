@@ -16,38 +16,6 @@ struct dCamMapToolData {
 	/* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
 };
 
-struct camera_class {
-};
-
-struct stage_camera2_data_class {
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80009184 */ ~cXyz();
-	/* 800977F4 */ cXyz(cXyz const&);
-	/* 8014195C */ cXyz(f32, f32, f32);
-	/* 800125DC */ cXyz();
-	/* 8008E790 */ void abs() const;
-	/* 8008E8D0 */ void operator-=(Vec const&);
-	/* 8008E904 */ void operator+=(Vec const&);
-	/* 800977D8 */ void operator=(cXyz const&);
-	/* 80182D8C */ void set(f32, f32, f32);
-	/* 80266AE4 */ void operator+(Vec const&) const;
-	/* 80266B34 */ void operator-(Vec const&) const;
-	/* 80266B84 */ void operator*(f32) const;
-	/* 80266BD0 */ void operator*(Vec const&) const;
-	/* 80266CE4 */ void norm() const;
-	/* 80266EF4 */ void normalize();
-	/* 8026706C */ bool operator!=(Vec const&) const;
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
 struct cSAngle {
 	/* 80030510 */ ~cSAngle();
 	/* 80271004 */ void Val(s16);
@@ -78,6 +46,38 @@ struct cSAngle {
 	/* 802711E8 */ void operator-=(cSAngle const&);
 	/* 80271264 */ void operator*(f32) const;
 	/* 802712B4 */ void operator*=(f32);
+};
+
+struct camera_class {
+};
+
+struct Vec {
+};
+
+struct cXyz {
+	/* 80009184 */ ~cXyz();
+	/* 800977F4 */ cXyz(cXyz const&);
+	/* 8014195C */ cXyz(f32, f32, f32);
+	/* 800125DC */ cXyz();
+	/* 8008E790 */ void abs() const;
+	/* 8008E8D0 */ void operator-=(Vec const&);
+	/* 8008E904 */ void operator+=(Vec const&);
+	/* 800977D8 */ void operator=(cXyz const&);
+	/* 80182D8C */ void set(f32, f32, f32);
+	/* 80266AE4 */ void operator+(Vec const&) const;
+	/* 80266B34 */ void operator-(Vec const&) const;
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80266BD0 */ void operator*(Vec const&) const;
+	/* 80266CE4 */ void norm() const;
+	/* 80266EF4 */ void normalize();
+	/* 8026706C */ bool operator!=(Vec const&) const;
+};
+
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct stage_camera2_data_class {
 };
 
 struct dCamera_c {
@@ -445,6 +445,9 @@ struct dStage_roomControl_c {
 	/* 80024384 */ void getStatusRoomDt(int);
 };
 
+struct request_of_phase_process_class {
+};
+
 struct cM3dGCyl {
 	/* 80030E3C */ ~cM3dGCyl();
 	/* 8026F0A8 */ cM3dGCyl(cXyz const*, f32, f32);
@@ -520,12 +523,12 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
+struct csXyz {
+};
+
 struct dBgS_RoofChk {
 	/* 80078FF4 */ dBgS_RoofChk();
 	/* 80079090 */ ~dBgS_RoofChk();
-};
-
-struct csXyz {
 };
 
 struct dBgS {
@@ -987,7 +990,7 @@ void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
 void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16); // 2
 void mDoMtx_concatProjView(f32 const (* )[4], f32 const (* )[4], f32 (* )[4]); // 2
 void mDoLib_project(Vec*, Vec*); // 2
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fopAcM_setStageLayer(void*); // 2
 void fopAcM_searchFromName4Event(char const*, s16); // 2
 void fopCamM_GetParam(camera_class*); // 2
@@ -995,7 +998,7 @@ void fpcSch_JudgeForPName(void*, void*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 void dComIfGp_getRoomCamera(int); // 2
 void dComIfGp_getRoomArrow(int); // 2
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
 void dPath_GetRoomPath(int, int); // 2
 void dKyw_get_wind_vec(); // 2
 void dKyw_get_wind_pow(); // 2

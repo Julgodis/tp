@@ -9,13 +9,20 @@
 // Types:
 // 
 
+struct cM3dGPla {
+};
+
 struct cXyz {
+};
+
+struct cBgD_Vtx_t {
 };
 
 struct cBgS_ShdwDraw {
 	/* 80267F88 */ cBgS_ShdwDraw();
 	/* 80267FD0 */ ~cBgS_ShdwDraw();
 	/* 80268048 */ void Set(cXyz&, cXyz&);
+	/* 8026806C */ void SetCallback(int (*)(cBgS_ShdwDraw*, cBgD_Vtx_t*, int, int, int, cM3dGPla*));
 };
 
 struct cBgS_Chk {
@@ -31,7 +38,6 @@ struct cM3dGAab {
 // Forward References:
 // 
 
-extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i(); // 1
 
 extern "C" void __ct__13cBgS_ShdwDrawFv(); // 1
 extern "C" void __dt__13cBgS_ShdwDrawFv(); // 1
@@ -101,7 +107,7 @@ asm void cBgS_ShdwDraw::Set(cXyz& field_0, cXyz& field_1) {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i() {
+asm void cBgS_ShdwDraw::SetCallback(int (*)(cBgS_ShdwDraw*, cBgD_Vtx_t*, int, int, int, cM3dGPla*)) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_shdw_draw/SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i.s"
 }

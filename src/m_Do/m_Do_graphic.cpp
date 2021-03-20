@@ -109,13 +109,13 @@ struct dMenu_Collect3D_c {
 	/* 801B75E8 */ void setupItem3D(f32 (* )[4]);
 };
 
+struct _GXRenderModeObj {
+};
+
 struct JUTXfb {
 	struct EXfbNumber {
 	};
 
-};
-
-struct _GXRenderModeObj {
 };
 
 struct JFWDisplay {
@@ -220,7 +220,7 @@ void mDoExt_getArchiveHeap(); // 2
 void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32); // 2
 void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
 void mDoExt_restoreCurrentHeap(); // 2
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
+void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
 void fpcSch_JudgeByID(void*, void*); // 2
 void dCam_getBody(); // 2
 void dKy_setLight(); // 2

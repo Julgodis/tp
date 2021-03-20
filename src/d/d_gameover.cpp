@@ -72,6 +72,12 @@ struct JKRHeap {
 	/* 802CE784 */ void getTotalFreeSize();
 };
 
+struct fopAc_ac_c {
+};
+
+struct cXyz {
+};
+
 struct request_of_phase_process_class {
 };
 
@@ -131,6 +137,12 @@ struct J2DScreen {
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 };
 
+struct ResTLUT {
+};
+
+struct ResTIMG {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -138,12 +150,6 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
-};
-
-struct ResTIMG {
-};
-
-struct ResTLUT {
 };
 
 struct J2DPicture {
@@ -236,7 +242,7 @@ void mDoExt_setCurrentHeap(JKRHeap*); // 2
 void mDoExt_getSubFont(); // 2
 void fopMsgM_SearchByID(u32); // 2
 void fopMsgM_Delete(void*); // 2
-extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i(); // 1
+void fopMsgM_create(s16, fopAc_ac_c*, cXyz*, u32*, u32*, int (*)(void*)); // 2
 void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
 void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
 void dComIfGp_setHeapLockFlag(u8); // 2

@@ -6,6 +6,13 @@
 #include "dolphin/types.h"
 
 // 
+// Types:
+// 
+
+struct layer_class {
+};
+
+// 
 // Forward References:
 // 
 
@@ -24,7 +31,7 @@ extern "C" void fpcPause_Init__FPv(); // 1
 // 
 
 void fpcBs_Is_JustOfType(int, int); // 2
-extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
+void fpcLyIt_OnlyHere(layer_class*, int (*)(void*, void*), void*); // 2
 
 extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
 extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1

@@ -9,20 +9,20 @@
 // Types:
 // 
 
-struct J2DTextBoxVBinding {
-};
-
 struct JUtility {
 	struct TColor {
 	};
 
 };
 
+struct JUTFont {
+	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
+};
+
 struct J2DTextBoxHBinding {
 };
 
-struct JUTFont {
-	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
+struct J2DTextBoxVBinding {
 };
 
 struct J2DPrint {

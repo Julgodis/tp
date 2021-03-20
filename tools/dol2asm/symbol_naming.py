@@ -56,6 +56,8 @@ def class_name_from(name):
     ])
 
 def named_type_from_qulified_name(qname):
+    if not qname:
+        return None
     return NamedType([
         class_name_from(part)
         for part in qname.parts
@@ -63,8 +65,15 @@ def named_type_from_qulified_name(qname):
 
 def type_from_demangled_param(param):
     if isinstance(param, demangle.FuncParam):
-        return None
+        # TODO: check for None from type_from_demangled_param
+        return FunctionType(
+            inner = type_from_demangled_param(param.inner_type),
+            return_type = type_from_demangled_param(param.ret_type),
+            argument_types = [ type_from_demangled_param(arg) for arg in param.params ],
+            inner_class= named_type_from_qulified_name(param.class_name)
+        )
     elif isinstance(param, demangle.ArrayParam):
+        # TODO: check for None from type_from_demangled_param
         return ArrayType(
             base = type_from_demangled_param(param.base_type),
             inner = type_from_demangled_param(param.inner_type),

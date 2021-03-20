@@ -44,12 +44,12 @@ struct dMeter2Info_c {
 	/* 8021CC00 */ void resetMeterString();
 };
 
+struct JKRExpHeap {
+};
+
 struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 	/* 802F7FCC */ void animationTransform();
-};
-
-struct JKRExpHeap {
 };
 
 struct J2DGrafContext {

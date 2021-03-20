@@ -9,15 +9,15 @@
 // Types:
 // 
 
-struct OSThread {
-};
-
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 	/* 802CE83C */ void findFromRoot(void*);
 	/* 802CEBA8 */ void isSubHeap(JKRHeap*) const;
+};
+
+struct OSThread {
 };
 
 struct JKRThread {
@@ -32,13 +32,13 @@ struct JKRThread {
 	/* 802D1E14 */ bool run();
 };
 
+struct JKRThreadName_ {
+};
+
 struct JUTConsole {
 	/* 802E75EC */ void clear();
 	/* 802E7BB8 */ void print_f(char const*, ...);
 	/* 802E7C38 */ void print(char const*);
-};
-
-struct JKRThreadName_ {
 };
 
 struct JKRThreadSwitch {

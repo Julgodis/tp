@@ -33,12 +33,12 @@ struct dTimer_c {
 	/* 802613DC */ void createGetIn(cXyz);
 };
 
-struct JKRArchive {
-};
-
 struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRArchive {
 };
 
 struct dDlst_TimerScrnDraw_c {
@@ -267,7 +267,7 @@ void mDoExt_getMesgFont(); // 2
 void mDoLib_project(Vec*, Vec*); // 2
 void fopMsgM_GetAppend(void*); // 2
 void fopMsgM_Delete(void*); // 2
-extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i(); // 1
+void fop_Timer_create(s16, u8, u32, u8, u8, f32, f32, f32, f32, int (*)(void*)); // 2
 void fopMsgM_createExpHeap(u32, JKRHeap*); // 2
 void fopMsgM_destroyExpHeap(JKRExpHeap*); // 2
 void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2

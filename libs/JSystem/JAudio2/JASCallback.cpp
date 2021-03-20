@@ -10,6 +10,8 @@
 // 
 
 struct JASCallbackMgr {
+	/* 8028FFA8 */ void regist(s32 (*)(void*), void*);
+	/* 80290030 */ void reject(s32 (*)(void*), void*);
 	/* 802900C4 */ void callback();
 };
 
@@ -17,8 +19,6 @@ struct JASCallbackMgr {
 // Forward References:
 // 
 
-extern "C" void regist__14JASCallbackMgrFPFPv_lPv(); // 1
-extern "C" void reject__14JASCallbackMgrFPFPv_lPv(); // 1
 
 extern "C" void regist__14JASCallbackMgrFPFPv_lPv(); // 1
 extern "C" void reject__14JASCallbackMgrFPFPv_lPv(); // 1
@@ -54,7 +54,7 @@ extern "C" void _restgpr_29(); // 1
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void regist__14JASCallbackMgrFPFPv_lPv() {
+asm void JASCallbackMgr::regist(s32 (*)(void*), void* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCallback/regist__14JASCallbackMgrFPFPv_lPv.s"
 }
@@ -65,7 +65,7 @@ extern "C" asm void regist__14JASCallbackMgrFPFPv_lPv() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void reject__14JASCallbackMgrFPFPv_lPv() {
+asm void JASCallbackMgr::reject(s32 (*)(void*), void* field_1) {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASCallback/reject__14JASCallbackMgrFPFPv_lPv.s"
 }

@@ -9,10 +9,10 @@
 // Types:
 // 
 
-struct cM3dGCyl {
+struct Vec {
 };
 
-struct Vec {
+struct cM3dGCyl {
 };
 
 struct cM3dGPla {

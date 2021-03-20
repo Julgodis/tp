@@ -9,6 +9,9 @@
 // Types:
 // 
 
+struct JKRMemBreakFlag {
+};
+
 struct JKRArchive {
 	struct EMountDirection {
 	};
@@ -33,9 +36,6 @@ struct JKRArchive {
 	/* 802D6734 */ void findPtrResource(void const*) const;
 	/* 802D693C */ void setExpandSize(JKRArchive::SDIFileEntry*, u32);
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
-};
-
-struct JKRMemBreakFlag {
 };
 
 struct JKRMemArchive {

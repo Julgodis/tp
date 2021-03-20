@@ -11,20 +11,12 @@
 
 struct JASAramStream {
 	/* 802963A8 */ JASAramStream();
+	/* 8029649C */ void init(u32, u32, void (*)(u32, JASAramStream*, void*), void*);
 	/* 8029655C */ void prepare(s32, int);
 	/* 80296618 */ void start();
 	/* 8029664C */ void stop(u16);
 	/* 80296684 */ void pause(bool);
 	/* 802966CC */ void cancel();
-};
-
-struct JAIStreamMgr {
-};
-
-struct JAIAudience {
-};
-
-struct JASSoundParams {
 };
 
 struct JGeometry {
@@ -36,7 +28,7 @@ struct JGeometry {
 
 };
 
-struct JAISoundActivity {
+struct JAIAudience {
 };
 
 struct JAISoundID {
@@ -46,6 +38,15 @@ template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAIStream> */
 struct JAISoundStrategyMgr__template2 {
+};
+
+struct JAISoundActivity {
+};
+
+struct JASSoundParams {
+};
+
+struct JAIStreamMgr {
 };
 
 struct JAIStream {
@@ -132,7 +133,6 @@ extern "C" extern void* __vt__9JAIStream[12];
 // External References:
 // 
 
-extern "C" void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv(); // 1
 extern "C" void __register_global_object(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_29(); // 1

@@ -9,11 +9,11 @@
 // Types:
 // 
 
-struct JUTDirectPrint {
-	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
+struct OSContext {
 };
 
-struct OSContext {
+struct JUTDirectPrint {
+	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
 };
 
 struct JUTException {
@@ -41,6 +41,8 @@ struct JUTException {
 	/* 802E34C0 */ void printContext(u16, OSContext*, u32, u32);
 	/* 802E3980 */ void waitTime(s32);
 	/* 802E3A08 */ void createFB();
+	/* 802E3AEC */ void setPreUserCallback(void (*)(u16, OSContext*, u32, u32));
+	/* 802E3AFC */ void setPostUserCallback(void (*)(u16, OSContext*, u32, u32));
 	/* 802E3B0C */ void appendMapFile(char const*);
 	/* 802E3BA0 */ void queryMapAddress(char*, u32, s32, u32*, u32*, char*, u32, bool, bool);
 	/* 802E3C90 */ void queryMapAddress_single(char*, u32, s32, u32*, u32*, char*, u32, bool, bool);
@@ -48,10 +50,10 @@ struct JUTException {
 	/* 802E40EC */ ~JUTException();
 };
 
-struct _GXGamma {
+struct _GXRenderModeObj {
 };
 
-struct _GXRenderModeObj {
+struct _GXGamma {
 };
 
 struct JUTExternalFB {
@@ -122,8 +124,6 @@ struct JUTDirectFile {
 
 extern "C" static void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct(); // 1
 static void search_name_part(u8*, u8*, int); // 2
-extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
-extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
 extern "C" void __sinit_JUTException_cpp(); // 1
 
 extern "C" void __ct__12JUTExceptionFP14JUTDirectPrint(); // 1
@@ -745,7 +745,7 @@ asm void JUTException::createFB() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v() {
+asm void JUTException::setPreUserCallback(void (*)(u16, OSContext*, u32, u32)) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v.s"
 }
@@ -756,7 +756,7 @@ extern "C" asm void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v() {
+asm void JUTException::setPostUserCallback(void (*)(u16, OSContext*, u32, u32)) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v.s"
 }

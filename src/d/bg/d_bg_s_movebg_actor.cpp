@@ -9,6 +9,20 @@
 // Types:
 // 
 
+struct csXyz {
+};
+
+struct dBgW {
+	/* 8007B970 */ dBgW();
+	/* 8007B9C0 */ void Move();
+};
+
+struct cBgS_PolyInfo {
+};
+
+struct cXyz {
+};
+
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
 	/* 80078688 */ bool CreateHeap();
@@ -20,6 +34,7 @@ struct dBgS_MoveBgActor {
 	/* 800786B8 */ bool ToFore();
 	/* 800786C0 */ bool ToBack();
 	/* 800786C8 */ void MoveBGCreateHeap();
+	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
 };
@@ -57,11 +72,6 @@ struct cBgW {
 	/* 80079F38 */ void Set(cBgD_t*, u32, f32 (* )[3][4]);
 };
 
-struct dBgW {
-	/* 8007B970 */ dBgW();
-	/* 8007B9C0 */ void Move();
-};
-
 struct cBgW_BgId {
 	/* 802681D4 */ void ChkUsed() const;
 };
@@ -71,7 +81,6 @@ struct cBgW_BgId {
 // 
 
 static void CheckCreateHeap(fopAc_ac_c*); // 2
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
 extern "C" static void d_bg_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c(); // 1
@@ -93,7 +102,7 @@ extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
 // 
 
 void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
 void* operator new(u32); // 2
 extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
@@ -233,7 +242,7 @@ asm void dBgS_MoveBgActor::MoveBGCreateHeap() {
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f() {
+asm void dBgS_MoveBgActor::MoveBGCreate(char const* field_0, int field_1, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32 field_3, f32 (* field_4)[3][4]) {
 	nofralloc
 #include "asm/d/bg/d_bg_s_movebg_actor/func_800787BC.s"
 }

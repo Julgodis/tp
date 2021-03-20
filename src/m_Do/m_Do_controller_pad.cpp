@@ -9,6 +9,9 @@
 // Types:
 // 
 
+struct interface_of_controller_pad {
+};
+
 struct JUTGamePad {
 	struct EPadPort {
 	};
@@ -21,9 +24,6 @@ struct JUTGamePad {
 	/* 802E08E4 */ void read();
 	/* 802E1024 */ void clearForReset();
 	/* 802E199C */ void getGamePad(int);
-};
-
-struct interface_of_controller_pad {
 };
 
 struct mDoCPd_c {
