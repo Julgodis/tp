@@ -24,8 +24,8 @@ struct JAIStreamAramMgr {
 
 extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
 extern "C" void __dt__16JAIStreamAramMgrFv(); // 1
-SECTION_DATA extern void* const __vt__16JAIStreamAramMgr[5];
-SECTION_DATA extern void* const __vt__16JAIStreamDataMgr[4 + 1 /* padding */];
+extern "C" extern void* __vt__16JAIStreamAramMgr[5];
+extern "C" extern void* __vt__16JAIStreamDataMgr[4 + 1 /* padding */];
 
 // 
 // External References:
@@ -40,26 +40,26 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C9A08-803C9A1C 0014+00 rc=0 efc=0 .data      __vt__16JAIStreamAramMgr                                     */
-void* const __vt__16JAIStreamAramMgr[5] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)__dt__16JAIStreamAramMgrFv,
+/* 803C9A08-803C9A1C 0014+00 rc=2 efc=1 rfr=False None .data      __vt__16JAIStreamAramMgr                                     */
+SECTION_DATA void* __vt__16JAIStreamAramMgr[5] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)__dt__16JAIStreamAramMgrFv,
 };
 
-/* 803C9A1C-803C9A30 0010+04 rc=0 efc=0 .data      __vt__16JAIStreamDataMgr                                     */
-void* const __vt__16JAIStreamDataMgr[4 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)__dt__16JAIStreamDataMgrFv,
+/* 803C9A1C-803C9A30 0010+04 rc=3 efc=2 rfr=False None .data      __vt__16JAIStreamDataMgr                                     */
+SECTION_DATA void* __vt__16JAIStreamDataMgr[4 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)__dt__16JAIStreamDataMgrFv,
 	/* padding */
 	NULL,
 };
 
-/* 802A3AD8-802A3B20 0048+00 rc=0 efc=0 .text      __dt__16JAIStreamDataMgrFv                                   */
+/* 802A3AD8-802A3B20 0048+00 rc=5 efc=4 rfr=False None .text      __dt__16JAIStreamDataMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ asm JAIStreamDataMgr::~JAIStreamDataMgr() {
 #pragma pop
 
 
-/* 802A3B20-802A3B68 0048+00 rc=0 efc=0 .text      __dt__16JAIStreamAramMgrFv                                   */
+/* 802A3B20-802A3B68 0048+00 rc=3 efc=2 rfr=False None .text      __dt__16JAIStreamAramMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -12,11 +12,6 @@
 extern "C" void ldexp(); // 1
 
 extern "C" void ldexp(); // 1
-SECTION_SDATA2 extern u8 Math_Double_precision_s_ldexp__lit_91[8];
-SECTION_SDATA2 extern f64 Math_Double_precision_s_ldexp__lit_92;
-SECTION_SDATA2 extern f64 Math_Double_precision_s_ldexp__lit_93;
-SECTION_SDATA2 extern f64 Math_Double_precision_s_ldexp__lit_94;
-SECTION_SDATA2 extern f64 Math_Double_precision_s_ldexp__lit_95;
 
 // 
 // External References:
@@ -31,24 +26,24 @@ extern "C" void copysign(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80456B10-80456B18 0008+00 rc=0 efc=0 .sdata2    @91                                                          */
-u8 Math_Double_precision_s_ldexp__lit_91[8] = {
+/* 80456B10-80456B18 0008+00 rc=1 efc=0 rfr=False None .sdata2    @91                                                          */
+SECTION_SDATA2 static u8 Math_Double_precision_s_ldexp__lit_91[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456B18-80456B20 0008+00 rc=0 efc=0 .sdata2    @92                                                          */
-f64 Math_Double_precision_s_ldexp__lit_92 = 1.8014398509481984e+16;
+/* 80456B18-80456B20 0008+00 rc=1 efc=0 rfr=False None .sdata2    @92                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_s_ldexp__lit_92 = 1.8014398509481984e+16;
 
-/* 80456B20-80456B28 0008+00 rc=0 efc=0 .sdata2    @93                                                          */
-f64 Math_Double_precision_s_ldexp__lit_93 = 1e-300;
+/* 80456B20-80456B28 0008+00 rc=1 efc=0 rfr=False None .sdata2    @93                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_s_ldexp__lit_93 = 1e-300;
 
-/* 80456B28-80456B30 0008+00 rc=0 efc=0 .sdata2    @94                                                          */
-f64 Math_Double_precision_s_ldexp__lit_94 = 1e+300;
+/* 80456B28-80456B30 0008+00 rc=1 efc=0 rfr=False None .sdata2    @94                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_s_ldexp__lit_94 = 1e+300;
 
-/* 80456B30-80456B38 0008+00 rc=0 efc=0 .sdata2    @95                                                          */
-f64 Math_Double_precision_s_ldexp__lit_95 = 5.551115123125783e-17;
+/* 80456B30-80456B38 0008+00 rc=1 efc=0 rfr=False None .sdata2    @95                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_s_ldexp__lit_95 = 5.551115123125783e-17;
 
-/* 8036C2D0-8036C494 01C4+00 rc=0 efc=0 .text      ldexp                                                        */
+/* 8036C2D0-8036C494 01C4+00 rc=3 efc=3 rfr=False None .text      ldexp                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

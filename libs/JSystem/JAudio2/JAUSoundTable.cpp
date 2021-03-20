@@ -42,7 +42,7 @@ extern "C" void init__17JAUSoundNameTableFPCv(); // 1
 // Declarations:
 // 
 
-/* 802A7114-802A7160 004C+00 rc=0 efc=0 .text      init__13JAUSoundTableFPCv                                    */
+/* 802A7114-802A7160 004C+00 rc=1 efc=1 rfr=False None .text      init__13JAUSoundTableFPCv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,7 +53,7 @@ asm void JAUSoundTable::init(void const* field_0) {
 #pragma pop
 
 
-/* 802A7160-802A728C 012C+00 rc=0 efc=0 .text      getTypeID__13JAUSoundTableCF10JAISoundID                     */
+/* 802A7160-802A728C 012C+00 rc=10 efc=10 rfr=False None .text      getTypeID__13JAUSoundTableCF10JAISoundID                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +64,7 @@ asm void JAUSoundTable::getTypeID(JAISoundID field_0) const {
 #pragma pop
 
 
-/* 802A728C-802A73D4 0148+00 rc=0 efc=0 .text      getData__13JAUSoundTableCF10JAISoundID                       */
+/* 802A728C-802A73D4 0148+00 rc=7 efc=7 rfr=False None .text      getData__13JAUSoundTableCF10JAISoundID                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +75,7 @@ asm void JAUSoundTable::getData(JAISoundID field_0) const {
 #pragma pop
 
 
-/* 802A73D4-802A7420 004C+00 rc=0 efc=0 .text      init__17JAUSoundNameTableFPCv                                */
+/* 802A73D4-802A7420 004C+00 rc=1 efc=1 rfr=False None .text      init__17JAUSoundNameTableFPCv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

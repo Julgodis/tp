@@ -38,7 +38,7 @@ extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
 // Declarations:
 // 
 
-/* 80022428-80022460 0038+00 rc=0 efc=0 .text      fpcMtd_Method__FPFPv_iPv                                     */
+/* 80022428-80022460 0038+00 rc=10 efc=6 rfr=False None .text      fpcMtd_Method__FPFPv_iPv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -49,7 +49,7 @@ extern "C" asm void fpcMtd_Method__FPFPv_iPv() {
 #pragma pop
 
 
-/* 80022460-80022484 0024+00 rc=0 efc=0 .text      fpcMtd_Execute__FP20process_method_classPv                   */
+/* 80022460-80022484 0024+00 rc=10 efc=10 rfr=False None .text      fpcMtd_Execute__FP20process_method_classPv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +60,7 @@ asm void fpcMtd_Execute(process_method_class* field_0, void* field_1) {
 #pragma pop
 
 
-/* 80022484-800224A8 0024+00 rc=0 efc=0 .text      fpcMtd_IsDelete__FP20process_method_classPv                  */
+/* 80022484-800224A8 0024+00 rc=10 efc=10 rfr=False None .text      fpcMtd_IsDelete__FP20process_method_classPv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +71,7 @@ asm void fpcMtd_IsDelete(process_method_class* field_0, void* field_1) {
 #pragma pop
 
 
-/* 800224A8-800224CC 0024+00 rc=0 efc=0 .text      fpcMtd_Delete__FP20process_method_classPv                    */
+/* 800224A8-800224CC 0024+00 rc=10 efc=10 rfr=False None .text      fpcMtd_Delete__FP20process_method_classPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +82,7 @@ asm void fpcMtd_Delete(process_method_class* field_0, void* field_1) {
 #pragma pop
 
 
-/* 800224CC-800224F0 0024+00 rc=0 efc=0 .text      fpcMtd_Create__FP20process_method_classPv                    */
+/* 800224CC-800224F0 0024+00 rc=10 efc=10 rfr=False None .text      fpcMtd_Create__FP20process_method_classPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

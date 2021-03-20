@@ -46,10 +46,10 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-struct JKRArchive {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -101,13 +101,7 @@ extern "C" void draw__14dMsgScrnTree_cFv(); // 1
 extern "C" void fukiAlpha__14dMsgScrnTree_cFf(); // 1
 extern "C" void fukiScale__14dMsgScrnTree_cFf(); // 1
 extern "C" void fukiTrans__14dMsgScrnTree_cFff(); // 1
-SECTION_RODATA extern const u8 data_80399C18[24];
-SECTION_RODATA extern const char* const msg_scrn_d_msg_scrn_tree__stringBase0;
-SECTION_DATA extern void* const __vt__14dMsgScrnTree_c[22];
-SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_tree__lit_3949[4];
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_tree__lit_3950;
-SECTION_SDATA2 extern f32 lit_3951[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_tree__lit_4053;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_tree__stringBase0;
 
 // 
 // External References:
@@ -163,75 +157,75 @@ extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_MsgObject_HIO_c[1040];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80399C18-80399C30 0018+00 rc=0 efc=0 .rodata    t_tag$3763                                                   */
-const u8 data_80399C18[24] = {
+/* 80399C18-80399C30 0018+00 rc=1 efc=0 rfr=False None .rodata    t_tag$3763                                                   */
+SECTION_RODATA static u8 const data_80399C18[24] = {
 	0x6D, 0x67, 0x5F, 0x65, 0x34, 0x6C, 0x69, 0x6E, 0x00, 0x00, 0x00, 0x00, 0x66, 0x34, 0x5F, 0x77,
 	0x00, 0x00, 0x00, 0x00, 0x74, 0x34, 0x5F, 0x73,
 };
 
-/* 80399C30-80399C98 0064+04 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 80399C30-80399C98 0064+04 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_80399C30 = "zelda_kanban_wood_a.blo";
-const char* const stringBase_80399C48 = "zelda_kanban_wood_a.bck";
-const char* const stringBase_80399C60 = "zelda_kanban_wood_a.btk";
-const char* const stringBase_80399C78 = "zelda_kanban_wood_a_02.btk";
-const char* const stringBase_80399C93 = "";
+SECTION_DEAD static char const* const stringBase_80399C30 = "zelda_kanban_wood_a.blo";
+SECTION_DEAD static char const* const stringBase_80399C48 = "zelda_kanban_wood_a.bck";
+SECTION_DEAD static char const* const stringBase_80399C60 = "zelda_kanban_wood_a.btk";
+SECTION_DEAD static char const* const stringBase_80399C78 = "zelda_kanban_wood_a_02.btk";
+SECTION_DEAD static char const* const stringBase_80399C93 = "";
 /* @stringBase0 padding */
-char* const pad_80399C94 = "\0\0\0";
+SECTION_DEAD static char const* const pad_80399C94 = "\0\0\0";
 #pragma pop
 
-/* 803C1420-803C1478 0058+00 rc=0 efc=0 .data      __vt__14dMsgScrnTree_c                                       */
-void* const __vt__14dMsgScrnTree_c[22] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)draw__14dMsgScrnTree_cFv,
-	(void*)__dt__14dMsgScrnTree_cFv,
-	(void*)exec__14dMsgScrnTree_cFv,
-	(void*)multiDraw__14dMsgScrnBase_cFv,
-	(void*)drawSelf__14dMsgScrnBase_cFv,
-	(void*)setSelectString__14dMsgScrnBase_cFPcPcPc,
-	(void*)setSelectRubyString__14dMsgScrnBase_cFPcPcPc,
-	(void*)arwAnimeInit__14dMsgScrnBase_cFv,
-	(void*)arwAnimeMove__14dMsgScrnBase_cFv,
-	(void*)dotAnimeInit__14dMsgScrnBase_cFv,
-	(void*)dotAnimeMove__14dMsgScrnBase_cFv,
-	(void*)isSelect__14dMsgScrnBase_cFv,
-	(void*)selectAnimeInit__14dMsgScrnBase_cFUcUcfUc,
-	(void*)selectAnimeMove__14dMsgScrnBase_cFUcUcb,
-	(void*)selectAnimeEnd__14dMsgScrnBase_cFv,
-	(void*)fukiScale__14dMsgScrnTree_cFf,
-	(void*)fukiTrans__14dMsgScrnTree_cFff,
-	(void*)fukiAlpha__14dMsgScrnTree_cFf,
-	(void*)fontAlpha__14dMsgScrnBase_cFf,
-	(void*)fukiPosCalc__14dMsgScrnBase_cFUc,
+/* 803C1420-803C1478 0058+00 rc=2 efc=0 rfr=False None .data      __vt__14dMsgScrnTree_c                                       */
+SECTION_DATA static void* __vt__14dMsgScrnTree_c[22] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)draw__14dMsgScrnTree_cFv,
+	/* 3    */ (void*)__dt__14dMsgScrnTree_cFv,
+	/* 4    */ (void*)exec__14dMsgScrnTree_cFv,
+	/* 5    */ (void*)multiDraw__14dMsgScrnBase_cFv,
+	/* 6    */ (void*)drawSelf__14dMsgScrnBase_cFv,
+	/* 7    */ (void*)setSelectString__14dMsgScrnBase_cFPcPcPc,
+	/* 8    */ (void*)setSelectRubyString__14dMsgScrnBase_cFPcPcPc,
+	/* 9    */ (void*)arwAnimeInit__14dMsgScrnBase_cFv,
+	/* 10   */ (void*)arwAnimeMove__14dMsgScrnBase_cFv,
+	/* 11   */ (void*)dotAnimeInit__14dMsgScrnBase_cFv,
+	/* 12   */ (void*)dotAnimeMove__14dMsgScrnBase_cFv,
+	/* 13   */ (void*)isSelect__14dMsgScrnBase_cFv,
+	/* 14   */ (void*)selectAnimeInit__14dMsgScrnBase_cFUcUcfUc,
+	/* 15   */ (void*)selectAnimeMove__14dMsgScrnBase_cFUcUcb,
+	/* 16   */ (void*)selectAnimeEnd__14dMsgScrnBase_cFv,
+	/* 17   */ (void*)fukiScale__14dMsgScrnTree_cFf,
+	/* 18   */ (void*)fukiTrans__14dMsgScrnTree_cFff,
+	/* 19   */ (void*)fukiAlpha__14dMsgScrnTree_cFf,
+	/* 20   */ (void*)fontAlpha__14dMsgScrnBase_cFf,
+	/* 21   */ (void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
 
-/* 80454D58-80454D5C 0004+00 rc=0 efc=0 .sdata2    @3949                                                        */
-u8 msg_scrn_d_msg_scrn_tree__lit_3949[4] = {
+/* 80454D58-80454D5C 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3949                                                        */
+SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_tree__lit_3949[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454D5C-80454D60 0004+00 rc=0 efc=0 .sdata2    @3950                                                        */
-f32 msg_scrn_d_msg_scrn_tree__lit_3950 = 1.0f;
+/* 80454D5C-80454D60 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3950                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_tree__lit_3950 = 1.0f;
 
-/* 80454D60-80454D68 0004+04 rc=0 efc=0 .sdata2    @3951                                                        */
-f32 lit_3951[1 + 1 /* padding */] = {
+/* 80454D60-80454D68 0004+04 rc=1 efc=0 rfr=False None .sdata2    @3951                                                        */
+SECTION_SDATA2 static f32 lit_3951[1 + 1 /* padding */] = {
 	6.0f / 5.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80248954-80248F14 05C0+00 rc=0 efc=0 .text      __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap                */
+/* 80248954-80248F14 05C0+00 rc=1 efc=1 rfr=False None .text      __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -242,7 +236,7 @@ asm dMsgScrnTree_c::dMsgScrnTree_c(JUTFont* field_0, JKRExpHeap* field_1) {
 #pragma pop
 
 
-/* 80248F14-80249118 0204+00 rc=0 efc=0 .text      __dt__14dMsgScrnTree_cFv                                     */
+/* 80248F14-80249118 0204+00 rc=1 efc=0 rfr=False None .text      __dt__14dMsgScrnTree_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,10 +248,10 @@ asm dMsgScrnTree_c::~dMsgScrnTree_c() {
 
 
 /* ############################################################################################## */
-/* 80454D68-80454D70 0008+00 rc=0 efc=0 .sdata2    @4053                                                        */
-f64 msg_scrn_d_msg_scrn_tree__lit_4053 = 4503601774854144.0 /* cast s32 to float */;
+/* 80454D68-80454D70 0008+00 rc=1 efc=0 rfr=False None .sdata2    @4053                                                        */
+SECTION_SDATA2 static f64 msg_scrn_d_msg_scrn_tree__lit_4053 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80249118-80249270 0158+00 rc=0 efc=0 .text      exec__14dMsgScrnTree_cFv                                     */
+/* 80249118-80249270 0158+00 rc=1 efc=0 rfr=False None .text      exec__14dMsgScrnTree_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -268,7 +262,7 @@ asm void dMsgScrnTree_c::exec() {
 #pragma pop
 
 
-/* 80249270-802492F8 0088+00 rc=0 efc=0 .text      draw__14dMsgScrnTree_cFv                                     */
+/* 80249270-802492F8 0088+00 rc=1 efc=0 rfr=False None .text      draw__14dMsgScrnTree_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -279,7 +273,7 @@ asm void dMsgScrnTree_c::draw() {
 #pragma pop
 
 
-/* 802492F8-802493AC 00B4+00 rc=0 efc=0 .text      fukiAlpha__14dMsgScrnTree_cFf                                */
+/* 802492F8-802493AC 00B4+00 rc=1 efc=0 rfr=False None .text      fukiAlpha__14dMsgScrnTree_cFf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -290,13 +284,13 @@ asm void dMsgScrnTree_c::fukiAlpha(f32 field_0) {
 #pragma pop
 
 
-/* 802493AC-802493B0 0004+00 rc=0 efc=0 .text      fukiScale__14dMsgScrnTree_cFf                                */
+/* 802493AC-802493B0 0004+00 rc=1 efc=0 rfr=False None .text      fukiScale__14dMsgScrnTree_cFf                                */
 void dMsgScrnTree_c::fukiScale(f32 field_0) {
 	/* empty function */
 }
 
 
-/* 802493B0-802493B4 0004+00 rc=0 efc=0 .text      fukiTrans__14dMsgScrnTree_cFff                               */
+/* 802493B0-802493B4 0004+00 rc=1 efc=0 rfr=False None .text      fukiTrans__14dMsgScrnTree_cFff                               */
 void dMsgScrnTree_c::fukiTrans(f32 field_0, f32 field_1) {
 	/* empty function */
 }

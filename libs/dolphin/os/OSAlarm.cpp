@@ -11,25 +11,23 @@
 
 extern "C" void OSInitAlarm(); // 1
 extern "C" void OSCreateAlarm(); // 1
-extern "C" void InsertAlarm(); // 1
+extern "C" static void InsertAlarm(); // 1
 extern "C" void OSSetAlarm(); // 1
 extern "C" void OSSetPeriodicAlarm(); // 1
 extern "C" void OSCancelAlarm(); // 1
-extern "C" void DecrementerExceptionCallback(); // 1
-extern "C" void DecrementerExceptionHandler(); // 1
-extern "C" void OSAlarm__OnReset(); // 1
+extern "C" static void DecrementerExceptionCallback(); // 1
+extern "C" static void DecrementerExceptionHandler(); // 1
+extern "C" static void OSAlarm__OnReset(); // 1
 
 extern "C" void OSInitAlarm(); // 1
 extern "C" void OSCreateAlarm(); // 1
-extern "C" void InsertAlarm(); // 1
+extern "C" static void InsertAlarm(); // 1
 extern "C" void OSSetAlarm(); // 1
 extern "C" void OSSetPeriodicAlarm(); // 1
 extern "C" void OSCancelAlarm(); // 1
-extern "C" void DecrementerExceptionCallback(); // 1
-extern "C" void DecrementerExceptionHandler(); // 1
-extern "C" void OSAlarm__OnReset(); // 1
-SECTION_DATA extern void* OSAlarm__ResetFunctionInfo[4];
-SECTION_SBSS extern u8 AlarmQueue[8];
+extern "C" static void DecrementerExceptionCallback(); // 1
+extern "C" static void DecrementerExceptionHandler(); // 1
+extern "C" static void OSAlarm__OnReset(); // 1
 
 // 
 // External References:
@@ -74,18 +72,18 @@ extern "C" void __div2i(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803CF480-803CF490 0010+00 rc=0 efc=0 .data      ResetFunctionInfo                                            */
-void* OSAlarm__ResetFunctionInfo[4] = {
-	(void*)OSAlarm__OnReset,
-	(void*)0xFFFFFFFF,
-	(void*)NULL,
-	(void*)NULL,
+/* 803CF480-803CF490 0010+00 rc=1 efc=0 rfr=False None .data      ResetFunctionInfo                                            */
+SECTION_DATA static void* OSAlarm__ResetFunctionInfo[4] = {
+	/* 0    */ (void*)OSAlarm__OnReset,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
 };
 
-/* 80451638-80451640 0008+00 rc=0 efc=0 .sbss      AlarmQueue                                                   */
-u8 AlarmQueue[8];
+/* 80451638-80451640 0008+00 rc=5 efc=0 rfr=False None .sbss      AlarmQueue                                                   */
+static u8 AlarmQueue[8];
 
-/* 8033A8A0-8033A8F8 0058+00 rc=0 efc=0 .text      OSInitAlarm                                                  */
+/* 8033A8A0-8033A8F8 0058+00 rc=3 efc=3 rfr=False None .text      OSInitAlarm                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +94,7 @@ extern "C" asm void OSInitAlarm() {
 #pragma pop
 
 
-/* 8033A8F8-8033A908 0010+00 rc=0 efc=0 .text      OSCreateAlarm                                                */
+/* 8033A8F8-8033A908 0010+00 rc=17 efc=17 rfr=False None .text      OSCreateAlarm                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,18 +105,18 @@ extern "C" asm void OSCreateAlarm() {
 #pragma pop
 
 
-/* 8033A908-8033AB58 0250+00 rc=0 efc=0 .text      InsertAlarm                                                  */
+/* 8033A908-8033AB58 0250+00 rc=3 efc=0 rfr=False None .text      InsertAlarm                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void InsertAlarm() {
+extern "C" asm static void InsertAlarm() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/InsertAlarm.s"
 }
 #pragma pop
 
 
-/* 8033AB58-8033ABC0 0068+00 rc=0 efc=0 .text      OSSetAlarm                                                   */
+/* 8033AB58-8033ABC0 0068+00 rc=18 efc=18 rfr=False None .text      OSSetAlarm                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +127,7 @@ extern "C" asm void OSSetAlarm() {
 #pragma pop
 
 
-/* 8033ABC0-8033AC3C 007C+00 rc=0 efc=0 .text      OSSetPeriodicAlarm                                           */
+/* 8033ABC0-8033AC3C 007C+00 rc=1 efc=1 rfr=False None .text      OSSetPeriodicAlarm                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,7 +138,7 @@ extern "C" asm void OSSetPeriodicAlarm() {
 #pragma pop
 
 
-/* 8033AC3C-8033AD58 011C+00 rc=0 efc=0 .text      OSCancelAlarm                                                */
+/* 8033AC3C-8033AD58 011C+00 rc=12 efc=11 rfr=False None .text      OSCancelAlarm                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,33 +149,33 @@ extern "C" asm void OSCancelAlarm() {
 #pragma pop
 
 
-/* 8033AD58-8033AF88 0230+00 rc=0 efc=0 .text      DecrementerExceptionCallback                                 */
+/* 8033AD58-8033AF88 0230+00 rc=1 efc=0 rfr=False None .text      DecrementerExceptionCallback                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void DecrementerExceptionCallback() {
+extern "C" asm static void DecrementerExceptionCallback() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/DecrementerExceptionCallback.s"
 }
 #pragma pop
 
 
-/* 8033AF88-8033AFD8 0050+00 rc=0 efc=0 .text      DecrementerExceptionHandler                                  */
+/* 8033AF88-8033AFD8 0050+00 rc=1 efc=0 rfr=False None .text      DecrementerExceptionHandler                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void DecrementerExceptionHandler() {
+extern "C" asm static void DecrementerExceptionHandler() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/DecrementerExceptionHandler.s"
 }
 #pragma pop
 
 
-/* 8033AFD8-8033B078 00A0+00 rc=0 efc=0 .text      OnReset                                                      */
+/* 8033AFD8-8033B078 00A0+00 rc=1 efc=0 rfr=False None .text      OnReset                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void OSAlarm__OnReset() {
+extern "C" asm static void OSAlarm__OnReset() {
 	nofralloc
 #include "asm/dolphin/os/OSAlarm/OSAlarm__OnReset.s"
 }

@@ -70,11 +70,11 @@ struct cBgW_BgId {
 // Forward References:
 // 
 
-void CheckCreateHeap(fopAc_ac_c*); // 2
+static void CheckCreateHeap(fopAc_ac_c*); // 2
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" void d_bg_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c(); // 1
+extern "C" static void d_bg_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c(); // 1
 extern "C" bool CreateHeap__16dBgS_MoveBgActorFv(); // 1
 extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
 extern "C" bool Execute__16dBgS_MoveBgActorFPPA3_A4_f(); // 1
@@ -87,10 +87,6 @@ extern "C" void MoveBGCreateHeap__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-SECTION_DATA extern void* const __vt__16dBgS_MoveBgActor[10];
-SECTION_SBSS extern u8 m_name__16dBgS_MoveBgActor[4];
-SECTION_SBSS extern u8 m_dzb_id__16dBgS_MoveBgActor[4];
-SECTION_SBSS extern u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -120,29 +116,29 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_27(); // 1
-SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803AB9A0-803AB9C8 0028+00 rc=0 efc=0 .data      __vt__16dBgS_MoveBgActor                                     */
-void* const __vt__16dBgS_MoveBgActor[10] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)CreateHeap__16dBgS_MoveBgActorFv,
-	(void*)Create__16dBgS_MoveBgActorFv,
-	(void*)Execute__16dBgS_MoveBgActorFPPA3_A4_f,
-	(void*)Draw__16dBgS_MoveBgActorFv,
-	(void*)Delete__16dBgS_MoveBgActorFv,
-	(void*)IsDelete__16dBgS_MoveBgActorFv,
-	(void*)ToFore__16dBgS_MoveBgActorFv,
-	(void*)ToBack__16dBgS_MoveBgActorFv,
+/* 803AB9A0-803AB9C8 0028+00 rc=1 efc=0 rfr=False None .data      __vt__16dBgS_MoveBgActor                                     */
+SECTION_DATA static void* __vt__16dBgS_MoveBgActor[10] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)CreateHeap__16dBgS_MoveBgActorFv,
+	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
+	/* 4    */ (void*)Execute__16dBgS_MoveBgActorFPPA3_A4_f,
+	/* 5    */ (void*)Draw__16dBgS_MoveBgActorFv,
+	/* 6    */ (void*)Delete__16dBgS_MoveBgActorFv,
+	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
+	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
+	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
-/* 80078624-80078668 0044+00 rc=0 efc=0 .text      __ct__16dBgS_MoveBgActorFv                                   */
+/* 80078624-80078668 0044+00 rc=0 efc=0 rfr=False None .text      __ct__16dBgS_MoveBgActorFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -153,76 +149,76 @@ asm dBgS_MoveBgActor::dBgS_MoveBgActor() {
 #pragma pop
 
 
-/* 80078668-80078688 0020+00 rc=0 efc=0 .text      CheckCreateHeap__FP10fopAc_ac_c                              */
+/* 80078668-80078688 0020+00 rc=1 efc=0 rfr=False None .text      CheckCreateHeap__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CheckCreateHeap(fopAc_ac_c* field_0) {
+asm static void CheckCreateHeap(fopAc_ac_c* field_0) {
 	nofralloc
 #include "asm/d/bg/d_bg_s_movebg_actor/d_bg_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80078688-80078690 0008+00 rc=0 efc=0 .text      CreateHeap__16dBgS_MoveBgActorFv                             */
+/* 80078688-80078690 0008+00 rc=1 efc=0 rfr=False None .text      CreateHeap__16dBgS_MoveBgActorFv                             */
 bool dBgS_MoveBgActor::CreateHeap() {
 	return true;
 }
 
 
-/* 80078690-80078698 0008+00 rc=0 efc=0 .text      Create__16dBgS_MoveBgActorFv                                 */
+/* 80078690-80078698 0008+00 rc=1 efc=0 rfr=False None .text      Create__16dBgS_MoveBgActorFv                                 */
 bool dBgS_MoveBgActor::Create() {
 	return true;
 }
 
 
-/* 80078698-800786A0 0008+00 rc=0 efc=0 .text      Execute__16dBgS_MoveBgActorFPPA3_A4_f                        */
+/* 80078698-800786A0 0008+00 rc=1 efc=0 rfr=False None .text      Execute__16dBgS_MoveBgActorFPPA3_A4_f                        */
 bool dBgS_MoveBgActor::Execute(f32 (** field_0)[3][4]) {
 	return true;
 }
 
 
-/* 800786A0-800786A8 0008+00 rc=0 efc=0 .text      Draw__16dBgS_MoveBgActorFv                                   */
+/* 800786A0-800786A8 0008+00 rc=1 efc=0 rfr=False None .text      Draw__16dBgS_MoveBgActorFv                                   */
 bool dBgS_MoveBgActor::Draw() {
 	return true;
 }
 
 
-/* 800786A8-800786B0 0008+00 rc=0 efc=0 .text      Delete__16dBgS_MoveBgActorFv                                 */
+/* 800786A8-800786B0 0008+00 rc=1 efc=0 rfr=False None .text      Delete__16dBgS_MoveBgActorFv                                 */
 bool dBgS_MoveBgActor::Delete() {
 	return true;
 }
 
 
-/* 800786B0-800786B8 0008+00 rc=0 efc=0 .text      IsDelete__16dBgS_MoveBgActorFv                               */
+/* 800786B0-800786B8 0008+00 rc=1 efc=0 rfr=False None .text      IsDelete__16dBgS_MoveBgActorFv                               */
 bool dBgS_MoveBgActor::IsDelete() {
 	return true;
 }
 
 
-/* 800786B8-800786C0 0008+00 rc=0 efc=0 .text      ToFore__16dBgS_MoveBgActorFv                                 */
+/* 800786B8-800786C0 0008+00 rc=1 efc=0 rfr=False None .text      ToFore__16dBgS_MoveBgActorFv                                 */
 bool dBgS_MoveBgActor::ToFore() {
 	return true;
 }
 
 
-/* 800786C0-800786C8 0008+00 rc=0 efc=0 .text      ToBack__16dBgS_MoveBgActorFv                                 */
+/* 800786C0-800786C8 0008+00 rc=1 efc=0 rfr=False None .text      ToBack__16dBgS_MoveBgActorFv                                 */
 bool dBgS_MoveBgActor::ToBack() {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 80450F70-80450F74 0004+00 rc=0 efc=0 .sbss      m_name__16dBgS_MoveBgActor                                   */
-u8 m_name__16dBgS_MoveBgActor[4];
+/* 80450F70-80450F74 0004+00 rc=2 efc=0 rfr=False None .sbss      m_name__16dBgS_MoveBgActor                                   */
+static u8 m_name__16dBgS_MoveBgActor[4];
 
-/* 80450F74-80450F78 0004+00 rc=0 efc=0 .sbss      m_dzb_id__16dBgS_MoveBgActor                                 */
-u8 m_dzb_id__16dBgS_MoveBgActor[4];
+/* 80450F74-80450F78 0004+00 rc=2 efc=0 rfr=False None .sbss      m_dzb_id__16dBgS_MoveBgActor                                 */
+static u8 m_dzb_id__16dBgS_MoveBgActor[4];
 
-/* 80450F78-80450F80 0004+04 rc=0 efc=0 .sbss      m_set_func__16dBgS_MoveBgActor                               */
-u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
+/* 80450F78-80450F80 0004+04 rc=2 efc=0 rfr=False None .sbss      m_set_func__16dBgS_MoveBgActor                               */
+static u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
 
-/* 800786C8-800787BC 00F4+00 rc=0 efc=0 .text      MoveBGCreateHeap__16dBgS_MoveBgActorFv                       */
+/* 800786C8-800787BC 00F4+00 rc=1 efc=0 rfr=False None .text      MoveBGCreateHeap__16dBgS_MoveBgActorFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -233,7 +229,7 @@ asm void dBgS_MoveBgActor::MoveBGCreateHeap() {
 #pragma pop
 
 
-/* 800787BC-800788DC 0120+00 rc=0 efc=0 .text      MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f */
+/* 800787BC-800788DC 0120+00 rc=0 efc=0 rfr=False None .text      MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -244,7 +240,7 @@ extern "C" asm void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_Poly
 #pragma pop
 
 
-/* 800788DC-80078950 0074+00 rc=0 efc=0 .text      MoveBGDelete__16dBgS_MoveBgActorFv                           */
+/* 800788DC-80078950 0074+00 rc=0 efc=0 rfr=False None .text      MoveBGDelete__16dBgS_MoveBgActorFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +251,7 @@ asm void dBgS_MoveBgActor::MoveBGDelete() {
 #pragma pop
 
 
-/* 80078950-80078A14 00C4+00 rc=0 efc=0 .text      MoveBGExecute__16dBgS_MoveBgActorFv                          */
+/* 80078950-80078A14 00C4+00 rc=0 efc=0 rfr=False None .text      MoveBGExecute__16dBgS_MoveBgActorFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

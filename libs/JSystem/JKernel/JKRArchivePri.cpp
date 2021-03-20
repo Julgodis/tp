@@ -65,7 +65,7 @@ extern "C" void store__Q210JKRArchive8CArcNameFPCc(); // 1
 extern "C" void store__Q210JKRArchive8CArcNameFPCcc(); // 1
 extern "C" void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl(); // 1
 extern "C" void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry(); // 1
-SECTION_SBSS extern u8 sCurrentDirID__10JKRArchive[4 + 4 /* padding */];
+extern "C" extern u8 sCurrentDirID__10JKRArchive[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -93,19 +93,19 @@ extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void tolower(); // 1
 extern "C" void strcmp(); // 1
-SECTION_DATA extern void* const __vt__10JKRArchive[20];
-SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
-SECTION_SBSS extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
+extern "C" extern void* __vt__10JKRArchive[20];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
+extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80451420-80451428 0004+04 rc=0 efc=0 .sbss      sCurrentDirID__10JKRArchive                                  */
+/* 80451420-80451428 0004+04 rc=6 efc=5 rfr=False None .sbss      sCurrentDirID__10JKRArchive                                  */
 u8 sCurrentDirID__10JKRArchive[4 + 4 /* padding */];
 
-/* 802D6294-802D6334 00A0+00 rc=0 efc=0 .text      __ct__10JKRArchiveFlQ210JKRArchive10EMountMode               */
+/* 802D6294-802D6334 00A0+00 rc=5 efc=5 rfr=False None .text      __ct__10JKRArchiveFlQ210JKRArchive10EMountMode               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +116,7 @@ asm JKRArchive::JKRArchive(s32 field_0, JKRArchive::EMountMode field_1) {
 #pragma pop
 
 
-/* 802D6334-802D6394 0060+00 rc=0 efc=0 .text      __dt__10JKRArchiveFv                                         */
+/* 802D6334-802D6394 0060+00 rc=5 efc=5 rfr=False None .text      __dt__10JKRArchiveFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +127,7 @@ asm JKRArchive::~JKRArchive() {
 #pragma pop
 
 
-/* 802D6394-802D63E0 004C+00 rc=0 efc=0 .text      isSameName__10JKRArchiveCFRQ210JKRArchive8CArcNameUlUs       */
+/* 802D6394-802D63E0 004C+00 rc=4 efc=0 rfr=False None .text      isSameName__10JKRArchiveCFRQ210JKRArchive8CArcNameUlUs       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +138,7 @@ asm void JKRArchive::isSameName(JKRArchive::CArcName& field_0, u32 field_1, u16 
 #pragma pop
 
 
-/* 802D63E0-802D641C 003C+00 rc=0 efc=0 .text      findResType__10JKRArchiveCFUl                                */
+/* 802D63E0-802D641C 003C+00 rc=1 efc=0 rfr=False None .text      findResType__10JKRArchiveCFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -149,7 +149,7 @@ asm void JKRArchive::findResType(u32 field_0) const {
 #pragma pop
 
 
-/* 802D641C-802D64F4 00D8+00 rc=0 efc=0 .text      findDirectory__10JKRArchiveCFPCcUl                           */
+/* 802D641C-802D64F4 00D8+00 rc=3 efc=3 rfr=False None .text      findDirectory__10JKRArchiveCFPCcUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +160,7 @@ asm void JKRArchive::findDirectory(char const* field_0, u32 field_1) const {
 #pragma pop
 
 
-/* 802D64F4-802D65A4 00B0+00 rc=0 efc=0 .text      findTypeResource__10JKRArchiveCFUlPCc                        */
+/* 802D64F4-802D65A4 00B0+00 rc=2 efc=2 rfr=False None .text      findTypeResource__10JKRArchiveCFUlPCc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +171,7 @@ asm void JKRArchive::findTypeResource(u32 field_0, char const* field_1) const {
 #pragma pop
 
 
-/* 802D65A4-802D6684 00E0+00 rc=0 efc=0 .text      findFsResource__10JKRArchiveCFPCcUl                          */
+/* 802D65A4-802D6684 00E0+00 rc=4 efc=4 rfr=False None .text      findFsResource__10JKRArchiveCFPCcUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +182,7 @@ asm void JKRArchive::findFsResource(char const* field_0, u32 field_1) const {
 #pragma pop
 
 
-/* 802D6684-802D66AC 0028+00 rc=0 efc=0 .text      findIdxResource__10JKRArchiveCFUl                            */
+/* 802D6684-802D66AC 0028+00 rc=7 efc=7 rfr=False None .text      findIdxResource__10JKRArchiveCFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -193,7 +193,7 @@ asm void JKRArchive::findIdxResource(u32 field_0) const {
 #pragma pop
 
 
-/* 802D66AC-802D6734 0088+00 rc=0 efc=0 .text      findNameResource__10JKRArchiveCFPCc                          */
+/* 802D66AC-802D6734 0088+00 rc=4 efc=4 rfr=False None .text      findNameResource__10JKRArchiveCFPCc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -204,7 +204,7 @@ asm void JKRArchive::findNameResource(char const* field_0) const {
 #pragma pop
 
 
-/* 802D6734-802D6770 003C+00 rc=0 efc=0 .text      findPtrResource__10JKRArchiveCFPCv                           */
+/* 802D6734-802D6770 003C+00 rc=9 efc=9 rfr=False None .text      findPtrResource__10JKRArchiveCFPCv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -215,7 +215,7 @@ asm void JKRArchive::findPtrResource(void const* field_0) const {
 #pragma pop
 
 
-/* 802D6770-802D67F4 0084+00 rc=0 efc=0 .text      findIdResource__10JKRArchiveCFUs                             */
+/* 802D6770-802D67F4 0084+00 rc=4 efc=4 rfr=False None .text      findIdResource__10JKRArchiveCFUs                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -226,7 +226,7 @@ asm void JKRArchive::findIdResource(u16 field_0) const {
 #pragma pop
 
 
-/* 802D67F4-802D6884 0090+00 rc=0 efc=0 .text      store__Q210JKRArchive8CArcNameFPCc                           */
+/* 802D67F4-802D6884 0090+00 rc=2 efc=0 rfr=False None .text      store__Q210JKRArchive8CArcNameFPCc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -237,7 +237,7 @@ asm void JKRArchive::CArcName::store(char const* field_0) {
 #pragma pop
 
 
-/* 802D6884-802D693C 00B8+00 rc=0 efc=0 .text      store__Q210JKRArchive8CArcNameFPCcc                          */
+/* 802D6884-802D693C 00B8+00 rc=2 efc=0 rfr=False None .text      store__Q210JKRArchive8CArcNameFPCcc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -248,7 +248,7 @@ asm void JKRArchive::CArcName::store(char const* field_0, char field_1) {
 #pragma pop
 
 
-/* 802D693C-802D6978 003C+00 rc=0 efc=0 .text      setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl  */
+/* 802D693C-802D6978 003C+00 rc=5 efc=5 rfr=False None .text      setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -259,7 +259,7 @@ asm void JKRArchive::setExpandSize(JKRArchive::SDIFileEntry* field_0, u32 field_
 #pragma pop
 
 
-/* 802D6978-802D69B8 0040+00 rc=0 efc=0 .text      getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry   */
+/* 802D6978-802D69B8 0040+00 rc=5 efc=5 rfr=False None .text      getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

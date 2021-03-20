@@ -10,13 +10,13 @@
 // 
 
 extern "C" void __CARDSeek(); // 1
-extern "C" void ReadCallback(); // 1
-extern "C" void CARDReadAsync(); // 1
+extern "C" static void ReadCallback(); // 1
+extern "C" static void CARDReadAsync(); // 1
 extern "C" void CARDRead(); // 1
 
 extern "C" void __CARDSeek(); // 1
-extern "C" void ReadCallback(); // 1
-extern "C" void CARDReadAsync(); // 1
+extern "C" static void ReadCallback(); // 1
+extern "C" static void CARDReadAsync(); // 1
 extern "C" void CARDRead(); // 1
 
 // 
@@ -44,13 +44,13 @@ extern "C" void __CARDRead(); // 1
 extern "C" void __CARDGetFatBlock(); // 1
 extern "C" void __CARDGetDirBlock(); // 1
 extern "C" void __CARDIsReadable(); // 1
-SECTION_BSS extern u8 __CARDBlock[544];
+extern "C" extern u8 __CARDBlock[544];
 
 // 
 // Declarations:
 // 
 
-/* 803584A0-80358658 01B8+00 rc=0 efc=0 .text      __CARDSeek                                                   */
+/* 803584A0-80358658 01B8+00 rc=2 efc=1 rfr=False None .text      __CARDSeek                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,29 +61,29 @@ extern "C" asm void __CARDSeek() {
 #pragma pop
 
 
-/* 80358658-80358788 0130+00 rc=0 efc=0 .text      ReadCallback                                                 */
+/* 80358658-80358788 0130+00 rc=1 efc=0 rfr=False None .text      ReadCallback                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void ReadCallback() {
+extern "C" asm static void ReadCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDRead/ReadCallback.s"
 }
 #pragma pop
 
 
-/* 80358788-803588CC 0144+00 rc=0 efc=0 .text      CARDReadAsync                                                */
+/* 80358788-803588CC 0144+00 rc=1 efc=0 rfr=False None .text      CARDReadAsync                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void CARDReadAsync() {
+extern "C" asm static void CARDReadAsync() {
 	nofralloc
 #include "asm/dolphin/card/CARDRead/CARDReadAsync.s"
 }
 #pragma pop
 
 
-/* 803588CC-80358914 0048+00 rc=0 efc=0 .text      CARDRead                                                     */
+/* 803588CC-80358914 0048+00 rc=2 efc=2 rfr=False None .text      CARDRead                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

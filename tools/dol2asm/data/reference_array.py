@@ -26,10 +26,10 @@ class ReferenceArray(ArbitraryData):
         padding = self.padding // self.element_size
         
         if size == 1 and padding == 0:
-            return self.data_type
+            return self.element_type()
         else:
             return PaddingArrayType.create(
-                self.data_type,
+                self.element_type(),
                 self.size // self.element_size,
                 self.padding // self.element_size)
 
@@ -93,7 +93,7 @@ class ReferenceArray(ArbitraryData):
             for index, reference in enumerate(self.references):
                 value = self.export_reference_value(
                     exporter.gst, index, reference)
-                await builder.write(f"\t(void*){value},")
+                await builder.write(f"\t/* {index:<4} */ (void*){value},")
 
             if self.padding > 0:
                 await builder.write("\t/* padding */")

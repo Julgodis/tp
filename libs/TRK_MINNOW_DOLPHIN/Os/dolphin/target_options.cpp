@@ -26,7 +26,7 @@ SECTION_BSS extern u8 data_8044F828[8];
 // Declarations:
 // 
 
-/* 80372180-80372190 0010+00 rc=0 efc=0 .text      GetUseSerialIO                                               */
+/* 80372180-80372190 0010+00 rc=2 efc=2 rfr=False None .text      GetUseSerialIO                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -37,7 +37,7 @@ extern "C" asm void GetUseSerialIO() {
 #pragma pop
 
 
-/* 80372190-8037219C 000C+00 rc=0 efc=0 .text      SetUseSerialIO                                               */
+/* 80372190-8037219C 000C+00 rc=1 efc=1 rfr=False None .text      SetUseSerialIO                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

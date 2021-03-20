@@ -9,25 +9,10 @@
 // Types:
 // 
 
-struct JAISeMgr {
-};
-
-struct JAISoundActivity {
-};
-
-struct JASSoundParams {
-};
-
-struct JAISoundID {
-};
-
 struct JAIAudience {
 };
 
-template <typename A0>
-struct JAISoundStrategyMgr { };
-/* JAISoundStrategyMgr<JAISe> */
-struct JAISoundStrategyMgr__template0 {
+struct JASSoundParams {
 };
 
 struct JGeometry {
@@ -37,6 +22,21 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundActivity {
+};
+
+struct JAISoundID {
+};
+
+template <typename A0>
+struct JAISoundStrategyMgr { };
+/* JAISoundStrategyMgr<JAISe> */
+struct JAISoundStrategyMgr__template0 {
+};
+
+struct JAISeMgr {
 };
 
 struct JAISe {
@@ -95,14 +95,14 @@ struct JSUPtrLink {
 // Forward References:
 // 
 
-extern "C" void func_8029F870(); // 1
-extern "C" void func_8029F878(); // 1
-extern "C" void func_8029F880(); // 1
-extern "C" void func_8029F888(); // 1
-extern "C" void func_8029F890(); // 1
-extern "C" void func_8029F898(); // 1
-extern "C" void func_8029F8A0(); // 1
-extern "C" void func_8029F8A8(); // 1
+extern "C" static void func_8029F870(); // 1
+extern "C" static void func_8029F878(); // 1
+extern "C" static void func_8029F880(); // 1
+extern "C" static void func_8029F888(); // 1
+extern "C" static void func_8029F890(); // 1
+extern "C" static void func_8029F898(); // 1
+extern "C" static void func_8029F8A0(); // 1
+extern "C" static void func_8029F8A8(); // 1
 
 extern "C" void func_8029F03C(); // 1
 extern "C" void mixOut___5JAISeFRC14JASSoundParams(); // 1
@@ -121,19 +121,15 @@ extern "C" void getTrack__5JAISeFv(); // 1
 extern "C" void getChildTrack__5JAISeFi(); // 1
 extern "C" void asSe__5JAISeFv(); // 1
 extern "C" void getTempoMgr__5JAISeFv(); // 1
-extern "C" void func_8029F870(); // 1
-extern "C" void func_8029F878(); // 1
-extern "C" void func_8029F880(); // 1
-extern "C" void func_8029F888(); // 1
-extern "C" void func_8029F890(); // 1
-extern "C" void func_8029F898(); // 1
-extern "C" void func_8029F8A0(); // 1
-extern "C" void func_8029F8A8(); // 1
-SECTION_DATA extern void* const __vt__5JAISe[22];
-SECTION_SDATA2 extern f32 JAISe__lit_626;
-SECTION_SDATA2 extern u8 JAISe__lit_627[4];
-SECTION_SDATA2 extern f32 JAISe__lit_628;
-SECTION_SDATA2 extern f32 lit_736;
+extern "C" static void func_8029F870(); // 1
+extern "C" static void func_8029F878(); // 1
+extern "C" static void func_8029F880(); // 1
+extern "C" static void func_8029F888(); // 1
+extern "C" static void func_8029F890(); // 1
+extern "C" static void func_8029F898(); // 1
+extern "C" static void func_8029F8A0(); // 1
+extern "C" static void func_8029F8A8(); // 1
+extern "C" extern void* __vt__5JAISe[22];
 
 // 
 // External References:
@@ -174,44 +170,44 @@ extern "C" void _restgpr_29(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C9858-803C98B0 0058+00 rc=0 efc=0 .data      __vt__5JAISe                                                 */
-void* const __vt__5JAISe[22] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_8029F8A8,
-	(void*)func_8029F8A0,
-	(void*)func_8029F898,
-	(void*)func_8029F890,
-	(void*)asSeq__8JAISoundFv,
-	(void*)asStream__8JAISoundFv,
-	(void*)func_8029F888,
-	(void*)func_8029F880,
-	(void*)func_8029F878,
-	(void*)func_8029F870,
-	(void*)getNumChild__5JAISeCFv,
-	(void*)getChild__5JAISeFi,
-	(void*)releaseChild__5JAISeFi,
-	(void*)getTrack__5JAISeFv,
-	(void*)getChildTrack__5JAISeFi,
-	(void*)asSe__5JAISeFv,
-	(void*)getTempoMgr__5JAISeFv,
-	(void*)JAISound_tryDie___5JAISeFv,
+/* 803C9858-803C98B0 0058+00 rc=2 efc=1 rfr=False None .data      __vt__5JAISe                                                 */
+SECTION_DATA void* __vt__5JAISe[22] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)func_8029F8A8,
+	/* 5    */ (void*)func_8029F8A0,
+	/* 6    */ (void*)func_8029F898,
+	/* 7    */ (void*)func_8029F890,
+	/* 8    */ (void*)asSeq__8JAISoundFv,
+	/* 9    */ (void*)asStream__8JAISoundFv,
+	/* 10   */ (void*)func_8029F888,
+	/* 11   */ (void*)func_8029F880,
+	/* 12   */ (void*)func_8029F878,
+	/* 13   */ (void*)func_8029F870,
+	/* 14   */ (void*)getNumChild__5JAISeCFv,
+	/* 15   */ (void*)getChild__5JAISeFi,
+	/* 16   */ (void*)releaseChild__5JAISeFi,
+	/* 17   */ (void*)getTrack__5JAISeFv,
+	/* 18   */ (void*)getChildTrack__5JAISeFi,
+	/* 19   */ (void*)asSe__5JAISeFv,
+	/* 20   */ (void*)getTempoMgr__5JAISeFv,
+	/* 21   */ (void*)JAISound_tryDie___5JAISeFv,
 };
 
-/* 80455778-8045577C 0004+00 rc=0 efc=0 .sdata2    @626                                                         */
-f32 JAISe__lit_626 = 1.0f;
+/* 80455778-8045577C 0004+00 rc=2 efc=0 rfr=False None .sdata2    @626                                                         */
+SECTION_SDATA2 static f32 JAISe__lit_626 = 1.0f;
 
-/* 8045577C-80455780 0004+00 rc=0 efc=0 .sdata2    @627                                                         */
-u8 JAISe__lit_627[4] = {
+/* 8045577C-80455780 0004+00 rc=2 efc=0 rfr=False None .sdata2    @627                                                         */
+SECTION_SDATA2 static u8 JAISe__lit_627[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455780-80455784 0004+00 rc=0 efc=0 .sdata2    @628                                                         */
-f32 JAISe__lit_628 = 0.5f;
+/* 80455780-80455784 0004+00 rc=2 efc=0 rfr=False None .sdata2    @628                                                         */
+SECTION_SDATA2 static f32 JAISe__lit_628 = 0.5f;
 
-/* 8029F03C-8029F0F8 00BC+00 rc=0 efc=0 .text      __ct__5JAISeFP8JAISeMgrP27JAISoundStrategyMgr<5JAISe>Ul      */
+/* 8029F03C-8029F0F8 00BC+00 rc=1 efc=1 rfr=False None .text      __ct__5JAISeFP8JAISeMgrP27JAISoundStrategyMgr<5JAISe>Ul      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -222,7 +218,7 @@ asm JAISe::JAISe(JAISeMgr* field_0, JAISoundStrategyMgr<JAISe>* field_1, u32 fie
 #pragma pop
 
 
-/* 8029F0F8-8029F214 011C+00 rc=0 efc=0 .text      mixOut___5JAISeFRC14JASSoundParams                           */
+/* 8029F0F8-8029F214 011C+00 rc=1 efc=0 rfr=False None .text      mixOut___5JAISeFRC14JASSoundParams                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -233,7 +229,7 @@ asm void JAISe::mixOut_(JASSoundParams const& field_0) {
 #pragma pop
 
 
-/* 8029F214-8029F250 003C+00 rc=0 efc=0 .text      stopTrack___5JAISeFv                                         */
+/* 8029F214-8029F250 003C+00 rc=1 efc=0 rfr=False None .text      stopTrack___5JAISeFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -244,7 +240,7 @@ asm void JAISe::stopTrack_() {
 #pragma pop
 
 
-/* 8029F250-8029F304 00B4+00 rc=0 efc=0 .text      startTrack___5JAISeFRC14JASSoundParams                       */
+/* 8029F250-8029F304 00B4+00 rc=1 efc=0 rfr=False None .text      startTrack___5JAISeFRC14JASSoundParams                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -256,10 +252,10 @@ asm void JAISe::startTrack_(JASSoundParams const& field_0) {
 
 
 /* ############################################################################################## */
-/* 80455784-80455788 0004+00 rc=0 efc=0 .sdata2    @736                                                         */
-f32 lit_736 = 1.0f / 100.0f;
+/* 80455784-80455788 0004+00 rc=2 efc=0 rfr=False None .sdata2    @736                                                         */
+SECTION_SDATA2 static f32 lit_736 = 1.0f / 100.0f;
 
-/* 8029F304-8029F4CC 01C8+00 rc=0 efc=0 .text      JAISeCategoryMgr_mixOut___5JAISeFbRC14JASSoundParams16JAISoundActivity */
+/* 8029F304-8029F4CC 01C8+00 rc=1 efc=1 rfr=False None .text      JAISeCategoryMgr_mixOut___5JAISeFbRC14JASSoundParams16JAISoundActivity */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -270,7 +266,7 @@ asm void JAISe::JAISeCategoryMgr_mixOut_(bool field_0, JASSoundParams const& fie
 #pragma pop
 
 
-/* 8029F4CC-8029F5C8 00FC+00 rc=0 efc=0 .text      JAISeCategoryMgr_calc___5JAISeFv                             */
+/* 8029F4CC-8029F5C8 00FC+00 rc=1 efc=1 rfr=False None .text      JAISeCategoryMgr_calc___5JAISeFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -281,7 +277,7 @@ asm void JAISe::JAISeCategoryMgr_calc_() {
 #pragma pop
 
 
-/* 8029F5C8-8029F650 0088+00 rc=0 efc=0 .text      JAISound_tryDie___5JAISeFv                                   */
+/* 8029F5C8-8029F650 0088+00 rc=2 efc=0 rfr=False None .text      JAISound_tryDie___5JAISeFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,7 +288,7 @@ asm void JAISe::JAISound_tryDie_() {
 #pragma pop
 
 
-/* 8029F650-8029F6D8 0088+00 rc=0 efc=0 .text      JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
+/* 8029F650-8029F6D8 0088+00 rc=1 efc=1 rfr=False None .text      JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -303,25 +299,25 @@ asm void JAISe::JAISeMgr_startID_(JAISoundID field_0, JGeometry::TVec3<f32> cons
 #pragma pop
 
 
-/* 8029F6D8-8029F6E0 0008+00 rc=0 efc=0 .text      getNumChild__5JAISeCFv                                       */
+/* 8029F6D8-8029F6E0 0008+00 rc=2 efc=0 rfr=False None .text      getNumChild__5JAISeCFv                                       */
 bool JAISe::getNumChild() const {
 	return false;
 }
 
 
-/* 8029F6E0-8029F6E8 0008+00 rc=0 efc=0 .text      getChild__5JAISeFi                                           */
+/* 8029F6E0-8029F6E8 0008+00 rc=2 efc=0 rfr=False None .text      getChild__5JAISeFi                                           */
 bool JAISe::getChild(int field_0) {
 	return false;
 }
 
 
-/* 8029F6E8-8029F6EC 0004+00 rc=0 efc=0 .text      releaseChild__5JAISeFi                                       */
+/* 8029F6E8-8029F6EC 0004+00 rc=2 efc=0 rfr=False None .text      releaseChild__5JAISeFi                                       */
 void JAISe::releaseChild(int field_0) {
 	/* empty function */
 }
 
 
-/* 8029F6EC-8029F78C 00A0+00 rc=0 efc=0 .text      prepare_getSeqData___5JAISeFv                                */
+/* 8029F6EC-8029F78C 00A0+00 rc=1 efc=0 rfr=False None .text      prepare_getSeqData___5JAISeFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -332,7 +328,7 @@ asm void JAISe::prepare_getSeqData_() {
 #pragma pop
 
 
-/* 8029F78C-8029F84C 00C0+00 rc=0 efc=0 .text      prepare___5JAISeFv                                           */
+/* 8029F78C-8029F84C 00C0+00 rc=1 efc=0 rfr=False None .text      prepare___5JAISeFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -343,7 +339,7 @@ asm void JAISe::prepare_() {
 #pragma pop
 
 
-/* 8029F84C-8029F854 0008+00 rc=0 efc=0 .text      getTrack__5JAISeFv                                           */
+/* 8029F84C-8029F854 0008+00 rc=2 efc=0 rfr=False None .text      getTrack__5JAISeFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -354,7 +350,7 @@ asm void JAISe::getTrack() {
 #pragma pop
 
 
-/* 8029F854-8029F864 0010+00 rc=0 efc=0 .text      getChildTrack__5JAISeFi                                      */
+/* 8029F854-8029F864 0010+00 rc=2 efc=0 rfr=False None .text      getChildTrack__5JAISeFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -365,13 +361,13 @@ asm void JAISe::getChildTrack(int field_0) {
 #pragma pop
 
 
-/* 8029F864-8029F868 0004+00 rc=0 efc=0 .text      asSe__5JAISeFv                                               */
+/* 8029F864-8029F868 0004+00 rc=2 efc=0 rfr=False None .text      asSe__5JAISeFv                                               */
 void JAISe::asSe() {
 	/* empty function */
 }
 
 
-/* 8029F868-8029F870 0008+00 rc=0 efc=0 .text      getTempoMgr__5JAISeFv                                        */
+/* 8029F868-8029F870 0008+00 rc=2 efc=0 rfr=False None .text      getTempoMgr__5JAISeFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -382,88 +378,88 @@ asm void JAISe::getTempoMgr() {
 #pragma pop
 
 
-/* 8029F870-8029F878 0008+00 rc=0 efc=0 .text      @16@JAISound_tryDie___5JAISeFv                               */
+/* 8029F870-8029F878 0008+00 rc=1 efc=0 rfr=False None .text      @16@JAISound_tryDie___5JAISeFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8029F870() {
+extern "C" asm static void func_8029F870() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISe/func_8029F870.s"
 }
 #pragma pop
 
 
-/* 8029F878-8029F880 0008+00 rc=0 efc=0 .text      @16@getTempoMgr__5JAISeFv                                    */
+/* 8029F878-8029F880 0008+00 rc=1 efc=0 rfr=False None .text      @16@getTempoMgr__5JAISeFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8029F878() {
+extern "C" asm static void func_8029F878() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISe/func_8029F878.s"
 }
 #pragma pop
 
 
-/* 8029F880-8029F888 0008+00 rc=0 efc=0 .text      @16@getChildTrack__5JAISeFi                                  */
+/* 8029F880-8029F888 0008+00 rc=1 efc=0 rfr=False None .text      @16@getChildTrack__5JAISeFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8029F880() {
+extern "C" asm static void func_8029F880() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISe/func_8029F880.s"
 }
 #pragma pop
 
 
-/* 8029F888-8029F890 0008+00 rc=0 efc=0 .text      @16@getTrack__5JAISeFv                                       */
+/* 8029F888-8029F890 0008+00 rc=1 efc=0 rfr=False None .text      @16@getTrack__5JAISeFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8029F888() {
+extern "C" asm static void func_8029F888() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISe/func_8029F888.s"
 }
 #pragma pop
 
 
-/* 8029F890-8029F898 0008+00 rc=0 efc=0 .text      @16@asSe__5JAISeFv                                           */
+/* 8029F890-8029F898 0008+00 rc=1 efc=0 rfr=False None .text      @16@asSe__5JAISeFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8029F890() {
+extern "C" asm static void func_8029F890() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISe/func_8029F890.s"
 }
 #pragma pop
 
 
-/* 8029F898-8029F8A0 0008+00 rc=0 efc=0 .text      @16@releaseChild__5JAISeFi                                   */
+/* 8029F898-8029F8A0 0008+00 rc=1 efc=0 rfr=False None .text      @16@releaseChild__5JAISeFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8029F898() {
+extern "C" asm static void func_8029F898() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISe/func_8029F898.s"
 }
 #pragma pop
 
 
-/* 8029F8A0-8029F8A8 0008+00 rc=0 efc=0 .text      @16@getChild__5JAISeFi                                       */
+/* 8029F8A0-8029F8A8 0008+00 rc=1 efc=0 rfr=False None .text      @16@getChild__5JAISeFi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8029F8A0() {
+extern "C" asm static void func_8029F8A0() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISe/func_8029F8A0.s"
 }
 #pragma pop
 
 
-/* 8029F8A8-8029F8B0 0008+00 rc=0 efc=0 .text      @16@getNumChild__5JAISeCFv                                   */
+/* 8029F8A8-8029F8B0 0008+00 rc=1 efc=0 rfr=False None .text      @16@getNumChild__5JAISeCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8029F8A8() {
+extern "C" asm static void func_8029F8A8() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JAISe/func_8029F8A8.s"
 }

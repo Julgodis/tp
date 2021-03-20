@@ -9,7 +9,9 @@ def merge_symbol_from_group(context, section, group):
         return None
 
     if isinstance(group[0], ArbitraryData):
-        return [Structure.create(section, group)]
+        struct = Structure.create(section, group)
+        struct.set_mlts(group[0]._module,group[0]._library,group[0]._translation_unit,group[0]._section)
+        return [struct]
 
     context.error(group[0])
     context.error(group[0].section.id)

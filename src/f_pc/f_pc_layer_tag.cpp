@@ -31,7 +31,6 @@ extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs(); // 1
 extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class(); // 1
 extern "C" void fpcLyTg_Move__FP26layer_management_tag_classUiUsUs(); // 1
 extern "C" void fpcLyTg_Init__FP26layer_management_tag_classUiPv(); // 1
-SECTION_DATA extern u8 data_803A3A00[28 + 4 /* padding */];
 
 // 
 // External References:
@@ -61,7 +60,7 @@ extern "C" void _restgpr_28(); // 1
 // Declarations:
 // 
 
-/* 80021CD4-80021DCC 00F8+00 rc=0 efc=0 .text      fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs        */
+/* 80021CD4-80021DCC 00F8+00 rc=2 efc=1 rfr=False None .text      fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +71,7 @@ asm void fpcLyTg_ToQueue(layer_management_tag_class* field_0, u32 field_1, u16 f
 #pragma pop
 
 
-/* 80021DCC-80021E2C 0060+00 rc=0 efc=0 .text      fpcLyTg_QueueTo__FP26layer_management_tag_class              */
+/* 80021DCC-80021E2C 0060+00 rc=3 efc=2 rfr=False None .text      fpcLyTg_QueueTo__FP26layer_management_tag_class              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +82,7 @@ asm void fpcLyTg_QueueTo(layer_management_tag_class* field_0) {
 #pragma pop
 
 
-/* 80021E2C-80021EB0 0084+00 rc=0 efc=0 .text      fpcLyTg_Move__FP26layer_management_tag_classUiUsUs           */
+/* 80021E2C-80021EB0 0084+00 rc=1 efc=1 rfr=False None .text      fpcLyTg_Move__FP26layer_management_tag_classUiUsUs           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,15 +94,15 @@ asm void fpcLyTg_Move(layer_management_tag_class* field_0, u32 field_1, u16 fiel
 
 
 /* ############################################################################################## */
-/* 803A3A00-803A3A20 001C+04 rc=0 efc=0 .data      crear$2239                                                   */
-u8 data_803A3A00[28 + 4 /* padding */] = {
+/* 803A3A00-803A3A20 001C+04 rc=1 efc=0 rfr=False None .data      crear$2239                                                   */
+SECTION_DATA static u8 data_803A3A00[28 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80021EB0-80021F64 00B4+00 rc=0 efc=0 .text      fpcLyTg_Init__FP26layer_management_tag_classUiPv             */
+/* 80021EB0-80021F64 00B4+00 rc=1 efc=1 rfr=False None .text      fpcLyTg_Init__FP26layer_management_tag_classUiPv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

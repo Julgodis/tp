@@ -26,35 +26,33 @@ struct JUTFader {
 // Forward References:
 // 
 
-bool dOvlpFd_Draw(overlap1_class*); // 2
-void dOvlpFd_startFadeIn(int); // 2
-void dOvlpFd_FadeOut(overlap1_class*); // 2
-void dOvlpFd_Wait(overlap1_class*); // 2
-void dOvlpFd_FadeIn(overlap1_class*); // 2
-void dOvlpFd_Execute(overlap1_class*); // 2
-bool dOvlpFd_IsDelete(overlap1_class*); // 2
-bool dOvlpFd_Delete(overlap1_class*); // 2
-void dOvlpFd_Create(void*); // 2
+static bool dOvlpFd_Draw(overlap1_class*); // 2
+static void dOvlpFd_startFadeIn(int); // 2
+static void dOvlpFd_FadeOut(overlap1_class*); // 2
+static void dOvlpFd_Wait(overlap1_class*); // 2
+static void dOvlpFd_FadeIn(overlap1_class*); // 2
+static void dOvlpFd_Execute(overlap1_class*); // 2
+static bool dOvlpFd_IsDelete(overlap1_class*); // 2
+static bool dOvlpFd_Delete(overlap1_class*); // 2
+static void dOvlpFd_Create(void*); // 2
 
-extern "C" bool dOvlpFd_Draw__FP14overlap1_class(); // 1
-extern "C" void dOvlpFd_startFadeIn__Fi(); // 1
-extern "C" void dOvlpFd_FadeOut__FP14overlap1_class(); // 1
-extern "C" void dOvlpFd_Wait__FP14overlap1_class(); // 1
-extern "C" void dOvlpFd_FadeIn__FP14overlap1_class(); // 1
-extern "C" void dOvlpFd_Execute__FP14overlap1_class(); // 1
-extern "C" bool dOvlpFd_IsDelete__FP14overlap1_class(); // 1
-extern "C" bool dOvlpFd_Delete__FP14overlap1_class(); // 1
-extern "C" void dOvlpFd_Create__FPv(); // 1
-SECTION_DATA extern void* l_dOvlpFd_Method[5];
-SECTION_DATA extern void* g_profile_OVERLAP0[10];
-SECTION_DATA extern void* g_profile_OVERLAP1[10];
-SECTION_DATA extern void* g_profile_OVERLAP6[10];
-SECTION_DATA extern void* g_profile_OVERLAP7[10];
-SECTION_DATA extern void* g_profile_OVERLAP8[10];
-SECTION_DATA extern void* g_profile_OVERLAP9[10];
-SECTION_DATA extern void* g_profile_OVERLAP10[10];
-SECTION_DATA extern void* g_profile_OVERLAP11[10 + 1 /* padding */];
-SECTION_SBSS extern u8 dOvlpFd_execute_f[4 + 4 /* padding */];
+extern "C" static bool dOvlpFd_Draw__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_startFadeIn__Fi(); // 1
+extern "C" static void dOvlpFd_FadeOut__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_Wait__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_FadeIn__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_Execute__FP14overlap1_class(); // 1
+extern "C" static bool dOvlpFd_IsDelete__FP14overlap1_class(); // 1
+extern "C" static bool dOvlpFd_Delete__FP14overlap1_class(); // 1
+extern "C" static void dOvlpFd_Create__FPv(); // 1
+extern "C" extern void* g_profile_OVERLAP0[10];
+extern "C" extern void* g_profile_OVERLAP1[10];
+extern "C" extern void* g_profile_OVERLAP6[10];
+extern "C" extern void* g_profile_OVERLAP7[10];
+extern "C" extern void* g_profile_OVERLAP8[10];
+extern "C" extern void* g_profile_OVERLAP9[10];
+extern "C" extern void* g_profile_OVERLAP10[10];
+extern "C" extern void* g_profile_OVERLAP11[10 + 1 /* padding */];
 
 // 
 // External References:
@@ -72,37 +70,37 @@ extern "C" void fopOvlpM_SceneIsStart__Fv(); // 1
 extern "C" void fopOvlpM_IsOutReq__FP18overlap_task_class(); // 1
 extern "C" void fopOvlpM_Done__FP18overlap_task_class(); // 1
 extern "C" void setStatus__8JUTFaderFQ28JUTFader7EStatusi(); // 1
-SECTION_DATA extern void* g_fopOvlp_Method[5 + 1 /* padding */];
-SECTION_DATA extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SBSS extern u8 sManager__10JFWDisplay[4];
+extern "C" extern void* g_fopOvlp_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 sManager__10JFWDisplay[4];
 
 // 
 // Declarations:
 // 
 
-/* 8025217C-80252184 0008+00 rc=0 efc=0 .text      dOvlpFd_Draw__FP14overlap1_class                             */
-bool dOvlpFd_Draw(overlap1_class* field_0) {
+/* 8025217C-80252184 0008+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_Draw__FP14overlap1_class                             */
+static bool dOvlpFd_Draw(overlap1_class* field_0) {
 	return true;
 }
 
 
-/* 80252184-802521F4 0070+00 rc=0 efc=0 .text      dOvlpFd_startFadeIn__Fi                                      */
+/* 80252184-802521F4 0070+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_startFadeIn__Fi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dOvlpFd_startFadeIn(int field_0) {
+asm static void dOvlpFd_startFadeIn(int field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_startFadeIn__Fi.s"
 }
 #pragma pop
 
 
-/* 802521F4-802522C8 00D4+00 rc=0 efc=0 .text      dOvlpFd_FadeOut__FP14overlap1_class                          */
+/* 802521F4-802522C8 00D4+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_FadeOut__FP14overlap1_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dOvlpFd_FadeOut(overlap1_class* field_0) {
+asm static void dOvlpFd_FadeOut(overlap1_class* field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_FadeOut__FP14overlap1_class.s"
 }
@@ -110,59 +108,59 @@ asm void dOvlpFd_FadeOut(overlap1_class* field_0) {
 
 
 /* ############################################################################################## */
-/* 804510E0-804510E8 0004+04 rc=0 efc=0 .sbss      dOvlpFd_execute_f                                            */
-u8 dOvlpFd_execute_f[4 + 4 /* padding */];
+/* 804510E0-804510E8 0004+04 rc=4 efc=0 rfr=False None .sbss      dOvlpFd_execute_f                                            */
+static u8 dOvlpFd_execute_f[4 + 4 /* padding */];
 
-/* 802522C8-80252300 0038+00 rc=0 efc=0 .text      dOvlpFd_Wait__FP14overlap1_class                             */
+/* 802522C8-80252300 0038+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_Wait__FP14overlap1_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dOvlpFd_Wait(overlap1_class* field_0) {
+asm static void dOvlpFd_Wait(overlap1_class* field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_Wait__FP14overlap1_class.s"
 }
 #pragma pop
 
 
-/* 80252300-8025242C 012C+00 rc=0 efc=0 .text      dOvlpFd_FadeIn__FP14overlap1_class                           */
+/* 80252300-8025242C 012C+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_FadeIn__FP14overlap1_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dOvlpFd_FadeIn(overlap1_class* field_0) {
+asm static void dOvlpFd_FadeIn(overlap1_class* field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_FadeIn__FP14overlap1_class.s"
 }
 #pragma pop
 
 
-/* 8025242C-80252458 002C+00 rc=0 efc=0 .text      dOvlpFd_Execute__FP14overlap1_class                          */
+/* 8025242C-80252458 002C+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_Execute__FP14overlap1_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dOvlpFd_Execute(overlap1_class* field_0) {
+asm static void dOvlpFd_Execute(overlap1_class* field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_Execute__FP14overlap1_class.s"
 }
 #pragma pop
 
 
-/* 80252458-80252460 0008+00 rc=0 efc=0 .text      dOvlpFd_IsDelete__FP14overlap1_class                         */
-bool dOvlpFd_IsDelete(overlap1_class* field_0) {
+/* 80252458-80252460 0008+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_IsDelete__FP14overlap1_class                         */
+static bool dOvlpFd_IsDelete(overlap1_class* field_0) {
 	return true;
 }
 
 
-/* 80252460-80252468 0008+00 rc=0 efc=0 .text      dOvlpFd_Delete__FP14overlap1_class                           */
-bool dOvlpFd_Delete(overlap1_class* field_0) {
+/* 80252460-80252468 0008+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_Delete__FP14overlap1_class                           */
+static bool dOvlpFd_Delete(overlap1_class* field_0) {
 	return true;
 }
 
 
-/* 80252468-8025247C 0014+00 rc=0 efc=0 .text      dOvlpFd_Create__FPv                                          */
+/* 80252468-8025247C 0014+00 rc=1 efc=0 rfr=False None .text      dOvlpFd_Create__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dOvlpFd_Create(void* field_0) {
+asm static void dOvlpFd_Create(void* field_0) {
 	nofralloc
 #include "asm/d/ovlp/d_ovlp_fade/dOvlpFd_Create__FPv.s"
 }
@@ -170,125 +168,125 @@ asm void dOvlpFd_Create(void* field_0) {
 
 
 /* ############################################################################################## */
-/* 803C2B98-803C2BAC 0014+00 rc=0 efc=0 .data      l_dOvlpFd_Method                                             */
-void* l_dOvlpFd_Method[5] = {
-	(void*)dOvlpFd_Create__FPv,
-	(void*)dOvlpFd_Delete__FP14overlap1_class,
-	(void*)dOvlpFd_Execute__FP14overlap1_class,
-	(void*)dOvlpFd_IsDelete__FP14overlap1_class,
-	(void*)dOvlpFd_Draw__FP14overlap1_class,
+/* 803C2B98-803C2BAC 0014+00 rc=8 efc=0 rfr=False None .data      l_dOvlpFd_Method                                             */
+SECTION_DATA static void* l_dOvlpFd_Method[5] = {
+	/* 0    */ (void*)dOvlpFd_Create__FPv,
+	/* 1    */ (void*)dOvlpFd_Delete__FP14overlap1_class,
+	/* 2    */ (void*)dOvlpFd_Execute__FP14overlap1_class,
+	/* 3    */ (void*)dOvlpFd_IsDelete__FP14overlap1_class,
+	/* 4    */ (void*)dOvlpFd_Draw__FP14overlap1_class,
 };
 
-/* 803C2BAC-803C2BD4 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP0                                           */
-void* g_profile_OVERLAP0[10] = {
-	(void*)NULL,
-	(void*)0x0000FFFD,
-	(void*)NULL,
-	(void*)&g_fpcLf_Method,
-	(void*)0x000000D8,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)&g_fopOvlp_Method,
-	(void*)0x03050000,
-	(void*)&l_dOvlpFd_Method,
+/* 803C2BAC-803C2BD4 0028+00 rc=0 efc=0 rfr=False None .data      g_profile_OVERLAP0                                           */
+SECTION_DATA void* g_profile_OVERLAP0[10] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0x0000FFFD,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000000D8,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopOvlp_Method,
+	/* 8    */ (void*)0x03050000,
+	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2BD4-803C2BFC 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP1                                           */
-void* g_profile_OVERLAP1[10] = {
-	(void*)NULL,
-	(void*)0x0000FFFD,
-	(void*)0x00010000,
-	(void*)&g_fpcLf_Method,
-	(void*)0x000000D8,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)&g_fopOvlp_Method,
-	(void*)0x03060000,
-	(void*)&l_dOvlpFd_Method,
+/* 803C2BD4-803C2BFC 0028+00 rc=0 efc=0 rfr=False None .data      g_profile_OVERLAP1                                           */
+SECTION_DATA void* g_profile_OVERLAP1[10] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0x0000FFFD,
+	/* 2    */ (void*)0x00010000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000000D8,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopOvlp_Method,
+	/* 8    */ (void*)0x03060000,
+	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2BFC-803C2C24 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP6                                           */
-void* g_profile_OVERLAP6[10] = {
-	(void*)NULL,
-	(void*)0x0000FFFD,
-	(void*)0x00030000,
-	(void*)&g_fpcLf_Method,
-	(void*)0x000000D8,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)&g_fopOvlp_Method,
-	(void*)0x03090000,
-	(void*)&l_dOvlpFd_Method,
+/* 803C2BFC-803C2C24 0028+00 rc=0 efc=0 rfr=False None .data      g_profile_OVERLAP6                                           */
+SECTION_DATA void* g_profile_OVERLAP6[10] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0x0000FFFD,
+	/* 2    */ (void*)0x00030000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000000D8,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopOvlp_Method,
+	/* 8    */ (void*)0x03090000,
+	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C24-803C2C4C 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP7                                           */
-void* g_profile_OVERLAP7[10] = {
-	(void*)NULL,
-	(void*)0x0000FFFD,
-	(void*)0x00040000,
-	(void*)&g_fpcLf_Method,
-	(void*)0x000000D8,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)&g_fopOvlp_Method,
-	(void*)0x030A0000,
-	(void*)&l_dOvlpFd_Method,
+/* 803C2C24-803C2C4C 0028+00 rc=0 efc=0 rfr=False None .data      g_profile_OVERLAP7                                           */
+SECTION_DATA void* g_profile_OVERLAP7[10] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0x0000FFFD,
+	/* 2    */ (void*)0x00040000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000000D8,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopOvlp_Method,
+	/* 8    */ (void*)0x030A0000,
+	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C4C-803C2C74 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP8                                           */
-void* g_profile_OVERLAP8[10] = {
-	(void*)NULL,
-	(void*)0x0000FFFD,
-	(void*)0x00050000,
-	(void*)&g_fpcLf_Method,
-	(void*)0x000000D8,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)&g_fopOvlp_Method,
-	(void*)0x030B0000,
-	(void*)&l_dOvlpFd_Method,
+/* 803C2C4C-803C2C74 0028+00 rc=0 efc=0 rfr=False None .data      g_profile_OVERLAP8                                           */
+SECTION_DATA void* g_profile_OVERLAP8[10] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0x0000FFFD,
+	/* 2    */ (void*)0x00050000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000000D8,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopOvlp_Method,
+	/* 8    */ (void*)0x030B0000,
+	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C74-803C2C9C 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP9                                           */
-void* g_profile_OVERLAP9[10] = {
-	(void*)NULL,
-	(void*)0x0000FFFD,
-	(void*)0x00060000,
-	(void*)&g_fpcLf_Method,
-	(void*)0x000000D8,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)&g_fopOvlp_Method,
-	(void*)0x030C0000,
-	(void*)&l_dOvlpFd_Method,
+/* 803C2C74-803C2C9C 0028+00 rc=0 efc=0 rfr=False None .data      g_profile_OVERLAP9                                           */
+SECTION_DATA void* g_profile_OVERLAP9[10] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0x0000FFFD,
+	/* 2    */ (void*)0x00060000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000000D8,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopOvlp_Method,
+	/* 8    */ (void*)0x030C0000,
+	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2C9C-803C2CC4 0028+00 rc=0 efc=0 .data      g_profile_OVERLAP10                                          */
-void* g_profile_OVERLAP10[10] = {
-	(void*)NULL,
-	(void*)0x0000FFFD,
-	(void*)0x00070000,
-	(void*)&g_fpcLf_Method,
-	(void*)0x000000D8,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)&g_fopOvlp_Method,
-	(void*)0x030D0000,
-	(void*)&l_dOvlpFd_Method,
+/* 803C2C9C-803C2CC4 0028+00 rc=0 efc=0 rfr=False None .data      g_profile_OVERLAP10                                          */
+SECTION_DATA void* g_profile_OVERLAP10[10] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0x0000FFFD,
+	/* 2    */ (void*)0x00070000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000000D8,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopOvlp_Method,
+	/* 8    */ (void*)0x030D0000,
+	/* 9    */ (void*)&l_dOvlpFd_Method,
 };
 
-/* 803C2CC4-803C2CF0 0028+04 rc=0 efc=0 .data      g_profile_OVERLAP11                                          */
-void* g_profile_OVERLAP11[10 + 1 /* padding */] = {
-	(void*)NULL,
-	(void*)0x0000FFFD,
-	(void*)0x00080000,
-	(void*)&g_fpcLf_Method,
-	(void*)0x000000D8,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)&g_fopOvlp_Method,
-	(void*)0x030E0000,
-	(void*)&l_dOvlpFd_Method,
+/* 803C2CC4-803C2CF0 0028+04 rc=0 efc=0 rfr=False None .data      g_profile_OVERLAP11                                          */
+SECTION_DATA void* g_profile_OVERLAP11[10 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0x0000FFFD,
+	/* 2    */ (void*)0x00080000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x000000D8,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopOvlp_Method,
+	/* 8    */ (void*)0x030E0000,
+	/* 9    */ (void*)&l_dOvlpFd_Method,
 	/* padding */
 	NULL,
 };

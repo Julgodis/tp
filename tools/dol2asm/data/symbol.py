@@ -15,8 +15,10 @@ class Symbol:
     alignment: int = 0
     reference_count: int = 0
     external_reference_count: int = 0
+    require_forward_reference: bool = False
     data_type: Type = None
     source: str = None
+    force_section: str = None
     _internal_references = None
     _module: str = None
     _library: str = None
@@ -57,6 +59,10 @@ class Symbol:
     @property
     def label(self):
         return self.identifier.label
+
+    @property
+    def is_static(self):
+        return self.reference_count > 0 and self.external_reference_count == 0
 
     def add_reference(self, referencer):
         self.reference_count += 1
@@ -116,10 +122,8 @@ class Symbol:
     async def export_section_header(self, builder: AsyncBuilder):
         if self._section == ".extab":
             await builder.write("#pragma section \"extab_\"")
-            await builder.write_nonewline("SECTION_EXTAB ")
         if self._section == ".extabindex":
             await builder.write("#pragma section \"extabindex_\"")
-            await builder.write_nonewline("SECTION_EXTABINDEX ")
         elif self._section == ".ctors":
             if self.identifier.label == "__init_cpp_exceptions_reference":
                 await builder.write("#pragma section \".ctors$10\"")
@@ -134,26 +138,54 @@ class Symbol:
             elif self.identifier.label == "__fini_cpp_exceptions_reference":
                 await builder.write("#pragma section \".dtors$15\"")
                 await builder.write_nonewline("__declspec(section \".dtors$15\") ")
+        elif self.force_section:
+            if self.force_section == '.bss':
+                await builder.write_nonewline("SECTION_BSS ")
+            else:
+                assert False
+        else:
+            await builder.write_nonewline("extern \"C\" ")
+        """
+        elif self._section == ".sbss2":
+            # metrowerks cannot generate symbols in the .sbss2 section from code. Because it requries
+            # every constant symbol to be initialized. (.sbss2 hold constant uninitialized data)
+            # Thus, we force the compiler to put the symbol in the right place
+            await builder.write_nonewline("SECTION_SBSS2 ")
+        """
 
     async def export_section(self, builder: AsyncBuilder):
         section = ""
+
         if self._section == ".data":
             section = "SECTION_DATA "
         elif self._section == ".sdata":
             section = "SECTION_SDATA "
         elif self._section == ".sdata2":
             section = "SECTION_SDATA2 "
-        elif self._section == ".bss":
-            section = "SECTION_BSS "
-        elif self._section == ".sbss":
-            section = "SECTION_SBSS "
+        #elif self._section == ".bss":
+        #    section = "SECTION_BSS "
+        #elif self._section == ".sbss":
+        #    section = "SECTION_SBSS "
         elif self._section == ".sbss2":
             section = "SECTION_SBSS2 "
         elif self._section == ".init":
             section = "SECTION_INIT "
         elif self._section == ".rodata":
             section = "SECTION_RODATA "
-
+        elif self._section == ".extab":
+            await builder.write_nonewline("SECTION_EXTAB ")
+        elif self._section == ".extabindex":
+            await builder.write_nonewline("SECTION_EXTABINDEX ")
+        elif self._section == ".ctors":
+            if self.identifier.label == "__init_cpp_exceptions_reference":
+                section = "__declspec(section \".ctors$10\") "
+            elif self.identifier.label == "_ctors":
+                section = "__declspec(section \".ctors$10\") "
+        elif self._section == ".dtors":
+            if self.identifier.label == "__destroy_global_chain_reference":
+                section = "__declspec(section \".dtors$10\") "
+            elif self.identifier.label == "__fini_cpp_exceptions_reference":
+                section = "__declspec(section \".dtors$15\") "
         await builder.write_nonewline(section)
 
     async def export_extern(self, builder: AsyncBuilder):

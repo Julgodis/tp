@@ -44,24 +44,24 @@ struct dMeter2Info_c {
 	/* 8021CC00 */ void resetMeterString();
 };
 
-struct JKRArchive {
+struct J2DPane {
+	/* 802F7AFC */ void getParentPane();
+	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRExpHeap {
 };
 
 struct J2DGrafContext {
+};
+
+struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7AFC */ void getParentPane();
-	/* 802F7FCC */ void animationTransform();
 };
 
 struct CPaneMgr {
@@ -102,20 +102,7 @@ extern "C" void createString__14dMeterString_cFi(); // 1
 extern "C" void playBckAnimation__14dMeterString_cFf(); // 1
 extern "C" void drawPikari__14dMeterString_cFv(); // 1
 extern "C" void isLeadByte__14dMeterString_cFi(); // 1
-SECTION_RODATA extern const char* const d_meter_d_meter_string__stringBase0;
-SECTION_DATA extern void* const __vt__14dMeterString_c[8];
-SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3758;
-SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3759;
-SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3760;
-SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3761;
-SECTION_SDATA2 extern u8 d_meter_d_meter_string__lit_3762[4];
-SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3819;
-SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3820;
-SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3821;
-SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3822[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 d_meter_d_meter_string__lit_3824;
-SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3866;
-SECTION_SDATA2 extern f32 d_meter_d_meter_string__lit_3979;
+extern "C" extern char const* const d_meter_d_meter_string__stringBase0;
 
 // 
 // External References:
@@ -157,30 +144,30 @@ extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
 extern "C" void _savegpr_23(); // 1
 extern "C" void _restgpr_23(); // 1
 extern "C" void strcpy(); // 1
-SECTION_DATA extern void* const __vt__12dDlst_base_c[3];
-SECTION_DATA extern void* const __vt__11dMeterSub_c[8 + 3 /* padding */];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 g_drawHIO[3880];
-SECTION_BSS extern u8 g_meter2_info[248];
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_drawHIO[3880];
+extern "C" extern u8 g_meter2_info[248];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803BF308-803BF328 0020+00 rc=0 efc=0 .data      __vt__14dMeterString_c                                       */
-void* const __vt__14dMeterString_c[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)draw__14dMeterString_cFv,
-	(void*)__dt__14dMeterString_cFv,
-	(void*)_create__14dMeterString_cFv,
-	(void*)_execute__14dMeterString_cFUl,
-	(void*)_delete__14dMeterString_cFv,
-	(void*)isDead__11dMeterSub_cFv,
+/* 803BF308-803BF328 0020+00 rc=2 efc=0 rfr=False None .data      __vt__14dMeterString_c                                       */
+SECTION_DATA static void* __vt__14dMeterString_c[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)draw__14dMeterString_cFv,
+	/* 3    */ (void*)__dt__14dMeterString_cFv,
+	/* 4    */ (void*)_create__14dMeterString_cFv,
+	/* 5    */ (void*)_execute__14dMeterString_cFUl,
+	/* 6    */ (void*)_delete__14dMeterString_cFv,
+	/* 7    */ (void*)isDead__11dMeterSub_cFv,
 };
 
-/* 8020ED60-8020EDF4 0094+00 rc=0 efc=0 .text      __ct__14dMeterString_cFi                                     */
+/* 8020ED60-8020EDF4 0094+00 rc=1 efc=1 rfr=False None .text      __ct__14dMeterString_cFi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +178,7 @@ asm dMeterString_c::dMeterString_c(int field_0) {
 #pragma pop
 
 
-/* 8020EDF4-8020EE70 007C+00 rc=0 efc=0 .text      __dt__14dMeterString_cFv                                     */
+/* 8020EDF4-8020EE70 007C+00 rc=1 efc=0 rfr=False None .text      __dt__14dMeterString_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -203,35 +190,35 @@ asm dMeterString_c::~dMeterString_c() {
 
 
 /* ############################################################################################## */
-/* 80398210-80398258 0041+07 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 80398210-80398258 0041+07 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_80398210 = "zelda_game_image_cow_get_in.blo";
-const char* const stringBase_80398230 = "zelda_game_image_cow_get_in.bck";
-const char* const stringBase_80398250 = "";
+SECTION_DEAD static char const* const stringBase_80398210 = "zelda_game_image_cow_get_in.blo";
+SECTION_DEAD static char const* const stringBase_80398230 = "zelda_game_image_cow_get_in.bck";
+SECTION_DEAD static char const* const stringBase_80398250 = "";
 /* @stringBase0 padding */
-char* const pad_80398251 = "\0\0\0\0\0\0";
+SECTION_DEAD static char const* const pad_80398251 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 80454848-8045484C 0004+00 rc=0 efc=0 .sdata2    @3758                                                        */
-f32 d_meter_d_meter_string__lit_3758 = 210.0f;
+/* 80454848-8045484C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3758                                                        */
+SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3758 = 210.0f;
 
-/* 8045484C-80454850 0004+00 rc=0 efc=0 .sdata2    @3759                                                        */
-f32 d_meter_d_meter_string__lit_3759 = 410.0f;
+/* 8045484C-80454850 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3759                                                        */
+SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3759 = 410.0f;
 
-/* 80454850-80454854 0004+00 rc=0 efc=0 .sdata2    @3760                                                        */
-f32 d_meter_d_meter_string__lit_3760 = 32.0f;
+/* 80454850-80454854 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3760                                                        */
+SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3760 = 32.0f;
 
-/* 80454854-80454858 0004+00 rc=0 efc=0 .sdata2    @3761                                                        */
-f32 d_meter_d_meter_string__lit_3761 = 419.0f;
+/* 80454854-80454858 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3761                                                        */
+SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3761 = 419.0f;
 
-/* 80454858-8045485C 0004+00 rc=0 efc=0 .sdata2    @3762                                                        */
-u8 d_meter_d_meter_string__lit_3762[4] = {
+/* 80454858-8045485C 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3762                                                        */
+SECTION_SDATA2 static u8 d_meter_d_meter_string__lit_3762[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8020EE70-8020F150 02E0+00 rc=0 efc=0 .text      _create__14dMeterString_cFv                                  */
+/* 8020EE70-8020F150 02E0+00 rc=1 efc=0 rfr=False None .text      _create__14dMeterString_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -242,7 +229,7 @@ asm void dMeterString_c::_create() {
 #pragma pop
 
 
-/* 8020F150-8020F1B0 0060+00 rc=0 efc=0 .text      _execute__14dMeterString_cFUl                                */
+/* 8020F150-8020F1B0 0060+00 rc=1 efc=0 rfr=False None .text      _execute__14dMeterString_cFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,26 +241,26 @@ asm void dMeterString_c::_execute(u32 field_0) {
 
 
 /* ############################################################################################## */
-/* 8045485C-80454860 0004+00 rc=0 efc=0 .sdata2    @3819                                                        */
-f32 d_meter_d_meter_string__lit_3819 = 60.0f;
+/* 8045485C-80454860 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3819                                                        */
+SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3819 = 60.0f;
 
-/* 80454860-80454864 0004+00 rc=0 efc=0 .sdata2    @3820                                                        */
-f32 d_meter_d_meter_string__lit_3820 = 1.0f;
+/* 80454860-80454864 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3820                                                        */
+SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3820 = 1.0f;
 
-/* 80454864-80454868 0004+00 rc=0 efc=0 .sdata2    @3821                                                        */
-f32 d_meter_d_meter_string__lit_3821 = -1.0f;
+/* 80454864-80454868 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3821                                                        */
+SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3821 = -1.0f;
 
-/* 80454868-80454870 0004+04 rc=0 efc=0 .sdata2    @3822                                                        */
-f32 d_meter_d_meter_string__lit_3822[1 + 1 /* padding */] = {
+/* 80454868-80454870 0004+04 rc=1 efc=0 rfr=False None .sdata2    @3822                                                        */
+SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3822[1 + 1 /* padding */] = {
 	18.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80454870-80454878 0008+00 rc=0 efc=0 .sdata2    @3824                                                        */
-f64 d_meter_d_meter_string__lit_3824 = 4503601774854144.0 /* cast s32 to float */;
+/* 80454870-80454878 0008+00 rc=2 efc=0 rfr=False None .sdata2    @3824                                                        */
+SECTION_SDATA2 static f64 d_meter_d_meter_string__lit_3824 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8020F1B0-8020F49C 02EC+00 rc=0 efc=0 .text      draw__14dMeterString_cFv                                     */
+/* 8020F1B0-8020F49C 02EC+00 rc=1 efc=0 rfr=False None .text      draw__14dMeterString_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -284,7 +271,7 @@ asm void dMeterString_c::draw() {
 #pragma pop
 
 
-/* 8020F49C-8020F5A4 0108+00 rc=0 efc=0 .text      _delete__14dMeterString_cFv                                  */
+/* 8020F49C-8020F5A4 0108+00 rc=1 efc=0 rfr=False None .text      _delete__14dMeterString_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -296,10 +283,10 @@ asm void dMeterString_c::_delete() {
 
 
 /* ############################################################################################## */
-/* 80454878-8045487C 0004+00 rc=0 efc=0 .sdata2    @3866                                                        */
-f32 d_meter_d_meter_string__lit_3866 = 40.0f;
+/* 80454878-8045487C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3866                                                        */
+SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3866 = 40.0f;
 
-/* 8020F5A4-8020F66C 00C8+00 rc=0 efc=0 .text      createString__14dMeterString_cFi                             */
+/* 8020F5A4-8020F66C 00C8+00 rc=3 efc=1 rfr=False None .text      createString__14dMeterString_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,7 +297,7 @@ asm void dMeterString_c::createString(int field_0) {
 #pragma pop
 
 
-/* 8020F66C-8020F6EC 0080+00 rc=0 efc=0 .text      playBckAnimation__14dMeterString_cFf                         */
+/* 8020F66C-8020F6EC 0080+00 rc=2 efc=0 rfr=False None .text      playBckAnimation__14dMeterString_cFf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,10 +309,10 @@ asm void dMeterString_c::playBckAnimation(f32 field_0) {
 
 
 /* ############################################################################################## */
-/* 8045487C-80454880 0004+00 rc=0 efc=0 .sdata2    @3979                                                        */
-f32 d_meter_d_meter_string__lit_3979 = 0.5f;
+/* 8045487C-80454880 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3979                                                        */
+SECTION_SDATA2 static f32 d_meter_d_meter_string__lit_3979 = 0.5f;
 
-/* 8020F6EC-8020FA88 039C+00 rc=0 efc=0 .text      drawPikari__14dMeterString_cFv                               */
+/* 8020F6EC-8020FA88 039C+00 rc=1 efc=0 rfr=False None .text      drawPikari__14dMeterString_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -336,7 +323,7 @@ asm void dMeterString_c::drawPikari() {
 #pragma pop
 
 
-/* 8020FA88-8020FAB4 002C+00 rc=0 efc=0 .text      isLeadByte__14dMeterString_cFi                               */
+/* 8020FA88-8020FAB4 002C+00 rc=1 efc=0 rfr=False None .text      isLeadByte__14dMeterString_cFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

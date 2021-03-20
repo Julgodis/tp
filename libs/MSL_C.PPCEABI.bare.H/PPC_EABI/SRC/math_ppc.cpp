@@ -37,7 +37,7 @@ extern "C" void acos(); // 1
 // Declarations:
 // 
 
-/* 8036C9C4-8036C9E8 0024+00 rc=0 efc=0 .text      tanf                                                         */
+/* 8036C9C4-8036C9E8 0024+00 rc=2 efc=2 rfr=False None .text      tanf                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -48,7 +48,7 @@ extern "C" asm void tanf() {
 #pragma pop
 
 
-/* 8036C9E8-8036CA0C 0024+00 rc=0 efc=0 .text      sinf                                                         */
+/* 8036C9E8-8036CA0C 0024+00 rc=4 efc=4 rfr=False None .text      sinf                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -59,7 +59,7 @@ extern "C" asm void sinf() {
 #pragma pop
 
 
-/* 8036CA0C-8036CA30 0024+00 rc=0 efc=0 .text      cosf                                                         */
+/* 8036CA0C-8036CA30 0024+00 rc=4 efc=4 rfr=False None .text      cosf                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ extern "C" asm void cosf() {
 #pragma pop
 
 
-/* 8036CA30-8036CA54 0024+00 rc=0 efc=0 .text      acosf                                                        */
+/* 8036CA30-8036CA54 0024+00 rc=1 efc=1 rfr=False None .text      acosf                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

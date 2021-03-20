@@ -19,16 +19,7 @@ struct cBgW_NodeTree {
 	/* 80079238 */ ~cBgW_NodeTree();
 };
 
-struct cBgS_GrpPassChk {
-};
-
-struct cBgS_ShdwDraw {
-};
-
-struct cXyz {
-};
-
-struct cBgS_PolyPassChk {
+struct cBgS_LinChk {
 };
 
 struct cBgS_PolyInfo {
@@ -38,10 +29,19 @@ struct cBgS_PolyInfo {
 struct cBgS_GndChk {
 };
 
+struct cBgS_PolyPassChk {
+};
+
+struct cBgS_ShdwDraw {
+};
+
+struct cBgS_GrpPassChk {
+};
+
 struct cBgD_t {
 };
 
-struct cBgS_LinChk {
+struct cXyz {
 };
 
 struct cBgW {
@@ -110,11 +110,11 @@ struct cBgW_GrpElm {
 	/* 8007A1E4 */ cBgW_GrpElm();
 };
 
-struct Vec {
-};
-
 struct cM3dGPla {
 	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
+};
+
+struct Vec {
 };
 
 struct cM3dGTri {
@@ -125,16 +125,7 @@ struct cM3dGTri {
 struct dBgS_RoofChk {
 };
 
-struct csXyz {
-};
-
 struct dBgS_SphChk {
-};
-
-struct dBgS_SplGrpChk {
-};
-
-struct dBgS_CaptPoly {
 };
 
 struct dBgS_Acch {
@@ -145,6 +136,15 @@ struct dBgS_Acch {
 };
 
 struct fopAc_ac_c {
+};
+
+struct dBgS_CaptPoly {
+};
+
+struct dBgS_SplGrpChk {
+};
+
+struct csXyz {
 };
 
 struct dBgW {
@@ -390,24 +390,9 @@ extern "C" void OffMoveFlag__4dBgWFv(); // 1
 extern "C" void ChkMoveFlag__4dBgWCFv(); // 1
 extern "C" void dBgW_NewSet__FP6cBgD_tUlPA3_A4_f(); // 1
 extern "C" void __dt__4dBgWFv(); // 1
-SECTION_DATA extern void* const __vt__4dBgW[65];
-SECTION_DATA extern void* const __vt__8cM3dGTri[3];
-SECTION_DATA extern void* const __vt__11cBgW_GrpElm[3];
-SECTION_DATA extern void* const __vt__11cBgW_TriElm[3];
-SECTION_DATA extern void* const __vt__4cBgW[65];
-SECTION_DATA extern void* const __vt__13cBgW_NodeTree[3];
-SECTION_DATA extern void* const __vt__11cBgW_RwgElm[3 + 1 /* padding */];
-SECTION_BSS extern u8 d_bg_d_bg_w__l_wcsbuf[1008];
-SECTION_SBSS extern u8 l_start[4];
-SECTION_SBSS extern u8 l_wcsbuf_num[4];
-extern u8 struct_80450F88[8];
-SECTION_SDATA2 extern u8 d_bg_d_bg_w__lit_3717[4];
-SECTION_SDATA2 extern f32 d_bg_d_bg_w__lit_3935;
-SECTION_SDATA2 extern f32 d_bg_d_bg_w__lit_3936;
-SECTION_SDATA2 extern f32 d_bg_d_bg_w__lit_3937;
-SECTION_SDATA2 extern f32 d_bg_d_bg_w__lit_4073;
-SECTION_SDATA2 extern f32 d_bg_d_bg_w__lit_4271;
-SECTION_SDATA2 extern f32 lit_4962[1 + 1 /* padding */];
+extern "C" extern void* __vt__4dBgW[65];
+extern "C" extern void* __vt__8cM3dGTri[3];
+extern "C" extern u8 struct_80450F88[8];
 
 // 
 // External References:
@@ -519,193 +504,193 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_DATA extern void* const __vt__8cM3dGPla[3];
-SECTION_DATA extern void* const __vt__8cM3dGAab[3];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 sincosTable___5JMath[65536];
-SECTION_SBSS extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
+extern "C" extern void* __vt__8cM3dGPla[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803ABA80-803ABB84 0104+00 rc=0 efc=0 .data      __vt__4dBgW                                                  */
-void* const __vt__4dBgW[65] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__4dBgWFv,
-	(void*)ChkMemoryError__4cBgWFv,
-	(void*)ChkNotReady__4cBgWCFv,
-	(void*)ChkLock__4cBgWCFv,
-	(void*)ChkMoveBg__4cBgWCFv,
-	(void*)ChkMoveFlag__4dBgWCFv,
-	(void*)GetTriPla__4cBgWCFRC13cBgS_PolyInfo,
-	(void*)GetTriPnt__4cBgWCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz,
-	(void*)GetBnd__4cBgWCFv,
-	(void*)GetGrpInf__4cBgWCFRC13cBgS_PolyInfo,
-	(void*)OffMoveFlag__4dBgWFv,
-	(void*)GetTopUnder__4cBgWCFPfPf,
-	(void*)SetOldShapeAngleY__9dBgW_BaseFs,
-	(void*)LineCheck__4cBgWFP11cBgS_LinChk,
-	(void*)GroundCross__4cBgWFP11cBgS_GndChk,
-	(void*)ShdwDraw__4cBgWFP13cBgS_ShdwDraw,
-	(void*)CaptPoly__4dBgWFR13dBgS_CaptPoly,
-	(void*)WallCorrect__4dBgWFP9dBgS_Acch,
-	(void*)WallCorrectSort__4dBgWFP9dBgS_Acch,
-	(void*)RoofChk__4dBgWFP12dBgS_RoofChk,
-	(void*)SplGrpChk__4dBgWFP14dBgS_SplGrpChk,
-	(void*)SphChk__4dBgWFP11dBgS_SphChkPv,
-	(void*)GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo,
-	(void*)GetExitId__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetPolyColor__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetHorseNoEntry__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetSpecialCode__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetSpecialCode__4dBgWFi,
-	(void*)GetMagnetCode__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetPolyObjThrough__4dBgWFi,
-	(void*)GetPolyCamThrough__4dBgWFi,
-	(void*)GetPolyLinkThrough__4dBgWFi,
-	(void*)GetPolyArrowThrough__4dBgWFi,
-	(void*)GetPolyHSStick__4dBgWFi,
-	(void*)GetPolyBoomerangThrough__4dBgWFi,
-	(void*)GetPolyRopeThrough__4dBgWFi,
-	(void*)GetPolyBombThrough__4dBgWFi,
-	(void*)GetShdwThrough__4dBgWFi,
-	(void*)GetUnderwaterRoofCode__4dBgWFi,
-	(void*)GetMonkeyBarsCode__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetLinkNo__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetWallCode__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetPolyAtt0__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetPolyAtt1__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetGroundCode__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetIronBallThrough__4dBgWFi,
-	(void*)GetAttackThrough__4dBgWFi,
-	(void*)GetCamMoveBG__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetRoomCamId__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetRoomPathId__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetRoomPathPntNo__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetPolyGrpRoomInfId__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetGrpSoundId__4dBgWFRC13cBgS_PolyInfo,
-	(void*)CrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
-	(void*)TransPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
-	(void*)MatrixCrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
-	(void*)CallRideCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_c,
-	(void*)CallArrowStickCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
-	(void*)CalcPlane__4cBgWFv,
-	(void*)ClassifyPlane__4cBgWFv,
-	(void*)ChkPolyThrough__4dBgWFiP16cBgS_PolyPassChk,
-	(void*)ChkShdwDrawThrough__4dBgWFiP16cBgS_PolyPassChk,
-	(void*)ChkGrpThrough__4dBgWFiP15cBgS_GrpPassChki,
+/* 803ABA80-803ABB84 0104+00 rc=3 efc=1 rfr=False None .data      __vt__4dBgW                                                  */
+SECTION_DATA void* __vt__4dBgW[65] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__4dBgWFv,
+	/* 3    */ (void*)ChkMemoryError__4cBgWFv,
+	/* 4    */ (void*)ChkNotReady__4cBgWCFv,
+	/* 5    */ (void*)ChkLock__4cBgWCFv,
+	/* 6    */ (void*)ChkMoveBg__4cBgWCFv,
+	/* 7    */ (void*)ChkMoveFlag__4dBgWCFv,
+	/* 8    */ (void*)GetTriPla__4cBgWCFRC13cBgS_PolyInfo,
+	/* 9    */ (void*)GetTriPnt__4cBgWCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz,
+	/* 10   */ (void*)GetBnd__4cBgWCFv,
+	/* 11   */ (void*)GetGrpInf__4cBgWCFRC13cBgS_PolyInfo,
+	/* 12   */ (void*)OffMoveFlag__4dBgWFv,
+	/* 13   */ (void*)GetTopUnder__4cBgWCFPfPf,
+	/* 14   */ (void*)SetOldShapeAngleY__9dBgW_BaseFs,
+	/* 15   */ (void*)LineCheck__4cBgWFP11cBgS_LinChk,
+	/* 16   */ (void*)GroundCross__4cBgWFP11cBgS_GndChk,
+	/* 17   */ (void*)ShdwDraw__4cBgWFP13cBgS_ShdwDraw,
+	/* 18   */ (void*)CaptPoly__4dBgWFR13dBgS_CaptPoly,
+	/* 19   */ (void*)WallCorrect__4dBgWFP9dBgS_Acch,
+	/* 20   */ (void*)WallCorrectSort__4dBgWFP9dBgS_Acch,
+	/* 21   */ (void*)RoofChk__4dBgWFP12dBgS_RoofChk,
+	/* 22   */ (void*)SplGrpChk__4dBgWFP14dBgS_SplGrpChk,
+	/* 23   */ (void*)SphChk__4dBgWFP11dBgS_SphChkPv,
+	/* 24   */ (void*)GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo,
+	/* 25   */ (void*)GetExitId__4dBgWFRC13cBgS_PolyInfo,
+	/* 26   */ (void*)GetPolyColor__4dBgWFRC13cBgS_PolyInfo,
+	/* 27   */ (void*)GetHorseNoEntry__4dBgWFRC13cBgS_PolyInfo,
+	/* 28   */ (void*)GetSpecialCode__4dBgWFRC13cBgS_PolyInfo,
+	/* 29   */ (void*)GetSpecialCode__4dBgWFi,
+	/* 30   */ (void*)GetMagnetCode__4dBgWFRC13cBgS_PolyInfo,
+	/* 31   */ (void*)GetPolyObjThrough__4dBgWFi,
+	/* 32   */ (void*)GetPolyCamThrough__4dBgWFi,
+	/* 33   */ (void*)GetPolyLinkThrough__4dBgWFi,
+	/* 34   */ (void*)GetPolyArrowThrough__4dBgWFi,
+	/* 35   */ (void*)GetPolyHSStick__4dBgWFi,
+	/* 36   */ (void*)GetPolyBoomerangThrough__4dBgWFi,
+	/* 37   */ (void*)GetPolyRopeThrough__4dBgWFi,
+	/* 38   */ (void*)GetPolyBombThrough__4dBgWFi,
+	/* 39   */ (void*)GetShdwThrough__4dBgWFi,
+	/* 40   */ (void*)GetUnderwaterRoofCode__4dBgWFi,
+	/* 41   */ (void*)GetMonkeyBarsCode__4dBgWFRC13cBgS_PolyInfo,
+	/* 42   */ (void*)GetLinkNo__4dBgWFRC13cBgS_PolyInfo,
+	/* 43   */ (void*)GetWallCode__4dBgWFRC13cBgS_PolyInfo,
+	/* 44   */ (void*)GetPolyAtt0__4dBgWFRC13cBgS_PolyInfo,
+	/* 45   */ (void*)GetPolyAtt1__4dBgWFRC13cBgS_PolyInfo,
+	/* 46   */ (void*)GetGroundCode__4dBgWFRC13cBgS_PolyInfo,
+	/* 47   */ (void*)GetIronBallThrough__4dBgWFi,
+	/* 48   */ (void*)GetAttackThrough__4dBgWFi,
+	/* 49   */ (void*)GetCamMoveBG__4dBgWFRC13cBgS_PolyInfo,
+	/* 50   */ (void*)GetRoomCamId__4dBgWFRC13cBgS_PolyInfo,
+	/* 51   */ (void*)GetRoomPathId__4dBgWFRC13cBgS_PolyInfo,
+	/* 52   */ (void*)GetRoomPathPntNo__4dBgWFRC13cBgS_PolyInfo,
+	/* 53   */ (void*)GetPolyGrpRoomInfId__4dBgWFRC13cBgS_PolyInfo,
+	/* 54   */ (void*)GetGrpSoundId__4dBgWFRC13cBgS_PolyInfo,
+	/* 55   */ (void*)CrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
+	/* 56   */ (void*)TransPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
+	/* 57   */ (void*)MatrixCrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
+	/* 58   */ (void*)CallRideCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_c,
+	/* 59   */ (void*)CallArrowStickCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
+	/* 60   */ (void*)CalcPlane__4cBgWFv,
+	/* 61   */ (void*)ClassifyPlane__4cBgWFv,
+	/* 62   */ (void*)ChkPolyThrough__4dBgWFiP16cBgS_PolyPassChk,
+	/* 63   */ (void*)ChkShdwDrawThrough__4dBgWFiP16cBgS_PolyPassChk,
+	/* 64   */ (void*)ChkGrpThrough__4dBgWFiP15cBgS_GrpPassChki,
 };
 
-/* 803ABB84-803ABB90 000C+00 rc=0 efc=0 .data      __vt__8cM3dGTri                                              */
-void* const __vt__8cM3dGTri[3] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__8cM3dGTriFv,
+/* 803ABB84-803ABB90 000C+00 rc=8 efc=5 rfr=False None .data      __vt__8cM3dGTri                                              */
+SECTION_DATA void* __vt__8cM3dGTri[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__8cM3dGTriFv,
 };
 
-/* 803ABB90-803ABB9C 000C+00 rc=0 efc=0 .data      __vt__11cBgW_GrpElm                                          */
-void* const __vt__11cBgW_GrpElm[3] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11cBgW_GrpElmFv,
+/* 803ABB90-803ABB9C 000C+00 rc=2 efc=0 rfr=False None .data      __vt__11cBgW_GrpElm                                          */
+SECTION_DATA static void* __vt__11cBgW_GrpElm[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11cBgW_GrpElmFv,
 };
 
-/* 803ABB9C-803ABBA8 000C+00 rc=0 efc=0 .data      __vt__11cBgW_TriElm                                          */
-void* const __vt__11cBgW_TriElm[3] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11cBgW_TriElmFv,
+/* 803ABB9C-803ABBA8 000C+00 rc=2 efc=0 rfr=False None .data      __vt__11cBgW_TriElm                                          */
+SECTION_DATA static void* __vt__11cBgW_TriElm[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11cBgW_TriElmFv,
 };
 
-/* 803ABBA8-803ABCAC 0104+00 rc=0 efc=0 .data      __vt__4cBgW                                                  */
-void* const __vt__4cBgW[65] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__4cBgWFv,
-	(void*)ChkMemoryError__4cBgWFv,
-	(void*)ChkNotReady__4cBgWCFv,
-	(void*)ChkLock__4cBgWCFv,
-	(void*)ChkMoveBg__4cBgWCFv,
-	(void*)NULL,
-	(void*)GetTriPla__4cBgWCFRC13cBgS_PolyInfo,
-	(void*)GetTriPnt__4cBgWCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz,
-	(void*)GetBnd__4cBgWCFv,
-	(void*)GetGrpInf__4cBgWCFRC13cBgS_PolyInfo,
-	(void*)NULL,
-	(void*)GetTopUnder__4cBgWCFPfPf,
-	(void*)SetOldShapeAngleY__9dBgW_BaseFs,
-	(void*)LineCheck__4cBgWFP11cBgS_LinChk,
-	(void*)GroundCross__4cBgWFP11cBgS_GndChk,
-	(void*)ShdwDraw__4cBgWFP13cBgS_ShdwDraw,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c,
-	(void*)CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
-	(void*)CalcPlane__4cBgWFv,
-	(void*)ClassifyPlane__4cBgWFv,
-	(void*)ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk,
-	(void*)ChkShdwDrawThrough__4cBgWFiP16cBgS_PolyPassChk,
-	(void*)ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki,
+/* 803ABBA8-803ABCAC 0104+00 rc=2 efc=0 rfr=False None .data      __vt__4cBgW                                                  */
+SECTION_DATA static void* __vt__4cBgW[65] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__4cBgWFv,
+	/* 3    */ (void*)ChkMemoryError__4cBgWFv,
+	/* 4    */ (void*)ChkNotReady__4cBgWCFv,
+	/* 5    */ (void*)ChkLock__4cBgWCFv,
+	/* 6    */ (void*)ChkMoveBg__4cBgWCFv,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)GetTriPla__4cBgWCFRC13cBgS_PolyInfo,
+	/* 9    */ (void*)GetTriPnt__4cBgWCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz,
+	/* 10   */ (void*)GetBnd__4cBgWCFv,
+	/* 11   */ (void*)GetGrpInf__4cBgWCFRC13cBgS_PolyInfo,
+	/* 12   */ (void*)NULL,
+	/* 13   */ (void*)GetTopUnder__4cBgWCFPfPf,
+	/* 14   */ (void*)SetOldShapeAngleY__9dBgW_BaseFs,
+	/* 15   */ (void*)LineCheck__4cBgWFP11cBgS_LinChk,
+	/* 16   */ (void*)GroundCross__4cBgWFP11cBgS_GndChk,
+	/* 17   */ (void*)ShdwDraw__4cBgWFP13cBgS_ShdwDraw,
+	/* 18   */ (void*)NULL,
+	/* 19   */ (void*)NULL,
+	/* 20   */ (void*)NULL,
+	/* 21   */ (void*)NULL,
+	/* 22   */ (void*)NULL,
+	/* 23   */ (void*)NULL,
+	/* 24   */ (void*)GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo,
+	/* 25   */ (void*)NULL,
+	/* 26   */ (void*)NULL,
+	/* 27   */ (void*)NULL,
+	/* 28   */ (void*)NULL,
+	/* 29   */ (void*)NULL,
+	/* 30   */ (void*)NULL,
+	/* 31   */ (void*)NULL,
+	/* 32   */ (void*)NULL,
+	/* 33   */ (void*)NULL,
+	/* 34   */ (void*)NULL,
+	/* 35   */ (void*)NULL,
+	/* 36   */ (void*)NULL,
+	/* 37   */ (void*)NULL,
+	/* 38   */ (void*)NULL,
+	/* 39   */ (void*)NULL,
+	/* 40   */ (void*)NULL,
+	/* 41   */ (void*)NULL,
+	/* 42   */ (void*)NULL,
+	/* 43   */ (void*)NULL,
+	/* 44   */ (void*)NULL,
+	/* 45   */ (void*)NULL,
+	/* 46   */ (void*)NULL,
+	/* 47   */ (void*)NULL,
+	/* 48   */ (void*)NULL,
+	/* 49   */ (void*)NULL,
+	/* 50   */ (void*)NULL,
+	/* 51   */ (void*)NULL,
+	/* 52   */ (void*)NULL,
+	/* 53   */ (void*)NULL,
+	/* 54   */ (void*)NULL,
+	/* 55   */ (void*)NULL,
+	/* 56   */ (void*)NULL,
+	/* 57   */ (void*)NULL,
+	/* 58   */ (void*)CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c,
+	/* 59   */ (void*)CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
+	/* 60   */ (void*)CalcPlane__4cBgWFv,
+	/* 61   */ (void*)ClassifyPlane__4cBgWFv,
+	/* 62   */ (void*)ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk,
+	/* 63   */ (void*)ChkShdwDrawThrough__4cBgWFiP16cBgS_PolyPassChk,
+	/* 64   */ (void*)ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki,
 };
 
-/* 803ABCAC-803ABCB8 000C+00 rc=0 efc=0 .data      __vt__13cBgW_NodeTree                                        */
-void* const __vt__13cBgW_NodeTree[3] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__13cBgW_NodeTreeFv,
+/* 803ABCAC-803ABCB8 000C+00 rc=2 efc=0 rfr=False None .data      __vt__13cBgW_NodeTree                                        */
+SECTION_DATA static void* __vt__13cBgW_NodeTree[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__13cBgW_NodeTreeFv,
 };
 
-/* 803ABCB8-803ABCC8 000C+04 rc=0 efc=0 .data      __vt__11cBgW_RwgElm                                          */
-void* const __vt__11cBgW_RwgElm[3 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11cBgW_RwgElmFv,
+/* 803ABCB8-803ABCC8 000C+04 rc=2 efc=0 rfr=False None .data      __vt__11cBgW_RwgElm                                          */
+SECTION_DATA static void* __vt__11cBgW_RwgElm[3 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11cBgW_RwgElmFv,
 	/* padding */
 	NULL,
 };
 
-/* 800791C4-800791D4 0010+00 rc=0 efc=0 .text      __ct__11cBgW_RwgElmFv                                        */
+/* 800791C4-800791D4 0010+00 rc=1 efc=0 rfr=False None .text      __ct__11cBgW_RwgElmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -716,7 +701,7 @@ asm cBgW_RwgElm::cBgW_RwgElm() {
 #pragma pop
 
 
-/* 800791D4-8007921C 0048+00 rc=0 efc=0 .text      __dt__11cBgW_RwgElmFv                                        */
+/* 800791D4-8007921C 0048+00 rc=2 efc=0 rfr=False None .text      __dt__11cBgW_RwgElmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -727,7 +712,7 @@ asm cBgW_RwgElm::~cBgW_RwgElm() {
 #pragma pop
 
 
-/* 8007921C-80079238 001C+00 rc=0 efc=0 .text      __ct__13cBgW_NodeTreeFv                                      */
+/* 8007921C-80079238 001C+00 rc=1 efc=0 rfr=False None .text      __ct__13cBgW_NodeTreeFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -738,7 +723,7 @@ asm cBgW_NodeTree::cBgW_NodeTree() {
 #pragma pop
 
 
-/* 80079238-80079294 005C+00 rc=0 efc=0 .text      __dt__13cBgW_NodeTreeFv                                      */
+/* 80079238-80079294 005C+00 rc=2 efc=0 rfr=False None .text      __dt__13cBgW_NodeTreeFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -750,12 +735,12 @@ asm cBgW_NodeTree::~cBgW_NodeTree() {
 
 
 /* ############################################################################################## */
-/* 804526F8-804526FC 0004+00 rc=0 efc=0 .sdata2    @3717                                                        */
-u8 d_bg_d_bg_w__lit_3717[4] = {
+/* 804526F8-804526FC 0004+00 rc=6 efc=0 rfr=False None .sdata2    @3717                                                        */
+SECTION_SDATA2 static u8 d_bg_d_bg_w__lit_3717[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80079294-8007933C 00A8+00 rc=0 efc=0 .text      __ct__4cBgWFv                                                */
+/* 80079294-8007933C 00A8+00 rc=1 efc=0 rfr=False None .text      __ct__4cBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -766,7 +751,7 @@ asm cBgW::cBgW() {
 #pragma pop
 
 
-/* 8007933C-800793A4 0068+00 rc=0 efc=0 .text      __dt__4cBgWFv                                                */
+/* 8007933C-800793A4 0068+00 rc=3 efc=1 rfr=False None .text      __dt__4cBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -777,7 +762,7 @@ asm cBgW::~cBgW() {
 #pragma pop
 
 
-/* 800793A4-800793C4 0020+00 rc=0 efc=0 .text      FreeArea__4cBgWFv                                            */
+/* 800793A4-800793C4 0020+00 rc=2 efc=0 rfr=False None .text      FreeArea__4cBgWFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -788,7 +773,7 @@ asm void cBgW::FreeArea() {
 #pragma pop
 
 
-/* 800793C4-80079484 00C0+00 rc=0 efc=0 .text      GlobalVtx__4cBgWFv                                           */
+/* 800793C4-80079484 00C0+00 rc=2 efc=0 rfr=False None .text      GlobalVtx__4cBgWFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -799,7 +784,7 @@ asm void cBgW::GlobalVtx() {
 #pragma pop
 
 
-/* 80079484-80079564 00E0+00 rc=0 efc=0 .text      SetVtx__4cBgWFv                                              */
+/* 80079484-80079564 00E0+00 rc=1 efc=0 rfr=False None .text      SetVtx__4cBgWFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -810,7 +795,7 @@ asm void cBgW::SetVtx() {
 #pragma pop
 
 
-/* 80079564-80079668 0104+00 rc=0 efc=0 .text      CalcPlane__4cBgWFv                                           */
+/* 80079564-80079668 0104+00 rc=3 efc=1 rfr=False None .text      CalcPlane__4cBgWFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -821,7 +806,7 @@ asm void cBgW::CalcPlane() {
 #pragma pop
 
 
-/* 80079668-800796F8 0090+00 rc=0 efc=0 .text      SetTri__4cBgWFv                                              */
+/* 80079668-800796F8 0090+00 rc=1 efc=0 rfr=False None .text      SetTri__4cBgWFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -832,7 +817,7 @@ asm void cBgW::SetTri() {
 #pragma pop
 
 
-/* 800796F8-80079754 005C+00 rc=0 efc=0 .text      __dt__11cBgW_TriElmFv                                        */
+/* 800796F8-80079754 005C+00 rc=2 efc=0 rfr=False None .text      __dt__11cBgW_TriElmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -843,7 +828,7 @@ asm cBgW_TriElm::~cBgW_TriElm() {
 #pragma pop
 
 
-/* 80079754-80079770 001C+00 rc=0 efc=0 .text      __ct__11cBgW_TriElmFv                                        */
+/* 80079754-80079770 001C+00 rc=1 efc=0 rfr=False None .text      __ct__11cBgW_TriElmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -854,7 +839,7 @@ asm cBgW_TriElm::cBgW_TriElm() {
 #pragma pop
 
 
-/* 80079770-800797BC 004C+00 rc=0 efc=0 .text      BlckConnect__4cBgWFPUsPii                                    */
+/* 80079770-800797BC 004C+00 rc=1 efc=0 rfr=False None .text      BlckConnect__4cBgWFPUsPii                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -865,7 +850,7 @@ asm void cBgW::BlckConnect(u16* field_0, int* field_1, int field_2) {
 #pragma pop
 
 
-/* 800797BC-8007998C 01D0+00 rc=0 efc=0 .text      ClassifyPlane__4cBgWFv                                       */
+/* 800797BC-8007998C 01D0+00 rc=3 efc=1 rfr=False None .text      ClassifyPlane__4cBgWFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -876,7 +861,7 @@ asm void cBgW::ClassifyPlane() {
 #pragma pop
 
 
-/* 8007998C-800799E0 0054+00 rc=0 efc=0 .text      MakeBlckTransMinMax__4cBgWFP4cXyzP4cXyz                      */
+/* 8007998C-800799E0 0054+00 rc=1 efc=0 rfr=False None .text      MakeBlckTransMinMax__4cBgWFP4cXyzP4cXyz                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -887,7 +872,7 @@ asm void cBgW::MakeBlckTransMinMax(cXyz* field_0, cXyz* field_1) {
 #pragma pop
 
 
-/* 800799E0-80079A68 0088+00 rc=0 efc=0 .text      MakeBlckMinMax__4cBgWFiP4cXyzP4cXyz                          */
+/* 800799E0-80079A68 0088+00 rc=1 efc=0 rfr=False None .text      MakeBlckMinMax__4cBgWFiP4cXyzP4cXyz                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -899,16 +884,16 @@ asm void cBgW::MakeBlckMinMax(int field_0, cXyz* field_1, cXyz* field_2) {
 
 
 /* ############################################################################################## */
-/* 804526FC-80452700 0004+00 rc=0 efc=0 .sdata2    @3935                                                        */
-f32 d_bg_d_bg_w__lit_3935 = 1000000000.0f;
+/* 804526FC-80452700 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3935                                                        */
+SECTION_SDATA2 static f32 d_bg_d_bg_w__lit_3935 = 1000000000.0f;
 
-/* 80452700-80452704 0004+00 rc=0 efc=0 .sdata2    @3936                                                        */
-f32 d_bg_d_bg_w__lit_3936 = -1000000000.0f;
+/* 80452700-80452704 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3936                                                        */
+SECTION_SDATA2 static f32 d_bg_d_bg_w__lit_3936 = -1000000000.0f;
 
-/* 80452704-80452708 0004+00 rc=0 efc=0 .sdata2    @3937                                                        */
-f32 d_bg_d_bg_w__lit_3937 = 1.0f;
+/* 80452704-80452708 0004+00 rc=5 efc=0 rfr=False None .sdata2    @3937                                                        */
+SECTION_SDATA2 static f32 d_bg_d_bg_w__lit_3937 = 1.0f;
 
-/* 80079A68-80079BDC 0174+00 rc=0 efc=0 .text      MakeBlckBnd__4cBgWFiP4cXyzP4cXyz                             */
+/* 80079A68-80079BDC 0174+00 rc=1 efc=0 rfr=False None .text      MakeBlckBnd__4cBgWFiP4cXyzP4cXyz                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -919,7 +904,7 @@ asm void cBgW::MakeBlckBnd(int field_0, cXyz* field_1, cXyz* field_2) {
 #pragma pop
 
 
-/* 80079BDC-80079CC4 00E8+00 rc=0 efc=0 .text      MakeNodeTreeRp__4cBgWFi                                      */
+/* 80079BDC-80079CC4 00E8+00 rc=1 efc=0 rfr=False None .text      MakeNodeTreeRp__4cBgWFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -930,7 +915,7 @@ asm void cBgW::MakeNodeTreeRp(int field_0) {
 #pragma pop
 
 
-/* 80079CC4-80079DF0 012C+00 rc=0 efc=0 .text      MakeNodeTreeGrpRp__4cBgWFi                                   */
+/* 80079CC4-80079DF0 012C+00 rc=1 efc=0 rfr=False None .text      MakeNodeTreeGrpRp__4cBgWFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -941,7 +926,7 @@ asm void cBgW::MakeNodeTreeGrpRp(int field_0) {
 #pragma pop
 
 
-/* 80079DF0-80079EEC 00FC+00 rc=0 efc=0 .text      MakeNodeTree__4cBgWFv                                        */
+/* 80079DF0-80079EEC 00FC+00 rc=2 efc=0 rfr=False None .text      MakeNodeTree__4cBgWFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -952,7 +937,7 @@ asm void cBgW::MakeNodeTree() {
 #pragma pop
 
 
-/* 80079EEC-80079F38 004C+00 rc=0 efc=0 .text      ChkMemoryError__4cBgWFv                                      */
+/* 80079EEC-80079F38 004C+00 rc=3 efc=1 rfr=False None .text      ChkMemoryError__4cBgWFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -964,10 +949,10 @@ asm void cBgW::ChkMemoryError() {
 
 
 /* ############################################################################################## */
-/* 80452708-8045270C 0004+00 rc=0 efc=0 .sdata2    @4073                                                        */
-f32 d_bg_d_bg_w__lit_4073 = 128.0f;
+/* 80452708-8045270C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4073                                                        */
+SECTION_SDATA2 static f32 d_bg_d_bg_w__lit_4073 = 128.0f;
 
-/* 80079F38-8007A184 024C+00 rc=0 efc=0 .text      Set__4cBgWFP6cBgD_tUlPA3_A4_f                                */
+/* 80079F38-8007A184 024C+00 rc=4 efc=3 rfr=False None .text      Set__4cBgWFP6cBgD_tUlPA3_A4_f                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -978,7 +963,7 @@ asm void cBgW::Set(cBgD_t* field_0, u32 field_1, f32 (* field_2)[3][4]) {
 #pragma pop
 
 
-/* 8007A184-8007A1E4 0060+00 rc=0 efc=0 .text      __dt__11cBgW_GrpElmFv                                        */
+/* 8007A184-8007A1E4 0060+00 rc=2 efc=0 rfr=False None .text      __dt__11cBgW_GrpElmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -989,7 +974,7 @@ asm cBgW_GrpElm::~cBgW_GrpElm() {
 #pragma pop
 
 
-/* 8007A1E4-8007A200 001C+00 rc=0 efc=0 .text      __ct__11cBgW_GrpElmFv                                        */
+/* 8007A1E4-8007A200 001C+00 rc=1 efc=0 rfr=False None .text      __ct__11cBgW_GrpElmFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1000,7 +985,7 @@ asm cBgW_GrpElm::cBgW_GrpElm() {
 #pragma pop
 
 
-/* 8007A200-8007A344 0144+00 rc=0 efc=0 .text      RwgLineCheck__4cBgWFUsP11cBgS_LinChk                         */
+/* 8007A200-8007A344 0144+00 rc=1 efc=0 rfr=False None .text      RwgLineCheck__4cBgWFUsP11cBgS_LinChk                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1011,7 +996,7 @@ asm void cBgW::RwgLineCheck(u16 field_0, cBgS_LinChk* field_1) {
 #pragma pop
 
 
-/* 8007A344-8007A3A0 005C+00 rc=0 efc=0 .text      __dt__8cM3dGTriFv                                            */
+/* 8007A344-8007A3A0 005C+00 rc=1 efc=0 rfr=False None .text      __dt__8cM3dGTriFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1022,7 +1007,7 @@ asm cM3dGTri::~cM3dGTri() {
 #pragma pop
 
 
-/* 8007A3A0-8007A52C 018C+00 rc=0 efc=0 .text      LineCheckRp__4cBgWFP11cBgS_LinChki                           */
+/* 8007A3A0-8007A52C 018C+00 rc=1 efc=0 rfr=False None .text      LineCheckRp__4cBgWFP11cBgS_LinChki                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1033,7 +1018,7 @@ asm void cBgW::LineCheckRp(cBgS_LinChk* field_0, int field_1) {
 #pragma pop
 
 
-/* 8007A52C-8007A658 012C+00 rc=0 efc=0 .text      LineCheckGrpRp__4cBgWFP11cBgS_LinChkii                       */
+/* 8007A52C-8007A658 012C+00 rc=1 efc=0 rfr=False None .text      LineCheckGrpRp__4cBgWFP11cBgS_LinChkii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1044,7 +1029,7 @@ asm void cBgW::LineCheckGrpRp(cBgS_LinChk* field_0, int field_1, int field_2) {
 #pragma pop
 
 
-/* 8007A658-8007A680 0028+00 rc=0 efc=0 .text      LineCheck__4cBgWFP11cBgS_LinChk                              */
+/* 8007A658-8007A680 0028+00 rc=3 efc=1 rfr=False None .text      LineCheck__4cBgWFP11cBgS_LinChk                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1055,7 +1040,7 @@ asm void cBgW::LineCheck(cBgS_LinChk* field_0) {
 #pragma pop
 
 
-/* 8007A680-8007A774 00F4+00 rc=0 efc=0 .text      RwgGroundCheckCommon__4cBgWFfUsP11cBgS_GndChk                */
+/* 8007A680-8007A774 00F4+00 rc=2 efc=0 rfr=False None .text      RwgGroundCheckCommon__4cBgWFfUsP11cBgS_GndChk                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1066,7 +1051,7 @@ asm void cBgW::RwgGroundCheckCommon(f32 field_0, u16 field_1, cBgS_GndChk* field
 #pragma pop
 
 
-/* 8007A774-8007A824 00B0+00 rc=0 efc=0 .text      RwgGroundCheckGnd__4cBgWFUsP11cBgS_GndChk                    */
+/* 8007A774-8007A824 00B0+00 rc=1 efc=0 rfr=False None .text      RwgGroundCheckGnd__4cBgWFUsP11cBgS_GndChk                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1078,10 +1063,10 @@ asm void cBgW::RwgGroundCheckGnd(u16 field_0, cBgS_GndChk* field_1) {
 
 
 /* ############################################################################################## */
-/* 8045270C-80452710 0004+00 rc=0 efc=0 .sdata2    @4271                                                        */
-f32 d_bg_d_bg_w__lit_4271 = 0.014000000432133675f;
+/* 8045270C-80452710 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4271                                                        */
+SECTION_SDATA2 static f32 d_bg_d_bg_w__lit_4271 = 0.014000000432133675f;
 
-/* 8007A824-8007A8F4 00D0+00 rc=0 efc=0 .text      RwgGroundCheckWall__4cBgWFUsP11cBgS_GndChk                   */
+/* 8007A824-8007A8F4 00D0+00 rc=1 efc=0 rfr=False None .text      RwgGroundCheckWall__4cBgWFUsP11cBgS_GndChk                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1092,7 +1077,7 @@ asm void cBgW::RwgGroundCheckWall(u16 field_0, cBgS_GndChk* field_1) {
 #pragma pop
 
 
-/* 8007A8F4-8007AA50 015C+00 rc=0 efc=0 .text      GroundCrossRp__4cBgWFP11cBgS_GndChki                         */
+/* 8007A8F4-8007AA50 015C+00 rc=1 efc=0 rfr=False None .text      GroundCrossRp__4cBgWFP11cBgS_GndChki                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1103,7 +1088,7 @@ asm void cBgW::GroundCrossRp(cBgS_GndChk* field_0, int field_1) {
 #pragma pop
 
 
-/* 8007AA50-8007AB9C 014C+00 rc=0 efc=0 .text      GroundCrossGrpRp__4cBgWFP11cBgS_GndChkii                     */
+/* 8007AA50-8007AB9C 014C+00 rc=1 efc=0 rfr=False None .text      GroundCrossGrpRp__4cBgWFP11cBgS_GndChkii                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1114,7 +1099,7 @@ asm void cBgW::GroundCrossGrpRp(cBgS_GndChk* field_0, int field_1, int field_2) 
 #pragma pop
 
 
-/* 8007AB9C-8007ABC4 0028+00 rc=0 efc=0 .text      GroundCross__4cBgWFP11cBgS_GndChk                            */
+/* 8007AB9C-8007ABC4 0028+00 rc=3 efc=1 rfr=False None .text      GroundCross__4cBgWFP11cBgS_GndChk                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1125,7 +1110,7 @@ asm void cBgW::GroundCross(cBgS_GndChk* field_0) {
 #pragma pop
 
 
-/* 8007ABC4-8007AC10 004C+00 rc=0 efc=0 .text      CopyOldMtx__4cBgWFv                                          */
+/* 8007ABC4-8007AC10 004C+00 rc=1 efc=0 rfr=False None .text      CopyOldMtx__4cBgWFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1136,7 +1121,7 @@ asm void cBgW::CopyOldMtx() {
 #pragma pop
 
 
-/* 8007AC10-8007ADF0 01E0+00 rc=0 efc=0 .text      Move__4cBgWFv                                                */
+/* 8007AC10-8007ADF0 01E0+00 rc=1 efc=0 rfr=False None .text      Move__4cBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1147,7 +1132,7 @@ asm void cBgW::Move() {
 #pragma pop
 
 
-/* 8007ADF0-8007AEA4 00B4+00 rc=0 efc=0 .text      RwgShdwDraw__4cBgWFiP13cBgS_ShdwDraw                         */
+/* 8007ADF0-8007AEA4 00B4+00 rc=1 efc=0 rfr=False None .text      RwgShdwDraw__4cBgWFiP13cBgS_ShdwDraw                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1158,7 +1143,7 @@ asm void cBgW::RwgShdwDraw(int field_0, cBgS_ShdwDraw* field_1) {
 #pragma pop
 
 
-/* 8007AEA4-8007AFC0 011C+00 rc=0 efc=0 .text      ShdwDrawRp__4cBgWFP13cBgS_ShdwDrawi                          */
+/* 8007AEA4-8007AFC0 011C+00 rc=1 efc=0 rfr=False None .text      ShdwDrawRp__4cBgWFP13cBgS_ShdwDrawi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1169,7 +1154,7 @@ asm void cBgW::ShdwDrawRp(cBgS_ShdwDraw* field_0, int field_1) {
 #pragma pop
 
 
-/* 8007AFC0-8007B084 00C4+00 rc=0 efc=0 .text      ShdwDrawGrpRp__4cBgWFP13cBgS_ShdwDrawi                       */
+/* 8007AFC0-8007B084 00C4+00 rc=1 efc=0 rfr=False None .text      ShdwDrawGrpRp__4cBgWFP13cBgS_ShdwDrawi                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1180,7 +1165,7 @@ asm void cBgW::ShdwDrawGrpRp(cBgS_ShdwDraw* field_0, int field_1) {
 #pragma pop
 
 
-/* 8007B084-8007B0A8 0024+00 rc=0 efc=0 .text      ShdwDraw__4cBgWFP13cBgS_ShdwDraw                             */
+/* 8007B084-8007B0A8 0024+00 rc=3 efc=1 rfr=False None .text      ShdwDraw__4cBgWFP13cBgS_ShdwDraw                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1191,13 +1176,13 @@ asm void cBgW::ShdwDraw(cBgS_ShdwDraw* field_0) {
 #pragma pop
 
 
-/* 8007B0A8-8007B0B0 0008+00 rc=0 efc=0 .text      ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk                   */
+/* 8007B0A8-8007B0B0 0008+00 rc=1 efc=0 rfr=False None .text      ChkPolyThrough__4cBgWFiP16cBgS_PolyPassChk                   */
 bool cBgW::ChkPolyThrough(int field_0, cBgS_PolyPassChk* field_1) {
 	return false;
 }
 
 
-/* 8007B0B0-8007B0DC 002C+00 rc=0 efc=0 .text      ChkShdwDrawThrough__4cBgWFiP16cBgS_PolyPassChk               */
+/* 8007B0B0-8007B0DC 002C+00 rc=1 efc=0 rfr=False None .text      ChkShdwDrawThrough__4cBgWFiP16cBgS_PolyPassChk               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1208,13 +1193,13 @@ asm void cBgW::ChkShdwDrawThrough(int field_0, cBgS_PolyPassChk* field_1) {
 #pragma pop
 
 
-/* 8007B0DC-8007B0E4 0008+00 rc=0 efc=0 .text      ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki                    */
+/* 8007B0DC-8007B0E4 0008+00 rc=1 efc=0 rfr=False None .text      ChkGrpThrough__4cBgWFiP15cBgS_GrpPassChki                    */
 bool cBgW::ChkGrpThrough(int field_0, cBgS_GrpPassChk* field_1, int field_2) {
 	return false;
 }
 
 
-/* 8007B0E4-8007B164 0080+00 rc=0 efc=0 .text      GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo                    */
+/* 8007B0E4-8007B164 0080+00 rc=3 efc=1 rfr=False None .text      GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1225,7 +1210,7 @@ asm void cBgW::GetGrpRoomIndex(cBgS_PolyInfo const& field_0) const {
 #pragma pop
 
 
-/* 8007B164-8007B17C 0018+00 rc=0 efc=0 .text      GetBnd__4cBgWCFv                                             */
+/* 8007B164-8007B17C 0018+00 rc=3 efc=1 rfr=False None .text      GetBnd__4cBgWCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1236,7 +1221,7 @@ asm void cBgW::GetBnd() const {
 #pragma pop
 
 
-/* 8007B17C-8007B1B4 0038+00 rc=0 efc=0 .text      GetTrans__4cBgWCFP4cXyz                                      */
+/* 8007B17C-8007B1B4 0038+00 rc=1 efc=1 rfr=False None .text      GetTrans__4cBgWCFP4cXyz                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1247,7 +1232,7 @@ asm void cBgW::GetTrans(cXyz* field_0) const {
 #pragma pop
 
 
-/* 8007B1B4-8007B240 008C+00 rc=0 efc=0 .text      GetTriPnt__4cBgWCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz        */
+/* 8007B1B4-8007B240 008C+00 rc=3 efc=1 rfr=False None .text      GetTriPnt__4cBgWCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1258,7 +1243,7 @@ asm void cBgW::GetTriPnt(cBgS_PolyInfo const& field_0, cXyz* field_1, cXyz* fiel
 #pragma pop
 
 
-/* 8007B240-8007B270 0030+00 rc=0 efc=0 .text      GetTopUnder__4cBgWCFPfPf                                     */
+/* 8007B240-8007B270 0030+00 rc=3 efc=1 rfr=False None .text      GetTopUnder__4cBgWCFPfPf                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1269,7 +1254,7 @@ asm void cBgW::GetTopUnder(f32* field_0, f32* field_1) const {
 #pragma pop
 
 
-/* 8007B270-8007B2B0 0040+00 rc=0 efc=0 .text      GetTriPla__4cBgWCFRC13cBgS_PolyInfo                          */
+/* 8007B270-8007B2B0 0040+00 rc=3 efc=1 rfr=False None .text      GetTriPla__4cBgWCFRC13cBgS_PolyInfo                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1280,7 +1265,7 @@ asm void cBgW::GetTriPla(cBgS_PolyInfo const& field_0) const {
 #pragma pop
 
 
-/* 8007B2B0-8007B2F4 0044+00 rc=0 efc=0 .text      GetGrpInf__4cBgWCFRC13cBgS_PolyInfo                          */
+/* 8007B2B0-8007B2F4 0044+00 rc=3 efc=1 rfr=False None .text      GetGrpInf__4cBgWCFRC13cBgS_PolyInfo                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1291,7 +1276,7 @@ asm void cBgW::GetGrpInf(cBgS_PolyInfo const& field_0) const {
 #pragma pop
 
 
-/* 8007B2F4-8007B30C 0018+00 rc=0 efc=0 .text      GetPolyInfId__4cBgWCFi                                       */
+/* 8007B2F4-8007B30C 0018+00 rc=5 efc=0 rfr=False None .text      GetPolyInfId__4cBgWCFi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1302,7 +1287,7 @@ asm void cBgW::GetPolyInfId(int field_0) const {
 #pragma pop
 
 
-/* 8007B30C-8007B360 0054+00 rc=0 efc=0 .text      GetPolyInf0__4cBgWCFiUlUl                                    */
+/* 8007B30C-8007B360 0054+00 rc=6 efc=0 rfr=False None .text      GetPolyInf0__4cBgWCFiUlUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1313,7 +1298,7 @@ asm void cBgW::GetPolyInf0(int field_0, u32 field_1, u32 field_2) const {
 #pragma pop
 
 
-/* 8007B360-8007B3AC 004C+00 rc=0 efc=0 .text      GetMaskPolyInf0_NoShift__4cBgWCFiUl                          */
+/* 8007B360-8007B3AC 004C+00 rc=10 efc=0 rfr=False None .text      GetMaskPolyInf0_NoShift__4cBgWCFiUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1324,7 +1309,7 @@ asm void cBgW::GetMaskPolyInf0_NoShift(int field_0, u32 field_1) const {
 #pragma pop
 
 
-/* 8007B3AC-8007B3D8 002C+00 rc=0 efc=0 .text      GetExitId__4dBgWFRC13cBgS_PolyInfo                           */
+/* 8007B3AC-8007B3D8 002C+00 rc=2 efc=1 rfr=False None .text      GetExitId__4dBgWFRC13cBgS_PolyInfo                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1335,7 +1320,7 @@ asm void dBgW::GetExitId(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B3D8-8007B404 002C+00 rc=0 efc=0 .text      GetPolyColor__4dBgWFRC13cBgS_PolyInfo                        */
+/* 8007B3D8-8007B404 002C+00 rc=2 efc=1 rfr=False None .text      GetPolyColor__4dBgWFRC13cBgS_PolyInfo                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1346,7 +1331,7 @@ asm void dBgW::GetPolyColor(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B404-8007B430 002C+00 rc=0 efc=0 .text      GetHorseNoEntry__4dBgWFRC13cBgS_PolyInfo                     */
+/* 8007B404-8007B430 002C+00 rc=2 efc=1 rfr=False None .text      GetHorseNoEntry__4dBgWFRC13cBgS_PolyInfo                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1357,7 +1342,7 @@ asm void dBgW::GetHorseNoEntry(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B430-8007B460 0030+00 rc=0 efc=0 .text      GetSpecialCode__4dBgWFRC13cBgS_PolyInfo                      */
+/* 8007B430-8007B460 0030+00 rc=2 efc=1 rfr=False None .text      GetSpecialCode__4dBgWFRC13cBgS_PolyInfo                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1368,7 +1353,7 @@ asm void dBgW::GetSpecialCode(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B460-8007B488 0028+00 rc=0 efc=0 .text      GetSpecialCode__4dBgWFi                                      */
+/* 8007B460-8007B488 0028+00 rc=2 efc=1 rfr=False None .text      GetSpecialCode__4dBgWFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1379,7 +1364,7 @@ asm void dBgW::GetSpecialCode(int field_0) {
 #pragma pop
 
 
-/* 8007B488-8007B4B4 002C+00 rc=0 efc=0 .text      GetMagnetCode__4dBgWFRC13cBgS_PolyInfo                       */
+/* 8007B488-8007B4B4 002C+00 rc=2 efc=1 rfr=False None .text      GetMagnetCode__4dBgWFRC13cBgS_PolyInfo                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1390,7 +1375,7 @@ asm void dBgW::GetMagnetCode(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B4B4-8007B4E0 002C+00 rc=0 efc=0 .text      GetMonkeyBarsCode__4dBgWFRC13cBgS_PolyInfo                   */
+/* 8007B4B4-8007B4E0 002C+00 rc=2 efc=1 rfr=False None .text      GetMonkeyBarsCode__4dBgWFRC13cBgS_PolyInfo                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1401,7 +1386,7 @@ asm void dBgW::GetMonkeyBarsCode(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B4E0-8007B504 0024+00 rc=0 efc=0 .text      GetPolyObjThrough__4dBgWFi                                   */
+/* 8007B4E0-8007B504 0024+00 rc=2 efc=1 rfr=False None .text      GetPolyObjThrough__4dBgWFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1412,7 +1397,7 @@ asm void dBgW::GetPolyObjThrough(int field_0) {
 #pragma pop
 
 
-/* 8007B504-8007B52C 0028+00 rc=0 efc=0 .text      GetPolyCamThrough__4dBgWFi                                   */
+/* 8007B504-8007B52C 0028+00 rc=2 efc=1 rfr=False None .text      GetPolyCamThrough__4dBgWFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1423,7 +1408,7 @@ asm void dBgW::GetPolyCamThrough(int field_0) {
 #pragma pop
 
 
-/* 8007B52C-8007B550 0024+00 rc=0 efc=0 .text      GetPolyLinkThrough__4dBgWFi                                  */
+/* 8007B52C-8007B550 0024+00 rc=2 efc=1 rfr=False None .text      GetPolyLinkThrough__4dBgWFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1434,7 +1419,7 @@ asm void dBgW::GetPolyLinkThrough(int field_0) {
 #pragma pop
 
 
-/* 8007B550-8007B574 0024+00 rc=0 efc=0 .text      GetPolyArrowThrough__4dBgWFi                                 */
+/* 8007B550-8007B574 0024+00 rc=2 efc=1 rfr=False None .text      GetPolyArrowThrough__4dBgWFi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1445,7 +1430,7 @@ asm void dBgW::GetPolyArrowThrough(int field_0) {
 #pragma pop
 
 
-/* 8007B574-8007B598 0024+00 rc=0 efc=0 .text      GetPolyHSStick__4dBgWFi                                      */
+/* 8007B574-8007B598 0024+00 rc=2 efc=1 rfr=False None .text      GetPolyHSStick__4dBgWFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1456,7 +1441,7 @@ asm void dBgW::GetPolyHSStick(int field_0) {
 #pragma pop
 
 
-/* 8007B598-8007B5BC 0024+00 rc=0 efc=0 .text      GetPolyBoomerangThrough__4dBgWFi                             */
+/* 8007B598-8007B5BC 0024+00 rc=2 efc=1 rfr=False None .text      GetPolyBoomerangThrough__4dBgWFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1467,7 +1452,7 @@ asm void dBgW::GetPolyBoomerangThrough(int field_0) {
 #pragma pop
 
 
-/* 8007B5BC-8007B5E0 0024+00 rc=0 efc=0 .text      GetPolyRopeThrough__4dBgWFi                                  */
+/* 8007B5BC-8007B5E0 0024+00 rc=2 efc=1 rfr=False None .text      GetPolyRopeThrough__4dBgWFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1478,7 +1463,7 @@ asm void dBgW::GetPolyRopeThrough(int field_0) {
 #pragma pop
 
 
-/* 8007B5E0-8007B604 0024+00 rc=0 efc=0 .text      GetPolyBombThrough__4dBgWFi                                  */
+/* 8007B5E0-8007B604 0024+00 rc=2 efc=1 rfr=False None .text      GetPolyBombThrough__4dBgWFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1489,7 +1474,7 @@ asm void dBgW::GetPolyBombThrough(int field_0) {
 #pragma pop
 
 
-/* 8007B604-8007B630 002C+00 rc=0 efc=0 .text      GetShdwThrough__4dBgWFi                                      */
+/* 8007B604-8007B630 002C+00 rc=2 efc=1 rfr=False None .text      GetShdwThrough__4dBgWFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1500,7 +1485,7 @@ asm void dBgW::GetShdwThrough(int field_0) {
 #pragma pop
 
 
-/* 8007B630-8007B654 0024+00 rc=0 efc=0 .text      GetUnderwaterRoofCode__4dBgWFi                               */
+/* 8007B630-8007B654 0024+00 rc=2 efc=1 rfr=False None .text      GetUnderwaterRoofCode__4dBgWFi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1511,7 +1496,7 @@ asm void dBgW::GetUnderwaterRoofCode(int field_0) {
 #pragma pop
 
 
-/* 8007B654-8007B6AC 0058+00 rc=0 efc=0 .text      GetPolyInf1__4cBgWCFiUlUl                                    */
+/* 8007B654-8007B6AC 0058+00 rc=6 efc=0 rfr=False None .text      GetPolyInf1__4cBgWCFiUlUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1522,7 +1507,7 @@ asm void cBgW::GetPolyInf1(int field_0, u32 field_1, u32 field_2) const {
 #pragma pop
 
 
-/* 8007B6AC-8007B6D8 002C+00 rc=0 efc=0 .text      GetLinkNo__4dBgWFRC13cBgS_PolyInfo                           */
+/* 8007B6AC-8007B6D8 002C+00 rc=2 efc=1 rfr=False None .text      GetLinkNo__4dBgWFRC13cBgS_PolyInfo                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1533,7 +1518,7 @@ asm void dBgW::GetLinkNo(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B6D8-8007B704 002C+00 rc=0 efc=0 .text      GetWallCode__4dBgWFRC13cBgS_PolyInfo                         */
+/* 8007B6D8-8007B704 002C+00 rc=2 efc=1 rfr=False None .text      GetWallCode__4dBgWFRC13cBgS_PolyInfo                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1544,7 +1529,7 @@ asm void dBgW::GetWallCode(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B704-8007B734 0030+00 rc=0 efc=0 .text      GetPolyAtt0__4dBgWFRC13cBgS_PolyInfo                         */
+/* 8007B704-8007B734 0030+00 rc=2 efc=1 rfr=False None .text      GetPolyAtt0__4dBgWFRC13cBgS_PolyInfo                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1555,7 +1540,7 @@ asm void dBgW::GetPolyAtt0(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B734-8007B760 002C+00 rc=0 efc=0 .text      GetPolyAtt1__4dBgWFRC13cBgS_PolyInfo                         */
+/* 8007B734-8007B760 002C+00 rc=2 efc=1 rfr=False None .text      GetPolyAtt1__4dBgWFRC13cBgS_PolyInfo                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1566,7 +1551,7 @@ asm void dBgW::GetPolyAtt1(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B760-8007B78C 002C+00 rc=0 efc=0 .text      GetGroundCode__4dBgWFRC13cBgS_PolyInfo                       */
+/* 8007B760-8007B78C 002C+00 rc=2 efc=1 rfr=False None .text      GetGroundCode__4dBgWFRC13cBgS_PolyInfo                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1577,7 +1562,7 @@ asm void dBgW::GetGroundCode(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B78C-8007B7DC 0050+00 rc=0 efc=0 .text      GetMaskPolyInf1_NoShift__4cBgWCFiUl                          */
+/* 8007B78C-8007B7DC 0050+00 rc=2 efc=0 rfr=False None .text      GetMaskPolyInf1_NoShift__4cBgWCFiUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1588,7 +1573,7 @@ asm void cBgW::GetMaskPolyInf1_NoShift(int field_0, u32 field_1) const {
 #pragma pop
 
 
-/* 8007B7DC-8007B800 0024+00 rc=0 efc=0 .text      GetIronBallThrough__4dBgWFi                                  */
+/* 8007B7DC-8007B800 0024+00 rc=2 efc=1 rfr=False None .text      GetIronBallThrough__4dBgWFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1599,7 +1584,7 @@ asm void dBgW::GetIronBallThrough(int field_0) {
 #pragma pop
 
 
-/* 8007B800-8007B824 0024+00 rc=0 efc=0 .text      GetAttackThrough__4dBgWFi                                    */
+/* 8007B800-8007B824 0024+00 rc=2 efc=1 rfr=False None .text      GetAttackThrough__4dBgWFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1610,7 +1595,7 @@ asm void dBgW::GetAttackThrough(int field_0) {
 #pragma pop
 
 
-/* 8007B824-8007B87C 0058+00 rc=0 efc=0 .text      GetPolyInf2__4cBgWCFiUlUl                                    */
+/* 8007B824-8007B87C 0058+00 rc=4 efc=0 rfr=False None .text      GetPolyInf2__4cBgWCFiUlUl                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1621,7 +1606,7 @@ asm void cBgW::GetPolyInf2(int field_0, u32 field_1, u32 field_2) const {
 #pragma pop
 
 
-/* 8007B87C-8007B8A8 002C+00 rc=0 efc=0 .text      GetCamMoveBG__4dBgWFRC13cBgS_PolyInfo                        */
+/* 8007B87C-8007B8A8 002C+00 rc=2 efc=1 rfr=False None .text      GetCamMoveBG__4dBgWFRC13cBgS_PolyInfo                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1632,7 +1617,7 @@ asm void dBgW::GetCamMoveBG(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B8A8-8007B8D8 0030+00 rc=0 efc=0 .text      GetRoomCamId__4dBgWFRC13cBgS_PolyInfo                        */
+/* 8007B8A8-8007B8D8 0030+00 rc=2 efc=1 rfr=False None .text      GetRoomCamId__4dBgWFRC13cBgS_PolyInfo                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1643,7 +1628,7 @@ asm void dBgW::GetRoomCamId(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B8D8-8007B904 002C+00 rc=0 efc=0 .text      GetRoomPathId__4dBgWFRC13cBgS_PolyInfo                       */
+/* 8007B8D8-8007B904 002C+00 rc=2 efc=1 rfr=False None .text      GetRoomPathId__4dBgWFRC13cBgS_PolyInfo                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1654,7 +1639,7 @@ asm void dBgW::GetRoomPathId(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B904-8007B930 002C+00 rc=0 efc=0 .text      GetRoomPathPntNo__4dBgWFRC13cBgS_PolyInfo                    */
+/* 8007B904-8007B930 002C+00 rc=2 efc=1 rfr=False None .text      GetRoomPathPntNo__4dBgWFRC13cBgS_PolyInfo                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1665,7 +1650,7 @@ asm void dBgW::GetRoomPathPntNo(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007B930-8007B948 0018+00 rc=0 efc=0 .text      GetTriGrp__4cBgWCFi                                          */
+/* 8007B930-8007B948 0018+00 rc=2 efc=0 rfr=False None .text      GetTriGrp__4cBgWCFi                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1676,7 +1661,7 @@ asm void cBgW::GetTriGrp(int field_0) const {
 #pragma pop
 
 
-/* 8007B948-8007B958 0010+00 rc=0 efc=0 .text      ChkNotReady__4cBgWCFv                                        */
+/* 8007B948-8007B958 0010+00 rc=3 efc=1 rfr=False None .text      ChkNotReady__4cBgWCFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1687,7 +1672,7 @@ asm void cBgW::ChkNotReady() const {
 #pragma pop
 
 
-/* 8007B958-8007B964 000C+00 rc=0 efc=0 .text      ChkLock__4cBgWCFv                                            */
+/* 8007B958-8007B964 000C+00 rc=3 efc=1 rfr=False None .text      ChkLock__4cBgWCFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1698,7 +1683,7 @@ asm void cBgW::ChkLock() const {
 #pragma pop
 
 
-/* 8007B964-8007B970 000C+00 rc=0 efc=0 .text      ChkMoveBg__4cBgWCFv                                          */
+/* 8007B964-8007B970 000C+00 rc=3 efc=1 rfr=False None .text      ChkMoveBg__4cBgWCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1709,7 +1694,7 @@ asm void cBgW::ChkMoveBg() const {
 #pragma pop
 
 
-/* 8007B970-8007B9C0 0050+00 rc=0 efc=0 .text      __ct__4dBgWFv                                                */
+/* 8007B970-8007B9C0 0050+00 rc=3 efc=2 rfr=False None .text      __ct__4dBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1720,7 +1705,7 @@ asm dBgW::dBgW() {
 #pragma pop
 
 
-/* 8007B9C0-8007B9EC 002C+00 rc=0 efc=0 .text      Move__4dBgWFv                                                */
+/* 8007B9C0-8007B9EC 002C+00 rc=2 efc=2 rfr=False None .text      Move__4dBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1731,7 +1716,7 @@ asm void dBgW::Move() {
 #pragma pop
 
 
-/* 8007B9EC-8007BA40 0054+00 rc=0 efc=0 .text      positionWallCorrect__4dBgWFP9dBgS_AcchfR8cM3dGPlaP4cXyzf     */
+/* 8007B9EC-8007BA40 0054+00 rc=2 efc=0 rfr=False None .text      positionWallCorrect__4dBgWFP9dBgS_AcchfR8cM3dGPlaP4cXyzf     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1743,14 +1728,14 @@ asm void dBgW::positionWallCorrect(dBgS_Acch* field_0, f32 field_1, cM3dGPla& fi
 
 
 /* ############################################################################################## */
-/* 80452710-80452718 0004+04 rc=0 efc=0 .sdata2    @4962                                                        */
-f32 lit_4962[1 + 1 /* padding */] = {
+/* 80452710-80452718 0004+04 rc=2 efc=0 rfr=False None .sdata2    @4962                                                        */
+SECTION_SDATA2 static f32 lit_4962[1 + 1 /* padding */] = {
 	1.0f / 125.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 8007BA40-8007C234 07F4+00 rc=0 efc=0 .text      RwgWallCorrect__4dBgWFP9dBgS_AcchUs                          */
+/* 8007BA40-8007C234 07F4+00 rc=1 efc=0 rfr=False None .text      RwgWallCorrect__4dBgWFP9dBgS_AcchUs                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1761,7 +1746,7 @@ asm void dBgW::RwgWallCorrect(dBgS_Acch* field_0, u16 field_1) {
 #pragma pop
 
 
-/* 8007C234-8007C360 012C+00 rc=0 efc=0 .text      WallCorrectRp__4dBgWFP9dBgS_Acchi                            */
+/* 8007C234-8007C360 012C+00 rc=1 efc=0 rfr=False None .text      WallCorrectRp__4dBgWFP9dBgS_Acchi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1772,7 +1757,7 @@ asm void dBgW::WallCorrectRp(dBgS_Acch* field_0, int field_1) {
 #pragma pop
 
 
-/* 8007C360-8007C484 0124+00 rc=0 efc=0 .text      WallCorrectGrpRp__4dBgWFP9dBgS_Acchii                        */
+/* 8007C360-8007C484 0124+00 rc=1 efc=0 rfr=False None .text      WallCorrectGrpRp__4dBgWFP9dBgS_Acchii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1783,7 +1768,7 @@ asm void dBgW::WallCorrectGrpRp(dBgS_Acch* field_0, int field_1, int field_2) {
 #pragma pop
 
 
-/* 8007C484-8007C4AC 0028+00 rc=0 efc=0 .text      WallCorrect__4dBgWFP9dBgS_Acch                               */
+/* 8007C484-8007C4AC 0028+00 rc=2 efc=1 rfr=False None .text      WallCorrect__4dBgWFP9dBgS_Acch                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1795,16 +1780,16 @@ asm void dBgW::WallCorrect(dBgS_Acch* field_0) {
 
 
 /* ############################################################################################## */
-/* 80424B80-80424F70 03F0+00 rc=0 efc=0 .bss       l_wcsbuf                                                     */
-u8 d_bg_d_bg_w__l_wcsbuf[1008];
+/* 80424B80-80424F70 03F0+00 rc=1 efc=0 rfr=False None .bss       l_wcsbuf                                                     */
+static u8 d_bg_d_bg_w__l_wcsbuf[1008];
 
-/* 80450F80-80450F84 0004+00 rc=0 efc=0 .sbss      l_start                                                      */
-u8 l_start[4];
+/* 80450F80-80450F84 0004+00 rc=2 efc=0 rfr=False None .sbss      l_start                                                      */
+static u8 l_start[4];
 
-/* 80450F84-80450F88 0004+00 rc=0 efc=0 .sbss      l_wcsbuf_num                                                 */
-u8 l_wcsbuf_num[4];
+/* 80450F84-80450F88 0004+00 rc=2 efc=0 rfr=False None .sbss      l_wcsbuf_num                                                 */
+static u8 l_wcsbuf_num[4];
 
-/* 8007C4AC-8007C714 0268+00 rc=0 efc=0 .text      RwgWallCorrectSort__4dBgWFP9dBgS_AcchUs                      */
+/* 8007C4AC-8007C714 0268+00 rc=1 efc=0 rfr=False None .text      RwgWallCorrectSort__4dBgWFP9dBgS_AcchUs                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1815,7 +1800,7 @@ asm void dBgW::RwgWallCorrectSort(dBgS_Acch* field_0, u16 field_1) {
 #pragma pop
 
 
-/* 8007C714-8007C808 00F4+00 rc=0 efc=0 .text      WallCorrectRpSort__4dBgWFP9dBgS_Acchi                        */
+/* 8007C714-8007C808 00F4+00 rc=1 efc=0 rfr=False None .text      WallCorrectRpSort__4dBgWFP9dBgS_Acchi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1826,7 +1811,7 @@ asm void dBgW::WallCorrectRpSort(dBgS_Acch* field_0, int field_1) {
 #pragma pop
 
 
-/* 8007C808-8007C910 0108+00 rc=0 efc=0 .text      WallCorrectGrpRpSort__4dBgWFP9dBgS_Acchii                    */
+/* 8007C808-8007C910 0108+00 rc=1 efc=0 rfr=False None .text      WallCorrectGrpRpSort__4dBgWFP9dBgS_Acchii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1837,7 +1822,7 @@ asm void dBgW::WallCorrectGrpRpSort(dBgS_Acch* field_0, int field_1, int field_2
 #pragma pop
 
 
-/* 8007C910-8007D0DC 07CC+00 rc=0 efc=0 .text      WallCorrectSort__4dBgWFP9dBgS_Acch                           */
+/* 8007C910-8007D0DC 07CC+00 rc=2 efc=1 rfr=False None .text      WallCorrectSort__4dBgWFP9dBgS_Acch                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1848,7 +1833,7 @@ asm void dBgW::WallCorrectSort(dBgS_Acch* field_0) {
 #pragma pop
 
 
-/* 8007D0DC-8007D208 012C+00 rc=0 efc=0 .text      RwgRoofChk__4dBgWFUsP12dBgS_RoofChk                          */
+/* 8007D0DC-8007D208 012C+00 rc=1 efc=0 rfr=False None .text      RwgRoofChk__4dBgWFUsP12dBgS_RoofChk                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1859,7 +1844,7 @@ asm void dBgW::RwgRoofChk(u16 field_0, dBgS_RoofChk* field_1) {
 #pragma pop
 
 
-/* 8007D208-8007D330 0128+00 rc=0 efc=0 .text      RoofChkRp__4dBgWFP12dBgS_RoofChki                            */
+/* 8007D208-8007D330 0128+00 rc=1 efc=0 rfr=False None .text      RoofChkRp__4dBgWFP12dBgS_RoofChki                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1870,7 +1855,7 @@ asm void dBgW::RoofChkRp(dBgS_RoofChk* field_0, int field_1) {
 #pragma pop
 
 
-/* 8007D330-8007D470 0140+00 rc=0 efc=0 .text      RoofChkGrpRp__4dBgWFP12dBgS_RoofChkii                        */
+/* 8007D330-8007D470 0140+00 rc=1 efc=0 rfr=False None .text      RoofChkGrpRp__4dBgWFP12dBgS_RoofChkii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1881,7 +1866,7 @@ asm void dBgW::RoofChkGrpRp(dBgS_RoofChk* field_0, int field_1, int field_2) {
 #pragma pop
 
 
-/* 8007D470-8007D498 0028+00 rc=0 efc=0 .text      RoofChk__4dBgWFP12dBgS_RoofChk                               */
+/* 8007D470-8007D498 0028+00 rc=2 efc=1 rfr=False None .text      RoofChk__4dBgWFP12dBgS_RoofChk                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1892,7 +1877,7 @@ asm void dBgW::RoofChk(dBgS_RoofChk* field_0) {
 #pragma pop
 
 
-/* 8007D498-8007D5C4 012C+00 rc=0 efc=0 .text      RwgSplGrpChk__4dBgWFUsP14dBgS_SplGrpChk                      */
+/* 8007D498-8007D5C4 012C+00 rc=1 efc=0 rfr=False None .text      RwgSplGrpChk__4dBgWFUsP14dBgS_SplGrpChk                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1903,7 +1888,7 @@ asm void dBgW::RwgSplGrpChk(u16 field_0, dBgS_SplGrpChk* field_1) {
 #pragma pop
 
 
-/* 8007D5C4-8007D6F0 012C+00 rc=0 efc=0 .text      SplGrpChkRp__4dBgWFP14dBgS_SplGrpChki                        */
+/* 8007D5C4-8007D6F0 012C+00 rc=1 efc=0 rfr=False None .text      SplGrpChkRp__4dBgWFP14dBgS_SplGrpChki                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1914,7 +1899,7 @@ asm void dBgW::SplGrpChkRp(dBgS_SplGrpChk* field_0, int field_1) {
 #pragma pop
 
 
-/* 8007D6F0-8007D830 0140+00 rc=0 efc=0 .text      SplGrpChkGrpRp__4dBgWFP14dBgS_SplGrpChkii                    */
+/* 8007D6F0-8007D830 0140+00 rc=1 efc=0 rfr=False None .text      SplGrpChkGrpRp__4dBgWFP14dBgS_SplGrpChkii                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1925,7 +1910,7 @@ asm void dBgW::SplGrpChkGrpRp(dBgS_SplGrpChk* field_0, int field_1, int field_2)
 #pragma pop
 
 
-/* 8007D830-8007D858 0028+00 rc=0 efc=0 .text      SplGrpChk__4dBgWFP14dBgS_SplGrpChk                           */
+/* 8007D830-8007D858 0028+00 rc=2 efc=1 rfr=False None .text      SplGrpChk__4dBgWFP14dBgS_SplGrpChk                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1936,7 +1921,7 @@ asm void dBgW::SplGrpChk(dBgS_SplGrpChk* field_0) {
 #pragma pop
 
 
-/* 8007D858-8007D8E8 0090+00 rc=0 efc=0 .text      RwgCaptPoly__4dBgWFiR13dBgS_CaptPoly                         */
+/* 8007D858-8007D8E8 0090+00 rc=1 efc=0 rfr=False None .text      RwgCaptPoly__4dBgWFiR13dBgS_CaptPoly                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1947,7 +1932,7 @@ asm void dBgW::RwgCaptPoly(int field_0, dBgS_CaptPoly& field_1) {
 #pragma pop
 
 
-/* 8007D8E8-8007DA04 011C+00 rc=0 efc=0 .text      CaptPolyRp__4dBgWFR13dBgS_CaptPolyi                          */
+/* 8007D8E8-8007DA04 011C+00 rc=1 efc=0 rfr=False None .text      CaptPolyRp__4dBgWFR13dBgS_CaptPolyi                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1958,7 +1943,7 @@ asm void dBgW::CaptPolyRp(dBgS_CaptPoly& field_0, int field_1) {
 #pragma pop
 
 
-/* 8007DA04-8007DAF8 00F4+00 rc=0 efc=0 .text      CaptPolyGrpRp__4dBgWFR13dBgS_CaptPolyii                      */
+/* 8007DA04-8007DAF8 00F4+00 rc=1 efc=0 rfr=False None .text      CaptPolyGrpRp__4dBgWFR13dBgS_CaptPolyii                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1969,7 +1954,7 @@ asm void dBgW::CaptPolyGrpRp(dBgS_CaptPoly& field_0, int field_1, int field_2) {
 #pragma pop
 
 
-/* 8007DAF8-8007DB20 0028+00 rc=0 efc=0 .text      CaptPoly__4dBgWFR13dBgS_CaptPoly                             */
+/* 8007DAF8-8007DB20 0028+00 rc=2 efc=1 rfr=False None .text      CaptPoly__4dBgWFR13dBgS_CaptPoly                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1980,7 +1965,7 @@ asm void dBgW::CaptPoly(dBgS_CaptPoly& field_0) {
 #pragma pop
 
 
-/* 8007DB20-8007DC70 0150+00 rc=0 efc=0 .text      RwgSphChk__4dBgWFUsP11dBgS_SphChkPv                          */
+/* 8007DB20-8007DC70 0150+00 rc=1 efc=0 rfr=False None .text      RwgSphChk__4dBgWFUsP11dBgS_SphChkPv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1991,7 +1976,7 @@ asm void dBgW::RwgSphChk(u16 field_0, dBgS_SphChk* field_1, void* field_2) {
 #pragma pop
 
 
-/* 8007DC70-8007DDE0 0170+00 rc=0 efc=0 .text      SphChkRp__4dBgWFP11dBgS_SphChkPvi                            */
+/* 8007DC70-8007DDE0 0170+00 rc=1 efc=0 rfr=False None .text      SphChkRp__4dBgWFP11dBgS_SphChkPvi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2002,7 +1987,7 @@ asm void dBgW::SphChkRp(dBgS_SphChk* field_0, void* field_1, int field_2) {
 #pragma pop
 
 
-/* 8007DDE0-8007DF00 0120+00 rc=0 efc=0 .text      SphChkGrpRp__4dBgWFP11dBgS_SphChkPvii                        */
+/* 8007DDE0-8007DF00 0120+00 rc=1 efc=0 rfr=False None .text      SphChkGrpRp__4dBgWFP11dBgS_SphChkPvii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2013,7 +1998,7 @@ asm void dBgW::SphChkGrpRp(dBgS_SphChk* field_0, void* field_1, int field_2, int
 #pragma pop
 
 
-/* 8007DF00-8007DF28 0028+00 rc=0 efc=0 .text      SphChk__4dBgWFP11dBgS_SphChkPv                               */
+/* 8007DF00-8007DF28 0028+00 rc=2 efc=1 rfr=False None .text      SphChk__4dBgWFP11dBgS_SphChkPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2024,7 +2009,7 @@ asm void dBgW::SphChk(dBgS_SphChk* field_0, void* field_1) {
 #pragma pop
 
 
-/* 8007DF28-8007DF58 0030+00 rc=0 efc=0 .text      GetPolyGrpRoomInfId__4dBgWFRC13cBgS_PolyInfo                 */
+/* 8007DF28-8007DF58 0030+00 rc=2 efc=1 rfr=False None .text      GetPolyGrpRoomInfId__4dBgWFRC13cBgS_PolyInfo                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2035,7 +2020,7 @@ asm void dBgW::GetPolyGrpRoomInfId(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007DF58-8007DF88 0030+00 rc=0 efc=0 .text      GetGrpSoundId__4dBgWFRC13cBgS_PolyInfo                       */
+/* 8007DF58-8007DF88 0030+00 rc=2 efc=1 rfr=False None .text      GetGrpSoundId__4dBgWFRC13cBgS_PolyInfo                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2046,7 +2031,7 @@ asm void dBgW::GetGrpSoundId(cBgS_PolyInfo const& field_0) {
 #pragma pop
 
 
-/* 8007DF88-8007DFC4 003C+00 rc=0 efc=0 .text      CrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz       */
+/* 8007DF88-8007DFC4 003C+00 rc=1 efc=0 rfr=False None .text      CrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2057,7 +2042,7 @@ asm void dBgW::CrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_2,
 #pragma pop
 
 
-/* 8007DFC4-8007E000 003C+00 rc=0 efc=0 .text      TransPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz     */
+/* 8007DFC4-8007E000 003C+00 rc=1 efc=0 rfr=False None .text      TransPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2068,7 +2053,7 @@ asm void dBgW::TransPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_
 #pragma pop
 
 
-/* 8007E000-8007E02C 002C+00 rc=0 efc=0 .text      MatrixCrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
+/* 8007E000-8007E02C 002C+00 rc=1 efc=0 rfr=False None .text      MatrixCrrPos__4dBgWFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2079,7 +2064,7 @@ asm void dBgW::MatrixCrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool fi
 #pragma pop
 
 
-/* 8007E02C-8007E360 0334+00 rc=0 efc=0 .text      ChkPolyThrough__4dBgWFiP16cBgS_PolyPassChk                   */
+/* 8007E02C-8007E360 0334+00 rc=2 efc=1 rfr=False None .text      ChkPolyThrough__4dBgWFiP16cBgS_PolyPassChk                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2090,7 +2075,7 @@ asm void dBgW::ChkPolyThrough(int field_0, cBgS_PolyPassChk* field_1) {
 #pragma pop
 
 
-/* 8007E360-8007E3D8 0078+00 rc=0 efc=0 .text      ChkShdwDrawThrough__4dBgWFiP16cBgS_PolyPassChk               */
+/* 8007E360-8007E3D8 0078+00 rc=2 efc=1 rfr=False None .text      ChkShdwDrawThrough__4dBgWFiP16cBgS_PolyPassChk               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2101,7 +2086,7 @@ asm void dBgW::ChkShdwDrawThrough(int field_0, cBgS_PolyPassChk* field_1) {
 #pragma pop
 
 
-/* 8007E3D8-8007E444 006C+00 rc=0 efc=0 .text      ChkGrpThrough__4dBgWFiP15cBgS_GrpPassChki                    */
+/* 8007E3D8-8007E444 006C+00 rc=2 efc=1 rfr=False None .text      ChkGrpThrough__4dBgWFiP15cBgS_GrpPassChki                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2112,7 +2097,7 @@ asm void dBgW::ChkGrpThrough(int field_0, cBgS_GrpPassChk* field_1, int field_2)
 #pragma pop
 
 
-/* 8007E444-8007E474 0030+00 rc=0 efc=0 .text      CallRideCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_c           */
+/* 8007E444-8007E474 0030+00 rc=2 efc=1 rfr=False None .text      CallRideCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2123,7 +2108,7 @@ asm void dBgW::CallRideCallBack(fopAc_ac_c* field_0, fopAc_ac_c* field_1) {
 #pragma pop
 
 
-/* 8007E474-8007E4A4 0030+00 rc=0 efc=0 .text      CallArrowStickCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_cR4cXyz */
+/* 8007E474-8007E4A4 0030+00 rc=2 efc=1 rfr=False None .text      CallArrowStickCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_cR4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2134,7 +2119,7 @@ asm void dBgW::CallArrowStickCallBack(fopAc_ac_c* field_0, fopAc_ac_c* field_1, 
 #pragma pop
 
 
-/* 8007E4A4-8007E4B4 0010+00 rc=0 efc=0 .text      OffMoveFlag__4dBgWFv                                         */
+/* 8007E4A4-8007E4B4 0010+00 rc=2 efc=1 rfr=False None .text      OffMoveFlag__4dBgWFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2145,7 +2130,7 @@ asm void dBgW::OffMoveFlag() {
 #pragma pop
 
 
-/* 8007E4B4-8007E4C0 000C+00 rc=0 efc=0 .text      ChkMoveFlag__4dBgWCFv                                        */
+/* 8007E4B4-8007E4C0 000C+00 rc=2 efc=1 rfr=False None .text      ChkMoveFlag__4dBgWCFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2156,7 +2141,7 @@ asm void dBgW::ChkMoveFlag() const {
 #pragma pop
 
 
-/* 8007E4C0-8007E548 0088+00 rc=0 efc=0 .text      dBgW_NewSet__FP6cBgD_tUlPA3_A4_f                             */
+/* 8007E4C0-8007E548 0088+00 rc=0 efc=0 rfr=False None .text      dBgW_NewSet__FP6cBgD_tUlPA3_A4_f                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2167,7 +2152,7 @@ asm void dBgW_NewSet(cBgD_t* field_0, u32 field_1, f32 (* field_2)[3][4]) {
 #pragma pop
 
 
-/* 8007E548-8007E5A8 0060+00 rc=0 efc=0 .text      __dt__4dBgWFv                                                */
+/* 8007E548-8007E5A8 0060+00 rc=1 efc=0 rfr=False None .text      __dt__4dBgWFv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2179,6 +2164,6 @@ asm dBgW::~dBgW() {
 
 
 /* ############################################################################################## */
-/* 80450F88-80450F90 0008+00 rc=0 efc=0 None       None                                                         */
+/* 80450F88-80450F90 0008+00 rc=4 efc=4 rfr=False None .sbss      None                                                         */
 u8 struct_80450F88[8];
 

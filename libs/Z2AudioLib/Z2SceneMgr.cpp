@@ -139,8 +139,8 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-void dComIfGs_getStartPoint(); // 2
-void dComIfGs_isSaveSwitch(int); // 2
+static void dComIfGs_getStartPoint(); // 2
+static void dComIfGs_isSaveSwitch(int); // 2
 
 extern "C" void __ct__10Z2SceneMgrFv(); // 1
 extern "C" void setInDarkness__10Z2SceneMgrFb(); // 1
@@ -153,11 +153,11 @@ extern "C" void setFieldBgmPlay__8Z2SeqMgrFb(); // 1
 extern "C" void isActive__12JAIStreamMgrCFv(); // 1
 extern "C" void getID__8JAISoundCFv(); // 1
 extern "C" void func_802B9994(); // 1
-extern "C" void dComIfGs_getStartPoint__Fv(); // 1
+extern "C" static void dComIfGs_getStartPoint__Fv(); // 1
 extern "C" void unMuteSceneBgm__8Z2SeqMgrFUl(); // 1
 extern "C" void muteSceneBgm__8Z2SeqMgrFUlf(); // 1
 extern "C" void __as__10JAISoundIDFRC10JAISoundID(); // 1
-extern "C" void dComIfGs_isSaveSwitch__Fi(); // 1
+extern "C" static void dComIfGs_isSaveSwitch__Fi(); // 1
 extern "C" void resetCrowdSize__7Z2SeMgrFv(); // 1
 extern "C" void setTwilightGateVol__8Z2SeqMgrFf(); // 1
 extern "C" void setWindStoneVol__8Z2SeqMgrFfUl(); // 1
@@ -177,27 +177,7 @@ extern "C" void eraseBgmWave__10Z2SceneMgrFUl(); // 1
 extern "C" void getWaveLoadStatus__10Z2SceneMgrFUlUl(); // 1
 extern "C" void loadSeWave__10Z2SceneMgrFUl(); // 1
 extern "C" void loadBgmWave__10Z2SceneMgrFUl(); // 1
-SECTION_RODATA extern const char* const Z2SceneMgr__stringBase0;
-SECTION_DATA extern void* sSpotName[81];
-SECTION_DATA extern void* lit_5354[16];
-SECTION_DATA extern void* lit_5353[16];
-SECTION_DATA extern void* lit_5352[14];
-SECTION_DATA extern void* lit_5351[14];
-SECTION_DATA extern void* lit_5350[12];
-SECTION_DATA extern void* Z2SceneMgr__lit_5349[8];
-SECTION_DATA extern void* Z2SceneMgr__lit_5348[13];
-SECTION_DATA extern void* Z2SceneMgr__lit_5347[81];
-SECTION_DATA extern void* Z2SceneMgr__lit_5852[87];
-SECTION_SDATA2 extern u8 lit_3511[4];
-SECTION_SDATA2 extern f32 lit_3512;
-SECTION_SDATA2 extern f32 lit_3529[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 lit_3531;
-SECTION_SDATA2 extern f32 lit_5341;
-SECTION_SDATA2 extern f32 lit_5342;
-SECTION_SDATA2 extern f32 Z2SceneMgr__lit_5343;
-SECTION_SDATA2 extern f32 Z2SceneMgr__lit_5344;
-SECTION_SDATA2 extern f32 Z2SceneMgr__lit_5345;
-SECTION_SDATA2 extern f32 Z2SceneMgr__lit_5346;
+extern "C" extern char const* const Z2SceneMgr__stringBase0;
 
 // 
 // External References:
@@ -251,24 +231,25 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_16(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SBSS extern u8 data_80450B3C[4];
-SECTION_SBSS extern u8 data_80450B40[4];
-SECTION_SBSS extern u8 data_80450B48[4];
-SECTION_SBSS extern u8 data_80450B58[4];
-SECTION_SBSS extern u8 data_80450B60[4];
-SECTION_SBSS extern u8 data_80450B7C[4];
-SECTION_SBSS extern u8 data_80450B80[4];
-SECTION_SBSS extern u8 data_80450B84[4];
-SECTION_SBSS extern u8 data_80450B88[4];
-SECTION_SBSS extern u8 data_80450CC0[4 + 4 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450860[4];
+extern "C" extern u8 data_80450B3C[4];
+extern "C" extern u8 data_80450B40[4];
+extern "C" extern u8 data_80450B48[4];
+extern "C" extern u8 data_80450B58[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 data_80450CC0[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 802B6840-802B68B0 0070+00 rc=0 efc=0 .text      __ct__10Z2SceneMgrFv                                         */
+/* 802B6840-802B68B0 0070+00 rc=1 efc=1 rfr=False None .text      __ct__10Z2SceneMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -279,7 +260,7 @@ asm Z2SceneMgr::Z2SceneMgr() {
 #pragma pop
 
 
-/* 802B68B0-802B68E0 0030+00 rc=0 efc=0 .text      setInDarkness__10Z2SceneMgrFb                                */
+/* 802B68B0-802B68E0 0030+00 rc=1 efc=1 rfr=False None .text      setInDarkness__10Z2SceneMgrFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,15 +272,15 @@ asm void Z2SceneMgr::setInDarkness(bool field_0) {
 
 
 /* ############################################################################################## */
-/* 80455A38-80455A3C 0004+00 rc=0 efc=0 .sdata2    @3511                                                        */
-u8 lit_3511[4] = {
+/* 80455A38-80455A3C 0004+00 rc=8 efc=0 rfr=False None .sdata2    @3511                                                        */
+SECTION_SDATA2 static u8 lit_3511[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455A3C-80455A40 0004+00 rc=0 efc=0 .sdata2    @3512                                                        */
-f32 lit_3512 = 1.0f;
+/* 80455A3C-80455A40 0004+00 rc=6 efc=0 rfr=False None .sdata2    @3512                                                        */
+SECTION_SDATA2 static f32 lit_3512 = 1.0f;
 
-/* 802B68E0-802B697C 009C+00 rc=0 efc=0 .text      setSceneExist__10Z2SceneMgrFb                                */
+/* 802B68E0-802B697C 009C+00 rc=5 efc=2 rfr=False None .text      setSceneExist__10Z2SceneMgrFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -311,17 +292,17 @@ asm void Z2SceneMgr::setSceneExist(bool field_0) {
 
 
 /* ############################################################################################## */
-/* 80455A40-80455A48 0004+04 rc=0 efc=0 .sdata2    @3529                                                        */
-f32 lit_3529[1 + 1 /* padding */] = {
+/* 80455A40-80455A48 0004+04 rc=1 efc=0 rfr=False None .sdata2    @3529                                                        */
+SECTION_SDATA2 static f32 lit_3529[1 + 1 /* padding */] = {
 	3.0f / 10.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455A48-80455A50 0008+00 rc=0 efc=0 .sdata2    @3531                                                        */
-f64 lit_3531 = 4503599627370496.0 /* cast u32 to float */;
+/* 80455A48-80455A50 0008+00 rc=5 efc=0 rfr=False None .sdata2    @3531                                                        */
+SECTION_SDATA2 static f64 lit_3531 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802B697C-802B6A18 009C+00 rc=0 efc=0 .text      setFadeOutStart__10Z2SceneMgrFUc                             */
+/* 802B697C-802B6A18 009C+00 rc=1 efc=1 rfr=False None .text      setFadeOutStart__10Z2SceneMgrFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -332,7 +313,7 @@ asm void Z2SceneMgr::setFadeOutStart(u8 field_0) {
 #pragma pop
 
 
-/* 802B6A18-802B6AF8 00E0+00 rc=0 efc=0 .text      setFadeInStart__10Z2SceneMgrFUc                              */
+/* 802B6A18-802B6AF8 00E0+00 rc=1 efc=1 rfr=False None .text      setFadeInStart__10Z2SceneMgrFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -344,406 +325,406 @@ asm void Z2SceneMgr::setFadeInStart(u8 field_0) {
 
 
 /* ############################################################################################## */
-/* 8039BFA8-8039C220 0274+04 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 8039BFA8-8039C220 0274+04 rc=2 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_8039BFA8 = "F_SP00";
-const char* const stringBase_8039BFAF = "F_SP103";
-const char* const stringBase_8039BFB7 = "R_SP01";
-const char* const stringBase_8039BFBE = "F_SP104";
-const char* const stringBase_8039BFC6 = "R_SP107";
-const char* const stringBase_8039BFCE = "F_SP108";
-const char* const stringBase_8039BFD6 = "R_SP108";
-const char* const stringBase_8039BFDE = "F_SP117";
-const char* const stringBase_8039BFE6 = "F_SP109";
-const char* const stringBase_8039BFEE = "R_SP109";
-const char* const stringBase_8039BFF6 = "R_SP209";
-const char* const stringBase_8039BFFE = "F_SP110";
-const char* const stringBase_8039C006 = "R_SP110";
-const char* const stringBase_8039C00E = "F_SP111";
-const char* const stringBase_8039C016 = "F_SP128";
-const char* const stringBase_8039C01E = "R_SP128";
-const char* const stringBase_8039C026 = "F_SP115";
-const char* const stringBase_8039C02E = "F_SP112";
-const char* const stringBase_8039C036 = "F_SP126";
-const char* const stringBase_8039C03E = "F_SP127";
-const char* const stringBase_8039C046 = "R_SP127";
-const char* const stringBase_8039C04E = "F_SP113";
-const char* const stringBase_8039C056 = "F_SP116";
-const char* const stringBase_8039C05E = "R_SP116";
-const char* const stringBase_8039C066 = "R_SP160";
-const char* const stringBase_8039C06E = "R_SP161";
-const char* const stringBase_8039C076 = "F_SP114";
-const char* const stringBase_8039C07E = "F_SP118";
-const char* const stringBase_8039C086 = "F_SP124";
-const char* const stringBase_8039C08E = "F_SP125";
-const char* const stringBase_8039C096 = "F_SP121";
-const char* const stringBase_8039C09E = "F_SP122";
-const char* const stringBase_8039C0A6 = "F_SP123";
-const char* const stringBase_8039C0AE = "F_SP200";
-const char* const stringBase_8039C0B6 = "F_SP102";
-const char* const stringBase_8039C0BE = "";
-const char* const stringBase_8039C0BF = "R_SP300";
-const char* const stringBase_8039C0C7 = "R_SP301";
-const char* const stringBase_8039C0CF = "T_ENEMY";
-const char* const stringBase_8039C0D7 = "D_MN54";
-const char* const stringBase_8039C0DE = "D_MN05";
-const char* const stringBase_8039C0E5 = "D_MN05B";
-const char* const stringBase_8039C0ED = "D_MN05A";
-const char* const stringBase_8039C0F5 = "D_MN04";
-const char* const stringBase_8039C0FC = "D_MN04B";
-const char* const stringBase_8039C104 = "D_MN04A";
-const char* const stringBase_8039C10C = "D_MN01";
-const char* const stringBase_8039C113 = "D_MN01B";
-const char* const stringBase_8039C11B = "D_MN01A";
-const char* const stringBase_8039C123 = "D_MN10";
-const char* const stringBase_8039C12A = "D_MN10B";
-const char* const stringBase_8039C132 = "D_MN10A";
-const char* const stringBase_8039C13A = "D_MN11";
-const char* const stringBase_8039C141 = "D_MN11B";
-const char* const stringBase_8039C149 = "D_MN11A";
-const char* const stringBase_8039C151 = "D_MN06";
-const char* const stringBase_8039C158 = "D_MN06B";
-const char* const stringBase_8039C160 = "D_MN06A";
-const char* const stringBase_8039C168 = "D_MN07";
-const char* const stringBase_8039C16F = "D_MN07B";
-const char* const stringBase_8039C177 = "D_MN07A";
-const char* const stringBase_8039C17F = "D_MN08";
-const char* const stringBase_8039C186 = "D_MN08B";
-const char* const stringBase_8039C18E = "D_MN08C";
-const char* const stringBase_8039C196 = "D_MN08A";
-const char* const stringBase_8039C19E = "D_MN08D";
-const char* const stringBase_8039C1A6 = "D_MN09";
-const char* const stringBase_8039C1AD = "D_MN09A";
-const char* const stringBase_8039C1B5 = "D_MN09B";
-const char* const stringBase_8039C1BD = "D_MN09C";
-const char* const stringBase_8039C1C5 = "D_SB00";
-const char* const stringBase_8039C1CC = "D_SB01";
-const char* const stringBase_8039C1D3 = "D_SB02";
-const char* const stringBase_8039C1DA = "D_SB03";
-const char* const stringBase_8039C1E1 = "D_SB04";
-const char* const stringBase_8039C1E8 = "D_SB05";
-const char* const stringBase_8039C1EF = "D_SB06";
-const char* const stringBase_8039C1F6 = "D_SB07";
-const char* const stringBase_8039C1FD = "D_SB08";
-const char* const stringBase_8039C204 = "D_SB09";
-const char* const stringBase_8039C20B = "D_SB10";
-const char* const stringBase_8039C212 = "force_end";
+SECTION_DEAD static char const* const stringBase_8039BFA8 = "F_SP00";
+SECTION_DEAD static char const* const stringBase_8039BFAF = "F_SP103";
+SECTION_DEAD static char const* const stringBase_8039BFB7 = "R_SP01";
+SECTION_DEAD static char const* const stringBase_8039BFBE = "F_SP104";
+SECTION_DEAD static char const* const stringBase_8039BFC6 = "R_SP107";
+SECTION_DEAD static char const* const stringBase_8039BFCE = "F_SP108";
+SECTION_DEAD static char const* const stringBase_8039BFD6 = "R_SP108";
+SECTION_DEAD static char const* const stringBase_8039BFDE = "F_SP117";
+SECTION_DEAD static char const* const stringBase_8039BFE6 = "F_SP109";
+SECTION_DEAD static char const* const stringBase_8039BFEE = "R_SP109";
+SECTION_DEAD static char const* const stringBase_8039BFF6 = "R_SP209";
+SECTION_DEAD static char const* const stringBase_8039BFFE = "F_SP110";
+SECTION_DEAD static char const* const stringBase_8039C006 = "R_SP110";
+SECTION_DEAD static char const* const stringBase_8039C00E = "F_SP111";
+SECTION_DEAD static char const* const stringBase_8039C016 = "F_SP128";
+SECTION_DEAD static char const* const stringBase_8039C01E = "R_SP128";
+SECTION_DEAD static char const* const stringBase_8039C026 = "F_SP115";
+SECTION_DEAD static char const* const stringBase_8039C02E = "F_SP112";
+SECTION_DEAD static char const* const stringBase_8039C036 = "F_SP126";
+SECTION_DEAD static char const* const stringBase_8039C03E = "F_SP127";
+SECTION_DEAD static char const* const stringBase_8039C046 = "R_SP127";
+SECTION_DEAD static char const* const stringBase_8039C04E = "F_SP113";
+SECTION_DEAD static char const* const stringBase_8039C056 = "F_SP116";
+SECTION_DEAD static char const* const stringBase_8039C05E = "R_SP116";
+SECTION_DEAD static char const* const stringBase_8039C066 = "R_SP160";
+SECTION_DEAD static char const* const stringBase_8039C06E = "R_SP161";
+SECTION_DEAD static char const* const stringBase_8039C076 = "F_SP114";
+SECTION_DEAD static char const* const stringBase_8039C07E = "F_SP118";
+SECTION_DEAD static char const* const stringBase_8039C086 = "F_SP124";
+SECTION_DEAD static char const* const stringBase_8039C08E = "F_SP125";
+SECTION_DEAD static char const* const stringBase_8039C096 = "F_SP121";
+SECTION_DEAD static char const* const stringBase_8039C09E = "F_SP122";
+SECTION_DEAD static char const* const stringBase_8039C0A6 = "F_SP123";
+SECTION_DEAD static char const* const stringBase_8039C0AE = "F_SP200";
+SECTION_DEAD static char const* const stringBase_8039C0B6 = "F_SP102";
+SECTION_DEAD static char const* const stringBase_8039C0BE = "";
+SECTION_DEAD static char const* const stringBase_8039C0BF = "R_SP300";
+SECTION_DEAD static char const* const stringBase_8039C0C7 = "R_SP301";
+SECTION_DEAD static char const* const stringBase_8039C0CF = "T_ENEMY";
+SECTION_DEAD static char const* const stringBase_8039C0D7 = "D_MN54";
+SECTION_DEAD static char const* const stringBase_8039C0DE = "D_MN05";
+SECTION_DEAD static char const* const stringBase_8039C0E5 = "D_MN05B";
+SECTION_DEAD static char const* const stringBase_8039C0ED = "D_MN05A";
+SECTION_DEAD static char const* const stringBase_8039C0F5 = "D_MN04";
+SECTION_DEAD static char const* const stringBase_8039C0FC = "D_MN04B";
+SECTION_DEAD static char const* const stringBase_8039C104 = "D_MN04A";
+SECTION_DEAD static char const* const stringBase_8039C10C = "D_MN01";
+SECTION_DEAD static char const* const stringBase_8039C113 = "D_MN01B";
+SECTION_DEAD static char const* const stringBase_8039C11B = "D_MN01A";
+SECTION_DEAD static char const* const stringBase_8039C123 = "D_MN10";
+SECTION_DEAD static char const* const stringBase_8039C12A = "D_MN10B";
+SECTION_DEAD static char const* const stringBase_8039C132 = "D_MN10A";
+SECTION_DEAD static char const* const stringBase_8039C13A = "D_MN11";
+SECTION_DEAD static char const* const stringBase_8039C141 = "D_MN11B";
+SECTION_DEAD static char const* const stringBase_8039C149 = "D_MN11A";
+SECTION_DEAD static char const* const stringBase_8039C151 = "D_MN06";
+SECTION_DEAD static char const* const stringBase_8039C158 = "D_MN06B";
+SECTION_DEAD static char const* const stringBase_8039C160 = "D_MN06A";
+SECTION_DEAD static char const* const stringBase_8039C168 = "D_MN07";
+SECTION_DEAD static char const* const stringBase_8039C16F = "D_MN07B";
+SECTION_DEAD static char const* const stringBase_8039C177 = "D_MN07A";
+SECTION_DEAD static char const* const stringBase_8039C17F = "D_MN08";
+SECTION_DEAD static char const* const stringBase_8039C186 = "D_MN08B";
+SECTION_DEAD static char const* const stringBase_8039C18E = "D_MN08C";
+SECTION_DEAD static char const* const stringBase_8039C196 = "D_MN08A";
+SECTION_DEAD static char const* const stringBase_8039C19E = "D_MN08D";
+SECTION_DEAD static char const* const stringBase_8039C1A6 = "D_MN09";
+SECTION_DEAD static char const* const stringBase_8039C1AD = "D_MN09A";
+SECTION_DEAD static char const* const stringBase_8039C1B5 = "D_MN09B";
+SECTION_DEAD static char const* const stringBase_8039C1BD = "D_MN09C";
+SECTION_DEAD static char const* const stringBase_8039C1C5 = "D_SB00";
+SECTION_DEAD static char const* const stringBase_8039C1CC = "D_SB01";
+SECTION_DEAD static char const* const stringBase_8039C1D3 = "D_SB02";
+SECTION_DEAD static char const* const stringBase_8039C1DA = "D_SB03";
+SECTION_DEAD static char const* const stringBase_8039C1E1 = "D_SB04";
+SECTION_DEAD static char const* const stringBase_8039C1E8 = "D_SB05";
+SECTION_DEAD static char const* const stringBase_8039C1EF = "D_SB06";
+SECTION_DEAD static char const* const stringBase_8039C1F6 = "D_SB07";
+SECTION_DEAD static char const* const stringBase_8039C1FD = "D_SB08";
+SECTION_DEAD static char const* const stringBase_8039C204 = "D_SB09";
+SECTION_DEAD static char const* const stringBase_8039C20B = "D_SB10";
+SECTION_DEAD static char const* const stringBase_8039C212 = "force_end";
 /* @stringBase0 padding */
-char* const pad_8039C21C = "\0\0\0";
+SECTION_DEAD static char const* const pad_8039C21C = "\0\0\0";
 #pragma pop
 
-/* 803CA5C0-803CA704 0144+00 rc=0 efc=0 .data      sSpotName                                                    */
-void* sSpotName[81] = {
-	(void*)&Z2SceneMgr__stringBase0,
-	(void*)0x8039BFAF,
-	(void*)0x8039BFB7,
-	(void*)0x8039BFBE,
-	(void*)0x8039BFC6,
-	(void*)0x8039BFCE,
-	(void*)0x8039BFD6,
-	(void*)0x8039BFDE,
-	(void*)0x8039BFE6,
-	(void*)0x8039BFEE,
-	(void*)0x8039BFF6,
-	(void*)0x8039BFFE,
-	(void*)0x8039C006,
-	(void*)0x8039C00E,
-	(void*)0x8039C016,
-	(void*)0x8039C01E,
-	(void*)0x8039C026,
-	(void*)0x8039C02E,
-	(void*)0x8039C036,
-	(void*)0x8039C03E,
-	(void*)0x8039C046,
-	(void*)0x8039C04E,
-	(void*)0x8039C056,
-	(void*)0x8039C05E,
-	(void*)0x8039C066,
-	(void*)0x8039C06E,
-	(void*)0x8039C076,
-	(void*)0x8039C07E,
-	(void*)0x8039C086,
-	(void*)0x8039C08E,
-	(void*)0x8039C096,
-	(void*)0x8039C09E,
-	(void*)0x8039C0A6,
-	(void*)0x8039C0AE,
-	(void*)0x8039C0B6,
-	(void*)0x8039C0BE,
-	(void*)0x8039C0BF,
-	(void*)0x8039C0C7,
-	(void*)0x8039C0CF,
-	(void*)0x8039C0D7,
-	(void*)0x8039C0DE,
-	(void*)0x8039C0E5,
-	(void*)0x8039C0ED,
-	(void*)0x8039C0F5,
-	(void*)0x8039C0FC,
-	(void*)0x8039C104,
-	(void*)0x8039C10C,
-	(void*)0x8039C113,
-	(void*)0x8039C11B,
-	(void*)0x8039C123,
-	(void*)0x8039C12A,
-	(void*)0x8039C132,
-	(void*)0x8039C13A,
-	(void*)0x8039C141,
-	(void*)0x8039C149,
-	(void*)0x8039C151,
-	(void*)0x8039C158,
-	(void*)0x8039C160,
-	(void*)0x8039C168,
-	(void*)0x8039C16F,
-	(void*)0x8039C177,
-	(void*)0x8039C17F,
-	(void*)0x8039C186,
-	(void*)0x8039C18E,
-	(void*)0x8039C196,
-	(void*)0x8039C19E,
-	(void*)0x8039C1A6,
-	(void*)0x8039C1AD,
-	(void*)0x8039C1B5,
-	(void*)0x8039C1BD,
-	(void*)0x8039C1C5,
-	(void*)0x8039C1CC,
-	(void*)0x8039C1D3,
-	(void*)0x8039C1DA,
-	(void*)0x8039C1E1,
-	(void*)0x8039C1E8,
-	(void*)0x8039C1EF,
-	(void*)0x8039C1F6,
-	(void*)0x8039C1FD,
-	(void*)0x8039C204,
-	(void*)0x8039C20B,
+/* 803CA5C0-803CA704 0144+00 rc=1 efc=0 rfr=False None .data      sSpotName                                                    */
+SECTION_DATA static void* sSpotName[81] = {
+	/* 0    */ (void*)&Z2SceneMgr__stringBase0,
+	/* 1    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x7),
+	/* 2    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xF),
+	/* 3    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x16),
+	/* 4    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1E),
+	/* 5    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x26),
+	/* 6    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x2E),
+	/* 7    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x36),
+	/* 8    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x3E),
+	/* 9    */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x46),
+	/* 10   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x4E),
+	/* 11   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x56),
+	/* 12   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x5E),
+	/* 13   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x66),
+	/* 14   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x6E),
+	/* 15   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x76),
+	/* 16   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x7E),
+	/* 17   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x86),
+	/* 18   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x8E),
+	/* 19   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x96),
+	/* 20   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x9E),
+	/* 21   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xA6),
+	/* 22   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xAE),
+	/* 23   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xB6),
+	/* 24   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xBE),
+	/* 25   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xC6),
+	/* 26   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xCE),
+	/* 27   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xD6),
+	/* 28   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xDE),
+	/* 29   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xE6),
+	/* 30   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xEE),
+	/* 31   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xF6),
+	/* 32   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0xFE),
+	/* 33   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x106),
+	/* 34   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x10E),
+	/* 35   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x116),
+	/* 36   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x117),
+	/* 37   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x11F),
+	/* 38   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x127),
+	/* 39   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x12F),
+	/* 40   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x136),
+	/* 41   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x13D),
+	/* 42   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x145),
+	/* 43   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x14D),
+	/* 44   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x154),
+	/* 45   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x15C),
+	/* 46   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x164),
+	/* 47   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x16B),
+	/* 48   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x173),
+	/* 49   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x17B),
+	/* 50   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x182),
+	/* 51   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x18A),
+	/* 52   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x192),
+	/* 53   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x199),
+	/* 54   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1A1),
+	/* 55   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1A9),
+	/* 56   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1B0),
+	/* 57   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1B8),
+	/* 58   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1C0),
+	/* 59   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1C7),
+	/* 60   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1CF),
+	/* 61   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1D7),
+	/* 62   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1DE),
+	/* 63   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1E6),
+	/* 64   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1EE),
+	/* 65   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1F6),
+	/* 66   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x1FE),
+	/* 67   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x205),
+	/* 68   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x20D),
+	/* 69   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x215),
+	/* 70   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x21D),
+	/* 71   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x224),
+	/* 72   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x22B),
+	/* 73   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x232),
+	/* 74   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x239),
+	/* 75   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x240),
+	/* 76   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x247),
+	/* 77   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x24E),
+	/* 78   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x255),
+	/* 79   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x25C),
+	/* 80   */ (void*)(((char*)&Z2SceneMgr__stringBase0)+0x263),
 };
 
-/* 803CA704-803CA744 0040+00 rc=0 efc=0 .data      @5354                                                        */
-void* lit_5354[16] = {
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BEC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2BC0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BEC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BEC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BEC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
+/* 803CA704-803CA744 0040+00 rc=1 efc=0 rfr=False None .data      @5354                                                        */
+SECTION_DATA static void* lit_5354[16] = {
+	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
+	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
+	/* 2    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
+	/* 3    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
+	/* 4    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
+	/* 5    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
+	/* 6    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
+	/* 7    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BEC),
+	/* 8    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2BC0),
+	/* 9    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BEC),
+	/* 10   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
+	/* 11   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BEC),
+	/* 12   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BEC),
+	/* 13   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BDC),
+	/* 14   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
+	/* 15   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BE4),
 };
 
-/* 803CA744-803CA784 0040+00 rc=0 efc=0 .data      @5353                                                        */
-void* lit_5353[16] = {
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1B98),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1B98),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1B98),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BBC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB8),
+/* 803CA744-803CA784 0040+00 rc=1 efc=0 rfr=False None .data      @5353                                                        */
+SECTION_DATA static void* lit_5353[16] = {
+	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA0),
+	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB8),
+	/* 2    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1B98),
+	/* 3    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1B98),
+	/* 4    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1B98),
+	/* 5    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA0),
+	/* 6    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB8),
+	/* 7    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA0),
+	/* 8    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BBC),
+	/* 9    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA8),
+	/* 10   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA8),
+	/* 11   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BA8),
+	/* 12   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB0),
+	/* 13   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB0),
+	/* 14   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB0),
+	/* 15   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BB8),
 };
 
-/* 803CA784-803CA7BC 0038+00 rc=0 efc=0 .data      @5352                                                        */
-void* lit_5352[14] = {
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC48),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC78),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCC8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCC8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCA0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCC8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC08),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC08),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCC8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC18),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC20),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC28),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC34),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC3C),
+/* 803CA784-803CA7BC 0038+00 rc=1 efc=0 rfr=False None .data      @5352                                                        */
+SECTION_DATA static void* lit_5352[14] = {
+	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC48),
+	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC78),
+	/* 2    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCC8),
+	/* 3    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCC8),
+	/* 4    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCA0),
+	/* 5    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCC8),
+	/* 6    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC08),
+	/* 7    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC08),
+	/* 8    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCC8),
+	/* 9    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC18),
+	/* 10   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC20),
+	/* 11   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC28),
+	/* 12   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC34),
+	/* 13   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xC3C),
 };
 
-/* 803CA7BC-803CA7F4 0038+00 rc=0 efc=0 .data      @5351                                                        */
-void* lit_5351[14] = {
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xAF4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xADC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xADC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xADC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xAEC),
+/* 803CA7BC-803CA7F4 0038+00 rc=1 efc=0 rfr=False None .data      @5351                                                        */
+SECTION_DATA static void* lit_5351[14] = {
+	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
+	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xAF4),
+	/* 2    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
+	/* 3    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
+	/* 4    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xADC),
+	/* 5    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
+	/* 6    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xADC),
+	/* 7    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
+	/* 8    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
+	/* 9    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
+	/* 10   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
+	/* 11   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB48),
+	/* 12   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xADC),
+	/* 13   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xAEC),
 };
 
-/* 803CA7F4-803CA824 0030+00 rc=0 efc=0 .data      @5350                                                        */
-void* lit_5350[12] = {
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7B0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x72C),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x804),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x804),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x778),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x788),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x798),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x790),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x798),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7A0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7A8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7A8),
+/* 803CA7F4-803CA824 0030+00 rc=1 efc=0 rfr=False None .data      @5350                                                        */
+SECTION_DATA static void* lit_5350[12] = {
+	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7B0),
+	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x72C),
+	/* 2    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x804),
+	/* 3    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x804),
+	/* 4    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x778),
+	/* 5    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x788),
+	/* 6    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x798),
+	/* 7    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x790),
+	/* 8    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x798),
+	/* 9    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7A0),
+	/* 10   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7A8),
+	/* 11   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x7A8),
 };
 
-/* 803CA824-803CA844 0020+00 rc=0 efc=0 .data      @5349                                                        */
-void* Z2SceneMgr__lit_5349[8] = {
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x430),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x45C),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x52C),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x604),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x604),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x628),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x6F4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x604),
+/* 803CA824-803CA844 0020+00 rc=1 efc=0 rfr=False None .data      @5349                                                        */
+SECTION_DATA static void* Z2SceneMgr__lit_5349[8] = {
+	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x430),
+	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x45C),
+	/* 2    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x52C),
+	/* 3    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x604),
+	/* 4    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x604),
+	/* 5    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x628),
+	/* 6    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x6F4),
+	/* 7    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x604),
 };
 
-/* 803CA844-803CA878 0034+00 rc=0 efc=0 .data      @5348                                                        */
-void* Z2SceneMgr__lit_5348[13] = {
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2E0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x364),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x378),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x338),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x338),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x35C),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x328),
+/* 803CA844-803CA878 0034+00 rc=1 efc=0 rfr=False None .data      @5348                                                        */
+SECTION_DATA static void* Z2SceneMgr__lit_5348[13] = {
+	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
+	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2E0),
+	/* 2    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
+	/* 3    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x364),
+	/* 4    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x378),
+	/* 5    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x338),
+	/* 6    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
+	/* 7    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
+	/* 8    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x338),
+	/* 9    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x35C),
+	/* 10   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
+	/* 11   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x3E4),
+	/* 12   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x328),
 };
 
-/* 803CA878-803CA9BC 0144+00 rc=0 efc=0 .data      @5347                                                        */
-void* Z2SceneMgr__lit_5347[81] = {
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x150),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1E0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x40C),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x700),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x80C),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xA08),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x968),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1824),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB94),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCF4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xF00),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1010),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1174),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xF70),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1098),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1140),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x11BC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x13B4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x12D8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1338),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1384),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1468),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x150C),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x15E4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1688),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x17E0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x18E8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1994),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1934),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x19C8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1A30),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BF4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1CF8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1DA8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1D2C),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2BC0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A7C),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x948),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x134),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2BC0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1E68),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1EA4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1F00),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1FAC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1FE8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2038),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x20D8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2108),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2158),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x21F8),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2248),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2298),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2338),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2374),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x23D0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x247C),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x24AC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x24FC),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x259C),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x25F4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2644),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x26E4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2760),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2760),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x27B0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2894),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x28D4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2980),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A04),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A34),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2AC4),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A84),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2AF0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2AF0),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B18),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
-	(void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B6C),
+/* 803CA878-803CA9BC 0144+00 rc=1 efc=0 rfr=False None .data      @5347                                                        */
+SECTION_DATA static void* Z2SceneMgr__lit_5347[81] = {
+	/* 0    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x150),
+	/* 1    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1E0),
+	/* 2    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x40C),
+	/* 3    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x700),
+	/* 4    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x80C),
+	/* 5    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xA08),
+	/* 6    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x968),
+	/* 7    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1824),
+	/* 8    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xB94),
+	/* 9    */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xCF4),
+	/* 10   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xF00),
+	/* 11   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1010),
+	/* 12   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1174),
+	/* 13   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0xF70),
+	/* 14   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1098),
+	/* 15   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1140),
+	/* 16   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x11BC),
+	/* 17   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x13B4),
+	/* 18   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x12D8),
+	/* 19   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1338),
+	/* 20   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1384),
+	/* 21   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1468),
+	/* 22   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x150C),
+	/* 23   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x15E4),
+	/* 24   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1688),
+	/* 25   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x17E0),
+	/* 26   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x18E8),
+	/* 27   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1994),
+	/* 28   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1934),
+	/* 29   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x19C8),
+	/* 30   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1A30),
+	/* 31   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1BF4),
+	/* 32   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1CF8),
+	/* 33   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1DA8),
+	/* 34   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1D2C),
+	/* 35   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2BC0),
+	/* 36   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A7C),
+	/* 37   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x948),
+	/* 38   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x134),
+	/* 39   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2BC0),
+	/* 40   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1E68),
+	/* 41   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1EA4),
+	/* 42   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1F00),
+	/* 43   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1FAC),
+	/* 44   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x1FE8),
+	/* 45   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2038),
+	/* 46   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x20D8),
+	/* 47   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2108),
+	/* 48   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2158),
+	/* 49   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x21F8),
+	/* 50   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2248),
+	/* 51   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2298),
+	/* 52   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2338),
+	/* 53   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2374),
+	/* 54   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x23D0),
+	/* 55   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x247C),
+	/* 56   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x24AC),
+	/* 57   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x24FC),
+	/* 58   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x259C),
+	/* 59   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x25F4),
+	/* 60   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2644),
+	/* 61   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x26E4),
+	/* 62   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2760),
+	/* 63   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2760),
+	/* 64   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x27B0),
+	/* 65   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2894),
+	/* 66   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x28D4),
+	/* 67   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2980),
+	/* 68   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A04),
+	/* 69   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A34),
+	/* 70   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2AC4),
+	/* 71   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2A84),
+	/* 72   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2AF0),
+	/* 73   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2AF0),
+	/* 74   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B18),
+	/* 75   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
+	/* 76   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
+	/* 77   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
+	/* 78   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
+	/* 79   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B44),
+	/* 80   */ (void*)(((char*)setSceneName__10Z2SceneMgrFPcll)+0x2B6C),
 };
 
-/* 80455A50-80455A54 0004+00 rc=0 efc=0 .sdata2    @5341                                                        */
-f32 lit_5341 = -1.0f;
+/* 80455A50-80455A54 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5341                                                        */
+SECTION_SDATA2 static f32 lit_5341 = -1.0f;
 
-/* 80455A54-80455A58 0004+00 rc=0 efc=0 .sdata2    @5342                                                        */
-f32 lit_5342 = 0.5f;
+/* 80455A54-80455A58 0004+00 rc=2 efc=0 rfr=False None .sdata2    @5342                                                        */
+SECTION_SDATA2 static f32 lit_5342 = 0.5f;
 
-/* 80455A58-80455A5C 0004+00 rc=0 efc=0 .sdata2    @5343                                                        */
-f32 Z2SceneMgr__lit_5343 = 7.0f / 10.0f;
+/* 80455A58-80455A5C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5343                                                        */
+SECTION_SDATA2 static f32 Z2SceneMgr__lit_5343 = 7.0f / 10.0f;
 
-/* 80455A5C-80455A60 0004+00 rc=0 efc=0 .sdata2    @5344                                                        */
-f32 Z2SceneMgr__lit_5344 = 4.0f / 5.0f;
+/* 80455A5C-80455A60 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5344                                                        */
+SECTION_SDATA2 static f32 Z2SceneMgr__lit_5344 = 4.0f / 5.0f;
 
-/* 80455A60-80455A64 0004+00 rc=0 efc=0 .sdata2    @5345                                                        */
-f32 Z2SceneMgr__lit_5345 = 1.0f / 10.0f;
+/* 80455A60-80455A64 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5345                                                        */
+SECTION_SDATA2 static f32 Z2SceneMgr__lit_5345 = 1.0f / 10.0f;
 
-/* 80455A64-80455A68 0004+00 rc=0 efc=0 .sdata2    @5346                                                        */
-f32 Z2SceneMgr__lit_5346 = 2.0f / 25.0f;
+/* 80455A64-80455A68 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5346                                                        */
+SECTION_SDATA2 static f32 Z2SceneMgr__lit_5346 = 2.0f / 25.0f;
 
-/* 802B6AF8-802B995C 2E64+00 rc=0 efc=0 .text      setSceneName__10Z2SceneMgrFPcll                              */
+/* 802B6AF8-802B995C 2E64+00 rc=9 efc=1 rfr=False None .text      setSceneName__10Z2SceneMgrFPcll                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -754,7 +735,7 @@ asm void Z2SceneMgr::setSceneName(char* field_0, s32 field_1, s32 field_2) {
 #pragma pop
 
 
-/* 802B995C-802B9968 000C+00 rc=0 efc=0 .text      __ct__10JAISoundIDFRC10JAISoundID                            */
+/* 802B995C-802B9968 000C+00 rc=1 efc=0 rfr=False None .text      __ct__10JAISoundIDFRC10JAISoundID                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -765,7 +746,7 @@ asm JAISoundID::JAISoundID(JAISoundID const& field_0) {
 #pragma pop
 
 
-/* 802B9968-802B9978 0010+00 rc=0 efc=0 .text      setFieldBgmPlay__8Z2SeqMgrFb                                 */
+/* 802B9968-802B9978 0010+00 rc=1 efc=0 rfr=False None .text      setFieldBgmPlay__8Z2SeqMgrFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -776,7 +757,7 @@ asm void Z2SeqMgr::setFieldBgmPlay(bool field_0) {
 #pragma pop
 
 
-/* 802B9978-802B9988 0010+00 rc=0 efc=0 .text      isActive__12JAIStreamMgrCFv                                  */
+/* 802B9978-802B9988 0010+00 rc=1 efc=0 rfr=False None .text      isActive__12JAIStreamMgrCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -787,7 +768,7 @@ asm void JAIStreamMgr::isActive() const {
 #pragma pop
 
 
-/* 802B9988-802B9994 000C+00 rc=0 efc=0 .text      getID__8JAISoundCFv                                          */
+/* 802B9988-802B9994 000C+00 rc=1 efc=0 rfr=False None .text      getID__8JAISoundCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -798,7 +779,7 @@ asm void JAISound::getID() const {
 #pragma pop
 
 
-/* 802B9994-802B999C 0008+00 rc=0 efc=0 .text      getFirst__19JSUList<9JAIStream>CFv                           */
+/* 802B9994-802B999C 0008+00 rc=1 efc=0 rfr=False None .text      getFirst__19JSUList<9JAIStream>CFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -809,18 +790,18 @@ asm void JSUList__template2::getFirst() const {
 #pragma pop
 
 
-/* 802B999C-802B99AC 0010+00 rc=0 efc=0 .text      dComIfGs_getStartPoint__Fv                                   */
+/* 802B999C-802B99AC 0010+00 rc=1 efc=0 rfr=False None .text      dComIfGs_getStartPoint__Fv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_getStartPoint() {
+asm static void dComIfGs_getStartPoint() {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/dComIfGs_getStartPoint__Fv.s"
 }
 #pragma pop
 
 
-/* 802B99AC-802B9A24 0078+00 rc=0 efc=0 .text      unMuteSceneBgm__8Z2SeqMgrFUl                                 */
+/* 802B99AC-802B9A24 0078+00 rc=1 efc=0 rfr=False None .text      unMuteSceneBgm__8Z2SeqMgrFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -831,7 +812,7 @@ asm void Z2SeqMgr::unMuteSceneBgm(u32 field_0) {
 #pragma pop
 
 
-/* 802B9A24-802B9A88 0064+00 rc=0 efc=0 .text      muteSceneBgm__8Z2SeqMgrFUlf                                  */
+/* 802B9A24-802B9A88 0064+00 rc=1 efc=0 rfr=False None .text      muteSceneBgm__8Z2SeqMgrFUlf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -842,7 +823,7 @@ asm void Z2SeqMgr::muteSceneBgm(u32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 802B9A88-802B9A94 000C+00 rc=0 efc=0 .text      __as__10JAISoundIDFRC10JAISoundID                            */
+/* 802B9A88-802B9A94 000C+00 rc=1 efc=0 rfr=False None .text      __as__10JAISoundIDFRC10JAISoundID                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -853,18 +834,18 @@ asm void JAISoundID::operator=(JAISoundID const& field_0) {
 #pragma pop
 
 
-/* 802B9A94-802B9AC4 0030+00 rc=0 efc=0 .text      dComIfGs_isSaveSwitch__Fi                                    */
+/* 802B9A94-802B9AC4 0030+00 rc=1 efc=0 rfr=False None .text      dComIfGs_isSaveSwitch__Fi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGs_isSaveSwitch(int field_0) {
+asm static void dComIfGs_isSaveSwitch(int field_0) {
 	nofralloc
 #include "asm/Z2AudioLib/Z2SceneMgr/dComIfGs_isSaveSwitch__Fi.s"
 }
 #pragma pop
 
 
-/* 802B9AC4-802B9AD0 000C+00 rc=0 efc=0 .text      resetCrowdSize__7Z2SeMgrFv                                   */
+/* 802B9AC4-802B9AD0 000C+00 rc=1 efc=0 rfr=False None .text      resetCrowdSize__7Z2SeMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -875,7 +856,7 @@ asm void Z2SeMgr::resetCrowdSize() {
 #pragma pop
 
 
-/* 802B9AD0-802B9AFC 002C+00 rc=0 efc=0 .text      setTwilightGateVol__8Z2SeqMgrFf                              */
+/* 802B9AD0-802B9AFC 002C+00 rc=1 efc=0 rfr=False None .text      setTwilightGateVol__8Z2SeqMgrFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -886,7 +867,7 @@ asm void Z2SeqMgr::setTwilightGateVol(f32 field_0) {
 #pragma pop
 
 
-/* 802B9AFC-802B9B60 0064+00 rc=0 efc=0 .text      setWindStoneVol__8Z2SeqMgrFfUl                               */
+/* 802B9AFC-802B9B60 0064+00 rc=1 efc=0 rfr=False None .text      setWindStoneVol__8Z2SeqMgrFfUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -897,7 +878,7 @@ asm void Z2SeqMgr::setWindStoneVol(f32 field_0, u32 field_1) {
 #pragma pop
 
 
-/* 802B9B60-802B9B68 0008+00 rc=0 efc=0 .text      __ct__10JAISoundIDFUl                                        */
+/* 802B9B60-802B9B68 0008+00 rc=1 efc=0 rfr=False None .text      __ct__10JAISoundIDFUl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -908,7 +889,7 @@ asm JAISoundID::JAISoundID(u32 field_0) {
 #pragma pop
 
 
-/* 802B9B68-802B9C50 00E8+00 rc=0 efc=0 .text      sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb            */
+/* 802B9B68-802B9C50 00E8+00 rc=1 efc=0 rfr=False None .text      sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -919,7 +900,7 @@ asm void Z2SceneMgr::sceneChange(JAISoundID field_0, u8 field_1, u8 field_2, u8 
 #pragma pop
 
 
-/* 802B9C50-802B9D40 00F0+00 rc=0 efc=0 .text      framework__10Z2SceneMgrFv                                    */
+/* 802B9C50-802B9D40 00F0+00 rc=1 efc=1 rfr=False None .text      framework__10Z2SceneMgrFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -930,7 +911,7 @@ asm void Z2SceneMgr::framework() {
 #pragma pop
 
 
-/* 802B9D40-802B9D98 0058+00 rc=0 efc=0 .text      load1stDynamicWave__10Z2SceneMgrFv                           */
+/* 802B9D40-802B9D98 0058+00 rc=1 efc=1 rfr=False None .text      load1stDynamicWave__10Z2SceneMgrFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -941,7 +922,7 @@ asm void Z2SceneMgr::load1stDynamicWave() {
 #pragma pop
 
 
-/* 802B9D98-802B9FC8 0230+00 rc=0 efc=0 .text      _load1stWaveInner_1__10Z2SceneMgrFv                          */
+/* 802B9D98-802B9FC8 0230+00 rc=2 efc=0 rfr=False None .text      _load1stWaveInner_1__10Z2SceneMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -952,7 +933,7 @@ asm void Z2SceneMgr::_load1stWaveInner_1() {
 #pragma pop
 
 
-/* 802B9FC8-802BA09C 00D4+00 rc=0 efc=0 .text      _load1stWaveInner_2__10Z2SceneMgrFv                          */
+/* 802B9FC8-802BA09C 00D4+00 rc=2 efc=0 rfr=False None .text      _load1stWaveInner_2__10Z2SceneMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -963,7 +944,7 @@ asm void Z2SceneMgr::_load1stWaveInner_2() {
 #pragma pop
 
 
-/* 802BA09C-802BA120 0084+00 rc=0 efc=0 .text      check1stDynamicWave__10Z2SceneMgrFv                          */
+/* 802BA09C-802BA120 0084+00 rc=1 efc=1 rfr=False None .text      check1stDynamicWave__10Z2SceneMgrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -974,7 +955,7 @@ asm void Z2SceneMgr::check1stDynamicWave() {
 #pragma pop
 
 
-/* 802BA120-802BA294 0174+00 rc=0 efc=0 .text      load2ndDynamicWave__10Z2SceneMgrFv                           */
+/* 802BA120-802BA294 0174+00 rc=2 efc=2 rfr=False None .text      load2ndDynamicWave__10Z2SceneMgrFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -986,98 +967,98 @@ asm void Z2SceneMgr::load2ndDynamicWave() {
 
 
 /* ############################################################################################## */
-/* 803CA9BC-803CAB18 015C+00 rc=0 efc=0 .data      @5852                                                        */
-void* Z2SceneMgr__lit_5852[87] = {
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x204),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x23C),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x190),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
-	(void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x1B8),
+/* 803CA9BC-803CAB18 015C+00 rc=1 efc=0 rfr=False None .data      @5852                                                        */
+SECTION_DATA static void* Z2SceneMgr__lit_5852[87] = {
+	/* 0    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	/* 1    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 2    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 3    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 4    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 5    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 6    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 7    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 8    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 9    */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 10   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 11   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 12   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 13   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 14   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 15   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	/* 16   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x204),
+	/* 17   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 18   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 19   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 20   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 21   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 22   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 23   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 24   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 25   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 26   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x23C),
+	/* 27   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 28   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 29   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 30   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 31   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 32   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 33   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 34   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 35   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 36   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 37   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 38   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 39   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 40   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 41   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 42   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 43   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 44   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 45   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 46   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	/* 47   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
+	/* 48   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 49   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 50   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	/* 51   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 52   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 53   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	/* 54   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	/* 55   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 56   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
+	/* 57   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 58   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 59   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 60   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 61   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 62   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 63   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
+	/* 64   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 65   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x150),
+	/* 66   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 67   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 68   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 69   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x180),
+	/* 70   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 71   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 72   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x190),
+	/* 73   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 74   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 75   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 76   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 77   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 78   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 79   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 80   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 81   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 82   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 83   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 84   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 85   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x2A0),
+	/* 86   */ (void*)(((char*)sceneBgmStart__10Z2SceneMgrFv)+0x1B8),
 };
 
-/* 802BA294-802BA56C 02D8+00 rc=0 efc=0 .text      sceneBgmStart__10Z2SceneMgrFv                                */
+/* 802BA294-802BA56C 02D8+00 rc=3 efc=2 rfr=False None .text      sceneBgmStart__10Z2SceneMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1088,7 +1069,7 @@ asm void Z2SceneMgr::sceneBgmStart() {
 #pragma pop
 
 
-/* 802BA56C-802BA5C0 0054+00 rc=0 efc=0 .text      loadStaticWaves__10Z2SceneMgrFv                              */
+/* 802BA56C-802BA5C0 0054+00 rc=1 efc=1 rfr=False None .text      loadStaticWaves__10Z2SceneMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1099,13 +1080,13 @@ asm void Z2SceneMgr::loadStaticWaves() {
 #pragma pop
 
 
-/* 802BA5C0-802BA5C8 0008+00 rc=0 efc=0 .text      checkFirstWaves__10Z2SceneMgrFv                              */
+/* 802BA5C0-802BA5C8 0008+00 rc=1 efc=1 rfr=False None .text      checkFirstWaves__10Z2SceneMgrFv                              */
 bool Z2SceneMgr::checkFirstWaves() {
 	return false;
 }
 
 
-/* 802BA5C8-802BA630 0068+00 rc=0 efc=0 .text      eraseSeWave__10Z2SceneMgrFUl                                 */
+/* 802BA5C8-802BA630 0068+00 rc=2 efc=0 rfr=False None .text      eraseSeWave__10Z2SceneMgrFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1116,7 +1097,7 @@ asm void Z2SceneMgr::eraseSeWave(u32 field_0) {
 #pragma pop
 
 
-/* 802BA630-802BA698 0068+00 rc=0 efc=0 .text      eraseBgmWave__10Z2SceneMgrFUl                                */
+/* 802BA630-802BA698 0068+00 rc=2 efc=0 rfr=False None .text      eraseBgmWave__10Z2SceneMgrFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1127,7 +1108,7 @@ asm void Z2SceneMgr::eraseBgmWave(u32 field_0) {
 #pragma pop
 
 
-/* 802BA698-802BA704 006C+00 rc=0 efc=0 .text      getWaveLoadStatus__10Z2SceneMgrFUlUl                         */
+/* 802BA698-802BA704 006C+00 rc=1 efc=0 rfr=False None .text      getWaveLoadStatus__10Z2SceneMgrFUlUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1138,7 +1119,7 @@ asm void Z2SceneMgr::getWaveLoadStatus(u32 field_0, u32 field_1) {
 #pragma pop
 
 
-/* 802BA704-802BA770 006C+00 rc=0 efc=0 .text      loadSeWave__10Z2SceneMgrFUl                                  */
+/* 802BA704-802BA770 006C+00 rc=3 efc=0 rfr=False None .text      loadSeWave__10Z2SceneMgrFUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1149,7 +1130,7 @@ asm void Z2SceneMgr::loadSeWave(u32 field_0) {
 #pragma pop
 
 
-/* 802BA770-802BA7DC 006C+00 rc=0 efc=0 .text      loadBgmWave__10Z2SceneMgrFUl                                 */
+/* 802BA770-802BA7DC 006C+00 rc=3 efc=0 rfr=False None .text      loadBgmWave__10Z2SceneMgrFUl                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

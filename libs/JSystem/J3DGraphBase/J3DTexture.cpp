@@ -9,10 +9,10 @@
 // Types:
 // 
 
-struct ResTIMG {
+struct _GXTexMapID {
 };
 
-struct _GXTexMapID {
+struct ResTIMG {
 };
 
 struct J3DTexture {
@@ -29,9 +29,6 @@ struct J3DTexture {
 extern "C" void loadGX__10J3DTextureCFUs11_GXTexMapID(); // 1
 extern "C" void entryNum__10J3DTextureFUs(); // 1
 extern "C" void addResTIMG__10J3DTextureFUsPC7ResTIMG(); // 1
-SECTION_SDATA2 extern f32 lit_284;
-SECTION_SDATA2 extern f32 lit_285;
-SECTION_SDATA2 extern f64 J3DTexture__lit_288;
 
 // 
 // External References:
@@ -62,16 +59,16 @@ extern "C" void _restgpr_28(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80456388-8045638C 0004+00 rc=0 efc=0 .sdata2    @284                                                         */
-f32 lit_284 = 0.125f;
+/* 80456388-8045638C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @284                                                         */
+SECTION_SDATA2 static f32 lit_284 = 0.125f;
 
-/* 8045638C-80456390 0004+00 rc=0 efc=0 .sdata2    @285                                                         */
-f32 lit_285 = 1.0f / 100.0f;
+/* 8045638C-80456390 0004+00 rc=1 efc=0 rfr=False None .sdata2    @285                                                         */
+SECTION_SDATA2 static f32 lit_285 = 1.0f / 100.0f;
 
-/* 80456390-80456398 0008+00 rc=0 efc=0 .sdata2    @288                                                         */
-f64 J3DTexture__lit_288 = 4503601774854144.0 /* cast s32 to float */;
+/* 80456390-80456398 0008+00 rc=1 efc=0 rfr=False None .sdata2    @288                                                         */
+SECTION_SDATA2 static f64 J3DTexture__lit_288 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8031204C-803121A4 0158+00 rc=0 efc=0 .text      loadGX__10J3DTextureCFUs11_GXTexMapID                        */
+/* 8031204C-803121A4 0158+00 rc=1 efc=1 rfr=False None .text      loadGX__10J3DTextureCFUs11_GXTexMapID                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +79,7 @@ asm void J3DTexture::loadGX(u16 field_0, _GXTexMapID field_1) const {
 #pragma pop
 
 
-/* 803121A4-8031221C 0078+00 rc=0 efc=0 .text      entryNum__10J3DTextureFUs                                    */
+/* 803121A4-8031221C 0078+00 rc=1 efc=0 rfr=False None .text      entryNum__10J3DTextureFUs                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +90,7 @@ asm void J3DTexture::entryNum(u16 field_0) {
 #pragma pop
 
 
-/* 8031221C-80312488 026C+00 rc=0 efc=0 .text      addResTIMG__10J3DTextureFUsPC7ResTIMG                        */
+/* 8031221C-80312488 026C+00 rc=1 efc=1 rfr=False None .text      addResTIMG__10J3DTextureFUsPC7ResTIMG                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

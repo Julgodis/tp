@@ -9,9 +9,6 @@
 // Types:
 // 
 
-struct J3DMaterialDLBlock {
-};
-
 struct J3DMaterial {
 	/* 803157A0 */ void createColorBlock(u32);
 	/* 803159A0 */ void createTexGenBlock(u32);
@@ -28,6 +25,9 @@ struct J3DMaterial {
 };
 
 struct J3DMaterialBlock {
+};
+
+struct J3DMaterialDLBlock {
 };
 
 struct J3DMaterialFactory {
@@ -86,23 +86,8 @@ struct J3DPEBlockNull {
 struct J3DTevSwapModeInfo {
 };
 
-struct J3DTevSwapModeTable {
-};
-
 struct J3DTevOrder {
 	/* 8000E140 */ J3DTevOrder();
-};
-
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
-};
-
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
 };
 
 struct J3DTevStageInfo {
@@ -111,6 +96,21 @@ struct J3DTevStageInfo {
 struct J3DTevStage {
 	/* 8000E230 */ J3DTevStage();
 	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
+};
+
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
+};
+
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
+};
+
+struct J3DTevSwapModeTable {
 };
 
 struct J3DTevBlock {
@@ -193,16 +193,16 @@ struct J3DColorBlockNull {
 	/* 80332B38 */ ~J3DColorBlockNull();
 };
 
-struct J3DBlend {
+struct J3DAlphaComp {
 };
 
-struct J3DAlphaComp {
+struct J3DZMode {
 };
 
 struct J3DFog {
 };
 
-struct J3DZMode {
+struct J3DBlend {
 };
 
 struct J3DPEBlock {
@@ -234,10 +234,10 @@ struct J3DPEBlock {
 	/* 80317394 */ void setFogOffset(u32);
 };
 
-struct J3DLightObj {
+struct J3DColorChan {
 };
 
-struct J3DColorChan {
+struct J3DLightObj {
 };
 
 struct J3DColorBlock {
@@ -278,11 +278,11 @@ struct J3DColorBlock {
 struct J3DTexMtx {
 };
 
-struct J3DTexCoord {
-	/* 8000E464 */ J3DTexCoord();
+struct J3DNBTScale {
 };
 
-struct J3DNBTScale {
+struct J3DTexCoord {
+	/* 8000E464 */ J3DTexCoord();
 };
 
 struct J3DTexGenBlock {
@@ -338,9 +338,9 @@ struct J3DFogInfo {
 // Forward References:
 // 
 
-void JSUConvertOffsetToPtr__template43(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template44(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template45(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template43(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template44(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template45(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template46(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template47(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template48(void const*, void const*); // 2
@@ -353,10 +353,10 @@ void JSUConvertOffsetToPtr__template54(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template55(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template56(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template57(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template58(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template58(void const*, void const*); // 2
 void JSUConvertOffsetToPtr__template59(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template60(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template61(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template60(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template61(void const*, void const*); // 2
 
 extern "C" void __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock(); // 1
 extern "C" void __ct__18J3DMaterialFactoryFRC18J3DMaterialDLBlock(); // 1
@@ -421,9 +421,9 @@ extern "C" void __dt__18J3DTexGenBlockNullFv(); // 1
 extern "C" void getType__17J3DColorBlockNullFv(); // 1
 extern "C" void __dt__17J3DColorBlockNullFv(); // 1
 extern "C" void __dt__11J3DMaterialFv(); // 1
-extern "C" void func_80332BDC(); // 1
-extern "C" void func_80332BF4(); // 1
-extern "C" void func_80332C0C(); // 1
+extern "C" static void func_80332BDC(); // 1
+extern "C" static void func_80332BF4(); // 1
+extern "C" static void func_80332C0C(); // 1
 extern "C" void func_80332C24(); // 1
 extern "C" void func_80332C3C(); // 1
 extern "C" void func_80332C54(); // 1
@@ -436,19 +436,10 @@ extern "C" void func_80332CE4(); // 1
 extern "C" void func_80332CFC(); // 1
 extern "C" void func_80332D14(); // 1
 extern "C" void func_80332D2C(); // 1
-extern "C" void func_80332D44(); // 1
+extern "C" static void func_80332D44(); // 1
 extern "C" void func_80332D5C(); // 1
-extern "C" void func_80332D74(); // 1
-extern "C" void func_80332D8C(); // 1
-SECTION_DATA extern void* const __vt__14J3DPEBlockNull[31];
-SECTION_DATA extern void* const __vt__15J3DTevBlockNull[55];
-SECTION_DATA extern void* const __vt__18J3DTexGenBlockNull[27];
-SECTION_DATA extern void* const __vt__17J3DColorBlockNull[36 + 1 /* padding */];
-SECTION_SDATA2 extern u32 lit_1691;
-SECTION_SDATA2 extern u32 J3DMaterialFactory__lit_1798;
-SECTION_SDATA2 extern u32 lit_1915[1 + 1 /* padding */];
-SECTION_SBSS2 extern u8 lit_1897[4];
-SECTION_SBSS2 extern u8 data_80456BBC[4];
+extern "C" static void func_80332D74(); // 1
+extern "C" static void func_80332D8C(); // 1
 
 // 
 // External References:
@@ -643,35 +634,35 @@ extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_RODATA extern const u8 j3dDefaultTexCoordInfo[32];
-SECTION_RODATA extern const u8 j3dDefaultIndTexMtxInfo[28];
-SECTION_RODATA extern const u8 j3dDefaultIndTevStageInfo[12];
-SECTION_RODATA extern const u8 j3dDefaultFogInfo[44];
-SECTION_RODATA extern const u8 j3dDefaultNBTScaleInfo[16];
-SECTION_DATA extern void* const __vt__17J3DLockedMaterial[12];
-SECTION_DATA extern void* const __vt__18J3DPatchedMaterial[12];
-SECTION_DATA extern void* const __vt__11J3DMaterial[12];
-SECTION_DATA extern void* const __vt__10J3DPEBlock[31];
-SECTION_DATA extern void* const __vt__15J3DIndBlockNull[19];
-SECTION_DATA extern void* const __vt__11J3DIndBlock[19];
-SECTION_DATA extern void* const __vt__14J3DTexGenBlock[27];
-SECTION_DATA extern void* const __vt__13J3DColorBlock[36];
-SECTION_DATA extern void* const __vt__18J3DTevBlockPatched[55];
-SECTION_DATA extern void* const __vt__21J3DTexGenBlockPatched[27];
-SECTION_DATA extern void* const __vt__11J3DTevBlock[55];
-SECTION_SDATA2 extern u32 j3dDefaultTevOrderInfoNull;
-SECTION_SDATA2 extern u32 j3dDefaultIndTexOrderNull;
-SECTION_SDATA2 extern u8 j3dDefaultIndTexCoordScaleInfo[4];
-SECTION_SDATA2 extern u32 j3dDefaultTevSwapModeTable;
-SECTION_SDATA2 extern u32 j3dDefaultBlendInfo;
-SECTION_SDATA2 extern u8 j3dDefaultColorChanInfo[8];
-SECTION_SDATA2 extern u16 j3dDefaultZModeID[1 + 1 /* padding */];
+extern "C" extern u8 const j3dDefaultTexCoordInfo[32];
+extern "C" extern u8 const j3dDefaultIndTexMtxInfo[28];
+extern "C" extern u8 const j3dDefaultIndTevStageInfo[12];
+extern "C" extern u8 const j3dDefaultFogInfo[44];
+extern "C" extern u8 const j3dDefaultNBTScaleInfo[16];
+extern "C" extern void* __vt__17J3DLockedMaterial[12];
+extern "C" extern void* __vt__18J3DPatchedMaterial[12];
+extern "C" extern void* __vt__11J3DMaterial[12];
+extern "C" extern void* __vt__10J3DPEBlock[31];
+extern "C" extern void* __vt__15J3DIndBlockNull[19];
+extern "C" extern void* __vt__11J3DIndBlock[19];
+extern "C" extern void* __vt__14J3DTexGenBlock[27];
+extern "C" extern void* __vt__13J3DColorBlock[36];
+extern "C" extern void* __vt__18J3DTevBlockPatched[55];
+extern "C" extern void* __vt__21J3DTexGenBlockPatched[27];
+extern "C" extern void* __vt__11J3DTevBlock[55];
+extern "C" extern u32 j3dDefaultTevOrderInfoNull;
+extern "C" extern u32 j3dDefaultIndTexOrderNull;
+extern "C" extern u8 j3dDefaultIndTexCoordScaleInfo[4];
+extern "C" extern u32 j3dDefaultTevSwapModeTable;
+extern "C" extern u32 j3dDefaultBlendInfo;
+extern "C" extern u8 j3dDefaultColorChanInfo[8];
+extern "C" extern u16 j3dDefaultZModeID[1 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 8032FFEC-80330234 0248+00 rc=0 efc=0 .text      __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock              */
+/* 8032FFEC-80330234 0248+00 rc=7 efc=7 rfr=False None .text      __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -682,7 +673,7 @@ asm J3DMaterialFactory::J3DMaterialFactory(J3DMaterialBlock const& field_0) {
 #pragma pop
 
 
-/* 80330234-803302BC 0088+00 rc=0 efc=0 .text      __ct__18J3DMaterialFactoryFRC18J3DMaterialDLBlock            */
+/* 80330234-803302BC 0088+00 rc=2 efc=2 rfr=False None .text      __ct__18J3DMaterialFactoryFRC18J3DMaterialDLBlock            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -693,7 +684,7 @@ asm J3DMaterialFactory::J3DMaterialFactory(J3DMaterialDLBlock const& field_0) {
 #pragma pop
 
 
-/* 803302BC-80330304 0048+00 rc=0 efc=0 .text      countUniqueMaterials__18J3DMaterialFactoryFv                 */
+/* 803302BC-80330304 0048+00 rc=3 efc=3 rfr=False None .text      countUniqueMaterials__18J3DMaterialFactoryFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -704,7 +695,7 @@ asm void J3DMaterialFactory::countUniqueMaterials() {
 #pragma pop
 
 
-/* 80330304-8033033C 0038+00 rc=0 efc=0 .text      countTexGens__18J3DMaterialFactoryCFi                        */
+/* 80330304-8033033C 0038+00 rc=4 efc=0 rfr=False None .text      countTexGens__18J3DMaterialFactoryCFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -715,7 +706,7 @@ asm void J3DMaterialFactory::countTexGens(int field_0) const {
 #pragma pop
 
 
-/* 8033033C-803303C4 0088+00 rc=0 efc=0 .text      countStages__18J3DMaterialFactoryCFi                         */
+/* 8033033C-803303C4 0088+00 rc=2 efc=0 rfr=False None .text      countStages__18J3DMaterialFactoryCFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -726,7 +717,7 @@ asm void J3DMaterialFactory::countStages(int field_0) const {
 #pragma pop
 
 
-/* 803303C4-80330440 007C+00 rc=0 efc=0 .text      create__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl */
+/* 803303C4-80330440 007C+00 rc=4 efc=4 rfr=False None .text      create__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -737,7 +728,7 @@ asm void J3DMaterialFactory::create(J3DMaterial* field_0, J3DMaterialFactory::Ma
 #pragma pop
 
 
-/* 80330440-80330D84 0944+00 rc=0 efc=0 .text      createNormalMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
+/* 80330440-80330D84 0944+00 rc=1 efc=0 rfr=False None .text      createNormalMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -748,7 +739,7 @@ asm void J3DMaterialFactory::createNormalMaterial(J3DMaterial* field_0, int fiel
 #pragma pop
 
 
-/* 80330D84-8033168C 0908+00 rc=0 efc=0 .text      createPatchedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
+/* 80330D84-8033168C 0908+00 rc=1 efc=0 rfr=False None .text      createPatchedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -759,7 +750,7 @@ asm void J3DMaterialFactory::createPatchedMaterial(J3DMaterial* field_0, int fie
 #pragma pop
 
 
-/* 8033168C-803317D4 0148+00 rc=0 efc=0 .text      modifyPatchedCurrentMtx__18J3DMaterialFactoryCFP11J3DMateriali */
+/* 8033168C-803317D4 0148+00 rc=1 efc=1 rfr=False None .text      modifyPatchedCurrentMtx__18J3DMaterialFactoryCFP11J3DMateriali */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -771,174 +762,174 @@ asm void J3DMaterialFactory::modifyPatchedCurrentMtx(J3DMaterial* field_0, int f
 
 
 /* ############################################################################################## */
-/* 803CEE90-803CEF0C 007C+00 rc=0 efc=0 .data      __vt__14J3DPEBlockNull                                       */
-void* const __vt__14J3DPEBlockNull[31] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)reset__10J3DPEBlockFP10J3DPEBlock,
-	(void*)load__14J3DPEBlockNullFv,
-	(void*)patch__10J3DPEBlockFv,
-	(void*)diff__10J3DPEBlockFUl,
-	(void*)diffFog__10J3DPEBlockFv,
-	(void*)diffBlend__10J3DPEBlockFv,
-	(void*)countDLSize__10J3DPEBlockFv,
-	(void*)getType__14J3DPEBlockNullFv,
-	(void*)setFog__10J3DPEBlockF6J3DFog,
-	(void*)setFog__10J3DPEBlockFP6J3DFog,
-	(void*)getFog__10J3DPEBlockFv,
-	(void*)setAlphaComp__10J3DPEBlockFPC12J3DAlphaComp,
-	(void*)setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp,
-	(void*)getAlphaComp__10J3DPEBlockFv,
-	(void*)setBlend__10J3DPEBlockFPC8J3DBlend,
-	(void*)setBlend__10J3DPEBlockFRC8J3DBlend,
-	(void*)getBlend__10J3DPEBlockFv,
-	(void*)setZMode__10J3DPEBlockFPC8J3DZMode,
-	(void*)setZMode__10J3DPEBlockF8J3DZMode,
-	(void*)getZMode__10J3DPEBlockFv,
-	(void*)setZCompLoc__10J3DPEBlockFPCUc,
-	(void*)setZCompLoc__10J3DPEBlockFUc,
-	(void*)getZCompLoc__10J3DPEBlockCFv,
-	(void*)setDither__10J3DPEBlockFPCUc,
-	(void*)setDither__10J3DPEBlockFUc,
-	(void*)getDither__10J3DPEBlockCFv,
-	(void*)getFogOffset__10J3DPEBlockCFv,
-	(void*)setFogOffset__10J3DPEBlockFUl,
-	(void*)__dt__14J3DPEBlockNullFv,
+/* 803CEE90-803CEF0C 007C+00 rc=2 efc=0 rfr=False None .data      __vt__14J3DPEBlockNull                                       */
+SECTION_DATA static void* __vt__14J3DPEBlockNull[31] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)reset__10J3DPEBlockFP10J3DPEBlock,
+	/* 3    */ (void*)load__14J3DPEBlockNullFv,
+	/* 4    */ (void*)patch__10J3DPEBlockFv,
+	/* 5    */ (void*)diff__10J3DPEBlockFUl,
+	/* 6    */ (void*)diffFog__10J3DPEBlockFv,
+	/* 7    */ (void*)diffBlend__10J3DPEBlockFv,
+	/* 8    */ (void*)countDLSize__10J3DPEBlockFv,
+	/* 9    */ (void*)getType__14J3DPEBlockNullFv,
+	/* 10   */ (void*)setFog__10J3DPEBlockF6J3DFog,
+	/* 11   */ (void*)setFog__10J3DPEBlockFP6J3DFog,
+	/* 12   */ (void*)getFog__10J3DPEBlockFv,
+	/* 13   */ (void*)setAlphaComp__10J3DPEBlockFPC12J3DAlphaComp,
+	/* 14   */ (void*)setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp,
+	/* 15   */ (void*)getAlphaComp__10J3DPEBlockFv,
+	/* 16   */ (void*)setBlend__10J3DPEBlockFPC8J3DBlend,
+	/* 17   */ (void*)setBlend__10J3DPEBlockFRC8J3DBlend,
+	/* 18   */ (void*)getBlend__10J3DPEBlockFv,
+	/* 19   */ (void*)setZMode__10J3DPEBlockFPC8J3DZMode,
+	/* 20   */ (void*)setZMode__10J3DPEBlockF8J3DZMode,
+	/* 21   */ (void*)getZMode__10J3DPEBlockFv,
+	/* 22   */ (void*)setZCompLoc__10J3DPEBlockFPCUc,
+	/* 23   */ (void*)setZCompLoc__10J3DPEBlockFUc,
+	/* 24   */ (void*)getZCompLoc__10J3DPEBlockCFv,
+	/* 25   */ (void*)setDither__10J3DPEBlockFPCUc,
+	/* 26   */ (void*)setDither__10J3DPEBlockFUc,
+	/* 27   */ (void*)getDither__10J3DPEBlockCFv,
+	/* 28   */ (void*)getFogOffset__10J3DPEBlockCFv,
+	/* 29   */ (void*)setFogOffset__10J3DPEBlockFUl,
+	/* 30   */ (void*)__dt__14J3DPEBlockNullFv,
 };
 
-/* 803CEF0C-803CEFE8 00DC+00 rc=0 efc=0 .data      __vt__15J3DTevBlockNull                                      */
-void* const __vt__15J3DTevBlockNull[55] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)reset__15J3DTevBlockNullFP11J3DTevBlock,
-	(void*)load__11J3DTevBlockFv,
-	(void*)diff__11J3DTevBlockFUl,
-	(void*)diffTexNo__11J3DTevBlockFv,
-	(void*)diffTevReg__11J3DTevBlockFv,
-	(void*)diffTexCoordScale__11J3DTevBlockFv,
-	(void*)diffTevStage__11J3DTevBlockFv,
-	(void*)diffTevStageIndirect__11J3DTevBlockFv,
-	(void*)patch__11J3DTevBlockFv,
-	(void*)patchTexNo__11J3DTevBlockFv,
-	(void*)patchTevReg__11J3DTevBlockFv,
-	(void*)patchTexNoAndTexCoordScale__11J3DTevBlockFv,
-	(void*)ptrToIndex__15J3DTevBlockNullFv,
-	(void*)indexToPtr__15J3DTevBlockNullFv,
-	(void*)getType__15J3DTevBlockNullFv,
-	(void*)countDLSize__11J3DTevBlockFv,
-	(void*)setTexNo__11J3DTevBlockFUlPCUs,
-	(void*)setTexNo__11J3DTevBlockFUlUs,
-	(void*)getTexNo__11J3DTevBlockCFUl,
-	(void*)setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder,
-	(void*)setTevOrder__11J3DTevBlockFUl11J3DTevOrder,
-	(void*)getTevOrder__11J3DTevBlockFUl,
-	(void*)setTevColor__11J3DTevBlockFUlPC13J3DGXColorS10,
-	(void*)setTevColor__11J3DTevBlockFUl13J3DGXColorS10,
-	(void*)getTevColor__11J3DTevBlockFUl,
-	(void*)setTevKColor__11J3DTevBlockFUlPC10J3DGXColor,
-	(void*)setTevKColor__11J3DTevBlockFUl10J3DGXColor,
-	(void*)getTevKColor__11J3DTevBlockFUl,
-	(void*)setTevKColorSel__11J3DTevBlockFUlPCUc,
-	(void*)setTevKColorSel__11J3DTevBlockFUlUc,
-	(void*)getTevKColorSel__11J3DTevBlockFUl,
-	(void*)setTevKAlphaSel__11J3DTevBlockFUlPCUc,
-	(void*)setTevKAlphaSel__11J3DTevBlockFUlUc,
-	(void*)getTevKAlphaSel__11J3DTevBlockFUl,
-	(void*)setTevStageNum__11J3DTevBlockFPCUc,
-	(void*)setTevStageNum__11J3DTevBlockFUc,
-	(void*)getTevStageNum__11J3DTevBlockCFv,
-	(void*)setTevStage__11J3DTevBlockFUlPC11J3DTevStage,
-	(void*)setTevStage__11J3DTevBlockFUl11J3DTevStage,
-	(void*)getTevStage__11J3DTevBlockFUl,
-	(void*)setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo,
-	(void*)setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo,
-	(void*)setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable,
-	(void*)setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable,
-	(void*)getTevSwapModeTable__11J3DTevBlockFUl,
-	(void*)setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage,
-	(void*)setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage,
-	(void*)getIndTevStage__11J3DTevBlockFUl,
-	(void*)getTexNoOffset__11J3DTevBlockCFv,
-	(void*)getTevRegOffset__11J3DTevBlockCFv,
-	(void*)setTexNoOffset__11J3DTevBlockFUl,
-	(void*)setTevRegOffset__11J3DTevBlockFUl,
-	(void*)__dt__15J3DTevBlockNullFv,
+/* 803CEF0C-803CEFE8 00DC+00 rc=2 efc=0 rfr=False None .data      __vt__15J3DTevBlockNull                                      */
+SECTION_DATA static void* __vt__15J3DTevBlockNull[55] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)reset__15J3DTevBlockNullFP11J3DTevBlock,
+	/* 3    */ (void*)load__11J3DTevBlockFv,
+	/* 4    */ (void*)diff__11J3DTevBlockFUl,
+	/* 5    */ (void*)diffTexNo__11J3DTevBlockFv,
+	/* 6    */ (void*)diffTevReg__11J3DTevBlockFv,
+	/* 7    */ (void*)diffTexCoordScale__11J3DTevBlockFv,
+	/* 8    */ (void*)diffTevStage__11J3DTevBlockFv,
+	/* 9    */ (void*)diffTevStageIndirect__11J3DTevBlockFv,
+	/* 10   */ (void*)patch__11J3DTevBlockFv,
+	/* 11   */ (void*)patchTexNo__11J3DTevBlockFv,
+	/* 12   */ (void*)patchTevReg__11J3DTevBlockFv,
+	/* 13   */ (void*)patchTexNoAndTexCoordScale__11J3DTevBlockFv,
+	/* 14   */ (void*)ptrToIndex__15J3DTevBlockNullFv,
+	/* 15   */ (void*)indexToPtr__15J3DTevBlockNullFv,
+	/* 16   */ (void*)getType__15J3DTevBlockNullFv,
+	/* 17   */ (void*)countDLSize__11J3DTevBlockFv,
+	/* 18   */ (void*)setTexNo__11J3DTevBlockFUlPCUs,
+	/* 19   */ (void*)setTexNo__11J3DTevBlockFUlUs,
+	/* 20   */ (void*)getTexNo__11J3DTevBlockCFUl,
+	/* 21   */ (void*)setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder,
+	/* 22   */ (void*)setTevOrder__11J3DTevBlockFUl11J3DTevOrder,
+	/* 23   */ (void*)getTevOrder__11J3DTevBlockFUl,
+	/* 24   */ (void*)setTevColor__11J3DTevBlockFUlPC13J3DGXColorS10,
+	/* 25   */ (void*)setTevColor__11J3DTevBlockFUl13J3DGXColorS10,
+	/* 26   */ (void*)getTevColor__11J3DTevBlockFUl,
+	/* 27   */ (void*)setTevKColor__11J3DTevBlockFUlPC10J3DGXColor,
+	/* 28   */ (void*)setTevKColor__11J3DTevBlockFUl10J3DGXColor,
+	/* 29   */ (void*)getTevKColor__11J3DTevBlockFUl,
+	/* 30   */ (void*)setTevKColorSel__11J3DTevBlockFUlPCUc,
+	/* 31   */ (void*)setTevKColorSel__11J3DTevBlockFUlUc,
+	/* 32   */ (void*)getTevKColorSel__11J3DTevBlockFUl,
+	/* 33   */ (void*)setTevKAlphaSel__11J3DTevBlockFUlPCUc,
+	/* 34   */ (void*)setTevKAlphaSel__11J3DTevBlockFUlUc,
+	/* 35   */ (void*)getTevKAlphaSel__11J3DTevBlockFUl,
+	/* 36   */ (void*)setTevStageNum__11J3DTevBlockFPCUc,
+	/* 37   */ (void*)setTevStageNum__11J3DTevBlockFUc,
+	/* 38   */ (void*)getTevStageNum__11J3DTevBlockCFv,
+	/* 39   */ (void*)setTevStage__11J3DTevBlockFUlPC11J3DTevStage,
+	/* 40   */ (void*)setTevStage__11J3DTevBlockFUl11J3DTevStage,
+	/* 41   */ (void*)getTevStage__11J3DTevBlockFUl,
+	/* 42   */ (void*)setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo,
+	/* 43   */ (void*)setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo,
+	/* 44   */ (void*)setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable,
+	/* 45   */ (void*)setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable,
+	/* 46   */ (void*)getTevSwapModeTable__11J3DTevBlockFUl,
+	/* 47   */ (void*)setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage,
+	/* 48   */ (void*)setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage,
+	/* 49   */ (void*)getIndTevStage__11J3DTevBlockFUl,
+	/* 50   */ (void*)getTexNoOffset__11J3DTevBlockCFv,
+	/* 51   */ (void*)getTevRegOffset__11J3DTevBlockCFv,
+	/* 52   */ (void*)setTexNoOffset__11J3DTevBlockFUl,
+	/* 53   */ (void*)setTevRegOffset__11J3DTevBlockFUl,
+	/* 54   */ (void*)__dt__15J3DTevBlockNullFv,
 };
 
-/* 803CEFE8-803CF054 006C+00 rc=0 efc=0 .data      __vt__18J3DTexGenBlockNull                                   */
-void* const __vt__18J3DTexGenBlockNull[27] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)reset__14J3DTexGenBlockFP14J3DTexGenBlock,
-	(void*)calc__18J3DTexGenBlockNullFPA4_Cf,
-	(void*)calcWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf,
-	(void*)calcPostTexMtx__18J3DTexGenBlockNullFPA4_Cf,
-	(void*)calcPostTexMtxWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf,
-	(void*)load__18J3DTexGenBlockNullFv,
-	(void*)patch__18J3DTexGenBlockNullFv,
-	(void*)diff__18J3DTexGenBlockNullFUl,
-	(void*)diffTexMtx__18J3DTexGenBlockNullFv,
-	(void*)diffTexGen__18J3DTexGenBlockNullFv,
-	(void*)countDLSize__14J3DTexGenBlockFv,
-	(void*)getType__18J3DTexGenBlockNullFv,
-	(void*)setTexGenNum__14J3DTexGenBlockFPCUl,
-	(void*)setTexGenNum__14J3DTexGenBlockFUl,
-	(void*)getTexGenNum__14J3DTexGenBlockCFv,
-	(void*)setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord,
-	(void*)getTexCoord__14J3DTexGenBlockFUl,
-	(void*)setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx,
-	(void*)getTexMtx__14J3DTexGenBlockFUl,
-	(void*)setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale,
-	(void*)setNBTScale__14J3DTexGenBlockF11J3DNBTScale,
-	(void*)getNBTScale__14J3DTexGenBlockFv,
-	(void*)getTexMtxOffset__14J3DTexGenBlockCFv,
-	(void*)setTexMtxOffset__14J3DTexGenBlockFUl,
-	(void*)__dt__18J3DTexGenBlockNullFv,
+/* 803CEFE8-803CF054 006C+00 rc=2 efc=0 rfr=False None .data      __vt__18J3DTexGenBlockNull                                   */
+SECTION_DATA static void* __vt__18J3DTexGenBlockNull[27] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)reset__14J3DTexGenBlockFP14J3DTexGenBlock,
+	/* 3    */ (void*)calc__18J3DTexGenBlockNullFPA4_Cf,
+	/* 4    */ (void*)calcWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf,
+	/* 5    */ (void*)calcPostTexMtx__18J3DTexGenBlockNullFPA4_Cf,
+	/* 6    */ (void*)calcPostTexMtxWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf,
+	/* 7    */ (void*)load__18J3DTexGenBlockNullFv,
+	/* 8    */ (void*)patch__18J3DTexGenBlockNullFv,
+	/* 9    */ (void*)diff__18J3DTexGenBlockNullFUl,
+	/* 10   */ (void*)diffTexMtx__18J3DTexGenBlockNullFv,
+	/* 11   */ (void*)diffTexGen__18J3DTexGenBlockNullFv,
+	/* 12   */ (void*)countDLSize__14J3DTexGenBlockFv,
+	/* 13   */ (void*)getType__18J3DTexGenBlockNullFv,
+	/* 14   */ (void*)setTexGenNum__14J3DTexGenBlockFPCUl,
+	/* 15   */ (void*)setTexGenNum__14J3DTexGenBlockFUl,
+	/* 16   */ (void*)getTexGenNum__14J3DTexGenBlockCFv,
+	/* 17   */ (void*)setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord,
+	/* 18   */ (void*)getTexCoord__14J3DTexGenBlockFUl,
+	/* 19   */ (void*)setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx,
+	/* 20   */ (void*)getTexMtx__14J3DTexGenBlockFUl,
+	/* 21   */ (void*)setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale,
+	/* 22   */ (void*)setNBTScale__14J3DTexGenBlockF11J3DNBTScale,
+	/* 23   */ (void*)getNBTScale__14J3DTexGenBlockFv,
+	/* 24   */ (void*)getTexMtxOffset__14J3DTexGenBlockCFv,
+	/* 25   */ (void*)setTexMtxOffset__14J3DTexGenBlockFUl,
+	/* 26   */ (void*)__dt__18J3DTexGenBlockNullFv,
 };
 
-/* 803CF054-803CF0E8 0090+04 rc=0 efc=0 .data      __vt__17J3DColorBlockNull                                    */
-void* const __vt__17J3DColorBlockNull[36 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)load__13J3DColorBlockFv,
-	(void*)reset__13J3DColorBlockFP13J3DColorBlock,
-	(void*)patch__13J3DColorBlockFv,
-	(void*)patchMatColor__13J3DColorBlockFv,
-	(void*)patchLight__13J3DColorBlockFv,
-	(void*)diff__13J3DColorBlockFUl,
-	(void*)diffAmbColor__13J3DColorBlockFv,
-	(void*)diffMatColor__13J3DColorBlockFv,
-	(void*)diffColorChan__13J3DColorBlockFv,
-	(void*)diffLightObj__13J3DColorBlockFUl,
-	(void*)countDLSize__13J3DColorBlockFv,
-	(void*)getType__17J3DColorBlockNullFv,
-	(void*)setMatColor__13J3DColorBlockFUlPC10J3DGXColor,
-	(void*)setMatColor__13J3DColorBlockFUl10J3DGXColor,
-	(void*)getMatColor__13J3DColorBlockFUl,
-	(void*)setAmbColor__13J3DColorBlockFUlPC10J3DGXColor,
-	(void*)setAmbColor__13J3DColorBlockFUl10J3DGXColor,
-	(void*)getAmbColor__13J3DColorBlockFUl,
-	(void*)setColorChanNum__13J3DColorBlockFUc,
-	(void*)setColorChanNum__13J3DColorBlockFPCUc,
-	(void*)getColorChanNum__13J3DColorBlockCFv,
-	(void*)setColorChan__13J3DColorBlockFUlRC12J3DColorChan,
-	(void*)setColorChan__13J3DColorBlockFUlPC12J3DColorChan,
-	(void*)getColorChan__13J3DColorBlockFUl,
-	(void*)setLight__13J3DColorBlockFUlP11J3DLightObj,
-	(void*)getLight__13J3DColorBlockFUl,
-	(void*)setCullMode__13J3DColorBlockFPCUc,
-	(void*)setCullMode__13J3DColorBlockFUc,
-	(void*)getCullMode__13J3DColorBlockCFv,
-	(void*)getMatColorOffset__13J3DColorBlockCFv,
-	(void*)getColorChanOffset__13J3DColorBlockCFv,
-	(void*)setMatColorOffset__13J3DColorBlockFUl,
-	(void*)setColorChanOffset__13J3DColorBlockFUl,
-	(void*)__dt__17J3DColorBlockNullFv,
+/* 803CF054-803CF0E8 0090+04 rc=2 efc=0 rfr=False None .data      __vt__17J3DColorBlockNull                                    */
+SECTION_DATA static void* __vt__17J3DColorBlockNull[36 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)load__13J3DColorBlockFv,
+	/* 3    */ (void*)reset__13J3DColorBlockFP13J3DColorBlock,
+	/* 4    */ (void*)patch__13J3DColorBlockFv,
+	/* 5    */ (void*)patchMatColor__13J3DColorBlockFv,
+	/* 6    */ (void*)patchLight__13J3DColorBlockFv,
+	/* 7    */ (void*)diff__13J3DColorBlockFUl,
+	/* 8    */ (void*)diffAmbColor__13J3DColorBlockFv,
+	/* 9    */ (void*)diffMatColor__13J3DColorBlockFv,
+	/* 10   */ (void*)diffColorChan__13J3DColorBlockFv,
+	/* 11   */ (void*)diffLightObj__13J3DColorBlockFUl,
+	/* 12   */ (void*)countDLSize__13J3DColorBlockFv,
+	/* 13   */ (void*)getType__17J3DColorBlockNullFv,
+	/* 14   */ (void*)setMatColor__13J3DColorBlockFUlPC10J3DGXColor,
+	/* 15   */ (void*)setMatColor__13J3DColorBlockFUl10J3DGXColor,
+	/* 16   */ (void*)getMatColor__13J3DColorBlockFUl,
+	/* 17   */ (void*)setAmbColor__13J3DColorBlockFUlPC10J3DGXColor,
+	/* 18   */ (void*)setAmbColor__13J3DColorBlockFUl10J3DGXColor,
+	/* 19   */ (void*)getAmbColor__13J3DColorBlockFUl,
+	/* 20   */ (void*)setColorChanNum__13J3DColorBlockFUc,
+	/* 21   */ (void*)setColorChanNum__13J3DColorBlockFPCUc,
+	/* 22   */ (void*)getColorChanNum__13J3DColorBlockCFv,
+	/* 23   */ (void*)setColorChan__13J3DColorBlockFUlRC12J3DColorChan,
+	/* 24   */ (void*)setColorChan__13J3DColorBlockFUlPC12J3DColorChan,
+	/* 25   */ (void*)getColorChan__13J3DColorBlockFUl,
+	/* 26   */ (void*)setLight__13J3DColorBlockFUlP11J3DLightObj,
+	/* 27   */ (void*)getLight__13J3DColorBlockFUl,
+	/* 28   */ (void*)setCullMode__13J3DColorBlockFPCUc,
+	/* 29   */ (void*)setCullMode__13J3DColorBlockFUc,
+	/* 30   */ (void*)getCullMode__13J3DColorBlockCFv,
+	/* 31   */ (void*)getMatColorOffset__13J3DColorBlockCFv,
+	/* 32   */ (void*)getColorChanOffset__13J3DColorBlockCFv,
+	/* 33   */ (void*)setMatColorOffset__13J3DColorBlockFUl,
+	/* 34   */ (void*)setColorChanOffset__13J3DColorBlockFUl,
+	/* 35   */ (void*)__dt__17J3DColorBlockNullFv,
 	/* padding */
 	NULL,
 };
 
-/* 803317D4-80331A7C 02A8+00 rc=0 efc=0 .text      createLockedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
+/* 803317D4-80331A7C 02A8+00 rc=2 efc=0 rfr=False None .text      createLockedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -949,7 +940,7 @@ asm void J3DMaterialFactory::createLockedMaterial(J3DMaterial* field_0, int fiel
 #pragma pop
 
 
-/* 80331A7C-80331AFC 0080+00 rc=0 efc=0 .text      calcSize__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl */
+/* 80331A7C-80331AFC 0080+00 rc=4 efc=4 rfr=False None .text      calcSize__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -960,7 +951,7 @@ asm void J3DMaterialFactory::calcSize(J3DMaterial* field_0, J3DMaterialFactory::
 #pragma pop
 
 
-/* 80331AFC-80331C30 0134+00 rc=0 efc=0 .text      calcSizeNormalMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
+/* 80331AFC-80331C30 0134+00 rc=1 efc=0 rfr=False None .text      calcSizeNormalMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -971,7 +962,7 @@ asm void J3DMaterialFactory::calcSizeNormalMaterial(J3DMaterial* field_0, int fi
 #pragma pop
 
 
-/* 80331C30-80331D00 00D0+00 rc=0 efc=0 .text      calcSizePatchedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
+/* 80331C30-80331D00 00D0+00 rc=1 efc=0 rfr=False None .text      calcSizePatchedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -982,7 +973,7 @@ asm void J3DMaterialFactory::calcSizePatchedMaterial(J3DMaterial* field_0, int f
 #pragma pop
 
 
-/* 80331D00-80331D18 0018+00 rc=0 efc=0 .text      calcSizeLockedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
+/* 80331D00-80331D18 0018+00 rc=2 efc=0 rfr=False None .text      calcSizeLockedMaterial__18J3DMaterialFactoryCFP11J3DMaterialiUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -994,10 +985,10 @@ asm void J3DMaterialFactory::calcSizeLockedMaterial(J3DMaterial* field_0, int fi
 
 
 /* ############################################################################################## */
-/* 804564A8-804564AC 0004+00 rc=0 efc=0 .sdata2    @1691                                                        */
-u32 lit_1691 = 0xFFFFFFFF;
+/* 804564A8-804564AC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1691                                                        */
+SECTION_SDATA2 static u32 lit_1691 = 0xFFFFFFFF;
 
-/* 80331D18-80331D74 005C+00 rc=0 efc=0 .text      newMatColor__18J3DMaterialFactoryCFii                        */
+/* 80331D18-80331D74 005C+00 rc=2 efc=0 rfr=False None .text      newMatColor__18J3DMaterialFactoryCFii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1008,7 +999,7 @@ asm void J3DMaterialFactory::newMatColor(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 80331D74-80331DAC 0038+00 rc=0 efc=0 .text      newColorChanNum__18J3DMaterialFactoryCFi                     */
+/* 80331D74-80331DAC 0038+00 rc=2 efc=0 rfr=False None .text      newColorChanNum__18J3DMaterialFactoryCFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1019,7 +1010,7 @@ asm void J3DMaterialFactory::newColorChanNum(int field_0) const {
 #pragma pop
 
 
-/* 80331DAC-80331F50 01A4+00 rc=0 efc=0 .text      newColorChan__18J3DMaterialFactoryCFii                       */
+/* 80331DAC-80331F50 01A4+00 rc=2 efc=0 rfr=False None .text      newColorChan__18J3DMaterialFactoryCFii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1031,10 +1022,10 @@ asm void J3DMaterialFactory::newColorChan(int field_0, int field_1) const {
 
 
 /* ############################################################################################## */
-/* 804564AC-804564B0 0004+00 rc=0 efc=0 .sdata2    @1798                                                        */
-u32 J3DMaterialFactory__lit_1798 = 0x32323232;
+/* 804564AC-804564B0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1798                                                        */
+SECTION_SDATA2 static u32 J3DMaterialFactory__lit_1798 = 0x32323232;
 
-/* 80331F50-80331FAC 005C+00 rc=0 efc=0 .text      newAmbColor__18J3DMaterialFactoryCFii                        */
+/* 80331F50-80331FAC 005C+00 rc=1 efc=0 rfr=False None .text      newAmbColor__18J3DMaterialFactoryCFii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1045,7 +1036,7 @@ asm void J3DMaterialFactory::newAmbColor(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 80331FAC-80331FE4 0038+00 rc=0 efc=0 .text      newTexGenNum__18J3DMaterialFactoryCFi                        */
+/* 80331FAC-80331FE4 0038+00 rc=2 efc=0 rfr=False None .text      newTexGenNum__18J3DMaterialFactoryCFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1056,7 +1047,7 @@ asm void J3DMaterialFactory::newTexGenNum(int field_0) const {
 #pragma pop
 
 
-/* 80331FE4-80332044 0060+00 rc=0 efc=0 .text      newTexCoord__18J3DMaterialFactoryCFii                        */
+/* 80331FE4-80332044 0060+00 rc=3 efc=0 rfr=False None .text      newTexCoord__18J3DMaterialFactoryCFii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1067,7 +1058,7 @@ asm void J3DMaterialFactory::newTexCoord(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 80332044-803320CC 0088+00 rc=0 efc=0 .text      newTexMtx__18J3DMaterialFactoryCFii                          */
+/* 80332044-803320CC 0088+00 rc=2 efc=0 rfr=False None .text      newTexMtx__18J3DMaterialFactoryCFii                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1078,7 +1069,7 @@ asm void J3DMaterialFactory::newTexMtx(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 803320CC-8033210C 0040+00 rc=0 efc=0 .text      newCullMode__18J3DMaterialFactoryCFi                         */
+/* 803320CC-8033210C 0040+00 rc=2 efc=0 rfr=False None .text      newCullMode__18J3DMaterialFactoryCFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1089,7 +1080,7 @@ asm void J3DMaterialFactory::newCullMode(int field_0) const {
 #pragma pop
 
 
-/* 8033210C-80332154 0048+00 rc=0 efc=0 .text      newTexNo__18J3DMaterialFactoryCFii                           */
+/* 8033210C-80332154 0048+00 rc=2 efc=0 rfr=False None .text      newTexNo__18J3DMaterialFactoryCFii                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1100,7 +1091,7 @@ asm void J3DMaterialFactory::newTexNo(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 80332154-803321A0 004C+00 rc=0 efc=0 .text      newTevOrder__18J3DMaterialFactoryCFii                        */
+/* 80332154-803321A0 004C+00 rc=2 efc=0 rfr=False None .text      newTevOrder__18J3DMaterialFactoryCFii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1112,13 +1103,13 @@ asm void J3DMaterialFactory::newTevOrder(int field_0, int field_1) const {
 
 
 /* ############################################################################################## */
-/* 80456BB8-80456BBC 0004+00 rc=0 efc=0 .sbss2     @1897                                                        */
-u8 lit_1897[4];
+/* 80456BB8-80456BBC 0004+00 rc=1 efc=0 rfr=False None .sbss2     @1897                                                        */
+SECTION_SBSS2 static u8 lit_1897[4];
 
-/* 80456BBC-80456BC0 0004+00 rc=0 efc=0 .sbss2     None                                                         */
-u8 data_80456BBC[4];
+/* 80456BBC-80456BC0 0004+00 rc=1 efc=0 rfr=False None .sbss2     None                                                         */
+SECTION_SBSS2 static u8 data_80456BBC[4];
 
-/* 803321A0-80332210 0070+00 rc=0 efc=0 .text      newTevColor__18J3DMaterialFactoryCFii                        */
+/* 803321A0-80332210 0070+00 rc=2 efc=0 rfr=False None .text      newTevColor__18J3DMaterialFactoryCFii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1130,14 +1121,14 @@ asm void J3DMaterialFactory::newTevColor(int field_0, int field_1) const {
 
 
 /* ############################################################################################## */
-/* 804564B0-804564B8 0004+04 rc=0 efc=0 .sdata2    @1915                                                        */
-u32 lit_1915[1 + 1 /* padding */] = {
+/* 804564B0-804564B8 0004+04 rc=1 efc=0 rfr=False None .sdata2    @1915                                                        */
+SECTION_SDATA2 static u32 lit_1915[1 + 1 /* padding */] = {
 	0xFFFFFFFF,
 	/* padding */
 	0x00000000,
 };
 
-/* 80332210-8033226C 005C+00 rc=0 efc=0 .text      newTevKColor__18J3DMaterialFactoryCFii                       */
+/* 80332210-8033226C 005C+00 rc=2 efc=0 rfr=False None .text      newTevKColor__18J3DMaterialFactoryCFii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1148,7 +1139,7 @@ asm void J3DMaterialFactory::newTevKColor(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 8033226C-803322A4 0038+00 rc=0 efc=0 .text      newTevStageNum__18J3DMaterialFactoryCFi                      */
+/* 8033226C-803322A4 0038+00 rc=2 efc=0 rfr=False None .text      newTevStageNum__18J3DMaterialFactoryCFi                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1159,7 +1150,7 @@ asm void J3DMaterialFactory::newTevStageNum(int field_0) const {
 #pragma pop
 
 
-/* 803322A4-80332304 0060+00 rc=0 efc=0 .text      newTevStage__18J3DMaterialFactoryCFii                        */
+/* 803322A4-80332304 0060+00 rc=2 efc=0 rfr=False None .text      newTevStage__18J3DMaterialFactoryCFii                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1170,7 +1161,7 @@ asm void J3DMaterialFactory::newTevStage(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 80332304-803323A0 009C+00 rc=0 efc=0 .text      newTevSwapModeTable__18J3DMaterialFactoryCFii                */
+/* 80332304-803323A0 009C+00 rc=1 efc=0 rfr=False None .text      newTevSwapModeTable__18J3DMaterialFactoryCFii                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1181,7 +1172,7 @@ asm void J3DMaterialFactory::newTevSwapModeTable(int field_0, int field_1) const
 #pragma pop
 
 
-/* 803323A0-803323C8 0028+00 rc=0 efc=0 .text      newIndTexStageNum__18J3DMaterialFactoryCFi                   */
+/* 803323A0-803323C8 0028+00 rc=2 efc=0 rfr=False None .text      newIndTexStageNum__18J3DMaterialFactoryCFi                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1192,7 +1183,7 @@ asm void J3DMaterialFactory::newIndTexStageNum(int field_0) const {
 #pragma pop
 
 
-/* 803323C8-8033240C 0044+00 rc=0 efc=0 .text      newIndTexOrder__18J3DMaterialFactoryCFii                     */
+/* 803323C8-8033240C 0044+00 rc=2 efc=0 rfr=False None .text      newIndTexOrder__18J3DMaterialFactoryCFii                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1203,7 +1194,7 @@ asm void J3DMaterialFactory::newIndTexOrder(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 8033240C-803324B4 00A8+00 rc=0 efc=0 .text      newIndTexMtx__18J3DMaterialFactoryCFii                       */
+/* 8033240C-803324B4 00A8+00 rc=2 efc=0 rfr=False None .text      newIndTexMtx__18J3DMaterialFactoryCFii                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1214,7 +1205,7 @@ asm void J3DMaterialFactory::newIndTexMtx(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 803324B4-80332648 0194+00 rc=0 efc=0 .text      newIndTevStage__18J3DMaterialFactoryCFii                     */
+/* 803324B4-80332648 0194+00 rc=2 efc=0 rfr=False None .text      newIndTevStage__18J3DMaterialFactoryCFii                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1225,7 +1216,7 @@ asm void J3DMaterialFactory::newIndTevStage(int field_0, int field_1) const {
 #pragma pop
 
 
-/* 80332648-8033268C 0044+00 rc=0 efc=0 .text      newIndTexCoordScale__18J3DMaterialFactoryCFii                */
+/* 80332648-8033268C 0044+00 rc=2 efc=0 rfr=False None .text      newIndTexCoordScale__18J3DMaterialFactoryCFii                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1236,7 +1227,7 @@ asm void J3DMaterialFactory::newIndTexCoordScale(int field_0, int field_1) const
 #pragma pop
 
 
-/* 8033268C-80332768 00DC+00 rc=0 efc=0 .text      newFog__18J3DMaterialFactoryCFi                              */
+/* 8033268C-80332768 00DC+00 rc=2 efc=0 rfr=False None .text      newFog__18J3DMaterialFactoryCFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1247,7 +1238,7 @@ asm void J3DMaterialFactory::newFog(int field_0) const {
 #pragma pop
 
 
-/* 80332768-803327E8 0080+00 rc=0 efc=0 .text      newAlphaComp__18J3DMaterialFactoryCFi                        */
+/* 80332768-803327E8 0080+00 rc=2 efc=0 rfr=False None .text      newAlphaComp__18J3DMaterialFactoryCFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1258,7 +1249,7 @@ asm void J3DMaterialFactory::newAlphaComp(int field_0) const {
 #pragma pop
 
 
-/* 803327E8-8033282C 0044+00 rc=0 efc=0 .text      newBlend__18J3DMaterialFactoryCFi                            */
+/* 803327E8-8033282C 0044+00 rc=2 efc=0 rfr=False None .text      newBlend__18J3DMaterialFactoryCFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1269,7 +1260,7 @@ asm void J3DMaterialFactory::newBlend(int field_0) const {
 #pragma pop
 
 
-/* 8033282C-8033288C 0060+00 rc=0 efc=0 .text      newZMode__18J3DMaterialFactoryCFi                            */
+/* 8033282C-8033288C 0060+00 rc=2 efc=0 rfr=False None .text      newZMode__18J3DMaterialFactoryCFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1280,7 +1271,7 @@ asm void J3DMaterialFactory::newZMode(int field_0) const {
 #pragma pop
 
 
-/* 8033288C-803328C4 0038+00 rc=0 efc=0 .text      newZCompLoc__18J3DMaterialFactoryCFi                         */
+/* 8033288C-803328C4 0038+00 rc=2 efc=0 rfr=False None .text      newZCompLoc__18J3DMaterialFactoryCFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1291,7 +1282,7 @@ asm void J3DMaterialFactory::newZCompLoc(int field_0) const {
 #pragma pop
 
 
-/* 803328C4-803328FC 0038+00 rc=0 efc=0 .text      newDither__18J3DMaterialFactoryCFi                           */
+/* 803328C4-803328FC 0038+00 rc=2 efc=0 rfr=False None .text      newDither__18J3DMaterialFactoryCFi                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1302,7 +1293,7 @@ asm void J3DMaterialFactory::newDither(int field_0) const {
 #pragma pop
 
 
-/* 803328FC-803329A0 00A4+00 rc=0 efc=0 .text      newNBTScale__18J3DMaterialFactoryCFi                         */
+/* 803328FC-803329A0 00A4+00 rc=1 efc=0 rfr=False None .text      newNBTScale__18J3DMaterialFactoryCFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1313,13 +1304,13 @@ asm void J3DMaterialFactory::newNBTScale(int field_0) const {
 #pragma pop
 
 
-/* 803329A0-803329A4 0004+00 rc=0 efc=0 .text      load__14J3DPEBlockNullFv                                     */
+/* 803329A0-803329A4 0004+00 rc=1 efc=0 rfr=False None .text      load__14J3DPEBlockNullFv                                     */
 void J3DPEBlockNull::load() {
 	/* empty function */
 }
 
 
-/* 803329A4-803329B0 000C+00 rc=0 efc=0 .text      getType__14J3DPEBlockNullFv                                  */
+/* 803329A4-803329B0 000C+00 rc=1 efc=0 rfr=False None .text      getType__14J3DPEBlockNullFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1330,7 +1321,7 @@ asm void J3DPEBlockNull::getType() {
 #pragma pop
 
 
-/* 803329B0-80332A0C 005C+00 rc=0 efc=0 .text      __dt__14J3DPEBlockNullFv                                     */
+/* 803329B0-80332A0C 005C+00 rc=1 efc=0 rfr=False None .text      __dt__14J3DPEBlockNullFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1341,19 +1332,19 @@ asm J3DPEBlockNull::~J3DPEBlockNull() {
 #pragma pop
 
 
-/* 80332A0C-80332A10 0004+00 rc=0 efc=0 .text      reset__15J3DTevBlockNullFP11J3DTevBlock                      */
+/* 80332A0C-80332A10 0004+00 rc=1 efc=0 rfr=False None .text      reset__15J3DTevBlockNullFP11J3DTevBlock                      */
 void J3DTevBlockNull::reset(J3DTevBlock* field_0) {
 	/* empty function */
 }
 
 
-/* 80332A10-80332A14 0004+00 rc=0 efc=0 .text      ptrToIndex__15J3DTevBlockNullFv                              */
+/* 80332A10-80332A14 0004+00 rc=1 efc=0 rfr=False None .text      ptrToIndex__15J3DTevBlockNullFv                              */
 void J3DTevBlockNull::ptrToIndex() {
 	/* empty function */
 }
 
 
-/* 80332A14-80332A38 0024+00 rc=0 efc=0 .text      indexToPtr__15J3DTevBlockNullFv                              */
+/* 80332A14-80332A38 0024+00 rc=1 efc=0 rfr=False None .text      indexToPtr__15J3DTevBlockNullFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1364,7 +1355,7 @@ asm void J3DTevBlockNull::indexToPtr() {
 #pragma pop
 
 
-/* 80332A38-80332A44 000C+00 rc=0 efc=0 .text      getType__15J3DTevBlockNullFv                                 */
+/* 80332A38-80332A44 000C+00 rc=1 efc=0 rfr=False None .text      getType__15J3DTevBlockNullFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1375,7 +1366,7 @@ asm void J3DTevBlockNull::getType() {
 #pragma pop
 
 
-/* 80332A44-80332AA0 005C+00 rc=0 efc=0 .text      __dt__15J3DTevBlockNullFv                                    */
+/* 80332A44-80332AA0 005C+00 rc=1 efc=0 rfr=False None .text      __dt__15J3DTevBlockNullFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1386,61 +1377,61 @@ asm J3DTevBlockNull::~J3DTevBlockNull() {
 #pragma pop
 
 
-/* 80332AA0-80332AA4 0004+00 rc=0 efc=0 .text      calc__18J3DTexGenBlockNullFPA4_Cf                            */
+/* 80332AA0-80332AA4 0004+00 rc=1 efc=0 rfr=False None .text      calc__18J3DTexGenBlockNullFPA4_Cf                            */
 void J3DTexGenBlockNull::calc(f32 const (* field_0)[4]) {
 	/* empty function */
 }
 
 
-/* 80332AA4-80332AA8 0004+00 rc=0 efc=0 .text      calcWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf              */
+/* 80332AA4-80332AA8 0004+00 rc=1 efc=0 rfr=False None .text      calcWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf              */
 void J3DTexGenBlockNull::calcWithoutViewMtx(f32 const (* field_0)[4]) {
 	/* empty function */
 }
 
 
-/* 80332AA8-80332AAC 0004+00 rc=0 efc=0 .text      calcPostTexMtx__18J3DTexGenBlockNullFPA4_Cf                  */
+/* 80332AA8-80332AAC 0004+00 rc=1 efc=0 rfr=False None .text      calcPostTexMtx__18J3DTexGenBlockNullFPA4_Cf                  */
 void J3DTexGenBlockNull::calcPostTexMtx(f32 const (* field_0)[4]) {
 	/* empty function */
 }
 
 
-/* 80332AAC-80332AB0 0004+00 rc=0 efc=0 .text      calcPostTexMtxWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf    */
+/* 80332AAC-80332AB0 0004+00 rc=1 efc=0 rfr=False None .text      calcPostTexMtxWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf    */
 void J3DTexGenBlockNull::calcPostTexMtxWithoutViewMtx(f32 const (* field_0)[4]) {
 	/* empty function */
 }
 
 
-/* 80332AB0-80332AB4 0004+00 rc=0 efc=0 .text      load__18J3DTexGenBlockNullFv                                 */
+/* 80332AB0-80332AB4 0004+00 rc=1 efc=0 rfr=False None .text      load__18J3DTexGenBlockNullFv                                 */
 void J3DTexGenBlockNull::load() {
 	/* empty function */
 }
 
 
-/* 80332AB4-80332AB8 0004+00 rc=0 efc=0 .text      patch__18J3DTexGenBlockNullFv                                */
+/* 80332AB4-80332AB8 0004+00 rc=1 efc=0 rfr=False None .text      patch__18J3DTexGenBlockNullFv                                */
 void J3DTexGenBlockNull::patch() {
 	/* empty function */
 }
 
 
-/* 80332AB8-80332ABC 0004+00 rc=0 efc=0 .text      diff__18J3DTexGenBlockNullFUl                                */
+/* 80332AB8-80332ABC 0004+00 rc=1 efc=0 rfr=False None .text      diff__18J3DTexGenBlockNullFUl                                */
 void J3DTexGenBlockNull::diff(u32 field_0) {
 	/* empty function */
 }
 
 
-/* 80332ABC-80332AC0 0004+00 rc=0 efc=0 .text      diffTexMtx__18J3DTexGenBlockNullFv                           */
+/* 80332ABC-80332AC0 0004+00 rc=1 efc=0 rfr=False None .text      diffTexMtx__18J3DTexGenBlockNullFv                           */
 void J3DTexGenBlockNull::diffTexMtx() {
 	/* empty function */
 }
 
 
-/* 80332AC0-80332AC4 0004+00 rc=0 efc=0 .text      diffTexGen__18J3DTexGenBlockNullFv                           */
+/* 80332AC0-80332AC4 0004+00 rc=1 efc=0 rfr=False None .text      diffTexGen__18J3DTexGenBlockNullFv                           */
 void J3DTexGenBlockNull::diffTexGen() {
 	/* empty function */
 }
 
 
-/* 80332AC4-80332AD0 000C+00 rc=0 efc=0 .text      getType__18J3DTexGenBlockNullFv                              */
+/* 80332AC4-80332AD0 000C+00 rc=1 efc=0 rfr=False None .text      getType__18J3DTexGenBlockNullFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1451,7 +1442,7 @@ asm void J3DTexGenBlockNull::getType() {
 #pragma pop
 
 
-/* 80332AD0-80332B2C 005C+00 rc=0 efc=0 .text      __dt__18J3DTexGenBlockNullFv                                 */
+/* 80332AD0-80332B2C 005C+00 rc=1 efc=0 rfr=False None .text      __dt__18J3DTexGenBlockNullFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1462,7 +1453,7 @@ asm J3DTexGenBlockNull::~J3DTexGenBlockNull() {
 #pragma pop
 
 
-/* 80332B2C-80332B38 000C+00 rc=0 efc=0 .text      getType__17J3DColorBlockNullFv                               */
+/* 80332B2C-80332B38 000C+00 rc=1 efc=0 rfr=False None .text      getType__17J3DColorBlockNullFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1473,7 +1464,7 @@ asm void J3DColorBlockNull::getType() {
 #pragma pop
 
 
-/* 80332B38-80332B94 005C+00 rc=0 efc=0 .text      __dt__17J3DColorBlockNullFv                                  */
+/* 80332B38-80332B94 005C+00 rc=1 efc=0 rfr=False None .text      __dt__17J3DColorBlockNullFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1484,7 +1475,7 @@ asm J3DColorBlockNull::~J3DColorBlockNull() {
 #pragma pop
 
 
-/* 80332B94-80332BDC 0048+00 rc=0 efc=0 .text      __dt__11J3DMaterialFv                                        */
+/* 80332B94-80332BDC 0048+00 rc=2 efc=2 rfr=False None .text      __dt__11J3DMaterialFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1495,40 +1486,40 @@ asm J3DMaterial::~J3DMaterial() {
 #pragma pop
 
 
-/* 80332BDC-80332BF4 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<17J3DCurrentMtxInfo>__FPCvPCv          */
+/* 80332BDC-80332BF4 0018+00 rc=1 efc=0 rfr=False None .text      JSUConvertOffsetToPtr<17J3DCurrentMtxInfo>__FPCvPCv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSUConvertOffsetToPtr__template43(void const* field_0, void const* field_1) {
+asm static void JSUConvertOffsetToPtr__template43(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332BDC.s"
 }
 #pragma pop
 
 
-/* 80332BF4-80332C0C 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<15J3DPatchingInfo>__FPCvPCv            */
+/* 80332BF4-80332C0C 0018+00 rc=1 efc=0 rfr=False None .text      JSUConvertOffsetToPtr<15J3DPatchingInfo>__FPCvPCv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSUConvertOffsetToPtr__template44(void const* field_0, void const* field_1) {
+asm static void JSUConvertOffsetToPtr__template44(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332BF4.s"
 }
 #pragma pop
 
 
-/* 80332C0C-80332C24 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<18J3DDisplayListInit>__FPCvPCv         */
+/* 80332C0C-80332C24 0018+00 rc=1 efc=0 rfr=False None .text      JSUConvertOffsetToPtr<18J3DDisplayListInit>__FPCvPCv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSUConvertOffsetToPtr__template45(void const* field_0, void const* field_1) {
+asm static void JSUConvertOffsetToPtr__template45(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332C0C.s"
 }
 #pragma pop
 
 
-/* 80332C24-80332C3C 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<15J3DNBTScaleInfo>__FPCvPCv            */
+/* 80332C24-80332C3C 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<15J3DNBTScaleInfo>__FPCvPCv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1539,7 +1530,7 @@ asm void JSUConvertOffsetToPtr__template46(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332C3C-80332C54 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<12J3DZModeInfo>__FPCvPCv               */
+/* 80332C3C-80332C54 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<12J3DZModeInfo>__FPCvPCv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1550,7 +1541,7 @@ asm void JSUConvertOffsetToPtr__template47(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332C54-80332C6C 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<12J3DBlendInfo>__FPCvPCv               */
+/* 80332C54-80332C6C 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<12J3DBlendInfo>__FPCvPCv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1561,7 +1552,7 @@ asm void JSUConvertOffsetToPtr__template48(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332C6C-80332C84 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<16J3DAlphaCompInfo>__FPCvPCv           */
+/* 80332C6C-80332C84 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<16J3DAlphaCompInfo>__FPCvPCv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1572,7 +1563,7 @@ asm void JSUConvertOffsetToPtr__template49(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332C84-80332C9C 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<10J3DFogInfo>__FPCvPCv                 */
+/* 80332C84-80332C9C 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<10J3DFogInfo>__FPCvPCv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1583,7 +1574,7 @@ asm void JSUConvertOffsetToPtr__template50(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332C9C-80332CB4 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<23J3DTevSwapModeTableInfo>__FPCvPCv    */
+/* 80332C9C-80332CB4 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<23J3DTevSwapModeTableInfo>__FPCvPCv    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1594,7 +1585,7 @@ asm void JSUConvertOffsetToPtr__template51(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332CB4-80332CCC 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<18J3DTevSwapModeInfo>__FPCvPCv         */
+/* 80332CB4-80332CCC 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<18J3DTevSwapModeInfo>__FPCvPCv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1605,7 +1596,7 @@ asm void JSUConvertOffsetToPtr__template52(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332CCC-80332CE4 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<15J3DTevStageInfo>__FPCvPCv            */
+/* 80332CCC-80332CE4 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<15J3DTevStageInfo>__FPCvPCv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1616,7 +1607,7 @@ asm void JSUConvertOffsetToPtr__template53(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332CE4-80332CFC 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<15J3DTevOrderInfo>__FPCvPCv            */
+/* 80332CE4-80332CFC 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<15J3DTevOrderInfo>__FPCvPCv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1627,7 +1618,7 @@ asm void JSUConvertOffsetToPtr__template54(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332CFC-80332D14 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<13J3DTexMtxInfo>__FPCvPCv              */
+/* 80332CFC-80332D14 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<13J3DTexMtxInfo>__FPCvPCv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1638,7 +1629,7 @@ asm void JSUConvertOffsetToPtr__template55(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332D14-80332D2C 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<16J3DTexCoord2Info>__FPCvPCv           */
+/* 80332D14-80332D2C 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<16J3DTexCoord2Info>__FPCvPCv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1649,7 +1640,7 @@ asm void JSUConvertOffsetToPtr__template56(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332D2C-80332D44 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<15J3DTexCoordInfo>__FPCvPCv            */
+/* 80332D2C-80332D44 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<15J3DTexCoordInfo>__FPCvPCv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1660,18 +1651,18 @@ asm void JSUConvertOffsetToPtr__template57(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332D44-80332D5C 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<12J3DLightInfo>__FPCvPCv               */
+/* 80332D44-80332D5C 0018+00 rc=1 efc=0 rfr=False None .text      JSUConvertOffsetToPtr<12J3DLightInfo>__FPCvPCv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSUConvertOffsetToPtr__template58(void const* field_0, void const* field_1) {
+asm static void JSUConvertOffsetToPtr__template58(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332D44.s"
 }
 #pragma pop
 
 
-/* 80332D5C-80332D74 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<16J3DColorChanInfo>__FPCvPCv           */
+/* 80332D5C-80332D74 0018+00 rc=2 efc=1 rfr=False None .text      JSUConvertOffsetToPtr<16J3DColorChanInfo>__FPCvPCv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1682,22 +1673,22 @@ asm void JSUConvertOffsetToPtr__template59(void const* field_0, void const* fiel
 #pragma pop
 
 
-/* 80332D74-80332D8C 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<14J3DIndInitData>__FPCvPCv             */
+/* 80332D74-80332D8C 0018+00 rc=1 efc=0 rfr=False None .text      JSUConvertOffsetToPtr<14J3DIndInitData>__FPCvPCv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSUConvertOffsetToPtr__template60(void const* field_0, void const* field_1) {
+asm static void JSUConvertOffsetToPtr__template60(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332D74.s"
 }
 #pragma pop
 
 
-/* 80332D8C-80332DA4 0018+00 rc=0 efc=0 .text      JSUConvertOffsetToPtr<19J3DMaterialInitData>__FPCvPCv        */
+/* 80332D8C-80332DA4 0018+00 rc=1 efc=0 rfr=False None .text      JSUConvertOffsetToPtr<19J3DMaterialInitData>__FPCvPCv        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JSUConvertOffsetToPtr__template61(void const* field_0, void const* field_1) {
+asm static void JSUConvertOffsetToPtr__template61(void const* field_0, void const* field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphLoader/J3DMaterialFactory/func_80332D8C.s"
 }

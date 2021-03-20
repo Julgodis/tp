@@ -9,9 +9,6 @@
 // Types:
 // 
 
-struct interface_of_controller_pad {
-};
-
 struct JUTGamePad {
 	struct EPadPort {
 	};
@@ -24,6 +21,9 @@ struct JUTGamePad {
 	/* 802E08E4 */ void read();
 	/* 802E1024 */ void clearForReset();
 	/* 802E199C */ void getGamePad(int);
+};
+
+struct interface_of_controller_pad {
 };
 
 struct mDoCPd_c {
@@ -44,12 +44,8 @@ extern "C" void read__8mDoCPd_cFv(); // 1
 extern "C" void convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad(); // 1
 extern "C" void LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad(); // 1
 extern "C" void recalibrate__8mDoCPd_cFv(); // 1
-SECTION_BSS extern u8 m_gamePad__8mDoCPd_c[16];
-SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
-SECTION_SDATA2 extern f32 lit_3709;
-SECTION_SDATA2 extern f32 lit_3710;
-SECTION_SDATA2 extern f32 m_Do_m_Do_controller_pad__lit_3711[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 m_Do_m_Do_controller_pad__lit_3713;
+extern "C" extern u8 m_gamePad__8mDoCPd_c[16];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 
 // 
 // External References:
@@ -73,25 +69,26 @@ extern "C" void setEnabled__Q210JUTGamePad7CRumbleFUl(); // 1
 extern "C" void PADSetAnalogMode(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_BSS extern u8 g_HIO[64 + 4 /* padding */];
-SECTION_SDATA extern u32 data_80450580;
-SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
-SECTION_SBSS extern u8 sAnalogMode__10JUTGamePad[4];
-SECTION_SBSS extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
-SECTION_SBSS extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
+extern "C" extern u8 g_HIO[64 + 4 /* padding */];
+extern "C" extern u32 data_80450580;
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+extern "C" extern u8 sAnalogMode__10JUTGamePad[4];
+extern "C" extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
+extern "C" extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
+extern "C" extern u8 struct_80451500[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803DD2D8-803DD2E8 0010+00 rc=0 efc=0 .bss       m_gamePad__8mDoCPd_c                                         */
+/* 803DD2D8-803DD2E8 0010+00 rc=8 efc=6 rfr=False None .bss       m_gamePad__8mDoCPd_c                                         */
 u8 m_gamePad__8mDoCPd_c[16];
 
-/* 803DD2E8-803DD3E8 0100+00 rc=0 efc=0 .bss       m_cpadInfo__8mDoCPd_c                                        */
+/* 803DD2E8-803DD3E8 0100+00 rc=86 efc=84 rfr=False None .bss       m_cpadInfo__8mDoCPd_c                                        */
 u8 m_cpadInfo__8mDoCPd_c[256];
 
-/* 80007954-80007A94 0140+00 rc=0 efc=0 .text      create__8mDoCPd_cFv                                          */
+/* 80007954-80007A94 0140+00 rc=1 efc=1 rfr=False None .text      create__8mDoCPd_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,7 +99,7 @@ asm void mDoCPd_c::create() {
 #pragma pop
 
 
-/* 80007A94-80007B7C 00E8+00 rc=0 efc=0 .text      read__8mDoCPd_cFv                                            */
+/* 80007A94-80007B7C 00E8+00 rc=1 efc=1 rfr=False None .text      read__8mDoCPd_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,23 +111,23 @@ asm void mDoCPd_c::read() {
 
 
 /* ############################################################################################## */
-/* 80451A20-80451A24 0004+00 rc=0 efc=0 .sdata2    @3709                                                        */
-f32 lit_3709 = 1.0f / 15.0f;
+/* 80451A20-80451A24 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3709                                                        */
+SECTION_SDATA2 static f32 lit_3709 = 1.0f / 15.0f;
 
-/* 80451A24-80451A28 0004+00 rc=0 efc=0 .sdata2    @3710                                                        */
-f32 lit_3710 = 1.0f;
+/* 80451A24-80451A28 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3710                                                        */
+SECTION_SDATA2 static f32 lit_3710 = 1.0f;
 
-/* 80451A28-80451A30 0004+04 rc=0 efc=0 .sdata2    @3711                                                        */
-f32 m_Do_m_Do_controller_pad__lit_3711[1 + 1 /* padding */] = {
+/* 80451A28-80451A30 0004+04 rc=1 efc=0 rfr=False None .sdata2    @3711                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_controller_pad__lit_3711[1 + 1 /* padding */] = {
 	0.0071428571827709675f,
 	/* padding */
 	0.0f,
 };
 
-/* 80451A30-80451A38 0008+00 rc=0 efc=0 .sdata2    @3713                                                        */
-f64 m_Do_m_Do_controller_pad__lit_3713 = 4503599627370496.0 /* cast u32 to float */;
+/* 80451A30-80451A38 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3713                                                        */
+SECTION_SDATA2 static f64 m_Do_m_Do_controller_pad__lit_3713 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80007B7C-80007CD0 0154+00 rc=0 efc=0 .text      convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad */
+/* 80007B7C-80007CD0 0154+00 rc=1 efc=0 rfr=False None .text      convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,7 +138,7 @@ asm void mDoCPd_c::convert(interface_of_controller_pad* field_0, JUTGamePad* fie
 #pragma pop
 
 
-/* 80007CD0-80007D74 00A4+00 rc=0 efc=0 .text      LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad        */
+/* 80007CD0-80007D74 00A4+00 rc=1 efc=0 rfr=False None .text      LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,7 +149,7 @@ asm void mDoCPd_c::LRlockCheck(interface_of_controller_pad* field_0) {
 #pragma pop
 
 
-/* 80007D74-80007D9C 0028+00 rc=0 efc=0 .text      recalibrate__8mDoCPd_cFv                                     */
+/* 80007D74-80007D9C 0028+00 rc=1 efc=1 rfr=False None .text      recalibrate__8mDoCPd_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

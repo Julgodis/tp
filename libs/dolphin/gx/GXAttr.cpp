@@ -10,7 +10,7 @@
 // 
 
 extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXSetVtxDescv(); // 1
+extern "C" static void GXSetVtxDescv(); // 1
 extern "C" void __GXSetVCD(); // 1
 extern "C" void __GXCalculateVLim(); // 1
 extern "C" void GXClearVtxDesc(); // 1
@@ -23,7 +23,7 @@ extern "C" void GXSetTexCoordGen2(); // 1
 extern "C" void GXSetNumTexGens(); // 1
 
 extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXSetVtxDescv(); // 1
+extern "C" static void GXSetVtxDescv(); // 1
 extern "C" void __GXSetVCD(); // 1
 extern "C" void __GXCalculateVLim(); // 1
 extern "C" void GXClearVtxDesc(); // 1
@@ -34,15 +34,6 @@ extern "C" void GXSetArray(); // 1
 extern "C" void GXInvalidateVtxCache(); // 1
 extern "C" void GXSetTexCoordGen2(); // 1
 extern "C" void GXSetNumTexGens(); // 1
-SECTION_DATA extern void* GXAttr__lit_176[26];
-SECTION_DATA extern void* lit_223[26];
-SECTION_DATA extern void* GXAttr__lit_476[17];
-SECTION_DATA extern void* GXAttr__lit_503[17];
-SECTION_DATA extern void* GXAttr__lit_740[7];
-SECTION_DATA extern void* lit_739[21];
-SECTION_SDATA extern u8 data_80450A80[4];
-SECTION_SDATA extern u8 data_80450A84[4];
-SECTION_SDATA extern u8 data_80450A88[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -51,44 +42,44 @@ SECTION_SDATA extern u8 data_80450A88[4 + 4 /* padding */];
 extern "C" void __GXSetMatrixIndex(); // 1
 
 extern "C" void __GXSetMatrixIndex(); // 1
-SECTION_SDATA2 extern void* __GXData;
+extern "C" extern void* __GXData;
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803D2280-803D22E8 0068+00 rc=0 efc=0 .data      @176                                                         */
-void* GXAttr__lit_176[26] = {
-	(void*)(((char*)GXSetVtxDesc)+0x20),
-	(void*)(((char*)GXSetVtxDesc)+0x34),
-	(void*)(((char*)GXSetVtxDesc)+0x48),
-	(void*)(((char*)GXSetVtxDesc)+0x5C),
-	(void*)(((char*)GXSetVtxDesc)+0x70),
-	(void*)(((char*)GXSetVtxDesc)+0x84),
-	(void*)(((char*)GXSetVtxDesc)+0x98),
-	(void*)(((char*)GXSetVtxDesc)+0xAC),
-	(void*)(((char*)GXSetVtxDesc)+0xC0),
-	(void*)(((char*)GXSetVtxDesc)+0xD4),
-	(void*)(((char*)GXSetVtxDesc)+0xE8),
-	(void*)(((char*)GXSetVtxDesc)+0x150),
-	(void*)(((char*)GXSetVtxDesc)+0x164),
-	(void*)(((char*)GXSetVtxDesc)+0x178),
-	(void*)(((char*)GXSetVtxDesc)+0x18C),
-	(void*)(((char*)GXSetVtxDesc)+0x1A0),
-	(void*)(((char*)GXSetVtxDesc)+0x1B4),
-	(void*)(((char*)GXSetVtxDesc)+0x1C8),
-	(void*)(((char*)GXSetVtxDesc)+0x1DC),
-	(void*)(((char*)GXSetVtxDesc)+0x1F0),
-	(void*)(((char*)GXSetVtxDesc)+0x204),
-	(void*)(((char*)GXSetVtxDesc)+0x214),
-	(void*)(((char*)GXSetVtxDesc)+0x214),
-	(void*)(((char*)GXSetVtxDesc)+0x214),
-	(void*)(((char*)GXSetVtxDesc)+0x214),
-	(void*)(((char*)GXSetVtxDesc)+0x11C),
+/* 803D2280-803D22E8 0068+00 rc=1 efc=0 rfr=False None .data      @176                                                         */
+SECTION_DATA static void* GXAttr__lit_176[26] = {
+	/* 0    */ (void*)(((char*)GXSetVtxDesc)+0x20),
+	/* 1    */ (void*)(((char*)GXSetVtxDesc)+0x34),
+	/* 2    */ (void*)(((char*)GXSetVtxDesc)+0x48),
+	/* 3    */ (void*)(((char*)GXSetVtxDesc)+0x5C),
+	/* 4    */ (void*)(((char*)GXSetVtxDesc)+0x70),
+	/* 5    */ (void*)(((char*)GXSetVtxDesc)+0x84),
+	/* 6    */ (void*)(((char*)GXSetVtxDesc)+0x98),
+	/* 7    */ (void*)(((char*)GXSetVtxDesc)+0xAC),
+	/* 8    */ (void*)(((char*)GXSetVtxDesc)+0xC0),
+	/* 9    */ (void*)(((char*)GXSetVtxDesc)+0xD4),
+	/* 10   */ (void*)(((char*)GXSetVtxDesc)+0xE8),
+	/* 11   */ (void*)(((char*)GXSetVtxDesc)+0x150),
+	/* 12   */ (void*)(((char*)GXSetVtxDesc)+0x164),
+	/* 13   */ (void*)(((char*)GXSetVtxDesc)+0x178),
+	/* 14   */ (void*)(((char*)GXSetVtxDesc)+0x18C),
+	/* 15   */ (void*)(((char*)GXSetVtxDesc)+0x1A0),
+	/* 16   */ (void*)(((char*)GXSetVtxDesc)+0x1B4),
+	/* 17   */ (void*)(((char*)GXSetVtxDesc)+0x1C8),
+	/* 18   */ (void*)(((char*)GXSetVtxDesc)+0x1DC),
+	/* 19   */ (void*)(((char*)GXSetVtxDesc)+0x1F0),
+	/* 20   */ (void*)(((char*)GXSetVtxDesc)+0x204),
+	/* 21   */ (void*)(((char*)GXSetVtxDesc)+0x214),
+	/* 22   */ (void*)(((char*)GXSetVtxDesc)+0x214),
+	/* 23   */ (void*)(((char*)GXSetVtxDesc)+0x214),
+	/* 24   */ (void*)(((char*)GXSetVtxDesc)+0x214),
+	/* 25   */ (void*)(((char*)GXSetVtxDesc)+0x11C),
 };
 
-/* 8035AEB8-8035B124 026C+00 rc=0 efc=0 .text      GXSetVtxDesc                                                 */
+/* 8035AEB8-8035B124 026C+00 rc=71 efc=70 rfr=False None .text      GXSetVtxDesc                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,48 +91,48 @@ extern "C" asm void GXSetVtxDesc() {
 
 
 /* ############################################################################################## */
-/* 803D22E8-803D2350 0068+00 rc=0 efc=0 .data      @223                                                         */
-void* lit_223[26] = {
-	(void*)(((char*)GXSetVtxDescv)+0x2C),
-	(void*)(((char*)GXSetVtxDescv)+0x40),
-	(void*)(((char*)GXSetVtxDescv)+0x54),
-	(void*)(((char*)GXSetVtxDescv)+0x68),
-	(void*)(((char*)GXSetVtxDescv)+0x7C),
-	(void*)(((char*)GXSetVtxDescv)+0x90),
-	(void*)(((char*)GXSetVtxDescv)+0xA4),
-	(void*)(((char*)GXSetVtxDescv)+0xB8),
-	(void*)(((char*)GXSetVtxDescv)+0xCC),
-	(void*)(((char*)GXSetVtxDescv)+0xE0),
-	(void*)(((char*)GXSetVtxDescv)+0xF4),
-	(void*)(((char*)GXSetVtxDescv)+0x15C),
-	(void*)(((char*)GXSetVtxDescv)+0x170),
-	(void*)(((char*)GXSetVtxDescv)+0x184),
-	(void*)(((char*)GXSetVtxDescv)+0x198),
-	(void*)(((char*)GXSetVtxDescv)+0x1AC),
-	(void*)(((char*)GXSetVtxDescv)+0x1C0),
-	(void*)(((char*)GXSetVtxDescv)+0x1D4),
-	(void*)(((char*)GXSetVtxDescv)+0x1E8),
-	(void*)(((char*)GXSetVtxDescv)+0x1FC),
-	(void*)(((char*)GXSetVtxDescv)+0x210),
-	(void*)(((char*)GXSetVtxDescv)+0x220),
-	(void*)(((char*)GXSetVtxDescv)+0x220),
-	(void*)(((char*)GXSetVtxDescv)+0x220),
-	(void*)(((char*)GXSetVtxDescv)+0x220),
-	(void*)(((char*)GXSetVtxDescv)+0x128),
+/* 803D22E8-803D2350 0068+00 rc=1 efc=0 rfr=False None .data      @223                                                         */
+SECTION_DATA static void* lit_223[26] = {
+	/* 0    */ (void*)(((char*)GXSetVtxDescv)+0x2C),
+	/* 1    */ (void*)(((char*)GXSetVtxDescv)+0x40),
+	/* 2    */ (void*)(((char*)GXSetVtxDescv)+0x54),
+	/* 3    */ (void*)(((char*)GXSetVtxDescv)+0x68),
+	/* 4    */ (void*)(((char*)GXSetVtxDescv)+0x7C),
+	/* 5    */ (void*)(((char*)GXSetVtxDescv)+0x90),
+	/* 6    */ (void*)(((char*)GXSetVtxDescv)+0xA4),
+	/* 7    */ (void*)(((char*)GXSetVtxDescv)+0xB8),
+	/* 8    */ (void*)(((char*)GXSetVtxDescv)+0xCC),
+	/* 9    */ (void*)(((char*)GXSetVtxDescv)+0xE0),
+	/* 10   */ (void*)(((char*)GXSetVtxDescv)+0xF4),
+	/* 11   */ (void*)(((char*)GXSetVtxDescv)+0x15C),
+	/* 12   */ (void*)(((char*)GXSetVtxDescv)+0x170),
+	/* 13   */ (void*)(((char*)GXSetVtxDescv)+0x184),
+	/* 14   */ (void*)(((char*)GXSetVtxDescv)+0x198),
+	/* 15   */ (void*)(((char*)GXSetVtxDescv)+0x1AC),
+	/* 16   */ (void*)(((char*)GXSetVtxDescv)+0x1C0),
+	/* 17   */ (void*)(((char*)GXSetVtxDescv)+0x1D4),
+	/* 18   */ (void*)(((char*)GXSetVtxDescv)+0x1E8),
+	/* 19   */ (void*)(((char*)GXSetVtxDescv)+0x1FC),
+	/* 20   */ (void*)(((char*)GXSetVtxDescv)+0x210),
+	/* 21   */ (void*)(((char*)GXSetVtxDescv)+0x220),
+	/* 22   */ (void*)(((char*)GXSetVtxDescv)+0x220),
+	/* 23   */ (void*)(((char*)GXSetVtxDescv)+0x220),
+	/* 24   */ (void*)(((char*)GXSetVtxDescv)+0x220),
+	/* 25   */ (void*)(((char*)GXSetVtxDescv)+0x128),
 };
 
-/* 8035B124-8035B3AC 0288+00 rc=0 efc=0 .text      GXSetVtxDescv                                                */
+/* 8035B124-8035B3AC 0288+00 rc=1 efc=0 rfr=False None .text      GXSetVtxDescv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void GXSetVtxDescv() {
+extern "C" asm static void GXSetVtxDescv() {
 	nofralloc
 #include "asm/dolphin/gx/GXAttr/GXSetVtxDescv.s"
 }
 #pragma pop
 
 
-/* 8035B3AC-8035B468 00BC+00 rc=0 efc=0 .text      __GXSetVCD                                                   */
+/* 8035B3AC-8035B468 00BC+00 rc=2 efc=2 rfr=False None .text      __GXSetVCD                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -153,24 +144,24 @@ extern "C" asm void __GXSetVCD() {
 
 
 /* ############################################################################################## */
-/* 80450A80-80450A84 0004+00 rc=0 efc=0 .sdata     tbl1$241                                                     */
-u8 data_80450A80[4] = {
+/* 80450A80-80450A84 0004+00 rc=1 efc=0 rfr=False None .sdata     tbl1$241                                                     */
+SECTION_SDATA static u8 data_80450A80[4] = {
 	0x00, 0x04, 0x01, 0x02,
 };
 
-/* 80450A84-80450A88 0004+00 rc=0 efc=0 .sdata     tbl2$242                                                     */
-u8 data_80450A84[4] = {
+/* 80450A84-80450A88 0004+00 rc=1 efc=0 rfr=False None .sdata     tbl2$242                                                     */
+SECTION_SDATA static u8 data_80450A84[4] = {
 	0x00, 0x08, 0x01, 0x02,
 };
 
-/* 80450A88-80450A90 0004+04 rc=0 efc=0 .sdata     tbl3$243                                                     */
-u8 data_80450A88[4 + 4 /* padding */] = {
+/* 80450A88-80450A90 0004+04 rc=1 efc=0 rfr=False None .sdata     tbl3$243                                                     */
+SECTION_SDATA static u8 data_80450A88[4 + 4 /* padding */] = {
 	0x00, 0x0C, 0x01, 0x02,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8035B468-8035B58C 0124+00 rc=0 efc=0 .text      __GXCalculateVLim                                            */
+/* 8035B468-8035B58C 0124+00 rc=2 efc=2 rfr=False None .text      __GXCalculateVLim                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +172,7 @@ extern "C" asm void __GXCalculateVLim() {
 #pragma pop
 
 
-/* 8035B58C-8035B5C4 0038+00 rc=0 efc=0 .text      GXClearVtxDesc                                               */
+/* 8035B58C-8035B5C4 0038+00 rc=66 efc=66 rfr=False None .text      GXClearVtxDesc                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -193,28 +184,28 @@ extern "C" asm void GXClearVtxDesc() {
 
 
 /* ############################################################################################## */
-/* 803D2350-803D2394 0044+00 rc=0 efc=0 .data      @476                                                         */
-void* GXAttr__lit_476[17] = {
-	(void*)(((char*)GXSetVtxAttrFmt)+0x3C),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x64),
-	(void*)(((char*)GXSetVtxAttrFmt)+0xB8),
-	(void*)(((char*)GXSetVtxAttrFmt)+0xD4),
-	(void*)(((char*)GXSetVtxAttrFmt)+0xF0),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x118),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x140),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x168),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x190),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x1B8),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x1E0),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x208),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x22C),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x22C),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x22C),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x22C),
-	(void*)(((char*)GXSetVtxAttrFmt)+0x64),
+/* 803D2350-803D2394 0044+00 rc=1 efc=0 rfr=False None .data      @476                                                         */
+SECTION_DATA static void* GXAttr__lit_476[17] = {
+	/* 0    */ (void*)(((char*)GXSetVtxAttrFmt)+0x3C),
+	/* 1    */ (void*)(((char*)GXSetVtxAttrFmt)+0x64),
+	/* 2    */ (void*)(((char*)GXSetVtxAttrFmt)+0xB8),
+	/* 3    */ (void*)(((char*)GXSetVtxAttrFmt)+0xD4),
+	/* 4    */ (void*)(((char*)GXSetVtxAttrFmt)+0xF0),
+	/* 5    */ (void*)(((char*)GXSetVtxAttrFmt)+0x118),
+	/* 6    */ (void*)(((char*)GXSetVtxAttrFmt)+0x140),
+	/* 7    */ (void*)(((char*)GXSetVtxAttrFmt)+0x168),
+	/* 8    */ (void*)(((char*)GXSetVtxAttrFmt)+0x190),
+	/* 9    */ (void*)(((char*)GXSetVtxAttrFmt)+0x1B8),
+	/* 10   */ (void*)(((char*)GXSetVtxAttrFmt)+0x1E0),
+	/* 11   */ (void*)(((char*)GXSetVtxAttrFmt)+0x208),
+	/* 12   */ (void*)(((char*)GXSetVtxAttrFmt)+0x22C),
+	/* 13   */ (void*)(((char*)GXSetVtxAttrFmt)+0x22C),
+	/* 14   */ (void*)(((char*)GXSetVtxAttrFmt)+0x22C),
+	/* 15   */ (void*)(((char*)GXSetVtxAttrFmt)+0x22C),
+	/* 16   */ (void*)(((char*)GXSetVtxAttrFmt)+0x64),
 };
 
-/* 8035B5C4-8035B820 025C+00 rc=0 efc=0 .text      GXSetVtxAttrFmt                                              */
+/* 8035B5C4-8035B820 025C+00 rc=70 efc=69 rfr=False None .text      GXSetVtxAttrFmt                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -226,28 +217,28 @@ extern "C" asm void GXSetVtxAttrFmt() {
 
 
 /* ############################################################################################## */
-/* 803D2394-803D23D8 0044+00 rc=0 efc=0 .data      @503                                                         */
-void* GXAttr__lit_503[17] = {
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x50),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x78),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0xCC),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0xE8),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x104),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x12C),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x154),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x17C),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x1A4),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x1CC),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x1F4),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x21C),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x240),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x240),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x240),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x240),
-	(void*)(((char*)GXSetVtxAttrFmtv)+0x78),
+/* 803D2394-803D23D8 0044+00 rc=1 efc=0 rfr=False None .data      @503                                                         */
+SECTION_DATA static void* GXAttr__lit_503[17] = {
+	/* 0    */ (void*)(((char*)GXSetVtxAttrFmtv)+0x50),
+	/* 1    */ (void*)(((char*)GXSetVtxAttrFmtv)+0x78),
+	/* 2    */ (void*)(((char*)GXSetVtxAttrFmtv)+0xCC),
+	/* 3    */ (void*)(((char*)GXSetVtxAttrFmtv)+0xE8),
+	/* 4    */ (void*)(((char*)GXSetVtxAttrFmtv)+0x104),
+	/* 5    */ (void*)(((char*)GXSetVtxAttrFmtv)+0x12C),
+	/* 6    */ (void*)(((char*)GXSetVtxAttrFmtv)+0x154),
+	/* 7    */ (void*)(((char*)GXSetVtxAttrFmtv)+0x17C),
+	/* 8    */ (void*)(((char*)GXSetVtxAttrFmtv)+0x1A4),
+	/* 9    */ (void*)(((char*)GXSetVtxAttrFmtv)+0x1CC),
+	/* 10   */ (void*)(((char*)GXSetVtxAttrFmtv)+0x1F4),
+	/* 11   */ (void*)(((char*)GXSetVtxAttrFmtv)+0x21C),
+	/* 12   */ (void*)(((char*)GXSetVtxAttrFmtv)+0x240),
+	/* 13   */ (void*)(((char*)GXSetVtxAttrFmtv)+0x240),
+	/* 14   */ (void*)(((char*)GXSetVtxAttrFmtv)+0x240),
+	/* 15   */ (void*)(((char*)GXSetVtxAttrFmtv)+0x240),
+	/* 16   */ (void*)(((char*)GXSetVtxAttrFmtv)+0x78),
 };
 
-/* 8035B820-8035BAA0 0280+00 rc=0 efc=0 .text      GXSetVtxAttrFmtv                                             */
+/* 8035B820-8035BAA0 0280+00 rc=2 efc=1 rfr=False None .text      GXSetVtxAttrFmtv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +249,7 @@ extern "C" asm void GXSetVtxAttrFmtv() {
 #pragma pop
 
 
-/* 8035BAA0-8035BB28 0088+00 rc=0 efc=0 .text      __GXSetVAT                                                   */
+/* 8035BAA0-8035BB28 0088+00 rc=2 efc=2 rfr=False None .text      __GXSetVAT                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +260,7 @@ extern "C" asm void __GXSetVAT() {
 #pragma pop
 
 
-/* 8035BB28-8035BB6C 0044+00 rc=0 efc=0 .text      GXSetArray                                                   */
+/* 8035BB28-8035BB6C 0044+00 rc=13 efc=13 rfr=False None .text      GXSetArray                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +271,7 @@ extern "C" asm void GXSetArray() {
 #pragma pop
 
 
-/* 8035BB6C-8035BB7C 0010+00 rc=0 efc=0 .text      GXInvalidateVtxCache                                         */
+/* 8035BB6C-8035BB7C 0010+00 rc=6 efc=6 rfr=False None .text      GXInvalidateVtxCache                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,43 +283,43 @@ extern "C" asm void GXInvalidateVtxCache() {
 
 
 /* ############################################################################################## */
-/* 803D23D8-803D23F4 001C+00 rc=0 efc=0 .data      @740                                                         */
-void* GXAttr__lit_740[7] = {
-	(void*)(((char*)GXSetTexCoordGen2)+0x1CC),
-	(void*)(((char*)GXSetTexCoordGen2)+0x1E0),
-	(void*)(((char*)GXSetTexCoordGen2)+0x1F4),
-	(void*)(((char*)GXSetTexCoordGen2)+0x208),
-	(void*)(((char*)GXSetTexCoordGen2)+0x21C),
-	(void*)(((char*)GXSetTexCoordGen2)+0x230),
-	(void*)(((char*)GXSetTexCoordGen2)+0x244),
+/* 803D23D8-803D23F4 001C+00 rc=1 efc=0 rfr=False None .data      @740                                                         */
+SECTION_DATA static void* GXAttr__lit_740[7] = {
+	/* 0    */ (void*)(((char*)GXSetTexCoordGen2)+0x1CC),
+	/* 1    */ (void*)(((char*)GXSetTexCoordGen2)+0x1E0),
+	/* 2    */ (void*)(((char*)GXSetTexCoordGen2)+0x1F4),
+	/* 3    */ (void*)(((char*)GXSetTexCoordGen2)+0x208),
+	/* 4    */ (void*)(((char*)GXSetTexCoordGen2)+0x21C),
+	/* 5    */ (void*)(((char*)GXSetTexCoordGen2)+0x230),
+	/* 6    */ (void*)(((char*)GXSetTexCoordGen2)+0x244),
 };
 
-/* 803D23F4-803D2448 0054+00 rc=0 efc=0 .data      @739                                                         */
-void* lit_739[21] = {
-	(void*)(((char*)GXSetTexCoordGen2)+0x38),
-	(void*)(((char*)GXSetTexCoordGen2)+0x44),
-	(void*)(((char*)GXSetTexCoordGen2)+0x50),
-	(void*)(((char*)GXSetTexCoordGen2)+0x5C),
-	(void*)(((char*)GXSetTexCoordGen2)+0x78),
-	(void*)(((char*)GXSetTexCoordGen2)+0x80),
-	(void*)(((char*)GXSetTexCoordGen2)+0x88),
-	(void*)(((char*)GXSetTexCoordGen2)+0x90),
-	(void*)(((char*)GXSetTexCoordGen2)+0x98),
-	(void*)(((char*)GXSetTexCoordGen2)+0xA0),
-	(void*)(((char*)GXSetTexCoordGen2)+0xA8),
-	(void*)(((char*)GXSetTexCoordGen2)+0xB0),
-	(void*)(((char*)GXSetTexCoordGen2)+0xB4),
-	(void*)(((char*)GXSetTexCoordGen2)+0xB4),
-	(void*)(((char*)GXSetTexCoordGen2)+0xB4),
-	(void*)(((char*)GXSetTexCoordGen2)+0xB4),
-	(void*)(((char*)GXSetTexCoordGen2)+0xB4),
-	(void*)(((char*)GXSetTexCoordGen2)+0xB4),
-	(void*)(((char*)GXSetTexCoordGen2)+0xB4),
-	(void*)(((char*)GXSetTexCoordGen2)+0x68),
-	(void*)(((char*)GXSetTexCoordGen2)+0x70),
+/* 803D23F4-803D2448 0054+00 rc=1 efc=0 rfr=False None .data      @739                                                         */
+SECTION_DATA static void* lit_739[21] = {
+	/* 0    */ (void*)(((char*)GXSetTexCoordGen2)+0x38),
+	/* 1    */ (void*)(((char*)GXSetTexCoordGen2)+0x44),
+	/* 2    */ (void*)(((char*)GXSetTexCoordGen2)+0x50),
+	/* 3    */ (void*)(((char*)GXSetTexCoordGen2)+0x5C),
+	/* 4    */ (void*)(((char*)GXSetTexCoordGen2)+0x78),
+	/* 5    */ (void*)(((char*)GXSetTexCoordGen2)+0x80),
+	/* 6    */ (void*)(((char*)GXSetTexCoordGen2)+0x88),
+	/* 7    */ (void*)(((char*)GXSetTexCoordGen2)+0x90),
+	/* 8    */ (void*)(((char*)GXSetTexCoordGen2)+0x98),
+	/* 9    */ (void*)(((char*)GXSetTexCoordGen2)+0xA0),
+	/* 10   */ (void*)(((char*)GXSetTexCoordGen2)+0xA8),
+	/* 11   */ (void*)(((char*)GXSetTexCoordGen2)+0xB0),
+	/* 12   */ (void*)(((char*)GXSetTexCoordGen2)+0xB4),
+	/* 13   */ (void*)(((char*)GXSetTexCoordGen2)+0xB4),
+	/* 14   */ (void*)(((char*)GXSetTexCoordGen2)+0xB4),
+	/* 15   */ (void*)(((char*)GXSetTexCoordGen2)+0xB4),
+	/* 16   */ (void*)(((char*)GXSetTexCoordGen2)+0xB4),
+	/* 17   */ (void*)(((char*)GXSetTexCoordGen2)+0xB4),
+	/* 18   */ (void*)(((char*)GXSetTexCoordGen2)+0xB4),
+	/* 19   */ (void*)(((char*)GXSetTexCoordGen2)+0x68),
+	/* 20   */ (void*)(((char*)GXSetTexCoordGen2)+0x70),
 };
 
-/* 8035BB7C-8035BDFC 0280+00 rc=0 efc=0 .text      GXSetTexCoordGen2                                            */
+/* 8035BB7C-8035BDFC 0280+00 rc=48 efc=46 rfr=False None .text      GXSetTexCoordGen2                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,7 +330,7 @@ extern "C" asm void GXSetTexCoordGen2() {
 #pragma pop
 
 
-/* 8035BDFC-8035BE38 003C+00 rc=0 efc=0 .text      GXSetNumTexGens                                              */
+/* 8035BDFC-8035BE38 003C+00 rc=59 efc=59 rfr=False None .text      GXSetNumTexGens                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

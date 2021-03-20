@@ -45,7 +45,7 @@ extern "C" void GXSetTexCoordGen2(); // 1
 // Declarations:
 // 
 
-/* 8027B040-8027B13C 00FC+00 rc=0 efc=0 .text      JPALoadExTex__FP18JPAEmitterWorkData                         */
+/* 8027B040-8027B13C 00FC+00 rc=1 efc=1 rfr=False None .text      JPALoadExTex__FP18JPAEmitterWorkData                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,7 +56,7 @@ asm void JPALoadExTex(JPAEmitterWorkData* field_0) {
 #pragma pop
 
 
-/* 8027B13C-8027B144 0008+00 rc=0 efc=0 .text      __ct__13JPAExTexShapeFPCUc                                   */
+/* 8027B13C-8027B144 0008+00 rc=1 efc=1 rfr=False None .text      __ct__13JPAExTexShapeFPCUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

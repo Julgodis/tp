@@ -26,18 +26,18 @@ struct dAttDraw_CallBack_c {
 	/* 80070178 */ void execute(u16, J3DTransformInfo*);
 };
 
-struct cSAngle {
-	/* 80270F68 */ cSAngle(cSAngle const&);
-	/* 80270F98 */ cSAngle(s16);
-	/* 802710E8 */ void Inv() const;
-	/* 80271228 */ void operator-(s16) const;
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct cSAngle {
+	/* 80270F68 */ cSAngle(cSAngle const&);
+	/* 80270F98 */ cSAngle(s16);
+	/* 802710E8 */ void Inv() const;
+	/* 80271228 */ void operator-(s16) const;
 };
 
 struct fopAc_ac_c {
@@ -210,17 +210,17 @@ struct Z2SeqMgr {
 // Forward References:
 // 
 
-extern "C" void func_80070018(); // 1
-void check_event_condition(u32, u16); // 2
-void check_flontofplayer(u32, s16, s16); // 2
-void distace_weight(f32, s16, f32); // 2
-void distace_angle_adjust(f32, s16, f32); // 2
-void check_distace(cXyz*, s16, cXyz*, f32, f32, f32, f32); // 2
-void select_attention(fopAc_ac_c*, void*); // 2
-void sound_attention(fopAc_ac_c*, void*); // 2
+extern "C" static void func_80070018(); // 1
+static void check_event_condition(u32, u16); // 2
+static void check_flontofplayer(u32, s16, s16); // 2
+static void distace_weight(f32, s16, f32); // 2
+static void distace_angle_adjust(f32, s16, f32); // 2
+static void check_distace(cXyz*, s16, cXyz*, f32, f32, f32, f32); // 2
+static void select_attention(fopAc_ac_c*, void*); // 2
+static void sound_attention(fopAc_ac_c*, void*); // 2
 extern "C" void __sinit_d_attention_cpp(); // 1
 
-extern "C" void func_80070018(); // 1
+extern "C" static void func_80070018(); // 1
 extern "C" void __ct__11dAttParam_cFl(); // 1
 extern "C" void __dt__11dAttParam_cFv(); // 1
 extern "C" void __ct__15dAttDrawParam_cFv(); // 1
@@ -231,15 +231,15 @@ extern "C" void GetLockonList__12dAttention_cFl(); // 1
 extern "C" void getActionBtnB__12dAttention_cFv(); // 1
 extern "C" void getActionBtnXY__12dAttention_cFv(); // 1
 extern "C" void chkAttMask__12dAttention_cFUlUl(); // 1
-extern "C" void check_event_condition__FUlUs(); // 1
-extern "C" void check_flontofplayer__FUlss(); // 1
-extern "C" void distace_weight__Ffsf(); // 1
-extern "C" void distace_angle_adjust__Ffsf(); // 1
-extern "C" void check_distace__FP4cXyzsP4cXyzffff(); // 1
+extern "C" static void check_event_condition__FUlUs(); // 1
+extern "C" static void check_flontofplayer__FUlss(); // 1
+extern "C" static void distace_weight__Ffsf(); // 1
+extern "C" static void distace_angle_adjust__Ffsf(); // 1
+extern "C" static void check_distace__FP4cXyzsP4cXyzffff(); // 1
 extern "C" void calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl(); // 1
 extern "C" void setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl(); // 1
 extern "C" void initList__12dAttention_cFUl(); // 1
-extern "C" void select_attention__FP10fopAc_ac_cPv(); // 1
+extern "C" static void select_attention__FP10fopAc_ac_cPv(); // 1
 extern "C" void makeList__12dAttention_cFv(); // 1
 extern "C" void setOwnerAttentionPos__12dAttention_cFv(); // 1
 extern "C" void SelectAttention__12dAttention_cFP10fopAc_ac_c(); // 1
@@ -250,7 +250,7 @@ extern "C" void nextAttention__12dAttention_cFv(); // 1
 extern "C" void freeAttention__12dAttention_cFv(); // 1
 extern "C" void chaseAttention__12dAttention_cFv(); // 1
 extern "C" void EnemyDistance__12dAttention_cFP10fopAc_ac_c(); // 1
-extern "C" void sound_attention__FP10fopAc_ac_cPv(); // 1
+extern "C" static void sound_attention__FP10fopAc_ac_cPv(); // 1
 extern "C" void runSoundProc__12dAttention_cFv(); // 1
 extern "C" void runDrawProc__12dAttention_cFv(); // 1
 extern "C" void runDebugDisp__12dAttention_cFv(); // 1
@@ -291,53 +291,12 @@ extern "C" void proc__10dAttLook_cFv(); // 1
 extern "C" void request__10dAttLook_cFP10fopAc_ac_cfffsi(); // 1
 extern "C" void __dt__15dAttDrawParam_cFv(); // 1
 extern "C" void __sinit_d_attention_cpp(); // 1
-SECTION_RODATA extern const char* const d_d_attention__stringBase0;
-SECTION_DATA extern u8 loc_type_tbl__12dAttention_c[12];
-SECTION_DATA extern u8 act_type_tbl__12dAttention_c[20];
-SECTION_DATA extern u8 data_803A9C18[36];
-SECTION_DATA extern u8 data_803A9C3C[12];
-SECTION_DATA extern void* const __vt__19dAttDraw_CallBack_c[3];
-SECTION_DATA extern void* const __vt__15dAttDrawParam_c[3];
-SECTION_DATA extern void* const __vt__11dAttParam_c[3 + 1 /* padding */];
-SECTION_BSS extern u8 d_d_attention__lit_4093[12];
-SECTION_BSS extern u8 g_AttDwHIO[16 + 4 /* padding */];
-SECTION_SDATA extern u32 loc_type_num__12dAttention_c;
-SECTION_SDATA extern u32 act_type_num__12dAttention_c;
-SECTION_SDATA extern u32 chk_type_tbl__12dAttention_c;
-SECTION_SDATA extern u32 chk_type_num__12dAttention_c;
-SECTION_SDATA extern u32 data_80450670;
-SECTION_SDATA extern u8 data_80450674[6 + 6 /* padding */];
-SECTION_SDATA extern u8 data_80450680[8];
-SECTION_SDATA extern u8 data_80450688[8];
-SECTION_SDATA2 extern f32 d_d_attention__lit_4061;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4062;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4063;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4064;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4065;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4066;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4067;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4068;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4069;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4070;
-SECTION_SDATA2 extern u8 d_d_attention__lit_4071[4];
-SECTION_SDATA2 extern f32 d_d_attention__lit_4072;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4073;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4084;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4085;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4092;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4448[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 d_d_attention__lit_4450;
-SECTION_SDATA2 extern f64 d_d_attention__lit_4514;
-SECTION_SDATA2 extern f64 d_d_attention__lit_4515;
-SECTION_SDATA2 extern u8 d_d_attention__lit_4516[8];
-SECTION_SDATA2 extern f32 d_d_attention__lit_4562;
-SECTION_SDATA2 extern f32 d_d_attention__lit_4563;
-SECTION_SDATA2 extern f32 lit_5137;
-SECTION_SDATA2 extern f32 lit_5138;
-SECTION_SDATA2 extern f32 lit_5668[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 lit_5670;
-SECTION_SDATA2 extern f32 d_d_attention__lit_5784;
-SECTION_SDATA2 extern f32 d_d_attention__lit_5785;
+extern "C" extern char const* const d_d_attention__stringBase0;
+extern "C" extern void* __vt__19dAttDraw_CallBack_c[3];
+extern "C" extern void* __vt__11dAttParam_c[3 + 1 /* padding */];
+extern "C" extern u8 pad_8045067A[4];
+extern "C" extern u8 data_80450680[8];
+extern "C" extern u8 data_80450688[8];
 
 // 
 // External References:
@@ -444,26 +403,27 @@ extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
 extern "C" void tan(); // 1
-SECTION_DATA extern void* const __vt__25mDoExt_McaMorfCallBack1_c[3];
-SECTION_DATA extern u8 dist_table__12dAttention_c[6552];
-SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
-SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 j3dSys[284];
-SECTION_SDATA extern u32 __float_nan;
-SECTION_SDATA extern u32 __float_max;
-SECTION_SBSS extern u8 data_80450F58[8];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern void* __vt__25mDoExt_McaMorfCallBack1_c[3];
+extern "C" extern u8 dist_table__12dAttention_c[6552];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u32 __float_nan;
+extern "C" extern u32 __float_max;
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 data_80450F58[8];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80070018-80070038 0020+00 rc=0 efc=0 .text      padLockButton__25@unnamed@d_attention_cpp@Fl                 */
+/* 80070018-80070038 0020+00 rc=2 efc=0 rfr=False None .text      padLockButton__25@unnamed@d_attention_cpp@Fl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80070018() {
+extern "C" asm static void func_80070018() {
 	nofralloc
 #include "asm/d/d_attention/func_80070018.s"
 }
@@ -471,104 +431,104 @@ extern "C" asm void func_80070018() {
 
 
 /* ############################################################################################## */
-/* 8037A770-8037A780 000F+01 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 8037A770-8037A780 000F+01 rc=2 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_8037A770 = "D_MN09B";
-const char* const stringBase_8037A778 = "Always";
+SECTION_DEAD static char const* const stringBase_8037A770 = "D_MN09B";
+SECTION_DEAD static char const* const stringBase_8037A778 = "Always";
 /* @stringBase0 padding */
-char* const pad_8037A77F = "";
+SECTION_DEAD static char const* const pad_8037A77F = "";
 #pragma pop
 
-/* 803A9BF8-803A9C04 000C+00 rc=0 efc=0 .data      loc_type_tbl__12dAttention_c                                 */
-u8 loc_type_tbl__12dAttention_c[12] = {
+/* 803A9BF8-803A9C04 000C+00 rc=2 efc=0 rfr=False None .data      loc_type_tbl__12dAttention_c                                 */
+SECTION_DATA static u8 loc_type_tbl__12dAttention_c[12] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0x02, 0x00, 0x02, 0x00, 0x04,
 };
 
-/* 803A9C04-803A9C18 0014+00 rc=0 efc=0 .data      act_type_tbl__12dAttention_c                                 */
-u8 act_type_tbl__12dAttention_c[20] = {
+/* 803A9C04-803A9C18 0014+00 rc=1 efc=0 rfr=False None .data      act_type_tbl__12dAttention_c                                 */
+SECTION_DATA static u8 act_type_tbl__12dAttention_c[20] = {
 	0x00, 0x03, 0x00, 0x08, 0x00, 0x04, 0x00, 0x10, 0x00, 0x05, 0x00, 0x20, 0x00, 0x06, 0x00, 0x40,
 	0x00, 0x07, 0x00, 0x80,
 };
 
-/* 803A9C18-803A9C3C 0024+00 rc=0 efc=0 .data      ftp_table$4417                                               */
-u8 data_803A9C18[36] = {
+/* 803A9C18-803A9C3C 0024+00 rc=1 efc=0 rfr=False None .data      ftp_table$4417                                               */
+SECTION_DATA static u8 data_803A9C18[36] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x08,
 	0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80,
 	0x00, 0x00, 0x01, 0x00,
 };
 
-/* 803A9C3C-803A9C48 000C+00 rc=0 efc=0 .data      ang_table2$4419                                              */
-u8 data_803A9C3C[12] = {
+/* 803A9C3C-803A9C48 000C+00 rc=1 efc=0 rfr=False None .data      ang_table2$4419                                              */
+SECTION_DATA static u8 data_803A9C3C[12] = {
 	0x0A, 0xAA, 0x20, 0x00, 0x2A, 0xAA, 0x40, 0x00, 0x4E, 0x38, 0x60, 0x00,
 };
 
-/* 803A9C48-803A9C54 000C+00 rc=0 efc=0 .data      __vt__19dAttDraw_CallBack_c                                  */
-void* const __vt__19dAttDraw_CallBack_c[3] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo,
+/* 803A9C48-803A9C54 000C+00 rc=2 efc=1 rfr=False None .data      __vt__19dAttDraw_CallBack_c                                  */
+SECTION_DATA void* __vt__19dAttDraw_CallBack_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo,
 };
 
-/* 803A9C54-803A9C60 000C+00 rc=0 efc=0 .data      __vt__15dAttDrawParam_c                                      */
-void* const __vt__15dAttDrawParam_c[3] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__15dAttDrawParam_cFv,
+/* 803A9C54-803A9C60 000C+00 rc=2 efc=0 rfr=False None .data      __vt__15dAttDrawParam_c                                      */
+SECTION_DATA static void* __vt__15dAttDrawParam_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__15dAttDrawParam_cFv,
 };
 
-/* 803A9C60-803A9C70 000C+04 rc=0 efc=0 .data      __vt__11dAttParam_c                                          */
-void* const __vt__11dAttParam_c[3 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11dAttParam_cFv,
+/* 803A9C60-803A9C70 000C+04 rc=4 efc=1 rfr=False None .data      __vt__11dAttParam_c                                          */
+SECTION_DATA void* __vt__11dAttParam_c[3 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11dAttParam_cFv,
 	/* padding */
 	NULL,
 };
 
-/* 80452628-8045262C 0004+00 rc=0 efc=0 .sdata2    @4061                                                        */
-f32 d_d_attention__lit_4061 = 45.0f;
+/* 80452628-8045262C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4061                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4061 = 45.0f;
 
-/* 8045262C-80452630 0004+00 rc=0 efc=0 .sdata2    @4062                                                        */
-f32 d_d_attention__lit_4062 = 30.0f;
+/* 8045262C-80452630 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4062                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4062 = 30.0f;
 
-/* 80452630-80452634 0004+00 rc=0 efc=0 .sdata2    @4063                                                        */
-f32 d_d_attention__lit_4063 = 90.0f;
+/* 80452630-80452634 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4063                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4063 = 90.0f;
 
-/* 80452634-80452638 0004+00 rc=0 efc=0 .sdata2    @4064                                                        */
-f32 d_d_attention__lit_4064 = -9.0f / 10.0f;
+/* 80452634-80452638 0004+00 rc=2 efc=0 rfr=False None .sdata2    @4064                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4064 = -9.0f / 10.0f;
 
-/* 80452638-8045263C 0004+00 rc=0 efc=0 .sdata2    @4065                                                        */
-f32 d_d_attention__lit_4065 = 3000.0f;
+/* 80452638-8045263C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4065                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4065 = 3000.0f;
 
-/* 8045263C-80452640 0004+00 rc=0 efc=0 .sdata2    @4066                                                        */
-f32 d_d_attention__lit_4066 = 1000.0f;
+/* 8045263C-80452640 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4066                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4066 = 1000.0f;
 
-/* 80452640-80452644 0004+00 rc=0 efc=0 .sdata2    @4067                                                        */
-f32 d_d_attention__lit_4067 = 6.0f;
+/* 80452640-80452644 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4067                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4067 = 6.0f;
 
-/* 80452644-80452648 0004+00 rc=0 efc=0 .sdata2    @4068                                                        */
-f32 d_d_attention__lit_4068 = 4.5f;
+/* 80452644-80452648 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4068                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4068 = 4.5f;
 
-/* 80452648-8045264C 0004+00 rc=0 efc=0 .sdata2    @4069                                                        */
-f32 d_d_attention__lit_4069 = 14.0f;
+/* 80452648-8045264C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4069                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4069 = 14.0f;
 
-/* 8045264C-80452650 0004+00 rc=0 efc=0 .sdata2    @4070                                                        */
-f32 d_d_attention__lit_4070 = 10.0f;
+/* 8045264C-80452650 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4070                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4070 = 10.0f;
 
-/* 80452650-80452654 0004+00 rc=0 efc=0 .sdata2    @4071                                                        */
-u8 d_d_attention__lit_4071[4] = {
+/* 80452650-80452654 0004+00 rc=12 efc=0 rfr=False None .sdata2    @4071                                                        */
+SECTION_SDATA2 static u8 d_d_attention__lit_4071[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80452654-80452658 0004+00 rc=0 efc=0 .sdata2    @4072                                                        */
-f32 d_d_attention__lit_4072 = 17.0f / 10.0f;
+/* 80452654-80452658 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4072                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4072 = 17.0f / 10.0f;
 
-/* 80452658-8045265C 0004+00 rc=0 efc=0 .sdata2    @4073                                                        */
-f32 d_d_attention__lit_4073 = 1.0f;
+/* 80452658-8045265C 0004+00 rc=10 efc=0 rfr=False None .sdata2    @4073                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4073 = 1.0f;
 
-/* 80070038-80070110 00D8+00 rc=0 efc=0 .text      __ct__11dAttParam_cFl                                        */
+/* 80070038-80070110 00D8+00 rc=1 efc=0 rfr=False None .text      __ct__11dAttParam_cFl                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -579,7 +539,7 @@ asm dAttParam_c::dAttParam_c(s32 field_0) {
 #pragma pop
 
 
-/* 80070110-80070158 0048+00 rc=0 efc=0 .text      __dt__11dAttParam_cFv                                        */
+/* 80070110-80070158 0048+00 rc=2 efc=0 rfr=False None .text      __dt__11dAttParam_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -591,13 +551,13 @@ asm dAttParam_c::~dAttParam_c() {
 
 
 /* ############################################################################################## */
-/* 8045265C-80452660 0004+00 rc=0 efc=0 .sdata2    @4084                                                        */
-f32 d_d_attention__lit_4084 = 250.0f;
+/* 8045265C-80452660 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4084                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4084 = 250.0f;
 
-/* 80452660-80452664 0004+00 rc=0 efc=0 .sdata2    @4085                                                        */
-f32 d_d_attention__lit_4085 = 2.0f;
+/* 80452660-80452664 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4085                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4085 = 2.0f;
 
-/* 80070158-80070178 0020+00 rc=0 efc=0 .text      __ct__15dAttDrawParam_cFv                                    */
+/* 80070158-80070178 0020+00 rc=1 efc=0 rfr=False None .text      __ct__15dAttDrawParam_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -609,10 +569,10 @@ asm dAttDrawParam_c::dAttDrawParam_c() {
 
 
 /* ############################################################################################## */
-/* 80452664-80452668 0004+00 rc=0 efc=0 .sdata2    @4092                                                        */
-f32 d_d_attention__lit_4092 = 3.0f / 5.0f;
+/* 80452664-80452668 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4092                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4092 = 3.0f / 5.0f;
 
-/* 80070178-80070198 0020+00 rc=0 efc=0 .text      execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo         */
+/* 80070178-80070198 0020+00 rc=1 efc=0 rfr=False None .text      execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -624,13 +584,13 @@ asm void dAttDraw_CallBack_c::execute(u16 field_0, J3DTransformInfo* field_1) {
 
 
 /* ############################################################################################## */
-/* 80424B00-80424B0C 000C+00 rc=0 efc=0 .bss       @4093                                                        */
-u8 d_d_attention__lit_4093[12];
+/* 80424B00-80424B0C 000C+00 rc=1 efc=0 rfr=False None .bss       @4093                                                        */
+static u8 d_d_attention__lit_4093[12];
 
-/* 80424B0C-80424B20 0010+04 rc=0 efc=0 .bss       g_AttDwHIO                                                   */
-u8 g_AttDwHIO[16 + 4 /* padding */];
+/* 80424B0C-80424B20 0010+04 rc=3 efc=0 rfr=False None .bss       g_AttDwHIO                                                   */
+static u8 g_AttDwHIO[16 + 4 /* padding */];
 
-/* 80070198-80070774 05DC+00 rc=0 efc=0 .text      __ct__12dAttention_cFP10fopAc_ac_cUl                         */
+/* 80070198-80070774 05DC+00 rc=1 efc=1 rfr=False None .text      __ct__12dAttention_cFP10fopAc_ac_cUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -641,7 +601,7 @@ asm dAttention_c::dAttention_c(fopAc_ac_c* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80070774-80070844 00D0+00 rc=0 efc=0 .text      __dt__12dAttention_cFv                                       */
+/* 80070774-80070844 00D0+00 rc=2 efc=2 rfr=False None .text      __dt__12dAttention_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -652,7 +612,7 @@ asm dAttention_c::~dAttention_c() {
 #pragma pop
 
 
-/* 80070844-80070880 003C+00 rc=0 efc=0 .text      GetLockonList__12dAttention_cFl                              */
+/* 80070844-80070880 003C+00 rc=4 efc=2 rfr=False None .text      GetLockonList__12dAttention_cFl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -663,7 +623,7 @@ asm void dAttention_c::GetLockonList(s32 field_0) {
 #pragma pop
 
 
-/* 80070880-80070974 00F4+00 rc=0 efc=0 .text      getActionBtnB__12dAttention_cFv                              */
+/* 80070880-80070974 00F4+00 rc=5 efc=5 rfr=False None .text      getActionBtnB__12dAttention_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -674,7 +634,7 @@ asm void dAttention_c::getActionBtnB() {
 #pragma pop
 
 
-/* 80070974-80070A70 00FC+00 rc=0 efc=0 .text      getActionBtnXY__12dAttention_cFv                             */
+/* 80070974-80070A70 00FC+00 rc=1 efc=1 rfr=False None .text      getActionBtnXY__12dAttention_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -686,10 +646,10 @@ asm void dAttention_c::getActionBtnXY() {
 
 
 /* ############################################################################################## */
-/* 80450660-80450664 0004+00 rc=0 efc=0 .sdata     loc_type_num__12dAttention_c                                 */
-u32 loc_type_num__12dAttention_c = 0x00000003;
+/* 80450660-80450664 0004+00 rc=2 efc=0 rfr=False None .sdata     loc_type_num__12dAttention_c                                 */
+SECTION_SDATA static u32 loc_type_num__12dAttention_c = 0x00000003;
 
-/* 80070A70-80070AC0 0050+00 rc=0 efc=0 .text      chkAttMask__12dAttention_cFUlUl                              */
+/* 80070A70-80070AC0 0050+00 rc=1 efc=0 rfr=False None .text      chkAttMask__12dAttention_cFUlUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -700,11 +660,11 @@ asm void dAttention_c::chkAttMask(u32 field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80070AC0-80070B2C 006C+00 rc=0 efc=0 .text      check_event_condition__FUlUs                                 */
+/* 80070AC0-80070B2C 006C+00 rc=2 efc=0 rfr=False None .text      check_event_condition__FUlUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void check_event_condition(u32 field_0, u16 field_1) {
+asm static void check_event_condition(u32 field_0, u16 field_1) {
 	nofralloc
 #include "asm/d/d_attention/check_event_condition__FUlUs.s"
 }
@@ -712,30 +672,30 @@ asm void check_event_condition(u32 field_0, u16 field_1) {
 
 
 /* ############################################################################################## */
-/* 80450664-80450668 0004+00 rc=0 efc=0 .sdata     act_type_num__12dAttention_c                                 */
-u32 act_type_num__12dAttention_c = 0x00000005;
+/* 80450664-80450668 0004+00 rc=1 efc=0 rfr=False None .sdata     act_type_num__12dAttention_c                                 */
+SECTION_SDATA static u32 act_type_num__12dAttention_c = 0x00000005;
 
-/* 80450668-8045066C 0004+00 rc=0 efc=0 .sdata     chk_type_tbl__12dAttention_c                                 */
-u32 chk_type_tbl__12dAttention_c = 0x00080100;
+/* 80450668-8045066C 0004+00 rc=1 efc=0 rfr=False None .sdata     chk_type_tbl__12dAttention_c                                 */
+SECTION_SDATA static u32 chk_type_tbl__12dAttention_c = 0x00080100;
 
-/* 8045066C-80450670 0004+00 rc=0 efc=0 .sdata     chk_type_num__12dAttention_c                                 */
-u32 chk_type_num__12dAttention_c = 0x00000001;
+/* 8045066C-80450670 0004+00 rc=1 efc=0 rfr=False None .sdata     chk_type_num__12dAttention_c                                 */
+SECTION_SDATA static u32 chk_type_num__12dAttention_c = 0x00000001;
 
-/* 80450670-80450674 0004+00 rc=0 efc=0 .sdata     None                                                         */
-u32 data_80450670 = 0x01000000;
+/* 80450670-80450674 0004+00 rc=2 efc=0 rfr=False None .sdata     None                                                         */
+SECTION_SDATA static u32 data_80450670 = 0x01000000;
 
-/* 80450674-80450680 0006+06 rc=0 efc=0 .sdata     ang_table$4418                                               */
-u8 data_80450674[6 + 6 /* padding */] = {
+/* 80450674-8045067C 0006+02 rc=1 efc=0 rfr=False None .sdata     ang_table$4418                                               */
+SECTION_SDATA static u8 data_80450674[6 + 2 /* padding */] = {
 	0x40, 0x00, 0x20, 0x00, 0x0A, 0xAA,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00,
 };
 
-/* 80070B2C-80070BF4 00C8+00 rc=0 efc=0 .text      check_flontofplayer__FUlss                                   */
+/* 80070B2C-80070BF4 00C8+00 rc=2 efc=0 rfr=False None .text      check_flontofplayer__FUlss                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void check_flontofplayer(u32 field_0, s16 field_1, s16 field_2) {
+asm static void check_flontofplayer(u32 field_0, s16 field_1, s16 field_2) {
 	nofralloc
 #include "asm/d/d_attention/check_flontofplayer__FUlss.s"
 }
@@ -743,32 +703,32 @@ asm void check_flontofplayer(u32 field_0, s16 field_1, s16 field_2) {
 
 
 /* ############################################################################################## */
-/* 80452668-80452670 0004+04 rc=0 efc=0 .sdata2    @4448                                                        */
-f32 d_d_attention__lit_4448[1 + 1 /* padding */] = {
+/* 80452668-80452670 0004+04 rc=2 efc=0 rfr=False None .sdata2    @4448                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4448[1 + 1 /* padding */] = {
 	32768.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80452670-80452678 0008+00 rc=0 efc=0 .sdata2    @4450                                                        */
-f64 d_d_attention__lit_4450 = 4503601774854144.0 /* cast s32 to float */;
+/* 80452670-80452678 0008+00 rc=3 efc=0 rfr=False None .sdata2    @4450                                                        */
+SECTION_SDATA2 static f64 d_d_attention__lit_4450 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80070BF4-80070C40 004C+00 rc=0 efc=0 .text      distace_weight__Ffsf                                         */
+/* 80070BF4-80070C40 004C+00 rc=2 efc=0 rfr=False None .text      distace_weight__Ffsf                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void distace_weight(f32 field_0, s16 field_1, f32 field_2) {
+asm static void distace_weight(f32 field_0, s16 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/d_attention/distace_weight__Ffsf.s"
 }
 #pragma pop
 
 
-/* 80070C40-80070CA0 0060+00 rc=0 efc=0 .text      distace_angle_adjust__Ffsf                                   */
+/* 80070C40-80070CA0 0060+00 rc=2 efc=0 rfr=False None .text      distace_angle_adjust__Ffsf                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void distace_angle_adjust(f32 field_0, s16 field_1, f32 field_2) {
+asm static void distace_angle_adjust(f32 field_0, s16 field_1, f32 field_2) {
 	nofralloc
 #include "asm/d/d_attention/distace_angle_adjust__Ffsf.s"
 }
@@ -776,22 +736,22 @@ asm void distace_angle_adjust(f32 field_0, s16 field_1, f32 field_2) {
 
 
 /* ############################################################################################## */
-/* 80452678-80452680 0008+00 rc=0 efc=0 .sdata2    @4514                                                        */
-f64 d_d_attention__lit_4514 = 0.5;
+/* 80452678-80452680 0008+00 rc=3 efc=0 rfr=False None .sdata2    @4514                                                        */
+SECTION_SDATA2 static f64 d_d_attention__lit_4514 = 0.5;
 
-/* 80452680-80452688 0008+00 rc=0 efc=0 .sdata2    @4515                                                        */
-f64 d_d_attention__lit_4515 = 3.0;
+/* 80452680-80452688 0008+00 rc=3 efc=0 rfr=False None .sdata2    @4515                                                        */
+SECTION_SDATA2 static f64 d_d_attention__lit_4515 = 3.0;
 
-/* 80452688-80452690 0008+00 rc=0 efc=0 .sdata2    @4516                                                        */
-u8 d_d_attention__lit_4516[8] = {
+/* 80452688-80452690 0008+00 rc=3 efc=0 rfr=False None .sdata2    @4516                                                        */
+SECTION_SDATA2 static u8 d_d_attention__lit_4516[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80070CA0-80070E90 01F0+00 rc=0 efc=0 .text      check_distace__FP4cXyzsP4cXyzffff                            */
+/* 80070CA0-80070E90 01F0+00 rc=3 efc=0 rfr=False None .text      check_distace__FP4cXyzsP4cXyzffff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void check_distace(cXyz* field_0, s16 field_1, cXyz* field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6) {
+asm static void check_distace(cXyz* field_0, s16 field_1, cXyz* field_2, f32 field_3, f32 field_4, f32 field_5, f32 field_6) {
 	nofralloc
 #include "asm/d/d_attention/check_distace__FP4cXyzsP4cXyzffff.s"
 }
@@ -799,13 +759,13 @@ asm void check_distace(cXyz* field_0, s16 field_1, cXyz* field_2, f32 field_3, f
 
 
 /* ############################################################################################## */
-/* 80452690-80452694 0004+00 rc=0 efc=0 .sdata2    @4562                                                        */
-f32 d_d_attention__lit_4562 = -1.0f;
+/* 80452690-80452694 0004+00 rc=3 efc=0 rfr=False None .sdata2    @4562                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4562 = -1.0f;
 
-/* 80452694-80452698 0004+00 rc=0 efc=0 .sdata2    @4563                                                        */
-f32 d_d_attention__lit_4563 = 0.5f;
+/* 80452694-80452698 0004+00 rc=3 efc=0 rfr=False None .sdata2    @4563                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_4563 = 0.5f;
 
-/* 80070E90-800710C0 0230+00 rc=0 efc=0 .text      calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl              */
+/* 80070E90-800710C0 0230+00 rc=2 efc=0 rfr=False None .text      calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -816,7 +776,7 @@ asm void dAttention_c::calcWeight(int field_0, fopAc_ac_c* field_1, f32 field_2,
 #pragma pop
 
 
-/* 800710C0-80071240 0180+00 rc=0 efc=0 .text      setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl           */
+/* 800710C0-80071240 0180+00 rc=1 efc=0 rfr=False None .text      setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -827,7 +787,7 @@ asm void dAttention_c::setList(int field_0, fopAc_ac_c* field_1, f32 field_2, f3
 #pragma pop
 
 
-/* 80071240-8007138C 014C+00 rc=0 efc=0 .text      initList__12dAttention_cFUl                                  */
+/* 80071240-8007138C 014C+00 rc=6 efc=0 rfr=False None .text      initList__12dAttention_cFUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -838,18 +798,18 @@ asm void dAttention_c::initList(u32 field_0) {
 #pragma pop
 
 
-/* 8007138C-800713CC 0040+00 rc=0 efc=0 .text      select_attention__FP10fopAc_ac_cPv                           */
+/* 8007138C-800713CC 0040+00 rc=1 efc=0 rfr=False None .text      select_attention__FP10fopAc_ac_cPv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void select_attention(fopAc_ac_c* field_0, void* field_1) {
+asm static void select_attention(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/d_attention/select_attention__FP10fopAc_ac_cPv.s"
 }
 #pragma pop
 
 
-/* 800713CC-80071424 0058+00 rc=0 efc=0 .text      makeList__12dAttention_cFv                                   */
+/* 800713CC-80071424 0058+00 rc=4 efc=0 rfr=False None .text      makeList__12dAttention_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -860,7 +820,7 @@ asm void dAttention_c::makeList() {
 #pragma pop
 
 
-/* 80071424-80071488 0064+00 rc=0 efc=0 .text      setOwnerAttentionPos__12dAttention_cFv                       */
+/* 80071424-80071488 0064+00 rc=1 efc=0 rfr=False None .text      setOwnerAttentionPos__12dAttention_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -871,7 +831,7 @@ asm void dAttention_c::setOwnerAttentionPos() {
 #pragma pop
 
 
-/* 80071488-8007167C 01F4+00 rc=0 efc=0 .text      SelectAttention__12dAttention_cFP10fopAc_ac_c                */
+/* 80071488-8007167C 01F4+00 rc=1 efc=0 rfr=False None .text      SelectAttention__12dAttention_cFP10fopAc_ac_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -882,7 +842,7 @@ asm void dAttention_c::SelectAttention(fopAc_ac_c* field_0) {
 #pragma pop
 
 
-/* 8007167C-800716B8 003C+00 rc=0 efc=0 .text      __dt__7cSGlobeFv                                             */
+/* 8007167C-800716B8 003C+00 rc=9 efc=9 rfr=False None .text      __dt__7cSGlobeFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -893,7 +853,7 @@ asm cSGlobe::~cSGlobe() {
 #pragma pop
 
 
-/* 800716B8-800718A4 01EC+00 rc=0 efc=0 .text      sortList__12dAttention_cFv                                   */
+/* 800716B8-800718A4 01EC+00 rc=4 efc=0 rfr=False None .text      sortList__12dAttention_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -904,7 +864,7 @@ asm void dAttention_c::sortList() {
 #pragma pop
 
 
-/* 800718A4-80071960 00BC+00 rc=0 efc=0 .text      stockAttention__12dAttention_cFv                             */
+/* 800718A4-80071960 00BC+00 rc=2 efc=0 rfr=False None .text      stockAttention__12dAttention_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -915,7 +875,7 @@ asm void dAttention_c::stockAttention() {
 #pragma pop
 
 
-/* 80071960-80071A68 0108+00 rc=0 efc=0 .text      nextAttention__12dAttention_cFv                              */
+/* 80071960-80071A68 0108+00 rc=2 efc=0 rfr=False None .text      nextAttention__12dAttention_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -926,7 +886,7 @@ asm void dAttention_c::nextAttention() {
 #pragma pop
 
 
-/* 80071A68-80071A98 0030+00 rc=0 efc=0 .text      freeAttention__12dAttention_cFv                              */
+/* 80071A68-80071A98 0030+00 rc=3 efc=0 rfr=False None .text      freeAttention__12dAttention_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -937,7 +897,7 @@ asm void dAttention_c::freeAttention() {
 #pragma pop
 
 
-/* 80071A98-80071CC0 0228+00 rc=0 efc=0 .text      chaseAttention__12dAttention_cFv                             */
+/* 80071A98-80071CC0 0228+00 rc=2 efc=0 rfr=False None .text      chaseAttention__12dAttention_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -948,7 +908,7 @@ asm void dAttention_c::chaseAttention() {
 #pragma pop
 
 
-/* 80071CC0-80071D6C 00AC+00 rc=0 efc=0 .text      EnemyDistance__12dAttention_cFP10fopAc_ac_c                  */
+/* 80071CC0-80071D6C 00AC+00 rc=1 efc=0 rfr=False None .text      EnemyDistance__12dAttention_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -959,11 +919,11 @@ asm void dAttention_c::EnemyDistance(fopAc_ac_c* field_0) {
 #pragma pop
 
 
-/* 80071D6C-80071DEC 0080+00 rc=0 efc=0 .text      sound_attention__FP10fopAc_ac_cPv                            */
+/* 80071D6C-80071DEC 0080+00 rc=1 efc=0 rfr=False None .text      sound_attention__FP10fopAc_ac_cPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sound_attention(fopAc_ac_c* field_0, void* field_1) {
+asm static void sound_attention(fopAc_ac_c* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/d_attention/sound_attention__FP10fopAc_ac_cPv.s"
 }
@@ -971,13 +931,13 @@ asm void sound_attention(fopAc_ac_c* field_0, void* field_1) {
 
 
 /* ############################################################################################## */
-/* 80452698-8045269C 0004+00 rc=0 efc=0 .sdata2    @5137                                                        */
-f32 lit_5137 = 10000.0f;
+/* 80452698-8045269C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5137                                                        */
+SECTION_SDATA2 static f32 lit_5137 = 10000.0f;
 
-/* 8045269C-804526A0 0004+00 rc=0 efc=0 .sdata2    @5138                                                        */
-f32 lit_5138 = 1.0f / 10.0f;
+/* 8045269C-804526A0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5138                                                        */
+SECTION_SDATA2 static f32 lit_5138 = 1.0f / 10.0f;
 
-/* 80071DEC-80071E84 0098+00 rc=0 efc=0 .text      runSoundProc__12dAttention_cFv                               */
+/* 80071DEC-80071E84 0098+00 rc=1 efc=0 rfr=False None .text      runSoundProc__12dAttention_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -988,7 +948,7 @@ asm void dAttention_c::runSoundProc() {
 #pragma pop
 
 
-/* 80071E84-800720F4 0270+00 rc=0 efc=0 .text      runDrawProc__12dAttention_cFv                                */
+/* 80071E84-800720F4 0270+00 rc=1 efc=0 rfr=False None .text      runDrawProc__12dAttention_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -999,13 +959,13 @@ asm void dAttention_c::runDrawProc() {
 #pragma pop
 
 
-/* 800720F4-800720F8 0004+00 rc=0 efc=0 .text      runDebugDisp__12dAttention_cFv                               */
+/* 800720F4-800720F8 0004+00 rc=1 efc=0 rfr=False None .text      runDebugDisp__12dAttention_cFv                               */
 void dAttention_c::runDebugDisp() {
 	/* empty function */
 }
 
 
-/* 800720F8-800722A0 01A8+00 rc=0 efc=0 .text      checkButton__12dAttention_cFv                                */
+/* 800720F8-800722A0 01A8+00 rc=1 efc=0 rfr=False None .text      checkButton__12dAttention_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1016,7 +976,7 @@ asm void dAttention_c::checkButton() {
 #pragma pop
 
 
-/* 800722A0-800722EC 004C+00 rc=0 efc=0 .text      triggerProc__12dAttention_cFv                                */
+/* 800722A0-800722EC 004C+00 rc=2 efc=0 rfr=False None .text      triggerProc__12dAttention_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1027,7 +987,7 @@ asm void dAttention_c::triggerProc() {
 #pragma pop
 
 
-/* 800722EC-80072344 0058+00 rc=0 efc=0 .text      lostCheck__12dAttention_cFv                                  */
+/* 800722EC-80072344 0058+00 rc=2 efc=0 rfr=False None .text      lostCheck__12dAttention_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1038,7 +998,7 @@ asm void dAttention_c::lostCheck() {
 #pragma pop
 
 
-/* 80072344-800725F0 02AC+00 rc=0 efc=0 .text      judgementStatus4Hold__12dAttention_cFv                       */
+/* 80072344-800725F0 02AC+00 rc=1 efc=0 rfr=False None .text      judgementStatus4Hold__12dAttention_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1049,7 +1009,7 @@ asm void dAttention_c::judgementStatus4Hold() {
 #pragma pop
 
 
-/* 800725F0-80072924 0334+00 rc=0 efc=0 .text      judgementStatus4Switch__12dAttention_cFv                     */
+/* 800725F0-80072924 0334+00 rc=1 efc=0 rfr=False None .text      judgementStatus4Switch__12dAttention_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1060,7 +1020,7 @@ asm void dAttention_c::judgementStatus4Switch() {
 #pragma pop
 
 
-/* 80072924-80072BD4 02B0+00 rc=0 efc=0 .text      Run__12dAttention_cFv                                        */
+/* 80072924-80072BD4 02B0+00 rc=1 efc=1 rfr=False None .text      Run__12dAttention_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1071,7 +1031,7 @@ asm void dAttention_c::Run() {
 #pragma pop
 
 
-/* 80072BD4-80072D80 01AC+00 rc=0 efc=0 .text      Draw__12dAttention_cFv                                       */
+/* 80072BD4-80072D80 01AC+00 rc=1 efc=1 rfr=False None .text      Draw__12dAttention_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1082,7 +1042,7 @@ asm void dAttention_c::Draw() {
 #pragma pop
 
 
-/* 80072D80-80072DD8 0058+00 rc=0 efc=0 .text      lockSoundStart__12dAttention_cFUl                            */
+/* 80072D80-80072DD8 0058+00 rc=2 efc=0 rfr=False None .text      lockSoundStart__12dAttention_cFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1093,7 +1053,7 @@ asm void dAttention_c::lockSoundStart(u32 field_0) {
 #pragma pop
 
 
-/* 80072DD8-80072FE8 0210+00 rc=0 efc=0 .text      setAnm__10dAttDraw_cFUcf                                     */
+/* 80072DD8-80072FE8 0210+00 rc=1 efc=0 rfr=False None .text      setAnm__10dAttDraw_cFUcf                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1104,7 +1064,7 @@ asm void dAttDraw_c::setAnm(u8 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 80072FE8-80073004 001C+00 rc=0 efc=0 .text      setAlphaAnm__10dAttDraw_cFUcUc                               */
+/* 80072FE8-80073004 001C+00 rc=1 efc=0 rfr=False None .text      setAlphaAnm__10dAttDraw_cFUcUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1116,17 +1076,17 @@ asm void dAttDraw_c::setAlphaAnm(u8 field_0, u8 field_1) {
 
 
 /* ############################################################################################## */
-/* 804526A0-804526A8 0004+04 rc=0 efc=0 .sdata2    @5668                                                        */
-f32 lit_5668[1 + 1 /* padding */] = {
+/* 804526A0-804526A8 0004+04 rc=1 efc=0 rfr=False None .sdata2    @5668                                                        */
+SECTION_SDATA2 static f32 lit_5668[1 + 1 /* padding */] = {
 	255.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 804526A8-804526B0 0008+00 rc=0 efc=0 .sdata2    @5670                                                        */
-f64 lit_5670 = 4503599627370496.0 /* cast u32 to float */;
+/* 804526A8-804526B0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @5670                                                        */
+SECTION_SDATA2 static f64 lit_5670 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80073004-800732AC 02A8+00 rc=0 efc=0 .text      alphaAnm__10dAttDraw_cFv                                     */
+/* 80073004-800732AC 02A8+00 rc=1 efc=0 rfr=False None .text      alphaAnm__10dAttDraw_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1137,20 +1097,20 @@ asm void dAttDraw_c::alphaAnm() {
 #pragma pop
 
 
-/* 800732AC-800732B0 0004+00 rc=0 efc=0 .text      setTevKColor__11J3DTevBlockFUlPC10J3DGXColor                 */
+/* 800732AC-800732B0 0004+00 rc=3 efc=3 rfr=False None .text      setTevKColor__11J3DTevBlockFUlPC10J3DGXColor                 */
 void J3DTevBlock::setTevKColor(u32 field_0, J3DGXColor const* field_1) {
 	/* empty function */
 }
 
 
 /* ############################################################################################## */
-/* 804526B0-804526B4 0004+00 rc=0 efc=0 .sdata2    @5784                                                        */
-f32 d_d_attention__lit_5784 = 0.01745329238474369f;
+/* 804526B0-804526B4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5784                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_5784 = 0.01745329238474369f;
 
-/* 804526B4-804526B8 0004+00 rc=0 efc=0 .sdata2    @5785                                                        */
-f32 d_d_attention__lit_5785 = -100.0f;
+/* 804526B4-804526B8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5785                                                        */
+SECTION_SDATA2 static f32 d_d_attention__lit_5785 = -100.0f;
 
-/* 800732B0-8007353C 028C+00 rc=0 efc=0 .text      draw__10dAttDraw_cFR4cXyzPA4_f                               */
+/* 800732B0-8007353C 028C+00 rc=1 efc=0 rfr=False None .text      draw__10dAttDraw_cFR4cXyzPA4_f                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1161,7 +1121,7 @@ asm void dAttDraw_c::draw(cXyz& field_0, f32 (* field_1)[4]) {
 #pragma pop
 
 
-/* 8007353C-800735DC 00A0+00 rc=0 efc=0 .text      LockonTarget__12dAttention_cFl                               */
+/* 8007353C-800735DC 00A0+00 rc=21 efc=13 rfr=False None .text      LockonTarget__12dAttention_cFl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1172,7 +1132,7 @@ asm void dAttention_c::LockonTarget(s32 field_0) {
 #pragma pop
 
 
-/* 800735DC-800736CC 00F0+00 rc=0 efc=0 .text      LockonReleaseDistanse__12dAttention_cFv                      */
+/* 800735DC-800736CC 00F0+00 rc=1 efc=1 rfr=False None .text      LockonReleaseDistanse__12dAttention_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1183,7 +1143,7 @@ asm void dAttention_c::LockonReleaseDistanse() {
 #pragma pop
 
 
-/* 800736CC-80073734 0068+00 rc=0 efc=0 .text      LockonTargetPId__12dAttention_cFl                            */
+/* 800736CC-80073734 0068+00 rc=2 efc=0 rfr=False None .text      LockonTargetPId__12dAttention_cFl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1194,7 +1154,7 @@ asm void dAttention_c::LockonTargetPId(s32 field_0) {
 #pragma pop
 
 
-/* 80073734-8007378C 0058+00 rc=0 efc=0 .text      ActionTarget__12dAttention_cFl                               */
+/* 80073734-8007378C 0058+00 rc=3 efc=3 rfr=False None .text      ActionTarget__12dAttention_cFl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1205,7 +1165,7 @@ asm void dAttention_c::ActionTarget(s32 field_0) {
 #pragma pop
 
 
-/* 8007378C-800737E4 0058+00 rc=0 efc=0 .text      CheckObjectTarget__12dAttention_cFl                          */
+/* 8007378C-800737E4 0058+00 rc=3 efc=3 rfr=False None .text      CheckObjectTarget__12dAttention_cFl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1216,7 +1176,7 @@ asm void dAttention_c::CheckObjectTarget(s32 field_0) {
 #pragma pop
 
 
-/* 800737E4-80073838 0054+00 rc=0 efc=0 .text      LockonTruth__12dAttention_cFv                                */
+/* 800737E4-80073838 0054+00 rc=56 efc=53 rfr=False None .text      LockonTruth__12dAttention_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1227,7 +1187,7 @@ asm void dAttention_c::LockonTruth() {
 #pragma pop
 
 
-/* 80073838-80073864 002C+00 rc=0 efc=0 .text      checkDistance__12dAttention_cFP4cXyzsP4cXyzffff              */
+/* 80073838-80073864 002C+00 rc=1 efc=1 rfr=False None .text      checkDistance__12dAttention_cFP4cXyzsP4cXyzffff              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1238,7 +1198,7 @@ asm void dAttention_c::checkDistance(cXyz* field_0, s16 field_1, cXyz* field_2, 
 #pragma pop
 
 
-/* 80073864-80073898 0034+00 rc=0 efc=0 .text      getActor__10dAttList_cFv                                     */
+/* 80073864-80073898 0034+00 rc=14 efc=3 rfr=False None .text      getActor__10dAttList_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1249,7 +1209,7 @@ asm void dAttList_c::getActor() {
 #pragma pop
 
 
-/* 80073898-800738B4 001C+00 rc=0 efc=0 .text      setActor__10dAttList_cFP10fopAc_ac_c                         */
+/* 80073898-800738B4 001C+00 rc=3 efc=0 rfr=False None .text      setActor__10dAttList_cFP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1260,7 +1220,7 @@ asm void dAttList_c::setActor(fopAc_ac_c* field_0) {
 #pragma pop
 
 
-/* 800738B4-800738CC 0018+00 rc=0 efc=0 .text      getPId__10dAttHint_cFPv                                      */
+/* 800738B4-800738CC 0018+00 rc=1 efc=0 rfr=False None .text      getPId__10dAttHint_cFPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1271,7 +1231,7 @@ asm void dAttHint_c::getPId(void* field_0) {
 #pragma pop
 
 
-/* 800738CC-800738FC 0030+00 rc=0 efc=0 .text      convPId__10dAttHint_cFUi                                     */
+/* 800738CC-800738FC 0030+00 rc=1 efc=1 rfr=False None .text      convPId__10dAttHint_cFUi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1282,7 +1242,7 @@ asm void dAttHint_c::convPId(u32 field_0) {
 #pragma pop
 
 
-/* 800738FC-80073958 005C+00 rc=0 efc=0 .text      request__10dAttHint_cFP10fopAc_ac_ci                         */
+/* 800738FC-80073958 005C+00 rc=0 efc=0 rfr=False None .text      request__10dAttHint_cFP10fopAc_ac_ci                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1293,7 +1253,7 @@ asm void dAttHint_c::request(fopAc_ac_c* field_0, int field_1) {
 #pragma pop
 
 
-/* 80073958-80073970 0018+00 rc=0 efc=0 .text      init__10dAttHint_cFv                                         */
+/* 80073958-80073970 0018+00 rc=1 efc=0 rfr=False None .text      init__10dAttHint_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1304,7 +1264,7 @@ asm void dAttHint_c::init() {
 #pragma pop
 
 
-/* 80073970-8007398C 001C+00 rc=0 efc=0 .text      proc__10dAttHint_cFv                                         */
+/* 80073970-8007398C 001C+00 rc=1 efc=0 rfr=False None .text      proc__10dAttHint_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1315,7 +1275,7 @@ asm void dAttHint_c::proc() {
 #pragma pop
 
 
-/* 8007398C-800739BC 0030+00 rc=0 efc=0 .text      convPId__11dAttCatch_cFUi                                    */
+/* 8007398C-800739BC 0030+00 rc=4 efc=4 rfr=False None .text      convPId__11dAttCatch_cFUi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1326,7 +1286,7 @@ asm void dAttCatch_c::convPId(u32 field_0) {
 #pragma pop
 
 
-/* 800739BC-800739DC 0020+00 rc=0 efc=0 .text      init__11dAttCatch_cFv                                        */
+/* 800739BC-800739DC 0020+00 rc=1 efc=0 rfr=False None .text      init__11dAttCatch_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1337,7 +1297,7 @@ asm void dAttCatch_c::init() {
 #pragma pop
 
 
-/* 800739DC-80073A08 002C+00 rc=0 efc=0 .text      proc__11dAttCatch_cFv                                        */
+/* 800739DC-80073A08 002C+00 rc=1 efc=0 rfr=False None .text      proc__11dAttCatch_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1348,7 +1308,7 @@ asm void dAttCatch_c::proc() {
 #pragma pop
 
 
-/* 80073A08-80073CA4 029C+00 rc=0 efc=0 .text      request__11dAttCatch_cFP10fopAc_ac_cUcfffsi                  */
+/* 80073A08-80073CA4 029C+00 rc=0 efc=0 rfr=False None .text      request__11dAttCatch_cFP10fopAc_ac_cUcfffsi                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1359,7 +1319,7 @@ asm void dAttCatch_c::request(fopAc_ac_c* field_0, u8 field_1, f32 field_2, f32 
 #pragma pop
 
 
-/* 80073CA4-80073CD4 0030+00 rc=0 efc=0 .text      convPId__10dAttLook_cFUi                                     */
+/* 80073CA4-80073CD4 0030+00 rc=1 efc=1 rfr=False None .text      convPId__10dAttLook_cFUi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1370,7 +1330,7 @@ asm void dAttLook_c::convPId(u32 field_0) {
 #pragma pop
 
 
-/* 80073CD4-80073CEC 0018+00 rc=0 efc=0 .text      init__10dAttLook_cFv                                         */
+/* 80073CD4-80073CEC 0018+00 rc=1 efc=0 rfr=False None .text      init__10dAttLook_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1381,7 +1341,7 @@ asm void dAttLook_c::init() {
 #pragma pop
 
 
-/* 80073CEC-80073D08 001C+00 rc=0 efc=0 .text      proc__10dAttLook_cFv                                         */
+/* 80073CEC-80073D08 001C+00 rc=1 efc=0 rfr=False None .text      proc__10dAttLook_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1392,7 +1352,7 @@ asm void dAttLook_c::proc() {
 #pragma pop
 
 
-/* 80073D08-80073FC4 02BC+00 rc=0 efc=0 .text      request__10dAttLook_cFP10fopAc_ac_cfffsi                     */
+/* 80073D08-80073FC4 02BC+00 rc=0 efc=0 rfr=False None .text      request__10dAttLook_cFP10fopAc_ac_cfffsi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1403,7 +1363,7 @@ asm void dAttLook_c::request(fopAc_ac_c* field_0, f32 field_1, f32 field_2, f32 
 #pragma pop
 
 
-/* 80073FC4-8007400C 0048+00 rc=0 efc=0 .text      __dt__15dAttDrawParam_cFv                                    */
+/* 80073FC4-8007400C 0048+00 rc=2 efc=0 rfr=False None .text      __dt__15dAttDrawParam_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1414,7 +1374,7 @@ asm dAttDrawParam_c::~dAttDrawParam_c() {
 #pragma pop
 
 
-/* 8007400C-80074048 003C+00 rc=0 efc=0 .text      __sinit_d_attention_cpp                                      */
+/* 8007400C-80074048 003C+00 rc=1 efc=1 rfr=False None .text      __sinit_d_attention_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1426,13 +1386,18 @@ extern "C" asm void __sinit_d_attention_cpp() {
 
 
 /* ############################################################################################## */
-/* 80450680-80450688 0008+00 rc=0 efc=0 .sdata     None                                                         */
-u8 data_80450680[8] = {
+/* 8045067A-8045067E 0004+00 rc=0 efc=0 rfr=False None .sdata     None                                                         */
+SECTION_SDATA u8 pad_8045067A[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80450680-80450688 0008+00 rc=2 efc=2 rfr=False None .sdata     None                                                         */
+SECTION_SDATA u8 data_80450680[8] = {
 	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80450688-80450690 0008+00 rc=0 efc=0 .sdata     None                                                         */
-u8 data_80450688[8] = {
+/* 80450688-80450690 0008+00 rc=1 efc=1 rfr=False None .sdata     None                                                         */
+SECTION_SDATA u8 data_80450688[8] = {
 	0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

@@ -35,7 +35,6 @@ struct JSUPtrList {
 
 extern "C" void __ct__11JKRDisposerFv(); // 1
 extern "C" void __dt__11JKRDisposerFv(); // 1
-SECTION_DATA extern void* const __vt__11JKRDisposer[3 + 1 /* padding */];
 
 // 
 // External References:
@@ -55,16 +54,16 @@ extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803CC0F0-803CC100 000C+04 rc=0 efc=0 .data      __vt__11JKRDisposer                                          */
-void* const __vt__11JKRDisposer[3 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11JKRDisposerFv,
+/* 803CC0F0-803CC100 000C+04 rc=2 efc=0 rfr=False None .data      __vt__11JKRDisposer                                          */
+SECTION_DATA static void* __vt__11JKRDisposer[3 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11JKRDisposerFv,
 	/* padding */
 	NULL,
 };
 
-/* 802D147C-802D14E4 0068+00 rc=0 efc=0 .text      __ct__11JKRDisposerFv                                        */
+/* 802D147C-802D14E4 0068+00 rc=12 efc=12 rfr=False None .text      __ct__11JKRDisposerFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +74,7 @@ asm JKRDisposer::JKRDisposer() {
 #pragma pop
 
 
-/* 802D14E4-802D1568 0084+00 rc=0 efc=0 .text      __dt__11JKRDisposerFv                                        */
+/* 802D14E4-802D1568 0084+00 rc=11 efc=10 rfr=False None .text      __dt__11JKRDisposerFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

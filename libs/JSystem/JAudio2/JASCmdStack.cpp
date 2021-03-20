@@ -39,10 +39,7 @@ extern "C" void execCommandOnce__Q210JASPortCmd9TPortHeadFv(); // 1
 extern "C" void execCommandStay__Q210JASPortCmd9TPortHeadFv(); // 1
 extern "C" void __sinit_JASCmdStack_cpp(); // 1
 extern "C" void __dt__Q210JASPortCmd9TPortHeadFv(); // 1
-SECTION_BSS extern u8 JASCmdStack__lit_80[12];
-SECTION_BSS extern u8 sCommandListOnce__10JASPortCmd[12];
-SECTION_BSS extern u8 JASCmdStack__lit_82[12];
-SECTION_BSS extern u8 sCommandListStay__10JASPortCmd[12];
+extern "C" extern u8 JASCmdStack__lit_82[12];
 
 // 
 // External References:
@@ -70,19 +67,19 @@ extern "C" void _restgpr_29(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80431678-80431684 000C+00 rc=0 efc=0 .bss       @80                                                          */
-u8 JASCmdStack__lit_80[12];
+/* 80431678-80431684 000C+00 rc=1 efc=0 rfr=False None .bss       @80                                                          */
+static u8 JASCmdStack__lit_80[12];
 
-/* 80431684-80431690 000C+00 rc=0 efc=0 .bss       sCommandListOnce__10JASPortCmd                               */
-u8 sCommandListOnce__10JASPortCmd[12];
+/* 80431684-80431690 000C+00 rc=1 efc=0 rfr=False None .bss       sCommandListOnce__10JASPortCmd                               */
+static u8 sCommandListOnce__10JASPortCmd[12];
 
-/* 80431690-8043169C 000C+00 rc=0 efc=0 .bss       @82                                                          */
+/* 80431690-8043169C 000C+00 rc=0 efc=0 rfr=False None .bss       @82                                                          */
 u8 JASCmdStack__lit_82[12];
 
-/* 8043169C-804316A8 000C+00 rc=0 efc=0 .bss       sCommandListStay__10JASPortCmd                               */
-u8 sCommandListStay__10JASPortCmd[12];
+/* 8043169C-804316A8 000C+00 rc=1 efc=0 rfr=False None .bss       sCommandListStay__10JASPortCmd                               */
+static u8 sCommandListStay__10JASPortCmd[12];
 
-/* 80291060-80291094 0034+00 rc=0 efc=0 .text      execAllCommand__10JASPortCmdFv                               */
+/* 80291060-80291094 0034+00 rc=1 efc=1 rfr=False None .text      execAllCommand__10JASPortCmdFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +90,7 @@ asm void JASPortCmd::execAllCommand() {
 #pragma pop
 
 
-/* 80291094-8029110C 0078+00 rc=0 efc=0 .text      execCommandOnce__Q210JASPortCmd9TPortHeadFv                  */
+/* 80291094-8029110C 0078+00 rc=1 efc=0 rfr=False None .text      execCommandOnce__Q210JASPortCmd9TPortHeadFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +101,7 @@ asm void JASPortCmd::TPortHead::execCommandOnce() {
 #pragma pop
 
 
-/* 8029110C-8029116C 0060+00 rc=0 efc=0 .text      execCommandStay__Q210JASPortCmd9TPortHeadFv                  */
+/* 8029110C-8029116C 0060+00 rc=1 efc=0 rfr=False None .text      execCommandStay__Q210JASPortCmd9TPortHeadFv                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,7 +112,7 @@ asm void JASPortCmd::TPortHead::execCommandStay() {
 #pragma pop
 
 
-/* 8029116C-802911D0 0064+00 rc=0 efc=0 .text      __sinit_JASCmdStack_cpp                                      */
+/* 8029116C-802911D0 0064+00 rc=1 efc=1 rfr=False None .text      __sinit_JASCmdStack_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,7 +123,7 @@ extern "C" asm void __sinit_JASCmdStack_cpp() {
 #pragma pop
 
 
-/* 802911D0-80291228 0058+00 rc=0 efc=0 .text      __dt__Q210JASPortCmd9TPortHeadFv                             */
+/* 802911D0-80291228 0058+00 rc=1 efc=0 rfr=False None .text      __dt__Q210JASPortCmd9TPortHeadFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

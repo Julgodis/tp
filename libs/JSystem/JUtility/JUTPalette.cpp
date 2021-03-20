@@ -9,16 +9,16 @@
 // Types:
 // 
 
-struct _GXTlut {
-};
-
-struct ResTLUT {
-};
-
 struct _GXTlutFmt {
 };
 
 struct JUTTransparency {
+};
+
+struct _GXTlut {
+};
+
+struct ResTLUT {
 };
 
 struct JUTPalette {
@@ -35,7 +35,7 @@ struct JUTPalette {
 extern "C" void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT(); // 1
 extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv(); // 1
 extern "C" void load__10JUTPaletteFv(); // 1
-SECTION_RODATA extern const char* const JUTPalette__stringBase0;
+extern "C" extern char const* const JUTPalette__stringBase0;
 
 // 
 // External References:
@@ -58,17 +58,17 @@ extern "C" void _restgpr_29(); // 1
 // 
 
 /* ############################################################################################## */
-/* 8039D360-8039D390 0029+07 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 8039D360-8039D390 0029+07 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_8039D360 = "JUTPalette.cpp";
-const char* const stringBase_8039D36F = "JUTTexture: TLUT is NULL\n";
+SECTION_DEAD static char const* const stringBase_8039D360 = "JUTPalette.cpp";
+SECTION_DEAD static char const* const stringBase_8039D36F = "JUTTexture: TLUT is NULL\n";
 /* @stringBase0 padding */
-char* const pad_8039D389 = "\0\0\0\0\0\0";
+SECTION_DEAD static char const* const pad_8039D389 = "\0\0\0\0\0\0";
 #pragma pop
 
-/* 802DE890-802DE91C 008C+00 rc=0 efc=0 .text      storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT                    */
+/* 802DE890-802DE91C 008C+00 rc=8 efc=8 rfr=False None .text      storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +79,7 @@ asm void JUTPalette::storeTLUT(_GXTlut field_0, ResTLUT* field_1) {
 #pragma pop
 
 
-/* 802DE91C-802DE95C 0040+00 rc=0 efc=0 .text      storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv */
+/* 802DE91C-802DE95C 0040+00 rc=3 efc=3 rfr=False None .text      storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +90,7 @@ asm void JUTPalette::storeTLUT(_GXTlut field_0, _GXTlutFmt field_1, JUTTranspare
 #pragma pop
 
 
-/* 802DE95C-802DE9A0 0044+00 rc=0 efc=0 .text      load__10JUTPaletteFv                                         */
+/* 802DE95C-802DE9A0 0044+00 rc=1 efc=1 rfr=False None .text      load__10JUTPaletteFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

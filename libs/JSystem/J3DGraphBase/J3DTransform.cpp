@@ -22,7 +22,7 @@ struct Vec {
 // Forward References:
 // 
 
-void __MTGQR7(u32); // 2
+static void __MTGQR7(u32); // 2
 void J3DGQRSetup7(u32, u32, u32, u32); // 2
 void J3DCalcBBoardMtx(f32 (* )[4]); // 2
 void J3DCalcYBBoardMtx(f32 (* )[4]); // 2
@@ -38,7 +38,7 @@ void J3DScaleNrmMtx33(f32 (* )[3], Vec const&); // 2
 void J3DMtxProjConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4]); // 2
 void J3DPSMtxArrayConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4], u32); // 2
 
-extern "C" void __MTGQR7__FUl(); // 1
+extern "C" static void __MTGQR7__FUl(); // 1
 extern "C" void J3DGQRSetup7__FUlUlUlUl(); // 1
 extern "C" void J3DCalcBBoardMtx__FPA4_f(); // 1
 extern "C" void J3DCalcYBBoardMtx__FPA4_f(); // 1
@@ -53,15 +53,10 @@ extern "C" void J3DScaleNrmMtx__FPA4_fRC3Vec(); // 1
 extern "C" void J3DScaleNrmMtx33__FPA3_fRC3Vec(); // 1
 extern "C" void J3DMtxProjConcat__FPA4_fPA4_fPA4_f(); // 1
 extern "C" void J3DPSMtxArrayConcat__FPA4_fPA4_fPA4_fUl(); // 1
-SECTION_RODATA extern const u8 j3dDefaultTransformInfo[32];
-SECTION_RODATA extern const u8 j3dDefaultScale[12];
-SECTION_RODATA extern const u8 j3dDefaultMtx[48];
-SECTION_RODATA extern const u8 lit_443[12];
-SECTION_DATA extern u8 PSMulUnit01[8];
-SECTION_SDATA extern u8 J3DTransform__Unit01[8];
-SECTION_SDATA2 extern u8 lit_435[4];
-SECTION_SDATA2 extern f32 J3DTransform__lit_526;
-SECTION_SDATA2 extern f32 lit_557[1 + 1 /* padding */];
+extern "C" extern u8 const j3dDefaultTransformInfo[32];
+extern "C" extern u8 const j3dDefaultScale[12];
+extern "C" extern u8 const j3dDefaultMtx[48];
+extern "C" extern u8 PSMulUnit01[8];
 
 // 
 // External References:
@@ -70,24 +65,24 @@ SECTION_SDATA2 extern f32 lit_557[1 + 1 /* padding */];
 extern "C" void PSVECNormalize(); // 1
 
 extern "C" void PSVECNormalize(); // 1
-SECTION_BSS extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 sincosTable___5JMath[65536];
 
 // 
 // Declarations:
 // 
 
-/* 80311630-80311638 0008+00 rc=0 efc=0 .text      __MTGQR7__FUl                                                */
+/* 80311630-80311638 0008+00 rc=1 efc=0 rfr=False None .text      __MTGQR7__FUl                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void __MTGQR7(u32 field_0) {
+asm static void __MTGQR7(u32 field_0) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTransform/__MTGQR7__FUl.s"
 }
 #pragma pop
 
 
-/* 80311638-80311670 0038+00 rc=0 efc=0 .text      J3DGQRSetup7__FUlUlUlUl                                      */
+/* 80311638-80311670 0038+00 rc=2 efc=2 rfr=False None .text      J3DGQRSetup7__FUlUlUlUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,12 +94,12 @@ asm void J3DGQRSetup7(u32 field_0, u32 field_1, u32 field_2, u32 field_3) {
 
 
 /* ############################################################################################## */
-/* 80456378-8045637C 0004+00 rc=0 efc=0 .sdata2    @435                                                         */
-u8 lit_435[4] = {
+/* 80456378-8045637C 0004+00 rc=6 efc=0 rfr=False None .sdata2    @435                                                         */
+SECTION_SDATA2 static u8 lit_435[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80311670-80311760 00F0+00 rc=0 efc=0 .text      J3DCalcBBoardMtx__FPA4_f                                     */
+/* 80311670-80311760 00F0+00 rc=2 efc=2 rfr=False None .text      J3DCalcBBoardMtx__FPA4_f                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,30 +111,30 @@ asm void J3DCalcBBoardMtx(f32 (* field_0)[4]) {
 
 
 /* ############################################################################################## */
-/* 803A1E30-803A1E50 0020+00 rc=0 efc=0 .rodata    j3dDefaultTransformInfo                                      */
-const u8 j3dDefaultTransformInfo[32] = {
+/* 803A1E30-803A1E50 0020+00 rc=1 efc=1 rfr=False None .rodata    j3dDefaultTransformInfo                                      */
+SECTION_RODATA u8 const j3dDefaultTransformInfo[32] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1E50-803A1E5C 000C+00 rc=0 efc=0 .rodata    j3dDefaultScale                                              */
-const u8 j3dDefaultScale[12] = {
+/* 803A1E50-803A1E5C 000C+00 rc=1 efc=1 rfr=False None .rodata    j3dDefaultScale                                              */
+SECTION_RODATA u8 const j3dDefaultScale[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 803A1E5C-803A1E8C 0030+00 rc=0 efc=0 .rodata    j3dDefaultMtx                                                */
-const u8 j3dDefaultMtx[48] = {
+/* 803A1E5C-803A1E8C 0030+00 rc=8 efc=8 rfr=False None .rodata    j3dDefaultMtx                                                */
+SECTION_RODATA u8 const j3dDefaultMtx[48] = {
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1E8C-803A1E98 000C+00 rc=0 efc=0 .rodata    @443                                                         */
-const u8 lit_443[12] = {
+/* 803A1E8C-803A1E98 000C+00 rc=1 efc=0 rfr=False None .rodata    @443                                                         */
+SECTION_RODATA static u8 const lit_443[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80311760-8031189C 013C+00 rc=0 efc=0 .text      J3DCalcYBBoardMtx__FPA4_f                                    */
+/* 80311760-8031189C 013C+00 rc=2 efc=2 rfr=False None .text      J3DCalcYBBoardMtx__FPA4_f                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -150,7 +145,7 @@ asm void J3DCalcYBBoardMtx(f32 (* field_0)[4]) {
 #pragma pop
 
 
-/* 8031189C-80311964 00C8+00 rc=0 efc=0 .text      J3DPSCalcInverseTranspose__FPA4_fPA3_f                       */
+/* 8031189C-80311964 00C8+00 rc=6 efc=6 rfr=False None .text      J3DPSCalcInverseTranspose__FPA4_fPA3_f                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,7 +156,7 @@ asm void J3DPSCalcInverseTranspose(f32 (* field_0)[4], f32 (* field_1)[3]) {
 #pragma pop
 
 
-/* 80311964-80311A24 00C0+00 rc=0 efc=0 .text      J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f         */
+/* 80311964-80311A24 00C0+00 rc=2 efc=2 rfr=False None .text      J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,7 +167,7 @@ asm void J3DGetTranslateRotateMtx(J3DTransformInfo const& field_0, f32 (* field_
 #pragma pop
 
 
-/* 80311A24-80311ACC 00A8+00 rc=0 efc=0 .text      J3DGetTranslateRotateMtx__FsssfffPA4_f                       */
+/* 80311A24-80311ACC 00A8+00 rc=1 efc=1 rfr=False None .text      J3DGetTranslateRotateMtx__FsssfffPA4_f                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,10 +179,10 @@ asm void J3DGetTranslateRotateMtx(s16 field_0, s16 field_1, s16 field_2, f32 fie
 
 
 /* ############################################################################################## */
-/* 8045637C-80456380 0004+00 rc=0 efc=0 .sdata2    @526                                                         */
-f32 J3DTransform__lit_526 = 1.0f;
+/* 8045637C-80456380 0004+00 rc=4 efc=0 rfr=False None .sdata2    @526                                                         */
+SECTION_SDATA2 static f32 J3DTransform__lit_526 = 1.0f;
 
-/* 80311ACC-80311B80 00B4+00 rc=0 efc=0 .text      J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f          */
+/* 80311ACC-80311B80 00B4+00 rc=3 efc=3 rfr=False None .text      J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +193,7 @@ asm void J3DGetTextureMtx(J3DTextureSRTInfo const& field_0, Vec const& field_1, 
 #pragma pop
 
 
-/* 80311B80-80311C34 00B4+00 rc=0 efc=0 .text      J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f       */
+/* 80311B80-80311C34 00B4+00 rc=3 efc=3 rfr=False None .text      J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,14 +205,14 @@ asm void J3DGetTextureMtxOld(J3DTextureSRTInfo const& field_0, Vec const& field_
 
 
 /* ############################################################################################## */
-/* 80456380-80456388 0004+04 rc=0 efc=0 .sdata2    @557                                                         */
-f32 lit_557[1 + 1 /* padding */] = {
+/* 80456380-80456388 0004+04 rc=2 efc=0 rfr=False None .sdata2    @557                                                         */
+SECTION_SDATA2 static f32 lit_557[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
-/* 80311C34-80311CE4 00B0+00 rc=0 efc=0 .text      J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f            */
+/* 80311C34-80311CE4 00B0+00 rc=3 efc=3 rfr=False None .text      J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,7 +223,7 @@ asm void J3DGetTextureMtxMaya(J3DTextureSRTInfo const& field_0, f32 (* field_1)[
 #pragma pop
 
 
-/* 80311CE4-80311D94 00B0+00 rc=0 efc=0 .text      J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f         */
+/* 80311CE4-80311D94 00B0+00 rc=3 efc=3 rfr=False None .text      J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -239,7 +234,7 @@ asm void J3DGetTextureMtxMayaOld(J3DTextureSRTInfo const& field_0, f32 (* field_
 #pragma pop
 
 
-/* 80311D94-80311DF8 0064+00 rc=0 efc=0 .text      J3DScaleNrmMtx__FPA4_fRC3Vec                                 */
+/* 80311D94-80311DF8 0064+00 rc=2 efc=2 rfr=False None .text      J3DScaleNrmMtx__FPA4_fRC3Vec                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +245,7 @@ asm void J3DScaleNrmMtx(f32 (* field_0)[4], Vec const& field_1) {
 #pragma pop
 
 
-/* 80311DF8-80311E4C 0054+00 rc=0 efc=0 .text      J3DScaleNrmMtx33__FPA3_fRC3Vec                               */
+/* 80311DF8-80311E4C 0054+00 rc=5 efc=5 rfr=False None .text      J3DScaleNrmMtx33__FPA3_fRC3Vec                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -261,7 +256,7 @@ asm void J3DScaleNrmMtx33(f32 (* field_0)[3], Vec const& field_1) {
 #pragma pop
 
 
-/* 80311E4C-80311F70 0124+00 rc=0 efc=0 .text      J3DMtxProjConcat__FPA4_fPA4_fPA4_f                           */
+/* 80311E4C-80311F70 0124+00 rc=3 efc=3 rfr=False None .text      J3DMtxProjConcat__FPA4_fPA4_fPA4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,12 +268,12 @@ asm void J3DMtxProjConcat(f32 (* field_0)[4], f32 (* field_1)[4], f32 (* field_2
 
 
 /* ############################################################################################## */
-/* 80450958-80450960 0008+00 rc=0 efc=0 .sdata     Unit01                                                       */
-u8 J3DTransform__Unit01[8] = {
+/* 80450958-80450960 0008+00 rc=1 efc=0 rfr=False None .sdata     Unit01                                                       */
+SECTION_SDATA static u8 J3DTransform__Unit01[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 80311F70-8031204C 00DC+00 rc=0 efc=0 .text      J3DPSMtxArrayConcat__FPA4_fPA4_fPA4_fUl                      */
+/* 80311F70-8031204C 00DC+00 rc=1 efc=1 rfr=False None .text      J3DPSMtxArrayConcat__FPA4_fPA4_fPA4_fUl                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -290,8 +285,8 @@ asm void J3DPSMtxArrayConcat(f32 (* field_0)[4], f32 (* field_1)[4], f32 (* fiel
 
 
 /* ############################################################################################## */
-/* 803CD8F8-803CD900 0008+00 rc=0 efc=0 .data      PSMulUnit01                                                  */
-u8 PSMulUnit01[8] = {
+/* 803CD8F8-803CD900 0008+00 rc=2 efc=2 rfr=False None .data      PSMulUnit01                                                  */
+SECTION_DATA u8 PSMulUnit01[8] = {
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x80, 0x00, 0x00,
 };
 

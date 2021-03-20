@@ -20,14 +20,14 @@ extern "C" void TRKRestoreExtended1Block(); // 1
 // 
 
 
-SECTION_DATA extern u8 gTRKRestoreFlags[9 + 3 /* padding */];
-SECTION_BSS extern u8 gTRKCPUState[1072];
+extern "C" extern u8 gTRKRestoreFlags[9 + 3 /* padding */];
+extern "C" extern u8 gTRKCPUState[1072];
 
 // 
 // Declarations:
 // 
 
-/* 803711F0-803713A8 01B8+00 rc=0 efc=0 .text      TRKSaveExtended1Block                                        */
+/* 803711F0-803713A8 01B8+00 rc=3 efc=3 rfr=False None .text      TRKSaveExtended1Block                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -38,7 +38,7 @@ extern "C" asm void TRKSaveExtended1Block() {
 #pragma pop
 
 
-/* 803713A8-80371560 01B8+00 rc=0 efc=0 .text      TRKRestoreExtended1Block                                     */
+/* 803713A8-80371560 01B8+00 rc=1 efc=1 rfr=False None .text      TRKRestoreExtended1Block                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -92,6 +92,9 @@ def execute_tasks(process_count: int,
     manager = Manager()
     results = [None] * len(input_tasks)
 
+    if len(input_tasks) == 1:
+        process_count = 0
+
     if process_count == 0:
         output = manager.Queue()
         for i, task in enumerate(input_tasks):

@@ -30,14 +30,13 @@ struct dBgS_PolyPassChk {
 // Forward References:
 // 
 
-extern "C" void func_80077574(); // 1
+extern "C" static void func_80077574(); // 1
 
 extern "C" void __ct__8dBgS_ChkFv(); // 1
 extern "C" void __dt__8dBgS_ChkFv(); // 1
 extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv(); // 1
 extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv(); // 1
-extern "C" void func_80077574(); // 1
-SECTION_DATA extern void* const __vt__8dBgS_Chk[6];
+extern "C" static void func_80077574(); // 1
 
 // 
 // External References:
@@ -56,17 +55,17 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803AB670-803AB688 0018+00 rc=0 efc=0 .data      __vt__8dBgS_Chk                                              */
-void* const __vt__8dBgS_Chk[6] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__8dBgS_ChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80077574,
+/* 803AB670-803AB688 0018+00 rc=2 efc=0 rfr=False None .data      __vt__8dBgS_Chk                                              */
+SECTION_DATA static void* __vt__8dBgS_Chk[6] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__8dBgS_ChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_80077574,
 };
 
-/* 8007749C-800774E8 004C+00 rc=0 efc=0 .text      __ct__8dBgS_ChkFv                                            */
+/* 8007749C-800774E8 004C+00 rc=6 efc=6 rfr=False None .text      __ct__8dBgS_ChkFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +76,7 @@ asm dBgS_Chk::dBgS_Chk() {
 #pragma pop
 
 
-/* 800774E8-80077560 0078+00 rc=0 efc=0 .text      __dt__8dBgS_ChkFv                                            */
+/* 800774E8-80077560 0078+00 rc=8 efc=6 rfr=False None .text      __dt__8dBgS_ChkFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,13 +87,13 @@ asm dBgS_Chk::~dBgS_Chk() {
 #pragma pop
 
 
-/* 80077560-80077564 0004+00 rc=0 efc=0 .text      GetPolyPassChkInfo__8dBgS_ChkFv                              */
+/* 80077560-80077564 0004+00 rc=6 efc=6 rfr=False None .text      GetPolyPassChkInfo__8dBgS_ChkFv                              */
 void dBgS_Chk::GetPolyPassChkInfo() {
 	/* empty function */
 }
 
 
-/* 80077564-80077574 0010+00 rc=0 efc=0 .text      GetGrpPassChkInfo__8dBgS_ChkFv                               */
+/* 80077564-80077574 0010+00 rc=6 efc=6 rfr=False None .text      GetGrpPassChkInfo__8dBgS_ChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,11 +104,11 @@ asm void dBgS_Chk::GetGrpPassChkInfo() {
 #pragma pop
 
 
-/* 80077574-8007757C 0008+00 rc=0 efc=0 .text      @16@__dt__8dBgS_ChkFv                                        */
+/* 80077574-8007757C 0008+00 rc=1 efc=0 rfr=False None .text      @16@__dt__8dBgS_ChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80077574() {
+extern "C" asm static void func_80077574() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_chk/func_80077574.s"
 }

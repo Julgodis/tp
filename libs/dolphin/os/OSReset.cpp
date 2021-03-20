@@ -10,23 +10,20 @@
 // 
 
 extern "C" void OSRegisterResetFunction(); // 1
-extern "C" void __OSCallResetFunctions(); // 1
-extern "C" void Reset(); // 1
-extern "C" void KillThreads(); // 1
+extern "C" static void __OSCallResetFunctions(); // 1
+extern "C" static void Reset(); // 1
+extern "C" static void KillThreads(); // 1
 extern "C" void __OSDoHotReset(); // 1
 extern "C" void OSResetSystem(); // 1
 extern "C" void OSGetResetCode(); // 1
 
 extern "C" void OSRegisterResetFunction(); // 1
-extern "C" void __OSCallResetFunctions(); // 1
-extern "C" void Reset(); // 1
-extern "C" void KillThreads(); // 1
+extern "C" static void __OSCallResetFunctions(); // 1
+extern "C" static void Reset(); // 1
+extern "C" static void KillThreads(); // 1
 extern "C" void __OSDoHotReset(); // 1
 extern "C" void OSResetSystem(); // 1
 extern "C" void OSGetResetCode(); // 1
-SECTION_DATA extern u8 OSReset__lit_153[78 + 2 /* padding */];
-SECTION_SBSS extern u8 ResetFunctionQueue[8];
-SECTION_SBSS extern u8 bootThisDol[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -61,17 +58,17 @@ extern "C" void OSDisableScheduler(); // 1
 extern "C" void OSEnableScheduler(); // 1
 extern "C" void OSCancelThread(); // 1
 extern "C" void __PADDisableRecalibration(); // 1
-SECTION_BSS extern u8 __OSRebootParams[28 + 4 /* padding */];
+extern "C" extern u8 __OSRebootParams[28 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80451690-80451698 0008+00 rc=0 efc=0 .sbss      ResetFunctionQueue                                           */
-u8 ResetFunctionQueue[8];
+/* 80451690-80451698 0008+00 rc=2 efc=0 rfr=False None .sbss      ResetFunctionQueue                                           */
+static u8 ResetFunctionQueue[8];
 
-/* 8033F660-8033F6E4 0084+00 rc=0 efc=0 .text      OSRegisterResetFunction                                      */
+/* 8033F660-8033F6E4 0084+00 rc=5 efc=5 rfr=False None .text      OSRegisterResetFunction                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,40 +79,40 @@ extern "C" asm void OSRegisterResetFunction() {
 #pragma pop
 
 
-/* 8033F6E4-8033F78C 00A8+00 rc=0 efc=0 .text      __OSCallResetFunctions                                       */
+/* 8033F6E4-8033F78C 00A8+00 rc=1 efc=0 rfr=False None .text      __OSCallResetFunctions                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __OSCallResetFunctions() {
+extern "C" asm static void __OSCallResetFunctions() {
 	nofralloc
 #include "asm/dolphin/os/OSReset/__OSCallResetFunctions.s"
 }
 #pragma pop
 
 
-/* 8033F78C-8033F7FC 0070+00 rc=0 efc=0 .text      Reset                                                        */
+/* 8033F78C-8033F7FC 0070+00 rc=2 efc=0 rfr=False None .text      Reset                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void Reset() {
+extern "C" asm static void Reset() {
 	nofralloc
 #include "asm/dolphin/os/OSReset/Reset.s"
 }
 #pragma pop
 
 
-/* 8033F7FC-8033F864 0068+00 rc=0 efc=0 .text      KillThreads                                                  */
+/* 8033F7FC-8033F864 0068+00 rc=1 efc=0 rfr=False None .text      KillThreads                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void KillThreads() {
+extern "C" asm static void KillThreads() {
 	nofralloc
 #include "asm/dolphin/os/OSReset/KillThreads.s"
 }
 #pragma pop
 
 
-/* 8033F864-8033F8AC 0048+00 rc=0 efc=0 .text      __OSDoHotReset                                               */
+/* 8033F864-8033F8AC 0048+00 rc=3 efc=3 rfr=False None .text      __OSDoHotReset                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,8 +124,8 @@ extern "C" asm void __OSDoHotReset() {
 
 
 /* ############################################################################################## */
-/* 803D07E8-803D0838 004E+02 rc=0 efc=0 .data      @153                                                         */
-u8 OSReset__lit_153[78 + 2 /* padding */] = {
+/* 803D07E8-803D0838 004E+02 rc=1 efc=0 rfr=False None .data      @153                                                         */
+SECTION_DATA static u8 OSReset__lit_153[78 + 2 /* padding */] = {
 	0x4F, 0x53, 0x52, 0x65, 0x73, 0x65, 0x74, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6D, 0x28, 0x29, 0x3A,
 	0x20, 0x59, 0x6F, 0x75, 0x20, 0x63, 0x61, 0x6E, 0x27, 0x74, 0x20, 0x73, 0x70, 0x65, 0x63, 0x69,
 	0x66, 0x79, 0x20, 0x54, 0x52, 0x55, 0x45, 0x20, 0x74, 0x6F, 0x20, 0x66, 0x6F, 0x72, 0x63, 0x65,
@@ -138,10 +135,10 @@ u8 OSReset__lit_153[78 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 80451698-804516A0 0004+04 rc=0 efc=0 .sbss      bootThisDol                                                  */
-u8 bootThisDol[4 + 4 /* padding */];
+/* 80451698-804516A0 0004+04 rc=1 efc=0 rfr=False None .sbss      bootThisDol                                                  */
+static u8 bootThisDol[4 + 4 /* padding */];
 
-/* 8033F8AC-8033FAAC 0200+00 rc=0 efc=0 .text      OSResetSystem                                                */
+/* 8033F8AC-8033FAAC 0200+00 rc=5 efc=5 rfr=False None .text      OSResetSystem                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,7 +149,7 @@ extern "C" asm void OSResetSystem() {
 #pragma pop
 
 
-/* 8033FAAC-8033FAE4 0038+00 rc=0 efc=0 .text      OSGetResetCode                                               */
+/* 8033FAAC-8033FAE4 0038+00 rc=3 efc=3 rfr=False None .text      OSGetResetCode                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

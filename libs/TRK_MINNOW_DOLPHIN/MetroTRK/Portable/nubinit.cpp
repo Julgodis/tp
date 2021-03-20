@@ -16,8 +16,6 @@ extern "C" void TRKInitializeNub(); // 1
 extern "C" void TRKNubWelcome(); // 1
 extern "C" void TRKTerminateNub(); // 1
 extern "C" void TRKInitializeNub(); // 1
-SECTION_RODATA extern const u8 MetroTRK_Portable_nubinit__lit_133[27 + 1 /* padding */];
-SECTION_RODATA extern const u8 MetroTRK_Portable_nubinit__lit_154[16 + 4 /* padding */];
 SECTION_BSS extern u8 gTRKBigEndian[4 + 4 /* padding */];
 
 // 
@@ -49,22 +47,22 @@ extern "C" void InitializeProgramEndTrap(); // 1
 extern "C" void TRK_board_display(); // 1
 extern "C" void TRKInitializeIntDrivenUART(); // 1
 extern "C" void MWTRACE(); // 1
-SECTION_SBSS extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
+extern "C" extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803A2688-803A26A4 001B+01 rc=0 efc=0 .rodata    @133                                                         */
-const u8 MetroTRK_Portable_nubinit__lit_133[27 + 1 /* padding */] = {
+/* 803A2688-803A26A4 001B+01 rc=1 efc=0 rfr=False None .rodata    @133                                                         */
+SECTION_RODATA static u8 const MetroTRK_Portable_nubinit__lit_133[27 + 1 /* padding */] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x47, 0x41, 0x4D,
 	0x45, 0x43, 0x55, 0x42, 0x45, 0x20, 0x76, 0x32, 0x2E, 0x36, 0x00,
 	/* padding */
 	0x00,
 };
 
-/* 8036CE40-8036CE68 0028+00 rc=0 efc=0 .text      TRKNubWelcome                                                */
+/* 8036CE40-8036CE68 0028+00 rc=1 efc=1 rfr=False None .text      TRKNubWelcome                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +73,7 @@ extern "C" asm void TRKNubWelcome() {
 #pragma pop
 
 
-/* 8036CE68-8036CE8C 0024+00 rc=0 efc=0 .text      TRKTerminateNub                                              */
+/* 8036CE68-8036CE8C 0024+00 rc=1 efc=1 rfr=False None .text      TRKTerminateNub                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,17 +85,17 @@ extern "C" asm void TRKTerminateNub() {
 
 
 /* ############################################################################################## */
-/* 803A26A4-803A26B8 0010+04 rc=0 efc=0 .rodata    @154                                                         */
-const u8 MetroTRK_Portable_nubinit__lit_154[16 + 4 /* padding */] = {
+/* 803A26A4-803A26B8 0010+04 rc=1 efc=0 rfr=False None .rodata    @154                                                         */
+SECTION_RODATA static u8 const MetroTRK_Portable_nubinit__lit_154[16 + 4 /* padding */] = {
 	0x49, 0x6E, 0x69, 0x74, 0x69, 0x61, 0x6C, 0x69, 0x7A, 0x65, 0x20, 0x4E, 0x55, 0x42, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8044D8B8-8044D8C0 0004+04 rc=0 efc=0 .bss       gTRKBigEndian                                                */
+/* 8044D8B8-8044D8C0 0004+04 rc=5 efc=4 rfr=False .bss .bss       gTRKBigEndian                                                */
 u8 gTRKBigEndian[4 + 4 /* padding */];
 
-/* 8036CE8C-8036CFD8 014C+00 rc=0 efc=0 .text      TRKInitializeNub                                             */
+/* 8036CE8C-8036CFD8 014C+00 rc=1 efc=1 rfr=False None .text      TRKInitializeNub                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

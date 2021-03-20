@@ -20,7 +20,6 @@ extern "C" void TRKConstructEvent(); // 1
 extern "C" void TRKPostEvent(); // 1
 extern "C" void TRKGetNextEvent(); // 1
 extern "C" void TRKInitializeEventQueue(); // 1
-SECTION_BSS extern u8 gTRKEventQueue[40];
 
 // 
 // External References:
@@ -42,7 +41,7 @@ extern "C" bool TRKInitializeMutex(); // 1
 // Declarations:
 // 
 
-/* 8036CC18-8036CC3C 0024+00 rc=0 efc=0 .text      TRKDestructEvent                                             */
+/* 8036CC18-8036CC3C 0024+00 rc=1 efc=1 rfr=False None .text      TRKDestructEvent                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,7 +52,7 @@ extern "C" asm void TRKDestructEvent() {
 #pragma pop
 
 
-/* 8036CC3C-8036CC54 0018+00 rc=0 efc=0 .text      TRKConstructEvent                                            */
+/* 8036CC3C-8036CC54 0018+00 rc=5 efc=5 rfr=False None .text      TRKConstructEvent                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,10 +64,10 @@ extern "C" asm void TRKConstructEvent() {
 
 
 /* ############################################################################################## */
-/* 8044D890-8044D8B8 0028+00 rc=0 efc=0 .bss       gTRKEventQueue                                               */
-u8 gTRKEventQueue[40];
+/* 8044D890-8044D8B8 0028+00 rc=3 efc=0 rfr=False None .bss       gTRKEventQueue                                               */
+static u8 gTRKEventQueue[40];
 
-/* 8036CC54-8036CD34 00E0+00 rc=0 efc=0 .text      TRKPostEvent                                                 */
+/* 8036CC54-8036CD34 00E0+00 rc=5 efc=5 rfr=False None .text      TRKPostEvent                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +78,7 @@ extern "C" asm void TRKPostEvent() {
 #pragma pop
 
 
-/* 8036CD34-8036CDE8 00B4+00 rc=0 efc=0 .text      TRKGetNextEvent                                              */
+/* 8036CD34-8036CDE8 00B4+00 rc=1 efc=1 rfr=False None .text      TRKGetNextEvent                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +89,7 @@ extern "C" asm void TRKGetNextEvent() {
 #pragma pop
 
 
-/* 8036CDE8-8036CE40 0058+00 rc=0 efc=0 .text      TRKInitializeEventQueue                                      */
+/* 8036CDE8-8036CE40 0058+00 rc=1 efc=1 rfr=False None .text      TRKInitializeEventQueue                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

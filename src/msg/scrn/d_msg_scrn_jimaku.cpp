@@ -48,18 +48,18 @@ struct dMsgScrnLight_c {
 	/* 80245934 */ dMsgScrnLight_c(u8, u8);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct CPaneMgr {
@@ -96,11 +96,7 @@ extern "C" void fukiAlpha__16dMsgScrnJimaku_cFf(); // 1
 extern "C" void fukiScale__16dMsgScrnJimaku_cFf(); // 1
 extern "C" void fukiTrans__16dMsgScrnJimaku_cFff(); // 1
 extern "C" void fontAlpha__16dMsgScrnJimaku_cFf(); // 1
-SECTION_RODATA extern const char* const msg_scrn_d_msg_scrn_jimaku__stringBase0;
-SECTION_DATA extern void* const __vt__16dMsgScrnJimaku_c[22];
-SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_jimaku__lit_3941[4];
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_jimaku__lit_3942;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_jimaku__lit_4021[1 + 1 /* padding */];
+extern "C" extern char const* const msg_scrn_d_msg_scrn_jimaku__stringBase0;
 
 // 
 // External References:
@@ -165,59 +161,59 @@ extern "C" void _restgpr_23(); // 1
 extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_MsgObject_HIO_c[1040];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80399A80-80399AA0 001F+01 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 80399A80-80399AA0 001F+01 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_80399A80 = "zelda_jimaku_message_text.blo";
-const char* const stringBase_80399A9E = "";
+SECTION_DEAD static char const* const stringBase_80399A80 = "zelda_jimaku_message_text.blo";
+SECTION_DEAD static char const* const stringBase_80399A9E = "";
 /* @stringBase0 padding */
-char* const pad_80399A9F = "";
+SECTION_DEAD static char const* const pad_80399A9F = "";
 #pragma pop
 
-/* 803C11E8-803C1240 0058+00 rc=0 efc=0 .data      __vt__16dMsgScrnJimaku_c                                     */
-void* const __vt__16dMsgScrnJimaku_c[22] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)draw__14dMsgScrnBase_cFv,
-	(void*)__dt__16dMsgScrnJimaku_cFv,
-	(void*)exec__16dMsgScrnJimaku_cFv,
-	(void*)multiDraw__14dMsgScrnBase_cFv,
-	(void*)drawSelf__16dMsgScrnJimaku_cFv,
-	(void*)setSelectString__14dMsgScrnBase_cFPcPcPc,
-	(void*)setSelectRubyString__14dMsgScrnBase_cFPcPcPc,
-	(void*)arwAnimeInit__14dMsgScrnBase_cFv,
-	(void*)arwAnimeMove__14dMsgScrnBase_cFv,
-	(void*)dotAnimeInit__14dMsgScrnBase_cFv,
-	(void*)dotAnimeMove__14dMsgScrnBase_cFv,
-	(void*)isSelect__14dMsgScrnBase_cFv,
-	(void*)selectAnimeInit__14dMsgScrnBase_cFUcUcfUc,
-	(void*)selectAnimeMove__14dMsgScrnBase_cFUcUcb,
-	(void*)selectAnimeEnd__14dMsgScrnBase_cFv,
-	(void*)fukiScale__16dMsgScrnJimaku_cFf,
-	(void*)fukiTrans__16dMsgScrnJimaku_cFff,
-	(void*)fukiAlpha__16dMsgScrnJimaku_cFf,
-	(void*)fontAlpha__16dMsgScrnJimaku_cFf,
-	(void*)fukiPosCalc__14dMsgScrnBase_cFUc,
+/* 803C11E8-803C1240 0058+00 rc=2 efc=0 rfr=False None .data      __vt__16dMsgScrnJimaku_c                                     */
+SECTION_DATA static void* __vt__16dMsgScrnJimaku_c[22] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)draw__14dMsgScrnBase_cFv,
+	/* 3    */ (void*)__dt__16dMsgScrnJimaku_cFv,
+	/* 4    */ (void*)exec__16dMsgScrnJimaku_cFv,
+	/* 5    */ (void*)multiDraw__14dMsgScrnBase_cFv,
+	/* 6    */ (void*)drawSelf__16dMsgScrnJimaku_cFv,
+	/* 7    */ (void*)setSelectString__14dMsgScrnBase_cFPcPcPc,
+	/* 8    */ (void*)setSelectRubyString__14dMsgScrnBase_cFPcPcPc,
+	/* 9    */ (void*)arwAnimeInit__14dMsgScrnBase_cFv,
+	/* 10   */ (void*)arwAnimeMove__14dMsgScrnBase_cFv,
+	/* 11   */ (void*)dotAnimeInit__14dMsgScrnBase_cFv,
+	/* 12   */ (void*)dotAnimeMove__14dMsgScrnBase_cFv,
+	/* 13   */ (void*)isSelect__14dMsgScrnBase_cFv,
+	/* 14   */ (void*)selectAnimeInit__14dMsgScrnBase_cFUcUcfUc,
+	/* 15   */ (void*)selectAnimeMove__14dMsgScrnBase_cFUcUcb,
+	/* 16   */ (void*)selectAnimeEnd__14dMsgScrnBase_cFv,
+	/* 17   */ (void*)fukiScale__16dMsgScrnJimaku_cFf,
+	/* 18   */ (void*)fukiTrans__16dMsgScrnJimaku_cFff,
+	/* 19   */ (void*)fukiAlpha__16dMsgScrnJimaku_cFf,
+	/* 20   */ (void*)fontAlpha__16dMsgScrnJimaku_cFf,
+	/* 21   */ (void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
 
-/* 80454CB0-80454CB4 0004+00 rc=0 efc=0 .sdata2    @3941                                                        */
-u8 msg_scrn_d_msg_scrn_jimaku__lit_3941[4] = {
+/* 80454CB0-80454CB4 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3941                                                        */
+SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_jimaku__lit_3941[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454CB4-80454CB8 0004+00 rc=0 efc=0 .sdata2    @3942                                                        */
-f32 msg_scrn_d_msg_scrn_jimaku__lit_3942 = 6.0f / 5.0f;
+/* 80454CB4-80454CB8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3942                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_jimaku__lit_3942 = 6.0f / 5.0f;
 
-/* 80244558-80244A74 051C+00 rc=0 efc=0 .text      __ct__16dMsgScrnJimaku_cFUcP10JKRExpHeap                     */
+/* 80244558-80244A74 051C+00 rc=1 efc=1 rfr=False None .text      __ct__16dMsgScrnJimaku_cFUcP10JKRExpHeap                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,7 +224,7 @@ asm dMsgScrnJimaku_c::dMsgScrnJimaku_c(u8 field_0, JKRExpHeap* field_1) {
 #pragma pop
 
 
-/* 80244A74-80244C2C 01B8+00 rc=0 efc=0 .text      __dt__16dMsgScrnJimaku_cFv                                   */
+/* 80244A74-80244C2C 01B8+00 rc=1 efc=0 rfr=False None .text      __dt__16dMsgScrnJimaku_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,14 +236,14 @@ asm dMsgScrnJimaku_c::~dMsgScrnJimaku_c() {
 
 
 /* ############################################################################################## */
-/* 80454CB8-80454CC0 0004+04 rc=0 efc=0 .sdata2    @4021                                                        */
-f32 msg_scrn_d_msg_scrn_jimaku__lit_4021[1 + 1 /* padding */] = {
+/* 80454CB8-80454CC0 0004+04 rc=2 efc=0 rfr=False None .sdata2    @4021                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_jimaku__lit_4021[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80244C2C-80244D34 0108+00 rc=0 efc=0 .text      exec__16dMsgScrnJimaku_cFv                                   */
+/* 80244C2C-80244D34 0108+00 rc=1 efc=0 rfr=False None .text      exec__16dMsgScrnJimaku_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +254,7 @@ asm void dMsgScrnJimaku_c::exec() {
 #pragma pop
 
 
-/* 80244D34-80244D8C 0058+00 rc=0 efc=0 .text      drawSelf__16dMsgScrnJimaku_cFv                               */
+/* 80244D34-80244D8C 0058+00 rc=1 efc=0 rfr=False None .text      drawSelf__16dMsgScrnJimaku_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +265,7 @@ asm void dMsgScrnJimaku_c::drawSelf() {
 #pragma pop
 
 
-/* 80244D8C-80244E2C 00A0+00 rc=0 efc=0 .text      fukiAlpha__16dMsgScrnJimaku_cFf                              */
+/* 80244D8C-80244E2C 00A0+00 rc=1 efc=0 rfr=False None .text      fukiAlpha__16dMsgScrnJimaku_cFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,19 +276,19 @@ asm void dMsgScrnJimaku_c::fukiAlpha(f32 field_0) {
 #pragma pop
 
 
-/* 80244E2C-80244E30 0004+00 rc=0 efc=0 .text      fukiScale__16dMsgScrnJimaku_cFf                              */
+/* 80244E2C-80244E30 0004+00 rc=1 efc=0 rfr=False None .text      fukiScale__16dMsgScrnJimaku_cFf                              */
 void dMsgScrnJimaku_c::fukiScale(f32 field_0) {
 	/* empty function */
 }
 
 
-/* 80244E30-80244E34 0004+00 rc=0 efc=0 .text      fukiTrans__16dMsgScrnJimaku_cFff                             */
+/* 80244E30-80244E34 0004+00 rc=1 efc=0 rfr=False None .text      fukiTrans__16dMsgScrnJimaku_cFff                             */
 void dMsgScrnJimaku_c::fukiTrans(f32 field_0, f32 field_1) {
 	/* empty function */
 }
 
 
-/* 80244E34-80244E38 0004+00 rc=0 efc=0 .text      fontAlpha__16dMsgScrnJimaku_cFf                              */
+/* 80244E34-80244E38 0004+00 rc=1 efc=0 rfr=False None .text      fontAlpha__16dMsgScrnJimaku_cFf                              */
 void dMsgScrnJimaku_c::fontAlpha(f32 field_0) {
 	/* empty function */
 }

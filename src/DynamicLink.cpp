@@ -85,7 +85,7 @@ struct JKRDvdRipper {
 // Forward References:
 // 
 
-void calcSum2(u16 const*, u32); // 2
+static void calcSum2(u16 const*, u32); // 2
 extern "C" void ModuleProlog(); // 1
 extern "C" void ModuleEpilog(); // 1
 extern "C" void ModuleUnresolved(); // 1
@@ -103,7 +103,7 @@ extern "C" void __ct__20DynamicModuleControlFPCc(); // 1
 extern "C" void mountCallback__20DynamicModuleControlFPv(); // 1
 extern "C" void initialize__20DynamicModuleControlFv(); // 1
 extern "C" void callback__20DynamicModuleControlFPv(); // 1
-extern "C" void calcSum2__FPCUsUl(); // 1
+extern "C" static void calcSum2__FPCUsUl(); // 1
 extern "C" void do_load__20DynamicModuleControlFv(); // 1
 extern "C" void do_load_async__20DynamicModuleControlFv(); // 1
 extern "C" void do_unload__20DynamicModuleControlFv(); // 1
@@ -126,17 +126,8 @@ extern "C" void dump2__24DynamicModuleControlBaseFv(); // 1
 extern "C" void getModuleTypeString__24DynamicModuleControlBaseCFv(); // 1
 extern "C" bool getModuleSize__24DynamicModuleControlBaseCFv(); // 1
 extern "C" void getModuleName__20DynamicModuleControlCFv(); // 1
-SECTION_RODATA extern const char* const DynamicLink__stringBase0;
-SECTION_DATA extern u8 data_803C34B0[16];
-SECTION_DATA extern void* const __vt__20DynamicModuleControl[13];
-SECTION_DATA extern void* const __vt__24DynamicModuleControlBase[13];
-SECTION_SBSS extern u8 mFirst__24DynamicModuleControlBase[4];
-SECTION_SBSS extern u8 mLast__24DynamicModuleControlBase[4];
-SECTION_SBSS extern u8 sAllocBytes__20DynamicModuleControl[4];
-SECTION_SBSS extern u8 sArchive__20DynamicModuleControl[4];
-SECTION_SBSS extern u8 sFileCache__20DynamicModuleControl[4 + 4 /* padding */];
-SECTION_SDATA2 extern f32 DynamicLink__lit_3772[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 DynamicLink__lit_3774;
+extern "C" extern char const* const DynamicLink__stringBase0;
+extern "C" extern void* __vt__20DynamicModuleControl[13];
 
 // 
 // External References:
@@ -198,52 +189,106 @@ extern "C" void snprintf(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C34B0-803C34C0 0010+00 rc=0 efc=0 .data      strings$4165                                                 */
-u8 data_803C34B0[16] = {
-	0x80, 0x39, 0xA7, 0x5E, 0x80, 0x39, 0xA7, 0x63, 0x80, 0x39, 0xA7, 0x67, 0x80, 0x39, 0xA7, 0x6C,
+/* 8039A4A0-8039A7E8 0344+04 rc=11 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD static char const* const stringBase_8039A4A0 = 
+    "%08x DynamicModuleControlBase::unlink() mLinkCou"
+    "nt id already zero.\n";
+SECTION_DEAD static char const* const stringBase_8039A4E5 = 
+    "\nDynamicModuleControlBase::dump()\n";
+SECTION_DEAD static char const* const stringBase_8039A508 = "Do  Lnk Size      Name\n";
+SECTION_DEAD static char const* const stringBase_8039A520 = "(Null)";
+SECTION_DEAD static char const* const stringBase_8039A527 = "%3d%3d%5.1f %05x %-4s %-24s ";
+SECTION_DEAD static char const* const stringBase_8039A544 = "%3d%3d ???? ????? %-4s %-24s ";
+SECTION_DEAD static char const* const stringBase_8039A562 = "\n";
+SECTION_DEAD static char const* const stringBase_8039A564 = "TotalSize %6.2f %06x\n\n";
+SECTION_DEAD static char const* const stringBase_8039A57B = "Base";
+SECTION_DEAD static char const* const stringBase_8039A580 = "/rel/Final/Release";
+SECTION_DEAD static char const* const stringBase_8039A593 = "RELS.arc";
+SECTION_DEAD static char const* const stringBase_8039A59C = 
+    "マウント失敗ですが単にアーカイブを作ってないだけなら遅いだけです %s\n";
+SECTION_DEAD static char const* const stringBase_8039A5E1 = "%s.rel";
+SECTION_DEAD static char const* const stringBase_8039A5E8 = "/rel/Final/Release/%s.rel";
+// MWCC ignores mapping of some japanese characters using the 
+// byte 0x5C (ASCII '\'). This is why this string is hex-encoded.
+SECTION_DEAD static char const* const stringBase_8039A602 = 
+    "\x44\x79\x6E\x61\x6D\x69\x63\x4D\x6F\x64\x75\x6C\x65\x43\x6F\x6E\x74\x72\x6F\x6C\x3A\x3A\x64\x6F\x5F\x6C\x6F\x61\x64\x28\x29\x20\x83\x8A\x83\x5C\x81\x5B\x83\x58\x93\xC7\x82\xDD\x8D\x9E\x82\xDD"
+    "\x8E\xB8\x94\x73\x20\x5B\x25\x73\x5D\x0A";
+SECTION_DEAD static char const* const stringBase_8039A63D = 
+    "DynamicModuleControl::do_load() チェックサムエラー %04x %"
+    "04x[%s]\n";
+SECTION_DEAD static char const* const stringBase_8039A67F = 
+    "DynamicModuleControl::do_load_async() 非同期読み込みコール"
+    "バック登録失敗 [%s]\n";
+SECTION_DEAD static char const* const stringBase_8039A6CE = "%08x-%08x %08x %08x";
+SECTION_DEAD static char const* const stringBase_8039A6E2 = "BSSメモリ確保失敗\n";
+SECTION_DEAD static char const* const stringBase_8039A6F5 = "リンク失敗\n";
+SECTION_DEAD static char const* const stringBase_8039A701 = "モジュールリサイズ(縮小)失敗\n";
+SECTION_DEAD static char const* const stringBase_8039A71F = "BSSメモリ確保失敗 [%x]\n";
+SECTION_DEAD static char const* const stringBase_8039A737 = "アンリンク失敗 mModule=%08x mBss=%08x\n";
+SECTION_DEAD static char const* const stringBase_8039A75E = "????";
+SECTION_DEAD static char const* const stringBase_8039A763 = "MEM";
+SECTION_DEAD static char const* const stringBase_8039A767 = "ARAM";
+SECTION_DEAD static char const* const stringBase_8039A76C = "DVD";
+SECTION_DEAD static char const* const stringBase_8039A770 = "\nError: リンクされていない関数が呼び出されました.\n";
+SECTION_DEAD static char const* const stringBase_8039A7A3 = 
+    "Address:      Back Chain    LR Save\n";
+SECTION_DEAD static char const* const stringBase_8039A7C8 = "0x%08x:   0x%08x    0x%08x\n";
+/* @stringBase0 padding */
+SECTION_DEAD static char const* const pad_8039A7E4 = "\0\0\0";
+#pragma pop
+
+/* 803C34B0-803C34C0 0010+00 rc=1 efc=0 rfr=False None .data      strings$4165                                                 */
+SECTION_DATA static void* data_803C34B0[4] = {
+	/* 0    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2BE),
+	/* 1    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2C3),
+	/* 2    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2C7),
+	/* 3    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2CC),
 };
 
-/* 803C34C0-803C34F4 0034+00 rc=0 efc=0 .data      __vt__20DynamicModuleControl                                 */
-void* const __vt__20DynamicModuleControl[13] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__20DynamicModuleControlFv,
-	(void*)getModuleName__20DynamicModuleControlCFv,
-	(void*)getModuleSize__20DynamicModuleControlCFv,
-	(void*)getModuleTypeString__20DynamicModuleControlCFv,
-	(void*)dump__24DynamicModuleControlBaseFv,
-	(void*)dump2__20DynamicModuleControlFv,
-	(void*)do_load__20DynamicModuleControlFv,
-	(void*)do_load_async__20DynamicModuleControlFv,
-	(void*)do_unload__20DynamicModuleControlFv,
-	(void*)do_link__20DynamicModuleControlFv,
-	(void*)do_unlink__20DynamicModuleControlFv,
+/* 803C34C0-803C34F4 0034+00 rc=3 efc=2 rfr=False None .data      __vt__20DynamicModuleControl                                 */
+SECTION_DATA void* __vt__20DynamicModuleControl[13] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__20DynamicModuleControlFv,
+	/* 3    */ (void*)getModuleName__20DynamicModuleControlCFv,
+	/* 4    */ (void*)getModuleSize__20DynamicModuleControlCFv,
+	/* 5    */ (void*)getModuleTypeString__20DynamicModuleControlCFv,
+	/* 6    */ (void*)dump__24DynamicModuleControlBaseFv,
+	/* 7    */ (void*)dump2__20DynamicModuleControlFv,
+	/* 8    */ (void*)do_load__20DynamicModuleControlFv,
+	/* 9    */ (void*)do_load_async__20DynamicModuleControlFv,
+	/* 10   */ (void*)do_unload__20DynamicModuleControlFv,
+	/* 11   */ (void*)do_link__20DynamicModuleControlFv,
+	/* 12   */ (void*)do_unlink__20DynamicModuleControlFv,
 };
 
-/* 803C34F4-803C3528 0034+00 rc=0 efc=0 .data      __vt__24DynamicModuleControlBase                             */
-void* const __vt__24DynamicModuleControlBase[13] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__24DynamicModuleControlBaseFv,
-	(void*)getModuleName__24DynamicModuleControlBaseCFv,
-	(void*)getModuleSize__24DynamicModuleControlBaseCFv,
-	(void*)getModuleTypeString__24DynamicModuleControlBaseCFv,
-	(void*)dump__24DynamicModuleControlBaseFv,
-	(void*)dump2__24DynamicModuleControlBaseFv,
-	(void*)do_load__24DynamicModuleControlBaseFv,
-	(void*)do_load_async__24DynamicModuleControlBaseFv,
-	(void*)do_unload__24DynamicModuleControlBaseFv,
-	(void*)do_link__24DynamicModuleControlBaseFv,
-	(void*)do_unlink__24DynamicModuleControlBaseFv,
+/* 803C34F4-803C3528 0034+00 rc=2 efc=0 rfr=False None .data      __vt__24DynamicModuleControlBase                             */
+SECTION_DATA static void* __vt__24DynamicModuleControlBase[13] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__24DynamicModuleControlBaseFv,
+	/* 3    */ (void*)getModuleName__24DynamicModuleControlBaseCFv,
+	/* 4    */ (void*)getModuleSize__24DynamicModuleControlBaseCFv,
+	/* 5    */ (void*)getModuleTypeString__24DynamicModuleControlBaseCFv,
+	/* 6    */ (void*)dump__24DynamicModuleControlBaseFv,
+	/* 7    */ (void*)dump2__24DynamicModuleControlBaseFv,
+	/* 8    */ (void*)do_load__24DynamicModuleControlBaseFv,
+	/* 9    */ (void*)do_load_async__24DynamicModuleControlBaseFv,
+	/* 10   */ (void*)do_unload__24DynamicModuleControlBaseFv,
+	/* 11   */ (void*)do_link__24DynamicModuleControlBaseFv,
+	/* 12   */ (void*)do_unlink__24DynamicModuleControlBaseFv,
 };
 
-/* 80451138-8045113C 0004+00 rc=0 efc=0 .sbss      mFirst__24DynamicModuleControlBase                           */
-u8 mFirst__24DynamicModuleControlBase[4];
+/* 80451138-8045113C 0004+00 rc=3 efc=0 rfr=False None .sbss      mFirst__24DynamicModuleControlBase                           */
+static u8 mFirst__24DynamicModuleControlBase[4];
 
-/* 8045113C-80451140 0004+00 rc=0 efc=0 .sbss      mLast__24DynamicModuleControlBase                            */
-u8 mLast__24DynamicModuleControlBase[4];
+/* 8045113C-80451140 0004+00 rc=2 efc=0 rfr=False None .sbss      mLast__24DynamicModuleControlBase                            */
+static u8 mLast__24DynamicModuleControlBase[4];
 
-/* 802621CC-80262284 00B8+00 rc=0 efc=0 .text      __dt__24DynamicModuleControlBaseFv                           */
+/* 802621CC-80262284 00B8+00 rc=3 efc=2 rfr=False None .text      __dt__24DynamicModuleControlBaseFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,7 +299,7 @@ asm DynamicModuleControlBase::~DynamicModuleControlBase() {
 #pragma pop
 
 
-/* 80262284-802622D0 004C+00 rc=0 efc=0 .text      __ct__24DynamicModuleControlBaseFv                           */
+/* 80262284-802622D0 004C+00 rc=1 efc=0 rfr=False None .text      __ct__24DynamicModuleControlBaseFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -265,7 +310,7 @@ asm DynamicModuleControlBase::DynamicModuleControlBase() {
 #pragma pop
 
 
-/* 802622D0-80262364 0094+00 rc=0 efc=0 .text      link__24DynamicModuleControlBaseFv                           */
+/* 802622D0-80262364 0094+00 rc=2 efc=2 rfr=False None .text      link__24DynamicModuleControlBaseFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -276,59 +321,7 @@ asm void DynamicModuleControlBase::link() {
 #pragma pop
 
 
-/* ############################################################################################## */
-/* 8039A4A0-8039A7E8 0344+04 rc=0 efc=0 .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-const char* const stringBase_8039A4A0 = 
-    "%08x DynamicModuleControlBase::unlink() mLinkCou"
-    "nt id already zero.\n";
-const char* const stringBase_8039A4E5 = 
-    "\nDynamicModuleControlBase::dump()\n";
-const char* const stringBase_8039A508 = "Do  Lnk Size      Name\n";
-const char* const stringBase_8039A520 = "(Null)";
-const char* const stringBase_8039A527 = "%3d%3d%5.1f %05x %-4s %-24s ";
-const char* const stringBase_8039A544 = "%3d%3d ???? ????? %-4s %-24s ";
-const char* const stringBase_8039A562 = "\n";
-const char* const stringBase_8039A564 = "TotalSize %6.2f %06x\n\n";
-const char* const stringBase_8039A57B = "Base";
-const char* const stringBase_8039A580 = "/rel/Final/Release";
-const char* const stringBase_8039A593 = "RELS.arc";
-const char* const stringBase_8039A59C = 
-    "マウント失敗ですが単にアーカイブを作ってないだけなら遅いだけです %s\n";
-const char* const stringBase_8039A5E1 = "%s.rel";
-const char* const stringBase_8039A5E8 = "/rel/Final/Release/%s.rel";
-// MWCC ignores mapping of some japanese characters using the 
-// byte 0x5C (ASCII '\'). This is why this string is hex-encoded.
-const char* const stringBase_8039A602 = 
-    "\x44\x79\x6E\x61\x6D\x69\x63\x4D\x6F\x64\x75\x6C\x65\x43\x6F\x6E\x74\x72\x6F\x6C\x3A\x3A\x64\x6F\x5F\x6C\x6F\x61\x64\x28\x29\x20\x83\x8A\x83\x5C\x81\x5B\x83\x58\x93\xC7\x82\xDD\x8D\x9E\x82\xDD"
-    "\x8E\xB8\x94\x73\x20\x5B\x25\x73\x5D\x0A";
-const char* const stringBase_8039A63D = 
-    "DynamicModuleControl::do_load() チェックサムエラー %04x %"
-    "04x[%s]\n";
-const char* const stringBase_8039A67F = 
-    "DynamicModuleControl::do_load_async() 非同期読み込みコール"
-    "バック登録失敗 [%s]\n";
-const char* const stringBase_8039A6CE = "%08x-%08x %08x %08x";
-const char* const stringBase_8039A6E2 = "BSSメモリ確保失敗\n";
-const char* const stringBase_8039A6F5 = "リンク失敗\n";
-const char* const stringBase_8039A701 = "モジュールリサイズ(縮小)失敗\n";
-const char* const stringBase_8039A71F = "BSSメモリ確保失敗 [%x]\n";
-const char* const stringBase_8039A737 = "アンリンク失敗 mModule=%08x mBss=%08x\n";
-const char* const stringBase_8039A75E = "????";
-const char* const stringBase_8039A763 = "MEM";
-const char* const stringBase_8039A767 = "ARAM";
-const char* const stringBase_8039A76C = "DVD";
-const char* const stringBase_8039A770 = "\nError: リンクされていない関数が呼び出されました.\n";
-const char* const stringBase_8039A7A3 = 
-    "Address:      Back Chain    LR Save\n";
-const char* const stringBase_8039A7C8 = "0x%08x:   0x%08x    0x%08x\n";
-/* @stringBase0 padding */
-char* const pad_8039A7E4 = "\0\0\0";
-#pragma pop
-
-/* 80262364-802623EC 0088+00 rc=0 efc=0 .text      unlink__24DynamicModuleControlBaseFv                         */
+/* 80262364-802623EC 0088+00 rc=1 efc=1 rfr=False None .text      unlink__24DynamicModuleControlBaseFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,7 +332,7 @@ asm void DynamicModuleControlBase::unlink() {
 #pragma pop
 
 
-/* 802623EC-8026242C 0040+00 rc=0 efc=0 .text      load_async__24DynamicModuleControlBaseFv                     */
+/* 802623EC-8026242C 0040+00 rc=1 efc=1 rfr=False None .text      load_async__24DynamicModuleControlBaseFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -350,7 +343,7 @@ asm void DynamicModuleControlBase::load_async() {
 #pragma pop
 
 
-/* 8026242C-80262470 0044+00 rc=0 efc=0 .text      force_unlink__24DynamicModuleControlBaseFv                   */
+/* 8026242C-80262470 0044+00 rc=1 efc=0 rfr=False None .text      force_unlink__24DynamicModuleControlBaseFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -362,17 +355,17 @@ asm void DynamicModuleControlBase::force_unlink() {
 
 
 /* ############################################################################################## */
-/* 80455008-80455010 0004+04 rc=0 efc=0 .sdata2    @3772                                                        */
-f32 DynamicLink__lit_3772[1 + 1 /* padding */] = {
+/* 80455008-80455010 0004+04 rc=1 efc=0 rfr=False None .sdata2    @3772                                                        */
+SECTION_SDATA2 static f32 DynamicLink__lit_3772[1 + 1 /* padding */] = {
 	0.0009765625f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455010-80455018 0008+00 rc=0 efc=0 .sdata2    @3774                                                        */
-f64 DynamicLink__lit_3774 = 4503599627370496.0 /* cast u32 to float */;
+/* 80455010-80455018 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3774                                                        */
+SECTION_SDATA2 static f64 DynamicLink__lit_3774 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80262470-80262660 01F0+00 rc=0 efc=0 .text      dump__24DynamicModuleControlBaseFv                           */
+/* 80262470-80262660 01F0+00 rc=4 efc=2 rfr=False None .text      dump__24DynamicModuleControlBaseFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -383,7 +376,7 @@ asm void DynamicModuleControlBase::dump() {
 #pragma pop
 
 
-/* 80262660-802626D0 0070+00 rc=0 efc=0 .text      __ct__20DynamicModuleControlFPCc                             */
+/* 80262660-802626D0 0070+00 rc=2 efc=2 rfr=False None .text      __ct__20DynamicModuleControlFPCc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -395,16 +388,16 @@ asm DynamicModuleControl::DynamicModuleControl(char const* field_0) {
 
 
 /* ############################################################################################## */
-/* 80451140-80451144 0004+00 rc=0 efc=0 .sbss      sAllocBytes__20DynamicModuleControl                          */
-u8 sAllocBytes__20DynamicModuleControl[4];
+/* 80451140-80451144 0004+00 rc=3 efc=0 rfr=False None .sbss      sAllocBytes__20DynamicModuleControl                          */
+static u8 sAllocBytes__20DynamicModuleControl[4];
 
-/* 80451144-80451148 0004+00 rc=0 efc=0 .sbss      sArchive__20DynamicModuleControl                             */
-u8 sArchive__20DynamicModuleControl[4];
+/* 80451144-80451148 0004+00 rc=3 efc=0 rfr=False None .sbss      sArchive__20DynamicModuleControl                             */
+static u8 sArchive__20DynamicModuleControl[4];
 
-/* 80451148-80451150 0004+04 rc=0 efc=0 .sbss      sFileCache__20DynamicModuleControl                           */
-u8 sFileCache__20DynamicModuleControl[4 + 4 /* padding */];
+/* 80451148-80451150 0004+04 rc=3 efc=0 rfr=False None .sbss      sFileCache__20DynamicModuleControl                           */
+static u8 sFileCache__20DynamicModuleControl[4 + 4 /* padding */];
 
-/* 802626D0-8026275C 008C+00 rc=0 efc=0 .text      mountCallback__20DynamicModuleControlFPv                     */
+/* 802626D0-8026275C 008C+00 rc=1 efc=0 rfr=False None .text      mountCallback__20DynamicModuleControlFPv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -415,7 +408,7 @@ asm void DynamicModuleControl::mountCallback(void* field_0) {
 #pragma pop
 
 
-/* 8026275C-80262794 0038+00 rc=0 efc=0 .text      initialize__20DynamicModuleControlFv                         */
+/* 8026275C-80262794 0038+00 rc=1 efc=1 rfr=False None .text      initialize__20DynamicModuleControlFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -426,7 +419,7 @@ asm void DynamicModuleControl::initialize() {
 #pragma pop
 
 
-/* 80262794-802627C0 002C+00 rc=0 efc=0 .text      callback__20DynamicModuleControlFPv                          */
+/* 80262794-802627C0 002C+00 rc=1 efc=0 rfr=False None .text      callback__20DynamicModuleControlFPv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -437,18 +430,18 @@ asm void DynamicModuleControl::callback(void* field_0) {
 #pragma pop
 
 
-/* 802627C0-802627E8 0028+00 rc=0 efc=0 .text      calcSum2__FPCUsUl                                            */
+/* 802627C0-802627E8 0028+00 rc=1 efc=0 rfr=False None .text      calcSum2__FPCUsUl                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void calcSum2(u16 const* field_0, u32 field_1) {
+asm static void calcSum2(u16 const* field_0, u32 field_1) {
 	nofralloc
 #include "asm/DynamicLink/calcSum2__FPCUsUl.s"
 }
 #pragma pop
 
 
-/* 802627E8-80262AFC 0314+00 rc=0 efc=0 .text      do_load__20DynamicModuleControlFv                            */
+/* 802627E8-80262AFC 0314+00 rc=1 efc=0 rfr=False None .text      do_load__20DynamicModuleControlFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -459,7 +452,7 @@ asm void DynamicModuleControl::do_load() {
 #pragma pop
 
 
-/* 80262AFC-80262BC4 00C8+00 rc=0 efc=0 .text      do_load_async__20DynamicModuleControlFv                      */
+/* 80262AFC-80262BC4 00C8+00 rc=1 efc=0 rfr=False None .text      do_load_async__20DynamicModuleControlFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -470,7 +463,7 @@ asm void DynamicModuleControl::do_load_async() {
 #pragma pop
 
 
-/* 80262BC4-80262C0C 0048+00 rc=0 efc=0 .text      do_unload__20DynamicModuleControlFv                          */
+/* 80262BC4-80262C0C 0048+00 rc=1 efc=0 rfr=False None .text      do_unload__20DynamicModuleControlFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -481,7 +474,7 @@ asm void DynamicModuleControl::do_unload() {
 #pragma pop
 
 
-/* 80262C0C-80262C5C 0050+00 rc=0 efc=0 .text      dump2__20DynamicModuleControlFv                              */
+/* 80262C0C-80262C5C 0050+00 rc=1 efc=0 rfr=False None .text      dump2__20DynamicModuleControlFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -492,7 +485,7 @@ asm void DynamicModuleControl::dump2() {
 #pragma pop
 
 
-/* 80262C5C-80262F28 02CC+00 rc=0 efc=0 .text      do_link__20DynamicModuleControlFv                            */
+/* 80262C5C-80262F28 02CC+00 rc=1 efc=0 rfr=False None .text      do_link__20DynamicModuleControlFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -503,7 +496,7 @@ asm void DynamicModuleControl::do_link() {
 #pragma pop
 
 
-/* 80262F28-80263000 00D8+00 rc=0 efc=0 .text      do_unlink__20DynamicModuleControlFv                          */
+/* 80262F28-80263000 00D8+00 rc=1 efc=0 rfr=False None .text      do_unlink__20DynamicModuleControlFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -514,7 +507,7 @@ asm void DynamicModuleControl::do_unlink() {
 #pragma pop
 
 
-/* 80263000-80263070 0070+00 rc=0 efc=0 .text      getModuleSize__20DynamicModuleControlCFv                     */
+/* 80263000-80263070 0070+00 rc=1 efc=0 rfr=False None .text      getModuleSize__20DynamicModuleControlCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -525,7 +518,7 @@ asm void DynamicModuleControl::getModuleSize() const {
 #pragma pop
 
 
-/* 80263070-80263088 0018+00 rc=0 efc=0 .text      getModuleTypeString__20DynamicModuleControlCFv               */
+/* 80263070-80263088 0018+00 rc=1 efc=0 rfr=False None .text      getModuleTypeString__20DynamicModuleControlCFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -536,19 +529,19 @@ asm void DynamicModuleControl::getModuleTypeString() const {
 #pragma pop
 
 
-/* 80263088-8026308C 0004+00 rc=0 efc=0 .text      ModuleProlog                                                 */
+/* 80263088-8026308C 0004+00 rc=0 efc=0 rfr=False None .text      ModuleProlog                                                 */
 extern "C" void ModuleProlog() {
 	/* empty function */
 }
 
 
-/* 8026308C-80263090 0004+00 rc=0 efc=0 .text      ModuleEpilog                                                 */
+/* 8026308C-80263090 0004+00 rc=0 efc=0 rfr=False None .text      ModuleEpilog                                                 */
 extern "C" void ModuleEpilog() {
 	/* empty function */
 }
 
 
-/* 80263090-8026314C 00BC+00 rc=0 efc=0 .text      ModuleUnresolved                                             */
+/* 80263090-8026314C 00BC+00 rc=0 efc=0 rfr=False None .text      ModuleUnresolved                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -559,7 +552,7 @@ extern "C" asm void ModuleUnresolved() {
 #pragma pop
 
 
-/* 8026314C-80263190 0044+00 rc=0 efc=0 .text      ModuleConstructorsX                                          */
+/* 8026314C-80263190 0044+00 rc=0 efc=0 rfr=False None .text      ModuleConstructorsX                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -570,7 +563,7 @@ extern "C" asm void ModuleConstructorsX() {
 #pragma pop
 
 
-/* 80263190-802631D4 0044+00 rc=0 efc=0 .text      ModuleDestructorsX                                           */
+/* 80263190-802631D4 0044+00 rc=0 efc=0 rfr=False None .text      ModuleDestructorsX                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -581,43 +574,43 @@ extern "C" asm void ModuleDestructorsX() {
 #pragma pop
 
 
-/* 802631D4-802631DC 0008+00 rc=0 efc=0 .text      do_link__24DynamicModuleControlBaseFv                        */
+/* 802631D4-802631DC 0008+00 rc=1 efc=0 rfr=False None .text      do_link__24DynamicModuleControlBaseFv                        */
 bool DynamicModuleControlBase::do_link() {
 	return true;
 }
 
 
-/* 802631DC-802631E4 0008+00 rc=0 efc=0 .text      do_load__24DynamicModuleControlBaseFv                        */
+/* 802631DC-802631E4 0008+00 rc=1 efc=0 rfr=False None .text      do_load__24DynamicModuleControlBaseFv                        */
 bool DynamicModuleControlBase::do_load() {
 	return true;
 }
 
 
-/* 802631E4-802631EC 0008+00 rc=0 efc=0 .text      do_unload__24DynamicModuleControlBaseFv                      */
+/* 802631E4-802631EC 0008+00 rc=1 efc=0 rfr=False None .text      do_unload__24DynamicModuleControlBaseFv                      */
 bool DynamicModuleControlBase::do_unload() {
 	return true;
 }
 
 
-/* 802631EC-802631F4 0008+00 rc=0 efc=0 .text      do_unlink__24DynamicModuleControlBaseFv                      */
+/* 802631EC-802631F4 0008+00 rc=1 efc=0 rfr=False None .text      do_unlink__24DynamicModuleControlBaseFv                      */
 bool DynamicModuleControlBase::do_unlink() {
 	return true;
 }
 
 
-/* 802631F4-802631FC 0008+00 rc=0 efc=0 .text      do_load_async__24DynamicModuleControlBaseFv                  */
+/* 802631F4-802631FC 0008+00 rc=1 efc=0 rfr=False None .text      do_load_async__24DynamicModuleControlBaseFv                  */
 bool DynamicModuleControlBase::do_load_async() {
 	return true;
 }
 
 
-/* 802631FC-80263200 0004+00 rc=0 efc=0 .text      dump2__24DynamicModuleControlBaseFv                          */
+/* 802631FC-80263200 0004+00 rc=1 efc=0 rfr=False None .text      dump2__24DynamicModuleControlBaseFv                          */
 void DynamicModuleControlBase::dump2() {
 	/* empty function */
 }
 
 
-/* 80263200-80263210 0010+00 rc=0 efc=0 .text      getModuleTypeString__24DynamicModuleControlBaseCFv           */
+/* 80263200-80263210 0010+00 rc=1 efc=0 rfr=False None .text      getModuleTypeString__24DynamicModuleControlBaseCFv           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -628,13 +621,13 @@ asm void DynamicModuleControlBase::getModuleTypeString() const {
 #pragma pop
 
 
-/* 80263210-80263218 0008+00 rc=0 efc=0 .text      getModuleSize__24DynamicModuleControlBaseCFv                 */
+/* 80263210-80263218 0008+00 rc=1 efc=0 rfr=False None .text      getModuleSize__24DynamicModuleControlBaseCFv                 */
 bool DynamicModuleControlBase::getModuleSize() const {
 	return false;
 }
 
 
-/* 80263218-80263220 0008+00 rc=0 efc=0 .text      getModuleName__20DynamicModuleControlCFv                     */
+/* 80263218-80263220 0008+00 rc=1 efc=0 rfr=False None .text      getModuleName__20DynamicModuleControlCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

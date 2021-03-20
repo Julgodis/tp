@@ -16,8 +16,6 @@ extern "C" void OSGetSaveRegion(); // 1
 extern "C" void __OSReboot(); // 1
 extern "C" void OSSetSaveRegion(); // 1
 extern "C" void OSGetSaveRegion(); // 1
-SECTION_SBSS extern u8 SaveStart[4];
-SECTION_SBSS extern u8 SaveEnd[4];
 
 // 
 // External References:
@@ -41,7 +39,7 @@ extern "C" void OSDisableInterrupts(); // 1
 // Declarations:
 // 
 
-/* 8033F5D0-8033F640 0070+00 rc=0 efc=0 .text      __OSReboot                                                   */
+/* 8033F5D0-8033F640 0070+00 rc=1 efc=1 rfr=False None .text      __OSReboot                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,13 +51,13 @@ extern "C" asm void __OSReboot() {
 
 
 /* ############################################################################################## */
-/* 80451688-8045168C 0004+00 rc=0 efc=0 .sbss      SaveStart                                                    */
-u8 SaveStart[4];
+/* 80451688-8045168C 0004+00 rc=2 efc=0 rfr=False None .sbss      SaveStart                                                    */
+static u8 SaveStart[4];
 
-/* 8045168C-80451690 0004+00 rc=0 efc=0 .sbss      SaveEnd                                                      */
-u8 SaveEnd[4];
+/* 8045168C-80451690 0004+00 rc=2 efc=0 rfr=False None .sbss      SaveEnd                                                      */
+static u8 SaveEnd[4];
 
-/* 8033F640-8033F64C 000C+00 rc=0 efc=0 .text      OSSetSaveRegion                                              */
+/* 8033F640-8033F64C 000C+00 rc=1 efc=1 rfr=False None .text      OSSetSaveRegion                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +68,7 @@ extern "C" asm void OSSetSaveRegion() {
 #pragma pop
 
 
-/* 8033F64C-8033F660 0014+00 rc=0 efc=0 .text      OSGetSaveRegion                                              */
+/* 8033F64C-8033F660 0014+00 rc=1 efc=1 rfr=False None .text      OSGetSaveRegion                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

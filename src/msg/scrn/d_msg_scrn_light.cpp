@@ -29,10 +29,13 @@ struct dMsgScrnLight_c {
 	/* 802460DC */ void drawCommon(f32, f32, f32, f32, f32);
 };
 
-struct JKRArchive {
+struct JKRExpHeap {
 };
 
 struct J2DGrafContext {
+};
+
+struct JKRArchive {
 };
 
 struct J2DScreen {
@@ -40,9 +43,6 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -82,14 +82,7 @@ extern "C" void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TC
 extern "C" void drawCommon__15dMsgScrnLight_cFfffff(); // 1
 extern "C" void __dt__19dMsgScrnLight_HIO_cFv(); // 1
 extern "C" void __sinit_d_msg_scrn_light_cpp(); // 1
-SECTION_RODATA extern const char* const msg_scrn_d_msg_scrn_light__stringBase0;
-SECTION_DATA extern void* const __vt__15dMsgScrnLight_c[3];
-SECTION_DATA extern void* const __vt__19dMsgScrnLight_HIO_c[3];
-SECTION_BSS extern u8 lit_3735[12];
-SECTION_BSS extern u8 g_MsgScrnLight_HIO_c[80 + 4 /* padding */];
-SECTION_SDATA2 extern u8 msg_scrn_d_msg_scrn_light__lit_3808[4];
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_light__lit_3869;
-SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_light__lit_3871;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_light__stringBase0;
 
 // 
 // External References:
@@ -115,29 +108,29 @@ extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
 extern "C" void animation__9J2DScreenFv(); // 1
 extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
 extern "C" void __register_global_object(); // 1
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SBSS extern u8 data_804510D8[8];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 data_804510D8[8];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C1298-803C12A4 000C+00 rc=0 efc=0 .data      __vt__15dMsgScrnLight_c                                      */
-void* const __vt__15dMsgScrnLight_c[3] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__15dMsgScrnLight_cFv,
+/* 803C1298-803C12A4 000C+00 rc=2 efc=0 rfr=False None .data      __vt__15dMsgScrnLight_c                                      */
+SECTION_DATA static void* __vt__15dMsgScrnLight_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__15dMsgScrnLight_cFv,
 };
 
-/* 803C12A4-803C12B0 000C+00 rc=0 efc=0 .data      __vt__19dMsgScrnLight_HIO_c                                  */
-void* const __vt__19dMsgScrnLight_HIO_c[3] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__19dMsgScrnLight_HIO_cFv,
+/* 803C12A4-803C12B0 000C+00 rc=2 efc=0 rfr=False None .data      __vt__19dMsgScrnLight_HIO_c                                  */
+SECTION_DATA static void* __vt__19dMsgScrnLight_HIO_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__19dMsgScrnLight_HIO_cFv,
 };
 
-/* 8024575C-802457C4 0068+00 rc=0 efc=0 .text      __ct__19dMsgScrnLight_HIO_cFv                                */
+/* 8024575C-802457C4 0068+00 rc=1 efc=0 rfr=False None .text      __ct__19dMsgScrnLight_HIO_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +141,7 @@ asm dMsgScrnLight_HIO_c::dMsgScrnLight_HIO_c() {
 #pragma pop
 
 
-/* 802457C4-80245934 0170+00 rc=0 efc=0 .text      updateColor__19dMsgScrnLight_HIO_cFUc                        */
+/* 802457C4-80245934 0170+00 rc=1 efc=0 rfr=False None .text      updateColor__19dMsgScrnLight_HIO_cFUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,32 +153,32 @@ asm void dMsgScrnLight_HIO_c::updateColor(u8 field_0) {
 
 
 /* ############################################################################################## */
-/* 80399B08-80399B78 006C+04 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 80399B08-80399B78 006C+04 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_80399B08 = 
+SECTION_DEAD static char const* const stringBase_80399B08 = 
     "zelda_message_window_text_light.blo";
-const char* const stringBase_80399B2C = 
+SECTION_DEAD static char const* const stringBase_80399B2C = 
     "zelda_message_window_text_light.bck";
-const char* const stringBase_80399B50 = 
+SECTION_DEAD static char const* const stringBase_80399B50 = 
     "zelda_message_window_text_light.bpk";
 /* @stringBase0 padding */
-char* const pad_80399B74 = "\0\0\0";
+SECTION_DEAD static char const* const pad_80399B74 = "\0\0\0";
 #pragma pop
 
-/* 804306C8-804306D4 000C+00 rc=0 efc=0 .bss       @3735                                                        */
-u8 lit_3735[12];
+/* 804306C8-804306D4 000C+00 rc=1 efc=0 rfr=False None .bss       @3735                                                        */
+static u8 lit_3735[12];
 
-/* 804306D4-80430728 0050+04 rc=0 efc=0 .bss       g_MsgScrnLight_HIO_c                                         */
-u8 g_MsgScrnLight_HIO_c[80 + 4 /* padding */];
+/* 804306D4-80430728 0050+04 rc=3 efc=0 rfr=False None .bss       g_MsgScrnLight_HIO_c                                         */
+static u8 g_MsgScrnLight_HIO_c[80 + 4 /* padding */];
 
-/* 80454CD8-80454CDC 0004+00 rc=0 efc=0 .sdata2    @3808                                                        */
-u8 msg_scrn_d_msg_scrn_light__lit_3808[4] = {
+/* 80454CD8-80454CDC 0004+00 rc=4 efc=0 rfr=False None .sdata2    @3808                                                        */
+SECTION_SDATA2 static u8 msg_scrn_d_msg_scrn_light__lit_3808[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80245934-80245B00 01CC+00 rc=0 efc=0 .text      __ct__15dMsgScrnLight_cFUcUc                                 */
+/* 80245934-80245B00 01CC+00 rc=4 efc=4 rfr=False None .text      __ct__15dMsgScrnLight_cFUcUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +189,7 @@ asm dMsgScrnLight_c::dMsgScrnLight_c(u8 field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80245B00-80245C04 0104+00 rc=0 efc=0 .text      __dt__15dMsgScrnLight_cFv                                    */
+/* 80245B00-80245C04 0104+00 rc=1 efc=0 rfr=False None .text      __dt__15dMsgScrnLight_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -208,13 +201,13 @@ asm dMsgScrnLight_c::~dMsgScrnLight_c() {
 
 
 /* ############################################################################################## */
-/* 80454CDC-80454CE0 0004+00 rc=0 efc=0 .sdata2    @3869                                                        */
-f32 msg_scrn_d_msg_scrn_light__lit_3869 = 1.0f;
+/* 80454CDC-80454CE0 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3869                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_light__lit_3869 = 1.0f;
 
-/* 80454CE0-80454CE8 0008+00 rc=0 efc=0 .sdata2    @3871                                                        */
-f64 msg_scrn_d_msg_scrn_light__lit_3871 = 4503601774854144.0 /* cast s32 to float */;
+/* 80454CE0-80454CE8 0008+00 rc=2 efc=0 rfr=False None .sdata2    @3871                                                        */
+SECTION_SDATA2 static f64 msg_scrn_d_msg_scrn_light__lit_3871 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80245C04-80245F90 038C+00 rc=0 efc=0 .text      draw__15dMsgScrnLight_cFPffffffUc                            */
+/* 80245C04-80245F90 038C+00 rc=2 efc=2 rfr=False None .text      draw__15dMsgScrnLight_cFPffffffUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +218,7 @@ asm void dMsgScrnLight_c::draw(f32* field_0, f32 field_1, f32 field_2, f32 field
 #pragma pop
 
 
-/* 80245F90-802460DC 014C+00 rc=0 efc=0 .text      draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor */
+/* 80245F90-802460DC 014C+00 rc=1 efc=1 rfr=False None .text      draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -236,7 +229,7 @@ asm void dMsgScrnLight_c::draw(f32* field_0, f32 field_1, f32 field_2, f32 field
 #pragma pop
 
 
-/* 802460DC-80246348 026C+00 rc=0 efc=0 .text      drawCommon__15dMsgScrnLight_cFfffff                          */
+/* 802460DC-80246348 026C+00 rc=2 efc=0 rfr=False None .text      drawCommon__15dMsgScrnLight_cFfffff                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,7 +240,7 @@ asm void dMsgScrnLight_c::drawCommon(f32 field_0, f32 field_1, f32 field_2, f32 
 #pragma pop
 
 
-/* 80246348-80246390 0048+00 rc=0 efc=0 .text      __dt__19dMsgScrnLight_HIO_cFv                                */
+/* 80246348-80246390 0048+00 rc=2 efc=0 rfr=False None .text      __dt__19dMsgScrnLight_HIO_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +251,7 @@ asm dMsgScrnLight_HIO_c::~dMsgScrnLight_HIO_c() {
 #pragma pop
 
 
-/* 80246390-802463CC 003C+00 rc=0 efc=0 .text      __sinit_d_msg_scrn_light_cpp                                 */
+/* 80246390-802463CC 003C+00 rc=1 efc=1 rfr=False None .text      __sinit_d_msg_scrn_light_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -39,7 +39,7 @@ extern "C" void dead__12daItemBase_cFv(); // 1
 extern "C" void chkDead__12daItemBase_cFv(); // 1
 extern "C" void CheckItemCreateHeap__FP10fopAc_ac_c(); // 1
 extern "C" void CheckFieldItemCreateHeap__FP10fopAc_ac_c(); // 1
-SECTION_RODATA extern const u8 m_data__12daItemBase_c[56];
+extern "C" extern u8 const m_data__12daItemBase_c[56];
 
 // 
 // External References:
@@ -47,14 +47,14 @@ SECTION_RODATA extern const u8 m_data__12daItemBase_c[56];
 
 
 extern "C" void CreateItemHeap__12daItemBase_cFPCcsssssss(); // 1
-SECTION_DATA extern void* item_resource__10dItem_data[1530];
-SECTION_DATA extern u8 field_item_res__10dItem_data[4080];
+extern "C" extern void* item_resource__10dItem_data[1530];
+extern "C" extern void* field_item_res__10dItem_data[1020];
 
 // 
 // Declarations:
 // 
 
-/* 80037A5C-80037A64 0008+00 rc=0 efc=0 .text      getItemNo__12daItemBase_cFv                                  */
+/* 80037A5C-80037A64 0008+00 rc=4 efc=2 rfr=False None .text      getItemNo__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +65,7 @@ asm void daItemBase_c::getItemNo() {
 #pragma pop
 
 
-/* 80037A64-80037A74 0010+00 rc=0 efc=0 .text      hide__12daItemBase_cFv                                       */
+/* 80037A64-80037A74 0010+00 rc=6 efc=5 rfr=False None .text      hide__12daItemBase_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ asm void daItemBase_c::hide() {
 #pragma pop
 
 
-/* 80037A74-80037A84 0010+00 rc=0 efc=0 .text      show__12daItemBase_cFv                                       */
+/* 80037A74-80037A84 0010+00 rc=8 efc=7 rfr=False None .text      show__12daItemBase_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ asm void daItemBase_c::show() {
 #pragma pop
 
 
-/* 80037A84-80037ACC 0048+00 rc=0 efc=0 .text      changeDraw__12daItemBase_cFv                                 */
+/* 80037A84-80037ACC 0048+00 rc=1 efc=1 rfr=False None .text      changeDraw__12daItemBase_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +98,7 @@ asm void daItemBase_c::changeDraw() {
 #pragma pop
 
 
-/* 80037ACC-80037AE4 0018+00 rc=0 efc=0 .text      chkDraw__12daItemBase_cFv                                    */
+/* 80037ACC-80037AE4 0018+00 rc=2 efc=1 rfr=False None .text      chkDraw__12daItemBase_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +109,7 @@ asm void daItemBase_c::chkDraw() {
 #pragma pop
 
 
-/* 80037AE4-80037AF4 0010+00 rc=0 efc=0 .text      dead__12daItemBase_cFv                                       */
+/* 80037AE4-80037AF4 0010+00 rc=3 efc=3 rfr=False None .text      dead__12daItemBase_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -120,7 +120,7 @@ asm void daItemBase_c::dead() {
 #pragma pop
 
 
-/* 80037AF4-80037B0C 0018+00 rc=0 efc=0 .text      chkDead__12daItemBase_cFv                                    */
+/* 80037AF4-80037B0C 0018+00 rc=0 efc=0 rfr=False None .text      chkDead__12daItemBase_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -131,7 +131,7 @@ asm void daItemBase_c::chkDead() {
 #pragma pop
 
 
-/* 80037B0C-80037B78 006C+00 rc=0 efc=0 .text      CheckItemCreateHeap__FP10fopAc_ac_c                          */
+/* 80037B0C-80037B78 006C+00 rc=0 efc=0 rfr=False None .text      CheckItemCreateHeap__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -142,7 +142,7 @@ asm void CheckItemCreateHeap(fopAc_ac_c* field_0) {
 #pragma pop
 
 
-/* 80037B78-80037BE0 0068+00 rc=0 efc=0 .text      CheckFieldItemCreateHeap__FP10fopAc_ac_c                     */
+/* 80037B78-80037BE0 0068+00 rc=1 efc=1 rfr=False None .text      CheckFieldItemCreateHeap__FP10fopAc_ac_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,8 +154,8 @@ asm void CheckFieldItemCreateHeap(fopAc_ac_c* field_0) {
 
 
 /* ############################################################################################## */
-/* 803792B0-803792E8 0038+00 rc=0 efc=0 .rodata    m_data__12daItemBase_c                                       */
-const u8 m_data__12daItemBase_c[56] = {
+/* 803792B0-803792E8 0038+00 rc=1 efc=1 rfr=False None .rodata    m_data__12daItemBase_c                                       */
+SECTION_RODATA u8 const m_data__12daItemBase_c[56] = {
 	0xC0, 0x90, 0x00, 0x00, 0x3F, 0x1E, 0xB8, 0x52, 0x42, 0x34, 0x00, 0x00, 0x41, 0x20, 0x00, 0x00,
 	0x40, 0xC0, 0x00, 0x00, 0x00, 0x01, 0x00, 0xF0, 0x00, 0x3C, 0x0F, 0xA0, 0x00, 0x78, 0x00, 0x00,
 	0xC0, 0x80, 0x00, 0x00, 0x40, 0x60, 0x00, 0x00, 0x04, 0x4C, 0x0B, 0xB8, 0x41, 0xB8, 0x00, 0x00,

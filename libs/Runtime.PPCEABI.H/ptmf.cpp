@@ -16,7 +16,7 @@ extern "C" void __ptmf_scall(); // 1
 extern "C" void __ptmf_test(); // 1
 extern "C" void __ptmf_cmpr(); // 1
 extern "C" void __ptmf_scall(); // 1
-SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 
 // 
 // External References:
@@ -28,7 +28,7 @@ SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 80362018-80362048 0030+00 rc=0 efc=0 .text      __ptmf_test                                                  */
+/* 80362018-80362048 0030+00 rc=10 efc=10 rfr=False None .text      __ptmf_test                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -39,7 +39,7 @@ extern "C" asm void __ptmf_test() {
 #pragma pop
 
 
-/* 80362048-80362084 003C+00 rc=0 efc=0 .text      __ptmf_cmpr                                                  */
+/* 80362048-80362084 003C+00 rc=0 efc=0 rfr=False None .text      __ptmf_cmpr                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -50,7 +50,7 @@ extern "C" asm void __ptmf_cmpr() {
 #pragma pop
 
 
-/* 80362084-803620AC 0028+00 rc=0 efc=0 .text      __ptmf_scall                                                 */
+/* 80362084-803620AC 0028+00 rc=125 efc=125 rfr=False None .text      __ptmf_scall                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -62,8 +62,8 @@ extern "C" asm void __ptmf_scall() {
 
 
 /* ############################################################################################## */
-/* 803A2180-803A2190 000C+04 rc=0 efc=0 .rodata    __ptmf_null                                                  */
-const u8 __ptmf_null[12 + 4 /* padding */] = {
+/* 803A2180-803A2190 000C+04 rc=23 efc=23 rfr=False None .rodata    __ptmf_null                                                  */
+SECTION_RODATA u8 const __ptmf_null[12 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,

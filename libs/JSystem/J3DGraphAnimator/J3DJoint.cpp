@@ -60,15 +60,9 @@ extern "C" void appendChild__8J3DJointFP8J3DJoint(); // 1
 extern "C" void __ct__8J3DJointFv(); // 1
 extern "C" void entryIn__8J3DJointFv(); // 1
 extern "C" void recursiveCalc__8J3DJointFv(); // 1
-SECTION_RODATA extern const u8 J3DJoint__lit_882[12];
-SECTION_RODATA extern const u8 J3DJoint__lit_893[12];
-SECTION_RODATA extern const u8 lit_1257[12];
-SECTION_RODATA extern const u8 lit_1259[12];
-SECTION_SBSS extern u8 mMtxBuffer__10J3DMtxCalc[4];
-SECTION_SBSS extern u8 mJoint__10J3DMtxCalc[4];
-SECTION_SBSS extern u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
-SECTION_SDATA2 extern f32 lit_922;
-SECTION_SDATA2 extern u8 lit_1220[4];
+extern "C" extern u8 mMtxBuffer__10J3DMtxCalc[4];
+extern "C" extern u8 mJoint__10J3DMtxCalc[4];
+extern "C" extern u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -90,24 +84,24 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXConcat(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_27(); // 1
-SECTION_RODATA extern const u8 j3dDefaultTransformInfo[32];
-SECTION_BSS extern u8 j3dSys[284];
-SECTION_BSS extern u8 mCurrentMtx__6J3DSys[48];
-SECTION_BSS extern u8 mCurrentS__6J3DSys[12];
-SECTION_BSS extern u8 mParentS__6J3DSys[12];
-SECTION_SBSS extern u8 entryNum__13J3DDrawBuffer[4 + 4 /* padding */];
+extern "C" extern u8 const j3dDefaultTransformInfo[32];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 mCurrentS__6J3DSys[12];
+extern "C" extern u8 mParentS__6J3DSys[12];
+extern "C" extern u8 entryNum__13J3DDrawBuffer[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803A2068-803A2074 000C+00 rc=0 efc=0 .rodata    @882                                                         */
-const u8 J3DJoint__lit_882[12] = {
+/* 803A2068-803A2074 000C+00 rc=1 efc=0 rfr=False None .rodata    @882                                                         */
+SECTION_RODATA static u8 const J3DJoint__lit_882[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 8032EC28-8032ECAC 0084+00 rc=0 efc=0 .text      init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf            */
+/* 8032EC28-8032ECAC 0084+00 rc=1 efc=1 rfr=False None .text      init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,12 +113,12 @@ asm void J3DMtxCalcJ3DSysInitBasic::init(Vec const& field_0, f32 const (& field_
 
 
 /* ############################################################################################## */
-/* 803A2074-803A2080 000C+00 rc=0 efc=0 .rodata    @893                                                         */
-const u8 J3DJoint__lit_893[12] = {
+/* 803A2074-803A2080 000C+00 rc=1 efc=0 rfr=False None .rodata    @893                                                         */
+SECTION_RODATA static u8 const J3DJoint__lit_893[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 8032ECAC-8032ED30 0084+00 rc=0 efc=0 .text      init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf             */
+/* 8032ECAC-8032ED30 0084+00 rc=2 efc=2 rfr=False None .text      init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,16 +130,16 @@ asm void J3DMtxCalcJ3DSysInitMaya::init(Vec const& field_0, f32 const (& field_1
 
 
 /* ############################################################################################## */
-/* 804515F0-804515F4 0004+00 rc=0 efc=0 .sbss      mMtxBuffer__10J3DMtxCalc                                     */
+/* 804515F0-804515F4 0004+00 rc=4 efc=1 rfr=False None .sbss      mMtxBuffer__10J3DMtxCalc                                     */
 u8 mMtxBuffer__10J3DMtxCalc[4];
 
-/* 804515F4-804515F8 0004+00 rc=0 efc=0 .sbss      mJoint__10J3DMtxCalc                                         */
+/* 804515F4-804515F8 0004+00 rc=13 efc=9 rfr=False None .sbss      mJoint__10J3DMtxCalc                                         */
 u8 mJoint__10J3DMtxCalc[4];
 
-/* 804564A0-804564A4 0004+00 rc=0 efc=0 .sdata2    @922                                                         */
-f32 lit_922 = 1.0f;
+/* 804564A0-804564A4 0004+00 rc=3 efc=0 rfr=False None .sdata2    @922                                                         */
+SECTION_SDATA2 static f32 lit_922 = 1.0f;
 
-/* 8032ED30-8032EE50 0120+00 rc=0 efc=0 .text      calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo */
+/* 8032ED30-8032EE50 0120+00 rc=1 efc=1 rfr=False None .text      calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +150,7 @@ asm void J3DMtxCalcCalcTransformBasic::calcTransform(J3DTransformInfo const& fie
 #pragma pop
 
 
-/* 8032EE50-8032EFBC 016C+00 rc=0 efc=0 .text      calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo */
+/* 8032EE50-8032EFBC 016C+00 rc=1 efc=1 rfr=False None .text      calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +161,7 @@ asm void J3DMtxCalcCalcTransformSoftimage::calcTransform(J3DTransformInfo const&
 #pragma pop
 
 
-/* 8032EFBC-8032F13C 0180+00 rc=0 efc=0 .text      calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo */
+/* 8032EFBC-8032F13C 0180+00 rc=6 efc=6 rfr=False None .text      calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -178,7 +172,7 @@ asm void J3DMtxCalcCalcTransformMaya::calcTransform(J3DTransformInfo const& fiel
 #pragma pop
 
 
-/* 8032F13C-8032F170 0034+00 rc=0 efc=0 .text      appendChild__8J3DJointFP8J3DJoint                            */
+/* 8032F13C-8032F170 0034+00 rc=1 efc=1 rfr=False None .text      appendChild__8J3DJointFP8J3DJoint                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -190,22 +184,22 @@ asm void J3DJoint::appendChild(J3DJoint* field_0) {
 
 
 /* ############################################################################################## */
-/* 803A2080-803A208C 000C+00 rc=0 efc=0 .rodata    @1257                                                        */
-const u8 lit_1257[12] = {
+/* 803A2080-803A208C 000C+00 rc=1 efc=0 rfr=False None .rodata    @1257                                                        */
+SECTION_RODATA static u8 const lit_1257[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A208C-803A2098 000C+00 rc=0 efc=0 .rodata    @1259                                                        */
-const u8 lit_1259[12] = {
+/* 803A208C-803A2098 000C+00 rc=1 efc=0 rfr=False None .rodata    @1259                                                        */
+SECTION_RODATA static u8 const lit_1259[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804564A4-804564A8 0004+00 rc=0 efc=0 .sdata2    @1220                                                        */
-u8 lit_1220[4] = {
+/* 804564A4-804564A8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1220                                                        */
+SECTION_SDATA2 static u8 lit_1220[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8032F170-8032F254 00E4+00 rc=0 efc=0 .text      __ct__8J3DJointFv                                            */
+/* 8032F170-8032F254 00E4+00 rc=1 efc=1 rfr=False None .text      __ct__8J3DJointFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +210,7 @@ asm J3DJoint::J3DJoint() {
 #pragma pop
 
 
-/* 8032F254-8032F3F8 01A4+00 rc=0 efc=0 .text      entryIn__8J3DJointFv                                         */
+/* 8032F254-8032F3F8 01A4+00 rc=1 efc=1 rfr=False None .text      entryIn__8J3DJointFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,10 +222,10 @@ asm void J3DJoint::entryIn() {
 
 
 /* ############################################################################################## */
-/* 804515F8-80451600 0004+04 rc=0 efc=0 .sbss      mCurrentMtxCalc__8J3DJoint                                   */
+/* 804515F8-80451600 0004+04 rc=2 efc=1 rfr=False None .sbss      mCurrentMtxCalc__8J3DJoint                                   */
 u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
 
-/* 8032F3F8-8032F5A8 01B0+00 rc=0 efc=0 .text      recursiveCalc__8J3DJointFv                                   */
+/* 8032F3F8-8032F5A8 01B0+00 rc=1 efc=1 rfr=False None .text      recursiveCalc__8J3DJointFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

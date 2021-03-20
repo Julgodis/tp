@@ -9,24 +9,15 @@
 // Forward References:
 // 
 
-extern "C" void cb(); // 1
+extern "C" static void cb(); // 1
 extern "C" void __fstLoad(); // 1
 
-extern "C" void cb(); // 1
+extern "C" static void cb(); // 1
 extern "C" void __fstLoad(); // 1
-SECTION_DATA extern u8 lit_38[26 + 2 /* padding */];
-SECTION_DATA extern u8 lit_39[22 + 2 /* padding */];
-SECTION_DATA extern u8 lit_40[20];
-SECTION_DATA extern u8 lit_41[20];
-SECTION_DATA extern u8 lit_44[20];
-SECTION_BSS extern u8 bb2Buf[63 + 1 /* padding */];
-SECTION_BSS extern u8 data_8044C9F8[48];
-SECTION_SDATA extern u16 lit_37[1 + 1 /* padding */];
-SECTION_SDATA extern u32 lit_42;
-SECTION_SDATA extern u8 lit_43[3 + 5 /* padding */];
-SECTION_SBSS extern u8 status[4];
-SECTION_SBSS extern u8 bb2[4];
-SECTION_SBSS extern u8 idTmp[4 + 4 /* padding */];
+extern "C" extern u8 lit_39[22 + 2 /* padding */];
+extern "C" extern u8 lit_40[20];
+extern "C" extern u8 lit_41[20];
+extern "C" extern u8 lit_44[20];
 
 // 
 // External References:
@@ -55,20 +46,20 @@ extern "C" void DVDGetDriveStatus(); // 1
 // 
 
 /* ############################################################################################## */
-/* 804517D0-804517D4 0004+00 rc=0 efc=0 .sbss      status                                                       */
-u8 status[4];
+/* 804517D0-804517D4 0004+00 rc=1 efc=0 rfr=False None .sbss      status                                                       */
+static u8 status[4];
 
-/* 804517D4-804517D8 0004+00 rc=0 efc=0 .sbss      bb2                                                          */
-u8 bb2[4];
+/* 804517D4-804517D8 0004+00 rc=2 efc=0 rfr=False None .sbss      bb2                                                          */
+static u8 bb2[4];
 
-/* 804517D8-804517E0 0004+04 rc=0 efc=0 .sbss      idTmp                                                        */
-u8 idTmp[4 + 4 /* padding */];
+/* 804517D8-804517E0 0004+04 rc=2 efc=0 rfr=False None .sbss      idTmp                                                        */
+static u8 idTmp[4 + 4 /* padding */];
 
-/* 8034BD2C-8034BE04 00D8+00 rc=0 efc=0 .text      cb                                                           */
+/* 8034BD2C-8034BE04 00D8+00 rc=1 efc=0 rfr=False None .text      cb                                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void cb() {
+extern "C" asm static void cb() {
 	nofralloc
 #include "asm/dolphin/dvd/fstload/cb.s"
 }
@@ -76,38 +67,38 @@ extern "C" asm void cb() {
 
 
 /* ############################################################################################## */
-/* 803D16F0-803D170C 001A+02 rc=0 efc=0 .data      @38                                                          */
-u8 lit_38[26 + 2 /* padding */] = {
+/* 803D16F0-803D170C 001A+02 rc=1 efc=0 rfr=False None .data      @38                                                          */
+SECTION_DATA static u8 lit_38[26 + 2 /* padding */] = {
 	0x20, 0x20, 0x47, 0x61, 0x6D, 0x65, 0x20, 0x4E, 0x61, 0x6D, 0x65, 0x20, 0x2E, 0x2E, 0x2E, 0x20,
 	0x25, 0x63, 0x25, 0x63, 0x25, 0x63, 0x25, 0x63, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 8044C9B8-8044C9F8 003F+01 rc=0 efc=0 .bss       bb2Buf                                                       */
-u8 bb2Buf[63 + 1 /* padding */];
+/* 8044C9B8-8044C9F8 003F+01 rc=1 efc=0 rfr=False None .bss       bb2Buf                                                       */
+static u8 bb2Buf[63 + 1 /* padding */];
 
-/* 8044C9F8-8044CA28 0030+00 rc=0 efc=0 .bss       block$18                                                     */
-u8 data_8044C9F8[48];
+/* 8044C9F8-8044CA28 0030+00 rc=1 efc=0 rfr=False None .bss       block$18                                                     */
+static u8 data_8044C9F8[48];
 
-/* 80450A00-80450A04 0002+02 rc=0 efc=0 .sdata     @37                                                          */
-u16 lit_37[1 + 1 /* padding */] = {
+/* 80450A00-80450A04 0002+02 rc=1 efc=0 rfr=False None .sdata     @37                                                          */
+SECTION_SDATA static u16 lit_37[1 + 1 /* padding */] = {
 	0x0A00,
 	/* padding */
 	0x0000,
 };
 
-/* 80450A04-80450A08 0004+00 rc=0 efc=0 .sdata     @42                                                          */
-u32 lit_42 = 0x4F464600;
+/* 80450A04-80450A08 0004+00 rc=1 efc=0 rfr=False None .sdata     @42                                                          */
+SECTION_SDATA static u32 lit_42 = 0x4F464600;
 
-/* 80450A08-80450A10 0003+05 rc=0 efc=0 .sdata     @43                                                          */
-u8 lit_43[3 + 5 /* padding */] = {
+/* 80450A08-80450A10 0003+05 rc=1 efc=0 rfr=False None .sdata     @43                                                          */
+SECTION_SDATA static u8 lit_43[3 + 5 /* padding */] = {
 	0x4F, 0x4E, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8034BE04-8034BF6C 0168+00 rc=0 efc=0 .text      __fstLoad                                                    */
+/* 8034BE04-8034BF6C 0168+00 rc=1 efc=1 rfr=False None .text      __fstLoad                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,28 +110,28 @@ extern "C" asm void __fstLoad() {
 
 
 /* ############################################################################################## */
-/* 803D170C-803D1724 0016+02 rc=0 efc=0 .data      @39                                                          */
-u8 lit_39[22 + 2 /* padding */] = {
+/* 803D170C-803D1724 0016+02 rc=0 efc=0 rfr=False None .data      @39                                                          */
+SECTION_DATA u8 lit_39[22 + 2 /* padding */] = {
 	0x20, 0x20, 0x43, 0x6F, 0x6D, 0x70, 0x61, 0x6E, 0x79, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
 	0x25, 0x63, 0x25, 0x63, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 803D1724-803D1738 0014+00 rc=0 efc=0 .data      @40                                                          */
-u8 lit_40[20] = {
+/* 803D1724-803D1738 0014+00 rc=0 efc=0 rfr=False None .data      @40                                                          */
+SECTION_DATA u8 lit_40[20] = {
 	0x20, 0x20, 0x44, 0x69, 0x73, 0x6B, 0x20, 0x23, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
 	0x25, 0x64, 0x0A, 0x00,
 };
 
-/* 803D1738-803D174C 0014+00 rc=0 efc=0 .data      @41                                                          */
-u8 lit_41[20] = {
+/* 803D1738-803D174C 0014+00 rc=0 efc=0 rfr=False None .data      @41                                                          */
+SECTION_DATA u8 lit_41[20] = {
 	0x20, 0x20, 0x47, 0x61, 0x6D, 0x65, 0x20, 0x76, 0x65, 0x72, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
 	0x25, 0x64, 0x0A, 0x00,
 };
 
-/* 803D174C-803D1760 0014+00 rc=0 efc=0 .data      @44                                                          */
-u8 lit_44[20] = {
+/* 803D174C-803D1760 0014+00 rc=0 efc=0 rfr=False None .data      @44                                                          */
+SECTION_DATA u8 lit_44[20] = {
 	0x20, 0x20, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6D, 0x69, 0x6E, 0x67, 0x20, 0x2E, 0x2E, 0x2E, 0x20,
 	0x25, 0x73, 0x0A, 0x00,
 };

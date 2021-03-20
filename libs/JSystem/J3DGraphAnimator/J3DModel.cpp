@@ -10,11 +10,6 @@
 // 
 
 struct J3DModel;
-struct J3DDeformData {
-	/* 8032E230 */ void offAllFlag(u32);
-	/* 8032E274 */ void deform(J3DModel*);
-};
-
 struct J3DModelData {
 	/* 803260F8 */ void syncJ3DSysFlags() const;
 };
@@ -25,6 +20,11 @@ struct J3DSkinDeform {
 	/* 8032D378 */ void changeFastSkinDL(J3DModelData*);
 	/* 8032D738 */ void transformVtxPosNrm(J3DModelData*);
 	/* 8032DFDC */ void deform(J3DModel*);
+};
+
+struct J3DDeformData {
+	/* 8032E230 */ void offAllFlag(u32);
+	/* 8032E274 */ void deform(J3DModel*);
 };
 
 struct J3DModel {
@@ -145,9 +145,7 @@ extern "C" void calcBBoardMtx__8J3DModelFv(); // 1
 extern "C" void prepareShapePackets__8J3DModelFv(); // 1
 extern "C" void __dt__8J3DModelFv(); // 1
 extern "C" void __dt__12J3DMtxBufferFv(); // 1
-SECTION_DATA extern void* const __vt__8J3DModel[9];
-SECTION_DATA extern void* const __vt__12J3DMtxBuffer[3];
-SECTION_SDATA2 extern f32 J3DModel__lit_896[1 + 1 /* padding */];
+extern "C" extern void* __vt__8J3DModel[9];
 
 // 
 // External References:
@@ -230,23 +228,23 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_RODATA extern const u8 j3dDefaultScale[12];
-SECTION_RODATA extern const u8 j3dDefaultMtx[48];
-SECTION_BSS extern u8 j3dSys[284];
+extern "C" extern u8 const j3dDefaultScale[12];
+extern "C" extern u8 const j3dDefaultMtx[48];
+extern "C" extern u8 j3dSys[284];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80456428-80456430 0004+04 rc=0 efc=0 .sdata2    @896                                                         */
-f32 J3DModel__lit_896[1 + 1 /* padding */] = {
+/* 80456428-80456430 0004+04 rc=1 efc=0 rfr=False None .sdata2    @896                                                         */
+SECTION_SDATA2 static f32 J3DModel__lit_896[1 + 1 /* padding */] = {
 	1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80327100-80327184 0084+00 rc=0 efc=0 .text      initialize__8J3DModelFv                                      */
+/* 80327100-80327184 0084+00 rc=3 efc=3 rfr=False None .text      initialize__8J3DModelFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,27 +256,27 @@ asm void J3DModel::initialize() {
 
 
 /* ############################################################################################## */
-/* 803CED20-803CED44 0024+00 rc=0 efc=0 .data      __vt__8J3DModel                                              */
-void* const __vt__8J3DModel[9] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)update__8J3DModelFv,
-	(void*)entry__8J3DModelFv,
-	(void*)calc__8J3DModelFv,
-	(void*)calcMaterial__8J3DModelFv,
-	(void*)calcDiffTexMtx__8J3DModelFv,
-	(void*)viewCalc__8J3DModelFv,
-	(void*)__dt__8J3DModelFv,
+/* 803CED20-803CED44 0024+00 rc=4 efc=3 rfr=False None .data      __vt__8J3DModel                                              */
+SECTION_DATA void* __vt__8J3DModel[9] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)update__8J3DModelFv,
+	/* 3    */ (void*)entry__8J3DModelFv,
+	/* 4    */ (void*)calc__8J3DModelFv,
+	/* 5    */ (void*)calcMaterial__8J3DModelFv,
+	/* 6    */ (void*)calcDiffTexMtx__8J3DModelFv,
+	/* 7    */ (void*)viewCalc__8J3DModelFv,
+	/* 8    */ (void*)__dt__8J3DModelFv,
 };
 
-/* 803CED44-803CED50 000C+00 rc=0 efc=0 .data      __vt__12J3DMtxBuffer                                         */
-void* const __vt__12J3DMtxBuffer[3] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__12J3DMtxBufferFv,
+/* 803CED44-803CED50 000C+00 rc=2 efc=0 rfr=False None .data      __vt__12J3DMtxBuffer                                         */
+SECTION_DATA static void* __vt__12J3DMtxBuffer[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__12J3DMtxBufferFv,
 };
 
-/* 80327184-80327300 017C+00 rc=0 efc=0 .text      entryModelData__8J3DModelFP12J3DModelDataUlUl                */
+/* 80327184-80327300 017C+00 rc=3 efc=3 rfr=False None .text      entryModelData__8J3DModelFP12J3DModelDataUlUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -289,7 +287,7 @@ asm void J3DModel::entryModelData(J3DModelData* field_0, u32 field_1, u32 field_
 #pragma pop
 
 
-/* 80327300-803273CC 00CC+00 rc=0 efc=0 .text      createShapePacket__8J3DModelFP12J3DModelData                 */
+/* 80327300-803273CC 00CC+00 rc=1 efc=0 rfr=False None .text      createShapePacket__8J3DModelFP12J3DModelData                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -300,7 +298,7 @@ asm void J3DModel::createShapePacket(J3DModelData* field_0) {
 #pragma pop
 
 
-/* 803273CC-803275FC 0230+00 rc=0 efc=0 .text      createMatPacket__8J3DModelFP12J3DModelDataUl                 */
+/* 803273CC-803275FC 0230+00 rc=1 efc=0 rfr=False None .text      createMatPacket__8J3DModelFP12J3DModelDataUl                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -311,7 +309,7 @@ asm void J3DModel::createMatPacket(J3DModelData* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 803275FC-8032767C 0080+00 rc=0 efc=0 .text      newDifferedDisplayList__8J3DModelFUl                         */
+/* 803275FC-8032767C 0080+00 rc=1 efc=1 rfr=False None .text      newDifferedDisplayList__8J3DModelFUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,7 +320,7 @@ asm void J3DModel::newDifferedDisplayList(u32 field_0) {
 #pragma pop
 
 
-/* 8032767C-803276B4 0038+00 rc=0 efc=0 .text      lock__8J3DModelFv                                            */
+/* 8032767C-803276B4 0038+00 rc=4 efc=4 rfr=False None .text      lock__8J3DModelFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,7 +331,7 @@ asm void J3DModel::lock() {
 #pragma pop
 
 
-/* 803276B4-803276EC 0038+00 rc=0 efc=0 .text      unlock__8J3DModelFv                                          */
+/* 803276B4-803276EC 0038+00 rc=2 efc=2 rfr=False None .text      unlock__8J3DModelFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -344,7 +342,7 @@ asm void J3DModel::unlock() {
 #pragma pop
 
 
-/* 803276EC-80327858 016C+00 rc=0 efc=0 .text      calcMaterial__8J3DModelFv                                    */
+/* 803276EC-80327858 016C+00 rc=1 efc=0 rfr=False None .text      calcMaterial__8J3DModelFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -355,7 +353,7 @@ asm void J3DModel::calcMaterial() {
 #pragma pop
 
 
-/* 80327858-803279A0 0148+00 rc=0 efc=0 .text      calcDiffTexMtx__8J3DModelFv                                  */
+/* 80327858-803279A0 0148+00 rc=1 efc=0 rfr=False None .text      calcDiffTexMtx__8J3DModelFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -366,7 +364,7 @@ asm void J3DModel::calcDiffTexMtx() {
 #pragma pop
 
 
-/* 803279A0-80327A2C 008C+00 rc=0 efc=0 .text      diff__8J3DModelFv                                            */
+/* 803279A0-80327A2C 008C+00 rc=2 efc=2 rfr=False None .text      diff__8J3DModelFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -377,7 +375,7 @@ asm void J3DModel::diff() {
 #pragma pop
 
 
-/* 80327A2C-80327AA0 0074+00 rc=0 efc=0 .text      setDeformData__8J3DModelFP13J3DDeformDataUl                  */
+/* 80327A2C-80327AA0 0074+00 rc=1 efc=1 rfr=False None .text      setDeformData__8J3DModelFP13J3DDeformDataUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -388,7 +386,7 @@ asm void J3DModel::setDeformData(J3DDeformData* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80327AA0-80327BD4 0134+00 rc=0 efc=0 .text      setSkinDeform__8J3DModelFP13J3DSkinDeformUl                  */
+/* 80327AA0-80327BD4 0134+00 rc=0 efc=0 rfr=False None .text      setSkinDeform__8J3DModelFP13J3DSkinDeformUl                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -399,7 +397,7 @@ asm void J3DModel::setSkinDeform(J3DSkinDeform* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80327BD4-80327C58 0084+00 rc=0 efc=0 .text      calcAnmMtx__8J3DModelFv                                      */
+/* 80327BD4-80327C58 0084+00 rc=1 efc=0 rfr=False None .text      calcAnmMtx__8J3DModelFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,7 +408,7 @@ asm void J3DModel::calcAnmMtx() {
 #pragma pop
 
 
-/* 80327C58-80327CA4 004C+00 rc=0 efc=0 .text      calcWeightEnvelopeMtx__8J3DModelFv                           */
+/* 80327C58-80327CA4 004C+00 rc=2 efc=1 rfr=False None .text      calcWeightEnvelopeMtx__8J3DModelFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -421,7 +419,7 @@ asm void J3DModel::calcWeightEnvelopeMtx() {
 #pragma pop
 
 
-/* 80327CA4-80327CF0 004C+00 rc=0 efc=0 .text      update__8J3DModelFv                                          */
+/* 80327CA4-80327CF0 004C+00 rc=1 efc=0 rfr=False None .text      update__8J3DModelFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -432,7 +430,7 @@ asm void J3DModel::update() {
 #pragma pop
 
 
-/* 80327CF0-80327E4C 015C+00 rc=0 efc=0 .text      calc__8J3DModelFv                                            */
+/* 80327CF0-80327E4C 015C+00 rc=1 efc=0 rfr=False None .text      calc__8J3DModelFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -443,7 +441,7 @@ asm void J3DModel::calc() {
 #pragma pop
 
 
-/* 80327E4C-80327F40 00F4+00 rc=0 efc=0 .text      entry__8J3DModelFv                                           */
+/* 80327E4C-80327F40 00F4+00 rc=1 efc=0 rfr=False None .text      entry__8J3DModelFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -454,7 +452,7 @@ asm void J3DModel::entry() {
 #pragma pop
 
 
-/* 80327F40-80328190 0250+00 rc=0 efc=0 .text      viewCalc__8J3DModelFv                                        */
+/* 80327F40-80328190 0250+00 rc=1 efc=0 rfr=False None .text      viewCalc__8J3DModelFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -465,7 +463,7 @@ asm void J3DModel::viewCalc() {
 #pragma pop
 
 
-/* 80328190-803281B4 0024+00 rc=0 efc=0 .text      calcNrmMtx__8J3DModelFv                                      */
+/* 80328190-803281B4 0024+00 rc=1 efc=0 rfr=False None .text      calcNrmMtx__8J3DModelFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -476,7 +474,7 @@ asm void J3DModel::calcNrmMtx() {
 #pragma pop
 
 
-/* 803281B4-803282B8 0104+00 rc=0 efc=0 .text      calcBumpMtx__8J3DModelFv                                     */
+/* 803281B4-803282B8 0104+00 rc=1 efc=0 rfr=False None .text      calcBumpMtx__8J3DModelFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -487,7 +485,7 @@ asm void J3DModel::calcBumpMtx() {
 #pragma pop
 
 
-/* 803282B8-803282EC 0034+00 rc=0 efc=0 .text      calcBBoardMtx__8J3DModelFv                                   */
+/* 803282B8-803282EC 0034+00 rc=1 efc=0 rfr=False None .text      calcBBoardMtx__8J3DModelFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -498,7 +496,7 @@ asm void J3DModel::calcBBoardMtx() {
 #pragma pop
 
 
-/* 803282EC-80328350 0064+00 rc=0 efc=0 .text      prepareShapePackets__8J3DModelFv                             */
+/* 803282EC-80328350 0064+00 rc=2 efc=0 rfr=False None .text      prepareShapePackets__8J3DModelFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -509,7 +507,7 @@ asm void J3DModel::prepareShapePackets() {
 #pragma pop
 
 
-/* 80328350-803283B4 0064+00 rc=0 efc=0 .text      __dt__8J3DModelFv                                            */
+/* 80328350-803283B4 0064+00 rc=1 efc=0 rfr=False None .text      __dt__8J3DModelFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -520,7 +518,7 @@ asm J3DModel::~J3DModel() {
 #pragma pop
 
 
-/* 803283B4-803283FC 0048+00 rc=0 efc=0 .text      __dt__12J3DMtxBufferFv                                       */
+/* 803283B4-803283FC 0048+00 rc=1 efc=0 rfr=False None .text      __dt__12J3DMtxBufferFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

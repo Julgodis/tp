@@ -9,13 +9,13 @@
 // Types:
 // 
 
+struct J2DOrthoGraph {
+};
+
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct J2DOrthoGraph {
 };
 
 struct dMsgScrnExplain_c {
@@ -92,23 +92,23 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JKRArchive {
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+struct JKRExpHeap {
 };
 
 struct J2DGrafContext {
+};
+
+struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-};
-
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
 };
 
 struct CPaneMgr {
@@ -169,38 +169,19 @@ extern "C" void getAlphaRatio__17dMsgScrnExplain_cFv(); // 1
 extern "C" void checkTriggerA__17dMsgScrnExplain_cFv(); // 1
 extern "C" void checkTriggerB__17dMsgScrnExplain_cFv(); // 1
 extern "C" void __sinit_d_msg_scrn_explain_cpp(); // 1
-SECTION_RODATA extern const char* const msg_scrn_d_msg_scrn_explain__stringBase0;
-SECTION_DATA extern u8 msg_scrn_d_msg_scrn_explain__cNullVec__6Z2Calc[12];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3819[3];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3820[3];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3821[3];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3822[3];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3823[3];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3824[3];
-SECTION_DATA extern u8 msg_scrn_d_msg_scrn_explain__init_process[72];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3825[3];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3826[3];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3827[3];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3828[3];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3829[3];
-SECTION_DATA extern void* msg_scrn_d_msg_scrn_explain__lit_3830[3];
-SECTION_DATA extern u8 msg_scrn_d_msg_scrn_explain__move_process[72];
-SECTION_DATA extern void* const __vt__17dMsgScrnExplain_c[3];
-SECTION_SDATA2 extern f32 lit_3978;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_explain__lit_3979;
-SECTION_SDATA2 extern u8 lit_3980[4];
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_explain__lit_3981;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_explain__lit_4078;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_explain__lit_4120;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_explain__lit_4121;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_explain__lit_4122;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_explain__lit_4123;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_explain__lit_4124;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_explain__lit_4211;
-SECTION_SDATA2 extern f32 lit_4230;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_explain__lit_4294;
-SECTION_SDATA2 extern f32 msg_scrn_d_msg_scrn_explain__lit_4414;
-SECTION_SDATA2 extern f64 msg_scrn_d_msg_scrn_explain__lit_4416;
+extern "C" extern char const* const msg_scrn_d_msg_scrn_explain__stringBase0;
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3819[3];
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3820[3];
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3821[3];
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3822[3];
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3823[3];
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3824[3];
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3825[3];
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3826[3];
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3827[3];
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3828[3];
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3829[3];
+extern "C" extern void* msg_scrn_d_msg_scrn_explain__lit_3830[3];
 
 // 
 // External References:
@@ -279,82 +260,82 @@ extern "C" void _restgpr_29(); // 1
 extern "C" void snprintf(); // 1
 extern "C" void strcat(); // 1
 extern "C" void strcpy(); // 1
-SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 g_meter2_info[248];
-SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
-SECTION_SBSS extern u8 data_80450B70[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 g_MsgObject_HIO_c[1040];
+extern "C" extern u8 data_80450B70[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80399910-80399990 007C+04 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 80399910-80399990 007C+04 rc=2 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_80399910 = "zelda_message_window_new.blo";
-const char* const stringBase_8039992D = 
+SECTION_DEAD static char const* const stringBase_80399910 = "zelda_message_window_new.blo";
+SECTION_DEAD static char const* const stringBase_8039992D = 
     "zelda_message_window_text_save_road.blo";
-const char* const stringBase_80399955 = "zelda_message_window_text.blo";
-const char* const stringBase_80399973 = "";
-const char* const stringBase_80399974 = "tt_block8x8.bti";
-const char* const stringBase_80399984 = """\x1B""CR[%d]";
+SECTION_DEAD static char const* const stringBase_80399955 = "zelda_message_window_text.blo";
+SECTION_DEAD static char const* const stringBase_80399973 = "";
+SECTION_DEAD static char const* const stringBase_80399974 = "tt_block8x8.bti";
+SECTION_DEAD static char const* const stringBase_80399984 = """\x1B""CR[%d]";
 /* @stringBase0 padding */
-char* const pad_8039998C = "\0\0\0";
+SECTION_DEAD static char const* const pad_8039998C = "\0\0\0";
 #pragma pop
 
-/* 803C0E40-803C0E4C 000C+00 rc=0 efc=0 .data      cNullVec__6Z2Calc                                            */
-u8 msg_scrn_d_msg_scrn_explain__cNullVec__6Z2Calc[12] = {
+/* 803C0E40-803C0E4C 000C+00 rc=1 efc=0 rfr=False None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA static u8 msg_scrn_d_msg_scrn_explain__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C0E4C-803C0E58 000C+00 rc=0 efc=0 .data      @3819                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3819[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)wait_init__17dMsgScrnExplain_cFv,
+/* 803C0E4C-803C0E58 000C+00 rc=0 efc=0 rfr=False None .data      @3819                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3819[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)wait_init__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0E58-803C0E64 000C+00 rc=0 efc=0 .data      @3820                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3820[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)open_request_init__17dMsgScrnExplain_cFv,
+/* 803C0E58-803C0E64 000C+00 rc=0 efc=0 rfr=False None .data      @3820                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3820[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)open_request_init__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0E64-803C0E70 000C+00 rc=0 efc=0 .data      @3821                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3821[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)open_init__17dMsgScrnExplain_cFv,
+/* 803C0E64-803C0E70 000C+00 rc=0 efc=0 rfr=False None .data      @3821                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3821[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)open_init__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0E70-803C0E7C 000C+00 rc=0 efc=0 .data      @3822                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3822[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)move_init__17dMsgScrnExplain_cFv,
+/* 803C0E70-803C0E7C 000C+00 rc=0 efc=0 rfr=False None .data      @3822                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3822[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)move_init__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0E7C-803C0E88 000C+00 rc=0 efc=0 .data      @3823                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3823[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)move_select_init__17dMsgScrnExplain_cFv,
+/* 803C0E7C-803C0E88 000C+00 rc=0 efc=0 rfr=False None .data      @3823                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3823[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)move_select_init__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0E88-803C0E94 000C+00 rc=0 efc=0 .data      @3824                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3824[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)close_init__17dMsgScrnExplain_cFv,
+/* 803C0E88-803C0E94 000C+00 rc=0 efc=0 rfr=False None .data      @3824                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3824[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)close_init__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0E94-803C0EDC 0048+00 rc=0 efc=0 .data      init_process                                                 */
-u8 msg_scrn_d_msg_scrn_explain__init_process[72] = {
+/* 803C0E94-803C0EDC 0048+00 rc=1 efc=0 rfr=False None .data      init_process                                                 */
+SECTION_DATA static u8 msg_scrn_d_msg_scrn_explain__init_process[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -362,50 +343,50 @@ u8 msg_scrn_d_msg_scrn_explain__init_process[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C0EDC-803C0EE8 000C+00 rc=0 efc=0 .data      @3825                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3825[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)wait_proc__17dMsgScrnExplain_cFv,
+/* 803C0EDC-803C0EE8 000C+00 rc=0 efc=0 rfr=False None .data      @3825                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3825[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)wait_proc__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0EE8-803C0EF4 000C+00 rc=0 efc=0 .data      @3826                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3826[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)open_request_proc__17dMsgScrnExplain_cFv,
+/* 803C0EE8-803C0EF4 000C+00 rc=0 efc=0 rfr=False None .data      @3826                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3826[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)open_request_proc__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0EF4-803C0F00 000C+00 rc=0 efc=0 .data      @3827                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3827[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)open_proc__17dMsgScrnExplain_cFv,
+/* 803C0EF4-803C0F00 000C+00 rc=0 efc=0 rfr=False None .data      @3827                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3827[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)open_proc__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0F00-803C0F0C 000C+00 rc=0 efc=0 .data      @3828                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3828[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)move_proc__17dMsgScrnExplain_cFv,
+/* 803C0F00-803C0F0C 000C+00 rc=0 efc=0 rfr=False None .data      @3828                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3828[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)move_proc__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0F0C-803C0F18 000C+00 rc=0 efc=0 .data      @3829                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3829[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)move_select_proc__17dMsgScrnExplain_cFv,
+/* 803C0F0C-803C0F18 000C+00 rc=0 efc=0 rfr=False None .data      @3829                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3829[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)move_select_proc__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0F18-803C0F24 000C+00 rc=0 efc=0 .data      @3830                                                        */
-void* msg_scrn_d_msg_scrn_explain__lit_3830[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)close_proc__17dMsgScrnExplain_cFv,
+/* 803C0F18-803C0F24 000C+00 rc=0 efc=0 rfr=False None .data      @3830                                                        */
+SECTION_DATA void* msg_scrn_d_msg_scrn_explain__lit_3830[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)close_proc__17dMsgScrnExplain_cFv,
 };
 
-/* 803C0F24-803C0F6C 0048+00 rc=0 efc=0 .data      move_process                                                 */
-u8 msg_scrn_d_msg_scrn_explain__move_process[72] = {
+/* 803C0F24-803C0F6C 0048+00 rc=1 efc=0 rfr=False None .data      move_process                                                 */
+SECTION_DATA static u8 msg_scrn_d_msg_scrn_explain__move_process[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -413,28 +394,28 @@ u8 msg_scrn_d_msg_scrn_explain__move_process[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C0F6C-803C0F78 000C+00 rc=0 efc=0 .data      __vt__17dMsgScrnExplain_c                                    */
-void* const __vt__17dMsgScrnExplain_c[3] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__17dMsgScrnExplain_cFv,
+/* 803C0F6C-803C0F78 000C+00 rc=2 efc=0 rfr=False None .data      __vt__17dMsgScrnExplain_c                                    */
+SECTION_DATA static void* __vt__17dMsgScrnExplain_c[3] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__17dMsgScrnExplain_cFv,
 };
 
-/* 80454BB8-80454BBC 0004+00 rc=0 efc=0 .sdata2    @3978                                                        */
-f32 lit_3978 = 608.0f;
+/* 80454BB8-80454BBC 0004+00 rc=5 efc=0 rfr=False None .sdata2    @3978                                                        */
+SECTION_SDATA2 static f32 lit_3978 = 608.0f;
 
-/* 80454BBC-80454BC0 0004+00 rc=0 efc=0 .sdata2    @3979                                                        */
-f32 msg_scrn_d_msg_scrn_explain__lit_3979 = -10.0f;
+/* 80454BBC-80454BC0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3979                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_explain__lit_3979 = -10.0f;
 
-/* 80454BC0-80454BC4 0004+00 rc=0 efc=0 .sdata2    @3980                                                        */
-u8 lit_3980[4] = {
+/* 80454BC0-80454BC4 0004+00 rc=5 efc=0 rfr=False None .sdata2    @3980                                                        */
+SECTION_SDATA2 static u8 lit_3980[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454BC4-80454BC8 0004+00 rc=0 efc=0 .sdata2    @3981                                                        */
-f32 msg_scrn_d_msg_scrn_explain__lit_3981 = -190.0f;
+/* 80454BC4-80454BC8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3981                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_explain__lit_3981 = -190.0f;
 
-/* 8023CC88-8023D538 08B0+00 rc=0 efc=0 .text      __ct__17dMsgScrnExplain_cFP9STControlUcbUc                   */
+/* 8023CC88-8023D538 08B0+00 rc=2 efc=2 rfr=False None .text      __ct__17dMsgScrnExplain_cFP9STControlUcbUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,7 +426,7 @@ asm dMsgScrnExplain_c::dMsgScrnExplain_c(STControl* field_0, u8 field_1, bool fi
 #pragma pop
 
 
-/* 8023D538-8023D7D8 02A0+00 rc=0 efc=0 .text      __dt__17dMsgScrnExplain_cFv                                  */
+/* 8023D538-8023D7D8 02A0+00 rc=1 efc=0 rfr=False None .text      __dt__17dMsgScrnExplain_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -457,10 +438,10 @@ asm dMsgScrnExplain_c::~dMsgScrnExplain_c() {
 
 
 /* ############################################################################################## */
-/* 80454BC8-80454BCC 0004+00 rc=0 efc=0 .sdata2    @4078                                                        */
-f32 msg_scrn_d_msg_scrn_explain__lit_4078 = -35.0f;
+/* 80454BC8-80454BCC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4078                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_explain__lit_4078 = -35.0f;
 
-/* 8023D7D8-8023D918 0140+00 rc=0 efc=0 .text      move__17dMsgScrnExplain_cFv                                  */
+/* 8023D7D8-8023D918 0140+00 rc=4 efc=4 rfr=False None .text      move__17dMsgScrnExplain_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -472,22 +453,22 @@ asm void dMsgScrnExplain_c::move() {
 
 
 /* ############################################################################################## */
-/* 80454BCC-80454BD0 0004+00 rc=0 efc=0 .sdata2    @4120                                                        */
-f32 msg_scrn_d_msg_scrn_explain__lit_4120 = 448.0f;
+/* 80454BCC-80454BD0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4120                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_explain__lit_4120 = 448.0f;
 
-/* 80454BD0-80454BD4 0004+00 rc=0 efc=0 .sdata2    @4121                                                        */
-f32 msg_scrn_d_msg_scrn_explain__lit_4121 = -1.0f;
+/* 80454BD0-80454BD4 0004+00 rc=4 efc=0 rfr=False None .sdata2    @4121                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_explain__lit_4121 = -1.0f;
 
-/* 80454BD4-80454BD8 0004+00 rc=0 efc=0 .sdata2    @4122                                                        */
-f32 msg_scrn_d_msg_scrn_explain__lit_4122 = -100.0f;
+/* 80454BD4-80454BD8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4122                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_explain__lit_4122 = -100.0f;
 
-/* 80454BD8-80454BDC 0004+00 rc=0 efc=0 .sdata2    @4123                                                        */
-f32 msg_scrn_d_msg_scrn_explain__lit_4123 = 486.0f;
+/* 80454BD8-80454BDC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4123                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_explain__lit_4123 = 486.0f;
 
-/* 80454BDC-80454BE0 0004+00 rc=0 efc=0 .sdata2    @4124                                                        */
-f32 msg_scrn_d_msg_scrn_explain__lit_4124 = 209.0f;
+/* 80454BDC-80454BE0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4124                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_explain__lit_4124 = 209.0f;
 
-/* 8023D918-8023DAD0 01B8+00 rc=0 efc=0 .text      draw__17dMsgScrnExplain_cFP13J2DOrthoGraph                   */
+/* 8023D918-8023DAD0 01B8+00 rc=3 efc=3 rfr=False None .text      draw__17dMsgScrnExplain_cFP13J2DOrthoGraph                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -498,25 +479,25 @@ asm void dMsgScrnExplain_c::draw(J2DOrthoGraph* field_0) {
 #pragma pop
 
 
-/* 8023DAD0-8023DAD4 0004+00 rc=0 efc=0 .text      wait_init__17dMsgScrnExplain_cFv                             */
+/* 8023DAD0-8023DAD4 0004+00 rc=1 efc=0 rfr=False None .text      wait_init__17dMsgScrnExplain_cFv                             */
 void dMsgScrnExplain_c::wait_init() {
 	/* empty function */
 }
 
 
-/* 8023DAD4-8023DAD8 0004+00 rc=0 efc=0 .text      wait_proc__17dMsgScrnExplain_cFv                             */
+/* 8023DAD4-8023DAD8 0004+00 rc=1 efc=0 rfr=False None .text      wait_proc__17dMsgScrnExplain_cFv                             */
 void dMsgScrnExplain_c::wait_proc() {
 	/* empty function */
 }
 
 
-/* 8023DAD8-8023DADC 0004+00 rc=0 efc=0 .text      open_request_init__17dMsgScrnExplain_cFv                     */
+/* 8023DAD8-8023DADC 0004+00 rc=2 efc=0 rfr=False None .text      open_request_init__17dMsgScrnExplain_cFv                     */
 void dMsgScrnExplain_c::open_request_init() {
 	/* empty function */
 }
 
 
-/* 8023DADC-8023DBE4 0108+00 rc=0 efc=0 .text      open_request_proc__17dMsgScrnExplain_cFv                     */
+/* 8023DADC-8023DBE4 0108+00 rc=1 efc=0 rfr=False None .text      open_request_proc__17dMsgScrnExplain_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -528,10 +509,10 @@ asm void dMsgScrnExplain_c::open_request_proc() {
 
 
 /* ############################################################################################## */
-/* 80454BE0-80454BE4 0004+00 rc=0 efc=0 .sdata2    @4211                                                        */
-f32 msg_scrn_d_msg_scrn_explain__lit_4211 = 1.0f;
+/* 80454BE0-80454BE4 0004+00 rc=6 efc=0 rfr=False None .sdata2    @4211                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_explain__lit_4211 = 1.0f;
 
-/* 8023DBE4-8023DC7C 0098+00 rc=0 efc=0 .text      open_init__17dMsgScrnExplain_cFv                             */
+/* 8023DBE4-8023DC7C 0098+00 rc=1 efc=0 rfr=False None .text      open_init__17dMsgScrnExplain_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -543,10 +524,10 @@ asm void dMsgScrnExplain_c::open_init() {
 
 
 /* ############################################################################################## */
-/* 80454BE4-80454BE8 0004+00 rc=0 efc=0 .sdata2    @4230                                                        */
-f32 lit_4230 = 150.0f;
+/* 80454BE4-80454BE8 0004+00 rc=2 efc=0 rfr=False None .sdata2    @4230                                                        */
+SECTION_SDATA2 static f32 lit_4230 = 150.0f;
 
-/* 8023DC7C-8023DD90 0114+00 rc=0 efc=0 .text      open_proc__17dMsgScrnExplain_cFv                             */
+/* 8023DC7C-8023DD90 0114+00 rc=1 efc=0 rfr=False None .text      open_proc__17dMsgScrnExplain_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -557,7 +538,7 @@ asm void dMsgScrnExplain_c::open_proc() {
 #pragma pop
 
 
-/* 8023DD90-8023DDB4 0024+00 rc=0 efc=0 .text      move_init__17dMsgScrnExplain_cFv                             */
+/* 8023DD90-8023DDB4 0024+00 rc=1 efc=0 rfr=False None .text      move_init__17dMsgScrnExplain_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -568,7 +549,7 @@ asm void dMsgScrnExplain_c::move_init() {
 #pragma pop
 
 
-/* 8023DDB4-8023DE8C 00D8+00 rc=0 efc=0 .text      move_proc__17dMsgScrnExplain_cFv                             */
+/* 8023DDB4-8023DE8C 00D8+00 rc=1 efc=0 rfr=False None .text      move_proc__17dMsgScrnExplain_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -580,10 +561,10 @@ asm void dMsgScrnExplain_c::move_proc() {
 
 
 /* ############################################################################################## */
-/* 80454BE8-80454BEC 0004+00 rc=0 efc=0 .sdata2    @4294                                                        */
-f32 msg_scrn_d_msg_scrn_explain__lit_4294 = 0.5f;
+/* 80454BE8-80454BEC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4294                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_explain__lit_4294 = 0.5f;
 
-/* 8023DE8C-8023E0F4 0268+00 rc=0 efc=0 .text      move_select_init__17dMsgScrnExplain_cFv                      */
+/* 8023DE8C-8023E0F4 0268+00 rc=1 efc=0 rfr=False None .text      move_select_init__17dMsgScrnExplain_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -594,7 +575,7 @@ asm void dMsgScrnExplain_c::move_select_init() {
 #pragma pop
 
 
-/* 8023E0F4-8023E43C 0348+00 rc=0 efc=0 .text      move_select_proc__17dMsgScrnExplain_cFv                      */
+/* 8023E0F4-8023E43C 0348+00 rc=1 efc=0 rfr=False None .text      move_select_proc__17dMsgScrnExplain_cFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -605,7 +586,7 @@ asm void dMsgScrnExplain_c::move_select_proc() {
 #pragma pop
 
 
-/* 8023E43C-8023E448 000C+00 rc=0 efc=0 .text      close_init__17dMsgScrnExplain_cFv                            */
+/* 8023E43C-8023E448 000C+00 rc=1 efc=0 rfr=False None .text      close_init__17dMsgScrnExplain_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -616,7 +597,7 @@ asm void dMsgScrnExplain_c::close_init() {
 #pragma pop
 
 
-/* 8023E448-8023E558 0110+00 rc=0 efc=0 .text      close_proc__17dMsgScrnExplain_cFv                            */
+/* 8023E448-8023E558 0110+00 rc=1 efc=0 rfr=False None .text      close_proc__17dMsgScrnExplain_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -627,7 +608,7 @@ asm void dMsgScrnExplain_c::close_proc() {
 #pragma pop
 
 
-/* 8023E558-8023E5CC 0074+00 rc=0 efc=0 .text      openExplain__17dMsgScrnExplain_cFUlUcUcUcb                   */
+/* 8023E558-8023E5CC 0074+00 rc=7 efc=7 rfr=False None .text      openExplain__17dMsgScrnExplain_cFUlUcUcUcb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -639,13 +620,13 @@ asm void dMsgScrnExplain_c::openExplain(u32 field_0, u8 field_1, u8 field_2, u8 
 
 
 /* ############################################################################################## */
-/* 80454BEC-80454BF0 0004+00 rc=0 efc=0 .sdata2    @4414                                                        */
-f32 msg_scrn_d_msg_scrn_explain__lit_4414 = 5.0f;
+/* 80454BEC-80454BF0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4414                                                        */
+SECTION_SDATA2 static f32 msg_scrn_d_msg_scrn_explain__lit_4414 = 5.0f;
 
-/* 80454BF0-80454BF8 0008+00 rc=0 efc=0 .sdata2    @4416                                                        */
-f64 msg_scrn_d_msg_scrn_explain__lit_4416 = 4503601774854144.0 /* cast s32 to float */;
+/* 80454BF0-80454BF8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @4416                                                        */
+SECTION_SDATA2 static f64 msg_scrn_d_msg_scrn_explain__lit_4416 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8023E5CC-8023E640 0074+00 rc=0 efc=0 .text      getAlphaRatio__17dMsgScrnExplain_cFv                         */
+/* 8023E5CC-8023E640 0074+00 rc=2 efc=0 rfr=False None .text      getAlphaRatio__17dMsgScrnExplain_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -656,7 +637,7 @@ asm void dMsgScrnExplain_c::getAlphaRatio() {
 #pragma pop
 
 
-/* 8023E640-8023E654 0014+00 rc=0 efc=0 .text      checkTriggerA__17dMsgScrnExplain_cFv                         */
+/* 8023E640-8023E654 0014+00 rc=1 efc=0 rfr=False None .text      checkTriggerA__17dMsgScrnExplain_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -667,7 +648,7 @@ asm void dMsgScrnExplain_c::checkTriggerA() {
 #pragma pop
 
 
-/* 8023E654-8023E668 0014+00 rc=0 efc=0 .text      checkTriggerB__17dMsgScrnExplain_cFv                         */
+/* 8023E654-8023E668 0014+00 rc=1 efc=0 rfr=False None .text      checkTriggerB__17dMsgScrnExplain_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -678,7 +659,7 @@ asm void dMsgScrnExplain_c::checkTriggerB() {
 #pragma pop
 
 
-/* 8023E668-8023E79C 0134+00 rc=0 efc=0 .text      __sinit_d_msg_scrn_explain_cpp                               */
+/* 8023E668-8023E79C 0134+00 rc=1 efc=1 rfr=False None .text      __sinit_d_msg_scrn_explain_cpp                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

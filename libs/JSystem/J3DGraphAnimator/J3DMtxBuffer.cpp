@@ -9,10 +9,10 @@
 // Types:
 // 
 
-struct Vec {
+struct J3DModelData {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct J3DMtxBuffer {
@@ -51,13 +51,6 @@ extern "C" void calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf(); // 1
 extern "C" void calcNrmMtx__12J3DMtxBufferFv(); // 1
 extern "C" void calcBBoardMtx__12J3DMtxBufferFv(); // 1
 extern "C" void J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f(); // 1
-SECTION_BSS extern u8 sNoUseDrawMtx__12J3DMtxBuffer[48];
-SECTION_BSS extern u8 sNoUseNrmMtx__12J3DMtxBuffer[36 + 4 /* padding */];
-SECTION_SDATA extern void* sNoUseDrawMtxPtr__12J3DMtxBuffer;
-SECTION_SDATA extern void* sNoUseNrmMtxPtr__12J3DMtxBuffer;
-SECTION_SDATA extern u8 J3DUnit01[8];
-SECTION_SDATA2 extern f32 J3DMtxBuffer__lit_1320;
-SECTION_SDATA2 extern u8 lit_1321[4];
 
 // 
 // External References:
@@ -101,13 +94,13 @@ extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_BSS extern u8 j3dSys[284];
+extern "C" extern u8 j3dSys[284];
 
 // 
 // Declarations:
 // 
 
-/* 80326214-80326258 0044+00 rc=0 efc=0 .text      initialize__12J3DMtxBufferFv                                 */
+/* 80326214-80326258 0044+00 rc=1 efc=1 rfr=False None .text      initialize__12J3DMtxBufferFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,7 +111,7 @@ asm void J3DMtxBuffer::initialize() {
 #pragma pop
 
 
-/* 80326258-80326364 010C+00 rc=0 efc=0 .text      create__12J3DMtxBufferFP12J3DModelDataUl                     */
+/* 80326258-80326364 010C+00 rc=1 efc=1 rfr=False None .text      create__12J3DMtxBufferFP12J3DModelDataUl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +122,7 @@ asm void J3DMtxBuffer::create(J3DModelData* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80326364-803263F0 008C+00 rc=0 efc=0 .text      createAnmMtx__12J3DMtxBufferFP12J3DModelData                 */
+/* 80326364-803263F0 008C+00 rc=1 efc=0 rfr=False None .text      createAnmMtx__12J3DMtxBufferFP12J3DModelData                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -140,7 +133,7 @@ asm void J3DMtxBuffer::createAnmMtx(J3DModelData* field_0) {
 #pragma pop
 
 
-/* 803263F0-8032648C 009C+00 rc=0 efc=0 .text      createWeightEnvelopeMtx__12J3DMtxBufferFP12J3DModelData      */
+/* 803263F0-8032648C 009C+00 rc=1 efc=0 rfr=False None .text      createWeightEnvelopeMtx__12J3DMtxBufferFP12J3DModelData      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,13 +145,19 @@ asm void J3DMtxBuffer::createWeightEnvelopeMtx(J3DModelData* field_0) {
 
 
 /* ############################################################################################## */
-/* 80450970-80450974 0004+00 rc=0 efc=0 .sdata     sNoUseDrawMtxPtr__12J3DMtxBuffer                             */
-void* sNoUseDrawMtxPtr__12J3DMtxBuffer = (void*)&sNoUseDrawMtx__12J3DMtxBuffer;
+/* 804371C0-804371F0 0030+00 rc=1 efc=0 rfr=False None .bss       sNoUseDrawMtx__12J3DMtxBuffer                                */
+static u8 sNoUseDrawMtx__12J3DMtxBuffer[48];
 
-/* 80450974-80450978 0004+00 rc=0 efc=0 .sdata     sNoUseNrmMtxPtr__12J3DMtxBuffer                              */
-void* sNoUseNrmMtxPtr__12J3DMtxBuffer = (void*)&sNoUseNrmMtx__12J3DMtxBuffer;
+/* 804371F0-80437218 0024+04 rc=1 efc=0 rfr=False None .bss       sNoUseNrmMtx__12J3DMtxBuffer                                 */
+static u8 sNoUseNrmMtx__12J3DMtxBuffer[36 + 4 /* padding */];
 
-/* 8032648C-803264B8 002C+00 rc=0 efc=0 .text      setNoUseDrawMtx__12J3DMtxBufferFv                            */
+/* 80450970-80450974 0004+00 rc=1 efc=0 rfr=False None .sdata     sNoUseDrawMtxPtr__12J3DMtxBuffer                             */
+SECTION_SDATA static void* sNoUseDrawMtxPtr__12J3DMtxBuffer = (void*)&sNoUseDrawMtx__12J3DMtxBuffer;
+
+/* 80450974-80450978 0004+00 rc=1 efc=0 rfr=False None .sdata     sNoUseNrmMtxPtr__12J3DMtxBuffer                              */
+SECTION_SDATA static void* sNoUseNrmMtxPtr__12J3DMtxBuffer = (void*)&sNoUseNrmMtx__12J3DMtxBuffer;
+
+/* 8032648C-803264B8 002C+00 rc=1 efc=0 rfr=False None .text      setNoUseDrawMtx__12J3DMtxBufferFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,7 +168,7 @@ asm void J3DMtxBuffer::setNoUseDrawMtx() {
 #pragma pop
 
 
-/* 803264B8-80326664 01AC+00 rc=0 efc=0 .text      createDoubleDrawMtx__12J3DMtxBufferFP12J3DModelDataUl        */
+/* 803264B8-80326664 01AC+00 rc=1 efc=0 rfr=False None .text      createDoubleDrawMtx__12J3DMtxBufferFP12J3DModelDataUl        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +179,7 @@ asm void J3DMtxBuffer::createDoubleDrawMtx(J3DModelData* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80326664-803268D4 0270+00 rc=0 efc=0 .text      createBumpMtxArray__12J3DMtxBufferFP12J3DModelDataUl         */
+/* 80326664-803268D4 0270+00 rc=1 efc=0 rfr=False None .text      createBumpMtxArray__12J3DMtxBufferFP12J3DModelDataUl         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,12 +191,12 @@ asm void J3DMtxBuffer::createBumpMtxArray(J3DModelData* field_0, u32 field_1) {
 
 
 /* ############################################################################################## */
-/* 80450978-80450980 0008+00 rc=0 efc=0 .sdata     J3DUnit01                                                    */
-u8 J3DUnit01[8] = {
+/* 80450978-80450980 0008+00 rc=1 efc=0 rfr=False None .sdata     J3DUnit01                                                    */
+SECTION_SDATA static u8 J3DUnit01[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 803268D4-80326ACC 01F8+00 rc=0 efc=0 .text      calcWeightEnvelopeMtx__12J3DMtxBufferFv                      */
+/* 803268D4-80326ACC 01F8+00 rc=1 efc=1 rfr=False None .text      calcWeightEnvelopeMtx__12J3DMtxBufferFv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -208,7 +207,7 @@ asm void J3DMtxBuffer::calcWeightEnvelopeMtx() {
 #pragma pop
 
 
-/* 80326ACC-80326D3C 0270+00 rc=0 efc=0 .text      calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf                */
+/* 80326ACC-80326D3C 0270+00 rc=1 efc=1 rfr=False None .text      calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -219,7 +218,7 @@ asm void J3DMtxBuffer::calcDrawMtx(u32 field_0, Vec const& field_1, f32 const (&
 #pragma pop
 
 
-/* 80326D3C-80326EF0 01B4+00 rc=0 efc=0 .text      calcNrmMtx__12J3DMtxBufferFv                                 */
+/* 80326D3C-80326EF0 01B4+00 rc=1 efc=1 rfr=False None .text      calcNrmMtx__12J3DMtxBufferFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -231,15 +230,15 @@ asm void J3DMtxBuffer::calcNrmMtx() {
 
 
 /* ############################################################################################## */
-/* 80456420-80456424 0004+00 rc=0 efc=0 .sdata2    @1320                                                        */
-f32 J3DMtxBuffer__lit_1320 = 1.0f;
+/* 80456420-80456424 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1320                                                        */
+SECTION_SDATA2 static f32 J3DMtxBuffer__lit_1320 = 1.0f;
 
-/* 80456424-80456428 0004+00 rc=0 efc=0 .sdata2    @1321                                                        */
-u8 lit_1321[4] = {
+/* 80456424-80456428 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1321                                                        */
+SECTION_SDATA2 static u8 lit_1321[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80326EF0-80327048 0158+00 rc=0 efc=0 .text      calcBBoardMtx__12J3DMtxBufferFv                              */
+/* 80326EF0-80327048 0158+00 rc=1 efc=1 rfr=False None .text      calcBBoardMtx__12J3DMtxBufferFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +249,7 @@ asm void J3DMtxBuffer::calcBBoardMtx() {
 #pragma pop
 
 
-/* 80327048-80327100 00B8+00 rc=0 efc=0 .text      J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f               */
+/* 80327048-80327100 00B8+00 rc=2 efc=1 rfr=False None .text      J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -260,11 +259,4 @@ asm void J3DCalcViewBaseMtx(f32 (* field_0)[4], Vec const& field_1, f32 const (&
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 804371C0-804371F0 0030+00 rc=0 efc=0 .bss       sNoUseDrawMtx__12J3DMtxBuffer                                */
-u8 sNoUseDrawMtx__12J3DMtxBuffer[48];
-
-/* 804371F0-80437218 0024+04 rc=0 efc=0 .bss       sNoUseNrmMtx__12J3DMtxBuffer                                 */
-u8 sNoUseNrmMtx__12J3DMtxBuffer[36 + 4 /* padding */];
 

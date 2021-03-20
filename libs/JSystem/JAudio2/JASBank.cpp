@@ -41,17 +41,10 @@ struct JASDriver {
 // 
 
 extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
-extern "C" void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
+extern "C" static void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
 
 extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
-extern "C" void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
-SECTION_RODATA extern const u8 data_8039B190[12];
-SECTION_RODATA extern const void* data_8039B19C[6 + 1 /* padding */];
-SECTION_BSS extern u8 JASBank__lit_156[12 + 4 /* padding */];
-SECTION_SDATA2 extern f32 lit_248;
-SECTION_SDATA2 extern u8 lit_249[4];
-SECTION_SDATA2 extern f32 lit_250;
-SECTION_SDATA2 extern f32 JASBank__lit_290;
+extern "C" static void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
 
 // 
 // External References:
@@ -80,28 +73,29 @@ extern "C" void _savegpr_23(); // 1
 extern "C" void _savegpr_25(); // 1
 extern "C" void _restgpr_23(); // 1
 extern "C" void _restgpr_25(); // 1
-SECTION_BSS extern u8 data_80431B34[16 + 4 /* padding */];
+extern "C" extern u8 data_80431B34[16 + 4 /* padding */];
+extern "C" extern u8 struct_80451260[8];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80431B48-80431B58 000C+04 rc=0 efc=0 .bss       @156                                                         */
-u8 JASBank__lit_156[12 + 4 /* padding */];
+/* 80431B48-80431B58 000C+04 rc=2 efc=0 rfr=False None .bss       @156                                                         */
+static u8 JASBank__lit_156[12 + 4 /* padding */];
 
-/* 80455630-80455634 0004+00 rc=0 efc=0 .sdata2    @248                                                         */
-f32 lit_248 = 1.0f;
+/* 80455630-80455634 0004+00 rc=1 efc=0 rfr=False None .sdata2    @248                                                         */
+SECTION_SDATA2 static f32 lit_248 = 1.0f;
 
-/* 80455634-80455638 0004+00 rc=0 efc=0 .sdata2    @249                                                         */
-u8 lit_249[4] = {
+/* 80455634-80455638 0004+00 rc=1 efc=0 rfr=False None .sdata2    @249                                                         */
+SECTION_SDATA2 static u8 lit_249[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455638-8045563C 0004+00 rc=0 efc=0 .sdata2    @250                                                         */
-f32 lit_250 = 0.5f;
+/* 80455638-8045563C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @250                                                         */
+SECTION_SDATA2 static f32 lit_250 = 0.5f;
 
-/* 80297930-80297C40 0310+00 rc=0 efc=0 .text      noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv */
+/* 80297930-80297C40 0310+00 rc=1 efc=1 rfr=False None .text      noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -113,31 +107,31 @@ extern "C" asm void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDs
 
 
 /* ############################################################################################## */
-/* 8039B190-8039B19C 000C+00 rc=0 efc=0 .rodata    OSC_RELEASE_TABLE$260                                        */
-const u8 data_8039B190[12] = {
+/* 8039B190-8039B19C 000C+00 rc=1 efc=0 rfr=False None .rodata    OSC_RELEASE_TABLE$260                                        */
+SECTION_RODATA static u8 const data_8039B190[12] = {
 	0x00, 0x01, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039B19C-8039B1B8 0018+04 rc=0 efc=0 .rodata    OSC_ENV$261                                                  */
-const void* data_8039B19C[6 + 1 /* padding */] = {
-	(void*)NULL,
-	(void*)0x3F800000,
-	(void*)NULL,
-	(void*)&data_8039B190,
-	(void*)0x3F800000,
-	(void*)NULL,
+/* 8039B19C-8039B1B8 0018+04 rc=1 efc=0 rfr=False None .rodata    OSC_ENV$261                                                  */
+SECTION_RODATA static void* const data_8039B19C[6 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0x3F800000,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)&data_8039B190,
+	/* 4    */ (void*)0x3F800000,
+	/* 5    */ (void*)NULL,
 	/* padding */
 	NULL,
 };
 
-/* 8045563C-80455640 0004+00 rc=0 efc=0 .sdata2    @290                                                         */
-f32 JASBank__lit_290 = 16736.015625f;
+/* 8045563C-80455640 0004+00 rc=1 efc=0 rfr=False None .sdata2    @290                                                         */
+SECTION_SDATA2 static f32 JASBank__lit_290 = 16736.015625f;
 
-/* 80297C40-80297D78 0138+00 rc=0 efc=0 .text      noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv */
+/* 80297C40-80297D78 0138+00 rc=1 efc=0 rfr=False None .text      noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv() {
+extern "C" asm static void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv() {
 	nofralloc
 #include "asm/JSystem/JAudio2/JASBank/noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv.s"
 }

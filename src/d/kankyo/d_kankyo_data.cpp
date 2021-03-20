@@ -34,34 +34,84 @@ extern "C" void dKyd_darkworld_tbl_getp__Fv(); // 1
 extern "C" void dKyd_light_size_tbl_getp__Fv(); // 1
 extern "C" void dKyd_light_tw_size_tbl_getp__Fv(); // 1
 extern "C" void dKyd_BloomInf_tbl_getp__Fi(); // 1
-SECTION_RODATA extern const char* const d_kankyo_d_kankyo_data__stringBase0;
-SECTION_DATA extern u8 l_kydata_BloomInf_tbl[768];
-SECTION_DATA extern void* l_darkworld_tbl[68];
-SECTION_DATA extern u8 l_light_size_tbl[288];
-SECTION_DATA extern u8 l_light_size_tbl_tw[72];
-SECTION_DATA extern u8 l_maple_col[36];
-SECTION_DATA extern u8 l_time_attribute[132];
-SECTION_DATA extern u8 l_time_attribute_boss[132];
-SECTION_DATA extern u8 l_field_data[832];
-SECTION_DATA extern u8 l_pselect_default[24];
-SECTION_DATA extern u8 l_envr_default[130 + 2 /* padding */];
-SECTION_DATA extern u8 l_vr_box_data[378 + 2 /* padding */];
-SECTION_DATA extern u8 S_xfog_table_data[40 + 4 /* padding */];
+extern "C" extern char const* const d_kankyo_d_kankyo_data__stringBase0;
 
 // 
 // External References:
 // 
 
 
-SECTION_BSS extern u8 g_env_light[4880];
+extern "C" extern u8 g_env_light[4880];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803A8E98-803A9198 0300+00 rc=0 efc=0 .data      l_kydata_BloomInf_tbl                                        */
-u8 l_kydata_BloomInf_tbl[768] = {
+/* 8037A1C0-8037A368 01A4+04 rc=3 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD static char const* const stringBase_8037A1C0 = "R_SP30";
+SECTION_DEAD static char const* const stringBase_8037A1C7 = "T_SP05";
+SECTION_DEAD static char const* const stringBase_8037A1CE = "T_SP05A";
+SECTION_DEAD static char const* const stringBase_8037A1D6 = "T_WARP2";
+SECTION_DEAD static char const* const stringBase_8037A1DE = "T_IMAI";
+SECTION_DEAD static char const* const stringBase_8037A1E5 = "T_IMAI0";
+SECTION_DEAD static char const* const stringBase_8037A1ED = "T_TOMI";
+SECTION_DEAD static char const* const stringBase_8037A1F4 = "T_SASA1";
+SECTION_DEAD static char const* const stringBase_8037A1FC = "F_SP105";
+SECTION_DEAD static char const* const stringBase_8037A204 = "F_SP05";
+SECTION_DEAD static char const* const stringBase_8037A20B = "R_SP107";
+SECTION_DEAD static char const* const stringBase_8037A213 = "F_SP108";
+SECTION_DEAD static char const* const stringBase_8037A21B = "R_SP108";
+SECTION_DEAD static char const* const stringBase_8037A223 = "TEST11";
+SECTION_DEAD static char const* const stringBase_8037A22A = "F_SP109";
+SECTION_DEAD static char const* const stringBase_8037A232 = "F_SP110";
+SECTION_DEAD static char const* const stringBase_8037A23A = "R_SP109";
+SECTION_DEAD static char const* const stringBase_8037A242 = "F_SP111";
+SECTION_DEAD static char const* const stringBase_8037A24A = "F_SP112";
+SECTION_DEAD static char const* const stringBase_8037A252 = "F_SP113";
+SECTION_DEAD static char const* const stringBase_8037A25A = "F_SP115";
+SECTION_DEAD static char const* const stringBase_8037A262 = "F_SP116";
+SECTION_DEAD static char const* const stringBase_8037A26A = "F_SP122";
+SECTION_DEAD static char const* const stringBase_8037A272 = "F_SP121";
+SECTION_DEAD static char const* const stringBase_8037A27A = "F_SP126";
+SECTION_DEAD static char const* const stringBase_8037A282 = "R_SP209";
+SECTION_DEAD static char const* const stringBase_8037A28A = "R_SP116";
+SECTION_DEAD static char const* const stringBase_8037A292 = "D_MN08";
+SECTION_DEAD static char const* const stringBase_8037A299 = "D_MN08B";
+SECTION_DEAD static char const* const stringBase_8037A2A1 = "D_MN08C";
+SECTION_DEAD static char const* const stringBase_8037A2A9 = "D_MN08A";
+SECTION_DEAD static char const* const stringBase_8037A2B1 = "D_SB10";
+SECTION_DEAD static char const* const stringBase_8037A2B8 = "R_SP01";
+SECTION_DEAD static char const* const stringBase_8037A2BF = "R_SP128";
+SECTION_DEAD static char const* const stringBase_8037A2C7 = "F_SP114";
+SECTION_DEAD static char const* const stringBase_8037A2CF = "F_SP102";
+SECTION_DEAD static char const* const stringBase_8037A2D7 = "F_SP123";
+SECTION_DEAD static char const* const stringBase_8037A2DF = "R_SP160";
+SECTION_DEAD static char const* const stringBase_8037A2E7 = "R_SP161";
+SECTION_DEAD static char const* const stringBase_8037A2EF = "F_SP118";
+SECTION_DEAD static char const* const stringBase_8037A2F7 = "F_SP124";
+SECTION_DEAD static char const* const stringBase_8037A2FF = "F_SP125";
+SECTION_DEAD static char const* const stringBase_8037A307 = "R_SP127";
+SECTION_DEAD static char const* const stringBase_8037A30F = "D_MN01A";
+SECTION_DEAD static char const* const stringBase_8037A317 = "D_MN10A";
+SECTION_DEAD static char const* const stringBase_8037A31F = "D_MN06A";
+SECTION_DEAD static char const* const stringBase_8037A327 = "D_MN07A";
+SECTION_DEAD static char const* const stringBase_8037A32F = "D_MN08D";
+SECTION_DEAD static char const* const stringBase_8037A337 = "D_MN09";
+SECTION_DEAD static char const* const stringBase_8037A33E = "D_MN09B";
+SECTION_DEAD static char const* const stringBase_8037A346 = "D_MN09C";
+SECTION_DEAD static char const* const stringBase_8037A34E = "R_SP300";
+SECTION_DEAD static char const* const stringBase_8037A356 = "D_SB02";
+SECTION_DEAD static char const* const stringBase_8037A35D = "D_SB03";
+/* @stringBase0 padding */
+SECTION_DEAD static char const* const pad_8037A364 = "\0\0\0";
+#pragma pop
+
+/* 803A8E98-803A9198 0300+00 rc=1 efc=0 rfr=False None .data      l_kydata_BloomInf_tbl                                        */
+SECTION_DATA static u8 l_kydata_BloomInf_tbl[768] = {
 	0x01, 0xFF, 0x40, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x28, 0x46, 0x87,
 	0xCF, 0xB1, 0x38, 0xD2, 0xFF, 0xFF, 0xFF, 0x60, 0x00, 0x2D, 0x46, 0x73, 0xCF, 0xB1, 0x38, 0xD2,
 	0xFF, 0xFF, 0xFF, 0x60, 0x00, 0x00, 0x40, 0x30, 0x60, 0xBA, 0xEC, 0xFF, 0xFF, 0xFF, 0xFF, 0x00,
@@ -112,118 +162,185 @@ u8 l_kydata_BloomInf_tbl[768] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A9198-803A92A8 0110+00 rc=0 efc=0 .data      l_darkworld_tbl                                              */
-void* l_darkworld_tbl[68] = {
-	(void*)&d_kankyo_d_kankyo_data__stringBase0,
-	(void*)0x06000000,
-	(void*)0x8037A1C7,
-	(void*)0x05000000,
-	(void*)0x8037A1CE,
-	(void*)0x05000000,
-	(void*)0x8037A1D6,
-	(void*)0x05000000,
-	(void*)0x8037A1DE,
-	(void*)0x05000000,
-	(void*)0x8037A1E5,
-	(void*)0x05000000,
-	(void*)0x8037A1ED,
-	(void*)0x05000000,
-	(void*)0x8037A1ED,
-	(void*)0x05000000,
-	(void*)0x8037A1ED,
-	(void*)0x05000000,
-	(void*)0x8037A1F4,
-	(void*)0x05000000,
-	(void*)0x8037A1FC,
-	(void*)NULL,
-	(void*)0x8037A204,
-	(void*)0x05000000,
-	(void*)0x8037A20B,
-	(void*)0x02000000,
-	(void*)0x8037A213,
-	(void*)NULL,
-	(void*)0x8037A21B,
-	(void*)NULL,
-	(void*)0x8037A223,
-	(void*)0x05000000,
-	(void*)0x8037A22A,
-	(void*)0x01000000,
-	(void*)0x8037A232,
-	(void*)0x01000000,
-	(void*)0x8037A23A,
-	(void*)0x01000000,
-	(void*)0x8037A242,
-	(void*)0x01000000,
-	(void*)0x8037A24A,
-	(void*)0x02000000,
-	(void*)0x8037A252,
-	(void*)0x02000000,
-	(void*)0x8037A25A,
-	(void*)0x02000000,
-	(void*)0x8037A262,
-	(void*)0x02000000,
-	(void*)0x8037A26A,
-	(void*)0x02000000,
-	(void*)0x8037A272,
-	(void*)0x01000000,
-	(void*)0x8037A27A,
-	(void*)0x02000000,
-	(void*)0x8037A282,
-	(void*)0x01000000,
-	(void*)0x8037A28A,
-	(void*)0x02000000,
-	(void*)0x8037A292,
-	(void*)0x06000000,
-	(void*)0x8037A299,
-	(void*)0x06000000,
-	(void*)0x8037A2A1,
-	(void*)0x06000000,
-	(void*)0x8037A2A9,
-	(void*)0x06000000,
-	(void*)0x8037A2B1,
-	(void*)NULL,
+/* 803A9198-803A92A8 0110+00 rc=1 efc=0 rfr=False None .data      l_darkworld_tbl                                              */
+SECTION_DATA static void* l_darkworld_tbl[68] = {
+	/* 0    */ (void*)&d_kankyo_d_kankyo_data__stringBase0,
+	/* 1    */ (void*)0x06000000,
+	/* 2    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x7),
+	/* 3    */ (void*)0x05000000,
+	/* 4    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xE),
+	/* 5    */ (void*)0x05000000,
+	/* 6    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x16),
+	/* 7    */ (void*)0x05000000,
+	/* 8    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x1E),
+	/* 9    */ (void*)0x05000000,
+	/* 10   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x25),
+	/* 11   */ (void*)0x05000000,
+	/* 12   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x2D),
+	/* 13   */ (void*)0x05000000,
+	/* 14   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x2D),
+	/* 15   */ (void*)0x05000000,
+	/* 16   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x2D),
+	/* 17   */ (void*)0x05000000,
+	/* 18   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x34),
+	/* 19   */ (void*)0x05000000,
+	/* 20   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x3C),
+	/* 21   */ (void*)NULL,
+	/* 22   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x44),
+	/* 23   */ (void*)0x05000000,
+	/* 24   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x4B),
+	/* 25   */ (void*)0x02000000,
+	/* 26   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x53),
+	/* 27   */ (void*)NULL,
+	/* 28   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x5B),
+	/* 29   */ (void*)NULL,
+	/* 30   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x63),
+	/* 31   */ (void*)0x05000000,
+	/* 32   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x6A),
+	/* 33   */ (void*)0x01000000,
+	/* 34   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x72),
+	/* 35   */ (void*)0x01000000,
+	/* 36   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x7A),
+	/* 37   */ (void*)0x01000000,
+	/* 38   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x82),
+	/* 39   */ (void*)0x01000000,
+	/* 40   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x8A),
+	/* 41   */ (void*)0x02000000,
+	/* 42   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x92),
+	/* 43   */ (void*)0x02000000,
+	/* 44   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x9A),
+	/* 45   */ (void*)0x02000000,
+	/* 46   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xA2),
+	/* 47   */ (void*)0x02000000,
+	/* 48   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xAA),
+	/* 49   */ (void*)0x02000000,
+	/* 50   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xB2),
+	/* 51   */ (void*)0x01000000,
+	/* 52   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xBA),
+	/* 53   */ (void*)0x02000000,
+	/* 54   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xC2),
+	/* 55   */ (void*)0x01000000,
+	/* 56   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xCA),
+	/* 57   */ (void*)0x02000000,
+	/* 58   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xD2),
+	/* 59   */ (void*)0x06000000,
+	/* 60   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xD9),
+	/* 61   */ (void*)0x06000000,
+	/* 62   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xE1),
+	/* 63   */ (void*)0x06000000,
+	/* 64   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xE9),
+	/* 65   */ (void*)0x06000000,
+	/* 66   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xF1),
+	/* 67   */ (void*)NULL,
 };
 
-/* 803A92A8-803A93C8 0120+00 rc=0 efc=0 .data      l_light_size_tbl                                             */
-u8 l_light_size_tbl[288] = {
-	0x80, 0x37, 0xA2, 0xB8, 0x00, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x1B, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x2A, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x32, 0x02, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x3A, 0x00, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x82, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0xBF, 0x00, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xC7, 0x02, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x5A, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x72, 0x03, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0xCF, 0x03, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x6A, 0x03, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0xD7, 0x03, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x8A, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0xDF, 0x00, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xE7, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0xEF, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xF7, 0x03, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0xFF, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA3, 0x07, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA3, 0x0F, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA3, 0x17, 0x02, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA3, 0x1F, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA3, 0x27, 0x02, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x92, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xA9, 0x02, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x99, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xA1, 0x02, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA3, 0x2F, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA3, 0x37, 0x02, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA3, 0x3E, 0x03, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA3, 0x46, 0x03, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA3, 0x4E, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA3, 0x56, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA3, 0x5D, 0x00, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xB1, 0x00, 0x00, 0x00, 0x00,
+/* 803A92A8-803A93C8 0120+00 rc=1 efc=0 rfr=False None .data      l_light_size_tbl                                             */
+SECTION_DATA static void* l_light_size_tbl[72] = {
+	/* 0    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xF8),
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x5B),
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x6A),
+	/* 5    */ (void*)0x02000000,
+	/* 6    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x72),
+	/* 7    */ (void*)0x02000000,
+	/* 8    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x7A),
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xC2),
+	/* 11   */ (void*)NULL,
+	/* 12   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xFF),
+	/* 13   */ (void*)NULL,
+	/* 14   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x107),
+	/* 15   */ (void*)0x02000000,
+	/* 16   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x9A),
+	/* 17   */ (void*)0x02000000,
+	/* 18   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xB2),
+	/* 19   */ (void*)0x03000000,
+	/* 20   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x10F),
+	/* 21   */ (void*)0x03000000,
+	/* 22   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xAA),
+	/* 23   */ (void*)0x03000000,
+	/* 24   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x117),
+	/* 25   */ (void*)0x03000000,
+	/* 26   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xCA),
+	/* 27   */ (void*)NULL,
+	/* 28   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x11F),
+	/* 29   */ (void*)NULL,
+	/* 30   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x127),
+	/* 31   */ (void*)NULL,
+	/* 32   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x12F),
+	/* 33   */ (void*)0x02000000,
+	/* 34   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x137),
+	/* 35   */ (void*)0x03000000,
+	/* 36   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x13F),
+	/* 37   */ (void*)0x02000000,
+	/* 38   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x147),
+	/* 39   */ (void*)NULL,
+	/* 40   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x14F),
+	/* 41   */ (void*)0x02000000,
+	/* 42   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x157),
+	/* 43   */ (void*)0x02000000,
+	/* 44   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x15F),
+	/* 45   */ (void*)0x02000000,
+	/* 46   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x167),
+	/* 47   */ (void*)0x02000000,
+	/* 48   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xD2),
+	/* 49   */ (void*)0x02000000,
+	/* 50   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xE9),
+	/* 51   */ (void*)0x02000000,
+	/* 52   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xD9),
+	/* 53   */ (void*)0x02000000,
+	/* 54   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xE1),
+	/* 55   */ (void*)0x02000000,
+	/* 56   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x16F),
+	/* 57   */ (void*)0x02000000,
+	/* 58   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x177),
+	/* 59   */ (void*)0x02000000,
+	/* 60   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x17E),
+	/* 61   */ (void*)0x03000000,
+	/* 62   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x186),
+	/* 63   */ (void*)0x03000000,
+	/* 64   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x18E),
+	/* 65   */ (void*)0x02000000,
+	/* 66   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x196),
+	/* 67   */ (void*)NULL,
+	/* 68   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x19D),
+	/* 69   */ (void*)NULL,
+	/* 70   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xF1),
+	/* 71   */ (void*)NULL,
 };
 
-/* 803A93C8-803A9410 0048+00 rc=0 efc=0 .data      l_light_size_tbl_tw                                          */
-u8 l_light_size_tbl_tw[72] = {
-	0x80, 0x37, 0xA2, 0x2A, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x32, 0x02, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x82, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x52, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x7A, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x5A, 0x02, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x72, 0x03, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xCF, 0x03, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x6A, 0x03, 0x00, 0x00, 0x00,
+/* 803A93C8-803A9410 0048+00 rc=1 efc=0 rfr=False None .data      l_light_size_tbl_tw                                          */
+SECTION_DATA static void* l_light_size_tbl_tw[18] = {
+	/* 0    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x6A),
+	/* 1    */ (void*)0x02000000,
+	/* 2    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x72),
+	/* 3    */ (void*)0x02000000,
+	/* 4    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xC2),
+	/* 5    */ (void*)0x02000000,
+	/* 6    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x92),
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xBA),
+	/* 9    */ (void*)0x02000000,
+	/* 10   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x9A),
+	/* 11   */ (void*)0x02000000,
+	/* 12   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xB2),
+	/* 13   */ (void*)0x03000000,
+	/* 14   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0x10F),
+	/* 15   */ (void*)0x03000000,
+	/* 16   */ (void*)(((char*)&d_kankyo_d_kankyo_data__stringBase0)+0xAA),
+	/* 17   */ (void*)0x03000000,
 };
 
-/* 803A9410-803A9434 0024+00 rc=0 efc=0 .data      l_maple_col                                                  */
-u8 l_maple_col[36] = {
+/* 803A9410-803A9434 0024+00 rc=1 efc=0 rfr=False None .data      l_maple_col                                                  */
+SECTION_DATA static u8 l_maple_col[36] = {
 	0x56, 0x4B, 0x39, 0x37, 0x28, 0x1E, 0x6E, 0x32, 0x0F, 0x64, 0x64, 0x80, 0x52, 0x41, 0x66, 0x19,
 	0x0F, 0x00, 0x46, 0x00, 0x0F, 0x64, 0x64, 0x80, 0x65, 0x5E, 0x69, 0x0E, 0x23, 0x0B, 0x28, 0x14,
 	0x05, 0x5A, 0x5A, 0x6E,
 };
 
-/* 803A9434-803A94B8 0084+00 rc=0 efc=0 .data      l_time_attribute                                             */
-u8 l_time_attribute[132] = {
+/* 803A9434-803A94B8 0084+00 rc=1 efc=0 rfr=False None .data      l_time_attribute                                             */
+SECTION_DATA static u8 l_time_attribute[132] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00, 0x05, 0x05, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00,
 	0x42, 0xB4, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00, 0x42, 0xD2, 0x00, 0x00,
 	0x00, 0x01, 0x00, 0x00, 0x42, 0xD2, 0x00, 0x00, 0x42, 0xD2, 0x00, 0x00, 0x01, 0x01, 0x00, 0x00,
@@ -235,8 +352,8 @@ u8 l_time_attribute[132] = {
 	0x05, 0x05, 0x00, 0x00,
 };
 
-/* 803A94B8-803A953C 0084+00 rc=0 efc=0 .data      l_time_attribute_boss                                        */
-u8 l_time_attribute_boss[132] = {
+/* 803A94B8-803A953C 0084+00 rc=1 efc=0 rfr=False None .data      l_time_attribute_boss                                        */
+SECTION_DATA static u8 l_time_attribute_boss[132] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00,
 	0x42, 0xB4, 0x00, 0x00, 0x01, 0x02, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00, 0x43, 0x34, 0x00, 0x00,
 	0x02, 0x03, 0x00, 0x00, 0x43, 0x34, 0x00, 0x00, 0x43, 0x61, 0x00, 0x00, 0x03, 0x04, 0x00, 0x00,
@@ -248,8 +365,8 @@ u8 l_time_attribute_boss[132] = {
 	0x05, 0x05, 0x00, 0x00,
 };
 
-/* 803A953C-803A987C 0340+00 rc=0 efc=0 .data      l_field_data                                                 */
-u8 l_field_data[832] = {
+/* 803A953C-803A987C 0340+00 rc=1 efc=0 rfr=False None .data      l_field_data                                                 */
+SECTION_DATA static u8 l_field_data[832] = {
 	0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
 	0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
 	0x40, 0x40, 0x40, 0x40, 0xC5, 0x9C, 0x40, 0x00, 0x46, 0xEA, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -304,7 +421,7 @@ u8 l_field_data[832] = {
 	0xC5, 0x9C, 0x40, 0x00, 0x46, 0xEA, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800569DC-800569E8 000C+00 rc=0 efc=0 .text      dKyd_dmpalet_getp__Fv                                        */
+/* 800569DC-800569E8 000C+00 rc=1 efc=1 rfr=False None .text      dKyd_dmpalet_getp__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -316,13 +433,13 @@ asm void dKyd_dmpalet_getp() {
 
 
 /* ############################################################################################## */
-/* 803A987C-803A9894 0018+00 rc=0 efc=0 .data      l_pselect_default                                            */
-u8 l_pselect_default[24] = {
+/* 803A987C-803A9894 0018+00 rc=1 efc=0 rfr=False None .data      l_pselect_default                                            */
+SECTION_DATA static u8 l_pselect_default[24] = {
 	0x00, 0x00, 0x01, 0x02, 0x02, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x04, 0x05, 0x06,
 	0x06, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800569E8-800569F4 000C+00 rc=0 efc=0 .text      dKyd_dmpselect_getp__Fv                                      */
+/* 800569E8-800569F4 000C+00 rc=1 efc=1 rfr=False None .text      dKyd_dmpselect_getp__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -334,8 +451,8 @@ asm void dKyd_dmpselect_getp() {
 
 
 /* ############################################################################################## */
-/* 803A9894-803A9918 0082+02 rc=0 efc=0 .data      l_envr_default                                               */
-u8 l_envr_default[130 + 2 /* padding */] = {
+/* 803A9894-803A9918 0082+02 rc=1 efc=0 rfr=False None .data      l_envr_default                                               */
+SECTION_DATA static u8 l_envr_default[130 + 2 /* padding */] = {
 	0x00, 0x01, 0x02, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -349,7 +466,7 @@ u8 l_envr_default[130 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 800569F4-80056A00 000C+00 rc=0 efc=0 .text      dKyd_dmenvr_getp__Fv                                         */
+/* 800569F4-80056A00 000C+00 rc=1 efc=1 rfr=False None .text      dKyd_dmenvr_getp__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -361,8 +478,8 @@ asm void dKyd_dmenvr_getp() {
 
 
 /* ############################################################################################## */
-/* 803A9918-803A9A94 017A+02 rc=0 efc=0 .data      l_vr_box_data                                                */
-u8 l_vr_box_data[378 + 2 /* padding */] = {
+/* 803A9918-803A9A94 017A+02 rc=1 efc=0 rfr=False None .data      l_vr_box_data                                                */
+SECTION_DATA static u8 l_vr_box_data[378 + 2 /* padding */] = {
 	0x2F, 0x1A, 0x07, 0x44, 0x1E, 0x10, 0xF5, 0xA5, 0x6C, 0x9A, 0x5C, 0x3B, 0xFF, 0x44, 0x1E, 0x10,
 	0xA3, 0xFF, 0x5B, 0x49, 0x72, 0x39, 0x5B, 0xA7, 0xFF, 0xF7, 0xF7, 0x83, 0x7E, 0x7D, 0x1D, 0x1E,
 	0x20, 0x00, 0xFF, 0xF7, 0xF7, 0xFF, 0xE5, 0xF5, 0xFF, 0xFF, 0x45, 0x90, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -391,7 +508,7 @@ u8 l_vr_box_data[378 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 80056A00-80056A0C 000C+00 rc=0 efc=0 .text      dKyd_dmvrbox_getp__Fv                                        */
+/* 80056A00-80056A0C 000C+00 rc=1 efc=1 rfr=False None .text      dKyd_dmvrbox_getp__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -402,7 +519,7 @@ asm void dKyd_dmvrbox_getp() {
 #pragma pop
 
 
-/* 80056A0C-80056A18 000C+00 rc=0 efc=0 .text      dKyd_schejule_getp__Fv                                       */
+/* 80056A0C-80056A18 000C+00 rc=1 efc=1 rfr=False None .text      dKyd_schejule_getp__Fv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -413,7 +530,7 @@ asm void dKyd_schejule_getp() {
 #pragma pop
 
 
-/* 80056A18-80056A24 000C+00 rc=0 efc=0 .text      dKyd_schejule_boss_getp__Fv                                  */
+/* 80056A18-80056A24 000C+00 rc=1 efc=1 rfr=False None .text      dKyd_schejule_boss_getp__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -425,8 +542,8 @@ asm void dKyd_schejule_boss_getp() {
 
 
 /* ############################################################################################## */
-/* 803A9A94-803A9AC0 0028+04 rc=0 efc=0 .data      S_xfog_table_data                                            */
-u8 S_xfog_table_data[40 + 4 /* padding */] = {
+/* 803A9A94-803A9AC0 0028+04 rc=1 efc=0 rfr=False None .data      S_xfog_table_data                                            */
+SECTION_DATA static u8 S_xfog_table_data[40 + 4 /* padding */] = {
 	0x01, 0x04, 0x01, 0x04, 0x01, 0x0E, 0x01, 0x18, 0x01, 0x22, 0x01, 0x2C, 0x01, 0x36, 0x01, 0x40,
 	0x01, 0x4A, 0x01, 0x54, 0x00, 0xFA, 0x01, 0x04, 0x01, 0x18, 0x01, 0x40, 0x01, 0x5E, 0x01, 0x90,
 	0x01, 0xE0, 0x02, 0x26, 0x02, 0x58, 0x03, 0x20,
@@ -434,7 +551,7 @@ u8 S_xfog_table_data[40 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80056A24-80056A64 0040+00 rc=0 efc=0 .text      dKyd_xfog_table_set__FUc                                     */
+/* 80056A24-80056A64 0040+00 rc=2 efc=2 rfr=False None .text      dKyd_xfog_table_set__FUc                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,7 +562,7 @@ asm void dKyd_xfog_table_set(u8 field_0) {
 #pragma pop
 
 
-/* 80056A64-80056A70 000C+00 rc=0 efc=0 .text      dKyd_maple_col_getp__Fv                                      */
+/* 80056A64-80056A70 000C+00 rc=1 efc=1 rfr=False None .text      dKyd_maple_col_getp__Fv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -456,7 +573,7 @@ asm void dKyd_maple_col_getp() {
 #pragma pop
 
 
-/* 80056A70-80056A7C 000C+00 rc=0 efc=0 .text      dKyd_darkworld_tbl_getp__Fv                                  */
+/* 80056A70-80056A7C 000C+00 rc=4 efc=4 rfr=False None .text      dKyd_darkworld_tbl_getp__Fv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -467,7 +584,7 @@ asm void dKyd_darkworld_tbl_getp() {
 #pragma pop
 
 
-/* 80056A7C-80056A88 000C+00 rc=0 efc=0 .text      dKyd_light_size_tbl_getp__Fv                                 */
+/* 80056A7C-80056A88 000C+00 rc=1 efc=1 rfr=False None .text      dKyd_light_size_tbl_getp__Fv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -478,7 +595,7 @@ asm void dKyd_light_size_tbl_getp() {
 #pragma pop
 
 
-/* 80056A88-80056A94 000C+00 rc=0 efc=0 .text      dKyd_light_tw_size_tbl_getp__Fv                              */
+/* 80056A88-80056A94 000C+00 rc=1 efc=1 rfr=False None .text      dKyd_light_tw_size_tbl_getp__Fv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -489,7 +606,7 @@ asm void dKyd_light_tw_size_tbl_getp() {
 #pragma pop
 
 
-/* 80056A94-80056AA8 0014+00 rc=0 efc=0 .text      dKyd_BloomInf_tbl_getp__Fi                                   */
+/* 80056A94-80056AA8 0014+00 rc=1 efc=1 rfr=False None .text      dKyd_BloomInf_tbl_getp__Fi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -499,67 +616,4 @@ asm void dKyd_BloomInf_tbl_getp(int field_0) {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 8037A1C0-8037A368 01A4+04 rc=0 efc=0 .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-const char* const stringBase_8037A1C0 = "R_SP30";
-const char* const stringBase_8037A1C7 = "T_SP05";
-const char* const stringBase_8037A1CE = "T_SP05A";
-const char* const stringBase_8037A1D6 = "T_WARP2";
-const char* const stringBase_8037A1DE = "T_IMAI";
-const char* const stringBase_8037A1E5 = "T_IMAI0";
-const char* const stringBase_8037A1ED = "T_TOMI";
-const char* const stringBase_8037A1F4 = "T_SASA1";
-const char* const stringBase_8037A1FC = "F_SP105";
-const char* const stringBase_8037A204 = "F_SP05";
-const char* const stringBase_8037A20B = "R_SP107";
-const char* const stringBase_8037A213 = "F_SP108";
-const char* const stringBase_8037A21B = "R_SP108";
-const char* const stringBase_8037A223 = "TEST11";
-const char* const stringBase_8037A22A = "F_SP109";
-const char* const stringBase_8037A232 = "F_SP110";
-const char* const stringBase_8037A23A = "R_SP109";
-const char* const stringBase_8037A242 = "F_SP111";
-const char* const stringBase_8037A24A = "F_SP112";
-const char* const stringBase_8037A252 = "F_SP113";
-const char* const stringBase_8037A25A = "F_SP115";
-const char* const stringBase_8037A262 = "F_SP116";
-const char* const stringBase_8037A26A = "F_SP122";
-const char* const stringBase_8037A272 = "F_SP121";
-const char* const stringBase_8037A27A = "F_SP126";
-const char* const stringBase_8037A282 = "R_SP209";
-const char* const stringBase_8037A28A = "R_SP116";
-const char* const stringBase_8037A292 = "D_MN08";
-const char* const stringBase_8037A299 = "D_MN08B";
-const char* const stringBase_8037A2A1 = "D_MN08C";
-const char* const stringBase_8037A2A9 = "D_MN08A";
-const char* const stringBase_8037A2B1 = "D_SB10";
-const char* const stringBase_8037A2B8 = "R_SP01";
-const char* const stringBase_8037A2BF = "R_SP128";
-const char* const stringBase_8037A2C7 = "F_SP114";
-const char* const stringBase_8037A2CF = "F_SP102";
-const char* const stringBase_8037A2D7 = "F_SP123";
-const char* const stringBase_8037A2DF = "R_SP160";
-const char* const stringBase_8037A2E7 = "R_SP161";
-const char* const stringBase_8037A2EF = "F_SP118";
-const char* const stringBase_8037A2F7 = "F_SP124";
-const char* const stringBase_8037A2FF = "F_SP125";
-const char* const stringBase_8037A307 = "R_SP127";
-const char* const stringBase_8037A30F = "D_MN01A";
-const char* const stringBase_8037A317 = "D_MN10A";
-const char* const stringBase_8037A31F = "D_MN06A";
-const char* const stringBase_8037A327 = "D_MN07A";
-const char* const stringBase_8037A32F = "D_MN08D";
-const char* const stringBase_8037A337 = "D_MN09";
-const char* const stringBase_8037A33E = "D_MN09B";
-const char* const stringBase_8037A346 = "D_MN09C";
-const char* const stringBase_8037A34E = "R_SP300";
-const char* const stringBase_8037A356 = "D_SB02";
-const char* const stringBase_8037A35D = "D_SB03";
-/* @stringBase0 padding */
-char* const pad_8037A364 = "\0\0\0";
-#pragma pop
 

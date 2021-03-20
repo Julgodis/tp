@@ -92,12 +92,8 @@ extern "C" void __ct__Q216JASBasicWaveBank14TGroupWaveInfoFv(); // 1
 extern "C" void getWaveInfo__Q216JASBasicWaveBank11TWaveHandleCFv(); // 1
 extern "C" void getWaveArc__16JASBasicWaveBankFUl(); // 1
 extern "C" void getArcCount__16JASBasicWaveBankCFv(); // 1
-SECTION_DATA extern void* const __vt__Q216JASBasicWaveBank11TWaveHandle[5];
-SECTION_DATA extern void* const __vt__Q216JASBasicWaveBank10TWaveGroup[6];
-SECTION_DATA extern void* const __vt__13JASWaveHandle[5];
-SECTION_DATA extern void* const __vt__16JASBasicWaveBank[6];
-SECTION_DATA extern void* const __vt__11JASWaveBank[6];
-SECTION_SBSS extern u8 mNoLoad__16JASBasicWaveBank[4 + 4 /* padding */];
+extern "C" extern void* __vt__13JASWaveHandle[5];
+extern "C" extern void* __vt__11JASWaveBank[6];
 
 // 
 // External References:
@@ -135,62 +131,62 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_SDATA extern u32 one__11JASWaveInfo[1 + 1 /* padding */];
+extern "C" extern u32 one__11JASWaveInfo[1 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C7728-803C773C 0014+00 rc=0 efc=0 .data      __vt__Q216JASBasicWaveBank11TWaveHandle                      */
-void* const __vt__Q216JASBasicWaveBank11TWaveHandle[5] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__Q216JASBasicWaveBank11TWaveHandleFv,
-	(void*)getWaveInfo__Q216JASBasicWaveBank11TWaveHandleCFv,
-	(void*)getWavePtr__Q216JASBasicWaveBank11TWaveHandleCFv,
+/* 803C7728-803C773C 0014+00 rc=2 efc=0 rfr=False None .data      __vt__Q216JASBasicWaveBank11TWaveHandle                      */
+SECTION_DATA static void* __vt__Q216JASBasicWaveBank11TWaveHandle[5] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__Q216JASBasicWaveBank11TWaveHandleFv,
+	/* 3    */ (void*)getWaveInfo__Q216JASBasicWaveBank11TWaveHandleCFv,
+	/* 4    */ (void*)getWavePtr__Q216JASBasicWaveBank11TWaveHandleCFv,
 };
 
-/* 803C773C-803C7754 0018+00 rc=0 efc=0 .data      __vt__Q216JASBasicWaveBank10TWaveGroup                       */
-void* const __vt__Q216JASBasicWaveBank10TWaveGroup[6] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__Q216JASBasicWaveBank10TWaveGroupFv,
-	(void*)onDispose__10JASWaveArcFv,
-	(void*)onLoadDone__Q216JASBasicWaveBank10TWaveGroupFv,
-	(void*)onEraseDone__Q216JASBasicWaveBank10TWaveGroupFv,
+/* 803C773C-803C7754 0018+00 rc=2 efc=0 rfr=False None .data      __vt__Q216JASBasicWaveBank10TWaveGroup                       */
+SECTION_DATA static void* __vt__Q216JASBasicWaveBank10TWaveGroup[6] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__Q216JASBasicWaveBank10TWaveGroupFv,
+	/* 3    */ (void*)onDispose__10JASWaveArcFv,
+	/* 4    */ (void*)onLoadDone__Q216JASBasicWaveBank10TWaveGroupFv,
+	/* 5    */ (void*)onEraseDone__Q216JASBasicWaveBank10TWaveGroupFv,
 };
 
-/* 803C7754-803C7768 0014+00 rc=0 efc=0 .data      __vt__13JASWaveHandle                                        */
-void* const __vt__13JASWaveHandle[5] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__13JASWaveHandleFv,
-	(void*)NULL,
-	(void*)NULL,
+/* 803C7754-803C7768 0014+00 rc=5 efc=2 rfr=False None .data      __vt__13JASWaveHandle                                        */
+SECTION_DATA void* __vt__13JASWaveHandle[5] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__13JASWaveHandleFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
 };
 
-/* 803C7768-803C7780 0018+00 rc=0 efc=0 .data      __vt__16JASBasicWaveBank                                     */
-void* const __vt__16JASBasicWaveBank[6] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__16JASBasicWaveBankFv,
-	(void*)getWaveHandle__16JASBasicWaveBankCFUl,
-	(void*)getWaveArc__16JASBasicWaveBankFUl,
-	(void*)getArcCount__16JASBasicWaveBankCFv,
+/* 803C7768-803C7780 0018+00 rc=2 efc=0 rfr=False None .data      __vt__16JASBasicWaveBank                                     */
+SECTION_DATA static void* __vt__16JASBasicWaveBank[6] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__16JASBasicWaveBankFv,
+	/* 3    */ (void*)getWaveHandle__16JASBasicWaveBankCFUl,
+	/* 4    */ (void*)getWaveArc__16JASBasicWaveBankFUl,
+	/* 5    */ (void*)getArcCount__16JASBasicWaveBankCFv,
 };
 
-/* 803C7780-803C7798 0018+00 rc=0 efc=0 .data      __vt__11JASWaveBank                                          */
-void* const __vt__11JASWaveBank[6] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11JASWaveBankFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 803C7780-803C7798 0018+00 rc=5 efc=2 rfr=False None .data      __vt__11JASWaveBank                                          */
+SECTION_DATA void* __vt__11JASWaveBank[6] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11JASWaveBankFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)NULL,
 };
 
-/* 802984F8-80298558 0060+00 rc=0 efc=0 .text      __ct__16JASBasicWaveBankFv                                   */
+/* 802984F8-80298558 0060+00 rc=1 efc=1 rfr=False None .text      __ct__16JASBasicWaveBankFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,7 +197,7 @@ asm JASBasicWaveBank::JASBasicWaveBank() {
 #pragma pop
 
 
-/* 80298558-802985E4 008C+00 rc=0 efc=0 .text      __dt__16JASBasicWaveBankFv                                   */
+/* 80298558-802985E4 008C+00 rc=1 efc=0 rfr=False None .text      __dt__16JASBasicWaveBankFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -212,7 +208,7 @@ asm JASBasicWaveBank::~JASBasicWaveBank() {
 #pragma pop
 
 
-/* 802985E4-80298640 005C+00 rc=0 efc=0 .text      __dt__Q216JASBasicWaveBank11TWaveHandleFv                    */
+/* 802985E4-80298640 005C+00 rc=3 efc=0 rfr=False None .text      __dt__Q216JASBasicWaveBank11TWaveHandleFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -223,7 +219,7 @@ asm JASBasicWaveBank::TWaveHandle::~TWaveHandle() {
 #pragma pop
 
 
-/* 80298640-80298664 0024+00 rc=0 efc=0 .text      getWaveGroup__16JASBasicWaveBankFUl                          */
+/* 80298640-80298664 0024+00 rc=2 efc=1 rfr=False None .text      getWaveGroup__16JASBasicWaveBankFUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -234,7 +230,7 @@ asm void JASBasicWaveBank::getWaveGroup(u32 field_0) {
 #pragma pop
 
 
-/* 80298664-80298710 00AC+00 rc=0 efc=0 .text      setGroupCount__16JASBasicWaveBankFUlP7JKRHeap                */
+/* 80298664-80298710 00AC+00 rc=1 efc=1 rfr=False None .text      setGroupCount__16JASBasicWaveBankFUlP7JKRHeap                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -245,7 +241,7 @@ asm void JASBasicWaveBank::setGroupCount(u32 field_0, JKRHeap* field_1) {
 #pragma pop
 
 
-/* 80298710-80298790 0080+00 rc=0 efc=0 .text      setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap             */
+/* 80298710-80298790 0080+00 rc=1 efc=1 rfr=False None .text      setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -256,7 +252,7 @@ asm void JASBasicWaveBank::setWaveTableSize(u32 field_0, JKRHeap* field_1) {
 #pragma pop
 
 
-/* 80298790-8029883C 00AC+00 rc=0 efc=0 .text      incWaveTable__16JASBasicWaveBankFPCQ216JASBasicWaveBank10TWaveGroup */
+/* 80298790-8029883C 00AC+00 rc=1 efc=0 rfr=False None .text      incWaveTable__16JASBasicWaveBankFPCQ216JASBasicWaveBank10TWaveGroup */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -268,10 +264,10 @@ asm void JASBasicWaveBank::incWaveTable(JASBasicWaveBank::TWaveGroup const* fiel
 
 
 /* ############################################################################################## */
-/* 80451278-80451280 0004+04 rc=0 efc=0 .sbss      mNoLoad__16JASBasicWaveBank                                  */
-u8 mNoLoad__16JASBasicWaveBank[4 + 4 /* padding */];
+/* 80451278-80451280 0004+04 rc=2 efc=0 rfr=False None .sbss      mNoLoad__16JASBasicWaveBank                                  */
+static u8 mNoLoad__16JASBasicWaveBank[4 + 4 /* padding */];
 
-/* 8029883C-802988DC 00A0+00 rc=0 efc=0 .text      decWaveTable__16JASBasicWaveBankFPCQ216JASBasicWaveBank10TWaveGroup */
+/* 8029883C-802988DC 00A0+00 rc=1 efc=0 rfr=False None .text      decWaveTable__16JASBasicWaveBankFPCQ216JASBasicWaveBank10TWaveGroup */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -282,7 +278,7 @@ asm void JASBasicWaveBank::decWaveTable(JASBasicWaveBank::TWaveGroup const* fiel
 #pragma pop
 
 
-/* 802988DC-80298910 0034+00 rc=0 efc=0 .text      getWaveHandle__16JASBasicWaveBankCFUl                        */
+/* 802988DC-80298910 0034+00 rc=1 efc=0 rfr=False None .text      getWaveHandle__16JASBasicWaveBankCFUl                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -293,7 +289,7 @@ asm void JASBasicWaveBank::getWaveHandle(u32 field_0) const {
 #pragma pop
 
 
-/* 80298910-802989C0 00B0+00 rc=0 efc=0 .text      setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo */
+/* 80298910-802989C0 00B0+00 rc=1 efc=1 rfr=False None .text      setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -304,7 +300,7 @@ asm void JASBasicWaveBank::setWaveInfo(JASBasicWaveBank::TWaveGroup* field_0, in
 #pragma pop
 
 
-/* 802989C0-80298A0C 004C+00 rc=0 efc=0 .text      __ct__Q216JASBasicWaveBank10TWaveGroupFv                     */
+/* 802989C0-80298A0C 004C+00 rc=1 efc=0 rfr=False None .text      __ct__Q216JASBasicWaveBank10TWaveGroupFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -315,7 +311,7 @@ asm JASBasicWaveBank::TWaveGroup::TWaveGroup() {
 #pragma pop
 
 
-/* 80298A0C-80298A84 0078+00 rc=0 efc=0 .text      __dt__Q216JASBasicWaveBank10TWaveGroupFv                     */
+/* 80298A0C-80298A84 0078+00 rc=3 efc=0 rfr=False None .text      __dt__Q216JASBasicWaveBank10TWaveGroupFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -326,7 +322,7 @@ asm JASBasicWaveBank::TWaveGroup::~TWaveGroup() {
 #pragma pop
 
 
-/* 80298A84-80298B04 0080+00 rc=0 efc=0 .text      setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap   */
+/* 80298A84-80298B04 0080+00 rc=1 efc=1 rfr=False None .text      setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -337,7 +333,7 @@ asm void JASBasicWaveBank::TWaveGroup::setWaveCount(u32 field_0, JKRHeap* field_
 #pragma pop
 
 
-/* 80298B04-80298B2C 0028+00 rc=0 efc=0 .text      onLoadDone__Q216JASBasicWaveBank10TWaveGroupFv               */
+/* 80298B04-80298B2C 0028+00 rc=1 efc=0 rfr=False None .text      onLoadDone__Q216JASBasicWaveBank10TWaveGroupFv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -348,7 +344,7 @@ asm void JASBasicWaveBank::TWaveGroup::onLoadDone() {
 #pragma pop
 
 
-/* 80298B2C-80298B54 0028+00 rc=0 efc=0 .text      onEraseDone__Q216JASBasicWaveBank10TWaveGroupFv              */
+/* 80298B2C-80298B54 0028+00 rc=1 efc=0 rfr=False None .text      onEraseDone__Q216JASBasicWaveBank10TWaveGroupFv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -359,7 +355,7 @@ asm void JASBasicWaveBank::TWaveGroup::onEraseDone() {
 #pragma pop
 
 
-/* 80298B54-80298B64 0010+00 rc=0 efc=0 .text      getWaveID__Q216JASBasicWaveBank10TWaveGroupCFi               */
+/* 80298B54-80298B64 0010+00 rc=2 efc=0 rfr=False None .text      getWaveID__Q216JASBasicWaveBank10TWaveGroupCFi               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -370,7 +366,7 @@ asm void JASBasicWaveBank::TWaveGroup::getWaveID(int field_0) const {
 #pragma pop
 
 
-/* 80298B64-80298B88 0024+00 rc=0 efc=0 .text      getWavePtr__Q216JASBasicWaveBank11TWaveHandleCFv             */
+/* 80298B64-80298B88 0024+00 rc=1 efc=0 rfr=False None .text      getWavePtr__Q216JASBasicWaveBank11TWaveHandleCFv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -381,7 +377,7 @@ asm void JASBasicWaveBank::TWaveHandle::getWavePtr() const {
 #pragma pop
 
 
-/* 80298B88-80298BD0 0048+00 rc=0 efc=0 .text      __dt__11JASWaveBankFv                                        */
+/* 80298B88-80298BD0 0048+00 rc=1 efc=0 rfr=False None .text      __dt__11JASWaveBankFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -392,7 +388,7 @@ asm JASWaveBank::~JASWaveBank() {
 #pragma pop
 
 
-/* 80298BD0-80298C18 0048+00 rc=0 efc=0 .text      __dt__13JASWaveHandleFv                                      */
+/* 80298BD0-80298C18 0048+00 rc=1 efc=0 rfr=False None .text      __dt__13JASWaveHandleFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -403,7 +399,7 @@ asm JASWaveHandle::~JASWaveHandle() {
 #pragma pop
 
 
-/* 80298C18-80298C4C 0034+00 rc=0 efc=0 .text      __ct__Q216JASBasicWaveBank11TWaveHandleFv                    */
+/* 80298C18-80298C4C 0034+00 rc=1 efc=0 rfr=False None .text      __ct__Q216JASBasicWaveBank11TWaveHandleFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -414,7 +410,7 @@ asm JASBasicWaveBank::TWaveHandle::TWaveHandle() {
 #pragma pop
 
 
-/* 80298C4C-80298C64 0018+00 rc=0 efc=0 .text      __ct__Q216JASBasicWaveBank14TGroupWaveInfoFv                 */
+/* 80298C4C-80298C64 0018+00 rc=1 efc=0 rfr=False None .text      __ct__Q216JASBasicWaveBank14TGroupWaveInfoFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -425,7 +421,7 @@ asm JASBasicWaveBank::TGroupWaveInfo::TGroupWaveInfo() {
 #pragma pop
 
 
-/* 80298C64-80298C6C 0008+00 rc=0 efc=0 .text      getWaveInfo__Q216JASBasicWaveBank11TWaveHandleCFv            */
+/* 80298C64-80298C6C 0008+00 rc=1 efc=0 rfr=False None .text      getWaveInfo__Q216JASBasicWaveBank11TWaveHandleCFv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -436,7 +432,7 @@ asm void JASBasicWaveBank::TWaveHandle::getWaveInfo() const {
 #pragma pop
 
 
-/* 80298C6C-80298C8C 0020+00 rc=0 efc=0 .text      getWaveArc__16JASBasicWaveBankFUl                            */
+/* 80298C6C-80298C8C 0020+00 rc=1 efc=0 rfr=False None .text      getWaveArc__16JASBasicWaveBankFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -447,7 +443,7 @@ asm void JASBasicWaveBank::getWaveArc(u32 field_0) {
 #pragma pop
 
 
-/* 80298C8C-80298C94 0008+00 rc=0 efc=0 .text      getArcCount__16JASBasicWaveBankCFv                           */
+/* 80298C8C-80298C94 0008+00 rc=1 efc=0 rfr=False None .text      getArcCount__16JASBasicWaveBankCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

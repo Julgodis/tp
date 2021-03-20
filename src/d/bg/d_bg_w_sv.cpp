@@ -9,16 +9,16 @@
 // Types:
 // 
 
-struct cBgD_t {
-};
-
-struct csXyz {
+struct cXyz {
 };
 
 struct cBgS_PolyInfo {
 };
 
-struct cXyz {
+struct cBgD_t {
+};
+
+struct csXyz {
 };
 
 struct dBgWSv {
@@ -36,13 +36,13 @@ struct dBgW_Base {
 	/* 80074AB4 */ void SetOldShapeAngleY(s16);
 };
 
+struct cBgS_LinChk {
+};
+
 struct cBgS_ShdwDraw {
 };
 
 struct cBgS_GndChk {
-};
-
-struct cBgS_LinChk {
 };
 
 struct cBgW {
@@ -65,9 +65,6 @@ struct cBgW {
 	/* 8007B964 */ void ChkMoveBg() const;
 };
 
-struct dBgS_Acch {
-};
-
 struct dBgS_RoofChk {
 };
 
@@ -77,16 +74,19 @@ struct cBgS_PolyPassChk {
 struct dBgS_SphChk {
 };
 
+struct dBgS_Acch {
+};
+
 struct cBgS_GrpPassChk {
+};
+
+struct fopAc_ac_c {
 };
 
 struct dBgS_CaptPoly {
 };
 
 struct dBgS_SplGrpChk {
-};
-
-struct fopAc_ac_c {
 };
 
 struct dBgW {
@@ -148,9 +148,6 @@ extern "C" void TransPosWork__6dBgWSvFP4cXyziii(); // 1
 extern "C" void TransPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __dt__6dBgWSvFv(); // 1
-SECTION_DATA extern void* const __vt__6dBgWSv[65 + 1 /* padding */];
-SECTION_SDATA2 extern u8 d_bg_d_bg_w_sv__lit_3807[4];
-SECTION_SDATA2 extern f32 d_bg_d_bg_w_sv__lit_3808;
 
 // 
 // External References:
@@ -226,14 +223,14 @@ extern "C" void* __nwa__FUl(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_27(); // 1
-SECTION_DATA extern void* const __vt__4dBgW[65];
-SECTION_SBSS extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
+extern "C" extern void* __vt__4dBgW[65];
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80082F98-80083020 0088+00 rc=0 efc=0 .text      Set__6dBgWSvFP6cBgD_tUl                                      */
+/* 80082F98-80083020 0088+00 rc=0 efc=0 rfr=False None .text      Set__6dBgWSvFP6cBgD_tUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -244,7 +241,7 @@ asm void dBgWSv::Set(cBgD_t* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80083020-8008308C 006C+00 rc=0 efc=0 .text      CopyBackVtx__6dBgWSvFv                                       */
+/* 80083020-8008308C 006C+00 rc=0 efc=0 rfr=False None .text      CopyBackVtx__6dBgWSvFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +252,7 @@ asm void dBgWSv::CopyBackVtx() {
 #pragma pop
 
 
-/* 8008308C-80083244 01B8+00 rc=0 efc=0 .text      CrrPosWork__6dBgWSvFP4cXyziii                                */
+/* 8008308C-80083244 01B8+00 rc=1 efc=0 rfr=False None .text      CrrPosWork__6dBgWSvFP4cXyziii                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,7 +263,7 @@ asm void dBgWSv::CrrPosWork(cXyz* field_0, int field_1, int field_2, int field_3
 #pragma pop
 
 
-/* 80083244-80083300 00BC+00 rc=0 efc=0 .text      CrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz     */
+/* 80083244-80083300 00BC+00 rc=1 efc=0 rfr=False None .text      CrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -278,15 +275,15 @@ asm void dBgWSv::CrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_
 
 
 /* ############################################################################################## */
-/* 80452758-8045275C 0004+00 rc=0 efc=0 .sdata2    @3807                                                        */
-u8 d_bg_d_bg_w_sv__lit_3807[4] = {
+/* 80452758-8045275C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3807                                                        */
+SECTION_SDATA2 static u8 d_bg_d_bg_w_sv__lit_3807[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045275C-80452760 0004+00 rc=0 efc=0 .sdata2    @3808                                                        */
-f32 d_bg_d_bg_w_sv__lit_3808 = 1.0f;
+/* 8045275C-80452760 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3808                                                        */
+SECTION_SDATA2 static f32 d_bg_d_bg_w_sv__lit_3808 = 1.0f;
 
-/* 80083300-8008351C 021C+00 rc=0 efc=0 .text      TransPosWork__6dBgWSvFP4cXyziii                              */
+/* 80083300-8008351C 021C+00 rc=1 efc=0 rfr=False None .text      TransPosWork__6dBgWSvFP4cXyziii                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -297,7 +294,7 @@ asm void dBgWSv::TransPosWork(cXyz* field_0, int field_1, int field_2, int field
 #pragma pop
 
 
-/* 8008351C-800835D8 00BC+00 rc=0 efc=0 .text      TransPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz   */
+/* 8008351C-800835D8 00BC+00 rc=1 efc=0 rfr=False None .text      TransPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -308,85 +305,85 @@ asm void dBgWSv::TransPos(cBgS_PolyInfo const& field_0, void* field_1, bool fiel
 #pragma pop
 
 
-/* 800835D8-800835DC 0004+00 rc=0 efc=0 .text      MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
+/* 800835D8-800835DC 0004+00 rc=1 efc=0 rfr=False None .text      MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
 void dBgWSv::MatrixCrrPos(cBgS_PolyInfo const& field_0, void* field_1, bool field_2, cXyz* field_3, csXyz* field_4, csXyz* field_5) {
 	/* empty function */
 }
 
 
 /* ############################################################################################## */
-/* 803ABEB8-803ABFC0 0104+04 rc=0 efc=0 .data      __vt__6dBgWSv                                                */
-void* const __vt__6dBgWSv[65 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__6dBgWSvFv,
-	(void*)ChkMemoryError__4cBgWFv,
-	(void*)ChkNotReady__4cBgWCFv,
-	(void*)ChkLock__4cBgWCFv,
-	(void*)ChkMoveBg__4cBgWCFv,
-	(void*)ChkMoveFlag__4dBgWCFv,
-	(void*)GetTriPla__4cBgWCFRC13cBgS_PolyInfo,
-	(void*)GetTriPnt__4cBgWCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz,
-	(void*)GetBnd__4cBgWCFv,
-	(void*)GetGrpInf__4cBgWCFRC13cBgS_PolyInfo,
-	(void*)OffMoveFlag__4dBgWFv,
-	(void*)GetTopUnder__4cBgWCFPfPf,
-	(void*)SetOldShapeAngleY__9dBgW_BaseFs,
-	(void*)LineCheck__4cBgWFP11cBgS_LinChk,
-	(void*)GroundCross__4cBgWFP11cBgS_GndChk,
-	(void*)ShdwDraw__4cBgWFP13cBgS_ShdwDraw,
-	(void*)CaptPoly__4dBgWFR13dBgS_CaptPoly,
-	(void*)WallCorrect__4dBgWFP9dBgS_Acch,
-	(void*)WallCorrectSort__4dBgWFP9dBgS_Acch,
-	(void*)RoofChk__4dBgWFP12dBgS_RoofChk,
-	(void*)SplGrpChk__4dBgWFP14dBgS_SplGrpChk,
-	(void*)SphChk__4dBgWFP11dBgS_SphChkPv,
-	(void*)GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo,
-	(void*)GetExitId__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetPolyColor__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetHorseNoEntry__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetSpecialCode__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetSpecialCode__4dBgWFi,
-	(void*)GetMagnetCode__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetPolyObjThrough__4dBgWFi,
-	(void*)GetPolyCamThrough__4dBgWFi,
-	(void*)GetPolyLinkThrough__4dBgWFi,
-	(void*)GetPolyArrowThrough__4dBgWFi,
-	(void*)GetPolyHSStick__4dBgWFi,
-	(void*)GetPolyBoomerangThrough__4dBgWFi,
-	(void*)GetPolyRopeThrough__4dBgWFi,
-	(void*)GetPolyBombThrough__4dBgWFi,
-	(void*)GetShdwThrough__4dBgWFi,
-	(void*)GetUnderwaterRoofCode__4dBgWFi,
-	(void*)GetMonkeyBarsCode__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetLinkNo__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetWallCode__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetPolyAtt0__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetPolyAtt1__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetGroundCode__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetIronBallThrough__4dBgWFi,
-	(void*)GetAttackThrough__4dBgWFi,
-	(void*)GetCamMoveBG__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetRoomCamId__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetRoomPathId__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetRoomPathPntNo__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetPolyGrpRoomInfId__4dBgWFRC13cBgS_PolyInfo,
-	(void*)GetGrpSoundId__4dBgWFRC13cBgS_PolyInfo,
-	(void*)CrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
-	(void*)TransPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
-	(void*)MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
-	(void*)CallRideCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_c,
-	(void*)CallArrowStickCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
-	(void*)CalcPlane__4cBgWFv,
-	(void*)ClassifyPlane__4cBgWFv,
-	(void*)ChkPolyThrough__4dBgWFiP16cBgS_PolyPassChk,
-	(void*)ChkShdwDrawThrough__4dBgWFiP16cBgS_PolyPassChk,
-	(void*)ChkGrpThrough__4dBgWFiP15cBgS_GrpPassChki,
+/* 803ABEB8-803ABFC0 0104+04 rc=1 efc=0 rfr=False None .data      __vt__6dBgWSv                                                */
+SECTION_DATA static void* __vt__6dBgWSv[65 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__6dBgWSvFv,
+	/* 3    */ (void*)ChkMemoryError__4cBgWFv,
+	/* 4    */ (void*)ChkNotReady__4cBgWCFv,
+	/* 5    */ (void*)ChkLock__4cBgWCFv,
+	/* 6    */ (void*)ChkMoveBg__4cBgWCFv,
+	/* 7    */ (void*)ChkMoveFlag__4dBgWCFv,
+	/* 8    */ (void*)GetTriPla__4cBgWCFRC13cBgS_PolyInfo,
+	/* 9    */ (void*)GetTriPnt__4cBgWCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz,
+	/* 10   */ (void*)GetBnd__4cBgWCFv,
+	/* 11   */ (void*)GetGrpInf__4cBgWCFRC13cBgS_PolyInfo,
+	/* 12   */ (void*)OffMoveFlag__4dBgWFv,
+	/* 13   */ (void*)GetTopUnder__4cBgWCFPfPf,
+	/* 14   */ (void*)SetOldShapeAngleY__9dBgW_BaseFs,
+	/* 15   */ (void*)LineCheck__4cBgWFP11cBgS_LinChk,
+	/* 16   */ (void*)GroundCross__4cBgWFP11cBgS_GndChk,
+	/* 17   */ (void*)ShdwDraw__4cBgWFP13cBgS_ShdwDraw,
+	/* 18   */ (void*)CaptPoly__4dBgWFR13dBgS_CaptPoly,
+	/* 19   */ (void*)WallCorrect__4dBgWFP9dBgS_Acch,
+	/* 20   */ (void*)WallCorrectSort__4dBgWFP9dBgS_Acch,
+	/* 21   */ (void*)RoofChk__4dBgWFP12dBgS_RoofChk,
+	/* 22   */ (void*)SplGrpChk__4dBgWFP14dBgS_SplGrpChk,
+	/* 23   */ (void*)SphChk__4dBgWFP11dBgS_SphChkPv,
+	/* 24   */ (void*)GetGrpRoomIndex__4cBgWCFRC13cBgS_PolyInfo,
+	/* 25   */ (void*)GetExitId__4dBgWFRC13cBgS_PolyInfo,
+	/* 26   */ (void*)GetPolyColor__4dBgWFRC13cBgS_PolyInfo,
+	/* 27   */ (void*)GetHorseNoEntry__4dBgWFRC13cBgS_PolyInfo,
+	/* 28   */ (void*)GetSpecialCode__4dBgWFRC13cBgS_PolyInfo,
+	/* 29   */ (void*)GetSpecialCode__4dBgWFi,
+	/* 30   */ (void*)GetMagnetCode__4dBgWFRC13cBgS_PolyInfo,
+	/* 31   */ (void*)GetPolyObjThrough__4dBgWFi,
+	/* 32   */ (void*)GetPolyCamThrough__4dBgWFi,
+	/* 33   */ (void*)GetPolyLinkThrough__4dBgWFi,
+	/* 34   */ (void*)GetPolyArrowThrough__4dBgWFi,
+	/* 35   */ (void*)GetPolyHSStick__4dBgWFi,
+	/* 36   */ (void*)GetPolyBoomerangThrough__4dBgWFi,
+	/* 37   */ (void*)GetPolyRopeThrough__4dBgWFi,
+	/* 38   */ (void*)GetPolyBombThrough__4dBgWFi,
+	/* 39   */ (void*)GetShdwThrough__4dBgWFi,
+	/* 40   */ (void*)GetUnderwaterRoofCode__4dBgWFi,
+	/* 41   */ (void*)GetMonkeyBarsCode__4dBgWFRC13cBgS_PolyInfo,
+	/* 42   */ (void*)GetLinkNo__4dBgWFRC13cBgS_PolyInfo,
+	/* 43   */ (void*)GetWallCode__4dBgWFRC13cBgS_PolyInfo,
+	/* 44   */ (void*)GetPolyAtt0__4dBgWFRC13cBgS_PolyInfo,
+	/* 45   */ (void*)GetPolyAtt1__4dBgWFRC13cBgS_PolyInfo,
+	/* 46   */ (void*)GetGroundCode__4dBgWFRC13cBgS_PolyInfo,
+	/* 47   */ (void*)GetIronBallThrough__4dBgWFi,
+	/* 48   */ (void*)GetAttackThrough__4dBgWFi,
+	/* 49   */ (void*)GetCamMoveBG__4dBgWFRC13cBgS_PolyInfo,
+	/* 50   */ (void*)GetRoomCamId__4dBgWFRC13cBgS_PolyInfo,
+	/* 51   */ (void*)GetRoomPathId__4dBgWFRC13cBgS_PolyInfo,
+	/* 52   */ (void*)GetRoomPathPntNo__4dBgWFRC13cBgS_PolyInfo,
+	/* 53   */ (void*)GetPolyGrpRoomInfId__4dBgWFRC13cBgS_PolyInfo,
+	/* 54   */ (void*)GetGrpSoundId__4dBgWFRC13cBgS_PolyInfo,
+	/* 55   */ (void*)CrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
+	/* 56   */ (void*)TransPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
+	/* 57   */ (void*)MatrixCrrPos__6dBgWSvFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
+	/* 58   */ (void*)CallRideCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_c,
+	/* 59   */ (void*)CallArrowStickCallBack__4dBgWFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
+	/* 60   */ (void*)CalcPlane__4cBgWFv,
+	/* 61   */ (void*)ClassifyPlane__4cBgWFv,
+	/* 62   */ (void*)ChkPolyThrough__4dBgWFiP16cBgS_PolyPassChk,
+	/* 63   */ (void*)ChkShdwDrawThrough__4dBgWFiP16cBgS_PolyPassChk,
+	/* 64   */ (void*)ChkGrpThrough__4dBgWFiP15cBgS_GrpPassChki,
 	/* padding */
 	NULL,
 };
 
-/* 800835DC-8008364C 0070+00 rc=0 efc=0 .text      __dt__6dBgWSvFv                                              */
+/* 800835DC-8008364C 0070+00 rc=1 efc=0 rfr=False None .text      __dt__6dBgWSvFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

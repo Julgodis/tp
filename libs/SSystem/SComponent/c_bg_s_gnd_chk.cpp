@@ -9,10 +9,10 @@
 // Types:
 // 
 
-struct Vec {
+struct cXyz {
 };
 
-struct cXyz {
+struct Vec {
 };
 
 struct cBgS_GndChk {
@@ -37,15 +37,14 @@ struct cBgS_PolyInfo {
 // Forward References:
 // 
 
-extern "C" void func_80267D54(); // 1
+extern "C" static void func_80267D54(); // 1
 
 extern "C" void __ct__11cBgS_GndChkFv(); // 1
 extern "C" void __dt__11cBgS_GndChkFv(); // 1
 extern "C" void SetPos__11cBgS_GndChkFPC3Vec(); // 1
 extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
 extern "C" void PreCheck__11cBgS_GndChkFv(); // 1
-extern "C" void func_80267D54(); // 1
-SECTION_DATA extern void* const __vt__11cBgS_GndChk[6];
+extern "C" static void func_80267D54(); // 1
 
 // 
 // External References:
@@ -58,24 +57,24 @@ extern "C" void __dt__8cBgS_ChkFv(); // 1
 extern "C" void __ct__13cBgS_PolyInfoFv(); // 1
 extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
 extern "C" void __dl__FPv(); // 1
-SECTION_BSS extern f32 Zero__4cXyz[3];
+extern "C" extern f32 Zero__4cXyz[3];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C3F90-803C3FA8 0018+00 rc=0 efc=0 .data      __vt__11cBgS_GndChk                                          */
-void* const __vt__11cBgS_GndChk[6] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11cBgS_GndChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80267D54,
+/* 803C3F90-803C3FA8 0018+00 rc=2 efc=0 rfr=False None .data      __vt__11cBgS_GndChk                                          */
+SECTION_DATA static void* __vt__11cBgS_GndChk[6] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11cBgS_GndChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_80267D54,
 };
 
-/* 80267C1C-80267C94 0078+00 rc=0 efc=0 .text      __ct__11cBgS_GndChkFv                                        */
+/* 80267C1C-80267C94 0078+00 rc=2 efc=2 rfr=False None .text      __ct__11cBgS_GndChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +85,7 @@ asm cBgS_GndChk::cBgS_GndChk() {
 #pragma pop
 
 
-/* 80267C94-80267D0C 0078+00 rc=0 efc=0 .text      __dt__11cBgS_GndChkFv                                        */
+/* 80267C94-80267D0C 0078+00 rc=6 efc=4 rfr=False None .text      __dt__11cBgS_GndChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +96,7 @@ asm cBgS_GndChk::~cBgS_GndChk() {
 #pragma pop
 
 
-/* 80267D0C-80267D28 001C+00 rc=0 efc=0 .text      SetPos__11cBgS_GndChkFPC3Vec                                 */
+/* 80267D0C-80267D28 001C+00 rc=0 efc=0 rfr=False None .text      SetPos__11cBgS_GndChkFPC3Vec                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,7 +107,7 @@ asm void cBgS_GndChk::SetPos(Vec const* field_0) {
 #pragma pop
 
 
-/* 80267D28-80267D44 001C+00 rc=0 efc=0 .text      SetPos__11cBgS_GndChkFPC4cXyz                                */
+/* 80267D28-80267D44 001C+00 rc=51 efc=51 rfr=False None .text      SetPos__11cBgS_GndChkFPC4cXyz                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +118,7 @@ asm void cBgS_GndChk::SetPos(cXyz const* field_0) {
 #pragma pop
 
 
-/* 80267D44-80267D54 0010+00 rc=0 efc=0 .text      PreCheck__11cBgS_GndChkFv                                    */
+/* 80267D44-80267D54 0010+00 rc=1 efc=1 rfr=False None .text      PreCheck__11cBgS_GndChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -130,11 +129,11 @@ asm void cBgS_GndChk::PreCheck() {
 #pragma pop
 
 
-/* 80267D54-80267D5C 0008+00 rc=0 efc=0 .text      @20@__dt__11cBgS_GndChkFv                                    */
+/* 80267D54-80267D5C 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__11cBgS_GndChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80267D54() {
+extern "C" asm static void func_80267D54() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_gnd_chk/func_80267D54.s"
 }

@@ -30,13 +30,13 @@ extern "C" void free(); // 1
 extern "C" void __flush_all(); // 1
 extern "C" void __flush_buffer(); // 1
 extern "C" void ftell(); // 1
-SECTION_DATA extern u8 __lower_map[256];
+extern "C" extern u8 __lower_map[256];
 
 // 
 // Declarations:
 // 
 
-/* 8036581C-803658C0 00A4+00 rc=0 efc=0 .text      __msl_strnicmp                                               */
+/* 8036581C-803658C0 00A4+00 rc=1 efc=1 rfr=False None .text      __msl_strnicmp                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -47,7 +47,7 @@ extern "C" asm void __msl_strnicmp() {
 #pragma pop
 
 
-/* 803658C0-803659F8 0138+00 rc=0 efc=0 .text      fflush                                                       */
+/* 803658C0-803659F8 0138+00 rc=4 efc=4 rfr=False None .text      fflush                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -58,7 +58,7 @@ extern "C" asm void fflush() {
 #pragma pop
 
 
-/* 803659F8-80365BB4 01BC+00 rc=0 efc=0 .text      fclose                                                       */
+/* 803659F8-80365BB4 01BC+00 rc=1 efc=1 rfr=False None .text      fclose                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

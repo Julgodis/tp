@@ -9,13 +9,13 @@
 // Types:
 // 
 
-struct Vec {
-};
-
 struct Z2SoundHandlePool {
 };
 
 struct JAISoundID {
+};
+
+struct Vec {
 };
 
 struct Z2SoundObjBase {
@@ -52,9 +52,6 @@ struct Z2SoundObjArrow {
 	/* 802BEB74 */ void init(Vec*, u8);
 };
 
-struct JAUSoundAnimationSound {
-};
-
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
@@ -70,6 +67,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAUSoundAnimationSound {
 };
 
 struct Z2SoundObjAnime {
@@ -171,26 +171,8 @@ extern "C" void updateSoundLifeTime___15Z2SoundObjAnimeFff(); // 1
 extern "C" void func_802BF660(); // 1
 extern "C" void func_802BF890(); // 1
 extern "C" void func_802BF898(); // 1
-SECTION_RODATA extern const u8 Z2SoundObject__cNullVec__6Z2Calc[12 + 4 /* padding */];
-SECTION_DATA extern void* const __vt__15Z2SoundObjAnime[8];
-SECTION_DATA extern void* const __vt__15Z2SoundObjArrow[8];
-SECTION_DATA extern void* const __vt__16Z2SoundObjSimple[8];
-SECTION_DATA extern void* const __vt__21Z2DopplerSoundObjBase[8];
-SECTION_DATA extern void* const __vt__14Z2SoundObjBase[8];
-SECTION_SDATA2 extern f32 Z2SoundObject__lit_3559;
-SECTION_SDATA2 extern f32 lit_3560;
-SECTION_SDATA2 extern f32 Z2SoundObject__lit_3561[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 lit_3564;
-SECTION_SDATA2 extern u8 Z2SoundObject__lit_3821[4];
-SECTION_SDATA2 extern f32 Z2SoundObject__lit_3822;
-SECTION_SDATA2 extern f32 Z2SoundObject__lit_3823;
-SECTION_SDATA2 extern f32 Z2SoundObject__lit_3824;
-SECTION_SDATA2 extern f32 Z2SoundObject__lit_3825[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 Z2SoundObject__lit_3828;
-SECTION_SDATA2 extern f32 Z2SoundObject__lit_3859;
-SECTION_SDATA2 extern f32 Z2SoundObject__lit_3860;
-SECTION_SDATA2 extern f32 Z2SoundObject__lit_3861;
-SECTION_SDATA2 extern f32 Z2SoundObject__lit_3862;
+extern "C" extern void* __vt__15Z2SoundObjAnime[8];
+extern "C" extern void* __vt__16Z2SoundObjSimple[8];
 
 // 
 // External References:
@@ -234,78 +216,78 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_23(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_SDATA extern u32 __float_max;
-SECTION_SBSS extern u8 data_80450B4C[4];
-SECTION_SBSS extern u8 data_80450B60[4];
-SECTION_SBSS extern u8 data_80450B74[4];
-SECTION_SBSS extern u8 data_80450B88[4];
+extern "C" extern u32 __float_max;
+extern "C" extern u8 data_80450B4C[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 data_80450B88[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803CACD0-803CACF0 0020+00 rc=0 efc=0 .data      __vt__15Z2SoundObjAnime                                      */
-void* const __vt__15Z2SoundObjAnime[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)framework__14Z2SoundObjBaseFUlSc,
-	(void*)dispose__14Z2SoundObjBaseFv,
-	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	(void*)init__15Z2SoundObjAnimeFP3VecUc,
-	(void*)startSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
-	(void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
+/* 803CACD0-803CACF0 0020+00 rc=2 efc=1 rfr=False None .data      __vt__15Z2SoundObjAnime                                      */
+SECTION_DATA void* __vt__15Z2SoundObjAnime[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)framework__14Z2SoundObjBaseFUlSc,
+	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
+	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	/* 5    */ (void*)init__15Z2SoundObjAnimeFP3VecUc,
+	/* 6    */ (void*)startSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
+	/* 7    */ (void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
 };
 
-/* 803CACF0-803CAD10 0020+00 rc=0 efc=0 .data      __vt__15Z2SoundObjArrow                                      */
-void* const __vt__15Z2SoundObjArrow[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)framework__21Z2DopplerSoundObjBaseFUlSc,
-	(void*)dispose__14Z2SoundObjBaseFv,
-	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	(void*)init__15Z2SoundObjArrowFP3VecUc,
-	(void*)startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
-	(void*)startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
+/* 803CACF0-803CAD10 0020+00 rc=1 efc=0 rfr=False None .data      __vt__15Z2SoundObjArrow                                      */
+SECTION_DATA static void* __vt__15Z2SoundObjArrow[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)framework__21Z2DopplerSoundObjBaseFUlSc,
+	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
+	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	/* 5    */ (void*)init__15Z2SoundObjArrowFP3VecUc,
+	/* 6    */ (void*)startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
+	/* 7    */ (void*)startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
 };
 
-/* 803CAD10-803CAD30 0020+00 rc=0 efc=0 .data      __vt__16Z2SoundObjSimple                                     */
-void* const __vt__16Z2SoundObjSimple[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)framework__14Z2SoundObjBaseFUlSc,
-	(void*)dispose__14Z2SoundObjBaseFv,
-	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	(void*)init__16Z2SoundObjSimpleFP3VecUc,
-	(void*)startSound__16Z2SoundObjSimpleF10JAISoundIDUlSc,
-	(void*)startLevelSound__16Z2SoundObjSimpleF10JAISoundIDUlSc,
+/* 803CAD10-803CAD30 0020+00 rc=4 efc=3 rfr=False None .data      __vt__16Z2SoundObjSimple                                     */
+SECTION_DATA void* __vt__16Z2SoundObjSimple[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)framework__14Z2SoundObjBaseFUlSc,
+	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
+	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	/* 5    */ (void*)init__16Z2SoundObjSimpleFP3VecUc,
+	/* 6    */ (void*)startSound__16Z2SoundObjSimpleF10JAISoundIDUlSc,
+	/* 7    */ (void*)startLevelSound__16Z2SoundObjSimpleF10JAISoundIDUlSc,
 };
 
-/* 803CAD30-803CAD50 0020+00 rc=0 efc=0 .data      __vt__21Z2DopplerSoundObjBase                                */
-void* const __vt__21Z2DopplerSoundObjBase[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)framework__21Z2DopplerSoundObjBaseFUlSc,
-	(void*)dispose__14Z2SoundObjBaseFv,
-	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	(void*)init__21Z2DopplerSoundObjBaseFP3VecUc,
-	(void*)startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
-	(void*)startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
+/* 803CAD30-803CAD50 0020+00 rc=2 efc=0 rfr=False None .data      __vt__21Z2DopplerSoundObjBase                                */
+SECTION_DATA static void* __vt__21Z2DopplerSoundObjBase[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)framework__21Z2DopplerSoundObjBaseFUlSc,
+	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
+	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	/* 5    */ (void*)init__21Z2DopplerSoundObjBaseFP3VecUc,
+	/* 6    */ (void*)startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
+	/* 7    */ (void*)startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
 };
 
-/* 803CAD50-803CAD70 0020+00 rc=0 efc=0 .data      __vt__14Z2SoundObjBase                                       */
-void* const __vt__14Z2SoundObjBase[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)framework__14Z2SoundObjBaseFUlSc,
-	(void*)dispose__14Z2SoundObjBaseFv,
-	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	(void*)init__14Z2SoundObjBaseFP3VecUc,
-	(void*)startSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
-	(void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
+/* 803CAD50-803CAD70 0020+00 rc=2 efc=0 rfr=False None .data      __vt__14Z2SoundObjBase                                       */
+SECTION_DATA static void* __vt__14Z2SoundObjBase[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)framework__14Z2SoundObjBaseFUlSc,
+	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
+	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	/* 5    */ (void*)init__14Z2SoundObjBaseFP3VecUc,
+	/* 6    */ (void*)startSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
+	/* 7    */ (void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
 };
 
-/* 802BDEF0-802BDF48 0058+00 rc=0 efc=0 .text      __ct__14Z2SoundObjBaseFv                                     */
+/* 802BDEF0-802BDF48 0058+00 rc=5 efc=2 rfr=False None .text      __ct__14Z2SoundObjBaseFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -316,7 +298,7 @@ asm Z2SoundObjBase::Z2SoundObjBase() {
 #pragma pop
 
 
-/* 802BDF48-802BDFB0 0068+00 rc=0 efc=0 .text      __dt__14Z2SoundObjBaseFv                                     */
+/* 802BDF48-802BDFB0 0068+00 rc=4 efc=3 rfr=False None .text      __dt__14Z2SoundObjBaseFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -327,7 +309,7 @@ asm Z2SoundObjBase::~Z2SoundObjBase() {
 #pragma pop
 
 
-/* 802BDFB0-802BDFF8 0048+00 rc=0 efc=0 .text      init__14Z2SoundObjBaseFP3VecUc                               */
+/* 802BDFB0-802BDFF8 0048+00 rc=7 efc=2 rfr=False None .text      init__14Z2SoundObjBaseFP3VecUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -338,7 +320,7 @@ asm void Z2SoundObjBase::init(Vec* field_0, u8 field_1) {
 #pragma pop
 
 
-/* 802BDFF8-802BE038 0040+00 rc=0 efc=0 .text      deleteObject__14Z2SoundObjBaseFv                             */
+/* 802BDFF8-802BE038 0040+00 rc=9 efc=8 rfr=False None .text      deleteObject__14Z2SoundObjBaseFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -349,7 +331,7 @@ asm void Z2SoundObjBase::deleteObject() {
 #pragma pop
 
 
-/* 802BE038-802BE070 0038+00 rc=0 efc=0 .text      framework__14Z2SoundObjBaseFUlSc                             */
+/* 802BE038-802BE070 0038+00 rc=7 efc=3 rfr=False None .text      framework__14Z2SoundObjBaseFUlSc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -360,7 +342,7 @@ asm void Z2SoundObjBase::framework(u32 field_0, s8 field_1) {
 #pragma pop
 
 
-/* 802BE070-802BE104 0094+00 rc=0 efc=0 .text      dispose__14Z2SoundObjBaseFv                                  */
+/* 802BE070-802BE104 0094+00 rc=8 efc=3 rfr=False None .text      dispose__14Z2SoundObjBaseFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -371,7 +353,7 @@ asm void Z2SoundObjBase::dispose() {
 #pragma pop
 
 
-/* 802BE104-802BE144 0040+00 rc=0 efc=0 .text      stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool                */
+/* 802BE104-802BE144 0040+00 rc=8 efc=3 rfr=False None .text      stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -383,23 +365,23 @@ asm void Z2SoundObjBase::stopOK(Z2SoundHandlePool& field_0) {
 
 
 /* ############################################################################################## */
-/* 80455B38-80455B3C 0004+00 rc=0 efc=0 .sdata2    @3559                                                        */
-f32 Z2SoundObject__lit_3559 = 127.0f;
+/* 80455B38-80455B3C 0004+00 rc=5 efc=0 rfr=False None .sdata2    @3559                                                        */
+SECTION_SDATA2 static f32 Z2SoundObject__lit_3559 = 127.0f;
 
-/* 80455B3C-80455B40 0004+00 rc=0 efc=0 .sdata2    @3560                                                        */
-f32 lit_3560 = 1.0f;
+/* 80455B3C-80455B40 0004+00 rc=4 efc=0 rfr=False None .sdata2    @3560                                                        */
+SECTION_SDATA2 static f32 lit_3560 = 1.0f;
 
-/* 80455B40-80455B48 0004+04 rc=0 efc=0 .sdata2    @3561                                                        */
-f32 Z2SoundObject__lit_3561[1 + 1 /* padding */] = {
+/* 80455B40-80455B48 0004+04 rc=3 efc=0 rfr=False None .sdata2    @3561                                                        */
+SECTION_SDATA2 static f32 Z2SoundObject__lit_3561[1 + 1 /* padding */] = {
 	-1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455B48-80455B50 0008+00 rc=0 efc=0 .sdata2    @3564                                                        */
-f64 lit_3564 = 4503601774854144.0 /* cast s32 to float */;
+/* 80455B48-80455B50 0008+00 rc=3 efc=0 rfr=False None .sdata2    @3564                                                        */
+SECTION_SDATA2 static f64 lit_3564 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802BE144-802BE2D4 0190+00 rc=0 efc=0 .text      startSound__14Z2SoundObjBaseF10JAISoundIDUlSc                */
+/* 802BE144-802BE2D4 0190+00 rc=8 efc=3 rfr=False None .text      startSound__14Z2SoundObjBaseF10JAISoundIDUlSc                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,7 +392,7 @@ asm void Z2SoundObjBase::startSound(JAISoundID field_0, u32 field_1, s8 field_2)
 #pragma pop
 
 
-/* 802BE2D4-802BE4A4 01D0+00 rc=0 efc=0 .text      startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc           */
+/* 802BE2D4-802BE4A4 01D0+00 rc=7 efc=3 rfr=False None .text      startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -421,7 +403,7 @@ asm void Z2SoundObjBase::startLevelSound(JAISoundID field_0, u32 field_1, s8 fie
 #pragma pop
 
 
-/* 802BE4A4-802BE5A0 00FC+00 rc=0 efc=0 .text      startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase     */
+/* 802BE4A4-802BE5A0 00FC+00 rc=5 efc=5 rfr=False None .text      startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -433,14 +415,14 @@ asm void Z2SoundObjBase::startCollisionSE(u32 field_0, u32 field_1, Z2SoundObjBa
 
 
 /* ############################################################################################## */
-/* 8039C230-8039C240 000C+04 rc=0 efc=0 .rodata    cNullVec__6Z2Calc                                            */
-const u8 Z2SoundObject__cNullVec__6Z2Calc[12 + 4 /* padding */] = {
+/* 8039C230-8039C240 000C+04 rc=1 efc=0 rfr=False None .rodata    cNullVec__6Z2Calc                                            */
+SECTION_RODATA static u8 const Z2SoundObject__cNullVec__6Z2Calc[12 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802BE5A0-802BE5FC 005C+00 rc=0 efc=0 .text      __ct__21Z2DopplerSoundObjBaseFv                              */
+/* 802BE5A0-802BE5FC 005C+00 rc=1 efc=0 rfr=False None .text      __ct__21Z2DopplerSoundObjBaseFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -451,7 +433,7 @@ asm Z2DopplerSoundObjBase::Z2DopplerSoundObjBase() {
 #pragma pop
 
 
-/* 802BE5FC-802BE65C 0060+00 rc=0 efc=0 .text      __dt__21Z2DopplerSoundObjBaseFv                              */
+/* 802BE5FC-802BE65C 0060+00 rc=0 efc=0 rfr=False None .text      __dt__21Z2DopplerSoundObjBaseFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -462,7 +444,7 @@ asm Z2DopplerSoundObjBase::~Z2DopplerSoundObjBase() {
 #pragma pop
 
 
-/* 802BE65C-802BE6B8 005C+00 rc=0 efc=0 .text      init__21Z2DopplerSoundObjBaseFP3VecUc                        */
+/* 802BE65C-802BE6B8 005C+00 rc=1 efc=0 rfr=False None .text      init__21Z2DopplerSoundObjBaseFP3VecUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -473,7 +455,7 @@ asm void Z2DopplerSoundObjBase::init(Vec* field_0, u8 field_1) {
 #pragma pop
 
 
-/* 802BE6B8-802BE714 005C+00 rc=0 efc=0 .text      framework__21Z2DopplerSoundObjBaseFUlSc                      */
+/* 802BE6B8-802BE714 005C+00 rc=2 efc=0 rfr=False None .text      framework__21Z2DopplerSoundObjBaseFUlSc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -484,7 +466,7 @@ asm void Z2DopplerSoundObjBase::framework(u32 field_0, s8 field_1) {
 #pragma pop
 
 
-/* 802BE714-802BE7AC 0098+00 rc=0 efc=0 .text      startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc         */
+/* 802BE714-802BE7AC 0098+00 rc=2 efc=0 rfr=False None .text      startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -495,7 +477,7 @@ asm void Z2DopplerSoundObjBase::startSound(JAISoundID field_0, u32 field_1, s8 f
 #pragma pop
 
 
-/* 802BE7AC-802BE844 0098+00 rc=0 efc=0 .text      startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc    */
+/* 802BE7AC-802BE844 0098+00 rc=2 efc=0 rfr=False None .text      startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -506,7 +488,7 @@ asm void Z2DopplerSoundObjBase::startLevelSound(JAISoundID field_0, u32 field_1,
 #pragma pop
 
 
-/* 802BE844-802BE880 003C+00 rc=0 efc=0 .text      __ct__16Z2SoundObjSimpleFv                                   */
+/* 802BE844-802BE880 003C+00 rc=8 efc=8 rfr=False None .text      __ct__16Z2SoundObjSimpleFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -517,7 +499,7 @@ asm Z2SoundObjSimple::Z2SoundObjSimple() {
 #pragma pop
 
 
-/* 802BE880-802BE8A0 0020+00 rc=0 efc=0 .text      init__16Z2SoundObjSimpleFP3VecUc                             */
+/* 802BE880-802BE8A0 0020+00 rc=1 efc=0 rfr=False None .text      init__16Z2SoundObjSimpleFP3VecUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -529,31 +511,31 @@ asm void Z2SoundObjSimple::init(Vec* field_0, u8 field_1) {
 
 
 /* ############################################################################################## */
-/* 80455B50-80455B54 0004+00 rc=0 efc=0 .sdata2    @3821                                                        */
-u8 Z2SoundObject__lit_3821[4] = {
+/* 80455B50-80455B54 0004+00 rc=4 efc=0 rfr=False None .sdata2    @3821                                                        */
+SECTION_SDATA2 static u8 Z2SoundObject__lit_3821[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455B54-80455B58 0004+00 rc=0 efc=0 .sdata2    @3822                                                        */
-f32 Z2SoundObject__lit_3822 = 1.0f / 5.0f;
+/* 80455B54-80455B58 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3822                                                        */
+SECTION_SDATA2 static f32 Z2SoundObject__lit_3822 = 1.0f / 5.0f;
 
-/* 80455B58-80455B5C 0004+00 rc=0 efc=0 .sdata2    @3823                                                        */
-f32 Z2SoundObject__lit_3823 = 2.0f / 5.0f;
+/* 80455B58-80455B5C 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3823                                                        */
+SECTION_SDATA2 static f32 Z2SoundObject__lit_3823 = 2.0f / 5.0f;
 
-/* 80455B5C-80455B60 0004+00 rc=0 efc=0 .sdata2    @3824                                                        */
-f32 Z2SoundObject__lit_3824 = 3.0f / 5.0f;
+/* 80455B5C-80455B60 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3824                                                        */
+SECTION_SDATA2 static f32 Z2SoundObject__lit_3824 = 3.0f / 5.0f;
 
-/* 80455B60-80455B68 0004+04 rc=0 efc=0 .sdata2    @3825                                                        */
-f32 Z2SoundObject__lit_3825[1 + 1 /* padding */] = {
+/* 80455B60-80455B68 0004+04 rc=2 efc=0 rfr=False None .sdata2    @3825                                                        */
+SECTION_SDATA2 static f32 Z2SoundObject__lit_3825[1 + 1 /* padding */] = {
 	6.0f / 5.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455B68-80455B70 0008+00 rc=0 efc=0 .sdata2    @3828                                                        */
-f64 Z2SoundObject__lit_3828 = 4503599627370496.0 /* cast u32 to float */;
+/* 80455B68-80455B70 0008+00 rc=3 efc=0 rfr=False None .sdata2    @3828                                                        */
+SECTION_SDATA2 static f64 Z2SoundObject__lit_3828 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802BE8A0-802BE9B0 0110+00 rc=0 efc=0 .text      startSound__16Z2SoundObjSimpleF10JAISoundIDUlSc              */
+/* 802BE8A0-802BE9B0 0110+00 rc=1 efc=0 rfr=False None .text      startSound__16Z2SoundObjSimpleF10JAISoundIDUlSc              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -565,19 +547,19 @@ asm void Z2SoundObjSimple::startSound(JAISoundID field_0, u32 field_1, s8 field_
 
 
 /* ############################################################################################## */
-/* 80455B70-80455B74 0004+00 rc=0 efc=0 .sdata2    @3859                                                        */
-f32 Z2SoundObject__lit_3859 = 2.0f;
+/* 80455B70-80455B74 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3859                                                        */
+SECTION_SDATA2 static f32 Z2SoundObject__lit_3859 = 2.0f;
 
-/* 80455B74-80455B78 0004+00 rc=0 efc=0 .sdata2    @3860                                                        */
-f32 Z2SoundObject__lit_3860 = 22.0f;
+/* 80455B74-80455B78 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3860                                                        */
+SECTION_SDATA2 static f32 Z2SoundObject__lit_3860 = 22.0f;
 
-/* 80455B78-80455B7C 0004+00 rc=0 efc=0 .sdata2    @3861                                                        */
-f32 Z2SoundObject__lit_3861 = 50.0f;
+/* 80455B78-80455B7C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3861                                                        */
+SECTION_SDATA2 static f32 Z2SoundObject__lit_3861 = 50.0f;
 
-/* 80455B7C-80455B80 0004+00 rc=0 efc=0 .sdata2    @3862                                                        */
-f32 Z2SoundObject__lit_3862 = 1.5f;
+/* 80455B7C-80455B80 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3862                                                        */
+SECTION_SDATA2 static f32 Z2SoundObject__lit_3862 = 1.5f;
 
-/* 802BE9B0-802BEB38 0188+00 rc=0 efc=0 .text      startLevelSound__16Z2SoundObjSimpleF10JAISoundIDUlSc         */
+/* 802BE9B0-802BEB38 0188+00 rc=1 efc=0 rfr=False None .text      startLevelSound__16Z2SoundObjSimpleF10JAISoundIDUlSc         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -588,7 +570,7 @@ asm void Z2SoundObjSimple::startLevelSound(JAISoundID field_0, u32 field_1, s8 f
 #pragma pop
 
 
-/* 802BEB38-802BEB74 003C+00 rc=0 efc=0 .text      __ct__15Z2SoundObjArrowFv                                    */
+/* 802BEB38-802BEB74 003C+00 rc=0 efc=0 rfr=False None .text      __ct__15Z2SoundObjArrowFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -599,7 +581,7 @@ asm Z2SoundObjArrow::Z2SoundObjArrow() {
 #pragma pop
 
 
-/* 802BEB74-802BEB94 0020+00 rc=0 efc=0 .text      init__15Z2SoundObjArrowFP3VecUc                              */
+/* 802BEB74-802BEB94 0020+00 rc=1 efc=0 rfr=False None .text      init__15Z2SoundObjArrowFP3VecUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -610,7 +592,7 @@ asm void Z2SoundObjArrow::init(Vec* field_0, u8 field_1) {
 #pragma pop
 
 
-/* 802BEB94-802BEBDC 0048+00 rc=0 efc=0 .text      __ct__15Z2SoundObjAnimeFv                                    */
+/* 802BEB94-802BEBDC 0048+00 rc=2 efc=2 rfr=False None .text      __ct__15Z2SoundObjAnimeFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -621,7 +603,7 @@ asm Z2SoundObjAnime::Z2SoundObjAnime() {
 #pragma pop
 
 
-/* 802BEBDC-802BEBFC 0020+00 rc=0 efc=0 .text      init__15Z2SoundObjAnimeFP3VecUc                              */
+/* 802BEBDC-802BEBFC 0020+00 rc=2 efc=1 rfr=False None .text      init__15Z2SoundObjAnimeFP3VecUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -632,7 +614,7 @@ asm void Z2SoundObjAnime::init(Vec* field_0, u8 field_1) {
 #pragma pop
 
 
-/* 802BEBFC-802BED68 016C+00 rc=0 efc=0 .text      initAnime__15Z2SoundObjAnimeFPvbff                           */
+/* 802BEBFC-802BED68 016C+00 rc=2 efc=2 rfr=False None .text      initAnime__15Z2SoundObjAnimeFPvbff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -643,7 +625,7 @@ asm void Z2SoundObjAnime::initAnime(void* field_0, bool field_1, f32 field_2, f3
 #pragma pop
 
 
-/* 802BED68-802BEED4 016C+00 rc=0 efc=0 .text      ageSounds___15Z2SoundObjAnimeFv                              */
+/* 802BED68-802BEED4 016C+00 rc=1 efc=0 rfr=False None .text      ageSounds___15Z2SoundObjAnimeFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -654,7 +636,7 @@ asm void Z2SoundObjAnime::ageSounds_() {
 #pragma pop
 
 
-/* 802BEED4-802BF304 0430+00 rc=0 efc=0 .text      updateAnime__15Z2SoundObjAnimeFff                            */
+/* 802BEED4-802BF304 0430+00 rc=2 efc=2 rfr=False None .text      updateAnime__15Z2SoundObjAnimeFff                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -665,7 +647,7 @@ asm void Z2SoundObjAnime::updateAnime(f32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 802BF304-802BF660 035C+00 rc=0 efc=0 .text      updateSoundLifeTime___15Z2SoundObjAnimeFff                   */
+/* 802BF304-802BF660 035C+00 rc=1 efc=0 rfr=False None .text      updateSoundLifeTime___15Z2SoundObjAnimeFff                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -676,7 +658,7 @@ asm void Z2SoundObjAnime::updateSoundLifeTime_(f32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 802BF660-802BF890 0230+00 rc=0 efc=0 .text      startSoundInner__15Z2SoundObjAnimeFRCQ29JGeometry8TVec3<f>fP14Z2SoundStarterUlSc */
+/* 802BF660-802BF890 0230+00 rc=1 efc=0 rfr=False None .text      startSoundInner__15Z2SoundObjAnimeFRCQ29JGeometry8TVec3<f>fP14Z2SoundStarterUlSc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -687,7 +669,7 @@ asm void Z2SoundObjAnime::startSoundInner(JGeometry::TVec3<f32> const& field_0, 
 #pragma pop
 
 
-/* 802BF890-802BF898 0008+00 rc=0 efc=0 .text      getSoundID__15Z2SoundObjAnimeFPC22JAUSoundAnimationSoundRCQ29JGeometry8TVec3<f>f */
+/* 802BF890-802BF898 0008+00 rc=1 efc=0 rfr=False None .text      getSoundID__15Z2SoundObjAnimeFPC22JAUSoundAnimationSoundRCQ29JGeometry8TVec3<f>f */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -698,7 +680,7 @@ asm void Z2SoundObjAnime::getSoundID(JAUSoundAnimationSound const* field_0, JGeo
 #pragma pop
 
 
-/* 802BF898-802BF920 0088+00 rc=0 efc=0 .text      playsSound__15Z2SoundObjAnimeFPC22JAUSoundAnimationSoundRCQ29JGeometry8TVec3<f>f */
+/* 802BF898-802BF920 0088+00 rc=1 efc=0 rfr=False None .text      playsSound__15Z2SoundObjAnimeFPC22JAUSoundAnimationSoundRCQ29JGeometry8TVec3<f>f */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

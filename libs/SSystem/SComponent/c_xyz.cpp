@@ -59,32 +59,21 @@ extern "C" void isZero__4cXyzCFv(); // 1
 extern "C" void atan2sX_Z__4cXyzCFv(); // 1
 extern "C" void atan2sY_XZ__4cXyzCFv(); // 1
 extern "C" void __sinit_c_xyz_cpp(); // 1
-SECTION_RODATA extern const u8 c_xyz__lit_2299[12 + 4 /* padding */];
-SECTION_BSS extern u8 lit_2450[12];
-SECTION_BSS extern f32 Zero__4cXyz[3];
-SECTION_BSS extern u8 lit_2451[12];
-SECTION_BSS extern u8 BaseX__4cXyz[12];
-SECTION_BSS extern u8 lit_2452[12];
-SECTION_BSS extern u8 BaseY__4cXyz[12];
-SECTION_BSS extern u8 lit_2453[12];
-SECTION_BSS extern u8 BaseZ__4cXyz[12];
-SECTION_BSS extern u8 lit_2454[12];
-SECTION_BSS extern u8 BaseXY__4cXyz[12];
-SECTION_BSS extern u8 lit_2455[12];
-SECTION_BSS extern u8 BaseXZ__4cXyz[12];
-SECTION_BSS extern u8 lit_2456[12];
-SECTION_BSS extern u8 BaseYZ__4cXyz[12];
-SECTION_BSS extern u8 lit_2457[12];
-SECTION_BSS extern u8 BaseXYZ__4cXyz[12];
-SECTION_SDATA2 extern f32 c_xyz__lit_2201;
-SECTION_SDATA2 extern f32 c_xyz__lit_2288;
-SECTION_SDATA2 extern f32 lit_2325;
-SECTION_SDATA2 extern f32 lit_2326;
-SECTION_SDATA2 extern u8 lit_2327[4];
-SECTION_SDATA2 extern f32 c_xyz__lit_2405;
-SECTION_SDATA2 extern f64 lit_2446;
-SECTION_SDATA2 extern f64 lit_2447;
-SECTION_SDATA2 extern u8 lit_2448[8];
+extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u8 lit_2451[12];
+extern "C" extern u8 BaseX__4cXyz[12];
+extern "C" extern u8 lit_2452[12];
+extern "C" extern u8 BaseY__4cXyz[12];
+extern "C" extern u8 lit_2453[12];
+extern "C" extern u8 BaseZ__4cXyz[12];
+extern "C" extern u8 lit_2454[12];
+extern "C" extern u8 BaseXY__4cXyz[12];
+extern "C" extern u8 lit_2455[12];
+extern "C" extern u8 BaseXZ__4cXyz[12];
+extern "C" extern u8 lit_2456[12];
+extern "C" extern u8 BaseYZ__4cXyz[12];
+extern "C" extern u8 lit_2457[12];
+extern "C" extern u8 BaseXYZ__4cXyz[12];
 
 // 
 // External References:
@@ -108,14 +97,14 @@ extern "C" void PSVECNormalize(); // 1
 extern "C" void PSVECSquareMag(); // 1
 extern "C" void PSVECCrossProduct(); // 1
 extern "C" void __register_global_object(); // 1
-SECTION_SDATA extern u32 __float_nan;
-SECTION_SDATA extern u32 __float_epsilon;
+extern "C" extern u32 __float_nan;
+extern "C" extern u32 __float_epsilon;
 
 // 
 // Declarations:
 // 
 
-/* 80266AE4-80266B34 0050+00 rc=0 efc=0 .text      __pl__4cXyzCFRC3Vec                                          */
+/* 80266AE4-80266B34 0050+00 rc=103 efc=103 rfr=False None .text      __pl__4cXyzCFRC3Vec                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,7 +115,7 @@ asm void cXyz::operator+(Vec const& field_0) const {
 #pragma pop
 
 
-/* 80266B34-80266B84 0050+00 rc=0 efc=0 .text      __mi__4cXyzCFRC3Vec                                          */
+/* 80266B34-80266B84 0050+00 rc=196 efc=196 rfr=False None .text      __mi__4cXyzCFRC3Vec                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +126,7 @@ asm void cXyz::operator-(Vec const& field_0) const {
 #pragma pop
 
 
-/* 80266B84-80266BD0 004C+00 rc=0 efc=0 .text      __ml__4cXyzCFf                                               */
+/* 80266B84-80266BD0 004C+00 rc=100 efc=99 rfr=False None .text      __ml__4cXyzCFf                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +137,7 @@ asm void cXyz::operator*(f32 field_0) const {
 #pragma pop
 
 
-/* 80266BD0-80266C18 0048+00 rc=0 efc=0 .text      __ml__4cXyzCFRC3Vec                                          */
+/* 80266BD0-80266C18 0048+00 rc=7 efc=7 rfr=False None .text      __ml__4cXyzCFRC3Vec                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,10 +149,10 @@ asm void cXyz::operator*(Vec const& field_0) const {
 
 
 /* ############################################################################################## */
-/* 80455070-80455074 0004+00 rc=0 efc=0 .sdata2    @2201                                                        */
-f32 c_xyz__lit_2201 = 1.0f;
+/* 80455070-80455074 0004+00 rc=3 efc=0 rfr=False None .sdata2    @2201                                                        */
+SECTION_SDATA2 static f32 c_xyz__lit_2201 = 1.0f;
 
-/* 80266C18-80266C6C 0054+00 rc=0 efc=0 .text      __dv__4cXyzCFf                                               */
+/* 80266C18-80266C6C 0054+00 rc=3 efc=3 rfr=False None .text      __dv__4cXyzCFf                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -174,7 +163,7 @@ asm void cXyz::operator/(f32 field_0) const {
 #pragma pop
 
 
-/* 80266C6C-80266CBC 0050+00 rc=0 efc=0 .text      getCrossProduct__4cXyzCFRC3Vec                               */
+/* 80266C6C-80266CBC 0050+00 rc=1 efc=0 rfr=False None .text      getCrossProduct__4cXyzCFRC3Vec                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +174,7 @@ asm void cXyz::getCrossProduct(Vec const& field_0) const {
 #pragma pop
 
 
-/* 80266CBC-80266CE4 0028+00 rc=0 efc=0 .text      outprod__4cXyzCFRC3Vec                                       */
+/* 80266CBC-80266CE4 0028+00 rc=7 efc=7 rfr=False None .text      outprod__4cXyzCFRC3Vec                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +185,7 @@ asm void cXyz::outprod(Vec const& field_0) const {
 #pragma pop
 
 
-/* 80266CE4-80266D30 004C+00 rc=0 efc=0 .text      norm__4cXyzCFv                                               */
+/* 80266CE4-80266D30 004C+00 rc=10 efc=10 rfr=False None .text      norm__4cXyzCFv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -208,16 +197,16 @@ asm void cXyz::norm() const {
 
 
 /* ############################################################################################## */
-/* 80430CE8-80430CF4 000C+00 rc=0 efc=0 .bss       @2450                                                        */
-u8 lit_2450[12];
+/* 80430CE8-80430CF4 000C+00 rc=1 efc=0 rfr=False None .bss       @2450                                                        */
+static u8 lit_2450[12];
 
-/* 80430CF4-80430D00 000C+00 rc=0 efc=0 .bss       Zero__4cXyz                                                  */
+/* 80430CF4-80430D00 000C+00 rc=52 efc=50 rfr=False None .bss       Zero__4cXyz                                                  */
 f32 Zero__4cXyz[3];
 
-/* 80455074-80455078 0004+00 rc=0 efc=0 .sdata2    @2288                                                        */
-f32 c_xyz__lit_2288 = 7.999999968033578e-11f;
+/* 80455074-80455078 0004+00 rc=4 efc=0 rfr=False None .sdata2    @2288                                                        */
+SECTION_SDATA2 static f32 c_xyz__lit_2288 = 7.999999968033578e-11f;
 
-/* 80266D30-80266DC4 0094+00 rc=0 efc=0 .text      normZP__4cXyzCFv                                             */
+/* 80266D30-80266DC4 0094+00 rc=5 efc=4 rfr=False None .text      normZP__4cXyzCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,25 +218,25 @@ asm void cXyz::normZP() const {
 
 
 /* ############################################################################################## */
-/* 8039A868-8039A878 000C+04 rc=0 efc=0 .rodata    @2299                                                        */
-const u8 c_xyz__lit_2299[12 + 4 /* padding */] = {
+/* 8039A868-8039A878 000C+04 rc=1 efc=0 rfr=False None .rodata    @2299                                                        */
+SECTION_RODATA static u8 const c_xyz__lit_2299[12 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455078-8045507C 0004+00 rc=0 efc=0 .sdata2    @2325                                                        */
-f32 lit_2325 = 1.25f;
+/* 80455078-8045507C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2325                                                        */
+SECTION_SDATA2 static f32 lit_2325 = 1.25f;
 
-/* 8045507C-80455080 0004+00 rc=0 efc=0 .sdata2    @2326                                                        */
-f32 lit_2326 = 1000000.0f;
+/* 8045507C-80455080 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2326                                                        */
+SECTION_SDATA2 static f32 lit_2326 = 1000000.0f;
 
-/* 80455080-80455084 0004+00 rc=0 efc=0 .sdata2    @2327                                                        */
-u8 lit_2327[4] = {
+/* 80455080-80455084 0004+00 rc=3 efc=0 rfr=False None .sdata2    @2327                                                        */
+SECTION_SDATA2 static u8 lit_2327[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80266DC4-80266EF4 0130+00 rc=0 efc=0 .text      normZC__4cXyzCFv                                             */
+/* 80266DC4-80266EF4 0130+00 rc=0 efc=0 rfr=False None .text      normZC__4cXyzCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -258,7 +247,7 @@ asm void cXyz::normZC() const {
 #pragma pop
 
 
-/* 80266EF4-80266F48 0054+00 rc=0 efc=0 .text      normalize__4cXyzFv                                           */
+/* 80266EF4-80266F48 0054+00 rc=13 efc=13 rfr=False None .text      normalize__4cXyzFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +258,7 @@ asm void cXyz::normalize() {
 #pragma pop
 
 
-/* 80266F48-80266FDC 0094+00 rc=0 efc=0 .text      normalizeZP__4cXyzFv                                         */
+/* 80266F48-80266FDC 0094+00 rc=19 efc=19 rfr=False None .text      normalizeZP__4cXyzFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +269,7 @@ asm void cXyz::normalizeZP() {
 #pragma pop
 
 
-/* 80266FDC-8026702C 0050+00 rc=0 efc=0 .text      normalizeRS__4cXyzFv                                         */
+/* 80266FDC-8026702C 0050+00 rc=2 efc=2 rfr=False None .text      normalizeRS__4cXyzFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +280,7 @@ asm void cXyz::normalizeRS() {
 #pragma pop
 
 
-/* 8026702C-8026706C 0040+00 rc=0 efc=0 .text      __eq__4cXyzCFRC3Vec                                          */
+/* 8026702C-8026706C 0040+00 rc=5 efc=5 rfr=False None .text      __eq__4cXyzCFRC3Vec                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,7 +291,7 @@ asm bool cXyz::operator==(Vec const& field_0) const {
 #pragma pop
 
 
-/* 8026706C-802670AC 0040+00 rc=0 efc=0 .text      __ne__4cXyzCFRC3Vec                                          */
+/* 8026706C-802670AC 0040+00 rc=6 efc=6 rfr=False None .text      __ne__4cXyzCFRC3Vec                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -314,10 +303,10 @@ asm bool cXyz::operator!=(Vec const& field_0) const {
 
 
 /* ############################################################################################## */
-/* 80455084-80455088 0004+00 rc=0 efc=0 .sdata2    @2405                                                        */
-f32 c_xyz__lit_2405 = 32.0f;
+/* 80455084-80455088 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2405                                                        */
+SECTION_SDATA2 static f32 c_xyz__lit_2405 = 32.0f;
 
-/* 802670AC-80267128 007C+00 rc=0 efc=0 .text      isZero__4cXyzCFv                                             */
+/* 802670AC-80267128 007C+00 rc=4 efc=4 rfr=False None .text      isZero__4cXyzCFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -328,7 +317,7 @@ asm void cXyz::isZero() const {
 #pragma pop
 
 
-/* 80267128-80267150 0028+00 rc=0 efc=0 .text      atan2sX_Z__4cXyzCFv                                          */
+/* 80267128-80267150 0028+00 rc=81 efc=81 rfr=False None .text      atan2sX_Z__4cXyzCFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -340,18 +329,18 @@ asm void cXyz::atan2sX_Z() const {
 
 
 /* ############################################################################################## */
-/* 80455088-80455090 0008+00 rc=0 efc=0 .sdata2    @2446                                                        */
-f64 lit_2446 = 0.5;
+/* 80455088-80455090 0008+00 rc=1 efc=0 rfr=False None .sdata2    @2446                                                        */
+SECTION_SDATA2 static f64 lit_2446 = 0.5;
 
-/* 80455090-80455098 0008+00 rc=0 efc=0 .sdata2    @2447                                                        */
-f64 lit_2447 = 3.0;
+/* 80455090-80455098 0008+00 rc=1 efc=0 rfr=False None .sdata2    @2447                                                        */
+SECTION_SDATA2 static f64 lit_2447 = 3.0;
 
-/* 80455098-804550A0 0008+00 rc=0 efc=0 .sdata2    @2448                                                        */
-u8 lit_2448[8] = {
+/* 80455098-804550A0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @2448                                                        */
+SECTION_SDATA2 static u8 lit_2448[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80267150-80267290 0140+00 rc=0 efc=0 .text      atan2sY_XZ__4cXyzCFv                                         */
+/* 80267150-80267290 0140+00 rc=21 efc=21 rfr=False None .text      atan2sY_XZ__4cXyzCFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -362,7 +351,7 @@ asm void cXyz::atan2sY_XZ() const {
 #pragma pop
 
 
-/* 80267290-802673F4 0164+00 rc=0 efc=0 .text      __sinit_c_xyz_cpp                                            */
+/* 80267290-802673F4 0164+00 rc=1 efc=1 rfr=False None .text      __sinit_c_xyz_cpp                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -374,45 +363,45 @@ extern "C" asm void __sinit_c_xyz_cpp() {
 
 
 /* ############################################################################################## */
-/* 80430D00-80430D0C 000C+00 rc=0 efc=0 .bss       @2451                                                        */
+/* 80430D00-80430D0C 000C+00 rc=0 efc=0 rfr=False None .bss       @2451                                                        */
 u8 lit_2451[12];
 
-/* 80430D0C-80430D18 000C+00 rc=0 efc=0 .bss       BaseX__4cXyz                                                 */
+/* 80430D0C-80430D18 000C+00 rc=3 efc=3 rfr=False None .bss       BaseX__4cXyz                                                 */
 u8 BaseX__4cXyz[12];
 
-/* 80430D18-80430D24 000C+00 rc=0 efc=0 .bss       @2452                                                        */
+/* 80430D18-80430D24 000C+00 rc=0 efc=0 rfr=False None .bss       @2452                                                        */
 u8 lit_2452[12];
 
-/* 80430D24-80430D30 000C+00 rc=0 efc=0 .bss       BaseY__4cXyz                                                 */
+/* 80430D24-80430D30 000C+00 rc=14 efc=14 rfr=False None .bss       BaseY__4cXyz                                                 */
 u8 BaseY__4cXyz[12];
 
-/* 80430D30-80430D3C 000C+00 rc=0 efc=0 .bss       @2453                                                        */
+/* 80430D30-80430D3C 000C+00 rc=0 efc=0 rfr=False None .bss       @2453                                                        */
 u8 lit_2453[12];
 
-/* 80430D3C-80430D48 000C+00 rc=0 efc=0 .bss       BaseZ__4cXyz                                                 */
+/* 80430D3C-80430D48 000C+00 rc=15 efc=15 rfr=False None .bss       BaseZ__4cXyz                                                 */
 u8 BaseZ__4cXyz[12];
 
-/* 80430D48-80430D54 000C+00 rc=0 efc=0 .bss       @2454                                                        */
+/* 80430D48-80430D54 000C+00 rc=0 efc=0 rfr=False None .bss       @2454                                                        */
 u8 lit_2454[12];
 
-/* 80430D54-80430D60 000C+00 rc=0 efc=0 .bss       BaseXY__4cXyz                                                */
+/* 80430D54-80430D60 000C+00 rc=0 efc=0 rfr=False None .bss       BaseXY__4cXyz                                                */
 u8 BaseXY__4cXyz[12];
 
-/* 80430D60-80430D6C 000C+00 rc=0 efc=0 .bss       @2455                                                        */
+/* 80430D60-80430D6C 000C+00 rc=0 efc=0 rfr=False None .bss       @2455                                                        */
 u8 lit_2455[12];
 
-/* 80430D6C-80430D78 000C+00 rc=0 efc=0 .bss       BaseXZ__4cXyz                                                */
+/* 80430D6C-80430D78 000C+00 rc=0 efc=0 rfr=False None .bss       BaseXZ__4cXyz                                                */
 u8 BaseXZ__4cXyz[12];
 
-/* 80430D78-80430D84 000C+00 rc=0 efc=0 .bss       @2456                                                        */
+/* 80430D78-80430D84 000C+00 rc=0 efc=0 rfr=False None .bss       @2456                                                        */
 u8 lit_2456[12];
 
-/* 80430D84-80430D90 000C+00 rc=0 efc=0 .bss       BaseYZ__4cXyz                                                */
+/* 80430D84-80430D90 000C+00 rc=0 efc=0 rfr=False None .bss       BaseYZ__4cXyz                                                */
 u8 BaseYZ__4cXyz[12];
 
-/* 80430D90-80430D9C 000C+00 rc=0 efc=0 .bss       @2457                                                        */
+/* 80430D90-80430D9C 000C+00 rc=0 efc=0 rfr=False None .bss       @2457                                                        */
 u8 lit_2457[12];
 
-/* 80430D9C-80430DA8 000C+00 rc=0 efc=0 .bss       BaseXYZ__4cXyz                                               */
+/* 80430D9C-80430DA8 000C+00 rc=0 efc=0 rfr=False None .bss       BaseXYZ__4cXyz                                               */
 u8 BaseXYZ__4cXyz[12];
 

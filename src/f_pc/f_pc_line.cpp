@@ -19,8 +19,7 @@ struct node_list_class {
 void fpcLn_Create(); // 2
 
 extern "C" void fpcLn_Create__Fv(); // 1
-SECTION_BSS extern u8 l_fpcLn_Line[192];
-SECTION_SDATA extern void* g_fpcLn_Queue[2];
+extern "C" extern void* g_fpcLn_Queue[2];
 
 // 
 // External References:
@@ -35,10 +34,10 @@ extern "C" void cLs_Create__FP15node_list_class(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803F4CF0-803F4DB0 00C0+00 rc=0 efc=0 .bss       l_fpcLn_Line                                                 */
-u8 l_fpcLn_Line[192];
+/* 803F4CF0-803F4DB0 00C0+00 rc=2 efc=0 rfr=False None .bss       l_fpcLn_Line                                                 */
+static u8 l_fpcLn_Line[192];
 
-/* 80021F64-80021FB8 0054+00 rc=0 efc=0 .text      fpcLn_Create__Fv                                             */
+/* 80021F64-80021FB8 0054+00 rc=1 efc=1 rfr=False None .text      fpcLn_Create__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -50,9 +49,9 @@ asm void fpcLn_Create() {
 
 
 /* ############################################################################################## */
-/* 804505D8-804505E0 0008+00 rc=0 efc=0 .sdata     g_fpcLn_Queue                                                */
-void* g_fpcLn_Queue[2] = {
-	(void*)&l_fpcLn_Line,
-	(void*)0x00000010,
+/* 804505D8-804505E0 0008+00 rc=2 efc=2 rfr=False None .sdata     g_fpcLn_Queue                                                */
+SECTION_SDATA void* g_fpcLn_Queue[2] = {
+	/* 0    */ (void*)&l_fpcLn_Line,
+	/* 1    */ (void*)0x00000010,
 };
 

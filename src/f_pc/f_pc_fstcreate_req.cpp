@@ -28,14 +28,13 @@ struct create_request_method_class {
 // Forward References:
 // 
 
-void fpcFCtRq_Do(fast_create_request*); // 2
-bool fpcFCtRq_Delete(fast_create_request*); // 2
+static void fpcFCtRq_Do(fast_create_request*); // 2
+static bool fpcFCtRq_Delete(fast_create_request*); // 2
 extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
 
-extern "C" void fpcFCtRq_Do__FP19fast_create_request(); // 1
-extern "C" bool fpcFCtRq_Delete__FP19fast_create_request(); // 1
+extern "C" static void fpcFCtRq_Do__FP19fast_create_request(); // 1
+extern "C" static bool fpcFCtRq_Delete__FP19fast_create_request(); // 1
 extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
-SECTION_DATA extern void* data_803A3AE0[3 + 1 /* padding */];
 
 // 
 // External References:
@@ -65,34 +64,34 @@ extern "C" void _restgpr_26(); // 1
 // Declarations:
 // 
 
-/* 80023A48-80023A98 0050+00 rc=0 efc=0 .text      fpcFCtRq_Do__FP19fast_create_request                         */
+/* 80023A48-80023A98 0050+00 rc=1 efc=0 rfr=False None .text      fpcFCtRq_Do__FP19fast_create_request                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcFCtRq_Do(fast_create_request* field_0) {
+asm static void fpcFCtRq_Do(fast_create_request* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_fstcreate_req/fpcFCtRq_Do__FP19fast_create_request.s"
 }
 #pragma pop
 
 
-/* 80023A98-80023AA0 0008+00 rc=0 efc=0 .text      fpcFCtRq_Delete__FP19fast_create_request                     */
-bool fpcFCtRq_Delete(fast_create_request* field_0) {
+/* 80023A98-80023AA0 0008+00 rc=1 efc=0 rfr=False None .text      fpcFCtRq_Delete__FP19fast_create_request                     */
+static bool fpcFCtRq_Delete(fast_create_request* field_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 803A3AE0-803A3AF0 000C+04 rc=0 efc=0 .data      submethod$2214                                               */
-void* data_803A3AE0[3 + 1 /* padding */] = {
-	(void*)fpcFCtRq_Do__FP19fast_create_request,
-	(void*)NULL,
-	(void*)fpcFCtRq_Delete__FP19fast_create_request,
+/* 803A3AE0-803A3AF0 000C+04 rc=1 efc=0 rfr=False None .data      submethod$2214                                               */
+SECTION_DATA static void* data_803A3AE0[3 + 1 /* padding */] = {
+	/* 0    */ (void*)fpcFCtRq_Do__FP19fast_create_request,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)fpcFCtRq_Delete__FP19fast_create_request,
 	/* padding */
 	NULL,
 };
 
-/* 80023AA0-80023B70 00D0+00 rc=0 efc=0 .text      fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv               */
+/* 80023AA0-80023B70 00D0+00 rc=1 efc=1 rfr=False None .text      fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

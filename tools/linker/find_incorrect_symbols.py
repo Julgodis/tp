@@ -50,7 +50,12 @@ def find_first_incorrect():
     for i, data in sections.items():
         name = module_0.SECTIONS[i]
         for addr, elf_symbol, mod_symbol in data:
+            print("invalid symbol addr")
             print(f"{elf_symbol.section.name:>12}/{addr:08X} {name:>12}/{mod_symbol['addr']:08X} {mod_symbol['name']}")
+
+            for sym in module_0.SYMBOLS:
+                if sym['addr'] == addr:
+                    print(f"{sym['addr']:08X} {sym['name']} {sym['label']}")
 
             x = keys.index(addr)
             for ri in range(x-15,x+5):
@@ -65,6 +70,23 @@ def find_first_incorrect():
             print()
             sys.exit(1)
 
+def find_first_symbol_iws():
+    for elf_symbol in SYMBOLS:
+        addr = elf_symbol.offset
+        if elf_symbol.section and elf_symbol.section.addr:
+            addr += elf_symbol.section.addr
+        if elf_symbol.name in module_0.SYMBOL_NAMES:
+            mod_symbol = module_0.SYMBOLS[module_0.SYMBOL_NAMES[elf_symbol.name]]
+            section_name = module_0.SECTIONS[mod_symbol['section']] 
+            if section_name == ".extab":
+                section_name = "extab_"
+            if section_name == ".extabindex":
+                section_name = "extabindex_"
+            if section_name != elf_symbol.section.name:
+                print("section miss-match")
+                print(f"'{elf_symbol.section.name}'/{addr:08X} '{section_name}'/{mod_symbol['addr']:08X} {mod_symbol['name']} {mod_symbol['label']}")
+                sys.exit(1)
+
 def find_symbol(name):
     for symbol in SYMBOLS:
         if symbol.name == name:
@@ -76,5 +98,6 @@ def find_symbol(name):
             print(f"section: {symbol.section.name}")
             sys.exit(1)
 
+find_first_symbol_iws()
 find_first_incorrect()
 #find_symbol("debugPrint__9JFWSystem")

@@ -36,13 +36,13 @@ extern "C" void TRKTargetStopped(); // 1
 extern "C" void TRKTargetSupportRequest(); // 1
 extern "C" void TRKTargetInterrupt(); // 1
 extern "C" void TRKTargetContinue(); // 1
-SECTION_SBSS extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
+extern "C" extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 8036CB20-8036CC18 00F8+00 rc=0 efc=0 .text      TRKNubMainLoop                                               */
+/* 8036CB20-8036CC18 00F8+00 rc=1 efc=1 rfr=False None .text      TRKNubMainLoop                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

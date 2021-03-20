@@ -9,22 +9,21 @@
 // Forward References:
 // 
 
-extern "C" void OSMemory__OnReset(); // 1
-extern "C" void MEMIntrruptHandler(); // 1
+extern "C" static void OSMemory__OnReset(); // 1
+extern "C" static void MEMIntrruptHandler(); // 1
 extern "C" void OSProtectRange(); // 1
-extern "C" void Config24MB(); // 1
-extern "C" void Config48MB(); // 1
-extern "C" void RealMode(); // 1
+extern "C" static void Config24MB(); // 1
+extern "C" static void Config48MB(); // 1
+extern "C" static void RealMode(); // 1
 extern "C" void __OSInitMemoryProtection(); // 1
 
-extern "C" void OSMemory__OnReset(); // 1
-extern "C" void MEMIntrruptHandler(); // 1
+extern "C" static void OSMemory__OnReset(); // 1
+extern "C" static void MEMIntrruptHandler(); // 1
 extern "C" void OSProtectRange(); // 1
-extern "C" void Config24MB(); // 1
-extern "C" void Config48MB(); // 1
-extern "C" void RealMode(); // 1
+extern "C" static void Config24MB(); // 1
+extern "C" static void Config48MB(); // 1
+extern "C" static void RealMode(); // 1
 extern "C" void __OSInitMemoryProtection(); // 1
-SECTION_DATA extern void* OSMemory__ResetFunctionInfo[4];
 
 // 
 // External References:
@@ -49,35 +48,35 @@ extern "C" void __OSSetInterruptHandler(); // 1
 extern "C" void __OSMaskInterrupts(); // 1
 extern "C" void __OSUnmaskInterrupts(); // 1
 extern "C" void OSRegisterResetFunction(); // 1
-SECTION_BSS extern u8 __OSErrorTable[68 + 12 /* padding */];
+extern "C" extern u8 __OSErrorTable[68 + 12 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 8033EC6C-8033ECA8 003C+00 rc=0 efc=0 .text      OnReset                                                      */
+/* 8033EC6C-8033ECA8 003C+00 rc=1 efc=0 rfr=False None .text      OnReset                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void OSMemory__OnReset() {
+extern "C" asm static void OSMemory__OnReset() {
 	nofralloc
 #include "asm/dolphin/os/OSMemory/OSMemory__OnReset.s"
 }
 #pragma pop
 
 
-/* 8033ECA8-8033ED14 006C+00 rc=0 efc=0 .text      MEMIntrruptHandler                                           */
+/* 8033ECA8-8033ED14 006C+00 rc=1 efc=0 rfr=False None .text      MEMIntrruptHandler                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void MEMIntrruptHandler() {
+extern "C" asm static void MEMIntrruptHandler() {
 	nofralloc
 #include "asm/dolphin/os/OSMemory/MEMIntrruptHandler.s"
 }
 #pragma pop
 
 
-/* 8033ED14-8033EDD8 00C4+00 rc=0 efc=0 .text      OSProtectRange                                               */
+/* 8033ED14-8033EDD8 00C4+00 rc=1 efc=1 rfr=False None .text      OSProtectRange                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,33 +87,33 @@ extern "C" asm void OSProtectRange() {
 #pragma pop
 
 
-/* 8033EDD8-8033EE58 0080+00 rc=0 efc=0 .text      Config24MB                                                   */
+/* 8033EDD8-8033EE58 0080+00 rc=1 efc=0 rfr=False None .text      Config24MB                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void Config24MB() {
+extern "C" asm static void Config24MB() {
 	nofralloc
 #include "asm/dolphin/os/OSMemory/Config24MB.s"
 }
 #pragma pop
 
 
-/* 8033EE58-8033EED8 0080+00 rc=0 efc=0 .text      Config48MB                                                   */
+/* 8033EE58-8033EED8 0080+00 rc=1 efc=0 rfr=False None .text      Config48MB                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void Config48MB() {
+extern "C" asm static void Config48MB() {
 	nofralloc
 #include "asm/dolphin/os/OSMemory/Config48MB.s"
 }
 #pragma pop
 
 
-/* 8033EED8-8033EEF0 0018+00 rc=0 efc=0 .text      RealMode                                                     */
+/* 8033EED8-8033EEF0 0018+00 rc=1 efc=0 rfr=False None .text      RealMode                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void RealMode() {
+extern "C" asm static void RealMode() {
 	nofralloc
 #include "asm/dolphin/os/OSMemory/RealMode.s"
 }
@@ -122,15 +121,15 @@ extern "C" asm void RealMode() {
 
 
 /* ############################################################################################## */
-/* 803D07D8-803D07E8 0010+00 rc=0 efc=0 .data      ResetFunctionInfo                                            */
-void* OSMemory__ResetFunctionInfo[4] = {
-	(void*)OSMemory__OnReset,
-	(void*)0x0000007F,
-	(void*)NULL,
-	(void*)NULL,
+/* 803D07D8-803D07E8 0010+00 rc=1 efc=0 rfr=False None .data      ResetFunctionInfo                                            */
+SECTION_DATA static void* OSMemory__ResetFunctionInfo[4] = {
+	/* 0    */ (void*)OSMemory__OnReset,
+	/* 1    */ (void*)0x0000007F,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
 };
 
-/* 8033EEF0-8033F008 0118+00 rc=0 efc=0 .text      __OSInitMemoryProtection                                     */
+/* 8033EEF0-8033F008 0118+00 rc=1 efc=1 rfr=False None .text      __OSInitMemoryProtection                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

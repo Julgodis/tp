@@ -15,15 +15,15 @@ extern "C" void vsnprintf(); // 1
 extern "C" void vprintf(); // 1
 extern "C" void fprintf(); // 1
 extern "C" void printf(); // 1
-extern "C" void __StringWrite(); // 1
-extern "C" void __FileWrite(); // 1
-extern "C" void __pformatter(); // 1
-extern "C" void float2str(); // 1
-extern "C" void round_decimal(); // 1
-extern "C" void double2hex(); // 1
-extern "C" void longlong2str(); // 1
-extern "C" void long2str(); // 1
-extern "C" void parse_format(); // 1
+extern "C" static void __StringWrite(); // 1
+extern "C" static void __FileWrite(); // 1
+extern "C" static void __pformatter(); // 1
+extern "C" static void float2str(); // 1
+extern "C" static void round_decimal(); // 1
+extern "C" static void double2hex(); // 1
+extern "C" static void longlong2str(); // 1
+extern "C" static void long2str(); // 1
+extern "C" static void parse_format(); // 1
 
 extern "C" void sprintf(); // 1
 extern "C" void snprintf(); // 1
@@ -31,22 +31,16 @@ extern "C" void vsnprintf(); // 1
 extern "C" void vprintf(); // 1
 extern "C" void fprintf(); // 1
 extern "C" void printf(); // 1
-extern "C" void __StringWrite(); // 1
-extern "C" void __FileWrite(); // 1
-extern "C" void __pformatter(); // 1
-extern "C" void float2str(); // 1
-extern "C" void round_decimal(); // 1
-extern "C" void double2hex(); // 1
-extern "C" void longlong2str(); // 1
-extern "C" void long2str(); // 1
-extern "C" void parse_format(); // 1
-SECTION_RODATA extern const char* const MSL_Common_Src_printf__stringBase0;
-SECTION_DATA extern void* lit_1248[33];
-SECTION_DATA extern void* lit_1307[33];
-SECTION_DATA extern void* lit_1443[56];
-SECTION_DATA extern void* lit_1442[17 + 1 /* padding */];
-SECTION_SDATA extern u8 data_80450AD8[2 + 6 /* padding */];
-SECTION_SDATA2 extern u8 MSL_Common_Src_printf__lit_1089[8];
+extern "C" static void __StringWrite(); // 1
+extern "C" static void __FileWrite(); // 1
+extern "C" static void __pformatter(); // 1
+extern "C" static void float2str(); // 1
+extern "C" static void round_decimal(); // 1
+extern "C" static void double2hex(); // 1
+extern "C" static void longlong2str(); // 1
+extern "C" static void long2str(); // 1
+extern "C" static void parse_format(); // 1
+extern "C" extern char const* const MSL_Common_Src_printf__stringBase0;
 
 // 
 // External References:
@@ -81,14 +75,14 @@ extern "C" void strchr(); // 1
 extern "C" void strcpy(); // 1
 extern "C" void strlen(); // 1
 extern "C" void fwide(); // 1
-SECTION_DATA extern void* __files[80];
-SECTION_DATA extern u8 __ctype_map[256];
+extern "C" extern void* __files[80];
+extern "C" extern u8 __ctype_map[256];
 
 // 
 // Declarations:
 // 
 
-/* 803664DC-803665BC 00E0+00 rc=0 efc=0 .text      sprintf                                                      */
+/* 803664DC-803665BC 00E0+00 rc=32 efc=32 rfr=False None .text      sprintf                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +93,7 @@ extern "C" asm void sprintf() {
 #pragma pop
 
 
-/* 803665BC-80366690 00D4+00 rc=0 efc=0 .text      snprintf                                                     */
+/* 803665BC-80366690 00D4+00 rc=19 efc=19 rfr=False None .text      snprintf                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -110,7 +104,7 @@ extern "C" asm void snprintf() {
 #pragma pop
 
 
-/* 80366690-80366704 0074+00 rc=0 efc=0 .text      vsnprintf                                                    */
+/* 80366690-80366704 0074+00 rc=8 efc=8 rfr=False None .text      vsnprintf                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +115,7 @@ extern "C" asm void vsnprintf() {
 #pragma pop
 
 
-/* 80366704-8036679C 0098+00 rc=0 efc=0 .text      vprintf                                                      */
+/* 80366704-8036679C 0098+00 rc=2 efc=2 rfr=False None .text      vprintf                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +126,7 @@ extern "C" asm void vprintf() {
 #pragma pop
 
 
-/* 8036679C-8036687C 00E0+00 rc=0 efc=0 .text      fprintf                                                      */
+/* 8036679C-8036687C 00E0+00 rc=9 efc=9 rfr=False None .text      fprintf                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,7 +137,7 @@ extern "C" asm void fprintf() {
 #pragma pop
 
 
-/* 8036687C-80366964 00E8+00 rc=0 efc=0 .text      printf                                                       */
+/* 8036687C-80366964 00E8+00 rc=4 efc=4 rfr=False None .text      printf                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,22 +148,22 @@ extern "C" asm void printf() {
 #pragma pop
 
 
-/* 80366964-803669D0 006C+00 rc=0 efc=0 .text      __StringWrite                                                */
+/* 80366964-803669D0 006C+00 rc=3 efc=0 rfr=False None .text      __StringWrite                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __StringWrite() {
+extern "C" asm static void __StringWrite() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/__StringWrite.s"
 }
 #pragma pop
 
 
-/* 803669D0-80366A28 0058+00 rc=0 efc=0 .text      __FileWrite                                                  */
+/* 803669D0-80366A28 0058+00 rc=3 efc=0 rfr=False None .text      __FileWrite                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __FileWrite() {
+extern "C" asm static void __FileWrite() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/__FileWrite.s"
 }
@@ -177,35 +171,35 @@ extern "C" asm void __FileWrite() {
 
 
 /* ############################################################################################## */
-/* 803A2318-803A2340 0025+03 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 803A2318-803A2340 0025+03 rc=3 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_803A2318 = "";
-const char* const stringBase_803A2319 = "-INF";
-const char* const stringBase_803A231E = "-inf";
-const char* const stringBase_803A2323 = "INF";
-const char* const stringBase_803A2327 = "inf";
-const char* const stringBase_803A232B = "-NAN";
-const char* const stringBase_803A2330 = "-nan";
-const char* const stringBase_803A2335 = "NAN";
-const char* const stringBase_803A2339 = "nan";
+SECTION_DEAD static char const* const stringBase_803A2318 = "";
+SECTION_DEAD static char const* const stringBase_803A2319 = "-INF";
+SECTION_DEAD static char const* const stringBase_803A231E = "-inf";
+SECTION_DEAD static char const* const stringBase_803A2323 = "INF";
+SECTION_DEAD static char const* const stringBase_803A2327 = "inf";
+SECTION_DEAD static char const* const stringBase_803A232B = "-NAN";
+SECTION_DEAD static char const* const stringBase_803A2330 = "-nan";
+SECTION_DEAD static char const* const stringBase_803A2335 = "NAN";
+SECTION_DEAD static char const* const stringBase_803A2339 = "nan";
 /* @stringBase0 padding */
-char* const pad_803A233D = "\0\0";
+SECTION_DEAD static char const* const pad_803A233D = "\0\0";
 #pragma pop
 
-/* 80450AD8-80450AE0 0002+06 rc=0 efc=0 .sdata     @wstringBase0                                                */
-u8 data_80450AD8[2 + 6 /* padding */] = {
+/* 80450AD8-80450AE0 0002+06 rc=1 efc=0 rfr=False None .sdata     @wstringBase0                                                */
+SECTION_SDATA static u8 data_80450AD8[2 + 6 /* padding */] = {
 	0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80366A28-8036719C 0774+00 rc=0 efc=0 .text      __pformatter                                                 */
+/* 80366A28-8036719C 0774+00 rc=6 efc=0 rfr=False None .text      __pformatter                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __pformatter() {
+extern "C" asm static void __pformatter() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/__pformatter.s"
 }
@@ -213,38 +207,38 @@ extern "C" asm void __pformatter() {
 
 
 /* ############################################################################################## */
-/* 80456670-80456678 0008+00 rc=0 efc=0 .sdata2    @1089                                                        */
-u8 MSL_Common_Src_printf__lit_1089[8] = {
+/* 80456670-80456678 0008+00 rc=1 efc=0 rfr=False None .sdata2    @1089                                                        */
+SECTION_SDATA2 static u8 MSL_Common_Src_printf__lit_1089[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8036719C-803678B8 071C+00 rc=0 efc=0 .text      float2str                                                    */
+/* 8036719C-803678B8 071C+00 rc=1 efc=0 rfr=False None .text      float2str                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void float2str() {
+extern "C" asm static void float2str() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/float2str.s"
 }
 #pragma pop
 
 
-/* 803678B8-803679E4 012C+00 rc=0 efc=0 .text      round_decimal                                                */
+/* 803678B8-803679E4 012C+00 rc=1 efc=0 rfr=False None .text      round_decimal                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void round_decimal() {
+extern "C" asm static void round_decimal() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/round_decimal.s"
 }
 #pragma pop
 
 
-/* 803679E4-80367D1C 0338+00 rc=0 efc=0 .text      double2hex                                                   */
+/* 803679E4-80367D1C 0338+00 rc=1 efc=0 rfr=False None .text      double2hex                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void double2hex() {
+extern "C" asm static void double2hex() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/double2hex.s"
 }
@@ -252,48 +246,48 @@ extern "C" asm void double2hex() {
 
 
 /* ############################################################################################## */
-/* 803D2F18-803D2F9C 0084+00 rc=0 efc=0 .data      @1248                                                        */
-void* lit_1248[33] = {
-	(void*)(((char*)longlong2str)+0xF8),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x98),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x98),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0xD0),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0xE4),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0x108),
-	(void*)(((char*)longlong2str)+0xF8),
+/* 803D2F18-803D2F9C 0084+00 rc=1 efc=0 rfr=False None .data      @1248                                                        */
+SECTION_DATA static void* lit_1248[33] = {
+	/* 0    */ (void*)(((char*)longlong2str)+0xF8),
+	/* 1    */ (void*)(((char*)longlong2str)+0x108),
+	/* 2    */ (void*)(((char*)longlong2str)+0x108),
+	/* 3    */ (void*)(((char*)longlong2str)+0x108),
+	/* 4    */ (void*)(((char*)longlong2str)+0x108),
+	/* 5    */ (void*)(((char*)longlong2str)+0x108),
+	/* 6    */ (void*)(((char*)longlong2str)+0x108),
+	/* 7    */ (void*)(((char*)longlong2str)+0x108),
+	/* 8    */ (void*)(((char*)longlong2str)+0x108),
+	/* 9    */ (void*)(((char*)longlong2str)+0x108),
+	/* 10   */ (void*)(((char*)longlong2str)+0x108),
+	/* 11   */ (void*)(((char*)longlong2str)+0x108),
+	/* 12   */ (void*)(((char*)longlong2str)+0x98),
+	/* 13   */ (void*)(((char*)longlong2str)+0x108),
+	/* 14   */ (void*)(((char*)longlong2str)+0x108),
+	/* 15   */ (void*)(((char*)longlong2str)+0x108),
+	/* 16   */ (void*)(((char*)longlong2str)+0x108),
+	/* 17   */ (void*)(((char*)longlong2str)+0x98),
+	/* 18   */ (void*)(((char*)longlong2str)+0x108),
+	/* 19   */ (void*)(((char*)longlong2str)+0x108),
+	/* 20   */ (void*)(((char*)longlong2str)+0x108),
+	/* 21   */ (void*)(((char*)longlong2str)+0x108),
+	/* 22   */ (void*)(((char*)longlong2str)+0x108),
+	/* 23   */ (void*)(((char*)longlong2str)+0xD0),
+	/* 24   */ (void*)(((char*)longlong2str)+0x108),
+	/* 25   */ (void*)(((char*)longlong2str)+0x108),
+	/* 26   */ (void*)(((char*)longlong2str)+0x108),
+	/* 27   */ (void*)(((char*)longlong2str)+0x108),
+	/* 28   */ (void*)(((char*)longlong2str)+0x108),
+	/* 29   */ (void*)(((char*)longlong2str)+0xE4),
+	/* 30   */ (void*)(((char*)longlong2str)+0x108),
+	/* 31   */ (void*)(((char*)longlong2str)+0x108),
+	/* 32   */ (void*)(((char*)longlong2str)+0xF8),
 };
 
-/* 80367D1C-80368030 0314+00 rc=0 efc=0 .text      longlong2str                                                 */
+/* 80367D1C-80368030 0314+00 rc=2 efc=0 rfr=False None .text      longlong2str                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void longlong2str() {
+extern "C" asm static void longlong2str() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/longlong2str.s"
 }
@@ -301,48 +295,48 @@ extern "C" asm void longlong2str() {
 
 
 /* ############################################################################################## */
-/* 803D2F9C-803D3020 0084+00 rc=0 efc=0 .data      @1307                                                        */
-void* lit_1307[33] = {
-	(void*)(((char*)long2str)+0xA8),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0x70),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0x70),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0x88),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0x98),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xB4),
-	(void*)(((char*)long2str)+0xA8),
+/* 803D2F9C-803D3020 0084+00 rc=1 efc=0 rfr=False None .data      @1307                                                        */
+SECTION_DATA static void* lit_1307[33] = {
+	/* 0    */ (void*)(((char*)long2str)+0xA8),
+	/* 1    */ (void*)(((char*)long2str)+0xB4),
+	/* 2    */ (void*)(((char*)long2str)+0xB4),
+	/* 3    */ (void*)(((char*)long2str)+0xB4),
+	/* 4    */ (void*)(((char*)long2str)+0xB4),
+	/* 5    */ (void*)(((char*)long2str)+0xB4),
+	/* 6    */ (void*)(((char*)long2str)+0xB4),
+	/* 7    */ (void*)(((char*)long2str)+0xB4),
+	/* 8    */ (void*)(((char*)long2str)+0xB4),
+	/* 9    */ (void*)(((char*)long2str)+0xB4),
+	/* 10   */ (void*)(((char*)long2str)+0xB4),
+	/* 11   */ (void*)(((char*)long2str)+0xB4),
+	/* 12   */ (void*)(((char*)long2str)+0x70),
+	/* 13   */ (void*)(((char*)long2str)+0xB4),
+	/* 14   */ (void*)(((char*)long2str)+0xB4),
+	/* 15   */ (void*)(((char*)long2str)+0xB4),
+	/* 16   */ (void*)(((char*)long2str)+0xB4),
+	/* 17   */ (void*)(((char*)long2str)+0x70),
+	/* 18   */ (void*)(((char*)long2str)+0xB4),
+	/* 19   */ (void*)(((char*)long2str)+0xB4),
+	/* 20   */ (void*)(((char*)long2str)+0xB4),
+	/* 21   */ (void*)(((char*)long2str)+0xB4),
+	/* 22   */ (void*)(((char*)long2str)+0xB4),
+	/* 23   */ (void*)(((char*)long2str)+0x88),
+	/* 24   */ (void*)(((char*)long2str)+0xB4),
+	/* 25   */ (void*)(((char*)long2str)+0xB4),
+	/* 26   */ (void*)(((char*)long2str)+0xB4),
+	/* 27   */ (void*)(((char*)long2str)+0xB4),
+	/* 28   */ (void*)(((char*)long2str)+0xB4),
+	/* 29   */ (void*)(((char*)long2str)+0x98),
+	/* 30   */ (void*)(((char*)long2str)+0xB4),
+	/* 31   */ (void*)(((char*)long2str)+0xB4),
+	/* 32   */ (void*)(((char*)long2str)+0xA8),
 };
 
-/* 80368030-80368288 0258+00 rc=0 efc=0 .text      long2str                                                     */
+/* 80368030-80368288 0258+00 rc=3 efc=0 rfr=False None .text      long2str                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void long2str() {
+extern "C" asm static void long2str() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/long2str.s"
 }
@@ -350,94 +344,94 @@ extern "C" asm void long2str() {
 
 
 /* ############################################################################################## */
-/* 803D3020-803D3100 00E0+00 rc=0 efc=0 .data      @1443                                                        */
-void* lit_1443[56] = {
-	(void*)(((char*)parse_format)+0x38C),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x3DC),
-	(void*)(((char*)parse_format)+0x354),
-	(void*)(((char*)parse_format)+0x3C8),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x30C),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x38C),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x440),
-	(void*)(((char*)parse_format)+0x30C),
-	(void*)(((char*)parse_format)+0x3DC),
-	(void*)(((char*)parse_format)+0x354),
-	(void*)(((char*)parse_format)+0x3C8),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x30C),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4A4),
-	(void*)(((char*)parse_format)+0x30C),
-	(void*)(((char*)parse_format)+0x41C),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x478),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x30C),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x4BC),
-	(void*)(((char*)parse_format)+0x30C),
+/* 803D3020-803D3100 00E0+00 rc=1 efc=0 rfr=False None .data      @1443                                                        */
+SECTION_DATA static void* lit_1443[56] = {
+	/* 0    */ (void*)(((char*)parse_format)+0x38C),
+	/* 1    */ (void*)(((char*)parse_format)+0x4BC),
+	/* 2    */ (void*)(((char*)parse_format)+0x4BC),
+	/* 3    */ (void*)(((char*)parse_format)+0x4BC),
+	/* 4    */ (void*)(((char*)parse_format)+0x3DC),
+	/* 5    */ (void*)(((char*)parse_format)+0x354),
+	/* 6    */ (void*)(((char*)parse_format)+0x3C8),
+	/* 7    */ (void*)(((char*)parse_format)+0x4BC),
+	/* 8    */ (void*)(((char*)parse_format)+0x4BC),
+	/* 9    */ (void*)(((char*)parse_format)+0x4BC),
+	/* 10   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 11   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 12   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 13   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 14   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 15   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 16   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 17   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 18   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 19   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 20   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 21   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 22   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 23   */ (void*)(((char*)parse_format)+0x30C),
+	/* 24   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 25   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 26   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 27   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 28   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 29   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 30   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 31   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 32   */ (void*)(((char*)parse_format)+0x38C),
+	/* 33   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 34   */ (void*)(((char*)parse_format)+0x440),
+	/* 35   */ (void*)(((char*)parse_format)+0x30C),
+	/* 36   */ (void*)(((char*)parse_format)+0x3DC),
+	/* 37   */ (void*)(((char*)parse_format)+0x354),
+	/* 38   */ (void*)(((char*)parse_format)+0x3C8),
+	/* 39   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 40   */ (void*)(((char*)parse_format)+0x30C),
+	/* 41   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 42   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 43   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 44   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 45   */ (void*)(((char*)parse_format)+0x4A4),
+	/* 46   */ (void*)(((char*)parse_format)+0x30C),
+	/* 47   */ (void*)(((char*)parse_format)+0x41C),
+	/* 48   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 49   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 50   */ (void*)(((char*)parse_format)+0x478),
+	/* 51   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 52   */ (void*)(((char*)parse_format)+0x30C),
+	/* 53   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 54   */ (void*)(((char*)parse_format)+0x4BC),
+	/* 55   */ (void*)(((char*)parse_format)+0x30C),
 };
 
-/* 803D3100-803D3148 0044+04 rc=0 efc=0 .data      @1442                                                        */
-void* lit_1442[17 + 1 /* padding */] = {
-	(void*)(((char*)parse_format)+0xBC),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xD4),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xB0),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xA4),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xF8),
-	(void*)(((char*)parse_format)+0xE0),
+/* 803D3100-803D3148 0044+04 rc=1 efc=0 rfr=False None .data      @1442                                                        */
+SECTION_DATA static void* lit_1442[17 + 1 /* padding */] = {
+	/* 0    */ (void*)(((char*)parse_format)+0xBC),
+	/* 1    */ (void*)(((char*)parse_format)+0xF8),
+	/* 2    */ (void*)(((char*)parse_format)+0xF8),
+	/* 3    */ (void*)(((char*)parse_format)+0xD4),
+	/* 4    */ (void*)(((char*)parse_format)+0xF8),
+	/* 5    */ (void*)(((char*)parse_format)+0xF8),
+	/* 6    */ (void*)(((char*)parse_format)+0xF8),
+	/* 7    */ (void*)(((char*)parse_format)+0xF8),
+	/* 8    */ (void*)(((char*)parse_format)+0xF8),
+	/* 9    */ (void*)(((char*)parse_format)+0xF8),
+	/* 10   */ (void*)(((char*)parse_format)+0xF8),
+	/* 11   */ (void*)(((char*)parse_format)+0xB0),
+	/* 12   */ (void*)(((char*)parse_format)+0xF8),
+	/* 13   */ (void*)(((char*)parse_format)+0xA4),
+	/* 14   */ (void*)(((char*)parse_format)+0xF8),
+	/* 15   */ (void*)(((char*)parse_format)+0xF8),
+	/* 16   */ (void*)(((char*)parse_format)+0xE0),
 	/* padding */
 	NULL,
 };
 
-/* 80368288-8036878C 0504+00 rc=0 efc=0 .text      parse_format                                                 */
+/* 80368288-8036878C 0504+00 rc=3 efc=0 rfr=False None .text      parse_format                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void parse_format() {
+extern "C" asm static void parse_format() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf/parse_format.s"
 }

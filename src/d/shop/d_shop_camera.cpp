@@ -55,26 +55,6 @@ extern "C" void setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10f
 extern "C" void setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz(); // 1
 extern "C" void _debugSetCamera__16ShopCam_action_cFv(); // 1
 extern "C" void setMasterCamCtrPos__16ShopCam_action_cFP4cXyz(); // 1
-SECTION_DATA extern u8 cam_seira_shop[56];
-SECTION_DATA extern u8 cam_seira_evnt_before[56];
-SECTION_DATA extern u8 cam_seira_evnt_after[56];
-SECTION_DATA extern void* shop_cam_data_tbl[3];
-SECTION_DATA extern void* d_shop_d_shop_camera__lit_3771[3];
-SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_3796;
-SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_3797;
-SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_3798;
-SECTION_SDATA2 extern u8 d_shop_d_shop_camera__lit_3916[4];
-SECTION_SDATA2 extern f64 d_shop_d_shop_camera__lit_3917;
-SECTION_SDATA2 extern f64 d_shop_d_shop_camera__lit_3918;
-SECTION_SDATA2 extern u8 d_shop_d_shop_camera__lit_3919[8];
-SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_3920;
-SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_3992;
-SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_4059;
-SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_4060;
-SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_4061;
-SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_4062;
-SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_4063;
-SECTION_SDATA2 extern f32 d_shop_d_shop_camera__lit_4064;
 
 // 
 // External References:
@@ -107,63 +87,63 @@ extern "C" void __ptmf_test(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_27(); // 1
-SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SDATA extern u32 __float_nan;
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803BB7C8-803BB800 0038+00 rc=0 efc=0 .data      cam_seira_shop                                               */
-u8 cam_seira_shop[56] = {
+/* 803BB7C8-803BB800 0038+00 rc=1 efc=0 rfr=False None .data      cam_seira_shop                                               */
+SECTION_DATA static u8 cam_seira_shop[56] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0xE6, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x42, 0xE6, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00,
 	0x43, 0x1B, 0x00, 0x00, 0xC3, 0x2F, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00, 0x43, 0x1B, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00,
 };
 
-/* 803BB800-803BB838 0038+00 rc=0 efc=0 .data      cam_seira_evnt_before                                        */
-u8 cam_seira_evnt_before[56] = {
+/* 803BB800-803BB838 0038+00 rc=1 efc=0 rfr=False None .data      cam_seira_evnt_before                                        */
+SECTION_DATA static u8 cam_seira_evnt_before[56] = {
 	0xC2, 0x48, 0x00, 0x00, 0x42, 0xE6, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
 	0x42, 0xE6, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00,
 	0x43, 0x1B, 0x00, 0x00, 0xC3, 0x2F, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00, 0x43, 0x1B, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00,
 };
 
-/* 803BB838-803BB870 0038+00 rc=0 efc=0 .data      cam_seira_evnt_after                                         */
-u8 cam_seira_evnt_after[56] = {
+/* 803BB838-803BB870 0038+00 rc=1 efc=0 rfr=False None .data      cam_seira_evnt_after                                         */
+SECTION_DATA static u8 cam_seira_evnt_after[56] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0xE6, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x42, 0xE6, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00,
 	0x43, 0x1B, 0x00, 0x00, 0xC3, 0x2F, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00, 0x43, 0x1B, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00,
 };
 
-/* 803BB870-803BB87C 000C+00 rc=0 efc=0 .data      shop_cam_data_tbl                                            */
-void* shop_cam_data_tbl[3] = {
-	(void*)&cam_seira_shop,
-	(void*)&cam_seira_evnt_before,
-	(void*)&cam_seira_evnt_after,
+/* 803BB870-803BB87C 000C+00 rc=2 efc=0 rfr=False None .data      shop_cam_data_tbl                                            */
+SECTION_DATA static void* shop_cam_data_tbl[3] = {
+	/* 0    */ (void*)&cam_seira_shop,
+	/* 1    */ (void*)&cam_seira_evnt_before,
+	/* 2    */ (void*)&cam_seira_evnt_after,
 };
 
-/* 803BB87C-803BB888 000C+00 rc=0 efc=0 .data      @3771                                                        */
-void* d_shop_d_shop_camera__lit_3771[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)shop_cam_action__16ShopCam_action_cFv,
+/* 803BB87C-803BB888 000C+00 rc=1 efc=0 rfr=False None .data      @3771                                                        */
+SECTION_DATA static void* d_shop_d_shop_camera__lit_3771[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)shop_cam_action__16ShopCam_action_cFv,
 };
 
-/* 80453A88-80453A8C 0004+00 rc=0 efc=0 .sdata2    @3796                                                        */
-f32 d_shop_d_shop_camera__lit_3796 = 0.25f;
+/* 80453A88-80453A8C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3796                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_camera__lit_3796 = 0.25f;
 
-/* 80453A8C-80453A90 0004+00 rc=0 efc=0 .sdata2    @3797                                                        */
-f32 d_shop_d_shop_camera__lit_3797 = 20.0f;
+/* 80453A8C-80453A90 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3797                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_camera__lit_3797 = 20.0f;
 
-/* 80453A90-80453A94 0004+00 rc=0 efc=0 .sdata2    @3798                                                        */
-f32 d_shop_d_shop_camera__lit_3798 = 5.0f;
+/* 80453A90-80453A94 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3798                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_camera__lit_3798 = 5.0f;
 
-/* 80195C9C-80195E18 017C+00 rc=0 efc=0 .text      shop_cam_action_init__16ShopCam_action_cFv                   */
+/* 80195C9C-80195E18 017C+00 rc=0 efc=0 rfr=False None .text      shop_cam_action_init__16ShopCam_action_cFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,26 +155,26 @@ asm void ShopCam_action_c::shop_cam_action_init() {
 
 
 /* ############################################################################################## */
-/* 80453A94-80453A98 0004+00 rc=0 efc=0 .sdata2    @3916                                                        */
-u8 d_shop_d_shop_camera__lit_3916[4] = {
+/* 80453A94-80453A98 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3916                                                        */
+SECTION_SDATA2 static u8 d_shop_d_shop_camera__lit_3916[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80453A98-80453AA0 0008+00 rc=0 efc=0 .sdata2    @3917                                                        */
-f64 d_shop_d_shop_camera__lit_3917 = 0.5;
+/* 80453A98-80453AA0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3917                                                        */
+SECTION_SDATA2 static f64 d_shop_d_shop_camera__lit_3917 = 0.5;
 
-/* 80453AA0-80453AA8 0008+00 rc=0 efc=0 .sdata2    @3918                                                        */
-f64 d_shop_d_shop_camera__lit_3918 = 3.0;
+/* 80453AA0-80453AA8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3918                                                        */
+SECTION_SDATA2 static f64 d_shop_d_shop_camera__lit_3918 = 3.0;
 
-/* 80453AA8-80453AB0 0008+00 rc=0 efc=0 .sdata2    @3919                                                        */
-u8 d_shop_d_shop_camera__lit_3919[8] = {
+/* 80453AA8-80453AB0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3919                                                        */
+SECTION_SDATA2 static u8 d_shop_d_shop_camera__lit_3919[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80453AB0-80453AB4 0004+00 rc=0 efc=0 .sdata2    @3920                                                        */
-f32 d_shop_d_shop_camera__lit_3920 = 1.0f;
+/* 80453AB0-80453AB4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3920                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_camera__lit_3920 = 1.0f;
 
-/* 80195E18-8019630C 04F4+00 rc=0 efc=0 .text      shop_cam_action__16ShopCam_action_cFv                        */
+/* 80195E18-8019630C 04F4+00 rc=1 efc=0 rfr=False None .text      shop_cam_action__16ShopCam_action_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +185,7 @@ asm void ShopCam_action_c::shop_cam_action() {
 #pragma pop
 
 
-/* 8019630C-8019635C 0050+00 rc=0 efc=0 .text      Save__16ShopCam_action_cFv                                   */
+/* 8019630C-8019635C 0050+00 rc=1 efc=0 rfr=False None .text      Save__16ShopCam_action_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,7 +196,7 @@ asm void ShopCam_action_c::Save() {
 #pragma pop
 
 
-/* 8019635C-801963B4 0058+00 rc=0 efc=0 .text      EventRecoverNotime__16ShopCam_action_cFv                     */
+/* 8019635C-801963B4 0058+00 rc=0 efc=0 rfr=False None .text      EventRecoverNotime__16ShopCam_action_cFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +207,7 @@ asm void ShopCam_action_c::EventRecoverNotime() {
 #pragma pop
 
 
-/* 801963B4-801964C8 0114+00 rc=0 efc=0 .text      Reset__16ShopCam_action_cFv                                  */
+/* 801963B4-801964C8 0114+00 rc=0 efc=0 rfr=False None .text      Reset__16ShopCam_action_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -238,7 +218,7 @@ asm void ShopCam_action_c::Reset() {
 #pragma pop
 
 
-/* 801964C8-80196544 007C+00 rc=0 efc=0 .text      move__16ShopCam_action_cFv                                   */
+/* 801964C8-80196544 007C+00 rc=0 efc=0 rfr=False None .text      move__16ShopCam_action_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,10 +230,10 @@ asm void ShopCam_action_c::move() {
 
 
 /* ############################################################################################## */
-/* 80453AB4-80453AB8 0004+00 rc=0 efc=0 .sdata2    @3992                                                        */
-f32 d_shop_d_shop_camera__lit_3992 = 45.0f;
+/* 80453AB4-80453AB8 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3992                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_camera__lit_3992 = 45.0f;
 
-/* 80196544-80196608 00C4+00 rc=0 efc=0 .text      setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz */
+/* 80196544-80196608 00C4+00 rc=1 efc=1 rfr=False None .text      setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -264,7 +244,7 @@ asm void ShopCam_action_c::setCamDataIdx(fopAc_ac_c* field_0, fopAc_ac_c* field_
 #pragma pop
 
 
-/* 80196608-801966D4 00CC+00 rc=0 efc=0 .text      setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz */
+/* 80196608-801966D4 00CC+00 rc=1 efc=1 rfr=False None .text      setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -276,25 +256,25 @@ asm void ShopCam_action_c::setCamDataIdx2(fopAc_ac_c* field_0, fopAc_ac_c* field
 
 
 /* ############################################################################################## */
-/* 80453AB8-80453ABC 0004+00 rc=0 efc=0 .sdata2    @4059                                                        */
-f32 d_shop_d_shop_camera__lit_4059 = 0.5f;
+/* 80453AB8-80453ABC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4059                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_camera__lit_4059 = 0.5f;
 
-/* 80453ABC-80453AC0 0004+00 rc=0 efc=0 .sdata2    @4060                                                        */
-f32 d_shop_d_shop_camera__lit_4060 = 167.0f;
+/* 80453ABC-80453AC0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4060                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_camera__lit_4060 = 167.0f;
 
-/* 80453AC0-80453AC4 0004+00 rc=0 efc=0 .sdata2    @4061                                                        */
-f32 d_shop_d_shop_camera__lit_4061 = 220.0f;
+/* 80453AC0-80453AC4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4061                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_camera__lit_4061 = 220.0f;
 
-/* 80453AC4-80453AC8 0004+00 rc=0 efc=0 .sdata2    @4062                                                        */
-f32 d_shop_d_shop_camera__lit_4062 = 120.0f;
+/* 80453AC4-80453AC8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4062                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_camera__lit_4062 = 120.0f;
 
-/* 80453AC8-80453ACC 0004+00 rc=0 efc=0 .sdata2    @4063                                                        */
-f32 d_shop_d_shop_camera__lit_4063 = -50.0f;
+/* 80453AC8-80453ACC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4063                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_camera__lit_4063 = -50.0f;
 
-/* 80453ACC-80453AD0 0004+00 rc=0 efc=0 .sdata2    @4064                                                        */
-f32 d_shop_d_shop_camera__lit_4064 = 350.0f;
+/* 80453ACC-80453AD0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4064                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_camera__lit_4064 = 350.0f;
 
-/* 801966D4-801968B8 01E4+00 rc=0 efc=0 .text      _debugSetCamera__16ShopCam_action_cFv                        */
+/* 801966D4-801968B8 01E4+00 rc=2 efc=0 rfr=False None .text      _debugSetCamera__16ShopCam_action_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -305,7 +285,7 @@ asm void ShopCam_action_c::_debugSetCamera() {
 #pragma pop
 
 
-/* 801968B8-80196914 005C+00 rc=0 efc=0 .text      setMasterCamCtrPos__16ShopCam_action_cFP4cXyz                */
+/* 801968B8-80196914 005C+00 rc=1 efc=1 rfr=False None .text      setMasterCamCtrPos__16ShopCam_action_cFP4cXyz                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

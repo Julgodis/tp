@@ -10,7 +10,7 @@
 // 
 
 
-SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
+extern "C" extern u8 errno[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -23,6 +23,6 @@ SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 804519A8-804519B0 0004+04 rc=0 efc=0 .sbss      errno                                                        */
+/* 804519A8-804519B0 0004+04 rc=6 efc=6 rfr=False None .sbss      errno                                                        */
 u8 errno[4 + 4 /* padding */];
 

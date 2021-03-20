@@ -9,14 +9,14 @@
 // Forward References:
 // 
 
-extern "C" void BlockReadCallback(); // 1
+extern "C" static void BlockReadCallback(); // 1
 extern "C" void __CARDRead(); // 1
-extern "C" void BlockWriteCallback(); // 1
+extern "C" static void BlockWriteCallback(); // 1
 extern "C" void __CARDWrite(); // 1
 
-extern "C" void BlockReadCallback(); // 1
+extern "C" static void BlockReadCallback(); // 1
 extern "C" void __CARDRead(); // 1
-extern "C" void BlockWriteCallback(); // 1
+extern "C" static void BlockWriteCallback(); // 1
 extern "C" void __CARDWrite(); // 1
 
 // 
@@ -30,24 +30,24 @@ extern "C" void __CARDPutControlBlock(); // 1
 extern "C" void __CARDReadSegment(); // 1
 extern "C" void __CARDWritePage(); // 1
 extern "C" void __CARDPutControlBlock(); // 1
-SECTION_BSS extern u8 __CARDBlock[544];
+extern "C" extern u8 __CARDBlock[544];
 
 // 
 // Declarations:
 // 
 
-/* 80355184-80355260 00DC+00 rc=0 efc=0 .text      BlockReadCallback                                            */
+/* 80355184-80355260 00DC+00 rc=1 efc=0 rfr=False None .text      BlockReadCallback                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void BlockReadCallback() {
+extern "C" asm static void BlockReadCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDRdwr/BlockReadCallback.s"
 }
 #pragma pop
 
 
-/* 80355260-803552C4 0064+00 rc=0 efc=0 .text      __CARDRead                                                   */
+/* 80355260-803552C4 0064+00 rc=3 efc=3 rfr=False None .text      __CARDRead                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -58,18 +58,18 @@ extern "C" asm void __CARDRead() {
 #pragma pop
 
 
-/* 803552C4-803553AC 00E8+00 rc=0 efc=0 .text      BlockWriteCallback                                           */
+/* 803552C4-803553AC 00E8+00 rc=1 efc=0 rfr=False None .text      BlockWriteCallback                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void BlockWriteCallback() {
+extern "C" asm static void BlockWriteCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDRdwr/BlockWriteCallback.s"
 }
 #pragma pop
 
 
-/* 803553AC-80355414 0068+00 rc=0 efc=0 .text      __CARDWrite                                                  */
+/* 803553AC-80355414 0068+00 rc=4 efc=4 rfr=False None .text      __CARDWrite                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

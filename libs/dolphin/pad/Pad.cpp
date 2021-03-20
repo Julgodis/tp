@@ -9,71 +9,49 @@
 // Forward References:
 // 
 
-extern "C" void UpdateOrigin(); // 1
-extern "C" void PADOriginCallback(); // 1
-extern "C" void PADOriginUpdateCallback(); // 1
-extern "C" void PADProbeCallback(); // 1
-extern "C" void PADTypeAndStatusCallback(); // 1
-extern "C" void PADReceiveCheckCallback(); // 1
+extern "C" static void UpdateOrigin(); // 1
+extern "C" static void PADOriginCallback(); // 1
+extern "C" static void PADOriginUpdateCallback(); // 1
+extern "C" static void PADProbeCallback(); // 1
+extern "C" static void PADTypeAndStatusCallback(); // 1
+extern "C" static void PADReceiveCheckCallback(); // 1
 extern "C" void PADReset(); // 1
 extern "C" void PADRecalibrate(); // 1
 extern "C" void PADInit(); // 1
 extern "C" void PADRead(); // 1
 extern "C" void PADControlMotor(); // 1
 extern "C" void PADSetSpec(); // 1
-extern "C" void SPEC0_MakeStatus(); // 1
-extern "C" void SPEC1_MakeStatus(); // 1
-extern "C" void SPEC2_MakeStatus(); // 1
+extern "C" static void SPEC0_MakeStatus(); // 1
+extern "C" static void SPEC1_MakeStatus(); // 1
+extern "C" static void SPEC2_MakeStatus(); // 1
 extern "C" void PADSetAnalogMode(); // 1
-extern "C" void Pad__OnReset(); // 1
-extern "C" void SamplingHandler(); // 1
-extern "C" void PADSetSamplingCallback(); // 1
+extern "C" static void Pad__OnReset(); // 1
+extern "C" static void SamplingHandler(); // 1
+extern "C" static void PADSetSamplingCallback(); // 1
 extern "C" void __PADDisableRecalibration(); // 1
 
-extern "C" void UpdateOrigin(); // 1
-extern "C" void PADOriginCallback(); // 1
-extern "C" void PADOriginUpdateCallback(); // 1
-extern "C" void PADProbeCallback(); // 1
-extern "C" void PADTypeAndStatusCallback(); // 1
-extern "C" void PADReceiveCheckCallback(); // 1
+extern "C" static void UpdateOrigin(); // 1
+extern "C" static void PADOriginCallback(); // 1
+extern "C" static void PADOriginUpdateCallback(); // 1
+extern "C" static void PADProbeCallback(); // 1
+extern "C" static void PADTypeAndStatusCallback(); // 1
+extern "C" static void PADReceiveCheckCallback(); // 1
 extern "C" void PADReset(); // 1
 extern "C" void PADRecalibrate(); // 1
 extern "C" void PADInit(); // 1
 extern "C" void PADRead(); // 1
 extern "C" void PADControlMotor(); // 1
 extern "C" void PADSetSpec(); // 1
-extern "C" void SPEC0_MakeStatus(); // 1
-extern "C" void SPEC1_MakeStatus(); // 1
-extern "C" void SPEC2_MakeStatus(); // 1
+extern "C" static void SPEC0_MakeStatus(); // 1
+extern "C" static void SPEC1_MakeStatus(); // 1
+extern "C" static void SPEC2_MakeStatus(); // 1
 extern "C" void PADSetAnalogMode(); // 1
-extern "C" void Pad__OnReset(); // 1
-extern "C" void SamplingHandler(); // 1
-extern "C" void PADSetSamplingCallback(); // 1
+extern "C" static void Pad__OnReset(); // 1
+extern "C" static void SamplingHandler(); // 1
+extern "C" static void PADSetSamplingCallback(); // 1
 extern "C" void __PADDisableRecalibration(); // 1
-SECTION_DATA extern u8 Pad__lit_1[69 + 3 /* padding */];
-SECTION_DATA extern void* Pad__ResetFunctionInfo[4];
-SECTION_BSS extern u8 Pad__Type[16];
-SECTION_BSS extern u8 Origin[48];
-SECTION_BSS extern u8 CmdProbeDevice[16];
-SECTION_SDATA extern void* __PADVersion;
-SECTION_SDATA extern u32 ResettingChan;
-SECTION_SDATA extern u32 XPatchBits;
-SECTION_SDATA extern u32 AnalogMode;
-SECTION_SDATA extern u32 Spec;
-SECTION_SDATA extern void* MakeStatus;
-SECTION_SDATA extern u32 CmdReadOrigin;
-SECTION_SDATA extern u32 CmdCalibrate;
-SECTION_SBSS extern u8 Initialized[4];
-SECTION_SBSS extern u8 EnabledBits[4];
-SECTION_SBSS extern u8 ResettingBits[4];
-SECTION_SBSS extern u8 RecalibrateBits[4];
-SECTION_SBSS extern u8 WaitingBits[4];
-SECTION_SBSS extern u8 CheckingBits[4];
-SECTION_SBSS extern u8 PendingBits[4];
-SECTION_SBSS extern u8 BarrelBits[4];
-SECTION_SBSS extern u8 SamplingCallback[4];
-SECTION_SBSS extern u8 data_8045186C[4];
-SECTION_SBSS extern u8 __PADSpec[4 + 4 /* padding */];
+extern "C" extern u8 CmdProbeDevice[16];
+extern "C" extern u8 __PADSpec[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -128,36 +106,47 @@ extern "C" void SIGetType(); // 1
 extern "C" void SIGetTypeAsync(); // 1
 extern "C" void SIRefreshSamplingRate(); // 1
 extern "C" void __shr2i(); // 1
-SECTION_SBSS extern u8 __PADFixBits[4 + 4 /* padding */];
+extern "C" extern u8 __PADFixBits[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 8044CB70-8044CB80 0010+00 rc=0 efc=0 .bss       Type                                                         */
-u8 Pad__Type[16];
+/* 803D1B48-803D1B90 0045+03 rc=1 efc=0 rfr=False None .data      @1                                                           */
+SECTION_DATA static u8 Pad__lit_1[69 + 3 /* padding */] = {
+	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
+	0x20, 0x50, 0x41, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
+	0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,
+	0x30, 0x34, 0x3A, 0x31, 0x34, 0x3A, 0x34, 0x39, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31,
+	0x29, 0x20, 0x3E, 0x3E, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00,
+};
 
-/* 8044CB80-8044CBB0 0030+00 rc=0 efc=0 .bss       Origin                                                       */
-u8 Origin[48];
+/* 8044CB70-8044CB80 0010+00 rc=3 efc=0 rfr=False None .bss       Type                                                         */
+static u8 Pad__Type[16];
 
-/* 80450A20-80450A24 0004+00 rc=0 efc=0 .sdata     __PADVersion                                                 */
-void* __PADVersion = (void*)&Pad__lit_1;
+/* 8044CB80-8044CBB0 0030+00 rc=8 efc=0 rfr=False None .bss       Origin                                                       */
+static u8 Origin[48];
 
-/* 80450A24-80450A28 0004+00 rc=0 efc=0 .sdata     ResettingChan                                                */
-u32 ResettingChan = 0x00000020;
+/* 80450A20-80450A24 0004+00 rc=1 efc=0 rfr=False None .sdata     __PADVersion                                                 */
+SECTION_SDATA static void* __PADVersion = (void*)&Pad__lit_1;
 
-/* 80450A28-80450A2C 0004+00 rc=0 efc=0 .sdata     XPatchBits                                                   */
-u32 XPatchBits = 0xF0000000;
+/* 80450A24-80450A28 0004+00 rc=7 efc=0 rfr=False None .sdata     ResettingChan                                                */
+SECTION_SDATA static u32 ResettingChan = 0x00000020;
 
-/* 80450A2C-80450A30 0004+00 rc=0 efc=0 .sdata     AnalogMode                                                   */
-u32 AnalogMode = 0x00000300;
+/* 80450A28-80450A2C 0004+00 rc=1 efc=0 rfr=False None .sdata     XPatchBits                                                   */
+SECTION_SDATA static u32 XPatchBits = 0xF0000000;
 
-/* 8034E2B4-8034E458 01A4+00 rc=0 efc=0 .text      UpdateOrigin                                                 */
+/* 80450A2C-80450A30 0004+00 rc=7 efc=0 rfr=False None .sdata     AnalogMode                                                   */
+SECTION_SDATA static u32 AnalogMode = 0x00000300;
+
+/* 8034E2B4-8034E458 01A4+00 rc=2 efc=0 rfr=False None .text      UpdateOrigin                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void UpdateOrigin() {
+extern "C" asm static void UpdateOrigin() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/UpdateOrigin.s"
 }
@@ -165,20 +154,20 @@ extern "C" asm void UpdateOrigin() {
 
 
 /* ############################################################################################## */
-/* 80451848-8045184C 0004+00 rc=0 efc=0 .sbss      Initialized                                                  */
-u8 Initialized[4];
+/* 80451848-8045184C 0004+00 rc=1 efc=0 rfr=False None .sbss      Initialized                                                  */
+static u8 Initialized[4];
 
-/* 8045184C-80451850 0004+00 rc=0 efc=0 .sbss      EnabledBits                                                  */
-u8 EnabledBits[4];
+/* 8045184C-80451850 0004+00 rc=10 efc=0 rfr=False None .sbss      EnabledBits                                                  */
+static u8 EnabledBits[4];
 
-/* 80451850-80451854 0004+00 rc=0 efc=0 .sbss      ResettingBits                                                */
-u8 ResettingBits[4];
+/* 80451850-80451854 0004+00 rc=7 efc=0 rfr=False None .sbss      ResettingBits                                                */
+static u8 ResettingBits[4];
 
-/* 8034E458-8034E51C 00C4+00 rc=0 efc=0 .text      PADOriginCallback                                            */
+/* 8034E458-8034E51C 00C4+00 rc=1 efc=0 rfr=False None .text      PADOriginCallback                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void PADOriginCallback() {
+extern "C" asm static void PADOriginCallback() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/PADOriginCallback.s"
 }
@@ -186,37 +175,37 @@ extern "C" asm void PADOriginCallback() {
 
 
 /* ############################################################################################## */
-/* 80451854-80451858 0004+00 rc=0 efc=0 .sbss      RecalibrateBits                                              */
-u8 RecalibrateBits[4];
+/* 80451854-80451858 0004+00 rc=4 efc=0 rfr=False None .sbss      RecalibrateBits                                              */
+static u8 RecalibrateBits[4];
 
-/* 80451858-8045185C 0004+00 rc=0 efc=0 .sbss      WaitingBits                                                  */
-u8 WaitingBits[4];
+/* 80451858-8045185C 0004+00 rc=7 efc=0 rfr=False None .sbss      WaitingBits                                                  */
+static u8 WaitingBits[4];
 
-/* 8045185C-80451860 0004+00 rc=0 efc=0 .sbss      CheckingBits                                                 */
-u8 CheckingBits[4];
+/* 8045185C-80451860 0004+00 rc=6 efc=0 rfr=False None .sbss      CheckingBits                                                 */
+static u8 CheckingBits[4];
 
-/* 80451860-80451864 0004+00 rc=0 efc=0 .sbss      PendingBits                                                  */
-u8 PendingBits[4];
+/* 80451860-80451864 0004+00 rc=6 efc=0 rfr=False None .sbss      PendingBits                                                  */
+static u8 PendingBits[4];
 
-/* 80451864-80451868 0004+00 rc=0 efc=0 .sbss      BarrelBits                                                   */
-u8 BarrelBits[4];
+/* 80451864-80451868 0004+00 rc=6 efc=0 rfr=False None .sbss      BarrelBits                                                   */
+static u8 BarrelBits[4];
 
-/* 8034E51C-8034E5E8 00CC+00 rc=0 efc=0 .text      PADOriginUpdateCallback                                      */
+/* 8034E51C-8034E5E8 00CC+00 rc=2 efc=0 rfr=False None .text      PADOriginUpdateCallback                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void PADOriginUpdateCallback() {
+extern "C" asm static void PADOriginUpdateCallback() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/PADOriginUpdateCallback.s"
 }
 #pragma pop
 
 
-/* 8034E5E8-8034E6C0 00D8+00 rc=0 efc=0 .text      PADProbeCallback                                             */
+/* 8034E5E8-8034E6C0 00D8+00 rc=1 efc=0 rfr=False None .text      PADProbeCallback                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void PADProbeCallback() {
+extern "C" asm static void PADProbeCallback() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/PADProbeCallback.s"
 }
@@ -224,41 +213,41 @@ extern "C" asm void PADProbeCallback() {
 
 
 /* ############################################################################################## */
-/* 80450A30-80450A34 0004+00 rc=0 efc=0 .sdata     Spec                                                         */
-u32 Spec = 0x00000005;
+/* 80450A30-80450A34 0004+00 rc=4 efc=0 rfr=False None .sdata     Spec                                                         */
+SECTION_SDATA static u32 Spec = 0x00000005;
 
-/* 80450A34-80450A38 0004+00 rc=0 efc=0 .sdata     MakeStatus                                                   */
-void* MakeStatus = (void*)SPEC2_MakeStatus;
+/* 80450A34-80450A38 0004+00 rc=2 efc=0 rfr=False None .sdata     MakeStatus                                                   */
+SECTION_SDATA static void* MakeStatus = (void*)SPEC2_MakeStatus;
 
-/* 80450A38-80450A3C 0004+00 rc=0 efc=0 .sdata     CmdReadOrigin                                                */
-u32 CmdReadOrigin = 0x41000000;
+/* 80450A38-80450A3C 0004+00 rc=3 efc=0 rfr=False None .sdata     CmdReadOrigin                                                */
+SECTION_SDATA static u32 CmdReadOrigin = 0x41000000;
 
-/* 80450A3C-80450A40 0004+00 rc=0 efc=0 .sdata     CmdCalibrate                                                 */
-u32 CmdCalibrate = 0x42000000;
+/* 80450A3C-80450A40 0004+00 rc=1 efc=0 rfr=False None .sdata     CmdCalibrate                                                 */
+SECTION_SDATA static u32 CmdCalibrate = 0x42000000;
 
-/* 8034E6C0-8034E9EC 032C+00 rc=0 efc=0 .text      PADTypeAndStatusCallback                                     */
+/* 8034E6C0-8034E9EC 032C+00 rc=4 efc=0 rfr=False None .text      PADTypeAndStatusCallback                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void PADTypeAndStatusCallback() {
+extern "C" asm static void PADTypeAndStatusCallback() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/PADTypeAndStatusCallback.s"
 }
 #pragma pop
 
 
-/* 8034E9EC-8034EB2C 0140+00 rc=0 efc=0 .text      PADReceiveCheckCallback                                      */
+/* 8034E9EC-8034EB2C 0140+00 rc=1 efc=0 rfr=False None .text      PADReceiveCheckCallback                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void PADReceiveCheckCallback() {
+extern "C" asm static void PADReceiveCheckCallback() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/PADReceiveCheckCallback.s"
 }
 #pragma pop
 
 
-/* 8034EB2C-8034EC3C 0110+00 rc=0 efc=0 .text      PADReset                                                     */
+/* 8034EB2C-8034EC3C 0110+00 rc=3 efc=1 rfr=False None .text      PADReset                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -269,7 +258,7 @@ extern "C" asm void PADReset() {
 #pragma pop
 
 
-/* 8034EC3C-8034ED50 0114+00 rc=0 efc=0 .text      PADRecalibrate                                               */
+/* 8034EC3C-8034ED50 0114+00 rc=2 efc=1 rfr=False None .text      PADRecalibrate                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -281,35 +270,24 @@ extern "C" asm void PADRecalibrate() {
 
 
 /* ############################################################################################## */
-/* 803D1B48-803D1B90 0045+03 rc=0 efc=0 .data      @1                                                           */
-u8 Pad__lit_1[69 + 3 /* padding */] = {
-	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
-	0x20, 0x50, 0x41, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
-	0x6C, 0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20,
-	0x30, 0x34, 0x3A, 0x31, 0x34, 0x3A, 0x34, 0x39, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31,
-	0x29, 0x20, 0x3E, 0x3E, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
+/* 803D1B90-803D1BA0 0010+00 rc=1 efc=0 rfr=False None .data      ResetFunctionInfo                                            */
+SECTION_DATA static void* Pad__ResetFunctionInfo[4] = {
+	/* 0    */ (void*)Pad__OnReset,
+	/* 1    */ (void*)0x0000007F,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
 };
 
-/* 803D1B90-803D1BA0 0010+00 rc=0 efc=0 .data      ResetFunctionInfo                                            */
-void* Pad__ResetFunctionInfo[4] = {
-	(void*)Pad__OnReset,
-	(void*)0x0000007F,
-	(void*)NULL,
-	(void*)NULL,
-};
+/* 80451868-8045186C 0004+00 rc=3 efc=0 rfr=False None .sbss      SamplingCallback                                             */
+static u8 SamplingCallback[4];
 
-/* 80451868-8045186C 0004+00 rc=0 efc=0 .sbss      SamplingCallback                                             */
-u8 SamplingCallback[4];
+/* 8045186C-80451870 0004+00 rc=1 efc=0 rfr=False None .sbss      recalibrated$388                                             */
+static u8 data_8045186C[4];
 
-/* 8045186C-80451870 0004+00 rc=0 efc=0 .sbss      recalibrated$388                                             */
-u8 data_8045186C[4];
-
-/* 80451870-80451878 0004+04 rc=0 efc=0 .sbss      __PADSpec                                                    */
+/* 80451870-80451878 0004+04 rc=3 efc=1 rfr=False None .sbss      __PADSpec                                                    */
 u8 __PADSpec[4 + 4 /* padding */];
 
-/* 8034ED50-8034EEA0 0150+00 rc=0 efc=0 .text      PADInit                                                      */
+/* 8034ED50-8034EEA0 0150+00 rc=1 efc=1 rfr=False None .text      PADInit                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -320,7 +298,7 @@ extern "C" asm void PADInit() {
 #pragma pop
 
 
-/* 8034EEA0-8034F1A0 0300+00 rc=0 efc=0 .text      PADRead                                                      */
+/* 8034EEA0-8034F1A0 0300+00 rc=1 efc=1 rfr=False None .text      PADRead                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -331,7 +309,7 @@ extern "C" asm void PADRead() {
 #pragma pop
 
 
-/* 8034F1A0-8034F258 00B8+00 rc=0 efc=0 .text      PADControlMotor                                              */
+/* 8034F1A0-8034F258 00B8+00 rc=2 efc=2 rfr=False None .text      PADControlMotor                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -342,7 +320,7 @@ extern "C" asm void PADControlMotor() {
 #pragma pop
 
 
-/* 8034F258-8034F2B8 0060+00 rc=0 efc=0 .text      PADSetSpec                                                   */
+/* 8034F258-8034F2B8 0060+00 rc=2 efc=1 rfr=False None .text      PADSetSpec                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -353,40 +331,40 @@ extern "C" asm void PADSetSpec() {
 #pragma pop
 
 
-/* 8034F2B8-8034F42C 0174+00 rc=0 efc=0 .text      SPEC0_MakeStatus                                             */
+/* 8034F2B8-8034F42C 0174+00 rc=1 efc=0 rfr=False None .text      SPEC0_MakeStatus                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void SPEC0_MakeStatus() {
+extern "C" asm static void SPEC0_MakeStatus() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/SPEC0_MakeStatus.s"
 }
 #pragma pop
 
 
-/* 8034F42C-8034F5A0 0174+00 rc=0 efc=0 .text      SPEC1_MakeStatus                                             */
+/* 8034F42C-8034F5A0 0174+00 rc=1 efc=0 rfr=False None .text      SPEC1_MakeStatus                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void SPEC1_MakeStatus() {
+extern "C" asm static void SPEC1_MakeStatus() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/SPEC1_MakeStatus.s"
 }
 #pragma pop
 
 
-/* 8034F5A0-8034FA10 0470+00 rc=0 efc=0 .text      SPEC2_MakeStatus                                             */
+/* 8034F5A0-8034FA10 0470+00 rc=2 efc=0 rfr=False None .text      SPEC2_MakeStatus                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void SPEC2_MakeStatus() {
+extern "C" asm static void SPEC2_MakeStatus() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/SPEC2_MakeStatus.s"
 }
 #pragma pop
 
 
-/* 8034FA10-8034FA84 0074+00 rc=0 efc=0 .text      PADSetAnalogMode                                             */
+/* 8034FA10-8034FA84 0074+00 rc=2 efc=2 rfr=False None .text      PADSetAnalogMode                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -397,40 +375,40 @@ extern "C" asm void PADSetAnalogMode() {
 #pragma pop
 
 
-/* 8034FA84-8034FB40 00BC+00 rc=0 efc=0 .text      OnReset                                                      */
+/* 8034FA84-8034FB40 00BC+00 rc=1 efc=0 rfr=False None .text      OnReset                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void Pad__OnReset() {
+extern "C" asm static void Pad__OnReset() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/Pad__OnReset.s"
 }
 #pragma pop
 
 
-/* 8034FB40-8034FBA0 0060+00 rc=0 efc=0 .text      SamplingHandler                                              */
+/* 8034FB40-8034FBA0 0060+00 rc=1 efc=0 rfr=False None .text      SamplingHandler                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void SamplingHandler() {
+extern "C" asm static void SamplingHandler() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/SamplingHandler.s"
 }
 #pragma pop
 
 
-/* 8034FBA0-8034FBF4 0054+00 rc=0 efc=0 .text      PADSetSamplingCallback                                       */
+/* 8034FBA0-8034FBF4 0054+00 rc=1 efc=0 rfr=False None .text      PADSetSamplingCallback                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void PADSetSamplingCallback() {
+extern "C" asm static void PADSetSamplingCallback() {
 	nofralloc
 #include "asm/dolphin/pad/Pad/PADSetSamplingCallback.s"
 }
 #pragma pop
 
 
-/* 8034FBF4-8034FC70 007C+00 rc=0 efc=0 .text      __PADDisableRecalibration                                    */
+/* 8034FBF4-8034FC70 007C+00 rc=1 efc=1 rfr=False None .text      __PADDisableRecalibration                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -442,6 +420,6 @@ extern "C" asm void __PADDisableRecalibration() {
 
 
 /* ############################################################################################## */
-/* 8044CBB0-8044CBC0 0010+00 rc=0 efc=0 .bss       CmdProbeDevice                                               */
+/* 8044CBB0-8044CBC0 0010+00 rc=0 efc=0 rfr=False None .bss       CmdProbeDevice                                               */
 u8 CmdProbeDevice[16];
 

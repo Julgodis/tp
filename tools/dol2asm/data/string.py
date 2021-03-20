@@ -59,7 +59,7 @@ class String(ArbitraryData):
     decoded_string: str = None
 
     def array_type(self):
-        return self.data_type
+        return self.element_type()
 
     async def export_declaration(self, exporter, builder: AsyncBuilder):
         assert self.padding == 0
@@ -72,9 +72,10 @@ class String(ArbitraryData):
         else:
             data = escape_string(self.decoded_string)
 
-        await self.export_section_header(builder)
-        await self.export_readonly(builder)
-        await builder.write_nonewline(self.data_type.decl(self.identifier.label))
+        await builder.write_nonewline("SECTION_DEAD ")
+        if self.is_static:
+            await self.export_static(builder)
+        await builder.write_nonewline(self.array_type().decl(self.identifier.label))
         await String.export_string(builder, data)
 
     @staticmethod
@@ -98,8 +99,18 @@ class String(ArbitraryData):
 class StringBase(ArbitraryData):
     strings: List[Symbol] = field(default_factory=list, repr=False)
 
+    def valid_reference(self, addr):
+        return addr >= self.start and addr < self.end
+
     def array_type(self):
-        return self.data_type
+        return self.element_type()
+
+    @property
+    def is_static(self):
+        # having @stringBase0 as satatic would remove the forward reference to the lcf generated symbol,
+        # this will not compile correctly. 
+        return False
+
 
     def set_mlts(self, module: int, library: str, translation_unit: str, section: str):
         super().set_mlts(module, library, translation_unit, section)
@@ -111,6 +122,11 @@ class StringBase(ArbitraryData):
         await builder.write("#pragma force_active on")
         await builder.write("#pragma section \".dead\"")
         for string in self.strings:
+            # if the @stringBase0 is static (which it will almost always be), setup 
+            # so that the sub-strings are static.
+            if self.reference_count > 0 and self.external_reference_count == 0:
+                string.reference_count = 1
+                string.external_reference_count = 0
             await string.export_declaration(exporter, builder)
 
         if self.padding > 0:
@@ -118,7 +134,9 @@ class StringBase(ArbitraryData):
             assert self.padding_data[-1] == 0
             data = escape_full_string(self.padding_data[:-1])
             await builder.write("/* @stringBase0 padding */")
-            await builder.write_nonewline(self.data_type.decl(f"pad_{self.end:08X}"))
+            await builder.write_nonewline("SECTION_DEAD ")
+            await builder.write_nonewline("static ")
+            await builder.write_nonewline(self.array_type().decl(f"pad_{self.end:08X}"))
             await String.export_string(builder, data)
         await builder.write("#pragma pop")
 
@@ -129,7 +147,7 @@ class StringBase(ArbitraryData):
             symbol.addr,
             symbol.size,
             data=data,
-            data_type=ConstType(PointerType(CHAR)),
+            data_type=PointerType(ConstType(CHAR)),
             padding=len(padding_data),
             padding_data=padding_data,
             strings=strings)

@@ -9,12 +9,6 @@
 // Types:
 // 
 
-struct JASDsp {
-	struct TChannel {
-	};
-
-};
-
 struct JASOscillator {
 	struct Data {
 	};
@@ -26,6 +20,12 @@ struct JASChannel {
 	/* 8029AAD0 */ void release(u16);
 	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
 	/* 8029AB98 */ void setMixConfig(u32, u16);
+};
+
+struct JASDsp {
+	struct TChannel {
+	};
+
 };
 
 struct JASAramStream {
@@ -114,22 +114,9 @@ extern "C" void channelProc__13JASAramStreamFv(); // 1
 extern "C" void channelStart__13JASAramStreamFv(); // 1
 extern "C" void channelStop__13JASAramStreamFUs(); // 1
 extern "C" void func_802978DC(); // 1
-SECTION_RODATA extern const u8 OSC_RELEASE_TABLE[12];
-SECTION_RODATA extern const void* OSC_ENV[6 + 1 /* padding */];
-SECTION_DATA extern void* lit_613[13 + 1 /* padding */];
-SECTION_BSS extern u8 JASAramStream__lit_792[12];
-SECTION_BSS extern u8 data_80431B34[16 + 4 /* padding */];
-SECTION_SBSS extern u8 sLoadThread__13JASAramStream[4];
-SECTION_SBSS extern u8 sReadBuffer__13JASAramStream[4];
-SECTION_SBSS extern u8 sBlockSize__13JASAramStream[4];
-SECTION_SBSS extern u8 sChannelMax__13JASAramStream[4];
-extern u8 struct_80451260[8];
-SECTION_SDATA2 extern u8 lit_390[4];
-SECTION_SDATA2 extern f32 lit_391;
-SECTION_SDATA2 extern f32 lit_392;
-SECTION_SDATA2 extern f32 JASAramStream__lit_531;
-SECTION_SDATA2 extern f64 JASAramStream__lit_533;
-SECTION_SDATA2 extern u8 data_80455628[4 + 4 /* padding */];
+extern "C" extern u8 data_80431B34[16 + 4 /* padding */];
+extern "C" extern u8 sBlockSize__13JASAramStream[4];
+extern "C" extern u8 struct_80451260[8];
 
 // 
 // External References:
@@ -198,26 +185,29 @@ extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_SBSS extern u8 JASDram[4];
+extern "C" extern u8 JASDram[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80451250-80451254 0004+00 rc=0 efc=0 .sbss      sLoadThread__13JASAramStream                                 */
-u8 sLoadThread__13JASAramStream[4];
+/* 80451250-80451254 0004+00 rc=6 efc=0 rfr=False None .sbss      sLoadThread__13JASAramStream                                 */
+static u8 sLoadThread__13JASAramStream[4];
 
-/* 80451254-80451258 0004+00 rc=0 efc=0 .sbss      sReadBuffer__13JASAramStream                                 */
-u8 sReadBuffer__13JASAramStream[4];
+/* 80451254-80451258 0004+00 rc=3 efc=0 rfr=False None .sbss      sReadBuffer__13JASAramStream                                 */
+static u8 sReadBuffer__13JASAramStream[4];
 
-/* 80451258-8045125C 0004+00 rc=0 efc=0 .sbss      sBlockSize__13JASAramStream                                  */
+/* 80451258-8045125C 0004+00 rc=7 efc=1 rfr=False None .sbss      sBlockSize__13JASAramStream                                  */
 u8 sBlockSize__13JASAramStream[4];
 
-/* 8045125C-80451260 0004+00 rc=0 efc=0 .sbss      sChannelMax__13JASAramStream                                 */
-u8 sChannelMax__13JASAramStream[4];
+/* 8045125C-80451260 0004+00 rc=1 efc=0 rfr=False None .sbss      sChannelMax__13JASAramStream                                 */
+static u8 sChannelMax__13JASAramStream[4];
 
-/* 8029631C-802963A8 008C+00 rc=0 efc=0 .text      initSystem__13JASAramStreamFUlUl                             */
+/* 80451260-80451268 0008+00 rc=12 efc=4 rfr=False None .sbss      None                                                         */
+u8 struct_80451260[8];
+
+/* 8029631C-802963A8 008C+00 rc=1 efc=1 rfr=False None .text      initSystem__13JASAramStreamFUlUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,18 +219,18 @@ asm void JASAramStream::initSystem(u32 field_0, u32 field_1) {
 
 
 /* ############################################################################################## */
-/* 80455610-80455614 0004+00 rc=0 efc=0 .sdata2    @390                                                         */
-u8 lit_390[4] = {
+/* 80455610-80455614 0004+00 rc=3 efc=0 rfr=False None .sdata2    @390                                                         */
+SECTION_SDATA2 static u8 lit_390[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455614-80455618 0004+00 rc=0 efc=0 .sdata2    @391                                                         */
-f32 lit_391 = 1.0f;
+/* 80455614-80455618 0004+00 rc=2 efc=0 rfr=False None .sdata2    @391                                                         */
+SECTION_SDATA2 static f32 lit_391 = 1.0f;
 
-/* 80455618-8045561C 0004+00 rc=0 efc=0 .sdata2    @392                                                         */
-f32 lit_392 = 0.5f;
+/* 80455618-8045561C 0004+00 rc=2 efc=0 rfr=False None .sdata2    @392                                                         */
+SECTION_SDATA2 static f32 lit_392 = 0.5f;
 
-/* 802963A8-8029649C 00F4+00 rc=0 efc=0 .text      __ct__13JASAramStreamFv                                      */
+/* 802963A8-8029649C 00F4+00 rc=1 efc=1 rfr=False None .text      __ct__13JASAramStreamFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -251,7 +241,7 @@ asm JASAramStream::JASAramStream() {
 #pragma pop
 
 
-/* 8029649C-8029655C 00C0+00 rc=0 efc=0 .text      init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv         */
+/* 8029649C-8029655C 00C0+00 rc=1 efc=1 rfr=False None .text      init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -262,7 +252,7 @@ extern "C" asm void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv() {
 #pragma pop
 
 
-/* 8029655C-80296618 00BC+00 rc=0 efc=0 .text      prepare__13JASAramStreamFli                                  */
+/* 8029655C-80296618 00BC+00 rc=1 efc=1 rfr=False None .text      prepare__13JASAramStreamFli                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,7 +263,7 @@ asm void JASAramStream::prepare(s32 field_0, int field_1) {
 #pragma pop
 
 
-/* 80296618-8029664C 0034+00 rc=0 efc=0 .text      start__13JASAramStreamFv                                     */
+/* 80296618-8029664C 0034+00 rc=1 efc=1 rfr=False None .text      start__13JASAramStreamFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -284,7 +274,7 @@ asm void JASAramStream::start() {
 #pragma pop
 
 
-/* 8029664C-80296684 0038+00 rc=0 efc=0 .text      stop__13JASAramStreamFUs                                     */
+/* 8029664C-80296684 0038+00 rc=1 efc=1 rfr=False None .text      stop__13JASAramStreamFUs                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -295,7 +285,7 @@ asm void JASAramStream::stop(u16 field_0) {
 #pragma pop
 
 
-/* 80296684-802966CC 0048+00 rc=0 efc=0 .text      pause__13JASAramStreamFb                                     */
+/* 80296684-802966CC 0048+00 rc=1 efc=1 rfr=False None .text      pause__13JASAramStreamFb                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -306,7 +296,7 @@ asm void JASAramStream::pause(bool field_0) {
 #pragma pop
 
 
-/* 802966CC-80296710 0044+00 rc=0 efc=0 .text      cancel__13JASAramStreamFv                                    */
+/* 802966CC-80296710 0044+00 rc=1 efc=1 rfr=False None .text      cancel__13JASAramStreamFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,7 +307,7 @@ asm void JASAramStream::cancel() {
 #pragma pop
 
 
-/* 80296710-8029673C 002C+00 rc=0 efc=0 .text      getBlockSamples__13JASAramStreamCFv                          */
+/* 80296710-8029673C 002C+00 rc=4 efc=0 rfr=False None .text      getBlockSamples__13JASAramStreamCFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -328,7 +318,7 @@ asm void JASAramStream::getBlockSamples() const {
 #pragma pop
 
 
-/* 8029673C-8029676C 0030+00 rc=0 efc=0 .text      headerLoadTask__13JASAramStreamFPv                           */
+/* 8029673C-8029676C 0030+00 rc=1 efc=0 rfr=False None .text      headerLoadTask__13JASAramStreamFPv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,7 +329,7 @@ asm void JASAramStream::headerLoadTask(void* field_0) {
 #pragma pop
 
 
-/* 8029676C-80296848 00DC+00 rc=0 efc=0 .text      firstLoadTask__13JASAramStreamFPv                            */
+/* 8029676C-80296848 00DC+00 rc=1 efc=0 rfr=False None .text      firstLoadTask__13JASAramStreamFPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -350,7 +340,7 @@ asm void JASAramStream::firstLoadTask(void* field_0) {
 #pragma pop
 
 
-/* 80296848-80296868 0020+00 rc=0 efc=0 .text      loadToAramTask__13JASAramStreamFPv                           */
+/* 80296848-80296868 0020+00 rc=1 efc=0 rfr=False None .text      loadToAramTask__13JASAramStreamFPv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -361,7 +351,7 @@ asm void JASAramStream::loadToAramTask(void* field_0) {
 #pragma pop
 
 
-/* 80296868-802968C8 0060+00 rc=0 efc=0 .text      finishTask__13JASAramStreamFPv                               */
+/* 80296868-802968C8 0060+00 rc=2 efc=0 rfr=False None .text      finishTask__13JASAramStreamFPv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -372,7 +362,7 @@ asm void JASAramStream::finishTask(void* field_0) {
 #pragma pop
 
 
-/* 802968C8-80296920 0058+00 rc=0 efc=0 .text      prepareFinishTask__13JASAramStreamFPv                        */
+/* 802968C8-80296920 0058+00 rc=1 efc=0 rfr=False None .text      prepareFinishTask__13JASAramStreamFPv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -384,13 +374,13 @@ asm void JASAramStream::prepareFinishTask(void* field_0) {
 
 
 /* ############################################################################################## */
-/* 8045561C-80455620 0004+00 rc=0 efc=0 .sdata2    @531                                                         */
-f32 JASAramStream__lit_531 = 127.0f;
+/* 8045561C-80455620 0004+00 rc=1 efc=0 rfr=False None .sdata2    @531                                                         */
+SECTION_SDATA2 static f32 JASAramStream__lit_531 = 127.0f;
 
-/* 80455620-80455628 0008+00 rc=0 efc=0 .sdata2    @533                                                         */
-f64 JASAramStream__lit_533 = 4503599627370496.0 /* cast u32 to float */;
+/* 80455620-80455628 0008+00 rc=3 efc=0 rfr=False None .sdata2    @533                                                         */
+SECTION_SDATA2 static f64 JASAramStream__lit_533 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80296920-80296AE8 01C8+00 rc=0 efc=0 .text      headerLoad__13JASAramStreamFUli                              */
+/* 80296920-80296AE8 01C8+00 rc=1 efc=0 rfr=False None .text      headerLoad__13JASAramStreamFUli                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -401,7 +391,7 @@ asm void JASAramStream::headerLoad(u32 field_0, int field_1) {
 #pragma pop
 
 
-/* 80296AE8-80296D74 028C+00 rc=0 efc=0 .text      load__13JASAramStreamFv                                      */
+/* 80296AE8-80296D74 028C+00 rc=2 efc=0 rfr=False None .text      load__13JASAramStreamFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -412,7 +402,7 @@ asm void JASAramStream::load() {
 #pragma pop
 
 
-/* 80296D74-80296D94 0020+00 rc=0 efc=0 .text      channelProcCallback__13JASAramStreamFPv                      */
+/* 80296D74-80296D94 0020+00 rc=2 efc=0 rfr=False None .text      channelProcCallback__13JASAramStreamFPv                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -424,26 +414,26 @@ asm void JASAramStream::channelProcCallback(void* field_0) {
 
 
 /* ############################################################################################## */
-/* 803C7670-803C76A8 0034+04 rc=0 efc=0 .data      @613                                                         */
-void* lit_613[13 + 1 /* padding */] = {
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x34),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x48),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+/* 803C7670-803C76A8 0034+04 rc=1 efc=0 rfr=False None .data      @613                                                         */
+SECTION_DATA static void* lit_613[13 + 1 /* padding */] = {
+	/* 0    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	/* 1    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x34),
+	/* 2    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x48),
+	/* 3    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	/* 4    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	/* 5    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	/* 6    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	/* 7    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	/* 8    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	/* 9    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	/* 10   */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	/* 11   */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	/* 12   */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
 	/* padding */
 	NULL,
 };
 
-/* 80296D94-80296DF0 005C+00 rc=0 efc=0 .text      dvdErrorCheck__13JASAramStreamFPv                            */
+/* 80296D94-80296DF0 005C+00 rc=2 efc=0 rfr=False None .text      dvdErrorCheck__13JASAramStreamFPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -454,7 +444,7 @@ asm void JASAramStream::dvdErrorCheck(void* field_0) {
 #pragma pop
 
 
-/* 80296DF0-80296E2C 003C+00 rc=0 efc=0 .text      channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv */
+/* 80296DF0-80296E2C 003C+00 rc=1 efc=0 rfr=False None .text      channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -465,7 +455,7 @@ asm void JASAramStream::channelCallback(u32 field_0, JASChannel* field_1, JASDsp
 #pragma pop
 
 
-/* 80296E2C-802974AC 0680+00 rc=0 efc=0 .text      updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel */
+/* 80296E2C-802974AC 0680+00 rc=1 efc=0 rfr=False None .text      updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -476,7 +466,7 @@ asm void JASAramStream::updateChannel(u32 field_0, JASChannel* field_1, JASDsp::
 #pragma pop
 
 
-/* 802974AC-80297658 01AC+00 rc=0 efc=0 .text      channelProc__13JASAramStreamFv                               */
+/* 802974AC-80297658 01AC+00 rc=1 efc=0 rfr=False None .text      channelProc__13JASAramStreamFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -488,37 +478,37 @@ asm void JASAramStream::channelProc() {
 
 
 /* ############################################################################################## */
-/* 8039B168-8039B174 000C+00 rc=0 efc=0 .rodata    OSC_RELEASE_TABLE                                            */
-const u8 OSC_RELEASE_TABLE[12] = {
+/* 8039B168-8039B174 000C+00 rc=1 efc=0 rfr=False None .rodata    OSC_RELEASE_TABLE                                            */
+SECTION_RODATA static u8 const OSC_RELEASE_TABLE[12] = {
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039B174-8039B190 0018+04 rc=0 efc=0 .rodata    OSC_ENV                                                      */
-const void* OSC_ENV[6 + 1 /* padding */] = {
-	(void*)NULL,
-	(void*)0x3F800000,
-	(void*)NULL,
-	(void*)&OSC_RELEASE_TABLE,
-	(void*)0x3F800000,
-	(void*)NULL,
+/* 8039B174-8039B190 0018+04 rc=1 efc=0 rfr=False None .rodata    OSC_ENV                                                      */
+SECTION_RODATA static void* const OSC_ENV[6 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0x3F800000,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)&OSC_RELEASE_TABLE,
+	/* 4    */ (void*)0x3F800000,
+	/* 5    */ (void*)NULL,
 	/* padding */
 	NULL,
 };
 
-/* 80431B28-80431B34 000C+00 rc=0 efc=0 .bss       @792                                                         */
-u8 JASAramStream__lit_792[12];
+/* 80431B28-80431B34 000C+00 rc=1 efc=0 rfr=False None .bss       @792                                                         */
+static u8 JASAramStream__lit_792[12];
 
-/* 80431B34-80431B48 0010+04 rc=0 efc=0 .bss       memPool_$localstatic3$getMemPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>Fv */
+/* 80431B34-80431B48 0010+04 rc=5 efc=4 rfr=False None .bss       memPool_$localstatic3$getMemPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>Fv */
 u8 data_80431B34[16 + 4 /* padding */];
 
-/* 80455628-80455630 0004+04 rc=0 efc=0 .sdata2    one$776                                                      */
-u8 data_80455628[4 + 4 /* padding */] = {
+/* 80455628-80455630 0004+04 rc=1 efc=0 rfr=False None .sdata2    one$776                                                      */
+SECTION_SDATA2 static u8 data_80455628[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x01,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80297658-80297870 0218+00 rc=0 efc=0 .text      channelStart__13JASAramStreamFv                              */
+/* 80297658-80297870 0218+00 rc=1 efc=0 rfr=False None .text      channelStart__13JASAramStreamFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -529,7 +519,7 @@ asm void JASAramStream::channelStart() {
 #pragma pop
 
 
-/* 80297870-802978DC 006C+00 rc=0 efc=0 .text      channelStop__13JASAramStreamFUs                              */
+/* 80297870-802978DC 006C+00 rc=1 efc=0 rfr=False None .text      channelStop__13JASAramStreamFUs                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -540,7 +530,7 @@ asm void JASAramStream::channelStop(u16 field_0) {
 #pragma pop
 
 
-/* 802978DC-80297930 0054+00 rc=0 efc=0 .text      __dt__38JASMemPool_MultiThreaded<10JASChannel>Fv             */
+/* 802978DC-80297930 0054+00 rc=6 efc=5 rfr=False None .text      __dt__38JASMemPool_MultiThreaded<10JASChannel>Fv             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -550,8 +540,4 @@ asm JASMemPool_MultiThreaded__template2::~JASMemPool_MultiThreaded__template2() 
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80451260-80451268 0008+00 rc=0 efc=0 None       None                                                         */
-u8 struct_80451260[8];
 

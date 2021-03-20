@@ -10,12 +10,12 @@
 // 
 
 void fpcLd_Use(s16); // 2
-void fpcLd_IsLoaded(s16); // 2
+static void fpcLd_IsLoaded(s16); // 2
 void fpcLd_Free(s16); // 2
 void fpcLd_Load(s16); // 2
 
 extern "C" void fpcLd_Use__Fs(); // 1
-extern "C" void fpcLd_IsLoaded__Fs(); // 1
+extern "C" static void fpcLd_IsLoaded__Fs(); // 1
 extern "C" void fpcLd_Free__Fs(); // 1
 extern "C" void fpcLd_Load__Fs(); // 1
 
@@ -35,7 +35,7 @@ extern "C" void cDyl_LinkASync__Fs(); // 1
 // Declarations:
 // 
 
-/* 80021FB8-80022008 0050+00 rc=0 efc=0 .text      fpcLd_Use__Fs                                                */
+/* 80021FB8-80022008 0050+00 rc=1 efc=1 rfr=False None .text      fpcLd_Use__Fs                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -46,18 +46,18 @@ asm void fpcLd_Use(s16 field_0) {
 #pragma pop
 
 
-/* 80022008-8002202C 0024+00 rc=0 efc=0 .text      fpcLd_IsLoaded__Fs                                           */
+/* 80022008-8002202C 0024+00 rc=1 efc=0 rfr=False None .text      fpcLd_IsLoaded__Fs                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLd_IsLoaded(s16 field_0) {
+asm static void fpcLd_IsLoaded(s16 field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_load/fpcLd_IsLoaded__Fs.s"
 }
 #pragma pop
 
 
-/* 8002202C-80022050 0024+00 rc=0 efc=0 .text      fpcLd_Free__Fs                                               */
+/* 8002202C-80022050 0024+00 rc=2 efc=2 rfr=False None .text      fpcLd_Free__Fs                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +68,7 @@ asm void fpcLd_Free(s16 field_0) {
 #pragma pop
 
 
-/* 80022050-800220A0 0050+00 rc=0 efc=0 .text      fpcLd_Load__Fs                                               */
+/* 80022050-800220A0 0050+00 rc=2 efc=1 rfr=False None .text      fpcLd_Load__Fs                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

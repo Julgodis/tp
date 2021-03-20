@@ -25,7 +25,6 @@ extern "C" void fopCamM_GetParam__FP12camera_class(); // 1
 extern "C" void fopCamM_Create__FisPv(); // 1
 extern "C" void fopCamM_Management__Fv(); // 1
 extern "C" void fopCamM_Init__Fv(); // 1
-SECTION_BSS extern u8 l_fopCamM_id[16];
 
 // 
 // External References:
@@ -45,7 +44,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 8001E308-8001E310 0008+00 rc=0 efc=0 .text      fopCamM_GetParam__FP12camera_class                           */
+/* 8001E308-8001E310 0008+00 rc=12 efc=12 rfr=False None .text      fopCamM_GetParam__FP12camera_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -57,10 +56,10 @@ asm void fopCamM_GetParam(camera_class* field_0) {
 
 
 /* ############################################################################################## */
-/* 803F1DD8-803F1DE8 0010+00 rc=0 efc=0 .bss       l_fopCamM_id                                                 */
-u8 l_fopCamM_id[16];
+/* 803F1DD8-803F1DE8 0010+00 rc=1 efc=0 rfr=False None .bss       l_fopCamM_id                                                 */
+static u8 l_fopCamM_id[16];
 
-/* 8001E310-8001E374 0064+00 rc=0 efc=0 .text      fopCamM_Create__FisPv                                        */
+/* 8001E310-8001E374 0064+00 rc=1 efc=1 rfr=False None .text      fopCamM_Create__FisPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,13 +70,13 @@ asm void fopCamM_Create(int field_0, s16 field_1, void* field_2) {
 #pragma pop
 
 
-/* 8001E374-8001E378 0004+00 rc=0 efc=0 .text      fopCamM_Management__Fv                                       */
+/* 8001E374-8001E378 0004+00 rc=1 efc=1 rfr=False None .text      fopCamM_Management__Fv                                       */
 void fopCamM_Management() {
 	/* empty function */
 }
 
 
-/* 8001E378-8001E37C 0004+00 rc=0 efc=0 .text      fopCamM_Init__Fv                                             */
+/* 8001E378-8001E37C 0004+00 rc=1 efc=1 rfr=False None .text      fopCamM_Init__Fv                                             */
 void fopCamM_Init() {
 	/* empty function */
 }

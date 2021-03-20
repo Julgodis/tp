@@ -135,6 +135,9 @@ docs:
 rels: $(RELS)
 	echo Nice!
 
+c: $(LIBS) $(O_FILES)
+	echo Done
+
 # elf
 $(ELF): $(LIBS) $(O_FILES) $(LDSCRIPT)
 	@echo $(O_FILES) > build/o_files

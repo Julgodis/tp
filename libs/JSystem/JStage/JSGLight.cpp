@@ -78,8 +78,7 @@ extern "C" void JSGGetPosition__Q26JStage6TLightCFP3Vec(); // 1
 extern "C" void JSGSetPosition__Q26JStage6TLightFRC3Vec(); // 1
 extern "C" void JSGGetDirection__Q26JStage6TLightCFP3Vec(); // 1
 extern "C" void JSGSetDirection__Q26JStage6TLightFRC3Vec(); // 1
-SECTION_DATA extern void* const __vt__Q26JStage6TLight[27 + 1 /* padding */];
-SECTION_SDATA2 extern u32 JSGLight__lit_311[1 + 1 /* padding */];
+extern "C" extern void* __vt__Q26JStage6TLight[27 + 1 /* padding */];
 
 // 
 // External References:
@@ -106,40 +105,40 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C4778-803C47E8 006C+04 rc=0 efc=0 .data      __vt__Q26JStage6TLight                                       */
-void* const __vt__Q26JStage6TLight[27 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)JSGFGetType__Q26JStage6TLightCFv,
-	(void*)JSGGetName__Q26JStage7TObjectCFv,
-	(void*)JSGUpdate__Q26JStage7TObjectFv,
-	(void*)JSGGetFlag__Q26JStage7TObjectCFv,
-	(void*)JSGSetFlag__Q26JStage7TObjectFUl,
-	(void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
-	(void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
-	(void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
-	(void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
-	(void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
-	(void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
-	(void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
-	(void*)JSGGetLightType__Q26JStage6TLightCFv,
-	(void*)JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight,
-	(void*)JSGGetPosition__Q26JStage6TLightCFP3Vec,
-	(void*)JSGSetPosition__Q26JStage6TLightFRC3Vec,
-	(void*)JSGGetColor__Q26JStage6TLightCFv,
-	(void*)JSGSetColor__Q26JStage6TLightF8_GXColor,
-	(void*)JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn,
-	(void*)JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn,
-	(void*)JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn,
-	(void*)JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn,
-	(void*)JSGGetDirection__Q26JStage6TLightCFP3Vec,
-	(void*)JSGSetDirection__Q26JStage6TLightFRC3Vec,
+/* 803C4778-803C47E8 006C+04 rc=2 efc=1 rfr=False None .data      __vt__Q26JStage6TLight                                       */
+SECTION_DATA void* __vt__Q26JStage6TLight[27 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)JSGFGetType__Q26JStage6TLightCFv,
+	/* 4    */ (void*)JSGGetName__Q26JStage7TObjectCFv,
+	/* 5    */ (void*)JSGUpdate__Q26JStage7TObjectFv,
+	/* 6    */ (void*)JSGGetFlag__Q26JStage7TObjectCFv,
+	/* 7    */ (void*)JSGSetFlag__Q26JStage7TObjectFUl,
+	/* 8    */ (void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
+	/* 9    */ (void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
+	/* 10   */ (void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
+	/* 11   */ (void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
+	/* 12   */ (void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
+	/* 13   */ (void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
+	/* 14   */ (void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
+	/* 15   */ (void*)JSGGetLightType__Q26JStage6TLightCFv,
+	/* 16   */ (void*)JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight,
+	/* 17   */ (void*)JSGGetPosition__Q26JStage6TLightCFP3Vec,
+	/* 18   */ (void*)JSGSetPosition__Q26JStage6TLightFRC3Vec,
+	/* 19   */ (void*)JSGGetColor__Q26JStage6TLightCFv,
+	/* 20   */ (void*)JSGSetColor__Q26JStage6TLightF8_GXColor,
+	/* 21   */ (void*)JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn,
+	/* 22   */ (void*)JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn,
+	/* 23   */ (void*)JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn,
+	/* 24   */ (void*)JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn,
+	/* 25   */ (void*)JSGGetDirection__Q26JStage6TLightCFP3Vec,
+	/* 26   */ (void*)JSGSetDirection__Q26JStage6TLightFRC3Vec,
 	/* padding */
 	NULL,
 };
 
-/* 80280D28-80280D88 0060+00 rc=0 efc=0 .text      __dt__Q26JStage6TLightFv                                     */
+/* 80280D28-80280D88 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q26JStage6TLightFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -150,33 +149,33 @@ asm JStage::TLight::~TLight() {
 #pragma pop
 
 
-/* 80280D88-80280D90 0008+00 rc=0 efc=0 .text      JSGFGetType__Q26JStage6TLightCFv                             */
+/* 80280D88-80280D90 0008+00 rc=2 efc=1 rfr=False None .text      JSGFGetType__Q26JStage6TLightCFv                             */
 s32 JStage::TLight::JSGFGetType() const {
 	return 5;
 }
 
 
-/* 80280D90-80280D98 0008+00 rc=0 efc=0 .text      JSGGetLightType__Q26JStage6TLightCFv                         */
+/* 80280D90-80280D98 0008+00 rc=2 efc=1 rfr=False None .text      JSGGetLightType__Q26JStage6TLightCFv                         */
 bool JStage::TLight::JSGGetLightType() const {
 	return true;
 }
 
 
-/* 80280D98-80280D9C 0004+00 rc=0 efc=0 .text      JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight          */
+/* 80280D98-80280D9C 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight          */
 void JStage::TLight::JSGSetLightType(JStage::TELight field_0) {
 	/* empty function */
 }
 
 
 /* ############################################################################################## */
-/* 804553E8-804553F0 0004+04 rc=0 efc=0 .sdata2    @311                                                         */
-u32 JSGLight__lit_311[1 + 1 /* padding */] = {
+/* 804553E8-804553F0 0004+04 rc=1 efc=0 rfr=False None .sdata2    @311                                                         */
+SECTION_SDATA2 static u32 JSGLight__lit_311[1 + 1 /* padding */] = {
 	0xFFFFFFFF,
 	/* padding */
 	0x00000000,
 };
 
-/* 80280D9C-80280DB0 0014+00 rc=0 efc=0 .text      JSGGetColor__Q26JStage6TLightCFv                             */
+/* 80280D9C-80280DB0 0014+00 rc=2 efc=1 rfr=False None .text      JSGGetColor__Q26JStage6TLightCFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,55 +186,55 @@ asm void JStage::TLight::JSGGetColor() const {
 #pragma pop
 
 
-/* 80280DB0-80280DB4 0004+00 rc=0 efc=0 .text      JSGSetColor__Q26JStage6TLightF8_GXColor                      */
+/* 80280DB0-80280DB4 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetColor__Q26JStage6TLightF8_GXColor                      */
 void JStage::TLight::JSGSetColor(_GXColor field_0) {
 	/* empty function */
 }
 
 
-/* 80280DB4-80280DB8 0004+00 rc=0 efc=0 .text      JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn */
+/* 80280DB4-80280DB8 0004+00 rc=2 efc=1 rfr=False None .text      JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn */
 void JStage::TLight::JSGGetDistanceAttenuation(f32* field_0, f32* field_1, _GXDistAttnFn* field_2) const {
 	/* empty function */
 }
 
 
-/* 80280DB8-80280DBC 0004+00 rc=0 efc=0 .text      JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn */
+/* 80280DB8-80280DBC 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn */
 void JStage::TLight::JSGSetDistanceAttenuation(f32 field_0, f32 field_1, _GXDistAttnFn field_2) {
 	/* empty function */
 }
 
 
-/* 80280DBC-80280DC0 0004+00 rc=0 efc=0 .text      JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn      */
+/* 80280DBC-80280DC0 0004+00 rc=2 efc=1 rfr=False None .text      JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn      */
 void JStage::TLight::JSGGetAngleAttenuation(f32* field_0, _GXSpotFn* field_1) const {
 	/* empty function */
 }
 
 
-/* 80280DC0-80280DC4 0004+00 rc=0 efc=0 .text      JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn         */
+/* 80280DC0-80280DC4 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn         */
 void JStage::TLight::JSGSetAngleAttenuation(f32 field_0, _GXSpotFn field_1) {
 	/* empty function */
 }
 
 
-/* 80280DC4-80280DC8 0004+00 rc=0 efc=0 .text      JSGGetPosition__Q26JStage6TLightCFP3Vec                      */
+/* 80280DC4-80280DC8 0004+00 rc=2 efc=1 rfr=False None .text      JSGGetPosition__Q26JStage6TLightCFP3Vec                      */
 void JStage::TLight::JSGGetPosition(Vec* field_0) const {
 	/* empty function */
 }
 
 
-/* 80280DC8-80280DCC 0004+00 rc=0 efc=0 .text      JSGSetPosition__Q26JStage6TLightFRC3Vec                      */
+/* 80280DC8-80280DCC 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetPosition__Q26JStage6TLightFRC3Vec                      */
 void JStage::TLight::JSGSetPosition(Vec const& field_0) {
 	/* empty function */
 }
 
 
-/* 80280DCC-80280DD0 0004+00 rc=0 efc=0 .text      JSGGetDirection__Q26JStage6TLightCFP3Vec                     */
+/* 80280DCC-80280DD0 0004+00 rc=2 efc=1 rfr=False None .text      JSGGetDirection__Q26JStage6TLightCFP3Vec                     */
 void JStage::TLight::JSGGetDirection(Vec* field_0) const {
 	/* empty function */
 }
 
 
-/* 80280DD0-80280DD4 0004+00 rc=0 efc=0 .text      JSGSetDirection__Q26JStage6TLightFRC3Vec                     */
+/* 80280DD0-80280DD4 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetDirection__Q26JStage6TLightFRC3Vec                     */
 void JStage::TLight::JSGSetDirection(Vec const& field_0) {
 	/* empty function */
 }

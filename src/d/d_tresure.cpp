@@ -75,16 +75,7 @@ extern "C" void getNextData__7dTres_cFPCQ27dTres_c15typeGroupData_c(); // 1
 extern "C" void setPosition__7dTres_cFiUcPC3Veci(); // 1
 extern "C" void getTypeGroupNoToType__7dTres_cFUc(); // 1
 extern "C" void getTypeToTypeGroupNo__7dTres_cFUc(); // 1
-SECTION_RODATA extern const u8 typeToTypeGroup__7dTres_c[34 + 6 /* padding */];
-SECTION_BSS extern u8 mTypeGroupListAll__7dTres_c[204 + 4 /* padding */];
-SECTION_SBSS extern u8 mTypeGroupData__7dTres_c[4];
-SECTION_SBSS extern u8 mNum__7dTres_c[2 + 2 /* padding */];
-SECTION_SDATA2 extern f32 d_d_tresure__lit_3839;
-SECTION_SDATA2 extern u8 d_d_tresure__lit_3840[4];
-SECTION_SDATA2 extern f64 d_d_tresure__lit_3841;
-SECTION_SDATA2 extern f64 d_d_tresure__lit_3842;
-SECTION_SDATA2 extern u8 d_d_tresure__lit_3843[8];
-SECTION_SDATA2 extern f64 d_d_tresure__lit_3845;
+extern "C" extern u8 mTypeGroupListAll__7dTres_c[204 + 4 /* padding */];
 
 // 
 // External References:
@@ -121,20 +112,20 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
-SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SDATA extern u8 data_80450680[8];
-SECTION_SDATA extern u32 __float_nan;
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 data_80450680[8];
+extern "C" extern u32 __float_nan;
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80450F98-80450F9C 0004+00 rc=0 efc=0 .sbss      mTypeGroupData__7dTres_c                                     */
-u8 mTypeGroupData__7dTres_c[4];
+/* 80450F98-80450F9C 0004+00 rc=2 efc=0 rfr=False None .sbss      mTypeGroupData__7dTres_c                                     */
+static u8 mTypeGroupData__7dTres_c[4];
 
-/* 8009BBD8-8009BC18 0040+00 rc=0 efc=0 .text      createWork__7dTres_cFv                                       */
+/* 8009BBD8-8009BC18 0040+00 rc=1 efc=1 rfr=False None .text      createWork__7dTres_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +136,7 @@ asm void dTres_c::createWork() {
 #pragma pop
 
 
-/* 8009BC18-8009BC60 0048+00 rc=0 efc=0 .text      create__7dTres_cFv                                           */
+/* 8009BC18-8009BC60 0048+00 rc=1 efc=1 rfr=False None .text      create__7dTres_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +147,7 @@ asm void dTres_c::create() {
 #pragma pop
 
 
-/* 8009BC60-8009BC6C 000C+00 rc=0 efc=0 .text      remove__7dTres_cFv                                           */
+/* 8009BC60-8009BC6C 000C+00 rc=1 efc=1 rfr=False None .text      remove__7dTres_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,13 +159,13 @@ asm void dTres_c::remove() {
 
 
 /* ############################################################################################## */
-/* 80425438-80425508 00CC+04 rc=0 efc=0 .bss       mTypeGroupListAll__7dTres_c                                  */
+/* 80425438-80425508 00CC+04 rc=9 efc=3 rfr=False None .bss       mTypeGroupListAll__7dTres_c                                  */
 u8 mTypeGroupListAll__7dTres_c[204 + 4 /* padding */];
 
-/* 80450F9C-80450FA0 0002+02 rc=0 efc=0 .sbss      mNum__7dTres_c                                               */
-u8 mNum__7dTres_c[2 + 2 /* padding */];
+/* 80450F9C-80450FA0 0002+02 rc=2 efc=0 rfr=False None .sbss      mNum__7dTres_c                                               */
+static u8 mNum__7dTres_c[2 + 2 /* padding */];
 
-/* 8009BC6C-8009BCB4 0048+00 rc=0 efc=0 .text      reset__7dTres_cFv                                            */
+/* 8009BC6C-8009BCB4 0048+00 rc=2 efc=0 rfr=False None .text      reset__7dTres_cFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +176,7 @@ asm void dTres_c::reset() {
 #pragma pop
 
 
-/* 8009BCB4-8009BE28 0174+00 rc=0 efc=0 .text      addData__7dTres_cFPQ27dTres_c10list_classSc                  */
+/* 8009BCB4-8009BE28 0174+00 rc=1 efc=1 rfr=False None .text      addData__7dTres_cFPQ27dTres_c10list_classSc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -197,29 +188,29 @@ asm void dTres_c::addData(dTres_c::list_class* field_0, s8 field_1) {
 
 
 /* ############################################################################################## */
-/* 80452BE8-80452BEC 0004+00 rc=0 efc=0 .sdata2    @3839                                                        */
-f32 d_d_tresure__lit_3839 = 182.04444885253906f;
+/* 80452BE8-80452BEC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3839                                                        */
+SECTION_SDATA2 static f32 d_d_tresure__lit_3839 = 182.04444885253906f;
 
-/* 80452BEC-80452BF0 0004+00 rc=0 efc=0 .sdata2    @3840                                                        */
-u8 d_d_tresure__lit_3840[4] = {
+/* 80452BEC-80452BF0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3840                                                        */
+SECTION_SDATA2 static u8 d_d_tresure__lit_3840[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80452BF0-80452BF8 0008+00 rc=0 efc=0 .sdata2    @3841                                                        */
-f64 d_d_tresure__lit_3841 = 0.5;
+/* 80452BF0-80452BF8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3841                                                        */
+SECTION_SDATA2 static f64 d_d_tresure__lit_3841 = 0.5;
 
-/* 80452BF8-80452C00 0008+00 rc=0 efc=0 .sdata2    @3842                                                        */
-f64 d_d_tresure__lit_3842 = 3.0;
+/* 80452BF8-80452C00 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3842                                                        */
+SECTION_SDATA2 static f64 d_d_tresure__lit_3842 = 3.0;
 
-/* 80452C00-80452C08 0008+00 rc=0 efc=0 .sdata2    @3843                                                        */
-u8 d_d_tresure__lit_3843[8] = {
+/* 80452C00-80452C08 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3843                                                        */
+SECTION_SDATA2 static u8 d_d_tresure__lit_3843[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80452C08-80452C10 0008+00 rc=0 efc=0 .sdata2    @3845                                                        */
-f64 d_d_tresure__lit_3845 = 4503601774854144.0 /* cast s32 to float */;
+/* 80452C08-80452C10 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3845                                                        */
+SECTION_SDATA2 static f64 d_d_tresure__lit_3845 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8009BE28-8009C168 0340+00 rc=0 efc=0 .text      checkTreasureBox__7dTres_cFPQ27dTres_c6data_s                */
+/* 8009BE28-8009C168 0340+00 rc=1 efc=0 rfr=False None .text      checkTreasureBox__7dTres_cFPQ27dTres_c6data_s                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -230,7 +221,7 @@ asm void dTres_c::checkTreasureBox(dTres_c::data_s* field_0) {
 #pragma pop
 
 
-/* 8009C168-8009C1F0 0088+00 rc=0 efc=0 .text      onStatus__7dTres_cFUcii                                      */
+/* 8009C168-8009C1F0 0088+00 rc=0 efc=0 rfr=False None .text      onStatus__7dTres_cFUcii                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,7 +232,7 @@ asm void dTres_c::onStatus(u8 field_0, int field_1, int field_2) {
 #pragma pop
 
 
-/* 8009C1F0-8009C27C 008C+00 rc=0 efc=0 .text      offStatus__7dTres_cFUcii                                     */
+/* 8009C1F0-8009C27C 008C+00 rc=0 efc=0 rfr=False None .text      offStatus__7dTres_cFUcii                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -252,7 +243,7 @@ asm void dTres_c::offStatus(u8 field_0, int field_1, int field_2) {
 #pragma pop
 
 
-/* 8009C27C-8009C360 00E4+00 rc=0 efc=0 .text      getBossIconFloorNo__7dTres_cFPi                              */
+/* 8009C27C-8009C360 00E4+00 rc=1 efc=1 rfr=False None .text      getBossIconFloorNo__7dTres_cFPi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -263,7 +254,7 @@ asm void dTres_c::getBossIconFloorNo(int* field_0) {
 #pragma pop
 
 
-/* 8009C360-8009C39C 003C+00 rc=0 efc=0 .text      getFirstData__7dTres_cFUc                                    */
+/* 8009C360-8009C39C 003C+00 rc=8 efc=4 rfr=False None .text      getFirstData__7dTres_cFUc                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -274,7 +265,7 @@ asm void dTres_c::getFirstData(u8 field_0) {
 #pragma pop
 
 
-/* 8009C39C-8009C3B4 0018+00 rc=0 efc=0 .text      getNextData__7dTres_cFPQ27dTres_c15typeGroupData_c           */
+/* 8009C39C-8009C3B4 0018+00 rc=5 efc=3 rfr=False None .text      getNextData__7dTres_cFPQ27dTres_c15typeGroupData_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -285,7 +276,7 @@ asm void dTres_c::getNextData(dTres_c::typeGroupData_c* field_0) {
 #pragma pop
 
 
-/* 8009C3B4-8009C3CC 0018+00 rc=0 efc=0 .text      getNextData__7dTres_cFPCQ27dTres_c15typeGroupData_c          */
+/* 8009C3B4-8009C3CC 0018+00 rc=1 efc=1 rfr=False None .text      getNextData__7dTres_cFPCQ27dTres_c15typeGroupData_c          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -296,7 +287,7 @@ asm void dTres_c::getNextData(dTres_c::typeGroupData_c const* field_0) {
 #pragma pop
 
 
-/* 8009C3CC-8009C49C 00D0+00 rc=0 efc=0 .text      setPosition__7dTres_cFiUcPC3Veci                             */
+/* 8009C3CC-8009C49C 00D0+00 rc=0 efc=0 rfr=False None .text      setPosition__7dTres_cFiUcPC3Veci                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -308,8 +299,8 @@ asm void dTres_c::setPosition(int field_0, u8 field_1, Vec const* field_2, int f
 
 
 /* ############################################################################################## */
-/* 8037B0D8-8037B100 0022+06 rc=0 efc=0 .rodata    typeToTypeGroup__7dTres_c                                    */
-const u8 typeToTypeGroup__7dTres_c[34 + 6 /* padding */] = {
+/* 8037B0D8-8037B100 0022+06 rc=2 efc=0 rfr=False None .rodata    typeToTypeGroup__7dTres_c                                    */
+SECTION_RODATA static u8 const typeToTypeGroup__7dTres_c[34 + 6 /* padding */] = {
 	0xFF, 0x00, 0x00, 0x01, 0x01, 0x02, 0x02, 0x03, 0x03, 0x04, 0x04, 0x05, 0x05, 0x06, 0x06, 0x07,
 	0x07, 0x08, 0x80, 0x09, 0x81, 0x0A, 0x82, 0x0B, 0x83, 0x0C, 0x84, 0x0D, 0x85, 0x0E, 0x87, 0x0F,
 	0x88, 0x10,
@@ -317,7 +308,7 @@ const u8 typeToTypeGroup__7dTres_c[34 + 6 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8009C49C-8009C4B0 0014+00 rc=0 efc=0 .text      getTypeGroupNoToType__7dTres_cFUc                            */
+/* 8009C49C-8009C4B0 0014+00 rc=1 efc=1 rfr=False None .text      getTypeGroupNoToType__7dTres_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -328,7 +319,7 @@ asm void dTres_c::getTypeGroupNoToType(u8 field_0) {
 #pragma pop
 
 
-/* 8009C4B0-8009C4FC 004C+00 rc=0 efc=0 .text      getTypeToTypeGroupNo__7dTres_cFUc                            */
+/* 8009C4B0-8009C4FC 004C+00 rc=4 efc=3 rfr=False None .text      getTypeToTypeGroupNo__7dTres_cFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

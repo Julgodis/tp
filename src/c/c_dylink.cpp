@@ -56,19 +56,19 @@ struct JKRFileCache {
 // Forward References:
 // 
 
-void cCc_Init(); // 2
+static void cCc_Init(); // 2
 void cDyl_IsLinked(s16); // 2
 void cDyl_Unlink(s16); // 2
 void cDyl_LinkASync(s16); // 2
-void cDyl_InitCallback(void*); // 2
+static void cDyl_InitCallback(void*); // 2
 void cDyl_InitAsync(); // 2
 void cDyl_InitAsyncIsDone(); // 2
 
-extern "C" void cCc_Init__Fv(); // 1
+extern "C" static void cCc_Init__Fv(); // 1
 extern "C" void cDyl_IsLinked__Fs(); // 1
 extern "C" void cDyl_Unlink__Fs(); // 1
 extern "C" void cDyl_LinkASync__Fs(); // 1
-extern "C" void cDyl_InitCallback__FPv(); // 1
+extern "C" static void cDyl_InitCallback__FPv(); // 1
 extern "C" void cDyl_InitAsync__Fv(); // 1
 extern "C" void cDyl_InitAsyncIsDone__Fv(); // 1
 extern "C" s32 phase_01__7cDylPhsFPv(); // 1
@@ -78,13 +78,7 @@ extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs(); // 1
 extern "C" void Unlink__7cDylPhsFP30request_of_phase_process_classs(); // 1
 extern "C" bool getModuleName__24DynamicModuleControlBaseCFv(); // 1
 extern "C" void __dt__20DynamicModuleControlFv(); // 1
-SECTION_RODATA extern const void* DynamicNameTable[1514];
-SECTION_RODATA extern const char* const c_c_dylink__stringBase0;
-SECTION_DATA extern void* data_803A3590[3 + 1 /* padding */];
-SECTION_BSS extern u8 DMC[3168];
-SECTION_SBSS extern u8 data_80450CA8[4];
-SECTION_SBSS extern u8 cDyl_Initialized[4];
-SECTION_SBSS extern u8 cDyl_DVD[4 + 4 /* padding */];
+extern "C" extern char const* const c_c_dylink__stringBase0;
 
 // 
 // External References:
@@ -127,1549 +121,2320 @@ extern "C" void OSSetStringTable(); // 1
 extern "C" void _savegpr_23(); // 1
 extern "C" void _restgpr_23(); // 1
 extern "C" void strcmp(); // 1
-SECTION_DATA extern void* const __vt__20DynamicModuleControl[13];
+extern "C" extern void* __vt__20DynamicModuleControl[13];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80374640-80375DE8 17A8+00 rc=0 efc=0 .rodata    DynamicNameTable                                             */
-const void* DynamicNameTable[1514] = {
-	(void*)0x00140000,
-	(void*)&c_c_dylink__stringBase0,
-	(void*)0x00160000,
-	(void*)0x80375DF3,
-	(void*)0x00170000,
-	(void*)0x80375E02,
-	(void*)0x00180000,
-	(void*)0x80375E12,
-	(void*)0x00190000,
-	(void*)0x80375E22,
-	(void*)0x001B0000,
-	(void*)0x80375E31,
-	(void*)0x001C0000,
-	(void*)0x80375E43,
-	(void*)0x001D0000,
-	(void*)0x80375E4E,
-	(void*)0x001E0000,
-	(void*)0x80375E5E,
-	(void*)0x001F0000,
-	(void*)0x80375E6D,
-	(void*)0x00200000,
-	(void*)0x80375E7F,
-	(void*)0x00210000,
-	(void*)0x80375E8F,
-	(void*)0x00220000,
-	(void*)0x80375E9C,
-	(void*)0x00230000,
-	(void*)0x80375EA8,
-	(void*)0x00240000,
-	(void*)0x80375EB5,
-	(void*)0x00250000,
-	(void*)0x80375EC4,
-	(void*)0x00260000,
-	(void*)0x80375ED5,
-	(void*)0x00270000,
-	(void*)0x80375EE3,
-	(void*)0x00280000,
-	(void*)0x80375EF0,
-	(void*)0x00290000,
-	(void*)0x80375EFD,
-	(void*)0x002A0000,
-	(void*)0x80375F0A,
-	(void*)0x002B0000,
-	(void*)0x80375F15,
-	(void*)0x002C0000,
-	(void*)0x80375F22,
-	(void*)0x002D0000,
-	(void*)0x80375F2E,
-	(void*)0x002E0000,
-	(void*)0x80375F39,
-	(void*)0x002F0000,
-	(void*)0x80375F44,
-	(void*)0x00300000,
-	(void*)0x80375F51,
-	(void*)0x00310000,
-	(void*)0x80375F5C,
-	(void*)0x00320000,
-	(void*)0x80375F6B,
-	(void*)0x00330000,
-	(void*)0x80375F79,
-	(void*)0x00340000,
-	(void*)0x80375F88,
-	(void*)0x00350000,
-	(void*)0x80375F96,
-	(void*)0x00360000,
-	(void*)0x80375FAA,
-	(void*)0x00370000,
-	(void*)0x80375FBC,
-	(void*)0x00380000,
-	(void*)0x80375FCC,
-	(void*)0x00390000,
-	(void*)0x80375FDF,
-	(void*)0x003A0000,
-	(void*)0x80375FF3,
-	(void*)0x003B0000,
-	(void*)0x80376007,
-	(void*)0x003C0000,
-	(void*)0x80376017,
-	(void*)0x003D0000,
-	(void*)0x80376028,
-	(void*)0x003E0000,
-	(void*)0x80376038,
-	(void*)0x003F0000,
-	(void*)0x80376047,
-	(void*)0x00400000,
-	(void*)0x80376057,
-	(void*)0x00410000,
-	(void*)0x80376066,
-	(void*)0x00420000,
-	(void*)0x80376077,
-	(void*)0x00430000,
-	(void*)0x80376088,
-	(void*)0x00440000,
-	(void*)0x80376097,
-	(void*)0x00450000,
-	(void*)0x803760AB,
-	(void*)0x00460000,
-	(void*)0x803760BA,
-	(void*)0x00470000,
-	(void*)0x803760C9,
-	(void*)0x00480000,
-	(void*)0x803760DC,
-	(void*)0x00490000,
-	(void*)0x803760EE,
-	(void*)0x004A0000,
-	(void*)0x80376100,
-	(void*)0x004B0000,
-	(void*)0x80376111,
-	(void*)0x004C0000,
-	(void*)0x80376121,
-	(void*)0x004D0000,
-	(void*)0x80376136,
-	(void*)0x004E0000,
-	(void*)0x80376149,
-	(void*)0x004F0000,
-	(void*)0x8037615A,
-	(void*)0x00500000,
-	(void*)0x80376170,
-	(void*)0x00510000,
-	(void*)0x8037617F,
-	(void*)0x00520000,
-	(void*)0x8037618E,
-	(void*)0x00530000,
-	(void*)0x8037619E,
-	(void*)0x00540000,
-	(void*)0x803761AF,
-	(void*)0x00550000,
-	(void*)0x803761C0,
-	(void*)0x00560000,
-	(void*)0x803761D1,
-	(void*)0x00570000,
-	(void*)0x803761DF,
-	(void*)0x00580000,
-	(void*)0x803761EC,
-	(void*)0x00590000,
-	(void*)0x803761FB,
-	(void*)0x005A0000,
-	(void*)0x80376208,
-	(void*)0x005B0000,
-	(void*)0x80376217,
-	(void*)0x005C0000,
-	(void*)0x80376223,
-	(void*)0x005D0000,
-	(void*)0x80376233,
-	(void*)0x005E0000,
-	(void*)0x80376243,
-	(void*)0x005F0000,
-	(void*)0x80376257,
-	(void*)0x00600000,
-	(void*)0x80376269,
-	(void*)0x00610000,
-	(void*)0x80376274,
-	(void*)0x00620000,
-	(void*)0x80376282,
-	(void*)0x00630000,
-	(void*)0x80376291,
-	(void*)0x00640000,
-	(void*)0x803762A0,
-	(void*)0x00650000,
-	(void*)0x803762AE,
-	(void*)0x00660000,
-	(void*)0x803762BC,
-	(void*)0x00670000,
-	(void*)0x803762CA,
-	(void*)0x00680000,
-	(void*)0x803762D8,
-	(void*)0x00690000,
-	(void*)0x803762ED,
-	(void*)0x006A0000,
-	(void*)0x803762FE,
-	(void*)0x006B0000,
-	(void*)0x8037630D,
-	(void*)0x006C0000,
-	(void*)0x8037631C,
-	(void*)0x006D0000,
-	(void*)0x8037632B,
-	(void*)0x006E0000,
-	(void*)0x8037633C,
-	(void*)0x006F0000,
-	(void*)0x8037634B,
-	(void*)0x00700000,
-	(void*)0x8037635B,
-	(void*)0x00710000,
-	(void*)0x8037636C,
-	(void*)0x00720000,
-	(void*)0x8037637D,
-	(void*)0x00730000,
-	(void*)0x8037638E,
-	(void*)0x00740000,
-	(void*)0x8037639F,
-	(void*)0x00750000,
-	(void*)0x803763B2,
-	(void*)0x00760000,
-	(void*)0x803763C4,
-	(void*)0x00770000,
-	(void*)0x803763D1,
-	(void*)0x00780000,
-	(void*)0x803763DD,
-	(void*)0x00790000,
-	(void*)0x803763EC,
-	(void*)0x007A0000,
-	(void*)0x803763FD,
-	(void*)0x007B0000,
-	(void*)0x8037640A,
-	(void*)0x007C0000,
-	(void*)0x80376418,
-	(void*)0x007D0000,
-	(void*)0x80376427,
-	(void*)0x007E0000,
-	(void*)0x80376437,
-	(void*)0x007F0000,
-	(void*)0x80376446,
-	(void*)0x00800000,
-	(void*)0x80376454,
-	(void*)0x00810000,
-	(void*)0x80376462,
-	(void*)0x00820000,
-	(void*)0x80376470,
-	(void*)0x00830000,
-	(void*)0x8037647E,
-	(void*)0x00840000,
-	(void*)0x8037648C,
-	(void*)0x00850000,
-	(void*)0x8037649A,
-	(void*)0x00860000,
-	(void*)0x803764AE,
-	(void*)0x00870000,
-	(void*)0x803764C1,
-	(void*)0x00880000,
-	(void*)0x803764D5,
-	(void*)0x00890000,
-	(void*)0x803764E6,
-	(void*)0x008A0000,
-	(void*)0x803764F7,
-	(void*)0x008B0000,
-	(void*)0x80376508,
-	(void*)0x008C0000,
-	(void*)0x80376518,
-	(void*)0x008D0000,
-	(void*)0x8037652A,
-	(void*)0x008E0000,
-	(void*)0x8037653B,
-	(void*)0x008F0000,
-	(void*)0x8037654D,
-	(void*)0x00900000,
-	(void*)0x8037655D,
-	(void*)0x00910000,
-	(void*)0x8037656D,
-	(void*)0x00920000,
-	(void*)0x8037657E,
-	(void*)0x00930000,
-	(void*)0x80376591,
-	(void*)0x00940000,
-	(void*)0x803765A5,
-	(void*)0x00950000,
-	(void*)0x803765B9,
-	(void*)0x00960000,
-	(void*)0x803765CB,
-	(void*)0x00970000,
-	(void*)0x803765DD,
-	(void*)0x00980000,
-	(void*)0x803765EF,
-	(void*)0x00990000,
-	(void*)0x80376605,
-	(void*)0x009A0000,
-	(void*)0x8037661B,
-	(void*)0x009B0000,
-	(void*)0x8037662D,
-	(void*)0x009C0000,
-	(void*)0x80376642,
-	(void*)0x009D0000,
-	(void*)0x80376652,
-	(void*)0x009E0000,
-	(void*)0x80376664,
-	(void*)0x009F0000,
-	(void*)0x80376679,
-	(void*)0x00A00000,
-	(void*)0x8037668D,
-	(void*)0x00A10000,
-	(void*)0x803766A3,
-	(void*)0x00A20000,
-	(void*)0x803766B5,
-	(void*)0x00A30000,
-	(void*)0x803766C9,
-	(void*)0x00A40000,
-	(void*)0x803766DF,
-	(void*)0x00A50000,
-	(void*)0x803766EF,
-	(void*)0x00A60000,
-	(void*)0x80376702,
-	(void*)0x00A70000,
-	(void*)0x80376717,
-	(void*)0x00A80000,
-	(void*)0x80376729,
-	(void*)0x00A90000,
-	(void*)0x8037673A,
-	(void*)0x00AA0000,
-	(void*)0x8037674D,
-	(void*)0x00AB0000,
-	(void*)0x8037675D,
-	(void*)0x00AC0000,
-	(void*)0x8037676D,
-	(void*)0x00AD0000,
-	(void*)0x8037677D,
-	(void*)0x00AE0000,
-	(void*)0x8037678F,
-	(void*)0x00AF0000,
-	(void*)0x803767A4,
-	(void*)0x00B00000,
-	(void*)0x803767B8,
-	(void*)0x00B10000,
-	(void*)0x803767CD,
-	(void*)0x00B20000,
-	(void*)0x803767E2,
-	(void*)0x00B30000,
-	(void*)0x803767F7,
-	(void*)0x00B40000,
-	(void*)0x80376809,
-	(void*)0x00B50000,
-	(void*)0x80376818,
-	(void*)0x00B60000,
-	(void*)0x8037682A,
-	(void*)0x00B70000,
-	(void*)0x8037683B,
-	(void*)0x00B80000,
-	(void*)0x8037684D,
-	(void*)0x00B90000,
-	(void*)0x8037685B,
-	(void*)0x00BA0000,
-	(void*)0x8037686B,
-	(void*)0x00BB0000,
-	(void*)0x80376879,
-	(void*)0x00BC0000,
-	(void*)0x80376883,
-	(void*)0x00BD0000,
-	(void*)0x80376897,
-	(void*)0x00BE0000,
-	(void*)0x803768A7,
-	(void*)0x00BF0000,
-	(void*)0x803768B5,
-	(void*)0x00C00000,
-	(void*)0x803768C3,
-	(void*)0x00C10000,
-	(void*)0x803768D6,
-	(void*)0x00C20000,
-	(void*)0x803768E8,
-	(void*)0x00C30000,
-	(void*)0x803768F9,
-	(void*)0x00C40000,
-	(void*)0x80376909,
-	(void*)0x00C50000,
-	(void*)0x80376918,
-	(void*)0x00C60000,
-	(void*)0x80376927,
-	(void*)0x00C70000,
-	(void*)0x80376939,
-	(void*)0x00C80000,
-	(void*)0x8037694A,
-	(void*)0x00C90000,
-	(void*)0x8037695B,
-	(void*)0x00CA0000,
-	(void*)0x8037696E,
-	(void*)0x00CB0000,
-	(void*)0x80376981,
-	(void*)0x00CC0000,
-	(void*)0x8037698F,
-	(void*)0x00CD0000,
-	(void*)0x803769A4,
-	(void*)0x00CE0000,
-	(void*)0x803769B5,
-	(void*)0x00CF0000,
-	(void*)0x803769C4,
-	(void*)0x00D00000,
-	(void*)0x803769D3,
-	(void*)0x00D10000,
-	(void*)0x803769E5,
-	(void*)0x00D20000,
-	(void*)0x803769F5,
-	(void*)0x00D30000,
-	(void*)0x803769FE,
-	(void*)0x00D40000,
-	(void*)0x80376A14,
-	(void*)0x00D50000,
-	(void*)0x80376A26,
-	(void*)0x00D60000,
-	(void*)0x80376A37,
-	(void*)0x00D70000,
-	(void*)0x80376A49,
-	(void*)0x00D80000,
-	(void*)0x80376A5B,
-	(void*)0x00D90000,
-	(void*)0x80376A6D,
-	(void*)0x00DA0000,
-	(void*)0x80376A7E,
-	(void*)0x00DB0000,
-	(void*)0x80376A90,
-	(void*)0x00DC0000,
-	(void*)0x80376AA2,
-	(void*)0x00DD0000,
-	(void*)0x80376AB2,
-	(void*)0x00DE0000,
-	(void*)0x80376AC0,
-	(void*)0x00DF0000,
-	(void*)0x80376ACE,
-	(void*)0x00E00000,
-	(void*)0x80376ADF,
-	(void*)0x00E10000,
-	(void*)0x80376AF0,
-	(void*)0x00E20000,
-	(void*)0x80376B00,
-	(void*)0x00E30000,
-	(void*)0x80376B10,
-	(void*)0x00E40000,
-	(void*)0x80376B20,
-	(void*)0x00E50000,
-	(void*)0x80376B29,
-	(void*)0x00E60000,
-	(void*)0x80376B35,
-	(void*)0x00E70000,
-	(void*)0x80376B48,
-	(void*)0x00E80000,
-	(void*)0x80376B59,
-	(void*)0x00E90000,
-	(void*)0x80376B6A,
-	(void*)0x00EA0000,
-	(void*)0x80376B78,
-	(void*)0x00EB0000,
-	(void*)0x80376B86,
-	(void*)0x00EC0000,
-	(void*)0x80376B94,
-	(void*)0x00ED0000,
-	(void*)0x80376BA2,
-	(void*)0x00EE0000,
-	(void*)0x80376BAC,
-	(void*)0x00EF0000,
-	(void*)0x80376BB6,
-	(void*)0x00F00000,
-	(void*)0x80376BBF,
-	(void*)0x00F10000,
-	(void*)0x80376BCB,
-	(void*)0x00F20000,
-	(void*)0x80376BD6,
-	(void*)0x00F30000,
-	(void*)0x80376BE2,
-	(void*)0x00F40000,
-	(void*)0x80376BEB,
-	(void*)0x00F50000,
-	(void*)0x80376BF4,
-	(void*)0x00F60000,
-	(void*)0x80376BFD,
-	(void*)0x00F70000,
-	(void*)0x80376C06,
-	(void*)0x00F80000,
-	(void*)0x80376C0F,
-	(void*)0x00F90000,
-	(void*)0x80376C21,
-	(void*)0x00FA0000,
-	(void*)0x80376C2C,
-	(void*)0x00FB0000,
-	(void*)0x80376C3D,
-	(void*)0x00FC0000,
-	(void*)0x80376C46,
-	(void*)0x00FE0000,
-	(void*)0x80376C50,
-	(void*)0x00FF0000,
-	(void*)0x80376C5E,
-	(void*)0x01000000,
-	(void*)0x80376C68,
-	(void*)0x01010000,
-	(void*)0x80376C73,
-	(void*)0x01020000,
-	(void*)0x80376C80,
-	(void*)0x01030000,
-	(void*)0x80376C8C,
-	(void*)0x01040000,
-	(void*)0x80376C9D,
-	(void*)0x01050000,
-	(void*)0x80376CA8,
-	(void*)0x01060000,
-	(void*)0x80376CAF,
-	(void*)0x01070000,
-	(void*)0x80376CB7,
-	(void*)0x01080000,
-	(void*)0x80376CC0,
-	(void*)0x01090000,
-	(void*)0x80376CC7,
-	(void*)0x010A0000,
-	(void*)0x80376CD4,
-	(void*)0x010B0000,
-	(void*)0x80376CDB,
-	(void*)0x010C0000,
-	(void*)0x80376CE6,
-	(void*)0x010D0000,
-	(void*)0x80376CED,
-	(void*)0x010E0000,
-	(void*)0x80376CF8,
-	(void*)0x010F0000,
-	(void*)0x80376D03,
-	(void*)0x01100000,
-	(void*)0x80376D0E,
-	(void*)0x01110000,
-	(void*)0x80376D1B,
-	(void*)0x01120000,
-	(void*)0x80376D26,
-	(void*)0x01130000,
-	(void*)0x80376D33,
-	(void*)0x01140000,
-	(void*)0x80376D3F,
-	(void*)0x01150000,
-	(void*)0x80376D4F,
-	(void*)0x01160000,
-	(void*)0x80376D5E,
-	(void*)0x01170000,
-	(void*)0x80376D69,
-	(void*)0x01180000,
-	(void*)0x80376D78,
-	(void*)0x01190000,
-	(void*)0x80376D85,
-	(void*)0x011A0000,
-	(void*)0x80376D93,
-	(void*)0x011B0000,
-	(void*)0x80376DA0,
-	(void*)0x011C0000,
-	(void*)0x80376DB0,
-	(void*)0x011D0000,
-	(void*)0x80376DC0,
-	(void*)0x011E0000,
-	(void*)0x80376DCF,
-	(void*)0x011F0000,
-	(void*)0x80376DDF,
-	(void*)0x01200000,
-	(void*)0x80376DED,
-	(void*)0x01210000,
-	(void*)0x80376DFE,
-	(void*)0x01220000,
-	(void*)0x80376E0E,
-	(void*)0x01230000,
-	(void*)0x80376E1F,
-	(void*)0x01240000,
-	(void*)0x80376E33,
-	(void*)0x01250000,
-	(void*)0x80376E43,
-	(void*)0x01260000,
-	(void*)0x80376E56,
-	(void*)0x01270000,
-	(void*)0x80376E6A,
-	(void*)0x01280000,
-	(void*)0x80376E7C,
-	(void*)0x01290000,
-	(void*)0x80376E8A,
-	(void*)0x012A0000,
-	(void*)0x80376E98,
-	(void*)0x012B0000,
-	(void*)0x80376EA6,
-	(void*)0x012C0000,
-	(void*)0x80376EB6,
-	(void*)0x012D0000,
-	(void*)0x80376EC2,
-	(void*)0x012E0000,
-	(void*)0x80376ED2,
-	(void*)0x012F0000,
-	(void*)0x80376EE2,
-	(void*)0x01300000,
-	(void*)0x80376EF0,
-	(void*)0x01310000,
-	(void*)0x80376EFE,
-	(void*)0x01320000,
-	(void*)0x80376F0A,
-	(void*)0x01330000,
-	(void*)0x80376F1B,
-	(void*)0x01340000,
-	(void*)0x80376F2A,
-	(void*)0x01350000,
-	(void*)0x80376F39,
-	(void*)0x01360000,
-	(void*)0x80376F46,
-	(void*)0x01370000,
-	(void*)0x80376F52,
-	(void*)0x01380000,
-	(void*)0x80376F5F,
-	(void*)0x01390000,
-	(void*)0x80376F6A,
-	(void*)0x013A0000,
-	(void*)0x80376F78,
-	(void*)0x013B0000,
-	(void*)0x80376F85,
-	(void*)0x013C0000,
-	(void*)0x80376F92,
-	(void*)0x013D0000,
-	(void*)0x80376FA0,
-	(void*)0x013E0000,
-	(void*)0x80376FAE,
-	(void*)0x013F0000,
-	(void*)0x80376FBF,
-	(void*)0x01400000,
-	(void*)0x80376FCE,
-	(void*)0x01410000,
-	(void*)0x80376FDD,
-	(void*)0x01420000,
-	(void*)0x80376FE9,
-	(void*)0x01430000,
-	(void*)0x80376FFA,
-	(void*)0x01440000,
-	(void*)0x80377006,
-	(void*)0x01450000,
-	(void*)0x80377012,
-	(void*)0x01460000,
-	(void*)0x80377023,
-	(void*)0x01470000,
-	(void*)0x8037702F,
-	(void*)0x01480000,
-	(void*)0x8037703B,
-	(void*)0x01490000,
-	(void*)0x80377047,
-	(void*)0x014A0000,
-	(void*)0x80377055,
-	(void*)0x014B0000,
-	(void*)0x80377063,
-	(void*)0x014C0000,
-	(void*)0x80377077,
-	(void*)0x014D0000,
-	(void*)0x80377086,
-	(void*)0x014E0000,
-	(void*)0x80377097,
-	(void*)0x014F0000,
-	(void*)0x803770A8,
-	(void*)0x01500000,
-	(void*)0x803770B8,
-	(void*)0x01510000,
-	(void*)0x803770CA,
-	(void*)0x01520000,
-	(void*)0x803770E1,
-	(void*)0x01530000,
-	(void*)0x803770F6,
-	(void*)0x01540000,
-	(void*)0x8037710B,
-	(void*)0x01550000,
-	(void*)0x8037711B,
-	(void*)0x01560000,
-	(void*)0x8037712B,
-	(void*)0x01570000,
-	(void*)0x80377138,
-	(void*)0x01580000,
-	(void*)0x80377147,
-	(void*)0x01590000,
-	(void*)0x80377156,
-	(void*)0x015A0000,
-	(void*)0x80377165,
-	(void*)0x015B0000,
-	(void*)0x80377177,
-	(void*)0x015C0000,
-	(void*)0x80377187,
-	(void*)0x015D0000,
-	(void*)0x80377198,
-	(void*)0x015E0000,
-	(void*)0x803771AB,
-	(void*)0x015F0000,
-	(void*)0x803771BF,
-	(void*)0x01600000,
-	(void*)0x803771CF,
-	(void*)0x01610000,
-	(void*)0x803771DF,
-	(void*)0x01620000,
-	(void*)0x803771ED,
-	(void*)0x01630000,
-	(void*)0x803771FB,
-	(void*)0x01640000,
-	(void*)0x8037720C,
-	(void*)0x01650000,
-	(void*)0x80377222,
-	(void*)0x01660000,
-	(void*)0x80377232,
-	(void*)0x01670000,
-	(void*)0x80377245,
-	(void*)0x01680000,
-	(void*)0x80377254,
-	(void*)0x01690000,
-	(void*)0x80377265,
-	(void*)0x016A0000,
-	(void*)0x80377276,
-	(void*)0x016B0000,
-	(void*)0x80377288,
-	(void*)0x016C0000,
-	(void*)0x80377297,
-	(void*)0x016D0000,
-	(void*)0x803772A9,
-	(void*)0x016E0000,
-	(void*)0x803772B7,
-	(void*)0x016F0000,
-	(void*)0x803772C2,
-	(void*)0x01700000,
-	(void*)0x803772D2,
-	(void*)0x01710000,
-	(void*)0x803772E1,
-	(void*)0x01720000,
-	(void*)0x803772F3,
-	(void*)0x01730000,
-	(void*)0x80377305,
-	(void*)0x01740000,
-	(void*)0x8037731A,
-	(void*)0x01750000,
-	(void*)0x80377333,
-	(void*)0x01760000,
-	(void*)0x80377342,
-	(void*)0x01770000,
-	(void*)0x80377350,
-	(void*)0x01780000,
-	(void*)0x80377362,
-	(void*)0x01790000,
-	(void*)0x80377371,
-	(void*)0x017A0000,
-	(void*)0x80377380,
-	(void*)0x017B0000,
-	(void*)0x8037738F,
-	(void*)0x017C0000,
-	(void*)0x803773A2,
-	(void*)0x017D0000,
-	(void*)0x803773B4,
-	(void*)0x017E0000,
-	(void*)0x803773C0,
-	(void*)0x017F0000,
-	(void*)0x803773CB,
-	(void*)0x01800000,
-	(void*)0x803773DF,
-	(void*)0x01810000,
-	(void*)0x803773F2,
-	(void*)0x01820000,
-	(void*)0x80377404,
-	(void*)0x01830000,
-	(void*)0x80377415,
-	(void*)0x01840000,
-	(void*)0x80377425,
-	(void*)0x01850000,
-	(void*)0x8037743A,
-	(void*)0x01860000,
-	(void*)0x8037744E,
-	(void*)0x01870000,
-	(void*)0x8037745A,
-	(void*)0x01880000,
-	(void*)0x8037746A,
-	(void*)0x01890000,
-	(void*)0x8037747F,
-	(void*)0x018A0000,
-	(void*)0x80377490,
-	(void*)0x018B0000,
-	(void*)0x803774A3,
-	(void*)0x018C0000,
-	(void*)0x803774B5,
-	(void*)0x018D0000,
-	(void*)0x803774C5,
-	(void*)0x018E0000,
-	(void*)0x803774D7,
-	(void*)0x018F0000,
-	(void*)0x803774EB,
-	(void*)0x01900000,
-	(void*)0x803774FE,
-	(void*)0x01910000,
-	(void*)0x8037750D,
-	(void*)0x01920000,
-	(void*)0x8037751F,
-	(void*)0x01930000,
-	(void*)0x80377533,
-	(void*)0x01940000,
-	(void*)0x80377542,
-	(void*)0x01950000,
-	(void*)0x80377553,
-	(void*)0x01960000,
-	(void*)0x80377561,
-	(void*)0x01970000,
-	(void*)0x80377573,
-	(void*)0x01980000,
-	(void*)0x80377580,
-	(void*)0x01990000,
-	(void*)0x8037758C,
-	(void*)0x019A0000,
-	(void*)0x8037759C,
-	(void*)0x019B0000,
-	(void*)0x803775AC,
-	(void*)0x019C0000,
-	(void*)0x803775BE,
-	(void*)0x019D0000,
-	(void*)0x803775CE,
-	(void*)0x019E0000,
-	(void*)0x803775DE,
-	(void*)0x019F0000,
-	(void*)0x803775EE,
-	(void*)0x01A00000,
-	(void*)0x803775FE,
-	(void*)0x01A10000,
-	(void*)0x8037760E,
-	(void*)0x01A20000,
-	(void*)0x80377619,
-	(void*)0x01A30000,
-	(void*)0x8037762B,
-	(void*)0x01A40000,
-	(void*)0x8037763D,
-	(void*)0x01A50000,
-	(void*)0x8037764D,
-	(void*)0x01A60000,
-	(void*)0x80377661,
-	(void*)0x01A70000,
-	(void*)0x80377671,
-	(void*)0x01A80000,
-	(void*)0x80377681,
-	(void*)0x01A90000,
-	(void*)0x8037768E,
-	(void*)0x01AA0000,
-	(void*)0x803776A1,
-	(void*)0x01AB0000,
-	(void*)0x803776B5,
-	(void*)0x01AC0000,
-	(void*)0x803776C6,
-	(void*)0x01AD0000,
-	(void*)0x803776D4,
-	(void*)0x01AE0000,
-	(void*)0x803776E3,
-	(void*)0x01AF0000,
-	(void*)0x803776F6,
-	(void*)0x01B00000,
-	(void*)0x803776FF,
-	(void*)0x01B10000,
-	(void*)0x80377708,
-	(void*)0x01B20000,
-	(void*)0x80377712,
-	(void*)0x01B30000,
-	(void*)0x8037771B,
-	(void*)0x01B40000,
-	(void*)0x80377724,
-	(void*)0x01B50000,
-	(void*)0x8037772D,
-	(void*)0x01B60000,
-	(void*)0x80377736,
-	(void*)0x01B70000,
-	(void*)0x8037773F,
-	(void*)0x01B80000,
-	(void*)0x80377748,
-	(void*)0x01B90000,
-	(void*)0x80377751,
-	(void*)0x01BA0000,
-	(void*)0x8037775A,
-	(void*)0x01BB0000,
-	(void*)0x80377763,
-	(void*)0x01BC0000,
-	(void*)0x8037776C,
-	(void*)0x01BD0000,
-	(void*)0x80377775,
-	(void*)0x01BE0000,
-	(void*)0x8037777E,
-	(void*)0x01BF0000,
-	(void*)0x80377788,
-	(void*)0x01C00000,
-	(void*)0x80377791,
-	(void*)0x01C10000,
-	(void*)0x8037779F,
-	(void*)0x01C20000,
-	(void*)0x803777A8,
-	(void*)0x01C30000,
-	(void*)0x803777B1,
-	(void*)0x01C40000,
-	(void*)0x803777BA,
-	(void*)0x01C50000,
-	(void*)0x803777C7,
-	(void*)0x01C60000,
-	(void*)0x803777D0,
-	(void*)0x01C70000,
-	(void*)0x803777DE,
-	(void*)0x01C80000,
-	(void*)0x803777E7,
-	(void*)0x01C90000,
-	(void*)0x803777F0,
-	(void*)0x01CA0000,
-	(void*)0x803777F9,
-	(void*)0x01CB0000,
-	(void*)0x80377807,
-	(void*)0x01CC0000,
-	(void*)0x80377814,
-	(void*)0x01CD0000,
-	(void*)0x8037781D,
-	(void*)0x01CE0000,
-	(void*)0x80377826,
-	(void*)0x01CF0000,
-	(void*)0x80377834,
-	(void*)0x01D00000,
-	(void*)0x8037783D,
-	(void*)0x01D10000,
-	(void*)0x80377846,
-	(void*)0x01D20000,
-	(void*)0x80377850,
-	(void*)0x01D30000,
-	(void*)0x8037785E,
-	(void*)0x01D40000,
-	(void*)0x80377867,
-	(void*)0x01D50000,
-	(void*)0x80377870,
-	(void*)0x01D60000,
-	(void*)0x8037787A,
-	(void*)0x01D70000,
-	(void*)0x80377884,
-	(void*)0x01D80000,
-	(void*)0x8037788D,
-	(void*)0x01D90000,
-	(void*)0x80377896,
-	(void*)0x01DA0000,
-	(void*)0x8037789F,
-	(void*)0x01DB0000,
-	(void*)0x803778A8,
-	(void*)0x01DC0000,
-	(void*)0x803778B1,
-	(void*)0x01DD0000,
-	(void*)0x803778BA,
-	(void*)0x01DE0000,
-	(void*)0x803778C3,
-	(void*)0x01DF0000,
-	(void*)0x803778CC,
-	(void*)0x01E00000,
-	(void*)0x803778D5,
-	(void*)0x01E10000,
-	(void*)0x803778DE,
-	(void*)0x01E20000,
-	(void*)0x803778E7,
-	(void*)0x01E30000,
-	(void*)0x803778F0,
-	(void*)0x01E40000,
-	(void*)0x803778F9,
-	(void*)0x01E50000,
-	(void*)0x80377902,
-	(void*)0x01E60000,
-	(void*)0x8037790B,
-	(void*)0x01E70000,
-	(void*)0x80377914,
-	(void*)0x01E80000,
-	(void*)0x8037791D,
-	(void*)0x01E90000,
-	(void*)0x80377928,
-	(void*)0x01EA0000,
-	(void*)0x80377931,
-	(void*)0x01EB0000,
-	(void*)0x8037793A,
-	(void*)0x01EC0000,
-	(void*)0x80377943,
-	(void*)0x01ED0000,
-	(void*)0x8037794D,
-	(void*)0x01EE0000,
-	(void*)0x80377957,
-	(void*)0x01EF0000,
-	(void*)0x80377960,
-	(void*)0x01F00000,
-	(void*)0x80377969,
-	(void*)0x01F10000,
-	(void*)0x80377972,
-	(void*)0x01F20000,
-	(void*)0x8037797B,
-	(void*)0x01F30000,
-	(void*)0x80377984,
-	(void*)0x01F40000,
-	(void*)0x80377994,
-	(void*)0x01F50000,
-	(void*)0x8037799D,
-	(void*)0x01F60000,
-	(void*)0x803779AA,
-	(void*)0x01F70000,
-	(void*)0x803779B4,
-	(void*)0x01F80000,
-	(void*)0x803779C5,
-	(void*)0x01F90000,
-	(void*)0x803779D7,
-	(void*)0x01FA0000,
-	(void*)0x803779E0,
-	(void*)0x01FB0000,
-	(void*)0x803779E9,
-	(void*)0x01FC0000,
-	(void*)0x803779F2,
-	(void*)0x01FD0000,
-	(void*)0x803779FB,
-	(void*)0x01FE0000,
-	(void*)0x80377A04,
-	(void*)0x01FF0000,
-	(void*)0x80377A0D,
-	(void*)0x02000000,
-	(void*)0x80377A16,
-	(void*)0x02010000,
-	(void*)0x80377A1F,
-	(void*)0x02020000,
-	(void*)0x80377A28,
-	(void*)0x02030000,
-	(void*)0x80377A35,
-	(void*)0x02040000,
-	(void*)0x80377A43,
-	(void*)0x02050000,
-	(void*)0x80377A50,
-	(void*)0x02060000,
-	(void*)0x80377A61,
-	(void*)0x02070000,
-	(void*)0x80377A6A,
-	(void*)0x02080000,
-	(void*)0x80377A73,
-	(void*)0x02090000,
-	(void*)0x80377A7C,
-	(void*)0x020A0000,
-	(void*)0x80377A85,
-	(void*)0x020B0000,
-	(void*)0x80377A8E,
-	(void*)0x020C0000,
-	(void*)0x80377A97,
-	(void*)0x020D0000,
-	(void*)0x80377AA0,
-	(void*)0x020E0000,
-	(void*)0x80377AA9,
-	(void*)0x020F0000,
-	(void*)0x80377AB3,
-	(void*)0x02100000,
-	(void*)0x80377ABC,
-	(void*)0x02110000,
-	(void*)0x80377AC6,
-	(void*)0x02120000,
-	(void*)0x80377ACF,
-	(void*)0x02130000,
-	(void*)0x80377ADC,
-	(void*)0x02140000,
-	(void*)0x80377AE5,
-	(void*)0x02150000,
-	(void*)0x80377AEE,
-	(void*)0x02160000,
-	(void*)0x80377AF8,
-	(void*)0x02170000,
-	(void*)0x80377B02,
-	(void*)0x02190000,
-	(void*)0x80377B13,
-	(void*)0x021A0000,
-	(void*)0x80377B24,
-	(void*)0x021B0000,
-	(void*)0x80377B34,
-	(void*)0x021C0000,
-	(void*)0x80377B4B,
-	(void*)0x021D0000,
-	(void*)0x80377B5A,
-	(void*)0x021E0000,
-	(void*)0x80377B68,
-	(void*)0x021F0000,
-	(void*)0x80377B76,
-	(void*)0x02200000,
-	(void*)0x80377B83,
-	(void*)0x02210000,
-	(void*)0x80377B8E,
-	(void*)0x02220000,
-	(void*)0x80377B98,
-	(void*)0x02230000,
-	(void*)0x80377BA4,
-	(void*)0x02240000,
-	(void*)0x80377BAF,
-	(void*)0x02250000,
-	(void*)0x80377BBB,
-	(void*)0x02260000,
-	(void*)0x80377BC5,
-	(void*)0x02270000,
-	(void*)0x80377BD5,
-	(void*)0x02280000,
-	(void*)0x80377BE7,
-	(void*)0x02290000,
-	(void*)0x80377BF5,
-	(void*)0x022A0000,
-	(void*)0x80377C05,
-	(void*)0x022B0000,
-	(void*)0x80377C16,
-	(void*)0x022C0000,
-	(void*)0x80377C26,
-	(void*)0x022D0000,
-	(void*)0x80377C33,
-	(void*)0x022E0000,
-	(void*)0x80377C43,
-	(void*)0x022F0000,
-	(void*)0x80377C56,
-	(void*)0x02300000,
-	(void*)0x80377C69,
-	(void*)0x02310000,
-	(void*)0x80377C73,
-	(void*)0x02320000,
-	(void*)0x80377C7E,
-	(void*)0x02330000,
-	(void*)0x80377C87,
-	(void*)0x02340000,
-	(void*)0x80377C93,
-	(void*)0x02350000,
-	(void*)0x80377C9F,
-	(void*)0x02360000,
-	(void*)0x80377CAB,
-	(void*)0x02370000,
-	(void*)0x80377CB7,
-	(void*)0x02380000,
-	(void*)0x80377CC3,
-	(void*)0x02390000,
-	(void*)0x80377CD0,
-	(void*)0x023A0000,
-	(void*)0x80377CDC,
-	(void*)0x023B0000,
-	(void*)0x80377CE8,
-	(void*)0x023C0000,
-	(void*)0x80377CF4,
-	(void*)0x023D0000,
-	(void*)0x80377D00,
-	(void*)0x023E0000,
-	(void*)0x80377D0E,
-	(void*)0x023F0000,
-	(void*)0x80377D1C,
-	(void*)0x02400000,
-	(void*)0x80377D2A,
-	(void*)0x02410000,
-	(void*)0x80377D3A,
-	(void*)0x02420000,
-	(void*)0x80377D4A,
-	(void*)0x02430000,
-	(void*)0x80377D56,
-	(void*)0x02440000,
-	(void*)0x80377D62,
-	(void*)0x02450000,
-	(void*)0x80377D6F,
-	(void*)0x02460000,
-	(void*)0x80377D7C,
-	(void*)0x02470000,
-	(void*)0x80377D88,
-	(void*)0x02480000,
-	(void*)0x80377D95,
-	(void*)0x02490000,
-	(void*)0x80377DA4,
-	(void*)0x024A0000,
-	(void*)0x80377DB3,
-	(void*)0x024B0000,
-	(void*)0x80377DC2,
-	(void*)0x024C0000,
-	(void*)0x80377DD3,
-	(void*)0x024D0000,
-	(void*)0x80377DE1,
-	(void*)0x024E0000,
-	(void*)0x80377DF5,
-	(void*)0x024F0000,
-	(void*)0x80377E01,
-	(void*)0x02500000,
-	(void*)0x80377E0F,
-	(void*)0x02510000,
-	(void*)0x80377E1B,
-	(void*)0x02520000,
-	(void*)0x80377E27,
-	(void*)0x02530000,
-	(void*)0x80377E3C,
-	(void*)0x02540000,
-	(void*)0x80377E4A,
-	(void*)0x02550000,
-	(void*)0x80377E58,
-	(void*)0x02560000,
-	(void*)0x80377E66,
-	(void*)0x02570000,
-	(void*)0x80377E75,
-	(void*)0x02580000,
-	(void*)0x80377E81,
-	(void*)0x02590000,
-	(void*)0x80377E8F,
-	(void*)0x025A0000,
-	(void*)0x80377E9C,
-	(void*)0x025B0000,
-	(void*)0x80377EA7,
-	(void*)0x025C0000,
-	(void*)0x80377EB8,
-	(void*)0x025D0000,
-	(void*)0x80377EC4,
-	(void*)0x025E0000,
-	(void*)0x80377ED2,
-	(void*)0x025F0000,
-	(void*)0x80377EE1,
-	(void*)0x02600000,
-	(void*)0x80377EEF,
-	(void*)0x02610000,
-	(void*)0x80377EFC,
-	(void*)0x02620000,
-	(void*)0x80377F09,
-	(void*)0x02630000,
-	(void*)0x80377F15,
-	(void*)0x02640000,
-	(void*)0x80377F22,
-	(void*)0x02650000,
-	(void*)0x80377F2F,
-	(void*)0x02660000,
-	(void*)0x80377F3C,
-	(void*)0x02670000,
-	(void*)0x80377F49,
-	(void*)0x02680000,
-	(void*)0x80377F56,
-	(void*)0x02690000,
-	(void*)0x80377F64,
-	(void*)0x026A0000,
-	(void*)0x80377F73,
-	(void*)0x026B0000,
-	(void*)0x80377F82,
-	(void*)0x026C0000,
-	(void*)0x80377F91,
-	(void*)0x026D0000,
-	(void*)0x80377FA3,
-	(void*)0x026E0000,
-	(void*)0x80377FB0,
-	(void*)0x026F0000,
-	(void*)0x80377FBD,
-	(void*)0x02700000,
-	(void*)0x80377FD0,
-	(void*)0x02710000,
-	(void*)0x80377FE3,
-	(void*)0x02720000,
-	(void*)0x80377FF6,
-	(void*)0x02730000,
-	(void*)0x80378004,
-	(void*)0x02740000,
-	(void*)0x80378010,
-	(void*)0x02750000,
-	(void*)0x8037801C,
-	(void*)0x02760000,
-	(void*)0x80378028,
-	(void*)0x02770000,
-	(void*)0x80378034,
-	(void*)0x02780000,
-	(void*)0x80378040,
-	(void*)0x02790000,
-	(void*)0x8037804D,
-	(void*)0x027A0000,
-	(void*)0x80378059,
-	(void*)0x027B0000,
-	(void*)0x80378067,
-	(void*)0x027C0000,
-	(void*)0x80378073,
-	(void*)0x027D0000,
-	(void*)0x8037807F,
-	(void*)0x027E0000,
-	(void*)0x8037808C,
-	(void*)0x027F0000,
-	(void*)0x80378099,
-	(void*)0x02800000,
-	(void*)0x803780A7,
-	(void*)0x02810000,
-	(void*)0x803780B4,
-	(void*)0x02820000,
-	(void*)0x803780C2,
-	(void*)0x02830000,
-	(void*)0x803780D5,
-	(void*)0x02840000,
-	(void*)0x803780E1,
-	(void*)0x02850000,
-	(void*)0x803780ED,
-	(void*)0x02860000,
-	(void*)0x803780FD,
-	(void*)0x02870000,
-	(void*)0x8037810B,
-	(void*)0x02880000,
-	(void*)0x80378119,
-	(void*)0x02890000,
-	(void*)0x80378126,
-	(void*)0x028A0000,
-	(void*)0x80378137,
-	(void*)0x028B0000,
-	(void*)0x80378146,
-	(void*)0x028C0000,
-	(void*)0x80378153,
-	(void*)0x028D0000,
-	(void*)0x80378164,
-	(void*)0x028E0000,
-	(void*)0x80378175,
-	(void*)0x028F0000,
-	(void*)0x80378184,
-	(void*)0x02900000,
-	(void*)0x80378193,
-	(void*)0x02910000,
-	(void*)0x803781A3,
-	(void*)0x02920000,
-	(void*)0x803781B0,
-	(void*)0x02930000,
-	(void*)0x803781BE,
-	(void*)0x02940000,
-	(void*)0x803781D0,
-	(void*)0x02950000,
-	(void*)0x803781DF,
-	(void*)0x02960000,
-	(void*)0x803781ED,
-	(void*)0x02970000,
-	(void*)0x803781FB,
-	(void*)0x02980000,
-	(void*)0x80378209,
-	(void*)0x02990000,
-	(void*)0x80378215,
-	(void*)0x029A0000,
-	(void*)0x80378222,
-	(void*)0x029B0000,
-	(void*)0x8037822F,
-	(void*)0x029C0000,
-	(void*)0x8037823E,
-	(void*)0x029D0000,
-	(void*)0x8037824B,
-	(void*)0x029E0000,
-	(void*)0x80378259,
-	(void*)0x029F0000,
-	(void*)0x80378266,
-	(void*)0x02A00000,
-	(void*)0x80378276,
-	(void*)0x02A10000,
-	(void*)0x80378285,
-	(void*)0x02A20000,
-	(void*)0x80378297,
-	(void*)0x02A30000,
-	(void*)0x803782A8,
-	(void*)0x02A40000,
-	(void*)0x803782BA,
-	(void*)0x02A50000,
-	(void*)0x803782CB,
-	(void*)0x02A60000,
-	(void*)0x803782D8,
-	(void*)0x02A70000,
-	(void*)0x803782E4,
-	(void*)0x02A80000,
-	(void*)0x803782F2,
-	(void*)0x02A90000,
-	(void*)0x803782FD,
-	(void*)0x02AA0000,
-	(void*)0x80378308,
-	(void*)0x02AB0000,
-	(void*)0x80378314,
-	(void*)0x02AC0000,
-	(void*)0x80378320,
-	(void*)0x02AD0000,
-	(void*)0x8037832C,
-	(void*)0x02AE0000,
-	(void*)0x80378338,
-	(void*)0x02AF0000,
-	(void*)0x80378344,
-	(void*)0x02B00000,
-	(void*)0x80378350,
-	(void*)0x02B10000,
-	(void*)0x8037835C,
-	(void*)0x02B20000,
-	(void*)0x80378368,
-	(void*)0x02B30000,
-	(void*)0x80378374,
-	(void*)0x02B40000,
-	(void*)0x80378380,
-	(void*)0x02B50000,
-	(void*)0x8037838C,
-	(void*)0x02B60000,
-	(void*)0x80378398,
-	(void*)0x02B70000,
-	(void*)0x803783A4,
-	(void*)0x02B80000,
-	(void*)0x803783B0,
-	(void*)0x02B90000,
-	(void*)0x803783BC,
-	(void*)0x02BA0000,
-	(void*)0x803783C8,
-	(void*)0x02BB0000,
-	(void*)0x803783D4,
-	(void*)0x02BC0000,
-	(void*)0x803783E0,
-	(void*)0x02BD0000,
-	(void*)0x803783E9,
-	(void*)0x02BE0000,
-	(void*)0x803783F2,
-	(void*)0x02BF0000,
-	(void*)0x80378400,
-	(void*)0x02C00000,
-	(void*)0x8037840E,
-	(void*)0x02C10000,
-	(void*)0x8037841E,
-	(void*)0x02C20000,
-	(void*)0x8037842C,
-	(void*)0x02C30000,
-	(void*)0x80378439,
-	(void*)0x02C40000,
-	(void*)0x80378447,
-	(void*)0x02C50000,
-	(void*)0x80378455,
-	(void*)0x02C60000,
-	(void*)0x80378464,
-	(void*)0x02C70000,
-	(void*)0x80378473,
-	(void*)0x02C80000,
-	(void*)0x80378482,
-	(void*)0x02C90000,
-	(void*)0x80378491,
-	(void*)0x02CA0000,
-	(void*)0x803784A1,
-	(void*)0x02CB0000,
-	(void*)0x803784B1,
-	(void*)0x02CC0000,
-	(void*)0x803784C1,
-	(void*)0x02CD0000,
-	(void*)0x803784D3,
-	(void*)0x02CE0000,
-	(void*)0x803784E6,
-	(void*)0x02CF0000,
-	(void*)0x803784F1,
-	(void*)0x02D00000,
-	(void*)0x80378500,
-	(void*)0x02D10000,
-	(void*)0x80378511,
-	(void*)0x02D20000,
-	(void*)0x8037851F,
-	(void*)0x02D30000,
-	(void*)0x8037852B,
-	(void*)0x02D40000,
-	(void*)0x80378539,
-	(void*)0x02D50000,
-	(void*)0x80378546,
-	(void*)0x02D60000,
-	(void*)0x80378552,
-	(void*)0x02D70000,
-	(void*)0x80378562,
-	(void*)0x02D80000,
-	(void*)0x8037856F,
-	(void*)0x02DA0000,
-	(void*)0x8037857A,
-	(void*)0x02DB0000,
-	(void*)0x80378584,
-	(void*)0x02DC0000,
-	(void*)0x8037858F,
-	(void*)0x02DD0000,
-	(void*)0x80378596,
-	(void*)0x02DE0000,
-	(void*)0x803785A4,
-	(void*)0x02DF0000,
-	(void*)0x803785AF,
-	(void*)0x02E00000,
-	(void*)0x803785BA,
-	(void*)0x02E10000,
-	(void*)0x803785CB,
-	(void*)0x02E20000,
-	(void*)0x803785D5,
-	(void*)0x02E30000,
-	(void*)0x803785DC,
-	(void*)0x02E40000,
-	(void*)0x803785E6,
-	(void*)0x02E50000,
-	(void*)0x803785F1,
-	(void*)0x02E60000,
-	(void*)0x803785FD,
-	(void*)0x02E70000,
-	(void*)0x80378608,
-	(void*)0x02E80000,
-	(void*)0x80378613,
-	(void*)0x02E90000,
-	(void*)0x80378621,
-	(void*)0x02EA0000,
-	(void*)0x80378631,
-	(void*)0x02EB0000,
-	(void*)0x80378640,
-	(void*)0x02EC0000,
-	(void*)0x8037864D,
-	(void*)0x02ED0000,
-	(void*)0x8037865A,
-	(void*)0x02EE0000,
-	(void*)0x80378666,
-	(void*)0x02EF0000,
-	(void*)0x80378672,
-	(void*)0x02F00000,
-	(void*)0x8037867F,
-	(void*)0x02F10000,
-	(void*)0x8037868A,
-	(void*)0x02F20000,
-	(void*)0x80378694,
-	(void*)0x02F30000,
-	(void*)0x803786A3,
-	(void*)0x02F40000,
-	(void*)0x803786AC,
-	(void*)0x02F50000,
-	(void*)0x803786B5,
-	(void*)0x02F60000,
-	(void*)0x803786C3,
-	(void*)0x02F70000,
-	(void*)0x803786D3,
-	(void*)0x02F80000,
-	(void*)0x803786E3,
-	(void*)0x02F90000,
-	(void*)0x803786F3,
-	(void*)0x02FA0000,
-	(void*)0x80378704,
-	(void*)0x02FB0000,
-	(void*)0x80378713,
-	(void*)0x02FC0000,
-	(void*)0x80378720,
-	(void*)0x02FD0000,
-	(void*)0x8037872E,
-	(void*)0x02FE0000,
-	(void*)0x8037873C,
-	(void*)0x02FF0000,
-	(void*)0x80378747,
-	(void*)0x03000000,
-	(void*)0x80378754,
-	(void*)0x03010000,
-	(void*)0x8037875B,
-	(void*)0x03040000,
-	(void*)0x80378767,
-	(void*)0x03050000,
-	(void*)0x80378770,
-	(void*)0x03060000,
-	(void*)0x8037877E,
-	(void*)0x03070000,
-	(void*)0x8037878F,
-	(void*)0x03080000,
-	(void*)0x8037879A,
-	(void*)0x03090000,
-	(void*)0x803787A4,
-	(void*)0x030A0000,
-	(void*)0x803787B2,
-	(void*)0x030B0000,
-	(void*)0x803787C2,
-	(void*)0x030C0000,
-	(void*)0x803787D0,
-	(void*)0x030F0000,
-	(void*)0x803787DF,
-	(void*)0x03100000,
-	(void*)0x803787EB,
-	(void*)0xFFFF0000,
-	(void*)NULL,
+/* 80374640-80375DE8 17A8+00 rc=1 efc=0 rfr=False None .rodata    DynamicNameTable                                             */
+SECTION_RODATA static void* const DynamicNameTable[1514] = {
+	/* 0    */ (void*)0x00140000,
+	/* 1    */ (void*)&c_c_dylink__stringBase0,
+	/* 2    */ (void*)0x00160000,
+	/* 3    */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB),
+	/* 4    */ (void*)0x00170000,
+	/* 5    */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A),
+	/* 6    */ (void*)0x00180000,
+	/* 7    */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2A),
+	/* 8    */ (void*)0x00190000,
+	/* 9    */ (void*)(((char*)&c_c_dylink__stringBase0)+0x3A),
+	/* 10   */ (void*)0x001B0000,
+	/* 11   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x49),
+	/* 12   */ (void*)0x001C0000,
+	/* 13   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x5B),
+	/* 14   */ (void*)0x001D0000,
+	/* 15   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x66),
+	/* 16   */ (void*)0x001E0000,
+	/* 17   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x76),
+	/* 18   */ (void*)0x001F0000,
+	/* 19   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x85),
+	/* 20   */ (void*)0x00200000,
+	/* 21   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x97),
+	/* 22   */ (void*)0x00210000,
+	/* 23   */ (void*)(((char*)&c_c_dylink__stringBase0)+0xA7),
+	/* 24   */ (void*)0x00220000,
+	/* 25   */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB4),
+	/* 26   */ (void*)0x00230000,
+	/* 27   */ (void*)(((char*)&c_c_dylink__stringBase0)+0xC0),
+	/* 28   */ (void*)0x00240000,
+	/* 29   */ (void*)(((char*)&c_c_dylink__stringBase0)+0xCD),
+	/* 30   */ (void*)0x00250000,
+	/* 31   */ (void*)(((char*)&c_c_dylink__stringBase0)+0xDC),
+	/* 32   */ (void*)0x00260000,
+	/* 33   */ (void*)(((char*)&c_c_dylink__stringBase0)+0xED),
+	/* 34   */ (void*)0x00270000,
+	/* 35   */ (void*)(((char*)&c_c_dylink__stringBase0)+0xFB),
+	/* 36   */ (void*)0x00280000,
+	/* 37   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x108),
+	/* 38   */ (void*)0x00290000,
+	/* 39   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x115),
+	/* 40   */ (void*)0x002A0000,
+	/* 41   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x122),
+	/* 42   */ (void*)0x002B0000,
+	/* 43   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x12D),
+	/* 44   */ (void*)0x002C0000,
+	/* 45   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x13A),
+	/* 46   */ (void*)0x002D0000,
+	/* 47   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x146),
+	/* 48   */ (void*)0x002E0000,
+	/* 49   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x151),
+	/* 50   */ (void*)0x002F0000,
+	/* 51   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x15C),
+	/* 52   */ (void*)0x00300000,
+	/* 53   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x169),
+	/* 54   */ (void*)0x00310000,
+	/* 55   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x174),
+	/* 56   */ (void*)0x00320000,
+	/* 57   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x183),
+	/* 58   */ (void*)0x00330000,
+	/* 59   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x191),
+	/* 60   */ (void*)0x00340000,
+	/* 61   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A0),
+	/* 62   */ (void*)0x00350000,
+	/* 63   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1AE),
+	/* 64   */ (void*)0x00360000,
+	/* 65   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C2),
+	/* 66   */ (void*)0x00370000,
+	/* 67   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D4),
+	/* 68   */ (void*)0x00380000,
+	/* 69   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E4),
+	/* 70   */ (void*)0x00390000,
+	/* 71   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F7),
+	/* 72   */ (void*)0x003A0000,
+	/* 73   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x20B),
+	/* 74   */ (void*)0x003B0000,
+	/* 75   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x21F),
+	/* 76   */ (void*)0x003C0000,
+	/* 77   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x22F),
+	/* 78   */ (void*)0x003D0000,
+	/* 79   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x240),
+	/* 80   */ (void*)0x003E0000,
+	/* 81   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x250),
+	/* 82   */ (void*)0x003F0000,
+	/* 83   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x25F),
+	/* 84   */ (void*)0x00400000,
+	/* 85   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x26F),
+	/* 86   */ (void*)0x00410000,
+	/* 87   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x27E),
+	/* 88   */ (void*)0x00420000,
+	/* 89   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x28F),
+	/* 90   */ (void*)0x00430000,
+	/* 91   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2A0),
+	/* 92   */ (void*)0x00440000,
+	/* 93   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2AF),
+	/* 94   */ (void*)0x00450000,
+	/* 95   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2C3),
+	/* 96   */ (void*)0x00460000,
+	/* 97   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2D2),
+	/* 98   */ (void*)0x00470000,
+	/* 99   */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2E1),
+	/* 100  */ (void*)0x00480000,
+	/* 101  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2F4),
+	/* 102  */ (void*)0x00490000,
+	/* 103  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x306),
+	/* 104  */ (void*)0x004A0000,
+	/* 105  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x318),
+	/* 106  */ (void*)0x004B0000,
+	/* 107  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x329),
+	/* 108  */ (void*)0x004C0000,
+	/* 109  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x339),
+	/* 110  */ (void*)0x004D0000,
+	/* 111  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x34E),
+	/* 112  */ (void*)0x004E0000,
+	/* 113  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x361),
+	/* 114  */ (void*)0x004F0000,
+	/* 115  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x372),
+	/* 116  */ (void*)0x00500000,
+	/* 117  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x388),
+	/* 118  */ (void*)0x00510000,
+	/* 119  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x397),
+	/* 120  */ (void*)0x00520000,
+	/* 121  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x3A6),
+	/* 122  */ (void*)0x00530000,
+	/* 123  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x3B6),
+	/* 124  */ (void*)0x00540000,
+	/* 125  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x3C7),
+	/* 126  */ (void*)0x00550000,
+	/* 127  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x3D8),
+	/* 128  */ (void*)0x00560000,
+	/* 129  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x3E9),
+	/* 130  */ (void*)0x00570000,
+	/* 131  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x3F7),
+	/* 132  */ (void*)0x00580000,
+	/* 133  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x404),
+	/* 134  */ (void*)0x00590000,
+	/* 135  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x413),
+	/* 136  */ (void*)0x005A0000,
+	/* 137  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x420),
+	/* 138  */ (void*)0x005B0000,
+	/* 139  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x42F),
+	/* 140  */ (void*)0x005C0000,
+	/* 141  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x43B),
+	/* 142  */ (void*)0x005D0000,
+	/* 143  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x44B),
+	/* 144  */ (void*)0x005E0000,
+	/* 145  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x45B),
+	/* 146  */ (void*)0x005F0000,
+	/* 147  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x46F),
+	/* 148  */ (void*)0x00600000,
+	/* 149  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x481),
+	/* 150  */ (void*)0x00610000,
+	/* 151  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x48C),
+	/* 152  */ (void*)0x00620000,
+	/* 153  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x49A),
+	/* 154  */ (void*)0x00630000,
+	/* 155  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x4A9),
+	/* 156  */ (void*)0x00640000,
+	/* 157  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x4B8),
+	/* 158  */ (void*)0x00650000,
+	/* 159  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x4C6),
+	/* 160  */ (void*)0x00660000,
+	/* 161  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x4D4),
+	/* 162  */ (void*)0x00670000,
+	/* 163  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x4E2),
+	/* 164  */ (void*)0x00680000,
+	/* 165  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x4F0),
+	/* 166  */ (void*)0x00690000,
+	/* 167  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x505),
+	/* 168  */ (void*)0x006A0000,
+	/* 169  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x516),
+	/* 170  */ (void*)0x006B0000,
+	/* 171  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x525),
+	/* 172  */ (void*)0x006C0000,
+	/* 173  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x534),
+	/* 174  */ (void*)0x006D0000,
+	/* 175  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x543),
+	/* 176  */ (void*)0x006E0000,
+	/* 177  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x554),
+	/* 178  */ (void*)0x006F0000,
+	/* 179  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x563),
+	/* 180  */ (void*)0x00700000,
+	/* 181  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x573),
+	/* 182  */ (void*)0x00710000,
+	/* 183  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x584),
+	/* 184  */ (void*)0x00720000,
+	/* 185  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x595),
+	/* 186  */ (void*)0x00730000,
+	/* 187  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x5A6),
+	/* 188  */ (void*)0x00740000,
+	/* 189  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x5B7),
+	/* 190  */ (void*)0x00750000,
+	/* 191  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x5CA),
+	/* 192  */ (void*)0x00760000,
+	/* 193  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x5DC),
+	/* 194  */ (void*)0x00770000,
+	/* 195  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x5E9),
+	/* 196  */ (void*)0x00780000,
+	/* 197  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x5F5),
+	/* 198  */ (void*)0x00790000,
+	/* 199  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x604),
+	/* 200  */ (void*)0x007A0000,
+	/* 201  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x615),
+	/* 202  */ (void*)0x007B0000,
+	/* 203  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x622),
+	/* 204  */ (void*)0x007C0000,
+	/* 205  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x630),
+	/* 206  */ (void*)0x007D0000,
+	/* 207  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x63F),
+	/* 208  */ (void*)0x007E0000,
+	/* 209  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x64F),
+	/* 210  */ (void*)0x007F0000,
+	/* 211  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x65E),
+	/* 212  */ (void*)0x00800000,
+	/* 213  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x66C),
+	/* 214  */ (void*)0x00810000,
+	/* 215  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x67A),
+	/* 216  */ (void*)0x00820000,
+	/* 217  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x688),
+	/* 218  */ (void*)0x00830000,
+	/* 219  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x696),
+	/* 220  */ (void*)0x00840000,
+	/* 221  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x6A4),
+	/* 222  */ (void*)0x00850000,
+	/* 223  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x6B2),
+	/* 224  */ (void*)0x00860000,
+	/* 225  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x6C6),
+	/* 226  */ (void*)0x00870000,
+	/* 227  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x6D9),
+	/* 228  */ (void*)0x00880000,
+	/* 229  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x6ED),
+	/* 230  */ (void*)0x00890000,
+	/* 231  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x6FE),
+	/* 232  */ (void*)0x008A0000,
+	/* 233  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x70F),
+	/* 234  */ (void*)0x008B0000,
+	/* 235  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x720),
+	/* 236  */ (void*)0x008C0000,
+	/* 237  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x730),
+	/* 238  */ (void*)0x008D0000,
+	/* 239  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x742),
+	/* 240  */ (void*)0x008E0000,
+	/* 241  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x753),
+	/* 242  */ (void*)0x008F0000,
+	/* 243  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x765),
+	/* 244  */ (void*)0x00900000,
+	/* 245  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x775),
+	/* 246  */ (void*)0x00910000,
+	/* 247  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x785),
+	/* 248  */ (void*)0x00920000,
+	/* 249  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x796),
+	/* 250  */ (void*)0x00930000,
+	/* 251  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x7A9),
+	/* 252  */ (void*)0x00940000,
+	/* 253  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x7BD),
+	/* 254  */ (void*)0x00950000,
+	/* 255  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x7D1),
+	/* 256  */ (void*)0x00960000,
+	/* 257  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x7E3),
+	/* 258  */ (void*)0x00970000,
+	/* 259  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x7F5),
+	/* 260  */ (void*)0x00980000,
+	/* 261  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x807),
+	/* 262  */ (void*)0x00990000,
+	/* 263  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x81D),
+	/* 264  */ (void*)0x009A0000,
+	/* 265  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x833),
+	/* 266  */ (void*)0x009B0000,
+	/* 267  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x845),
+	/* 268  */ (void*)0x009C0000,
+	/* 269  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x85A),
+	/* 270  */ (void*)0x009D0000,
+	/* 271  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x86A),
+	/* 272  */ (void*)0x009E0000,
+	/* 273  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x87C),
+	/* 274  */ (void*)0x009F0000,
+	/* 275  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x891),
+	/* 276  */ (void*)0x00A00000,
+	/* 277  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x8A5),
+	/* 278  */ (void*)0x00A10000,
+	/* 279  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x8BB),
+	/* 280  */ (void*)0x00A20000,
+	/* 281  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x8CD),
+	/* 282  */ (void*)0x00A30000,
+	/* 283  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x8E1),
+	/* 284  */ (void*)0x00A40000,
+	/* 285  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x8F7),
+	/* 286  */ (void*)0x00A50000,
+	/* 287  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x907),
+	/* 288  */ (void*)0x00A60000,
+	/* 289  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x91A),
+	/* 290  */ (void*)0x00A70000,
+	/* 291  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x92F),
+	/* 292  */ (void*)0x00A80000,
+	/* 293  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x941),
+	/* 294  */ (void*)0x00A90000,
+	/* 295  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x952),
+	/* 296  */ (void*)0x00AA0000,
+	/* 297  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x965),
+	/* 298  */ (void*)0x00AB0000,
+	/* 299  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x975),
+	/* 300  */ (void*)0x00AC0000,
+	/* 301  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x985),
+	/* 302  */ (void*)0x00AD0000,
+	/* 303  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x995),
+	/* 304  */ (void*)0x00AE0000,
+	/* 305  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x9A7),
+	/* 306  */ (void*)0x00AF0000,
+	/* 307  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x9BC),
+	/* 308  */ (void*)0x00B00000,
+	/* 309  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x9D0),
+	/* 310  */ (void*)0x00B10000,
+	/* 311  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x9E5),
+	/* 312  */ (void*)0x00B20000,
+	/* 313  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x9FA),
+	/* 314  */ (void*)0x00B30000,
+	/* 315  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xA0F),
+	/* 316  */ (void*)0x00B40000,
+	/* 317  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xA21),
+	/* 318  */ (void*)0x00B50000,
+	/* 319  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xA30),
+	/* 320  */ (void*)0x00B60000,
+	/* 321  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xA42),
+	/* 322  */ (void*)0x00B70000,
+	/* 323  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xA53),
+	/* 324  */ (void*)0x00B80000,
+	/* 325  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xA65),
+	/* 326  */ (void*)0x00B90000,
+	/* 327  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xA73),
+	/* 328  */ (void*)0x00BA0000,
+	/* 329  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xA83),
+	/* 330  */ (void*)0x00BB0000,
+	/* 331  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xA91),
+	/* 332  */ (void*)0x00BC0000,
+	/* 333  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xA9B),
+	/* 334  */ (void*)0x00BD0000,
+	/* 335  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xAAF),
+	/* 336  */ (void*)0x00BE0000,
+	/* 337  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xABF),
+	/* 338  */ (void*)0x00BF0000,
+	/* 339  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xACD),
+	/* 340  */ (void*)0x00C00000,
+	/* 341  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xADB),
+	/* 342  */ (void*)0x00C10000,
+	/* 343  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xAEE),
+	/* 344  */ (void*)0x00C20000,
+	/* 345  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB00),
+	/* 346  */ (void*)0x00C30000,
+	/* 347  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB11),
+	/* 348  */ (void*)0x00C40000,
+	/* 349  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB21),
+	/* 350  */ (void*)0x00C50000,
+	/* 351  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB30),
+	/* 352  */ (void*)0x00C60000,
+	/* 353  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB3F),
+	/* 354  */ (void*)0x00C70000,
+	/* 355  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB51),
+	/* 356  */ (void*)0x00C80000,
+	/* 357  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB62),
+	/* 358  */ (void*)0x00C90000,
+	/* 359  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB73),
+	/* 360  */ (void*)0x00CA0000,
+	/* 361  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB86),
+	/* 362  */ (void*)0x00CB0000,
+	/* 363  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xB99),
+	/* 364  */ (void*)0x00CC0000,
+	/* 365  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xBA7),
+	/* 366  */ (void*)0x00CD0000,
+	/* 367  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xBBC),
+	/* 368  */ (void*)0x00CE0000,
+	/* 369  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xBCD),
+	/* 370  */ (void*)0x00CF0000,
+	/* 371  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xBDC),
+	/* 372  */ (void*)0x00D00000,
+	/* 373  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xBEB),
+	/* 374  */ (void*)0x00D10000,
+	/* 375  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xBFD),
+	/* 376  */ (void*)0x00D20000,
+	/* 377  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xC0D),
+	/* 378  */ (void*)0x00D30000,
+	/* 379  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xC16),
+	/* 380  */ (void*)0x00D40000,
+	/* 381  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xC2C),
+	/* 382  */ (void*)0x00D50000,
+	/* 383  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xC3E),
+	/* 384  */ (void*)0x00D60000,
+	/* 385  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xC4F),
+	/* 386  */ (void*)0x00D70000,
+	/* 387  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xC61),
+	/* 388  */ (void*)0x00D80000,
+	/* 389  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xC73),
+	/* 390  */ (void*)0x00D90000,
+	/* 391  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xC85),
+	/* 392  */ (void*)0x00DA0000,
+	/* 393  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xC96),
+	/* 394  */ (void*)0x00DB0000,
+	/* 395  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xCA8),
+	/* 396  */ (void*)0x00DC0000,
+	/* 397  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xCBA),
+	/* 398  */ (void*)0x00DD0000,
+	/* 399  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xCCA),
+	/* 400  */ (void*)0x00DE0000,
+	/* 401  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xCD8),
+	/* 402  */ (void*)0x00DF0000,
+	/* 403  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xCE6),
+	/* 404  */ (void*)0x00E00000,
+	/* 405  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xCF7),
+	/* 406  */ (void*)0x00E10000,
+	/* 407  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xD08),
+	/* 408  */ (void*)0x00E20000,
+	/* 409  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xD18),
+	/* 410  */ (void*)0x00E30000,
+	/* 411  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xD28),
+	/* 412  */ (void*)0x00E40000,
+	/* 413  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xD38),
+	/* 414  */ (void*)0x00E50000,
+	/* 415  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xD41),
+	/* 416  */ (void*)0x00E60000,
+	/* 417  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xD4D),
+	/* 418  */ (void*)0x00E70000,
+	/* 419  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xD60),
+	/* 420  */ (void*)0x00E80000,
+	/* 421  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xD71),
+	/* 422  */ (void*)0x00E90000,
+	/* 423  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xD82),
+	/* 424  */ (void*)0x00EA0000,
+	/* 425  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xD90),
+	/* 426  */ (void*)0x00EB0000,
+	/* 427  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xD9E),
+	/* 428  */ (void*)0x00EC0000,
+	/* 429  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xDAC),
+	/* 430  */ (void*)0x00ED0000,
+	/* 431  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xDBA),
+	/* 432  */ (void*)0x00EE0000,
+	/* 433  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xDC4),
+	/* 434  */ (void*)0x00EF0000,
+	/* 435  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xDCE),
+	/* 436  */ (void*)0x00F00000,
+	/* 437  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xDD7),
+	/* 438  */ (void*)0x00F10000,
+	/* 439  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xDE3),
+	/* 440  */ (void*)0x00F20000,
+	/* 441  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xDEE),
+	/* 442  */ (void*)0x00F30000,
+	/* 443  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xDFA),
+	/* 444  */ (void*)0x00F40000,
+	/* 445  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE03),
+	/* 446  */ (void*)0x00F50000,
+	/* 447  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE0C),
+	/* 448  */ (void*)0x00F60000,
+	/* 449  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE15),
+	/* 450  */ (void*)0x00F70000,
+	/* 451  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE1E),
+	/* 452  */ (void*)0x00F80000,
+	/* 453  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE27),
+	/* 454  */ (void*)0x00F90000,
+	/* 455  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE39),
+	/* 456  */ (void*)0x00FA0000,
+	/* 457  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE44),
+	/* 458  */ (void*)0x00FB0000,
+	/* 459  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE55),
+	/* 460  */ (void*)0x00FC0000,
+	/* 461  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE5E),
+	/* 462  */ (void*)0x00FE0000,
+	/* 463  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE68),
+	/* 464  */ (void*)0x00FF0000,
+	/* 465  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE76),
+	/* 466  */ (void*)0x01000000,
+	/* 467  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE80),
+	/* 468  */ (void*)0x01010000,
+	/* 469  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE8B),
+	/* 470  */ (void*)0x01020000,
+	/* 471  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xE98),
+	/* 472  */ (void*)0x01030000,
+	/* 473  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xEA4),
+	/* 474  */ (void*)0x01040000,
+	/* 475  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xEB5),
+	/* 476  */ (void*)0x01050000,
+	/* 477  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xEC0),
+	/* 478  */ (void*)0x01060000,
+	/* 479  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xEC7),
+	/* 480  */ (void*)0x01070000,
+	/* 481  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xECF),
+	/* 482  */ (void*)0x01080000,
+	/* 483  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xED8),
+	/* 484  */ (void*)0x01090000,
+	/* 485  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xEDF),
+	/* 486  */ (void*)0x010A0000,
+	/* 487  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xEEC),
+	/* 488  */ (void*)0x010B0000,
+	/* 489  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xEF3),
+	/* 490  */ (void*)0x010C0000,
+	/* 491  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xEFE),
+	/* 492  */ (void*)0x010D0000,
+	/* 493  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF05),
+	/* 494  */ (void*)0x010E0000,
+	/* 495  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF10),
+	/* 496  */ (void*)0x010F0000,
+	/* 497  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF1B),
+	/* 498  */ (void*)0x01100000,
+	/* 499  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF26),
+	/* 500  */ (void*)0x01110000,
+	/* 501  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF33),
+	/* 502  */ (void*)0x01120000,
+	/* 503  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF3E),
+	/* 504  */ (void*)0x01130000,
+	/* 505  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF4B),
+	/* 506  */ (void*)0x01140000,
+	/* 507  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF57),
+	/* 508  */ (void*)0x01150000,
+	/* 509  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF67),
+	/* 510  */ (void*)0x01160000,
+	/* 511  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF76),
+	/* 512  */ (void*)0x01170000,
+	/* 513  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF81),
+	/* 514  */ (void*)0x01180000,
+	/* 515  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF90),
+	/* 516  */ (void*)0x01190000,
+	/* 517  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xF9D),
+	/* 518  */ (void*)0x011A0000,
+	/* 519  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xFAB),
+	/* 520  */ (void*)0x011B0000,
+	/* 521  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xFB8),
+	/* 522  */ (void*)0x011C0000,
+	/* 523  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xFC8),
+	/* 524  */ (void*)0x011D0000,
+	/* 525  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xFD8),
+	/* 526  */ (void*)0x011E0000,
+	/* 527  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xFE7),
+	/* 528  */ (void*)0x011F0000,
+	/* 529  */ (void*)(((char*)&c_c_dylink__stringBase0)+0xFF7),
+	/* 530  */ (void*)0x01200000,
+	/* 531  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1005),
+	/* 532  */ (void*)0x01210000,
+	/* 533  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1016),
+	/* 534  */ (void*)0x01220000,
+	/* 535  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1026),
+	/* 536  */ (void*)0x01230000,
+	/* 537  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1037),
+	/* 538  */ (void*)0x01240000,
+	/* 539  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x104B),
+	/* 540  */ (void*)0x01250000,
+	/* 541  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x105B),
+	/* 542  */ (void*)0x01260000,
+	/* 543  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x106E),
+	/* 544  */ (void*)0x01270000,
+	/* 545  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1082),
+	/* 546  */ (void*)0x01280000,
+	/* 547  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1094),
+	/* 548  */ (void*)0x01290000,
+	/* 549  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x10A2),
+	/* 550  */ (void*)0x012A0000,
+	/* 551  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x10B0),
+	/* 552  */ (void*)0x012B0000,
+	/* 553  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x10BE),
+	/* 554  */ (void*)0x012C0000,
+	/* 555  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x10CE),
+	/* 556  */ (void*)0x012D0000,
+	/* 557  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x10DA),
+	/* 558  */ (void*)0x012E0000,
+	/* 559  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x10EA),
+	/* 560  */ (void*)0x012F0000,
+	/* 561  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x10FA),
+	/* 562  */ (void*)0x01300000,
+	/* 563  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1108),
+	/* 564  */ (void*)0x01310000,
+	/* 565  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1116),
+	/* 566  */ (void*)0x01320000,
+	/* 567  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1122),
+	/* 568  */ (void*)0x01330000,
+	/* 569  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1133),
+	/* 570  */ (void*)0x01340000,
+	/* 571  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1142),
+	/* 572  */ (void*)0x01350000,
+	/* 573  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1151),
+	/* 574  */ (void*)0x01360000,
+	/* 575  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x115E),
+	/* 576  */ (void*)0x01370000,
+	/* 577  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x116A),
+	/* 578  */ (void*)0x01380000,
+	/* 579  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1177),
+	/* 580  */ (void*)0x01390000,
+	/* 581  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1182),
+	/* 582  */ (void*)0x013A0000,
+	/* 583  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1190),
+	/* 584  */ (void*)0x013B0000,
+	/* 585  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x119D),
+	/* 586  */ (void*)0x013C0000,
+	/* 587  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x11AA),
+	/* 588  */ (void*)0x013D0000,
+	/* 589  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x11B8),
+	/* 590  */ (void*)0x013E0000,
+	/* 591  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x11C6),
+	/* 592  */ (void*)0x013F0000,
+	/* 593  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x11D7),
+	/* 594  */ (void*)0x01400000,
+	/* 595  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x11E6),
+	/* 596  */ (void*)0x01410000,
+	/* 597  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x11F5),
+	/* 598  */ (void*)0x01420000,
+	/* 599  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1201),
+	/* 600  */ (void*)0x01430000,
+	/* 601  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1212),
+	/* 602  */ (void*)0x01440000,
+	/* 603  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x121E),
+	/* 604  */ (void*)0x01450000,
+	/* 605  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x122A),
+	/* 606  */ (void*)0x01460000,
+	/* 607  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x123B),
+	/* 608  */ (void*)0x01470000,
+	/* 609  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1247),
+	/* 610  */ (void*)0x01480000,
+	/* 611  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1253),
+	/* 612  */ (void*)0x01490000,
+	/* 613  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x125F),
+	/* 614  */ (void*)0x014A0000,
+	/* 615  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x126D),
+	/* 616  */ (void*)0x014B0000,
+	/* 617  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x127B),
+	/* 618  */ (void*)0x014C0000,
+	/* 619  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x128F),
+	/* 620  */ (void*)0x014D0000,
+	/* 621  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x129E),
+	/* 622  */ (void*)0x014E0000,
+	/* 623  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x12AF),
+	/* 624  */ (void*)0x014F0000,
+	/* 625  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x12C0),
+	/* 626  */ (void*)0x01500000,
+	/* 627  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x12D0),
+	/* 628  */ (void*)0x01510000,
+	/* 629  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x12E2),
+	/* 630  */ (void*)0x01520000,
+	/* 631  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x12F9),
+	/* 632  */ (void*)0x01530000,
+	/* 633  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x130E),
+	/* 634  */ (void*)0x01540000,
+	/* 635  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1323),
+	/* 636  */ (void*)0x01550000,
+	/* 637  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1333),
+	/* 638  */ (void*)0x01560000,
+	/* 639  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1343),
+	/* 640  */ (void*)0x01570000,
+	/* 641  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1350),
+	/* 642  */ (void*)0x01580000,
+	/* 643  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x135F),
+	/* 644  */ (void*)0x01590000,
+	/* 645  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x136E),
+	/* 646  */ (void*)0x015A0000,
+	/* 647  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x137D),
+	/* 648  */ (void*)0x015B0000,
+	/* 649  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x138F),
+	/* 650  */ (void*)0x015C0000,
+	/* 651  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x139F),
+	/* 652  */ (void*)0x015D0000,
+	/* 653  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x13B0),
+	/* 654  */ (void*)0x015E0000,
+	/* 655  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x13C3),
+	/* 656  */ (void*)0x015F0000,
+	/* 657  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x13D7),
+	/* 658  */ (void*)0x01600000,
+	/* 659  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x13E7),
+	/* 660  */ (void*)0x01610000,
+	/* 661  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x13F7),
+	/* 662  */ (void*)0x01620000,
+	/* 663  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1405),
+	/* 664  */ (void*)0x01630000,
+	/* 665  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1413),
+	/* 666  */ (void*)0x01640000,
+	/* 667  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1424),
+	/* 668  */ (void*)0x01650000,
+	/* 669  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x143A),
+	/* 670  */ (void*)0x01660000,
+	/* 671  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x144A),
+	/* 672  */ (void*)0x01670000,
+	/* 673  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x145D),
+	/* 674  */ (void*)0x01680000,
+	/* 675  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x146C),
+	/* 676  */ (void*)0x01690000,
+	/* 677  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x147D),
+	/* 678  */ (void*)0x016A0000,
+	/* 679  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x148E),
+	/* 680  */ (void*)0x016B0000,
+	/* 681  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x14A0),
+	/* 682  */ (void*)0x016C0000,
+	/* 683  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x14AF),
+	/* 684  */ (void*)0x016D0000,
+	/* 685  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x14C1),
+	/* 686  */ (void*)0x016E0000,
+	/* 687  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x14CF),
+	/* 688  */ (void*)0x016F0000,
+	/* 689  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x14DA),
+	/* 690  */ (void*)0x01700000,
+	/* 691  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x14EA),
+	/* 692  */ (void*)0x01710000,
+	/* 693  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x14F9),
+	/* 694  */ (void*)0x01720000,
+	/* 695  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x150B),
+	/* 696  */ (void*)0x01730000,
+	/* 697  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x151D),
+	/* 698  */ (void*)0x01740000,
+	/* 699  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1532),
+	/* 700  */ (void*)0x01750000,
+	/* 701  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x154B),
+	/* 702  */ (void*)0x01760000,
+	/* 703  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x155A),
+	/* 704  */ (void*)0x01770000,
+	/* 705  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1568),
+	/* 706  */ (void*)0x01780000,
+	/* 707  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x157A),
+	/* 708  */ (void*)0x01790000,
+	/* 709  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1589),
+	/* 710  */ (void*)0x017A0000,
+	/* 711  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1598),
+	/* 712  */ (void*)0x017B0000,
+	/* 713  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x15A7),
+	/* 714  */ (void*)0x017C0000,
+	/* 715  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x15BA),
+	/* 716  */ (void*)0x017D0000,
+	/* 717  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x15CC),
+	/* 718  */ (void*)0x017E0000,
+	/* 719  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x15D8),
+	/* 720  */ (void*)0x017F0000,
+	/* 721  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x15E3),
+	/* 722  */ (void*)0x01800000,
+	/* 723  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x15F7),
+	/* 724  */ (void*)0x01810000,
+	/* 725  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x160A),
+	/* 726  */ (void*)0x01820000,
+	/* 727  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x161C),
+	/* 728  */ (void*)0x01830000,
+	/* 729  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x162D),
+	/* 730  */ (void*)0x01840000,
+	/* 731  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x163D),
+	/* 732  */ (void*)0x01850000,
+	/* 733  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1652),
+	/* 734  */ (void*)0x01860000,
+	/* 735  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1666),
+	/* 736  */ (void*)0x01870000,
+	/* 737  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1672),
+	/* 738  */ (void*)0x01880000,
+	/* 739  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1682),
+	/* 740  */ (void*)0x01890000,
+	/* 741  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1697),
+	/* 742  */ (void*)0x018A0000,
+	/* 743  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x16A8),
+	/* 744  */ (void*)0x018B0000,
+	/* 745  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x16BB),
+	/* 746  */ (void*)0x018C0000,
+	/* 747  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x16CD),
+	/* 748  */ (void*)0x018D0000,
+	/* 749  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x16DD),
+	/* 750  */ (void*)0x018E0000,
+	/* 751  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x16EF),
+	/* 752  */ (void*)0x018F0000,
+	/* 753  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1703),
+	/* 754  */ (void*)0x01900000,
+	/* 755  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1716),
+	/* 756  */ (void*)0x01910000,
+	/* 757  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1725),
+	/* 758  */ (void*)0x01920000,
+	/* 759  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1737),
+	/* 760  */ (void*)0x01930000,
+	/* 761  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x174B),
+	/* 762  */ (void*)0x01940000,
+	/* 763  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x175A),
+	/* 764  */ (void*)0x01950000,
+	/* 765  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x176B),
+	/* 766  */ (void*)0x01960000,
+	/* 767  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1779),
+	/* 768  */ (void*)0x01970000,
+	/* 769  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x178B),
+	/* 770  */ (void*)0x01980000,
+	/* 771  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1798),
+	/* 772  */ (void*)0x01990000,
+	/* 773  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x17A4),
+	/* 774  */ (void*)0x019A0000,
+	/* 775  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x17B4),
+	/* 776  */ (void*)0x019B0000,
+	/* 777  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x17C4),
+	/* 778  */ (void*)0x019C0000,
+	/* 779  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x17D6),
+	/* 780  */ (void*)0x019D0000,
+	/* 781  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x17E6),
+	/* 782  */ (void*)0x019E0000,
+	/* 783  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x17F6),
+	/* 784  */ (void*)0x019F0000,
+	/* 785  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1806),
+	/* 786  */ (void*)0x01A00000,
+	/* 787  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1816),
+	/* 788  */ (void*)0x01A10000,
+	/* 789  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1826),
+	/* 790  */ (void*)0x01A20000,
+	/* 791  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1831),
+	/* 792  */ (void*)0x01A30000,
+	/* 793  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1843),
+	/* 794  */ (void*)0x01A40000,
+	/* 795  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1855),
+	/* 796  */ (void*)0x01A50000,
+	/* 797  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1865),
+	/* 798  */ (void*)0x01A60000,
+	/* 799  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1879),
+	/* 800  */ (void*)0x01A70000,
+	/* 801  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1889),
+	/* 802  */ (void*)0x01A80000,
+	/* 803  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1899),
+	/* 804  */ (void*)0x01A90000,
+	/* 805  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x18A6),
+	/* 806  */ (void*)0x01AA0000,
+	/* 807  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x18B9),
+	/* 808  */ (void*)0x01AB0000,
+	/* 809  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x18CD),
+	/* 810  */ (void*)0x01AC0000,
+	/* 811  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x18DE),
+	/* 812  */ (void*)0x01AD0000,
+	/* 813  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x18EC),
+	/* 814  */ (void*)0x01AE0000,
+	/* 815  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x18FB),
+	/* 816  */ (void*)0x01AF0000,
+	/* 817  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x190E),
+	/* 818  */ (void*)0x01B00000,
+	/* 819  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1917),
+	/* 820  */ (void*)0x01B10000,
+	/* 821  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1920),
+	/* 822  */ (void*)0x01B20000,
+	/* 823  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x192A),
+	/* 824  */ (void*)0x01B30000,
+	/* 825  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1933),
+	/* 826  */ (void*)0x01B40000,
+	/* 827  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x193C),
+	/* 828  */ (void*)0x01B50000,
+	/* 829  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1945),
+	/* 830  */ (void*)0x01B60000,
+	/* 831  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x194E),
+	/* 832  */ (void*)0x01B70000,
+	/* 833  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1957),
+	/* 834  */ (void*)0x01B80000,
+	/* 835  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1960),
+	/* 836  */ (void*)0x01B90000,
+	/* 837  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1969),
+	/* 838  */ (void*)0x01BA0000,
+	/* 839  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1972),
+	/* 840  */ (void*)0x01BB0000,
+	/* 841  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x197B),
+	/* 842  */ (void*)0x01BC0000,
+	/* 843  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1984),
+	/* 844  */ (void*)0x01BD0000,
+	/* 845  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x198D),
+	/* 846  */ (void*)0x01BE0000,
+	/* 847  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1996),
+	/* 848  */ (void*)0x01BF0000,
+	/* 849  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x19A0),
+	/* 850  */ (void*)0x01C00000,
+	/* 851  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x19A9),
+	/* 852  */ (void*)0x01C10000,
+	/* 853  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x19B7),
+	/* 854  */ (void*)0x01C20000,
+	/* 855  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x19C0),
+	/* 856  */ (void*)0x01C30000,
+	/* 857  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x19C9),
+	/* 858  */ (void*)0x01C40000,
+	/* 859  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x19D2),
+	/* 860  */ (void*)0x01C50000,
+	/* 861  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x19DF),
+	/* 862  */ (void*)0x01C60000,
+	/* 863  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x19E8),
+	/* 864  */ (void*)0x01C70000,
+	/* 865  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x19F6),
+	/* 866  */ (void*)0x01C80000,
+	/* 867  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x19FF),
+	/* 868  */ (void*)0x01C90000,
+	/* 869  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A08),
+	/* 870  */ (void*)0x01CA0000,
+	/* 871  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A11),
+	/* 872  */ (void*)0x01CB0000,
+	/* 873  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A1F),
+	/* 874  */ (void*)0x01CC0000,
+	/* 875  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A2C),
+	/* 876  */ (void*)0x01CD0000,
+	/* 877  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A35),
+	/* 878  */ (void*)0x01CE0000,
+	/* 879  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A3E),
+	/* 880  */ (void*)0x01CF0000,
+	/* 881  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A4C),
+	/* 882  */ (void*)0x01D00000,
+	/* 883  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A55),
+	/* 884  */ (void*)0x01D10000,
+	/* 885  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A5E),
+	/* 886  */ (void*)0x01D20000,
+	/* 887  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A68),
+	/* 888  */ (void*)0x01D30000,
+	/* 889  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A76),
+	/* 890  */ (void*)0x01D40000,
+	/* 891  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A7F),
+	/* 892  */ (void*)0x01D50000,
+	/* 893  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A88),
+	/* 894  */ (void*)0x01D60000,
+	/* 895  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A92),
+	/* 896  */ (void*)0x01D70000,
+	/* 897  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1A9C),
+	/* 898  */ (void*)0x01D80000,
+	/* 899  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1AA5),
+	/* 900  */ (void*)0x01D90000,
+	/* 901  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1AAE),
+	/* 902  */ (void*)0x01DA0000,
+	/* 903  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1AB7),
+	/* 904  */ (void*)0x01DB0000,
+	/* 905  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1AC0),
+	/* 906  */ (void*)0x01DC0000,
+	/* 907  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1AC9),
+	/* 908  */ (void*)0x01DD0000,
+	/* 909  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1AD2),
+	/* 910  */ (void*)0x01DE0000,
+	/* 911  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1ADB),
+	/* 912  */ (void*)0x01DF0000,
+	/* 913  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1AE4),
+	/* 914  */ (void*)0x01E00000,
+	/* 915  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1AED),
+	/* 916  */ (void*)0x01E10000,
+	/* 917  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1AF6),
+	/* 918  */ (void*)0x01E20000,
+	/* 919  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1AFF),
+	/* 920  */ (void*)0x01E30000,
+	/* 921  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B08),
+	/* 922  */ (void*)0x01E40000,
+	/* 923  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B11),
+	/* 924  */ (void*)0x01E50000,
+	/* 925  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B1A),
+	/* 926  */ (void*)0x01E60000,
+	/* 927  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B23),
+	/* 928  */ (void*)0x01E70000,
+	/* 929  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B2C),
+	/* 930  */ (void*)0x01E80000,
+	/* 931  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B35),
+	/* 932  */ (void*)0x01E90000,
+	/* 933  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B40),
+	/* 934  */ (void*)0x01EA0000,
+	/* 935  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B49),
+	/* 936  */ (void*)0x01EB0000,
+	/* 937  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B52),
+	/* 938  */ (void*)0x01EC0000,
+	/* 939  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B5B),
+	/* 940  */ (void*)0x01ED0000,
+	/* 941  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B65),
+	/* 942  */ (void*)0x01EE0000,
+	/* 943  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B6F),
+	/* 944  */ (void*)0x01EF0000,
+	/* 945  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B78),
+	/* 946  */ (void*)0x01F00000,
+	/* 947  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B81),
+	/* 948  */ (void*)0x01F10000,
+	/* 949  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B8A),
+	/* 950  */ (void*)0x01F20000,
+	/* 951  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B93),
+	/* 952  */ (void*)0x01F30000,
+	/* 953  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1B9C),
+	/* 954  */ (void*)0x01F40000,
+	/* 955  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1BAC),
+	/* 956  */ (void*)0x01F50000,
+	/* 957  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1BB5),
+	/* 958  */ (void*)0x01F60000,
+	/* 959  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1BC2),
+	/* 960  */ (void*)0x01F70000,
+	/* 961  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1BCC),
+	/* 962  */ (void*)0x01F80000,
+	/* 963  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1BDD),
+	/* 964  */ (void*)0x01F90000,
+	/* 965  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1BEF),
+	/* 966  */ (void*)0x01FA0000,
+	/* 967  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1BF8),
+	/* 968  */ (void*)0x01FB0000,
+	/* 969  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C01),
+	/* 970  */ (void*)0x01FC0000,
+	/* 971  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C0A),
+	/* 972  */ (void*)0x01FD0000,
+	/* 973  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C13),
+	/* 974  */ (void*)0x01FE0000,
+	/* 975  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C1C),
+	/* 976  */ (void*)0x01FF0000,
+	/* 977  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C25),
+	/* 978  */ (void*)0x02000000,
+	/* 979  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C2E),
+	/* 980  */ (void*)0x02010000,
+	/* 981  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C37),
+	/* 982  */ (void*)0x02020000,
+	/* 983  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C40),
+	/* 984  */ (void*)0x02030000,
+	/* 985  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C4D),
+	/* 986  */ (void*)0x02040000,
+	/* 987  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C5B),
+	/* 988  */ (void*)0x02050000,
+	/* 989  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C68),
+	/* 990  */ (void*)0x02060000,
+	/* 991  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C79),
+	/* 992  */ (void*)0x02070000,
+	/* 993  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C82),
+	/* 994  */ (void*)0x02080000,
+	/* 995  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C8B),
+	/* 996  */ (void*)0x02090000,
+	/* 997  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C94),
+	/* 998  */ (void*)0x020A0000,
+	/* 999  */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1C9D),
+	/* 1000 */ (void*)0x020B0000,
+	/* 1001 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1CA6),
+	/* 1002 */ (void*)0x020C0000,
+	/* 1003 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1CAF),
+	/* 1004 */ (void*)0x020D0000,
+	/* 1005 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1CB8),
+	/* 1006 */ (void*)0x020E0000,
+	/* 1007 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1CC1),
+	/* 1008 */ (void*)0x020F0000,
+	/* 1009 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1CCB),
+	/* 1010 */ (void*)0x02100000,
+	/* 1011 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1CD4),
+	/* 1012 */ (void*)0x02110000,
+	/* 1013 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1CDE),
+	/* 1014 */ (void*)0x02120000,
+	/* 1015 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1CE7),
+	/* 1016 */ (void*)0x02130000,
+	/* 1017 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1CF4),
+	/* 1018 */ (void*)0x02140000,
+	/* 1019 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1CFD),
+	/* 1020 */ (void*)0x02150000,
+	/* 1021 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D06),
+	/* 1022 */ (void*)0x02160000,
+	/* 1023 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D10),
+	/* 1024 */ (void*)0x02170000,
+	/* 1025 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D1A),
+	/* 1026 */ (void*)0x02190000,
+	/* 1027 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D2B),
+	/* 1028 */ (void*)0x021A0000,
+	/* 1029 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D3C),
+	/* 1030 */ (void*)0x021B0000,
+	/* 1031 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D4C),
+	/* 1032 */ (void*)0x021C0000,
+	/* 1033 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D63),
+	/* 1034 */ (void*)0x021D0000,
+	/* 1035 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D72),
+	/* 1036 */ (void*)0x021E0000,
+	/* 1037 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D80),
+	/* 1038 */ (void*)0x021F0000,
+	/* 1039 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D8E),
+	/* 1040 */ (void*)0x02200000,
+	/* 1041 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1D9B),
+	/* 1042 */ (void*)0x02210000,
+	/* 1043 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1DA6),
+	/* 1044 */ (void*)0x02220000,
+	/* 1045 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1DB0),
+	/* 1046 */ (void*)0x02230000,
+	/* 1047 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1DBC),
+	/* 1048 */ (void*)0x02240000,
+	/* 1049 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1DC7),
+	/* 1050 */ (void*)0x02250000,
+	/* 1051 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1DD3),
+	/* 1052 */ (void*)0x02260000,
+	/* 1053 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1DDD),
+	/* 1054 */ (void*)0x02270000,
+	/* 1055 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1DED),
+	/* 1056 */ (void*)0x02280000,
+	/* 1057 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1DFF),
+	/* 1058 */ (void*)0x02290000,
+	/* 1059 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E0D),
+	/* 1060 */ (void*)0x022A0000,
+	/* 1061 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E1D),
+	/* 1062 */ (void*)0x022B0000,
+	/* 1063 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E2E),
+	/* 1064 */ (void*)0x022C0000,
+	/* 1065 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E3E),
+	/* 1066 */ (void*)0x022D0000,
+	/* 1067 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E4B),
+	/* 1068 */ (void*)0x022E0000,
+	/* 1069 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E5B),
+	/* 1070 */ (void*)0x022F0000,
+	/* 1071 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E6E),
+	/* 1072 */ (void*)0x02300000,
+	/* 1073 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E81),
+	/* 1074 */ (void*)0x02310000,
+	/* 1075 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E8B),
+	/* 1076 */ (void*)0x02320000,
+	/* 1077 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E96),
+	/* 1078 */ (void*)0x02330000,
+	/* 1079 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1E9F),
+	/* 1080 */ (void*)0x02340000,
+	/* 1081 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1EAB),
+	/* 1082 */ (void*)0x02350000,
+	/* 1083 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1EB7),
+	/* 1084 */ (void*)0x02360000,
+	/* 1085 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1EC3),
+	/* 1086 */ (void*)0x02370000,
+	/* 1087 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1ECF),
+	/* 1088 */ (void*)0x02380000,
+	/* 1089 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1EDB),
+	/* 1090 */ (void*)0x02390000,
+	/* 1091 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1EE8),
+	/* 1092 */ (void*)0x023A0000,
+	/* 1093 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1EF4),
+	/* 1094 */ (void*)0x023B0000,
+	/* 1095 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F00),
+	/* 1096 */ (void*)0x023C0000,
+	/* 1097 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F0C),
+	/* 1098 */ (void*)0x023D0000,
+	/* 1099 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F18),
+	/* 1100 */ (void*)0x023E0000,
+	/* 1101 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F26),
+	/* 1102 */ (void*)0x023F0000,
+	/* 1103 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F34),
+	/* 1104 */ (void*)0x02400000,
+	/* 1105 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F42),
+	/* 1106 */ (void*)0x02410000,
+	/* 1107 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F52),
+	/* 1108 */ (void*)0x02420000,
+	/* 1109 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F62),
+	/* 1110 */ (void*)0x02430000,
+	/* 1111 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F6E),
+	/* 1112 */ (void*)0x02440000,
+	/* 1113 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F7A),
+	/* 1114 */ (void*)0x02450000,
+	/* 1115 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F87),
+	/* 1116 */ (void*)0x02460000,
+	/* 1117 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1F94),
+	/* 1118 */ (void*)0x02470000,
+	/* 1119 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1FA0),
+	/* 1120 */ (void*)0x02480000,
+	/* 1121 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1FAD),
+	/* 1122 */ (void*)0x02490000,
+	/* 1123 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1FBC),
+	/* 1124 */ (void*)0x024A0000,
+	/* 1125 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1FCB),
+	/* 1126 */ (void*)0x024B0000,
+	/* 1127 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1FDA),
+	/* 1128 */ (void*)0x024C0000,
+	/* 1129 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1FEB),
+	/* 1130 */ (void*)0x024D0000,
+	/* 1131 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x1FF9),
+	/* 1132 */ (void*)0x024E0000,
+	/* 1133 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x200D),
+	/* 1134 */ (void*)0x024F0000,
+	/* 1135 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2019),
+	/* 1136 */ (void*)0x02500000,
+	/* 1137 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2027),
+	/* 1138 */ (void*)0x02510000,
+	/* 1139 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2033),
+	/* 1140 */ (void*)0x02520000,
+	/* 1141 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x203F),
+	/* 1142 */ (void*)0x02530000,
+	/* 1143 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2054),
+	/* 1144 */ (void*)0x02540000,
+	/* 1145 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2062),
+	/* 1146 */ (void*)0x02550000,
+	/* 1147 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2070),
+	/* 1148 */ (void*)0x02560000,
+	/* 1149 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x207E),
+	/* 1150 */ (void*)0x02570000,
+	/* 1151 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x208D),
+	/* 1152 */ (void*)0x02580000,
+	/* 1153 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2099),
+	/* 1154 */ (void*)0x02590000,
+	/* 1155 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x20A7),
+	/* 1156 */ (void*)0x025A0000,
+	/* 1157 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x20B4),
+	/* 1158 */ (void*)0x025B0000,
+	/* 1159 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x20BF),
+	/* 1160 */ (void*)0x025C0000,
+	/* 1161 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x20D0),
+	/* 1162 */ (void*)0x025D0000,
+	/* 1163 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x20DC),
+	/* 1164 */ (void*)0x025E0000,
+	/* 1165 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x20EA),
+	/* 1166 */ (void*)0x025F0000,
+	/* 1167 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x20F9),
+	/* 1168 */ (void*)0x02600000,
+	/* 1169 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2107),
+	/* 1170 */ (void*)0x02610000,
+	/* 1171 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2114),
+	/* 1172 */ (void*)0x02620000,
+	/* 1173 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2121),
+	/* 1174 */ (void*)0x02630000,
+	/* 1175 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x212D),
+	/* 1176 */ (void*)0x02640000,
+	/* 1177 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x213A),
+	/* 1178 */ (void*)0x02650000,
+	/* 1179 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2147),
+	/* 1180 */ (void*)0x02660000,
+	/* 1181 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2154),
+	/* 1182 */ (void*)0x02670000,
+	/* 1183 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2161),
+	/* 1184 */ (void*)0x02680000,
+	/* 1185 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x216E),
+	/* 1186 */ (void*)0x02690000,
+	/* 1187 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x217C),
+	/* 1188 */ (void*)0x026A0000,
+	/* 1189 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x218B),
+	/* 1190 */ (void*)0x026B0000,
+	/* 1191 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x219A),
+	/* 1192 */ (void*)0x026C0000,
+	/* 1193 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x21A9),
+	/* 1194 */ (void*)0x026D0000,
+	/* 1195 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x21BB),
+	/* 1196 */ (void*)0x026E0000,
+	/* 1197 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x21C8),
+	/* 1198 */ (void*)0x026F0000,
+	/* 1199 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x21D5),
+	/* 1200 */ (void*)0x02700000,
+	/* 1201 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x21E8),
+	/* 1202 */ (void*)0x02710000,
+	/* 1203 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x21FB),
+	/* 1204 */ (void*)0x02720000,
+	/* 1205 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x220E),
+	/* 1206 */ (void*)0x02730000,
+	/* 1207 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x221C),
+	/* 1208 */ (void*)0x02740000,
+	/* 1209 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2228),
+	/* 1210 */ (void*)0x02750000,
+	/* 1211 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2234),
+	/* 1212 */ (void*)0x02760000,
+	/* 1213 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2240),
+	/* 1214 */ (void*)0x02770000,
+	/* 1215 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x224C),
+	/* 1216 */ (void*)0x02780000,
+	/* 1217 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2258),
+	/* 1218 */ (void*)0x02790000,
+	/* 1219 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2265),
+	/* 1220 */ (void*)0x027A0000,
+	/* 1221 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2271),
+	/* 1222 */ (void*)0x027B0000,
+	/* 1223 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x227F),
+	/* 1224 */ (void*)0x027C0000,
+	/* 1225 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x228B),
+	/* 1226 */ (void*)0x027D0000,
+	/* 1227 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2297),
+	/* 1228 */ (void*)0x027E0000,
+	/* 1229 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x22A4),
+	/* 1230 */ (void*)0x027F0000,
+	/* 1231 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x22B1),
+	/* 1232 */ (void*)0x02800000,
+	/* 1233 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x22BF),
+	/* 1234 */ (void*)0x02810000,
+	/* 1235 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x22CC),
+	/* 1236 */ (void*)0x02820000,
+	/* 1237 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x22DA),
+	/* 1238 */ (void*)0x02830000,
+	/* 1239 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x22ED),
+	/* 1240 */ (void*)0x02840000,
+	/* 1241 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x22F9),
+	/* 1242 */ (void*)0x02850000,
+	/* 1243 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2305),
+	/* 1244 */ (void*)0x02860000,
+	/* 1245 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2315),
+	/* 1246 */ (void*)0x02870000,
+	/* 1247 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2323),
+	/* 1248 */ (void*)0x02880000,
+	/* 1249 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2331),
+	/* 1250 */ (void*)0x02890000,
+	/* 1251 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x233E),
+	/* 1252 */ (void*)0x028A0000,
+	/* 1253 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x234F),
+	/* 1254 */ (void*)0x028B0000,
+	/* 1255 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x235E),
+	/* 1256 */ (void*)0x028C0000,
+	/* 1257 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x236B),
+	/* 1258 */ (void*)0x028D0000,
+	/* 1259 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x237C),
+	/* 1260 */ (void*)0x028E0000,
+	/* 1261 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x238D),
+	/* 1262 */ (void*)0x028F0000,
+	/* 1263 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x239C),
+	/* 1264 */ (void*)0x02900000,
+	/* 1265 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x23AB),
+	/* 1266 */ (void*)0x02910000,
+	/* 1267 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x23BB),
+	/* 1268 */ (void*)0x02920000,
+	/* 1269 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x23C8),
+	/* 1270 */ (void*)0x02930000,
+	/* 1271 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x23D6),
+	/* 1272 */ (void*)0x02940000,
+	/* 1273 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x23E8),
+	/* 1274 */ (void*)0x02950000,
+	/* 1275 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x23F7),
+	/* 1276 */ (void*)0x02960000,
+	/* 1277 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2405),
+	/* 1278 */ (void*)0x02970000,
+	/* 1279 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2413),
+	/* 1280 */ (void*)0x02980000,
+	/* 1281 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2421),
+	/* 1282 */ (void*)0x02990000,
+	/* 1283 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x242D),
+	/* 1284 */ (void*)0x029A0000,
+	/* 1285 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x243A),
+	/* 1286 */ (void*)0x029B0000,
+	/* 1287 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2447),
+	/* 1288 */ (void*)0x029C0000,
+	/* 1289 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2456),
+	/* 1290 */ (void*)0x029D0000,
+	/* 1291 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2463),
+	/* 1292 */ (void*)0x029E0000,
+	/* 1293 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2471),
+	/* 1294 */ (void*)0x029F0000,
+	/* 1295 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x247E),
+	/* 1296 */ (void*)0x02A00000,
+	/* 1297 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x248E),
+	/* 1298 */ (void*)0x02A10000,
+	/* 1299 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x249D),
+	/* 1300 */ (void*)0x02A20000,
+	/* 1301 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x24AF),
+	/* 1302 */ (void*)0x02A30000,
+	/* 1303 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x24C0),
+	/* 1304 */ (void*)0x02A40000,
+	/* 1305 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x24D2),
+	/* 1306 */ (void*)0x02A50000,
+	/* 1307 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x24E3),
+	/* 1308 */ (void*)0x02A60000,
+	/* 1309 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x24F0),
+	/* 1310 */ (void*)0x02A70000,
+	/* 1311 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x24FC),
+	/* 1312 */ (void*)0x02A80000,
+	/* 1313 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x250A),
+	/* 1314 */ (void*)0x02A90000,
+	/* 1315 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2515),
+	/* 1316 */ (void*)0x02AA0000,
+	/* 1317 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2520),
+	/* 1318 */ (void*)0x02AB0000,
+	/* 1319 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x252C),
+	/* 1320 */ (void*)0x02AC0000,
+	/* 1321 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2538),
+	/* 1322 */ (void*)0x02AD0000,
+	/* 1323 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2544),
+	/* 1324 */ (void*)0x02AE0000,
+	/* 1325 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2550),
+	/* 1326 */ (void*)0x02AF0000,
+	/* 1327 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x255C),
+	/* 1328 */ (void*)0x02B00000,
+	/* 1329 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2568),
+	/* 1330 */ (void*)0x02B10000,
+	/* 1331 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2574),
+	/* 1332 */ (void*)0x02B20000,
+	/* 1333 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2580),
+	/* 1334 */ (void*)0x02B30000,
+	/* 1335 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x258C),
+	/* 1336 */ (void*)0x02B40000,
+	/* 1337 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2598),
+	/* 1338 */ (void*)0x02B50000,
+	/* 1339 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x25A4),
+	/* 1340 */ (void*)0x02B60000,
+	/* 1341 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x25B0),
+	/* 1342 */ (void*)0x02B70000,
+	/* 1343 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x25BC),
+	/* 1344 */ (void*)0x02B80000,
+	/* 1345 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x25C8),
+	/* 1346 */ (void*)0x02B90000,
+	/* 1347 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x25D4),
+	/* 1348 */ (void*)0x02BA0000,
+	/* 1349 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x25E0),
+	/* 1350 */ (void*)0x02BB0000,
+	/* 1351 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x25EC),
+	/* 1352 */ (void*)0x02BC0000,
+	/* 1353 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x25F8),
+	/* 1354 */ (void*)0x02BD0000,
+	/* 1355 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2601),
+	/* 1356 */ (void*)0x02BE0000,
+	/* 1357 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x260A),
+	/* 1358 */ (void*)0x02BF0000,
+	/* 1359 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2618),
+	/* 1360 */ (void*)0x02C00000,
+	/* 1361 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2626),
+	/* 1362 */ (void*)0x02C10000,
+	/* 1363 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2636),
+	/* 1364 */ (void*)0x02C20000,
+	/* 1365 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2644),
+	/* 1366 */ (void*)0x02C30000,
+	/* 1367 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2651),
+	/* 1368 */ (void*)0x02C40000,
+	/* 1369 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x265F),
+	/* 1370 */ (void*)0x02C50000,
+	/* 1371 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x266D),
+	/* 1372 */ (void*)0x02C60000,
+	/* 1373 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x267C),
+	/* 1374 */ (void*)0x02C70000,
+	/* 1375 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x268B),
+	/* 1376 */ (void*)0x02C80000,
+	/* 1377 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x269A),
+	/* 1378 */ (void*)0x02C90000,
+	/* 1379 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x26A9),
+	/* 1380 */ (void*)0x02CA0000,
+	/* 1381 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x26B9),
+	/* 1382 */ (void*)0x02CB0000,
+	/* 1383 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x26C9),
+	/* 1384 */ (void*)0x02CC0000,
+	/* 1385 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x26D9),
+	/* 1386 */ (void*)0x02CD0000,
+	/* 1387 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x26EB),
+	/* 1388 */ (void*)0x02CE0000,
+	/* 1389 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x26FE),
+	/* 1390 */ (void*)0x02CF0000,
+	/* 1391 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2709),
+	/* 1392 */ (void*)0x02D00000,
+	/* 1393 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2718),
+	/* 1394 */ (void*)0x02D10000,
+	/* 1395 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2729),
+	/* 1396 */ (void*)0x02D20000,
+	/* 1397 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2737),
+	/* 1398 */ (void*)0x02D30000,
+	/* 1399 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2743),
+	/* 1400 */ (void*)0x02D40000,
+	/* 1401 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2751),
+	/* 1402 */ (void*)0x02D50000,
+	/* 1403 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x275E),
+	/* 1404 */ (void*)0x02D60000,
+	/* 1405 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x276A),
+	/* 1406 */ (void*)0x02D70000,
+	/* 1407 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x277A),
+	/* 1408 */ (void*)0x02D80000,
+	/* 1409 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2787),
+	/* 1410 */ (void*)0x02DA0000,
+	/* 1411 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2792),
+	/* 1412 */ (void*)0x02DB0000,
+	/* 1413 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x279C),
+	/* 1414 */ (void*)0x02DC0000,
+	/* 1415 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x27A7),
+	/* 1416 */ (void*)0x02DD0000,
+	/* 1417 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x27AE),
+	/* 1418 */ (void*)0x02DE0000,
+	/* 1419 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x27BC),
+	/* 1420 */ (void*)0x02DF0000,
+	/* 1421 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x27C7),
+	/* 1422 */ (void*)0x02E00000,
+	/* 1423 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x27D2),
+	/* 1424 */ (void*)0x02E10000,
+	/* 1425 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x27E3),
+	/* 1426 */ (void*)0x02E20000,
+	/* 1427 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x27ED),
+	/* 1428 */ (void*)0x02E30000,
+	/* 1429 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x27F4),
+	/* 1430 */ (void*)0x02E40000,
+	/* 1431 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x27FE),
+	/* 1432 */ (void*)0x02E50000,
+	/* 1433 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2809),
+	/* 1434 */ (void*)0x02E60000,
+	/* 1435 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2815),
+	/* 1436 */ (void*)0x02E70000,
+	/* 1437 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2820),
+	/* 1438 */ (void*)0x02E80000,
+	/* 1439 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x282B),
+	/* 1440 */ (void*)0x02E90000,
+	/* 1441 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2839),
+	/* 1442 */ (void*)0x02EA0000,
+	/* 1443 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2849),
+	/* 1444 */ (void*)0x02EB0000,
+	/* 1445 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2858),
+	/* 1446 */ (void*)0x02EC0000,
+	/* 1447 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2865),
+	/* 1448 */ (void*)0x02ED0000,
+	/* 1449 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2872),
+	/* 1450 */ (void*)0x02EE0000,
+	/* 1451 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x287E),
+	/* 1452 */ (void*)0x02EF0000,
+	/* 1453 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x288A),
+	/* 1454 */ (void*)0x02F00000,
+	/* 1455 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2897),
+	/* 1456 */ (void*)0x02F10000,
+	/* 1457 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x28A2),
+	/* 1458 */ (void*)0x02F20000,
+	/* 1459 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x28AC),
+	/* 1460 */ (void*)0x02F30000,
+	/* 1461 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x28BB),
+	/* 1462 */ (void*)0x02F40000,
+	/* 1463 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x28C4),
+	/* 1464 */ (void*)0x02F50000,
+	/* 1465 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x28CD),
+	/* 1466 */ (void*)0x02F60000,
+	/* 1467 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x28DB),
+	/* 1468 */ (void*)0x02F70000,
+	/* 1469 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x28EB),
+	/* 1470 */ (void*)0x02F80000,
+	/* 1471 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x28FB),
+	/* 1472 */ (void*)0x02F90000,
+	/* 1473 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x290B),
+	/* 1474 */ (void*)0x02FA0000,
+	/* 1475 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x291C),
+	/* 1476 */ (void*)0x02FB0000,
+	/* 1477 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x292B),
+	/* 1478 */ (void*)0x02FC0000,
+	/* 1479 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2938),
+	/* 1480 */ (void*)0x02FD0000,
+	/* 1481 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2946),
+	/* 1482 */ (void*)0x02FE0000,
+	/* 1483 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2954),
+	/* 1484 */ (void*)0x02FF0000,
+	/* 1485 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x295F),
+	/* 1486 */ (void*)0x03000000,
+	/* 1487 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x296C),
+	/* 1488 */ (void*)0x03010000,
+	/* 1489 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2973),
+	/* 1490 */ (void*)0x03040000,
+	/* 1491 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x297F),
+	/* 1492 */ (void*)0x03050000,
+	/* 1493 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2988),
+	/* 1494 */ (void*)0x03060000,
+	/* 1495 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2996),
+	/* 1496 */ (void*)0x03070000,
+	/* 1497 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x29A7),
+	/* 1498 */ (void*)0x03080000,
+	/* 1499 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x29B2),
+	/* 1500 */ (void*)0x03090000,
+	/* 1501 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x29BC),
+	/* 1502 */ (void*)0x030A0000,
+	/* 1503 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x29CA),
+	/* 1504 */ (void*)0x030B0000,
+	/* 1505 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x29DA),
+	/* 1506 */ (void*)0x030C0000,
+	/* 1507 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x29E8),
+	/* 1508 */ (void*)0x030F0000,
+	/* 1509 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x29F7),
+	/* 1510 */ (void*)0x03100000,
+	/* 1511 */ (void*)(((char*)&c_c_dylink__stringBase0)+0x2A03),
+	/* 1512 */ (void*)0xFFFF0000,
+	/* 1513 */ (void*)NULL,
 };
 
-/* 803F0F50-803F1BB0 0C60+00 rc=0 efc=0 .bss       DMC                                                          */
-u8 DMC[3168];
+/* 80375DE8-80378878 2A8F+01 rc=3 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD static char const* const stringBase_80375DE8 = "d_a_alldie";
+SECTION_DEAD static char const* const stringBase_80375DF3 = "d_a_obj_swpush";
+SECTION_DEAD static char const* const stringBase_80375E02 = "d_a_obj_swpush2";
+SECTION_DEAD static char const* const stringBase_80375E12 = "d_a_obj_swpush5";
+SECTION_DEAD static char const* const stringBase_80375E22 = "d_a_tag_gstart";
+SECTION_DEAD static char const* const stringBase_80375E31 = "d_a_obj_lv6elevta";
+SECTION_DEAD static char const* const stringBase_80375E43 = "d_a_obj_so";
+SECTION_DEAD static char const* const stringBase_80375E4E = "d_a_obj_movebox";
+SECTION_DEAD static char const* const stringBase_80375E5E = "d_a_obj_swturn";
+SECTION_DEAD static char const* const stringBase_80375E6D = "d_a_obj_lv6swturn";
+SECTION_DEAD static char const* const stringBase_80375E7F = "d_a_obj_sekizoa";
+SECTION_DEAD static char const* const stringBase_80375E8F = "d_a_obj_gra2";
+SECTION_DEAD static char const* const stringBase_80375E9C = "d_a_tag_gra";
+SECTION_DEAD static char const* const stringBase_80375EA8 = "d_a_tag_yami";
+SECTION_DEAD static char const* const stringBase_80375EB5 = "d_a_obj_ladder";
+SECTION_DEAD static char const* const stringBase_80375EC4 = "d_a_obj_brakeeff";
+SECTION_DEAD static char const* const stringBase_80375ED5 = "d_a_obj_fmobj";
+SECTION_DEAD static char const* const stringBase_80375EE3 = "d_a_obj_lbox";
+SECTION_DEAD static char const* const stringBase_80375EF0 = "d_a_obj_web0";
+SECTION_DEAD static char const* const stringBase_80375EFD = "d_a_obj_web1";
+SECTION_DEAD static char const* const stringBase_80375F0A = "d_a_obj_cb";
+SECTION_DEAD static char const* const stringBase_80375F15 = "d_a_obj_maki";
+SECTION_DEAD static char const* const stringBase_80375F22 = "d_a_obj_brg";
+SECTION_DEAD static char const* const stringBase_80375F2E = "d_a_obj_gb";
+SECTION_DEAD static char const* const stringBase_80375F39 = "d_a_obj_gm";
+SECTION_DEAD static char const* const stringBase_80375F44 = "d_a_obj_toby";
+SECTION_DEAD static char const* const stringBase_80375F51 = "d_a_obj_tp";
+SECTION_DEAD static char const* const stringBase_80375F5C = "d_a_obj_treesh";
+SECTION_DEAD static char const* const stringBase_80375F6B = "d_a_obj_zdoor";
+SECTION_DEAD static char const* const stringBase_80375F79 = "d_a_obj_pillar";
+SECTION_DEAD static char const* const stringBase_80375F88 = "d_a_obj_cdoor";
+SECTION_DEAD static char const* const stringBase_80375F96 = "d_a_obj_groundwater";
+SECTION_DEAD static char const* const stringBase_80375FAA = "d_a_obj_rotBridge";
+SECTION_DEAD static char const* const stringBase_80375FBC = "d_a_obj_magLift";
+SECTION_DEAD static char const* const stringBase_80375FCC = "d_a_obj_magLiftRot";
+SECTION_DEAD static char const* const stringBase_80375FDF = "d_a_obj_lv1Candle00";
+SECTION_DEAD static char const* const stringBase_80375FF3 = "d_a_obj_lv1Candle01";
+SECTION_DEAD static char const* const stringBase_80376007 = "d_a_obj_TvCdlst";
+SECTION_DEAD static char const* const stringBase_80376017 = "d_a_obj_hsTarget";
+SECTION_DEAD static char const* const stringBase_80376028 = "d_a_obj_heavySw";
+SECTION_DEAD static char const* const stringBase_80376038 = "d_a_obj_goGate";
+SECTION_DEAD static char const* const stringBase_80376047 = "d_a_obj_taFence";
+SECTION_DEAD static char const* const stringBase_80376057 = "d_a_obj_saidan";
+SECTION_DEAD static char const* const stringBase_80376066 = "d_a_obj_spinLift";
+SECTION_DEAD static char const* const stringBase_80376077 = "d_a_obj_bmWindow";
+SECTION_DEAD static char const* const stringBase_80376088 = "d_a_obj_rfHole";
+SECTION_DEAD static char const* const stringBase_80376097 = "d_a_obj_waterPillar";
+SECTION_DEAD static char const* const stringBase_803760AB = "d_a_obj_syRock";
+SECTION_DEAD static char const* const stringBase_803760BA = "d_a_obj_bsGate";
+SECTION_DEAD static char const* const stringBase_803760C9 = "d_a_obj_amiShutter";
+SECTION_DEAD static char const* const stringBase_803760DC = "d_a_obj_waterGate";
+SECTION_DEAD static char const* const stringBase_803760EE = "d_a_obj_lv2Candle";
+SECTION_DEAD static char const* const stringBase_80376100 = "d_a_obj_togeTrap";
+SECTION_DEAD static char const* const stringBase_80376111 = "d_a_obj_rotTrap";
+SECTION_DEAD static char const* const stringBase_80376121 = "d_a_obj_sWallShutter";
+SECTION_DEAD static char const* const stringBase_80376136 = "d_a_obj_lv5IceWall";
+SECTION_DEAD static char const* const stringBase_80376149 = "d_a_obj_lv5SwIce";
+SECTION_DEAD static char const* const stringBase_8037615A = "d_a_obj_lv5FloorBoard";
+SECTION_DEAD static char const* const stringBase_80376170 = "d_a_obj_Turara";
+SECTION_DEAD static char const* const stringBase_8037617F = "d_a_obj_twGate";
+SECTION_DEAD static char const* const stringBase_8037618E = "d_a_obj_digholl";
+SECTION_DEAD static char const* const stringBase_8037619E = "d_a_obj_digplace";
+SECTION_DEAD static char const* const stringBase_803761AF = "d_a_obj_testcube";
+SECTION_DEAD static char const* const stringBase_803761C0 = "d_a_obj_kshutter";
+SECTION_DEAD static char const* const stringBase_803761D1 = "d_a_npc_coach";
+SECTION_DEAD static char const* const stringBase_803761DF = "d_a_npc_theB";
+SECTION_DEAD static char const* const stringBase_803761EC = "d_a_coach_fire";
+SECTION_DEAD static char const* const stringBase_803761FB = "d_a_coach_2D";
+SECTION_DEAD static char const* const stringBase_80376208 = "d_a_balloon_2D";
+SECTION_DEAD static char const* const stringBase_80376217 = "d_a_skip_2D";
+SECTION_DEAD static char const* const stringBase_80376223 = "d_a_obj_mvstair";
+SECTION_DEAD static char const* const stringBase_80376233 = "d_a_obj_cowdoor";
+SECTION_DEAD static char const* const stringBase_80376243 = "d_a_obj_swpropeller";
+SECTION_DEAD static char const* const stringBase_80376257 = "d_a_obj_bmshutter";
+SECTION_DEAD static char const* const stringBase_80376269 = "d_a_npc_ks";
+SECTION_DEAD static char const* const stringBase_80376274 = "d_a_obj_hfuta";
+SECTION_DEAD static char const* const stringBase_80376282 = "d_a_obj_bkdoor";
+SECTION_DEAD static char const* const stringBase_80376291 = "d_a_obj_cboard";
+SECTION_DEAD static char const* const stringBase_803762A0 = "d_a_obj_mgate";
+SECTION_DEAD static char const* const stringBase_803762AE = "d_a_obj_ikada";
+SECTION_DEAD static char const* const stringBase_803762BC = "d_a_obj_ice_l";
+SECTION_DEAD static char const* const stringBase_803762CA = "d_a_obj_ice_s";
+SECTION_DEAD static char const* const stringBase_803762D8 = "d_a_obj_enemy_create";
+SECTION_DEAD static char const* const stringBase_803762ED = "d_a_obj_bhbridge";
+SECTION_DEAD static char const* const stringBase_803762FE = "d_a_obj_kaisou";
+SECTION_DEAD static char const* const stringBase_8037630D = "d_a_obj_hhashi";
+SECTION_DEAD static char const* const stringBase_8037631C = "d_a_obj_bhashi";
+SECTION_DEAD static char const* const stringBase_8037632B = "d_a_obj_octhashi";
+SECTION_DEAD static char const* const stringBase_8037633C = "d_a_obj_thashi";
+SECTION_DEAD static char const* const stringBase_8037634B = "d_a_obj_crvgate";
+SECTION_DEAD static char const* const stringBase_8037635B = "d_a_obj_crvfence";
+SECTION_DEAD static char const* const stringBase_8037636C = "d_a_obj_crvhahen";
+SECTION_DEAD static char const* const stringBase_8037637D = "d_a_obj_crvsteel";
+SECTION_DEAD static char const* const stringBase_8037638E = "d_a_obj_crvlh_up";
+SECTION_DEAD static char const* const stringBase_8037639F = "d_a_obj_crvlh_down";
+SECTION_DEAD static char const* const stringBase_803763B2 = "d_a_obj_riverrock";
+SECTION_DEAD static char const* const stringBase_803763C4 = "d_a_obj_dust";
+SECTION_DEAD static char const* const stringBase_803763D1 = "d_a_obj_ita";
+SECTION_DEAD static char const* const stringBase_803763DD = "d_a_obj_window";
+SECTION_DEAD static char const* const stringBase_803763EC = "d_a_obj_metalbox";
+SECTION_DEAD static char const* const stringBase_803763FD = "d_a_obj_bbox";
+SECTION_DEAD static char const* const stringBase_8037640A = "d_a_obj_msima";
+SECTION_DEAD static char const* const stringBase_80376418 = "d_a_obj_myogan";
+SECTION_DEAD static char const* const stringBase_80376427 = "d_a_b_zant_sima";
+SECTION_DEAD static char const* const stringBase_80376437 = "d_a_obj_cblock";
+SECTION_DEAD static char const* const stringBase_80376446 = "d_a_obj_cwall";
+SECTION_DEAD static char const* const stringBase_80376454 = "d_a_obj_kgate";
+SECTION_DEAD static char const* const stringBase_80376462 = "d_a_obj_rgate";
+SECTION_DEAD static char const* const stringBase_80376470 = "d_a_obj_onsen";
+SECTION_DEAD static char const* const stringBase_8037647E = "d_a_obj_chest";
+SECTION_DEAD static char const* const stringBase_8037648C = "d_a_obj_bemos";
+SECTION_DEAD static char const* const stringBase_8037649A = "d_a_obj_rope_bridge";
+SECTION_DEAD static char const* const stringBase_803764AE = "d_a_obj_well_cover";
+SECTION_DEAD static char const* const stringBase_803764C1 = "d_a_obj_grave_stone";
+SECTION_DEAD static char const* const stringBase_803764D5 = "d_a_obj_zra_rock";
+SECTION_DEAD static char const* const stringBase_803764E6 = "d_a_obj_gra_rock";
+SECTION_DEAD static char const* const stringBase_803764F7 = "d_a_obj_grz_rock";
+SECTION_DEAD static char const* const stringBase_80376508 = "d_a_obj_graWall";
+SECTION_DEAD static char const* const stringBase_80376518 = "d_a_obj_onsenFire";
+SECTION_DEAD static char const* const stringBase_8037652A = "d_a_obj_lv6bemos";
+SECTION_DEAD static char const* const stringBase_8037653B = "d_a_obj_lv6bemos2";
+SECTION_DEAD static char const* const stringBase_8037654D = "d_a_obj_barDesk";
+SECTION_DEAD static char const* const stringBase_8037655D = "d_a_obj_digsnow";
+SECTION_DEAD static char const* const stringBase_8037656D = "d_a_obj_Y_taihou";
+SECTION_DEAD static char const* const stringBase_8037657E = "d_a_obj_dmelevator";
+SECTION_DEAD static char const* const stringBase_80376591 = "d_a_obj_lv6TogeRoll";
+SECTION_DEAD static char const* const stringBase_803765A5 = "d_a_obj_lv6TogeTrap";
+SECTION_DEAD static char const* const stringBase_803765B9 = "d_a_obj_lv6Tenbin";
+SECTION_DEAD static char const* const stringBase_803765CB = "d_a_obj_lv6SwGate";
+SECTION_DEAD static char const* const stringBase_803765DD = "d_a_obj_lv6Lblock";
+SECTION_DEAD static char const* const stringBase_803765EF = "d_a_obj_lv6ChangeGate";
+SECTION_DEAD static char const* const stringBase_80376605 = "d_a_obj_lv6FurikoTrap";
+SECTION_DEAD static char const* const stringBase_8037661B = "d_a_obj_lv6SzGate";
+SECTION_DEAD static char const* const stringBase_8037662D = "d_a_obj_lv4EdShutter";
+SECTION_DEAD static char const* const stringBase_80376642 = "d_a_obj_lv4Gate";
+SECTION_DEAD static char const* const stringBase_80376652 = "d_a_obj_lv4PoGate";
+SECTION_DEAD static char const* const stringBase_80376664 = "d_a_obj_lv4SlideWall";
+SECTION_DEAD static char const* const stringBase_80376679 = "d_a_obj_lv4HsTarget";
+SECTION_DEAD static char const* const stringBase_8037668D = "d_a_obj_lv7PropellerY";
+SECTION_DEAD static char const* const stringBase_803766A3 = "d_a_obj_lv7BsGate";
+SECTION_DEAD static char const* const stringBase_803766B5 = "d_a_obj_lv8OptiLift";
+SECTION_DEAD static char const* const stringBase_803766C9 = "d_a_obj_lv8KekkaiTrap";
+SECTION_DEAD static char const* const stringBase_803766DF = "d_a_obj_lv8Lift";
+SECTION_DEAD static char const* const stringBase_803766EF = "d_a_obj_lv8UdFloor";
+SECTION_DEAD static char const* const stringBase_80376702 = "d_a_obj_lv9SwShutter";
+SECTION_DEAD static char const* const stringBase_80376717 = "d_a_obj_tobyhouse";
+SECTION_DEAD static char const* const stringBase_80376729 = "d_a_obj_poCandle";
+SECTION_DEAD static char const* const stringBase_8037673A = "d_a_obj_lv4digsand";
+SECTION_DEAD static char const* const stringBase_8037674D = "d_a_obj_fallobj";
+SECTION_DEAD static char const* const stringBase_8037675D = "d_a_obj_smgdoor";
+SECTION_DEAD static char const* const stringBase_8037676D = "d_a_obj_swLight";
+SECTION_DEAD static char const* const stringBase_8037677D = "d_a_obj_avalanche";
+SECTION_DEAD static char const* const stringBase_8037678F = "d_a_obj_mirror_screw";
+SECTION_DEAD static char const* const stringBase_803767A4 = "d_a_obj_mirror_sand";
+SECTION_DEAD static char const* const stringBase_803767B8 = "d_a_obj_mirror_table";
+SECTION_DEAD static char const* const stringBase_803767CD = "d_a_obj_mirror_chain";
+SECTION_DEAD static char const* const stringBase_803767E2 = "d_a_obj_mirror_6pole";
+SECTION_DEAD static char const* const stringBase_803767F7 = "d_a_obj_swspinner";
+SECTION_DEAD static char const* const stringBase_80376809 = "d_a_obj_thdoor";
+SECTION_DEAD static char const* const stringBase_80376818 = "d_a_obj_lv7bridge";
+SECTION_DEAD static char const* const stringBase_8037682A = "d_a_obj_zrTurara";
+SECTION_DEAD static char const* const stringBase_8037683B = "d_a_obj_takaraDai";
+SECTION_DEAD static char const* const stringBase_8037684D = "d_a_obj_table";
+SECTION_DEAD static char const* const stringBase_8037685B = "d_a_obj_catdoor";
+SECTION_DEAD static char const* const stringBase_8037686B = "d_a_obj_tgake";
+SECTION_DEAD static char const* const stringBase_80376879 = "d_a_cstaF";
+SECTION_DEAD static char const* const stringBase_80376883 = "d_a_obj_lv4RailWall";
+SECTION_DEAD static char const* const stringBase_80376897 = "d_a_obj_lv4sand";
+SECTION_DEAD static char const* const stringBase_803768A7 = "d_a_obj_pdoor";
+SECTION_DEAD static char const* const stringBase_803768B5 = "d_a_door_push";
+SECTION_DEAD static char const* const stringBase_803768C3 = "d_a_obj_ganonwall2";
+SECTION_DEAD static char const* const stringBase_803768D6 = "d_a_obj_lv4bridge";
+SECTION_DEAD static char const* const stringBase_803768E8 = "d_a_obj_lv4floor";
+SECTION_DEAD static char const* const stringBase_803768F9 = "d_a_tag_spinner";
+SECTION_DEAD static char const* const stringBase_80376909 = "d_a_obj_swhang";
+SECTION_DEAD static char const* const stringBase_80376918 = "d_a_obj_rstair";
+SECTION_DEAD static char const* const stringBase_80376927 = "d_a_obj_magne_arm";
+SECTION_DEAD static char const* const stringBase_80376939 = "d_a_obj_kwheel00";
+SECTION_DEAD static char const* const stringBase_8037694A = "d_a_obj_kwheel01";
+SECTION_DEAD static char const* const stringBase_8037695B = "d_a_obj_lv5ychndlr";
+SECTION_DEAD static char const* const stringBase_8037696E = "d_a_obj_lv4prelvtr";
+SECTION_DEAD static char const* const stringBase_80376981 = "d_a_obj_hasu2";
+SECTION_DEAD static char const* const stringBase_8037698F = "d_a_obj_lv5yiblltray";
+SECTION_DEAD static char const* const stringBase_803769A4 = "d_a_obj_lv6egate";
+SECTION_DEAD static char const* const stringBase_803769B5 = "d_a_obj_pdtile";
+SECTION_DEAD static char const* const stringBase_803769C4 = "d_a_obj_pdwall";
+SECTION_DEAD static char const* const stringBase_803769D3 = "d_a_obj_lv4prwall";
+SECTION_DEAD static char const* const stringBase_803769E5 = "d_a_obj_klift00";
+SECTION_DEAD static char const* const stringBase_803769F5 = "d_a_b_oh";
+SECTION_DEAD static char const* const stringBase_803769FE = "d_a_obj_lv4chandelier";
+SECTION_DEAD static char const* const stringBase_80376A14 = "d_a_obj_lv3saka00";
+SECTION_DEAD static char const* const stringBase_80376A26 = "d_a_obj_lv3Water";
+SECTION_DEAD static char const* const stringBase_80376A37 = "d_a_obj_lv3Water2";
+SECTION_DEAD static char const* const stringBase_80376A49 = "d_a_obj_lv3WaterB";
+SECTION_DEAD static char const* const stringBase_80376A5B = "d_a_obj_hbombkoya";
+SECTION_DEAD static char const* const stringBase_80376A6D = "d_a_obj_szbridge";
+SECTION_DEAD static char const* const stringBase_80376A7E = "d_a_obj_warp_kbrg";
+SECTION_DEAD static char const* const stringBase_80376A90 = "d_a_obj_warp_obrg";
+SECTION_DEAD static char const* const stringBase_80376AA2 = "d_a_obj_burnbox";
+SECTION_DEAD static char const* const stringBase_80376AB2 = "d_a_obj_kjgjs";
+SECTION_DEAD static char const* const stringBase_80376AC0 = "d_a_obj_ihasi";
+SECTION_DEAD static char const* const stringBase_80376ACE = "d_a_obj_iceblock";
+SECTION_DEAD static char const* const stringBase_80376ADF = "d_a_obj_volcball";
+SECTION_DEAD static char const* const stringBase_80376AF0 = "d_a_obj_volcbom";
+SECTION_DEAD static char const* const stringBase_80376B00 = "d_a_obj_vground";
+SECTION_DEAD static char const* const stringBase_80376B10 = "d_a_obj_kkanban";
+SECTION_DEAD static char const* const stringBase_80376B20 = "d_a_e_ph";
+SECTION_DEAD static char const* const stringBase_80376B29 = "d_a_npc_zra";
+SECTION_DEAD static char const* const stringBase_80376B35 = "d_a_obj_chandelier";
+SECTION_DEAD static char const* const stringBase_80376B48 = "d_a_obj_stopper2";
+SECTION_DEAD static char const* const stringBase_80376B59 = "d_a_door_shutter";
+SECTION_DEAD static char const* const stringBase_80376B6A = "d_a_tag_hinit";
+SECTION_DEAD static char const* const stringBase_80376B78 = "d_a_tag_hjump";
+SECTION_DEAD static char const* const stringBase_80376B86 = "d_a_tag_ajnot";
+SECTION_DEAD static char const* const stringBase_80376B94 = "d_a_tag_hstop";
+SECTION_DEAD static char const* const stringBase_80376BA2 = "d_a_canoe";
+SECTION_DEAD static char const* const stringBase_80376BAC = "d_a_horse";
+SECTION_DEAD static char const* const stringBase_80376BB6 = "d_a_e_wb";
+SECTION_DEAD static char const* const stringBase_80376BBF = "d_a_obj_ito";
+SECTION_DEAD static char const* const stringBase_80376BCB = "d_a_obj_sw";
+SECTION_DEAD static char const* const stringBase_80376BD6 = "d_a_spinner";
+SECTION_DEAD static char const* const stringBase_80376BE2 = "d_a_b_ob";
+SECTION_DEAD static char const* const stringBase_80376BEB = "d_a_kago";
+SECTION_DEAD static char const* const stringBase_80376BF4 = "d_a_e_yc";
+SECTION_DEAD static char const* const stringBase_80376BFD = "d_a_b_ds";
+SECTION_DEAD static char const* const stringBase_80376C06 = "d_a_b_dr";
+SECTION_DEAD static char const* const stringBase_80376C0F = "d_a_b_zant_mobile";
+SECTION_DEAD static char const* const stringBase_80376C21 = "d_a_b_zant";
+SECTION_DEAD static char const* const stringBase_80376C2C = "d_a_b_zant_magic";
+SECTION_DEAD static char const* const stringBase_80376C3D = "d_a_tbox";
+SECTION_DEAD static char const* const stringBase_80376C46 = "d_a_tbox2";
+SECTION_DEAD static char const* const stringBase_80376C50 = "d_a_boomerang";
+SECTION_DEAD static char const* const stringBase_80376C5E = "d_a_midna";
+SECTION_DEAD static char const* const stringBase_80376C68 = "d_a_npc_tk";
+SECTION_DEAD static char const* const stringBase_80376C73 = "d_a_npc_worm";
+SECTION_DEAD static char const* const stringBase_80376C80 = "d_a_ppolamp";
+SECTION_DEAD static char const* const stringBase_80376C8C = "d_a_obj_bky_rock";
+SECTION_DEAD static char const* const stringBase_80376C9D = "d_a_hitobj";
+SECTION_DEAD static char const* const stringBase_80376CA8 = "d_a_ep";
+SECTION_DEAD static char const* const stringBase_80376CAF = "d_a_cow";
+SECTION_DEAD static char const* const stringBase_80376CB7 = "d_a_peru";
+SECTION_DEAD static char const* const stringBase_80376CC0 = "d_a_ni";
+SECTION_DEAD static char const* const stringBase_80376CC7 = "d_a_npc_tkj2";
+SECTION_DEAD static char const* const stringBase_80376CD4 = "d_a_sq";
+SECTION_DEAD static char const* const stringBase_80376CDB = "d_a_npc_sq";
+SECTION_DEAD static char const* const stringBase_80376CE6 = "d_a_do";
+SECTION_DEAD static char const* const stringBase_80376CED = "d_a_npc_ne";
+SECTION_DEAD static char const* const stringBase_80376CF8 = "d_a_npc_tr";
+SECTION_DEAD static char const* const stringBase_80376D03 = "d_a_npc_lf";
+SECTION_DEAD static char const* const stringBase_80376D0E = "d_a_obj_food";
+SECTION_DEAD static char const* const stringBase_80376D1B = "d_a_obj_ki";
+SECTION_DEAD static char const* const stringBase_80376D26 = "d_a_obj_kita";
+SECTION_DEAD static char const* const stringBase_80376D33 = "d_a_obj_key";
+SECTION_DEAD static char const* const stringBase_80376D3F = "d_a_obj_keyhole";
+SECTION_DEAD static char const* const stringBase_80376D4F = "d_a_obj_Lv5Key";
+SECTION_DEAD static char const* const stringBase_80376D5E = "d_a_obj_lp";
+SECTION_DEAD static char const* const stringBase_80376D69 = "d_a_obj_tatigi";
+SECTION_DEAD static char const* const stringBase_80376D78 = "d_a_obj_rock";
+SECTION_DEAD static char const* const stringBase_80376D85 = "d_a_obj_wflag";
+SECTION_DEAD static char const* const stringBase_80376D93 = "d_a_obj_kage";
+SECTION_DEAD static char const* const stringBase_80376DA0 = "d_a_obj_kanban2";
+SECTION_DEAD static char const* const stringBase_80376DB0 = "d_a_obj_balloon";
+SECTION_DEAD static char const* const stringBase_80376DC0 = "d_a_obj_suisya";
+SECTION_DEAD static char const* const stringBase_80376DCF = "d_a_obj_oiltubo";
+SECTION_DEAD static char const* const stringBase_80376DDF = "d_a_obj_roten";
+SECTION_DEAD static char const* const stringBase_80376DED = "d_a_obj_ss_drink";
+SECTION_DEAD static char const* const stringBase_80376DFE = "d_a_obj_ss_item";
+SECTION_DEAD static char const* const stringBase_80376E0E = "d_a_tag_ss_drink";
+SECTION_DEAD static char const* const stringBase_80376E1F = "d_a_tag_bottle_item";
+SECTION_DEAD static char const* const stringBase_80376E33 = "d_a_tag_lv5soup";
+SECTION_DEAD static char const* const stringBase_80376E43 = "d_a_tag_myna_light";
+SECTION_DEAD static char const* const stringBase_80376E56 = "d_a_tag_shop_camera";
+SECTION_DEAD static char const* const stringBase_80376E6A = "d_a_tag_shop_item";
+SECTION_DEAD static char const* const stringBase_80376E7C = "d_a_obj_ndoor";
+SECTION_DEAD static char const* const stringBase_80376E8A = "d_a_obj_udoor";
+SECTION_DEAD static char const* const stringBase_80376E98 = "d_a_obj_usaku";
+SECTION_DEAD static char const* const stringBase_80376EA6 = "d_a_obj_sm_door";
+SECTION_DEAD static char const* const stringBase_80376EB6 = "d_a_obj_bed";
+SECTION_DEAD static char const* const stringBase_80376EC2 = "d_a_obj_boumato";
+SECTION_DEAD static char const* const stringBase_80376ED2 = "d_a_obj_itamato";
+SECTION_DEAD static char const* const stringBase_80376EE2 = "d_a_obj_nougu";
+SECTION_DEAD static char const* const stringBase_80376EF0 = "d_a_obj_stick";
+SECTION_DEAD static char const* const stringBase_80376EFE = "d_a_obj_mie";
+SECTION_DEAD static char const* const stringBase_80376F0A = "d_a_obj_sekidoor";
+SECTION_DEAD static char const* const stringBase_80376F1B = "d_a_obj_sekizo";
+SECTION_DEAD static char const* const stringBase_80376F2A = "d_a_obj_smtile";
+SECTION_DEAD static char const* const stringBase_80376F39 = "d_a_npc_fish";
+SECTION_DEAD static char const* const stringBase_80376F46 = "d_a_mg_fish";
+SECTION_DEAD static char const* const stringBase_80376F52 = "d_a_mg_fshop";
+SECTION_DEAD static char const* const stringBase_80376F5F = "d_a_npc_du";
+SECTION_DEAD static char const* const stringBase_80376F6A = "d_a_disappear";
+SECTION_DEAD static char const* const stringBase_80376F78 = "d_a_obj_mato";
+SECTION_DEAD static char const* const stringBase_80376F85 = "d_a_obj_flag";
+SECTION_DEAD static char const* const stringBase_80376F92 = "d_a_obj_flag2";
+SECTION_DEAD static char const* const stringBase_80376FA0 = "d_a_obj_flag3";
+SECTION_DEAD static char const* const stringBase_80376FAE = "d_a_obj_gomikabe";
+SECTION_DEAD static char const* const stringBase_80376FBF = "d_a_obj_yousei";
+SECTION_DEAD static char const* const stringBase_80376FCE = "d_a_obj_kabuto";
+SECTION_DEAD static char const* const stringBase_80376FDD = "d_a_obj_cho";
+SECTION_DEAD static char const* const stringBase_80376FE9 = "d_a_obj_kuwagata";
+SECTION_DEAD static char const* const stringBase_80376FFA = "d_a_obj_nan";
+SECTION_DEAD static char const* const stringBase_80377006 = "d_a_obj_dan";
+SECTION_DEAD static char const* const stringBase_80377012 = "d_a_obj_kamakiri";
+SECTION_DEAD static char const* const stringBase_80377023 = "d_a_obj_ten";
+SECTION_DEAD static char const* const stringBase_8037702F = "d_a_obj_ari";
+SECTION_DEAD static char const* const stringBase_8037703B = "d_a_obj_kag";
+SECTION_DEAD static char const* const stringBase_80377047 = "d_a_obj_batta";
+SECTION_DEAD static char const* const stringBase_80377055 = "d_a_obj_tombo";
+SECTION_DEAD static char const* const stringBase_80377063 = "d_a_obj_katatsumuri";
+SECTION_DEAD static char const* const stringBase_80377077 = "d_a_obj_h_saku";
+SECTION_DEAD static char const* const stringBase_80377086 = "d_a_obj_yobikusa";
+SECTION_DEAD static char const* const stringBase_80377097 = "d_a_obj_kazeneko";
+SECTION_DEAD static char const* const stringBase_803770A8 = "d_a_obj_kznkarm";
+SECTION_DEAD static char const* const stringBase_803770B8 = "d_a_obj_nameplate";
+SECTION_DEAD static char const* const stringBase_803770CA = "d_a_obj_ornament_cloth";
+SECTION_DEAD static char const* const stringBase_803770E1 = "d_a_obj_laundry_rope";
+SECTION_DEAD static char const* const stringBase_803770F6 = "d_a_obj_sakuita_rope";
+SECTION_DEAD static char const* const stringBase_8037710B = "d_a_obj_sakuita";
+SECTION_DEAD static char const* const stringBase_8037711B = "d_a_obj_laundry";
+SECTION_DEAD static char const* const stringBase_8037712B = "d_a_warp_bug";
+SECTION_DEAD static char const* const stringBase_80377138 = "d_a_izumi_gate";
+SECTION_DEAD static char const* const stringBase_80377147 = "d_a_obj_fchain";
+SECTION_DEAD static char const* const stringBase_80377156 = "d_a_obj_wchain";
+SECTION_DEAD static char const* const stringBase_80377165 = "d_a_tag_attention";
+SECTION_DEAD static char const* const stringBase_80377177 = "d_a_obj_tornado";
+SECTION_DEAD static char const* const stringBase_80377187 = "d_a_obj_tornado2";
+SECTION_DEAD static char const* const stringBase_80377198 = "d_a_obj_firepillar";
+SECTION_DEAD static char const* const stringBase_803771AB = "d_a_obj_firepillar2";
+SECTION_DEAD static char const* const stringBase_803771BF = "d_a_obj_inobone";
+SECTION_DEAD static char const* const stringBase_803771CF = "d_a_obj_stopper";
+SECTION_DEAD static char const* const stringBase_803771DF = "d_a_obj_mhole";
+SECTION_DEAD static char const* const stringBase_803771ED = "d_a_tag_magne";
+SECTION_DEAD static char const* const stringBase_803771FB = "d_a_obj_bosswarp";
+SECTION_DEAD static char const* const stringBase_8037720C = "d_a_obj_wood_pendulum";
+SECTION_DEAD static char const* const stringBase_80377222 = "d_a_obj_wdStick";
+SECTION_DEAD static char const* const stringBase_80377232 = "d_a_obj_stairBlock";
+SECTION_DEAD static char const* const stringBase_80377245 = "d_a_obj_geyser";
+SECTION_DEAD static char const* const stringBase_80377254 = "d_a_obj_ktOnFire";
+SECTION_DEAD static char const* const stringBase_80377265 = "d_a_obj_fireWood";
+SECTION_DEAD static char const* const stringBase_80377276 = "d_a_obj_fireWood2";
+SECTION_DEAD static char const* const stringBase_80377288 = "d_a_obj_gpTaru";
+SECTION_DEAD static char const* const stringBase_80377297 = "d_a_obj_onsenTaru";
+SECTION_DEAD static char const* const stringBase_803772A9 = "d_a_obj_kiPot";
+SECTION_DEAD static char const* const stringBase_803772B7 = "d_a_tboxSw";
+SECTION_DEAD static char const* const stringBase_803772C2 = "d_a_obj_swchain";
+SECTION_DEAD static char const* const stringBase_803772D2 = "d_a_obj_wsword";
+SECTION_DEAD static char const* const stringBase_803772E1 = "d_a_obj_stoneMark";
+SECTION_DEAD static char const* const stringBase_803772F3 = "d_a_obj_lv3Candle";
+SECTION_DEAD static char const* const stringBase_80377305 = "d_a_obj_lv4CandleTag";
+SECTION_DEAD static char const* const stringBase_8037731A = "d_a_obj_lv4CandleDemoTag";
+SECTION_DEAD static char const* const stringBase_80377333 = "d_a_obj_damCps";
+SECTION_DEAD static char const* const stringBase_80377342 = "d_a_obj_smoke";
+SECTION_DEAD static char const* const stringBase_80377350 = "d_a_obj_waterfall";
+SECTION_DEAD static char const* const stringBase_80377362 = "d_a_obj_zcloth";
+SECTION_DEAD static char const* const stringBase_80377371 = "d_a_obj_poFire";
+SECTION_DEAD static char const* const stringBase_80377380 = "d_a_tag_poFire";
+SECTION_DEAD static char const* const stringBase_8037738F = "d_a_obj_glowSphere";
+SECTION_DEAD static char const* const stringBase_803773A2 = "d_a_tag_lightball";
+SECTION_DEAD static char const* const stringBase_803773B4 = "d_a_swLBall";
+SECTION_DEAD static char const* const stringBase_803773C0 = "d_a_swBall";
+SECTION_DEAD static char const* const stringBase_803773CB = "d_a_obj_lv3waterEff";
+SECTION_DEAD static char const* const stringBase_803773DF = "d_a_tag_river_back";
+SECTION_DEAD static char const* const stringBase_803773F2 = "d_a_tag_kago_fall";
+SECTION_DEAD static char const* const stringBase_80377404 = "d_a_tag_lv2prchk";
+SECTION_DEAD static char const* const stringBase_80377415 = "d_a_obj_lv4gear";
+SECTION_DEAD static char const* const stringBase_80377425 = "d_a_obj_master_sword";
+SECTION_DEAD static char const* const stringBase_8037743A = "d_a_obj_wood_statue";
+SECTION_DEAD static char const* const stringBase_8037744E = "d_a_obj_fan";
+SECTION_DEAD static char const* const stringBase_8037745A = "d_a_obj_iceleaf";
+SECTION_DEAD static char const* const stringBase_8037746A = "d_a_obj_zrTuraraRock";
+SECTION_DEAD static char const* const stringBase_8037747F = "d_a_tag_ret_room";
+SECTION_DEAD static char const* const stringBase_80377490 = "d_a_obj_wind_stone";
+SECTION_DEAD static char const* const stringBase_803774A3 = "d_a_tag_wara_howl";
+SECTION_DEAD static char const* const stringBase_803774B5 = "d_a_obj_scannon";
+SECTION_DEAD static char const* const stringBase_803774C5 = "d_a_obj_smw_stone";
+SECTION_DEAD static char const* const stringBase_803774D7 = "d_a_obj_scannon_crs";
+SECTION_DEAD static char const* const stringBase_803774EB = "d_a_obj_snowEffTag";
+SECTION_DEAD static char const* const stringBase_803774FE = "d_a_tag_CstaSw";
+SECTION_DEAD static char const* const stringBase_8037750D = "d_a_tag_lv6CstaSw";
+SECTION_DEAD static char const* const stringBase_8037751F = "d_a_obj_bubblePilar";
+SECTION_DEAD static char const* const stringBase_80377533 = "d_a_obj_poTbox";
+SECTION_DEAD static char const* const stringBase_80377542 = "d_a_obj_timeFire";
+SECTION_DEAD static char const* const stringBase_80377553 = "d_a_obj_tmoon";
+SECTION_DEAD static char const* const stringBase_80377561 = "d_a_obj_ganonwall";
+SECTION_DEAD static char const* const stringBase_80377573 = "d_a_obj_prop";
+SECTION_DEAD static char const* const stringBase_80377580 = "d_a_cstatue";
+SECTION_DEAD static char const* const stringBase_8037758C = "d_a_obj_swBallA";
+SECTION_DEAD static char const* const stringBase_8037759C = "d_a_obj_swBallB";
+SECTION_DEAD static char const* const stringBase_803775AC = "d_a_obj_snow_soup";
+SECTION_DEAD static char const* const stringBase_803775BE = "d_a_obj_nagaisu";
+SECTION_DEAD static char const* const stringBase_803775CE = "d_a_obj_rcircle";
+SECTION_DEAD static char const* const stringBase_803775DE = "d_a_obj_picture";
+SECTION_DEAD static char const* const stringBase_803775EE = "d_a_tag_setBall";
+SECTION_DEAD static char const* const stringBase_803775FE = "d_a_tag_smk_emt";
+SECTION_DEAD static char const* const stringBase_8037760E = "d_a_swTime";
+SECTION_DEAD static char const* const stringBase_80377619 = "d_a_obj_hakai_ftr";
+SECTION_DEAD static char const* const stringBase_8037762B = "d_a_obj_hakai_brl";
+SECTION_DEAD static char const* const stringBase_8037763D = "d_a_obj_crystal";
+SECTION_DEAD static char const* const stringBase_8037764D = "d_a_obj_scannon_ten";
+SECTION_DEAD static char const* const stringBase_80377661 = "d_a_obj_swBallC";
+SECTION_DEAD static char const* const stringBase_80377671 = "d_a_scene_exit2";
+SECTION_DEAD static char const* const stringBase_80377681 = "d_a_obj_hata";
+SECTION_DEAD static char const* const stringBase_8037768E = "d_a_obj_toaru_maki";
+SECTION_DEAD static char const* const stringBase_803776A1 = "d_a_tag_attack_item";
+SECTION_DEAD static char const* const stringBase_803776B5 = "d_a_tag_rmbit_sw";
+SECTION_DEAD static char const* const stringBase_803776C6 = "d_a_obj_sword";
+SECTION_DEAD static char const* const stringBase_803776D4 = "d_a_tag_spring";
+SECTION_DEAD static char const* const stringBase_803776E3 = "d_a_tag_statue_evt";
+SECTION_DEAD static char const* const stringBase_803776F6 = "d_a_e_ai";
+SECTION_DEAD static char const* const stringBase_803776FF = "d_a_e_gs";
+SECTION_DEAD static char const* const stringBase_80377708 = "d_a_e_gob";
+SECTION_DEAD static char const* const stringBase_80377712 = "d_a_e_dd";
+SECTION_DEAD static char const* const stringBase_8037771B = "d_a_e_dn";
+SECTION_DEAD static char const* const stringBase_80377724 = "d_a_e_s1";
+SECTION_DEAD static char const* const stringBase_8037772D = "d_a_e_mf";
+SECTION_DEAD static char const* const stringBase_80377736 = "d_a_e_sg";
+SECTION_DEAD static char const* const stringBase_8037773F = "d_a_e_bs";
+SECTION_DEAD static char const* const stringBase_80377748 = "d_a_e_sf";
+SECTION_DEAD static char const* const stringBase_80377751 = "d_a_e_sh";
+SECTION_DEAD static char const* const stringBase_8037775A = "d_a_e_df";
+SECTION_DEAD static char const* const stringBase_80377763 = "d_a_e_gm";
+SECTION_DEAD static char const* const stringBase_8037776C = "d_a_e_md";
+SECTION_DEAD static char const* const stringBase_80377775 = "d_a_e_sm";
+SECTION_DEAD static char const* const stringBase_8037777E = "d_a_e_sm2";
+SECTION_DEAD static char const* const stringBase_80377788 = "d_a_e_st";
+SECTION_DEAD static char const* const stringBase_80377791 = "d_a_e_st_line";
+SECTION_DEAD static char const* const stringBase_8037779F = "d_a_e_sb";
+SECTION_DEAD static char const* const stringBase_803777A8 = "d_a_e_th";
+SECTION_DEAD static char const* const stringBase_803777B1 = "d_a_e_cr";
+SECTION_DEAD static char const* const stringBase_803777BA = "d_a_e_cr_egg";
+SECTION_DEAD static char const* const stringBase_803777C7 = "d_a_e_db";
+SECTION_DEAD static char const* const stringBase_803777D0 = "d_a_e_db_leaf";
+SECTION_DEAD static char const* const stringBase_803777DE = "d_a_e_ga";
+SECTION_DEAD static char const* const stringBase_803777E7 = "d_a_e_gb";
+SECTION_DEAD static char const* const stringBase_803777F0 = "d_a_e_hb";
+SECTION_DEAD static char const* const stringBase_803777F9 = "d_a_e_hb_leaf";
+SECTION_DEAD static char const* const stringBase_80377807 = "d_a_e_hzelda";
+SECTION_DEAD static char const* const stringBase_80377814 = "d_a_e_yd";
+SECTION_DEAD static char const* const stringBase_8037781D = "d_a_e_yh";
+SECTION_DEAD static char const* const stringBase_80377826 = "d_a_e_yd_leaf";
+SECTION_DEAD static char const* const stringBase_80377834 = "d_a_e_hm";
+SECTION_DEAD static char const* const stringBase_8037783D = "d_a_e_tk";
+SECTION_DEAD static char const* const stringBase_80377846 = "d_a_e_tk2";
+SECTION_DEAD static char const* const stringBase_80377850 = "d_a_e_tk_ball";
+SECTION_DEAD static char const* const stringBase_8037785E = "d_a_e_rb";
+SECTION_DEAD static char const* const stringBase_80377867 = "d_a_e_rd";
+SECTION_DEAD static char const* const stringBase_80377870 = "d_a_e_rdb";
+SECTION_DEAD static char const* const stringBase_8037787A = "d_a_e_rdy";
+SECTION_DEAD static char const* const stringBase_80377884 = "d_a_e_fm";
+SECTION_DEAD static char const* const stringBase_8037788D = "d_a_e_fs";
+SECTION_DEAD static char const* const stringBase_80377896 = "d_a_e_pm";
+SECTION_DEAD static char const* const stringBase_8037789F = "d_a_e_po";
+SECTION_DEAD static char const* const stringBase_803778A8 = "d_a_e_mb";
+SECTION_DEAD static char const* const stringBase_803778B1 = "d_a_e_mk";
+SECTION_DEAD static char const* const stringBase_803778BA = "d_a_e_mm";
+SECTION_DEAD static char const* const stringBase_803778C3 = "d_a_e_fz";
+SECTION_DEAD static char const* const stringBase_803778CC = "d_a_e_zs";
+SECTION_DEAD static char const* const stringBase_803778D5 = "d_a_e_kk";
+SECTION_DEAD static char const* const stringBase_803778DE = "d_a_e_hp";
+SECTION_DEAD static char const* const stringBase_803778E7 = "d_a_e_zh";
+SECTION_DEAD static char const* const stringBase_803778F0 = "d_a_e_zm";
+SECTION_DEAD static char const* const stringBase_803778F9 = "d_a_e_pz";
+SECTION_DEAD static char const* const stringBase_80377902 = "d_a_e_fb";
+SECTION_DEAD static char const* const stringBase_8037790B = "d_a_e_fk";
+SECTION_DEAD static char const* const stringBase_80377914 = "d_a_e_ms";
+SECTION_DEAD static char const* const stringBase_8037791D = "d_a_e_nest";
+SECTION_DEAD static char const* const stringBase_80377928 = "d_a_e_nz";
+SECTION_DEAD static char const* const stringBase_80377931 = "d_a_e_ba";
+SECTION_DEAD static char const* const stringBase_8037793A = "d_a_e_bu";
+SECTION_DEAD static char const* const stringBase_80377943 = "d_a_e_bug";
+SECTION_DEAD static char const* const stringBase_8037794D = "d_a_e_bee";
+SECTION_DEAD static char const* const stringBase_80377957 = "d_a_e_is";
+SECTION_DEAD static char const* const stringBase_80377960 = "d_a_e_kg";
+SECTION_DEAD static char const* const stringBase_80377969 = "d_a_e_kr";
+SECTION_DEAD static char const* const stringBase_80377972 = "d_a_e_sw";
+SECTION_DEAD static char const* const stringBase_8037797B = "d_a_e_ge";
+SECTION_DEAD static char const* const stringBase_80377984 = "d_a_tag_watchge";
+SECTION_DEAD static char const* const stringBase_80377994 = "d_a_e_ym";
+SECTION_DEAD static char const* const stringBase_8037799D = "d_a_e_ym_tag";
+SECTION_DEAD static char const* const stringBase_803779AA = "d_a_e_ymb";
+SECTION_DEAD static char const* const stringBase_803779B4 = "d_a_tag_firewall";
+SECTION_DEAD static char const* const stringBase_803779C5 = "d_a_tag_waterfall";
+SECTION_DEAD static char const* const stringBase_803779D7 = "d_a_e_yk";
+SECTION_DEAD static char const* const stringBase_803779E0 = "d_a_e_yr";
+SECTION_DEAD static char const* const stringBase_803779E9 = "d_a_e_yg";
+SECTION_DEAD static char const* const stringBase_803779F2 = "d_a_e_hz";
+SECTION_DEAD static char const* const stringBase_803779FB = "d_a_e_ws";
+SECTION_DEAD static char const* const stringBase_80377A04 = "d_a_e_oc";
+SECTION_DEAD static char const* const stringBase_80377A0D = "d_a_e_ot";
+SECTION_DEAD static char const* const stringBase_80377A16 = "d_a_e_dt";
+SECTION_DEAD static char const* const stringBase_80377A1F = "d_a_e_bg";
+SECTION_DEAD static char const* const stringBase_80377A28 = "d_a_e_oct_bg";
+SECTION_DEAD static char const* const stringBase_80377A35 = "d_a_L7demo_dr";
+SECTION_DEAD static char const* const stringBase_80377A43 = "d_a_L7low_dr";
+SECTION_DEAD static char const* const stringBase_80377A50 = "d_a_L7op_demo_dr";
+SECTION_DEAD static char const* const stringBase_80377A61 = "d_a_e_tt";
+SECTION_DEAD static char const* const stringBase_80377A6A = "d_a_e_dk";
+SECTION_DEAD static char const* const stringBase_80377A73 = "d_a_e_vt";
+SECTION_DEAD static char const* const stringBase_80377A7C = "d_a_e_ww";
+SECTION_DEAD static char const* const stringBase_80377A85 = "d_a_e_gi";
+SECTION_DEAD static char const* const stringBase_80377A8E = "d_a_b_bh";
+SECTION_DEAD static char const* const stringBase_80377A97 = "d_a_b_bq";
+SECTION_DEAD static char const* const stringBase_80377AA0 = "d_a_b_gm";
+SECTION_DEAD static char const* const stringBase_80377AA9 = "d_a_b_gnd";
+SECTION_DEAD static char const* const stringBase_80377AB3 = "d_a_b_go";
+SECTION_DEAD static char const* const stringBase_80377ABC = "d_a_b_oh2";
+SECTION_DEAD static char const* const stringBase_80377AC6 = "d_a_b_yo";
+SECTION_DEAD static char const* const stringBase_80377ACF = "d_a_b_yo_ice";
+SECTION_DEAD static char const* const stringBase_80377ADC = "d_a_b_tn";
+SECTION_DEAD static char const* const stringBase_80377AE5 = "d_a_b_gg";
+SECTION_DEAD static char const* const stringBase_80377AEE = "d_a_b_dre";
+SECTION_DEAD static char const* const stringBase_80377AF8 = "d_a_b_mgn";
+SECTION_DEAD static char const* const stringBase_80377B02 = "d_a_e_warpappear";
+SECTION_DEAD static char const* const stringBase_80377B13 = "d_a_obj_smallkey";
+SECTION_DEAD static char const* const stringBase_80377B24 = "d_a_obj_kantera";
+SECTION_DEAD static char const* const stringBase_80377B34 = "d_a_obj_life_container";
+SECTION_DEAD static char const* const stringBase_80377B4B = "d_a_obj_shield";
+SECTION_DEAD static char const* const stringBase_80377B5A = "d_a_demo_item";
+SECTION_DEAD static char const* const stringBase_80377B68 = "d_a_shop_item";
+SECTION_DEAD static char const* const stringBase_80377B76 = "d_a_obj_drop";
+SECTION_DEAD static char const* const stringBase_80377B83 = "d_a_obj_rw";
+SECTION_DEAD static char const* const stringBase_80377B8E = "d_a_nbomb";
+SECTION_DEAD static char const* const stringBase_80377B98 = "d_a_tag_csw";
+SECTION_DEAD static char const* const stringBase_80377BA4 = "d_a_tag_qs";
+SECTION_DEAD static char const* const stringBase_80377BAF = "d_a_hozelda";
+SECTION_DEAD static char const* const stringBase_80377BBB = "d_a_swc00";
+SECTION_DEAD static char const* const stringBase_80377BC5 = "d_a_door_knob00";
+SECTION_DEAD static char const* const stringBase_80377BD5 = "d_a_door_dbdoor00";
+SECTION_DEAD static char const* const stringBase_80377BE7 = "d_a_door_boss";
+SECTION_DEAD static char const* const stringBase_80377BF5 = "d_a_door_bossL1";
+SECTION_DEAD static char const* const stringBase_80377C05 = "d_a_door_mbossL1";
+SECTION_DEAD static char const* const stringBase_80377C16 = "d_a_door_bossL5";
+SECTION_DEAD static char const* const stringBase_80377C26 = "d_a_dshutter";
+SECTION_DEAD static char const* const stringBase_80377C33 = "d_a_door_spiral";
+SECTION_DEAD static char const* const stringBase_80377C43 = "d_a_tag_chgrestart";
+SECTION_DEAD static char const* const stringBase_80377C56 = "d_a_tag_setrestart";
+SECTION_DEAD static char const* const stringBase_80377C69 = "d_a_andsw";
+SECTION_DEAD static char const* const stringBase_80377C73 = "d_a_andsw2";
+SECTION_DEAD static char const* const stringBase_80377C7E = "d_a_myna";
+SECTION_DEAD static char const* const stringBase_80377C87 = "d_a_npc_gnd";
+SECTION_DEAD static char const* const stringBase_80377C93 = "d_a_npc_gra";
+SECTION_DEAD static char const* const stringBase_80377C9F = "d_a_npc_grc";
+SECTION_DEAD static char const* const stringBase_80377CAB = "d_a_npc_grd";
+SECTION_DEAD static char const* const stringBase_80377CB7 = "d_a_npc_grm";
+SECTION_DEAD static char const* const stringBase_80377CC3 = "d_a_npc_grmc";
+SECTION_DEAD static char const* const stringBase_80377CD0 = "d_a_npc_gro";
+SECTION_DEAD static char const* const stringBase_80377CDC = "d_a_npc_grr";
+SECTION_DEAD static char const* const stringBase_80377CE8 = "d_a_npc_grs";
+SECTION_DEAD static char const* const stringBase_80377CF4 = "d_a_npc_grz";
+SECTION_DEAD static char const* const stringBase_80377D00 = "d_a_npc_yamid";
+SECTION_DEAD static char const* const stringBase_80377D0E = "d_a_npc_yamit";
+SECTION_DEAD static char const* const stringBase_80377D1C = "d_a_npc_yamis";
+SECTION_DEAD static char const* const stringBase_80377D2A = "d_a_npc_blue_ns";
+SECTION_DEAD static char const* const stringBase_80377D3A = "d_a_npc_kakashi";
+SECTION_DEAD static char const* const stringBase_80377D4A = "d_a_npc_kdk";
+SECTION_DEAD static char const* const stringBase_80377D56 = "d_a_npc_aru";
+SECTION_DEAD static char const* const stringBase_80377D62 = "d_a_npc_bans";
+SECTION_DEAD static char const* const stringBase_80377D6F = "d_a_npc_besu";
+SECTION_DEAD static char const* const stringBase_80377D7C = "d_a_npc_bou";
+SECTION_DEAD static char const* const stringBase_80377D88 = "d_a_npc_bouS";
+SECTION_DEAD static char const* const stringBase_80377D95 = "d_a_npc_clerka";
+SECTION_DEAD static char const* const stringBase_80377DA4 = "d_a_npc_clerkb";
+SECTION_DEAD static char const* const stringBase_80377DB3 = "d_a_npc_clerkt";
+SECTION_DEAD static char const* const stringBase_80377DC2 = "d_a_npc_wrestler";
+SECTION_DEAD static char const* const stringBase_80377DD3 = "d_a_tag_arena";
+SECTION_DEAD static char const* const stringBase_80377DE1 = "d_a_tag_instruction";
+SECTION_DEAD static char const* const stringBase_80377DF5 = "d_a_npc_doc";
+SECTION_DEAD static char const* const stringBase_80377E01 = "d_a_npc_gwolf";
+SECTION_DEAD static char const* const stringBase_80377E0F = "d_a_npc_len";
+SECTION_DEAD static char const* const stringBase_80377E1B = "d_a_npc_lud";
+SECTION_DEAD static char const* const stringBase_80377E27 = "d_a_npc_fairy_seirei";
+SECTION_DEAD static char const* const stringBase_80377E3C = "d_a_npc_fairy";
+SECTION_DEAD static char const* const stringBase_80377E4A = "d_a_npc_hanjo";
+SECTION_DEAD static char const* const stringBase_80377E58 = "d_a_npc_henna";
+SECTION_DEAD static char const* const stringBase_80377E66 = "d_a_npc_henna0";
+SECTION_DEAD static char const* const stringBase_80377E75 = "d_a_npc_hoz";
+SECTION_DEAD static char const* const stringBase_80377E81 = "d_a_npc_jagar";
+SECTION_DEAD static char const* const stringBase_80377E8F = "d_a_npc_kkri";
+SECTION_DEAD static char const* const stringBase_80377E9C = "d_a_npc_kn";
+SECTION_DEAD static char const* const stringBase_80377EA7 = "d_a_obj_knBullet";
+SECTION_DEAD static char const* const stringBase_80377EB8 = "d_a_npc_knj";
+SECTION_DEAD static char const* const stringBase_80377EC4 = "d_a_npc_kolin";
+SECTION_DEAD static char const* const stringBase_80377ED2 = "d_a_npc_kolinb";
+SECTION_DEAD static char const* const stringBase_80377EE1 = "d_a_npc_kyury";
+SECTION_DEAD static char const* const stringBase_80377EEF = "d_a_npc_maro";
+SECTION_DEAD static char const* const stringBase_80377EFC = "d_a_npc_midp";
+SECTION_DEAD static char const* const stringBase_80377F09 = "d_a_npc_moi";
+SECTION_DEAD static char const* const stringBase_80377F15 = "d_a_npc_raca";
+SECTION_DEAD static char const* const stringBase_80377F22 = "d_a_npc_saru";
+SECTION_DEAD static char const* const stringBase_80377F2F = "d_a_npc_seib";
+SECTION_DEAD static char const* const stringBase_80377F3C = "d_a_npc_seic";
+SECTION_DEAD static char const* const stringBase_80377F49 = "d_a_npc_seid";
+SECTION_DEAD static char const* const stringBase_80377F56 = "d_a_npc_seira";
+SECTION_DEAD static char const* const stringBase_80377F64 = "d_a_npc_seira2";
+SECTION_DEAD static char const* const stringBase_80377F73 = "d_a_npc_seirei";
+SECTION_DEAD static char const* const stringBase_80377F82 = "d_a_npc_shaman";
+SECTION_DEAD static char const* const stringBase_80377F91 = "d_a_npc_shop_maro";
+SECTION_DEAD static char const* const stringBase_80377FA3 = "d_a_npc_sola";
+SECTION_DEAD static char const* const stringBase_80377FB0 = "d_a_npc_taro";
+SECTION_DEAD static char const* const stringBase_80377FBD = "d_a_npc_pachi_besu";
+SECTION_DEAD static char const* const stringBase_80377FD0 = "d_a_npc_pachi_taro";
+SECTION_DEAD static char const* const stringBase_80377FE3 = "d_a_npc_pachi_maro";
+SECTION_DEAD static char const* const stringBase_80377FF6 = "d_a_tag_pachi";
+SECTION_DEAD static char const* const stringBase_80378004 = "d_a_npc_the";
+SECTION_DEAD static char const* const stringBase_80378010 = "d_a_npc_tkj";
+SECTION_DEAD static char const* const stringBase_8037801C = "d_a_npc_tks";
+SECTION_DEAD static char const* const stringBase_80378028 = "d_a_npc_tkc";
+SECTION_DEAD static char const* const stringBase_80378034 = "d_a_obj_tks";
+SECTION_DEAD static char const* const stringBase_80378040 = "d_a_npc_toby";
+SECTION_DEAD static char const* const stringBase_8037804D = "d_a_npc_uri";
+SECTION_DEAD static char const* const stringBase_80378059 = "d_a_npc_yelia";
+SECTION_DEAD static char const* const stringBase_80378067 = "d_a_npc_ykm";
+SECTION_DEAD static char const* const stringBase_80378073 = "d_a_npc_ykw";
+SECTION_DEAD static char const* const stringBase_8037807F = "d_a_npc_zanb";
+SECTION_DEAD static char const* const stringBase_8037808C = "d_a_npc_zant";
+SECTION_DEAD static char const* const stringBase_80378099 = "d_a_npc_zelda";
+SECTION_DEAD static char const* const stringBase_803780A7 = "d_a_npc_zelR";
+SECTION_DEAD static char const* const stringBase_803780B4 = "d_a_npc_zelRo";
+SECTION_DEAD static char const* const stringBase_803780C2 = "d_a_obj_zra_freeze";
+SECTION_DEAD static char const* const stringBase_803780D5 = "d_a_npc_zrc";
+SECTION_DEAD static char const* const stringBase_803780E1 = "d_a_npc_zrz";
+SECTION_DEAD static char const* const stringBase_803780ED = "d_a_obj_zraMark";
+SECTION_DEAD static char const* const stringBase_803780FD = "d_a_npc_myna2";
+SECTION_DEAD static char const* const stringBase_8037810B = "d_a_tag_myna2";
+SECTION_DEAD static char const* const stringBase_80378119 = "d_a_npc_cdn3";
+SECTION_DEAD static char const* const stringBase_80378126 = "d_a_tag_schedule";
+SECTION_DEAD static char const* const stringBase_80378137 = "d_a_tag_escape";
+SECTION_DEAD static char const* const stringBase_80378146 = "d_a_npc_chat";
+SECTION_DEAD static char const* const stringBase_80378153 = "d_a_npc_soldierA";
+SECTION_DEAD static char const* const stringBase_80378164 = "d_a_npc_soldierB";
+SECTION_DEAD static char const* const stringBase_80378175 = "d_a_passer_mng";
+SECTION_DEAD static char const* const stringBase_80378184 = "d_a_npc_passer";
+SECTION_DEAD static char const* const stringBase_80378193 = "d_a_npc_passer2";
+SECTION_DEAD static char const* const stringBase_803781A3 = "d_a_npc_post";
+SECTION_DEAD static char const* const stringBase_803781B0 = "d_a_npc_pouya";
+SECTION_DEAD static char const* const stringBase_803781BE = "d_a_formation_mng";
+SECTION_DEAD static char const* const stringBase_803781D0 = "d_a_npc_fguard";
+SECTION_DEAD static char const* const stringBase_803781DF = "d_a_guard_mng";
+SECTION_DEAD static char const* const stringBase_803781ED = "d_a_tag_guard";
+SECTION_DEAD static char const* const stringBase_803781FB = "d_a_npc_guard";
+SECTION_DEAD static char const* const stringBase_80378209 = "d_a_npc_ash";
+SECTION_DEAD static char const* const stringBase_80378215 = "d_a_npc_ashB";
+SECTION_DEAD static char const* const stringBase_80378222 = "d_a_npc_shad";
+SECTION_DEAD static char const* const stringBase_8037822F = "d_a_npc_rafrel";
+SECTION_DEAD static char const* const stringBase_8037823E = "d_a_npc_moir";
+SECTION_DEAD static char const* const stringBase_8037824B = "d_a_npc_impal";
+SECTION_DEAD static char const* const stringBase_80378259 = "d_a_npc_shoe";
+SECTION_DEAD static char const* const stringBase_80378266 = "d_a_npc_doorboy";
+SECTION_DEAD static char const* const stringBase_80378276 = "d_a_npc_prayer";
+SECTION_DEAD static char const* const stringBase_80378285 = "d_a_npc_kasi_hana";
+SECTION_DEAD static char const* const stringBase_80378297 = "d_a_npc_kasi_kyu";
+SECTION_DEAD static char const* const stringBase_803782A8 = "d_a_npc_kasi_mich";
+SECTION_DEAD static char const* const stringBase_803782BA = "d_a_npc_drainSol";
+SECTION_DEAD static char const* const stringBase_803782CB = "d_a_npc_chin";
+SECTION_DEAD static char const* const stringBase_803782D8 = "d_a_npc_ins";
+SECTION_DEAD static char const* const stringBase_803782E4 = "d_a_npc_shop0";
+SECTION_DEAD static char const* const stringBase_803782F2 = "d_a_npc_mk";
+SECTION_DEAD static char const* const stringBase_803782FD = "d_a_npc_p2";
+SECTION_DEAD static char const* const stringBase_80378308 = "d_a_kytag00";
+SECTION_DEAD static char const* const stringBase_80378314 = "d_a_kytag01";
+SECTION_DEAD static char const* const stringBase_80378320 = "d_a_kytag02";
+SECTION_DEAD static char const* const stringBase_8037832C = "d_a_kytag03";
+SECTION_DEAD static char const* const stringBase_80378338 = "d_a_kytag04";
+SECTION_DEAD static char const* const stringBase_80378344 = "d_a_kytag05";
+SECTION_DEAD static char const* const stringBase_80378350 = "d_a_kytag06";
+SECTION_DEAD static char const* const stringBase_8037835C = "d_a_kytag07";
+SECTION_DEAD static char const* const stringBase_80378368 = "d_a_kytag08";
+SECTION_DEAD static char const* const stringBase_80378374 = "d_a_kytag09";
+SECTION_DEAD static char const* const stringBase_80378380 = "d_a_kytag10";
+SECTION_DEAD static char const* const stringBase_8037838C = "d_a_kytag11";
+SECTION_DEAD static char const* const stringBase_80378398 = "d_a_kytag12";
+SECTION_DEAD static char const* const stringBase_803783A4 = "d_a_kytag13";
+SECTION_DEAD static char const* const stringBase_803783B0 = "d_a_kytag14";
+SECTION_DEAD static char const* const stringBase_803783BC = "d_a_kytag15";
+SECTION_DEAD static char const* const stringBase_803783C8 = "d_a_kytag16";
+SECTION_DEAD static char const* const stringBase_803783D4 = "d_a_kytag17";
+SECTION_DEAD static char const* const stringBase_803783E0 = "d_a_ykgr";
+SECTION_DEAD static char const* const stringBase_803783E9 = "d_a_talk";
+SECTION_DEAD static char const* const stringBase_803783F2 = "d_a_obj_crope";
+SECTION_DEAD static char const* const stringBase_80378400 = "d_a_obj_bombf";
+SECTION_DEAD static char const* const stringBase_8037840E = "d_a_obj_bk_leaf";
+SECTION_DEAD static char const* const stringBase_8037841E = "d_a_tag_mhint";
+SECTION_DEAD static char const* const stringBase_8037842C = "d_a_tag_mmsg";
+SECTION_DEAD static char const* const stringBase_80378439 = "d_a_tag_mwait";
+SECTION_DEAD static char const* const stringBase_80378447 = "d_a_tag_mstop";
+SECTION_DEAD static char const* const stringBase_80378455 = "d_a_tag_stream";
+SECTION_DEAD static char const* const stringBase_80378464 = "d_a_tag_sppath";
+SECTION_DEAD static char const* const stringBase_80378473 = "d_a_tag_wljump";
+SECTION_DEAD static char const* const stringBase_80378482 = "d_a_tag_TWgate";
+SECTION_DEAD static char const* const stringBase_80378491 = "d_a_tag_Lv6Gate";
+SECTION_DEAD static char const* const stringBase_803784A1 = "d_a_tag_Lv7Gate";
+SECTION_DEAD static char const* const stringBase_803784B1 = "d_a_tag_Lv8Gate";
+SECTION_DEAD static char const* const stringBase_803784C1 = "d_a_tag_theB_hint";
+SECTION_DEAD static char const* const stringBase_803784D3 = "d_a_tag_assistance";
+SECTION_DEAD static char const* const stringBase_803784E6 = "d_a_demo00";
+SECTION_DEAD static char const* const stringBase_803784F1 = "d_a_tag_camera";
+SECTION_DEAD static char const* const stringBase_80378500 = "d_a_tag_chkpoint";
+SECTION_DEAD static char const* const stringBase_80378511 = "d_a_tag_event";
+SECTION_DEAD static char const* const stringBase_8037851F = "d_a_tag_evt";
+SECTION_DEAD static char const* const stringBase_8037852B = "d_a_tag_telop";
+SECTION_DEAD static char const* const stringBase_80378539 = "d_a_tag_howl";
+SECTION_DEAD static char const* const stringBase_80378546 = "d_a_tag_msg";
+SECTION_DEAD static char const* const stringBase_80378552 = "d_a_tag_lantern";
+SECTION_DEAD static char const* const stringBase_80378562 = "d_a_tag_mist";
+SECTION_DEAD static char const* const stringBase_8037856F = "d_a_dmidna";
+SECTION_DEAD static char const* const stringBase_8037857A = "d_a_vrbox";
+SECTION_DEAD static char const* const stringBase_80378584 = "d_a_vrbox2";
+SECTION_DEAD static char const* const stringBase_8037858F = "d_a_bg";
+SECTION_DEAD static char const* const stringBase_80378596 = "d_a_set_bgobj";
+SECTION_DEAD static char const* const stringBase_803785A4 = "d_a_bg_obj";
+SECTION_DEAD static char const* const stringBase_803785AF = "d_a_mirror";
+SECTION_DEAD static char const* const stringBase_803785BA = "d_a_movie_player";
+SECTION_DEAD static char const* const stringBase_803785CB = "d_a_title";
+SECTION_DEAD static char const* const stringBase_803785D5 = "d_a_fr";
+SECTION_DEAD static char const* const stringBase_803785DC = "d_a_econt";
+SECTION_DEAD static char const* const stringBase_803785E6 = "d_a_mg_rod";
+SECTION_DEAD static char const* const stringBase_803785F1 = "d_a_e_arrow";
+SECTION_DEAD static char const* const stringBase_803785FD = "d_a_bullet";
+SECTION_DEAD static char const* const stringBase_80378608 = "d_a_swhit0";
+SECTION_DEAD static char const* const stringBase_80378613 = "d_a_e_th_ball";
+SECTION_DEAD static char const* const stringBase_80378621 = "d_a_tag_evtarea";
+SECTION_DEAD static char const* const stringBase_80378631 = "d_a_tag_evtmsg";
+SECTION_DEAD static char const* const stringBase_80378640 = "d_a_tag_kmsg";
+SECTION_DEAD static char const* const stringBase_8037864D = "d_a_tag_push";
+SECTION_DEAD static char const* const stringBase_8037865A = "d_a_e_mk_bo";
+SECTION_DEAD static char const* const stringBase_80378666 = "d_a_e_mm_mt";
+SECTION_DEAD static char const* const stringBase_80378672 = "d_a_obj_kbox";
+SECTION_DEAD static char const* const stringBase_8037867F = "d_a_obj_fw";
+SECTION_DEAD static char const* const stringBase_8037868A = "d_a_b_gos";
+SECTION_DEAD static char const* const stringBase_80378694 = "d_a_obj_ystone";
+SECTION_DEAD static char const* const stringBase_803786A3 = "d_a_mant";
+SECTION_DEAD static char const* const stringBase_803786AC = "d_a_crod";
+SECTION_DEAD static char const* const stringBase_803786B5 = "d_a_obj_pleaf";
+SECTION_DEAD static char const* const stringBase_803786C3 = "d_a_obj_kbacket";
+SECTION_DEAD static char const* const stringBase_803786D3 = "d_a_obj_yel_bag";
+SECTION_DEAD static char const* const stringBase_803786E3 = "d_a_obj_pumpkin";
+SECTION_DEAD static char const* const stringBase_803786F3 = "d_a_obj_automata";
+SECTION_DEAD static char const* const stringBase_80378704 = "d_a_obj_gadget";
+SECTION_DEAD static char const* const stringBase_80378713 = "d_a_obj_kago";
+SECTION_DEAD static char const* const stringBase_80378720 = "d_a_obj_carry";
+SECTION_DEAD static char const* const stringBase_8037872E = "d_a_obj_stone";
+SECTION_DEAD static char const* const stringBase_8037873C = "d_a_obj_hb";
+SECTION_DEAD static char const* const stringBase_80378747 = "d_a_npc_inko";
+SECTION_DEAD static char const* const stringBase_80378754 = "d_a_bd";
+SECTION_DEAD static char const* const stringBase_8037875B = "d_a_obj_eff";
+SECTION_DEAD static char const* const stringBase_80378767 = "d_a_e_bi";
+SECTION_DEAD static char const* const stringBase_80378770 = "d_a_e_bi_leaf";
+SECTION_DEAD static char const* const stringBase_8037877E = "d_a_startAndGoal";
+SECTION_DEAD static char const* const stringBase_8037878F = "d_a_npc_df";
+SECTION_DEAD static char const* const stringBase_8037879A = "d_a_arrow";
+SECTION_DEAD static char const* const stringBase_803787A4 = "d_a_path_line";
+SECTION_DEAD static char const* const stringBase_803787B2 = "d_a_tag_allmato";
+SECTION_DEAD static char const* const stringBase_803787C2 = "d_a_obj_timer";
+SECTION_DEAD static char const* const stringBase_803787D0 = "d_a_scene_exit";
+SECTION_DEAD static char const* const stringBase_803787DF = "d_a_suspend";
+SECTION_DEAD static char const* const stringBase_803787EB = "d_a_grass";
+SECTION_DEAD static char const* const stringBase_803787F5 = "cDyl_Link i_ProfName=%d\n";
+SECTION_DEAD static char const* const stringBase_8037880E = 
+    "cDyl_LinkASync: リンクに失敗しました。諦めます\n";
+SECTION_DEAD static char const* const stringBase_8037883E = "/";
+SECTION_DEAD static char const* const stringBase_80378840 = 
+    "/dvd/str/Final/Release/frameworkF.str";
+SECTION_DEAD static char const* const stringBase_80378866 = "f_pc_profile_lst";
+/* @stringBase0 padding */
+SECTION_DEAD static char const* const pad_80378877 = "";
+#pragma pop
 
-/* 80450CA8-80450CAC 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80450CA8[4];
+/* 803F0F50-803F1BB0 0C60+00 rc=4 efc=0 rfr=False None .bss       DMC                                                          */
+static u8 DMC[3168];
 
-/* 800183DC-80018544 0168+00 rc=0 efc=0 .text      cCc_Init__Fv                                                 */
+/* 80450CA8-80450CAC 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_80450CA8[4];
+
+/* 800183DC-80018544 0168+00 rc=1 efc=0 rfr=False None .text      cCc_Init__Fv                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cCc_Init() {
+asm static void cCc_Init() {
 	nofralloc
 #include "asm/c/c_dylink/cCc_Init__Fv.s"
 }
 #pragma pop
 
 
-/* 80018544-8001857C 0038+00 rc=0 efc=0 .text      cDyl_IsLinked__Fs                                            */
+/* 80018544-8001857C 0038+00 rc=1 efc=1 rfr=False None .text      cDyl_IsLinked__Fs                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1680,7 +2445,7 @@ asm void cDyl_IsLinked(s16 field_0) {
 #pragma pop
 
 
-/* 8001857C-800185C0 0044+00 rc=0 efc=0 .text      cDyl_Unlink__Fs                                              */
+/* 8001857C-800185C0 0044+00 rc=2 efc=1 rfr=False None .text      cDyl_Unlink__Fs                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1692,781 +2457,10 @@ asm void cDyl_Unlink(s16 field_0) {
 
 
 /* ############################################################################################## */
-/* 80375DE8-80378878 2A8F+01 rc=0 efc=0 .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-const char* const stringBase_80375DE8 = "d_a_alldie";
-const char* const stringBase_80375DF3 = "d_a_obj_swpush";
-const char* const stringBase_80375E02 = "d_a_obj_swpush2";
-const char* const stringBase_80375E12 = "d_a_obj_swpush5";
-const char* const stringBase_80375E22 = "d_a_tag_gstart";
-const char* const stringBase_80375E31 = "d_a_obj_lv6elevta";
-const char* const stringBase_80375E43 = "d_a_obj_so";
-const char* const stringBase_80375E4E = "d_a_obj_movebox";
-const char* const stringBase_80375E5E = "d_a_obj_swturn";
-const char* const stringBase_80375E6D = "d_a_obj_lv6swturn";
-const char* const stringBase_80375E7F = "d_a_obj_sekizoa";
-const char* const stringBase_80375E8F = "d_a_obj_gra2";
-const char* const stringBase_80375E9C = "d_a_tag_gra";
-const char* const stringBase_80375EA8 = "d_a_tag_yami";
-const char* const stringBase_80375EB5 = "d_a_obj_ladder";
-const char* const stringBase_80375EC4 = "d_a_obj_brakeeff";
-const char* const stringBase_80375ED5 = "d_a_obj_fmobj";
-const char* const stringBase_80375EE3 = "d_a_obj_lbox";
-const char* const stringBase_80375EF0 = "d_a_obj_web0";
-const char* const stringBase_80375EFD = "d_a_obj_web1";
-const char* const stringBase_80375F0A = "d_a_obj_cb";
-const char* const stringBase_80375F15 = "d_a_obj_maki";
-const char* const stringBase_80375F22 = "d_a_obj_brg";
-const char* const stringBase_80375F2E = "d_a_obj_gb";
-const char* const stringBase_80375F39 = "d_a_obj_gm";
-const char* const stringBase_80375F44 = "d_a_obj_toby";
-const char* const stringBase_80375F51 = "d_a_obj_tp";
-const char* const stringBase_80375F5C = "d_a_obj_treesh";
-const char* const stringBase_80375F6B = "d_a_obj_zdoor";
-const char* const stringBase_80375F79 = "d_a_obj_pillar";
-const char* const stringBase_80375F88 = "d_a_obj_cdoor";
-const char* const stringBase_80375F96 = "d_a_obj_groundwater";
-const char* const stringBase_80375FAA = "d_a_obj_rotBridge";
-const char* const stringBase_80375FBC = "d_a_obj_magLift";
-const char* const stringBase_80375FCC = "d_a_obj_magLiftRot";
-const char* const stringBase_80375FDF = "d_a_obj_lv1Candle00";
-const char* const stringBase_80375FF3 = "d_a_obj_lv1Candle01";
-const char* const stringBase_80376007 = "d_a_obj_TvCdlst";
-const char* const stringBase_80376017 = "d_a_obj_hsTarget";
-const char* const stringBase_80376028 = "d_a_obj_heavySw";
-const char* const stringBase_80376038 = "d_a_obj_goGate";
-const char* const stringBase_80376047 = "d_a_obj_taFence";
-const char* const stringBase_80376057 = "d_a_obj_saidan";
-const char* const stringBase_80376066 = "d_a_obj_spinLift";
-const char* const stringBase_80376077 = "d_a_obj_bmWindow";
-const char* const stringBase_80376088 = "d_a_obj_rfHole";
-const char* const stringBase_80376097 = "d_a_obj_waterPillar";
-const char* const stringBase_803760AB = "d_a_obj_syRock";
-const char* const stringBase_803760BA = "d_a_obj_bsGate";
-const char* const stringBase_803760C9 = "d_a_obj_amiShutter";
-const char* const stringBase_803760DC = "d_a_obj_waterGate";
-const char* const stringBase_803760EE = "d_a_obj_lv2Candle";
-const char* const stringBase_80376100 = "d_a_obj_togeTrap";
-const char* const stringBase_80376111 = "d_a_obj_rotTrap";
-const char* const stringBase_80376121 = "d_a_obj_sWallShutter";
-const char* const stringBase_80376136 = "d_a_obj_lv5IceWall";
-const char* const stringBase_80376149 = "d_a_obj_lv5SwIce";
-const char* const stringBase_8037615A = "d_a_obj_lv5FloorBoard";
-const char* const stringBase_80376170 = "d_a_obj_Turara";
-const char* const stringBase_8037617F = "d_a_obj_twGate";
-const char* const stringBase_8037618E = "d_a_obj_digholl";
-const char* const stringBase_8037619E = "d_a_obj_digplace";
-const char* const stringBase_803761AF = "d_a_obj_testcube";
-const char* const stringBase_803761C0 = "d_a_obj_kshutter";
-const char* const stringBase_803761D1 = "d_a_npc_coach";
-const char* const stringBase_803761DF = "d_a_npc_theB";
-const char* const stringBase_803761EC = "d_a_coach_fire";
-const char* const stringBase_803761FB = "d_a_coach_2D";
-const char* const stringBase_80376208 = "d_a_balloon_2D";
-const char* const stringBase_80376217 = "d_a_skip_2D";
-const char* const stringBase_80376223 = "d_a_obj_mvstair";
-const char* const stringBase_80376233 = "d_a_obj_cowdoor";
-const char* const stringBase_80376243 = "d_a_obj_swpropeller";
-const char* const stringBase_80376257 = "d_a_obj_bmshutter";
-const char* const stringBase_80376269 = "d_a_npc_ks";
-const char* const stringBase_80376274 = "d_a_obj_hfuta";
-const char* const stringBase_80376282 = "d_a_obj_bkdoor";
-const char* const stringBase_80376291 = "d_a_obj_cboard";
-const char* const stringBase_803762A0 = "d_a_obj_mgate";
-const char* const stringBase_803762AE = "d_a_obj_ikada";
-const char* const stringBase_803762BC = "d_a_obj_ice_l";
-const char* const stringBase_803762CA = "d_a_obj_ice_s";
-const char* const stringBase_803762D8 = "d_a_obj_enemy_create";
-const char* const stringBase_803762ED = "d_a_obj_bhbridge";
-const char* const stringBase_803762FE = "d_a_obj_kaisou";
-const char* const stringBase_8037630D = "d_a_obj_hhashi";
-const char* const stringBase_8037631C = "d_a_obj_bhashi";
-const char* const stringBase_8037632B = "d_a_obj_octhashi";
-const char* const stringBase_8037633C = "d_a_obj_thashi";
-const char* const stringBase_8037634B = "d_a_obj_crvgate";
-const char* const stringBase_8037635B = "d_a_obj_crvfence";
-const char* const stringBase_8037636C = "d_a_obj_crvhahen";
-const char* const stringBase_8037637D = "d_a_obj_crvsteel";
-const char* const stringBase_8037638E = "d_a_obj_crvlh_up";
-const char* const stringBase_8037639F = "d_a_obj_crvlh_down";
-const char* const stringBase_803763B2 = "d_a_obj_riverrock";
-const char* const stringBase_803763C4 = "d_a_obj_dust";
-const char* const stringBase_803763D1 = "d_a_obj_ita";
-const char* const stringBase_803763DD = "d_a_obj_window";
-const char* const stringBase_803763EC = "d_a_obj_metalbox";
-const char* const stringBase_803763FD = "d_a_obj_bbox";
-const char* const stringBase_8037640A = "d_a_obj_msima";
-const char* const stringBase_80376418 = "d_a_obj_myogan";
-const char* const stringBase_80376427 = "d_a_b_zant_sima";
-const char* const stringBase_80376437 = "d_a_obj_cblock";
-const char* const stringBase_80376446 = "d_a_obj_cwall";
-const char* const stringBase_80376454 = "d_a_obj_kgate";
-const char* const stringBase_80376462 = "d_a_obj_rgate";
-const char* const stringBase_80376470 = "d_a_obj_onsen";
-const char* const stringBase_8037647E = "d_a_obj_chest";
-const char* const stringBase_8037648C = "d_a_obj_bemos";
-const char* const stringBase_8037649A = "d_a_obj_rope_bridge";
-const char* const stringBase_803764AE = "d_a_obj_well_cover";
-const char* const stringBase_803764C1 = "d_a_obj_grave_stone";
-const char* const stringBase_803764D5 = "d_a_obj_zra_rock";
-const char* const stringBase_803764E6 = "d_a_obj_gra_rock";
-const char* const stringBase_803764F7 = "d_a_obj_grz_rock";
-const char* const stringBase_80376508 = "d_a_obj_graWall";
-const char* const stringBase_80376518 = "d_a_obj_onsenFire";
-const char* const stringBase_8037652A = "d_a_obj_lv6bemos";
-const char* const stringBase_8037653B = "d_a_obj_lv6bemos2";
-const char* const stringBase_8037654D = "d_a_obj_barDesk";
-const char* const stringBase_8037655D = "d_a_obj_digsnow";
-const char* const stringBase_8037656D = "d_a_obj_Y_taihou";
-const char* const stringBase_8037657E = "d_a_obj_dmelevator";
-const char* const stringBase_80376591 = "d_a_obj_lv6TogeRoll";
-const char* const stringBase_803765A5 = "d_a_obj_lv6TogeTrap";
-const char* const stringBase_803765B9 = "d_a_obj_lv6Tenbin";
-const char* const stringBase_803765CB = "d_a_obj_lv6SwGate";
-const char* const stringBase_803765DD = "d_a_obj_lv6Lblock";
-const char* const stringBase_803765EF = "d_a_obj_lv6ChangeGate";
-const char* const stringBase_80376605 = "d_a_obj_lv6FurikoTrap";
-const char* const stringBase_8037661B = "d_a_obj_lv6SzGate";
-const char* const stringBase_8037662D = "d_a_obj_lv4EdShutter";
-const char* const stringBase_80376642 = "d_a_obj_lv4Gate";
-const char* const stringBase_80376652 = "d_a_obj_lv4PoGate";
-const char* const stringBase_80376664 = "d_a_obj_lv4SlideWall";
-const char* const stringBase_80376679 = "d_a_obj_lv4HsTarget";
-const char* const stringBase_8037668D = "d_a_obj_lv7PropellerY";
-const char* const stringBase_803766A3 = "d_a_obj_lv7BsGate";
-const char* const stringBase_803766B5 = "d_a_obj_lv8OptiLift";
-const char* const stringBase_803766C9 = "d_a_obj_lv8KekkaiTrap";
-const char* const stringBase_803766DF = "d_a_obj_lv8Lift";
-const char* const stringBase_803766EF = "d_a_obj_lv8UdFloor";
-const char* const stringBase_80376702 = "d_a_obj_lv9SwShutter";
-const char* const stringBase_80376717 = "d_a_obj_tobyhouse";
-const char* const stringBase_80376729 = "d_a_obj_poCandle";
-const char* const stringBase_8037673A = "d_a_obj_lv4digsand";
-const char* const stringBase_8037674D = "d_a_obj_fallobj";
-const char* const stringBase_8037675D = "d_a_obj_smgdoor";
-const char* const stringBase_8037676D = "d_a_obj_swLight";
-const char* const stringBase_8037677D = "d_a_obj_avalanche";
-const char* const stringBase_8037678F = "d_a_obj_mirror_screw";
-const char* const stringBase_803767A4 = "d_a_obj_mirror_sand";
-const char* const stringBase_803767B8 = "d_a_obj_mirror_table";
-const char* const stringBase_803767CD = "d_a_obj_mirror_chain";
-const char* const stringBase_803767E2 = "d_a_obj_mirror_6pole";
-const char* const stringBase_803767F7 = "d_a_obj_swspinner";
-const char* const stringBase_80376809 = "d_a_obj_thdoor";
-const char* const stringBase_80376818 = "d_a_obj_lv7bridge";
-const char* const stringBase_8037682A = "d_a_obj_zrTurara";
-const char* const stringBase_8037683B = "d_a_obj_takaraDai";
-const char* const stringBase_8037684D = "d_a_obj_table";
-const char* const stringBase_8037685B = "d_a_obj_catdoor";
-const char* const stringBase_8037686B = "d_a_obj_tgake";
-const char* const stringBase_80376879 = "d_a_cstaF";
-const char* const stringBase_80376883 = "d_a_obj_lv4RailWall";
-const char* const stringBase_80376897 = "d_a_obj_lv4sand";
-const char* const stringBase_803768A7 = "d_a_obj_pdoor";
-const char* const stringBase_803768B5 = "d_a_door_push";
-const char* const stringBase_803768C3 = "d_a_obj_ganonwall2";
-const char* const stringBase_803768D6 = "d_a_obj_lv4bridge";
-const char* const stringBase_803768E8 = "d_a_obj_lv4floor";
-const char* const stringBase_803768F9 = "d_a_tag_spinner";
-const char* const stringBase_80376909 = "d_a_obj_swhang";
-const char* const stringBase_80376918 = "d_a_obj_rstair";
-const char* const stringBase_80376927 = "d_a_obj_magne_arm";
-const char* const stringBase_80376939 = "d_a_obj_kwheel00";
-const char* const stringBase_8037694A = "d_a_obj_kwheel01";
-const char* const stringBase_8037695B = "d_a_obj_lv5ychndlr";
-const char* const stringBase_8037696E = "d_a_obj_lv4prelvtr";
-const char* const stringBase_80376981 = "d_a_obj_hasu2";
-const char* const stringBase_8037698F = "d_a_obj_lv5yiblltray";
-const char* const stringBase_803769A4 = "d_a_obj_lv6egate";
-const char* const stringBase_803769B5 = "d_a_obj_pdtile";
-const char* const stringBase_803769C4 = "d_a_obj_pdwall";
-const char* const stringBase_803769D3 = "d_a_obj_lv4prwall";
-const char* const stringBase_803769E5 = "d_a_obj_klift00";
-const char* const stringBase_803769F5 = "d_a_b_oh";
-const char* const stringBase_803769FE = "d_a_obj_lv4chandelier";
-const char* const stringBase_80376A14 = "d_a_obj_lv3saka00";
-const char* const stringBase_80376A26 = "d_a_obj_lv3Water";
-const char* const stringBase_80376A37 = "d_a_obj_lv3Water2";
-const char* const stringBase_80376A49 = "d_a_obj_lv3WaterB";
-const char* const stringBase_80376A5B = "d_a_obj_hbombkoya";
-const char* const stringBase_80376A6D = "d_a_obj_szbridge";
-const char* const stringBase_80376A7E = "d_a_obj_warp_kbrg";
-const char* const stringBase_80376A90 = "d_a_obj_warp_obrg";
-const char* const stringBase_80376AA2 = "d_a_obj_burnbox";
-const char* const stringBase_80376AB2 = "d_a_obj_kjgjs";
-const char* const stringBase_80376AC0 = "d_a_obj_ihasi";
-const char* const stringBase_80376ACE = "d_a_obj_iceblock";
-const char* const stringBase_80376ADF = "d_a_obj_volcball";
-const char* const stringBase_80376AF0 = "d_a_obj_volcbom";
-const char* const stringBase_80376B00 = "d_a_obj_vground";
-const char* const stringBase_80376B10 = "d_a_obj_kkanban";
-const char* const stringBase_80376B20 = "d_a_e_ph";
-const char* const stringBase_80376B29 = "d_a_npc_zra";
-const char* const stringBase_80376B35 = "d_a_obj_chandelier";
-const char* const stringBase_80376B48 = "d_a_obj_stopper2";
-const char* const stringBase_80376B59 = "d_a_door_shutter";
-const char* const stringBase_80376B6A = "d_a_tag_hinit";
-const char* const stringBase_80376B78 = "d_a_tag_hjump";
-const char* const stringBase_80376B86 = "d_a_tag_ajnot";
-const char* const stringBase_80376B94 = "d_a_tag_hstop";
-const char* const stringBase_80376BA2 = "d_a_canoe";
-const char* const stringBase_80376BAC = "d_a_horse";
-const char* const stringBase_80376BB6 = "d_a_e_wb";
-const char* const stringBase_80376BBF = "d_a_obj_ito";
-const char* const stringBase_80376BCB = "d_a_obj_sw";
-const char* const stringBase_80376BD6 = "d_a_spinner";
-const char* const stringBase_80376BE2 = "d_a_b_ob";
-const char* const stringBase_80376BEB = "d_a_kago";
-const char* const stringBase_80376BF4 = "d_a_e_yc";
-const char* const stringBase_80376BFD = "d_a_b_ds";
-const char* const stringBase_80376C06 = "d_a_b_dr";
-const char* const stringBase_80376C0F = "d_a_b_zant_mobile";
-const char* const stringBase_80376C21 = "d_a_b_zant";
-const char* const stringBase_80376C2C = "d_a_b_zant_magic";
-const char* const stringBase_80376C3D = "d_a_tbox";
-const char* const stringBase_80376C46 = "d_a_tbox2";
-const char* const stringBase_80376C50 = "d_a_boomerang";
-const char* const stringBase_80376C5E = "d_a_midna";
-const char* const stringBase_80376C68 = "d_a_npc_tk";
-const char* const stringBase_80376C73 = "d_a_npc_worm";
-const char* const stringBase_80376C80 = "d_a_ppolamp";
-const char* const stringBase_80376C8C = "d_a_obj_bky_rock";
-const char* const stringBase_80376C9D = "d_a_hitobj";
-const char* const stringBase_80376CA8 = "d_a_ep";
-const char* const stringBase_80376CAF = "d_a_cow";
-const char* const stringBase_80376CB7 = "d_a_peru";
-const char* const stringBase_80376CC0 = "d_a_ni";
-const char* const stringBase_80376CC7 = "d_a_npc_tkj2";
-const char* const stringBase_80376CD4 = "d_a_sq";
-const char* const stringBase_80376CDB = "d_a_npc_sq";
-const char* const stringBase_80376CE6 = "d_a_do";
-const char* const stringBase_80376CED = "d_a_npc_ne";
-const char* const stringBase_80376CF8 = "d_a_npc_tr";
-const char* const stringBase_80376D03 = "d_a_npc_lf";
-const char* const stringBase_80376D0E = "d_a_obj_food";
-const char* const stringBase_80376D1B = "d_a_obj_ki";
-const char* const stringBase_80376D26 = "d_a_obj_kita";
-const char* const stringBase_80376D33 = "d_a_obj_key";
-const char* const stringBase_80376D3F = "d_a_obj_keyhole";
-const char* const stringBase_80376D4F = "d_a_obj_Lv5Key";
-const char* const stringBase_80376D5E = "d_a_obj_lp";
-const char* const stringBase_80376D69 = "d_a_obj_tatigi";
-const char* const stringBase_80376D78 = "d_a_obj_rock";
-const char* const stringBase_80376D85 = "d_a_obj_wflag";
-const char* const stringBase_80376D93 = "d_a_obj_kage";
-const char* const stringBase_80376DA0 = "d_a_obj_kanban2";
-const char* const stringBase_80376DB0 = "d_a_obj_balloon";
-const char* const stringBase_80376DC0 = "d_a_obj_suisya";
-const char* const stringBase_80376DCF = "d_a_obj_oiltubo";
-const char* const stringBase_80376DDF = "d_a_obj_roten";
-const char* const stringBase_80376DED = "d_a_obj_ss_drink";
-const char* const stringBase_80376DFE = "d_a_obj_ss_item";
-const char* const stringBase_80376E0E = "d_a_tag_ss_drink";
-const char* const stringBase_80376E1F = "d_a_tag_bottle_item";
-const char* const stringBase_80376E33 = "d_a_tag_lv5soup";
-const char* const stringBase_80376E43 = "d_a_tag_myna_light";
-const char* const stringBase_80376E56 = "d_a_tag_shop_camera";
-const char* const stringBase_80376E6A = "d_a_tag_shop_item";
-const char* const stringBase_80376E7C = "d_a_obj_ndoor";
-const char* const stringBase_80376E8A = "d_a_obj_udoor";
-const char* const stringBase_80376E98 = "d_a_obj_usaku";
-const char* const stringBase_80376EA6 = "d_a_obj_sm_door";
-const char* const stringBase_80376EB6 = "d_a_obj_bed";
-const char* const stringBase_80376EC2 = "d_a_obj_boumato";
-const char* const stringBase_80376ED2 = "d_a_obj_itamato";
-const char* const stringBase_80376EE2 = "d_a_obj_nougu";
-const char* const stringBase_80376EF0 = "d_a_obj_stick";
-const char* const stringBase_80376EFE = "d_a_obj_mie";
-const char* const stringBase_80376F0A = "d_a_obj_sekidoor";
-const char* const stringBase_80376F1B = "d_a_obj_sekizo";
-const char* const stringBase_80376F2A = "d_a_obj_smtile";
-const char* const stringBase_80376F39 = "d_a_npc_fish";
-const char* const stringBase_80376F46 = "d_a_mg_fish";
-const char* const stringBase_80376F52 = "d_a_mg_fshop";
-const char* const stringBase_80376F5F = "d_a_npc_du";
-const char* const stringBase_80376F6A = "d_a_disappear";
-const char* const stringBase_80376F78 = "d_a_obj_mato";
-const char* const stringBase_80376F85 = "d_a_obj_flag";
-const char* const stringBase_80376F92 = "d_a_obj_flag2";
-const char* const stringBase_80376FA0 = "d_a_obj_flag3";
-const char* const stringBase_80376FAE = "d_a_obj_gomikabe";
-const char* const stringBase_80376FBF = "d_a_obj_yousei";
-const char* const stringBase_80376FCE = "d_a_obj_kabuto";
-const char* const stringBase_80376FDD = "d_a_obj_cho";
-const char* const stringBase_80376FE9 = "d_a_obj_kuwagata";
-const char* const stringBase_80376FFA = "d_a_obj_nan";
-const char* const stringBase_80377006 = "d_a_obj_dan";
-const char* const stringBase_80377012 = "d_a_obj_kamakiri";
-const char* const stringBase_80377023 = "d_a_obj_ten";
-const char* const stringBase_8037702F = "d_a_obj_ari";
-const char* const stringBase_8037703B = "d_a_obj_kag";
-const char* const stringBase_80377047 = "d_a_obj_batta";
-const char* const stringBase_80377055 = "d_a_obj_tombo";
-const char* const stringBase_80377063 = "d_a_obj_katatsumuri";
-const char* const stringBase_80377077 = "d_a_obj_h_saku";
-const char* const stringBase_80377086 = "d_a_obj_yobikusa";
-const char* const stringBase_80377097 = "d_a_obj_kazeneko";
-const char* const stringBase_803770A8 = "d_a_obj_kznkarm";
-const char* const stringBase_803770B8 = "d_a_obj_nameplate";
-const char* const stringBase_803770CA = "d_a_obj_ornament_cloth";
-const char* const stringBase_803770E1 = "d_a_obj_laundry_rope";
-const char* const stringBase_803770F6 = "d_a_obj_sakuita_rope";
-const char* const stringBase_8037710B = "d_a_obj_sakuita";
-const char* const stringBase_8037711B = "d_a_obj_laundry";
-const char* const stringBase_8037712B = "d_a_warp_bug";
-const char* const stringBase_80377138 = "d_a_izumi_gate";
-const char* const stringBase_80377147 = "d_a_obj_fchain";
-const char* const stringBase_80377156 = "d_a_obj_wchain";
-const char* const stringBase_80377165 = "d_a_tag_attention";
-const char* const stringBase_80377177 = "d_a_obj_tornado";
-const char* const stringBase_80377187 = "d_a_obj_tornado2";
-const char* const stringBase_80377198 = "d_a_obj_firepillar";
-const char* const stringBase_803771AB = "d_a_obj_firepillar2";
-const char* const stringBase_803771BF = "d_a_obj_inobone";
-const char* const stringBase_803771CF = "d_a_obj_stopper";
-const char* const stringBase_803771DF = "d_a_obj_mhole";
-const char* const stringBase_803771ED = "d_a_tag_magne";
-const char* const stringBase_803771FB = "d_a_obj_bosswarp";
-const char* const stringBase_8037720C = "d_a_obj_wood_pendulum";
-const char* const stringBase_80377222 = "d_a_obj_wdStick";
-const char* const stringBase_80377232 = "d_a_obj_stairBlock";
-const char* const stringBase_80377245 = "d_a_obj_geyser";
-const char* const stringBase_80377254 = "d_a_obj_ktOnFire";
-const char* const stringBase_80377265 = "d_a_obj_fireWood";
-const char* const stringBase_80377276 = "d_a_obj_fireWood2";
-const char* const stringBase_80377288 = "d_a_obj_gpTaru";
-const char* const stringBase_80377297 = "d_a_obj_onsenTaru";
-const char* const stringBase_803772A9 = "d_a_obj_kiPot";
-const char* const stringBase_803772B7 = "d_a_tboxSw";
-const char* const stringBase_803772C2 = "d_a_obj_swchain";
-const char* const stringBase_803772D2 = "d_a_obj_wsword";
-const char* const stringBase_803772E1 = "d_a_obj_stoneMark";
-const char* const stringBase_803772F3 = "d_a_obj_lv3Candle";
-const char* const stringBase_80377305 = "d_a_obj_lv4CandleTag";
-const char* const stringBase_8037731A = "d_a_obj_lv4CandleDemoTag";
-const char* const stringBase_80377333 = "d_a_obj_damCps";
-const char* const stringBase_80377342 = "d_a_obj_smoke";
-const char* const stringBase_80377350 = "d_a_obj_waterfall";
-const char* const stringBase_80377362 = "d_a_obj_zcloth";
-const char* const stringBase_80377371 = "d_a_obj_poFire";
-const char* const stringBase_80377380 = "d_a_tag_poFire";
-const char* const stringBase_8037738F = "d_a_obj_glowSphere";
-const char* const stringBase_803773A2 = "d_a_tag_lightball";
-const char* const stringBase_803773B4 = "d_a_swLBall";
-const char* const stringBase_803773C0 = "d_a_swBall";
-const char* const stringBase_803773CB = "d_a_obj_lv3waterEff";
-const char* const stringBase_803773DF = "d_a_tag_river_back";
-const char* const stringBase_803773F2 = "d_a_tag_kago_fall";
-const char* const stringBase_80377404 = "d_a_tag_lv2prchk";
-const char* const stringBase_80377415 = "d_a_obj_lv4gear";
-const char* const stringBase_80377425 = "d_a_obj_master_sword";
-const char* const stringBase_8037743A = "d_a_obj_wood_statue";
-const char* const stringBase_8037744E = "d_a_obj_fan";
-const char* const stringBase_8037745A = "d_a_obj_iceleaf";
-const char* const stringBase_8037746A = "d_a_obj_zrTuraraRock";
-const char* const stringBase_8037747F = "d_a_tag_ret_room";
-const char* const stringBase_80377490 = "d_a_obj_wind_stone";
-const char* const stringBase_803774A3 = "d_a_tag_wara_howl";
-const char* const stringBase_803774B5 = "d_a_obj_scannon";
-const char* const stringBase_803774C5 = "d_a_obj_smw_stone";
-const char* const stringBase_803774D7 = "d_a_obj_scannon_crs";
-const char* const stringBase_803774EB = "d_a_obj_snowEffTag";
-const char* const stringBase_803774FE = "d_a_tag_CstaSw";
-const char* const stringBase_8037750D = "d_a_tag_lv6CstaSw";
-const char* const stringBase_8037751F = "d_a_obj_bubblePilar";
-const char* const stringBase_80377533 = "d_a_obj_poTbox";
-const char* const stringBase_80377542 = "d_a_obj_timeFire";
-const char* const stringBase_80377553 = "d_a_obj_tmoon";
-const char* const stringBase_80377561 = "d_a_obj_ganonwall";
-const char* const stringBase_80377573 = "d_a_obj_prop";
-const char* const stringBase_80377580 = "d_a_cstatue";
-const char* const stringBase_8037758C = "d_a_obj_swBallA";
-const char* const stringBase_8037759C = "d_a_obj_swBallB";
-const char* const stringBase_803775AC = "d_a_obj_snow_soup";
-const char* const stringBase_803775BE = "d_a_obj_nagaisu";
-const char* const stringBase_803775CE = "d_a_obj_rcircle";
-const char* const stringBase_803775DE = "d_a_obj_picture";
-const char* const stringBase_803775EE = "d_a_tag_setBall";
-const char* const stringBase_803775FE = "d_a_tag_smk_emt";
-const char* const stringBase_8037760E = "d_a_swTime";
-const char* const stringBase_80377619 = "d_a_obj_hakai_ftr";
-const char* const stringBase_8037762B = "d_a_obj_hakai_brl";
-const char* const stringBase_8037763D = "d_a_obj_crystal";
-const char* const stringBase_8037764D = "d_a_obj_scannon_ten";
-const char* const stringBase_80377661 = "d_a_obj_swBallC";
-const char* const stringBase_80377671 = "d_a_scene_exit2";
-const char* const stringBase_80377681 = "d_a_obj_hata";
-const char* const stringBase_8037768E = "d_a_obj_toaru_maki";
-const char* const stringBase_803776A1 = "d_a_tag_attack_item";
-const char* const stringBase_803776B5 = "d_a_tag_rmbit_sw";
-const char* const stringBase_803776C6 = "d_a_obj_sword";
-const char* const stringBase_803776D4 = "d_a_tag_spring";
-const char* const stringBase_803776E3 = "d_a_tag_statue_evt";
-const char* const stringBase_803776F6 = "d_a_e_ai";
-const char* const stringBase_803776FF = "d_a_e_gs";
-const char* const stringBase_80377708 = "d_a_e_gob";
-const char* const stringBase_80377712 = "d_a_e_dd";
-const char* const stringBase_8037771B = "d_a_e_dn";
-const char* const stringBase_80377724 = "d_a_e_s1";
-const char* const stringBase_8037772D = "d_a_e_mf";
-const char* const stringBase_80377736 = "d_a_e_sg";
-const char* const stringBase_8037773F = "d_a_e_bs";
-const char* const stringBase_80377748 = "d_a_e_sf";
-const char* const stringBase_80377751 = "d_a_e_sh";
-const char* const stringBase_8037775A = "d_a_e_df";
-const char* const stringBase_80377763 = "d_a_e_gm";
-const char* const stringBase_8037776C = "d_a_e_md";
-const char* const stringBase_80377775 = "d_a_e_sm";
-const char* const stringBase_8037777E = "d_a_e_sm2";
-const char* const stringBase_80377788 = "d_a_e_st";
-const char* const stringBase_80377791 = "d_a_e_st_line";
-const char* const stringBase_8037779F = "d_a_e_sb";
-const char* const stringBase_803777A8 = "d_a_e_th";
-const char* const stringBase_803777B1 = "d_a_e_cr";
-const char* const stringBase_803777BA = "d_a_e_cr_egg";
-const char* const stringBase_803777C7 = "d_a_e_db";
-const char* const stringBase_803777D0 = "d_a_e_db_leaf";
-const char* const stringBase_803777DE = "d_a_e_ga";
-const char* const stringBase_803777E7 = "d_a_e_gb";
-const char* const stringBase_803777F0 = "d_a_e_hb";
-const char* const stringBase_803777F9 = "d_a_e_hb_leaf";
-const char* const stringBase_80377807 = "d_a_e_hzelda";
-const char* const stringBase_80377814 = "d_a_e_yd";
-const char* const stringBase_8037781D = "d_a_e_yh";
-const char* const stringBase_80377826 = "d_a_e_yd_leaf";
-const char* const stringBase_80377834 = "d_a_e_hm";
-const char* const stringBase_8037783D = "d_a_e_tk";
-const char* const stringBase_80377846 = "d_a_e_tk2";
-const char* const stringBase_80377850 = "d_a_e_tk_ball";
-const char* const stringBase_8037785E = "d_a_e_rb";
-const char* const stringBase_80377867 = "d_a_e_rd";
-const char* const stringBase_80377870 = "d_a_e_rdb";
-const char* const stringBase_8037787A = "d_a_e_rdy";
-const char* const stringBase_80377884 = "d_a_e_fm";
-const char* const stringBase_8037788D = "d_a_e_fs";
-const char* const stringBase_80377896 = "d_a_e_pm";
-const char* const stringBase_8037789F = "d_a_e_po";
-const char* const stringBase_803778A8 = "d_a_e_mb";
-const char* const stringBase_803778B1 = "d_a_e_mk";
-const char* const stringBase_803778BA = "d_a_e_mm";
-const char* const stringBase_803778C3 = "d_a_e_fz";
-const char* const stringBase_803778CC = "d_a_e_zs";
-const char* const stringBase_803778D5 = "d_a_e_kk";
-const char* const stringBase_803778DE = "d_a_e_hp";
-const char* const stringBase_803778E7 = "d_a_e_zh";
-const char* const stringBase_803778F0 = "d_a_e_zm";
-const char* const stringBase_803778F9 = "d_a_e_pz";
-const char* const stringBase_80377902 = "d_a_e_fb";
-const char* const stringBase_8037790B = "d_a_e_fk";
-const char* const stringBase_80377914 = "d_a_e_ms";
-const char* const stringBase_8037791D = "d_a_e_nest";
-const char* const stringBase_80377928 = "d_a_e_nz";
-const char* const stringBase_80377931 = "d_a_e_ba";
-const char* const stringBase_8037793A = "d_a_e_bu";
-const char* const stringBase_80377943 = "d_a_e_bug";
-const char* const stringBase_8037794D = "d_a_e_bee";
-const char* const stringBase_80377957 = "d_a_e_is";
-const char* const stringBase_80377960 = "d_a_e_kg";
-const char* const stringBase_80377969 = "d_a_e_kr";
-const char* const stringBase_80377972 = "d_a_e_sw";
-const char* const stringBase_8037797B = "d_a_e_ge";
-const char* const stringBase_80377984 = "d_a_tag_watchge";
-const char* const stringBase_80377994 = "d_a_e_ym";
-const char* const stringBase_8037799D = "d_a_e_ym_tag";
-const char* const stringBase_803779AA = "d_a_e_ymb";
-const char* const stringBase_803779B4 = "d_a_tag_firewall";
-const char* const stringBase_803779C5 = "d_a_tag_waterfall";
-const char* const stringBase_803779D7 = "d_a_e_yk";
-const char* const stringBase_803779E0 = "d_a_e_yr";
-const char* const stringBase_803779E9 = "d_a_e_yg";
-const char* const stringBase_803779F2 = "d_a_e_hz";
-const char* const stringBase_803779FB = "d_a_e_ws";
-const char* const stringBase_80377A04 = "d_a_e_oc";
-const char* const stringBase_80377A0D = "d_a_e_ot";
-const char* const stringBase_80377A16 = "d_a_e_dt";
-const char* const stringBase_80377A1F = "d_a_e_bg";
-const char* const stringBase_80377A28 = "d_a_e_oct_bg";
-const char* const stringBase_80377A35 = "d_a_L7demo_dr";
-const char* const stringBase_80377A43 = "d_a_L7low_dr";
-const char* const stringBase_80377A50 = "d_a_L7op_demo_dr";
-const char* const stringBase_80377A61 = "d_a_e_tt";
-const char* const stringBase_80377A6A = "d_a_e_dk";
-const char* const stringBase_80377A73 = "d_a_e_vt";
-const char* const stringBase_80377A7C = "d_a_e_ww";
-const char* const stringBase_80377A85 = "d_a_e_gi";
-const char* const stringBase_80377A8E = "d_a_b_bh";
-const char* const stringBase_80377A97 = "d_a_b_bq";
-const char* const stringBase_80377AA0 = "d_a_b_gm";
-const char* const stringBase_80377AA9 = "d_a_b_gnd";
-const char* const stringBase_80377AB3 = "d_a_b_go";
-const char* const stringBase_80377ABC = "d_a_b_oh2";
-const char* const stringBase_80377AC6 = "d_a_b_yo";
-const char* const stringBase_80377ACF = "d_a_b_yo_ice";
-const char* const stringBase_80377ADC = "d_a_b_tn";
-const char* const stringBase_80377AE5 = "d_a_b_gg";
-const char* const stringBase_80377AEE = "d_a_b_dre";
-const char* const stringBase_80377AF8 = "d_a_b_mgn";
-const char* const stringBase_80377B02 = "d_a_e_warpappear";
-const char* const stringBase_80377B13 = "d_a_obj_smallkey";
-const char* const stringBase_80377B24 = "d_a_obj_kantera";
-const char* const stringBase_80377B34 = "d_a_obj_life_container";
-const char* const stringBase_80377B4B = "d_a_obj_shield";
-const char* const stringBase_80377B5A = "d_a_demo_item";
-const char* const stringBase_80377B68 = "d_a_shop_item";
-const char* const stringBase_80377B76 = "d_a_obj_drop";
-const char* const stringBase_80377B83 = "d_a_obj_rw";
-const char* const stringBase_80377B8E = "d_a_nbomb";
-const char* const stringBase_80377B98 = "d_a_tag_csw";
-const char* const stringBase_80377BA4 = "d_a_tag_qs";
-const char* const stringBase_80377BAF = "d_a_hozelda";
-const char* const stringBase_80377BBB = "d_a_swc00";
-const char* const stringBase_80377BC5 = "d_a_door_knob00";
-const char* const stringBase_80377BD5 = "d_a_door_dbdoor00";
-const char* const stringBase_80377BE7 = "d_a_door_boss";
-const char* const stringBase_80377BF5 = "d_a_door_bossL1";
-const char* const stringBase_80377C05 = "d_a_door_mbossL1";
-const char* const stringBase_80377C16 = "d_a_door_bossL5";
-const char* const stringBase_80377C26 = "d_a_dshutter";
-const char* const stringBase_80377C33 = "d_a_door_spiral";
-const char* const stringBase_80377C43 = "d_a_tag_chgrestart";
-const char* const stringBase_80377C56 = "d_a_tag_setrestart";
-const char* const stringBase_80377C69 = "d_a_andsw";
-const char* const stringBase_80377C73 = "d_a_andsw2";
-const char* const stringBase_80377C7E = "d_a_myna";
-const char* const stringBase_80377C87 = "d_a_npc_gnd";
-const char* const stringBase_80377C93 = "d_a_npc_gra";
-const char* const stringBase_80377C9F = "d_a_npc_grc";
-const char* const stringBase_80377CAB = "d_a_npc_grd";
-const char* const stringBase_80377CB7 = "d_a_npc_grm";
-const char* const stringBase_80377CC3 = "d_a_npc_grmc";
-const char* const stringBase_80377CD0 = "d_a_npc_gro";
-const char* const stringBase_80377CDC = "d_a_npc_grr";
-const char* const stringBase_80377CE8 = "d_a_npc_grs";
-const char* const stringBase_80377CF4 = "d_a_npc_grz";
-const char* const stringBase_80377D00 = "d_a_npc_yamid";
-const char* const stringBase_80377D0E = "d_a_npc_yamit";
-const char* const stringBase_80377D1C = "d_a_npc_yamis";
-const char* const stringBase_80377D2A = "d_a_npc_blue_ns";
-const char* const stringBase_80377D3A = "d_a_npc_kakashi";
-const char* const stringBase_80377D4A = "d_a_npc_kdk";
-const char* const stringBase_80377D56 = "d_a_npc_aru";
-const char* const stringBase_80377D62 = "d_a_npc_bans";
-const char* const stringBase_80377D6F = "d_a_npc_besu";
-const char* const stringBase_80377D7C = "d_a_npc_bou";
-const char* const stringBase_80377D88 = "d_a_npc_bouS";
-const char* const stringBase_80377D95 = "d_a_npc_clerka";
-const char* const stringBase_80377DA4 = "d_a_npc_clerkb";
-const char* const stringBase_80377DB3 = "d_a_npc_clerkt";
-const char* const stringBase_80377DC2 = "d_a_npc_wrestler";
-const char* const stringBase_80377DD3 = "d_a_tag_arena";
-const char* const stringBase_80377DE1 = "d_a_tag_instruction";
-const char* const stringBase_80377DF5 = "d_a_npc_doc";
-const char* const stringBase_80377E01 = "d_a_npc_gwolf";
-const char* const stringBase_80377E0F = "d_a_npc_len";
-const char* const stringBase_80377E1B = "d_a_npc_lud";
-const char* const stringBase_80377E27 = "d_a_npc_fairy_seirei";
-const char* const stringBase_80377E3C = "d_a_npc_fairy";
-const char* const stringBase_80377E4A = "d_a_npc_hanjo";
-const char* const stringBase_80377E58 = "d_a_npc_henna";
-const char* const stringBase_80377E66 = "d_a_npc_henna0";
-const char* const stringBase_80377E75 = "d_a_npc_hoz";
-const char* const stringBase_80377E81 = "d_a_npc_jagar";
-const char* const stringBase_80377E8F = "d_a_npc_kkri";
-const char* const stringBase_80377E9C = "d_a_npc_kn";
-const char* const stringBase_80377EA7 = "d_a_obj_knBullet";
-const char* const stringBase_80377EB8 = "d_a_npc_knj";
-const char* const stringBase_80377EC4 = "d_a_npc_kolin";
-const char* const stringBase_80377ED2 = "d_a_npc_kolinb";
-const char* const stringBase_80377EE1 = "d_a_npc_kyury";
-const char* const stringBase_80377EEF = "d_a_npc_maro";
-const char* const stringBase_80377EFC = "d_a_npc_midp";
-const char* const stringBase_80377F09 = "d_a_npc_moi";
-const char* const stringBase_80377F15 = "d_a_npc_raca";
-const char* const stringBase_80377F22 = "d_a_npc_saru";
-const char* const stringBase_80377F2F = "d_a_npc_seib";
-const char* const stringBase_80377F3C = "d_a_npc_seic";
-const char* const stringBase_80377F49 = "d_a_npc_seid";
-const char* const stringBase_80377F56 = "d_a_npc_seira";
-const char* const stringBase_80377F64 = "d_a_npc_seira2";
-const char* const stringBase_80377F73 = "d_a_npc_seirei";
-const char* const stringBase_80377F82 = "d_a_npc_shaman";
-const char* const stringBase_80377F91 = "d_a_npc_shop_maro";
-const char* const stringBase_80377FA3 = "d_a_npc_sola";
-const char* const stringBase_80377FB0 = "d_a_npc_taro";
-const char* const stringBase_80377FBD = "d_a_npc_pachi_besu";
-const char* const stringBase_80377FD0 = "d_a_npc_pachi_taro";
-const char* const stringBase_80377FE3 = "d_a_npc_pachi_maro";
-const char* const stringBase_80377FF6 = "d_a_tag_pachi";
-const char* const stringBase_80378004 = "d_a_npc_the";
-const char* const stringBase_80378010 = "d_a_npc_tkj";
-const char* const stringBase_8037801C = "d_a_npc_tks";
-const char* const stringBase_80378028 = "d_a_npc_tkc";
-const char* const stringBase_80378034 = "d_a_obj_tks";
-const char* const stringBase_80378040 = "d_a_npc_toby";
-const char* const stringBase_8037804D = "d_a_npc_uri";
-const char* const stringBase_80378059 = "d_a_npc_yelia";
-const char* const stringBase_80378067 = "d_a_npc_ykm";
-const char* const stringBase_80378073 = "d_a_npc_ykw";
-const char* const stringBase_8037807F = "d_a_npc_zanb";
-const char* const stringBase_8037808C = "d_a_npc_zant";
-const char* const stringBase_80378099 = "d_a_npc_zelda";
-const char* const stringBase_803780A7 = "d_a_npc_zelR";
-const char* const stringBase_803780B4 = "d_a_npc_zelRo";
-const char* const stringBase_803780C2 = "d_a_obj_zra_freeze";
-const char* const stringBase_803780D5 = "d_a_npc_zrc";
-const char* const stringBase_803780E1 = "d_a_npc_zrz";
-const char* const stringBase_803780ED = "d_a_obj_zraMark";
-const char* const stringBase_803780FD = "d_a_npc_myna2";
-const char* const stringBase_8037810B = "d_a_tag_myna2";
-const char* const stringBase_80378119 = "d_a_npc_cdn3";
-const char* const stringBase_80378126 = "d_a_tag_schedule";
-const char* const stringBase_80378137 = "d_a_tag_escape";
-const char* const stringBase_80378146 = "d_a_npc_chat";
-const char* const stringBase_80378153 = "d_a_npc_soldierA";
-const char* const stringBase_80378164 = "d_a_npc_soldierB";
-const char* const stringBase_80378175 = "d_a_passer_mng";
-const char* const stringBase_80378184 = "d_a_npc_passer";
-const char* const stringBase_80378193 = "d_a_npc_passer2";
-const char* const stringBase_803781A3 = "d_a_npc_post";
-const char* const stringBase_803781B0 = "d_a_npc_pouya";
-const char* const stringBase_803781BE = "d_a_formation_mng";
-const char* const stringBase_803781D0 = "d_a_npc_fguard";
-const char* const stringBase_803781DF = "d_a_guard_mng";
-const char* const stringBase_803781ED = "d_a_tag_guard";
-const char* const stringBase_803781FB = "d_a_npc_guard";
-const char* const stringBase_80378209 = "d_a_npc_ash";
-const char* const stringBase_80378215 = "d_a_npc_ashB";
-const char* const stringBase_80378222 = "d_a_npc_shad";
-const char* const stringBase_8037822F = "d_a_npc_rafrel";
-const char* const stringBase_8037823E = "d_a_npc_moir";
-const char* const stringBase_8037824B = "d_a_npc_impal";
-const char* const stringBase_80378259 = "d_a_npc_shoe";
-const char* const stringBase_80378266 = "d_a_npc_doorboy";
-const char* const stringBase_80378276 = "d_a_npc_prayer";
-const char* const stringBase_80378285 = "d_a_npc_kasi_hana";
-const char* const stringBase_80378297 = "d_a_npc_kasi_kyu";
-const char* const stringBase_803782A8 = "d_a_npc_kasi_mich";
-const char* const stringBase_803782BA = "d_a_npc_drainSol";
-const char* const stringBase_803782CB = "d_a_npc_chin";
-const char* const stringBase_803782D8 = "d_a_npc_ins";
-const char* const stringBase_803782E4 = "d_a_npc_shop0";
-const char* const stringBase_803782F2 = "d_a_npc_mk";
-const char* const stringBase_803782FD = "d_a_npc_p2";
-const char* const stringBase_80378308 = "d_a_kytag00";
-const char* const stringBase_80378314 = "d_a_kytag01";
-const char* const stringBase_80378320 = "d_a_kytag02";
-const char* const stringBase_8037832C = "d_a_kytag03";
-const char* const stringBase_80378338 = "d_a_kytag04";
-const char* const stringBase_80378344 = "d_a_kytag05";
-const char* const stringBase_80378350 = "d_a_kytag06";
-const char* const stringBase_8037835C = "d_a_kytag07";
-const char* const stringBase_80378368 = "d_a_kytag08";
-const char* const stringBase_80378374 = "d_a_kytag09";
-const char* const stringBase_80378380 = "d_a_kytag10";
-const char* const stringBase_8037838C = "d_a_kytag11";
-const char* const stringBase_80378398 = "d_a_kytag12";
-const char* const stringBase_803783A4 = "d_a_kytag13";
-const char* const stringBase_803783B0 = "d_a_kytag14";
-const char* const stringBase_803783BC = "d_a_kytag15";
-const char* const stringBase_803783C8 = "d_a_kytag16";
-const char* const stringBase_803783D4 = "d_a_kytag17";
-const char* const stringBase_803783E0 = "d_a_ykgr";
-const char* const stringBase_803783E9 = "d_a_talk";
-const char* const stringBase_803783F2 = "d_a_obj_crope";
-const char* const stringBase_80378400 = "d_a_obj_bombf";
-const char* const stringBase_8037840E = "d_a_obj_bk_leaf";
-const char* const stringBase_8037841E = "d_a_tag_mhint";
-const char* const stringBase_8037842C = "d_a_tag_mmsg";
-const char* const stringBase_80378439 = "d_a_tag_mwait";
-const char* const stringBase_80378447 = "d_a_tag_mstop";
-const char* const stringBase_80378455 = "d_a_tag_stream";
-const char* const stringBase_80378464 = "d_a_tag_sppath";
-const char* const stringBase_80378473 = "d_a_tag_wljump";
-const char* const stringBase_80378482 = "d_a_tag_TWgate";
-const char* const stringBase_80378491 = "d_a_tag_Lv6Gate";
-const char* const stringBase_803784A1 = "d_a_tag_Lv7Gate";
-const char* const stringBase_803784B1 = "d_a_tag_Lv8Gate";
-const char* const stringBase_803784C1 = "d_a_tag_theB_hint";
-const char* const stringBase_803784D3 = "d_a_tag_assistance";
-const char* const stringBase_803784E6 = "d_a_demo00";
-const char* const stringBase_803784F1 = "d_a_tag_camera";
-const char* const stringBase_80378500 = "d_a_tag_chkpoint";
-const char* const stringBase_80378511 = "d_a_tag_event";
-const char* const stringBase_8037851F = "d_a_tag_evt";
-const char* const stringBase_8037852B = "d_a_tag_telop";
-const char* const stringBase_80378539 = "d_a_tag_howl";
-const char* const stringBase_80378546 = "d_a_tag_msg";
-const char* const stringBase_80378552 = "d_a_tag_lantern";
-const char* const stringBase_80378562 = "d_a_tag_mist";
-const char* const stringBase_8037856F = "d_a_dmidna";
-const char* const stringBase_8037857A = "d_a_vrbox";
-const char* const stringBase_80378584 = "d_a_vrbox2";
-const char* const stringBase_8037858F = "d_a_bg";
-const char* const stringBase_80378596 = "d_a_set_bgobj";
-const char* const stringBase_803785A4 = "d_a_bg_obj";
-const char* const stringBase_803785AF = "d_a_mirror";
-const char* const stringBase_803785BA = "d_a_movie_player";
-const char* const stringBase_803785CB = "d_a_title";
-const char* const stringBase_803785D5 = "d_a_fr";
-const char* const stringBase_803785DC = "d_a_econt";
-const char* const stringBase_803785E6 = "d_a_mg_rod";
-const char* const stringBase_803785F1 = "d_a_e_arrow";
-const char* const stringBase_803785FD = "d_a_bullet";
-const char* const stringBase_80378608 = "d_a_swhit0";
-const char* const stringBase_80378613 = "d_a_e_th_ball";
-const char* const stringBase_80378621 = "d_a_tag_evtarea";
-const char* const stringBase_80378631 = "d_a_tag_evtmsg";
-const char* const stringBase_80378640 = "d_a_tag_kmsg";
-const char* const stringBase_8037864D = "d_a_tag_push";
-const char* const stringBase_8037865A = "d_a_e_mk_bo";
-const char* const stringBase_80378666 = "d_a_e_mm_mt";
-const char* const stringBase_80378672 = "d_a_obj_kbox";
-const char* const stringBase_8037867F = "d_a_obj_fw";
-const char* const stringBase_8037868A = "d_a_b_gos";
-const char* const stringBase_80378694 = "d_a_obj_ystone";
-const char* const stringBase_803786A3 = "d_a_mant";
-const char* const stringBase_803786AC = "d_a_crod";
-const char* const stringBase_803786B5 = "d_a_obj_pleaf";
-const char* const stringBase_803786C3 = "d_a_obj_kbacket";
-const char* const stringBase_803786D3 = "d_a_obj_yel_bag";
-const char* const stringBase_803786E3 = "d_a_obj_pumpkin";
-const char* const stringBase_803786F3 = "d_a_obj_automata";
-const char* const stringBase_80378704 = "d_a_obj_gadget";
-const char* const stringBase_80378713 = "d_a_obj_kago";
-const char* const stringBase_80378720 = "d_a_obj_carry";
-const char* const stringBase_8037872E = "d_a_obj_stone";
-const char* const stringBase_8037873C = "d_a_obj_hb";
-const char* const stringBase_80378747 = "d_a_npc_inko";
-const char* const stringBase_80378754 = "d_a_bd";
-const char* const stringBase_8037875B = "d_a_obj_eff";
-const char* const stringBase_80378767 = "d_a_e_bi";
-const char* const stringBase_80378770 = "d_a_e_bi_leaf";
-const char* const stringBase_8037877E = "d_a_startAndGoal";
-const char* const stringBase_8037878F = "d_a_npc_df";
-const char* const stringBase_8037879A = "d_a_arrow";
-const char* const stringBase_803787A4 = "d_a_path_line";
-const char* const stringBase_803787B2 = "d_a_tag_allmato";
-const char* const stringBase_803787C2 = "d_a_obj_timer";
-const char* const stringBase_803787D0 = "d_a_scene_exit";
-const char* const stringBase_803787DF = "d_a_suspend";
-const char* const stringBase_803787EB = "d_a_grass";
-const char* const stringBase_803787F5 = "cDyl_Link i_ProfName=%d\n";
-const char* const stringBase_8037880E = 
-    "cDyl_LinkASync: リンクに失敗しました。諦めます\n";
-const char* const stringBase_8037883E = "/";
-const char* const stringBase_80378840 = 
-    "/dvd/str/Final/Release/frameworkF.str";
-const char* const stringBase_80378866 = "f_pc_profile_lst";
-/* @stringBase0 padding */
-char* const pad_80378877 = "";
-#pragma pop
+/* 80450CAC-80450CB0 0004+00 rc=2 efc=0 rfr=False None .sbss      cDyl_Initialized                                             */
+static u8 cDyl_Initialized[4];
 
-/* 80450CAC-80450CB0 0004+00 rc=0 efc=0 .sbss      cDyl_Initialized                                             */
-u8 cDyl_Initialized[4];
-
-/* 800185C0-80018688 00C8+00 rc=0 efc=0 .text      cDyl_LinkASync__Fs                                           */
+/* 800185C0-80018688 00C8+00 rc=2 efc=1 rfr=False None .text      cDyl_LinkASync__Fs                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2477,11 +2471,11 @@ asm void cDyl_LinkASync(s16 field_0) {
 #pragma pop
 
 
-/* 80018688-80018764 00DC+00 rc=0 efc=0 .text      cDyl_InitCallback__FPv                                       */
+/* 80018688-80018764 00DC+00 rc=1 efc=0 rfr=False None .text      cDyl_InitCallback__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cDyl_InitCallback(void* field_0) {
+asm static void cDyl_InitCallback(void* field_0) {
 	nofralloc
 #include "asm/c/c_dylink/cDyl_InitCallback__FPv.s"
 }
@@ -2489,10 +2483,10 @@ asm void cDyl_InitCallback(void* field_0) {
 
 
 /* ############################################################################################## */
-/* 80450CB0-80450CB8 0004+04 rc=0 efc=0 .sbss      cDyl_DVD                                                     */
-u8 cDyl_DVD[4 + 4 /* padding */];
+/* 80450CB0-80450CB8 0004+04 rc=2 efc=0 rfr=False None .sbss      cDyl_DVD                                                     */
+static u8 cDyl_DVD[4 + 4 /* padding */];
 
-/* 80018764-80018798 0034+00 rc=0 efc=0 .text      cDyl_InitAsync__Fv                                           */
+/* 80018764-80018798 0034+00 rc=1 efc=1 rfr=False None .text      cDyl_InitAsync__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2503,7 +2497,7 @@ asm void cDyl_InitAsync() {
 #pragma pop
 
 
-/* 80018798-80018804 006C+00 rc=0 efc=0 .text      cDyl_InitAsyncIsDone__Fv                                     */
+/* 80018798-80018804 006C+00 rc=2 efc=2 rfr=False None .text      cDyl_InitAsyncIsDone__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2514,13 +2508,13 @@ asm void cDyl_InitAsyncIsDone() {
 #pragma pop
 
 
-/* 80018804-8001880C 0008+00 rc=0 efc=0 .text      phase_01__7cDylPhsFPv                                        */
+/* 80018804-8001880C 0008+00 rc=1 efc=0 rfr=False None .text      phase_01__7cDylPhsFPv                                        */
 s32 cDylPhs::phase_01(void* field_0) {
 	return 2;
 }
 
 
-/* 8001880C-80018844 0038+00 rc=0 efc=0 .text      phase_02__7cDylPhsFPs                                        */
+/* 8001880C-80018844 0038+00 rc=1 efc=0 rfr=False None .text      phase_02__7cDylPhsFPs                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2531,23 +2525,23 @@ asm void cDylPhs::phase_02(s16* field_0) {
 #pragma pop
 
 
-/* 80018844-8001884C 0008+00 rc=0 efc=0 .text      phase_03__7cDylPhsFPv                                        */
+/* 80018844-8001884C 0008+00 rc=1 efc=0 rfr=False None .text      phase_03__7cDylPhsFPv                                        */
 bool cDylPhs::phase_03(void* field_0) {
 	return false;
 }
 
 
 /* ############################################################################################## */
-/* 803A3590-803A35A0 000C+04 rc=0 efc=0 .data      l_method$3807                                                */
-void* data_803A3590[3 + 1 /* padding */] = {
-	(void*)phase_01__7cDylPhsFPv,
-	(void*)phase_02__7cDylPhsFPs,
-	(void*)phase_03__7cDylPhsFPv,
+/* 803A3590-803A35A0 000C+04 rc=1 efc=0 rfr=False None .data      l_method$3807                                                */
+SECTION_DATA static void* data_803A3590[3 + 1 /* padding */] = {
+	/* 0    */ (void*)phase_01__7cDylPhsFPv,
+	/* 1    */ (void*)phase_02__7cDylPhsFPs,
+	/* 2    */ (void*)phase_03__7cDylPhsFPv,
 	/* padding */
 	NULL,
 };
 
-/* 8001884C-80018890 0044+00 rc=0 efc=0 .text      Link__7cDylPhsFP30request_of_phase_process_classs            */
+/* 8001884C-80018890 0044+00 rc=2 efc=2 rfr=False None .text      Link__7cDylPhsFP30request_of_phase_process_classs            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2558,7 +2552,7 @@ asm void cDylPhs::Link(request_of_phase_process_class* field_0, s16 field_1) {
 #pragma pop
 
 
-/* 80018890-800188DC 004C+00 rc=0 efc=0 .text      Unlink__7cDylPhsFP30request_of_phase_process_classs          */
+/* 80018890-800188DC 004C+00 rc=1 efc=1 rfr=False None .text      Unlink__7cDylPhsFP30request_of_phase_process_classs          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2569,13 +2563,13 @@ asm void cDylPhs::Unlink(request_of_phase_process_class* field_0, s16 field_1) {
 #pragma pop
 
 
-/* 800188DC-800188E4 0008+00 rc=0 efc=0 .text      getModuleName__24DynamicModuleControlBaseCFv                 */
+/* 800188DC-800188E4 0008+00 rc=1 efc=1 rfr=False None .text      getModuleName__24DynamicModuleControlBaseCFv                 */
 bool DynamicModuleControlBase::getModuleName() const {
 	return false;
 }
 
 
-/* 800188E4-80018944 0060+00 rc=0 efc=0 .text      __dt__20DynamicModuleControlFv                               */
+/* 800188E4-80018944 0060+00 rc=1 efc=1 rfr=False None .text      __dt__20DynamicModuleControlFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

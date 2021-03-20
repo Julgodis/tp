@@ -20,8 +20,6 @@ extern "C" void OSGetArenaLo(); // 1
 extern "C" void OSSetArenaHi(); // 1
 extern "C" void OSSetArenaLo(); // 1
 extern "C" void OSAllocFromArenaLo(); // 1
-SECTION_SDATA extern u32 __OSArenaLo[1 + 1 /* padding */];
-SECTION_SBSS extern u8 __OSArenaHi[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -34,10 +32,10 @@ SECTION_SBSS extern u8 __OSArenaHi[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80451650-80451658 0004+04 rc=0 efc=0 .sbss      __OSArenaHi                                                  */
-u8 __OSArenaHi[4 + 4 /* padding */];
+/* 80451650-80451658 0004+04 rc=2 efc=0 rfr=False None .sbss      __OSArenaHi                                                  */
+static u8 __OSArenaHi[4 + 4 /* padding */];
 
-/* 8033B28C-8033B294 0008+00 rc=0 efc=0 .text      OSGetArenaHi                                                 */
+/* 8033B28C-8033B294 0008+00 rc=7 efc=7 rfr=False None .text      OSGetArenaHi                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -49,14 +47,14 @@ extern "C" asm void OSGetArenaHi() {
 
 
 /* ############################################################################################## */
-/* 80450998-804509A0 0004+04 rc=0 efc=0 .sdata     __OSArenaLo                                                  */
-u32 __OSArenaLo[1 + 1 /* padding */] = {
+/* 80450998-804509A0 0004+04 rc=3 efc=0 rfr=False None .sdata     __OSArenaLo                                                  */
+SECTION_SDATA static u32 __OSArenaLo[1 + 1 /* padding */] = {
 	0xFFFFFFFF,
 	/* padding */
 	0x00000000,
 };
 
-/* 8033B294-8033B29C 0008+00 rc=0 efc=0 .text      OSGetArenaLo                                                 */
+/* 8033B294-8033B29C 0008+00 rc=4 efc=4 rfr=False None .text      OSGetArenaLo                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,7 +65,7 @@ extern "C" asm void OSGetArenaLo() {
 #pragma pop
 
 
-/* 8033B29C-8033B2A4 0008+00 rc=0 efc=0 .text      OSSetArenaHi                                                 */
+/* 8033B29C-8033B2A4 0008+00 rc=5 efc=5 rfr=False None .text      OSSetArenaHi                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -78,7 +76,7 @@ extern "C" asm void OSSetArenaHi() {
 #pragma pop
 
 
-/* 8033B2A4-8033B2AC 0008+00 rc=0 efc=0 .text      OSSetArenaLo                                                 */
+/* 8033B2A4-8033B2AC 0008+00 rc=5 efc=5 rfr=False None .text      OSSetArenaLo                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -89,7 +87,7 @@ extern "C" asm void OSSetArenaLo() {
 #pragma pop
 
 
-/* 8033B2AC-8033B2D8 002C+00 rc=0 efc=0 .text      OSAllocFromArenaLo                                           */
+/* 8033B2AC-8033B2D8 002C+00 rc=4 efc=4 rfr=False None .text      OSAllocFromArenaLo                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

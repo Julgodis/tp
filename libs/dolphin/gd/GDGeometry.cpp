@@ -16,7 +16,6 @@ extern "C" void GDSetArrayRaw(); // 1
 extern "C" void GDSetVtxDescv(); // 1
 extern "C" void GDSetArray(); // 1
 extern "C" void GDSetArrayRaw(); // 1
-SECTION_DATA extern void* GDGeometry__lit_121[26];
 
 // 
 // External References:
@@ -25,44 +24,44 @@ SECTION_DATA extern void* GDGeometry__lit_121[26];
 extern "C" void GDOverflowed(); // 1
 
 extern "C" void GDOverflowed(); // 1
-SECTION_SBSS extern u8 __GDCurrentDL[4];
+extern "C" extern u8 __GDCurrentDL[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803D2948-803D29B0 0068+00 rc=0 efc=0 .data      @121                                                         */
-void* GDGeometry__lit_121[26] = {
-	(void*)(((char*)GDSetVtxDescv)+0x78),
-	(void*)(((char*)GDSetVtxDescv)+0x80),
-	(void*)(((char*)GDSetVtxDescv)+0x90),
-	(void*)(((char*)GDSetVtxDescv)+0xA4),
-	(void*)(((char*)GDSetVtxDescv)+0xB8),
-	(void*)(((char*)GDSetVtxDescv)+0xCC),
-	(void*)(((char*)GDSetVtxDescv)+0xE0),
-	(void*)(((char*)GDSetVtxDescv)+0xF4),
-	(void*)(((char*)GDSetVtxDescv)+0x108),
-	(void*)(((char*)GDSetVtxDescv)+0x11C),
-	(void*)(((char*)GDSetVtxDescv)+0x124),
-	(void*)(((char*)GDSetVtxDescv)+0x154),
-	(void*)(((char*)GDSetVtxDescv)+0x170),
-	(void*)(((char*)GDSetVtxDescv)+0x18C),
-	(void*)(((char*)GDSetVtxDescv)+0x1A8),
-	(void*)(((char*)GDSetVtxDescv)+0x1C4),
-	(void*)(((char*)GDSetVtxDescv)+0x1E0),
-	(void*)(((char*)GDSetVtxDescv)+0x1FC),
-	(void*)(((char*)GDSetVtxDescv)+0x218),
-	(void*)(((char*)GDSetVtxDescv)+0x234),
-	(void*)(((char*)GDSetVtxDescv)+0x250),
-	(void*)(((char*)GDSetVtxDescv)+0x268),
-	(void*)(((char*)GDSetVtxDescv)+0x268),
-	(void*)(((char*)GDSetVtxDescv)+0x268),
-	(void*)(((char*)GDSetVtxDescv)+0x268),
-	(void*)(((char*)GDSetVtxDescv)+0x13C),
+/* 803D2948-803D29B0 0068+00 rc=1 efc=0 rfr=False None .data      @121                                                         */
+SECTION_DATA static void* GDGeometry__lit_121[26] = {
+	/* 0    */ (void*)(((char*)GDSetVtxDescv)+0x78),
+	/* 1    */ (void*)(((char*)GDSetVtxDescv)+0x80),
+	/* 2    */ (void*)(((char*)GDSetVtxDescv)+0x90),
+	/* 3    */ (void*)(((char*)GDSetVtxDescv)+0xA4),
+	/* 4    */ (void*)(((char*)GDSetVtxDescv)+0xB8),
+	/* 5    */ (void*)(((char*)GDSetVtxDescv)+0xCC),
+	/* 6    */ (void*)(((char*)GDSetVtxDescv)+0xE0),
+	/* 7    */ (void*)(((char*)GDSetVtxDescv)+0xF4),
+	/* 8    */ (void*)(((char*)GDSetVtxDescv)+0x108),
+	/* 9    */ (void*)(((char*)GDSetVtxDescv)+0x11C),
+	/* 10   */ (void*)(((char*)GDSetVtxDescv)+0x124),
+	/* 11   */ (void*)(((char*)GDSetVtxDescv)+0x154),
+	/* 12   */ (void*)(((char*)GDSetVtxDescv)+0x170),
+	/* 13   */ (void*)(((char*)GDSetVtxDescv)+0x18C),
+	/* 14   */ (void*)(((char*)GDSetVtxDescv)+0x1A8),
+	/* 15   */ (void*)(((char*)GDSetVtxDescv)+0x1C4),
+	/* 16   */ (void*)(((char*)GDSetVtxDescv)+0x1E0),
+	/* 17   */ (void*)(((char*)GDSetVtxDescv)+0x1FC),
+	/* 18   */ (void*)(((char*)GDSetVtxDescv)+0x218),
+	/* 19   */ (void*)(((char*)GDSetVtxDescv)+0x234),
+	/* 20   */ (void*)(((char*)GDSetVtxDescv)+0x250),
+	/* 21   */ (void*)(((char*)GDSetVtxDescv)+0x268),
+	/* 22   */ (void*)(((char*)GDSetVtxDescv)+0x268),
+	/* 23   */ (void*)(((char*)GDSetVtxDescv)+0x268),
+	/* 24   */ (void*)(((char*)GDSetVtxDescv)+0x268),
+	/* 25   */ (void*)(((char*)GDSetVtxDescv)+0x13C),
 };
 
-/* 80361104-80361700 05FC+00 rc=0 efc=0 .text      GDSetVtxDescv                                                */
+/* 80361104-80361700 05FC+00 rc=2 efc=1 rfr=False None .text      GDSetVtxDescv                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -73,7 +72,7 @@ extern "C" asm void GDSetVtxDescv() {
 #pragma pop
 
 
-/* 80361700-8036190C 020C+00 rc=0 efc=0 .text      GDSetArray                                                   */
+/* 80361700-8036190C 020C+00 rc=1 efc=1 rfr=False None .text      GDSetArray                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,7 +83,7 @@ extern "C" asm void GDSetArray() {
 #pragma pop
 
 
-/* 8036190C-80361B14 0208+00 rc=0 efc=0 .text      GDSetArrayRaw                                                */
+/* 8036190C-80361B14 0208+00 rc=1 efc=1 rfr=False None .text      GDSetArrayRaw                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

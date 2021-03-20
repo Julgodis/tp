@@ -9,11 +9,11 @@
 // Types:
 // 
 
-struct OSContext {
-};
-
 struct JUTDirectPrint {
 	/* 802E456C */ void changeFrameBuffer(void*, u16, u16);
+};
+
+struct OSContext {
 };
 
 struct JUTException {
@@ -48,10 +48,10 @@ struct JUTException {
 	/* 802E40EC */ ~JUTException();
 };
 
-struct _GXRenderModeObj {
+struct _GXGamma {
 };
 
-struct _GXGamma {
+struct _GXRenderModeObj {
 };
 
 struct JUTExternalFB {
@@ -120,8 +120,8 @@ struct JUTDirectFile {
 // Forward References:
 // 
 
-extern "C" void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct(); // 1
-void search_name_part(u8*, u8*, int); // 2
+extern "C" static void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct(); // 1
+static void search_name_part(u8*, u8*, int); // 2
 extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
 extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
 extern "C" void __sinit_JUTException_cpp(); // 1
@@ -130,13 +130,13 @@ extern "C" void __ct__12JUTExceptionFP14JUTDirectPrint(); // 1
 extern "C" void create__12JUTExceptionFP14JUTDirectPrint(); // 1
 extern "C" void run__12JUTExceptionFv(); // 1
 extern "C" void errorHandler__12JUTExceptionFUsP9OSContextUlUl(); // 1
-extern "C" void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct(); // 1
+extern "C" static void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct(); // 1
 extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
 extern "C" void setFPException__12JUTExceptionFUl(); // 1
 extern "C" void showFloatSub__12JUTExceptionFif(); // 1
 extern "C" void showFloat__12JUTExceptionFP9OSContext(); // 1
 extern "C" void searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl(); // 1
-extern "C" void search_name_part__FPUcPUci(); // 1
+extern "C" static void search_name_part__FPUcPUci(); // 1
 extern "C" void showStack__12JUTExceptionFP9OSContext(); // 1
 extern "C" void showMainInfo__12JUTExceptionFUsP9OSContextUlUl(); // 1
 extern "C" void showGPR__12JUTExceptionFP9OSContext(); // 1
@@ -159,28 +159,10 @@ extern "C" void __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl(); // 1
 extern "C" void __dt__12JUTExceptionFv(); // 1
 extern "C" void __sinit_JUTException_cpp(); // 1
 extern "C" void func_802E4194(); // 1
-SECTION_RODATA extern const char* const JUTException__stringBase0;
-SECTION_DATA extern u8 sMessageQueue__12JUTException[32];
-SECTION_DATA extern u8 c3bcnt[32];
-SECTION_DATA extern void* sCpuExpName__12JUTException[17];
-SECTION_DATA extern void* const __vt__12JUTException[4 + 1 /* padding */];
-SECTION_BSS extern u8 exCallbackObject[20];
-SECTION_BSS extern u8 JUTException__lit_2182[12];
-SECTION_BSS extern u8 sMapFileList__12JUTException[12 + 4 /* padding */];
-SECTION_BSS extern u8 data_804345A8[712];
-SECTION_SDATA extern u8 sMessageBuffer__12JUTException[4 + 4 /* padding */];
-SECTION_SDATA extern u8 data_804508F8[8];
-SECTION_SBSS extern u8 sErrorManager__12JUTException[4];
-SECTION_SBSS extern u8 sPreUserCallback__12JUTException[4];
-SECTION_SBSS extern u8 sPostUserCallback__12JUTException[4];
-SECTION_SBSS extern u8 sConsoleBuffer__12JUTException[4];
-SECTION_SBSS extern u8 sConsoleBufferSize__12JUTException[4];
-SECTION_SBSS extern u8 sConsole__12JUTException[4];
-SECTION_SBSS extern u8 msr__12JUTException[4];
-SECTION_SBSS extern u8 fpscr__12JUTException[4];
-SECTION_SDATA2 extern u8 lit_2293[4];
-SECTION_SDATA2 extern f32 lit_3034;
-SECTION_SDATA2 extern f32 lit_3035[1 + 1 /* padding */];
+extern "C" extern char const* const JUTException__stringBase0;
+extern "C" extern u8 data_804508F8[8];
+extern "C" extern u8 sErrorManager__12JUTException[4];
+extern "C" extern u8 sConsole__12JUTException[4];
 
 // 
 // External References:
@@ -318,69 +300,152 @@ extern "C" void strcmp(); // 1
 extern "C" void strcat(); // 1
 extern "C" void strcpy(); // 1
 extern "C" void strtol(); // 1
-SECTION_DATA extern u8 GXNtsc480Int[60];
-SECTION_SDATA extern u32 __OSFpscrEnableBits;
-SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
-SECTION_SBSS extern u8 sManager__17JUTConsoleManager[4];
+extern "C" extern u8 GXNtsc480Int[60];
+extern "C" extern u32 __OSFpscrEnableBits;
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sManager__17JUTConsoleManager[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803CC620-803CC640 0020+00 rc=0 efc=0 .data      sMessageQueue__12JUTException                                */
-u8 sMessageQueue__12JUTException[32] = {
+/* 8039D490-8039D9A0 050E+02 rc=14 efc=0 rfr=False None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD static char const* const stringBase_8039D490 = "SYSTEM RESET";
+SECTION_DEAD static char const* const stringBase_8039D49D = "MACHINE CHECK";
+SECTION_DEAD static char const* const stringBase_8039D4AB = "DSI";
+SECTION_DEAD static char const* const stringBase_8039D4AF = "ISI";
+SECTION_DEAD static char const* const stringBase_8039D4B3 = "EXTERNAL INTERRUPT";
+SECTION_DEAD static char const* const stringBase_8039D4C6 = "ALIGNMENT";
+SECTION_DEAD static char const* const stringBase_8039D4D0 = "PROGRAM";
+SECTION_DEAD static char const* const stringBase_8039D4D8 = "FLOATING POINT";
+SECTION_DEAD static char const* const stringBase_8039D4E7 = "DECREMENTER";
+SECTION_DEAD static char const* const stringBase_8039D4F3 = "SYSTEM CALL";
+SECTION_DEAD static char const* const stringBase_8039D4FF = "TRACE";
+SECTION_DEAD static char const* const stringBase_8039D505 = "PERFORMACE MONITOR";
+SECTION_DEAD static char const* const stringBase_8039D518 = "BREAK POINT";
+SECTION_DEAD static char const* const stringBase_8039D524 = "SYSTEM INTERRUPT";
+SECTION_DEAD static char const* const stringBase_8039D535 = "THERMAL INTERRUPT";
+SECTION_DEAD static char const* const stringBase_8039D547 = "PROTECTION";
+SECTION_DEAD static char const* const stringBase_8039D552 = "%s in \"%s\" on line %d\n";
+SECTION_DEAD static char const* const stringBase_8039D569 = "F%02d: Nan      ";
+SECTION_DEAD static char const* const stringBase_8039D57A = "F%02d:+Inf     ";
+SECTION_DEAD static char const* const stringBase_8039D58A = "F%02d:-Inf     ";
+SECTION_DEAD static char const* const stringBase_8039D59A = "F%02d: 0.0      ";
+SECTION_DEAD static char const* const stringBase_8039D5AB = "F%02d:%+.3E";
+SECTION_DEAD static char const* const stringBase_8039D5B7 = 
+    "-------------------------------- FPR\n";
+SECTION_DEAD static char const* const stringBase_8039D5DD = " ";
+SECTION_DEAD static char const* const stringBase_8039D5DF = "\n";
+SECTION_DEAD static char const* const stringBase_8039D5E1 = 
+    "-------------------------------- TRACE\n";
+SECTION_DEAD static char const* const stringBase_8039D609 = "Address:   BackChain   LR save\n";
+SECTION_DEAD static char const* const stringBase_8039D629 = "Suppress trace.\n";
+SECTION_DEAD static char const* const stringBase_8039D63A = "%08X:  %08X    %08X\n";
+SECTION_DEAD static char const* const stringBase_8039D64F = "CONTEXT:%08XH  (%s EXCEPTION)\n";
+SECTION_DEAD static char const* const stringBase_8039D66E = "CONTEXT:%08XH\n";
+SECTION_DEAD static char const* const stringBase_8039D67D = " FPE: Invalid operation\n";
+SECTION_DEAD static char const* const stringBase_8039D696 = " SNaN\n";
+SECTION_DEAD static char const* const stringBase_8039D69D = " Infinity - Infinity\n";
+SECTION_DEAD static char const* const stringBase_8039D6B3 = " Infinity / Infinity\n";
+SECTION_DEAD static char const* const stringBase_8039D6C9 = " 0 / 0\n";
+SECTION_DEAD static char const* const stringBase_8039D6D1 = " Infinity * 0\n";
+SECTION_DEAD static char const* const stringBase_8039D6E0 = " Invalid compare\n";
+SECTION_DEAD static char const* const stringBase_8039D6F2 = " Software request\n";
+SECTION_DEAD static char const* const stringBase_8039D705 = " Invalid square root\n";
+SECTION_DEAD static char const* const stringBase_8039D71B = " Invalid integer convert\n";
+SECTION_DEAD static char const* const stringBase_8039D735 = " FPE: Overflow\n";
+SECTION_DEAD static char const* const stringBase_8039D745 = " FPE: Underflow\n";
+SECTION_DEAD static char const* const stringBase_8039D756 = " FPE: Zero division\n";
+SECTION_DEAD static char const* const stringBase_8039D76B = " FPE: Inexact result\n";
+SECTION_DEAD static char const* const stringBase_8039D781 = "SRR0:   %08XH   SRR1:%08XH\n";
+SECTION_DEAD static char const* const stringBase_8039D79D = "DSISR:  %08XH   DAR: %08XH\n";
+SECTION_DEAD static char const* const stringBase_8039D7B9 = 
+    "-------------------------------- GPR\n";
+SECTION_DEAD static char const* const stringBase_8039D7DF = 
+    "R%02d:%08XH  R%02d:%08XH  R%02d:%08XH\n";
+SECTION_DEAD static char const* const stringBase_8039D806 = "R%02d:%08XH  R%02d:%08XH\n";
+SECTION_DEAD static char const* const stringBase_8039D820 = "";
+SECTION_DEAD static char const* const stringBase_8039D821 = "%s %s:%x section:%d\n";
+SECTION_DEAD static char const* const stringBase_8039D836 = 
+    "-------------------------------- GPRMAP\n";
+SECTION_DEAD static char const* const stringBase_8039D85F = "R%02d: %08XH";
+SECTION_DEAD static char const* const stringBase_8039D86C = "  no information\n";
+SECTION_DEAD static char const* const stringBase_8039D87E = 
+    "  no register which seem to address.\n";
+SECTION_DEAD static char const* const stringBase_8039D8A4 = 
+    "-------------------------------- SRR0MAP\n";
+SECTION_DEAD static char const* const stringBase_8039D8CE = "SRR0: %08XH";
+SECTION_DEAD static char const* const stringBase_8039D8DA = " MSR:%08XH\t FPSCR:%08XH\n";
+SECTION_DEAD static char const* const stringBase_8039D8F3 = 
+    "******** EXCEPTION OCCURRED! ********\nFrameMemor"
+    "y:%XH\n";
+SECTION_DEAD static char const* const stringBase_8039D92A = 
+    "******** USER HALT ********\nFrameMemory:%XH\n";
+SECTION_DEAD static char const* const stringBase_8039D957 = 
+    "--------------------------------\n";
+SECTION_DEAD static char const* const stringBase_8039D979 = ".map";
+SECTION_DEAD static char const* const stringBase_8039D97E = "  [%08X]: .%s [%08X: %XH]\n  %s\n";
+/* @stringBase0 padding */
+SECTION_DEAD static char const* const pad_8039D99E = "\0";
+#pragma pop
+
+/* 803CC620-803CC640 0020+00 rc=3 efc=0 rfr=False None .data      sMessageQueue__12JUTException                                */
+SECTION_DATA static u8 sMessageQueue__12JUTException[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CC640-803CC660 0020+00 rc=0 efc=0 .data      c3bcnt                                                       */
-u8 c3bcnt[32] = {
+/* 803CC640-803CC660 0020+00 rc=1 efc=0 rfr=False None .data      c3bcnt                                                       */
+SECTION_DATA static u8 c3bcnt[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CC660-803CC6A4 0044+00 rc=0 efc=0 .data      sCpuExpName__12JUTException                                  */
-void* sCpuExpName__12JUTException[17] = {
-	(void*)&JUTException__stringBase0,
-	(void*)0x8039D49D,
-	(void*)0x8039D4AB,
-	(void*)0x8039D4AF,
-	(void*)0x8039D4B3,
-	(void*)0x8039D4C6,
-	(void*)0x8039D4D0,
-	(void*)0x8039D4D8,
-	(void*)0x8039D4E7,
-	(void*)0x8039D4F3,
-	(void*)0x8039D4FF,
-	(void*)0x8039D505,
-	(void*)0x8039D518,
-	(void*)0x8039D524,
-	(void*)0x8039D535,
-	(void*)0x8039D547,
-	(void*)0x8039D4D8,
+/* 803CC660-803CC6A4 0044+00 rc=1 efc=0 rfr=False None .data      sCpuExpName__12JUTException                                  */
+SECTION_DATA static void* sCpuExpName__12JUTException[17] = {
+	/* 0    */ (void*)&JUTException__stringBase0,
+	/* 1    */ (void*)(((char*)&JUTException__stringBase0)+0xD),
+	/* 2    */ (void*)(((char*)&JUTException__stringBase0)+0x1B),
+	/* 3    */ (void*)(((char*)&JUTException__stringBase0)+0x1F),
+	/* 4    */ (void*)(((char*)&JUTException__stringBase0)+0x23),
+	/* 5    */ (void*)(((char*)&JUTException__stringBase0)+0x36),
+	/* 6    */ (void*)(((char*)&JUTException__stringBase0)+0x40),
+	/* 7    */ (void*)(((char*)&JUTException__stringBase0)+0x48),
+	/* 8    */ (void*)(((char*)&JUTException__stringBase0)+0x57),
+	/* 9    */ (void*)(((char*)&JUTException__stringBase0)+0x63),
+	/* 10   */ (void*)(((char*)&JUTException__stringBase0)+0x6F),
+	/* 11   */ (void*)(((char*)&JUTException__stringBase0)+0x75),
+	/* 12   */ (void*)(((char*)&JUTException__stringBase0)+0x88),
+	/* 13   */ (void*)(((char*)&JUTException__stringBase0)+0x94),
+	/* 14   */ (void*)(((char*)&JUTException__stringBase0)+0xA5),
+	/* 15   */ (void*)(((char*)&JUTException__stringBase0)+0xB7),
+	/* 16   */ (void*)(((char*)&JUTException__stringBase0)+0x48),
 };
 
-/* 803CC6A4-803CC6B8 0010+04 rc=0 efc=0 .data      __vt__12JUTException                                         */
-void* const __vt__12JUTException[4 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__12JUTExceptionFv,
-	(void*)run__12JUTExceptionFv,
+/* 803CC6A4-803CC6B8 0010+04 rc=2 efc=0 rfr=False None .data      __vt__12JUTException                                         */
+SECTION_DATA static void* __vt__12JUTException[4 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__12JUTExceptionFv,
+	/* 3    */ (void*)run__12JUTExceptionFv,
 	/* padding */
 	NULL,
 };
 
-/* 80451508-8045150C 0004+00 rc=0 efc=0 .sbss      sErrorManager__12JUTException                                */
+/* 80451508-8045150C 0004+00 rc=7 efc=3 rfr=False None .sbss      sErrorManager__12JUTException                                */
 u8 sErrorManager__12JUTException[4];
 
-/* 8045150C-80451510 0004+00 rc=0 efc=0 .sbss      sPreUserCallback__12JUTException                             */
-u8 sPreUserCallback__12JUTException[4];
+/* 8045150C-80451510 0004+00 rc=4 efc=0 rfr=False None .sbss      sPreUserCallback__12JUTException                             */
+static u8 sPreUserCallback__12JUTException[4];
 
-/* 80451510-80451514 0004+00 rc=0 efc=0 .sbss      sPostUserCallback__12JUTException                            */
-u8 sPostUserCallback__12JUTException[4];
+/* 80451510-80451514 0004+00 rc=3 efc=0 rfr=False None .sbss      sPostUserCallback__12JUTException                            */
+static u8 sPostUserCallback__12JUTException[4];
 
-/* 802E1D5C-802E1E40 00E4+00 rc=0 efc=0 .text      __ct__12JUTExceptionFP14JUTDirectPrint                       */
+/* 802E1D5C-802E1E40 00E4+00 rc=1 efc=0 rfr=False None .text      __ct__12JUTExceptionFP14JUTDirectPrint                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -391,7 +456,7 @@ asm JUTException::JUTException(JUTDirectPrint* field_0) {
 #pragma pop
 
 
-/* 802E1E40-802E1EA8 0068+00 rc=0 efc=0 .text      create__12JUTExceptionFP14JUTDirectPrint                     */
+/* 802E1E40-802E1EA8 0068+00 rc=1 efc=1 rfr=False None .text      create__12JUTExceptionFP14JUTDirectPrint                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -403,14 +468,14 @@ asm void JUTException::create(JUTDirectPrint* field_0) {
 
 
 /* ############################################################################################## */
-/* 804508F0-804508F8 0004+04 rc=0 efc=0 .sdata     sMessageBuffer__12JUTException                               */
-u8 sMessageBuffer__12JUTException[4 + 4 /* padding */] = {
+/* 804508F0-804508F8 0004+04 rc=1 efc=0 rfr=False None .sdata     sMessageBuffer__12JUTException                               */
+SECTION_SDATA static u8 sMessageBuffer__12JUTException[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802E1EA8-802E1FCC 0124+00 rc=0 efc=0 .text      run__12JUTExceptionFv                                        */
+/* 802E1EA8-802E1FCC 0124+00 rc=1 efc=0 rfr=False None .text      run__12JUTExceptionFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -422,25 +487,25 @@ asm void JUTException::run() {
 
 
 /* ############################################################################################## */
-/* 80434578-8043458C 0014+00 rc=0 efc=0 .bss       exCallbackObject                                             */
-u8 exCallbackObject[20];
+/* 80434578-8043458C 0014+00 rc=2 efc=0 rfr=False None .bss       exCallbackObject                                             */
+static u8 exCallbackObject[20];
 
-/* 80451514-80451518 0004+00 rc=0 efc=0 .sbss      sConsoleBuffer__12JUTException                               */
-u8 sConsoleBuffer__12JUTException[4];
+/* 80451514-80451518 0004+00 rc=1 efc=0 rfr=False None .sbss      sConsoleBuffer__12JUTException                               */
+static u8 sConsoleBuffer__12JUTException[4];
 
-/* 80451518-8045151C 0004+00 rc=0 efc=0 .sbss      sConsoleBufferSize__12JUTException                           */
-u8 sConsoleBufferSize__12JUTException[4];
+/* 80451518-8045151C 0004+00 rc=1 efc=0 rfr=False None .sbss      sConsoleBufferSize__12JUTException                           */
+static u8 sConsoleBufferSize__12JUTException[4];
 
-/* 8045151C-80451520 0004+00 rc=0 efc=0 .sbss      sConsole__12JUTException                                     */
+/* 8045151C-80451520 0004+00 rc=14 efc=1 rfr=False None .sbss      sConsole__12JUTException                                     */
 u8 sConsole__12JUTException[4];
 
-/* 80451520-80451524 0004+00 rc=0 efc=0 .sbss      msr__12JUTException                                          */
-u8 msr__12JUTException[4];
+/* 80451520-80451524 0004+00 rc=2 efc=0 rfr=False None .sbss      msr__12JUTException                                          */
+static u8 msr__12JUTException[4];
 
-/* 80451524-80451528 0004+00 rc=0 efc=0 .sbss      fpscr__12JUTException                                        */
-u8 fpscr__12JUTException[4];
+/* 80451524-80451528 0004+00 rc=3 efc=0 rfr=False None .sbss      fpscr__12JUTException                                        */
+static u8 fpscr__12JUTException[4];
 
-/* 802E1FCC-802E20C0 00F4+00 rc=0 efc=0 .text      errorHandler__12JUTExceptionFUsP9OSContextUlUl               */
+/* 802E1FCC-802E20C0 00F4+00 rc=2 efc=0 rfr=False None .text      errorHandler__12JUTExceptionFUsP9OSContextUlUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -452,110 +517,27 @@ asm void JUTException::errorHandler(u16 field_0, OSContext* field_1, u32 field_2
 
 
 /* ############################################################################################## */
-/* 8039D490-8039D9A0 050E+02 rc=0 efc=0 .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-const char* const stringBase_8039D490 = "SYSTEM RESET";
-const char* const stringBase_8039D49D = "MACHINE CHECK";
-const char* const stringBase_8039D4AB = "DSI";
-const char* const stringBase_8039D4AF = "ISI";
-const char* const stringBase_8039D4B3 = "EXTERNAL INTERRUPT";
-const char* const stringBase_8039D4C6 = "ALIGNMENT";
-const char* const stringBase_8039D4D0 = "PROGRAM";
-const char* const stringBase_8039D4D8 = "FLOATING POINT";
-const char* const stringBase_8039D4E7 = "DECREMENTER";
-const char* const stringBase_8039D4F3 = "SYSTEM CALL";
-const char* const stringBase_8039D4FF = "TRACE";
-const char* const stringBase_8039D505 = "PERFORMACE MONITOR";
-const char* const stringBase_8039D518 = "BREAK POINT";
-const char* const stringBase_8039D524 = "SYSTEM INTERRUPT";
-const char* const stringBase_8039D535 = "THERMAL INTERRUPT";
-const char* const stringBase_8039D547 = "PROTECTION";
-const char* const stringBase_8039D552 = "%s in \"%s\" on line %d\n";
-const char* const stringBase_8039D569 = "F%02d: Nan      ";
-const char* const stringBase_8039D57A = "F%02d:+Inf     ";
-const char* const stringBase_8039D58A = "F%02d:-Inf     ";
-const char* const stringBase_8039D59A = "F%02d: 0.0      ";
-const char* const stringBase_8039D5AB = "F%02d:%+.3E";
-const char* const stringBase_8039D5B7 = 
-    "-------------------------------- FPR\n";
-const char* const stringBase_8039D5DD = " ";
-const char* const stringBase_8039D5DF = "\n";
-const char* const stringBase_8039D5E1 = 
-    "-------------------------------- TRACE\n";
-const char* const stringBase_8039D609 = "Address:   BackChain   LR save\n";
-const char* const stringBase_8039D629 = "Suppress trace.\n";
-const char* const stringBase_8039D63A = "%08X:  %08X    %08X\n";
-const char* const stringBase_8039D64F = "CONTEXT:%08XH  (%s EXCEPTION)\n";
-const char* const stringBase_8039D66E = "CONTEXT:%08XH\n";
-const char* const stringBase_8039D67D = " FPE: Invalid operation\n";
-const char* const stringBase_8039D696 = " SNaN\n";
-const char* const stringBase_8039D69D = " Infinity - Infinity\n";
-const char* const stringBase_8039D6B3 = " Infinity / Infinity\n";
-const char* const stringBase_8039D6C9 = " 0 / 0\n";
-const char* const stringBase_8039D6D1 = " Infinity * 0\n";
-const char* const stringBase_8039D6E0 = " Invalid compare\n";
-const char* const stringBase_8039D6F2 = " Software request\n";
-const char* const stringBase_8039D705 = " Invalid square root\n";
-const char* const stringBase_8039D71B = " Invalid integer convert\n";
-const char* const stringBase_8039D735 = " FPE: Overflow\n";
-const char* const stringBase_8039D745 = " FPE: Underflow\n";
-const char* const stringBase_8039D756 = " FPE: Zero division\n";
-const char* const stringBase_8039D76B = " FPE: Inexact result\n";
-const char* const stringBase_8039D781 = "SRR0:   %08XH   SRR1:%08XH\n";
-const char* const stringBase_8039D79D = "DSISR:  %08XH   DAR: %08XH\n";
-const char* const stringBase_8039D7B9 = 
-    "-------------------------------- GPR\n";
-const char* const stringBase_8039D7DF = 
-    "R%02d:%08XH  R%02d:%08XH  R%02d:%08XH\n";
-const char* const stringBase_8039D806 = "R%02d:%08XH  R%02d:%08XH\n";
-const char* const stringBase_8039D820 = "";
-const char* const stringBase_8039D821 = "%s %s:%x section:%d\n";
-const char* const stringBase_8039D836 = 
-    "-------------------------------- GPRMAP\n";
-const char* const stringBase_8039D85F = "R%02d: %08XH";
-const char* const stringBase_8039D86C = "  no information\n";
-const char* const stringBase_8039D87E = 
-    "  no register which seem to address.\n";
-const char* const stringBase_8039D8A4 = 
-    "-------------------------------- SRR0MAP\n";
-const char* const stringBase_8039D8CE = "SRR0: %08XH";
-const char* const stringBase_8039D8DA = " MSR:%08XH\t FPSCR:%08XH\n";
-const char* const stringBase_8039D8F3 = 
-    "******** EXCEPTION OCCURRED! ********\nFrameMemor"
-    "y:%XH\n";
-const char* const stringBase_8039D92A = 
-    "******** USER HALT ********\nFrameMemory:%XH\n";
-const char* const stringBase_8039D957 = 
-    "--------------------------------\n";
-const char* const stringBase_8039D979 = ".map";
-const char* const stringBase_8039D97E = "  [%08X]: .%s [%08X: %XH]\n  %s\n";
-/* @stringBase0 padding */
-char* const pad_8039D99E = "\0";
-#pragma pop
+/* 8043458C-80434598 000C+00 rc=1 efc=0 rfr=False None .bss       @2182                                                        */
+static u8 JUTException__lit_2182[12];
 
-/* 8043458C-80434598 000C+00 rc=0 efc=0 .bss       @2182                                                        */
-u8 JUTException__lit_2182[12];
+/* 80434598-804345A8 000C+04 rc=4 efc=0 rfr=False None .bss       sMapFileList__12JUTException                                 */
+static u8 sMapFileList__12JUTException[12 + 4 /* padding */];
 
-/* 80434598-804345A8 000C+04 rc=0 efc=0 .bss       sMapFileList__12JUTException                                 */
-u8 sMapFileList__12JUTException[12 + 4 /* padding */];
+/* 804345A8-80434870 02C8+00 rc=1 efc=0 rfr=False None .bss       context$2230                                                 */
+static u8 data_804345A8[712];
 
-/* 804345A8-80434870 02C8+00 rc=0 efc=0 .bss       context$2230                                                 */
-u8 data_804345A8[712];
-
-/* 802E20C0-802E21FC 013C+00 rc=0 efc=0 .text      panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct        */
+/* 802E20C0-802E21FC 013C+00 rc=1 efc=0 rfr=False None .text      panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct() {
+extern "C" asm static void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct() {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct.s"
 }
 #pragma pop
 
 
-/* 802E21FC-802E227C 0080+00 rc=0 efc=0 .text      panic_f__12JUTExceptionFPCciPCce                             */
+/* 802E21FC-802E227C 0080+00 rc=16 efc=16 rfr=False None .text      panic_f__12JUTExceptionFPCciPCce                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -566,7 +548,7 @@ asm void JUTException::panic_f(char const* field_0, int field_1, char const* fie
 #pragma pop
 
 
-/* 802E227C-802E22C4 0048+00 rc=0 efc=0 .text      setFPException__12JUTExceptionFUl                            */
+/* 802E227C-802E22C4 0048+00 rc=1 efc=0 rfr=False None .text      setFPException__12JUTExceptionFUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -578,12 +560,12 @@ asm void JUTException::setFPException(u32 field_0) {
 
 
 /* ############################################################################################## */
-/* 80456050-80456054 0004+00 rc=0 efc=0 .sdata2    @2293                                                        */
-u8 lit_2293[4] = {
+/* 80456050-80456054 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2293                                                        */
+SECTION_SDATA2 static u8 lit_2293[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802E22C4-802E2454 0190+00 rc=0 efc=0 .text      showFloatSub__12JUTExceptionFif                              */
+/* 802E22C4-802E2454 0190+00 rc=1 efc=0 rfr=False None .text      showFloatSub__12JUTExceptionFif                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -594,7 +576,7 @@ asm void JUTException::showFloatSub(int field_0, f32 field_1) {
 #pragma pop
 
 
-/* 802E2454-802E2578 0124+00 rc=0 efc=0 .text      showFloat__12JUTExceptionFP9OSContext                        */
+/* 802E2454-802E2578 0124+00 rc=1 efc=0 rfr=False None .text      showFloat__12JUTExceptionFP9OSContext                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -605,7 +587,7 @@ asm void JUTException::showFloat(OSContext* field_0) {
 #pragma pop
 
 
-/* 802E2578-802E2638 00C0+00 rc=0 efc=0 .text      searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl           */
+/* 802E2578-802E2638 00C0+00 rc=1 efc=0 rfr=False None .text      searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -616,18 +598,18 @@ asm void JUTException::searchPartialModule(u32 field_0, u32* field_1, u32* field
 #pragma pop
 
 
-/* 802E2638-802E26B0 0078+00 rc=0 efc=0 .text      search_name_part__FPUcPUci                                   */
+/* 802E2638-802E26B0 0078+00 rc=1 efc=0 rfr=False None .text      search_name_part__FPUcPUci                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void search_name_part(u8* field_0, u8* field_1, int field_2) {
+asm static void search_name_part(u8* field_0, u8* field_1, int field_2) {
 	nofralloc
 #include "asm/JSystem/JUtility/JUTException/search_name_part__FPUcPUci.s"
 }
 #pragma pop
 
 
-/* 802E26B0-802E27B0 0100+00 rc=0 efc=0 .text      showStack__12JUTExceptionFP9OSContext                        */
+/* 802E26B0-802E27B0 0100+00 rc=1 efc=0 rfr=False None .text      showStack__12JUTExceptionFP9OSContext                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -638,7 +620,7 @@ asm void JUTException::showStack(OSContext* field_0) {
 #pragma pop
 
 
-/* 802E27B0-802E2A84 02D4+00 rc=0 efc=0 .text      showMainInfo__12JUTExceptionFUsP9OSContextUlUl               */
+/* 802E27B0-802E2A84 02D4+00 rc=1 efc=0 rfr=False None .text      showMainInfo__12JUTExceptionFUsP9OSContextUlUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -649,7 +631,7 @@ asm void JUTException::showMainInfo(u16 field_0, OSContext* field_1, u32 field_2
 #pragma pop
 
 
-/* 802E2A84-802E2B44 00C0+00 rc=0 efc=0 .text      showGPR__12JUTExceptionFP9OSContext                          */
+/* 802E2A84-802E2B44 00C0+00 rc=1 efc=0 rfr=False None .text      showGPR__12JUTExceptionFP9OSContext                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -660,7 +642,7 @@ asm void JUTException::showGPR(OSContext* field_0) {
 #pragma pop
 
 
-/* 802E2B44-802E2CA0 015C+00 rc=0 efc=0 .text      showMapInfo_subroutine__12JUTExceptionFUlb                   */
+/* 802E2B44-802E2CA0 015C+00 rc=3 efc=0 rfr=False None .text      showMapInfo_subroutine__12JUTExceptionFUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -671,7 +653,7 @@ asm void JUTException::showMapInfo_subroutine(u32 field_0, bool field_1) {
 #pragma pop
 
 
-/* 802E2CA0-802E2DAC 010C+00 rc=0 efc=0 .text      showGPRMap__12JUTExceptionFP9OSContext                       */
+/* 802E2CA0-802E2DAC 010C+00 rc=1 efc=0 rfr=False None .text      showGPRMap__12JUTExceptionFP9OSContext                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -682,7 +664,7 @@ asm void JUTException::showGPRMap(OSContext* field_0) {
 #pragma pop
 
 
-/* 802E2DAC-802E2E70 00C4+00 rc=0 efc=0 .text      showSRR0Map__12JUTExceptionFP9OSContext                      */
+/* 802E2DAC-802E2E70 00C4+00 rc=1 efc=0 rfr=False None .text      showSRR0Map__12JUTExceptionFP9OSContext                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -693,7 +675,7 @@ asm void JUTException::showSRR0Map(OSContext* field_0) {
 #pragma pop
 
 
-/* 802E2E70-802E2F18 00A8+00 rc=0 efc=0 .text      printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl */
+/* 802E2E70-802E2F18 00A8+00 rc=1 efc=0 rfr=False None .text      printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -704,7 +686,7 @@ asm void JUTException::printDebugInfo(JUTException::EInfoPage field_0, u16 field
 #pragma pop
 
 
-/* 802E2F18-802E2F54 003C+00 rc=0 efc=0 .text      isEnablePad__12JUTExceptionCFv                               */
+/* 802E2F18-802E2F54 003C+00 rc=2 efc=1 rfr=False None .text      isEnablePad__12JUTExceptionCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -715,7 +697,7 @@ asm void JUTException::isEnablePad() const {
 #pragma pop
 
 
-/* 802E2F54-802E34C0 056C+00 rc=0 efc=0 .text      readPad__12JUTExceptionFPUlPUl                               */
+/* 802E2F54-802E34C0 056C+00 rc=2 efc=1 rfr=False None .text      readPad__12JUTExceptionFPUlPUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -726,7 +708,7 @@ asm void JUTException::readPad(u32* field_0, u32* field_1) {
 #pragma pop
 
 
-/* 802E34C0-802E3980 04C0+00 rc=0 efc=0 .text      printContext__12JUTExceptionFUsP9OSContextUlUl               */
+/* 802E34C0-802E3980 04C0+00 rc=1 efc=0 rfr=False None .text      printContext__12JUTExceptionFUsP9OSContextUlUl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -737,7 +719,7 @@ asm void JUTException::printContext(u16 field_0, OSContext* field_1, u32 field_2
 #pragma pop
 
 
-/* 802E3980-802E3A08 0088+00 rc=0 efc=0 .text      waitTime__12JUTExceptionFl                                   */
+/* 802E3980-802E3A08 0088+00 rc=5 efc=2 rfr=False None .text      waitTime__12JUTExceptionFl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -748,7 +730,7 @@ asm void JUTException::waitTime(s32 field_0) {
 #pragma pop
 
 
-/* 802E3A08-802E3AEC 00E4+00 rc=0 efc=0 .text      createFB__12JUTExceptionFv                                   */
+/* 802E3A08-802E3AEC 00E4+00 rc=1 efc=0 rfr=False None .text      createFB__12JUTExceptionFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -759,7 +741,7 @@ asm void JUTException::createFB() {
 #pragma pop
 
 
-/* 802E3AEC-802E3AFC 0010+00 rc=0 efc=0 .text      setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v     */
+/* 802E3AEC-802E3AFC 0010+00 rc=1 efc=1 rfr=False None .text      setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -770,7 +752,7 @@ extern "C" asm void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v() {
 #pragma pop
 
 
-/* 802E3AFC-802E3B0C 0010+00 rc=0 efc=0 .text      setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v    */
+/* 802E3AFC-802E3B0C 0010+00 rc=1 efc=1 rfr=False None .text      setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -781,7 +763,7 @@ extern "C" asm void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v() 
 #pragma pop
 
 
-/* 802E3B0C-802E3BA0 0094+00 rc=0 efc=0 .text      appendMapFile__12JUTExceptionFPCc                            */
+/* 802E3B0C-802E3BA0 0094+00 rc=1 efc=1 rfr=False None .text      appendMapFile__12JUTExceptionFPCc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -792,7 +774,7 @@ asm void JUTException::appendMapFile(char const* field_0) {
 #pragma pop
 
 
-/* 802E3BA0-802E3C90 00F0+00 rc=0 efc=0 .text      queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb            */
+/* 802E3BA0-802E3C90 00F0+00 rc=1 efc=0 rfr=False None .text      queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -803,7 +785,7 @@ asm void JUTException::queryMapAddress(char* field_0, u32 field_1, s32 field_2, 
 #pragma pop
 
 
-/* 802E3C90-802E3FEC 035C+00 rc=0 efc=0 .text      queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb     */
+/* 802E3C90-802E3FEC 035C+00 rc=1 efc=0 rfr=False None .text      queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -815,17 +797,17 @@ asm void JUTException::queryMapAddress_single(char* field_0, u32 field_1, s32 fi
 
 
 /* ############################################################################################## */
-/* 80456054-80456058 0004+00 rc=0 efc=0 .sdata2    @3034                                                        */
-f32 lit_3034 = 10.0f;
+/* 80456054-80456058 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3034                                                        */
+SECTION_SDATA2 static f32 lit_3034 = 10.0f;
 
-/* 80456058-80456060 0004+04 rc=0 efc=0 .sdata2    @3035                                                        */
-f32 lit_3035[1 + 1 /* padding */] = {
+/* 80456058-80456060 0004+04 rc=1 efc=0 rfr=False None .sdata2    @3035                                                        */
+SECTION_SDATA2 static f32 lit_3035[1 + 1 /* padding */] = {
 	6.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 802E3FEC-802E40CC 00E0+00 rc=0 efc=0 .text      createConsole__12JUTExceptionFPvUl                           */
+/* 802E3FEC-802E40CC 00E0+00 rc=1 efc=1 rfr=False None .text      createConsole__12JUTExceptionFPvUl                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -836,7 +818,7 @@ asm void JUTException::createConsole(void* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 802E40CC-802E40EC 0020+00 rc=0 efc=0 .text      __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl       */
+/* 802E40CC-802E40EC 0020+00 rc=1 efc=0 rfr=False None .text      __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -847,7 +829,7 @@ asm JUTExternalFB::JUTExternalFB(_GXRenderModeObj* field_0, _GXGamma field_1, vo
 #pragma pop
 
 
-/* 802E40EC-802E414C 0060+00 rc=0 efc=0 .text      __dt__12JUTExceptionFv                                       */
+/* 802E40EC-802E414C 0060+00 rc=1 efc=0 rfr=False None .text      __dt__12JUTExceptionFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -858,7 +840,7 @@ asm JUTException::~JUTException() {
 #pragma pop
 
 
-/* 802E414C-802E4194 0048+00 rc=0 efc=0 .text      __sinit_JUTException_cpp                                     */
+/* 802E414C-802E4194 0048+00 rc=1 efc=1 rfr=False None .text      __sinit_JUTException_cpp                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -869,7 +851,7 @@ extern "C" asm void __sinit_JUTException_cpp() {
 #pragma pop
 
 
-/* 802E4194-802E41E8 0054+00 rc=0 efc=0 .text      __dt__39JSUList<Q212JUTException12JUTExMapFile>Fv            */
+/* 802E4194-802E41E8 0054+00 rc=1 efc=0 rfr=False None .text      __dt__39JSUList<Q212JUTException12JUTExMapFile>Fv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -881,8 +863,8 @@ asm JSUList__template13::~JSUList__template13() {
 
 
 /* ############################################################################################## */
-/* 804508F8-80450900 0008+00 rc=0 efc=0 .sdata     None                                                         */
-u8 data_804508F8[8] = {
+/* 804508F8-80450900 0008+00 rc=3 efc=3 rfr=False None .sdata     None                                                         */
+SECTION_SDATA u8 data_804508F8[8] = {
 	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 

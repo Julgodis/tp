@@ -38,8 +38,6 @@ extern "C" void TRKReleaseBuffer(); // 1
 extern "C" void TRKGetBuffer(); // 1
 extern "C" void TRKGetFreeBuffer(); // 1
 extern "C" void TRKInitializeMessageBuffers(); // 1
-SECTION_RODATA extern const u8 lit_618[29 + 3 /* padding */];
-SECTION_BSS extern u8 gTRKMsgBufs[6576];
 
 // 
 // External References:
@@ -64,7 +62,7 @@ SECTION_BSS extern u8 gTRKBigEndian[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 8036D01C-8036D10C 00F0+00 rc=0 efc=0 .text      TRKReadBuffer_ui32                                           */
+/* 8036D01C-8036D10C 00F0+00 rc=2 efc=2 rfr=False None .text      TRKReadBuffer_ui32                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +73,7 @@ extern "C" asm void TRKReadBuffer_ui32() {
 #pragma pop
 
 
-/* 8036D10C-8036D1A4 0098+00 rc=0 efc=0 .text      TRKReadBuffer_ui8                                            */
+/* 8036D10C-8036D1A4 0098+00 rc=1 efc=1 rfr=False None .text      TRKReadBuffer_ui8                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +84,7 @@ extern "C" asm void TRKReadBuffer_ui8() {
 #pragma pop
 
 
-/* 8036D1A4-8036D28C 00E8+00 rc=0 efc=0 .text      TRKReadBuffer1_ui64                                          */
+/* 8036D1A4-8036D28C 00E8+00 rc=2 efc=2 rfr=False None .text      TRKReadBuffer1_ui64                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +95,7 @@ extern "C" asm void TRKReadBuffer1_ui64() {
 #pragma pop
 
 
-/* 8036D28C-8036D388 00FC+00 rc=0 efc=0 .text      TRKAppendBuffer_ui32                                         */
+/* 8036D28C-8036D388 00FC+00 rc=2 efc=2 rfr=False None .text      TRKAppendBuffer_ui32                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,7 +106,7 @@ extern "C" asm void TRKAppendBuffer_ui32() {
 #pragma pop
 
 
-/* 8036D388-8036D3F0 0068+00 rc=0 efc=0 .text      TRKAppendBuffer_ui8                                          */
+/* 8036D388-8036D3F0 0068+00 rc=8 efc=8 rfr=False None .text      TRKAppendBuffer_ui8                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +117,7 @@ extern "C" asm void TRKAppendBuffer_ui8() {
 #pragma pop
 
 
-/* 8036D3F0-8036D4EC 00FC+00 rc=0 efc=0 .text      TRKAppendBuffer1_ui64                                        */
+/* 8036D3F0-8036D4EC 00FC+00 rc=2 efc=2 rfr=False None .text      TRKAppendBuffer1_ui64                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -130,7 +128,7 @@ extern "C" asm void TRKAppendBuffer1_ui64() {
 #pragma pop
 
 
-/* 8036D4EC-8036D578 008C+00 rc=0 efc=0 .text      TRKReadBuffer                                                */
+/* 8036D4EC-8036D578 008C+00 rc=1 efc=1 rfr=False None .text      TRKReadBuffer                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,7 +139,7 @@ extern "C" asm void TRKReadBuffer() {
 #pragma pop
 
 
-/* 8036D578-8036D61C 00A4+00 rc=0 efc=0 .text      TRKAppendBuffer                                              */
+/* 8036D578-8036D61C 00A4+00 rc=3 efc=3 rfr=False None .text      TRKAppendBuffer                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,7 +150,7 @@ extern "C" asm void TRKAppendBuffer() {
 #pragma pop
 
 
-/* 8036D61C-8036D64C 0030+00 rc=0 efc=0 .text      TRKSetBufferPosition                                         */
+/* 8036D61C-8036D64C 0030+00 rc=7 efc=7 rfr=False None .text      TRKSetBufferPosition                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -163,7 +161,7 @@ extern "C" asm void TRKSetBufferPosition() {
 #pragma pop
 
 
-/* 8036D64C-8036D68C 0040+00 rc=0 efc=0 .text      TRKResetBuffer                                               */
+/* 8036D64C-8036D68C 0040+00 rc=4 efc=4 rfr=False None .text      TRKResetBuffer                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,10 +173,10 @@ extern "C" asm void TRKResetBuffer() {
 
 
 /* ############################################################################################## */
-/* 8044D8C0-8044F270 19B0+00 rc=0 efc=0 .bss       gTRKMsgBufs                                                  */
-u8 gTRKMsgBufs[6576];
+/* 8044D8C0-8044F270 19B0+00 rc=4 efc=0 rfr=False None .bss       gTRKMsgBufs                                                  */
+static u8 gTRKMsgBufs[6576];
 
-/* 8036D68C-8036D6F0 0064+00 rc=0 efc=0 .text      TRKReleaseBuffer                                             */
+/* 8036D68C-8036D6F0 0064+00 rc=8 efc=8 rfr=False None .text      TRKReleaseBuffer                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,7 +187,7 @@ extern "C" asm void TRKReleaseBuffer() {
 #pragma pop
 
 
-/* 8036D6F0-8036D71C 002C+00 rc=0 efc=0 .text      TRKGetBuffer                                                 */
+/* 8036D6F0-8036D71C 002C+00 rc=7 efc=7 rfr=False None .text      TRKGetBuffer                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,15 +199,15 @@ extern "C" asm void TRKGetBuffer() {
 
 
 /* ############################################################################################## */
-/* 803A26E0-803A2700 001D+03 rc=0 efc=0 .rodata    @618                                                         */
-const u8 lit_618[29 + 3 /* padding */] = {
+/* 803A26E0-803A2700 001D+03 rc=1 efc=0 rfr=False None .rodata    @618                                                         */
+SECTION_RODATA static u8 const lit_618[29 + 3 /* padding */] = {
 	0x45, 0x52, 0x52, 0x4F, 0x52, 0x20, 0x3A, 0x20, 0x4E, 0x6F, 0x20, 0x62, 0x75, 0x66, 0x66, 0x65,
 	0x72, 0x20, 0x61, 0x76, 0x61, 0x69, 0x6C, 0x61, 0x62, 0x6C, 0x65, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
 
-/* 8036D71C-8036D7E4 00C8+00 rc=0 efc=0 .text      TRKGetFreeBuffer                                             */
+/* 8036D71C-8036D7E4 00C8+00 rc=6 efc=6 rfr=False None .text      TRKGetFreeBuffer                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -220,7 +218,7 @@ extern "C" asm void TRKGetFreeBuffer() {
 #pragma pop
 
 
-/* 8036D7E4-8036D858 0074+00 rc=0 efc=0 .text      TRKInitializeMessageBuffers                                  */
+/* 8036D7E4-8036D858 0074+00 rc=1 efc=1 rfr=False None .text      TRKInitializeMessageBuffers                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

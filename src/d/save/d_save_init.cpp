@@ -23,7 +23,7 @@ extern "C" void setInitEventBit__Fv(); // 1
 // Declarations:
 // 
 
-/* 80035C88-80035C8C 0004+00 rc=0 efc=0 .text      setInitEventBit__Fv                                          */
+/* 80035C88-80035C8C 0004+00 rc=1 efc=1 rfr=False None .text      setInitEventBit__Fv                                          */
 void setInitEventBit() {
 	/* empty function */
 }

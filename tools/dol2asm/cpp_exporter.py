@@ -312,9 +312,10 @@ class CPPExporter:
     tu: TranslationUnit = None
 
     async def export_symbol_header(self, builder: AsyncBuilder, symbol: Symbol):
-        await builder.write("/* %08X-%08X %04X+%02X rc=%i efc=%i %-10s %-60s */" % (
+        await builder.write("/* %08X-%08X %04X+%02X rc=%i efc=%i rfr=%s %s %-10s %-60s */" % (
             symbol.start, symbol.end+symbol.padding, symbol.size, symbol.padding,
-            symbol.reference_count, symbol.external_reference_count,
+            symbol.reference_count, symbol.external_reference_count, symbol.require_forward_reference,
+            symbol.force_section,
             symbol._section, symbol.identifier.name))
 
     def symbol_get_desc(self, symbol: Symbol, type: str, forward: bool, **kwargs) -> DeclType:
@@ -525,39 +526,54 @@ class CPPExporter:
             else:
                 section.symbols.sort(key=lambda x: x.addr)
 
+
+        def add_references(used_symbols, parent, depth):
+            references = parent.internal_references(self.context, self.gst)
+            for symbol in references:
+                if isinstance(symbol, Function):
+                    continue
+                if not symbol in decl_references:
+                    continue
+                if symbol.addr > parent.addr and not isinstance(parent, Function) and symbol.is_static:
+                    if not symbol in forward_used_symbols:
+                        forward_used_symbols.add(symbol)
+                        forward_symbols.append(symbol)
+                if symbol in used_symbols:
+                    continue
+                used_symbols.add(symbol)
+                symbols.append(symbol)
+                if not symbol.require_forward_reference:
+                    add_references(used_symbols, symbol, depth + 1)
+
+        def add_relocations(used_symbols, parent, depth):
+            # TODO:
+            relocations = parent.relocation_symbols(self.context, self.gst, section)
+            for symbol in relocations:
+                if isinstance(symbol, Function):
+                    continue
+                if not symbol in decl_references:
+                    continue
+                if symbol.addr > parent.addr and not isinstance(parent, Function) and symbol.is_static:
+                    if not symbol in forward_used_symbols:
+                        forward_used_symbols.add(symbol)
+                        forward_symbols.append(symbol)
+                if symbol in used_symbols:
+                    continue
+                used_symbols.add(symbol)
+                symbols.append(symbol)
+                if not symbol.require_forward_reference:
+                    add_relocations(used_symbols, symbol, depth + 1)
+
         used_symbols = set()
+        forward_used_symbols = set()
         function_symbols_groups = []
         for section in sections:
             if section.name == ".text":
                 for function in section.symbols:
                     symbols = []
-                    addr_references = function.internal_references(
-                        self.context, self.gst)
-                    # self.gst.resolve_set(addr_references)
-                    references = addr_references
-                    for symbol in references:
-                        if isinstance(symbol, Function):
-                            continue
-                        if not symbol in decl_references:
-                            continue
-                        if symbol in used_symbols:
-                            continue
-                        used_symbols.add(symbol)
-                        symbols.append(symbol)
-
-                    addr_relocations = function.relocation_symbols(
-                        self.context, self.gst, section)
-                    # self.gst.resolve_set(addr_relocations)
-                    relocations = addr_relocations
-                    for symbol in relocations:
-                        if isinstance(symbol, Function):
-                            continue
-                        if not symbol in decl_references:
-                            continue
-                        if symbol in used_symbols:
-                            continue
-                        used_symbols.add(symbol)
-                        symbols.append(symbol)
+                    forward_symbols = []
+                    add_references(used_symbols, function, 1)
+                    add_relocations(used_symbols, function, 1)
 
                     # add missing references so that the order is still correct
                     missing_order_symbols = []
@@ -570,21 +586,34 @@ class CPPExporter:
                                 continue
                             if prev_symbol in used_symbols:
                                 continue
+                            add_references(used_symbols, prev_symbol, 1)
+                            add_relocations(used_symbols, prev_symbol, 1)
                             missing_order_symbols.append(prev_symbol)
                             used_symbols.add(prev_symbol)
 
                     symbols.extend(missing_order_symbols)
                     symbols.sort(key=lambda x: (x.addr, x.size))
-                    function_symbols_groups.append((function, symbols))
+                    forward_symbols.sort(key=lambda x: (x.addr, x.size))
+                    function_symbols_groups.append((function, symbols, forward_symbols))
 
-        for function, symbols in function_symbols_groups:
+        for function, symbols, forward_symbols in function_symbols_groups:
             # new section of symbols followed by a function
             if len(symbols) > 0:
                 await builder.write("/* ############################################################################################## */")
 
+            for symbol in forward_symbols:
+                symbol.require_forward_reference = True
+                await self.export_symbol_header(builder, symbol)
+                await symbol.export_forward_references(self, builder, c_export = True)
+                await builder.write("")
+
             unreferenced_decls = 0
             for symbol in symbols:
                 await self.export_symbol_header(builder, symbol)
+                #rfs = symbol.internal_references(self.context, self.gst)
+                #for r in rfs:
+                #    await builder.write(f"/* {r} */")
+
                 await symbol.export_declaration(self, builder)
                 await builder.write("")
 

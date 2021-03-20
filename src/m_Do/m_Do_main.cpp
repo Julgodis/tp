@@ -71,93 +71,66 @@ struct JUTConsole {
 // Forward References:
 // 
 
-void version_check(); // 2
-void CheckHeap(u32); // 2
-void countUsed(JKRExpHeap*); // 2
-void debugDisplay(); // 2
-void Debug_console(u32); // 2
-void LOAD_COPYDATE(void*); // 2
-void debug(); // 2
-void main01(); // 2
+static void version_check(); // 2
+static void CheckHeap(u32); // 2
+static void countUsed(JKRExpHeap*); // 2
+static void debugDisplay(); // 2
+static void Debug_console(u32); // 2
+static void LOAD_COPYDATE(void*); // 2
+static void debug(); // 2
+static void main01(); // 2
 extern "C" void main(); // 1
 extern "C" void __sinit_m_Do_main_cpp(); // 1
 
-extern "C" void version_check__Fv(); // 1
+extern "C" static void version_check__Fv(); // 1
 extern "C" void CheckHeap1__9HeapCheckFv(); // 1
-extern "C" void CheckHeap__FUl(); // 1
-extern "C" void countUsed__FP10JKRExpHeap(); // 1
+extern "C" static void CheckHeap__FUl(); // 1
+extern "C" static void countUsed__FP10JKRExpHeap(); // 1
 extern "C" void getUsedCount__9HeapCheckCFv(); // 1
 extern "C" void heapDisplay__9HeapCheckCFv(); // 1
-extern "C" void debugDisplay__Fv(); // 1
-extern "C" void Debug_console__FUl(); // 1
-extern "C" void LOAD_COPYDATE__FPv(); // 1
-extern "C" void debug__Fv(); // 1
-extern "C" void main01__Fv(); // 1
+extern "C" static void debugDisplay__Fv(); // 1
+extern "C" static void Debug_console__FUl(); // 1
+extern "C" static void LOAD_COPYDATE__FPv(); // 1
+extern "C" static void debug__Fv(); // 1
+extern "C" static void main01__Fv(); // 1
 extern "C" void main(); // 1
 extern "C" bool dump_sort__7JKRHeapFv(); // 1
 extern "C" void __sinit_m_Do_main_cpp(); // 1
-SECTION_RODATA extern const char* const m_Do_m_Do_main__stringBase0;
-SECTION_DATA extern u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */];
-SECTION_DATA extern void* HeapCheckTable[8];
-SECTION_DATA extern u8 data_803A2F14[20];
-SECTION_DATA extern u8 data_803A2F28[20 + 4 /* padding */];
-SECTION_BSS extern u8 RootHeapCheck[40];
-SECTION_BSS extern u8 SystemHeapCheck[40];
-SECTION_BSS extern u8 ZeldaHeapCheck[40];
-SECTION_BSS extern u8 GameHeapCheck[40];
-SECTION_BSS extern u8 ArchiveHeapCheck[40];
-SECTION_BSS extern u8 J2dHeapCheck[40];
-SECTION_BSS extern u8 HostioHeapCheck[40];
-SECTION_BSS extern u8 CommandHeapCheck[40];
-SECTION_BSS extern u8 mainThreadStack[32768];
-SECTION_BSS extern u8 mainThread[792 + 8 /* padding */];
-SECTION_SDATA extern u32 data_80450580;
-SECTION_SDATA extern u32 memMargin__7mDoMain;
-SECTION_SDATA extern u8 data_80450588[8];
-SECTION_SBSS extern u8 data_80450B00[8];
-SECTION_SBSS extern u8 sPowerOnTime__7mDoMain[4];
-SECTION_SBSS extern u8 data_80450B0C[4];
-SECTION_SBSS extern u8 sHungUpTime__7mDoMain[4];
-SECTION_SBSS extern u8 data_80450B14[4];
-extern u8 struct_80450B18[4];
-SECTION_SBSS extern f32 data_80450B1C;
-SECTION_SBSS extern u8 data_80450B20[4];
-SECTION_SBSS extern f32 data_80450B24;
-SECTION_SBSS extern u8 data_80450B28[4];
-SECTION_SBSS extern u8 data_80450B2C[4];
-SECTION_SBSS extern u8 data_80450B30[4];
-SECTION_SBSS extern u8 data_80450B34[4];
-SECTION_SBSS extern u8 data_80450B38[4];
-SECTION_SBSS extern u8 data_80450B3C[4];
-SECTION_SBSS extern u8 data_80450B40[4];
-SECTION_SBSS extern u8 data_80450B44[4];
-SECTION_SBSS extern u8 data_80450B48[4];
-SECTION_SBSS extern u8 data_80450B4C[4];
-SECTION_SBSS extern u8 data_80450B50[4];
-SECTION_SBSS extern u8 data_80450B54[4];
-SECTION_SBSS extern u8 data_80450B58[4];
-SECTION_SBSS extern u8 data_80450B5C[4];
-SECTION_SBSS extern u8 data_80450B60[4];
-SECTION_SBSS extern u8 data_80450B64[4];
-SECTION_SBSS extern u8 data_80450B68[4];
-SECTION_SBSS extern u8 data_80450B6C[4];
-SECTION_SBSS extern u8 data_80450B70[4];
-SECTION_SBSS extern u8 data_80450B74[4];
-SECTION_SBSS extern u8 data_80450B78[4];
-SECTION_SBSS extern u8 data_80450B7C[4];
-SECTION_SBSS extern u8 data_80450B80[4];
-SECTION_SBSS extern u8 data_80450B84[4];
-SECTION_SBSS extern u8 data_80450B88[4];
-SECTION_SBSS extern u8 data_80450B8C[4];
-SECTION_SBSS extern u8 data_80450B90[4 + 4 /* padding */];
-extern u8 struct_80450B98[4];
-SECTION_SBSS extern u8 data_80450B9C[4];
-SECTION_SDATA2 extern f32 m_Do_m_Do_main__lit_3884;
-SECTION_SDATA2 extern f32 m_Do_m_Do_main__lit_3885;
-SECTION_SDATA2 extern u8 m_Do_m_Do_main__lit_3886[4];
-SECTION_SDATA2 extern f32 m_Do_m_Do_main__lit_3887;
-SECTION_SDATA2 extern f32 m_Do_m_Do_main__lit_3888[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 m_Do_m_Do_main__lit_3890;
+extern "C" extern char const* const m_Do_m_Do_main__stringBase0;
+extern "C" extern u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */];
+extern "C" extern void* data_803A2F14[5];
+extern "C" extern void* data_803A2F28[5 + 1 /* padding */];
+extern "C" extern u32 data_80450580;
+extern "C" extern u32 memMargin__7mDoMain;
+extern "C" extern u8 sPowerOnTime__7mDoMain[4];
+extern "C" extern u8 data_80450B0C[4];
+extern "C" extern u8 sHungUpTime__7mDoMain[4];
+extern "C" extern u8 data_80450B14[4];
+extern "C" extern u8 data_80450B38[4];
+extern "C" extern u8 data_80450B3C[4];
+extern "C" extern u8 data_80450B40[4];
+extern "C" extern u8 data_80450B44[4];
+extern "C" extern u8 data_80450B48[4];
+extern "C" extern u8 data_80450B4C[4];
+extern "C" extern u8 data_80450B50[4];
+extern "C" extern u8 data_80450B54[4];
+extern "C" extern u8 data_80450B58[4];
+extern "C" extern u8 data_80450B5C[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B64[4];
+extern "C" extern u8 data_80450B68[4];
+extern "C" extern u8 data_80450B6C[4];
+extern "C" extern u8 data_80450B70[4];
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 data_80450B78[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 data_80450B8C[4];
+extern "C" extern u8 data_80450B90[4 + 4 /* padding */];
+extern "C" extern u8 struct_80450B98[4];
+extern "C" extern u8 data_80450B9C[4];
 
 // 
 // External References:
@@ -274,100 +247,101 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void strcmp(); // 1
-SECTION_BSS extern u8 m_gamePad__8mDoCPd_c[16];
-SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
-SECTION_BSS extern u8 g_mDoMemCd_control[8192];
-SECTION_BSS extern u8 g_HIO[64 + 4 /* padding */];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SBSS extern u8 g_mDoAud_audioHeap[4];
-SECTION_SBSS extern u8 gameHeap[4];
-SECTION_SBSS extern u8 zeldaHeap[4];
-SECTION_SBSS extern u8 archiveHeap[4];
-SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
-SECTION_SBSS extern u8 systemConsole__9JFWSystem[4];
-SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
-SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
-SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];
-SECTION_SBSS extern u8 sAramObject__7JKRAram[4];
+extern "C" extern u8 m_gamePad__8mDoCPd_c[16];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_mDoMemCd_control[8192];
+extern "C" extern u8 g_HIO[64 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_mDoAud_audioHeap[4];
+extern "C" extern u8 gameHeap[4];
+extern "C" extern u8 zeldaHeap[4];
+extern "C" extern u8 archiveHeap[4];
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+extern "C" extern u8 struct_80450C80[8];
+extern "C" extern u8 systemConsole__9JFWSystem[4];
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
+extern "C" extern u8 sRootHeap__7JKRHeap[4];
+extern "C" extern u8 sAramObject__7JKRAram[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803739A0-80373CB0 0310+00 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 803739A0-80373CB0 0310+00 rc=8 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_803739A0 = "20Apr2004";
-const char* const stringBase_803739AA = "Patch2";
-const char* const stringBase_803739B1 = "SDKのバージョンが一致しません。停止します\n";
-const char* const stringBase_803739DC = "[%sName]";
-const char* const stringBase_803739E5 = "HeapSize         %8ld";
-const char* const stringBase_803739FB = "TargetHeapSize   %8ld";
-const char* const stringBase_80373A11 = "TotalFree        %8ld";
-const char* const stringBase_80373A27 = "FreeSize         %8ld";
-const char* const stringBase_80373A3D = "TotalUsedSize    %8ld";
-const char* const stringBase_80373A53 = "TotalUsedRate        %3ld%%";
-const char* const stringBase_80373A6F = "MaxTotalUsedSize %8ld";
-const char* const stringBase_80373A85 = "MaxTotalUsedRate     %3ld%%";
-const char* const stringBase_80373AA1 = "MinFreeSize      %8ld";
-const char* const stringBase_80373AB7 = "MinFreeRate          %3ld%%";
-const char* const stringBase_80373AD3 = "UsedCount             %3ld%";
-const char* const stringBase_80373AEF = "";
-const char* const stringBase_80373AF0 = "TotalFree";
-const char* const stringBase_80373AFA = "MaxUsed  ";
-const char* const stringBase_80373B04 = "Used     ";
-const char* const stringBase_80373B0E = "RelUsed  ";
-const char* const stringBase_80373B18 = "/ MaxFree";
-const char* const stringBase_80373B22 = "/HeapSize";
-const char* const stringBase_80373B2C = "Blk/Bytes";
-const char* const stringBase_80373B36 = "ARAM Free";
-const char* const stringBase_80373B40 = "%d";
-const char* const stringBase_80373B43 = "%s";
-const char* const stringBase_80373B46 = " [%s]";
-const char* const stringBase_80373B4C = "%10d";
-const char* const stringBase_80373B51 = 
+SECTION_DEAD static char const* const stringBase_803739A0 = "20Apr2004";
+SECTION_DEAD static char const* const stringBase_803739AA = "Patch2";
+SECTION_DEAD static char const* const stringBase_803739B1 = "SDKのバージョンが一致しません。停止します\n";
+SECTION_DEAD static char const* const stringBase_803739DC = "[%sName]";
+SECTION_DEAD static char const* const stringBase_803739E5 = "HeapSize         %8ld";
+SECTION_DEAD static char const* const stringBase_803739FB = "TargetHeapSize   %8ld";
+SECTION_DEAD static char const* const stringBase_80373A11 = "TotalFree        %8ld";
+SECTION_DEAD static char const* const stringBase_80373A27 = "FreeSize         %8ld";
+SECTION_DEAD static char const* const stringBase_80373A3D = "TotalUsedSize    %8ld";
+SECTION_DEAD static char const* const stringBase_80373A53 = "TotalUsedRate        %3ld%%";
+SECTION_DEAD static char const* const stringBase_80373A6F = "MaxTotalUsedSize %8ld";
+SECTION_DEAD static char const* const stringBase_80373A85 = "MaxTotalUsedRate     %3ld%%";
+SECTION_DEAD static char const* const stringBase_80373AA1 = "MinFreeSize      %8ld";
+SECTION_DEAD static char const* const stringBase_80373AB7 = "MinFreeRate          %3ld%%";
+SECTION_DEAD static char const* const stringBase_80373AD3 = "UsedCount             %3ld%";
+SECTION_DEAD static char const* const stringBase_80373AEF = "";
+SECTION_DEAD static char const* const stringBase_80373AF0 = "TotalFree";
+SECTION_DEAD static char const* const stringBase_80373AFA = "MaxUsed  ";
+SECTION_DEAD static char const* const stringBase_80373B04 = "Used     ";
+SECTION_DEAD static char const* const stringBase_80373B0E = "RelUsed  ";
+SECTION_DEAD static char const* const stringBase_80373B18 = "/ MaxFree";
+SECTION_DEAD static char const* const stringBase_80373B22 = "/HeapSize";
+SECTION_DEAD static char const* const stringBase_80373B2C = "Blk/Bytes";
+SECTION_DEAD static char const* const stringBase_80373B36 = "ARAM Free";
+SECTION_DEAD static char const* const stringBase_80373B40 = "%d";
+SECTION_DEAD static char const* const stringBase_80373B43 = "%s";
+SECTION_DEAD static char const* const stringBase_80373B46 = " [%s]";
+SECTION_DEAD static char const* const stringBase_80373B4C = "%10d";
+SECTION_DEAD static char const* const stringBase_80373B51 = 
     "Press X+Y+START to CLEAR console.";
-const char* const stringBase_80373B73 = "3DStick UP/Down to scroll";
-const char* const stringBase_80373B8D = 
+SECTION_DEAD static char const* const stringBase_80373B73 = "3DStick UP/Down to scroll";
+SECTION_DEAD static char const* const stringBase_80373B8D = 
     "Press A to output terminal from console.";
-const char* const stringBase_80373BB6 = "SCROLL：%3d %3d %3d Output=%1x";
-const char* const stringBase_80373BD5 = 
+SECTION_DEAD static char const* const stringBase_80373BB6 = "SCROLL：%3d %3d %3d Output=%1x";
+SECTION_DEAD static char const* const stringBase_80373BD5 = 
     "Press L+R trigger to control console.";
-const char* const stringBase_80373BFB = 
+SECTION_DEAD static char const* const stringBase_80373BFB = 
     "Press [Z] trigger to close this window.";
-const char* const stringBase_80373C23 = "/str/Final/Release/COPYDATE";
-const char* const stringBase_80373C3F = "Root";
-const char* const stringBase_80373C44 = "ルート";
-const char* const stringBase_80373C4B = "System";
-const char* const stringBase_80373C52 = "システム";
-const char* const stringBase_80373C5B = "Zelda";
-const char* const stringBase_80373C61 = "ゼルダ";
-const char* const stringBase_80373C68 = "Game";
-const char* const stringBase_80373C6D = "ゲーム";
-const char* const stringBase_80373C74 = "Archive";
-const char* const stringBase_80373C7C = "アーカイブ";
-const char* const stringBase_80373C87 = "J2d";
-const char* const stringBase_80373C8B = "J2D";
-const char* const stringBase_80373C8F = "Hostio";
-const char* const stringBase_80373C96 = "ホストIO";
-const char* const stringBase_80373C9F = "Command";
-const char* const stringBase_80373CA7 = "コマンド";
+SECTION_DEAD static char const* const stringBase_80373C23 = "/str/Final/Release/COPYDATE";
+SECTION_DEAD static char const* const stringBase_80373C3F = "Root";
+SECTION_DEAD static char const* const stringBase_80373C44 = "ルート";
+SECTION_DEAD static char const* const stringBase_80373C4B = "System";
+SECTION_DEAD static char const* const stringBase_80373C52 = "システム";
+SECTION_DEAD static char const* const stringBase_80373C5B = "Zelda";
+SECTION_DEAD static char const* const stringBase_80373C61 = "ゼルダ";
+SECTION_DEAD static char const* const stringBase_80373C68 = "Game";
+SECTION_DEAD static char const* const stringBase_80373C6D = "ゲーム";
+SECTION_DEAD static char const* const stringBase_80373C74 = "Archive";
+SECTION_DEAD static char const* const stringBase_80373C7C = "アーカイブ";
+SECTION_DEAD static char const* const stringBase_80373C87 = "J2d";
+SECTION_DEAD static char const* const stringBase_80373C8B = "J2D";
+SECTION_DEAD static char const* const stringBase_80373C8F = "Hostio";
+SECTION_DEAD static char const* const stringBase_80373C96 = "ホストIO";
+SECTION_DEAD static char const* const stringBase_80373C9F = "Command";
+SECTION_DEAD static char const* const stringBase_80373CA7 = "コマンド";
 #pragma pop
 
-/* 800056C0-80005728 0068+00 rc=0 efc=0 .text      version_check__Fv                                            */
+/* 800056C0-80005728 0068+00 rc=1 efc=0 rfr=False None .text      version_check__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void version_check() {
+asm static void version_check() {
 	nofralloc
 #include "asm/m_Do/m_Do_main/version_check__Fv.s"
 }
 #pragma pop
 
 
-/* 80005728-8000578C 0064+00 rc=0 efc=0 .text      CheckHeap1__9HeapCheckFv                                     */
+/* 80005728-8000578C 0064+00 rc=1 efc=0 rfr=False None .text      CheckHeap1__9HeapCheckFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -379,49 +353,97 @@ asm void HeapCheck::CheckHeap1() {
 
 
 /* ############################################################################################## */
-/* 803A2EE0-803A2EF4 0012+02 rc=0 efc=0 .data      COPYDATE_STRING__7mDoMain                                    */
-u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */] = {
+/* 803D32E0-803D3308 0028+00 rc=3 efc=0 rfr=True None .bss       RootHeapCheck                                                */
+extern "C" u8 RootHeapCheck[40];
+
+/* 803D3308-803D3330 0028+00 rc=1 efc=0 rfr=True None .bss       SystemHeapCheck                                              */
+extern "C" u8 SystemHeapCheck[40];
+
+/* 803D3330-803D3358 0028+00 rc=1 efc=0 rfr=True None .bss       ZeldaHeapCheck                                               */
+extern "C" u8 ZeldaHeapCheck[40];
+
+/* 803D3358-803D3380 0028+00 rc=1 efc=0 rfr=True None .bss       GameHeapCheck                                                */
+extern "C" u8 GameHeapCheck[40];
+
+/* 803D3380-803D33A8 0028+00 rc=1 efc=0 rfr=True None .bss       ArchiveHeapCheck                                             */
+extern "C" u8 ArchiveHeapCheck[40];
+
+/* 803D33A8-803D33D0 0028+00 rc=1 efc=0 rfr=True None .bss       J2dHeapCheck                                                 */
+extern "C" u8 J2dHeapCheck[40];
+
+/* 803D33D0-803D33F8 0028+00 rc=1 efc=0 rfr=True None .bss       HostioHeapCheck                                              */
+extern "C" u8 HostioHeapCheck[40];
+
+/* 803D33F8-803D3420 0028+00 rc=1 efc=0 rfr=True None .bss       CommandHeapCheck                                             */
+extern "C" u8 CommandHeapCheck[40];
+
+/* 803A2EE0-803A2EF4 0012+02 rc=3 efc=1 rfr=False None .data      COPYDATE_STRING__7mDoMain                                    */
+SECTION_DATA u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */] = {
 	0x3F, 0x3F, 0x2F, 0x3F, 0x3F, 0x2F, 0x3F, 0x3F, 0x20, 0x3F, 0x3F, 0x3A, 0x3F, 0x3F, 0x3A, 0x3F,
 	0x3F, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 803A2EF4-803A2F14 0020+00 rc=0 efc=0 .data      HeapCheckTable                                               */
-void* HeapCheckTable[8] = {
-	(void*)&RootHeapCheck,
-	(void*)&SystemHeapCheck,
-	(void*)&ZeldaHeapCheck,
-	(void*)&GameHeapCheck,
-	(void*)&ArchiveHeapCheck,
-	(void*)&J2dHeapCheck,
-	(void*)&HostioHeapCheck,
-	(void*)&CommandHeapCheck,
+/* 803A2EF4-803A2F14 0020+00 rc=1 efc=0 rfr=False None .data      HeapCheckTable                                               */
+SECTION_DATA static void* HeapCheckTable[8] = {
+	/* 0    */ (void*)&RootHeapCheck,
+	/* 1    */ (void*)&SystemHeapCheck,
+	/* 2    */ (void*)&ZeldaHeapCheck,
+	/* 3    */ (void*)&GameHeapCheck,
+	/* 4    */ (void*)&ArchiveHeapCheck,
+	/* 5    */ (void*)&J2dHeapCheck,
+	/* 6    */ (void*)&HostioHeapCheck,
+	/* 7    */ (void*)&CommandHeapCheck,
 };
 
-/* 8000578C-80005848 00BC+00 rc=0 efc=0 .text      CheckHeap__FUl                                               */
+/* 803D32E0-803D3308 0028+00 rc=3 efc=0 rfr=True None .bss       RootHeapCheck                                                */
+static u8 RootHeapCheck[40];
+
+/* 803D3308-803D3330 0028+00 rc=1 efc=0 rfr=True None .bss       SystemHeapCheck                                              */
+static u8 SystemHeapCheck[40];
+
+/* 803D3330-803D3358 0028+00 rc=1 efc=0 rfr=True None .bss       ZeldaHeapCheck                                               */
+static u8 ZeldaHeapCheck[40];
+
+/* 803D3358-803D3380 0028+00 rc=1 efc=0 rfr=True None .bss       GameHeapCheck                                                */
+static u8 GameHeapCheck[40];
+
+/* 803D3380-803D33A8 0028+00 rc=1 efc=0 rfr=True None .bss       ArchiveHeapCheck                                             */
+static u8 ArchiveHeapCheck[40];
+
+/* 803D33A8-803D33D0 0028+00 rc=1 efc=0 rfr=True None .bss       J2dHeapCheck                                                 */
+static u8 J2dHeapCheck[40];
+
+/* 803D33D0-803D33F8 0028+00 rc=1 efc=0 rfr=True None .bss       HostioHeapCheck                                              */
+static u8 HostioHeapCheck[40];
+
+/* 803D33F8-803D3420 0028+00 rc=1 efc=0 rfr=True None .bss       CommandHeapCheck                                             */
+static u8 CommandHeapCheck[40];
+
+/* 8000578C-80005848 00BC+00 rc=1 efc=0 rfr=False None .text      CheckHeap__FUl                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void CheckHeap(u32 field_0) {
+asm static void CheckHeap(u32 field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_main/CheckHeap__FUl.s"
 }
 #pragma pop
 
 
-/* 80005848-800058A0 0058+00 rc=0 efc=0 .text      countUsed__FP10JKRExpHeap                                    */
+/* 80005848-800058A0 0058+00 rc=2 efc=0 rfr=False None .text      countUsed__FP10JKRExpHeap                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void countUsed(JKRExpHeap* field_0) {
+asm static void countUsed(JKRExpHeap* field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_main/countUsed__FP10JKRExpHeap.s"
 }
 #pragma pop
 
 
-/* 800058A0-800058C4 0024+00 rc=0 efc=0 .text      getUsedCount__9HeapCheckCFv                                  */
+/* 800058A0-800058C4 0024+00 rc=2 efc=0 rfr=False None .text      getUsedCount__9HeapCheckCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -432,7 +454,7 @@ asm void HeapCheck::getUsedCount() const {
 #pragma pop
 
 
-/* 800058C4-80005AD8 0214+00 rc=0 efc=0 .text      heapDisplay__9HeapCheckCFv                                   */
+/* 800058C4-80005AD8 0214+00 rc=1 efc=0 rfr=False None .text      heapDisplay__9HeapCheckCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -444,22 +466,40 @@ asm void HeapCheck::heapDisplay() const {
 
 
 /* ############################################################################################## */
-/* 80450580-80450584 0004+00 rc=0 efc=0 .sdata     None                                                         */
-u32 data_80450580 = 0xFF000000;
+/* 80450580-80450584 0004+00 rc=9 efc=6 rfr=False None .sdata     None                                                         */
+SECTION_SDATA u32 data_80450580 = 0xFF000000;
 
-/* 80450584-80450588 0004+00 rc=0 efc=0 .sdata     memMargin__7mDoMain                                          */
-u32 memMargin__7mDoMain = 0xFFFFFFFF;
+/* 80450584-80450588 0004+00 rc=1 efc=1 rfr=False None .sdata     memMargin__7mDoMain                                          */
+SECTION_SDATA u32 memMargin__7mDoMain = 0xFFFFFFFF;
 
-/* 80450588-80450590 0008+00 rc=0 efc=0 .sdata     None                                                         */
-u8 data_80450588[8] = {
+/* 80450588-80450590 0008+00 rc=2 efc=0 rfr=False None .sdata     None                                                         */
+SECTION_SDATA static u8 data_80450588[8] = {
 	0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80005AD8-80005D4C 0274+00 rc=0 efc=0 .text      debugDisplay__Fv                                             */
+/* 80450B00-80450B08 0008+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_80450B00[8];
+
+/* 80450B08-80450B0C 0004+00 rc=2 efc=1 rfr=False None .sbss      sPowerOnTime__7mDoMain                                       */
+u8 sPowerOnTime__7mDoMain[4];
+
+/* 80450B0C-80450B10 0004+00 rc=2 efc=1 rfr=False None .sbss      None                                                         */
+u8 data_80450B0C[4];
+
+/* 80450B10-80450B14 0004+00 rc=2 efc=2 rfr=False None .sbss      sHungUpTime__7mDoMain                                        */
+u8 sHungUpTime__7mDoMain[4];
+
+/* 80450B14-80450B18 0004+00 rc=2 efc=2 rfr=False None .sbss      None                                                         */
+u8 data_80450B14[4];
+
+/* 80450B18-80450B1C 0004+00 rc=3 efc=0 rfr=False None .sbss      None                                                         */
+static u8 struct_80450B18[4];
+
+/* 80005AD8-80005D4C 0274+00 rc=1 efc=0 rfr=False None .text      debugDisplay__Fv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void debugDisplay() {
+asm static void debugDisplay() {
 	nofralloc
 #include "asm/m_Do/m_Do_main/debugDisplay__Fv.s"
 }
@@ -467,93 +507,75 @@ asm void debugDisplay() {
 
 
 /* ############################################################################################## */
-/* 80450B00-80450B08 0008+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80450B00[8];
+/* 80450B1C-80450B20 0004+00 rc=1 efc=0 rfr=False None .sbss      console_position_x$3776                                      */
+static f32 data_80450B1C;
 
-/* 80450B08-80450B0C 0004+00 rc=0 efc=0 .sbss      sPowerOnTime__7mDoMain                                       */
-u8 sPowerOnTime__7mDoMain[4];
+/* 80450B20-80450B24 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_80450B20[4];
 
-/* 80450B0C-80450B10 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80450B0C[4];
+/* 80450B24-80450B28 0004+00 rc=1 efc=0 rfr=False None .sbss      console_position_y$3779                                      */
+static f32 data_80450B24;
 
-/* 80450B10-80450B14 0004+00 rc=0 efc=0 .sbss      sHungUpTime__7mDoMain                                        */
-u8 sHungUpTime__7mDoMain[4];
+/* 80450B28-80450B2C 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_80450B28[4];
 
-/* 80450B14-80450B18 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80450B14[4];
+/* 80450B2C-80450B30 0004+00 rc=1 efc=0 rfr=False None .sbss      console_scroll$3782                                          */
+static u8 data_80450B2C[4];
 
-/* 80450B18-80450B1C 0004+00 rc=0 efc=0 None       None                                                         */
-u8 struct_80450B18[4];
+/* 80450B30-80450B34 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_80450B30[4];
 
-/* 80450B1C-80450B20 0004+00 rc=0 efc=0 .sbss      console_position_x$3776                                      */
-f32 data_80450B1C;
+/* 80451A00-80451A04 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3884                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3884 = 20.0f;
 
-/* 80450B20-80450B24 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80450B20[4];
+/* 80451A04-80451A08 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3885                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3885 = 30.0f;
 
-/* 80450B24-80450B28 0004+00 rc=0 efc=0 .sbss      console_position_y$3779                                      */
-f32 data_80450B24;
-
-/* 80450B28-80450B2C 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80450B28[4];
-
-/* 80450B2C-80450B30 0004+00 rc=0 efc=0 .sbss      console_scroll$3782                                          */
-u8 data_80450B2C[4];
-
-/* 80450B30-80450B34 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80450B30[4];
-
-/* 80451A00-80451A04 0004+00 rc=0 efc=0 .sdata2    @3884                                                        */
-f32 m_Do_m_Do_main__lit_3884 = 20.0f;
-
-/* 80451A04-80451A08 0004+00 rc=0 efc=0 .sdata2    @3885                                                        */
-f32 m_Do_m_Do_main__lit_3885 = 30.0f;
-
-/* 80451A08-80451A0C 0004+00 rc=0 efc=0 .sdata2    @3886                                                        */
-u8 m_Do_m_Do_main__lit_3886[4] = {
+/* 80451A08-80451A0C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3886                                                        */
+SECTION_SDATA2 static u8 m_Do_m_Do_main__lit_3886[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451A0C-80451A10 0004+00 rc=0 efc=0 .sdata2    @3887                                                        */
-f32 m_Do_m_Do_main__lit_3887 = 1.0f;
+/* 80451A0C-80451A10 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3887                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3887 = 1.0f;
 
-/* 80451A10-80451A18 0004+04 rc=0 efc=0 .sdata2    @3888                                                        */
-f32 m_Do_m_Do_main__lit_3888[1 + 1 /* padding */] = {
+/* 80451A10-80451A18 0004+04 rc=1 efc=0 rfr=False None .sdata2    @3888                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_main__lit_3888[1 + 1 /* padding */] = {
 	-1.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80451A18-80451A20 0008+00 rc=0 efc=0 .sdata2    @3890                                                        */
-f64 m_Do_m_Do_main__lit_3890 = 4503601774854144.0 /* cast s32 to float */;
+/* 80451A18-80451A20 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3890                                                        */
+SECTION_SDATA2 static f64 m_Do_m_Do_main__lit_3890 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80005D4C-8000614C 0400+00 rc=0 efc=0 .text      Debug_console__FUl                                           */
+/* 80005D4C-8000614C 0400+00 rc=1 efc=0 rfr=False None .text      Debug_console__FUl                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void Debug_console(u32 field_0) {
+asm static void Debug_console(u32 field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_main/Debug_console__FUl.s"
 }
 #pragma pop
 
 
-/* 8000614C-800061C8 007C+00 rc=0 efc=0 .text      LOAD_COPYDATE__FPv                                           */
+/* 8000614C-800061C8 007C+00 rc=1 efc=0 rfr=False None .text      LOAD_COPYDATE__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void LOAD_COPYDATE(void* field_0) {
+asm static void LOAD_COPYDATE(void* field_0) {
 	nofralloc
 #include "asm/m_Do/m_Do_main/LOAD_COPYDATE__FPv.s"
 }
 #pragma pop
 
 
-/* 800061C8-8000628C 00C4+00 rc=0 efc=0 .text      debug__Fv                                                    */
+/* 800061C8-8000628C 00C4+00 rc=1 efc=0 rfr=False None .text      debug__Fv                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void debug() {
+asm static void debug() {
 	nofralloc
 #include "asm/m_Do/m_Do_main/debug__Fv.s"
 }
@@ -561,17 +583,14 @@ asm void debug() {
 
 
 /* ############################################################################################## */
-/* 803D32E0-803D3308 0028+00 rc=0 efc=0 .bss       RootHeapCheck                                                */
-u8 RootHeapCheck[40];
+/* 80450B34-80450B38 0004+00 rc=1 efc=0 rfr=False None .sbss      frame$3939                                                   */
+static u8 data_80450B34[4];
 
-/* 80450B34-80450B38 0004+00 rc=0 efc=0 .sbss      frame$3939                                                   */
-u8 data_80450B34[4];
-
-/* 8000628C-80006454 01C8+00 rc=0 efc=0 .text      main01__Fv                                                   */
+/* 8000628C-80006454 01C8+00 rc=1 efc=0 rfr=False None .text      main01__Fv                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void main01() {
+asm static void main01() {
 	nofralloc
 #include "asm/m_Do/m_Do_main/main01__Fv.s"
 }
@@ -579,34 +598,13 @@ asm void main01() {
 
 
 /* ############################################################################################## */
-/* 803D3308-803D3330 0028+00 rc=0 efc=0 .bss       SystemHeapCheck                                              */
-u8 SystemHeapCheck[40];
+/* 803D3420-803DB420 8000+00 rc=1 efc=0 rfr=False None .bss       mainThreadStack                                              */
+static u8 mainThreadStack[32768];
 
-/* 803D3330-803D3358 0028+00 rc=0 efc=0 .bss       ZeldaHeapCheck                                               */
-u8 ZeldaHeapCheck[40];
+/* 803DB420-803DB740 0318+08 rc=1 efc=0 rfr=False None .bss       mainThread                                                   */
+static u8 mainThread[792 + 8 /* padding */];
 
-/* 803D3358-803D3380 0028+00 rc=0 efc=0 .bss       GameHeapCheck                                                */
-u8 GameHeapCheck[40];
-
-/* 803D3380-803D33A8 0028+00 rc=0 efc=0 .bss       ArchiveHeapCheck                                             */
-u8 ArchiveHeapCheck[40];
-
-/* 803D33A8-803D33D0 0028+00 rc=0 efc=0 .bss       J2dHeapCheck                                                 */
-u8 J2dHeapCheck[40];
-
-/* 803D33D0-803D33F8 0028+00 rc=0 efc=0 .bss       HostioHeapCheck                                              */
-u8 HostioHeapCheck[40];
-
-/* 803D33F8-803D3420 0028+00 rc=0 efc=0 .bss       CommandHeapCheck                                             */
-u8 CommandHeapCheck[40];
-
-/* 803D3420-803DB420 8000+00 rc=0 efc=0 .bss       mainThreadStack                                              */
-u8 mainThreadStack[32768];
-
-/* 803DB420-803DB740 0318+08 rc=0 efc=0 .bss       mainThread                                                   */
-u8 mainThread[792 + 8 /* padding */];
-
-/* 80006454-800065D8 0184+00 rc=0 efc=0 .text      main                                                         */
+/* 80006454-800065D8 0184+00 rc=1 efc=1 rfr=False None .text      main                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -617,13 +615,13 @@ extern "C" asm void main() {
 #pragma pop
 
 
-/* 800065D8-800065E0 0008+00 rc=0 efc=0 .text      dump_sort__7JKRHeapFv                                        */
+/* 800065D8-800065E0 0008+00 rc=2 efc=2 rfr=False None .text      dump_sort__7JKRHeapFv                                        */
 bool JKRHeap::dump_sort() {
 	return true;
 }
 
 
-/* 800065E0-80006798 01B8+00 rc=0 efc=0 .text      __sinit_m_Do_main_cpp                                        */
+/* 800065E0-80006798 01B8+00 rc=1 efc=1 rfr=False None .text      __sinit_m_Do_main_cpp                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -635,92 +633,98 @@ extern "C" asm void __sinit_m_Do_main_cpp() {
 
 
 /* ############################################################################################## */
-/* 803A2F14-803A2F28 0014+00 rc=0 efc=0 .data      desc1$3717                                                   */
-u8 data_803A2F14[20] = {
-	0x80, 0x37, 0x3A, 0xEF, 0x80, 0x37, 0x3A, 0xF0, 0x80, 0x37, 0x3A, 0xFA, 0x80, 0x37, 0x3B, 0x04,
-	0x80, 0x37, 0x3B, 0x0E,
+/* 803A2F14-803A2F28 0014+00 rc=0 efc=0 rfr=False None .data      desc1$3717                                                   */
+SECTION_DATA void* data_803A2F14[5] = {
+	/* 0    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
+	/* 1    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x150),
+	/* 2    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x15A),
+	/* 3    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x164),
+	/* 4    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x16E),
 };
 
-/* 803A2F28-803A2F40 0014+04 rc=0 efc=0 .data      desc2$3718                                                   */
-u8 data_803A2F28[20 + 4 /* padding */] = {
-	0x80, 0x37, 0x3A, 0xEF, 0x80, 0x37, 0x3B, 0x18, 0x80, 0x37, 0x3B, 0x22, 0x80, 0x37, 0x3B, 0x2C,
-	0x80, 0x37, 0x3B, 0x2C,
+/* 803A2F28-803A2F40 0014+04 rc=0 efc=0 rfr=False None .data      desc2$3718                                                   */
+SECTION_DATA void* data_803A2F28[5 + 1 /* padding */] = {
+	/* 0    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
+	/* 1    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x178),
+	/* 2    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x182),
+	/* 3    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x18C),
+	/* 4    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x18C),
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 
-/* 80450B38-80450B3C 0004+00 rc=0 efc=0 .sbss      sInstance__34JASGlobalInstance<13Z2WolfHowlMgr>              */
+/* 80450B38-80450B3C 0004+00 rc=2 efc=2 rfr=False None .sbss      sInstance__34JASGlobalInstance<13Z2WolfHowlMgr>              */
 u8 data_80450B38[4];
 
-/* 80450B3C-80450B40 0004+00 rc=0 efc=0 .sbss      sInstance__31JASGlobalInstance<10Z2EnvSeMgr>                 */
+/* 80450B3C-80450B40 0004+00 rc=6 efc=6 rfr=False None .sbss      sInstance__31JASGlobalInstance<10Z2EnvSeMgr>                 */
 u8 data_80450B3C[4];
 
-/* 80450B40-80450B44 0004+00 rc=0 efc=0 .sbss      sInstance__32JASGlobalInstance<11Z2FxLineMgr>                */
+/* 80450B40-80450B44 0004+00 rc=6 efc=6 rfr=False None .sbss      sInstance__32JASGlobalInstance<11Z2FxLineMgr>                */
 u8 data_80450B40[4];
 
-/* 80450B44-80450B48 0004+00 rc=0 efc=0 .sbss      sInstance__31JASGlobalInstance<10Z2Audience>                 */
+/* 80450B44-80450B48 0004+00 rc=18 efc=18 rfr=False None .sbss      sInstance__31JASGlobalInstance<10Z2Audience>                 */
 u8 data_80450B44[4];
 
-/* 80450B48-80450B4C 0004+00 rc=0 efc=0 .sbss      sInstance__34JASGlobalInstance<13Z2SoundObjMgr>              */
+/* 80450B48-80450B4C 0004+00 rc=17 efc=17 rfr=False None .sbss      sInstance__34JASGlobalInstance<13Z2SoundObjMgr>              */
 u8 data_80450B48[4];
 
-/* 80450B4C-80450B50 0004+00 rc=0 efc=0 .sbss      sInstance__32JASGlobalInstance<11Z2SoundInfo>                */
+/* 80450B4C-80450B50 0004+00 rc=10 efc=10 rfr=False None .sbss      sInstance__32JASGlobalInstance<11Z2SoundInfo>                */
 u8 data_80450B4C[4];
 
-/* 80450B50-80450B54 0004+00 rc=0 efc=0 .sbss      sInstance__33JASGlobalInstance<12JAUSoundInfo>               */
+/* 80450B50-80450B54 0004+00 rc=5 efc=5 rfr=False None .sbss      sInstance__33JASGlobalInstance<12JAUSoundInfo>               */
 u8 data_80450B50[4];
 
-/* 80450B54-80450B58 0004+00 rc=0 efc=0 .sbss      sInstance__38JASGlobalInstance<17JAUSoundNameTable>          */
+/* 80450B54-80450B58 0004+00 rc=2 efc=2 rfr=False None .sbss      sInstance__38JASGlobalInstance<17JAUSoundNameTable>          */
 u8 data_80450B54[4];
 
-/* 80450B58-80450B5C 0004+00 rc=0 efc=0 .sbss      sInstance__34JASGlobalInstance<13JAUSoundTable>              */
+/* 80450B58-80450B5C 0004+00 rc=12 efc=12 rfr=False None .sbss      sInstance__34JASGlobalInstance<13JAUSoundTable>              */
 u8 data_80450B58[4];
 
-/* 80450B5C-80450B60 0004+00 rc=0 efc=0 .sbss      sInstance__33JASGlobalInstance<12JAISoundInfo>               */
+/* 80450B5C-80450B60 0004+00 rc=6 efc=6 rfr=False None .sbss      sInstance__33JASGlobalInstance<12JAISoundInfo>               */
 u8 data_80450B5C[4];
 
-/* 80450B60-80450B64 0004+00 rc=0 efc=0 .sbss      sInstance__31JASGlobalInstance<10Z2SoundMgr>                 */
+/* 80450B60-80450B64 0004+00 rc=29 efc=29 rfr=False None .sbss      sInstance__31JASGlobalInstance<10Z2SoundMgr>                 */
 u8 data_80450B60[4];
 
-/* 80450B64-80450B68 0004+00 rc=0 efc=0 .sbss      sInstance__33JASGlobalInstance<12JAIStreamMgr>               */
+/* 80450B64-80450B68 0004+00 rc=2 efc=2 rfr=False None .sbss      sInstance__33JASGlobalInstance<12JAIStreamMgr>               */
 u8 data_80450B64[4];
 
-/* 80450B68-80450B6C 0004+00 rc=0 efc=0 .sbss      sInstance__29JASGlobalInstance<9JAISeqMgr>                   */
+/* 80450B68-80450B6C 0004+00 rc=3 efc=3 rfr=False None .sbss      sInstance__29JASGlobalInstance<9JAISeqMgr>                   */
 u8 data_80450B68[4];
 
-/* 80450B6C-80450B70 0004+00 rc=0 efc=0 .sbss      sInstance__28JASGlobalInstance<8JAISeMgr>                    */
+/* 80450B6C-80450B70 0004+00 rc=4 efc=4 rfr=False None .sbss      sInstance__28JASGlobalInstance<8JAISeMgr>                    */
 u8 data_80450B6C[4];
 
-/* 80450B70-80450B74 0004+00 rc=0 efc=0 .sbss      sInstance__33JASGlobalInstance<12Z2SpeechMgr2>               */
+/* 80450B70-80450B74 0004+00 rc=9 efc=9 rfr=False None .sbss      sInstance__33JASGlobalInstance<12Z2SpeechMgr2>               */
 u8 data_80450B70[4];
 
-/* 80450B74-80450B78 0004+00 rc=0 efc=0 .sbss      sInstance__35JASGlobalInstance<14Z2SoundStarter>             */
+/* 80450B74-80450B78 0004+00 rc=22 efc=22 rfr=False None .sbss      sInstance__35JASGlobalInstance<14Z2SoundStarter>             */
 u8 data_80450B74[4];
 
-/* 80450B78-80450B7C 0004+00 rc=0 efc=0 .sbss      sInstance__36JASGlobalInstance<15JAISoundStarter>            */
+/* 80450B78-80450B7C 0004+00 rc=2 efc=2 rfr=False None .sbss      sInstance__36JASGlobalInstance<15JAISoundStarter>            */
 u8 data_80450B78[4];
 
-/* 80450B7C-80450B80 0004+00 rc=0 efc=0 .sbss      sInstance__32JASGlobalInstance<11Z2StatusMgr>                */
+/* 80450B7C-80450B80 0004+00 rc=34 efc=34 rfr=False None .sbss      sInstance__32JASGlobalInstance<11Z2StatusMgr>                */
 u8 data_80450B7C[4];
 
-/* 80450B80-80450B84 0004+00 rc=0 efc=0 .sbss      sInstance__31JASGlobalInstance<10Z2SceneMgr>                 */
+/* 80450B80-80450B84 0004+00 rc=46 efc=46 rfr=False None .sbss      sInstance__31JASGlobalInstance<10Z2SceneMgr>                 */
 u8 data_80450B80[4];
 
-/* 80450B84-80450B88 0004+00 rc=0 efc=0 .sbss      sInstance__28JASGlobalInstance<8Z2SeqMgr>                    */
+/* 80450B84-80450B88 0004+00 rc=38 efc=38 rfr=False None .sbss      sInstance__28JASGlobalInstance<8Z2SeqMgr>                    */
 u8 data_80450B84[4];
 
-/* 80450B88-80450B8C 0004+00 rc=0 efc=0 .sbss      sInstance__27JASGlobalInstance<7Z2SeMgr>                     */
+/* 80450B88-80450B8C 0004+00 rc=25 efc=25 rfr=False None .sbss      sInstance__27JASGlobalInstance<7Z2SeMgr>                     */
 u8 data_80450B88[4];
 
-/* 80450B8C-80450B90 0004+00 rc=0 efc=0 .sbss      sInstance__35JASGlobalInstance<14JASAudioThread>             */
+/* 80450B8C-80450B90 0004+00 rc=6 efc=6 rfr=False None .sbss      sInstance__35JASGlobalInstance<14JASAudioThread>             */
 u8 data_80450B8C[4];
 
-/* 80450B90-80450B98 0004+04 rc=0 efc=0 .sbss      sInstance__40JASGlobalInstance<19JASDefaultBankTable>        */
+/* 80450B90-80450B98 0004+04 rc=4 efc=4 rfr=False None .sbss      sInstance__40JASGlobalInstance<19JASDefaultBankTable>        */
 u8 data_80450B90[4 + 4 /* padding */];
 
-/* 80450B98-80450B9C 0004+00 rc=0 efc=0 None       None                                                         */
+/* 80450B98-80450B9C 0004+00 rc=6 efc=6 rfr=False None .sbss      None                                                         */
 u8 struct_80450B98[4];
 
-/* 80450B9C-80450BA0 0004+00 rc=0 efc=0 .sbss      None                                                         */
+/* 80450B9C-80450BA0 0004+00 rc=3 efc=3 rfr=False None .sbss      None                                                         */
 u8 data_80450B9C[4];
 

@@ -14,18 +14,22 @@ class ArbitraryData(Symbol):
     @property
     def element_size(self):
         return 1
+        
     @property
     def total_element_count(self):
         total = (self.size // self.element_size) + (self.padding // self.element_size)
         return total
 
-    def array_type(self):
-        if self.size <= 0:
-            print(self)
-            sys.exit(1)
+    def element_type(self):
+        type = self.data_type
+        if self._section == ".rodata":
+            type = ConstType(type)
+        return type
 
+
+    def array_type(self):
         return PaddingArrayType.create(
-            self.data_type,
+            self.element_type(),
             self.size // self.element_size,
             self.padding // self.element_size)
 
@@ -39,21 +43,26 @@ class ArbitraryData(Symbol):
     async def export_forward_references(self, exporter, builder: AsyncBuilder, c_export: bool = False):
         if not c_export:
             return
-
-        decl_type = self.array_type()
+        if self.is_static:
+            if not self.force_section and not self.require_forward_reference:
+                return
 
         await self.export_section_header(builder)
-        await self.export_section(builder)
-        await self.export_extern(builder)
-        await self.export_readonly(builder)
+        decl_type = self.array_type()
+
+        if not self.is_static:
+            await self.export_extern(builder)
+        #await self.export_readonly(builder)
         await builder.write_nonewline(decl_type.decl(self.identifier.label))
         await builder.write(";")
 
     async def export_declaration_head(self, exporter, builder: AsyncBuilder):
         decl_type = self.array_type()
 
-        await self.export_section_header(builder)
-        await self.export_readonly(builder)
+        await self.export_section(builder)
+        if self.is_static:
+            await self.export_static(builder)
+        #await self.export_readonly(builder)
         await builder.write_nonewline(decl_type.decl(self.identifier.label))
 
     async def export_declaration_body(self, exporter, builder: AsyncBuilder):

@@ -9,21 +9,19 @@
 // Forward References:
 // 
 
-extern "C" void bitrev(); // 1
-extern "C" void ReadArrayUnlock(); // 1
-extern "C" void DummyLen(); // 1
+extern "C" static void bitrev(); // 1
+extern "C" static void ReadArrayUnlock(); // 1
+extern "C" static void DummyLen(); // 1
 extern "C" void __CARDUnlock(); // 1
-extern "C" void InitCallback(); // 1
-extern "C" void DoneCallback(); // 1
+extern "C" static void InitCallback(); // 1
+extern "C" static void DoneCallback(); // 1
 
-extern "C" void bitrev(); // 1
-extern "C" void ReadArrayUnlock(); // 1
-extern "C" void DummyLen(); // 1
+extern "C" static void bitrev(); // 1
+extern "C" static void ReadArrayUnlock(); // 1
+extern "C" static void DummyLen(); // 1
 extern "C" void __CARDUnlock(); // 1
-extern "C" void InitCallback(); // 1
-extern "C" void DoneCallback(); // 1
-SECTION_DATA extern u8 CardData[352];
-SECTION_SDATA extern u32 next[1 + 1 /* padding */];
+extern "C" static void InitCallback(); // 1
+extern "C" static void DoneCallback(); // 1
 
 // 
 // External References:
@@ -58,28 +56,28 @@ extern "C" void DSPCheckMailToDSP(); // 1
 extern "C" void DSPSendMailToDSP(); // 1
 extern "C" void __CARDReadStatus(); // 1
 extern "C" void __CARDMountCallback(); // 1
-SECTION_BSS extern u8 __CARDBlock[544];
+extern "C" extern u8 __CARDBlock[544];
 
 // 
 // Declarations:
 // 
 
-/* 80353F24-80354090 016C+00 rc=0 efc=0 .text      bitrev                                                       */
+/* 80353F24-80354090 016C+00 rc=1 efc=0 rfr=False None .text      bitrev                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void bitrev() {
+extern "C" asm static void bitrev() {
 	nofralloc
 #include "asm/dolphin/card/CARDUnlock/bitrev.s"
 }
 #pragma pop
 
 
-/* 80354090-803541D4 0144+00 rc=0 efc=0 .text      ReadArrayUnlock                                              */
+/* 80354090-803541D4 0144+00 rc=2 efc=0 rfr=False None .text      ReadArrayUnlock                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void ReadArrayUnlock() {
+extern "C" asm static void ReadArrayUnlock() {
 	nofralloc
 #include "asm/dolphin/card/CARDUnlock/ReadArrayUnlock.s"
 }
@@ -87,18 +85,18 @@ extern "C" asm void ReadArrayUnlock() {
 
 
 /* ############################################################################################## */
-/* 80450A68-80450A70 0004+04 rc=0 efc=0 .sdata     next                                                         */
-u32 next[1 + 1 /* padding */] = {
+/* 80450A68-80450A70 0004+04 rc=2 efc=0 rfr=False None .sdata     next                                                         */
+SECTION_SDATA static u32 next[1 + 1 /* padding */] = {
 	0x00000001,
 	/* padding */
 	0x00000000,
 };
 
-/* 803541D4-80354298 00C4+00 rc=0 efc=0 .text      DummyLen                                                     */
+/* 803541D4-80354298 00C4+00 rc=2 efc=0 rfr=False None .text      DummyLen                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void DummyLen() {
+extern "C" asm static void DummyLen() {
 	nofralloc
 #include "asm/dolphin/card/CARDUnlock/DummyLen.s"
 }
@@ -106,8 +104,8 @@ extern "C" asm void DummyLen() {
 
 
 /* ############################################################################################## */
-/* 803D1EA0-803D2000 0160+00 rc=0 efc=0 .data      CardData                                                     */
-u8 CardData[352] = {
+/* 803D1EA0-803D2000 0160+00 rc=1 efc=0 rfr=False None .data      CardData                                                     */
+SECTION_DATA static u8 CardData[352] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x21, 0x02, 0xFF, 0x00, 0x21,
 	0x13, 0x06, 0x12, 0x03, 0x12, 0x04, 0x13, 0x05, 0x00, 0x92, 0x00, 0xFF, 0x00, 0x88, 0xFF, 0xFF,
@@ -132,7 +130,7 @@ u8 CardData[352] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80354298-80354DF0 0B58+00 rc=0 efc=0 .text      __CARDUnlock                                                 */
+/* 80354298-80354DF0 0B58+00 rc=1 efc=1 rfr=False None .text      __CARDUnlock                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -143,22 +141,22 @@ extern "C" asm void __CARDUnlock() {
 #pragma pop
 
 
-/* 80354DF0-80354E60 0070+00 rc=0 efc=0 .text      InitCallback                                                 */
+/* 80354DF0-80354E60 0070+00 rc=1 efc=0 rfr=False None .text      InitCallback                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void InitCallback() {
+extern "C" asm static void InitCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDUnlock/InitCallback.s"
 }
 #pragma pop
 
 
-/* 80354E60-80355184 0324+00 rc=0 efc=0 .text      DoneCallback                                                 */
+/* 80354E60-80355184 0324+00 rc=1 efc=0 rfr=False None .text      DoneCallback                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void DoneCallback() {
+extern "C" asm static void DoneCallback() {
 	nofralloc
 #include "asm/dolphin/card/CARDUnlock/DoneCallback.s"
 }

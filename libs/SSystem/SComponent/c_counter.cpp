@@ -12,7 +12,7 @@
 void cCt_Counter(int); // 2
 
 extern "C" void cCt_Counter__Fi(); // 1
-SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
 
 // 
 // External References:
@@ -25,10 +25,10 @@ SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80430CD8-80430CE8 000C+04 rc=0 efc=0 .bss       g_Counter                                                    */
+/* 80430CD8-80430CE8 000C+04 rc=13 efc=12 rfr=False None .bss       g_Counter                                                    */
 u8 g_Counter[12 + 4 /* padding */];
 
-/* 80265E1C-80265E64 0048+00 rc=0 efc=0 .text      cCt_Counter__Fi                                              */
+/* 80265E1C-80265E64 0048+00 rc=1 efc=1 rfr=False None .text      cCt_Counter__Fi                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

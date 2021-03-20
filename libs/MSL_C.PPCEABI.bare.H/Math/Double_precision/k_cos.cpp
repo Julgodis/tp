@@ -12,15 +12,6 @@
 extern "C" void __kernel_cos(); // 1
 
 extern "C" void __kernel_cos(); // 1
-SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_65;
-SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_66;
-SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_67;
-SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_68;
-SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_69;
-SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_70;
-SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_71;
-SECTION_SDATA2 extern f64 Math_Double_precision_k_cos__lit_72;
-SECTION_SDATA2 extern f64 lit_73;
 
 // 
 // External References:
@@ -33,34 +24,34 @@ SECTION_SDATA2 extern f64 lit_73;
 // 
 
 /* ############################################################################################## */
-/* 804569C0-804569C8 0008+00 rc=0 efc=0 .sdata2    @65                                                          */
-f64 Math_Double_precision_k_cos__lit_65 = 1.0;
+/* 804569C0-804569C8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @65                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_k_cos__lit_65 = 1.0;
 
-/* 804569C8-804569D0 0008+00 rc=0 efc=0 .sdata2    @66                                                          */
-f64 Math_Double_precision_k_cos__lit_66 = 0.0416666666666666;
+/* 804569C8-804569D0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @66                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_k_cos__lit_66 = 0.0416666666666666;
 
-/* 804569D0-804569D8 0008+00 rc=0 efc=0 .sdata2    @67                                                          */
-f64 Math_Double_precision_k_cos__lit_67 = -0.001388888888887411;
+/* 804569D0-804569D8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @67                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_k_cos__lit_67 = -0.001388888888887411;
 
-/* 804569D8-804569E0 0008+00 rc=0 efc=0 .sdata2    @68                                                          */
-f64 Math_Double_precision_k_cos__lit_68 = 2.480158728947673e-05;
+/* 804569D8-804569E0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @68                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_k_cos__lit_68 = 2.480158728947673e-05;
 
-/* 804569E0-804569E8 0008+00 rc=0 efc=0 .sdata2    @69                                                          */
-f64 Math_Double_precision_k_cos__lit_69 = -2.7557314351390663e-07;
+/* 804569E0-804569E8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @69                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_k_cos__lit_69 = -2.7557314351390663e-07;
 
-/* 804569E8-804569F0 0008+00 rc=0 efc=0 .sdata2    @70                                                          */
-f64 Math_Double_precision_k_cos__lit_70 = 2.087572321298175e-09;
+/* 804569E8-804569F0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @70                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_k_cos__lit_70 = 2.087572321298175e-09;
 
-/* 804569F0-804569F8 0008+00 rc=0 efc=0 .sdata2    @71                                                          */
-f64 Math_Double_precision_k_cos__lit_71 = -1.1359647557788195e-11;
+/* 804569F0-804569F8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @71                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_k_cos__lit_71 = -1.1359647557788195e-11;
 
-/* 804569F8-80456A00 0008+00 rc=0 efc=0 .sdata2    @72                                                          */
-f64 Math_Double_precision_k_cos__lit_72 = 0.5;
+/* 804569F8-80456A00 0008+00 rc=1 efc=0 rfr=False None .sdata2    @72                                                          */
+SECTION_SDATA2 static f64 Math_Double_precision_k_cos__lit_72 = 0.5;
 
-/* 80456A00-80456A08 0008+00 rc=0 efc=0 .sdata2    @73                                                          */
-f64 lit_73 = 0.28125;
+/* 80456A00-80456A08 0008+00 rc=1 efc=0 rfr=False None .sdata2    @73                                                          */
+SECTION_SDATA2 static f64 lit_73 = 0.28125;
 
-/* 8036AAA8-8036AB9C 00F4+00 rc=0 efc=0 .text      __kernel_cos                                                 */
+/* 8036AAA8-8036AB9C 00F4+00 rc=2 efc=2 rfr=False None .text      __kernel_cos                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

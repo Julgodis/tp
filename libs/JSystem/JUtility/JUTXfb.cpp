@@ -42,7 +42,7 @@ extern "C" void delXfb__6JUTXfbFi(); // 1
 extern "C" void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber(); // 1
 extern "C" void destroyManager__6JUTXfbFv(); // 1
 extern "C" void initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber(); // 1
-SECTION_SBSS extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
+extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -71,14 +71,14 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
-SECTION_SBSS extern u8 sManager__8JUTVideo[4];
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sManager__8JUTVideo[4];
 
 // 
 // Declarations:
 // 
 
-/* 802E5214-802E5228 0014+00 rc=0 efc=0 .text      clearIndex__6JUTXfbFv                                        */
+/* 802E5214-802E5228 0014+00 rc=2 efc=1 rfr=False None .text      clearIndex__6JUTXfbFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -89,7 +89,7 @@ asm void JUTXfb::clearIndex() {
 #pragma pop
 
 
-/* 802E5228-802E5260 0038+00 rc=0 efc=0 .text      common_init__6JUTXfbFi                                       */
+/* 802E5228-802E5260 0038+00 rc=1 efc=0 rfr=False None .text      common_init__6JUTXfbFi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -100,7 +100,7 @@ asm void JUTXfb::common_init(int field_0) {
 #pragma pop
 
 
-/* 802E5260-802E5308 00A8+00 rc=0 efc=0 .text      __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber */
+/* 802E5260-802E5308 00A8+00 rc=1 efc=0 rfr=False None .text      __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,10 +112,10 @@ asm JUTXfb::JUTXfb(_GXRenderModeObj const* field_0, JKRHeap* field_1, JUTXfb::EX
 
 
 /* ############################################################################################## */
-/* 80451550-80451558 0004+04 rc=0 efc=0 .sbss      sManager__6JUTXfb                                            */
+/* 80451550-80451558 0004+04 rc=16 efc=13 rfr=False None .sbss      sManager__6JUTXfb                                            */
 u8 sManager__6JUTXfb[4 + 4 /* padding */];
 
-/* 802E5308-802E5378 0070+00 rc=0 efc=0 .text      __dt__6JUTXfbFv                                              */
+/* 802E5308-802E5378 0070+00 rc=1 efc=0 rfr=False None .text      __dt__6JUTXfbFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,7 +126,7 @@ asm JUTXfb::~JUTXfb() {
 #pragma pop
 
 
-/* 802E5378-802E53B8 0040+00 rc=0 efc=0 .text      delXfb__6JUTXfbFi                                            */
+/* 802E5378-802E53B8 0040+00 rc=1 efc=0 rfr=False None .text      delXfb__6JUTXfbFi                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +137,7 @@ asm void JUTXfb::delXfb(int field_0) {
 #pragma pop
 
 
-/* 802E53B8-802E5424 006C+00 rc=0 efc=0 .text      createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber        */
+/* 802E53B8-802E5424 006C+00 rc=1 efc=1 rfr=False None .text      createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +148,7 @@ asm void JUTXfb::createManager(JKRHeap* field_0, JUTXfb::EXfbNumber field_1) {
 #pragma pop
 
 
-/* 802E5424-802E5454 0030+00 rc=0 efc=0 .text      destroyManager__6JUTXfbFv                                    */
+/* 802E5424-802E5454 0030+00 rc=1 efc=1 rfr=False None .text      destroyManager__6JUTXfbFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +159,7 @@ asm void JUTXfb::destroyManager() {
 #pragma pop
 
 
-/* 802E5454-802E5530 00DC+00 rc=0 efc=0 .text      initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber         */
+/* 802E5454-802E5530 00DC+00 rc=1 efc=0 rfr=False None .text      initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

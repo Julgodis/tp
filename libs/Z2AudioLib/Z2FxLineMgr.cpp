@@ -59,7 +59,6 @@ extern "C" void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb(); // 1
 extern "C" void setFxForceOff__11Z2FxLineMgrFb(); // 1
 extern "C" void setUnderWaterFx__11Z2FxLineMgrFb(); // 1
 extern "C" void setSceneFx__11Z2FxLineMgrFl(); // 1
-SECTION_DATA extern void* lit_3566[76];
 
 // 
 // External References:
@@ -83,18 +82,18 @@ extern "C" void _savegpr_22(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_22(); // 1
 extern "C" void _restgpr_28(); // 1
-SECTION_DATA extern void* const __vt__10JSUIosBase[3];
-SECTION_DATA extern void* const __vt__20JSURandomInputStream[9];
-SECTION_DATA extern void* const __vt__14JSUInputStream[6 + 1 /* padding */];
-SECTION_DATA extern void* const __vt__20JSUMemoryInputStream[9 + 1 /* padding */];
-SECTION_SBSS extern u8 data_80450B40[4];
-SECTION_SBSS extern u8 data_80450B80[4];
+extern "C" extern void* __vt__10JSUIosBase[3];
+extern "C" extern void* __vt__20JSURandomInputStream[9];
+extern "C" extern void* __vt__14JSUInputStream[6 + 1 /* padding */];
+extern "C" extern void* __vt__20JSUMemoryInputStream[9 + 1 /* padding */];
+extern "C" extern u8 data_80450B40[4];
+extern "C" extern u8 data_80450B80[4];
 
 // 
 // Declarations:
 // 
 
-/* 802BA7DC-802BA7FC 0020+00 rc=0 efc=0 .text      __ct__11Z2FxLineMgrFv                                        */
+/* 802BA7DC-802BA7FC 0020+00 rc=1 efc=1 rfr=False None .text      __ct__11Z2FxLineMgrFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +104,7 @@ asm Z2FxLineMgr::Z2FxLineMgr() {
 #pragma pop
 
 
-/* 802BA7FC-802BAC28 042C+00 rc=0 efc=0 .text      initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap            */
+/* 802BA7FC-802BAC28 042C+00 rc=1 efc=1 rfr=False None .text      initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +115,7 @@ asm void Z2FxLineMgr::initDataArc(JKRArchive* field_0, JKRHeap* field_1) {
 #pragma pop
 
 
-/* 802BAC28-802BAC74 004C+00 rc=0 efc=0 .text      setLineID__11Z2FxLineMgrFScbb                                */
+/* 802BAC28-802BAC74 004C+00 rc=4 efc=0 rfr=False None .text      setLineID__11Z2FxLineMgrFScbb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +126,7 @@ asm void Z2FxLineMgr::setLineID(s8 field_0, bool field_1, bool field_2) {
 #pragma pop
 
 
-/* 802BAC74-802BAE1C 01A8+00 rc=0 efc=0 .text      setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb                   */
+/* 802BAC74-802BAE1C 01A8+00 rc=1 efc=0 rfr=False None .text      setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +137,7 @@ asm void Z2FxLineMgr::setLine(Z2FxLineConfig* field_0, bool field_1, bool field_
 #pragma pop
 
 
-/* 802BAE1C-802BAE48 002C+00 rc=0 efc=0 .text      setFxForceOff__11Z2FxLineMgrFb                               */
+/* 802BAE1C-802BAE48 002C+00 rc=1 efc=1 rfr=False None .text      setFxForceOff__11Z2FxLineMgrFb                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -149,7 +148,7 @@ asm void Z2FxLineMgr::setFxForceOff(bool field_0) {
 #pragma pop
 
 
-/* 802BAE48-802BAEB8 0070+00 rc=0 efc=0 .text      setUnderWaterFx__11Z2FxLineMgrFb                             */
+/* 802BAE48-802BAEB8 0070+00 rc=1 efc=1 rfr=False None .text      setUnderWaterFx__11Z2FxLineMgrFb                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,87 +160,87 @@ asm void Z2FxLineMgr::setUnderWaterFx(bool field_0) {
 
 
 /* ############################################################################################## */
-/* 803CAB18-803CAC48 0130+00 rc=0 efc=0 .data      @3566                                                        */
-void* lit_3566[76] = {
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x88),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x54),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xD0),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xD0),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xD0),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xF8),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xF8),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xF8),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x10C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x10C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x10C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x120),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x120),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
-	(void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+/* 803CAB18-803CAC48 0130+00 rc=1 efc=0 rfr=False None .data      @3566                                                        */
+SECTION_DATA static void* lit_3566[76] = {
+	/* 0    */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x88),
+	/* 1    */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 2    */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	/* 3    */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
+	/* 4    */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 5    */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 6    */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
+	/* 7    */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 8    */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 9    */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
+	/* 10   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 11   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
+	/* 12   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
+	/* 13   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 14   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 15   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 16   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 17   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 18   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 19   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 20   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 21   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 22   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 23   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 24   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 25   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x68),
+	/* 26   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 27   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 28   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x54),
+	/* 29   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 30   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 31   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 32   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 33   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 34   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 35   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	/* 36   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	/* 37   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	/* 38   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
+	/* 39   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
+	/* 40   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
+	/* 41   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
+	/* 42   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
+	/* 43   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xB0),
+	/* 44   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xD0),
+	/* 45   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xD0),
+	/* 46   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xD0),
+	/* 47   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
+	/* 48   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
+	/* 49   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
+	/* 50   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xF8),
+	/* 51   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xF8),
+	/* 52   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xF8),
+	/* 53   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x10C),
+	/* 54   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x10C),
+	/* 55   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x10C),
+	/* 56   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 57   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 58   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 59   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 60   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 61   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x120),
+	/* 62   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x120),
+	/* 63   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 64   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 65   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0xE4),
+	/* 66   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 67   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	/* 68   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
+	/* 69   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x9C),
+	/* 70   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 71   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 72   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 73   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 74   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x134),
+	/* 75   */ (void*)(((char*)setSceneFx__11Z2FxLineMgrFl)+0x7C),
 };
 
-/* 802BAEB8-802BB00C 0154+00 rc=0 efc=0 .text      setSceneFx__11Z2FxLineMgrFl                                  */
+/* 802BAEB8-802BB00C 0154+00 rc=3 efc=1 rfr=False None .text      setSceneFx__11Z2FxLineMgrFl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

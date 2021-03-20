@@ -53,15 +53,6 @@ extern "C" void calc_c__15JPABaseParticleFP18JPAEmitterWorkData(); // 1
 extern "C" void canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData(); // 1
 extern "C" void getWidth__15JPABaseParticleCFPC14JPABaseEmitter(); // 1
 extern "C" void getHeight__15JPABaseParticleCFPC14JPABaseEmitter(); // 1
-SECTION_SDATA2 extern f32 lit_2565;
-SECTION_SDATA2 extern u8 lit_2566[4];
-SECTION_SDATA2 extern f32 lit_2567;
-SECTION_SDATA2 extern f32 lit_2568;
-SECTION_SDATA2 extern f32 lit_2569;
-SECTION_SDATA2 extern f32 lit_2570;
-SECTION_SDATA2 extern f64 lit_2572;
-SECTION_SDATA2 extern f64 lit_2574;
-SECTION_SDATA2 extern f32 lit_3010[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -90,14 +81,14 @@ extern "C" void _savegpr_26(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_DATA extern void* const __vt__19JPAParticleCallBack[5];
-SECTION_SDATA extern u32 __float_epsilon;
+extern "C" extern void* __vt__19JPAParticleCallBack[5];
+extern "C" extern u32 __float_epsilon;
 
 // 
 // Declarations:
 // 
 
-/* 8027EFA4-8027EFEC 0048+00 rc=0 efc=0 .text      __dt__19JPAParticleCallBackFv                                */
+/* 8027EFA4-8027EFEC 0048+00 rc=11 efc=11 rfr=False None .text      __dt__19JPAParticleCallBackFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,33 +100,33 @@ asm JPAParticleCallBack::~JPAParticleCallBack() {
 
 
 /* ############################################################################################## */
-/* 80455388-8045538C 0004+00 rc=0 efc=0 .sdata2    @2565                                                        */
-f32 lit_2565 = 1.0f;
+/* 80455388-8045538C 0004+00 rc=2 efc=0 rfr=False None .sdata2    @2565                                                        */
+SECTION_SDATA2 static f32 lit_2565 = 1.0f;
 
-/* 8045538C-80455390 0004+00 rc=0 efc=0 .sdata2    @2566                                                        */
-u8 lit_2566[4] = {
+/* 8045538C-80455390 0004+00 rc=4 efc=0 rfr=False None .sdata2    @2566                                                        */
+SECTION_SDATA2 static u8 lit_2566[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455390-80455394 0004+00 rc=0 efc=0 .sdata2    @2567                                                        */
-f32 lit_2567 = 32.0f;
+/* 80455390-80455394 0004+00 rc=2 efc=0 rfr=False None .sdata2    @2567                                                        */
+SECTION_SDATA2 static f32 lit_2567 = 32.0f;
 
-/* 80455394-80455398 0004+00 rc=0 efc=0 .sdata2    @2568                                                        */
-f32 lit_2568 = 0.5f;
+/* 80455394-80455398 0004+00 rc=2 efc=0 rfr=False None .sdata2    @2568                                                        */
+SECTION_SDATA2 static f32 lit_2568 = 0.5f;
 
-/* 80455398-8045539C 0004+00 rc=0 efc=0 .sdata2    @2569                                                        */
-f32 lit_2569 = 3.0f;
+/* 80455398-8045539C 0004+00 rc=2 efc=0 rfr=False None .sdata2    @2569                                                        */
+SECTION_SDATA2 static f32 lit_2569 = 3.0f;
 
-/* 8045539C-804553A0 0004+00 rc=0 efc=0 .sdata2    @2570                                                        */
-f32 lit_2570 = 32768.0f;
+/* 8045539C-804553A0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2570                                                        */
+SECTION_SDATA2 static f32 lit_2570 = 32768.0f;
 
-/* 804553A0-804553A8 0008+00 rc=0 efc=0 .sdata2    @2572                                                        */
-f64 lit_2572 = 4503601774854144.0 /* cast s32 to float */;
+/* 804553A0-804553A8 0008+00 rc=4 efc=0 rfr=False None .sdata2    @2572                                                        */
+SECTION_SDATA2 static f64 lit_2572 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 804553A8-804553B0 0008+00 rc=0 efc=0 .sdata2    @2574                                                        */
-f64 lit_2574 = 4503599627370496.0 /* cast u32 to float */;
+/* 804553A8-804553B0 0008+00 rc=2 efc=0 rfr=False None .sdata2    @2574                                                        */
+SECTION_SDATA2 static f64 lit_2574 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 8027EFEC-8027F8C8 08DC+00 rc=0 efc=0 .text      init_p__15JPABaseParticleFP18JPAEmitterWorkData              */
+/* 8027EFEC-8027F8C8 08DC+00 rc=1 efc=1 rfr=False None .text      init_p__15JPABaseParticleFP18JPAEmitterWorkData              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,7 +137,7 @@ asm void JPABaseParticle::init_p(JPAEmitterWorkData* field_0) {
 #pragma pop
 
 
-/* 8027F8C8-8027FFD0 0708+00 rc=0 efc=0 .text      init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027F8C8-8027FFD0 0708+00 rc=1 efc=1 rfr=False None .text      init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +148,7 @@ asm void JPABaseParticle::init_c(JPAEmitterWorkData* field_0, JPABaseParticle* f
 #pragma pop
 
 
-/* 8027FFD0-80280260 0290+00 rc=0 efc=0 .text      calc_p__15JPABaseParticleFP18JPAEmitterWorkData              */
+/* 8027FFD0-80280260 0290+00 rc=1 efc=1 rfr=False None .text      calc_p__15JPABaseParticleFP18JPAEmitterWorkData              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +159,7 @@ asm void JPABaseParticle::calc_p(JPAEmitterWorkData* field_0) {
 #pragma pop
 
 
-/* 80280260-802804C8 0268+00 rc=0 efc=0 .text      calc_c__15JPABaseParticleFP18JPAEmitterWorkData              */
+/* 80280260-802804C8 0268+00 rc=1 efc=1 rfr=False None .text      calc_c__15JPABaseParticleFP18JPAEmitterWorkData              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,7 +170,7 @@ asm void JPABaseParticle::calc_c(JPAEmitterWorkData* field_0) {
 #pragma pop
 
 
-/* 802804C8-80280548 0080+00 rc=0 efc=0 .text      canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData      */
+/* 802804C8-80280548 0080+00 rc=1 efc=0 rfr=False None .text      canCreateChild__15JPABaseParticleFP18JPAEmitterWorkData      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,14 +182,14 @@ asm void JPABaseParticle::canCreateChild(JPAEmitterWorkData* field_0) {
 
 
 /* ############################################################################################## */
-/* 804553B0-804553B8 0004+04 rc=0 efc=0 .sdata2    @3010                                                        */
-f32 lit_3010[1 + 1 /* padding */] = {
+/* 804553B0-804553B8 0004+04 rc=2 efc=0 rfr=False None .sdata2    @3010                                                        */
+SECTION_SDATA2 static f32 lit_3010[1 + 1 /* padding */] = {
 	2.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80280548-80280568 0020+00 rc=0 efc=0 .text      getWidth__15JPABaseParticleCFPC14JPABaseEmitter              */
+/* 80280548-80280568 0020+00 rc=3 efc=3 rfr=False None .text      getWidth__15JPABaseParticleCFPC14JPABaseEmitter              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +200,7 @@ asm void JPABaseParticle::getWidth(JPABaseEmitter const* field_0) const {
 #pragma pop
 
 
-/* 80280568-80280588 0020+00 rc=0 efc=0 .text      getHeight__15JPABaseParticleCFPC14JPABaseEmitter             */
+/* 80280568-80280588 0020+00 rc=3 efc=3 rfr=False None .text      getHeight__15JPABaseParticleCFPC14JPABaseEmitter             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

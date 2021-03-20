@@ -37,7 +37,6 @@ extern "C" void __ct__13cBgS_ShdwDrawFv(); // 1
 extern "C" void __dt__13cBgS_ShdwDrawFv(); // 1
 extern "C" void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz(); // 1
 extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i(); // 1
-SECTION_DATA extern void* const __vt__13cBgS_ShdwDraw[3 + 1 /* padding */];
 
 // 
 // External References:
@@ -49,23 +48,23 @@ extern "C" void __ct__8cBgS_ChkFv(); // 1
 extern "C" void __dt__8cBgS_ChkFv(); // 1
 extern "C" void Set__8cM3dGAabFPC4cXyzPC4cXyz(); // 1
 extern "C" void __dl__FPv(); // 1
-SECTION_DATA extern void* const __vt__8cM3dGAab[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C3FC0-803C3FD0 000C+04 rc=0 efc=0 .data      __vt__13cBgS_ShdwDraw                                        */
-void* const __vt__13cBgS_ShdwDraw[3 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__13cBgS_ShdwDrawFv,
+/* 803C3FC0-803C3FD0 000C+04 rc=2 efc=0 rfr=False None .data      __vt__13cBgS_ShdwDraw                                        */
+SECTION_DATA static void* __vt__13cBgS_ShdwDraw[3 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__13cBgS_ShdwDrawFv,
 	/* padding */
 	NULL,
 };
 
-/* 80267F88-80267FD0 0048+00 rc=0 efc=0 .text      __ct__13cBgS_ShdwDrawFv                                      */
+/* 80267F88-80267FD0 0048+00 rc=1 efc=1 rfr=False None .text      __ct__13cBgS_ShdwDrawFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +75,7 @@ asm cBgS_ShdwDraw::cBgS_ShdwDraw() {
 #pragma pop
 
 
-/* 80267FD0-80268048 0078+00 rc=0 efc=0 .text      __dt__13cBgS_ShdwDrawFv                                      */
+/* 80267FD0-80268048 0078+00 rc=3 efc=2 rfr=False None .text      __dt__13cBgS_ShdwDrawFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +86,7 @@ asm cBgS_ShdwDraw::~cBgS_ShdwDraw() {
 #pragma pop
 
 
-/* 80268048-8026806C 0024+00 rc=0 efc=0 .text      Set__13cBgS_ShdwDrawFR4cXyzR4cXyz                            */
+/* 80268048-8026806C 0024+00 rc=1 efc=1 rfr=False None .text      Set__13cBgS_ShdwDrawFR4cXyzR4cXyz                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +97,7 @@ asm void cBgS_ShdwDraw::Set(cXyz& field_0, cXyz& field_1) {
 #pragma pop
 
 
-/* 8026806C-80268074 0008+00 rc=0 efc=0 .text      SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i */
+/* 8026806C-80268074 0008+00 rc=1 efc=1 rfr=False None .text      SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

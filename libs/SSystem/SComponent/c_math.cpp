@@ -10,7 +10,7 @@
 // 
 
 void cM_rad2s(f32); // 2
-void U_GetAtanTable(f32, f32); // 2
+static void U_GetAtanTable(f32, f32); // 2
 void cM_atan2s(f32, f32); // 2
 void cM_atan2f(f32, f32); // 2
 void cM_initRnd(int, int, int); // 2
@@ -18,12 +18,12 @@ void cM_rnd(); // 2
 void cM_rndF(f32); // 2
 void cM_rndFX(f32); // 2
 void cM_initRnd2(int, int, int); // 2
-void cM_rnd2(); // 2
+static void cM_rnd2(); // 2
 void cM_rndF2(f32); // 2
 void cM_rndFX2(f32); // 2
 
 extern "C" void cM_rad2s__Ff(); // 1
-extern "C" void U_GetAtanTable__Fff(); // 1
+extern "C" static void U_GetAtanTable__Fff(); // 1
 extern "C" void cM_atan2s__Fff(); // 1
 extern "C" void cM_atan2f__Fff(); // 1
 extern "C" void cM_initRnd__Fiii(); // 1
@@ -31,28 +31,9 @@ extern "C" void cM_rnd__Fv(); // 1
 extern "C" void cM_rndF__Ff(); // 1
 extern "C" void cM_rndFX__Ff(); // 1
 extern "C" void cM_initRnd2__Fiii(); // 1
-extern "C" void cM_rnd2__Fv(); // 1
+extern "C" static void cM_rnd2__Fv(); // 1
 extern "C" void cM_rndF2__Ff(); // 1
 extern "C" void cM_rndFX2__Ff(); // 1
-SECTION_DATA extern u8 atntable[2050 + 6 /* padding */];
-SECTION_SBSS extern u8 data_80451168[4];
-SECTION_SBSS extern u8 data_8045116C[4];
-SECTION_SBSS extern u8 data_80451170[4];
-SECTION_SBSS extern u8 data_80451174[4];
-SECTION_SBSS extern u8 data_80451178[4];
-SECTION_SBSS extern u8 data_8045117C[4];
-SECTION_SDATA2 extern f64 c_math__lit_2201;
-SECTION_SDATA2 extern f32 c_math__lit_2215;
-SECTION_SDATA2 extern f32 lit_2232;
-SECTION_SDATA2 extern u8 c_math__lit_2277[4];
-SECTION_SDATA2 extern f32 lit_2282;
-SECTION_SDATA2 extern f64 lit_2284;
-SECTION_SDATA2 extern f32 lit_2296;
-SECTION_SDATA2 extern f32 lit_2297;
-SECTION_SDATA2 extern f32 lit_2298[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 c_math__lit_2299;
-SECTION_SDATA2 extern f32 c_math__lit_2311;
-SECTION_SDATA2 extern f32 c_math__lit_2312;
 
 // 
 // External References:
@@ -61,20 +42,20 @@ SECTION_SDATA2 extern f32 c_math__lit_2312;
 extern "C" void fmod(); // 1
 
 extern "C" void fmod(); // 1
-SECTION_SBSS extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 804550A8-804550B0 0008+00 rc=0 efc=0 .sdata2    @2201                                                        */
-f64 c_math__lit_2201 = 6.2831854820251465;
+/* 804550A8-804550B0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @2201                                                        */
+SECTION_SDATA2 static f64 c_math__lit_2201 = 6.2831854820251465;
 
-/* 804550B0-804550B4 0004+00 rc=0 efc=0 .sdata2    @2215                                                        */
-f32 c_math__lit_2215 = 10430.3779296875f;
+/* 804550B0-804550B4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2215                                                        */
+SECTION_SDATA2 static f32 c_math__lit_2215 = 10430.3779296875f;
 
-/* 802675E4-80267640 005C+00 rc=0 efc=0 .text      cM_rad2s__Ff                                                 */
+/* 802675E4-80267640 005C+00 rc=23 efc=23 rfr=False None .text      cM_rad2s__Ff                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,8 +67,8 @@ asm void cM_rad2s(f32 field_0) {
 
 
 /* ############################################################################################## */
-/* 803C3778-803C3F80 0802+06 rc=0 efc=0 .data      atntable                                                     */
-u8 atntable[2050 + 6 /* padding */] = {
+/* 803C3778-803C3F80 0802+06 rc=1 efc=0 rfr=False None .data      atntable                                                     */
+SECTION_DATA static u8 atntable[2050 + 6 /* padding */] = {
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x14, 0x00, 0x1F, 0x00, 0x29, 0x00, 0x33, 0x00, 0x3D, 0x00, 0x47,
 	0x00, 0x51, 0x00, 0x5C, 0x00, 0x66, 0x00, 0x70, 0x00, 0x7A, 0x00, 0x84, 0x00, 0x8F, 0x00, 0x99,
 	0x00, 0xA3, 0x00, 0xAD, 0x00, 0xB7, 0x00, 0xC2, 0x00, 0xCC, 0x00, 0xD6, 0x00, 0xE0, 0x00, 0xEA,
@@ -221,14 +202,14 @@ u8 atntable[2050 + 6 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804550B4-804550B8 0004+00 rc=0 efc=0 .sdata2    @2232                                                        */
-f32 lit_2232 = 1024.0f;
+/* 804550B4-804550B8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2232                                                        */
+SECTION_SDATA2 static f32 lit_2232 = 1024.0f;
 
-/* 80267640-80267674 0034+00 rc=0 efc=0 .text      U_GetAtanTable__Fff                                          */
+/* 80267640-80267674 0034+00 rc=1 efc=0 rfr=False None .text      U_GetAtanTable__Fff                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void U_GetAtanTable(f32 field_0, f32 field_1) {
+asm static void U_GetAtanTable(f32 field_0, f32 field_1) {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/U_GetAtanTable__Fff.s"
 }
@@ -236,12 +217,12 @@ asm void U_GetAtanTable(f32 field_0, f32 field_1) {
 
 
 /* ############################################################################################## */
-/* 804550B8-804550BC 0004+00 rc=0 efc=0 .sdata2    @2277                                                        */
-u8 c_math__lit_2277[4] = {
+/* 804550B8-804550BC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2277                                                        */
+SECTION_SDATA2 static u8 c_math__lit_2277[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80267674-80267814 01A0+00 rc=0 efc=0 .text      cM_atan2s__Fff                                               */
+/* 80267674-80267814 01A0+00 rc=83 efc=82 rfr=False None .text      cM_atan2s__Fff                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -253,13 +234,13 @@ asm void cM_atan2s(f32 field_0, f32 field_1) {
 
 
 /* ############################################################################################## */
-/* 804550BC-804550C0 0004+00 rc=0 efc=0 .sdata2    @2282                                                        */
-f32 lit_2282 = 9.58738019107841e-05f;
+/* 804550BC-804550C0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2282                                                        */
+SECTION_SDATA2 static f32 lit_2282 = 9.58738019107841e-05f;
 
-/* 804550C0-804550C8 0008+00 rc=0 efc=0 .sdata2    @2284                                                        */
-f64 lit_2284 = 4503601774854144.0 /* cast s32 to float */;
+/* 804550C0-804550C8 0008+00 rc=3 efc=0 rfr=False None .sdata2    @2284                                                        */
+SECTION_SDATA2 static f64 lit_2284 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80267814-8026785C 0048+00 rc=0 efc=0 .text      cM_atan2f__Fff                                               */
+/* 80267814-8026785C 0048+00 rc=4 efc=4 rfr=False None .text      cM_atan2f__Fff                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -271,16 +252,16 @@ asm void cM_atan2f(f32 field_0, f32 field_1) {
 
 
 /* ############################################################################################## */
-/* 80451168-8045116C 0004+00 rc=0 efc=0 .sbss      r0                                                           */
-u8 data_80451168[4];
+/* 80451168-8045116C 0004+00 rc=2 efc=0 rfr=False None .sbss      r0                                                           */
+static u8 data_80451168[4];
 
-/* 8045116C-80451170 0004+00 rc=0 efc=0 .sbss      r1                                                           */
-u8 data_8045116C[4];
+/* 8045116C-80451170 0004+00 rc=2 efc=0 rfr=False None .sbss      r1                                                           */
+static u8 data_8045116C[4];
 
-/* 80451170-80451174 0004+00 rc=0 efc=0 .sbss      r2                                                           */
-u8 data_80451170[4];
+/* 80451170-80451174 0004+00 rc=2 efc=0 rfr=False None .sbss      r2                                                           */
+static u8 data_80451170[4];
 
-/* 8026785C-8026786C 0010+00 rc=0 efc=0 .text      cM_initRnd__Fiii                                             */
+/* 8026785C-8026786C 0010+00 rc=1 efc=1 rfr=False None .text      cM_initRnd__Fiii                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,23 +273,23 @@ asm void cM_initRnd(int field_0, int field_1, int field_2) {
 
 
 /* ############################################################################################## */
-/* 804550C8-804550CC 0004+00 rc=0 efc=0 .sdata2    @2296                                                        */
-f32 lit_2296 = 30323.0f;
+/* 804550C8-804550CC 0004+00 rc=2 efc=0 rfr=False None .sdata2    @2296                                                        */
+SECTION_SDATA2 static f32 lit_2296 = 30323.0f;
 
-/* 804550CC-804550D0 0004+00 rc=0 efc=0 .sdata2    @2297                                                        */
-f32 lit_2297 = 30269.0f;
+/* 804550CC-804550D0 0004+00 rc=2 efc=0 rfr=False None .sdata2    @2297                                                        */
+SECTION_SDATA2 static f32 lit_2297 = 30269.0f;
 
-/* 804550D0-804550D8 0004+04 rc=0 efc=0 .sdata2    @2298                                                        */
-f32 lit_2298[1 + 1 /* padding */] = {
+/* 804550D0-804550D8 0004+04 rc=2 efc=0 rfr=False None .sdata2    @2298                                                        */
+SECTION_SDATA2 static f32 lit_2298[1 + 1 /* padding */] = {
 	30307.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 804550D8-804550E0 0008+00 rc=0 efc=0 .sdata2    @2299                                                        */
-f64 c_math__lit_2299 = 1.0;
+/* 804550D8-804550E0 0008+00 rc=2 efc=0 rfr=False None .sdata2    @2299                                                        */
+SECTION_SDATA2 static f64 c_math__lit_2299 = 1.0;
 
-/* 8026786C-80267954 00E8+00 rc=0 efc=0 .text      cM_rnd__Fv                                                   */
+/* 8026786C-80267954 00E8+00 rc=17 efc=15 rfr=False None .text      cM_rnd__Fv                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -319,7 +300,7 @@ asm void cM_rnd() {
 #pragma pop
 
 
-/* 80267954-8026798C 0038+00 rc=0 efc=0 .text      cM_rndF__Ff                                                  */
+/* 80267954-8026798C 0038+00 rc=34 efc=34 rfr=False None .text      cM_rndF__Ff                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -331,13 +312,13 @@ asm void cM_rndF(f32 field_0) {
 
 
 /* ############################################################################################## */
-/* 804550E0-804550E4 0004+00 rc=0 efc=0 .sdata2    @2311                                                        */
-f32 c_math__lit_2311 = 2.0f;
+/* 804550E0-804550E4 0004+00 rc=2 efc=0 rfr=False None .sdata2    @2311                                                        */
+SECTION_SDATA2 static f32 c_math__lit_2311 = 2.0f;
 
-/* 804550E4-804550E8 0004+00 rc=0 efc=0 .sdata2    @2312                                                        */
-f32 c_math__lit_2312 = 0.5f;
+/* 804550E4-804550E8 0004+00 rc=2 efc=0 rfr=False None .sdata2    @2312                                                        */
+SECTION_SDATA2 static f32 c_math__lit_2312 = 0.5f;
 
-/* 8026798C-802679D4 0048+00 rc=0 efc=0 .text      cM_rndFX__Ff                                                 */
+/* 8026798C-802679D4 0048+00 rc=24 efc=24 rfr=False None .text      cM_rndFX__Ff                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -349,16 +330,16 @@ asm void cM_rndFX(f32 field_0) {
 
 
 /* ############################################################################################## */
-/* 80451174-80451178 0004+00 rc=0 efc=0 .sbss      r02                                                          */
-u8 data_80451174[4];
+/* 80451174-80451178 0004+00 rc=2 efc=0 rfr=False None .sbss      r02                                                          */
+static u8 data_80451174[4];
 
-/* 80451178-8045117C 0004+00 rc=0 efc=0 .sbss      r12                                                          */
-u8 data_80451178[4];
+/* 80451178-8045117C 0004+00 rc=2 efc=0 rfr=False None .sbss      r12                                                          */
+static u8 data_80451178[4];
 
-/* 8045117C-80451180 0004+00 rc=0 efc=0 .sbss      r22                                                          */
-u8 data_8045117C[4];
+/* 8045117C-80451180 0004+00 rc=2 efc=0 rfr=False None .sbss      r22                                                          */
+static u8 data_8045117C[4];
 
-/* 802679D4-802679E4 0010+00 rc=0 efc=0 .text      cM_initRnd2__Fiii                                            */
+/* 802679D4-802679E4 0010+00 rc=0 efc=0 rfr=False None .text      cM_initRnd2__Fiii                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -369,18 +350,18 @@ asm void cM_initRnd2(int field_0, int field_1, int field_2) {
 #pragma pop
 
 
-/* 802679E4-80267ACC 00E8+00 rc=0 efc=0 .text      cM_rnd2__Fv                                                  */
+/* 802679E4-80267ACC 00E8+00 rc=2 efc=0 rfr=False None .text      cM_rnd2__Fv                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cM_rnd2() {
+asm static void cM_rnd2() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_math/cM_rnd2__Fv.s"
 }
 #pragma pop
 
 
-/* 80267ACC-80267B04 0038+00 rc=0 efc=0 .text      cM_rndF2__Ff                                                 */
+/* 80267ACC-80267B04 0038+00 rc=0 efc=0 rfr=False None .text      cM_rndF2__Ff                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -391,7 +372,7 @@ asm void cM_rndF2(f32 field_0) {
 #pragma pop
 
 
-/* 80267B04-80267B4C 0048+00 rc=0 efc=0 .text      cM_rndFX2__Ff                                                */
+/* 80267B04-80267B4C 0048+00 rc=0 efc=0 rfr=False None .text      cM_rndFX2__Ff                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -16,42 +16,41 @@ struct create_tag_class {
 // Forward References:
 // 
 
-void fopDwIt_GetTag(); // 2
+static void fopDwIt_GetTag(); // 2
 void fopDwIt_Begin(); // 2
 void fopDwIt_Next(create_tag_class*); // 2
 
-extern "C" void fopDwIt_GetTag__Fv(); // 1
+extern "C" static void fopDwIt_GetTag__Fv(); // 1
 extern "C" void fopDwIt_Begin__Fv(); // 1
 extern "C" void fopDwIt_Next__FP16create_tag_class(); // 1
-SECTION_SBSS extern u8 l_fopDwTg_id[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
 
-SECTION_SDATA extern u8 g_fopDwTg_Queue[8];
+extern "C" extern u8 g_fopDwTg_Queue[8];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80450CF8-80450D00 0004+04 rc=0 efc=0 .sbss      l_fopDwTg_id                                                 */
-u8 l_fopDwTg_id[4 + 4 /* padding */];
+/* 80450CF8-80450D00 0004+04 rc=2 efc=0 rfr=False None .sbss      l_fopDwTg_id                                                 */
+static u8 l_fopDwTg_id[4 + 4 /* padding */];
 
-/* 80020400-80020444 0044+00 rc=0 efc=0 .text      fopDwIt_GetTag__Fv                                           */
+/* 80020400-80020444 0044+00 rc=2 efc=0 rfr=False None .text      fopDwIt_GetTag__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopDwIt_GetTag() {
+asm static void fopDwIt_GetTag() {
 	nofralloc
 #include "asm/f_op/f_op_draw_iter/fopDwIt_GetTag__Fv.s"
 }
 #pragma pop
 
 
-/* 80020444-80020480 003C+00 rc=0 efc=0 .text      fopDwIt_Begin__Fv                                            */
+/* 80020444-80020480 003C+00 rc=1 efc=1 rfr=False None .text      fopDwIt_Begin__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -62,7 +61,7 @@ asm void fopDwIt_Begin() {
 #pragma pop
 
 
-/* 80020480-800204AC 002C+00 rc=0 efc=0 .text      fopDwIt_Next__FP16create_tag_class                           */
+/* 80020480-800204AC 002C+00 rc=1 efc=1 rfr=False None .text      fopDwIt_Next__FP16create_tag_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

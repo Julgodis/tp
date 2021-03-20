@@ -9,15 +9,15 @@
 // Forward References:
 // 
 
-extern "C" void __VIRetraceHandler(); // 1
+extern "C" static void __VIRetraceHandler(); // 1
 extern "C" void VISetPreRetraceCallback(); // 1
 extern "C" void VISetPostRetraceCallback(); // 1
-extern "C" void getTiming(); // 1
-extern "C" void __VIInit(); // 1
+extern "C" static void getTiming(); // 1
+extern "C" static void __VIInit(); // 1
 extern "C" void VIInit(); // 1
 extern "C" void VIWaitForRetrace(); // 1
-extern "C" void setFbbRegs(); // 1
-extern "C" void setVerticalRegs(); // 1
+extern "C" static void setFbbRegs(); // 1
+extern "C" static void setVerticalRegs(); // 1
 extern "C" void VIConfigure(); // 1
 extern "C" void VIFlush(); // 1
 extern "C" void VISetNextFrameBuffer(); // 1
@@ -25,24 +25,24 @@ extern "C" void VIGetNextFrameBuffer(); // 1
 extern "C" void VIGetCurrentFrameBuffer(); // 1
 extern "C" void VISetBlack(); // 1
 extern "C" void VIGetRetraceCount(); // 1
-extern "C" void GetCurrentDisplayPosition(); // 1
-extern "C" void getCurrentFieldEvenOdd(); // 1
+extern "C" static void GetCurrentDisplayPosition(); // 1
+extern "C" static void getCurrentFieldEvenOdd(); // 1
 extern "C" void VIGetNextField(); // 1
 extern "C" void VIGetCurrentLine(); // 1
 extern "C" void VIGetTvFormat(); // 1
 extern "C" void VIGetDTVStatus(); // 1
-extern "C" void __VIDisplayPositionToXY(); // 1
-extern "C" void __VIGetCurrentPosition(); // 1
+extern "C" static void __VIDisplayPositionToXY(); // 1
+extern "C" static void __VIGetCurrentPosition(); // 1
 
-extern "C" void __VIRetraceHandler(); // 1
+extern "C" static void __VIRetraceHandler(); // 1
 extern "C" void VISetPreRetraceCallback(); // 1
 extern "C" void VISetPostRetraceCallback(); // 1
-extern "C" void getTiming(); // 1
-extern "C" void __VIInit(); // 1
+extern "C" static void getTiming(); // 1
+extern "C" static void __VIInit(); // 1
 extern "C" void VIInit(); // 1
 extern "C" void VIWaitForRetrace(); // 1
-extern "C" void setFbbRegs(); // 1
-extern "C" void setVerticalRegs(); // 1
+extern "C" static void setFbbRegs(); // 1
+extern "C" static void setVerticalRegs(); // 1
 extern "C" void VIConfigure(); // 1
 extern "C" void VIFlush(); // 1
 extern "C" void VISetNextFrameBuffer(); // 1
@@ -50,53 +50,25 @@ extern "C" void VIGetNextFrameBuffer(); // 1
 extern "C" void VIGetCurrentFrameBuffer(); // 1
 extern "C" void VISetBlack(); // 1
 extern "C" void VIGetRetraceCount(); // 1
-extern "C" void GetCurrentDisplayPosition(); // 1
-extern "C" void getCurrentFieldEvenOdd(); // 1
+extern "C" static void GetCurrentDisplayPosition(); // 1
+extern "C" static void getCurrentFieldEvenOdd(); // 1
 extern "C" void VIGetNextField(); // 1
 extern "C" void VIGetCurrentLine(); // 1
 extern "C" void VIGetTvFormat(); // 1
 extern "C" void VIGetDTVStatus(); // 1
-extern "C" void __VIDisplayPositionToXY(); // 1
-extern "C" void __VIGetCurrentPosition(); // 1
-SECTION_DATA extern u8 vi__lit_1[68];
-SECTION_DATA extern u8 timing[380];
-SECTION_DATA extern u8 taps[50 + 2 /* padding */];
-SECTION_DATA extern void* vi__lit_101[31];
-SECTION_DATA extern u8 vi__lit_355[41 + 3 /* padding */];
-SECTION_DATA extern u8 vi__lit_356[41 + 3 /* padding */];
-SECTION_DATA extern u8 vi__lit_357[41 + 3 /* padding */];
-SECTION_DATA extern u8 vi__lit_358[41 + 3 /* padding */];
-SECTION_DATA extern u8 vi__lit_359[41 + 3 /* padding */];
-SECTION_DATA extern u8 vi__lit_360[41 + 3 /* padding */];
-SECTION_DATA extern u8 vi__lit_538[75 + 1 /* padding */];
-SECTION_DATA extern void* vi__lit_740[8 + 1 /* padding */];
-SECTION_BSS extern u8 regs[118 + 2 /* padding */];
-SECTION_BSS extern u8 shdwRegs[118 + 2 /* padding */];
-SECTION_BSS extern u8 HorVer[88];
-SECTION_SDATA extern void* __VIVersion;
-SECTION_SDATA extern u8 vi__lit_537[5 + 7 /* padding */];
-SECTION_SBSS extern u8 IsInitialized[4];
-SECTION_SBSS extern u8 retraceCount[4];
-SECTION_SBSS extern u8 flushFlag[4];
-SECTION_SBSS extern u8 retraceQueue[8];
-SECTION_SBSS extern u8 PreCB[4];
-SECTION_SBSS extern u8 PostCB[4];
-SECTION_SBSS extern u8 PositionCallback[4];
-SECTION_SBSS extern u8 encoderType[4];
-extern u8 struct_80451804[4];
-SECTION_SBSS extern u8 changeMode[4 + 4 /* padding */];
-SECTION_SBSS extern u8 changed[4];
-SECTION_SBSS extern u8 data_80451814[4];
-SECTION_SBSS extern u8 shdwChangeMode[4 + 4 /* padding */];
-SECTION_SBSS extern u8 shdwChanged[4];
-SECTION_SBSS extern u8 data_80451824[4];
-SECTION_SBSS extern u8 CurrTiming[4];
-SECTION_SBSS extern u8 CurrTvMode[4];
-SECTION_SBSS extern u8 NextBufAddr[4];
-SECTION_SBSS extern u8 CurrBufAddr[4];
-SECTION_SBSS extern u8 FBSet[4];
-SECTION_SBSS extern u8 timingExtra[4];
-SECTION_SBSS extern u8 data_80451840[4 + 4 /* padding */];
+extern "C" static void __VIDisplayPositionToXY(); // 1
+extern "C" static void __VIGetCurrentPosition(); // 1
+extern "C" extern u8 timing[380];
+extern "C" extern u8 taps[50 + 2 /* padding */];
+extern "C" extern u8 vi__lit_355[41 + 3 /* padding */];
+extern "C" extern u8 vi__lit_356[41 + 3 /* padding */];
+extern "C" extern u8 vi__lit_357[41 + 3 /* padding */];
+extern "C" extern u8 vi__lit_358[41 + 3 /* padding */];
+extern "C" extern u8 vi__lit_359[41 + 3 /* padding */];
+extern "C" extern u8 vi__lit_360[41 + 3 /* padding */];
+extern "C" extern u8 vi__lit_538[75 + 1 /* padding */];
+extern "C" extern u8 shdwRegs[118 + 2 /* padding */];
+extern "C" extern u8 pad_80450A19[4];
 
 // 
 // External References:
@@ -143,78 +115,78 @@ extern "C" void __shr2u(); // 1
 // 
 
 /* ############################################################################################## */
-/* 8044CA28-8044CAA0 0076+02 rc=0 efc=0 .bss       regs                                                         */
-u8 regs[118 + 2 /* padding */];
+/* 8044CA28-8044CAA0 0076+02 rc=8 efc=0 rfr=False None .bss       regs                                                         */
+static u8 regs[118 + 2 /* padding */];
 
-/* 804517E0-804517E4 0004+00 rc=0 efc=0 .sbss      IsInitialized                                                */
-u8 IsInitialized[4];
+/* 804517E0-804517E4 0004+00 rc=1 efc=0 rfr=False None .sbss      IsInitialized                                                */
+static u8 IsInitialized[4];
 
-/* 804517E4-804517E8 0004+00 rc=0 efc=0 .sbss      retraceCount                                                 */
-u8 retraceCount[4];
+/* 804517E4-804517E8 0004+00 rc=4 efc=0 rfr=False None .sbss      retraceCount                                                 */
+static u8 retraceCount[4];
 
-/* 804517E8-804517EC 0004+00 rc=0 efc=0 .sbss      flushFlag                                                    */
-u8 flushFlag[4];
+/* 804517E8-804517EC 0004+00 rc=3 efc=0 rfr=False None .sbss      flushFlag                                                    */
+static u8 flushFlag[4];
 
-/* 804517EC-804517F4 0008+00 rc=0 efc=0 .sbss      retraceQueue                                                 */
-u8 retraceQueue[8];
+/* 804517EC-804517F4 0008+00 rc=3 efc=0 rfr=False None .sbss      retraceQueue                                                 */
+static u8 retraceQueue[8];
 
-/* 804517F4-804517F8 0004+00 rc=0 efc=0 .sbss      PreCB                                                        */
-u8 PreCB[4];
+/* 804517F4-804517F8 0004+00 rc=3 efc=0 rfr=False None .sbss      PreCB                                                        */
+static u8 PreCB[4];
 
-/* 804517F8-804517FC 0004+00 rc=0 efc=0 .sbss      PostCB                                                       */
-u8 PostCB[4];
+/* 804517F8-804517FC 0004+00 rc=3 efc=0 rfr=False None .sbss      PostCB                                                       */
+static u8 PostCB[4];
 
-/* 804517FC-80451800 0004+00 rc=0 efc=0 .sbss      PositionCallback                                             */
-u8 PositionCallback[4];
+/* 804517FC-80451800 0004+00 rc=1 efc=0 rfr=False None .sbss      PositionCallback                                             */
+static u8 PositionCallback[4];
 
-/* 80451800-80451804 0004+00 rc=0 efc=0 .sbss      encoderType                                                  */
-u8 encoderType[4];
+/* 80451800-80451804 0004+00 rc=2 efc=0 rfr=False None .sbss      encoderType                                                  */
+static u8 encoderType[4];
 
-/* 80451804-80451808 0004+00 rc=0 efc=0 None       None                                                         */
-u8 struct_80451804[4];
+/* 80451804-80451808 0004+00 rc=2 efc=0 rfr=False None .sbss      None                                                         */
+static u8 struct_80451804[4];
 
-/* 80451808-80451810 0004+04 rc=0 efc=0 .sbss      changeMode                                                   */
-u8 changeMode[4 + 4 /* padding */];
+/* 80451808-80451810 0004+04 rc=3 efc=0 rfr=False None .sbss      changeMode                                                   */
+static u8 changeMode[4 + 4 /* padding */];
 
-/* 80451810-80451814 0004+00 rc=0 efc=0 .sbss      changed                                                      */
-u8 changed[4];
+/* 80451810-80451814 0004+00 rc=5 efc=0 rfr=False None .sbss      changed                                                      */
+static u8 changed[4];
 
-/* 80451814-80451818 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80451814[4];
+/* 80451814-80451818 0004+00 rc=5 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_80451814[4];
 
-/* 80451818-80451820 0004+04 rc=0 efc=0 .sbss      shdwChangeMode                                               */
-u8 shdwChangeMode[4 + 4 /* padding */];
+/* 80451818-80451820 0004+04 rc=3 efc=0 rfr=False None .sbss      shdwChangeMode                                               */
+static u8 shdwChangeMode[4 + 4 /* padding */];
 
-/* 80451820-80451824 0004+00 rc=0 efc=0 .sbss      shdwChanged                                                  */
-u8 shdwChanged[4];
+/* 80451820-80451824 0004+00 rc=3 efc=0 rfr=False None .sbss      shdwChanged                                                  */
+static u8 shdwChanged[4];
 
-/* 80451824-80451828 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80451824[4];
+/* 80451824-80451828 0004+00 rc=3 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_80451824[4];
 
-/* 80451828-8045182C 0004+00 rc=0 efc=0 .sbss      CurrTiming                                                   */
-u8 CurrTiming[4];
+/* 80451828-8045182C 0004+00 rc=6 efc=0 rfr=False None .sbss      CurrTiming                                                   */
+static u8 CurrTiming[4];
 
-/* 8045182C-80451830 0004+00 rc=0 efc=0 .sbss      CurrTvMode                                                   */
-u8 CurrTvMode[4];
+/* 8045182C-80451830 0004+00 rc=3 efc=0 rfr=False None .sbss      CurrTvMode                                                   */
+static u8 CurrTvMode[4];
 
-/* 80451830-80451834 0004+00 rc=0 efc=0 .sbss      NextBufAddr                                                  */
-u8 NextBufAddr[4];
+/* 80451830-80451834 0004+00 rc=3 efc=0 rfr=False None .sbss      NextBufAddr                                                  */
+static u8 NextBufAddr[4];
 
-/* 80451834-80451838 0004+00 rc=0 efc=0 .sbss      CurrBufAddr                                                  */
-u8 CurrBufAddr[4];
+/* 80451834-80451838 0004+00 rc=2 efc=0 rfr=False None .sbss      CurrBufAddr                                                  */
+static u8 CurrBufAddr[4];
 
-/* 8034BF6C-8034C1E0 0274+00 rc=0 efc=0 .text      __VIRetraceHandler                                           */
+/* 8034BF6C-8034C1E0 0274+00 rc=1 efc=0 rfr=False None .text      __VIRetraceHandler                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __VIRetraceHandler() {
+extern "C" asm static void __VIRetraceHandler() {
 	nofralloc
 #include "asm/dolphin/vi/vi/__VIRetraceHandler.s"
 }
 #pragma pop
 
 
-/* 8034C1E0-8034C224 0044+00 rc=0 efc=0 .text      VISetPreRetraceCallback                                      */
+/* 8034C1E0-8034C224 0044+00 rc=4 efc=4 rfr=False None .text      VISetPreRetraceCallback                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +197,7 @@ extern "C" asm void VISetPreRetraceCallback() {
 #pragma pop
 
 
-/* 8034C224-8034C268 0044+00 rc=0 efc=0 .text      VISetPostRetraceCallback                                     */
+/* 8034C224-8034C268 0044+00 rc=4 efc=4 rfr=False None .text      VISetPostRetraceCallback                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -237,8 +209,8 @@ extern "C" asm void VISetPostRetraceCallback() {
 
 
 /* ############################################################################################## */
-/* 803D1760-803D17A4 0044+00 rc=0 efc=0 .data      @1                                                           */
-u8 vi__lit_1[68] = {
+/* 803D1760-803D17A4 0044+00 rc=4 efc=0 rfr=False None .data      @1                                                           */
+SECTION_DATA static u8 vi__lit_1[68] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x56, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
 	0x64, 0x3A, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x37, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,
@@ -246,8 +218,8 @@ u8 vi__lit_1[68] = {
 	0x20, 0x3E, 0x3E, 0x00,
 };
 
-/* 803D17A4-803D1920 017C+00 rc=0 efc=0 .data      timing                                                       */
-u8 timing[380] = {
+/* 803D17A4-803D1920 017C+00 rc=0 efc=0 rfr=False None .data      timing                                                       */
+SECTION_DATA u8 timing[380] = {
 	0x06, 0x00, 0x00, 0xF0, 0x00, 0x18, 0x00, 0x19, 0x00, 0x03, 0x00, 0x02, 0x0C, 0x0D, 0x0C, 0x0D,
 	0x02, 0x08, 0x02, 0x07, 0x02, 0x08, 0x02, 0x07, 0x02, 0x0D, 0x01, 0xAD, 0x40, 0x47, 0x69, 0xA2,
 	0x01, 0x75, 0x7A, 0x00, 0x01, 0x9C, 0x06, 0x00, 0x00, 0xF0, 0x00, 0x18, 0x00, 0x18, 0x00, 0x04,
@@ -274,8 +246,8 @@ u8 timing[380] = {
 	0x01, 0xAD, 0x40, 0x47, 0x69, 0xB4, 0x01, 0x87, 0x7A, 0x00, 0x01, 0x9C,
 };
 
-/* 803D1920-803D1954 0032+02 rc=0 efc=0 .data      taps                                                         */
-u8 taps[50 + 2 /* padding */] = {
+/* 803D1920-803D1954 0032+02 rc=0 efc=0 rfr=False None .data      taps                                                         */
+SECTION_DATA u8 taps[50 + 2 /* padding */] = {
 	0x01, 0xF0, 0x01, 0xDC, 0x01, 0xAE, 0x01, 0x74, 0x01, 0x29, 0x00, 0xDB, 0x00, 0x8E, 0x00, 0x46,
 	0x00, 0x0C, 0x00, 0xE2, 0x00, 0xCB, 0x00, 0xC0, 0x00, 0xC4, 0x00, 0xCF, 0x00, 0xDE, 0x00, 0xEC,
 	0x00, 0xFC, 0x00, 0x08, 0x00, 0x0F, 0x00, 0x13, 0x00, 0x13, 0x00, 0x0F, 0x00, 0x0C, 0x00, 0x08,
@@ -284,63 +256,63 @@ u8 taps[50 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 803D1954-803D19D0 007C+00 rc=0 efc=0 .data      @101                                                         */
-void* vi__lit_101[31] = {
-	(void*)(((char*)getTiming)+0x28),
-	(void*)(((char*)getTiming)+0x30),
-	(void*)(((char*)getTiming)+0x68),
-	(void*)(((char*)getTiming)+0x70),
-	(void*)(((char*)getTiming)+0x38),
-	(void*)(((char*)getTiming)+0x40),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0x58),
-	(void*)(((char*)getTiming)+0x60),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0x78),
-	(void*)(((char*)getTiming)+0x80),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0x48),
-	(void*)(((char*)getTiming)+0x50),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0x88),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0x90),
-	(void*)(((char*)getTiming)+0xA0),
-	(void*)(((char*)getTiming)+0x98),
-	(void*)(((char*)getTiming)+0x98),
-	(void*)(((char*)getTiming)+0x98),
+/* 803D1954-803D19D0 007C+00 rc=1 efc=0 rfr=False None .data      @101                                                         */
+SECTION_DATA static void* vi__lit_101[31] = {
+	/* 0    */ (void*)(((char*)getTiming)+0x28),
+	/* 1    */ (void*)(((char*)getTiming)+0x30),
+	/* 2    */ (void*)(((char*)getTiming)+0x68),
+	/* 3    */ (void*)(((char*)getTiming)+0x70),
+	/* 4    */ (void*)(((char*)getTiming)+0x38),
+	/* 5    */ (void*)(((char*)getTiming)+0x40),
+	/* 6    */ (void*)(((char*)getTiming)+0xA0),
+	/* 7    */ (void*)(((char*)getTiming)+0xA0),
+	/* 8    */ (void*)(((char*)getTiming)+0x58),
+	/* 9    */ (void*)(((char*)getTiming)+0x60),
+	/* 10   */ (void*)(((char*)getTiming)+0xA0),
+	/* 11   */ (void*)(((char*)getTiming)+0xA0),
+	/* 12   */ (void*)(((char*)getTiming)+0xA0),
+	/* 13   */ (void*)(((char*)getTiming)+0xA0),
+	/* 14   */ (void*)(((char*)getTiming)+0xA0),
+	/* 15   */ (void*)(((char*)getTiming)+0xA0),
+	/* 16   */ (void*)(((char*)getTiming)+0x78),
+	/* 17   */ (void*)(((char*)getTiming)+0x80),
+	/* 18   */ (void*)(((char*)getTiming)+0xA0),
+	/* 19   */ (void*)(((char*)getTiming)+0xA0),
+	/* 20   */ (void*)(((char*)getTiming)+0x48),
+	/* 21   */ (void*)(((char*)getTiming)+0x50),
+	/* 22   */ (void*)(((char*)getTiming)+0xA0),
+	/* 23   */ (void*)(((char*)getTiming)+0xA0),
+	/* 24   */ (void*)(((char*)getTiming)+0x88),
+	/* 25   */ (void*)(((char*)getTiming)+0xA0),
+	/* 26   */ (void*)(((char*)getTiming)+0x90),
+	/* 27   */ (void*)(((char*)getTiming)+0xA0),
+	/* 28   */ (void*)(((char*)getTiming)+0x98),
+	/* 29   */ (void*)(((char*)getTiming)+0x98),
+	/* 30   */ (void*)(((char*)getTiming)+0x98),
 };
 
-/* 80451838-8045183C 0004+00 rc=0 efc=0 .sbss      FBSet                                                        */
-u8 FBSet[4];
+/* 80451838-8045183C 0004+00 rc=2 efc=0 rfr=False None .sbss      FBSet                                                        */
+static u8 FBSet[4];
 
-/* 8045183C-80451840 0004+00 rc=0 efc=0 .sbss      timingExtra                                                  */
-u8 timingExtra[4];
+/* 8045183C-80451840 0004+00 rc=1 efc=0 rfr=False None .sbss      timingExtra                                                  */
+static u8 timingExtra[4];
 
-/* 8034C268-8034C310 00A8+00 rc=0 efc=0 .text      getTiming                                                    */
+/* 8034C268-8034C310 00A8+00 rc=4 efc=0 rfr=False None .text      getTiming                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void getTiming() {
+extern "C" asm static void getTiming() {
 	nofralloc
 #include "asm/dolphin/vi/vi/getTiming.s"
 }
 #pragma pop
 
 
-/* 8034C310-8034C514 0204+00 rc=0 efc=0 .text      __VIInit                                                     */
+/* 8034C310-8034C514 0204+00 rc=1 efc=0 rfr=False None .text      __VIInit                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __VIInit() {
+extern "C" asm static void __VIInit() {
 	nofralloc
 #include "asm/dolphin/vi/vi/__VIInit.s"
 }
@@ -348,10 +320,10 @@ extern "C" asm void __VIInit() {
 
 
 /* ############################################################################################## */
-/* 80450A10-80450A14 0004+00 rc=0 efc=0 .sdata     __VIVersion                                                  */
-void* __VIVersion = (void*)&vi__lit_1;
+/* 80450A10-80450A14 0004+00 rc=1 efc=0 rfr=False None .sdata     __VIVersion                                                  */
+SECTION_SDATA static void* __VIVersion = (void*)&vi__lit_1;
 
-/* 8034C514-8034C9C4 04B0+00 rc=0 efc=0 .text      VIInit                                                       */
+/* 8034C514-8034C9C4 04B0+00 rc=1 efc=1 rfr=False None .text      VIInit                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -362,7 +334,7 @@ extern "C" asm void VIInit() {
 #pragma pop
 
 
-/* 8034C9C4-8034CA18 0054+00 rc=0 efc=0 .text      VIWaitForRetrace                                             */
+/* 8034C9C4-8034CA18 0054+00 rc=10 efc=10 rfr=False None .text      VIWaitForRetrace                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -373,22 +345,22 @@ extern "C" asm void VIWaitForRetrace() {
 #pragma pop
 
 
-/* 8034CA18-8034CCEC 02D4+00 rc=0 efc=0 .text      setFbbRegs                                                   */
+/* 8034CA18-8034CCEC 02D4+00 rc=2 efc=0 rfr=False None .text      setFbbRegs                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void setFbbRegs() {
+extern "C" asm static void setFbbRegs() {
 	nofralloc
 #include "asm/dolphin/vi/vi/setFbbRegs.s"
 }
 #pragma pop
 
 
-/* 8034CCEC-8034CE8C 01A0+00 rc=0 efc=0 .text      setVerticalRegs                                              */
+/* 8034CCEC-8034CE8C 01A0+00 rc=2 efc=0 rfr=False None .text      setVerticalRegs                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void setVerticalRegs() {
+extern "C" asm static void setVerticalRegs() {
 	nofralloc
 #include "asm/dolphin/vi/vi/setVerticalRegs.s"
 }
@@ -396,17 +368,17 @@ extern "C" asm void setVerticalRegs() {
 
 
 /* ############################################################################################## */
-/* 80450A14-80450A20 0005+07 rc=0 efc=0 .sdata     @537                                                         */
-u8 vi__lit_537[5 + 7 /* padding */] = {
+/* 80450A14-80450A1C 0005+03 rc=1 efc=0 rfr=False None .sdata     @537                                                         */
+SECTION_SDATA static u8 vi__lit_537[5 + 3 /* padding */] = {
 	0x76, 0x69, 0x2E, 0x63, 0x00,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00,
 };
 
-/* 80451840-80451848 0004+04 rc=0 efc=0 .sbss      message$351                                                  */
-u8 data_80451840[4 + 4 /* padding */];
+/* 80451840-80451848 0004+04 rc=1 efc=0 rfr=False None .sbss      message$351                                                  */
+static u8 data_80451840[4 + 4 /* padding */];
 
-/* 8034CE8C-8034D694 0808+00 rc=0 efc=0 .text      VIConfigure                                                  */
+/* 8034CE8C-8034D694 0808+00 rc=2 efc=2 rfr=False None .text      VIConfigure                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -417,7 +389,7 @@ extern "C" asm void VIConfigure() {
 #pragma pop
 
 
-/* 8034D694-8034D7C4 0130+00 rc=0 efc=0 .text      VIFlush                                                      */
+/* 8034D694-8034D7C4 0130+00 rc=9 efc=9 rfr=False None .text      VIFlush                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -428,7 +400,7 @@ extern "C" asm void VIFlush() {
 #pragma pop
 
 
-/* 8034D7C4-8034D830 006C+00 rc=0 efc=0 .text      VISetNextFrameBuffer                                         */
+/* 8034D7C4-8034D830 006C+00 rc=3 efc=3 rfr=False None .text      VISetNextFrameBuffer                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -439,7 +411,7 @@ extern "C" asm void VISetNextFrameBuffer() {
 #pragma pop
 
 
-/* 8034D830-8034D838 0008+00 rc=0 efc=0 .text      VIGetNextFrameBuffer                                         */
+/* 8034D830-8034D838 0008+00 rc=1 efc=1 rfr=False None .text      VIGetNextFrameBuffer                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -450,7 +422,7 @@ extern "C" asm void VIGetNextFrameBuffer() {
 #pragma pop
 
 
-/* 8034D838-8034D840 0008+00 rc=0 efc=0 .text      VIGetCurrentFrameBuffer                                      */
+/* 8034D838-8034D840 0008+00 rc=1 efc=1 rfr=False None .text      VIGetCurrentFrameBuffer                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -461,7 +433,7 @@ extern "C" asm void VIGetCurrentFrameBuffer() {
 #pragma pop
 
 
-/* 8034D840-8034D8BC 007C+00 rc=0 efc=0 .text      VISetBlack                                                   */
+/* 8034D840-8034D8BC 007C+00 rc=7 efc=7 rfr=False None .text      VISetBlack                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -472,7 +444,7 @@ extern "C" asm void VISetBlack() {
 #pragma pop
 
 
-/* 8034D8BC-8034D8C4 0008+00 rc=0 efc=0 .text      VIGetRetraceCount                                            */
+/* 8034D8BC-8034D8C4 0008+00 rc=9 efc=9 rfr=False None .text      VIGetRetraceCount                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -483,22 +455,22 @@ extern "C" asm void VIGetRetraceCount() {
 #pragma pop
 
 
-/* 8034D8C4-8034D900 003C+00 rc=0 efc=0 .text      GetCurrentDisplayPosition                                    */
+/* 8034D8C4-8034D900 003C+00 rc=1 efc=0 rfr=False None .text      GetCurrentDisplayPosition                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void GetCurrentDisplayPosition() {
+extern "C" asm static void GetCurrentDisplayPosition() {
 	nofralloc
 #include "asm/dolphin/vi/vi/GetCurrentDisplayPosition.s"
 }
 #pragma pop
 
 
-/* 8034D900-8034D968 0068+00 rc=0 efc=0 .text      getCurrentFieldEvenOdd                                       */
+/* 8034D900-8034D968 0068+00 rc=1 efc=0 rfr=False None .text      getCurrentFieldEvenOdd                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void getCurrentFieldEvenOdd() {
+extern "C" asm static void getCurrentFieldEvenOdd() {
 	nofralloc
 #include "asm/dolphin/vi/vi/getCurrentFieldEvenOdd.s"
 }
@@ -506,13 +478,13 @@ extern "C" asm void getCurrentFieldEvenOdd() {
 
 
 /* ############################################################################################## */
-/* 8044CAA0-8044CB18 0076+02 rc=0 efc=0 .bss       shdwRegs                                                     */
+/* 8044CAA0-8044CB18 0076+02 rc=0 efc=0 rfr=False None .bss       shdwRegs                                                     */
 u8 shdwRegs[118 + 2 /* padding */];
 
-/* 8044CB18-8044CB70 0058+00 rc=0 efc=0 .bss       HorVer                                                       */
-u8 HorVer[88];
+/* 8044CB18-8044CB70 0058+00 rc=2 efc=0 rfr=False None .bss       HorVer                                                       */
+static u8 HorVer[88];
 
-/* 8034D968-8034DA04 009C+00 rc=0 efc=0 .text      VIGetNextField                                               */
+/* 8034D968-8034DA04 009C+00 rc=0 efc=0 rfr=False None .text      VIGetNextField                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -523,7 +495,7 @@ extern "C" asm void VIGetNextField() {
 #pragma pop
 
 
-/* 8034DA04-8034DA9C 0098+00 rc=0 efc=0 .text      VIGetCurrentLine                                             */
+/* 8034DA04-8034DA9C 0098+00 rc=1 efc=1 rfr=False None .text      VIGetCurrentLine                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -535,8 +507,8 @@ extern "C" asm void VIGetCurrentLine() {
 
 
 /* ############################################################################################## */
-/* 803D19D0-803D19FC 0029+03 rc=0 efc=0 .data      @355                                                         */
-u8 vi__lit_355[41 + 3 /* padding */] = {
+/* 803D19D0-803D19FC 0029+03 rc=0 efc=0 rfr=False None .data      @355                                                         */
+SECTION_DATA u8 vi__lit_355[41 + 3 /* padding */] = {
 	0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A,
 	0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A,
 	0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x2A, 0x0A, 0x00,
@@ -544,8 +516,8 @@ u8 vi__lit_355[41 + 3 /* padding */] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803D19FC-803D1A28 0029+03 rc=0 efc=0 .data      @356                                                         */
-u8 vi__lit_356[41 + 3 /* padding */] = {
+/* 803D19FC-803D1A28 0029+03 rc=0 efc=0 rfr=False None .data      @356                                                         */
+SECTION_DATA u8 vi__lit_356[41 + 3 /* padding */] = {
 	0x20, 0x21, 0x20, 0x21, 0x20, 0x21, 0x20, 0x43, 0x20, 0x41, 0x20, 0x55, 0x20, 0x54, 0x20, 0x49,
 	0x20, 0x4F, 0x20, 0x4E, 0x20, 0x21, 0x20, 0x21, 0x20, 0x21, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
 	0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x0A, 0x00,
@@ -553,8 +525,8 @@ u8 vi__lit_356[41 + 3 /* padding */] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803D1A28-803D1A54 0029+03 rc=0 efc=0 .data      @357                                                         */
-u8 vi__lit_357[41 + 3 /* padding */] = {
+/* 803D1A28-803D1A54 0029+03 rc=0 efc=0 rfr=False None .data      @357                                                         */
+SECTION_DATA u8 vi__lit_357[41 + 3 /* padding */] = {
 	0x54, 0x68, 0x69, 0x73, 0x20, 0x54, 0x56, 0x20, 0x66, 0x6F, 0x72, 0x6D, 0x61, 0x74, 0x20, 0x22,
 	0x44, 0x45, 0x42, 0x55, 0x47, 0x5F, 0x50, 0x41, 0x4C, 0x22, 0x20, 0x69, 0x73, 0x20, 0x6F, 0x6E,
 	0x6C, 0x79, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x0A, 0x00,
@@ -562,8 +534,8 @@ u8 vi__lit_357[41 + 3 /* padding */] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803D1A54-803D1A80 0029+03 rc=0 efc=0 .data      @358                                                         */
-u8 vi__lit_358[41 + 3 /* padding */] = {
+/* 803D1A54-803D1A80 0029+03 rc=0 efc=0 rfr=False None .data      @358                                                         */
+SECTION_DATA u8 vi__lit_358[41 + 3 /* padding */] = {
 	0x74, 0x65, 0x6D, 0x70, 0x6F, 0x72, 0x61, 0x72, 0x79, 0x20, 0x73, 0x6F, 0x6C, 0x75, 0x74, 0x69,
 	0x6F, 0x6E, 0x20, 0x75, 0x6E, 0x74, 0x69, 0x6C, 0x20, 0x50, 0x41, 0x4C, 0x20, 0x44, 0x41, 0x43,
 	0x20, 0x62, 0x6F, 0x61, 0x72, 0x64, 0x20, 0x0A, 0x00,
@@ -571,8 +543,8 @@ u8 vi__lit_358[41 + 3 /* padding */] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803D1A80-803D1AAC 0029+03 rc=0 efc=0 .data      @359                                                         */
-u8 vi__lit_359[41 + 3 /* padding */] = {
+/* 803D1A80-803D1AAC 0029+03 rc=0 efc=0 rfr=False None .data      @359                                                         */
+SECTION_DATA u8 vi__lit_359[41 + 3 /* padding */] = {
 	0x69, 0x73, 0x20, 0x61, 0x76, 0x61, 0x69, 0x6C, 0x61, 0x62, 0x6C, 0x65, 0x2E, 0x20, 0x50, 0x6C,
 	0x65, 0x61, 0x73, 0x65, 0x20, 0x64, 0x6F, 0x20, 0x4E, 0x4F, 0x54, 0x20, 0x75, 0x73, 0x65, 0x20,
 	0x74, 0x68, 0x69, 0x73, 0x20, 0x20, 0x20, 0x0A, 0x00,
@@ -580,8 +552,8 @@ u8 vi__lit_359[41 + 3 /* padding */] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803D1AAC-803D1AD8 0029+03 rc=0 efc=0 .data      @360                                                         */
-u8 vi__lit_360[41 + 3 /* padding */] = {
+/* 803D1AAC-803D1AD8 0029+03 rc=0 efc=0 rfr=False None .data      @360                                                         */
+SECTION_DATA u8 vi__lit_360[41 + 3 /* padding */] = {
 	0x6D, 0x6F, 0x64, 0x65, 0x20, 0x69, 0x6E, 0x20, 0x72, 0x65, 0x61, 0x6C, 0x20, 0x67, 0x61, 0x6D,
 	0x65, 0x73, 0x21, 0x21, 0x21, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
 	0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x0A, 0x00,
@@ -589,8 +561,8 @@ u8 vi__lit_360[41 + 3 /* padding */] = {
 	0x00, 0x00, 0x00,
 };
 
-/* 803D1AD8-803D1B24 004B+01 rc=0 efc=0 .data      @538                                                         */
-u8 vi__lit_538[75 + 1 /* padding */] = {
+/* 803D1AD8-803D1B24 004B+01 rc=0 efc=0 rfr=False None .data      @538                                                         */
+SECTION_DATA u8 vi__lit_538[75 + 1 /* padding */] = {
 	0x56, 0x49, 0x43, 0x6F, 0x6E, 0x66, 0x69, 0x67, 0x75, 0x72, 0x65, 0x28, 0x29, 0x3A, 0x20, 0x54,
 	0x72, 0x69, 0x65, 0x64, 0x20, 0x74, 0x6F, 0x20, 0x63, 0x68, 0x61, 0x6E, 0x67, 0x65, 0x20, 0x6D,
 	0x6F, 0x64, 0x65, 0x20, 0x66, 0x72, 0x6F, 0x6D, 0x20, 0x28, 0x25, 0x64, 0x29, 0x20, 0x74, 0x6F,
@@ -600,21 +572,21 @@ u8 vi__lit_538[75 + 1 /* padding */] = {
 	0x00,
 };
 
-/* 803D1B24-803D1B48 0020+04 rc=0 efc=0 .data      @740                                                         */
-void* vi__lit_740[8 + 1 /* padding */] = {
-	(void*)(((char*)VIGetTvFormat)+0x38),
-	(void*)(((char*)VIGetTvFormat)+0x40),
-	(void*)(((char*)VIGetTvFormat)+0x48),
-	(void*)(((char*)VIGetTvFormat)+0x38),
-	(void*)(((char*)VIGetTvFormat)+0x40),
-	(void*)(((char*)VIGetTvFormat)+0x48),
-	(void*)(((char*)VIGetTvFormat)+0x38),
-	(void*)(((char*)VIGetTvFormat)+0x38),
+/* 803D1B24-803D1B48 0020+04 rc=1 efc=0 rfr=False None .data      @740                                                         */
+SECTION_DATA static void* vi__lit_740[8 + 1 /* padding */] = {
+	/* 0    */ (void*)(((char*)VIGetTvFormat)+0x38),
+	/* 1    */ (void*)(((char*)VIGetTvFormat)+0x40),
+	/* 2    */ (void*)(((char*)VIGetTvFormat)+0x48),
+	/* 3    */ (void*)(((char*)VIGetTvFormat)+0x38),
+	/* 4    */ (void*)(((char*)VIGetTvFormat)+0x40),
+	/* 5    */ (void*)(((char*)VIGetTvFormat)+0x48),
+	/* 6    */ (void*)(((char*)VIGetTvFormat)+0x38),
+	/* 7    */ (void*)(((char*)VIGetTvFormat)+0x38),
 	/* padding */
 	NULL,
 };
 
-/* 8034DA9C-8034DB04 0068+00 rc=0 efc=0 .text      VIGetTvFormat                                                */
+/* 8034DA9C-8034DB04 0068+00 rc=3 efc=2 rfr=False None .text      VIGetTvFormat                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -625,7 +597,7 @@ extern "C" asm void VIGetTvFormat() {
 #pragma pop
 
 
-/* 8034DB04-8034DB40 003C+00 rc=0 efc=0 .text      VIGetDTVStatus                                               */
+/* 8034DB04-8034DB40 003C+00 rc=2 efc=2 rfr=False None .text      VIGetDTVStatus                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -636,25 +608,31 @@ extern "C" asm void VIGetDTVStatus() {
 #pragma pop
 
 
-/* 8034DB40-8034DD5C 021C+00 rc=0 efc=0 .text      __VIDisplayPositionToXY                                      */
+/* 8034DB40-8034DD5C 021C+00 rc=1 efc=0 rfr=False None .text      __VIDisplayPositionToXY                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __VIDisplayPositionToXY() {
+extern "C" asm static void __VIDisplayPositionToXY() {
 	nofralloc
 #include "asm/dolphin/vi/vi/__VIDisplayPositionToXY.s"
 }
 #pragma pop
 
 
-/* 8034DD5C-8034DDBC 0060+00 rc=0 efc=0 .text      __VIGetCurrentPosition                                       */
+/* 8034DD5C-8034DDBC 0060+00 rc=1 efc=0 rfr=False None .text      __VIGetCurrentPosition                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __VIGetCurrentPosition() {
+extern "C" asm static void __VIGetCurrentPosition() {
 	nofralloc
 #include "asm/dolphin/vi/vi/__VIGetCurrentPosition.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80450A19-80450A1D 0004+00 rc=0 efc=0 rfr=False None .sdata     None                                                         */
+SECTION_SDATA u8 pad_80450A19[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 

@@ -34,7 +34,7 @@ extern "C" void endControl__8daItem_cFv(); // 1
 // Declarations:
 // 
 
-/* 80037BE0-80037BF4 0014+00 rc=0 efc=0 .text      startCtrl__8daItem_cFv                                       */
+/* 80037BE0-80037BF4 0014+00 rc=0 efc=0 rfr=False None .text      startCtrl__8daItem_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,7 +45,7 @@ asm void daItem_c::startCtrl() {
 #pragma pop
 
 
-/* 80037BF4-80037C04 0010+00 rc=0 efc=0 .text      startControl__8daItem_cFv                                    */
+/* 80037BF4-80037C04 0010+00 rc=0 efc=0 rfr=False None .text      startControl__8daItem_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,7 +56,7 @@ asm void daItem_c::startControl() {
 #pragma pop
 
 
-/* 80037C04-80037C14 0010+00 rc=0 efc=0 .text      endControl__8daItem_cFv                                      */
+/* 80037C04-80037C14 0010+00 rc=0 efc=0 rfr=False None .text      endControl__8daItem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

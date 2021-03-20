@@ -43,13 +43,13 @@ extern "C" void _restgpr_27(); // 1
 
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_27(); // 1
-SECTION_DATA extern void* const __vt__7JUTFont[17];
+extern "C" extern void* __vt__7JUTFont[17];
 
 // 
 // Declarations:
 // 
 
-/* 802DECF8-802DED24 002C+00 rc=0 efc=0 .text      __ct__7JUTFontFv                                             */
+/* 802DECF8-802DED24 002C+00 rc=2 efc=2 rfr=False None .text      __ct__7JUTFontFv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +60,7 @@ asm JUTFont::JUTFont() {
 #pragma pop
 
 
-/* 802DED24-802DED70 004C+00 rc=0 efc=0 .text      initialize_state__7JUTFontFv                                 */
+/* 802DED24-802DED70 004C+00 rc=9 efc=9 rfr=False None .text      initialize_state__7JUTFontFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +71,7 @@ asm void JUTFont::initialize_state() {
 #pragma pop
 
 
-/* 802DED70-802DEDC4 0054+00 rc=0 efc=0 .text      setCharColor__7JUTFontFQ28JUtility6TColor                    */
+/* 802DED70-802DEDC4 0054+00 rc=4 efc=3 rfr=False None .text      setCharColor__7JUTFontFQ28JUtility6TColor                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +82,7 @@ asm void JUTFont::setCharColor(JUtility::TColor field_0) {
 #pragma pop
 
 
-/* 802DEDC4-802DEE28 0064+00 rc=0 efc=0 .text      setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor  */
+/* 802DEDC4-802DEE28 0064+00 rc=2 efc=2 rfr=False None .text      setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +93,7 @@ asm void JUTFont::setGradColor(JUtility::TColor field_0, JUtility::TColor field_
 #pragma pop
 
 
-/* 802DEE28-802DEF48 0120+00 rc=0 efc=0 .text      drawString_size_scale__7JUTFontFffffPCcUlb                   */
+/* 802DEE28-802DEF48 0120+00 rc=3 efc=3 rfr=False None .text      drawString_size_scale__7JUTFontFffffPCcUlb                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

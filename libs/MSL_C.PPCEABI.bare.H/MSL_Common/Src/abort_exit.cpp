@@ -14,12 +14,8 @@ extern "C" void abort(); // 1
 
 extern "C" void exit(); // 1
 extern "C" void abort(); // 1
-SECTION_BSS extern u8 __atexit_funcs[256];
-SECTION_SBSS extern u8 __aborting[4];
-SECTION_SBSS extern u8 __atexit_curr_func[4];
-SECTION_SBSS extern u8 __stdio_exit[4];
-SECTION_SBSS extern u8 __console_exit[4];
-SECTION_SBSS extern u8 data_804519A0[8];
+extern "C" extern u8 __stdio_exit[4];
+extern "C" extern u8 data_804519A0[8];
 
 // 
 // External References:
@@ -39,29 +35,29 @@ extern "C" void __begin_critical_region(); // 1
 extern "C" void __kill_critical_regions(); // 1
 extern "C" void raise(); // 1
 #pragma section ".dtors$10"
-__declspec(section ".dtors$10") extern const void* __destroy_global_chain_reference;
+__declspec(section ".dtors$10") extern void* __destroy_global_chain_reference;
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 8044D440-8044D540 0100+00 rc=0 efc=0 .bss       __atexit_funcs                                               */
-u8 __atexit_funcs[256];
+/* 8044D440-8044D540 0100+00 rc=2 efc=0 rfr=False None .bss       __atexit_funcs                                               */
+static u8 __atexit_funcs[256];
 
-/* 80451990-80451994 0004+00 rc=0 efc=0 .sbss      __aborting                                                   */
-u8 __aborting[4];
+/* 80451990-80451994 0004+00 rc=2 efc=0 rfr=False None .sbss      __aborting                                                   */
+static u8 __aborting[4];
 
-/* 80451994-80451998 0004+00 rc=0 efc=0 .sbss      __atexit_curr_func                                           */
-u8 __atexit_curr_func[4];
+/* 80451994-80451998 0004+00 rc=2 efc=0 rfr=False None .sbss      __atexit_curr_func                                           */
+static u8 __atexit_curr_func[4];
 
-/* 80451998-8045199C 0004+00 rc=0 efc=0 .sbss      __stdio_exit                                                 */
+/* 80451998-8045199C 0004+00 rc=2 efc=1 rfr=False None .sbss      __stdio_exit                                                 */
 u8 __stdio_exit[4];
 
-/* 8045199C-804519A0 0004+00 rc=0 efc=0 .sbss      __console_exit                                               */
-u8 __console_exit[4];
+/* 8045199C-804519A0 0004+00 rc=2 efc=0 rfr=False None .sbss      __console_exit                                               */
+static u8 __console_exit[4];
 
-/* 803629CC-80362ABC 00F0+00 rc=0 efc=0 .text      exit                                                         */
+/* 803629CC-80362ABC 00F0+00 rc=2 efc=2 rfr=False None .text      exit                                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +68,7 @@ extern "C" asm void exit() {
 #pragma pop
 
 
-/* 80362ABC-80362B58 009C+00 rc=0 efc=0 .text      abort                                                        */
+/* 80362ABC-80362B58 009C+00 rc=9 efc=9 rfr=False None .text      abort                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,6 +80,6 @@ extern "C" asm void abort() {
 
 
 /* ############################################################################################## */
-/* 804519A0-804519A8 0008+00 rc=0 efc=0 .sbss      None                                                         */
+/* 804519A0-804519A8 0008+00 rc=1 efc=1 rfr=False None .sbss      None                                                         */
 u8 data_804519A0[8];
 

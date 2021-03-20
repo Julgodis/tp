@@ -12,25 +12,24 @@
 extern "C" void __ieee754_sqrt(); // 1
 
 extern "C" void __ieee754_sqrt(); // 1
-SECTION_SDATA2 extern f64 Math_Double_precision_e_sqrt__lit_164;
 
 // 
 // External References:
 // 
 
 
-SECTION_SDATA extern u32 __float_nan;
-SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 errno[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80456B48-80456B50 0008+00 rc=0 efc=0 .sdata2    @164                                                         */
-f64 Math_Double_precision_e_sqrt__lit_164 = 1.0;
+/* 80456B48-80456B50 0008+00 rc=1 efc=0 rfr=False None .sdata2    @164                                                         */
+SECTION_SDATA2 static f64 Math_Double_precision_e_sqrt__lit_164 = 1.0;
 
-/* 8036C7A0-8036C9C4 0224+00 rc=0 efc=0 .text      __ieee754_sqrt                                               */
+/* 8036C7A0-8036C9C4 0224+00 rc=1 efc=1 rfr=False None .text      __ieee754_sqrt                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

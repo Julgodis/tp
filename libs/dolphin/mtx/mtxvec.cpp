@@ -29,7 +29,7 @@ extern "C" void PSMTXMultVecArraySR(); // 1
 // Declarations:
 // 
 
-/* 80346D6C-80346DC0 0054+00 rc=0 efc=0 .text      PSMTXMultVec                                                 */
+/* 80346D6C-80346DC0 0054+00 rc=158 efc=158 rfr=False None .text      PSMTXMultVec                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -40,7 +40,7 @@ extern "C" asm void PSMTXMultVec() {
 #pragma pop
 
 
-/* 80346DC0-80346E4C 008C+00 rc=0 efc=0 .text      PSMTXMultVecArray                                            */
+/* 80346DC0-80346E4C 008C+00 rc=2 efc=2 rfr=False None .text      PSMTXMultVecArray                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +51,7 @@ extern "C" asm void PSMTXMultVecArray() {
 #pragma pop
 
 
-/* 80346E4C-80346EA0 0054+00 rc=0 efc=0 .text      PSMTXMultVecSR                                               */
+/* 80346E4C-80346EA0 0054+00 rc=47 efc=47 rfr=False None .text      PSMTXMultVecSR                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -62,7 +62,7 @@ extern "C" asm void PSMTXMultVecSR() {
 #pragma pop
 
 
-/* 80346EA0-80346F28 0088+00 rc=0 efc=0 .text      PSMTXMultVecArraySR                                          */
+/* 80346EA0-80346F28 0088+00 rc=2 efc=2 rfr=False None .text      PSMTXMultVecArraySR                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

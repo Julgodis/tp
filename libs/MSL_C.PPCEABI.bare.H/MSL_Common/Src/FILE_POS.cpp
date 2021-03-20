@@ -10,11 +10,11 @@
 // 
 
 extern "C" void fseek(); // 1
-extern "C" void _fseek(); // 1
+extern "C" static void _fseek(); // 1
 extern "C" void ftell(); // 1
 
 extern "C" void fseek(); // 1
-extern "C" void _fseek(); // 1
+extern "C" static void _fseek(); // 1
 extern "C" void ftell(); // 1
 
 // 
@@ -28,13 +28,13 @@ extern "C" void __begin_critical_region(); // 1
 extern "C" void __flush_buffer(); // 1
 extern "C" void __end_critical_region(); // 1
 extern "C" void __begin_critical_region(); // 1
-SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
+extern "C" extern u8 errno[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80365BB4-80365C20 006C+00 rc=0 efc=0 .text      fseek                                                        */
+/* 80365BB4-80365C20 006C+00 rc=2 efc=2 rfr=False None .text      fseek                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,18 +45,18 @@ extern "C" asm void fseek() {
 #pragma pop
 
 
-/* 80365C20-80365E90 0270+00 rc=0 efc=0 .text      _fseek                                                       */
+/* 80365C20-80365E90 0270+00 rc=1 efc=0 rfr=False None .text      _fseek                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void _fseek() {
+extern "C" asm static void _fseek() {
 	nofralloc
 #include "asm/MSL_C.PPCEABI.bare.H/MSL_Common/Src/FILE_POS/_fseek.s"
 }
 #pragma pop
 
 
-/* 80365E90-80365F74 00E4+00 rc=0 efc=0 .text      ftell                                                        */
+/* 80365E90-80365F74 00E4+00 rc=2 efc=2 rfr=False None .text      ftell                                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

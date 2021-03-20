@@ -92,10 +92,6 @@ extern "C" void onDispose__10JASWaveArcFv(); // 1
 extern "C" void setEntryNum__10JASWaveArcFl(); // 1
 extern "C" void setFileName__10JASWaveArcFPCc(); // 1
 extern "C" void __dt__11JASDisposerFv(); // 1
-SECTION_DATA extern u8 sCurrentDir__16JASWaveArcLoader[64];
-SECTION_DATA extern void* const __vt__10JASWaveArc[6];
-SECTION_DATA extern void* const __vt__11JASDisposer[4];
-SECTION_SBSS extern u8 sAramHeap__16JASWaveArcLoader[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -151,10 +147,10 @@ extern "C" void strlen(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80451290-80451298 0004+04 rc=0 efc=0 .sbss      sAramHeap__16JASWaveArcLoader                                */
-u8 sAramHeap__16JASWaveArcLoader[4 + 4 /* padding */];
+/* 80451290-80451298 0004+04 rc=1 efc=0 rfr=False None .sbss      sAramHeap__16JASWaveArcLoader                                */
+static u8 sAramHeap__16JASWaveArcLoader[4 + 4 /* padding */];
 
-/* 8029A0A0-8029A0D0 0030+00 rc=0 efc=0 .text      getRootHeap__16JASWaveArcLoaderFv                            */
+/* 8029A0A0-8029A0D0 0030+00 rc=2 efc=0 rfr=False None .text      getRootHeap__16JASWaveArcLoaderFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,15 +162,15 @@ asm void JASWaveArcLoader::getRootHeap() {
 
 
 /* ############################################################################################## */
-/* 803C77E0-803C7820 0040+00 rc=0 efc=0 .data      sCurrentDir__16JASWaveArcLoader                              */
-u8 sCurrentDir__16JASWaveArcLoader[64] = {
+/* 803C77E0-803C7820 0040+00 rc=2 efc=0 rfr=False None .data      sCurrentDir__16JASWaveArcLoader                              */
+SECTION_DATA static u8 sCurrentDir__16JASWaveArcLoader[64] = {
 	0x2F, 0x41, 0x75, 0x64, 0x69, 0x6F, 0x52, 0x65, 0x73, 0x2F, 0x57, 0x61, 0x76, 0x65, 0x73, 0x2F,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8029A0D0-8029A130 0060+00 rc=0 efc=0 .text      setCurrentDir__16JASWaveArcLoaderFPCc                        */
+/* 8029A0D0-8029A130 0060+00 rc=1 efc=1 rfr=False None .text      setCurrentDir__16JASWaveArcLoaderFPCc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +181,7 @@ asm void JASWaveArcLoader::setCurrentDir(char const* field_0) {
 #pragma pop
 
 
-/* 8029A130-8029A13C 000C+00 rc=0 efc=0 .text      getCurrentDir__16JASWaveArcLoaderFv                          */
+/* 8029A130-8029A13C 000C+00 rc=1 efc=0 rfr=False None .text      getCurrentDir__16JASWaveArcLoaderFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -197,25 +193,25 @@ asm void JASWaveArcLoader::getCurrentDir() {
 
 
 /* ############################################################################################## */
-/* 803C7820-803C7838 0018+00 rc=0 efc=0 .data      __vt__10JASWaveArc                                           */
-void* const __vt__10JASWaveArc[6] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__10JASWaveArcFv,
-	(void*)onDispose__10JASWaveArcFv,
-	(void*)onLoadDone__10JASWaveArcFv,
-	(void*)onEraseDone__10JASWaveArcFv,
+/* 803C7820-803C7838 0018+00 rc=2 efc=0 rfr=False None .data      __vt__10JASWaveArc                                           */
+SECTION_DATA static void* __vt__10JASWaveArc[6] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__10JASWaveArcFv,
+	/* 3    */ (void*)onDispose__10JASWaveArcFv,
+	/* 4    */ (void*)onLoadDone__10JASWaveArcFv,
+	/* 5    */ (void*)onEraseDone__10JASWaveArcFv,
 };
 
-/* 803C7838-803C7848 0010+00 rc=0 efc=0 .data      __vt__11JASDisposer                                          */
-void* const __vt__11JASDisposer[4] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11JASDisposerFv,
-	(void*)onDispose__11JASDisposerFv,
+/* 803C7838-803C7848 0010+00 rc=3 efc=0 rfr=False None .data      __vt__11JASDisposer                                          */
+SECTION_DATA static void* __vt__11JASDisposer[4] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11JASDisposerFv,
+	/* 3    */ (void*)onDispose__11JASDisposerFv,
 };
 
-/* 8029A13C-8029A1B4 0078+00 rc=0 efc=0 .text      __ct__10JASWaveArcFv                                         */
+/* 8029A13C-8029A1B4 0078+00 rc=2 efc=2 rfr=False None .text      __ct__10JASWaveArcFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -226,7 +222,7 @@ asm JASWaveArc::JASWaveArc() {
 #pragma pop
 
 
-/* 8029A1B4-8029A258 00A4+00 rc=0 efc=0 .text      __dt__10JASWaveArcFv                                         */
+/* 8029A1B4-8029A258 00A4+00 rc=3 efc=2 rfr=False None .text      __dt__10JASWaveArcFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -237,7 +233,7 @@ asm JASWaveArc::~JASWaveArc() {
 #pragma pop
 
 
-/* 8029A258-8029A2EC 0094+00 rc=0 efc=0 .text      loadSetup__10JASWaveArcFUl                                   */
+/* 8029A258-8029A2EC 0094+00 rc=1 efc=0 rfr=False None .text      loadSetup__10JASWaveArcFUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -248,7 +244,7 @@ asm void JASWaveArc::loadSetup(u32 field_0) {
 #pragma pop
 
 
-/* 8029A2EC-8029A378 008C+00 rc=0 efc=0 .text      eraseSetup__10JASWaveArcFv                                   */
+/* 8029A2EC-8029A378 008C+00 rc=1 efc=0 rfr=False None .text      eraseSetup__10JASWaveArcFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -259,7 +255,7 @@ asm void JASWaveArc::eraseSetup() {
 #pragma pop
 
 
-/* 8029A378-8029A404 008C+00 rc=0 efc=0 .text      loadToAramCallback__10JASWaveArcFPv                          */
+/* 8029A378-8029A404 008C+00 rc=1 efc=0 rfr=False None .text      loadToAramCallback__10JASWaveArcFPv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -270,7 +266,7 @@ asm void JASWaveArc::loadToAramCallback(void* field_0) {
 #pragma pop
 
 
-/* 8029A404-8029A4C0 00BC+00 rc=0 efc=0 .text      sendLoadCmd__10JASWaveArcFv                                  */
+/* 8029A404-8029A4C0 00BC+00 rc=2 efc=0 rfr=False None .text      sendLoadCmd__10JASWaveArcFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -281,7 +277,7 @@ asm void JASWaveArc::sendLoadCmd() {
 #pragma pop
 
 
-/* 8029A4C0-8029A580 00C0+00 rc=0 efc=0 .text      load__10JASWaveArcFP7JASHeap                                 */
+/* 8029A4C0-8029A580 00C0+00 rc=2 efc=2 rfr=False None .text      load__10JASWaveArcFP7JASHeap                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,7 +288,7 @@ asm void JASWaveArc::load(JASHeap* field_0) {
 #pragma pop
 
 
-/* 8029A580-8029A640 00C0+00 rc=0 efc=0 .text      loadTail__10JASWaveArcFP7JASHeap                             */
+/* 8029A580-8029A640 00C0+00 rc=1 efc=1 rfr=False None .text      loadTail__10JASWaveArcFP7JASHeap                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -303,7 +299,7 @@ asm void JASWaveArc::loadTail(JASHeap* field_0) {
 #pragma pop
 
 
-/* 8029A640-8029A664 0024+00 rc=0 efc=0 .text      erase__10JASWaveArcFv                                        */
+/* 8029A640-8029A664 0024+00 rc=2 efc=2 rfr=False None .text      erase__10JASWaveArcFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -314,7 +310,7 @@ asm void JASWaveArc::erase() {
 #pragma pop
 
 
-/* 8029A664-8029A6AC 0048+00 rc=0 efc=0 .text      onDispose__10JASWaveArcFv                                    */
+/* 8029A664-8029A6AC 0048+00 rc=3 efc=2 rfr=False None .text      onDispose__10JASWaveArcFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -325,7 +321,7 @@ asm void JASWaveArc::onDispose() {
 #pragma pop
 
 
-/* 8029A6AC-8029A70C 0060+00 rc=0 efc=0 .text      setEntryNum__10JASWaveArcFl                                  */
+/* 8029A6AC-8029A70C 0060+00 rc=1 efc=0 rfr=False None .text      setEntryNum__10JASWaveArcFl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -336,7 +332,7 @@ asm void JASWaveArc::setEntryNum(s32 field_0) {
 #pragma pop
 
 
-/* 8029A70C-8029A7B8 00AC+00 rc=0 efc=0 .text      setFileName__10JASWaveArcFPCc                                */
+/* 8029A70C-8029A7B8 00AC+00 rc=2 efc=2 rfr=False None .text      setFileName__10JASWaveArcFPCc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -347,7 +343,7 @@ asm void JASWaveArc::setFileName(char const* field_0) {
 #pragma pop
 
 
-/* 8029A7B8-8029A800 0048+00 rc=0 efc=0 .text      __dt__11JASDisposerFv                                        */
+/* 8029A7B8-8029A800 0048+00 rc=1 efc=0 rfr=False None .text      __dt__11JASDisposerFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

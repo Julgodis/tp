@@ -22,10 +22,10 @@ struct layer_class {
 // Forward References:
 // 
 
-void fpcLnIt_MethodCall(create_tag_class*, method_filter*); // 2
+static void fpcLnIt_MethodCall(create_tag_class*, method_filter*); // 2
 extern "C" void fpcLnIt_Queue__FPFPvPv_i(); // 1
 
-extern "C" void fpcLnIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
+extern "C" static void fpcLnIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
 extern "C" void fpcLnIt_Queue__FPFPvPv_i(); // 1
 
 // 
@@ -45,24 +45,24 @@ extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv(); 
 extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
-SECTION_SDATA extern void* g_fpcLn_Queue[2];
+extern "C" extern void* g_fpcLn_Queue[2];
 
 // 
 // Declarations:
 // 
 
-/* 800236C0-80023728 0068+00 rc=0 efc=0 .text      fpcLnIt_MethodCall__FP16create_tag_classP13method_filter     */
+/* 800236C0-80023728 0068+00 rc=1 efc=0 rfr=False None .text      fpcLnIt_MethodCall__FP16create_tag_classP13method_filter     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLnIt_MethodCall(create_tag_class* field_0, method_filter* field_1) {
+asm static void fpcLnIt_MethodCall(create_tag_class* field_0, method_filter* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_line_iter/fpcLnIt_MethodCall__FP16create_tag_classP13method_filter.s"
 }
 #pragma pop
 
 
-/* 80023728-80023764 003C+00 rc=0 efc=0 .text      fpcLnIt_Queue__FPFPvPv_i                                     */
+/* 80023728-80023764 003C+00 rc=1 efc=1 rfr=False None .text      fpcLnIt_Queue__FPFPvPv_i                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

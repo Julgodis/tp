@@ -64,13 +64,13 @@ extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudi
 
 
 extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit(); // 1
-SECTION_RODATA extern const u8 gauDataSize_TEParagraph_data__Q37JStudio3stb4data[32];
+extern "C" extern u8 const gauDataSize_TEParagraph_data__Q37JStudio3stb4data[32];
 
 // 
 // Declarations:
 // 
 
-/* 802899BC-80289A08 004C+00 rc=0 efc=0 .text      getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData */
+/* 802899BC-80289A08 004C+00 rc=1 efc=1 rfr=False None .text      getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +81,7 @@ asm void JStudio::stb::data::TParse_TSequence::getData(JStudio::stb::data::TPars
 #pragma pop
 
 
-/* 80289A08-80289A80 0078+00 rc=0 efc=0 .text      getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData */
+/* 80289A08-80289A80 0078+00 rc=1 efc=1 rfr=False None .text      getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ asm void JStudio::stb::data::TParse_TParagraph::getData(JStudio::stb::data::TPar
 #pragma pop
 
 
-/* 80289A80-80289B00 0080+00 rc=0 efc=0 .text      getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData */
+/* 80289A80-80289B00 0080+00 rc=3 efc=3 rfr=False None .text      getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

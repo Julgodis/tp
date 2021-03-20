@@ -16,25 +16,19 @@ struct STRUCT_DSP_TASK {
 // Forward References:
 // 
 
-void DspHandShake(void*); // 2
+static void DspHandShake(void*); // 2
 extern "C" void DspBoot__FPFPv_v(); // 1
 extern "C" void DSPSendCommands2__FPUlUlPFUs_v(); // 1
-void DspInitWork(); // 2
-extern "C" void DspStartWork__FUlPFUs_v(); // 1
+static void DspInitWork(); // 2
+extern "C" static void DspStartWork__FUlPFUs_v(); // 1
 void DspFinishWork(u16); // 2
 
-extern "C" void DspHandShake__FPv(); // 1
+extern "C" static void DspHandShake__FPv(); // 1
 extern "C" void DspBoot__FPFPv_v(); // 1
 extern "C" void DSPSendCommands2__FPUlUlPFUs_v(); // 1
-extern "C" void DspInitWork__Fv(); // 1
-extern "C" void DspStartWork__FUlPFUs_v(); // 1
+extern "C" static void DspInitWork__Fv(); // 1
+extern "C" static void DspStartWork__FUlPFUs_v(); // 1
 extern "C" void DspFinishWork__FUs(); // 1
-SECTION_DATA extern u8 jdsp[7936];
-SECTION_BSS extern u8 audio_task[80 + 16 /* padding */];
-SECTION_BSS extern u8 AUDIO_YIELD_BUFFER[8192];
-SECTION_BSS extern u8 taskwork[128];
-SECTION_SBSS extern u8 taskreadp[4];
-SECTION_SBSS extern u8 taskwritep[4];
 
 // 
 // External References:
@@ -72,12 +66,12 @@ extern "C" void _restgpr_26(); // 1
 // Declarations:
 // 
 
-/* 8029E6E0-8029E718 0038+00 rc=0 efc=0 .text      DspHandShake__FPv                                            */
+/* 8029E6E0-8029E718 0038+00 rc=1 efc=0 rfr=False None .text      DspHandShake__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-asm void DspHandShake(void* field_0) {
+asm static void DspHandShake(void* field_0) {
 	nofralloc
 #include "asm/JSystem/JAudio2/dsptask/DspHandShake__FPv.s"
 }
@@ -85,8 +79,8 @@ asm void DspHandShake(void* field_0) {
 
 
 /* ############################################################################################## */
-/* 803C7920-803C9820 1F00+00 rc=0 efc=0 .data      jdsp                                                         */
-u8 jdsp[7936] = {
+/* 803C7920-803C9820 1F00+00 rc=1 efc=0 rfr=False None .data      jdsp                                                         */
+SECTION_DATA static u8 jdsp[7936] = {
 	0x02, 0x9F, 0x00, 0x12, 0x00, 0x00, 0x00, 0x00, 0x02, 0xFF, 0x00, 0x00, 0x02, 0xFF, 0x00, 0x00,
 	0x02, 0xFF, 0x00, 0x00, 0x02, 0xFF, 0x00, 0x00, 0x02, 0xFF, 0x00, 0x00, 0x02, 0x9F, 0x06, 0xA5,
 	0x02, 0x9F, 0x00, 0x4E, 0x12, 0x05, 0x02, 0xBF, 0x00, 0x57, 0x81, 0x00, 0x00, 0x9F, 0x10, 0x00,
@@ -585,13 +579,13 @@ u8 jdsp[7936] = {
 	0x80, 0x01, 0x02, 0xBF, 0x00, 0xF4, 0x02, 0xDF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80431F80-80431FE0 0050+10 rc=0 efc=0 .bss       audio_task                                                   */
-u8 audio_task[80 + 16 /* padding */];
+/* 80431F80-80431FE0 0050+10 rc=1 efc=0 rfr=False None .bss       audio_task                                                   */
+static u8 audio_task[80 + 16 /* padding */];
 
-/* 80431FE0-80433FE0 2000+00 rc=0 efc=0 .bss       AUDIO_YIELD_BUFFER                                           */
-u8 AUDIO_YIELD_BUFFER[8192];
+/* 80431FE0-80433FE0 2000+00 rc=1 efc=0 rfr=False None .bss       AUDIO_YIELD_BUFFER                                           */
+static u8 AUDIO_YIELD_BUFFER[8192];
 
-/* 8029E720-8029E7CC 00AC+00 rc=0 efc=0 .text      DspBoot__FPFPv_v                                             */
+/* 8029E720-8029E7CC 00AC+00 rc=1 efc=1 rfr=False None .text      DspBoot__FPFPv_v                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -603,7 +597,7 @@ extern "C" asm void DspBoot__FPFPv_v() {
 #pragma pop
 
 
-/* 8029E7E0-8029E8C8 00E8+00 rc=0 efc=0 .text      DSPSendCommands2__FPUlUlPFUs_v                               */
+/* 8029E7E0-8029E8C8 00E8+00 rc=4 efc=4 rfr=False None .text      DSPSendCommands2__FPUlUlPFUs_v                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -616,15 +610,15 @@ extern "C" asm void DSPSendCommands2__FPUlUlPFUs_v() {
 
 
 /* ############################################################################################## */
-/* 80433FE0-80434060 0080+00 rc=0 efc=0 .bss       taskwork                                                     */
-u8 taskwork[128];
+/* 80433FE0-80434060 0080+00 rc=3 efc=0 rfr=False None .bss       taskwork                                                     */
+static u8 taskwork[128];
 
-/* 8029E8E0-8029E90C 002C+00 rc=0 efc=0 .text      DspInitWork__Fv                                              */
+/* 8029E8E0-8029E90C 002C+00 rc=1 efc=0 rfr=False None .text      DspInitWork__Fv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-asm void DspInitWork() {
+asm static void DspInitWork() {
 	nofralloc
 #include "asm/JSystem/JAudio2/dsptask/DspInitWork__Fv.s"
 }
@@ -632,25 +626,25 @@ asm void DspInitWork() {
 
 
 /* ############################################################################################## */
-/* 80451300-80451304 0004+00 rc=0 efc=0 .sbss      taskreadp                                                    */
-u8 taskreadp[4];
+/* 80451300-80451304 0004+00 rc=2 efc=0 rfr=False None .sbss      taskreadp                                                    */
+static u8 taskreadp[4];
 
-/* 80451304-80451308 0004+00 rc=0 efc=0 .sbss      taskwritep                                                   */
-u8 taskwritep[4];
+/* 80451304-80451308 0004+00 rc=1 efc=0 rfr=False None .sbss      taskwritep                                                   */
+static u8 taskwritep[4];
 
-/* 8029E920-8029E968 0048+00 rc=0 efc=0 .text      DspStartWork__FUlPFUs_v                                      */
+/* 8029E920-8029E968 0048+00 rc=1 efc=0 rfr=False None .text      DspStartWork__FUlPFUs_v                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
 #pragma function_align 32
-extern "C" asm void DspStartWork__FUlPFUs_v() {
+extern "C" asm static void DspStartWork__FUlPFUs_v() {
 	nofralloc
 #include "asm/JSystem/JAudio2/dsptask/DspStartWork__FUlPFUs_v.s"
 }
 #pragma pop
 
 
-/* 8029E980-8029E9E8 0068+00 rc=0 efc=0 .text      DspFinishWork__FUs                                           */
+/* 8029E980-8029E9E8 0068+00 rc=1 efc=1 rfr=False None .text      DspFinishWork__FUs                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

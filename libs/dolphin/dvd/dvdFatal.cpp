@@ -12,7 +12,6 @@
 extern "C" void __DVDPrintFatalMessage(); // 1
 
 extern "C" void __DVDPrintFatalMessage(); // 1
-SECTION_SBSS extern u8 FatalFunc[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -25,10 +24,10 @@ SECTION_SBSS extern u8 FatalFunc[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 804517C8-804517D0 0004+04 rc=0 efc=0 .sbss      FatalFunc                                                    */
-u8 FatalFunc[4 + 4 /* padding */];
+/* 804517C8-804517D0 0004+04 rc=1 efc=0 rfr=False None .sbss      FatalFunc                                                    */
+static u8 FatalFunc[4 + 4 /* padding */];
 
-/* 8034BCFC-8034BD2C 0030+00 rc=0 efc=0 .text      __DVDPrintFatalMessage                                       */
+/* 8034BCFC-8034BD2C 0030+00 rc=1 efc=1 rfr=False None .text      __DVDPrintFatalMessage                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

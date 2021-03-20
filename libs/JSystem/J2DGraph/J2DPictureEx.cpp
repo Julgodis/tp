@@ -9,6 +9,19 @@
 // Types:
 // 
 
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
+struct _GXTexMapID {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
 struct ResTIMG {
 };
 
@@ -23,27 +36,13 @@ struct JUTTexture {
 	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
-	template <typename A1>
-	struct TVec2 { };
-	/* TVec2<s16> */
-	struct TVec2__template1 {
-		/* 802FF204 */ TVec2__template1();
-	};
-
+struct ResTLUT {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
+struct J2DAnmTevRegKey {
 };
 
-struct _GXTexMapID {
+struct J2DAnmVtxColor {
 };
 
 struct JSUStreamSeekFrom {
@@ -54,48 +53,16 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DAnmColor {
-};
-
-struct _GXCullMode {
-};
-
 struct J2DTevStage {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DMaterial {
-	/* 802EA38C */ void setGX();
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-};
-
-struct ResFONT {
 };
 
 struct J2DAnmBase {
 };
 
-struct J2DAnmVtxColor {
+struct _GXCullMode {
 };
 
-struct J2DAnmTransform {
+struct ResFONT {
 };
 
 struct J2DPane {
@@ -123,7 +90,40 @@ struct J2DPane {
 	/* 802F8474 */ void update();
 };
 
-struct ResTLUT {
+struct J2DAnmTexPattern {
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
+
+	template <typename A1>
+	struct TVec2 { };
+	/* TVec2<s16> */
+	struct TVec2__template1 {
+		/* 802FF204 */ TVec2__template1();
+	};
+
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DMaterial {
+	/* 802EA38C */ void setGX();
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
 struct J2DPictureEx {
@@ -309,14 +309,8 @@ extern "C" void load__12J2DPictureExFUc(); // 1
 extern "C" void setCullBack__12J2DPictureExFb(); // 1
 extern "C" void isUsed__12J2DPictureExFPC7ResFONT(); // 1
 extern "C" void setAnimation__12J2DPictureExFP10J2DAnmBase(); // 1
-SECTION_RODATA extern const u8 lit_2555[32];
-SECTION_RODATA extern const u8 lit_2556[32];
-SECTION_RODATA extern const u8 lit_2557[40];
-SECTION_DATA extern void* const __vt__12J2DPictureEx[83 + 1 /* padding */];
-SECTION_SDATA2 extern f32 J2DPictureEx__lit_1517;
-SECTION_SDATA2 extern u8 lit_1784[4];
-SECTION_SDATA2 extern f64 lit_2130;
-SECTION_SDATA2 extern f32 lit_2690[1 + 1 /* padding */];
+extern "C" extern u8 const lit_2556[32];
+extern "C" extern u8 const lit_2557[40];
 
 // 
 // External References:
@@ -429,17 +423,17 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_RODATA extern const u8 j2dDefaultTexMtxInfo[36];
+extern "C" extern u8 const j2dDefaultTexMtxInfo[36];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 804562C0-804562C4 0004+00 rc=0 efc=0 .sdata2    @1517                                                        */
-f32 J2DPictureEx__lit_1517 = 1.0f;
+/* 804562C0-804562C4 0004+00 rc=7 efc=0 rfr=False None .sdata2    @1517                                                        */
+SECTION_SDATA2 static f32 J2DPictureEx__lit_1517 = 1.0f;
 
-/* 80303640-803036EC 00AC+00 rc=0 efc=0 .text      initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT                */
+/* 80303640-803036EC 00AC+00 rc=1 efc=0 rfr=False None .text      initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -451,96 +445,96 @@ asm void J2DPictureEx::initiate(ResTIMG const* field_0, ResTLUT const* field_1) 
 
 
 /* ############################################################################################## */
-/* 803CD4B8-803CD608 014C+04 rc=0 efc=0 .data      __vt__12J2DPictureEx                                         */
-void* const __vt__12J2DPictureEx[83 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__12J2DPictureExFv,
-	(void*)getTypeID__10J2DPictureCFv,
-	(void*)move__7J2DPaneFff,
-	(void*)add__7J2DPaneFff,
-	(void*)resize__7J2DPaneFff,
-	(void*)setCullBack__12J2DPictureExFb,
-	(void*)setCullBack__12J2DPictureExF11_GXCullMode,
-	(void*)setAlpha__12J2DPictureExFUc,
-	(void*)setConnectParent__7J2DPaneFb,
-	(void*)calcMtx__7J2DPaneFv,
-	(void*)update__7J2DPaneFv,
-	(void*)drawSelf__10J2DPictureFff,
-	(void*)drawSelf__12J2DPictureExFffPA3_A4_f,
-	(void*)search__7J2DPaneFUx,
-	(void*)searchUserInfo__7J2DPaneFUx,
-	(void*)makeMatrix__7J2DPaneFff,
-	(void*)makeMatrix__7J2DPaneFffff,
-	(void*)isUsed__12J2DPictureExFPC7ResTIMG,
-	(void*)isUsed__12J2DPictureExFPC7ResFONT,
-	(void*)clearAnmTransform__7J2DPaneFv,
-	(void*)rewriteAlpha__12J2DPictureExFv,
-	(void*)setAnimation__12J2DPictureExFP10J2DAnmBase,
-	(void*)setAnimation__12J2DPictureExFP15J2DAnmTransform,
-	(void*)setAnimation__12J2DPictureExFP11J2DAnmColor,
-	(void*)setAnimation__12J2DPictureExFP16J2DAnmTexPattern,
-	(void*)setAnimation__12J2DPictureExFP19J2DAnmTextureSRTKey,
-	(void*)setAnimation__12J2DPictureExFP15J2DAnmTevRegKey,
-	(void*)setAnimation__12J2DPictureExFP20J2DAnmVisibilityFull,
-	(void*)setAnimation__12J2DPictureExFP14J2DAnmVtxColor,
-	(void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
-	(void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
-	(void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
-	(void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
-	(void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
-	(void*)animationPane__12J2DPictureExFPC15J2DAnmTransform,
-	(void*)initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT,
-	(void*)prepareTexture__12J2DPictureExFUc,
-	(void*)append__12J2DPictureExFPC7ResTIMGf,
-	(void*)append__12J2DPictureExFPC7ResTIMGP10JUTPalettef,
-	(void*)append__12J2DPictureExFPCcf,
-	(void*)append__12J2DPictureExFPCcP10JUTPalettef,
-	(void*)append__12J2DPictureExFP10JUTTexturef,
-	(void*)prepend__12J2DPictureExFPC7ResTIMGf,
-	(void*)prepend__12J2DPictureExFPC7ResTIMGP10JUTPalettef,
-	(void*)prepend__12J2DPictureExFPCcf,
-	(void*)prepend__12J2DPictureExFPCcP10JUTPalettef,
-	(void*)prepend__12J2DPictureExFP10JUTTexturef,
-	(void*)insert__12J2DPictureExFPC7ResTIMGUcf,
-	(void*)insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf,
-	(void*)insert__12J2DPictureExFPCcUcf,
-	(void*)insert__12J2DPictureExFPCcP10JUTPaletteUcf,
-	(void*)insert__12J2DPictureExFP10JUTTextureUcf,
-	(void*)remove__12J2DPictureExFUc,
-	(void*)remove__12J2DPictureExFv,
-	(void*)remove__12J2DPictureExFP10JUTTexture,
-	(void*)draw__12J2DPictureExFffbbb,
-	(void*)draw__12J2DPictureExFffUcbbb,
-	(void*)draw__12J2DPictureExFffffbbb,
-	(void*)drawOut__12J2DPictureExFffffff,
-	(void*)drawOut__12J2DPictureExFffffffff,
-	(void*)func_80304EF0,
-	(void*)load__12J2DPictureExF11_GXTexMapIDUc,
-	(void*)load__12J2DPictureExFUc,
-	(void*)setBlendRatio__10J2DPictureFff,
-	(void*)setBlendColorRatio__12J2DPictureExFff,
-	(void*)setBlendAlphaRatio__12J2DPictureExFff,
-	(void*)changeTexture__12J2DPictureExFPC7ResTIMGUc,
-	(void*)changeTexture__12J2DPictureExFPCcUc,
-	(void*)changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette,
-	(void*)changeTexture__12J2DPictureExFPCcUcP10JUTPalette,
-	(void*)getTexture__12J2DPictureExCFUc,
-	(void*)getTextureCount__12J2DPictureExCFv,
-	(void*)setBlack__12J2DPictureExFQ28JUtility6TColor,
-	(void*)setWhite__12J2DPictureExFQ28JUtility6TColor,
-	(void*)setBlackWhite__12J2DPictureExFQ28JUtility6TColorQ28JUtility6TColor,
-	(void*)getBlack__12J2DPictureExCFv,
-	(void*)getWhite__12J2DPictureExCFv,
-	(void*)getMaterial__12J2DPictureExCFv,
-	(void*)drawFullSet__12J2DPictureExFffffPA3_A4_f,
-	(void*)drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f,
-	(void*)getUsableTlut__12J2DPictureExFUc,
+/* 803CD4B8-803CD608 014C+04 rc=2 efc=0 rfr=False None .data      __vt__12J2DPictureEx                                         */
+SECTION_DATA static void* __vt__12J2DPictureEx[83 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__12J2DPictureExFv,
+	/* 3    */ (void*)getTypeID__10J2DPictureCFv,
+	/* 4    */ (void*)move__7J2DPaneFff,
+	/* 5    */ (void*)add__7J2DPaneFff,
+	/* 6    */ (void*)resize__7J2DPaneFff,
+	/* 7    */ (void*)setCullBack__12J2DPictureExFb,
+	/* 8    */ (void*)setCullBack__12J2DPictureExF11_GXCullMode,
+	/* 9    */ (void*)setAlpha__12J2DPictureExFUc,
+	/* 10   */ (void*)setConnectParent__7J2DPaneFb,
+	/* 11   */ (void*)calcMtx__7J2DPaneFv,
+	/* 12   */ (void*)update__7J2DPaneFv,
+	/* 13   */ (void*)drawSelf__10J2DPictureFff,
+	/* 14   */ (void*)drawSelf__12J2DPictureExFffPA3_A4_f,
+	/* 15   */ (void*)search__7J2DPaneFUx,
+	/* 16   */ (void*)searchUserInfo__7J2DPaneFUx,
+	/* 17   */ (void*)makeMatrix__7J2DPaneFff,
+	/* 18   */ (void*)makeMatrix__7J2DPaneFffff,
+	/* 19   */ (void*)isUsed__12J2DPictureExFPC7ResTIMG,
+	/* 20   */ (void*)isUsed__12J2DPictureExFPC7ResFONT,
+	/* 21   */ (void*)clearAnmTransform__7J2DPaneFv,
+	/* 22   */ (void*)rewriteAlpha__12J2DPictureExFv,
+	/* 23   */ (void*)setAnimation__12J2DPictureExFP10J2DAnmBase,
+	/* 24   */ (void*)setAnimation__12J2DPictureExFP15J2DAnmTransform,
+	/* 25   */ (void*)setAnimation__12J2DPictureExFP11J2DAnmColor,
+	/* 26   */ (void*)setAnimation__12J2DPictureExFP16J2DAnmTexPattern,
+	/* 27   */ (void*)setAnimation__12J2DPictureExFP19J2DAnmTextureSRTKey,
+	/* 28   */ (void*)setAnimation__12J2DPictureExFP15J2DAnmTevRegKey,
+	/* 29   */ (void*)setAnimation__12J2DPictureExFP20J2DAnmVisibilityFull,
+	/* 30   */ (void*)setAnimation__12J2DPictureExFP14J2DAnmVtxColor,
+	/* 31   */ (void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
+	/* 32   */ (void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
+	/* 33   */ (void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
+	/* 34   */ (void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
+	/* 35   */ (void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
+	/* 36   */ (void*)animationPane__12J2DPictureExFPC15J2DAnmTransform,
+	/* 37   */ (void*)initiate__12J2DPictureExFPC7ResTIMGPC7ResTLUT,
+	/* 38   */ (void*)prepareTexture__12J2DPictureExFUc,
+	/* 39   */ (void*)append__12J2DPictureExFPC7ResTIMGf,
+	/* 40   */ (void*)append__12J2DPictureExFPC7ResTIMGP10JUTPalettef,
+	/* 41   */ (void*)append__12J2DPictureExFPCcf,
+	/* 42   */ (void*)append__12J2DPictureExFPCcP10JUTPalettef,
+	/* 43   */ (void*)append__12J2DPictureExFP10JUTTexturef,
+	/* 44   */ (void*)prepend__12J2DPictureExFPC7ResTIMGf,
+	/* 45   */ (void*)prepend__12J2DPictureExFPC7ResTIMGP10JUTPalettef,
+	/* 46   */ (void*)prepend__12J2DPictureExFPCcf,
+	/* 47   */ (void*)prepend__12J2DPictureExFPCcP10JUTPalettef,
+	/* 48   */ (void*)prepend__12J2DPictureExFP10JUTTexturef,
+	/* 49   */ (void*)insert__12J2DPictureExFPC7ResTIMGUcf,
+	/* 50   */ (void*)insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf,
+	/* 51   */ (void*)insert__12J2DPictureExFPCcUcf,
+	/* 52   */ (void*)insert__12J2DPictureExFPCcP10JUTPaletteUcf,
+	/* 53   */ (void*)insert__12J2DPictureExFP10JUTTextureUcf,
+	/* 54   */ (void*)remove__12J2DPictureExFUc,
+	/* 55   */ (void*)remove__12J2DPictureExFv,
+	/* 56   */ (void*)remove__12J2DPictureExFP10JUTTexture,
+	/* 57   */ (void*)draw__12J2DPictureExFffbbb,
+	/* 58   */ (void*)draw__12J2DPictureExFffUcbbb,
+	/* 59   */ (void*)draw__12J2DPictureExFffffbbb,
+	/* 60   */ (void*)drawOut__12J2DPictureExFffffff,
+	/* 61   */ (void*)drawOut__12J2DPictureExFffffffff,
+	/* 62   */ (void*)func_80304EF0,
+	/* 63   */ (void*)load__12J2DPictureExF11_GXTexMapIDUc,
+	/* 64   */ (void*)load__12J2DPictureExFUc,
+	/* 65   */ (void*)setBlendRatio__10J2DPictureFff,
+	/* 66   */ (void*)setBlendColorRatio__12J2DPictureExFff,
+	/* 67   */ (void*)setBlendAlphaRatio__12J2DPictureExFff,
+	/* 68   */ (void*)changeTexture__12J2DPictureExFPC7ResTIMGUc,
+	/* 69   */ (void*)changeTexture__12J2DPictureExFPCcUc,
+	/* 70   */ (void*)changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette,
+	/* 71   */ (void*)changeTexture__12J2DPictureExFPCcUcP10JUTPalette,
+	/* 72   */ (void*)getTexture__12J2DPictureExCFUc,
+	/* 73   */ (void*)getTextureCount__12J2DPictureExCFv,
+	/* 74   */ (void*)setBlack__12J2DPictureExFQ28JUtility6TColor,
+	/* 75   */ (void*)setWhite__12J2DPictureExFQ28JUtility6TColor,
+	/* 76   */ (void*)setBlackWhite__12J2DPictureExFQ28JUtility6TColorQ28JUtility6TColor,
+	/* 77   */ (void*)getBlack__12J2DPictureExCFv,
+	/* 78   */ (void*)getWhite__12J2DPictureExCFv,
+	/* 79   */ (void*)getMaterial__12J2DPictureExCFv,
+	/* 80   */ (void*)drawFullSet__12J2DPictureExFffffPA3_A4_f,
+	/* 81   */ (void*)drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f,
+	/* 82   */ (void*)getUsableTlut__12J2DPictureExFUc,
 	/* padding */
 	NULL,
 };
 
-/* 803036EC-8030393C 0250+00 rc=0 efc=0 .text      __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial */
+/* 803036EC-8030393C 0250+00 rc=1 efc=1 rfr=False None .text      __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,7 +545,7 @@ asm J2DPictureEx::J2DPictureEx(J2DPane* field_0, JSURandomInputStream* field_1, 
 #pragma pop
 
 
-/* 8030393C-803039CC 0090+00 rc=0 efc=0 .text      __dt__12J2DPictureExFv                                       */
+/* 8030393C-803039CC 0090+00 rc=1 efc=0 rfr=False None .text      __dt__12J2DPictureExFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -562,7 +556,7 @@ asm J2DPictureEx::~J2DPictureEx() {
 #pragma pop
 
 
-/* 803039CC-80303AB4 00E8+00 rc=0 efc=0 .text      prepareTexture__12J2DPictureExFUc                            */
+/* 803039CC-80303AB4 00E8+00 rc=1 efc=0 rfr=False None .text      prepareTexture__12J2DPictureExFUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,7 +567,7 @@ asm void J2DPictureEx::prepareTexture(u8 field_0) {
 #pragma pop
 
 
-/* 80303AB4-80303B80 00CC+00 rc=0 efc=0 .text      drawSelf__12J2DPictureExFffPA3_A4_f                          */
+/* 80303AB4-80303B80 00CC+00 rc=1 efc=0 rfr=False None .text      drawSelf__12J2DPictureExFffPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -584,7 +578,7 @@ asm void J2DPictureEx::drawSelf(f32 field_0, f32 field_1, f32 (* field_2)[3][4])
 #pragma pop
 
 
-/* 80303B80-80303BDC 005C+00 rc=0 efc=0 .text      drawFullSet__12J2DPictureExFffffPA3_A4_f                     */
+/* 80303B80-80303BDC 005C+00 rc=1 efc=0 rfr=False None .text      drawFullSet__12J2DPictureExFffffPA3_A4_f                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -596,12 +590,12 @@ asm void J2DPictureEx::drawFullSet(f32 field_0, f32 field_1, f32 field_2, f32 fi
 
 
 /* ############################################################################################## */
-/* 804562C4-804562C8 0004+00 rc=0 efc=0 .sdata2    @1784                                                        */
-u8 lit_1784[4] = {
+/* 804562C4-804562C8 0004+00 rc=5 efc=0 rfr=False None .sdata2    @1784                                                        */
+SECTION_SDATA2 static u8 lit_1784[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80303BDC-80303E5C 0280+00 rc=0 efc=0 .text      drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f            */
+/* 80303BDC-80303E5C 0280+00 rc=1 efc=0 rfr=False None .text      drawTexCoord__12J2DPictureExFffffssssssssPA3_A4_f            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -612,7 +606,7 @@ asm void J2DPictureEx::drawTexCoord(f32 field_0, f32 field_1, f32 field_2, f32 f
 #pragma pop
 
 
-/* 80303E5C-80303EA4 0048+00 rc=0 efc=0 .text      append__12J2DPictureExFPC7ResTIMGP10JUTPalettef              */
+/* 80303E5C-80303EA4 0048+00 rc=1 efc=0 rfr=False None .text      append__12J2DPictureExFPC7ResTIMGP10JUTPalettef              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -623,7 +617,7 @@ asm void J2DPictureEx::append(ResTIMG const* field_0, JUTPalette* field_1, f32 f
 #pragma pop
 
 
-/* 80303EA4-80303EEC 0048+00 rc=0 efc=0 .text      append__12J2DPictureExFPCcP10JUTPalettef                     */
+/* 80303EA4-80303EEC 0048+00 rc=1 efc=0 rfr=False None .text      append__12J2DPictureExFPCcP10JUTPalettef                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -634,7 +628,7 @@ asm void J2DPictureEx::append(char const* field_0, JUTPalette* field_1, f32 fiel
 #pragma pop
 
 
-/* 80303EEC-80303F34 0048+00 rc=0 efc=0 .text      append__12J2DPictureExFP10JUTTexturef                        */
+/* 80303EEC-80303F34 0048+00 rc=1 efc=0 rfr=False None .text      append__12J2DPictureExFP10JUTTexturef                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -645,7 +639,7 @@ asm void J2DPictureEx::append(JUTTexture* field_0, f32 field_1) {
 #pragma pop
 
 
-/* 80303F34-80303FD8 00A4+00 rc=0 efc=0 .text      insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf            */
+/* 80303F34-80303FD8 00A4+00 rc=1 efc=0 rfr=False None .text      insert__12J2DPictureExFPC7ResTIMGP10JUTPaletteUcf            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -656,7 +650,7 @@ asm void J2DPictureEx::insert(ResTIMG const* field_0, JUTPalette* field_1, u8 fi
 #pragma pop
 
 
-/* 80303FD8-80304048 0070+00 rc=0 efc=0 .text      insert__12J2DPictureExFPCcP10JUTPaletteUcf                   */
+/* 80303FD8-80304048 0070+00 rc=1 efc=0 rfr=False None .text      insert__12J2DPictureExFPCcP10JUTPaletteUcf                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -667,7 +661,7 @@ asm void J2DPictureEx::insert(char const* field_0, JUTPalette* field_1, u8 field
 #pragma pop
 
 
-/* 80304048-803040E4 009C+00 rc=0 efc=0 .text      insert__12J2DPictureExFP10JUTTextureUcf                      */
+/* 80304048-803040E4 009C+00 rc=1 efc=0 rfr=False None .text      insert__12J2DPictureExFP10JUTTextureUcf                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -678,7 +672,7 @@ asm void J2DPictureEx::insert(JUTTexture* field_0, u8 field_1, f32 field_2) {
 #pragma pop
 
 
-/* 803040E4-8030437C 0298+00 rc=0 efc=0 .text      insertCommon__12J2DPictureExFUcf                             */
+/* 803040E4-8030437C 0298+00 rc=2 efc=0 rfr=False None .text      insertCommon__12J2DPictureExFUcf                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -689,7 +683,7 @@ asm void J2DPictureEx::insertCommon(u8 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 8030437C-8030446C 00F0+00 rc=0 efc=0 .text      isInsert__12J2DPictureExCFUc                                 */
+/* 8030437C-8030446C 00F0+00 rc=2 efc=0 rfr=False None .text      isInsert__12J2DPictureExCFUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -700,7 +694,7 @@ asm void J2DPictureEx::isInsert(u8 field_0) const {
 #pragma pop
 
 
-/* 8030446C-80304608 019C+00 rc=0 efc=0 .text      remove__12J2DPictureExFUc                                    */
+/* 8030446C-80304608 019C+00 rc=1 efc=0 rfr=False None .text      remove__12J2DPictureExFUc                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -711,7 +705,7 @@ asm void J2DPictureEx::remove(u8 field_0) {
 #pragma pop
 
 
-/* 80304608-8030466C 0064+00 rc=0 efc=0 .text      remove__12J2DPictureExFv                                     */
+/* 80304608-8030466C 0064+00 rc=1 efc=0 rfr=False None .text      remove__12J2DPictureExFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -722,7 +716,7 @@ asm void J2DPictureEx::remove() {
 #pragma pop
 
 
-/* 8030466C-80304728 00BC+00 rc=0 efc=0 .text      remove__12J2DPictureExFP10JUTTexture                         */
+/* 8030466C-80304728 00BC+00 rc=1 efc=0 rfr=False None .text      remove__12J2DPictureExFP10JUTTexture                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -733,7 +727,7 @@ asm void J2DPictureEx::remove(JUTTexture* field_0) {
 #pragma pop
 
 
-/* 80304728-8030477C 0054+00 rc=0 efc=0 .text      isRemove__12J2DPictureExCFUc                                 */
+/* 80304728-8030477C 0054+00 rc=1 efc=0 rfr=False None .text      isRemove__12J2DPictureExCFUc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -745,10 +739,10 @@ asm void J2DPictureEx::isRemove(u8 field_0) const {
 
 
 /* ############################################################################################## */
-/* 804562C8-804562D0 0008+00 rc=0 efc=0 .sdata2    @2130                                                        */
-f64 lit_2130 = 4503601774854144.0 /* cast s32 to float */;
+/* 804562C8-804562D0 0008+00 rc=2 efc=0 rfr=False None .sdata2    @2130                                                        */
+SECTION_SDATA2 static f64 lit_2130 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8030477C-80304890 0114+00 rc=0 efc=0 .text      draw__12J2DPictureExFffUcbbb                                 */
+/* 8030477C-80304890 0114+00 rc=1 efc=0 rfr=False None .text      draw__12J2DPictureExFffUcbbb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -759,7 +753,7 @@ asm void J2DPictureEx::draw(f32 field_0, f32 field_1, u8 field_2, bool field_3, 
 #pragma pop
 
 
-/* 80304890-80304D88 04F8+00 rc=0 efc=0 .text      draw__12J2DPictureExFffffbbb                                 */
+/* 80304890-80304D88 04F8+00 rc=1 efc=0 rfr=False None .text      draw__12J2DPictureExFffffbbb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -770,7 +764,7 @@ asm void J2DPictureEx::draw(f32 field_0, f32 field_1, f32 field_2, f32 field_3, 
 #pragma pop
 
 
-/* 80304D88-80304EF0 0168+00 rc=0 efc=0 .text      drawOut__12J2DPictureExFffffff                               */
+/* 80304D88-80304EF0 0168+00 rc=1 efc=0 rfr=False None .text      drawOut__12J2DPictureExFffffff                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -781,7 +775,7 @@ asm void J2DPictureEx::drawOut(f32 field_0, f32 field_1, f32 field_2, f32 field_
 #pragma pop
 
 
-/* 80304EF0-80305264 0374+00 rc=0 efc=0 .text      drawOut__12J2DPictureExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
+/* 80304EF0-80305264 0374+00 rc=1 efc=0 rfr=False None .text      drawOut__12J2DPictureExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -792,7 +786,7 @@ asm void J2DPictureEx::drawOut(JGeometry::TBox2<f32> const& field_0, JGeometry::
 #pragma pop
 
 
-/* 80305264-803052AC 0048+00 rc=0 efc=0 .text      load__12J2DPictureExF11_GXTexMapIDUc                         */
+/* 80305264-803052AC 0048+00 rc=1 efc=0 rfr=False None .text      load__12J2DPictureExF11_GXTexMapIDUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -803,7 +797,7 @@ asm void J2DPictureEx::load(_GXTexMapID field_0, u8 field_1) {
 #pragma pop
 
 
-/* 803052AC-803053E0 0134+00 rc=0 efc=0 .text      setTevOrder__12J2DPictureExFUcUcb                            */
+/* 803052AC-803053E0 0134+00 rc=3 efc=0 rfr=False None .text      setTevOrder__12J2DPictureExFUcUcb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -814,7 +808,7 @@ asm void J2DPictureEx::setTevOrder(u8 field_0, u8 field_1, bool field_2) {
 #pragma pop
 
 
-/* 803053E0-80305688 02A8+00 rc=0 efc=0 .text      setTevStage__12J2DPictureExFUcUcb                            */
+/* 803053E0-80305688 02A8+00 rc=3 efc=0 rfr=False None .text      setTevStage__12J2DPictureExFUcUcb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -826,13 +820,13 @@ asm void J2DPictureEx::setTevStage(u8 field_0, u8 field_1, bool field_2) {
 
 
 /* ############################################################################################## */
-/* 803A1D50-803A1D70 0020+00 rc=0 efc=0 .rodata    @2555                                                        */
-const u8 lit_2555[32] = {
+/* 803A1D50-803A1D70 0020+00 rc=1 efc=0 rfr=False None .rodata    @2555                                                        */
+SECTION_RODATA static u8 const lit_2555[32] = {
 	0x0F, 0x08, 0x0A, 0x0F, 0x0F, 0x08, 0x0A, 0x0F, 0x0F, 0x08, 0x0E, 0x0F, 0x0F, 0x08, 0x0E, 0x00,
 	0x0F, 0x0A, 0x00, 0x0F, 0x02, 0x04, 0x08, 0x0F, 0x02, 0x04, 0x08, 0x0F, 0x02, 0x04, 0x00, 0x0F,
 };
 
-/* 80305688-80305928 02A0+00 rc=0 efc=0 .text      setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
+/* 80305688-80305928 02A0+00 rc=1 efc=0 rfr=False None .text      setStage__12J2DPictureExFP11J2DTevStageQ212J2DPictureEx10stage_enum */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -844,14 +838,14 @@ asm void J2DPictureEx::setStage(J2DTevStage* field_0, J2DPictureEx::stage_enum f
 
 
 /* ############################################################################################## */
-/* 804562D0-804562D8 0004+04 rc=0 efc=0 .sdata2    @2690                                                        */
-f32 lit_2690[1 + 1 /* padding */] = {
+/* 804562D0-804562D8 0004+04 rc=1 efc=0 rfr=False None .sdata2    @2690                                                        */
+SECTION_SDATA2 static f32 lit_2690[1 + 1 /* padding */] = {
 	255.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80305928-80305C70 0348+00 rc=0 efc=0 .text      setTevKColor__12J2DPictureExFUc                              */
+/* 80305928-80305C70 0348+00 rc=5 efc=0 rfr=False None .text      setTevKColor__12J2DPictureExFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -862,7 +856,7 @@ asm void J2DPictureEx::setTevKColor(u8 field_0) {
 #pragma pop
 
 
-/* 80305C70-80305D18 00A8+00 rc=0 efc=0 .text      setTevKColorSel__12J2DPictureExFUc                           */
+/* 80305C70-80305D18 00A8+00 rc=3 efc=0 rfr=False None .text      setTevKColorSel__12J2DPictureExFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -873,7 +867,7 @@ asm void J2DPictureEx::setTevKColorSel(u8 field_0) {
 #pragma pop
 
 
-/* 80305D18-80305DC0 00A8+00 rc=0 efc=0 .text      setTevKAlphaSel__12J2DPictureExFUc                           */
+/* 80305D18-80305DC0 00A8+00 rc=3 efc=0 rfr=False None .text      setTevKAlphaSel__12J2DPictureExFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -884,7 +878,7 @@ asm void J2DPictureEx::setTevKAlphaSel(u8 field_0) {
 #pragma pop
 
 
-/* 80305DC0-80305ED4 0114+00 rc=0 efc=0 .text      shiftSetBlendRatio__12J2DPictureExFUcfbb                     */
+/* 80305DC0-80305ED4 0114+00 rc=2 efc=0 rfr=False None .text      shiftSetBlendRatio__12J2DPictureExFUcfbb                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -895,7 +889,7 @@ asm void J2DPictureEx::shiftSetBlendRatio(u8 field_0, f32 field_1, bool field_2,
 #pragma pop
 
 
-/* 80305ED4-80305F34 0060+00 rc=0 efc=0 .text      setBlendColorRatio__12J2DPictureExFff                        */
+/* 80305ED4-80305F34 0060+00 rc=1 efc=0 rfr=False None .text      setBlendColorRatio__12J2DPictureExFff                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -906,7 +900,7 @@ asm void J2DPictureEx::setBlendColorRatio(f32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 80305F34-80305F94 0060+00 rc=0 efc=0 .text      setBlendAlphaRatio__12J2DPictureExFff                        */
+/* 80305F34-80305F94 0060+00 rc=1 efc=0 rfr=False None .text      setBlendAlphaRatio__12J2DPictureExFff                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -917,7 +911,7 @@ asm void J2DPictureEx::setBlendAlphaRatio(f32 field_0, f32 field_1) {
 #pragma pop
 
 
-/* 80305F94-803060DC 0148+00 rc=0 efc=0 .text      changeTexture__12J2DPictureExFPC7ResTIMGUc                   */
+/* 80305F94-803060DC 0148+00 rc=1 efc=0 rfr=False None .text      changeTexture__12J2DPictureExFPC7ResTIMGUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -928,7 +922,7 @@ asm void J2DPictureEx::changeTexture(ResTIMG const* field_0, u8 field_1) {
 #pragma pop
 
 
-/* 803060DC-80306134 0058+00 rc=0 efc=0 .text      changeTexture__12J2DPictureExFPCcUc                          */
+/* 803060DC-80306134 0058+00 rc=1 efc=0 rfr=False None .text      changeTexture__12J2DPictureExFPCcUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -939,7 +933,7 @@ asm void J2DPictureEx::changeTexture(char const* field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80306134-80306298 0164+00 rc=0 efc=0 .text      changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette      */
+/* 80306134-80306298 0164+00 rc=1 efc=0 rfr=False None .text      changeTexture__12J2DPictureExFPC7ResTIMGUcP10JUTPalette      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -950,7 +944,7 @@ asm void J2DPictureEx::changeTexture(ResTIMG const* field_0, u8 field_1, JUTPale
 #pragma pop
 
 
-/* 80306298-803062F8 0060+00 rc=0 efc=0 .text      changeTexture__12J2DPictureExFPCcUcP10JUTPalette             */
+/* 80306298-803062F8 0060+00 rc=1 efc=0 rfr=False None .text      changeTexture__12J2DPictureExFPCcUcP10JUTPalette             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -961,7 +955,7 @@ asm void J2DPictureEx::changeTexture(char const* field_0, u8 field_1, JUTPalette
 #pragma pop
 
 
-/* 803062F8-80306350 0058+00 rc=0 efc=0 .text      getTexture__12J2DPictureExCFUc                               */
+/* 803062F8-80306350 0058+00 rc=1 efc=0 rfr=False None .text      getTexture__12J2DPictureExCFUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -972,7 +966,7 @@ asm void J2DPictureEx::getTexture(u8 field_0) const {
 #pragma pop
 
 
-/* 80306350-80306370 0020+00 rc=0 efc=0 .text      getTextureCount__12J2DPictureExCFv                           */
+/* 80306350-80306370 0020+00 rc=1 efc=0 rfr=False None .text      getTextureCount__12J2DPictureExCFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -983,7 +977,7 @@ asm void J2DPictureEx::getTextureCount() const {
 #pragma pop
 
 
-/* 80306370-803063F8 0088+00 rc=0 efc=0 .text      setBlack__12J2DPictureExFQ28JUtility6TColor                  */
+/* 80306370-803063F8 0088+00 rc=1 efc=0 rfr=False None .text      setBlack__12J2DPictureExFQ28JUtility6TColor                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -994,7 +988,7 @@ asm void J2DPictureEx::setBlack(JUtility::TColor field_0) {
 #pragma pop
 
 
-/* 803063F8-80306480 0088+00 rc=0 efc=0 .text      setWhite__12J2DPictureExFQ28JUtility6TColor                  */
+/* 803063F8-80306480 0088+00 rc=1 efc=0 rfr=False None .text      setWhite__12J2DPictureExFQ28JUtility6TColor                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1005,7 +999,7 @@ asm void J2DPictureEx::setWhite(JUtility::TColor field_0) {
 #pragma pop
 
 
-/* 80306480-80306664 01E4+00 rc=0 efc=0 .text      setBlackWhite__12J2DPictureExFQ28JUtility6TColorQ28JUtility6TColor */
+/* 80306480-80306664 01E4+00 rc=1 efc=0 rfr=False None .text      setBlackWhite__12J2DPictureExFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1016,7 +1010,7 @@ asm void J2DPictureEx::setBlackWhite(JUtility::TColor field_0, JUtility::TColor 
 #pragma pop
 
 
-/* 80306664-80306824 01C0+00 rc=0 efc=0 .text      getBlackWhite__12J2DPictureExCFPQ28JUtility6TColorPQ28JUtility6TColor */
+/* 80306664-80306824 01C0+00 rc=4 efc=0 rfr=False None .text      getBlackWhite__12J2DPictureExCFPQ28JUtility6TColorPQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1027,7 +1021,7 @@ asm void J2DPictureEx::getBlackWhite(JUtility::TColor* field_0, JUtility::TColor
 #pragma pop
 
 
-/* 80306824-803068F8 00D4+00 rc=0 efc=0 .text      isSetBlackWhite__12J2DPictureExCFQ28JUtility6TColorQ28JUtility6TColor */
+/* 80306824-803068F8 00D4+00 rc=1 efc=0 rfr=False None .text      isSetBlackWhite__12J2DPictureExCFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1038,7 +1032,7 @@ asm void J2DPictureEx::isSetBlackWhite(JUtility::TColor field_0, JUtility::TColo
 #pragma pop
 
 
-/* 803068F8-80306958 0060+00 rc=0 efc=0 .text      getBlack__12J2DPictureExCFv                                  */
+/* 803068F8-80306958 0060+00 rc=1 efc=0 rfr=False None .text      getBlack__12J2DPictureExCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1049,7 +1043,7 @@ asm void J2DPictureEx::getBlack() const {
 #pragma pop
 
 
-/* 80306958-803069B8 0060+00 rc=0 efc=0 .text      getWhite__12J2DPictureExCFv                                  */
+/* 80306958-803069B8 0060+00 rc=1 efc=0 rfr=False None .text      getWhite__12J2DPictureExCFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1060,7 +1054,7 @@ asm void J2DPictureEx::getWhite() const {
 #pragma pop
 
 
-/* 803069B8-803069D8 0020+00 rc=0 efc=0 .text      setAlpha__12J2DPictureExFUc                                  */
+/* 803069B8-803069D8 0020+00 rc=1 efc=0 rfr=False None .text      setAlpha__12J2DPictureExFUc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1071,7 +1065,7 @@ asm void J2DPictureEx::setAlpha(u8 field_0) {
 #pragma pop
 
 
-/* 803069D8-80306A0C 0034+00 rc=0 efc=0 .text      setCullBack__12J2DPictureExF11_GXCullMode                    */
+/* 803069D8-80306A0C 0034+00 rc=1 efc=0 rfr=False None .text      setCullBack__12J2DPictureExF11_GXCullMode                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1082,7 +1076,7 @@ asm void J2DPictureEx::setCullBack(_GXCullMode field_0) {
 #pragma pop
 
 
-/* 80306A0C-80306A24 0018+00 rc=0 efc=0 .text      rewriteAlpha__12J2DPictureExFv                               */
+/* 80306A0C-80306A24 0018+00 rc=1 efc=0 rfr=False None .text      rewriteAlpha__12J2DPictureExFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1093,7 +1087,7 @@ asm void J2DPictureEx::rewriteAlpha() {
 #pragma pop
 
 
-/* 80306A24-80306AC4 00A0+00 rc=0 efc=0 .text      isUsed__12J2DPictureExFPC7ResTIMG                            */
+/* 80306A24-80306AC4 00A0+00 rc=1 efc=0 rfr=False None .text      isUsed__12J2DPictureExFPC7ResTIMG                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1104,7 +1098,7 @@ asm void J2DPictureEx::isUsed(ResTIMG const* field_0) {
 #pragma pop
 
 
-/* 80306AC4-80306AF0 002C+00 rc=0 efc=0 .text      setAnimation__12J2DPictureExFP11J2DAnmColor                  */
+/* 80306AC4-80306AF0 002C+00 rc=1 efc=0 rfr=False None .text      setAnimation__12J2DPictureExFP11J2DAnmColor                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1115,7 +1109,7 @@ asm void J2DPictureEx::setAnimation(J2DAnmColor* field_0) {
 #pragma pop
 
 
-/* 80306AF0-80306B1C 002C+00 rc=0 efc=0 .text      setAnimation__12J2DPictureExFP19J2DAnmTextureSRTKey          */
+/* 80306AF0-80306B1C 002C+00 rc=1 efc=0 rfr=False None .text      setAnimation__12J2DPictureExFP19J2DAnmTextureSRTKey          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1126,7 +1120,7 @@ asm void J2DPictureEx::setAnimation(J2DAnmTextureSRTKey* field_0) {
 #pragma pop
 
 
-/* 80306B1C-80306B48 002C+00 rc=0 efc=0 .text      setAnimation__12J2DPictureExFP16J2DAnmTexPattern             */
+/* 80306B1C-80306B48 002C+00 rc=1 efc=0 rfr=False None .text      setAnimation__12J2DPictureExFP16J2DAnmTexPattern             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1137,7 +1131,7 @@ asm void J2DPictureEx::setAnimation(J2DAnmTexPattern* field_0) {
 #pragma pop
 
 
-/* 80306B48-80306B74 002C+00 rc=0 efc=0 .text      setAnimation__12J2DPictureExFP15J2DAnmTevRegKey              */
+/* 80306B48-80306B74 002C+00 rc=1 efc=0 rfr=False None .text      setAnimation__12J2DPictureExFP15J2DAnmTevRegKey              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1148,7 +1142,7 @@ asm void J2DPictureEx::setAnimation(J2DAnmTevRegKey* field_0) {
 #pragma pop
 
 
-/* 80306B74-80306B7C 0008+00 rc=0 efc=0 .text      setAnimation__12J2DPictureExFP20J2DAnmVisibilityFull         */
+/* 80306B74-80306B7C 0008+00 rc=1 efc=0 rfr=False None .text      setAnimation__12J2DPictureExFP20J2DAnmVisibilityFull         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1159,7 +1153,7 @@ asm void J2DPictureEx::setAnimation(J2DAnmVisibilityFull* field_0) {
 #pragma pop
 
 
-/* 80306B7C-80306C70 00F4+00 rc=0 efc=0 .text      setAnimation__12J2DPictureExFP14J2DAnmVtxColor               */
+/* 80306B7C-80306C70 00F4+00 rc=1 efc=0 rfr=False None .text      setAnimation__12J2DPictureExFP14J2DAnmVtxColor               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1170,7 +1164,7 @@ asm void J2DPictureEx::setAnimation(J2DAnmVtxColor* field_0) {
 #pragma pop
 
 
-/* 80306C70-80306DC8 0158+00 rc=0 efc=0 .text      animationPane__12J2DPictureExFPC15J2DAnmTransform            */
+/* 80306C70-80306DC8 0158+00 rc=1 efc=0 rfr=False None .text      animationPane__12J2DPictureExFPC15J2DAnmTransform            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1181,7 +1175,7 @@ asm void J2DPictureEx::animationPane(J2DAnmTransform const* field_0) {
 #pragma pop
 
 
-/* 80306DC8-80306ED4 010C+00 rc=0 efc=0 .text      getUsableTlut__12J2DPictureExFUc                             */
+/* 80306DC8-80306ED4 010C+00 rc=1 efc=0 rfr=False None .text      getUsableTlut__12J2DPictureExFUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1192,7 +1186,7 @@ asm void J2DPictureEx::getUsableTlut(u8 field_0) {
 #pragma pop
 
 
-/* 80306ED4-80306F04 0030+00 rc=0 efc=0 .text      append__12J2DPictureExFPC7ResTIMGf                           */
+/* 80306ED4-80306F04 0030+00 rc=1 efc=0 rfr=False None .text      append__12J2DPictureExFPC7ResTIMGf                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1203,7 +1197,7 @@ asm void J2DPictureEx::append(ResTIMG const* field_0, f32 field_1) {
 #pragma pop
 
 
-/* 80306F04-80306F34 0030+00 rc=0 efc=0 .text      append__12J2DPictureExFPCcf                                  */
+/* 80306F04-80306F34 0030+00 rc=1 efc=0 rfr=False None .text      append__12J2DPictureExFPCcf                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1214,7 +1208,7 @@ asm void J2DPictureEx::append(char const* field_0, f32 field_1) {
 #pragma pop
 
 
-/* 80306F34-80306F64 0030+00 rc=0 efc=0 .text      prepend__12J2DPictureExFP10JUTTexturef                       */
+/* 80306F34-80306F64 0030+00 rc=1 efc=0 rfr=False None .text      prepend__12J2DPictureExFP10JUTTexturef                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1225,7 +1219,7 @@ asm void J2DPictureEx::prepend(JUTTexture* field_0, f32 field_1) {
 #pragma pop
 
 
-/* 80306F64-80306F94 0030+00 rc=0 efc=0 .text      prepend__12J2DPictureExFPCcP10JUTPalettef                    */
+/* 80306F64-80306F94 0030+00 rc=1 efc=0 rfr=False None .text      prepend__12J2DPictureExFPCcP10JUTPalettef                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1236,7 +1230,7 @@ asm void J2DPictureEx::prepend(char const* field_0, JUTPalette* field_1, f32 fie
 #pragma pop
 
 
-/* 80306F94-80306FC4 0030+00 rc=0 efc=0 .text      prepend__12J2DPictureExFPCcf                                 */
+/* 80306F94-80306FC4 0030+00 rc=1 efc=0 rfr=False None .text      prepend__12J2DPictureExFPCcf                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1247,7 +1241,7 @@ asm void J2DPictureEx::prepend(char const* field_0, f32 field_1) {
 #pragma pop
 
 
-/* 80306FC4-80306FF4 0030+00 rc=0 efc=0 .text      prepend__12J2DPictureExFPC7ResTIMGP10JUTPalettef             */
+/* 80306FC4-80306FF4 0030+00 rc=1 efc=0 rfr=False None .text      prepend__12J2DPictureExFPC7ResTIMGP10JUTPalettef             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1258,7 +1252,7 @@ asm void J2DPictureEx::prepend(ResTIMG const* field_0, JUTPalette* field_1, f32 
 #pragma pop
 
 
-/* 80306FF4-80307024 0030+00 rc=0 efc=0 .text      prepend__12J2DPictureExFPC7ResTIMGf                          */
+/* 80306FF4-80307024 0030+00 rc=1 efc=0 rfr=False None .text      prepend__12J2DPictureExFPC7ResTIMGf                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1269,7 +1263,7 @@ asm void J2DPictureEx::prepend(ResTIMG const* field_0, f32 field_1) {
 #pragma pop
 
 
-/* 80307024-80307058 0034+00 rc=0 efc=0 .text      insert__12J2DPictureExFPCcUcf                                */
+/* 80307024-80307058 0034+00 rc=1 efc=0 rfr=False None .text      insert__12J2DPictureExFPCcUcf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1280,7 +1274,7 @@ asm void J2DPictureEx::insert(char const* field_0, u8 field_1, f32 field_2) {
 #pragma pop
 
 
-/* 80307058-8030708C 0034+00 rc=0 efc=0 .text      insert__12J2DPictureExFPC7ResTIMGUcf                         */
+/* 80307058-8030708C 0034+00 rc=1 efc=0 rfr=False None .text      insert__12J2DPictureExFPC7ResTIMGUcf                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1291,7 +1285,7 @@ asm void J2DPictureEx::insert(ResTIMG const* field_0, u8 field_1, f32 field_2) {
 #pragma pop
 
 
-/* 8030708C-803070D0 0044+00 rc=0 efc=0 .text      draw__12J2DPictureExFffbbb                                   */
+/* 8030708C-803070D0 0044+00 rc=1 efc=0 rfr=False None .text      draw__12J2DPictureExFffbbb                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1302,7 +1296,7 @@ asm void J2DPictureEx::draw(f32 field_0, f32 field_1, bool field_2, bool field_3
 #pragma pop
 
 
-/* 803070D0-80307134 0064+00 rc=0 efc=0 .text      drawOut__12J2DPictureExFffffffff                             */
+/* 803070D0-80307134 0064+00 rc=1 efc=0 rfr=False None .text      drawOut__12J2DPictureExFffffffff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1313,7 +1307,7 @@ asm void J2DPictureEx::drawOut(f32 field_0, f32 field_1, f32 field_2, f32 field_
 #pragma pop
 
 
-/* 80307134-80307168 0034+00 rc=0 efc=0 .text      load__12J2DPictureExFUc                                      */
+/* 80307134-80307168 0034+00 rc=1 efc=0 rfr=False None .text      load__12J2DPictureExFUc                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1324,7 +1318,7 @@ asm void J2DPictureEx::load(u8 field_0) {
 #pragma pop
 
 
-/* 80307168-803071A4 003C+00 rc=0 efc=0 .text      setCullBack__12J2DPictureExFb                                */
+/* 80307168-803071A4 003C+00 rc=1 efc=0 rfr=False None .text      setCullBack__12J2DPictureExFb                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1335,7 +1329,7 @@ asm void J2DPictureEx::setCullBack(bool field_0) {
 #pragma pop
 
 
-/* 803071A4-803071C4 0020+00 rc=0 efc=0 .text      isUsed__12J2DPictureExFPC7ResFONT                            */
+/* 803071A4-803071C4 0020+00 rc=1 efc=0 rfr=False None .text      isUsed__12J2DPictureExFPC7ResFONT                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1346,7 +1340,7 @@ asm void J2DPictureEx::isUsed(ResFONT const* field_0) {
 #pragma pop
 
 
-/* 803071C4-803071E4 0020+00 rc=0 efc=0 .text      setAnimation__12J2DPictureExFP10J2DAnmBase                   */
+/* 803071C4-803071E4 0020+00 rc=1 efc=0 rfr=False None .text      setAnimation__12J2DPictureExFP10J2DAnmBase                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1358,14 +1352,14 @@ asm void J2DPictureEx::setAnimation(J2DAnmBase* field_0) {
 
 
 /* ############################################################################################## */
-/* 803A1D70-803A1D90 0020+00 rc=0 efc=0 .rodata    @2556                                                        */
-const u8 lit_2556[32] = {
+/* 803A1D70-803A1D90 0020+00 rc=0 efc=0 rfr=False None .rodata    @2556                                                        */
+SECTION_RODATA u8 const lit_2556[32] = {
 	0x07, 0x04, 0x05, 0x07, 0x05, 0x07, 0x07, 0x07, 0x07, 0x04, 0x06, 0x07, 0x07, 0x04, 0x06, 0x00,
 	0x07, 0x05, 0x00, 0x07, 0x01, 0x02, 0x04, 0x07, 0x07, 0x07, 0x07, 0x02, 0x01, 0x02, 0x00, 0x07,
 };
 
-/* 803A1D90-803A1DB8 0028+00 rc=0 efc=0 .rodata    @2557                                                        */
-const u8 lit_2557[40] = {
+/* 803A1D90-803A1DB8 0028+00 rc=0 efc=0 rfr=False None .rodata    @2557                                                        */
+SECTION_RODATA u8 const lit_2557[40] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00,
 	0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

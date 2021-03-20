@@ -21,7 +21,7 @@ class VirtualTable(ReferenceArray):
     def create(identifier: Identifier, addr: int, values: List[int], padding_values: List[int]) -> "VirtualTable":
         return VirtualTable(
             identifier=identifier,
-            data_type=ConstType(PointerType(VOID)),
+            data_type=PointerType(VOID),
             addr=addr,
             size=4 * len(values),
             padding = 4 * len(padding_values),

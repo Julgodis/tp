@@ -285,4 +285,9 @@ LIBS := \
 	$(BUILD_DIR)/libodemuexi2.a \
 	$(BUILD_DIR)/libodenotstub.a \
 
+
+TESTXX := \
+
+
+
 RELS := \

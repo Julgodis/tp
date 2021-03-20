@@ -32,13 +32,13 @@ void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); // 2
 
 extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
 extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter(); // 1
-SECTION_DATA extern u8 g_fopScnTg_SceneList[12 + 4 /* padding */];
+extern "C" extern u8 g_fopScnTg_SceneList[12 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 8001EC74-8001ECB0 003C+00 rc=0 efc=0 .text      fopScnIt_Judge__FPFPvPv_PvPv                                 */
+/* 8001EC74-8001ECB0 003C+00 rc=1 efc=1 rfr=False None .text      fopScnIt_Judge__FPFPvPv_PvPv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -46,13 +46,13 @@ extern "C" void cAPIGph_BeforeOfDraw__Fv(); // 1
 extern "C" void cAPIGph_AfterOfDraw__Fv(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_SBSS extern u8 g_fpcLf_type[4 + 4 /* padding */];
+extern "C" extern u8 g_fpcLf_type[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80023954-800239F4 00A0+00 rc=0 efc=0 .text      fpcDw_Execute__FP18base_process_class                        */
+/* 80023954-800239F4 00A0+00 rc=1 efc=1 rfr=False None .text      fpcDw_Execute__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,7 +63,7 @@ asm void fpcDw_Execute(base_process_class* field_0) {
 #pragma pop
 
 
-/* 800239F4-80023A48 0054+00 rc=0 efc=0 .text      fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i                         */
+/* 800239F4-80023A48 0054+00 rc=1 efc=1 rfr=False None .text      fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

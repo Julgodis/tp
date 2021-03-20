@@ -35,7 +35,7 @@ extern "C" void getOff__10e_wb_classFv(); // 1
 extern "C" void checkDownDamage__10e_wb_classFv(); // 1
 extern "C" void checkNormalRideMode__10e_wb_classCFv(); // 1
 extern "C" void setRunRideMode__10e_wb_classFv(); // 1
-SECTION_SBSS extern u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
+extern "C" extern u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -48,7 +48,7 @@ extern "C" void setLinkRiding__14Z2CreatureRideFb(); // 1
 // Declarations:
 // 
 
-/* 80037C7C-80037C90 0014+00 rc=0 efc=0 .text      checkWait__10e_wb_classFv                                    */
+/* 80037C7C-80037C90 0014+00 rc=1 efc=1 rfr=False None .text      checkWait__10e_wb_classFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -59,7 +59,7 @@ asm void e_wb_class::checkWait() {
 #pragma pop
 
 
-/* 80037C90-80037CB0 0020+00 rc=0 efc=0 .text      setPlayerRideNow__10e_wb_classFv                             */
+/* 80037C90-80037CB0 0020+00 rc=2 efc=2 rfr=False None .text      setPlayerRideNow__10e_wb_classFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +70,7 @@ asm void e_wb_class::setPlayerRideNow() {
 #pragma pop
 
 
-/* 80037CB0-80037CF4 0044+00 rc=0 efc=0 .text      setPlayerRide__10e_wb_classFv                                */
+/* 80037CB0-80037CF4 0044+00 rc=3 efc=3 rfr=False None .text      setPlayerRide__10e_wb_classFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +81,7 @@ asm void e_wb_class::setPlayerRide() {
 #pragma pop
 
 
-/* 80037CF4-80037D68 0074+00 rc=0 efc=0 .text      getOff__10e_wb_classFv                                       */
+/* 80037CF4-80037D68 0074+00 rc=1 efc=1 rfr=False None .text      getOff__10e_wb_classFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +92,7 @@ asm void e_wb_class::getOff() {
 #pragma pop
 
 
-/* 80037D68-80037D94 002C+00 rc=0 efc=0 .text      checkDownDamage__10e_wb_classFv                              */
+/* 80037D68-80037D94 002C+00 rc=3 efc=2 rfr=False None .text      checkDownDamage__10e_wb_classFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +103,7 @@ asm void e_wb_class::checkDownDamage() {
 #pragma pop
 
 
-/* 80037D94-80037DBC 0028+00 rc=0 efc=0 .text      checkNormalRideMode__10e_wb_classCFv                         */
+/* 80037D94-80037DBC 0028+00 rc=2 efc=2 rfr=False None .text      checkNormalRideMode__10e_wb_classCFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,7 +114,7 @@ asm void e_wb_class::checkNormalRideMode() const {
 #pragma pop
 
 
-/* 80037DBC-80037DE4 0028+00 rc=0 efc=0 .text      setRunRideMode__10e_wb_classFv                               */
+/* 80037DBC-80037DE4 0028+00 rc=1 efc=1 rfr=False None .text      setRunRideMode__10e_wb_classFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,6 +126,6 @@ asm void e_wb_class::setRunRideMode() {
 
 
 /* ############################################################################################## */
-/* 80450DF8-80450E00 0004+04 rc=0 efc=0 .sbss      m_top__12daTagHstop_c                                        */
+/* 80450DF8-80450E00 0004+04 rc=1 efc=1 rfr=False None .sbss      m_top__12daTagHstop_c                                        */
 u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
 

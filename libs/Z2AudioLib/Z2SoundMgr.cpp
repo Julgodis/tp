@@ -15,12 +15,6 @@ struct JASTrack {
 	/* 80292918 */ void writePort(u32, u16);
 };
 
-struct JAISoundID {
-};
-
-struct JAISound {
-};
-
 struct JAISoundHandle {
 };
 
@@ -31,6 +25,12 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
+};
+
+struct JAISound {
 };
 
 struct Z2SoundMgr {
@@ -141,16 +141,8 @@ extern "C" void stop__10Z2SoundMgrFv(); // 1
 extern "C" void initParams__10Z2SoundMgrFv(); // 1
 extern "C" void multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf(); // 1
 extern "C" void isPlayingSoundID__10Z2SoundMgrF10JAISoundID(); // 1
-SECTION_RODATA extern const u8 cResetFilterTable[16];
-SECTION_RODATA extern const char* const Z2SoundMgr__stringBase0;
-SECTION_DATA extern void* Z2SoundMgr__lit_3690[22];
-SECTION_DATA extern void* const __vt__10Z2SoundMgr[3 + 1 /* padding */];
-SECTION_SDATA2 extern f32 Z2SoundMgr__lit_3688;
-SECTION_SDATA2 extern f32 Z2SoundMgr__lit_3689;
-SECTION_SDATA2 extern f32 Z2SoundMgr__lit_3904;
-SECTION_SDATA2 extern u8 Z2SoundMgr__lit_3905[4];
-SECTION_SDATA2 extern f64 Z2SoundMgr__lit_3909;
-SECTION_SDATA2 extern f32 Z2SoundMgr__lit_4313[1 + 1 /* padding */];
+extern "C" extern char const* const Z2SoundMgr__stringBase0;
+extern "C" extern void* __vt__10Z2SoundMgr[3 + 1 /* padding */];
 
 // 
 // External References:
@@ -219,53 +211,54 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void sprintf(); // 1
-SECTION_RODATA extern const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
-SECTION_SBSS extern u8 data_80450B4C[4];
-SECTION_SBSS extern u8 data_80450B60[4];
-SECTION_SBSS extern u8 data_80450B70[4];
-SECTION_SBSS extern u8 data_80450B80[4];
-SECTION_SBSS extern u8 data_80450B84[4];
-SECTION_SBSS extern u8 data_80450B88[4];
-SECTION_SBSS extern u8 data_80450CC0[4 + 4 /* padding */];
+extern "C" extern u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
+extern "C" extern u8 data_80450B4C[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B70[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 data_80450CC0[4 + 4 /* padding */];
+extern "C" extern u8 struct_80451340[8];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C9D18-803C9D70 0058+00 rc=0 efc=0 .data      @3690                                                        */
-void* Z2SoundMgr__lit_3690[22] = {
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x40),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x7C),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x88),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x94),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0xA4),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0xB4),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0xC4),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1AC),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1BC),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1CC),
-	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x148),
+/* 803C9D18-803C9D70 0058+00 rc=1 efc=0 rfr=False None .data      @3690                                                        */
+SECTION_DATA static void* Z2SoundMgr__lit_3690[22] = {
+	/* 0    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x40),
+	/* 1    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x7C),
+	/* 2    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x88),
+	/* 3    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x94),
+	/* 4    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0xA4),
+	/* 5    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0xB4),
+	/* 6    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0xC4),
+	/* 7    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1AC),
+	/* 8    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1BC),
+	/* 9    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	/* 10   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	/* 11   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	/* 12   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	/* 13   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	/* 14   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	/* 15   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	/* 16   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	/* 17   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	/* 18   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	/* 19   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	/* 20   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1CC),
+	/* 21   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x148),
 };
 
-/* 80455838-8045583C 0004+00 rc=0 efc=0 .sdata2    @3688                                                        */
-f32 Z2SoundMgr__lit_3688 = 1.0f;
+/* 80455838-8045583C 0004+00 rc=5 efc=0 rfr=False None .sdata2    @3688                                                        */
+SECTION_SDATA2 static f32 Z2SoundMgr__lit_3688 = 1.0f;
 
-/* 8045583C-80455840 0004+00 rc=0 efc=0 .sdata2    @3689                                                        */
-f32 Z2SoundMgr__lit_3689 = -1.0f;
+/* 8045583C-80455840 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3689                                                        */
+SECTION_SDATA2 static f32 Z2SoundMgr__lit_3689 = -1.0f;
 
-/* 802A9BC8-802A9E80 02B8+00 rc=0 efc=0 .text      seqCallback__FP8JASTrackUs                                   */
+/* 802A9BC8-802A9E80 02B8+00 rc=2 efc=1 rfr=False None .text      seqCallback__FP8JASTrackUs                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,16 +270,16 @@ asm void seqCallback(JASTrack* field_0, u16 field_1) {
 
 
 /* ############################################################################################## */
-/* 803C9D70-803C9D80 000C+04 rc=0 efc=0 .data      __vt__10Z2SoundMgr                                           */
-void* const __vt__10Z2SoundMgr[3 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)func_802A9EE8,
+/* 803C9D70-803C9D80 000C+04 rc=2 efc=1 rfr=False None .data      __vt__10Z2SoundMgr                                           */
+SECTION_DATA void* __vt__10Z2SoundMgr[3 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)func_802A9EE8,
 	/* padding */
 	NULL,
 };
 
-/* 802A9E80-802A9EE8 0068+00 rc=0 efc=0 .text      __ct__10Z2SoundMgrFv                                         */
+/* 802A9E80-802A9EE8 0068+00 rc=1 efc=1 rfr=False None .text      __ct__10Z2SoundMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -298,32 +291,32 @@ asm Z2SoundMgr::Z2SoundMgr() {
 
 
 /* ############################################################################################## */
-/* 8039B9C0-8039B9D0 0010+00 rc=0 efc=0 .rodata    cResetFilterTable                                            */
-const u8 cResetFilterTable[16] = {
+/* 8039B9C0-8039B9D0 0010+00 rc=1 efc=0 rfr=False None .rodata    cResetFilterTable                                            */
+SECTION_RODATA static u8 const cResetFilterTable[16] = {
 	0x7F, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8039B9D0-8039B9F0 001D+03 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 8039B9D0-8039B9F0 001D+03 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_8039B9D0 = "Unknown Sound-Type id :%08x\n";
+SECTION_DEAD static char const* const stringBase_8039B9D0 = "Unknown Sound-Type id :%08x\n";
 /* @stringBase0 padding */
-char* const pad_8039B9ED = "\0\0";
+SECTION_DEAD static char const* const pad_8039B9ED = "\0\0";
 #pragma pop
 
-/* 80455840-80455844 0004+00 rc=0 efc=0 .sdata2    @3904                                                        */
-f32 Z2SoundMgr__lit_3904 = 3.0f / 10.0f;
+/* 80455840-80455844 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3904                                                        */
+SECTION_SDATA2 static f32 Z2SoundMgr__lit_3904 = 3.0f / 10.0f;
 
-/* 80455844-80455848 0004+00 rc=0 efc=0 .sdata2    @3905                                                        */
-u8 Z2SoundMgr__lit_3905[4] = {
+/* 80455844-80455848 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3905                                                        */
+SECTION_SDATA2 static u8 Z2SoundMgr__lit_3905[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455848-80455850 0008+00 rc=0 efc=0 .sdata2    @3909                                                        */
-f64 Z2SoundMgr__lit_3909 = 4503599627370496.0 /* cast u32 to float */;
+/* 80455848-80455850 0008+00 rc=2 efc=0 rfr=False None .sdata2    @3909                                                        */
+SECTION_SDATA2 static f64 Z2SoundMgr__lit_3909 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802A9EE8-802AA1B0 02C8+00 rc=0 efc=0 .text      startSound__10Z2SoundMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+/* 802A9EE8-802AA1B0 02C8+00 rc=1 efc=0 rfr=False None .text      startSound__10Z2SoundMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -334,7 +327,7 @@ asm void Z2SoundMgr::startSound(JAISoundID field_0, JAISoundHandle* field_1, JGe
 #pragma pop
 
 
-/* 802AA1B0-802AA270 00C0+00 rc=0 efc=0 .text      calc__10Z2SoundMgrFv                                         */
+/* 802AA1B0-802AA270 00C0+00 rc=2 efc=0 rfr=False None .text      calc__10Z2SoundMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -345,7 +338,7 @@ asm void Z2SoundMgr::calc() {
 #pragma pop
 
 
-/* 802AA270-802AA33C 00CC+00 rc=0 efc=0 .text      setIIR__10Z2SoundMgrFP8JAISoundPCs                           */
+/* 802AA270-802AA33C 00CC+00 rc=3 efc=2 rfr=False None .text      setIIR__10Z2SoundMgrFP8JAISoundPCs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -356,7 +349,7 @@ asm void Z2SoundMgr::setIIR(JAISound* field_0, s16 const* field_1) {
 #pragma pop
 
 
-/* 802AA33C-802AA430 00F4+00 rc=0 efc=0 .text      setFilterOff__10Z2SoundMgrFP8JAISound                        */
+/* 802AA33C-802AA430 00F4+00 rc=1 efc=0 rfr=False None .text      setFilterOff__10Z2SoundMgrFP8JAISound                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -367,7 +360,7 @@ asm void Z2SoundMgr::setFilterOff(JAISound* field_0) {
 #pragma pop
 
 
-/* 802AA430-802AA528 00F8+00 rc=0 efc=0 .text      resetFilterAll__10Z2SoundMgrFv                               */
+/* 802AA430-802AA528 00F8+00 rc=1 efc=1 rfr=False None .text      resetFilterAll__10Z2SoundMgrFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -378,7 +371,7 @@ asm void Z2SoundMgr::resetFilterAll() {
 #pragma pop
 
 
-/* 802AA528-802AA67C 0154+00 rc=0 efc=0 .text      mixOut__10Z2SoundMgrFv                                       */
+/* 802AA528-802AA67C 0154+00 rc=2 efc=0 rfr=False None .text      mixOut__10Z2SoundMgrFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,7 +382,7 @@ asm void Z2SoundMgr::mixOut() {
 #pragma pop
 
 
-/* 802AA67C-802AA6B0 0034+00 rc=0 efc=0 .text      framework__10Z2SoundMgrFv                                    */
+/* 802AA67C-802AA6B0 0034+00 rc=1 efc=1 rfr=False None .text      framework__10Z2SoundMgrFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -400,7 +393,7 @@ asm void Z2SoundMgr::framework() {
 #pragma pop
 
 
-/* 802AA6B0-802AA7DC 012C+00 rc=0 efc=0 .text      pauseAllGameSound__10Z2SoundMgrFb                            */
+/* 802AA6B0-802AA7DC 012C+00 rc=1 efc=1 rfr=False None .text      pauseAllGameSound__10Z2SoundMgrFb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -411,7 +404,7 @@ asm void Z2SoundMgr::pauseAllGameSound(bool field_0) {
 #pragma pop
 
 
-/* 802AA7DC-802AA84C 0070+00 rc=0 efc=0 .text      stopSoundID__10Z2SoundMgrF10JAISoundID                       */
+/* 802AA7DC-802AA84C 0070+00 rc=1 efc=1 rfr=False None .text      stopSoundID__10Z2SoundMgrF10JAISoundID                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -422,7 +415,7 @@ asm void Z2SoundMgr::stopSoundID(JAISoundID field_0) {
 #pragma pop
 
 
-/* 802AA84C-802AA8C8 007C+00 rc=0 efc=0 .text      stopSync__10Z2SoundMgrFv                                     */
+/* 802AA84C-802AA8C8 007C+00 rc=1 efc=1 rfr=False None .text      stopSync__10Z2SoundMgrFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -433,7 +426,7 @@ asm void Z2SoundMgr::stopSync() {
 #pragma pop
 
 
-/* 802AA8C8-802AA908 0040+00 rc=0 efc=0 .text      stop__10Z2SoundMgrFv                                         */
+/* 802AA8C8-802AA908 0040+00 rc=1 efc=0 rfr=False None .text      stop__10Z2SoundMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,14 +438,14 @@ asm void Z2SoundMgr::stop() {
 
 
 /* ############################################################################################## */
-/* 80455850-80455858 0004+04 rc=0 efc=0 .sdata2    @4313                                                        */
-f32 Z2SoundMgr__lit_4313[1 + 1 /* padding */] = {
+/* 80455850-80455858 0004+04 rc=1 efc=0 rfr=False None .sdata2    @4313                                                        */
+SECTION_SDATA2 static f32 Z2SoundMgr__lit_4313[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
-/* 802AA908-802AA9E8 00E0+00 rc=0 efc=0 .text      initParams__10Z2SoundMgrFv                                   */
+/* 802AA908-802AA9E8 00E0+00 rc=1 efc=1 rfr=False None .text      initParams__10Z2SoundMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -463,7 +456,7 @@ asm void Z2SoundMgr::initParams() {
 #pragma pop
 
 
-/* 802AA9E8-802AAAC4 00DC+00 rc=0 efc=0 .text      multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf               */
+/* 802AA9E8-802AAAC4 00DC+00 rc=1 efc=1 rfr=False None .text      multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -474,7 +467,7 @@ asm void Z2SoundMgr::multiVolumeSoundID(JAISoundID field_0, f32 field_1) {
 #pragma pop
 
 
-/* 802AAAC4-802AAB94 00D0+00 rc=0 efc=0 .text      isPlayingSoundID__10Z2SoundMgrF10JAISoundID                  */
+/* 802AAAC4-802AAB94 00D0+00 rc=1 efc=0 rfr=False None .text      isPlayingSoundID__10Z2SoundMgrF10JAISoundID                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

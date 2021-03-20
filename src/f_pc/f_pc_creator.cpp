@@ -47,7 +47,7 @@ extern "C" void fpcCtRq_Handler__Fv(); // 1
 // Declarations:
 // 
 
-/* 80020EA8-80020EC8 0020+00 rc=0 efc=0 .text      fpcCt_IsCreatingByID__FUi                                    */
+/* 80020EA8-80020EC8 0020+00 rc=1 efc=1 rfr=False None .text      fpcCt_IsCreatingByID__FUi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -58,7 +58,7 @@ asm void fpcCt_IsCreatingByID(u32 field_0) {
 #pragma pop
 
 
-/* 80020EC8-80020EEC 0024+00 rc=0 efc=0 .text      fpcCt_IsDoing__FP18base_process_class                        */
+/* 80020EC8-80020EEC 0024+00 rc=1 efc=1 rfr=False None .text      fpcCt_IsDoing__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -69,7 +69,7 @@ asm void fpcCt_IsDoing(base_process_class* field_0) {
 #pragma pop
 
 
-/* 80020EEC-80020F10 0024+00 rc=0 efc=0 .text      fpcCt_Abort__FP18base_process_class                          */
+/* 80020EEC-80020F10 0024+00 rc=1 efc=1 rfr=False None .text      fpcCt_Abort__FP18base_process_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,7 +80,7 @@ asm void fpcCt_Abort(base_process_class* field_0) {
 #pragma pop
 
 
-/* 80020F10-80020F30 0020+00 rc=0 efc=0 .text      fpcCt_Handler__Fv                                            */
+/* 80020F10-80020F30 0020+00 rc=1 efc=1 rfr=False None .text      fpcCt_Handler__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

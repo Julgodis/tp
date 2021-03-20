@@ -148,16 +148,16 @@ struct Z2StatusMgr {
 // Forward References:
 // 
 
-extern "C" bool func_80041480(); // 1
-extern "C" void func_80041488(); // 1
+extern "C" static bool func_80041480(); // 1
+extern "C" static void func_80041488(); // 1
 void dEv_defaultSkipProc(void*, int); // 2
 void dEv_defaultSkipZev(void*, int); // 2
 void dEv_defaultSkipStb(void*, int); // 2
 void dEv_noFinishSkipProc(void*, int); // 2
 extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
 
-extern "C" bool func_80041480(); // 1
-extern "C" void func_80041488(); // 1
+extern "C" static bool func_80041480(); // 1
+extern "C" static void func_80041488(); // 1
 extern "C" void __ct__14dEvt_control_cFv(); // 1
 extern "C" void __ct__12dEvt_order_cFv(); // 1
 extern "C" void orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv(); // 1
@@ -214,12 +214,7 @@ extern "C" void setPtI__14dEvt_control_cFPv(); // 1
 extern "C" void setPtI_Id__14dEvt_control_cFUi(); // 1
 extern "C" void setPtD__14dEvt_control_cFPv(); // 1
 extern "C" void setGtItm__14dEvt_control_cFUc(); // 1
-SECTION_RODATA extern const char* const d_event_d_event__stringBase0;
-SECTION_DATA extern void* d_event_d_event__lit_4719[14];
-SECTION_SDATA2 extern f32 d_event_d_event__lit_4361;
-SECTION_SDATA2 extern f32 lit_4904;
-SECTION_SDATA2 extern f32 lit_5013;
-SECTION_SDATA2 extern u8 lit_5095[4];
+extern "C" extern char const* const d_event_d_event__stringBase0;
 
 // 
 // External References:
@@ -305,37 +300,38 @@ extern "C" void _restgpr_29(); // 1
 extern "C" void strcat(); // 1
 extern "C" void strncpy(); // 1
 extern "C" void strcpy(); // 1
-SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
-SECTION_DATA extern void* const __vt__11dEvt_info_c[3 + 1 /* padding */];
-SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
-SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SBSS extern u8 m_mode__7dDemo_c[4];
-SECTION_SBSS extern u8 m_midnaActor__9daPy_py_c[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
+extern "C" extern void* __vt__11dEvt_info_c[3 + 1 /* padding */];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 m_mode__7dDemo_c[4];
+extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80041480-80041488 0008+00 rc=0 efc=0 .text      event_debug_evnt__21@unnamed@d_event_cpp@Fv                  */
-extern "C" bool func_80041480() {
+/* 80041480-80041488 0008+00 rc=1 efc=0 rfr=False None .text      event_debug_evnt__21@unnamed@d_event_cpp@Fv                  */
+extern "C" static bool func_80041480() {
 	return false;
 }
 
 
-/* 80041488-80041580 00F8+00 rc=0 efc=0 .text      clear_tmpflag_for_message__21@unnamed@d_event_cpp@Fv         */
+/* 80041488-80041580 00F8+00 rc=1 efc=0 rfr=False None .text      clear_tmpflag_for_message__21@unnamed@d_event_cpp@Fv         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80041488() {
+extern "C" asm static void func_80041488() {
 	nofralloc
 #include "asm/d/event/d_event/func_80041488.s"
 }
 #pragma pop
 
 
-/* 80041580-800415D4 0054+00 rc=0 efc=0 .text      __ct__14dEvt_control_cFv                                     */
+/* 80041580-800415D4 0054+00 rc=1 efc=1 rfr=False None .text      __ct__14dEvt_control_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -346,13 +342,13 @@ asm dEvt_control_c::dEvt_control_c() {
 #pragma pop
 
 
-/* 800415D4-800415D8 0004+00 rc=0 efc=0 .text      __ct__12dEvt_order_cFv                                       */
+/* 800415D4-800415D8 0004+00 rc=1 efc=0 rfr=False None .text      __ct__12dEvt_order_cFv                                       */
 dEvt_order_c::dEvt_order_c() {
 	/* empty function */
 }
 
 
-/* 800415D8-80041668 0090+00 rc=0 efc=0 .text      orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv                   */
+/* 800415D8-80041668 0090+00 rc=1 efc=0 rfr=False None .text      orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -363,7 +359,7 @@ asm void dEvt_control_c::orderOld(u16 field_0, u16 field_1, u16 field_2, u16 fie
 #pragma pop
 
 
-/* 80041668-80041804 019C+00 rc=0 efc=0 .text      order__14dEvt_control_cFUsUsUsUsPvPvsUc                      */
+/* 80041668-80041804 019C+00 rc=16 efc=13 rfr=False None .text      order__14dEvt_control_cFUsUsUsUsPvPvsUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -375,10 +371,10 @@ asm void dEvt_control_c::order(u16 field_0, u16 field_1, u16 field_2, u16 field_
 
 
 /* ############################################################################################## */
-/* 80451EC0-80451EC4 0004+00 rc=0 efc=0 .sdata2    @4361                                                        */
-f32 d_event_d_event__lit_4361 = 1.0f;
+/* 80451EC0-80451EC4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4361                                                        */
+SECTION_SDATA2 static f32 d_event_d_event__lit_4361 = 1.0f;
 
-/* 80041804-80041934 0130+00 rc=0 efc=0 .text      setParam__14dEvt_control_cFP12dEvt_order_c                   */
+/* 80041804-80041934 0130+00 rc=5 efc=0 rfr=False None .text      setParam__14dEvt_control_cFP12dEvt_order_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -389,7 +385,7 @@ asm void dEvt_control_c::setParam(dEvt_order_c* field_0) {
 #pragma pop
 
 
-/* 80041934-80041964 0030+00 rc=0 efc=0 .text      beforeFlagProc__14dEvt_control_cFP12dEvt_order_c             */
+/* 80041934-80041964 0030+00 rc=2 efc=0 rfr=False None .text      beforeFlagProc__14dEvt_control_cFP12dEvt_order_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -401,23 +397,23 @@ asm void dEvt_control_c::beforeFlagProc(dEvt_order_c* field_0) {
 
 
 /* ############################################################################################## */
-/* 80379D80-80379DD0 004E+02 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 80379D80-80379DD0 004E+02 rc=7 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_80379D80 = "？？？";
-const char* const stringBase_80379D87 = "ALL";
-const char* const stringBase_80379D8B = "DEFAULT_TALK";
-const char* const stringBase_80379D98 = "MHINT_TALK";
-const char* const stringBase_80379DA3 = "DEFAULT_TALK_XY";
-const char* const stringBase_80379DB3 = "DEFAULT_GETITEM";
-const char* const stringBase_80379DC3 = "$0";
-const char* const stringBase_80379DC6 = "GIVEMAN";
+SECTION_DEAD static char const* const stringBase_80379D80 = "？？？";
+SECTION_DEAD static char const* const stringBase_80379D87 = "ALL";
+SECTION_DEAD static char const* const stringBase_80379D8B = "DEFAULT_TALK";
+SECTION_DEAD static char const* const stringBase_80379D98 = "MHINT_TALK";
+SECTION_DEAD static char const* const stringBase_80379DA3 = "DEFAULT_TALK_XY";
+SECTION_DEAD static char const* const stringBase_80379DB3 = "DEFAULT_GETITEM";
+SECTION_DEAD static char const* const stringBase_80379DC3 = "$0";
+SECTION_DEAD static char const* const stringBase_80379DC6 = "GIVEMAN";
 /* @stringBase0 padding */
-char* const pad_80379DCE = "\0";
+SECTION_DEAD static char const* const pad_80379DCE = "\0";
 #pragma pop
 
-/* 80041964-800419A8 0044+00 rc=0 efc=0 .text      afterFlagProc__14dEvt_control_cFP12dEvt_order_c              */
+/* 80041964-800419A8 0044+00 rc=2 efc=0 rfr=False None .text      afterFlagProc__14dEvt_control_cFP12dEvt_order_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -428,7 +424,7 @@ asm void dEvt_control_c::afterFlagProc(dEvt_order_c* field_0) {
 #pragma pop
 
 
-/* 800419A8-80041A20 0078+00 rc=0 efc=0 .text      commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs            */
+/* 800419A8-80041A20 0078+00 rc=4 efc=0 rfr=False None .text      commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -439,7 +435,7 @@ asm void dEvt_control_c::commonCheck(dEvt_order_c* field_0, u16 field_1, u16 fie
 #pragma pop
 
 
-/* 80041A20-80041B58 0138+00 rc=0 efc=0 .text      talkCheck__14dEvt_control_cFP12dEvt_order_c                  */
+/* 80041A20-80041B58 0138+00 rc=1 efc=0 rfr=False None .text      talkCheck__14dEvt_control_cFP12dEvt_order_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -450,7 +446,7 @@ asm void dEvt_control_c::talkCheck(dEvt_order_c* field_0) {
 #pragma pop
 
 
-/* 80041B58-80041C90 0138+00 rc=0 efc=0 .text      talkXyCheck__14dEvt_control_cFP12dEvt_order_c                */
+/* 80041B58-80041C90 0138+00 rc=1 efc=0 rfr=False None .text      talkXyCheck__14dEvt_control_cFP12dEvt_order_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -461,7 +457,7 @@ asm void dEvt_control_c::talkXyCheck(dEvt_order_c* field_0) {
 #pragma pop
 
 
-/* 80041C90-80041D34 00A4+00 rc=0 efc=0 .text      catchCheck__14dEvt_control_cFP12dEvt_order_c                 */
+/* 80041C90-80041D34 00A4+00 rc=1 efc=0 rfr=False None .text      catchCheck__14dEvt_control_cFP12dEvt_order_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -472,7 +468,7 @@ asm void dEvt_control_c::catchCheck(dEvt_order_c* field_0) {
 #pragma pop
 
 
-/* 80041D34-80041DDC 00A8+00 rc=0 efc=0 .text      talkEnd__14dEvt_control_cFv                                  */
+/* 80041D34-80041DDC 00A8+00 rc=1 efc=0 rfr=False None .text      talkEnd__14dEvt_control_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -483,7 +479,7 @@ asm void dEvt_control_c::talkEnd() {
 #pragma pop
 
 
-/* 80041DDC-80041F18 013C+00 rc=0 efc=0 .text      demoCheck__14dEvt_control_cFP12dEvt_order_c                  */
+/* 80041DDC-80041F18 013C+00 rc=1 efc=0 rfr=False None .text      demoCheck__14dEvt_control_cFP12dEvt_order_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -494,7 +490,7 @@ asm void dEvt_control_c::demoCheck(dEvt_order_c* field_0) {
 #pragma pop
 
 
-/* 80041F18-80041FA0 0088+00 rc=0 efc=0 .text      demoEnd__14dEvt_control_cFv                                  */
+/* 80041F18-80041FA0 0088+00 rc=1 efc=0 rfr=False None .text      demoEnd__14dEvt_control_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -505,7 +501,7 @@ asm void dEvt_control_c::demoEnd() {
 #pragma pop
 
 
-/* 80041FA0-80042014 0074+00 rc=0 efc=0 .text      potentialCheck__14dEvt_control_cFP12dEvt_order_c             */
+/* 80041FA0-80042014 0074+00 rc=1 efc=0 rfr=False None .text      potentialCheck__14dEvt_control_cFP12dEvt_order_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -516,7 +512,7 @@ asm void dEvt_control_c::potentialCheck(dEvt_order_c* field_0) {
 #pragma pop
 
 
-/* 80042014-8004212C 0118+00 rc=0 efc=0 .text      doorCheck__14dEvt_control_cFP12dEvt_order_c                  */
+/* 80042014-8004212C 0118+00 rc=1 efc=0 rfr=False None .text      doorCheck__14dEvt_control_cFP12dEvt_order_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -527,7 +523,7 @@ asm void dEvt_control_c::doorCheck(dEvt_order_c* field_0) {
 #pragma pop
 
 
-/* 8004212C-800421C0 0094+00 rc=0 efc=0 .text      itemCheck__14dEvt_control_cFP12dEvt_order_c                  */
+/* 8004212C-800421C0 0094+00 rc=1 efc=0 rfr=False None .text      itemCheck__14dEvt_control_cFP12dEvt_order_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -538,7 +534,7 @@ asm void dEvt_control_c::itemCheck(dEvt_order_c* field_0) {
 #pragma pop
 
 
-/* 800421C0-80042254 0094+00 rc=0 efc=0 .text      endProc__14dEvt_control_cFv                                  */
+/* 800421C0-80042254 0094+00 rc=1 efc=0 rfr=False None .text      endProc__14dEvt_control_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -549,7 +545,7 @@ asm void dEvt_control_c::endProc() {
 #pragma pop
 
 
-/* 80042254-800422C0 006C+00 rc=0 efc=0 .text      change__14dEvt_control_cFv                                   */
+/* 80042254-800422C0 006C+00 rc=1 efc=0 rfr=False None .text      change__14dEvt_control_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -561,25 +557,25 @@ asm void dEvt_control_c::change() {
 
 
 /* ############################################################################################## */
-/* 803A7F78-803A7FB0 0038+00 rc=0 efc=0 .data      @4719                                                        */
-void* d_event_d_event__lit_4719[14] = {
-	(void*)(((char*)entry__14dEvt_control_cFv)+0x70),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0xB8),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0x94),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0xDC),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0xF4),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0x118),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0x13C),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0x13C),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0x184),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0x184),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0x160),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0xB8),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0x184),
-	(void*)(((char*)entry__14dEvt_control_cFv)+0x184),
+/* 803A7F78-803A7FB0 0038+00 rc=1 efc=0 rfr=False None .data      @4719                                                        */
+SECTION_DATA static void* d_event_d_event__lit_4719[14] = {
+	/* 0    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x70),
+	/* 1    */ (void*)(((char*)entry__14dEvt_control_cFv)+0xB8),
+	/* 2    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x94),
+	/* 3    */ (void*)(((char*)entry__14dEvt_control_cFv)+0xDC),
+	/* 4    */ (void*)(((char*)entry__14dEvt_control_cFv)+0xF4),
+	/* 5    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x118),
+	/* 6    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x13C),
+	/* 7    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x13C),
+	/* 8    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x184),
+	/* 9    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x184),
+	/* 10   */ (void*)(((char*)entry__14dEvt_control_cFv)+0x160),
+	/* 11   */ (void*)(((char*)entry__14dEvt_control_cFv)+0xB8),
+	/* 12   */ (void*)(((char*)entry__14dEvt_control_cFv)+0x184),
+	/* 13   */ (void*)(((char*)entry__14dEvt_control_cFv)+0x184),
 };
 
-/* 800422C0-80042468 01A8+00 rc=0 efc=0 .text      entry__14dEvt_control_cFv                                    */
+/* 800422C0-80042468 01A8+00 rc=2 efc=0 rfr=False None .text      entry__14dEvt_control_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -590,7 +586,7 @@ asm void dEvt_control_c::entry() {
 #pragma pop
 
 
-/* 80042468-80042518 00B0+00 rc=0 efc=0 .text      reset__14dEvt_control_cFv                                    */
+/* 80042468-80042518 00B0+00 rc=9 efc=8 rfr=False None .text      reset__14dEvt_control_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -601,7 +597,7 @@ asm void dEvt_control_c::reset() {
 #pragma pop
 
 
-/* 80042518-800425B4 009C+00 rc=0 efc=0 .text      reset__14dEvt_control_cFPv                                   */
+/* 80042518-800425B4 009C+00 rc=6 efc=3 rfr=False None .text      reset__14dEvt_control_cFPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -612,7 +608,7 @@ asm void dEvt_control_c::reset(void* field_0) {
 #pragma pop
 
 
-/* 800425B4-800425E8 0034+00 rc=0 efc=0 .text      clearSkipSystem__14dEvt_control_cFv                          */
+/* 800425B4-800425E8 0034+00 rc=2 efc=0 rfr=False None .text      clearSkipSystem__14dEvt_control_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -623,7 +619,7 @@ asm void dEvt_control_c::clearSkipSystem() {
 #pragma pop
 
 
-/* 800425E8-8004261C 0034+00 rc=0 efc=0 .text      dEv_defaultSkipProc__FPvi                                    */
+/* 800425E8-8004261C 0034+00 rc=2 efc=2 rfr=False None .text      dEv_defaultSkipProc__FPvi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -634,7 +630,7 @@ asm void dEv_defaultSkipProc(void* field_0, int field_1) {
 #pragma pop
 
 
-/* 8004261C-80042778 015C+00 rc=0 efc=0 .text      dEv_defaultSkipZev__FPvi                                     */
+/* 8004261C-80042778 015C+00 rc=2 efc=1 rfr=False None .text      dEv_defaultSkipZev__FPvi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -645,7 +641,7 @@ asm void dEv_defaultSkipZev(void* field_0, int field_1) {
 #pragma pop
 
 
-/* 80042778-800428DC 0164+00 rc=0 efc=0 .text      dEv_defaultSkipStb__FPvi                                     */
+/* 80042778-800428DC 0164+00 rc=1 efc=1 rfr=False None .text      dEv_defaultSkipStb__FPvi                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -656,7 +652,7 @@ asm void dEv_defaultSkipStb(void* field_0, int field_1) {
 #pragma pop
 
 
-/* 800428DC-8004290C 0030+00 rc=0 efc=0 .text      dEv_noFinishSkipProc__FPvi                                   */
+/* 800428DC-8004290C 0030+00 rc=1 efc=1 rfr=False None .text      dEv_noFinishSkipProc__FPvi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -667,7 +663,7 @@ asm void dEv_noFinishSkipProc(void* field_0, int field_1) {
 #pragma pop
 
 
-/* 8004290C-80042914 0008+00 rc=0 efc=0 .text      getSkipEventName__14dEvt_control_cFv                         */
+/* 8004290C-80042914 0008+00 rc=2 efc=0 rfr=False None .text      getSkipEventName__14dEvt_control_cFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -678,7 +674,7 @@ asm void dEvt_control_c::getSkipEventName() {
 #pragma pop
 
 
-/* 80042914-80042958 0044+00 rc=0 efc=0 .text      setSkipProc__14dEvt_control_cFPvPFPvi_ii                     */
+/* 80042914-80042958 0044+00 rc=4 efc=3 rfr=False None .text      setSkipProc__14dEvt_control_cFPvPFPvi_ii                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -689,7 +685,7 @@ extern "C" asm void setSkipProc__14dEvt_control_cFPvPFPvi_ii() {
 #pragma pop
 
 
-/* 80042958-800429A8 0050+00 rc=0 efc=0 .text      setSkipZev__14dEvt_control_cFPvPc                            */
+/* 80042958-800429A8 0050+00 rc=1 efc=1 rfr=False None .text      setSkipZev__14dEvt_control_cFPvPc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -700,7 +696,7 @@ asm void dEvt_control_c::setSkipZev(void* field_0, char* field_1) {
 #pragma pop
 
 
-/* 800429A8-800429B4 000C+00 rc=0 efc=0 .text      onSkipFade__14dEvt_control_cFv                               */
+/* 800429A8-800429B4 000C+00 rc=1 efc=1 rfr=False None .text      onSkipFade__14dEvt_control_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -711,7 +707,7 @@ asm void dEvt_control_c::onSkipFade() {
 #pragma pop
 
 
-/* 800429B4-800429D4 0020+00 rc=0 efc=0 .text      offSkipFade__14dEvt_control_cFv                              */
+/* 800429B4-800429D4 0020+00 rc=1 efc=0 rfr=False None .text      offSkipFade__14dEvt_control_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -723,10 +719,10 @@ asm void dEvt_control_c::offSkipFade() {
 
 
 /* ############################################################################################## */
-/* 80451EC4-80451EC8 0004+00 rc=0 efc=0 .sdata2    @4904                                                        */
-f32 lit_4904 = 1.0f / 10.0f;
+/* 80451EC4-80451EC8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4904                                                        */
+SECTION_SDATA2 static f32 lit_4904 = 1.0f / 10.0f;
 
-/* 800429D4-80042BBC 01E8+00 rc=0 efc=0 .text      skipper__14dEvt_control_cFv                                  */
+/* 800429D4-80042BBC 01E8+00 rc=1 efc=0 rfr=False None .text      skipper__14dEvt_control_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -738,10 +734,10 @@ asm void dEvt_control_c::skipper() {
 
 
 /* ############################################################################################## */
-/* 80451EC8-80451ECC 0004+00 rc=0 efc=0 .sdata2    @5013                                                        */
-f32 lit_5013 = -1.0f / 20.0f;
+/* 80451EC8-80451ECC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5013                                                        */
+SECTION_SDATA2 static f32 lit_5013 = -1.0f / 20.0f;
 
-/* 80042BBC-80042FA8 03EC+00 rc=0 efc=0 .text      Step__14dEvt_control_cFv                                     */
+/* 80042BBC-80042FA8 03EC+00 rc=1 efc=1 rfr=False None .text      Step__14dEvt_control_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -752,7 +748,7 @@ asm void dEvt_control_c::Step() {
 #pragma pop
 
 
-/* 80042FA8-8004316C 01C4+00 rc=0 efc=0 .text      moveApproval__14dEvt_control_cFPv                            */
+/* 80042FA8-8004316C 01C4+00 rc=2 efc=2 rfr=False None .text      moveApproval__14dEvt_control_cFPv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -763,7 +759,7 @@ asm void dEvt_control_c::moveApproval(void* field_0) {
 #pragma pop
 
 
-/* 8004316C-800431E8 007C+00 rc=0 efc=0 .text      compulsory__14dEvt_control_cFPvPCcUs                         */
+/* 8004316C-800431E8 007C+00 rc=28 efc=28 rfr=False None .text      compulsory__14dEvt_control_cFPvPCcUs                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -775,12 +771,12 @@ asm void dEvt_control_c::compulsory(void* field_0, char const* field_1, u16 fiel
 
 
 /* ############################################################################################## */
-/* 80451ECC-80451ED0 0004+00 rc=0 efc=0 .sdata2    @5095                                                        */
-u8 lit_5095[4] = {
+/* 80451ECC-80451ED0 0004+00 rc=2 efc=0 rfr=False None .sdata2    @5095                                                        */
+SECTION_SDATA2 static u8 lit_5095[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 800431E8-80043278 0090+00 rc=0 efc=0 .text      remove__14dEvt_control_cFv                                   */
+/* 800431E8-80043278 0090+00 rc=2 efc=1 rfr=False None .text      remove__14dEvt_control_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -791,7 +787,7 @@ asm void dEvt_control_c::remove() {
 #pragma pop
 
 
-/* 80043278-80043280 0008+00 rc=0 efc=0 .text      getStageEventDt__14dEvt_control_cFv                          */
+/* 80043278-80043280 0008+00 rc=4 efc=2 rfr=False None .text      getStageEventDt__14dEvt_control_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -802,7 +798,7 @@ asm void dEvt_control_c::getStageEventDt() {
 #pragma pop
 
 
-/* 80043280-800432C8 0048+00 rc=0 efc=0 .text      sceneChange__14dEvt_control_cFi                              */
+/* 80043280-800432C8 0048+00 rc=1 efc=1 rfr=False None .text      sceneChange__14dEvt_control_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -813,7 +809,7 @@ asm void dEvt_control_c::sceneChange(int field_0) {
 #pragma pop
 
 
-/* 800432C8-800432EC 0024+00 rc=0 efc=0 .text      getPId__14dEvt_control_cFPv                                  */
+/* 800432C8-800432EC 0024+00 rc=6 efc=0 rfr=False None .text      getPId__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -824,7 +820,7 @@ asm void dEvt_control_c::getPId(void* field_0) {
 #pragma pop
 
 
-/* 800432EC-8004331C 0030+00 rc=0 efc=0 .text      convPId__14dEvt_control_cFUi                                 */
+/* 800432EC-8004331C 0030+00 rc=20 efc=13 rfr=False None .text      convPId__14dEvt_control_cFUi                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -835,7 +831,7 @@ asm void dEvt_control_c::convPId(u32 field_0) {
 #pragma pop
 
 
-/* 8004331C-800433F0 00D4+00 rc=0 efc=0 .text      getStbDemoData__14dEvt_control_cFPc                          */
+/* 8004331C-800433F0 00D4+00 rc=1 efc=1 rfr=False None .text      getStbDemoData__14dEvt_control_cFPc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -846,7 +842,7 @@ asm void dEvt_control_c::getStbDemoData(char* field_0) {
 #pragma pop
 
 
-/* 800433F0-80043428 0038+00 rc=0 efc=0 .text      __ct__11dEvt_info_cFv                                        */
+/* 800433F0-80043428 0038+00 rc=1 efc=1 rfr=False None .text      __ct__11dEvt_info_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -857,7 +853,7 @@ asm dEvt_info_c::dEvt_info_c() {
 #pragma pop
 
 
-/* 80043428-80043480 0058+00 rc=0 efc=0 .text      setEventName__11dEvt_info_cFPc                               */
+/* 80043428-80043480 0058+00 rc=0 efc=0 rfr=False None .text      setEventName__11dEvt_info_cFPc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -868,7 +864,7 @@ asm void dEvt_info_c::setEventName(char* field_0) {
 #pragma pop
 
 
-/* 80043480-800434CC 004C+00 rc=0 efc=0 .text      getEventName__11dEvt_info_cFv                                */
+/* 80043480-800434CC 004C+00 rc=1 efc=0 rfr=False None .text      getEventName__11dEvt_info_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -879,7 +875,7 @@ asm void dEvt_info_c::getEventName() {
 #pragma pop
 
 
-/* 800434CC-800434D8 000C+00 rc=0 efc=0 .text      beforeProc__11dEvt_info_cFv                                  */
+/* 800434CC-800434D8 000C+00 rc=1 efc=1 rfr=False None .text      beforeProc__11dEvt_info_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -890,7 +886,7 @@ asm void dEvt_info_c::beforeProc() {
 #pragma pop
 
 
-/* 800434D8-80043500 0028+00 rc=0 efc=0 .text      searchMapEventData__14dEvt_control_cFUc                      */
+/* 800434D8-80043500 0028+00 rc=4 efc=4 rfr=False None .text      searchMapEventData__14dEvt_control_cFUc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -901,7 +897,7 @@ asm void dEvt_control_c::searchMapEventData(u8 field_0) {
 #pragma pop
 
 
-/* 80043500-8004360C 010C+00 rc=0 efc=0 .text      searchMapEventData__14dEvt_control_cFUcl                     */
+/* 80043500-8004360C 010C+00 rc=10 efc=7 rfr=False None .text      searchMapEventData__14dEvt_control_cFUcl                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -912,7 +908,7 @@ asm void dEvt_control_c::searchMapEventData(u8 field_0, s32 field_1) {
 #pragma pop
 
 
-/* 8004360C-8004362C 0020+00 rc=0 efc=0 .text      runningEventID__14dEvt_control_cFs                           */
+/* 8004360C-8004362C 0020+00 rc=1 efc=1 rfr=False None .text      runningEventID__14dEvt_control_cFs                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -923,7 +919,7 @@ asm void dEvt_control_c::runningEventID(s16 field_0) {
 #pragma pop
 
 
-/* 8004362C-8004365C 0030+00 rc=0 efc=0 .text      setPt1__14dEvt_control_cFPv                                  */
+/* 8004362C-8004365C 0030+00 rc=1 efc=0 rfr=False None .text      setPt1__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -934,7 +930,7 @@ asm void dEvt_control_c::setPt1(void* field_0) {
 #pragma pop
 
 
-/* 8004365C-8004368C 0030+00 rc=0 efc=0 .text      setPt2__14dEvt_control_cFPv                                  */
+/* 8004365C-8004368C 0030+00 rc=3 efc=2 rfr=False None .text      setPt2__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -945,7 +941,7 @@ asm void dEvt_control_c::setPt2(void* field_0) {
 #pragma pop
 
 
-/* 8004368C-800436BC 0030+00 rc=0 efc=0 .text      setPtT__14dEvt_control_cFPv                                  */
+/* 8004368C-800436BC 0030+00 rc=5 efc=4 rfr=False None .text      setPtT__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -956,7 +952,7 @@ asm void dEvt_control_c::setPtT(void* field_0) {
 #pragma pop
 
 
-/* 800436BC-800436EC 0030+00 rc=0 efc=0 .text      setPtI__14dEvt_control_cFPv                                  */
+/* 800436BC-800436EC 0030+00 rc=3 efc=2 rfr=False None .text      setPtI__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -967,7 +963,7 @@ asm void dEvt_control_c::setPtI(void* field_0) {
 #pragma pop
 
 
-/* 800436EC-800436F4 0008+00 rc=0 efc=0 .text      setPtI_Id__14dEvt_control_cFUi                               */
+/* 800436EC-800436F4 0008+00 rc=6 efc=6 rfr=False None .text      setPtI_Id__14dEvt_control_cFUi                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -978,7 +974,7 @@ asm void dEvt_control_c::setPtI_Id(u32 field_0) {
 #pragma pop
 
 
-/* 800436F4-80043724 0030+00 rc=0 efc=0 .text      setPtD__14dEvt_control_cFPv                                  */
+/* 800436F4-80043724 0030+00 rc=4 efc=4 rfr=False None .text      setPtD__14dEvt_control_cFPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -989,7 +985,7 @@ asm void dEvt_control_c::setPtD(void* field_0) {
 #pragma pop
 
 
-/* 80043724-8004372C 0008+00 rc=0 efc=0 .text      setGtItm__14dEvt_control_cFUc                                */
+/* 80043724-8004372C 0008+00 rc=2 efc=2 rfr=False None .text      setGtItm__14dEvt_control_cFUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

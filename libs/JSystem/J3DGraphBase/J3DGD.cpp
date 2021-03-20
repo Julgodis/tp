@@ -150,28 +150,7 @@ extern "C" void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl(); // 1
 extern "C" void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl(); // 1
 extern "C" void J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl(); // 1
 extern "C" void J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize(); // 1
-SECTION_DATA extern void* J3DGD__lit_899[17];
-SECTION_DATA extern void* lit_951[21];
-SECTION_DATA extern u8 data_803CD880[16 + 16 /* padding */];
-SECTION_SDATA extern u8 data_80450908[4];
-SECTION_SDATA extern u8 J3DGDTexMode0Ids[8];
-SECTION_SDATA extern u8 J3DGDTexMode1Ids[8];
-SECTION_SDATA extern u8 J3DGDTexImage0Ids[8];
-SECTION_SDATA extern u8 J3DGDTexImage3Ids[8];
-SECTION_SDATA extern u8 J3DGDTexTlutIds[8];
-SECTION_SDATA extern u8 J3DGD__GX2HWFiltConv[6 + 2 /* padding */];
-SECTION_SDATA extern u8 J3DTexImage1Ids[8];
-SECTION_SDATA extern u8 J3DTexImage2Ids[8 + 4 /* padding */];
-SECTION_SDATA2 extern f32 J3DGD__lit_1050;
-SECTION_SDATA2 extern f32 lit_1051;
-SECTION_SDATA2 extern f32 lit_1233;
-SECTION_SDATA2 extern u8 lit_1460[4];
-SECTION_SDATA2 extern f32 lit_1461[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 lit_1462;
-SECTION_SDATA2 extern f32 J3DGD__lit_1463[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 lit_1464;
-SECTION_SDATA2 extern f32 lit_1465[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 lit_1468;
+extern "C" extern u8 pad_8045094C[4];
 
 // 
 // External References:
@@ -206,19 +185,19 @@ extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_SBSS extern u8 __GDCurrentDL[4];
+extern "C" extern u8 __GDCurrentDL[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80450908-8045090C 0004+00 rc=0 efc=0 .sdata     cm2hw$552                                                    */
-u8 data_80450908[4] = {
+/* 80450908-8045090C 0004+00 rc=1 efc=0 rfr=False None .sdata     cm2hw$552                                                    */
+SECTION_SDATA static u8 data_80450908[4] = {
 	0x00, 0x02, 0x01, 0x03,
 };
 
-/* 8030D098-8030D210 0178+00 rc=0 efc=0 .text      J3DGDSetGenMode__FUcUcUcUc11_GXCullMode                      */
+/* 8030D098-8030D210 0178+00 rc=1 efc=1 rfr=False None .text      J3DGDSetGenMode__FUcUcUcUc11_GXCullMode                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,7 +208,7 @@ asm void J3DGDSetGenMode(u8 field_0, u8 field_1, u8 field_2, u8 field_3, _GXCull
 #pragma pop
 
 
-/* 8030D210-8030D364 0154+00 rc=0 efc=0 .text      J3DGDSetGenMode_3Param__FUcUcUc                              */
+/* 8030D210-8030D364 0154+00 rc=1 efc=1 rfr=False None .text      J3DGDSetGenMode_3Param__FUcUcUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,7 +219,7 @@ asm void J3DGDSetGenMode_3Param(u8 field_0, u8 field_1, u8 field_2) {
 #pragma pop
 
 
-/* 8030D364-8030D65C 02F8+00 rc=0 efc=0 .text      J3DGDSetLightAttn__F10_GXLightIDffffff                       */
+/* 8030D364-8030D65C 02F8+00 rc=1 efc=1 rfr=False None .text      J3DGDSetLightAttn__F10_GXLightIDffffff                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -251,7 +230,7 @@ asm void J3DGDSetLightAttn(_GXLightID field_0, f32 field_1, f32 field_2, f32 fie
 #pragma pop
 
 
-/* 8030D65C-8030D76C 0110+00 rc=0 efc=0 .text      J3DGDSetLightColor__F10_GXLightID8_GXColor                   */
+/* 8030D65C-8030D76C 0110+00 rc=1 efc=1 rfr=False None .text      J3DGDSetLightColor__F10_GXLightID8_GXColor                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -262,7 +241,7 @@ asm void J3DGDSetLightColor(_GXLightID field_0, _GXColor field_1) {
 #pragma pop
 
 
-/* 8030D76C-8030D938 01CC+00 rc=0 efc=0 .text      J3DGDSetLightPos__F10_GXLightIDfff                           */
+/* 8030D76C-8030D938 01CC+00 rc=1 efc=1 rfr=False None .text      J3DGDSetLightPos__F10_GXLightIDfff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,7 +252,7 @@ asm void J3DGDSetLightPos(_GXLightID field_0, f32 field_1, f32 field_2, f32 fiel
 #pragma pop
 
 
-/* 8030D938-8030DB04 01CC+00 rc=0 efc=0 .text      J3DGDSetLightDir__F10_GXLightIDfff                           */
+/* 8030D938-8030DB04 01CC+00 rc=1 efc=1 rfr=False None .text      J3DGDSetLightDir__F10_GXLightIDfff                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -285,28 +264,28 @@ asm void J3DGDSetLightDir(_GXLightID field_0, f32 field_1, f32 field_2, f32 fiel
 
 
 /* ############################################################################################## */
-/* 803CD7E8-803CD82C 0044+00 rc=0 efc=0 .data      @899                                                         */
-void* J3DGD__lit_899[17] = {
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x10C),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x128),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x164),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x178),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x18C),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x1A8),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x1C4),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x1E0),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x1F0),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x200),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x210),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x220),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x22C),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x22C),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x22C),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x22C),
-	(void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x128),
+/* 803CD7E8-803CD82C 0044+00 rc=1 efc=0 rfr=False None .data      @899                                                         */
+SECTION_DATA static void* J3DGD__lit_899[17] = {
+	/* 0    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x10C),
+	/* 1    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x128),
+	/* 2    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x164),
+	/* 3    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x178),
+	/* 4    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x18C),
+	/* 5    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x1A8),
+	/* 6    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x1C4),
+	/* 7    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x1E0),
+	/* 8    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x1F0),
+	/* 9    */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x200),
+	/* 10   */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x210),
+	/* 11   */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x220),
+	/* 12   */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x22C),
+	/* 13   */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x22C),
+	/* 14   */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x22C),
+	/* 15   */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x22C),
+	/* 16   */ (void*)(((char*)J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb)+0x128),
 };
 
-/* 8030DB04-8030E064 0560+00 rc=0 efc=0 .text      J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb       */
+/* 8030DB04-8030E064 0560+00 rc=2 efc=1 rfr=False None .text      J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -318,32 +297,32 @@ asm void J3DGDSetVtxAttrFmtv(_GXVtxFmt field_0, _GXVtxAttrFmtList const* field_1
 
 
 /* ############################################################################################## */
-/* 803CD82C-803CD880 0054+00 rc=0 efc=0 .data      @951                                                         */
-void* lit_951[21] = {
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x34),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x40),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x4C),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x58),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x74),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x7C),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x84),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x8C),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x94),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x9C),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xA4),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xAC),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xB4),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xBC),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xC4),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xCC),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xD4),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xDC),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xE4),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x64),
-	(void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x6C),
+/* 803CD82C-803CD880 0054+00 rc=1 efc=0 rfr=False None .data      @951                                                         */
+SECTION_DATA static void* lit_951[21] = {
+	/* 0    */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x34),
+	/* 1    */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x40),
+	/* 2    */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x4C),
+	/* 3    */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x58),
+	/* 4    */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x74),
+	/* 5    */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x7C),
+	/* 6    */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x84),
+	/* 7    */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x8C),
+	/* 8    */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x94),
+	/* 9    */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x9C),
+	/* 10   */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xA4),
+	/* 11   */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xAC),
+	/* 12   */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xB4),
+	/* 13   */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xBC),
+	/* 14   */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xC4),
+	/* 15   */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xCC),
+	/* 16   */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xD4),
+	/* 17   */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xDC),
+	/* 18   */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0xE4),
+	/* 19   */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x64),
+	/* 20   */ (void*)(((char*)J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc)+0x6C),
 };
 
-/* 8030E064-8030E234 01D0+00 rc=0 efc=0 .text      J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc          */
+/* 8030E064-8030E234 01D0+00 rc=2 efc=1 rfr=False None .text      J3DGDSetTexCoordGen__F13_GXTexGenType12_GXTexGenSrc          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -354,7 +333,7 @@ asm void J3DGDSetTexCoordGen(_GXTexGenType field_0, _GXTexGenSrc field_1) {
 #pragma pop
 
 
-/* 8030E234-8030E438 0204+00 rc=0 efc=0 .text      J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc         */
+/* 8030E234-8030E438 0204+00 rc=16 efc=16 rfr=False None .text      J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -366,45 +345,45 @@ asm void J3DGDSetTexCoordScale2(_GXTexCoordID field_0, u16 field_1, u8 field_2, 
 
 
 /* ############################################################################################## */
-/* 8045090C-80450914 0008+00 rc=0 efc=0 .sdata     J3DGDTexMode0Ids                                             */
-u8 J3DGDTexMode0Ids[8] = {
+/* 8045090C-80450914 0008+00 rc=1 efc=0 rfr=False None .sdata     J3DGDTexMode0Ids                                             */
+SECTION_SDATA static u8 J3DGDTexMode0Ids[8] = {
 	0x80, 0x81, 0x82, 0x83, 0xA0, 0xA1, 0xA2, 0xA3,
 };
 
-/* 80450914-8045091C 0008+00 rc=0 efc=0 .sdata     J3DGDTexMode1Ids                                             */
-u8 J3DGDTexMode1Ids[8] = {
+/* 80450914-8045091C 0008+00 rc=1 efc=0 rfr=False None .sdata     J3DGDTexMode1Ids                                             */
+SECTION_SDATA static u8 J3DGDTexMode1Ids[8] = {
 	0x84, 0x85, 0x86, 0x87, 0xA4, 0xA5, 0xA6, 0xA7,
 };
 
-/* 8045091C-80450924 0008+00 rc=0 efc=0 .sdata     J3DGDTexImage0Ids                                            */
-u8 J3DGDTexImage0Ids[8] = {
+/* 8045091C-80450924 0008+00 rc=1 efc=0 rfr=False None .sdata     J3DGDTexImage0Ids                                            */
+SECTION_SDATA static u8 J3DGDTexImage0Ids[8] = {
 	0x88, 0x89, 0x8A, 0x8B, 0xA8, 0xA9, 0xAA, 0xAB,
 };
 
-/* 80450924-8045092C 0008+00 rc=0 efc=0 .sdata     J3DGDTexImage3Ids                                            */
-u8 J3DGDTexImage3Ids[8] = {
+/* 80450924-8045092C 0008+00 rc=2 efc=0 rfr=False None .sdata     J3DGDTexImage3Ids                                            */
+SECTION_SDATA static u8 J3DGDTexImage3Ids[8] = {
 	0x94, 0x95, 0x96, 0x97, 0xB4, 0xB5, 0xB6, 0xB7,
 };
 
-/* 8045092C-80450934 0008+00 rc=0 efc=0 .sdata     J3DGDTexTlutIds                                              */
-u8 J3DGDTexTlutIds[8] = {
+/* 8045092C-80450934 0008+00 rc=1 efc=0 rfr=False None .sdata     J3DGDTexTlutIds                                              */
+SECTION_SDATA static u8 J3DGDTexTlutIds[8] = {
 	0x98, 0x99, 0x9A, 0x9B, 0xB8, 0xB9, 0xBA, 0xBB,
 };
 
-/* 80450934-8045093C 0006+02 rc=0 efc=0 .sdata     GX2HWFiltConv                                                */
-u8 J3DGD__GX2HWFiltConv[6 + 2 /* padding */] = {
+/* 80450934-8045093C 0006+02 rc=1 efc=0 rfr=False None .sdata     GX2HWFiltConv                                                */
+SECTION_SDATA static u8 J3DGD__GX2HWFiltConv[6 + 2 /* padding */] = {
 	0x00, 0x04, 0x01, 0x05, 0x02, 0x06,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 80456328-8045632C 0004+00 rc=0 efc=0 .sdata2    @1050                                                        */
-f32 J3DGD__lit_1050 = 32.0f;
+/* 80456328-8045632C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1050                                                        */
+SECTION_SDATA2 static f32 J3DGD__lit_1050 = 32.0f;
 
-/* 8045632C-80456330 0004+00 rc=0 efc=0 .sdata2    @1051                                                        */
-f32 lit_1051 = 16.0f;
+/* 8045632C-80456330 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1051                                                        */
+SECTION_SDATA2 static f32 lit_1051 = 16.0f;
 
-/* 8030E438-8030E5D4 019C+00 rc=0 efc=0 .text      J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy */
+/* 8030E438-8030E5D4 019C+00 rc=1 efc=1 rfr=False None .text      J3DGDSetTexLookupMode__F11_GXTexMapID14_GXTexWrapMode14_GXTexWrapMode12_GXTexFilter12_GXTexFilterfffUcUc13_GXAnisotropy */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -415,7 +394,7 @@ asm void J3DGDSetTexLookupMode(_GXTexMapID field_0, _GXTexWrapMode field_1, _GXT
 #pragma pop
 
 
-/* 8030E5D4-8030E67C 00A8+00 rc=0 efc=0 .text      J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt             */
+/* 8030E5D4-8030E67C 00A8+00 rc=1 efc=1 rfr=False None .text      J3DGDSetTexImgAttr__F11_GXTexMapIDUsUs9_GXTexFmt             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -426,7 +405,7 @@ asm void J3DGDSetTexImgAttr(_GXTexMapID field_0, u16 field_1, u16 field_2, _GXTe
 #pragma pop
 
 
-/* 8030E67C-8030E70C 0090+00 rc=0 efc=0 .text      J3DGDSetTexImgPtr__F11_GXTexMapIDPv                          */
+/* 8030E67C-8030E70C 0090+00 rc=1 efc=1 rfr=False None .text      J3DGDSetTexImgPtr__F11_GXTexMapIDPv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -437,7 +416,7 @@ asm void J3DGDSetTexImgPtr(_GXTexMapID field_0, void* field_1) {
 #pragma pop
 
 
-/* 8030E70C-8030E7E0 00D4+00 rc=0 efc=0 .text      J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl                       */
+/* 8030E70C-8030E7E0 00D4+00 rc=1 efc=1 rfr=False None .text      J3DGDSetTexImgPtrRaw__F11_GXTexMapIDUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -448,7 +427,7 @@ asm void J3DGDSetTexImgPtrRaw(_GXTexMapID field_0, u32 field_1) {
 #pragma pop
 
 
-/* 8030E7E0-8030E878 0098+00 rc=0 efc=0 .text      J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt                */
+/* 8030E7E0-8030E878 0098+00 rc=1 efc=1 rfr=False None .text      J3DGDSetTexTlut__F11_GXTexMapIDUl10_GXTlutFmt                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -459,7 +438,7 @@ asm void J3DGDSetTexTlut(_GXTexMapID field_0, u32 field_1, _GXTlutFmt field_2) {
 #pragma pop
 
 
-/* 8030E878-8030EB30 02B8+00 rc=0 efc=0 .text      J3DGDLoadTlut__FPvUl11_GXTlutSize                            */
+/* 8030E878-8030EB30 02B8+00 rc=1 efc=1 rfr=False None .text      J3DGDLoadTlut__FPvUl11_GXTlutSize                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -471,10 +450,10 @@ asm void J3DGDLoadTlut(void* field_0, u32 field_1, _GXTlutSize field_2) {
 
 
 /* ############################################################################################## */
-/* 80456330-80456334 0004+00 rc=0 efc=0 .sdata2    @1233                                                        */
-f32 lit_1233 = 1024.0f;
+/* 80456330-80456334 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1233                                                        */
+SECTION_SDATA2 static f32 lit_1233 = 1024.0f;
 
-/* 8030EB30-8030EE10 02E0+00 rc=0 efc=0 .text      J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc                  */
+/* 8030EB30-8030EE10 02E0+00 rc=2 efc=2 rfr=False None .text      J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -485,7 +464,7 @@ asm void J3DGDSetIndTexMtx(_GXIndTexMtxID field_0, f32 (* field_1)[3], s8 field_
 #pragma pop
 
 
-/* 8030EE10-8030EF08 00F8+00 rc=0 efc=0 .text      J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale */
+/* 8030EE10-8030EF08 00F8+00 rc=2 efc=2 rfr=False None .text      J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -496,7 +475,7 @@ asm void J3DGDSetIndTexCoordScale(_GXIndTexStageID field_0, _GXIndTexScale field
 #pragma pop
 
 
-/* 8030EF08-8030F108 0200+00 rc=0 efc=0 .text      J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID */
+/* 8030EF08-8030F108 0200+00 rc=2 efc=2 rfr=False None .text      J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -508,14 +487,14 @@ asm void J3DGDSetIndTexOrder(u32 field_0, _GXTexCoordID field_1, _GXTexMapID fie
 
 
 /* ############################################################################################## */
-/* 803CD880-803CD8A0 0010+10 rc=0 efc=0 .data      c2r$1302                                                     */
-u8 data_803CD880[16 + 16 /* padding */] = {
+/* 803CD880-803CD8A0 0010+10 rc=1 efc=0 rfr=False None .data      c2r$1302                                                     */
+SECTION_DATA static u8 data_803CD880[16 + 16 /* padding */] = {
 	0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x07, 0x05, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8030F108-8030F294 018C+00 rc=0 efc=0 .text      J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID */
+/* 8030F108-8030F294 018C+00 rc=9 efc=9 rfr=False None .text      J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -526,7 +505,7 @@ asm void J3DGDSetTevOrder(_GXTevStageID field_0, _GXTexCoordID field_1, _GXTexMa
 #pragma pop
 
 
-/* 8030F294-8030F3FC 0168+00 rc=0 efc=0 .text      J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor                */
+/* 8030F294-8030F3FC 0168+00 rc=11 efc=11 rfr=False None .text      J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -537,7 +516,7 @@ asm void J3DGDSetTevKColor(_GXTevKColorID field_0, _GXColor field_1) {
 #pragma pop
 
 
-/* 8030F3FC-8030F630 0234+00 rc=0 efc=0 .text      J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10             */
+/* 8030F3FC-8030F630 0234+00 rc=11 efc=11 rfr=False None .text      J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -549,42 +528,42 @@ asm void J3DGDSetTevColorS10(_GXTevRegID field_0, _GXColorS10 field_1) {
 
 
 /* ############################################################################################## */
-/* 80456334-80456338 0004+00 rc=0 efc=0 .sdata2    @1460                                                        */
-u8 lit_1460[4] = {
+/* 80456334-80456338 0004+00 rc=3 efc=0 rfr=False None .sdata2    @1460                                                        */
+SECTION_SDATA2 static u8 lit_1460[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456338-80456340 0004+04 rc=0 efc=0 .sdata2    @1461                                                        */
-f32 lit_1461[1 + 1 /* padding */] = {
+/* 80456338-80456340 0004+04 rc=1 efc=0 rfr=False None .sdata2    @1461                                                        */
+SECTION_SDATA2 static f32 lit_1461[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
-/* 80456340-80456348 0008+00 rc=0 efc=0 .sdata2    @1462                                                        */
-f64 lit_1462 = 1.0;
+/* 80456340-80456348 0008+00 rc=1 efc=0 rfr=False None .sdata2    @1462                                                        */
+SECTION_SDATA2 static f64 lit_1462 = 1.0;
 
-/* 80456348-80456350 0004+04 rc=0 efc=0 .sdata2    @1463                                                        */
-f32 J3DGD__lit_1463[1 + 1 /* padding */] = {
+/* 80456348-80456350 0004+04 rc=1 efc=0 rfr=False None .sdata2    @1463                                                        */
+SECTION_SDATA2 static f32 J3DGD__lit_1463[1 + 1 /* padding */] = {
 	2.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80456350-80456358 0008+00 rc=0 efc=0 .sdata2    @1464                                                        */
-f64 lit_1464 = 0.5;
+/* 80456350-80456358 0008+00 rc=1 efc=0 rfr=False None .sdata2    @1464                                                        */
+SECTION_SDATA2 static f64 lit_1464 = 0.5;
 
-/* 80456358-80456360 0004+04 rc=0 efc=0 .sdata2    @1465                                                        */
-f32 lit_1465[1 + 1 /* padding */] = {
+/* 80456358-80456360 0004+04 rc=1 efc=0 rfr=False None .sdata2    @1465                                                        */
+SECTION_SDATA2 static f32 lit_1465[1 + 1 /* padding */] = {
 	8388638.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80456360-80456368 0008+00 rc=0 efc=0 .sdata2    @1468                                                        */
-f64 lit_1468 = 4503601774854144.0 /* cast s32 to float */;
+/* 80456360-80456368 0008+00 rc=1 efc=0 rfr=False None .sdata2    @1468                                                        */
+SECTION_SDATA2 static f64 lit_1468 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8030F630-8030F994 0364+00 rc=0 efc=0 .text      J3DGDSetFog__F10_GXFogTypeffff8_GXColor                      */
+/* 8030F630-8030F994 0364+00 rc=3 efc=3 rfr=False None .text      J3DGDSetFog__F10_GXFogTypeffff8_GXColor                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,7 +574,7 @@ asm void J3DGDSetFog(_GXFogType field_0, f32 field_1, f32 field_2, f32 field_3, 
 #pragma pop
 
 
-/* 8030F994-8030FAE0 014C+00 rc=0 efc=0 .text      J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable                  */
+/* 8030F994-8030FAE0 014C+00 rc=3 efc=3 rfr=False None .text      J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -606,7 +585,7 @@ asm void J3DGDSetFogRangeAdj(u8 field_0, u16 field_1, _GXFogAdjTable* field_2) {
 #pragma pop
 
 
-/* 8030FAE0-8030FB60 0080+00 rc=0 efc=0 .text      J3DFifoLoadPosMtxImm__FPA4_fUl                               */
+/* 8030FAE0-8030FB60 0080+00 rc=10 efc=10 rfr=False None .text      J3DFifoLoadPosMtxImm__FPA4_fUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -617,7 +596,7 @@ asm void J3DFifoLoadPosMtxImm(f32 (* field_0)[4], u32 field_1) {
 #pragma pop
 
 
-/* 8030FB60-8030FBCC 006C+00 rc=0 efc=0 .text      J3DFifoLoadNrmMtxImm__FPA4_fUl                               */
+/* 8030FB60-8030FBCC 006C+00 rc=9 efc=9 rfr=False None .text      J3DFifoLoadNrmMtxImm__FPA4_fUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -628,7 +607,7 @@ asm void J3DFifoLoadNrmMtxImm(f32 (* field_0)[4], u32 field_1) {
 #pragma pop
 
 
-/* 8030FBCC-8030FC38 006C+00 rc=0 efc=0 .text      J3DFifoLoadNrmMtxImm3x3__FPA3_fUl                            */
+/* 8030FBCC-8030FC38 006C+00 rc=3 efc=3 rfr=False None .text      J3DFifoLoadNrmMtxImm3x3__FPA3_fUl                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -639,7 +618,7 @@ asm void J3DFifoLoadNrmMtxImm3x3(f32 (* field_0)[3], u32 field_1) {
 #pragma pop
 
 
-/* 8030FC38-8030FCD0 0098+00 rc=0 efc=0 .text      J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl                          */
+/* 8030FC38-8030FCD0 0098+00 rc=4 efc=4 rfr=False None .text      J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -650,7 +629,7 @@ asm void J3DFifoLoadNrmMtxToTexMtx(f32 (* field_0)[4], u32 field_1) {
 #pragma pop
 
 
-/* 8030FCD0-8030FD68 0098+00 rc=0 efc=0 .text      J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl                       */
+/* 8030FCD0-8030FD68 0098+00 rc=2 efc=2 rfr=False None .text      J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -662,19 +641,17 @@ asm void J3DFifoLoadNrmMtxToTexMtx3x3(f32 (* field_0)[3], u32 field_1) {
 
 
 /* ############################################################################################## */
-/* 8045093C-80450944 0008+00 rc=0 efc=0 .sdata     J3DTexImage1Ids                                              */
-u8 J3DTexImage1Ids[8] = {
+/* 8045093C-80450944 0008+00 rc=1 efc=0 rfr=False None .sdata     J3DTexImage1Ids                                              */
+SECTION_SDATA static u8 J3DTexImage1Ids[8] = {
 	0x8C, 0x8D, 0x8E, 0x8F, 0xAC, 0xAD, 0xAE, 0xAF,
 };
 
-/* 80450944-80450950 0008+04 rc=0 efc=0 .sdata     J3DTexImage2Ids                                              */
-u8 J3DTexImage2Ids[8 + 4 /* padding */] = {
+/* 80450944-8045094C 0008+00 rc=1 efc=0 rfr=False None .sdata     J3DTexImage2Ids                                              */
+SECTION_SDATA static u8 J3DTexImage2Ids[8] = {
 	0x90, 0x91, 0x92, 0x93, 0xB0, 0xB1, 0xB2, 0xB3,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8030FD68-8030FDE8 0080+00 rc=0 efc=0 .text      J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize */
+/* 8030FD68-8030FDE8 0080+00 rc=1 efc=1 rfr=False None .text      J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -684,4 +661,8 @@ asm void J3DFifoLoadTexCached(_GXTexMapID field_0, u32 field_1, _GXTexCacheSize 
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 8045094C-80450950 0004+00 rc=0 efc=0 rfr=False None .sdata     None                                                         */
+SECTION_SDATA u8 pad_8045094C[4];
 

@@ -46,8 +46,7 @@ extern "C" void __dt__Q26JStage13TAmbientLightFv(); // 1
 extern "C" s32 JSGFGetType__Q26JStage13TAmbientLightCFv(); // 1
 extern "C" void JSGGetColor__Q26JStage13TAmbientLightCFv(); // 1
 extern "C" void JSGSetColor__Q26JStage13TAmbientLightF8_GXColor(); // 1
-SECTION_DATA extern void* const __vt__Q26JStage13TAmbientLight[17 + 1 /* padding */];
-SECTION_SDATA2 extern u32 lit_302[1 + 1 /* padding */];
+extern "C" extern void* __vt__Q26JStage13TAmbientLight[17 + 1 /* padding */];
 
 // 
 // External References:
@@ -74,30 +73,30 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803C4638-803C4680 0044+04 rc=0 efc=0 .data      __vt__Q26JStage13TAmbientLight                               */
-void* const __vt__Q26JStage13TAmbientLight[17 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)JSGFGetType__Q26JStage13TAmbientLightCFv,
-	(void*)JSGGetName__Q26JStage7TObjectCFv,
-	(void*)JSGUpdate__Q26JStage7TObjectFv,
-	(void*)JSGGetFlag__Q26JStage7TObjectCFv,
-	(void*)JSGSetFlag__Q26JStage7TObjectFUl,
-	(void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
-	(void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
-	(void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
-	(void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
-	(void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
-	(void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
-	(void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
-	(void*)JSGGetColor__Q26JStage13TAmbientLightCFv,
-	(void*)JSGSetColor__Q26JStage13TAmbientLightF8_GXColor,
+/* 803C4638-803C4680 0044+04 rc=2 efc=1 rfr=False None .data      __vt__Q26JStage13TAmbientLight                               */
+SECTION_DATA void* __vt__Q26JStage13TAmbientLight[17 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)JSGFGetType__Q26JStage13TAmbientLightCFv,
+	/* 4    */ (void*)JSGGetName__Q26JStage7TObjectCFv,
+	/* 5    */ (void*)JSGUpdate__Q26JStage7TObjectFv,
+	/* 6    */ (void*)JSGGetFlag__Q26JStage7TObjectCFv,
+	/* 7    */ (void*)JSGSetFlag__Q26JStage7TObjectFUl,
+	/* 8    */ (void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
+	/* 9    */ (void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
+	/* 10   */ (void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
+	/* 11   */ (void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
+	/* 12   */ (void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
+	/* 13   */ (void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
+	/* 14   */ (void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
+	/* 15   */ (void*)JSGGetColor__Q26JStage13TAmbientLightCFv,
+	/* 16   */ (void*)JSGSetColor__Q26JStage13TAmbientLightF8_GXColor,
 	/* padding */
 	NULL,
 };
 
-/* 80280B20-80280B80 0060+00 rc=0 efc=0 .text      __dt__Q26JStage13TAmbientLightFv                             */
+/* 80280B20-80280B80 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q26JStage13TAmbientLightFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,21 +107,21 @@ asm JStage::TAmbientLight::~TAmbientLight() {
 #pragma pop
 
 
-/* 80280B80-80280B88 0008+00 rc=0 efc=0 .text      JSGFGetType__Q26JStage13TAmbientLightCFv                     */
+/* 80280B80-80280B88 0008+00 rc=2 efc=1 rfr=False None .text      JSGFGetType__Q26JStage13TAmbientLightCFv                     */
 s32 JStage::TAmbientLight::JSGFGetType() const {
 	return 4;
 }
 
 
 /* ############################################################################################## */
-/* 804553D0-804553D8 0004+04 rc=0 efc=0 .sdata2    @302                                                         */
-u32 lit_302[1 + 1 /* padding */] = {
+/* 804553D0-804553D8 0004+04 rc=1 efc=0 rfr=False None .sdata2    @302                                                         */
+SECTION_SDATA2 static u32 lit_302[1 + 1 /* padding */] = {
 	0xFFFFFFFF,
 	/* padding */
 	0x00000000,
 };
 
-/* 80280B88-80280B9C 0014+00 rc=0 efc=0 .text      JSGGetColor__Q26JStage13TAmbientLightCFv                     */
+/* 80280B88-80280B9C 0014+00 rc=2 efc=1 rfr=False None .text      JSGGetColor__Q26JStage13TAmbientLightCFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -133,7 +132,7 @@ asm void JStage::TAmbientLight::JSGGetColor() const {
 #pragma pop
 
 
-/* 80280B9C-80280BA0 0004+00 rc=0 efc=0 .text      JSGSetColor__Q26JStage13TAmbientLightF8_GXColor              */
+/* 80280B9C-80280BA0 0004+00 rc=1 efc=0 rfr=False None .text      JSGSetColor__Q26JStage13TAmbientLightF8_GXColor              */
 void JStage::TAmbientLight::JSGSetColor(_GXColor field_0) {
 	/* empty function */
 }

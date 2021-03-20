@@ -24,10 +24,10 @@ class Literal(ArbitraryData):
         padding = self.padding // self.element_size
         
         if size == 1 and padding == 0:
-            return self.data_type
+            return self.element_type()
         else:
             return PaddingArrayType.create(
-                self.data_type,
+                self.element_type(),
                 self.size // self.element_size,
                 self.padding // self.element_size)
 

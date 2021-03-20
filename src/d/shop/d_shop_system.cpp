@@ -9,6 +9,16 @@
 // Types:
 // 
 
+struct Vec {
+};
+
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct fopAc_ac_c {
+};
+
 struct STControl {
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 800320AC */ void init();
@@ -19,9 +29,6 @@ struct STControl {
 	/* 800325A0 */ void checkDownTrigger();
 };
 
-struct fopAc_ac_c {
-};
-
 struct mesg_flow_node_branch {
 };
 
@@ -29,13 +36,6 @@ struct dMsgFlow_c {
 	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
 	/* 8024A528 */ void getEventId(int*);
 	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
-};
-
-struct Vec {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct dShopSystem_c {
@@ -108,9 +108,6 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct J3DJoint {
-};
-
 struct daNpcT_faceMotionAnmData_c {
 };
 
@@ -118,6 +115,9 @@ struct J3DModel {
 };
 
 struct daNpcT_motionAnmData_c {
+};
+
+struct J3DJoint {
 };
 
 struct daNpcT_c {
@@ -216,12 +216,12 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-void dShopSystem_searchItemActor(void*, void*); // 2
-void dShopSystem_searchCameraActor(void*, void*); // 2
+static void dShopSystem_searchItemActor(void*, void*); // 2
+static void dShopSystem_searchCameraActor(void*, void*); // 2
 extern "C" void __sinit_d_shop_system_cpp(); // 1
 
-extern "C" void dShopSystem_searchItemActor__FPvPv(); // 1
-extern "C" void dShopSystem_searchCameraActor__FPvPv(); // 1
+extern "C" static void dShopSystem_searchItemActor__FPvPv(); // 1
+extern "C" static void dShopSystem_searchCameraActor__FPvPv(); // 1
 extern "C" void initShopSystem__13dShopSystem_cFv(); // 1
 extern "C" void __dt__13dShopSystem_cFv(); // 1
 extern "C" void onFlag__13dShopSystem_cFi(); // 1
@@ -271,60 +271,19 @@ extern "C" void __sinit_d_shop_system_cpp(); // 1
 extern "C" bool beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
 extern "C" bool beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
 extern "C" bool getResName2__13dShopSystem_cFi(); // 1
-SECTION_RODATA extern const char* const d_shop_d_shop_system__stringBase0;
-SECTION_DATA extern u8 d_shop_d_shop_system__cNullVec__6Z2Calc[12];
-SECTION_DATA extern u8 dShopSystem_itemActor[28];
-SECTION_DATA extern u8 item_seira_shop[36];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4056[3];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4057[3];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4058[3];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4059[3];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4060[3];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4061[3];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4062[3];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4063[3];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4064[3];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4065[3];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4066[3];
-SECTION_DATA extern void* d_shop_d_shop_system__lit_4067[3];
-SECTION_DATA extern u8 d_shop_d_shop_system__process[144 + 120 /* padding */];
-SECTION_DATA extern void* const __vt__13dShopSystem_c[52 + 1 /* padding */];
-SECTION_SDATA extern u8 dShopSystem_itemNo[7 + 1 /* padding */];
-SECTION_SDATA extern u8 dShopSystem_cameraActor[8];
-SECTION_SDATA extern void* shop_item_pos_data_tbl[1 + 1 /* padding */];
-SECTION_SBSS extern u8 data_80451058[4];
-SECTION_SBSS extern u8 dShopSystem_item_count[4];
-SECTION_SBSS extern u8 data_80451060[4];
-SECTION_SBSS extern u8 dShopSystem_camera_count[4];
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_4097;
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_4098;
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_4099;
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_4100;
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_4101;
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_4493;
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_4494;
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_4495;
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_4496;
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_5000;
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_5001;
-SECTION_SDATA2 extern f32 lit_5002;
-SECTION_SDATA2 extern f32 lit_5003;
-SECTION_SDATA2 extern f32 lit_5004;
-SECTION_SDATA2 extern f32 lit_5005;
-SECTION_SDATA2 extern f32 lit_5006;
-SECTION_SDATA2 extern f32 lit_5007;
-SECTION_SDATA2 extern u8 lit_5084[4];
-SECTION_SDATA2 extern f32 lit_5296[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 d_shop_d_shop_system__lit_5298;
-SECTION_SDATA2 extern u8 data_80453B58[6 + 2 /* padding */];
-SECTION_SDATA2 extern f32 lit_5687;
-SECTION_SDATA2 extern f32 lit_5688;
-SECTION_SDATA2 extern f32 lit_5689;
-SECTION_SDATA2 extern f32 lit_5690;
-SECTION_SDATA2 extern f32 d_shop_d_shop_system__lit_5691;
-SECTION_SDATA2 extern f32 lit_5692;
-SECTION_SDATA2 extern f32 lit_5693;
-SECTION_SDATA2 extern f32 lit_5694;
+extern "C" extern char const* const d_shop_d_shop_system__stringBase0;
+extern "C" extern void* d_shop_d_shop_system__lit_4056[3];
+extern "C" extern void* d_shop_d_shop_system__lit_4057[3];
+extern "C" extern void* d_shop_d_shop_system__lit_4058[3];
+extern "C" extern void* d_shop_d_shop_system__lit_4059[3];
+extern "C" extern void* d_shop_d_shop_system__lit_4060[3];
+extern "C" extern void* d_shop_d_shop_system__lit_4061[3];
+extern "C" extern void* d_shop_d_shop_system__lit_4062[3];
+extern "C" extern void* d_shop_d_shop_system__lit_4063[3];
+extern "C" extern void* d_shop_d_shop_system__lit_4064[3];
+extern "C" extern void* d_shop_d_shop_system__lit_4065[3];
+extern "C" extern void* d_shop_d_shop_system__lit_4066[3];
+extern "C" extern void* d_shop_d_shop_system__lit_4067[3];
 
 // 
 // External References:
@@ -468,50 +427,50 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-SECTION_DATA extern void* const __vt__9STControl[4];
-SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 g_cursorHIO[68 + 4 /* padding */];
-SECTION_BSS extern u8 g_meter2_info[248];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern void* __vt__9STControl[4];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_cursorHIO[68 + 4 /* padding */];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803BB898-803BB8A4 000C+00 rc=0 efc=0 .data      cNullVec__6Z2Calc                                            */
-u8 d_shop_d_shop_system__cNullVec__6Z2Calc[12] = {
+/* 803BB898-803BB8A4 000C+00 rc=1 efc=0 rfr=False None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA static u8 d_shop_d_shop_system__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BB8A4-803BB8C0 001C+00 rc=0 efc=0 .data      dShopSystem_itemActor                                        */
-u8 dShopSystem_itemActor[28] = {
+/* 803BB8A4-803BB8C0 001C+00 rc=6 efc=0 rfr=False None .data      dShopSystem_itemActor                                        */
+SECTION_DATA static u8 dShopSystem_itemActor[28] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804506E8-804506F0 0007+01 rc=0 efc=0 .sdata     dShopSystem_itemNo                                           */
-u8 dShopSystem_itemNo[7 + 1 /* padding */] = {
+/* 804506E8-804506F0 0007+01 rc=7 efc=0 rfr=False None .sdata     dShopSystem_itemNo                                           */
+SECTION_SDATA static u8 dShopSystem_itemNo[7 + 1 /* padding */] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	/* padding */
 	0x00,
 };
 
-/* 80451058-8045105C 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80451058[4];
+/* 80451058-8045105C 0004+00 rc=9 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_80451058[4];
 
-/* 8045105C-80451060 0004+00 rc=0 efc=0 .sbss      dShopSystem_item_count                                       */
-u8 dShopSystem_item_count[4];
+/* 8045105C-80451060 0004+00 rc=6 efc=0 rfr=False None .sbss      dShopSystem_item_count                                       */
+static u8 dShopSystem_item_count[4];
 
-/* 80451060-80451064 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80451060[4];
+/* 80451060-80451064 0004+00 rc=4 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_80451060[4];
 
-/* 80197098-80197270 01D8+00 rc=0 efc=0 .text      dShopSystem_searchItemActor__FPvPv                           */
+/* 80197098-80197270 01D8+00 rc=1 efc=0 rfr=False None .text      dShopSystem_searchItemActor__FPvPv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_searchItemActor(void* field_0, void* field_1) {
+asm static void dShopSystem_searchItemActor(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/dShopSystem_searchItemActor__FPvPv.s"
 }
@@ -519,19 +478,19 @@ asm void dShopSystem_searchItemActor(void* field_0, void* field_1) {
 
 
 /* ############################################################################################## */
-/* 804506F0-804506F8 0008+00 rc=0 efc=0 .sdata     dShopSystem_cameraActor                                      */
-u8 dShopSystem_cameraActor[8] = {
+/* 804506F0-804506F8 0008+00 rc=6 efc=0 rfr=False None .sdata     dShopSystem_cameraActor                                      */
+SECTION_SDATA static u8 dShopSystem_cameraActor[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451064-80451068 0004+00 rc=0 efc=0 .sbss      dShopSystem_camera_count                                     */
-u8 dShopSystem_camera_count[4];
+/* 80451064-80451068 0004+00 rc=5 efc=0 rfr=False None .sbss      dShopSystem_camera_count                                     */
+static u8 dShopSystem_camera_count[4];
 
-/* 80197270-80197338 00C8+00 rc=0 efc=0 .text      dShopSystem_searchCameraActor__FPvPv                         */
+/* 80197270-80197338 00C8+00 rc=1 efc=0 rfr=False None .text      dShopSystem_searchCameraActor__FPvPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dShopSystem_searchCameraActor(void* field_0, void* field_1) {
+asm static void dShopSystem_searchCameraActor(void* field_0, void* field_1) {
 	nofralloc
 #include "asm/d/shop/d_shop_system/dShopSystem_searchCameraActor__FPvPv.s"
 }
@@ -539,22 +498,22 @@ asm void dShopSystem_searchCameraActor(void* field_0, void* field_1) {
 
 
 /* ############################################################################################## */
-/* 80453B00-80453B04 0004+00 rc=0 efc=0 .sdata2    @4097                                                        */
-f32 d_shop_d_shop_system__lit_4097 = 9.0f / 10.0f;
+/* 80453B00-80453B04 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4097                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4097 = 9.0f / 10.0f;
 
-/* 80453B04-80453B08 0004+00 rc=0 efc=0 .sdata2    @4098                                                        */
-f32 d_shop_d_shop_system__lit_4098 = 0.5f;
+/* 80453B04-80453B08 0004+00 rc=2 efc=0 rfr=False None .sdata2    @4098                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4098 = 0.5f;
 
-/* 80453B08-80453B0C 0004+00 rc=0 efc=0 .sdata2    @4099                                                        */
-f32 d_shop_d_shop_system__lit_4099 = 1.0f;
+/* 80453B08-80453B0C 0004+00 rc=5 efc=0 rfr=False None .sdata2    @4099                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4099 = 1.0f;
 
-/* 80453B0C-80453B10 0004+00 rc=0 efc=0 .sdata2    @4100                                                        */
-f32 d_shop_d_shop_system__lit_4100 = 1.0f / 10.0f;
+/* 80453B0C-80453B10 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4100                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4100 = 1.0f / 10.0f;
 
-/* 80453B10-80453B14 0004+00 rc=0 efc=0 .sdata2    @4101                                                        */
-f32 d_shop_d_shop_system__lit_4101 = 7.0f / 10.0f;
+/* 80453B10-80453B14 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4101                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4101 = 7.0f / 10.0f;
 
-/* 80197338-801974E4 01AC+00 rc=0 efc=0 .text      initShopSystem__13dShopSystem_cFv                            */
+/* 80197338-801974E4 01AC+00 rc=0 efc=0 rfr=False None .text      initShopSystem__13dShopSystem_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -566,99 +525,99 @@ asm void dShopSystem_c::initShopSystem() {
 
 
 /* ############################################################################################## */
-/* 803BB8C0-803BB8E4 0024+00 rc=0 efc=0 .data      item_seira_shop                                              */
-u8 item_seira_shop[36] = {
+/* 803BB8C0-803BB8E4 0024+00 rc=1 efc=0 rfr=False None .data      item_seira_shop                                              */
+SECTION_DATA static u8 item_seira_shop[36] = {
 	0x42, 0xDC, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00, 0xC2, 0xE6, 0x00, 0x00, 0x43, 0x20, 0x00, 0x00,
 	0x43, 0x16, 0x00, 0x00, 0xC2, 0xE6, 0x00, 0x00, 0x43, 0x52, 0x00, 0x00, 0x43, 0x16, 0x00, 0x00,
 	0xC2, 0xE6, 0x00, 0x00,
 };
 
-/* 803BB8E4-803BB8F0 000C+00 rc=0 efc=0 .data      @4056                                                        */
-void* d_shop_d_shop_system__lit_4056[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB8E4-803BB8F0 000C+00 rc=0 efc=0 rfr=False None .data      @4056                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4056[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB8F0-803BB8FC 000C+00 rc=0 efc=0 .data      @4057                                                        */
-void* d_shop_d_shop_system__lit_4057[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB8F0-803BB8FC 000C+00 rc=0 efc=0 rfr=False None .data      @4057                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4057[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB8FC-803BB908 000C+00 rc=0 efc=0 .data      @4058                                                        */
-void* d_shop_d_shop_system__lit_4058[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_select_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB8FC-803BB908 000C+00 rc=0 efc=0 rfr=False None .data      @4058                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4058[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_select_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB908-803BB914 000C+00 rc=0 efc=0 .data      @4059                                                        */
-void* d_shop_d_shop_system__lit_4059[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_select_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB908-803BB914 000C+00 rc=0 efc=0 rfr=False None .data      @4059                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4059[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_select_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB914-803BB920 000C+00 rc=0 efc=0 .data      @4060                                                        */
-void* d_shop_d_shop_system__lit_4060[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_select__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB914-803BB920 000C+00 rc=0 efc=0 rfr=False None .data      @4060                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4060[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_select__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB920-803BB92C 000C+00 rc=0 efc=0 .data      @4061                                                        */
-void* d_shop_d_shop_system__lit_4061[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_moving__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB920-803BB92C 000C+00 rc=0 efc=0 rfr=False None .data      @4061                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4061[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_moving__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB92C-803BB938 000C+00 rc=0 efc=0 .data      @4062                                                        */
-void* d_shop_d_shop_system__lit_4062[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_decide__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB92C-803BB938 000C+00 rc=0 efc=0 rfr=False None .data      @4062                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4062[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_decide__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB938-803BB944 000C+00 rc=0 efc=0 .data      @4063                                                        */
-void* d_shop_d_shop_system__lit_4063[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_choose__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB938-803BB944 000C+00 rc=0 efc=0 rfr=False None .data      @4063                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4063[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_choose__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB944-803BB950 000C+00 rc=0 efc=0 .data      @4064                                                        */
-void* d_shop_d_shop_system__lit_4064[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_decide_yes__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB944-803BB950 000C+00 rc=0 efc=0 rfr=False None .data      @4064                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4064[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_decide_yes__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB950-803BB95C 000C+00 rc=0 efc=0 .data      @4065                                                        */
-void* d_shop_d_shop_system__lit_4065[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_decide_no__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB950-803BB95C 000C+00 rc=0 efc=0 rfr=False None .data      @4065                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4065[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_decide_no__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB95C-803BB968 000C+00 rc=0 efc=0 .data      @4066                                                        */
-void* d_shop_d_shop_system__lit_4066[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_finish__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB95C-803BB968 000C+00 rc=0 efc=0 rfr=False None .data      @4066                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4066[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_finish__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB968-803BB974 000C+00 rc=0 efc=0 .data      @4067                                                        */
-void* d_shop_d_shop_system__lit_4067[3] = {
-	(void*)NULL,
-	(void*)0xFFFFFFFF,
-	(void*)seq_event__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
+/* 803BB968-803BB974 000C+00 rc=0 efc=0 rfr=False None .data      @4067                                                        */
+SECTION_DATA void* d_shop_d_shop_system__lit_4067[3] = {
+	/* 0    */ (void*)NULL,
+	/* 1    */ (void*)0xFFFFFFFF,
+	/* 2    */ (void*)seq_event__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c,
 };
 
-/* 803BB974-803BBA7C 0090+78 rc=0 efc=0 .data      process                                                      */
-u8 d_shop_d_shop_system__process[144 + 120 /* padding */] = {
+/* 803BB974-803BBA7C 0090+78 rc=1 efc=0 rfr=False None .data      process                                                      */
+SECTION_DATA static u8 d_shop_d_shop_system__process[144 + 120 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -679,65 +638,65 @@ u8 d_shop_d_shop_system__process[144 + 120 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803BBA7C-803BBB50 00D0+04 rc=0 efc=0 .data      __vt__13dShopSystem_c                                        */
-void* const __vt__13dShopSystem_c[52 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__13dShopSystem_cFv,
-	(void*)ctrlBtk__8daNpcT_cFv,
-	(void*)ctrlSubFaceMotion__8daNpcT_cFi,
-	(void*)checkChangeJoint__8daNpcT_cFi,
-	(void*)checkRemoveJoint__8daNpcT_cFi,
-	(void*)getBackboneJointNo__8daNpcT_cFv,
-	(void*)getNeckJointNo__8daNpcT_cFv,
-	(void*)getHeadJointNo__8daNpcT_cFv,
-	(void*)getFootLJointNo__8daNpcT_cFv,
-	(void*)getFootRJointNo__8daNpcT_cFv,
-	(void*)getEyeballLMaterialNo__8daNpcT_cFv,
-	(void*)getEyeballRMaterialNo__8daNpcT_cFv,
-	(void*)getEyeballMaterialNo__8daNpcT_cFv,
-	(void*)ctrlJoint__8daNpcT_cFP8J3DJointP8J3DModel,
-	(void*)afterJntAnm__8daNpcT_cFi,
-	(void*)setParam__8daNpcT_cFv,
-	(void*)checkChangeEvt__8daNpcT_cFv,
-	(void*)evtTalk__8daNpcT_cFv,
-	(void*)evtEndProc__8daNpcT_cFv,
-	(void*)evtCutProc__8daNpcT_cFv,
-	(void*)setAfterTalkMotion__8daNpcT_cFv,
-	(void*)evtProc__8daNpcT_cFv,
-	(void*)action__8daNpcT_cFv,
-	(void*)beforeMove__8daNpcT_cFv,
-	(void*)afterMoved__8daNpcT_cFv,
-	(void*)setAttnPos__8daNpcT_cFv,
-	(void*)setFootPos__8daNpcT_cFv,
-	(void*)setCollision__8daNpcT_cFv,
-	(void*)setFootPrtcl__8daNpcT_cFP4cXyzff,
-	(void*)checkCullDraw__8daNpcT_cFv,
-	(void*)twilight__8daNpcT_cFv,
-	(void*)chkXYItems__8daNpcT_cFv,
-	(void*)evtOrder__8daNpcT_cFv,
-	(void*)decTmr__8daNpcT_cFv,
-	(void*)clrParam__8daNpcT_cFv,
-	(void*)drawDbgInfo__8daNpcT_cFv,
-	(void*)drawOtherMdl__8daNpcT_cFv,
-	(void*)drawGhost__8daNpcT_cFv,
-	(void*)afterSetFaceMotionAnm__8daNpcT_cFiifi,
-	(void*)afterSetMotionAnm__8daNpcT_cFiifi,
-	(void*)getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c,
-	(void*)getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c,
-	(void*)changeAnm__8daNpcT_cFPiPi,
-	(void*)changeBck__8daNpcT_cFPiPi,
-	(void*)changeBtp__8daNpcT_cFPiPi,
-	(void*)changeBtk__8daNpcT_cFPiPi,
-	(void*)setMotionAnm__8daNpcT_cFifi,
-	(void*)getResName2__13dShopSystem_cFi,
-	(void*)beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci,
-	(void*)beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci,
+/* 803BBA7C-803BBB50 00D0+04 rc=1 efc=0 rfr=False None .data      __vt__13dShopSystem_c                                        */
+SECTION_DATA static void* __vt__13dShopSystem_c[52 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__13dShopSystem_cFv,
+	/* 3    */ (void*)ctrlBtk__8daNpcT_cFv,
+	/* 4    */ (void*)ctrlSubFaceMotion__8daNpcT_cFi,
+	/* 5    */ (void*)checkChangeJoint__8daNpcT_cFi,
+	/* 6    */ (void*)checkRemoveJoint__8daNpcT_cFi,
+	/* 7    */ (void*)getBackboneJointNo__8daNpcT_cFv,
+	/* 8    */ (void*)getNeckJointNo__8daNpcT_cFv,
+	/* 9    */ (void*)getHeadJointNo__8daNpcT_cFv,
+	/* 10   */ (void*)getFootLJointNo__8daNpcT_cFv,
+	/* 11   */ (void*)getFootRJointNo__8daNpcT_cFv,
+	/* 12   */ (void*)getEyeballLMaterialNo__8daNpcT_cFv,
+	/* 13   */ (void*)getEyeballRMaterialNo__8daNpcT_cFv,
+	/* 14   */ (void*)getEyeballMaterialNo__8daNpcT_cFv,
+	/* 15   */ (void*)ctrlJoint__8daNpcT_cFP8J3DJointP8J3DModel,
+	/* 16   */ (void*)afterJntAnm__8daNpcT_cFi,
+	/* 17   */ (void*)setParam__8daNpcT_cFv,
+	/* 18   */ (void*)checkChangeEvt__8daNpcT_cFv,
+	/* 19   */ (void*)evtTalk__8daNpcT_cFv,
+	/* 20   */ (void*)evtEndProc__8daNpcT_cFv,
+	/* 21   */ (void*)evtCutProc__8daNpcT_cFv,
+	/* 22   */ (void*)setAfterTalkMotion__8daNpcT_cFv,
+	/* 23   */ (void*)evtProc__8daNpcT_cFv,
+	/* 24   */ (void*)action__8daNpcT_cFv,
+	/* 25   */ (void*)beforeMove__8daNpcT_cFv,
+	/* 26   */ (void*)afterMoved__8daNpcT_cFv,
+	/* 27   */ (void*)setAttnPos__8daNpcT_cFv,
+	/* 28   */ (void*)setFootPos__8daNpcT_cFv,
+	/* 29   */ (void*)setCollision__8daNpcT_cFv,
+	/* 30   */ (void*)setFootPrtcl__8daNpcT_cFP4cXyzff,
+	/* 31   */ (void*)checkCullDraw__8daNpcT_cFv,
+	/* 32   */ (void*)twilight__8daNpcT_cFv,
+	/* 33   */ (void*)chkXYItems__8daNpcT_cFv,
+	/* 34   */ (void*)evtOrder__8daNpcT_cFv,
+	/* 35   */ (void*)decTmr__8daNpcT_cFv,
+	/* 36   */ (void*)clrParam__8daNpcT_cFv,
+	/* 37   */ (void*)drawDbgInfo__8daNpcT_cFv,
+	/* 38   */ (void*)drawOtherMdl__8daNpcT_cFv,
+	/* 39   */ (void*)drawGhost__8daNpcT_cFv,
+	/* 40   */ (void*)afterSetFaceMotionAnm__8daNpcT_cFiifi,
+	/* 41   */ (void*)afterSetMotionAnm__8daNpcT_cFiifi,
+	/* 42   */ (void*)getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c,
+	/* 43   */ (void*)getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c,
+	/* 44   */ (void*)changeAnm__8daNpcT_cFPiPi,
+	/* 45   */ (void*)changeBck__8daNpcT_cFPiPi,
+	/* 46   */ (void*)changeBtp__8daNpcT_cFPiPi,
+	/* 47   */ (void*)changeBtk__8daNpcT_cFPiPi,
+	/* 48   */ (void*)setMotionAnm__8daNpcT_cFifi,
+	/* 49   */ (void*)getResName2__13dShopSystem_cFi,
+	/* 50   */ (void*)beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci,
+	/* 51   */ (void*)beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci,
 	/* padding */
 	NULL,
 };
 
-/* 801974E4-801975C0 00DC+00 rc=0 efc=0 .text      __dt__13dShopSystem_cFv                                      */
+/* 801974E4-801975C0 00DC+00 rc=1 efc=0 rfr=False None .text      __dt__13dShopSystem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -748,7 +707,7 @@ asm dShopSystem_c::~dShopSystem_c() {
 #pragma pop
 
 
-/* 801975C0-801975DC 001C+00 rc=0 efc=0 .text      onFlag__13dShopSystem_cFi                                    */
+/* 801975C0-801975DC 001C+00 rc=6 efc=0 rfr=False None .text      onFlag__13dShopSystem_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -759,7 +718,7 @@ asm void dShopSystem_c::onFlag(int field_0) {
 #pragma pop
 
 
-/* 801975DC-801975F8 001C+00 rc=0 efc=0 .text      offFlag__13dShopSystem_cFi                                   */
+/* 801975DC-801975F8 001C+00 rc=7 efc=0 rfr=False None .text      offFlag__13dShopSystem_cFi                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -770,7 +729,7 @@ asm void dShopSystem_c::offFlag(int field_0) {
 #pragma pop
 
 
-/* 801975F8-80197618 0020+00 rc=0 efc=0 .text      isFlag__13dShopSystem_cFi                                    */
+/* 801975F8-80197618 0020+00 rc=9 efc=1 rfr=False None .text      isFlag__13dShopSystem_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -781,7 +740,7 @@ asm void dShopSystem_c::isFlag(int field_0) {
 #pragma pop
 
 
-/* 80197618-80197634 001C+00 rc=0 efc=0 .text      onSoldOutItemFlag__13dShopSystem_cFi                         */
+/* 80197618-80197634 001C+00 rc=1 efc=0 rfr=False None .text      onSoldOutItemFlag__13dShopSystem_cFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -792,7 +751,7 @@ asm void dShopSystem_c::onSoldOutItemFlag(int field_0) {
 #pragma pop
 
 
-/* 80197634-80197650 001C+00 rc=0 efc=0 .text      offSoldOutItemFlag__13dShopSystem_cFi                        */
+/* 80197634-80197650 001C+00 rc=1 efc=0 rfr=False None .text      offSoldOutItemFlag__13dShopSystem_cFi                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -803,7 +762,7 @@ asm void dShopSystem_c::offSoldOutItemFlag(int field_0) {
 #pragma pop
 
 
-/* 80197650-80197670 0020+00 rc=0 efc=0 .text      isSoldOutItemFlag__13dShopSystem_cFi                         */
+/* 80197650-80197670 0020+00 rc=2 efc=0 rfr=False None .text      isSoldOutItemFlag__13dShopSystem_cFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -814,7 +773,7 @@ asm void dShopSystem_c::isSoldOutItemFlag(int field_0) {
 #pragma pop
 
 
-/* 80197670-80197808 0198+00 rc=0 efc=0 .text      checkController__13dShopSystem_cFUcP10dMsgFlow_c             */
+/* 80197670-80197808 0198+00 rc=3 efc=0 rfr=False None .text      checkController__13dShopSystem_cFUcP10dMsgFlow_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -826,19 +785,19 @@ asm void dShopSystem_c::checkController(u8 field_0, dMsgFlow_c* field_1) {
 
 
 /* ############################################################################################## */
-/* 80453B14-80453B18 0004+00 rc=0 efc=0 .sdata2    @4493                                                        */
-f32 d_shop_d_shop_system__lit_4493 = -1.0f;
+/* 80453B14-80453B18 0004+00 rc=4 efc=0 rfr=False None .sdata2    @4493                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4493 = -1.0f;
 
-/* 80453B18-80453B1C 0004+00 rc=0 efc=0 .sdata2    @4494                                                        */
-f32 d_shop_d_shop_system__lit_4494 = 0.25f;
+/* 80453B18-80453B1C 0004+00 rc=8 efc=0 rfr=False None .sdata2    @4494                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4494 = 0.25f;
 
-/* 80453B1C-80453B20 0004+00 rc=0 efc=0 .sdata2    @4495                                                        */
-f32 d_shop_d_shop_system__lit_4495 = 20.0f;
+/* 80453B1C-80453B20 0004+00 rc=9 efc=0 rfr=False None .sdata2    @4495                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4495 = 20.0f;
 
-/* 80453B20-80453B24 0004+00 rc=0 efc=0 .sdata2    @4496                                                        */
-f32 d_shop_d_shop_system__lit_4496 = 5.0f;
+/* 80453B20-80453B24 0004+00 rc=9 efc=0 rfr=False None .sdata2    @4496                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_4496 = 5.0f;
 
-/* 80197808-80197DD0 05C8+00 rc=0 efc=0 .text      chooseItem3__13dShopSystem_cFUc                              */
+/* 80197808-80197DD0 05C8+00 rc=1 efc=0 rfr=False None .text      chooseItem3__13dShopSystem_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -849,7 +808,7 @@ asm void dShopSystem_c::chooseItem3(u8 field_0) {
 #pragma pop
 
 
-/* 80197DD0-80198250 0480+00 rc=0 efc=0 .text      chooseItem5__13dShopSystem_cFUc                              */
+/* 80197DD0-80198250 0480+00 rc=1 efc=0 rfr=False None .text      chooseItem5__13dShopSystem_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -860,7 +819,7 @@ asm void dShopSystem_c::chooseItem5(u8 field_0) {
 #pragma pop
 
 
-/* 80198250-80198444 01F4+00 rc=0 efc=0 .text      chooseItem4__13dShopSystem_cFUc                              */
+/* 80198250-80198444 01F4+00 rc=1 efc=0 rfr=False None .text      chooseItem4__13dShopSystem_cFUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -871,7 +830,7 @@ asm void dShopSystem_c::chooseItem4(u8 field_0) {
 #pragma pop
 
 
-/* 80198444-80198488 0044+00 rc=0 efc=0 .text      moveCursor__13dShopSystem_cFiUc                              */
+/* 80198444-80198488 0044+00 rc=5 efc=0 rfr=False None .text      moveCursor__13dShopSystem_cFiUc                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -882,7 +841,7 @@ asm void dShopSystem_c::moveCursor(int field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80198488-80198708 0280+00 rc=0 efc=0 .text      moveCursor0__13dShopSystem_cFiUc                             */
+/* 80198488-80198708 0280+00 rc=1 efc=0 rfr=False None .text      moveCursor0__13dShopSystem_cFiUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -893,7 +852,7 @@ asm void dShopSystem_c::moveCursor0(int field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80198708-80198878 0170+00 rc=0 efc=0 .text      moveCursor1__13dShopSystem_cFiUc                             */
+/* 80198708-80198878 0170+00 rc=1 efc=0 rfr=False None .text      moveCursor1__13dShopSystem_cFiUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -904,7 +863,7 @@ asm void dShopSystem_c::moveCursor1(int field_0, u8 field_1) {
 #pragma pop
 
 
-/* 80198878-80198950 00D8+00 rc=0 efc=0 .text      drawCursor__13dShopSystem_cFv                                */
+/* 80198878-80198950 00D8+00 rc=0 efc=0 rfr=False None .text      drawCursor__13dShopSystem_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -915,7 +874,7 @@ asm void dShopSystem_c::drawCursor() {
 #pragma pop
 
 
-/* 80198950-80198A2C 00DC+00 rc=0 efc=0 .text      itemRotate__13dShopSystem_cFv                                */
+/* 80198950-80198A2C 00DC+00 rc=0 efc=0 rfr=False None .text      itemRotate__13dShopSystem_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -927,43 +886,43 @@ asm void dShopSystem_c::itemRotate() {
 
 
 /* ############################################################################################## */
-/* 80394C10-80394C28 0016+02 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 80394C10-80394C28 0016+02 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_80394C10 = "R_SP01";
-const char* const stringBase_80394C17 = ".bck";
-const char* const stringBase_80394C1C = ".btp";
-const char* const stringBase_80394C21 = ".btk";
+SECTION_DEAD static char const* const stringBase_80394C10 = "R_SP01";
+SECTION_DEAD static char const* const stringBase_80394C17 = ".bck";
+SECTION_DEAD static char const* const stringBase_80394C1C = ".btp";
+SECTION_DEAD static char const* const stringBase_80394C21 = ".btk";
 /* @stringBase0 padding */
-char* const pad_80394C26 = "\0";
+SECTION_DEAD static char const* const pad_80394C26 = "\0";
 #pragma pop
 
-/* 80453B24-80453B28 0004+00 rc=0 efc=0 .sdata2    @5000                                                        */
-f32 d_shop_d_shop_system__lit_5000 = -25.0f;
+/* 80453B24-80453B28 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5000                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_5000 = -25.0f;
 
-/* 80453B28-80453B2C 0004+00 rc=0 efc=0 .sdata2    @5001                                                        */
-f32 d_shop_d_shop_system__lit_5001 = 150.0f;
+/* 80453B28-80453B2C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5001                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_5001 = 150.0f;
 
-/* 80453B2C-80453B30 0004+00 rc=0 efc=0 .sdata2    @5002                                                        */
-f32 lit_5002 = -50.0f;
+/* 80453B2C-80453B30 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5002                                                        */
+SECTION_SDATA2 static f32 lit_5002 = -50.0f;
 
-/* 80453B30-80453B34 0004+00 rc=0 efc=0 .sdata2    @5003                                                        */
-f32 lit_5003 = 250.0f;
+/* 80453B30-80453B34 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5003                                                        */
+SECTION_SDATA2 static f32 lit_5003 = 250.0f;
 
-/* 80453B34-80453B38 0004+00 rc=0 efc=0 .sdata2    @5004                                                        */
-f32 lit_5004 = 60.0f;
+/* 80453B34-80453B38 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5004                                                        */
+SECTION_SDATA2 static f32 lit_5004 = 60.0f;
 
-/* 80453B38-80453B3C 0004+00 rc=0 efc=0 .sdata2    @5005                                                        */
-f32 lit_5005 = -130.0f;
+/* 80453B38-80453B3C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5005                                                        */
+SECTION_SDATA2 static f32 lit_5005 = -130.0f;
 
-/* 80453B3C-80453B40 0004+00 rc=0 efc=0 .sdata2    @5006                                                        */
-f32 lit_5006 = 215.0f;
+/* 80453B3C-80453B40 0004+00 rc=2 efc=0 rfr=False None .sdata2    @5006                                                        */
+SECTION_SDATA2 static f32 lit_5006 = 215.0f;
 
-/* 80453B40-80453B44 0004+00 rc=0 efc=0 .sdata2    @5007                                                        */
-f32 lit_5007 = 15.0f;
+/* 80453B40-80453B44 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5007                                                        */
+SECTION_SDATA2 static f32 lit_5007 = 15.0f;
 
-/* 80198A2C-801990B0 0684+00 rc=0 efc=0 .text      itemZoom__13dShopSystem_cFP4cXyz                             */
+/* 80198A2C-801990B0 0684+00 rc=0 efc=0 rfr=False None .text      itemZoom__13dShopSystem_cFP4cXyz                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -974,19 +933,19 @@ asm void dShopSystem_c::itemZoom(cXyz* field_0) {
 #pragma pop
 
 
-/* 801990B0-801990B8 0008+00 rc=0 efc=0 .text      seq_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c         */
+/* 801990B0-801990B8 0008+00 rc=1 efc=0 rfr=False None .text      seq_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c         */
 bool dShopSystem_c::seq_wait(fopAc_ac_c* field_0, dMsgFlow_c* field_1) {
 	return false;
 }
 
 
 /* ############################################################################################## */
-/* 80453B44-80453B48 0004+00 rc=0 efc=0 .sdata2    @5084                                                        */
-u8 lit_5084[4] = {
+/* 80453B44-80453B48 0004+00 rc=3 efc=0 rfr=False None .sdata2    @5084                                                        */
+SECTION_SDATA2 static u8 lit_5084[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 801990B8-8019936C 02B4+00 rc=0 efc=0 .text      seq_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c        */
+/* 801990B8-8019936C 02B4+00 rc=1 efc=0 rfr=False None .text      seq_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -997,7 +956,7 @@ asm void dShopSystem_c::seq_start(fopAc_ac_c* field_0, dMsgFlow_c* field_1) {
 #pragma pop
 
 
-/* 8019936C-801993C4 0058+00 rc=0 efc=0 .text      seq_select_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c  */
+/* 8019936C-801993C4 0058+00 rc=1 efc=0 rfr=False None .text      seq_select_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1008,7 +967,7 @@ asm void dShopSystem_c::seq_select_wait(fopAc_ac_c* field_0, dMsgFlow_c* field_1
 #pragma pop
 
 
-/* 801993C4-8019959C 01D8+00 rc=0 efc=0 .text      seq_select_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c */
+/* 801993C4-8019959C 01D8+00 rc=1 efc=0 rfr=False None .text      seq_select_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1019,7 +978,7 @@ asm void dShopSystem_c::seq_select_start(fopAc_ac_c* field_0, dMsgFlow_c* field_
 #pragma pop
 
 
-/* 8019959C-80199A18 047C+00 rc=0 efc=0 .text      seq_select__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c       */
+/* 8019959C-80199A18 047C+00 rc=1 efc=0 rfr=False None .text      seq_select__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1031,17 +990,17 @@ asm void dShopSystem_c::seq_select(fopAc_ac_c* field_0, dMsgFlow_c* field_1) {
 
 
 /* ############################################################################################## */
-/* 80453B48-80453B50 0004+04 rc=0 efc=0 .sdata2    @5296                                                        */
-f32 lit_5296[1 + 1 /* padding */] = {
+/* 80453B48-80453B50 0004+04 rc=1 efc=0 rfr=False None .sdata2    @5296                                                        */
+SECTION_SDATA2 static f32 lit_5296[1 + 1 /* padding */] = {
 	9.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80453B50-80453B58 0008+00 rc=0 efc=0 .sdata2    @5298                                                        */
-f64 d_shop_d_shop_system__lit_5298 = 4503601774854144.0 /* cast s32 to float */;
+/* 80453B50-80453B58 0008+00 rc=1 efc=0 rfr=False None .sdata2    @5298                                                        */
+SECTION_SDATA2 static f64 d_shop_d_shop_system__lit_5298 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80199A18-80199BF8 01E0+00 rc=0 efc=0 .text      seq_moving__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c       */
+/* 80199A18-80199BF8 01E0+00 rc=1 efc=0 rfr=False None .text      seq_moving__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1052,7 +1011,7 @@ asm void dShopSystem_c::seq_moving(fopAc_ac_c* field_0, dMsgFlow_c* field_1) {
 #pragma pop
 
 
-/* 80199BF8-80199D14 011C+00 rc=0 efc=0 .text      seq_decide__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c       */
+/* 80199BF8-80199D14 011C+00 rc=1 efc=0 rfr=False None .text      seq_decide__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1063,7 +1022,7 @@ asm void dShopSystem_c::seq_decide(fopAc_ac_c* field_0, dMsgFlow_c* field_1) {
 #pragma pop
 
 
-/* 80199D14-80199E28 0114+00 rc=0 efc=0 .text      seq_choose__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c       */
+/* 80199D14-80199E28 0114+00 rc=1 efc=0 rfr=False None .text      seq_choose__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1074,7 +1033,7 @@ asm void dShopSystem_c::seq_choose(fopAc_ac_c* field_0, dMsgFlow_c* field_1) {
 #pragma pop
 
 
-/* 80199E28-80199FA4 017C+00 rc=0 efc=0 .text      seq_decide_yes__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c   */
+/* 80199E28-80199FA4 017C+00 rc=1 efc=0 rfr=False None .text      seq_decide_yes__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1085,7 +1044,7 @@ asm void dShopSystem_c::seq_decide_yes(fopAc_ac_c* field_0, dMsgFlow_c* field_1)
 #pragma pop
 
 
-/* 80199FA4-8019A020 007C+00 rc=0 efc=0 .text      seq_decide_no__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c    */
+/* 80199FA4-8019A020 007C+00 rc=1 efc=0 rfr=False None .text      seq_decide_no__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1096,7 +1055,7 @@ asm void dShopSystem_c::seq_decide_no(fopAc_ac_c* field_0, dMsgFlow_c* field_1) 
 #pragma pop
 
 
-/* 8019A020-8019A0C0 00A0+00 rc=0 efc=0 .text      seq_finish__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c       */
+/* 8019A020-8019A0C0 00A0+00 rc=1 efc=0 rfr=False None .text      seq_finish__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1107,7 +1066,7 @@ asm void dShopSystem_c::seq_finish(fopAc_ac_c* field_0, dMsgFlow_c* field_1) {
 #pragma pop
 
 
-/* 8019A0C0-8019A0D0 0010+00 rc=0 efc=0 .text      seq_event__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c        */
+/* 8019A0C0-8019A0D0 0010+00 rc=1 efc=0 rfr=False None .text      seq_event__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1118,7 +1077,7 @@ asm void dShopSystem_c::seq_event(fopAc_ac_c* field_0, dMsgFlow_c* field_1) {
 #pragma pop
 
 
-/* 8019A0D0-8019A158 0088+00 rc=0 efc=0 .text      shop_init__13dShopSystem_cFb                                 */
+/* 8019A0D0-8019A158 0088+00 rc=0 efc=0 rfr=False None .text      shop_init__13dShopSystem_cFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1129,7 +1088,7 @@ asm void dShopSystem_c::shop_init(bool field_0) {
 #pragma pop
 
 
-/* 8019A158-8019A238 00E0+00 rc=0 efc=0 .text      shop_process__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c     */
+/* 8019A158-8019A238 00E0+00 rc=0 efc=0 rfr=False None .text      shop_process__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1141,21 +1100,21 @@ asm void dShopSystem_c::shop_process(fopAc_ac_c* field_0, dMsgFlow_c* field_1) {
 
 
 /* ############################################################################################## */
-/* 804506F8-80450700 0004+04 rc=0 efc=0 .sdata     shop_item_pos_data_tbl                                       */
-void* shop_item_pos_data_tbl[1 + 1 /* padding */] = {
-	(void*)&item_seira_shop,
+/* 804506F8-80450700 0004+04 rc=1 efc=0 rfr=False None .sdata     shop_item_pos_data_tbl                                       */
+SECTION_SDATA static void* shop_item_pos_data_tbl[1 + 1 /* padding */] = {
+	/* 0    */ (void*)&item_seira_shop,
 	/* padding */
 	NULL,
 };
 
-/* 80453B58-80453B60 0006+02 rc=0 efc=0 .sdata2    item_no$5460                                                 */
-u8 data_80453B58[6 + 2 /* padding */] = {
+/* 80453B58-80453B60 0006+02 rc=1 efc=0 rfr=False None .sdata2    item_no$5460                                                 */
+SECTION_SDATA2 static u8 data_80453B58[6 + 2 /* padding */] = {
 	0x64, 0x76, 0x4B, 0x64, 0x76, 0xFF,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 8019A238-8019A344 010C+00 rc=0 efc=0 .text      createShopItem__13dShopSystem_cFi                            */
+/* 8019A238-8019A344 010C+00 rc=0 efc=0 rfr=False None .text      createShopItem__13dShopSystem_cFi                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1166,7 +1125,7 @@ asm void dShopSystem_c::createShopItem(int field_0) {
 #pragma pop
 
 
-/* 8019A344-8019A354 0010+00 rc=0 efc=0 .text      setSeq__13dShopSystem_cFUc                                   */
+/* 8019A344-8019A354 0010+00 rc=12 efc=0 rfr=False None .text      setSeq__13dShopSystem_cFUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1177,7 +1136,7 @@ asm void dShopSystem_c::setSeq(u8 field_0) {
 #pragma pop
 
 
-/* 8019A354-8019A364 0010+00 rc=0 efc=0 .text      setSoldOutFlag__13dShopSystem_cFv                            */
+/* 8019A354-8019A364 0010+00 rc=1 efc=1 rfr=False None .text      setSoldOutFlag__13dShopSystem_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1188,7 +1147,7 @@ asm void dShopSystem_c::setSoldOutFlag() {
 #pragma pop
 
 
-/* 8019A364-8019A4F4 0190+00 rc=0 efc=0 .text      setSoldOut__13dShopSystem_cFv                                */
+/* 8019A364-8019A4F4 0190+00 rc=2 efc=0 rfr=False None .text      setSoldOut__13dShopSystem_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1199,7 +1158,7 @@ asm void dShopSystem_c::setSoldOut() {
 #pragma pop
 
 
-/* 8019A4F4-8019A564 0070+00 rc=0 efc=0 .text      setSoldOutItemHide__13dShopSystem_cFv                        */
+/* 8019A4F4-8019A564 0070+00 rc=1 efc=0 rfr=False None .text      setSoldOutItemHide__13dShopSystem_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1210,7 +1169,7 @@ asm void dShopSystem_c::setSoldOutItemHide() {
 #pragma pop
 
 
-/* 8019A564-8019A5D0 006C+00 rc=0 efc=0 .text      deleteObject__13dShopSystem_cFv                              */
+/* 8019A564-8019A5D0 006C+00 rc=1 efc=0 rfr=False None .text      deleteObject__13dShopSystem_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1222,31 +1181,31 @@ asm void dShopSystem_c::deleteObject() {
 
 
 /* ############################################################################################## */
-/* 80453B60-80453B64 0004+00 rc=0 efc=0 .sdata2    @5687                                                        */
-f32 lit_5687 = -175.0f;
+/* 80453B60-80453B64 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5687                                                        */
+SECTION_SDATA2 static f32 lit_5687 = -175.0f;
 
-/* 80453B64-80453B68 0004+00 rc=0 efc=0 .sdata2    @5688                                                        */
-f32 lit_5688 = 165.0f;
+/* 80453B64-80453B68 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5688                                                        */
+SECTION_SDATA2 static f32 lit_5688 = 165.0f;
 
-/* 80453B68-80453B6C 0004+00 rc=0 efc=0 .sdata2    @5689                                                        */
-f32 lit_5689 = 10.0f;
+/* 80453B68-80453B6C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5689                                                        */
+SECTION_SDATA2 static f32 lit_5689 = 10.0f;
 
-/* 80453B6C-80453B70 0004+00 rc=0 efc=0 .sdata2    @5690                                                        */
-f32 lit_5690 = 225.0f;
+/* 80453B6C-80453B70 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5690                                                        */
+SECTION_SDATA2 static f32 lit_5690 = 225.0f;
 
-/* 80453B70-80453B74 0004+00 rc=0 efc=0 .sdata2    @5691                                                        */
-f32 d_shop_d_shop_system__lit_5691 = 370.0f;
+/* 80453B70-80453B74 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5691                                                        */
+SECTION_SDATA2 static f32 d_shop_d_shop_system__lit_5691 = 370.0f;
 
-/* 80453B74-80453B78 0004+00 rc=0 efc=0 .sdata2    @5692                                                        */
-f32 lit_5692 = -180.0f;
+/* 80453B74-80453B78 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5692                                                        */
+SECTION_SDATA2 static f32 lit_5692 = -180.0f;
 
-/* 80453B78-80453B7C 0004+00 rc=0 efc=0 .sdata2    @5693                                                        */
-f32 lit_5693 = 245.0f;
+/* 80453B78-80453B7C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5693                                                        */
+SECTION_SDATA2 static f32 lit_5693 = 245.0f;
 
-/* 80453B7C-80453B80 0004+00 rc=0 efc=0 .sdata2    @5694                                                        */
-f32 lit_5694 = -380.0f;
+/* 80453B7C-80453B80 0004+00 rc=1 efc=0 rfr=False None .sdata2    @5694                                                        */
+SECTION_SDATA2 static f32 lit_5694 = -380.0f;
 
-/* 8019A5D0-8019AB00 0530+00 rc=0 efc=0 .text      searchItemActor__13dShopSystem_cFv                           */
+/* 8019A5D0-8019AB00 0530+00 rc=1 efc=0 rfr=False None .text      searchItemActor__13dShopSystem_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1257,7 +1216,7 @@ asm void dShopSystem_c::searchItemActor() {
 #pragma pop
 
 
-/* 8019AB00-8019AB1C 001C+00 rc=0 efc=0 .text      getFlowNodeNum__13dShopSystem_cFv                            */
+/* 8019AB00-8019AB1C 001C+00 rc=1 efc=0 rfr=False None .text      getFlowNodeNum__13dShopSystem_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1268,7 +1227,7 @@ asm void dShopSystem_c::getFlowNodeNum() {
 #pragma pop
 
 
-/* 8019AB1C-8019AB24 0008+00 rc=0 efc=0 .text      setSellItemMax__13dShopSystem_cFUc                           */
+/* 8019AB1C-8019AB24 0008+00 rc=0 efc=0 rfr=False None .text      setSellItemMax__13dShopSystem_cFUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1279,7 +1238,7 @@ asm void dShopSystem_c::setSellItemMax(u8 field_0) {
 #pragma pop
 
 
-/* 8019AB24-8019AB60 003C+00 rc=0 efc=0 .text      checkShopOpen__13dShopSystem_cFv                             */
+/* 8019AB24-8019AB60 003C+00 rc=0 efc=0 rfr=False None .text      checkShopOpen__13dShopSystem_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1290,7 +1249,7 @@ asm void dShopSystem_c::checkShopOpen() {
 #pragma pop
 
 
-/* 8019AB60-8019AB84 0024+00 rc=0 efc=0 .text      checkLeftTrigger__13dShopSystem_cFP9STControl                */
+/* 8019AB60-8019AB84 0024+00 rc=3 efc=0 rfr=False None .text      checkLeftTrigger__13dShopSystem_cFP9STControl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1301,7 +1260,7 @@ asm void dShopSystem_c::checkLeftTrigger(STControl* field_0) {
 #pragma pop
 
 
-/* 8019AB84-8019ABA8 0024+00 rc=0 efc=0 .text      checkRightTrigger__13dShopSystem_cFP9STControl               */
+/* 8019AB84-8019ABA8 0024+00 rc=3 efc=0 rfr=False None .text      checkRightTrigger__13dShopSystem_cFP9STControl               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1312,13 +1271,13 @@ asm void dShopSystem_c::checkRightTrigger(STControl* field_0) {
 #pragma pop
 
 
-/* 8019ABA8-8019ABB0 0008+00 rc=0 efc=0 .text      dpdMove__13dShopSystem_cFv                                   */
+/* 8019ABA8-8019ABB0 0008+00 rc=1 efc=0 rfr=False None .text      dpdMove__13dShopSystem_cFv                                   */
 bool dShopSystem_c::dpdMove() {
 	return false;
 }
 
 
-/* 8019ABB0-8019ACE0 0130+00 rc=0 efc=0 .text      __sinit_d_shop_system_cpp                                    */
+/* 8019ABB0-8019ACE0 0130+00 rc=1 efc=1 rfr=False None .text      __sinit_d_shop_system_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1329,19 +1288,19 @@ extern "C" asm void __sinit_d_shop_system_cpp() {
 #pragma pop
 
 
-/* 8019ACE0-8019ACE8 0008+00 rc=0 efc=0 .text      beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci         */
+/* 8019ACE0-8019ACE8 0008+00 rc=1 efc=0 rfr=False None .text      beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci         */
 bool dShopSystem_c::beforeStartSeqAction(dMsgFlow_c* field_0, int field_1) {
 	return true;
 }
 
 
-/* 8019ACE8-8019ACF0 0008+00 rc=0 efc=0 .text      beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci        */
+/* 8019ACE8-8019ACF0 0008+00 rc=1 efc=0 rfr=False None .text      beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci        */
 bool dShopSystem_c::beforeSelectSeqAction(dMsgFlow_c* field_0, int field_1) {
 	return true;
 }
 
 
-/* 8019ACF0-8019ACF8 0008+00 rc=0 efc=0 .text      getResName2__13dShopSystem_cFi                               */
+/* 8019ACF0-8019ACF8 0008+00 rc=1 efc=0 rfr=False None .text      getResName2__13dShopSystem_cFi                               */
 bool dShopSystem_c::getResName2(int field_0) {
 	return false;
 }

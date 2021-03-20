@@ -143,12 +143,7 @@ extern "C" void getBtpFrm__12daItemBase_cFv(); // 1
 extern "C" void getShadowSize__12daItemBase_cFv(); // 1
 extern "C" void getCollisionH__12daItemBase_cFv(); // 1
 extern "C" void getCollisionR__12daItemBase_cFv(); // 1
-SECTION_DATA extern void* const __vt__12daItemBase_c[17 + 1 /* padding */];
-SECTION_SDATA2 extern f32 d_a_d_a_itembase__lit_3881;
-SECTION_SDATA2 extern u8 lit_3952[4];
-SECTION_SDATA2 extern f32 d_a_d_a_itembase__lit_3953[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 lit_3955;
-SECTION_SDATA2 extern f64 d_a_d_a_itembase__lit_4041;
+extern "C" extern void* __vt__12daItemBase_c[17 + 1 /* padding */];
 
 // 
 // External References:
@@ -193,19 +188,19 @@ extern "C" void _savefpr_27(); // 1
 extern "C" void _restfpr_27(); // 1
 extern "C" void _savegpr_21(); // 1
 extern "C" void _restgpr_21(); // 1
-SECTION_DATA extern void* const __vt__12J3DFrameCtrl[3];
-SECTION_DATA extern void* item_resource__10dItem_data[1530];
-SECTION_DATA extern u8 item_info__10dItem_data[1020 + 4 /* padding */];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
-SECTION_BSS extern u8 g_env_light[4880];
-SECTION_BSS extern u8 j3dSys[284];
+extern "C" extern void* __vt__12J3DFrameCtrl[3];
+extern "C" extern void* item_resource__10dItem_data[1530];
+extern "C" extern u8 item_info__10dItem_data[1020 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
 // 
 // Declarations:
 // 
 
-/* 80144724-8014474C 0028+00 rc=0 efc=0 .text      DeleteBase__12daItemBase_cFPCc                               */
+/* 80144724-8014474C 0028+00 rc=1 efc=1 rfr=False None .text      DeleteBase__12daItemBase_cFPCc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -216,23 +211,23 @@ asm void daItemBase_c::DeleteBase(char const* field_0) {
 #pragma pop
 
 
-/* 8014474C-80144754 0008+00 rc=0 efc=0 .text      clothCreate__12daItemBase_cFv                                */
+/* 8014474C-80144754 0008+00 rc=2 efc=1 rfr=False None .text      clothCreate__12daItemBase_cFv                                */
 bool daItemBase_c::clothCreate() {
 	return true;
 }
 
 
-/* 80144754-8014475C 0008+00 rc=0 efc=0 .text      __CreateHeap__12daItemBase_cFv                               */
+/* 80144754-8014475C 0008+00 rc=2 efc=1 rfr=False None .text      __CreateHeap__12daItemBase_cFv                               */
 bool daItemBase_c::__CreateHeap() {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 804533A8-804533AC 0004+00 rc=0 efc=0 .sdata2    @3881                                                        */
-f32 d_a_d_a_itembase__lit_3881 = 1.0f;
+/* 804533A8-804533AC 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3881                                                        */
+SECTION_SDATA2 static f32 d_a_d_a_itembase__lit_3881 = 1.0f;
 
-/* 8014475C-80144B94 0438+00 rc=0 efc=0 .text      CreateItemHeap__12daItemBase_cFPCcsssssss                    */
+/* 8014475C-80144B94 0438+00 rc=3 efc=3 rfr=False None .text      CreateItemHeap__12daItemBase_cFPCcsssssss                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -243,7 +238,7 @@ asm void daItemBase_c::CreateItemHeap(char const* field_0, s16 field_1, s16 fiel
 #pragma pop
 
 
-/* 80144B94-80144C30 009C+00 rc=0 efc=0 .text      DrawBase__12daItemBase_cFv                                   */
+/* 80144B94-80144C30 009C+00 rc=2 efc=1 rfr=False None .text      DrawBase__12daItemBase_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,7 +249,7 @@ asm void daItemBase_c::DrawBase() {
 #pragma pop
 
 
-/* 80144C30-80144C7C 004C+00 rc=0 efc=0 .text      RotateYBase__12daItemBase_cFv                                */
+/* 80144C30-80144C7C 004C+00 rc=2 efc=1 rfr=False None .text      RotateYBase__12daItemBase_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -265,7 +260,7 @@ asm void daItemBase_c::RotateYBase() {
 #pragma pop
 
 
-/* 80144C7C-80144CA0 0024+00 rc=0 efc=0 .text      setListStart__12daItemBase_cFv                               */
+/* 80144C7C-80144CA0 0024+00 rc=2 efc=1 rfr=False None .text      setListStart__12daItemBase_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -276,7 +271,7 @@ asm void daItemBase_c::setListStart() {
 #pragma pop
 
 
-/* 80144CA0-80144CC4 0024+00 rc=0 efc=0 .text      setListEnd__12daItemBase_cFv                                 */
+/* 80144CA0-80144CC4 0024+00 rc=1 efc=0 rfr=False None .text      setListEnd__12daItemBase_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -287,7 +282,7 @@ asm void daItemBase_c::setListEnd() {
 #pragma pop
 
 
-/* 80144CC4-80144D18 0054+00 rc=0 efc=0 .text      settingBeforeDraw__12daItemBase_cFv                          */
+/* 80144CC4-80144D18 0054+00 rc=2 efc=1 rfr=False None .text      settingBeforeDraw__12daItemBase_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -298,7 +293,7 @@ asm void daItemBase_c::settingBeforeDraw() {
 #pragma pop
 
 
-/* 80144D18-80144D70 0058+00 rc=0 efc=0 .text      setTevStr__12daItemBase_cFv                                  */
+/* 80144D18-80144D70 0058+00 rc=1 efc=0 rfr=False None .text      setTevStr__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,22 +305,22 @@ asm void daItemBase_c::setTevStr() {
 
 
 /* ############################################################################################## */
-/* 804533AC-804533B0 0004+00 rc=0 efc=0 .sdata2    @3952                                                        */
-u8 lit_3952[4] = {
+/* 804533AC-804533B0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3952                                                        */
+SECTION_SDATA2 static u8 lit_3952[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804533B0-804533B8 0004+04 rc=0 efc=0 .sdata2    @3953                                                        */
-f32 d_a_d_a_itembase__lit_3953[1 + 1 /* padding */] = {
+/* 804533B0-804533B8 0004+04 rc=1 efc=0 rfr=False None .sdata2    @3953                                                        */
+SECTION_SDATA2 static f32 d_a_d_a_itembase__lit_3953[1 + 1 /* padding */] = {
 	150.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 804533B8-804533C0 0008+00 rc=0 efc=0 .sdata2    @3955                                                        */
-f64 lit_3955 = 4503599627370496.0 /* cast u32 to float */;
+/* 804533B8-804533C0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3955                                                        */
+SECTION_SDATA2 static f64 lit_3955 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80144D70-80144EDC 016C+00 rc=0 efc=0 .text      setShadow__12daItemBase_cFv                                  */
+/* 80144D70-80144EDC 016C+00 rc=2 efc=1 rfr=False None .text      setShadow__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -337,10 +332,10 @@ asm void daItemBase_c::setShadow() {
 
 
 /* ############################################################################################## */
-/* 804533C0-804533C8 0008+00 rc=0 efc=0 .sdata2    @4041                                                        */
-f64 d_a_d_a_itembase__lit_4041 = 4503601774854144.0 /* cast s32 to float */;
+/* 804533C0-804533C8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @4041                                                        */
+SECTION_SDATA2 static f64 d_a_d_a_itembase__lit_4041 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80144EDC-8014503C 0160+00 rc=0 efc=0 .text      animEntry__12daItemBase_cFv                                  */
+/* 80144EDC-8014503C 0160+00 rc=2 efc=1 rfr=False None .text      animEntry__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -351,7 +346,7 @@ asm void daItemBase_c::animEntry() {
 #pragma pop
 
 
-/* 8014503C-80145144 0108+00 rc=0 efc=0 .text      animPlay__12daItemBase_cFffffff                              */
+/* 8014503C-80145144 0108+00 rc=2 efc=2 rfr=False None .text      animPlay__12daItemBase_cFffffff                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -362,7 +357,7 @@ asm void daItemBase_c::animPlay(f32 field_0, f32 field_1, f32 field_2, f32 field
 #pragma pop
 
 
-/* 80145144-80145164 0020+00 rc=0 efc=0 .text      chkFlag__12daItemBase_cFi                                    */
+/* 80145144-80145164 0020+00 rc=2 efc=1 rfr=False None .text      chkFlag__12daItemBase_cFi                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -373,7 +368,7 @@ asm void daItemBase_c::chkFlag(int field_0) {
 #pragma pop
 
 
-/* 80145164-80145180 001C+00 rc=0 efc=0 .text      getTevFrm__12daItemBase_cFv                                  */
+/* 80145164-80145180 001C+00 rc=2 efc=1 rfr=False None .text      getTevFrm__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -384,7 +379,7 @@ asm void daItemBase_c::getTevFrm() {
 #pragma pop
 
 
-/* 80145180-8014519C 001C+00 rc=0 efc=0 .text      getBtpFrm__12daItemBase_cFv                                  */
+/* 80145180-8014519C 001C+00 rc=2 efc=1 rfr=False None .text      getBtpFrm__12daItemBase_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -395,7 +390,7 @@ asm void daItemBase_c::getBtpFrm() {
 #pragma pop
 
 
-/* 8014519C-801451B4 0018+00 rc=0 efc=0 .text      getShadowSize__12daItemBase_cFv                              */
+/* 8014519C-801451B4 0018+00 rc=2 efc=1 rfr=False None .text      getShadowSize__12daItemBase_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -406,7 +401,7 @@ asm void daItemBase_c::getShadowSize() {
 #pragma pop
 
 
-/* 801451B4-801451D0 001C+00 rc=0 efc=0 .text      getCollisionH__12daItemBase_cFv                              */
+/* 801451B4-801451D0 001C+00 rc=2 efc=1 rfr=False None .text      getCollisionH__12daItemBase_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -417,7 +412,7 @@ asm void daItemBase_c::getCollisionH() {
 #pragma pop
 
 
-/* 801451D0-801451EC 001C+00 rc=0 efc=0 .text      getCollisionR__12daItemBase_cFv                              */
+/* 801451D0-801451EC 001C+00 rc=2 efc=1 rfr=False None .text      getCollisionR__12daItemBase_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -429,25 +424,25 @@ asm void daItemBase_c::getCollisionR() {
 
 
 /* ############################################################################################## */
-/* 803B3610-803B3658 0044+04 rc=0 efc=0 .data      __vt__12daItemBase_c                                         */
-void* const __vt__12daItemBase_c[17 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)DrawBase__12daItemBase_cFv,
-	(void*)setListStart__12daItemBase_cFv,
-	(void*)settingBeforeDraw__12daItemBase_cFv,
-	(void*)setTevStr__12daItemBase_cFv,
-	(void*)setShadow__12daItemBase_cFv,
-	(void*)animEntry__12daItemBase_cFv,
-	(void*)RotateYBase__12daItemBase_cFv,
-	(void*)clothCreate__12daItemBase_cFv,
-	(void*)__CreateHeap__12daItemBase_cFv,
-	(void*)chkFlag__12daItemBase_cFi,
-	(void*)getTevFrm__12daItemBase_cFv,
-	(void*)getBtpFrm__12daItemBase_cFv,
-	(void*)getShadowSize__12daItemBase_cFv,
-	(void*)getCollisionH__12daItemBase_cFv,
-	(void*)getCollisionR__12daItemBase_cFv,
+/* 803B3610-803B3658 0044+04 rc=1 efc=1 rfr=False None .data      __vt__12daItemBase_c                                         */
+SECTION_DATA void* __vt__12daItemBase_c[17 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)DrawBase__12daItemBase_cFv,
+	/* 3    */ (void*)setListStart__12daItemBase_cFv,
+	/* 4    */ (void*)settingBeforeDraw__12daItemBase_cFv,
+	/* 5    */ (void*)setTevStr__12daItemBase_cFv,
+	/* 6    */ (void*)setShadow__12daItemBase_cFv,
+	/* 7    */ (void*)animEntry__12daItemBase_cFv,
+	/* 8    */ (void*)RotateYBase__12daItemBase_cFv,
+	/* 9    */ (void*)clothCreate__12daItemBase_cFv,
+	/* 10   */ (void*)__CreateHeap__12daItemBase_cFv,
+	/* 11   */ (void*)chkFlag__12daItemBase_cFi,
+	/* 12   */ (void*)getTevFrm__12daItemBase_cFv,
+	/* 13   */ (void*)getBtpFrm__12daItemBase_cFv,
+	/* 14   */ (void*)getShadowSize__12daItemBase_cFv,
+	/* 15   */ (void*)getCollisionH__12daItemBase_cFv,
+	/* 16   */ (void*)getCollisionR__12daItemBase_cFv,
 	/* padding */
 	NULL,
 };

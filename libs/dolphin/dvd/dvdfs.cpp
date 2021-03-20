@@ -14,14 +14,14 @@ extern "C" void DVDConvertPathToEntrynum(); // 1
 extern "C" void DVDFastOpen(); // 1
 extern "C" void DVDOpen(); // 1
 extern "C" void DVDClose(); // 1
-extern "C" void entryToPath(); // 1
-extern "C" void DVDConvertEntrynumToPath(); // 1
-extern "C" void DVDGetCurrentDir(); // 1
+extern "C" static void entryToPath(); // 1
+extern "C" static void DVDConvertEntrynumToPath(); // 1
+extern "C" static void DVDGetCurrentDir(); // 1
 extern "C" void DVDChangeDir(); // 1
 extern "C" void DVDReadAsyncPrio(); // 1
-extern "C" void cbForReadAsync(); // 1
+extern "C" static void cbForReadAsync(); // 1
 extern "C" void DVDReadPrio(); // 1
-extern "C" void cbForReadSync(); // 1
+extern "C" static void cbForReadSync(); // 1
 extern "C" void DVDOpenDir(); // 1
 extern "C" void DVDReadDir(); // 1
 extern "C" bool DVDCloseDir(); // 1
@@ -31,30 +31,19 @@ extern "C" void DVDConvertPathToEntrynum(); // 1
 extern "C" void DVDFastOpen(); // 1
 extern "C" void DVDOpen(); // 1
 extern "C" void DVDClose(); // 1
-extern "C" void entryToPath(); // 1
-extern "C" void DVDConvertEntrynumToPath(); // 1
-extern "C" void DVDGetCurrentDir(); // 1
+extern "C" static void entryToPath(); // 1
+extern "C" static void DVDConvertEntrynumToPath(); // 1
+extern "C" static void DVDGetCurrentDir(); // 1
 extern "C" void DVDChangeDir(); // 1
 extern "C" void DVDReadAsyncPrio(); // 1
-extern "C" void cbForReadAsync(); // 1
+extern "C" static void cbForReadAsync(); // 1
 extern "C" void DVDReadPrio(); // 1
-extern "C" void cbForReadSync(); // 1
+extern "C" static void cbForReadSync(); // 1
 extern "C" void DVDOpenDir(); // 1
 extern "C" void DVDReadDir(); // 1
 extern "C" bool DVDCloseDir(); // 1
-SECTION_DATA extern u8 dvdfs__lit_119[200];
-SECTION_DATA extern u8 dvdfs__lit_140[55 + 1 /* padding */];
-SECTION_DATA extern u8 lit_239[52];
-SECTION_DATA extern u8 lit_265[47 + 1 /* padding */];
-SECTION_DATA extern u8 dvdfs__lit_311[58 + 2 /* padding */];
-SECTION_SDATA extern u8 dvdfs__lit_118[8];
-SECTION_SBSS extern u8 dvdfs__BootInfo[4];
-SECTION_SBSS extern u8 FstStart[4];
-SECTION_SBSS extern u8 FstStringStart[4];
-SECTION_SBSS extern u8 MaxEntryNum[4];
-SECTION_SBSS extern u8 currentDirectory[4];
-SECTION_SBSS extern u8 __DVDLongFileNameFlag[4];
-SECTION_SBSS extern u8 __DVDThreadQueue[8];
+extern "C" extern u8 __DVDLongFileNameFlag[4];
+extern "C" extern u8 __DVDThreadQueue[8];
 
 // 
 // External References:
@@ -85,19 +74,19 @@ extern "C" void tolower(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80451758-8045175C 0004+00 rc=0 efc=0 .sbss      BootInfo                                                     */
-u8 dvdfs__BootInfo[4];
+/* 80451758-8045175C 0004+00 rc=1 efc=0 rfr=False None .sbss      BootInfo                                                     */
+static u8 dvdfs__BootInfo[4];
 
-/* 8045175C-80451760 0004+00 rc=0 efc=0 .sbss      FstStart                                                     */
-u8 FstStart[4];
+/* 8045175C-80451760 0004+00 rc=10 efc=0 rfr=False None .sbss      FstStart                                                     */
+static u8 FstStart[4];
 
-/* 80451760-80451764 0004+00 rc=0 efc=0 .sbss      FstStringStart                                               */
-u8 FstStringStart[4];
+/* 80451760-80451764 0004+00 rc=5 efc=0 rfr=False None .sbss      FstStringStart                                               */
+static u8 FstStringStart[4];
 
-/* 80451764-80451768 0004+00 rc=0 efc=0 .sbss      MaxEntryNum                                                  */
-u8 MaxEntryNum[4];
+/* 80451764-80451768 0004+00 rc=2 efc=0 rfr=False None .sbss      MaxEntryNum                                                  */
+static u8 MaxEntryNum[4];
 
-/* 803484F0-80348528 0038+00 rc=0 efc=0 .text      __DVDFSInit                                                  */
+/* 803484F0-80348528 0038+00 rc=2 efc=2 rfr=False None .text      __DVDFSInit                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,8 +98,8 @@ extern "C" asm void __DVDFSInit() {
 
 
 /* ############################################################################################## */
-/* 803D1380-803D1448 00C8+00 rc=0 efc=0 .data      @119                                                         */
-u8 dvdfs__lit_119[200] = {
+/* 803D1380-803D1448 00C8+00 rc=1 efc=0 rfr=False None .data      @119                                                         */
+SECTION_DATA static u8 dvdfs__lit_119[200] = {
 	0x44, 0x56, 0x44, 0x43, 0x6F, 0x6E, 0x76, 0x65, 0x72, 0x74, 0x45, 0x6E, 0x74, 0x72, 0x79, 0x6E,
 	0x75, 0x6D, 0x54, 0x6F, 0x50, 0x61, 0x74, 0x68, 0x28, 0x70, 0x6F, 0x73, 0x73, 0x69, 0x62, 0x6C,
 	0x79, 0x20, 0x44, 0x56, 0x44, 0x4F, 0x70, 0x65, 0x6E, 0x20, 0x6F, 0x72, 0x20, 0x44, 0x56, 0x44,
@@ -126,18 +115,18 @@ u8 dvdfs__lit_119[200] = {
 	0x64, 0x20, 0x73, 0x6F, 0x6F, 0x6E, 0x0A, 0x00,
 };
 
-/* 804509E0-804509E8 0008+00 rc=0 efc=0 .sdata     @118                                                         */
-u8 dvdfs__lit_118[8] = {
+/* 804509E0-804509E8 0008+00 rc=3 efc=0 rfr=False None .sdata     @118                                                         */
+SECTION_SDATA static u8 dvdfs__lit_118[8] = {
 	0x64, 0x76, 0x64, 0x66, 0x73, 0x2E, 0x63, 0x00,
 };
 
-/* 80451768-8045176C 0004+00 rc=0 efc=0 .sbss      currentDirectory                                             */
-u8 currentDirectory[4];
+/* 80451768-8045176C 0004+00 rc=4 efc=0 rfr=False None .sbss      currentDirectory                                             */
+static u8 currentDirectory[4];
 
-/* 8045176C-80451770 0004+00 rc=0 efc=0 .sbss      __DVDLongFileNameFlag                                        */
+/* 8045176C-80451770 0004+00 rc=2 efc=1 rfr=False None .sbss      __DVDLongFileNameFlag                                        */
 u8 __DVDLongFileNameFlag[4];
 
-/* 80348528-8034881C 02F4+00 rc=0 efc=0 .text      DVDConvertPathToEntrynum                                     */
+/* 80348528-8034881C 02F4+00 rc=9 efc=6 rfr=False None .text      DVDConvertPathToEntrynum                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +137,7 @@ extern "C" asm void DVDConvertPathToEntrynum() {
 #pragma pop
 
 
-/* 8034881C-80348890 0074+00 rc=0 efc=0 .text      DVDFastOpen                                                  */
+/* 8034881C-80348890 0074+00 rc=3 efc=3 rfr=False None .text      DVDFastOpen                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,8 +149,8 @@ extern "C" asm void DVDFastOpen() {
 
 
 /* ############################################################################################## */
-/* 803D1448-803D1480 0037+01 rc=0 efc=0 .data      @140                                                         */
-u8 dvdfs__lit_140[55 + 1 /* padding */] = {
+/* 803D1448-803D1480 0037+01 rc=1 efc=0 rfr=False None .data      @140                                                         */
+SECTION_DATA static u8 dvdfs__lit_140[55 + 1 /* padding */] = {
 	0x57, 0x61, 0x72, 0x6E, 0x69, 0x6E, 0x67, 0x3A, 0x20, 0x44, 0x56, 0x44, 0x4F, 0x70, 0x65, 0x6E,
 	0x28, 0x29, 0x3A, 0x20, 0x66, 0x69, 0x6C, 0x65, 0x20, 0x27, 0x25, 0x73, 0x27, 0x20, 0x77, 0x61,
 	0x73, 0x20, 0x6E, 0x6F, 0x74, 0x20, 0x66, 0x6F, 0x75, 0x6E, 0x64, 0x20, 0x75, 0x6E, 0x64, 0x65,
@@ -170,7 +159,7 @@ u8 dvdfs__lit_140[55 + 1 /* padding */] = {
 	0x00,
 };
 
-/* 80348890-80348958 00C8+00 rc=0 efc=0 .text      DVDOpen                                                      */
+/* 80348890-80348958 00C8+00 rc=3 efc=3 rfr=False None .text      DVDOpen                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +170,7 @@ extern "C" asm void DVDOpen() {
 #pragma pop
 
 
-/* 80348958-8034897C 0024+00 rc=0 efc=0 .text      DVDClose                                                     */
+/* 80348958-8034897C 0024+00 rc=4 efc=4 rfr=False None .text      DVDClose                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,40 +181,40 @@ extern "C" asm void DVDClose() {
 #pragma pop
 
 
-/* 8034897C-80348ADC 0160+00 rc=0 efc=0 .text      entryToPath                                                  */
+/* 8034897C-80348ADC 0160+00 rc=2 efc=0 rfr=False None .text      entryToPath                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void entryToPath() {
+extern "C" asm static void entryToPath() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdfs/entryToPath.s"
 }
 #pragma pop
 
 
-/* 80348ADC-80348C30 0154+00 rc=0 efc=0 .text      DVDConvertEntrynumToPath                                     */
+/* 80348ADC-80348C30 0154+00 rc=1 efc=0 rfr=False None .text      DVDConvertEntrynumToPath                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void DVDConvertEntrynumToPath() {
+extern "C" asm static void DVDConvertEntrynumToPath() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdfs/DVDConvertEntrynumToPath.s"
 }
 #pragma pop
 
 
-/* 80348C30-80348CF4 00C4+00 rc=0 efc=0 .text      DVDGetCurrentDir                                             */
+/* 80348C30-80348CF4 00C4+00 rc=1 efc=0 rfr=False None .text      DVDGetCurrentDir                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void DVDGetCurrentDir() {
+extern "C" asm static void DVDGetCurrentDir() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdfs/DVDGetCurrentDir.s"
 }
 #pragma pop
 
 
-/* 80348CF4-80348D54 0060+00 rc=0 efc=0 .text      DVDChangeDir                                                 */
+/* 80348CF4-80348D54 0060+00 rc=2 efc=2 rfr=False None .text      DVDChangeDir                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -237,15 +226,15 @@ extern "C" asm void DVDChangeDir() {
 
 
 /* ############################################################################################## */
-/* 803D1480-803D14B4 0034+00 rc=0 efc=0 .data      @239                                                         */
-u8 lit_239[52] = {
+/* 803D1480-803D14B4 0034+00 rc=1 efc=0 rfr=False None .data      @239                                                         */
+SECTION_DATA static u8 lit_239[52] = {
 	0x44, 0x56, 0x44, 0x52, 0x65, 0x61, 0x64, 0x41, 0x73, 0x79, 0x6E, 0x63, 0x28, 0x29, 0x3A, 0x20,
 	0x73, 0x70, 0x65, 0x63, 0x69, 0x66, 0x69, 0x65, 0x64, 0x20, 0x61, 0x72, 0x65, 0x61, 0x20, 0x69,
 	0x73, 0x20, 0x6F, 0x75, 0x74, 0x20, 0x6F, 0x66, 0x20, 0x74, 0x68, 0x65, 0x20, 0x66, 0x69, 0x6C,
 	0x65, 0x20, 0x20, 0x00,
 };
 
-/* 80348D54-80348E14 00C0+00 rc=0 efc=0 .text      DVDReadAsyncPrio                                             */
+/* 80348D54-80348E14 00C0+00 rc=2 efc=2 rfr=False None .text      DVDReadAsyncPrio                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -256,11 +245,11 @@ extern "C" asm void DVDReadAsyncPrio() {
 #pragma pop
 
 
-/* 80348E14-80348E44 0030+00 rc=0 efc=0 .text      cbForReadAsync                                               */
+/* 80348E14-80348E44 0030+00 rc=1 efc=0 rfr=False None .text      cbForReadAsync                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void cbForReadAsync() {
+extern "C" asm static void cbForReadAsync() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdfs/cbForReadAsync.s"
 }
@@ -268,8 +257,8 @@ extern "C" asm void cbForReadAsync() {
 
 
 /* ############################################################################################## */
-/* 803D14B4-803D14E4 002F+01 rc=0 efc=0 .data      @265                                                         */
-u8 lit_265[47 + 1 /* padding */] = {
+/* 803D14B4-803D14E4 002F+01 rc=1 efc=0 rfr=False None .data      @265                                                         */
+SECTION_DATA static u8 lit_265[47 + 1 /* padding */] = {
 	0x44, 0x56, 0x44, 0x52, 0x65, 0x61, 0x64, 0x28, 0x29, 0x3A, 0x20, 0x73, 0x70, 0x65, 0x63, 0x69,
 	0x66, 0x69, 0x65, 0x64, 0x20, 0x61, 0x72, 0x65, 0x61, 0x20, 0x69, 0x73, 0x20, 0x6F, 0x75, 0x74,
 	0x20, 0x6F, 0x66, 0x20, 0x74, 0x68, 0x65, 0x20, 0x66, 0x69, 0x6C, 0x65, 0x20, 0x20, 0x00,
@@ -277,10 +266,10 @@ u8 lit_265[47 + 1 /* padding */] = {
 	0x00,
 };
 
-/* 80451770-80451778 0008+00 rc=0 efc=0 .sbss      __DVDThreadQueue                                             */
+/* 80451770-80451778 0008+00 rc=5 efc=3 rfr=False None .sbss      __DVDThreadQueue                                             */
 u8 __DVDThreadQueue[8];
 
-/* 80348E44-80348F5C 0118+00 rc=0 efc=0 .text      DVDReadPrio                                                  */
+/* 80348E44-80348F5C 0118+00 rc=9 efc=9 rfr=False None .text      DVDReadPrio                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,11 +280,11 @@ extern "C" asm void DVDReadPrio() {
 #pragma pop
 
 
-/* 80348F5C-80348F80 0024+00 rc=0 efc=0 .text      cbForReadSync                                                */
+/* 80348F5C-80348F80 0024+00 rc=1 efc=0 rfr=False None .text      cbForReadSync                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void cbForReadSync() {
+extern "C" asm static void cbForReadSync() {
 	nofralloc
 #include "asm/dolphin/dvd/dvdfs/cbForReadSync.s"
 }
@@ -303,8 +292,8 @@ extern "C" asm void cbForReadSync() {
 
 
 /* ############################################################################################## */
-/* 803D14E4-803D1520 003A+02 rc=0 efc=0 .data      @311                                                         */
-u8 dvdfs__lit_311[58 + 2 /* padding */] = {
+/* 803D14E4-803D1520 003A+02 rc=1 efc=0 rfr=False None .data      @311                                                         */
+SECTION_DATA static u8 dvdfs__lit_311[58 + 2 /* padding */] = {
 	0x57, 0x61, 0x72, 0x6E, 0x69, 0x6E, 0x67, 0x3A, 0x20, 0x44, 0x56, 0x44, 0x4F, 0x70, 0x65, 0x6E,
 	0x44, 0x69, 0x72, 0x28, 0x29, 0x3A, 0x20, 0x66, 0x69, 0x6C, 0x65, 0x20, 0x27, 0x25, 0x73, 0x27,
 	0x20, 0x77, 0x61, 0x73, 0x20, 0x6E, 0x6F, 0x74, 0x20, 0x66, 0x6F, 0x75, 0x6E, 0x64, 0x20, 0x75,
@@ -313,7 +302,7 @@ u8 dvdfs__lit_311[58 + 2 /* padding */] = {
 	0x00, 0x00,
 };
 
-/* 80348F80-80349040 00C0+00 rc=0 efc=0 .text      DVDOpenDir                                                   */
+/* 80348F80-80349040 00C0+00 rc=3 efc=3 rfr=False None .text      DVDOpenDir                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,7 +313,7 @@ extern "C" asm void DVDOpenDir() {
 #pragma pop
 
 
-/* 80349040-803490E4 00A4+00 rc=0 efc=0 .text      DVDReadDir                                                   */
+/* 80349040-803490E4 00A4+00 rc=3 efc=3 rfr=False None .text      DVDReadDir                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -335,7 +324,7 @@ extern "C" asm void DVDReadDir() {
 #pragma pop
 
 
-/* 803490E4-803490EC 0008+00 rc=0 efc=0 .text      DVDCloseDir                                                  */
+/* 803490E4-803490EC 0008+00 rc=3 efc=3 rfr=False None .text      DVDCloseDir                                                  */
 extern "C" bool DVDCloseDir() {
 	return true;
 }

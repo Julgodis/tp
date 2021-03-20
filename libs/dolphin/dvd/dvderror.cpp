@@ -9,12 +9,11 @@
 // Forward References:
 // 
 
-extern "C" void ErrorCode2Num(); // 1
+extern "C" static void ErrorCode2Num(); // 1
 extern "C" void __DVDStoreErrorCode(); // 1
 
-extern "C" void ErrorCode2Num(); // 1
+extern "C" static void ErrorCode2Num(); // 1
 extern "C" void __DVDStoreErrorCode(); // 1
-SECTION_DATA extern u8 ErrorTable[72];
 
 // 
 // External References:
@@ -31,8 +30,8 @@ extern "C" void __OSUnlockSramEx(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803D16A8-803D16F0 0048+00 rc=0 efc=0 .data      ErrorTable                                                   */
-u8 ErrorTable[72] = {
+/* 803D16A8-803D16F0 0048+00 rc=1 efc=0 rfr=False None .data      ErrorTable                                                   */
+SECTION_DATA static u8 ErrorTable[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x3A, 0x00, 0x00, 0x06, 0x28, 0x00, 0x00, 0x03, 0x02, 0x00,
 	0x00, 0x03, 0x11, 0x00, 0x00, 0x05, 0x20, 0x00, 0x00, 0x05, 0x20, 0x01, 0x00, 0x05, 0x21, 0x00,
 	0x00, 0x05, 0x24, 0x00, 0x00, 0x05, 0x24, 0x01, 0x00, 0x05, 0x24, 0x02, 0x00, 0x0B, 0x5A, 0x01,
@@ -40,18 +39,18 @@ u8 ErrorTable[72] = {
 	0x00, 0x10, 0x00, 0x07, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8034BA6C-8034BB88 011C+00 rc=0 efc=0 .text      ErrorCode2Num                                                */
+/* 8034BA6C-8034BB88 011C+00 rc=1 efc=0 rfr=False None .text      ErrorCode2Num                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void ErrorCode2Num() {
+extern "C" asm static void ErrorCode2Num() {
 	nofralloc
 #include "asm/dolphin/dvd/dvderror/ErrorCode2Num.s"
 }
 #pragma pop
 
 
-/* 8034BB88-8034BC04 007C+00 rc=0 efc=0 .text      __DVDStoreErrorCode                                          */
+/* 8034BB88-8034BC04 007C+00 rc=12 efc=12 rfr=False None .text      __DVDStoreErrorCode                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

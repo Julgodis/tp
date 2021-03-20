@@ -46,23 +46,9 @@ extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
 extern "C" void mDoLib_pos2camera__FP3VecP3Vec(); // 1
 extern "C" void __sinit_m_Do_lib_cpp(); // 1
 extern "C" void __dt__11J3DUClipperFv(); // 1
-SECTION_DATA extern void* const __vt__11J3DUClipper[3 + 1 /* padding */];
-SECTION_BSS extern u8 lit_3727[12];
-SECTION_BSS extern u8 mClipper__14mDoLib_clipper[92];
-SECTION_SBSS extern f32 mSystemFar__14mDoLib_clipper;
-SECTION_SBSS extern f32 mFovyRate__14mDoLib_clipper;
-SECTION_SDATA2 extern f32 lit_3634;
-SECTION_SDATA2 extern f32 lit_3635;
-SECTION_SDATA2 extern f64 lit_3638;
-SECTION_SDATA2 extern f32 m_Do_m_Do_lib__lit_3739;
-SECTION_SDATA2 extern u8 lit_3784[4];
-SECTION_SDATA2 extern f32 m_Do_m_Do_lib__lit_3785;
-SECTION_SDATA2 extern f32 lit_3786;
-SECTION_SDATA2 extern f32 m_Do_m_Do_lib__lit_3787;
-SECTION_SDATA2 extern f32 m_Do_m_Do_lib__lit_3788;
-SECTION_SDATA2 extern f32 m_Do_m_Do_lib__lit_3789;
-SECTION_SDATA2 extern f32 m_Do_m_Do_lib__lit_3790;
-SECTION_SDATA2 extern f32 m_Do_m_Do_lib__lit_3791[1 + 1 /* padding */];
+extern "C" extern u8 mClipper__14mDoLib_clipper[92];
+extern "C" extern f32 mSystemFar__14mDoLib_clipper;
+extern "C" extern f32 mFovyRate__14mDoLib_clipper;
 
 // 
 // External References:
@@ -89,24 +75,24 @@ extern "C" void GXInitTlutObj(); // 1
 extern "C" void __register_global_object(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 sincosTable___5JMath[65536];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80451B70-80451B74 0004+00 rc=0 efc=0 .sdata2    @3634                                                        */
-f32 lit_3634 = 0.125f;
+/* 80451B70-80451B74 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3634                                                        */
+SECTION_SDATA2 static f32 lit_3634 = 0.125f;
 
-/* 80451B74-80451B78 0004+00 rc=0 efc=0 .sdata2    @3635                                                        */
-f32 lit_3635 = 1.0f / 100.0f;
+/* 80451B74-80451B78 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3635                                                        */
+SECTION_SDATA2 static f32 lit_3635 = 1.0f / 100.0f;
 
-/* 80451B78-80451B80 0008+00 rc=0 efc=0 .sdata2    @3638                                                        */
-f64 lit_3638 = 4503601774854144.0 /* cast s32 to float */;
+/* 80451B78-80451B80 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3638                                                        */
+SECTION_SDATA2 static f64 lit_3638 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8001513C-8001528C 0150+00 rc=0 efc=0 .text      mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj  */
+/* 8001513C-8001528C 0150+00 rc=3 efc=3 rfr=False None .text      mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,22 +104,22 @@ asm void mDoLib_setResTimgObj(ResTIMG const* field_0, _GXTexObj* field_1, u32 fi
 
 
 /* ############################################################################################## */
-/* 803DD8D8-803DD8E4 000C+00 rc=0 efc=0 .bss       @3727                                                        */
-u8 lit_3727[12];
+/* 803DD8D8-803DD8E4 000C+00 rc=1 efc=0 rfr=False None .bss       @3727                                                        */
+static u8 lit_3727[12];
 
-/* 803DD8E4-803DD940 005C+00 rc=0 efc=0 .bss       mClipper__14mDoLib_clipper                                   */
+/* 803DD8E4-803DD940 005C+00 rc=7 efc=5 rfr=False None .bss       mClipper__14mDoLib_clipper                                   */
 u8 mClipper__14mDoLib_clipper[92];
 
-/* 80450C70-80450C74 0004+00 rc=0 efc=0 .sbss      mSystemFar__14mDoLib_clipper                                 */
+/* 80450C70-80450C74 0004+00 rc=3 efc=2 rfr=False None .sbss      mSystemFar__14mDoLib_clipper                                 */
 f32 mSystemFar__14mDoLib_clipper;
 
-/* 80450C74-80450C78 0004+00 rc=0 efc=0 .sbss      mFovyRate__14mDoLib_clipper                                  */
+/* 80450C74-80450C78 0004+00 rc=2 efc=1 rfr=False None .sbss      mFovyRate__14mDoLib_clipper                                  */
 f32 mFovyRate__14mDoLib_clipper;
 
-/* 80451B80-80451B84 0004+00 rc=0 efc=0 .sdata2    @3739                                                        */
-f32 m_Do_m_Do_lib__lit_3739 = 182.04444885253906f;
+/* 80451B80-80451B84 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3739                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3739 = 182.04444885253906f;
 
-/* 8001528C-80015310 0084+00 rc=0 efc=0 .text      setup__14mDoLib_clipperFffff                                 */
+/* 8001528C-80015310 0084+00 rc=1 efc=1 rfr=False None .text      setup__14mDoLib_clipperFffff                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,37 +131,37 @@ asm void mDoLib_clipper::setup(f32 field_0, f32 field_1, f32 field_2, f32 field_
 
 
 /* ############################################################################################## */
-/* 80451B84-80451B88 0004+00 rc=0 efc=0 .sdata2    @3784                                                        */
-u8 lit_3784[4] = {
+/* 80451B84-80451B88 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3784                                                        */
+SECTION_SDATA2 static u8 lit_3784[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451B88-80451B8C 0004+00 rc=0 efc=0 .sdata2    @3785                                                        */
-f32 m_Do_m_Do_lib__lit_3785 = 500000.0f;
+/* 80451B88-80451B8C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3785                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3785 = 500000.0f;
 
-/* 80451B8C-80451B90 0004+00 rc=0 efc=0 .sdata2    @3786                                                        */
-f32 lit_3786 = 0.5f;
+/* 80451B8C-80451B90 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3786                                                        */
+SECTION_SDATA2 static f32 lit_3786 = 0.5f;
 
-/* 80451B90-80451B94 0004+00 rc=0 efc=0 .sdata2    @3787                                                        */
-f32 m_Do_m_Do_lib__lit_3787 = 2.0f;
+/* 80451B90-80451B94 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3787                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3787 = 2.0f;
 
-/* 80451B94-80451B98 0004+00 rc=0 efc=0 .sdata2    @3788                                                        */
-f32 m_Do_m_Do_lib__lit_3788 = 304.0f;
+/* 80451B94-80451B98 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3788                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3788 = 304.0f;
 
-/* 80451B98-80451B9C 0004+00 rc=0 efc=0 .sdata2    @3789                                                        */
-f32 m_Do_m_Do_lib__lit_3789 = 608.0f;
+/* 80451B98-80451B9C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3789                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3789 = 608.0f;
 
-/* 80451B9C-80451BA0 0004+00 rc=0 efc=0 .sdata2    @3790                                                        */
-f32 m_Do_m_Do_lib__lit_3790 = 224.0f;
+/* 80451B9C-80451BA0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3790                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3790 = 224.0f;
 
-/* 80451BA0-80451BA8 0004+04 rc=0 efc=0 .sdata2    @3791                                                        */
-f32 m_Do_m_Do_lib__lit_3791[1 + 1 /* padding */] = {
+/* 80451BA0-80451BA8 0004+04 rc=1 efc=0 rfr=False None .sdata2    @3791                                                        */
+SECTION_SDATA2 static f32 m_Do_m_Do_lib__lit_3791[1 + 1 /* padding */] = {
 	448.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80015310-800154EC 01DC+00 rc=0 efc=0 .text      mDoLib_project__FP3VecP3Vec                                  */
+/* 80015310-800154EC 01DC+00 rc=21 efc=21 rfr=False None .text      mDoLib_project__FP3VecP3Vec                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -186,7 +172,7 @@ asm void mDoLib_project(Vec* field_0, Vec* field_1) {
 #pragma pop
 
 
-/* 800154EC-80015544 0058+00 rc=0 efc=0 .text      mDoLib_pos2camera__FP3VecP3Vec                               */
+/* 800154EC-80015544 0058+00 rc=2 efc=2 rfr=False None .text      mDoLib_pos2camera__FP3VecP3Vec                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,16 +184,16 @@ asm void mDoLib_pos2camera(Vec* field_0, Vec* field_1) {
 
 
 /* ############################################################################################## */
-/* 803A3498-803A34A8 000C+04 rc=0 efc=0 .data      __vt__11J3DUClipper                                          */
-void* const __vt__11J3DUClipper[3 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11J3DUClipperFv,
+/* 803A3498-803A34A8 000C+04 rc=2 efc=0 rfr=False None .data      __vt__11J3DUClipper                                          */
+SECTION_DATA static void* __vt__11J3DUClipper[3 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11J3DUClipperFv,
 	/* padding */
 	NULL,
 };
 
-/* 80015544-80015590 004C+00 rc=0 efc=0 .text      __sinit_m_Do_lib_cpp                                         */
+/* 80015544-80015590 004C+00 rc=1 efc=1 rfr=False None .text      __sinit_m_Do_lib_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -218,7 +204,7 @@ extern "C" asm void __sinit_m_Do_lib_cpp() {
 #pragma pop
 
 
-/* 80015590-800155D8 0048+00 rc=0 efc=0 .text      __dt__11J3DUClipperFv                                        */
+/* 80015590-800155D8 0048+00 rc=2 efc=0 rfr=False None .text      __dt__11J3DUClipperFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

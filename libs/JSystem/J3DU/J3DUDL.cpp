@@ -30,7 +30,7 @@ extern "C" bool getUseMtxNum__11J3DShapeMtxCFv(); // 1
 // Declarations:
 // 
 
-/* 80273E08-80273E10 0008+00 rc=0 efc=0 .text      getUseMtxNum__11J3DShapeMtxCFv                               */
+/* 80273E08-80273E10 0008+00 rc=4 efc=4 rfr=False None .text      getUseMtxNum__11J3DShapeMtxCFv                               */
 bool J3DShapeMtx::getUseMtxNum() const {
 	return true;
 }

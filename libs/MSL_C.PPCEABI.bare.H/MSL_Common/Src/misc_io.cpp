@@ -20,13 +20,13 @@ extern "C" void __stdio_atexit(); // 1
 extern "C" void __close_all(); // 1
 
 extern "C" void __close_all(); // 1
-SECTION_SBSS extern u8 __stdio_exit[4];
+extern "C" extern u8 __stdio_exit[4];
 
 // 
 // Declarations:
 // 
 
-/* 803664CC-803664DC 0010+00 rc=0 efc=0 .text      __stdio_atexit                                               */
+/* 803664CC-803664DC 0010+00 rc=2 efc=2 rfr=False None .text      __stdio_atexit                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

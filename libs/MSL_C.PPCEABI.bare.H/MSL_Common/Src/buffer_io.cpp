@@ -25,7 +25,7 @@ extern "C" void __prep_buffer(); // 1
 // Declarations:
 // 
 
-/* 803650E0-803651A4 00C4+00 rc=0 efc=0 .text      __flush_buffer                                               */
+/* 803650E0-803651A4 00C4+00 rc=5 efc=5 rfr=False None .text      __flush_buffer                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -36,7 +36,7 @@ extern "C" asm void __flush_buffer() {
 #pragma pop
 
 
-/* 803651A4-803651D8 0034+00 rc=0 efc=0 .text      __prep_buffer                                                */
+/* 803651A4-803651D8 0034+00 rc=2 efc=2 rfr=False None .text      __prep_buffer                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

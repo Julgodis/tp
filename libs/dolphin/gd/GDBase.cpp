@@ -18,8 +18,7 @@ extern "C" void GDInitGDLObj(); // 1
 extern "C" void GDFlushCurrToMem(); // 1
 extern "C" void GDPadCurr32(); // 1
 extern "C" void GDOverflowed(); // 1
-SECTION_SBSS extern u8 __GDCurrentDL[4];
-SECTION_SBSS extern u8 overflowcb[4];
+extern "C" extern u8 __GDCurrentDL[4];
 
 // 
 // External References:
@@ -33,7 +32,7 @@ extern "C" void DCFlushRange(); // 1
 // Declarations:
 // 
 
-/* 80360F98-80360FB0 0018+00 rc=0 efc=0 .text      GDInitGDLObj                                                 */
+/* 80360F98-80360FB0 0018+00 rc=6 efc=6 rfr=False None .text      GDInitGDLObj                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,10 +44,10 @@ extern "C" asm void GDInitGDLObj() {
 
 
 /* ############################################################################################## */
-/* 80451980-80451984 0004+00 rc=0 efc=0 .sbss      __GDCurrentDL                                                */
+/* 80451980-80451984 0004+00 rc=102 efc=100 rfr=False None .sbss      __GDCurrentDL                                                */
 u8 __GDCurrentDL[4];
 
-/* 80360FB0-80360FDC 002C+00 rc=0 efc=0 .text      GDFlushCurrToMem                                             */
+/* 80360FB0-80360FDC 002C+00 rc=2 efc=2 rfr=False None .text      GDFlushCurrToMem                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -59,7 +58,7 @@ extern "C" asm void GDFlushCurrToMem() {
 #pragma pop
 
 
-/* 80360FDC-803610D4 00F8+00 rc=0 efc=0 .text      GDPadCurr32                                                  */
+/* 80360FDC-803610D4 00F8+00 rc=2 efc=2 rfr=False None .text      GDPadCurr32                                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,10 +70,10 @@ extern "C" asm void GDPadCurr32() {
 
 
 /* ############################################################################################## */
-/* 80451984-80451988 0004+00 rc=0 efc=0 .sbss      overflowcb                                                   */
-u8 overflowcb[4];
+/* 80451984-80451988 0004+00 rc=1 efc=0 rfr=False None .sbss      overflowcb                                                   */
+static u8 overflowcb[4];
 
-/* 803610D4-80361104 0030+00 rc=0 efc=0 .text      GDOverflowed                                                 */
+/* 803610D4-80361104 0030+00 rc=41 efc=41 rfr=False None .text      GDOverflowed                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -17,7 +17,7 @@ extern "C" void GXLoadPosMtxImm(); // 1
 extern "C" void GXLoadNrmMtxImm(); // 1
 extern "C" void GXSetCurrentMtx(); // 1
 extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void __GXSetViewport(); // 1
+extern "C" static void __GXSetViewport(); // 1
 extern "C" void GXSetViewport(); // 1
 extern "C" void GXGetViewportv(); // 1
 extern "C" void GXSetScissor(); // 1
@@ -34,7 +34,7 @@ extern "C" void GXLoadPosMtxImm(); // 1
 extern "C" void GXLoadNrmMtxImm(); // 1
 extern "C" void GXSetCurrentMtx(); // 1
 extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void __GXSetViewport(); // 1
+extern "C" static void __GXSetViewport(); // 1
 extern "C" void GXSetViewport(); // 1
 extern "C" void GXGetViewportv(); // 1
 extern "C" void GXSetScissor(); // 1
@@ -42,35 +42,31 @@ extern "C" void GXGetScissor(); // 1
 extern "C" void GXSetScissorBoxOffset(); // 1
 extern "C" void GXSetClipMode(); // 1
 extern "C" void __GXSetMatrixIndex(); // 1
-SECTION_SDATA2 extern u8 lit_26[4];
-SECTION_SDATA2 extern f32 lit_27;
-SECTION_SDATA2 extern f32 lit_28;
-SECTION_SDATA2 extern f32 lit_201;
 
 // 
 // External References:
 // 
 
 
-SECTION_SDATA2 extern void* __GXData;
+extern "C" extern void* __GXData;
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80456650-80456654 0004+00 rc=0 efc=0 .sdata2    @26                                                          */
-u8 lit_26[4] = {
+/* 80456650-80456654 0004+00 rc=3 efc=0 rfr=False None .sdata2    @26                                                          */
+SECTION_SDATA2 static u8 lit_26[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456654-80456658 0004+00 rc=0 efc=0 .sdata2    @27                                                          */
-f32 lit_27 = 1.0f;
+/* 80456654-80456658 0004+00 rc=2 efc=0 rfr=False None .sdata2    @27                                                          */
+SECTION_SDATA2 static f32 lit_27 = 1.0f;
 
-/* 80456658-8045665C 0004+00 rc=0 efc=0 .sdata2    @28                                                          */
-f32 lit_28 = 0.5f;
+/* 80456658-8045665C 0004+00 rc=2 efc=0 rfr=False None .sdata2    @28                                                          */
+SECTION_SDATA2 static f32 lit_28 = 0.5f;
 
-/* 8035FF60-803600D4 0174+00 rc=0 efc=0 .text      GXProject                                                    */
+/* 8035FF60-803600D4 0174+00 rc=1 efc=1 rfr=False None .text      GXProject                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +77,7 @@ extern "C" asm void GXProject() {
 #pragma pop
 
 
-/* 803600D4-80360178 00A4+00 rc=0 efc=0 .text      GXSetProjection                                              */
+/* 803600D4-80360178 00A4+00 rc=15 efc=15 rfr=False None .text      GXSetProjection                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +88,7 @@ extern "C" asm void GXSetProjection() {
 #pragma pop
 
 
-/* 80360178-80360204 008C+00 rc=0 efc=0 .text      GXSetProjectionv                                             */
+/* 80360178-80360204 008C+00 rc=1 efc=1 rfr=False None .text      GXSetProjectionv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -103,7 +99,7 @@ extern "C" asm void GXSetProjectionv() {
 #pragma pop
 
 
-/* 80360204-8036024C 0048+00 rc=0 efc=0 .text      GXGetProjectionv                                             */
+/* 80360204-8036024C 0048+00 rc=1 efc=1 rfr=False None .text      GXGetProjectionv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,7 +110,7 @@ extern "C" asm void GXGetProjectionv() {
 #pragma pop
 
 
-/* 8036024C-8036029C 0050+00 rc=0 efc=0 .text      GXLoadPosMtxImm                                              */
+/* 8036024C-8036029C 0050+00 rc=83 efc=83 rfr=False None .text      GXLoadPosMtxImm                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +121,7 @@ extern "C" asm void GXLoadPosMtxImm() {
 #pragma pop
 
 
-/* 8036029C-803602EC 0050+00 rc=0 efc=0 .text      GXLoadNrmMtxImm                                              */
+/* 8036029C-803602EC 0050+00 rc=11 efc=11 rfr=False None .text      GXLoadNrmMtxImm                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +132,7 @@ extern "C" asm void GXLoadNrmMtxImm() {
 #pragma pop
 
 
-/* 803602EC-80360320 0034+00 rc=0 efc=0 .text      GXSetCurrentMtx                                              */
+/* 803602EC-80360320 0034+00 rc=51 efc=51 rfr=False None .text      GXSetCurrentMtx                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +143,7 @@ extern "C" asm void GXSetCurrentMtx() {
 #pragma pop
 
 
-/* 80360320-803603D4 00B4+00 rc=0 efc=0 .text      GXLoadTexMtxImm                                              */
+/* 80360320-803603D4 00B4+00 rc=15 efc=15 rfr=False None .text      GXLoadTexMtxImm                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,21 +155,21 @@ extern "C" asm void GXLoadTexMtxImm() {
 
 
 /* ############################################################################################## */
-/* 8045665C-80456660 0004+00 rc=0 efc=0 .sdata2    @201                                                         */
-f32 lit_201 = 342.0f;
+/* 8045665C-80456660 0004+00 rc=1 efc=0 rfr=False None .sdata2    @201                                                         */
+SECTION_SDATA2 static f32 lit_201 = 342.0f;
 
-/* 803603D4-80360464 0090+00 rc=0 efc=0 .text      __GXSetViewport                                              */
+/* 803603D4-80360464 0090+00 rc=1 efc=0 rfr=False None .text      __GXSetViewport                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __GXSetViewport() {
+extern "C" asm static void __GXSetViewport() {
 	nofralloc
 #include "asm/dolphin/gx/GXTransform/__GXSetViewport.s"
 }
 #pragma pop
 
 
-/* 80360464-803604AC 0048+00 rc=0 efc=0 .text      GXSetViewport                                                */
+/* 80360464-803604AC 0048+00 rc=10 efc=10 rfr=False None .text      GXSetViewport                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +180,7 @@ extern "C" asm void GXSetViewport() {
 #pragma pop
 
 
-/* 803604AC-803604D0 0024+00 rc=0 efc=0 .text      GXGetViewportv                                               */
+/* 803604AC-803604D0 0024+00 rc=1 efc=1 rfr=False None .text      GXGetViewportv                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -195,7 +191,7 @@ extern "C" asm void GXGetViewportv() {
 #pragma pop
 
 
-/* 803604D0-80360548 0078+00 rc=0 efc=0 .text      GXSetScissor                                                 */
+/* 803604D0-80360548 0078+00 rc=11 efc=11 rfr=False None .text      GXSetScissor                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -206,7 +202,7 @@ extern "C" asm void GXSetScissor() {
 #pragma pop
 
 
-/* 80360548-80360590 0048+00 rc=0 efc=0 .text      GXGetScissor                                                 */
+/* 80360548-80360590 0048+00 rc=6 efc=6 rfr=False None .text      GXGetScissor                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -217,7 +213,7 @@ extern "C" asm void GXGetScissor() {
 #pragma pop
 
 
-/* 80360590-803605D0 0040+00 rc=0 efc=0 .text      GXSetScissorBoxOffset                                        */
+/* 80360590-803605D0 0040+00 rc=1 efc=1 rfr=False None .text      GXSetScissorBoxOffset                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -228,7 +224,7 @@ extern "C" asm void GXSetScissorBoxOffset() {
 #pragma pop
 
 
-/* 803605D0-803605F8 0028+00 rc=0 efc=0 .text      GXSetClipMode                                                */
+/* 803605D0-803605F8 0028+00 rc=27 efc=27 rfr=False None .text      GXSetClipMode                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -239,7 +235,7 @@ extern "C" asm void GXSetClipMode() {
 #pragma pop
 
 
-/* 803605F8-8036067C 0084+00 rc=0 efc=0 .text      __GXSetMatrixIndex                                           */
+/* 803605F8-8036067C 0084+00 rc=2 efc=1 rfr=False None .text      __GXSetMatrixIndex                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

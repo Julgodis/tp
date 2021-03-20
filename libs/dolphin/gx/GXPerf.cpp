@@ -16,92 +16,90 @@ extern "C" void GXReadXfRasMetric(); // 1
 extern "C" void GXSetGPMetric(); // 1
 extern "C" void GXClearGPMetric(); // 1
 extern "C" void GXReadXfRasMetric(); // 1
-SECTION_DATA extern void* lit_182[23];
-SECTION_DATA extern void* lit_181[36 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
 
-SECTION_SBSS extern u8 __cpReg[4];
-SECTION_SDATA2 extern void* __GXData;
+extern "C" extern u8 __cpReg[4];
+extern "C" extern void* __GXData;
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803D2858-803D28B4 005C+00 rc=0 efc=0 .data      @182                                                         */
-void* lit_182[23] = {
-	(void*)(((char*)GXSetGPMetric)+0x568),
-	(void*)(((char*)GXSetGPMetric)+0x584),
-	(void*)(((char*)GXSetGPMetric)+0x5A0),
-	(void*)(((char*)GXSetGPMetric)+0x5BC),
-	(void*)(((char*)GXSetGPMetric)+0x610),
-	(void*)(((char*)GXSetGPMetric)+0x62C),
-	(void*)(((char*)GXSetGPMetric)+0x648),
-	(void*)(((char*)GXSetGPMetric)+0x664),
-	(void*)(((char*)GXSetGPMetric)+0x5D8),
-	(void*)(((char*)GXSetGPMetric)+0x680),
-	(void*)(((char*)GXSetGPMetric)+0x6B0),
-	(void*)(((char*)GXSetGPMetric)+0x6E0),
-	(void*)(((char*)GXSetGPMetric)+0x710),
-	(void*)(((char*)GXSetGPMetric)+0x740),
-	(void*)(((char*)GXSetGPMetric)+0x770),
-	(void*)(((char*)GXSetGPMetric)+0x7A0),
-	(void*)(((char*)GXSetGPMetric)+0x7D0),
-	(void*)(((char*)GXSetGPMetric)+0x7FC),
-	(void*)(((char*)GXSetGPMetric)+0x80C),
-	(void*)(((char*)GXSetGPMetric)+0x81C),
-	(void*)(((char*)GXSetGPMetric)+0x82C),
-	(void*)(((char*)GXSetGPMetric)+0x5F4),
-	(void*)(((char*)GXSetGPMetric)+0x838),
+/* 803D2858-803D28B4 005C+00 rc=1 efc=0 rfr=False None .data      @182                                                         */
+SECTION_DATA static void* lit_182[23] = {
+	/* 0    */ (void*)(((char*)GXSetGPMetric)+0x568),
+	/* 1    */ (void*)(((char*)GXSetGPMetric)+0x584),
+	/* 2    */ (void*)(((char*)GXSetGPMetric)+0x5A0),
+	/* 3    */ (void*)(((char*)GXSetGPMetric)+0x5BC),
+	/* 4    */ (void*)(((char*)GXSetGPMetric)+0x610),
+	/* 5    */ (void*)(((char*)GXSetGPMetric)+0x62C),
+	/* 6    */ (void*)(((char*)GXSetGPMetric)+0x648),
+	/* 7    */ (void*)(((char*)GXSetGPMetric)+0x664),
+	/* 8    */ (void*)(((char*)GXSetGPMetric)+0x5D8),
+	/* 9    */ (void*)(((char*)GXSetGPMetric)+0x680),
+	/* 10   */ (void*)(((char*)GXSetGPMetric)+0x6B0),
+	/* 11   */ (void*)(((char*)GXSetGPMetric)+0x6E0),
+	/* 12   */ (void*)(((char*)GXSetGPMetric)+0x710),
+	/* 13   */ (void*)(((char*)GXSetGPMetric)+0x740),
+	/* 14   */ (void*)(((char*)GXSetGPMetric)+0x770),
+	/* 15   */ (void*)(((char*)GXSetGPMetric)+0x7A0),
+	/* 16   */ (void*)(((char*)GXSetGPMetric)+0x7D0),
+	/* 17   */ (void*)(((char*)GXSetGPMetric)+0x7FC),
+	/* 18   */ (void*)(((char*)GXSetGPMetric)+0x80C),
+	/* 19   */ (void*)(((char*)GXSetGPMetric)+0x81C),
+	/* 20   */ (void*)(((char*)GXSetGPMetric)+0x82C),
+	/* 21   */ (void*)(((char*)GXSetGPMetric)+0x5F4),
+	/* 22   */ (void*)(((char*)GXSetGPMetric)+0x838),
 };
 
-/* 803D28B4-803D2948 0090+04 rc=0 efc=0 .data      @181                                                         */
-void* lit_181[36 + 1 /* padding */] = {
-	(void*)(((char*)GXSetGPMetric)+0x13C),
-	(void*)(((char*)GXSetGPMetric)+0x15C),
-	(void*)(((char*)GXSetGPMetric)+0x17C),
-	(void*)(((char*)GXSetGPMetric)+0x19C),
-	(void*)(((char*)GXSetGPMetric)+0x1BC),
-	(void*)(((char*)GXSetGPMetric)+0x1DC),
-	(void*)(((char*)GXSetGPMetric)+0x1FC),
-	(void*)(((char*)GXSetGPMetric)+0x21C),
-	(void*)(((char*)GXSetGPMetric)+0x23C),
-	(void*)(((char*)GXSetGPMetric)+0x25C),
-	(void*)(((char*)GXSetGPMetric)+0x29C),
-	(void*)(((char*)GXSetGPMetric)+0x2BC),
-	(void*)(((char*)GXSetGPMetric)+0x2D8),
-	(void*)(((char*)GXSetGPMetric)+0x2F4),
-	(void*)(((char*)GXSetGPMetric)+0x310),
-	(void*)(((char*)GXSetGPMetric)+0x32C),
-	(void*)(((char*)GXSetGPMetric)+0x348),
-	(void*)(((char*)GXSetGPMetric)+0x364),
-	(void*)(((char*)GXSetGPMetric)+0x380),
-	(void*)(((char*)GXSetGPMetric)+0x39C),
-	(void*)(((char*)GXSetGPMetric)+0x3B8),
-	(void*)(((char*)GXSetGPMetric)+0x3D4),
-	(void*)(((char*)GXSetGPMetric)+0x3F0),
-	(void*)(((char*)GXSetGPMetric)+0x40C),
-	(void*)(((char*)GXSetGPMetric)+0x428),
-	(void*)(((char*)GXSetGPMetric)+0x444),
-	(void*)(((char*)GXSetGPMetric)+0x460),
-	(void*)(((char*)GXSetGPMetric)+0x47C),
-	(void*)(((char*)GXSetGPMetric)+0x498),
-	(void*)(((char*)GXSetGPMetric)+0x4B4),
-	(void*)(((char*)GXSetGPMetric)+0x4D0),
-	(void*)(((char*)GXSetGPMetric)+0x4EC),
-	(void*)(((char*)GXSetGPMetric)+0x508),
-	(void*)(((char*)GXSetGPMetric)+0x524),
-	(void*)(((char*)GXSetGPMetric)+0x27C),
-	(void*)(((char*)GXSetGPMetric)+0x53C),
+/* 803D28B4-803D2948 0090+04 rc=1 efc=0 rfr=False None .data      @181                                                         */
+SECTION_DATA static void* lit_181[36 + 1 /* padding */] = {
+	/* 0    */ (void*)(((char*)GXSetGPMetric)+0x13C),
+	/* 1    */ (void*)(((char*)GXSetGPMetric)+0x15C),
+	/* 2    */ (void*)(((char*)GXSetGPMetric)+0x17C),
+	/* 3    */ (void*)(((char*)GXSetGPMetric)+0x19C),
+	/* 4    */ (void*)(((char*)GXSetGPMetric)+0x1BC),
+	/* 5    */ (void*)(((char*)GXSetGPMetric)+0x1DC),
+	/* 6    */ (void*)(((char*)GXSetGPMetric)+0x1FC),
+	/* 7    */ (void*)(((char*)GXSetGPMetric)+0x21C),
+	/* 8    */ (void*)(((char*)GXSetGPMetric)+0x23C),
+	/* 9    */ (void*)(((char*)GXSetGPMetric)+0x25C),
+	/* 10   */ (void*)(((char*)GXSetGPMetric)+0x29C),
+	/* 11   */ (void*)(((char*)GXSetGPMetric)+0x2BC),
+	/* 12   */ (void*)(((char*)GXSetGPMetric)+0x2D8),
+	/* 13   */ (void*)(((char*)GXSetGPMetric)+0x2F4),
+	/* 14   */ (void*)(((char*)GXSetGPMetric)+0x310),
+	/* 15   */ (void*)(((char*)GXSetGPMetric)+0x32C),
+	/* 16   */ (void*)(((char*)GXSetGPMetric)+0x348),
+	/* 17   */ (void*)(((char*)GXSetGPMetric)+0x364),
+	/* 18   */ (void*)(((char*)GXSetGPMetric)+0x380),
+	/* 19   */ (void*)(((char*)GXSetGPMetric)+0x39C),
+	/* 20   */ (void*)(((char*)GXSetGPMetric)+0x3B8),
+	/* 21   */ (void*)(((char*)GXSetGPMetric)+0x3D4),
+	/* 22   */ (void*)(((char*)GXSetGPMetric)+0x3F0),
+	/* 23   */ (void*)(((char*)GXSetGPMetric)+0x40C),
+	/* 24   */ (void*)(((char*)GXSetGPMetric)+0x428),
+	/* 25   */ (void*)(((char*)GXSetGPMetric)+0x444),
+	/* 26   */ (void*)(((char*)GXSetGPMetric)+0x460),
+	/* 27   */ (void*)(((char*)GXSetGPMetric)+0x47C),
+	/* 28   */ (void*)(((char*)GXSetGPMetric)+0x498),
+	/* 29   */ (void*)(((char*)GXSetGPMetric)+0x4B4),
+	/* 30   */ (void*)(((char*)GXSetGPMetric)+0x4D0),
+	/* 31   */ (void*)(((char*)GXSetGPMetric)+0x4EC),
+	/* 32   */ (void*)(((char*)GXSetGPMetric)+0x508),
+	/* 33   */ (void*)(((char*)GXSetGPMetric)+0x524),
+	/* 34   */ (void*)(((char*)GXSetGPMetric)+0x27C),
+	/* 35   */ (void*)(((char*)GXSetGPMetric)+0x53C),
 	/* padding */
 	NULL,
 };
 
-/* 8036067C-80360EC4 0848+00 rc=0 efc=0 .text      GXSetGPMetric                                                */
+/* 8036067C-80360EC4 0848+00 rc=3 efc=1 rfr=False None .text      GXSetGPMetric                                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,7 +110,7 @@ extern "C" asm void GXSetGPMetric() {
 #pragma pop
 
 
-/* 80360EC4-80360ED4 0010+00 rc=0 efc=0 .text      GXClearGPMetric                                              */
+/* 80360EC4-80360ED4 0010+00 rc=1 efc=1 rfr=False None .text      GXClearGPMetric                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -123,7 +121,7 @@ extern "C" asm void GXClearGPMetric() {
 #pragma pop
 
 
-/* 80360ED4-80360F98 00C4+00 rc=0 efc=0 .text      GXReadXfRasMetric                                            */
+/* 80360ED4-80360F98 00C4+00 rc=1 efc=1 rfr=False None .text      GXReadXfRasMetric                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

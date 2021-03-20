@@ -46,10 +46,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cM3dGPla {
+struct cBgS_PolyInfo {
 };
 
-struct cBgS_PolyInfo {
+struct cM3dGPla {
 };
 
 struct cBgS {
@@ -83,36 +83,19 @@ struct J3DLightInfo {
 // Forward References:
 // 
 
-void dkWmark_Create(kankyo_class*); // 2
-void dkWmark_Delete(dkWmark_c*); // 2
-void dkWmark_Execute(dkWmark_c*); // 2
-void dkWmark_Draw(dkWmark_c*); // 2
+static void dkWmark_Create(kankyo_class*); // 2
+static void dkWmark_Delete(dkWmark_c*); // 2
+static void dkWmark_Execute(dkWmark_c*); // 2
+static void dkWmark_Draw(dkWmark_c*); // 2
 
-extern "C" void dkWmark_Create__FP12kankyo_class(); // 1
+extern "C" static void dkWmark_Create__FP12kankyo_class(); // 1
 extern "C" void __dt__9dkWmark_cFv(); // 1
-extern "C" void dkWmark_Delete__FP9dkWmark_c(); // 1
+extern "C" static void dkWmark_Delete__FP9dkWmark_c(); // 1
 extern "C" void setMatrix__9dkWmark_cFv(); // 1
-extern "C" void dkWmark_Execute__FP9dkWmark_c(); // 1
-extern "C" void dkWmark_Draw__FP9dkWmark_c(); // 1
-SECTION_RODATA extern const u8 data_8039A488[12];
-SECTION_RODATA extern const char* const d_d_k_wmark__stringBase0;
-SECTION_DATA extern void* l_dkWmark_Method[5];
-SECTION_DATA extern void* g_profile_WMARK[10 + 1 /* padding */];
-SECTION_BSS extern u8 lit_3644[12];
-SECTION_BSS extern f32 data_80430C9C[3];
-SECTION_SBSS extern u8 m_nowID__9dkWmark_c[4];
-SECTION_SBSS extern u8 data_80451134[4];
-SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3718;
-SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3719;
-SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3720;
-SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3844;
-SECTION_SDATA2 extern u8 d_d_k_wmark__lit_3845[4 + 4 /* padding */];
-SECTION_SDATA2 extern f64 d_d_k_wmark__lit_3846;
-SECTION_SDATA2 extern f64 d_d_k_wmark__lit_3847;
-SECTION_SDATA2 extern u8 d_d_k_wmark__lit_3848[8];
-SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3873;
-SECTION_SDATA2 extern f32 d_d_k_wmark__lit_3906;
-SECTION_SDATA2 extern f64 lit_3908;
+extern "C" static void dkWmark_Execute__FP9dkWmark_c(); // 1
+extern "C" static void dkWmark_Draw__FP9dkWmark_c(); // 1
+extern "C" extern char const* const d_d_k_wmark__stringBase0;
+extern "C" extern void* g_profile_WMARK[10 + 1 /* padding */];
 
 // 
 // External References:
@@ -168,72 +151,73 @@ extern "C" void __construct_array(); // 1
 extern "C" void _savegpr_26(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void abs(); // 1
-SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
-SECTION_DATA extern void* const __vt__8cM3dGPla[3];
-SECTION_DATA extern void* g_fopKy_Method[5 + 1 /* padding */];
-SECTION_DATA extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
-SECTION_BSS extern u8 mClipper__14mDoLib_clipper[92];
-SECTION_BSS extern u8 mGndCheck__11fopAcM_gc_c[84];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 g_env_light[4880];
-SECTION_BSS extern u8 j3dSys[284];
-SECTION_BSS extern u8 sincosTable___5JMath[65536];
-SECTION_SDATA extern u32 __float_nan;
-SECTION_SBSS extern f32 mGroundY__11fopAcM_gc_c;
+extern "C" extern u8 const j3dDefaultLightInfo[52];
+extern "C" extern void* __vt__8cM3dGPla[3];
+extern "C" extern void* g_fopKy_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 mClipper__14mDoLib_clipper[92];
+extern "C" extern u8 mGndCheck__11fopAcM_gc_c[84];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern f32 mGroundY__11fopAcM_gc_c;
+extern "C" extern u8 struct_80450D64[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 8039A488-8039A494 000C+00 rc=0 efc=0 .rodata    kColor$localstatic3$draw__9dkWmark_cFv                       */
-const u8 data_8039A488[12] = {
+/* 8039A488-8039A494 000C+00 rc=1 efc=0 rfr=False None .rodata    kColor$localstatic3$draw__9dkWmark_cFv                       */
+SECTION_RODATA static u8 const data_8039A488[12] = {
 	0x00, 0x00, 0x00, 0x82, 0x5F, 0x4B, 0x32, 0x3C, 0x64, 0x6E, 0x78, 0x28,
 };
 
-/* 8039A494-8039A4A0 0006+06 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 8039A494-8039A4A0 0006+06 rc=1 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_8039A494 = "Alink";
+SECTION_DEAD static char const* const stringBase_8039A494 = "Alink";
 /* @stringBase0 padding */
-char* const pad_8039A49A = "\0\0\0\0\0";
+SECTION_DEAD static char const* const pad_8039A49A = "\0\0\0\0\0";
 #pragma pop
 
-/* 80430C90-80430C9C 000C+00 rc=0 efc=0 .bss       @3644                                                        */
-u8 lit_3644[12];
+/* 80430C90-80430C9C 000C+00 rc=1 efc=0 rfr=False None .bss       @3644                                                        */
+static u8 lit_3644[12];
 
-/* 80430C9C-80430CA8 000C+00 rc=0 efc=0 .bss       wolfFootScale$localstatic3$create__9dkWmark_cFv              */
-f32 data_80430C9C[3];
+/* 80430C9C-80430CA8 000C+00 rc=1 efc=0 rfr=False None .bss       wolfFootScale$localstatic3$create__9dkWmark_cFv              */
+static f32 data_80430C9C[3];
 
-/* 80451130-80451134 0004+00 rc=0 efc=0 .sbss      m_nowID__9dkWmark_c                                          */
-u8 m_nowID__9dkWmark_c[4];
+/* 80451130-80451134 0004+00 rc=2 efc=0 rfr=False None .sbss      m_nowID__9dkWmark_c                                          */
+static u8 m_nowID__9dkWmark_c[4];
 
-/* 80451134-80451138 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80451134[4];
+/* 80451134-80451138 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_80451134[4];
 
-/* 80454FB0-80454FB4 0004+00 rc=0 efc=0 .sdata2    @3718                                                        */
-f32 d_d_k_wmark__lit_3718 = 11.0f / 10.0f;
+/* 80454FB0-80454FB4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3718                                                        */
+SECTION_SDATA2 static f32 d_d_k_wmark__lit_3718 = 11.0f / 10.0f;
 
-/* 80454FB4-80454FB8 0004+00 rc=0 efc=0 .sdata2    @3719                                                        */
-f32 d_d_k_wmark__lit_3719 = 1.0f;
+/* 80454FB4-80454FB8 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3719                                                        */
+SECTION_SDATA2 static f32 d_d_k_wmark__lit_3719 = 1.0f;
 
-/* 80454FB8-80454FBC 0004+00 rc=0 efc=0 .sdata2    @3720                                                        */
-f32 d_d_k_wmark__lit_3720 = 3.0f / 5.0f;
+/* 80454FB8-80454FBC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3720                                                        */
+SECTION_SDATA2 static f32 d_d_k_wmark__lit_3720 = 3.0f / 5.0f;
 
-/* 8026141C-80261640 0224+00 rc=0 efc=0 .text      dkWmark_Create__FP12kankyo_class                             */
+/* 8026141C-80261640 0224+00 rc=1 efc=0 rfr=False None .text      dkWmark_Create__FP12kankyo_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dkWmark_Create(kankyo_class* field_0) {
+asm static void dkWmark_Create(kankyo_class* field_0) {
 	nofralloc
 #include "asm/d/d_k_wmark/dkWmark_Create__FP12kankyo_class.s"
 }
 #pragma pop
 
 
-/* 80261640-8026169C 005C+00 rc=0 efc=0 .text      __dt__9dkWmark_cFv                                           */
+/* 80261640-8026169C 005C+00 rc=1 efc=0 rfr=False None .text      __dt__9dkWmark_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -244,11 +228,11 @@ asm dkWmark_c::~dkWmark_c() {
 #pragma pop
 
 
-/* 8026169C-802616C4 0028+00 rc=0 efc=0 .text      dkWmark_Delete__FP9dkWmark_c                                 */
+/* 8026169C-802616C4 0028+00 rc=1 efc=0 rfr=False None .text      dkWmark_Delete__FP9dkWmark_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dkWmark_Delete(dkWmark_c* field_0) {
+asm static void dkWmark_Delete(dkWmark_c* field_0) {
 	nofralloc
 #include "asm/d/d_k_wmark/dkWmark_Delete__FP9dkWmark_c.s"
 }
@@ -256,28 +240,28 @@ asm void dkWmark_Delete(dkWmark_c* field_0) {
 
 
 /* ############################################################################################## */
-/* 80454FBC-80454FC0 0004+00 rc=0 efc=0 .sdata2    @3844                                                        */
-f32 d_d_k_wmark__lit_3844 = 100.0f;
+/* 80454FBC-80454FC0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3844                                                        */
+SECTION_SDATA2 static f32 d_d_k_wmark__lit_3844 = 100.0f;
 
-/* 80454FC0-80454FC8 0004+04 rc=0 efc=0 .sdata2    @3845                                                        */
-u8 d_d_k_wmark__lit_3845[4 + 4 /* padding */] = {
+/* 80454FC0-80454FC8 0004+04 rc=2 efc=0 rfr=False None .sdata2    @3845                                                        */
+SECTION_SDATA2 static u8 d_d_k_wmark__lit_3845[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80454FC8-80454FD0 0008+00 rc=0 efc=0 .sdata2    @3846                                                        */
-f64 d_d_k_wmark__lit_3846 = 0.5;
+/* 80454FC8-80454FD0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3846                                                        */
+SECTION_SDATA2 static f64 d_d_k_wmark__lit_3846 = 0.5;
 
-/* 80454FD0-80454FD8 0008+00 rc=0 efc=0 .sdata2    @3847                                                        */
-f64 d_d_k_wmark__lit_3847 = 3.0;
+/* 80454FD0-80454FD8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3847                                                        */
+SECTION_SDATA2 static f64 d_d_k_wmark__lit_3847 = 3.0;
 
-/* 80454FD8-80454FE0 0008+00 rc=0 efc=0 .sdata2    @3848                                                        */
-u8 d_d_k_wmark__lit_3848[8] = {
+/* 80454FD8-80454FE0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3848                                                        */
+SECTION_SDATA2 static u8 d_d_k_wmark__lit_3848[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 802616C4-80261964 02A0+00 rc=0 efc=0 .text      setMatrix__9dkWmark_cFv                                      */
+/* 802616C4-80261964 02A0+00 rc=2 efc=0 rfr=False None .text      setMatrix__9dkWmark_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -289,14 +273,14 @@ asm void dkWmark_c::setMatrix() {
 
 
 /* ############################################################################################## */
-/* 80454FE0-80454FE4 0004+00 rc=0 efc=0 .sdata2    @3873                                                        */
-f32 d_d_k_wmark__lit_3873 = 1.0f / 50.0f;
+/* 80454FE0-80454FE4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3873                                                        */
+SECTION_SDATA2 static f32 d_d_k_wmark__lit_3873 = 1.0f / 50.0f;
 
-/* 80261964-80261A18 00B4+00 rc=0 efc=0 .text      dkWmark_Execute__FP9dkWmark_c                                */
+/* 80261964-80261A18 00B4+00 rc=1 efc=0 rfr=False None .text      dkWmark_Execute__FP9dkWmark_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dkWmark_Execute(dkWmark_c* field_0) {
+asm static void dkWmark_Execute(dkWmark_c* field_0) {
 	nofralloc
 #include "asm/d/d_k_wmark/dkWmark_Execute__FP9dkWmark_c.s"
 }
@@ -304,17 +288,17 @@ asm void dkWmark_Execute(dkWmark_c* field_0) {
 
 
 /* ############################################################################################## */
-/* 80454FE4-80454FE8 0004+00 rc=0 efc=0 .sdata2    @3906                                                        */
-f32 d_d_k_wmark__lit_3906 = 50.0f;
+/* 80454FE4-80454FE8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3906                                                        */
+SECTION_SDATA2 static f32 d_d_k_wmark__lit_3906 = 50.0f;
 
-/* 80454FE8-80454FF0 0008+00 rc=0 efc=0 .sdata2    @3908                                                        */
-f64 lit_3908 = 4503599627370496.0 /* cast u32 to float */;
+/* 80454FE8-80454FF0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3908                                                        */
+SECTION_SDATA2 static f64 lit_3908 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80261A18-80261B54 013C+00 rc=0 efc=0 .text      dkWmark_Draw__FP9dkWmark_c                                   */
+/* 80261A18-80261B54 013C+00 rc=1 efc=0 rfr=False None .text      dkWmark_Draw__FP9dkWmark_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dkWmark_Draw(dkWmark_c* field_0) {
+asm static void dkWmark_Draw(dkWmark_c* field_0) {
 	nofralloc
 #include "asm/d/d_k_wmark/dkWmark_Draw__FP9dkWmark_c.s"
 }
@@ -322,27 +306,27 @@ asm void dkWmark_Draw(dkWmark_c* field_0) {
 
 
 /* ############################################################################################## */
-/* 803C3430-803C3444 0014+00 rc=0 efc=0 .data      l_dkWmark_Method                                             */
-void* l_dkWmark_Method[5] = {
-	(void*)dkWmark_Create__FP12kankyo_class,
-	(void*)dkWmark_Delete__FP9dkWmark_c,
-	(void*)dkWmark_Execute__FP9dkWmark_c,
-	(void*)NULL,
-	(void*)dkWmark_Draw__FP9dkWmark_c,
+/* 803C3430-803C3444 0014+00 rc=1 efc=0 rfr=False None .data      l_dkWmark_Method                                             */
+SECTION_DATA static void* l_dkWmark_Method[5] = {
+	/* 0    */ (void*)dkWmark_Create__FP12kankyo_class,
+	/* 1    */ (void*)dkWmark_Delete__FP9dkWmark_c,
+	/* 2    */ (void*)dkWmark_Execute__FP9dkWmark_c,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)dkWmark_Draw__FP9dkWmark_c,
 };
 
-/* 803C3444-803C3470 0028+04 rc=0 efc=0 .data      g_profile_WMARK                                              */
-void* g_profile_WMARK[10 + 1 /* padding */] = {
-	(void*)0xFFFFFFFD,
-	(void*)0x0009FFFD,
-	(void*)0x03030000,
-	(void*)&g_fpcLf_Method,
-	(void*)0x00000498,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)&g_fopKy_Method,
-	(void*)0x02F80000,
-	(void*)&l_dkWmark_Method,
+/* 803C3444-803C3470 0028+04 rc=0 efc=0 rfr=False None .data      g_profile_WMARK                                              */
+SECTION_DATA void* g_profile_WMARK[10 + 1 /* padding */] = {
+	/* 0    */ (void*)0xFFFFFFFD,
+	/* 1    */ (void*)0x0009FFFD,
+	/* 2    */ (void*)0x03030000,
+	/* 3    */ (void*)&g_fpcLf_Method,
+	/* 4    */ (void*)0x00000498,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)&g_fopKy_Method,
+	/* 8    */ (void*)0x02F80000,
+	/* 9    */ (void*)&l_dkWmark_Method,
 	/* padding */
 	NULL,
 };

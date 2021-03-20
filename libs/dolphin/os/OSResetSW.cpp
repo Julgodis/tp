@@ -10,19 +10,12 @@
 // 
 
 extern "C" void __OSResetSWInterruptHandler(); // 1
-extern "C" void OSGetResetButtonState(); // 1
+extern "C" static void OSGetResetButtonState(); // 1
 extern "C" void OSGetResetSwitchState(); // 1
 
 extern "C" void __OSResetSWInterruptHandler(); // 1
-extern "C" void OSGetResetButtonState(); // 1
+extern "C" static void OSGetResetButtonState(); // 1
 extern "C" void OSGetResetSwitchState(); // 1
-SECTION_SBSS extern u8 ResetCallback[4];
-SECTION_SBSS extern u8 Down[4];
-SECTION_SBSS extern u8 OSResetSW__LastState[4 + 4 /* padding */];
-SECTION_SBSS extern u8 HoldUp[4];
-SECTION_SBSS extern u8 data_804516B4[4];
-SECTION_SBSS extern u8 HoldDown[4];
-SECTION_SBSS extern u8 data_804516BC[4];
 
 // 
 // External References:
@@ -39,36 +32,36 @@ extern "C" void OSRestoreInterrupts(); // 1
 extern "C" void __OSMaskInterrupts(); // 1
 extern "C" void __OSGetSystemTime(); // 1
 extern "C" void __div2i(); // 1
-SECTION_SBSS extern u8 __OSStartTime[4];
-SECTION_SBSS extern u8 data_80451634[4];
+extern "C" extern u8 __OSStartTime[4];
+extern "C" extern u8 data_80451634[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 804516A0-804516A4 0004+00 rc=0 efc=0 .sbss      ResetCallback                                                */
-u8 ResetCallback[4];
+/* 804516A0-804516A4 0004+00 rc=1 efc=0 rfr=False None .sbss      ResetCallback                                                */
+static u8 ResetCallback[4];
 
-/* 804516A4-804516A8 0004+00 rc=0 efc=0 .sbss      Down                                                         */
-u8 Down[4];
+/* 804516A4-804516A8 0004+00 rc=2 efc=0 rfr=False None .sbss      Down                                                         */
+static u8 Down[4];
 
-/* 804516A8-804516B0 0004+04 rc=0 efc=0 .sbss      LastState                                                    */
-u8 OSResetSW__LastState[4 + 4 /* padding */];
+/* 804516A8-804516B0 0004+04 rc=2 efc=0 rfr=False None .sbss      LastState                                                    */
+static u8 OSResetSW__LastState[4 + 4 /* padding */];
 
-/* 804516B0-804516B4 0004+00 rc=0 efc=0 .sbss      HoldUp                                                       */
-u8 HoldUp[4];
+/* 804516B0-804516B4 0004+00 rc=1 efc=0 rfr=False None .sbss      HoldUp                                                       */
+static u8 HoldUp[4];
 
-/* 804516B4-804516B8 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_804516B4[4];
+/* 804516B4-804516B8 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_804516B4[4];
 
-/* 804516B8-804516BC 0004+00 rc=0 efc=0 .sbss      HoldDown                                                     */
-u8 HoldDown[4];
+/* 804516B8-804516BC 0004+00 rc=2 efc=0 rfr=False None .sbss      HoldDown                                                     */
+static u8 HoldDown[4];
 
-/* 804516BC-804516C0 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_804516BC[4];
+/* 804516BC-804516C0 0004+00 rc=2 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_804516BC[4];
 
-/* 8033FAE4-8033FBD8 00F4+00 rc=0 efc=0 .text      __OSResetSWInterruptHandler                                  */
+/* 8033FAE4-8033FBD8 00F4+00 rc=1 efc=1 rfr=False None .text      __OSResetSWInterruptHandler                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,18 +72,18 @@ extern "C" asm void __OSResetSWInterruptHandler() {
 #pragma pop
 
 
-/* 8033FBD8-8033FE70 0298+00 rc=0 efc=0 .text      OSGetResetButtonState                                        */
+/* 8033FBD8-8033FE70 0298+00 rc=1 efc=0 rfr=False None .text      OSGetResetButtonState                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void OSGetResetButtonState() {
+extern "C" asm static void OSGetResetButtonState() {
 	nofralloc
 #include "asm/dolphin/os/OSResetSW/OSGetResetButtonState.s"
 }
 #pragma pop
 
 
-/* 8033FE70-8033FE90 0020+00 rc=0 efc=0 .text      OSGetResetSwitchState                                        */
+/* 8033FE70-8033FE90 0020+00 rc=1 efc=1 rfr=False None .text      OSGetResetSwitchState                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

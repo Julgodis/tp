@@ -27,7 +27,6 @@ extern "C" void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl(); // 1
 extern "C" void __ct__12J3DShapeDrawFPCUcUl(); // 1
 extern "C" void draw__12J3DShapeDrawCFv(); // 1
 extern "C" void __dt__12J3DShapeDrawFv(); // 1
-SECTION_DATA extern void* const __vt__12J3DShapeDraw[3 + 1 /* padding */];
 
 // 
 // External References:
@@ -53,7 +52,7 @@ extern "C" void _restgpr_18(); // 1
 // Declarations:
 // 
 
-/* 80314924-80314974 0050+00 rc=0 efc=0 .text      countVertex__12J3DShapeDrawFUl                               */
+/* 80314924-80314974 0050+00 rc=1 efc=0 rfr=False None .text      countVertex__12J3DShapeDrawFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +63,7 @@ asm void J3DShapeDraw::countVertex(u32 field_0) {
 #pragma pop
 
 
-/* 80314974-80314ABC 0148+00 rc=0 efc=0 .text      addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl                    */
+/* 80314974-80314ABC 0148+00 rc=1 efc=1 rfr=False None .text      addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,16 +75,16 @@ asm void J3DShapeDraw::addTexMtxIndexInDL(u32 field_0, u32 field_1, u32 field_2)
 
 
 /* ############################################################################################## */
-/* 803CDC68-803CDC78 000C+04 rc=0 efc=0 .data      __vt__12J3DShapeDraw                                         */
-void* const __vt__12J3DShapeDraw[3 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__12J3DShapeDrawFv,
+/* 803CDC68-803CDC78 000C+04 rc=2 efc=0 rfr=False None .data      __vt__12J3DShapeDraw                                         */
+SECTION_DATA static void* __vt__12J3DShapeDraw[3 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__12J3DShapeDrawFv,
 	/* padding */
 	NULL,
 };
 
-/* 80314ABC-80314AD4 0018+00 rc=0 efc=0 .text      __ct__12J3DShapeDrawFPCUcUl                                  */
+/* 80314ABC-80314AD4 0018+00 rc=1 efc=1 rfr=False None .text      __ct__12J3DShapeDrawFPCUcUl                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +95,7 @@ asm J3DShapeDraw::J3DShapeDraw(u8 const* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 80314AD4-80314B00 002C+00 rc=0 efc=0 .text      draw__12J3DShapeDrawCFv                                      */
+/* 80314AD4-80314B00 002C+00 rc=3 efc=3 rfr=False None .text      draw__12J3DShapeDrawCFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,7 +106,7 @@ asm void J3DShapeDraw::draw() const {
 #pragma pop
 
 
-/* 80314B00-80314B48 0048+00 rc=0 efc=0 .text      __dt__12J3DShapeDrawFv                                       */
+/* 80314B00-80314B48 0048+00 rc=1 efc=0 rfr=False None .text      __dt__12J3DShapeDrawFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

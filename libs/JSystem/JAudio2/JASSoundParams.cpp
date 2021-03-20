@@ -21,10 +21,6 @@ struct JASSoundParams {
 
 extern "C" void clamp__14JASSoundParamsFv(); // 1
 extern "C" void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams(); // 1
-SECTION_SDATA2 extern u8 lit_299[4];
-SECTION_SDATA2 extern f32 lit_300;
-SECTION_SDATA2 extern f32 JASSoundParams__lit_301;
-SECTION_SDATA2 extern f32 JASSoundParams__lit_311;
 
 // 
 // External References:
@@ -37,18 +33,18 @@ SECTION_SDATA2 extern f32 JASSoundParams__lit_311;
 // 
 
 /* ############################################################################################## */
-/* 80455760-80455764 0004+00 rc=0 efc=0 .sdata2    @299                                                         */
-u8 lit_299[4] = {
+/* 80455760-80455764 0004+00 rc=1 efc=0 rfr=False None .sdata2    @299                                                         */
+SECTION_SDATA2 static u8 lit_299[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455764-80455768 0004+00 rc=0 efc=0 .sdata2    @300                                                         */
-f32 lit_300 = 1.0f;
+/* 80455764-80455768 0004+00 rc=1 efc=0 rfr=False None .sdata2    @300                                                         */
+SECTION_SDATA2 static f32 lit_300 = 1.0f;
 
-/* 80455768-8045576C 0004+00 rc=0 efc=0 .sdata2    @301                                                         */
-f32 JASSoundParams__lit_301 = 8.0f;
+/* 80455768-8045576C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @301                                                         */
+SECTION_SDATA2 static f32 JASSoundParams__lit_301 = 8.0f;
 
-/* 8029E3B0-8029E47C 00CC+00 rc=0 efc=0 .text      clamp__14JASSoundParamsFv                                    */
+/* 8029E3B0-8029E47C 00CC+00 rc=2 efc=2 rfr=False None .text      clamp__14JASSoundParamsFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,10 +56,10 @@ asm void JASSoundParams::clamp() {
 
 
 /* ############################################################################################## */
-/* 8045576C-80455770 0004+00 rc=0 efc=0 .sdata2    @311                                                         */
-f32 JASSoundParams__lit_311 = 0.5f;
+/* 8045576C-80455770 0004+00 rc=1 efc=0 rfr=False None .sdata2    @311                                                         */
+SECTION_SDATA2 static f32 JASSoundParams__lit_311 = 0.5f;
 
-/* 8029E47C-8029E4D8 005C+00 rc=0 efc=0 .text      combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams */
+/* 8029E47C-8029E4D8 005C+00 rc=2 efc=2 rfr=False None .text      combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

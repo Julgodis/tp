@@ -34,7 +34,7 @@ def string_from_data(addr: int, data: bytearray) -> String:
         Identifier("stringBase", addr, None),
         addr,
         len(data),
-        data_type=ConstType(PointerType(CHAR)),
+        data_type=PointerType(ConstType(CHAR)),
         encoding=encoding,
         decoded_string=string)
 

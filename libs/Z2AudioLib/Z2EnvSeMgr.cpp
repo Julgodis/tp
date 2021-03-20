@@ -9,10 +9,10 @@
 // Types:
 // 
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2EnvSeBase {
@@ -210,84 +210,6 @@ extern "C" void startFogSe__10Z2EnvSeMgrFv(); // 1
 extern "C" void initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc(); // 1
 extern "C" void registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec(); // 1
 extern "C" void startLv3WaterSe__10Z2EnvSeMgrFSc(); // 1
-SECTION_RODATA extern const u8 Z2EnvSeMgr__cNullVec__6Z2Calc[12 + 4 /* padding */];
-SECTION_DATA extern void* Z2EnvSeMgr__lit_4025[12];
-SECTION_DATA extern void* Z2EnvSeMgr__lit_4272[12];
-SECTION_DATA extern void* Z2EnvSeMgr__lit_4622[42];
-SECTION_DATA extern void* Z2EnvSeMgr__lit_4734[16];
-SECTION_DATA extern void* lit_4839[32];
-SECTION_DATA extern void* lit_5076[14];
-SECTION_DATA extern void* Z2EnvSeMgr__lit_5074[10];
-SECTION_DATA extern void* lit_5259[14];
-SECTION_DATA extern void* Z2EnvSeMgr__lit_5258[10];
-SECTION_SDATA2 extern f32 lit_3501;
-SECTION_SDATA2 extern f32 lit_3502;
-SECTION_SDATA2 extern u8 lit_3503[4];
-SECTION_SDATA2 extern f32 lit_3504;
-SECTION_SDATA2 extern f32 lit_3505[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 lit_3508;
-SECTION_SDATA2 extern f32 lit_3574;
-SECTION_SDATA2 extern f32 lit_3585;
-SECTION_SDATA2 extern f32 lit_3654;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3655;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3704;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3705;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3749;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3750;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3751;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3752;
-SECTION_SDATA2 extern f32 lit_3753;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3754;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3755;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3756;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3757;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3758;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3759;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3760;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3761;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3762;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3763;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3764;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3765;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3766;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3767;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3768;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3769;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3770;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3771;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3772;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3773;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3774;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3775;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3776;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3777;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3928;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_3963;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4260;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4261;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4262;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4263;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4264;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4265;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4266;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4267;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4268;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4269[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 Z2EnvSeMgr__lit_4271;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4400;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4422;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4510;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4511;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4619;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4621;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4732;
-SECTION_SDATA2 extern f32 lit_4833;
-SECTION_SDATA2 extern f32 lit_4834;
-SECTION_SDATA2 extern f32 lit_4835;
-SECTION_SDATA2 extern f32 lit_4836;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4837;
-SECTION_SDATA2 extern f32 lit_4856;
-SECTION_SDATA2 extern f32 Z2EnvSeMgr__lit_4879;
 
 // 
 // External References:
@@ -343,25 +265,25 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_RODATA extern const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
-SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SBSS extern u8 data_80450B3C[4];
-SECTION_SBSS extern u8 data_80450B44[4];
-SECTION_SBSS extern u8 data_80450B60[4];
-SECTION_SBSS extern u8 data_80450B74[4];
-SECTION_SBSS extern u8 data_80450B7C[4];
-SECTION_SBSS extern u8 data_80450B80[4];
-SECTION_SBSS extern u8 data_80450B88[4];
-SECTION_SBSS extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
-SECTION_SDATA2 extern f32 cEqualCSlope__6Z2Calc;
-SECTION_SDATA2 extern f32 cEqualPSlope__6Z2Calc;
+extern "C" extern u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 data_80450B3C[4];
+extern "C" extern u8 data_80450B44[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
+extern "C" extern f32 cEqualCSlope__6Z2Calc;
+extern "C" extern f32 cEqualPSlope__6Z2Calc;
 
 // 
 // Declarations:
 // 
 
-/* 802C589C-802C58AC 0010+00 rc=0 efc=0 .text      __ct__11Z2EnvSeBaseFP3Vec                                    */
+/* 802C589C-802C58AC 0010+00 rc=3 efc=0 rfr=False None .text      __ct__11Z2EnvSeBaseFP3Vec                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -372,7 +294,7 @@ asm Z2EnvSeBase::Z2EnvSeBase(Vec* field_0) {
 #pragma pop
 
 
-/* 802C58AC-802C5908 005C+00 rc=0 efc=0 .text      __dt__11Z2EnvSeBaseFv                                        */
+/* 802C58AC-802C5908 005C+00 rc=3 efc=0 rfr=False None .text      __dt__11Z2EnvSeBaseFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -384,31 +306,31 @@ asm Z2EnvSeBase::~Z2EnvSeBase() {
 
 
 /* ############################################################################################## */
-/* 80455D40-80455D44 0004+00 rc=0 efc=0 .sdata2    @3501                                                        */
-f32 lit_3501 = 33.0f / 100.0f;
+/* 80455D40-80455D44 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3501                                                        */
+SECTION_SDATA2 static f32 lit_3501 = 33.0f / 100.0f;
 
-/* 80455D44-80455D48 0004+00 rc=0 efc=0 .sdata2    @3502                                                        */
-f32 lit_3502 = 1.0f;
+/* 80455D44-80455D48 0004+00 rc=24 efc=0 rfr=False None .sdata2    @3502                                                        */
+SECTION_SDATA2 static f32 lit_3502 = 1.0f;
 
-/* 80455D48-80455D4C 0004+00 rc=0 efc=0 .sdata2    @3503                                                        */
-u8 lit_3503[4] = {
+/* 80455D48-80455D4C 0004+00 rc=19 efc=0 rfr=False None .sdata2    @3503                                                        */
+SECTION_SDATA2 static u8 lit_3503[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455D4C-80455D50 0004+00 rc=0 efc=0 .sdata2    @3504                                                        */
-f32 lit_3504 = 1500.0f;
+/* 80455D4C-80455D50 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3504                                                        */
+SECTION_SDATA2 static f32 lit_3504 = 1500.0f;
 
-/* 80455D50-80455D58 0004+04 rc=0 efc=0 .sdata2    @3505                                                        */
-f32 lit_3505[1 + 1 /* padding */] = {
+/* 80455D50-80455D58 0004+04 rc=9 efc=0 rfr=False None .sdata2    @3505                                                        */
+SECTION_SDATA2 static f32 lit_3505[1 + 1 /* padding */] = {
 	1.0f / 10.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455D58-80455D60 0008+00 rc=0 efc=0 .sdata2    @3508                                                        */
-f64 lit_3508 = 4503599627370496.0 /* cast u32 to float */;
+/* 80455D58-80455D60 0008+00 rc=8 efc=0 rfr=False None .sdata2    @3508                                                        */
+SECTION_SDATA2 static f64 lit_3508 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 802C5908-802C5AB4 01AC+00 rc=0 efc=0 .text      startEnvSe__11Z2EnvSeBaseF10JAISoundIDfffffUl                */
+/* 802C5908-802C5AB4 01AC+00 rc=2 efc=0 rfr=False None .text      startEnvSe__11Z2EnvSeBaseF10JAISoundIDfffffUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -419,7 +341,7 @@ asm void Z2EnvSeBase::startEnvSe(JAISoundID field_0, f32 field_1, f32 field_2, f
 #pragma pop
 
 
-/* 802C5AB4-802C5C9C 01E8+00 rc=0 efc=0 .text      startEnvSeLevel__11Z2EnvSeBaseF10JAISoundIDfffffUl           */
+/* 802C5AB4-802C5C9C 01E8+00 rc=9 efc=0 rfr=False None .text      startEnvSeLevel__11Z2EnvSeBaseF10JAISoundIDfffffUl           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -431,17 +353,17 @@ asm void Z2EnvSeBase::startEnvSeLevel(JAISoundID field_0, f32 field_1, f32 field
 
 
 /* ############################################################################################## */
-/* 8039C250-8039C260 000C+04 rc=0 efc=0 .rodata    cNullVec__6Z2Calc                                            */
-const u8 Z2EnvSeMgr__cNullVec__6Z2Calc[12 + 4 /* padding */] = {
+/* 8039C250-8039C260 000C+04 rc=2 efc=0 rfr=False None .rodata    cNullVec__6Z2Calc                                            */
+SECTION_RODATA static u8 const Z2EnvSeMgr__cNullVec__6Z2Calc[12 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455D60-80455D64 0004+00 rc=0 efc=0 .sdata2    @3574                                                        */
-f32 lit_3574 = 0.5f;
+/* 80455D60-80455D64 0004+00 rc=10 efc=0 rfr=False None .sdata2    @3574                                                        */
+SECTION_SDATA2 static f32 lit_3574 = 0.5f;
 
-/* 802C5C9C-802C5D1C 0080+00 rc=0 efc=0 .text      __ct__10Z2EnvSeDirFP3Vec                                     */
+/* 802C5C9C-802C5D1C 0080+00 rc=1 efc=0 rfr=False None .text      __ct__10Z2EnvSeDirFP3Vec                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -452,7 +374,7 @@ asm Z2EnvSeDir::Z2EnvSeDir(Vec* field_0) {
 #pragma pop
 
 
-/* 802C5D1C-802C5D70 0054+00 rc=0 efc=0 .text      __dt__10Z2EnvSeDirFv                                         */
+/* 802C5D1C-802C5D70 0054+00 rc=1 efc=0 rfr=False None .text      __dt__10Z2EnvSeDirFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -464,10 +386,10 @@ asm Z2EnvSeDir::~Z2EnvSeDir() {
 
 
 /* ############################################################################################## */
-/* 80455D64-80455D68 0004+00 rc=0 efc=0 .sdata2    @3585                                                        */
-f32 lit_3585 = -1000.0f;
+/* 80455D64-80455D68 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3585                                                        */
+SECTION_SDATA2 static f32 lit_3585 = -1000.0f;
 
-/* 802C5D70-802C5D9C 002C+00 rc=0 efc=0 .text      setPanDir__10Z2EnvSeDirFP3Vec                                */
+/* 802C5D70-802C5D9C 002C+00 rc=2 efc=0 rfr=False None .text      setPanDir__10Z2EnvSeDirFP3Vec                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -478,7 +400,7 @@ asm void Z2EnvSeDir::setPanDir(Vec* field_0) {
 #pragma pop
 
 
-/* 802C5D9C-802C5E90 00F4+00 rc=0 efc=0 .text      calcPan__10Z2EnvSeDirFf                                      */
+/* 802C5D9C-802C5E90 00F4+00 rc=1 efc=0 rfr=False None .text      calcPan__10Z2EnvSeDirFf                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -489,7 +411,7 @@ asm void Z2EnvSeDir::calcPan(f32 field_0) {
 #pragma pop
 
 
-/* 802C5E90-802C5ECC 003C+00 rc=0 efc=0 .text      startEnvSeDirLevel__10Z2EnvSeDirF10JAISoundIDff              */
+/* 802C5E90-802C5ECC 003C+00 rc=1 efc=0 rfr=False None .text      startEnvSeDirLevel__10Z2EnvSeDirF10JAISoundIDff              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -501,13 +423,13 @@ asm void Z2EnvSeDir::startEnvSeDirLevel(JAISoundID field_0, f32 field_1, f32 fie
 
 
 /* ############################################################################################## */
-/* 80455D68-80455D6C 0004+00 rc=0 efc=0 .sdata2    @3654                                                        */
-f32 lit_3654 = 0.0018554000416770577f;
+/* 80455D68-80455D6C 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3654                                                        */
+SECTION_SDATA2 static f32 lit_3654 = 0.0018554000416770577f;
 
-/* 80455D6C-80455D70 0004+00 rc=0 efc=0 .sdata2    @3655                                                        */
-f32 Z2EnvSeMgr__lit_3655 = 0.0008553999941796064f;
+/* 80455D6C-80455D70 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3655                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3655 = 0.0008553999941796064f;
 
-/* 802C5ECC-802C5F28 005C+00 rc=0 efc=0 .text      __ct__14Z2EnvSeAutoPanFv                                     */
+/* 802C5ECC-802C5F28 005C+00 rc=1 efc=0 rfr=False None .text      __ct__14Z2EnvSeAutoPanFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -518,7 +440,7 @@ asm Z2EnvSeAutoPan::Z2EnvSeAutoPan() {
 #pragma pop
 
 
-/* 802C5F28-802C5F7C 0054+00 rc=0 efc=0 .text      __dt__14Z2EnvSeAutoPanFv                                     */
+/* 802C5F28-802C5F7C 0054+00 rc=1 efc=0 rfr=False None .text      __dt__14Z2EnvSeAutoPanFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -529,7 +451,7 @@ asm Z2EnvSeAutoPan::~Z2EnvSeAutoPan() {
 #pragma pop
 
 
-/* 802C5F7C-802C5F98 001C+00 rc=0 efc=0 .text      setPanParam__14Z2EnvSeAutoPanFffbbff                         */
+/* 802C5F7C-802C5F98 001C+00 rc=2 efc=0 rfr=False None .text      setPanParam__14Z2EnvSeAutoPanFffbbff                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -541,13 +463,13 @@ asm void Z2EnvSeAutoPan::setPanParam(f32 field_0, f32 field_1, bool field_2, boo
 
 
 /* ############################################################################################## */
-/* 80455D70-80455D74 0004+00 rc=0 efc=0 .sdata2    @3704                                                        */
-f32 Z2EnvSeMgr__lit_3704 = 2.0f;
+/* 80455D70-80455D74 0004+00 rc=4 efc=0 rfr=False None .sdata2    @3704                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3704 = 2.0f;
 
-/* 80455D74-80455D78 0004+00 rc=0 efc=0 .sdata2    @3705                                                        */
-f32 Z2EnvSeMgr__lit_3705 = -1.0f;
+/* 80455D74-80455D78 0004+00 rc=7 efc=0 rfr=False None .sdata2    @3705                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3705 = -1.0f;
 
-/* 802C5F98-802C60E0 0148+00 rc=0 efc=0 .text      calcPan__14Z2EnvSeAutoPanFv                                  */
+/* 802C5F98-802C60E0 0148+00 rc=2 efc=0 rfr=False None .text      calcPan__14Z2EnvSeAutoPanFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -558,7 +480,7 @@ asm void Z2EnvSeAutoPan::calcPan() {
 #pragma pop
 
 
-/* 802C60E0-802C611C 003C+00 rc=0 efc=0 .text      startEnvSeAutoPanLevel__14Z2EnvSeAutoPanF10JAISoundIDfff     */
+/* 802C60E0-802C611C 003C+00 rc=2 efc=0 rfr=False None .text      startEnvSeAutoPanLevel__14Z2EnvSeAutoPanF10JAISoundIDfff     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -570,94 +492,94 @@ asm void Z2EnvSeAutoPan::startEnvSeAutoPanLevel(JAISoundID field_0, f32 field_1,
 
 
 /* ############################################################################################## */
-/* 80455D78-80455D7C 0004+00 rc=0 efc=0 .sdata2    @3749                                                        */
-f32 Z2EnvSeMgr__lit_3749 = 1.0f / 100.0f;
+/* 80455D78-80455D7C 0004+00 rc=8 efc=0 rfr=False None .sdata2    @3749                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3749 = 1.0f / 100.0f;
 
-/* 80455D7C-80455D80 0004+00 rc=0 efc=0 .sdata2    @3750                                                        */
-f32 Z2EnvSeMgr__lit_3750 = 0.007823764346539974f;
+/* 80455D7C-80455D80 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3750                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3750 = 0.007823764346539974f;
 
-/* 80455D80-80455D84 0004+00 rc=0 efc=0 .sdata2    @3751                                                        */
-f32 Z2EnvSeMgr__lit_3751 = 3.0f / 50.0f;
+/* 80455D80-80455D84 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3751                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3751 = 3.0f / 50.0f;
 
-/* 80455D84-80455D88 0004+00 rc=0 efc=0 .sdata2    @3752                                                        */
-f32 Z2EnvSeMgr__lit_3752 = 1.0f / 5.0f;
+/* 80455D84-80455D88 0004+00 rc=4 efc=0 rfr=False None .sdata2    @3752                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3752 = 1.0f / 5.0f;
 
-/* 80455D88-80455D8C 0004+00 rc=0 efc=0 .sdata2    @3753                                                        */
-f32 lit_3753 = 0.026302523910999298f;
+/* 80455D88-80455D8C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3753                                                        */
+SECTION_SDATA2 static f32 lit_3753 = 0.026302523910999298f;
 
-/* 80455D8C-80455D90 0004+00 rc=0 efc=0 .sdata2    @3754                                                        */
-f32 Z2EnvSeMgr__lit_3754 = 0.004999999888241291f;
+/* 80455D8C-80455D90 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3754                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3754 = 0.004999999888241291f;
 
-/* 80455D90-80455D94 0004+00 rc=0 efc=0 .sdata2    @3755                                                        */
-f32 Z2EnvSeMgr__lit_3755 = 9.0f / 10.0f;
+/* 80455D90-80455D94 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3755                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3755 = 9.0f / 10.0f;
 
-/* 80455D94-80455D98 0004+00 rc=0 efc=0 .sdata2    @3756                                                        */
-f32 Z2EnvSeMgr__lit_3756 = 0.023310113698244095f;
+/* 80455D94-80455D98 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3756                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3756 = 0.023310113698244095f;
 
-/* 80455D98-80455D9C 0004+00 rc=0 efc=0 .sdata2    @3757                                                        */
-f32 Z2EnvSeMgr__lit_3757 = 0.003000000026077032f;
+/* 80455D98-80455D9C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3757                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3757 = 0.003000000026077032f;
 
-/* 80455D9C-80455DA0 0004+00 rc=0 efc=0 .sdata2    @3758                                                        */
-f32 Z2EnvSeMgr__lit_3758 = 0.006385157350450754f;
+/* 80455D9C-80455DA0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3758                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3758 = 0.006385157350450754f;
 
-/* 80455DA0-80455DA4 0004+00 rc=0 efc=0 .sdata2    @3759                                                        */
-f32 Z2EnvSeMgr__lit_3759 = 0.004000000189989805f;
+/* 80455DA0-80455DA4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3759                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3759 = 0.004000000189989805f;
 
-/* 80455DA4-80455DA8 0004+00 rc=0 efc=0 .sdata2    @3760                                                        */
-f32 Z2EnvSeMgr__lit_3760 = 4.0f / 5.0f;
+/* 80455DA4-80455DA8 0004+00 rc=6 efc=0 rfr=False None .sdata2    @3760                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3760 = 4.0f / 5.0f;
 
-/* 80455DA8-80455DAC 0004+00 rc=0 efc=0 .sdata2    @3761                                                        */
-f32 Z2EnvSeMgr__lit_3761 = 0.006188805215060711f;
+/* 80455DA8-80455DAC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3761                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3761 = 0.006188805215060711f;
 
-/* 80455DAC-80455DB0 0004+00 rc=0 efc=0 .sdata2    @3762                                                        */
-f32 Z2EnvSeMgr__lit_3762 = 0.0044999998062849045f;
+/* 80455DAC-80455DB0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3762                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3762 = 0.0044999998062849045f;
 
-/* 80455DB0-80455DB4 0004+00 rc=0 efc=0 .sdata2    @3763                                                        */
-f32 Z2EnvSeMgr__lit_3763 = 3.0f / 10.0f;
+/* 80455DB0-80455DB4 0004+00 rc=6 efc=0 rfr=False None .sdata2    @3763                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3763 = 3.0f / 10.0f;
 
-/* 80455DB4-80455DB8 0004+00 rc=0 efc=0 .sdata2    @3764                                                        */
-f32 Z2EnvSeMgr__lit_3764 = 0.05343298241496086f;
+/* 80455DB4-80455DB8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3764                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3764 = 0.05343298241496086f;
 
-/* 80455DB8-80455DBC 0004+00 rc=0 efc=0 .sdata2    @3765                                                        */
-f32 Z2EnvSeMgr__lit_3765 = 0.0020000000949949026f;
+/* 80455DB8-80455DBC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3765                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3765 = 0.0020000000949949026f;
 
-/* 80455DBC-80455DC0 0004+00 rc=0 efc=0 .sdata2    @3766                                                        */
-f32 Z2EnvSeMgr__lit_3766 = 7.0f / 10.0f;
+/* 80455DBC-80455DC0 0004+00 rc=7 efc=0 rfr=False None .sdata2    @3766                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3766 = 7.0f / 10.0f;
 
-/* 80455DC0-80455DC4 0004+00 rc=0 efc=0 .sdata2    @3767                                                        */
-f32 Z2EnvSeMgr__lit_3767 = 0.04256627336144447f;
+/* 80455DC0-80455DC4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3767                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3767 = 0.04256627336144447f;
 
-/* 80455DC4-80455DC8 0004+00 rc=0 efc=0 .sdata2    @3768                                                        */
-f32 Z2EnvSeMgr__lit_3768 = 0.0024999999441206455f;
+/* 80455DC4-80455DC8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3768                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3768 = 0.0024999999441206455f;
 
-/* 80455DC8-80455DCC 0004+00 rc=0 efc=0 .sdata2    @3769                                                        */
-f32 Z2EnvSeMgr__lit_3769 = 2.0f / 5.0f;
+/* 80455DC8-80455DCC 0004+00 rc=5 efc=0 rfr=False None .sdata2    @3769                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3769 = 2.0f / 5.0f;
 
-/* 80455DCC-80455DD0 0004+00 rc=0 efc=0 .sdata2    @3770                                                        */
-f32 Z2EnvSeMgr__lit_3770 = 0.01293395459651947f;
+/* 80455DCC-80455DD0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3770                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3770 = 0.01293395459651947f;
 
-/* 80455DD0-80455DD4 0004+00 rc=0 efc=0 .sdata2    @3771                                                        */
-f32 Z2EnvSeMgr__lit_3771 = 0.006000000052154064f;
+/* 80455DD0-80455DD4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3771                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3771 = 0.006000000052154064f;
 
-/* 80455DD4-80455DD8 0004+00 rc=0 efc=0 .sdata2    @3772                                                        */
-f32 Z2EnvSeMgr__lit_3772 = 3.0f / 5.0f;
+/* 80455DD4-80455DD8 0004+00 rc=3 efc=0 rfr=False None .sdata2    @3772                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3772 = 3.0f / 5.0f;
 
-/* 80455DD8-80455DDC 0004+00 rc=0 efc=0 .sdata2    @3773                                                        */
-f32 Z2EnvSeMgr__lit_3773 = 0.012157413177192211f;
+/* 80455DD8-80455DDC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3773                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3773 = 0.012157413177192211f;
 
-/* 80455DDC-80455DE0 0004+00 rc=0 efc=0 .sdata2    @3774                                                        */
-f32 Z2EnvSeMgr__lit_3774 = 0.006500000134110451f;
+/* 80455DDC-80455DE0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3774                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3774 = 0.006500000134110451f;
 
-/* 80455DE0-80455DE4 0004+00 rc=0 efc=0 .sdata2    @3775                                                        */
-f32 Z2EnvSeMgr__lit_3775 = 0.020923573523759842f;
+/* 80455DE0-80455DE4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3775                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3775 = 0.020923573523759842f;
 
-/* 80455DE4-80455DE8 0004+00 rc=0 efc=0 .sdata2    @3776                                                        */
-f32 Z2EnvSeMgr__lit_3776 = 0.0010000000474974513f;
+/* 80455DE4-80455DE8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3776                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3776 = 0.0010000000474974513f;
 
-/* 80455DE8-80455DEC 0004+00 rc=0 efc=0 .sdata2    @3777                                                        */
-f32 Z2EnvSeMgr__lit_3777 = 0.0037908784579485655f;
+/* 80455DE8-80455DEC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3777                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3777 = 0.0037908784579485655f;
 
-/* 802C611C-802C6540 0424+00 rc=0 efc=0 .text      __ct__10Z2EnvSeMgrFv                                         */
+/* 802C611C-802C6540 0424+00 rc=1 efc=1 rfr=False None .text      __ct__10Z2EnvSeMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -668,7 +590,7 @@ asm Z2EnvSeMgr::Z2EnvSeMgr() {
 #pragma pop
 
 
-/* 802C6540-802C66B0 0170+00 rc=0 efc=0 .text      __dt__10Z2EnvSeMgrFv                                         */
+/* 802C6540-802C66B0 0170+00 rc=1 efc=1 rfr=False None .text      __dt__10Z2EnvSeMgrFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -680,10 +602,10 @@ asm Z2EnvSeMgr::~Z2EnvSeMgr() {
 
 
 /* ############################################################################################## */
-/* 80455DEC-80455DF0 0004+00 rc=0 efc=0 .sdata2    @3928                                                        */
-f32 Z2EnvSeMgr__lit_3928 = 30.0f;
+/* 80455DEC-80455DF0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @3928                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3928 = 30.0f;
 
-/* 802C66B0-802C6998 02E8+00 rc=0 efc=0 .text      framework__10Z2EnvSeMgrFv                                    */
+/* 802C66B0-802C6998 02E8+00 rc=1 efc=1 rfr=False None .text      framework__10Z2EnvSeMgrFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -694,13 +616,13 @@ asm void Z2EnvSeMgr::framework() {
 #pragma pop
 
 
-/* 802C6998-802C699C 0004+00 rc=0 efc=0 .text      resetScene__10Z2EnvSeMgrFv                                   */
+/* 802C6998-802C699C 0004+00 rc=1 efc=1 rfr=False None .text      resetScene__10Z2EnvSeMgrFv                                   */
 void Z2EnvSeMgr::resetScene() {
 	/* empty function */
 }
 
 
-/* 802C699C-802C6AC0 0124+00 rc=0 efc=0 .text      resetSceneInner__10Z2EnvSeMgrFv                              */
+/* 802C699C-802C6AC0 0124+00 rc=1 efc=1 rfr=False None .text      resetSceneInner__10Z2EnvSeMgrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -712,10 +634,10 @@ asm void Z2EnvSeMgr::resetSceneInner() {
 
 
 /* ############################################################################################## */
-/* 80455DF0-80455DF4 0004+00 rc=0 efc=0 .sdata2    @3963                                                        */
-f32 Z2EnvSeMgr__lit_3963 = 100.0f;
+/* 80455DF0-80455DF4 0004+00 rc=2 efc=0 rfr=False None .sdata2    @3963                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_3963 = 100.0f;
 
-/* 802C6AC0-802C6C1C 015C+00 rc=0 efc=0 .text      initSceneEnvSe__10Z2EnvSeMgrFlScf                            */
+/* 802C6AC0-802C6C1C 015C+00 rc=1 efc=1 rfr=False None .text      initSceneEnvSe__10Z2EnvSeMgrFlScf                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -726,7 +648,7 @@ asm void Z2EnvSeMgr::initSceneEnvSe(s32 field_0, s8 field_1, f32 field_2) {
 #pragma pop
 
 
-/* 802C6C1C-802C6C84 0068+00 rc=0 efc=0 .text      playSceneEnvSe__10Z2EnvSeMgrFv                               */
+/* 802C6C1C-802C6C84 0068+00 rc=1 efc=0 rfr=False None .text      playSceneEnvSe__10Z2EnvSeMgrFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -738,23 +660,23 @@ asm void Z2EnvSeMgr::playSceneEnvSe() {
 
 
 /* ############################################################################################## */
-/* 803CB9C8-803CB9F8 0030+00 rc=0 efc=0 .data      @4025                                                        */
-void* Z2EnvSeMgr__lit_4025[12] = {
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x428),
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x1C8),
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x20C),
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x250),
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x294),
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x2D8),
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x31C),
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x360),
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x3A4),
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x3E8),
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x31C),
-	(void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x2D8),
+/* 803CB9C8-803CB9F8 0030+00 rc=1 efc=0 rfr=False None .data      @4025                                                        */
+SECTION_DATA static void* Z2EnvSeMgr__lit_4025[12] = {
+	/* 0    */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x428),
+	/* 1    */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x1C8),
+	/* 2    */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x20C),
+	/* 3    */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x250),
+	/* 4    */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x294),
+	/* 5    */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x2D8),
+	/* 6    */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x31C),
+	/* 7    */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x360),
+	/* 8    */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x3A4),
+	/* 9    */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x3E8),
+	/* 10   */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x31C),
+	/* 11   */ (void*)(((char*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+0x2D8),
 };
 
-/* 802C6C84-802C70C8 0444+00 rc=0 efc=0 .text      initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec                  */
+/* 802C6C84-802C70C8 0444+00 rc=3 efc=1 rfr=False None .text      initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -766,60 +688,60 @@ asm void Z2EnvSeMgr::initStaticEnvSe(u8 field_0, u8 field_1, u8 field_2, u8 fiel
 
 
 /* ############################################################################################## */
-/* 803CB9F8-803CBA28 0030+00 rc=0 efc=0 .data      @4272                                                        */
-void* Z2EnvSeMgr__lit_4272[12] = {
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x168),
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x170),
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x1C4),
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x204),
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x220),
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x46C),
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x48C),
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x528),
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x558),
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x578),
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x4DC),
-	(void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x464),
+/* 803CB9F8-803CBA28 0030+00 rc=1 efc=0 rfr=False None .data      @4272                                                        */
+SECTION_DATA static void* Z2EnvSeMgr__lit_4272[12] = {
+	/* 0    */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x168),
+	/* 1    */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x170),
+	/* 2    */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x1C4),
+	/* 3    */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x204),
+	/* 4    */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x220),
+	/* 5    */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x46C),
+	/* 6    */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x48C),
+	/* 7    */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x528),
+	/* 8    */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x558),
+	/* 9    */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x578),
+	/* 10   */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x4DC),
+	/* 11   */ (void*)(((char*)startStaticEnvSe__10Z2EnvSeMgrFSc)+0x464),
 };
 
-/* 80455DF4-80455DF8 0004+00 rc=0 efc=0 .sdata2    @4260                                                        */
-f32 Z2EnvSeMgr__lit_4260 = 127.0f;
+/* 80455DF4-80455DF8 0004+00 rc=9 efc=0 rfr=False None .sdata2    @4260                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4260 = 127.0f;
 
-/* 80455DF8-80455DFC 0004+00 rc=0 efc=0 .sdata2    @4261                                                        */
-f32 Z2EnvSeMgr__lit_4261 = 21.0f / 10.0f;
+/* 80455DF8-80455DFC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4261                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4261 = 21.0f / 10.0f;
 
-/* 80455DFC-80455E00 0004+00 rc=0 efc=0 .sdata2    @4262                                                        */
-f32 Z2EnvSeMgr__lit_4262 = 64.0f;
+/* 80455DFC-80455E00 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4262                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4262 = 64.0f;
 
-/* 80455E00-80455E04 0004+00 rc=0 efc=0 .sdata2    @4263                                                        */
-f32 Z2EnvSeMgr__lit_4263 = 7.0f / 20.0f;
+/* 80455E00-80455E04 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4263                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4263 = 7.0f / 20.0f;
 
-/* 80455E04-80455E08 0004+00 rc=0 efc=0 .sdata2    @4264                                                        */
-f32 Z2EnvSeMgr__lit_4264 = 23.0f / 20.0f;
+/* 80455E04-80455E08 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4264                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4264 = 23.0f / 20.0f;
 
-/* 80455E08-80455E0C 0004+00 rc=0 efc=0 .sdata2    @4265                                                        */
-f32 Z2EnvSeMgr__lit_4265 = 8.0f / 5.0f;
+/* 80455E08-80455E0C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4265                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4265 = 8.0f / 5.0f;
 
-/* 80455E0C-80455E10 0004+00 rc=0 efc=0 .sdata2    @4266                                                        */
-f32 Z2EnvSeMgr__lit_4266 = 13.0f / 20.0f;
+/* 80455E0C-80455E10 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4266                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4266 = 13.0f / 20.0f;
 
-/* 80455E10-80455E14 0004+00 rc=0 efc=0 .sdata2    @4267                                                        */
-f32 Z2EnvSeMgr__lit_4267 = 3.0f / 25.0f;
+/* 80455E10-80455E14 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4267                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4267 = 3.0f / 25.0f;
 
-/* 80455E14-80455E18 0004+00 rc=0 efc=0 .sdata2    @4268                                                        */
-f32 Z2EnvSeMgr__lit_4268 = 17.0f / 20.0f;
+/* 80455E14-80455E18 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4268                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4268 = 17.0f / 20.0f;
 
-/* 80455E18-80455E20 0004+04 rc=0 efc=0 .sdata2    @4269                                                        */
-f32 Z2EnvSeMgr__lit_4269[1 + 1 /* padding */] = {
+/* 80455E18-80455E20 0004+04 rc=3 efc=0 rfr=False None .sdata2    @4269                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4269[1 + 1 /* padding */] = {
 	0.75f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455E20-80455E28 0008+00 rc=0 efc=0 .sdata2    @4271                                                        */
-f64 Z2EnvSeMgr__lit_4271 = 4503601774854144.0 /* cast s32 to float */;
+/* 80455E20-80455E28 0008+00 rc=9 efc=0 rfr=False None .sdata2    @4271                                                        */
+SECTION_SDATA2 static f64 Z2EnvSeMgr__lit_4271 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802C70C8-802C780C 0744+00 rc=0 efc=0 .text      startStaticEnvSe__10Z2EnvSeMgrFSc                            */
+/* 802C70C8-802C780C 0744+00 rc=3 efc=1 rfr=False None .text      startStaticEnvSe__10Z2EnvSeMgrFSc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -830,7 +752,7 @@ asm void Z2EnvSeMgr::startStaticEnvSe(s8 field_0) {
 #pragma pop
 
 
-/* 802C780C-802C7830 0024+00 rc=0 efc=0 .text      registWindowPos__10Z2EnvSeMgrFP3Vec                          */
+/* 802C780C-802C7830 0024+00 rc=1 efc=1 rfr=False None .text      registWindowPos__10Z2EnvSeMgrFP3Vec                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -842,10 +764,10 @@ asm void Z2EnvSeMgr::registWindowPos(Vec* field_0) {
 
 
 /* ############################################################################################## */
-/* 80455E28-80455E2C 0004+00 rc=0 efc=0 .sdata2    @4400                                                        */
-f32 Z2EnvSeMgr__lit_4400 = 11.0f / 10.0f;
+/* 80455E28-80455E2C 0004+00 rc=3 efc=0 rfr=False None .sdata2    @4400                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4400 = 11.0f / 10.0f;
 
-/* 802C7830-802C7CF4 04C4+00 rc=0 efc=0 .text      startRainSe__10Z2EnvSeMgrFlSc                                */
+/* 802C7830-802C7CF4 04C4+00 rc=2 efc=1 rfr=False None .text      startRainSe__10Z2EnvSeMgrFlSc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -857,10 +779,10 @@ asm void Z2EnvSeMgr::startRainSe(s32 field_0, s8 field_1) {
 
 
 /* ############################################################################################## */
-/* 80455E2C-80455E30 0004+00 rc=0 efc=0 .sdata2    @4422                                                        */
-f32 Z2EnvSeMgr__lit_4422 = 0.25f;
+/* 80455E2C-80455E30 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4422                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4422 = 0.25f;
 
-/* 802C7CF4-802C7E68 0174+00 rc=0 efc=0 .text      startNearThunderSe__10Z2EnvSeMgrFSc                          */
+/* 802C7CF4-802C7E68 0174+00 rc=1 efc=1 rfr=False None .text      startNearThunderSe__10Z2EnvSeMgrFSc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -871,7 +793,7 @@ asm void Z2EnvSeMgr::startNearThunderSe(s8 field_0) {
 #pragma pop
 
 
-/* 802C7E68-802C7FB4 014C+00 rc=0 efc=0 .text      startFarThunderSe__10Z2EnvSeMgrFP3VecSc                      */
+/* 802C7E68-802C7FB4 014C+00 rc=2 efc=2 rfr=False None .text      startFarThunderSe__10Z2EnvSeMgrFP3VecSc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -882,7 +804,7 @@ asm void Z2EnvSeMgr::startFarThunderSe(Vec* field_0, s8 field_1) {
 #pragma pop
 
 
-/* 802C7FB4-802C7FBC 0008+00 rc=0 efc=0 .text      setSnowPower__10Z2EnvSeMgrFSc                                */
+/* 802C7FB4-802C7FBC 0008+00 rc=0 efc=0 rfr=False None .text      setSnowPower__10Z2EnvSeMgrFSc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -893,7 +815,7 @@ asm void Z2EnvSeMgr::setSnowPower(s8 field_0) {
 #pragma pop
 
 
-/* 802C7FBC-802C7FC8 000C+00 rc=0 efc=0 .text      initStrongWindSe__10Z2EnvSeMgrFv                             */
+/* 802C7FBC-802C7FC8 000C+00 rc=1 efc=1 rfr=False None .text      initStrongWindSe__10Z2EnvSeMgrFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -904,7 +826,7 @@ asm void Z2EnvSeMgr::initStrongWindSe() {
 #pragma pop
 
 
-/* 802C7FC8-802C800C 0044+00 rc=0 efc=0 .text      setWindDirection__10Z2EnvSeMgrFP3Vec                         */
+/* 802C7FC8-802C800C 0044+00 rc=1 efc=1 rfr=False None .text      setWindDirection__10Z2EnvSeMgrFP3Vec                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -915,7 +837,7 @@ asm void Z2EnvSeMgr::setWindDirection(Vec* field_0) {
 #pragma pop
 
 
-/* 802C800C-802C80F8 00EC+00 rc=0 efc=0 .text      startStrongWindSe__10Z2EnvSeMgrFSc                           */
+/* 802C800C-802C80F8 00EC+00 rc=1 efc=1 rfr=False None .text      startStrongWindSe__10Z2EnvSeMgrFSc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -927,13 +849,13 @@ asm void Z2EnvSeMgr::startStrongWindSe(s8 field_0) {
 
 
 /* ############################################################################################## */
-/* 80455E30-80455E34 0004+00 rc=0 efc=0 .sdata2    @4510                                                        */
-f32 Z2EnvSeMgr__lit_4510 = 1.5f;
+/* 80455E30-80455E34 0004+00 rc=3 efc=0 rfr=False None .sdata2    @4510                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4510 = 1.5f;
 
-/* 80455E34-80455E38 0004+00 rc=0 efc=0 .sdata2    @4511                                                        */
-f32 Z2EnvSeMgr__lit_4511 = 3.0f;
+/* 80455E34-80455E38 0004+00 rc=3 efc=0 rfr=False None .sdata2    @4511                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4511 = 3.0f;
 
-/* 802C80F8-802C8234 013C+00 rc=0 efc=0 .text      initRiverSe__10Z2EnvSeMgrFUcUcUcUc                           */
+/* 802C80F8-802C8234 013C+00 rc=1 efc=1 rfr=False None .text      initRiverSe__10Z2EnvSeMgrFUcUcUcUc                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -944,7 +866,7 @@ asm void Z2EnvSeMgr::initRiverSe(u8 field_0, u8 field_1, u8 field_2, u8 field_3)
 #pragma pop
 
 
-/* 802C8234-802C8258 0024+00 rc=0 efc=0 .text      registRiverSePos__10Z2EnvSeMgrFP3Vec                         */
+/* 802C8234-802C8258 0024+00 rc=2 efc=1 rfr=False None .text      registRiverSePos__10Z2EnvSeMgrFP3Vec                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -955,7 +877,7 @@ asm void Z2EnvSeMgr::registRiverSePos(Vec* field_0) {
 #pragma pop
 
 
-/* 802C8258-802C8300 00A8+00 rc=0 efc=0 .text      setHyrulSewerOpen__10Z2EnvSeMgrFb                            */
+/* 802C8258-802C8300 00A8+00 rc=0 efc=0 rfr=False None .text      setHyrulSewerOpen__10Z2EnvSeMgrFb                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -967,59 +889,59 @@ asm void Z2EnvSeMgr::setHyrulSewerOpen(bool field_0) {
 
 
 /* ############################################################################################## */
-/* 803CBA28-803CBAD0 00A8+00 rc=0 efc=0 .data      @4622                                                        */
-void* Z2EnvSeMgr__lit_4622[42] = {
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0x80),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0x9C),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0x8C),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xAC),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xAC),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xAC),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
-	(void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xAC),
+/* 803CBA28-803CBAD0 00A8+00 rc=1 efc=0 rfr=False None .data      @4622                                                        */
+SECTION_DATA static void* Z2EnvSeMgr__lit_4622[42] = {
+	/* 0    */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0x80),
+	/* 1    */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 2    */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 3    */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0x9C),
+	/* 4    */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 5    */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 6    */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 7    */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 8    */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 9    */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 10   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 11   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0x8C),
+	/* 12   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 13   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 14   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 15   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 16   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xAC),
+	/* 17   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 18   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 19   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 20   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 21   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 22   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 23   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 24   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 25   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xAC),
+	/* 26   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xAC),
+	/* 27   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 28   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 29   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 30   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 31   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 32   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 33   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 34   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 35   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 36   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 37   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 38   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 39   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 40   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xA0),
+	/* 41   */ (void*)(((char*)startRiverSe__10Z2EnvSeMgrFSc)+0xAC),
 };
 
-/* 80455E38-80455E3C 0004+00 rc=0 efc=0 .sdata2    @4619                                                        */
-f32 Z2EnvSeMgr__lit_4619 = -14500.0f;
+/* 80455E38-80455E3C 0004+00 rc=2 efc=0 rfr=False None .sdata2    @4619                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4619 = -14500.0f;
 
-/* 80455E3C-80455E40 0004+00 rc=0 efc=0 .sdata2    @4621                                                        */
-f32 Z2EnvSeMgr__lit_4621 = 150.0f;
+/* 80455E3C-80455E40 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4621                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4621 = 150.0f;
 
-/* 802C8300-802C8730 0430+00 rc=0 efc=0 .text      startRiverSe__10Z2EnvSeMgrFSc                                */
+/* 802C8300-802C8730 0430+00 rc=3 efc=1 rfr=False None .text      startRiverSe__10Z2EnvSeMgrFSc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1030,7 +952,7 @@ asm void Z2EnvSeMgr::startRiverSe(s8 field_0) {
 #pragma pop
 
 
-/* 802C8730-802C886C 013C+00 rc=0 efc=0 .text      initFallSe__10Z2EnvSeMgrFUcUcUcUc                            */
+/* 802C8730-802C886C 013C+00 rc=2 efc=1 rfr=False None .text      initFallSe__10Z2EnvSeMgrFUcUcUcUc                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1041,7 +963,7 @@ asm void Z2EnvSeMgr::initFallSe(u8 field_0, u8 field_1, u8 field_2, u8 field_3) 
 #pragma pop
 
 
-/* 802C886C-802C8890 0024+00 rc=0 efc=0 .text      registFallSePos__10Z2EnvSeMgrFP3Vec                          */
+/* 802C886C-802C8890 0024+00 rc=1 efc=1 rfr=False None .text      registFallSePos__10Z2EnvSeMgrFP3Vec                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1052,7 +974,7 @@ asm void Z2EnvSeMgr::registFallSePos(Vec* field_0) {
 #pragma pop
 
 
-/* 802C8890-802C8A90 0200+00 rc=0 efc=0 .text      startFallSe__10Z2EnvSeMgrFSc                                 */
+/* 802C8890-802C8A90 0200+00 rc=2 efc=1 rfr=False None .text      startFallSe__10Z2EnvSeMgrFSc                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1064,30 +986,30 @@ asm void Z2EnvSeMgr::startFallSe(s8 field_0) {
 
 
 /* ############################################################################################## */
-/* 803CBAD0-803CBB10 0040+00 rc=0 efc=0 .data      @4734                                                        */
-void* Z2EnvSeMgr__lit_4734[16] = {
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x15C),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0xF4),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x108),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x150),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x170),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x11C),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x13C),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x13C),
-	(void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x13C),
+/* 803CBAD0-803CBB10 0040+00 rc=1 efc=0 rfr=False None .data      @4734                                                        */
+SECTION_DATA static void* Z2EnvSeMgr__lit_4734[16] = {
+	/* 0    */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x15C),
+	/* 1    */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0xF4),
+	/* 2    */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x108),
+	/* 3    */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
+	/* 4    */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x150),
+	/* 5    */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
+	/* 6    */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
+	/* 7    */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
+	/* 8    */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x170),
+	/* 9    */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x11C),
+	/* 10   */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x13C),
+	/* 11   */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
+	/* 12   */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
+	/* 13   */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x180),
+	/* 14   */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x13C),
+	/* 15   */ (void*)(((char*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+0x13C),
 };
 
-/* 80455E40-80455E44 0004+00 rc=0 efc=0 .sdata2    @4732                                                        */
-f32 Z2EnvSeMgr__lit_4732 = 4.0f;
+/* 80455E40-80455E44 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4732                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4732 = 4.0f;
 
-/* 802C8A90-802C8C24 0194+00 rc=0 efc=0 .text      initEtcSe__10Z2EnvSeMgrFUcUcUcUc                             */
+/* 802C8A90-802C8C24 0194+00 rc=3 efc=1 rfr=False None .text      initEtcSe__10Z2EnvSeMgrFUcUcUcUc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1098,7 +1020,7 @@ asm void Z2EnvSeMgr::initEtcSe(u8 field_0, u8 field_1, u8 field_2, u8 field_3) {
 #pragma pop
 
 
-/* 802C8C24-802C8C48 0024+00 rc=0 efc=0 .text      registEtcSePos__10Z2EnvSeMgrFP3Vec                           */
+/* 802C8C24-802C8C48 0024+00 rc=2 efc=1 rfr=False None .text      registEtcSePos__10Z2EnvSeMgrFP3Vec                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1110,58 +1032,58 @@ asm void Z2EnvSeMgr::registEtcSePos(Vec* field_0) {
 
 
 /* ############################################################################################## */
-/* 803CBB10-803CBB90 0080+00 rc=0 efc=0 .data      @4839                                                        */
-void* lit_4839[32] = {
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x62C),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x518),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0xE4),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x20C),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x498),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x28C),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x374),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x2D8),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x2D8),
-	(void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x324),
+/* 803CBB10-803CBB90 0080+00 rc=1 efc=0 rfr=False None .data      @4839                                                        */
+SECTION_DATA static void* lit_4839[32] = {
+	/* 0    */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x62C),
+	/* 1    */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 2    */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 3    */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 4    */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 5    */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 6    */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 7    */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 8    */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 9    */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 10   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 11   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 12   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 13   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 14   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 15   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 16   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x518),
+	/* 17   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0xE4),
+	/* 18   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x20C),
+	/* 19   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 20   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x498),
+	/* 21   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 22   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 23   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 24   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x28C),
+	/* 25   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x374),
+	/* 26   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x2D8),
+	/* 27   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 28   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 29   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x624),
+	/* 30   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x2D8),
+	/* 31   */ (void*)(((char*)startEtcSe__10Z2EnvSeMgrFSc)+0x324),
 };
 
-/* 80455E44-80455E48 0004+00 rc=0 efc=0 .sdata2    @4833                                                        */
-f32 lit_4833 = 6.0f / 5.0f;
+/* 80455E44-80455E48 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4833                                                        */
+SECTION_SDATA2 static f32 lit_4833 = 6.0f / 5.0f;
 
-/* 80455E48-80455E4C 0004+00 rc=0 efc=0 .sdata2    @4834                                                        */
-f32 lit_4834 = 13.0f / 10.0f;
+/* 80455E48-80455E4C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4834                                                        */
+SECTION_SDATA2 static f32 lit_4834 = 13.0f / 10.0f;
 
-/* 80455E4C-80455E50 0004+00 rc=0 efc=0 .sdata2    @4835                                                        */
-f32 lit_4835 = 89.0f / 100.0f;
+/* 80455E4C-80455E50 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4835                                                        */
+SECTION_SDATA2 static f32 lit_4835 = 89.0f / 100.0f;
 
-/* 80455E50-80455E54 0004+00 rc=0 efc=0 .sdata2    @4836                                                        */
-f32 lit_4836 = 0.3319999873638153f;
+/* 80455E50-80455E54 0004+00 rc=2 efc=0 rfr=False None .sdata2    @4836                                                        */
+SECTION_SDATA2 static f32 lit_4836 = 0.3319999873638153f;
 
-/* 80455E54-80455E58 0004+00 rc=0 efc=0 .sdata2    @4837                                                        */
-f32 Z2EnvSeMgr__lit_4837 = 0.6679999828338623f;
+/* 80455E54-80455E58 0004+00 rc=2 efc=0 rfr=False None .sdata2    @4837                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4837 = 0.6679999828338623f;
 
-/* 802C8C48-802C92C8 0680+00 rc=0 efc=0 .text      startEtcSe__10Z2EnvSeMgrFSc                                  */
+/* 802C8C48-802C92C8 0680+00 rc=3 efc=1 rfr=False None .text      startEtcSe__10Z2EnvSeMgrFSc                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1172,7 +1094,7 @@ asm void Z2EnvSeMgr::startEtcSe(s8 field_0) {
 #pragma pop
 
 
-/* 802C92C8-802C92EC 0024+00 rc=0 efc=0 .text      registWolfSmellSePos__10Z2EnvSeMgrFP3Vec                     */
+/* 802C92C8-802C92EC 0024+00 rc=0 efc=0 rfr=False None .text      registWolfSmellSePos__10Z2EnvSeMgrFP3Vec                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1184,10 +1106,10 @@ asm void Z2EnvSeMgr::registWolfSmellSePos(Vec* field_0) {
 
 
 /* ############################################################################################## */
-/* 80455E58-80455E5C 0004+00 rc=0 efc=0 .sdata2    @4856                                                        */
-f32 lit_4856 = 340.0f;
+/* 80455E58-80455E5C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4856                                                        */
+SECTION_SDATA2 static f32 lit_4856 = 340.0f;
 
-/* 802C92EC-802C93A0 00B4+00 rc=0 efc=0 .text      startFogWipeTrigger__10Z2EnvSeMgrFP3Vec                      */
+/* 802C92EC-802C93A0 00B4+00 rc=0 efc=0 rfr=False None .text      startFogWipeTrigger__10Z2EnvSeMgrFP3Vec                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1198,7 +1120,7 @@ asm void Z2EnvSeMgr::startFogWipeTrigger(Vec* field_0) {
 #pragma pop
 
 
-/* 802C93A0-802C93E4 0044+00 rc=0 efc=0 .text      setFogWipeWidth__10Z2EnvSeMgrFf                              */
+/* 802C93A0-802C93E4 0044+00 rc=0 efc=0 rfr=False None .text      setFogWipeWidth__10Z2EnvSeMgrFf                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1209,7 +1131,7 @@ asm void Z2EnvSeMgr::setFogWipeWidth(f32 field_0) {
 #pragma pop
 
 
-/* 802C93E4-802C9400 001C+00 rc=0 efc=0 .text      getFogDensity__10Z2EnvSeMgrFv                                */
+/* 802C93E4-802C9400 001C+00 rc=5 efc=2 rfr=False None .text      getFogDensity__10Z2EnvSeMgrFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1221,10 +1143,10 @@ asm void Z2EnvSeMgr::getFogDensity() {
 
 
 /* ############################################################################################## */
-/* 80455E5C-80455E60 0004+00 rc=0 efc=0 .sdata2    @4879                                                        */
-f32 Z2EnvSeMgr__lit_4879 = 20.0f;
+/* 80455E5C-80455E60 0004+00 rc=1 efc=0 rfr=False None .sdata2    @4879                                                        */
+SECTION_SDATA2 static f32 Z2EnvSeMgr__lit_4879 = 20.0f;
 
-/* 802C9400-802C950C 010C+00 rc=0 efc=0 .text      startFogSe__10Z2EnvSeMgrFv                                   */
+/* 802C9400-802C950C 010C+00 rc=0 efc=0 rfr=False None .text      startFogSe__10Z2EnvSeMgrFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1236,39 +1158,39 @@ asm void Z2EnvSeMgr::startFogSe() {
 
 
 /* ############################################################################################## */
-/* 803CBB90-803CBBC8 0038+00 rc=0 efc=0 .data      @5076                                                        */
-void* lit_5076[14] = {
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x640),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x61C),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x668),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x6C4),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0xA34),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x640),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x640),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x780),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x7CC),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x640),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x844),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x8D8),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x950),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x99C),
+/* 803CBB90-803CBBC8 0038+00 rc=1 efc=0 rfr=False None .data      @5076                                                        */
+SECTION_DATA static void* lit_5076[14] = {
+	/* 0    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x640),
+	/* 1    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x61C),
+	/* 2    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x668),
+	/* 3    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x6C4),
+	/* 4    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0xA34),
+	/* 5    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x640),
+	/* 6    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x640),
+	/* 7    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x780),
+	/* 8    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x7CC),
+	/* 9    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x640),
+	/* 10   */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x844),
+	/* 11   */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x8D8),
+	/* 12   */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x950),
+	/* 13   */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x99C),
 };
 
-/* 803CBBC8-803CBBF0 0028+00 rc=0 efc=0 .data      @5074                                                        */
-void* Z2EnvSeMgr__lit_5074[10] = {
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x50),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x1E8),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x380),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x5E4),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x5E4),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x11C),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x2B4),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x44C),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x5E4),
-	(void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x518),
+/* 803CBBC8-803CBBF0 0028+00 rc=1 efc=0 rfr=False None .data      @5074                                                        */
+SECTION_DATA static void* Z2EnvSeMgr__lit_5074[10] = {
+	/* 0    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x50),
+	/* 1    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x1E8),
+	/* 2    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x380),
+	/* 3    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x5E4),
+	/* 4    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x5E4),
+	/* 5    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x11C),
+	/* 6    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x2B4),
+	/* 7    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x44C),
+	/* 8    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x5E4),
+	/* 9    */ (void*)(((char*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+0x518),
 };
 
-/* 802C950C-802C9F58 0A4C+00 rc=0 efc=0 .text      initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc                        */
+/* 802C950C-802C9F58 0A4C+00 rc=3 efc=1 rfr=False None .text      initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1280,39 +1202,39 @@ asm void Z2EnvSeMgr::initLv3WaterSe(u8 field_0, u8 field_1, u8 field_2, u8 field
 
 
 /* ############################################################################################## */
-/* 803CBBF0-803CBC28 0038+00 rc=0 efc=0 .data      @5259                                                        */
-void* lit_5259[14] = {
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xBC),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xA4),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xD8),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x200),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x824),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xBC),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xBC),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x4B8),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x508),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xBC),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x5A4),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x684),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x708),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x770),
+/* 803CBBF0-803CBC28 0038+00 rc=1 efc=0 rfr=False None .data      @5259                                                        */
+SECTION_DATA static void* lit_5259[14] = {
+	/* 0    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xBC),
+	/* 1    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xA4),
+	/* 2    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xD8),
+	/* 3    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x200),
+	/* 4    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x824),
+	/* 5    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xBC),
+	/* 6    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xBC),
+	/* 7    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x4B8),
+	/* 8    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x508),
+	/* 9    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0xBC),
+	/* 10   */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x5A4),
+	/* 11   */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x684),
+	/* 12   */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x708),
+	/* 13   */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x770),
 };
 
-/* 803CBC28-803CBC50 0028+00 rc=0 efc=0 .data      @5258                                                        */
-void* Z2EnvSeMgr__lit_5258[10] = {
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x48),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x58),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x68),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x78),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x78),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x48),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x58),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x68),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x78),
-	(void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x68),
+/* 803CBC28-803CBC50 0028+00 rc=1 efc=0 rfr=False None .data      @5258                                                        */
+SECTION_DATA static void* Z2EnvSeMgr__lit_5258[10] = {
+	/* 0    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x48),
+	/* 1    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x58),
+	/* 2    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x68),
+	/* 3    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x78),
+	/* 4    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x78),
+	/* 5    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x48),
+	/* 6    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x58),
+	/* 7    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x68),
+	/* 8    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x78),
+	/* 9    */ (void*)(((char*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+0x68),
 };
 
-/* 802C9F58-802CA794 083C+00 rc=0 efc=0 .text      registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec                    */
+/* 802C9F58-802CA794 083C+00 rc=3 efc=1 rfr=False None .text      registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1323,7 +1245,7 @@ asm void Z2EnvSeMgr::registLv3WaterSePos(u8 field_0, Vec* field_1) {
 #pragma pop
 
 
-/* 802CA794-802CAAC0 032C+00 rc=0 efc=0 .text      startLv3WaterSe__10Z2EnvSeMgrFSc                             */
+/* 802CA794-802CAAC0 032C+00 rc=2 efc=1 rfr=False None .text      startLv3WaterSe__10Z2EnvSeMgrFSc                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

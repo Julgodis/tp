@@ -30,12 +30,12 @@ struct judge_filter {
 
 extern "C" void fpcCtIt_Method__FPFPvPv_iPv(); // 1
 extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv(); // 1
-void fpcCtIt_filter_JudgeInLayer(create_tag*, fpcCtIt_jilprm_c*); // 2
+static void fpcCtIt_filter_JudgeInLayer(create_tag*, fpcCtIt_jilprm_c*); // 2
 extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
 
 extern "C" void fpcCtIt_Method__FPFPvPv_iPv(); // 1
 extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c(); // 1
+extern "C" static void fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c(); // 1
 extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
 
 // 
@@ -51,13 +51,13 @@ extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
 extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
 extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
 extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter(); // 1
-SECTION_DATA extern u8 g_fpcCtTg_Queue[12 + 4 /* padding */];
+extern "C" extern u8 g_fpcCtTg_Queue[12 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 800209C8-80020A04 003C+00 rc=0 efc=0 .text      fpcCtIt_Method__FPFPvPv_iPv                                  */
+/* 800209C8-80020A04 003C+00 rc=1 efc=1 rfr=False None .text      fpcCtIt_Method__FPFPvPv_iPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +68,7 @@ extern "C" asm void fpcCtIt_Method__FPFPvPv_iPv() {
 #pragma pop
 
 
-/* 80020A04-80020A40 003C+00 rc=0 efc=0 .text      fpcCtIt_Judge__FPFPvPv_PvPv                                  */
+/* 80020A04-80020A40 003C+00 rc=3 efc=2 rfr=False None .text      fpcCtIt_Judge__FPFPvPv_PvPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,18 +79,18 @@ extern "C" asm void fpcCtIt_Judge__FPFPvPv_PvPv() {
 #pragma pop
 
 
-/* 80020A40-80020A94 0054+00 rc=0 efc=0 .text      fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c */
+/* 80020A40-80020A94 0054+00 rc=1 efc=0 rfr=False None .text      fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcCtIt_filter_JudgeInLayer(create_tag* field_0, fpcCtIt_jilprm_c* field_1) {
+asm static void fpcCtIt_filter_JudgeInLayer(create_tag* field_0, fpcCtIt_jilprm_c* field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_create_iter/fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c.s"
 }
 #pragma pop
 
 
-/* 80020A94-80020ACC 0038+00 rc=0 efc=0 .text      fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv                         */
+/* 80020A94-80020ACC 0038+00 rc=1 efc=1 rfr=False None .text      fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

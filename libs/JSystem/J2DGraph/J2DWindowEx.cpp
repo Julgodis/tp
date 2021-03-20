@@ -9,6 +9,16 @@
 // Types:
 // 
 
+struct J2DAnmVisibilityFull {
+	/* 8030C048 */ void getVisibility(u16, u8*) const;
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmTransform {
+};
+
 struct J2DWindow {
 	struct TMaterial {
 	};
@@ -20,17 +30,14 @@ struct J2DWindow {
 	/* 802FBF98 */ s32 getTypeID() const;
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
+struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmVisibilityFull {
-	/* 8030C048 */ void getVisibility(u16, u8*) const;
+struct _GXColor {
+};
+
+struct J2DAnmVtxColor {
+	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
 };
 
 struct JSUStreamSeekFrom {
@@ -41,55 +48,28 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DAnmTexPattern {
+struct J2DTevStage {
 };
 
 struct ResTIMG {
 };
 
-struct J2DAnmColor {
+struct J2DAnmBase {
 };
 
 struct _GXCullMode {
 };
 
-struct J2DTevStage {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DMaterial {
-	/* 802EA38C */ void setGX();
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-};
-
 struct ResFONT {
 };
 
-struct J2DAnmBase {
-};
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
 
-struct _GXColor {
-};
-
-struct J2DAnmVtxColor {
-	/* 8030363C */ void getColor(u8, u16, _GXColor*) const;
-};
-
-struct J2DAnmTransform {
 };
 
 struct J2DPane {
@@ -116,6 +96,26 @@ struct J2DPane {
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DMaterial {
+	/* 802EA38C */ void setGX();
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
 };
 
 struct J2DWindowEx {
@@ -215,25 +215,17 @@ extern "C" void setCullBack__11J2DWindowExFb(); // 1
 extern "C" void isUsed__11J2DWindowExFPC7ResFONT(); // 1
 extern "C" void setAnimation__11J2DWindowExFP10J2DAnmBase(); // 1
 extern "C" void getColor__14J2DAnmVtxColorCFUcUsP8_GXColor(); // 1
-SECTION_RODATA extern const u8 lit_1508[16];
-SECTION_RODATA extern const u8 lit_1557[16];
-SECTION_RODATA extern const u8 lit_1566[16];
-SECTION_RODATA extern const u8 lit_1575[16];
-SECTION_RODATA extern const u8 J2DWindowEx__lit_1581[16];
-SECTION_RODATA extern const u8 lit_1587[16];
-SECTION_RODATA extern const u8 lit_1596[16];
-SECTION_RODATA extern const u8 lit_1605[16];
-SECTION_RODATA extern const u8 lit_1612[16];
-SECTION_RODATA extern const u8 lit_2530[24];
-SECTION_RODATA extern const u8 lit_2531[24];
-SECTION_RODATA extern const u8 J2DWindowEx__lit_2532[30 + 2 /* padding */];
-SECTION_RODATA extern const u8 lit_3089[16];
-SECTION_DATA extern void* const __vt__11J2DWindowEx[51 + 1 /* padding */];
-SECTION_SDATA2 extern f64 lit_1549;
-SECTION_SDATA2 extern f64 lit_1552;
-SECTION_SDATA2 extern u8 lit_1827[4];
-SECTION_SDATA2 extern f32 J2DWindowEx__lit_2256;
-SECTION_SDATA2 extern f32 J2DWindowEx__lit_2257[1 + 1 /* padding */];
+extern "C" extern u8 const lit_1557[16];
+extern "C" extern u8 const lit_1566[16];
+extern "C" extern u8 const lit_1575[16];
+extern "C" extern u8 const J2DWindowEx__lit_1581[16];
+extern "C" extern u8 const lit_1587[16];
+extern "C" extern u8 const lit_1596[16];
+extern "C" extern u8 const lit_1605[16];
+extern "C" extern u8 const lit_1612[16];
+extern "C" extern u8 const lit_2530[24];
+extern "C" extern u8 const lit_2531[24];
+extern "C" extern u8 const J2DWindowEx__lit_2532[30 + 2 /* padding */];
 
 // 
 // External References:
@@ -340,75 +332,75 @@ extern "C" void _restgpr_29(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803A1C60-803A1C70 0010+00 rc=0 efc=0 .rodata    @1508                                                        */
-const u8 lit_1508[16] = {
+/* 803A1C60-803A1C70 0010+00 rc=2 efc=0 rfr=False None .rodata    @1508                                                        */
+SECTION_RODATA static u8 const lit_1508[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CD3E8-803CD4B8 00CC+04 rc=0 efc=0 .data      __vt__11J2DWindowEx                                          */
-void* const __vt__11J2DWindowEx[51 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11J2DWindowExFv,
-	(void*)getTypeID__9J2DWindowCFv,
-	(void*)move__7J2DPaneFff,
-	(void*)add__7J2DPaneFff,
-	(void*)resize__9J2DWindowFff,
-	(void*)setCullBack__11J2DWindowExFb,
-	(void*)setCullBack__11J2DWindowExF11_GXCullMode,
-	(void*)setAlpha__11J2DWindowExFUc,
-	(void*)setConnectParent__7J2DPaneFb,
-	(void*)calcMtx__7J2DPaneFv,
-	(void*)update__7J2DPaneFv,
-	(void*)drawSelf__9J2DWindowFff,
-	(void*)drawSelf__11J2DWindowExFffPA3_A4_f,
-	(void*)search__7J2DPaneFUx,
-	(void*)searchUserInfo__7J2DPaneFUx,
-	(void*)makeMatrix__7J2DPaneFff,
-	(void*)makeMatrix__7J2DPaneFffff,
-	(void*)isUsed__11J2DWindowExFPC7ResTIMG,
-	(void*)isUsed__11J2DWindowExFPC7ResFONT,
-	(void*)clearAnmTransform__7J2DPaneFv,
-	(void*)rewriteAlpha__11J2DWindowExFv,
-	(void*)setAnimation__11J2DWindowExFP10J2DAnmBase,
-	(void*)setAnimation__11J2DWindowExFP15J2DAnmTransform,
-	(void*)setAnimation__11J2DWindowExFP11J2DAnmColor,
-	(void*)setAnimation__11J2DWindowExFP16J2DAnmTexPattern,
-	(void*)setAnimation__11J2DWindowExFP19J2DAnmTextureSRTKey,
-	(void*)setAnimation__11J2DWindowExFP15J2DAnmTevRegKey,
-	(void*)setAnimation__11J2DWindowExFP20J2DAnmVisibilityFull,
-	(void*)setAnimation__11J2DWindowExFP14J2DAnmVtxColor,
-	(void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
-	(void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
-	(void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
-	(void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
-	(void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
-	(void*)animationPane__11J2DWindowExFPC15J2DAnmTransform,
-	(void*)func_80301FC8,
-	(void*)func_80302164,
-	(void*)draw__11J2DWindowExFffff,
-	(void*)setBlack__11J2DWindowExFQ28JUtility6TColor,
-	(void*)setWhite__11J2DWindowExFQ28JUtility6TColor,
-	(void*)setBlackWhite__11J2DWindowExFQ28JUtility6TColorQ28JUtility6TColor,
-	(void*)getBlack__11J2DWindowExCFv,
-	(void*)getWhite__11J2DWindowExCFv,
-	(void*)getFrameTexture__11J2DWindowExCFUcUc,
-	(void*)getContentsTexture__11J2DWindowExCFUc,
-	(void*)getMaterial__11J2DWindowExCFRQ29J2DWindow9TMaterial,
-	(void*)getFrameMaterial__11J2DWindowExCFUc,
-	(void*)getContentsMaterial__11J2DWindowExCFv,
-	(void*)func_80301994,
+/* 803CD3E8-803CD4B8 00CC+04 rc=2 efc=0 rfr=False None .data      __vt__11J2DWindowEx                                          */
+SECTION_DATA static void* __vt__11J2DWindowEx[51 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11J2DWindowExFv,
+	/* 3    */ (void*)getTypeID__9J2DWindowCFv,
+	/* 4    */ (void*)move__7J2DPaneFff,
+	/* 5    */ (void*)add__7J2DPaneFff,
+	/* 6    */ (void*)resize__9J2DWindowFff,
+	/* 7    */ (void*)setCullBack__11J2DWindowExFb,
+	/* 8    */ (void*)setCullBack__11J2DWindowExF11_GXCullMode,
+	/* 9    */ (void*)setAlpha__11J2DWindowExFUc,
+	/* 10   */ (void*)setConnectParent__7J2DPaneFb,
+	/* 11   */ (void*)calcMtx__7J2DPaneFv,
+	/* 12   */ (void*)update__7J2DPaneFv,
+	/* 13   */ (void*)drawSelf__9J2DWindowFff,
+	/* 14   */ (void*)drawSelf__11J2DWindowExFffPA3_A4_f,
+	/* 15   */ (void*)search__7J2DPaneFUx,
+	/* 16   */ (void*)searchUserInfo__7J2DPaneFUx,
+	/* 17   */ (void*)makeMatrix__7J2DPaneFff,
+	/* 18   */ (void*)makeMatrix__7J2DPaneFffff,
+	/* 19   */ (void*)isUsed__11J2DWindowExFPC7ResTIMG,
+	/* 20   */ (void*)isUsed__11J2DWindowExFPC7ResFONT,
+	/* 21   */ (void*)clearAnmTransform__7J2DPaneFv,
+	/* 22   */ (void*)rewriteAlpha__11J2DWindowExFv,
+	/* 23   */ (void*)setAnimation__11J2DWindowExFP10J2DAnmBase,
+	/* 24   */ (void*)setAnimation__11J2DWindowExFP15J2DAnmTransform,
+	/* 25   */ (void*)setAnimation__11J2DWindowExFP11J2DAnmColor,
+	/* 26   */ (void*)setAnimation__11J2DWindowExFP16J2DAnmTexPattern,
+	/* 27   */ (void*)setAnimation__11J2DWindowExFP19J2DAnmTextureSRTKey,
+	/* 28   */ (void*)setAnimation__11J2DWindowExFP15J2DAnmTevRegKey,
+	/* 29   */ (void*)setAnimation__11J2DWindowExFP20J2DAnmVisibilityFull,
+	/* 30   */ (void*)setAnimation__11J2DWindowExFP14J2DAnmVtxColor,
+	/* 31   */ (void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
+	/* 32   */ (void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
+	/* 33   */ (void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
+	/* 34   */ (void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
+	/* 35   */ (void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
+	/* 36   */ (void*)animationPane__11J2DWindowExFPC15J2DAnmTransform,
+	/* 37   */ (void*)func_80301FC8,
+	/* 38   */ (void*)func_80302164,
+	/* 39   */ (void*)draw__11J2DWindowExFffff,
+	/* 40   */ (void*)setBlack__11J2DWindowExFQ28JUtility6TColor,
+	/* 41   */ (void*)setWhite__11J2DWindowExFQ28JUtility6TColor,
+	/* 42   */ (void*)setBlackWhite__11J2DWindowExFQ28JUtility6TColorQ28JUtility6TColor,
+	/* 43   */ (void*)getBlack__11J2DWindowExCFv,
+	/* 44   */ (void*)getWhite__11J2DWindowExCFv,
+	/* 45   */ (void*)getFrameTexture__11J2DWindowExCFUcUc,
+	/* 46   */ (void*)getContentsTexture__11J2DWindowExCFUc,
+	/* 47   */ (void*)getMaterial__11J2DWindowExCFRQ29J2DWindow9TMaterial,
+	/* 48   */ (void*)getFrameMaterial__11J2DWindowExCFUc,
+	/* 49   */ (void*)getContentsMaterial__11J2DWindowExCFv,
+	/* 50   */ (void*)func_80301994,
 	/* padding */
 	NULL,
 };
 
-/* 804562A0-804562A8 0008+00 rc=0 efc=0 .sdata2    @1549                                                        */
-f64 lit_1549 = 4503601774854144.0 /* cast s32 to float */;
+/* 804562A0-804562A8 0008+00 rc=4 efc=0 rfr=False None .sdata2    @1549                                                        */
+SECTION_SDATA2 static f64 lit_1549 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 804562A8-804562B0 0008+00 rc=0 efc=0 .sdata2    @1552                                                        */
-f64 lit_1552 = 4503599627370496.0 /* cast u32 to float */;
+/* 804562A8-804562B0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @1552                                                        */
+SECTION_SDATA2 static f64 lit_1552 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80300C94-80300F80 02EC+00 rc=0 efc=0 .text      __ct__11J2DWindowExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial */
+/* 80300C94-80300F80 02EC+00 rc=1 efc=1 rfr=False None .text      __ct__11J2DWindowExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -419,7 +411,7 @@ asm J2DWindowEx::J2DWindowEx(J2DPane* field_0, JSURandomInputStream* field_1, u3
 #pragma pop
 
 
-/* 80300F80-80301144 01C4+00 rc=0 efc=0 .text      setMinSize__11J2DWindowExFv                                  */
+/* 80300F80-80301144 01C4+00 rc=1 efc=0 rfr=False None .text      setMinSize__11J2DWindowExFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -430,7 +422,7 @@ asm void J2DWindowEx::setMinSize() {
 #pragma pop
 
 
-/* 80301144-8030122C 00E8+00 rc=0 efc=0 .text      __dt__11J2DWindowExFv                                        */
+/* 80301144-8030122C 00E8+00 rc=1 efc=0 rfr=False None .text      __dt__11J2DWindowExFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -441,7 +433,7 @@ asm J2DWindowEx::~J2DWindowEx() {
 #pragma pop
 
 
-/* 8030122C-803012CC 00A0+00 rc=0 efc=0 .text      drawSelf__11J2DWindowExFffPA3_A4_f                           */
+/* 8030122C-803012CC 00A0+00 rc=1 efc=0 rfr=False None .text      drawSelf__11J2DWindowExFffPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -452,7 +444,7 @@ asm void J2DWindowEx::drawSelf(f32 field_0, f32 field_1, f32 (* field_2)[3][4]) 
 #pragma pop
 
 
-/* 803012CC-80301994 06C8+00 rc=0 efc=0 .text      draw_private__11J2DWindowExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
+/* 803012CC-80301994 06C8+00 rc=2 efc=0 rfr=False None .text      draw_private__11J2DWindowExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -464,22 +456,22 @@ asm void J2DWindowEx::draw_private(JGeometry::TBox2<f32> const& field_0, JGeomet
 
 
 /* ############################################################################################## */
-/* 804562B0-804562B4 0004+00 rc=0 efc=0 .sdata2    @1827                                                        */
-u8 lit_1827[4] = {
+/* 804562B0-804562B4 0004+00 rc=4 efc=0 rfr=False None .sdata2    @1827                                                        */
+SECTION_SDATA2 static u8 lit_1827[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804562B4-804562B8 0004+00 rc=0 efc=0 .sdata2    @2256                                                        */
-f32 J2DWindowEx__lit_2256 = 1.0f;
+/* 804562B4-804562B8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @2256                                                        */
+SECTION_SDATA2 static f32 J2DWindowEx__lit_2256 = 1.0f;
 
-/* 804562B8-804562C0 0004+04 rc=0 efc=0 .sdata2    @2257                                                        */
-f32 J2DWindowEx__lit_2257[1 + 1 /* padding */] = {
+/* 804562B8-804562C0 0004+04 rc=1 efc=0 rfr=False None .sdata2    @2257                                                        */
+SECTION_SDATA2 static f32 J2DWindowEx__lit_2257[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
-/* 80301994-80301D74 03E0+00 rc=0 efc=0 .text      drawContents__11J2DWindowExFRCQ29JGeometry8TBox2<f>          */
+/* 80301994-80301D74 03E0+00 rc=1 efc=0 rfr=False None .text      drawContents__11J2DWindowExFRCQ29JGeometry8TBox2<f>          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -490,7 +482,7 @@ asm void J2DWindowEx::drawContents(JGeometry::TBox2<f32> const& field_0) {
 #pragma pop
 
 
-/* 80301D74-80301FC8 0254+00 rc=0 efc=0 .text      drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb  */
+/* 80301D74-80301FC8 0254+00 rc=1 efc=0 rfr=False None .text      drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -501,7 +493,7 @@ asm void J2DWindowEx::drawFrameTexture(f32 field_0, f32 field_1, f32 field_2, f3
 #pragma pop
 
 
-/* 80301FC8-80302164 019C+00 rc=0 efc=0 .text      draw__11J2DWindowExFRCQ29JGeometry8TBox2<f>                  */
+/* 80301FC8-80302164 019C+00 rc=1 efc=0 rfr=False None .text      draw__11J2DWindowExFRCQ29JGeometry8TBox2<f>                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -512,7 +504,7 @@ asm void J2DWindowEx::draw(JGeometry::TBox2<f32> const& field_0) {
 #pragma pop
 
 
-/* 80302164-80302284 0120+00 rc=0 efc=0 .text      draw__11J2DWindowExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
+/* 80302164-80302284 0120+00 rc=1 efc=0 rfr=False None .text      draw__11J2DWindowExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -523,7 +515,7 @@ asm void J2DWindowEx::draw(JGeometry::TBox2<f32> const& field_0, JGeometry::TBox
 #pragma pop
 
 
-/* 80302284-80302388 0104+00 rc=0 efc=0 .text      setTevOrder__11J2DWindowExFb                                 */
+/* 80302284-80302388 0104+00 rc=1 efc=0 rfr=False None .text      setTevOrder__11J2DWindowExFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -534,7 +526,7 @@ asm void J2DWindowEx::setTevOrder(bool field_0) {
 #pragma pop
 
 
-/* 80302388-803024B4 012C+00 rc=0 efc=0 .text      setTevStage__11J2DWindowExFb                                 */
+/* 80302388-803024B4 012C+00 rc=1 efc=0 rfr=False None .text      setTevStage__11J2DWindowExFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -545,7 +537,7 @@ asm void J2DWindowEx::setTevStage(bool field_0) {
 #pragma pop
 
 
-/* 803024B4-80302764 02B0+00 rc=0 efc=0 .text      setStage__11J2DWindowExFP11J2DTevStageQ211J2DWindowEx10stage_enum */
+/* 803024B4-80302764 02B0+00 rc=1 efc=0 rfr=False None .text      setStage__11J2DWindowExFP11J2DTevStageQ211J2DWindowEx10stage_enum */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -556,7 +548,7 @@ asm void J2DWindowEx::setStage(J2DTevStage* field_0, J2DWindowEx::stage_enum fie
 #pragma pop
 
 
-/* 80302764-803027EC 0088+00 rc=0 efc=0 .text      setBlack__11J2DWindowExFQ28JUtility6TColor                   */
+/* 80302764-803027EC 0088+00 rc=1 efc=0 rfr=False None .text      setBlack__11J2DWindowExFQ28JUtility6TColor                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -567,7 +559,7 @@ asm void J2DWindowEx::setBlack(JUtility::TColor field_0) {
 #pragma pop
 
 
-/* 803027EC-80302874 0088+00 rc=0 efc=0 .text      setWhite__11J2DWindowExFQ28JUtility6TColor                   */
+/* 803027EC-80302874 0088+00 rc=1 efc=0 rfr=False None .text      setWhite__11J2DWindowExFQ28JUtility6TColor                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -578,7 +570,7 @@ asm void J2DWindowEx::setWhite(JUtility::TColor field_0) {
 #pragma pop
 
 
-/* 80302874-80302A4C 01D8+00 rc=0 efc=0 .text      setBlackWhite__11J2DWindowExFQ28JUtility6TColorQ28JUtility6TColor */
+/* 80302874-80302A4C 01D8+00 rc=1 efc=0 rfr=False None .text      setBlackWhite__11J2DWindowExFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -589,7 +581,7 @@ asm void J2DWindowEx::setBlackWhite(JUtility::TColor field_0, JUtility::TColor f
 #pragma pop
 
 
-/* 80302A4C-80302BE8 019C+00 rc=0 efc=0 .text      getBlackWhite__11J2DWindowExCFPQ28JUtility6TColorPQ28JUtility6TColor */
+/* 80302A4C-80302BE8 019C+00 rc=4 efc=0 rfr=False None .text      getBlackWhite__11J2DWindowExCFPQ28JUtility6TColorPQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -600,7 +592,7 @@ asm void J2DWindowEx::getBlackWhite(JUtility::TColor* field_0, JUtility::TColor*
 #pragma pop
 
 
-/* 80302BE8-80302C88 00A0+00 rc=0 efc=0 .text      isSetBlackWhite__11J2DWindowExCFQ28JUtility6TColorQ28JUtility6TColor */
+/* 80302BE8-80302C88 00A0+00 rc=1 efc=0 rfr=False None .text      isSetBlackWhite__11J2DWindowExCFQ28JUtility6TColorQ28JUtility6TColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -611,7 +603,7 @@ asm void J2DWindowEx::isSetBlackWhite(JUtility::TColor field_0, JUtility::TColor
 #pragma pop
 
 
-/* 80302C88-80302CE8 0060+00 rc=0 efc=0 .text      getBlack__11J2DWindowExCFv                                   */
+/* 80302C88-80302CE8 0060+00 rc=1 efc=0 rfr=False None .text      getBlack__11J2DWindowExCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -622,7 +614,7 @@ asm void J2DWindowEx::getBlack() const {
 #pragma pop
 
 
-/* 80302CE8-80302D48 0060+00 rc=0 efc=0 .text      getWhite__11J2DWindowExCFv                                   */
+/* 80302CE8-80302D48 0060+00 rc=1 efc=0 rfr=False None .text      getWhite__11J2DWindowExCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -633,7 +625,7 @@ asm void J2DWindowEx::getWhite() const {
 #pragma pop
 
 
-/* 80302D48-80302D98 0050+00 rc=0 efc=0 .text      setAlpha__11J2DWindowExFUc                                   */
+/* 80302D48-80302D98 0050+00 rc=1 efc=0 rfr=False None .text      setAlpha__11J2DWindowExFUc                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -644,7 +636,7 @@ asm void J2DWindowEx::setAlpha(u8 field_0) {
 #pragma pop
 
 
-/* 80302D98-80302DF4 005C+00 rc=0 efc=0 .text      setCullBack__11J2DWindowExF11_GXCullMode                     */
+/* 80302D98-80302DF4 005C+00 rc=1 efc=0 rfr=False None .text      setCullBack__11J2DWindowExF11_GXCullMode                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -655,7 +647,7 @@ asm void J2DWindowEx::setCullBack(_GXCullMode field_0) {
 #pragma pop
 
 
-/* 80302DF4-80302E0C 0018+00 rc=0 efc=0 .text      rewriteAlpha__11J2DWindowExFv                                */
+/* 80302DF4-80302E0C 0018+00 rc=1 efc=0 rfr=False None .text      rewriteAlpha__11J2DWindowExFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -666,7 +658,7 @@ asm void J2DWindowEx::rewriteAlpha() {
 #pragma pop
 
 
-/* 80302E0C-80302E74 0068+00 rc=0 efc=0 .text      getFrameTexture__11J2DWindowExCFUcUc                         */
+/* 80302E0C-80302E74 0068+00 rc=1 efc=0 rfr=False None .text      getFrameTexture__11J2DWindowExCFUcUc                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -677,7 +669,7 @@ asm void J2DWindowEx::getFrameTexture(u8 field_0, u8 field_1) const {
 #pragma pop
 
 
-/* 80302E74-80302EDC 0068+00 rc=0 efc=0 .text      getContentsTexture__11J2DWindowExCFUc                        */
+/* 80302E74-80302EDC 0068+00 rc=1 efc=0 rfr=False None .text      getContentsTexture__11J2DWindowExCFUc                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -688,7 +680,7 @@ asm void J2DWindowEx::getContentsTexture(u8 field_0) const {
 #pragma pop
 
 
-/* 80302EDC-80302FFC 0120+00 rc=0 efc=0 .text      isUsed__11J2DWindowExFPC7ResTIMG                             */
+/* 80302EDC-80302FFC 0120+00 rc=1 efc=0 rfr=False None .text      isUsed__11J2DWindowExFPC7ResTIMG                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -699,7 +691,7 @@ asm void J2DWindowEx::isUsed(ResTIMG const* field_0) {
 #pragma pop
 
 
-/* 80302FFC-80303084 0088+00 rc=0 efc=0 .text      setAnimation__11J2DWindowExFP11J2DAnmColor                   */
+/* 80302FFC-80303084 0088+00 rc=1 efc=0 rfr=False None .text      setAnimation__11J2DWindowExFP11J2DAnmColor                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -710,7 +702,7 @@ asm void J2DWindowEx::setAnimation(J2DAnmColor* field_0) {
 #pragma pop
 
 
-/* 80303084-8030310C 0088+00 rc=0 efc=0 .text      setAnimation__11J2DWindowExFP19J2DAnmTextureSRTKey           */
+/* 80303084-8030310C 0088+00 rc=1 efc=0 rfr=False None .text      setAnimation__11J2DWindowExFP19J2DAnmTextureSRTKey           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -721,7 +713,7 @@ asm void J2DWindowEx::setAnimation(J2DAnmTextureSRTKey* field_0) {
 #pragma pop
 
 
-/* 8030310C-80303194 0088+00 rc=0 efc=0 .text      setAnimation__11J2DWindowExFP16J2DAnmTexPattern              */
+/* 8030310C-80303194 0088+00 rc=1 efc=0 rfr=False None .text      setAnimation__11J2DWindowExFP16J2DAnmTexPattern              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -732,7 +724,7 @@ asm void J2DWindowEx::setAnimation(J2DAnmTexPattern* field_0) {
 #pragma pop
 
 
-/* 80303194-8030321C 0088+00 rc=0 efc=0 .text      setAnimation__11J2DWindowExFP15J2DAnmTevRegKey               */
+/* 80303194-8030321C 0088+00 rc=1 efc=0 rfr=False None .text      setAnimation__11J2DWindowExFP15J2DAnmTevRegKey               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -743,7 +735,7 @@ asm void J2DWindowEx::setAnimation(J2DAnmTevRegKey* field_0) {
 #pragma pop
 
 
-/* 8030321C-80303274 0058+00 rc=0 efc=0 .text      isNeedSetAnm__11J2DWindowExFUc                               */
+/* 8030321C-80303274 0058+00 rc=4 efc=0 rfr=False None .text      isNeedSetAnm__11J2DWindowExFUc                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -754,7 +746,7 @@ asm void J2DWindowEx::isNeedSetAnm(u8 field_0) {
 #pragma pop
 
 
-/* 80303274-8030327C 0008+00 rc=0 efc=0 .text      setAnimation__11J2DWindowExFP20J2DAnmVisibilityFull          */
+/* 80303274-8030327C 0008+00 rc=1 efc=0 rfr=False None .text      setAnimation__11J2DWindowExFP20J2DAnmVisibilityFull          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -765,7 +757,7 @@ asm void J2DWindowEx::setAnimation(J2DAnmVisibilityFull* field_0) {
 #pragma pop
 
 
-/* 8030327C-80303370 00F4+00 rc=0 efc=0 .text      setAnimation__11J2DWindowExFP14J2DAnmVtxColor                */
+/* 8030327C-80303370 00F4+00 rc=1 efc=0 rfr=False None .text      setAnimation__11J2DWindowExFP14J2DAnmVtxColor                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -777,72 +769,72 @@ asm void J2DWindowEx::setAnimation(J2DAnmVtxColor* field_0) {
 
 
 /* ############################################################################################## */
-/* 803A1C70-803A1C80 0010+00 rc=0 efc=0 .rodata    @1557                                                        */
-const u8 lit_1557[16] = {
+/* 803A1C70-803A1C80 0010+00 rc=0 efc=0 rfr=False None .rodata    @1557                                                        */
+SECTION_RODATA u8 const lit_1557[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1C80-803A1C90 0010+00 rc=0 efc=0 .rodata    @1566                                                        */
-const u8 lit_1566[16] = {
+/* 803A1C80-803A1C90 0010+00 rc=0 efc=0 rfr=False None .rodata    @1566                                                        */
+SECTION_RODATA u8 const lit_1566[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1C90-803A1CA0 0010+00 rc=0 efc=0 .rodata    @1575                                                        */
-const u8 lit_1575[16] = {
+/* 803A1C90-803A1CA0 0010+00 rc=0 efc=0 rfr=False None .rodata    @1575                                                        */
+SECTION_RODATA u8 const lit_1575[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1CA0-803A1CB0 0010+00 rc=0 efc=0 .rodata    @1581                                                        */
-const u8 J2DWindowEx__lit_1581[16] = {
+/* 803A1CA0-803A1CB0 0010+00 rc=0 efc=0 rfr=False None .rodata    @1581                                                        */
+SECTION_RODATA u8 const J2DWindowEx__lit_1581[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1CB0-803A1CC0 0010+00 rc=0 efc=0 .rodata    @1587                                                        */
-const u8 lit_1587[16] = {
+/* 803A1CB0-803A1CC0 0010+00 rc=0 efc=0 rfr=False None .rodata    @1587                                                        */
+SECTION_RODATA u8 const lit_1587[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1CC0-803A1CD0 0010+00 rc=0 efc=0 .rodata    @1596                                                        */
-const u8 lit_1596[16] = {
+/* 803A1CC0-803A1CD0 0010+00 rc=0 efc=0 rfr=False None .rodata    @1596                                                        */
+SECTION_RODATA u8 const lit_1596[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1CD0-803A1CE0 0010+00 rc=0 efc=0 .rodata    @1605                                                        */
-const u8 lit_1605[16] = {
+/* 803A1CD0-803A1CE0 0010+00 rc=0 efc=0 rfr=False None .rodata    @1605                                                        */
+SECTION_RODATA u8 const lit_1605[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1CE0-803A1CF0 0010+00 rc=0 efc=0 .rodata    @1612                                                        */
-const u8 lit_1612[16] = {
+/* 803A1CE0-803A1CF0 0010+00 rc=0 efc=0 rfr=False None .rodata    @1612                                                        */
+SECTION_RODATA u8 const lit_1612[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1CF0-803A1D08 0018+00 rc=0 efc=0 .rodata    @2530                                                        */
-const u8 lit_2530[24] = {
+/* 803A1CF0-803A1D08 0018+00 rc=0 efc=0 rfr=False None .rodata    @2530                                                        */
+SECTION_RODATA u8 const lit_2530[24] = {
 	0x0F, 0x08, 0x0A, 0x0F, 0x0F, 0x08, 0x0A, 0x0F, 0x0F, 0x0A, 0x00, 0x0F, 0x02, 0x04, 0x08, 0x0F,
 	0x02, 0x04, 0x08, 0x0F, 0x0F, 0x0F, 0x0F, 0x0A,
 };
 
-/* 803A1D08-803A1D20 0018+00 rc=0 efc=0 .rodata    @2531                                                        */
-const u8 lit_2531[24] = {
+/* 803A1D08-803A1D20 0018+00 rc=0 efc=0 rfr=False None .rodata    @2531                                                        */
+SECTION_RODATA u8 const lit_2531[24] = {
 	0x07, 0x04, 0x05, 0x07, 0x05, 0x07, 0x07, 0x07, 0x07, 0x05, 0x00, 0x07, 0x01, 0x02, 0x04, 0x07,
 	0x07, 0x07, 0x07, 0x02, 0x07, 0x07, 0x07, 0x05,
 };
 
-/* 803A1D20-803A1D40 001E+02 rc=0 efc=0 .rodata    @2532                                                        */
-const u8 J2DWindowEx__lit_2532[30 + 2 /* padding */] = {
+/* 803A1D20-803A1D40 001E+02 rc=0 efc=0 rfr=False None .rodata    @2532                                                        */
+SECTION_RODATA u8 const J2DWindowEx__lit_2532[30 + 2 /* padding */] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00,
 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
 
-/* 803A1D40-803A1D50 0010+00 rc=0 efc=0 .rodata    @3089                                                        */
-const u8 lit_3089[16] = {
+/* 803A1D40-803A1D50 0010+00 rc=1 efc=0 rfr=False None .rodata    @3089                                                        */
+SECTION_RODATA static u8 const lit_3089[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80303370-80303510 01A0+00 rc=0 efc=0 .text      animationPane__11J2DWindowExFPC15J2DAnmTransform             */
+/* 80303370-80303510 01A0+00 rc=1 efc=0 rfr=False None .text      animationPane__11J2DWindowExFPC15J2DAnmTransform             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -853,7 +845,7 @@ asm void J2DWindowEx::animationPane(J2DAnmTransform const* field_0) {
 #pragma pop
 
 
-/* 80303510-80303534 0024+00 rc=0 efc=0 .text      getFrameMaterial__11J2DWindowExCFUc                          */
+/* 80303510-80303534 0024+00 rc=1 efc=0 rfr=False None .text      getFrameMaterial__11J2DWindowExCFUc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -864,7 +856,7 @@ asm void J2DWindowEx::getFrameMaterial(u8 field_0) const {
 #pragma pop
 
 
-/* 80303534-8030353C 0008+00 rc=0 efc=0 .text      getContentsMaterial__11J2DWindowExCFv                        */
+/* 80303534-8030353C 0008+00 rc=1 efc=0 rfr=False None .text      getContentsMaterial__11J2DWindowExCFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -875,7 +867,7 @@ asm void J2DWindowEx::getContentsMaterial() const {
 #pragma pop
 
 
-/* 8030353C-80303568 002C+00 rc=0 efc=0 .text      getMaterial__11J2DWindowExCFRQ29J2DWindow9TMaterial          */
+/* 8030353C-80303568 002C+00 rc=1 efc=0 rfr=False None .text      getMaterial__11J2DWindowExCFRQ29J2DWindow9TMaterial          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -886,7 +878,7 @@ asm void J2DWindowEx::getMaterial(J2DWindow::TMaterial& field_0) const {
 #pragma pop
 
 
-/* 80303568-803035C0 0058+00 rc=0 efc=0 .text      draw__11J2DWindowExFffff                                     */
+/* 80303568-803035C0 0058+00 rc=1 efc=0 rfr=False None .text      draw__11J2DWindowExFffff                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -897,7 +889,7 @@ asm void J2DWindowEx::draw(f32 field_0, f32 field_1, f32 field_2, f32 field_3) {
 #pragma pop
 
 
-/* 803035C0-803035FC 003C+00 rc=0 efc=0 .text      setCullBack__11J2DWindowExFb                                 */
+/* 803035C0-803035FC 003C+00 rc=1 efc=0 rfr=False None .text      setCullBack__11J2DWindowExFb                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -908,7 +900,7 @@ asm void J2DWindowEx::setCullBack(bool field_0) {
 #pragma pop
 
 
-/* 803035FC-8030361C 0020+00 rc=0 efc=0 .text      isUsed__11J2DWindowExFPC7ResFONT                             */
+/* 803035FC-8030361C 0020+00 rc=1 efc=0 rfr=False None .text      isUsed__11J2DWindowExFPC7ResFONT                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -919,7 +911,7 @@ asm void J2DWindowEx::isUsed(ResFONT const* field_0) {
 #pragma pop
 
 
-/* 8030361C-8030363C 0020+00 rc=0 efc=0 .text      setAnimation__11J2DWindowExFP10J2DAnmBase                    */
+/* 8030361C-8030363C 0020+00 rc=1 efc=0 rfr=False None .text      setAnimation__11J2DWindowExFP10J2DAnmBase                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -930,7 +922,7 @@ asm void J2DWindowEx::setAnimation(J2DAnmBase* field_0) {
 #pragma pop
 
 
-/* 8030363C-80303640 0004+00 rc=0 efc=0 .text      getColor__14J2DAnmVtxColorCFUcUsP8_GXColor                   */
+/* 8030363C-80303640 0004+00 rc=1 efc=1 rfr=False None .text      getColor__14J2DAnmVtxColorCFUcUsP8_GXColor                   */
 void J2DAnmVtxColor::getColor(u8 field_0, u16 field_1, _GXColor* field_2) const {
 	/* empty function */
 }

@@ -42,7 +42,7 @@ extern "C" void checkExport__12JASTrackPortCFUl(); // 1
 // Declarations:
 // 
 
-/* 8029354C-8029357C 0030+00 rc=0 efc=0 .text      init__12JASTrackPortFv                                       */
+/* 8029354C-8029357C 0030+00 rc=1 efc=1 rfr=False None .text      init__12JASTrackPortFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,7 +53,7 @@ asm void JASTrackPort::init() {
 #pragma pop
 
 
-/* 8029357C-802935A0 0024+00 rc=0 efc=0 .text      readImport__12JASTrackPortFUl                                */
+/* 8029357C-802935A0 0024+00 rc=1 efc=1 rfr=False None .text      readImport__12JASTrackPortFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +64,7 @@ asm void JASTrackPort::readImport(u32 field_0) {
 #pragma pop
 
 
-/* 802935A0-802935C4 0024+00 rc=0 efc=0 .text      readExport__12JASTrackPortFUl                                */
+/* 802935A0-802935C4 0024+00 rc=1 efc=1 rfr=False None .text      readExport__12JASTrackPortFUl                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +75,7 @@ asm void JASTrackPort::readExport(u32 field_0) {
 #pragma pop
 
 
-/* 802935C4-802935E8 0024+00 rc=0 efc=0 .text      writeImport__12JASTrackPortFUlUs                             */
+/* 802935C4-802935E8 0024+00 rc=1 efc=1 rfr=False None .text      writeImport__12JASTrackPortFUlUs                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +86,7 @@ asm void JASTrackPort::writeImport(u32 field_0, u16 field_1) {
 #pragma pop
 
 
-/* 802935E8-8029360C 0024+00 rc=0 efc=0 .text      writeExport__12JASTrackPortFUlUs                             */
+/* 802935E8-8029360C 0024+00 rc=1 efc=1 rfr=False None .text      writeExport__12JASTrackPortFUlUs                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +97,7 @@ asm void JASTrackPort::writeExport(u32 field_0, u16 field_1) {
 #pragma pop
 
 
-/* 8029360C-80293628 001C+00 rc=0 efc=0 .text      checkImport__12JASTrackPortCFUl                              */
+/* 8029360C-80293628 001C+00 rc=1 efc=1 rfr=False None .text      checkImport__12JASTrackPortCFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,7 +108,7 @@ asm void JASTrackPort::checkImport(u32 field_0) const {
 #pragma pop
 
 
-/* 80293628-80293644 001C+00 rc=0 efc=0 .text      checkExport__12JASTrackPortCFUl                              */
+/* 80293628-80293644 001C+00 rc=1 efc=1 rfr=False None .text      checkExport__12JASTrackPortCFUl                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

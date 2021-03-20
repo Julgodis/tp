@@ -26,9 +26,7 @@ struct JASVoiceBank {
 extern "C" void getInstParam__12JASVoiceBankCFiiiP12JASInstParam(); // 1
 extern "C" void __dt__12JASVoiceBankFv(); // 1
 extern "C" void getType__12JASVoiceBankCFv(); // 1
-SECTION_RODATA extern const u8 sOscData__12JASVoiceBank[24];
-SECTION_DATA extern void* const __vt__12JASVoiceBank[5 + 1 /* padding */];
-SECTION_SBSS extern u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
+extern "C" extern void* __vt__12JASVoiceBank[5 + 1 /* padding */];
 
 // 
 // External References:
@@ -37,23 +35,23 @@ SECTION_SBSS extern u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
 void operator delete(void*); // 2
 
 extern "C" void __dl__FPv(); // 1
-SECTION_DATA extern void* const __vt__7JASBank[5];
+extern "C" extern void* __vt__7JASBank[5];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 8039B1B8-8039B1D0 0018+00 rc=0 efc=0 .rodata    sOscData__12JASVoiceBank                                     */
-const u8 sOscData__12JASVoiceBank[24] = {
+/* 8039B1B8-8039B1D0 0018+00 rc=1 efc=0 rfr=False None .rodata    sOscData__12JASVoiceBank                                     */
+SECTION_RODATA static u8 const sOscData__12JASVoiceBank[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80451268-80451270 0004+04 rc=0 efc=0 .sbss      sOscTable__12JASVoiceBank                                    */
-u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
+/* 80451268-80451270 0004+04 rc=1 efc=0 rfr=False None .sbss      sOscTable__12JASVoiceBank                                    */
+static u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
 
-/* 80297F74-80297FAC 0038+00 rc=0 efc=0 .text      getInstParam__12JASVoiceBankCFiiiP12JASInstParam             */
+/* 80297F74-80297FAC 0038+00 rc=1 efc=0 rfr=False None .text      getInstParam__12JASVoiceBankCFiiiP12JASInstParam             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,18 +63,18 @@ asm void JASVoiceBank::getInstParam(int field_0, int field_1, int field_2, JASIn
 
 
 /* ############################################################################################## */
-/* 803C76D0-803C76E8 0014+04 rc=0 efc=0 .data      __vt__12JASVoiceBank                                         */
-void* const __vt__12JASVoiceBank[5 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__12JASVoiceBankFv,
-	(void*)getInstParam__12JASVoiceBankCFiiiP12JASInstParam,
-	(void*)getType__12JASVoiceBankCFv,
+/* 803C76D0-803C76E8 0014+04 rc=2 efc=1 rfr=False None .data      __vt__12JASVoiceBank                                         */
+SECTION_DATA void* __vt__12JASVoiceBank[5 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__12JASVoiceBankFv,
+	/* 3    */ (void*)getInstParam__12JASVoiceBankCFiiiP12JASInstParam,
+	/* 4    */ (void*)getType__12JASVoiceBankCFv,
 	/* padding */
 	NULL,
 };
 
-/* 80297FAC-80298008 005C+00 rc=0 efc=0 .text      __dt__12JASVoiceBankFv                                       */
+/* 80297FAC-80298008 005C+00 rc=1 efc=0 rfr=False None .text      __dt__12JASVoiceBankFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +85,7 @@ asm JASVoiceBank::~JASVoiceBank() {
 #pragma pop
 
 
-/* 80298008-80298014 000C+00 rc=0 efc=0 .text      getType__12JASVoiceBankCFv                                   */
+/* 80298008-80298014 000C+00 rc=1 efc=0 rfr=False None .text      getType__12JASVoiceBankCFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

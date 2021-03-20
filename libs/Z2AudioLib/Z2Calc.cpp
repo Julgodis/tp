@@ -44,14 +44,8 @@ extern "C" void getRandom_0_1__6Z2CalcFv(); // 1
 extern "C" void setParam__Q26Z2Calc8FNoise1fFfff(); // 1
 extern "C" void tau__Q26Z2Calc8FNoise1fFf(); // 1
 extern "C" void calcNoise1f__Q26Z2Calc8FNoise1fFv(); // 1
-SECTION_SBSS extern u8 data_80451330[4];
-SECTION_SBSS extern u8 data_80451334[4];
-SECTION_SDATA2 extern f32 cEqualCSlope__6Z2Calc;
-SECTION_SDATA2 extern f32 cEqualPSlope__6Z2Calc;
-SECTION_SDATA2 extern u8 lit_380[4];
-SECTION_SDATA2 extern f32 lit_381;
-SECTION_SDATA2 extern f32 lit_396;
-SECTION_SDATA2 extern f32 lit_397;
+extern "C" extern f32 cEqualCSlope__6Z2Calc;
+extern "C" extern f32 cEqualPSlope__6Z2Calc;
 
 // 
 // External References:
@@ -68,7 +62,7 @@ extern "C" void pow(); // 1
 // Declarations:
 // 
 
-/* 802A968C-802A96F4 0068+00 rc=0 efc=0 .text      linearTransform__6Z2CalcFfffffb                              */
+/* 802A968C-802A96F4 0068+00 rc=17 efc=16 rfr=False None .text      linearTransform__6Z2CalcFfffffb                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,21 +74,21 @@ asm void Z2Calc::linearTransform(f32 field_0, f32 field_1, f32 field_2, f32 fiel
 
 
 /* ############################################################################################## */
-/* 80455820-80455824 0004+00 rc=0 efc=0 .sdata2    cEqualCSlope__6Z2Calc                                        */
-f32 cEqualCSlope__6Z2Calc = 1.0f;
+/* 80455820-80455824 0004+00 rc=1 efc=1 rfr=False None .sdata2    cEqualCSlope__6Z2Calc                                        */
+SECTION_SDATA2 f32 cEqualCSlope__6Z2Calc = 1.0f;
 
-/* 80455824-80455828 0004+00 rc=0 efc=0 .sdata2    cEqualPSlope__6Z2Calc                                        */
-f32 cEqualPSlope__6Z2Calc = 0.5f;
+/* 80455824-80455828 0004+00 rc=1 efc=1 rfr=False None .sdata2    cEqualPSlope__6Z2Calc                                        */
+SECTION_SDATA2 f32 cEqualPSlope__6Z2Calc = 0.5f;
 
-/* 80455828-8045582C 0004+00 rc=0 efc=0 .sdata2    @380                                                         */
-u8 lit_380[4] = {
+/* 80455828-8045582C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @380                                                         */
+SECTION_SDATA2 static u8 lit_380[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8045582C-80455830 0004+00 rc=0 efc=0 .sdata2    @381                                                         */
-f32 lit_381 = 1.0f;
+/* 8045582C-80455830 0004+00 rc=4 efc=0 rfr=False None .sdata2    @381                                                         */
+SECTION_SDATA2 static f32 lit_381 = 1.0f;
 
-/* 802A96F4-802A9814 0120+00 rc=0 efc=0 .text      getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign             */
+/* 802A96F4-802A9814 0120+00 rc=29 efc=29 rfr=False None .text      getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,13 +100,13 @@ asm void Z2Calc::getParamByExp(f32 field_0, f32 field_1, f32 field_2, f32 field_
 
 
 /* ############################################################################################## */
-/* 80455830-80455834 0004+00 rc=0 efc=0 .sdata2    @396                                                         */
-f32 lit_396 = 2.0f;
+/* 80455830-80455834 0004+00 rc=1 efc=0 rfr=False None .sdata2    @396                                                         */
+SECTION_SDATA2 static f32 lit_396 = 2.0f;
 
-/* 80455834-80455838 0004+00 rc=0 efc=0 .sdata2    @397                                                         */
-f32 lit_397 = -2.0f;
+/* 80455834-80455838 0004+00 rc=1 efc=0 rfr=False None .sdata2    @397                                                         */
+SECTION_SDATA2 static f32 lit_397 = -2.0f;
 
-/* 802A9814-802A98D4 00C0+00 rc=0 efc=0 .text      getRandom__6Z2CalcFfff                                       */
+/* 802A9814-802A98D4 00C0+00 rc=2 efc=2 rfr=False None .text      getRandom__6Z2CalcFfff                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,13 +118,13 @@ asm void Z2Calc::getRandom(f32 field_0, f32 field_1, f32 field_2) {
 
 
 /* ############################################################################################## */
-/* 80451330-80451334 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_80451330[4];
+/* 80451330-80451334 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_80451330[4];
 
-/* 80451334-80451338 0004+00 rc=0 efc=0 .sbss      oRandom$401                                                  */
-u8 data_80451334[4];
+/* 80451334-80451338 0004+00 rc=1 efc=0 rfr=False None .sbss      oRandom$401                                                  */
+static u8 data_80451334[4];
 
-/* 802A98D4-802A9944 0070+00 rc=0 efc=0 .text      getRandom_0_1__6Z2CalcFv                                     */
+/* 802A98D4-802A9944 0070+00 rc=2 efc=1 rfr=False None .text      getRandom_0_1__6Z2CalcFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,7 +135,7 @@ asm void Z2Calc::getRandom_0_1() {
 #pragma pop
 
 
-/* 802A9944-802A9958 0014+00 rc=0 efc=0 .text      setParam__Q26Z2Calc8FNoise1fFfff                             */
+/* 802A9944-802A9958 0014+00 rc=1 efc=1 rfr=False None .text      setParam__Q26Z2Calc8FNoise1fFfff                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,7 +146,7 @@ asm void Z2Calc::FNoise1f::setParam(f32 field_0, f32 field_1, f32 field_2) {
 #pragma pop
 
 
-/* 802A9958-802A99A0 0048+00 rc=0 efc=0 .text      tau__Q26Z2Calc8FNoise1fFf                                    */
+/* 802A9958-802A99A0 0048+00 rc=1 efc=0 rfr=False None .text      tau__Q26Z2Calc8FNoise1fFf                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -163,7 +157,7 @@ asm void Z2Calc::FNoise1f::tau(f32 field_0) {
 #pragma pop
 
 
-/* 802A99A0-802A9A34 0094+00 rc=0 efc=0 .text      calcNoise1f__Q26Z2Calc8FNoise1fFv                            */
+/* 802A99A0-802A9A34 0094+00 rc=5 efc=5 rfr=False None .text      calcNoise1f__Q26Z2Calc8FNoise1fFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

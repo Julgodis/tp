@@ -41,13 +41,13 @@ extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
 extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
 extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
 extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter(); // 1
-SECTION_DATA extern u8 g_fopAcTg_Queue[12 + 4 /* padding */];
+extern "C" extern u8 g_fopAcTg_Queue[12 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 800197BC-800197F8 003C+00 rc=0 efc=0 .text      fopAcIt_Executor__FPFPvPv_iPv                                */
+/* 800197BC-800197F8 003C+00 rc=5 efc=5 rfr=False None .text      fopAcIt_Executor__FPFPvPv_iPv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -58,7 +58,7 @@ extern "C" asm void fopAcIt_Executor__FPFPvPv_iPv() {
 #pragma pop
 
 
-/* 800197F8-80019834 003C+00 rc=0 efc=0 .text      fopAcIt_Judge__FPFPvPv_PvPv                                  */
+/* 800197F8-80019834 003C+00 rc=67 efc=67 rfr=False None .text      fopAcIt_Judge__FPFPvPv_PvPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

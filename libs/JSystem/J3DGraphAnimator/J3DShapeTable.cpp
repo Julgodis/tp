@@ -9,10 +9,10 @@
 // Types:
 // 
 
-struct J3DVertexData {
+struct J3DDrawMtxData {
 };
 
-struct J3DDrawMtxData {
+struct J3DVertexData {
 };
 
 struct J3DShapeTable {
@@ -57,7 +57,7 @@ extern "C" void _restgpr_27(); // 1
 // Declarations:
 // 
 
-/* 803258A0-803258D8 0038+00 rc=0 efc=0 .text      hide__13J3DShapeTableFv                                      */
+/* 803258A0-803258D8 0038+00 rc=0 efc=0 rfr=False None .text      hide__13J3DShapeTableFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +68,7 @@ asm void J3DShapeTable::hide() {
 #pragma pop
 
 
-/* 803258D8-80325910 0038+00 rc=0 efc=0 .text      show__13J3DShapeTableFv                                      */
+/* 803258D8-80325910 0038+00 rc=0 efc=0 rfr=False None .text      show__13J3DShapeTableFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +79,7 @@ asm void J3DShapeTable::show() {
 #pragma pop
 
 
-/* 80325910-8032597C 006C+00 rc=0 efc=0 .text      initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData */
+/* 80325910-8032597C 006C+00 rc=2 efc=2 rfr=False None .text      initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +90,7 @@ asm void J3DShapeTable::initShapeNodes(J3DDrawMtxData* field_0, J3DVertexData* f
 #pragma pop
 
 
-/* 8032597C-80325A18 009C+00 rc=0 efc=0 .text      sortVcdVatCmd__13J3DShapeTableFv                             */
+/* 8032597C-80325A18 009C+00 rc=2 efc=2 rfr=False None .text      sortVcdVatCmd__13J3DShapeTableFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

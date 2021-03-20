@@ -10,7 +10,7 @@
 // 
 
 
-SECTION_SDATA2 extern u8 ga8cSignature__Q27JStudio4data[8];
+extern "C" extern u8 ga8cSignature__Q27JStudio4data[8];
 
 // 
 // External References:
@@ -23,8 +23,8 @@ SECTION_SDATA2 extern u8 ga8cSignature__Q27JStudio4data[8];
 // 
 
 /* ############################################################################################## */
-/* 80455460-80455468 0008+00 rc=0 efc=0 .sdata2    ga8cSignature__Q27JStudio4data                               */
-u8 ga8cSignature__Q27JStudio4data[8] = {
+/* 80455460-80455468 0008+00 rc=1 efc=1 rfr=False None .sdata2    ga8cSignature__Q27JStudio4data                               */
+SECTION_SDATA2 u8 ga8cSignature__Q27JStudio4data[8] = {
 	0x6A, 0x73, 0x74, 0x75, 0x64, 0x69, 0x6F, 0x00,
 };
 

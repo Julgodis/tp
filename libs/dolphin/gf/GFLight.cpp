@@ -33,7 +33,7 @@ extern "C" void GFSetChanAmbColor__F12_GXChannelID8_GXColor(); // 1
 // Declarations:
 // 
 
-/* 802CDE54-802CDE9C 0048+00 rc=0 efc=0 .text      GFSetChanAmbColor__F12_GXChannelID8_GXColor                  */
+/* 802CDE54-802CDE9C 0048+00 rc=0 efc=0 rfr=False None .text      GFSetChanAmbColor__F12_GXChannelID8_GXColor                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -35,17 +35,17 @@ struct create_tag_class {
 // 
 
 void fpcDt_IsComplete(); // 2
-void fpcDt_deleteMethod(base_process_class*); // 2
+static void fpcDt_deleteMethod(base_process_class*); // 2
 void fpcDt_Handler(); // 2
-void fpcDt_ToQueue(base_process_class*); // 2
-void fpcDt_ToDeleteQ(base_process_class*); // 2
+static void fpcDt_ToQueue(base_process_class*); // 2
+static void fpcDt_ToDeleteQ(base_process_class*); // 2
 void fpcDt_Delete(void*); // 2
 
 extern "C" void fpcDt_IsComplete__Fv(); // 1
-extern "C" void fpcDt_deleteMethod__FP18base_process_class(); // 1
+extern "C" static void fpcDt_deleteMethod__FP18base_process_class(); // 1
 extern "C" void fpcDt_Handler__Fv(); // 1
-extern "C" void fpcDt_ToQueue__FP18base_process_class(); // 1
-extern "C" void fpcDt_ToDeleteQ__FP18base_process_class(); // 1
+extern "C" static void fpcDt_ToQueue__FP18base_process_class(); // 1
+extern "C" static void fpcDt_ToDeleteQ__FP18base_process_class(); // 1
 extern "C" void fpcDt_Delete__FPv(); // 1
 
 // 
@@ -101,14 +101,14 @@ extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
 extern "C" void cTg_IsUse__FP16create_tag_class(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_DATA extern u8 g_fpcDtTg_Queue[12 + 4 /* padding */];
-SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
+extern "C" extern u8 g_fpcDtTg_Queue[12 + 4 /* padding */];
+extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80021040-80021060 0020+00 rc=0 efc=0 .text      fpcDt_IsComplete__Fv                                         */
+/* 80021040-80021060 0020+00 rc=1 efc=1 rfr=False None .text      fpcDt_IsComplete__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,18 +119,18 @@ asm void fpcDt_IsComplete() {
 #pragma pop
 
 
-/* 80021060-800210D4 0074+00 rc=0 efc=0 .text      fpcDt_deleteMethod__FP18base_process_class                   */
+/* 80021060-800210D4 0074+00 rc=1 efc=0 rfr=False None .text      fpcDt_deleteMethod__FP18base_process_class                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcDt_deleteMethod(base_process_class* field_0) {
+asm static void fpcDt_deleteMethod(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_deletor/fpcDt_deleteMethod__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 800210D4-8002110C 0038+00 rc=0 efc=0 .text      fpcDt_Handler__Fv                                            */
+/* 800210D4-8002110C 0038+00 rc=1 efc=1 rfr=False None .text      fpcDt_Handler__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,29 +141,29 @@ asm void fpcDt_Handler() {
 #pragma pop
 
 
-/* 8002110C-80021188 007C+00 rc=0 efc=0 .text      fpcDt_ToQueue__FP18base_process_class                        */
+/* 8002110C-80021188 007C+00 rc=1 efc=0 rfr=False None .text      fpcDt_ToQueue__FP18base_process_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcDt_ToQueue(base_process_class* field_0) {
+asm static void fpcDt_ToQueue(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_deletor/fpcDt_ToQueue__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 80021188-800212A4 011C+00 rc=0 efc=0 .text      fpcDt_ToDeleteQ__FP18base_process_class                      */
+/* 80021188-800212A4 011C+00 rc=1 efc=0 rfr=False None .text      fpcDt_ToDeleteQ__FP18base_process_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcDt_ToDeleteQ(base_process_class* field_0) {
+asm static void fpcDt_ToDeleteQ(base_process_class* field_0) {
 	nofralloc
 #include "asm/f_pc/f_pc_deletor/fpcDt_ToDeleteQ__FP18base_process_class.s"
 }
 #pragma pop
 
 
-/* 800212A4-80021308 0064+00 rc=0 efc=0 .text      fpcDt_Delete__FPv                                            */
+/* 800212A4-80021308 0064+00 rc=3 efc=3 rfr=False None .text      fpcDt_Delete__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

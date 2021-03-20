@@ -26,8 +26,7 @@ extern "C" void TRKInitializeTarget(); // 1
 extern "C" void __TRK_copy_vectors(); // 1
 extern "C" void TRKTargetTranslate(); // 1
 extern "C" void EnableMetroTRKInterrupts(); // 1
-SECTION_DATA extern u8 TRK_ISR_OFFSETS[60 + 4 /* padding */];
-SECTION_BSS extern u8 lc_base[4 + 4 /* padding */];
+SECTION_BSS u8 lc_base[4 + 4 /* padding */];
 
 // 
 // External References:
@@ -46,7 +45,7 @@ extern "C" void EnableEXI2Interrupts(); // 1
 extern "C" void InitMetroTRKCommTable(); // 1
 
 SECTION_INIT void TRK_memcpy(); // 1
-SECTION_INIT extern u8 __TRK_unknown_data[7988];
+extern "C" extern u8 __TRK_unknown_data[7988];
 extern "C" void ARGetDMAStatus(); // 1
 extern "C" void ARStartDMA(); // 1
 extern "C" void __ARClearInterrupt(); // 1
@@ -57,14 +56,14 @@ extern "C" void TRKSaveExtended1Block(); // 1
 extern "C" void TRK_main(); // 1
 extern "C" void EnableEXI2Interrupts(); // 1
 extern "C" void InitMetroTRKCommTable(); // 1
-SECTION_BSS extern u8 gTRKState[164];
-SECTION_BSS extern u8 gTRKCPUState[1072];
+extern "C" extern u8 gTRKState[164];
+extern "C" extern u8 gTRKCPUState[1072];
 
 // 
 // Declarations:
 // 
 
-/* 80371560-803715F8 0098+00 rc=0 efc=0 .text      InitMetroTRK                                                 */
+/* 80371560-803715F8 0098+00 rc=1 efc=1 rfr=False None .text      InitMetroTRK                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +74,7 @@ extern "C" asm void InitMetroTRK() {
 #pragma pop
 
 
-/* 803715F8-8037168C 0094+00 rc=0 efc=0 .text      InitMetroTRK_BBA                                             */
+/* 803715F8-8037168C 0094+00 rc=1 efc=1 rfr=False None .text      InitMetroTRK_BBA                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +85,7 @@ extern "C" asm void InitMetroTRK_BBA() {
 #pragma pop
 
 
-/* 8037168C-80371878 01EC+00 rc=0 efc=0 .text      TRK__write_aram                                              */
+/* 8037168C-80371878 01EC+00 rc=1 efc=1 rfr=False None .text      TRK__write_aram                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +96,7 @@ extern "C" asm void TRK__write_aram() {
 #pragma pop
 
 
-/* 80371878-803719AC 0134+00 rc=0 efc=0 .text      TRK__read_aram                                               */
+/* 80371878-803719AC 0134+00 rc=1 efc=1 rfr=False None .text      TRK__read_aram                                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,10 +108,10 @@ extern "C" asm void TRK__read_aram() {
 
 
 /* ############################################################################################## */
-/* 8044F810-8044F818 0004+04 rc=0 efc=0 .bss       lc_base                                                      */
-u8 lc_base[4 + 4 /* padding */];
+/* 8044F810-8044F818 0004+04 rc=3 efc=0 rfr=False .bss .bss       lc_base                                                      */
+static u8 lc_base[4 + 4 /* padding */];
 
-/* 803719AC-803719F8 004C+00 rc=0 efc=0 .text      TRKInitializeTarget                                          */
+/* 803719AC-803719F8 004C+00 rc=1 efc=1 rfr=False None .text      TRKInitializeTarget                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,8 +123,8 @@ extern "C" asm void TRKInitializeTarget() {
 
 
 /* ############################################################################################## */
-/* 803D3268-803D32A8 003C+04 rc=0 efc=0 .data      TRK_ISR_OFFSETS                                              */
-u8 TRK_ISR_OFFSETS[60 + 4 /* padding */] = {
+/* 803D3268-803D32A8 003C+04 rc=1 efc=0 rfr=False None .data      TRK_ISR_OFFSETS                                              */
+SECTION_DATA static u8 TRK_ISR_OFFSETS[60 + 4 /* padding */] = {
 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00,
 	0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x08, 0x00,
 	0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0F, 0x00,
@@ -134,7 +133,7 @@ u8 TRK_ISR_OFFSETS[60 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803719F8-80371B24 012C+00 rc=0 efc=0 .text      __TRK_copy_vectors                                           */
+/* 803719F8-80371B24 012C+00 rc=1 efc=1 rfr=False None .text      __TRK_copy_vectors                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +144,7 @@ extern "C" asm void __TRK_copy_vectors() {
 #pragma pop
 
 
-/* 80371B24-80371B7C 0058+00 rc=0 efc=0 .text      TRKTargetTranslate                                           */
+/* 80371B24-80371B7C 0058+00 rc=1 efc=1 rfr=False None .text      TRKTargetTranslate                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +155,7 @@ extern "C" asm void TRKTargetTranslate() {
 #pragma pop
 
 
-/* 80371B7C-80371B9C 0020+00 rc=0 efc=0 .text      EnableMetroTRKInterrupts                                     */
+/* 80371B7C-80371B9C 0020+00 rc=1 efc=1 rfr=False None .text      EnableMetroTRKInterrupts                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

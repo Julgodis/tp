@@ -10,14 +10,14 @@
 // 
 
 extern "C" void __CARDCompareFileName(); // 1
-extern "C" void __CARDAccess(); // 1
+extern "C" static void __CARDAccess(); // 1
 extern "C" void __CARDIsWritable(); // 1
 extern "C" void __CARDIsReadable(); // 1
 extern "C" void CARDOpen(); // 1
 extern "C" void CARDClose(); // 1
 
 extern "C" void __CARDCompareFileName(); // 1
-extern "C" void __CARDAccess(); // 1
+extern "C" static void __CARDAccess(); // 1
 extern "C" void __CARDIsWritable(); // 1
 extern "C" void __CARDIsReadable(); // 1
 extern "C" void CARDOpen(); // 1
@@ -36,13 +36,14 @@ extern "C" void __CARDGetControlBlock(); // 1
 extern "C" void __CARDPutControlBlock(); // 1
 extern "C" void __CARDGetDirBlock(); // 1
 extern "C" void memcmp(); // 1
-SECTION_BSS extern u8 __CARDDiskNone[32];
+extern "C" extern u8 __CARDDiskNone[32];
+extern "C" extern u8 struct_80450A70[8];
 
 // 
 // Declarations:
 // 
 
-/* 80357C74-80357CDC 0068+00 rc=0 efc=0 .text      __CARDCompareFileName                                        */
+/* 80357C74-80357CDC 0068+00 rc=2 efc=1 rfr=False None .text      __CARDCompareFileName                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,18 +54,18 @@ extern "C" asm void __CARDCompareFileName() {
 #pragma pop
 
 
-/* 80357CDC-80357D70 0094+00 rc=0 efc=0 .text      __CARDAccess                                                 */
+/* 80357CDC-80357D70 0094+00 rc=2 efc=0 rfr=False None .text      __CARDAccess                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __CARDAccess() {
+extern "C" asm static void __CARDAccess() {
 	nofralloc
 #include "asm/dolphin/card/CARDOpen/__CARDAccess.s"
 }
 #pragma pop
 
 
-/* 80357D70-80357EA4 0134+00 rc=0 efc=0 .text      __CARDIsWritable                                             */
+/* 80357D70-80357EA4 0134+00 rc=2 efc=2 rfr=False None .text      __CARDIsWritable                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +76,7 @@ extern "C" asm void __CARDIsWritable() {
 #pragma pop
 
 
-/* 80357EA4-80357F98 00F4+00 rc=0 efc=0 .text      __CARDIsReadable                                             */
+/* 80357EA4-80357F98 00F4+00 rc=2 efc=2 rfr=False None .text      __CARDIsReadable                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +87,7 @@ extern "C" asm void __CARDIsReadable() {
 #pragma pop
 
 
-/* 80357F98-803580B4 011C+00 rc=0 efc=0 .text      CARDOpen                                                     */
+/* 80357F98-803580B4 011C+00 rc=3 efc=3 rfr=False None .text      CARDOpen                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +98,7 @@ extern "C" asm void CARDOpen() {
 #pragma pop
 
 
-/* 803580B4-80358108 0054+00 rc=0 efc=0 .text      CARDClose                                                    */
+/* 803580B4-80358108 0054+00 rc=3 efc=3 rfr=False None .text      CARDClose                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

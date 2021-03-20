@@ -84,8 +84,8 @@ void makeTexCoordTable(); // 2
 void makeAlphaCmpTable(); // 2
 void makeZModeTable(); // 2
 void makeTevSwapTable(); // 2
-void J3DGDLoadTexMtxImm(f32 (* )[4], u32, _GXTexMtxType); // 2
-void J3DGDLoadPostTexMtxImm(f32 (* )[4], u32); // 2
+static void J3DGDLoadTexMtxImm(f32 (* )[4], u32, _GXTexMtxType); // 2
+static void J3DGDLoadPostTexMtxImm(f32 (* )[4], u32); // 2
 
 extern "C" void load__11J3DLightObjCFUl(); // 1
 extern "C" void loadTexCoordGens__FUlP11J3DTexCoord(); // 1
@@ -104,45 +104,34 @@ extern "C" void makeZModeTable__Fv(); // 1
 extern "C" void makeTevSwapTable__Fv(); // 1
 extern "C" void loadTexMtx__9J3DTexMtxCFUl(); // 1
 extern "C" void loadPostTexMtx__9J3DTexMtxCFUl(); // 1
-extern "C" void J3DGDLoadTexMtxImm__FPA4_fUl13_GXTexMtxType(); // 1
-extern "C" void J3DGDLoadPostTexMtxImm__FPA4_fUl(); // 1
-SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
-SECTION_RODATA extern const u8 j3dDefaultTexCoordInfo[32];
-SECTION_RODATA extern const u8 j3dDefaultTexMtxInfo[100];
-SECTION_RODATA extern const u8 j3dDefaultIndTexMtxInfo[28];
-SECTION_RODATA extern const u8 j3dDefaultTevStageInfo[20];
-SECTION_RODATA extern const u8 j3dDefaultIndTevStageInfo[12];
-SECTION_RODATA extern const u8 j3dDefaultFogInfo[44];
-SECTION_RODATA extern const u8 j3dDefaultNBTScaleInfo[16];
-SECTION_RODATA extern const u8 lit_1197[11 + 5 /* padding */];
-SECTION_DATA extern u8 data_803CEAC8[48];
-SECTION_DATA extern u8 data_803CEAF8[48];
-SECTION_DATA extern void* J3DTevs__lit_1059[12];
-SECTION_DATA extern u8 data_803CEB58[48];
-SECTION_DATA extern u8 data_803CEB88[48];
-SECTION_DATA extern void* lit_1131[12];
-SECTION_BSS extern u8 j3dTexCoordTable[7623 + 1 /* padding */];
-SECTION_BSS extern u8 j3dTevSwapTableTable[1024];
-SECTION_BSS extern u8 j3dAlphaCmpTable[768];
-SECTION_BSS extern u8 j3dZModeTable[96];
-SECTION_SDATA2 extern f32 lit_1167;
-SECTION_SDATA2 extern f32 lit_1168;
-SECTION_SDATA2 extern f64 lit_1171;
-SECTION_SDATA2 extern u32 j3dDefaultColInfo;
-SECTION_SDATA2 extern u32 j3dDefaultAmbInfo;
-SECTION_SDATA2 extern u32 data_804563C8;
-SECTION_SDATA2 extern u32 j3dDefaultTevOrderInfoNull;
-SECTION_SDATA2 extern u32 j3dDefaultIndTexOrderNull;
-SECTION_SDATA2 extern u32 j3dDefaultTevColor;
-SECTION_SDATA2 extern u32 data_804563D8;
-SECTION_SDATA2 extern u8 j3dDefaultIndTexCoordScaleInfo[4];
-SECTION_SDATA2 extern u32 j3dDefaultTevKColor;
-SECTION_SDATA2 extern u8 j3dDefaultTevSwapMode[4];
-SECTION_SDATA2 extern u32 j3dDefaultTevSwapModeTable;
-SECTION_SDATA2 extern u32 j3dDefaultBlendInfo;
-SECTION_SDATA2 extern u8 j3dDefaultColorChanInfo[8];
-extern u8 struct_804563F8[4];
-SECTION_SDATA2 extern u16 j3dDefaultZModeID[1 + 1 /* padding */];
+extern "C" static void J3DGDLoadTexMtxImm__FPA4_fUl13_GXTexMtxType(); // 1
+extern "C" static void J3DGDLoadPostTexMtxImm__FPA4_fUl(); // 1
+extern "C" extern u8 const j3dDefaultLightInfo[52];
+extern "C" extern u8 const j3dDefaultTexCoordInfo[32];
+extern "C" extern u8 const j3dDefaultTexMtxInfo[100];
+extern "C" extern u8 const j3dDefaultIndTexMtxInfo[28];
+extern "C" extern u8 const j3dDefaultTevStageInfo[20];
+extern "C" extern u8 const j3dDefaultIndTevStageInfo[12];
+extern "C" extern u8 const j3dDefaultFogInfo[44];
+extern "C" extern u8 const j3dDefaultNBTScaleInfo[16];
+extern "C" extern u8 j3dTevSwapTableTable[1024];
+extern "C" extern u8 j3dAlphaCmpTable[768];
+extern "C" extern u8 j3dZModeTable[96];
+extern "C" extern u32 j3dDefaultColInfo;
+extern "C" extern u32 j3dDefaultAmbInfo;
+extern "C" extern u32 data_804563C8;
+extern "C" extern u32 j3dDefaultTevOrderInfoNull;
+extern "C" extern u32 j3dDefaultIndTexOrderNull;
+extern "C" extern u32 j3dDefaultTevColor;
+extern "C" extern u32 data_804563D8;
+extern "C" extern u8 j3dDefaultIndTexCoordScaleInfo[4];
+extern "C" extern u32 j3dDefaultTevKColor;
+extern "C" extern u8 j3dDefaultTevSwapMode[4];
+extern "C" extern u32 j3dDefaultTevSwapModeTable;
+extern "C" extern u32 j3dDefaultBlendInfo;
+extern "C" extern u8 j3dDefaultColorChanInfo[8];
+extern "C" extern u8 struct_804563F8[4];
+extern "C" extern u16 j3dDefaultZModeID[1 + 1 /* padding */];
 
 // 
 // External References:
@@ -193,15 +182,15 @@ extern "C" void _savegpr_26(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
-SECTION_BSS extern u8 j3dSys[284];
-SECTION_BSS extern u8 sTexCoordScaleTable__6J3DSys[64 + 4 /* padding */];
-SECTION_SBSS extern u8 __GDCurrentDL[4];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sTexCoordScaleTable__6J3DSys[64 + 4 /* padding */];
+extern "C" extern u8 __GDCurrentDL[4];
 
 // 
 // Declarations:
 // 
 
-/* 80323590-80323644 00B4+00 rc=0 efc=0 .text      load__11J3DLightObjCFUl                                      */
+/* 80323590-80323644 00B4+00 rc=3 efc=3 rfr=False None .text      load__11J3DLightObjCFUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -212,7 +201,7 @@ asm void J3DLightObj::load(u32 field_0) const {
 #pragma pop
 
 
-/* 80323644-803238C4 0280+00 rc=0 efc=0 .text      loadTexCoordGens__FUlP11J3DTexCoord                          */
+/* 80323644-803238C4 0280+00 rc=3 efc=3 rfr=False None .text      loadTexCoordGens__FUlP11J3DTexCoord                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -223,7 +212,7 @@ asm void loadTexCoordGens(u32 field_0, J3DTexCoord* field_1) {
 #pragma pop
 
 
-/* 803238C4-80323900 003C+00 rc=0 efc=0 .text      load__9J3DTexMtxCFUl                                         */
+/* 803238C4-80323900 003C+00 rc=6 efc=6 rfr=False None .text      load__9J3DTexMtxCFUl                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -234,7 +223,7 @@ asm void J3DTexMtx::load(u32 field_0) const {
 #pragma pop
 
 
-/* 80323900-80323920 0020+00 rc=0 efc=0 .text      calc__9J3DTexMtxFPA4_Cf                                      */
+/* 80323900-80323920 0020+00 rc=2 efc=2 rfr=False None .text      calc__9J3DTexMtxFPA4_Cf                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -246,37 +235,37 @@ asm void J3DTexMtx::calc(f32 const (* field_0)[4]) {
 
 
 /* ############################################################################################## */
-/* 803CEAC8-803CEAF8 0030+00 rc=0 efc=0 .data      qMtx$1001                                                    */
-u8 data_803CEAC8[48] = {
+/* 803CEAC8-803CEAF8 0030+00 rc=1 efc=0 rfr=False None .data      qMtx$1001                                                    */
+SECTION_DATA static u8 data_803CEAC8[48] = {
 	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CEAF8-803CEB28 0030+00 rc=0 efc=0 .data      qMtx2$1002                                                   */
-u8 data_803CEAF8[48] = {
+/* 803CEAF8-803CEB28 0030+00 rc=1 efc=0 rfr=False None .data      qMtx2$1002                                                   */
+SECTION_DATA static u8 data_803CEAF8[48] = {
 	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CEB28-803CEB58 0030+00 rc=0 efc=0 .data      @1059                                                        */
-void* J3DTevs__lit_1059[12] = {
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x2A4),
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x1C8),
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x260),
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x170),
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0xB0),
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x108),
-	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
+/* 803CEB28-803CEB58 0030+00 rc=1 efc=0 rfr=False None .data      @1059                                                        */
+SECTION_DATA static void* J3DTevs__lit_1059[12] = {
+	/* 0    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x2A4),
+	/* 1    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x1C8),
+	/* 2    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
+	/* 3    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
+	/* 4    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x260),
+	/* 5    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
+	/* 6    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x170),
+	/* 7    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0xB0),
+	/* 8    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
+	/* 9    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
+	/* 10   */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x108),
+	/* 11   */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
 };
 
-/* 80323920-80323C0C 02EC+00 rc=0 efc=0 .text      calcTexMtx__9J3DTexMtxFPA4_Cf                                */
+/* 80323920-80323C0C 02EC+00 rc=2 efc=0 rfr=False None .text      calcTexMtx__9J3DTexMtxFPA4_Cf                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -288,37 +277,37 @@ asm void J3DTexMtx::calcTexMtx(f32 const (* field_0)[4]) {
 
 
 /* ############################################################################################## */
-/* 803CEB58-803CEB88 0030+00 rc=0 efc=0 .data      qMtx$1063                                                    */
-u8 data_803CEB58[48] = {
+/* 803CEB58-803CEB88 0030+00 rc=1 efc=0 rfr=False None .data      qMtx$1063                                                    */
+SECTION_DATA static u8 data_803CEB58[48] = {
 	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CEB88-803CEBB8 0030+00 rc=0 efc=0 .data      qMtx2$1064                                                   */
-u8 data_803CEB88[48] = {
+/* 803CEB88-803CEBB8 0030+00 rc=1 efc=0 rfr=False None .data      qMtx2$1064                                                   */
+SECTION_DATA static u8 data_803CEB88[48] = {
 	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803CEBB8-803CEBE8 0030+00 rc=0 efc=0 .data      @1131                                                        */
-void* lit_1131[12] = {
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x310),
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x200),
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x234),
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x288),
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x2CC),
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x234),
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x1B8),
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x108),
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0xB0),
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x150),
-	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
+/* 803CEBB8-803CEBE8 0030+00 rc=1 efc=0 rfr=False None .data      @1131                                                        */
+SECTION_DATA static void* lit_1131[12] = {
+	/* 0    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x310),
+	/* 1    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x200),
+	/* 2    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x234),
+	/* 3    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x288),
+	/* 4    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x2CC),
+	/* 5    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x234),
+	/* 6    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x1B8),
+	/* 7    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x108),
+	/* 8    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
+	/* 9    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0xB0),
+	/* 10   */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x150),
+	/* 11   */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
 };
 
-/* 80323C0C-80323F64 0358+00 rc=0 efc=0 .text      calcPostTexMtx__9J3DTexMtxFPA4_Cf                            */
+/* 80323C0C-80323F64 0358+00 rc=3 efc=2 rfr=False None .text      calcPostTexMtx__9J3DTexMtxFPA4_Cf                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -329,7 +318,7 @@ asm void J3DTexMtx::calcPostTexMtx(f32 const (* field_0)[4]) {
 #pragma pop
 
 
-/* 80323F64-80323F88 0024+00 rc=0 efc=0 .text      isTexNoReg__FPv                                              */
+/* 80323F64-80323F88 0024+00 rc=1 efc=1 rfr=False None .text      isTexNoReg__FPv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -340,7 +329,7 @@ asm void isTexNoReg(void* field_0) {
 #pragma pop
 
 
-/* 80323F88-80323F94 000C+00 rc=0 efc=0 .text      getTexNoReg__FPv                                             */
+/* 80323F88-80323F94 000C+00 rc=1 efc=1 rfr=False None .text      getTexNoReg__FPv                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -352,16 +341,16 @@ asm void getTexNoReg(void* field_0) {
 
 
 /* ############################################################################################## */
-/* 804563B0-804563B4 0004+00 rc=0 efc=0 .sdata2    @1167                                                        */
-f32 lit_1167 = 0.125f;
+/* 804563B0-804563B4 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1167                                                        */
+SECTION_SDATA2 static f32 lit_1167 = 0.125f;
 
-/* 804563B4-804563B8 0004+00 rc=0 efc=0 .sdata2    @1168                                                        */
-f32 lit_1168 = 1.0f / 100.0f;
+/* 804563B4-804563B8 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1168                                                        */
+SECTION_SDATA2 static f32 lit_1168 = 1.0f / 100.0f;
 
-/* 804563B8-804563C0 0008+00 rc=0 efc=0 .sdata2    @1171                                                        */
-f64 lit_1171 = 4503601774854144.0 /* cast s32 to float */;
+/* 804563B8-804563C0 0008+00 rc=1 efc=0 rfr=False None .sdata2    @1171                                                        */
+SECTION_SDATA2 static f64 lit_1171 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 80323F94-8032413C 01A8+00 rc=0 efc=0 .text      loadTexNo__FUlRCUs                                           */
+/* 80323F94-8032413C 01A8+00 rc=20 efc=20 rfr=False None .text      loadTexNo__FUlRCUs                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -372,7 +361,7 @@ asm void loadTexNo(u32 field_0, u16 const& field_1) {
 #pragma pop
 
 
-/* 8032413C-80324160 0024+00 rc=0 efc=0 .text      patchTexNo_PtrToIdx__FUlRCUs                                 */
+/* 8032413C-80324160 0024+00 rc=2 efc=2 rfr=False None .text      patchTexNo_PtrToIdx__FUlRCUs                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -383,7 +372,7 @@ asm void patchTexNo_PtrToIdx(u32 field_0, u16 const& field_1) {
 #pragma pop
 
 
-/* 80324160-80324194 0034+00 rc=0 efc=0 .text      loadNBTScale__FR11J3DNBTScale                                */
+/* 80324160-80324194 0034+00 rc=2 efc=2 rfr=False None .text      loadNBTScale__FR11J3DNBTScale                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -395,22 +384,22 @@ asm void loadNBTScale(J3DNBTScale& field_0) {
 
 
 /* ############################################################################################## */
-/* 803A1EC8-803A1EFC 0034+00 rc=0 efc=0 .rodata    j3dDefaultLightInfo                                          */
-const u8 j3dDefaultLightInfo[52] = {
+/* 803A1EC8-803A1EFC 0034+00 rc=9 efc=9 rfr=False None .rodata    j3dDefaultLightInfo                                          */
+SECTION_RODATA u8 const j3dDefaultLightInfo[52] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xBF, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x3F, 0x80, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1EFC-803A1F1C 0020+00 rc=0 efc=0 .rodata    j3dDefaultTexCoordInfo                                       */
-const u8 j3dDefaultTexCoordInfo[32] = {
+/* 803A1EFC-803A1F1C 0020+00 rc=5 efc=5 rfr=False None .rodata    j3dDefaultTexCoordInfo                                       */
+SECTION_RODATA u8 const j3dDefaultTexCoordInfo[32] = {
 	0x01, 0x04, 0x3C, 0x00, 0x01, 0x05, 0x3C, 0x00, 0x01, 0x06, 0x3C, 0x00, 0x01, 0x07, 0x3C, 0x00,
 	0x01, 0x08, 0x3C, 0x00, 0x01, 0x09, 0x3C, 0x00, 0x01, 0x0A, 0x3C, 0x00, 0x01, 0x0B, 0x3C, 0x00,
 };
 
-/* 803A1F1C-803A1F80 0064+00 rc=0 efc=0 .rodata    j3dDefaultTexMtxInfo                                         */
-const u8 j3dDefaultTexMtxInfo[100] = {
+/* 803A1F1C-803A1F80 0064+00 rc=1 efc=1 rfr=False None .rodata    j3dDefaultTexMtxInfo                                         */
+SECTION_RODATA u8 const j3dDefaultTexMtxInfo[100] = {
 	0x01, 0x00, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -420,46 +409,46 @@ const u8 j3dDefaultTexMtxInfo[100] = {
 	0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 803A1F80-803A1F9C 001C+00 rc=0 efc=0 .rodata    j3dDefaultIndTexMtxInfo                                      */
-const u8 j3dDefaultIndTexMtxInfo[28] = {
+/* 803A1F80-803A1F9C 001C+00 rc=2 efc=2 rfr=False None .rodata    j3dDefaultIndTexMtxInfo                                      */
+SECTION_RODATA u8 const j3dDefaultIndTexMtxInfo[28] = {
 	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00,
 };
 
-/* 803A1F9C-803A1FB0 0014+00 rc=0 efc=0 .rodata    j3dDefaultTevStageInfo                                       */
-const u8 j3dDefaultTevStageInfo[20] = {
+/* 803A1F9C-803A1FB0 0014+00 rc=1 efc=1 rfr=False None .rodata    j3dDefaultTevStageInfo                                       */
+SECTION_RODATA u8 const j3dDefaultTevStageInfo[20] = {
 	0x04, 0x0A, 0x0F, 0x0F, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x05, 0x07, 0x07, 0x00, 0x00, 0x00,
 	0x00, 0x01, 0x00, 0x00,
 };
 
-/* 803A1FB0-803A1FBC 000C+00 rc=0 efc=0 .rodata    j3dDefaultIndTevStageInfo                                    */
-const u8 j3dDefaultIndTevStageInfo[12] = {
+/* 803A1FB0-803A1FBC 000C+00 rc=2 efc=2 rfr=False None .rodata    j3dDefaultIndTevStageInfo                                    */
+SECTION_RODATA u8 const j3dDefaultIndTevStageInfo[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1FBC-803A1FE8 002C+00 rc=0 efc=0 .rodata    j3dDefaultFogInfo                                            */
-const u8 j3dDefaultFogInfo[44] = {
+/* 803A1FBC-803A1FE8 002C+00 rc=3 efc=3 rfr=False None .rodata    j3dDefaultFogInfo                                            */
+SECTION_RODATA u8 const j3dDefaultFogInfo[44] = {
 	0x00, 0x00, 0x01, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3D, 0xCC, 0xCC, 0xCD,
 	0x46, 0x1C, 0x40, 0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803A1FE8-803A1FF8 0010+00 rc=0 efc=0 .rodata    j3dDefaultNBTScaleInfo                                       */
-const u8 j3dDefaultNBTScaleInfo[16] = {
+/* 803A1FE8-803A1FF8 0010+00 rc=3 efc=3 rfr=False None .rodata    j3dDefaultNBTScaleInfo                                       */
+SECTION_RODATA u8 const j3dDefaultNBTScaleInfo[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
 
-/* 803A1FF8-803A2008 000B+05 rc=0 efc=0 .rodata    @1197                                                        */
-const u8 lit_1197[11 + 5 /* padding */] = {
+/* 803A1FF8-803A2008 000B+05 rc=1 efc=0 rfr=False None .rodata    @1197                                                        */
+SECTION_RODATA static u8 const lit_1197[11 + 5 /* padding */] = {
 	0x1E, 0x21, 0x24, 0x27, 0x2A, 0x2D, 0x30, 0x33, 0x36, 0x39, 0x3C,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80434C98-80436A60 1DC7+01 rc=0 efc=0 .bss       j3dTexCoordTable                                             */
-u8 j3dTexCoordTable[7623 + 1 /* padding */];
+/* 80434C98-80436A60 1DC7+01 rc=1 efc=0 rfr=False None .bss       j3dTexCoordTable                                             */
+static u8 j3dTexCoordTable[7623 + 1 /* padding */];
 
-/* 80324194-8032423C 00A8+00 rc=0 efc=0 .text      makeTexCoordTable__Fv                                        */
+/* 80324194-8032423C 00A8+00 rc=1 efc=1 rfr=False None .text      makeTexCoordTable__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -471,13 +460,13 @@ asm void makeTexCoordTable() {
 
 
 /* ############################################################################################## */
-/* 80436A60-80436E60 0400+00 rc=0 efc=0 .bss       j3dTevSwapTableTable                                         */
+/* 80436A60-80436E60 0400+00 rc=4 efc=3 rfr=False None .bss       j3dTevSwapTableTable                                         */
 u8 j3dTevSwapTableTable[1024];
 
-/* 80436E60-80437160 0300+00 rc=0 efc=0 .bss       j3dAlphaCmpTable                                             */
+/* 80436E60-80437160 0300+00 rc=3 efc=2 rfr=False None .bss       j3dAlphaCmpTable                                             */
 u8 j3dAlphaCmpTable[768];
 
-/* 8032423C-803242A8 006C+00 rc=0 efc=0 .text      makeAlphaCmpTable__Fv                                        */
+/* 8032423C-803242A8 006C+00 rc=1 efc=1 rfr=False None .text      makeAlphaCmpTable__Fv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -489,10 +478,10 @@ asm void makeAlphaCmpTable() {
 
 
 /* ############################################################################################## */
-/* 80437160-804371C0 0060+00 rc=0 efc=0 .bss       j3dZModeTable                                                */
+/* 80437160-804371C0 0060+00 rc=5 efc=4 rfr=False None .bss       j3dZModeTable                                                */
 u8 j3dZModeTable[96];
 
-/* 803242A8-80324314 006C+00 rc=0 efc=0 .text      makeZModeTable__Fv                                           */
+/* 803242A8-80324314 006C+00 rc=1 efc=1 rfr=False None .text      makeZModeTable__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -503,7 +492,7 @@ asm void makeZModeTable() {
 #pragma pop
 
 
-/* 80324314-80324358 0044+00 rc=0 efc=0 .text      makeTevSwapTable__Fv                                         */
+/* 80324314-80324358 0044+00 rc=1 efc=1 rfr=False None .text      makeTevSwapTable__Fv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -514,7 +503,7 @@ asm void makeTevSwapTable() {
 #pragma pop
 
 
-/* 80324358-803243BC 0064+00 rc=0 efc=0 .text      loadTexMtx__9J3DTexMtxCFUl                                   */
+/* 80324358-803243BC 0064+00 rc=1 efc=0 rfr=False None .text      loadTexMtx__9J3DTexMtxCFUl                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -525,7 +514,7 @@ asm void J3DTexMtx::loadTexMtx(u32 field_0) const {
 #pragma pop
 
 
-/* 803243BC-8032441C 0060+00 rc=0 efc=0 .text      loadPostTexMtx__9J3DTexMtxCFUl                               */
+/* 803243BC-8032441C 0060+00 rc=1 efc=0 rfr=False None .text      loadPostTexMtx__9J3DTexMtxCFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -536,22 +525,22 @@ asm void J3DTexMtx::loadPostTexMtx(u32 field_0) const {
 #pragma pop
 
 
-/* 8032441C-8032499C 0580+00 rc=0 efc=0 .text      J3DGDLoadTexMtxImm__FPA4_fUl13_GXTexMtxType                  */
+/* 8032441C-8032499C 0580+00 rc=1 efc=0 rfr=False None .text      J3DGDLoadTexMtxImm__FPA4_fUl13_GXTexMtxType                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDLoadTexMtxImm(f32 (* field_0)[4], u32 field_1, _GXTexMtxType field_2) {
+asm static void J3DGDLoadTexMtxImm(f32 (* field_0)[4], u32 field_1, _GXTexMtxType field_2) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTevs/J3DGDLoadTexMtxImm__FPA4_fUl13_GXTexMtxType.s"
 }
 #pragma pop
 
 
-/* 8032499C-80324F08 056C+00 rc=0 efc=0 .text      J3DGDLoadPostTexMtxImm__FPA4_fUl                             */
+/* 8032499C-80324F08 056C+00 rc=1 efc=0 rfr=False None .text      J3DGDLoadPostTexMtxImm__FPA4_fUl                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void J3DGDLoadPostTexMtxImm(f32 (* field_0)[4], u32 field_1) {
+asm static void J3DGDLoadPostTexMtxImm(f32 (* field_0)[4], u32 field_1) {
 	nofralloc
 #include "asm/JSystem/J3DGraphBase/J3DTevs/J3DGDLoadPostTexMtxImm__FPA4_fUl.s"
 }
@@ -559,61 +548,61 @@ asm void J3DGDLoadPostTexMtxImm(f32 (* field_0)[4], u32 field_1) {
 
 
 /* ############################################################################################## */
-/* 804563C0-804563C4 0004+00 rc=0 efc=0 .sdata2    j3dDefaultColInfo                                            */
-u32 j3dDefaultColInfo = 0xFFFFFFFF;
+/* 804563C0-804563C4 0004+00 rc=4 efc=4 rfr=False None .sdata2    j3dDefaultColInfo                                            */
+SECTION_SDATA2 u32 j3dDefaultColInfo = 0xFFFFFFFF;
 
-/* 804563C4-804563C8 0004+00 rc=0 efc=0 .sdata2    j3dDefaultAmbInfo                                            */
-u32 j3dDefaultAmbInfo = 0x32323232;
+/* 804563C4-804563C8 0004+00 rc=2 efc=2 rfr=False None .sdata2    j3dDefaultAmbInfo                                            */
+SECTION_SDATA2 u32 j3dDefaultAmbInfo = 0x32323232;
 
-/* 804563C8-804563CC 0004+00 rc=0 efc=0 .sdata2    None                                                         */
-u32 data_804563C8 = 0x01000000;
+/* 804563C8-804563CC 0004+00 rc=1 efc=1 rfr=False None .sdata2    None                                                         */
+SECTION_SDATA2 u32 data_804563C8 = 0x01000000;
 
-/* 804563CC-804563D0 0004+00 rc=0 efc=0 .sdata2    j3dDefaultTevOrderInfoNull                                   */
-u32 j3dDefaultTevOrderInfoNull = 0xFFFFFF00;
+/* 804563CC-804563D0 0004+00 rc=3 efc=3 rfr=False None .sdata2    j3dDefaultTevOrderInfoNull                                   */
+SECTION_SDATA2 u32 j3dDefaultTevOrderInfoNull = 0xFFFFFF00;
 
-/* 804563D0-804563D4 0004+00 rc=0 efc=0 .sdata2    j3dDefaultIndTexOrderNull                                    */
-u32 j3dDefaultIndTexOrderNull = 0xFFFF0000;
+/* 804563D0-804563D4 0004+00 rc=2 efc=2 rfr=False None .sdata2    j3dDefaultIndTexOrderNull                                    */
+SECTION_SDATA2 u32 j3dDefaultIndTexOrderNull = 0xFFFF0000;
 
-/* 804563D4-804563D8 0004+00 rc=0 efc=0 .sdata2    j3dDefaultTevColor                                           */
-u32 j3dDefaultTevColor = 0x00FF00FF;
+/* 804563D4-804563D8 0004+00 rc=5 efc=5 rfr=False None .sdata2    j3dDefaultTevColor                                           */
+SECTION_SDATA2 u32 j3dDefaultTevColor = 0x00FF00FF;
 
-/* 804563D8-804563DC 0004+00 rc=0 efc=0 .sdata2    None                                                         */
-u32 data_804563D8 = 0x00FF00FF;
+/* 804563D8-804563DC 0004+00 rc=1 efc=1 rfr=False None .sdata2    None                                                         */
+SECTION_SDATA2 u32 data_804563D8 = 0x00FF00FF;
 
-/* 804563DC-804563E0 0004+00 rc=0 efc=0 .sdata2    j3dDefaultIndTexCoordScaleInfo                               */
-u8 j3dDefaultIndTexCoordScaleInfo[4] = {
+/* 804563DC-804563E0 0004+00 rc=2 efc=2 rfr=False None .sdata2    j3dDefaultIndTexCoordScaleInfo                               */
+SECTION_SDATA2 u8 j3dDefaultIndTexCoordScaleInfo[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804563E0-804563E4 0004+00 rc=0 efc=0 .sdata2    j3dDefaultTevKColor                                          */
-u32 j3dDefaultTevKColor = 0xFFFFFFFF;
+/* 804563E0-804563E4 0004+00 rc=5 efc=5 rfr=False None .sdata2    j3dDefaultTevKColor                                          */
+SECTION_SDATA2 u32 j3dDefaultTevKColor = 0xFFFFFFFF;
 
-/* 804563E4-804563E8 0004+00 rc=0 efc=0 .sdata2    j3dDefaultTevSwapMode                                        */
-u8 j3dDefaultTevSwapMode[4] = {
+/* 804563E4-804563E8 0004+00 rc=2 efc=2 rfr=False None .sdata2    j3dDefaultTevSwapMode                                        */
+SECTION_SDATA2 u8 j3dDefaultTevSwapMode[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804563E8-804563EC 0004+00 rc=0 efc=0 .sdata2    j3dDefaultTevSwapModeTable                                   */
-u32 j3dDefaultTevSwapModeTable = 0x00010203;
+/* 804563E8-804563EC 0004+00 rc=2 efc=2 rfr=False None .sdata2    j3dDefaultTevSwapModeTable                                   */
+SECTION_SDATA2 u32 j3dDefaultTevSwapModeTable = 0x00010203;
 
-/* 804563EC-804563F0 0004+00 rc=0 efc=0 .sdata2    j3dDefaultBlendInfo                                          */
-u32 j3dDefaultBlendInfo = 0x01040505;
+/* 804563EC-804563F0 0004+00 rc=3 efc=3 rfr=False None .sdata2    j3dDefaultBlendInfo                                          */
+SECTION_SDATA2 u32 j3dDefaultBlendInfo = 0x01040505;
 
-/* 804563F0-804563F8 0008+00 rc=0 efc=0 .sdata2    j3dDefaultColorChanInfo                                      */
-u8 j3dDefaultColorChanInfo[8] = {
+/* 804563F0-804563F8 0008+00 rc=3 efc=3 rfr=False None .sdata2    j3dDefaultColorChanInfo                                      */
+SECTION_SDATA2 u8 j3dDefaultColorChanInfo[8] = {
 	0x00, 0x00, 0x00, 0x02, 0x02, 0x00, 0xFF, 0xFF,
 };
 
-/* 804563F8-804563FC 0004+00 rc=0 efc=0 None       None                                                         */
-u8 struct_804563F8[4] = {
+/* 804563F8-804563FC 0004+00 rc=2 efc=2 rfr=False None .sdata2    None                                                         */
+SECTION_SDATA2 u8 struct_804563F8[4] = {
 	/* 804563F8 0002 data_804563F8 None */
 	0x1B, 0x00,
 	/* 804563FA 0002 data_804563FA j3dDefaultAlphaCmpID */
 	0x00, 0xE7,
 };
 
-/* 804563FC-80456400 0002+02 rc=0 efc=0 .sdata2    j3dDefaultZModeID                                            */
-u16 j3dDefaultZModeID[1 + 1 /* padding */] = {
+/* 804563FC-80456400 0002+02 rc=3 efc=3 rfr=False None .sdata2    j3dDefaultZModeID                                            */
+SECTION_SDATA2 u16 j3dDefaultZModeID[1 + 1 /* padding */] = {
 	0x0017,
 	/* padding */
 	0x0000,

@@ -71,7 +71,6 @@ extern "C" bool do_getSize__13JKRAssertHeapFPv(); // 1
 extern "C" bool do_getFreeSize__13JKRAssertHeapFv(); // 1
 extern "C" bool do_getMaxFreeBlock__13JKRAssertHeapFv(); // 1
 extern "C" bool do_getTotalFreeSize__13JKRAssertHeapFv(); // 1
-SECTION_DATA extern void* const __vt__13JKRAssertHeap[24];
 
 // 
 // External References:
@@ -88,42 +87,42 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void state_register__7JKRHeapCFPQ27JKRHeap6TStateUl(); // 1
 extern "C" void state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState(); // 1
 extern "C" void state_dump__7JKRHeapCFRCQ27JKRHeap6TState(); // 1
-SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];
+extern "C" extern u8 sRootHeap__7JKRHeap[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803CC090-803CC0F0 0060+00 rc=0 efc=0 .data      __vt__13JKRAssertHeap                                        */
-void* const __vt__13JKRAssertHeap[24] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__13JKRAssertHeapFv,
-	(void*)callAllDisposer__7JKRHeapFv,
-	(void*)getHeapType__13JKRAssertHeapFv,
-	(void*)check__13JKRAssertHeapFv,
-	(void*)dump_sort__13JKRAssertHeapFv,
-	(void*)dump__13JKRAssertHeapFv,
-	(void*)do_destroy__13JKRAssertHeapFv,
-	(void*)do_alloc__13JKRAssertHeapFUli,
-	(void*)do_free__13JKRAssertHeapFPv,
-	(void*)do_freeAll__13JKRAssertHeapFv,
-	(void*)do_freeTail__13JKRAssertHeapFv,
-	(void*)do_fillFreeArea__13JKRAssertHeapFv,
-	(void*)do_resize__13JKRAssertHeapFPvUl,
-	(void*)do_getSize__13JKRAssertHeapFPv,
-	(void*)do_getFreeSize__13JKRAssertHeapFv,
-	(void*)do_getMaxFreeBlock__13JKRAssertHeapFv,
-	(void*)do_getTotalFreeSize__13JKRAssertHeapFv,
-	(void*)do_changeGroupID__13JKRAssertHeapFUc,
-	(void*)do_getCurrentGroupId__13JKRAssertHeapFv,
-	(void*)state_register__7JKRHeapCFPQ27JKRHeap6TStateUl,
-	(void*)state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState,
-	(void*)state_dump__7JKRHeapCFRCQ27JKRHeap6TState,
+/* 803CC090-803CC0F0 0060+00 rc=2 efc=0 rfr=False None .data      __vt__13JKRAssertHeap                                        */
+SECTION_DATA static void* __vt__13JKRAssertHeap[24] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__13JKRAssertHeapFv,
+	/* 3    */ (void*)callAllDisposer__7JKRHeapFv,
+	/* 4    */ (void*)getHeapType__13JKRAssertHeapFv,
+	/* 5    */ (void*)check__13JKRAssertHeapFv,
+	/* 6    */ (void*)dump_sort__13JKRAssertHeapFv,
+	/* 7    */ (void*)dump__13JKRAssertHeapFv,
+	/* 8    */ (void*)do_destroy__13JKRAssertHeapFv,
+	/* 9    */ (void*)do_alloc__13JKRAssertHeapFUli,
+	/* 10   */ (void*)do_free__13JKRAssertHeapFPv,
+	/* 11   */ (void*)do_freeAll__13JKRAssertHeapFv,
+	/* 12   */ (void*)do_freeTail__13JKRAssertHeapFv,
+	/* 13   */ (void*)do_fillFreeArea__13JKRAssertHeapFv,
+	/* 14   */ (void*)do_resize__13JKRAssertHeapFPvUl,
+	/* 15   */ (void*)do_getSize__13JKRAssertHeapFPv,
+	/* 16   */ (void*)do_getFreeSize__13JKRAssertHeapFv,
+	/* 17   */ (void*)do_getMaxFreeBlock__13JKRAssertHeapFv,
+	/* 18   */ (void*)do_getTotalFreeSize__13JKRAssertHeapFv,
+	/* 19   */ (void*)do_changeGroupID__13JKRAssertHeapFUc,
+	/* 20   */ (void*)do_getCurrentGroupId__13JKRAssertHeapFv,
+	/* 21   */ (void*)state_register__7JKRHeapCFPQ27JKRHeap6TStateUl,
+	/* 22   */ (void*)state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState,
+	/* 23   */ (void*)state_dump__7JKRHeapCFRCQ27JKRHeap6TState,
 };
 
-/* 802D12C4-802D1300 003C+00 rc=0 efc=0 .text      __ct__13JKRAssertHeapFPvUlP7JKRHeapb                         */
+/* 802D12C4-802D1300 003C+00 rc=1 efc=0 rfr=False None .text      __ct__13JKRAssertHeapFPvUlP7JKRHeapb                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,7 +133,7 @@ asm JKRAssertHeap::JKRAssertHeap(void* field_0, u32 field_1, JKRHeap* field_2, b
 #pragma pop
 
 
-/* 802D1300-802D1368 0068+00 rc=0 efc=0 .text      __dt__13JKRAssertHeapFv                                      */
+/* 802D1300-802D1368 0068+00 rc=1 efc=0 rfr=False None .text      __dt__13JKRAssertHeapFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +144,7 @@ asm JKRAssertHeap::~JKRAssertHeap() {
 #pragma pop
 
 
-/* 802D1368-802D13D8 0070+00 rc=0 efc=0 .text      create__13JKRAssertHeapFP7JKRHeap                            */
+/* 802D1368-802D13D8 0070+00 rc=1 efc=1 rfr=False None .text      create__13JKRAssertHeapFP7JKRHeap                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +155,7 @@ asm void JKRAssertHeap::create(JKRHeap* field_0) {
 #pragma pop
 
 
-/* 802D13D8-802D1408 0030+00 rc=0 efc=0 .text      do_destroy__13JKRAssertHeapFv                                */
+/* 802D13D8-802D1408 0030+00 rc=1 efc=0 rfr=False None .text      do_destroy__13JKRAssertHeapFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +166,7 @@ asm void JKRAssertHeap::do_destroy() {
 #pragma pop
 
 
-/* 802D1408-802D1414 000C+00 rc=0 efc=0 .text      getHeapType__13JKRAssertHeapFv                               */
+/* 802D1408-802D1414 000C+00 rc=1 efc=0 rfr=False None .text      getHeapType__13JKRAssertHeapFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -178,91 +177,91 @@ asm void JKRAssertHeap::getHeapType() {
 #pragma pop
 
 
-/* 802D1414-802D141C 0008+00 rc=0 efc=0 .text      check__13JKRAssertHeapFv                                     */
+/* 802D1414-802D141C 0008+00 rc=1 efc=0 rfr=False None .text      check__13JKRAssertHeapFv                                     */
 bool JKRAssertHeap::check() {
 	return true;
 }
 
 
-/* 802D141C-802D1424 0008+00 rc=0 efc=0 .text      dump__13JKRAssertHeapFv                                      */
+/* 802D141C-802D1424 0008+00 rc=1 efc=0 rfr=False None .text      dump__13JKRAssertHeapFv                                      */
 bool JKRAssertHeap::dump() {
 	return true;
 }
 
 
-/* 802D1424-802D142C 0008+00 rc=0 efc=0 .text      dump_sort__13JKRAssertHeapFv                                 */
+/* 802D1424-802D142C 0008+00 rc=1 efc=0 rfr=False None .text      dump_sort__13JKRAssertHeapFv                                 */
 bool JKRAssertHeap::dump_sort() {
 	return true;
 }
 
 
-/* 802D142C-802D1434 0008+00 rc=0 efc=0 .text      do_changeGroupID__13JKRAssertHeapFUc                         */
+/* 802D142C-802D1434 0008+00 rc=1 efc=0 rfr=False None .text      do_changeGroupID__13JKRAssertHeapFUc                         */
 bool JKRAssertHeap::do_changeGroupID(u8 field_0) {
 	return false;
 }
 
 
-/* 802D1434-802D143C 0008+00 rc=0 efc=0 .text      do_getCurrentGroupId__13JKRAssertHeapFv                      */
+/* 802D1434-802D143C 0008+00 rc=1 efc=0 rfr=False None .text      do_getCurrentGroupId__13JKRAssertHeapFv                      */
 bool JKRAssertHeap::do_getCurrentGroupId() {
 	return false;
 }
 
 
-/* 802D143C-802D1444 0008+00 rc=0 efc=0 .text      do_alloc__13JKRAssertHeapFUli                                */
+/* 802D143C-802D1444 0008+00 rc=1 efc=0 rfr=False None .text      do_alloc__13JKRAssertHeapFUli                                */
 bool JKRAssertHeap::do_alloc(u32 field_0, int field_1) {
 	return false;
 }
 
 
-/* 802D1444-802D1448 0004+00 rc=0 efc=0 .text      do_free__13JKRAssertHeapFPv                                  */
+/* 802D1444-802D1448 0004+00 rc=1 efc=0 rfr=False None .text      do_free__13JKRAssertHeapFPv                                  */
 void JKRAssertHeap::do_free(void* field_0) {
 	/* empty function */
 }
 
 
-/* 802D1448-802D144C 0004+00 rc=0 efc=0 .text      do_freeAll__13JKRAssertHeapFv                                */
+/* 802D1448-802D144C 0004+00 rc=1 efc=0 rfr=False None .text      do_freeAll__13JKRAssertHeapFv                                */
 void JKRAssertHeap::do_freeAll() {
 	/* empty function */
 }
 
 
-/* 802D144C-802D1450 0004+00 rc=0 efc=0 .text      do_freeTail__13JKRAssertHeapFv                               */
+/* 802D144C-802D1450 0004+00 rc=1 efc=0 rfr=False None .text      do_freeTail__13JKRAssertHeapFv                               */
 void JKRAssertHeap::do_freeTail() {
 	/* empty function */
 }
 
 
-/* 802D1450-802D1454 0004+00 rc=0 efc=0 .text      do_fillFreeArea__13JKRAssertHeapFv                           */
+/* 802D1450-802D1454 0004+00 rc=1 efc=0 rfr=False None .text      do_fillFreeArea__13JKRAssertHeapFv                           */
 void JKRAssertHeap::do_fillFreeArea() {
 	/* empty function */
 }
 
 
-/* 802D1454-802D145C 0008+00 rc=0 efc=0 .text      do_resize__13JKRAssertHeapFPvUl                              */
+/* 802D1454-802D145C 0008+00 rc=1 efc=0 rfr=False None .text      do_resize__13JKRAssertHeapFPvUl                              */
 bool JKRAssertHeap::do_resize(void* field_0, u32 field_1) {
 	return false;
 }
 
 
-/* 802D145C-802D1464 0008+00 rc=0 efc=0 .text      do_getSize__13JKRAssertHeapFPv                               */
+/* 802D145C-802D1464 0008+00 rc=1 efc=0 rfr=False None .text      do_getSize__13JKRAssertHeapFPv                               */
 bool JKRAssertHeap::do_getSize(void* field_0) {
 	return false;
 }
 
 
-/* 802D1464-802D146C 0008+00 rc=0 efc=0 .text      do_getFreeSize__13JKRAssertHeapFv                            */
+/* 802D1464-802D146C 0008+00 rc=1 efc=0 rfr=False None .text      do_getFreeSize__13JKRAssertHeapFv                            */
 bool JKRAssertHeap::do_getFreeSize() {
 	return false;
 }
 
 
-/* 802D146C-802D1474 0008+00 rc=0 efc=0 .text      do_getMaxFreeBlock__13JKRAssertHeapFv                        */
+/* 802D146C-802D1474 0008+00 rc=1 efc=0 rfr=False None .text      do_getMaxFreeBlock__13JKRAssertHeapFv                        */
 bool JKRAssertHeap::do_getMaxFreeBlock() {
 	return false;
 }
 
 
-/* 802D1474-802D147C 0008+00 rc=0 efc=0 .text      do_getTotalFreeSize__13JKRAssertHeapFv                       */
+/* 802D1474-802D147C 0008+00 rc=1 efc=0 rfr=False None .text      do_getTotalFreeSize__13JKRAssertHeapFv                       */
 bool JKRAssertHeap::do_getTotalFreeSize() {
 	return false;
 }

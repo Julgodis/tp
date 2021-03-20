@@ -30,7 +30,6 @@ extern "C" void __ct__14daObj_SSBase_cFv(); // 1
 extern "C" void __dt__14daObj_SSBase_cFv(); // 1
 extern "C" void getProcessID__14daObj_SSBase_cFv(); // 1
 extern "C" void setSoldOut__14daObj_SSBase_cFv(); // 1
-SECTION_DATA extern void* const __vt__14daObj_SSBase_c[5 + 1 /* padding */];
 
 // 
 // External References:
@@ -47,18 +46,18 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803BA088-803BA0A0 0014+04 rc=0 efc=0 .data      __vt__14daObj_SSBase_c                                       */
-void* const __vt__14daObj_SSBase_c[5 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__14daObj_SSBase_cFv,
-	(void*)setSoldOut__14daObj_SSBase_cFv,
-	(void*)getProcessID__14daObj_SSBase_cFv,
+/* 803BA088-803BA0A0 0014+04 rc=2 efc=0 rfr=False None .data      __vt__14daObj_SSBase_c                                       */
+SECTION_DATA static void* __vt__14daObj_SSBase_c[5 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__14daObj_SSBase_cFv,
+	/* 3    */ (void*)setSoldOut__14daObj_SSBase_cFv,
+	/* 4    */ (void*)getProcessID__14daObj_SSBase_cFv,
 	/* padding */
 	NULL,
 };
 
-/* 8015E3F8-8015E450 0058+00 rc=0 efc=0 .text      __ct__14daObj_SSBase_cFv                                     */
+/* 8015E3F8-8015E450 0058+00 rc=0 efc=0 rfr=False None .text      __ct__14daObj_SSBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -69,7 +68,7 @@ asm daObj_SSBase_c::daObj_SSBase_c() {
 #pragma pop
 
 
-/* 8015E450-8015E4B0 0060+00 rc=0 efc=0 .text      __dt__14daObj_SSBase_cFv                                     */
+/* 8015E450-8015E4B0 0060+00 rc=1 efc=0 rfr=False None .text      __dt__14daObj_SSBase_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,7 +79,7 @@ asm daObj_SSBase_c::~daObj_SSBase_c() {
 #pragma pop
 
 
-/* 8015E4B0-8015E4C8 0018+00 rc=0 efc=0 .text      getProcessID__14daObj_SSBase_cFv                             */
+/* 8015E4B0-8015E4C8 0018+00 rc=1 efc=0 rfr=False None .text      getProcessID__14daObj_SSBase_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,7 +90,7 @@ asm void daObj_SSBase_c::getProcessID() {
 #pragma pop
 
 
-/* 8015E4C8-8015E4CC 0004+00 rc=0 efc=0 .text      setSoldOut__14daObj_SSBase_cFv                               */
+/* 8015E4C8-8015E4CC 0004+00 rc=1 efc=0 rfr=False None .text      setSoldOut__14daObj_SSBase_cFv                               */
 void daObj_SSBase_c::setSoldOut() {
 	/* empty function */
 }

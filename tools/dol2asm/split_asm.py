@@ -120,8 +120,8 @@ def main(debug, game_path):
     cpp_gen = True
     asm_gen = False
     mk_gen = False
-    symbols_gen = False
-    ref_gen = False
+    symbols_gen = True
+    ref_gen = True
     no_file_generation = False
     select_modules = [0]
 
@@ -129,7 +129,7 @@ def main(debug, game_path):
     asm_group_count = 16
 
     step_count = 1
-    process_count = 12
+    process_count = 7
 
     g.CONSOLE.print(f"dol2asm {g.VERSION} for '{g.GAME_NAME}'")
 
@@ -398,6 +398,73 @@ def main(debug, game_path):
     for section, symbol in require_resolve:
         symbol.resolve_references(main_context, symbol_table, section)
 
+
+    g.CONSOLE.print(f"{step_count:2} Validate symbols")
+    step_count += 1
+    for module in modules:
+        for lib in module.libraries.values():
+            for tu in lib.translation_units.values():
+                for section in tu.sections.values():
+                    new_symbols = []
+                    for symbol in section.symbols:
+                        if symbol._section == ".bss":
+                            if symbol.size + symbol.padding <= 8:
+                                main_context.warning(f"'{symbol.label}' ({symbol.size:04X}+{symbol.padding:02X}) is short enough to be placed in '.sbss' or '.sbss2', but the expected section is '.bss'. This translation unit could have been compiled with a different threshold (not 8). Force metrowerks to place the symbol in the right place.")
+                                symbol.force_section = ".bss"
+
+                        if symbol._section == ".sbss" or symbol._section == ".sbss2" or symbol._section == ".sdata" or symbol._section == ".sdata2":
+                            ssize = symbol.size
+                            spad = symbol.padding
+                            if symbol.size + symbol.padding > 8:
+                                if symbol.size <= 8:
+                                    pads = []
+                                    pad_addr = symbol.end
+                                    pad_off = 0
+                                    pad_size = symbol.padding
+                                    pad_data = symbol.padding_data
+
+                                    symbol.padding = ((symbol.size + 3) & (~3)) - symbol.size
+                                    symbol.padding_data = symbol.padding_data[0:symbol.padding]
+
+                                    pad_size -= symbol.padding
+                                    pad_data = pad_data[symbol.padding:]
+
+                                    while pad_size > 0:
+                                        max_size = min(pad_size, 8)
+                                        assert max_size % 4 == 0
+                                        if symbol.padding_data:
+                                            pads.append(ArbitraryData.create_with_data(
+                                                Identifier("pad", pad_addr, None), 
+                                                pad_addr, 
+                                                pad_data[pad_off:][:max_size], 
+                                                []))
+                                        else:
+                                            pads.append(ArbitraryData.create_without_data(
+                                                Identifier("pad", pad_addr, None),
+                                                pad_addr,
+                                                max_size,
+                                                0))
+
+                                        pad_addr += max_size
+                                        pad_off += max_size
+                                        pad_size -= max_size
+
+                                    main_context.warning(f"'{symbol.label}' ({ssize:04X}+{spad:02X}) truncating padding to fit in '{symbol._section}' section (threshold 8). created {len(pads)} new symbol(s) for padding, taking up {sum([x.size for x in pads])} bytes in total.")
+                                    new_symbols.extend(pads)
+                                else:
+                                    main_context.error(f"'{symbol.label}' ({ssize:04X}+{spad:02X}) is too large and does not fit in '{symbol._section}' section (threshold 8)")
+                    
+                    if new_symbols:
+                        for symbol in new_symbols:
+                            symbol.set_mlts(
+                                module.index,
+                                lib.name,
+                                tu.name,
+                                section.name
+                            )
+                        section.symbols.extend(new_symbols)
+                        section.symbols.sort(key=lambda x: (x.addr, x.size))
+
     if ref_gen:
         g.CONSOLE.print(f"{step_count:2} Calculate reference count")
         step_count += 1
@@ -490,7 +557,7 @@ def main(debug, game_path):
         if cpp_gen:
             for lib_name,lib in module.libraries.items():
                 for tu_name,tu in lib.translation_units.items():
-                    #if tu_name.endswith("JAUBankTable"):
+                    #if tu_name == "d/map/d_map_path_dmap":
                     cpp_tasks.append((tu,tu.source_path(lib),))
 
         if asm_gen:

@@ -29,13 +29,13 @@ extern "C" void cAPICPad_ANY_BUTTON__FUl(); // 1
 
 
 extern "C" void recalibrate__8mDoCPd_cFv(); // 1
-SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 
 // 
 // Declarations:
 // 
 
-/* 8026328C-802632AC 0020+00 rc=0 efc=0 .text      cAPICPad_recalibrate__Fv                                     */
+/* 8026328C-802632AC 0020+00 rc=3 efc=3 rfr=False None .text      cAPICPad_recalibrate__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -46,7 +46,7 @@ asm void cAPICPad_recalibrate() {
 #pragma pop
 
 
-/* 802632AC-802632C8 001C+00 rc=0 efc=0 .text      cAPICPad_ANY_BUTTON__FUl                                     */
+/* 802632AC-802632C8 001C+00 rc=3 efc=3 rfr=False None .text      cAPICPad_ANY_BUTTON__FUl                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

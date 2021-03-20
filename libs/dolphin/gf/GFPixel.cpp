@@ -38,13 +38,6 @@ void GFSetZMode(u8, _GXCompare, u8); // 2
 extern "C" void GFSetFog__F10_GXFogTypeffff8_GXColor(); // 1
 extern "C" void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc(); // 1
 extern "C" void GFSetZMode__FUc10_GXCompareUc(); // 1
-SECTION_SDATA2 extern u8 GFPixel__lit_293[4];
-SECTION_SDATA2 extern f32 GFPixel__lit_294;
-SECTION_SDATA2 extern f64 lit_295;
-SECTION_SDATA2 extern f32 lit_296[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 GFPixel__lit_297;
-SECTION_SDATA2 extern f32 lit_298[1 + 1 /* padding */];
-SECTION_SDATA2 extern f64 GFPixel__lit_301;
 
 // 
 // External References:
@@ -63,38 +56,38 @@ extern "C" void _restgpr_28(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80455F68-80455F6C 0004+00 rc=0 efc=0 .sdata2    @293                                                         */
-u8 GFPixel__lit_293[4] = {
+/* 80455F68-80455F6C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @293                                                         */
+SECTION_SDATA2 static u8 GFPixel__lit_293[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80455F6C-80455F70 0004+00 rc=0 efc=0 .sdata2    @294                                                         */
-f32 GFPixel__lit_294 = 0.5f;
+/* 80455F6C-80455F70 0004+00 rc=1 efc=0 rfr=False None .sdata2    @294                                                         */
+SECTION_SDATA2 static f32 GFPixel__lit_294 = 0.5f;
 
-/* 80455F70-80455F78 0008+00 rc=0 efc=0 .sdata2    @295                                                         */
-f64 lit_295 = 1.0;
+/* 80455F70-80455F78 0008+00 rc=1 efc=0 rfr=False None .sdata2    @295                                                         */
+SECTION_SDATA2 static f64 lit_295 = 1.0;
 
-/* 80455F78-80455F80 0004+04 rc=0 efc=0 .sdata2    @296                                                         */
-f32 lit_296[1 + 1 /* padding */] = {
+/* 80455F78-80455F80 0004+04 rc=1 efc=0 rfr=False None .sdata2    @296                                                         */
+SECTION_SDATA2 static f32 lit_296[1 + 1 /* padding */] = {
 	2.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455F80-80455F88 0008+00 rc=0 efc=0 .sdata2    @297                                                         */
-f64 GFPixel__lit_297 = 0.5;
+/* 80455F80-80455F88 0008+00 rc=1 efc=0 rfr=False None .sdata2    @297                                                         */
+SECTION_SDATA2 static f64 GFPixel__lit_297 = 0.5;
 
-/* 80455F88-80455F90 0004+04 rc=0 efc=0 .sdata2    @298                                                         */
-f32 lit_298[1 + 1 /* padding */] = {
+/* 80455F88-80455F90 0004+04 rc=1 efc=0 rfr=False None .sdata2    @298                                                         */
+SECTION_SDATA2 static f32 lit_298[1 + 1 /* padding */] = {
 	8388638.0f,
 	/* padding */
 	0.0f,
 };
 
-/* 80455F90-80455F98 0008+00 rc=0 efc=0 .sdata2    @301                                                         */
-f64 GFPixel__lit_301 = 4503601774854144.0 /* cast s32 to float */;
+/* 80455F90-80455F98 0008+00 rc=1 efc=0 rfr=False None .sdata2    @301                                                         */
+SECTION_SDATA2 static f64 GFPixel__lit_301 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 802CDE9C-802CE004 0168+00 rc=0 efc=0 .text      GFSetFog__F10_GXFogTypeffff8_GXColor                         */
+/* 802CDE9C-802CE004 0168+00 rc=1 efc=1 rfr=False None .text      GFSetFog__F10_GXFogTypeffff8_GXColor                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +98,7 @@ asm void GFSetFog(_GXFogType field_0, f32 field_1, f32 field_2, f32 field_3, f32
 #pragma pop
 
 
-/* 802CE004-802CE0A4 00A0+00 rc=0 efc=0 .text      GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc */
+/* 802CE004-802CE0A4 00A0+00 rc=1 efc=1 rfr=False None .text      GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +109,7 @@ asm void GFSetBlendModeEtc(_GXBlendMode field_0, _GXBlendFactor field_1, _GXBlen
 #pragma pop
 
 
-/* 802CE0A4-802CE0D0 002C+00 rc=0 efc=0 .text      GFSetZMode__FUc10_GXCompareUc                                */
+/* 802CE0A4-802CE0D0 002C+00 rc=1 efc=1 rfr=False None .text      GFSetZMode__FUc10_GXCompareUc                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

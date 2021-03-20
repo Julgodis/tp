@@ -53,7 +53,7 @@ extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ
 // Declarations:
 // 
 
-/* 802850AC-80285114 0068+00 rc=0 efc=0 .text      getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData */
+/* 802850AC-80285114 0068+00 rc=1 efc=1 rfr=False None .text      getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

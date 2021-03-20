@@ -57,15 +57,15 @@ struct JUTGamePad {
 // Forward References:
 // 
 
-extern "C" void func_8006F168(); // 1
-extern "C" void func_8006F184(); // 1
-extern "C" void func_8006F1A4(); // 1
-extern "C" void func_8006F1D8(); // 1
+extern "C" static void func_8006F168(); // 1
+extern "C" static void func_8006F184(); // 1
+extern "C" static void func_8006F1A4(); // 1
+extern "C" static void func_8006F1D8(); // 1
 
-extern "C" void func_8006F168(); // 1
-extern "C" void func_8006F184(); // 1
-extern "C" void func_8006F1A4(); // 1
-extern "C" void func_8006F1D8(); // 1
+extern "C" static void func_8006F168(); // 1
+extern "C" static void func_8006F184(); // 1
+extern "C" static void func_8006F1A4(); // 1
+extern "C" static void func_8006F1D8(); // 1
 extern "C" void Run__12dVibration_cFv(); // 1
 extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
@@ -77,9 +77,7 @@ extern "C" void setDefault__12dVibration_cFv(); // 1
 extern "C" void Init__12dVibration_cFv(); // 1
 extern "C" void Pause__12dVibration_cFv(); // 1
 extern "C" void Remove__12dVibration_cFv(); // 1
-SECTION_SBSS extern u8 data_80450F50[8];
-SECTION_SBSS extern u8 data_80450F58[8];
-SECTION_SDATA2 extern f64 d_d_vibration__lit_3756;
+extern "C" extern u8 data_80450F58[8];
 
 // 
 // External References:
@@ -111,44 +109,44 @@ extern "C" void _savegpr_26(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_RODATA extern const u8 MS_patt__12dVibration_c[88];
-SECTION_RODATA extern const u8 CS_patt__12dVibration_c[88];
-SECTION_RODATA extern const u8 MQ_patt__12dVibration_c[80];
-SECTION_RODATA extern const u8 CQ_patt__12dVibration_c[80];
-SECTION_BSS extern u8 m_gamePad__8mDoCPd_c[16];
-SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 const MS_patt__12dVibration_c[88];
+extern "C" extern u8 const CS_patt__12dVibration_c[88];
+extern "C" extern u8 const MQ_patt__12dVibration_c[80];
+extern "C" extern u8 const CQ_patt__12dVibration_c[80];
+extern "C" extern u8 m_gamePad__8mDoCPd_c[16];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
 // 
 
-/* 8006F168-8006F184 001C+00 rc=0 efc=0 .text      makedata__25@unnamed@d_vibration_cpp@FPUsUll                 */
+/* 8006F168-8006F184 001C+00 rc=1 efc=0 rfr=False None .text      makedata__25@unnamed@d_vibration_cpp@FPUsUll                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8006F168() {
+extern "C" asm static void func_8006F168() {
 	nofralloc
 #include "asm/d/d_vibration/func_8006F168.s"
 }
 #pragma pop
 
 
-/* 8006F184-8006F1A4 0020+00 rc=0 efc=0 .text      rollshift__25@unnamed@d_vibration_cpp@FUlll                  */
+/* 8006F184-8006F1A4 0020+00 rc=1 efc=0 rfr=False None .text      rollshift__25@unnamed@d_vibration_cpp@FUlll                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8006F184() {
+extern "C" asm static void func_8006F184() {
 	nofralloc
 #include "asm/d/d_vibration/func_8006F184.s"
 }
 #pragma pop
 
 
-/* 8006F1A4-8006F1D8 0034+00 rc=0 efc=0 .text      makebits__25@unnamed@d_vibration_cpp@FUlll                   */
+/* 8006F1A4-8006F1D8 0034+00 rc=2 efc=0 rfr=False None .text      makebits__25@unnamed@d_vibration_cpp@FUlll                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8006F1A4() {
+extern "C" asm static void func_8006F1A4() {
 	nofralloc
 #include "asm/d/d_vibration/func_8006F1A4.s"
 }
@@ -156,14 +154,14 @@ extern "C" asm void func_8006F1A4() {
 
 
 /* ############################################################################################## */
-/* 80452620-80452628 0008+00 rc=0 efc=0 .sdata2    @3756                                                        */
-f64 d_d_vibration__lit_3756 = 4503601774854144.0 /* cast s32 to float */;
+/* 80452620-80452628 0008+00 rc=1 efc=0 rfr=False None .sdata2    @3756                                                        */
+SECTION_SDATA2 static f64 d_d_vibration__lit_3756 = 4503601774854144.0 /* cast s32 to float */;
 
-/* 8006F1D8-8006F268 0090+00 rc=0 efc=0 .text      randombit__25@unnamed@d_vibration_cpp@Fll                    */
+/* 8006F1D8-8006F268 0090+00 rc=1 efc=0 rfr=False None .text      randombit__25@unnamed@d_vibration_cpp@Fll                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8006F1D8() {
+extern "C" asm static void func_8006F1D8() {
 	nofralloc
 #include "asm/d/d_vibration/func_8006F1D8.s"
 }
@@ -171,10 +169,10 @@ extern "C" asm void func_8006F1D8() {
 
 
 /* ############################################################################################## */
-/* 80450F50-80450F58 0008+00 rc=0 efc=0 .sbss      data$3831                                                    */
-u8 data_80450F50[8];
+/* 80450F50-80450F58 0008+00 rc=1 efc=0 rfr=False None .sbss      data$3831                                                    */
+static u8 data_80450F50[8];
 
-/* 8006F268-8006FA24 07BC+00 rc=0 efc=0 .text      Run__12dVibration_cFv                                        */
+/* 8006F268-8006FA24 07BC+00 rc=2 efc=2 rfr=False None .text      Run__12dVibration_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +183,7 @@ asm void dVibration_c::Run() {
 #pragma pop
 
 
-/* 8006FA24-8006FB10 00EC+00 rc=0 efc=0 .text      StartShock__12dVibration_cFii4cXyz                           */
+/* 8006FA24-8006FB10 00EC+00 rc=62 efc=62 rfr=False None .text      StartShock__12dVibration_cFii4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +194,7 @@ asm void dVibration_c::StartShock(int field_0, int field_1, cXyz field_2) {
 #pragma pop
 
 
-/* 8006FB10-8006FC0C 00FC+00 rc=0 efc=0 .text      StartQuake__12dVibration_cFii4cXyz                           */
+/* 8006FB10-8006FC0C 00FC+00 rc=8 efc=8 rfr=False None .text      StartQuake__12dVibration_cFii4cXyz                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -207,7 +205,7 @@ asm void dVibration_c::StartQuake(int field_0, int field_1, cXyz field_2) {
 #pragma pop
 
 
-/* 8006FC0C-8006FD94 0188+00 rc=0 efc=0 .text      StartQuake__12dVibration_cFPCUcii4cXyz                       */
+/* 8006FC0C-8006FD94 0188+00 rc=2 efc=2 rfr=False None .text      StartQuake__12dVibration_cFPCUcii4cXyz                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -218,7 +216,7 @@ asm void dVibration_c::StartQuake(u8 const* field_0, int field_1, int field_2, c
 #pragma pop
 
 
-/* 8006FD94-8006FE00 006C+00 rc=0 efc=0 .text      StopQuake__12dVibration_cFi                                  */
+/* 8006FD94-8006FE00 006C+00 rc=6 efc=6 rfr=False None .text      StopQuake__12dVibration_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,7 +227,7 @@ asm void dVibration_c::StopQuake(int field_0) {
 #pragma pop
 
 
-/* 8006FE00-8006FE5C 005C+00 rc=0 efc=0 .text      Kill__12dVibration_cFv                                       */
+/* 8006FE00-8006FE5C 005C+00 rc=2 efc=0 rfr=False None .text      Kill__12dVibration_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,7 +238,7 @@ asm void dVibration_c::Kill() {
 #pragma pop
 
 
-/* 8006FE5C-8006FE84 0028+00 rc=0 efc=0 .text      CheckQuake__12dVibration_cFv                                 */
+/* 8006FE5C-8006FE84 0028+00 rc=0 efc=0 rfr=False None .text      CheckQuake__12dVibration_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -251,7 +249,7 @@ asm void dVibration_c::CheckQuake() {
 #pragma pop
 
 
-/* 8006FE84-8006FF04 0080+00 rc=0 efc=0 .text      setDefault__12dVibration_cFv                                 */
+/* 8006FE84-8006FF04 0080+00 rc=2 efc=0 rfr=False None .text      setDefault__12dVibration_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -262,7 +260,7 @@ asm void dVibration_c::setDefault() {
 #pragma pop
 
 
-/* 8006FF04-8006FF38 0034+00 rc=0 efc=0 .text      Init__12dVibration_cFv                                       */
+/* 8006FF04-8006FF38 0034+00 rc=2 efc=2 rfr=False None .text      Init__12dVibration_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,7 +271,7 @@ asm void dVibration_c::Init() {
 #pragma pop
 
 
-/* 8006FF38-8006FFF8 00C0+00 rc=0 efc=0 .text      Pause__12dVibration_cFv                                      */
+/* 8006FF38-8006FFF8 00C0+00 rc=1 efc=1 rfr=False None .text      Pause__12dVibration_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -284,7 +282,7 @@ asm void dVibration_c::Pause() {
 #pragma pop
 
 
-/* 8006FFF8-80070018 0020+00 rc=0 efc=0 .text      Remove__12dVibration_cFv                                     */
+/* 8006FFF8-80070018 0020+00 rc=1 efc=1 rfr=False None .text      Remove__12dVibration_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -296,6 +294,6 @@ asm void dVibration_c::Remove() {
 
 
 /* ############################################################################################## */
-/* 80450F58-80450F60 0008+00 rc=0 efc=0 .sbss      None                                                         */
+/* 80450F58-80450F60 0008+00 rc=2 efc=2 rfr=False None .sbss      None                                                         */
 u8 data_80450F58[8];
 

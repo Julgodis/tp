@@ -26,10 +26,6 @@ struct JKRHeap {
 
 extern "C" void __ct__12JUTGraphFifoFUl(); // 1
 extern "C" void __dt__12JUTGraphFifoFv(); // 1
-SECTION_DATA extern void* const __vt__12JUTGraphFifo[3 + 1 /* padding */];
-SECTION_SBSS extern u8 data_804514B8[4];
-SECTION_SBSS extern u8 sCurrentFifo__12JUTGraphFifo[4];
-SECTION_SBSS extern u8 mGpStatus__12JUTGraphFifo[5 + 3 /* padding */];
 
 // 
 // External References:
@@ -54,29 +50,29 @@ extern "C" void GXSaveCPUFifo(); // 1
 extern "C" void GXGetGPStatus(); // 1
 extern "C" void _savegpr_26(); // 1
 extern "C" void _restgpr_26(); // 1
-SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803CC590-803CC5A0 000C+04 rc=0 efc=0 .data      __vt__12JUTGraphFifo                                         */
-void* const __vt__12JUTGraphFifo[3 + 1 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__12JUTGraphFifoFv,
+/* 803CC590-803CC5A0 000C+04 rc=2 efc=0 rfr=False None .data      __vt__12JUTGraphFifo                                         */
+SECTION_DATA static void* __vt__12JUTGraphFifo[3 + 1 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__12JUTGraphFifoFv,
 	/* padding */
 	NULL,
 };
 
-/* 804514B8-804514BC 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_804514B8[4];
+/* 804514B8-804514BC 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_804514B8[4];
 
-/* 804514BC-804514C0 0004+00 rc=0 efc=0 .sbss      sCurrentFifo__12JUTGraphFifo                                 */
-u8 sCurrentFifo__12JUTGraphFifo[4];
+/* 804514BC-804514C0 0004+00 rc=2 efc=0 rfr=False None .sbss      sCurrentFifo__12JUTGraphFifo                                 */
+static u8 sCurrentFifo__12JUTGraphFifo[4];
 
-/* 802DEB58-802DEC34 00DC+00 rc=0 efc=0 .text      __ct__12JUTGraphFifoFUl                                      */
+/* 802DEB58-802DEC34 00DC+00 rc=1 efc=1 rfr=False None .text      __ct__12JUTGraphFifoFUl                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -88,10 +84,10 @@ asm JUTGraphFifo::JUTGraphFifo(u32 field_0) {
 
 
 /* ############################################################################################## */
-/* 804514C0-804514C8 0005+03 rc=0 efc=0 .sbss      mGpStatus__12JUTGraphFifo                                    */
-u8 mGpStatus__12JUTGraphFifo[5 + 3 /* padding */];
+/* 804514C0-804514C8 0005+03 rc=1 efc=0 rfr=False None .sbss      mGpStatus__12JUTGraphFifo                                    */
+static u8 mGpStatus__12JUTGraphFifo[5 + 3 /* padding */];
 
-/* 802DEC34-802DECF8 00C4+00 rc=0 efc=0 .text      __dt__12JUTGraphFifoFv                                       */
+/* 802DEC34-802DECF8 00C4+00 rc=1 efc=0 rfr=False None .text      __dt__12JUTGraphFifoFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

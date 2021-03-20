@@ -17,11 +17,11 @@ struct draw_priority_class {
 // 
 
 void fpcDwPi_Get(draw_priority_class const*); // 2
-void fpcDwPi_Set(draw_priority_class*, s16); // 2
+static void fpcDwPi_Set(draw_priority_class*, s16); // 2
 void fpcDwPi_Init(draw_priority_class*, s16); // 2
 
 extern "C" void fpcDwPi_Get__FPC19draw_priority_class(); // 1
-extern "C" void fpcDwPi_Set__FP19draw_priority_classs(); // 1
+extern "C" static void fpcDwPi_Set__FP19draw_priority_classs(); // 1
 extern "C" void fpcDwPi_Init__FP19draw_priority_classs(); // 1
 
 // 
@@ -34,7 +34,7 @@ extern "C" void fpcDwPi_Init__FP19draw_priority_classs(); // 1
 // Declarations:
 // 
 
-/* 80021308-80021310 0008+00 rc=0 efc=0 .text      fpcDwPi_Get__FPC19draw_priority_class                        */
+/* 80021308-80021310 0008+00 rc=1 efc=1 rfr=False None .text      fpcDwPi_Get__FPC19draw_priority_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,18 +45,18 @@ asm void fpcDwPi_Get(draw_priority_class const* field_0) {
 #pragma pop
 
 
-/* 80021310-80021318 0008+00 rc=0 efc=0 .text      fpcDwPi_Set__FP19draw_priority_classs                        */
+/* 80021310-80021318 0008+00 rc=1 efc=0 rfr=False None .text      fpcDwPi_Set__FP19draw_priority_classs                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcDwPi_Set(draw_priority_class* field_0, s16 field_1) {
+asm static void fpcDwPi_Set(draw_priority_class* field_0, s16 field_1) {
 	nofralloc
 #include "asm/f_pc/f_pc_draw_priority/fpcDwPi_Set__FP19draw_priority_classs.s"
 }
 #pragma pop
 
 
-/* 80021318-80021338 0020+00 rc=0 efc=0 .text      fpcDwPi_Init__FP19draw_priority_classs                       */
+/* 80021318-80021338 0020+00 rc=1 efc=1 rfr=False None .text      fpcDwPi_Init__FP19draw_priority_classs                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

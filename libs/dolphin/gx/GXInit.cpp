@@ -9,46 +9,27 @@
 // Forward References:
 // 
 
-extern "C" void __GXDefaultTexRegionCallback(); // 1
-extern "C" void __GXDefaultTlutRegionCallback(); // 1
-extern "C" void __GXShutdown(); // 1
+extern "C" static void __GXDefaultTexRegionCallback(); // 1
+extern "C" static void __GXDefaultTlutRegionCallback(); // 1
+extern "C" static void __GXShutdown(); // 1
 extern "C" void __GXInitRevisionBits(); // 1
 extern "C" void GXInit(); // 1
-extern "C" void __GXInitGX(); // 1
+extern "C" static void __GXInitGX(); // 1
 
-extern "C" void __GXDefaultTexRegionCallback(); // 1
-extern "C" void __GXDefaultTlutRegionCallback(); // 1
-extern "C" void __GXShutdown(); // 1
+extern "C" static void __GXDefaultTexRegionCallback(); // 1
+extern "C" static void __GXDefaultTlutRegionCallback(); // 1
+extern "C" static void __GXShutdown(); // 1
 extern "C" void __GXInitRevisionBits(); // 1
 extern "C" void GXInit(); // 1
-extern "C" void __GXInitGX(); // 1
-SECTION_DATA extern u8 GXInit__lit_1[68 + 28 /* padding */];
-SECTION_DATA extern u8 DefaultTexData[32];
-SECTION_DATA extern u8 GXDefaultVATList[208];
-SECTION_DATA extern u8 GXDefaultProjData[28];
-SECTION_DATA extern u8 GXTexRegionAddrTable[192];
-SECTION_DATA extern void* GXResetFuncInfo[4 + 1 /* padding */];
-SECTION_BSS extern u8 FifoObj[128];
-SECTION_BSS extern u8 gxData[1456];
-SECTION_SDATA extern void* __GXVersion[1 + 1 /* padding */];
-SECTION_SBSS extern u8 __piReg[4];
-SECTION_SBSS extern u8 __cpReg[4];
-SECTION_SBSS extern u8 __peReg[4];
-SECTION_SBSS extern u8 __memReg[4];
-SECTION_SBSS extern u8 data_80451930[4 + 4 /* padding */];
-SECTION_SBSS extern u8 data_80451938[4];
-SECTION_SBSS extern u8 data_8045193C[4];
-SECTION_SBSS extern u8 data_80451940[4];
-SECTION_SBSS extern u8 data_80451944[4];
-SECTION_SDATA2 extern void* __GXData;
-SECTION_SDATA2 extern f32 GXInit__lit_267;
-SECTION_SDATA2 extern u8 GXInit__lit_268[4];
-SECTION_SDATA2 extern u32 GXInit__lit_269;
-SECTION_SDATA2 extern u8 GXInit__lit_270[4];
-SECTION_SDATA2 extern u32 GXInit__lit_271;
-SECTION_SDATA2 extern f32 lit_331;
-SECTION_SDATA2 extern f32 lit_332;
-SECTION_SDATA2 extern f64 lit_334;
+extern "C" static void __GXInitGX(); // 1
+extern "C" extern u8 DefaultTexData[32];
+extern "C" extern u8 GXDefaultVATList[208];
+extern "C" extern u8 GXDefaultProjData[28];
+extern "C" extern u8 __piReg[4];
+extern "C" extern u8 __cpReg[4];
+extern "C" extern u8 __peReg[4];
+extern "C" extern u8 __memReg[4];
+extern "C" extern void* __GXData;
 
 // 
 // External References:
@@ -249,35 +230,41 @@ extern "C" void GXSetScissorBoxOffset(); // 1
 extern "C" void GXSetClipMode(); // 1
 extern "C" void GXSetGPMetric(); // 1
 extern "C" void GXClearGPMetric(); // 1
-SECTION_DATA extern u8 GXNtsc480IntDf[60];
-SECTION_DATA extern u8 GXMpal480IntDf[60];
-SECTION_DATA extern u8 GXPal528IntDf[60];
-SECTION_DATA extern u8 GXEurgb60Hz480IntDf[60 + 4 /* padding */];
+extern "C" extern u8 GXNtsc480IntDf[60];
+extern "C" extern u8 GXMpal480IntDf[60];
+extern "C" extern u8 GXPal528IntDf[60];
+extern "C" extern u8 GXEurgb60Hz480IntDf[60 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80456580-80456584 0004+00 rc=0 efc=0 .sdata2    __GXData                                                     */
-void* __GXData = (void*)&gxData;
+/* 8044CE00-8044CE80 0080+00 rc=1 efc=0 rfr=False None .bss       FifoObj                                                      */
+static u8 FifoObj[128];
 
-/* 8035921C-80359318 00FC+00 rc=0 efc=0 .text      __GXDefaultTexRegionCallback                                 */
+/* 8044CE80-8044D430 05B0+00 rc=1 efc=0 rfr=False None .bss       gxData                                                       */
+static u8 gxData[1456];
+
+/* 80456580-80456584 0004+00 rc=114 efc=108 rfr=False None .sdata2    __GXData                                                     */
+SECTION_SDATA2 void* __GXData = (void*)&gxData;
+
+/* 8035921C-80359318 00FC+00 rc=1 efc=0 rfr=False None .text      __GXDefaultTexRegionCallback                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __GXDefaultTexRegionCallback() {
+extern "C" asm static void __GXDefaultTexRegionCallback() {
 	nofralloc
 #include "asm/dolphin/gx/GXInit/__GXDefaultTexRegionCallback.s"
 }
 #pragma pop
 
 
-/* 80359318-8035933C 0024+00 rc=0 efc=0 .text      __GXDefaultTlutRegionCallback                                */
+/* 80359318-8035933C 0024+00 rc=1 efc=0 rfr=False None .text      __GXDefaultTlutRegionCallback                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __GXDefaultTlutRegionCallback() {
+extern "C" asm static void __GXDefaultTlutRegionCallback() {
 	nofralloc
 #include "asm/dolphin/gx/GXInit/__GXDefaultTlutRegionCallback.s"
 }
@@ -285,42 +272,42 @@ extern "C" asm void __GXDefaultTlutRegionCallback() {
 
 
 /* ############################################################################################## */
-/* 80451920-80451924 0004+00 rc=0 efc=0 .sbss      __piReg                                                      */
+/* 80451920-80451924 0004+00 rc=3 efc=2 rfr=False None .sbss      __piReg                                                      */
 u8 __piReg[4];
 
-/* 80451924-80451928 0004+00 rc=0 efc=0 .sbss      __cpReg                                                      */
+/* 80451924-80451928 0004+00 rc=14 efc=12 rfr=False None .sbss      __cpReg                                                      */
 u8 __cpReg[4];
 
-/* 80451928-8045192C 0004+00 rc=0 efc=0 .sbss      __peReg                                                      */
+/* 80451928-8045192C 0004+00 rc=12 efc=11 rfr=False None .sbss      __peReg                                                      */
 u8 __peReg[4];
 
-/* 8045192C-80451930 0004+00 rc=0 efc=0 .sbss      __memReg                                                     */
+/* 8045192C-80451930 0004+00 rc=4 efc=2 rfr=False None .sbss      __memReg                                                     */
 u8 __memReg[4];
 
-/* 80451930-80451938 0004+04 rc=0 efc=0 .sbss      peCount$35                                                   */
-u8 data_80451930[4 + 4 /* padding */];
+/* 80451930-80451938 0004+04 rc=1 efc=0 rfr=False None .sbss      peCount$35                                                   */
+static u8 data_80451930[4 + 4 /* padding */];
 
-/* 80451938-8045193C 0004+00 rc=0 efc=0 .sbss      time$36                                                      */
-u8 data_80451938[4];
+/* 80451938-8045193C 0004+00 rc=1 efc=0 rfr=False None .sbss      time$36                                                      */
+static u8 data_80451938[4];
 
-/* 8045193C-80451940 0004+00 rc=0 efc=0 .sbss      None                                                         */
-u8 data_8045193C[4];
+/* 8045193C-80451940 0004+00 rc=1 efc=0 rfr=False None .sbss      None                                                         */
+static u8 data_8045193C[4];
 
-/* 80451940-80451944 0004+00 rc=0 efc=0 .sbss      calledOnce$37                                                */
-u8 data_80451940[4];
+/* 80451940-80451944 0004+00 rc=1 efc=0 rfr=False None .sbss      calledOnce$37                                                */
+static u8 data_80451940[4];
 
-/* 8035933C-803594CC 0190+00 rc=0 efc=0 .text      __GXShutdown                                                 */
+/* 8035933C-803594CC 0190+00 rc=1 efc=0 rfr=False None .text      __GXShutdown                                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __GXShutdown() {
+extern "C" asm static void __GXShutdown() {
 	nofralloc
 #include "asm/dolphin/gx/GXInit/__GXShutdown.s"
 }
 #pragma pop
 
 
-/* 803594CC-80359670 01A4+00 rc=0 efc=0 .text      __GXInitRevisionBits                                         */
+/* 803594CC-80359670 01A4+00 rc=2 efc=1 rfr=False None .text      __GXInitRevisionBits                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -332,8 +319,8 @@ extern "C" asm void __GXInitRevisionBits() {
 
 
 /* ############################################################################################## */
-/* 803D2040-803D20A0 0044+1C rc=0 efc=0 .data      @1                                                           */
-u8 GXInit__lit_1[68 + 28 /* padding */] = {
+/* 803D2040-803D20A0 0044+1C rc=2 efc=0 rfr=False None .data      @1                                                           */
+SECTION_DATA static u8 GXInit__lit_1[68 + 28 /* padding */] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x47, 0x58, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
 	0x64, 0x3A, 0x20, 0x4E, 0x6F, 0x76, 0x20, 0x31, 0x30, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30,
@@ -344,14 +331,14 @@ u8 GXInit__lit_1[68 + 28 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803D20A0-803D20C0 0020+00 rc=0 efc=0 .data      DefaultTexData                                               */
-u8 DefaultTexData[32] = {
+/* 803D20A0-803D20C0 0020+00 rc=0 efc=0 rfr=False None .data      DefaultTexData                                               */
+SECTION_DATA u8 DefaultTexData[32] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-/* 803D20C0-803D2190 00D0+00 rc=0 efc=0 .data      GXDefaultVATList                                             */
-u8 GXDefaultVATList[208] = {
+/* 803D20C0-803D2190 00D0+00 rc=0 efc=0 rfr=False None .data      GXDefaultVATList                                             */
+SECTION_DATA u8 GXDefaultVATList[208] = {
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x00,
@@ -367,14 +354,14 @@ u8 GXDefaultVATList[208] = {
 	0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803D2190-803D21AC 001C+00 rc=0 efc=0 .data      GXDefaultProjData                                            */
-u8 GXDefaultProjData[28] = {
+/* 803D2190-803D21AC 001C+00 rc=0 efc=0 rfr=False None .data      GXDefaultProjData                                            */
+SECTION_DATA u8 GXDefaultProjData[28] = {
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xBF, 0x80, 0x00, 0x00, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803D21AC-803D226C 00C0+00 rc=0 efc=0 .data      GXTexRegionAddrTable                                         */
-u8 GXTexRegionAddrTable[192] = {
+/* 803D21AC-803D226C 00C0+00 rc=1 efc=0 rfr=False None .data      GXTexRegionAddrTable                                         */
+SECTION_DATA static u8 GXTexRegionAddrTable[192] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00,
 	0x00, 0x04, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00,
 	0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x80, 0x00, 0x00, 0x02, 0x80, 0x00, 0x00, 0x03, 0x80, 0x00,
@@ -389,38 +376,35 @@ u8 GXTexRegionAddrTable[192] = {
 	0x00, 0x08, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00,
 };
 
-/* 803D226C-803D2280 0010+04 rc=0 efc=0 .data      GXResetFuncInfo                                              */
-void* GXResetFuncInfo[4 + 1 /* padding */] = {
-	(void*)__GXShutdown,
-	(void*)0x0000007F,
-	(void*)NULL,
-	(void*)NULL,
+/* 803D226C-803D2280 0010+04 rc=1 efc=0 rfr=False None .data      GXResetFuncInfo                                              */
+SECTION_DATA static void* GXResetFuncInfo[4 + 1 /* padding */] = {
+	/* 0    */ (void*)__GXShutdown,
+	/* 1    */ (void*)0x0000007F,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
 	/* padding */
 	NULL,
 };
 
-/* 8044CE00-8044CE80 0080+00 rc=0 efc=0 .bss       FifoObj                                                      */
-u8 FifoObj[128];
-
-/* 80450A78-80450A80 0004+04 rc=0 efc=0 .sdata     __GXVersion                                                  */
-void* __GXVersion[1 + 1 /* padding */] = {
-	(void*)&GXInit__lit_1,
+/* 80450A78-80450A80 0004+04 rc=1 efc=0 rfr=False None .sdata     __GXVersion                                                  */
+SECTION_SDATA static void* __GXVersion[1 + 1 /* padding */] = {
+	/* 0    */ (void*)&GXInit__lit_1,
 	/* padding */
 	NULL,
 };
 
-/* 80451944-80451948 0004+00 rc=0 efc=0 .sbss      resetFuncRegistered$145                                      */
-u8 data_80451944[4];
+/* 80451944-80451948 0004+00 rc=1 efc=0 rfr=False None .sbss      resetFuncRegistered$145                                      */
+static u8 data_80451944[4];
 
-/* 80456584-80456588 0004+00 rc=0 efc=0 .sdata2    @267                                                         */
-f32 GXInit__lit_267 = 16777216.0f;
+/* 80456584-80456588 0004+00 rc=1 efc=0 rfr=False None .sdata2    @267                                                         */
+SECTION_SDATA2 static f32 GXInit__lit_267 = 16777216.0f;
 
-/* 80456588-8045658C 0004+00 rc=0 efc=0 .sdata2    @268                                                         */
-u8 GXInit__lit_268[4] = {
+/* 80456588-8045658C 0004+00 rc=2 efc=0 rfr=False None .sdata2    @268                                                         */
+SECTION_SDATA2 static u8 GXInit__lit_268[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80359670-80359C70 0600+00 rc=0 efc=0 .text      GXInit                                                       */
+/* 80359670-80359C70 0600+00 rc=2 efc=2 rfr=False None .text      GXInit                                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -432,38 +416,34 @@ extern "C" asm void GXInit() {
 
 
 /* ############################################################################################## */
-/* 8045658C-80456590 0004+00 rc=0 efc=0 .sdata2    @269                                                         */
-u32 GXInit__lit_269 = 0x404040FF;
+/* 8045658C-80456590 0004+00 rc=1 efc=0 rfr=False None .sdata2    @269                                                         */
+SECTION_SDATA2 static u32 GXInit__lit_269 = 0x404040FF;
 
-/* 80456590-80456594 0004+00 rc=0 efc=0 .sdata2    @270                                                         */
-u8 GXInit__lit_270[4] = {
+/* 80456590-80456594 0004+00 rc=1 efc=0 rfr=False None .sdata2    @270                                                         */
+SECTION_SDATA2 static u8 GXInit__lit_270[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456594-80456598 0004+00 rc=0 efc=0 .sdata2    @271                                                         */
-u32 GXInit__lit_271 = 0xFFFFFFFF;
+/* 80456594-80456598 0004+00 rc=1 efc=0 rfr=False None .sdata2    @271                                                         */
+SECTION_SDATA2 static u32 GXInit__lit_271 = 0xFFFFFFFF;
 
-/* 80456598-8045659C 0004+00 rc=0 efc=0 .sdata2    @331                                                         */
-f32 lit_331 = 1.0f;
+/* 80456598-8045659C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @331                                                         */
+SECTION_SDATA2 static f32 lit_331 = 1.0f;
 
-/* 8045659C-804565A0 0004+00 rc=0 efc=0 .sdata2    @332                                                         */
-f32 lit_332 = 1.0f / 10.0f;
+/* 8045659C-804565A0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @332                                                         */
+SECTION_SDATA2 static f32 lit_332 = 1.0f / 10.0f;
 
-/* 804565A0-804565A8 0008+00 rc=0 efc=0 .sdata2    @334                                                         */
-f64 lit_334 = 4503599627370496.0 /* cast u32 to float */;
+/* 804565A0-804565A8 0008+00 rc=1 efc=0 rfr=False None .sdata2    @334                                                         */
+SECTION_SDATA2 static f64 lit_334 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80359C70-8035A5A8 0938+00 rc=0 efc=0 .text      __GXInitGX                                                   */
+/* 80359C70-8035A5A8 0938+00 rc=1 efc=0 rfr=False None .text      __GXInitGX                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void __GXInitGX() {
+extern "C" asm static void __GXInitGX() {
 	nofralloc
 #include "asm/dolphin/gx/GXInit/__GXInitGX.s"
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 8044CE80-8044D430 05B0+00 rc=0 efc=0 .bss       gxData                                                       */
-u8 gxData[1456];
 

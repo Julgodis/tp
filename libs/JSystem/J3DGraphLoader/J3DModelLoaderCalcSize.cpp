@@ -9,28 +9,28 @@
 // Types:
 // 
 
-struct J3DEnvelopeBlock {
+struct J3DModelInfoBlock {
 };
 
-struct J3DMaterialDLBlock {
-};
-
-struct J3DTextureBlock {
-};
-
-struct J3DShapeBlock {
+struct J3DMaterialBlock {
 };
 
 struct J3DJointBlock {
 };
 
-struct J3DModelInfoBlock {
+struct J3DMaterialDLBlock {
+};
+
+struct J3DShapeBlock {
+};
+
+struct J3DEnvelopeBlock {
 };
 
 struct J3DDrawBlock {
 };
 
-struct J3DMaterialBlock {
+struct J3DTextureBlock {
 };
 
 struct J3DModelLoader {
@@ -93,7 +93,7 @@ extern "C" void calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlock
 extern "C" void calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock(); // 1
 extern "C" void calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl(); // 1
 extern "C" void calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl(); // 1
-SECTION_RODATA extern const char* const J3DModelLoaderCalcSize__stringBase0;
+extern "C" extern char const* const J3DModelLoaderCalcSize__stringBase0;
 
 // 
 // External References:
@@ -132,7 +132,7 @@ extern "C" void _restgpr_28(); // 1
 // Declarations:
 // 
 
-/* 80336794-803367D4 0040+00 rc=0 efc=0 .text      countMaterialNum__14J3DModelLoaderFPCv                       */
+/* 80336794-803367D4 0040+00 rc=3 efc=3 rfr=False None .text      countMaterialNum__14J3DModelLoaderFPCv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,16 +144,16 @@ asm void J3DModelLoader::countMaterialNum(void const* field_0) {
 
 
 /* ############################################################################################## */
-/* 803A20E8-803A2100 0014+04 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 803A20E8-803A2100 0014+04 rc=3 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_803A20E8 = "Unknown data block\n";
+SECTION_DEAD static char const* const stringBase_803A20E8 = "Unknown data block\n";
 /* @stringBase0 padding */
-char* const pad_803A20FC = "\0\0\0";
+SECTION_DEAD static char const* const pad_803A20FC = "\0\0\0";
 #pragma pop
 
-/* 803367D4-803369A0 01CC+00 rc=0 efc=0 .text      calcLoadSize__14J3DModelLoaderFPCvUl                         */
+/* 803367D4-803369A0 01CC+00 rc=3 efc=3 rfr=False None .text      calcLoadSize__14J3DModelLoaderFPCvUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -164,7 +164,7 @@ asm void J3DModelLoader::calcLoadSize(void const* field_0, u32 field_1) {
 #pragma pop
 
 
-/* 803369A0-80336A98 00F8+00 rc=0 efc=0 .text      calcLoadMaterialTableSize__14J3DModelLoaderFPCv              */
+/* 803369A0-80336A98 00F8+00 rc=3 efc=3 rfr=False None .text      calcLoadMaterialTableSize__14J3DModelLoaderFPCv              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,7 +175,7 @@ asm void J3DModelLoader::calcLoadMaterialTableSize(void const* field_0) {
 #pragma pop
 
 
-/* 80336A98-80336CD8 0240+00 rc=0 efc=0 .text      calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl        */
+/* 80336A98-80336CD8 0240+00 rc=3 efc=3 rfr=False None .text      calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -186,7 +186,7 @@ asm void J3DModelLoader::calcLoadBinaryDisplayListSize(void const* field_0, u32 
 #pragma pop
 
 
-/* 80336CD8-80336D64 008C+00 rc=0 efc=0 .text      calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl */
+/* 80336CD8-80336D64 008C+00 rc=2 efc=0 rfr=False None .text      calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -197,7 +197,7 @@ asm void J3DModelLoader::calcSizeInformation(J3DModelInfoBlock const* field_0, u
 #pragma pop
 
 
-/* 80336D64-80336D90 002C+00 rc=0 efc=0 .text      calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock            */
+/* 80336D64-80336D90 002C+00 rc=2 efc=0 rfr=False None .text      calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -208,7 +208,7 @@ asm void J3DModelLoader::calcSizeJoint(J3DJointBlock const* field_0) {
 #pragma pop
 
 
-/* 80336D90-80336DA0 0010+00 rc=0 efc=0 .text      calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock      */
+/* 80336D90-80336DA0 0010+00 rc=2 efc=0 rfr=False None .text      calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -219,7 +219,7 @@ asm void J3DModelLoader::calcSizeEnvelope(J3DEnvelopeBlock const* field_0) {
 #pragma pop
 
 
-/* 80336DA0-80336DB4 0014+00 rc=0 efc=0 .text      calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock              */
+/* 80336DA0-80336DB4 0014+00 rc=2 efc=0 rfr=False None .text      calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -230,7 +230,7 @@ asm void J3DModelLoader::calcSizeDraw(J3DDrawBlock const* field_0) {
 #pragma pop
 
 
-/* 80336DB4-80336EA0 00EC+00 rc=0 efc=0 .text      calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl */
+/* 80336DB4-80336EA0 00EC+00 rc=1 efc=1 rfr=False None .text      calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,7 +241,7 @@ asm void J3DModelLoader_v26::calcSizeMaterial(J3DMaterialBlock const* field_0, u
 #pragma pop
 
 
-/* 80336EA0-80336F44 00A4+00 rc=0 efc=0 .text      calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl          */
+/* 80336EA0-80336F44 00A4+00 rc=2 efc=0 rfr=False None .text      calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -252,7 +252,7 @@ asm void J3DModelLoader::calcSizeShape(J3DShapeBlock const* field_0, u32 field_1
 #pragma pop
 
 
-/* 80336F44-80336F60 001C+00 rc=0 efc=0 .text      calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock        */
+/* 80336F44-80336F60 001C+00 rc=3 efc=0 rfr=False None .text      calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -263,7 +263,7 @@ asm void J3DModelLoader::calcSizeTexture(J3DTextureBlock const* field_0) {
 #pragma pop
 
 
-/* 80336F60-80336FF0 0090+00 rc=0 efc=0 .text      calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl */
+/* 80336F60-80336FF0 0090+00 rc=1 efc=1 rfr=False None .text      calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -274,7 +274,7 @@ asm void J3DModelLoader_v26::calcSizeMaterialTable(J3DMaterialBlock const* field
 #pragma pop
 
 
-/* 80336FF0-80337010 0020+00 rc=0 efc=0 .text      calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock   */
+/* 80336FF0-80337010 0020+00 rc=1 efc=0 rfr=False None .text      calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -285,7 +285,7 @@ asm void J3DModelLoader::calcSizeTextureTable(J3DTextureBlock const* field_0) {
 #pragma pop
 
 
-/* 80337010-803370A0 0090+00 rc=0 efc=0 .text      calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl */
+/* 80337010-803370A0 0090+00 rc=1 efc=0 rfr=False None .text      calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -296,7 +296,7 @@ asm void J3DModelLoader::calcSizePatchedMaterial(J3DMaterialBlock const* field_0
 #pragma pop
 
 
-/* 803370A0-80337178 00D8+00 rc=0 efc=0 .text      calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl */
+/* 803370A0-80337178 00D8+00 rc=1 efc=0 rfr=False None .text      calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -39,15 +39,14 @@ struct cM3dGLin {
 // Forward References:
 // 
 
-extern "C" void func_80267F80(); // 1
+extern "C" static void func_80267F80(); // 1
 
 extern "C" void __ct__11cBgS_LinChkFv(); // 1
 extern "C" void __dt__11cBgS_LinChkFv(); // 1
 extern "C" void ct__11cBgS_LinChkFv(); // 1
 extern "C" void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi(); // 1
 extern "C" void PreCalc__11cBgS_LinChkFv(); // 1
-extern "C" void func_80267F80(); // 1
-SECTION_DATA extern void* const __vt__11cBgS_LinChk[6];
+extern "C" static void func_80267F80(); // 1
 
 // 
 // External References:
@@ -66,25 +65,25 @@ extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_DATA extern void* const __vt__8cM3dGLin[3];
-SECTION_BSS extern f32 Zero__4cXyz[3];
+extern "C" extern void* __vt__8cM3dGLin[3];
+extern "C" extern f32 Zero__4cXyz[3];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C3FA8-803C3FC0 0018+00 rc=0 efc=0 .data      __vt__11cBgS_LinChk                                          */
-void* const __vt__11cBgS_LinChk[6] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11cBgS_LinChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80267F80,
+/* 803C3FA8-803C3FC0 0018+00 rc=2 efc=0 rfr=False None .data      __vt__11cBgS_LinChk                                          */
+SECTION_DATA static void* __vt__11cBgS_LinChk[6] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11cBgS_LinChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_80267F80,
 };
 
-/* 80267D5C-80267DBC 0060+00 rc=0 efc=0 .text      __ct__11cBgS_LinChkFv                                        */
+/* 80267D5C-80267DBC 0060+00 rc=2 efc=2 rfr=False None .text      __ct__11cBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +94,7 @@ asm cBgS_LinChk::cBgS_LinChk() {
 #pragma pop
 
 
-/* 80267DBC-80267E48 008C+00 rc=0 efc=0 .text      __dt__11cBgS_LinChkFv                                        */
+/* 80267DBC-80267E48 008C+00 rc=4 efc=2 rfr=False None .text      __dt__11cBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,7 +105,7 @@ asm cBgS_LinChk::~cBgS_LinChk() {
 #pragma pop
 
 
-/* 80267E48-80267ED0 0088+00 rc=0 efc=0 .text      ct__11cBgS_LinChkFv                                          */
+/* 80267E48-80267ED0 0088+00 rc=1 efc=0 rfr=False None .text      ct__11cBgS_LinChkFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -117,7 +116,7 @@ asm void cBgS_LinChk::ct() {
 #pragma pop
 
 
-/* 80267ED0-80267F40 0070+00 rc=0 efc=0 .text      Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi                         */
+/* 80267ED0-80267F40 0070+00 rc=2 efc=2 rfr=False None .text      Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -128,7 +127,7 @@ asm void cBgS_LinChk::Set2(cXyz const* field_0, cXyz const* field_1, u32 field_2
 #pragma pop
 
 
-/* 80267F40-80267F80 0040+00 rc=0 efc=0 .text      PreCalc__11cBgS_LinChkFv                                     */
+/* 80267F40-80267F80 0040+00 rc=1 efc=1 rfr=False None .text      PreCalc__11cBgS_LinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,11 +138,11 @@ asm void cBgS_LinChk::PreCalc() {
 #pragma pop
 
 
-/* 80267F80-80267F88 0008+00 rc=0 efc=0 .text      @20@__dt__11cBgS_LinChkFv                                    */
+/* 80267F80-80267F88 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__11cBgS_LinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80267F80() {
+extern "C" asm static void func_80267F80() {
 	nofralloc
 #include "asm/SSystem/SComponent/c_bg_s_lin_chk/func_80267F80.s"
 }

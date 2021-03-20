@@ -14,12 +14,6 @@ extern "C" void C_MTXOrtho(); // 1
 
 extern "C" void C_MTXPerspective(); // 1
 extern "C" void C_MTXOrtho(); // 1
-SECTION_SDATA2 extern f32 mtx44__lit_99;
-SECTION_SDATA2 extern f32 mtx44__lit_100;
-SECTION_SDATA2 extern u8 mtx44__lit_101[4];
-SECTION_SDATA2 extern f32 mtx44__lit_102;
-SECTION_SDATA2 extern f32 mtx44__lit_105;
-SECTION_SDATA2 extern f32 mtx44__lit_106;
 
 // 
 // External References:
@@ -34,27 +28,27 @@ extern "C" void tanf(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80456528-8045652C 0004+00 rc=0 efc=0 .sdata2    @99                                                          */
-f32 mtx44__lit_99 = 1.0f;
+/* 80456528-8045652C 0004+00 rc=2 efc=0 rfr=False None .sdata2    @99                                                          */
+SECTION_SDATA2 static f32 mtx44__lit_99 = 1.0f;
 
-/* 8045652C-80456530 0004+00 rc=0 efc=0 .sdata2    @100                                                         */
-f32 mtx44__lit_100 = 2.0f;
+/* 8045652C-80456530 0004+00 rc=1 efc=0 rfr=False None .sdata2    @100                                                         */
+SECTION_SDATA2 static f32 mtx44__lit_100 = 2.0f;
 
-/* 80456530-80456534 0004+00 rc=0 efc=0 .sdata2    @101                                                         */
-u8 mtx44__lit_101[4] = {
+/* 80456530-80456534 0004+00 rc=2 efc=0 rfr=False None .sdata2    @101                                                         */
+SECTION_SDATA2 static u8 mtx44__lit_101[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80456534-80456538 0004+00 rc=0 efc=0 .sdata2    @102                                                         */
-f32 mtx44__lit_102 = -1.0f;
+/* 80456534-80456538 0004+00 rc=2 efc=0 rfr=False None .sdata2    @102                                                         */
+SECTION_SDATA2 static f32 mtx44__lit_102 = -1.0f;
 
-/* 80456538-8045653C 0004+00 rc=0 efc=0 .sdata2    @105                                                         */
-f32 mtx44__lit_105 = 0.5f;
+/* 80456538-8045653C 0004+00 rc=1 efc=0 rfr=False None .sdata2    @105                                                         */
+SECTION_SDATA2 static f32 mtx44__lit_105 = 0.5f;
 
-/* 8045653C-80456540 0004+00 rc=0 efc=0 .sdata2    @106                                                         */
-f32 mtx44__lit_106 = 0.01745329238474369f;
+/* 8045653C-80456540 0004+00 rc=1 efc=0 rfr=False None .sdata2    @106                                                         */
+SECTION_SDATA2 static f32 mtx44__lit_106 = 0.01745329238474369f;
 
-/* 80346F28-80346FF8 00D0+00 rc=0 efc=0 .text      C_MTXPerspective                                             */
+/* 80346F28-80346FF8 00D0+00 rc=6 efc=6 rfr=False None .text      C_MTXPerspective                                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +59,7 @@ extern "C" asm void C_MTXPerspective() {
 #pragma pop
 
 
-/* 80346FF8-80347090 0098+00 rc=0 efc=0 .text      C_MTXOrtho                                                   */
+/* 80346FF8-80347090 0098+00 rc=11 efc=11 rfr=False None .text      C_MTXOrtho                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

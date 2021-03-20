@@ -9,10 +9,10 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct fopAc_ac_c {
 };
 
 struct dBgS_LinChk {
@@ -94,36 +94,36 @@ struct cBgS_LinChk {
 // Forward References:
 // 
 
-extern "C" void func_80078534(); // 1
-extern "C" void func_8007853C(); // 1
-extern "C" void func_80078544(); // 1
-extern "C" void func_8007854C(); // 1
-extern "C" void func_80078554(); // 1
-extern "C" void func_8007855C(); // 1
-extern "C" void func_80078564(); // 1
-extern "C" void func_8007856C(); // 1
-extern "C" void func_80078574(); // 1
-extern "C" void func_8007857C(); // 1
-extern "C" void func_80078584(); // 1
-extern "C" void func_8007858C(); // 1
-extern "C" void func_80078594(); // 1
-extern "C" void func_8007859C(); // 1
-extern "C" void func_800785A4(); // 1
-extern "C" void func_800785AC(); // 1
-extern "C" void func_800785B4(); // 1
-extern "C" void func_800785BC(); // 1
-extern "C" void func_800785C4(); // 1
-extern "C" void func_800785CC(); // 1
-extern "C" void func_800785D4(); // 1
-extern "C" void func_800785DC(); // 1
-extern "C" void func_800785E4(); // 1
-extern "C" void func_800785EC(); // 1
-extern "C" void func_800785F4(); // 1
-extern "C" void func_800785FC(); // 1
-extern "C" void func_80078604(); // 1
-extern "C" void func_8007860C(); // 1
-extern "C" void func_80078614(); // 1
-extern "C" void func_8007861C(); // 1
+extern "C" static void func_80078534(); // 1
+extern "C" static void func_8007853C(); // 1
+extern "C" static void func_80078544(); // 1
+extern "C" static void func_8007854C(); // 1
+extern "C" static void func_80078554(); // 1
+extern "C" static void func_8007855C(); // 1
+extern "C" static void func_80078564(); // 1
+extern "C" static void func_8007856C(); // 1
+extern "C" static void func_80078574(); // 1
+extern "C" static void func_8007857C(); // 1
+extern "C" static void func_80078584(); // 1
+extern "C" static void func_8007858C(); // 1
+extern "C" static void func_80078594(); // 1
+extern "C" static void func_8007859C(); // 1
+extern "C" static void func_800785A4(); // 1
+extern "C" static void func_800785AC(); // 1
+extern "C" static void func_800785B4(); // 1
+extern "C" static void func_800785BC(); // 1
+extern "C" static void func_800785C4(); // 1
+extern "C" static void func_800785CC(); // 1
+extern "C" static void func_800785D4(); // 1
+extern "C" static void func_800785DC(); // 1
+extern "C" static void func_800785E4(); // 1
+extern "C" static void func_800785EC(); // 1
+extern "C" static void func_800785F4(); // 1
+extern "C" static void func_800785FC(); // 1
+extern "C" static void func_80078604(); // 1
+extern "C" static void func_8007860C(); // 1
+extern "C" static void func_80078614(); // 1
+extern "C" static void func_8007861C(); // 1
 
 extern "C" void __ct__11dBgS_LinChkFv(); // 1
 extern "C" void __dt__11dBgS_LinChkFv(); // 1
@@ -146,46 +146,36 @@ extern "C" void __ct__15dBgS_RopeLinChkFv(); // 1
 extern "C" void __dt__15dBgS_RopeLinChkFv(); // 1
 extern "C" void __ct__16dBgS_HorseLinChkFv(); // 1
 extern "C" void __dt__16dBgS_HorseLinChkFv(); // 1
-extern "C" void func_80078534(); // 1
-extern "C" void func_8007853C(); // 1
-extern "C" void func_80078544(); // 1
-extern "C" void func_8007854C(); // 1
-extern "C" void func_80078554(); // 1
-extern "C" void func_8007855C(); // 1
-extern "C" void func_80078564(); // 1
-extern "C" void func_8007856C(); // 1
-extern "C" void func_80078574(); // 1
-extern "C" void func_8007857C(); // 1
-extern "C" void func_80078584(); // 1
-extern "C" void func_8007858C(); // 1
-extern "C" void func_80078594(); // 1
-extern "C" void func_8007859C(); // 1
-extern "C" void func_800785A4(); // 1
-extern "C" void func_800785AC(); // 1
-extern "C" void func_800785B4(); // 1
-extern "C" void func_800785BC(); // 1
-extern "C" void func_800785C4(); // 1
-extern "C" void func_800785CC(); // 1
-extern "C" void func_800785D4(); // 1
-extern "C" void func_800785DC(); // 1
-extern "C" void func_800785E4(); // 1
-extern "C" void func_800785EC(); // 1
-extern "C" void func_800785F4(); // 1
-extern "C" void func_800785FC(); // 1
-extern "C" void func_80078604(); // 1
-extern "C" void func_8007860C(); // 1
-extern "C" void func_80078614(); // 1
-extern "C" void func_8007861C(); // 1
-SECTION_DATA extern void* const __vt__16dBgS_HorseLinChk[12];
-SECTION_DATA extern void* const __vt__15dBgS_RopeLinChk[12];
-SECTION_DATA extern void* const __vt__20dBgS_BoomerangLinChk[12];
-SECTION_DATA extern void* const __vt__16dBgS_ArrowLinChk[12];
-SECTION_DATA extern void* const __vt__15dBgS_BombLinChk[12];
-SECTION_DATA extern void* const __vt__15dBgS_LinkLinChk[12];
-SECTION_DATA extern void* const __vt__14dBgS_ObjLinChk[12];
-SECTION_DATA extern void* const __vt__21dBgS_CamLinChk_NorWtr[12];
-SECTION_DATA extern void* const __vt__14dBgS_CamLinChk[12];
-SECTION_DATA extern void* const __vt__11dBgS_LinChk[12];
+extern "C" static void func_80078534(); // 1
+extern "C" static void func_8007853C(); // 1
+extern "C" static void func_80078544(); // 1
+extern "C" static void func_8007854C(); // 1
+extern "C" static void func_80078554(); // 1
+extern "C" static void func_8007855C(); // 1
+extern "C" static void func_80078564(); // 1
+extern "C" static void func_8007856C(); // 1
+extern "C" static void func_80078574(); // 1
+extern "C" static void func_8007857C(); // 1
+extern "C" static void func_80078584(); // 1
+extern "C" static void func_8007858C(); // 1
+extern "C" static void func_80078594(); // 1
+extern "C" static void func_8007859C(); // 1
+extern "C" static void func_800785A4(); // 1
+extern "C" static void func_800785AC(); // 1
+extern "C" static void func_800785B4(); // 1
+extern "C" static void func_800785BC(); // 1
+extern "C" static void func_800785C4(); // 1
+extern "C" static void func_800785CC(); // 1
+extern "C" static void func_800785D4(); // 1
+extern "C" static void func_800785DC(); // 1
+extern "C" static void func_800785E4(); // 1
+extern "C" static void func_800785EC(); // 1
+extern "C" static void func_800785F4(); // 1
+extern "C" static void func_800785FC(); // 1
+extern "C" static void func_80078604(); // 1
+extern "C" static void func_8007860C(); // 1
+extern "C" static void func_80078614(); // 1
+extern "C" static void func_8007861C(); // 1
 
 // 
 // External References:
@@ -215,167 +205,167 @@ extern "C" void __dl__FPv(); // 1
 // 
 
 /* ############################################################################################## */
-/* 803AB7C0-803AB7F0 0030+00 rc=0 efc=0 .data      __vt__16dBgS_HorseLinChk                                     */
-void* const __vt__16dBgS_HorseLinChk[12] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__16dBgS_HorseLinChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_8007860C,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_8007861C,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80078614,
+/* 803AB7C0-803AB7F0 0030+00 rc=2 efc=0 rfr=False None .data      __vt__16dBgS_HorseLinChk                                     */
+SECTION_DATA static void* __vt__16dBgS_HorseLinChk[12] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__16dBgS_HorseLinChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_8007860C,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)func_8007861C,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)func_80078614,
 };
 
-/* 803AB7F0-803AB820 0030+00 rc=0 efc=0 .data      __vt__15dBgS_RopeLinChk                                      */
-void* const __vt__15dBgS_RopeLinChk[12] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__15dBgS_RopeLinChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785F4,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80078604,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785FC,
+/* 803AB7F0-803AB820 0030+00 rc=2 efc=0 rfr=False None .data      __vt__15dBgS_RopeLinChk                                      */
+SECTION_DATA static void* __vt__15dBgS_RopeLinChk[12] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__15dBgS_RopeLinChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_800785F4,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)func_80078604,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)func_800785FC,
 };
 
-/* 803AB820-803AB850 0030+00 rc=0 efc=0 .data      __vt__20dBgS_BoomerangLinChk                                 */
-void* const __vt__20dBgS_BoomerangLinChk[12] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__20dBgS_BoomerangLinChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785DC,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785EC,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785E4,
+/* 803AB820-803AB850 0030+00 rc=2 efc=0 rfr=False None .data      __vt__20dBgS_BoomerangLinChk                                 */
+SECTION_DATA static void* __vt__20dBgS_BoomerangLinChk[12] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__20dBgS_BoomerangLinChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_800785DC,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)func_800785EC,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)func_800785E4,
 };
 
-/* 803AB850-803AB880 0030+00 rc=0 efc=0 .data      __vt__16dBgS_ArrowLinChk                                     */
-void* const __vt__16dBgS_ArrowLinChk[12] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__16dBgS_ArrowLinChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785C4,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785D4,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785CC,
+/* 803AB850-803AB880 0030+00 rc=2 efc=0 rfr=False None .data      __vt__16dBgS_ArrowLinChk                                     */
+SECTION_DATA static void* __vt__16dBgS_ArrowLinChk[12] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__16dBgS_ArrowLinChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_800785C4,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)func_800785D4,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)func_800785CC,
 };
 
-/* 803AB880-803AB8B0 0030+00 rc=0 efc=0 .data      __vt__15dBgS_BombLinChk                                      */
-void* const __vt__15dBgS_BombLinChk[12] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__15dBgS_BombLinChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785AC,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785BC,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785B4,
+/* 803AB880-803AB8B0 0030+00 rc=2 efc=0 rfr=False None .data      __vt__15dBgS_BombLinChk                                      */
+SECTION_DATA static void* __vt__15dBgS_BombLinChk[12] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__15dBgS_BombLinChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_800785AC,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)func_800785BC,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)func_800785B4,
 };
 
-/* 803AB8B0-803AB8E0 0030+00 rc=0 efc=0 .data      __vt__15dBgS_LinkLinChk                                      */
-void* const __vt__15dBgS_LinkLinChk[12] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__15dBgS_LinkLinChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80078594,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_800785A4,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_8007859C,
+/* 803AB8B0-803AB8E0 0030+00 rc=2 efc=0 rfr=False None .data      __vt__15dBgS_LinkLinChk                                      */
+SECTION_DATA static void* __vt__15dBgS_LinkLinChk[12] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__15dBgS_LinkLinChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_80078594,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)func_800785A4,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)func_8007859C,
 };
 
-/* 803AB8E0-803AB910 0030+00 rc=0 efc=0 .data      __vt__14dBgS_ObjLinChk                                       */
-void* const __vt__14dBgS_ObjLinChk[12] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__14dBgS_ObjLinChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_8007857C,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_8007858C,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80078584,
+/* 803AB8E0-803AB910 0030+00 rc=2 efc=0 rfr=False None .data      __vt__14dBgS_ObjLinChk                                       */
+SECTION_DATA static void* __vt__14dBgS_ObjLinChk[12] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__14dBgS_ObjLinChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_8007857C,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)func_8007858C,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)func_80078584,
 };
 
-/* 803AB910-803AB940 0030+00 rc=0 efc=0 .data      __vt__21dBgS_CamLinChk_NorWtr                                */
-void* const __vt__21dBgS_CamLinChk_NorWtr[12] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__21dBgS_CamLinChk_NorWtrFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80078564,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80078574,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_8007856C,
+/* 803AB910-803AB940 0030+00 rc=2 efc=0 rfr=False None .data      __vt__21dBgS_CamLinChk_NorWtr                                */
+SECTION_DATA static void* __vt__21dBgS_CamLinChk_NorWtr[12] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__21dBgS_CamLinChk_NorWtrFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_80078564,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)func_80078574,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)func_8007856C,
 };
 
-/* 803AB940-803AB970 0030+00 rc=0 efc=0 .data      __vt__14dBgS_CamLinChk                                       */
-void* const __vt__14dBgS_CamLinChk[12] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__14dBgS_CamLinChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_8007854C,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_8007855C,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80078554,
+/* 803AB940-803AB970 0030+00 rc=2 efc=0 rfr=False None .data      __vt__14dBgS_CamLinChk                                       */
+SECTION_DATA static void* __vt__14dBgS_CamLinChk[12] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__14dBgS_CamLinChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_8007854C,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)func_8007855C,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)func_80078554,
 };
 
-/* 803AB970-803AB9A0 0030+00 rc=0 efc=0 .data      __vt__11dBgS_LinChk                                          */
-void* const __vt__11dBgS_LinChk[12] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__11dBgS_LinChkFv,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80078534,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_80078544,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)func_8007853C,
+/* 803AB970-803AB9A0 0030+00 rc=2 efc=0 rfr=False None .data      __vt__11dBgS_LinChk                                          */
+SECTION_DATA static void* __vt__11dBgS_LinChk[12] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__11dBgS_LinChkFv,
+	/* 3    */ (void*)NULL,
+	/* 4    */ (void*)NULL,
+	/* 5    */ (void*)func_80078534,
+	/* 6    */ (void*)NULL,
+	/* 7    */ (void*)NULL,
+	/* 8    */ (void*)func_80078544,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)func_8007853C,
 };
 
-/* 80077C68-80077CDC 0074+00 rc=0 efc=0 .text      __ct__11dBgS_LinChkFv                                        */
+/* 80077C68-80077CDC 0074+00 rc=11 efc=3 rfr=False None .text      __ct__11dBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -386,7 +376,7 @@ asm dBgS_LinChk::dBgS_LinChk() {
 #pragma pop
 
 
-/* 80077CDC-80077D64 0088+00 rc=0 efc=0 .text      __dt__11dBgS_LinChkFv                                        */
+/* 80077CDC-80077D64 0088+00 rc=17 efc=5 rfr=False None .text      __dt__11dBgS_LinChkFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -397,7 +387,7 @@ asm dBgS_LinChk::~dBgS_LinChk() {
 #pragma pop
 
 
-/* 80077D64-80077DA4 0040+00 rc=0 efc=0 .text      Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c              */
+/* 80077D64-80077DA4 0040+00 rc=15 efc=15 rfr=False None .text      Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -408,7 +398,7 @@ asm void dBgS_LinChk::Set(cXyz const* field_0, cXyz const* field_1, fopAc_ac_c c
 #pragma pop
 
 
-/* 80077DA4-80077E00 005C+00 rc=0 efc=0 .text      __ct__14dBgS_CamLinChkFv                                     */
+/* 80077DA4-80077E00 005C+00 rc=13 efc=12 rfr=False None .text      __ct__14dBgS_CamLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -419,7 +409,7 @@ asm dBgS_CamLinChk::dBgS_CamLinChk() {
 #pragma pop
 
 
-/* 80077E00-80077E78 0078+00 rc=0 efc=0 .text      __dt__14dBgS_CamLinChkFv                                     */
+/* 80077E00-80077E78 0078+00 rc=17 efc=12 rfr=False None .text      __dt__14dBgS_CamLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -430,7 +420,7 @@ asm dBgS_CamLinChk::~dBgS_CamLinChk() {
 #pragma pop
 
 
-/* 80077E78-80077EE4 006C+00 rc=0 efc=0 .text      __ct__21dBgS_CamLinChk_NorWtrFv                              */
+/* 80077E78-80077EE4 006C+00 rc=0 efc=0 rfr=False None .text      __ct__21dBgS_CamLinChk_NorWtrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -441,7 +431,7 @@ asm dBgS_CamLinChk_NorWtr::dBgS_CamLinChk_NorWtr() {
 #pragma pop
 
 
-/* 80077EE4-80077F5C 0078+00 rc=0 efc=0 .text      __dt__21dBgS_CamLinChk_NorWtrFv                              */
+/* 80077EE4-80077F5C 0078+00 rc=4 efc=0 rfr=False None .text      __dt__21dBgS_CamLinChk_NorWtrFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -452,7 +442,7 @@ asm dBgS_CamLinChk_NorWtr::~dBgS_CamLinChk_NorWtr() {
 #pragma pop
 
 
-/* 80077F5C-80077FB8 005C+00 rc=0 efc=0 .text      __ct__14dBgS_ObjLinChkFv                                     */
+/* 80077F5C-80077FB8 005C+00 rc=4 efc=4 rfr=False None .text      __ct__14dBgS_ObjLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -463,7 +453,7 @@ asm dBgS_ObjLinChk::dBgS_ObjLinChk() {
 #pragma pop
 
 
-/* 80077FB8-80078030 0078+00 rc=0 efc=0 .text      __dt__14dBgS_ObjLinChkFv                                     */
+/* 80077FB8-80078030 0078+00 rc=6 efc=2 rfr=False None .text      __dt__14dBgS_ObjLinChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -474,7 +464,7 @@ asm dBgS_ObjLinChk::~dBgS_ObjLinChk() {
 #pragma pop
 
 
-/* 80078030-8007808C 005C+00 rc=0 efc=0 .text      __ct__15dBgS_LinkLinChkFv                                    */
+/* 80078030-8007808C 005C+00 rc=1 efc=1 rfr=False None .text      __ct__15dBgS_LinkLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -485,7 +475,7 @@ asm dBgS_LinkLinChk::dBgS_LinkLinChk() {
 #pragma pop
 
 
-/* 8007808C-80078104 0078+00 rc=0 efc=0 .text      __dt__15dBgS_LinkLinChkFv                                    */
+/* 8007808C-80078104 0078+00 rc=5 efc=1 rfr=False None .text      __dt__15dBgS_LinkLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -496,7 +486,7 @@ asm dBgS_LinkLinChk::~dBgS_LinkLinChk() {
 #pragma pop
 
 
-/* 80078104-80078160 005C+00 rc=0 efc=0 .text      __ct__15dBgS_BombLinChkFv                                    */
+/* 80078104-80078160 005C+00 rc=0 efc=0 rfr=False None .text      __ct__15dBgS_BombLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -507,7 +497,7 @@ asm dBgS_BombLinChk::dBgS_BombLinChk() {
 #pragma pop
 
 
-/* 80078160-800781D8 0078+00 rc=0 efc=0 .text      __dt__15dBgS_BombLinChkFv                                    */
+/* 80078160-800781D8 0078+00 rc=4 efc=0 rfr=False None .text      __dt__15dBgS_BombLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -518,7 +508,7 @@ asm dBgS_BombLinChk::~dBgS_BombLinChk() {
 #pragma pop
 
 
-/* 800781D8-80078240 0068+00 rc=0 efc=0 .text      __ct__16dBgS_ArrowLinChkFv                                   */
+/* 800781D8-80078240 0068+00 rc=1 efc=1 rfr=False None .text      __ct__16dBgS_ArrowLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -529,7 +519,7 @@ asm dBgS_ArrowLinChk::dBgS_ArrowLinChk() {
 #pragma pop
 
 
-/* 80078240-800782B8 0078+00 rc=0 efc=0 .text      __dt__16dBgS_ArrowLinChkFv                                   */
+/* 80078240-800782B8 0078+00 rc=5 efc=1 rfr=False None .text      __dt__16dBgS_ArrowLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -540,7 +530,7 @@ asm dBgS_ArrowLinChk::~dBgS_ArrowLinChk() {
 #pragma pop
 
 
-/* 800782B8-80078314 005C+00 rc=0 efc=0 .text      __ct__20dBgS_BoomerangLinChkFv                               */
+/* 800782B8-80078314 005C+00 rc=1 efc=1 rfr=False None .text      __ct__20dBgS_BoomerangLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,7 +541,7 @@ asm dBgS_BoomerangLinChk::dBgS_BoomerangLinChk() {
 #pragma pop
 
 
-/* 80078314-8007838C 0078+00 rc=0 efc=0 .text      __dt__20dBgS_BoomerangLinChkFv                               */
+/* 80078314-8007838C 0078+00 rc=5 efc=1 rfr=False None .text      __dt__20dBgS_BoomerangLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -562,7 +552,7 @@ asm dBgS_BoomerangLinChk::~dBgS_BoomerangLinChk() {
 #pragma pop
 
 
-/* 8007838C-800783E8 005C+00 rc=0 efc=0 .text      __ct__15dBgS_RopeLinChkFv                                    */
+/* 8007838C-800783E8 005C+00 rc=1 efc=1 rfr=False None .text      __ct__15dBgS_RopeLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,7 +563,7 @@ asm dBgS_RopeLinChk::dBgS_RopeLinChk() {
 #pragma pop
 
 
-/* 800783E8-80078460 0078+00 rc=0 efc=0 .text      __dt__15dBgS_RopeLinChkFv                                    */
+/* 800783E8-80078460 0078+00 rc=5 efc=1 rfr=False None .text      __dt__15dBgS_RopeLinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -584,7 +574,7 @@ asm dBgS_RopeLinChk::~dBgS_RopeLinChk() {
 #pragma pop
 
 
-/* 80078460-800784BC 005C+00 rc=0 efc=0 .text      __ct__16dBgS_HorseLinChkFv                                   */
+/* 80078460-800784BC 005C+00 rc=0 efc=0 rfr=False None .text      __ct__16dBgS_HorseLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,7 +585,7 @@ asm dBgS_HorseLinChk::dBgS_HorseLinChk() {
 #pragma pop
 
 
-/* 800784BC-80078534 0078+00 rc=0 efc=0 .text      __dt__16dBgS_HorseLinChkFv                                   */
+/* 800784BC-80078534 0078+00 rc=4 efc=0 rfr=False None .text      __dt__16dBgS_HorseLinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -606,330 +596,330 @@ asm dBgS_HorseLinChk::~dBgS_HorseLinChk() {
 #pragma pop
 
 
-/* 80078534-8007853C 0008+00 rc=0 efc=0 .text      @20@__dt__11dBgS_LinChkFv                                    */
+/* 80078534-8007853C 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__11dBgS_LinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80078534() {
+extern "C" asm static void func_80078534() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078534.s"
 }
 #pragma pop
 
 
-/* 8007853C-80078544 0008+00 rc=0 efc=0 .text      @104@__dt__11dBgS_LinChkFv                                   */
+/* 8007853C-80078544 0008+00 rc=1 efc=0 rfr=False None .text      @104@__dt__11dBgS_LinChkFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8007853C() {
+extern "C" asm static void func_8007853C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007853C.s"
 }
 #pragma pop
 
 
-/* 80078544-8007854C 0008+00 rc=0 efc=0 .text      @88@__dt__11dBgS_LinChkFv                                    */
+/* 80078544-8007854C 0008+00 rc=1 efc=0 rfr=False None .text      @88@__dt__11dBgS_LinChkFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80078544() {
+extern "C" asm static void func_80078544() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078544.s"
 }
 #pragma pop
 
 
-/* 8007854C-80078554 0008+00 rc=0 efc=0 .text      @20@__dt__14dBgS_CamLinChkFv                                 */
+/* 8007854C-80078554 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__14dBgS_CamLinChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8007854C() {
+extern "C" asm static void func_8007854C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007854C.s"
 }
 #pragma pop
 
 
-/* 80078554-8007855C 0008+00 rc=0 efc=0 .text      @104@__dt__14dBgS_CamLinChkFv                                */
+/* 80078554-8007855C 0008+00 rc=1 efc=0 rfr=False None .text      @104@__dt__14dBgS_CamLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80078554() {
+extern "C" asm static void func_80078554() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078554.s"
 }
 #pragma pop
 
 
-/* 8007855C-80078564 0008+00 rc=0 efc=0 .text      @88@__dt__14dBgS_CamLinChkFv                                 */
+/* 8007855C-80078564 0008+00 rc=1 efc=0 rfr=False None .text      @88@__dt__14dBgS_CamLinChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8007855C() {
+extern "C" asm static void func_8007855C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007855C.s"
 }
 #pragma pop
 
 
-/* 80078564-8007856C 0008+00 rc=0 efc=0 .text      @20@__dt__21dBgS_CamLinChk_NorWtrFv                          */
+/* 80078564-8007856C 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__21dBgS_CamLinChk_NorWtrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80078564() {
+extern "C" asm static void func_80078564() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078564.s"
 }
 #pragma pop
 
 
-/* 8007856C-80078574 0008+00 rc=0 efc=0 .text      @104@__dt__21dBgS_CamLinChk_NorWtrFv                         */
+/* 8007856C-80078574 0008+00 rc=1 efc=0 rfr=False None .text      @104@__dt__21dBgS_CamLinChk_NorWtrFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8007856C() {
+extern "C" asm static void func_8007856C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007856C.s"
 }
 #pragma pop
 
 
-/* 80078574-8007857C 0008+00 rc=0 efc=0 .text      @88@__dt__21dBgS_CamLinChk_NorWtrFv                          */
+/* 80078574-8007857C 0008+00 rc=1 efc=0 rfr=False None .text      @88@__dt__21dBgS_CamLinChk_NorWtrFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80078574() {
+extern "C" asm static void func_80078574() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078574.s"
 }
 #pragma pop
 
 
-/* 8007857C-80078584 0008+00 rc=0 efc=0 .text      @20@__dt__14dBgS_ObjLinChkFv                                 */
+/* 8007857C-80078584 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__14dBgS_ObjLinChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8007857C() {
+extern "C" asm static void func_8007857C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007857C.s"
 }
 #pragma pop
 
 
-/* 80078584-8007858C 0008+00 rc=0 efc=0 .text      @104@__dt__14dBgS_ObjLinChkFv                                */
+/* 80078584-8007858C 0008+00 rc=1 efc=0 rfr=False None .text      @104@__dt__14dBgS_ObjLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80078584() {
+extern "C" asm static void func_80078584() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078584.s"
 }
 #pragma pop
 
 
-/* 8007858C-80078594 0008+00 rc=0 efc=0 .text      @88@__dt__14dBgS_ObjLinChkFv                                 */
+/* 8007858C-80078594 0008+00 rc=1 efc=0 rfr=False None .text      @88@__dt__14dBgS_ObjLinChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8007858C() {
+extern "C" asm static void func_8007858C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007858C.s"
 }
 #pragma pop
 
 
-/* 80078594-8007859C 0008+00 rc=0 efc=0 .text      @20@__dt__15dBgS_LinkLinChkFv                                */
+/* 80078594-8007859C 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__15dBgS_LinkLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80078594() {
+extern "C" asm static void func_80078594() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078594.s"
 }
 #pragma pop
 
 
-/* 8007859C-800785A4 0008+00 rc=0 efc=0 .text      @104@__dt__15dBgS_LinkLinChkFv                               */
+/* 8007859C-800785A4 0008+00 rc=1 efc=0 rfr=False None .text      @104@__dt__15dBgS_LinkLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8007859C() {
+extern "C" asm static void func_8007859C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007859C.s"
 }
 #pragma pop
 
 
-/* 800785A4-800785AC 0008+00 rc=0 efc=0 .text      @88@__dt__15dBgS_LinkLinChkFv                                */
+/* 800785A4-800785AC 0008+00 rc=1 efc=0 rfr=False None .text      @88@__dt__15dBgS_LinkLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785A4() {
+extern "C" asm static void func_800785A4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785A4.s"
 }
 #pragma pop
 
 
-/* 800785AC-800785B4 0008+00 rc=0 efc=0 .text      @20@__dt__15dBgS_BombLinChkFv                                */
+/* 800785AC-800785B4 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__15dBgS_BombLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785AC() {
+extern "C" asm static void func_800785AC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785AC.s"
 }
 #pragma pop
 
 
-/* 800785B4-800785BC 0008+00 rc=0 efc=0 .text      @104@__dt__15dBgS_BombLinChkFv                               */
+/* 800785B4-800785BC 0008+00 rc=1 efc=0 rfr=False None .text      @104@__dt__15dBgS_BombLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785B4() {
+extern "C" asm static void func_800785B4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785B4.s"
 }
 #pragma pop
 
 
-/* 800785BC-800785C4 0008+00 rc=0 efc=0 .text      @88@__dt__15dBgS_BombLinChkFv                                */
+/* 800785BC-800785C4 0008+00 rc=1 efc=0 rfr=False None .text      @88@__dt__15dBgS_BombLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785BC() {
+extern "C" asm static void func_800785BC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785BC.s"
 }
 #pragma pop
 
 
-/* 800785C4-800785CC 0008+00 rc=0 efc=0 .text      @20@__dt__16dBgS_ArrowLinChkFv                               */
+/* 800785C4-800785CC 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__16dBgS_ArrowLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785C4() {
+extern "C" asm static void func_800785C4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785C4.s"
 }
 #pragma pop
 
 
-/* 800785CC-800785D4 0008+00 rc=0 efc=0 .text      @104@__dt__16dBgS_ArrowLinChkFv                              */
+/* 800785CC-800785D4 0008+00 rc=1 efc=0 rfr=False None .text      @104@__dt__16dBgS_ArrowLinChkFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785CC() {
+extern "C" asm static void func_800785CC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785CC.s"
 }
 #pragma pop
 
 
-/* 800785D4-800785DC 0008+00 rc=0 efc=0 .text      @88@__dt__16dBgS_ArrowLinChkFv                               */
+/* 800785D4-800785DC 0008+00 rc=1 efc=0 rfr=False None .text      @88@__dt__16dBgS_ArrowLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785D4() {
+extern "C" asm static void func_800785D4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785D4.s"
 }
 #pragma pop
 
 
-/* 800785DC-800785E4 0008+00 rc=0 efc=0 .text      @20@__dt__20dBgS_BoomerangLinChkFv                           */
+/* 800785DC-800785E4 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__20dBgS_BoomerangLinChkFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785DC() {
+extern "C" asm static void func_800785DC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785DC.s"
 }
 #pragma pop
 
 
-/* 800785E4-800785EC 0008+00 rc=0 efc=0 .text      @104@__dt__20dBgS_BoomerangLinChkFv                          */
+/* 800785E4-800785EC 0008+00 rc=1 efc=0 rfr=False None .text      @104@__dt__20dBgS_BoomerangLinChkFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785E4() {
+extern "C" asm static void func_800785E4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785E4.s"
 }
 #pragma pop
 
 
-/* 800785EC-800785F4 0008+00 rc=0 efc=0 .text      @88@__dt__20dBgS_BoomerangLinChkFv                           */
+/* 800785EC-800785F4 0008+00 rc=1 efc=0 rfr=False None .text      @88@__dt__20dBgS_BoomerangLinChkFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785EC() {
+extern "C" asm static void func_800785EC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785EC.s"
 }
 #pragma pop
 
 
-/* 800785F4-800785FC 0008+00 rc=0 efc=0 .text      @20@__dt__15dBgS_RopeLinChkFv                                */
+/* 800785F4-800785FC 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__15dBgS_RopeLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785F4() {
+extern "C" asm static void func_800785F4() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785F4.s"
 }
 #pragma pop
 
 
-/* 800785FC-80078604 0008+00 rc=0 efc=0 .text      @104@__dt__15dBgS_RopeLinChkFv                               */
+/* 800785FC-80078604 0008+00 rc=1 efc=0 rfr=False None .text      @104@__dt__15dBgS_RopeLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_800785FC() {
+extern "C" asm static void func_800785FC() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_800785FC.s"
 }
 #pragma pop
 
 
-/* 80078604-8007860C 0008+00 rc=0 efc=0 .text      @88@__dt__15dBgS_RopeLinChkFv                                */
+/* 80078604-8007860C 0008+00 rc=1 efc=0 rfr=False None .text      @88@__dt__15dBgS_RopeLinChkFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80078604() {
+extern "C" asm static void func_80078604() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078604.s"
 }
 #pragma pop
 
 
-/* 8007860C-80078614 0008+00 rc=0 efc=0 .text      @20@__dt__16dBgS_HorseLinChkFv                               */
+/* 8007860C-80078614 0008+00 rc=1 efc=0 rfr=False None .text      @20@__dt__16dBgS_HorseLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8007860C() {
+extern "C" asm static void func_8007860C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007860C.s"
 }
 #pragma pop
 
 
-/* 80078614-8007861C 0008+00 rc=0 efc=0 .text      @104@__dt__16dBgS_HorseLinChkFv                              */
+/* 80078614-8007861C 0008+00 rc=1 efc=0 rfr=False None .text      @104@__dt__16dBgS_HorseLinChkFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80078614() {
+extern "C" asm static void func_80078614() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_80078614.s"
 }
 #pragma pop
 
 
-/* 8007861C-80078624 0008+00 rc=0 efc=0 .text      @88@__dt__16dBgS_HorseLinChkFv                               */
+/* 8007861C-80078624 0008+00 rc=1 efc=0 rfr=False None .text      @88@__dt__16dBgS_HorseLinChkFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8007861C() {
+extern "C" asm static void func_8007861C() {
 	nofralloc
 #include "asm/d/bg/d_bg_s_lin_chk/func_8007861C.s"
 }

@@ -52,7 +52,7 @@ extern "C" void _restgpr_29(); // 1
 // Declarations:
 // 
 
-/* 80023788-800237B8 0030+00 rc=0 efc=0 .text      fpcMtdTg_Do__FP24process_method_tag_class                    */
+/* 80023788-800237B8 0030+00 rc=1 efc=1 rfr=False None .text      fpcMtdTg_Do__FP24process_method_tag_class                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,7 +63,7 @@ asm void fpcMtdTg_Do(process_method_tag_class* field_0) {
 #pragma pop
 
 
-/* 800237B8-800237D8 0020+00 rc=0 efc=0 .text      fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class */
+/* 800237B8-800237D8 0020+00 rc=1 efc=1 rfr=False None .text      fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +74,7 @@ asm void fpcMtdTg_ToMethodQ(node_list_class* field_0, process_method_tag_class* 
 #pragma pop
 
 
-/* 800237D8-800237F8 0020+00 rc=0 efc=0 .text      fpcMtdTg_MethodQTo__FP24process_method_tag_class             */
+/* 800237D8-800237F8 0020+00 rc=1 efc=1 rfr=False None .text      fpcMtdTg_MethodQTo__FP24process_method_tag_class             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +85,7 @@ asm void fpcMtdTg_MethodQTo(process_method_tag_class* field_0) {
 #pragma pop
 
 
-/* 800237F8-80023844 004C+00 rc=0 efc=0 .text      fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv          */
+/* 800237F8-80023844 004C+00 rc=3 efc=3 rfr=False None .text      fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

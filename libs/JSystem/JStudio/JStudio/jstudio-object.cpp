@@ -9,20 +9,20 @@
 // Types:
 // 
 
-struct _GXColor {
-};
-
 struct Vec {
 };
 
+struct _GXColor {
+};
+
 namespace JStudio {
+	struct TControl {
+	};
+
 	struct data {
 		struct TEOperationData {
 		};
 
-	};
-
-	struct TControl {
 	};
 
 	struct TAdaptor {
@@ -185,16 +185,16 @@ namespace JStudio {
 // 
 
 extern "C" void func_80288204(); // 1
-extern "C" void func_802885DC(); // 1
-extern "C" void func_8028863C(); // 1
-extern "C" void func_8028869C(); // 1
-extern "C" void func_802886FC(); // 1
-extern "C" void func_8028875C(); // 1
-extern "C" void func_802887BC(); // 1
-extern "C" void func_80288818(); // 1
-extern "C" void func_80288874(); // 1
-extern "C" void func_802888D0(); // 1
-extern "C" void func_8028892C(); // 1
+extern "C" static void func_802885DC(); // 1
+extern "C" static void func_8028863C(); // 1
+extern "C" static void func_8028869C(); // 1
+extern "C" static void func_802886FC(); // 1
+extern "C" static void func_8028875C(); // 1
+extern "C" static void func_802887BC(); // 1
+extern "C" static void func_80288818(); // 1
+extern "C" static void func_80288874(); // 1
+extern "C" static void func_802888D0(); // 1
+extern "C" static void func_8028892C(); // 1
 
 extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
 extern "C" void update__Q27JStudio14TVariableValueFdPQ27JStudio8TAdaptor(); // 1
@@ -262,164 +262,123 @@ extern "C" void __dt__Q27JStudio14TObject_cameraFv(); // 1
 extern "C" void __dt__Q27JStudio20TObject_ambientLightFv(); // 1
 extern "C" void __dt__Q27JStudio13TObject_actorFv(); // 1
 extern "C" void func_80288204(); // 1
-extern "C" void func_802885DC(); // 1
-extern "C" void func_8028863C(); // 1
-extern "C" void func_8028869C(); // 1
-extern "C" void func_802886FC(); // 1
-extern "C" void func_8028875C(); // 1
-extern "C" void func_802887BC(); // 1
-extern "C" void func_80288818(); // 1
-extern "C" void func_80288874(); // 1
-extern "C" void func_802888D0(); // 1
-extern "C" void func_8028892C(); // 1
-SECTION_RODATA extern const u8 sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor[12];
-SECTION_RODATA extern const u8 sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor[12];
-SECTION_RODATA extern const u8 sauVariableValue_3_SCALING_XYZ__Q27JStudio14TAdaptor_actor[12];
-SECTION_RODATA extern const u8 sauVariableValue_3_COLOR_RGB__Q27JStudio21TAdaptor_ambientLight[12];
-SECTION_RODATA extern const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight[16];
-SECTION_RODATA extern const u8 sauVariableValue_3_POSITION_XYZ__Q27JStudio15TAdaptor_camera[12];
-SECTION_RODATA extern const u8 sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio15TAdaptor_camera[12];
-SECTION_RODATA extern const u8 sauVariableValue_3_COLOR_RGB__Q27JStudio12TAdaptor_fog[12];
-SECTION_RODATA extern const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio12TAdaptor_fog[16];
-SECTION_RODATA extern const u8 sauVariableValue_3_COLOR_RGB__Q27JStudio14TAdaptor_light[12];
-SECTION_RODATA extern const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio14TAdaptor_light[16];
-SECTION_RODATA extern const u8 sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];
-SECTION_RODATA extern const u8 sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];
-SECTION_RODATA extern const u8 sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio17TAdaptor_particle[12];
-SECTION_RODATA extern const u8 sauVariableValue_3_ROTATION_XYZ__Q27JStudio17TAdaptor_particle[12];
-SECTION_RODATA extern const u8 sauVariableValue_3_SCALING_XYZ__Q27JStudio17TAdaptor_particle[12];
-SECTION_RODATA extern const u8 sauVariableValue_3_COLOR_RGB__Q27JStudio17TAdaptor_particle[12];
-SECTION_RODATA extern const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio17TAdaptor_particle[16];
-SECTION_RODATA extern const u8 sauVariableValue_3_COLOR1_RGB__Q27JStudio17TAdaptor_particle[12];
-SECTION_RODATA extern const u8 sauVariableValue_4_COLOR1_RGBA__Q27JStudio17TAdaptor_particle[16];
-SECTION_RODATA extern const u8 sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_sound[12];
-SECTION_RODATA extern const char* const jstudio_object__stringBase0;
-SECTION_DATA extern u8 lit_742[12];
-SECTION_DATA extern u8 jstudio_object__lit_745[12];
-SECTION_DATA extern u8 jstudio_object__lit_748[12];
-SECTION_DATA extern u8 lit_751[12];
-SECTION_DATA extern u8 lit_754[12];
-SECTION_DATA extern u8 jstudio_object__lit_757[12];
-SECTION_DATA extern u8 lit_760[12];
-SECTION_DATA extern u8 jstudio_object__lit_763[12];
-SECTION_DATA extern u8 jstudio_object__lit_766[12];
-SECTION_DATA extern u8 lit_769[12];
-SECTION_DATA extern u8 jstudio_object__lit_772[12];
-SECTION_DATA extern u8 jstudio_object__lit_775[12];
-SECTION_DATA extern u8 lit_778[12];
-SECTION_DATA extern void* jstudio_object__lit_882[19];
-SECTION_DATA extern u8 lit_1305[12];
-SECTION_DATA extern u8 lit_1308[12];
-SECTION_DATA extern u8 lit_1310[12];
-SECTION_DATA extern u8 lit_1312[12];
-SECTION_DATA extern u8 lit_1314[12];
-SECTION_DATA extern u8 lit_1316[12];
-SECTION_DATA extern u8 lit_1318[12];
-SECTION_DATA extern u8 jstudio_object__lit_1320[12];
-SECTION_DATA extern u8 lit_1323[12];
-SECTION_DATA extern u8 lit_1325[12];
-SECTION_DATA extern u8 lit_1327[12];
-SECTION_DATA extern u8 lit_1329[12];
-SECTION_DATA extern void* lit_1366[73];
-SECTION_DATA extern u8 lit_1441[12];
-SECTION_DATA extern u8 lit_1444[12];
-SECTION_DATA extern u8 lit_1446[12];
-SECTION_DATA extern u8 lit_1449[12];
-SECTION_DATA extern u8 lit_1451[12];
-SECTION_DATA extern u8 lit_1453[12];
-SECTION_DATA extern u8 lit_1455[12];
-SECTION_DATA extern void* jstudio_object__lit_1491[64];
-SECTION_DATA extern void* lit_1546[17];
-SECTION_DATA extern u8 lit_1570[12];
-SECTION_DATA extern u8 jstudio_object__lit_1573[12];
-SECTION_DATA extern void* lit_1613[35];
-SECTION_DATA extern u8 lit_1637[12];
-SECTION_DATA extern u8 lit_1683[12];
-SECTION_DATA extern u8 lit_1686[12];
-SECTION_DATA extern u8 lit_1688[12];
-SECTION_DATA extern u8 lit_1690[12];
-SECTION_DATA extern u8 lit_1692[12];
-SECTION_DATA extern u8 lit_1694[12];
-SECTION_DATA extern u8 lit_1696[12];
-SECTION_DATA extern u8 lit_1698[12];
-SECTION_DATA extern u8 lit_1701[12];
-SECTION_DATA extern u8 lit_1703[12];
-SECTION_DATA extern u8 jstudio_object__lit_1705[12];
-SECTION_DATA extern void* lit_1752[78];
-SECTION_DATA extern u8 lit_1776[12];
-SECTION_DATA extern u8 lit_1779[12];
-SECTION_DATA extern u8 lit_1781[12];
-SECTION_DATA extern u8 lit_1783[12];
-SECTION_DATA extern u8 lit_1785[12];
-SECTION_DATA extern u8 lit_1787[12];
-SECTION_DATA extern u8 lit_1789[12];
-SECTION_DATA extern u8 lit_1791[12];
-SECTION_DATA extern u8 lit_1794[12];
-SECTION_DATA extern u8 lit_1796[12];
-SECTION_DATA extern u8 jstudio_object__lit_1798[12];
-SECTION_DATA extern u8 lit_1800[12];
-SECTION_DATA extern void* jstudio_object__lit_1831[67];
-SECTION_DATA extern void* const __vt__Q27JStudio13TObject_sound[8];
-SECTION_DATA extern void* const __vt__Q27JStudio14TAdaptor_sound[20];
-SECTION_DATA extern void* const __vt__Q27JStudio16TObject_particle[8];
-SECTION_DATA extern void* const __vt__Q27JStudio17TAdaptor_particle[19];
-SECTION_DATA extern void* const __vt__Q27JStudio15TObject_message[8 + 9 /* padding */];
-SECTION_DATA extern void* const __vt__Q27JStudio13TObject_light[8];
-SECTION_DATA extern void* const __vt__Q27JStudio14TAdaptor_light[10];
-SECTION_DATA extern void* const __vt__Q27JStudio11TObject_fog[8];
-SECTION_DATA extern void* const __vt__Q27JStudio12TAdaptor_fog[8];
-SECTION_DATA extern void* const __vt__Q27JStudio14TObject_camera[8];
-SECTION_DATA extern void* const __vt__Q27JStudio15TAdaptor_camera[15];
-SECTION_DATA extern void* const __vt__Q27JStudio20TObject_ambientLight[8];
-SECTION_DATA extern void* const __vt__Q27JStudio21TAdaptor_ambientLight[8];
-SECTION_DATA extern void* const __vt__Q27JStudio13TObject_actor[8];
-SECTION_DATA extern void* const __vt__Q27JStudio14TAdaptor_actor[20];
-SECTION_DATA extern void* const __vt__Q27JStudio7TObject[8];
-SECTION_DATA extern void* const __vt__Q27JStudio8TAdaptor[8];
-SECTION_DATA extern void* const __vt__Q37JStudio14TVariableValue13TOutput_none_[4];
-SECTION_DATA extern void* const __vt__Q37JStudio14TVariableValue7TOutput[4];
-SECTION_DATA extern void* const data_803C5650[4];
-SECTION_DATA extern void* const data_803C5660[4];
-SECTION_DATA extern void* const data_803C5670[4];
-SECTION_DATA extern void* const data_803C5680[4];
-SECTION_DATA extern void* const data_803C5690[4];
-SECTION_BSS extern u8 jstudio_object__lit_744[12];
-SECTION_BSS extern u8 data_8043101C[16];
-SECTION_BSS extern u8 lit_747[12];
-SECTION_BSS extern u8 data_80431038[16];
-SECTION_BSS extern u8 lit_750[12];
-SECTION_BSS extern u8 data_80431054[16];
-SECTION_BSS extern u8 lit_753[12];
-SECTION_BSS extern u8 data_80431070[16];
-SECTION_BSS extern u8 lit_756[12];
-SECTION_BSS extern u8 data_8043108C[16];
-SECTION_BSS extern u8 lit_759[12];
-SECTION_BSS extern u8 data_804310A8[16];
-SECTION_BSS extern u8 lit_762[12];
-SECTION_BSS extern u8 data_804310C4[16];
-SECTION_BSS extern u8 lit_765[12];
-SECTION_BSS extern u8 data_804310E0[16];
-SECTION_BSS extern u8 lit_768[12];
-SECTION_BSS extern u8 data_804310FC[16];
-SECTION_BSS extern u8 lit_771[12];
-SECTION_BSS extern u8 data_80431118[16];
-SECTION_BSS extern u8 lit_774[12];
-SECTION_BSS extern u8 data_80431134[16];
-SECTION_BSS extern u8 lit_777[12];
-SECTION_BSS extern u8 data_80431150[16];
-SECTION_BSS extern u8 lit_780[12];
-SECTION_BSS extern u8 data_8043116C[16];
-SECTION_BSS extern u8 lit_819[12];
-SECTION_SBSS extern u8 soOutput_none___Q27JStudio14TVariableValue[4 + 4 /* padding */];
-SECTION_SBSS extern u8 data_804511F8[8];
-SECTION_SBSS extern u8 data_80451200[8];
-SECTION_SDATA2 extern f64 lit_803;
-SECTION_SDATA2 extern u8 lit_1094[4];
-SECTION_SDATA2 extern f32 jstudio_object__lit_1095;
-SECTION_SDATA2 extern u8 sauVariableValue_2_DISTANCE_NEAR_FAR__Q27JStudio15TAdaptor_camera[8];
-SECTION_SDATA2 extern u8 sauVariableValue_2_RANGE_BEGIN_END__Q27JStudio12TAdaptor_fog[8];
-SECTION_SDATA2 extern u8 sauVariableValue_2_DIRECTION_THETA_PHI__Q27JStudio14TAdaptor_light[8];
-SECTION_SDATA2 extern f32 lit_1967[1 + 1 /* padding */];
+extern "C" static void func_802885DC(); // 1
+extern "C" static void func_8028863C(); // 1
+extern "C" static void func_8028869C(); // 1
+extern "C" static void func_802886FC(); // 1
+extern "C" static void func_8028875C(); // 1
+extern "C" static void func_802887BC(); // 1
+extern "C" static void func_80288818(); // 1
+extern "C" static void func_80288874(); // 1
+extern "C" static void func_802888D0(); // 1
+extern "C" static void func_8028892C(); // 1
+extern "C" extern u8 const sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor[12];
+extern "C" extern u8 const sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor[12];
+extern "C" extern u8 const sauVariableValue_3_SCALING_XYZ__Q27JStudio14TAdaptor_actor[12];
+extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight[16];
+extern "C" extern u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio15TAdaptor_camera[12];
+extern "C" extern u8 const sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio15TAdaptor_camera[12];
+extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio12TAdaptor_fog[16];
+extern "C" extern u8 const sauVariableValue_3_COLOR_RGB__Q27JStudio14TAdaptor_light[12];
+extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio14TAdaptor_light[16];
+extern "C" extern u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];
+extern "C" extern u8 const sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];
+extern "C" extern u8 const sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio17TAdaptor_particle[12];
+extern "C" extern u8 const sauVariableValue_3_ROTATION_XYZ__Q27JStudio17TAdaptor_particle[12];
+extern "C" extern u8 const sauVariableValue_3_SCALING_XYZ__Q27JStudio17TAdaptor_particle[12];
+extern "C" extern u8 const sauVariableValue_3_COLOR_RGB__Q27JStudio17TAdaptor_particle[12];
+extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio17TAdaptor_particle[16];
+extern "C" extern u8 const sauVariableValue_3_COLOR1_RGB__Q27JStudio17TAdaptor_particle[12];
+extern "C" extern u8 const sauVariableValue_4_COLOR1_RGBA__Q27JStudio17TAdaptor_particle[16];
+extern "C" extern u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_sound[12];
+extern "C" extern char const* const jstudio_object__stringBase0;
+extern "C" extern u8 jstudio_object__lit_745[12];
+extern "C" extern u8 jstudio_object__lit_748[12];
+extern "C" extern u8 lit_751[12];
+extern "C" extern u8 lit_754[12];
+extern "C" extern u8 jstudio_object__lit_757[12];
+extern "C" extern u8 lit_760[12];
+extern "C" extern u8 jstudio_object__lit_763[12];
+extern "C" extern u8 jstudio_object__lit_766[12];
+extern "C" extern u8 lit_769[12];
+extern "C" extern u8 jstudio_object__lit_772[12];
+extern "C" extern u8 jstudio_object__lit_775[12];
+extern "C" extern u8 lit_778[12];
+extern "C" extern u8 lit_1305[12];
+extern "C" extern u8 lit_1308[12];
+extern "C" extern u8 lit_1310[12];
+extern "C" extern u8 lit_1312[12];
+extern "C" extern u8 lit_1314[12];
+extern "C" extern u8 lit_1316[12];
+extern "C" extern u8 lit_1318[12];
+extern "C" extern u8 jstudio_object__lit_1320[12];
+extern "C" extern u8 lit_1323[12];
+extern "C" extern u8 lit_1325[12];
+extern "C" extern u8 lit_1327[12];
+extern "C" extern u8 lit_1329[12];
+extern "C" extern u8 lit_1441[12];
+extern "C" extern u8 lit_1444[12];
+extern "C" extern u8 lit_1446[12];
+extern "C" extern u8 lit_1449[12];
+extern "C" extern u8 lit_1451[12];
+extern "C" extern u8 lit_1453[12];
+extern "C" extern u8 lit_1455[12];
+extern "C" extern u8 lit_1683[12];
+extern "C" extern u8 lit_1686[12];
+extern "C" extern u8 lit_1688[12];
+extern "C" extern u8 lit_1690[12];
+extern "C" extern u8 lit_1692[12];
+extern "C" extern u8 lit_1694[12];
+extern "C" extern u8 lit_1696[12];
+extern "C" extern u8 lit_1698[12];
+extern "C" extern u8 lit_1701[12];
+extern "C" extern u8 lit_1703[12];
+extern "C" extern u8 jstudio_object__lit_1705[12];
+extern "C" extern u8 lit_1776[12];
+extern "C" extern u8 lit_1779[12];
+extern "C" extern u8 lit_1781[12];
+extern "C" extern u8 lit_1783[12];
+extern "C" extern u8 lit_1785[12];
+extern "C" extern u8 lit_1787[12];
+extern "C" extern u8 lit_1789[12];
+extern "C" extern u8 lit_1791[12];
+extern "C" extern u8 lit_1794[12];
+extern "C" extern u8 lit_1796[12];
+extern "C" extern u8 jstudio_object__lit_1798[12];
+extern "C" extern u8 lit_1800[12];
+extern "C" extern void* __vt__Q27JStudio14TAdaptor_sound[20];
+extern "C" extern void* __vt__Q27JStudio17TAdaptor_particle[19];
+extern "C" extern void* __vt__Q27JStudio14TAdaptor_light[10];
+extern "C" extern void* __vt__Q27JStudio12TAdaptor_fog[8];
+extern "C" extern void* __vt__Q27JStudio15TAdaptor_camera[15];
+extern "C" extern void* __vt__Q27JStudio21TAdaptor_ambientLight[8];
+extern "C" extern void* __vt__Q27JStudio14TAdaptor_actor[20];
+extern "C" extern void* __vt__Q27JStudio8TAdaptor[8];
+extern "C" extern void* __vt__Q37JStudio14TVariableValue7TOutput[4];
+extern "C" extern u8 lit_747[12];
+extern "C" extern u8 lit_750[12];
+extern "C" extern u8 lit_753[12];
+extern "C" extern u8 lit_756[12];
+extern "C" extern u8 lit_759[12];
+extern "C" extern u8 data_804310A8[16];
+extern "C" extern u8 lit_762[12];
+extern "C" extern u8 data_804310C4[16];
+extern "C" extern u8 lit_765[12];
+extern "C" extern u8 data_804310E0[16];
+extern "C" extern u8 lit_768[12];
+extern "C" extern u8 data_804310FC[16];
+extern "C" extern u8 lit_771[12];
+extern "C" extern u8 data_80431118[16];
+extern "C" extern u8 lit_774[12];
+extern "C" extern u8 data_80431134[16];
+extern "C" extern u8 lit_777[12];
+extern "C" extern u8 data_80431150[16];
+extern "C" extern u8 lit_780[12];
+extern "C" extern u8 data_8043116C[16];
+extern "C" extern u8 lit_819[12];
+extern "C" extern u8 soOutput_none___Q27JStudio14TVariableValue[4 + 4 /* padding */];
+extern "C" extern u8 data_804511F8[8];
+extern "C" extern u8 data_80451200[8];
 
 // 
 // External References:
@@ -448,766 +407,766 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
-SECTION_RODATA extern const u8 __ptmf_null[12 + 4 /* padding */];
-SECTION_DATA extern void* const __vt__Q27JStudio16TAdaptor_message[9];
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern void* __vt__Q27JStudio16TAdaptor_message[9];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 803C4B00-803C4B0C 000C+00 rc=0 efc=0 .data      @742                                                         */
-u8 lit_742[12] = {
+/* 803C4B00-803C4B0C 000C+00 rc=5 efc=0 rfr=False None .data      @742                                                         */
+SECTION_DATA static u8 lit_742[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B0C-803C4B18 000C+00 rc=0 efc=0 .data      @745                                                         */
-u8 jstudio_object__lit_745[12] = {
+/* 803C4B0C-803C4B18 000C+00 rc=0 efc=0 rfr=False None .data      @745                                                         */
+SECTION_DATA u8 jstudio_object__lit_745[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B18-803C4B24 000C+00 rc=0 efc=0 .data      @748                                                         */
-u8 jstudio_object__lit_748[12] = {
+/* 803C4B18-803C4B24 000C+00 rc=0 efc=0 rfr=False None .data      @748                                                         */
+SECTION_DATA u8 jstudio_object__lit_748[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B24-803C4B30 000C+00 rc=0 efc=0 .data      @751                                                         */
-u8 lit_751[12] = {
+/* 803C4B24-803C4B30 000C+00 rc=0 efc=0 rfr=False None .data      @751                                                         */
+SECTION_DATA u8 lit_751[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B30-803C4B3C 000C+00 rc=0 efc=0 .data      @754                                                         */
-u8 lit_754[12] = {
+/* 803C4B30-803C4B3C 000C+00 rc=0 efc=0 rfr=False None .data      @754                                                         */
+SECTION_DATA u8 lit_754[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B3C-803C4B48 000C+00 rc=0 efc=0 .data      @757                                                         */
-u8 jstudio_object__lit_757[12] = {
+/* 803C4B3C-803C4B48 000C+00 rc=0 efc=0 rfr=False None .data      @757                                                         */
+SECTION_DATA u8 jstudio_object__lit_757[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B48-803C4B54 000C+00 rc=0 efc=0 .data      @760                                                         */
-u8 lit_760[12] = {
+/* 803C4B48-803C4B54 000C+00 rc=0 efc=0 rfr=False None .data      @760                                                         */
+SECTION_DATA u8 lit_760[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B54-803C4B60 000C+00 rc=0 efc=0 .data      @763                                                         */
-u8 jstudio_object__lit_763[12] = {
+/* 803C4B54-803C4B60 000C+00 rc=0 efc=0 rfr=False None .data      @763                                                         */
+SECTION_DATA u8 jstudio_object__lit_763[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B60-803C4B6C 000C+00 rc=0 efc=0 .data      @766                                                         */
-u8 jstudio_object__lit_766[12] = {
+/* 803C4B60-803C4B6C 000C+00 rc=0 efc=0 rfr=False None .data      @766                                                         */
+SECTION_DATA u8 jstudio_object__lit_766[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B6C-803C4B78 000C+00 rc=0 efc=0 .data      @769                                                         */
-u8 lit_769[12] = {
+/* 803C4B6C-803C4B78 000C+00 rc=0 efc=0 rfr=False None .data      @769                                                         */
+SECTION_DATA u8 lit_769[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B78-803C4B84 000C+00 rc=0 efc=0 .data      @772                                                         */
-u8 jstudio_object__lit_772[12] = {
+/* 803C4B78-803C4B84 000C+00 rc=0 efc=0 rfr=False None .data      @772                                                         */
+SECTION_DATA u8 jstudio_object__lit_772[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B84-803C4B90 000C+00 rc=0 efc=0 .data      @775                                                         */
-u8 jstudio_object__lit_775[12] = {
+/* 803C4B84-803C4B90 000C+00 rc=0 efc=0 rfr=False None .data      @775                                                         */
+SECTION_DATA u8 jstudio_object__lit_775[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B90-803C4B9C 000C+00 rc=0 efc=0 .data      @778                                                         */
-u8 lit_778[12] = {
+/* 803C4B90-803C4B9C 000C+00 rc=0 efc=0 rfr=False None .data      @778                                                         */
+SECTION_DATA u8 lit_778[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4B9C-803C4BE8 004C+00 rc=0 efc=0 .data      @882                                                         */
-void* jstudio_object__lit_882[19] = {
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x2C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x3C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x4C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x5C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
-	(void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x6C),
+/* 803C4B9C-803C4BE8 004C+00 rc=1 efc=0 rfr=False None .data      @882                                                         */
+SECTION_DATA static void* jstudio_object__lit_882[19] = {
+	/* 0    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 1    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x2C),
+	/* 2    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x3C),
+	/* 3    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x4C),
+	/* 4    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 5    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 6    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 7    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 8    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 9    */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 10   */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 11   */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 12   */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 13   */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 14   */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 15   */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 16   */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x5C),
+	/* 17   */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x7C),
+	/* 18   */ (void*)(((char*)adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl)+0x6C),
 };
 
-/* 803C4BE8-803C4BF4 000C+00 rc=0 efc=0 .data      @1305                                                        */
-u8 lit_1305[12] = {
+/* 803C4BE8-803C4BF4 000C+00 rc=0 efc=0 rfr=False None .data      @1305                                                        */
+SECTION_DATA u8 lit_1305[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4BF4-803C4C00 000C+00 rc=0 efc=0 .data      @1308                                                        */
-u8 lit_1308[12] = {
+/* 803C4BF4-803C4C00 000C+00 rc=0 efc=0 rfr=False None .data      @1308                                                        */
+SECTION_DATA u8 lit_1308[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4C00-803C4C0C 000C+00 rc=0 efc=0 .data      @1310                                                        */
-u8 lit_1310[12] = {
+/* 803C4C00-803C4C0C 000C+00 rc=0 efc=0 rfr=False None .data      @1310                                                        */
+SECTION_DATA u8 lit_1310[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4C0C-803C4C18 000C+00 rc=0 efc=0 .data      @1312                                                        */
-u8 lit_1312[12] = {
+/* 803C4C0C-803C4C18 000C+00 rc=0 efc=0 rfr=False None .data      @1312                                                        */
+SECTION_DATA u8 lit_1312[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4C18-803C4C24 000C+00 rc=0 efc=0 .data      @1314                                                        */
-u8 lit_1314[12] = {
+/* 803C4C18-803C4C24 000C+00 rc=0 efc=0 rfr=False None .data      @1314                                                        */
+SECTION_DATA u8 lit_1314[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4C24-803C4C30 000C+00 rc=0 efc=0 .data      @1316                                                        */
-u8 lit_1316[12] = {
+/* 803C4C24-803C4C30 000C+00 rc=0 efc=0 rfr=False None .data      @1316                                                        */
+SECTION_DATA u8 lit_1316[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4C30-803C4C3C 000C+00 rc=0 efc=0 .data      @1318                                                        */
-u8 lit_1318[12] = {
+/* 803C4C30-803C4C3C 000C+00 rc=0 efc=0 rfr=False None .data      @1318                                                        */
+SECTION_DATA u8 lit_1318[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x24, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4C3C-803C4C48 000C+00 rc=0 efc=0 .data      @1320                                                        */
-u8 jstudio_object__lit_1320[12] = {
+/* 803C4C3C-803C4C48 000C+00 rc=0 efc=0 rfr=False None .data      @1320                                                        */
+SECTION_DATA u8 jstudio_object__lit_1320[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4C48-803C4C54 000C+00 rc=0 efc=0 .data      @1323                                                        */
-u8 lit_1323[12] = {
+/* 803C4C48-803C4C54 000C+00 rc=0 efc=0 rfr=False None .data      @1323                                                        */
+SECTION_DATA u8 lit_1323[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4C54-803C4C60 000C+00 rc=0 efc=0 .data      @1325                                                        */
-u8 lit_1325[12] = {
+/* 803C4C54-803C4C60 000C+00 rc=0 efc=0 rfr=False None .data      @1325                                                        */
+SECTION_DATA u8 lit_1325[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4C60-803C4C6C 000C+00 rc=0 efc=0 .data      @1327                                                        */
-u8 lit_1327[12] = {
+/* 803C4C60-803C4C6C 000C+00 rc=0 efc=0 rfr=False None .data      @1327                                                        */
+SECTION_DATA u8 lit_1327[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4C6C-803C4C78 000C+00 rc=0 efc=0 .data      @1329                                                        */
-u8 lit_1329[12] = {
+/* 803C4C6C-803C4C78 000C+00 rc=0 efc=0 rfr=False None .data      @1329                                                        */
+SECTION_DATA u8 lit_1329[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4C78-803C4D9C 0124+00 rc=0 efc=0 .data      @1366                                                        */
-void* lit_1366[73] = {
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x208),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x210),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x218),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x250),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x220),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x228),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x230),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x25C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x238),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x240),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x248),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x268),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x114),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x130),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x14C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x194),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x1B0),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x1CC),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x88),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0xA4),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x1F8),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0xC0),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x200),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0xDC),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0xF8),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x178),
+/* 803C4C78-803C4D9C 0124+00 rc=1 efc=0 rfr=False None .data      @1366                                                        */
+SECTION_DATA static void* lit_1366[73] = {
+	/* 0    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x208),
+	/* 1    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x210),
+	/* 2    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x218),
+	/* 3    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x250),
+	/* 4    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x220),
+	/* 5    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x228),
+	/* 6    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x230),
+	/* 7    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x25C),
+	/* 8    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x238),
+	/* 9    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x240),
+	/* 10   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x248),
+	/* 11   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x268),
+	/* 12   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 13   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 14   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 15   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 16   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 17   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 18   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 19   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 20   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 21   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 22   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 23   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 24   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 25   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 26   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 27   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 28   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 29   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 30   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 31   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 32   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 33   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 34   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 35   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 36   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 37   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 38   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 39   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x114),
+	/* 40   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x130),
+	/* 41   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x14C),
+	/* 42   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x194),
+	/* 43   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x1B0),
+	/* 44   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x1CC),
+	/* 45   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 46   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 47   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 48   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x88),
+	/* 49   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0xA4),
+	/* 50   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x1F8),
+	/* 51   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 52   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 53   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 54   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 55   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 56   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 57   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 58   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0xC0),
+	/* 59   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 60   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 61   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 62   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 63   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 64   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 65   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 66   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x200),
+	/* 67   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0xDC),
+	/* 68   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 69   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0xF8),
+	/* 70   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 71   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x274),
+	/* 72   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl)+0x178),
 };
 
-/* 803C4D9C-803C4DA8 000C+00 rc=0 efc=0 .data      @1441                                                        */
-u8 lit_1441[12] = {
+/* 803C4D9C-803C4DA8 000C+00 rc=0 efc=0 rfr=False None .data      @1441                                                        */
+SECTION_DATA u8 lit_1441[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4DA8-803C4DB4 000C+00 rc=0 efc=0 .data      @1444                                                        */
-u8 lit_1444[12] = {
+/* 803C4DA8-803C4DB4 000C+00 rc=0 efc=0 rfr=False None .data      @1444                                                        */
+SECTION_DATA u8 lit_1444[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x24, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4DB4-803C4DC0 000C+00 rc=0 efc=0 .data      @1446                                                        */
-u8 lit_1446[12] = {
+/* 803C4DB4-803C4DC0 000C+00 rc=0 efc=0 rfr=False None .data      @1446                                                        */
+SECTION_DATA u8 lit_1446[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4DC0-803C4DCC 000C+00 rc=0 efc=0 .data      @1449                                                        */
-u8 lit_1449[12] = {
+/* 803C4DC0-803C4DCC 000C+00 rc=0 efc=0 rfr=False None .data      @1449                                                        */
+SECTION_DATA u8 lit_1449[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4DCC-803C4DD8 000C+00 rc=0 efc=0 .data      @1451                                                        */
-u8 lit_1451[12] = {
+/* 803C4DCC-803C4DD8 000C+00 rc=0 efc=0 rfr=False None .data      @1451                                                        */
+SECTION_DATA u8 lit_1451[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4DD8-803C4DE4 000C+00 rc=0 efc=0 .data      @1453                                                        */
-u8 lit_1453[12] = {
+/* 803C4DD8-803C4DE4 000C+00 rc=0 efc=0 rfr=False None .data      @1453                                                        */
+SECTION_DATA u8 lit_1453[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4DE4-803C4DF0 000C+00 rc=0 efc=0 .data      @1455                                                        */
-u8 lit_1455[12] = {
+/* 803C4DE4-803C4DF0 000C+00 rc=0 efc=0 rfr=False None .data      @1455                                                        */
+SECTION_DATA u8 lit_1455[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4DF0-803C4EF0 0100+00 rc=0 efc=0 .data      @1491                                                        */
-void* jstudio_object__lit_1491[64] = {
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x164),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x16C),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x174),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1B4),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x17C),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x184),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x18C),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1C8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x19C),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x194),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1A4),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1AC),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1DC),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x80),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x9C),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0xB8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0xE4),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x100),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x11C),
-	(void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x138),
+/* 803C4DF0-803C4EF0 0100+00 rc=1 efc=0 rfr=False None .data      @1491                                                        */
+SECTION_DATA static void* jstudio_object__lit_1491[64] = {
+	/* 0    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x164),
+	/* 1    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x16C),
+	/* 2    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x174),
+	/* 3    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1B4),
+	/* 4    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x17C),
+	/* 5    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x184),
+	/* 6    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x18C),
+	/* 7    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1C8),
+	/* 8    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 9    */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 10   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 11   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 12   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 13   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 14   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 15   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 16   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 17   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x19C),
+	/* 18   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x194),
+	/* 19   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1A4),
+	/* 20   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1AC),
+	/* 21   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1DC),
+	/* 22   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 23   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 24   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 25   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 26   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 27   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x80),
+	/* 28   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x9C),
+	/* 29   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0xB8),
+	/* 30   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 31   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 32   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 33   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 34   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 35   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 36   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 37   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 38   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 39   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 40   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 41   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 42   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 43   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 44   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 45   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 46   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 47   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 48   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 49   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 50   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 51   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 52   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 53   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 54   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 55   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 56   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 57   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 58   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 59   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x1E8),
+	/* 60   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0xE4),
+	/* 61   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x100),
+	/* 62   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x11C),
+	/* 63   */ (void*)(((char*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl)+0x138),
 };
 
-/* 803C4EF0-803C4F34 0044+00 rc=0 efc=0 .data      @1546                                                        */
-void* lit_1546[17] = {
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x50),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x58),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x60),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x68),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x80),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x94),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x70),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x78),
-	(void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xA8),
+/* 803C4EF0-803C4F34 0044+00 rc=1 efc=0 rfr=False None .data      @1546                                                        */
+SECTION_DATA static void* lit_1546[17] = {
+	/* 0    */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x50),
+	/* 1    */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x58),
+	/* 2    */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x60),
+	/* 3    */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x68),
+	/* 4    */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x80),
+	/* 5    */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x94),
+	/* 6    */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
+	/* 7    */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
+	/* 8    */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
+	/* 9    */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
+	/* 10   */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
+	/* 11   */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
+	/* 12   */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
+	/* 13   */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xB4),
+	/* 14   */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x70),
+	/* 15   */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0x78),
+	/* 16   */ (void*)(((char*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl)+0xA8),
 };
 
-/* 803C4F34-803C4F40 000C+00 rc=0 efc=0 .data      @1570                                                        */
-u8 lit_1570[12] = {
+/* 803C4F34-803C4F40 000C+00 rc=1 efc=0 rfr=False None .data      @1570                                                        */
+SECTION_DATA static u8 lit_1570[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4F40-803C4F4C 000C+00 rc=0 efc=0 .data      @1573                                                        */
-u8 jstudio_object__lit_1573[12] = {
+/* 803C4F40-803C4F4C 000C+00 rc=1 efc=0 rfr=False None .data      @1573                                                        */
+SECTION_DATA static u8 jstudio_object__lit_1573[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x24, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4F4C-803C4FD8 008C+00 rc=0 efc=0 .data      @1613                                                        */
-void* lit_1613[35] = {
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xF4),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xFC),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x104),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x14C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x10C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x114),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x11C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x158),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xD4),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xDC),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xE4),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xEC),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x134),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x140),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x124),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x12C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x164),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x80),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xB0),
+/* 803C4F4C-803C4FD8 008C+00 rc=1 efc=0 rfr=False None .data      @1613                                                        */
+SECTION_DATA static void* lit_1613[35] = {
+	/* 0    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xF4),
+	/* 1    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xFC),
+	/* 2    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x104),
+	/* 3    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x14C),
+	/* 4    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x10C),
+	/* 5    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x114),
+	/* 6    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x11C),
+	/* 7    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x158),
+	/* 8    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xD4),
+	/* 9    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xDC),
+	/* 10   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xE4),
+	/* 11   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xEC),
+	/* 12   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x134),
+	/* 13   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x140),
+	/* 14   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x124),
+	/* 15   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x12C),
+	/* 16   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x164),
+	/* 17   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 18   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 19   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 20   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 21   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 22   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 23   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 24   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 25   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 26   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 27   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 28   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 29   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 30   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 31   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 32   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x170),
+	/* 33   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0x80),
+	/* 34   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl)+0xB0),
 };
 
-/* 803C4FD8-803C4FE4 000C+00 rc=0 efc=0 .data      @1637                                                        */
-u8 lit_1637[12] = {
+/* 803C4FD8-803C4FE4 000C+00 rc=1 efc=0 rfr=False None .data      @1637                                                        */
+SECTION_DATA static u8 lit_1637[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4FE4-803C4FF0 000C+00 rc=0 efc=0 .data      @1683                                                        */
-u8 lit_1683[12] = {
+/* 803C4FE4-803C4FF0 000C+00 rc=0 efc=0 rfr=False None .data      @1683                                                        */
+SECTION_DATA u8 lit_1683[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4FF0-803C4FFC 000C+00 rc=0 efc=0 .data      @1686                                                        */
-u8 lit_1686[12] = {
+/* 803C4FF0-803C4FFC 000C+00 rc=0 efc=0 rfr=False None .data      @1686                                                        */
+SECTION_DATA u8 lit_1686[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x24, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C4FFC-803C5008 000C+00 rc=0 efc=0 .data      @1688                                                        */
-u8 lit_1688[12] = {
+/* 803C4FFC-803C5008 000C+00 rc=0 efc=0 rfr=False None .data      @1688                                                        */
+SECTION_DATA u8 lit_1688[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5008-803C5014 000C+00 rc=0 efc=0 .data      @1690                                                        */
-u8 lit_1690[12] = {
+/* 803C5008-803C5014 000C+00 rc=0 efc=0 rfr=False None .data      @1690                                                        */
+SECTION_DATA u8 lit_1690[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5014-803C5020 000C+00 rc=0 efc=0 .data      @1692                                                        */
-u8 lit_1692[12] = {
+/* 803C5014-803C5020 000C+00 rc=0 efc=0 rfr=False None .data      @1692                                                        */
+SECTION_DATA u8 lit_1692[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5020-803C502C 000C+00 rc=0 efc=0 .data      @1694                                                        */
-u8 lit_1694[12] = {
+/* 803C5020-803C502C 000C+00 rc=0 efc=0 rfr=False None .data      @1694                                                        */
+SECTION_DATA u8 lit_1694[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C502C-803C5038 000C+00 rc=0 efc=0 .data      @1696                                                        */
-u8 lit_1696[12] = {
+/* 803C502C-803C5038 000C+00 rc=0 efc=0 rfr=False None .data      @1696                                                        */
+SECTION_DATA u8 lit_1696[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5038-803C5044 000C+00 rc=0 efc=0 .data      @1698                                                        */
-u8 lit_1698[12] = {
+/* 803C5038-803C5044 000C+00 rc=0 efc=0 rfr=False None .data      @1698                                                        */
+SECTION_DATA u8 lit_1698[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5044-803C5050 000C+00 rc=0 efc=0 .data      @1701                                                        */
-u8 lit_1701[12] = {
+/* 803C5044-803C5050 000C+00 rc=0 efc=0 rfr=False None .data      @1701                                                        */
+SECTION_DATA u8 lit_1701[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5050-803C505C 000C+00 rc=0 efc=0 .data      @1703                                                        */
-u8 lit_1703[12] = {
+/* 803C5050-803C505C 000C+00 rc=0 efc=0 rfr=False None .data      @1703                                                        */
+SECTION_DATA u8 lit_1703[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C505C-803C5068 000C+00 rc=0 efc=0 .data      @1705                                                        */
-u8 jstudio_object__lit_1705[12] = {
+/* 803C505C-803C5068 000C+00 rc=0 efc=0 rfr=False None .data      @1705                                                        */
+SECTION_DATA u8 jstudio_object__lit_1705[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5068-803C51A0 0138+00 rc=0 efc=0 .data      @1752                                                        */
-void* lit_1752[78] = {
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1DC),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1E4),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1EC),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x264),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1F4),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1FC),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x204),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x270),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x20C),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x214),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x21C),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x27C),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x224),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x22C),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x234),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x23C),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x288),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x294),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0xC8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x100),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x11C),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x138),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x154),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x90),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x244),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x254),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x25C),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2A0),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2AC),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0xAC),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0xE4),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x178),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1B8),
-	(void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x194),
+/* 803C5068-803C51A0 0138+00 rc=1 efc=0 rfr=False None .data      @1752                                                        */
+SECTION_DATA static void* lit_1752[78] = {
+	/* 0    */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1DC),
+	/* 1    */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1E4),
+	/* 2    */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1EC),
+	/* 3    */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x264),
+	/* 4    */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1F4),
+	/* 5    */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1FC),
+	/* 6    */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x204),
+	/* 7    */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x270),
+	/* 8    */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x20C),
+	/* 9    */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x214),
+	/* 10   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x21C),
+	/* 11   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x27C),
+	/* 12   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 13   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 14   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 15   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 16   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 17   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 18   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 19   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 20   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x224),
+	/* 21   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x22C),
+	/* 22   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x234),
+	/* 23   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x23C),
+	/* 24   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x288),
+	/* 25   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x294),
+	/* 26   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 27   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 28   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 29   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 30   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 31   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 32   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 33   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 34   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 35   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 36   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 37   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0xC8),
+	/* 38   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x100),
+	/* 39   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x11C),
+	/* 40   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x138),
+	/* 41   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x154),
+	/* 42   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 43   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 44   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 45   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 46   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 47   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 48   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 49   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 50   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 51   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 52   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 53   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 54   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 55   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 56   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 57   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 58   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 59   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x90),
+	/* 60   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x244),
+	/* 61   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x24C),
+	/* 62   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x254),
+	/* 63   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x25C),
+	/* 64   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2A0),
+	/* 65   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2AC),
+	/* 66   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 67   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 68   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 69   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 70   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0xAC),
+	/* 71   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0xE4),
+	/* 72   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x178),
+	/* 73   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 74   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 75   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x2B8),
+	/* 76   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x1B8),
+	/* 77   */ (void*)(((char*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl)+0x194),
 };
 
-/* 803C51A0-803C51AC 000C+00 rc=0 efc=0 .data      @1776                                                        */
-u8 lit_1776[12] = {
+/* 803C51A0-803C51AC 000C+00 rc=0 efc=0 rfr=False None .data      @1776                                                        */
+SECTION_DATA u8 lit_1776[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C51AC-803C51B8 000C+00 rc=0 efc=0 .data      @1779                                                        */
-u8 lit_1779[12] = {
+/* 803C51AC-803C51B8 000C+00 rc=0 efc=0 rfr=False None .data      @1779                                                        */
+SECTION_DATA u8 lit_1779[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x24, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C51B8-803C51C4 000C+00 rc=0 efc=0 .data      @1781                                                        */
-u8 lit_1781[12] = {
+/* 803C51B8-803C51C4 000C+00 rc=0 efc=0 rfr=False None .data      @1781                                                        */
+SECTION_DATA u8 lit_1781[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x28, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C51C4-803C51D0 000C+00 rc=0 efc=0 .data      @1783                                                        */
-u8 lit_1783[12] = {
+/* 803C51C4-803C51D0 000C+00 rc=0 efc=0 rfr=False None .data      @1783                                                        */
+SECTION_DATA u8 lit_1783[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C51D0-803C51DC 000C+00 rc=0 efc=0 .data      @1785                                                        */
-u8 lit_1785[12] = {
+/* 803C51D0-803C51DC 000C+00 rc=0 efc=0 rfr=False None .data      @1785                                                        */
+SECTION_DATA u8 lit_1785[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C51DC-803C51E8 000C+00 rc=0 efc=0 .data      @1787                                                        */
-u8 lit_1787[12] = {
+/* 803C51DC-803C51E8 000C+00 rc=0 efc=0 rfr=False None .data      @1787                                                        */
+SECTION_DATA u8 lit_1787[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C51E8-803C51F4 000C+00 rc=0 efc=0 .data      @1789                                                        */
-u8 lit_1789[12] = {
+/* 803C51E8-803C51F4 000C+00 rc=0 efc=0 rfr=False None .data      @1789                                                        */
+SECTION_DATA u8 lit_1789[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C51F4-803C5200 000C+00 rc=0 efc=0 .data      @1791                                                        */
-u8 lit_1791[12] = {
+/* 803C51F4-803C5200 000C+00 rc=0 efc=0 rfr=False None .data      @1791                                                        */
+SECTION_DATA u8 lit_1791[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5200-803C520C 000C+00 rc=0 efc=0 .data      @1794                                                        */
-u8 lit_1794[12] = {
+/* 803C5200-803C520C 000C+00 rc=0 efc=0 rfr=False None .data      @1794                                                        */
+SECTION_DATA u8 lit_1794[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C520C-803C5218 000C+00 rc=0 efc=0 .data      @1796                                                        */
-u8 lit_1796[12] = {
+/* 803C520C-803C5218 000C+00 rc=0 efc=0 rfr=False None .data      @1796                                                        */
+SECTION_DATA u8 lit_1796[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5218-803C5224 000C+00 rc=0 efc=0 .data      @1798                                                        */
-u8 jstudio_object__lit_1798[12] = {
+/* 803C5218-803C5224 000C+00 rc=0 efc=0 rfr=False None .data      @1798                                                        */
+SECTION_DATA u8 jstudio_object__lit_1798[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5224-803C5230 000C+00 rc=0 efc=0 .data      @1800                                                        */
-u8 lit_1800[12] = {
+/* 803C5224-803C5230 000C+00 rc=0 efc=0 rfr=False None .data      @1800                                                        */
+SECTION_DATA u8 lit_1800[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 803C5230-803C533C 010C+00 rc=0 efc=0 .data      @1831                                                        */
-void* jstudio_object__lit_1831[67] = {
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x200),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x208),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x210),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x240),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0xC0),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0xF8),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x114),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x130),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x14C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x1B8),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x88),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x218),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x220),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x228),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x230),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x238),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0xA4),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0xDC),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x1DC),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x170),
-	(void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x194),
+/* 803C5230-803C533C 010C+00 rc=1 efc=0 rfr=False None .data      @1831                                                        */
+SECTION_DATA static void* jstudio_object__lit_1831[67] = {
+	/* 0    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x200),
+	/* 1    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x208),
+	/* 2    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x210),
+	/* 3    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x240),
+	/* 4    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 5    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 6    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 7    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 8    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 9    */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 10   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 11   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 12   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 13   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 14   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 15   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 16   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 17   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 18   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 19   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 20   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 21   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 22   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 23   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 24   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 25   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0xC0),
+	/* 26   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0xF8),
+	/* 27   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x114),
+	/* 28   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x130),
+	/* 29   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x14C),
+	/* 30   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 31   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 32   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 33   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 34   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 35   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x1B8),
+	/* 36   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 37   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 38   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 39   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x88),
+	/* 40   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x218),
+	/* 41   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x220),
+	/* 42   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x228),
+	/* 43   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x230),
+	/* 44   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x238),
+	/* 45   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 46   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 47   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 48   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 49   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 50   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 51   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 52   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 53   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 54   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 55   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 56   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 57   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 58   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0xA4),
+	/* 59   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0xDC),
+	/* 60   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 61   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 62   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 63   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x24C),
+	/* 64   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x1DC),
+	/* 65   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x170),
+	/* 66   */ (void*)(((char*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl)+0x194),
 };
 
-/* 803C533C-803C535C 0020+00 rc=0 efc=0 .data      __vt__Q27JStudio13TObject_sound                              */
-void* const __vt__Q27JStudio13TObject_sound[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__Q27JStudio13TObject_soundFv,
-	(void*)do_begin__Q27JStudio7TObjectFv,
-	(void*)do_end__Q27JStudio7TObjectFv,
-	(void*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl,
-	(void*)do_wait__Q27JStudio7TObjectFUl,
-	(void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
+/* 803C533C-803C535C 0020+00 rc=2 efc=0 rfr=False None .data      __vt__Q27JStudio13TObject_sound                              */
+SECTION_DATA static void* __vt__Q27JStudio13TObject_sound[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__Q27JStudio13TObject_soundFv,
+	/* 3    */ (void*)do_begin__Q27JStudio7TObjectFv,
+	/* 4    */ (void*)do_end__Q27JStudio7TObjectFv,
+	/* 5    */ (void*)do_paragraph__Q27JStudio13TObject_soundFUlPCvUl,
+	/* 6    */ (void*)do_wait__Q27JStudio7TObjectFUl,
+	/* 7    */ (void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
 };
 
-/* 803C535C-803C53AC 0050+00 rc=0 efc=0 .data      __vt__Q27JStudio14TAdaptor_sound                             */
-void* const __vt__Q27JStudio14TAdaptor_sound[20] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
-	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 803C535C-803C53AC 0050+00 rc=2 efc=1 rfr=False None .data      __vt__Q27JStudio14TAdaptor_sound                             */
+SECTION_DATA void* __vt__Q27JStudio14TAdaptor_sound[20] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
+	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	/* 5    */ (void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
+	/* 6    */ (void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
+	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)NULL,
+	/* 12   */ (void*)NULL,
+	/* 13   */ (void*)NULL,
+	/* 14   */ (void*)NULL,
+	/* 15   */ (void*)NULL,
+	/* 16   */ (void*)NULL,
+	/* 17   */ (void*)NULL,
+	/* 18   */ (void*)NULL,
+	/* 19   */ (void*)NULL,
 };
 
-/* 803C53AC-803C53CC 0020+00 rc=0 efc=0 .data      __vt__Q27JStudio16TObject_particle                           */
-void* const __vt__Q27JStudio16TObject_particle[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__Q27JStudio16TObject_particleFv,
-	(void*)do_begin__Q27JStudio7TObjectFv,
-	(void*)do_end__Q27JStudio7TObjectFv,
-	(void*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl,
-	(void*)do_wait__Q27JStudio7TObjectFUl,
-	(void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
+/* 803C53AC-803C53CC 0020+00 rc=2 efc=0 rfr=False None .data      __vt__Q27JStudio16TObject_particle                           */
+SECTION_DATA static void* __vt__Q27JStudio16TObject_particle[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__Q27JStudio16TObject_particleFv,
+	/* 3    */ (void*)do_begin__Q27JStudio7TObjectFv,
+	/* 4    */ (void*)do_end__Q27JStudio7TObjectFv,
+	/* 5    */ (void*)do_paragraph__Q27JStudio16TObject_particleFUlPCvUl,
+	/* 6    */ (void*)do_wait__Q27JStudio7TObjectFUl,
+	/* 7    */ (void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
 };
 
-/* 803C53CC-803C5418 004C+00 rc=0 efc=0 .data      __vt__Q27JStudio17TAdaptor_particle                          */
-void* const __vt__Q27JStudio17TAdaptor_particle[19] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
-	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 803C53CC-803C5418 004C+00 rc=2 efc=1 rfr=False None .data      __vt__Q27JStudio17TAdaptor_particle                          */
+SECTION_DATA void* __vt__Q27JStudio17TAdaptor_particle[19] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
+	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	/* 5    */ (void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
+	/* 6    */ (void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
+	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)NULL,
+	/* 12   */ (void*)NULL,
+	/* 13   */ (void*)NULL,
+	/* 14   */ (void*)NULL,
+	/* 15   */ (void*)NULL,
+	/* 16   */ (void*)NULL,
+	/* 17   */ (void*)NULL,
+	/* 18   */ (void*)NULL,
 };
 
-/* 803C5418-803C545C 0020+24 rc=0 efc=0 .data      __vt__Q27JStudio15TObject_message                            */
-void* const __vt__Q27JStudio15TObject_message[8 + 9 /* padding */] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__Q27JStudio15TObject_messageFv,
-	(void*)do_begin__Q27JStudio7TObjectFv,
-	(void*)do_end__Q27JStudio7TObjectFv,
-	(void*)do_paragraph__Q27JStudio15TObject_messageFUlPCvUl,
-	(void*)do_wait__Q27JStudio7TObjectFUl,
-	(void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
+/* 803C5418-803C545C 0020+24 rc=2 efc=0 rfr=False None .data      __vt__Q27JStudio15TObject_message                            */
+SECTION_DATA static void* __vt__Q27JStudio15TObject_message[8 + 9 /* padding */] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__Q27JStudio15TObject_messageFv,
+	/* 3    */ (void*)do_begin__Q27JStudio7TObjectFv,
+	/* 4    */ (void*)do_end__Q27JStudio7TObjectFv,
+	/* 5    */ (void*)do_paragraph__Q27JStudio15TObject_messageFUlPCvUl,
+	/* 6    */ (void*)do_wait__Q27JStudio7TObjectFUl,
+	/* 7    */ (void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
 	/* padding */
 	NULL,
 	NULL,
@@ -1220,188 +1179,188 @@ void* const __vt__Q27JStudio15TObject_message[8 + 9 /* padding */] = {
 	NULL,
 };
 
-/* 803C545C-803C547C 0020+00 rc=0 efc=0 .data      __vt__Q27JStudio13TObject_light                              */
-void* const __vt__Q27JStudio13TObject_light[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__Q27JStudio13TObject_lightFv,
-	(void*)do_begin__Q27JStudio7TObjectFv,
-	(void*)do_end__Q27JStudio7TObjectFv,
-	(void*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl,
-	(void*)do_wait__Q27JStudio7TObjectFUl,
-	(void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
+/* 803C545C-803C547C 0020+00 rc=2 efc=0 rfr=False None .data      __vt__Q27JStudio13TObject_light                              */
+SECTION_DATA static void* __vt__Q27JStudio13TObject_light[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__Q27JStudio13TObject_lightFv,
+	/* 3    */ (void*)do_begin__Q27JStudio7TObjectFv,
+	/* 4    */ (void*)do_end__Q27JStudio7TObjectFv,
+	/* 5    */ (void*)do_paragraph__Q27JStudio13TObject_lightFUlPCvUl,
+	/* 6    */ (void*)do_wait__Q27JStudio7TObjectFUl,
+	/* 7    */ (void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
 };
 
-/* 803C547C-803C54A4 0028+00 rc=0 efc=0 .data      __vt__Q27JStudio14TAdaptor_light                             */
-void* const __vt__Q27JStudio14TAdaptor_light[10] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
-	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
-	(void*)NULL,
-	(void*)NULL,
+/* 803C547C-803C54A4 0028+00 rc=2 efc=1 rfr=False None .data      __vt__Q27JStudio14TAdaptor_light                             */
+SECTION_DATA void* __vt__Q27JStudio14TAdaptor_light[10] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
+	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	/* 5    */ (void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
+	/* 6    */ (void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
+	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
 };
 
-/* 803C54A4-803C54C4 0020+00 rc=0 efc=0 .data      __vt__Q27JStudio11TObject_fog                                */
-void* const __vt__Q27JStudio11TObject_fog[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__Q27JStudio11TObject_fogFv,
-	(void*)do_begin__Q27JStudio7TObjectFv,
-	(void*)do_end__Q27JStudio7TObjectFv,
-	(void*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl,
-	(void*)do_wait__Q27JStudio7TObjectFUl,
-	(void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
+/* 803C54A4-803C54C4 0020+00 rc=2 efc=0 rfr=False None .data      __vt__Q27JStudio11TObject_fog                                */
+SECTION_DATA static void* __vt__Q27JStudio11TObject_fog[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__Q27JStudio11TObject_fogFv,
+	/* 3    */ (void*)do_begin__Q27JStudio7TObjectFv,
+	/* 4    */ (void*)do_end__Q27JStudio7TObjectFv,
+	/* 5    */ (void*)do_paragraph__Q27JStudio11TObject_fogFUlPCvUl,
+	/* 6    */ (void*)do_wait__Q27JStudio7TObjectFUl,
+	/* 7    */ (void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
 };
 
-/* 803C54C4-803C54E4 0020+00 rc=0 efc=0 .data      __vt__Q27JStudio12TAdaptor_fog                               */
-void* const __vt__Q27JStudio12TAdaptor_fog[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
-	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+/* 803C54C4-803C54E4 0020+00 rc=2 efc=1 rfr=False None .data      __vt__Q27JStudio12TAdaptor_fog                               */
+SECTION_DATA void* __vt__Q27JStudio12TAdaptor_fog[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
+	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	/* 5    */ (void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
+	/* 6    */ (void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
+	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
 };
 
-/* 803C54E4-803C5504 0020+00 rc=0 efc=0 .data      __vt__Q27JStudio14TObject_camera                             */
-void* const __vt__Q27JStudio14TObject_camera[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__Q27JStudio14TObject_cameraFv,
-	(void*)do_begin__Q27JStudio7TObjectFv,
-	(void*)do_end__Q27JStudio7TObjectFv,
-	(void*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl,
-	(void*)do_wait__Q27JStudio7TObjectFUl,
-	(void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
+/* 803C54E4-803C5504 0020+00 rc=2 efc=0 rfr=False None .data      __vt__Q27JStudio14TObject_camera                             */
+SECTION_DATA static void* __vt__Q27JStudio14TObject_camera[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__Q27JStudio14TObject_cameraFv,
+	/* 3    */ (void*)do_begin__Q27JStudio7TObjectFv,
+	/* 4    */ (void*)do_end__Q27JStudio7TObjectFv,
+	/* 5    */ (void*)do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl,
+	/* 6    */ (void*)do_wait__Q27JStudio7TObjectFUl,
+	/* 7    */ (void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
 };
 
-/* 803C5504-803C5540 003C+00 rc=0 efc=0 .data      __vt__Q27JStudio15TAdaptor_camera                            */
-void* const __vt__Q27JStudio15TAdaptor_camera[15] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
-	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 803C5504-803C5540 003C+00 rc=2 efc=1 rfr=False None .data      __vt__Q27JStudio15TAdaptor_camera                            */
+SECTION_DATA void* __vt__Q27JStudio15TAdaptor_camera[15] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
+	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	/* 5    */ (void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
+	/* 6    */ (void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
+	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)NULL,
+	/* 12   */ (void*)NULL,
+	/* 13   */ (void*)NULL,
+	/* 14   */ (void*)NULL,
 };
 
-/* 803C5540-803C5560 0020+00 rc=0 efc=0 .data      __vt__Q27JStudio20TObject_ambientLight                       */
-void* const __vt__Q27JStudio20TObject_ambientLight[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__Q27JStudio20TObject_ambientLightFv,
-	(void*)do_begin__Q27JStudio7TObjectFv,
-	(void*)do_end__Q27JStudio7TObjectFv,
-	(void*)do_paragraph__Q27JStudio20TObject_ambientLightFUlPCvUl,
-	(void*)do_wait__Q27JStudio7TObjectFUl,
-	(void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
+/* 803C5540-803C5560 0020+00 rc=2 efc=0 rfr=False None .data      __vt__Q27JStudio20TObject_ambientLight                       */
+SECTION_DATA static void* __vt__Q27JStudio20TObject_ambientLight[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__Q27JStudio20TObject_ambientLightFv,
+	/* 3    */ (void*)do_begin__Q27JStudio7TObjectFv,
+	/* 4    */ (void*)do_end__Q27JStudio7TObjectFv,
+	/* 5    */ (void*)do_paragraph__Q27JStudio20TObject_ambientLightFUlPCvUl,
+	/* 6    */ (void*)do_wait__Q27JStudio7TObjectFUl,
+	/* 7    */ (void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
 };
 
-/* 803C5560-803C5580 0020+00 rc=0 efc=0 .data      __vt__Q27JStudio21TAdaptor_ambientLight                      */
-void* const __vt__Q27JStudio21TAdaptor_ambientLight[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
-	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+/* 803C5560-803C5580 0020+00 rc=2 efc=1 rfr=False None .data      __vt__Q27JStudio21TAdaptor_ambientLight                      */
+SECTION_DATA void* __vt__Q27JStudio21TAdaptor_ambientLight[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
+	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	/* 5    */ (void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
+	/* 6    */ (void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
+	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
 };
 
-/* 803C5580-803C55A0 0020+00 rc=0 efc=0 .data      __vt__Q27JStudio13TObject_actor                              */
-void* const __vt__Q27JStudio13TObject_actor[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__dt__Q27JStudio13TObject_actorFv,
-	(void*)do_begin__Q27JStudio7TObjectFv,
-	(void*)do_end__Q27JStudio7TObjectFv,
-	(void*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl,
-	(void*)do_wait__Q27JStudio7TObjectFUl,
-	(void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
+/* 803C5580-803C55A0 0020+00 rc=2 efc=0 rfr=False None .data      __vt__Q27JStudio13TObject_actor                              */
+SECTION_DATA static void* __vt__Q27JStudio13TObject_actor[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__dt__Q27JStudio13TObject_actorFv,
+	/* 3    */ (void*)do_begin__Q27JStudio7TObjectFv,
+	/* 4    */ (void*)do_end__Q27JStudio7TObjectFv,
+	/* 5    */ (void*)do_paragraph__Q27JStudio13TObject_actorFUlPCvUl,
+	/* 6    */ (void*)do_wait__Q27JStudio7TObjectFUl,
+	/* 7    */ (void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
 };
 
-/* 803C55A0-803C55F0 0050+00 rc=0 efc=0 .data      __vt__Q27JStudio14TAdaptor_actor                             */
-void* const __vt__Q27JStudio14TAdaptor_actor[20] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
-	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 803C55A0-803C55F0 0050+00 rc=2 efc=1 rfr=False None .data      __vt__Q27JStudio14TAdaptor_actor                             */
+SECTION_DATA void* __vt__Q27JStudio14TAdaptor_actor[20] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
+	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	/* 5    */ (void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
+	/* 6    */ (void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
+	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+	/* 8    */ (void*)NULL,
+	/* 9    */ (void*)NULL,
+	/* 10   */ (void*)NULL,
+	/* 11   */ (void*)NULL,
+	/* 12   */ (void*)NULL,
+	/* 13   */ (void*)NULL,
+	/* 14   */ (void*)NULL,
+	/* 15   */ (void*)NULL,
+	/* 16   */ (void*)NULL,
+	/* 17   */ (void*)NULL,
+	/* 18   */ (void*)NULL,
+	/* 19   */ (void*)NULL,
 };
 
-/* 803C55F0-803C5610 0020+00 rc=0 efc=0 .data      __vt__Q27JStudio7TObject                                     */
-void* const __vt__Q27JStudio7TObject[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)do_begin__Q27JStudio7TObjectFv,
-	(void*)do_end__Q27JStudio7TObjectFv,
-	(void*)NULL,
-	(void*)do_wait__Q27JStudio7TObjectFUl,
-	(void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
+/* 803C55F0-803C5610 0020+00 rc=2 efc=0 rfr=False None .data      __vt__Q27JStudio7TObject                                     */
+SECTION_DATA static void* __vt__Q27JStudio7TObject[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)do_begin__Q27JStudio7TObjectFv,
+	/* 4    */ (void*)do_end__Q27JStudio7TObjectFv,
+	/* 5    */ (void*)NULL,
+	/* 6    */ (void*)do_wait__Q27JStudio7TObjectFUl,
+	/* 7    */ (void*)do_data__Q27JStudio7TObjectFPCvUlPCvUl,
 };
 
-/* 803C5610-803C5630 0020+00 rc=0 efc=0 .data      __vt__Q27JStudio8TAdaptor                                    */
-void* const __vt__Q27JStudio8TAdaptor[8] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
-	(void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
-	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+/* 803C5610-803C5630 0020+00 rc=9 efc=8 rfr=False None .data      __vt__Q27JStudio8TAdaptor                                    */
+SECTION_DATA void* __vt__Q27JStudio8TAdaptor[8] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
+	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	/* 5    */ (void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
+	/* 6    */ (void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
+	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
 };
 
-/* 803C5630-803C5640 0010+00 rc=0 efc=0 .data      __vt__Q37JStudio14TVariableValue13TOutput_none_              */
-void* const __vt__Q37JStudio14TVariableValue13TOutput_none_[4] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)__cl__Q37JStudio14TVariableValue13TOutput_none_CFfPQ27JStudio8TAdaptor,
-	(void*)__dt__Q37JStudio14TVariableValue13TOutput_none_Fv,
+/* 803C5630-803C5640 0010+00 rc=1 efc=0 rfr=False None .data      __vt__Q37JStudio14TVariableValue13TOutput_none_              */
+SECTION_DATA static void* __vt__Q37JStudio14TVariableValue13TOutput_none_[4] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)__cl__Q37JStudio14TVariableValue13TOutput_none_CFfPQ27JStudio8TAdaptor,
+	/* 3    */ (void*)__dt__Q37JStudio14TVariableValue13TOutput_none_Fv,
 };
 
-/* 803C5640-803C5650 0010+00 rc=0 efc=0 .data      __vt__Q37JStudio14TVariableValue7TOutput                     */
-void* const __vt__Q37JStudio14TVariableValue7TOutput[4] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)NULL,
-	(void*)NULL,
+/* 803C5640-803C5650 0010+00 rc=7 efc=5 rfr=False None .data      __vt__Q37JStudio14TVariableValue7TOutput                     */
+SECTION_DATA void* __vt__Q37JStudio14TVariableValue7TOutput[4] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)NULL,
+	/* 3    */ (void*)NULL,
 };
 
-/* 80285E0C-80285E54 0048+00 rc=0 efc=0 .text      __dt__Q37JStudio14TVariableValue7TOutputFv                   */
+/* 80285E0C-80285E54 0048+00 rc=17 efc=11 rfr=False None .text      __dt__Q37JStudio14TVariableValue7TOutputFv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1412,7 +1371,7 @@ asm JStudio::TVariableValue::TOutput::~TOutput() {
 #pragma pop
 
 
-/* 80285E54-80285EB8 0064+00 rc=0 efc=0 .text      update__Q27JStudio14TVariableValueFdPQ27JStudio8TAdaptor     */
+/* 80285E54-80285EB8 0064+00 rc=1 efc=0 rfr=False None .text      update__Q27JStudio14TVariableValueFdPQ27JStudio8TAdaptor     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1423,7 +1382,7 @@ asm void JStudio::TVariableValue::update(f64 field_0, JStudio::TAdaptor* field_1
 #pragma pop
 
 
-/* 80285EB8-80285ECC 0014+00 rc=0 efc=0 .text      update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued */
+/* 80285EB8-80285ECC 0014+00 rc=8 efc=4 rfr=False None .text      update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1435,10 +1394,10 @@ asm void JStudio::TVariableValue::update_immediate_(JStudio::TVariableValue* fie
 
 
 /* ############################################################################################## */
-/* 804554A0-804554A8 0008+00 rc=0 efc=0 .sdata2    @803                                                         */
-f64 lit_803 = 4503599627370496.0 /* cast u32 to float */;
+/* 804554A0-804554A8 0008+00 rc=3 efc=0 rfr=False None .sdata2    @803                                                         */
+SECTION_SDATA2 static f64 lit_803 = 4503599627370496.0 /* cast u32 to float */;
 
-/* 80285ECC-80285F08 003C+00 rc=0 efc=0 .text      update_time___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued */
+/* 80285ECC-80285F08 003C+00 rc=1 efc=0 rfr=False None .text      update_time___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1449,7 +1408,7 @@ asm void JStudio::TVariableValue::update_time_(JStudio::TVariableValue* field_0,
 #pragma pop
 
 
-/* 80285F08-80285F6C 0064+00 rc=0 efc=0 .text      update_functionValue___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued */
+/* 80285F08-80285F6C 0064+00 rc=2 efc=0 rfr=False None .text      update_functionValue___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1460,7 +1419,7 @@ asm void JStudio::TVariableValue::update_functionValue_(JStudio::TVariableValue*
 #pragma pop
 
 
-/* 80285F6C-80285FCC 0060+00 rc=0 efc=0 .text      __dt__Q37JStudio14TVariableValue13TOutput_none_Fv            */
+/* 80285F6C-80285FCC 0060+00 rc=2 efc=0 rfr=False None .text      __dt__Q37JStudio14TVariableValue13TOutput_none_Fv            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1471,13 +1430,13 @@ asm JStudio::TVariableValue::TOutput_none_::~TOutput_none_() {
 #pragma pop
 
 
-/* 80285FCC-80285FD0 0004+00 rc=0 efc=0 .text      __cl__Q37JStudio14TVariableValue13TOutput_none_CFfPQ27JStudio8TAdaptor */
+/* 80285FCC-80285FD0 0004+00 rc=1 efc=0 rfr=False None .text      __cl__Q37JStudio14TVariableValue13TOutput_none_CFfPQ27JStudio8TAdaptor */
 void JStudio::TVariableValue::TOutput_none_::operator()(f32 field_0, JStudio::TAdaptor* field_1) const {
 	/* empty function */
 }
 
 
-/* 80285FD0-80286018 0048+00 rc=0 efc=0 .text      __dt__Q27JStudio8TAdaptorFv                                  */
+/* 80285FD0-80286018 0048+00 rc=8 efc=0 rfr=False None .text      __dt__Q27JStudio8TAdaptorFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1488,37 +1447,37 @@ asm JStudio::TAdaptor::~TAdaptor() {
 #pragma pop
 
 
-/* 80286018-8028601C 0004+00 rc=0 efc=0 .text      adaptor_do_prepare__Q27JStudio8TAdaptorFv                    */
+/* 80286018-8028601C 0004+00 rc=10 efc=2 rfr=False None .text      adaptor_do_prepare__Q27JStudio8TAdaptorFv                    */
 void JStudio::TAdaptor::adaptor_do_prepare() {
 	/* empty function */
 }
 
 
-/* 8028601C-80286020 0004+00 rc=0 efc=0 .text      adaptor_do_begin__Q27JStudio8TAdaptorFv                      */
+/* 8028601C-80286020 0004+00 rc=12 efc=4 rfr=False None .text      adaptor_do_begin__Q27JStudio8TAdaptorFv                      */
 void JStudio::TAdaptor::adaptor_do_begin() {
 	/* empty function */
 }
 
 
-/* 80286020-80286024 0004+00 rc=0 efc=0 .text      adaptor_do_end__Q27JStudio8TAdaptorFv                        */
+/* 80286020-80286024 0004+00 rc=10 efc=2 rfr=False None .text      adaptor_do_end__Q27JStudio8TAdaptorFv                        */
 void JStudio::TAdaptor::adaptor_do_end() {
 	/* empty function */
 }
 
 
-/* 80286024-80286028 0004+00 rc=0 efc=0 .text      adaptor_do_update__Q27JStudio8TAdaptorFUl                    */
+/* 80286024-80286028 0004+00 rc=10 efc=2 rfr=False None .text      adaptor_do_update__Q27JStudio8TAdaptorFUl                    */
 void JStudio::TAdaptor::adaptor_do_update(u32 field_0) {
 	/* empty function */
 }
 
 
-/* 80286028-8028602C 0004+00 rc=0 efc=0 .text      adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl              */
+/* 80286028-8028602C 0004+00 rc=12 efc=4 rfr=False None .text      adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl              */
 void JStudio::TAdaptor::adaptor_do_data(void const* field_0, u32 field_1, void const* field_2, u32 field_3) {
 	/* empty function */
 }
 
 
-/* 8028602C-802860CC 00A0+00 rc=0 efc=0 .text      adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028602C-802860CC 00A0+00 rc=8 efc=0 rfr=False None .text      adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1529,7 +1488,7 @@ asm void JStudio::TAdaptor::adaptor_setVariableValue(JStudio::TControl* field_0,
 #pragma pop
 
 
-/* 802860CC-802861C0 00F4+00 rc=0 efc=0 .text      adaptor_setVariableValue_n__Q27JStudio8TAdaptorFPQ27JStudio8TControlPCUlUlQ37JStudio4data15TEOperationDataPCvUl */
+/* 802860CC-802861C0 00F4+00 rc=7 efc=0 rfr=False None .text      adaptor_setVariableValue_n__Q27JStudio8TAdaptorFPQ27JStudio8TControlPCUlUlQ37JStudio4data15TEOperationDataPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1540,7 +1499,7 @@ asm void JStudio::TAdaptor::adaptor_setVariableValue_n(JStudio::TControl* field_
 #pragma pop
 
 
-/* 802861C0-80286204 0044+00 rc=0 efc=0 .text      adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate */
+/* 802861C0-80286204 0044+00 rc=2 efc=2 rfr=False None .text      adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1551,7 +1510,7 @@ asm void JStudio::TAdaptor::adaptor_setVariableValue_immediate(JStudio::TAdaptor
 #pragma pop
 
 
-/* 80286204-80286274 0070+00 rc=0 efc=0 .text      adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec */
+/* 80286204-80286274 0070+00 rc=4 efc=4 rfr=False None .text      adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1562,7 +1521,7 @@ asm void JStudio::TAdaptor::adaptor_setVariableValue_Vec(u32 const* field_0, Vec
 #pragma pop
 
 
-/* 80286274-802862AC 0038+00 rc=0 efc=0 .text      adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl */
+/* 80286274-802862AC 0038+00 rc=6 efc=6 rfr=False None .text      adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1573,7 +1532,7 @@ asm void JStudio::TAdaptor::adaptor_getVariableValue_Vec(Vec* field_0, u32 const
 #pragma pop
 
 
-/* 802862AC-8028638C 00E0+00 rc=0 efc=0 .text      adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor */
+/* 802862AC-8028638C 00E0+00 rc=3 efc=3 rfr=False None .text      adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1585,15 +1544,15 @@ asm void JStudio::TAdaptor::adaptor_setVariableValue_GXColor(u32 const* field_0,
 
 
 /* ############################################################################################## */
-/* 804554A8-804554AC 0004+00 rc=0 efc=0 .sdata2    @1094                                                        */
-u8 lit_1094[4] = {
+/* 804554A8-804554AC 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1094                                                        */
+SECTION_SDATA2 static u8 lit_1094[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804554AC-804554B0 0004+00 rc=0 efc=0 .sdata2    @1095                                                        */
-f32 jstudio_object__lit_1095 = 255.0f;
+/* 804554AC-804554B0 0004+00 rc=1 efc=0 rfr=False None .sdata2    @1095                                                        */
+SECTION_SDATA2 static f32 jstudio_object__lit_1095 = 255.0f;
 
-/* 8028638C-802864D8 014C+00 rc=0 efc=0 .text      adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl */
+/* 8028638C-802864D8 014C+00 rc=4 efc=4 rfr=False None .text      adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1604,7 +1563,7 @@ asm void JStudio::TAdaptor::adaptor_getVariableValue_GXColor(_GXColor* field_0, 
 #pragma pop
 
 
-/* 802864D8-8028656C 0094+00 rc=0 efc=0 .text      adaptor_updateVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUl */
+/* 802864D8-8028656C 0094+00 rc=1 efc=0 rfr=False None .text      adaptor_updateVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1615,7 +1574,7 @@ asm void JStudio::TAdaptor::adaptor_updateVariableValue(JStudio::TControl* field
 #pragma pop
 
 
-/* 8028656C-80286584 0018+00 rc=0 efc=0 .text      adaptor_setVariableValue_VOID___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl */
+/* 8028656C-80286584 0018+00 rc=2 efc=0 rfr=False None .text      adaptor_setVariableValue_VOID___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1626,7 +1585,7 @@ asm void JStudio::TAdaptor::adaptor_setVariableValue_VOID_(JStudio::TAdaptor* fi
 #pragma pop
 
 
-/* 80286584-802865B0 002C+00 rc=0 efc=0 .text      adaptor_setVariableValue_IMMEDIATE___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl */
+/* 80286584-802865B0 002C+00 rc=2 efc=0 rfr=False None .text      adaptor_setVariableValue_IMMEDIATE___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1637,7 +1596,7 @@ asm void JStudio::TAdaptor::adaptor_setVariableValue_IMMEDIATE_(JStudio::TAdapto
 #pragma pop
 
 
-/* 802865B0-802865DC 002C+00 rc=0 efc=0 .text      adaptor_setVariableValue_TIME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl */
+/* 802865B0-802865DC 002C+00 rc=2 efc=0 rfr=False None .text      adaptor_setVariableValue_TIME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1648,7 +1607,7 @@ asm void JStudio::TAdaptor::adaptor_setVariableValue_TIME_(JStudio::TAdaptor* fi
 #pragma pop
 
 
-/* 802865DC-80286648 006C+00 rc=0 efc=0 .text      adaptor_setVariableValue_FVR_NAME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl */
+/* 802865DC-80286648 006C+00 rc=1 efc=0 rfr=False None .text      adaptor_setVariableValue_FVR_NAME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1659,7 +1618,7 @@ asm void JStudio::TAdaptor::adaptor_setVariableValue_FVR_NAME_(JStudio::TAdaptor
 #pragma pop
 
 
-/* 80286648-802866B0 0068+00 rc=0 efc=0 .text      adaptor_setVariableValue_FVR_INDEX___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl */
+/* 80286648-802866B0 0068+00 rc=2 efc=0 rfr=False None .text      adaptor_setVariableValue_FVR_INDEX___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1670,7 +1629,7 @@ asm void JStudio::TAdaptor::adaptor_setVariableValue_FVR_INDEX_(JStudio::TAdapto
 #pragma pop
 
 
-/* 802866B0-80286734 0084+00 rc=0 efc=0 .text      __dt__Q27JStudio7TObjectFv                                   */
+/* 802866B0-80286734 0084+00 rc=8 efc=0 rfr=False None .text      __dt__Q27JStudio7TObjectFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1681,7 +1640,7 @@ asm JStudio::TObject::~TObject() {
 #pragma pop
 
 
-/* 80286734-8028679C 0068+00 rc=0 efc=0 .text      forward_value__Q27JStudio7TObjectFUl                         */
+/* 80286734-8028679C 0068+00 rc=1 efc=0 rfr=False None .text      forward_value__Q27JStudio7TObjectFUl                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1692,7 +1651,7 @@ asm void JStudio::TObject::forward_value(u32 field_0) {
 #pragma pop
 
 
-/* 8028679C-802867D4 0038+00 rc=0 efc=0 .text      do_begin__Q27JStudio7TObjectFv                               */
+/* 8028679C-802867D4 0038+00 rc=9 efc=0 rfr=False None .text      do_begin__Q27JStudio7TObjectFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1703,7 +1662,7 @@ asm void JStudio::TObject::do_begin() {
 #pragma pop
 
 
-/* 802867D4-8028680C 0038+00 rc=0 efc=0 .text      do_end__Q27JStudio7TObjectFv                                 */
+/* 802867D4-8028680C 0038+00 rc=9 efc=0 rfr=False None .text      do_end__Q27JStudio7TObjectFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1714,7 +1673,7 @@ asm void JStudio::TObject::do_end() {
 #pragma pop
 
 
-/* 8028680C-8028682C 0020+00 rc=0 efc=0 .text      do_wait__Q27JStudio7TObjectFUl                               */
+/* 8028680C-8028682C 0020+00 rc=9 efc=0 rfr=False None .text      do_wait__Q27JStudio7TObjectFUl                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1725,7 +1684,7 @@ asm void JStudio::TObject::do_wait(u32 field_0) {
 #pragma pop
 
 
-/* 8028682C-80286864 0038+00 rc=0 efc=0 .text      do_data__Q27JStudio7TObjectFPCvUlPCvUl                       */
+/* 8028682C-80286864 0038+00 rc=9 efc=0 rfr=False None .text      do_data__Q27JStudio7TObjectFPCvUlPCvUl                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1736,7 +1695,7 @@ asm void JStudio::TObject::do_data(void const* field_0, u32 field_1, void const*
 #pragma pop
 
 
-/* 80286864-802868B0 004C+00 rc=0 efc=0 .text      __ct__Q27JStudio7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio8TAdaptor */
+/* 80286864-802868B0 004C+00 rc=8 efc=0 rfr=False None .text      __ct__Q27JStudio7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio8TAdaptor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1747,7 +1706,7 @@ asm JStudio::TObject::TObject(JStudio::stb::data::TParse_TBlock_object const& fi
 #pragma pop
 
 
-/* 802868B0-80286910 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio14TAdaptor_actorFv                           */
+/* 802868B0-80286910 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q27JStudio14TAdaptor_actorFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1758,7 +1717,7 @@ asm JStudio::TAdaptor_actor::~TAdaptor_actor() {
 #pragma pop
 
 
-/* 80286910-8028694C 003C+00 rc=0 efc=0 .text      __ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor */
+/* 80286910-8028694C 003C+00 rc=1 efc=1 rfr=False None .text      __ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1770,27 +1729,27 @@ asm JStudio::TObject_actor::TObject_actor(JStudio::stb::data::TParse_TBlock_obje
 
 
 /* ############################################################################################## */
-/* 8039AA68-8039AA74 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor */
-const u8 sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor[12] = {
+/* 8039AA68-8039AA74 000C+00 rc=5 efc=2 rfr=False None .rodata    sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor */
+SECTION_RODATA u8 const sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor[12] = {
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
 };
 
-/* 80431010-8043101C 000C+00 rc=0 efc=0 .bss       @744                                                         */
-u8 jstudio_object__lit_744[12];
+/* 80431010-8043101C 000C+00 rc=3 efc=0 rfr=False None .bss       @744                                                         */
+static u8 jstudio_object__lit_744[12];
 
-/* 8043101C-8043102C 0010+00 rc=0 efc=0 .bss       soovv_actor_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
-u8 data_8043101C[16];
+/* 8043101C-8043102C 0010+00 rc=1 efc=0 rfr=False None .bss       soovv_actor_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+static u8 data_8043101C[16];
 
-/* 8043102C-80431038 000C+00 rc=0 efc=0 .bss       @747                                                         */
+/* 8043102C-80431038 000C+00 rc=0 efc=0 rfr=False None .bss       @747                                                         */
 u8 lit_747[12];
 
-/* 80431038-80431048 0010+00 rc=0 efc=0 .bss       soovv_actor_RELATION_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
-u8 data_80431038[16];
+/* 80431038-80431048 0010+00 rc=1 efc=0 rfr=False None .bss       soovv_actor_RELATION_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+static u8 data_80431038[16];
 
-/* 804511F0-804511F8 0004+04 rc=0 efc=0 .sbss      soOutput_none___Q27JStudio14TVariableValue                   */
+/* 804511F0-804511F8 0004+04 rc=12 efc=6 rfr=False None .sbss      soOutput_none___Q27JStudio14TVariableValue                   */
 u8 soOutput_none___Q27JStudio14TVariableValue[4 + 4 /* padding */];
 
-/* 8028694C-80286C9C 0350+00 rc=0 efc=0 .text      do_paragraph__Q27JStudio13TObject_actorFUlPCvUl              */
+/* 8028694C-80286C9C 0350+00 rc=2 efc=0 rfr=False None .text      do_paragraph__Q27JStudio13TObject_actorFUlPCvUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1801,7 +1760,7 @@ asm void JStudio::TObject_actor::do_paragraph(u32 field_0, void const* field_1, 
 #pragma pop
 
 
-/* 80286C9C-80286CFC 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio21TAdaptor_ambientLightFv                    */
+/* 80286C9C-80286CFC 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q27JStudio21TAdaptor_ambientLightFv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1812,7 +1771,7 @@ asm JStudio::TAdaptor_ambientLight::~TAdaptor_ambientLight() {
 #pragma pop
 
 
-/* 80286CFC-80286D38 003C+00 rc=0 efc=0 .text      __ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight */
+/* 80286CFC-80286D38 003C+00 rc=1 efc=1 rfr=False None .text      __ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1824,27 +1783,27 @@ asm JStudio::TObject_ambientLight::TObject_ambientLight(JStudio::stb::data::TPar
 
 
 /* ############################################################################################## */
-/* 8039AA74-8039AA80 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor  */
-const u8 sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor[12] = {
+/* 8039AA74-8039AA80 000C+00 rc=2 efc=2 rfr=False None .rodata    sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor  */
+SECTION_RODATA u8 const sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor[12] = {
 	0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x08,
 };
 
-/* 8039AA80-8039AA8C 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_SCALING_XYZ__Q27JStudio14TAdaptor_actor   */
-const u8 sauVariableValue_3_SCALING_XYZ__Q27JStudio14TAdaptor_actor[12] = {
+/* 8039AA80-8039AA8C 000C+00 rc=2 efc=2 rfr=False None .rodata    sauVariableValue_3_SCALING_XYZ__Q27JStudio14TAdaptor_actor   */
+SECTION_RODATA u8 const sauVariableValue_3_SCALING_XYZ__Q27JStudio14TAdaptor_actor[12] = {
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x0B,
 };
 
-/* 8039AA8C-8039AA98 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_COLOR_RGB__Q27JStudio21TAdaptor_ambientLight */
-const u8 sauVariableValue_3_COLOR_RGB__Q27JStudio21TAdaptor_ambientLight[12] = {
+/* 8039AA8C-8039AA98 000C+00 rc=1 efc=0 rfr=False None .rodata    sauVariableValue_3_COLOR_RGB__Q27JStudio21TAdaptor_ambientLight */
+SECTION_RODATA static u8 const sauVariableValue_3_COLOR_RGB__Q27JStudio21TAdaptor_ambientLight[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
 
-/* 8039AA98-8039AAA8 0010+00 rc=0 efc=0 .rodata    sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight */
-const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight[16] = {
+/* 8039AA98-8039AAA8 0010+00 rc=3 efc=2 rfr=False None .rodata    sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight */
+SECTION_RODATA u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
 };
 
-/* 80286D38-80286E1C 00E4+00 rc=0 efc=0 .text      do_paragraph__Q27JStudio20TObject_ambientLightFUlPCvUl       */
+/* 80286D38-80286E1C 00E4+00 rc=1 efc=0 rfr=False None .text      do_paragraph__Q27JStudio20TObject_ambientLightFUlPCvUl       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1855,7 +1814,7 @@ asm void JStudio::TObject_ambientLight::do_paragraph(u32 field_0, void const* fi
 #pragma pop
 
 
-/* 80286E1C-80286E7C 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio15TAdaptor_cameraFv                          */
+/* 80286E1C-80286E7C 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q27JStudio15TAdaptor_cameraFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1866,7 +1825,7 @@ asm JStudio::TAdaptor_camera::~TAdaptor_camera() {
 #pragma pop
 
 
-/* 80286E7C-80286EB8 003C+00 rc=0 efc=0 .text      __ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera */
+/* 80286E7C-80286EB8 003C+00 rc=1 efc=1 rfr=False None .text      __ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1878,34 +1837,34 @@ asm JStudio::TObject_camera::TObject_camera(JStudio::stb::data::TParse_TBlock_ob
 
 
 /* ############################################################################################## */
-/* 8039AAA8-8039AAB4 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_POSITION_XYZ__Q27JStudio15TAdaptor_camera */
-const u8 sauVariableValue_3_POSITION_XYZ__Q27JStudio15TAdaptor_camera[12] = {
+/* 8039AAA8-8039AAB4 000C+00 rc=3 efc=2 rfr=False None .rodata    sauVariableValue_3_POSITION_XYZ__Q27JStudio15TAdaptor_camera */
+SECTION_RODATA u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio15TAdaptor_camera[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
 
-/* 8039AAB4-8039AAC0 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio15TAdaptor_camera */
-const u8 sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio15TAdaptor_camera[12] = {
+/* 8039AAB4-8039AAC0 000C+00 rc=3 efc=2 rfr=False None .rodata    sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio15TAdaptor_camera */
+SECTION_RODATA u8 const sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio15TAdaptor_camera[12] = {
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
 };
 
-/* 80431048-80431054 000C+00 rc=0 efc=0 .bss       @750                                                         */
+/* 80431048-80431054 000C+00 rc=0 efc=0 rfr=False None .bss       @750                                                         */
 u8 lit_750[12];
 
-/* 80431054-80431064 0010+00 rc=0 efc=0 .bss       soovv_camera_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
-u8 data_80431054[16];
+/* 80431054-80431064 0010+00 rc=1 efc=0 rfr=False None .bss       soovv_camera_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+static u8 data_80431054[16];
 
-/* 80431064-80431070 000C+00 rc=0 efc=0 .bss       @753                                                         */
+/* 80431064-80431070 000C+00 rc=0 efc=0 rfr=False None .bss       @753                                                         */
 u8 lit_753[12];
 
-/* 80431070-80431080 0010+00 rc=0 efc=0 .bss       soovv_camera_TARGET_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
-u8 data_80431070[16];
+/* 80431070-80431080 0010+00 rc=1 efc=0 rfr=False None .bss       soovv_camera_TARGET_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+static u8 data_80431070[16];
 
-/* 804554B0-804554B8 0008+00 rc=0 efc=0 .sdata2    sauVariableValue_2_DISTANCE_NEAR_FAR__Q27JStudio15TAdaptor_camera */
-u8 sauVariableValue_2_DISTANCE_NEAR_FAR__Q27JStudio15TAdaptor_camera[8] = {
+/* 804554B0-804554B8 0008+00 rc=1 efc=0 rfr=False None .sdata2    sauVariableValue_2_DISTANCE_NEAR_FAR__Q27JStudio15TAdaptor_camera */
+SECTION_SDATA2 static u8 sauVariableValue_2_DISTANCE_NEAR_FAR__Q27JStudio15TAdaptor_camera[8] = {
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x09,
 };
 
-/* 80286EB8-8028717C 02C4+00 rc=0 efc=0 .text      do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl             */
+/* 80286EB8-8028717C 02C4+00 rc=2 efc=0 rfr=False None .text      do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1916,7 +1875,7 @@ asm void JStudio::TObject_camera::do_paragraph(u32 field_0, void const* field_1,
 #pragma pop
 
 
-/* 8028717C-802871DC 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio12TAdaptor_fogFv                             */
+/* 8028717C-802871DC 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q27JStudio12TAdaptor_fogFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1927,7 +1886,7 @@ asm JStudio::TAdaptor_fog::~TAdaptor_fog() {
 #pragma pop
 
 
-/* 802871DC-80287218 003C+00 rc=0 efc=0 .text      __ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog */
+/* 802871DC-80287218 003C+00 rc=1 efc=1 rfr=False None .text      __ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1939,22 +1898,22 @@ asm JStudio::TObject_fog::TObject_fog(JStudio::stb::data::TParse_TBlock_object c
 
 
 /* ############################################################################################## */
-/* 8039AAC0-8039AACC 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_COLOR_RGB__Q27JStudio12TAdaptor_fog       */
-const u8 sauVariableValue_3_COLOR_RGB__Q27JStudio12TAdaptor_fog[12] = {
+/* 8039AAC0-8039AACC 000C+00 rc=1 efc=0 rfr=False None .rodata    sauVariableValue_3_COLOR_RGB__Q27JStudio12TAdaptor_fog       */
+SECTION_RODATA static u8 const sauVariableValue_3_COLOR_RGB__Q27JStudio12TAdaptor_fog[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
 
-/* 8039AACC-8039AADC 0010+00 rc=0 efc=0 .rodata    sauVariableValue_4_COLOR_RGBA__Q27JStudio12TAdaptor_fog      */
-const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio12TAdaptor_fog[16] = {
+/* 8039AACC-8039AADC 0010+00 rc=3 efc=2 rfr=False None .rodata    sauVariableValue_4_COLOR_RGBA__Q27JStudio12TAdaptor_fog      */
+SECTION_RODATA u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio12TAdaptor_fog[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
 };
 
-/* 804554B8-804554C0 0008+00 rc=0 efc=0 .sdata2    sauVariableValue_2_RANGE_BEGIN_END__Q27JStudio12TAdaptor_fog */
-u8 sauVariableValue_2_RANGE_BEGIN_END__Q27JStudio12TAdaptor_fog[8] = {
+/* 804554B8-804554C0 0008+00 rc=1 efc=0 rfr=False None .sdata2    sauVariableValue_2_RANGE_BEGIN_END__Q27JStudio12TAdaptor_fog */
+SECTION_SDATA2 static u8 sauVariableValue_2_RANGE_BEGIN_END__Q27JStudio12TAdaptor_fog[8] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
 };
 
-/* 80287218-80287308 00F0+00 rc=0 efc=0 .text      do_paragraph__Q27JStudio11TObject_fogFUlPCvUl                */
+/* 80287218-80287308 00F0+00 rc=2 efc=0 rfr=False None .text      do_paragraph__Q27JStudio11TObject_fogFUlPCvUl                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1965,7 +1924,7 @@ asm void JStudio::TObject_fog::do_paragraph(u32 field_0, void const* field_1, u3
 #pragma pop
 
 
-/* 80287308-80287368 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio14TAdaptor_lightFv                           */
+/* 80287308-80287368 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q27JStudio14TAdaptor_lightFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1976,7 +1935,7 @@ asm JStudio::TAdaptor_light::~TAdaptor_light() {
 #pragma pop
 
 
-/* 80287368-802873A4 003C+00 rc=0 efc=0 .text      __ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light */
+/* 80287368-802873A4 003C+00 rc=1 efc=1 rfr=False None .text      __ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1988,18 +1947,18 @@ asm JStudio::TObject_light::TObject_light(JStudio::stb::data::TParse_TBlock_obje
 
 
 /* ############################################################################################## */
-/* 80431080-8043108C 000C+00 rc=0 efc=0 .bss       @756                                                         */
+/* 80431080-8043108C 000C+00 rc=0 efc=0 rfr=False None .bss       @756                                                         */
 u8 lit_756[12];
 
-/* 8043108C-8043109C 0010+00 rc=0 efc=0 .bss       soovv_light_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
-u8 data_8043108C[16];
+/* 8043108C-8043109C 0010+00 rc=1 efc=0 rfr=False None .bss       soovv_light_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+static u8 data_8043108C[16];
 
-/* 804554C0-804554C8 0008+00 rc=0 efc=0 .sdata2    sauVariableValue_2_DIRECTION_THETA_PHI__Q27JStudio14TAdaptor_light */
-u8 sauVariableValue_2_DIRECTION_THETA_PHI__Q27JStudio14TAdaptor_light[8] = {
+/* 804554C0-804554C8 0008+00 rc=1 efc=0 rfr=False None .sdata2    sauVariableValue_2_DIRECTION_THETA_PHI__Q27JStudio14TAdaptor_light */
+SECTION_SDATA2 static u8 sauVariableValue_2_DIRECTION_THETA_PHI__Q27JStudio14TAdaptor_light[8] = {
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x0B,
 };
 
-/* 802873A4-802875E0 023C+00 rc=0 efc=0 .text      do_paragraph__Q27JStudio13TObject_lightFUlPCvUl              */
+/* 802873A4-802875E0 023C+00 rc=2 efc=0 rfr=False None .text      do_paragraph__Q27JStudio13TObject_lightFUlPCvUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2010,7 +1969,7 @@ asm void JStudio::TObject_light::do_paragraph(u32 field_0, void const* field_1, 
 #pragma pop
 
 
-/* 802875E0-80287640 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio16TAdaptor_messageFv                         */
+/* 802875E0-80287640 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q27JStudio16TAdaptor_messageFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2021,7 +1980,7 @@ asm JStudio::TAdaptor_message::~TAdaptor_message() {
 #pragma pop
 
 
-/* 80287640-8028767C 003C+00 rc=0 efc=0 .text      __ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message */
+/* 80287640-8028767C 003C+00 rc=1 efc=1 rfr=False None .text      __ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2032,7 +1991,7 @@ asm JStudio::TObject_message::TObject_message(JStudio::stb::data::TParse_TBlock_
 #pragma pop
 
 
-/* 8028767C-8028770C 0090+00 rc=0 efc=0 .text      do_paragraph__Q27JStudio15TObject_messageFUlPCvUl            */
+/* 8028767C-8028770C 0090+00 rc=1 efc=0 rfr=False None .text      do_paragraph__Q27JStudio15TObject_messageFUlPCvUl            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2043,7 +2002,7 @@ asm void JStudio::TObject_message::do_paragraph(u32 field_0, void const* field_1
 #pragma pop
 
 
-/* 8028770C-8028776C 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio17TAdaptor_particleFv                        */
+/* 8028770C-8028776C 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q27JStudio17TAdaptor_particleFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2054,7 +2013,7 @@ asm JStudio::TAdaptor_particle::~TAdaptor_particle() {
 #pragma pop
 
 
-/* 8028776C-802877A8 003C+00 rc=0 efc=0 .text      __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle */
+/* 8028776C-802877A8 003C+00 rc=1 efc=1 rfr=False None .text      __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2065,7 +2024,7 @@ asm JStudio::TObject_particle::TObject_particle(JStudio::stb::data::TParse_TBloc
 #pragma pop
 
 
-/* 802877A8-80287B3C 0394+00 rc=0 efc=0 .text      do_paragraph__Q27JStudio16TObject_particleFUlPCvUl           */
+/* 802877A8-80287B3C 0394+00 rc=2 efc=0 rfr=False None .text      do_paragraph__Q27JStudio16TObject_particleFUlPCvUl           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2076,7 +2035,7 @@ asm void JStudio::TObject_particle::do_paragraph(u32 field_0, void const* field_
 #pragma pop
 
 
-/* 80287B3C-80287B9C 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio14TAdaptor_soundFv                           */
+/* 80287B3C-80287B9C 0060+00 rc=1 efc=1 rfr=False None .text      __dt__Q27JStudio14TAdaptor_soundFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2087,7 +2046,7 @@ asm JStudio::TAdaptor_sound::~TAdaptor_sound() {
 #pragma pop
 
 
-/* 80287B9C-80287BD8 003C+00 rc=0 efc=0 .text      __ct__Q27JStudio13TObject_soundFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_sound */
+/* 80287B9C-80287BD8 003C+00 rc=1 efc=1 rfr=False None .text      __ct__Q27JStudio13TObject_soundFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_sound */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2099,67 +2058,67 @@ asm JStudio::TObject_sound::TObject_sound(JStudio::stb::data::TParse_TBlock_obje
 
 
 /* ############################################################################################## */
-/* 8039AADC-8039AAE8 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_COLOR_RGB__Q27JStudio14TAdaptor_light     */
-const u8 sauVariableValue_3_COLOR_RGB__Q27JStudio14TAdaptor_light[12] = {
+/* 8039AADC-8039AAE8 000C+00 rc=0 efc=0 rfr=False None .rodata    sauVariableValue_3_COLOR_RGB__Q27JStudio14TAdaptor_light     */
+SECTION_RODATA u8 const sauVariableValue_3_COLOR_RGB__Q27JStudio14TAdaptor_light[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
 
-/* 8039AAE8-8039AAF8 0010+00 rc=0 efc=0 .rodata    sauVariableValue_4_COLOR_RGBA__Q27JStudio14TAdaptor_light    */
-const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio14TAdaptor_light[16] = {
+/* 8039AAE8-8039AAF8 0010+00 rc=2 efc=2 rfr=False None .rodata    sauVariableValue_4_COLOR_RGBA__Q27JStudio14TAdaptor_light    */
+SECTION_RODATA u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio14TAdaptor_light[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03,
 };
 
-/* 8039AAF8-8039AB04 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_light  */
-const u8 sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_light[12] = {
+/* 8039AAF8-8039AB04 000C+00 rc=2 efc=2 rfr=False None .rodata    sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_light  */
+SECTION_RODATA u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_light[12] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06,
 };
 
-/* 8039AB04-8039AB10 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio14TAdaptor_light */
-const u8 sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio14TAdaptor_light[12] = {
+/* 8039AB04-8039AB10 000C+00 rc=2 efc=2 rfr=False None .rodata    sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio14TAdaptor_light */
+SECTION_RODATA u8 const sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio14TAdaptor_light[12] = {
 	0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x09,
 };
 
-/* 8039AB10-8039AB1C 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio17TAdaptor_particle */
-const u8 sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio17TAdaptor_particle[12] = {
+/* 8039AB10-8039AB1C 000C+00 rc=1 efc=1 rfr=False None .rodata    sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio17TAdaptor_particle */
+SECTION_RODATA u8 const sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio17TAdaptor_particle[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
 
-/* 8039AB1C-8039AB28 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_ROTATION_XYZ__Q27JStudio17TAdaptor_particle */
-const u8 sauVariableValue_3_ROTATION_XYZ__Q27JStudio17TAdaptor_particle[12] = {
+/* 8039AB1C-8039AB28 000C+00 rc=1 efc=1 rfr=False None .rodata    sauVariableValue_3_ROTATION_XYZ__Q27JStudio17TAdaptor_particle */
+SECTION_RODATA u8 const sauVariableValue_3_ROTATION_XYZ__Q27JStudio17TAdaptor_particle[12] = {
 	0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05,
 };
 
-/* 8039AB28-8039AB34 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_SCALING_XYZ__Q27JStudio17TAdaptor_particle */
-const u8 sauVariableValue_3_SCALING_XYZ__Q27JStudio17TAdaptor_particle[12] = {
+/* 8039AB28-8039AB34 000C+00 rc=1 efc=1 rfr=False None .rodata    sauVariableValue_3_SCALING_XYZ__Q27JStudio17TAdaptor_particle */
+SECTION_RODATA u8 const sauVariableValue_3_SCALING_XYZ__Q27JStudio17TAdaptor_particle[12] = {
 	0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x08,
 };
 
-/* 8039AB34-8039AB40 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_COLOR_RGB__Q27JStudio17TAdaptor_particle  */
-const u8 sauVariableValue_3_COLOR_RGB__Q27JStudio17TAdaptor_particle[12] = {
+/* 8039AB34-8039AB40 000C+00 rc=0 efc=0 rfr=False None .rodata    sauVariableValue_3_COLOR_RGB__Q27JStudio17TAdaptor_particle  */
+SECTION_RODATA u8 const sauVariableValue_3_COLOR_RGB__Q27JStudio17TAdaptor_particle[12] = {
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x0B,
 };
 
-/* 8039AB40-8039AB50 0010+00 rc=0 efc=0 .rodata    sauVariableValue_4_COLOR_RGBA__Q27JStudio17TAdaptor_particle */
-const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio17TAdaptor_particle[16] = {
+/* 8039AB40-8039AB50 0010+00 rc=1 efc=1 rfr=False None .rodata    sauVariableValue_4_COLOR_RGBA__Q27JStudio17TAdaptor_particle */
+SECTION_RODATA u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio17TAdaptor_particle[16] = {
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x0C,
 };
 
-/* 8039AB50-8039AB5C 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_COLOR1_RGB__Q27JStudio17TAdaptor_particle */
-const u8 sauVariableValue_3_COLOR1_RGB__Q27JStudio17TAdaptor_particle[12] = {
+/* 8039AB50-8039AB5C 000C+00 rc=0 efc=0 rfr=False None .rodata    sauVariableValue_3_COLOR1_RGB__Q27JStudio17TAdaptor_particle */
+SECTION_RODATA u8 const sauVariableValue_3_COLOR1_RGB__Q27JStudio17TAdaptor_particle[12] = {
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x0B,
 };
 
-/* 8039AB5C-8039AB6C 0010+00 rc=0 efc=0 .rodata    sauVariableValue_4_COLOR1_RGBA__Q27JStudio17TAdaptor_particle */
-const u8 sauVariableValue_4_COLOR1_RGBA__Q27JStudio17TAdaptor_particle[16] = {
+/* 8039AB5C-8039AB6C 0010+00 rc=0 efc=0 rfr=False None .rodata    sauVariableValue_4_COLOR1_RGBA__Q27JStudio17TAdaptor_particle */
+SECTION_RODATA u8 const sauVariableValue_4_COLOR1_RGBA__Q27JStudio17TAdaptor_particle[16] = {
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x00, 0x00, 0x0C,
 };
 
-/* 8039AB6C-8039AB78 000C+00 rc=0 efc=0 .rodata    sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_sound  */
-const u8 sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_sound[12] = {
+/* 8039AB6C-8039AB78 000C+00 rc=2 efc=1 rfr=False None .rodata    sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_sound  */
+SECTION_RODATA u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_sound[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
 
-/* 80287BD8-80287F04 032C+00 rc=0 efc=0 .text      do_paragraph__Q27JStudio13TObject_soundFUlPCvUl              */
+/* 80287BD8-80287F04 032C+00 rc=2 efc=0 rfr=False None .text      do_paragraph__Q27JStudio13TObject_soundFUlPCvUl              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2170,7 +2129,7 @@ asm void JStudio::TObject_sound::do_paragraph(u32 field_0, void const* field_1, 
 #pragma pop
 
 
-/* 80287F04-80287F64 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio13TObject_soundFv                            */
+/* 80287F04-80287F64 0060+00 rc=1 efc=0 rfr=False None .text      __dt__Q27JStudio13TObject_soundFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2181,7 +2140,7 @@ asm JStudio::TObject_sound::~TObject_sound() {
 #pragma pop
 
 
-/* 80287F64-80287FC4 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio16TObject_particleFv                         */
+/* 80287F64-80287FC4 0060+00 rc=1 efc=0 rfr=False None .text      __dt__Q27JStudio16TObject_particleFv                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2192,7 +2151,7 @@ asm JStudio::TObject_particle::~TObject_particle() {
 #pragma pop
 
 
-/* 80287FC4-80288024 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio15TObject_messageFv                          */
+/* 80287FC4-80288024 0060+00 rc=1 efc=0 rfr=False None .text      __dt__Q27JStudio15TObject_messageFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2203,7 +2162,7 @@ asm JStudio::TObject_message::~TObject_message() {
 #pragma pop
 
 
-/* 80288024-80288084 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio13TObject_lightFv                            */
+/* 80288024-80288084 0060+00 rc=1 efc=0 rfr=False None .text      __dt__Q27JStudio13TObject_lightFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2214,7 +2173,7 @@ asm JStudio::TObject_light::~TObject_light() {
 #pragma pop
 
 
-/* 80288084-802880E4 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio11TObject_fogFv                              */
+/* 80288084-802880E4 0060+00 rc=1 efc=0 rfr=False None .text      __dt__Q27JStudio11TObject_fogFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2225,7 +2184,7 @@ asm JStudio::TObject_fog::~TObject_fog() {
 #pragma pop
 
 
-/* 802880E4-80288144 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio14TObject_cameraFv                           */
+/* 802880E4-80288144 0060+00 rc=1 efc=0 rfr=False None .text      __dt__Q27JStudio14TObject_cameraFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2236,7 +2195,7 @@ asm JStudio::TObject_camera::~TObject_camera() {
 #pragma pop
 
 
-/* 80288144-802881A4 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio20TObject_ambientLightFv                     */
+/* 80288144-802881A4 0060+00 rc=1 efc=0 rfr=False None .text      __dt__Q27JStudio20TObject_ambientLightFv                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2247,7 +2206,7 @@ asm JStudio::TObject_ambientLight::~TObject_ambientLight() {
 #pragma pop
 
 
-/* 802881A4-80288204 0060+00 rc=0 efc=0 .text      __dt__Q27JStudio13TObject_actorFv                            */
+/* 802881A4-80288204 0060+00 rc=1 efc=0 rfr=False None .text      __dt__Q27JStudio13TObject_actorFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2259,47 +2218,47 @@ asm JStudio::TObject_actor::~TObject_actor() {
 
 
 /* ############################################################################################## */
-/* 803C5650-803C5660 0010+00 rc=0 efc=0 .data      __vt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_sound> */
-void* const data_803C5650[4] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)func_802887BC,
-	(void*)func_802885DC,
+/* 803C5650-803C5660 0010+00 rc=2 efc=0 rfr=False None .data      __vt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_sound> */
+SECTION_DATA static void* data_803C5650[4] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)func_802887BC,
+	/* 3    */ (void*)func_802885DC,
 };
 
-/* 803C5660-803C5670 0010+00 rc=0 efc=0 .data      __vt__Q37JStudio28@unnamed@jstudio_object_cpp@57TOutputVariableValue_BOOL_<Q27JStudio17TAdaptor_particle> */
-void* const data_803C5660[4] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)func_80288818,
-	(void*)func_8028863C,
+/* 803C5660-803C5670 0010+00 rc=2 efc=0 rfr=False None .data      __vt__Q37JStudio28@unnamed@jstudio_object_cpp@57TOutputVariableValue_BOOL_<Q27JStudio17TAdaptor_particle> */
+SECTION_DATA static void* data_803C5660[4] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)func_80288818,
+	/* 3    */ (void*)func_8028863C,
 };
 
-/* 803C5670-803C5680 0010+00 rc=0 efc=0 .data      __vt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_light> */
-void* const data_803C5670[4] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)func_80288874,
-	(void*)func_8028869C,
+/* 803C5670-803C5680 0010+00 rc=2 efc=0 rfr=False None .data      __vt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_light> */
+SECTION_DATA static void* data_803C5670[4] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)func_80288874,
+	/* 3    */ (void*)func_8028869C,
 };
 
-/* 803C5680-803C5690 0010+00 rc=0 efc=0 .data      __vt__Q37JStudio28@unnamed@jstudio_object_cpp@55TOutputVariableValue_BOOL_<Q27JStudio15TAdaptor_camera> */
-void* const data_803C5680[4] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)func_802888D0,
-	(void*)func_802886FC,
+/* 803C5680-803C5690 0010+00 rc=2 efc=0 rfr=False None .data      __vt__Q37JStudio28@unnamed@jstudio_object_cpp@55TOutputVariableValue_BOOL_<Q27JStudio15TAdaptor_camera> */
+SECTION_DATA static void* data_803C5680[4] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)func_802888D0,
+	/* 3    */ (void*)func_802886FC,
 };
 
-/* 803C5690-803C56A0 0010+00 rc=0 efc=0 .data      __vt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_actor> */
-void* const data_803C5690[4] = {
-	(void*)NULL /* RTTI */,
-	(void*)NULL,
-	(void*)func_8028892C,
-	(void*)func_8028875C,
+/* 803C5690-803C56A0 0010+00 rc=2 efc=0 rfr=False None .data      __vt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_actor> */
+SECTION_DATA static void* data_803C5690[4] = {
+	/* 0    */ (void*)NULL /* RTTI */,
+	/* 1    */ (void*)NULL,
+	/* 2    */ (void*)func_8028892C,
+	/* 3    */ (void*)func_8028875C,
 };
 
-/* 80288204-802885DC 03D8+00 rc=0 efc=0 .text      __sinit_jstudio-object_cpp                                   */
+/* 80288204-802885DC 03D8+00 rc=1 efc=1 rfr=False None .text      __sinit_jstudio-object_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2310,55 +2269,55 @@ extern "C" asm void func_80288204() {
 #pragma pop
 
 
-/* 802885DC-8028863C 0060+00 rc=0 efc=0 .text      __dt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_sound>Fv */
+/* 802885DC-8028863C 0060+00 rc=2 efc=0 rfr=False None .text      __dt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_sound>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802885DC() {
+extern "C" asm static void func_802885DC() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-object/func_802885DC.s"
 }
 #pragma pop
 
 
-/* 8028863C-8028869C 0060+00 rc=0 efc=0 .text      __dt__Q37JStudio28@unnamed@jstudio_object_cpp@57TOutputVariableValue_BOOL_<Q27JStudio17TAdaptor_particle>Fv */
+/* 8028863C-8028869C 0060+00 rc=2 efc=0 rfr=False None .text      __dt__Q37JStudio28@unnamed@jstudio_object_cpp@57TOutputVariableValue_BOOL_<Q27JStudio17TAdaptor_particle>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8028863C() {
+extern "C" asm static void func_8028863C() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-object/func_8028863C.s"
 }
 #pragma pop
 
 
-/* 8028869C-802886FC 0060+00 rc=0 efc=0 .text      __dt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_light>Fv */
+/* 8028869C-802886FC 0060+00 rc=2 efc=0 rfr=False None .text      __dt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_light>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8028869C() {
+extern "C" asm static void func_8028869C() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-object/func_8028869C.s"
 }
 #pragma pop
 
 
-/* 802886FC-8028875C 0060+00 rc=0 efc=0 .text      __dt__Q37JStudio28@unnamed@jstudio_object_cpp@55TOutputVariableValue_BOOL_<Q27JStudio15TAdaptor_camera>Fv */
+/* 802886FC-8028875C 0060+00 rc=2 efc=0 rfr=False None .text      __dt__Q37JStudio28@unnamed@jstudio_object_cpp@55TOutputVariableValue_BOOL_<Q27JStudio15TAdaptor_camera>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802886FC() {
+extern "C" asm static void func_802886FC() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-object/func_802886FC.s"
 }
 #pragma pop
 
 
-/* 8028875C-802887BC 0060+00 rc=0 efc=0 .text      __dt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_actor>Fv */
+/* 8028875C-802887BC 0060+00 rc=2 efc=0 rfr=False None .text      __dt__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_actor>Fv */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8028875C() {
+extern "C" asm static void func_8028875C() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-object/func_8028875C.s"
 }
@@ -2366,62 +2325,62 @@ extern "C" asm void func_8028875C() {
 
 
 /* ############################################################################################## */
-/* 804554C8-804554D0 0004+04 rc=0 efc=0 .sdata2    @1967                                                        */
-f32 lit_1967[1 + 1 /* padding */] = {
+/* 804554C8-804554D0 0004+04 rc=5 efc=0 rfr=False None .sdata2    @1967                                                        */
+SECTION_SDATA2 static f32 lit_1967[1 + 1 /* padding */] = {
 	0.5f,
 	/* padding */
 	0.0f,
 };
 
-/* 802887BC-80288818 005C+00 rc=0 efc=0 .text      __cl__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_sound>CFfPQ27JStudio8TAdaptor */
+/* 802887BC-80288818 005C+00 rc=1 efc=0 rfr=False None .text      __cl__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_sound>CFfPQ27JStudio8TAdaptor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802887BC() {
+extern "C" asm static void func_802887BC() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-object/func_802887BC.s"
 }
 #pragma pop
 
 
-/* 80288818-80288874 005C+00 rc=0 efc=0 .text      __cl__Q37JStudio28@unnamed@jstudio_object_cpp@57TOutputVariableValue_BOOL_<Q27JStudio17TAdaptor_particle>CFfPQ27JStudio8TAdaptor */
+/* 80288818-80288874 005C+00 rc=1 efc=0 rfr=False None .text      __cl__Q37JStudio28@unnamed@jstudio_object_cpp@57TOutputVariableValue_BOOL_<Q27JStudio17TAdaptor_particle>CFfPQ27JStudio8TAdaptor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80288818() {
+extern "C" asm static void func_80288818() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80288818.s"
 }
 #pragma pop
 
 
-/* 80288874-802888D0 005C+00 rc=0 efc=0 .text      __cl__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_light>CFfPQ27JStudio8TAdaptor */
+/* 80288874-802888D0 005C+00 rc=1 efc=0 rfr=False None .text      __cl__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_light>CFfPQ27JStudio8TAdaptor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_80288874() {
+extern "C" asm static void func_80288874() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-object/func_80288874.s"
 }
 #pragma pop
 
 
-/* 802888D0-8028892C 005C+00 rc=0 efc=0 .text      __cl__Q37JStudio28@unnamed@jstudio_object_cpp@55TOutputVariableValue_BOOL_<Q27JStudio15TAdaptor_camera>CFfPQ27JStudio8TAdaptor */
+/* 802888D0-8028892C 005C+00 rc=1 efc=0 rfr=False None .text      __cl__Q37JStudio28@unnamed@jstudio_object_cpp@55TOutputVariableValue_BOOL_<Q27JStudio15TAdaptor_camera>CFfPQ27JStudio8TAdaptor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_802888D0() {
+extern "C" asm static void func_802888D0() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-object/func_802888D0.s"
 }
 #pragma pop
 
 
-/* 8028892C-80288988 005C+00 rc=0 efc=0 .text      __cl__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_actor>CFfPQ27JStudio8TAdaptor */
+/* 8028892C-80288988 005C+00 rc=1 efc=0 rfr=False None .text      __cl__Q37JStudio28@unnamed@jstudio_object_cpp@54TOutputVariableValue_BOOL_<Q27JStudio14TAdaptor_actor>CFfPQ27JStudio8TAdaptor */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void func_8028892C() {
+extern "C" asm static void func_8028892C() {
 	nofralloc
 #include "asm/JSystem/JStudio/JStudio/jstudio-object/func_8028892C.s"
 }
@@ -2429,69 +2388,69 @@ extern "C" asm void func_8028892C() {
 
 
 /* ############################################################################################## */
-/* 8039AB78-8039AB88 000A+06 rc=0 efc=0 .rodata    @stringBase0                                                 */
+/* 8039AB78-8039AB88 000A+06 rc=0 efc=0 rfr=False None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
-const char* const stringBase_8039AB78 = "(unnamed)";
+SECTION_DEAD char const* const stringBase_8039AB78 = "(unnamed)";
 /* @stringBase0 padding */
-char* const pad_8039AB82 = "\0\0\0\0\0";
+SECTION_DEAD static char const* const pad_8039AB82 = "\0\0\0\0\0";
 #pragma pop
 
-/* 8043109C-804310A8 000C+00 rc=0 efc=0 .bss       @759                                                         */
+/* 8043109C-804310A8 000C+00 rc=0 efc=0 rfr=False None .bss       @759                                                         */
 u8 lit_759[12];
 
-/* 804310A8-804310B8 0010+00 rc=0 efc=0 .bss       soovv_particle_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+/* 804310A8-804310B8 0010+00 rc=0 efc=0 rfr=False None .bss       soovv_particle_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
 u8 data_804310A8[16];
 
-/* 804310B8-804310C4 000C+00 rc=0 efc=0 .bss       @762                                                         */
+/* 804310B8-804310C4 000C+00 rc=0 efc=0 rfr=False None .bss       @762                                                         */
 u8 lit_762[12];
 
-/* 804310C4-804310D4 0010+00 rc=0 efc=0 .bss       soovv_particle_REPEAT___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+/* 804310C4-804310D4 0010+00 rc=0 efc=0 rfr=False None .bss       soovv_particle_REPEAT___Q27JStudio28@unnamed@jstudio_object_cpp@ */
 u8 data_804310C4[16];
 
-/* 804310D4-804310E0 000C+00 rc=0 efc=0 .bss       @765                                                         */
+/* 804310D4-804310E0 000C+00 rc=0 efc=0 rfr=False None .bss       @765                                                         */
 u8 lit_765[12];
 
-/* 804310E0-804310F0 0010+00 rc=0 efc=0 .bss       soovv_particle_ON_EXIT_NOT_END___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+/* 804310E0-804310F0 0010+00 rc=0 efc=0 rfr=False None .bss       soovv_particle_ON_EXIT_NOT_END___Q27JStudio28@unnamed@jstudio_object_cpp@ */
 u8 data_804310E0[16];
 
-/* 804310F0-804310FC 000C+00 rc=0 efc=0 .bss       @768                                                         */
+/* 804310F0-804310FC 000C+00 rc=0 efc=0 rfr=False None .bss       @768                                                         */
 u8 lit_768[12];
 
-/* 804310FC-8043110C 0010+00 rc=0 efc=0 .bss       soovv_sound_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+/* 804310FC-8043110C 0010+00 rc=0 efc=0 rfr=False None .bss       soovv_sound_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ */
 u8 data_804310FC[16];
 
-/* 8043110C-80431118 000C+00 rc=0 efc=0 .bss       @771                                                         */
+/* 8043110C-80431118 000C+00 rc=0 efc=0 rfr=False None .bss       @771                                                         */
 u8 lit_771[12];
 
-/* 80431118-80431128 0010+00 rc=0 efc=0 .bss       soovv_sound_REPEAT___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+/* 80431118-80431128 0010+00 rc=0 efc=0 rfr=False None .bss       soovv_sound_REPEAT___Q27JStudio28@unnamed@jstudio_object_cpp@ */
 u8 data_80431118[16];
 
-/* 80431128-80431134 000C+00 rc=0 efc=0 .bss       @774                                                         */
+/* 80431128-80431134 000C+00 rc=0 efc=0 rfr=False None .bss       @774                                                         */
 u8 lit_774[12];
 
-/* 80431134-80431144 0010+00 rc=0 efc=0 .bss       soovv_sound_CONTINUOUS___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+/* 80431134-80431144 0010+00 rc=0 efc=0 rfr=False None .bss       soovv_sound_CONTINUOUS___Q27JStudio28@unnamed@jstudio_object_cpp@ */
 u8 data_80431134[16];
 
-/* 80431144-80431150 000C+00 rc=0 efc=0 .bss       @777                                                         */
+/* 80431144-80431150 000C+00 rc=0 efc=0 rfr=False None .bss       @777                                                         */
 u8 lit_777[12];
 
-/* 80431150-80431160 0010+00 rc=0 efc=0 .bss       soovv_sound_LOCATED___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+/* 80431150-80431160 0010+00 rc=0 efc=0 rfr=False None .bss       soovv_sound_LOCATED___Q27JStudio28@unnamed@jstudio_object_cpp@ */
 u8 data_80431150[16];
 
-/* 80431160-8043116C 000C+00 rc=0 efc=0 .bss       @780                                                         */
+/* 80431160-8043116C 000C+00 rc=0 efc=0 rfr=False None .bss       @780                                                         */
 u8 lit_780[12];
 
-/* 8043116C-8043117C 0010+00 rc=0 efc=0 .bss       soovv_sound_ON_EXIT_NOT_END___Q27JStudio28@unnamed@jstudio_object_cpp@ */
+/* 8043116C-8043117C 0010+00 rc=0 efc=0 rfr=False None .bss       soovv_sound_ON_EXIT_NOT_END___Q27JStudio28@unnamed@jstudio_object_cpp@ */
 u8 data_8043116C[16];
 
-/* 8043117C-80431188 000C+00 rc=0 efc=0 .bss       @819                                                         */
+/* 8043117C-80431188 000C+00 rc=0 efc=0 rfr=False None .bss       @819                                                         */
 u8 lit_819[12];
 
-/* 804511F8-80451200 0008+00 rc=0 efc=0 .sbss      None                                                         */
+/* 804511F8-80451200 0008+00 rc=1 efc=1 rfr=False None .sbss      None                                                         */
 u8 data_804511F8[8];
 
-/* 80451200-80451208 0008+00 rc=0 efc=0 .sbss      None                                                         */
+/* 80451200-80451208 0008+00 rc=1 efc=1 rfr=False None .sbss      None                                                         */
 u8 data_80451200[8];
 

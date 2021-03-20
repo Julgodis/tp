@@ -12,7 +12,7 @@
 extern "C" void PPCMfmsr(); // 1
 extern "C" void PPCMtmsr(); // 1
 extern "C" void PPCMfhid0(); // 1
-extern "C" void PPCMthid0(); // 1
+extern "C" static void PPCMthid0(); // 1
 extern "C" void PPCMfl2cr(); // 1
 extern "C" void PPCMtl2cr(); // 1
 extern "C" void PPCMtdec(); // 1
@@ -35,7 +35,7 @@ extern "C" void PPCSetFpNonIEEEMode(); // 1
 extern "C" void PPCMfmsr(); // 1
 extern "C" void PPCMtmsr(); // 1
 extern "C" void PPCMfhid0(); // 1
-extern "C" void PPCMthid0(); // 1
+extern "C" static void PPCMthid0(); // 1
 extern "C" void PPCMfl2cr(); // 1
 extern "C" void PPCMtl2cr(); // 1
 extern "C" void PPCMtdec(); // 1
@@ -65,7 +65,7 @@ extern "C" void PPCSetFpNonIEEEMode(); // 1
 // Declarations:
 // 
 
-/* 80339CC0-80339CC8 0008+00 rc=0 efc=0 .text      PPCMfmsr                                                     */
+/* 80339CC0-80339CC8 0008+00 rc=5 efc=5 rfr=False None .text      PPCMfmsr                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +76,7 @@ extern "C" asm void PPCMfmsr() {
 #pragma pop
 
 
-/* 80339CC8-80339CD0 0008+00 rc=0 efc=0 .text      PPCMtmsr                                                     */
+/* 80339CC8-80339CD0 0008+00 rc=4 efc=4 rfr=False None .text      PPCMtmsr                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +87,7 @@ extern "C" asm void PPCMtmsr() {
 #pragma pop
 
 
-/* 80339CD0-80339CD8 0008+00 rc=0 efc=0 .text      PPCMfhid0                                                    */
+/* 80339CD0-80339CD8 0008+00 rc=2 efc=1 rfr=False None .text      PPCMfhid0                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,18 +98,18 @@ extern "C" asm void PPCMfhid0() {
 #pragma pop
 
 
-/* 80339CD8-80339CE0 0008+00 rc=0 efc=0 .text      PPCMthid0                                                    */
+/* 80339CD8-80339CE0 0008+00 rc=1 efc=0 rfr=False None .text      PPCMthid0                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm void PPCMthid0() {
+extern "C" asm static void PPCMthid0() {
 	nofralloc
 #include "asm/dolphin/base/PPCArch/PPCMthid0.s"
 }
 #pragma pop
 
 
-/* 80339CE0-80339CE8 0008+00 rc=0 efc=0 .text      PPCMfl2cr                                                    */
+/* 80339CE0-80339CE8 0008+00 rc=2 efc=2 rfr=False None .text      PPCMfl2cr                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -120,7 +120,7 @@ extern "C" asm void PPCMfl2cr() {
 #pragma pop
 
 
-/* 80339CE8-80339CF0 0008+00 rc=0 efc=0 .text      PPCMtl2cr                                                    */
+/* 80339CE8-80339CF0 0008+00 rc=2 efc=2 rfr=False None .text      PPCMtl2cr                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -131,7 +131,7 @@ extern "C" asm void PPCMtl2cr() {
 #pragma pop
 
 
-/* 80339CF0-80339CF8 0008+00 rc=0 efc=0 .text      PPCMtdec                                                     */
+/* 80339CF0-80339CF8 0008+00 rc=3 efc=3 rfr=False None .text      PPCMtdec                                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -142,7 +142,7 @@ extern "C" asm void PPCMtdec() {
 #pragma pop
 
 
-/* 80339CF8-80339D00 0008+00 rc=0 efc=0 .text      PPCSync                                                      */
+/* 80339CF8-80339D00 0008+00 rc=9 efc=9 rfr=False None .text      PPCSync                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -153,7 +153,7 @@ extern "C" asm void PPCSync() {
 #pragma pop
 
 
-/* 80339D00-80339D14 0014+00 rc=0 efc=0 .text      PPCHalt                                                      */
+/* 80339D00-80339D14 0014+00 rc=7 efc=7 rfr=False None .text      PPCHalt                                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -164,7 +164,7 @@ extern "C" asm void PPCHalt() {
 #pragma pop
 
 
-/* 80339D14-80339D1C 0008+00 rc=0 efc=0 .text      PPCMtmmcr0                                                   */
+/* 80339D14-80339D1C 0008+00 rc=1 efc=1 rfr=False None .text      PPCMtmmcr0                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,7 +175,7 @@ extern "C" asm void PPCMtmmcr0() {
 #pragma pop
 
 
-/* 80339D1C-80339D24 0008+00 rc=0 efc=0 .text      PPCMtmmcr1                                                   */
+/* 80339D1C-80339D24 0008+00 rc=1 efc=1 rfr=False None .text      PPCMtmmcr1                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -186,7 +186,7 @@ extern "C" asm void PPCMtmmcr1() {
 #pragma pop
 
 
-/* 80339D24-80339D2C 0008+00 rc=0 efc=0 .text      PPCMtpmc1                                                    */
+/* 80339D24-80339D2C 0008+00 rc=1 efc=1 rfr=False None .text      PPCMtpmc1                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -197,7 +197,7 @@ extern "C" asm void PPCMtpmc1() {
 #pragma pop
 
 
-/* 80339D2C-80339D34 0008+00 rc=0 efc=0 .text      PPCMtpmc2                                                    */
+/* 80339D2C-80339D34 0008+00 rc=1 efc=1 rfr=False None .text      PPCMtpmc2                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -208,7 +208,7 @@ extern "C" asm void PPCMtpmc2() {
 #pragma pop
 
 
-/* 80339D34-80339D3C 0008+00 rc=0 efc=0 .text      PPCMtpmc3                                                    */
+/* 80339D34-80339D3C 0008+00 rc=1 efc=1 rfr=False None .text      PPCMtpmc3                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -219,7 +219,7 @@ extern "C" asm void PPCMtpmc3() {
 #pragma pop
 
 
-/* 80339D3C-80339D44 0008+00 rc=0 efc=0 .text      PPCMtpmc4                                                    */
+/* 80339D3C-80339D44 0008+00 rc=1 efc=1 rfr=False None .text      PPCMtpmc4                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -230,7 +230,7 @@ extern "C" asm void PPCMtpmc4() {
 #pragma pop
 
 
-/* 80339D44-80339D64 0020+00 rc=0 efc=0 .text      PPCMffpscr                                                   */
+/* 80339D44-80339D64 0020+00 rc=2 efc=2 rfr=False None .text      PPCMffpscr                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,7 +241,7 @@ extern "C" asm void PPCMffpscr() {
 #pragma pop
 
 
-/* 80339D64-80339D8C 0028+00 rc=0 efc=0 .text      PPCMtfpscr                                                   */
+/* 80339D64-80339D8C 0028+00 rc=2 efc=2 rfr=False None .text      PPCMtfpscr                                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -252,7 +252,7 @@ extern "C" asm void PPCMtfpscr() {
 #pragma pop
 
 
-/* 80339D8C-80339D94 0008+00 rc=0 efc=0 .text      PPCMfhid2                                                    */
+/* 80339D8C-80339D94 0008+00 rc=4 efc=4 rfr=False None .text      PPCMfhid2                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -263,7 +263,7 @@ extern "C" asm void PPCMfhid2() {
 #pragma pop
 
 
-/* 80339D94-80339D9C 0008+00 rc=0 efc=0 .text      PPCMthid2                                                    */
+/* 80339D94-80339D9C 0008+00 rc=4 efc=4 rfr=False None .text      PPCMthid2                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -274,7 +274,7 @@ extern "C" asm void PPCMthid2() {
 #pragma pop
 
 
-/* 80339D9C-80339DA4 0008+00 rc=0 efc=0 .text      PPCMtwpar                                                    */
+/* 80339D9C-80339DA4 0008+00 rc=1 efc=1 rfr=False None .text      PPCMtwpar                                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -285,7 +285,7 @@ extern "C" asm void PPCMtwpar() {
 #pragma pop
 
 
-/* 80339DA4-80339DCC 0028+00 rc=0 efc=0 .text      PPCDisableSpeculation                                        */
+/* 80339DA4-80339DCC 0028+00 rc=1 efc=1 rfr=False None .text      PPCDisableSpeculation                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -296,7 +296,7 @@ extern "C" asm void PPCDisableSpeculation() {
 #pragma pop
 
 
-/* 80339DCC-80339DD4 0008+00 rc=0 efc=0 .text      PPCSetFpNonIEEEMode                                          */
+/* 80339DCC-80339DD4 0008+00 rc=1 efc=1 rfr=False None .text      PPCSetFpNonIEEEMode                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
